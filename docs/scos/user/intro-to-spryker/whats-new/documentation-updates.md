@@ -298,7 +298,7 @@ Below you will find the list of the new/updated documentation released as part o
 
 * [Queue Worker](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#queue)
 * [Deploy File Reference](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file-reference-1.0.html)
-* [Health checks](/docs/scos/dev/technical-enhancements/health-checks.html)
+* [Health checks](/docs/scos/dev/technical-enhancement-integration-guides/integrating-health-checks.html)
 * [Asset Management](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/asset-management.html)
 <details>
 <summary markdown='span'>Feature overview</summary>
@@ -310,7 +310,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details>
 <summary markdown='span'>Integration guide</summary>
 
-[Custom Location for Static Assets](/docs/scos/dev/technical-enhancements/custom-location-for-static-assets.html)
+[Custom Location for Static Assets](/docs/scos/dev/technical-enhancement-integration-guides/integrating-custom-location-for-static-assets.html)
 
 </details>
 

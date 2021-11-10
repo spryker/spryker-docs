@@ -11,9 +11,11 @@ In your development, this endpoint can help you to:
 * Retrieve a list of products to be displayed anywhere you want.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](https://documentation.spryker.com/docs/catalog-api-feature-integration).
+
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-catalog-feature-integration.html#install-feature-api).
 
 ## Search by products
+
 To search by products, send the request:
 
 ---
@@ -41,7 +43,6 @@ To search by products, send the request:
 | page  | Sets the number of the search results page from which the results are retrieved | {% raw %}{{page_number}}{% endraw %}    |
 | ipp   | Sets the number of products per page  | {% raw %}{{number_of_products}}{% endraw %}  |
 | merchant_name | Filters the results by a merchant name.  | {% raw %}{{merchnat_name}}{% endraw %}  |
-
 
 
 | REQUEST   | USAGE     |

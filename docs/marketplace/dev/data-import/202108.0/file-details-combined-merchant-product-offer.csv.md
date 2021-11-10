@@ -15,7 +15,7 @@ data:import --config data/import/common/combined_merchant_product_offer_import_c
 
 {% info_block infoBox "Info" %}
 
-See [Importing Data with a Configuration File](https://documentation.spryker.com/docs/importing-data-with-configuration-file) to learn more about bulk importing with the help of the configuration file.
+See [Importing Data with a Configuration File](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html) to learn more about bulk importing with the help of the configuration file.
 
 {% endinfo_block %}
 

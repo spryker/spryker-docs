@@ -12,9 +12,9 @@ redirect_from:
 Spryker Cloud Commerce OS(SCCOS) provides automated CI/CD(Continuous Integration/Continuous Deployment) Pipelines based on the following AWS Code Suite services:
 
 *   [CodePipeline](https://aws.amazon.com/codepipeline/) - Build and Deploy scenarios
-    
+
 *   [CodeBuild](https://aws.amazon.com/codebuild/) - Stages of pipeline execution
-    
+
 
 ## Deployment pipeline types
 
@@ -30,21 +30,19 @@ _Destructive deploy_ is a pipeline that includes all the stages of a complete CI
 
 Regardless of the pipeline type, deployment is divided into three stages:
 
-1.  `pre-deploy`
-    
-2.  `install`
-    
-3.  `post-deploy`
-    
+1. `pre-deploy`
+2. `install`  
+3. `post-deploy`
+
 
 The stages are configured as [CodeBuild projects](https://docs.aws.amazon.com/codebuild/latest/userguide/builds-projects-and-builds.html) in AWS.
 
 Each stage is configured to execute a set of commands. The configuration is based on two files:
 
 *   `buildspec.yml` provides the default configuration of SCCOS. This is a CodeBuild configuration file that is used if no custom configuration is provided for a stage.
-    
+
 *   `deploy.yml` provides a custom configuration overwriting `buildspec.yml`. This file is located in the project repository root.
-    
+
 {% info_block infoBox "Deploy file name" %}
 
 Deploy file name depends on the project and environment you are working with.
@@ -52,7 +50,7 @@ Deploy file name depends on the project and environment you are working with.
 {% endinfo_block %}
 
 
-The variables in the `image: environment:` section of `deploy.yml` are injected into the Docker image built with [Spryker Docker SDK](https://documentation.spryker.com/docs/docker-sdk).
+The variables in the `image: environment:` section of `deploy.yml` are injected into the Docker image built with [Spryker Docker SDK](/docs/scos/dev/the-docker-sdk/{{site.version}}/the-docker-sdk.html).
 
 ```yaml
 ...
@@ -77,10 +75,10 @@ environment:
   SPRYKER\_HOOK\_AFTER\_DEPLOY: “curl http://some.host.com:<port>/notify“  
   SPRYKER\_HOOK\_INSTALL: “chmod +x ./some\_custom\_script.sh && ./some\_custom\_scipt.sh“  
   SPRYKER\_HOOK\_DESTRUCTIVE\_INSTALL: “vendor/bin/install -r destructive --no-ansi -vvv“
-... 
- ``` 
- 
- 
+...
+ ```
+
+
 
 
 ## Pre-deploy stage
@@ -110,9 +108,9 @@ The `install` stage is configured as an install script.
 Depending on the pipeline type, the `install` stage command or script is specified in the following variables in `deploy.yml`:
 
 *   normal: `image: environment: SPRYKER_HOOK_INSTALL:`
-    
+
 *   destructive: `image: environment: SPRYKER_HOOK_DESTRUCTIVE_INSTALL:`
-    
+
 
 The CodeBuild project of this stage is named `Run_install_for_<project_name>`. The currently built Docker image is used as the environment image and all Zed environment variables are accessible.
 
@@ -122,7 +120,7 @@ The default configuration in `buildspec.yml` looks as follows:
 
 `production` and `destructive` refer to the `production.yml` and `destructive.yml` install scripts respectively. By default, they are located in `config/install`.
 
-  
+
 ## Post-deploy stage
 
 
@@ -144,7 +142,7 @@ Schematically, deployment in Spryker Cloud Commerce OS looks as follows.
 
 <details open>
     <summary>Deployment flow diagram</summary>
-    
+
 ![deployment-diagram](https://confluence-connect.gliffy.net/embed/image/18f6b79e-7e90-4a4e-b371-20b44d49983b.png?utm_medium=live&utm_source=custom)
 
 </details>
@@ -153,6 +151,3 @@ Schematically, deployment in Spryker Cloud Commerce OS looks as follows.
 
 
 *   [Customizing deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/customizing-deployment-pipelines.html)
-    
-
-

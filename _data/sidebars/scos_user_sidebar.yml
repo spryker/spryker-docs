@@ -177,7 +177,7 @@ entries:
     - title: Contributing to documentation
       nested:
       - title: Building the documentation site
-      - url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html
+        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html
   - title: Features
     url: /docs/scos/user/features/features.html  
     nested:

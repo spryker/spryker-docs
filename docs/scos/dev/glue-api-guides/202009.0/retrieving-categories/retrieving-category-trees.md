@@ -16,7 +16,7 @@ related:
 By means of the category API, you are able to retrieve the exact structure of your category tree with its hierarchical characteristics.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Category API Feature Integration](https://documentation.spryker.com/v6/docs/category-management-feature-integration-201907).
+For detailed information on the modules that provide the API functionality and related installation instructions, see Category API Feature Integration.
 
 ## Retrieve a category tree
 

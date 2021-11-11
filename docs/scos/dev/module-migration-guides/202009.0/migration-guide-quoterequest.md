@@ -34,7 +34,11 @@ ALTER TABLE spy_quote_request DROP COLUMN is_latest_version_hidden;
 COMMIT;
 ```
 
-{% info_block warningBox "Make sure that the `spy_quote_request` table now has a new column `is_latest_version_visible`.)
+{% info_block warningBox "Verification" %}
+
+Make sure that the `spy_quote_request` table now has a new column `is_latest_version_visible`.
+
+{% endinfo_block %}
 
 3. Rebuild Propel models:
 

@@ -4,10 +4,10 @@ description: Find out how you can build the Spryker documentation site
 template: howto-guide-template
 ---
 
-We use [Jekyll](https://jekyllrb.com/) to build the Spryker documentation site. To build the local copy of it, you need to:
+We use [Jekyll](https://jekyllrb.com/) to build the Spryker documentation site. To build it locally, you need to:
 
 1. Install Jekyll
-2. Install the documentation site locally
+2. Set up the documentation site locally
 3. Run the documentation site locally
 
 ## Prerequisites
@@ -22,9 +22,9 @@ Before you begin, install the following:
 
 Depending on your operating system, follow the Jekyll installation guides below.
 
-### MacOS
+### Install Jekyll on MacOS
 
-To install Jekyll on MacOS, do the following:
+To install Jekyll on MacOS:
 
 #### 1. Install command line tools
 To compile native extensions, install the command line tools:
@@ -59,7 +59,7 @@ brew install ruby
         ```bash
         echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"' >> ~/.zshrc
         ```
-        * Bash
+        * Bash:
         ```bash
         echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"' >> ~/.bash_profile
         ```
@@ -72,22 +72,21 @@ gem install --user-install bundler jekyll
 2. Check the installed Ruby version:
 ```bash
 ruby -v
-ruby 3.0.0p0 (2020-12-25 revision 95aff21468)
 ```  
 3. Append your path file with the following, replacing `X.X` with the first two digits of the Ruby version you've checked in the previous step:
     * Zsh:
     ```bash
     echo 'export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"' >> ~/.zshrc
     ```
-    * Bash
+    * Bash:
     ```bash
     echo 'export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"' >> ~/.bash_profile
     ```
-### Windows
+### Install Jekyll on Windows
 
 To install Jekyll on Windows, follow the [official Jekyll on Windows documentation](https://jekyllrb.com/docs/installation/windows/).
 
-### Ubuntu
+### Install Jekyll on Ubuntu
 
 To install Jekyll on Ubuntu, follow the [official Jekyll on Ubuntu documentation](https://jekyllrb.com/docs/installation/ubuntu/).
 
@@ -95,11 +94,11 @@ To install Jekyll on Ubuntu, follow the [official Jekyll on Ubuntu documentation
 
 To install Jekyll on other Linux systems, follow the [official Jekyll on Linux documentation](https://jekyllrb.com/docs/installation/other-linux/).
 
-## Install the documentation site locally
+## Set up the Spryker documentation site locally
 
-To set up the Spryker documentation site locally, do the following:
+To set up the Spryker documentation site locally:
 
-1. Clone the Spryker Documentation repository and go to the newly created directory:
+1. Clone the Spryker documentation repository and go to the newly created directory:
 ```bash
 git clone git@github.com:spryker/spryker-docs.git ./spryker-docs
 cd spryker-docs
@@ -110,7 +109,7 @@ bundle install
 ```
 {% info_block infoBox "MacOS on M1 processor" %}
 
-If you use the latest generation of MacBooks running on M1 processors,  prefix this command like this:
+On a MacBook with the M1 processor, run the following command instead::
 
 ```bash
 arch -arch x86_64 bundle install
@@ -120,7 +119,7 @@ arch -arch x86_64 bundle install
 
 ## Run the documentation site locally
 
-To run Spryker documentation site locally, do the following:
+To run Spryker documentation site locally:
 
 1. Go to the local documentation site directory:
 ```bash
@@ -134,7 +133,7 @@ Now, you can access the local copy of the Spryker documentation site at http://l
 
 {% info_block infoBox "MacOS on M1 processor" %}
 
-If you use the latest generation of MacBooks running on M1 processors,  prefix this command like this:
+On a MacBook with the M1 processor, run the following command instead:
 
 ```bash
 arch -arch x86_64 bundle exec jekyll serve

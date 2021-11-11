@@ -143,11 +143,11 @@ arch -arch x86_64 bundle exec jekyll serve
  
 ## Tips and tricks
 
-* To regenerate only those pages that were added or updated since the last build, use this command:
+* To regenerate only those pages that were added or updated since the last build, build the site with the following command:
 ```bash
 bundle exec jekyll serve --incremental
 ```
-* To automatically refresh the page with each change you make to the source files, use this command:
+* To automatically refresh the page with each change you make to the source files, build the site with the following command:
 ```bash
 bundle exec jekyll serve --incremental --livereload
 ```

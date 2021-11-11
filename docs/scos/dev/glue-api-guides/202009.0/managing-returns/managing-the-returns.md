@@ -49,7 +49,7 @@ To create a return for a registered user, send the request:
 
 | Header key | Header value | Required | Description |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | string | ✓ | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 | Query parameter | Description | Possible values |
 | --- | --- | --- |
@@ -265,7 +265,7 @@ To retrieve returns, send the request:
 
 | Header key | Header value | Required | Description |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | string | ✓ | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 | Query parameter | Description | Possible values |
 | --- | --- | --- |
@@ -364,7 +364,7 @@ To retrieve a return, send the request:
 
 | Header key | Header value | Required | Description |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | string | ✓ | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 | Query parameter | Description | Possible values |
 | --- | --- | --- |

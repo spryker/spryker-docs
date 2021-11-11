@@ -12,11 +12,12 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
 ---
 
-<section contenteditable="false" class="errorBox"><div class="content">
+{% info_block errorBox "Error" %}
 
 **The following feature integration Guide expects the basic feature to be in place.**
 The current guide only adds the Payment Management API functionality.
-</div></section>
+
+{% endinfo_block %}
 
 Follow the steps below to install Payments feature API.
 
@@ -35,22 +36,20 @@ Run the following command to install the required modules:
 composer require spryker/payments-rest-api:"1.1.0" --update-with-dependencies
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
-
-**Verification**
+{% info_block warningBox “Verification” %}
     
 Make sure that the following modules are installed:
 
 | Module | Expected Directory |
 | --- | --- |
 | `PaymentsRestApi` | `vendor/spryker/payments-rest-api` |
-</div></section>
+
+{% endinfo_block %}
 
 ## 2) Set Up Configuration
 Put all the payment methods available in the shop to  `CheckoutRestApiConfig`, for example:
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php</summary>
+**src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php**
     
 ```php
 <?php
@@ -85,16 +84,12 @@ class PaymentsRestApiConfig extends SprykerPaymentsRestApiConfig
 }
 ```
 
-<br>
-</details>
-
 
 ## 3) Set Up Transfer Objects
 ### Install payment methods
 To have payment methods available for the checkout,  extend `RestPaymentTransfer` with project-specific payment method transfers:
 
-<details open>
-<summary markdown='span'>src/Pyz/Shared/CheckoutRestApi/Transfer/checkout_rest_api.transfer.xml</summary>
+**src/Pyz/Shared/CheckoutRestApi/Transfer/checkout_rest_api.transfer.xml**
 
 ```xml
 <?xml version="1.0"?>
@@ -110,16 +105,13 @@ To have payment methods available for the checkout,  extend `RestPaymentTransfer
  
 </transfers>
 ```
-    
-<br>
-</details>
 
-<p>Run the following command to generate transfer changes:
+
+Run the following command to generate transfer changes:
 
 ```bash
 console transfer:generate
 ```
-</p>
 
 {% info_block warningBox "Verification" %}
 
@@ -155,8 +147,7 @@ Activate the following plugin:
 | --- | --- | --- | --- |
 | `PaymentMethodsByCheckoutDataResourceRelationshipPlugin` | Adds payment-methods resource as relationship in case `RestCheckoutDataTransfer` is provided as payload. | None | `Spryker\Glue\PaymentsRestApi\Plugin\GlueApplication` |
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
     
 ```php
 <?php
@@ -188,9 +179,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-<br>
-</details>
-
 {% info_block warningBox "Verification" %}
 
 To verify `PaymentMethodsByCheckoutDataResourceRelationshipPlugin` is activated, send a POST request to `http://glue.mysprykershop.com/checkout-data?include=payment-methods` and make sure that `checkout-data` resource has a relationship to the `payment-methods` resources.
@@ -204,8 +192,7 @@ Mappers should be configured on a project level to map the data from the request
 | --- | --- | --- |--- |
 | PaymentsQuoteMapperPlugin | Adds a mapper that maps Payments information to `QuoteTransfer`. | None | `Spryker\Zed\PaymentsRestApi\Communication\Plugin\CheckoutRestApi` |
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
+**src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
     
 ```php
 <?php
@@ -229,8 +216,6 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 }
 ```
 
-<br>
-</details>
 
 {% info_block warningBox "Verification" %}
 
@@ -243,8 +228,7 @@ To verify that `PaymentsQuoteMapperPlugin` is activated, send a POST request to 
 | --- | --- | --- | --- |
 | SelectedPaymentMethodCheckoutDataResponseMapperPlugin | Maps the selected payment method data to the checkout-data resource attributes. | None | `Spryker\Glue\PaymentsRestApi\Plugin\CheckoutRestApi` |
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
+**src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
     
 ```php
 <?php
@@ -269,12 +253,10 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 ```
 
-<br>
-</details>
 
 {% info_block warningBox "Verification" %}
 
-To verify that SelectedPaymentMethodCheckoutDataResponseMapperPlugin is activated, send a POST request to the `http://glue.mysprykershop.com/checkout-data` endpoint with payment method name and payment provider name, and make sure that you get not empty "selectedPaymentMethods" attribute in the response:
+To verify that `SelectedPaymentMethodCheckoutDataResponseMapperPlugin` is activated, send a POST request to the `http://glue.mysprykershop.com/checkout-data` endpoint with payment method name and payment provider name, and make sure that you get not empty `selectedPaymentMethods` attribute in the response:
 
 {% endinfo_block %}
 

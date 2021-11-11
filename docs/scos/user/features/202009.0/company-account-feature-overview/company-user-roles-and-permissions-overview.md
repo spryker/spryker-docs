@@ -27,8 +27,11 @@ Each Company role contains a set of permissions in the form of **Permission** ke
 The Permission keys define what the users are allowed to do.
 
 {% info_block infoBox %}
+
 For example, a user can be allowed to add products to cart.
+
 {% endinfo_block %}
+
 Permissions that can be used are not limited in any way - you can create and integrate any permissions. Each of the permissions is represented as a plugin in the code.
 
 Here is another example of the connection between company roles and permissions:
@@ -51,39 +54,13 @@ Company roles and permissions and their relation to the organizational structure
 
 ## Permission types
 Permissions can be simple and complex.
-<table>
-	<th>Permission Type</th>
-	<th>Description</th>
-	<th>Example</th>
-	<tr>
-        <td><b>Simple</b></td>
-		<td>	Simple permissions are those that do not have any logic behind them and answer the question “Does the customer have a permission?”. Simple permissions implement only PermissionPluginInterface (Shared).</td>
-		<td>
-            <p>A Company User is allowed (or not allowed) to access product details page.</p>
-          
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/simple_permissions.png) 
+|Permission Type|Description|Example|
+|--- |--- |--- |
+|Simple|Simple permissions are those that do not have any logic behind them and answer the question “Does the customer have a permission?”. Simple permissions implement only PermissionPluginInterface (Shared).|A Company User is allowed (or not allowed) to access product details page. ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/simple_permissions.png)|
+|Complex|Complex permissions have some logic behind them and answer the question “Does the customer have a permission with some parameters and business logic?”. Complex permissions implement ExecutablePermissionPluginInterface (Shared).|A Company User is allowed (or not allowed) to place an order with grand total over 1000 Euro. ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/complex_permissions.png)|
+|Infrastructural|Some permissions should not be managed in the UI, but programatically. Infrastructural permissions implement InfrastructuralPermissionPluginInterface (Shared).|Read shared cart, which is managed by the Shared Carts feature.|
 
-
-</td>
-	</tr>
-	<tr>
-        <td><b>Complex</b></td>
-		<td>Complex permissions have some logic behind them and answer the question “Does the customer have a permission with some parameters and business logic?”. Complex permissions implement ExecutablePermissionPluginInterface (Shared).</td>
-		<td>
-           <p> A Company User is allowed (or not allowed) to place an order with grand total over 1000 Euro.</p>
-       
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/complex_permissions.png)
-        </td>
-	</tr>
-    <tr>
-        <td><b>Infrastructural</b></td>
-		<td>Some permissions should not be managed in the UI, but programatically. Infrastructural permissions implement InfrastructuralPermissionPluginInterface (Shared).</td>
-		<td>
-           <p> Read shared cart, which is managed by the Shared Carts feature.</p>
-       </td>
-	</tr>
-</table>
 
 {% info_block infoBox %}
 Some of the Permissions can be configured for specific roles, for example, “allow adding no more than X items to cart” for junior support engineer.<br>Or for example, some specific products are not allowed to be viewed by anyone, but Admin and Top Managers.<br>These values are referred to as **Company Role Permissions**.
@@ -124,7 +101,7 @@ Every company role includes a set of permissions that can be enabled/disabled ac
   - **Buy up to grand total (Requires "Send cart for approval")** - sets a limit for the grand total of the cart. If the amount in the cart is bigger than the limit set in this permission, the user will not be able to proceed to checkout. Works with **Send cart for approval** permission. This permission is available after enabling the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) feature.
   - **Approve up to grand total** - with this permission enabled, a user can approve the the cart. See [Approval Feature Overview](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) for more details.
   - **View Business Unit orders** - with this permission enabled, a user can see not only their own orders, but also the orders of their business unit.
-  - **View Company orders** - with this permission enabled, a user can see not only their own orders, orders of their business unit, but also the orders of their comapny.
+  - **View Company orders** - with this permission enabled, a user can see not only their own orders, orders of their business unit, but also the orders of their company.
   - **Send cart for approval (Requires "Buy up to grand total")** - allows a user to send the cart for approval. Works together with Buy up to grand total permission. See [Approval Feature Overview](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) for more details.
 
 ## If you are:
@@ -136,9 +113,9 @@ Every company role includes a set of permissions that can be enabled/disabled ac
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
                 <li><a href="https://documentation.spryker.com/docs/mg-companyuser#upgrading-from-version-1-0-0-to-version-2-0-0" class="mr-link">Migrate the CompanyUser module from version 1.* to version 2.*</a></li>
-                <li><a href="https://documentation.spryker.com/docs/logging-in-as-a-company-user" class="mr-link">Authenticate as company user via Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/retrieving-company-users" class="mr-link">Retrieve information about company users via Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/en/retrieving-company-roles" class="mr-link">Retrieve information about company roles via Glue API</a></li>
+                <li><a href="/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html" class="mr-link">Authenticate as company user via Glue API</a></li>
+                <li><a href="/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-users.html" class="mr-link">Retrieve information about company users via Glue API</a></li>
+                <li><a href="/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-roles.html" class="mr-link">Retrieve information about company roles via Glue API</a></li>
               </ul>
         </div>
         <!-- col2 -->

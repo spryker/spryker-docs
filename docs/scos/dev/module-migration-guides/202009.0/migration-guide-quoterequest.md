@@ -52,10 +52,16 @@ So, when this command finishes its execution, `QuoteRequest-related` database cl
 vendor/bin/console transfer:generate
 ```
 
-@(Warning" %}
+{% info_block warningBox “Warning” %}
+
 Make sure that `QuoteRequestTransfer` now has `isLatestVersionVisible`, and doesn't have `isLatestVersionHidden` property.
+
 {% endinfo_block %}
 
-@(Error)(Make sure that, if you had usage of `QuoteTransfer::setIsLatestVersionHidden`, `QuoteTransfer::getIsLatestVersionHidden`  methods on project level, they have been updated to use the newly introduced `QuoteTransfer::getIsLatestVersionVisible` and  `QuoteTransfer::getIsLatestVersionVisible` methods with business logic inversion.)
+{% info_block warningBox “Verification” %}
+
+Make sure that, if you had usage of `QuoteTransfer::setIsLatestVersionHidden`, `QuoteTransfer::getIsLatestVersionHidden`  methods on project level, they have been updated to use the newly introduced `QuoteTransfer::getIsLatestVersionVisible` and  `QuoteTransfer::getIsLatestVersionVisible` methods with business logic inversion.
+
+{% endinfo_block %}
 
 *Estimated migration time: ~2h*

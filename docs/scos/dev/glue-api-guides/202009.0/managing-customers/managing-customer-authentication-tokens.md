@@ -128,7 +128,7 @@ To view generic errors that originate from the Glue Application, see [Reference 
 
 ## Next steps
 
-* [Authenticate as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}managing-customers/authenticating-as-a-customer.html)
+* [Authenticate as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html)
 * [Manage customer passwords](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-passwords.html)
 
 

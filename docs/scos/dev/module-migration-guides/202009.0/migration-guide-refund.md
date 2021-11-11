@@ -13,7 +13,7 @@ redirect_from:
 ## Upgrading from Version 4.* to Version 5.*
 Version 4 of the Refund module no longer uses `SalesAggregatorFacade` , it was replaced with `SalesFacade`.
 The `RefundCalculator` business class must now replace `RefundToSalesAggregatorInterface` with the `RefundToSalesInterface` bridge.
-To learn more see [Migration Guide - Calculation](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-calculation.md.html). 
+To learn more see [Migration Guide - Calculation](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-calculation.html). 
 
 ## Upgrading from Version 2.* to Version 3.*
 To migrate the Refund module from version 2 to version 3, follow these steps:

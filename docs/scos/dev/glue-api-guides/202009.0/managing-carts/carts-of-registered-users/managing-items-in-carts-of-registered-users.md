@@ -1428,7 +1428,7 @@ Request sample:
 ```    
 </details>
 
-For the attributes of the included resources, see [Retrieving Concrete Products](https://documentation.spryker.com/v6/docs/retrieving-product-information#retrieve-concrete-products).
+For the attributes of the included resources, see [Retrieving Concrete Products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html).
 
 ## Remove items from a registered user's cart
 

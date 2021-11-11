@@ -596,6 +596,8 @@ Request sample:
 | remunerationTotal | Integer | Total sum of remuneration.|
 
 **Billing and shipping addresses**
+
+<div>
 | Attribute | Type | Description |
 | --- | --- | --- |
 | billingAddress | object | List of attributes describing the billing address of the order. |
@@ -620,7 +622,7 @@ Request sample:
 | iso2Code | String | ISO 2-Letter Country Code to use. |
 | isDefaultShipping | String | Specifies whether the address should be used as the default shipping address of the customer:<ul><li> If the parameter is not set, the default value is **true**.</li><li> If the customer does not have a default shipping address, the value is **true**.</li></ul> |
 | isDefaultBilling | String | Specifies whether the address should be used as the default billing address of the customer<ul><li> If the parameter is not set, the default value is **true**.</li><li> If the customer does not have a default billing address, the value is **true**.</li></ul> |
-
+</div>
 
 **Order item information** 
 

@@ -19,9 +19,9 @@ To run the Docker SDK in a local environment, follow the instructions below.
 ### Installing Docker
 
 For Docker installation instructions, see one of the following:
-* [Installing Docker prerequisites on MacOS](/docs/scos/dev/installation/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html)
-* [Installing Docker prerequisites on Linux](/docs/scos/dev/installation/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html)
-* [Installing Docker prerequisites on Windows](/docs/scos/dev/installation/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows.html)
+* [Installing Docker prerequisites on MacOS](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html)
+* [Installing Docker prerequisites on Linux](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html)
+* [Installing Docker prerequisites on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl1.html)
 
 ### Setting up a project with the Docker SDK
 
@@ -97,7 +97,7 @@ For solutions to common issues, see [Spryker in Docker troubleshooting](/docs/sc
 
 ## What documents should I use to start developing and configuring my project?
 
-* [Deploy file reference - 1.0](/docs/scos/dev/docker-sdk/deploy-file-reference-1.0.html)
-* [Docker SDK configuration reference](/docs/scos/dev/docker-sdk/docker-sdk-configuration-reference.html)
-* [Configuring services](/docs/scos/dev/docker-sdk/configuring-services.html)
+* [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file-reference-1.0.html)
+* [Docker SDK configuration reference](/docs/scos/dev/the-docker-sdk/{{page.version}}/docker-sdk-configuration-reference.html)
+* [Configuring services](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-services.md.html)
 

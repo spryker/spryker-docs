@@ -34,12 +34,12 @@ xcode-select --install
 ```
 
 #### 2. Install Ruby
-Jekyll requires Ruby version 2.4.0 to run. If you already have Ruby installed, you can check its version by running
+Check your current Ruby version:
 
 ```bash
 ruby -v
 ```
- If you don't have Ruby installed yet, or your Ruby version is lower than 2.4.0, do the following:
+If Ruby is not installed or the version is below 2.4.0, do the following: 
 
  1. Install Homebrew:
 ```bash
@@ -49,17 +49,21 @@ ruby -v
 ```bash
 brew install ruby
 ```
-3. Add the brew Ruby and gems path to your Shell configuration: 
-```bash
-# If you're using Zsh
-echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"' >> ~/.zshrc
-
-# If you're using Bash
-echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"' >> ~/.bash_profile
-
-# Unsure which shell you are using? Type
-echo $SHELL
-```
+3. Add the brew Ruby and gems path to your Shell configuration:
+    1. Check what Shell you are using:
+    ```
+    echo $SHELL
+    ```
+    2. Add the path using one of the following commands:
+        * Zsh:
+        ```bash
+        echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"' >> ~/.zshrc
+        ```
+        * Bash
+        ```bash
+        echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"' >> ~/.bash_profile
+        ```
+        
 #### 3. Install Jekyll and Bundler
 1. Install Jekyll and Bundler gems:
 ```bash
@@ -70,17 +74,15 @@ gem install --user-install bundler jekyll
 ruby -v
 ruby 3.0.0p0 (2020-12-25 revision 95aff21468)
 ```  
-3. Append your path file with the following one, replacing X.X with the first two digits of your Ruby version:
-```bash
-# If you're using Zsh
-echo 'export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"' >> ~/.zshrc
-
-# If you're using Bash
-echo 'export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"' >> ~/.bash_profile
-
-# Not which Shell you are using? Type
-echo $SHELL
-```
+3. Append your path file with the following, replacing `X.X` with the first two digits of the Ruby version you've checked in the previous step:
+    * Zsh:
+    ```bash
+    echo 'export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"' >> ~/.zshrc
+    ```
+    * Bash
+    ```bash
+    echo 'export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"' >> ~/.bash_profile
+    ```
 ### Windows
 
 To install Jekyll on Windows, follow the [official Jekyll on Windows documentation](https://jekyllrb.com/docs/installation/windows/).
@@ -95,7 +97,7 @@ To install Jekyll on other Linux systems, follow the [official Jekyll on Linux d
 
 ## Install the documentation site locally
 
-After you installed Jekyll, you should run the documentation site locally. Do the following:
+To set up the Spryker documentation site locally, do the following:
 
 1. Clone the Spryker Documentation repository and go to the newly created directory:
 ```bash
@@ -118,13 +120,13 @@ arch -arch x86_64 bundle install
 
 ## Run the documentation site locally
 
-Now that you have Jekyll and the documentation site installed, you can run the site locally. Do the following:
+To run Spryker documentation site locally, do the following:
 
 1. Go to the local documentation site directory:
 ```bash
 cd spryker-docs
 ```
-2. Run:
+2. Build the site:
 ```bash
 bundle exec jekyll serve
 ```

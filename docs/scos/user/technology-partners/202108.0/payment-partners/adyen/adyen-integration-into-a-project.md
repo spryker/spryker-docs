@@ -462,9 +462,7 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
 <summary>src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
 
 ```twig
-
-...
-{% define data = {
+{% raw %}{%{% endraw %} define data = {
     backUrl: _view.previousStepUrl,
     forms: {
         payment: _view.paymentForm
@@ -481,11 +479,11 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
         'Adyen/sofort': ['sofort', 'adyen'],
         'Adyen/wechatpay': ['wechatpay', 'adyen'],
     }
-} %}
- 
+} {% raw %}%}{% endraw %}
+
 ...
 
-{% embed molecule('form') with {
+{% raw %}{%{% endraw %} embed molecule('form') with {
     ...
     data: {
        ... 
@@ -494,7 +492,5 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
            class: '... js-payment-form__submit',
        },
     }
-...
-
 ```
 </details>

@@ -3,7 +3,7 @@ title: Enabling the CMS content widgets button in the WYSIWYG Editor
 description: Use the guide to enable the CMS content widgets button in the WYSIWYG Editor
 last_updated: Nov 9, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-configure-separators-default-number-rows
+originalLink: https://documentation.spryker.com/2021080/docs/ht-enable-cms-content-widgets-button-201907
 originalArticleId: ff4905b1-51f0-4d36-bf4c-d0c78c26fb9e
 redirect_from:
   - /v3/docs/ht-enable-cms-content-widgets-button-201907

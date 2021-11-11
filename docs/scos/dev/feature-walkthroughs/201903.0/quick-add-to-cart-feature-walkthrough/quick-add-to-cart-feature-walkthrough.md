@@ -32,7 +32,7 @@ The following schema illustrates relations  in the Quick Order feature:
 
 | INTEGRATION GUIDES  | MIGRATION GUIDES | TUTORIALS AND HOWTOS |
 |---|---|---|
-| [Quick Add to Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-feature-integration.html) | ProductPackagingUnitStorage migration guide | [Configuring separators and default number of row](/docs/scos/dev/tutorials-and-howtos/howtos/howto-configure-separators-default-number-rows.html) |
+| [Quick Add to Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-feature-integration.html) | ProductPackagingUnitStorage migration guide | [Configuring separators and default number of row](/docs/scos/dev/feature-walkthroughs/{{page.version}}/quick-add-to-cart-feature-walkthrough/configuring-separators-and-default-number-rows.html) |
 | [Quick Add to Cart + Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-shopping-lists-feature-integration.html) | ProductPageSearch migration guide |  |
 | [Quick Add to Cart + Discontinued Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-discontinued-products-feature-integration.html) | QuickOrderPage migration guide |  |
 | [Quick Add to Cart + Measurement Units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-measurement-units-feature-integration.html) |  | |

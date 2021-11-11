@@ -17,7 +17,7 @@ related:
 
 ## Partner Information
 
-[About IADVIZE](https://www.iadvize.com)
+[About IADVIZE](https://spryker.com/industry-partner/iadvize/)
 
 Make Customer Experience authentic
 

@@ -1,5 +1,5 @@
 ---
-title: HowTo - Enable the CMS content widgets button in the WYSIWYG Editor
+title: Enabling the CMS content widgets button in the WYSIWYG Editor
 description: Use the guide to enable the CMS content widgets button in the WYSIWYG Editor
 last_updated: Nov 9, 2021
 template: howto-guide-template

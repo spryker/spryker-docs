@@ -1,5 +1,5 @@
 ---
-title: HowTo - disable accounts switch for Business on Behalf
+title: Disabling accounts switch for Business on Behalf
 description: Use the guide to disable accounts switch for Business on Behalf
 last_updated: Nov 9, 2021
 template: howto-guide-template

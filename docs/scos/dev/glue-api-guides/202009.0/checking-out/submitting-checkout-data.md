@@ -39,7 +39,7 @@ To submit checkout data without order confirmation, send the request:
 
 | Query parameter | Description | Possible values |
 | --- | --- | --- |
-| Include | Adds resource relationships to the request.	 | payment-methods, shipment-methods, addresses |
+| include | Adds resource relationships to the request.	 | payment-methods, shipment-methods, addresses |
 | sort | Sorts included shipment and payment methods by an attribute. | {% raw %}{{{% endraw %}included_resource{% raw %}}}{% endraw %}.{% raw %}{{{% endraw %}attribute{% raw %}}}{% endraw %}, -{% raw %}{{{% endraw %}included_resource{% raw %}}}{% endraw %}.{% raw %}{{{% endraw %}attribute{% raw %}}}{% endraw %} |
 
 

@@ -38,7 +38,7 @@ The attributes for Create and Edit pages, as well as for abstract and concrete p
 {% info_block warningBox "Product bundles" %}
 When you create a product bundle, a single product variant is created automatically. Skip the configuration in this tab
 {% endinfo_block %}
-* In the **Variants** tab, you can see [super attributes](https://documentation.spryker.com/v6/docs/products-overview#super-attributes) that derive from **Catalog** > **Attributes**. See [Creating product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) to learn how to create them.
+* In the **Variants** tab, you can see [super attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html#super-attributes) that derive from **Catalog** > **Attributes**. See [Creating product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) to learn how to create them.
 * You can select as many super attributes as you need and define one or more values for them. For each product attribute value you select, a product variant is created. After creating the abstract product, you can create new product variants based on the super attributes you select when creating the abstract product. 
 * While editing the abstract product/product bundle, you will see a table that displays the product variants that exist for this abstract product. From this page, you can View, Edit, and Manage Attributes for the product variant.
 

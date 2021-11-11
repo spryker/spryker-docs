@@ -21,6 +21,12 @@ Install the Computop module:
 composer require spryker-eco/computop
 ```
 
+To use PayPal Express, you also need to install the Computop Shipment module:
+
+```bash
+composer require spryker-eco/computop-shipment
+```
+
 ## Configuration
 
 You can check all the necessary configurations in `vendor/spryker-eco/computop/config/config.dist.php`.
@@ -44,6 +50,7 @@ $config[ComputopApiConstants::BLOWFISH_PASSWORD] = 'Password for blowfish hashin
 $config[ComputopApiConstants::HMAC_PASSWORD] = 'Password for hmac hashing';
 $config[ComputopConstants::IDEAL_ISSUER_ID] = 'IDeal issuer identifier';
 $config[ComputopConstants::PAYDIREKT_SHOP_KEY] = 'Paydirekt shop key';
+$config[ComputopConstants::PAY_PAL_CLIENT_ID] = 'Paypal Client ID';	
 
 // Init API call endpoints
 $config[ComputopConstants::PAY_NOW_INIT_ACTION] = 'https://www.computop-paygate.com/paynow.aspx';
@@ -137,6 +144,7 @@ $config[ComputopShipmentConstants::PAYPAL_EXPRESS_DEFAULT_SHIPMENT_METHOD_KEY] =
 | `$config[ComputopApiConstants::HMAC_PASSWORD]` | string | Password for HMAC hashing. |
 | `$config[ComputopConstants::PAYDIREKT_SHOP_KEY]` | string | Shop key for the Paydirect payment method. |
 | `$config[ComputopConstants::IDEAL_ISSUER_ID]`  | string  | Issuer ID for the Ideal payment method.  |
+| `$config[ComputopConstants::PAY_PAL_CLIENT_ID]`  | string  | PayPal Client ID for the PayPal Express payment method.  |
 | `$config[ComputopConstants::PAY_NOW_INIT_ACTION]`  | string  | `init` API call endpoint for the PayNow payment method.  |
 | `$config[ComputopConstants::CREDIT_CARD_INIT_ACTION]`  |string | `init` API call endpoint for the Credit Card payment method.  |
 | `$config[ComputopConstants::PAYPAL_INIT_ACTION]`  | string  | `init` API call endpoint for the PayPal payment method.  |

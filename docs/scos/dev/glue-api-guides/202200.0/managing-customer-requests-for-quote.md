@@ -1,5 +1,5 @@
 ---
-title: Managing cusomer requests for quote
+title: Managing customer requests for quote
 description: This endpoint allows managing customer requests for quote.
 last_updated: Jun 22, 2021
 template: glue-api-storefront-guide-template
@@ -35,12 +35,12 @@ Sample request: `POST https://glue.mysprykershop.com/quote-requests`
 ```json
 {
     "data": {
-        "type": "quote-requests",
+        "type": "agent-quote-requests",
         "attributes": {
-            "cartUuid": "0ba0fb0a-adf6-5fa1-ae13-76626d6cc1a3",
+            "cartUuid": "b46c8c2c-a343-5c29-a222-117292a8fdad",
             "meta": {
-                "purchase_order_number": "228",
-                "delivery_date": "2021-07-31",
+                "purchase_order_number": "7711",
+                "delivery_date": "2021-12-31",
                 "note": "consider the quotation request"
             }
         }
@@ -52,8 +52,8 @@ Sample request: `POST https://glue.mysprykershop.com/quote-requests`
 |---|---|---|---|
 | companyUserUuid | &check; | String | Company user ID |
 | purchase_order_number |   | Integer | Purchase order number |
-| delivery_date |   | String | Delivary date of the product |
-| note |   | String | Notes/commnets left by a customer or Back Office user. |
+| delivery_date |   | String | Product delivery date |
+| note |   | String | Notes/comments left by a customer or Back Office user. |
 
 ### Response
 
@@ -63,21 +63,21 @@ Sample request: `POST https://glue.mysprykershop.com/quote-requests`
 {
     "data": {
         "type": "quote-requests",
-        "id": "DE--21-2",
+        "id": "DE--21-10",
         "attributes": {
+            "quoteRequestReference": "DE--21-10",
             "status": "draft",
-            "quoteRequestReference": "DE--21-2",
-            "createdAt": null,
+            "isLatestVersionVisible": true,
+            "createdAt": "2021-11-11 15:00:10",
             "validUntil": null,
+            "versions": [
+                "DE--21-10-1"
+            ],
             "shownVersion": {
                 "version": 1,
-                "versionReference": "DE--21-2-1",
-                "createdAt": null,
-                "meta": {
-                    "purchase_order_number": "228",
-                    "delivery_date": "2021-07-31",
-                    "note": "consider the quotation request"
-                },
+                "versionReference": "DE--21-10-1",
+                "createdAt": "2021-11-11 15:00:11",
+                "metadata": [],
                 "cart": {
                     "priceMode": "GROSS_MODE",
                     "store": "DE",
@@ -85,106 +85,38 @@ Sample request: `POST https://glue.mysprykershop.com/quote-requests`
                     "totals": {
                         "expenseTotal": 0,
                         "discountTotal": 0,
-                        "taxTotal": 24619,
-                        "subtotal": 154194,
-                        "grandTotal": 154194,
-                        "priceToPay": 154194
+                        "taxTotal": {
+                            "tax_rate": null,
+                            "amount": 5416
+                        },
+                        "subtotal": 82786,
+                        "grandTotal": 82786,
+                        "priceToPay": 82786
                     },
                     "billingAddress": null,
-                    "discounts": [],
-                    "shipments": [],
                     "items": [
                         {
-                            "sku": "023_21758366",
-                            "quantity": 5,
-                            "groupKey": "023_21758366",
-                            "abstractSku": "023",
+                            "groupKey": "089_29634947",
+                            "productOfferReference": null,
+                            "merchantReference": null,
+                            "sku": "089_29634947",
+                            "quantity": 2,
+                            "abstractSku": "089",
                             "amount": null,
-                            "calculations": {
-                                "unitPrice": 26723,
-                                "sumPrice": 133615,
-                                "taxRate": 19,
-                                "unitNetPrice": 0,
-                                "sumNetPrice": 0,
-                                "unitGrossPrice": 26723,
-                                "sumGrossPrice": 133615,
-                                "unitTaxAmountFullAggregation": 4267,
-                                "sumTaxAmountFullAggregation": 21333,
-                                "sumSubtotalAggregation": 133615,
-                                "unitSubtotalAggregation": 26723,
-                                "unitProductOptionPriceAggregation": 0,
-                                "sumProductOptionPriceAggregation": 0,
-                                "unitDiscountAmountAggregation": 0,
-                                "sumDiscountAmountAggregation": 0,
-                                "unitDiscountAmountFullAggregation": 0,
-                                "sumDiscountAmountFullAggregation": 0,
-                                "unitPriceToPayAggregation": 26723,
-                                "sumPriceToPayAggregation": 133615
-                            }
-                        },
-                        {
-                            "sku": "020_21081478",
-                            "quantity": "1",
-                            "groupKey": "020_21081478",
-                            "abstractSku": "020",
-                            "amount": null,
-                            "calculations": {
-                                "unitPrice": 10580,
-                                "sumPrice": 10580,
-                                "taxRate": 19,
-                                "unitNetPrice": 0,
-                                "sumNetPrice": 0,
-                                "unitGrossPrice": 10580,
-                                "sumGrossPrice": 10580,
-                                "unitTaxAmountFullAggregation": 1689,
-                                "sumTaxAmountFullAggregation": 1690,
-                                "sumSubtotalAggregation": 10580,
-                                "unitSubtotalAggregation": 10580,
-                                "unitProductOptionPriceAggregation": 0,
-                                "sumProductOptionPriceAggregation": 0,
-                                "unitDiscountAmountAggregation": 0,
-                                "sumDiscountAmountAggregation": 0,
-                                "unitDiscountAmountFullAggregation": 0,
-                                "sumDiscountAmountFullAggregation": 0,
-                                "unitPriceToPayAggregation": 10580,
-                                "sumPriceToPayAggregation": 10580
-                            }
-                        },
-                        {
-                            "sku": "009_30692991",
-                            "quantity": "1",
-                            "groupKey": "009_30692991",
-                            "abstractSku": "009",
-                            "amount": null,
-                            "calculations": {
-                                "unitPrice": 9999,
-                                "sumPrice": 9999,
-                                "taxRate": 19,
-                                "unitNetPrice": 0,
-                                "sumNetPrice": 0,
-                                "unitGrossPrice": 9999,
-                                "sumGrossPrice": 9999,
-                                "unitTaxAmountFullAggregation": 1596,
-                                "sumTaxAmountFullAggregation": 1596,
-                                "sumSubtotalAggregation": 9999,
-                                "unitSubtotalAggregation": 9999,
-                                "unitProductOptionPriceAggregation": 0,
-                                "sumProductOptionPriceAggregation": 0,
-                                "unitDiscountAmountAggregation": 0,
-                                "sumDiscountAmountAggregation": 0,
-                                "unitDiscountAmountFullAggregation": 0,
-                                "sumDiscountAmountFullAggregation": 0,
-                                "unitPriceToPayAggregation": 9999,
-                                "sumPriceToPayAggregation": 9999
-                            }
+                            "configuredBundle": null,
+                            "configuredBundleItem": null,
+                            "salesUnit": null,
+                            "calculations": null,
+                            "selectedProductOptions": []
                         }
-                    ]
+                    ],
+                    "discounts": [],
+                    "shipments": []
                 }
-            },
-            "versions": []
+            }
         },
         "links": {
-            "self": "https://glue.69.demo-spryker.com/quote-requests/DE--21-2"
+            "self": "https://glue.de.69-new.demo-spryker.com/quote-requests/DE--21-10"
         }
     }
 }
@@ -193,15 +125,403 @@ Sample request: `POST https://glue.mysprykershop.com/quote-requests`
 </details>
 
 <details><summary>Response sample with customers</summary>
+
+```json
+{
+    "data": {
+        "type": "quote-requests",
+        "id": "DE--21-10",
+        "attributes": {
+            "quoteRequestReference": "DE--21-10",
+            "status": "draft",
+            "isLatestVersionVisible": true,
+            "createdAt": "2021-11-11 15:04:26",
+            "validUntil": null,
+            "versions": [
+                "DE--21-10-1"
+            ],
+            "shownVersion": {
+                "version": 1,
+                "versionReference": "DE--21-10-1",
+                "createdAt": "2021-11-11 15:04:27",
+                "metadata": [],
+                "cart": {
+                    "priceMode": "GROSS_MODE",
+                    "store": "DE",
+                    "currency": "EUR",
+                    "totals": {
+                        "expenseTotal": 0,
+                        "discountTotal": 0,
+                        "taxTotal": {
+                            "tax_rate": null,
+                            "amount": 5416
+                        },
+                        "subtotal": 82786,
+                        "grandTotal": 82786,
+                        "priceToPay": 82786
+                    },
+                    "billingAddress": null,
+                    "items": [
+                        {
+                            "groupKey": "089_29634947",
+                            "productOfferReference": null,
+                            "merchantReference": null,
+                            "sku": "089_29634947",
+                            "quantity": 2,
+                            "abstractSku": "089",
+                            "amount": null,
+                            "configuredBundle": null,
+                            "configuredBundleItem": null,
+                            "salesUnit": null,
+                            "calculations": null,
+                            "selectedProductOptions": []
+                        }
+                    ],
+                    "discounts": [],
+                    "shipments": []
+                }
+            }
+        },
+        "links": {
+            "self": "https://glue.de.69-new.demo-spryker.com/quote-requests/DE--21-10?include=customers"
+        },
+        "relationships": {
+            "customers": {
+                "data": [
+                    {
+                        "type": "customers",
+                        "id": "DE--21"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "customers",
+            "id": "DE--21",
+            "attributes": {
+                "firstName": "Sonia",
+                "lastName": "Wagner",
+                "email": "sonia@spryker.com",
+                "gender": "Female",
+                "dateOfBirth": null,
+                "salutation": "Ms",
+                "createdAt": "2021-11-09 12:57:02.000000",
+                "updatedAt": "2021-11-09 12:57:02.000000"
+            },
+            "links": {
+                "self": "https://glue.de.69-new.demo-spryker.com/customers/DE--21"
+            }
+        }
+    ]
+}
+```
+
 </details>
 
 <details><summary>Response sample with company-users</summary>
+
+```json
+{
+    "data": {
+        "type": "quote-requests",
+        "id": "DE--21-10",
+        "attributes": {
+            "quoteRequestReference": "DE--21-10",
+            "status": "draft",
+            "isLatestVersionVisible": true,
+            "createdAt": "2021-11-11 15:05:45",
+            "validUntil": null,
+            "versions": [
+                "DE--21-10-1"
+            ],
+            "shownVersion": {
+                "version": 1,
+                "versionReference": "DE--21-10-1",
+                "createdAt": "2021-11-11 15:05:46",
+                "metadata": [],
+                "cart": {
+                    "priceMode": "GROSS_MODE",
+                    "store": "DE",
+                    "currency": "EUR",
+                    "totals": {
+                        "expenseTotal": 0,
+                        "discountTotal": 0,
+                        "taxTotal": {
+                            "tax_rate": null,
+                            "amount": 5416
+                        },
+                        "subtotal": 82786,
+                        "grandTotal": 82786,
+                        "priceToPay": 82786
+                    },
+                    "billingAddress": null,
+                    "items": [
+                        {
+                            "groupKey": "089_29634947",
+                            "productOfferReference": null,
+                            "merchantReference": null,
+                            "sku": "089_29634947",
+                            "quantity": 2,
+                            "abstractSku": "089",
+                            "amount": null,
+                            "configuredBundle": null,
+                            "configuredBundleItem": null,
+                            "salesUnit": null,
+                            "calculations": null,
+                            "selectedProductOptions": []
+                        }
+                    ],
+                    "discounts": [],
+                    "shipments": []
+                }
+            }
+        },
+        "links": {
+            "self": "https://glue.de.69-new.demo-spryker.com/quote-requests/DE--21-10?include=company-users"
+        },
+        "relationships": {
+            "company-users": {
+                "data": [
+                    {
+                        "type": "company-users",
+                        "id": "ebf4b55a-cab0-5ed0-8fb7-525a3eeedeac"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "company-users",
+            "id": "ebf4b55a-cab0-5ed0-8fb7-525a3eeedeac",
+            "attributes": {
+                "isActive": true,
+                "isDefault": false
+            },
+            "links": {
+                "self": "https://glue.de.69-new.demo-spryker.com/company-users/ebf4b55a-cab0-5ed0-8fb7-525a3eeedeac"
+            }
+        }
+    ]
+}
+```
+
 </details>
 
 <details><summary>Response sample with company-business-units</summary>
+
+```json
+{
+    "data": {
+        "type": "quote-requests",
+        "id": "DE--21-10",
+        "attributes": {
+            "quoteRequestReference": "DE--21-10",
+            "status": "draft",
+            "isLatestVersionVisible": true,
+            "createdAt": "2021-11-11 15:06:38",
+            "validUntil": null,
+            "versions": [
+                "DE--21-10-1"
+            ],
+            "shownVersion": {
+                "version": 1,
+                "versionReference": "DE--21-10-1",
+                "createdAt": "2021-11-11 15:06:39",
+                "metadata": [],
+                "cart": {
+                    "priceMode": "GROSS_MODE",
+                    "store": "DE",
+                    "currency": "EUR",
+                    "totals": {
+                        "expenseTotal": 0,
+                        "discountTotal": 0,
+                        "taxTotal": {
+                            "tax_rate": null,
+                            "amount": 5416
+                        },
+                        "subtotal": 82786,
+                        "grandTotal": 82786,
+                        "priceToPay": 82786
+                    },
+                    "billingAddress": null,
+                    "items": [
+                        {
+                            "groupKey": "089_29634947",
+                            "productOfferReference": null,
+                            "merchantReference": null,
+                            "sku": "089_29634947",
+                            "quantity": 2,
+                            "abstractSku": "089",
+                            "amount": null,
+                            "configuredBundle": null,
+                            "configuredBundleItem": null,
+                            "salesUnit": null,
+                            "calculations": null,
+                            "selectedProductOptions": []
+                        }
+                    ],
+                    "discounts": [],
+                    "shipments": []
+                }
+            }
+        },
+        "links": {
+            "self": "https://glue.de.69-new.demo-spryker.com/quote-requests/DE--21-10?include=company-business-units"
+        },
+        "relationships": {
+            "company-business-units": {
+                "data": [
+                    {
+                        "type": "company-business-units",
+                        "id": "5b9c6fc4-bf5d-5b53-9ca9-1916657e6fb2"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "company-business-units",
+            "id": "5b9c6fc4-bf5d-5b53-9ca9-1916657e6fb2",
+            "attributes": {
+                "defaultBillingAddress": null,
+                "name": "Spryker Systems HR department",
+                "email": "HR@spryker.com",
+                "phone": "4902890031",
+                "externalUrl": "",
+                "bic": "",
+                "iban": ""
+            },
+            "links": {
+                "self": "https://glue.de.69-new.demo-spryker.com/company-business-units/5b9c6fc4-bf5d-5b53-9ca9-1916657e6fb2"
+            }
+        }
+    ]
+}
+```
+
 </details>
 
 <details><summary>Response sample with concrete-products</summary>
+
+```json
+{
+    "data": {
+        "type": "quote-requests",
+        "id": "DE--21-10",
+        "attributes": {
+            "quoteRequestReference": "DE--21-10",
+            "status": "draft",
+            "isLatestVersionVisible": true,
+            "createdAt": "2021-11-11 15:07:09",
+            "validUntil": null,
+            "versions": [
+                "DE--21-10-1"
+            ],
+            "shownVersion": {
+                "version": 1,
+                "versionReference": "DE--21-10-1",
+                "createdAt": "2021-11-11 15:07:10",
+                "metadata": [],
+                "cart": {
+                    "priceMode": "GROSS_MODE",
+                    "store": "DE",
+                    "currency": "EUR",
+                    "totals": {
+                        "expenseTotal": 0,
+                        "discountTotal": 0,
+                        "taxTotal": {
+                            "tax_rate": null,
+                            "amount": 5416
+                        },
+                        "subtotal": 82786,
+                        "grandTotal": 82786,
+                        "priceToPay": 82786
+                    },
+                    "billingAddress": null,
+                    "items": [
+                        {
+                            "groupKey": "089_29634947",
+                            "productOfferReference": null,
+                            "merchantReference": null,
+                            "sku": "089_29634947",
+                            "quantity": 2,
+                            "abstractSku": "089",
+                            "amount": null,
+                            "configuredBundle": null,
+                            "configuredBundleItem": null,
+                            "salesUnit": null,
+                            "calculations": null,
+                            "selectedProductOptions": []
+                        }
+                    ],
+                    "discounts": [],
+                    "shipments": []
+                }
+            }
+        },
+        "links": {
+            "self": "https://glue.de.69-new.demo-spryker.com/quote-requests/DE--21-10?include=concrete-products"
+        },
+        "relationships": {
+            "concrete-products": {
+                "data": [
+                    {
+                        "type": "concrete-products",
+                        "id": "089_29634947"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "concrete-products",
+            "id": "089_29634947",
+            "attributes": {
+                "sku": "089_29634947",
+                "isDiscontinued": false,
+                "discontinuedNote": null,
+                "averageRating": null,
+                "reviewCount": 0,
+                "productAbstractSku": "089",
+                "name": "Sony SWR12",
+                "description": "Be more you SmartBand 2 keeps an eye on your pulse and stress level, checking how your energy rises and falls. Then you can see what keeps you calm, what makes you excited and everything in between. So you can start doing more of what makes you, you. With an inbuilt heart rate monitor, the SmartBand 2 constantly checks your pulse, whether you’re on the move or sitting at a desk. See what activities raise your heart rate, and how your heart returns to its normal resting rate. Walking, running or just rushing between meetings. However you move, the SmartBand 2 captures it all so you can see how active you’ve been. Even while you sleep the tracker is still working hard, monitoring how long and how sound your zzz really is. Check SmartBand 2 data from the past week, month, year and beyond on the Lifelog app. View on the timeline alongside other Lifelog entries, including events, photos and music. See how different activities, like a holiday or listening to your favourite tune, can alter your pulse and stress levels and learn how to balance your life.",
+                "attributes": {
+                    "processor_cores": "2",
+                    "weight": "63.5 g",
+                    "clock_mode": "12h",
+                    "internal_ram": "512 MB",
+                    "brand": "Sony",
+                    "color": "Black"
+                },
+                "superAttributesDefinition": [
+                    "color"
+                ],
+                "metaTitle": "Sony SWR12",
+                "metaKeywords": "Sony,Smart Electronics",
+                "metaDescription": "Be more you SmartBand 2 keeps an eye on your pulse and stress level, checking how your energy rises and falls. Then you can see what keeps you calm, what m",
+                "attributeNames": {
+                    "processor_cores": "Processor cores",
+                    "weight": "Weight",
+                    "clock_mode": "Clock mode",
+                    "internal_ram": "Internal RAM",
+                    "brand": "Brand",
+                    "color": "Color"
+                },
+                "productConfigurationInstance": null
+            },
+            "links": {
+                "self": "https://glue.de.69-new.demo-spryker.com/concrete-products/089_29634947"
+            }
+        }
+    ]
+}
+```
+
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -242,284 +562,473 @@ To retrieve all requests for quote for a customer, send the following request:
 |---|---|---|
 | include | Adds resource relationships to the request. | <div><ul><li>customers</li><li>company-users</li><li>company-business-units</li><li>concrete-products</li></ul></div> |
 
-Sample request: `POST https://glue.mysprykershop.com/quote-requests`
+Sample request: `GET https://glue.mysprykershop.com/quote-requests`
 
 <details><summary>Response sample</summary>
 
 ```json
 {
-    "data": [
-        {
-            "type": "quote-requests",
-            "id": "DE--21-2",
-            "attributes": {
-                "status": "draft",
-                "quoteRequestReference": "DE--21-2",
-                "createdAt": "2021-07-26 16:13:14.000000",
-                "validUntil": null,
-                "shownVersion": {
-                    "version": 1,
-                    "versionReference": "DE--21-2-1",
-                    "createdAt": null,
-                    "meta": {
-                        "purchase_order_number": "228",
-                        "delivery_date": "2021-07-31",
-                        "note": "consider the quotation request"
-                    },
-                    "cart": {
-                        "priceMode": "GROSS_MODE",
-                        "store": "DE",
-                        "currency": "EUR",
-                        "totals": {
-                            "expenseTotal": 0,
-                            "discountTotal": 0,
-                            "taxTotal": 24619,
-                            "subtotal": 154194,
-                            "grandTotal": 154194,
-                            "priceToPay": 154194
+    "data": {
+        "type": "quote-requests",
+        "id": "DE--21-10",
+        "attributes": {
+            "quoteRequestReference": "DE--21-10",
+            "status": "draft",
+            "isLatestVersionVisible": true,
+            "createdAt": "2021-11-11 15:00:10",
+            "validUntil": null,
+            "versions": [
+                "DE--21-10-1"
+            ],
+            "shownVersion": {
+                "version": 1,
+                "versionReference": "DE--21-10-1",
+                "createdAt": "2021-11-11 15:00:11",
+                "metadata": [],
+                "cart": {
+                    "priceMode": "GROSS_MODE",
+                    "store": "DE",
+                    "currency": "EUR",
+                    "totals": {
+                        "expenseTotal": 0,
+                        "discountTotal": 0,
+                        "taxTotal": {
+                            "tax_rate": null,
+                            "amount": 5416
                         },
-                        "billingAddress": null,
-                        "discounts": [],
-                        "shipments": [],
-                        "items": [
-                            {
-                                "sku": "023_21758366",
-                                "quantity": 5,
-                                "groupKey": "023_21758366",
-                                "abstractSku": "023",
-                                "amount": null,
-                                "calculations": {
-                                    "unitPrice": 26723,
-                                    "sumPrice": 133615,
-                                    "taxRate": 19,
-                                    "unitNetPrice": 0,
-                                    "sumNetPrice": 0,
-                                    "unitGrossPrice": 26723,
-                                    "sumGrossPrice": 133615,
-                                    "unitTaxAmountFullAggregation": 4267,
-                                    "sumTaxAmountFullAggregation": 21333,
-                                    "sumSubtotalAggregation": 133615,
-                                    "unitSubtotalAggregation": 26723,
-                                    "unitProductOptionPriceAggregation": 0,
-                                    "sumProductOptionPriceAggregation": 0,
-                                    "unitDiscountAmountAggregation": 0,
-                                    "sumDiscountAmountAggregation": 0,
-                                    "unitDiscountAmountFullAggregation": 0,
-                                    "sumDiscountAmountFullAggregation": 0,
-                                    "unitPriceToPayAggregation": 26723,
-                                    "sumPriceToPayAggregation": 133615
-                                }
-                            },
-                            {
-                                "sku": "020_21081478",
-                                "quantity": "1",
-                                "groupKey": "020_21081478",
-                                "abstractSku": "020",
-                                "amount": null,
-                                "calculations": {
-                                    "unitPrice": 10580,
-                                    "sumPrice": 10580,
-                                    "taxRate": 19,
-                                    "unitNetPrice": 0,
-                                    "sumNetPrice": 0,
-                                    "unitGrossPrice": 10580,
-                                    "sumGrossPrice": 10580,
-                                    "unitTaxAmountFullAggregation": 1689,
-                                    "sumTaxAmountFullAggregation": 1690,
-                                    "sumSubtotalAggregation": 10580,
-                                    "unitSubtotalAggregation": 10580,
-                                    "unitProductOptionPriceAggregation": 0,
-                                    "sumProductOptionPriceAggregation": 0,
-                                    "unitDiscountAmountAggregation": 0,
-                                    "sumDiscountAmountAggregation": 0,
-                                    "unitDiscountAmountFullAggregation": 0,
-                                    "sumDiscountAmountFullAggregation": 0,
-                                    "unitPriceToPayAggregation": 10580,
-                                    "sumPriceToPayAggregation": 10580
-                                }
-                            },
-                            {
-                                "sku": "009_30692991",
-                                "quantity": "1",
-                                "groupKey": "009_30692991",
-                                "abstractSku": "009",
-                                "amount": null,
-                                "calculations": {
-                                    "unitPrice": 9999,
-                                    "sumPrice": 9999,
-                                    "taxRate": 19,
-                                    "unitNetPrice": 0,
-                                    "sumNetPrice": 0,
-                                    "unitGrossPrice": 9999,
-                                    "sumGrossPrice": 9999,
-                                    "unitTaxAmountFullAggregation": 1596,
-                                    "sumTaxAmountFullAggregation": 1596,
-                                    "sumSubtotalAggregation": 9999,
-                                    "unitSubtotalAggregation": 9999,
-                                    "unitProductOptionPriceAggregation": 0,
-                                    "sumProductOptionPriceAggregation": 0,
-                                    "unitDiscountAmountAggregation": 0,
-                                    "sumDiscountAmountAggregation": 0,
-                                    "unitDiscountAmountFullAggregation": 0,
-                                    "sumDiscountAmountFullAggregation": 0,
-                                    "unitPriceToPayAggregation": 9999,
-                                    "sumPriceToPayAggregation": 9999
-                                }
-                            }
-                        ]
-                    }
-                },
-                "versions": []
-            },
-            "links": {
-                "self": "https://glue.69.demo-spryker.com/quote-requests/DE--21-2"
+                        "subtotal": 82786,
+                        "grandTotal": 82786,
+                        "priceToPay": 82786
+                    },
+                    "billingAddress": null,
+                    "items": [
+                        {
+                            "groupKey": "089_29634947",
+                            "productOfferReference": null,
+                            "merchantReference": null,
+                            "sku": "089_29634947",
+                            "quantity": 2,
+                            "abstractSku": "089",
+                            "amount": null,
+                            "configuredBundle": null,
+                            "configuredBundleItem": null,
+                            "salesUnit": null,
+                            "calculations": null,
+                            "selectedProductOptions": []
+                        }
+                    ],
+                    "discounts": [],
+                    "shipments": []
+                }
             }
         },
-        {
-            "type": "quote-requests",
-            "id": "DE--21-1",
-            "attributes": {
-                "status": "draft",
-                "quoteRequestReference": "DE--21-1",
-                "createdAt": "2021-07-26 16:12:42.000000",
-                "validUntil": null,
-                "shownVersion": {
-                    "version": 1,
-                    "versionReference": "DE--21-1-1",
-                    "createdAt": null,
-                    "meta": {
-                        "purchase_order_number": "228",
-                        "delivery_date": "2021-07-31",
-                        "note": "consider the quotation request"
-                    },
-                    "cart": {
-                        "priceMode": "GROSS_MODE",
-                        "store": "DE",
-                        "currency": "EUR",
-                        "totals": {
-                            "expenseTotal": 0,
-                            "discountTotal": 0,
-                            "taxTotal": 24619,
-                            "subtotal": 154194,
-                            "grandTotal": 154194,
-                            "priceToPay": 154194
-                        },
-                        "billingAddress": null,
-                        "discounts": [],
-                        "shipments": [],
-                        "items": [
-                            {
-                                "sku": "023_21758366",
-                                "quantity": 5,
-                                "groupKey": "023_21758366",
-                                "abstractSku": "023",
-                                "amount": null,
-                                "calculations": {
-                                    "unitPrice": 26723,
-                                    "sumPrice": 133615,
-                                    "taxRate": 19,
-                                    "unitNetPrice": 0,
-                                    "sumNetPrice": 0,
-                                    "unitGrossPrice": 26723,
-                                    "sumGrossPrice": 133615,
-                                    "unitTaxAmountFullAggregation": 4267,
-                                    "sumTaxAmountFullAggregation": 21333,
-                                    "sumSubtotalAggregation": 133615,
-                                    "unitSubtotalAggregation": 26723,
-                                    "unitProductOptionPriceAggregation": 0,
-                                    "sumProductOptionPriceAggregation": 0,
-                                    "unitDiscountAmountAggregation": 0,
-                                    "sumDiscountAmountAggregation": 0,
-                                    "unitDiscountAmountFullAggregation": 0,
-                                    "sumDiscountAmountFullAggregation": 0,
-                                    "unitPriceToPayAggregation": 26723,
-                                    "sumPriceToPayAggregation": 133615
-                                }
-                            },
-                            {
-                                "sku": "020_21081478",
-                                "quantity": "1",
-                                "groupKey": "020_21081478",
-                                "abstractSku": "020",
-                                "amount": null,
-                                "calculations": {
-                                    "unitPrice": 10580,
-                                    "sumPrice": 10580,
-                                    "taxRate": 19,
-                                    "unitNetPrice": 0,
-                                    "sumNetPrice": 0,
-                                    "unitGrossPrice": 10580,
-                                    "sumGrossPrice": 10580,
-                                    "unitTaxAmountFullAggregation": 1689,
-                                    "sumTaxAmountFullAggregation": 1690,
-                                    "sumSubtotalAggregation": 10580,
-                                    "unitSubtotalAggregation": 10580,
-                                    "unitProductOptionPriceAggregation": 0,
-                                    "sumProductOptionPriceAggregation": 0,
-                                    "unitDiscountAmountAggregation": 0,
-                                    "sumDiscountAmountAggregation": 0,
-                                    "unitDiscountAmountFullAggregation": 0,
-                                    "sumDiscountAmountFullAggregation": 0,
-                                    "unitPriceToPayAggregation": 10580,
-                                    "sumPriceToPayAggregation": 10580
-                                }
-                            },
-                            {
-                                "sku": "009_30692991",
-                                "quantity": "1",
-                                "groupKey": "009_30692991",
-                                "abstractSku": "009",
-                                "amount": null,
-                                "calculations": {
-                                    "unitPrice": 9999,
-                                    "sumPrice": 9999,
-                                    "taxRate": 19,
-                                    "unitNetPrice": 0,
-                                    "sumNetPrice": 0,
-                                    "unitGrossPrice": 9999,
-                                    "sumGrossPrice": 9999,
-                                    "unitTaxAmountFullAggregation": 1596,
-                                    "sumTaxAmountFullAggregation": 1596,
-                                    "sumSubtotalAggregation": 9999,
-                                    "unitSubtotalAggregation": 9999,
-                                    "unitProductOptionPriceAggregation": 0,
-                                    "sumProductOptionPriceAggregation": 0,
-                                    "unitDiscountAmountAggregation": 0,
-                                    "sumDiscountAmountAggregation": 0,
-                                    "unitDiscountAmountFullAggregation": 0,
-                                    "sumDiscountAmountFullAggregation": 0,
-                                    "unitPriceToPayAggregation": 9999,
-                                    "sumPriceToPayAggregation": 9999
-                                }
-                            }
-                        ]
-                    }
-                },
-                "versions": []
-            },
-            "links": {
-                "self": "https://glue.69.demo-spryker.com/quote-requests/DE--21-1"
-            }
+        "links": {
+            "self": "https://glue.de.69-new.demo-spryker.com/quote-requests/DE--21-10"
         }
-    ],
-    "links": {
-        "self": "https://glue.69.demo-spryker.com/quote-requests"
     }
 }
 ```
 
 </details>
+
 <details><summary>Response sample with customers</summary>
+
+```json
+{
+    "data": {
+        "type": "quote-requests",
+        "id": "DE--21-10",
+        "attributes": {
+            "quoteRequestReference": "DE--21-10",
+            "status": "draft",
+            "isLatestVersionVisible": true,
+            "createdAt": "2021-11-11 15:04:26",
+            "validUntil": null,
+            "versions": [
+                "DE--21-10-1"
+            ],
+            "shownVersion": {
+                "version": 1,
+                "versionReference": "DE--21-10-1",
+                "createdAt": "2021-11-11 15:04:27",
+                "metadata": [],
+                "cart": {
+                    "priceMode": "GROSS_MODE",
+                    "store": "DE",
+                    "currency": "EUR",
+                    "totals": {
+                        "expenseTotal": 0,
+                        "discountTotal": 0,
+                        "taxTotal": {
+                            "tax_rate": null,
+                            "amount": 5416
+                        },
+                        "subtotal": 82786,
+                        "grandTotal": 82786,
+                        "priceToPay": 82786
+                    },
+                    "billingAddress": null,
+                    "items": [
+                        {
+                            "groupKey": "089_29634947",
+                            "productOfferReference": null,
+                            "merchantReference": null,
+                            "sku": "089_29634947",
+                            "quantity": 2,
+                            "abstractSku": "089",
+                            "amount": null,
+                            "configuredBundle": null,
+                            "configuredBundleItem": null,
+                            "salesUnit": null,
+                            "calculations": null,
+                            "selectedProductOptions": []
+                        }
+                    ],
+                    "discounts": [],
+                    "shipments": []
+                }
+            }
+        },
+        "links": {
+            "self": "https://glue.de.69-new.demo-spryker.com/quote-requests/DE--21-10?include=customers"
+        },
+        "relationships": {
+            "customers": {
+                "data": [
+                    {
+                        "type": "customers",
+                        "id": "DE--21"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "customers",
+            "id": "DE--21",
+            "attributes": {
+                "firstName": "Sonia",
+                "lastName": "Wagner",
+                "email": "sonia@spryker.com",
+                "gender": "Female",
+                "dateOfBirth": null,
+                "salutation": "Ms",
+                "createdAt": "2021-11-09 12:57:02.000000",
+                "updatedAt": "2021-11-09 12:57:02.000000"
+            },
+            "links": {
+                "self": "https://glue.de.69-new.demo-spryker.com/customers/DE--21"
+            }
+        }
+    ]
+}
+```
 
 </details>
 
 <details><summary>Response sample with company-users</summary>
+
+```json
+{
+    "data": {
+        "type": "quote-requests",
+        "id": "DE--21-10",
+        "attributes": {
+            "quoteRequestReference": "DE--21-10",
+            "status": "draft",
+            "isLatestVersionVisible": true,
+            "createdAt": "2021-11-11 15:05:45",
+            "validUntil": null,
+            "versions": [
+                "DE--21-10-1"
+            ],
+            "shownVersion": {
+                "version": 1,
+                "versionReference": "DE--21-10-1",
+                "createdAt": "2021-11-11 15:05:46",
+                "metadata": [],
+                "cart": {
+                    "priceMode": "GROSS_MODE",
+                    "store": "DE",
+                    "currency": "EUR",
+                    "totals": {
+                        "expenseTotal": 0,
+                        "discountTotal": 0,
+                        "taxTotal": {
+                            "tax_rate": null,
+                            "amount": 5416
+                        },
+                        "subtotal": 82786,
+                        "grandTotal": 82786,
+                        "priceToPay": 82786
+                    },
+                    "billingAddress": null,
+                    "items": [
+                        {
+                            "groupKey": "089_29634947",
+                            "productOfferReference": null,
+                            "merchantReference": null,
+                            "sku": "089_29634947",
+                            "quantity": 2,
+                            "abstractSku": "089",
+                            "amount": null,
+                            "configuredBundle": null,
+                            "configuredBundleItem": null,
+                            "salesUnit": null,
+                            "calculations": null,
+                            "selectedProductOptions": []
+                        }
+                    ],
+                    "discounts": [],
+                    "shipments": []
+                }
+            }
+        },
+        "links": {
+            "self": "https://glue.de.69-new.demo-spryker.com/quote-requests/DE--21-10?include=company-users"
+        },
+        "relationships": {
+            "company-users": {
+                "data": [
+                    {
+                        "type": "company-users",
+                        "id": "ebf4b55a-cab0-5ed0-8fb7-525a3eeedeac"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "company-users",
+            "id": "ebf4b55a-cab0-5ed0-8fb7-525a3eeedeac",
+            "attributes": {
+                "isActive": true,
+                "isDefault": false
+            },
+            "links": {
+                "self": "https://glue.de.69-new.demo-spryker.com/company-users/ebf4b55a-cab0-5ed0-8fb7-525a3eeedeac"
+            }
+        }
+    ]
+}
+```
+
 </details>
 
 <details><summary>Response sample with company-business-units</summary>
+
+```json
+{
+    "data": {
+        "type": "quote-requests",
+        "id": "DE--21-10",
+        "attributes": {
+            "quoteRequestReference": "DE--21-10",
+            "status": "draft",
+            "isLatestVersionVisible": true,
+            "createdAt": "2021-11-11 15:06:38",
+            "validUntil": null,
+            "versions": [
+                "DE--21-10-1"
+            ],
+            "shownVersion": {
+                "version": 1,
+                "versionReference": "DE--21-10-1",
+                "createdAt": "2021-11-11 15:06:39",
+                "metadata": [],
+                "cart": {
+                    "priceMode": "GROSS_MODE",
+                    "store": "DE",
+                    "currency": "EUR",
+                    "totals": {
+                        "expenseTotal": 0,
+                        "discountTotal": 0,
+                        "taxTotal": {
+                            "tax_rate": null,
+                            "amount": 5416
+                        },
+                        "subtotal": 82786,
+                        "grandTotal": 82786,
+                        "priceToPay": 82786
+                    },
+                    "billingAddress": null,
+                    "items": [
+                        {
+                            "groupKey": "089_29634947",
+                            "productOfferReference": null,
+                            "merchantReference": null,
+                            "sku": "089_29634947",
+                            "quantity": 2,
+                            "abstractSku": "089",
+                            "amount": null,
+                            "configuredBundle": null,
+                            "configuredBundleItem": null,
+                            "salesUnit": null,
+                            "calculations": null,
+                            "selectedProductOptions": []
+                        }
+                    ],
+                    "discounts": [],
+                    "shipments": []
+                }
+            }
+        },
+        "links": {
+            "self": "https://glue.de.69-new.demo-spryker.com/quote-requests/DE--21-10?include=company-business-units"
+        },
+        "relationships": {
+            "company-business-units": {
+                "data": [
+                    {
+                        "type": "company-business-units",
+                        "id": "5b9c6fc4-bf5d-5b53-9ca9-1916657e6fb2"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "company-business-units",
+            "id": "5b9c6fc4-bf5d-5b53-9ca9-1916657e6fb2",
+            "attributes": {
+                "defaultBillingAddress": null,
+                "name": "Spryker Systems HR department",
+                "email": "HR@spryker.com",
+                "phone": "4902890031",
+                "externalUrl": "",
+                "bic": "",
+                "iban": ""
+            },
+            "links": {
+                "self": "https://glue.de.69-new.demo-spryker.com/company-business-units/5b9c6fc4-bf5d-5b53-9ca9-1916657e6fb2"
+            }
+        }
+    ]
+}
+```
+
 </details>
 
 <details><summary>Response sample with concrete-products</summary>
+
+```json
+{
+    "data": {
+        "type": "quote-requests",
+        "id": "DE--21-10",
+        "attributes": {
+            "quoteRequestReference": "DE--21-10",
+            "status": "draft",
+            "isLatestVersionVisible": true,
+            "createdAt": "2021-11-11 15:07:09",
+            "validUntil": null,
+            "versions": [
+                "DE--21-10-1"
+            ],
+            "shownVersion": {
+                "version": 1,
+                "versionReference": "DE--21-10-1",
+                "createdAt": "2021-11-11 15:07:10",
+                "metadata": [],
+                "cart": {
+                    "priceMode": "GROSS_MODE",
+                    "store": "DE",
+                    "currency": "EUR",
+                    "totals": {
+                        "expenseTotal": 0,
+                        "discountTotal": 0,
+                        "taxTotal": {
+                            "tax_rate": null,
+                            "amount": 5416
+                        },
+                        "subtotal": 82786,
+                        "grandTotal": 82786,
+                        "priceToPay": 82786
+                    },
+                    "billingAddress": null,
+                    "items": [
+                        {
+                            "groupKey": "089_29634947",
+                            "productOfferReference": null,
+                            "merchantReference": null,
+                            "sku": "089_29634947",
+                            "quantity": 2,
+                            "abstractSku": "089",
+                            "amount": null,
+                            "configuredBundle": null,
+                            "configuredBundleItem": null,
+                            "salesUnit": null,
+                            "calculations": null,
+                            "selectedProductOptions": []
+                        }
+                    ],
+                    "discounts": [],
+                    "shipments": []
+                }
+            }
+        },
+        "links": {
+            "self": "https://glue.de.69-new.demo-spryker.com/quote-requests/DE--21-10?include=concrete-products"
+        },
+        "relationships": {
+            "concrete-products": {
+                "data": [
+                    {
+                        "type": "concrete-products",
+                        "id": "089_29634947"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "concrete-products",
+            "id": "089_29634947",
+            "attributes": {
+                "sku": "089_29634947",
+                "isDiscontinued": false,
+                "discontinuedNote": null,
+                "averageRating": null,
+                "reviewCount": 0,
+                "productAbstractSku": "089",
+                "name": "Sony SWR12",
+                "description": "Be more you SmartBand 2 keeps an eye on your pulse and stress level, checking how your energy rises and falls. Then you can see what keeps you calm, what makes you excited and everything in between. So you can start doing more of what makes you, you. With an inbuilt heart rate monitor, the SmartBand 2 constantly checks your pulse, whether you’re on the move or sitting at a desk. See what activities raise your heart rate, and how your heart returns to its normal resting rate. Walking, running or just rushing between meetings. However you move, the SmartBand 2 captures it all so you can see how active you’ve been. Even while you sleep the tracker is still working hard, monitoring how long and how sound your zzz really is. Check SmartBand 2 data from the past week, month, year and beyond on the Lifelog app. View on the timeline alongside other Lifelog entries, including events, photos and music. See how different activities, like a holiday or listening to your favourite tune, can alter your pulse and stress levels and learn how to balance your life.",
+                "attributes": {
+                    "processor_cores": "2",
+                    "weight": "63.5 g",
+                    "clock_mode": "12h",
+                    "internal_ram": "512 MB",
+                    "brand": "Sony",
+                    "color": "Black"
+                },
+                "superAttributesDefinition": [
+                    "color"
+                ],
+                "metaTitle": "Sony SWR12",
+                "metaKeywords": "Sony,Smart Electronics",
+                "metaDescription": "Be more you SmartBand 2 keeps an eye on your pulse and stress level, checking how your energy rises and falls. Then you can see what keeps you calm, what m",
+                "attributeNames": {
+                    "processor_cores": "Processor cores",
+                    "weight": "Weight",
+                    "clock_mode": "Clock mode",
+                    "internal_ram": "Internal RAM",
+                    "brand": "Brand",
+                    "color": "Color"
+                },
+                "productConfigurationInstance": null
+            },
+            "links": {
+                "self": "https://glue.de.69-new.demo-spryker.com/concrete-products/089_29634947"
+            }
+        }
+    ]
+}
+```
+
 </details>
 
 ## Retrieve a request for quote
@@ -536,7 +1045,7 @@ To retrieve a request for quote for a customer, send the following request:
 |---|---|---|
 | include | Adds resource relationships to the request. | <div><ul><li>customers</li><li>company-users</li><li>company-business-units</li><li>concrete-products</li></ul></div> |
 
-Sample request: `GET https://glue.mysprykershop.com/quote-requests/DE--21-1`
+Sample request: `GET https://glue.mysprykershop.com/quote-requests/DE--21-10`
 
 Response
 
@@ -544,263 +1053,464 @@ Response
 
 ```json
 {
-    "data": [
-        {
-            "type": "quote-requests",
-            "id": "DE--21-2",
-            "attributes": {
-                "status": "draft",
-                "quoteRequestReference": "DE--21-2",
-                "createdAt": "2021-07-26 16:13:14.000000",
-                "validUntil": null,
-                "shownVersion": {
-                    "version": 1,
-                    "versionReference": "DE--21-2-1",
-                    "createdAt": null,
-                    "meta": {
-                        "purchase_order_number": "228",
-                        "delivery_date": "2021-07-31",
-                        "note": "consider the quotation request"
-                    },
-                    "cart": {
-                        "priceMode": "GROSS_MODE",
-                        "store": "DE",
-                        "currency": "EUR",
-                        "totals": {
-                            "expenseTotal": 0,
-                            "discountTotal": 0,
-                            "taxTotal": 24619,
-                            "subtotal": 154194,
-                            "grandTotal": 154194,
-                            "priceToPay": 154194
+    "data": {
+        "type": "quote-requests",
+        "id": "DE--21-10",
+        "attributes": {
+            "quoteRequestReference": "DE--21-10",
+            "status": "draft",
+            "isLatestVersionVisible": true,
+            "createdAt": "2021-11-11 15:00:10.000000",
+            "validUntil": null,
+            "versions": [
+                "DE--21-10-1"
+            ],
+            "shownVersion": {
+                "version": 1,
+                "versionReference": "DE--21-10-1",
+                "createdAt": "2021-11-11 15:00:11.000000",
+                "metadata": [],
+                "cart": {
+                    "priceMode": "GROSS_MODE",
+                    "store": "DE",
+                    "currency": "EUR",
+                    "totals": {
+                        "expenseTotal": 0,
+                        "discountTotal": 0,
+                        "taxTotal": {
+                            "tax_rate": null,
+                            "amount": 5416
                         },
-                        "billingAddress": null,
-                        "discounts": [],
-                        "shipments": [],
-                        "items": [
-                            {
-                                "sku": "023_21758366",
-                                "quantity": 5,
-                                "groupKey": "023_21758366",
-                                "abstractSku": "023",
-                                "amount": null,
-                                "calculations": {
-                                    "unitPrice": 26723,
-                                    "sumPrice": 133615,
-                                    "taxRate": 19,
-                                    "unitNetPrice": 0,
-                                    "sumNetPrice": 0,
-                                    "unitGrossPrice": 26723,
-                                    "sumGrossPrice": 133615,
-                                    "unitTaxAmountFullAggregation": 4267,
-                                    "sumTaxAmountFullAggregation": 21333,
-                                    "sumSubtotalAggregation": 133615,
-                                    "unitSubtotalAggregation": 26723,
-                                    "unitProductOptionPriceAggregation": 0,
-                                    "sumProductOptionPriceAggregation": 0,
-                                    "unitDiscountAmountAggregation": 0,
-                                    "sumDiscountAmountAggregation": 0,
-                                    "unitDiscountAmountFullAggregation": 0,
-                                    "sumDiscountAmountFullAggregation": 0,
-                                    "unitPriceToPayAggregation": 26723,
-                                    "sumPriceToPayAggregation": 133615
-                                }
-                            },
-                            {
-                                "sku": "020_21081478",
-                                "quantity": "1",
-                                "groupKey": "020_21081478",
-                                "abstractSku": "020",
-                                "amount": null,
-                                "calculations": {
-                                    "unitPrice": 10580,
-                                    "sumPrice": 10580,
-                                    "taxRate": 19,
-                                    "unitNetPrice": 0,
-                                    "sumNetPrice": 0,
-                                    "unitGrossPrice": 10580,
-                                    "sumGrossPrice": 10580,
-                                    "unitTaxAmountFullAggregation": 1689,
-                                    "sumTaxAmountFullAggregation": 1690,
-                                    "sumSubtotalAggregation": 10580,
-                                    "unitSubtotalAggregation": 10580,
-                                    "unitProductOptionPriceAggregation": 0,
-                                    "sumProductOptionPriceAggregation": 0,
-                                    "unitDiscountAmountAggregation": 0,
-                                    "sumDiscountAmountAggregation": 0,
-                                    "unitDiscountAmountFullAggregation": 0,
-                                    "sumDiscountAmountFullAggregation": 0,
-                                    "unitPriceToPayAggregation": 10580,
-                                    "sumPriceToPayAggregation": 10580
-                                }
-                            },
-                            {
-                                "sku": "009_30692991",
-                                "quantity": "1",
-                                "groupKey": "009_30692991",
-                                "abstractSku": "009",
-                                "amount": null,
-                                "calculations": {
-                                    "unitPrice": 9999,
-                                    "sumPrice": 9999,
-                                    "taxRate": 19,
-                                    "unitNetPrice": 0,
-                                    "sumNetPrice": 0,
-                                    "unitGrossPrice": 9999,
-                                    "sumGrossPrice": 9999,
-                                    "unitTaxAmountFullAggregation": 1596,
-                                    "sumTaxAmountFullAggregation": 1596,
-                                    "sumSubtotalAggregation": 9999,
-                                    "unitSubtotalAggregation": 9999,
-                                    "unitProductOptionPriceAggregation": 0,
-                                    "sumProductOptionPriceAggregation": 0,
-                                    "unitDiscountAmountAggregation": 0,
-                                    "sumDiscountAmountAggregation": 0,
-                                    "unitDiscountAmountFullAggregation": 0,
-                                    "sumDiscountAmountFullAggregation": 0,
-                                    "unitPriceToPayAggregation": 9999,
-                                    "sumPriceToPayAggregation": 9999
-                                }
-                            }
-                        ]
-                    }
-                },
-                "versions": []
-            },
-            "links": {
-                "self": "https://glue.69.demo-spryker.com/quote-requests/DE--21-2"
+                        "subtotal": 82786,
+                        "grandTotal": 82786,
+                        "priceToPay": 82786
+                    },
+                    "billingAddress": null,
+                    "items": [
+                        {
+                            "groupKey": "089_29634947",
+                            "productOfferReference": null,
+                            "merchantReference": null,
+                            "sku": "089_29634947",
+                            "quantity": 2,
+                            "abstractSku": "089",
+                            "amount": null,
+                            "configuredBundle": null,
+                            "configuredBundleItem": null,
+                            "salesUnit": null,
+                            "calculations": null,
+                            "selectedProductOptions": []
+                        }
+                    ],
+                    "discounts": [],
+                    "shipments": []
+                }
             }
         },
-        {
-            "type": "quote-requests",
-            "id": "DE--21-1",
-            "attributes": {
-                "status": "draft",
-                "quoteRequestReference": "DE--21-1",
-                "createdAt": "2021-07-26 16:12:42.000000",
-                "validUntil": null,
-                "shownVersion": {
-                    "version": 1,
-                    "versionReference": "DE--21-1-1",
-                    "createdAt": null,
-                    "meta": {
-                        "purchase_order_number": "228",
-                        "delivery_date": "2021-07-31",
-                        "note": "consider the quotation request"
-                    },
-                    "cart": {
-                        "priceMode": "GROSS_MODE",
-                        "store": "DE",
-                        "currency": "EUR",
-                        "totals": {
-                            "expenseTotal": 0,
-                            "discountTotal": 0,
-                            "taxTotal": 24619,
-                            "subtotal": 154194,
-                            "grandTotal": 154194,
-                            "priceToPay": 154194
+        "links": {
+            "self": "https://glue.de.69-new.demo-spryker.com/quote-requests/DE--21-10"
+        }
+    }
+}
+```
+
+</details>
+
+<details><summary>Response sample with customers</summary>
+
+```json
+{
+    "data": {
+        "type": "quote-requests",
+        "id": "DE--21-10",
+        "attributes": {
+            "quoteRequestReference": "DE--21-10",
+            "status": "draft",
+            "isLatestVersionVisible": true,
+            "createdAt": "2021-11-11 15:00:10.000000",
+            "validUntil": null,
+            "versions": [
+                "DE--21-10-1"
+            ],
+            "shownVersion": {
+                "version": 1,
+                "versionReference": "DE--21-10-1",
+                "createdAt": "2021-11-11 15:00:11.000000",
+                "metadata": [],
+                "cart": {
+                    "priceMode": "GROSS_MODE",
+                    "store": "DE",
+                    "currency": "EUR",
+                    "totals": {
+                        "expenseTotal": 0,
+                        "discountTotal": 0,
+                        "taxTotal": {
+                            "tax_rate": null,
+                            "amount": 5416
                         },
-                        "billingAddress": null,
-                        "discounts": [],
-                        "shipments": [],
-                        "items": [
-                            {
-                                "sku": "023_21758366",
-                                "quantity": 5,
-                                "groupKey": "023_21758366",
-                                "abstractSku": "023",
-                                "amount": null,
-                                "calculations": {
-                                    "unitPrice": 26723,
-                                    "sumPrice": 133615,
-                                    "taxRate": 19,
-                                    "unitNetPrice": 0,
-                                    "sumNetPrice": 0,
-                                    "unitGrossPrice": 26723,
-                                    "sumGrossPrice": 133615,
-                                    "unitTaxAmountFullAggregation": 4267,
-                                    "sumTaxAmountFullAggregation": 21333,
-                                    "sumSubtotalAggregation": 133615,
-                                    "unitSubtotalAggregation": 26723,
-                                    "unitProductOptionPriceAggregation": 0,
-                                    "sumProductOptionPriceAggregation": 0,
-                                    "unitDiscountAmountAggregation": 0,
-                                    "sumDiscountAmountAggregation": 0,
-                                    "unitDiscountAmountFullAggregation": 0,
-                                    "sumDiscountAmountFullAggregation": 0,
-                                    "unitPriceToPayAggregation": 26723,
-                                    "sumPriceToPayAggregation": 133615
-                                }
-                            },
-                            {
-                                "sku": "020_21081478",
-                                "quantity": "1",
-                                "groupKey": "020_21081478",
-                                "abstractSku": "020",
-                                "amount": null,
-                                "calculations": {
-                                    "unitPrice": 10580,
-                                    "sumPrice": 10580,
-                                    "taxRate": 19,
-                                    "unitNetPrice": 0,
-                                    "sumNetPrice": 0,
-                                    "unitGrossPrice": 10580,
-                                    "sumGrossPrice": 10580,
-                                    "unitTaxAmountFullAggregation": 1689,
-                                    "sumTaxAmountFullAggregation": 1690,
-                                    "sumSubtotalAggregation": 10580,
-                                    "unitSubtotalAggregation": 10580,
-                                    "unitProductOptionPriceAggregation": 0,
-                                    "sumProductOptionPriceAggregation": 0,
-                                    "unitDiscountAmountAggregation": 0,
-                                    "sumDiscountAmountAggregation": 0,
-                                    "unitDiscountAmountFullAggregation": 0,
-                                    "sumDiscountAmountFullAggregation": 0,
-                                    "unitPriceToPayAggregation": 10580,
-                                    "sumPriceToPayAggregation": 10580
-                                }
-                            },
-                            {
-                                "sku": "009_30692991",
-                                "quantity": "1",
-                                "groupKey": "009_30692991",
-                                "abstractSku": "009",
-                                "amount": null,
-                                "calculations": {
-                                    "unitPrice": 9999,
-                                    "sumPrice": 9999,
-                                    "taxRate": 19,
-                                    "unitNetPrice": 0,
-                                    "sumNetPrice": 0,
-                                    "unitGrossPrice": 9999,
-                                    "sumGrossPrice": 9999,
-                                    "unitTaxAmountFullAggregation": 1596,
-                                    "sumTaxAmountFullAggregation": 1596,
-                                    "sumSubtotalAggregation": 9999,
-                                    "unitSubtotalAggregation": 9999,
-                                    "unitProductOptionPriceAggregation": 0,
-                                    "sumProductOptionPriceAggregation": 0,
-                                    "unitDiscountAmountAggregation": 0,
-                                    "sumDiscountAmountAggregation": 0,
-                                    "unitDiscountAmountFullAggregation": 0,
-                                    "sumDiscountAmountFullAggregation": 0,
-                                    "unitPriceToPayAggregation": 9999,
-                                    "sumPriceToPayAggregation": 9999
-                                }
-                            }
-                        ]
+                        "subtotal": 82786,
+                        "grandTotal": 82786,
+                        "priceToPay": 82786
+                    },
+                    "billingAddress": null,
+                    "items": [
+                        {
+                            "groupKey": "089_29634947",
+                            "productOfferReference": null,
+                            "merchantReference": null,
+                            "sku": "089_29634947",
+                            "quantity": 2,
+                            "abstractSku": "089",
+                            "amount": null,
+                            "configuredBundle": null,
+                            "configuredBundleItem": null,
+                            "salesUnit": null,
+                            "calculations": null,
+                            "selectedProductOptions": []
+                        }
+                    ],
+                    "discounts": [],
+                    "shipments": []
+                }
+            }
+        },
+        "links": {
+            "self": "https://glue.de.69-new.demo-spryker.com/quote-requests/DE--21-10?include=customers"
+        },
+        "relationships": {
+            "customers": {
+                "data": [
+                    {
+                        "type": "customers",
+                        "id": "DE--21"
                     }
-                },
-                "versions": []
-            },
-            "links": {
-                "self": "https://glue.69.demo-spryker.com/quote-requests/DE--21-1"
+                ]
             }
         }
-    ],
-    "links": {
-        "self": "https://glue.69.demo-spryker.com/quote-requests"
-    }
+    },
+    "included": [
+        {
+            "type": "customers",
+            "id": "DE--21",
+            "attributes": {
+                "firstName": "Sonia",
+                "lastName": "Wagner",
+                "email": "sonia@spryker.com",
+                "gender": "Female",
+                "dateOfBirth": null,
+                "salutation": "Ms",
+                "createdAt": "2021-11-09 12:57:02.000000",
+                "updatedAt": "2021-11-09 12:57:02.000000"
+            },
+            "links": {
+                "self": "https://glue.de.69-new.demo-spryker.com/customers/DE--21"
+            }
+        }
+    ]
+}
+```
+
+</details>
+
+<details><summary>Response sample with company-users</summary>
+
+```json
+{
+    "data": {
+        "type": "quote-requests",
+        "id": "DE--21-10",
+        "attributes": {
+            "quoteRequestReference": "DE--21-10",
+            "status": "draft",
+            "isLatestVersionVisible": true,
+            "createdAt": "2021-11-11 15:00:10.000000",
+            "validUntil": null,
+            "versions": [
+                "DE--21-10-1"
+            ],
+            "shownVersion": {
+                "version": 1,
+                "versionReference": "DE--21-10-1",
+                "createdAt": "2021-11-11 15:00:11.000000",
+                "metadata": [],
+                "cart": {
+                    "priceMode": "GROSS_MODE",
+                    "store": "DE",
+                    "currency": "EUR",
+                    "totals": {
+                        "expenseTotal": 0,
+                        "discountTotal": 0,
+                        "taxTotal": {
+                            "tax_rate": null,
+                            "amount": 5416
+                        },
+                        "subtotal": 82786,
+                        "grandTotal": 82786,
+                        "priceToPay": 82786
+                    },
+                    "billingAddress": null,
+                    "items": [
+                        {
+                            "groupKey": "089_29634947",
+                            "productOfferReference": null,
+                            "merchantReference": null,
+                            "sku": "089_29634947",
+                            "quantity": 2,
+                            "abstractSku": "089",
+                            "amount": null,
+                            "configuredBundle": null,
+                            "configuredBundleItem": null,
+                            "salesUnit": null,
+                            "calculations": null,
+                            "selectedProductOptions": []
+                        }
+                    ],
+                    "discounts": [],
+                    "shipments": []
+                }
+            }
+        },
+        "links": {
+            "self": "https://glue.de.69-new.demo-spryker.com/quote-requests/DE--21-10?include=company-users"
+        },
+        "relationships": {
+            "company-users": {
+                "data": [
+                    {
+                        "type": "company-users",
+                        "id": "ebf4b55a-cab0-5ed0-8fb7-525a3eeedeac"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "company-users",
+            "id": "ebf4b55a-cab0-5ed0-8fb7-525a3eeedeac",
+            "attributes": {
+                "isActive": true,
+                "isDefault": false
+            },
+            "links": {
+                "self": "https://glue.de.69-new.demo-spryker.com/company-users/ebf4b55a-cab0-5ed0-8fb7-525a3eeedeac"
+            }
+        }
+    ]
+}
+```
+
+</details>
+
+<details><summary>Response sample with company-business-units</summary>
+
+```json
+{
+    "data": {
+        "type": "quote-requests",
+        "id": "DE--21-10",
+        "attributes": {
+            "quoteRequestReference": "DE--21-10",
+            "status": "draft",
+            "isLatestVersionVisible": true,
+            "createdAt": "2021-11-11 15:00:10.000000",
+            "validUntil": null,
+            "versions": [
+                "DE--21-10-1"
+            ],
+            "shownVersion": {
+                "version": 1,
+                "versionReference": "DE--21-10-1",
+                "createdAt": "2021-11-11 15:00:11.000000",
+                "metadata": [],
+                "cart": {
+                    "priceMode": "GROSS_MODE",
+                    "store": "DE",
+                    "currency": "EUR",
+                    "totals": {
+                        "expenseTotal": 0,
+                        "discountTotal": 0,
+                        "taxTotal": {
+                            "tax_rate": null,
+                            "amount": 5416
+                        },
+                        "subtotal": 82786,
+                        "grandTotal": 82786,
+                        "priceToPay": 82786
+                    },
+                    "billingAddress": null,
+                    "items": [
+                        {
+                            "groupKey": "089_29634947",
+                            "productOfferReference": null,
+                            "merchantReference": null,
+                            "sku": "089_29634947",
+                            "quantity": 2,
+                            "abstractSku": "089",
+                            "amount": null,
+                            "configuredBundle": null,
+                            "configuredBundleItem": null,
+                            "salesUnit": null,
+                            "calculations": null,
+                            "selectedProductOptions": []
+                        }
+                    ],
+                    "discounts": [],
+                    "shipments": []
+                }
+            }
+        },
+        "links": {
+            "self": "https://glue.de.69-new.demo-spryker.com/quote-requests/DE--21-10?include=company-business-units"
+        },
+        "relationships": {
+            "company-business-units": {
+                "data": [
+                    {
+                        "type": "company-business-units",
+                        "id": "5b9c6fc4-bf5d-5b53-9ca9-1916657e6fb2"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "company-business-units",
+            "id": "5b9c6fc4-bf5d-5b53-9ca9-1916657e6fb2",
+            "attributes": {
+                "defaultBillingAddress": null,
+                "name": "Spryker Systems HR department",
+                "email": "HR@spryker.com",
+                "phone": "4902890031",
+                "externalUrl": "",
+                "bic": "",
+                "iban": ""
+            },
+            "links": {
+                "self": "https://glue.de.69-new.demo-spryker.com/company-business-units/5b9c6fc4-bf5d-5b53-9ca9-1916657e6fb2"
+            }
+        }
+    ]
+}
+```
+
+</details>
+
+<details><summary>Response sample with concrete-products</summary>
+
+```json
+{
+    "data": {
+        "type": "quote-requests",
+        "id": "DE--21-10",
+        "attributes": {
+            "quoteRequestReference": "DE--21-10",
+            "status": "draft",
+            "isLatestVersionVisible": true,
+            "createdAt": "2021-11-11 15:00:10.000000",
+            "validUntil": null,
+            "versions": [
+                "DE--21-10-1"
+            ],
+            "shownVersion": {
+                "version": 1,
+                "versionReference": "DE--21-10-1",
+                "createdAt": "2021-11-11 15:00:11.000000",
+                "metadata": [],
+                "cart": {
+                    "priceMode": "GROSS_MODE",
+                    "store": "DE",
+                    "currency": "EUR",
+                    "totals": {
+                        "expenseTotal": 0,
+                        "discountTotal": 0,
+                        "taxTotal": {
+                            "tax_rate": null,
+                            "amount": 5416
+                        },
+                        "subtotal": 82786,
+                        "grandTotal": 82786,
+                        "priceToPay": 82786
+                    },
+                    "billingAddress": null,
+                    "items": [
+                        {
+                            "groupKey": "089_29634947",
+                            "productOfferReference": null,
+                            "merchantReference": null,
+                            "sku": "089_29634947",
+                            "quantity": 2,
+                            "abstractSku": "089",
+                            "amount": null,
+                            "configuredBundle": null,
+                            "configuredBundleItem": null,
+                            "salesUnit": null,
+                            "calculations": null,
+                            "selectedProductOptions": []
+                        }
+                    ],
+                    "discounts": [],
+                    "shipments": []
+                }
+            }
+        },
+        "links": {
+            "self": "https://glue.de.69-new.demo-spryker.com/quote-requests/DE--21-10?include=concrete-products"
+        },
+        "relationships": {
+            "concrete-products": {
+                "data": [
+                    {
+                        "type": "concrete-products",
+                        "id": "089_29634947"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "concrete-products",
+            "id": "089_29634947",
+            "attributes": {
+                "sku": "089_29634947",
+                "isDiscontinued": false,
+                "discontinuedNote": null,
+                "averageRating": null,
+                "reviewCount": 0,
+                "productAbstractSku": "089",
+                "name": "Sony SWR12",
+                "description": "Be more you SmartBand 2 keeps an eye on your pulse and stress level, checking how your energy rises and falls. Then you can see what keeps you calm, what makes you excited and everything in between. So you can start doing more of what makes you, you. With an inbuilt heart rate monitor, the SmartBand 2 constantly checks your pulse, whether you’re on the move or sitting at a desk. See what activities raise your heart rate, and how your heart returns to its normal resting rate. Walking, running or just rushing between meetings. However you move, the SmartBand 2 captures it all so you can see how active you’ve been. Even while you sleep the tracker is still working hard, monitoring how long and how sound your zzz really is. Check SmartBand 2 data from the past week, month, year and beyond on the Lifelog app. View on the timeline alongside other Lifelog entries, including events, photos and music. See how different activities, like a holiday or listening to your favourite tune, can alter your pulse and stress levels and learn how to balance your life.",
+                "attributes": {
+                    "processor_cores": "2",
+                    "weight": "63.5 g",
+                    "clock_mode": "12h",
+                    "internal_ram": "512 MB",
+                    "brand": "Sony",
+                    "color": "Black"
+                },
+                "superAttributesDefinition": [
+                    "color"
+                ],
+                "metaTitle": "Sony SWR12",
+                "metaKeywords": "Sony,Smart Electronics",
+                "metaDescription": "Be more you SmartBand 2 keeps an eye on your pulse and stress level, checking how your energy rises and falls. Then you can see what keeps you calm, what m",
+                "attributeNames": {
+                    "processor_cores": "Processor cores",
+                    "weight": "Weight",
+                    "clock_mode": "Clock mode",
+                    "internal_ram": "Internal RAM",
+                    "brand": "Brand",
+                    "color": "Color"
+                },
+                "productConfigurationInstance": null
+            },
+            "links": {
+                "self": "https://glue.de.69-new.demo-spryker.com/concrete-products/089_29634947"
+            }
+        }
+    ]
 }
 ```
 
@@ -814,6 +1524,13 @@ Response
 | 002 | Access token is missing |
 | 101 | Cart with the given uuid is not found. |
 | 102 | Failed to add an item to cart. |
+| 1401 | Rest user is not a company user (wrong access token) |  
 | 4501 | Quote request is not found. |
-| 1401 | Rest user is not a company user (wrong access token) |
+| 5402 | Quote request reference is required.  |
 | 5403 | Cart is empty |
+| 5404 | Wrong Quote Request status for this operation.  |
+| 5405 | Quote Request could not be updated due to parallel-customer interaction.  |
+| 5406 | Something went wrong.  |
+| 5407 | Something went wrong with agent. |
+
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

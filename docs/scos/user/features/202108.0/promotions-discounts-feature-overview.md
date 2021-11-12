@@ -194,9 +194,21 @@ A product catalog manager defines calculation when [creating a voucher](/docs/sc
 ## Discount priority
 
 In cases when several discounts can apply to a customer order, a Back Office user can set the discount priorities. The discount priority is an integer value which defines the order in which the discounts are applied. 
+Discount prioritization behavior does not depend on the [discount type](#discount-types). For example, you might have the following priorities for different types:
 
-For example: [EXAMPLE] - non-exclusive discounts with priorities
-                      - exclusive discounts with priorities
+* Cart rule discount with priority 1
+* Voucher code discount with priority 2
+* Voucher code discount with priority 3
+* Cart rule discount with priority 4
+
+In this case, the discounts are applied in the order of priority, irrespective of the type.
+
+{% info_block infoBox "Info" %}
+
+If you have a voucher code and a cart rule with the same priority, then both discounts should use the same subtotal.???
+
+{% endinfo_block %} 
+
 
 ## Discount calculation types
 
@@ -227,12 +239,19 @@ The general discount calculation logic follows these rules:
 * All discounts are calculated sequentially based on their [priority value](#discount-priority). Thus, discounts with the highest priority value are considered first. SEE SCENRIOS?
 * Discounts without priority values are treated with the last possible priority.
 * Discounts with the same priority value are calculated independent of each other.
+* If there is a set of discounts with [exclusive](#exclusive-discount) and [non-exclusive](#non-exclusive-discount) discounts, the non-exclusive discounts are disregarded. The remaining excusive discounts are handled according to their priority values as shown in the schema:
+[SCHEMA ]<!---
+(If a set of discounts exists, some of which are exclusive, the non-exclusive discounts are discarded. So, the processing logic would be to first evaluate whether exclusive discounts exist. -If yes, discard non-exclusive discounts and evaluate the remaining exclusive discounts using:
+Priority value
+If same priority, apply the existing Spryker logic that chooses the discount with the highest customer value.
+-If no, proceed with priority evaluation using customer value as a fallback where priority assignment clashes.
+-->
 
-https://spryker.atlassian.net/browse/CC-14607
+### Example discount calculation scenarios
 
-If a set of discounts exists, some of which are exclusive, the non-exclusive discounts are discarded. So, the processing logic would be to first evaluate whether exclusive discounts exist.
+The following scenarios illustrates how the discount calculation logic works
 
-[SCHEMA ]
+[SCENARIOS]
 
 
 ## Related Business User articles

@@ -17,8 +17,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |---|---|---|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| Prices | {{page.version}} |[Prices feature integration](https://documentation.spryker.com/docs/prices-feature-integration) |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Prices | {{page.version}} |[Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/prices-feature-integration.html) |
 | Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) |
 
 
@@ -214,7 +214,7 @@ Set up publisher:
 ```php
 <?php
 
-namespace Pyz\Zed\Publisher; 
+namespace Pyz\Zed\Publisher;
 
 use Spryker\Zed\PriceProductOfferStorage\Communication\Plugin\Publisher\PriceProductOffer\PriceProductStoreWritePublisherPlugin;
 use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
@@ -914,15 +914,15 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
             new PriceProductOfferPriceProductDimensionExpanderStrategyPlugin(),
         ];
     }
-    
-    /**	
-     * @return \Spryker\Zed\PriceProductExtension\Dependency\Plugin\PriceProductValidatorPluginInterface[]	
-     */	
-    protected function getPriceProductValidatorPlugins(): array	
-    {	
-        return [	
-            new PriceProductVolumeValidatorPlugin(),	
-        ];	
+
+    /**
+     * @return \Spryker\Zed\PriceProductExtension\Dependency\Plugin\PriceProductValidatorPluginInterface[]
+     */
+    protected function getPriceProductValidatorPlugins(): array
+    {
+        return [
+            new PriceProductVolumeValidatorPlugin(),
+        ];
     }
 }
 ```

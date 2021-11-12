@@ -23,7 +23,7 @@ For security reasons and to reduce the database storage space, we recommend dele
 
 To configure the lifetime of refresh tokens, [extend](/docs/scos/dev/back-end-development/extending-spryker/extending-the-spryker-core-functionality.html) the `Spryker\Shared\Oauth\OauthConfig` class on a project level.
 
-To configure the [cron job](/docs/scos/dev/sdk/{{site.version}}/cronjob-scheduling.html) to delete the tokens with expired lifetime, configure the time interval for the job via the `Spryker\Shared\Oauth\OauthConfig::getRefreshTokenRetentionInterval()` method.
+To configure the [cron job](/docs/scos/dev/sdk/cronjob-scheduling.html) to delete the tokens with expired lifetime, configure the time interval for the job via the `Spryker\Shared\Oauth\OauthConfig::getRefreshTokenRetentionInterval()` method.
 
 To delete the tokens with expired lifetime manually, run the command:
 

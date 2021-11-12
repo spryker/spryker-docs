@@ -51,7 +51,7 @@ In this section you will find information about our Technology Partner Integrati
 ### Analytics
 
 * [ChannelPilot Analytics](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/analytics/channelpilot-analytics.html)
-* [FactFinder](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/analytics/fact-finder/fact-finder.html)
+* [FactFinder](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/analytics/fact-finder.html)
 * [Haensel AMS](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/analytics/haensel-ams.html)
 * [Mindlab](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/analytics/mindlab.html)
 * [Minubo](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/analytics/minubo.html)

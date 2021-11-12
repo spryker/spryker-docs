@@ -18,7 +18,7 @@ redirect_from:
 
 In this section you will find information about our Technology Partner Integration solutions.
 
-Visit [Technology Partners](https://spryker.com/en/technology-partners/) for a complete list of our partners.
+Visit [Technology Partners](https://spryker.com/technology-partners/) for a complete list of our partners.
 
 ##  Hosting Providers
 

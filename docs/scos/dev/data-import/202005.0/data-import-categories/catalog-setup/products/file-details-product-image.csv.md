@@ -9,9 +9,10 @@ redirect_from:
   - /v5/docs/en/file-details-product-imagecsv
 ---
 
-This article contains content of the **product_image.csv** file to configure [Product Image](https://documentation.spryker.com/v5/docs/en/product-images-overview) information on your Spryker Demo Shop.
+This article contains content of the **product_image.csv** file to configure [Product Image](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-images-overview.html) information on your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
+## Headers & Mandatory Fields
+
 These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
@@ -34,10 +35,10 @@ This file has the following dependencies:
 * [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
 
 ## Template File & Content Example
+
 A template and an example of the *product_image.csv*  file can be downloaded here:
 
 | File | Description |
 | --- | --- |
 | [product_image.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/Template+product_image.csv) | Payment Method Store .csv template file (empty content, contains headers only). |
 | [product_image.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/product_image.csv) | Payment Method Store .csv file containing a Demo Shop data sample. |
-

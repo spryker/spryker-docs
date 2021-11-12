@@ -9,7 +9,7 @@ redirect_from:
   - /v6/docs/en/file-details-warehouse-storecsv
 ---
 
-This article contains content of the `warehouse_store.csv` file to configure the relation between [Warehouse](https://documentation.spryker.com/v6/docs/multiple-warehouse-stock) and Store in your Spryker Demo Shop.
+This article contains content of the `warehouse_store.csv` file to configure the relation between [Warehouse](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html) and Store in your Spryker Demo Shop.
 
 ## Import file parameters
 The file should have the following parameters:
@@ -23,11 +23,11 @@ The file should have the following parameters:
 ## Dependencies
 This file has the following dependencies: 
 
-*     [warehouse.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse.csv.html)
-*     `stores.php` configuration file of demo shop PHP project, where stores are defined initially
+* [warehouse.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse.csv.html)
+* `stores.php` configuration file of demo shop PHP project, where stores are defined initially
 
 ## Additional details
-Check the [HowTo - Import Warehouse Data](/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html).  
+Check the [HowTo - Import Warehouse Data](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html).  
 The console command `data:import:stock-store` uses `…/vendor/spryker/stock-data-import/data/import/warehouse_store.csv`. 
 
 You can also create `warehouse_store.csv` in `…/data/import`. 

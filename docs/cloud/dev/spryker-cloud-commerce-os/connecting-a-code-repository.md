@@ -1,5 +1,5 @@
 ---
-title: Connecting code repository
+title: Connecting a code repository
 description: Connect a GitHub or Bitbucket code repository to your Spryker Cloud project.
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/connecting-code-repository
@@ -7,9 +7,10 @@ originalArticleId: cf723ab0-922f-4255-a26b-f405b15098e5
 redirect_from:
   - /docs/connecting-code-repository
   - /docs/en/connecting-code-repository
+  - /docs/cloud/dev/spryker-cloud-commerce-os/connecting-code-repository
 ---
 
-This document describes how to connect a code repository to Spryker Cloud Commerce OS. 
+This document describes how to connect a code repository to Spryker Cloud Commerce OS.
 
 {% info_block infoBox "Initial setup" %}
 
@@ -36,7 +37,7 @@ We recommend mapping your branches to environments as follows:
 To connect a GitHub code repository:
 
 1. Configure a GitHub code repository.
-2. Provide the following details via [support](https://spryker.force.com/support/s/): 
+2. Provide the following details via [support](https://spryker.force.com/support/s/):
 
 * **URL**
 * **Branch**
@@ -45,17 +46,17 @@ To connect a GitHub code repository:
 
 We connect the code repository shortly after you provide the details.
 
- 
+
 
 
 ## Connect a Bitbucket code repository
 
-Currently, only GitHub is integrated into AWS CodeBuild. To use a Bitbucket code repository, configure [AWS CodeStar](https://docs.aws.amazon.com/codestar/latest/userguide/welcome.html) by following the steps below. 
+Currently, only GitHub is integrated into AWS CodeBuild. To use a Bitbucket code repository, configure [AWS CodeStar](https://docs.aws.amazon.com/codestar/latest/userguide/welcome.html) by following the steps below.
 
 
 ### Prerequisites
 
-Ensure that your BitBucket account has *Admin* permissions in the code repository. 
+Ensure that your BitBucket account has *Admin* permissions in the code repository.
 
 AWS CodeStar integrates via OAuth 2.0 and requires the following permissions:
 
@@ -94,13 +95,13 @@ To get an [Amazon Resource Name (ARN)](https://docs.aws.amazon.com/general/lates
 
 8. Select **Grant access**.
 
-![grant access](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Connecting+code+repository/grant-accees.png) 
+![grant access](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Connecting+code+repository/grant-accees.png)
 
 9. In the *Connect to Bitbucket* pane, select **Connect**.
 
 ![connect repository](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Connecting+code+repository/connect-repository.png)
 
-The page refreshes with all the fields cleared. 
+The page refreshes with all the fields cleared.
 
 10. Select **Connections**.
 
@@ -114,11 +115,11 @@ We connect the repository shortly after you provide the details.
 
 ## Connect a GitLab code repository
 
-Currently, [CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html) doesn’t have a native integration of GitLab. To make it work, you can configure a [CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) repository as a mirror of a GitLab repository. 
+Currently, [CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html) doesn’t have a native integration of GitLab. To make it work, you can configure a [CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) repository as a mirror of a GitLab repository.
 
 {% info_block warningBox "Pushing changes" %}
 
-To avoid synchronization issues, do not push any changes to the CodeCommit repository. 
+To avoid synchronization issues, do not push any changes to the CodeCommit repository.
 
 {% endinfo_block %}
 
@@ -127,7 +128,7 @@ Prepare for configuration:
 
 1. Ensure that your GitLab account has *Admin* permissions in the code repository.
 2. Request the following details via [support](https://spryker.force.com/support/s/):
-    * CodeCommit repository URL 
+    * CodeCommit repository URL
     * Username and password for HTTPS authorization in CodeCommit repository
 
 
@@ -141,7 +142,7 @@ To configure GitLab mirroring:
 
 ![GitLab navigation](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Connecting+code+repository/gitlab-navigation.png)
 
-4. In **Git repository URL**, enter the CodeCommit repository URL provided by support. 
+4. In **Git repository URL**, enter the CodeCommit repository URL provided by support.
 5. For **Mirror direction**, select **Push**.
 6. For **Authentication method**, select **Password**.
 7. Enter a **Password**.
@@ -155,7 +156,4 @@ Allow the synchronization several minutes to complete and you should see the rec
 
 ## Next step
 
-[Deploying in a staging environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html)
-
-
-
+[Deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/deployment-pipelines.html)

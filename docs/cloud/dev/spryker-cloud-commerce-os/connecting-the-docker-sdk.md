@@ -1,5 +1,5 @@
 ---
-title: Connecting Docker SDK
+title: Connecting the Docker SDK
 description: Connect Docker SDK to your Spryker Cloud project.
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/connecting-docker-sdk
@@ -7,6 +7,7 @@ originalArticleId: a4fe702d-b469-4224-a329-aba9f6c2c027
 redirect_from:
   - /docs/connecting-docker-sdk
   - /docs/en/connecting-docker-sdk
+  - /docs/cloud/dev/spryker-cloud-commerce-os/connecting-docker-sdk
 ---
 
 Spryker Docker SDK is a tool used to set up docker environments for Spryker projects.
@@ -29,6 +30,7 @@ At the [Set up a Deploy file](/docs/scos/dev/setup/installing-spryker-with-docke
 If you want to start a new project from scratch, follow [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
 
 
+
 ## Next step
 
-[Accessing AWS Management Console](/docs/cloud/dev/spryker-cloud-commerce-os/access/accessing-aws-management-console.html)
+[Connecting a code repository](/docs/cloud/dev/spryker-cloud-commerce-os/connecting-a-code-repository.html)

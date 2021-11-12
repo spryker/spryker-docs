@@ -134,4 +134,4 @@ When the installation process is complete, Spryker Commerce OS is ready to use. 
 Credentials to access the administrator interface: user `admin@spryker.com` and password `change123`.
 
 ## Next steps:
-* [Troubleshooting installation issues](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/databases-and-services-issues/peer-authentication-failed-for-user-postgres.html)
+* [Troubleshooting installation issues](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/troubleshooting-spryker-in-vagrant-installation-issues.html)

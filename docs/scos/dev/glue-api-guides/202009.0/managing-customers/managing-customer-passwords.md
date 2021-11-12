@@ -39,7 +39,7 @@ To change a customer's password, send the request:
 
 | Header key | Header value | Required | Description |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authenticates the customer you want to change the password of. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer). |
+| Authorization | string | &check; | Alphanumeric string that authenticates the customer you want to change the password of. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
 
 Request sample: `PATCH http://glue.mysprykershop.com/customer-password/DE--21`
@@ -163,5 +163,5 @@ To view generic errors that originate from the Glue Application, see [Reference 
 
 ## Next steps
 
-[Authenticate as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/customer-password.html)
+[Authenticate as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html)
 

@@ -58,8 +58,8 @@ First run `composer update spryker/*` to update your all modules to the latest m
 **ProductBundle >= 4.*** - [Migration Guide - ProductBundle](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-productbundle.html) uses the new `PriceProduct` module, the new plugin to watch cart item reload action.
 **ProductLabelGui >= 2.*** - see [Migration Guide - ProductLabelGui](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-productlabelgui.html).
 **ProductManagement >= 0.9.*** - see [Migration Guide - ProductManagement](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-productmanagement.html). New forms and views have been added.
-**ProductRelation >= 2.*** - see [Migration Guide - ProductRelation](https://documentation.spryker.com/v6/docs/mg-product-relation).
-**ProductRelationCollector >= 2.*** - see [Migration Guide - ProductRelationCollector](https://documentation.spryker.com/v6/docs/mg-product-relation-collector).
+**ProductRelation >= 2.*** - see [Migration Guide - ProductRelation](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-productrelation.html).
+**ProductRelationCollector >= 2.*** - see [Migration Guide - ProductRelationCollector](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-productrelationcollector.html).
 **ProductSetGui >= 2.*** - see [Migration Guide - ProductSetGui](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-productsetgui.html).
 **Wishlist >= 2.*** - see [Migration Guide - Wishlist](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-wishlist.html).
 **Search >= 7.0** - see [Migration Guide - Search](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-search.html).

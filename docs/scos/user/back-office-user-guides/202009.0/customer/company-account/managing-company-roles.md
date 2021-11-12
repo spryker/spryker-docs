@@ -46,8 +46,12 @@ To edit a company role:
 To delete a company role:
 1. On the **Overview of Company Roles** page in the _Actions_ column, click **Delete**.
 2. On the confirmation page, click **Delete** company role to confirm the action.
-    {% info_block infoBox "If you delete a default role, the following message is displayed:" %}
+   
+{% info_block infoBox%}
+
+If you delete a default role, the following message is displayed:
 _You cannot delete a default role; please set another default role before the delete action._
+
 {% endinfo_block %}
 ***
 **What's next?**

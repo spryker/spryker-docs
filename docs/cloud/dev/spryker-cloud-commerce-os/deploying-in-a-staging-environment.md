@@ -9,7 +9,7 @@ redirect_from:
   - /docs/en/deploying-in-a-staging-environment
 ---
 
-This document describes how to deploy an application to [ECS cluster](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/clusters.html) in a [staging environment](/docs/cloud/dev/spryker-cloud-commerce-os/environments-overview.html#staging-stage). 
+This document describes how to deploy an application to [ECS cluster](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/clusters.html) in a [staging environment](/docs/cloud/dev/spryker-cloud-commerce-os/environments-overview.html#staging-stage).
 
 
 ## Prerequisites
@@ -27,12 +27,12 @@ Example of the ECR images with the application version in tags:
 * `spryker-staging-frontend:290b955bd06d029c8643c093b58a0cedb86b1c8d`
 * `spryker-staging-jenkins:290b955bd06d029c8643c093b58a0cedb86b1c8d`
 
- 
+
 
 
 ## 1. Check the version to deploy
 
-To deploy a specific application version, copy the version of the respective GitHub commit: 
+To deploy a specific application version, copy the version of the respective GitHub commit:
 
 
 ![version to deploy](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Deploying+in+a+staging+environment/version-to-deploy.png)
@@ -44,19 +44,19 @@ To deploy a specific application version, copy the version of the respective Git
 ## 2. Define the version to deploy
 To define the application version to deploy:
 
-1. In the AWS Management Console, go to **Services** > **Systems Manager** > **Application Management** > **[Parameter Store](https://eu-central-1.console.aws.amazon.com/systems-manager/parameters/)**. 
+1. In the AWS Management Console, go to **Services** > **Systems Manager** > **Application Management** > **[Parameter Store](https://eu-central-1.console.aws.amazon.com/systems-manager/parameters/)**.
 
 2. Select */spryker-staging/desired_version*.
 
-3. Select **Edit**. 
+3. Select **Edit**.
 
-4. Enter the application version into the **Value** field. 
+4. Enter the application version into the **Value** field.
 
 {% info_block infoBox "Deploying *latest*" %}
 
 Enter *latest* if you want to deploy the last built application version. You can check this version in the */spryker-staging/lastbuildversion* parameter in the [Parameter Store](https://eu-central-1.console.aws.amazon.com/systems-manager/parameters). We recommend deploying *latest* in the staging environment to:
 * Keep the application up to date with the latest changes.
-* Avoid updating */spryker-staging/desired_version* during each deployment. 
+* Avoid updating */spryker-staging/desired_version* during each deployment.
 
 {% endinfo_block %}
 
@@ -70,12 +70,12 @@ To run a pipeline:
 
 1. In the AWS Management Console, go to **Services** > **[CodePipeline](https://eu-central-1.console.aws.amazon.com/codesuite/codepipeline/pipelines)**.
 
-2. Select *NORMAL_Deploy_Spryker_spryker-staging*. 
+2. Select *NORMAL_Deploy_Spryker_spryker-staging*.
 
 
 {% info_block infoBox "Deploy types" %}
 
-Normal deploy is a pipeline that includes all the stages of a complete CI/CD flow.  The Install stage of this pipeline does not perform any dangerous data manipulations like database cleanup or scheduler reset. If you want to reset demo data during deployment, select *DESTRUCTIVE_Deploy_Spryker_spryker-staging*. 
+Normal deploy is a pipeline that includes all the stages of a complete CI/CD flow.  The Install stage of this pipeline does not perform any dangerous data manipulations like database cleanup or scheduler reset. If you want to reset demo data during deployment, select *DESTRUCTIVE_Deploy_Spryker_spryker-staging*.
 
 {% endinfo_block %}
 
@@ -86,16 +86,16 @@ Normal deploy is a pipeline that includes all the stages of a complete CI/CD flo
 
     ![compare application stage](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Deploying+in+a+staging+environment/compare-application-stage.png)
 
-   
+
     2. Select **Tail logs** and check the job output.
 
-    
+
 
     ![tail logs](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Deploying+in+a+staging+environment/tail-logs.png)
 
     3. Check `Deploymnet version` and `Latest deployed version` in the output.
 
-    
+
 
     ![deployment versions logs](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Deploying+in+a+staging+environment/deployment-versions-logs-staging.png)
 
@@ -132,7 +132,7 @@ To check the deployed application version in the ECS cluster, do following:
 
 ![select task](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Deploying+in+a+staging+environment/select-task-stage.png)
 
-7. In the *Image* column of the *Containers* section, ensure that the image name of the container contains the correct application version. 
+7. In the *Image* column of the *Containers* section, ensure that the image name of the container contains the correct application version.
 
 ![check image task](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Deploying+in+a+staging+environment/check-image-task-stage.png)
 
@@ -141,17 +141,10 @@ To roll back an application:
 
 1. Find out the application version you want to roll back to. See [1. Check the version to deploy](#check-the-version-to-deploy) for more details.
 
-2. In [Parameter Store](https://eu-central-1.console.aws.amazon.com/systems-manager/parameters/), set the application version as the value of the */spryker-staging/desired_version* parameter. See [2. Define the version to deploy](#define-the-version-to-deploy) for more details. 
+2. In [Parameter Store](https://eu-central-1.console.aws.amazon.com/systems-manager/parameters/), set the application version as the value of the */spryker-staging/desired_version* parameter. See [2. Define the version to deploy](#define-the-version-to-deploy) for more details.
 
 3. Run a deployment pipeline as described in [3. Run a deployment pipeline](#run-a-deployment-pipeline).
 
 
 ## Next step
-[Debugging](/docs/cloud/dev/spryker-cloud-commerce-os/debugging.html)
-
-
-
-
-
-
-
+[Configuring debugging](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-debugging.html)

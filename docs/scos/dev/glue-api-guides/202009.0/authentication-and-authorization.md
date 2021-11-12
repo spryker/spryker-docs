@@ -31,7 +31,7 @@ The default lifetime of the access tokens is 8 hours (28800 seconds) and 1 month
 
 For security purposes, when you finish sending requests as a user, or if a token gets compromised, we recommend revoking the refresh token. Revoked tokens are marked as expired on the date and time of the request and can no longer be exchanged for access tokens. 
 
-Expired tokens are stored in the database, and you can configure them to be deleted. For details, see [Deleting expired refresh tokens](https://documentation.spryker.com/v6/docs/configuring-outdated-refresh-token-life-time). 
+Expired tokens are stored in the database, and you can configure them to be deleted. For details, see [Deleting expired refresh tokens](/docs/scos/dev/glue-api-guides/{{page.version}}/deleting-expired-refresh-tokens.html). 
 
 ## Protected resources
 

@@ -1,6 +1,7 @@
 ---
 title: Inherited scope
-last_updated: Sep 14, 2021
+last_updated: Nov 05, 2021
+description: Inherited scope rules apply when you need to grant access to an entity (child) that inherits from another entity (parent).
 template: concept-topic-template
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Exporting Data
+title: Data export
 description: This article will teach you how to export data from a Spryker shop to an external system
 last_updated: Aug 27, 2020
 template: data-export-template
@@ -20,6 +20,7 @@ related:
 The Data Export is currently a BETA feature.
 
 {% endinfo_block %}
+
 To quickly populate an external system like ERP or OMS with data from your Spryker shop, you can export it as .csv files from the Spryker shop and then import them into the external system.
 
 For now, you can export only order data, which includes data on:
@@ -47,7 +48,6 @@ Spryker Data Export supports the multi-store functionality, which means that you
 {% endinfo_block %}
 
 ## .yml Export Configuration File
-<a href="yml-export-configuration-file"></a>
 
 The .yml export configuration file allows you to define what orders you want to export. The following content is exported:
 
@@ -62,6 +62,7 @@ By default, the .yml export configuration file resides in `./data/export/config/
 The root of data export files is configured globally, and it is not changeable by data export.
 
 {% endinfo_block %}
+
 <a name="structure"></a>
 
 ### Structure of the .yml Export Configuration File
@@ -105,6 +106,7 @@ actions:
           <<: *default_filter_criteria
           store_name: [<store_name_value_1>]
 ```
+
 Type of content to export is defined in section *actions* by *data_entity* and must be *order*, *order-item* and *order-expense* . You can define what stores you want to run export for, and specify order dates you want to export data for. See [Setting the Filter Criteria](/docs/scos/dev/data-export/{{page.version}}/data-export.html#filter) in a .yml File for details on how to export order data for specific stores and time period.
 
 Check out the default .yml export configuration file [order_export_config.yml](https://github.com/spryker-shop/suite/blob/master/data/export/production/order_export_config.yml) for example. It’s configuration presupposes batch export of the three data entities: *order*, *order-item*, *order-expense.*
@@ -119,6 +121,7 @@ When running the command for data export with this file,` console data:export --
 * orders_DE.csv
 
 See[ Data Export Ordres .csv Files Format](/docs/scos/dev/data-export/{{page.version}}/data-export-orders-.csv-files-format.html)  for details on the content of each of the files.
+
 <a name="filter"></a>
 
 ### Setting the Filter Criteria in a .yml File
@@ -163,6 +166,7 @@ actions:
 #### Defining the Date and Time Range for Order Data Export
 
 The default date and time range filter criteria, for example, the order creation dates filter applied to all *data_entity* items by default, is specified in the *defaults* section:
+
 ```yml
 defaults:
   filter_criteria: &default_filter_criteria
@@ -214,6 +218,7 @@ actions:
           store_name: AT
     ...
 ```
+
 After running the command with the changed filter criteria for *order-expense*, the *order-expenses_AT.csv* file will only contain the orders created on May 15th, 2020. The other files will contain the orders created from May 1st till July 6th, as specified in *&default_filter_criteria* of the *defaults* section.
 
 ## Overwriting Existing .csv Files Upon Repeated Command Run
@@ -224,6 +229,7 @@ If you wish to generate new .csv files without overwriting eventual existing one
 And vice versa: if you want to overwrite the existing files, remove *{timestamp}* from the *destination* parameter of the .yml file for the necessary *data_entity* items, for example:
 
 Initial file:
+
 ```yml
 defaults:
   filter_criteria: &default_filter_criteria

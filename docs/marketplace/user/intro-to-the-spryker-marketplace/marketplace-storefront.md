@@ -4,7 +4,7 @@ description: This document describes the peculiarities of the Marketplace Storef
 template: concept-topic-template
 ---
 
-*Marketplace Storefront* is a web application designed for the [marketplace business model](/docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-concept.html). Based on the regular Storefront, it supports all [Spryker Commerce OS](https://documentation.spryker.com/docs/about-spryker) features. Marketplace functionality enables buyers to browse for products, view and purchase them across different merchants.
+*Marketplace Storefront* is a web application designed for the [marketplace business model](/docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-concept.html). Based on the regular Storefront, it supports all [Spryker Commerce OS](/docs/scos/user/intro-to-spryker/about-spryker.html) features. Marketplace functionality enables buyers to browse for products, view and purchase them across different merchants.
 
 In most sections of the Marketplace Storefront, customers can see who the seller of a product or offer is.
 
@@ -77,9 +77,7 @@ On the page of the wishlist, a merchant relation is displayed for each product. 
 
 If, after a product was added to a wishlist, a merchant becomes inactive, the merchant reference is no longer displayed for the product and the customer can't add it to cart. If the merchant becomes active again, the relation is displayed, and the customer can add the product to cart.
 
-If a product in a wishlist is out of stock, an [alternative product](https://documentation.spryker.com/docs/alternative-products-overview) can be displayed. A merchant reference is displayed for the alternative product. Currently, merchant offers are not supported by alternative products, so only merchant products can be displayed there.
-
-
+If a product in a wishlist is out of stock, an [alternative product](/docs/scos/user/features/{{site.version}}/alternative-products-feature-overview.html) can be displayed. A merchant reference is displayed for the alternative product. Currently, merchant offers are not supported by alternative products, so only merchant products can be displayed there.
 
 ### Merchant profiles
 

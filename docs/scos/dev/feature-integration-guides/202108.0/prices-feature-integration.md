@@ -24,7 +24,9 @@ related:
 ---
 
 {% info_block errorBox "Attention!" %}
+
 The following feature integration Guide expects the basic feature to be in place. The current feature integration Guide only adds the **Volume Prices** functionality and `PriceProductWidget`.
+
 {% endinfo_block %}
 
 ## Install feature core

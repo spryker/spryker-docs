@@ -31,11 +31,11 @@ There is already a list of plugins which populate quote transfer with correspond
 
 {% info_block infoBox "" %}
 
-For more details, check [Cart Data Flow](https://documentation.spryker.com/docs/cart-functionality#cart-data-flow) in the *Cart Functionality* section.
+For more details, check [Cart Data Flow](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/cart-module-reference-information.html#cart-operations#cart-data-flow) in the *Cart Functionality* section.
 
 {% endinfo_block %}
 
-If manual recalculation of cart is required, then `CalculationFacade::recalculate` can be called from Zed or `CalculationClient::recalculate` from Yves with prepared [Calculation Data Structure](https://documentation.spryker.com/docs/calculation-data-structure#quote-transfer). When the recalculation operation is called, the calculator runs the calculator plugin stack and each plugin modifies the `QuoteTransfer` (calculates discounts, adds sum gross prices, calculates taxes). Most plugins require the `unitGrossPrice` and the `quantity` to be provided.
+If manual recalculation of cart is required, then `CalculationFacade::recalculate` can be called from Zed or `CalculationClient::recalculate` from Yves with prepared [Calculation Data Structure](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculation-data-structure.html#quote-transfer). When the recalculation operation is called, the calculator runs the calculator plugin stack and each plugin modifies the `QuoteTransfer` (calculates discounts, adds sum gross prices, calculates taxes). Most plugins require the `unitGrossPrice` and the `quantity` to be provided.
 
 {% info_block infoBox "Calculated amounts" %}
 

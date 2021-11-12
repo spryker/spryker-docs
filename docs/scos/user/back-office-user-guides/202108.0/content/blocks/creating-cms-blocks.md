@@ -63,7 +63,7 @@ The following table describes the attributes on the *Overview of CMS Blocks* pag
 | ATTRIBUTE | DESCRIPTION: REGULAR CMS BLOCK | DESCRIPTION:  EMAIL CMS BLOCK |
 | --- | --- | --- |
 | Block Id | Sequence number. | Sequence number. |
-| Name | Name of a CMS block. | Name of a CMS block. <br> This name is used by developers to assign the block to its [.twig email template](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html#email-template).
+| Name | Name of a CMS block. | Name of a CMS block. <br> This name is used by developers to assign the block to its [.twig email template](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html).
 | Template | Defines a placeholder structure of the CMS block. | Defines the placeholder structure of the Email CMS block. |
 | Status | Block status that can be active (visible on the Storefront) or inactive (invisible on the Storefront). | Irrelevant. |
 | Stores | Locale(s) for which the block will be visible on the store website. | Irrelevant. |

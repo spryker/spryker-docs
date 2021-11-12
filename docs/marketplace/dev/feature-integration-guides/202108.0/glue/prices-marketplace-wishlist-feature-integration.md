@@ -18,7 +18,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | LINK |
 | --------------- | ------- | ---------- |
 | Marketplace Wishlist | {{page.version}} |[Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-wishlist-feature-integration.html) |
-| Product Prices API | {{page.version}} |[Glue API: Product Prices feature integration](https://documentation.spryker.com/docs/glue-api-prices-api-feature-integration) |
+| Product Prices API | {{page.version}} |[Glue API: Product Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-price-feature-integration.html) |
 
 
 ### 1) Set up behavior

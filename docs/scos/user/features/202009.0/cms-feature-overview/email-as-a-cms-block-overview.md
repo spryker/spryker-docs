@@ -17,7 +17,7 @@ There are two types of emails used to manage CMS Blocks as emails: CMS Block ema
 
 
 ## CMS Block Email Template
-*CMS Block email template* is a [Twig](/docs/scos/dev/sdk/{{page.version}}/twig-and-twigextension.html) file that defines the design and layout of CMS Block in a way suitable for using it as an email.
+*CMS Block email template* is a [Twig](/docs/scos/dev/sdk/twig-and-twigextension.html) file that defines the design and layout of CMS Block in a way suitable for using it as an email.
 The following CMS Block email templates are available by default:
 
 * *HTML email template with header and footer*
@@ -102,7 +102,7 @@ After creating email templates, a developer can [import](/docs/scos/dev/data-imp
 ## Email Content
 
 
-When [editing an email template via Email CMS Block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-content-of-emails-via-cms-blocks.html#editing-email-cms-blocks), you work in the [WYSIWYG editor](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/wysiwyg-editor.html). Apart from the regular WYSIWYG editor tools, you can add glossary keys and variables.
+When [editing an email template via Email CMS Block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-content-of-emails-via-cms-blocks.html#editing-email-cms-blocks), you work in the [WYSIWYG editor](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-feature-overview.html). Apart from the regular WYSIWYG editor tools, you can add glossary keys and variables.
 
 
 You can use the functionalities described in this section, regardless of the email format.

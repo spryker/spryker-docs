@@ -109,4 +109,4 @@ By selecting **Same Name as Abstract Product**, the name of the abstract product
 
 ## Next steps
 
-- [Manage abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/products/abstract-products/managing-marketplace-abstract-product.html)
+- [Manage abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product.html)

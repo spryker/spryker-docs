@@ -4,11 +4,11 @@ description: This glue API document describes how to retrieve abstract products 
 template: glue-api-storefront-guide-template
 ---
 
-This endpoint allows retrieving abstract products in [abstract product lists](https://documentation.spryker.com/docs/content-items-feature-overview).
+This endpoint allows retrieving abstract products in [abstract product lists](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html).
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Content Items API](https://documentation.spryker.com/docs/content-items-api-feature-integration).
+For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-api-feature-integration.html).
 
 ## Retrieve abstract products in an abstract product list
 
@@ -27,7 +27,7 @@ To retrieve abstract products in an abstract product list, send the request:
 
 {% info_block warningBox "Info" %}
 
-Alternatively, you can [retrieve an abstract product list](https://documentation.spryker.com/docs/retireving-abstract-product-list-content-items#retrieve-abstract-product-list-content-item) with the `abstract-products` resource included.
+Alternatively, you can [retrieve an abstract product list](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-content-items/retrieving-abstract-product-list-content-items.html#retrieve-abstract-product-list-content-item) with the `abstract-products` resource included.
 
 {% endinfo_block %}
 

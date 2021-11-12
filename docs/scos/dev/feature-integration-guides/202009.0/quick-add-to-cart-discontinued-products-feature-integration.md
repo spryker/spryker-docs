@@ -1,6 +1,6 @@
 ---
 title: Quick Add to Cart + Discontinued Products feature integration
-description: Quick Add to Cart + Discontinued Products allow showing products in cart as "discontinued". This guide describes how to integrate the feature into the project.
+description: This guide describes how to integrate the Quick Add to Cart + Discontinued Products feature into the project.
 last_updated: Aug 27, 2020
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/quick-add-to-cart-discontinued-products-feature-integration
@@ -52,5 +52,9 @@ class QuickOrderDependencyProvider extends SprykerQuickOrderDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
-Make the following checks at `https://mysprykershop.com/quick-order`:<ul><li>`ProductDiscontinuedItemValidatorPlugin`validates discontinued products. Provide the SKU of a discontinued product on the **Quick Add To Cart** page and verify that the error message is displayed and you are not allowed to work with this product.</li></ul>
+
+Make the following checks at `https://mysprykershop.com/quick-order`:
+
+- `ProductDiscontinuedItemValidatorPlugin`validates discontinued products. Provide the SKU of a discontinued product on the **Quick Add To Cart** page and verify that the error message is displayed and you are not allowed to work with this product.
+  
 {% endinfo_block %}

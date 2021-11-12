@@ -16,10 +16,10 @@ related:
   - title: Discontinued Products Feature Overview
     link: docs/scos/user/features/page.version/product-feature-overview/discontinued-products-overview.html
   - title: Catalog Search
-    link: docs/scos/dev/glue-api-guides/page.version/catalog-search.html
+    link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.html
 ---
 
-The _Alternative Products_ feature allows customers to find a substitute for a product that runs out of stock or is no longer available for other reasons. The feature is particularly useful when a certain product becomes discontinued. In this case, customers usually look for an up-to-date generation of the same product, and suggesting possible alternatives is crucial. For more details, see [Alternative Products](/docs/scos/user/features/{{page.version}}/alternative-products-feature-overview.html) and [Discontinued Products](https://documentation.spryker.com/v6/docs/discontinued-products).
+The _Alternative Products_ feature allows customers to find a substitute for a product that runs out of stock or is no longer available for other reasons. The feature is particularly useful when a certain product becomes discontinued. In this case, customers usually look for an up-to-date generation of the same product, and suggesting possible alternatives is crucial. For more details, see [Alternative Products](/docs/scos/user/features/{{page.version}}/alternative-products-feature-overview.html) and [Discontinued Products](/docs/scos/user/features/{{page.version}}/product-feature-overview/discontinued-products-overview.html).
 
 The Product Alternatives API provides access to alternative products via REST API requests. In particular, you can:
 

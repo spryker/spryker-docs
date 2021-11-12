@@ -14,6 +14,7 @@ related:
 ---
 
 {% info_block errorBox %}
+
 The following feature integration guide expects the basic feature to be in place.<br>The current feature integration guide only adds the **[Warehouse Management](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html)** and **[Add to cart from catalog page](/docs/scos/user/features/{{page.version}}/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)** functionalities.
 
 {% endinfo_block %}
@@ -34,12 +35,21 @@ composer require spryker-feature/inventory-management 202009.0 --update-with-dep
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules have been installed:<table><thead><tr><td>Module</td><td>Expected Directory</td></tr></thead><tbody><tr><td>`Stock`</td><td>`vendor/spryker/stock`</td></tr><tr><td>`StockDataImport`</td><td>`vendor/spryker/stock-data-import`</td></tr><tr><td>`StockGui`</td><td>`vendor/spryker/stock-gui`</td></tr></tbody></table>
+Make sure that the following modules have been installed:
+
+|Module|Expected Directory|
+|--- |--- |
+|`Stock`|`vendor/spryker/stock`|
+|`StockDataImport`|`vendor/spryker/stock-data-import`|
+|`StockGui`|`vendor/spryker/stock-gui`|
+
 {% endinfo_block %}
 
 ### 2) Set up Database Schema and Transfer Objects
 Adjust the schema definition so `EventTransfer` has the additional columns for Availability entity:
+
 **src/Pyz/Zed/Availability/Persistence/Propel/Schema/spy_availability.schema.xml**
+
 ```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\Availability\Persistence" package="src.Orm.Zed.Availability.Persistence">
@@ -69,11 +79,24 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes have been applied in transfer objects:<table><thead><tr><td>Transfer</td><td>Type</td><td>Event</td><td>Path</td></tr></thead><tbody><tr><td>`StockTransfer`</td><td>class</td><td>added</td><td>`src/Generated/Shared/Transfer/StockTransfer.php`</td></tr><tr><td>`StockCriteriaFilterTransfer`</td><td>class</td><td>added</td><td>`src/Generated/Shared/Transfer/StockCriteriaFilterTransfer.php`</td></tr><tr><td>`StockResponseTransfer`</td><td>class</td><td>added</td><td>`src/Generated/Shared/Transfer/StockResponseTransfer.php`</td></tr></tbody></table>
+Make sure that the following changes have been applied in transfer objects:
+
+|Transfer|Type|Event|Path|
+|--- |--- |--- |--- |
+|`StockTransfer`|class|added|`src/Generated/Shared/Transfer/StockTransfer.php`|
+|`StockCriteriaFilterTransfer`|class|added|`src/Generated/Shared/Transfer/StockCriteriaFilterTransfer.php`|
+|`StockResponseTransfer`|class|added|`src/Generated/Shared/Transfer/StockResponseTransfer.php`|
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes have been applied by checking your database:<table><thead><tr><td>Database entity</td><td>Type</td><td>Event</td></tr></thead><tbody><tr><td>`spy_stock_store`</td><td>table</td><td>added</td></tr><tr><td>`spy_stock.is_active`</td><td>column</td><td>added</td></tr></tbody></table>
+Make sure that the following changes have been applied by checking your database:
+
+|Database entity|Type|Event|
+|--- |--- |--- |
+|`spy_stock_store`|table|added|
+|`spy_stock.is_active`|column|added|
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
@@ -83,16 +106,21 @@ Make sure that the `SpyAvailabilityTableMap::getBehaviors()` has mapping for `sp
 {% endinfo_block %}
 
 ### 3) Configure Export to Elasticsearch
+
 {% info_block errorBox "Attention!" %}
 
 This section only covers the **Add to cart from catalog page** related setup.
 
 {% endinfo_block %}
+
 Install the following plugins:
+
 | Plugin | Specification | Prerequisites | Namespace |
 | --- | --- | --- | --- |
 | `AvailabilityProductAbstractAddToCartPlugin` | Filters out products that are not available. | None | `Spryker\Zed\Availability\Communication\Plugin\ProductPageSearch` |
+
 **src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php**
+
 ```php
 <?php
 
@@ -123,6 +151,7 @@ Make sure that only abstract products which have single concrete which is availa
 
 ### 4) Import Data
 #### Import Warehouses
+
 Prepare your data according to your requirements using our demo data:
 
 **vendor/spryker/spryker/Bundles/StockDataImport/data/import/warehouse.csv**

@@ -30,7 +30,7 @@ To create the product, do the following:
     1. In the list of products in the **Catalog > Products** section, find your product and click **Edit** in the *Actions* column for it.
     2. In the **Variants** tab, click **Edit** for the product(s) you want to make active.
     3. On the **Edit Concrete Product** page, click **Activate**. The abstract product will now also become active.
-5. Make sure your product is visible and searchable in the Storefront by going through the checklist in the HowTo - [Make a Product Searchable and Shown on the Storefront](/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html) article.
+5. Make sure your product is visible and searchable in the Storefront by going through the checklist in the HowTo - [Make a Product Searchable and Shown on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html) article.
 
 Now that you have the product, you can proceed with offering services to it.
 
@@ -113,7 +113,7 @@ This approach can be applied to both Scenario 1 and Scenario 2 - that is when th
 If you need an approach that would best suit your specific business needs, we recommend your development team to implement a custom solution for your project. The custom solution can be handled as follows:
 
 #### 1. Identify the respective products with labels
-First of all, you need to somehow identify the products for which the custom solution will be applied. We recommend doing this via product labels. For this, create specific labels for the products that require service from your side. The labels can be, for example, *free service, installation service, 1-day service*, etc. See [Creating a Product Label](https://documentation.spryker.com/v6/docs/creating-a-product-label#creating-a-product-label) for details on how to create labels and assign products to them.
+First of all, you need to somehow identify the products for which the custom solution will be applied. We recommend doing this via product labels. For this, create specific labels for the products that require service from your side. The labels can be, for example, *free service, installation service, 1-day service*, etc. See [Creating a Product Label](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/creating-product-labels.html) for details on how to create labels and assign products to them.
 
 #### 2.  Override the Add to Cart functionality
 At this step, you need the development team to change the default *Add to Cart* functionality to meet your project’s needs.

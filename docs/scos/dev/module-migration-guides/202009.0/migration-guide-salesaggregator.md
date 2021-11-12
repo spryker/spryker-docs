@@ -141,7 +141,7 @@ The payment methods have changed accordingly to use `SalesFacade` instead of `Sa
 
 
 ## Upgrading from Version 2.* to Version 3.*
-The tax plugins are using the version 3.* of the Tax module. See [Migration Guide - Tax](https://documentation.spryker.com/module_migration_guides/mg-tax.htm) for more details.
+The tax plugins are using the version 3.* of the Tax module. See [Migration Guide - Tax](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-tax.html) for more details.
 
 ## SalesAggregator Migration Console Command
 SalesAggregator Migration Console Command:

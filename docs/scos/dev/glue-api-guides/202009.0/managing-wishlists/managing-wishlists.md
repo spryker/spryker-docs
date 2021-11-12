@@ -31,7 +31,7 @@ To create a wishlist, send the request:
 
 | Header key | Header value | Required | Description |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 Sample request: `POST https://glue.mysprykershop.com/wishlists`
 
@@ -113,7 +113,7 @@ To retrieve all wishlists of a customer, send the request:
 
 | Header key | Header value | Required | Description |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 
 
@@ -482,7 +482,7 @@ To retrieve wishlist items, send the request:
 
 | Header key | Header value | Required | Description |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 
 
@@ -794,7 +794,7 @@ To edit a wishlist, send the request:
 
 | Header key | Header value | Required | Description |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 Sample request: `PATCH https://glue.mysprykershop.com/wishlists`
 
@@ -852,7 +852,7 @@ To delete a wishlist, send the request:
 
 | Header key | Header value | Required | Description |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 
 Request sample: `DELETE https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a`

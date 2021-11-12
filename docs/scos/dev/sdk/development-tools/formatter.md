@@ -12,13 +12,13 @@ redirect_from:
   - /docs/en/formatter
   - /v6/docs/formatter
   - /v6/docs/en/formatter
-  - /docs/scos/dev/sdk/201811.0/formatter.html
-  - /docs/scos/dev/sdk/201903.0/formatter.html
-  - /docs/scos/dev/sdk/201907.0/formatter.html
-  - /docs/scos/dev/sdk/202001.0/formatter.html
-  - /docs/scos/dev/sdk/202005.0/formatter.html
-  - /docs/scos/dev/sdk/202009.0/formatter.html
-  - /docs/scos/dev/sdk/202108.0/formatter.html
+  - /docs/scos/dev/sdk/201811.0/development-tools/formatter.html
+  - /docs/scos/dev/sdk/201903.0/development-tools/formatter.html
+  - /docs/scos/dev/sdk/201907.0/development-tools/formatter.html
+  - /docs/scos/dev/sdk/202001.0/development-tools/formatter.html
+  - /docs/scos/dev/sdk/202005.0/development-tools/formatter.html
+  - /docs/scos/dev/sdk/202009.0/development-tools/formatter.html
+  - /docs/scos/dev/sdk/202108.0/development-tools/formatter.html
 ---
 
 *Formatter* allows you to find and fix code style mistakes and keep the code more readable.

@@ -71,7 +71,16 @@ entries:
         url: /docs/cloud/dev/spryker-cloud-commerce-os/performance-testing.html
       - title: Monitoring issues and informing about alerts
         url: /docs/cloud/dev/spryker-cloud-commerce-os/monitoring-issues-and-informing-about-alerts.html
-      - title: Troubleshooting
-        url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting.html
+      - title: Troubleshooting deployment
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting-deployment/troubleshooting-deployment.html
+        nested:
+          - title: Assets, logs, or pipelines are not visible in AWS Management Console
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting-deployment/assets-logs-or-pipelines-are-not-visible-in-aws-management-console.html
+          - title: Changing a source branch fails
+            url: /changing-a-source-branch-fails.html
+          - title: Deployment fails due to a failed docker authentication
+            url: /deployment-fails-due-to-a-failed-docker-authentication.html
+          - title: Jenkins does not restart
+            url: /jenkins-does-not-restart.html          
       - title: Release notes
         url: /docs/cloud/dev/spryker-cloud-commerce-os/release-notes.html

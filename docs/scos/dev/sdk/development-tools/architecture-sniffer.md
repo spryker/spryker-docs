@@ -22,13 +22,13 @@ redirect_from:
   - /v2/docs/en/architecture-sniffer
   - /v1/docs/architecture-sniffer
   - /v1/docs/en/architecture-sniffer
-  - /docs/scos/dev/sdk/201811.0/architecture-sniffer.html
-  - /docs/scos/dev/sdk/201903.0/architecture-sniffer.html
-  - /docs/scos/dev/sdk/201907.0/architecture-sniffer.html
-  - /docs/scos/dev/sdk/202001.0/architecture-sniffer.html
-  - /docs/scos/dev/sdk/202005.0/architecture-sniffer.html
-  - /docs/scos/dev/sdk/202009.0/architecture-sniffer.html
-  - /docs/scos/dev/sdk/202108.0/architecture-sniffer.html
+  - /docs/scos/dev/sdk/201811.0/development-tools/architecture-sniffer.html
+  - /docs/scos/dev/sdk/201903.0/development-tools/architecture-sniffer.html
+  - /docs/scos/dev/sdk/201907.0/development-tools/architecture-sniffer.html
+  - /docs/scos/dev/sdk/202001.0/development-tools/architecture-sniffer.html
+  - /docs/scos/dev/sdk/202005.0/development-tools/architecture-sniffer.html
+  - /docs/scos/dev/sdk/202009.0/development-tools/architecture-sniffer.html
+  - /docs/scos/dev/sdk/202108.0/development-tools/architecture-sniffer.html
 related:
   - title: Code Sniffer
     link: docs/scos/dev/sdk/development-tools/code-sniffer.html

@@ -1,12 +1,12 @@
 ---
 title: Assets, logs, or pipelines are not visible in AWS Management Console
-description:
+description: Solution to absent assets, logs, or pipelines in the AWS Management Console. 
 template: troubleshooting-guide-template
 ---
 
 
 
-You don't see your assets, logs or pipelines In the AWS Management Console.
+You don't see your assets, logs or pipelines in the AWS Management Console.
 
 ![Empty log groups](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Troubleshooting/empty-log-groups.png)
 

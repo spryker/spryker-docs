@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/authorization-enabler-integration
   - /docs/authorization-enabler-integration
   - /docs/en/authorization-enabler-integration
+  - /docs/scos/dev/technical-enhancements/authorization-enabler-integration.html
 ---
 
 

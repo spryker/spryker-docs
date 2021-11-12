@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/symfony-5-integration
   - /v6/docs/symfony-5-integration
   - /v6/docs/en/symfony-5-integration
+  - /docs/scos/dev/technical-enhancements/symfony-5-integration.html
 ---
 
 Spryker supports Symfony 5 that was released in November 2019. We tried to keep BC for all three major versions of Symfony, but due to some changes in version 5, we had to partially drop support for Symfony 3.

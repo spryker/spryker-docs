@@ -18,6 +18,7 @@ redirect_from:
   - /v4/docs/en/dynamic-propel-configuration
   - /v3/docs/dynamic-propel-configuration
   - /v3/docs/en/dynamic-propel-configuration
+  - /docs/scos/dev/technical-enhancements/dynamic-propel-configuration.html
 ---
 
 Previously, it was always necessary to run the `vendor/bin/console propel:config:convert` command for Propel to fetch database configuration and generate the `propel.json` file where it was stored.

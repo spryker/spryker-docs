@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/enabling-the-product-cms-block
   - /docs/enabling-the-product-cms-block
   - /docs/en/enabling-the-product-cms-block
+  - /docs/scos/dev/technical-enhancements/enabling-the-product-cms-block.html
 related:
   - title: CMS Block
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html

@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/scss-linter-integration-guide
   - /v6/docs/scss-linter-integration-guide
   - /v6/docs/en/scss-linter-integration-guide
+  - /docs/scos/dev/migration-and-integration/202108.0/development-tools/scss-linter-integration-guide.html
 ---
 
 Follow the steps below to integrate the [SCSS linter ](/docs/scos/dev/sdk/development-tools/scss-linter.html)into your project.

@@ -28,10 +28,10 @@ According to [Semantic Versioning](http://semver.org/), Spryker releases a major
 
 In the Spryker Commerce OS’s core, all public methods in theses locatable classes are considered as API:
 
-* [Facades](https://documentation.spryker.com/docs/facade)
-* [Clients](https://documentation.spryker.com/docs/client)
-* [Query Containers](https://documentation.spryker.com/docs/query-container)
-* [Services](https://documentation.spryker.com/docs/service)
+* [Facades](/docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html)
+* [Clients](/docs/scos/dev/back-end-development/client/client.html)
+* [Query Containers](/docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html)
+* [Services](/docs/scos/dev/back-end-development/messages-and-errors/registering-a-new-service.html)
 * Plugin defining protected methods in dependency providers.
 
 And the interfaces which are implemented everywhere are also part of the API:
@@ -41,18 +41,18 @@ And the interfaces which are implemented everywhere are also part of the API:
 
 In addition to these obvious cases, there are some other classes that are part of the API and can cause a BC break:
 
-* module Config [`Client/Yves/Zed/Shared/Service`](https://documentation.spryker.com/docs/configuration-management#how-to-retrieve-the-configuration)
+* module Config [`Client/Yves/Zed/Shared/Service`](/docs/scos/dev/back-end-development/data-manipulation/configuration-management.html)
 * Controllers
 * Twig functions
-* [CLI commands](https://documentation.spryker.com/docs/console-commands)
-* Public constants that define environment configuration in [Constant Interfaces](https://documentation.spryker.com/docs/configuration-management#constant-interfaces)
+* [CLI commands](/docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html)
+* Public constants that define environment configuration in [Constant Interfaces](/docs/scos/dev/back-end-development/data-manipulation/configuration-management.html)
 
 Every change in a schema can cause a BC break:
 
-* [Database](https://documentation.spryker.com/docs/database-schema-definition)
+* [Database](/docs/scos/dev/back-end-development/zed/persistence-layer/database-schema-definition.html)
 * Search
-* [Storage](https://documentation.spryker.com/docs/redis-as-kv)
-* Changes in [transfer objects](https://documentation.spryker.com/docs/ht-use-transfer-objects-201903) can also cause BC breaks e.g. when an existing field is renamed.
+* [Storage](/docs/scos/dev/back-end-development/client/using-and-configuring-redis-as-a-key-value-storage.html)
+* Changes in [transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html) can also cause BC breaks e.g. when an existing field is renamed.
 
 There are several other ways to cause a BC break:
 

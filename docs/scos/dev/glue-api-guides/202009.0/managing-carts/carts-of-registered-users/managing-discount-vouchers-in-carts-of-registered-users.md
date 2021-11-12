@@ -38,7 +38,7 @@ To apply a discount voucher to a cart of a registered user, send the request:
 
 | HEADER KEY | HEADER TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | String | &check; | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | String | &check; | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 | Query parameter | Description | Possible values |
 | --- | --- | --- |
@@ -219,7 +219,7 @@ To remove a discount voucher, send the request:
 
 | HEADER KEY | HEADER TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | String | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | String | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 
 

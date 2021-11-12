@@ -13,19 +13,24 @@ redirect_from:
 Version 2.* of the ProductLabelSearch module changes the storage data structure to maintain relations of product labels to stores.
 
 To upgrade to the new version of the module, do the following:
+
 1. Upgrade the ProductLabelSearch module to the new version:
+
 ```bash
 composer require spryker/product-label-search:"^2.0.0" --update-with-dependencies
 ```
 2. Update the generated classes:
+
 ```bash
 console transfer:generate
 ```
 3. Remove the deprecated plugins from `Pyz\Zed\Event\EventDependencyProvider`
- ```php
+
+```php
 Spryker\Zed\ProductLabelSearch\Communication\Plugin\Event\Subscriber\ProductLabelSearchEventSubscriber
 ```
 4. Add the new plugins to `Pyz\Zed\Publisher\PublisherDependencyProvider`:
+
 ```php
 <?php
 
@@ -73,6 +78,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-search.html#upgrading-from-version-8-9---to-version-8-10--). 
 
 {% endinfo_block %}
+
 To upgrade the module, do the following:
 1. Update the module with composer:
 ```bash
@@ -80,6 +86,7 @@ composer update spryker/product-label-search
 ```
 2. Remove the usage of deprecated `Spryker\Zed\ProductLabelSearch\Communication\Plugin\PageMapExpander\ProductLabelMapExpanderPlugin` from `Pyz\Zed\ProductPageSearch\ProductPageSearchDependencyProvider`.
 3. Enable the replacement plugin:
+
 ```php
 <?php
 

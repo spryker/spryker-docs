@@ -17,7 +17,7 @@ This topic describes how to create a CMS block.
 
 {% info_block infoBox "Info" %}
 
-If you want to create a CMS block for [email](https://documentation.spryker.com/v6/docs/email-as-a-cms-block-overview), see [Creating an email CMS block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-content-of-emails-via-cms-blocks.html#creating-an-email-cms-block).
+If you want to create a CMS block for [email](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html), see [Creating an email CMS block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-content-of-emails-via-cms-blocks.html#creating-an-email-cms-block).
 
 {% endinfo_block %}
 
@@ -59,7 +59,7 @@ The following table describes the attributes on the *Overview of CMS Blocks* pag
 | ATTRIBUTE | DESCRIPTION: REGULAR CMS BLOCK | DESCRIPTION:  EMAIL CMS BLOCK |
 | --- | --- | --- |
 | Block Id | Sequence number. | Sequence number. |
-| Name | Name of a CMS block. | Name of a CMS block. <br> This name is used by developers to assign the block to its [.twig email template](https://documentation.spryker.com/v6/docs/email-as-a-cms-block-overview#email-template).
+| Name | Name of a CMS block. | Name of a CMS block. <br> This name is used by developers to assign the block to its [.twig email template](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html).
 | Template | Defines a placeholder structure of the CMS block. | Defines the placeholder structure of the Email CMS block. |
 | Status | Block status that can be active (visible in the online store) or inactive (invisible in the online store). | Irrelevant. |
 | Stores | Locale(s) for which the block will be visible on the store website. | Irrelevant. |

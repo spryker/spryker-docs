@@ -120,7 +120,7 @@ To revoke a company user refresh token, send the request:
 
 For security purposes, the endpoint always returns the `204 No Content` status code, regardless of any refresh tokens being revoked.
 
-The tokens are marked as expired on the date and time of the request. You can configure expired tokens to be automatically deleted from the database by setting the lifetime of expired tokens. For details, see [Configuring Outdated Refresh Token Life Time](https://documentation.spryker.com/v6/docs/configuring-outdated-refresh-token-life-time).
+The tokens are marked as expired on the date and time of the request. You can configure expired tokens to be automatically deleted from the database by setting the lifetime of expired tokens. For details, see [Configuring Outdated Refresh Token Life Time](/docs/scos/dev/glue-api-guides/{{page.version}}/deleting-expired-refresh-tokens.html).
 
 ## Possible errors
 

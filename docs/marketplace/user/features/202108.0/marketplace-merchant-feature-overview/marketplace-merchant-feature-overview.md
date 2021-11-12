@@ -99,7 +99,7 @@ Marketplace Storefront allows buyers to check what merchants are the owners of t
 In the Spryker Marketplace, you can search for the products sold by a specific merchant by entering the merchant name in the search field. The search results contain the merchant products and/or the abstract products the merchant product offers are related to. The search suggestions and the auto-completion functionality provide the merchant products and offers by the merchant name.
 ![Search by merchant name](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Merchants/Merchants+feature+overview/search-by-merchant-name.gif)
 
-In the catalog and search results pages, there is the merchant multi-select filter. This filter allows shoppers to see only the products with the product offers belonging to the selected merchant. See [Standard Filters](https://documentation.spryker.com/docs/standard-filters) documentation for more details on the filters available in the Spryker Commerce OS.
+In the catalog and search results pages, there is the merchant multi-select filter. This filter allows shoppers to see only the products with the product offers belonging to the selected merchant. See [Standard Filters](/docs/scos/user/features/{{page.version}}/search-feature-overview/standard-filters-overview.html) documentation for more details on the filters available in the Spryker Commerce OS.
 
 ![Merchant search filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Merchants/Merchants+feature+overview/merchant-filter.gif)
 
@@ -107,14 +107,15 @@ In the catalog and search results pages, there is the merchant multi-select filt
 If the merchant is not active, their products and offers are not displayed in the search suggestions, search results and in the merchant filter.
 
 ## Next steps
+
 [Learn about the merchant users](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html)
 
 ## Related Business User articles
 
 |FEATURE OVERVIEWS  |MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
 |---------|---------|---------|
-|[Merchant users overview](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/merchant-users-overview.html) | [Editing merchant's profile details](/docs/marketplace/user/merchant-portal-user-guides/{{ page.version }}/profile/editing-merchants-profile-details.html) |[Managing merchants](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchants.html)|
-|[Main merchant concept](/docs/marketplace/user/features/{{ page.version }}/marketplace-merchant-feature-overview/main-merchant-concept.html)| | [Managing merchant users](/docs/marketplace/user/back-office-user-guides/{{ page.version }}/marketplace/merchants/managing-merchant-users.html)|
+|[Merchant users overview](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html) | [Editing merchant's profile details](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/profile/editing-merchants-profile-details.html) |[Managing merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html)|
+|[Main merchant concept](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/main-merchant-concept.html)| | [Managing merchant users](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchant-users.html)|
 
 {% info_block warningBox "Developer guides" %}
 

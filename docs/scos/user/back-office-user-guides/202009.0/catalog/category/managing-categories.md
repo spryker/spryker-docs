@@ -20,27 +20,35 @@ related:
 This topic describes how to manage categories:
 * How to define an order according to which the products are going to be displayed.
 * How to view, edit, and delete categories.
-***
-
 
 ## Ordering Products in Categories
 You can adjust the order in which products under the category are displayed in the store.
 To define the order of displaying products, you need to set the numbers under which each product will be displayed on the page.
+
 {% info_block infoBox "Example" %}
+
 For example, you have ten products assigned to your category. For five of them, there is a seasonal discount applied. So you need those to be at the top of the list.
+
 {% endinfo_block %}
 
 **To change the order of products:**
 1. Click **Assign Products** in the **Categories** table for a specific category.
 2. Scroll down to the **Products in this category** section.
-3. In the _Order_ column, set numbers 1-5 for specific products. 
-    {% info_block warningBox "Note" %}
+3. In the _Order_ column, set numbers 1-5 for specific products.
+   
+ {% info_block warningBox "Note" %}
+
 In case you have several products with the identical order number value, the ordering will be performed based on the _product name_ attribute.
+
 {% endinfo_block %}
-    {% info_block infoBox "Information" %}
+
+{% info_block infoBox "Information" %}
+
 The product with 0 in the _Order_ column will be displayed at the bottom.
+
 {% endinfo_block %}
-5. Once the order you have set is correct, click **Save**. 
+
+4. Once the order you have set is correct, click **Save**. 
 
 ## Viewing Categories
 Before updating a category, you can view it to make sure that this is the needed category. 
@@ -74,8 +82,11 @@ If at some point of time you need to delete a category, you will use the **Categ
 1. For the category you need to delete, click **Delete** in the _Actions_ column. 
 2. On the **Delete category** page, you will be provided with detailed information about everything that will be de-assigned, moved, or deleted along with that category. 
 3. Select the checkbox next to **Yes, I am sure** to confirm your awareness and click **Delete**.
+   
 {% info_block warningBox "Note" %}
+
 Products assigned to this category will not be deleted. They will be de-assigned and continue to exist in the system. If the same products are assigned to other categories, they will stay assigned to those.
+
 {% endinfo_block %}
 
 **Tips & Tricks**

@@ -18,15 +18,17 @@ related:
 Follow the steps below to install Promotions & Discounts feature API.
 
 ## Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
 | Spryker Core | 202009.0 | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Product | 202009.0 | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
+| Product | 202009.0 | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)|
 | Promotions & Discounts | 202009.0 |  |
 
 ## 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
@@ -48,6 +50,7 @@ Make sure that the following modules have been installed:
 {% endinfo_block %}
 
 ## 2) Set up Database Schema and Transfer Objects
+
 Run the following commands to generate transfer changes:
 
 ```bash
@@ -69,7 +72,6 @@ Make sure that the following changes have occurred in the database:
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes have occurred in the database:
-
 
 | Transfer | Type | Event | Path |
 | --- | --- | --- | --- |
@@ -105,8 +107,11 @@ Make sure that SpyDiscountPromotion is extended with UUID behavior using the fol
 {% endinfo_block %}
 
 ## 3) Set up Behavior
+
 ### Generate UUIDs for existing discount promotion records that do not have them
+
 Run the following command:
+
 ```bash
 console uuid:generate DiscountPromotion spy_discount_promotion
 ```
@@ -117,7 +122,7 @@ Make sure that the UUID field is populated for all records in the spy_discount_p
 
 ```sql
 SELECT COUNT(*) FROM spy_discount_promotion WHERE uuid IS NULL;
-``
+```
 
 {% endinfo_block %}
 
@@ -132,8 +137,7 @@ Add the following fields into the *Quote Fields Allowed for Saving* list:
 
 To do so, modify the following file:
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/Quote/QuoteConfig.php</summary>
+**src/Pyz/Zed/Quote/QuoteConfig.php**
 
 ```php
 <?php
@@ -158,8 +162,6 @@ class QuoteConfig extends SprykerQuoteConfig
     }
 }
 ```
- <br>
-</details>
 
 
 ### Enable resources and relationships
@@ -179,12 +181,11 @@ Activate the following plugin:
 | `PromotionItemByQuoteTransferResourceRelationshipPlugin` | Adds the `promotional-items` resource as a relationship to the carts and `guest-carts` resources. | None | `Spryker\Glue\DiscountPromotionsRestApi\Plugin\GlueApplication` |
 | `ProductAbstractBySkuResourceRelationshipPlugin` | Adds the `abstract-products` resource as a relationship to the `promotional-items` resource. | None | `Spryker\Glue\ProductsRestApi\Plugin\GlueApplication` |
 
-<details open>
-   <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<details open><summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 
-    <?php
+<?php
 
 namespace Pyz\Glue\GlueApplication;
 
@@ -266,8 +267,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
-
-<br>
 </details>
 
 <details open>
@@ -295,7 +294,6 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
     }
 }
 ```
- <br>
 </details>
 
 <details open>
@@ -323,7 +321,6 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
     }
 }
 ```
- <br>
 </details>
 
 
@@ -357,8 +354,7 @@ To verify that ProductLabelsResourceRoutePlugin is set up correctly, make sure t
 
 * `http://glue.mysprykershop.com/product-labels/{% raw %}{{{% endraw %}idProductLabel{% raw %}}}{% endraw %}`
 
-<details open>
-<summary markdown='span'>Example response</summary>
+**Example response**
 
 ```json
 {
@@ -377,9 +373,6 @@ To verify that ProductLabelsResourceRoutePlugin is set up correctly, make sure t
     }
 }
 ```
- <br>
-</details>
-
 
 {% endinfo_block %}
 
@@ -387,8 +380,7 @@ To verify that ProductLabelsResourceRoutePlugin is set up correctly, make sure t
 
 To check `ProductLabelsRelationshipByResourceIdPlugin` plugin installation, send a request to `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}?include=product-labels` with an SKU of a product with at least one product label assigned to it. Make sure that the response includes relationships to the product-labels resource(s).
 
-<details open>
-<summary markdown='span'>Example response</summary>
+**Example response**
 
 ```json
 {
@@ -429,9 +421,6 @@ To check `ProductLabelsRelationshipByResourceIdPlugin` plugin installation, send
     ]
 }
 ```
- <br>
-</details>
-
 
 {% endinfo_block %}
 
@@ -481,7 +470,6 @@ To check `ProductLabelByProductConcreteSkuResourceRelationshipPlugin` plugin ins
     ]
 }
 ```
- <br>
 </details>
 
 
@@ -597,7 +585,6 @@ To verify installation of CartRuleByQuoteResourceRelationshipPlugin and VoucherB
     ]
 }
 ```
- <br>
 </details>
 
 
@@ -703,7 +690,6 @@ Make sure that the cart-rules and vouchers relationships are also available for 
     ]
 }
 ```
- <br>
 </details>
 
 
@@ -736,7 +722,6 @@ Add items to the cart to satisfy the conditions of the discount rule:
     }
 }
 ```
- <br>
 </details>
 
 Make sure that the following relations are available:
@@ -878,7 +863,6 @@ Make sure that the following relations are available:
     ]
 }
 ```
- <br>
 </details>
 
 
@@ -913,7 +897,6 @@ Add the selected promotional product to the cart and check the cart in the respo
     }
 }
 ```
- <br>
 </details>
 
 <details open>
@@ -1022,7 +1005,6 @@ Add the selected promotional product to the cart and check the cart in the respo
     ]
 }
 ```
- <br>
 </details>
 
 {% endinfo_block %}

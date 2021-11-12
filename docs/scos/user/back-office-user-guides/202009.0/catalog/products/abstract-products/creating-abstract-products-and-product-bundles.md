@@ -23,7 +23,7 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html
 ---
 
-This topic describes how to create [abstract products](https://documentation.spryker.com/v6/docs/products-overview#abstract-products-and-product-variants) and [product bundles](/docs/scos/user/features/{{page.version}}/product-bundles/product-bundles-feature-overview.html).
+This topic describes how to create [abstract products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants) and [product bundles](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html).
 
 
 ## Prerequisites 
@@ -40,33 +40,36 @@ Each section contains reference information. Make sure to review it before you s
 You can add super attributes to product variants only when creating an abstract product. 
 
 {% endinfo_block %}
+
 {% info_block errorBox "Create at least one product variant" %}
+
 To be able to add product variants after creating an abstract product,  add at least one product variant while creating the abstract product.
+
 {% endinfo_block %}
 
 ## Defining general settings
 To create an abstract product or a product bundle:
 1. Depending on the type of the product you want to create, select one of the following:
-    * Abstract product: select **Create Product**.
-    * Product bundle: select **Create Product Bundle**.
-    This takes you to the *Create a Product* page.
+   * Abstract product: select **Create Product**.
+   * Product bundle: select **Create Product Bundle**. This takes you to the *Create a Product* page.
 2. In the **General** tab, define general settings:
-    1. Select one or more **Store relations**.
-    2. Enter an **SKU Prefix**.
-    3. Enter a **Name** and **Description** for all the locales.
-    4. Optional: Select **New from** and **New to** dates.
-    5. Select **Next >** and follow [Defining prices](#defining-prices).
-        This opens the **Prices & Tax** tab.
+   1. Select one or more **Store relations**.
+   2. Enter an **SKU Prefix**.
+   3. Enter a **Name** and **Description** for all the locales.
+   4. Optional: Select **New from** and **New to** dates.
+   5. Select **Next >** and follow [Defining prices](#defining-prices).
+This opens the **Prices & Tax** tab.
 
 ### Reference information: Defining general settings
-
+<div>
 | Attribute | Description | 
 | --- | --- | --- | --- |  
-| Store relation  | Defines the [stores](/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/howto-set-up-multiple-stores.html) the product will be available in.<br>You can select multiple values. | 
+| Store relation  | Defines the [stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) the product will be available in.<br>You can select multiple values. | 
 | SKU Prefix | Unique product identifier that will be used to track unique information related to the product. |
 | Name | The name that will be displayed for the product on the Storefront. | 
 | Description | The description that will be displayed for the product on the Storefront. | 
-| New from<br>New to  | Defines the period of time for which: <br><ul><li>A [dynamic product label](/docs/scos/user/features/{{page.version}}/product-labels/product-labels-feature-overview.html) *New* will be assigned to the product.</li><li>The product will be assigned to the *New* [category](/docs/scos/user/features/{{page.version}}category-management-feature-overview.html)</li></ul><br> You can either select no dates or both. | 
+| New from<br>New to  | Defines the period of time for which: <br><ul><li>A [dynamic product label](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) *New* will be assigned to the product.</li><li>The product will be assigned to the *New* [category](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html)</li></ul><br> You can either select no dates or both. | 
+</div>
 
 ## Defining prices
 
@@ -83,30 +86,32 @@ In the **Prices & Tax** tab, define prices:
 | Attribute |Description | 
 | --- | --- | --- |
 |Merchant Price Dimension| B2B only<br>Defines the [merchant](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html) the prices will apply to.<br>If you select **Default prices**, the prices will apply to all customers.<br>To [manage merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html) go to **Marketplace** > **Merchant Relations**. |
-| Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price  before tax.<br>If a product variant of the abstract product does not have a price, it [inherits](https://documentation.spryker.com/v6/docs/products-overview#product-information-inheritance) the price you enter here. | 
+| Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price  before tax.<br>If a product variant of the abstract product does not have a price, it the price you enter here. | 
 |Default<br>Original | A default price is the price a customer pays for the product. An original price is a price displayed as a strikethrough beside the default price on the Storefront. The original price is optional and is usually used to indicate a price change. |
-| Tax Set | The conditions under which the product will be taxed.<br>To [manage tax sets](https://documentation.spryker.com/v6/docs/managing-tax-rates-sets), go to **Taxes** > **Tax Sets**.|
+| Tax Set | The conditions under which the product will be taxed.<br>To [manage tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-rates/managing-tax-rates.html), go to **Taxes** > **Tax Sets**.|
     
 ## Defining product variants
 In the **Variants** tab, define product variants:
 * Product bundle: Select **Save** and follow [Defining meta information](#defining-meta-information).
-           The page refreshes with a product variant created automatically. 
+The page refreshes with a product variant created automatically. 
 * Abstract product: Define product variants as follows:
-    1. Select one or more super attributes that define your product variants.
-    2. In the field next to the super attribute you've selected, select one or more product attribute values.
-    3. Repeat the previous step until you select at least one value for each selected super attribute.  
-    4. Select **Save** and follow [Defining meta information](#defining-meta-information).
-        The page refreshes with the created product variants displayed in the table.
+  1. Select one or more super attributes that define your product variants.
+  2. In the field next to the super attribute you've selected, select one or more product attribute values.
+  3. Repeat the previous step until you select at least one value for each selected super attribute.
+  4. Select **Save** and follow [Defining meta information](#defining-meta-information).
+  The page refreshes with the created product variants displayed in the table.
         
-    ![Defining product variants](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+user+guide/Catalog/Products/Abstract+products/Creating+abstract+products/defining-product-variants.gif)
+  ![Defining product variants](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+user+guide/Catalog/Products/Abstract+products/Creating+abstract+products/defining-product-variants.gif)
 
 ### Reference information: Defining product variants
 
 {% info_block warningBox "Product bundles" %}
+
 The reference information in this section is relevant only for abstract products. When you create a product bundle, a single product variant is created automatically.
+
 {% endinfo_block %}
 
-In the **Variants** tab, you can see all the existing [super attributes](https://documentation.spryker.com/v6/docs/products-overview#super-attributes). You can [create](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) or [manage](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/managing-product-attributes.html) super attributes in **Catalog** > **Attributes**.
+In the **Variants** tab, you can see all the existing [super attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html#super-attributes). You can [create](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) or [manage](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/managing-product-attributes.html) super attributes in **Catalog** > **Attributes**.
 
 You can select as many super attributes as you need and define one or more values for them. For each product attribute value you select, a product variant will be created. After creating the abstract product, you will be able to create new product variants based on the super attributes you select when creating the abstract product. 
 
@@ -136,9 +141,9 @@ Optional: Add images for the product:
 4. Enter an **Image Set Name**.
 5. Repeat steps *2* and *3* until you add the desired number of image sets.
 6. In the desired image set, enter the following:
-    *  **Small Image URL**
-    *  **Large Image URL**
-    *  **Sort order**
+  *  **Small Image URL**
+  *  **Large Image URL**
+  *  **Sort order**
 7. Optional: Select **Add image** and repeat the previous step until you add all the desired images for this locale.
 8. Repeat steps *1* to *6* until you add images for all the desired locales.
 9. Select **Save**.

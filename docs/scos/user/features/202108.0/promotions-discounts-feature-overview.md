@@ -251,7 +251,7 @@ If same priority, apply the existing Spryker logic that chooses the discount wit
 
 The following scenarios illustrates how the discount calculation logic works
 
-[SCENARIOS]
+[SCENARIOS] https://spryker.atlassian.net/browse/CC-14607
 
 
 ## Related Business User articles

@@ -1164,7 +1164,7 @@ entries:
           - "202005.0"
           - "202009.0"
           nested:
-          - title: Abstract Product- Reference Information
+          - title: Abstract Product - Reference Information
             url: /docs/scos/user/back-office-user-guides/catalog/products/references/abstract-product-reference-information.html
             include_versions:
             - "201811.0"
@@ -1172,7 +1172,7 @@ entries:
             - "201907.0"
             - "202001.0"
             - "202005.0"
-          - title: Products- Reference Information
+          - title: Products - Reference Information
             url: /docs/scos/user/back-office-user-guides/catalog/products/references/products-reference-information.html
             include_versions:
             - "201811.0"
@@ -1180,7 +1180,7 @@ entries:
             - "201907.0"
             - "202001.0"
             - "202005.0"
-          - title: Concrete Product- Reference Information
+          - title: Concrete Product - Reference Information
             url: /docs/scos/user/back-office-user-guides/catalog/products/references/concrete-product-reference-information.html
             include_versions:
             - "201811.0"

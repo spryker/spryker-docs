@@ -106,12 +106,33 @@ entries:
             - title: Managing main merchant returns
               url: /docs/marketplace/user/back-office-user-guides/sales/managing-main-merchant-returns.html
 
+        - title: Customer
+          nested:
+      
+            - title: Customer, customer access, customer groups
+              nested:
+        
+            - title: Managing customers
+              url: /docs/scos/user/back-office-user-guides/customer/customer-customer-access-customer-groups/managing-customers.html
+        
+            - title: Managing customer addresses
+              url: /docs/scos/user/back-office-user-guides/customer/customer-customer-access-customer-groups/managing-customer-addresses.html
+        
+            - title: Managing customer access
+              url: /docs/scos/user/back-office-user-guides/customer/customer-customer-access-customer-groups/managing-customer-access.html
+        
+            - title: Managing customer groups
+              url: /docs/scos/user/back-office-user-guides/customer/customer-customer-access-customer-groups/managing-customer-groups.html
+        
         - title: Catalog
 
           nested:
 
             - title: Availability
               nested:
+
+              - title: Managing products availability
+                url: /docs/marketplace/user/back-office-user-guides/catalog/availability/managing-products-availability.html
 
               - title: "Availability: reference information"
                 url: /docs/marketplace/user/back-office-user-guides/catalog/availability/availability-reference-information.html
@@ -134,12 +155,21 @@ entries:
                 - title: Creating product variants
                   url: /docs/marketplace/user/back-office-user-guides/catalog/products/concrete-products/creating-product-variants.html
 
+                - title: Editing product variants
+                  url: /docs/marketplace/user/back-office-user-guides/catalog/products/concrete-products/editing-product-variants.html
+
               - title: Managing products
                 nested:
 
                 - title: Managing products
                   url: /docs/marketplace/user/back-office-user-guides/catalog/products/managing-products/managing-products.html
-
+                  nested:
+                    
+                    - title: Discontinuing products
+                      url: /docs/marketplace/user/back-office-user-guides/catalog/products/managing-products/discontinuing-products.html
+                    
+                    - title: Adding product alternatives
+                      url: /docs/marketplace/user/back-office-user-guides/catalog/products/managing-products/adding-product-alternatives.html
 
               - title: "Abstract products: reference information"
                 url: /docs/marketplace/user/back-office-user-guides/catalog/products/abstract-product-reference-information.html
@@ -147,14 +177,220 @@ entries:
               - title: "Products: reference information"
                 url: /docs/marketplace/user/back-office-user-guides/catalog/products/products-reference-information.html
 
-        - title: Product Options
+            - title: Category
+              nested:
+                
+                - title: Creating categories
+                  url: /docs/scos/user/back-office-user-guides/catalog/category/creating-categories.html
+                
+                - title: Assigning products to categories
+                  url: /docs/scos/user/back-office-user-guides/catalog/category/assigning-products-to-categories.html
+                
+                - title: Managing categories
+                  url: /docs/scos/user/back-office-user-guides/catalog/category/managing-categories.html
+                
+                - title: References
+        
+            - title: Attributes
+              nested:
+
+                - title: Creating product attributes
+                  url: /docs/scos/user/back-office-user-guides/catalog/attributes/creating-product-attributes.html
+        
+                - title: Managing product attributes
+                  url: /docs/scos/user/back-office-user-guides/catalog/attributes/managing-product-attributes.html
+            
+            - title: Availability
+              nested:
+
+                - title: Managing products availability
+                  url: /docs/scos/user/back-office-user-guides/catalog/availability/managing-products-availability.html
+
+                - title: Availability - reference information
+                  url: /docs/marketplace/user/back-office-user-guides/catalog/availability/availability-reference-information.html
+            
+            - title: Product reviews
+              nested:
+
+                - title: Managing product reviews
+                  url: /docs/scos/user/back-office-user-guides/catalog/product-reviews/managing-product-reviews.html
+            
+            - title: Product Options
+              nested:
+
+                - title: Creating product options
+                  url: /docs/marketplace/user/back-office-user-guides/catalog/product-options/creating-product-options.html
+
+                - title: Managing product options
+                  url: /docs/marketplace/user/back-office-user-guides/catalog/product-options/managing-product-options.html
+
+            - title: Product lists
+              nested:
+        
+                - title: Creating product lists
+                  url: /docs/scos/user/back-office-user-guides/catalog/product-lists/creating-product-lists.html
+        
+                - title: Managing product lists
+                  url: /docs/scos/user/back-office-user-guides/catalog/product-lists/managing-product-lists.html
+
+            - title: Product barcodes
+              nested:
+                
+                - title: Viewing product barcodes
+                  url: /docs/scos/user/back-office-user-guides/catalog/product-barcodes/viewing-product-barcodes.html
+      
+            - title: Scheduled prices
+              nested:
+        
+                - title: Creating scheduled prices
+                  url: /docs/scos/user/back-office-user-guides/catalog/scheduled-prices/creating-scheduled-prices.html
+          
+                - title: Managing scheduled prices
+                  url: /docs/scos/user/back-office-user-guides/catalog/scheduled-prices/managing-scheduled-prices.html
+
+        - title: Content
           nested:
+            
+            - title: Adding content to the Storefront pages using templates and slots
+              url: /docs/scos/user/back-office-user-guides/content/adding-content-to-storefront-pages-using-templates-and-slots-best-practices.html
+        
+            - title: Content items
+              nested:
+        
+                - title: Creating content items
+                  url: /docs/scos/user/back-office-user-guides/content/content-items/creating-content-items.html
+          
+                - title: Editing content items
+                  url: /docs/scos/user/back-office-user-guides/content/content-items/editing-content-items.html
+          
+                - title: Adding content items to CMS pages and blocks
+                  url: /docs/scos/user/back-office-user-guides/content/content-items/adding-content-items-to-cms-pages-and-blocks.html
+          
+                - title: Editing content items in CMS pages and blocks
+                  url: /docs/scos/user/back-office-user-guides/content/content-items/editing-content-items-in-cms-pages-and-blocks.html
 
-            - title: Creating product options
-              url: /docs/marketplace/user/back-office-user-guides/catalog/product-options/creating-product-options.html
+                - title: References
+                  nested:
 
-            - title: Managing product options
-              url: /docs/marketplace/user/back-office-user-guides/catalog/product-options/managing-product-options.html
+                    - title: Reference information - content item widgets types
+                      url: /docs/scos/user/back-office-user-guides/content/content-items/references/reference-information-content-item-widgets-types.html
+            
+                    - title: Reference information - content item widgets templates
+                      url: /docs/scos/user/back-office-user-guides/content/content-items/references/reference-information-content-item-widgets-templates.html
+            
+                - title: Content Item Widgets
+                  url: /docs/scos/user/back-office-user-guides/content/content-items/content-item-widgets.html
+          
+            - title: Blocks
+              nested:
+
+                - title: Creating CMS blocks
+                  url: /docs/scos/user/back-office-user-guides/content/blocks/creating-cms-blocks.html
+                
+                - title: Managing CMS blocks
+                  url: /docs/scos/user/back-office-user-guides/content/blocks/managing-cms-blocks.html
+        
+                - title: Managing content of emails via CMS blocks
+                  url: /docs/scos/user/back-office-user-guides/content/blocks/managing-content-of-emails-via-cms-blocks.html
+          
+            - title: Pages
+              nested:
+        
+                - title: Creating CMS pages
+                  url: /docs/scos/user/back-office-user-guides/content/pages/creating-cms-pages.html
+                
+                - title: Editing CMS pages
+                  url: /docs/scos/user/back-office-user-guides/content/pages/editing-cms-pages.html
+        
+                - title: Managing CMS pages
+                  url: /docs/scos/user/back-office-user-guides/content/pages/managing-cms-pages.html
+        
+                - title: Managing CMS page versions
+                  url: /docs/scos/user/back-office-user-guides/content/pages/managing-cms-page-versions.html
+
+            - title: Navigation
+              nested:
+                
+                - title: Managing navigation elements
+                  url: /docs/scos/user/back-office-user-guides/content/navigation/managing-navigation-elements.html
+        
+            - title: Slots
+              nested:
+
+                - title: Managing slots
+                  url: /docs/scos/user/back-office-user-guides/content/slots/managing-slots.html
+        
+            - title: Redirects
+              nested:
+        
+                - title: Creating CMS redirects
+                  url: /docs/scos/user/back-office-user-guides/content/redirects/creating-cms-redirects.html
+        
+                - title: Managing CMS redirects
+                  url: /docs/scos/user/back-office-user-guides/content/redirects/managing-cms-redirects.html
+        
+            - title: File manager
+              nested:
+        
+                - title: Managing file tree
+                  url: /docs/scos/user/back-office-user-guides/content/file-manager/managing-file-tree.html
+        
+                - title: Managing file list
+                  url: /docs/scos/user/back-office-user-guides/content/file-manager/managing-file-list.html
+        
+        - title: Merchandising
+          nested:
+                
+            - title: Discount
+              nested:
+                
+                - title: Creating vouchers
+                  url: /docs/scos/user/back-office-user-guides/merchandising/discount/creating-vouchers.html
+                
+                - title: Creating cart rules
+                  url: /docs/scos/user/back-office-user-guides/merchandising/discount/creating-cart-rules.html
+                
+                - title: Managing discounts
+                  url: /docs/scos/user/back-office-user-guides/merchandising/discount/managing-discounts.html
+        
+            - title: Product labels
+              nested:
+        
+                - title: Creating product labels
+                  url: /docs/scos/user/back-office-user-guides/merchandising/product-labels/creating-product-labels.html
+                
+                - title: Managing product labels
+                  url: /docs/scos/user/back-office-user-guides/merchandising/product-labels/managing-product-labels.html
+
+            - title: Product relations
+              nested:
+        
+                - title: Creating product relations
+                  url: /docs/scos/user/back-office-user-guides/merchandising/product-relations/creating-product-relations.html
+        
+                - title: Managing product relations
+                  url: /docs/scos/user/back-office-user-guides/merchandising/product-relations/managing-product-relations.html
+
+            - title: Product sets
+              nested:
+        
+                - title: Creating product sets
+                  url: /docs/scos/user/back-office-user-guides/merchandising/product-sets/creating-product-sets.html
+        
+                - title: Managing product sets
+                  url: /docs/scos/user/back-office-user-guides/merchandising/product-sets/managing-product-sets.html
+
+            - title: Search and filters
+              nested:
+
+                - title: Managing category filters
+                  url: /docs/scos/user/back-office-user-guides/merchandising/search-and-filters/managing-category-filters.html
+        
+                - title: Managing filter preferences
+                  url: /docs/scos/user/back-office-user-guides/merchandising/search-and-filters/managing-filter-preferences.html
+                
+                - title: Managing search preferences
+                  url: /docs/scos/user/back-office-user-guides/merchandising/search-and-filters/managing-search-preferences.html
 
         - title: Marketplace
 
@@ -180,6 +416,142 @@ entries:
 
                 - title: Managing marketplace orders
                   url: /docs/marketplace/user/back-office-user-guides/marketplace/orders/managing-marketplace-orders.html
+
+        - title: Users
+          nested:
+      
+            - title: Roles, groups, and users
+              nested:
+        
+                - title: Managing roles
+                  url: /docs/scos/user/back-office-user-guides/users/roles-groups-and-users/managing-roles.html
+        
+                - title: Managing users
+                  url: /docs/scos/user/back-office-user-guides/users/roles-groups-and-users/managing-users.html
+        
+                - title: Managing groups
+                  url: /docs/scos/user/back-office-user-guides/users/roles-groups-and-users/managing-groups.html
+        
+        
+        - title: Administration
+          nested:
+
+            - title: Stores
+              url: /docs/marketplace/user/back-office-user-guides/administration/stores.html
+            
+            - title: Warehouses
+              nested:
+
+                - title: Creating warehouses
+                  url: /docs/marketplace/user/back-office-user-guides/administration/warehouses/creating-warehouses.html
+          
+                - title: Managing warehouses
+                  url: /docs/marketplace/user/back-office-user-guides/administration/warehouses/managing-warehouses.html
+        
+                - title: References
+                  nested:
+
+                - title: Warehouses - Reference Information
+                  url: /docs/marketplace/user/back-office-user-guides/administration/warehouses/references/warehouses-reference-information.html
+          
+                - title: Reference information - Warehouses
+                  url: /docs/marketplace/user/back-office-user-guides/administration/warehouses/references/reference-information-warehouses.html
+          
+            - title: Payment methods
+              nested:
+
+                - title: Managing payment methods
+                  url: /docs/marketplace/user/back-office-user-guides/administration/payment-methods/managing-payment-methods.html
+         
+                - title: References
+                  nested:
+
+                    - title: Payment Methods- Reference Information
+                      url: /docs/marketplace/user/back-office-user-guides/administration/payment-methods/references/payment-methods-reference-information.html
+          
+                    - title: Reference information- Payment methods
+                      url: /docs/marketplace/user/back-office-user-guides/administration/payment-methods/references/reference-information-payment-methods.html
+         
+                - title: Delivery methods
+                  nested:
+
+                    - title: Creating a carrier company
+                      url: /docs/marketplace/user/back-office-user-guides/administration/delivery-methods/creating-carrier-companies.html
+
+                    - title: Creating and managing delivery methods
+                      url: /docs/marketplace/user/back-office-user-guides/administration/delivery-methods/creating-and-managing-delivery-methods.html
+          
+                    - title: References
+                      nested:
+                        
+                        - title: Delivery Methods- Reference Information
+                          url: /docs/marketplace/user/back-office-user-guides/administration/delivery-methods/references/delivery-methods-reference-information.html
+            
+                        - title: Reference information- Delivery methods
+                          url: /docs/marketplace/user/back-office-user-guides/administration/delivery-methods/references/reference-information-delivery-methods.html
+            
+                    - title: Shipment
+                      url: /docs/marketplace/user/back-office-user-guides/administration/delivery-methods/shipment.html
+          
+            - title: Glossary
+              nested:
+
+                - title: Managing glossary
+                  url: /docs/marketplace/user/back-office-user-guides/administration/glossary/managing-glossary.html
+      
+            - title: Tax rates
+              nested:
+
+                - title: Managing tax rates
+                  url: /docs/marketplace/user/back-office-user-guides/administration/tax-rates/managing-tax-rates.html
+      
+            - title: Tax sets
+              nested:
+        
+                - title: Managing tax sets
+                  url: /docs/marketplace/user/back-office-user-guides/administration/tax-sets/managing-tax-sets.html
+                
+                - title: Taxes
+                  url: /docs/marketplace/user/back-office-user-guides/administration/tax-rates/taxes.html
+          
+                - title: References
+                  nested:
+
+                    - title: Tax Rates Reference Information
+                      url: /docs/marketplace/user/back-office-user-guides/administration/tax-rates/references/tax-rates-reference-information.html
+            
+                    - title: Tax Sets Reference Information
+                      url: /docs/marketplace/user/back-office-user-guides/administration/tax-sets/references/tax-sets-reference-information.html
+            
+            - title: Thresholds
+              nested:
+
+                - title: Managing global thresholds
+                  url: /docs/marketplace/user/back-office-user-guides/administration/thresholds/managing-global-thresholds.html
+          
+                - title: Managing merchant order thresholds
+                  url: /docs/marketplace/user/back-office-user-guides/administration/thresholds/managing-merchant-order-thresholds.html
+          
+                - title: Managing threshold settings
+                  url: /docs/marketplace/user/back-office-user-guides/administration/thresholds/managing-threshold-settings.html
+          
+                - title: Threshold
+                  url: /docs/marketplace/user/back-office-user-guides/administration/thresholds/threshold.html
+          
+                - title: References
+                  nested:
+
+                    - title: Threshold- Reference Information
+                      url: /docs/marketplace/user/back-office-user-guides/administration/thresholds/references/threshold-reference-information.html
+            
+                    - title: Reference information- Threshold
+                      url: /docs/marketplace/user/back-office-user-guides/administration/thresholds/references/reference-information-threshold.html
+            
+            - title: MIME type settings
+              nested:
+
+                - title: Managing MIME type settings
+                  url: /docs/marketplace/user/back-office-user-guides/administration/mime-type-settings/managing-mime-type-settings.html
 
       - title: Merchant Portal user guides
         url: /docs/marketplace/user/merchant-portal-user-guides/

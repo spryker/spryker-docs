@@ -1,0 +1,1 @@
+/Users/oksanafindir/Documents/Spryker/spryker-docs/docs/scos/user/back-office-user-guides/202108.0/catalog/availability/managing-products-availability.md

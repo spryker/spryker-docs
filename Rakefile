@@ -35,7 +35,8 @@ commonOptions = {
   },
   :empty_alt_ignore => true,
   :only_4xx => false,
-  :http_status_ignore => [429]
+  :http_status_ignore => [429],
+  :parallel => { :in_threads => 3}
 }
 
 task :check_cloud do

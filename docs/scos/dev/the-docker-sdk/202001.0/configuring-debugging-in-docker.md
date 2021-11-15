@@ -8,6 +8,7 @@ originalArticleId: 604dfef8-d365-4dd0-8e27-ac20a1b2ff6b
 redirect_from:
   - /v4/docs/debugging-setup-in-docker
   - /v4/docs/en/debugging-setup-in-docker
+  - /docs/scos/dev/the-docker-sdk/202001.0/debugging-setup-in-docker.html
 ---
 
 This document provides debugging procedures for Spryker in Docker.

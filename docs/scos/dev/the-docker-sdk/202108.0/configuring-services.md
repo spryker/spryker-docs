@@ -60,7 +60,9 @@ git clone https://github.com/spryker/docker-sdk.git ./docker
 {% endinfo_block %}
 
 ## Database services
-[MariaDB](https://mariadb.org/) is provided as a service by default, but you can switch to MySQL or PostgreSQL as described below.
+[MariaDB](https://mariadb.org/) is provided as a service by default. MariaDB is about 40% faster on write operations, and is therefore cheaper when compared, for example, to PostgreSQL.
+
+ Anyway, you can switch to MySQL or PostgreSQL as described below.
 
 ### MariaDB
 [MariaDB](https://mariadb.org/) is a community-developed, commercially supported fork of the [MySQL](https://www.mysql.com/) relational database management system.

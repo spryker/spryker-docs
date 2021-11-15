@@ -9,10 +9,10 @@ commonOptions = {
   :url_ignore => [
     /mysprykershop.com\/[\.\w\-\/\?]+/,
     /b2c-demo-shop.local\/[\.\w\-\/\?]+/,
-    /zed.de.b2b-demo-shop.local\/[\.\w\-\/\?]+/,
+    /b2b-demo-shop.local\/[\.\w\-\/\?]+/,
     /mydomain.com\/[\.\w\-\/\?]+/,
     /demoshop.local\/[\.\w\-\/\?]+/,
-    /mysprykershop.com:10007\/[\.\w\-\/\?]+/,
+    /zed.mysprykershop.com:10007/,
     /www.pexels.com\/[@\.\w\-\/\?]+/,
     /pixabay.com\/[\.\w\-\/\?]+/,
     /xentral.com\/[\.\w\-\/\?]+/,
@@ -35,9 +35,7 @@ commonOptions = {
   },
   :empty_alt_ignore => true,
   :only_4xx => false,
-  :http_status_ignore => [429],
-  :parallel => { :in_processes => 4},
-  :cache => { :timeframe => '2w' }
+  :http_status_ignore => [429]
 }
 
 task :check_cloud do

@@ -34,7 +34,7 @@ commonOptions = {
     :report_script_embeds => true,
   },
   :empty_alt_ignore => true,
-  :only_4xx => true,
+  :only_4xx => false,
   :http_status_ignore => [429],
   :parallel => { :in_processes => 4},
   :cache => { :timeframe => '2w' }
@@ -88,6 +88,7 @@ end
 
 task :check_scos_dev_2020090 do
   options = commonOptions.dup
+  options[:only_4xx] = false
   options[:file_ignore] = [
     /docs\/marketplace\/.+/,
     /docs\/cloud\/.+/,

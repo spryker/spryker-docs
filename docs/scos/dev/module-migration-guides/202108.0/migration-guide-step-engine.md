@@ -19,4 +19,4 @@ In Version 3 the `StepCollectionInterface::getPreviousStep()` has a new second o
 If `StepEngineInterface::getTemplateVariables()` is overridden in your project, you need to update the call to `StepCollectionInterface::getPreviousStep()` here as well.
 
 <!--See also:
-[Defining a Step - Step Engine](https://documentation.spryker.com/capabilities/order_management/step_engine/step-engine-define-step.htm)-->
+[Defining a Step - Step Engine](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-workflow-overview.html#defining-the-steps)-->

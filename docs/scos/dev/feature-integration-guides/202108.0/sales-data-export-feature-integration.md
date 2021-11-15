@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/sales-data-export-feature-integration
 related:
   - title: Data export
-    link: docs/scos/dev/sdk/page.version/data-export.html
+    link: docs/scos/dev/sdk/data-export.html
 ---
 
 ## Install feature core

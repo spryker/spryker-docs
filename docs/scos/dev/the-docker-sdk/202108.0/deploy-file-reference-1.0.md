@@ -97,7 +97,7 @@ Defines a tag to separate different boots for a single deployment.
 
 By default, the tag is a randomly generated, unique value.
 
-For example, Docker images and volumes are tagged with a `tag:` to avoid intersections between different boots for a signle deployment on a single host machine. The tag can be set directly in the deploy file to ensure that all the boots of a deployment run with the same images and volumes.
+For example, Docker images and volumes are tagged with a `tag:` to avoid intersections between different boots for a single deployment on a single host machine. The tag can be set directly in the deploy file to ensure that all the boots of a deployment run with the same images and volumes.
 
 This variable is optional. If not specified, the default value applies: `tag: '1.0'`.
 

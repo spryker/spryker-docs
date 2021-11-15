@@ -652,4 +652,4 @@ Resolve a search engine friendly URL of a merchant page. See [Resolving search e
 
 ## Possible errors
 
-For statuses, see [Reference information: GlueApplication errors](https://documentation.spryker.com/docs/reference-information-glueapplication-errors).
+For statuses, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

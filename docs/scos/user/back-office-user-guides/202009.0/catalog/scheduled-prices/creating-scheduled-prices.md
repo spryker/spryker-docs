@@ -29,14 +29,16 @@ Instead of changing prices manually on the starting day of the promotion, you ca
 
 **To create a price schedule:**
 
-1.     Create a CSV file with predefined product price schedules. See [Scheduled Prices: Reference information](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/creating-scheduled-prices.html#reference-information-creating-scheduled-prices).
-2.     Enter and select the attributes for your price schedule. See [Scheduled Prices: Reference information](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/creating-scheduled-prices.html#reference-information-creating-scheduled-prices).
-3.     Click **Browse** and select the file you've prepared in step 1.
-4.     Click **Import your CSV file**.
+1. Create a CSV file with predefined product price schedules. See [Scheduled Prices: Reference information](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/creating-scheduled-prices.html#reference-information-creating-scheduled-prices).
+2. Enter and select the attributes for your price schedule. See [Scheduled Prices: Reference information](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/creating-scheduled-prices.html#reference-information-creating-scheduled-prices).
+3. Click **Browse** and select the file you've prepared in step 1.
+4. Click **Import your CSV file**.
 5. Once redirected to the _Import dry run_ page, check whether there are incorrect entries in your file in the **Errors found inside your file** section.
 
-     {% info_block infoBox %}
+{% info_block infoBox %}
+
 If needed, you can [edit the imported scheduled prices](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/managing-scheduled-prices.html).
+
 {% endinfo_block %}
     
 6. Check if the successfully imported price schedules are correct in the **Row processed with success** section.
@@ -44,5 +46,5 @@ If needed, you can [edit the imported scheduled prices](/docs/scos/user/back-off
 7. If you are satisfied with the results, in the **Publish the scheduled prices** section, click **Publish** to apply the price schedules.
 
 **Tips & Tricks**
-*     If you leave the _Import dry run_ page without publishing the imported price schedules, they do not get deleted. However, you won't be able to return to that page unless you import the file once again.
-*     You can check current price schedules of each product in **Products** section >**Edit Product** page > **Scheduled Prices** tab.
+* If you leave the _Import dry run_ page without publishing the imported price schedules, they do not get deleted. However, you won't be able to return to that page unless you import the file once again.
+* You can check current price schedules of each product in **Products** section >**Edit Product** page > **Scheduled Prices** tab.

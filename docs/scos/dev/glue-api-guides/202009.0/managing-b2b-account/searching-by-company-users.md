@@ -40,7 +40,7 @@ To retrieve company users of the current authenticated customer, send the reques
 
 | Header key | Required | Description |
 | --- | --- | --- |
-| Authorization | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 
 | Query parameter | Description | Possible values |

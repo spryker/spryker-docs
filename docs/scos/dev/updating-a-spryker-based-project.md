@@ -240,9 +240,9 @@ The goal of the automoted tests in case of updates is not to have a 100% code co
 ### 2. Run code analysis tools
 
 We find the following static code analysis tools the most helpful for running after the update and strongly recommend that you use them:
-* [PhpStan](https://github.com/phpstan/phpstan):  helps you find incompatible interface signatures, undefined method calls, missing classes, use of deprecated methods (phpstan-deprecation-rules) and many more. See [PHPStan](/docs/scos/dev/sdk/{{site.version}}/development-tools/phpstan.html) for information on how to install and use the tool.
-* [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer): keeps the project code clean  and consistent after the update. See [Code Sniffer](/docs/scos/dev/sdk/{{site.version}}/development-tools/code-sniffer.html) for information on how to use the tool.
-* [Architecture Sniffer](https://github.com/spryker/architecture-sniffer): helps you maintain the quality of the architecture. See [Architecture Sniffer](/docs/scos/dev/sdk/{{site.version}}/development-tools/architecture-sniffer.html) for information on how to run the tool.
+* [PhpStan](https://github.com/phpstan/phpstan):  helps you find incompatible interface signatures, undefined method calls, missing classes, use of deprecated methods (phpstan-deprecation-rules) and many more. See [PHPStan](/docs/scos/dev/sdk/development-tools/phpstan.html) for information on how to install and use the tool.
+* [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer): keeps the project code clean  and consistent after the update. See [Code Sniffer](/docs/scos/dev/sdk/development-tools/code-sniffer.html) for information on how to use the tool.
+* [Architecture Sniffer](https://github.com/spryker/architecture-sniffer): helps you maintain the quality of the architecture. See [Architecture Sniffer](/docs/scos/dev/sdk/development-tools/architecture-sniffer.html) for information on how to run the tool.
 
 ### 3. Make other possible checks
 

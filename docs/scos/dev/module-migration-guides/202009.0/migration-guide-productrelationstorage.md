@@ -99,6 +99,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 ```
 
 5. In `Pyz/Zed/Synchronization/SynchronizationDependencyProvider`, replace  `ProductRelationSynchronizationDataPlugin` with `ProductRelationSynchronizationDataRepositoryPlugin`:
+
 ```php
 <?php
  
@@ -133,8 +134,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
     ```bash
     console queue:worker:start
     ```
-    
-{% endinfo_block %}
+    {% endinfo_block %}
 
 
 *Estimated migration time: 1 hour.*

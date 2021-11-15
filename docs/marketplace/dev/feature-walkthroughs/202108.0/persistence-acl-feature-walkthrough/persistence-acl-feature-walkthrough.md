@@ -1,7 +1,8 @@
 ---
 title: Persistence ACL feature walkthrough
-last_updated: Sep 14, 2021
-template: concept-topic-template
+last_updated: Nov 05, 2021
+description: With the Persistence ACL feature, you can manage authorization at the database entity level, or even within a set of entities or segments.
+template: feature-walkthrough-template
 ---
 
 ## Overview

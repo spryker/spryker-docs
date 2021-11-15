@@ -8,6 +8,7 @@ originalArticleId: 4006b24f-fd0a-480a-9589-d2b822fdbde3
 redirect_from:
 - /v5/docs/user-and-rights-management
 - /v5/docs/en/user-and-rights-management
+- /docs/scos/dev/feature-walkthroughs/202005.0/customer-account-management-feature-walkthrough/user-and-rights-overview.html
 ---
 
 User and rights management is a general term that describes the security functionality for controlling user access to perform various roles throughout the system.

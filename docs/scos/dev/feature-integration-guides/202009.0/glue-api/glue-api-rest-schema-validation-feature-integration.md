@@ -10,8 +10,6 @@ Follow the steps below to install Rest schema validation feature API.
 
 To start feature integration, overview and install the necessary features:
 
-
-
 | Name | Version | Integration guide |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
@@ -33,7 +31,6 @@ Make sure that the following modules have been installed:
 | --- | --- |
 | RestRequestValidator | vendor/spryker/rest-request-validator |
 
-
 {% endinfo_block %}
 
 
@@ -44,7 +41,6 @@ Set up the following behaviors.
 ### Enable Console Command
 
 Activate the console command provided by the module:
-
 
 | Class | Specification | Prerequisites | Namespace |
 | --- | --- | --- | --- |
@@ -99,6 +95,7 @@ console glue:rest:build-request-validation-cache
 {% info_block warningBox "Verification" %}
 
 Make sure that cache has been generated successfully. To do so, verify the contents of the `src/Generated/Glue/Validator` directory. It should contain a directory structure according to your store setup. Each directory should contain a `validation.cache` file with a Yaml of default core validation rules.
+
 ```yaml
 - AT
     - validation.cache
@@ -113,13 +110,9 @@ Make sure that cache has been generated successfully. To do so, verify the conte
 
 Activate the following plugin(s):
 
-
-
 | Plugin | Specification | Prerequisites | Namespace |
 | --- | --- | --- | --- |
 | ValidateRestRequestAttributesPlugin | Validates the `request attributes` section of `POST` and `PATCH` methods. | None | Spryker\Glue\RestRequestValidator\Plugin |
-
-
 
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
@@ -148,13 +141,14 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-
 Make sure that `ValidateRestRequestAttributesPlugin` has been activated:
+
 1. Make sure that there is a Glue API feature that uses validation configuration in your project.
 2. Create validation configuration:
-    a. Create `src/Pyz/Glue/YourModuleRestApi/Validation/{module}.validation.yaml`.
 
-    b. In the file, describe validation rules for endpoints. See see [Validating REST Request Format](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/validating-rest-request-format.html) for more details. Example:
+    1. Create `src/Pyz/Glue/YourModuleRestApi/Validation/{module}.validation.yaml`.
+
+    2. In the file, describe validation rules for endpoints. See see [Validating REST Request Format](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/validating-rest-request-format.html) for more details. Example:
 
     ```yaml
     access-tokens:
@@ -165,31 +159,29 @@ Make sure that `ValidateRestRequestAttributesPlugin` has been activated:
         password:
           - NotBlank
     ```
-
-
-    c. Collect the validation cache:
+   3. Collect the validation cache:
 
     ```bash
     console glue:rest:build-request-validation-cache
     ```
 
-2. Make a call to the endpoint you described in the validation file with invalid data. Request sample:
+3. Make a call to the endpoint you described in the validation file with invalid data. Request sample:
 
-`POST http://example.org/access-tokens`
+    `POST http://example.org/access-tokens`
 
-```json
-{
-    "data":
-        {
-            "type":"access-tokens",
-            "attributes":
-                {
-                    "username":"tester",
-                    "password": ""
-                }
-        }
-}
-```
+    ```json
+    {
+        "data":
+            {
+                "type":"access-tokens",
+                "attributes":
+                    {
+                        "username":"tester",
+                        "password": ""
+                    }
+            }
+    }
+    ```
 
 You should get a validation error similar to the following response sample:
 
@@ -208,6 +200,5 @@ You should get a validation error similar to the following response sample:
         }
     ]
 }
-
-
+```
 {% endinfo_block %}

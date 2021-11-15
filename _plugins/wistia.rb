@@ -14,7 +14,7 @@ class Wistia < Liquid::Tag
           @height = $3.to_i
       end
     else
-      raise "No YouTube ID provided in the \"wistia\" tag"
+      raise "No Wistia ID provided in the \"wistia\" tag"
     end
   end
 

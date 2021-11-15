@@ -41,11 +41,11 @@ In the Back Office, a Marketplace administrator can:
 
 ## Marketplace product options on the Storefront
 
-On the product detail page, the product option group (1) is displayed as a drop-down list with its option values (2). 
+On the product detail page, the product option group (1) is displayed as a drop-down list with its option values (2).
 
 ![Product options on the Storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+product+options/product-options-on-the-storefront.png)
 
-The merchant product option groups are displayed on the Storefront only when: 
+The merchant product option groups are displayed on the Storefront only when:
 * The product option group status is [active](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html#activating-a-product-option).
 * The product option group approval status is [approved](#marketplace-product-options-approval-statuses).
 
@@ -66,7 +66,7 @@ Currently, the feature has the following functional constraints which are going 
 * Product option values of a product option group can be only from one merchant.
 * Product options of a merchant can be used with all offers from all merchants.
 * There is no Back Office UI for approving or denying merchant product options.
-* [Glue API](https://documentation.spryker.com/docs/glue-rest-api) does not support merchant product option groups and values.
+* [Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-rest-api.html) does not support merchant product option groups and values.
 * Merchants can not create and manage product option groups and values in the Merchant Portal.
 
 ## Related Business User articles

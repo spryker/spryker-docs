@@ -14,7 +14,9 @@ related:
 ---
 
 ## Partner Information
-[About IADVIZE](https://spryker.com/industry-partner/iadvize/)
+
+About IADVIZE
+
 Make Customer Experience authentic
 
 iAdvize is a conversational marketing platform that allows more than 1,500 brands worldwide to make their customer experience authentic. iAdvize connects customers or prospects in need of advice with experts who are available 24/7 via real-time messaging.

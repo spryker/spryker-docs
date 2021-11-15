@@ -31,7 +31,15 @@ composer require spryker-feature/merchant-custom-prices:"^master" spryker/price-
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules have been installed:<table><col  /><col  /><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`PriceProductMerchantRelationship`</td><td>`vendor/spryker/price-product-merchant-relationship`</td></tr><tr><td>`PriceProductMerchantRelationshipDataImport`</td><td>`vendor/spryker/price-product-merchant-relationship-data-import`</td></tr><tr><td>`PriceProductMerchantRelationshipGui`</td><td>`vendor/spryker/price-product-merchant-relationship-gui`</td></tr><tr><td>`PriceProductMerchantRelationshipStorage`</td><td>`vendor/spryker/price-product-merchant-relationship-storage`</td></tr></tbody></table>
+Make sure that the following modules have been installed:
+
+|Module|Expected Directory|
+|--- |--- |
+|`PriceProductMerchantRelationship`|`vendor/spryker/price-product-merchant-relationship`|
+|`PriceProductMerchantRelationshipDataImport`|`vendor/spryker/price-product-merchant-relationship-data-import`|
+|`PriceProductMerchantRelationshipGui`|`vendor/spryker/price-product-merchant-relationship-gui`|
+|`PriceProductMerchantRelationshipStorage`|`vendor/spryker/price-product-merchant-relationship-storage`|
+
 {% endinfo_block %}
  
 ### 2) Set up Database Schema
@@ -69,21 +77,41 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes in transfer objects have been applied:<table><thead><tr><th>Transfer</th><th>Type</th><th>Event</th><th>Path</th></tr></thead><tbody><tr><td>`PriceProductMerchantRelationshipStorageTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PriceProductMerchantRelationshipStorageTransfer.php`</td></tr><tr><td>`PriceProductDimensionTransfer.idMerchantRelationship`</td><td>property</td><td>added</td><td>`src/Generated/Shared/Transfer/PriceProductDimensionTransfer.php`</td></tr></tbody></table>
+Make sure that the following changes in transfer objects have been applied:
+
+|Transfer|Type|Event|Path|
+|--- |--- |--- |--- |
+|`PriceProductMerchantRelationshipStorageTransfer`|class|created|`src/Generated/Shared/Transfer/PriceProductMerchantRelationshipStorageTransfer.php`|
+|`PriceProductDimensionTransfer.idMerchantRelationship`|property|added|`src/Generated/Shared/Transfer/PriceProductDimensionTransfer.php`|
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes have been applied by checking your database.<table><thead><tr><th>Transfer</th><th>Type</th><th>Event</th></tr></thead><tbody><tr><td>`spy_price_product_merchant_relationship`</td><td>table</td><td>created</td></tr><tr><td>`spy_price_product_concrete_merchant_relationship_storage`</td><td>table</td><td>created</td></tr><tr><td>`spy_price_product_abstract_merchant_relationship_storage`</td><td>table</td><td>created</td></tr></tbody></table>
+Make sure that the following changes have been applied by checking your database.
+
+|Transfer|Type|Event|
+|--- |--- |--- |
+|`spy_price_product_merchant_relationship`|table|created|
+|`spy_price_product_concrete_merchant_relationship_storage`|table|created|
+|`spy_price_product_abstract_merchant_relationship_storage`|table|created|
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the changes were implemented successfully. For this purpose, trigger the following methods and check that the above events have been triggered as well:<table><thead><tr><th>Class Path</th><th>Method Name</th></tr></thead><tbody><tr><td>`src/Orm/Zed/PriceProductMerchantRelationship/Persistence/Base/SpyPriceProductMerchantRelationship.php`</td><td>`prepareSaveEventName(
-{% endinfo_block %}`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`</td></tr></tbody></table>)
+Make sure that the changes were implemented successfully. For this purpose, trigger the following methods and check that the above events have been triggered as well:
+
+|Class Path|Method Name|
+|--- |--- |
+|`src/Orm/Zed/PriceProductMerchantRelationship/Persistence/Base/SpyPriceProductMerchantRelationship.php`|`prepareSaveEventName()`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`|
+
+{% endinfo_block %}
 
 ### 3) Configure Export to Redis
+
 {% info_block infoBox %}
-With this step, you will be able to publish prices on change (create, edit, delete
-{% endinfo_block %} to `spy_price_product_abstract_merchant_relationship_storage`, `spy_price_product_concrete_merchant_relationship_storage` and synchronize the data to Storage.)
+With this step, you will be able to publish prices on change (create, edit, delete to `spy_price_product_abstract_merchant_relationship_storage`, `spy_price_product_concrete_merchant_relationship_storage` and synchronize the data to Storage.)
+
+{% endinfo_block %}
 
 #### Set up Event Listeners
 
@@ -114,8 +142,14 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure when prices are exported, created, updated, or deleted manually in Zed UI, they are exported (or removed
-{% endinfo_block %} to Redis accordingly.<table><thead><tr><th>Storage Type</th><th>Target Entity</th><th>Example Expected Data Identifier</th></tr></thead><tbody><tr><td>Redis</td><td>Product Abstract Price</td><td>`kv:price_product_abstract_merchant_relationship:de:1:1`</td></tr><tr class="TableStyle-PatternedRows2-Body-DarkerRows"><td class="TableStyle-PatternedRows2-BodyB-Regular-DarkerRows">Redis</td><td class="TableStyle-PatternedRows2-BodyB-Regular-DarkerRows">Product Concrete Price</td><td class="TableStyle-PatternedRows2-BodyB-Regular-DarkerRows">`kv:price_product_concrete_merchant_relationship:de:1:1`</td></tr></tbody></table>)
+Make sure when prices are exported, created, updated, or deleted manually in Zed UI, they are exported (or removed from Redis accordingly).
+
+|Storage Type|Target Entity|Example Expected Data Identifier|
+|--- |--- |--- |
+|Redis|Product Abstract Price|`kv:price_product_abstract_merchant_relationship:de:1:1`|
+|Redis|Product Concrete Price|`kv:price_product_concrete_merchant_relationship:de:1:1`|
+
+{% endinfo_block %}
 
 **Example Expected Data Fragment: Product Abstract Price**
 
@@ -450,11 +484,13 @@ class PriceProductStorageDependencyProvider extends SprykerPriceProductStorageDe
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that there is the "Merchant Price Dimension" drop-down in the Back Office on the Product Abstract and Concrete (variants
-{% endinfo_block %} edit page (on the Price &amp; Tax tab). When you select some Merchant Relationship, the current page should be reloaded and the prices table should display prices from the selected Merchant Relationship if they exist or an empty table should be displayed when they do not exist.Make sure that when you added/changed prices for some Merchant Relationship, they appear after submitting the form and reloading the page.Make sure that Redis keys are updated/created for this product and business units are assigned to the selected MR.)
+Make sure that there is the "Merchant Price Dimension" drop-down in the Back Office on the Product Abstract and Concrete (variants edit page (on the Price &amp; Tax tab). When you select some Merchant Relationship, the current page should be reloaded and the prices table should display prices from the selected Merchant Relationship if they exist or an empty table should be displayed when they do not exist.Make sure that when you added/changed prices for some Merchant Relationship, they appear after submitting the form and reloading the page.Make sure that Redis keys are updated/created for this product and business units are assigned to the selected MR.)
+
+{% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 Make sure that a logged in user, who belongs to a company business unit and that business unit is assigned to some Merchant Relationship with specified prices, sees Merchant Relationship prices on the Catalog and on the Product page.<br>Make sure that this user sees MIN price if their business unit is assigned to multiple Merchant Relationships with different prices for the same product.
+
 {% endinfo_block %}
 
 ### Ensure Compatibility

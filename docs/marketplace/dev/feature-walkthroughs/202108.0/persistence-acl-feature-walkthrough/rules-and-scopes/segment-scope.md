@@ -1,14 +1,15 @@
 ---
 title: Segment scope
-last_updated: Sep 14, 2021
-template: concept-topic-template
+last_updated: Nov 05, 2021
+description: The segment rules allow you to grant permissions to subset of an entity collection. Segment entities are connected through a plain many-to-many tables, this allows to minimize performance impact.
+template: concept-topic-template 
 ---
 
 The segment rules allow you to grant permissions to subset of an entity collection.
 Segment entities are connected through a plain many-to-many tables, this allows to minimize performance impact.
 
 A subset can contain as many records as you want.
-There are few examples of data segments:
+There are few examples of data segments: 
 
 - Orders of DE store
 - Orders of total of > 100$

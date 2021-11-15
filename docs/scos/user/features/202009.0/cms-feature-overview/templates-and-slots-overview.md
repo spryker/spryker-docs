@@ -127,7 +127,7 @@ CMS Block is a separate entity with a dedicated section in the Back Office. See 
 
 ## Content Item
 
-[Content Item](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html-feature-overview) is the smallest content unit in Spryker that is used in the WISIWYG editor when creating content for CMS blocks. When a CMS block is inserted into a slot, all the content items of the CMS block are displayed on the Storefront page space of the slot.
+[Content Item](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html) is the smallest content unit in Spryker that is used in the WISIWYG editor when creating content for CMS blocks. When a CMS block is inserted into a slot, all the content items of the CMS block are displayed on the Storefront page space of the slot.
 
 <details open>
     <summary markdown='span'> Content item representation - Storefront</summary>
@@ -226,7 +226,7 @@ To meet your project requirements, you can extend the visibility conditions func
 
 A content manager can define visibility conditions by [selecting pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html#selecting-pages) in the Back Office > **Content Management > Slots** section.
 
-A developer can [import visibility conditions](/docs/scos/dev/developer-guides/{{page.version}}/development-guide/data-import/data-importers-overview-and-implementation.html).
+A developer can [import visibility conditions](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html).
 
 ## Slot Widget
 Slot widget is used to fetch content from a content provider and render it in specified pages. Content is fetched in the form of HTML code ready to be rendered in the Storefront. With the help of slot widgets, you can fetch and render content from the following content providers:

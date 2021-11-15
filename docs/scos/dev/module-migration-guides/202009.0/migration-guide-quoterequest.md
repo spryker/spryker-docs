@@ -34,7 +34,11 @@ ALTER TABLE spy_quote_request DROP COLUMN is_latest_version_hidden;
 COMMIT;
 ```
 
-{% info_block warningBox "Make sure that the `spy_quote_request` table now has a new column `is_latest_version_visible`.)
+{% info_block warningBox "Verification" %}
+
+Make sure that the `spy_quote_request` table now has a new column `is_latest_version_visible`.
+
+{% endinfo_block %}
 
 3. Rebuild Propel models:
 
@@ -52,10 +56,16 @@ So, when this command finishes its execution, `QuoteRequest-related` database cl
 vendor/bin/console transfer:generate
 ```
 
-@(Warning" %}
+{% info_block warningBox “Warning” %}
+
 Make sure that `QuoteRequestTransfer` now has `isLatestVersionVisible`, and doesn't have `isLatestVersionHidden` property.
+
 {% endinfo_block %}
 
-@(Error)(Make sure that, if you had usage of `QuoteTransfer::setIsLatestVersionHidden`, `QuoteTransfer::getIsLatestVersionHidden`  methods on project level, they have been updated to use the newly introduced `QuoteTransfer::getIsLatestVersionVisible` and  `QuoteTransfer::getIsLatestVersionVisible` methods with business logic inversion.)
+{% info_block warningBox “Verification” %}
+
+Make sure that, if you had usage of `QuoteTransfer::setIsLatestVersionHidden`, `QuoteTransfer::getIsLatestVersionHidden`  methods on project level, they have been updated to use the newly introduced `QuoteTransfer::getIsLatestVersionVisible` and  `QuoteTransfer::getIsLatestVersionVisible` methods with business logic inversion.
+
+{% endinfo_block %}
 
 *Estimated migration time: ~2h*

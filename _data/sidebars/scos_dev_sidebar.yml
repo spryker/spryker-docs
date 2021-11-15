@@ -193,7 +193,7 @@ entries:
       url: /docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html
       nested:
       - title: Users and rights overview
-        url: /docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html       
+        url: /docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html
     - title: Product Rating & Reviews
       url: /docs/scos/dev/feature-walkthroughs/product-rating-reviews-feature-walkthrough.html
     - title: Content Items
@@ -505,12 +505,22 @@ entries:
       include_versions:
       - "202009.0"
       - "202108.0"
+    - title: Merchant
+      url: /docs/scos/dev/feature-walkthroughs/merchant-feature-walkthrough.html
+      include_versions:
+      - "202108.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Merchant Custom Prices
       url: /docs/scos/dev/feature-walkthroughs/merchant-custom-prices-feature-walkthrough.html
       include_versions:
       - "202108.0"
     - title: Merchant B2B Contracts
-      url: /docs/scos/dev/feature-walkthroughs/merchant-b2b-contracts-feature-walkthrpugh.html
+      url: /docs/scos/dev/feature-walkthroughs/merchant-b2b-contracts-feature-walkthrough.html
       include_versions:
       - "202108.0"
     - title: Product
@@ -3113,9 +3123,9 @@ entries:
       - title: Special product types
         url: /docs/scos/dev/data-import/data-import-categories/special-product-types/special-product-types-import-category.html
         include_versions:
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         nested:
         - title: Gift cards
           url: /docs/scos/dev/data-import/data-import-categories/special-product-types/gift-cards/gift-cards.html
@@ -3964,6 +3974,31 @@ entries:
         url: /docs/scos/dev/legacy-demoshop/twig-templates/best-practices-twig-templates.html
         include_versions:
         - "201811.0"
+    - title: Updating the legacy Demoshop with SCOS
+      url: /docs/scos/dev/legacy-demoshop/updating-the-legacy-demoshop-with-scos/updating-the-legacy-demoshop-with-scos.html
+      include_versions:
+      - "201811.0"
+      nested:
+      - title: Making the Legacy Demoshop compatible with Publish & Synchronize
+        url: /docs/scos/dev/legacy-demoshop/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-publish-and-synchronize.html
+        include_versions:
+        - "201811.0"
+      - title: Making the Legacy Demoshop compatible with the Atomic Frontend
+        url: /docs/scos/dev/legacy-demoshop/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-atomic-frontend.html
+        include_versions:
+        - "201811.0"
+      - title: Making the Legacy Demoshop compatible with the Modular Frontend
+        url: /docs/scos/dev/legacy-demoshop/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-modular-frontend.html
+        include_versions:
+        - "201811.0"
+      - title: Setting up ShopUiCompatibility module in the Legacy Demoshop
+        url: /docs/scos/dev/legacy-demoshop/updating-the-legacy-demoshop-with-scos/setting-up-shopuicompatibility-module-in-the-legacy-demoshop.html
+        include_versions:
+        - "201811.0"
+      - title: Twig Compatibility:Legacy Demoshop vs SCOS
+        url: /docs/scos/dev/legacy-demoshop/updating-the-legacy-demoshop-with-scos/twig-compatibility-legacy-demoshop-vs-scos.html
+        include_versions:
+        - "201811.0"
     - title: Tutorial - Set Up a Hello World Queue - Legacy Demoshop
       url: /docs/scos/dev/legacy-demoshop/set-up-a-hello-world-queue-legacy-demoshop.html
       include_versions:
@@ -3984,57 +4019,65 @@ entries:
       url: /docs/scos/dev/legacy-demoshop/development.html
       include_versions:
       - "201811.0"
-  - title: Technical enhancements
+  - title: Technical enhancement integration guides
     nested:
-    - title: Separating different endpoint bootstraps
-      url: /docs/scos/dev/technical-enhancements/separating-different-endpoint-bootstraps.html
-    - title: Multiple publish queue structure
-      url: /docs/scos/dev/technical-enhancements/multiple-publish-queue-structure.html
-    - title: Enabling the category CMS blocks
-      url: /docs/scos/dev/technical-enhancements/enabling-the-category-cms-blocks.html
-    - title: Propel Clean Command
-      url: /docs/scos/dev/technical-enhancements/propel-clean-command.html
-    - title: Frontend CSS Lazy Load integration
-      url: /docs/scos/dev/technical-enhancements/frontend-css-lazy-load-integration.html
-    - title: Basic SEO techniques integration guide
-      url: /docs/scos/dev/technical-enhancements/basic-seo-techniques-integration-guide.html
-    - title: Environment Configuration Enhancement
-      url: /docs/scos/dev/technical-enhancements/environment-configuration-enhancement.html
-    - title: Configuring dynamic Yves-Zed tokens
-      url: /docs/scos/dev/technical-enhancements/configuring-dynamic-yves-zed-tokens.html
-    - title: Dynamic Propel Configuration
-      url: /docs/scos/dev/technical-enhancements/dynamic-propel-configuration.html
-    - title: Enabling the product CMS block
-      url: /docs/scos/dev/technical-enhancements/enabling-the-product-cms-block.html
-    - title: MariaDB database engine
-      url: /docs/scos/dev/technical-enhancements/mariadb-database-engine.html
-    - title: Enabling CMS block widget
-      url: /docs/scos/dev/technical-enhancements/enabling-cms-block-widget.html
-    - title: Queue worker signal handling
-      url: /docs/scos/dev/technical-enhancements/queue-worker-signal-handling.html
-    - title: Symfony 5 integration
-      url: /docs/scos/dev/technical-enhancements/symfony-5-integration.html
-    - title: Cache of Unresolved Entities for Zed
-      url: /docs/scos/dev/technical-enhancements/cache-of-unresolved-entities-for-zed.html
-    - title: Search Initialization Improvement
-      url: /docs/scos/dev/technical-enhancements/search-initialization-improvement.html
-    - title: Health Checks
-      url: /docs/scos/dev/technical-enhancements/health-checks.html
-    - title: Authorization Enabler integration
-      url: /docs/scos/dev/technical-enhancements/authorization-enabler-integration.html
-    - title: Custom Location for Static Assets
-      url: /docs/scos/dev/technical-enhancements/custom-location-for-static-assets.html
+    - title: Integrating development tools
+      nested:
+      - title: Formatter
+        url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-formatter.html
+      - title: SCSS linter
+        url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-scss-linter.html
+      - title: TS linter
+        url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-ts-linter.html
+      - title: Web Profiler for Zed
+        url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-for-zed.html
+      - title: Web Profiler Widget for Yves
+        url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-widget-for-yves.html
+    - title: Authorization Enabler
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-authorization-enabler.html
+    - title: Basic SEO techniques
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-basic-seo-techniques.html
+    - title: Cache of unresolved entities for Zed
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-cache-of-unresolved-entities-for-zed.html
+    - title: Category CMS blocks
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-category-cms-blocks.html
     - title: Chromium browser for tests
-      url: /docs/scos/dev/technical-enhancements/chromium-browser-for-tests.html
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-chromium-browser-for-tests.html
+    - title: CMS block widgets
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-cms-block-widgets.html
+    - title: CSS lazy loading for the front end
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-authorization-enabler.html
+    - title: Custom location for static assets
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-custom-location-for-static-assets.html
+    - title: Dynamic Yves-Zed tokens
+      url: /docs/scos/dev/technical-enhancement-integration-guides/configuring-dynamic-yves-zed-tokens.html
+    - title: Dynamic Propel configuration
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-dynamic-propel-configuration.html
+    - title: Environment configuration enhancement
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-environment-configuration-enhancement.html
+    - title: Health checks
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-health-checks.html
+    - title: MariaDB database engine
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-mariadb-database-engine.html
+    - title: Multi-queue publish structure
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html
+    - title: Product CMS blocks
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-product-cms-blocks.html
+    - title: Propel clean command
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-propel-clean-command.html
+    - title: Queue worker signal handling
+      url: /docs/scos/dev/technical-enhancement-integration-guides/configuring-queue-worker-signal-handling.html
+    - title: Search initialization enhancement
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-search-initialization-enhancement.html
+    - title: Separate endpoint bootstraps
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html
+    - title: Symfony 5
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-symfony-5.html
   - title: SDK
     nested:
     - title: Development Virtual Machine, Docker Containers & Console
       url: /docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html
     - title: Zed API
-      include_versions:
-      - "201811.0"
-      - "202009.0"
-      - "202108.0"
       nested:
       - title: Project Implementation - Zed API
         url: /docs/scos/dev/sdk/zed-api/zed-api-project-implementation.html
@@ -4048,87 +4091,32 @@ entries:
         url: /docs/scos/dev/sdk/zed-api/zed-api-resources.html
       - title: Zed API (BETA)
         url: /docs/scos/dev/sdk/zed-api/zed-api-beta.html
-        include_versions:
-        - "201811.0"
-        - "202009.0"
-        - "202108.0"
-    - title: CSS Class Customization
-      url: /docs/scos/dev/sdk/css-class-customization.html
-      include_versions:
-      - "201811.0"
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
     - title: Cronjob Scheduling
       url: /docs/scos/dev/sdk/cronjob-scheduling.html
     - title: Importer
       url: /docs/scos/dev/sdk/data-import.html
     - title: Development Tools
-      include_versions:
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
       nested:
       - title: Architecture Sniffer
         url: /docs/scos/dev/sdk/development-tools/architecture-sniffer.html
       - title: Spryk Code Generator
         url: /docs/scos/dev/sdk/development-tools/spryk-code-generator.html
-        include_versions:
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
       - title: Code Sniffer
         url: /docs/scos/dev/sdk/development-tools/code-sniffer.html
       - title: PHPStan
         url: /docs/scos/dev/sdk/development-tools/phpstan.html
-        include_versions:
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
       - title: Tooling config file
         url: /docs/scos/dev/sdk/development-tools/tooling-config-file.html
-        include_versions:
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
       - title: Static Security Checker
         url: /docs/scos/dev/sdk/development-tools/static-security-checker.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
       - title: TS linter
         url: /docs/scos/dev/sdk/development-tools/ts-linter.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
       - title: Formatter
         url: /docs/scos/dev/sdk/development-tools/formatter.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
       - title: SCSS linter
         url: /docs/scos/dev/sdk/development-tools/scss-linter.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
       - title: Performance audit tool- Benchmark
         url: /docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
     - title: Twig and TwigExtension
       url: /docs/scos/dev/sdk/twig-and-twigextension.html
     - title: Code Generator
@@ -4137,10 +4125,6 @@ entries:
       - "201811.0"
     - title: Data Export
       url: /docs/scos/dev/sdk/data-export.html
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
   - title: Tutorials and HowTos
     nested:
     - title: Introduction Tutorials
@@ -4444,109 +4428,6 @@ entries:
       url: /docs/scos/dev/architecture/code-buckets.html
     - title: Programming concepts
       url: /docs/scos/dev/architecture/programming-concepts.html
-  - title: Migration and integration
-    nested:
-    - title: About Migration and Integration Guides
-      url: /docs/scos/dev/migration-and-integration/about-migration-and-integration-guides.html
-    - title: Development Tools
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-      nested:
-      - title: Web Profiler for Zed
-        url: /docs/scos/dev/migration-and-integration/development-tools/web-profiler-for-zed.html
-        include_versions:
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-      - title: Web Profiler Widget for Yves
-        url: /docs/scos/dev/migration-and-integration/development-tools/web-profiler-widget-for-yves.html
-        include_versions:
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-      - title: SCSS linter integration guide
-        url: /docs/scos/dev/migration-and-integration/development-tools/scss-linter-integration-guide.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-      - title: Formatter integration guide
-        url: /docs/scos/dev/migration-and-integration/development-tools/formatter-integration-guide.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-      - title: TS linter integration guide
-        url: /docs/scos/dev/migration-and-integration/development-tools/ts-linter-integration-guide.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-    - title: Updating the Legacy Demoshop with SCOS
-      include_versions:
-      - "201811.0"
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      nested:
-      - title: Making the Legacy Demoshop Compatible with the Atomic Frontend
-        url: /docs/scos/dev/migration-and-integration/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-atomic-frontend.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-      - title: Setting up ShopUiCompatibility Module in the Legacy Demoshop
-        url: /docs/scos/dev/migration-and-integration/updating-the-legacy-demoshop-with-scos/setting-up-shopuicompatibility-module-in-the-legacy-demoshop.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-      - title: Making the Legacy Demoshop Compatible with Publish & Synchronize
-        url: /docs/scos/dev/migration-and-integration/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-publish-and-synchronize.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-      - title: Twig Compatibility- Legacy Demoshop vs SCOS
-        url: /docs/scos/dev/migration-and-integration/updating-the-legacy-demoshop-with-scos/twig-compatibility-legacy-demoshop-vs-scos.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-      - title: Integrating Modular Frontend into Legacy Demoshop
-        url: /docs/scos/dev/migration-and-integration/updating-the-legacy-demoshop-with-scos/integrating-modular-frontend-into-legacy-demoshop.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-      - title: Making the Legacy Demoshop Compatible with the Modular Frontend
-        url: /docs/scos/dev/migration-and-integration/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-modular-frontend.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
   - title: Guidelines
     nested:
     - title: Coding Guidelines
@@ -4632,8 +4513,10 @@ entries:
       - title: State machine cookbook - part I - state machine fundamentals
         url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-i-state-machine-fundamentals.html
   - title: Troubleshooting
+    url: /docs/scos/dev/troubleshooting/troubleshooting.html
     nested:
-    - title: Troubleshooting General Technical Issues
+    - title: Troubleshooting general technical issues
+      url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-general-technical-issues.html
       nested:
       - title: Fail whale on the front end
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/fail-whale-on-the-front-end.html
@@ -4652,11 +4535,8 @@ entries:
       - title: ERROR- remove spryker_logs- volume is in use
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/error-remove-spryker-logs-volume-is-in-use.html
       - title: Class Silex/ControllerProviderInterface not found
-        url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/class-silex-controllerproviderinterface-not-found.html
-      - title: Troubleshooting general technical issues
-        url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-general-technical-issues.html
-      - title: Error response from daemon- OCI runtime create failed- .... \\\"no
-          such file or directory\\\"\""- unknown
+        url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/class-silex-controllerproviderinterface-not-found.html 
+      - title: Error response from daemon- OCI runtime create failed- .... \\\"no such file or directory\\\"\""- unknown
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/error-response-from-daemon-oci-runtime-create-failed-no-such-file-or-directory-unknown.html
       - title: RabbitMQ- Zed.CRITICAL- PhpAmqpLib\Exception\AMQPChannelClosedException
           - Channel connection is closed
@@ -4667,7 +4547,8 @@ entries:
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/no-data-on-the-storefront.html
       - title: The spy_oms_transition_log table takes up too much space
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/the-spy-oms-transition-log-table-takes-up-too-much-space.html
-    - title: Troubleshooting Spryker In Vagrant Issues
+    - title: Troubleshooting Spryker in Vagrant issues
+      url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/troubleshooting-spryker-in-vagrant-installation-issues.html
       nested:
       - title: Frontend issues
         nested:
@@ -4702,8 +4583,6 @@ entries:
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/macos-issues/mac-osx-installation-fails-or-project-folder-can-not-be-mounted-due-to-sip.html
         - title: Mac OSX- iterm2 (locale error)
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/macos-issues/mac-osx-iterm2-locale-error.html
-      - title: Troubleshooting Spryker in Vagrant installation issues
-        url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/troubleshooting-spryker-in-vagrant-installation-issues.html
       - title: Databases and services issues
         nested:
         - title: Setup MySQL Workbench to avoid port clashing with the host system
@@ -4714,10 +4593,9 @@ entries:
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/databases-and-services-issues/peer-authentication-failed-for-user-postgres.html
         - title: My Elasticsearch dies
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/databases-and-services-issues/my-elasticsearch-dies.html
-    - title: Troubleshooting Spryker In Docker Issues
+    - title: Troubleshooting Spryker in Docker Issues
+      url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-spryker-in-docker-issues.html
       nested:
-      - title: Troubleshooting Spryker in Docker issues
-        url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-spryker-in-docker-issues.html
       - title: Troubleshooting debugging in Docker
         nested:
         - title: PHP `xdebug` extension is not active when accessing the website via

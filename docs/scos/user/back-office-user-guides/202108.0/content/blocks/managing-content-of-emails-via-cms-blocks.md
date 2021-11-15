@@ -17,7 +17,7 @@ related:
 
 You can manage the content of emails you send to customers by editing [email templates via CMS Blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html).
 
-There is a number of default emails that are automatically sent on different occasions, like customer registration or order shipment. You can change the default emails by editing their email templates via respective CMS blocks. For the full list of the emails with their email CMS blocks, see [Default email templates](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html#default-email-templates)
+There is a number of default emails that are automatically sent on different occasions, like customer registration or order shipment. You can change the default emails by editing their email templates via respective CMS blocks. For the full list of the emails with their email CMS blocks, see [Default email templates](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html)
 
 ## Prerequisites
 
@@ -31,7 +31,7 @@ If your development team has introduced a new email for your project, you have t
 
 {% info_block infoBox "Info" %}
 
-You don’t need to create new email CMS Blocks for the [default email templates](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html#default-email-templates). Instead, you edit the available email CMS Blocks to adjust them to your needs.
+You don’t need to create new email CMS Blocks for the [default email templates](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html). Instead, you edit the available email CMS Blocks to adjust them to your needs.
 
 {% endinfo_block %}
 
@@ -92,11 +92,11 @@ To edit an email CMS block:
 
 {% info_block warningBox "Note" %}
 
-If you updated the **name**, pass it to your development team to update the name of the respective [.twig email template](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html#cms-block-email-template).
+If you updated the **name**, pass it to your development team to update the name of the respective [.twig email template](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html).
 
 {% endinfo_block %}
 
-3. Click **Save**.
+1. Click **Save**.
 The page refreshes, displaying the message about the successful update of the email CMS block.
 
 

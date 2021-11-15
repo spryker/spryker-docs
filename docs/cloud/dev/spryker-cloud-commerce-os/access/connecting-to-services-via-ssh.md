@@ -21,11 +21,11 @@ Bastion is the only instance you can connect to via SSH.
 
 {% endinfo_block %}
 
-## Prerequisites 
+## Prerequisites
 For security purposes, SSH access is available only for the IP addresses in the security group. To get SSH access, provide the following details via [support](https://spryker.force.com/support/s/):
 
 * Public IPs
-* Public SSH keys 
+* Public SSH keys
 
 ## Connect to a service
 
@@ -50,13 +50,13 @@ To connect to a service:
     4. Connect to the copied IP address via SSH.
 2. In the AWS Management Console, find the endpoint to connect to:
     * For an AWS service endpoint:
-        1. Go to **Services** > **RDS** > **Databases**. 
+        1. Go to **Services** > **RDS** > **Databases**.
         2. Select the desired database.
         3. Copy the *Endpoint* value.
    * For a non-AWS service endpoint:
         1. Go to **Services** > **Route53** > **Hosted Zones**.
         2. Select the desired hosted zone.
-        3. Enter *jenkins* in the search field and press *Enter*. 
+        3. Enter *jenkins* in the search field and press *Enter*.
         4. Copy the value of the *Value/Route traffic to* field.
 
 3. Connect to the VPN.
@@ -72,6 +72,3 @@ To connect to a service:
     ```shell
     ssh -A ubuntu@<private_bastion_ip> -L 0.0.0.0:8080:<private_scheduler_ip>:80
     ```
-
-## Next step
-[Connecting code repository](/docs/cloud/dev/spryker-cloud-commerce-os/connecting-code-repository.html)

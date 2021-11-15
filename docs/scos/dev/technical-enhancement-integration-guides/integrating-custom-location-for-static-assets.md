@@ -15,6 +15,7 @@ redirect_from:
   - /v5/docs/en/custom-location-for-static-assets
   - /v4/docs/custom-location-for-static-assets
   - /v4/docs/en/custom-location-for-static-assets
+  - /docs/scos/dev/technical-enhancements/custom-location-for-static-assets.html
 ---
 
 ## General Information

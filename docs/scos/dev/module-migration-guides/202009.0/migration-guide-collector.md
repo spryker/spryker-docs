@@ -18,21 +18,22 @@ related:
 1. The general concept of `collectors`, and `collector queries` are enhanced to support multi-store.
 The following classes were altered to support the multi-store concept:
 
-* `AbstractCollector`
-* `AbstractDatabaseCollector`
-* `AbstractPdoCollector`
-* `AbstractPropelCollector`
-* `AbstractSearchPropelCollector`
-* `AbstractStoragePropelCollector`
-* `AbstractCollectorQuery`
+   * `AbstractCollector`
+   * `AbstractDatabaseCollector`
+   * `AbstractPdoCollector`
+   * `AbstractPropelCollector`
+   * `AbstractSearchPropelCollector`
+   * `AbstractStoragePropelCollector`
+   * `AbstractCollectorQuery`
 
 ### Collector multi-store concept overview
 
 1. The primary change affects the `AbstractDatabaseCollector::processBatchForExport()`. Previously this method was responsible for simply exporting all "touch active" touched entities to Storage or Search. In multi-store environment, a multi-store entity does not necessary exist in all stores even though it is "touch active" in all stores. Moreover, an exported "touch active" multi-store entity can become invalid if it is unassigned from a specific store. To achieve the expected behavior, the `AbstractCollector::isStorable()` method is introduced. Whenever this method returns with `true`, the subject entity is considered to be available (in the current store) and will be exported. On the other hand, the `false` return value that the entity is not available (in the current store) and either not should not be exported or should be deleted from Storage or Search if it has already been exported previously.
  
-    {% info_block warningBox %}
-The `AbstractCollector::isStorable(
-{% endinfo_block %}` is not limited to multi-store entities and can be used on demand according to the above description.)
+{% info_block warningBox %}
+The `AbstractCollector::isStorable()` is not limited to multi-store entities and can be used on demand according to the above description.
+
+{% endinfo_block %}
 
 2. The general "touch deleted" logic was updated through the `AbstractCollector::getTouchCollectionToDelete()` method which now always selects those records only from `spy_touch_storage`, and `spy_touch_search`, which are related to the current store.
 

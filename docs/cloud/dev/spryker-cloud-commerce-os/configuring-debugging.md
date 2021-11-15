@@ -1,5 +1,5 @@
 ---
-title: Debugging
+title: Configuring debugging
 description: Enable extended logs for an application to debug it.
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/debugging
@@ -7,9 +7,10 @@ originalArticleId: 23eb2efb-7de7-46d5-a525-1524e8d66d08
 redirect_from:
   - /docs/debugging
   - /docs/en/debugging
+  - /docs/cloud/dev/spryker-cloud-commerce-os/debugging
 ---
 
-Currently, Xdebug is not supported, but you can enable extended logs in the deploy file to debug an application. Extended logs provide extra information about application state and behavior. 
+Currently, Xdebug is not supported, but you can enable extended logs in the deploy file to debug an application. Extended logs provide extra information about application state and behavior.
 
 To enable extended logs:
 

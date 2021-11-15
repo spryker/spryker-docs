@@ -19,8 +19,8 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | 201907.0	 | 	[Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
-| Category Management | 201907.0 |  |
+| Spryker Core | 202009.0	 | 	[Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
+| Category Management | 202009.0 |  |
 
 ### 1) Install the required modules using Composer
 Run the following command to install the required modules:
@@ -32,11 +32,12 @@ composer require spryker/categories-rest-api:"^1.1.3" --update-with-dependencies
 {% info_block warningBox “Verification” %}
 
 Make sure that the following module is installed:
-{% endinfo_block %}
 
 | Module | Expected directory |
 | --- | --- |
 | `CategoriesRestApi` | `vendor/spryker/categories-rest-api` |
+
+{% endinfo_block %}
 
 ### 2) Set Up Transfer Objects
 Run the following command to generate transfer changes:
@@ -48,13 +49,14 @@ console transfer:generate
 {% info_block warningBox “Verification” %}
 
 Make sure that the following changes have occurred:
-{% endinfo_block %}
 
 | Transfer | Type | Event | Path |
 | --- | --- | --- | --- |
 | `RestCategoryTreesTransfer` | class | created | `src/Generated/Shared/Transfer/RestCategoryTreesTransfer` |
 | `RestCategoryTreesAttributesTransfer` | class | created | `src/Generated/Shared/Transfer/RestCategoryTreesAttributesTransfer` |
 | `RestCategoryNodesAttributesTransfer` | class | created | `src/Generated/Shared/Transfer/RestCategoryNodesAttributesTransfer` |
+
+{% endinfo_block %}
 
 ### 3) Set Up Behavior
 #### Enable resources and relationships:
@@ -93,7 +95,11 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox “Verification” %}
 
-Make sure the following endpoints are available:<ul><li>http://glue.mysprykershop.com/category-trees</li><li>http://glue.mysprykershop.com/category-nodes/{% raw %}{{{% endraw %}category_node_id{% raw %}}}{% endraw %}</li></ul>
+Make sure the following endpoints are available:
+
+- http://glue.mysprykershop.com/category-trees
+- http://glue.mysprykershop.com/category-nodes/{% raw %}{{{% endraw %}category_node_id{% raw %}}}{% endraw %}
+
 {% endinfo_block %}
 
 

@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/mariadb-database-engine
   - /v6/docs/mariadb-database-engine
   - /v6/docs/en/mariadb-database-engine
+  - /docs/scos/dev/technical-enhancements/mariadb-database-engine.html
 related:
   - title: Configuring services
     link: docs/scos/dev/the-docker-sdk/page.version/configuring-services.html

@@ -47,5 +47,5 @@ Find the template and an example of the file below:
 
 | FILE | DESCRIPTION |
 | --- | --- |
-|[ template_warehouse_address.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/Template%2Bwarehouse_address.csv) | Import file template with headers only. |
+|[ template_warehouse_address.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/Template_warehouse_address.csv) | Import file template with headers only. |
 | [warehouse_address.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/warehouse_address.csv) | Exemplary import file with Demo Shop data. |

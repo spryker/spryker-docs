@@ -33,7 +33,7 @@ The _alarm_clock_ and _waterproof_ attributes both have **Yes** and **No** attri
 *  _waterproof_ has **Include for full text boosted** set to **Yes**
 
 In this case, when typing **Yes** in the **Search** field on the web-shop, the products that have the **Waterproof** attributes with the "**yes**" value will appear higher in the list of results than products with Alarm clock attributes with the same value.
-![Full text boosted](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Search+Preferences+Types/full-text-boosted.png){height="500" width=""}
+![Full text boosted](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Search+Preferences+Types/full-text-boosted-attribute-values.png){height="500" width=""}
 
 {% info_block infoBox "Info" %}
 If several attributes having the same values have been included for full text boosted, they all will appear in the search results. Their order is provided by Elasticsearch and can be further improved by customizing its analyzers.

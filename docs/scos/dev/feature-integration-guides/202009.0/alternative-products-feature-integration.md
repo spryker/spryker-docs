@@ -103,16 +103,46 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes have been applied by checking your database:<table><thead><tr><td>Database Entity</td><td>Type</td><td>Event</td></tr></thead><tbody><tr><td>`spy_product_alternative`</td><td>table</td><td>created</td></tr><tr><td>`spy_product_alternative_storage`</td><td>table</td><td>created</td></tr><tr><td>`spy_product_replacement_for_storage`</td>`<td>table</td><td>created</td></tr></tbody></table>
+
+Make sure that the following changes have been applied by checking your database:
+
+|Database Entity|Type|Event|
+|--- |--- |--- |
+|`spy_product_alternative`|table|created|
+|`spy_product_alternative_storage`|table|created|
+|`spy_product_replacement_for_storage`|table|created|
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes have been applied in transfer objects:<table><thead><tr><td>Transfer</td><td>Type</td><td>Event</td><td>Path</td></tr></thead><tbody><tr><td>`SpyProductAlternativeEntityTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductAlternativeEntityTransfer`</td></tr><tr><td>`SpyProductAlternativeStorageEntityTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductAlternativeStorageEntityTransfer`</td></tr><tr><td>`SpyProductReplacementForStorageEntityTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductReplacementForStorageEntityTransfer`</td></tr><tr><td>`ProductAlternative`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductAlternative`</td></tr><tr><td>`ProductAlternativeResponse`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductAlternativeResponse`</td></tr><tr><td>`ResponseMessage`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ResponseMessage`</td></tr><tr><td>`ProductAlternativeCollection`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductAlternativeCollection`</td></tr><tr><td>`ProductAlternativeCreateRequest`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductAlternativeCreateRequest`</td></tr><tr><td>`ProductAlternativeListItem`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductAlternativeListItem`</td></tr><tr><td>`ProductAlternativeList`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductAlternativeList`</td></tr><tr><td>`ProductAlternativeStorage`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductAlternativeStorage`</td></tr><tr><td>`ProductReplacementStorage`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductReplacementStorage`</td></tr></tbody></table>
+Make sure that the following changes have been applied in transfer objects:
+
+|Transfer|Type|Event|Path|
+|--- |--- |--- |--- |
+|`SpyProductAlternativeEntityTransfer`|class|created|`src/Generated/Shared/Transfer/SpyProductAlternativeEntityTransfer`|
+|`SpyProductAlternativeStorageEntityTransfer`|class|created|`src/Generated/Shared/Transfer/SpyProductAlternativeStorageEntityTransfer`|
+|`SpyProductReplacementForStorageEntityTransfer`|class|created|`src/Generated/Shared/Transfer/SpyProductReplacementForStorageEntityTransfer`|
+|`ProductAlternative`|class|created|`src/Generated/Shared/Transfer/ProductAlternative`|
+|`ProductAlternativeResponse`|class|created|`src/Generated/Shared/Transfer/ProductAlternativeResponse`|
+|`ResponseMessage`|class|created|`src/Generated/Shared/Transfer/ResponseMessage`|
+|`ProductAlternativeCollection`|class|created|`src/Generated/Shared/Transfer/ProductAlternativeCollection`|
+|`ProductAlternativeCreateRequest`|class|created|`src/Generated/Shared/Transfer/ProductAlternativeCreateRequest`|
+|`ProductAlternativeListItem`|class|created|`src/Generated/Shared/Transfer/ProductAlternativeListItem`|
+|`ProductAlternativeList`|class|created|`src/Generated/Shared/Transfer/ProductAlternativeList`|
+|`ProductAlternativeStorage`|class|created|`src/Generated/Shared/Transfer/ProductAlternativeStorage`|
+|`ProductReplacementStorage`|class|created|`src/Generated/Shared/Transfer/ProductReplacementStorage`|
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the changes have been implemented successfully. For this purpose, trigger the following methods and make sure that the above events have been triggered:<table><thead><tr><td>Path</td><td>Method Name</td></tr></thead><tbody><tr><td>`src/Orm/Zed/ProductAlternative/Persistence/Base/SpyProductAlternative.php`</td><td>`prepareSaveEventName(
-{% endinfo_block %}`<br />`addSaveEventToMemory()`<br />`addDeleteEventToMemory()`</td></tr></tbody></table>)
+Make sure that the changes have been implemented successfully. For this purpose, trigger the following methods and make sure that the above events have been triggered:
+
+|Path|Method Name|
+|--- |--- |
+|`src/Orm/Zed/ProductAlternative/Persistence/Base/SpyProductAlternative.php`|`prepareSaveEventName()`<br>
+`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`|
+
+{% endinfo_block %}
 
 ### 3) Configure Export to Redis
 
@@ -399,7 +429,13 @@ Run the following command(s) to install the required modules:
 composer require spryker-feature/alternative-products: "^202009.0" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
-Make sure that the following modules have been installed:<table><thead><tr><td>Module</td><td>Expected Directory</td></tr></thead><tbody><tr><td>`ProductAlternativeWidget`</td><td>`vendor/spryker-shop/product-alternative-widget`</td></tr><tr><td>`ProductReplacementForWidget`</td><td>`vendor/spryker-shop/product-replacement-for-widget`</td></tr></tbody></table>
+Make sure that the following modules have been installed:
+
+|Module|Expected Directory|
+|--- |--- |
+|`ProductAlternativeWidget`|`vendor/spryker-shop/product-alternative-widget`|
+|`ProductReplacementForWidget`|`vendor/spryker-shop/product-replacement-for-widget`|
+
 {% endinfo_block %}
 
 ### 2) Add Translations
@@ -477,13 +513,21 @@ console frontend:yves:build
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following widgets were registered:<table><thead><tr><td>Module</td><td>Test</td></tr></thead><tbody><tr><td>`ProductAlternativeWidget`</td><td>Assign some alternative products in Zed, and make sure that they are displayed on the detail page of the product to which they were assigned.</td></tr><tr><td>`ProductReplacementForListWidget`</td><td>Make that after you've assigned some product as an alternative for another you can see "Replacement for" section on its product detail page.</td></tr><tr><td>`PdpProductReplacementForListWidget`</td><td>Make that after you've assigned some product as an alternative for another you can see "Replacement for" section on its product detail page.</td></tr><tr><td>`ProductAlternativeListWidget`</td><td>Assign some alternative products in Zed, and make sure that they are displayed on the PDP of the product to which they were assigned.</td></tr></tbody></table>
+Make sure that the following widgets were registered:
+
+|Module|Test|
+|--- |--- |
+|`ProductAlternativeWidget`|Assign some alternative products in Zed, and make sure that they are displayed on the detail page of the product to which they were assigned.|
+|`ProductReplacementForListWidget`|Make that after you've assigned some product as an alternative for another you can see "Replacement for" section on its product detail page.|
+|`PdpProductReplacementForListWidget`|Make that after you've assigned some product as an alternative for another you can see "Replacement for" section on its product detail page.|
+|`ProductAlternativeListWidget`|Assign some alternative products in Zed, and make sure that they are displayed on the PDP of the product to which they were assigned.|
+
 {% endinfo_block %}
 
 
 {% info_block infoBox "Store relation" %}
 
-If the [Product Label feature](/docs/scos/user/features/{{page.version}}/product-labels/product-labels.html) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by re-importing [product_label_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
+If the [Product Label feature](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by re-importing [product_label_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
 
 
 {% endinfo_block %}

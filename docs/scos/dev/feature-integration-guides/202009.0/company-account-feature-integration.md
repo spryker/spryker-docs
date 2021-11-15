@@ -37,7 +37,14 @@ composer require spryker-feature/company-account: "^master" --update-with-depend
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules were installed:<table><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`BusinessOnBehalf`</td><td>`vendor/spryker/business-on-behalf`</td></tr><tr><td>`BusinessOnBehalfDataImport`</td><td>`vendor/spryker/business-on-behalf-data-import`</td></tr><tr><td>`CompanyUserStorage`</td><td>`vendor/spryker/company-user-storage`</td></tr></tbody></table>
+Make sure that the following modules were installed:
+
+|Module|Expected Directory|
+|--- |--- |
+|`BusinessOnBehalf`|`vendor/spryker/business-on-behalf`|
+|`BusinessOnBehalfDataImport`|`vendor/spryker/business-on-behalf-data-import`|
+|`CompanyUserStorage`|`vendor/spryker/company-user-storage`|
+
 {% endinfo_block %}
 
 ### 2) Set up Database Schema and Transfer objects
@@ -92,20 +99,46 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes have been applied by checking your database:<table><thead><tr><th>Database Entity</th><th>Type</th><th>Event</th></tr></thead><tbody><tr><td>`spy_company_user.is_default`</td><td>column</td><td>created</td></tr></tbody></table>
+Make sure that the following changes have been applied by checking your database:
+
+|Database Entity|Type|Event|
+|--- |--- |--- |
+|`spy_company_user.is_default`|column|created|
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes in transfer objects:<table><thead><tr><th>Transfer</th><th>Type</th><th>Event</th><th>Path</th></tr></thead><tbody><tr><td>`CompanyUser.isDefault`</td><td>property</td><td>created</td><td>`src/Generated/Shared/Transfer/CompanyUserTransfer`</td></tr><tr><td>`Customer.isOnBehalf`</td><td>property</td><td>created</td><td>`src/Generated/Shared/Transfer/CustomerTransfer`</td></tr><tr><td>`CompanyUserAccessTokenRequestclass`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CompanyUserAccessTokenRequestTransfer`</td></tr><tr><td>`CompanyUserStorage`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CompanyUserStorageTransfer`</td></tr></tbody></table>
+Make sure that the following changes in transfer objects:
+
+|Transfer|Type|Event|Path|
+|--- |--- |--- |--- |
+|`CompanyUser.isDefault`|property|created|`src/Generated/Shared/Transfer/CompanyUserTransfer`|
+|`Customer.isOnBehalf`|property|created|`src/Generated/Shared/Transfer/CustomerTransfer`|
+|`CompanyUserAccessTokenRequestclass`|class|created|`src/Generated/Shared/Transfer/CompanyUserAccessTokenRequestTransfer`|
+|`CompanyUserStorage`|class|created|`src/Generated/Shared/Transfer/CompanyUserStorageTransfer`|
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that propel entities have been generated successfully by checking their existence. Also, change the generated entity classes to extend from Spryker core classes.<table><col  /><col  /><thead><tr><th>Class Path</th><th>Extends</th></tr></thead><tbody><tr><td>`src/Orm/Zed/CompanyUserStorage/Persistence/SpyCompanyUserStorage.php`</td><td>`Spryker\Zed\CompanyUserStorage\Persistence\Propel\AbstractSpyCompanyUserStorage`</td></tr><tr><td>`src/Orm/Zed/CompanyUserStorage/Persistence/SpyCompanyUserStorageQuery.php`</td><td>`Spryker\Zed\CompanyUserStorage\Persistence\Propel\AbstractSpyCompanyUserStorageQuery`</td></tr></tbody></table>
+Make sure that propel entities have been generated successfully by checking their existence. Also, change the generated entity classes to extend from Spryker core classes.
+
+|Class Path|Extends|
+|--- |--- |
+|`src/Orm/Zed/CompanyUserStorage/Persistence/SpyCompanyUserStorage.php`|`Spryker\Zed\CompanyUserStorage\Persistence\Propel\AbstractSpyCompanyUserStorage`|
+|`src/Orm/Zed/CompanyUserStorage/Persistence/SpyCompanyUserStorageQuery.php`|`Spryker\Zed\CompanyUserStorage\Persistence\Propel\AbstractSpyCompanyUserStorageQuery`|
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the changes have been implemented successfully. For this purpose, trigger the following methods and make sure that the above events have been triggered:<table><thead><tr><th>Path</th><th>Method Name</th></tr></thead><tbody><tr><td>`src/Orm/Zed/CompanyUser/Persistence/Base/SpyCompanyUser.php`</td><td>`prepareSaveEventName(
-{% endinfo_block %}`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`</td></tr><tr><td>`src/Orm/Zed/Company/Persistence/Base/SpyCompany.php`</td><td>`prepareSaveEventName()`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`</td></tr><tr><td>`src/Orm/Zed/CompanyUserStorage/Persistence/Base/SpyCompanyUserStorage.php`</td><td>`sendToQueue()`</td></tr></tbody></table>)
+Make sure that the changes have been implemented successfully. For this purpose, trigger the following methods and make sure that the above events have been triggered:
+
+|Path|Method Name|
+|--- |--- |
+|`src/Orm/Zed/CompanyUser/Persistence/Base/SpyCompanyUser.php`|`prepareSaveEventName(`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`|
+|`src/Orm/Zed/Company/Persistence/Base/SpyCompany.php`|`prepareSaveEventName()`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`|
+|`src/Orm/Zed/CompanyUserStorage/Persistence/Base/SpyCompanyUserStorage.php`|`sendToQueue()`|
+
+{% endinfo_block %}
 
 ### 3) Configure Export to Redis
 #### Set up Event Listeners
@@ -211,8 +244,14 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that when a company user is created, updated or deleted, when company's status changes or company is activated/deactivated the corresponding company users' records are exported (or removed
-{% endinfo_block %} to Redis.<table><thead><tr><th>Storage Type</th><th>Target Entity</th><th>Example Expected Data Identifier</th></tr></thead><tbody><tr><td>Redis</td><td>Company User</td><td>`kv:company_user:1`</td></tr></tbody></table>)
+
+Make sure that when a company user is created, updated or deleted, when company's status changes or company is activated/deactivated the corresponding company users' records are exported (or removed to Redis).
+
+|Storage Type|Target Entity|Example Expected Data Identifier|
+|--- |--- |--- |
+|Redis|Company User|`kv:company_user:1`|
+
+{% endinfo_block %}
 
 **Example Expected Data Fragment**
 
@@ -229,8 +268,10 @@ Make sure that when a company user is created, updated or deleted, when company'
 #### Import Business On Behalf
 
 {% info_block infoBox "Info" %}
-The following imported entities will be used as data for **Business on Behalf Company Users** (b2b extension for Company User module
-{% endinfo_block %} in Spryker OS.)
+
+The following imported entities will be used as data for **Business on Behalf Company Users** (b2b extension for Company User module in Spryker OS.)
+
+{% endinfo_block %}
 
 Prepare your data according to your requirements using our demo data:
 
@@ -507,7 +548,12 @@ composer require spryker-feature/company-account: "^master" --update-with-depend
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules were installed:<table><col  /><col  /><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`BusinessOnBehalfWidget`></td><td>`vendor/spryker-shop/business-on-behalf-widget`</td></tr></tbody></table>
+Make sure that the following modules were installed:
+
+|Module|Expected Directory|
+|--- |--- |
+|`BusinessOnBehalfWidget`>|`vendor/spryker-shop/business-on-behalf-widget`|
+
 {% endinfo_block %}
 
 ### 2) Add Translations

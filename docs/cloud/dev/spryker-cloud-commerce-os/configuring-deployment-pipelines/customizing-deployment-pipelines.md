@@ -13,7 +13,7 @@ This document describes how to customize deployment pipelines.
 
 {% info_block warningBox %}
 
-* In this document, we use the `pre-deploy` stage and its environment variable `SPRYKER_HOOK_BEFORE_DEPLOY` as an example. When customizing a different stage of a pipeline, use the respective variable. You can learn about environment variables for each deployment stage in [Deployment stages](/docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/deployment-pipelines.html#deployment-stages).
+* In this document, we use the `pre-deploy` stage and its environment variable `SPRYKER_HOOK_BEFORE_DEPLOY` as an example. When customizing a different stage of a pipeline, use the respective variable. You can learn about environment variables for each deployment stage in [Deployment stages](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/deployment-pipelines.html#deployment-stages).
 
 * Also, we use the default location of deployment scripts: `/config/install/`. Before you edit or add new scripts, make sure to check where they are stored in your project.
 

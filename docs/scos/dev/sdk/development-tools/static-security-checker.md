@@ -12,13 +12,13 @@ redirect_from:
   - /docs/en/static-security-checker
   - /v6/docs/static-security-checker
   - /v6/docs/en/static-security-checker
-  - /docs/scos/dev/sdk/201811.0/static-security-checker.html
-  - /docs/scos/dev/sdk/201903.0/static-security-checker.html
-  - /docs/scos/dev/sdk/201907.0/static-security-checker.html
-  - /docs/scos/dev/sdk/202001.0/static-security-checker.html
-  - /docs/scos/dev/sdk/202005.0/static-security-checker.html
-  - /docs/scos/dev/sdk/202009.0/static-security-checker.html
-  - /docs/scos/dev/sdk/202108.0/static-security-checker.html
+  - /docs/scos/dev/sdk/201811.0/development-tools/static-security-checker.html
+  - /docs/scos/dev/sdk/201903.0/development-tools/static-security-checker.html
+  - /docs/scos/dev/sdk/201907.0/development-tools/static-security-checker.html
+  - /docs/scos/dev/sdk/202001.0/development-tools/static-security-checker.html
+  - /docs/scos/dev/sdk/202005.0/development-tools/static-security-checker.html
+  - /docs/scos/dev/sdk/202009.0/development-tools/static-security-checker.html
+  - /docs/scos/dev/sdk/202108.0/development-tools/static-security-checker.html
 ---
 
 The Spryker static Security Checker allows you to detect packages with security vulnerabilities. It is based on the [Local PHP Security Checker](https://github.com/fabpot/local-php-security-checker).

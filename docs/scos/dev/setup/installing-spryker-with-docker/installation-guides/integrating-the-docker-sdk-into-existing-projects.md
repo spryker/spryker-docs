@@ -125,7 +125,7 @@ To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. Y
 To get the full and up-to-date list of commands, run `docker/sdk help`.
 
 ## Next steps
-* [Troubleshooting](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html)
+* [Troubleshooting](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-spryker-in-docker-issues.html)
 * [Debugging Setup in Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html)
 * [Deploy File Reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file-reference-1.0.html)
 * [Services](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-services.html)

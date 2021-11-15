@@ -240,12 +240,10 @@ The general discount calculation logic follows these rules:
 * Discounts without priority values are treated with the last possible priority.
 * Discounts with the same priority value are calculated independent of each other.
 * If there is a set of discounts with [exclusive](#exclusive-discount) and [non-exclusive](#non-exclusive-discount) discounts, the non-exclusive discounts are disregarded. The remaining excusive discounts are handled according to their priority values as shown in the schema:
-[SCHEMA ]<!---
-(If a set of discounts exists, some of which are exclusive, the non-exclusive discounts are discarded. So, the processing logic would be to first evaluate whether exclusive discounts exist. -If yes, discard non-exclusive discounts and evaluate the remaining exclusive discounts using:
-Priority value
-If same priority, apply the existing Spryker logic that chooses the discount with the highest customer value.
--If no, proceed with priority evaluation using customer value as a fallback where priority assignment clashes.
--->
+
+![discounts-calculation-logic](https://confluence-connect.gliffy.net/embed/image/ad6c6c4c-9ccb-42ae-a9dc-5944300bdf91.png?utm_medium=live&utm_source=custom)
+
+<!---source: https://spryker.atlassian.net/wiki/spaces/DOCS/pages/3019079947/CC-14560+-+Enable+prioritization+for+discounts -->
 
 ### Example discount calculation scenarios
 

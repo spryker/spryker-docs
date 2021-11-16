@@ -62,9 +62,6 @@ Request sample:
 | `POST https://glue.mysprykershop.com/quote-requests?include=company-business-units`  | Create a request for quote with information about company business units included.  |
 | `POST https://glue.mysprykershop.com/quote-requests?include=concrete-products`  | Create a request for quote with information about concrete products included. |
 
-
-</details>
-
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 |---|---|---|---|
 | companyUserUuid | String | &check; | Company user ID. |
@@ -1566,7 +1563,22 @@ To retrieve a request for quote for a customer, send the following request:
 
 </details>
 
-For repsonses' attribute descriptions, see [Create a request for quote](#response-attributes) section
+For responses' attribute descriptions, see [Create a request for quote](#response-attributes) section.
+
+## Update a request for quote
+
+To update a request for quote for a customer, send the request:
+
+`PATCH` **/quote-requests/*{% raw %}{{{% endraw %}QuotationRequestID{% raw %}}}{% endraw %}***
+
+---
+
+| PATH PARAMETER | DESCRIPTION |
+|-|-|
+| ***{% raw %}{{{% endraw %}QuotationRequestID{% raw %}}}{% endraw %}*** | Request for quote unique identifier to manage requests for quotes. To get it, [create a quote request](#create-a-request-for-quote). |
+
+
+
 
 ## Possible errors
 

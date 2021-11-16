@@ -11,7 +11,7 @@ This endpoint allows managing agent requests for quote.
 
 For details on the modules that provide the API functionality and how to install them, see <!--paste a link to a IG-->
 
-## Create an agent request for quote
+## Create a request for quote
 
 To create a request for quote for an agent, send the following request:
 
@@ -29,6 +29,12 @@ To create a request for quote for an agent, send the following request:
 | QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 |---|---|---|
 | include | Adds resource relationships to the request. | <div><ul><li>customers</li><li>company-users</li><li>company-business-units</li><li>concrete-products</li></ul></div> |
+
+{% info_block infoBox "Included resources" %}
+
+To retrieve relationships to customers, company users, company business units, or concrete products, include  `customers`, `company-users`, `company-business-units`, or `concrete-products` respectively.
+
+{% endinfo_block %}
 
 Sample request: `POST https://glue.mysprykershop.com/agent-quote-requests`
 
@@ -48,16 +54,24 @@ Sample request: `POST https://glue.mysprykershop.com/agent-quote-requests`
 }
 ```
 
+| REQUEST SAMPLE | USAGE |
+|-|-|
+| `POST https://glue.mysprykershop.com/agent-quote-requests?include=customers` | Create a request for quote with customer information included.  |
+| `POST https://glue.mysprykershop.com/agent-quote-requests?include=company-users`  | Create a request for quote with company user information included. |
+| `POST https://glue.mysprykershop.com/agent-quote-requests?include=company-business-units`  | Create a request for quote with information about company business units included.  |
+| `POST https://glue.mysprykershop.com/agent-quote-requests?include=concrete-products`  | Create a request for quote with information about concrete products included. |
+
 | ATTRIBUTE | REQUIRED | TYPE | DESCRIPTION |
 |---|---|---|---|
-| companyUserUuid | &check; | String | Company user ID |
-| purchase_order_number |   | Integer | Purchase order number |
-| delivery_date |   | String | Product delivery date |
-| note |   | String | Notes/comments left by a customer or Back Office user. |
+| companyUserUuid | &check; | String | Company user ID. |
+| purchase_order_number |   | Integer | Purchase order number. |
+| delivery_date |   | String | Product delivery date. |
+| note |   | String | Notes or comments left by a customer or Back Office user. |
 
 ### Response
 
 <details><summary>Response sample</summary>
+
 ```json
 {
     "data": {
@@ -163,7 +177,7 @@ Sample request: `POST https://glue.mysprykershop.com/agent-quote-requests`
 
 </details>
 
-## Retrieve agent requests for quote
+## Retrieve requests for quote
 
 To retrieve requests for quote for an agent, send the following request:
 
@@ -271,6 +285,12 @@ To retrieve a request for quote for an agent, send the following request:
 | QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 |---|---|---|
 | include | Adds resource relationships to the request. | <div><ul><li>customers</li><li>company-users</li><li>company-business-units</li><li>concrete-products</li></ul></div> |
+
+{% info_block infoBox "Included resources" %}
+
+To retrieve relationships to customers, company users, company business units, or concrete products, include  `customers`, `company-users`, `company-business-units`, or `concrete-products` respectively.
+
+{% endinfo_block %}
 
 Sample request: `GET https://glue.mysprykershop.com/agent-quote-requests/DE--21-22`
 

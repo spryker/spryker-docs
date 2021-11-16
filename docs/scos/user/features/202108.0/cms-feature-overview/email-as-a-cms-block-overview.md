@@ -44,7 +44,7 @@ When a developer creates an email template, inside the file, they enter the name
 
 
 #### Email Format
-There are two email formats by default: HTML and pure text. The format of the [default email templates](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html#default-email-templates) is identified by one of the respective tales in the name of an Email CMS Block: *--html* or *--text*. For example, Email CMS Blocks with the following names are assigned to the customer registration email template:
+There are two email formats by default: HTML and pure text. The format of the [default email templates](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html) is identified by one of the respective tales in the name of an Email CMS Block: *--html* or *--text*. For example, Email CMS Blocks with the following names are assigned to the customer registration email template:
 
 * customer-registration--html
 * customer-registration--text

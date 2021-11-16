@@ -20,13 +20,13 @@ redirect_from:
   - /v3/docs/en/phpstan
   - /v2/docs/phpstan
   - /v2/docs/en/phpstan
-  - /docs/scos/dev/sdk/201811.0/phpstan.html
-  - /docs/scos/dev/sdk/201903.0/phpstan.html
-  - /docs/scos/dev/sdk/201907.0/phpstan.html
-  - /docs/scos/dev/sdk/202001.0/phpstan.html
-  - /docs/scos/dev/sdk/202005.0/phpstan.html
-  - /docs/scos/dev/sdk/202009.0/phpstan.html
-  - /docs/scos/dev/sdk/202108.0/phpstan.html
+  - /docs/scos/dev/sdk/201811.0/development-tools/phpstan.html
+  - /docs/scos/dev/sdk/201903.0/development-tools/phpstan.html
+  - /docs/scos/dev/sdk/201907.0/development-tools/phpstan.html
+  - /docs/scos/dev/sdk/202001.0/development-tools/phpstan.html
+  - /docs/scos/dev/sdk/202005.0/development-tools/phpstan.html
+  - /docs/scos/dev/sdk/202009.0/development-tools/phpstan.html
+  - /docs/scos/dev/sdk/202108.0/development-tools/phpstan.html
 related:
   - title: Architecture Sniffer
     link: docs/scos/dev/sdk/development-tools/architecture-sniffer.html

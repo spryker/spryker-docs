@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/chromium-browser-for-tests
   - /v6/docs/chromium-browser-for-tests
   - /v6/docs/en/chromium-browser-for-tests
+  - /docs/scos/dev/technical-enhancements/chromium-browser-for-tests.html
 ---
 
 [Chromium](https://www.chromium.org/Home) is a headless browser used with [ChromeDriver](https://chromedriver.chromium.org/) for acceptance and functional tests. It provides full-control API to make end-to-end testing flexible and comfortable.  

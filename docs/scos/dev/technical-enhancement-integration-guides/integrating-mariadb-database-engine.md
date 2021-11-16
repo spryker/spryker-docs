@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/mariadb-database-engine
   - /v6/docs/mariadb-database-engine
   - /v6/docs/en/mariadb-database-engine
+  - /docs/scos/dev/technical-enhancements/mariadb-database-engine.html
 related:
   - title: Configuring services
     link: docs/scos/dev/the-docker-sdk/page.version/configuring-services.html
@@ -23,7 +24,7 @@ See [MariaDB knowledge base](https://mariadb.com/kb/en/) for more details.
 
 ## Integration into Docker-based projects
 
-For Docker-based integration instructions, see [MariaDB](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-services.html#mariadb).
+For Docker-based integration instructions, see [MariaDB](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-services.html#mariadb).
 
 ## Integration into DevVM-based projects
 To integrate MariaDB into a DevVM-based project:

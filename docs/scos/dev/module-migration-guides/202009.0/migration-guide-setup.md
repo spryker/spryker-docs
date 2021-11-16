@@ -21,6 +21,7 @@ The new commands need to be registered in projects in order to enable `setup:ins
 {% info_block infoBox "Deprecation Notice" %}
 As of this release the following commands have been deprecated and need to be removed `\Spryker\Zed\Setup\Communication\Console\RemoveGeneratedDirectoryConsole`<br> `\Spryker\Zed\Cache\Communication\Console\DeleteAllCachesConsole`
 {% endinfo_block %}
+
 ```php
 <?php
 
@@ -52,8 +53,3 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     }
 }
 ```
-<!--See also:
-
-* Checkout other Console commands
--->
-

@@ -9,7 +9,7 @@ redirect_from:
   - /v6/docs/en/glue-api-order-management-feature-integration
 related:
   - title: Retrieving Customer's Order History
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
+    link: docs/scos/dev/glue-api-guides/page.version/retrieving-orders.html
   - title: Checking Out Purchases and Getting Checkout Data
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
 ---
@@ -21,7 +21,7 @@ To start feature integration, overview and install all these necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | 201907.0 | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
+| Spryker Core | 202009.0 | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
 
 
 ## 1) Install the required modules using Composer

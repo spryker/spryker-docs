@@ -1,10 +1,10 @@
 ---
-title: Jenkins troubleshooting
+title: Jenkins does not restart
 description: This article describes how to troubleshoot the most common problems with the jenkins scheulder
 template: troubleshooting-guide-template
 ---
 
-When deploying an application, Jenkins does not restart properly and the `Deploy_Scheduler` deployment step fails. 
+When deploying an application, Jenkins does not restart properly and the `Deploy_Scheduler` deployment step fails.
 
 ## Cause
 

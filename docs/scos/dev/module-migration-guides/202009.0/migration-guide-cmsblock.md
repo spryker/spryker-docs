@@ -181,7 +181,7 @@ console propel:install
 This version allows saving CMS Block-Store relation.
 
 1. Update the `spryker/cms-block` module to at least Version 2.0.0.
-2. Update your `spryker/cms-block-collector` module to at least Version 2.0.0. See [Migration Guide - CMS Collector](https://documentation.spryker.com/module_migration_guides/mg-cms-collector.htm) for more details.
+2. Update your `spryker/cms-block-collector` module to at least Version 2.0.0. See [Migration Guide - CMS Collector](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-cmscollector.html) for more details.
 
 **Custom CMS Block Collector**
 

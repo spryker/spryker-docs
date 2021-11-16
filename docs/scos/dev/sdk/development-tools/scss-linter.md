@@ -12,13 +12,13 @@ redirect_from:
   - /docs/en/scss-linter
   - /v6/docs/scss-linter
   - /v6/docs/en/scss-linter
-  - /docs/scos/dev/sdk/201811.0/scss-linter.html
-  - /docs/scos/dev/sdk/201903.0/scss-linter.html
-  - /docs/scos/dev/sdk/201907.0/scss-linter.html
-  - /docs/scos/dev/sdk/202001.0/scss-linter.html
-  - /docs/scos/dev/sdk/202005.0/scss-linter.html
-  - /docs/scos/dev/sdk/202009.0/scss-linter.html
-  - /docs/scos/dev/sdk/202108.0/scss-linter.html
+  - /docs/scos/dev/sdk/201811.0/development-tools/scss-linter.html
+  - /docs/scos/dev/sdk/201903.0/development-tools/scss-linter.html
+  - /docs/scos/dev/sdk/201907.0/development-tools/scss-linter.html
+  - /docs/scos/dev/sdk/202001.0/development-tools/scss-linter.html
+  - /docs/scos/dev/sdk/202005.0/development-tools/scss-linter.html
+  - /docs/scos/dev/sdk/202009.0/development-tools/scss-linter.html
+  - /docs/scos/dev/sdk/202108.0/development-tools/scss-linter.html
 ---
 
 *SCSS linter* allows you to find and fix code style mistakes. It helps a team to follow the same standards and make code more readable.

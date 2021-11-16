@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/frontend-css-lazy-load
   - /v6/docs/frontend-css-lazy-load
   - /v6/docs/en/frontend-css-lazy-load
+  - /docs/scos/dev/technical-enhancements/frontend-css-lazy-load.html
 ---
 
 To implement [CSS lazy loading for front end](/docs/scos/dev/front-end-development/yves/frontend-assets-building-and-loading.html#page-critical-path-layout), do the following:

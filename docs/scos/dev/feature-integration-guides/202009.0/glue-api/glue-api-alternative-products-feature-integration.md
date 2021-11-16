@@ -19,9 +19,9 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Required Sub-Feature |
 | --- | --- | --- |
-| Spryker Core | 201907.0 | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
+| Spryker Core | 202009.0 | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
 | Alternative Products | 201907.0 | |
-| Products | 201907.0 | [Product API feature integration](h/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
+| Products | 202009.0 | [Product API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 
@@ -31,13 +31,15 @@ Run the following command to install the required modules:
 composer require spryker/alternative-products-rest-api:"^1.0.0" --update-with-dependencies
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
-    Make sure that the following module is installed:
+{% info_block warningBox “Verification” %}
+
+Make sure that the following module is installed:
 
 | Module | Expected Directory |
 | --- | --- |
 | `AlternativeProductsRestApi` | `vendor/spryker/alternative-products-rest-api` |
-</div></section>
+
+{% endinfo_block %}
 
 ## 2) Set up Behavior
 
@@ -48,7 +50,7 @@ Activate the following plugins:
 | `AbstractAlternativeProductsResourceRoutePlugin` | Registers the abstract alternative products resource. | None | `Spryker\Glue\AlternativeProductsRestApi\Plugin\GlueApplication` |
 | `ConcreteAlternativeProductsResourceRoutePlugin` | Registers the concrete alternative products resource. | None | `Spryker\Glue\AlternativeProductsRestApi\Plugin\GlueApplication` |
 
-src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -74,10 +76,11 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
+{% info_block warningBox “Verification” %}
+
 Make sure that the following endpoints are available:
 
 * `http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/abstract-alternative-products`
 * `http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/abstract-alternative-products`
 
-</div></section>
+{% endinfo_block %}

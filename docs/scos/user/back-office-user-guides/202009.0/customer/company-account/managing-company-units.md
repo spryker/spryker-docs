@@ -27,9 +27,9 @@ To create a company business unit:
 
 1. In the top right corner of the **Overview of Company Business Units** page, click **Create Company Business Unit**.
 2. On the **Create Company Business Unit** page, populate all required information: select company from the drop-down list and enter the name of the business unit. 
-       Parent, IBAN, and BIC fields are optional and can be populated later.
+Parent, IBAN, and BIC fields are optional and can be populated later.
 3. Click **Save**. 
-    The new created business unit will appear in the _Company Business Units_ table on the **Company Units** page.
+The newly created business unit will appear in the _Company Business Units_ table on the **Company Units** page.
 
 The fields that you enter and select are described in [Company Account: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/references/reference-information-company-account.html).
 
@@ -38,10 +38,14 @@ The business units can be managed by triggering certain actions in the _Actions_
 ## Editing a Business Unit
 To edit a business unit:
 1. Click **Edit** in the _Actions_ column if you want to change the details for a business unit such as Parent BU, Name, IBAN, and BIC.
-    {% info_block infoBox "Info" %}
-Once the company business unit address is created, you can attach it to a business unit on the **Edit Company Business Unit** page. See [Managing Company Unit Addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-unit-addresses.html
-{% endinfo_block %} for more details.)
-2. Once done, click **Save**.
+   
+{% info_block infoBox "Info" %}
+
+Once the company business unit address is created, you can attach it to a business unit on the **Edit Company Business Unit** page. See [Managing Company Unit Addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-unit-addresses.html) for more details.
+
+{% endinfo_block %}
+
+1. Once done, click **Save**.
 
 ## Deleting a Business Unit
 If you want to delete an existing business unit, click **Delete** in the _Actions_ column.

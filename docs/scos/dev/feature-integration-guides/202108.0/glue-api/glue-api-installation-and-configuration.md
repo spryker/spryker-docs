@@ -16,11 +16,11 @@ Functionally, Spryker API can be split into 2 parts: API infrastructure (GLUE) a
 
 To integrate GLUE API in your project, you need to:
 
-- [1. Installing GLUE](#1-installing-glue)
-- [2. Enabling GLUE](#2-enabling-glue)
-- [Integrate REST API resources](#integrate-rest-api-resources)
+- [ Install GLUE](#installing-glue)
+- [2. Enable GLUE](#enabling-glue)
 
-  
+
+
 ## 1. Installing GLUE
 
 GLUE infrastructure is shipped with the following modules:
@@ -35,7 +35,7 @@ To install it, you need to do the following:
 
 {% info_block warningBox "Note" %}
 
-Spryker Shop Suite contains GLUE out of the box. If your project has the latest Shop Suite master merged, you can proceed directly to step <a href="#enable">2. Enable GLUE</a>.
+Spryker Shop Suite contains GLUE out of the box. If your project has the latest Shop Suite master merged, you can proceed directly to step <a href="#enabling-glue">2. Enable GLUE</a>.
 
 {% endinfo_block %}
 

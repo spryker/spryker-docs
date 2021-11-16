@@ -225,7 +225,7 @@ Request sample: `https://glue.mysprykershop.com/product-management-attributes/st
 ```
 </details>
 
-For the attributes, see [Retrieve all product attributes](#all-attributes).
+For the attributes, see [Retrieve all product attributes](#retrieve-all-product-attributes).
 
 Possible errors
 

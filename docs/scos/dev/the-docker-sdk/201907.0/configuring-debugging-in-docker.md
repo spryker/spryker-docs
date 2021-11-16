@@ -8,6 +8,7 @@ originalArticleId: f0f8fc12-d5a8-4d06-955b-ad3fa2caf0da
 redirect_from:
   - /v3/docs/debugging-setup-in-docker-201907
   - /v3/docs/en/debugging-setup-in-docker-201907
+  - /docs/scos/dev/the-docker-sdk/201907.0/debugging-setup-in-docker.html
 ---
 
 ## Running Spryker containers with Xdebug enabled

@@ -9,6 +9,18 @@ redirect_from:
   - /2021080/docs/en/companyusersrestapi-migration-guide
   - /docs/companyusersrestapi-migration-guide
   - /docs/en/companyusersrestapi-migration-guide
+  - /v3/docs/companyusersrestapi-migration-guide
+  - /v3/docs/en/companyusersrestapi-migration-guide
+  - /v4/docs/companyusersrestapi-migration-guide
+  - /v4/docs/en/companyusersrestapi-migration-guide
+  - /v5/docs/companyusersrestapi-migration-guide
+  - /v5/docs/en/companyusersrestapi-migration-guide
+  - /v6/docs/companyusersrestapi-migration-guide
+  - /v6/docs/en/companyusersrestapi-migration-guide
+  - /docs/scos/dev/module-migration-guides/201907.0/glue-api/companyusersrestapi-migration-guide.html
+  - /docs/scos/dev/module-migration-guides/202001.0/glue-api/companyusersrestapi-migration-guide.html
+  - /docs/scos/dev/module-migration-guides/202005.0/glue-api/companyusersrestapi-migration-guide.html
+  - /docs/scos/dev/module-migration-guides/202009.0/glue-api/companyusersrestapi-migration-guide.html
 ---
 
 ## Upgrading from Version 1.3.0 to Version 2.0.0

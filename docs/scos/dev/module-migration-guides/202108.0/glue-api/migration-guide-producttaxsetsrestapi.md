@@ -9,6 +9,24 @@ redirect_from:
   - /2021080/docs/en/producttaxsetsrestapi-migration-guide
   - /docs/producttaxsetsrestapi-migration-guide
   - /docs/en/producttaxsetsrestapi-migration-guide
+  - /v1/docs/producttaxsetsrestapi-migration-guide
+  - /v1/docs/en/producttaxsetsrestapi-migration-guide
+  - /v2/docs/producttaxsetsrestapi-migration-guide
+  - /v2/docs/en/producttaxsetsrestapi-migration-guide
+  - /v3/docs/producttaxsetsrestapi-migration-guide
+  - /v3/docs/en/producttaxsetsrestapi-migration-guide
+  - /v4/docs/producttaxsetsrestapi-migration-guide
+  - /v4/docs/en/producttaxsetsrestapi-migration-guide
+  - /v5/docs/producttaxsetsrestapi-migration-guide
+  - /v5/docs/en/producttaxsetsrestapi-migration-guide
+  - /v6/docs/producttaxsetsrestapi-migration-guide
+  - /v6/docs/en/producttaxsetsrestapi-migration-guide
+  - /docs/scos/dev/module-migration-guides/201811.0/glue-api/migration-guide-producttaxsetsrestapi.html
+  - /docs/scos/dev/module-migration-guides/201903.0/glue-api/migration-guide-producttaxsetsrestapi.html
+  - /docs/scos/dev/module-migration-guides/201907.0/glue-api/migration-guide-producttaxsetsrestapi.html
+  - /docs/scos/dev/module-migration-guides/202001.0/glue-api/migration-guide-producttaxsetsrestapi.html
+  - /docs/scos/dev/module-migration-guides/202005.0/glue-api/migration-guide-producttaxsetsrestapi.html
+  - /docs/scos/dev/module-migration-guides/202009.0/glue-api/migration-guide-producttaxsetsrestapi.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

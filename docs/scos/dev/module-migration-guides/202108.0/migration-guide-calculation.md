@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-calculation
   - /docs/mg-calculation
   - /docs/en/mg-calculation
+  - /v1/docs/mg-calculation
+  - /v1/docs/en/mg-calculation
+  - /v2/docs/mg-calculation
+  - /v2/docs/en/mg-calculation
+  - /v3/docs/mg-calculation
+  - /v3/docs/en/mg-calculation
+  - /v4/docs/mg-calculation
+  - /v4/docs/en/mg-calculation
+  - /v5/docs/mg-calculation
+  - /v5/docs/en/mg-calculation
+  - /v6/docs/mg-calculation
+  - /v6/docs/en/mg-calculation
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-calculation.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-calculation.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-calculation.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-calculation.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-calculation.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-calculation.html
 ---
 
 ## Upgrading from Version 3.* to Version 4.*

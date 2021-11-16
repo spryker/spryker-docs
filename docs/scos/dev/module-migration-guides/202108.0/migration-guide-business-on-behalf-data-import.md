@@ -10,15 +10,33 @@ redirect_from:
   - /2021080/docs/en/mg-business-on-behalf-data-import
   - /docs/mg-business-on-behalf-data-import
   - /docs/en/mg-business-on-behalf-data-import
+  - /v1/docs/mg-business-on-behalf-data-import
+  - /v1/docs/en/mg-business-on-behalf-data-import
+  - /v2/docs/mg-business-on-behalf-data-import
+  - /v2/docs/en/mg-business-on-behalf-data-import
+  - /v3/docs/mg-business-on-behalf-data-import
+  - /v3/docs/en/mg-business-on-behalf-data-import
+  - /v4/docs/mg-business-on-behalf-data-import
+  - /v4/docs/en/mg-business-on-behalf-data-import
+  - /v5/docs/mg-business-on-behalf-data-import
+  - /v5/docs/en/mg-business-on-behalf-data-import
+  - /v6/docs/mg-business-on-behalf-data-import
+  - /v6/docs/en/mg-business-on-behalf-data-import
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-business-on-behalf-data-import.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-business-on-behalf-data-import.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-business-on-behalf-data-import.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-business-on-behalf-data-import.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-business-on-behalf-data-import.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-business-on-behalf-data-import.html
 ---
 
 ## Upgrading from Version 2.* to Version 3.*
-    
+
 In this version, we have changed the dependency to the CompanyUser module. This enables using the `CompanyUserEvents::COMPANY_USER_PUBLISH` constant to trigger [Publish & Syncronization](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html) handling for imported entities.
 No additional actions required.
 
 ## Upgrading from Version 1.1.0 to Version 2.0.0
-    
+
 In this version, the import key `company-user` has been assigned to the `CompanyUserDataImport`. `BusinessOnBehalfDataImport` now uses `company-user-on-behalf`. To migrate, just use the other key because the previous was repurposed.
 Therefore, if you have any custom deployment or importing script that used the console command:
 `vendor/bin/console data:import company-user`

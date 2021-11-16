@@ -9,17 +9,29 @@ redirect_from:
   - /2021080/docs/en/mg-contentbannersrestapi-201907
   - /docs/mg-contentbannersrestapi-201907
   - /docs/en/mg-contentbannersrestapi-201907
+  - /v3/docs/mg-contentbannersrestapi-201907
+  - /v3/docs/en/mg-contentbannersrestapi-201907
+  - /v4/docs/mg-contentbannersrestapi-201907
+  - /v4/docs/en/mg-contentbannersrestapi-201907
+  - /v5/docs/mg-contentbannersrestapi-201907
+  - /v5/docs/en/mg-contentbannersrestapi-201907
+  - /v6/docs/mg-contentbannersrestapi-201907
+  - /v6/docs/en/mg-contentbannersrestapi-201907
+  - /docs/scos/dev/module-migration-guides/201907.0/glue-api/migration-guide-contentbannersrestapi.html
+  - /docs/scos/dev/module-migration-guides/202001.0/glue-api/migration-guide-contentbannersrestapi.html
+  - /docs/scos/dev/module-migration-guides/202005.0/glue-api/migration-guide-contentbannersrestapi.html
+  - /docs/scos/dev/module-migration-guides/202009.0/glue-api/migration-guide-contentbannersrestapi.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*
-ContentBannersRestApi, version 2.0.0 introduces the [Banner content item](/docs/scos/dev/feature-walkthroughs/{{page.version}}/content-items-feature-walkthrough/content-item-types-module-relations.html) functionality that allows retrieving its data by the content item key via REST API endpoint for all or a specific locale.
+
+`ContentBannersRestApi`, version 2.0.0 introduces the [Banner content item](/docs/scos/dev/feature-walkthroughs/{{page.version}}/content-items-feature-walkthrough/content-item-types-module-relations.html) functionality that allows retrieving its data by the content item key via REST API endpoint for all or a specific locale.
 
 In `ContentBannersRestApi` version 2.0.0, we have:
-
-*     Adjusted models to support parameter KEY of a content item, so now endpoint expects the content key instead of ID in the URL.
-*     Removed `ContentBannersRestApiConfig::RESPONSE_CODE_CONTENT_ID_IS_MISSING` and `ContentBannersRestApiConfig::RESPONSE_DETAILS_CONTENT_ID_IS_MISSING`.
-*     Introduced `ContentBannersRestApiConfig::RESPONSE_CODE_CONTENT_KEY_IS_MISSING` and `ContentBannersRestApiConfig::RESPONSE_DETAILS_CONTENT_KEY_IS_MISSING`.
-*     Increased the version of `spryker/content-banner` in composer.json.
+* Adjusted models to support parameter KEY of a content item, so now endpoint expects the content key instead of ID in the URL.
+* Removed `ContentBannersRestApiConfig::RESPONSE_CODE_CONTENT_ID_IS_MISSING` and `ContentBannersRestApiConfig::RESPONSE_DETAILS_CONTENT_ID_IS_MISSING`.
+* Introduced `ContentBannersRestApiConfig::RESPONSE_CODE_CONTENT_KEY_IS_MISSING` and `ContentBannersRestApiConfig::RESPONSE_DETAILS_CONTENT_KEY_IS_MISSING`.
+* Increased the version of `spryker/content-banner` in composer.json.
 
 You can find more details about the changes on the [ContentBannersRestApi module release notes](https://github.com/spryker/content-banners-rest-api/releases/tag/2.0.0) page.
 

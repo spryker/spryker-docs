@@ -9,6 +9,15 @@ redirect_from:
   - /2021080/docs/en/mg-ordersrestapi
   - /docs/mg-ordersrestapi
   - /docs/en/mg-ordersrestapi
+  - /v4/docs/mg-ordersrestapi
+  - /v4/docs/en/mg-ordersrestapi
+  - /v5/docs/mg-ordersrestapi
+  - /v5/docs/en/mg-ordersrestapi
+  - /v6/docs/mg-ordersrestapi
+  - /v6/docs/en/mg-ordersrestapi
+  - /docs/scos/dev/module-migration-guides/202001.0/glue-api/migration-guide-ordersrestapi.html
+  - /docs/scos/dev/module-migration-guides/202005.0/glue-api/migration-guide-ordersrestapi.html
+  - /docs/scos/dev/module-migration-guides/202009.0/glue-api/migration-guide-ordersrestapi.html
 ---
 
 ## Upgrading from Version 3.0.* to Version 4.0.0
@@ -27,6 +36,7 @@ This release is a part of the Split delivery concept migration. When you upgrade
 ```bash
 composer require spryker/orders-rest-api: "^4.0.0" --update-with-dependencies
 ```
+
 2. Generate the transfer objects:
 
 ```bash

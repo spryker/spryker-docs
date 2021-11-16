@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-cart-extension
   - /docs/mg-cart-extension
   - /docs/en/mg-cart-extension
+  - /v1/docs/mg-cart-extension
+  - /v1/docs/en/mg-cart-extension
+  - /v1/docs/mg-cart-extension
+  - /v1/docs/en/mg-cart-extension
+  - /v1/docs/mg-cart-extension
+  - /v1/docs/en/mg-cart-extension
+  - /v1/docs/mg-cart-extension
+  - /v1/docs/en/mg-cart-extension
+  - /v1/docs/mg-cart-extension
+  - /v1/docs/en/mg-cart-extension
+  - /v1/docs/mg-cart-extension
+  - /v1/docs/en/mg-cart-extension
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-cartextension.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-cartextension.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-cartextension.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-cartextension.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-cartextension.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cartextension.html
 ---
 
 ## Upgrading from Version 2.* to Version 4.0.0

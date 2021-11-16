@@ -10,12 +10,30 @@ redirect_from:
   - /2021080/docs/en/mg-catalog
   - /docs/mg-catalog
   - /docs/en/mg-catalog
+  - /v1/docs/mg-catalog
+  - /v1/docs/en/mg-catalog
+  - /v2/docs/mg-catalog
+  - /v2/docs/en/mg-catalog
+  - /v3/docs/mg-catalog
+  - /v3/docs/en/mg-catalog
+  - /v4/docs/mg-catalog
+  - /v4/docs/en/mg-catalog
+  - /v5/docs/mg-catalog
+  - /v5/docs/en/mg-catalog
+  - /v6/docs/mg-catalog
+  - /v6/docs/en/mg-catalog
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-catalog.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-catalog.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-catalog.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-catalog.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-catalog.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-catalog.html
 related:
   - title: Migration Guide - Category
     link: docs/scos/dev/module-migration-guides/page.version/migration-guide-category.html
 ---
 
-## Upgrading from Version 5.5* to  Version 5.6*
+## Upgrading from version 5.5* to version 5.6*
 
 {% info_block errorBox "Prerequisites" %}
 
@@ -46,7 +64,7 @@ Spryker\Client\Search\Plugin\Elasticsearch\ResultFormatter\SuggestionByTypeResul
 ```
 2. Enable the replacement plugins:
 
-Pyz\Client\Catalog
+**Pyz\Client\Catalog**
 
 ```php
 <?php

@@ -9,6 +9,15 @@ redirect_from:
   - /2021080/docs/en/mg-checkoutrestapi
   - /docs/mg-checkoutrestapi
   - /docs/en/mg-checkoutrestapi
+  - /v4/docs/mg-checkoutrestapi
+  - /v4/docs/en/mg-checkoutrestapi
+  - /v5/docs/mg-checkoutrestapi
+  - /v5/docs/en/mg-checkoutrestapi
+  - /v6/docs/mg-checkoutrestapi
+  - /v6/docs/en/mg-checkoutrestapi
+  - /docs/scos/dev/module-migration-guides/202001.0/glue-api/migration-guide-checkoutrestapi.html
+  - /docs/scos/dev/module-migration-guides/202005.0/glue-api/migration-guide-checkoutrestapi.html
+  - /docs/scos/dev/module-migration-guides/202009.0/glue-api/migration-guide-checkoutrestapi.html
 related:
   - title: Migration Guide - Payment
     link: docs/scos/dev/module-migration-guides/page.version/migration-guide-payment.html
@@ -25,12 +34,14 @@ Version 3 of the **CheckoutRestApi** module adds the **Payment Method per Store*
 ```bash
 composer require spryker/checkout-rest-api:"^2.0.0" --update-with-dependencies
 ```
+
 2. Prepare a database entity schema for **each store** in the system:
 
 ```bash
 APPLICATION_STORE=DE console propel:schema:copy
 APPLICATION_STORE=US console propel:schema:copy
 ```
+
 3. Run the database migration:
 
 ```bash
@@ -40,6 +51,7 @@ console transfer:generate
 
 *Estimated migration time: 5 min*
 ***
+
 ## Upgrading from Version 1.* to Version 2.0.0
 
 In this new version of the **CheckoutRestApi** module, we have added support of split delivery. You can find more details about the changes on the [CheckoutRestApi module](https://github.com/spryker/checkout-rest-api/releases) release page.

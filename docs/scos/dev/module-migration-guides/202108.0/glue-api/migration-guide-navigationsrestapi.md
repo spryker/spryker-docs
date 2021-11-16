@@ -9,6 +9,22 @@ redirect_from:
   - /2021080/docs/en/migration-guide-navigationsrestapi
   - /docs/migration-guide-navigationsrestapi
   - /docs/en/migration-guide-navigationsrestapi
+  - /v2/docs/navigationsrestapi-migration-guide
+  - /v2/docs/en/navigationsrestapi-migration-guide
+  - /v3/docs/navigationsrestapi-migration-guide
+  - /v3/docs/en/navigationsrestapi-migration-guide
+  - /v4/docs/migration-guide-navigationsrestapi
+  - /v4/docs/en/migration-guide-navigationsrestapi
+  - /v5/docs/migration-guide-navigationsrestapi
+  - /v5/docs/en/migration-guide-navigationsrestapi
+  - /v6/docs/migration-guide-navigationsrestapi
+  - /v6/docs/en/migration-guide-navigationsrestapi
+  - /docs/scos/dev/module-migration-guides/201903.0/glue-api/migration-guide-navigationsrestapi.html
+  - /docs/scos/dev/module-migration-guides/201907.0/glue-api/migration-guide-navigationsrestapi.html
+  - /docs/scos/dev/module-migration-guides/202001.0/glue-api/migration-guide-navigationsrestapi.html
+  - /docs/scos/dev/module-migration-guides/202005.0/glue-api/migration-guide-navigationsrestapi.html
+  - /docs/scos/dev/module-migration-guides/202009.0/glue-api/migration-guide-navigationsrestapi.html
+  -
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

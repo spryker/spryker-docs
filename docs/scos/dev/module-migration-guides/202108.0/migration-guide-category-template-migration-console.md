@@ -9,9 +9,27 @@ redirect_from:
   - /2021080/docs/en/mg-category-template-console
   - /docs/mg-category-template-console
   - /docs/en/mg-category-template-console
+  - /v1/docs/mg-category-template-console
+  - /v1/docs/en/mg-category-template-console
+  - /v2/docs/mg-category-template-console
+  - /v2/docs/en/mg-category-template-console
+  - /v3/docs/mg-category-template-console
+  - /v3/docs/en/mg-category-template-console
+  - /v4/docs/mg-category-template-console
+  - /v4/docs/en/mg-category-template-console
+  - /v5/docs/mg-category-template-console
+  - /v5/docs/en/mg-category-template-console
+  - /v6/docs/mg-category-template-console
+  - /v6/docs/en/mg-category-template-console
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-category-template-migration-console.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-category-template-migration-console.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-category-template-migration-console.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-category-template-migration-console.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-category-template-migration-console.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-category-template-migration-console.html
 ---
 
-## Category Template Migration Script
+## Category template migration script
 
 ```php
 <?php

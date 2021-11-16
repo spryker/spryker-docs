@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-availability
   - /docs/mg-availability
   - /docs/en/mg-availability
+  - /v1/docs/mg-availability
+  - /v1/docs/en/mg-availability
+  - /v2/docs/mg-availability
+  - /v2/docs/en/mg-availability
+  - /v3/docs/mg-availability
+  - /v3/docs/en/mg-availability
+  - /v4/docs/mg-availability
+  - /v4/docs/en/mg-availability
+  - /v5/docs/mg-availability
+  - /v5/docs/en/mg-availability
+  - /v6/docs/mg-availability
+  - /v6/docs/en/mg-availability
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-availability.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-availability.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-availability.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-availability.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-availability.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-availability.html
 ---
 
 ## Upgrading from Version 8.* to Version 9.0.0
@@ -36,15 +54,17 @@ APPLICATION_STORE=DE console propel:schema:copy
 APPLICATION_STORE=US console propel:schema:copy
 ...
 ```
+
 3. Run the database migration:
 
 ```bash
 console propel:install
 console transfer:generate
 ```
+
 4. Add the following plugin to the project dependency provider, if applicable:
 
-src/Pyz/Zed/Cart/CartDependencyProvider.php
+**src/Pyz/Zed/Cart/CartDependencyProvider.php**
 
 ```php
 <?php
@@ -85,7 +105,7 @@ In order to dismantle the Horizontal Barrier and enable partial module updates o
 
 In **Availability** module version 6 we have added support for multi-store. The Back Office has undergone some changes to allow selecting stores and update database tables to store relations to store.
 
-To upgrade, first you need to run database migrations:
+To upgrade, run database migrations:
 
 ```php
            ALTER TABLE "spy_availability"

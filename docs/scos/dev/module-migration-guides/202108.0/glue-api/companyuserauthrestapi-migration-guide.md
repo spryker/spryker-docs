@@ -9,6 +9,18 @@ redirect_from:
   - /2021080/docs/en/companyuserauthrestapi-migration-guide
   - /docs/companyuserauthrestapi-migration-guide
   - /docs/en/companyuserauthrestapi-migration-guide
+  - /v3/docs/companyuserauthrestapi-migration-guide
+  - /v3/docs/en/companyuserauthrestapi-migration-guide
+  - /v4/docs/companyuserauthrestapi-migration-guide
+  - /v4/docs/en/companyuserauthrestapi-migration-guide
+  - /v5/docs/companyuserauthrestapi-migration-guide
+  - /v5/docs/en/companyuserauthrestapi-migration-guide
+  - /v6/docs/companyuserauthrestapi-migration-guide
+  - /v6/docs/en/companyuserauthrestapi-migration-guide
+  - docs/scos/dev/module-migration-guides/201907.0/glue-api/companyuserauthrestapi-migration-guide.html
+  - docs/scos/dev/module-migration-guides/202001.0/glue-api/companyuserauthrestapi-migration-guide.html
+  - docs/scos/dev/module-migration-guides/202005.0/glue-api/companyuserauthrestapi-migration-guide.html
+  - docs/scos/dev/module-migration-guides/202009.0/glue-api/companyuserauthrestapi-migration-guide.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

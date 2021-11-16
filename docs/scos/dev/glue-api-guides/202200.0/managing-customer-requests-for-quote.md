@@ -1,15 +1,15 @@
 ---
 title: Managing customer requests for quote
 description: This endpoint allows managing customer requests for quote.
-last_updated: Jun 22, 2021
+last_updated: Nov 15, 2021
 template: glue-api-storefront-guide-template
 ---
 
-This endpoint allows managing customer requests for quote.
+This endpoint allows managing customer requests for quote (RFQs).
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see <!--paste a link to a IG-->
+For details on the modules that provide the API functionality and how to install them, see <!--paste a link to an IG-->
 
 ## Create a request for quote
 
@@ -30,30 +30,47 @@ To create a request for quote for a customer, send the following request:
 |---|---|---|
 | include | Adds resource relationships to the request. | <div><ul><li>customers</li><li>company-users</li><li>company-business-units</li><li>concrete-products</li></ul></div> |
 
-Sample request: `POST https://glue.mysprykershop.com/quote-requests`
+{% info_block infoBox "Included resources" %}
+
+To retrieve relationships to customers, company users, company business units, or concrete products, include  `customers`, `company-users`, `company-business-units`, or `concrete-products` respectively.
+
+{% endinfo_block %}
+
+Request sample:
+`POST https://glue.mysprykershop.com/quote-requests`
 
 ```json
 {
     "data": {
-        "type": "agent-quote-requests",
+        "type": "quote-requests",
         "attributes": {
             "cartUuid": "b46c8c2c-a343-5c29-a222-117292a8fdad",
             "meta": {
                 "purchase_order_number": "7711",
                 "delivery_date": "2021-12-31",
-                "note": "consider the quotation request"
+                "note": "consider the request for quote"
             }
         }
     }
 }
 ```
 
-| ATTRIBUTE | REQUIRED | TYPE | DESCRIPTION |
+| REQUEST SAMPLE | USAGE |
+|-|-|
+| `POST https://glue.mysprykershop.com/quote-requests?include=customers`  | Create a request for quote with customer information included.  |
+| `POST https://glue.mysprykershop.com/quote-requests?include=company-users`  | Create a request for quote with company user information included. |
+| `POST https://glue.mysprykershop.com/quote-requests?include=company-business-units`  | Create a request for quote with information about company business units included.  |
+| `POST https://glue.mysprykershop.com/quote-requests?include=concrete-products`  | Create a request for quote with information about concrete products included. |
+
+
+</details>
+
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 |---|---|---|---|
-| companyUserUuid | &check; | String | Company user ID |
-| purchase_order_number |   | Integer | Purchase order number |
-| delivery_date |   | String | Product delivery date |
-| note |   | String | Notes/comments left by a customer or Back Office user. |
+| companyUserUuid | String | &check; | Company user ID. |
+| purchase_order_number |  Integer |  | Purchase order number. |
+| delivery_date | String |  | Product delivery date. |
+| note | String  |  | Notes or comments left by a customer or Back Office user. |
 
 ### Response
 
@@ -524,35 +541,41 @@ Sample request: `POST https://glue.mysprykershop.com/quote-requests`
 
 </details>
 
+<a name="response-attributes"></a>
+
 | ATTRIBUTE | TYPE | DESCRIPTION |
 |---|---|---|
-| quoteRequestReference | String | Reference of the quote request |
-| status | String | Status of the quote request |
-| isLatestVersionVisible | Boolean |   |
-| createdAt | String |   |
-| validUntil | String |   |
-| versions | Array |   |
-| shownVersion | Object |   |
-| version | Integer |   |
-| versionReference | String |   |
-| createdAt | String | Order creation date |
-| metadata | Array |   |
-| purchase_order_number | Integer | Purchase order number |
-| delivery_date | String | Delivery date |
-| note | String | Order notes |
+| quoteRequestReference | String | Reference of the request for quote |
+| status | String | Status of the request for quote. |
+| isLatestVersionVisible | Boolean | Defines if the latest version of the requoest for quote is visible or not:<div><ul><li>`true`—the latest version is shown.</li><li>`false`—the latest version is hidden.</li></ul></div> |
+| createdAt | String | Request for quote creation date.  |
+| validUntil | String | Date untiL which the request for quote is valid.  |
+| versions | Array | Contains an array of all the request for quote versions.  |
+| version | Integer | Request for quote version.  |
+| versionReference | String | Request for quoteversion ID.  |
+| createdAt | String | Order creation date. |
+| metadata | Array | Metadata of the request for quote.  |
 
 For attribute description of a cart, see [Managing carts of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html).
 
 For attribute descriptions of shipments, see [Managing customer addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customer-addresses.html).
 
-## Retrieve all requests for quote
+For attribute description of concrete products, see [Retrieving concrete products](https://docs.spryker.com/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#response).
 
-To retrieve all requests for quote for a customer, send the following request:
+For attribute description of customers, see [Managing customers](https://docs.spryker.com/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html).
+
+For attribute description of business units, see [Retrieving business units](https://docs.spryker.com/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-units.html).
+
+## Retrieve requests for quote
+
+To retrieve requests for quote for a customer, send the following request:
 
 ---
 `GET` **/quote-requests**
 
 ---
+
+### Request
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 |---|---|---|---|
@@ -562,7 +585,16 @@ To retrieve all requests for quote for a customer, send the following request:
 |---|---|---|
 | include | Adds resource relationships to the request. | <div><ul><li>customers</li><li>company-users</li><li>company-business-units</li><li>concrete-products</li></ul></div> |
 
-Sample request: `GET https://glue.mysprykershop.com/quote-requests`
+
+| REQUEST SAMPLE | USAGE |
+|-|-|
+| `GET https://glue.mysprykershop.com/quote-requests`  | Retrieve quote requests  |
+| `GET https://glue.mysprykershop.com/quote-requests?include=customers`  | Retrieve quote requests with customer information included.  |
+| `GET https://glue.mysprykershop.com/quote-requests?include=company-users`  | Retrieve quote requests with company user information included.  |
+| `GET https://glue.mysprykershop.com/quote-requests?include=company-business-units`  | Retrieve quote requests with information about company business units included.  |
+| `GET https://glue.mysprykershop.com/quote-requests?include=concrete-products`  | Retreieve quote requests with information about concrete products units included. |
+
+### Response
 
 <details><summary>Response sample</summary>
 
@@ -1031,11 +1063,23 @@ Sample request: `GET https://glue.mysprykershop.com/quote-requests`
 
 </details>
 
+For repsonses' attribute descriptions, see [Create a request for quote](#response-attributes) section.
+
 ## Retrieve a request for quote
 
 To retrieve a request for quote for a customer, send the following request:
 
-`GET` **/quote-requests/{{QuotationRequestID}}**
+---
+`GET` **/quote-requests/*{% raw %}{{{% endraw %}QuotationRequestID{% raw %}}}{% endraw %}***
+
+---
+
+| PATH PARAMETER | DESCRIPTION |
+|-|-|
+| ***{% raw %}{{{% endraw %}QuotationRequestID{% raw %}}}{% endraw %}*** | Request for quote unique identifier to manage requests for quotes. To get it, [create a quote request](#create-a-request-for-quote). |
+
+
+### Request
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 |---|---|---|---|
@@ -1045,9 +1089,15 @@ To retrieve a request for quote for a customer, send the following request:
 |---|---|---|
 | include | Adds resource relationships to the request. | <div><ul><li>customers</li><li>company-users</li><li>company-business-units</li><li>concrete-products</li></ul></div> |
 
-Sample request: `GET https://glue.mysprykershop.com/quote-requests/DE--21-10`
+| REQUEST SAMPLE | USAGE |
+|-|-|
+| `GET https://glue.mysprykershop.com/quote-requests/DE--21-10` | Retrieve a quote request with the `DE--21-10` ID  |
+| `GET https://glue.mysprykershop.com/quote-requests/DE--21-10?include=customers`  | Retrieve a quote request with the `DE--21-10` ID and with customer information included.  |
+| `GET https://glue.mysprykershop.com/quote-requests/DE--21-10?include=company-users`  | Retrieve a quote request with the `DE--21-10` ID and with company user information included.  |
+| `GET https://glue.mysprykershop.com/quote-requests/DE--21-10?include=company-business-units`  | Retrieve a quote request with the `DE--21-10` ID and with information about company business units included.  |
+| `GET https://glue.mysprykershop.com/quote-requests/DE--21-10?include=concrete-products`  | Retrieve a quote request with the `DE--21-10` ID and with information about concrete products included. |
 
-Response
+### Response
 
 <details><summary>Response sample</summary>
 
@@ -1516,18 +1566,20 @@ Response
 
 </details>
 
+For repsonses' attribute descriptions, see [Create a request for quote](#response-attributes) section
+
 ## Possible errors
 
 | CODE | REASON |
 |---|---|
-| 001 | Access token is invalid |
-| 002 | Access token is missing |
-| 101 | Cart with the given uuid is not found. |
+| 001 | Access token is invalid. |
+| 002 | Access token is missing. |
+| 101 | Cart with the given UUID is not found. |
 | 102 | Failed to add an item to cart. |
-| 1401 | Rest user is not a company user (wrong access token) |  
+| 1401 | Rest user is not a company user (wrong access token). |  
 | 4501 | Quote request is not found. |
 | 5402 | Quote request reference is required.  |
-| 5403 | Cart is empty |
+| 5403 | Cart is empty. |
 | 5404 | Wrong Quote Request status for this operation.  |
 | 5405 | Quote Request could not be updated due to parallel-customer interaction.  |
 | 5406 | Something went wrong.  |

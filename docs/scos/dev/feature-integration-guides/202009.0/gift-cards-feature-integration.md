@@ -33,11 +33,22 @@ composer require spryker-feature/gift-cards:"^202009.0" --update-with-dependenci
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules have been installed:<table><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`CartCode`</td><td>`vendor/spryker/cart-code`</td></tr><tr><td>`CartCodeExtension`</td><td>`vendor/spryker/cart-code-extension`</td></tr><tr><td>`GiftCard`</td><td>`vendor/spryker/gift-card`</td></tr><tr><td>`GiftCardBalance`</td><td>`vendor/spryker/gift-card-balance`</td></tr><tr><td>`Nopayment`</td><td>`vendor/spryker/nopayment`</td></tr></tbody></table>
+
+Make sure that the following modules have been installed:
+
+|Module|Expected Directory|
+|--- |--- |
+|`CartCode`|`vendor/spryker/cart-code`|
+|`CartCodeExtension`|`vendor/spryker/cart-code-extension`|
+|`GiftCard`|`vendor/spryker/gift-card`|
+|`GiftCardBalance`|`vendor/spryker/gift-card-balance`|
+|`Nopayment`|`vendor/spryker/nopayment`|
+
 {% endinfo_block %}
 
 ### 2) Set up Configuration
 #### Gift Card Purchase Process
+
 Extend your project with the following configuration.
 
 **src/Pyz/Zed/GiftCard/GiftCardConfig.php**
@@ -71,6 +82,7 @@ Once you've finished the *Setup Behaviour* step, make sure that "NoShipment" shi
 {% endinfo_block %}
 
 #### Gift Card Usage Process
+
 Extend your project with the following configuration.
 
 **config/Shared/config_default.php**
@@ -167,8 +179,13 @@ class SalesConfig extends SprykerSalesConfig
 ```
 
 {% info_block warningBox "Verification" %}
-Once you've finished Setup Behaviour step, make sure that:<ul><li>NoPayment01 statemachine is activated successfully.</li><li>When using a gift card to cover an entire order, the configured order state machine (e.g. "Nopayment01"
-{% endinfo_block %} is used.</li><li>You can't use blacklisted payment methods when using a gift card.</li><li>In the order detail page in Back office, you see the gift cards used in the order.</li></ul>)
+
+Once you've finished Setup Behavior step, make sure that:
+- NoPayment01 state machine is activated successfully.
+- When using a gift card to cover an entire order, the configured order state machine (e.g. "Nopayment01" is used.
+- You can't use blacklisted payment methods when using a gift card.</li><li>In the order detail page in Back office, you see the gift cards used in the order.)
+
+{% endinfo_block %}
 
 ### 3) Set up Database Schema
 Run the following commands to apply database changes and to generate entity and transfer changes:
@@ -180,18 +197,54 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-Verify the following changes have been applied by checking your database:<table><thead><tr><th>Database Entity</th><th>Type</th><th>Event</th></tr></thead><tbody><tr><td>`spy_gift_card`</td><td>table</td><td>created</td></tr><tr><td>`spy_gift_card_product_abstract_configuration`</td><td>table</td><td>created</td></tr><tr><td>`spy_gift_card_product_abstract_configuration_link`</td><td>table</td><td>created</td></tr><tr><td>`spy_gift_card_product_configuration`</td><td>table</td><td>created</td></tr><tr><td>`spy_gift_card_product_configuration_link`</td><td>table</td><td>created</td></tr><tr><td>`spy_payment_gift_card`</td><td>table</td><td>created</td></tr><tr><td>`spy_gift_card_balance_log`</td><td>table</td><td>created</td></tr><tr><td>`spy_sales_order_item_gift_card`</td><td>table</td><td>created</td></tr></tbody></table>
+
+Verify the following changes have been applied by checking your database:
+
+|Database Entity|Type|Event|
+|--- |--- |--- |
+|`spy_gift_card`|table|created|
+|`spy_gift_card_product_abstract_configuration`|table|created|
+|`spy_gift_card_product_abstract_configuration_link`|table|created|
+|`spy_gift_card_product_configuration`|table|created|
+|`spy_gift_card_product_configuration_link`|table|created|
+|`spy_payment_gift_card`|table|created|
+|`spy_gift_card_balance_log`|table|created|
+|`spy_sales_order_item_gift_card`|table|created|
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that propel entities have been generated successfully by checking their existence. Also, change the generated entity classes to extend from Spryker core classes.<table><thead><tr><th>Class Path</th><th>Extends</th></tr></thead><tbody><tr><td>`src/Orm/Zed/GiftCard/Persistence/SpyGiftCard.php`</td><td>`Spryker\Zed\GiftCard\Persistence\Propel\AbstractSpyGiftCard`</td></tr><tr><td>`src/Orm/Zed/GiftCard/Persistence/SpyGiftCardQuery.php`</td><td>`Spryker\Zed\GiftCard\Persistence\Propel\AbstractSpyGiftCardQuery`</td></tr><tr><td>`src/Orm/Zed/GiftCard/Persistence/SpyGiftCardProductAbstractConfiguration.php`</td><td>`Spryker\Zed\GiftCard\Persistence\Propel\AbstractSpyGiftCardProductAbstractConfiguration`</td></tr><tr><td>`src/Orm/Zed/GiftCard/Persistence/SpyGiftCardProductAbstractConfigurationQuery.php`</td><td>`Spryker\Zed\GiftCard\Persistence\Propel\AbstractSpyGiftCardProductAbstractConfigurationQuery`</td></tr><tr><td>`src/Orm/Zed/GiftCard/Persistence/SpyGiftCardProductAbstractConfigurationLink.php`</td><td>`Spryker\Zed\GiftCard\Persistence\Propel\AbstractSpyGiftCardProductAbstractConfigurationLink`</td></tr><tr><td>`src/Orm/Zed/GiftCard/Persistence/SpyGiftCardProductAbstractConfigurationLinkQuery.php`</td><td>`Spryker\Zed\GiftCard\Persistence\Propel\AbstractSpyGiftCardProductAbstractConfigurationLink`</td></tr><tr><td>`src/Orm/Zed/GiftCard/Persistence/SpyGiftCardProductConfiguration.php`</td><td>`Spryker\Zed\GiftCard\Persistence\Propel\AbstractSpyGiftCardProductConfiguration`</td></tr><tr><td>`src/Orm/Zed/GiftCard/Persistence/SpyGiftCardProductConfigurationQuery.php`</td><td>`Spryker\Zed\GiftCard\Persistence\Propel\AbstractSpyGiftCardProductConfigurationQuery`</td></tr><tr><td>`src/Orm/Zed/GiftCard/Persistence/SpyGiftCardProductConfigurationLink.php`</td><td>`Spryker\Zed\GiftCard\Persistence\Propel\AbstractSpyGiftCardProductConfigurationLink`</td></tr><tr><td>`src/Orm/Zed/GiftCard/Persistence/SpyGiftCardProductConfigurationLinkQuery.php`</td><td>`Spryker\Zed\GiftCard\Persistence\Propel\AbstractSpyGiftCardProductConfigurationLinkQuery`</td></tr><tr><td>`src/Orm/Zed/GiftCard/Persistence/SpyPaymentGiftCard.php`</td><td>`Spryker\Zed\GiftCard\Persistence\Propel\AbstractSpyPaymentGiftCard`</td></tr><tr><td>`src/Orm/Zed/GiftCard/Persistence/SpyPaymentGiftCardQuery.php`</td><td>`Spryker\Zed\GiftCard\Persistence\Propel\AbstractSpyPaymentGiftCardQuery`</td></tr><tr><td>`src/Orm/Zed/GiftCardBalance/Persistence/SpyGiftCardBalanceLog.php`</td><td>`Orm\Zed\GiftCardBalance\Persistence\Base\SpyGiftCardBalanceLog`</td></tr><tr><td>`src/Orm/Zed/GiftCardBalance/Persistence/SpyGiftCardBalanceLogQuery.php`</td><td>`Orm\Zed\GiftCardBalance\Persistence\Base\SpyGiftCardBalanceLogQuery`</td></tr><tr><td>`src/Orm/Zed/Sales/Persistence/SpySalesOrderItemGiftCard.php`</td><td>`Spryker\Zed\Sales\Persistence\Propel\AbstractSpySalesOrderItemGiftCard`</td></tr><tr><td>`src/Orm/Zed/Sales/Persistence/SpySalesOrderItemGiftCardQuery.php`</td><td>`Spryker\Zed\Sales\Persistence\Propel\AbstractSpySalesOrderItemGiftCardQuery`</td></tr></tbody></table>
+Make sure that propel entities have been generated successfully by checking their existence. Also, change the generated entity classes to extend from Spryker core classes.
+
+|Class Path|Extends|
+|--- |--- |
+|`src/Orm/Zed/GiftCard/Persistence/SpyGiftCard.php`|`Spryker\Zed\GiftCard\Persistence\Propel\AbstractSpyGiftCard`|
+|`src/Orm/Zed/GiftCard/Persistence/SpyGiftCardQuery.php`|`Spryker\Zed\GiftCard\Persistence\Propel\AbstractSpyGiftCardQuery`|
+|`src/Orm/Zed/GiftCard/Persistence/SpyGiftCardProductAbstractConfiguration.php`|`Spryker\Zed\GiftCard\Persistence\Propel\AbstractSpyGiftCardProductAbstractConfiguration`|
+|`src/Orm/Zed/GiftCard/Persistence/SpyGiftCardProductAbstractConfigurationQuery.php`|`Spryker\Zed\GiftCard\Persistence\Propel\AbstractSpyGiftCardProductAbstractConfigurationQuery`|
+|`src/Orm/Zed/GiftCard/Persistence/SpyGiftCardProductAbstractConfigurationLink.php`|`Spryker\Zed\GiftCard\Persistence\Propel\AbstractSpyGiftCardProductAbstractConfigurationLink`|
+|`src/Orm/Zed/GiftCard/Persistence/SpyGiftCardProductAbstractConfigurationLinkQuery.php`|`Spryker\Zed\GiftCard\Persistence\Propel\AbstractSpyGiftCardProductAbstractConfigurationLink`|
+|`src/Orm/Zed/GiftCard/Persistence/SpyGiftCardProductConfiguration.php`|`Spryker\Zed\GiftCard\Persistence\Propel\AbstractSpyGiftCardProductConfiguration`|
+|`src/Orm/Zed/GiftCard/Persistence/SpyGiftCardProductConfigurationQuery.php`|`Spryker\Zed\GiftCard\Persistence\Propel\AbstractSpyGiftCardProductConfigurationQuery`|
+|`src/Orm/Zed/GiftCard/Persistence/SpyGiftCardProductConfigurationLink.php`|`Spryker\Zed\GiftCard\Persistence\Propel\AbstractSpyGiftCardProductConfigurationLink`|
+|`src/Orm/Zed/GiftCard/Persistence/SpyGiftCardProductConfigurationLinkQuery.php`|`Spryker\Zed\GiftCard\Persistence\Propel\AbstractSpyGiftCardProductConfigurationLinkQuery`|
+|`src/Orm/Zed/GiftCard/Persistence/SpyPaymentGiftCard.php`|`Spryker\Zed\GiftCard\Persistence\Propel\AbstractSpyPaymentGiftCard`|
+|`src/Orm/Zed/GiftCard/Persistence/SpyPaymentGiftCardQuery.php`|`Spryker\Zed\GiftCard\Persistence\Propel\AbstractSpyPaymentGiftCardQuery`|
+|`src/Orm/Zed/GiftCardBalance/Persistence/SpyGiftCardBalanceLog.php`|`Orm\Zed\GiftCardBalance\Persistence\Base\SpyGiftCardBalanceLog`|
+|`src/Orm/Zed/GiftCardBalance/Persistence/SpyGiftCardBalanceLogQuery.php`|`Orm\Zed\GiftCardBalance\Persistence\Base\SpyGiftCardBalanceLogQuery`|
+|`src/Orm/Zed/Sales/Persistence/SpySalesOrderItemGiftCard.php`|`Spryker\Zed\Sales\Persistence\Propel\AbstractSpySalesOrderItemGiftCard`|
+|`src/Orm/Zed/Sales/Persistence/SpySalesOrderItemGiftCardQuery.php`|`Spryker\Zed\Sales\Persistence\Propel\AbstractSpySalesOrderItemGiftCardQuery`|
+
 {% endinfo_block %}
 
 ### 4) Import Data
 #### Gift Card Configuration Data
+
 {% info_block infoBox "Info" %}
-The following step imports abstract and concrete gift card configurations. Implementation for the data importer is not provided by Spryker Core, so you need to implement it on project level.<br><br>You can find an exemplary implementation [here](https://github.com/spryker-shop/suite/commit/f38bc5264e9964d2d2da5a045c0305973b3cb556#diff-e854f9b396bdaa07ca6276f168aaa76a
-{% endinfo_block %} (only Console and DataImport module changes are relevant). The following data import examples are based on this implementation.)
+
+The following step imports abstract and concrete gift card configurations. Implementation for the data importer is not provided by Spryker Core, so you need to implement it on project level.<br><br>You can find an exemplary implementation [here](https://github.com/spryker-shop/suite/commit/f38bc5264e9964d2d2da5a045c0305973b3cb556#diff-e854f9b396bdaa07ca6276f168aaa76a (only Console and DataImport module changes are relevant). The following data import examples are based on this implementation.
+
+{% endinfo_block %}
 
 **data/import/gift_card_abstract_configuration.csv**
 
@@ -229,8 +282,11 @@ Make sure to have imported abstract and concrete gift card configuration into yo
 {% endinfo_block %}
 
 #### Shipment Method Data
+
 {% info_block infoBox "Info" %}
+
 In this step, you will create a shipment method called "NoShipment". The name of the shipment method has to match the value of `\Spryker\Shared\Shipment\ShipmentConfig::SHIPMENT_METHOD_NAME_NO_SHIPMENT` constant.
+
 {% endinfo_block %}
 
 Taking into account project customizations, extend shipment method data importer as shown below:
@@ -259,20 +315,38 @@ console data:import:shipment-price
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that a shipment method with "NoShipment" name exists in your `spy_shipment_method` and `spy_shipment_method_price` database tables.
+
 {% endinfo_block %}
 
 #### Additional, Optional Data Imports
+
 {% info_block infoBox "Info" %}
-To be able to represent and display gift cards as products in your shop, you need to import some data into your database depending on your project configuration and needs. The following list contains the points which can be used to get the idea of what gift card related data you might want to use:<ul><li>**Product Attribute Key** to create a gift card "value" super attribute that defines gift card variants.</li><li>**Abstract Product** that represents gift cards in your catalog.</li><li>**Abstract Product Store Relation** to manage store-specific gift cards.</li><li>**Concrete Product** that represents gift cards with a specific price value.</li><li>**Product Image** for abstract and concrete product to display gift cards.</li><li>**Product Price** for concrete gift card products where the price value matches the "value" super attribute.</li><li>**Product Stock** data for concrete gift card products.</li><li>**Product Management Attribute** to define the previously created "value" product attribute for the PIM.</li><li>**Category** that represents all gift cards.</li><li>**Navigation item** to display gift card category or gift card product detail page directly.</li>
+
+To be able to represent and display gift cards as products in your shop, you need to import some data into your database depending on your project configuration and needs. The following list contains the points which can be used to get the idea of what gift card related data you might want to use:
+- **Product Attribute Key** to create a gift card "value" super attribute that defines gift card variants.
+- **Abstract Product** that represents gift cards in your catalog.
+- **Abstract Product Store Relation** to manage store-specific gift cards.
+- **Concrete Product** that represents gift cards with a specific price value.
+- **Product Image** for abstract and concrete product to display gift cards.
+- **Product Price** for concrete gift card products where the price value matches the "value" super attribute.
+- **Product Stock** data for concrete gift card products.
+- **Product Management Attribute** to define the previously created "value" product attribute for the PIM.
+- **Category** that represents all gift cards.<
+- **Navigation item** to display gift card category or gift card product detail page directly.
+  
 {% endinfo_block %}
 
-### 5) Set up Behaviour
+### 5) Set up Behavior
 #### Prepare Order State Machines - Gift Card Purchase Process
 
 {% info_block infoBox "Info" %}
+
 In this step, you will customize your Order State Machine to purchase gift cards. The process should distinguish gift card order items and ship them by sending an email to the customer. Below, you can see an example of how DummyPayment state machine is defined.
+
 {% endinfo_block %}
+
 DummyPayment Order State Machine Example:
 
 **config/Zed/oms/DummyPayment01.xml**
@@ -488,6 +562,7 @@ DummyPayment Order State Machine Example:
 #### Prepare Order State Machines - Gift Card Usage Process
 
 {% info_block infoBox "Info" %}
+
 In this step, you should customize your Order State Machine to place orders with 0 price to pay (by using gift cards). The process should skip payment-related steps as there is nothing for the customer to pay any more. Below you can see the example of how NoPayment state machine is defined.)
 NoPayment Order State Machine Example:
 
@@ -824,7 +899,15 @@ class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that,<ul><li>You can put a configured gift card product to cart and purchase it.</li><li>The gift card item shouldn't have any discounts applied.</li><li>During the checkout process, shipment method selection should be optional if there is only a gift card in cart.</li><li>The GiftCart/ShipGiftCard OMS command was invoked and customer received an email with the generated gift card code once the order is placed.</li></ul>Note: You need to complete Feature Frontend integration before you can verify these points.
+
+Make sure that:
+- You can put a configured gift card product to cart and purchase it.
+- The gift card item shouldn't have any discounts applied.
+- During the checkout process, shipment method selection should be optional if there is only a gift card in cart.
+- The GiftCart/ShipGiftCard OMS command was invoked and customer received an email with the generated gift card code once the order is placed.
+
+Note: You need to complete Feature Frontend integration before you can verify these points.
+
 {% endinfo_block %}
 
 #### Gift Card Code Usage Process
@@ -1059,7 +1142,15 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that:<ul><li>You can activate a gift card using its generated code.</li><li>You can't activate a gift card the balance of which has been depleted.</li><li>During the checkout process, payment method selection is skipped in case the gift card covers the grand total.</li><li>Having made a successful purchase with the help of a gift card, you receive a gift card balance notification e-mail.</li></ul>Note: You need to complete Feature Frontend integration before you can verify these points.
+
+Make sure that:
+- You can activate a gift card using its generated code.
+- You can't activate a gift card the balance of which has been depleted.
+- During the checkout process, payment method selection is skipped in case the gift card covers the grand total.
+- Having made a successful purchase with the help of a gift card, you receive a gift card balance notification e-mail.
+
+Note: You need to complete Feature Frontend integration before you can verify these points.
+
 {% endinfo_block %}
 
 ## Install Feature Frontend
@@ -1081,10 +1172,17 @@ composer require spryker-feature/gift-cards:"^202009.0" --update-with-dependenci
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules have been installed:<table><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`CartCodeWidget`</td><td>`vendor/spryker-shop/cart-code-widget`</td></tr><tr><td>`GiftCardWidget`</td><td>`vendor/spryker-shop/gift-card-widget`</td></tr></tbody></table>
+Make sure that the following modules have been installed:
+
+|Module|Expected Directory|
+|--- |--- |
+|`CartCodeWidget`|`vendor/spryker-shop/cart-code-widget`|
+|`GiftCardWidget`|`vendor/spryker-shop/gift-card-widget`|
+
 {% endinfo_block %}
 
 ### 2) Set up Configuration
+
 Extend your project with the following configuration.
 
 **config/Shared/config_default.php**

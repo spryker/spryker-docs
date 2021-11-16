@@ -407,13 +407,14 @@ class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProv
     protected function getEventTriggerResourcePlugins()
     {
         return [
-            new CmsPageEventResourceQueryContainerPluginCmsBlockEventResourceQueryContainerPlugin(),
-            new CmsBlockEventResourceQueryContainerPluginCmsEventResourceQueryContainerPlugin(),
-            new CmsEventResourceQueryContainerPluginCmsSlotBlockEventResourceBulkRepositoryPlugin(),
-            new CmsSlotBlockEventResourceBulkRepositoryPluginCmsSlotEventResourceBulkRepositoryPlugin(),
-            			new CmsSlotEventResourceBulkRepositoryPluginContentStorageEventResourceBulkRepositoryPlugin(),
+            new CmsPageEventResourceQueryContainerPlugin(),
+            new CmsBlockEventResourceQueryContainerPlugin(),
+            new CmsEventResourceQueryContainerPlugin(),
+            new CmsSlotBlockEventResourceBulkRepositoryPlugin(),
+            new CmsSlotEventResourceBulkRepositoryPlugin(),
+	    new ContentStorageEventResourceBulkRepositoryPlugin(),
 
-			// Optional subscribers, use only if you need CMS Block relationship with categories or products.
+	    // Optional subscribers, use only if you need CMS Block relationship with categories or products.
             new CmsBlockCategoryEventResourceQueryContainerPlugin(),
             new CmsBlockProductEventResourceQueryContainerPlugin(),
         ];

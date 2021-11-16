@@ -15,6 +15,7 @@ redirect_from:
   - /v5/docs/en/web-profiler
   - /v4/docs/web-profiler
   - /v4/docs/en/web-profiler
+  - /docs/scos/dev/migration-and-integration/202108.0/development-tools/web-profiler.html
 related:
   - title: Web Profiler Widget for Yves
     link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-widget-for-yves.html

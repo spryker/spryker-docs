@@ -156,7 +156,7 @@ To configure docker-sync mount mode on Windows with Windows Subsystem for Linux 
     $(lsb_release -cs) \
     stable"
     ```
-    5. Install the latest version of Docker Communitiy Edition:
+    5. Install the latest version of Docker Community Edition:
     ```bash
     sudo apt-get install docker-ce docker-ce-cli containerd.io
     ```
@@ -164,11 +164,13 @@ To configure docker-sync mount mode on Windows with Windows Subsystem for Linux 
     1. Check the latest stable [release of Docker Compose](https://github.com/docker/compose/releases).
 
     2. Download Docker Compose:
+
     {% info_block infoBox "Docker Compose version" %}
 
     Replace `{docker-compose-release}` in the command parameter with the version you have selected in the previous step.
     
-{% endinfo_block %}
+    {% endinfo_block %}
+
     ```bash
     sudo curl -L "https://github.com/docker/compose/releases/download/{docker-compose-release}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
     ```
@@ -323,7 +325,7 @@ To configure native mount mode for Windows with Windows Subsystem for Linux 2 (W
 
     Replace `{docker-compose-release}` in the command parameter with the version you have selected in the previous step.
     
-{% endinfo_block %}
+    {% endinfo_block %}
     ```bash
     sudo curl -L "https://github.com/docker/compose/releases/download/{docker-compose-release}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
     ```

@@ -21,13 +21,13 @@ redirect_from:
   - /v2/docs/en/zed-api-resources
   - /v1/docs/zed-api-resources
   - /v1/docs/en/zed-api-resources
-  - /docs/scos/dev/sdk/201811.0/zed-api-resources.html
-  - /docs/scos/dev/sdk/201903.0/zed-api-resources.html
-  - /docs/scos/dev/sdk/201907.0/zed-api-resources.html
-  - /docs/scos/dev/sdk/202001.0/zed-api-resources.html
-  - /docs/scos/dev/sdk/202005.0/zed-api-resources.html
-  - /docs/scos/dev/sdk/202009.0/zed-api-resources.html
-  - /docs/scos/dev/sdk/202108.0/zed-api-resources.html
+  - /docs/scos/dev/sdk/201811.0/zed-api/zed-api-resources.html
+  - /docs/scos/dev/sdk/201903.0/zed-api/zed-api-resources.html
+  - /docs/scos/dev/sdk/201907.0/zed-api/zed-api-resources.html
+  - /docs/scos/dev/sdk/202001.0/zed-api/zed-api-resources.html
+  - /docs/scos/dev/sdk/202005.0/zed-api/zed-api-resources.html
+  - /docs/scos/dev/sdk/202009.0/zed-api/zed-api-resources.html
+  - /docs/scos/dev/sdk/202108.0/zed-api/zed-api-resources.html
 ---
 
 Each module can have a “{module}Api” module(e.g. CustomerApi for Customer). Such an API module exposes CRUD facade methods (find, get, add, update, remove) that can be mapped to a URL via REST `resource/action` resolution.

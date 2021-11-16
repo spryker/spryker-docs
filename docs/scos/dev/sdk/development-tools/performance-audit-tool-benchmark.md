@@ -12,13 +12,13 @@ redirect_from:
   - /docs/en/performance-audit-tool-benchmark
   - /v6/docs/performance-audit-tool-benchmark
   - /v6/docs/en/performance-audit-tool-benchmark
-  - /docs/scos/dev/sdk/201811.0/performance-audit-tool-benchmark.html
-  - /docs/scos/dev/sdk/201903.0/performance-audit-tool-benchmark.html
-  - /docs/scos/dev/sdk/201907.0/performance-audit-tool-benchmark.html
-  - /docs/scos/dev/sdk/202001.0/performance-audit-tool-benchmark.html
-  - /docs/scos/dev/sdk/202005.0/performance-audit-tool-benchmark.html
-  - /docs/scos/dev/sdk/202009.0/performance-audit-tool-benchmark.html
-  - /docs/scos/dev/sdk/202108.0/performance-audit-tool-benchmark.html
+  - /docs/scos/dev/sdk/201811.0/development-tools/performance-audit-tool-benchmark.html
+  - /docs/scos/dev/sdk/201903.0/development-tools/performance-audit-tool-benchmark.html
+  - /docs/scos/dev/sdk/201907.0/development-tools/performance-audit-tool-benchmark.html
+  - /docs/scos/dev/sdk/202001.0/development-tools/performance-audit-tool-benchmark.html
+  - /docs/scos/dev/sdk/202005.0/development-tools/performance-audit-tool-benchmark.html
+  - /docs/scos/dev/sdk/202009.0/development-tools/performance-audit-tool-benchmark.html
+  - /docs/scos/dev/sdk/202108.0/development-tools/performance-audit-tool-benchmark.html
 ---
 
 The Benchmark tool allows you to profile requests to an application and see how long it takes to load a page and how much memory the application uses during these requests. This tool is based on [PHPBench](https://github.com/phpbench/phpbench) and is used inside Spryker.

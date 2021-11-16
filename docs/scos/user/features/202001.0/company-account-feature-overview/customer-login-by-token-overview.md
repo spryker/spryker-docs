@@ -111,6 +111,6 @@ Module Relations for Customer Login by Token feature are schematically represent
                 <li class="mr-title">Developer</li>
                 <li><a href="https://documentation.spryker.com/docs/howto-generate-a-token-for-login" class="mr-link">Generate a Token for Login</a></li>
                 <!---<li><a href="https://documentation.spryker.com/docs/ht-disable-accounts-switch-for-bob-201907" class="mr-link">HowTo - Disable Accounts Switch for Business on Behalf</a></li>-->
-                 <li><a href="https://documentation.spryker.com/docs/company-account-integration" class="mr-link">Enable customer login by token by integrating the Company Account feature into your project</a></li>
+                 <li><a href="/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html" class="mr-link">Enable customer login by token by integrating the Company Account feature into your project</a></li>
             </ul>
         </div>

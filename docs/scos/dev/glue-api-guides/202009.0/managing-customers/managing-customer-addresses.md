@@ -16,7 +16,7 @@ related:
   - title: Customer Accounts
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
   - title: Retrieving orders
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
+    link: docs/scos/dev/glue-api-guides/page.version/retrieving-orders.html
 ---
 
 This endpoints allows to retrieve and edit customer addresses. 
@@ -421,7 +421,7 @@ To view generic errors that originate from the Glue Application, see [Reference 
 * [Manage cart items](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html)
 * [Manage gift cards](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html)
 * [Manage wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html)
-* [Manage orders](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html)
+* [Manage orders](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-orders.html)
 * [Manage customer authentication tokens](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-authentication-tokens.html)
-* [Manage customer passwords](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/customer-password.html)
+* [Manage customer passwords](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-passwords.html)
 

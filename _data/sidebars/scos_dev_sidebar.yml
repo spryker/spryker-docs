@@ -3137,9 +3137,9 @@ entries:
       - title: Special product types
         url: /docs/scos/dev/data-import/data-import-categories/special-product-types/special-product-types-import-category.html
         include_versions:
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         nested:
         - title: Gift cards
           url: /docs/scos/dev/data-import/data-import-categories/special-product-types/gift-cards/gift-cards.html
@@ -3866,11 +3866,6 @@ entries:
     - "202009.0"
     - "202108.0"
     nested:
-    - title: Debugging setup in Docker
-      url: /docs/scos/dev/the-docker-sdk/debugging-setup-in-docker.html
-      include_versions:
-      - "201907.0"
-      - "202001.0"
     - title: Docker environment infrustructure
       url: /docs/scos/dev/the-docker-sdk/docker-environment-infrastructure.html
       include_versions:
@@ -3942,6 +3937,8 @@ entries:
     - title: Configuring debugging in Docker
       url: /docs/scos/dev/the-docker-sdk/configuring-debugging-in-docker.html
       include_versions:
+      - "201907.0"
+      - "202001.0"
       - "202005.0"
       - "202009.0"
       - "202108.0"

@@ -9,13 +9,13 @@ redirect_from:
   - /docs/en/generating-access-keys
 ---
 
-This document describes how to generate access keys. Access keys are used to access AWS Command Line Interface and connect integrated development environments, like PhpStorm. 
+This document describes how to generate access keys. Access keys are used to access AWS Command Line Interface and connect integrated development environments, like PhpStorm.
 
 {% info_block infoBox %}
 
 You can only generate an access key for your own account. If you want to create another account and generate an access key for that account, [contact support](https://spryker.force.com/support/s/).
 
-{% endinfo_block %} 
+{% endinfo_block %}
 
 To generate an access key:
 
@@ -26,7 +26,6 @@ To generate an access key:
     This opens the Create access key window with the success message displayed. Your access key has been generated.
 3. To download the access key, select **Download .csv** file.
 ![Download csv file button](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Security/Generating+access+keys/download-csv-button-file-button.png)
-4. Optional: To check the access key in this window, select **Show secret access key**. 
+4. Optional: To check the access key in this window, select **Show secret access key**.
 
-You generated and downloaded your access key.
-
+You've generated and downloaded your access key.

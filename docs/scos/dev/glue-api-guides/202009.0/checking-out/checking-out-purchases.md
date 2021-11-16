@@ -15,8 +15,6 @@ related:
     link: docs/scos/user/features/page.version/checkout-feature-overview/checkout-feature-overview.html
   - title: Multi-Step Checkout
     link: docs/scos/user/features/page.version/checkout-feature-overview/multi-step-checkout-overview.html
-  - title: Retrieving Customer's Order History
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
   - title: Managing guest carts
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-carts.html
   - title: Managing carts of registered users
@@ -53,7 +51,7 @@ By default, if checkout is successful, the order is placed, and the cart is dele
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | X-Anonymous-Customer-Unique-Id | String | Required when checking out a [guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html). | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
-| Authorization | String | Required when checking out a [cart of registered user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html). | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | String | Required when checking out a [cart of registered user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html). | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 
 
@@ -486,7 +484,7 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
 | redirectUrl | String | The URL to perform the payment verification requested by the selected payment method. After completing verification, ensure to [update payment data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/updating-payment-data.html#update-payment-data). If the value is `null` or empty, no additional verification is reuiqred. |
 | isExternalRedirect | Boolean | Defines if the customer is redirected to an external URL. |
 
-For the attributes of included resources, see [Retrieve an order](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html#retrieve-an-order)
+For the attributes of included resources, see [Retrieve an order](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-orders.html#retrieve-an-order)
 
 
 

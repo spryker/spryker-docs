@@ -8,5 +8,3 @@ redirect_from:
   - /v6/docs/mg-payonedemoshop
   - /v6/docs/en/mg-payonedemoshop
 ---
-
-

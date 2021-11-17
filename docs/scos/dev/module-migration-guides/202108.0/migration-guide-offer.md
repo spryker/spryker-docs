@@ -10,6 +10,25 @@ redirect_from:
   - /2021080/docs/en/mg-offer
   - /docs/mg-offer
   - /docs/en/mg-offer
+  - /v1/docs/mg-offer
+  - /v1/docs/en/mg-offer
+  - /v2/docs/mg-offer
+  - /v2/docs/en/mg-offer
+  - /v3/docs/mg-offer
+  - /v3/docs/en/mg-offer
+  - /v4/docs/mg-offer
+  - /v4/docs/en/mg-offer
+  - /v5/docs/mg-offer
+  - /v5/docs/en/mg-offer
+  - /v6/docs/mg-offer
+  - /v6/docs/en/mg-offer
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-offer.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-offer.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-offer.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-offer.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-offer.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-offer.html
+
 ---
 
 ## Upgrading from Version 0.1.* to Version 0.3.0

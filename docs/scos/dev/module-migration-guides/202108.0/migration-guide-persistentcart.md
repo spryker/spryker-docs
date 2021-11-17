@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-persistent-cart
   - /docs/mg-persistent-cart
   - /docs/en/mg-persistent-cart
+  - /v1/docs/mg-persistent-cart
+  - /v1/docs/en/mg-persistent-cart
+  - /v2/docs/mg-persistent-cart
+  - /v2/docs/en/mg-persistent-cart
+  - /v3/docs/mg-persistent-cart
+  - /v3/docs/en/mg-persistent-cart
+  - /v4/docs/mg-persistent-cart
+  - /v4/docs/en/mg-persistent-cart
+  - /v5/docs/mg-persistent-cart
+  - /v5/docs/en/mg-persistent-cart
+  - /v6/docs/mg-persistent-cart
+  - /v6/docs/en/mg-persistent-cart
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-payone-suite.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-payone-suite.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-payone-suite.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-payone-suite.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-payone-suite.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-payone-suite.html
 ---
 
 ## Upgrading from Version 1.* to Version 3.0.0

@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-oms
   - /docs/mg-oms
   - /docs/en/mg-oms
+  - /v1/docs/mg-oms
+  - /v1/docs/en/mg-oms
+  - /v2/docs/mg-oms
+  - /v2/docs/en/mg-oms
+  - /v3/docs/mg-oms
+  - /v3/docs/en/mg-oms
+  - /v4/docs/mg-oms
+  - /v4/docs/en/mg-oms
+  - /v5/docs/mg-oms
+  - /v5/docs/en/mg-oms
+  - /v6/docs/mg-oms
+  - /v6/docs/en/mg-oms
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-oms.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-oms.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-oms.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-oms.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-oms.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-oms.html
 ---
 
 ## Upgrading from Version 10.* to Version 11.0.0

@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-navigation
   - /docs/mg-navigation
   - /docs/en/mg-navigation
+  - /v1/docs/mg-navigation
+  - /v1/docs/en/mg-navigation
+  - /v2/docs/mg-navigation
+  - /v2/docs/en/mg-navigation
+  - /v3/docs/mg-navigation
+  - /v3/docs/en/mg-navigation
+  - /v4/docs/mg-navigation
+  - /v4/docs/en/mg-navigation
+  - /v5/docs/mg-navigation
+  - /v5/docs/en/mg-navigation
+  - /v6/docs/mg-navigation
+  - /v6/docs/en/mg-navigation
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-navigation.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-navigation.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-navigation.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-navigation.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-navigation.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-navigation.html
 related:
   - title: Migration Guide - NavigationGui
     link: docs/scos/dev/module-migration-guides/page.version/migration-guide-navigationgui.html

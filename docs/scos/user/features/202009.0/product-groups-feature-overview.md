@@ -71,7 +71,7 @@ Check out this video tutorial on product groups:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Check what product group a product belongs to by viewing a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/managing-products.html#viewing-products)  |
+| [Check what product group a product belongs to by viewing a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/managing-products.html#viewing-product)  |
 
 {% info_block warningBox "Developer guides" %}
 

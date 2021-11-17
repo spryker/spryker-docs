@@ -1,5 +1,5 @@
 ---
-title: Adding content to storefront pages using templates & slots- Best practices
+title: Adding content to storefront pages using templates & slots - Best practices
 description: Templates with slots allows managing all the Storefront content in the Back Office.
 last_updated: Aug 27, 2020
 template: back-office-user-guide-template
@@ -99,7 +99,7 @@ Follow the steps to select a template with slots:
 2. In the **List of Templates**, select the *Product* template with slots. 
     This template with slots is assigned to all the product pages. By selecting it, you select to work with all the product pages at once.
 
-If the templates with slots shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [Template with Slots](/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/feature-howtos/cms/howto-create-cms-templates.html#template-with-slots) for more details.
+If the templates with slots shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [Template with Slots](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#template-with-slots) for more details.
 
 ## Select a Slot
 

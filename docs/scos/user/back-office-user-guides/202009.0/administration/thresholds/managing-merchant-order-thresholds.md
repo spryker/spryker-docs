@@ -73,8 +73,8 @@ See [Threshold: Reference Information](/docs/scos/user/back-office-user-guides/{
 
 To set up several threshold types:
 1. Enter the fields in the sections of the thresholds you want to set up by following the respective instructions:
-    * [Setting up a Hard Minimum Threshold](#setting-up-a-hard-minimum-threshold)
-    * [Setting up a Hard Maximum Threshold](#setting-up-a-hard-maximum-threshold)
+    * [Setting up a Hard Minimum Threshold](#setting-up-minimum-hard--threshold)
+    * [Setting up a Hard Maximum Threshold](#setting-up-maximum-hard--threshold)
     * [Setting up a Soft Minimum Threshold](#setting-up-a-soft-minimum-threshold)
 2. Select **Save**.
 

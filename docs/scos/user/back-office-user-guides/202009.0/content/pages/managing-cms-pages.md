@@ -52,7 +52,7 @@ You can use the Preview mode from either the **Overview of CMS Pages** page or t
 1.On the **Overview of CMS Pages** page, click **View** and select **Preview** from the drop-down list next to the page whose draft you want to view.
 2. The page in the Preview mode will be opened in a new tab of your browser.
 
-**To preview a draft of your CMS page from the Edit Placeholders editor**, see the [Editing Placeholders](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/editing-cms-pages.html#selecting-the-placeholders-option) section.
+**To preview a draft of your CMS page from the Edit Placeholders editor**, see the [Editing Placeholders](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/editing-cms-pages.html#selecting-the-edit-gt-placeholders-option) section.
 
 
 ## Publishing a Page

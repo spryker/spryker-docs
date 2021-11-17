@@ -56,7 +56,7 @@ Spryker has improved permissions control mechanism for non-authenticated B2B sho
 For everyone interested in B2C commerce use cases, we provide Spryker’s B2C Demo Shop. It also consists of the most common combination of modules and functionalities to cover your needs in the B2C commerce.
 ![B2C Demo shop](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image4.png)
 
-**Documentation**: [B2C Demo Shop](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2bb2c-demo-shops#b2c-demo-shop)
+**Documentation**: [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html)
 
 ### B2B Company Account
 Let your customers model their company hierarchies by defining business units including multiple addresses to make the ordering process more convenient. They can create and manage users and assign roles and permissions to the Business Units to give full control where it’s needed. The Business on Behalf feature provides users with the ability to log in to different business units with the same credentials fully inheriting business unit permissions.

@@ -23,7 +23,7 @@ To define a rate under which the product, shipment, or a threshold are going to 
 To create a tax rate:
 
 1. On the *Overview of Tax Rates* page, click **Create Tax Rate** in the top right corner.
-2. On the *Create Tax Rate* page, enter and select the attributes. See [ Reference information: Creating and editing tax rates](#reference-information--creating-and-editing-tax-rates) for details on the attributes.
+2. On the *Create Tax Rate* page, enter and select the attributes. See [Reference information: Creating and editing tax rates](#reference-information-creating-and-editing-tax-rates) for details on the attributes.
 3. Click **Save**.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Taxes/Managing+Tax+Rates/create-tax-rate.png) 

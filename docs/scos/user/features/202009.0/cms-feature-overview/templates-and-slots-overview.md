@@ -196,7 +196,7 @@ With templates and slots, the following applies:
 
 * Spryker CMS Blocks is the content provider for all the slots.
 * Slots embed content from [CMS Blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html).
-* Content for CMS blocks is created in the [WYSIWYG Editor](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html#wysiwyg-editor).
+* Content for CMS blocks is created in the WYSIWYG Editor.
 * Templates with slots are managed in the Back Office > **Slots** section.
 
 The schema below shows how content is managed with the help of templates with slots:

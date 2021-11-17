@@ -30,32 +30,33 @@ Review the reference information before you start, or just look up the necessary
 To create a discount voucher:
 1. On the *Discount* page,  in the top-right corner, click **Create new discount**.
 2. On the *Create new discount* page, in the *General* tab, do the following:
-    1. In *Store relation*, check the stores you wish the discount to be active in.
-    2. In the *Discount Type* drop-down, select **Voucher codes**.
-    3. In the **Name** field, specify the name for the voucher.
-    4. _Optional_: Enter the description for the voucher in the **Description** field.
-    5. Specify if the voucher is exclusive.
-    6. Specify the validity interval (lifetime) of the voucher.
- 3. Click **Next** or select the **Discount calculation** tab to proceed.
- 4. On the *Create Discount* page, in the *Discount calculation* tab, do the following:
-    1.  Select either **Calculator percentage** or **Calculator fixed** in the **Calculator type** drop-down.
+    1. In *STORE RELATION*, check the stores you wish the discount to be active in.
+    2. In the *DISCOUNT TYPE* drop-down, select **Voucher codes**.
+    3. In the **NAME** field, specify the name for the voucher.
+    4. _Optional_:in the **DESCRIPTION** field, enter the description of the voucher.
+    5. _Optional_: in the **PRIORITY** field, enter an integer value from 1 to 9999 for the discount voucher priority.
+    6. Specify if the voucher is exclusive.
+    7. Specify the validity interval (lifetime) of the voucher.
+ 1. Click **Next** or select the **Discount calculation** tab to proceed.
+ 2. On the *Create Discount* page, in the *Discount calculation* tab, do the following:
+    1.  In the **CALCULATOR TYPE** drop-down, select either *Percentage* or *Fixed amount*..
 
       {% info_block warningBox "Note" %}
 
       The next step varies based on the selected calculator type:
 
-      1. **Calculator fixed**: Enter the prices to be discounted.
+      1. **Fixed amount**: Enter the prices to be discounted.
 
-      2.  **Calculator percentage**: Enter the values (percentage) to be discounted.
+      2.  **Percentage**: Enter the values (percentage) to be discounted.
 
       {% endinfo_block %}
 
     2. Select the **Discount application type** and define what products the voucher will be applied to. See reference information of the [Discount calculation](#discount-calculation-tab) tab for more details.
- 5. Click **Next**, or select the *Conditions* tab to proceed.
- 6. On the *Create new discount* page, in the *Conditions* tab, do the following:
+ 3. Click **Next**, or select the *Conditions* tab to proceed.
+ 4. On the *Create new discount* page, in the *Conditions* tab, do the following:
     1. Select the **Apply when** conditions or click **Plain query** and enter the  query manually. See reference information of the [Conditions](#conditions) tab for more details.
     2. Enter the value for the **The discount can be applied if the query applies for at least X item(s).** field.
-7. Click **Save** to create the new voucher.
+3. Click **Save** to create the new voucher.
 
 When you click **Save**, an additional tab named *Voucher Codes* appears. Here, you can generate, view, and export voucher codes (if they were already created).
 The list is empty until codes are generated.
@@ -117,13 +118,14 @@ The following table describes the attributes you enter and select in the *Genera
 
 | ATTRIBUTE |DESCRIPTION  |
 | --- | --- |
-|Store relation  |Stores you wish the discount to be active in. Multiple stores can be selected.|
-| Discount Type | Drop-down list where you select either *Voucher code* or *Cart rule* discount type. |
-| Name(A unique name that will be displayed to your customers) | Unique name that will be displayed to your customers. |
-| Description | Unique description of the discount. |
-| Non-Exclusive | Defines the discount exclusivity. Non-exclusive discounts can be redeemed in conjunction with other non-exclusive discounts.|
-| Exclusive | Defines the discount exclusivity. An exclusive discount can only be used on its own. You cannot apply other discounts with an exclusive one unless a higher exclusive discount is used. Then, the higher discount is redeemed.  |
-| Valid from and Valid to| Vouchers are redeemable/the cart rule is active between Valid From and Valid To dates, inclusive. E.g., a voucher can be redeemed/discount applies to the cart starting from 1/1/2018 until 31/12/2019.|
+|STORE RELATION  |Stores you wish the discount to be active in. Multiple stores can be selected.|
+| DISCOUNT TYPE | Drop-down list where you select either *Voucher code* or *Cart rule* discount type. |
+| NAME | Unique name that will be displayed to your customers. |
+| DESCRIPTION | Unique description of the discount. |
+| PRIORITY | Defines [priority of the discount](/docs/scos/user/features/202108.0/promotions-discounts-feature-overview.html#discount-priority). Can be an integer value from 1 to 9999, 1 being the highest priority, 9999 - the lowest. |
+| NON-EXCLUSIVE | Defines the discount exclusivity. Non-exclusive discounts can be redeemed in conjunction with other non-exclusive discounts.|
+| EXCLUSIVE | Defines the discount exclusivity. An exclusive discount can only be used on its own. You cannot apply other discounts with an exclusive one unless a higher exclusive discount is used. Then, the higher discount is redeemed.  |
+| VALID FROM and VALID TO| Vouchers are redeemable/the cart rule is active between Valid From and Valid To dates, inclusive. E.g., a voucher can be redeemed/discount applies to the cart starting from 1/1/2018 until 31/12/2019.|
 
 {% info_block infoBox "Info" %}
 
@@ -135,10 +137,10 @@ The name and the description should be meaningful to help other Back Office user
 
 This section contains information you need to know when working with discount calculations in the *Discount calculation* tab.
 
-**Calculator type**
+**CALCULATOR TYPE**
 The discount can be calculated in two ways:
-* **Percentage Value**: The discount is calculated as a percentage of the discounted items. If selected, you will need to set the percentage value (e.g., 25)
-* **Fixed Value**: A fixed amount is discounted. If you select this type, you will need to specify the amount (Gross, or Net, or Both) for each currency used in your store.
+* **Percentage**: The discount is calculated as a percentage of the discounted items. If selected, you will need to set the percentage value (e.g., 25)
+* **Fixed amount**: A fixed amount is discounted. If you select this type, you will need to specify the amount (Gross, or Net, or Both) for each currency used in your store.
 
 Example:
 
@@ -147,7 +149,7 @@ Example:
 | 50 € | Calculator Percentage | 10 |5 € | 45 € |
 | 50 €| Calculator Amount | 10 €| 10 €| 40 €|
 
-**Discount application type**
+**DISCOUNT APPLICATION TYPE**
 You can select one of the following options:
 * Query String
 * Promotional Product

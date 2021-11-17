@@ -10,24 +10,6 @@ redirect_from:
   - /2021080/docs/en/mg-cms
   - /docs/mg-cms
   - /docs/en/mg-cms
-  - /v1/docs/mg-cms
-  - /v1/docs/en/mg-cms
-  - /v2/docs/mg-cms
-  - /v2/docs/en/mg-cms
-  - /v3/docs/mg-cms
-  - /v3/docs/en/mg-cms
-  - /v4/docs/mg-cms
-  - /v4/docs/en/mg-cms
-  - /v5/docs/mg-cms
-  - /v5/docs/en/mg-cms
-  - /v6/docs/mg-cms
-  - /v6/docs/en/mg-cms
-  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-cms.html
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-cms.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-cms.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-cms.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-cms.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cms.html
 related:
   - title: CMS
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-feature-overview.html

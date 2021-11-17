@@ -10,24 +10,6 @@ redirect_from:
   - /2021080/docs/en/mg-collector
   - /docs/mg-collector
   - /docs/en/mg-collector
-  - /v1/docs/mg-collector
-  - /v1/docs/en/mg-collector
-  - /v2/docs/mg-collector
-  - /v2/docs/en/mg-collector
-  - /v3/docs/mg-collector
-  - /v3/docs/en/mg-collector
-  - /v4/docs/mg-collector
-  - /v4/docs/en/mg-collector
-  - /v5/docs/mg-collector
-  - /v5/docs/en/mg-collector
-  - /v6/docs/mg-collector
-  - /v6/docs/en/mg-collector
-  - docs/scos/dev/module-migration-guides/201811.0/migration-guide-collector.html
-  - docs/scos/dev/module-migration-guides/201903.0/migration-guide-collector.html
-  - docs/scos/dev/module-migration-guides/201907.0/migration-guide-collector.html
-  - docs/scos/dev/module-migration-guides/202001.0/migration-guide-collector.html
-  - docs/scos/dev/module-migration-guides/202005.0/migration-guide-collector.html
-  - docs/scos/dev/module-migration-guides/202009.0/migration-guide-collector.html
 related:
   - title: Migration Guide - Touch
     link: docs/scos/dev/module-migration-guides/page.version/migration-guide-touch.html

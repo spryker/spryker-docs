@@ -10,24 +10,6 @@ redirect_from:
   - /2021080/docs/en/mg-cms-block
   - /docs/mg-cms-block
   - /docs/en/mg-cms-block
-  - /v1/docs/mg-cms-block
-  - /v1/docs/en/mg-cms-block
-  - /v2/docs/mg-cms-block
-  - /v2/docs/en/mg-cms-block
-  - /v3/docs/mg-cms-block
-  - /v3/docs/en/mg-cms-block
-  - /v4/docs/mg-cms-block
-  - /v4/docs/en/mg-cms-block
-  - /v5/docs/mg-cms-block
-  - /v5/docs/en/mg-cms-block
-  - /v6/docs/mg-cms-block
-  - /v6/docs/en/mg-cms-block
-  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-cmsblock.html
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-cmsblock.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-cmsblock.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-cmsblock.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-cmsblock.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cmsblock.html
 related:
   - title: Migration Guide - CMS Block Collector
     link: docs/scos/dev/module-migration-guides/page.version/migration-guide-cms-block-collector.html

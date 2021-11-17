@@ -10,24 +10,6 @@ redirect_from:
   - /2021080/docs/en/mg-cms-block-gui
   - /docs/mg-cms-block-gui
   - /docs/en/mg-cms-block-gui
-  - /v1/docs/mg-cms-block-gui
-  - /v1/docs/en/mg-cms-block-gui
-  - /v2/docs/mg-cms-block-gui
-  - /v2/docs/en/mg-cms-block-gui
-  - /v3/docs/mg-cms-block-gui
-  - /v3/docs/en/mg-cms-block-gui
-  - /v4/docs/mg-cms-block-gui
-  - /v4/docs/en/mg-cms-block-gui
-  - /v5/docs/mg-cms-block-gui
-  - /v5/docs/en/mg-cms-block-gui
-  - /v6/docs/mg-cms-block-gui
-  - /v6/docs/en/mg-cms-block-gui
-  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-cmsblockgui.html
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-cmsblockgui.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-cmsblockgui.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-cmsblockgui.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-cmsblockgui.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cmsblockgui.html
 related:
   - title: Migration Guide - CMS Block
     link: docs/scos/dev/module-migration-guides/page.version/migration-guide-cmsblock.html

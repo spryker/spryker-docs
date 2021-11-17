@@ -10,24 +10,6 @@ redirect_from:
   - /2021080/docs/en/mg-discount
   - /docs/mg-discount
   - /docs/en/mg-discount
-  - /v1/docs/mg-discount
-  - /v1/docs/en/mg-discount
-  - /v2/docs/mg-discount
-  - /v2/docs/en/mg-discount
-  - /v3/docs/mg-discount
-  - /v3/docs/en/mg-discount
-  - /v4/docs/mg-discount
-  - /v4/docs/en/mg-discount
-  - /v5/docs/mg-discount
-  - /v5/docs/en/mg-discount
-  - /v6/docs/mg-discount
-  - /v6/docs/en/mg-discount
-  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-discount.html
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-discount.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-discount.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-discount.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-discount.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-discount.html
 ---
 
 ## Upgrading from Version 7.* to Version 9.0.0

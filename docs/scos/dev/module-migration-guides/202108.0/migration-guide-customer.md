@@ -10,24 +10,6 @@ redirect_from:
   - /2021080/docs/en/mg-customer
   - /docs/mg-customer
   - /docs/en/mg-customer
-  - /v1/docs/mg-customer
-  - /v1/docs/en/mg-customer
-  - /v2/docs/mg-customer
-  - /v2/docs/en/mg-customer
-  - /v3/docs/mg-customer
-  - /v3/docs/en/mg-customer
-  - /v4/docs/mg-customer
-  - /v4/docs/en/mg-customer
-  - /v5/docs/mg-customer
-  - /v5/docs/en/mg-customer
-  - /v6/docs/mg-customer
-  - /v6/docs/en/mg-customer
-  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-customer.html
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-customer.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-customer.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-customer.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-customer.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-customer.html
 ---
 
 ## Upgrading from Version 6.* to Version 7.0

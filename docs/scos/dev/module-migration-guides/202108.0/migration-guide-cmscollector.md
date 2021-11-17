@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-cms-collector
   - /docs/mg-cms-collector
   - /docs/en/mg-cms-collector
+  - /v1/docs/mg-cms-collector
+  - /v1/docs/en/mg-cms-collector
+  - /v2/docs/mg-cms-collector
+  - /v2/docs/en/mg-cms-collector
+  - /v3/docs/mg-cms-collector
+  - /v3/docs/en/mg-cms-collector
+  - /v4/docs/mg-cms-collector
+  - /v4/docs/en/mg-cms-collector
+  - /v5/docs/mg-cms-collector
+  - /v5/docs/en/mg-cms-collector
+  - /v6/docs/mg-cms-collector
+  - /v6/docs/en/mg-cms-collector
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-cmscollector.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-cmscollector.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-cmscollector.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-cmscollector.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-cmscollector.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cmscollector.html
 related:
   - title: Migration Guide - CMS Block
     link: docs/scos/dev/module-migration-guides/page.version/migration-guide-cmsblock.html
@@ -20,7 +38,6 @@ related:
 Upgrade `spryker/cms` module to at least 6.2 version. See [Migration Guide - CMS](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-cms.html) for more details.
 Upgrade `spryker/cms-content-widget` module to at least 1.1 version if you use `CmsPageCollectorParameterMapExpanderPlugin` plugin.
 CMS page data expander plugins are applied by the `spryker/cms` module instead of the `spryker/cms-collector` module:
-
 * Amend your custom CMS page collector data expander plugins to use `CmsPageDataExpanderPluginInterface` plugin interface instead of the deprecated `CmsPageCollectorDataExpanderPluginInterface` plugin interface.
 * If you use `CmsPageCollectorParameterMapExpanderPlugin` plugin, replace it with `CmsPageParameterMapExpanderPlugin` plugin.
 * Register your CMS page data expander plugins to `spryker/cms` module in the `CmsDependencyProvider` dependency provider.

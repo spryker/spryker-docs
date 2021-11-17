@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-discount-calculator-connector
   - /docs/mg-discount-calculator-connector
   - /docs/en/mg-discount-calculator-connector
+  - /v1/docs/mg-discount-calculator-connector
+  - /v1/docs/en/mg-discount-calculator-connector
+  - /v2/docs/mg-discount-calculator-connector
+  - /v2/docs/en/mg-discount-calculator-connector
+  - /v3/docs/mg-discount-calculator-connector
+  - /v3/docs/en/mg-discount-calculator-connector
+  - /v4/docs/mg-discount-calculator-connector
+  - /v4/docs/en/mg-discount-calculator-connector
+  - /v5/docs/mg-discount-calculator-connector
+  - /v5/docs/en/mg-discount-calculator-connector
+  - /v6/docs/mg-discount-calculator-connector
+  - /v6/docs/en/mg-discount-calculator-connector
+  - /dev/module-migration-guides/202108.0/migration-guide-discountcalculatorconnector.html
+  - /dev/module-migration-guides/202108.0/migration-guide-discountcalculatorconnector.html
+  - /dev/module-migration-guides/202108.0/migration-guide-discountcalculatorconnector.html
+  - /dev/module-migration-guides/202108.0/migration-guide-discountcalculatorconnector.html
+  - /dev/module-migration-guides/202108.0/migration-guide-discountcalculatorconnector.html
+  - /dev/module-migration-guides/202108.0/migration-guide-discountcalculatorconnector.html
 related:
   - title: Migration Guide - Discount
     link: docs/scos/dev/module-migration-guides/page.version/migration-guide-discount.html

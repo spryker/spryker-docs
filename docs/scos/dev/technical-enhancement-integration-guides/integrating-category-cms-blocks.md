@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/enabling-the-category-cms-block
   - /docs/enabling-the-category-cms-block
   - /docs/en/enabling-the-category-cms-block
+  - /docs/scos/dev/technical-enhancements/enabling-the-category-cms-block.html
 related:
   - title: Migration Guide - CMS Block
     link: docs/scos/dev/module-migration-guides/page.version/migration-guide-cmsblock.html

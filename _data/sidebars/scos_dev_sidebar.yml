@@ -136,10 +136,14 @@ entries:
     - title: Company Account
       url: /docs/scos/dev/feature-walkthroughs/company-account-feature-walkthrough/company-account-feature-walkthrough.html
       nested:
-      - title: Company account- module relations
+      - title: Company account - module relations
         url: /docs/scos/dev/feature-walkthroughs/company-account-feature-walkthrough/company-account-module-relations.html
       - title: Customer Login by Token reference information
         url: /docs/scos/dev/feature-walkthroughs/company-account-feature-walkthrough/customer-login-by-token-reference-information.html
+      - title: Disabling accounts switch for Business on Behalf
+        url: /docs/scos/dev/feature-walkthroughs/company-account-feature-walkthrough/disabling-accounts-switch-for-business-on-behalf.html
+        include_versions:
+        - "201907.0"
     - title: Product Options
       url: /docs/scos/dev/feature-walkthroughs/product-options-feature-walkthrough.html
     - title: Tax
@@ -205,7 +209,7 @@ entries:
       - "202108.0"
       - "202009.0"
       nested:
-      - title: Content Item Types- Module Relations
+      - title: Content Item Types - Module Relations
         url: /docs/scos/dev/feature-walkthroughs/content-items-feature-walkthrough/content-item-types-module-relations.html
         include_versions:
         - "201907.0"
@@ -213,6 +217,10 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
+      - title: Enabling the CMS content widgets button in the WYSIWYG Editor
+        url: /docs/scos/dev/feature-walkthroughs/content-items-feature-walkthrough/enabling-cms-content-widgets-button.html
+        include_versions:
+        - "201907.0"
     - title: Resource Sharing
       url: /docs/scos/dev/feature-walkthroughs/resource-sharing-feature-walkthrough.html
       include_versions:
@@ -329,7 +337,13 @@ entries:
       - title: Product Sets
         url: /docs/scos/dev/feature-walkthroughs/product-sets-feature-walkthrough/product-sets-feature-walkthrough.html
     - title: Quick Add to Cart
-      url: /docs/scos/dev/feature-walkthroughs/quick-add-to-cart-feature-walkthrough.html
+      url: /docs/scos/dev/feature-walkthroughs/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html
+      nested:
+      - title: Configuring separators and default number raws
+        url: /docs/scos/dev/feature-walkthroughs/quick-add-to-cart-feature-walkthrough/configuring-separators-and-default-number-rows.html
+        include_versions:
+        - "201903.0"
+        - "201907.0"
     - title: Scheduled Prices
       url: /docs/scos/dev/feature-walkthroughs/scheduled-prices-feature-walkthrough.html
       include_versions:
@@ -3852,11 +3866,6 @@ entries:
     - "202009.0"
     - "202108.0"
     nested:
-    - title: Debugging setup in Docker
-      url: /docs/scos/dev/the-docker-sdk/debugging-setup-in-docker.html
-      include_versions:
-      - "201907.0"
-      - "202001.0"
     - title: Docker environment infrustructure
       url: /docs/scos/dev/the-docker-sdk/docker-environment-infrastructure.html
       include_versions:
@@ -3928,6 +3937,8 @@ entries:
     - title: Configuring debugging in Docker
       url: /docs/scos/dev/the-docker-sdk/configuring-debugging-in-docker.html
       include_versions:
+      - "201907.0"
+      - "202001.0"
       - "202005.0"
       - "202009.0"
       - "202108.0"
@@ -4535,7 +4546,7 @@ entries:
       - title: ERROR- remove spryker_logs- volume is in use
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/error-remove-spryker-logs-volume-is-in-use.html
       - title: Class Silex/ControllerProviderInterface not found
-        url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/class-silex-controllerproviderinterface-not-found.html 
+        url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/class-silex-controllerproviderinterface-not-found.html
       - title: Error response from daemon- OCI runtime create failed- .... \\\"no such file or directory\\\"\""- unknown
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/error-response-from-daemon-oci-runtime-create-failed-no-such-file-or-directory-unknown.html
       - title: RabbitMQ- Zed.CRITICAL- PhpAmqpLib\Exception\AMQPChannelClosedException

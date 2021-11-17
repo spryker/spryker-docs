@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/configuring-dynamic-yves-zed-tokens
   - /v6/docs/configuring-dynamic-yves-zed-tokens
   - /v6/docs/en/configuring-dynamic-yves-zed-tokens
+  - /docs/scos/dev/technical-enhancements/configuring-dynamic-yves-zed-tokens.html
 ---
 
 This document describes how to improve security between Yves and Zed communication layers by implementing dynamic Yves-Zed tokens.

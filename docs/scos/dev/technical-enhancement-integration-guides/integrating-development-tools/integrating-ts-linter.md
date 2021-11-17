@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/ts-linter-integration-guide
   - /v6/docs/ts-linter-integration-guide
   - /v6/docs/en/ts-linter-integration-guide
+  - /docs/scos/dev/migration-and-integration/202108.0/development-tools/ts-linter-integration-guide.html
 ---
 
 Follow the steps below to integrate [TS linter](/docs/scos/dev/sdk/development-tools/ts-linter.html) into your project.

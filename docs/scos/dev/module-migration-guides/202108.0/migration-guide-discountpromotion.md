@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-discount-promotion
   - /docs/mg-discount-promotion
   - /docs/en/mg-discount-promotion
+  - /v1/docs/mg-discount-promotion
+  - /v1/docs/en/mg-discount-promotion
+  - /v2/docs/mg-discount-promotion
+  - /v2/docs/en/mg-discount-promotion
+  - /v3/docs/mg-discount-promotion
+  - /v3/docs/en/mg-discount-promotion
+  - /v4/docs/mg-discount-promotion
+  - /v4/docs/en/mg-discount-promotion
+  - /v5/docs/mg-discount-promotion
+  - /v5/docs/en/mg-discount-promotion
+  - /v6/docs/mg-discount-promotion
+  - /v6/docs/en/mg-discount-promotion
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-discountpromotion.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-discountpromotion.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-discountpromotion.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-discountpromotion.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-discountpromotion.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-discountpromotion.html
 ---
 
 ## Upgrading from Version 3.* to Version 4.0.0
@@ -29,6 +47,7 @@ This release is a part of the **Decimal Stock** concept migration. When you upgr
 ```bash
 composer require spryker/discount-promotion: "^4.0.0" --update-with-dependencies
 ```
+
 2. Update the database entity schema for each store in the system:
 
 ```bash
@@ -36,6 +55,7 @@ APPLICATION_STORE=DE console propel:schema:copy
 APPLICATION_STORE=US console propel:schema:copy
 ...
 ```
+
 3. Run the database migration:
 
 ```bash

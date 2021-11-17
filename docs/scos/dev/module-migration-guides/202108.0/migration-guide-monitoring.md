@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-monitoring
   - /docs/mg-monitoring
   - /docs/en/mg-monitoring
+  - /v1/docs/mg-monitoring
+  - /v1/docs/en/mg-monitoring
+  - /v2/docs/mg-monitoring
+  - /v2/docs/en/mg-monitoring
+  - /v3/docs/mg-monitoring
+  - /v3/docs/en/mg-monitoring
+  - /v4/docs/mg-monitoring
+  - /v4/docs/en/mg-monitoring
+  - /v5/docs/mg-monitoring
+  - /v5/docs/en/mg-monitoring
+  - /v6/docs/mg-monitoring
+  - /v6/docs/en/mg-monitoring
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-monitoring.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-monitoring.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-monitoring.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-monitoring.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-monitoring.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-monitoring.html
 related:
   - title: New Relic
     link: docs/scos/user/technology-partners/page.version/operational-tools-monitoring-legal-etc/new-relic.html

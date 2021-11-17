@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-discount-promotion-widget
   - /docs/mg-discount-promotion-widget
   - /docs/en/mg-discount-promotion-widget
+  - /v1/docs/mg-discount-promotion-widget
+  - /v1/docs/en/mg-discount-promotion-widget
+  - /v2/docs/mg-discount-promotion-widget
+  - /v2/docs/en/mg-discount-promotion-widget
+  - /v3/docs/mg-discount-promotion-widget
+  - /v3/docs/en/mg-discount-promotion-widget
+  - /v4/docs/mg-discount-promotion-widget
+  - /v4/docs/en/mg-discount-promotion-widget
+  - /v5/docs/mg-discount-promotion-widget
+  - /v5/docs/en/mg-discount-promotion-widget
+  - /v6/docs/mg-discount-promotion-widget
+  - /v6/docs/en/mg-discount-promotion-widget
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-discountpromotionwidget.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-discountpromotionwidget.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-discountpromotionwidget.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-discountpromotionwidget.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-discountpromotionwidget.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-discountpromotionwidget.html
 ---
 
 ## Upgrading from Version 1.* to Version 3.0.0

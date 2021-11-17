@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-discount-sales-aggregator-connector
   - /docs/mg-discount-sales-aggregator-connector
   - /docs/en/mg-discount-sales-aggregator-connector
+  - /v1/docs/mg-discount-sales-aggregator-connector
+  - /v1/docs/en/mg-discount-sales-aggregator-connector
+  - /v1/docs/mg-discount-sales-aggregator-connector
+  - /v1/docs/en/mg-discount-sales-aggregator-connector
+  - /v1/docs/mg-discount-sales-aggregator-connector
+  - /v1/docs/en/mg-discount-sales-aggregator-connector
+  - /v1/docs/mg-discount-sales-aggregator-connector
+  - /v1/docs/en/mg-discount-sales-aggregator-connector
+  - /v1/docs/mg-discount-sales-aggregator-connector
+  - /v1/docs/en/mg-discount-sales-aggregator-connector
+  - /v1/docs/mg-discount-sales-aggregator-connector
+  - /v1/docs/en/mg-discount-sales-aggregator-connector
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-discountsalesaggregatorconnector.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-discountsalesaggregatorconnector.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-discountsalesaggregatorconnector.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-discountsalesaggregatorconnector.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-discountsalesaggregatorconnector.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-discountsalesaggregatorconnector.html
 related:
   - title: Migration Guide - Discount
     link: docs/scos/dev/module-migration-guides/page.version/migration-guide-discount.html

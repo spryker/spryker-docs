@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/migration-guide-merchant
   - /docs/migration-guide-merchant
   - /docs/en/migration-guide-merchant
+  - /v1/docs/mg-merchant
+  - /v1/docs/en/mg-merchant
+  - /v2/docs/mg-merchant
+  - /v2/docs/en/mg-merchant
+  - /v3/docs/mg-merchant
+  - /v3/docs/en/mg-merchant
+  - /v4/docs/mg-merchant
+  - /v4/docs/en/mg-merchant
+  - /v5/docs/mg-merchant
+  - /v5/docs/en/mg-merchant
+  - /v6/docs/mg-merchant
+  - /v6/docs/en/mg-merchant
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-merchant.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-merchant.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-merchant.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-merchant.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-merchant.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-merchant.html
 ---
 
 ## Upgrading from version 2.* to version 3.*
@@ -17,7 +35,6 @@ redirect_from:
 The main update of the `Merchant` v3.0.0 is the ability to create stores and URLs for the merchant, activate and deactivate the merchant.
 
 Other changes are:
-
 * Removed `MerchantCriteriaFilter` transfer.
 * Added required merchant reference in the database.
 * Added is active column.

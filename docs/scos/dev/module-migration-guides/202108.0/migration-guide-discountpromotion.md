@@ -10,6 +10,18 @@ redirect_from:
   - /2021080/docs/en/mg-discount-promotion
   - /docs/mg-discount-promotion
   - /docs/en/mg-discount-promotion
+  - /v1/docs/mg-discount-promotion
+  - /v1/docs/en/mg-discount-promotion
+  - /v2/docs/mg-discount-promotion
+  - /v2/docs/en/mg-discount-promotion
+  - /v3/docs/mg-discount-promotion
+  - /v3/docs/en/mg-discount-promotion
+  - /v4/docs/mg-discount-promotion
+  - /v4/docs/en/mg-discount-promotion
+  - /v5/docs/mg-discount-promotion
+  - /v5/docs/en/mg-discount-promotion
+  - /v6/docs/mg-discount-promotion
+  - /v6/docs/en/mg-discount-promotion
 ---
 
 ## Upgrading from Version 3.* to Version 4.0.0

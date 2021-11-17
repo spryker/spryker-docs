@@ -16,7 +16,7 @@ redirect_from:
   - /docs/en/promotions-discounts
 ---
 
-The _Promotions & Discounts_ feature enables product catalog managers to provide free value to their customers by discounting a percentage or a fixed sum of an order's subtotal or an item's price on predefined conditions.
+The _Promotions & Discounts_ feature enables shop owners to provide free value to their customers by discounting a percentage or a fixed sum of an order's subtotal or an item's price on predefined conditions.
 
 ## Discount types
 
@@ -24,7 +24,7 @@ There are two discount types:
 * Voucher
 * Cart rule
 
-A product catalog manager selects a discount type when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
+A Back Office user selects a discount type when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
 
 ## Voucher
 
@@ -36,42 +36,42 @@ Once the customer clicks **Redeem code**, the page refreshes to show the discoun
 
 Multiple voucher codes can be generated for a single voucher. The code has a **Max number of uses** value which defines how many times the code can be redeemed.
 
-You can eneter codes manually or use the code generator in the Back Office.
+You can enter codes manually or use the code generator in the Back Office.
 ![Generate codes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/generate_codes.png)
 
-See [Creating a Voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) to learn how a product catalog manager can create a voucher in the Back Office.
+See [Creating a Voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) to learn how a Back Office user can create a voucher in the Back Office.
 
 ## Cart rule
 
 A Cart rule is a discount that applies to cart once all the [decision rules](#decision-rule) linked to the cart rule are fulfilled.
 
-The cart rule is applied automatically. If the decision rules of a discount are fulfilled, the customer can see the discount upon entering cart. Unlike with [voucher](#voucher), the **Clear all** and **Remove** actions are not displayed.
+The cart rule is applied automatically. If the decision rules of a discount are fulfilled, the customer can see the discount upon entering cart. Unlike for [voucher](#voucher), the **Clear all** and **Remove** actions are not displayed for cart rules.
 ![Cart rule](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/cart-cart-rule.png)
 
-See [Creating a Cart Rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html) to learn how a product catalog manager can create a cart rule in the Back Office.
+See [Creating a Cart Rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html) to learn how a Back Office user can create a cart rule in the Back Office.
 
 ### Decision rule
 
-A decision rule is a condition assigned to a discount that should be fulfilled for the discount to be applied.
+A decision rule is a condition assigned to a discount that should be fulfilled for the discount apply.
 
 A discount can have one or more decision rules. Find an exemplary combination below:
 
 | PARAMETER | RELATION OPERATOR | VALUE |
 | --- | --- | --- |
 | total-quantity | equal |  3 |
-|  day-of-week| equal | 5  |
+| day-of-week| equal | 5  |
 
 In this case, the discount is applied if the cart contains 3 items and the purchase is made on the fifth day of the week (Friday).
 
 Multiple decision rules form a query. A query is a request for information based on the defined parameters. In the Discount feature, a query requests information from a cart to check if it is eligible for the discount. By specifying decision rules, you define the parameters of the query.
 
-In the Back Office, a product catalog manager creates decision rules in a Query Builder. The decision rules created in the Query Builder are transformed into a single query.
+In the Back Office, you create decision rules in a Query Builder. The decision rules created in the Query Builder are transformed into a single query.
 
 The decision rules from the previous example look as follows in the Query Builder:
 
 ![Query builder](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/query-builder.png)
 
-A product catalog manager can enter the query manually as well.
+A Back Office user can enter the query manually as well.
 
 The same decision rules look as follows as a plain query:
 
@@ -81,10 +81,10 @@ You can switch between Query Builder and Plain query modes to see how the specif
 
 Decision rules are combined with *AND* and *OR*  combination operators. With the AND operator, all the rules should be fulfilled for the discount to be applied. With the OR operator, at least one of them should be fulfilled for the discount to be applied.
 
-In the following example, for the discount to be applied, a cart should contain 3 items and the purchase should be made on Wednesday.
+In the following example, for the discount apply, a cart should contain 3 items and the purchase should be made on Wednesday.
 ![AND operator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/and-operator.png)
 
-In the following example, for the discount to be applied, a cart should either contain 3 items or the purchase should be made on Wednesday.
+In the following example, for the discount to apply, a cart should either contain 3 items or the purchase should be made on Wednesday.
 ![OR operator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/or-operator.png)
 
 {% info_block infoBox "Info" %}
@@ -107,7 +107,7 @@ When a cart is evaluated on a level that has a rule and a rule group, the rule g
 
 ### Discount threshold
 
-Threshold is a minimum number of items in cart that should fulfill all the specified decision rules for the discount to be applied.
+Threshold is a minimum number of items in cart that should fulfill all the specified decision rules for the discount to apply.
 The default value is *1* . It means that a discount is applied if at least one item fulfills the discount's decision rules.
 
 In the following example, the discount is applied if there are four items with the Intel Core processor in cart.
@@ -129,58 +129,58 @@ The discount in the example below, applies to white products.
 ![Query collection](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/collection-query.png)
 
 The product selection based on the query string is dynamic:
-* If, at some point, the color attribute of a product changes from white to anything else, the product is no longer eligible to be discounted.
-* If, at some point, a product receives the white color attribute, it becomes eligible for the discount.
+* If, at some point, the color attribute of a product changes from white to anything else, the product is no longer eligible for discount.
+* If, at some point, a product receives the white color attribute, it becomes eligible for discount.
 
 ### Promotional product
 
 Promotional product is a discount application type that discounts a particular product, regardless of whether the product is added to cart or not.
 
-When a promotional product is available to a customer, the discount name is not displayed in the overview section. Instead, the **Promotional products** section is displayed in the cart, allowing to add the available quantity of the product to cart.
+When a promotional product is available to a customer, the discount name is not displayed in the overview section. Instead, the **Promotional products** section is displayed in the cart, allowing customers to add the available quantity of the product to cart.
 ![Promotional product](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/promotional-product-frontend.png)
 
-A product catalog manager selects the promotional product by entering an abstract product SKU in the Back Office. Also, they define the quantity of the product to be sold with a discount.
+A Back Office user selects the promotional product by entering an abstract product SKU in the Back Office. Also, they define the quantity of the product to be sold with a discount.
 
 ![Collection - promotional product](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/collection-promotional-product.png)
 
+## Discount calculation types
+
+Calculation defines the value to be deducted from a product's default price. There are two types of discount calculation:
+* Percentage
+* Fixed amount
+
+{% info_block infoBox %}
+
+With the fixed amount type, the currency of the respective shop is used for calculation.
+
+{% endinfo_block %}
+
+See examples in the table below.
+
+| PRODUCT PRICE | CALCULATION TYPE | AMOUNT | DISCOUNT APPLIED | PRICE TO PAY |
+| --- | --- | --- | --- | --- |
+| €50 | Percentage | 10 | €5 | €45 |
+| €50 | Fixed amount | 10 | €10 | €40 |
+
+A Back Office user defines calculation when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
+![Discount calculation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/discount_calculation.png)
 
 ## Discount exclusiveness
 
 Discount exclusiveness defines if a discount value of a discount can be combined with the discount value of other discounts in a single order.
 
-A product catalog manager defines calculation when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
+A Back Office user defines calculation when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
 ![Exclusive discount](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/exclusivity.png)
 
 ### Exclusive discount
 
-An exclusive discount is a discount that, when applied to a cart, discards all the other discounts applied to it. If a cart is eligible for multiple exclusive discounts, the highest-value discount is applied.
+An exclusive discount is a discount that, when applied to a cart, discards all the other discounts applied to it. If a cart is eligible for multiple exclusive discounts you can [prioritize](#discount-priority) the discounts to define which of the exclusive discounts should prevail over the others. See [LINK TO BO GUIDE] for details on how a Back Office user can set priorities for discounts.
 
-In the following example, a cart with the order total amount of €100 contains the following discounts.
-
-| DISCOUNT NAME  | DISCOUNT AMOUNT | DISCOUNT TYPE | EXCLUSIVENESS | DISCOUNTED AMOUNT |
-| --- | --- | --- | --- | --- |
-| D1 | 15 | Calculator percentage | Exclusive | €15 |
-|D2|5| Calculator fixed | Exclusive | €5 |
-|D3|10| Calculator percentage | Non-exclusive | €10 |
-
-The discount exclusivity is resolved as follows:
-1. The discounts D1 and D2 are exclusive, so the non-exclusive discount D3 is discarded.
-2. The discount D1 providers more free value than the discount D2.
-3. As a result, the discount D1 is applied.
+If the exclusive discounts are not prioritized or have the same priorities, the highest-value discount is applied. See [Discount calculation logic](#discount-calculation-logic) for details and examples on how the discounts are calculated.
 
 ### Non-exclusive discount
 
-A non-exclusive discount is a discount that can be combined with other non-exclusive discounts in a single order.
-
-In the following example, a cart with the order total amount of €30 contains the following discounts.
-
-| DISCOUNT NAME  | DISCOUNT AMOUNT | DISCOUNT TYPE | EXCLUSIVENESS | DISCOUNTED AMOUNT |
-| --- | --- | --- | --- | --- |
-| D1 | 15 | Calculator percentage | Non-exclusive | €15 |
-| D2 | 5 | Calculator fixed | Non-exclusive | €5 |
-| D3 | 10 |Calculator percentage | Non-exclusive | €10 |
-
-As all the discounts are non-exclusive, they are applied together. However, a Back Office user can [prioritize](#discount-priority) the non-exclusive discounts to set the order in which they should apply. See [LINK TO BO GUIDE] for details on how they can do that.
+A non-exclusive discount is a discount that can be combined with other non-exclusive discounts in a single order. As all the discounts are non-exclusive, they are applied together. However, a Back Office user can [prioritize](#discount-priority) the non-exclusive discounts to set the order in which they should apply. See [LINK TO BO GUIDE] for details on how a Back Office user can set priorities for discounts. See [Discount calculation logic](#discount-calculation-logic) for details and examples on how the discounts are calculated based on their priorities.
 
 ## Discount validity interval
 
@@ -193,7 +193,8 @@ A product catalog manager defines calculation when [creating a voucher](/docs/sc
 
 ## Discount priority
 
-In cases when several discounts can apply to a customer order, a Back Office user can set the discount priorities. The discount priority is an integer value which defines the order in which the discounts are applied. 
+In cases when several discounts can apply to a customer order, a Back Office user can set the discount priorities. The discount priority is an integer value which defines the order in which the discounts are applied. See [Discount calculation logic](#discount-calculation-logic) for details on how discounts are calculated based on their priorities.
+
 Discount prioritization behavior does not depend on the [discount type](#discount-types). For example, you might have the following priorities for different types:
 
 * Cart rule discount with priority 1
@@ -205,41 +206,18 @@ In this case, the discounts are applied in the order of priority, irrespective o
 
 {% info_block infoBox "Info" %}
 
-If you have a voucher code and a cart rule with the same priority, then both discounts should use the same subtotal.???
+If you have a voucher code and a cart rule with the same priority, then both discounts should apply and use the same cart subtotal. See [Scenario 5: Non-exclusive, fixed amount and percentage discounts with the same priority values](#scenario-5-non-exclusive-fixed-amount-and-percentage-discounts-with-the-same-priority-values) for an example.
 
 {% endinfo_block %} 
 
-
-## Discount calculation types
-
-Calculation defines the value to be deducted from a product's default price. There are two types of discount calculation:
-* Calculator percentage
-* Calculator fixed
-
-{% info_block infoBox %}
-
-With the calculator fixed type, the currency of the respective shop is used for calculation.
-
-{% endinfo_block %}
-
-See examples in the table below.
-
-| PRODUCT PRICE | CALCULATION TYPE | AMOUNT | DISCOUNT APPLIED | PRICE TO PAY |
-| --- | --- | --- | --- | --- |
-| €50 |  Calculator percentage | 10 | €5 | €45 |
-| €50 | Calculator fixed | 10 | €10 | €40 |
-
-A product catalog manager defines calculation when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
-![Discount calculation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/discount_calculation.png)
-
 ## Discount calculation logic
 
-The general discount calculation logic follows these rules:
+The discount calculation logic follows these rules:
 
-* All discounts are calculated sequentially based on their [priority value](#discount-priority). Thus, discounts with the highest priority value are considered first. SEE SCENRIOS?
+* All discounts are calculated sequentially based on their [priority value](#discount-priority). Thus, discounts with the highest priority value are considered first.
 * Discounts without priority values are treated with the last possible priority.
 * Discounts with the same priority value are calculated independent of each other.
-* If there is a set of discounts with [exclusive](#exclusive-discount) and [non-exclusive](#non-exclusive-discount) discounts, the non-exclusive discounts are disregarded. The remaining excusive discounts are handled according to their priority values as shown in the schema:
+* If there is a set of discounts with [exclusive](#exclusive-discount) and [non-exclusive](#non-exclusive-discount) discounts, the non-exclusive discounts are disregarded. The remaining exclusive discounts are handled according to their priority values as shown in the schema:
 
 ![discounts-calculation-logic](https://confluence-connect.gliffy.net/embed/image/ad6c6c4c-9ccb-42ae-a9dc-5944300bdf91.png?utm_medium=live&utm_source=custom)
 
@@ -247,10 +225,148 @@ The general discount calculation logic follows these rules:
 
 ### Example discount calculation scenarios
 
-The following scenarios illustrates how the discount calculation logic works
+The following scenarios illustrate how the discount calculation logic works.
 
-[SCENARIOS] https://spryker.atlassian.net/browse/CC-14607
+#### Scenario 1: Multiple non-exclusive discounts, mix of fixed amount and percentage discount calculation types.
 
+Cart subtotal: €500
+
+| DISCOUNT NAME|  DESCRIPTION|  DISCOUNT TYPE| DISCOUNT AMOUNT| DISCOUNT PRIORITY| EXCLUSIVENESS|
+| --- | --- | --- | --- | --- |--- |
+| HOCKEY10| 10% off your order| Percentage| 10%|  300|  No|
+| HELMET20| Save €20 on helmets| Fixed amount| €20|  200|  No|
+| STICK50| €50 off all carbon sticks| Fixed amount| €50|  500|  No|
+
+**Discounts applied in priority order:**
+
+1. HELMET20 (200 priority): €500 - €20 = €480
+2. HOCKEY10 (300 priority): €480 - €480*0.10 = €432
+3. STICK50 (500 priority): €432 - €50 = €382
+
+**Calculation as displayed in cart:**
+
+Subtotal: €500.00
+HELMET20: -€20.00
+HOCKEY10: -€4.80
+STICK50: -€50.00
+
+Grand total: €382.00
+
+{% info_block infoBox "Info" %}
+
+The assigned priorities can be confusing for customers, as they are not aware of the prioritization. For the scenario above, they might wonder why they get 10% off the pre-discount price of the stick, and not, for example, the helmet. Therefore, in the cases like this one, rather than creating prioritization logic for separate discount types, consider adjusting the discount prioritization of the same types accordingly to avoid the customer confusion.
+
+{% endinfo_block %}
+
+#### Scenario 2: Multiple non-exclusive discounts, percentage discount calculation types.
+
+Cart subtotal: $100
+
+| DISCOUNT NAME| DESCRIPTION| DISCOUNT TYPE| DISCOUNT AMOUNT| DISCOUNT PRIORITY| EXCLUSIVENESS| NOTES|
+| --- | --- | --- | --- | --- |--- |--- |
+| BUY4GET1| Buy 4 baguettes, get one free| Percentage| 100%| 100|  No| One baguette costs $3|
+| SPICE10| 10% off spices| Percentage| 10%| 100| No| Spices cost $30|
+| MEMBER5| 5% off for members| Percentage| 5%| 5000| No| |
+| STORE5| 5% off storewide if you spend $50 or more| Percentage| 5%| 5000|No| |
+
+**Discounts applied in priority order:**
+
+1. BUY5GET1 (100 priority): $100 - $3*1.00 or $3 = $97
+2. SPICE10 (100 priority): $97 - $30*0.10 or $3.00 = $94
+3. MEMBER5 (5000 priority): $94 - $94*0.05 or $4.70 = $89.30
+4. STORE5 (5000 priority): $89.30 - $94*0.05 or $4.70 = $84.60
+
+**Calculation as displayed in cart:**
+
+Subtotal: $100.00
+
+BUY5GET10: -$3.00
+SPICE10: -$3.00
+MEMBER5: -$4.70
+STORE5: -$4.70
+
+Grand total: $84.60
+
+#### Scenario 3: Multiple discounts, both exclusive and non-exclusive.
+
+Cart subtotal: $100
+
+| DISCOUNT NAME|  DESCRIPTION|  DISCOUNT TYPE| DISCOUNT AMOUNT| DISCOUNT PRIORITY| EXCLUSIVENESS| NOTES|
+| --- | --- | --- | --- | --- |--- |--- |
+| BUY4GET1| Buy 4 baguettes, get one free|  Percentage| 100%| 100|  No| One baguette costs $3|
+| SPICE10| 10% off spices| Percentage| 10%|  100|  No| $30 of spices|
+| MEMBER5| 5% off for members| Percentage| 5%| 5000| Yes| |
+| STORE5| 5% off storewide if you spend $50 or more|  Percentage| 5%| 9000| Yes| |
+
+**Discounts applied in priority order:**
+
+MEMBER5 (5000): $100 - $100*0.05 = $95
+
+In the presence of exclusive discounts, all non-exclusive discounts are excluded.
+Between the exclusive discounts, the discount with the higher priority is chosen.
+
+#### Scenario 4: Multiple non-exclusive, percentage discount calculation types. Executing discounts in priority order results in cart subtotal no longer satisfying conditions for one or more subsequent discounts.
+
+Cart subtotal: €100
+
+| DISCOUNT NAME|  DESCRIPTION|  DISCOUNT TYPE| DISCOUNT AMOUNT| DISCOUNT PRIORITY| EXCLUSIVENESS| NOTES|
+| --- | --- | --- | --- | --- |--- |--- |
+| 50SOCKS|  50% off Nike socks| Percentage| 50%|  100|  No| Nike socks cost €40|
+| 15PANTS|  15% off all white pants|  Percentage| 15%|100|  No| White pants cost €60|
+| SAVE20| 20% off purchases over €100|  Percentage| 20%|  300|  No| |
+| SITE5|  5% off everything in the store| Percentage| 5%| 9999| No| |
+
+**Discounts applied in priority order:**
+
+1. 50SOCKS (100 priority): €100 - €40*0.5 = €80
+2. 15PANTS (100 priority): €80 - €60*0.15 = €71
+3. SAVE20 (300 priority): No longer applies, because discounts with higher priorities have reduced the subtotal below the discount condition threshold of €100.
+4. SITE5: (9999 priority): €71 - €3.55 = €67.45
+
+#### Scenario 5: Non-exclusive, fixed amount and percentage discounts with the same priority values 
+
+Cart subtotal: €100
+
+| DISCOUNT NAME|  DESCRIPTION|  DISCOUNT TYPE| DISCOUNT AMOUNT| DISCOUNT PRIORITY| EXCLUSIVENESS|
+| --- | --- | --- | --- | --- |--- |
+| 50SOCKS|  10% off Nike socks| Percentage| 10%|  100|  No| Nike socks cost €40|
+| 15PANTS|  Save €20 on all white pants|  Fixed amount| €20|100|  No| White pants cost €60|
+
+**Discounts applied in priority order:**
+
+1. 50SOCKS (100 priority): €100 - €40*0.1 = €96
+2. 15PANTS (100 priority): €96 - €20 = €76
+
+
+**Calculation as displayed in cart:**
+
+Subtotal: €100.00
+
+50SOCKS: -€4
+15PANTS: -€20.00
+
+Grand total: €76.00
+
+#### Scenario 6: Exclusive and non-exclusive discounts without the priorities
+
+Cart subtotal: €100
+
+| DISCOUNT NAME  | DESCRIPTION| DISCOUNT TYPE | DISCOUNT AMOUNT | DISCOUNT PRIORITY|  EXCLUSIVENESS | NOTES |
+| --- | --- | --- | --- | --- |--- |--- |
+|50SOCKS | 10% off Nike socks | Percentage | 10% | |Exclusive | Nike socks cost €40 |
+|15PANTS|Save €5 on all pants| Fixed amount | €5 | | Exclusive |  |
+|SITE5|10% off everything in the store| Percentage | €10 | |  Non-exclusive | €10 | |
+
+In the presence of exclusive discounts, all non-exclusive discounts are excluded.
+Since the remaining exclusive discounts do not have priorities and the discount 15PANTS providers more free value than the discount 50SOCKS, this discount is applied.
+
+**Calculation as displayed in cart:**
+
+Subtotal: €100.00
+
+15PANTS: -€5
+
+Grand total: €95.00
 
 ## Related Business User articles
 

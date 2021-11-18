@@ -46,7 +46,7 @@ This reference page describes version 1 of the Deploy file format. This is the n
 The topics below are organized alphabetically for top-level keys and sub-level keys to describe the hierarchy.
 
 You can use the extended YAML syntax according to [YAML™ Version 1.2](https://yaml.org/spec/1.2/spec.html).
-Find B2B and B2C deploy file examples for [development](/docs/scos/dev/installation/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode) and [demo](/docs/scos/dev/installation/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#demo-mode) environments in the table:
+Find B2B and B2C deploy file examples for [development](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode) and [demo](/docs/scos/dev/installation/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#demo-mode) environments in the table:
 
 | Development mode | Demo mode |
 | --- | --- |
@@ -485,7 +485,7 @@ docker:
 
 ### docker: newrelic:
 
-Defines the [New Relic](/docs/scos/dev/docker-sdk/configuring-services.html#new-relic) configuration.
+Defines the [New Relic](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-services.html#new-relic) configuration.
 
 * `docker: newrelic: license:` - defines a New Relic license. Aquire it from [New Relic](https://www.newrelic.com/).
 * `docker: newrelic: appname:` - defines a New Relic application name. This variable is optional and does not have a default value.

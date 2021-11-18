@@ -74,7 +74,7 @@ To update payment with a payload from a third-party payment provider, send the r
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| paymentIdentifier | String |  | Unique payment identifier. To get it, [place. an order](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html#place-an-order). The value depends on the payment services provider plugin used to process the payment. For details, see [3. Implement Payload Processor Plugin](/docs/scos/dev/tutorials-and-howtos/202009.0/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html#3-implement-payload-processor-plugin). |
+| paymentIdentifier | String |  | Unique payment identifier. To get it, [place. an order](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html#place-an-order). The value depends on the payment services provider plugin used to process the payment. For details, see [3. Implement Payload Processor Plugin](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html#implement-payload-processor-plugin). |
 | dataPayload | Array | v | Payload from the payment service provider. The attributes of the payload depend on the selected payment service provider. |
 			
 	

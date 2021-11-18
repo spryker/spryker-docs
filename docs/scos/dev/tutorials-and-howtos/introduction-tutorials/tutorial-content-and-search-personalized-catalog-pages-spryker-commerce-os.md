@@ -457,7 +457,7 @@ class IndexController extends AbstractController
 
 {% info_block infoBox %}
 
-That's it for getting the personalized products. <br>To demonstrate having different personalized products for different customers. Go to [http://www.de.suite.local/personalized-product/12](http://www.de.suite.local/personalized-product/12) and check out the products. Refresh the page, you should see the same products as you still have the same session ID.<br> Now, remove the Spryker cookie so the session ID is different and refresh the page, you should see different products. This different customers with different sessions IDs get different personalized products.
+That's it for getting the personalized products. <br>To demonstrate having different personalized products for different customers. Go to `http://www.de.suite.local/personalized-product/12` and check out the products. Refresh the page, you should see the same products as you still have the same session ID.<br> Now, remove the Spryker cookie so the session ID is different and refresh the page, you should see different products. This different customers with different sessions IDs get different personalized products.
 
 {% endinfo_block %}
 

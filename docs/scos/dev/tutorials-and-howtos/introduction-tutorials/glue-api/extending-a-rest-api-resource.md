@@ -51,7 +51,7 @@ Also, let us assume that you modified the product storage data to match your pro
 
 {% info_block warningBox %}
 
-For more details, see [Database schema for product attributes](/docs/scos/user/features/product-feature-overview/product-attributes-overview.html) and [Extending the Database Schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).
+For more details, see [Database schema for product attributes](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-attributes-overview.html) and [Extending the Database Schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).
 
 {% endinfo_block %}
 

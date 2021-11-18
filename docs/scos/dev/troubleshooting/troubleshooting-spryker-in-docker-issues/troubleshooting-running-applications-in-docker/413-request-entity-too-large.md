@@ -18,7 +18,7 @@ redirect_from:
 You get the `413 Request Entity Too Large` error.
 
 ## Solution
-1. Increase the maximum request body size for the related application. See [Deploy File Reference - 1.0](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file-reference-1.0.html) to learn how to do that.
+1. Increase the maximum request body size for the related application. See [Deploy File Reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file-reference-1.0.html) to learn how to do that.
 2. Fetch the update:
 ```bash
 docker/sdk bootstrap

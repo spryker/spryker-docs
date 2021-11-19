@@ -53,6 +53,11 @@ To upgrade the `Category` module from version 4.* to 5.*:
          </behavior>
    </table>
    ```
+   {% info_block warningBox "Verification" %}
+
+   In case you have `src/Pyz/Zed/Category/Persistence/Propel/Schema/spy_category_template.schema.xml` file locally: if you've never changed it - remove it. If you have introduced changes to it - make sure to move them to `src/Pyz/Zed/Category/Persistence/Propel/Schema/spy_category.schema.xml` and then remove the file.
+
+   {% endinfo_block %}
 
 3. Update the database schema and the generated classes:
 

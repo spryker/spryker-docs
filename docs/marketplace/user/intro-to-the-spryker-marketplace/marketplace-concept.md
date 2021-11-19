@@ -24,3 +24,7 @@ Spryker Marketplace includes the following functionalities:
 * Products from different merchants can be mixed in a shopping cart and order fulfillment supports splitting order by a merchant.
 * Third-party Merchants can manage profile, products, offers, and orders using the Merchant Portal.
 * Marketplace administrator gets additional tools to manage the Marketplace and control their merchants by approving profiles, products, and offers.
+
+Check out this video to learn more about the Marketplace in the Spryker Commerce OS:
+
+{% wistia bxnsf8mzdc 960 720 %}

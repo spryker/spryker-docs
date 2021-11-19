@@ -133,6 +133,6 @@ The following figure shows how to perform these actions:
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Quick Add to Cart feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/quick-add-to-cart-feature-walkthrough.html) for developers.
+Are you a developer? See [Quick Add to Cart feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

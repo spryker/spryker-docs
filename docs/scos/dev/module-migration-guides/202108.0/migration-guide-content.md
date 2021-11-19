@@ -9,12 +9,24 @@ redirect_from:
   - /2021080/docs/en/mg-content-201907
   - /docs/mg-content-201907
   - /docs/en/mg-content-201907
+  - /v3/docs/mg-content-201907
+  - /v3/docs/en/mg-content-201907
+  - /v4/docs/mg-content-201907
+  - /v4/docs/en/mg-content-201907
+  - /v5/docs/mg-content-201907
+  - /v5/docs/en/mg-content-201907
+  - /v6/docs/mg-content-201907
+  - /v6/docs/en/mg-content-201907
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-content.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-content.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-content.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-content.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-content.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*
 
 The Content module version 2.0.0 implemented the following improvements:
-
 * Introduced the `spy_content.key` field to store the identifier for entities.
 * Introduced the `spy_content.spy_content-key` unique index.
 * Introduced the `ContentTransfer::$key` transfer object property.
@@ -26,10 +38,10 @@ The Content module version 2.0.0 implemented the following improvements:
 **To upgrade to the new version of the module, do the following:**
 1. Upgrade the `Content` module to version 2.0.0:
 
-
 ```bash
 composer require spryker/content:"^2.0.0" --update-with-dependencies
 ```
+
 2. Run the following command to re-generate transfer objects:
 
 ```bash

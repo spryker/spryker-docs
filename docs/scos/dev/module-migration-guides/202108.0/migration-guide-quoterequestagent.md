@@ -9,6 +9,19 @@ redirect_from:
   - /2021080/docs/en/mg-quoterequestagent
   - /docs/mg-quoterequestagent
   - /docs/en/mg-quoterequestagent
+  - /v3/docs/mg-quoterequestagent
+  - /v3/docs/en/mg-quoterequestagent
+  - /v4/docs/mg-quoterequestagent
+  - /v4/docs/en/mg-quoterequestagent
+  - /v5/docs/mg-quoterequestagent
+  - /v5/docs/en/mg-quoterequestagent
+  - /v6/docs/mg-quoterequestagent
+  - /v6/docs/en/mg-quoterequestagent
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-quoterequestagent.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-quoterequestagent.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-quoterequestagent.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-quoterequestagent.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-quoterequestagent.html
 ---
 
 ## Upgrading from Version 2.x.x to Version 3.x.x

@@ -6,7 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-product-option
 originalArticleId: ed0c6dbc-b739-4b12-b42d-54f89d6643c3
 redirect_from:
-  - /2021080/docs/mg-product-option
+  - /с/docs/mg-product-option
   - /2021080/docs/en/mg-product-option
   - /docs/mg-product-option
   - /docs/en/mg-product-option
@@ -28,6 +28,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-productoption.html
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productoption.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productoption.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productoption.html
 related:
   - title: Migration Guide - Currency
     link: docs/scos/dev/module-migration-guides/page.version/migration-guide-currency.html

@@ -9,6 +9,22 @@ redirect_from:
   - /2021080/docs/en/mg-cmspagesearch
   - /docs/mg-cmspagesearch
   - /docs/en/mg-cmspagesearch
+  - /v2/docs/mg-cmspagesearch
+  - /v2/docs/en/mg-cmspagesearch
+  - /v3/docs/mg-cmspagesearch
+  - /v3/docs/en/mg-cmspagesearch
+  - /v4/docs/mg-cmspagesearch
+  - /v4/docs/en/mg-cmspagesearch
+  - /v5/docs/mg-cmspagesearch
+  - /v5/docs/en/mg-cmspagesearch
+  - /v6/docs/mg-cmspagesearch
+  - /v6/docs/en/mg-cmspagesearch
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-cmspagesearch.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-cmspagesearch.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-cmspagesearch.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-cmspagesearch.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cmspagesearch.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmspagesearch.html
 ---
 
 ## Upgrading from Version 2.1.* to Version 2.2.*

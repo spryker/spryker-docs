@@ -28,6 +28,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-cartextension.html
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-cartextension.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cartextension.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cartextension.html
 ---
 
 ## Upgrading from Version 2.* to Version 4.0.0

@@ -10,12 +10,21 @@ redirect_from:
   - /2021080/docs/en/migration-guide-cmsblockstorage
   - /docs/migration-guide-cmsblockstorage
   - /docs/en/migration-guide-cmsblockstorage
+  - /v4/docs/migration-guide-cmsblockstorage
+  - /v4/docs/en/migration-guide-cmsblockstorage
+  - /v5/docs/migration-guide-cmsblockstorage
+  - /v5/docs/en/migration-guide-cmsblockstorage
+  - /v6/docs/migration-guide-cmsblockstorage
+  - /v6/docs/en/migration-guide-cmsblockstorage
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-cmsblockstorage.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-cmsblockstorage.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cmsblockstorage.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmsblockstorage.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*
 
 CmsBlockStorage version 2.0.0 introduces the following backward incompatible changes:
-
 * Introduced the `spy_cms_block_storage.cms_block_key` field to store the `cms_block` identifier.
 * Introduced the `mappings` parameter to synchronization behavior to support the ability to get data by block names.
 * Increased the minimum `spryker/cms-block` version in `composer.json`. See [Migration Guide - CMS Block](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-cmsblock.html#upgrading-from-version-2-to-version-3) for more details.
@@ -48,6 +57,7 @@ composer require spryker/cms-block-storage:"^2.0.0" --update-with-dependencies
     ```shell
     console transfer:generate
     ```
+
 4. Populate storage with the new version:
     a. Get all the data about CMS blocks from database and publish it into Redis:
     ```shell
@@ -56,9 +66,10 @@ composer require spryker/cms-block-storage:"^2.0.0" --update-with-dependencies
     b. Verify that the `spy_cms_block_storage.key` column uses keys instead of IDs. For example, `cms_block:en_us:blck-1`, where `blck-1` is the CMS block key.
 
     c. Verify that all the method overrides in `\Pyz\Zed\CmsBlockStorage\CmsBlockStorageDependencyProvider` match the signature provided in the package:
-```php
-protected function getContentWidgetDataExpanderPlugins(): array
-```
+
+    ```php
+    protected function getContentWidgetDataExpanderPlugins(): array
+    ```
 
 
 5. Enable CMS Block Key support for categories and products (optional):
@@ -67,6 +78,7 @@ protected function getContentWidgetDataExpanderPlugins(): array
     composer require spryker/cms-block-category-storage:"^1.4.0" spryker/cms-block-product-storage:"^1.4.0" --update-with-dependencies
     ```
     b. Add plugins in `src/Pyz/Client/CmsBlockStorage/CmsBlockStorageDependencyProvider.php`:
+
     ```php        
     namespace Pyz\Client\CmsBlockStorage;
 

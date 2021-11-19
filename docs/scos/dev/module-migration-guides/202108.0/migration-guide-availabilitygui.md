@@ -28,10 +28,6 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-availabilitygui.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-availabilitygui.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-availabilitygui.html
-
-
-
-
 ---
 
 ## Upgrading from Version 5.* to Version 6.0.0

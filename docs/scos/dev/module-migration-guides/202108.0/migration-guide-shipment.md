@@ -28,6 +28,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-shipment.html
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-shipment.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-shipment.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-shipment.html
 related:
   - title: "Reference information: Shipment method plugins"
     link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html

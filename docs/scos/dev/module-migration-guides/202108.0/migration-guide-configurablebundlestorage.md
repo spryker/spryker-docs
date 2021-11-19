@@ -10,6 +10,16 @@ redirect_from:
   - /2021080/docs/en/migration-guide-configurablebundlestorage
   - /docs/migration-guide-configurablebundlestorage
   - /docs/en/migration-guide-configurablebundlestorage
+  - /v4/docs/migration-guide-configurablebundlestorage
+  - /v4/docs/en/migration-guide-configurablebundlestorage
+  - /v5/docs/migration-guide-configurablebundlestorage
+  - /v5/docs/en/migration-guide-configurablebundlestorage
+  - /v6/docs/migration-guide-configurablebundlestorage
+  - /v6/docs/en/migration-guide-configurablebundlestorage
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-configurablebundlestorage.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-configurablebundlestorage.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-configurablebundlestorage.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-configurablebundlestorage.html
 related:
   - title: Migration Guide - ConfigurableBundle
     link: docs/scos/dev/module-migration-guides/page.version/migration-guide-configurablebundle.html
@@ -17,7 +27,7 @@ related:
 
 ## Upgrading from Version 1.* to Version 2.0.0
 
-In the `ConfigurableBundleStorage` version 2.0.0, we have introduced these backward-incompatible changes: 
+In the `ConfigurableBundleStorage` version 2.0.0, we have introduced these backward-incompatible changes:
 
 * Added `spryker/locale` module to dependencies.
 * Added `spryker/product-image` module to dependencies.

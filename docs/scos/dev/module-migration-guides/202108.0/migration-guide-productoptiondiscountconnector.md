@@ -28,6 +28,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-productoptiondiscountconnector.html
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productoptiondiscountconnector.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productoptiondiscountconnector.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productoptiondiscountconnector.html
 related:
   - title: Migration Guide - Product
     link: docs/scos/dev/module-migration-guides/page.version/migration-guide-product.html

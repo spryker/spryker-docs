@@ -9,6 +9,16 @@ redirect_from:
   - /2021080/docs/en/migration-guide-checkoutpage
   - /docs/migration-guide-checkoutpage
   - /docs/en/migration-guide-checkoutpage
+  - /v4/docs/migration-guide-checkoutpage
+  - /v4/docs/en/migration-guide-checkoutpage
+  - /v5/docs/migration-guide-checkoutpage
+  - /v5/docs/en/migration-guide-checkoutpage
+  - /v6/docs/migration-guide-checkoutpage
+  - /v6/docs/en/migration-guide-checkoutpage
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-checkoutpage.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-checkoutpage.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-checkoutpage.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-checkoutpage.html  
 ---
 
 ## Upgrading from Version 2.* to Version 3.*

@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/migration-guide-auth-module-to-securitygui-module
   - /docs/migration-guide-auth-module-to-securitygui-module
   - /docs/en/migration-guide-auth-module-to-securitygui-module
+  - /v6/docs/migration-guide-auth-module-to-securitygui-module
+  - /v6/docs/en/migration-guide-auth-module-to-securitygui-module
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-auth-module-to-securitygui-module.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-auth-module-to-securitygui-module.html
+
 ---
 
 We gave up the `Auth` module in favor of using `Symfony Security`. `Symfony Security` allows more flexible customization of the authorization system. More detailed information can be found in the [official documentation](https://symfony.com/doc/current/security.html).

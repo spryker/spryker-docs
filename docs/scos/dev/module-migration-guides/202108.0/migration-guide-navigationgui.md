@@ -28,6 +28,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-navigationgui.html
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-navigationgui.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-navigationgui.html
+  - /docs/scos/dev/module-migration-guides/2021080.0/migration-guide-navigationgui.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

@@ -9,6 +9,19 @@ redirect_from:
   - /2021080/docs/en/mg-quoterequestwidget
   - /docs/mg-quoterequestwidget
   - /docs/en/mg-quoterequestwidget
+  - /v3/docs/mg-quoterequestwidget
+  - /v3/docs/en/mg-quoterequestwidget
+  - /v4/docs/mg-quoterequestwidget
+  - /v4/docs/en/mg-quoterequestwidget
+  - /v5/docs/mg-quoterequestwidget
+  - /v5/docs/en/mg-quoterequestwidget
+  - /v6/docs/mg-quoterequestwidget
+  - /v6/docs/en/mg-quoterequestwidget
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-quoterequestwidget.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-quoterequestwidget.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-quoterequestwidget.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-quoterequestwidget.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-quoterequestwidget.html
 ---
 
 ## Upgrading from Version 1.x.x to Version 2.x.x

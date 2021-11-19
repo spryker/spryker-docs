@@ -10,6 +10,16 @@ redirect_from:
   - /2021080/docs/en/mg-product-packaging-unit-data-import
   - /docs/mg-product-packaging-unit-data-import
   - /docs/en/mg-product-packaging-unit-data-import
+  - /v4/docs/mg-product-packaging-unit-data-import
+  - /v4/docs/en/mg-product-packaging-unit-data-import
+  - /v5/docs/mg-product-packaging-unit-data-import
+  - /v5/docs/en/mg-product-packaging-unit-data-import
+  - /v6/docs/mg-product-packaging-unit-data-import
+  - /v6/docs/en/mg-product-packaging-unit-data-import
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-productpackagingunitdataimport.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productpackagingunitdataimport.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productpackagingunitdataimport.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productpackagingunitdataimport.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.0.0

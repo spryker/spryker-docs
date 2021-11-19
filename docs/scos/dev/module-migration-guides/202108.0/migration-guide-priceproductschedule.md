@@ -10,7 +10,17 @@ redirect_from:
   - /2021080/docs/en/mg-price-product-schedule
   - /docs/mg-price-product-schedule
   - /docs/en/mg-price-product-schedule
----
+  - /v4/docs/mg-price-product-schedule
+  - /v4/docs/en/mg-price-product-schedule
+  - /v5/docs/mg-price-product-schedule
+  - /v5/docs/en/mg-price-product-schedule
+  - /v6/docs/mg-price-product-schedule
+  - /v6/docs/en/mg-price-product-schedule
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-priceproductschedule.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-priceproductschedule.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-priceproductschedule.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-priceproductschedule.html
+  ---
 
 ## Upgrading from Version 1.* to Version 2.0.0
 

@@ -28,6 +28,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-salessplit.html
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-salessplit.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-salessplit.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-salessplit.html
 ---
 
 ## Upgrading from Version 3.* to Version 5.0.0

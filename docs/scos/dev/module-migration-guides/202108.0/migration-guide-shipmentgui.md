@@ -10,6 +10,16 @@ redirect_from:
   - /2021080/docs/en/mg-shipment-gui
   - /docs/mg-shipment-gui
   - /docs/en/mg-shipment-gui
+  - /v4/docs/mg-shipment-gui
+  - /v4/docs/en/mg-shipment-gui
+  - /v5/docs/mg-shipment-gui
+  - /v5/docs/en/mg-shipment-gui
+  - /v6/docs/mg-shipment-gui
+  - /v6/docs/en/mg-shipment-gui
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-shipmentgui.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-shipmentgui.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-shipmentgui.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-shipmentgui.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.0.0
@@ -39,15 +49,15 @@ src/Pyz/Zed/ShipmentGui/ShipmentGuiDependencyProvider.php
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\ShipmentGui;
- 
+
 use Spryker\Zed\Kernel\Communication\Form\FormTypeInterface;
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Money\Communication\Plugin\Form\MoneyCollectionFormTypePlugin;
 use Spryker\Zed\ShipmentGui\ShipmentGuiDependencyProvider as SprykerShipmentGuiDependencyProvider;
 use Spryker\Zed\Store\Communication\Plugin\Form\StoreRelationToggleFormTypePlugin;
- 
+
 class ShipmentGuiDependencyProvider extends SprykerShipmentGuiDependencyProvider
 {
     /**
@@ -59,7 +69,7 @@ class ShipmentGuiDependencyProvider extends SprykerShipmentGuiDependencyProvider
     {
         return new MoneyCollectionFormTypePlugin();
     }
- 
+
     /**
      * @return \Spryker\Zed\Kernel\Communication\Form\FormTypeInterface
      */

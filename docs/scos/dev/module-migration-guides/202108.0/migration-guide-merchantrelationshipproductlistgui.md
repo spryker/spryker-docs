@@ -10,6 +10,16 @@ redirect_from:
   - /2021080/docs/en/migration-guide-merchantrelationshipproductlistgui
   - /docs/migration-guide-merchantrelationshipproductlistgui
   - /docs/en/migration-guide-merchantrelationshipproductlistgui
+  - /v4/docs/migration-guide-merchantrelationshipproductlistgui
+  - /v4/docs/en/migration-guide-merchantrelationshipproductlistgui
+  - /v5/docs/migration-guide-merchantrelationshipproductlistgui
+  - /v5/docs/en/migration-guide-merchantrelationshipproductlistgui
+  - /v6/docs/migration-guide-merchantrelationshipproductlistgui
+  - /v6/docs/en/migration-guide-merchantrelationshipproductlistgui
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-merchantrelationshipproductlistgui.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-merchantrelationshipproductlistgui.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-merchantrelationshipproductlistgui.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-merchantrelationshipproductlistgui.html
 related:
   - title: Migration Guide - ProductListGui
     link: docs/scos/dev/module-migration-guides/page.version/migration-guide-productlistgui.html

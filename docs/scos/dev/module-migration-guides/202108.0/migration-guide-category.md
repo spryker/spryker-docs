@@ -28,6 +28,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-category.html
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-category.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-category.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-category.html
 related:
   - title: Creating Categories
     link: docs/scos/user/back-office-user-guides/page.version/catalog/category/creating-categories.html
@@ -82,7 +83,7 @@ To upgrade the `Category` module from version 4.* to 5.*:
 In case you have `src/Pyz/Zed/Category/Persistence/Propel/Schema/spy_category_template.schema.xml` file locally: if you've never changed it - remove it. If you have introduced changes to it - make sure to move them to `src/Pyz/Zed/Category/Persistence/Propel/Schema/spy_category.schema.xml` and then remove the file.
 
 {% endinfo_block %}
-   
+
 3. Update the database schema and the generated classes:
 
    ```bash

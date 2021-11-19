@@ -9,6 +9,22 @@ redirect_from:
   - /2021080/docs/en/mg-cmsstorage
   - /docs/mg-cmsstorage
   - /docs/en/mg-cmsstorage
+  - /v2/docs/mg-cmsstorage
+  - /v2/docs/en/mg-cmsstorage
+  - /v3/docs/mg-cmsstorage
+  - /v3/docs/en/mg-cmsstorage
+  - /v4/docs/mg-cmsstorage
+  - /v4/docs/en/mg-cmsstorage
+  - /v5/docs/mg-cmsstorage
+  - /v5/docs/en/mg-cmsstorage
+  - /v6/docs/mg-cmsstorage
+  - /v6/docs/en/mg-cmsstorage
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-cmsstorage.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-cmsstorage.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-cmsstorage.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-cmsstorage.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cmsstorage.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmsstorage.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*
@@ -16,7 +32,6 @@ redirect_from:
 Version 2.0.0 of the CmsStorage module introduces the [multi-store functionality](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
 
 **The main BC breaking changes are:**
-
 * Synchronization behavior
 * CMS Storage Dependency Provider return annotation
 

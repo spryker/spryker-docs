@@ -28,6 +28,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-cms-block-category-connector-migration-console.html
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-cms-block-category-connector-migration-console.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cms-block-category-connector-migration-console.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cms-block-category-connector-migration-console.html
 related:
   - title: Migration Guide - CMS Block Category Connector
     link: docs/scos/dev/module-migration-guides/page.version/migration-guide-cms-block-category-connector.html

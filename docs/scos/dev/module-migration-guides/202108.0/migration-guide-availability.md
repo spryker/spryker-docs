@@ -28,6 +28,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-availability.html
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-availability.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-availability.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-availability.html
 ---
 
 ## Upgrading from Version 8.* to Version 9.0.0

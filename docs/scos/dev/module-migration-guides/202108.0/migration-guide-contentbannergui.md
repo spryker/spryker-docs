@@ -9,6 +9,19 @@ redirect_from:
   - /2021080/docs/en/mg-contentbannergui-201907
   - /docs/mg-contentbannergui-201907
   - /docs/en/mg-contentbannergui-201907
+  - /v3/docs/mg-contentbannergui-201907
+  - /v3/docs/en/mg-contentbannergui-201907
+  - /v4/docs/mg-contentbannergui-201907
+  - /v4/docs/en/mg-contentbannergui-201907
+  - /v5/docs/mg-contentbannergui-201907
+  - /v5/docs/en/mg-contentbannergui-201907
+  - /v6/docs/mg-contentbannergui-201907
+  - /v6/docs/en/mg-contentbannergui-201907
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-contentbannergui.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-contentbannergui.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-contentbannergui.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-contentbannergui.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-contentbannergui.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

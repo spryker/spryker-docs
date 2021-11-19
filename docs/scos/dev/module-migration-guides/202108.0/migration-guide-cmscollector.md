@@ -28,6 +28,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-cmscollector.html
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-cmscollector.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cmscollector.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmscollector.html
 related:
   - title: Migration Guide - CMS Block
     link: docs/scos/dev/module-migration-guides/page.version/migration-guide-cmsblock.html

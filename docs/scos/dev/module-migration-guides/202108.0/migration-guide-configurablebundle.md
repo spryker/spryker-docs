@@ -10,10 +10,20 @@ redirect_from:
   - /2021080/docs/en/migration-guide-configurablebundle
   - /docs/migration-guide-configurablebundle
   - /docs/en/migration-guide-configurablebundle
+  - /v4/docs/migration-guide-configurablebundle
+  - /v4/docs/en/migration-guide-configurablebundle
+  - /v5/docs/migration-guide-configurablebundle
+  - /v5/docs/en/migration-guide-configurablebundle
+  - /v6/docs/migration-guide-configurablebundle
+  - /v6/docs/en/migration-guide-configurablebundle
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-configurablebundle.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-configurablebundle.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-configurablebundle.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-configurablebundle.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.0.0
- 
+
 `ConfigurableBundle` v2.0.0 provides extended database schema and additional plugins for interaction with other modules.
 
 The following details have been changed:

@@ -28,6 +28,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-sales.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-sales.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-sales.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-sales.html
 ---
 
 ## Upgrading from Version 10.* to Version 11.0.0

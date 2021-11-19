@@ -10,6 +10,16 @@ redirect_from:
   - /2021080/docs/en/migration-guide-cmsblockwidget
   - /docs/migration-guide-cmsblockwidget
   - /docs/en/migration-guide-cmsblockwidget
+  - /v4/docs/migration-guide-cmsblockwidget
+  - /v4/docs/en/migration-guide-cmsblockwidget
+  - /v5/docs/migration-guide-cmsblockwidget
+  - /v5/docs/en/migration-guide-cmsblockwidget
+  - /v6/docs/migration-guide-cmsblockwidget
+  - /v6/docs/en/migration-guide-cmsblockwidget
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-cmsblockwidget.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-cmsblockwidget.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cmsblockwidget.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmsblockwidget.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

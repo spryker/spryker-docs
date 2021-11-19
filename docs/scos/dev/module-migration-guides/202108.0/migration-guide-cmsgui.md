@@ -9,6 +9,22 @@ redirect_from:
   - /2021080/docs/en/migration-guide-cmsgui
   - /docs/migration-guide-cmsgui
   - /docs/en/migration-guide-cmsgui
+  - /v2/docs/mg-cms-gui
+  - /v2/docs/en/mg-cms-gui
+  - /v3/docs/mg-cms-gui
+  - /v3/docs/en/mg-cms-gui
+  - /v4/docs/mg-cms-gui
+  - /v4/docs/en/mg-cms-gui
+  - /v5/docs/mg-cms-gui
+  - /v5/docs/en/mg-cms-gui
+  - /v6/docs/mg-cms-gui
+  - /v6/docs/en/mg-cms-gui
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-api-module.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-api-module.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-api-module.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-api-module.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-api-module.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-api-module.html
 ---
 
 ## Upgrading from Version 4.* to Version 5.*

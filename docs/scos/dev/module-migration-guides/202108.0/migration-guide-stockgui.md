@@ -10,6 +10,16 @@ redirect_from:
   - /2021080/docs/en/mg-stockgui
   - /docs/mg-stockgui
   - /docs/en/mg-stockgui
+  - /v4/docs/mg-stockgui
+  - /v4/docs/en/mg-stockgui
+  - /v5/docs/mg-stockgui
+  - /v5/docs/en/mg-stockgui
+  - /v6/docs/mg-stockgui
+  - /v6/docs/en/mg-stockgui
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-stockgui.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-stockgui.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-stockgui.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-stockgui.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.0.0

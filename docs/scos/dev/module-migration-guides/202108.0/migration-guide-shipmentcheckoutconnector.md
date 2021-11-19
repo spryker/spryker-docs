@@ -10,6 +10,16 @@ redirect_from:
   - /2021080/docs/en/mg-shipment-checkout-connector
   - /docs/mg-shipment-checkout-connector
   - /docs/en/mg-shipment-checkout-connector
+  - /v4/docs/mg-shipment-checkout-connector
+  - /v4/docs/en/mg-shipment-checkout-connector
+  - /v5/docs/mg-shipment-checkout-connector
+  - /v5/docs/en/mg-shipment-checkout-connector
+  - /v6/docs/mg-shipment-checkout-connector
+  - /v6/docs/en/mg-shipment-checkout-connector
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-shipmentcheckoutconnector.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-shipmentcheckoutconnector.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-shipmentcheckoutconnector.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-shipmentcheckoutconnector.html
 ---
 
 ## Upgrading from Version 1.0.* to Version 2.0.0

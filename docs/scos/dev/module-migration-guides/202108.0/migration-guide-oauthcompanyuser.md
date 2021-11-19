@@ -9,6 +9,19 @@ redirect_from:
   - /2021080/docs/en/mg-oauthcompanyuser
   - /docs/mg-oauthcompanyuser
   - /docs/en/mg-oauthcompanyuser
+  - /v3/docs/mg-oauthcompanyuser
+  - /v3/docs/en/mg-oauthcompanyuser
+  - /v4/docs/mg-oauthcompanyuser
+  - /v4/docs/en/mg-oauthcompanyuser
+  - /v5/docs/mg-oauthcompanyuser
+  - /v5/docs/en/mg-oauthcompanyuser
+  - /v6/docs/mg-oauthcompanyuser
+  - /v6/docs/en/mg-oauthcompanyuser
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-oauthcompanyuser.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-oauthcompanyuser.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-oauthcompanyuser.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-oauthcompanyuser.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-oauthcompanyuser.html
 ---
 
 ## Upgrading from Version 1.x.x to 2.x.x

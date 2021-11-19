@@ -9,6 +9,21 @@ redirect_from:
   - /2021080/docs/en/mg-quick-order-page
   - /docs/mg-quick-order-page
   - /docs/en/mg-quick-order-page
+  - /v2/docs/mg-quick-order-page
+  - /v2/docs/en/mg-quick-order-page
+  - /v3/docs/mg-quick-order-page
+  - /v3/docs/en/mg-quick-order-page
+  - /v4/docs/mg-quick-order-page
+  - /v4/docs/en/mg-quick-order-page
+  - /v5/docs/mg-quick-order-page
+  - /v5/docs/en/mg-quick-order-page
+  - /v6/docs/mg-quick-order-page
+  - /v6/docs/en/mg-quick-order-page
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-quickorderpage.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-quickorderpage.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-quickorderpage.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-quickorderpage.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-quickorderpage.html
 ---
 
 ## Upgrading from Version 2.* to Version 4.0.0

@@ -28,6 +28,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-payment.html
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-payment.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-payment.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-payment.html
 related:
   - title: Migration Guide - CheckoutRestApi
     link: docs/scos/dev/module-migration-guides/page.version/glue-api/migration-guide-checkoutrestapi.html

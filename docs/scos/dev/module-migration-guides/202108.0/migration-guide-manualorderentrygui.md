@@ -10,6 +10,16 @@ redirect_from:
   - /2021080/docs/en/mg-manual-order-entry-gui
   - /docs/mg-manual-order-entry-gui
   - /docs/en/mg-manual-order-entry-gui
+  - /v4/docs/mg-manual-order-entry-gui
+  - /v4/docs/en/mg-manual-order-entry-gui
+  - /v5/docs/mg-manual-order-entry-gui
+  - /v5/docs/en/mg-manual-order-entry-gui
+  - /v6/docs/mg-manual-order-entry-gui
+  - /v6/docs/en/mg-manual-order-entry-gui
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-manualorderentrygui.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-manualorderentrygui.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-manualorderentrygui.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-manualorderentrygui.html
 related:
   - title: Migration Guide - Shipment
     link: docs/scos/dev/module-migration-guides/page.version/migration-guide-shipment.html

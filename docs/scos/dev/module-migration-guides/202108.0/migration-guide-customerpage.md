@@ -10,6 +10,16 @@ redirect_from:
   - /2021080/docs/en/mg-customerpage
   - /docs/mg-customerpage
   - /docs/en/mg-customerpage
+  - /v4/docs/mg-customerpage
+  - /v4/docs/en/mg-customerpage
+  - /v5/docs/mg-customerpage
+  - /v5/docs/en/mg-customerpage
+  - /v6/docs/mg-customerpage
+  - /v6/docs/en/mg-customerpage
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-customerpage.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-customerpage.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-customerpage.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-customerpage.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.0.0

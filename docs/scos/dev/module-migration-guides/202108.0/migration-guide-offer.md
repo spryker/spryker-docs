@@ -28,7 +28,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-offer.html
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-offer.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-offer.html
-
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-offer.html
 ---
 
 ## Upgrading from Version 0.1.* to Version 0.3.0

@@ -28,6 +28,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-shipmentdiscountconnector.html
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-shipmentdiscountconnector.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-shipmentdiscountconnector.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-shipmentdiscountconnector.html
 ---
 
 ## Upgrading from Version 3.0.* Version to 4.0.0

@@ -10,6 +10,16 @@ redirect_from:
   - /2021080/docs/en/mg-cart-variant
   - /docs/mg-cart-variant
   - /docs/en/mg-cart-variant
+  - /v4/docs/mg-cart-variant
+  - /v4/docs/en/mg-cart-variant
+  - /v4/docs/mg-cart-variant
+  - /v4/docs/en/mg-cart-variant
+  - /v4/docs/mg-cart-variant
+  - /v4/docs/en/mg-cart-variant
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-cartvariant.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-cartvariant.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cartvariant.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cartvariant.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.0.0

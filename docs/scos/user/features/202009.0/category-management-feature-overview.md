@@ -33,7 +33,7 @@ In the image below, the Cameras & Camcorders parent category has the Digital Cam
 
 A Back Office user defines the visual representation of a category on the Storefront by assigning a template to the category. For information on how to do that, see [Creating categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html).
 
-For more information about types of category templates, see [Category page template types](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html#reference-information-createing-a-category).
+For more information about types of category templates, see [Category page template types](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html).
 
 ## Category filters
 

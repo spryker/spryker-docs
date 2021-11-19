@@ -570,7 +570,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 To show the Easycredit info on the Product Details page, at the Summary and Payment steps, you have to extend some views on the project level .
 
-You can find some examples below in `[`payment.twig`](#payment-step)`, [`summary.twig`](#summary-step) and [`pdp.twig`](#pdp-page).
+You can find some examples below in `payment.twig`, `summary.twig` and `pdp.twig`.
 
 <details open>
 <summary markdown='span'>payment.twig</summary>

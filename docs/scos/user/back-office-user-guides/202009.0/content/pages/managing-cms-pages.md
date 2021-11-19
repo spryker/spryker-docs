@@ -64,7 +64,7 @@ You can publish your page either from the **Overview of CMS Pages** page or from
 1. On the **Overview of CMS Pages** page, click **Publish** in the _Actions_ column.
 2. The page will be successfully published.
 
-**To publish a page from the Edit Placeholders editor**, see the [Editing Placeholders](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/editing-cms-pages.html#selecting-the-placeholders-option) section.
+**To publish a page from the Edit Placeholders editor**, see the [Editing Placeholders](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/editing-cms-pages.html#selecting-the-edit-gt-placeholders-option) section.
 
 ## Viewing a Page
 To view a page:

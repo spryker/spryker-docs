@@ -10,11 +10,29 @@ redirect_from:
   - /2021080/docs/en/mg-transfer
   - /docs/mg-transfer
   - /docs/en/mg-transfer
+  - /v1/docs/mg-transfer
+  - /v1/docs/en/mg-transfer
+  - /v2/docs/mg-transfer
+  - /v2/docs/en/mg-transfer
+  - /v3/docs/mg-transfer
+  - /v3/docs/en/mg-transfer
+  - /v4/docs/mg-transfer
+  - /v4/docs/en/mg-transfer
+  - /v5/docs/mg-transfer
+  - /v5/docs/en/mg-transfer
+  - /v6/docs/mg-transfer
+  - /v6/docs/en/mg-transfer
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-transfer.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-transfer.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-transfer.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-transfer.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-transfer.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-transfer.html
 ---
 
 ## Upgrading from Version 2.* to Version 3.*
 
-When upgrading to the new major version of the `Transfer` module, it is necessary to make sure that everywhere the `$foo->fromArray($bar->toArray())` statement is used and the types are matching. 
+When upgrading to the new major version of the `Transfer` module, it is necessary to make sure that everywhere the `$foo->fromArray($bar->toArray())` statement is used and the types are matching.
 
 From now on we are no longer silently ignoring when you try to set a string to an array field and an exception is getting thrown instead.
 

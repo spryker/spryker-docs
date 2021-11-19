@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-pub-and-sync
   - /docs/mg-pub-and-sync
   - /docs/en/mg-pub-and-sync
+  - /v1/docs/mg-pub-and-sync
+  - /v1/docs/en/mg-pub-and-sync
+  - /v2/docs/mg-pub-and-sync
+  - /v2/docs/en/mg-pub-and-sync
+  - /v3/docs/mg-pub-and-sync
+  - /v3/docs/en/mg-pub-and-sync
+  - /v4/docs/mg-pub-and-sync
+  - /v4/docs/en/mg-pub-and-sync
+  - /v5/docs/mg-pub-and-sync
+  - /v5/docs/en/mg-pub-and-sync
+  - /v6/docs/mg-pub-and-sync
+  - /v6/docs/en/mg-pub-and-sync
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-publish-and-synchronization.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-publish-and-synchronization.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-publish-and-synchronization.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-publish-and-synchronization.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-publish-and-synchronization.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-publish-and-synchronization.html
 ---
 
 ## Upgrading from Version 0.* to Version 1.*

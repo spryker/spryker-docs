@@ -37,7 +37,7 @@ console transfer:generate
 
 3. Enable the following expander plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | `CompanyUnitAddressExpanderPlugin` | Expands address transfer with company unit address data. | None | `\SprykerShop\Yves\CompanyPage\Plugin\CheckoutPage\CompanyUnitAddressExpanderPlugin` |
 | `CustomerAddressExpanderPlugin` | Expands address transfer with customer address data. | None | `\SprykerShop\Yves\CustomerPage\Plugin\CheckoutPage\CustomerAddressExpanderPlugin` |

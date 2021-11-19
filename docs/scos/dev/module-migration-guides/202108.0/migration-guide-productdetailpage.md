@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-product-details-page
   - /docs/mg-product-details-page
   - /docs/en/mg-product-details-page
+  - /v1/docs/mg-product-details-page
+  - /v1/docs/en/mg-product-details-page
+  - /v1/docs/mg-product-details-page
+  - /v1/docs/en/mg-product-details-page
+  - /v1/docs/mg-product-details-page
+  - /v1/docs/en/mg-product-details-page
+  - /v1/docs/mg-product-details-page
+  - /v1/docs/en/mg-product-details-page
+  - /v1/docs/mg-product-details-page
+  - /v1/docs/en/mg-product-details-page
+  - /v1/docs/mg-product-details-page
+  - /v1/docs/en/mg-product-details-page
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-productdetailpage.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-productdetailpage.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-productdetailpage.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-productdetailpage.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productdetailpage.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productdetailpage.html
 ---
 
 ## Upgrading from Version 1.* to Version 3.0.0

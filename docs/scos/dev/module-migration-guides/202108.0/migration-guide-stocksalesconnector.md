@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-stock-sales-connector
   - /docs/mg-stock-sales-connector
   - /docs/en/mg-stock-sales-connector
+  - /v1/docs/mg-stock-sales-connector
+  - /v1/docs/en/mg-stock-sales-connector
+  - /v2/docs/mg-stock-sales-connector
+  - /v2/docs/en/mg-stock-sales-connector
+  - /v3/docs/mg-stock-sales-connector
+  - /v3/docs/en/mg-stock-sales-connector
+  - /v4/docs/mg-stock-sales-connector
+  - /v4/docs/en/mg-stock-sales-connector
+  - /v5/docs/mg-stock-sales-connector
+  - /v5/docs/en/mg-stock-sales-connector
+  - /v6/docs/mg-stock-sales-connector
+  - /v6/docs/en/mg-stock-sales-connector
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-stock.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-stock.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-stock.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-stock.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-stock.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-stock.html
 ---
 
 ## Upgrading from Version 3.* to Version 5.0.0

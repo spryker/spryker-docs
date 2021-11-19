@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-sales
   - /docs/mg-sales
   - /docs/en/mg-sales
+  - /v1/docs/mg-sales
+  - /v1/docs/en/mg-sales
+  - /v2/docs/mg-sales
+  - /v2/docs/en/mg-sales
+  - /v3/docs/mg-sales
+  - /v3/docs/en/mg-sales
+  - /v4/docs/mg-sales
+  - /v4/docs/en/mg-sales
+  - /v5/docs/mg-sales
+  - /v5/docs/en/mg-sales
+  - /v6/docs/mg-sales
+  - /v6/docs/en/mg-sales
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-sales.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-sales.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-sales.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-sales.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-sales.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-sales.html
 ---
 
 ## Upgrading from Version 10.* to Version 11.0.0
@@ -48,7 +66,7 @@ console transfer:generate
 
 4. Enable the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | `ProductBundleOptionOrderExpanderPlugin` | Expands sales order bundle items by product options. | None | `\Spryker\Zed\ProductBundle\Communication\Plugin\Sales\ProductBundleOptionOrderExpanderPlugin` |
 | `UniqueOrderBundleItemsExpanderPlugin` | Expands the provided array of `ItemTransfers` with product bundles. | None | `\Spryker\Zed\ProductBundle\Communication\Plugin\Sales\UniqueOrderBundleItemsExpanderPlugin` |

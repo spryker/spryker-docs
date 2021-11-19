@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-product-relation-collector
   - /docs/mg-product-relation-collector
   - /docs/en/mg-product-relation-collector
+  - /v1/docs/mg-product-relation-collector
+  - /v1/docs/en/mg-product-relation-collector
+  - /v2/docs/mg-product-relation-collector
+  - /v2/docs/en/mg-product-relation-collector
+  - /v3/docs/mg-product-relation-collector
+  - /v3/docs/en/mg-product-relation-collector
+  - /v4/docs/mg-product-relation-collector
+  - /v4/docs/en/mg-product-relation-collector
+  - /v5/docs/mg-product-relation-collector
+  - /v5/docs/en/mg-product-relation-collector
+  - /v6/docs/mg-product-relation-collector
+  - /v6s/docs/en/mg-product-relation-collector
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-productrelationcollector.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-productrelationcollector.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-productrelationcollector.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-productrelationcollector.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productrelationcollector.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productrelationcollector.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

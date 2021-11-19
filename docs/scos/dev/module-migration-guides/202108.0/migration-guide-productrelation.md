@@ -10,11 +10,29 @@ redirect_from:
   - /2021080/docs/en/migration-guide-productrelation
   - /docs/migration-guide-productrelation
   - /docs/en/migration-guide-productrelation
+  - /v1/docs/mg-product-relation
+  - /v1/docs/en/mg-product-relation
+  - /v2/docs/mg-product-relation
+  - /v2/docs/en/mg-product-relation
+  - /v3/docs/mg-product-relation
+  - /v3/docs/en/mg-product-relation
+  - /v4/docs/mg-product-relation
+  - /v4/docs/en/mg-product-relation
+  - /v5/docs/migration-guide-productrelation
+  - /v5/docs/en/migration-guide-productrelation
+  - /v6/docs/migration-guide-productrelation
+  - /v6/docs/en/migration-guide-productrelation
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-product-relation.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-product-relation.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-product-relation.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-productrelation.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productrelation.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productrelation.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*
 
-In version 2 we have added multi-currency support. First of all, make sure that you [migrated the Price module](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-price.html). We have changed Zed table to use `PriceProductFacade` for retrieving product prices. We have also changed `\Spryker\Client\ProductRelation\Storage\ProductRelationStorage` to resolve ProductRelation prices based on the selected currency, price mode combination. If you modified this class in project or extended it, you may want adapt to core version.
+In vers ion 2 we have added multi-currency support. First of all, make sure that you [migrated the Price module](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-price.html). We have changed Zed table to use `PriceProductFacade` for retrieving product prices. We have also changed `\Spryker\Client\ProductRelation\Storage\ProductRelationStorage` to resolve ProductRelation prices based on the selected currency, price mode combination. If you modified this class in project or extended it, you may want adapt to core version.
 
 
 

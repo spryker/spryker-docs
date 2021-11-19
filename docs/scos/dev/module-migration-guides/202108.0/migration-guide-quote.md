@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-quote
   - /docs/mg-quote
   - /docs/en/mg-quote
+  - /v1/docs/mg-quote
+  - /v1/docs/en/mg-quote
+  - /v2/docs/mg-quote
+  - /v2/docs/en/mg-quote
+  - /v3/docs/mg-quote
+  - /v3/docs/en/mg-quote
+  - /v4/docs/mg-quote
+  - /v4/docs/en/mg-quote
+  - /v5/docs/mg-quote
+  - /v5/docs/en/mg-quote
+  - /v6/docs/mg-quote
+  - /v6/docs/en/mg-quote
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-quote.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-quote.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-quote.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-quote.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-quote.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-quote.html
 related:
   - title: Migration Guide - Cart
     link: docs/scos/dev/module-migration-guides/page.version/migration-guide-cart.html

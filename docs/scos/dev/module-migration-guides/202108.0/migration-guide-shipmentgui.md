@@ -30,7 +30,7 @@ console transfer:generate
 ```
 3. Register the following form plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | `MoneyCollectionFormTypePlugin` | Represents the money collection fields based on stores, currencies, and price types defined in the system. | None | `Spryker\Zed\Money\Communication\Plugin\Form` |
 | `StoreRelationToggleFormTypePlugin` | Represents a store relation toggle form based on stores registered in the system. | None | `Spryker\Zed\Store\Communication\Plugin\Form` |

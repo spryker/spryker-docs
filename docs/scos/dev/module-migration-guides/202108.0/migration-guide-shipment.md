@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-shipment
   - /docs/mg-shipment
   - /docs/en/mg-shipment
+  - /v1/docs/mg-shipment
+  - /v1/docs/en/mg-shipment
+  - /v2/docs/mg-shipment
+  - /v2/docs/en/mg-shipment
+  - /v3/docs/mg-shipment
+  - /v3/docs/en/mg-shipment
+  - /v4/docs/mg-shipment
+  - /v4/docs/en/mg-shipment
+  - /v5/docs/mg-shipment
+  - /v5/docs/en/mg-shipment
+  - /v6/docs/mg-shipment
+  - /v6/docs/en/mg-shipment
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-shipment.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-shipment.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-shipment.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-shipment.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-shipment.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-shipment.html
 related:
   - title: "Reference information: Shipment method plugins"
     link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
@@ -81,7 +99,7 @@ console transfer:generate
 
 4. Enable the following plugins:
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | `GiftCardShipmentGroupMethodFilterPlugin` | Filters available shipment methods for a shipment group. | None | `\Spryker\Zed\GiftCard\Communication\Plugin\Shipment\GiftCardShipmentGroupMethodFilterPlugin` |
 | `ShipmentOrderMailExpanderPlugin` | Expands order mail transfer data with shipment groups data. | None | `\Spryker\Zed\Shipment\Dependency\Plugin\Oms\ShipmentOrderMailExpanderPlugin` |

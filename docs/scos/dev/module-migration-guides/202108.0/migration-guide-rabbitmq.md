@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-rabbitmq
   - /docs/mg-rabbitmq
   - /docs/en/mg-rabbitmq
+  - /v1/docs/mg-rabbitmq
+  - /v1/docs/en/mg-rabbitmq
+  - /v2/docs/mg-rabbitmq
+  - /v2/docs/en/mg-rabbitmq
+  - /v3/docs/mg-rabbitmq
+  - /v3/docs/en/mg-rabbitmq
+  - /v4/docs/mg-rabbitmq
+  - /v4/docs/en/mg-rabbitmq
+  - /v5/docs/mg-rabbitmq
+  - /v5/docs/en/mg-rabbitmq
+  - /v6/docs/mg-rabbitmq
+  - /v6/docs/en/mg-rabbitmq
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-rabbitmq.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-rabbitmq.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-rabbitmq.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-rabbitmq.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-rabbitmq.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-rabbitmq.html
 ---
 
 ## Upgrading from Version 0.* to Version 1.*

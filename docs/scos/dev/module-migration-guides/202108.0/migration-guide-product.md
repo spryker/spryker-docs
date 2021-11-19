@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-product
   - /docs/mg-product
   - /docs/en/mg-product
+  - /v1/docs/mg-product
+  - /v1/docs/en/mg-product
+  - /v2/docs/mg-product
+  - /v2/docs/en/mg-product
+  - /v3/docs/mg-product
+  - /v3/docs/en/mg-product
+  - /v4/docs/mg-product
+  - /v4/docs/en/mg-product
+  - /v5/docs/mg-product
+  - /v5/docs/en/mg-product
+  - /v6/docs/mg-product
+  - /v6/docs/en/mg-product
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-product.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-product.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-product.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-product.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-product.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-product.html
 related:
   - title: Migration Guide - Collector
     link: docs/scos/dev/module-migration-guides/page.version/migration-guide-collector.html
@@ -63,15 +81,15 @@ MySQL:
 INSERT INTO spy_product_abstract_store (fk_product_abstract, fk_store)
   SELECT id_product_abstract, id_store FROM spy_product_abstract, spy_store;
  ```
- 
+
 8. Product collector multi-store setup (if you have multi-stores
     1. Amend collector queries both for Search and Storage to include the information if the abstract product is available in the current store. You will need to `LEFT JOIN` the `spy_product_abstract_store` table to the selector queries on the abstract product and for the current store. Define the `spy_product_abstract_store.fk_store` column as `is_in_store` in the result (this name is a suggestion, feel free to choose an other name).
 
 **Explanation**
 The modification should not affect the number of found rows, but add information if the currently found abstract product is available in the current store or not. When the `is_in_store` is `NOT NULL`, the abstract product exists in the current store. When the `is_in_store` is `NULL`, the abstract product does not exist in the current store.
- 
+
 **Example implementation:**
-    
+
 ```php
 <?php
 namespace Pyz\Zed\Collector\Persistence\Search\Pdo\MySql;

@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-sales-split
   - /docs/mg-sales-split
   - /docs/en/mg-sales-split
+  - /v1/docs/mg-sales-split
+  - /v1/docs/en/mg-sales-split
+  - /v2/docs/mg-sales-split
+  - /v2/docs/en/mg-sales-split
+  - /v3/docs/mg-sales-split
+  - /v3/docs/en/mg-sales-split
+  - /v4/docs/mg-sales-split
+  - /v4/docs/en/mg-sales-split
+  - /v5/docs/mg-sales-split
+  - /v5/docs/en/mg-sales-split
+  - /v6/docs/mg-sales-split
+  - /v6/docs/en/mg-sales-split
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-salessplit.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-salessplit.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-salessplit.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-salessplit.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-salessplit.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-salessplit.html
 ---
 
 ## Upgrading from Version 3.* to Version 5.0.0

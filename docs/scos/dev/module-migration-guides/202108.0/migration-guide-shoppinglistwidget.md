@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-shopping-list-widget
   - /docs/mg-shopping-list-widget
   - /docs/en/mg-shopping-list-widget
+  - /v1/docs/mg-shopping-list-widget
+  - /v1/docs/en/mg-shopping-list-widget
+  - /v2/docs/mg-shopping-list-widget
+  - /v2/docs/en/mg-shopping-list-widget
+  - /v3/docs/mg-shopping-list-widget
+  - /v3/docs/en/mg-shopping-list-widget
+  - /v4/docs/mg-shopping-list-widget
+  - /v4/docs/en/mg-shopping-list-widget
+  - /v5/docs/mg-shopping-list-widget
+  - /v5/docs/en/mg-shopping-list-widget
+  - /v6/docs/mg-shopping-list-widget
+  - /v6/docs/en/mg-shopping-list-widget
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-shoppinglistwidget.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-shoppinglistwidget.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-shoppinglistwidget.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-shoppinglistwidget.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-shoppinglistwidget.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-shoppinglistwidget.html
 ---
 
 ## Upgrading from Version 0.4.* to Version 0.6.0

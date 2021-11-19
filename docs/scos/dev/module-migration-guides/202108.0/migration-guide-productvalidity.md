@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-product-validity
   - /docs/mg-product-validity
   - /docs/en/mg-product-validity
+  - /v1/docs/mg-product-validity
+  - /v1/docs/en/mg-product-validity
+  - /v2/docs/mg-product-validity
+  - /v2/docs/en/mg-product-validity
+  - /v3/docs/mg-product-validity
+  - /v3/docs/en/mg-product-validity
+  - /v4/docs/mg-product-validity
+  - /v4/docs/en/mg-product-validity
+  - /v5/docs/mg-product-validity
+  - /v5/docs/en/mg-product-validity
+  - /v6/docs/mg-product-validity
+  - /v6/docs/en/mg-product-validity
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-productvalidity.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-productvalidity.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-productvalidity.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-productvalidity.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productvalidity.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productvalidity.html
 ---
 
 ## Installing Version 1.*
@@ -20,7 +38,6 @@ The ProductValidity module is responsible for (de)activation of products for (or
 
 We have added a new [spy_product_validity](https://github.com/spryker/demoshop/commit/4fff838#diff-dbd7f860d235b1eaf9516e5127e656db) database table (the query can be checked [by following this link](https://github.com/spryker/demoshop/commit/4fff838#diff-99a822ed42bf42d4e81be47bc8e9829c)).
 To start the database migration, run the following commands:
-
 * `vendor/bin/console propel:diff` - manual review is necessary for the generated migration file.
 * `vendor/bin/console propel:migrate`
 * `vendor/bin/console propel:model:build`
@@ -58,6 +75,7 @@ $jobs[] = [
     'stores' => $allStores,
 ];
 ```
+
 {% info_block infoBox "Info" %}
 
 Check out our [Demoshop implementation](https://github.com/spryker/demoshop/commit/4fff838#diff-c1676e93a12b1edc23bd32cc28cababc) for implementation example.

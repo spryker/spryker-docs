@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-product-discount-connector
   - /docs/mg-product-discount-connector
   - /docs/en/mg-product-discount-connector
+  - /v1/docs/mg-product-discount-connector
+  - /v1/docs/en/mg-product-discount-connector
+  - /v2/docs/mg-product-discount-connector
+  - /v2/docs/en/mg-product-discount-connector
+  - /v3/docs/mg-product-discount-connector
+  - /v3/docs/en/mg-product-discount-connector
+  - /v4/docs/mg-product-discount-connector
+  - /v4/docs/en/mg-product-discount-connector
+  - /v5/docs/mg-product-discount-connector
+  - /v5/docs/en/mg-product-discount-connector
+  - /v6/docs/mg-product-discount-connector
+  - /v6/docs/en/mg-product-discount-connector
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-productdiscountconnector.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-productdiscountconnector.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-productdiscountconnector.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-productdiscountconnector.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productdiscountconnector.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productdiscountconnector.html
 ---
 
 ## Upgrading from Version 3.* to Version 5.0.0

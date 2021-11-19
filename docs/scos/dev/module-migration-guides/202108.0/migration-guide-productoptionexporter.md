@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-product-option-exporter
   - /docs/mg-product-option-exporter
   - /docs/en/mg-product-option-exporter
+  - /v1/docs/mg-product-option-exporter
+  - /v1/docs/en/mg-product-option-exporter
+  - /v1/docs/mg-product-option-exporter
+  - /v1/docs/en/mg-product-option-exporter
+  - /v1/docs/mg-product-option-exporter
+  - /v1/docs/en/mg-product-option-exporter
+  - /v1/docs/mg-product-option-exporter
+  - /v1/docs/en/mg-product-option-exporter
+  - /v1/docs/mg-product-option-exporter
+  - /v1/docs/en/mg-product-option-exporter
+  - /v1/docs/mg-product-option-exporter
+  - /v1/docs/en/mg-product-option-exporter
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-productoptionexporter.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-productoptionexporter.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-productoptionexporter.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productoptionexporter.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productoptionexporter.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productoptionexporter.html
 related:
   - title: Migration Guide - Product
     link: docs/scos/dev/module-migration-guides/page.version/migration-guide-product.html

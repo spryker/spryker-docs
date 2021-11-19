@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-price-cart-connector
   - /docs/mg-price-cart-connector
   - /docs/en/mg-price-cart-connector
+  - /v1/docs/mg-price-cart-connector
+  - /v1/docs/en/mg-price-cart-connector
+  - /v2/docs/mg-price-cart-connector
+  - /v2/docs/en/mg-price-cart-connector
+  - /v3/docs/mg-price-cart-connector
+  - /v3/docs/en/mg-price-cart-connector
+  - /v4/docs/mg-price-cart-connector
+  - /v4/docs/en/mg-price-cart-connector
+  - /v5/docs/mg-price-cart-connector
+  - /v5/docs/en/mg-price-cart-connector
+  - /v6/docs/mg-price-cart-connector
+  - /v6/docs/en/mg-price-cart-connector
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-pricecartconnector.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-pricecartconnector.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-pricecartconnector.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-pricecartconnector.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-pricecartconnector.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-pricecartconnector.html
 related:
   - title: Migration Guide - Price
     link: docs/scos/dev/module-migration-guides/page.version/migration-guide-price.html
@@ -22,6 +40,7 @@ related:
 {% info_block infoBox %}
 
 In order to dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://spryker.com/en/support/) if you have any questions.
+
 {% endinfo_block %}
 
 

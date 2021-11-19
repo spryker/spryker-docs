@@ -130,7 +130,7 @@ console publish:trigger-events -r merchant
 9. Register the following form plugins:
 
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | MerchantCheckoutPreConditionPlugin | Validates merchants in the cart for offer items. | None | Spryker\Zed\Merchant\Communication\Plugin\Checkout |
 | MerchantCartPreCheckPlugin | Validates merchant in the add to cart action for offer item. | None | Spryker\Zed\Merchant\Communication\Plugin\Cart |

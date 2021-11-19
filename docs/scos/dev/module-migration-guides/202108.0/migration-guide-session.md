@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/migration-guide-session
   - /docs/migration-guide-session
   - /docs/en/migration-guide-session
+  - /v1/docs/mg-session
+  - /v1/docs/en/mg-session
+  - /v2/docs/mg-session
+  - /v2/docs/en/mg-session
+  - /v3/docs/mg-session
+  - /v3/docs/en/mg-session
+  - /v4/docs/mg-session
+  - /v4/docs/en/mg-session
+  - /v5/docs/mg-session
+  - /v5/docs/en/mg-session
+  - /v6/docs/mg-session
+  - /v6/docs/en/mg-session
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-session.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-session.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-session.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-session.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-session.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-session.html
 ---
 
 {% info_block errorBox %}

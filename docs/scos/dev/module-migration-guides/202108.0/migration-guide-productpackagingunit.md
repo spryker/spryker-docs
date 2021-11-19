@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-product-packaging-unit
   - /docs/mg-product-packaging-unit
   - /docs/en/mg-product-packaging-unit
+  - /v1/docs/mg-product-packaging-unit
+  - /v1/docs/en/mg-product-packaging-unit
+  - /v1/docs/mg-product-packaging-unit
+  - /v1/docs/en/mg-product-packaging-unit
+  - /v1/docs/mg-product-packaging-unit
+  - /v1/docs/en/mg-product-packaging-unit
+  - /v1/docs/mg-product-packaging-unit
+  - /v1/docs/en/mg-product-packaging-unit
+  - /v1/docs/mg-product-packaging-unit
+  - /v1/docs/en/mg-product-packaging-unit
+  - /v1/docs/mg-product-packaging-unit
+  - /v1/docs/en/mg-product-packaging-unit
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-productpackagingunit.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-productpackagingunit.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-productpackagingunit.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-productpackagingunit.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productpackagingunit.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productpackagingunit.html
 ---
 
 ## Upgrading from Version 3.* to Version 4.0.0

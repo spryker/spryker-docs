@@ -10,6 +10,24 @@ redirect_from:
   - /2021080/docs/en/mg-wishlist
   - /docs/mg-wishlist
   - /docs/en/mg-wishlist
+  - /v1/docs/mg-wishlist
+  - /v1/docs/en/mg-wishlist
+  - /v2/docs/mg-wishlist
+  - /v2/docs/en/mg-wishlist
+  - /v3/docs/mg-wishlist
+  - /v3/docs/en/mg-wishlist
+  - /v4/docs/mg-wishlist
+  - /v4/docs/en/mg-wishlist
+  - /v5/docs/mg-wishlist
+  - /v5/docs/en/mg-wishlist
+  - /v6/docs/mg-wishlist
+  - /v6/docs/en/mg-wishlist
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-wishlist.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-wishlist.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-wishlist.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-wishlist.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-wishlist.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-wishlist.html
 related:
   - title: Migration Guide - Cart
     link: docs/scos/dev/module-migration-guides/page.version/migration-guide-cart.html

@@ -113,7 +113,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 }
 ```
 
-You should be able now to see the `abstract product-store` relations in the Product Information Management (PIM) Back Office. However, you will not able to manage / change anything yet. If you would like to enable the entire multi-store product behavior, see [Multi-Store Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/multi-store-products-feature-integration.html).
+You should be able now to see the `abstract product-store` relations in the Product Information Management (PIM) Back Office. However, you will not able to manage / change anything yet. If you would like to enable the entire multi-store product behavior, see [Multi-Store Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/multi-store-products-feature-integration.html).
 
 ## Upgrading from Version 0.8.* to Version 0.9.*
 

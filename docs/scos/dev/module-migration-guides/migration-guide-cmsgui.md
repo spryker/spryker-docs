@@ -29,7 +29,7 @@ redirect_from:
 
 ## Upgrading from Version 4.* to Version 5.*
 
-Version 5 of the CMSGui module introduces the [multi-store functionality](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
+Version 5 of the CMSGui module introduces the [multi-store functionality](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
 
 {% info_block errorBox %}
 

@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-payment.html
 related:
   - title: Migration Guide - CheckoutRestApi
-    link: docs/scos/dev/module-migration-guides/page.version/glue-api/migration-guide-checkoutrestapi.html
+    link: docs/scos/dev/module-migration-guides/glue-api/migration-guide-checkoutrestapi.html
 ---
 
 ## Upgrading from Version 4.* to Version 5.0.0

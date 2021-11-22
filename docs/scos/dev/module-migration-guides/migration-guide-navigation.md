@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-navigation.html
 related:
   - title: Migration Guide - NavigationGui
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-navigationgui.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-navigationgui.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

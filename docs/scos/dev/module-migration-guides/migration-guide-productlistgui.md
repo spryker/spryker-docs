@@ -22,7 +22,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-priceproductschedulegui.html
 related:
   - title: Migration Guide - MerchantRelationshipProductListGui
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-merchantrelationshipproductlistgui.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-merchantrelationshipproductlistgui.html
 ---
 
 ## Upgrading from Version 2.* to Version 3.*

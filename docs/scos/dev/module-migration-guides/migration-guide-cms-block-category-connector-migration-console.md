@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cms-block-category-connector-migration-console.html
 related:
   - title: Migration Guide - CMS Block Category Connector
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-cms-block-category-connector.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-cms-block-category-connector.html
 ---
 
 ## CMS Block Category Connector Migration script

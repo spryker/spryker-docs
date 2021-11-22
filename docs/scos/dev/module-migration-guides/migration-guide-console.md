@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-console.html
 related:
   - title: Migration Guide - Collector
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-collector.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-collector.html
 ---
 
 {% info_block errorBox "Prerequisites" %}

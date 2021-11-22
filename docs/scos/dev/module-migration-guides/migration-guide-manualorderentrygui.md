@@ -22,7 +22,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-manualorderentrygui.html
 related:
   - title: Migration Guide - Shipment
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-shipment.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-shipment.html
 ---
 
 ## Upgrading from Version 0.8.* to Version 0.9.0

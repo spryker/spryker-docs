@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-catalog.html
 related:
   - title: Migration Guide - Category
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-category.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-category.html
 ---
 
 ## Upgrading from version 5.5* to version 5.6*

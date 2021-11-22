@@ -31,9 +31,9 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productoption.html
 related:
   - title: Migration Guide - Currency
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-currency.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-currency.html
   - title: Migration Guide - Product Option Cart Connector
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-productoptioncartconnector.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-productoptioncartconnector.html
 ---
 
 ## Upgrading from Version 6.* to Version 8.0.0

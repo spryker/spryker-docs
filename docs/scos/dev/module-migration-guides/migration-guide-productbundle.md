@@ -31,9 +31,9 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productbundle.html
 related:
   - title: Migration Guide - Price
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-price.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-price.html
   - title: Migration Guide - Product
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-product.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-product.html
 ---
 
 ## Upgrading from Version 6.* to Version 7.0.0

@@ -31,9 +31,9 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productlabelgui.html
 related:
   - title: Migration Guide - Product
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-product.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-product.html
   - title: Migration Guide - Product Label
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-productlabel.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-productlabel.html
 ---
 
 ## Upgrading from version 2.* to version 3.*

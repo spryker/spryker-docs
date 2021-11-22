@@ -31,13 +31,13 @@ redirect_from:
   - /dev/module-migration-guides/202108.0/migration-guide-discountcalculatorconnector.html
 related:
   - title: Migration Guide - Discount
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-discount.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-discount.html
   - title: Creating Vouchers
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/creating-vouchers.html
   - title: Migration Guide - Tax
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-tax.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-tax.html
   - title: Migration Guide - DiscountSalesAggregatorConnector
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-discountsalesaggregatorconnector.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-discountsalesaggregatorconnector.html
 ---
 
 ## Upgrading from Version 4.* to Version 5.*

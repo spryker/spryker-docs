@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-salesaggregator.html
 related:
   - title: Migration Guide - Sales
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-sales.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-sales.html
 ---
 
 ## Upgrading from Version 4.* to Version 5.*

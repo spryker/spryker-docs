@@ -32,7 +32,7 @@ redirect_from:
 
 related:
   - title: Migration Guide - Discount
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-discount.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-discount.html
 ---
 
 ## Upgrading from Version 2.* to Version 3.*

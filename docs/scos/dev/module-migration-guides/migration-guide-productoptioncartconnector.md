@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productoptioncartconnector.html
 related:
   - title: Migration Guide - Product Option
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-productoption.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-productoption.html
 ---
 
 ## Upgrading from Version 5.* to Version 7.0.0

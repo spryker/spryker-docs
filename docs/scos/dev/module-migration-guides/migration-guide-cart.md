@@ -32,7 +32,7 @@ redirect_from:
 
 related:
   - title: Migration Guide - Quote
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-quote.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-quote.html
 ---
 
 ## Upgrading from Version 5.* to Version 7.0.0

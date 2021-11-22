@@ -31,9 +31,9 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmsblockgui.html
 related:
   - title: Migration Guide - CMS Block
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-cmsblock.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html
   - title: Migration Guide - CMS Block Collector
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-cms-block-collector.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-cms-block-collector.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

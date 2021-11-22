@@ -31,9 +31,9 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-product.html
 related:
   - title: Migration Guide - Collector
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-collector.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-collector.html
   - title: Migration Guide - ProductManagement
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-productmanagement.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-productmanagement.html
 ---
 
 ## Upgrading from Version 5.* to Version 6.*

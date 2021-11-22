@@ -31,13 +31,13 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productoptiondiscountconnector.html
 related:
   - title: Migration Guide - Product
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-product.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-product.html
   - title: Migration Guide - Product Label
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-productlabel.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-productlabel.html
   - title: Migration Guide - Product Bundle
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-productbundle.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-productbundle.html
   - title: Migration Guide - Product Label GUI
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-productlabelgui.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-productlabelgui.html
 ---
 
 ## Upgrading from Version 2.* to Version 3.*

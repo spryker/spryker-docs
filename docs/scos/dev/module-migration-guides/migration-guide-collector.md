@@ -31,7 +31,7 @@ redirect_from:
   - docs/scos/dev/module-migration-guides/202108.0/migration-guide-collector.html
 related:
   - title: Migration Guide - Touch
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-touch.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-touch.html
 ---
 
 ## Upgrading from Version 5.* to Version 6.*

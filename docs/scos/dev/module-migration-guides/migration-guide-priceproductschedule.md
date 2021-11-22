@@ -20,7 +20,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-priceproductschedule.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-priceproductschedule.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-priceproductschedule.html
-  ---
+---
 
 ## Upgrading from Version 1.* to Version 2.0.0
 

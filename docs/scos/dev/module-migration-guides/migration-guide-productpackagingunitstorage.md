@@ -23,9 +23,9 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-productpackagingunitstorage.html
   - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-productpackagingunitstorage.html
   - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-productpackagingunitstorage.html
-  /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productpackagingunitstorage.html
-  /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productpackagingunitstorage.html
-  /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productpackagingunitstorage.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productpackagingunitstorage.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productpackagingunitstorage.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productpackagingunitstorage.html
 ---
 
 ## Upgrading from Version 4.* to Version 5.0.0

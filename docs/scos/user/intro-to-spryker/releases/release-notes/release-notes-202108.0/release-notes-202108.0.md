@@ -181,7 +181,7 @@ The **Configurable Bundle** endpoints allow you to create representations that e
 * [Adding a configurable bundle to a registered user’s cart](/docs/scos/dev/glue-api-guides/202108.0/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart)
 * [Changing quantity of configurable bundles in a registered user’s cart](/docs/scos/dev/glue-api-guides/202108.0/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#change-quantity-of-configurable-bundles-in-a-registered-users-carts-cart)
 * [Removing a configurable bundle from a registered user’s cart](/docs/scos/dev/glue-api-guides/202108.0/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#remove-a-configurable-bundle-from-a-registered-users-cart)
-* [Checking our purchases with configurable bundles](/docs/scos/dev/glue-api-guides/202108.0/checking-out/checking-out-purchase.html)
+* [Checking our purchases with configurable bundles](/docs/scos/dev/glue-api-guides/202108.0/checking-out/checking-out-purchases.html)
 * [Retrieving orders with configurable bundles](/docs/scos/dev/glue-api-guides/202108.0/retrieving-orders.html)
 
 

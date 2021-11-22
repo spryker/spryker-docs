@@ -197,7 +197,7 @@ Each export execution generates at minimum three different .csv files: orders.cs
 A new console `data:export command` was implemented to be able to export these .csv order files.
 
 #### Documentation
-[Data Export](/docs/scos/dev/data-export/202009.0/data-export-orders-.csv-files-forma.html)
+[Data Export](/docs/scos/dev/data-export/202009.0/data-export-orders-.csv-files-format.html)
 
 ## Spryker Glue API
 We continue to add support for new storefront APIs.

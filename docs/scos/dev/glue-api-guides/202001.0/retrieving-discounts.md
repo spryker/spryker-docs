@@ -1,5 +1,5 @@
 ---
-title: Discounts and Promotions
+title: Retrieving Discounts
 last_updated: Aug 13, 2020
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/retrieving-discounts
@@ -7,6 +7,7 @@ originalArticleId: 1527ed38-1a7f-47cb-bd0f-007a9b7367fb
 redirect_from:
   - /v4/docs/retrieving-discounts
   - /v4/docs/en/retrieving-discounts
+  - /docs/scos/dev/glue-api-guides/202001.0/discounts-and-promotions.html
 related:
   - title: Promotions & Discounts feature overview
     link: docs/scos/user/features/page.version/promotions-discounts-feature-overview.html

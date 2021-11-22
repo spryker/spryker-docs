@@ -2226,7 +2226,7 @@ entries:
     - title: Migration Guide - ConfigurableBundle
       url: /docs/scos/dev/module-migration-guides/migration-guide-configurablebundle.html
     - title: Migration Guide - ProductListGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productlistgui.html"
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productlistgui.html
     - title: Migration Guide - ProductDetailPage
       url: /docs/scos/dev/module-migration-guides/migration-guide-productdetailpage.html
     - title: Migration Guide - Discount

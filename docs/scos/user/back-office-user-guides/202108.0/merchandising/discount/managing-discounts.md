@@ -21,7 +21,7 @@ To manage discounts, navigate to **Merchandising** > **Discount**.
 ## Editing a discount
 
 To edit a discount, do the following:
-1. On the **Overview of Discounts** page, click **Edit** in the _Actions_ column.
+1. On the *Overview of Discounts* page, click **Edit** in the _Actions_ column.
 2. Update the attributes and click **Save**.
 
 {% info_block infoBox %}

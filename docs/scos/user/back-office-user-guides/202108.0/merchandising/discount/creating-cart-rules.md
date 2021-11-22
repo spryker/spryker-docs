@@ -28,33 +28,33 @@ To start working with discounts, go to **Merchandising** > **Discount**.
 To create a cart rule discount:
 1. On the *Discount* page, in the top right corner, click **Create new discount**.
 2. On the *Create Discount* page, in the *General information* tab, do the following:
-    1. In **STORE RELATION**, check the stores you wish the discount to be active in.
-    2. From the **DISCOUNT TYPE** drop-down list, select a cart rule.
-    3. In the **NAME** field, specify the name for the discount.
-    4. _Optional_: in the **DESCRIPTION** field, enter the description of the discount.
-    5. _Optional_: in the **PRIORITY** field, enter an integer value from 1 to 9999 for the discount priority. For reference information, in the Creating a voucher guide, see the [Discount Overview page](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#discount-overview-page) section.
+    1. In *STORE RELATION*, check the stores you wish the discount to be active in.
+    2. From the *DISCOUNT TYPE* drop-down list, select a cart rule.
+    3. In the *NAME* field, specify the name for the discount.
+    4. _Optional_: in the *DESCRIPTION* field, enter the description of the discount.
+    5. _Optional_: in the *PRIORITY* field, enter an integer value from 1 to 9999 for the discount priority. For reference information, in the Creating a voucher guide, see the [Discount Overview page](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#discount-overview-page) section.
     6. Specify if the discount is exclusive. For reference information, in the Creating a voucher guide, see the [Discount Overview page](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#discount-overview-page) section.
     7. Specify the validity interval (lifetime) of the discount.
 * Click **Next** or select the *Discount calculation* tab to proceed.
 
 * On the *Create Discount* page, in the *Discount calculation* tab, do the following:
-    1.  In the **CALCULATOR TYPE** drop-down, select either *Percentage* or *Fixed amount*. For reference information, in the Creating a voucher guide, see the [Discount calculation tab](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#discount-calculation-tab) section.
+    1.  In the *CALCULATOR TYPE* drop-down, select either *Percentage* or *Fixed amount*. For reference information, in the Creating a voucher guide, see the [Discount calculation tab](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#discount-calculation-tab) section.
 
         {% info_block warningBox "Note" %}
 
         The next step varies based on the selected calculator type:
 
-          a. **Fixed amount**: Enter the prices to be discounted.
+          a. *Fixed amount*: Enter the prices to be discounted.
           
-          b.  **Percentage**: Enter the values (percentage) to be discounted.
+          b. *Percentage*: Enter the values (percentage) to be discounted.
 
         {% endinfo_block %}
 
-    2. Select the **DISCOUNT APPLICATION TYPE** and define what products the discount will be applied to. For reference information, in the Creating a voucher guide, see the [Discount calculation tab](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#discount-calculation-tab) section.
+    2. Select the *DISCOUNT APPLICATION TYPE* and define what products the discount will be applied to. For reference information, in the Creating a voucher guide, see the [Discount calculation tab](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#discount-calculation-tab) section.
  * Click **Next**, or select the **Conditions** tab to proceed.
  * On the *Create Discount* page, in the *Conditions* tab, do the following:
-    1. Select the **APPLY WHEN** conditions or click **Plain query** and enter the query manually. For reference information, in the Creating a voucher guide, see the [Conditions](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#conditions) section.
-    2. Enter the value for **THE DISCOUNT CAN BE APPLIED IF THE QUERY APPLIED FOR AT LEAST X ITEM(S).** field.
+    1. Select the *APPLY WHEN* conditions or click **Plain query** and enter the query manually. For reference information, in the Creating a voucher guide, see the [Conditions](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#conditions) section.
+    2. Enter the value for *THE DISCOUNT CAN BE APPLIED IF THE QUERY APPLIED FOR AT LEAST X ITEM(S).* field.
 * Click **Save** to create the new discount.
 
 

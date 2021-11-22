@@ -2448,7 +2448,7 @@ entries:
     - title: Migration Guide - ShipmentGui
       url: /docs/scos/dev/module-migration-guides/migration-guide-shipmentgui.html
     - title: Migration Guide - Product Relation
-      url: /docs/scos/dev/module-migration-guides/migration-guide-product-relation.html
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productrelation.html
     - title: Migration Guide - Form
       url: /docs/scos/dev/module-migration-guides/migration-guide-form.html
     - title: Migration Guide - Locale

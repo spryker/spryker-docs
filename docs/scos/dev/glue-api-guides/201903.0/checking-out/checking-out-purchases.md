@@ -38,7 +38,7 @@ A request should contain:
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
 | customer | RestCustomersRegisterRequestData | ✓ | Information about the customer<br>For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html). |
-| idCart | RestAddressesRequestData | ✓ | ID of the customer's cart<br>For details, see [Managing Carts of Registered Users](https://documentation.spryker.com/v2/docs/managing-carts-of-registered-users-201907). |
+| idCart | RestAddressesRequestData | ✓ | ID of the customer's cart<br>For details, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html). |
 | billingAddress | RestAddressesRequestData |  ✓| Customer's billing address<br>For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html). |
 | shippingAddress | RestAddressesRequestData |  ✓| Customer's shipping address<br>For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html). |
 | payments | RestPayment | ✓| Payment options, such as the payment system, method of payment, etc<br>For details, see [Payment Step](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html#payment-step). |

@@ -24,7 +24,7 @@ related:
 In corporate environments, where users act as company representatives rather than private buyers, companies can leverage [Company Roles](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html) in order to distribute scopes and permissions among [Company Users](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html). To identify which roles company users are assigned to, you can use the endpoints provided by the **Company Role API**.
 
 {% info_block warningBox "Authentication" %}
-The endpoints provided by this API cannot be accessed anonymously. To access them, you need to impersonate users as **Company Accounts** and pass the authentication tokens received. For details on how to authenticate and retrieve such a token, see [Logging In as Company User](https://documentation.spryker.com/v3/docs/logging-in-as-company-user-201907).
+The endpoints provided by this API cannot be accessed anonymously. To access them, you need to impersonate users as **Company Accounts** and pass the authentication tokens received. For details on how to authenticate and retrieve such a token, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html).
 {% endinfo_block %}
 
 In your development, the endpoint can help you to identify the roles existing in the company of the currently logged in user.
@@ -194,7 +194,7 @@ The response will include the following additional attributes:
 | Code | Reason |
 | --- | --- |
 | 401 | The access token is invalid. |
-| 403 | The access token is missing.<br>- OR -<br>The current Company Account is not set.<br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](https://documentation.spryker.com/v3/docs/logging-in-as-company-user-201907). |
+| 403 | The access token is missing.<br>- OR -<br>The current Company Account is not set.<br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html). |
 | 404 | The specified role was not found or the user does not have access to it. |
 
 <!-- add to related articles:

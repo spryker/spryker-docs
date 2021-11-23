@@ -64,74 +64,74 @@ Please visit our [Partners Registry](https://spryker.com/find-a-partner/) for a 
 
 ### Customer Retention & Loyalty
 
-* [Namogoo](/docs/scos/user/technology-partners/201907.0/marketing-and-conversion/customer-retention-and-loyalty/namogoo.html) 
+* [Namogoo](/docs/scos/user/technology-partners/201907.0/marketing-and-conversion/customer-retention-and-loyalty/namogoo.html)
 * [Trustpilot](/docs/scos/user/technology-partners/201907.0/marketing-and-conversion/customer-retention-and-loyalty/trustpilot.html)
 * [Zenloop](/docs/scos/user/technology-partners/201907.0/marketing-and-conversion/customer-retention-and-loyalty/zenloop.html)
 
 ### Personalization & Cross-Selling
 
 <!--* [8Select](/docs/scos/user/technology-partners/201907.0/marketing-and-conversion/personalization-and-cross-selling/8select.html)-->
-<!--* [Contentserv](https://documentation.spryker.com/v3/docs/)-->
-* [Econda](https://documentation.spryker.com/v3/docs/econda)
-* [Nosto](https://documentation.spryker.com/v3/docs/nosto)
-* [trbo](https://documentation.spryker.com/v3/docs/trbo)
+<!--* [Contentserv](/docs/scos/user/technology-partners/202108.0/marketing-and-conversion/personalization-and-cross-selling/contentserv.html)-->
+* [Econda](/docs/scos/user/technology-partners/202108.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda.html)
+* [Nosto](/docs/scos/user/technology-partners/202108.0/marketing-and-conversion/personalization-and-cross-selling/nosto.html)
+* [trbo](/docs/scos/user/technology-partners/202108.0/marketing-and-conversion/personalization-and-cross-selling/trbo.html)
 
 ## Marketplace Integrations
 
-* [ChannelPilot Marketplace](https://documentation.spryker.com/v3/docs/channelpilot)
+* [ChannelPilot Marketplace](/docs/scos/user/technology-partners/202108.0/marketplace-integrations/channelpilot-marketplace.html)
 
 ## Order Management (ERP/OMS)
 
-* [Tradebyte](https://documentation.spryker.com/v3/docs/tradebyte)
-* [Punchout Catalogs](https://documentation.spryker.com/v3/docs/punchout-catalogs)
+* [Tradebyte](/docs/scos/user/technology-partners/202108.0/order-management-erpoms/tradebyte.html)
+* [Punchout Catalogs](/docs/scos/user/technology-partners/202108.0/order-management-erpoms/punchout-catalogs/punchout-catalogs.html)
 
 ## Operational Tools
 
-<!--* [Common Solutions](https://documentation.spryker.com/v3/docs/common-solutions)-->
-* [Data Virtuality](https://documentation.spryker.com/v3/docs/datavirtuality)
-* [Loggly](https://documentation.spryker.com/v3/docs/loggly-queue)
-* [New Relic](https://documentation.spryker.com/v3/docs/new-relic)
-* [Proclane](https://documentation.spryker.com/v3/docs/proclane)
-* [PlusServer](https://documentation.spryker.com/v3/docs/plusserver)
-* [Tideways](https://documentation.spryker.com/v3/docs/tideways)
-* [Usercentrics](https://documentation.spryker.com/v3/docs/usercentrics)
-* [VSHN](https://documentation.spryker.com/v3/docs/vshn)
-<!--* [Mindcurv](https://documentation.spryker.com/v3/docs/mindcurv)-->
-<!--* [Shopmacher](https://documentation.spryker.com/v3/docs/shopmacher)-->
+<!--* [Common Solutions](/docs/scos/user/technology-partners/202108.0/operational-tools-monitoring-legal-etc/common-solutions.html)-->
+* [Data Virtuality](/docs/scos/user/technology-partners/202108.0/operational-tools-monitoring-legal-etc/data-virtuality.html)
+* [Loggly](/docs/scos/user/technology-partners/202108.0/operational-tools-monitoring-legal-etc/loggly.html)
+* [New Relic](/docs/scos/user/technology-partners/202108.0/operational-tools-monitoring-legal-etc/new-relic.html)
+* [Proclane](/docs/scos/user/technology-partners/202108.0/operational-tools-monitoring-legal-etc/proclane.html)
+* [PlusServer](/docs/scos/user/technology-partners/202108.0/operational-tools-monitoring-legal-etc/plusserver.html)
+* [Tideways](/docs/scos/user/technology-partners/202108.0/operational-tools-monitoring-legal-etc/tideways.html)
+* [Usercentrics](/docs/scos/user/technology-partners/202108.0/operational-tools-monitoring-legal-etc/usercentrics.html)
+* [VSHN](/docs/scos/user/technology-partners/202108.0/operational-tools-monitoring-legal-etc/vshn.html)
+<!--* [Mindcurv](/docs/scos/user/technology-partners/202108.0/operational-tools-monitoring-legal-etc/mindcurv.html)-->
+<!--* [Shopmacher](/docs/scos/user/technology-partners/202108.0/operational-tools-monitoring-legal-etc/shopmacher.html)-->
 
 
 ## Payment Partners
 
-* [Adyen](https://documentation.spryker.com/v3/docs/adyen)
-* [Amazon Pay](https://documentation.spryker.com/v3/docs/amazon-pay)
-* [AfterPay](https://documentation.spryker.com/v3/docs/afterpay)
-* [Arvato](https://documentation.spryker.com/v3/docs/arvato)
-* [Billie](https://documentation.spryker.com/v3/docs/billie)
-* [Billpay](https://documentation.spryker.com/v3/docs/billpay) 
-* [Braintree](https://documentation.spryker.com/v3/docs/braintree)
-* [BS Payone](https://documentation.spryker.com/v3/docs/payone-v1-1)
-* [Computop](https://documentation.spryker.com/v3/docs/computop)
-* [CrefoPay](https://documentation.spryker.com/v3/docs/crefopay)
-* [Heidelpay](https://documentation.spryker.com/v3/docs/heidelpay)
-<!--* [Informa Solutions](https://documentation.spryker.com/v3/docs/informa-solutions)-->
-* [Klarna](https://documentation.spryker.com/v3/docs/klarna)
-* [Payone](https://documentation.spryker.com/v3/docs/payolution)
-* [Powerpay](https://documentation.spryker.com/v3/docs/powerpay)
-* [Ratenkauf by Easycredit](https://documentation.spryker.com/v3/docs/ratenkauf-by-easycredit)
-* [RatePAY](https://documentation.spryker.com/v3/docs/ratepay)
+* [Adyen](/docs/scos/user/technology-partners/202108.0/payment-partners/adyen/adyen.html)
+* [Amazon Pay](/docs/scos/user/technology-partners/202108.0/payment-partners/amazon-pay/amazon-pay.html)
+* [AfterPay](/docs/scos/user/technology-partners/202108.0/payment-partners/afterpay/afterpay.html)
+* [Arvato](/docs/scos/user/technology-partners/202108.0/payment-partners/arvato/arvato.html)
+* [Billie](/docs/scos/user/technology-partners/202108.0/payment-partners/billie.html)
+* [Billpay](/docs/scos/user/technology-partners/202108.0/payment-partners/billpay/billpay.html)
+* [Braintree](/docs/scos/user/technology-partners/202108.0/payment-partners/braintree/braintree.html)
+* [BS Payone](/docs/scos/user/technology-partners/202108.0/payment-partners/braintree/braintree.html)
+* [Computop](/docs/scos/user/technology-partners/202108.0/payment-partners/computop/computop.html)
+* [CrefoPay](/docs/scos/user/technology-partners/202108.0/payment-partners/computop/computop.html)
+* [Heidelpay](/docs/scos/user/technology-partners/202108.0/payment-partners/heidelpay/heidelpay.html)
+<!--* [Informa Solutions](/docs/scos/user/technology-partners/202108.0/payment-partners/informa-solutions.html)-->
+* [Klarna](/docs/scos/user/technology-partners/202108.0/payment-partners/klarna/klarna.html)
+* [Payone](/docs/scos/user/technology-partners/202108.0/payment-partners/payolution/payolution.html)
+* [Powerpay](/docs/scos/user/technology-partners/202108.0/payment-partners/powerpay.html)
+* [Ratenkauf by Easycredit](docs/scos/user/technology-partners/202108.0/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html)
+* [RatePAY](/docs/scos/user/technology-partners/202108.0/payment-partners/ratepay/ratepay.html)
 
  ## Poduct Information (PIM/ERP)
 
-* [Akeneo](https://documentation.spryker.com/v3/docs/akeneo)
-* [Xentral](https://documentation.spryker.com/v3/docs/xentral)
-<!--* [Censhare](https://documentation.spryker.com/v3/docs/)-->
-<!--* [Contentserv](https://documentation.spryker.com/v3/docs/contentserv)-->
-<!--* [Tradebyte](https://documentation.spryker.com/v3/docs/tradebyte)-->
+* [Akeneo](/docs/scos/user/technology-partners/202108.0/product-information-pimerp/akeneo/akeneo.html)
+* [Xentral](/docs/scos/user/technology-partners/202108.0/product-information-pimerp/xentral.html)
+<!--* [Censhare](/docs/scos/user/technology-partners/202108.0/content-management/censhare.html)-->
+<!--* [Contentserv](/docs/scos/user/technology-partners/202108.0/marketing-and-conversion/personalization-and-cross-selling/contentserv.html)-->
+<!--* [Tradebyte](/docs/scos/user/technology-partners/202108.0/order-management-erpoms/tradebyte.html)-->
 
  ## Shipment
 
-* [Paazl](https://documentation.spryker.com/v3/docs/paazl) 
-* [Paqato](https://documentation.spryker.com/v3/docs/paqato)
-* [Seven Senders](https://documentation.spryker.com/v3/docs/sevensenders)
+* [Paazl](/docs/scos/user/technology-partners/202108.0/shipment/paazl.html)
+* [Paqato](/docs/scos/user/technology-partners/202108.0/shipment/paqato.html)
+* [Seven Senders](/docs/scos/user/technology-partners/202108.0/shipment/seven-senders.html)
 
 Become a partner now!

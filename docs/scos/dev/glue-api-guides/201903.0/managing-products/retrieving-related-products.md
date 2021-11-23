@@ -313,7 +313,7 @@ Sample request: `GET http://mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493
 where `1ce91011-8d60-59ef-9fe0-4493ef3628b2` is the ID of the cart you need items for.
 
 {% info_block infoBox %}
-For details on peculiarities of managing carts of registered users, see [Managing Carts of Registered Users](https://documentation.spryker.com/v2/docs/managing-carts-of-registered-users-201907).
+For details on peculiarities of managing carts of registered users, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html).
 {% endinfo_block %}
 
 ### Response

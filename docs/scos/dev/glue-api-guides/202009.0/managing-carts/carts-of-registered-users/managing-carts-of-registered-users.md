@@ -1757,7 +1757,7 @@ To retrieve a particular cart, send the request:
 
 | Path parameter | Description |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
+| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-registered-users-carts) to get it. |
 
 ### Request
 
@@ -2846,7 +2846,7 @@ You can edit the name of the cart, change the currency and price mode. To do tha
 
 | Path parameter | Description |
 | --- | --- |
-| ***cart_uuid*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
+| ***cart_uuid*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-registered-users-carts) to get it. |
 
 
 
@@ -2937,7 +2937,7 @@ To delete a cart, send the request:
 
 | Path parameter | Description |
 | --- | --- |
-| ***cart_uuid*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
+| ***cart_uuid*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-registered-users-carts) to get it. |
 
 
 

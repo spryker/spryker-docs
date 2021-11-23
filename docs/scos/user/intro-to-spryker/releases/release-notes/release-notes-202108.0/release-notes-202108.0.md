@@ -99,14 +99,14 @@ The Docker SDK supports defining if Xdebug is to be built in Docker images. By d
 The Docker SDK supports defining [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) for the Glue API application. You can define it in the `groups: applications: endpoints: cors-allow-origin:` section of the desired Deploy file.
 
 #### Documentation
-[Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/202108.0/deploy-file-reference-1.0.html#groups-applications-endpoints-)
+[Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/202108.0/deploy-file-reference-1.0.html#groups-applications-endpoints)
 
 ### Accessing private repositories via SSH agent
 
 The Docker SDK supports accessing private repositories via SSH agent. Private repository credentials are provided by SSH agent. They are used only when building images. You can use SSH agent for development environments and CI/CD pipelines.
 
 #### Documentation
-[Configuring access to private repositories](/docs/scos/dev/the-docker-sdk/202108.0/configuring-access-to-private-repositories.html#configuring-access-to-private-repositories)
+[Configuring access to private repositories](/docs/scos/dev/the-docker-sdk/202108.0/configuring-access-to-private-repositories.html)
 
 ### Graceful handling of SIGTERM and SIGSTOP
 
@@ -179,7 +179,7 @@ The **Configurable Bundle** endpoints allow you to create representations that e
 * [Changing quantity of configurable bundles in a guest cart](/docs/scos/dev/glue-api-guides/202108.0/managing-carts/guest-carts/managing-guest-cart-items.html#change-quantity-of-configurable-bundles-in-a-guest-cart)
 * [Removing a configurable bundle from a guest cart](/docs/scos/dev/glue-api-guides/202108.0/managing-carts/guest-carts/managing-guest-cart-items.html#remove-a-configurable-bundle-from-a-guest-cart)
 * [Adding a configurable bundle to a registered user’s cart](/docs/scos/dev/glue-api-guides/202108.0/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart)
-* [Changing quantity of configurable bundles in a registered user’s cart](/docs/scos/dev/glue-api-guides/202108.0/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#change-quantity-of-configurable-bundles-in-a-registered-users-carts-cart)
+* [Changing quantity of configurable bundles in a registered user’s cart](/docs/scos/dev/glue-api-guides/202108.0/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#change-quantity-of-configurable-bundles-in-a-registered-users-cart)
 * [Removing a configurable bundle from a registered user’s cart](/docs/scos/dev/glue-api-guides/202108.0/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#remove-a-configurable-bundle-from-a-registered-users-cart)
 * [Checking our purchases with configurable bundles](/docs/scos/dev/glue-api-guides/202108.0/checking-out/checking-out-purchases.html)
 * [Retrieving orders with configurable bundles](/docs/scos/dev/glue-api-guides/202108.0/retrieving-orders.html)

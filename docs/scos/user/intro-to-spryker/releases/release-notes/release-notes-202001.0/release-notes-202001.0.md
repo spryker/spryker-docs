@@ -169,7 +169,7 @@ Navigation vanity URLs are paramount for marketing purposes. To extend your navi
 
 #### Documentation
 
-* [Assigning Guest Cart to Registered Customer](/docs/scos/dev/glue-api-guides/202001.0/managing-carts/guest-carts/managing-guest-carts.html#assign-a-guest-cart-to-a-registered-customer)
+* [Assigning Guest Cart to Registered Customer](/docs/scos/dev/glue-api-guides/202001.0/managing-carts/guest-carts/managing-guest-carts.html#assigning-guest-cart-to--registered-customer)
 * [Getting the list of protected resources](/docs/scos/dev/glue-api-guides/202001.0/retrieving-protected-resources.html)
 * [Managing Customer Access to API Resources](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/managing-customer-access-to-glue-api-resources.html)
 

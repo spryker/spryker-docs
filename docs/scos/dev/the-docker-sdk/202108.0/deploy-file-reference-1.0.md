@@ -209,7 +209,7 @@ Defines the list of *Regions*.
 
 <a name="regions-services"></a>
 * `regions: services:` - defines settings for *Region*-specific `services:`. Only `database:` and `mail: sender:` are allowed here.
-	* `regions: services: database:` - see [database:](#database).
+	* `regions: services: database:` - see `database:` on this page.
 	* `regions: services: mail: sender:` - defines the mail sender configuration. Possible values are `name:` and `email:`.
 * `regions: stores:` - defines the list of *Stores*.
 <a name="regions-stores-services"></a>

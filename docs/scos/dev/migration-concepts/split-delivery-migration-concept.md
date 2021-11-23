@@ -50,7 +50,7 @@ console transfer:generate
 
 4. Follow individual migration guides of the modules listed below:
 
-* [Shipment](/docs/scos/dev/module-migration-guides/migration-guide-shipment.html#upgrading-from-version-6-to-version-700)
+* [Shipment](/docs/scos/dev/module-migration-guides/migration-guide-shipment.html#upgrading-from-version-6-to-version-7)
 * [CustomerPage](/docs/scos/dev/module-migration-guides/migration-guide-customerpage.html#upgrading-from-version-1-to-version-200)
 
 The following table lists the modules affected by the Split Delivery update:

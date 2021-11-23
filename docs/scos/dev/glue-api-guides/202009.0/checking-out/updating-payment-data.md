@@ -16,7 +16,7 @@ When [checking out purchases](/docs/scos/dev/glue-api-guides/{{page.version}}/ch
 
 It is the responsibility of the API Client to redirect the customer to the page and capture the response. For information on how to process it, see the payment service provider's API reference.
 
-The formats of the payloads used in the request and response to the third-party page are defined by the Eco layer module that implements the interaction with the payment provider. See [3. Implement Payload Processor Plugin](/docs/scos/dev/tutorials-and-howtos/202009.0/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html#3-implement-payload-processor-plugin) to learn more.
+The formats of the payloads used in the request and response to the third-party page are defined by the Eco layer module that implements the interaction with the payment provider. See [3. Implement Payload Processor Plugin](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html#implement-payload-processor-plugin) to learn more.
 
 
 **Interaction Diagram**

@@ -136,10 +136,14 @@ entries:
     - title: Company Account
       url: /docs/scos/dev/feature-walkthroughs/company-account-feature-walkthrough/company-account-feature-walkthrough.html
       nested:
-      - title: Company account- module relations
+      - title: Company account - module relations
         url: /docs/scos/dev/feature-walkthroughs/company-account-feature-walkthrough/company-account-module-relations.html
       - title: Customer Login by Token reference information
         url: /docs/scos/dev/feature-walkthroughs/company-account-feature-walkthrough/customer-login-by-token-reference-information.html
+      - title: Disabling accounts switch for Business on Behalf
+        url: /docs/scos/dev/feature-walkthroughs/company-account-feature-walkthrough/disabling-accounts-switch-for-business-on-behalf.html
+        include_versions:
+        - "201907.0"
     - title: Product Options
       url: /docs/scos/dev/feature-walkthroughs/product-options-feature-walkthrough.html
     - title: Tax
@@ -205,7 +209,7 @@ entries:
       - "202108.0"
       - "202009.0"
       nested:
-      - title: Content Item Types- Module Relations
+      - title: Content Item Types - Module Relations
         url: /docs/scos/dev/feature-walkthroughs/content-items-feature-walkthrough/content-item-types-module-relations.html
         include_versions:
         - "201907.0"
@@ -213,6 +217,10 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
+      - title: Enabling the CMS content widgets button in the WYSIWYG Editor
+        url: /docs/scos/dev/feature-walkthroughs/content-items-feature-walkthrough/enabling-cms-content-widgets-button.html
+        include_versions:
+        - "201907.0"
     - title: Resource Sharing
       url: /docs/scos/dev/feature-walkthroughs/resource-sharing-feature-walkthrough.html
       include_versions:
@@ -329,7 +337,13 @@ entries:
       - title: Product Sets
         url: /docs/scos/dev/feature-walkthroughs/product-sets-feature-walkthrough/product-sets-feature-walkthrough.html
     - title: Quick Add to Cart
-      url: /docs/scos/dev/feature-walkthroughs/quick-add-to-cart-feature-walkthrough.html
+      url: /docs/scos/dev/feature-walkthroughs/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html
+      nested:
+      - title: Configuring separators and default number raws
+        url: /docs/scos/dev/feature-walkthroughs/quick-add-to-cart-feature-walkthrough/configuring-separators-and-default-number-rows.html
+        include_versions:
+        - "201903.0"
+        - "201907.0"
     - title: Scheduled Prices
       url: /docs/scos/dev/feature-walkthroughs/scheduled-prices-feature-walkthrough.html
       include_versions:
@@ -2139,79 +2153,34 @@ entries:
         url: /docs/scos/dev/module-migration-guides/glue-api/catalogsearchrestapi-migration-guide.html
       - title: Migration Guide - NavigationsRestApi
         url: /docs/scos/dev/module-migration-guides/glue-api/migration-guide-navigationsrestapi.html
-        include_versions:
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
       - title: CompanyUsersRestApi Migration Guide
         url: /docs/scos/dev/module-migration-guides/glue-api/companyusersrestapi-migration-guide.html
-        include_versions:
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
       - title: Migration guide - ProductTaxSetsRestApi
         url: /docs/scos/dev/module-migration-guides/glue-api/migration-guide-producttaxsetsrestapi.html
       - title: Migration Guide - OrdersRestApi
         url: /docs/scos/dev/module-migration-guides/glue-api/migration-guide-ordersrestapi.html
-        include_versions:
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
       - title: CompanyUserAuthRestApi Migration Guide
         url: /docs/scos/dev/module-migration-guides/glue-api/companyuserauthrestapi-migration-guide.html
-        include_versions:
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
       - title: Migration Guide - CheckoutRestApi
         url: /docs/scos/dev/module-migration-guides/glue-api/migration-guide-checkoutrestapi.html
-        include_versions:
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
       - title: Migration Guide - ProductAvailabilitiesRestApi
         url: /docs/scos/dev/module-migration-guides/glue-api/migration-guide-productavailabilitiesrestapi.html
       - title: CartsRestApi Migration Guide
         url: /docs/scos/dev/module-migration-guides/glue-api/cartsrestapi-migration-guide.html
       - title: Migration Guide - ContentBannersRestApi
         url: /docs/scos/dev/module-migration-guides/glue-api/migration-guide-contentbannersrestapi.html
-        include_versions:
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
     - title: Migration Guide - ProductLabelDiscountConnector
       url: /docs/scos/dev/module-migration-guides/migration-guide-productlabeldiscountconnector.html
     - title: Migration Guide - PriceProductVolume
       url: /docs/scos/dev/module-migration-guides/migration-guide-priceproductvolume.html
     - title: Migration Guide - PriceProductScheduleGui
       url: /docs/scos/dev/module-migration-guides/migration-guide-priceproductschedulegui.html
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - Multi-Currency
       url: /docs/scos/dev/module-migration-guides/migration-guide-multi-currency.html
     - title: Migration Guide - Transfer
       url: /docs/scos/dev/module-migration-guides/migration-guide-transfer.html
     - title: Migration Guide - CMSBlockStorage
       url: /docs/scos/dev/module-migration-guides/migration-guide-cmsblockstorage.html
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - CartPage
       url: /docs/scos/dev/module-migration-guides/migration-guide-cartpage.html
     - title: Migration Guide - Search
@@ -2226,12 +2195,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-payone-suite.html
     - title: Migration Guide - QuoteRequestAgentPage
       url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequestagentpage.html
-      include_versions:
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - Touch
       url: /docs/scos/dev/module-migration-guides/migration-guide-touch.html
     - title: Migration Guide - OfferGui
@@ -2242,22 +2205,12 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-companyuser.html
     - title: Migration Guide - CartVariant
       url: /docs/scos/dev/module-migration-guides/migration-guide-cartvariant.html
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - ProductLabelGUI
       url: /docs/scos/dev/module-migration-guides/migration-guide-productlabelgui.html
     - title: Migration Guide - Collector
       url: /docs/scos/dev/module-migration-guides/migration-guide-collector.html
     - title: Migration Guide - ShipmentCartConnector
       url: /docs/scos/dev/module-migration-guides/migration-guide-shipmentcartconnector.html
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - Environment Configuration
       url: /docs/scos/dev/module-migration-guides/migration-guide-environment-configuration.html
     - title: Migration Guide - RabbitMQ
@@ -2272,18 +2225,8 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-productlistsearch.html
     - title: Migration Guide - ConfigurableBundle
       url: /docs/scos/dev/module-migration-guides/migration-guide-configurablebundle.html
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - ProductListGui
       url: /docs/scos/dev/module-migration-guides/migration-guide-productlistgui.html
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - ProductDetailPage
       url: /docs/scos/dev/module-migration-guides/migration-guide-productdetailpage.html
     - title: Migration Guide - Discount
@@ -2292,35 +2235,16 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-payment.html
     - title: Migration Guide - ContentStorage
       url: /docs/scos/dev/module-migration-guides/migration-guide-contentstorage.html
-      include_versions:
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - CMS Block Collector
       url: /docs/scos/dev/module-migration-guides/migration-guide-cms-block-collector.html
     - title: Migration Guide - CmsGui
       url: /docs/scos/dev/module-migration-guides/migration-guide-cmsgui.html
-      include_versions:
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - StockSalesConnector
       url: /docs/scos/dev/module-migration-guides/migration-guide-stocksalesconnector.html
     - title: Migration Guide - ProductOption
       url: /docs/scos/dev/module-migration-guides/migration-guide-productoption.html
     - title: Migration Guide - Content
       url: /docs/scos/dev/module-migration-guides/migration-guide-content.html
-      include_versions:
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - PriceProductStorage
       url: /docs/scos/dev/module-migration-guides/migration-guide-priceproductstorage.html
     - title: Migration Guide - Calculation
@@ -2339,24 +2263,12 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-price.html
     - title: Migration Guide - QuoteRequest
       url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequest.html
-      include_versions:
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - ProductQuantity
       url: /docs/scos/dev/module-migration-guides/migration-guide-productquantity.html
     - title: Migration Guide - SalesSplit
       url: /docs/scos/dev/module-migration-guides/migration-guide-salessplit.html
     - title: Migration Guide - ContentBanner
       url: /docs/scos/dev/module-migration-guides/migration-guide-contentbanner.html
-      include_versions:
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - Refund
       url: /docs/scos/dev/module-migration-guides/migration-guide-refund.html
     - title: Migration Guide - CmsBlockGui
@@ -2367,23 +2279,12 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-shoppinglistpage.html
     - title: Migration Guide - ContentBannerGui
       url: /docs/scos/dev/module-migration-guides/migration-guide-contentbannergui.html
-      include_versions:
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration guide - Payone Demoshop
       url: /docs/scos/dev/module-migration-guides/migration-guide-payone-demoshop.html
     - title: Migration Guide - AvailabilityCartConnector
       url: /docs/scos/dev/module-migration-guides/migration-guide-availabilitycartconnector.html
     - title: Migration Guide - ManualOrderEntryGui
       url: /docs/scos/dev/module-migration-guides/migration-guide-manualorderentrygui.html
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - PriceCartConnector
       url: /docs/scos/dev/module-migration-guides/migration-guide-pricecartconnector.html
     - title: Migration Guide - ProductMeasurementUnitWidget
@@ -2404,11 +2305,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-shipment.html
     - title: Migration Guide - CheckoutPage
       url: /docs/scos/dev/module-migration-guides/migration-guide-checkoutpage.html
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - Step Engine
       url: /docs/scos/dev/module-migration-guides/migration-guide-step-engine.html
     - title: Migration Guide - NavigationGui
@@ -2417,13 +2313,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-productbundle.html
     - title: Migration Guide - ProductPackagingUnitStorage
       url: /docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitstorage.html
-      include_versions:
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - ShoppingListWidget
       url: /docs/scos/dev/module-migration-guides/migration-guide-shoppinglistwidget.html
     - title: Migration Guide - Category
@@ -2432,22 +2321,10 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-discountcalculatorconnector.html
     - title: Migration Guide - CmsPageSearch
       url: /docs/scos/dev/module-migration-guides/migration-guide-cmspagesearch.html
-      include_versions:
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - OMS
       url: /docs/scos/dev/module-migration-guides/migration-guide-oms.html
     - title: Migration Guide - CmsBlockWidget
       url: /docs/scos/dev/module-migration-guides/migration-guide-cmsblockwidget.html
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - Navigation
       url: /docs/scos/dev/module-migration-guides/migration-guide-navigation.html
     - title: Migration Guide - Merchant
@@ -2460,18 +2337,8 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-cartextension.html
     - title: Migration Guide - ProductRelation
       url: /docs/scos/dev/module-migration-guides/migration-guide-productrelation.html
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - AvailabilityStorage
       url: /docs/scos/dev/module-migration-guides/migration-guide-availabilitystorage.html
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - Cart
       url: /docs/scos/dev/module-migration-guides/migration-guide-cart.html
     - title: Migration Guide - ProductManagement
@@ -2482,19 +2349,8 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-cms-block-category-connector.html
     - title: Migration Guide - ConfigurableBundleStorage
       url: /docs/scos/dev/module-migration-guides/migration-guide-configurablebundlestorage.html
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - ContentGui
       url: /docs/scos/dev/module-migration-guides/migration-guide-contentgui.html
-      include_versions:
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - Availability
       url: /docs/scos/dev/module-migration-guides/migration-guide-availability.html
     - title: Migration Guide - Offer
@@ -2505,35 +2361,14 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-productmeasurementunit.html
     - title: Migration Guide - CustomerPage
       url: /docs/scos/dev/module-migration-guides/migration-guide-customerpage.html
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - ProductDiscountConnector
       url: /docs/scos/dev/module-migration-guides/migration-guide-productdiscountconnector.html
     - title: Migration Guide - QuoteRequestAgent
       url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequestagent.html
-      include_versions:
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - StockGui
       url: /docs/scos/dev/module-migration-guides/migration-guide-stockgui.html
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - PriceProductSchedule
       url: /docs/scos/dev/module-migration-guides/migration-guide-priceproductschedule.html
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - Publish and Synchronization
       url: /docs/scos/dev/module-migration-guides/migration-guide-publish-and-synchronization.html
     - title: Migration Guide - Session
@@ -2542,13 +2377,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-customerreorderwidget.html
     - title: Migration Guide - QuickOrderPage
       url: /docs/scos/dev/module-migration-guides/migration-guide-quickorderpage.html
-      include_versions:
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - ProductLabel
       url: /docs/scos/dev/module-migration-guides/migration-guide-productlabel.html
     - title: Migration Guide - CmsBlock
@@ -2565,20 +2393,8 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-productsearch.html
     - title: Migration Guide - ProductPageSearch
       url: /docs/scos/dev/module-migration-guides/migration-guide-productpagesearch.html
-      include_versions:
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - MerchantRelationshipProductListGui
       url: /docs/scos/dev/module-migration-guides/migration-guide-merchantrelationshipproductlistgui.html
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - AvailabilityOfferConnector
       url: /docs/scos/dev/module-migration-guides/migration-guide-availabilityofferconnector.html
     - title: Migration Guide - ShipmentDiscountConnector
@@ -2589,72 +2405,28 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-discountsalesaggregatorconnector.html
     - title: Migration Guide - API Module
       url: /docs/scos/dev/module-migration-guides/migration-guide-api-module.html
-      include_versions:
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - SharedCartPage
       url: /docs/scos/dev/module-migration-guides/migration-guide-sharedcartpage.html
-      include_versions:
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - Catalog
       url: /docs/scos/dev/module-migration-guides/migration-guide-catalog.html
     - title: Migration Guide - ProductPackagingUnitWidget
       url: /docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitwidget.html
     - title: Migration Guide - CmsStorage
       url: /docs/scos/dev/module-migration-guides/migration-guide-cmsstorage.html
-      include_versions:
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - ProductPackagingUnit
       url: /docs/scos/dev/module-migration-guides/migration-guide-productpackagingunit.html
     - title: Migration Guide - QuoteRequestPage
       url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequestpage.html
-      include_versions:
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - QuoteRequestAgentWidget
       url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequestagentwidget.html
-      include_versions:
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - CmsCollector
       url: /docs/scos/dev/module-migration-guides/migration-guide-cmscollector.html
     - title: Migration Guide - QuoteRequestWidget
       url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequestwidget.html
-      include_versions:
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - ProductOptionCartConnector
       url: /docs/scos/dev/module-migration-guides/migration-guide-productoptioncartconnector.html
     - title: Migration Guide - ShipmentCheckoutConnector
       url: /docs/scos/dev/module-migration-guides/migration-guide-shipmentcheckoutconnector.html
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - DiscountPromotion
       url: /docs/scos/dev/module-migration-guides/migration-guide-discountpromotion.html
     - title: Migration Guide - Quote
@@ -2665,19 +2437,8 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-wishlist.html
     - title: Migration Guide - OauthCompanyUser
       url: /docs/scos/dev/module-migration-guides/migration-guide-oauthcompanyuser.html
-      include_versions:
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - ProductPackagingUnitDataImport
       url: /docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitdataimport.html
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - SalesAggregator
       url: /docs/scos/dev/module-migration-guides/migration-guide-salesaggregator.html
     - title: Migration Guide - Sales
@@ -2686,208 +2447,80 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-productsearchwidget.html
     - title: Migration Guide - ShipmentGui
       url: /docs/scos/dev/module-migration-guides/migration-guide-shipmentgui.html
-      include_versions:
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - Product Relation
-      url: /docs/scos/dev/module-migration-guides/migration-guide-product-relation.html
-      include_versions:
-      - "201811.0"
-      - "201903.0"
-      - "201907.0"
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productrelation.html
     - title: Migration Guide - Form
       url: /docs/scos/dev/module-migration-guides/migration-guide-form.html
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - Locale
       url: /docs/scos/dev/module-migration-guides/migration-guide-locale.html
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - Twig
       url: /docs/scos/dev/module-migration-guides/migration-guide-twig.html
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - ProductReviewSearch
       url: /docs/scos/dev/module-migration-guides/migration-guide-productreviewsearch.html
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - ProductSetPageSearch
       url: /docs/scos/dev/module-migration-guides/migration-guide-productsetpagesearch.html
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - HTTP
       url: /docs/scos/dev/module-migration-guides/migration-guide-http.html
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - EventDispatcher
       url: /docs/scos/dev/module-migration-guides/migration-guide-eventdispatcher.html
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - ProductLabelSearch
       url: /docs/scos/dev/module-migration-guides/migration-guide-productlabelsearch.html
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - Translator
       url: /docs/scos/dev/module-migration-guides/migration-guide-translator.html
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - CategoryPageSearch
       url: /docs/scos/dev/module-migration-guides/migration-guide-categorypagesearch.html
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - Validator
       url: /docs/scos/dev/module-migration-guides/migration-guide-validator.html
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - Router
       url: /docs/scos/dev/module-migration-guides/migration-guide-router.html
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - ErrorHandler
       url: /docs/scos/dev/module-migration-guides/migration-guide-errorhandler.html
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - ProductRelationStorage
       url: /docs/scos/dev/module-migration-guides/migration-guide-productrelationstorage.html
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - Store
       url: /docs/scos/dev/module-migration-guides/migration-guide-store.html
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - CompanyBusinessUnit
       url: /docs/scos/dev/module-migration-guides/migration-guide-companybusinessunit.html
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - Messenger
       url: /docs/scos/dev/module-migration-guides/migration-guide-messenger.html
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - ProductNew
       url: /docs/scos/dev/module-migration-guides/migration-guide-productnew.html
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - Security
       url: /docs/scos/dev/module-migration-guides/migration-guide-security.html
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - Propel
       url: /docs/scos/dev/module-migration-guides/migration-guide-propel.html
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - WebProfiler
       url: /docs/scos/dev/module-migration-guides/migration-guide-webprofiler.html
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Migration Guide - CategoryGui
       url: /docs/scos/dev/module-migration-guides/migration-guide-categorygui.html
-      include_versions:
-      - "202108.0"
     - title: Migration guide - ProductCategoryFilterGui
       url: /docs/scos/dev/module-migration-guides/migration-guide-productcategoryfiltergui.html
-      include_versions:
-      - "202108.0"
     - title: Migration guide - MerchantGui
       url: /docs/scos/dev/module-migration-guides/migration-guide-merchantgui.html
-      include_versions:
-      - "202009.0"
-      - "202108.0"
     - title: Migration guide - ProductCategoryStorage
       url: /docs/scos/dev/module-migration-guides/migration-guide-productcategorystorage.html
-      include_versions:
-      - "202108.0"
     - title: Migration Guide - ProductLabelStorage
       url: /docs/scos/dev/module-migration-guides/migration-guide-productlabelstorage.html
-      include_versions:
-      - "202009.0"
-      - "202108.0"
     - title: Migration guide - Elastica
       url: /docs/scos/dev/module-migration-guides/migration-guide-elastica.html
-      include_versions:
-      - "202009.0"
-      - "202108.0"
     - title: Migration guide - SalesMerchantConnector
       url: /docs/scos/dev/module-migration-guides/migration-guide-salesmerchantconnector.html
-      include_versions:
-      - "202009.0"
-      - "202108.0"
     - title: Migration guide - Auth module to SecurityGui module
       url: /docs/scos/dev/module-migration-guides/migration-guide-auth-module-to-securitygui-module.html
-      include_versions:
-      - "202009.0"
-      - "202108.0"
     - title: Migration guide - CategoryStorage
       url: /docs/scos/dev/module-migration-guides/migration-guide-categorystorage.html
-      include_versions:
-      - "202108.0"
     - title: Migration guide - ProductConfigurationStorage
       url: /docs/scos/dev/module-migration-guides/migration-guide-productconfigurationstorage.html
-      include_versions:
-      - "202200.0"
     - title: Migration guide - ProductConfiguration
       url: /docs/scos/dev/module-migration-guides/migration-guide-productconfiguration.html
-      include_versions:
-      - "202200.0"
     - title: Migration guide - ProductConfigurationsPriceProductVolumesRestApi
       url: /docs/scos/dev/module-migration-guides/migration-guide-productconfigurationspriceproductvolumesrestapi.html
-      include_versions:
-      - "202200.0"
     - title: Migration guide - ProductConfigurationWidget
       url: /docs/scos/dev/module-migration-guides/migration-guide-productconfigurationwidget.html
-      include_versions:
-      - "202200.0"
     - title: Migration guide - ProductConfiguratorGatewayPage
       url: /docs/scos/dev/module-migration-guides/migration-guide-productconfiguratorgatewaypage.html
-      include_versions:
-      - "202200.0"
     - title: Migration guide - ProductConfigurationsRestApi
       url: /docs/scos/dev/module-migration-guides/migration-guide-productconfigurationsrestapi.html
-      include_versions:
-      - "202200.0"
   - title: DevOps migration guides
     include_versions:
     - "202001.0"
@@ -4532,7 +4165,7 @@ entries:
       - title: ERROR- remove spryker_logs- volume is in use
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/error-remove-spryker-logs-volume-is-in-use.html
       - title: Class Silex/ControllerProviderInterface not found
-        url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/class-silex-controllerproviderinterface-not-found.html 
+        url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/class-silex-controllerproviderinterface-not-found.html
       - title: Error response from daemon- OCI runtime create failed- .... \\\"no such file or directory\\\"\""- unknown
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/error-response-from-daemon-oci-runtime-create-failed-no-such-file-or-directory-unknown.html
       - title: RabbitMQ- Zed.CRITICAL- PhpAmqpLib\Exception\AMQPChannelClosedException

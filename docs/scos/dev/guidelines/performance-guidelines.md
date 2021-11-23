@@ -188,7 +188,7 @@ You need to remove the cache files for each project deployment.
 
 {% endinfo_block %}
 
-See [EventDispatcher module migration guide](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-eventdispatcher.html) for information on how to upgrade to a newer version of the EventDispatcher module.
+See [EventDispatcher module migration guide](/docs/scos/dev/module-migration-guides/migration-guide-eventdispatcher.html) for information on how to upgrade to a newer version of the EventDispatcher module.
 
 See [Cache of Unresolved Entities for Zed](/docs/scos/dev/technical-enhancement-integration-guides/integrating-cache-of-unresolved-entities-for-zed.html) for information on how to integrate the Cache of Unresolved Entities for Zed feature into your project.
 

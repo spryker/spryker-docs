@@ -388,7 +388,7 @@ Find common settings for all services below:
 
 * `engine:` - defines a third-party application supported by Spryker that does the job specific for the *Service*. For example, you can currently set `database:engine:` to `postgres` or `mysql`.
 * `endpoints:` - defines the list of *Endpoints* that point to the *Service* web interface or port.
-* `version:` - defines the version of the service to be installed. If `database:engine:` is set to `mysql`, also defines if MySQL or MariaDB is used according to the [version](https://github.com/spryker/docker-sdk#supported-services). See [Database](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-services.html#database) for detailed configuration instructions.
+* `version:` - defines the version of the service to be installed. If `database:engine:` is set to `mysql`, also defines if MySQL or MariaDB is used according to the [version](https://github.com/spryker/docker-sdk#supported-services). See Database on this page for detailed configuration instructions.
 This variable is optional. If not specified, the [default version](https://github.com/spryker/docker-sdk#supported-services) applies.
 
 ```yaml
@@ -681,7 +681,7 @@ An SQL database management system *Service*.
 * Project-wide
 
   - `database: engine:` - possible values are `postgres`and `mysql`.
-  - `database: version:` - defines the version of the database engine. If `database:engine:` is set to `mysql`, also defines if MySQL or MariaDB is used according to the [version](https://github.com/spryker/docker-sdk#supported-services). See [Database](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-services.html#database) for detailed configuration instructions.
+  - `database: version:` - defines the version of the database engine. If `database:engine:` is set to `mysql`, also defines if MySQL or MariaDB is used according to the [version](https://github.com/spryker/docker-sdk#supported-services). See Database on this page for detailed configuration instructions.
   - `database: root: username:`, `database: root: password:` - defines the user with root privileges.
   - `database: endpoints:` - defines the service's port that can be accessed via given endpoints.
 

@@ -12,9 +12,9 @@ related:
   - title: Managing Navigation Elements
     link: docs/scos/user/back-office-user-guides/page.version/content/navigation/managing-navigation-elements.html
   - title: Migration Guide - Navigation
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-navigation.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-navigation.html
   - title: Migration Guide - NavigationGui
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-navigationgui.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-navigationgui.html
   - title: Navigation Module Integration
     link: docs/scos/dev/feature-integration-guides/page.version/navigation-module-integration.html
 ---

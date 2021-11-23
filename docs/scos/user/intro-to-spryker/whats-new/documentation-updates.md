@@ -119,8 +119,8 @@ Below you will find the list of the new/updated documentation released as part o
 <details>
 <summary markdown='span'>Migration guides</summary>
 
-* [PriceProductSchedule migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-priceproductschedule.html)
-* [PriceProductScheduleGui migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-priceproductschedulegui.html)
+* [PriceProductSchedule migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/migration-guide-priceproductschedule.html)
+* [PriceProductScheduleGui migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/migration-guide-priceproductschedulegui.html)
 
 </details>
 <details>
@@ -159,9 +159,9 @@ Below you will find the list of the new/updated documentation released as part o
 <summary markdown='span'>Migration guides</summary>
 
 
-* [CmsBlock - migration from v. 2.* to v. 3.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cmsblock.html#upgrading-from-version-2-to-version-3)
-* [CmsBlockStorage - migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cmsblockstorage.html)
-* [CmsBlockWidget - migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cmsblockwidget.html)
+* [CmsBlock - migration from v. 2.* to v. 3.*](/docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html#upgrading-from-version-2-to-version-3)
+* [CmsBlockStorage - migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/migration-guide-cmsblockstorage.html)
+* [CmsBlockWidget - migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/migration-guide-cmsblockwidget.html)
 
 
 </details>
@@ -233,10 +233,10 @@ Below you will find the list of the new/updated documentation released as part o
 <details>
 <summary markdown='span'>Migration guides</summary>
 
-* [ConfigurableBundle migration from v. 1* to v. 2*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-configurablebundle.html)
-* [ConfigurableBundleStorage migration from v. 1* to v. 2*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-configurablebundlestorage.html)
-* [MerchantRelationshipProductListGui migration from v. 1* to v. 2*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-merchantrelationshipproductlistgui.html)
-* [ProductListGui migration from v. 1* to v. 2*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-productlistgui.html)
+* [ConfigurableBundle migration from v. 1* to v. 2*](/docs/scos/dev/module-migration-guides/migration-guide-configurablebundle.html)
+* [ConfigurableBundleStorage migration from v. 1* to v. 2*](/docs/scos/dev/module-migration-guides/migration-guide-configurablebundlestorage.html)
+* [MerchantRelationshipProductListGui migration from v. 1* to v. 2*](/docs/scos/dev/module-migration-guides/migration-guide-merchantrelationshipproductlistgui.html)
+* [ProductListGui migration from v. 1* to v. 2*](/docs/scos/dev/module-migration-guides/migration-guide-productlistgui.html)
 
 </details>
 <details>

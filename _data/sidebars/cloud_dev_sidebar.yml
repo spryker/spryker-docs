@@ -74,7 +74,7 @@ entries:
       - title: Troubleshooting
         nested:
           - title: Troubleshooting deployment issues
-            url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-deployment-issues/troubleshooting-deployment.html
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-deployment-issues/troubleshooting-deployment-issues.html
             nested:
               - title: Assets, logs, or pipelines are not visible in AWS Management Console
                 url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-deployment-issues/assets-logs-or-pipelines-are-not-visible-in-aws-management-console.html

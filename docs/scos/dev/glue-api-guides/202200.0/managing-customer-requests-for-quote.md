@@ -1577,8 +1577,36 @@ To update a request for quote for a customer, send the request:
 |-|-|
 | ***{% raw %}{{{% endraw %}QuotationRequestID{% raw %}}}{% endraw %}*** | Request for quote unique identifier to manage requests for quotes. To get it, [create a quote request](#create-a-request-for-quote). |
 
+## Cancel a request for quote
 
+To cancel a request for quote, send the request:
 
+`POST` **/quote-requests/{% raw %}{{{% endraw %}*QuotationRequestID*{% raw %}}}{% endraw %}/quote-request-cancel**
+
+| PATH PARAMETER | DESCRIPTION |
+|-|-|
+| ***{% raw %}{{{% endraw %}QuotationRequestID{% raw %}}}{% endraw %}*** | Request for quote unique identifier to manage requests for quotes. To get it, [create a quote request](#create-a-request-for-quote). |
+
+### Request
+
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
+|---|---|---|---|
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+
+Request sample: `POST https://glue.mysprykershop.com/quote-requests/DE--21-34/quote-request-cancel`
+
+```json
+{
+    "data": {
+        "type": "quote-request-cancel",
+        "attributes": {}
+    }
+}
+```
+
+### Response
+
+In case of the successful request, `1` is sent in response.
 
 ## Possible errors
 

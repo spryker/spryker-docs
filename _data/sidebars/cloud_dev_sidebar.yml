@@ -73,20 +73,20 @@ entries:
         url: /docs/cloud/dev/spryker-cloud-commerce-os/monitoring-issues-and-informing-about-alerts.html
       - title: Troubleshooting
         nested:
-          - title: Troubleshooting deployment
-            url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-deployment/troubleshooting-deployment.html
+          - title: Troubleshooting deployment issues
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-deployment-issues/troubleshooting-deployment.html
             nested:
               - title: Assets, logs, or pipelines are not visible in AWS Management Console
-                url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-deployment/assets-logs-or-pipelines-are-not-visible-in-aws-management-console.html
+                url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-deployment-issues/assets-logs-or-pipelines-are-not-visible-in-aws-management-console.html
               - title: Deployment fails due to a failed docker authentication
-                url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-deployment/deployment-fails-due-to-a-failed-docker-authentication.html
+                url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-deployment-issues/deployment-fails-due-to-a-failed-docker-authentication.html
               - title: Jenkins does not restart
-                url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-deployment/jenkins-does-not-restart.html
+                url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-deployment-issues/jenkins-does-not-restart.html
           - title: Troubleshooting general issues
-            url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting-general-issues/troubleshooting-general-issues.html
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-general-issues/troubleshooting-general-issues.html
             nested:
               - title: Changing a source branch fails
-                url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-deployment/changing-a-source-branch-fails.html
+                url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-general-issues/changing-a-source-branch-fails.html
               - title: Email address is not verified
                 url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-general-issues/email-address-is-not-verified.html
               - title: 'Fatal error: Allowed memory size of x bytes exhausted'

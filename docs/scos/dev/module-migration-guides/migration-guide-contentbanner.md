@@ -24,6 +24,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-contentbanner.html
 ---
 
+
 ## Upgrading from Version 1.* to Version 2.*
 
 Version 2.0.0 of the ContentGui module introduces the [Content Items](/docs/scos/user/features/{{site.version}}/content-items-feature-overview.html) functionality that allows creating and managing content and later selecting where it should be inserted.

@@ -238,7 +238,7 @@ ip glue.mysprykershop.com
 
 {% info_block warningBox “Verification” %}
 
-If everything is set up correctly, you should be able to access http://glue.mysprykershop.com and get a correct JSON response as follows:
+If everything is set up correctly, you should be able to access `http://glue.mysprykershop.com` and get a correct JSON response as follows:
 
 **Default JSON Response**
 
@@ -411,4 +411,3 @@ Make sure that the response contains the ETag validation error.
 Make sure that the following endpoint is available: `http://mysprykershop.com/stores`
 
 {% endinfo_block %}
-

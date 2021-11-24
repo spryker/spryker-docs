@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/technical-enhancements/enabling-the-category-cms-block.html
 related:
   - title: Migration Guide - CMS Block
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-cmsblock.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html
 ---
 
 This document describes how to enable category CMS blocks in a Spryker project.

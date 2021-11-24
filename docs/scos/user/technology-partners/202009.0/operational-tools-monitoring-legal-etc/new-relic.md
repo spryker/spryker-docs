@@ -10,7 +10,7 @@ redirect_from:
   - /v6/docs/en/new-relic
 related:
   - title: Migration Guide - Session
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-session.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-session.html
 ---
 
 ## New Relic Monitoring

@@ -3178,37 +3178,49 @@ entries:
       - "201811.0"
       - "201903.0"
       - "201907.0"
+      - "202001.0"
+      - "202005.0"
       nested:
       - title: Shop Guide - Shipment Step
-        url: /docs/scos/user/shop-user-guides/checkout/shop-guide-shipment-step.html
+        url: /docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-shipment-step.html
         include_versions:
         - "201811.0"
         - "201903.0"
         - "201907.0"
+        - "202001.0"
+        - "202005.0"
       - title: Shop Guide - Payment Step
-        url: /docs/scos/user/shop-user-guides/checkout/shop-guide-payment-step.html
+        url: /docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-payment-step.html
         include_versions:
         - "201811.0"
         - "201903.0"
         - "201907.0"
+        - "202001.0"
+        - "202005.0"
       - title: Shop Guide - Summary Step
-        url: /docs/scos/user/shop-user-guides/checkout/shop-guide-summary-step.html
+        url: /docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-summary-step.html
         include_versions:
         - "201811.0"
         - "201903.0"
         - "201907.0"
+        - "202001.0"
+        - "202005.0"
       - title: Shop Guide - Address Step
-        url: /docs/scos/user/shop-user-guides/checkout/shop-guide-address-step.html
+        url: /docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-address-step.html
         include_versions:
         - "201811.0"
         - "201903.0"
         - "201907.0"
+        - "202001.0"
+        - "202005.0"
       - title: Shop Guide - Checkout
-        url: /docs/scos/user/shop-user-guides/checkout/shop-guide-checkout.html
+        url: /docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-checkout.html
         include_versions:
         - "201811.0"
         - "201903.0"
         - "201907.0"
+        - "202001.0"
+        - "202005.0"
     - title: Shop Guide - Customer Account
       include_versions:
       - "202005.0"

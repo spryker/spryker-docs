@@ -24,7 +24,7 @@ We've changed product label touch logic in order to be able to export label IDs 
 
 **Documentation**
 <br>For module documentation, see [Product Label Module Guide](/docs/scos/user/features/{{site.version}}/product-labels-feature-overview.html)
-<br>For detailed migration guides, see [Product Label Migration Guide](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-productlabel.html).
+<br>For detailed migration guides, see [Product Label Migration Guide](/docs/scos/dev/module-migration-guides/migration-guide-productlabel.html).
 
 **Migration Guides**
 <br>To upgrade, follow the steps described below:
@@ -116,10 +116,10 @@ CMS block positioning can be used for placing a block in certain places in your 
 
 For migration guides, see:
 
-* [Category Migration Guide](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-category.html)
-* [CMS Block Category Connector Migration Guide](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cms-block-category-connector.html)
+* [Category Migration Guide](/docs/scos/dev/module-migration-guides/migration-guide-category.html)
+* [CMS Block Category Connector Migration Guide](/docs/scos/dev/module-migration-guides/migration-guide-cms-block-category-connector.html)
 * Category Template Migration Console <!-- add a link -->
-* [CMS Block Category Connector Migration Console](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cms-block-category-connector-migration-console.html)
+* [CMS Block Category Connector Migration Console](/docs/scos/dev/module-migration-guides/migration-guide-cms-block-category-connector-migration-console.html)
 
 **Migration Guides**
 <br>To upgrade, follow the steps described below:

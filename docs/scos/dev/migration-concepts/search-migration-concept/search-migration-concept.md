@@ -183,13 +183,13 @@ That being done, the migration to Elasticsearch 7 from Elasticsearch 5 is comple
 ## Modules to upgrade
 The Search migration effort implies an upgrade of the following modules:
 
-* [Search](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-search.html#upgrading-from-version-89-to-version-810)
-* [Console](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-console.html)
-* [CmsPageSearch](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cmspagesearch.html#upgrading-from-version-21-to-version-22)
-* [Catalog](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-catalog.html#upgrading-from-version-55-to-version-56)
-* [ProductPageSearch](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-productpagesearch.html#upgrading-from-version-3-11-to-version-312)
-* [ProductReviewSearch](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-productreviewsearch.html#upgrading-from-version-13-to-version-14)
-* [ProductLabelSearch](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-productlabelsearch.html#upgrading-from-version-12-to-version-13)
-* [ProductSetPageSearch](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-productsetpagesearch.html#upgrading-from-version-13-to-version-14)
-* [CategoryPageSearch](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-categorypagesearch.html#upgrading-from-version-14-to-version-15)
-* [ProductNew](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-productnew.html#upgarding-from-version-11-to-version-12)
+* [Search](/docs/scos/dev/module-migration-guides/migration-guide-search.html#upgrading-from-version-89-to-version-810)
+* [Console](/docs/scos/dev/module-migration-guides/migration-guide-console.html)
+* [CmsPageSearch](/docs/scos/dev/module-migration-guides/migration-guide-cmspagesearch.html#upgrading-from-version-21-to-version-22)
+* [Catalog](/docs/scos/dev/module-migration-guides/migration-guide-catalog.html#upgrading-from-version-55-to-version-56)
+* [ProductPageSearch](/docs/scos/dev/module-migration-guides/migration-guide-productpagesearch.html#upgrading-from-version-3-11-to-version-312)
+* [ProductReviewSearch](/docs/scos/dev/module-migration-guides/migration-guide-productreviewsearch.html#upgrading-from-version-13-to-version-14)
+* [ProductLabelSearch](/docs/scos/dev/module-migration-guides/migration-guide-productlabelsearch.html#upgrading-from-version-12-to-version-13)
+* [ProductSetPageSearch](/docs/scos/dev/module-migration-guides/migration-guide-productsetpagesearch.html#upgrading-from-version-13-to-version-14)
+* [CategoryPageSearch](/docs/scos/dev/module-migration-guides/migration-guide-categorypagesearch.html#upgrading-from-version-14-to-version-15)
+* [ProductNew](/docs/scos/dev/module-migration-guides/migration-guide-productnew.html#upgarding-from-version-11-to-version-12)

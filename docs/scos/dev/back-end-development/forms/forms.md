@@ -37,8 +37,8 @@ The following modules are related to the service:
     
 ## Installation
 For information on how to install and integrate _Form_ and _Validator_ in your project, perform the steps detailed in the following guides:
-*   [Migration Guide - Form](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-form.html)
-*   [Migration Guide - Validator](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-validator.html)
+*   [Migration Guide - Form](/docs/scos/dev/module-migration-guides/migration-guide-form.html)
+*   [Migration Guide - Validator](/docs/scos/dev/module-migration-guides/migration-guide-validator.html)
 
 ## Extending Form
 The _Form_ Component provides several possibilities to add additional functionality like form types, validators etc. The `spryker/form-extension` module was created for this purpose. It will be installed automatically together with the `spryker/form` module.

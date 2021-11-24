@@ -1,7 +1,9 @@
 ---
 title: Assets, logs, or pipelines are not visible in AWS Management Console
-description: Solution to absent assets, logs, or pipelines in the AWS Management Console. 
+description: Solution to absent assets, logs, or pipelines in the AWS Management Console.
 template: troubleshooting-guide-template
+redirect_from:
+  - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting-deployment/assets-logs-or-pipelines-are-not-visible-in-aws-management-console.html
 ---
 
 

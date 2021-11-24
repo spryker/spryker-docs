@@ -129,7 +129,7 @@ cd spryker-docs
 ```bash
 bundle exec jekyll serve
 ```
-Now, you can access the local copy of the Spryker documentation site at http://localhost:4000.
+Now, you can access the local copy of the Spryker documentation site at `http://localhost:4000`.
 
 {% info_block infoBox "MacOS on M1 processor" %}
 

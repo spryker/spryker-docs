@@ -35,11 +35,13 @@ TLS configuration is not applied to Spryker directly, but is configured on the w
 * [Nginx](https://nginx.org/en/docs/http/configuring_https_servers.html)
 * [Apache](https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html)
 
-Forcing HTTPS can also be done via the `Strict-Transport-Security` header and can be configured for Yves and Zed with:
+Forcing HTTPS can also be done via the `Strict-Transport-Security` header and can be configured for Yves, Glue and Zed with:
 * `HttpConstants::ZED_HTTP_STRICT_TRANSPORT_SECURITY_ENABLED`
 * `HttpConstants::YVES_HTTP_STRICT_TRANSPORT_SECURITY_ENABLED`
 * `HttpConstants::ZED_HTTP_STRICT_TRANSPORT_SECURITY_CONFIG`
 * `HttpConstants::YVES_HTTP_STRICT_TRANSPORT_SECURITY_CONFIG`
+* `HttpConstants::GLUE_HTTP_STRICT_TRANSPORT_SECURITY_ENABLED`
+* `HttpConstants::GLUE_HTTP_STRICT_TRANSPORT_SECURITY_CONFIG`
 
 Server configuration can be tested with online tools like  [SSL Server Test](https://www.ssllabs.com/ssltest/).
 

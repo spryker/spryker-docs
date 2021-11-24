@@ -55,7 +55,7 @@ In addition, `CurrencyTransfer` contains information that specifies if it is the
 From currency version 3, we have introduced currency table where currencies are persisted. Also, currency facade provides API to read this data.
 {% info_block infoBox "Info" %}
 
-Check the [Curency migration guide](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-currency.html) to migrate to the latest  module version.
+Check the [Curency migration guide](/docs/scos/dev/module-migration-guides/migration-guide-currency.html) to migrate to the latest  module version.
 
 {% endinfo_block %}
  We have also introduced a currency switcher to Yves. To use it, do the following:

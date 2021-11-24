@@ -71,16 +71,38 @@ entries:
         url: /docs/cloud/dev/spryker-cloud-commerce-os/performance-testing.html
       - title: Monitoring issues and informing about alerts
         url: /docs/cloud/dev/spryker-cloud-commerce-os/monitoring-issues-and-informing-about-alerts.html
-      - title: Troubleshooting deployment
-        url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting-deployment/troubleshooting-deployment.html
+      - title: Troubleshooting
         nested:
-          - title: Assets, logs, or pipelines are not visible in AWS Management Console
-            url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting-deployment/assets-logs-or-pipelines-are-not-visible-in-aws-management-console.html
-          - title: Changing a source branch fails
-            url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting-deployment/changing-a-source-branch-fails.html
-          - title: Deployment fails due to a failed docker authentication
-            url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting-deployment/deployment-fails-due-to-a-failed-docker-authentication.html
-          - title: Jenkins does not restart
-            url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting-deployment/jenkins-does-not-restart.html
+          - title: Troubleshooting deployment issues
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-deployment-issues/troubleshooting-deployment-issues.html
+            nested:
+              - title: Assets, logs, or pipelines are not visible in AWS Management Console
+                url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-deployment-issues/assets-logs-or-pipelines-are-not-visible-in-aws-management-console.html
+              - title: Deployment fails due to a failed docker authentication
+                url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-deployment-issues/deployment-fails-due-to-a-failed-docker-authentication.html
+              - title: Jenkins does not restart
+                url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-deployment-issues/jenkins-does-not-restart.html
+          - title: Troubleshooting general issues
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-general-issues/troubleshooting-general-issues.html
+            nested:
+              - title: Changing a source branch fails
+                url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-general-issues/changing-a-source-branch-fails.html
+              - title: Email address is not verified
+                url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-general-issues/email-address-is-not-verified.html
+              - title: 'Fatal error: Allowed memory size of x bytes exhausted'
+                url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-general-issues/fatal-error-allowed-memory-size-of-x-bytes-exhausted.html
+          - title: Troubleshooting tutorials
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/troubleshooting-tutorials.html
+            nested:
+              - title: Troubleshooting a failed deployment
+                url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-a-failed-deployment.html
+              - title: Troubleshooting a killed process
+                url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-a-killed-process.html
+              - title: Troubleshooting an unavailable Zed
+                url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-an-unavailable-zed.html
+              - title: Troubleshooting unavailable Yves or Glue
+                url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-unavailable-yves-or-glue.html
+              - title: Troubleshooting Yves or Zed not restarting after deployment
+                url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-yves-or-zed-not-restarting-after-deployment.html
       - title: Release notes
         url: /docs/cloud/dev/spryker-cloud-commerce-os/release-notes.html

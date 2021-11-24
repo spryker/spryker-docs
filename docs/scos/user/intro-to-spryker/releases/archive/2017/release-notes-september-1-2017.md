@@ -25,7 +25,7 @@ Now stores with more than 100k of product attributes, have a convenient and easy
 | <ul><li>[ProductAttribute 1.0.0](https://github.com/spryker/product-attribute/releases/tag/1.0.0)</li><li>[ProductAttributeGui 1.0.0](https://github.com/spryker/product-attribute-gui/releases/tag/1.0.0)</li></ul> |[ProductManagement 0.8.0](https://github.com/spryker/product-management/releases/tag/0.8.0)  | n/a |
 
 **Documentation**
-<br>For detailed migration guides, see [ProductManagement Module Migration Guide from Version 0.7. to 0.8.](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-productmanagement.html##upgrading-from-version-07-to-version-08)
+<br>For detailed migration guides, see [ProductManagement Module Migration Guide from Version 0.7. to 0.8.](/docs/scos/dev/module-migration-guides/migration-guide-productmanagement.html##upgrading-from-version-07-to-version-08)
 
 **Migration Guides**
 <br>To upgrade, follow the steps described below:

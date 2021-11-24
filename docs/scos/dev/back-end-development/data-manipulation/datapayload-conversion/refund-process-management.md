@@ -20,7 +20,7 @@ related:
   - title: Refunds feature overview
     link: docs/scos/user/features/page.version/refunds-feature-overview.html
   - title: Migration Guide - Refund
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-refund.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-refund.html
 ---
 
 {% info_block infoBox %}

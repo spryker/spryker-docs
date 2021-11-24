@@ -43,7 +43,7 @@ class CmsDependencyProvider extends SprykerCmsDependencyProvider
 
 </details>
 
-* Optionally, upgrade the `spryker/cms-gui` module to at least 4.3 version if you want to have access to the Yves [preview pages from the Back Office](https://documentation.spryker.com/v4/docs/managing-cms-pages#previewing-cms-pages).
+* Optionally, upgrade the `spryker/cms-gui` module to at least 4.3 version if you want to have access to the Yves [preview pages from the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/managing-cms-pages.html).
 
 ## Usage in Yves
 1. Create a controller action for preview pages in Yves.

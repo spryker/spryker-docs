@@ -40,7 +40,7 @@ To add versioning to a resource, the route plugin of the resource module needs t
 
 {% info_block warningBox %}
 
-For more information on route plugins, see the [Resource Routing](/docs/scos/dev/back-end-development/glue-api/glue-infrastructure.html#resource-routing) section in **Glue Infrastructure**.
+For more information on route plugins, see the [Resource Routing](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-infrastructure.html#resource-routing) section in **Glue Infrastructure**.
 
 {% endinfo_block %}
 

@@ -121,7 +121,7 @@ To retrieve detailed information on an order, send the request:
 
 | Path parameter | Description |
 | --- | --- |
-| order_id | Unique identifier of an order. [Retrieve all orders](#retrieving-all-orders) to get it. |
+| order_id | Unique identifier of an order. [Retrieve all orders](#retrieve-all-orders) to get it. |
 
 ### Request
 

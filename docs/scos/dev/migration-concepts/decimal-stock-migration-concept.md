@@ -70,18 +70,18 @@ The following table lists the modules affected by the Decimal Stock update and w
 | --- | --- | --- |
 | `spryker/availability` | 9.0.0 | [Migration Guide - Availability](/docs/scos/dev/module-migration-guides/migration-guide-availability.html#upgrading-from-version-8-to-version-900) |
 | `spryker/oms` | 11.0.0 | [Migration Guide - OMS](/docs/scos/dev/module-migration-guides/migration-guide-oms.html#upgrading-from-version-10-to-version-1100) |
-| `spryker/stock` | 8.0.0 | [Migration Guide - Stock](/docs/scos/dev/module-migration-guides/migration-guide-stock.html#upgrading-from-version-7---to-version-8-0-0) |
+| `spryker/stock` | 8.0.0 | [Migration Guide - Stock](/docs/scos/dev/module-migration-guides/migration-guide-stock.html#upgrading-from-version-7-to-version-800) |
 | `spryker/availability-storage` | 2.0.0 | [Migration Guide - AvailabilityStorage](/docs/scos/dev/module-migration-guides/migration-guide-availabilitystorage.html#upgrading-from-version-1-to-version-200) |
 | `spryker/availability-gui` | 6.0.0 | [Migration Guide - AvailabilityGui](/docs/scos/dev/module-migration-guides/migration-guide-availabilitygui.html#upgrading-from-version-5-to-version-600) |
 | `spryker/availability-cart-connector` | 7.0.0 | [Migration Guide - AvailabilityCartConnector](/docs/scos/dev/module-migration-guides/migration-guide-availabilitycartconnector.html#upgrading-from-version-6-to-version-700) |
 | `spryker/availability-offer-connector` | 4.0.0 | [Migration Guide - AvailabilityOfferConnector](/docs/scos/dev/module-migration-guides/migration-guide-availabilityofferconnector.html#upgrading-from-version-3-to-version-400) |
 | `spryker/cart-variant` | 2.0.0 | [Migration Guide - CartVariant](/docs/scos/dev/module-migration-guides/migration-guide-cartvariant.html#upgrading-from-version-1-to-version-200) |
-| `spryker/product-availabilities-rest-api` | 4.0.0 | [Migration Guide - ProductAvailabilitiesRestApi](/docs/scos/dev/module-migration-guides/glue-api/migration-guide-productavailabilitiesrestapi.html#upgrading-from-version-3-to-version-400) |
+| `spryker/product-availabilities-rest-api` | 4.0.0 | [Migration Guide - ProductAvailabilitiesRestApi](/docs/scos/dev/module-migration-guides/glue-api/migration-guide-productavailabilitiesrestapi.html#upgrading-from-version-3-to-version-4) |
 | `spryker/product-bundle` | 7.0.0 | [Migration Guide - ProductBundle](/docs/scos/dev/module-migration-guides/migration-guide-productbundle.html#upgrading-from-version-6-to-version-700) |
 | `spryker/discount-promotion` | 4.0.0 | [Migration Guide - DiscountPromotion](/docs/scos/dev/module-migration-guides/migration-guide-discountpromotion.html#upgrading-from-version-3-to-version-400) |
 | `spryker/product-packaging-unit` | 4.0.0 | [Migration Guide - ProductPackagingUnit](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunit.html#upgrading-from-version-3-to-version-400) |
 | `spryker/product-measurement-unit` | 5.0.0 | [Migration Guide - ProductMeasurementUnit](/docs/scos/dev/module-migration-guides/migration-guide-productmeasurementunit.html#upgrading-from-version-4-to-version-500) |
 | `spryker/product-packaging-unit-data-import` | 2.0.0 | [Migration Guide - ProductPackagingUnitDataImport](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitdataimport.html#upgrading-from-version-1-to-version-200) |
 | `spryker/product-packaging-unit-storage` | 5.0.0 | [Migration Guide - ProductPackagingUnitStorage](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitstorage.html#upgrading-from-version-4-to-version-500) |
-| `spryker/product-management` | 0.19.0 | [Migration Guide - ProductManagement](/docs/scos/dev/module-migration-guides/migration-guide-productmanagement.html#upgrading-from-version-0-18-to-0-19-0) |
+| `spryker/product-management` | 0.19.0 | [Migration Guide - ProductManagement](/docs/scos/dev/module-migration-guides/migration-guide-productmanagement.html#upgrading-from-version-018-to-version-0190) |
 | `spryker-shop/product-packaging-unit-widget` | 0.5.0 | [Migration Guide - ProductPackagingUnitWidget](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitwidget.html#upgrading-from-version-04-to-version-050) |

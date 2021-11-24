@@ -110,7 +110,7 @@ In addition to user scopes, each endpoint can be secured individually. For this 
 
 {% info_block infoBox %}
 
-For details, see [Resource Routing](/docs/scos/dev/concepts/glue-api/glue-infrastructure.html#resource-routing).
+For details, see [Resource Routing](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html#resource-routing).
 
 {% endinfo_block %}
 

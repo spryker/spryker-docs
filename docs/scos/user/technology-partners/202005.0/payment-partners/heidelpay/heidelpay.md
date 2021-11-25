@@ -31,15 +31,15 @@ related:
 
 ## Partner Information
 
-[ABOUT HEIDELPAY](https://www.heidelpay.de/) 
-Heidelpay is an internationally operating payment institution, authorized and regulated by the Federal Financial Supervisory Authority. The Full-Service Payment Provider covers the entire range of services connected to international electronic payment processing. For more than 13 years the company has been successfully realizing projects of online and stationary retailers and currently serves more than 16.000 customers in many different industrial sectors worldwide. 
+[ABOUT HEIDELPAY](https://www.heidelpay.de/)
+Heidelpay is an internationally operating payment institution, authorized and regulated by the Federal Financial Supervisory Authority. The Full-Service Payment Provider covers the entire range of services connected to international electronic payment processing. For more than 13 years the company has been successfully realizing projects of online and stationary retailers and currently serves more than 16.000 customers in many different industrial sectors worldwide.
 
 ## Integrating Heidelpay
 
 To integrate Hidelpay in your project, follow these steps:
 
 1. [Install](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay-installation.html) Heidelpay
-2. [Integrate](https://documentation.spryker.com/v5/docs/en/heidelpay-integration) Heidelpay into your Legacy Demoshop project or [integrate](https://documentation.spryker.com/v5/docs/en/heidelpay-integration-scos)  Heidelpay into your Spryker Commerce OS project
+2. [Integrate](/docs/scos/user/technology-partners/202108.0/payment-partners/heidelpay/heidelpay-integration-into-the-legacy-demoshop.html) Heidelpay into your Legacy Demoshop project or [integrate](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/heidelpay/scos-integration/heidelpay-integration-into-scos.html)  Heidelpay into your Spryker Commerce OS project
 3. Configure selected payment methods:
 
   - Paypal ([Paypal Authorize](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay-paypal-authorize.html),[Payal Debit](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay-paypal-debit-workflow.html))

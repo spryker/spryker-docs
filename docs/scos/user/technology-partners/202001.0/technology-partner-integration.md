@@ -64,14 +64,14 @@ In this section you will find information about our Technology Partner Integrati
 
 ### Customer Retention & Loyalty
 
-* [Namogoo](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/customer-retention-and-loyalty/namogoo.html) 
+* [Namogoo](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/customer-retention-and-loyalty/namogoo.html)
 * [Trustpilot](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/customer-retention-and-loyalty/trustpilot.html)
 * [Zenloop](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/customer-retention-and-loyalty/zenloop.html)
 
 ### Personalization & Cross-Selling
 
 <!--* [8Select](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/8select.html)-->
-<!--* [Contentserv](https://documentation.spryker.com/v4/docs/)-->
+<!--* [Contentserv](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/contentserv.html)-->
 * [Econda](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/econda/econda.html)
 * [Nosto](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/nosto.html)
 * [trbo](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/trbo.html)
@@ -107,7 +107,7 @@ In this section you will find information about our Technology Partner Integrati
 * [AfterPay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/afterpay/afterpay.html)
 * [Arvato](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/arvato/arvato.html)
 * [Billie](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/billie.html)
-* [Billpay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/billpay/billpay.html) 
+* [Billpay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/billpay/billpay.html)
 * [Braintree](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/braintree/braintree.html)
 * [BS Payone](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/bs-payone.html)
 * [Computop](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop.html)
@@ -124,13 +124,13 @@ In this section you will find information about our Technology Partner Integrati
 
 * [Akeneo](/docs/scos/dev/technology-partners/{{page.version}}/product-information-pimerp/akeneo/akeneo.html)
 * [Xentral](/docs/scos/dev/technology-partners/{{page.version}}/order-management-erpoms/xentral.html)
-<!--* [Censhare](https://documentation.spryker.com/v4/docs/)-->
+<!--* [Censhare](/docs/scos/user/technology-partners/{{page.version}}/content-management/censhare.html)-->
 <!--* [Contentserv](/docs/scos/dev/technology-partners/{{page.version}}/product-information-pimerp/contentserv.html)-->
 <!--* [Tradebyte](/docs/scos/dev/technology-partners/{{page.version}}/order-management-erpoms/tradebyte.html)-->
 
  ## Shipment
 
-* [Paazl](/docs/scos/dev/technology-partners/{{page.version}}/shipment/paazl.html) 
+* [Paazl](/docs/scos/dev/technology-partners/{{page.version}}/shipment/paazl.html)
 * [Paqato](/docs/scos/dev/technology-partners/{{page.version}}/shipment/paqato.html)
 * [Seven Senders](/docs/scos/dev/technology-partners/{{page.version}}/shipment/seven-senders.html)
 

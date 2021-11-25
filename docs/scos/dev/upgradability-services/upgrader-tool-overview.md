@@ -91,4 +91,4 @@ For example, if at step 6, due to incorrect authentication details, the upgrader
 
 ## Next steps
 
-https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2927067137
+[Running the upgrader tool](/docs/scos/dev/upgradability-services/running-the-upgrader-tool.html)

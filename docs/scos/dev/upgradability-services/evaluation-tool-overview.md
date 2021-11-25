@@ -12,7 +12,7 @@ The evaluation tool is a utility that performs automated quality checks against 
 To install the evaluation tool, run the following command:
 
 ```bash
-1composer require --dev spryker-sdk/evaluator
+composer require --dev spryker-sdk/evaluator
 ```
 
 ## Using the evaluation tool
@@ -20,7 +20,7 @@ To install the evaluation tool, run the following command:
 To get up-to-date information about using the evaluation tool, run the following command:
 
 ```bash
-1docker/sdk cli evaluator
+docker/sdk cli evaluator
 ```
 
 For detailed instructions, see [Running the evaluation tool](/docs/scos/dev/upgradability-services/running-the-evaluation-tool.html).
@@ -116,6 +116,8 @@ Finished successfully
 ====================================================================================================
 Overall evaluation has been finished with errors
 ```
+
+</details>
 
 You can run the evaluation tool to perform all the checks or run a particular check. For example, if only one check returns an error, after troubleshooting it, you might run only the failed check.  
 

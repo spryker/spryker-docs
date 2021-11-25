@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ManualOrderEntryGui
+title: Migration guide - ManualOrderEntryGui
 description: Use the guide to migrate to a newer version of the ManualOrderEntryGui module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -21,7 +21,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-manualorderentrygui.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-manualorderentrygui.html
 related:
-  - title: Migration Guide - Shipment
+  - title: Migration guide - Shipment
     link: docs/scos/dev/module-migration-guides/migration-guide-shipment.html
 ---
 

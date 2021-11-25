@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - SalesAggregator
+title: Migration guide - SalesAggregator
 description: Use the guide to learn how to update the SalesAggregator module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -30,11 +30,11 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-salesaggregator.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-salesaggregator.html
 related:
-  - title: Migration Guide - Sales
+  - title: Migration guide - Sales
     link: docs/scos/dev/module-migration-guides/migration-guide-sales.html
 ---
 
-## Upgrading from Version 4.* to Version 5.*
+## Upgrading from version 4.* to version 5.*
 
 `SalesAggregator` version 4 is last version to be released for this module. Apart from future bug fixes, it will no longer be developed and Core will no longer use it to get order totals anymore.
 There are two steps to the two migration process.

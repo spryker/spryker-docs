@@ -1,5 +1,5 @@
 ---
-title: Migration guide - publish and synchronization
+title: Migration guide - Publish and ynchronization
 description: Use the guide to learn how to update the Publish and Synchronization module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -60,7 +60,7 @@ $stores['DE']['queuePools']['synchronizationPool'] = [
 
 In Previous version the listener plugins has been extended from Abstract plugin classes and now this has changed due to obey the spryker architecture and moved into business layer and open APIs from Facade classes.
 
-### Version 1 of the EventBehaivor modules
+### Version 1 of the EventBehavior modules
 
 #### PropelPlugin
 

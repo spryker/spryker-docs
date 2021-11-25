@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ProductRelation
+title: Migration guide - ProductRelation
 description: Use the guide to learn how to update the ProductRelation module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -31,12 +31,6 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productrelation.html
 ---
 
-## Upgrading from Version 1.* to Version 2.*
-
-In vers ion 2 we have added multi-currency support. First of all, make sure that you [migrated the Price module](/docs/scos/dev/module-migration-guides/migration-guide-price.html). We have changed Zed table to use `PriceProductFacade` for retrieving product prices. We have also changed `\Spryker\Client\ProductRelation\Storage\ProductRelationStorage` to resolve ProductRelation prices based on the selected currency, price mode combination. If you modified this class in project or extended it, you may want adapt to core version.
-
-
-
 ## Upgrading from version 2.* to 3.0.0
 
 From version 2.* we have added the possibility to assign product relations to stores.
@@ -65,7 +59,8 @@ console transfer:generate
 *Estimated migration time: 30 minutes.*
 
 
-<!-- **See also:**
-* [Learn more about Products in multi-store environment](/docs/scos/dev/feature-integration-guides/{{site.version}}/multi-store-products-feature-integration.html) -->
+## Upgrading from version 1.* to version 2.*
 
-<!-- Last review date: Nov 23, 2017 by Aurimas Ličkus -->
+In version 2 we have added multi-currency support. First of all, make sure that you [migrated the Price module](/docs/scos/dev/module-migration-guides/migration-guide-price.html). We have changed Zed table to use `PriceProductFacade` for retrieving product prices. We have also changed `\Spryker\Client\ProductRelation\Storage\ProductRelationStorage` to resolve ProductRelation prices based on the selected currency, price mode combination. If you modified this class in project or extended it, you may want adapt to core version.
+
+

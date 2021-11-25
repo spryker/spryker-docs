@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - PriceProductScheduleGui
+title: Migration guide - PriceProductScheduleGui
 description: Use the guide to update the PriceProductScheduleGui module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

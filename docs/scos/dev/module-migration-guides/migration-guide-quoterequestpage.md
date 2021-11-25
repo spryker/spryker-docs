@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - QuoteRequestPage
+title: Migration guide - QuoteRequestPage
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-quoterequestpage
@@ -24,7 +24,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-quoterequestpage.html
 ---
 
-## Upgrading from Version 2.x.x to Version 3.x.x
+## Upgrading from version 2.x.x to version 3.x.x
 
 In this new version of the `QuoteRequestPage` module, we have added support of shipment costs. You can find more details about the changes on the [QuoteRequestPage module release page](https://github.com/spryker-shop/quote-request-page/releases). The major changes are:
 
@@ -55,7 +55,7 @@ console transfer:generate
 
 *Estimated migration time: ~2h*
 
-## Upgrading from Version 1.x.x to Version 2.x.x
+## Upgrading from version 1.x.x to version 2.x.x
 
 The only major change of the `QuoteRequestPage 2.x.x` is the dependency update for `spryker/quote-request:^2.0.0`.
 

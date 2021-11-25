@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Tax
+title: Migration guide - Tax
 description: Use the guide to learn how to update the Tax module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-tax.html
 ---
 
-## Upgrading from Version 4.* to Version 5.*
+## Upgrading from version 4.* to version 5.*
 
 In version 5, tax calculation logic changed, tax amount for options, expenses and items are now calculated in the Tax module.
 The plugins: `ExpenseTaxCalculatorPlugin`, `ItemTaxCalculatorPlugin` and `TaxTotalsCalculatorPlugin` were removed, and replaced with:
@@ -44,7 +44,7 @@ Corresponding plugin business classes, `ExpenseTaxCalculator`, `ItemTaxCalculato
 
 ***
 
-## Upgrading from Version 2.* to Version 3.*
+## Upgrading from version 2.* to version 3.*
 
 If you’re migrating the Tax module from version 2 to version 3, you need to follow the steps described below.
 

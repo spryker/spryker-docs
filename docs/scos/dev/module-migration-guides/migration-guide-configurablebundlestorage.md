@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ConfigurableBundleStorage
+title: Migration guide - ConfigurableBundleStorage
 description: This migration guide contains instructions on upgrading ConfigurableBundleStorage to the newer major version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -21,7 +21,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-configurablebundlestorage.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-configurablebundlestorage.html
 related:
-  - title: Migration Guide - ConfigurableBundle
+  - title: Migration guide - ConfigurableBundle
     link: docs/scos/dev/module-migration-guides/migration-guide-configurablebundle.html
 ---
 

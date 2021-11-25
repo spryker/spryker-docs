@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Stock
+title: Migration guide - Stock
 description: Use the guide to migrate to a new version of the Stock module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/2021080.0/migration-guide-stock.html
 ---
 
-## Upgrading from Version 7.* to Version 8.0.0
+## Upgrading from version 7.* to version 8.0.0
 
 In this new version of the **Stock** module, we have added support of decimal stock. You can find more details about the changes on the Stock module release page.
 
@@ -69,7 +69,9 @@ console transfer:generate
 
 *Estimated migration time: 5 min*
 ***
-## Upgrading from Version 5.* to Version 7.0.0
+
+## Upgrading from version 5.* to version 7.0.0
+
 {% info_block infoBox %}
 To dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://spryker.com/en/support/) if you have any questions.
 {% endinfo_block %}

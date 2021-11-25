@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ShipmentDiscountConnector
+title: Migration guide - ShipmentDiscountConnector
 description: Use the guide to learn how to update the ShipmentDiscountConnector module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-shipmentdiscountconnector.html
 ---
 
-## Upgrading from Version 3.0.* Version to 4.0.0
+## Upgrading from version 3.0.* version to 4.0.0
 
 In this new version of the **ShipmentDiscountConnector** module, we have added support of split delivery. You can find more details about the changes on the [ShipmentDiscountConnector module release page](https://github.com/spryker/shipment-discount-connector/releases).
 
@@ -57,7 +57,7 @@ console transfer:generate
 
 *Estimated migration time: 5 min*
 ***
-## Upgrading from Version 1.* to Version 3.0.0
+## Upgrading from version 1.* to version 3.0.0
 
 {% info_block infoBox %}
 To dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://spryker.com/en/support/) if you have any questions.

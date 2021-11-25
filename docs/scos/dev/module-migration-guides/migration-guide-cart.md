@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Cart
+title: Migration guide - Cart
 description: Use the guide to update versions to the newer ones of the Cart module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -31,11 +31,11 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cart.html
 
 related:
-  - title: Migration Guide - Quote
+  - title: Migration guide - Quote
     link: docs/scos/dev/module-migration-guides/migration-guide-quote.html
 ---
 
-## Upgrading from Version 5.* to Version 7.0.0
+## Upgrading from version 5.* to version 7.0.0
 
 {% info_block infoBox %}
 
@@ -43,7 +43,7 @@ In order to dismantle the Horizontal Barrier and enable partial module updates o
 
 {% endinfo_block %}
 
-## Upgrading from Version 4.* to Version 5.*
+## Upgrading from version 4.* to version 5.*
 
 With the implementation of the quote storage strategies, the new version of the Cart module allows to use different behaviors for different strategies.
 Since `QuoteClient::getStorageStrategy` method is used now, the Quote module's version must be 2.0.0 or higher.

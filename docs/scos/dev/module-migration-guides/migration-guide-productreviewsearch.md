@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ProductReviewSearch
+title: Migration guide - ProductReviewSearch
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-productreviewsearch
@@ -18,7 +18,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productreviewsearch.html
 ---
 
-## Upgrading from Version 1.3.* to Version 1.4.*
+## Upgrading from version 1.3.* to version 1.4.*
 
 {% info_block errorBox "Prerequisites" %}
 

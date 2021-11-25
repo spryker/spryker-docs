@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ProductBundle
+title: Migration guide - ProductBundle
 description: Use the guide to migrate to a new version of the ProductBundle module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -30,9 +30,9 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productbundle.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productbundle.html
 related:
-  - title: Migration Guide - Price
+  - title: Migration guide - Price
     link: docs/scos/dev/module-migration-guides/migration-guide-price.html
-  - title: Migration Guide - Product
+  - title: Migration guide - Product
     link: docs/scos/dev/module-migration-guides/migration-guide-product.html
 ---
 

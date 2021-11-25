@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - CustomerReorderWidget
+title: Migration guide - CustomerReorderWidget
 description: Use the guide to migrate to a newer version of the CustomerReorderWidget module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

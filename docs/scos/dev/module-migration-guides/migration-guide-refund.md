@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Refund
+title: Migration guide - Refund
 description: Use the guide to learn how to update the Refund module to a newer version.
 last_updated: Aug 2, 2021
 template: module-migration-guide-template
@@ -31,13 +31,13 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-refund.html
 ---
 
-## Upgrading from Version 4.* to Version 5.*
+## Upgrading from version 4.* to version 5.*
 
 Version 4 of the Refund module no longer uses `SalesAggregatorFacade` , it was replaced with `SalesFacade`.
 The `RefundCalculator` business class must now replace `RefundToSalesAggregatorInterface` with the `RefundToSalesInterface` bridge.
 To learn more see [Migration Guide - Calculation](/docs/scos/dev/module-migration-guides/migration-guide-calculation.html).
 
-## Upgrading from Version 2.* to Version 3.*
+## Upgrading from version 2.* to version 3.*
 
 To migrate the Refund module from version 2 to version 3, follow these steps:
 Version 3 of the Refund module was completely rebuilt; the `SalesAggregator` is used to get a calculated `OrderTransfer` and plugins are used to change the refundable amount calculation behaviour.

@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - PriceProductStorage
+title: Migration guide - PriceProductStorage
 description: Use the guide to learn how to update the PriceProductStorage module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

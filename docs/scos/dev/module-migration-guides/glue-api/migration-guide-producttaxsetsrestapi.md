@@ -30,7 +30,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/glue-api/migration-guide-producttaxsetsrestapi.html
 ---
 
-## Upgrading from Version 1.* to Version 2.*
+## Upgrading from version 1.* to version 2.*
 
 ProductTaxSetsRestApi version 2 introduces performance improvements that allow getting tax set data from the Redis storage instead of multiple Zed calls.
 
@@ -44,7 +44,7 @@ Find or create `RabbitMqConfig` in a project.
 
 Find the `getQueueOptions` method and change it.
 
-RabbitMqConfig.php
+**RabbitMqConfig.php**
 
 ```php
 <?php
@@ -74,7 +74,7 @@ Find or create `GlueApplicationDependencyProvider` in a project.
 
 Find the `getResourceRelationshipPlugins` method and change it.
 
-GlueApplicationDependencyProvider.php
+**GlueApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -107,7 +107,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 Find and change `TaxWriterStep` in a project.
 
-TaxWriterStep.php
+**TaxWriterStep.php**
 
 ```php
 <?php
@@ -132,7 +132,7 @@ Find or create `EventDependencyProvider` in a project.
 
 Find the `getEventSubscriberCollection` method and change it.
 
-EventDependencyProvider.php
+**EventDependencyProvider.php**
 
 ```php
 <?php
@@ -162,7 +162,7 @@ Find or create `QueueDependencyProvider` in a project.
 
 Find the `getProcessorMessagePlugins` method and change it.
 
-QueueDependencyProvider.php
+**QueueDependencyProvider.php**
 
 ```php
 <?php
@@ -195,7 +195,7 @@ Find or create `QueueDependencyProvider` in a project.
 
 Find the `getProcessorMessagePlugins` method and change it.
 
-QueueDependencyProvider.php
+**QueueDependencyProvider.php**
 
 ```php
 <?php
@@ -228,7 +228,7 @@ Find or create `SynchronizationDependencyProvider` in a project.
 
 Find the `getProcessorMessagePlugins` method and change it.
 
-SynchronizationDependencyProvider.php
+**SynchronizationDependencyProvider.php**
 
 ```php
 <?php

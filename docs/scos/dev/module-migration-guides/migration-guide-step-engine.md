@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Step Engine
+title: Migration guide - Step Engine
 description: Use the guide to learn how to update the Step Engine module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-step-engine.html
 ---
 
-## Upgrading from Version 2.* to Version 3.*
+## Upgrading from version 2.* to version 3.*
 
 If you're migrating the StepEngine module from version 2 to version 3, you need to follow the steps described below.
 In Version 3 the `StepCollectionInterface::getPreviousStep()` has a new second optional argument (`AbstractTransfer $dataTransfer`). If you use this interface for your own implementation, you need to update your derived class.

@@ -1,5 +1,5 @@
 ---
-title: CatalogSearchRestApi Migration Guide
+title: Migration guide - CatalogSearchRestApi
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/catalogsearchrestapi-migration-guide
@@ -28,9 +28,10 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/glue-api/catalogsearchrestapi-migration-guide.html
   - /docs/scos/dev/module-migration-guides/202009.0/glue-api/catalogsearchrestapi-migration-guide.html
   - /docs/scos/dev/module-migration-guides/202108.0/glue-api/catalogsearchrestapi-migration-guide.html
+  - /docs/scos/dev/module-migration-guides/glue-api/catalogsearchrestapi-migration-guide.html
 ---
 
-## Upgrading from Version 1.* to Version 2.*
+## Upgrading from version 1.* to version 2.*
 
 CatalogSearchRestApi version 2 has been improved to work properly with the currency and price mode. Now other modules are responsible to handle these parameters in the request. Also, we have fixed a response structure to meet requirements, namely we have added a price with the currency information and fixed a catalog search suggestions structure.
 

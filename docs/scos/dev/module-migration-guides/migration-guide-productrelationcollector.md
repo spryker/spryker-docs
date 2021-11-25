@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ProductRelationCollector
+title: Migration guide - ProductRelationCollector
 description: Use the guide to learn how to update the ProductRelationCollector module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productrelationcollector.html
 ---
 
-## Upgrading from Version 1.* to Version 2.*
+## Upgrading from version 1.* to version 2.*
 
 From version 2 we added support for multi-currency. First of all, make sure that you [migrated the Price module](/docs/scos/dev/module-migration-guides/migration-guide-price.html). We have changed collector dependency to use `PriceProduct` module instead of price, please update your code accordingly if you overwrote the core.
 

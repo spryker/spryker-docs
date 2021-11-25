@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Search
+title: Migration guide - Search
 description: Use the guide to learn how to update the Search module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-search.html
 ---
 
-## Upgrading from Version 8.9.* to Version 8.10.*
+## Upgrading from version 8.9.* to version 8.10.*
 
 {% info_block errorBox "Prerequisites" %}
 

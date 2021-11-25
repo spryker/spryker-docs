@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ProductValidity
+title: Migration guide - ProductValidity
 description: Use the guide to learn how to update the ProductValidity module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

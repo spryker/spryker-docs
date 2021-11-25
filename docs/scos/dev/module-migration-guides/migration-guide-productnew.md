@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ProductNew
+title: Migration guide - ProductNew
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-productnew
@@ -18,7 +18,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productnew.html
 ---
 
-## Upgarding from Version 1.1* to Version 1.2*
+## Upgrading from version 1.1* to version 1.2*
 
 {% info_block errorBox "Prerequisites" %}
 

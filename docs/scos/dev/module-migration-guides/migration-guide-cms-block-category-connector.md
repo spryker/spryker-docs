@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - CMS Block Category Connector
+title: Migration guide - CmsBlockCategoryConnector
 description: Use the guide to update versions to the newer ones of the CMS Block Category Connector module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

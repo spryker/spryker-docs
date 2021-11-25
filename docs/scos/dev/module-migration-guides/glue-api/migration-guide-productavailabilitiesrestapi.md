@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ProductAvailabilitiesRestApi
+title: Migration guide - ProductAvailabilitiesRestApi
 description: Use the guide to migrate to a new version of the ProductAvailabilitiesRestApi module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/glue-api/migration-guide-productavailabilitiesrestapi.html
 ---
 
-## Upgrading from Version 3.* to Version 4.*
+## Upgrading from version 3.* to version 4.*
 
 In this new version of the **ProductAvailabilitiesRestApi** module, we have added support of decimal stock. You can find more details about the changes on the [ProductAvailabilitiesRestApi module](https://github.com/spryker/product-availabilities-rest-api/releases) release page.
 
@@ -169,7 +169,7 @@ Becomes:
 
 *Estimated migration time: 5 min*
 
-## Upgrading from Version 1.* to Version 3.0.0
+## Upgrading from version 1.* to version 3.0.0
 
 {% info_block infoBox %}
 

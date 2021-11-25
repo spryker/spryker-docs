@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Price
+title: Migration guide - Price
 description: Use the guide to migrate to a newer version of the Price module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -30,7 +30,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-price.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-price.html
 related:
-  - title: Migration Guide - Multi-Currency
+  - title: Migration guide - MultiCurrency
     link: docs/scos/dev/module-migration-guides/migration-guide-multi-currency.html
 ---
 

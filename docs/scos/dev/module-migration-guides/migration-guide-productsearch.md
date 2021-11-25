@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ProductSearch
+title: Migration guide - ProductSearch
 description: Use the guide to learn how to update the ProductSearch module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -30,13 +30,13 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productsearch.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productsearch.html
 related:
-  - title: Migration Guide - Product
+  - title: Migration guide - Product
     link: docs/scos/dev/module-migration-guides/migration-guide-product.html
-  - title: Migration Guide - Product Set GUI
+  - title: Migration guide - Product Set GUI
     link: docs/scos/dev/module-migration-guides/migration-guide-productsetgui.html
 ---
 
-## Upgrading from Version 3.* to Version 4.*
+## Upgrading from version 3.* to version 4.*
 
 1. Requires version ^4.0.0 of Product and ^5.0.0 of Search bundles.
 2. `ProductSearchFacade::activateProductSearch()` and `ProductSearchFacade::deactivateProductSearch()` are not connected to `searchableProduct` anymore.

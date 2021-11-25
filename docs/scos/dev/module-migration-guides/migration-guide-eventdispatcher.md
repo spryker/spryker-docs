@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - EventDispatcher
+title: Migration guide - EventDispatcher
 description: Use the guide to perform the EventDispatcher part of the Silex Migration Effort.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

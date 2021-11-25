@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - PersistentCart
+title: Migration guide - PersistentCart
 description: Use the guide to migrate to a newer version of the PersistentCart module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

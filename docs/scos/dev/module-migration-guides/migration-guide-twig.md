@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Twig
+title: Migration guide - Twig
 description: Use the guide to perform the Twig part of the Silex Migration Effort.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

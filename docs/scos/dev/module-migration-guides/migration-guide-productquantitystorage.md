@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ProductQuantityStorage
+title: Migration guide - ProductQuantityStorage
 description: Use the guide to learn how to update the ProductQuantityStorage module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productquantitystorage.html
 ---
 
-## Upgrading from Version 1.* to Version 3.0.0
+## Upgrading from version 1.* to version 3.0.0
 
 {% info_block infoBox %}
 

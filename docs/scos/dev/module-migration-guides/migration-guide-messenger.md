@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Messenger
+title: Migration guide - Messenger
 description: Use the guide to perform the Messenger part of the Silex Migration Effort.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

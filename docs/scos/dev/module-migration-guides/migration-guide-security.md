@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Security
+title: Migration guide - Security
 description: Use the guide to perform the Security part of the Silex Migration Effort.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

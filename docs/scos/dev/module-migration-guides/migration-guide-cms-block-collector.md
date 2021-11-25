@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - CMS Block Collector
+title: Migration Guide - CmsBlockCollector
 description: Use the guide to update versions to the newer ones of the CMS Block Collector module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

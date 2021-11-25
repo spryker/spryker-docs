@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ProductOption
+title: Migration guide - ProductOption
 description: Use the guide to learn how to update the ProductOption module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -30,9 +30,9 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productoption.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productoption.html
 related:
-  - title: Migration Guide - Currency
+  - title: Migration guide - Currency
     link: docs/scos/dev/module-migration-guides/migration-guide-currency.html
-  - title: Migration Guide - Product Option Cart Connector
+  - title: Migration guide - ProductOptionCartConnector
     link: docs/scos/dev/module-migration-guides/migration-guide-productoptioncartconnector.html
 ---
 

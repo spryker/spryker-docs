@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Store
+title: Migration guide - Store
 description: Use the guide to perform the Store part of the Silex Migration Effort.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

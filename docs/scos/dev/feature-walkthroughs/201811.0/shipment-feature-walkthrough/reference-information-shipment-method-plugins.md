@@ -12,7 +12,7 @@ related:
   - title: Shipment Module Overview
     link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/shipment-module-overview.html
   - title: Migration Guide - Shipment
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-shipment.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-shipment.html
 ---
 
 The main concerns regarding shipping services are :

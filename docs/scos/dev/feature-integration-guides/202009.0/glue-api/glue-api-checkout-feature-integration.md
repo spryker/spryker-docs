@@ -397,7 +397,7 @@ To verify that `OrderPaymentsResourceRoutePlugin` is activated, make sure that t
 ```
 {% endinfo_block %}
 
-For more details, see [Updating Payment Data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html#updating-payment-data).
+For more details, see [Updating Payment Data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/updating-payment-data.html).
 
 ### Configure mapping
 Mappers should be configured on the project level to map the data from the request to `QuoteTransfer`:

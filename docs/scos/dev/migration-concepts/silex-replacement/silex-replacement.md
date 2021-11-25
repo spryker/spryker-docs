@@ -102,21 +102,21 @@ Update the following modules using the provided migration guides:
 
 | MODULE | MIGRATION GUIDE |
 | --- | --- |
-| ErrorHandler | [Migration guide - ErrorHandler](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-errorhandler.html) |
-| EventDispatcher | [Migration guide - EventDispatcher](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-eventdispatcher.html) |
-| Form | [Migration guide - Form](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-form.html) |
-| Http | [Migration guide - Http](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-http.html) |
-| Locale | [Migration guide - Locale](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-locale.html) |
-|Propel | [Migration guide - Propel](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-propel.html) |
-| Messenger | [Migration guide - Messenger](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-messenger.html) |
-|Router | [Migration guide - Router](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-router.html) |
-| Security| [Migration guide -Security](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-security.html) |
-|Session | [Migration guide - Session](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-session.html) |
-| Store | [Migration guide - Store](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-store.html) |
-| Translator | [Migration guide - Translator](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-translator.html) |
-| Twig | [Migration guide -Twig](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-twig.html) |
-| Validator | [Migration guide - Validator](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-validator.html) |
-| WebProfiler | [Migration guide - WebProfiler](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-webprofiler.html) |
+| ErrorHandler | [Migration guide - ErrorHandler](/docs/scos/dev/module-migration-guides/migration-guide-errorhandler.html) |
+| EventDispatcher | [Migration guide - EventDispatcher](/docs/scos/dev/module-migration-guides/migration-guide-eventdispatcher.html) |
+| Form | [Migration guide - Form](/docs/scos/dev/module-migration-guides/migration-guide-form.html) |
+| Http | [Migration guide - Http](/docs/scos/dev/module-migration-guides/migration-guide-http.html) |
+| Locale | [Migration guide - Locale](/docs/scos/dev/module-migration-guides/migration-guide-locale.html) |
+|Propel | [Migration guide - Propel](/docs/scos/dev/module-migration-guides/migration-guide-propel.html) |
+| Messenger | [Migration guide - Messenger](/docs/scos/dev/module-migration-guides/migration-guide-messenger.html) |
+|Router | [Migration guide - Router](/docs/scos/dev/module-migration-guides/migration-guide-router.html) |
+| Security| [Migration guide -Security](/docs/scos/dev/module-migration-guides/migration-guide-security.html) |
+|Session | [Migration guide - Session](/docs/scos/dev/module-migration-guides/migration-guide-session.html) |
+| Store | [Migration guide - Store](/docs/scos/dev/module-migration-guides/migration-guide-store.html) |
+| Translator | [Migration guide - Translator](/docs/scos/dev/module-migration-guides/migration-guide-translator.html) |
+| Twig | [Migration guide -Twig](/docs/scos/dev/module-migration-guides/migration-guide-twig.html) |
+| Validator | [Migration guide - Validator](/docs/scos/dev/module-migration-guides/migration-guide-validator.html) |
+| WebProfiler | [Migration guide - WebProfiler](/docs/scos/dev/module-migration-guides/migration-guide-webprofiler.html) |
 
 You've replaced silex.
 

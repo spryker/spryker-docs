@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ShoppingList
+title: Migration guide - ShoppingList
 description: Use the guide to learn how to update the ShoppingList module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-shoppinglist.html
 ---
 
-## Upgrading from Version 2.* to Version 4.0.0
+## Upgrading from version 2.* to version 4.0.0
 
 {% info_block infoBox %}
 

@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Product
+title: Migration guide - Product
 description: Use the guide to update the Product module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -30,9 +30,9 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-product.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-product.html
 related:
-  - title: Migration Guide - Collector
+  - title: Migration guide - Collector
     link: docs/scos/dev/module-migration-guides/migration-guide-collector.html
-  - title: Migration Guide - ProductManagement
+  - title: Migration guide - ProductManagement
     link: docs/scos/dev/module-migration-guides/migration-guide-productmanagement.html
 ---
 

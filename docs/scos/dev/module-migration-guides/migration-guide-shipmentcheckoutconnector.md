@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ShipmentCheckoutConnector
+title: Migration guide - ShipmentCheckoutConnector
 description: Use the guide to learn how to update the ShipmentCheckoutConnector module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -22,7 +22,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-shipmentcheckoutconnector.html
 ---
 
-## Upgrading from Version 1.0.* to Version 2.0.0
+## Upgrading from version 1.0.* to version 2.0.0
 
 In this new version of the **ShipmentCheckoutConnector** module, we have added support of split delivery. You can find more details about the changes on the ShipmentCheckoutConnector module release page.
 

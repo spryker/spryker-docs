@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Navigation
+title: Migration guide - Navigation
 description: Use the guide to migrate to a newer version of the Navigation module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -30,7 +30,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-navigation.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-navigation.html
 related:
-  - title: Migration Guide - NavigationGui
+  - title: Migration guide - NavigationGui
     link: docs/scos/dev/module-migration-guides/migration-guide-navigationgui.html
 ---
 

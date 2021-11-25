@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Quote
+title: Migration guide - Quote
 description: Use the guide to learn how to update the Quote module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -30,11 +30,11 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-quote.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-quote.html
 related:
-  - title: Migration Guide - Cart
+  - title: Migration guide - Cart
     link: docs/scos/dev/module-migration-guides/migration-guide-cart.html
 ---
 
-## Upgrading from Version 1.* to Version 2.*
+## Upgrading from version 1.* to version 2.*
 
 The new version of the **Quote** module provides the ability to save customer quote into the database and get it. Version 2 of the `Quote` module introduced a new schema.
 

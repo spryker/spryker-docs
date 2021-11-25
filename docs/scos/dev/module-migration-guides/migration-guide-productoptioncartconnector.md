@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ProductOptionCartConnector
+title: Migration guide - ProductOptionCartConnector
 description: Use the guide to learn how to update the ProductOptionCartConnector module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -30,7 +30,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productoptioncartconnector.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productoptioncartconnector.html
 related:
-  - title: Migration Guide - Product Option
+  - title: Migration guide - ProductOption
     link: docs/scos/dev/module-migration-guides/migration-guide-productoption.html
 ---
 

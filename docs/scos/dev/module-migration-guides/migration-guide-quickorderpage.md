@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - QuickOrderPage
+title: Migration guide - QuickOrderPage
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-quick-order-page
@@ -26,7 +26,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-quickorderpage.html
 ---
 
-## Upgrading from Version 2.* to Version 4.0.0
+## Upgrading from version 2.* to version 4.0.0
 
 {% info_block infoBox %}
 
@@ -34,7 +34,7 @@ In order to dismantle the Horizontal Barrier and enable partial module updates o
 
 {% endinfo_block %}
 
-## Upgrading from Version 1.* to Version 2.*
+## Upgrading from version 1.* to version 2.*
 
 At version 2.0.0 we've introduced a couple of features for the **Quick Order** page.
 First of all, there is a brand new possibility to search for concrete products by name or SKU using a widget (reusable functionality). Now, a user is able to add items to a shopping list from the Quick Order form. After the user selected a certain product from the search field, price and measurement unit (if the module is installed and product already has unit) will be displayed. A price is getting recalculated on every quantity field change taking into account volume prices. Quantity is validated against quantity restrictions if configured. While adding to cart packaging units will be applied to a product if present.

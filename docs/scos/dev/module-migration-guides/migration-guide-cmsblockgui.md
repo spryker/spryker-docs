@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - CmsBlockGui
+title: Migration guide - CmsBlockGui
 description: Use the guide to update versions to the newer ones of the CMS Block GUI module.
 last_updated: Jul 16, 2021
 template: module-migration-guide-template
@@ -30,9 +30,9 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cmsblockgui.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmsblockgui.html
 related:
-  - title: Migration Guide - CMS Block
+  - title: Migration guide - CMS Block
     link: docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html
-  - title: Migration Guide - CMS Block Collector
+  - title: Migration guide - CMS Block Collector
     link: docs/scos/dev/module-migration-guides/migration-guide-cms-block-collector.html
 ---
 

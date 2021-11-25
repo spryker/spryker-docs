@@ -1,5 +1,5 @@
 ---
-title: CompanyUserAuthRestApi Migration Guide
+title: Migration guide - CompanyUserAuthRestApi
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/companyuserauthrestapi-migration-guide
@@ -17,14 +17,15 @@ redirect_from:
   - /v5/docs/en/companyuserauthrestapi-migration-guide
   - /v6/docs/companyuserauthrestapi-migration-guide
   - /v6/docs/en/companyuserauthrestapi-migration-guide
-  - docs/scos/dev/module-migration-guides/201907.0/glue-api/companyuserauthrestapi-migration-guide.html
-  - docs/scos/dev/module-migration-guides/202001.0/glue-api/companyuserauthrestapi-migration-guide.html
-  - docs/scos/dev/module-migration-guides/202005.0/glue-api/companyuserauthrestapi-migration-guide.html
-  - docs/scos/dev/module-migration-guides/202009.0/glue-api/companyuserauthrestapi-migration-guide.html
-  - docs/scos/dev/module-migration-guides/202108.0/glue-api/companyuserauthrestapi-migration-guide.html
+  - /docs/scos/dev/module-migration-guides/201907.0/glue-api/companyuserauthrestapi-migration-guide.html
+  - /docs/scos/dev/module-migration-guides/202001.0/glue-api/companyuserauthrestapi-migration-guide.html
+  - /docs/scos/dev/module-migration-guides/202005.0/glue-api/companyuserauthrestapi-migration-guide.html
+  - /docs/scos/dev/module-migration-guides/202009.0/glue-api/companyuserauthrestapi-migration-guide.html
+  - /docs/scos/dev/module-migration-guides/202108.0/glue-api/companyuserauthrestapi-migration-guide.html
+  - /docs/scos/dev/module-migration-guides/glue-api/companyuserauthrestapi-migration-guide.html
 ---
 
-## Upgrading from Version 1.* to Version 2.*
+## Upgrading from version 1.* to version 2.*
 
 
 CompanyUserAuthRestApi module version 2.0.0 brings the following major change:

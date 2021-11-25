@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Multi-Currency
+title: Migration guide - MultiCurrency
 description: Use the guide to migrate to a newer version of the MultiCurrency module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -30,15 +30,15 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-multi-currency.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-multi-currency.html
 related:
-  - title: Migration Guide - Currency
+  - title: Migration guide - Currency
     link: docs/scos/dev/module-migration-guides/migration-guide-currency.html
-  - title: Migration Guide - Sales
+  - title: Migration guide - Sales
     link: docs/scos/dev/module-migration-guides/migration-guide-sales.html
-  - title: Migration Guide - Price
+  - title: Migration guide - Price
     link: docs/scos/dev/module-migration-guides/migration-guide-price.html
-  - title: Migration Guide - Discount
+  - title: Migration guide - Discount
     link: docs/scos/dev/module-migration-guides/migration-guide-discount.html
-  - title: Migration Guide - Shipment
+  - title: Migration guide - Shipment
     link: docs/scos/dev/module-migration-guides/migration-guide-shipment.html
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ProductSearchWidget
+title: Migration guide - ProductSearchWidget
 description: Use the guide to learn how to update the ProductSearchWidget module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -32,7 +32,7 @@ redirect_from:
 
 ---
 
-## Upgrading from Version 1.* to Version 3.0.0
+## Upgrading from version 1.* to version 3.0.0
 
 {% info_block infoBox %}
 

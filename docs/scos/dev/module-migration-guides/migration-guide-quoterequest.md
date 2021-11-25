@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - QuoteRequest
+title: Migration guide - QuoteRequest
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-quoterequest
@@ -24,7 +24,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-quoterequest.html
 ---
 
-## Upgrading from Version 1.x.x to Version 2.x.x
+## Upgrading from version 1.x.x to version 2.x.x
 
 `QuoteRequest` module version 2.0.0 brings one major change - column `is_latest_version_hidden` has been replaced by `is_latest_version_visible` column in the `spy_quote_request` database table.
 

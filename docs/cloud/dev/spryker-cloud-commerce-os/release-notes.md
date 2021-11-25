@@ -36,7 +36,7 @@ This document describes new features and enhancements we released for Spryker Cl
 
 * **Documentation about Onboarding deliverables**: updated the Spryker Cloud Commerce OS getting started page with the deliverables provided after the onboarding. See [Getting started with the Spryker Cloud Commerce OS](/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html).
 
-* **Documentation about GitLab**: published the instructions on connecting a GitLab repository to the CD Pipeline. See [Connect a GitLab code repository](/docs/cloud/dev/spryker-cloud-commerce-os/connecting-code-repository.html#connect-a-gitlab-code-repository).
+* **Documentation about GitLab**: published the instructions on connecting a GitLab repository to the CD Pipeline. See [Connect a GitLab code repository](/docs/cloud/dev/spryker-cloud-commerce-os/connecting-a-code-repository.html#connect-a-gitlab-code-repository).
 
 * **Documentation about Docker SDK**: published new and updated existing pages covering the following Docker SDK topics: deploy file reference, choosing a version, quick start guide, installation, services, modes overview, mount options, debugging, running tests, troubleshooting. See [Docker SDK](https://documentation.spryker.com/docs/docker-sdk).
 

@@ -545,7 +545,7 @@ public function voucherAction(Request $request)
 
 {% info_block infoBox "Info" %}
 
-The step has a form now and receives the voucher code value from the customer. Go to the [shop](http://www.de.suite.local/) and try it out.
+The step has a form now and receives the voucher code value from the customer. Go to the shop `http://www.de.suite.local/` and try it out.
 
 {% endinfo_block %}
 

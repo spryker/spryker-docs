@@ -29,7 +29,7 @@ There is already a list of plugins which populate quote transfer with correspond
 
 {% info_block infoBox "" %}
 
-For more details, check [Cart Data Flow](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/cart-module-reference-information.html#cart-operations#cart-data-flow) in the *Cart Functionality* section.
+For more details, check [Cart Data Flow](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/cart-module-reference-information.html#cart-operations) in the *Cart Functionality* section.
 
 {% endinfo_block %}
 

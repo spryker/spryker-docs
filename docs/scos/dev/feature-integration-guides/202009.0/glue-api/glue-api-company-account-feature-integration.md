@@ -241,7 +241,7 @@ select count(*) from spy_company_user where uuid is NULL;
 
 {% info_block infoBox %}
 
-`CompaniesResourcePlugin` GET, `CompanyBusinessUnitsResourcePlugin` GET, `CompanyBusinessUnitAddressesResourcePlugin` GET, `CompanyRolesResourcePlugin` GET, `CompanyUsersResourceRoutePlugin` GET verbs are protected resources. For details, refer to the Configure section of [Configure documentation](/docs/scos/dev/concepts/glue-api/glue-infrastructure.html#resource-routing).
+`CompaniesResourcePlugin` GET, `CompanyBusinessUnitsResourcePlugin` GET, `CompanyBusinessUnitAddressesResourcePlugin` GET, `CompanyRolesResourcePlugin` GET, `CompanyUsersResourceRoutePlugin` GET verbs are protected resources. For details, refer to the Configure section of [Configure documentation](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html#resource-routing).
 
 {% endinfo_block %}
 

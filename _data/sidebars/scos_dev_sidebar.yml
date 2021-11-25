@@ -2146,381 +2146,384 @@ entries:
   - title: Module migration guides
     url: /docs/scos/dev/module-migration-guides/about-migration-guides.html
     nested:
+
     - title: Glue API
       url: /docs/scos/dev/module-migration-guides/glue-api/about-glue-api-migration-guides.html
       nested:
-      - title: CatalogSearchRestApi Migration Guide
+
+      - title: Migration Guide - CartsRestApi
+        url: /docs/scos/dev/module-migration-guides/glue-api/cartsrestapi-migration-guide.html
+      - title: Migration Guide - CatalogSearchRestApi
         url: /docs/scos/dev/module-migration-guides/glue-api/catalogsearchrestapi-migration-guide.html
-      - title: Migration Guide - NavigationsRestApi
-        url: /docs/scos/dev/module-migration-guides/glue-api/migration-guide-navigationsrestapi.html
-      - title: CompanyUsersRestApi Migration Guide
-        url: /docs/scos/dev/module-migration-guides/glue-api/companyusersrestapi-migration-guide.html
-      - title: Migration guide - ProductTaxSetsRestApi
-        url: /docs/scos/dev/module-migration-guides/glue-api/migration-guide-producttaxsetsrestapi.html
-      - title: Migration Guide - OrdersRestApi
-        url: /docs/scos/dev/module-migration-guides/glue-api/migration-guide-ordersrestapi.html
-      - title: CompanyUserAuthRestApi Migration Guide
-        url: /docs/scos/dev/module-migration-guides/glue-api/companyuserauthrestapi-migration-guide.html
       - title: Migration Guide - CheckoutRestApi
         url: /docs/scos/dev/module-migration-guides/glue-api/migration-guide-checkoutrestapi.html
-      - title: Migration Guide - ProductAvailabilitiesRestApi
-        url: /docs/scos/dev/module-migration-guides/glue-api/migration-guide-productavailabilitiesrestapi.html
-      - title: CartsRestApi Migration Guide
-        url: /docs/scos/dev/module-migration-guides/glue-api/cartsrestapi-migration-guide.html
+      - title: Migration Guide - CompanyUserAuthRestApi
+        url: /docs/scos/dev/module-migration-guides/glue-api/companyuserauthrestapi-migration-guide.html
+      - title: Migration Guide - CompanyUsersRestApi
+        url: /docs/scos/dev/module-migration-guides/glue-api/companyusersrestapi-migration-guide.html
       - title: Migration Guide - ContentBannersRestApi
         url: /docs/scos/dev/module-migration-guides/glue-api/migration-guide-contentbannersrestapi.html
-    - title: Migration Guide - ProductLabelDiscountConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productlabeldiscountconnector.html
-    - title: Migration Guide - PriceProductVolume
-      url: /docs/scos/dev/module-migration-guides/migration-guide-priceproductvolume.html
-    - title: Migration Guide - PriceProductScheduleGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-priceproductschedulegui.html
-    - title: Migration Guide - Multi-Currency
-      url: /docs/scos/dev/module-migration-guides/migration-guide-multi-currency.html
-    - title: Migration Guide - Transfer
-      url: /docs/scos/dev/module-migration-guides/migration-guide-transfer.html
-    - title: Migration Guide - CMSBlockStorage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cmsblockstorage.html
-    - title: Migration Guide - CartPage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cartpage.html
-    - title: Migration Guide - Search
-      url: /docs/scos/dev/module-migration-guides/migration-guide-search.html
-    - title: Migration Guide - ProductRelationCollector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productrelationcollector.html
-    - title: Migration Guide - Business On Behalf Data Import
-      url: /docs/scos/dev/module-migration-guides/migration-guide-business-on-behalf-data-import.html
-    - title: Migration Guide - MultiCartPage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-multicartpage.html
-    - title: Migration guide - Payone Suite
-      url: /docs/scos/dev/module-migration-guides/migration-guide-payone-suite.html
-    - title: Migration Guide - QuoteRequestAgentPage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequestagentpage.html
-    - title: Migration Guide - Touch
-      url: /docs/scos/dev/module-migration-guides/migration-guide-touch.html
-    - title: Migration Guide - OfferGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-offergui.html
-    - title: Migration Guide - ProductSetGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productsetgui.html
-    - title: Migration Guide - CompanyUser
-      url: /docs/scos/dev/module-migration-guides/migration-guide-companyuser.html
-    - title: Migration Guide - CartVariant
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cartvariant.html
-    - title: Migration Guide - ProductLabelGUI
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productlabelgui.html
-    - title: Migration Guide - Collector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-collector.html
-    - title: Migration Guide - ShipmentCartConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-shipmentcartconnector.html
-    - title: Migration Guide - Environment Configuration
-      url: /docs/scos/dev/module-migration-guides/migration-guide-environment-configuration.html
-    - title: Migration Guide - RabbitMQ
-      url: /docs/scos/dev/module-migration-guides/migration-guide-rabbitmq.html
-    - title: Migration Guide - Setup
-      url: /docs/scos/dev/module-migration-guides/migration-guide-setup.html
-    - title: Migration Guide - Tax
-      url: /docs/scos/dev/module-migration-guides/migration-guide-tax.html
-    - title: Migration Guide - Checkout
-      url: /docs/scos/dev/module-migration-guides/migration-guide-checkout.html
-    - title: Migration Guide - ProductListSearch
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productlistsearch.html
-    - title: Migration Guide - ConfigurableBundle
-      url: /docs/scos/dev/module-migration-guides/migration-guide-configurablebundle.html
-    - title: Migration Guide - ProductListGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productlistgui.html
-    - title: Migration Guide - ProductDetailPage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productdetailpage.html
-    - title: Migration Guide - Discount
-      url: /docs/scos/dev/module-migration-guides/migration-guide-discount.html
-    - title: Migration Guide - Payment
-      url: /docs/scos/dev/module-migration-guides/migration-guide-payment.html
-    - title: Migration Guide - ContentStorage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-contentstorage.html
-    - title: Migration Guide - CMS Block Collector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cms-block-collector.html
-    - title: Migration Guide - CmsGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cmsgui.html
-    - title: Migration Guide - StockSalesConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-stocksalesconnector.html
-    - title: Migration Guide - ProductOption
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productoption.html
-    - title: Migration Guide - Content
-      url: /docs/scos/dev/module-migration-guides/migration-guide-content.html
-    - title: Migration Guide - PriceProductStorage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-priceproductstorage.html
-    - title: Migration Guide - Calculation
-      url: /docs/scos/dev/module-migration-guides/migration-guide-calculation.html
-    - title: Migration Guide - Customer
-      url: /docs/scos/dev/module-migration-guides/migration-guide-customer.html
-    - title: Migration Guide - ProductOptionDiscountConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productoptiondiscountconnector.html
-    - title: Migration Guide - SalesQuantity
-      url: /docs/scos/dev/module-migration-guides/migration-guide-salesquantity.html
-    - title: Migration Guide - CMS Block Category Connector Migration Console
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cms-block-category-connector-migration-console.html
-    - title: Migration Guide - ShoppingList
-      url: /docs/scos/dev/module-migration-guides/migration-guide-shoppinglist.html
-    - title: Migration Guide - Price
-      url: /docs/scos/dev/module-migration-guides/migration-guide-price.html
-    - title: Migration Guide - QuoteRequest
-      url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequest.html
-    - title: Migration Guide - ProductQuantity
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productquantity.html
-    - title: Migration Guide - SalesSplit
-      url: /docs/scos/dev/module-migration-guides/migration-guide-salessplit.html
-    - title: Migration Guide - ContentBanner
-      url: /docs/scos/dev/module-migration-guides/migration-guide-contentbanner.html
-    - title: Migration Guide - Refund
-      url: /docs/scos/dev/module-migration-guides/migration-guide-refund.html
-    - title: Migration Guide - CmsBlockGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cmsblockgui.html
-    - title: Migration Guide - Currency
-      url: /docs/scos/dev/module-migration-guides/migration-guide-currency.html
-    - title: Migration Guide - ShoppingListPage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-shoppinglistpage.html
-    - title: Migration Guide - ContentBannerGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-contentbannergui.html
-    - title: Migration guide - Payone Demoshop
-      url: /docs/scos/dev/module-migration-guides/migration-guide-payone-demoshop.html
-    - title: Migration Guide - AvailabilityCartConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-availabilitycartconnector.html
-    - title: Migration Guide - ManualOrderEntryGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-manualorderentrygui.html
-    - title: Migration Guide - PriceCartConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-pricecartconnector.html
-    - title: Migration Guide - ProductMeasurementUnitWidget
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productmeasurementunitwidget.html
-    - title: Migration Guide - QuickOrder
-      url: /docs/scos/dev/module-migration-guides/migration-guide-quickorder.html
-    - title: Migration Guide - ProductQuantityDataImport
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productquantitydataimport.html
-    - title: Migration Guide - Product
-      url: /docs/scos/dev/module-migration-guides/migration-guide-product.html
-    - title: Migration Guide - CMS
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cms.html
-    - title: Migration Guide - PriceProductVolumeGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-priceproductvolumegui.html
-    - title: Migration Guide - PersistentCart
-      url: /docs/scos/dev/module-migration-guides/migration-guide-persistentcart.html
-    - title: Migration Guide - Shipment
-      url: /docs/scos/dev/module-migration-guides/migration-guide-shipment.html
-    - title: Migration Guide - CheckoutPage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-checkoutpage.html
-    - title: Migration Guide - Step Engine
-      url: /docs/scos/dev/module-migration-guides/migration-guide-step-engine.html
-    - title: Migration Guide - NavigationGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-navigationgui.html
-    - title: Migration Guide - ProductBundle
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productbundle.html
-    - title: Migration Guide - ProductPackagingUnitStorage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitstorage.html
-    - title: Migration Guide - ShoppingListWidget
-      url: /docs/scos/dev/module-migration-guides/migration-guide-shoppinglistwidget.html
-    - title: Migration Guide - Category
-      url: /docs/scos/dev/module-migration-guides/migration-guide-category.html
-    - title: Migration Guide - DiscountCalculatorConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-discountcalculatorconnector.html
-    - title: Migration Guide - CmsPageSearch
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cmspagesearch.html
-    - title: Migration Guide - OMS
-      url: /docs/scos/dev/module-migration-guides/migration-guide-oms.html
-    - title: Migration Guide - CmsBlockWidget
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cmsblockwidget.html
-    - title: Migration Guide - Navigation
-      url: /docs/scos/dev/module-migration-guides/migration-guide-navigation.html
-    - title: Migration Guide - Merchant
-      url: /docs/scos/dev/module-migration-guides/migration-guide-merchant.html
-    - title: Migration Guide - Category Template Migration Console
-      url: /docs/scos/dev/module-migration-guides/migration-guide-category-template-migration-console.html
-    - title: Migration Guide - ProductValidity
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productvalidity.html
-    - title: Migration Guide - CartExtension
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cartextension.html
-    - title: Migration Guide - ProductRelation
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productrelation.html
-    - title: Migration Guide - AvailabilityStorage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-availabilitystorage.html
-    - title: Migration Guide - Cart
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cart.html
-    - title: Migration Guide - ProductManagement
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productmanagement.html
-    - title: Migration Guide - ProductOptionExporter
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productoptionexporter.html
-    - title: Migration Guide - CMS Block Category Connector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cms-block-category-connector.html
-    - title: Migration Guide - ConfigurableBundleStorage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-configurablebundlestorage.html
-    - title: Migration Guide - ContentGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-contentgui.html
+      - title: Migration Guide - NavigationsRestApi
+        url: /docs/scos/dev/module-migration-guides/glue-api/migration-guide-navigationsrestapi.html
+      - title: Migration Guide - OrdersRestApi
+        url: /docs/scos/dev/module-migration-guides/glue-api/migration-guide-ordersrestapi.html
+      - title: Migration Guide - ProductAvailabilitiesRestApi
+        url: /docs/scos/dev/module-migration-guides/glue-api/migration-guide-productavailabilitiesrestapi.html
+      - title: Migration guide - ProductConfigurationsPriceProductVolumesRestApi
+        url: /docs/scos/dev/module-migration-guides/migration-guide-productconfigurationspriceproductvolumesrestapi.html
+      - title: Migration guide - ProductConfigurationsRestApi
+        url: /docs/scos/dev/module-migration-guides/migration-guide-productconfigurationsrestapi.html
+      - title: Migration guide - ProductTaxSetsRestApi
+        url: /docs/scos/dev/module-migration-guides/glue-api/migration-guide-producttaxsetsrestapi.html
+
+      
+    - title: Migration Guide - API Module
+      url: /docs/scos/dev/module-migration-guides/migration-guide-api-module.html
+    - title: Migration guide - Auth module to SecurityGui module
+      url: /docs/scos/dev/module-migration-guides/migration-guide-auth-module-to-securitygui-module.html
     - title: Migration Guide - Availability
       url: /docs/scos/dev/module-migration-guides/migration-guide-availability.html
-    - title: Migration Guide - Offer
-      url: /docs/scos/dev/module-migration-guides/migration-guide-offer.html
-    - title: Migration Guide - PriceProduct
-      url: /docs/scos/dev/module-migration-guides/migration-guide-priceproduct.html
-    - title: Migration Guide - ProductMeasurementUnit
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productmeasurementunit.html
-    - title: Migration Guide - CustomerPage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-customerpage.html
-    - title: Migration Guide - ProductDiscountConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productdiscountconnector.html
-    - title: Migration Guide - QuoteRequestAgent
-      url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequestagent.html
-    - title: Migration Guide - StockGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-stockgui.html
-    - title: Migration Guide - PriceProductSchedule
-      url: /docs/scos/dev/module-migration-guides/migration-guide-priceproductschedule.html
-    - title: Migration Guide - Publish and Synchronization
-      url: /docs/scos/dev/module-migration-guides/migration-guide-publish-and-synchronization.html
-    - title: Migration Guide - Session
-      url: /docs/scos/dev/module-migration-guides/migration-guide-session.html
-    - title: Migration Guide - CustomerReorderWidget
-      url: /docs/scos/dev/module-migration-guides/migration-guide-customerreorderwidget.html
-    - title: Migration Guide - QuickOrderPage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-quickorderpage.html
-    - title: Migration Guide - ProductLabel
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productlabel.html
-    - title: Migration Guide - CmsBlock
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html
+    - title: Migration Guide - AvailabilityCartConnector
+      url: /docs/scos/dev/module-migration-guides/migration-guide-availabilitycartconnector.html
     - title: Migration Guide - AvailabilityGui
       url: /docs/scos/dev/module-migration-guides/migration-guide-availabilitygui.html
-    - title: Migration Guide - ProductQuantityStorage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productquantitystorage.html
-    - title: Migration Guide - Stock
-      url: /docs/scos/dev/module-migration-guides/migration-guide-stock.html
-    - title: Migration Guide - Console
-      url: /docs/scos/dev/module-migration-guides/migration-guide-console.html
-    - title: Migration Guide - ProductSearch
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productsearch.html
-    - title: Migration Guide - ProductPageSearch
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productpagesearch.html
-    - title: Migration Guide - MerchantRelationshipProductListGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-merchantrelationshipproductlistgui.html
     - title: Migration Guide - AvailabilityOfferConnector
       url: /docs/scos/dev/module-migration-guides/migration-guide-availabilityofferconnector.html
-    - title: Migration Guide - ShipmentDiscountConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-shipmentdiscountconnector.html
+    - title: Migration Guide - AvailabilityStorage
+      url: /docs/scos/dev/module-migration-guides/migration-guide-availabilitystorage.html
+    - title: Migration Guide - Business On Behalf Data Import
+      url: /docs/scos/dev/module-migration-guides/migration-guide-business-on-behalf-data-import.html
+    - title: Migration Guide - Calculation
+      url: /docs/scos/dev/module-migration-guides/migration-guide-calculation.html
+    - title: Migration Guide - Cart
+      url: /docs/scos/dev/module-migration-guides/migration-guide-cart.html
+    - title: Migration Guide - CartExtension
+      url: /docs/scos/dev/module-migration-guides/migration-guide-cartextension.html
+    - title: Migration Guide - CartPage
+      url: /docs/scos/dev/module-migration-guides/migration-guide-cartpage.html
+    - title: Migration Guide - CartVariant
+      url: /docs/scos/dev/module-migration-guides/migration-guide-cartvariant.html
+    - title: Migration Guide - Catalog
+      url: /docs/scos/dev/module-migration-guides/migration-guide-catalog.html
+    - title: Migration Guide - Category Template Migration Console
+      url: /docs/scos/dev/module-migration-guides/migration-guide-category-template-migration-console.html
+    - title: Migration Guide - Category
+      url: /docs/scos/dev/module-migration-guides/migration-guide-category.html
+    - title: Migration Guide - CategoryGui
+      url: /docs/scos/dev/module-migration-guides/migration-guide-categorygui.html
+    - title: Migration Guide - CategoryPageSearch
+      url: /docs/scos/dev/module-migration-guides/migration-guide-categorypagesearch.html
+    - title: Migration guide - CategoryStorage
+      url: /docs/scos/dev/module-migration-guides/migration-guide-categorystorage.html
+    - title: Migration Guide - Checkout
+      url: /docs/scos/dev/module-migration-guides/migration-guide-checkout.html
+    - title: Migration Guide - CheckoutPage
+      url: /docs/scos/dev/module-migration-guides/migration-guide-checkoutpage.html
+    - title: Migration Guide - CMS Block Category Connector Migration Console
+      url: /docs/scos/dev/module-migration-guides/migration-guide-cms-block-category-connector-migration-console.html
+    - title: Migration Guide - CMS Block Category Connector
+      url: /docs/scos/dev/module-migration-guides/migration-guide-cms-block-category-connector.html
+    - title: Migration Guide - CMS Block Collector
+      url: /docs/scos/dev/module-migration-guides/migration-guide-cms-block-collector.html
+    - title: Migration Guide - CMS
+      url: /docs/scos/dev/module-migration-guides/migration-guide-cms.html
+    - title: Migration Guide - CmsBlock
+      url: /docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html
+    - title: Migration Guide - CmsBlockGui
+      url: /docs/scos/dev/module-migration-guides/migration-guide-cmsblockgui.html
+    - title: Migration Guide - CMSBlockStorage
+      url: /docs/scos/dev/module-migration-guides/migration-guide-cmsblockstorage.html
+    - title: Migration Guide - CmsBlockWidget
+      url: /docs/scos/dev/module-migration-guides/migration-guide-cmsblockwidget.html
+    - title: Migration Guide - CmsCollector
+      url: /docs/scos/dev/module-migration-guides/migration-guide-cmscollector.html
+    - title: Migration Guide - CmsGui
+      url: /docs/scos/dev/module-migration-guides/migration-guide-cmsgui.html
+    - title: Migration Guide - CmsPageSearch
+      url: /docs/scos/dev/module-migration-guides/migration-guide-cmspagesearch.html
+    - title: Migration Guide - CmsStorage
+      url: /docs/scos/dev/module-migration-guides/migration-guide-cmsstorage.html
+    - title: Migration Guide - Collector
+      url: /docs/scos/dev/module-migration-guides/migration-guide-collector.html
+    - title: Migration Guide - CompanyBusinessUnit
+      url: /docs/scos/dev/module-migration-guides/migration-guide-companybusinessunit.html
+    - title: Migration Guide - CompanyUser
+      url: /docs/scos/dev/module-migration-guides/migration-guide-companyuser.html
+    - title: Migration Guide - ConfigurableBundle
+      url: /docs/scos/dev/module-migration-guides/migration-guide-configurablebundle.html
+    - title: Migration Guide - ConfigurableBundleStorage
+      url: /docs/scos/dev/module-migration-guides/migration-guide-configurablebundlestorage.html
+    - title: Migration Guide - Console
+      url: /docs/scos/dev/module-migration-guides/migration-guide-console.html
+    - title: Migration Guide - Content
+      url: /docs/scos/dev/module-migration-guides/migration-guide-content.html
+    - title: Migration Guide - ContentBanner
+      url: /docs/scos/dev/module-migration-guides/migration-guide-contentbanner.html
+    - title: Migration Guide - ContentBannerGui
+      url: /docs/scos/dev/module-migration-guides/migration-guide-contentbannergui.html
+    - title: Migration Guide - ContentGui
+      url: /docs/scos/dev/module-migration-guides/migration-guide-contentgui.html
+    - title: Migration Guide - ContentStorage
+      url: /docs/scos/dev/module-migration-guides/migration-guide-contentstorage.html
+    - title: Migration Guide - Currency
+      url: /docs/scos/dev/module-migration-guides/migration-guide-currency.html
+    - title: Migration Guide - Customer
+      url: /docs/scos/dev/module-migration-guides/migration-guide-customer.html
+    - title: Migration Guide - CustomerPage
+      url: /docs/scos/dev/module-migration-guides/migration-guide-customerpage.html
+    - title: Migration Guide - CustomerReorderWidget
+      url: /docs/scos/dev/module-migration-guides/migration-guide-customerreorderwidget.html
+    - title: Migration Guide - Discount
+      url: /docs/scos/dev/module-migration-guides/migration-guide-discount.html
+    - title: Migration Guide - DiscountCalculatorConnector
+      url: /docs/scos/dev/module-migration-guides/migration-guide-discountcalculatorconnector.html
+    - title: Migration Guide - DiscountPromotion
+      url: /docs/scos/dev/module-migration-guides/migration-guide-discountpromotion.html
     - title: Migration Guide - DiscountPromotionWidget
       url: /docs/scos/dev/module-migration-guides/migration-guide-discountpromotionwidget.html
     - title: Migration Guide - DiscountSalesAggregatorConnector
       url: /docs/scos/dev/module-migration-guides/migration-guide-discountsalesaggregatorconnector.html
-    - title: Migration Guide - API Module
-      url: /docs/scos/dev/module-migration-guides/migration-guide-api-module.html
-    - title: Migration Guide - SharedCartPage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-sharedcartpage.html
-    - title: Migration Guide - Catalog
-      url: /docs/scos/dev/module-migration-guides/migration-guide-catalog.html
-    - title: Migration Guide - ProductPackagingUnitWidget
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitwidget.html
-    - title: Migration Guide - CmsStorage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cmsstorage.html
-    - title: Migration Guide - ProductPackagingUnit
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productpackagingunit.html
-    - title: Migration Guide - QuoteRequestPage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequestpage.html
-    - title: Migration Guide - QuoteRequestAgentWidget
-      url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequestagentwidget.html
-    - title: Migration Guide - CmsCollector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cmscollector.html
-    - title: Migration Guide - QuoteRequestWidget
-      url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequestwidget.html
-    - title: Migration Guide - ProductOptionCartConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productoptioncartconnector.html
-    - title: Migration Guide - ShipmentCheckoutConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-shipmentcheckoutconnector.html
-    - title: Migration Guide - DiscountPromotion
-      url: /docs/scos/dev/module-migration-guides/migration-guide-discountpromotion.html
-    - title: Migration Guide - Quote
-      url: /docs/scos/dev/module-migration-guides/migration-guide-quote.html
-    - title: Migration Guide - Monitoring
-      url: /docs/scos/dev/module-migration-guides/migration-guide-monitoring.html
-    - title: Migration Guide - Wishlist
-      url: /docs/scos/dev/module-migration-guides/migration-guide-wishlist.html
-    - title: Migration Guide - OauthCompanyUser
-      url: /docs/scos/dev/module-migration-guides/migration-guide-oauthcompanyuser.html
-    - title: Migration Guide - ProductPackagingUnitDataImport
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitdataimport.html
-    - title: Migration Guide - SalesAggregator
-      url: /docs/scos/dev/module-migration-guides/migration-guide-salesaggregator.html
-    - title: Migration Guide - Sales
-      url: /docs/scos/dev/module-migration-guides/migration-guide-sales.html
-    - title: Migration Guide - ProductSearchWidget
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productsearchwidget.html
-    - title: Migration Guide - ShipmentGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-shipmentgui.html
-    - title: Migration Guide - Product Relation
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productrelation.html
-    - title: Migration Guide - Form
-      url: /docs/scos/dev/module-migration-guides/migration-guide-form.html
-    - title: Migration Guide - Locale
-      url: /docs/scos/dev/module-migration-guides/migration-guide-locale.html
-    - title: Migration Guide - Twig
-      url: /docs/scos/dev/module-migration-guides/migration-guide-twig.html
-    - title: Migration Guide - ProductReviewSearch
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productreviewsearch.html
-    - title: Migration Guide - ProductSetPageSearch
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productsetpagesearch.html
-    - title: Migration Guide - HTTP
-      url: /docs/scos/dev/module-migration-guides/migration-guide-http.html
-    - title: Migration Guide - EventDispatcher
-      url: /docs/scos/dev/module-migration-guides/migration-guide-eventdispatcher.html
-    - title: Migration Guide - ProductLabelSearch
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productlabelsearch.html
-    - title: Migration Guide - Translator
-      url: /docs/scos/dev/module-migration-guides/migration-guide-translator.html
-    - title: Migration Guide - CategoryPageSearch
-      url: /docs/scos/dev/module-migration-guides/migration-guide-categorypagesearch.html
-    - title: Migration Guide - Validator
-      url: /docs/scos/dev/module-migration-guides/migration-guide-validator.html
-    - title: Migration Guide - Router
-      url: /docs/scos/dev/module-migration-guides/migration-guide-router.html
-    - title: Migration Guide - ErrorHandler
-      url: /docs/scos/dev/module-migration-guides/migration-guide-errorhandler.html
-    - title: Migration Guide - ProductRelationStorage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productrelationstorage.html
-    - title: Migration Guide - Store
-      url: /docs/scos/dev/module-migration-guides/migration-guide-store.html
-    - title: Migration Guide - CompanyBusinessUnit
-      url: /docs/scos/dev/module-migration-guides/migration-guide-companybusinessunit.html
-    - title: Migration Guide - Messenger
-      url: /docs/scos/dev/module-migration-guides/migration-guide-messenger.html
-    - title: Migration Guide - ProductNew
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productnew.html
-    - title: Migration Guide - Security
-      url: /docs/scos/dev/module-migration-guides/migration-guide-security.html
-    - title: Migration Guide - Propel
-      url: /docs/scos/dev/module-migration-guides/migration-guide-propel.html
-    - title: Migration Guide - WebProfiler
-      url: /docs/scos/dev/module-migration-guides/migration-guide-webprofiler.html
-    - title: Migration Guide - CategoryGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-categorygui.html
-    - title: Migration guide - ProductCategoryFilterGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productcategoryfiltergui.html
-    - title: Migration guide - MerchantGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-merchantgui.html
-    - title: Migration guide - ProductCategoryStorage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productcategorystorage.html
-    - title: Migration Guide - ProductLabelStorage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productlabelstorage.html
     - title: Migration guide - Elastica
       url: /docs/scos/dev/module-migration-guides/migration-guide-elastica.html
-    - title: Migration guide - SalesMerchantConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-salesmerchantconnector.html
-    - title: Migration guide - Auth module to SecurityGui module
-      url: /docs/scos/dev/module-migration-guides/migration-guide-auth-module-to-securitygui-module.html
-    - title: Migration guide - CategoryStorage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-categorystorage.html
-    - title: Migration guide - ProductConfigurationStorage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productconfigurationstorage.html
+    - title: Migration Guide - Environment Configuration
+      url: /docs/scos/dev/module-migration-guides/migration-guide-environment-configuration.html
+    - title: Migration Guide - ErrorHandler
+      url: /docs/scos/dev/module-migration-guides/migration-guide-errorhandler.html
+    - title: Migration Guide - EventDispatcher
+      url: /docs/scos/dev/module-migration-guides/migration-guide-eventdispatcher.html
+    - title: Migration Guide - Form
+      url: /docs/scos/dev/module-migration-guides/migration-guide-form.html
+    - title: Migration Guide - HTTP
+      url: /docs/scos/dev/module-migration-guides/migration-guide-http.html
+    - title: Migration Guide - Locale
+      url: /docs/scos/dev/module-migration-guides/migration-guide-locale.html
+    - title: Migration Guide - ManualOrderEntryGui
+      url: /docs/scos/dev/module-migration-guides/migration-guide-manualorderentrygui.html
+    - title: Migration Guide - Merchant
+      url: /docs/scos/dev/module-migration-guides/migration-guide-merchant.html
+    - title: Migration guide - MerchantGui
+      url: /docs/scos/dev/module-migration-guides/migration-guide-merchantgui.html
+    - title: Migration Guide - MerchantRelationshipProductListGui
+      url: /docs/scos/dev/module-migration-guides/migration-guide-merchantrelationshipproductlistgui.html
+    - title: Migration Guide - Messenger
+      url: /docs/scos/dev/module-migration-guides/migration-guide-messenger.html
+    - title: Migration Guide - Monitoring
+      url: /docs/scos/dev/module-migration-guides/migration-guide-monitoring.html
+    - title: Migration Guide - Multi-Currency
+      url: /docs/scos/dev/module-migration-guides/migration-guide-multi-currency.html
+    - title: Migration Guide - MultiCartPage
+      url: /docs/scos/dev/module-migration-guides/migration-guide-multicartpage.html
+    - title: Migration Guide - Navigation
+      url: /docs/scos/dev/module-migration-guides/migration-guide-navigation.html
+    - title: Migration Guide - NavigationGui
+      url: /docs/scos/dev/module-migration-guides/migration-guide-navigationgui.html
+    - title: Migration Guide - OauthCompanyUser
+      url: /docs/scos/dev/module-migration-guides/migration-guide-oauthcompanyuser.html
+    - title: Migration Guide - Offer
+      url: /docs/scos/dev/module-migration-guides/migration-guide-offer.html
+    - title: Migration Guide - OfferGui
+      url: /docs/scos/dev/module-migration-guides/migration-guide-offergui.html
+    - title: Migration Guide - OMS
+      url: /docs/scos/dev/module-migration-guides/migration-guide-oms.html
+    - title: Migration Guide - Payment
+      url: /docs/scos/dev/module-migration-guides/migration-guide-payment.html
+    - title: Migration guide - Payone Demoshop
+      url: /docs/scos/dev/module-migration-guides/migration-guide-payone-demoshop.html
+    - title: Migration guide - Payone Suite
+      url: /docs/scos/dev/module-migration-guides/migration-guide-payone-suite.html
+    - title: Migration Guide - PersistentCart
+      url: /docs/scos/dev/module-migration-guides/migration-guide-persistentcart.html
+    - title: Migration Guide - Price
+      url: /docs/scos/dev/module-migration-guides/migration-guide-price.html
+    - title: Migration Guide - PriceCartConnector
+      url: /docs/scos/dev/module-migration-guides/migration-guide-pricecartconnector.html
+    - title: Migration Guide - PriceProduct
+      url: /docs/scos/dev/module-migration-guides/migration-guide-priceproduct.html
+    - title: Migration Guide - PriceProductSchedule
+      url: /docs/scos/dev/module-migration-guides/migration-guide-priceproductschedule.html
+    - title: Migration Guide - PriceProductScheduleGui
+      url: /docs/scos/dev/module-migration-guides/migration-guide-priceproductschedulegui.html
+    - title: Migration Guide - PriceProductStorage
+      url: /docs/scos/dev/module-migration-guides/migration-guide-priceproductstorage.html
+    - title: Migration Guide - PriceProductVolume
+      url: /docs/scos/dev/module-migration-guides/migration-guide-priceproductvolume.html
+    - title: Migration Guide - PriceProductVolumeGui
+      url: /docs/scos/dev/module-migration-guides/migration-guide-priceproductvolumegui.html
+    - title: Migration Guide - Product
+      url: /docs/scos/dev/module-migration-guides/migration-guide-product.html
+    - title: Migration Guide - ProductBundle
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productbundle.html
+    - title: Migration guide - ProductCategoryFilterGui
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productcategoryfiltergui.html
+    - title: Migration guide - ProductCategoryStorage
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productcategorystorage.html
     - title: Migration guide - ProductConfiguration
       url: /docs/scos/dev/module-migration-guides/migration-guide-productconfiguration.html
-    - title: Migration guide - ProductConfigurationsPriceProductVolumesRestApi
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productconfigurationspriceproductvolumesrestapi.html
+    - title: Migration guide - ProductConfigurationStorage
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productconfigurationstorage.html
     - title: Migration guide - ProductConfigurationWidget
       url: /docs/scos/dev/module-migration-guides/migration-guide-productconfigurationwidget.html
     - title: Migration guide - ProductConfiguratorGatewayPage
       url: /docs/scos/dev/module-migration-guides/migration-guide-productconfiguratorgatewaypage.html
-    - title: Migration guide - ProductConfigurationsRestApi
-      url: /docs/scos/dev/module-migration-guides/migration-guide-productconfigurationsrestapi.html
+    - title: Migration Guide - ProductDetailPage
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productdetailpage.html
+    - title: Migration Guide - ProductDiscountConnector
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productdiscountconnector.html
+    - title: Migration Guide - ProductLabel
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productlabel.html
+    - title: Migration Guide - ProductLabelDiscountConnector
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productlabeldiscountconnector.html
+    - title: Migration Guide - ProductLabelGui
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productlabelgui.html
+    - title: Migration Guide - ProductLabelSearch
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productlabelsearch.html
+    - title: Migration Guide - ProductLabelStorage
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productlabelstorage.html
+    - title: Migration Guide - ProductListGui
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productlistgui.html
+    - title: Migration Guide - ProductListSearch
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productlistsearch.html
+    - title: Migration Guide - RabbitMQ
+      url: /docs/scos/dev/module-migration-guides/migration-guide-rabbitmq.html
+    - title: Migration Guide - ProductManagement
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productmanagement.html
+    - title: Migration Guide - ProductMeasurementUnit
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productmeasurementunit.html
+    - title: Migration Guide - ProductMeasurementUnitWidget
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productmeasurementunitwidget.html
+    - title: Migration Guide - ProductNew
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productnew.html
+    - title: Migration Guide - ProductOption
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productoption.html
+    - title: Migration Guide - ProductOptionCartConnector
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productoptioncartconnector.html
+    - title: Migration Guide - ProductOptionDiscountConnector
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productoptiondiscountconnector.html
+    - title: Migration Guide - ProductOptionExporter
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productoptionexporter.html
+    - title: Migration Guide - ProductPackagingUnit
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productpackagingunit.html
+    - title: Migration Guide - ProductPackagingUnitDataImport
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitdataimport.html
+    - title: Migration Guide - ProductPackagingUnitStorage
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitstorage.html
+    - title: Migration Guide - ProductPackagingUnitWidget
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitwidget.html
+    - title: Migration Guide - ProductPageSearch
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productpagesearch.html
+    - title: Migration Guide - ProductQuantity
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productquantity.html
+    - title: Migration Guide - ProductQuantityDataImport
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productquantitydataimport.html
+    - title: Migration Guide - ProductQuantityStorage
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productquantitystorage.html
+    - title: Migration Guide - ProductRelation
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productrelation.html
+    - title: Migration Guide - ProductRelationCollector
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productrelationcollector.html
+    - title: Migration Guide - ProductRelationStorage
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productrelationstorage.html
+    - title: Migration Guide - ProductReviewSearch
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productreviewsearch.html
+    - title: Migration Guide - ProductSearch
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productsearch.html
+    - title: Migration Guide - ProductSearchWidget
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productsearchwidget.html
+    - title: Migration Guide - ProductSetGui
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productsetgui.html
+    - title: Migration Guide - ProductSetPageSearch
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productsetpagesearch.html
+    - title: Migration Guide - ProductValidity
+      url: /docs/scos/dev/module-migration-guides/migration-guide-productvalidity.html
+    - title: Migration Guide - Propel
+      url: /docs/scos/dev/module-migration-guides/migration-guide-propel.html
+    - title: Migration Guide - Publish and Synchronization
+      url: /docs/scos/dev/module-migration-guides/migration-guide-publish-and-synchronization.html
+    - title: Migration Guide - QuickOrder
+      url: /docs/scos/dev/module-migration-guides/migration-guide-quickorder.html
+    - title: Migration Guide - QuickOrderPage
+      url: /docs/scos/dev/module-migration-guides/migration-guide-quickorderpage.html
+    - title: Migration Guide - Quote
+      url: /docs/scos/dev/module-migration-guides/migration-guide-quote.html
+    - title: Migration Guide - QuoteRequest
+      url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequest.html
+    - title: Migration Guide - QuoteRequestAgent
+      url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequestagent.html
+    - title: Migration Guide - QuoteRequestAgentPage
+      url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequestagentpage.html
+    - title: Migration Guide - QuoteRequestAgentWidget
+      url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequestagentwidget.html
+    - title: Migration Guide - QuoteRequestPage
+      url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequestpage.html
+    - title: Migration Guide - QuoteRequestWidget
+      url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequestwidget.html
+    - title: Migration Guide - Refund
+      url: /docs/scos/dev/module-migration-guides/migration-guide-refund.html  
+    - title: Migration Guide - Router
+      url: /docs/scos/dev/module-migration-guides/migration-guide-router.html
+    - title: Migration Guide - Sales
+      url: /docs/scos/dev/module-migration-guides/migration-guide-sales.html
+    - title: Migration Guide - SalesAggregator
+      url: /docs/scos/dev/module-migration-guides/migration-guide-salesaggregator.html
+    - title: Migration guide - SalesMerchantConnector
+      url: /docs/scos/dev/module-migration-guides/migration-guide-salesmerchantconnector.html
+    - title: Migration Guide - SalesQuantity
+      url: /docs/scos/dev/module-migration-guides/migration-guide-salesquantity.html
+    - title: Migration Guide - SalesSplit
+      url: /docs/scos/dev/module-migration-guides/migration-guide-salessplit.html
+    - title: Migration Guide - Search
+      url: /docs/scos/dev/module-migration-guides/migration-guide-search.html
+    - title: Migration Guide - Security
+      url: /docs/scos/dev/module-migration-guides/migration-guide-security.html
+    - title: Migration Guide - Session
+      url: /docs/scos/dev/module-migration-guides/migration-guide-session.html
+    - title: Migration Guide - Setup
+      url: /docs/scos/dev/module-migration-guides/migration-guide-setup.html
+    - title: Migration Guide - SharedCartPage
+      url: /docs/scos/dev/module-migration-guides/migration-guide-sharedcartpage.html
+    - title: Migration Guide - Shipment
+      url: /docs/scos/dev/module-migration-guides/migration-guide-shipment.html
+    - title: Migration Guide - ShipmentCartConnector
+      url: /docs/scos/dev/module-migration-guides/migration-guide-shipmentcartconnector.html
+    - title: Migration Guide - ShipmentCheckoutConnector
+      url: /docs/scos/dev/module-migration-guides/migration-guide-shipmentcheckoutconnector.html
+    - title: Migration Guide - ShipmentDiscountConnector
+      url: /docs/scos/dev/module-migration-guides/migration-guide-shipmentdiscountconnector.html
+    - title: Migration Guide - ShipmentGui
+      url: /docs/scos/dev/module-migration-guides/migration-guide-shipmentgui.html
+    - title: Migration Guide - ShoppingList
+      url: /docs/scos/dev/module-migration-guides/migration-guide-shoppinglist.html
+    - title: Migration Guide - ShoppingListPage
+      url: /docs/scos/dev/module-migration-guides/migration-guide-shoppinglistpage.html
+    - title: Migration Guide - ShoppingListWidget
+      url: /docs/scos/dev/module-migration-guides/migration-guide-shoppinglistwidget.html
+    - title: Migration Guide - Step Engine
+      url: /docs/scos/dev/module-migration-guides/migration-guide-step-engine.html
+    - title: Migration Guide - Stock
+      url: /docs/scos/dev/module-migration-guides/migration-guide-stock.html
+    - title: Migration Guide - StockGui
+      url: /docs/scos/dev/module-migration-guides/migration-guide-stockgui.html
+    - title: Migration Guide - StockSalesConnector
+      url: /docs/scos/dev/module-migration-guides/migration-guide-stocksalesconnector.html
+    - title: Migration Guide - Store
+      url: /docs/scos/dev/module-migration-guides/migration-guide-store.html
+    - title: Migration Guide - Tax
+      url: /docs/scos/dev/module-migration-guides/migration-guide-tax.html 
+    - title: Migration Guide - Touch
+      url: /docs/scos/dev/module-migration-guides/migration-guide-touch.html
+    - title: Migration Guide - Transfer
+      url: /docs/scos/dev/module-migration-guides/migration-guide-transfer.html
+    - title: Migration Guide - Translator
+      url: /docs/scos/dev/module-migration-guides/migration-guide-translator.html
+    - title: Migration Guide - Twig
+      url: /docs/scos/dev/module-migration-guides/migration-guide-twig.html
+    - title: Migration Guide - Validator
+      url: /docs/scos/dev/module-migration-guides/migration-guide-validator.html
+    - title: Migration Guide - WebProfiler
+      url: /docs/scos/dev/module-migration-guides/migration-guide-webprofiler.html
+    - title: Migration Guide - Wishlist
+      url: /docs/scos/dev/module-migration-guides/migration-guide-wishlist.html  
+    
   - title: DevOps migration guides
     include_versions:
     - "202001.0"

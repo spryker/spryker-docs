@@ -698,4 +698,4 @@ The options applied to the order are specified in the `productOptions` attribute
 }
 ```
 
-For detailed information and the possible error codes, see [Retrieving Customer's Order History](https://documentation.spryker.com/v5/docs/en/retrieving-order-history).
+For detailed information and the possible error codes, see [Retrieving Customer's Order History](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html).

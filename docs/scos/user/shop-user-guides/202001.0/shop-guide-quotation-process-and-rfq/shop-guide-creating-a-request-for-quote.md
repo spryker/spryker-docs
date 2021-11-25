@@ -23,7 +23,7 @@ To create a new RFQ:
 
 1. Open the **Shopping Cart** page.
 2. Click **Request a Quote**.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Creating+a+Request+for+Quote/create-rfq.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Creating+a+Request+for+Quote/create-rfq.png)
 
 3. Optional: On the **Create Quote Request** page populate the fields:
 - Enter a PURCHASE ORDER NUMBER
@@ -32,11 +32,17 @@ To create a new RFQ:
 4. On the **Create Quote Request** page click **Submit Request**. This will create a Request for Quote in Draft status in your Customer Account.
 
 {% info_block infoBox %}
-See [Buyer Workflow](https://documentation.spryker.com/v4/docs/quotation-process-feature-overview#buyer-workflow
-{% endinfo_block %} for more information on the request statuses and the workflow.)
+
+See [Buyer Workflow](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html#buyer-workflow) for more information on the request statuses and the workflow.
+
+{% endinfo_block %}
+
 {% info_block infoBox %}
-See [Reference Information](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-quotation-process-and-rfq/shop-guide-request-for-quote-reference-information.html
-{% endinfo_block %} for details on UI elements in the **Quote Requests** page in the Customer Account.)
+
+See [Reference Information](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-quotation-process-and-rfq/shop-guide-request-for-quote-reference-information.html) for details on UI elements in the **Quote Requests** page in the Customer Account.
+
+{% endinfo_block %}
+
 ***
 **What's next?**
 

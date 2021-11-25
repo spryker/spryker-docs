@@ -68,7 +68,7 @@ To change the title and content of the page:
 
 {% info_block infoBox %}
 
-In the placeholders editor, you can insert a banner, abstract product list, product set, and downloadable files using content item widgets. See the [Adding Content Item Widgets to a Page](https://documentation.spryker.com/v2/docs/adding-content-items-to-cms-pages-and-blocks#adding-content-item-widgets-to-pages) article for more details.
+In the placeholders editor, you can insert a banner, abstract product list, product set, and downloadable files using content item widgets. See the [Adding Content Item Widgets to a Page](/docs/scos/user/back-office-user-guides/202108.0/content/content-items/adding-content-items-to-cms-pages-and-blocks.html#adding-content-item-widgets-to-pages) article for more details.
 
 {% endinfo_block %}
 

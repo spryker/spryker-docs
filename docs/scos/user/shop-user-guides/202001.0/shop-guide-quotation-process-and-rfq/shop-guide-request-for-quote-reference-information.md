@@ -16,7 +16,7 @@ This page contains the information on the UI elements and pages that refer to th
 Quote Requests is the page where you can access all your RFQs. Don't have an RFQ? Start creating it.
 
 On the **Quote Requests** page, you see the following:
-![Quote requests](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Request+for+Quote:+Reference+Information/quote-requests.png) 
+![Quote requests](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Request+for+Quote:+Reference+Information/quote-requests.png)
 
 | # | Element | Description |
 |---|---|---|
@@ -25,7 +25,7 @@ On the **Quote Requests** page, you see the following:
 | 3 | Owner | The name of the company user for whom the RFQ has been created. |
 | 4 | Total | RFQ total amount. |
 | 5 | Date | The date when the RFQ has been created. |
-| 6 | Status | The status of the RFQ. See [RFQ Statuses](https://documentation.spryker.com/v4/docs/quotation-process-feature-overview#rfq-statuses) for the details. |
+| 6 | Status | The status of the RFQ. See [RFQ Statuses](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html#rfq-statuses) for the details. |
 | 7 | Actions | A set of actions you can do with the RFQ. |
 
 By default, the last created RFQ goes on top of the table.
@@ -33,7 +33,7 @@ By default, the last created RFQ goes on top of the table.
 ## Quote Request
 
 Every **Quote Request** page consists of the following parts:
-![Quote request page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Request+for+Quote:+Reference+Information/quote-request-page.png) 
+![Quote request page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Request+for+Quote:+Reference+Information/quote-request-page.png)
 
 | # | Element | Description |
 |---|---|---|

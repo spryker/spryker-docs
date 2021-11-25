@@ -22,7 +22,7 @@ File Uploader feature allows a Back Office user to upload files in accordance to
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/v1/docs/file-uploader-feature-overview" class="mr-link">Get a general idea about the File Uploader feature</a></li>
+                <li><a href="/docs/scos/user/features/{{page.version}}/file-manager-feature-overview/file-uploader.html" class="mr-link">Get a general idea about the File Uploader feature</a></li>
                 <li><a href="#" class="mr-link">Enable Cart Notes in your project</a></li>
             </ul>
         </div>
@@ -30,9 +30,9 @@ File Uploader feature allows a Back Office user to upload files in accordance to
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/v1/docs/file-uploader-feature-overview" class="mr-link">Get a general idea about the File Uploader feature</a></li>
-                <li><a href="https://documentation.spryker.com/v1/docs/managing-file-tree#uploading-files" class="mr-link">Upload files to the Back Office</a></li>
-                <li><a href="https://documentation.spryker.com/v1/docs/adding-content-item-widgets-to-pages-and-blocks#adding-content-item-widgets-to-pages" class="mr-link">Add a File to the Shop Application</a></li>
+                <li><a href="/docs/scos/user/features/{{page.version}}/file-manager-feature-overview/file-uploader.html" class="mr-link">Get a general idea about the File Uploader feature</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/content/file-manager/managing-file-tree.html#uploading-files" class="mr-link">Upload files to the Back Office</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/202108.0/content/content-items/adding-content-items-to-cms-pages-and-blocks.html#adding-content-item-widgets-to-pages" class="mr-link">Add a File to the Shop Application</a></li>
             </ul>
         </div>
     </div>

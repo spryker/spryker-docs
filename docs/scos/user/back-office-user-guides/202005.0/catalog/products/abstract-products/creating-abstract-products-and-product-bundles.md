@@ -49,7 +49,7 @@ According to the use case described in the Abstract and Concrete Products articl
     4. Enter **New from** and **New to** dates if you want to specify the period for the product to have the **New** label to be assigned to it, and have the product to be dynamically assigned to the **New** category.
 3. Click Next to go to the **Price & Tax** tab or just click on it.
 4. On the **Create a Product > Prices & Tax** tab:
-    1. **B2B only:** In the **Merchant Price Dimension**, select the merchant relationship to define a special price per merchant relation. See [Merchants](https://documentation.spryker.com/v5/docs/en/merchants) and [Products: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/references/products-reference-information.html) to know more.
+    1. **B2B only:** In the **Merchant Price Dimension**, select the merchant relationship to define a special price per merchant relation. See [Merchants Custom Prices](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html) and [Products: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/references/products-reference-information.html) to know more.
     2. Define the prices for each currency and store that you have in your set up. If you want to display promotions, enter both Default and Original prices. If no, you can enter only the Default price.
 
 {% info_block infoBox "Info" %}
@@ -65,9 +65,13 @@ Gross prices are prices after tax, while net prices are prices before tax.
 As described in the example, you have a smartphone that goes in three colors. Thus the color is your super attribute.
     1. Select the **color** checkbox.
     2. Then select red, green, and orange from the drop-down list, or you can start typing the color and select the needed one from autosuggestion (the colors are your concrete products). See  [Creating a Product Attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) to know more about super attributes.
+
     {% info_block warningBox "Note" %}
-If you are on the Variants tab and do not see the needed super attributes, you can go and create one in the separate tab. See [Creating a Product Attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html
-{% endinfo_block %} for more details.)
+
+    If you are on the Variants tab and do not see the needed super attributes, you can go and create one in the separate tab. See [Creating a Product Attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) for more details.
+
+    {% endinfo_block %}
+
  6. Click **Next** or select the **SEO** tab.
  7. **Optionally:** On the **Create a Product > SEO** tab, enter meta information to describe the page's content.
  8.  Click **Next** or select the **Image** tab.

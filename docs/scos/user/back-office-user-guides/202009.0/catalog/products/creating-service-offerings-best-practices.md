@@ -36,7 +36,7 @@ Now that you have the product, you can proceed with offering services to it.
 
 ## Creating a product with a service offering
 
-There are two ways of how you can create a product with a service offering: 
+There are two ways of how you can create a product with a service offering:
 
 * Offer the service as a product option.
 * Create a configurable bundle that would include the product and the service.
@@ -45,12 +45,14 @@ There are two ways of how you can create a product with a service offering:
 See below for information and step-by-step guides on each of the approaches.
 
 ### Service as a product option
+
 {% info_block infoBox "Note" %}
 
 This approach is suitable only for Scenario 1 - that is, when the service is optional.
 
 {% endinfo_block %}
-You can make the service, in our example, the installation service, a [product option](https://documentation.spryker.com/v6/docs/product-options-management) of the product you sell. In this case, the installation service will not be a separate product, but an optional part of the product. This means that buyers can decide on their own if they need the service. 
+
+You can make the service, in our example, the installation service, a [product option](/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html) of the product you sell. In this case, the installation service will not be a separate product, but an optional part of the product. This means that buyers can decide on their own if they need the service.
 
 To implement this approach, you need to create the Service product option and tie it to the respective product.
 
@@ -63,21 +65,26 @@ To create the product option, do the following:
 5. Activate the option by clicking **Activate** in the *Actions* column of the **Product option list**.
 
 That’s it. The option appears for the product on the Storefront:
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Creating+Service+Offerings/service-as-option-storefront.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Creating+Service+Offerings/service-as-option-storefront.png)
+
 {% info_block infoBox "Note" %}
 
 Keep in mind that depending on the use case you want to implement for your shop, additional development effort may be required on your project's side. For example, if you don’t want to allow buyers to add the Service option more than once if they have a set of specific products in carts.
 
 {% endinfo_block %}
+
 ### Service as a part of a configurable bundle list
+
 {% info_block infoBox "Note" %}
 
 This approach is suitable only for Scenario 1 - that is, when the service is optional.
 
 {% endinfo_block %}
+
 One more way to have a product with an optional service offering would be to make the product a [configurable bundle](/docs/scos/user/features/{{page.version}}/configurable-bundle/configurable-bundle.html). It means that you create a product (for example, equipment) and suggest another product (Installation service) as a bundle. To create such a configurable bundle product, follow the steps below.
 
 1. Create the *Installation Service* product as a usual abstract product, like you did in the [Prerequisites](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/creating-service-offerings-best-practices.html#prerequisites) section. Make sure you set the **Availability** as *Never out of stock*. See [Managing Products Availability](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html) for details on how to do that.
+
 {% info_block infoBox "Note" %}
 
 If you don’t want to display the Service products in the Storefront so buyers can not find them in the products catalog, don’t check the Searchable checkbox for it in the **General** tab of the **Create/Edit Concrete Product** page.
@@ -97,8 +104,8 @@ If you don’t want to display the Service products in the Storefront so buyers 
     10. Click **Save**. The Configurable bundle template with two slots, one for physical products and one for service, is now created.
  3. Activate the Configurable Bundle Template by clicking **Activate** in the *Actions* column of the **Configurable Bundle Templates** page.
  The configurable bundle now appears on the **Configurable Bundle List** page on the Storefront. Buyers can select the products and add the service if they want:
- 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Creating+Service+Offerings/configurable-bundle-list.png) 
+
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Creating+Service+Offerings/configurable-bundle-list.png)
 
 {% info_block infoBox "Note" %}
 
@@ -127,4 +134,3 @@ At this step, you need the development team to change the default *Add to Cart* 
 The  *Add to Cart* functionality implies a call to both Yves and Zed, which means the development team can execute a back-end logic for it. This logic could be triggered when products with specific labels are added to the cart. For example, it could automatically add the service product to the cart. It could also imply a check, that if another product with the same label is added to cart, the service product is not added, or another service product (for example, a service of another type with another price) is added to cart instead. You could also have a logic that if they buy more than a specific number of the products, the service product is for free.
 
 Even though this approach requires the most effort, it also the most efficient as it can be tailored to your specific needs.
-

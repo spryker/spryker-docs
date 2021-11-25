@@ -13,7 +13,7 @@ redirect_from:
 
 
 
-To open the Confirmation step, you need to complete the [Payment step](https://documentation.spryker.com/v1/docs/payment-step-shop-guide.htm).
+To open the Confirmation step, you need to complete the [Payment step](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-payment-step.html).
 
 The Confirmation step allows a customer to re-check the order information and confirm the order.
 
@@ -40,4 +40,3 @@ The *Summary* page in the Checkout consists of the following elements
 The order will be submitted and available in the [Administration Interface](https://documentation.spryker.com/v1/docs/orders.htm).
 
 *Last review date: Mar 06, 2019*
-

@@ -25,7 +25,7 @@ The **Merchants** section in the Back Office is designed to set up the contract 
 The **Merchant Relations** section is tight to the **Company Account > Companies** and **Company Units** sections as when you create the relation, you select the company and the respective business unit based on the contract.
 
 In order to have a correct set, you should:
-* Have a company setup done in the **Company Account** section. This company is the one with which the contract is signed. (See articles in the [Company Account](https://documentation.spryker.com/v5/docs/en/company-account-2) section.)
+* Have a company setup done in the **Company Account** section. This company is the one with which the contract is signed. (See articles in the [Company Account](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html) section.)
 * Create a merchant
 * Set up a merchant relation.
 ***

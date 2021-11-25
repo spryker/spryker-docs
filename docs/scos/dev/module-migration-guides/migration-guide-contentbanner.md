@@ -21,7 +21,9 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-contentbanner.html
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-contentbanner.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-contentbanner.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-contentbanner.html---
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-contentbanner.html
+---
+
 
 ## Upgrading from Version 1.* to Version 2.*
 

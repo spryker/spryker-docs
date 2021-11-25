@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/managing-returns
 related:
   - title: Return Management Feature Overview
-    link: /docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html
+    link: docs/scos/user/features/page.version/return-management-feature-overview/return-management-feature-overview.html
   - title: Managing Orders
     link: docs/scos/user/back-office-user-guides/page.version/sales/orders/managing-orders.html
 ---

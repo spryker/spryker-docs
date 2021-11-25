@@ -102,7 +102,7 @@ The page refreshed displaying the message about the successful update.
 
 #### Tips & Tricks
 
-* Add a [glossary key](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/managing-glossary.html) to the Email CMS Block. When the email is sent, the key is replaced with the translation you defined for the locale selected by the customer. See [Managing Glossary](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/managing-glossary.html#managing-glossary) to learn how to add translations.
+* Add a [glossary key](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/managing-glossary.html) to the Email CMS Block. When the email is sent, the key is replaced with the translation you defined for the locale selected by the customer. See [Managing Glossary](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/managing-glossary.html) to learn how to add translations.
 
 * Add variables to the Email CMS Block to replace them with customer and order specific details. When the email is sent, the variables are replaced with the actual details. For example, add *firstName*, and it is replaced with the name of the customer the email is sent to. A Developer can provide a full list of variables and create new ones.
 

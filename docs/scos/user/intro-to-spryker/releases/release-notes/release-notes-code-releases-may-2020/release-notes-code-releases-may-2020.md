@@ -112,7 +112,7 @@ The checkout process is paramount for your business in any business model. With 
 To enable the maximum level of security for your system, you must be able to invalidate refresh tokens in the presence of potential menaces. With this API **refresh tokens are made persistent long-term and you will be able to revoke them at any time for each user**. You can also configure the amount of time for persistence and clean the refresh tokens up from the database when necessary.
 
 #### Documentation
-[Token Revocation](/docs/scos/dev/glue-api-guides/202005.0/managing-customers/authenticating-as-a-customer.html#token-revocation)
+[Token Revocation](/docs/scos/dev/glue-api-guides/202009.0/managing-customers/managing-customer-authentication-tokens.html#revoke-a-refresh-token)
 
 ### Swagger Documentation Generator Contains “Includes” by Endpoint
 In order to make it easier for API consumers to understand the content of those endpoints following the compound documents section of the JSONAPI specification, in this release, we have introduced improvements that will allow you to have upfront information by endpoint about the **primary resources that can be included in the response**. This can be useful not only for a basic understanding of the endpoints but also for automation purposes.
@@ -122,7 +122,7 @@ In order to make it easier for API consumers to understand the content of those 
 
 ## Technical Enhancements
 ### Enable Jenkins v2 with SSL
-We have improved our Jenkins v2 support and security of cros-service communication covered with SSL by enabling additional API configuration.
+We have improved our Jenkins v2 support and security of cross-service communication covered with SSL by enabling additional API configuration.
 
 ### Cart Performance Improvements
 A few last code releases were aiming to bring cart operation to a new performance level. We have raised our acceptance criteria for cart operations to 100 independent cart items and optimized the related calculation stack.

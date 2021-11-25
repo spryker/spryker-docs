@@ -43,6 +43,6 @@ A customer can also be *registered by a Back Office User*. In this case, the cus
 
 See [Creating a Customer](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html#creating-a-customer) for details on how a Back Office user can create a customer.
 
-Likewise, if a customer gets *registered via an API*, they also receive the double opt-in email with the verification link. They must verify their account by clicking the link in the email, before you can [authenticate them via API](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html#user-authentication).
+Likewise, if a customer gets *registered via an API*, they also receive the double opt-in email with the verification link. They must verify their account by clicking the link in the email, before you can [authenticate them via API](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer).
 
-See [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html#authentication-and-authorization) for details on registration via API.
+See [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html) for details on registration via API.

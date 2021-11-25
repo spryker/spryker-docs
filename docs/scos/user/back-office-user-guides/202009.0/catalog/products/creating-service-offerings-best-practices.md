@@ -83,14 +83,15 @@ One more way to have a product with an optional service offering would be to mak
 If you don’t want to display the Service products in the Storefront so buyers can not find them in the products catalog, don’t check the Searchable checkbox for it in the **General** tab of the **Create/Edit Concrete Product** page.
 
 {% endinfo_block %}
-2. Create a [Configurable Bundle Template](/docs/scos/user/features/{{page.version}}/configurable-bundle/configurable-bundle.html-feature-overview#configurable-bundle-template) with two [slots](/docs/scos/user/features/{{page.version}}/configurable-bundle/configurable-bundle.html-feature-overview#configurable-bundle-slots) - one for the physical products, and one for the service:
+
+2. Create a [Configurable Bundle Template](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html#configurable-bundle-template) with two [slots](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html#configurable-bundle-slot) - one for the physical products, and one for the service:
     1. Go to **Merchandising > Configurable Bundle Templates** section and click Create New Template in the top right corner.
     2. On the **Template details** page, enter the name of your bundle template in the **Name** field for the corresponding locale.
     3. Click **Save**. A new tab Slots will appear on the same page.
     4. Click **Add Slot** in the top right corner on the **Template details** page.
     5. Enter the name of your slot in the **Name** field for the corresponding locale.
     6. Click **Save**. Two tabs will be added to the Slot details page: **Assign Categories** and **Assign Products**.
-    7. Assign the entire categories or individual physical products to the slot. Make sure to assign all products for which you want to offer the specific service. See [Adding Products to a Slot](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html#editing-the-slot-for-a-configurable-bundle-template) for details on how to assign categories and products.
+    7. Assign the entire categories or individual physical products to the slot. Make sure to assign all products for which you want to offer the specific service. See [Adding Products to a Slot](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/adding-scheduled-prices-to-abstract-products.html#adding-a-scheduled-price-to-an-abstract-product) for details on how to assign categories and products.
     8. Go back to the **Merchandising > Configurable Bundle Templates** section and click **Edit** for the just created Configurable bundle template.
     9. Click **Add slot** and add the Service product to it.
     10. Click **Save**. The Configurable bundle template with two slots, one for physical products and one for service, is now created.
@@ -104,18 +105,23 @@ If you don’t want to display the Service products in the Storefront so buyers 
 Depending on your specific business needs, you might need additional development effort for your project. For example, if you want to exclude the case when buyers access the service product and add it to the cart without corresponding physical products.
 
 {% endinfo_block %}
+
 ### Custom project solution
+
 {% info_block infoBox "Note" %}
 
 This approach can be applied to both Scenario 1 and Scenario 2 - that is when the service is optional or obligatory.
 
 {% endinfo_block %}
+
 If you need an approach that would best suit your specific business needs, we recommend your development team to implement a custom solution for your project. The custom solution can be handled as follows:
 
 #### 1. Identify the respective products with labels
+
 First of all, you need to somehow identify the products for which the custom solution will be applied. We recommend doing this via product labels. For this, create specific labels for the products that require service from your side. The labels can be, for example, *free service, installation service, 1-day service*, etc. See [Creating a Product Label](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/creating-product-labels.html) for details on how to create labels and assign products to them.
 
 #### 2.  Override the Add to Cart functionality
+
 At this step, you need the development team to change the default *Add to Cart* functionality to meet your project’s needs.
 
 The  *Add to Cart* functionality implies a call to both Yves and Zed, which means the development team can execute a back-end logic for it. This logic could be triggered when products with specific labels are added to the cart. For example, it could automatically add the service product to the cart. It could also imply a check, that if another product with the same label is added to cart, the service product is not added, or another service product (for example, a service of another type with another price) is added to cart instead. You could also have a logic that if they buy more than a specific number of the products, the service product is for free.

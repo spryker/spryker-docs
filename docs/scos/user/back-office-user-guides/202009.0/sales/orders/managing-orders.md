@@ -14,7 +14,7 @@ related:
   - title: Reclamations Feature Overview
     link: docs/scos/user/features/page.version/reclamations-feature-overview.html
   - title: Return Management Feature Overview
-    link: /docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html
+    link: docs/scos/user/features/page.version/return-management-feature-overview/return-management-feature-overview.html
 ---
 
 This article describes how to manage orders.

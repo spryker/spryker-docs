@@ -84,11 +84,11 @@ To instantiate your form, use Symfony’s `FormBuilder` in your module’s facto
 namespace Pyz\Yves\Newsletter;
 
 use Pyz\Yves\Newsletter\Form\SubscriptionFormType;
+use Spryker\Shared\Application\ApplicationConstants;
 use Spryker\Yves\Kernel\AbstractFactory;
 
 class NewsletterFactory extends AbstractFactory
 {
-
     /**
      * @return \Symfony\Component\Form\FormInterface
      */
@@ -96,7 +96,14 @@ class NewsletterFactory extends AbstractFactory
     {
         return $this->getFormFactory()->create(SubscriptionFormType::class);
     }
-
+    
+    /**
+     * @return \Symfony\Component\Form\FormFactory
+     */
+    public function getFormFactory()
+    {
+        return $this->getProvidedDependency(ApplicationConstants::FORM_FACTORY);
+    }
 }
 ```
 

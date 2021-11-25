@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Currency
+title: Migration guide - Currency
 description: Use the guide to update versions to the newer ones of the Currency module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

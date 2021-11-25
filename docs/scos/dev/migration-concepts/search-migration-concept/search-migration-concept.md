@@ -192,4 +192,4 @@ The Search migration effort implies an upgrade of the following modules:
 * [ProductLabelSearch](/docs/scos/dev/module-migration-guides/migration-guide-productlabelsearch.html#upgrading-from-version-12-to-version-13)
 * [ProductSetPageSearch](/docs/scos/dev/module-migration-guides/migration-guide-productsetpagesearch.html#upgrading-from-version-13-to-version-14)
 * [CategoryPageSearch](/docs/scos/dev/module-migration-guides/migration-guide-categorypagesearch.html#upgrading-from-version-14-to-version-15)
-* [ProductNew](/docs/scos/dev/module-migration-guides/migration-guide-productnew.html#upgarding-from-version-11-to-version-12)
+* [ProductNew](/docs/scos/dev/module-migration-guides/migration-guide-productnew.html)

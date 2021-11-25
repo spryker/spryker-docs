@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ContentBannersRestApi
+title: Migration guide - ContentBannersRestApi
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-contentbannersrestapi-201907
@@ -24,7 +24,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/glue-api/migration-guide-contentbannersrestapi.html
 ---
 
-## Upgrading from Version 1.* to Version 2.*
+## Upgrading from version 1.* to version 2.*
 
 `ContentBannersRestApi`, version 2.0.0 introduces the [Banner content item](/docs/scos/dev/feature-walkthroughs/{{site.version}}/content-items-feature-walkthrough/content-item-types-module-relations.html) functionality that allows retrieving its data by the content item key via REST API endpoint for all or a specific locale.
 

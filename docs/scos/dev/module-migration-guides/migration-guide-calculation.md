@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Calculation
+title: Migration guide - Calculation
 description: Use the guide to update versions to the newer ones of the Calculation module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-calculation.html
 ---
 
-## Upgrading from Version 3.* to Version 4.*
+## Upgrading from version 3.* to version 4.*
 
 To upgrade from 3* to 4*, composer update your calculator to version 4.
 

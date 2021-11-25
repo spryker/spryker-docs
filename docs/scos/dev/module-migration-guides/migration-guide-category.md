@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Category
+title: Migration guide - Category
 description: Use the guide to update versions to the newer ones of the Category module.
 last_updated: Jun 29, 2021
 template: module-migration-guide-template

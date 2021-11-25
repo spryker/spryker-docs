@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - OfferGui
+title: Migration guide - OfferGui
 description: Use the guide to learn how to update the OfferGui module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

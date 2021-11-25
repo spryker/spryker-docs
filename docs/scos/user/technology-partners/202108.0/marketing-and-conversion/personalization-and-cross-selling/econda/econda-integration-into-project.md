@@ -32,7 +32,7 @@ For [cross sell widgets](/docs/scos/user/technology-partners/{{page.version}}/ma
 
 Please refer to [Econda](http://www.econda.de/) documentation on how to customize your Econda widgets.
 
-Some examples can be found at [https://www.econda.de/en/](https://www.econda.de/en/)
+Some examples can be found at [https://www.econda.de/](https://www.econda.de/)
 
 Details on how to work with Javascript and templates in Spryker can be found in the [Front-End guide](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html).
 

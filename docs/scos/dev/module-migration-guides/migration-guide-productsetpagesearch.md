@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ProductSetPageSearch
+title: Migration guide - ProductSetPageSearch
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-productsetpagesearch
@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/migration-guide-productsetpagesearch
 ---
 
-## Upgrading from Version 1.3.* to Version 1.4.*
+## Upgrading from version 1.3.* to version 1.4.*
 
 {% info_block errorBox "Prerequisites" %}
 

@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - CartVariant
+title: Migration guide - CartVariant
 description: Use the guide to migrate to a new version of the CartVariant module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -22,7 +22,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cartvariant.html
 ---
 
-## Upgrading from Version 1.* to Version 2.0.0
+## Upgrading from version 1.* to version 2.0.0
 
 In this new version of the **CartVariant** module, we have added support of decimal stock. You can find more details about the changes on the [CartVariant module](https://github.com/spryker/cart-variant/releases) release page.
 

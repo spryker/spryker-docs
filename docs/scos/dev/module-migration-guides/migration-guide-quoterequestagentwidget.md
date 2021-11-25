@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - QuoteRequestAgentWidget
+title: Migration guide - QuoteRequestAgentWidget
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-quoterequestagentwidget
@@ -24,7 +24,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-quoterequestagentwidget.html
 ---
 
-## Upgrading from Version 1.x.x to Version 2.x.x
+## Upgrading from version 1.x.x to version 2.x.x
 
 The only major change of `QuoteRequestAgentWidget` 2.x.x is the dependency update for `spryker/quote-request-agent:^2.0.0`.
 

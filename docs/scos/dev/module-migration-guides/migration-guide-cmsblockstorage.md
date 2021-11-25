@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - CMSBlockStorage
+title: Migration guide - CmsBlockStorage
 description: The set of procedures required to perform to migrate from one version of the CMS Block Storage module to another.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

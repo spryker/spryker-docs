@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Environment Configuration
+title: Migration guide - Environment Configuration
 description: Use the guide to install new configuration options to update project implementations for Spryker compatibility.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -30,9 +30,9 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-environment-configuration.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-environment-configuration.html
 related:
-  - title: Migration Guide - Currency
+  - title: Migration guide - Currency
     link: docs/scos/dev/module-migration-guides/migration-guide-currency.html
-  - title: Migration Guide - Discount
+  - title: Migration guide - Discount
     link: docs/scos/dev/module-migration-guides/migration-guide-discount.html
 ---
 

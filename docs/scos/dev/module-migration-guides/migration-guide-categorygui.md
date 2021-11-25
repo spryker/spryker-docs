@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - CategoryGui
+title: Migration guide - CategoryGui
 description: Learn how to upgrade the CategoryGui module.
 last_updated: Jun 23, 2021
 template: module-migration-guide-template

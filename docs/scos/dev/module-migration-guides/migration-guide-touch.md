@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Touch
+title: Migration guide - Touch
 description: Use the guide to learn how to update the Touch module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-touch.html   
 ---
 
-## Upgrading from Version 3.* to Version 4.*
+## Upgrading from version 3.* to version 4.*
 
 1. Update/install `spryker/touch` to at least 4.0.0 version.
 2. Install the new database columns by running `vendor/bin/console propel:diff`. Propel should generate a migration file with the changes.

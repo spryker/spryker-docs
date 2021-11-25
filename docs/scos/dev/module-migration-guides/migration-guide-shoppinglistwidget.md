@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ShoppingListWidget
+title: Migration guide - ShoppingListWidget
 description: Use the guide to learn how to update the ShoppingListWidget module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-shoppinglistwidget.html
 ---
 
-## Upgrading from Version 0.4.* to Version 0.6.0
+## Upgrading from version 0.4.* to version 0.6.0
 
 {% info_block infoBox %}
 

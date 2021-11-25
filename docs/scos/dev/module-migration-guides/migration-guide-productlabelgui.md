@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ProductLabelGUI
+title: Migration guide - ProductLabelGUI
 description: Use the guide to learn how to update the ProductLabelGui module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -30,9 +30,9 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productlabelgui.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productlabelgui.html
 related:
-  - title: Migration Guide - Product
+  - title: Migration guide - Product
     link: docs/scos/dev/module-migration-guides/migration-guide-product.html
-  - title: Migration Guide - Product Label
+  - title: Migration guide - Product Label
     link: docs/scos/dev/module-migration-guides/migration-guide-productlabel.html
 ---
 

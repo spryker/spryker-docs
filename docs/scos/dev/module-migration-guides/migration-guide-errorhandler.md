@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ErrorHandler
+title: Migration guide - ErrorHandler
 description: Use the guide to perform the ErrorHandler part of the Silex Migration Effort.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

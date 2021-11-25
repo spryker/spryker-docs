@@ -1,3 +1,10 @@
+---
+title: Evaluation tool overview
+description: Functionalities of the evaluation tool
+last_updated: Nov 25, 2021
+template: concept-topic-template
+---
+
 The evaluation tool is a utility that performs automated quality checks against our own and industry standards.
 
 ## Installing the evaluation tool

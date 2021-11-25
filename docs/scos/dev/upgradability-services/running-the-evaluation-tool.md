@@ -1,3 +1,9 @@
+---
+title: Running the evaluation tool
+description: Instructions for running the evaluation tool
+last_updated: Nov 25, 2021
+template: concept-topic-template
+---
 This document describes how to check if code is compliant with Spryker’s and industry standards using the Evaluation tool.
 
 ## Prerequisites

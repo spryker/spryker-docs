@@ -1,3 +1,11 @@
+---
+title: Upgradability services
+description: Overview of upgradability services
+last_updated: Nov 25, 2021
+template: concept-topic-template
+---
+
+
 Keeping enterprise software up to date is a known hurdle. Especially when it comes to sophisticated transactional business models with individualization and customizations. Upgrades of big systems require a high investment of time, resources, and money that projects would rather spend for innovation. At the same time, little or no upgrades reduce access to security and improvements patches, as well as new features.
 
 Upgradability services are designed to lower the cost of performing regular upgrades, helping your business keep up with Spryker’s latest version.

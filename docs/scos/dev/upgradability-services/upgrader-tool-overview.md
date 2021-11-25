@@ -1,3 +1,12 @@
+---
+title: Upgradability tool overview
+description: Functionalities of the upgradability tool
+last_updated: Nov 25, 2021
+template: concept-topic-template
+---
+
+
+
 The upgrader tool is a utility that automatically updates a Spryker project’s modules and libraries to the latest versions.
 
 

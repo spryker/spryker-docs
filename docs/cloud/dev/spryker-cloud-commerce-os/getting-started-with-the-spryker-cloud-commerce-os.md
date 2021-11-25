@@ -25,7 +25,7 @@ After the initial setup, the following is configured and available:
 ## Access
 You can access SCCOS via:
 
-* IAM account - provides access to AWS Management Console. See [Accessing AWS Management Console](/docs/cloud/dev/spryker-cloud-commerce-os/access/accessing-aws-management-console.html) for more details. 
+* IAM account - provides access to AWS Management Console. See [Accessing AWS Management Console](/docs/cloud/dev/spryker-cloud-commerce-os/access/accessing-aws-management-console.html) for more details.
 * SSH - provides access to internal services via [bastion host](https://docs.aws.amazon.com/quickstart/latest/linux-bastion/overview.html). See [Connecting to services via SSH](/docs/cloud/dev/spryker-cloud-commerce-os/access/connecting-to-services-via-ssh.html) for more details.
 * VPN - provides access to internal services via [bastion host](https://docs.aws.amazon.com/quickstart/latest/linux-bastion/overview.html). We provide the access details during the onboarding.
 * SFTP - provides access to the SFTP folder mounted inside the Jenkins container.
@@ -33,9 +33,9 @@ You can access SCCOS via:
 {% info_block warningBox %}
 
 
-* For security purposes, VPN and SSH access are available only for the IP addresses in the security group. Provide your public IPs via [support](https://spryker.force.com/support/s/) to get the access. Additionally, for SSH access, provide your public SSH keys. 
+* For security purposes, VPN and SSH access are available only for the IP addresses in the security group. Provide your public IPs via [support](https://spryker.force.com/support/s/) to get the access. Additionally, for SSH access, provide your public SSH keys.
 
-* If you didn’t request SFTP access for the initial setup, you can request it via support later. 
+* If you didn’t request SFTP access for the initial setup, you can request it via support later.
 
 
 {% endinfo_block %}
@@ -63,4 +63,4 @@ The following CD pipelines are configured in [CodePipeline](https://docs.aws.ama
 See [Deploying in a staging environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html) and [Deploying in a production environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html) to learn about running pipelines.
 
 ## Next step
-[Connecting Docker SDK](/docs/cloud/dev/spryker-cloud-commerce-os/connecting-docker-sdk.html)
+[Environments overview](/docs/cloud/dev/spryker-cloud-commerce-os/environments-overview.html)

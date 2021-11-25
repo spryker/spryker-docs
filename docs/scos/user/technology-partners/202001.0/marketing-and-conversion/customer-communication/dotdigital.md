@@ -14,7 +14,8 @@ related:
 ---
 
 ## Partner Information
-[ABOUT DOTDIGITAL](https://spryker.com/industry-partner/dotdigital/)
+
+ABOUT DOTDIGITAL
 
 Acquire smarter. Convert faster. Deliver big.
 

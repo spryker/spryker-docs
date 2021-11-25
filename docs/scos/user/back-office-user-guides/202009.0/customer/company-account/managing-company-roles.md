@@ -25,7 +25,7 @@ To start managing company roles, navigate to the **Company Account** > **Company
 ***
 
 ## Prerequisites
-You need to [create a company](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-companies.html#creating-companies) before you create a company role.
+You need to [create a company](/docs/scos/user/back-office-user-guides/202009.0/customer/company-account/managing-companies.html#creating-a-company) before you create a company role.
 
 ## Creating a Company Role
 To create a new company role:
@@ -46,8 +46,12 @@ To edit a company role:
 To delete a company role:
 1. On the **Overview of Company Roles** page in the _Actions_ column, click **Delete**.
 2. On the confirmation page, click **Delete** company role to confirm the action.
-    {% info_block infoBox "If you delete a default role, the following message is displayed:" %}
+   
+{% info_block infoBox%}
+
+If you delete a default role, the following message is displayed:
 _You cannot delete a default role; please set another default role before the delete action._
+
 {% endinfo_block %}
 ***
 **What's next?**

@@ -9,7 +9,7 @@ redirect_from:
   - /v6/docs/en/file-details-product-reviewcsv
 ---
 
-This article contains content of the **product_review.csv** file to configure [Product Review](https://documentation.spryker.com/v6/docs/product-reviews) information on your Spryker Demo Shop.
+This article contains content of the **product_review.csv** file to configure [Product Review](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

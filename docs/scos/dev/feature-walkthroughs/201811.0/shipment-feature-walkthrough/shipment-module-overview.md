@@ -12,7 +12,7 @@ related:
   - title: "Reference information: Shipment method plugins"
     link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
   - title: Migration Guide - Shipment
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-shipment.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-shipment.html
 ---
 
 The main concepts regarding shipping that are modeled in the database are :

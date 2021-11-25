@@ -51,7 +51,7 @@ The email format itself is defined on the code level, the tales serving as ident
 
 
 ### Default Email Templates
-There is a number of email templates with the respective Email CMS Blocks available in the [Spryker Demo Shops](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2b-b2c-demo-shops).
+There is a number of email templates with the respective Email CMS Blocks available in the [Spryker Demo Shops](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2bb2c-demo-shops).
 
 The table below contains the list of the default email templates, their Email CMS Blocks, and purpose.
 
@@ -102,7 +102,7 @@ After creating email templates, a developer can [import](/docs/scos/dev/data-imp
 ## Email Content
 
 
-When [editing an email template via Email CMS Block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-content-of-emails-via-cms-blocks.html#editing-email-cms-blocks), you work in the [WYSIWYG editor](/docs/scos/user/features/{{page.version}}/cms/cms-feature-overview/wysiwyg-editor.html). Apart from the regular WYSIWYG editor tools, you can add glossary keys and variables.
+When [editing an email template via Email CMS Block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-content-of-emails-via-cms-blocks.html#editing-email-cms-blocks), you work in the [WYSIWYG editor](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-feature-overview.html). Apart from the regular WYSIWYG editor tools, you can add glossary keys and variables.
 
 
 You can use the functionalities described in this section, regardless of the email format.
@@ -111,7 +111,7 @@ You can use the functionalities described in this section, regardless of the ema
 
 You can add [glossary keys](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/managing-glossary.html) directly to email templates, and the respective translations are fetched automatically. When an email with a glossary key is sent, the key is replaced with the translation you defined for the locale selected by the customer. For example, you add the *cart.price.grand.total* glossary key to an email template. When the email is sent to the customer with de_DE locale, the key is replaced with Summe.
 
-See [Managing Glossary](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/managing-glossary.html#managing-glossary) to learn how a Back Office User creates translations.
+See [Managing Glossary](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/managing-glossary.html) to learn how a Back Office User creates translations.
 
 ### Variables in Email Templates
 

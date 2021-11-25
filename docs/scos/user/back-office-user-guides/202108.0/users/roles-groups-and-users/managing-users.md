@@ -45,7 +45,8 @@ To create a user record:
 That's it. The created user record appears on the *Users* page.    
 
 **Tips & tricks**
-<br>There is a way to initiate a create-new-user flow while editing a user record. To do that, on the *Edit User* page, in the top right corner, click **Add User**.
+
+There is a way to initiate a create-new-user flow while editing a user record. To do that, on the *Edit User* page, in the top right corner, click **Add User**.
 
 ## Editing users
 
@@ -53,7 +54,7 @@ To edit a user:
 1. In *Users List* > *Action* column, click **Edit**  if you want to change user's details.
 2. Click **Update**.
 
-## Reference information: Createing and editing users
+## Reference information: Creating and editing users
 
 This section describes attributes you see, select, and enter when creating and editing users.
 

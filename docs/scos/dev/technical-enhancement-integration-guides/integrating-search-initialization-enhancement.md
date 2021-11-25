@@ -16,6 +16,7 @@ redirect_from:
   - /v5/docs/en/search-initialization-improvement
   - /v4/docs/search-initialization-improvement
   - /v4/docs/en/search-initialization-improvement
+  - /docs/scos/dev/technical-enhancements/search-initialization-improvement.html
 ---
 
 ## General Information

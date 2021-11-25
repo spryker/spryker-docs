@@ -10,15 +10,15 @@ redirect_from:
   - /v5/docs/en/retrieving-navigation-trees
 related:
   - title: Migration Guide - NavigationsRestApi
-    link: docs/scos/dev/module-migration-guides/page.version/glue-api/migration-guide-navigationsrestapi.html
+    link: docs/scos/dev/module-migration-guides/glue-api/migration-guide-navigationsrestapi.html
   - title: Browsing a Category Tree
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-trees.html
   - title: Catalog Search
     link: docs/scos/dev/glue-api-guides/page.version/catalog-search.html
 ---
 
-The Navigation <!-- add link to feature overview later --> feature enables back-end developers to create navigtaion elements for Storefront. The navigation elements help shop users to navigate the shop and locate the necessary products and other content. Navigation elements can be linked to CMS pages, categories, as well as internal and external links. 
-        
+The Navigation <!-- add link to feature overview later --> feature enables back-end developers to create navigtaion elements for Storefront. The navigation elements help shop users to navigate the shop and locate the necessary products and other content. Navigation elements can be linked to CMS pages, categories, as well as internal and external links.
+
 A navigation element with its child nodes forms a navigation tree. You can only retrieve the entire navigation tree, but not a navigation element.
 
 ## Installation
@@ -34,7 +34,7 @@ To retrieve a navigation tree, send the request:
 
 | Path parameter | Description |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}navigation_key{% raw %}}}{% endraw %}*** | Unique identifier of a navigation tree to get information for. It is always case sensitive. | 
+| ***{% raw %}{{{% endraw %}navigation_key{% raw %}}}{% endraw %}*** | Unique identifier of a navigation tree to get information for. It is always case sensitive. |
 
 
 ### Request
@@ -61,7 +61,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
 
 <details open>
     <summary markdown='span'>Response sample</summary>
-    
+
 ```json
 {
     "data": {
@@ -125,7 +125,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
 
 <details open>
 <summary markdown='span'>Response sample with category nodes</summary>
-    
+
 ```json
 {
   "data": {
@@ -1097,7 +1097,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
   ]
 }
 ```
-    
+
 <br>
 </details>
 
@@ -1120,7 +1120,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
 | validTo | String | Specifies a date that the node is valid to. |
 | children | Array | Specifies an array of node elements that are nested within the current element. |
 
- 
+
 
 
 
@@ -1146,4 +1146,3 @@ If a navigation tree has a category child node, include the `category-nodes` res
 | --- | --- |
 | 400 | Navigation ID is not specified. |
 | 404 | Navigation not found. |
-

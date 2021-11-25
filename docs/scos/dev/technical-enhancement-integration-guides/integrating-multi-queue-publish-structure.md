@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/multiple-publish-queue-structure
   - /v6/docs/multiple-publish-queue-structure
   - /v6/docs/en/multiple-publish-queue-structure
+  - /docs/scos/dev/technical-enhancements/multiple-publish-queue-structure.html
 ---
 
 To improve debugging of failures and slow events in Spryker, we introduced a new publish queue structure. In the new structure, the single event queue is replaced by multiple publish queues. You can can find a detailed comparison of the structures in the table below.

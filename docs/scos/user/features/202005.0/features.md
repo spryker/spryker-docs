@@ -33,7 +33,7 @@ Or, you can go directly to the following guides to search for the necessary info
 
 * [Back Office User Guide](https://documentation.spryker.com/v5/docs/en/overview-of-the-back-office-user-guide): for step-by-step guides on how to work with the features in the Back Office.
 * [Feature integration guides](/docs/scos/dev/feature-integration-guides/{{page.version}}/feature-integration-guides.html): for developer guides on how to integrate a feature into a Spryker project.
-* [Module guides](/docs/scos/dev/module-migration-guides/{{page.version}}/about-migration-guides.html): for developer guides on how to upgrade individual feature modules.
+* [Module guides](/docs/scos/dev/module-migration-guides/about-migration-guides.html): for developer guides on how to upgrade individual feature modules.
 
 
 {% endinfo_block %}

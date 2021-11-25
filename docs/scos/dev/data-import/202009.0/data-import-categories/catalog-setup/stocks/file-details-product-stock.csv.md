@@ -9,7 +9,7 @@ redirect_from:
   - /v6/docs/en/file-details-product-stockcsv
 ---
 
-This article contains content of the **product_stock.csv** file to configure [Product Stock](https://documentation.spryker.com/v6/docs/multiple-warehouse-stock) information on your Spryker Demo Shop.
+This article contains content of the **product_stock.csv** file to configure [Product Stock](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

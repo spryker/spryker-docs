@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - StockSalesConnector
+title: Migration guide - StockSalesConnector
 description: Use the guide to learn how to update the StockSalesConnector module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-stock.html
 ---
 
-## Upgrading from Version 3.* to Version 5.0.0
+## Upgrading from version 3.* to version 5.0.0
 
 {% info_block infoBox %}
 

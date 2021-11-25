@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Collector
+title: Migration guide - Collector
 description: Use the guide to update versions to the newer ones of the Collector module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -30,7 +30,7 @@ redirect_from:
   - docs/scos/dev/module-migration-guides/202009.0/migration-guide-collector.html
   - docs/scos/dev/module-migration-guides/202108.0/migration-guide-collector.html
 related:
-  - title: Migration Guide - Touch
+  - title: Migration guide - Touch
     link: docs/scos/dev/module-migration-guides/migration-guide-touch.html
 ---
 

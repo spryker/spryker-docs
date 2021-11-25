@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - CMS
+title: Migration guide - Cms
 description: Use the guide to update versions to the newer ones of the CMS module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -32,15 +32,15 @@ redirect_from:
 related:
   - title: CMS
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-feature-overview.html
-  - title: Migration Guide - CMS Block
+  - title: Migration guide - CmsBlock
     link: docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html
-  - title: Migration Guide - CMS Block Collector
+  - title: Migration guide - CmsBlockCollector
     link: docs/scos/dev/module-migration-guides/migration-guide-cms-block-collector.html
-  - title: Migration Guide - CMS Block GUI
+  - title: Migration guide - CMS Block GUI
     link: docs/scos/dev/module-migration-guides/migration-guide-cmsblockgui.html
-  - title: Migration Guide - CMS Block Category Connector
+  - title: Migration guide - CMS Block Category Connector
     link: docs/scos/dev/module-migration-guides/migration-guide-cms-block-category-connector.html
-  - title: Migration Guide - CMS Collector
+  - title: Migration guide - CMS Collector
     link: docs/scos/dev/module-migration-guides/migration-guide-cmscollector.html
 ---
 

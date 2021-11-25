@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ShoppingListPage
+title: Migration guide - ShoppingListPage
 description: Use the guide to learn how to update the ShoppingListPage module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -34,7 +34,7 @@ related:
     link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-lists-feature-overview.html
 ---
 
-## Upgrading from Version 0.* to Version 0.8.0
+## Upgrading from version 0.* to version 0.8.0
 
 {% info_block infoBox %}
 

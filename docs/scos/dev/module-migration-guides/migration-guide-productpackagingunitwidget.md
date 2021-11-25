@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ProductPackagingUnitWidget
+title: Migration guide - ProductPackagingUnitWidget
 description: Use the guide to migrate to a new version of the
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

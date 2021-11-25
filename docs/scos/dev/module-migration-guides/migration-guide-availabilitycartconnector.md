@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - AvailabilityCartConnector
+title: Migration guide - AvailabilityCartConnector
 description: Use the guide to migrate to a new version of the AvailabilityCartConnector module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-availabilitycartconnector.html
 ---
 
-## Upgrading from Version 6.* to Version 7.0.0
+## Upgrading from version 6.* to version 7.0.0
 
 In this new version of the **AvailabilityCartConnector** module, we have added support of decimal stock. You can find more details about the changes on the [AvailabilityCartConnector module](https://github.com/spryker/availability-cart-connector/releases) release page.
 
@@ -64,7 +64,7 @@ console transfer:generate
 
 *Estimated migration time: 5 min*
 
-## Upgrading from Version 4.* to Version 6.0.0
+## Upgrading from version 4.* to version 6.0.0
 
 {% info_block infoBox %}
 

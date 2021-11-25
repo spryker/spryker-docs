@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - AvailabilityGui
+title: Migration guide - AvailabilityGui
 description: Use the guide to update versions to the newer ones of the AvailabilityGui module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -30,7 +30,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-availabilitygui.html
 ---
 
-## Upgrading from Version 5.* to Version 6.0.0
+## Upgrading from version 5.* to version 6.0.0
 
 In this new version of the **AvailabilityGui** module, we have added support of decimal stock. You can find more details about the changes on the [AvailabilityGui module](https://github.com/spryker/availability-gui/releases) release page.
 
@@ -63,7 +63,7 @@ console transfer:generate
 
 *Estimated migration time: 5 min*
 
-## Upgrading from Version 3.* to Version 5.0.0
+## Upgrading from version 3.* to version 5.0.0
 
 {% info_block infoBox %}
 

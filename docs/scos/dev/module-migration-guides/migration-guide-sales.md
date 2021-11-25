@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Sales
+title: Migration guide - Sales
 description: Use the guide to learn how to update the Sales module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-sales.html
 ---
 
-## Upgrading from Version 10.* to Version 11.0.0
+## Upgrading from version 10.* to version 11.0.0
 
 In this new version of the **Sales** module, we have added support of split delivery.
 You can find more details about the changes on the [Sales module release page](https://github.com/spryker/sales/releases).
@@ -110,7 +110,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 *Estimated migration time: 5 min*
 ***
 
-## Upgrading from Version 8.* to Version 10.0.0
+## Upgrading from version 8.* to version 10.0.0
 
 {% info_block infoBox %}
 
@@ -120,7 +120,7 @@ To dismantle the Horizontal Barrier and enable partial module updates on project
 
 ***
 
-## Upgrading from Version 7.* to Version 8.*
+## Upgrading from version 7.* to version 8.*
 
 In the **Sales** module version 8, we have added multi-currency support, this release added two new fields to `spy_sales table` to persist "currency" and "store".
 
@@ -185,7 +185,7 @@ INSERT INTO spy_sales_order_item_metadata (fk_sales_order_item, super_attributes
 SELECT id_sales_order_item, '[]', now(), now() FROM spy_sales_order_item;
 ```
 
-## Upgrading from Version 5.* to Version 6.*
+## Upgrading from version 5.* to version 6.*
 
 There are two steps for migrating to version 6 and they should be performed in the following order:
 
@@ -284,7 +284,7 @@ Now you have two options:
 1. To keep old calculation logic, see [Updating calculator stacks](/docs/scos/dev/module-migration-guides/migration-guide-calculation.html).
 2. To migrate to the new structure, see [Migrating sales to new calculator logic](/docs/scos/dev/module-migration-guides/migration-guide-calculation.html).
 
-## Upgrading from Version 3.* to Version 4.*
+## Upgrading from version 3.* to version 4.*
 
 With the Product-Bundle module release, the Sales schema file `spy_sales.schema.xml` was changed. Product-Bundle related entries were removed and moved to `Spryker/Zed/ProductBundle/Persistence/Propel/Schema/spy_sales.schema.xml`. As this feature was not used in `core/demoshop`, we also changed the data structure.
 **Unique Product Quantity** field in sales detail page is calculated differently now. Data comes from `OrderTransfer::uniqueProductQuantity`.

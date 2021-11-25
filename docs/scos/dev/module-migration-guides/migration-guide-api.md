@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - API Module
+title: Migration guide - Api
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-api-module
@@ -25,9 +25,10 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-api-module.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-api-module.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-api-module.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-api-module.html
 ---
 
-## Upgrading from Version 0.1.5 to Version 0.2.0
+## Upgrading from version 0.1.5 to version 0.2.0
 
 Version 0.2.0 of the Api module introduces a default behavior to disable legacy Zed API for security reasons.
 Some projects actively use and develop Zed API. To continue using legacy Zed API, one has to override the method `isApiEnabled` of the `ApiConfig` class in your project implementation:

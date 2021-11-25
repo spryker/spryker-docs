@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - NavigationsRestApi
+title: Migration guide - NavigationsRestApi
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-navigationsrestapi
@@ -27,7 +27,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/glue-api/migration-guide-navigationsrestapi.html
 ---
 
-## Upgrading from Version 1.* to Version 2.*
+## Upgrading from version 1.* to version 2.*
 
 Version 2.0.0 of the `NavigationsRestApi` module introduces the resourceId field and a new dependency to the `spryker/url-storage` module.
 
@@ -36,7 +36,8 @@ Version 2.0.0 of the `NavigationsRestApi` module introduces the resourceId field
 * Set up project configuration
 * Migrate database
 
-**To upgrade to the new version of the module, do the following:**
+To upgrade to the new version of the module, do the following:
+
 1. Update the NavigationsRestApi module with Composer:
 `"spryker/navigations-rest-api": "^2.0.0" --update-with-dependencies`
 2. Set up Project Configuration.

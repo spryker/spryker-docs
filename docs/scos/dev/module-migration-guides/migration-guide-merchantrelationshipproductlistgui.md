@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - MerchantRelationshipProductListGui
+title: Migration guide - MerchantRelationshipProductListGui
 description: This guide provides migration steps to upgrade  MerchantRelationshipProductListGui to the newer major version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -21,7 +21,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-merchantrelationshipproductlistgui.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-merchantrelationshipproductlistgui.html
 related:
-  - title: Migration Guide - ProductListGui
+  - title: Migration guide - ProductListGui
     link: docs/scos/dev/module-migration-guides/migration-guide-productlistgui.html
 ---
 

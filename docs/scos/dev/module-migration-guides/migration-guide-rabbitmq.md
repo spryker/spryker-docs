@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - RabbitMQ
+title: Migration guide - RabbitMQ
 description: Use the guide to learn how to update the RabbirMQ module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-rabbitmq.html
 ---
 
-## Upgrading from Version 0.* to Version 1.*
+## Upgrading from version 0.* to version 1.*
 
 ### Version 1 of the RabbitMq module
 
@@ -130,7 +130,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 </details>
 
 ***
-## Upgrading from Version 1.* to Version 2.*
+## Upgrading from version 1.* to version 2.*
 
 ### Version 2 of the RabbitMq module
 

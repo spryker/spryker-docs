@@ -47,7 +47,7 @@ For [cross sell widgets](econda-cross-sell), we will demonstrate integration of 
 
 Please refer to [Econda](http://www.econda.de/) documentation on how to customize your Econda widgets.
 
-Some examples can be found at [https://www.econda.de/en/](https://www.econda.de/en/)
+Some examples can be found at [https://www.econda.de/](https://www.econda.de/)
 
 Details on how to work with Javascript and templates in Spryker can be found in Front-End Guide<!-- link -->.
 

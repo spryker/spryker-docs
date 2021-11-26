@@ -34,6 +34,14 @@ YOUR ADVANTAGES:
 * Powered by AI: Personalize every experience based on artificial intelligence, customer data and real-time behavior.
 * Increased engagement: Deliver seamless experiences, get smarter segmentation, and increase engagement and conversions.
 
+## Related Developer articles
+
+* [Episerver API](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/episerver/episerver-api.html)
+* [Episerver order reference commands](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html)
+* [Installing and configuring Episerver](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html)
+* [Integrating Episerver](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html)
+
+
 ---
 
 ## Copyright and Disclaimer

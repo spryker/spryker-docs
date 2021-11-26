@@ -57,7 +57,7 @@ entries:
           url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-2018.11.0/release-notes-2018.11.0.html
           nested:
           - title: Security Release Notes 2018.11.0
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-2018.11.0/security-release-notes-2018.11.0.html      
+            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-2018.11.0/security-release-notes-2018.11.0.html
       - title: Releases archive
         url: /docs/scos/user/intro-to-spryker/releases/releases-archive.html
         nested:
@@ -179,7 +179,7 @@ entries:
       - title: Building the documentation site
         url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html
   - title: Features
-    url: /docs/scos/user/features/features.html  
+    url: /docs/scos/user/features/features.html
     nested:
     - title: Agent Assist
       url: /docs/scos/user/features/agent-assist-feature-overview.html
@@ -345,7 +345,7 @@ entries:
         - "201903.0"
         - "201907.0"
         - "202001.0"
-        - "202005.0" 
+        - "202005.0"
     - title: Content Items
       url: /docs/scos/user/features/content-items-feature-overview.html
       include_versions:
@@ -2357,26 +2357,24 @@ entries:
           nested:
           - title: Episerver - Installation and Configuration
             url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
+            include_versions:
+            - "202009.0"
           - title: Integrating Episerver
             url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
             include_versions:
             - "202009.0"
-            - "202108.0"
           - title: Technical details and HowTos
             include_versions:
             - "202009.0"
-            - "202108.0"
             nested:
             - title: Episerver - Order referenced commands
               url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-order-referenced-commands.html
               include_versions:
               - "202009.0"
-              - "202108.0"
             - title: Episerver - API Requests
               url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-api-requests.html
               include_versions:
               - "202009.0"
-              - "202108.0"
         - title: Dotdigital
           url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/dotdigital.html
         - title: Inxmail

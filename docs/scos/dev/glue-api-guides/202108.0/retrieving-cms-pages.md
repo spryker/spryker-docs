@@ -32,7 +32,7 @@ To retrieve all active CMS pages, send the request:
 ***
 {% info_block infoBox %}
 
-This endpoint returns [activated](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/managing-cms-pages.html#activating-and-deactivating-pages) CMS pages only. Also, if there are more than 12 active CMS pages, the endpoint returns the number of pages multiple of 12. See the Request section below for details.
+This endpoint returns activated CMS pages only. Also, if there are more than 12 active CMS pages, the endpoint returns the number of pages multiple of 12. See the Request section below for details.
 
 {% endinfo_block %}
 

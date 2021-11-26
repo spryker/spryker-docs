@@ -15,7 +15,7 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
 ---
 
-This endpoint allows authenticating as a customer. As an authenticated customer, you can send requests to [protected resources](//docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html#protected-resources).
+This endpoint allows authenticating as a customer. As an authenticated customer, you can send requests to [protected resources](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html#protected-resources).
 
 
 
@@ -117,9 +117,9 @@ To view generic errors that originate from the Glue Application, see [Reference 
 * [Manage cart items](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html)
 * [Manage gift cards](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html)
 * [Manage wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html)
-* [Manage orders](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html)
+* [Manage orders](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-orders.html)
 * [Managing customer authentication tokens](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-authentication-tokens.html)
 * [Manage customer addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html)
 * [Manage customer addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html)
-* [Manage customer passwords](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/customer-password.html)
+* [Manage customer passwords](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-passwords.html)
 

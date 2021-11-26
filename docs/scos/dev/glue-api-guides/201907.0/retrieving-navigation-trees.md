@@ -11,7 +11,7 @@ related:
   - title: Navigation API feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/navigation-api-feature-integration.html
   - title: Migration Guide - NavigationsRestApi
-    link: docs/scos/dev/module-migration-guides/page.version/glue-api/migration-guide-navigationsrestapi.html
+    link: docs/scos/dev/module-migration-guides/glue-api/migration-guide-navigationsrestapi.html
   - title: Browsing a Category Tree
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-trees.html
   - title: Catalog Search

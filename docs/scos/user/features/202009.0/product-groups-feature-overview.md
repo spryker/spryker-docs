@@ -12,13 +12,13 @@ redirect_from:
   - /v6/docs/en/product-groups
 ---
 
-The *Product Groups* feature allows product catalog managers to group products by attributes, like color or size. A typical use case is combining the same product in different colors into a product group (not to be confused with [product variant](/docs/scos/user/features/{{page.version}}/product/product-feature-overview/products-overview.html)). The feature changes the way shop users interact with products by improving accessibility and navigation.
+The *Product Groups* feature allows product catalog managers to group products by attributes, like color or size. A typical use case is combining the same product in different colors into a product group (not to be confused with [product variant](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html)). The feature changes the way shop users interact with products by improving accessibility and navigation.
 
 ## Product groups on the Storefront
 
-{% info_block warningBox "Examplary content" %}
+{% info_block warningBox "Exemplary content" %}
 
-By default, there is no way to display product groups on Storefront. This section describes an examplary implementation which you can add to your project. See [HowTo - Display product groups by color on Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-product-groups-by-color-on-the-storefront.html) for more details.
+By default, there is no way to display product groups on Storefront. This section describes an exemplary implementation which you can add to your project. See [HowTo - Display product groups by color on Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-product-groups-by-color-on-the-storefront.html) for more details.
 
 {% endinfo_block %}
 
@@ -45,7 +45,7 @@ Product abstract card:
 
 ## Product groups in the Back Office
 
-In the Back Office, a product catalog manager can view what product group an abstract product belongs to. See [Viewing a Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/managing-products.html#viewing-products) to learn more.   
+In the Back Office, a product catalog manager can view what product group an abstract product belongs to. See [Viewing a Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/managing-products.html#viewing-a-product) to learn more.   
 
 Also, they can insert product groups into CMS pages via content widgets in the [WYSIWYG editor](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html#content-item-widget).
 
@@ -71,7 +71,7 @@ Check out this video tutorial on product groups:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Check what product group a product belongs to by viewing a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/managing-products.html#viewing-products)  |
+| [Check what product group a product belongs to by viewing a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/managing-products.html#viewing-a-product)  |
 
 {% info_block warningBox "Developer guides" %}
 

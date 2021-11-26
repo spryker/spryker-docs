@@ -22,13 +22,13 @@ redirect_from:
   - /v2/docs/en/zed-api-project-implementation
   - /v1/docs/zed-api-project-implementation
   - /v1/docs/en/zed-api-project-implementation
-  - /docs/scos/dev/sdk/201811.0/zed-api-project-implementation.html
-  - /docs/scos/dev/sdk/201903.0/zed-api-project-implementation.html
-  - /docs/scos/dev/sdk/201907.0/zed-api-project-implementation.html
-  - /docs/scos/dev/sdk/202001.0/zed-api-project-implementation.html
-  - /docs/scos/dev/sdk/202005.0/zed-api-project-implementation.html
-  - /docs/scos/dev/sdk/202009.0/zed-api-project-implementation.html
-  - /docs/scos/dev/sdk/202108.0/zed-api-project-implementation.html
+  - /docs/scos/dev/sdk/201811.0/zed-api/zed-api-project-implementation.html
+  - /docs/scos/dev/sdk/201903.0/zed-api/zed-api-project-implementation.html
+  - /docs/scos/dev/sdk/201907.0/zed-api/zed-api-project-implementation.html
+  - /docs/scos/dev/sdk/202001.0/zed-api/zed-api-project-implementation.html
+  - /docs/scos/dev/sdk/202005.0/zed-api/zed-api-project-implementation.html
+  - /docs/scos/dev/sdk/202009.0/zed-api/zed-api-project-implementation.html
+  - /docs/scos/dev/sdk/202108.0/zed-api/zed-api-project-implementation.html
 ---
 
 For the API and the API bundles to get activated we need to configure our own service provider stack in the Zed `ApplicationDependencyProvider` class:

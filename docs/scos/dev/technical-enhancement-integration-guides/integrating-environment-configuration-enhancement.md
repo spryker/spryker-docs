@@ -18,6 +18,7 @@ redirect_from:
   - /v4/docs/en/environment-configuration-enhancement
   - /v3/docs/environment-configuration-enhancement
   - /v3/docs/en/environment-configuration-enhancement
+  - /docs/scos/dev/technical-enhancements/environment-configuration-enhancement.html
 ---
 
 Previously, the behavior of Spryker applications depended on the environment name and there was no other way to manage that.  This limited the number of possible names you could use to the four hardcoded ones:

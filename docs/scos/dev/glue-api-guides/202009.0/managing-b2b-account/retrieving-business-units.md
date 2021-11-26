@@ -23,7 +23,7 @@ related:
     link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
 ---
 
-In the B2B world, users represent their companies rather than act on their own behalf. Such users, called [Company Accounts](https://documentation.spryker.com/v6/docs/company-accounts-overview), are organized in business units depending on their job role and the scope of their activity. The endpoints allows retrieving business unit information.
+In the B2B world, users represent their companies rather than act on their own behalf. Such users, called [Company Accounts](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html), are organized in business units depending on their job role and the scope of their activity. The endpoints allows retrieving business unit information.
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html).

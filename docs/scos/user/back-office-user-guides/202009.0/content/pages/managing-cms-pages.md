@@ -23,8 +23,11 @@ To start managing CMS pages, got to **Content Management** > **Pages**.
 ***
 ## Previewing CMS Pages
 If you would like to see how your page will look like before you publish it, you can preview it in your browser.
+
 {% info_block warningBox "Note" %}
- To be able to preview a draft of your page, you need to link your Zed account to an Yves account.
+
+To be able to preview a draft of your page, you need to link your Zed account to an Yves account.
+
 {% endinfo_block %}
 
 **To link a Zed customer to an Yves customer:**
@@ -32,10 +35,12 @@ If you would like to see how your page will look like before you publish it, you
 1. Navigate to **Users Control** > **User**.
 2. On the **Users list** page, click **Assign Customers to User: Zed account e-mail** in the _Actions_ column. This will take you to the **Assign Customers** page.
 3. Select a user you would like to assign to your Zed account.
-    {% info_block warningBox "Note" %}
+{% info_block warningBox "Note" %}
+
 Keep in mind that a customer **cannot** be assigned to multiple users at a time.
+
 {% endinfo_block %}
-4. To keep the changes, click **Save**.
+1. To keep the changes, click **Save**.
 
 After you linked your Yves customer to your Zed user, make sure that you are logged in to Zed with your Zed account and logged in to Yves with the assigned customer account.
 
@@ -47,7 +52,7 @@ You can use the Preview mode from either the **Overview of CMS Pages** page or t
 1.On the **Overview of CMS Pages** page, click **View** and select **Preview** from the drop-down list next to the page whose draft you want to view.
 2. The page in the Preview mode will be opened in a new tab of your browser.
 
-**To preview a draft of your CMS page from the Edit Placeholders editor**, see the [Editing Placeholders](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/editing-cms-pages.html#selecting-the-placeholders-option) section.
+**To preview a draft of your CMS page from the Edit Placeholders editor**, see the [Editing Placeholders](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/editing-cms-pages.html#selecting-the-edit-gt-placeholders-option) section.
 
 
 ## Publishing a Page
@@ -59,26 +64,28 @@ You can publish your page either from the **Overview of CMS Pages** page or from
 1. On the **Overview of CMS Pages** page, click **Publish** in the _Actions_ column.
 2. The page will be successfully published.
 
-**To publish a page from the Edit Placeholders editor**, see the [Editing Placeholders](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/editing-cms-pages.html#selecting-the-placeholders-option) section.
+**To publish a page from the Edit Placeholders editor**, see the [Editing Placeholders](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/editing-cms-pages.html#selecting-the-edit-gt-placeholders-option) section.
 
 ## Viewing a Page
 To view a page:
 1. On the **Overview of CMS Pages** page, click **View** in the _Actions_ column.
 2. From the drop-down list, you can select the following options:
-    *  **Preview**: This option allows you to see the way the page will look like in the online store before publishing it.
-    *  **In Zed**: This option opens the View CMS Page editor that includes general information about a published page, as well as its URL and metadata.
-    *  **In Shop**: This option opens a live page in the online store. 
-    *  **Version History**: This option opens the Version History: Page name page that displays all available versions of the page and general information of the version you are currently using.
+  *  **Preview**: This option allows you to see the way the page will look like in the online store before publishing it.
+  *  **In Zed**: This option opens the View CMS Page editor that includes general information about a published page, as well as its URL and metadata.
+  *  **In Shop**: This option opens a live page in the online store. 
+  *  **Version History**: This option opens the Version History: Page name page that displays all available versions of the page and general information of the version you are currently using.
  3. To view the page details in Zed, click **View > In Zed**.
  4. On the **View CMS Page: [Page name]** page that opens, the following information is available:
-    * General information
-    * URLs
-    * SEO information
-    * Placeholders
+  * General information
+  * URLs
+  * SEO information
+  * Placeholders
 
 {% info_block infoBox %}
-See [CMS Page: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/references/reference-information-cms-pages.html
-{% endinfo_block %} to learn more about attributes on this page.)
+
+See [CMS Page: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/references/reference-information-cms-pages.html) to learn more about attributes on this page.
+
+{% endinfo_block %}
 
 **Tips & Tricks**
 On the **View CMS Page: [Page name]** page, you can do the following:

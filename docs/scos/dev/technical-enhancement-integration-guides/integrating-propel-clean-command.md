@@ -18,6 +18,7 @@ redirect_from:
   - /v4/docs/en/propel-clean-command
   - /v3/docs/propel-clean-command
   - /v3/docs/en/propel-clean-command
+  - /docs/scos/dev/technical-enhancements/propel-clean-command.html
 ---
 
 The `propel:database:drop` command is used to clean a database of all the tables, indexes, counters and so on. The command invokes the `drop` process to delete and re-create the database from scratch.

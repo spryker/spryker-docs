@@ -211,7 +211,14 @@ composer require spryker-feature/catalog:"^201903.0" spryker-feature/cms:"^20190
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules were installed:<table><thead><tr><th>Module</th><th>Expected directory</th></tr></thead><tbody><tr><td>`CmsSearchPage`</td><td>`vendor/spryker-shop/cms-search-page`</td></tr><tr><td>`TabsWidget`</td><td>`vendor/spryker-shop/tabs-widget`</td></tr><tr><td>`TabsWidgetExtension`</td><td>`vendor/spryker-shop/tabs-widget-extension`</td></tr></tbody></table>
+Make sure that the following modules were installed:
+
+|Module|Expected directory|
+|--- |--- |
+|`CmsSearchPage`|`vendor/spryker-shop/cms-search-page`|
+|`TabsWidget`|`vendor/spryker-shop/tabs-widget`|
+|`TabsWidgetExtension`|`vendor/spryker-shop/tabs-widget-extension`|
+
 {% endinfo_block %}
 
 ### 2) Add Translations
@@ -353,5 +360,12 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
  ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following widgets have been registered:<table><thead><tr><th>Module</th><th>Test</th></tr></thead><tbody><tr><td>`FullTextSearchTabsWidget`</td><td><ul><li>Go to the full-text search page (by searching for something in the search bar
-{% endinfo_block %} and search for a term that matches some products and CMS pages as well.</li><li>Make sure that the tabs component displays the activated tab items properly at the top of the search results.</li></ul></td></tr></tbody></table>)
+
+Make sure that the following widgets have been registered:
+
+|Module|Test|
+|--- |--- |
+|`FullTextSearchTabsWidget`|Go to the full-text search page (by searching for something in the search bar
+and search for a term that matches some products and CMS pages as well. Make sure that the tabs component displays the activated tab items properly at the top of the search results.|
+
+{% endinfo_block %}

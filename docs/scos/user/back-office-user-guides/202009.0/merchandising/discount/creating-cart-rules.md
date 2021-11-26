@@ -33,13 +33,15 @@ To start working with discounts, go to the **Merchandising > Discounts** section
 3. Click **Next** or select the **Discount calculation** tab to proceed.
 4. On the **Create Discount page >Discount calculation** tab, do the following:
     1.  Select either Calculator percentage, or Calculator fixed in the **Calculator type** drop-down. See [Discount Calculation: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/references/reference-information-discount-calculation.html) for more details.
+    
     {% info_block warningBox "Note" %}
 
     The next step varies based on the selected calculator type:
     a. **Calculator fixed**: Enter the prices to be discounted.
     b.  **Calculator percentage**: Enter the values (percentage) to be discounted.
 
-{% endinfo_block %}
+    {% endinfo_block %}
+
     2. Select the **Discount application type** and define what products the discount will be applied to. See [Discount Calculation: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/references/reference-information-discount-calculation.html) for more information.
  5. Click **Next**, or select the **Conditions** tab to proceed.
  6. On the **Create Discount page >Conditions** tab, do the following:

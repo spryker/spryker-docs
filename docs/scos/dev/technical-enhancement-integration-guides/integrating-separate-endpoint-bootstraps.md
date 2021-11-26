@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/separating-different-endpoint-bootstraps
   - /docs/separating-different-endpoint-bootstraps
   - /docs/en/separating-different-endpoint-bootstraps
+  - /docs/scos/dev/technical-enhancements/separating-different-endpoint-bootstraps.html
 ---
 
 Gateway and ZedRestApi requests require a different stack of plugins to be processed with. Separation of the application bootstrapping into individual endpoints reduces the number of wired plugins which improves the performance of request processing.

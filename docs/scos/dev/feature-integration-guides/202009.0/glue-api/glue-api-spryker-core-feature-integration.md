@@ -26,7 +26,16 @@ composer require spryker/glue-application:"^1.0.0" spryker/entity-tags-rest-api:
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules have been installed:<table><thead><tr><th>Module</th><th>Expected Directory </th></tr></thead><tbody><tr><td>`GlueApplication`</td><td>`vendor/spryker/glue-application`</td></tr><tr><td>`EntityTagsRestApi`</td><td>`vendor/spryker/entity-tag-rest-api`</td></tr><tr><td>`StoresRestApi`</td><td>`vendor/spryker/stores-rest-api`</td></tr><tr><td>`UrlsRestApi`</td><td>`vendor/spryker/urls-rest-api`</td></tr><td>`SecurityBlockerRestApi`</td><td>`vendor/spryker/security-blocker-rest-api`</td></tr></tbody></table>
+Make sure that the following modules have been installed:
+
+|Module|Expected Directory|
+|--- |--- |
+|`GlueApplication`|`vendor/spryker/glue-application`|
+|`EntityTagsRestApi`|`vendor/spryker/entity-tag-rest-api`|
+|`StoresRestApi`|`vendor/spryker/stores-rest-api`|
+|`UrlsRestApi`|`vendor/spryker/urls-rest-api`|
+|`SecurityBlockerRestApi`|`vendor/spryker/security-blocker-rest-api`|
+
 {% endinfo_block %}
 
 ### 2) Set Up Configuration
@@ -58,14 +67,21 @@ $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = '*';
 ```
 
 {% info_block warningBox "Verification" %}
-To make sure that the CORS headers are set up correctly, send the OPTIONS request to any valid GLUE resource with the **Origin** header `http://glue.mysprykershop.com/` and see the correct JSON response<ul><li>Verify that the **access-control-allow-origin** header is present and is the same to the one set in `config`</li><li>Verify that the **access-control-allow-methods** header is present and contains all available methods</li><li>Send POST, PATCH or DELETE requests (can choose any of available ones
-{% endinfo_block %} and verify that the response headers are the same</li></ul>)
+
+To make sure that the CORS headers are set up correctly, send the OPTIONS request to any valid GLUE resource with the **Origin** header `http://glue.mysprykershop.com/` and see the correct JSON response:
+- Verify that the **access-control-allow-origin** header is present and is the same to the one set in `config`
+- Verify that the **access-control-allow-methods** header is present and contains all available methods
+- Send POST, PATCH or DELETE requests (can choose any of available ones and verify that the response headers are the same)
+
+{% endinfo_block %}
 
 #### Configure included section
 
 {% info_block infoBox "Info" %}
-<ul><li>When the `GlueApplicationConfig::isEagerRelationshipsLoadingEnabled(
-{% endinfo_block %}` option is set to "false", no relationship will be loaded unless they are explicitly specified in the "included" query parameter (for example, `/abstract-products?include=abstract-product-prices`).</li><li>When the `GlueApplicationConfig::isEagerRelationshipsLoadingEnabled()` option is set to "true", all resource relationships will be loaded by default unless you pass an empty "include" query parameter (for example, `/abstract-products?include=`). If you specify needed relationships in the "included" query parameter, only required relationships will be added to response data.)
+- When the `GlueApplicationConfig::isEagerRelationshipsLoadingEnabled()` option is set to "false", no relationship will be loaded unless they are explicitly specified in the "included" query parameter (for example, `/abstract-products?include=abstract-product-prices`).
+- When the `GlueApplicationConfig::isEagerRelationshipsLoadingEnabled()` option is set to "true", all resource relationships will be loaded by default unless you pass an empty "include" query parameter (for example, `/abstract-products?include=`). If you specify needed relationships in the "included" query parameter, only required relationships will be added to response data.)
+
+{% endinfo_block %}
     
 ### 3) Set Up Transfer Objects
 Run the following command to generate transfer objects:
@@ -75,7 +91,23 @@ console transfer:generate
 ```
     
 {% info_block warningBox "Verification" %}
-Make sure that the following changes have occurred:<table><thead><tr><th>Transfer</th><th>Type</th><th>Event</th><th>Path</th></tr></thead><tbody><tr><td>`RestPageOffsetsTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/RestPageOffsetsTransfer.php`</td></tr><tr><td>`RestErrorMessageTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/RestErrorMessageTransfer.php`</td></tr><tr><td>`RestErrorCollectionTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/RestErrorCollectionTransfer.php`</td></tr><tr><td>`RestVersionTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/RestVersionTransfer.php`</td></tr><tr><td>`RestUserTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/RestUserTransfer.php`</td></tr><tr><td>`StoresRestAttributesTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/StoresRestAttributesTransfer.php`</td></tr><tr><td>`StoreCountryRestAttributesTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/StoreCountryRestAttributesTransfer.php`</td></tr><tr><td>`StoreRegionRestAttributesTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/StoreRegionRestAttributesTransfer.php`</td></tr><tr><td>`StoreLocaleRestAttributesTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/StoreLocaleRestAttributesTransfer.php`</td></tr><tr><td>`StoreCurrencyRestAttributesTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/StoreCurrencyRestAttributesTransfer.php`</td></tr><tr><td>`RestUrlResolverAttributesTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/RestUrlResolverAttributesTransfer.php`</td></tr></tbody></table>
+
+Make sure that the following changes have occurred:
+
+|Transfer|Type|Event|Path|
+|--- |--- |--- |--- |
+|`RestPageOffsetsTransfer`|class|created|`src/Generated/Shared/Transfer/RestPageOffsetsTransfer.php`|
+|`RestErrorMessageTransfer`|class|created|`src/Generated/Shared/Transfer/RestErrorMessageTransfer.php`|
+|`RestErrorCollectionTransfer`|class|created|`src/Generated/Shared/Transfer/RestErrorCollectionTransfer.php`|
+|`RestVersionTransfer`|class|created|`src/Generated/Shared/Transfer/RestVersionTransfer.php`|
+|`RestUserTransfer`|class|created|`src/Generated/Shared/Transfer/RestUserTransfer.php`|
+|`StoresRestAttributesTransfer`|class|created|`src/Generated/Shared/Transfer/StoresRestAttributesTransfer.php`|
+|`StoreCountryRestAttributesTransfer`|class|created|`src/Generated/Shared/Transfer/StoreCountryRestAttributesTransfer.php`|
+|`StoreRegionRestAttributesTransfer`|class|created|`src/Generated/Shared/Transfer/StoreRegionRestAttributesTransfer.php`|
+|`StoreLocaleRestAttributesTransfer`|class|created|`src/Generated/Shared/Transfer/StoreLocaleRestAttributesTransfer.php`|
+|`StoreCurrencyRestAttributesTransfer`|class|created|`src/Generated/Shared/Transfer/StoreCurrencyRestAttributesTransfer.php`|
+|`RestUrlResolverAttributesTransfer`|class|created|`src/Generated/Shared/Transfer/RestUrlResolverAttributesTransfer.php`|
+
 {% endinfo_block %}
     
 ### 4) Set Up Behavior
@@ -352,7 +384,6 @@ Make sure that the following endpoint is available:<ul><li>`http://glue.myspryke
 
 {% info_block warningBox "Verification" %}
 To make sure that the `ProductAbstractRestUrlResolverAttributesTransferProviderPlugin` plugin is set up correctly, request the `abstract-products` URL via the `/urls` API endpoint and make sure that you receive the correct resource identifier in the response.
-{% endinfo_block %}
 
 **Request body**
 
@@ -377,10 +408,10 @@ http://glue.mysprykershop.com/url-resolver/?url=/product-abstract-url
     }
 }
 ```
+{% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 To make sure that the `CategoryNodeRestUrlResolverAttributesTransferProviderPlugin` plugin is set up correctly, request the `category` URL via the `/urls` API endpoint and make sure that you receive the correct resource identifier in the response.
-{% endinfo_block %}
 
 **Request body**
 
@@ -405,6 +436,9 @@ http://glue.mysprykershop.com/url-resolver/?url=/category-url
     }
 }
 ```
+
+{% endinfo_block %}
+
 {% info_block warningBox "Verification" %}
 
 Make sure `SecurityBlockerCustomerControllerAfterActionPlugin` and `SecurityBlockerCustomerRestRequestValidatorPlugin` are activated correctly by attempting to get an access token (see [Authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html)) with the wrong credentials as a customer. After making the number of attempts you specified in `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS`, the account should be blocked for `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR` seconds. Check that with the consequent login attempts, you get the `429 Too many requests` error.

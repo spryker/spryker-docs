@@ -42,7 +42,7 @@ Follow the steps to install Spryker in Development mode:
     * Clone the B2B repository:
 
     ```bash
-    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202108.0  --single-branch ./b2b-demo-shop
+    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202108.0  --single-branch ./b2b-demo-shop
     ```
 
 5. Depending on the repository you've cloned, navigate into the cloned folder:
@@ -145,7 +145,7 @@ To get the full and up-to-date list of commands, run `docker/sdk help`.
 
 ## Next steps
 
-* [Spryker in Docker troubleshooting](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html)
+* [Spryker in Docker troubleshooting](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-spryker-in-docker-issues.html)
 * [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html)
 * [Deploy File Reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file-reference-1.0.html)
 * [Configuring services](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-services.html)

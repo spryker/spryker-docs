@@ -43,7 +43,7 @@ You can check more cases of product restrictions workflow on the [Restricted Pro
 | [Export a product list](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/managing-product-lists.html#exporting-a-product-list) |
 | [Remove a product list from the system](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/managing-product-lists.html#removing-a-product-list)  |
 | [Assign products to a product list](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/managing-product-lists.html#assigning-products-to-a-product-list) |
-| [Remove products from a product list](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/managing-product-lists.html#deassigning-products-form-a-product-list) |
+| [Remove products from a product list](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/managing-product-lists.html#deassigning-products-from-a-product-list) |
 
 {% info_block warningBox "Developer guides" %}
 

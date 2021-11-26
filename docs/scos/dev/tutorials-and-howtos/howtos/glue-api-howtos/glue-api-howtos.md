@@ -28,6 +28,6 @@ Glue API HowTo tutorials provide guides and instructions for tasks related to [S
 
 From these guides, you will learn how to perform the following tasks:
 
-* [Configuring Visibility of the Included Section]( https://documentation.spryker.com/docs/ht-configuring-visibility-included-section-201903)
-* [Configuring Glue for Cross-Origin Requests]( https://documentation.spryker.com/docs/about-glue-api-howtos)
+* [Configuring Visibility of the Included Section](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-visibility-of-the-included-section.html)
+* [Configuring Glue for Cross-Origin Requests](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-glue-for-cross-origin-requests.html)
 * [Managing Customer Access to API Resources](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/managing-customer-access-to-glue-api-resources.html)

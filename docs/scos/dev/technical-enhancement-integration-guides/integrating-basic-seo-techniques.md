@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/basic-seo-techniques-integration-guide
   - /v6/docs/basic-seo-techniques-integration-guide
   - /v6/docs/en/basic-seo-techniques-integration-guide
+  - /docs/scos/dev/technical-enhancements/basic-seo-techniques-integration-guide.html
 ---
 
 To improve the visibility of your Spryker-based shop for the search engines, you should optimize your project for them. The very first step towards the SEO of your project pages' content is the proper usage of headings on the pages and microdata usage. For details, see [Basic SEO techniques to use in your project](/docs/scos/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html).

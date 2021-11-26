@@ -13,7 +13,7 @@ redirect_from:
 
 {% info_block errorBox %}
 
-There is currently an issue when using giftcards with Computop. Our team is developing a fix for it.
+There is currently an issue when using gift cards and easyCredit with Computop. Our team is developing a fix for it.
 
 {% endinfo_block %}
 
@@ -44,7 +44,7 @@ The state machines provided below are examples of PSP provider flow.
 ```php
 $config[OmsConstants::PROCESS_LOCATION] = [
     ...
-    APPLICATION_ROOT_DIR . '/vendor/spryker-eco/cmoputop/config/Zed/Oms', // Is not required after State machine are copied to project level.
+    APPLICATION_ROOT_DIR . '/vendor/spryker-eco/computop/config/Zed/Oms', // Is not required after State machine are copied to project level.
 ];
 $config[OmsConstants::ACTIVE_PROCESSES] = [
     ...
@@ -415,7 +415,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
         'Computop/paydirekt': ['paydirekt', 'computop'],
         'Computop/paynow': ['paynow', 'computop'],
         'Computop/paypal': ['paypal', 'computop'],
-        'Computop/sofort': ['sofort', 'computop']
+        'Computop/sofort': ['sofort', 'computop'],
         'Computop/payu-cee-single': ['payu-cee-single', 'computop'],
     }
 } {% raw %}%}{% endraw %}
@@ -515,7 +515,7 @@ class StepFactory extends SprykerStepFactory
         return new PlaceOrderStep(
             $this->getCheckoutClient(),
             $this->getFlashMessenger(),
-            $this->getStore()->getCurrentLocale(),
+	    $this->getLocaleClient()->getCurrentLocale(),
             $this->getGlossaryStorageClient(),
             CheckoutPageRouteProviderPlugin::ROUTE_NAME_CHECKOUT_PLACE_ORDER,
             $this->getConfig()->getEscapeRoute(),
@@ -841,6 +841,8 @@ namespace Pyz\Yves\Router;
 
 use Pyz\Yves\CheckoutPage\Plugin\Router\CheckoutPageRouteProviderPlugin;
 use Spryker\Yves\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
+- use SprykerShop\Yves\CheckoutPage\Plugin\Router\CheckoutPageRouteProviderPlugin;
++ use Pyz\Yves\CheckoutPage\Plugin\Router\CheckoutPageRouteProviderPlugin;
 
 class RouterDependencyProvider extends SprykerRouterDependencyProvider
 {
@@ -857,7 +859,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
-6. Only for PayNow payment method: To set the Computop payment transfer with necessary data in `QuoteTransfer`, adjust `PlaceOrderStep`:
+6. For PayNow payment method only: To set the Computop payment transfer with necessary data in `QuoteTransfer`, adjust `PlaceOrderStep`:
 
 <details>
 <summary>src/Pyz/Yves/CheckoutPage/Process/Steps/PlaceOrderStep.php</summary>
@@ -901,7 +903,7 @@ class PlaceOrderStep extends SprykerShopPlaceOrderStep
 
 </details>
 
-7. Only for EasyCredit payment method: adjust the SummaryStep with EasyCredit installment information by adding the `easy-credit-summary` molecule to `summary.twig`.
+7. For EasyCredit payment method only: Adjust the SummaryStep with EasyCredit installment information by adding the `easy-credit-summary` molecule to `summary.twig`.
 
 <details>
 <summary>src/Pyz/Yves/CheckoutPage/Process/Steps/SummaryStep.php</summary>
@@ -983,7 +985,7 @@ class SummaryStep extends SprykerShopSummaryStep
 
 </details>
 
-8. Only for PayPalExpress payment method: adjust the PaymentStep with ComputopPayPalExpress check:
+8. For PayPalExpress payment method only: Adjust the PaymentStep with ComputopPayPalExpress check:
 
 <details>
 <summary>src/Pyz/Yves/CheckoutPage/Process/Steps/PaymentStep.php</summary>
@@ -1043,7 +1045,7 @@ class PaymentStep extends SprykerShopPaymentStep
 ```
 </details>
 
-9. Only for PayPalExpress payment method: adjust the `ShipmentStep` with default shipment method check:
+9. For PayPalExpress payment method only: adjust the `ShipmentStep` with the default shipment method check:
 
 <details>
 <summary>src/Pyz/Yves/CheckoutPage/Process/Steps/ShipmentStep.php</summary>
@@ -1139,7 +1141,7 @@ class ShipmentStep extends SprykerShipmentStep
 
 10. For PayPal Express payment method only: Extend `QuoteDependencyProvider` with `DefaultShippingMethodQuoteTransferExpanderPlugin`:
 
-**src\Pyz\Client\Quote\QuoteDependencyProvider.php**
+**src/Pyz/Client/Quote/QuoteDependencyProvider.php**
 
 ```php
 <?php
@@ -1175,7 +1177,7 @@ class QuoteDependencyProvider extends BaseQuoteDependencyProvider
 
 11. For PayPal Express payment method only: Extend `ComputopDependencyProvider` with `ExpandShipmentPayPalExpressInitPlugin`:
 
-**src\Pyz\Yves\Computop\ComputopDependencyProvider**
+**src/Pyz/Yves/Computop/ComputopDependencyProvider.php**
 
 ```php
 <?php
@@ -1207,7 +1209,7 @@ class ComputopDependencyProvider extends SprykerComputopDependencyProvider
 12. For PayPal Express payment method only: Extend cart-summary twig template with shipment information:
 
 <details>
-<summary>src\Pyz\Yves\CartPage\Theme\default\components\molecules\cart-summary\cart-summary.twig</summary>
+<summary>src/Pyz/Yves/CartPage/Theme/default/components/molecules/cart-summary/cart-summary.twig</summary>
 
 ```twig
 {% raw %}{%{% endraw %} extends model('component') {% raw %}%}{% endraw %}
@@ -1379,7 +1381,7 @@ class ComputopDependencyProvider extends SprykerComputopDependencyProvider
 13. For PayPal Express payment method only: Extend `ProceedToCheckoutButtonWidget` and add checkout button:
 
 <details>
-<summary>src\Pyz\Yves\CheckoutWidget\Widget\ProceedToCheckoutButtonWidget.php</summary>
+<summary>src/Pyz/Yves/CheckoutWidget/Widget/ProceedToCheckoutButtonWidget.php</summary>
 
 ```php
 <?php
@@ -1429,7 +1431,37 @@ class ProceedToCheckoutButtonWidget extends SprykerProceedToCheckoutButtonWidget
 
 14. For PayPal Express payment method only: Extend `CheckoutWidgetFactory`:
 
-**src\Pyz\Yves\CheckoutWidget\CheckoutWidgetFactory.php**
+    **src/Pyz/Yves/CheckoutWidget/CheckoutWidgetFactory.php**
+
+    ```php
+    <?php
+
+    /**
+     * This file is part of the Spryker Suite.
+     * For full license information, please view the LICENSE file that was distributed with this source code.
+     */
+
+    namespace Pyz\Yves\CheckoutWidget;
+
+    use SprykerEco\Client\Computop\ComputopClientInterface;
+    use SprykerShop\Yves\CheckoutWidget\CheckoutWidgetFactory as SprykerCheckoutWidgetFactory;
+
+    class CheckoutWidgetFactory extends SprykerCheckoutWidgetFactory
+    {
+        /**
+         * @return \SprykerEco\Client\Computop\ComputopClientInterface
+         */
+        public function getComputopClient(): ComputopClientInterface
+        {
+            return $this->getProvidedDependency(CheckoutWidgetDependencyProvider::CLIENT_COMPUTOP);
+        }
+    }
+
+    ```
+
+15. For  PayPal Express payment method only: override `CheckoutWidgetDependencyProvider`:
+
+**src/Pyz/Yves/CheckoutWidget/CheckoutWidgetDependencyProvider.php**
 
 ```php
 <?php
@@ -1441,25 +1473,50 @@ class ProceedToCheckoutButtonWidget extends SprykerProceedToCheckoutButtonWidget
 
 namespace Pyz\Yves\CheckoutWidget;
 
-use SprykerEco\Client\Computop\ComputopClientInterface;
-use SprykerShop\Yves\CheckoutWidget\CheckoutWidgetFactory as SprykerCheckoutWidgetFactory;
+use Spryker\Yves\Kernel\Container;
+use SprykerShop\Yves\CheckoutWidget\CheckoutWidgetDependencyProvider as SprykerCheckoutWidgetDependencyProvider;
 
-class CheckoutWidgetFactory extends SprykerCheckoutWidgetFactory
+class CheckoutWidgetDependencyProvider extends SprykerCheckoutWidgetDependencyProvider
 {
     /**
-     * @return \SprykerEco\Client\Computop\ComputopClientInterface
+     * @var string
      */
-    public function getComputopClient(): ComputopClientInterface
+    public const CLIENT_COMPUTOP = 'CLIENT_COMPUTOP';
+
+    /**
+     * @param \Spryker\Yves\Kernel\Container $container
+     *
+     * @return \Spryker\Yves\Kernel\Container
+     */
+    public function provideDependencies(Container $container)
     {
-        return $this->getProvidedDependency(CheckoutWidgetDependencyProvider::CLIENT_COMPUTOP);
+        $container = parent::provideDependencies($container);
+
+        $container = $this->addComputopClient($container);
+
+        return $container;
+    }
+
+    /**
+     * @param \Spryker\Yves\Kernel\Container $container
+     *
+     * @return \Spryker\Yves\Kernel\Container
+     */
+    protected function addComputopClient(Container $container): Container
+    {
+        $container->set(static::CLIENT_COMPUTOP, function (Container $container) {
+            return $container->getLocator()->computop()->client();
+        });
+
+        return $container;
     }
 }
 
 ```
 
-15. For PayPal Express payment method only: Extend `ShopApplicationDependencyProvider` with created `ProceedToCheckoutButtonWidget`:
+16.  For PayPal Express payment method only: Extend `ShopApplicationDependencyProvider` with created `ProceedToCheckoutButtonWidget`:
 
-**src\Pyz\Yves\ShopApplication\ShopApplicationDependencyProvider.php**
+**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -1476,9 +1533,9 @@ namespace Pyz\Yves\ShopApplication;
 ...
 ```
 
-16. For PayPal Express payment method only: Extend `proceed-to-checkout-button` twig template PayPal Express checkout button:
+17. For PayPal Express payment method only: Extend `proceed-to-checkout-button` twig template PayPal Express checkout button:
 
-**src\Pyz\Yves\CheckoutWidget\Theme\default\views\proceed-to-checkout-button\proceed-to-checkout-button.twig**
+**src/Pyz/Yves/CheckoutWidget/Theme/default/views/proceed-to-checkout-button/proceed-to-checkout-button.twig**
 
 ```twig
 {% raw %}{%{% endraw %} extends template('widget') {% raw %}%}{% endraw %}
@@ -1519,7 +1576,7 @@ To configure [CRIF](/docs/scos/user/technology-partners/{{page.version}}/payment
 
 1. Adjust `PaymentDependencyProvider` to use `ComputopPaymentMethodFilterPlugin`:  
 
-**\Pyz\Zed\Payment\PaymentDependencyProvider**
+**src/Pyz/Zed/Payment/PaymentDependencyProvider.php**
 
 ```php
 <?php
@@ -1651,8 +1708,8 @@ class StepFactory extends SprykerStepFactory
             $this->createGiftCardItemsChecker(),
             CheckoutPageRouteProviderPlugin::ROUTE_NAME_CHECKOUT_SHIPMENT,
             $this->getConfig()->getEscapeRoute(),
-            $this->getCheckoutShipmentStepEnterPreCheckPlugins()
-			$this->getComputopClient()
+            $this->getCheckoutShipmentStepEnterPreCheckPlugins(),
+	    $this->getComputopClient()
         );
     }
 

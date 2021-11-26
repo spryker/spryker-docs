@@ -82,6 +82,7 @@ docker/sdk bootstrap deploy.dev.yml
 {% info_block warningBox "Bootstrap" %}
 
 Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after you update the Docker SDK or the deploy file.
+Please disable compose V2 in the docker app as it is not supported by spryker/docker-sdk
 
 {% endinfo_block %}
 

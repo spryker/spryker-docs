@@ -40,6 +40,15 @@ YOUR ADVANTAGES:
 * Item-2-item recommendations, thanks to the most innovative data mining and machine learning process (up to 25% of turnover share with good recommendations)
 * Personalization and individualization with the very latest KI methods (up to 40% increase in turnover share, an increase of up to 800% in mailing success.)
 
+## Related Developer articles
+
+* [Installing Econda](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/inxmail-guides/inxmail-api.html)
+* [Inxmail order reference commands](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/inxmail-guides/inxmail-order-referenced-commands.html)
+* [Installing and configuring Inxmail](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/inxmail-guides/installing-and-configuring-inxmail.html)
+* [Integrating Inxmail](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/inxmail-guides/integrating-inxmail.html)
+
+
+
 ---
 
 ## Copyright and Disclaimer

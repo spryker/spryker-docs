@@ -1,7 +1,7 @@
 ---
-title: Econda - Integration into project
+title: Integrating Econda
 last_updated: Jun 16, 2021
-template: concept-topic-template
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/econda-integration-into-project
 originalArticleId: c4cff442-13cf-4c1e-ad8e-95457220cc85
 redirect_from:
@@ -9,16 +9,10 @@ redirect_from:
   - /2021080/docs/en/econda-integration-into-project
   - /docs/econda-integration-into-project
   - /docs/en/econda-integration-into-project
-related:
-  - title: Econda - Installation and configuration
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/personalization-and-cross-selling/econda/econda-installation-and-configuration.html
-  - title: Econda - Tracking
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/personalization-and-cross-selling/econda/econda-tracking.html
-  - title: Econda - Cross Sell
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/personalization-and-cross-selling/econda/econda-cross-sell.html
-  - title: Econda - Exporting CSVs
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/personalization-and-cross-selling/econda/econda-exporting-csvs.html
+  - /docs/scod/user/technology-partners/202108.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda-integration-into-project.html
 ---
+
+To integrate Econda, do the following.
 
 ## Prerequisites
 

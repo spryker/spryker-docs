@@ -2176,7 +2176,7 @@ entries:
       - title: Migration guide - ProductTaxSetsRestApi
         url: /docs/scos/dev/module-migration-guides/glue-api/migration-guide-producttaxsetsrestapi.html
 
-      
+
     - title: Migration Guide - API Module
       url: /docs/scos/dev/module-migration-guides/migration-guide-api-module.html
     - title: Migration guide - Auth module to SecurityGui module
@@ -2458,7 +2458,7 @@ entries:
     - title: Migration Guide - QuoteRequestWidget
       url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequestwidget.html
     - title: Migration Guide - Refund
-      url: /docs/scos/dev/module-migration-guides/migration-guide-refund.html  
+      url: /docs/scos/dev/module-migration-guides/migration-guide-refund.html
     - title: Migration Guide - Router
       url: /docs/scos/dev/module-migration-guides/migration-guide-router.html
     - title: Migration Guide - Sales
@@ -2508,7 +2508,7 @@ entries:
     - title: Migration Guide - Store
       url: /docs/scos/dev/module-migration-guides/migration-guide-store.html
     - title: Migration Guide - Tax
-      url: /docs/scos/dev/module-migration-guides/migration-guide-tax.html 
+      url: /docs/scos/dev/module-migration-guides/migration-guide-tax.html
     - title: Migration Guide - Touch
       url: /docs/scos/dev/module-migration-guides/migration-guide-touch.html
     - title: Migration Guide - Transfer
@@ -2522,8 +2522,8 @@ entries:
     - title: Migration Guide - WebProfiler
       url: /docs/scos/dev/module-migration-guides/migration-guide-webprofiler.html
     - title: Migration Guide - Wishlist
-      url: /docs/scos/dev/module-migration-guides/migration-guide-wishlist.html  
-    
+      url: /docs/scos/dev/module-migration-guides/migration-guide-wishlist.html
+
   - title: DevOps migration guides
     include_versions:
     - "202001.0"
@@ -3989,18 +3989,42 @@ entries:
         url: /docs/scos/dev/technology-partner-guides/hosting-providers/heroku-technology-partner-integration.html
     - title: Marketing & Conversion
       nested:
-      - title: Customer Communication
+      - title: Customer communication
         nested:
-        - title: Episerver
+        - title: Episerver guides
           nested:
           - title: Integrating Episerver
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver-guides/integrating-episerver.html
           - title: Installing and configuring Episerver
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver-guides/installing-and-configuring-episerver.html
           - title: Episerver API
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/episerver-api.html
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver-guides/episerver-api.html
           - title: Episerver order reference commands
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver-guides/episerver-order-reference-commands.html
+        - title: Inxmail guides
+          nested:
+          - title: Integrating Inxmail
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail-guides/integrating-inxmail.html
+          - title: Installing and configuring Inxmail
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail-guides/installing-and-configuring-inxmail.html
+          - title: Inxmail API requests
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail-guides/inxmail-api-requests.html
+          - title: Inxmail order referenced commands
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail-guides/inxmail-order-referenced-commands.html
+      - title: Personalization and cross-selling
+        nested:
+        - title: Econda guides
+          nested:
+          - title: Integrating Econda
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda-guides/integrating-econda.html
+          - title: Installing Econda
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda-guides/installing-econda.html
+          - title: Integrating Econda cross-selling
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda-guides/integrating-econda-cros-selling.html
+          - title: Adding the Econda tracking code
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda-guides/adding-the-econda-tracking-code.html
+          - title: Exporting Econda data
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda-guides/exporting-econda-data.html
       - title: Analytics
         nested:
         - title: FACT-Finder

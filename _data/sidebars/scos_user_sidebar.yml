@@ -2315,9 +2315,23 @@ entries:
           url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/econda/econda.html
           nested:
           - title: Econda - Cross Sell
+            include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+            - "202001.0"
+            - "202005.0"
+            - "202009.0"
             url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/econda/econda-cross-sell.html
           - title: Econda - Tracking
             url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/econda/econda-tracking.html
+            include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+            - "202001.0"
+            - "202005.0"
+            - "202009.0"
           - title: Econda - Frontend Integration
             url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/econda/econda-frontend-integration.html
             include_versions:
@@ -2332,12 +2346,10 @@ entries:
             url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/econda/econda-installation-and-configuration.html
             include_versions:
             - "202009.0"
-            - "202108.0"
           - title: Econda - Integration into project
             url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/econda/econda-integration-into-project.html
             include_versions:
             - "202009.0"
-            - "202108.0"
         - title: Nosto
           url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/nosto.html
         - title: 8Select

@@ -1,8 +1,8 @@
 ---
-title: Econda - Cross Sell
-description: Cross Sell takes the online behavior of your visitors, along with current product and website interactions and comes up with intelligent, dynamic, relevant recommendations for your visitors.
+title: Integrating Econda cross-selling
+description: Learn how to integrate Econda cross-selling
 last_updated: Jun 16, 2021
-template: concept-topic-template
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/econda-cross-sell
 originalArticleId: 66c188de-e8fa-4643-872c-98dc97d37c27
 redirect_from:
@@ -10,22 +10,14 @@ redirect_from:
   - /2021080/docs/en/econda-cross-sell
   - /docs/econda-cross-sell
   - /docs/en/econda-cross-sell
-related:
-  - title: Econda - Installation and configuration
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/personalization-and-cross-selling/econda/econda-installation-and-configuration.html
-  - title: Econda - Integration into project
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/personalization-and-cross-selling/econda/econda-integration-into-project.html
-  - title: Econda - Tracking
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/personalization-and-cross-selling/econda/econda-tracking.html
-  - title: Econda - Exporting CSVs
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/personalization-and-cross-selling/econda/econda-exporting-csvs.html
+  - /docs/scos/user/technology-partners/202108.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda-cross-sell.html
 ---
 
 Cross sell is highly customizable and it depends on your setup. Please refer to [Econda offical documentation](https://support.econda.de/display/CSDE/Control+Panel).
 
 All necessary JS files are already integrated into the module, the only thing you need to do is to add your API key inside the `econda_crosssell.twig` template:
 
-```php
+```twig
 <input type="hidden" name="econda_aid" value="ADD_YOUR_API_KEY_HERE">
 ```
 
@@ -58,7 +50,7 @@ Now we need to add our new Econda module to `entry.js`.
 
 by adding a line:
 
-```bash
+```js
 require('js/econda/econda');
 ```
 
@@ -68,7 +60,7 @@ Cross sell is highly customizable and it depends on your setup. Please refer to 
 
 Here is a sample `econda-widget.js` you can use as a help to integrate cross sell widget to your website:
 
-```bash
+```js
 'use strict';
 
 require('../../html/vendor/econda/cross-sell-widget.html');
@@ -114,7 +106,7 @@ econdaWidget.init();
 
 In `econda-widget.js` we are include the `cross-sell-widget.html` for the widget template. Template example is below.
 
-```bash
+```js
 <section class="products-set">
  <h3>You may also like</h3>
  <% for (ip = 0; ip < products.length; ip++) { %>

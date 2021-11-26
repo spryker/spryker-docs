@@ -27,7 +27,12 @@ Merging several queries to only one query with a bigger result (Unfiltered)
 
  Aggregate the duplicates query to one query and share the result to the stack of the code execution (Memory)
 
+{% info_block warningBox %}
+
 Memory leaks must be carefully checked during query optimizations as the results will be bigger or shared in one transaction.
+
+{% endinfo_block
+
 
 ### Optimistic vs. Pessimistic Locking
 It’s very possible that developers use explicit locks to prevent the race conditions or other problems, but this can easily impact the performance in high load of traffic. All requests now needs to wait for the lock and this will turn the parallel request processing to Sequentional processing and can increase the response time of all queued requests.
@@ -58,6 +63,7 @@ Example:
 We have 10 plugins for cart feature to calculate the items price, discount, tax, etc and each plugin has a query to find product by SKU per order item, it means, the code will execute 10 same queries per each item in cart
 
 If the cart item are equal to 70, we will have 70 x 10 (Plugins) = 700 same queries 
+```
 SELECT * FROM SPY_PRODUCT_ABSTRACT WHERE SKU = ?
 ->
 Plugin 1. QUERY
@@ -65,20 +71,21 @@ Plugin 2. QUERY
 Plugin 3. QUERY
 Plugin 4. QUERY
 Plugin n ....
-
+```
 We can solve this wrong design by
 
 Using IN condition instead of = in query
-
+```
 SELECT * FROM SPY_PRODUCT_ABSTRACT WHERE SKU IN (?,?,?,....)
-
+```
 Run only 1 query and provide the result to other plugins
-
+```
 Plugin 1. QUERY
 Plugin 2. RESULT
 Plugin 3. RESULT
 Plugin 4. RESULT
 Plugin n ...
+```
 
 ### ORM vs PDO
 Spryker uses Propel ORM to reduce the database complexity and low level interactions for the developers, as this is very great abstraction and cleaner approach but developers need to be careful to not miss use the pattern so some specific places such as heavy data transfer operations like Data Import or P&S for big data.
@@ -92,7 +99,7 @@ Affected features
 - Dataimport
 - Publish and Synchronize
 
-You can find more details here  https://docs.spryker.com/docs/scos/dev/data-import/202108.0/data-importer-speed-optimization.html
+You can find more details here [Data Importer Speed Optimization | Spryker Documentation ](https://docs.spryker.com/docs/scos/dev/data-import/202108.0/data-importer-speed-optimization.html)
 
 ### Database Query Optimization
 Database queries are the most slow parts of each applications, they have different dependencies such as database engines, hardware, configurations and etc. Spryker prevents any database execution for popular endpoints like Home, PDP, Search but for some this is not avoidable like Cart or Checkout. There are several ways to make sure these endpoints are handling the database queries in the best performance
@@ -109,12 +116,13 @@ Spryker has different features and several configurable modules which need to be
 This feature is one the important infrastructure part in Spryker and it’s important that the configurations are set correctly
 
 #### Multiple publisher queues
-Publishers are using queues to propagate the events and let the workers to consume them to provide necessary data for our frontend services. As Spryker uses RabbitMQ as a default option, it’s recommended to use multiple queues instead of one to spread the loads between different queues. your can find more information about multiple publisher queues here:
-https://docs.spryker.com/docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html#set-up-multiple-publish-queue-structure
+Publishers are using queues to propagate the events and let the workers to consume them to provide necessary data for our frontend services. As Spryker uses RabbitMQ as a default option, it’s recommended to use multiple queues instead of one to spread the loads between different queues. your can find more information about multiple publisher queues here [Integrating multi-queue publish structure | Spryker Documentation ](
+https://docs.spryker.com/docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html#set-up-multiple-publish-queue-structure)
 
 #### Workers
 Spryker default configuration comes with 1 worker per publisher queues, but this can be increased to the max number of CPUs for specific queue if other queues are not receiving any loads. e.g.
 
+```
 Publisher.ProductAbstract 10000 msg/minute (2 workers)
 Publisher.ProductConcrete 10000 msg/minute (2 workers)
 Publisher.Transaltion 10 msg/minute (1 worker)
@@ -122,6 +130,7 @@ Publisher.Cms 5 msg/minute (1 worker)
 ....
 -------------------------------------------------------
 CPU: 4
+```
 
 #### Chunk size
 Publishers are using different chunks to consume the messages from queues, the best number is very dependent on each entity and the hardware, but as a best practice we recommend to choose one of these numbers:
@@ -131,24 +140,31 @@ Publishers are using different chunks to consume the messages from queues, the b
 - 1500 
 - 2000 (Max)
 
+{% info_block warningBox %}
+
 Memory leaks must be carefully checked during chunk increasing as the messages will be bigger.
+
+{% endinfo_block
+
 
 #### Benchmark and Profiling the queues
 Spryker also recommends to enable the benchmark tests for each publisher queues and measure the processing time for the minimum of chunk for each queues before production deployment.
 
 Examples: of benchmark of each queue
 
+```
 time vendor/bin/console queue:task:start publisher.product_abstract // Ouput 30.00s
 ....
+```
 
 ### Cart and Checkout Plugins
 As Spryker boilerplate comes with most of the features enabled, please make sure you clean up the unnecessary plugins from Cart and Checkout plugin stack:
 
 - Cart Plugins
-https://github.com/spryker-shop/suite/blob/master/src/Pyz/Zed/Cart/CartDependencyProvider.php
+[suite/CartDependencyProvider.php at master · spryker-shop/suite ](https://github.com/spryker-shop/suite/blob/master/src/Pyz/Zed/Cart/CartDependencyProvider.php)
  
 - Checkout Plugins
-https://github.com/spryker-shop/suite/blob/master/src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php
+[https://github.com/spryker-shop/suite/blob/master/src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php](suite/CheckoutDependencyProvider.php at master · spryker-shop/suite)
 
 ### Zed Calls
 Zed calls are necessary when it requires to execute database related operation like Cart and Checkout requests. As these calls handled by RPC mechanism we need to reduced the calls to the maximum one call to the Zed. we can solve this by following to main approaches
@@ -166,10 +182,10 @@ We can solve this by
 
 ### Performance Check List
 
-[] https://docs.spryker.com/docs/scos/dev/guidelines/performance-guidelines.html
-[] https://docs.spryker.com/docs/scos/dev/data-import/202108.0/data-importer-speed-optimization.html
-[] https://docs.spryker.com/docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html#set-up-multiple-publish-queue-structure
-[] https://docs.spryker.com/docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html#set-up-multiple-publish-queue-structure
+- [Performance guidelines | Spryker Documentation](https://docs.spryker.com/docs/scos/dev/guidelines/performance-guidelines.html)
+- [Data Importer Speed Optimization | Spryker Documentation](https://docs.spryker.com/docs/scos/dev/data-import/202108.0/data-importer-speed-optimization.html)
+- [Integrating multi-queue publish structure | Spryker Documentation](https://docs.spryker.com/docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html#set-up-multiple-publish-queue-structure)
+- [https://docs.spryker.com/docs/cloud/dev/spryker-cloud-commerce-os/performance-testing.html](https://docs.spryker.com/docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html#set-up-multiple-publish-queue-structure)
 
 ## Application Performance and Load Tests
 In this part we need to know all necessary actions before go live, including Tests, CI and Monitoring tools.
@@ -184,12 +200,12 @@ Each project must have their own benchmark tests for the API and Frontend shops 
 Each shop needs to be ready for high traffic and serve as many users as possible, but keep the best performance of it.  Spryker also recommends to plan some stress tests with real data before go live.
 
 Spryker already provided a load test tool based on Gatling for all project
-- Spryker Load Tests  https://github.com/spryker-sdk/load-testing
+- Spryker Load Tests [GitHub - spryker-sdk/load-testing: Load testing tool for Spryker ](https://github.com/spryker-sdk/load-testing)
 
 ### Monitoring and Profiling
 We strongly recommend our customers to enable APM systems for the projects. Spryker support Newrelic as a default monitoring system.
-https://docs.spryker.com/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-new-relic-monitoring.html
+[https://docs.spryker.com/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-new-relic-monitoring.html](Tutorial - New Relic Monitoring | Spryker Documentation )
 
 ### Performance CI
 Performance CI plays a very important role to each project pipeline, it will prevent the new issues in long term in features development.
-https://docs.spryker.com/docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html
+[Performance audit tool- Benchmark | Spryker Documentation ](https://docs.spryker.com/docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html)

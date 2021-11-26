@@ -144,7 +144,7 @@ Publishers are using different chunks to consume the messages from queues, the b
 
 Memory leaks must be carefully checked during chunk increasing as the messages will be bigger.
 
-{% endinfo_block
+{% endinfo_block %}
 
 
 #### Benchmark and Profiling the queues

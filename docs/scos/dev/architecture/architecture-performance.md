@@ -103,3 +103,93 @@ Database queries are the most slow parts of each applications, they have differe
 - Break down heavy or slow queries to smaller queries and use PHP native functionalities for result calculations (like sorting, group by, filtering, validations, ….)
 
 ## Feature Configurations
+Spryker has different features and several configurable modules which need to be adjusted correctly to have the best performance and smooth execution in the applications, let’s check the most important configurations together 
+
+### Publish and Synchronize
+This feature is one the important infrastructure part in Spryker and it’s important that the configurations are set correctly
+
+#### Multiple publisher queues
+Publishers are using queues to propagate the events and let the workers to consume them to provide necessary data for our frontend services. As Spryker uses RabbitMQ as a default option, it’s recommended to use multiple queues instead of one to spread the loads between different queues. your can find more information about multiple publisher queues here:
+https://docs.spryker.com/docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html#set-up-multiple-publish-queue-structure
+
+#### Workers
+Spryker default configuration comes with 1 worker per publisher queues, but this can be increased to the max number of CPUs for specific queue if other queues are not receiving any loads. e.g.
+
+Publisher.ProductAbstract 10000 msg/minute (2 workers)
+Publisher.ProductConcrete 10000 msg/minute (2 workers)
+Publisher.Transaltion 10 msg/minute (1 worker)
+Publisher.Cms 5 msg/minute (1 worker)
+....
+-------------------------------------------------------
+CPU: 4
+
+#### Chunk size
+Publishers are using different chunks to consume the messages from queues, the best number is very dependent on each entity and the hardware, but as a best practice we recommend to choose one of these numbers:
+
+- 500 (Default)
+- 1000
+- 1500 
+- 2000 (Max)
+
+Memory leaks must be carefully checked during chunk increasing as the messages will be bigger.
+
+#### Benchmark and Profiling the queues
+Spryker also recommends to enable the benchmark tests for each publisher queues and measure the processing time for the minimum of chunk for each queues before production deployment.
+
+Examples: of benchmark of each queue
+
+time vendor/bin/console queue:task:start publisher.product_abstract // Ouput 30.00s
+....
+
+### Cart and Checkout Plugins
+As Spryker boilerplate comes with most of the features enabled, please make sure you clean up the unnecessary plugins from Cart and Checkout plugin stack:
+
+- Cart Plugins
+https://github.com/spryker-shop/suite/blob/master/src/Pyz/Zed/Cart/CartDependencyProvider.php
+ 
+- Checkout Plugins
+https://github.com/spryker-shop/suite/blob/master/src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php
+
+### Zed Calls
+Zed calls are necessary when it requires to execute database related operation like Cart and Checkout requests. As these calls handled by RPC mechanism we need to reduced the calls to the maximum one call to the Zed. we can solve this by following to main approaches
+
+- Export necessary data (Only product related data) from Zed to Redis in pre-calculation phase with help of Publish and Synchronize
+- Merge duplicate Zed requests to only one customer request (AddToCart + Validations + …)
+
+### OMS Optimization
+OMS processes are the template of the order fulfilment in Spryker, and the first state of OMS processes which is called NEW sate is playing a very important role in Checkout  process, therefore we need to make sure we don't use unnecessary features when we don't need them like Reservation or Timeout transitions
+
+We can solve this by 
+
+- Removing Reservation flag from NEW and other step in OMS
+- Removing Timeout transition from NEW step in OMS
+
+### Performance Check List
+
+[] https://docs.spryker.com/docs/scos/dev/guidelines/performance-guidelines.html
+[] https://docs.spryker.com/docs/scos/dev/data-import/202108.0/data-importer-speed-optimization.html
+[] https://docs.spryker.com/docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html#set-up-multiple-publish-queue-structure
+[] https://docs.spryker.com/docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html#set-up-multiple-publish-queue-structure
+
+## Application Performance and Load Tests
+In this part we need to know all necessary actions before go live, including Tests, CI and Monitoring tools.
+
+### Benchmark Test
+Each project must have their own benchmark tests for the API and Frontend shops before go live, This will assure that the project follow the best performance state for each single request. Any tools can be used for this type of test like
+
+- Apache Benchmark 
+- Apache jMeter
+
+### Load Test
+Each shop needs to be ready for high traffic and serve as many users as possible, but keep the best performance of it.  Spryker also recommends to plan some stress tests with real data before go live.
+
+Spryker already provided a load test tool based on Gatling for all project
+- Spryker Load Tests  https://github.com/spryker-sdk/load-testing
+
+### Monitoring and Profiling
+We strongly recommend our customers to enable APM systems for the projects. Spryker support Newrelic as a default monitoring system.
+https://docs.spryker.com/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-new-relic-monitoring.html
+
+### Performance CI
+Performance CI plays a very important role to each project pipeline, it will prevent the new issues in long term in features development.
+https://docs.spryker.com/docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html

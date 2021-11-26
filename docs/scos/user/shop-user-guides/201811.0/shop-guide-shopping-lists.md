@@ -22,7 +22,9 @@ The **Shopping Lists** page allows customers to create and manage the shopping l
 There are two ways to open the **Shopping Lists** page:
 
 {% info_block infoBox %}
+
 Make sure that you are logged in to your customer account.
+
 {% endinfo_block %}
 
 1. Go to the header of your shop application and click Shopping Lists.
@@ -34,14 +36,19 @@ Make sure that you are logged in to your customer account.
 ## Graphic User Interface
 
 {% info_block infoBox %}
+
 Hover your mouse over the numbers to view their description.
+
 {% endinfo_block %}
+
 ![Shopping lists GUI](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Lists/shop-lists-gui.png)
 ***
 ## Creating a New Shopping List
 
 {% info_block warningBox %}
+
 Keep in mind that you must be logged in to your customer account.
+
 {% endinfo_block %}
 
 To create a shopping list, enter a shopping list name and click **+ Create shopping list**.
@@ -122,8 +129,11 @@ To share a shopping list:
 2. From the **drop-down list** next to the business unit or customer you want to share a shopping list with, select the appropriate access rights level.
 
 {% info_block infoBox %}
-See [Permissions Management for Shared Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/multiple-and-shared-shopping-lists-overview.html
-{% endinfo_block %} to learn more about types of shopping list access rights.)
+
+See [Permissions Management for Shared Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/multiple-and-shared-shopping-lists-overview.html) to learn more about types of shopping list access rights.
+
+{% endinfo_block %}
+
 ![Share page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Lists/share-page.png)
 
 3. Click **Share**.

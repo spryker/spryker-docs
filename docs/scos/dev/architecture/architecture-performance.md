@@ -31,7 +31,7 @@ Merging several queries to only one query with a bigger result (Unfiltered)
 
 Memory leaks must be carefully checked during query optimizations as the results will be bigger or shared in one transaction.
 
-{% endinfo_block
+{% endinfo_block %}
 
 
 ### Optimistic vs. Pessimistic Locking

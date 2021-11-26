@@ -164,7 +164,7 @@ As Spryker boilerplate comes with most of the features enabled, please make sure
 [suite/CartDependencyProvider.php at master · spryker-shop/suite ](https://github.com/spryker-shop/suite/blob/master/src/Pyz/Zed/Cart/CartDependencyProvider.php)
  
 - Checkout Plugins
-[https://github.com/spryker-shop/suite/blob/master/src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php](suite/CheckoutDependencyProvider.php at master · spryker-shop/suite)
+[suite/CheckoutDependencyProvider.php at master · spryker-shop/suite](https://github.com/spryker-shop/suite/blob/master/src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php)
 
 ### Zed Calls
 Zed calls are necessary when it requires to execute database related operation like Cart and Checkout requests. As these calls handled by RPC mechanism we need to reduced the calls to the maximum one call to the Zed. we can solve this by following to main approaches
@@ -204,8 +204,8 @@ Spryker already provided a load test tool based on Gatling for all project
 
 ### Monitoring and Profiling
 We strongly recommend our customers to enable APM systems for the projects. Spryker support Newrelic as a default monitoring system.
-[https://docs.spryker.com/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-new-relic-monitoring.html](Tutorial - New Relic Monitoring | Spryker Documentation )
+[Tutorial - New Relic Monitoring | Spryker Documentation](https://docs.spryker.com/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-new-relic-monitoring.html)
 
 ### Performance CI
 Performance CI plays a very important role to each project pipeline, it will prevent the new issues in long term in features development.
-[Performance audit tool- Benchmark | Spryker Documentation ](https://docs.spryker.com/docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html)
+[Performance audit tool- Benchmark | Spryker Documentation](https://docs.spryker.com/docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html)

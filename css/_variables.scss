@@ -38,3 +38,12 @@ $header-bg-color: #fff;
 // left sidebar width + right sidebar width
 $sidebarsWidthDesktop: 655px;
 $sidebarsWidthTablet: 594px;
+
+$transition-duration: 0.3s;
+$transition-function: linear;
+
+// for sticky sidebars
+$header-min-height-desktop: 78px;
+$header-min-height-widescreen: 94px;
+$header-content-gap-desktop: 20px;
+$header-content-gap-widescreen: 40px;

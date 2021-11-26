@@ -1,13 +1,13 @@
 .main-sidebar {
     padding: 40px 0 0;
-    transition: transform .3s linear;
+    transition: transform $transition-duration $transition-function;
     position: relative;
 
     @include media("<laptop") {
         padding-top: 20px;
     }
 
-    &:before {
+    &::before {
         @include media(">desktop") {
             position: absolute;
             content: '';
@@ -66,26 +66,22 @@
     }
 
     &__sticky {
-        position: sticky;
-        top: 94px;
-        left: 0;
-        height: calc(100vh - 94px);
-        height: calc(100vh - 134px);
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
 
-        @include media("<laptop") {
-            top: 78px;
-            height: calc(100vh - 98px);
+        @include media(">desktop") {
+            position: sticky;
+            top: $header-min-height-desktop;
+            left: 0;
+            height: calc(100vh - $header-min-height-desktop - $header-content-gap-desktop);
+            flex-direction: column;
         }
 
-        @include media("<desktop") {
-            position: static;
-            height: auto;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            width: 100%;
+        @include media(">laptop") {
+            top: $header-min-height-widescreen;
+            height: calc(100vh - $header-min-height-widescreen - $header-content-gap-widescreen);
         }
     }
 
@@ -150,7 +146,7 @@
         flex: 1 1 auto;
         overflow: hidden;
         width: 310px;
-        transition: width .3s linear;
+        transition: width $transition-duration $transition-function;
 
         @include media("<laptop") {
             width: 270px;
@@ -170,7 +166,7 @@
     }
 
     &__slide {
-        transition: transform .3s linear, opacity .3s linear;
+        transition: transform $transition-duration $transition-function, opacity $transition-duration $transition-function;
         width: 310px;
 
         @include media("<laptop") {
@@ -239,7 +235,7 @@
         margin: 10px 10px 25px 25px;
         flex: 0 0 auto;
         width: 275px;
-        transition: transform .3s linear, opacity .3s linear;
+        transition: transform $transition-duration $transition-function, opacity $transition-duration $transition-function;
 
         @include media("<laptop") {
             width: 235px;
@@ -259,7 +255,7 @@
             flex: 0 0 auto;
             overflow: hidden;
             width: 310px;
-            transition: width .3s linear;
+            transition: width $transition-duration $transition-function;
 
             @include media("<laptop") {
                 width: 270px;

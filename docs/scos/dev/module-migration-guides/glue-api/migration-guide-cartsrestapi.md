@@ -1,5 +1,5 @@
 ---
-title: CartsRestApi Migration Guide
+title: Migration guide - CartsRestApi
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/cartsrestapi-migration-guide
@@ -27,6 +27,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202001.0/glue-api/cartsrestapi-migration-guide.html
   - /docs/scos/dev/module-migration-guides/202009.0/glue-api/cartsrestapi-migration-guide.html
   - /docs/scos/dev/module-migration-guides/202108.0/glue-api/cartsrestapi-migration-guide.html
+  - /docs/scos/dev/module-migration-guides/glue-api/cartsrestapi-migration-guide.html
 ---
 
 ## Upgrading from version 3.* to 5.0.0
@@ -37,7 +38,7 @@ In order to dismantle the Horizontal Barrier and enable partial module updates o
 
 {% endinfo_block %}
 
-## Upgrading from Version 2.* to Version 3.*
+## Upgrading from version 2.* to version 3.*
 
 **CartsRestApi** version 3 has been improved to provide functionality that allows using multiple carts.
 
@@ -165,7 +166,7 @@ vendor/bin/console transfer:generate
 
 _Estimated migration time: 1 hour_
 
-## Upgrading from Version 1.* to Version 2.*
+## Upgrading from version 1.* to version 2.*
 
 **CartsRestApi** version 2 has been improved to be independent of the `MultiCart` module. Now you can to use the `CartsRestApi` module only with the `PersistentCart` module.
 

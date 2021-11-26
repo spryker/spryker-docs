@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - DiscountSalesAggregatorConnector
+title: Migration guide - DiscountSalesAggregatorConnector
 description: Use the guide to migrate to a newer version of the DiscountSalesAggregatorConnector module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-discountsalesaggregatorconnector.html
 
 related:
-  - title: Migration Guide - Discount
+  - title: Migration guide - Discount
     link: docs/scos/dev/module-migration-guides/migration-guide-discount.html
 ---
 

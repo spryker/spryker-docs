@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - CMS Block Category Connector Migration Console
+title: Migration guide - CmsBlockCategoryConnector migration console
 description: Use the guide to update versions to the newer ones of the CMS Block Category Connector Console module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -29,8 +29,9 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-cms-block-category-connector-migration-console.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cms-block-category-connector-migration-console.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cms-block-category-connector-migration-console.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-cms-block-category-connector-migration-console.html
 related:
-  - title: Migration Guide - CMS Block Category Connector
+  - title: Migration guide - CmsBlockCategoryConnector
     link: docs/scos/dev/module-migration-guides/migration-guide-cms-block-category-connector.html
 ---
 

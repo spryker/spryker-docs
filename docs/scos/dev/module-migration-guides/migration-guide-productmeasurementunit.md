@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ProductMeasurementUnit
+title: Migration guide - ProductMeasurementUnit
 description: Use the guide to migrate to a new version of the ProductMeasurementUnit module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

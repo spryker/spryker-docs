@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ConfigurableBundle
+title: Migration guide - ConfigurableBundle
 description: This guide contains module migration steps for the ConfigurableBundle module to the newer major version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

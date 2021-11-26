@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Session
+title: Migration guide - Session
 description: Use the guide to perform the Session part of the Silex Migration Effort.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

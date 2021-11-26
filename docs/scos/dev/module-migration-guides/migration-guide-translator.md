@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Translator
+title: Migration guide - Translator
 description: Use the guide to perform the Translator part of the Silex Migration Effort.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

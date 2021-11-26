@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Availability
+title: Migration guide - Availability
 description: Use the guide to migrate to the new version of the Availability module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-availability.html
 ---
 
-## Upgrading from Version 8.* to Version 9.0.0
+## Upgrading from version 8.* to version 9.0.0
 
 In this new version of the **Availability** module, we have added support of decimal stock. You can find more details about the changes on the [Availability release](https://github.com/spryker/availability/releases) page.
 
@@ -94,7 +94,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 ```
 *Estimated migration time: 5 min*
 
-## Upgrading from Version 6.* to Version 8.0.0
+## Upgrading from version 6.* to version 8.0.0
 
 {% info_block infoBox %}
 
@@ -102,7 +102,7 @@ In order to dismantle the Horizontal Barrier and enable partial module updates o
 
 {% endinfo_block %}
 
-## Upgrading from Version 5.* to Version 6.*
+## Upgrading from version 5.* to version 6.*
 
 In **Availability** module version 6 we have added support for multi-store. The Back Office has undergone some changes to allow selecting stores and update database tables to store relations to store.
 
@@ -157,11 +157,11 @@ $this->touchQuery->addJoin(
         );
 ```
 
-## Upgrading from Version 3.* to Version 4.*
+## Upgrading from version 3.* to version 4.*
 
 All `Availability` UI has been moved to `AvailabilitGui` module, mostly Communication or Persistence were changed. If you have overwritten any of moved classes from those layers please change base class namespace from `Availability` to `AvailabilityGui` root.
 
-## Upgrading from Version 2.* to Version 3.*
+## Upgrading from version 2.* to version 3.*
 
 With Availability version 3, we have changed the way availability is calculated.
 Two new tables have been added:

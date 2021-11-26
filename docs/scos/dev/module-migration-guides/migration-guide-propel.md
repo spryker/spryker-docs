@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Propel
+title: Migration guide - Propel
 description: Use the guide to perform the Propel part of the Silex Migration Effort.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

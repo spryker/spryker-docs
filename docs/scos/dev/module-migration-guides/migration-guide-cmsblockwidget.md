@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - CmsBlockWidget
+title: Migration guide - CmsBlockWidget
 description: Learn how to upgrade the CmsBlockWidget module to a certain version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

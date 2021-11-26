@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Offer
+title: Migration guide - Offer
 description: Use the guide to learn how to update the Offer module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ShipmentGui
+title: Migration guide - ShipmentGui
 description: Use the guide to migrate to a new version of the ShipmentGui module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - CheckoutRestApi
+title: Migration guide - CheckoutRestApi
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-checkoutrestapi
@@ -20,11 +20,11 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/glue-api/migration-guide-checkoutrestapi.html
   - /docs/scos/dev/module-migration-guides/202108.0/glue-api/migration-guide-checkoutrestapi.html
 related:
-  - title: Migration Guide - Payment
+  - title: Migration guide - Payment
     link: docs/scos/dev/module-migration-guides/migration-guide-payment.html
 ---
 
-## Upgrading from Version 2.* to Version 3.0.0
+## Upgrading from version 2.* to version 3.0.0
 
 Version 3 of the **CheckoutRestApi** module adds the **Payment Method per Store** functionality.
 
@@ -53,7 +53,7 @@ console transfer:generate
 *Estimated migration time: 5 min*
 ***
 
-## Upgrading from Version 1.* to Version 2.0.0
+## Upgrading from version 1.* to version 2.0.0
 
 In this new version of the **CheckoutRestApi** module, we have added support of split delivery. You can find more details about the changes on the [CheckoutRestApi module](https://github.com/spryker/checkout-rest-api/releases) release page.
 

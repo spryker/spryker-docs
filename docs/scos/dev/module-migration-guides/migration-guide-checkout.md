@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Checkout
+title: Migration guide - Checkout
 description: Use the guide to update versions to the newer ones of the Checkout module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

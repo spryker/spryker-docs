@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - OrdersRestApi
+title: Migration guide - OrdersRestApi
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-ordersrestapi
@@ -21,7 +21,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/glue-api/migration-guide-ordersrestapi.html
 ---
 
-## Upgrading from Version 3.0.* to Version 4.0.0
+## Upgrading from version 3.0.* to version 4.0.0
 
 In this new version of the **OrdersRestApi** module, we have added support of split delivery. You can find more details about the changes on the [OrdersRestApi module](https://github.com/spryker/orders-rest-api/releases) release page.
 
@@ -31,7 +31,8 @@ This release is a part of the Split delivery concept migration. When you upgrade
 
 {% endinfo_block %}
 
-**To upgrade to the new version of the module, do the following:**
+To upgrade to the new version of the module, do the following:
+
 1. Upgrade the **OrdersRestApi** module to the new version:
 
 ```bash
@@ -46,7 +47,7 @@ console transfer:generate
 
 *Estimated migration time: 5 min*
 
-## Upgrading from Version 1.* to Version 3.0.0
+## Upgrading from version 1.* to version 3.0.0
 
 {% info_block infoBox %}
 

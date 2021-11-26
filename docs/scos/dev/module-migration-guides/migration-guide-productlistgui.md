@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ProductListGui
+title: Migration guide - ProductListGui
 description: This migration guide contains steps on migrating  ProductListGui to the major release versions.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -21,7 +21,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-priceproductschedulegui.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-priceproductschedulegui.html
 related:
-  - title: Migration Guide - MerchantRelationshipProductListGui
+  - title: Migration guide - MerchantRelationshipProductListGui
     link: docs/scos/dev/module-migration-guides/migration-guide-merchantrelationshipproductlistgui.html
 ---
 

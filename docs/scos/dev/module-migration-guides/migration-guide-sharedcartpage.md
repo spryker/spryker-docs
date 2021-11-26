@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - SharedCartPage
+title: Migration guide - SharedCartPage
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-shared-cart-page
@@ -27,7 +27,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-sharedcartpage.html
 ---
 
-## Upgrading from Version 1.* to Version 2.*
+## Upgrading from version 1.* to version 2.*
 
 From version 2 we have removed the disabled users from the shared list. The ability to enable/disable users was added to the `CompanyUser` module, version 2.0.0.
 

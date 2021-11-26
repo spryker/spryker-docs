@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - CmsBlock
+title: Migration guide - CmsBlock
 description: Use the guide to update versions to the newer ones of the CMS Block module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -30,9 +30,9 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cmsblock.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmsblock.html
 related:
-  - title: Migration Guide - CMS Block Collector
+  - title: Migration guide - CMS Block Collector
     link: docs/scos/dev/module-migration-guides/migration-guide-cms-block-collector.html
-  - title: Migration Guide - CMS Block GUI
+  - title: Migration guide - CMS Block GUI
     link: docs/scos/dev/module-migration-guides/migration-guide-cmsblockgui.html
   - title: CMS Block
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html

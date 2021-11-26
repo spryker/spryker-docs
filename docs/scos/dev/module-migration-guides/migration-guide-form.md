@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - Form
+title: Migration guide - Form
 description: Use the guide to perform the Form part of the Silex Migration Effort.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

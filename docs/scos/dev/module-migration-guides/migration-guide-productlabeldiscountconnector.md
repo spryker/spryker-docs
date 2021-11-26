@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - ProductLabelDiscountConnector
+title: Migration guide - ProductLabelDiscountConnector
 description: Use the guide to learn how to update the ProductLabelDiscountConnector module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

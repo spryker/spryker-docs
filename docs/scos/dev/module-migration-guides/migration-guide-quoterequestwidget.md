@@ -1,5 +1,5 @@
 ---
-title: Migration Guide - QuoteRequestWidget
+title: Migration guide - QuoteRequestWidget
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-quoterequestwidget
@@ -24,7 +24,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-quoterequestwidget.html
 ---
 
-## Upgrading from Version 1.x.x to Version 2.x.x
+## Upgrading from version 1.x.x to version 2.x.x
 
 The only major change of the `QuoteRequestWidget` 2.x.x is the dependency update for the `spryker/quote-request:^2.0.0`.
 

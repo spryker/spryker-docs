@@ -3987,7 +3987,7 @@ entries:
       nested:
       - title: Heroku technology partner integration
         url: /docs/scos/dev/technology-partner-guides/hosting-providers/heroku-technology-partner-integration.html
-    - title: Marketing & Conversion
+    - title: Marketing and conversion
       nested:
       - title: Customer communication
         nested:

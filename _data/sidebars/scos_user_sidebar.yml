@@ -2362,7 +2362,7 @@ entries:
         - "202108.0"
         nested:
         - title: Episerver
-          url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/episerver/episerver.html
+          url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/episerver.html
           include_versions:
           - "202009.0"
           - "202108.0"

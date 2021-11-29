@@ -11,19 +11,19 @@ This is the Beta version of the feature and is therefore subject to changes.
 
 {% endinfo_block %}
 
-The *Configurable Product* feature introduces a new type of product that can be customized by customers — a configurable product.
+The *Configurable Product* feature introduces a new type of product that can be customized by customers—a configurable product.
 
-The feature enabvles you to sell complex products with modular designs or services. For example, if you sell clothes, you can allow your customers to define the material and color and add their name to the product. Or, if you are selling a service, you can allow them to select a preferred date and time of the service delivery.
+The feature enables you to sell complex products with modular designs or services. For example, if you sell clothes, you can allow your customers to define the material and color and add their name to the product. Or, if you are selling a service, you can allow them to select a preferred date and time of the service delivery.
 
 ## Configurable product
 
 A *configurable product* is a product that customers can customize based on the parameters provided in a [product configurator](#product-configurator).
 
-For example, if you are selling a workstation installation service, before purchasing it, a customer can select a preferred date and time of installation.
+For example, if you are selling a workstation installation service, before purchasing it, customers can select a preferred date and time of installation.
 
 ### Configuring a configurable product
 
-To configure a product, from the *Product Details* page, the customer opens a product configurator by clicking the **Configure** button. The customer is redirected back to the product details page and can add the configured product to the wishlist or cart.
+To configure a product, from the *Product Details* page, a customer opens a product configurator by clicking the **Configure** button. The, they are redirected back to the product details page and can add the configured product to the wishlist or cart.
 
 ![configure-button-on-product-details-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configure-button-on-product-details-page.png)
 
@@ -63,7 +63,7 @@ You can create a product configurator as a part of your shop or integrate a thir
 
 ### How Spryker interacts with a product configurator
 
-A Spryker shop interacts with product configurators using parameters. When a customer is redirected from a Spryker shop to a configurator page, the shop passes the parameters related to the customer and the product. When a customer is redirected back to the shop, the configurator passes the updated parameters back.
+A Spryker shop interacts with product configurators using parameters. When a customer is redirected from a Spryker shop to a configurator page, the shop passes the parameters related to the customer and product. When the customer is redirected back to the shop, the configurator passes the updated parameters back.
 
 The behavior of the configurator is based on the parameters passed by a shop. For example, a shop passes the `store_name` parameter. If a customer is redirected from a US store, the language of the configurator is English. Also, the shop passes the URL of the page the customer is redirected from. After the customer saves the configuration, the configurator uses this URL to redirect them back to the same page.
 
@@ -86,13 +86,13 @@ Display parameter values are usually converted from regular parameter values to 
 
 The availability of a configurable product is based on the selected configuration.
 
-A customer selects the quantity of a product in a configurator or in a shop. If a configurator allows a customer to select a product quantity, it passes the selected quantity to the shop as a parameter. Otherwise, it passes the availability as a parameter, and the customer selects the product quantity in the shop.
+A customer selects the quantity of a product in a configurator or in a shop. If a configurator allows them to select a product quantity, it passes the selected quantity to the shop as a parameter. Otherwise, it passes the availability as a parameter, and they select the product quantity in the shop.
 
 If a configurator does not pass availability, [regular product availability](/docs/marketplace/user/features/{{page.version}}/marketplace-inventory-management-feature-overview.html) is used.
 
 ### Price calculation in a product configurator
 
-The price of a configurable product is based on the selected configuration. When a customer selects a configuration, the price of the product in the selected configuration is displayed. After a customer saves the configuration, the price of the product in the selected configuration is passed to the shop. The customer is redirected back to the shop where they can purchase the product for the price.
+The price of a configurable product is based on the selected configuration. When a customer selects a configuration, the price of the product in the selected configuration is displayed. After the customer saves the configuration, the price of the product in the selected configuration is passed to the shop. The customer is redirected back to the shop where they can purchase the product for the price.
 
 If a price is not provided by the configurator, [a regular product price](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html) is used.
 
@@ -100,13 +100,13 @@ If a price is not provided by the configurator, [a regular product price](/docs/
 
 When importing configurable products, a developer defines if the configuration is complete for each product.
 
-If the configuration is complete, on entering the *Product details* page, a Storefront user sees a message that the configuration is complete. By default, the message is followed by the first 3 descriptive attributes set in the configurator. Under the attributes, there are the **Show** and **Hide** buttons, which allow expanding and collapsing the remaining attributes, respectively. In case the configuration is complete, they can purchase the product without opening the configurator and selecting parameters.
+If the configuration is complete, on entering the *Product details* page, a customer sees a message that the configuration is complete. By default, the message is followed by the first 3 descriptive attributes set in the configurator. Under the attributes, there are the **Show** and **Hide** buttons, which allow expanding and collapsing the remaining attributes, respectively. In case the configuration is complete, a customer can purchase the product without opening the configurator and selecting parameters.
 
 ![configurtion-complete-message](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/Features/Configurable+Product+feature+overview/configurtion-complete-message.png)
 
 
-If the configuration is not complete, on entering the *Product details* page, a Storefront user sees a message that the configuration is not complete. To purchase the product, they open the configurator and select a configuration.
-However, a Storefront user can add a product with incomplete configuration to a wishlist. In this case, they can finish the configuration from the wishlist.
+If the configuration is not complete, on entering the *Product details* page, a customer sees a message that the configuration is not complete. To purchase the product, they open the configurator and select a configuration.
+However, they customer adds a product with incomplete configuration to a wishlist. In this case, they can finish the configuration from the wishlist.
 
 ![incomplete-configurtion-message](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/incomplete-configurtion-message.png)
 
@@ -123,19 +123,19 @@ If the configuration is complete, the **Configuration complete!** notification i
 
 #### Request for quote with a configurable product
 
-The information in [Complete and incomplete configuration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2117927245/WIP+Configurable+Product+feature+overview#Complete-and-incomplete-configuration) applies to [Quotation Process & RFQ](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html) functionalities. A Storefront user can only request a quote for a product with a complete configuration.
+The information in [Complete and incomplete configuration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2117927245/WIP+Configurable+Product+feature+overview#Complete-and-incomplete-configuration) applies to [Quotation Process & RFQ](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html) functionalities. A customer can only request a quote for a product with a complete configuration.
 
 ### Pre-configured parameter values
 
-When a developer creates configurable products by importing them, they can pre-configure parameter values. If a Storefront user chooses to configure such a product, they start with the pre-configured parameter values and can change them.
+When a developer creates configurable products by importing them, they can pre-configure parameter values. If a customer chooses to configure such a product, they start with the pre-configured parameter values and can change them.
 
-If a developer also defines that the configuration of such a product is complete, on entering the *Product details* page, a Storefront user sees the pre-configured parameter values. They can add the product to the cart without adjusting the configuration.
+If a developer also defines that the configuration of such a product is complete, on entering the *Product details* page, a customer sees the pre-configured parameter values. They can add the product to the cart without adjusting the configuration.
 
-If a developer defines that the configuration of such a product is incomplete, on entering the *Product details* page, a Storefront user does not see the pre-configured parameter values. However, they are still assigned to the product. The Storefront user has to configure the product, but they do not have to change the pre-configured parameter values.
+If a developer defines that the configuration of such a product is incomplete, on entering the *Product details* page, a customer does not see the pre-configured parameter values. However, they are still assigned to the product. The customer has to configure the product, but they do not have to change the pre-configured parameter values.
 
 ## Configurable product on the Storefront
 
-Storefront users configure a product on the Storefront as follows:
+Customers configure a product on the Storefront as follows:
 
 ![configurable-product-on-the-storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configurable-product-on-the-storefront.gif)
 

@@ -38,6 +38,10 @@ To add an item to a wishlist, send the request:
 
 ### Request
 
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
+| --- | --- | --- | --- |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
+
 <details><summary>Request sample</summary>
 
 `POST https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items`
@@ -55,7 +59,7 @@ To add an item to a wishlist, send the request:
 
 </details>
 
-<details><summary>Request sample: Add a configuratble product to a wishilist</summary>
+<details><summary>Request sample: add a configurable product to a wishlist</summary>
 
 `POST https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items`
 
@@ -64,7 +68,7 @@ To add an item to a wishlist, send the request:
     "data": {
         "type": "wishlist-items",
         "attributes": {
-            "sku": "{{concrete_id}}",
+            "sku": "093_24495843",
             "productConfigurationInstance": {
                 "displayData": "{\"Preferred time of the day\": \"Afternoon\", \"Date\": \"9.12.2021\"}",
                 "configuration": "{\"time_of_day\": \"2\"}",
@@ -117,11 +121,11 @@ To add an item to a wishlist, send the request:
 | displayData  | Array  | Array of variables that are proposed for a Storefront user to set up in the configurator.  |
 | configuration  | Array  | Default product configuration.  |
 | configuratorKey  | String  | Configurator type.  |
-| isComplete  | Boolean  | Shows if the configurable product configuration is complete:<div><ul><li>`true`—configuration complete</li><li>`false`—configuration incomplete</li></ul></div>  |
-| quantity  | Integer  | Quantity of the product added to the wishlist.  |
-| availableQuantity  | Integer  |  product available quantity in the store. |
+| isComplete  | Boolean  | Shows if the configurable product configuration is complete:<div><ul><li>`true`—configuration complete.</li><li>`false`—configuration incomplete.</li></ul></div>  |
+| quantity  | Integer  | Quantity of the product that is added to the wishlist.  |
+| availableQuantity  | Integer  |  Product quantity available in the store. |
 
-For attribute descriptions of product prices, see [Retrieving abstract product prives](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html#abstract-product-prices-response-attributes)
+For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html#abstract-product-prices-response-attributes).
 
 ### Response
 
@@ -141,7 +145,7 @@ Resonse sample:
 		}
 	}
 ```
-<details><summary>Respoonse sample: add a configuratble product to a wishilist</summary>
+<details><summary>Response sample: add a configurable product to a wishlist</summary>
 
 ```json
 {
@@ -205,23 +209,23 @@ Resonse sample:
 }
 ```
 
+</details>
+
 <a name="wishlishlist-items-response-attributes"></a>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| sku | String | SKU of a concrete product to add. |
+| sku | String | SKU of the added to the wishlist concrete product. |
 | displayData  | Array  | Array of variables a Storefront user set up in the configurator.  |
 | configuration  | Array  | Default product configuration.  |
 | configuratorKey  | String  | Configurator type.  |
-| isComplete  | Boolean  | Shows if the configurable product configuration is complete:<div><ul><li>`true`—configuration complete</li><li>`false`—configuration incomplete</li></ul></div>  |
-| quantity  | Integer  | Quantity of the product added to the wishlist.  |
-| availableQuantity  | Integer  |  product available quantity in the store. |
+| isComplete  | Boolean  | Shows if the configurable product configuration is complete:<div><ul><li>`true`—configuration complete.</li><li>`false`—configuration incomplete.</li></ul></div>  |
+| quantity  | Integer  | Quantity of the product that was added to the wishlist.  |
+| availableQuantity  | Integer  | Product quantity available in the store. |
 
-For attribute descriptions of product prices, see [Retrieving abstract product prives](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html#abstract-product-prices-response-attributes)
+For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html#abstract-product-prices-response-attributes).
 
-For attribute desriptions of concrete product availabillity, see [Retrieving concrete product availability](/docs/scos/dev/glue-api-guides/202108.0/managing-products/concrete-products/retrieving-concrete-product-availability.html#concrete-product-availability-response-attributes)
-
-
+For attribute desriptions of concrete product availabillity, see [Retrieving concrete product availability](/docs/scos/dev/glue-api-guides/202108.0/managing-products/concrete-products/retrieving-concrete-product-availability.html#concrete-product-availability-response-attributes).
 
 ## Delete a wishlist item
 
@@ -238,6 +242,10 @@ To delete wishlist item, send the request:
 | ***{% raw %}{{{% endraw %}item_sku{% raw %}}}{% endraw %}*** | Unique identifier of the product to delete. |
 
 ### Request
+
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
+| --- | --- | --- | --- |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 Request sample: `DELETE https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items/064_18404924`
 

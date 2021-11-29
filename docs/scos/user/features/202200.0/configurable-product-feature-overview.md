@@ -23,7 +23,7 @@ For example, if you are selling a workstation installation service, before purch
 
 ### Configuring a configurable product
 
-To configure a product, from the *Product Details* page, a customer opens a product configurator by clicking the **Configure** button. The, they are redirected back to the product details page and can add the configured product to the wishlist or cart.
+To configure a product, from the *Product Details* page, a customer opens a product configurator by clicking the **Configure** button. Then, they are redirected back to the product details page and can add the configured product to the wishlist or cart.
 
 ![configure-button-on-product-details-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configure-button-on-product-details-page.png)
 

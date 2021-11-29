@@ -23,11 +23,11 @@ For example, if you are selling a workstation installation service, before purch
 
 ### Configuring a configurable product
 
-To configure a product, from the *Product Details* page, a customer opens a product configurator by clicking the **Configure** button. Then, they are redirected back to the product details page and can add the configured product to the wishlist or cart.
+To configure a product, from the *Product Details* page, a customer opens a product configurator by clicking the **Configure** button. Then, they are redirected back to the _Product Details_ page and can add the configured product to the wishlist or cart.
 
 ![configure-button-on-product-details-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configure-button-on-product-details-page.png)
 
-After adding a configurable product to the cart, a customer can configure the product from the *Cart* page.
+After adding a configurable product to the cart, a customer change the product configuration from the *Cart* page.
 
 ![configure-button-on-the-cart-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configure-button-on-the-cart-page.png)
 
@@ -43,11 +43,11 @@ Configurable products are created in two steps:
 
 A Back Office user can add configurable products to pages, categories, and content items as regular products.
 
-In the product catalog, they can see which products are configurable ones and edit them as regular products. However, they cannot change configuration parameters.
+In the product catalog, they can see which products are configurable ones and edit them as regular products. However, a Back Office user cannot change configuration parameters.
 
 ![configurable-product-entry-in-the-back-office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configurable-product-entry-in-the-back-office.png)
 
-In the orders, they can see which products are configurable ones. They can also see the configuration of each product, but they cannot change the selected parameters.
+In the orders, A Back Office can see which products are configurable ones. They can also see the configuration of each product, but they cannot change the selected parameters.
 
 ![order-with-a-configurable-product](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/order-with-a-configurable-product.png)
 
@@ -56,16 +56,16 @@ In the orders, they can see which products are configurable ones. They can also 
 
 A *product configurator* is a tool that allows customers to customize the product parameters provided by the shop owner or product manufacturer.
 
-You can create a product configurator as a part of your shop or integrate a third-party one. The feature is shipped with an exemplary product configurator. The exemplary product configurator allows configuring *Date* and *Preferred time of the day* parameters.
+You can create a product configurator as a part of your shop or integrate a third-party one. The feature is shipped with an exemplary product configurator. The exemplary product configurator allows configuring the *Date* and *Preferred time of the day* parameters.
 
 ![examplary-product-configurator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/examplary-product-configurator.png)
 
 
 ### How Spryker interacts with a product configurator
 
-A Spryker shop interacts with product configurators using parameters. When a customer is redirected from a Spryker shop to a configurator page, the shop passes the parameters related to the customer and product. When the customer is redirected back to the shop, the configurator passes the updated parameters back.
+A Spryker shop interacts with product configurators using parameters. When a customer is redirected from a Spryker shop to the configurator page, the shop passes the customer and product parameters. When the customer is redirected back to the shop, the configurator passes the updated parameters back.
 
-The behavior of the configurator is based on the parameters passed by a shop. For example, a shop passes the `store_name` parameter. If a customer is redirected from a US store, the language of the configurator is English. Also, the shop passes the URL of the page the customer is redirected from. After the customer saves the configuration, the configurator uses this URL to redirect them back to the same page.
+The behavior of the configurator is based on the parameters passed by a shop. For example, a shop passes the `store_name` parameter. If a customer is redirected from a US store, the language of the configurator is English. Also, the shop passes the URL of the page the customer is redirected from. After they save the configuration, the configurator uses this URL to redirect them back to the same page.
 
 The selected configuration is also passed back to the shop as parameters. The shop uses the parameters to display the selected configuration on all related pages and process the order with the product.
 
@@ -92,7 +92,7 @@ If a configurator does not pass availability, [regular product availability](/do
 
 ### Price calculation in a product configurator
 
-The price of a configurable product is based on the selected configuration. When a customer selects a configuration, the price of the product in the selected configuration is displayed. After the customer saves the configuration, the price of the product in the selected configuration is passed to the shop. The customer is redirected back to the shop where they can purchase the product for the price.
+The price of a configurable product is based on the selected configuration. When a customer selects a configuration, the price of the product in the selected configuration is displayed. After they save the configuration, the price of the product in the selected configuration is passed to the shop. The customer is redirected back to the shop where they can purchase the product for the price.
 
 If a price is not provided by the configurator, [a regular product price](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html) is used.
 
@@ -100,13 +100,12 @@ If a price is not provided by the configurator, [a regular product price](/docs/
 
 When importing configurable products, a developer defines if the configuration is complete for each product.
 
-If the configuration is complete, on entering the *Product details* page, a customer sees a message that the configuration is complete. By default, the message is followed by the first 3 descriptive attributes set in the configurator. Under the attributes, there are the **Show** and **Hide** buttons, which allow expanding and collapsing the remaining attributes, respectively. In case the configuration is complete, a customer can purchase the product without opening the configurator and selecting parameters.
+If the configuration is complete, on entering the *Product details* page, a customer sees a message that the configuration is complete. By default, the message is followed by the first 3 descriptive attributes set in the configurator. Under the attributes, there are the **Show** and **Hide** buttons, which allow expanding and collapsing the remaining attributes, respectively. In case the configuration is complete, the customer can purchase the product without opening the configurator and selecting parameters.
 
 ![configurtion-complete-message](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/Features/Configurable+Product+feature+overview/configurtion-complete-message.png)
 
 
-If the configuration is not complete, on entering the *Product details* page, a customer sees a message that the configuration is not complete. To purchase the product, they open the configurator and select a configuration.
-However, they customer adds a product with incomplete configuration to a wishlist. In this case, they can finish the configuration from the wishlist.
+If the configuration is not complete, on entering the *Product details* page, a customer sees a message that the configuration is not complete. To purchase the product, they open the configurator and select a configuration. However, they can add a product with incomplete configuration to a wishlist. In this case, they can finish the configuration from the _Wishlist_ page.
 
 ![incomplete-configurtion-message](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/incomplete-configurtion-message.png)
 

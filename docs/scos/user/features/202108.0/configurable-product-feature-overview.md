@@ -18,7 +18,7 @@ This is the Beta version of the feature and is therefore subject to changes.
 
 {% endinfo_block %}
 
-The *Configurable Product* feature introduces a new type of product that can be customized by customers — a configurable product.
+The *Configurable Product* feature introduces a new type of product that can be customized by customers—a configurable product.
 
 The feature allows you to sell complex products with modular designs or services. For example, if you sell clothes, you can allow your customers to define the material, color, and add their name to the product. Or, if you are selling a service, you can allow them to select a preferred date and time of the service delivery.
 
@@ -30,7 +30,7 @@ For example, if you are selling a workstation installation service, before purch
 
 ### Configuring a configurable product
 
-To configure a product, from the *Product Details* page, the customer opens a product configurator by clicking the **Configure** button. After selecting and saving the configuration, the customer is redirected back to the product details page and can add the configured product to the wishlist or cart.
+To configure a product, from the *Product Details* page, a customer opens a product configurator. After selecting and saving the configuration, the customer is redirected back to the product details page. The selected configuration is displayed on the product details page, and the customer can add the configured product to the cart.
 
 ![configure-button-on-product-details-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configure-button-on-product-details-page.png)
 

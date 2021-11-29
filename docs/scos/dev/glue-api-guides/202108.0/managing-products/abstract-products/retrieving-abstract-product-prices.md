@@ -191,6 +191,7 @@ Response sample with default prices and volume prices for an abstract product
 
 </details>
 
+<a name="abstract-product-prices-response-attributes"></a>
 
 | FIELD | TYPE | DESCRIPTION |
 | --- | --- | --- |

@@ -1,22 +1,16 @@
 ---
 title: Episerver
 description: Create a standout experience for customers that unifies digital content, commerce, and marketing in one platform, including omnichannel solutions for smart personalization and intelligent campaigns by integrating Episerver into Spryker Commerce OS.
-last_updated: Aug 27, 2020
+last_updated: Apr 3, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v6/docs/episerver
-originalArticleId: 4b747d2a-4d25-4f4b-b4ca-9b3aaf181200
+originalLink: https://documentation.spryker.com/v5/docs/episerver
+originalArticleId: d85db6b9-5928-48eb-b3c1-0e78a8c9e890
 redirect_from:
-  - /v6/docs/episerver
-  - /v6/docs/en/episerver
+  - /v5/docs/episerver
+  - /v5/docs/en/episerver
 related:
-  - title: Episerver - Integration into a project
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
   - title: Episerver - Installation and Configuration
     link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
-  - title: Episerver - API Requests
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-api-requests.html
-  - title: Episerver - Order referenced commands
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-order-referenced-commands.html
 ---
 
 ## Partner Information
@@ -30,6 +24,13 @@ YOUR ADVANTAGES:
 * Powered by AI: Personalize every experience based on artificial intelligence, customer data and real-time behavior.
 * Increased engagement: Deliver seamless experiences, get smarter segmentation, and increase engagement and conversions.
 
+
+## Related Developer articles
+
+* [Installing and configuring Episerver](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/episerver-guides/installing-and-configuring-episerver.html)
+
+
+
 ---
 
 ## Copyright and Disclaimer
@@ -40,4 +41,3 @@ See [Disclaimer](https://github.com/spryker/spryker-documentation).
 For further information on this partner and integration into Spryker, please contact us.
 
 <div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>
-

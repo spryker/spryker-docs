@@ -1,13 +1,14 @@
 ---
-title: Episerver - API Requests
+title: Episerver API
 description: Learn about the API requests for Episerver in Spryker.
-last_updated: Nov 6, 2020
-template: concept-topic-template
+last_updated: Jun 16, 2021
+template: howto-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/episerver-api-requests
 originalArticleId: 5eb69571-319c-4335-ba5f-c365a60b7dc6
 redirect_from:
   - /v6/docs/episerver-api-requests
   - /v6/docs/en/episerver-api-requests
+  - /docs/scos/user/technology-partners/202009.0/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-api-requests.html
 related:
   - title: Episerver - Integration into a project
     link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
@@ -28,18 +29,18 @@ It sends the request via `\Generated\Shared\Transfer\EpiserverRequestTransfer`
 <transfers xmlns="spryker:transfer-01"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd" >
- 
+
     <transfer name="EpiserverResponse">
         <property name="isSuccessful" type="bool" />
         <property name="status" type="int" />
     </transfer>
- 
+
     <transfer name="EpiserverRequest">
         <property name="authorizationCode" type="string" />
         <property name="operationType" type="string" />
         <property name="payload" type="array" />
     </transfer>
- 
+
 </transfers>
 ```
 

@@ -1,26 +1,14 @@
 ---
-title: Episerver - Integration into a project
+title: Integrating Episerver
 description: Integrate Episerver in the Spryker Commerce OS
-last_updated: Nov 6, 2020
-template: concept-topic-template
-originalLink: https://documentation.spryker.com/v6/docs/episerver-integration-into-project
-originalArticleId: 92aefb7c-6db4-4777-bd2f-7d18bddd53fb
-redirect_from:
-  - /v6/docs/episerver-integration-into-project
-  - /v6/docs/en/episerver-integration-into-project
-related:
-  - title: Episerver - Installation and Configuration
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
-  - title: Episerver - Order referenced commands
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-order-referenced-commands.html
-  - title: Episerver - API Requests
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-api-requests.html
+last_updated: Jun 16, 2021
+template: howto-guide-template
 ---
 
 This article provides step-by-step instructions on integrating the Episerver module into your project.
 
 ## Prerequisites
-Prior to integrating Episerver into your project, make sure you [installed and configured](/docs/scos/user/technology-partners/202009.0/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html) the Episerver module.
+Prior to integrating Episerver into your project, make sure you [installed and configured](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html) the Episerver module.
 
 ## Customer Registration / Reset Password / Reset Rassword Confirm Event
 
@@ -267,7 +255,7 @@ class NewsletterPageRoueProviderPlugin extends SprykerShopNewsletterPageRoutePro
 {
     public const ROUTE_NAME_CUSTOMER_SUBSCRIBE = 'newsletter-success';
     public const ROUTE_NAME_CUSTOMER_UNSUBSCRIBE = 'newsletter-unsubscribe';
-    
+
     /**
      * Specification:
      * - Adds Routes to the RouteCollection.
@@ -282,7 +270,7 @@ class NewsletterPageRoueProviderPlugin extends SprykerShopNewsletterPageRoutePro
     {
         $route = $this->buildRoute('/newsletter/success', 'NewsletterPage', 'Newsletter', 'successAction');
         $routeCollection->add(static::ROUTE_NAME_CUSTOMER_SUBSCRIBE, $route);
-        
+
         $route = $this->buildRoute('/newsletter/unsubscribe', 'NewsletterPage', 'Newsletter', 'unsubscribeAction');
         $routeCollection->add(static::ROUTE_NAME_CUSTOMER_SUBSCRIBE, $route);
 
@@ -297,13 +285,13 @@ A small template for a subscription:
 
 ```html
 {% raw %}{%{% endraw %} extends template('page-layout-main') {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} define data = {
     title: 'newsletter.subscription.success' | trans
 } {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block pageInfo {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}
     <div class="box">
         <h4>{% raw %}{{{% endraw %}data.title{% raw %}}}{% endraw %}</h4>
@@ -317,13 +305,13 @@ And the second one is almost the same:
 
 ```html
 {% raw %}{%{% endraw %} extends template('page-layout-main') {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} define data = {
     title: 'newsletter.unsubscription.success' | trans
 } {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block pageInfo {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}
     <div class="box">
         <h4>{% raw %}{{{% endraw %}data.title{% raw %}}}{% endraw %}</h4>
@@ -498,9 +486,3 @@ $container->extend(self::MAIL_PROVIDER_COLLECTION, function (MailProviderCollect
     return $mailProviderCollection;
 });
 ```
-
-
-
-## API Requests
-
-

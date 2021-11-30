@@ -1,61 +1,29 @@
 ---
-title: Episerver - Installation and Configuration
-description: Install and  configure  Episerver into Spryker Commerce OS
-last_updated: Jul 27, 2020
-template: concept-topic-template
-originalLink: https://documentation.spryker.com/v5/docs/episerver-installation-and-configuration
-originalArticleId: 88000f11-a6d3-4fe5-b349-5aedc6f6f158
+title: Integrating Episerver
+description: Integrate Episerver in the Spryker Commerce OS
+last_updated: Jun 16, 2021
+template: howto-guide-template
+originalLink: https://documentation.spryker.com/v6/docs/episerver-integration-into-project
+originalArticleId: 92aefb7c-6db4-4777-bd2f-7d18bddd53fb
 redirect_from:
-  - /v5/docs/episerver-installation-and-configuration
-  - /v5/docs/en/episerver-installation-and-configuration
+  - /v6/docs/episerver-integration-into-project
+  - /v6/docs/en/episerver-integration-into-project
+  - /docs/scos/user/technology-partners/202009.0/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
 related:
-  - title: Episerver
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/episerver.html
+  - title: Episerver - Installation and Configuration
+    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
+  - title: Episerver - Order referenced commands
+    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-order-referenced-commands.html
+  - title: Episerver - API Requests
+    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-api-requests.html
 ---
 
-## Installation
+This article provides step-by-step instructions on integrating the Episerver module into your project.
 
-To install Episerver, run the command in the console:
-```php
-composer require spryker-eco/episerver
-```
+## Prerequisites
+Prior to integrating Episerver into your project, make sure you [installed and configured](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html) the Episerver module.
 
-## Configuration
-
-To set up the Episerver initial configuration, use the credentials received from your Episerver admin page.
-
-The `REQUEST_BASE_URL` parameter should be: `https://api.campaign.episerver.net/`
-
-To get `ORDER_LIST_AUTHORIZATION_CODE` or `CUSTOMER_LIST_AUTHORIZATION_CODE`, go to:
-
-<i>Menu → API overview → SOAP API → Recipient lists → (Click one of your lists here) → Manage authorization codes → Authorization code</i>
-
-To get any `...MAILING_ID`, go to:
-
-<b>Menu → Transactional mails → ID</b>
-
-```php
-$config[EpiserverConstants::REQUEST_BASE_URL] = 'https://api.campaign.episerver.net/';
-$config[EpiserverConstants::REQUEST_TIMEOUT] = 30;
-
-$config[EpiserverConstants::ORDER_LIST_AUTHORIZATION_CODE] = 'QJd9U0M9xssRGhnJrNr5ztt9FQa2x1wA';
-$config[EpiserverConstants::CUSTOMER_LIST_AUTHORIZATION_CODE] = 'QJd9U0M9xssRGhnJrNr5ztt9FQa2x1wA';
-
-$config[EpiserverConstants::ORDER_NEW_MAILING_ID] = '237667360304';
-$config[EpiserverConstants::ORDER_CANCELLED_MAILING_ID] = '237667360304';
-$config[EpiserverConstants::ORDER_SHIPPING_CONFIRMATION_MAILING_ID] = '237667360304';
-$config[EpiserverConstants::ORDER_PAYMENT_IS_NOT_RECEIVED_MAILING_ID] = '237667360304';
-
-$config[EpiserverConstants::EPISERVER_CONFIGURATION_MAILING_ID_LIST] = [
- CustomerRegistrationMailTypePlugin::MAIL_TYPE => '243323625271',
- CustomerRestoredPasswordConfirmationMailTypePlugin::MAIL_TYPE => '243646188958',
- CustomerRestorePasswordMailTypePlugin::MAIL_TYPE => '243646188953',
-];
-```
-
-## Installation
-
-### Customer Registration / Reset Password / Reset Rassword Confirm Event
+## Customer Registration / Reset Password / Reset Rassword Confirm Event
 
 The Episerver module has `SprykerEco\Zed\Episerver\Communication\Plugin\Customer\EpiserverCustomerMailPlugin`.
 
@@ -71,7 +39,7 @@ To use it,  set up `provideBusinessLayerDependencies` in the class `Pyz\Zed\Mail
 ])
 ```
 
-### Customer (Un)Subscribe For Newsletter
+## Customer (Un)Subscribe For Newsletter
 
 The Episerver module has `\SprykerEco\Zed\Episerver\Business\Mapper\Customer\CustomerNewsletterMapper`.
 
@@ -300,7 +268,7 @@ class NewsletterPageRoueProviderPlugin extends SprykerShopNewsletterPageRoutePro
 {
     public const ROUTE_NAME_CUSTOMER_SUBSCRIBE = 'newsletter-success';
     public const ROUTE_NAME_CUSTOMER_UNSUBSCRIBE = 'newsletter-unsubscribe';
-    
+
     /**
      * Specification:
      * - Adds Routes to the RouteCollection.
@@ -315,7 +283,7 @@ class NewsletterPageRoueProviderPlugin extends SprykerShopNewsletterPageRoutePro
     {
         $route = $this->buildRoute('/newsletter/success', 'NewsletterPage', 'Newsletter', 'successAction');
         $routeCollection->add(static::ROUTE_NAME_CUSTOMER_SUBSCRIBE, $route);
-        
+
         $route = $this->buildRoute('/newsletter/unsubscribe', 'NewsletterPage', 'Newsletter', 'unsubscribeAction');
         $routeCollection->add(static::ROUTE_NAME_CUSTOMER_SUBSCRIBE, $route);
 
@@ -330,13 +298,13 @@ A small template for a subscription:
 
 ```html
 {% raw %}{%{% endraw %} extends template('page-layout-main') {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} define data = {
     title: 'newsletter.subscription.success' | trans
 } {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block pageInfo {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}
     <div class="box">
         <h4>{% raw %}{{{% endraw %}data.title{% raw %}}}{% endraw %}</h4>
@@ -350,13 +318,13 @@ And the second one is almost the same:
 
 ```html
 {% raw %}{%{% endraw %} extends template('page-layout-main') {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} define data = {
     title: 'newsletter.unsubscription.success' | trans
 } {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block pageInfo {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}
     <div class="box">
         <h4>{% raw %}{{{% endraw %}data.title{% raw %}}}{% endraw %}</h4>
@@ -364,7 +332,7 @@ And the second one is almost the same:
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
-### Update User Data
+## Update User Data
 
 In case you want to change user data on the Episerver side, you need to extend the Customer model
 
@@ -532,152 +500,6 @@ $container->extend(self::MAIL_PROVIDER_COLLECTION, function (MailProviderCollect
 });
 ```
 
-## Order Referenced Commands
-The Episerver module has four different commands:
 
-* `\SprykerEco\Zed\Episerver\Communication\Plugin\Oms\Command\EpiserverNewOrderPlugin`
-* `\SprykerEco\Zed\Episerver\Communication\Plugin\Oms\Command\EpiserverOrderCanceledPlugin`
-* `\SprykerEco\Zed\Episerver\Communication\Plugin\Oms\Command\EpiserverPaymentNotReceivedPlugin`
-* `\SprykerEco\Zed\Episerver\Communication\Plugin\Oms\Command\EpiserverShippingConfirmationPlugin`
-  
-
-You can use these commands in `\Pyz\Zed\Oms\OmsDependencyProvider::getCommandPlugins`
-
-**OmsDependencyProvider**
-
-```php
-...
-use SprykerEco\Zed\Episerver\Communication\Plugin\Oms\Command\EpiserverNewOrderPlugin;
-...
-  
-/**
- * @param \Spryker\Zed\Kernel\Container $container
- *
- * @return \Spryker\Zed\Oms\Communication\Plugin\Oms\Command\CommandCollection
- */
-protected function getCommandPlugins(Container $container)
-{
-    $collection = parent::getCommandPlugins($container);
-  
-    ...
-    $collection->add(new EpiserverNewOrderPlugin(), 'Episerver/SendNewOrderRequest');
-    $collection->add(new EpiserverOrderCanceledPlugin(), 'Episerver/SendOrderCanceledRequest');
-    $collection->add(new EpiserverPaymentNotReceivedPlugin(), 'Episerver/PaymentNotReceivedRequest');
-    $collection->add(new EpiserverShippingConfirmationPlugin(), 'Episerver/ShippingConfirmedRequest');
-    ...
-  
-    return $collection;
-}
-```
-
-After that you are ready to use commands in the OMS setup:
-
-**OmsDependencyProvider**
-
-```html
-<events>
-    <event name="authorize" onEnter="true" command="Episerver/SendNewOrderRequest"/>
-    <event name="shipped_confirmed"  manual="true" command="Episerver/ShippingConfirmedRequest"/>
-    <event name="pay" manual="true" command="Episerver/PaymentNotReceivedRequest" />
-    <event name="cancel" manual="true" command="Episerver/SendOrderCanceledRequest" />
-</events>
-```
-
-**oms-statemachine**
-
-```html
-<?xml version="1.0"?>
-<statemachine
-        xmlns="spryker:oms-01"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd">
- 
-    <process name="OptivoPayment01" main="true">
-        <states>
-            <state name="new" reserved="true"/>
-            <state name="shipping confirmed" reserved="true"/>
-            <state name="payment pending" reserved="true"/>
-            <state name="invalid">
-                <flag>exclude from customer</flag>
-            </state>
-            <state name="cancelled">
-                <flag>exclude from customer</flag>
-            </state>
-            <state name="optivo_cancelled" reserved="true"/>
-        </states>
- 
-        <transitions>
-            <transition happy="true" condition="DummyPayment/IsAuthorized">
-                <source>new</source>
-                <target>shipping confirmed</target>
-                <event>authorize</event>
-            </transition>
- 
-            <transition happy="true">
-                <source>shipping confirmed</source>
-                <target>payment pending</target>
-                <event>shipped_confirmed</event>
-            </transition>
- 
-            <transition>
-                <source>new</source>
-                <target>invalid</target>
-                <event>authorize</event>
-            </transition>
- 
-            <transition>
-                <source>payment pending</source>
-                <target>cancelled</target>
-                <event>pay</event>
-            </transition>
- 
-            <transition>
-                <source>cancelled</source>
-                <target>optivo_cancelled</target>
-                <event>cancel</event>
-            </transition>
- 
-        </transitions>
- 
-        <events>
-            <event name="authorize" onEnter="true" command="Optivo/SendNewOrderRequest"/>
-            <event name="shipped_confirmed"  manual="true" command="Optivo/ShippingConfirmedRequest"/>
-            <event name="pay" manual="true" command="Optivo/PaymentNotReceivedRequest" />
-            <event name="cancel" manual="true" command="Optivo/SendOrderCanceledRequest" />
-        </events>
-    </process>
- 
-</statemachine>
-```
 
 ## API Requests
-`\SprykerEco\Zed\Episerver\Business\Api\Adapter\EpiserverApiAdapter` contains all needed data for sending it to Episerver for events.
-
-It sends the request via `\Generated\Shared\Transfer\EpiserverRequestTransfer`
-
-**OmsDependencyProvider**
-
-```html
-<?xml version="1.0"?>
-<transfers xmlns="spryker:transfer-01"
-           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd" >
- 
-    <transfer name="EpiserverResponse">
-        <property name="isSuccessful" type="bool" />
-        <property name="status" type="int" />
-    </transfer>
- 
-    <transfer name="EpiserverRequest">
-        <property name="authorizationCode" type="string" />
-        <property name="operationType" type="string" />
-        <property name="payload" type="array" />
-    </transfer>
- 
-</transfers>
-```
-
-The payload for Customer loads from `\SprykerEco\Zed\Episerver\Business\Mapper\Customer\CustomerMapper::buildPayload`, for Order from `\SprykerEco\Zed\Episerver\Business\Mapper\Order\AbstractOrderMapper` and for Newsletter from `\SprykerEco\Zed\Episerver\Business\Mapper\Customer\CustomerNewsletterMapper`.
-
-The abstract classes can be extended and changed in `\SprykerEco\Zed\Episerver\Business\EpiserverBusinessFactory`.
-

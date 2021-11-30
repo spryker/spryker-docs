@@ -2364,8 +2364,11 @@ entries:
         - title: Episerver
           url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/episerver.html
           include_versions:
-          - "202009.0"
           - "202108.0"
+        - title: Episerver
+          url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/episerver/episerver.html
+          include_versions:
+          - "202009.0"
           nested:
           - title: Episerver - Installation and Configuration
             url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html

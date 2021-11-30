@@ -22,6 +22,9 @@ entries:
           - title: Merchant Portal
             url: /docs/marketplace/user/intro-to-the-spryker-marketplace/merchant-portal.html
 
+          - title: Upcoming major module releases
+            url: /docs/marketplace/user/intro-to-the-spryker-marketplace/upcoming-major-module-releases.html
+
           - title: Release notes
             nested:
 

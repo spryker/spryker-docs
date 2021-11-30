@@ -14,6 +14,12 @@ redirect_from:
   - /v6/docs/en/upcoming-major-module-releases
 ---
 
+{% info_block infoBox "Info" %}
+
+Learn about Marketplace related upcoming major releases [here](/docs/scos/user/intro-to-spryker/whats-new/upcoming-major-module-releases.html).
+
+{% endinfo_block %}
+
 [Major module releases](/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html) might require some development efforts from projects. To help you plan in advance, check out the table below for information on modules for which we plan major releases.
 
 | MODULE | DATE | REASON FOR THE MAJOR VERSION |

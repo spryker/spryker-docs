@@ -60,12 +60,11 @@ You can create a product configurator as a part of your shop or integrate a thir
 
 ![examplary-product-configurator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/examplary-product-configurator.png)
 
-
 ### How Spryker interacts with a product configurator
 
 A Spryker shop interacts with product configurators using parameters. When a customer is redirected from a Spryker shop to the configurator page, the shop passes the customer and product parameters. When the customer is redirected back to the shop, the configurator passes the updated parameters back.
 
-The behavior of the configurator is based on the parameters passed by a shop. For example, a shop passes the `store_name` parameter. If a customer is redirected from a US store, the language of the configurator is English. Also, the shop passes the URL of the page the customer is redirected from. After they save the configuration, the configurator uses this URL to redirect them back to the same page.
+The behavior of the configurator is based on the parameters passed by a shop. For example, the shop passes the current store parameter and the current locale that the customer used before being redirected to the configurator page. Also, the shop passes the URL of the page the customer is redirected from. After the customer saves the configuration, the configurator uses this URL to redirect them back to the same page.
 
 The selected configuration is also passed back to the shop as parameters. The shop uses the parameters to display the selected configuration on all related pages and process the order with the product.
 

@@ -92,7 +92,7 @@ layout: default
             </div>
         {% endif %}
 
-        <aside class="form-collapse" style="display: none;">
+        <aside class="form-collapse">
             <div class="confirm-block">
                 <strong class="confirm-block__title">
                     Was this article helpful?
@@ -104,17 +104,17 @@ layout: default
             </div>
 
             <div class="js-form-collapse__slide">
-                <form class="feedback-form">
+                <form class="feedback-form" action="{{ site.form_endpoints['feedback'] }}" method="POST">
                     <h3 class="feedback-form__title" data-toc-skip>Please provide feedback</h3>
                     <div class="feedback-form__block">
                         <div class="feedback-form__column">
-                            <input type="text" placeholder="Name (Optional)" class="feedback-form__input">
+                            <input type="text" name="name" placeholder="Name (Optional)" class="feedback-form__input">
                         </div>
                         <div class="feedback-form__column">
-                            <input type="email" placeholder="Email (Optional)" class="feedback-form__input">
+                            <input type="email" name="email" placeholder="Email (Optional)" class="feedback-form__input">
                         </div>
                         <div class="feedback-form__column feedback-form__column--full">
-                            <textarea placeholder="Any additional feedback?" class="feedback-form__textarea"></textarea>
+                            <textarea name="feedback" placeholder="Any additional feedback?" class="feedback-form__textarea"></textarea>
                         </div>
                     </div>
                     <div class="feedback-form__action-row">
@@ -124,6 +124,27 @@ layout: default
                         <a href="#" class="feedback-form__link js-form-collapse__close">Skip</a>
                     </div>
                 </form>
+                <script>
+                    let form = document.getElementsByClassName("feedback-form")[0];
+
+                    async function handleSubmit(event) {
+                        event.preventDefault();
+                        let data = new FormData(event.target);
+                        fetch(event.target.action, {
+                            method: form.method,
+                            body: data,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        }).then(response => {
+                            alert("Thanks for your submission!");
+                            form.reset();
+                        }).catch(error => {
+                            alert("Oops! There was a problem submitting your form");
+                        });
+                    }
+                    form.addEventListener("submit", handleSubmit)
+                </script>
             </div>
         </aside>
 

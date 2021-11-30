@@ -60,23 +60,24 @@ You can create a product configurator as a part of your shop or integrate a thir
 
 ![examplary-product-configurator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/examplary-product-configurator.png)
 
+
 ### How Spryker interacts with a product configurator
 
 A Spryker shop interacts with product configurators using parameters. When a customer is redirected from a Spryker shop to the configurator page, the shop passes the customer and product parameters. When the customer is redirected back to the shop, the configurator passes the updated parameters back.
 
-The behavior of the configurator is based on the parameters passed by a shop. For example, the shop passes the current store parameter and the current locale that the customer used before being redirected to the configurator page. Also, the shop passes the URL of the page the customer is redirected from. After the customer saves the configuration, the configurator uses this URL to redirect them back to the same page.
+The behavior of the configurator is based on the parameters passed by a shop. For example, a shop passes the `store_name` parameter. If a customer is redirected from a US store, the language of the configurator is English. Also, the shop passes the URL of the page the customer is redirected from. After they save the configuration, the configurator uses this URL to redirect them back to the same page.
 
 The selected configuration is also passed back to the shop as parameters. The shop uses the parameters to display the selected configuration on all related pages and process the order with the product.
 
 #### Parameter types
 
-There are two parameter types: regular parameters and display parameters.
+There are two parameter types: configuration parameters and display parameters.
 
-*Regular parameters* are used by shops to interact with product configurators.
+*Configuration parameters* are used by shops to interact with product configurators.
 
-*DIsplay parameters* are used to display product configuration on the Storefront and in the Back Office.
+*Display parameters* are used to display product configuration on the Storefront and in the Back Office.
 
-Display parameter values are usually converted from regular parameter values to show data in a user-friendly format. For example, a product configurator passes the regular parameter to a shop: `"time_of_the_day": 3`. Since, in the configurator, `3` stands for `afternoon`, the shop displays **Preferred time of the day: Afternoon**.
+Display parameter values are usually converted from configuration parameter values to show data in a user-friendly format. For example, a product configurator passes the configuration parameter to a shop: `"time_of_the_day": 3`. Since, in the configurator, `3` stands for `afternoon`, the shop displays **Preferred time of the day: Afternoon**.
 
 ![display-data-in-a-configurator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/display-data-in-a-configurator.png)
 
@@ -112,12 +113,6 @@ If the configuration is not complete, on entering the *Product details* page, a 
 Even if all the parameter values are [pre-configured](#pre-configured-parameter-values), but configuration is not complete, a customer has to open the configurator and save the configuration. They are not required to change the pre-configured values though.
 
 ![configuration-is-not-complete-message-with-pre-configured-parameters](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configuration-is-not-complete-message-with-pre-configured-parameters.png)
-
-<!--
-
-
-If the configuration is complete, the **Configuration complete!** notification is shown.
--->
 
 #### Request for quote with a configurable product
 

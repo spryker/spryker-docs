@@ -43,9 +43,9 @@ An admin user was able to save raw HTML in product attributes, glossary and user
 **Affected modules:**
 
 * ProductAttribute <!--/module_guide/spryker/product-attribute.htm -->  (1.1.2)
-* ProductAttributeGui <!--(https://documentation.spryker.com/module_guide/spryker/product-attribute-gui.htm) -->  (1.2.1)
+* ProductAttributeGui <!--(https://github.com/spryker/product-attribute-gui) -->  (1.2.1)
 * Glossary <!-- (/docs/scos/user/back-office-user-guides/{{site.version}}/administration/glossary/glossary.html) --> (3.5.2)
-* Acl <!--(https://documentation.spryker.com/module_guide/spryker/acl.htm) -->(3.1.2)
+* Acl <!--(https://github.com/spryker/acl) -->(3.1.2)
 
 **How to get the fix:** Just update modules with'
 
@@ -57,7 +57,7 @@ composer update spryker/acl spryker/glossary spryker/product-attribute-gui spryk
 Product attribute forms were missing CSRF form tokens.
 
 **Affected module:**
-<br>ProductAttributeGui <!--(https://documentation.spryker.com/module_guide/spryker/product-attribute-gui.htm)--> (1.1.0)
+<br>ProductAttributeGui <!--(https://github.com/spryker/product-attribute-gui)--> (1.1.0)
 
 **How to get the fix:** Just update modules with
 
@@ -69,7 +69,7 @@ composer update spryker/product-attribute-gui
 The additional header Content-Security-Policy has been added by default.
 
 **Affected module:**
-<br>Application <!--(https://documentation.spryker.com/module_guide/spryker/application.htm)--> (3.14.0)
+<br>Application <!--(https://github.com/spryker/application)--> (3.14.0)
 
 **How to get the fix:** Just update modules with
 
@@ -81,4 +81,4 @@ composer update spryker/application
 This one is not a security vulnerability, but to prevent fatal mistakes, the default value of APPLICATION_ENV, when it is not passed from the system environment, has been set to production in the `Install` module.
 
 **Affected module:**
-<br>Install <!--(https://documentation.spryker.com/module_guide/spryker/install.htm) -->(0.5.1)
+<br>Install <!--(https://github.com/spryker/install) -->(0.5.1)

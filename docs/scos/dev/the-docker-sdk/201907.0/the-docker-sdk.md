@@ -23,7 +23,9 @@ The purposes of the tool:
 3. Simplifying the process of setting up a local demo of Spryker project.
 
 {% info_block errorBox %}
+
 All the commands below should be run from the root directory of Spryker project.
+
 {% endinfo_block %}
 
 ## Installation
@@ -32,9 +34,13 @@ All the commands below should be run from the root directory of Spryker project.
 ```shell
 git clone https://github.com/spryker/docker-sdk.git ./docker
 ```
+
 {% info_block warningBox %}
+
 Make sure `docker 18.09.1+` and `docker-compose 1.23+` are installed in the local environment.
+
 {% endinfo_block %}
+
 2. Initialize docker setup:
  ```shell
 docker/sdk bootstrap
@@ -43,15 +49,18 @@ docker/sdk bootstrap
 ```shell
 docker/sdk up
 ```
+
 {% info_block warningBox %}
+
 Make sure all the domains from `deploy.yml` are defined as `127.0.0.1` in the `hosts` file in the local environment.
+
 {% endinfo_block %}
 
 ## Getting Started
 
 There are two ways to start working with Spryker in Docker:
 
-* If you want to set up a new Spryker project in Docker, start with [Getting Started with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.htmlgetting-started-with-docker.html).
-* If you already have a DevVM based project, proceed to [Integrating Docker into an Existing Project](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.htmlintegrating-docker-into-an-existing-project.html) to convert your project into a Docker based one.
+* If you want to set up a new Spryker project in Docker, start with [Getting Started with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
+* If you already have a DevVM based project, proceed to [Integrating Docker into an Existing Project](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html) to convert your project into a Docker based one.
 
 <!-- Last review date: Aug 06, 2019by Mike Kalinin, Andrii Tserkovnyi -->

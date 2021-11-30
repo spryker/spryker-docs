@@ -90,7 +90,7 @@ The _Edit shopping list_ page opens where you can:
 
 {% info_block warningBox %}
 
-To be able to search for products, make sure that [Search Widget for Concrete Products](https://documentation.spryker.com/v1/docs/search-widget-for-concrete-products-overview) feature is [integrated](https://documentation.spryker.com/v1/docs/search-widget-for-concrete-products-integration) into your Project.
+To be able to search for products, make sure that [Search Widget for Concrete Products](/docs/scos/user/features/201903.0/product-feature-overview/search-widget-for-concrete-products-overview.html) feature is [integrated](/docs/scos/dev/feature-integration-guides/201903.0/search-widget-for-concrete-products-feature-integration.html) into your Project.
 
 {% endinfo_block %}
 

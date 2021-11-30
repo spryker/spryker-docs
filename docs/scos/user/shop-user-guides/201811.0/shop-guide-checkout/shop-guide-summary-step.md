@@ -37,6 +37,6 @@ The *Summary* page in the Checkout consists of the following elements
 1. Re-check the information entered from the previous steps.
 2. Click **Submit your Order** to finish the Checkout process.
 
-The order will be submitted and available in the [Administration Interface](https://documentation.spryker.com/v1/docs/orders.htm).
+The order will be submitted and available in the [Administration Interface](/docs/scos/dev/feature-integration-guides/201903.0/product-feature-integration.html).
 
 *Last review date: Mar 06, 2019*

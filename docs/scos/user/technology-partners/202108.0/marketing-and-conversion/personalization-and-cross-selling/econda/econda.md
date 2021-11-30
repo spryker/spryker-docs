@@ -42,10 +42,10 @@ YOUR ADVANTAGES:
 
 ## Related Developer articles
 
-* [Installing Econda](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/inxmail-guides/inxmail-api.html)
-* [Inxmail order reference commands](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/inxmail-guides/inxmail-order-referenced-commands.html)
-* [Installing and configuring Inxmail](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/inxmail-guides/installing-and-configuring-inxmail.html)
-* [Integrating Inxmail](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/inxmail-guides/integrating-inxmail.html)
+* [Installing Econda](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/inxmail/inxmail-api.html)
+* [Inxmail order reference commands](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/inxmail/inxmail-order-referenced-commands.html)
+* [Installing and configuring Inxmail](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/inxmail/installing-and-configuring-inxmail.html)
+* [Integrating Inxmail](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/inxmail/integrating-inxmail.html)
 
 
 

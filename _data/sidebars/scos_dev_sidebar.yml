@@ -3994,23 +3994,23 @@ entries:
         - title: Episerver guides
           nested:
           - title: Integrating Episerver
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver-guides/integrating-episerver.html
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
           - title: Installing and configuring Episerver
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver-guides/installing-and-configuring-episerver.html
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
           - title: Episerver API
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver-guides/episerver-api.html
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/episerver-api.html
           - title: Episerver order reference commands
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver-guides/episerver-order-reference-commands.html
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html
         - title: Inxmail guides
           nested:
           - title: Integrating Inxmail
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail-guides/integrating-inxmail.html
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/integrating-inxmail.html
           - title: Installing and configuring Inxmail
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail-guides/installing-and-configuring-inxmail.html
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/installing-and-configuring-inxmail.html
           - title: Inxmail API requests
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail-guides/inxmail-api-requests.html
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/inxmail-api-requests.html
           - title: Inxmail order referenced commands
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail-guides/inxmail-order-referenced-commands.html
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/inxmail-order-referenced-commands.html
       - title: Personalization and cross-selling
         nested:
         - title: Econda guides

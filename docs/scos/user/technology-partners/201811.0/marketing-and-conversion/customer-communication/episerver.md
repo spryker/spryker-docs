@@ -26,6 +26,14 @@ YOUR ADVANTAGES:
 
 ---
 
+## Related Developer articles
+
+* [Episerver API](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/episerver/episerver-api.html)
+* [Episerver order reference commands](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html)
+* [Installing and configuring Episerver](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html)
+* [Integrating Episerver](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html)
+
+
 ## Copyright and Disclaimer
 
 See [Disclaimer](https://github.com/spryker/spryker-documentation).
@@ -47,4 +55,3 @@ For further information on this partner and integration into Spryker, please con
             "></div>
 </div>
 </div>
-

@@ -16,7 +16,7 @@ redirect_from:
 
 {% info_block infoBox "Info" %}
 
-Learn about Marketplace related upcoming major releases [here](/docs/scos/user/intro-to-spryker/whats-new/upcoming-major-module-releases.html).
+Learn about Marketplace related upcoming major releases [here](/docs/marketplace/user/intro-to-the-spryker-marketplace/upcoming-major-module-releases.html).
 
 {% endinfo_block %}
 

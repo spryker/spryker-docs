@@ -30,7 +30,7 @@ Reduce your bounce rate effectively and create an enhanced shopping experience b
 <div>
 <a class="feature-link" href="https://documentation.spryker.com/v5/docs/product-image-management">Product Image Management</a>
 <a class="feature-link" href="https://documentation.spryker.com/v5/docs/image-hosting">Image Hosting</a>
-<a class="feature-link" href="https://documentation.spryker.com/v5/docs/asset-management">Asset Management</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/file-manager-feature-overview/asset-management.html">Asset Management</a>
 <a class="feature-link" href="https://documentation.spryker.com/v5/docs/video-embedding">Video Embedding</a>
-<a class="feature-link" href="https://documentation.spryker.com/v5/docs/file-uploader">File Uploader</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/file-manager-feature-overview/file-uploader.html">File Uploader</a>
 </div>

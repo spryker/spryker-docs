@@ -46,7 +46,7 @@ To enhance the visibility of your shop, the Spryker Commerce OS comes with sever
 **Features:**
 
 <div>
-<a class="feature-link" href="https://documentation.spryker.com/v4/docs/cms-page">CMS Page</a>     
-<a class="feature-link" href="https://documentation.spryker.com/v3/docs/cms-block">CMS Block</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html">CMS Page</a>     
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html">CMS Block</a>
    <a class="feature-link" href="https://documentation.spryker.com/v3/docs/content-item-widgets-201907">Content Item Widget</a> 
  <a class="feature-link" href="https://documentation.spryker.com/v3/docs/content-items-201907">Content Items</a> 

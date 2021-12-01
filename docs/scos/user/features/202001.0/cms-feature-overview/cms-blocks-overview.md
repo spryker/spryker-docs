@@ -35,8 +35,8 @@ Blocks help to place content in certain places in your template, so you can easi
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/v4/docs/product-block" class="mr-link">Install and configure a Product Block</a></li>
-<li><a href="https://documentation.spryker.com/v4/docs/enabling-category-cms-block" class="mr-link">Install and configure a Category Block</a></li>
+                <li><a href="/docs/scos/dev/feature-integration-guides/{{page.version}}/installing-the-product-cms-block.html" class="mr-link">Install and configure a Product Block</a></li>
+<li><a href="/docs/scos/dev/feature-integration-guides/{{page.version}}/installing-the-category-cms-blocks.html" class="mr-link">Install and configure a Category Block</a></li>
 <!-- <li><a href="https://documentation.spryker.com/v4/docs/cms-block-multistore" class="mr-link">Enable multi-store management for CMS blocks</a></li>-->
 <li><a href="https://documentation.spryker.com/v4/docs/mg-cms-collector#upgrading-from-version-1-to-version-2" class="mr-link">Migrate the CMS Collector module from version 1.* to version 2.*</a></li>
 <li><a href="https://documentation.spryker.com/v4/docs/mg-cms-block#upgrading-from-version-1-to-version-2" class="mr-link">Migrate the CMS Block module from version 1.* to version 2.*</a></li>

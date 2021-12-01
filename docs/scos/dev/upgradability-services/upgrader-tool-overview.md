@@ -48,7 +48,7 @@ Using Composer, the upgrader updates the modules in groups. After updating the m
 
 If the upgrader can’t update a module, it skips the module’s and the remaining groups. If all the groups failed to update, the upgrader returns the errors and stops. With at least one group updated, it returns the list of updated modules and proceeds to the next step.
 
-The upgrader skips the groups that contain the modules changed on the project level or that were part of a [major release](docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html#what-is-a-major-release). For example, if one or more modules in a group contain changes on the project level, you get an error similar to the following:
+The upgrader skips the groups that contain the modules changed on the project level or that were part of a [major release](/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html#what-is-a-major-release). For example, if one or more modules in a group contain changes on the project level, you get an error similar to the following:
 
 ```bash
 VCS: git update-index --refresh

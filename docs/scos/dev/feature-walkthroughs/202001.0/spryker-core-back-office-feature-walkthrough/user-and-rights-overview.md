@@ -122,15 +122,15 @@ In the example, we grant the user **winner@spryker.com** access to all Zed resou
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/spryker-core-back-office-feature-integration" class="mr-link">Enable Users and Rights by integrating the Spryker Core Back Office feature into your project</a></li></ul>
+                <li><a href="/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html" class="mr-link">Enable Users and Rights by integrating the Spryker Core Back Office feature into your project</a></li></ul>
         </div>
   <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/managing-roles" class="mr-link">Create and manage roles</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-groups" class="mr-link">Create and manage groups</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-users" class="mr-link">Create and manage users</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-roles.html" class="mr-link">Create and manage roles</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-groups.html" class="mr-link">Create and manage groups</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html" class="mr-link">Create and manage users</a></li>
             </ul>
         </div>
  </div>

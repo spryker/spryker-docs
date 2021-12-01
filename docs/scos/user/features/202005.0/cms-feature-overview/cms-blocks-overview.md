@@ -35,22 +35,22 @@ Blocks help to place content in certain places in your template, so you can easi
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/en/product-block" class="mr-link">Install and configure a Product Block</a></li>
-<li><a href="https://documentation.spryker.com/docs/en/enabling-category-cms-block" class="mr-link">Install and configure a Category Block</a></li>
-<!-- <li><a href="https://documentation.spryker.com/docs/en/cms-block-multistore" class="mr-link">Enable multi-store management for CMS blocks</a></li>-->
-<li><a href="https://documentation.spryker.com/docs/en/mg-cms-collector#upgrading-from-version-1-to-version-2" class="mr-link">Migrate the CMS Collector module from version 1.* to version 2.*</a></li>
-<li><a href="https://documentation.spryker.com/docs/en/mg-cms-block#upgrading-from-version-1-to-version-2" class="mr-link">Migrate the CMS Block module from version 1.* to version 2.*</a></li>
-<li><a href="https://documentation.spryker.com/docs/en/mg-cms-block-category-connector#migration-guide---cms-block-category-connector" class="mr-link">Migrate the CMS Block Category Connector module from version 1.* to version 2.*</a></li>
-<li><a href="https://documentation.spryker.com/docs/en/mg-cms-block-category-connector-console" class="mr-link">Migrate the CMS Block Category Connector Console module from version 1.* to version 2.*</a></li>
-<li><a href="https://documentation.spryker.com/docs/en/mg-cms-block-collector#upgrading-from-version-1-to-version-2" class="mr-link">Migrate the CMS Block Collector  module from version 1.* to version 2.*</a></li>
-<li><a href="https://documentation.spryker.com/docs/en/mg-cms-block-gui#upgrading-from-version-1-to-version-2" class="mr-link">Migrate the CMS Block GUI  module from version 1.* to version 2.*</a></li>
+                <li><a href="/docs/scos/dev/feature-integration-guides/{{page.version}}/installing-the-product-cms-block.html" class="mr-link">Install and configure a Product Block</a></li>
+<li><a href="/docs/scos/dev/feature-integration-guides/{{page.version}}/installing-the-category-cms-blocks.html" class="mr-link">Install and configure a Category Block</a></li>
+<li><a href="/docs/scos/dev/feature-integration-guides/{{page.version}}/multi-store-cms-block-feature-integration.html" class="mr-link">Enable multi-store management for CMS blocks</a></li>
+<li><a href="/docs/scos/dev/module-migration-guides/migration-guide-cmscollector.html" class="mr-link">Migrate CMS Collector module from version 1.* to version 2.*</a></li>
+<li><a href="/docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html" class="mr-link">Migrate CMS Block module from version 1.* to version 2.*</a></li>
+<li><a href="/docs/scos/dev/module-migration-guides/migration-guide-cms-block-category-connector.html" class="mr-link">Migrate CMS Block Category Connector module from version 1.* to version 2.*</a></li>
+<li><a href="/docs/scos/dev/module-migration-guides/migration-guide-cmsblockcategoryconnector-migration-console.html" class="mr-link">Migrate CMS Block Category Connector Console module from version 1.* to version 2.*</a></li>
+<li><a href="/docs/scos/dev/module-migration-guides/migration-guide-cms-block-collector.html" class="mr-link">Migrate CMS Block Collector  module from version 1.* to version 2.*</a></li>
+<li><a href="/docs/scos/dev/module-migration-guides/migration-guide-cmsblockgui.html" class="mr-link">Migrate CMS Block GUI  module from version 1.* to version 2.*</a></li>
     </ul>
         </div>
         <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/en/creating-a-cms-block" class="mr-link">Create a CMS Block</a></li>
-                <li><a href="https://documentation.spryker.com/docs/en/managing-cms-blocks" class="mr-link">Manage CMS Blocks</a></li>
-        <ul>      
+            <li class="mr-title"> Back Office User</li>
+            <li><a href="docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/creating-cms-blocks.html" class="mr-link">Create a CMS Block</a></li>
+            <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-cms-blocks.html" class="mr-link">Manage CMS Blocks</a></li>
+            </ul>      
             </div>

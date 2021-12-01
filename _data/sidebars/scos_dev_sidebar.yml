@@ -4013,18 +4013,20 @@ entries:
             url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/inxmail-order-referenced-commands.html
       - title: Personalization and cross-selling
         nested:
-        - title: Econda guides
+        - title: Econda
           nested:
-          - title: Integrating Econda
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda-guides/integrating-econda.html
           - title: Installing Econda
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda-guides/installing-econda.html
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/installing-econda.html
+          - title: Integrating Econda
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda.html
+          - title: Integrating Econda front end
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda-front-end.html
           - title: Integrating Econda cross-selling
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda-guides/integrating-econda-cros-selling.html
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda-cros-selling.html
           - title: Adding the Econda tracking code
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda-guides/adding-the-econda-tracking-code.html
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/adding-the-econda-tracking-code.html
           - title: Exporting Econda data
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda-guides/exporting-econda-data.html
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/exporting-econda-data.html
       - title: Analytics
         nested:
         - title: FACT-Finder

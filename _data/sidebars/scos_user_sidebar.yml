@@ -2307,89 +2307,25 @@ entries:
       - "202009.0"
       - "202108.0"
       nested:
-      - title: Personalization & Cross-Selling
+      - title: Personalization and cross-selling
         nested:
         - title: Contentserv
           url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/contentserv.html
         - title: Econda
-          url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/econda/econda.html
-          nested:
-          - title: Econda - Cross Sell
-            include_versions:
-            - "201811.0"
-            - "201903.0"
-            - "201907.0"
-            - "202001.0"
-            - "202005.0"
-            - "202009.0"
-            url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/econda/econda-cross-sell.html
-          - title: Econda - Tracking
-            url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/econda/econda-tracking.html
-            include_versions:
-            - "201811.0"
-            - "201903.0"
-            - "201907.0"
-            - "202001.0"
-            - "202005.0"
-            - "202009.0"
-          - title: Econda - Frontend Integration
-            url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/econda/econda-frontend-integration.html
-            include_versions:
-            - "201811.0"
-            - "201903.0"
-            - "201907.0"
-            - "202001.0"
-            - "202005.0"
-          - title: Econda - Exporting CSVs
-            url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/econda/econda-exporting-csvs.html
-          - title: Econda - Installation and configuration
-            url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/econda/econda-installation-and-configuration.html
-            include_versions:
-            - "202009.0"
-          - title: Econda - Integration into project
-            url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/econda/econda-integration-into-project.html
-            include_versions:
-            - "202009.0"
+          url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/econda.html
         - title: Nosto
           url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/nosto.html
         - title: 8Select
           url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/8select.html
         - title: trbo
           url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/trbo.html
-      - title: Customer Communication
+      - title: Customer communication
         include_versions:
         - "202009.0"
         - "202108.0"
         nested:
         - title: Episerver
           url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/episerver.html
-          include_versions:
-          - "202108.0"
-        - title: Episerver
-          url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/episerver/episerver.html
-          include_versions:
-          - "202009.0"
-          nested:
-          - title: Episerver - Installation and Configuration
-            url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
-            include_versions:
-            - "202009.0"
-          - title: Integrating Episerver
-            url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
-            include_versions:
-            - "202009.0"
-          - title: Technical details and HowTos
-            include_versions:
-            - "202009.0"
-            nested:
-            - title: Episerver - Order referenced commands
-              url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-order-referenced-commands.html
-              include_versions:
-              - "202009.0"
-            - title: Episerver - API Requests
-              url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-api-requests.html
-              include_versions:
-              - "202009.0"
         - title: Dotdigital
           url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/dotdigital.html
         - title: Inxmail

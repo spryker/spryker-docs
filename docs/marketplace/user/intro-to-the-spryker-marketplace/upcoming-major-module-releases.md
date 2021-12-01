@@ -1,5 +1,5 @@
 ---
-title: Marketplace Upcoming major module releases
+title: Marketplace upcoming major module releases
 description: Find out when and what modules will be updated in the next major version.
 last_updated: Nov 27, 2021
 template: concept-topic-template

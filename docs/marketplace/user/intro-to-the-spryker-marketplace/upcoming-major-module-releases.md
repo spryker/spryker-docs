@@ -17,5 +17,5 @@ Learn about SCOS related upcoming major releases [here](/docs/scos/user/intro-to
 | MODULE | DATE | REASON FOR THE MAJOR VERSION |
 | --- | --- | --- |
 | [MerchantProductOfferStorage](https://github.com/spryker/merchant-product-offer-storage) | Q4 2021 | Refactoring based. `MerchantProductOfferStorage` will be decomposed into `ProductOfferStorage` and `MerchantProductOfferStorage` modules. The following modules will receive a cascading major release: `ProductOfferPricesRestApi`, `MerchantProductOfferWidget`, `MerchantProductOffersRestApi` |
-| [ProductMerchantPortalGui](https://github.com/spryker/product-merchant-portal-gui) | Q1 2022 | Adding product approval status capability to UI. |
+| [ProductMerchantPortalGui](https://github.com/spryker/product-merchant-portal-gui) | Q4 2021 | Adding product approval status capability to UI. |
 

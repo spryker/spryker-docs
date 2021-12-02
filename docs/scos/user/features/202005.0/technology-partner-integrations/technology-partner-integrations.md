@@ -21,7 +21,7 @@ redirect_from:
 **Business Value**
 * Simplify and accelerate your processes by making use of the multitude of partner solutions
 ***
-        
+
 Streamline your operations by connecting your Spryker Commerce OS with a large selection of third-party applications and integrations.
 
 Create a rich customer experience by integrating an e-mail marketing provider that suits your business needs or reduce errors with the integration of an analytics solution and the ERP of your choice.
@@ -32,8 +32,8 @@ Automate your processes and implement several shipping and payment integrations.
 
 **Features**
 <div>
-<a class="feature-link" href="https://documentation.spryker.com/docs/en/partner-integration">Check out the full list of our Technology Partners</a>
-<a class="feature-link" href="https://documentation.spryker.com/docs/en/punchout-201907">Punch Out</a>
+<a class="feature-link" href="/docs/scos/user/technology-partners/{{page.version}}/technology-partner-integration.html">Check out the full list of our Technology Partners</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/technology-partner-integrations/punch-out/punch-out.html">Punch Out</a>
 </div>
 <!--
 <map id="map1">
@@ -64,4 +64,3 @@ Automate your processes and implement several shipping and payment integrations.
     </map>
 -->
 <!-- ../../Resources/Images/IP Integrations.png" usemap="#map1 -->
-

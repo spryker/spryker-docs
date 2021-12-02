@@ -4,6 +4,8 @@ description: Learn how to style and format your writing when creating the docs.
 template: concept-topic-template
 ---
 
+This page contains details on how to work with the 
+
 ## Directory structure
 
 The main directory for holding all the documents is `docs` at the root of the project. The second layer is **product** directories: *marketplace*, *scos*, *cloud* etc. Under each **product** directory, there are **realm** directories: *user*, *dev*, and admin (for cloud product). Each of these directories contains category directories with optional sub-categories. Category/sub-category directories contain documents.
@@ -16,9 +18,9 @@ The main directory for holding all the documents is `docs` at the root of the pr
 
 #### General
 
-Documents are created using Markdown and are placed into one of the category/sub-category folders. Each document file must have `.md` extension. You can use a text editor of choice for creating these files. 
+Documents are created using [markdown](https://en.wikipedia.org/wiki/Markdown) and are placed into one of the category/sub-category folders. Each document file must have `.md` extension. You can use a text editor of choice such as [VSCode](https://code.visualstudio.com) or [Atom](https://atom.io) for creating these files. 
 
-{% info_block warningBox "Warning" %}
+{% info_block errorBox "Templates" %}
 
 To keep our docs consistent, we have templates for all types of documents. The templates are stored in the `_templates` folder. Therefore, every time you need to create a new document, pick the right template from this folder, copy it to your new page, and write the document based on the structure of the template and instructions therein.
 
@@ -52,6 +54,48 @@ tags: [new, document]
 ```
 
 This block must include the document’s title. It can also include *tags*, *keywords*, *summary*, and other metadata. You can read more about front matter on Jekyll’s official [website](https://jekyllrb.com/docs/front-matter/).
+
+##### Related articles
+
+To add related articles, in the front matter, add the “related” parameter with the values as in the example below (mind the “link” parameter: no dash before “link”, no slash before “docs”):
+
+```md
+related: 
+    - title: Discount
+      link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-promotions-and-discounts-feature-walkthrough.html
+```
+
+{% info_block warningBox "Warning" %}
+
+Always use page.version in the link for related articles, even for unversioned articles!
+
+{% endinfo_block %}
+
+So for example the whole front matter:
+
+```md
+---
+title: Marketplace Promotions and Discounts feature overview
+description: This document contains concept information for the Marketplace Promotions and Discounts feature.
+template: concept-topic-template
+related: 
+    - title: Discount
+      link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-promotions-and-discounts-feature-walkthrough.html
+---
+```
+
+How it looks on the website:
+
+![related articles in the front matter](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/related-articles-in-the-front-matter.png)
+
+##### Setting up redirects
+
+To redirect from one page on our website to another, use the `redirect_from:` parameter in the front matter, press the **tab** button and enter the path starting with `/docs` and containing the exact version, if the document is versioned. For example:
+
+```md
+redirect_from:  
+  - /docs/marketplace/dev/feature-integration-guides/202108.0/combined-product-offer-import-integration.html
+```
 
 #### Liquid
 
@@ -161,4 +205,22 @@ For details on the feature, see [Merchant feature overview](/docs/marketplace/us
 ```
 
 the `Merchant feature overview` link will take the user to the `Merchant feature overview` article in version 2020109.0.
+
+## Deleting pages
+
+If you happen to delete the unnecessary or outdated page from the website, make sure to set up a redirect for it. See [Setting up redirects on this page](#setting-up-redirects).
+
+## Troubleshooting
+
+This section contains most coming issues that you may face while working with docs and expected ways how to resolve the problem.
+
+### Filename too long in Git for Windows
+If you face the “Filename too long” error, or an error like this one *“spryker.github.io/vendor/bundle/ruby/2.7.0/gems/jekyll-4.2.0/lib/jekyll/convertible.rb:222:in `write': No such file or directory @ rb_sysopen - E:/Jekyll/spryker.github.io/_site/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-content-and-search-attribute-cart-based-catalog-personalization-spryker-commerce-os/tutorial-content-and-search-attribute-cart-based-catalog-personalization.html (Errno::ENOENT)”*, run the following command to circumvent it:
+
+```bash
+git config --system core.longpaths true
 ```
+
+
+This command only solves the problem by being specific to the current project.
+ 

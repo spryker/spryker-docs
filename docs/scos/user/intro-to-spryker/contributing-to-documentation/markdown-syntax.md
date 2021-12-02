@@ -4,19 +4,35 @@ description: Learn the markdown syntax and how to create markdown elements in yo
 template: concept-topic-template
 ---
 
-This document contains Markdown syntax of the page elements used in our documentation. You will read about:
+This document contains Markdown syntax of the page elements used on our documentation website. You will read about:
 
-- General Markdown syntax
+- Documentation-specific markdown elements
 - HTML syntax that is used where Markdown is insufficient for our documentation website
 - Solutions to common issues
 
+{% info_block infoBox "Info" %}
+
+General formatting rules and styling rules for markdown can be found at [Basic writing and formatting syntax for Github](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+
+{% endinfo_block %}
+
+
 Syntax snippets contain text wrapped in braces - `{}`. This is a placeholder that should be replaced with what the text inside describes. The braces should be removed as well.
+
+{% info_block errorBox "Templates" %}
+
+Make sure to use the templates from the `_templates` folder for the document you are working on. They already contain the commonly used elements for each type of doc.
+
+![templates folder](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/templates.png)
+
+{% endinfo_block %}
+
 
 ## Drop-downs
 
 Drop-down syntax:
 
-```
+```md
 <details open>
 <summary>{drop-down toggle button}</summary>
 
@@ -27,7 +43,7 @@ Drop-down syntax:
 
 Example:
 
-```
+```md
 <details open>
 <summary>How to create and manage the articles</summary>
 
@@ -43,45 +59,12 @@ You need to do the following to update an article:
 
 Syntax of the drop-down with a code snippet:
 
-```
-<details open>
-<summary>{drop-down toggle button}</summary>
-
-```{programming language}
-{code}
-```
-</details>
-```
+![drop down with code snippet template](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/drop-down-with-code-snippet-template.png)
 
 Example:
 
-```
-<details open>
-<summary>src/Pyz/Zed/Installer/InstallerDependencyProvider.php</summary>
-    
-```php
-<?php
- 
-namespace Pyz\Zed\Installer;
- 
-use Spryker\Zed\Installer\InstallerDependencyProvider as SprykerInstallerDependencyProvider;
-use Spryker\Zed\SalesOrderThreshold\Communication\Plugin\Installer\SalesOrderThresholdTypeInstallerPlugin;
- 
-class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
-{
-	/**
-	 * @return \Spryker\Zed\Installer\Dependency\Plugin\InstallerPluginInterface[]
-	 */
-	public function getInstallerPlugins()
-	{
-		return [
-			new SalesOrderThresholdTypeInstallerPlugin(),
-		];
-	}
-}
-```
-</details>
-```
+![drop down with code snippet example](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/dropdown-with-the-code-snippet-example.png)
+
 
 {% info_block warningBox "Warning" %}
 
@@ -93,13 +76,42 @@ Make sure to fulfill the requirements:
 
 {% endinfo_block %}
 
+## Image and table sizes
+
+Currently, by default, image’s size should not exceed 50% of the content area. Also, 2-column tables also take 50% of the content area’s space.
+
+If you want your image or a 2-column table to stretch to the content area’s size, wrap the image and the table in `<div>` with the width-100 class. For example:
+
+To make an image as wide as the content area:
+
+```html
+
+<div class="width-100">
+
+![Marketplace concept](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Marketplace/Marketplace+Concept/marketplace-concept.png)
+
+</div>
+```
+
+To make a table as wide as the content area:
+
+```html
+<div class="width-100">
+
+| PATH PARAMETER | DESCRIPTION      |
+| ----------------- | -------------------------- |
+| content_item_key   | Key of the Abstract Product List content item. |
+
+</div>
+```
+
 ## Ordered and unordered lists in tables
 
-Doc360 Markdown does not support lists in tables. That’s why we write the lists in tables in HTML while the tables remain in Markdown.
+Generally, markdown does not support lists in tables. That's why we write the lists in tables in HTML while the tables remain in Markdown.
 
 Ordered list in table syntax:
 
-```
+```md
 |{table header}|{table header}|
 | --- | --- |
 |{text}|<ol><li>{text}</li><li>{text}</li></ol>|
@@ -108,7 +120,7 @@ Ordered list in table syntax:
 
 This is how the table will look:
 
-| **{table header}** | **{table header}** |
+| {table header}| {table header} |
 | ------------------ | ------------------ |
 | {text}             | <ol><li>{text}</li><li>{text}</li></ol>       |
 
@@ -132,11 +144,12 @@ Find a verification example below:
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed in `vendor/spryker`:
+
 | Module | Expected Directory |
 | --- | --- |
-| `Content` | `vendor/spryker/content` |
-| `ContentStorage` | `vendor/spryker/content-storage` |
-| `ContentGui` | `vendor/spryker/content-gui` |
+| Content | vendor/spryker/content |
+| ContentStorage | vendor/spryker/content-storage |
+| ContentGui | vendor/spryker/content-gui |
 
 {% endinfo_block %}
 
@@ -199,6 +212,13 @@ An entity cannot have a store relation and SynchronizationPool defined for it si
 
 {% endinfo_block %}
 
+{% info_block infoBox "Info" %}
+
+You can find the templates for notes in the `_templates` > `info-blocks` folder.
+
+{% endinfo_block %}
+
+
 ## Code snippets in tables
 
 Markdown does not support code snippets in tables. Try to avoid inserting code snippets into tables by all means on the documentation creation stage. If you do end up with a code snippet in a table, choose a solution depending on the conditions:
@@ -214,7 +234,9 @@ Follow the steps to create an anchor and link to it:
 
 1. Put the following next to the text you wish to provide a link to:
 
-`<a name="{anchor-name}"></a>`
+```md
+<a name="{anchor-name}"></a>
+```
 
 Make sure to fulfil the requirements:
 
@@ -224,10 +246,103 @@ Make sure to fulfil the requirements:
 2. Link text to this anchor, depending on the link source:
 
 - When linking to an anchor in a different page, use the usual markdown link syntax and add the anchor name at the end of the link - `[link text](https://[{article URL}#{anchor name})`.
-  Following the example above, it looks like `[Full access rights](https://documentation.spryker.com/v4/docs/whatever-article-name#full-access-rights)`.
+  Following the example above, it looks like `[Full access rights](https://docs.spryker.com/docs/scos/user/features/{{site.version}}/shared-carts-feature-overview.html#full-access)`.
 - When linking to an anchor in the same page, use the usual markdown link syntax with a relative URL path - `[link text](#{anchor name})`.
-  With the same example, it looks like `[Full access rights](#full-access-rights)`.
+  With the same example, it looks like `[Full access rights](#full-access)`.
 
 Find another example below:
 
-`1... 2 3To integrate GLUE API in your project, you need to: 4* [Install GLUE](#installing-glue) 5* [Enable GLUE](#enable-glue) 6 7... 8 91. Installing GLUE  <a name="installing-glue"></a>  102. Enable GLUE <a name="enable-glue"></a> 11 12... `
+```html
+To integrate GLUE API in your project, you need to:
+* [Installing GLUE](#installing-glue)
+* [Enable GLUE](#enable-glue)
+
+1. Installing GLUE  <a name="installing-glue"></a> 
+2. Enable GLUE <a name="enable-glue"></a>
+```
+
+## Adding Wistia videos
+
+To add a wistia video, use the following code: `{% wistia {{wistia video code}} %}`, where `{video code}` is the wistia's video code. For example, if you want to add video `https://fast.wistia.com/embed/medias/eiw5ev4gv2/`, your code should be: `{% wistia eiw5ev4gv2 %}`.
+
+You can also set video’s width and height. For example:
+
+​```md
+{% wistia eiw5ev4gv2 960 720 %}
+```
+where 
+960 - is the video’s width 
+720 - is the video’s height
+
+
+## Embedding .pdf files
+
+To embed .pdf files, use the following code:
+
+```html
+<embed src="http://example.com/the.pdf" width="500" height="375" 
+ type="application/pdf">
+```
+
+where `http://example.com/the.pdf` is the link to your .pdf file. 
+
+{% info_block infoBox "Info" %}
+
+Use the AWS storage for the .pdf files.
+
+{% endinfo_block %}
+
+
+## Glossary
+
+Glossary syntax:
+
+```
+**{glossary item}**
+
+>{glossary item description}
+
+...
+```
+
+Glossary example:
+
+```md
+**Deploy file**
+
+>A YAML file defining Spryker infrastructure and services for Spryker tools used to deploy Spryker applications in different environments.
+
+**Region**
+
+> Defines one or more isolated instances of Spryker applications that have only one persistent database to work with; limits the visibility of a project's **Stores** to operate only with the **Stores** that belong to a **Region**; refers to geographical terms like data centers, regions and continents in the real world.
+
+**Group**
+
+> Defines a group of Spryker applications within a **Region** that is scaled separately from other groups; can be assumed as an auto scaling group in the Cloud.
+
+**Store**
+
+>A store related context a request is processed in.
+
+**Application**
+
+>A Spryker application, like Zed, Yves or Glue.
+
+**Service**
+
+> An external storage or utility service. Represents service type and configuration. The configuration can be defined on different levels: project-wide, region-wide, store-specific or endpoint-specific with limitations based on the service type.
+
+**Endpoint**
+
+> A point of access to **Application** or **Service**. The key format is `domain[:port]`. By default, the port for HTTP endpoints is 80 . Port is mandatory for TCP endpoints.
+```
+
+## Inline code issues
+
+You may encounter an inline code piece that contains Markdown syntax symbols.  For example, “You also need to update Price` >= 4.* and PriceCartConnector` >= 3.* as they provide additional data…”. In this case, we get the following:
+
+- Desired output - “You also need to update `Price` >= 4.* and PriceCartConnector` >= 3.*` as they provide additional data…”. 
+- Usual Markdown syntax - `You also need to update `Price` >= 4.* and PriceCartConnector` >= 3.*` as they provide additional data…`
+- Because of the grave accents (`) in the inline code piece being part of the Markdown syntax, the actual output is - “You also need to update `Price` >= 4.* and PriceCartConnector `>= 3.*` as they provide additional data…”
+
+Avoid this issue by replacing grave accents in the inline code piece with triple grave accents  ( ``` ) -  `You also need to update ```Price` >= 4.* and PriceCartConnector` >= 3.*``` as they provide additional data…`

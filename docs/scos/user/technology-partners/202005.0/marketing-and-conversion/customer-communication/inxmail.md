@@ -33,7 +33,7 @@ YOUR ADVANTAGES:
 
 ## Related Developer articles
 
-* [Inxmail API requests](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/episerver.html/marketing-and-conversion/customer-communication/inxmail/inxmail-api-requests.html)
+* [Inxmail API requests](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/inxmail/inxmail-api-requests.html)
 * [Inxmail order reference commands](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/inxmail/inxmail-order-referenced-commands.html)
 * [Installing and configuring Inxmail](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/inxmail/installing-and-configuring-inxmail.html)
 * [Integrating Inxmail](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/inxmail/integrating-inxmail.html)

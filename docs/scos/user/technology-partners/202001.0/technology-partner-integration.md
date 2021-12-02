@@ -59,7 +59,7 @@ In this section you will find information about our Technology Partner Integrati
 ### Customer Communication
 
 * [Dotdigital](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/dotdigital.html)
-* [Episerver](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/episerver/episerver.html)
+* [Episerver](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/episerver.html)
 * [Inxmail](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/inxmail.html)
 
 ### Customer Retention & Loyalty

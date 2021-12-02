@@ -41,7 +41,7 @@ The Spryker layer structure looks as follows:
 
 ![Application layers and layers](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Architecture+Concepts/Modules+and+layers/layers.png)
 
-Each layer is servers a single main purpose inside an application layer.
+Each layer servers a single purpose inside an application layer.
 
 ### Persistence layer
 The persistence layer is responsible for defining and dealing with the database in a module. Database table schemas and query objects are defined in this layer. The Persistence layer cannot access any other layer above it.

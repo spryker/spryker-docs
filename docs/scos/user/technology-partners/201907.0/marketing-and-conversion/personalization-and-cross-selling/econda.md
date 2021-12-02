@@ -8,15 +8,7 @@ originalArticleId: 9fdc7329-3a4a-4bcf-8d55-e4898f0e07db
 redirect_from:
   - /v3/docs/econda
   - /v3/docs/en/econda
-related:
-  - title: Econda - Tracking
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/personalization-and-cross-selling/econda/econda-tracking.html
-  - title: Econda - Cross Sell
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/personalization-and-cross-selling/econda/econda-cross-sell.html
-  - title: Econda - Exporting CSVs
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/personalization-and-cross-selling/econda/econda-exporting-csvs.html
-  - title: Econda - Frontend Integration
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/personalization-and-cross-selling/econda/econda-frontend-integration.html
+  - /docs/scos/user/technology-partners/201907.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda.html
 ---
 
 ## Partner Information

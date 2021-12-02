@@ -11,7 +11,7 @@ redirect_from:
   - /docs/scos/user/technology-partners/202005.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda-frontend-integration.html
 related:
   - title: Econda
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/personalization-and-cross-selling/econda/econda.html
+    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/personalization-and-cross-selling/econda.html
   - title: Econda - Exporting CSVs
     link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/personalization-and-cross-selling/econda/econda-exporting-csvs.html
   - title: Econda - Tracking

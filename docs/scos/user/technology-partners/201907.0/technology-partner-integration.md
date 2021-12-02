@@ -59,7 +59,7 @@ Please visit our [Partners Registry](https://spryker.com/find-a-partner/) for a 
 ### Customer Communication
 
 * [Dotdigital](/docs/scos/user/technology-partners/201907.0/marketing-and-conversion/customer-communication/dotdigital.html)
-* [Episerver](/docs/scos/user/technology-partners/201907.0/marketing-and-conversion/customer-communication/episerver/episerver.html)
+* [Episerver](/docs/scos/user/technology-partners/201907.0/marketing-and-conversion/customer-communication/episerver.html)
 * [Inxmail](/docs/scos/user/technology-partners/201907.0/marketing-and-conversion/customer-communication/inxmail.html)
 
 ### Customer Retention & Loyalty

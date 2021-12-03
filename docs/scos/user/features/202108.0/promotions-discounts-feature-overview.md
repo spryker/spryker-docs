@@ -139,7 +139,7 @@ Promotional product is a discount application type that discounts a particular p
 When a customer meets the conditions for a promotional product discount, a **Promotional products** section is displayed in the cart, allowing customers to add the available quantity of the discounted product to cart.
 ![Promotional product](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/promotional-product-frontend.png)
 
-A Back Office user selects the promotional product by entering an abstract product SKU in the Back Office. Also, they define the quantity of the product to be sold with a discount.
+A Back Office user selects the promotional product by entering an abstract product SKU in the Back Office. Also, they define the maximum quantity of the product to be sold with a discount.
 
 ![Collection - promotional product](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/collection-promotional-product.png)
 

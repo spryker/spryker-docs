@@ -3,13 +3,12 @@ title: Integrating Episerver
 description: Integrate Episerver in the Spryker Commerce OS
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/episerver-integration-into-project
-originalArticleId: 8852bd2c-599e-4f4b-9342-2cac18579da0
+originalLink: https://documentation.spryker.com/v6/docs/episerver-integration-into-project
+originalArticleId: 92aefb7c-6db4-4777-bd2f-7d18bddd53fb
 redirect_from:
-  - /2021080/docs/episerver-integration-into-project
-  - /2021080/docs/en/episerver-integration-into-project
-  - /docs/episerver-integration-into-project
-  - /docs/en/episerver-integration-into-project
+  - /v6/docs/episerver-integration-into-project
+  - /v6/docs/en/episerver-integration-into-project
+  - /docs/scos/user/technology-partners/202009.0/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
 related:
   - title: Episerver - Installation and Configuration
     link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html

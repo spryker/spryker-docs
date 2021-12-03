@@ -3,13 +3,12 @@ title: Episerver order reference commands
 description: Learn about the order reference commands for Episerver in Spryker.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/episerver-order-referenced-commands
-originalArticleId: e7a03c79-0815-4b92-963d-37675be9561a
+originalLink: https://documentation.spryker.com/v6/docs/episerver-order-referenced-commands
+originalArticleId: 292db95d-7a1e-4544-b985-e44315f1f0c9
 redirect_from:
-  - /2021080/docs/episerver-order-referenced-commands
-  - /2021080/docs/en/episerver-order-referenced-commands
-  - /docs/episerver-order-referenced-commands
-  - /docs/en/episerver-order-referenced-commands
+  - /v6/docs/episerver-order-referenced-commands
+  - /v6/docs/en/episerver-order-referenced-commands
+  - /docs/scos/user/technology-partners/202009.0/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-order-referenced-commands.html
 related:
   - title: Episerver - Integration into a project
     link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html

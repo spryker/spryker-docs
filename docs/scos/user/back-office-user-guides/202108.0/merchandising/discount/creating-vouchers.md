@@ -45,7 +45,7 @@ To create a discount voucher:
 
       The next step varies based on the selected calculator type:
 
-      1. *Fixed amount*: Enter the prices to be discounted.
+      1. *Fixed amount*: Enter the amounts (per currency and price mode, if applicable) to be discounted.
 
       2. *Percentage*: Enter the values (percentage) to be discounted.
 

@@ -271,7 +271,7 @@ Cart subtotal: $100
 
 **Discounts applied in priority order:**
 
-1. BUY5GET1 (100 priority): $100 - $3*1.00 or $3 = $97
+1. BUY4GET1 (100 priority): $100 - $3*1.00 or $3 = $97
 2. SPICE10 (100 priority): $97 - $30*0.10 or $3.00 = $94
 3. MEMBER5 (5000 priority): $94 - $94*0.05 or $4.70 = $89.30
 4. STORE5 (5000 priority): $89.30 - $94*0.05 or $4.70 = $84.60

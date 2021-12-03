@@ -94,7 +94,7 @@ For example, to display products in the Spryker shop, we need to import and prop
 Features affected by the ORM approach:
 
 - [Data import](/docs/scos/dev/sdk/data-import.html)
-- [Publish and synchronization](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html)
+- [Publish and Synchronization](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html)
 
 ### Database query optimization
 Database queries are the slowest parts of each application. They have different dependencies such as database engines, hardware, configurations, etc. Spryker prevents any database execution for popular endpoints like Home, PDP, Search. However, this preventive measure is not avoidable for some endpoints, for example, Cart or Checkout. There are several ways to make sure such endpoints are handling the database queries most effectively in terms of performance:
@@ -136,7 +136,7 @@ Publishers use different chunks to consume messages from queues. Even though the
 
 {% info_block warningBox %}
 
-Memory leaks must be carefully checked when increasing chunks, as the messages will be bigger.
+Carefully check for memory leaks when increasing chunks, as the messages will be bigger.
 
 {% endinfo_block %}
 
@@ -154,11 +154,9 @@ time vendor/bin/console queue:task:start publisher.product_abstract // Ouput 30.
 ### Cart and Checkout plugins
 As the Spryker boilerplate comes with most of the features enabled, make sure you clean up the unnecessary plugins from the Cart and Checkout plugin stack:
 
-- Cart plugins
-[suite/CartDependencyProvider.php at master · spryker-shop/suite ](https://github.com/spryker-shop/suite/blob/master/src/Pyz/Zed/Cart/CartDependencyProvider.php)
+- [Cart plugins](https://github.com/spryker-shop/suite/blob/master/src/Pyz/Zed/Cart/CartDependencyProvider.php)
  
-- Checkout plugins
-[suite/CheckoutDependencyProvider.php at master · spryker-shop/suite](https://github.com/spryker-shop/suite/blob/master/src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php)
+- [Checkout plugins](https://github.com/spryker-shop/suite/blob/master/src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php)
 
 ### Zed Calls
 Zed calls are necessary when it comes to executing a database-related operation like Cart and Checkout requests. As an RPC mechanism handles these calls, it is necessary to reduce the number of calls to maximum one call to Zed. You can achieve this by:

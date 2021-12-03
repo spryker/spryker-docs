@@ -4065,16 +4065,14 @@ entries:
     nested:
     - title: Coding guidelines
       nested:
-      - title: Code Quality
+      - title: Code quality
         url: /docs/scos/dev/guidelines/coding-guidelines/code-quality.html
-      - title: Code Architecture Guide
+      - title: Code architecture guide
         url: /docs/scos/dev/guidelines/coding-guidelines/code-architecture-guide.html
-      - title: Secure Coding Practices
+      - title: Secure coding practices
         url: /docs/scos/dev/guidelines/coding-guidelines/secure-coding-practices.html
       - title: Code style guide
         url: /docs/scos/dev/guidelines/coding-guidelines/code-style-guide.html
-    - title: Module Configuration Convention
-      url: /docs/scos/dev/guidelines/module-configuration-convention.html
     - title: Performance guidelines
       nested:
       - title: General performance guidelines
@@ -4106,11 +4104,13 @@ entries:
         url: /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html
       - title: Available test helpers
         url: /docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
-    - title: Project Development Guidelines
+    - title: Project development guidelines
       url: /docs/scos/dev/guidelines/project-development-guidelines.html
     - title: Data Processing Guidelines
-      url: /docs/scos/dev/guidelines/data-processing-guidelines.html
-    - title: Making Your Spryker Shop Secure
+      url: /docs/scos/dev/guidelines/data-processing-guidelines.html      
+    - title: Module configuration convention
+      url: /docs/scos/dev/guidelines/module-configuration-convention.html
+    - title: Making your Spryker shop secure
       url: /docs/scos/dev/guidelines/making-your-spryker-shop-secure.html
   - title: Best practices
     nested:

@@ -55,7 +55,7 @@ To create a discount voucher:
  3. Click **Next**, or select the *Conditions* tab to proceed.
  4. On the *Create new discount* page, in the *Conditions* tab, do the following:
     1. Select the **Apply when** conditions or click **Plain query** and enter the  query manually. See reference information of the [Conditions](#conditions) tab for more details.
-    2. Enter the value for the *THE DISCOUNT CAN BE APPLIED IF THE QUERY APPLIED FOR AT LEAST X ITEM(S).* field.
+    2. Enter the value for the *THE DISCOUNT CAN BE APPLIED IF THE QUERY APPLIES FOR AT LEAST X ITEM(S).* field.
 3. Click **Save** to create the new voucher.
 
 When you click **Save**, an additional tab named *Voucher Codes* appears. Here, you can generate, view, and export voucher codes (if they were already created).

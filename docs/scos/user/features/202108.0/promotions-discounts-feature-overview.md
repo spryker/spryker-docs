@@ -247,7 +247,7 @@ Cart subtotal: €500
 
 Subtotal: €500.00
 HELMET20: -€20.00
-HOCKEY10: -€4.80
+HOCKEY10: -€48.00
 STICK50: -€50.00
 
 Grand total: €382.00

@@ -354,7 +354,7 @@ Cart subtotal: €100
 | DISCOUNT NAME  | DESCRIPTION| DISCOUNT TYPE | DISCOUNT AMOUNT | DISCOUNT PRIORITY|  EXCLUSIVENESS | NOTES |
 | --- | --- | --- | --- | --- |--- |--- |
 |10SOCKS | 10% off Nike socks | Percentage | 10% | |Exclusive | Nike socks cost €40 |
-|15PANTS|Save €5 on all pants| Fixed amount | €5 | | Exclusive |  |
+|5PANTS|Save €5 on all pants| Fixed amount | €5 | | Exclusive |  |
 |SITE10|10% off everything in the store| Percentage | €10 | |  Non-exclusive | €10 | |
 
 In the presence of exclusive discounts, all non-exclusive discounts are excluded.

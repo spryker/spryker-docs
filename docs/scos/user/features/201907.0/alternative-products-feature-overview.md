@@ -17,7 +17,7 @@ For marketplace relations, **Alternative Products** are useful because for the M
 The **Alternative Products** feature allows the shop owner to set the alternatives for both abstract and concrete products in the **Back Office: Products > Products**.
 
 The schema below illustrates relations between the alternative products:
-![Database relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Alternative+Products/Alternative+Products+Feature+Overview/alternative-schema.png) 
+![Database relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Alternative+Products/Alternative+Products+Feature+Overview/alternative-schema.png)
 
 All the available alternative products will be shown on the abstract product details page, if one of the following occurs:
 
@@ -25,11 +25,13 @@ All the available alternative products will be shown on the abstract product det
 * [Discontinued Products](/docs/scos/user/features/{{page.version}}product-feature-overview/discontinued-products-overview.html) feature is enabled
 
 {% info_block infoBox %}
+
 Alternative products can be attached to any product, but will be displayed only if the product becomes "out of stock" or "Discontinued".
+
 {% endinfo_block %}
 
 ## Replacement for
 Upon entering the product details page for the suggested alternative product, a shop user will see that the current product is listed in **Replacement for** section:
-![Replacement for](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Alternative+Products/Alternative+Products+Feature+Overview/replacement-for.png) 
+![Replacement for](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Alternative+Products/Alternative+Products+Feature+Overview/replacement-for.png)
 
 <!-- Last review date: Mar 1, 2019 - by Ahmed Sabaa, Yuliia Boiko -->

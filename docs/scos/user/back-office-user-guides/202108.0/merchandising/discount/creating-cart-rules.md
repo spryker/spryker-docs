@@ -44,7 +44,7 @@ To create a cart rule discount:
 
         The next step varies based on the selected calculator type:
 
-          a. *Fixed amount*: Enter the prices to be discounted.
+          a. *Fixed amount*: Enter the amounts (per currency and price mode, if applicable) to be discounted.
           
           b. *Percentage*: Enter the values (percentage) to be discounted.
 

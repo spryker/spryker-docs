@@ -46,7 +46,7 @@ To create a cart rule discount:
 
           a. *Fixed amount*: Enter the amounts (per currency and price mode, if applicable) to be discounted.
           
-          b. *Percentage*: Enter the values (percentage) to be discounted.
+          b. *Percentage*: Enter the percent value to be discounted.
 
         {% endinfo_block %}
 

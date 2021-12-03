@@ -47,7 +47,7 @@ To create a discount voucher:
 
       1. *Fixed amount*: Enter the amounts (per currency and price mode, if applicable) to be discounted.
 
-      2. *Percentage*: Enter the values (percentage) to be discounted.
+      2. *Percentage*: Enter the percent value to be discounted.
 
       {% endinfo_block %}
 

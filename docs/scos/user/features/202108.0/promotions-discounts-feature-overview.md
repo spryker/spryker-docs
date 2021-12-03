@@ -174,7 +174,15 @@ A Back Office user defines calculation when [creating a voucher](/docs/scos/user
 
 ### Exclusive discount
 
-An exclusive discount is a discount that, when applied to a cart, discards all the other discounts applied to it. If a cart is eligible for multiple exclusive discounts, you can [prioritize](#discount-priority) the discounts to define which of the exclusive discounts should prevail over the others. See [LINK TO BO GUIDE] for details on how a Back Office user can set priorities for discounts.
+An exclusive discount is a discount that, when applied to a cart, discards all the other discounts applied to it.
+
+{% info_block infoBox "Promotional products and query string" %}
+
+[Promotional product](#promotional-product) discounts and [query string](#query-string) discounts are separate when it comes to exclusivity. These types of discounts exclude all other discounts only among each other. Promotional product discounts are not affected by exclusive query string discounts, and vice versa.
+
+{% endinfo_block %}
+
+If a cart is eligible for multiple exclusive discounts, you can [prioritize](#discount-priority) the discounts to define which of the exclusive discounts should prevail over the others. See [LINK TO BO GUIDE] for details on how a Back Office user can set priorities for discounts.
 
 If the exclusive discounts are not prioritized or have the same priorities, the highest-value discount is applied. See [Discount calculation logic](#discount-calculation-logic) for details and examples on how the discounts are calculated.
 
@@ -305,25 +313,7 @@ MEMBER5 (5000): $100 - $100*0.05 = $95
 In the presence of exclusive discounts, all non-exclusive discounts are excluded.
 Between the exclusive discounts, the discount with the higher priority is chosen.
 
-#### Scenario 4: Multiple non-exclusive, percentage discount calculation types. Executing discounts in priority order results in cart subtotal no longer satisfying conditions for one or more subsequent discounts.
-
-Cart subtotal: €100
-
-| DISCOUNT NAME|  DESCRIPTION|  DISCOUNT TYPE| DISCOUNT AMOUNT| DISCOUNT PRIORITY| EXCLUSIVENESS| NOTES|
-| --- | --- | --- | --- | --- |--- |--- |
-| 50SOCKS|  50% off Nike socks| Percentage| 50%|  100|  No| Nike socks cost €40|
-| 15PANTS|  15% off all white pants|  Percentage| 15%|100|  No| White pants cost €60|
-| SAVE20| 20% off purchases over €100|  Percentage| 20%|  300|  No| |
-| SITE5|  5% off everything in the store| Percentage| 5%| 9999| No| |
-
-**Discounts applied in priority order:**
-
-1. 50SOCKS (100 priority): €100 - €40*0.5 = €80
-2. 15PANTS (100 priority): €80 - €60*0.15 = €71
-3. SAVE20 (300 priority): No longer applies, because discounts with higher priorities have reduced the subtotal below the discount condition threshold of €100.
-4. SITE5: (9999 priority): €71 - €3.55 = €67.45
-
-#### Scenario 5: Non-exclusive, fixed amount and percentage discounts with the same priority values 
+#### Scenario 4: Non-exclusive, fixed amount and percentage discounts with the same priority values 
 
 Cart subtotal: €100
 
@@ -347,7 +337,7 @@ Subtotal: €100.00
 
 Grand total: €76.00
 
-#### Scenario 6: Exclusive and non-exclusive discounts without the priorities
+#### Scenario 5: Exclusive and non-exclusive discounts without the priorities
 
 Cart subtotal: €100
 
@@ -367,6 +357,25 @@ Subtotal: €100.00
 15PANTS: -€5
 
 Grand total: €95.00
+
+<!-- THIS SCENARIO IS NOT SUPPORTED YET. IT WILL BE SUPPORTED ONCE CC-15011 IS FIXED #### Scenario 6: Multiple non-exclusive, percentage discount calculation types. Executing discounts in priority order results in cart subtotal no longer satisfying conditions for one or more subsequent discounts.
+
+Cart subtotal: €100
+
+| DISCOUNT NAME|  DESCRIPTION|  DISCOUNT TYPE| DISCOUNT AMOUNT| DISCOUNT PRIORITY| EXCLUSIVENESS| NOTES|
+| --- | --- | --- | --- | --- |--- |--- |
+| 50SOCKS|  50% off Nike socks| Percentage| 50%|  100|  No| Nike socks cost €40|
+| 15PANTS|  15% off all white pants|  Percentage| 15%|100|  No| White pants cost €60|
+| SAVE20| 20% off purchases over €100|  Percentage| 20%|  300|  No| |
+| SITE5|  5% off everything in the store| Percentage| 5%| 9999| No| |
+
+**Discounts applied in priority order:**
+
+1. 50SOCKS (100 priority): €100 - €40*0.5 = €80
+2. 15PANTS (100 priority): €80 - €60*0.15 = €71
+3. SAVE20 (300 priority): No longer applies, because discounts with higher priorities have reduced the subtotal below the discount condition threshold of €100.
+4. SITE5: (9999 priority): €71 - €3.55 = €67.45
+-->
 
 ## Related Business User articles
 

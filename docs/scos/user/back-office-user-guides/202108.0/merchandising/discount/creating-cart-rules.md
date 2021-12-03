@@ -32,13 +32,13 @@ To create a cart rule discount:
     2. From the *DISCOUNT TYPE* drop-down list, select a cart rule.
     3. In the *NAME* field, specify the name for the discount.
     4. _Optional_: in the *DESCRIPTION* field, enter the description of the discount.
-    5. _Optional_: in the *PRIORITY* field, enter an integer value from 1 to 9999 for the discount priority. For reference information, in the Creating a voucher guide, see the [Discount Overview page](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#discount-overview-page) section.
-    6. Specify if the discount is exclusive. For reference information, in the Creating a voucher guide, see the [Discount Overview page](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#discount-overview-page) section.
+    5. _Optional_: in the *PRIORITY* field, enter an integer value from 1 to 9999 for the discount priority. For reference information, in the *Create new discount* reference, see [General information tab](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#general-information-tab).
+    6. Specify if the discount is exclusive. For reference information, in the *Create new discount* reference, see [General information tab](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#general-information-tab).
     7. Specify the validity interval (lifetime) of the discount.
 * Click **Next** or select the *Discount calculation* tab to proceed.
 
 * On the *Create Discount* page, in the *Discount calculation* tab, do the following:
-    1.  In the *CALCULATOR TYPE* drop-down, select either *Percentage* or *Fixed amount*. For reference information, in the Creating a voucher guide, see the [Discount calculation tab](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#discount-calculation-tab) section.
+    1.  In the *CALCULATOR TYPE* drop-down, select either *Percentage* or *Fixed amount*. For reference information, in the *Create new discount* reference, see the [Discount calculation tab](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#discount-calculation-tab) section.
 
         {% info_block warningBox "Note" %}
 
@@ -50,7 +50,7 @@ To create a cart rule discount:
 
         {% endinfo_block %}
 
-    2. Select the *DISCOUNT APPLICATION TYPE* and define what products the discount will be applied to. For reference information, in the Creating a voucher guide, see the [Discount calculation tab](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#discount-calculation-tab) section.
+    2. Select the *DISCOUNT APPLICATION TYPE* and define what products the discount will be applied to. For reference information, in the *Create new discount* reference, see the [Discount calculation tab](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#discount-calculation-tab) section.
  * Click **Next**, or select the **Conditions** tab to proceed.
  * On the *Create Discount* page, in the *Conditions* tab, do the following:
     1. Select the *APPLY WHEN* conditions or click **Plain query** and enter the query manually. For reference information, in the Creating a voucher guide, see the [Conditions](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#conditions) section.

@@ -34,12 +34,12 @@ To create a discount voucher:
     2. In the *DISCOUNT TYPE* drop-down, select **Voucher codes**.
     3. In the **NAME** field, specify the name for the voucher.
     4. _Optional_:in the **DESCRIPTION** field, enter the description of the voucher.
-    5. _Optional_: in the **PRIORITY** field, enter an integer value from 1 to 9999 for the discount voucher priority.
-    6. Specify if the voucher is exclusive.
+    5. _Optional_: in the **PRIORITY** field, enter an integer value from 1 to 9999 for the discount voucher priority. For reference information, see [General information tab](#general-information-tab).
+    6. Specify if the voucher is exclusive. For reference information, see [General information tab](#general-information-tab).
     7. Specify the validity interval (lifetime) of the voucher.
  1. Click **Next** or select the **Discount calculation** tab to proceed.
  2. In the *Discount calculation* tab, do the following:
-    1.  In the **CALCULATOR TYPE** drop-down, select either *Percentage* or *Fixed amount*..
+    1.  In the **CALCULATOR TYPE** drop-down, select either *Percentage* or *Fixed amount*. For reference information, see [Discount calculation tab](#discount-calculation-tab).
 
       {% info_block warningBox "Note" %}
 
@@ -125,7 +125,7 @@ The following table describes the attributes you enter and select in the *Genera
  |
 | PRIORITY | Defines [the discount priority](/docs/scos/user/features/202108.0/promotions-discounts-feature-overview.html#discount-priority). Represented as an integer value from 1 to 9999, 1 being the highest priority and 9999 the lowest. |
 | NON-EXCLUSIVE | Defines the discount exclusivity. Non-exclusive discounts can be redeemed in conjunction with other non-exclusive discounts.|
-| EXCLUSIVE | Defines the discount exclusivity. When a discount is exclusive, no other discounts may be applied in conjunction. When a cart is eligible for multiple exclusive discounts, the discount with the highest value to the customer is applied.  |
+| EXCLUSIVE | Defines the discount exclusivity. When a discount is exclusive, no other discounts may be applied in conjunction. When a cart is eligible for multiple exclusive discounts, the discount with the highest value to the customer is applied. The exception to this is promotional product discounts. Query string discounts and promotional product discounts exclude only among each other. Promotional product discounts are not affected by exclusive query string discounts, and vice versa.|
 | VALID FROM and VALID TO| Vouchers are redeemable/the cart rule is active between Valid From and Valid To dates, inclusive. E.g., a voucher can be redeemed/discount applies to the cart starting from 1/1/2018 until 31/12/2019.|
 
 {% info_block infoBox "Info" %}
@@ -139,6 +139,7 @@ The name and the description should be meaningful to help other Back Office user
 This section contains information you need to know when working with discount calculations in the *Discount calculation* tab.
 
 **CALCULATOR TYPE**
+
 The discount can be calculated in two ways:
 * *Percentage*: The discount is calculated as a percentage of the price of the discounted items. If selected, you will need to set the percentage value (e.g., 25)
 * *Fixed amount*: A fixed amount is discounted. If you select this type, you need to specify the amount (Gross, Net or Both) for each currency used in your store.
@@ -151,6 +152,7 @@ Example:
 | 50 €| Fixed amount | 10 €| 10 €| 40 €|
 
 **DISCOUNT APPLICATION TYPE**
+
 You can select one of the following options:
 * Query String
 * Promotional Product

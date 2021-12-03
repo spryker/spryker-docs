@@ -15,6 +15,8 @@ redirect_from:
   - /v5/docs/en/ht-add-new-shipment-method
   - /v4/docs/ht-add-new-shipment-method
   - /v4/docs/en/ht-add-new-shipment-method
+  - /v3/docs/ht-add-new-shipment-method
+  - /v3/docs/en/ht-add-new-shipment-method
   - /v2/docs/ht-add-new-shipment-method
   - /v2/docs/en/ht-add-new-shipment-method
   - /v1/docs/ht-add-new-shipment-method

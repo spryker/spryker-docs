@@ -25,7 +25,7 @@ template: concept-topic-template
 
 Spryker modules contain public and private APIs. While the updates of the public API always follow backward compatibility, the updates of the private API can break backward compatibility.
 
-The public API includes the enities like facade, plugin stack, dependency list and so on. The private API includes Business model, Factory, Dependency provider, Repository, and Entity manager.
+The public API includes the entities like facade, plugin stack, dependency list, and so on. Other entities are private API. This check covers part of private API: Business model, Factory, Dependency provider, Repository, and Entity manager.
 
 ### What is the nature of the upgradability error?
 Spryker's minor releases can break backward compatibility in the private API. For example, a method is renamed or removed. If you use this method on the project level, you can get an error during an update.

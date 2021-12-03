@@ -47,7 +47,7 @@ The incoming data is taken from the stream - the Middleware does not care about 
 
 ### How the Middleware Works
 
-The Middleware provides a console interface to allow job triggering and Jenkins integration. It is evoked by running the `middleware:process: run` command. The main parameter of the command is *-p* (process name) which defines the process to be started.
+The Middleware provides a console interface to allow job triggering and Jenkins integration. It is evoked by running the `middleware:process:run` command. The main parameter of the command is *-p* (process name) which defines the process to be started.
 
 The default implementation of the middleware constructor includes the interface, reading/writing from/to JSON, .csv, .xml formats, business logic of mapping, translation and validation (you can add your own translators and validators).
 

@@ -54,7 +54,7 @@ To create a cart rule discount:
  * Click **Next**, or select the **Conditions** tab to proceed.
  * On the *Create Discount* page, in the *Conditions* tab, do the following:
     1. Select the *APPLY WHEN* conditions or click **Plain query** and enter the query manually. For reference information, in the Creating a voucher guide, see the [Conditions](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#conditions) section.
-    2. Enter the value for *THE DISCOUNT CAN BE APPLIED IF THE QUERY APPLIED FOR AT LEAST X ITEM(S).* field.
+    2. Enter the value for *THE DISCOUNT CAN BE APPLIED IF THE QUERY APPLIES FOR AT LEAST X ITEM(S).* field.
 * Click **Save** to create the new discount.
 
 

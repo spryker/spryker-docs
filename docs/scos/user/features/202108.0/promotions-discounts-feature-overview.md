@@ -136,7 +136,7 @@ The product selection based on the query string is dynamic:
 
 Promotional product is a discount application type that discounts a particular product at a set quantity, enabling "buy X, get Y" promotions.
 
-When a promotional product is available to a customer, the discount name is not displayed in the overview section. Instead, the **Promotional products** section is displayed in the cart, allowing customers to add the available quantity of the product to cart.
+When a customer meets the conditions for a promotional product discount, a **Promotional products** section is displayed in the cart, allowing customers to add the available quantity of the discounted product to cart.
 ![Promotional product](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/promotional-product-frontend.png)
 
 A Back Office user selects the promotional product by entering an abstract product SKU in the Back Office. Also, they define the quantity of the product to be sold with a discount.

@@ -123,7 +123,7 @@ The following table describes the attributes you enter and select in the *Genera
 | NAME | A unique name that is displayed in the calculation section of the cart on the Storefront. Should be short, but descriptive. |
 | DESCRIPTION | A summary explaining the promotion. Displayed with eligible products where applicable.
  |
-| PRIORITY | Defines [the discount priority](/docs/scos/user/features/202108.0/promotions-discounts-feature-overview.html#discount-priority). Can be an integer value from 1 to 9999, 1 being the highest priority, 9999 - the lowest. |
+| PRIORITY | Defines [the discount priority](/docs/scos/user/features/202108.0/promotions-discounts-feature-overview.html#discount-priority). Represented as an integer value from 1 to 9999, 1 being the highest priority and 9999 the lowest. |
 | NON-EXCLUSIVE | Defines the discount exclusivity. Non-exclusive discounts can be redeemed in conjunction with other non-exclusive discounts.|
 | EXCLUSIVE | Defines the discount exclusivity. An exclusive discount can only be used on its own. You cannot apply other discounts with an exclusive one unless a higher exclusive discount is used. Then, the higher discount is redeemed.  |
 | VALID FROM and VALID TO| Vouchers are redeemable/the cart rule is active between Valid From and Valid To dates, inclusive. E.g., a voucher can be redeemed/discount applies to the cart starting from 1/1/2018 until 31/12/2019.|

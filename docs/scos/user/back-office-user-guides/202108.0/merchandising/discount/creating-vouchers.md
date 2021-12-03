@@ -125,7 +125,7 @@ The following table describes the attributes you enter and select in the *Genera
  |
 | PRIORITY | Defines [the discount priority](/docs/scos/user/features/202108.0/promotions-discounts-feature-overview.html#discount-priority). Represented as an integer value from 1 to 9999, 1 being the highest priority and 9999 the lowest. |
 | NON-EXCLUSIVE | Defines the discount exclusivity. Non-exclusive discounts can be redeemed in conjunction with other non-exclusive discounts.|
-| EXCLUSIVE | Defines the discount exclusivity. An exclusive discount can only be used on its own. You cannot apply other discounts with an exclusive one unless a higher exclusive discount is used. Then, the higher discount is redeemed.  |
+| EXCLUSIVE | Defines the discount exclusivity. When a discount is exclusive, no other discounts may be applied in conjunction. When a cart is eligible for multiple exclusive discounts, the discount with the highest value to the customer is applied.  |
 | VALID FROM and VALID TO| Vouchers are redeemable/the cart rule is active between Valid From and Valid To dates, inclusive. E.g., a voucher can be redeemed/discount applies to the cart starting from 1/1/2018 until 31/12/2019.|
 
 {% info_block infoBox "Info" %}

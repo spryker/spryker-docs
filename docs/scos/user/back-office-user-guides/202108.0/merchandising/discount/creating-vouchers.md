@@ -120,7 +120,7 @@ The following table describes the attributes you enter and select in the *Genera
 | --- | --- |
 |STORE RELATION  |Stores you wish the discount to be active in. Multiple stores can be selected.|
 | DISCOUNT TYPE | Drop-down list where you select either *Voucher code* or *Cart rule* discount type. |
-| NAME | Unique name that will be displayed to your customers. |
+| NAME | A unique name that is displayed in the calculation section of the cart on the Storefront. Should be short, but descriptive. |
 | DESCRIPTION | Unique description of the discount. |
 | PRIORITY | Defines [the discount priority](/docs/scos/user/features/202108.0/promotions-discounts-feature-overview.html#discount-priority). Can be an integer value from 1 to 9999, 1 being the highest priority, 9999 - the lowest. |
 | NON-EXCLUSIVE | Defines the discount exclusivity. Non-exclusive discounts can be redeemed in conjunction with other non-exclusive discounts.|

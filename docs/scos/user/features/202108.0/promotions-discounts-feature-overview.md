@@ -358,7 +358,7 @@ Cart subtotal: €100
 |SITE10|10% off everything in the store| Percentage | €10 | |  Non-exclusive | €10 | |
 
 In the presence of exclusive discounts, all non-exclusive discounts are excluded.
-Since the remaining exclusive discounts do not have priorities and the discount 15PANTS providers more free value than the discount 50SOCKS, this discount is applied.
+Since the remaining exclusive discounts do not have priorities and the discount 5PANTS provides more free value than the discount 10SOCKS, this discount is applied.
 
 **Calculation as displayed in cart:**
 

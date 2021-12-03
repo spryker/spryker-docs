@@ -1,5 +1,5 @@
 ---
-title: Spryker Architecture Performance Guidelines
+title: Architecture performance guidelines
 description: Learn about the bad and best architecture practices which can affect the performance of applications in the very end servers
 last_updated: Nov 26, 2021
 template: concept-topic-template
@@ -20,7 +20,7 @@ Let's consider an example illustrating the impact of a bad architecture design w
 ### Duplications of database queries
 During the project implementation, sometimes developers might execute similar queries that return the same result or subset of data from it in one transaction. Therefore, architects should ensure that the database interactions are set to the lowest possible number. They can achieve this by:
 
-* Merging several queries to one query with a bigger result (unfiltered).
+* Merging several queries into one query with a bigger result (unfiltered).
 * Aggregating the duplicate query to one query and sharing the result with the stack of the code execution (memory).
 
 {% info_block warningBox %}
@@ -31,7 +31,6 @@ Make sure you carefully check for memory leaks during the query optimizations, a
 
 
 ### Optimistic vs. pessimistic locking
-
 Sometimes, developers use explicit locks to prevent race conditions or other issues that impact performance due to the high traffic load. This happens because all requests need to wait for the lock, which turns the parallel request processing into sequential processing and can increase the response time of all the queued requests.
 
 Some of the pessimistic locking use cases are:
@@ -50,7 +49,6 @@ We recommend architects fulfill the requirements by providing a different soluti
 During large-scale data processing operations, there can occur performance drawbacks when it comes to object creations, hydrations, and mappings in the process. Therefore, we highly recommend architects use native language data structure instead of objects if possible, as this can reduce more than 30%-50% of CPU loads in the long run.
 
 ## Performance optimization in the Spryker architecture
-
 Below, you will find an analysis of the Spryker architecture and solutions for the most common performance challenges we had in several projects.
 
 ### Database queries in plugins
@@ -102,7 +100,7 @@ Features affected by the ORM approach:
 Database queries are the slowest parts of each application. They have different dependencies such as database engines, hardware, configurations, etc. Spryker prevents any database execution for popular endpoints like Home, PDP, Search. However, this preventive measure is not avoidable for some endpoints, for example, Cart or Checkout. There are several ways to make sure such endpoints are handling the database queries most effectively in terms of performance:
 
 - Cache result for the duplicate queries.
-- Aggregate several queries to only one query when it’s possible.
+- Aggregate several queries to only one query if possible.
 - Change single inserts to bulk inserts.
 - Break down heavy or slow queries into smaller queries and use PHP native functionalities for result calculations (like sorting, group by, filtering, validations, etc.).
 
@@ -110,10 +108,10 @@ Database queries are the slowest parts of each application. They have different 
 Spryker has different features and several configurable modules that need to be adjusted correctly to have the best performance and smooth execution in the applications. 
 
 ### Publish and Synchronization
-This feature is one of the most important infrastructure parts in Spryker. Therefore the configurations must be set correctly for it.
+This feature is one of the most important infrastructure parts in Spryker. Therefore, the configurations must be set correctly for it.
 
 #### Multiple publisher queues
-Publishers use queues to propagate events and let workers consume them to provide necessary data for our frontend services. Since Spryker uses RabbitMQ as a default option, it’s recommended to use multiple queues instead of one to spread loads between different queues. For more information about multiple publisher queues, see [Integrating multi-queue publish structure](/docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html).
+Publishers use queues to propagate events and let workers consume them to provide necessary data for our frontend services. Since Spryker uses RabbitMQ as a default option, we recommend using multiple queues instead of one to spread loads between different queues. For more information about multiple publisher queues, see [Integrating multi-queue publish structure](/docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html).
 
 #### Workers
 The default Spryker configuration comes with one worker per publisher queue. Nevertheless, you can increase this configuration to the maximum number of CPUs for a specific queue if other queues do not receive any loads. For example:
@@ -186,7 +184,7 @@ Make sure to check the following articles on how to optimize the performance of 
 - [Performance testing in staging environments](/docs/cloud/dev/spryker-cloud-commerce-os/performance-testing.html)
 
 ## Application performance and load tests
-For the best performance, before going live, it is highly recommended to perform all the necessary tests, as well as run CI and Monitoring tools.
+For the best performance, before going live, we highly recommend performing all the necessary tests, as well as run CI and Monitoring tools.
 
 ### Benchmark test
 Each project must have its benchmark tests for the API and Frontend shops before going live. Having these tests in place ensures that the project follows the best performance state for each request. You can use any tools for this type of test, for example:

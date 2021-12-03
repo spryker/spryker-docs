@@ -1,5 +1,5 @@
 ---
-title: Performance guidelines
+title: General performance guidelines
 description: This guideline explains how to optimize the server-side execution time.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/performance-guidelines
   - /v1/docs/performance-guidelines
   - /v1/docs/en/performance-guidelines
+  - /docs/scos/dev/guidelines/performance-guidelines.html
 related:
   - title: Web Profiler Widget for Yves
     link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-widget-for-yves.html

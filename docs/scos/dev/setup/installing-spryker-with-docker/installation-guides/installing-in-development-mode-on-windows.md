@@ -32,6 +32,7 @@ Follow the steps to install Spryker in Development mode:
 1. Open Ubuntu.
 2. Open a terminal.
 3. Create a new folder and navigate into it.
+
 {% info_block warningBox "Important" %}
 
 Don't use a folder, which is under Windows filesystem, because it will slow down all operations significantly (the reason is Ubuntu <-> Windows filesystem sync)
@@ -41,6 +42,7 @@ Wrong: /mnt/c/Users/jdoe/Desktop/project
 Correct: /home/jdoe/workspace/project
 
 {% endinfo_block %}
+
 4. Depending on the desired [Demo Shop](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2bb2c-demo-shops):
     * Clone the B2C repository:
 

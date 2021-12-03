@@ -43,7 +43,7 @@ See [Creating a Voucher](/docs/scos/user/back-office-user-guides/{{page.version}
 
 ## Cart rule
 
-A Cart rule is a discount that applies to a cart once all the [decision rules](#decision-rule) linked to the cart rule are fulfilled.
+A cart rule is a discount that applies to a cart once all the [decision rules](#decision-rule) linked to the cart rule are fulfilled.
 
 The cart rule is applied automatically. If the decision rules of a discount are fulfilled, the customer can see the discount upon entering the cart. Unlike for [voucher](#voucher), the **Clear all** and **Remove** actions are not displayed for cart rules.
 ![Cart rule](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/cart-cart-rule.png)

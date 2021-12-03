@@ -23,23 +23,20 @@ template: concept-topic-template
 
 ## A core method is used on the project level
 
-Spryker modules contain public and private APIs. While the updates of the public API always follow backward compatibility, the updates of the private API can break backward compatibility.
+Modules have public and private APIs. The public API includes the entities like facade, plugin stack, dependency list and so on. The private API includes Business model, Factory, Dependency provider, Repository, and Entity manager.
 
-The public API includes the enities like facade, plugin stack, dependency list and so on. The private API includes Business model, Factory, Dependency provider, Repository, and Entity manager.
-
-### What is the nature of the upgradability error?
-Spryker's minor releases can break backward compatibility in the private API. For example, a method is renamed or removed. If you use this method on the project level, you can get an error during an update.
+While public API updates always support backward compatibility, the private API updates can break backward compatibility. Minor releases can break backward compatibility in the private API. For example, a method is renamed or removed. If you use this method on the project level, you can get an error during an update.
 
 In this check, the Evaluator works with Factory, Dependency provider, Repository, and Entity manager.
 Errors related to this check contains prefix `IsCoreMethodUsedOnProjectLevel`.
 
 ### How can I avoid this error?
 
-To avoid the error, instead of using the default methods, introduce custom ones. Override the default methods in the private API.
+To avoid the error, override the existing methods with custom ones in the private API.
 
-### Example of code that can cause the upgradability errors
+### Example incompatible code
 
-`CustomerAccessUpdater` uses the `setContentTypesToInaccessible` method that was declared on the core level.
+`CustomerAccessUpdater` uses the `setContentTypesToInaccessible` method from the core level.
 
 ```php
 <?php
@@ -73,10 +70,12 @@ Pyz\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessUpdater
 
 ### Solution
 
-Copy the method from the core to the project level and rename it with a specific prefix.
+To resolve the error provided in the example, would do the following:
 
-#### Example of code achieving the same result but not causing upgradability errors
-We have to add a method to class and interface
+1. Copy the method from the core to the project level and rename, for example, by adding a prefix.
+
+2. Add the method to the class and interface:
+
 ```php
 src/Pyz/Zed/CustomerAccess/Persistence/CustomerAccessEntityManager.php
 /**
@@ -100,3 +99,5 @@ src/Pyz/Zed/CustomerAccess/Persistence/CustomerAccessEntityManagerInterface.php
  */
 public function setContentTypesToInaccessible(CustomerAccessTransfer $customerAccessTransfer): CustomerAccessTransfer;
 ```
+
+When the core method is overridden, re-run the Evalutor. The same error shouldn't be returned.

@@ -16,6 +16,8 @@ redirect_from:
   - /v5/docs/en/ht-setup-stores-with-multiple-locales
   - /v4/docs/ht-setup-stores-with-multiple-locales
   - /v4/docs/en/ht-setup-stores-with-multiple-locales
+  - /v3/docs/ht-setup-stores-with-multiple-locales
+  - /v3/docs/en/ht-setup-stores-with-multiple-locales
   - /v2/docs/ht-setup-stores-with-multiple-locales
   - /v2/docs/en/ht-setup-stores-with-multiple-locales
   - /v1/docs/ht-setup-stores-with-multiple-locales

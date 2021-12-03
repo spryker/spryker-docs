@@ -23,7 +23,7 @@ redirect_from:
 This document describes the prerequisites for installing Spryker in Docker on MacOS.
 
 
-## Minimum system requirements
+## System requirements
 
 Review the system and software requirements in the table and configure them using the following instructions.
 
@@ -39,27 +39,29 @@ Review the system and software requirements in the table and configure them usin
 ## Installing and configuring required software
 Follow the steps to install and configure the required software:
 1. Download and install [Docker Desktop (Mac)](https://desktop.docker.com/mac/stable/amd64/Docker.dmg).
+
 2. Accept the privilege escalation request "Docker Desktop needs privileged access.".
 {% info_block infoBox %}
 Signup for Docker Hub is not required.
 {% endinfo_block %}
 
-3. Go to ![whale](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+Install+Prerequisites+-+MacOS/whale-x.png) > **Preferences**  > **Command Line** and **Enable experimental features**.
+3. In the Docker Desktop, go to preferences by selecting the gear in the top right corner.
 
+4. In the *General* seciton of *Preferences*, clear the **Use Docker Compose V2** checkbox.
 
-4. Update Memory and Swap Limits:
+5. Update Memory and Swap Limits:
 
-    1. Go to ![whale](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+Install+Prerequisites+-+MacOS/whale-x.png) > **Preferences**  > **Resources** > **ADVANCED**.
+    1. Go to **Resources** > **ADVANCED**.
     2. Set **CPUs:** to "4" or higher.
     3. Set **Memory:** to "4.00 GB" or higher.
     4. Set **Swap:** to "2.00 GB" or higher.
     5. Set the desired **Disk image size:**.
     6. Select the desired **Disk image location**.
-    7. Click **Apply & Restart**.
+    7. Select **Apply & Restart**.
 
 {% info_block warningBox %}
 
-You can set lower **Memory:** and **Swap:** limit values. However, the default limits won't be sufficient to run the application, so make sure to increase them.
+You can select lower **Memory:** and **Swap:** values than those provided in the instructions. However, the default ones won't be sufficient to run the application.
 
 {% endinfo_block %}
 

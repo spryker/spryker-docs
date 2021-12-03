@@ -3,16 +3,6 @@ title: Episerver API
 description: Learn about the API requests for Episerver in Spryker.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/episerver-api-requests
-originalArticleId: 4f75a136-495f-40a9-a75e-156f6adade30
-redirect_from:
-  - /2021080/docs/episerver-api-requests
-  - /2021080/docs/en/episerver-api-requests
-  - /docs/episerver-api-requests
-  - /docs/en/episerver-api-requests
-related:
-  - title: Episerver - Installation and Configuration
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
 ---
 
 `\SprykerEco\Zed\Episerver\Business\Api\Adapter\EpiserverApiAdapter` contains all needed data for sending it to Episerver for events.

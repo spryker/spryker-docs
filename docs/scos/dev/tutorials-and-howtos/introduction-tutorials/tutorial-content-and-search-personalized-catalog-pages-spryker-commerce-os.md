@@ -16,6 +16,8 @@ redirect_from:
   - /v5/docs/en/t-content-search-personalized-catalog-page
   - /v4/docs/t-content-search-personalized-catalog-page
   - /v4/docs/en/t-content-search-personalized-catalog-page
+  - /v3/docs/t-content-search-personalized-catalog-page
+  - /v3/docs/en/t-content-search-personalized-catalog-page
   - /v2/docs/t-content-search-personalized-catalog-page
   - /v2/docs/en/t-content-search-personalized-catalog-page
   - /v1/docs/t-content-search-personalized-catalog-page

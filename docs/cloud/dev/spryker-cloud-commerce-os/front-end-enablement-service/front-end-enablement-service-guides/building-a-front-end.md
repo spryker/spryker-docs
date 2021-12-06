@@ -1,4 +1,8 @@
-# Building a front end
+---
+title: Building a front end
+description: Learn how to build a front end from scratch and publish it
+template: concept-topic-template
+---
 
 This tutorial describes how to build a front end from scratch using FeS.
 

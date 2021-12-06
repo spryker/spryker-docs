@@ -1,5 +1,8 @@
-# Front-end enablement service
-
+---
+title: Front-end enablement service
+description: Overview of the front-end enablement service
+template: concept-topic-template
+---
 
 ## What is FeS?
 

@@ -31,7 +31,7 @@ A picture with 2 products of the same SKU added
 With the search widget, a customer can always find the items that are available specifically to them as [Product Restriction](https://documentation.spryker.com/v4/docs/merchant-product-restrictions) are considered while searching. This means, that if a blacklist rule exists for a customer, the products that are added to that rule will not be displayed in the search results.
 
 {% info_block infoBox %}
-You can find more examples of product restriction use cases on the [Restricted Products Behavior](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-product-restrictions-feature-walkthrough/restricted-products-behavior.html
+You can find more examples of product restriction use cases on the [Restricted Products Behavior](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-product-restrictions-feature-walkthrough/restricted-products-behavior.html)
 {% endinfo_block %} page.)
 
 ## Shopping List Page
@@ -42,7 +42,8 @@ The search widget is available on the shopping list edit page:
 {% info_block infoBox %}
 In the empty shopping list, the customer can still add products with the help of the search widget.
 {% endinfo_block %}
-![Search widget demo](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/search-widget-demo.png) 
+
+![Search widget demo](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/shopping-list-page.png) 
 
 In comparison with Shopping Cart, for Shopping lists, the quantity that is being added via a search widget is not verified. That means that the customer can add products to a shopping list with any quantity, irrespective of the [quantity restrictions](/docs/scos/user/features/{{page.version}}/product-information-management/product-quantity-restrictions/product-quantity-restrictions.html) the products may have.
 

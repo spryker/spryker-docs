@@ -240,7 +240,7 @@ On the *Create Content Item: File List* page, you can do the following:
 Make sure to click **Save** before clicking **Back to Content Items** or going to any other Back Office section. Otherwise, the changes are discarded.
 
 {% endinfo_block %}
-***
+
 **What's next?**
 The content item is created. Now, you can add it to a CMS block.
 

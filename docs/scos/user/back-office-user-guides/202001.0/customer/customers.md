@@ -27,8 +27,10 @@ The customer registration can be completed only by the customer by setting up th
 {% info_block infoBox %}
 This is how a Spryker Admin interacts with other departments to build customers' accounts with a specific set of access rules. 
 {% endinfo_block %}
-***
+
+
 **What's next?**
+
 To know how to manage customers, customer groups and customer access, see the following articles:
 
 * [Managing Customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customers/customers-customer-access-customer-groups/managing-customers.html), [Managing Customer Addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customer-addresses.html)

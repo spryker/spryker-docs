@@ -20,13 +20,13 @@ To create a new company record, do the following:
 2. On the **Create Company** page, enter the name of the company you would like to create.
 3. Click **Save**. 
     The new created company will appear in the _List of the Companies_ table on the **Companies** page.
-{% info_block errorBox "Important" %}
-Once the company is created, one business unit for it is created by default. This is considered to be headquarters and can be managed in the same ways as the other business units. See [Managing Company Units](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-units.html
-{% endinfo_block %} for more details.)
-***
+  {% info_block errorBox "Important" %}
+  Once the company is created, one business unit for it is created by default. This is considered to be headquarters and can be managed in the same ways as the other business units. See [Managing Company Units](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-units.html) for more details.
+  {% endinfo_block %} 
+
 The companies can be managed by triggering certain actions in the _Actions_ column in the _List of Companies_ table on the **Companies** page. 
 Specifically, company roles can be **Edited**, **De(Activated)**, **Approved**, and **Denied**.
-***
+
 ## Managing a Company
 
 Right after the Company has been created whether in the shop application or in the Back Office, it appears with **Pending** status in the **List of Companies** table. To become active and available to be used, it needs to be approved and then activated.

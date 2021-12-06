@@ -1076,11 +1076,14 @@ entries:
           - "201811.0"
           - "201903.0"
           - "201907.0"
+          - "202001.0"
           - "202009.0"
           - "202108.0"
           nested:
           - title: Creating abstract products and product bundles
             url: /docs/scos/user/back-office-user-guides/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html
+            include_versions:
+            - "202001.0"
           - title: Adding scheduled prices to abstract products
             url: /docs/scos/user/back-office-user-guides/catalog/products/abstract-products/adding-scheduled-prices-to-abstract-products.html
             include_versions:

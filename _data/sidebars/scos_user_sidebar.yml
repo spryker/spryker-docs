@@ -2621,6 +2621,8 @@ entries:
           url: /docs/scos/user/technology-partners/payment-partners/adyen/adyen-provided-payment-methods.html
         - title: Adyen - Filtering Payment Methods
           url: /docs/scos/user/technology-partners/payment-partners/adyen/adyen-filtering-payment-methods.html
+      - title: Informa Solutions
+        url: /docs/scos/user/technology-partners/payment-partners/informa-solutions.html
       - title: Computop
         url: /docs/scos/user/technology-partners/payment-partners/computop/computop.html
         include_versions:

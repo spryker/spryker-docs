@@ -15,6 +15,8 @@ redirect_from:
   - /v5/docs/en/ht-customize-http-headers-in-ajax-request
   - /v4/docs/ht-customize-http-headers-in-ajax-request
   - /v4/docs/en/ht-customize-http-headers-in-ajax-request
+  - /v3/docs/ht-customize-http-headers-in-ajax-request
+  - /v3/docs/en/ht-customize-http-headers-in-ajax-request
   - /v2/docs/ht-customize-http-headers-in-ajax-request
   - /v2/docs/en/ht-customize-http-headers-in-ajax-request
   - /v1/docs/ht-customize-http-headers-in-ajax-request

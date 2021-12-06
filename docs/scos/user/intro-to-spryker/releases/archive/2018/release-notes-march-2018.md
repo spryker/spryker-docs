@@ -167,6 +167,6 @@ Previously, there was an issue with the existing tax rates in the Administration
 The following content has been added to the Academy:
 
 <!--* Feature List-->
-* [Testing Concepts](/docs/scos/dev/guidelines/testing-concepts.html)
+* [Testing Concepts](/docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html)
 
 Your feedback would be highly appreciated. Please help us understand what you need from the Spryker Academy by filling out a very short [survey](https://docs.google.com/forms/d/1_vZg0lfqq24Qf9-fQhU50NgsEBy4eDqnDyx7gKz9Faw/edit).

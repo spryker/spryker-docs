@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/publish-and-synchronization-testing
   - /v6/docs/publish-and-synchronization-testing
   - /v6/docs/en/publish-and-synchronization-testing
+  - /docs/scos/dev/guidelines/testing/publish-and-synchronization-testing.html
 ---
 
 Publish & Synchronize (P&S) is an asynchronous process of changing data available to customers by pushing the data into storage, for example, Redis, and making it searchable, for example, with Elasticsearch. Due to its asynchronous nature, it is not easy to test the full process while developing.
@@ -26,11 +27,11 @@ For a better testing experience, Spryker provides some helpers that turn this as
 
 The main helpers involved in the P&S testing are:
 
-- [PublishAndSynchronizeHelper](/docs/scos/dev/guidelines/testing/available-test-helpers.html#publishandsynchronizehelper)
-- [EventBehaviorHelper](/docs/scos/dev/guidelines/testing/available-test-helpers.html#eventbehaviorhelper)
-- [QueueHelper](/docs/scos/dev/guidelines/testing/available-test-helpers.html#queuehelper)
-- [StorageHelper](/docs/scos/dev/guidelines/testing/available-test-helpers.html#storagehelper)
-- [SearchHelper](/docs/scos/dev/guidelines/testing/available-test-helpers.html#searchhelper)
+- [PublishAndSynchronizeHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#publishandsynchronizehelper)
+- [EventBehaviorHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#eventbehaviorhelper)
+- [QueueHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#queuehelper)
+- [StorageHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#storagehelper)
+- [SearchHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#searchhelper)
 
 ## P&S testing Storage
 Let's test that the relevant data of a saved entity is available in the Storage, for example, in Redis.
@@ -45,11 +46,11 @@ Since we work with the real database, we execute one test for:
 To prepare for the test, do the following:
 
 - Create a `Persistence` test suite for your `*Storage` module.
-- Besides some other [helpers](/docs/scos/dev/guidelines/testing/test-helpers.html), add the necessary P&S helpers:
-    - [PublishAndSynchronizeHelper](/docs/scos/dev/guidelines/testing/available-test-helpers.html#publishandsynchronizehelper)
-    - [EventBehaviorHelper](/docs/scos/dev/guidelines/testing/available-test-helpers.html#eventbehaviorhelper)
-    - [QueueHelper](/docs/scos/dev/guidelines/testing/available-test-helpers.html#queuehelper)
-    - [StorageHelper](/docs/scos/dev/guidelines/testing/available-test-helpers.html#storagehelper)
+- Besides some other [helpers](/docs/scos/dev/guidelines/testing-guidelines/test-helpers.html), add the necessary P&S helpers:
+    - [PublishAndSynchronizeHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#publishandsynchronizehelper)
+    - [EventBehaviorHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#eventbehaviorhelper)
+    - [QueueHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#queuehelper)
+    - [StorageHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#storagehelper)
 - Add the `PublishAndSynchronizeTest` class
 
 This being done, you can start testing the entire process.
@@ -91,11 +92,11 @@ Since we work with the real database, we execute one test for:
 ### Preparation:
 To prepare for the test, do the following:
 - Create a `Persistence` test suite for your `*Search` module
-- Besides some other [helpers](/docs/scos/dev/guidelines/testing/test-helpers.html), add the necessary P&S helpers:
-    - [PublishAndSynchronizeHelper](/docs/scos/dev/guidelines/testing/available-test-helpers.html#publishandsynchronizehelper)
-    - [EventBehaviorHelper](/docs/scos/dev/guidelines/testing/available-test-helpers.html#eventbehaviorhelper)
-    - [QueueHelper](/docs/scos/dev/guidelines/testing/available-test-helpers.html#queuehelper)
-    - [SearchHelper](/docs/scos/dev/guidelines/testing/available-test-helpers.html#searchhelper)
+- Besides some other [helpers](/docs/scos/dev/guidelines/testing-guidelines/test-helpers.html), add the necessary P&S helpers:
+    - [PublishAndSynchronizeHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#publishandsynchronizehelper)
+    - [EventBehaviorHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#eventbehaviorhelper)
+    - [QueueHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#queuehelper)
+    - [SearchHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#searchhelper)
 - Add the `PublishAndSynchronizeTest` class
 
 This being done, you can start testing the entire process.

@@ -14,9 +14,10 @@ redirect_from:
   - /v6/docs/en/test-helpers
   - /v5/docs/test-helper
   - /v5/docs/en/test-helper
+  - /docs/scos/dev/guidelines/testing/test-helpers.html
 ---
 
-[Codeception](https://codeception.com) provides so-called modules, which are *helpers* used for building your tests. These helpers allow you to hook into the lifecycle of tests and get handy methods available wherever the helper is enabled. Codeception and Spryker provide a lot of ready to use helpers. Checkout [Available Test Helpers](/docs/scos/dev/guidelines/testing/available-test-helpers.html) for information on some of them.
+[Codeception](https://codeception.com) provides so-called modules, which are *helpers* used for building your tests. These helpers allow you to hook into the lifecycle of tests and get handy methods available wherever the helper is enabled. Codeception and Spryker provide a lot of ready to use helpers. Checkout [Available Test Helpers](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html) for information on some of them.
 
 Basically, almost every Spryker module provides one or more helpers. The helpers can be found in the `tests/Organization/Application/Module/_support/Helper/*` directory. For example, check out the [helper of the Router module](https://github.com/spryker/router/tree/master/tests/SprykerTest/Zed/Router/_support/Helper).
 
@@ -115,9 +116,9 @@ class YourHelper extends Module
 }
 ```
 ## Next Steps
-* [Set up an organization of your tests](/docs/scos/dev/guidelines/testing/setting-up-tests.html).
-* Learn about the [available test helpers](/docs/scos/dev/guidelines/testing/available-test-helpers.html).
-*  Learn about the [console commands you can use to execute your tests](/docs/scos/dev/guidelines/testing/executing-tests.html).
-* [Configure data builders to create transfers your tests](/docs/scos/dev/guidelines/testing/data-builders.html).
-* [Generate code coverage report for your tests](/docs/scos/dev/guidelines/testing/code-coverage.html).
-* Learn about the [testing best practices](/docs/scos/dev/guidelines/testing/testing-best-practices.html).
+* [Set up an organization of your tests](/docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html).
+* Learn about the [available test helpers](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html).
+*  Learn about the [console commands you can use to execute your tests](/docs/scos/dev/guidelines/testing-guidelines/executing-tests.html).
+* [Configure data builders to create transfers your tests](/docs/scos/dev/guidelines/testing-guidelines/data-builders.html).
+* [Generate code coverage report for your tests](/docs/scos/dev/guidelines/testing-guidelines/code-coverage.html).
+* Learn about the [testing best practices](/docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html).

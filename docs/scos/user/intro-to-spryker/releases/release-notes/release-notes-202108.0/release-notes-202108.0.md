@@ -249,7 +249,7 @@ We have done a complete revamp of the Spryker external libraries where we are de
 
 * [Symfony 5 integration](/docs/scos/dev/technical-enhancement-integration-guides/integrating-symfony-5.html)
 * [Chromium browser for tests](/docs/scos/dev/technical-enhancement-integration-guides/integrating-chromium-browser-for-tests.html)
-* [Test framework](/docs/scos/dev/guidelines/testing/test-framework.html)
+* [Test framework](/docs/scos/dev/guidelines/testing-guidelines/test-framework.html)
 * [Migrating from Twig v1 to Twig v3](/docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html)
 * [Supported versions of PHP](/docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html)
 
@@ -265,7 +265,7 @@ We are making available a **testing infrastructure** specifically for the Publis
 We have also extended the testing framework so that you can include your tests.
 
 #### Documentation
-[Test framework](/docs/scos/dev/guidelines/testing/test-framework.html)
+[Test framework](/docs/scos/dev/guidelines/testing-guidelines/test-framework.html)
 
 ### Transfer strict mode
 We have introduced the **strict mode** and type hints for transfer objects in function arguments and return types. This allows for safer and cleaner code, raises the code legibility and the checking capacity of our validation tools. We maintain the flexibility to define as Strict, specific transfers or even fields within transfers.

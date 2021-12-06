@@ -4101,52 +4101,55 @@ entries:
       url: /docs/scos/dev/architecture/programming-concepts.html
   - title: Guidelines
     nested:
-    - title: Coding Guidelines
+    - title: Coding guidelines
       nested:
-      - title: Code Quality
+      - title: Code quality
         url: /docs/scos/dev/guidelines/coding-guidelines/code-quality.html
-      - title: Code Architecture Guide
+      - title: Code architecture guide
         url: /docs/scos/dev/guidelines/coding-guidelines/code-architecture-guide.html
-      - title: Secure Coding Practices
+      - title: Secure coding practices
         url: /docs/scos/dev/guidelines/coding-guidelines/secure-coding-practices.html
       - title: Code style guide
         url: /docs/scos/dev/guidelines/coding-guidelines/code-style-guide.html
-    - title: Module Configuration Convention
-      url: /docs/scos/dev/guidelines/module-configuration-convention.html
     - title: Performance guidelines
-      url: /docs/scos/dev/guidelines/performance-guidelines.html
-    - title: Testing Concepts
-      url: /docs/scos/dev/guidelines/testing-concepts.html
-    - title: Testing
+      nested:
+      - title: General performance guidelines
+        url: /docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html
+      - title: Architecture performance guidelines
+        url: /docs/scos/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
+      - title: Front-end performance guidelines
+        url: /docs/scos/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
+    - title: Testing guidelines
+      url: /docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
       nested:
       - title: Setting up Tests
-        url: /docs/scos/dev/guidelines/testing/setting-up-tests.html
+        url: /docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
       - title: Publish and Synchronization testing
-        url: /docs/scos/dev/guidelines/testing/publish-and-synchronization-testing.html
+        url: /docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html
       - title: Test Helpers
-        url: /docs/scos/dev/guidelines/testing/test-helpers.html
+        url: /docs/scos/dev/guidelines/testing-guidelines/test-helpers.html
       - title: Testify
-        url: /docs/scos/dev/guidelines/testing/testify.html
+        url: /docs/scos/dev/guidelines/testing-guidelines/testify.html
       - title: Executing Tests
-        url: /docs/scos/dev/guidelines/testing/executing-tests.html
+        url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests.html
       - title: Test framework
-        url: /docs/scos/dev/guidelines/testing/test-framework.html
+        url: /docs/scos/dev/guidelines/testing-guidelines/test-framework.html
       - title: Code Coverage
-        url: /docs/scos/dev/guidelines/testing/code-coverage.html
+        url: /docs/scos/dev/guidelines/testing-guidelines/code-coverage.html
       - title: Data Builders
-        url: /docs/scos/dev/guidelines/testing/data-builders.html
+        url: /docs/scos/dev/guidelines/testing-guidelines/data-builders.html
       - title: Testing Best Practices
-        url: /docs/scos/dev/guidelines/testing/testing-best-practices.html
+        url: /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html
       - title: Available test helpers
-        url: /docs/scos/dev/guidelines/testing/available-test-helpers.html
-    - title: Project Development Guidelines
+        url: /docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
+    - title: Project development guidelines
       url: /docs/scos/dev/guidelines/project-development-guidelines.html
     - title: Data Processing Guidelines
-      url: /docs/scos/dev/guidelines/data-processing-guidelines.html
-    - title: Making Your Spryker Shop Secure
+      url: /docs/scos/dev/guidelines/data-processing-guidelines.html      
+    - title: Module configuration convention
+      url: /docs/scos/dev/guidelines/module-configuration-convention.html
+    - title: Making your Spryker shop secure
       url: /docs/scos/dev/guidelines/making-your-spryker-shop-secure.html
-    - title: Front-end performance guidelines
-      url: /docs/scos/dev/guidelines/front-end-performance-guidelines.html
   - title: Best practices
     nested:
     - title: Basic SEO techniques to use in your project

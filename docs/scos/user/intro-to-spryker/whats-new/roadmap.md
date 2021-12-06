@@ -37,6 +37,8 @@ The roadmap contains features and not architectural items, enhancements, technol
 
 ## Spryker Commerce OS
 
+<div class="width-100">
+
 | FEATURE/ENHANCEMENT | DESCRIPTION |
 | --- | --- |
 |Configurable product | Support for products that need to be configured before the purchase:<ul><li>Interfaces to launch a 3rd party configurator from product details page</li><li>Attach/handover results of configuration to a cart item and persist in the order</li><li>A configurator can override product prices</li><li>Configurable product feature could be integrated with different CPQ systems (Configure, Price, Quote)</li></ul> |
@@ -48,8 +50,12 @@ The roadmap contains features and not architectural items, enhancements, technol
 |API enhancements| <ul><li>New front-end APIs for B2C and B2B</li><li>OAuth 2.0 implementation</li><li>Back-end APIs</li></ul>|
 |Back-Office UI improvements | <ul><li>Backoffice UI optimized for productivity</li><li>Better search and filter options</li><li>Bulk actions support</li><li>Built on atomic design principals</li><li>Easy to extend and use</li></ul> |
 
+</div>
+
 
 ## Spryker Cloud Commerce OS
+
+<div class="width-100">
 
 | FEATURE/ENHANCEMENT | DESCRIPTION |
 | --- | --- |
@@ -58,7 +64,11 @@ The roadmap contains features and not architectural items, enhancements, technol
 |Data integration plattform|<ul><li>**Middleware as a Service** - allows you to connect to different applications in providing multiple standards and functions</li><li>**Resource management** - host and run your own applications and business logic</li><li>**Speed** - create integrations without having to write custom code for each new data integration.</li></ul>|
 |Upgradability|<ul><li>**Speed** - spend less time on upgrading to new modules and features.</li><li>**Dependency checks** - allow you to quickly and seamlessly apply new Spryker capabilities.</li><li>**Flexibility** - get full benefits from the Spryker flexibility and adapt to ever changing market conditions.</li></ul>|
 
+</div>
+
 ## Spryker Marketplace Suite
+
+<div class="width-100">
 
 | FEATURE/ENHANCEMENT | DESCRIPTION |
 | --- | --- |
@@ -70,7 +80,11 @@ The roadmap contains features and not architectural items, enhancements, technol
 |Merchant Portal |The Merchants can:<ul><li>Create their own offers for products already listed in the Marketplace</li><li>Create their own sets of products, including descriptions, images, etc.</li><li>Define prices, stock availability, and validity dates for the offers and products</li><li>Manage existing offers and products in the Merchant Portal</li><li>Contact customers directly in case of issues</li><li>Manage the status of their incoming and shipped orders</li></ul>|
 | Back Office for the Operator |The Operator can: <ul><li>Ensure compliance with the Marketplace guidelines by managing Merchants in the Back Office </li><li>Manually approve Merchants, their Offers, Products, and Prices</li></ul>|
 
+</div>
+
 ## Spryker Unified Commerce Suite
+
+<div class="width-100">
 
 | FEATURE/ENHANCEMENT | DESCRIPTION |
 | --- | --- |
@@ -80,18 +94,25 @@ The roadmap contains features and not architectural items, enhancements, technol
 
 ## FeS
 
+<div class="width-100">
+
 | FEATURE/ENHANCEMENT | DESCRIPTION |
 | --- | --- |
 | VueStorefront: State-of-the-Art PWA integrated with Spryker |The most-used PWA in the world directly integrated with Spryker as alternative frontend: <ul><li>Many powerful views and tools</li>Customizable<li>State of the art mobile friendly</li><li>App-like experience</li></ul>|
 |Frontastic: PWA to empower the marketing people | "Frontend-as-a-Service" as the new PWA delivery: <ul><li>Easy and fast setup</li><li>Powerful platform for marketing people to structure and edit any aspect of a front end</li><li>Operated in the cloud</li></ul>|
 
+</div>
 
 ## App Store
+
+<div class="width-100">
 
 | FEATURE/ENHANCEMENT | DESCRIPTION |
 | --- | --- |
 | Making integrations simpler | The App Store will make creating integrations faster and make it fundamentally easier to integrate them into a project:<ul><li>Easier integrations: no or low code</li><li>3rd party contribution with apps and services</li><li>Transactional business model for integration usage</li></ul> |
 |Connecting instead of installing integrations to SCCOS | Integrations will be hosted independently of SCCOS and will not have to be integrated into code, but connected to: <ul><li>Spryker will host integrations as PBCs</li><li>Integrations will be updated and maintained by Spryker or app providers</li><li>Will only work with SCCOS</li><li>Customizations are possible and must be maintained by projects</li></ul> |
 | Accessing the App Store | App Store portal catalog will be a standalone application available via: <ul><li>SCCOS Back Office</li><li>Spryker Website (read only)</li></ul> |
+
+</div>
 
 Check out and [download the full version of the roadmap](https://hubs.ly/H0PdRfB0).

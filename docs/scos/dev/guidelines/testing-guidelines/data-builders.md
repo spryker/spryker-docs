@@ -14,6 +14,7 @@ redirect_from:
   - /v6/docs/en/data-builders
   - /v5/docs/data-builder
   - /v5/docs/en/data-builders
+  - /docs/scos/dev/guidelines/testing/data-builders.html
 ---
 
 Data builders help you create transfer objects for your tests. Instead of preparing transfers each time you need them, data builders do the work for you. Data builders use the [Faker library](https://github.com/fzaninotto/Faker).

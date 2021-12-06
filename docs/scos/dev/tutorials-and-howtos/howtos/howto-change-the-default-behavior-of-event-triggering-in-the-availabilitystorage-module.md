@@ -16,6 +16,8 @@ redirect_from:
   - /v5/docs/en/ht-change-default-behaviour-of-event-trigerring-in-availability-storage-module
   - /v4/docs/ht-change-default-behaviour-of-event-trigerring-in-availability-storage-module
   - /v4/docs/en/ht-change-default-behaviour-of-event-trigerring-in-availability-storage-module
+  - /v3/docs/ht-change-default-behaviour-of-event-trigerring-in-availability-storage-module
+  - /v3/docs/en/ht-change-default-behaviour-of-event-trigerring-in-availability-storage-module
   - /v2/docs/ht-change-default-behaviour-of-event-trigerring-in-availability-storage-module
   - /v2/docs/en/ht-change-default-behaviour-of-event-trigerring-in-availability-storage-module
   - /v1/docs/ht-change-default-behaviour-of-event-trigerring-in-availability-storage-module

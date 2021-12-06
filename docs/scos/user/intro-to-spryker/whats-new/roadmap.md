@@ -78,7 +78,7 @@ The roadmap contains features and not architectural items, enhancements, technol
 |Retail location profile |<ul><li>Each retail location has a profile that defines its location, open hours, and contact information. It is implemented using the Merchant Profile functionality of Spryker’s Marketplace.</li><li>Retail location information is also displayed in the storefront.</li><li>Employee of the store can login into the Merchant Portal to manage their orders or modify pricing and availability.</li></ul>|
 |Store Locator |<ul><li>Customer can search for retail locations near her and select which store she wants to visit</li><li>Customer can search for location based on product availability</li><li>Customers can save their favorite location</li></ul>|
 
-## FaaS
+## FeS
 
 | FEATURE/ENHANCEMENT | DESCRIPTION |
 | --- | --- |

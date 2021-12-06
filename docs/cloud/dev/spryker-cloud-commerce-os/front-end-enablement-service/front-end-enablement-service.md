@@ -2,9 +2,9 @@
 
 This document describes the following:
 
-* What FAAS is
-* What the purpose of FAAS is
-* Who the users of FAAS are
-* How FAAS works, its architecture
-* What projects can use FAAS
-* Provides links to other FAAS related docs
+* What FeS is
+* What the purpose of FeS is
+* Who the users of FeS are
+* How FeS works, its architecture
+* What projects can use FeS
+* Provides links to other FeS related docs

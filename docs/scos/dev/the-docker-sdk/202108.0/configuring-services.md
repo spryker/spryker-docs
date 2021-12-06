@@ -19,22 +19,7 @@ related:
 
 
 
-This document describes configuration options of the services shipped with Spryker in Docker by default.  Find the list of the services below:
-
-* Database
-* ElasticSearch
-* Kibana UI
-* RabbitMQ
-* Swagger UI
-* Redis
-* Redis GUI
-* MailHog
-* Blackfire
-* New Relic
-* WebDriver
-* Dashboard
-* Tideways
-
+This document describes configuration options of the services shipped with Spryker in Docker by default.
 
 {% info_block infoBox %}
 

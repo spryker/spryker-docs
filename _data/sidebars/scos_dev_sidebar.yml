@@ -4070,6 +4070,12 @@ entries:
           url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/installing-and-integrating-minubo.html
           include_versions:
           - "202108.0"
+    - title: Marketing and conversion
+      nested:
+        - title: Operation tools, monitoring, legal, etc.
+          nested:
+            - title: Configuring Loggly
+              url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/configuring-loggly.html
   - title: Architecture
     url: /docs/scos/dev/architecture/architecture.html
     nested:

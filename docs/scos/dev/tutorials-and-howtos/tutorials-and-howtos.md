@@ -18,6 +18,8 @@ redirect_from:
   - /v5/docs/en/about-tutorials
   - /v4/docs/about-tutorials
   - /v4/docs/en/about-tutorials
+  - /v3/docs/about-tutorials
+  - /v3/docs/en/about-tutorials
   - /v2/docs/about-tutorials
   - /v2/docs/en/about-tutorials
   - /v1/docs/about-tutorials

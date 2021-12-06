@@ -16,6 +16,8 @@ redirect_from:
   - /v5/docs/en/t-cms
   - /v4/docs/t-cms
   - /v4/docs/en/t-cms
+  - /v3/docs/t-cms
+  - /v3/docs/en/t-cms
   - /v2/docs/t-cms
   - /v2/docs/en/t-cms
   - /v1/docs/t-cms

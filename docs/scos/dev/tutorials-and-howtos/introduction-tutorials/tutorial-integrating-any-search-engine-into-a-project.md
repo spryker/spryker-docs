@@ -1,6 +1,6 @@
 ---
 title: Tutorial - Integrating any search engine into a project
-description: Learn how to integrate any external search engine instead of the default Elasticsearch
+description: Learn how to integrate any external search engine instead of the default Elasticsearch.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/tutorial-integrating-any-search-engine

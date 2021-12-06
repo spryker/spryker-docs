@@ -3,22 +3,14 @@ title: Integrating Episerver
 description: Integrate Episerver in the Spryker Commerce OS
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/episerver-integration-into-project
-originalArticleId: 8852bd2c-599e-4f4b-9342-2cac18579da0
-redirect_from:
-  - /2021080/docs/episerver-integration-into-project
-  - /2021080/docs/en/episerver-integration-into-project
-  - /docs/episerver-integration-into-project
-  - /docs/en/episerver-integration-into-project
-related:
-  - title: Episerver - Installation and Configuration
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
 ---
 
 This article provides step-by-step instructions on integrating the Episerver module into your project.
 
 ## Prerequisites
 Prior to integrating Episerver into your project, make sure you [installed and configured](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html) the Episerver module.
+
+
 
 ## Customer Registration / Reset Password / Reset Rassword Confirm Event
 
@@ -248,7 +240,7 @@ interface NewsletterPageToNewsletterClientInterface extends SprykerNewsletterPag
 
 Create a route for our controller. Here's an example:
 
-**NewsletterPageRouteProviderPlugin**
+**NewsletterPageControllerProvider**
 
 ```php
 <?php
@@ -256,35 +248,46 @@ Create a route for our controller. Here's an example:
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
-namespace Pyz\Yves\NewsletterPage\Plugin\Router;
-
-use Spryker\Yves\Router\Route\RouteCollection;
-use SprykerShop\Yves\NewsletterPage\Plugin\Router\NewsletterPageRouteProviderPlugin as SprykerShopNewsletterPageRouteProviderPlugin;
-
-class NewsletterPageRoueProviderPlugin extends SprykerShopNewsletterPageRouteProviderPlugin
+namespace Pyz\Yves\NewsletterPage\Plugin\Provider;
+use Silex\Application;
+use SprykerShop\Yves\NewsletterPage\Plugin\Provider\NewsletterPageControllerProvider as SprykerNewsletterPageControllerProvider;
+class NewsletterPageControllerProvider extends SprykerNewsletterPageControllerProvider
 {
-    public const ROUTE_NAME_CUSTOMER_SUBSCRIBE = 'newsletter-success';
-    public const ROUTE_NAME_CUSTOMER_UNSUBSCRIBE = 'newsletter-unsubscribe';
-
+    public const ROUTE_CUSTOMER_SUBSCRIBE = 'newsletter-success';
+    public const ROUTE_CUSTOMER_UNSUBSCRIBE = 'newsletter-unsubscribe';
     /**
-     * Specification:
-     * - Adds Routes to the RouteCollection.
+     * @param \Silex\Application $app
      *
-     * @api
-     *
-     * @param \Spryker\Yves\Router\Route\RouteCollection $routeCollection
-     *
-     * @return \Spryker\Yves\Router\Route\RouteCollection
+     * @return void
      */
-    public function addRoutes(RouteCollection $routeCollection): RouteCollection
+    protected function defineControllers(Application $app): void
     {
-        $route = $this->buildRoute('/newsletter/success', 'NewsletterPage', 'Newsletter', 'successAction');
-        $routeCollection->add(static::ROUTE_NAME_CUSTOMER_SUBSCRIBE, $route);
-
-        $route = $this->buildRoute('/newsletter/unsubscribe', 'NewsletterPage', 'Newsletter', 'unsubscribeAction');
-        $routeCollection->add(static::ROUTE_NAME_CUSTOMER_SUBSCRIBE, $route);
-
-        return $routeCollection;
+        $this
+            ->addNewsletterRoute()
+            ->addUnsubscriptionSuccessRoute()
+            ->addSubscriptionSuccessRoute();
+    }
+    /**
+     * @return $this
+     */
+    protected function addUnsubscriptionSuccessRoute()
+    {
+        $this->createController('/{newsletter}/unsubscribe', self::ROUTE_CUSTOMER_SUBSCRIBE, 'NewsletterPage', 'Newsletter', 'unsubscribe')
+            ->assert('newsletter', $this->getAllowedLocalesPattern() . 'newsletter|newsletter')
+            ->value('newsletter', 'newsletter')
+            ->method('GET|POST');
+        return $this;
+    }
+    /**
+     * @return $this
+     */
+    protected function addSubscriptionSuccessRoute()
+    {
+        $this->createController('/{newsletter}/success', self::ROUTE_CUSTOMER_UNSUBSCRIBE, 'NewsletterPage', 'Newsletter', 'success')
+            ->assert('newsletter', $this->getAllowedLocalesPattern() . 'newsletter|newsletter')
+            ->value('newsletter', 'newsletter')
+            ->method('GET|POST');
+        return $this;
     }
 }
 ```
@@ -496,7 +499,3 @@ $container->extend(self::MAIL_PROVIDER_COLLECTION, function (MailProviderCollect
     return $mailProviderCollection;
 });
 ```
-
-
-
-## API Requests

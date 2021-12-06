@@ -3,13 +3,13 @@ title: Installing and configuring Episerver
 description: Install and configure Episerver into Spryker Commerce OS
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/episerver-installation-and-configuration
-originalArticleId: b958e572-8aa3-48a1-9586-b3614abef99e
+originalLink: https://documentation.spryker.com/v5/docs/episerver-installation-and-configuration
+originalArticleId: 88000f11-a6d3-4fe5-b349-5aedc6f6f158
 redirect_from:
-  - /2021080/docs/episerver-installation-and-configuration
-  - /2021080/docs/en/episerver-installation-and-configuration
-  - /docs/episerver-installation-and-configuration
-  - /docs/en/episerver-installation-and-configuration
+  - /v5/docs/episerver-installation-and-configuration
+  - /v5/docs/en/episerver-installation-and-configuration
+  - /docs/scos/user/technology-partners/202005.0/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
+
 ---
 
 ## Installation

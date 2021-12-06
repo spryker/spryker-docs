@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/testing-concepts
   - /v1/docs/testing-concepts
   - /v1/docs/en/testing-concepts
+  - /docs/scos/dev/guidelines/testing-concepts.html
 ---
 
 Testing your project is one of the best ways to ensure that your software functions as it is supposed to. The role of testing is to find bugs during the early stages of development to minimize risks. QA is the process of assuring quality, not just verifying you will not get an error on some page.

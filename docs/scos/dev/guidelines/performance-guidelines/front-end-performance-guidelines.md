@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/front-end-performance-guidelines
   - /v6/docs/front-end-performance-guidelines
   - /v6/docs/en/front-end-performance-guidelines
+  - /docs/scos/dev/guidelines/front-end-performance-guidelines.html
 ---
 
 This document describes general and Spryker-specific front-end performance guidelines.

@@ -28,10 +28,10 @@ HowTos are simple step-by-step instructions to guide you through the process of 
 
 * [HowTo - Change the Default Behavior of Event Triggering in Availability Storage Module](/docs/scos/dev/tutorials-and-howtos/howtos/howto-change-the-default-behavior-of-event-triggering-in-the-availabilitystorage-module.html)
 <!--
-* [HowTo - Configure Separators and Default Number of Rows](https://documentation.spryker.com/2021080/docs/ht-configure-separators-default-number-rows)
-* [HowTo - Disable Accounts Switch for Business on Behalf](https://documentation.spryker.com/2021080/docs/ht-disable-accounts-switch-for-bob-201907)
-* [HowTo - Enable CMS Content Widgets Button in the WYSIWYG Editor](https://documentation.spryker.com/2021080/docs/ht-enable-cms-content-widgets-button-201907)
-* [HowTo - Import Minimum Order Value Data](https://documentation.spryker.com/2021080/docs/ht-import-minimum-order-value-data-201903)
+* [HowTo - Configure Separators and Default Number of Rows](/docs/scos/dev/tutorials-and-howtos/howtos/howto-configure-separators-default-number-rows.html)
+* [HowTo - Disable Accounts Switch for Business on Behalf](/docs/scos/dev/tutorials-and-howtos/howtos/howto-disable-accounts-switch-for-business-on-behalf.html)
+* [HowTo - Enable CMS Content Widgets Button in the WYSIWYG Editor](/docs/scos/dev/tutorials-and-howtos/howtos/howto-enable-cms-content-widgets-button.html)
+* [HowTo - Import Minimum Order Value Data](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/commerce-setup/file-details-sales-order-threshold.csv.html)
   -->
 * [HowTo - Create CMS Templates](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html)
 

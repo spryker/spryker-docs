@@ -13,7 +13,7 @@ redirect_from:
 
 {% info_block errorBox %}
 
-There is currently an issue when using gift cards with Computop. Our team is developing a fix for it.
+There is currently an issue when using gift cards and easyCredit with Computop. Our team is developing a fix for it.
 
 {% endinfo_block %}
 

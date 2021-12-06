@@ -209,7 +209,7 @@ php -d memory_limit=-1 composer.phar require "spryker/sales:^8.0.0"
 ```
 If no extra dependencies are found, *composer.json* will be updated, respectively. Otherwise, see the [Troubleshooting](#troubleshooting) section at the end of the article, *In case when update is not possible* part.
 
-2. [Check the migration guide](/docs/scos/dev/module-migration-guides/{{site.version}}/about-migration-guides.html) for the respective major module version. See the [Sales](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-sales.html) migration guide for example. Find the section for your module version and complete all the steps it contains.
+2. [Check the migration guide](/docs/scos/dev/module-migration-guides/about-migration-guides.html) for the respective major module version. See the [Sales](/docs/scos/dev/module-migration-guides/migration-guide-sales.html) migration guide for example. Find the section for your module version and complete all the steps it contains.
 3.  Check for project changes, just like for the *minor* updates in the section above. Go to  `https://github.com/[module-name-here]/compare/[your-version]…[available-version]` and check if there are any changes that might conflict with your business logic.
 
 ## Test after each iteration
@@ -229,7 +229,7 @@ Automoted tests are must-have for every project in general and are very helpful 
 * Functional tests - cover your Facade methods in Zed
 * Unit tests - cover classes with complex business logic and tricky algorithms
 
-See the [Testing](/docs/scos/dev/guidelines/testing/test-framework.html) section for information on what Spryker has to offer in terms of testing your project's code.
+See the [Testing](/docs/scos/dev/guidelines/testing-guidelines/test-framework.html) section for information on what Spryker has to offer in terms of testing your project's code.
 
 {% info_block infoBox "Note" %}
 
@@ -392,7 +392,7 @@ Please let us know in case if anything goes wrong with your update. Feel free to
 
 * You found an issue in the code while reviewing the diff in a Spryker repo.
 * After running autotests / testing the website you found an issue that broke the website. If this is not a project-related conflict and other projects can potentially be affected, please report the issue as soon as you can.
-* There are missing steps in a [migration guide](/docs/scos/dev/module-migration-guides/{{site.version}}/about-migration-guides.html) in our documentation.
+* There are missing steps in a [migration guide](/docs/scos/dev/module-migration-guides/about-migration-guides.html) in our documentation.
 
 Reach us out at:
 * **Support and community**: share your problem / solution or learn from others in our [community slack](http://slackcommunity.spryker.com/).

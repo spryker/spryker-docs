@@ -26,7 +26,7 @@ To edit a discount, do the following:
 
 {% info_block infoBox %}
 
-To find out more information about the attributes that you see on the *Edit Discount* page, in the Creating a voucher guides, see the [Reference information: Creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#reference-information--creating-a-voucher) section.
+To find out more information about the attributes that you see on the *Edit Discount* page, in the Creating a voucher guides, see the [Reference information: Creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#reference-information-creating-a-voucher) section.
 
 {% endinfo_block %}
 

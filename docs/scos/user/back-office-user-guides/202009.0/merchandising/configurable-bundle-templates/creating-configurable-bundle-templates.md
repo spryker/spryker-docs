@@ -28,7 +28,7 @@ To create a configurable bundle:
 ***
 **What's next?**
 
-* Now that you have created a template, add Slots to it. See [Creating a Slot for a Configurable Bundle Template](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html#creating-a-slot-for-a-configurable-bundle-template) for details on how to do that.
+* Now that you have created a template, add Slots to it. See [Creating a Slot for a Configurable Bundle Template](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html#creating-slots-in-configurable-bundle-templates) for details on how to do that.
 * To edit, (de)activate or delete the Configurable Bundle Tem[late, see Managing Configurable Bundle Templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html).
 * To learn about the attributes you select and enter while creating a product list, see [Configurable Bundle Templates: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/references/reference-information-configurable-bundle-templates.html).
 

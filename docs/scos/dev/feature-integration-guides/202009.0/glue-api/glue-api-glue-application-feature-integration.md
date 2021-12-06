@@ -238,7 +238,7 @@ ip glue.mysprykershop.com
 
 {% info_block warningBox “Verification” %}
 
-If everything is set up correctly, you should be able to access http://glue.mysprykershop.com and get a correct JSON response as follows:
+If everything is set up correctly, you should be able to access `http://glue.mysprykershop.com` and get a correct JSON response as follows:
 
 **Default JSON Response**
 
@@ -344,7 +344,7 @@ class EntityTagsRestApiConfig extends SprykerEntityTagsRestApiConfig
 
 {% info_block warningBox “Verification” %}
 
-If everything is set up correctly, a request to http://glue.mysprykershop.com with the header `[{"key":"Accept-Language","value":"de_DE, de;q=0.9"}]` should result in a response that contains the content-language header set to de_DE.
+If everything is set up correctly, a request to `http://glue.mysprykershop.com` with the header `[{"key":"Accept-Language","value":"de_DE, de;q=0.9"}]` should result in a response that contains the content-language header set to de_DE.
 
 {% endinfo_block %}
 
@@ -352,7 +352,7 @@ If everything is set up correctly, a request to http://glue.mysprykershop.com wi
 
 Send a GET request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`. Make sure that the response contains the 'ETag' header.
 
-Prepare a PATCH request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identitifer{% raw %}}}{% endraw %}`.
+Prepare a PATCH request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`.
 
 Add the 'If-Match' header with the value of ETag from the GET response header.
 
@@ -411,4 +411,3 @@ Make sure that the response contains the ETag validation error.
 Make sure that the following endpoint is available: `http://mysprykershop.com/stores`
 
 {% endinfo_block %}
-

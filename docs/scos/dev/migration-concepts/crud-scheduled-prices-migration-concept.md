@@ -38,12 +38,12 @@ console transfer:generate
 ```
 
 3. Follow individual migration guides of the modules listed below:
-* [PriceProductSchedule](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-priceproductschedule.html#upgrading-from-version-1-to-version-200)
-* [PriceProductScheduleGui](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-priceproductschedulegui.html)
+* [PriceProductSchedule](/docs/scos/dev/module-migration-guides/migration-guide-priceproductschedule.html#upgrading-from-version-1-to-version-200)
+* [PriceProductScheduleGui](/docs/scos/dev/module-migration-guides/migration-guide-priceproductschedulegui.html)
 
 You can find the affected modules of the CRUD scheduled prices update in the following table.
 
 | Module | Version | Migration guide |
 | --- | --- | --- |
-| `spryker/price-product-schedule	` | 	2.0.0 | [Migration Guide - PriceProductSchedule](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-priceproductschedule.html#upgrading-from-version-1-to-version-200) |
-| `spryker/price-product-schedule-gui` | 	2.0.0 | [Migration Guide - PriceProductScheduleGui](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-priceproductschedulegui.html) |
+| `spryker/price-product-schedule	` | 	2.0.0 | [Migration Guide - PriceProductSchedule](/docs/scos/dev/module-migration-guides/migration-guide-priceproductschedule.html#upgrading-from-version-1-to-version-200) |
+| `spryker/price-product-schedule-gui` | 	2.0.0 | [Migration Guide - PriceProductScheduleGui](/docs/scos/dev/module-migration-guides/migration-guide-priceproductschedulegui.html) |

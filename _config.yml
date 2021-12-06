@@ -160,7 +160,6 @@ versioned_categories:
     dev:
       - feature-walkthroughs
       - feature-integration-guides
-      - module-migration-guides
       - data-import
       - data-export
       - glue-api-guides

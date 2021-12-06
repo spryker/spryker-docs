@@ -59,7 +59,7 @@ Please visit our [Partners Registry](https://spryker.com/find-a-partner/) for a 
 ### Customer Communication
 
 * [Dotdigital](/docs/scos/user/technology-partners/201903.0/marketing-and-conversion/customer-communication/dotdigital.html)
-* [Episerver](/docs/scos/user/technology-partners/201903.0/marketing-and-conversion/customer-communication/episerver/episerver.html)
+* [Episerver](/docs/scos/user/technology-partners/201903.0/marketing-and-conversion/customer-communication/episerver.html)
 * [Inxmail](/docs/scos/user/technology-partners/201903.0/marketing-and-conversion/customer-communication/inxmail.html)
 
 ### Customer Retention & Loyalty
@@ -72,7 +72,7 @@ Please visit our [Partners Registry](https://spryker.com/find-a-partner/) for a 
 
 <!--* [8Select](/docs/scos/user/technology-partners/201903.0/marketing-and-conversion/personalization-and-cross-selling/8select.html)-->
 <!--* [Contentserv](https://documentation.spryker.com/v2/docs/)-->
-* [Econda](/docs/scos/user/technology-partners/201903.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda.html)
+* [Econda](/docs/scos/user/technology-partners/201903.0/marketing-and-conversion/personalization-and-cross-selling/econda.html)
 * [Nosto](/docs/scos/user/technology-partners/201903.0/marketing-and-conversion/personalization-and-cross-selling/nosto.html)
 * [trbo](/docs/scos/user/technology-partners/201903.0/marketing-and-conversion/personalization-and-cross-selling/trbo.html)
 

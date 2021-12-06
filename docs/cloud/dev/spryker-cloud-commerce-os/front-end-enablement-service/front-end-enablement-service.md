@@ -1,3 +1,5 @@
+# Front-end enablement service
+
 This document describes the following:
 
 * What FAAS is

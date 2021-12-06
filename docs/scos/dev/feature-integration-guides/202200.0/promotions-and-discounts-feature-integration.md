@@ -9,7 +9,7 @@ template: feature-integration-guide-template
 
 The following feature integration guide expects the basic feature to be in place.
 
-The current sub-feature integration guide adds discount prioritization functionality..
+The current feature integration guide adds discount prioritization functionality.
 
 {% endinfo_block %}
 

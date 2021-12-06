@@ -192,7 +192,7 @@ Configure Elasticsearch localized parameters:
 
 #### RabbitMQ
 
-Configure RabbitMQ permissions and virtual hosts according to the instructions in [Tutorial - Set Up a "Hello World" Queue - Legacy Demoshop](/docs/scos/dev/legacy-demoshop/{{page.version}}/set-up-a-hello-world-queue-legacy-demoshop.html#rabbitmq-management-ui).
+Configure RabbitMQ permissions and virtual hosts according to the instructions in [Tutorial - Set Up a "Hello World" Queue - Legacy Demoshop](/docs/scos/dev/legacy-demoshop/{{site.version}}/set-up-a-hello-world-queue-legacy-demoshop.html#rabbitmq-management-ui).
 
 #### Hostname
 

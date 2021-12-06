@@ -81,7 +81,11 @@ For example, the permission to view a product, a page, or permission to place an
 
 {% info_block infoBox %}
 
-For example, the permission to add to cart up to X [order value] would be the Zed-side permission. In this case the process of permissions check would be as follows:<ul><li>After the user clicked **Add to cart**, the request comes to Zed and the pre-checks are made following the “add to cart” request.</li><li>After that, the calculations are run. The calculations apply discounts per item, and then per cart (total).<br>The logic behind this is simple: a user might have a discount for a specific item, and a discount for order starting from a specific order value. The order value would be calculated taken the discount per items into account, and therefore the discount per cart would be applied after all discounts per items have been calculated.</li><li>After the calculations have been made, the cart is saved.</li></ul>
+For example, the permission to add to cart up to X [order value] would be the Zed-side permission. In this case the process of permissions check would be as follows:
+* fter the user clicked **Add to cart**, the request comes to Zed and the pre-checks are made following the “add to cart” request.
+* After that, the calculations are run. The calculations apply discounts per item, and then per cart (total).
+  <br>The logic behind this is simple: a user might have a discount for a specific item, and a discount for order starting from a specific order value. The order value would be calculated taken the discount per items into account, and therefore the discount per cart would be applied after all discounts per items have been calculated.
+* After the calculations have been made, the cart is saved.
 
 {% endinfo_block %}
 
@@ -118,7 +122,7 @@ Every company role includes a set of permissions that can be enabled/disabled ac
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href=/docs/scos/dev/module-migration-guides/migration-guide-companyuser.html#upgrading-from-version-100-to-version-200" class="mr-link">Migrate the CompanyUser module from version 1.* to version 2.*</a></li>
+                <li><a href="/docs/scos/dev/module-migration-guides/migration-guide-companyuser.html#upgrading-from-version-100-to-version-200" class="mr-link">Migrate the CompanyUser module from version 1.* to version 2.*</a></li>
                 <li><a href="/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html" class="mr-link">Authenticate as company user via Glue API</a></li>
                 <li><a href="/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-users.html" class="mr-link">Retrieve information about company users via Glue API</a></li>
                 <li><a href="/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-roles.html" class="mr-link">Retrieve information about company roles via Glue API</a></li>

@@ -1,33 +1,33 @@
 ---
-title: Evaluation tool overview
-description: Functionalities of the evaluation tool
+title: Evaluator tool overview
+description: Functionalities of the Evaluator tool
 last_updated: Nov 25, 2021
 template: concept-topic-template
 ---
 
-The evaluation tool is a utility that performs automated quality checks against our own and industry standards.
+The Evaluator tool is a utility that performs automated quality checks against our own and industry standards.
 
-## Installing the evaluation tool
+## Installing the Evaluator tool
 
-To install the evaluation tool, run the following command:
+To install the Evaluator tool, run the following command:
 
 ```bash
 composer require --dev spryker-sdk/evaluator
 ```
 
-## Using the evaluation tool
+## Using the Evaluator tool
 
-To get up-to-date information about using the evaluation tool, run the following command:
+To get up-to-date information about using the Evaluator tool, run the following command:
 
 ```bash
 docker/sdk cli evaluator
 ```
 
-For detailed instructions, see [Running the evaluation tool](/docs/scos/dev/upgradability-services/running-the-evaluation-tool.html).
+For detailed instructions, see [Running the Evaluator tool](/docs/scos/dev/upgradability-services/running-the-evaluation-tool.html).
 
-## How the evaluation tool works
+## How the Evaluator tool works
 
-The evaluation tool performs a number of checks that are based on the static analysis of our own and third-party tools. Currently, it performs the following checks:
+The Evaluator tool performs a number of checks that are based on the static analysis of our own and third-party tools. Currently, it performs the following checks:
 
 - [Architecture Sniffer](https://github.com/spryker/architecture-sniffer)
 - [Code Sniffer](https://github.com/spryker/code-sniffer)
@@ -38,7 +38,7 @@ The evaluation tool performs a number of checks that are based on the static ana
 
 We attuned the third-party tools to Spryker, so the e[valuation tool checks that your code is up to date both with the industry and Spryker specific standards.
 
-The evaluation tool provides you with informative output about your code. If all the checks you’ve run are successful, the tool returns a success message.
+The Evaluator tool provides you with informative output about your code. If all the checks you’ve run are successful, the tool returns a success message.
 
 Example of a successful evaluation:
 
@@ -66,7 +66,7 @@ Finished successfully
 Overall evaluation has been finished successfully
 ```
 
-If one or more checks fail, the Evaluation tool returns the errors per check.
+If one or more checks fail, the Evaluator tool returns the errors per check.
 
 
 <details>
@@ -119,7 +119,7 @@ Overall evaluation has been finished with errors
 
 </details>
 
-You can run the evaluation tool to perform all the checks or run a particular check. For example, if only one check returns an error, after troubleshooting it, you might run only the failed check.  
+You can run the Evaluator tool to perform all the checks or run a particular check. For example, if only one check returns an error, after troubleshooting it, you might run only the failed check.  
 
 Example of running a particular check:
 
@@ -154,4 +154,4 @@ Overall evaluation has been finished with errors
 
 ## Next steps
 
-[Running the evaluation tool](/docs/scos/dev/upgradability-services/running-the-evaluation-tool.html)
+[Running the Evaluator tool](/docs/scos/dev/upgradability-services/running-the-evaluation-tool.html)

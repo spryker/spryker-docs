@@ -1,14 +1,14 @@
 ---
-title: Running the evaluation tool
-description: Instructions for running the evaluation tool
+title: Running the Evaluator tool
+description: Instructions for running the Evaluator tool
 last_updated: Nov 25, 2021
 template: concept-topic-template
 ---
-This document describes how to check if code is compliant with Spryker’s and industry standards using the Evaluation tool.
+This document describes how to check if code is compliant with Spryker’s and industry standards using the Evaluator tool.
 
 ## Prerequisites
 
-To start working with the Evaluation tool, connect to the Docker SDK CLI container:
+To start working with the Evaluator tool, connect to the Docker SDK CLI container:
 
 ```bash
 docker/sdk cli
@@ -22,7 +22,7 @@ Get general information about the tool:
 
 ## Running a full evaluation
 
-To perform a full evaluation, run the evaluation tool without any options:
+To perform a full evaluation, run the Evaluator tool without any options:
 
 ```bash
 evaluator evaluate
@@ -47,9 +47,9 @@ evaluator evaluate -h
 {% endinfo_block %}
 
 
-## Updating the evaluation tool
+## Updating the Evaluator tool
 
-To update the evaluation tool to the latest version, run the following command:
+To update the Evaluator tool to the latest version, run the following command:
 
 ```bash
 composer update spryker-sdk/evaluator

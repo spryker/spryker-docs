@@ -20,9 +20,9 @@ template: concept-topic-template
 ### What is customized and not customized at this tier?
 
 
-### What coding principals should I follow to qualify for this tier?
+### What coding principles should I follow to qualify for this tier?
 
-Concrete principals with at least one example each.
+Concrete principles with at least one example each.
 
 
 ## {CUSTOMIZATION-TIER-2}
@@ -32,9 +32,9 @@ Concrete principals with at least one example each.
 ### What is customized and not customized at this tier?
 
 
-### What coding principals should I follow to qualify for this tier?
+### What coding principles should I follow to qualify for this tier?
 
-Concrete principals with at least one example each.
+Concrete principles with at least one example each.
 
 ## {CUSTOMIZATION-TIER-3}
 
@@ -43,9 +43,9 @@ Concrete principals with at least one example each.
 ### What is customized and not customized at this tier?
 
 
-### What coding principals should I follow to qualify for this tier?
+### What coding principles should I follow to qualify for this tier?
 
-Concrete principals with at least one example each.
+Concrete principles with at least one example each.
 
 
 ## {CUSTOMIZATION-TIER-4}
@@ -55,9 +55,9 @@ Concrete principals with at least one example each.
 ### What is customized and not customized at this tier?
 
 
-### What coding principals should I follow to qualify for this tier?
+### What coding principles should I follow to qualify for this tier?
 
-Concrete principals with at least one example each.
+Concrete principles with at least one example each.
 
 ## {CUSTOMIZATION-TIER-5}
 
@@ -66,6 +66,6 @@ Concrete principals with at least one example each.
 ### What is customized and not customized at this tier?
 
 
-### What coding principals should I follow to qualify for this tier?
+### What coding principles should I follow to qualify for this tier?
 
-Concrete principals with at least one example each.
+Concrete principles with at least one example each.

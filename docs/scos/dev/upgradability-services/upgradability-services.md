@@ -29,30 +29,30 @@ Short description of the implemented pipelines(evaluation and upgrader) and what
 ### What configuration options are available to customers?
 
 
-## Evaluation tool
+## Evaluator tool
 
-The evaluation tool is a utility that performs automated quality checks against our own and industry standards.
+The Evaluator tool is a utility that performs automated quality checks against our own and industry standards.
 
-The benefits of using the evaluation tool for your code are as follows:
+The benefits of using the Evaluator tool for your code are as follows:
 
 - Reduced upgrade efforts
 - Clean and consistent code
 - Fewer bugs
 
-### How the evaluation tool works
+### How the Evaluator tool works
 
-The evaluation tool checks code against a set of rules and returns an assessment result. If the code didn’t pass a rule, the tool returns the information you can use to improve your code.
+The Evaluator tool checks code against a set of rules and returns an assessment result. If the code didn’t pass a rule, the tool returns the information you can use to improve your code.
 
-The evaluation tool checks the following:
+The Evaluator tool checks the following:
 
 - Compliance with Spryker coding and architecture standards
 - Compliance with industry standards, like [Pear](https://pear.php.net/manual/en/standards.php) or [PSR-12](https://www.php-fig.org/psr/psr-12/)
 - Code flaws and bugs
 
-To learn more about the evaluation tool, see the following documents:
+To learn more about the Evaluator tool, see the following documents:
 
-- [Evaluation tool overview](/docs/scos/dev/upgradability-services/evaluation-tool-overview.html)
-- [Running the evaluation tool](/docs/scos/dev/upgradability-services/running-the-evaluation-tool.html)
+- [Evaluator tool overview](/docs/scos/dev/upgradability-services/evaluation-tool-overview.html)
+- [Running the Evaluator tool](/docs/scos/dev/upgradability-services/running-the-evaluation-tool.html)
 
 
 
@@ -71,7 +71,7 @@ The benefits of using the upgrader tool for your project are as follows:
 
 The upgrader tool checks your project’s code against our latest released code. If something needs to be updated, the upgrader automatically makes the changes and creates a PR in your repository, which you can review and merge.
 
-To learn more about the evaluation tool, see the following documents:
+To learn more about the Evaluator tool, see the following documents:
 
 * [Upgrader tool overview](/docs/scos/dev/upgradability-services/upgrader-tool-overview.html)
 * [Running the upgrader tool](/docs/scos/dev/upgradability-services/running-the-upgrader-tool.html)

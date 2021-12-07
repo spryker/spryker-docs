@@ -29,11 +29,11 @@ While public API updates always support backward compatibility, the private API 
 
 The errors related to this check are prefixed with `IsCoreMethodUsedOnProjectLevel`.
 
-### Avoiding the error
+### Overriding a core method on the project level
 
-To avoid the error, override the existing methods with custom ones in the private API.
+To avoid the error, override the core methods with custom ones in the private API.
 
-### Example incompatible code
+#### Example of code and a related error
 
 `CustomerAccessUpdater` uses the `setContentTypesToInaccessible` method from the core level.
 
@@ -67,13 +67,13 @@ Pyz\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessUpdater
 ************************************************************************************************************************
 ```
 
-### Solution
+#### Example of overriding a core method on the project error
 
-To resolve the error provided in the example, would do the following:
+To resolve the error provided in the example, do the following:
 
 1. Copy the method from the core to the project level and rename, for example, by adding a prefix.
 
-2. Add the method to the class and interface:
+2. Add the method to the class and the interface:
 
 ```php
 src/Pyz/Zed/CustomerAccess/Persistence/CustomerAccessEntityManager.php
@@ -99,4 +99,4 @@ src/Pyz/Zed/CustomerAccess/Persistence/CustomerAccessEntityManagerInterface.php
 public function setContentTypesToInaccessible(CustomerAccessTransfer $customerAccessTransfer): CustomerAccessTransfer;
 ```
 
-When the core method is overridden, re-run the Evalutor. The same error shouldn't be returned.
+When the core method is overridden, re-run the Evaluator. The same error shouldn't be returned.

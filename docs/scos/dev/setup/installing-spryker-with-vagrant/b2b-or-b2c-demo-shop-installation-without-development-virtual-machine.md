@@ -214,7 +214,6 @@ If you want to configure the hostname, set the values for Yves and Zed hostnames
    vendor/bin/install
    ```
 
-
  When the installation process is complete, Spryker Commerce OS is ready to use. It can be accessed via the following links:
 
 **B2B Demo Shop:**

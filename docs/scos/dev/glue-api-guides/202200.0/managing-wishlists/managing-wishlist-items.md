@@ -232,7 +232,7 @@ To delete wishlist item, send the request:
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}*** | Unique identifier of the wishlist to delete an item from. [Create a wishlist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
-| ***{% raw %}{{{% endraw %}wishlist_item_id{% raw %}}}{% endraw %}*** | Unique identifier of the product to delete. |
+| ***{% raw %}{{{% endraw %}wishlist_item_id{% raw %}}}{% endraw %}*** | Unique identifier of a product or configurable product to delete. To get this identifier, [retrieve a wishlist with items included](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html#retrieve-wishlists) or [add an item to a wishlist](#add-an-item-to-a-wishlist). |
 
 ### Request
 
@@ -241,33 +241,6 @@ To delete wishlist item, send the request:
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 Request sample: `DELETE https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items/064_18404924`
-Request sample: delete a configurable product: `DELETE https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items/093_24495843_98bf36f052d23f10a8a081694ad4f45e`
-
-### Response
-
-If the item is removed successfully, the endpoint returns the `204 No Content` status code.
-
-## Delete a configurable product
-
-To delete wishlist item, send the request:
-
----
-`DELETE` **/wishlists/*{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}*/wishlist-items/*{% raw %}{{{% endraw %}wishlist_item_id_productConfigurationInstanceHash{% raw %}}}{% endraw %}***
-
----
-
-| PATH PARAMETER | DESCRIPTION |
-| --- | --- |
-| ***{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}*** | Unique identifier of the wishlist to delete an item from. [Create a wishlist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
-| ***{% raw %}{{{% endraw %}wishlist_item_id_productConfigurationInstanceHash{% raw %}}}{% endraw %}*** | Unique identifier of the configurable product to delete. |
-
-### Request
-
-| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
-| --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
-
-Request sample: delete a configurable product: `DELETE https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items/093_24495843_98bf36f052d23f10a8a081694ad4f45e`
 
 ### Response
 

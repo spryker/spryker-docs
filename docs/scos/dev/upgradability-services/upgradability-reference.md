@@ -12,62 +12,19 @@ Minor releases can break backward compatibility through private API. In particul
 
 ### Example of code that can cause the upgradability errors
 
-#### Factory method overridding
+the same behavior for
+-   *Factory
+-   *EntityManager
+-   *Repository
+-   *DependencyProvider
 
 ```php
-
-namespace Pyz\Zed\CategoryDataImport\Business;
-
-use Pyz\Zed\CategoryDataImport\Business\Model\CategoryWriterStep;
-use Spryker\Zed\CategoryDataImport\Business\CategoryDataImportBusinessFactory as SprykerCategoryDataImportBusinessFactory;
-
-/**
- * @method \Spryker\Zed\CategoryDataImport\CategoryDataImportConfig getConfig()
- */
-class CategoryDataImportBusinessFactory extends SprykerCategoryDataImportBusinessFactory
-{
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
-     */
-    public function createCategoryImporter()
-    {
-        ...
-    }
-}
-```
-
-#### DependencyProvider method overridding
-
-```php
-namespace Pyz\Client\Queue;
-
-use Spryker\Client\Kernel\Container;
-use Spryker\Client\Queue\QueueDependencyProvider as BaseQueueDependencyProvider;
-
-class QueueDependencyProvider extends BaseQueueDependencyProvider
-{
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Queue\Model\Adapter\AdapterInterface[]
-     */
-    protected function createQueueAdapters(Container $container)
-    {
-        return [
-            $container->getLocator()->rabbitMq()->client()->createQueueAdapter(),
-        ];
-    }
-}
-```
-
-#### Repository method overridding
-```php
-namespace Pyz\Zed\EvaluatorSpryker\Persistence;
+namespace Pyz\Zed\Evaluator\Persistence;
 
 use Generated\Shared\Transfer\CategoryImageSetTransfer;
 use Spryker\Zed\CategoryImage\Persistence\CategoryImageEntityManager;
 
-class EvaluatorSprykerCategoryImageEntityManager extends CategoryImageEntityManager
+class EvaluatorCategoryImageEntityManager extends CategoryImageEntityManager
 {
     /**
      * @param \Generated\Shared\Transfer\CategoryImageSetTransfer $categoryImageSetTransfer
@@ -82,23 +39,34 @@ class EvaluatorSprykerCategoryImageEntityManager extends CategoryImageEntityMana
 
 ```
 
-#### Entity Manager method overridding
-```php
-namespace Pyz\Zed\EvaluatorSpryker\Persistence;
-...
+But for *DependencyProvider we have a specific case (exception), in particular, we might use overriding when we are going to create *Plugin. It means that this case is not an error
 
-class EvaluatorSprykerCmsSlotBlockRepository  extends CmsSlotBlockRepository
+```php
+<?php
+
+namespace Pyz\Yves\StorageRouter;
+
+use SprykerShop\Yves\CatalogPage\Plugin\StorageRouter\CatalogPageResourceCreatorPlugin;
+use SprykerShop\Yves\CmsPage\Plugin\StorageRouter\PageResourceCreatorPlugin;
+use SprykerShop\Yves\ProductDetailPage\Plugin\StorageRouter\ProductDetailPageResourceCreatorPlugin;
+use SprykerShop\Yves\ProductSetDetailPage\Plugin\StorageRouter\ProductSetDetailPageResourceCreatorPlugin;
+use SprykerShop\Yves\RedirectPage\Plugin\StorageRouter\RedirectResourceCreatorPlugin;
+use SprykerShop\Yves\StorageRouter\StorageRouterDependencyProvider as SprykerShopStorageRouterDependencyProvider;
+
+class StorageRouterDependencyProvider extends SprykerShopStorageRouterDependencyProvider
 {
     /**
-     * @param \Generated\Shared\Transfer\CmsSlotBlockCriteriaTransfer $cmsSlotBlockCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\CmsSlotBlockCollectionTransfer
+     * @return \SprykerShop\Yves\StorageRouterExtension\Dependency\Plugin\ResourceCreatorPluginInterface[]
      */
-    public function getCmsSlotBlocks(
-        CmsSlotBlockCriteriaTransfer $cmsSlotBlockCriteriaTransfer
-    ): CmsSlotBlockCollectionTransfer {
-
-        return new CmsSlotBlockCollectionTransfer();
+    protected function getResourceCreatorPlugins(): array
+    {
+        return [
+            new PageResourceCreatorPlugin(),
+            new CatalogPageResourceCreatorPlugin(),
+            new ProductDetailPageResourceCreatorPlugin(),
+            new ProductSetDetailPageResourceCreatorPlugin(),
+            new RedirectResourceCreatorPlugin(),
+        ];
     }
 }
 ```

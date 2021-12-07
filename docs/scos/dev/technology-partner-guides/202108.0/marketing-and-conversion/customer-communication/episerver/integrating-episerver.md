@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/episerver-integration-into-project
   - /docs/episerver-integration-into-project
   - /docs/en/episerver-integration-into-project
+  - /docs/scos/user/technology-partners/202108.0/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
 related:
   - title: Episerver - Installation and Configuration
     link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
@@ -500,7 +501,3 @@ $container->extend(self::MAIL_PROVIDER_COLLECTION, function (MailProviderCollect
     return $mailProviderCollection;
 });
 ```
-
-
-
-## API Requests

@@ -59,12 +59,12 @@ In this section you will find information about our Technology Partner Integrati
 ### Customer Communication
 
 * [Dotdigital](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/dotdigital.html)
-* [Episerver](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/episerver/episerver.html)
+* [Episerver](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/episerver.html)
 * [Inxmail](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/inxmail.html)
 
 ### Customer Retention & Loyalty
 
-* [Namogoo](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/customer-retention-and-loyalty/namogoo.html) 
+* [Namogoo](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/customer-retention-and-loyalty/namogoo.html)
 * [Trustpilot](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/customer-retention-and-loyalty/trustpilot.html)
 * [Zenloop](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/customer-retention-and-loyalty/zenloop.html)
 
@@ -72,7 +72,7 @@ In this section you will find information about our Technology Partner Integrati
 
 <!--* [8Select](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/8select.html)-->
 <!--* [Contentserv](https://documentation.spryker.com/v4/docs/)-->
-* [Econda](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/econda/econda.html)
+* [Econda](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/econda.html)
 * [Nosto](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/nosto.html)
 * [trbo](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/trbo.html)
 
@@ -107,13 +107,12 @@ In this section you will find information about our Technology Partner Integrati
 * [AfterPay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/afterpay/afterpay.html)
 * [Arvato](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/arvato/arvato.html)
 * [Billie](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/billie.html)
-* [Billpay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/billpay/billpay.html) 
+* [Billpay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/billpay/billpay.html)
 * [Braintree](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/braintree/braintree.html)
 * [BS Payone](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/bs-payone.html)
 * [Computop](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop.html)
 * [CrefoPay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay-installation-and-configuration.html)
 * [Heidelpay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay.html)
-<!--* [Informa Solutions](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/informa-solutions.html)-->
 * [Klarna](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/klarna/klarna.html)
 * [Payone](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/payolution/payolution.html)
 * [Powerpay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/powerpay.html)
@@ -130,7 +129,7 @@ In this section you will find information about our Technology Partner Integrati
 
  ## Shipment
 
-* [Paazl](/docs/scos/dev/technology-partners/{{page.version}}/shipment/paazl.html) 
+* [Paazl](/docs/scos/dev/technology-partners/{{page.version}}/shipment/paazl.html)
 * [Paqato](/docs/scos/dev/technology-partners/{{page.version}}/shipment/paqato.html)
 * [Seven Senders](/docs/scos/dev/technology-partners/{{page.version}}/shipment/seven-senders.html)
 

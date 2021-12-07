@@ -16,6 +16,10 @@ redirect_from:
   - /v5/docs/en/getting-started-with-docker
   - /v3/docs/spryker-in-docker-201907
   - /v3/docs/en/spryker-in-docker-201907
+  - /2021080/docs/getting-started-with-docker
+  - /2021080/docs/en/getting-started-with-docker
+  - /docs/getting-started-with-docker
+  - /docs/en/getting-started-with-docker
 ---
 
 This section is a complete stack for running Spryker in Docker containers.

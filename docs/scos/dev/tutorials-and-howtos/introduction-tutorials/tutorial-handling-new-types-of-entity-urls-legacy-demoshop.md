@@ -15,6 +15,8 @@ redirect_from:
   - /v5/docs/en/url-handling-new-entity
   - /v4/docs/url-handling-new-entity
   - /v4/docs/en/url-handling-new-entity
+  - /v3/docs/url-handling-new-entity
+  - /v3/docs/en/url-handling-new-entity
   - /v2/docs/url-handling-new-entity
   - /v2/docs/en/url-handling-new-entity
   - /v1/docs/url-handling-new-entity

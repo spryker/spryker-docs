@@ -15,6 +15,8 @@ redirect_from:
   - /v5/docs/en/ht-replace-bundle-dependencies
   - /v4/docs/ht-replace-bundle-dependencies
   - /v4/docs/en/ht-replace-bundle-dependencies
+  - /v3/docs/ht-replace-bundle-dependencies
+  - /v3/docs/en/ht-replace-bundle-dependencies
   - /v2/docs/ht-replace-bundle-dependencies
   - /v2/docs/en/ht-replace-bundle-dependencies
   - /v1/docs/ht-replace-bundle-dependencies

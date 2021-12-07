@@ -59,7 +59,7 @@ In this section you will find information about our Technology Partner Integrati
 ### Customer Communication
 
 * [Dotdigital](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/dotdigital.html)
-* [Episerver](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/episerver/episerver.html)
+* [Episerver](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/episerver.html)
 * [Inxmail](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/inxmail.html)
 
 ### Customer Retention & Loyalty
@@ -72,7 +72,7 @@ In this section you will find information about our Technology Partner Integrati
 
 <!--* [8Select](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/8select.html)-->
 <!--* [Contentserv](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/contentserv.html)-->
-* [Econda](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/econda/econda.html)
+* [Econda](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/econda.html)
 * [Nosto](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/nosto.html)
 * [trbo](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/trbo.html)
 

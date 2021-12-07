@@ -1,5 +1,5 @@
 ---
-title: informa solutions
+title: Informa Solutions
 last_updated: Oct 8, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/informa-solutions

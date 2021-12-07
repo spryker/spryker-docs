@@ -16,6 +16,8 @@ redirect_from:
   - /v5/docs/en/tutorial-architecture-walkthrough-scos
   - /v4/docs/tutorial-architecture-walkthrough-scos
   - /v4/docs/en/tutorial-architecture-walkthrough-scos
+  - /v3/docs/tutorial-architecture-walkthrough-scos
+  - /v3/docs/en/tutorial-architecture-walkthrough-scos
   - /v2/docs/tutorial-architecture-walkthrough-scos
   - /v2/docs/en/tutorial-architecture-walkthrough-scos
   - /v1/docs/tutorial-architecture-walkthrough-scos

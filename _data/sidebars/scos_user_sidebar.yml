@@ -57,7 +57,7 @@ entries:
           url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-2018.11.0/release-notes-2018.11.0.html
           nested:
           - title: Security Release Notes 2018.11.0
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-2018.11.0/security-release-notes-2018.11.0.html      
+            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-2018.11.0/security-release-notes-2018.11.0.html
       - title: Releases archive
         url: /docs/scos/user/intro-to-spryker/releases/releases-archive.html
         nested:
@@ -179,7 +179,7 @@ entries:
       - title: Building the documentation site
         url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html
   - title: Features
-    url: /docs/scos/user/features/features.html  
+    url: /docs/scos/user/features/features.html
     nested:
     - title: Agent Assist
       url: /docs/scos/user/features/agent-assist-feature-overview.html
@@ -345,7 +345,7 @@ entries:
         - "201903.0"
         - "201907.0"
         - "202001.0"
-        - "202005.0" 
+        - "202005.0"
     - title: Content Items
       url: /docs/scos/user/features/content-items-feature-overview.html
       include_versions:
@@ -2307,76 +2307,25 @@ entries:
       - "202009.0"
       - "202108.0"
       nested:
-      - title: Personalization & Cross-Selling
+      - title: Personalization and cross-selling
         nested:
         - title: Contentserv
           url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/contentserv.html
         - title: Econda
-          url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/econda/econda.html
-          nested:
-          - title: Econda - Cross Sell
-            url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/econda/econda-cross-sell.html
-          - title: Econda - Tracking
-            url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/econda/econda-tracking.html
-          - title: Econda - Frontend Integration
-            url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/econda/econda-frontend-integration.html
-            include_versions:
-            - "201811.0"
-            - "201903.0"
-            - "201907.0"
-            - "202001.0"
-            - "202005.0"
-          - title: Econda - Exporting CSVs
-            url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/econda/econda-exporting-csvs.html
-          - title: Econda - Installation and configuration
-            url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/econda/econda-installation-and-configuration.html
-            include_versions:
-            - "202009.0"
-            - "202108.0"
-          - title: Econda - Integration into project
-            url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/econda/econda-integration-into-project.html
-            include_versions:
-            - "202009.0"
-            - "202108.0"
+          url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/econda.html
         - title: Nosto
           url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/nosto.html
         - title: 8Select
           url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/8select.html
         - title: trbo
           url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/trbo.html
-      - title: Customer Communication
+      - title: Customer communication
         include_versions:
         - "202009.0"
         - "202108.0"
         nested:
         - title: Episerver
-          url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/episerver/episerver.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
-          nested:
-          - title: Episerver - Installation and Configuration
-            url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
-          - title: Integrating Episerver
-            url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
-            include_versions:
-            - "202009.0"
-            - "202108.0"
-          - title: Technical details and HowTos
-            include_versions:
-            - "202009.0"
-            - "202108.0"
-            nested:
-            - title: Episerver - Order referenced commands
-              url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-order-referenced-commands.html
-              include_versions:
-              - "202009.0"
-              - "202108.0"
-            - title: Episerver - API Requests
-              url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-api-requests.html
-              include_versions:
-              - "202009.0"
-              - "202108.0"
+          url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/episerver.html
         - title: Dotdigital
           url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/dotdigital.html
         - title: Inxmail
@@ -2672,8 +2621,6 @@ entries:
           url: /docs/scos/user/technology-partners/payment-partners/adyen/adyen-provided-payment-methods.html
         - title: Adyen - Filtering Payment Methods
           url: /docs/scos/user/technology-partners/payment-partners/adyen/adyen-filtering-payment-methods.html
-      - title: informa solutions
-        url: /docs/scos/user/technology-partners/payment-partners/informa-solutions.html
       - title: Computop
         url: /docs/scos/user/technology-partners/payment-partners/computop/computop.html
         include_versions:

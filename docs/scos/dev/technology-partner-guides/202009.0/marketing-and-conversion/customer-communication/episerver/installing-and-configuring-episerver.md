@@ -3,13 +3,12 @@ title: Installing and configuring Episerver
 description: Install and configure Episerver into Spryker Commerce OS
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/episerver-installation-and-configuration
-originalArticleId: b958e572-8aa3-48a1-9586-b3614abef99e
+originalLink: https://documentation.spryker.com/v6/docs/episerver-installation-and-configuration
+originalArticleId: 6a9116bd-ba85-4c53-acb9-3851681ff02b
 redirect_from:
-  - /2021080/docs/episerver-installation-and-configuration
-  - /2021080/docs/en/episerver-installation-and-configuration
-  - /docs/episerver-installation-and-configuration
-  - /docs/en/episerver-installation-and-configuration
+  - /v6/docs/episerver-installation-and-configuration
+  - /v6/docs/en/episerver-installation-and-configuration
+  - /docs/scos/user/technology-partners/202009.0/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
 related:
   - title: Episerver - Integration into a project
     link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
@@ -19,14 +18,14 @@ related:
     link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-api-requests.html
 ---
 
-## Installation
+## Installing Episerver
 
 To install Episerver, run the command in the console:
 ```php
 composer require spryker-eco/episerver
 ```
 
-## Configuration
+## Configuring Episerver
 
 To set up the Episerver initial configuration, use the credentials received from your Episerver admin page.
 

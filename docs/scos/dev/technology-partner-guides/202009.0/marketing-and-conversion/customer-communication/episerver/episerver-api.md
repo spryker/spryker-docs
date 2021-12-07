@@ -3,13 +3,12 @@ title: Episerver API
 description: Learn about the API requests for Episerver in Spryker.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/episerver-api-requests
-originalArticleId: 4f75a136-495f-40a9-a75e-156f6adade30
+originalLink: https://documentation.spryker.com/v6/docs/episerver-api-requests
+originalArticleId: 5eb69571-319c-4335-ba5f-c365a60b7dc6
 redirect_from:
-  - /2021080/docs/episerver-api-requests
-  - /2021080/docs/en/episerver-api-requests
-  - /docs/episerver-api-requests
-  - /docs/en/episerver-api-requests
+  - /v6/docs/episerver-api-requests
+  - /v6/docs/en/episerver-api-requests
+  - /docs/scos/user/technology-partners/202009.0/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-api-requests.html
 related:
   - title: Episerver - Integration into a project
     link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html

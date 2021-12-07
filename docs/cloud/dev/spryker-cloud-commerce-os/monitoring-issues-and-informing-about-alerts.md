@@ -12,6 +12,8 @@ Here is a high-level overview of the alarms that are configured by default in ou
 
 ### Endpoint status
 
+<div class="width-100">
+
 |Name of metric   | Description  |
 |---|---|
 |External monitor: HTTP check Yves/Zed /health-check (Draft)   | Checks whether Yves and Ted health-check endpoints provide an expected response  |
@@ -20,7 +22,11 @@ Here is a high-level overview of the alarms that are configured by default in ou
 | AVG Response time in ms  | Checks the page response time and runs on a pre-set threshold  | 
 | ALB 5XX response codes | Checks the status codes the application load balancer receives from the load balanced applications for the 5XX status codes  | 
 
+</div>
+
 ### ElastiCache/Redis
+
+<div class="width-100">
 
 |Name of metric   | Description  | 
 |---|---|
@@ -28,20 +34,32 @@ Here is a high-level overview of the alarms that are configured by default in ou
 | Redis is not used by any service  | Checks whether ElastiCache is used  | 
 | Redis is full  |Alerts the standby team when Redis has run out of memory and is swapping above 50MB of data, the amount of free memory on the host is running low, and when keys are evicted due to memory constraints   | 
 
+</div>
+
 ### ElasticSearch
+
+<div class="width-100">
 
 | Name of metric  | Description  | 
 |---|---|
 | ES cluster status  | Checks the status of the Elasticsearch Cluster  |  
 
+</div>
+
 ### Database
+
+<div class="width-100">
 
 |  Name of metric | Description  | 
 |---|---|
 |RDS DB connections   | Checks whether there are active connections to RDS  | 
 | RDS IO Credits  | Checks whether the RDS instance is running low or is running out of IO Credits  |   
 
+</div>
+
 ### Scheduler
+
+<div class="width-100">
 
 |  Name of metric | Description  | 
 |---|---|
@@ -49,7 +67,11 @@ Here is a high-level overview of the alarms that are configured by default in ou
 | Scheduler disk is 90% filled  | Alerts the monitoring team once Jenkins disk utilization is at or above 90%  | 
 | Jenkins container can't be deployed  |Checks whether there are deployment failures of Jenkins container   | 
 
+</div>
+
 ### Message broker
+
+<div class="width-100">
 
 | Name of metric  | Description  |  
 |---|---|
@@ -58,11 +80,17 @@ Here is a high-level overview of the alarms that are configured by default in ou
 | RMQ: disk alarms (Draft)  | Checks the status of the storage that is attached the instance that RabbitMQ is running on  | 
 | RMQ: memory alarms  |Checks memory utilization on RabbitMQ instance   | 
 
+</div>
+
 ### Deployment and miscellaneous
+
+<div class="width-100">
 
 | Name of metric  | Description  |  
 |---|---|
-| ECR Image scan results  | Spryker scans images that are used during the application build process. If high/higher severity vulnerabilities are discovered, an alert is triggered  | 
+| ECR Image scan results  | Spryker scans images that are used during the application build process. If high/higher severity vulnerabilities are discovered, an alert is triggered  |
+
+</div>
 
 ## When and how to get customers alerted?
 

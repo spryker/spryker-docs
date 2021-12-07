@@ -16,6 +16,8 @@ redirect_from:
   - /v5/docs/en/t-different-stores-different-logic-landing-pages
   - /v4/docs/t-different-stores-different-logic-landing-pages
   - /v4/docs/en/t-different-stores-different-logic-landing-pages
+  - /v3/docs/t-different-stores-different-logic-landing-pages
+  - /v3/docs/en/t-different-stores-different-logic-landing-pages
   - /v2/docs/t-different-stores-different-logic-landing-pages
   - /v2/docs/en/t-different-stores-different-logic-landing-pages
   - /v1/docs/t-different-stores-different-logic-landing-pages

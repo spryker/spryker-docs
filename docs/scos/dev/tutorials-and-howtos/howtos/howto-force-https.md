@@ -16,6 +16,8 @@ redirect_from:
   - /v5/docs/en/ht-force-https
   - /v4/docs/ht-force-https
   - /v4/docs/en/ht-force-https
+  - /v3/docs/ht-force-https
+  - /v3/docs/en/ht-force-https
   - /v2/docs/ht-force-https
   - /v2/docs/en/ht-force-https
   - /v1/docs/ht-force-https

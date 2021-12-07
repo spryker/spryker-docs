@@ -59,12 +59,12 @@ Please visit our [Partners Registry](https://spryker.com/find-a-partner/) for a 
 ### Customer Communication
 
 * [Dotdigital](/docs/scos/user/technology-partners/201811.0/marketing-and-conversion/customer-communication/dotdigital.html)
-* [Episerver](/docs/scos/user/technology-partners/201811.0/marketing-and-conversion/customer-communication/episerver/episerver.html)
+* [Episerver](/docs/scos/user/technology-partners/201811.0/marketing-and-conversion/customer-communication/episerver.html)
 * [Inxmail](/docs/scos/user/technology-partners/201811.0/marketing-and-conversion/customer-communication/inxmail.html)
 
 ### Customer Retention & Loyalty
 
-* [Namogoo](/docs/scos/user/technology-partners/201811.0/marketing-and-conversion/customer-retention-and-loyalty/namogoo.html) 
+* [Namogoo](/docs/scos/user/technology-partners/201811.0/marketing-and-conversion/customer-retention-and-loyalty/namogoo.html)
 * [Trustpilot](/docs/scos/user/technology-partners/201811.0/marketing-and-conversion/customer-retention-and-loyalty/trustpilot.html)
 * [Zenloop](/docs/scos/user/technology-partners/201811.0/marketing-and-conversion/customer-retention-and-loyalty/zenloop.html)
 
@@ -72,7 +72,7 @@ Please visit our [Partners Registry](https://spryker.com/find-a-partner/) for a 
 
 <!--* [8Select](/docs/scos/user/technology-partners/201811.0/marketing-and-conversion/personalization-and-cross-selling/8select.html)-->
 <!--* [Contentserv](/docs/scos/user/technology-partners/201811.0/marketing-and-conversion/personalization-and-cross-selling/contentserv.html)-->
-* [Econda](/docs/scos/user/technology-partners/201811.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda.html)
+* [Econda](/docs/scos/user/technology-partners/201811.0/marketing-and-conversion/personalization-and-cross-selling/econda.html)
 * [Nosto](/docs/scos/user/technology-partners/201811.0/marketing-and-conversion/personalization-and-cross-selling/nosto.html)
 * [trbo](/docs/scos/user/technology-partners/201811.0/marketing-and-conversion/personalization-and-cross-selling/trbo.html)
 
@@ -107,13 +107,12 @@ Please visit our [Partners Registry](https://spryker.com/find-a-partner/) for a 
 * [AfterPay](/docs/scos/user/technology-partners/201811.0/payment-partners/afterpay/afterpay.html)
 * [Arvato](/docs/scos/user/technology-partners/201811.0/payment-partners/arvato/arvato.html)
 * [Billie](/docs/scos/user/technology-partners/201811.0/payment-partners/billie.html)
-* [Billpay](/docs/scos/user/technology-partners/201811.0/payment-partners/billpay/billpay.html) 
+* [Billpay](/docs/scos/user/technology-partners/201811.0/payment-partners/billpay/billpay.html)
 * [Braintree](/docs/scos/user/technology-partners/201811.0/payment-partners/braintree/braintree.html)
 * [BS Payone](/docs/scos/user/technology-partners/201811.0/payment-partners/bs-payone/bs-payone.html)
 * [Computop](/docs/scos/user/technology-partners/201811.0/payment-partners/computop/computop.html)
 * [CrefoPay](/docs/scos/user/technology-partners/201811.0/payment-partners/crefopay/crefopay.html)
 * [Heidelpay](/docs/scos/user/technology-partners/201811.0/payment-partners/heidelpay/heidelpay.html)
-<!--* [Informa Solutions](/docs/scos/user/technology-partners/201811.0/payment-partners/informa-solutions.html)-->
 * [Klarna](/docs/scos/user/technology-partners/201811.0/payment-partners/klarna/klarna.html)
 * [Payolution](/docs/scos/user/technology-partners/201811.0/payment-partners/payolution/payolution.html)
 * [Powerpay](/docs/scos/user/technology-partners/201811.0/payment-partners/powerpay.html)
@@ -130,7 +129,7 @@ Please visit our [Partners Registry](https://spryker.com/find-a-partner/) for a 
 
  ## Shipment
 
-* [Paazl](/docs/scos/user/technology-partners/201811.0/shipment/paazl.html) 
+* [Paazl](/docs/scos/user/technology-partners/201811.0/shipment/paazl.html)
 * [Paqato](/docs/scos/user/technology-partners/201811.0/shipment/paqato.html)
 * [Seven Senders](/docs/scos/user/technology-partners/201811.0/shipment/seven-senders.html)
 

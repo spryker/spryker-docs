@@ -8,7 +8,7 @@ template: concept-topic-template
 ## Method is overridden with a Factory, Dependency Provider, Repository, or Entity Manager extended
 
 ### What is the nature of the upgradability error?
-minor releases could break backward compatibility through private API. In particular, the method might be changed (number of parameters or their types), renamed, or deleted. If you override this method on the project level, you could get an error during the update or get unexpected functionality.
+Minor releases can break backward compatibility through private API. In particular, the method can be changed (number of parameters or their types), renamed, or deleted. If you override this method on the project level, you could get an error during the update or get unexpected functionality.
 
 ### Example of code that can cause the upgradability errors
 

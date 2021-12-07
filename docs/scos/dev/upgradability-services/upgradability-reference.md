@@ -60,7 +60,12 @@ class QueueDependencyProvider extends BaseQueueDependencyProvider
 }
 ```
 
+
+Exception: when a plugin is introduced together with an overriddden method.
+
+
 #### Repository method overridding
+
 ```php
 namespace Pyz\Zed\EvaluatorSpryker\Persistence;
 
@@ -106,3 +111,4 @@ class EvaluatorSprykerCmsSlotBlockRepository  extends CmsSlotBlockRepository
 ### How can I avoid this error?
 - Introduce a new custom method without usage of existing one.
 - Override usage of the current method in all usage of public API.
+- the method names should be unique to the extend at which the future methods introduced by spryker will not match its name

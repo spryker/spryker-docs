@@ -1,21 +1,10 @@
 ---
-title: Loggly
-description: Read log messages from a queue and send the messages via https by integrating Loggly into the Spryker Commerce OS.
-last_updated: Jan 27, 2020
-template: concept-topic-template
-originalLink: https://documentation.spryker.com/v4/docs/loggly-queue
-originalArticleId: 1fba93b1-f344-472b-a14b-b3e49aa2aa52
-redirect_from:
-  - /v4/docs/loggly-queue
-  - /v4/docs/en/loggly-queue
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
+title: Configuring Loggly
+last_updated: Jun 16, 2021
+template: howto-guide-template
 ---
 
-The Loggly module provides a plugin to read log messages from a queue and send the messages via https to [Loggly](https://www.loggly.com/).
-
-To integrate this plugin you need to have the `QueueHandler` enabled in your Logger configuration. <!-- as described [here](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/spryker-middleware.html).-->
+To integrate Loggly, you need to have the `QueueHandler` enabled in your Logger configuration. <!-- as described [here](https://documentation.spryker.com/v5/docs/en/logger.htm).-->
 
 In addition you need to properly configure the queue setup for Loggly to work.
 
@@ -149,18 +138,3 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 }
 ```
-
-## Related Developer articles
-
-* [Configuring Loggly](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/configuring-loggly.html)
-
----
-
-## Copyright and Disclaimer
-
-See [Disclaimer](https://github.com/spryker/spryker-documentation).
-
----
-For further information on this partner and integration, contact us via submitting the form.
-
-<div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>

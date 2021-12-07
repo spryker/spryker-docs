@@ -1,23 +1,14 @@
 ---
-title: Loggly
-description: Read log messages from a queue and send the messages via https by integrating Loggly into the Spryker Commerce OS.
-last_updated: Oct 6, 2020
-template: concept-topic-template
-originalLink: https://documentation.spryker.com/v6/docs/loggly-queue
-originalArticleId: 391c5723-caab-4f15-afec-1d7f24083af0
-redirect_from:
-  - /v6/docs/loggly-queue
-  - /v6/docs/en/loggly-queue
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
+title: Configuring Loggly
+last_updated: Jun 16, 2021
+template: howto-guide-template
 ---
 
-The [Loggly](https://github.com/spryker-eco/loggly) module provides a plugin to read log messages from a queue and send the messages via https to [Loggly](https://www.loggly.com/).
 
-To start using Loggly, you need to do some configuration, as described below.
+To configure Loggly, do the following.
 
 ## 1. Adjusting the config_default.php file
+
 First of all, add necessary data to the *config_default.php* file:
 
 ```php
@@ -34,6 +25,7 @@ $config[LogglyConstants::QUEUE_CHUNK_SIZE] = $chunkSize;
 ```
 
 ## 2. Setting up a log queue
+
 Next, you have to set up a log queue. On project level, add the name of a log queue to an array returned by `\Pyz\Client\RabbitMq\RabbitMqConfig::getQueueConfiguration()` method:
 
 **Pyz\Client\RabbitMqRabbitMqConfig**
@@ -59,6 +51,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 ```
 
 ## 3. Configuring a queue consumer
+
 Configure a queue consumer in `Pyz\Zed\Queue\QueueConfig`:
 
 **Pyz\Zed\Queue\QueueConfig**
@@ -142,19 +135,4 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-## Related Developer articles
-
-* [Configuring Loggly](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/configuring-loggly.html)
-
-
-
----
-
-## Copyright and Disclaimer
-
-See [Disclaimer](https://github.com/spryker/spryker-documentation).
-
----
-For further information on this partner and integration into Spryker, please contact us.
-
-<div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>
+For further information on this partner and integration into Spryker, please [contact us](https://spryker.force.com/support/s/).

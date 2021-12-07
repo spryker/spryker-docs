@@ -2176,7 +2176,7 @@ entries:
       - title: Migration guide - ProductTaxSetsRestApi
         url: /docs/scos/dev/module-migration-guides/glue-api/migration-guide-producttaxsetsrestapi.html
 
-      
+
     - title: Migration Guide - API Module
       url: /docs/scos/dev/module-migration-guides/migration-guide-api-module.html
     - title: Migration guide - Auth module to SecurityGui module
@@ -2458,7 +2458,7 @@ entries:
     - title: Migration Guide - QuoteRequestWidget
       url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequestwidget.html
     - title: Migration Guide - Refund
-      url: /docs/scos/dev/module-migration-guides/migration-guide-refund.html  
+      url: /docs/scos/dev/module-migration-guides/migration-guide-refund.html
     - title: Migration Guide - Router
       url: /docs/scos/dev/module-migration-guides/migration-guide-router.html
     - title: Migration Guide - Sales
@@ -2508,7 +2508,7 @@ entries:
     - title: Migration Guide - Store
       url: /docs/scos/dev/module-migration-guides/migration-guide-store.html
     - title: Migration Guide - Tax
-      url: /docs/scos/dev/module-migration-guides/migration-guide-tax.html 
+      url: /docs/scos/dev/module-migration-guides/migration-guide-tax.html
     - title: Migration Guide - Touch
       url: /docs/scos/dev/module-migration-guides/migration-guide-touch.html
     - title: Migration Guide - Transfer
@@ -2522,8 +2522,8 @@ entries:
     - title: Migration Guide - WebProfiler
       url: /docs/scos/dev/module-migration-guides/migration-guide-webprofiler.html
     - title: Migration Guide - Wishlist
-      url: /docs/scos/dev/module-migration-guides/migration-guide-wishlist.html  
-    
+      url: /docs/scos/dev/module-migration-guides/migration-guide-wishlist.html
+
   - title: DevOps migration guides
     include_versions:
     - "202001.0"
@@ -3987,11 +3987,11 @@ entries:
       nested:
       - title: Heroku technology partner integration
         url: /docs/scos/dev/technology-partner-guides/hosting-providers/heroku-technology-partner-integration.html
-    - title: Marketing & Conversion
+    - title: Marketing and conversion
       nested:
-      - title: Customer Communication
+      - title: Customer communication
         nested:
-        - title: Episerver
+        - title: Episerver guides
           nested:
           - title: Integrating Episerver
             url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
@@ -4001,6 +4001,38 @@ entries:
             url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/episerver-api.html
           - title: Episerver order reference commands
             url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html
+        - title: Inxmail guides
+          nested:
+          - title: Integrating Inxmail
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/integrating-inxmail.html
+          - title: Installing and configuring Inxmail
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/installing-and-configuring-inxmail.html
+          - title: Inxmail API requests
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/inxmail-api-requests.html
+          - title: Inxmail order referenced commands
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/inxmail-order-referenced-commands.html
+      - title: Personalization and cross-selling
+        nested:
+        - title: Econda
+          nested:
+          - title: Installing Econda
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/installing-econda.html
+          - title: Integrating Econda
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda.html
+          - title: Integrating Econda front end
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda-front-end.html
+            include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+            - "202001.0"
+            - "202005.0"
+          - title: Integrating Econda cross-selling
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda-cross-selling.html
+          - title: Adding the Econda tracking code
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/adding-the-econda-tracking-code.html
+          - title: Exporting Econda data
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/exporting-econda-data.html
       - title: Analytics
         nested:
         - title: FACT-Finder
@@ -4063,52 +4095,55 @@ entries:
       url: /docs/scos/dev/architecture/programming-concepts.html
   - title: Guidelines
     nested:
-    - title: Coding Guidelines
+    - title: Coding guidelines
       nested:
-      - title: Code Quality
+      - title: Code quality
         url: /docs/scos/dev/guidelines/coding-guidelines/code-quality.html
-      - title: Code Architecture Guide
+      - title: Code architecture guide
         url: /docs/scos/dev/guidelines/coding-guidelines/code-architecture-guide.html
-      - title: Secure Coding Practices
+      - title: Secure coding practices
         url: /docs/scos/dev/guidelines/coding-guidelines/secure-coding-practices.html
       - title: Code style guide
         url: /docs/scos/dev/guidelines/coding-guidelines/code-style-guide.html
-    - title: Module Configuration Convention
-      url: /docs/scos/dev/guidelines/module-configuration-convention.html
     - title: Performance guidelines
-      url: /docs/scos/dev/guidelines/performance-guidelines.html
-    - title: Testing Concepts
-      url: /docs/scos/dev/guidelines/testing-concepts.html
-    - title: Testing
+      nested:
+      - title: General performance guidelines
+        url: /docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html
+      - title: Architecture performance guidelines
+        url: /docs/scos/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
+      - title: Front-end performance guidelines
+        url: /docs/scos/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
+    - title: Testing guidelines
+      url: /docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
       nested:
       - title: Setting up Tests
-        url: /docs/scos/dev/guidelines/testing/setting-up-tests.html
+        url: /docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
       - title: Publish and Synchronization testing
-        url: /docs/scos/dev/guidelines/testing/publish-and-synchronization-testing.html
+        url: /docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html
       - title: Test Helpers
-        url: /docs/scos/dev/guidelines/testing/test-helpers.html
+        url: /docs/scos/dev/guidelines/testing-guidelines/test-helpers.html
       - title: Testify
-        url: /docs/scos/dev/guidelines/testing/testify.html
+        url: /docs/scos/dev/guidelines/testing-guidelines/testify.html
       - title: Executing Tests
-        url: /docs/scos/dev/guidelines/testing/executing-tests.html
+        url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests.html
       - title: Test framework
-        url: /docs/scos/dev/guidelines/testing/test-framework.html
+        url: /docs/scos/dev/guidelines/testing-guidelines/test-framework.html
       - title: Code Coverage
-        url: /docs/scos/dev/guidelines/testing/code-coverage.html
+        url: /docs/scos/dev/guidelines/testing-guidelines/code-coverage.html
       - title: Data Builders
-        url: /docs/scos/dev/guidelines/testing/data-builders.html
+        url: /docs/scos/dev/guidelines/testing-guidelines/data-builders.html
       - title: Testing Best Practices
-        url: /docs/scos/dev/guidelines/testing/testing-best-practices.html
+        url: /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html
       - title: Available test helpers
-        url: /docs/scos/dev/guidelines/testing/available-test-helpers.html
-    - title: Project Development Guidelines
+        url: /docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
+    - title: Project development guidelines
       url: /docs/scos/dev/guidelines/project-development-guidelines.html
     - title: Data Processing Guidelines
-      url: /docs/scos/dev/guidelines/data-processing-guidelines.html
-    - title: Making Your Spryker Shop Secure
+      url: /docs/scos/dev/guidelines/data-processing-guidelines.html      
+    - title: Module configuration convention
+      url: /docs/scos/dev/guidelines/module-configuration-convention.html
+    - title: Making your Spryker shop secure
       url: /docs/scos/dev/guidelines/making-your-spryker-shop-secure.html
-    - title: Front-end performance guidelines
-      url: /docs/scos/dev/guidelines/front-end-performance-guidelines.html
   - title: Best practices
     nested:
     - title: Basic SEO techniques to use in your project

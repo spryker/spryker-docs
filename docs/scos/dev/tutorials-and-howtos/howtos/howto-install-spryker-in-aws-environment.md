@@ -16,6 +16,8 @@ redirect_from:
   - /v5/docs/en/ht-install-spryker-in-aws-environment
   - /v4/docs/ht-install-spryker-in-aws-environment
   - /v4/docs/en/ht-install-spryker-in-aws-environment
+  - /v3/docs/ht-install-spryker-in-aws-environment
+  - /v3/docs/en/ht-install-spryker-in-aws-environment
   - /v2/docs/ht-install-spryker-in-aws-environment
   - /v2/docs/en/ht-install-spryker-in-aws-environment
   - /v1/docs/ht-install-spryker-in-aws-environment

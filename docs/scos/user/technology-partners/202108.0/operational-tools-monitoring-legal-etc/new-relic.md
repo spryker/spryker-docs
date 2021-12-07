@@ -17,4 +17,15 @@ Spryker enables integration with New Relic for performance monitoring. New Relic
 ## Related Developer articles
 
 * [Installing and configuring New Relic with Vagrant](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/new-relic/installing-and-configuring-new-relic–with–vagrant.html)
-* [Enabling New Relic request logging](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/new-relic/enabling-request-logging.html)
+* [Configuring New Relic request logging](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/new-relic/configuring-new-relic-logging.html)
+
+---
+
+## Copyright and Disclaimer
+
+See [Disclaimer](https://github.com/spryker/spryker-documentation).
+
+---
+For further information on this partner and integration into Spryker, please contact us.
+
+<div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>

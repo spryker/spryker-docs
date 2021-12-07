@@ -16,43 +16,31 @@ To install and configure New Relic, do the following.
 
 ## Install New Relic
 
-The `spryker-eco/new-relic` module provides a `NewRelicMonitoringExtensionPlugin` to send monitoring information to the New Relic service. To be able to use the `\SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin` plugin within the [Monitoring](https://github.com/spryker/monitoring) module, install the NewRelic Module:
+The `spryker-eco/new-relic` module provides a `NewRelicMonitoringExtensionPlugin` to send monitoring information to the New Relic service.
 
+
+To install New Relic module, run
 ```bash
 composer require spryker-eco/new-relic
 ```
+This will install:
 
-To use `\SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin`, add it to `MonitoringDependencyProvider`:
+* `spryker-eco/new-relic - 1.1.x`
+* `spryker/monitoring - 2.x.x`
+* `spryker/monitoring - 1.x.x`
 
-```php
-<?php
+and will remove the eventual New Relic legacy packages:
 
-namespace Pyz\Service\Monitoring;
+* `spryker/new-relic`
+* `spryker/new-relic-api`
 
-use Spryker\Service\Kernel\AbstractBundleDependencyProvider;
-use Spryker\Service\Kernel\Container;
-use Spryker\Service\Monitoring\MonitoringDependencyProvider as SprykerMonitoringDependencyProvider;
-
-class MonitoringDependencyProvider extends SprykerMonitoringDependencyProvider
-{
-    /**
-     * @return \Spryker\Service\MonitoringExtension\Dependency\Plugin\MonitoringExtensionPluginInterface[]
-     */
-    protected function getMonitoringExtensions(): array
-    {
-        return [
-          new \SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin(),
-        ];
-    }
-}
-```
 
 ## Configure New Relic
 
 1. [Create a New Relic account](https://newrelic.com/signup).  
 2. Install the New Relic PHP extension in your virtual machine as described in [New Relic setup instructions](https://rpm.newrelic.com/accounts/1131235/applications/setup).
 
-## Implementation Overview
+## Implementation overview
 
 Monitoring is a Spryker module that provides a hook to add any monitoring provider you want. In the Monitoring module, you can find a service provider and a controller listener for Yves and Zed that need to be added to  `ApplicationDependencyProvider` to enable them.
 

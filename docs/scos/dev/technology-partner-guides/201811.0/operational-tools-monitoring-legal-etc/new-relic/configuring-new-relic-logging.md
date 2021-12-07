@@ -3,6 +3,7 @@ title: Configuring New Relic logging
 template: howto-guide-template
 ---
 
+This document describes how to configure different types of New Relic logging.
 
 ## Configuring request logging
 
@@ -16,7 +17,7 @@ namespace Pyz\Service\Monitoring;
 
 use Spryker\Service\Monitoring\MonitoringDependencyProvider as SprykerMonitoringDependencyProvider;
 use SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin;
-                          
+
 class MonitoringDependencyProvider extends SprykerMonitoringDependencyProvider
 {
     /**

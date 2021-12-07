@@ -1,5 +1,5 @@
 ---
-title: Enabling New Relic request logging
+title: Configuring New Relic logging
 template: howto-guide-template
 ---
 

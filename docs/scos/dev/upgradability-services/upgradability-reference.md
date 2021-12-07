@@ -27,6 +27,8 @@ Modules have public and private APIs. The public API includes the entities like 
 
 While public API updates always support backward compatibility, the private API updates can break backward compatibility. Minor releases can break backward compatibility in the private API. For example, a method is renamed or removed. If you use this method on the project level, you can get an error during an update.
 
+
+
 In this check, the Evaluator works with Factory, Dependency provider, Repository, and Entity manager.
 Errors related to this check contains prefix `IsCoreMethodUsedOnProjectLevel`.
 

@@ -21,8 +21,10 @@ related:
 Using the **Product Relations** feature, sellers can define a list of comparable or additional items for each product. You can display such items, also called Related Products, in search and in the cart together with the products selected by customers. This can help boosting the cross- and up-selling performance of the outlet.
 
 {% info_block infoBox %}
-Only [abstract](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html)
-{% endinfo_block %} products support Product Relations. For more details, see [Product Relations](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html).)
+
+Only [abstract](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) products support Product Relations. For more details, see [Product Relations](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html).
+
+{% endinfo_block %}
 
 The Product Relations API provides REST endpoints to retrieve the related products. Using it, you can:
 
@@ -35,15 +37,19 @@ In your development, the endpoints can help you to:
 * Provide additional products items in a customer's cart to offer upscale variations, accessories and other additional items for products in the cart. This will help you in boosting the cart value.
 
 {% info_block infoBox %}
+
 To be able to use **Product Relations API**, first, you need to have the Product Relations feature integrated with your project. For details, see [Product Relation Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-relation-integration.html).
+
 {% endinfo_block %}
 
 {% info_block infoBox %}
+
 Different types of relations, as well as their logic, are defined on the project level and can vary depending on the project-specific implementation. The API does not define any new relations. Its task is only to present related products via REST requests.
+
 {% endinfo_block %}
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Product Relations API Feature Integration](https://documentation.spryker.com/v3/docs/product-relations-api-feature-integration-201903).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Product Relations API Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-relations-feature-integration.html).
 
 ## Getting Related Items for an Abstract Product
 To get related items for an abstract product, send a GET request to the following endpoint:
@@ -295,10 +301,13 @@ For a detailed list of the fields included in the response for each product, see
 </details>
 
 {% info_block infoBox %}
+
 You can also use the Accept-Language header to specify the locale.<br>Sample header:```[{"key":"Accept-Language","value":"de, en;q=0.9"}]```where de and en are the locales; q=0.9 is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+
 {% endinfo_block %}
 
 ### Possible Errors
+
 | Code | Reason |
 | --- | --- |
 | 400 | Abstract product ID not specified |
@@ -311,7 +320,9 @@ Sample request: `GET http://mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493
 where `1ce91011-8d60-59ef-9fe0-4493ef3628b2` is the ID of the cart you need items for.
 
 {% info_block infoBox %}
+
 For details on peculiarities of managing carts of registered users, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html).
+
 {% endinfo_block %}
 
 ### Response
@@ -1383,7 +1394,9 @@ For a detailed list of the fields included in the response for each product, see
 </details>
 
 {% info_block infoBox %}
+
 You can also use the **Accept-Language** header to specify the locale.<br>Sample header:<br>`[{"key":"Accept-Language","value":"de, en;q=0.9"}]`<br>where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+
 {% endinfo_block %}
 
 ### Possible Errors
@@ -1401,7 +1414,9 @@ where `1ce91011-8d60-59ef-9fe0-4493ef3628b2` is the ID of the guest cart you nee
 Your request must specify a unique identifier of the **guest user** in the **X-Anonymous-Customer-Unique-Id** header.
 
 {% info_block infoBox %}
+
 For details on how to retrieve and manage the identifier, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html).
+
 {% endinfo_block %}
 
 ### Response
@@ -1614,12 +1629,14 @@ For a detailed list of the fields included in the response for each product, see
 </details>
 
 {% info_block infoBox %}
+
 You can also use the **Accept-Language** header to specify the locale.<br>Sample header:<br>`[{"key":"Accept-Language","value":"de, en;q=0.9"}]`<br>where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+
 {% endinfo_block %}
 
 ### Possible Errors
+
 | Code | Reason |
 | --- | --- |
 | 400 | Cart ID is missing |
 | 404 | A cart with the specified ID was not found |
-

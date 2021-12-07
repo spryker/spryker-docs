@@ -42,11 +42,11 @@ To change general information of the page and SEO details:
     * Template
     * Valid from and Valid to
     * Name and URL per locale
-   
-    In the **SEO** tab (per locale): 
+
+    In the **SEO** tab (per locale):
     * Meta title
     * Meta keywords
-    * Meta description 
+    * Meta description
 ***
 **Tips & Tricks**
 On the **Edit CMS Page: [Page name]** page, you can do the following:
@@ -56,7 +56,7 @@ On the **Edit CMS Page: [Page name]** page, you can do the following:
 * Switch to the page where you can edit a title and content of the page by clicking **Edit Placeholders** on the top of the page.
 * Cancel changes since the previous publish by clicking **Discard Draft** on the top of the page.
 * Remove the published version of the page from the store website by clicking **Deactivate** on the top of the page.
-* Make the page visible on the store website by clicking **Activate** on the top of the page.
+* Make the page visible on the store webs ite by clicking **Activate** on the top of the page.
 * Switch to the list of pages by clicking **Back to CMS** on the top of the page.
 
 ### Selecting the Edit > Placeholders option
@@ -64,11 +64,14 @@ To change the title and content of the page:
 1. Select **Edit** > **Placeholders**.
 2.  On the **Edit Placeholders: [Page Name]** editor that opens, insert your cursor into the placeholder where you would like to update the content.
 3.  Using options on the editor menu, edit the content of your page.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Pages/Editing+CMS+Pages/placeholders.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Pages/Editing+CMS+Pages/placeholders.png)
 
 {% info_block infoBox %}
-In the placeholders editor, you can insert a banner, abstract product list, product set, and downloadable files using content item widgets. See the [Adding Content Item Widgets to a Page](https://documentation.spryker.com/v1/docs/adding-content-items-to-cms-pages-and-blocks#adding-content-item-widgets-to-pages
-{% endinfo_block %} article for more details. )
+
+In the placeholders editor, you can insert a banner, abstract product list, product set, and downloadable files using content item widgets. See the [Adding Content Item Widgets to a Page](F#adding-content-item-widgets-to-pages) article for more details.
+
+{% endinfo_block %}
+
 ***
 **Tips & Tricks**
 On the **Edit Placeholders: [Page Name]** editor, you can do the following:

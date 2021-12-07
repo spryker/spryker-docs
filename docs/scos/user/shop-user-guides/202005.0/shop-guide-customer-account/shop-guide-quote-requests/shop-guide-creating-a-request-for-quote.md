@@ -33,9 +33,9 @@ To create a new RFQ:
 
 4. On the **Create Quote Request** page, click **Submit Request**. This will create a Request for Quote in the Draft status in the **Customer Account > Quote Request** section.
 
-* See [Buyer Workflow](https://documentation.spryker.com/v5/docs/en/quotation-process-feature-overview#buyer-workflow) for more information on the request statuses and the workflow.
+* See [Buyer Workflow](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html#buyer-workflow) for more information on the request statuses and the workflow.
 * See [Reference Information](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/references/request-for-quote-reference-information.html) for details on UI elements in the **Quote Requests** page in the Customer Account.
-![Create Quote Request](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Creating+a+Request+for+Quote/create-quote-request.png) 
+![Create Quote Request](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Creating+a+Request+for+Quote/create-quote-request.png)
 
 ***
 **What's next?**

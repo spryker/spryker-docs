@@ -33,17 +33,17 @@ Check out this video tutorial on how to build products and manage the product in
 
 **Features:**
 <div>
-<a class="feature-link" href="https://documentation.spryker.com/v4/docs/product-bundle">Product Bundles</a>
-<a class="feature-link" href="https://documentation.spryker.com/v4/docs/dynamic-product-labels">Dynamic Product Labels</a>
-<a class="feature-link" href="https://documentation.spryker.com/v4/docs/product-options-2">Product Options</a>
-<a class="feature-link" href="https://documentation.spryker.com/v4/docs/product-relations">Product Relations</a>
-<a class="feature-link" href="https://documentation.spryker.com/v4/docs/product-abstraction">Product Abstraction</a>
-<a class="feature-link" href="https://documentation.spryker.com/v4/docs/super-attributes">Super Attributes</a>
-<a class="feature-link" href="https://documentation.spryker.com/v4/docs/alternative-products">Alternative Products</a>
-<a class="feature-link" href="https://documentation.spryker.com/v4/docs/discontinued-products">Discontinued Products</a>
-<a class="feature-link" href="https://documentation.spryker.com/v4/docs/barcode-generator">Barcode Generator</a>
-<a class="feature-link" href="https://documentation.spryker.com/v4/docs/product-quantity-restrictions">Product Quantity Restrictions</a>
-<a class="feature-link" href="https://documentation.spryker.com/v4/docs/product-group">Product Groups</a>
-<a class="feature-link" href="https://documentation.spryker.com/v4/docs/configurable-bundle">Configurable Bundles</a>
-<a class="feature-link" href="https://documentation.spryker.com/v4/docs/product-set">Product Sets</a>
-<a class="feature-link" href="https://documentation.spryker.com/v4/docs/product-label">Product Labels</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html">Product Bundles</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html#dynamic-product-label">Dynamic Product Labels</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html">Product Options</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html">Product Relations</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html">Product Abstraction</a>
+<a class="feature-link" href="/docs/scos/user/features/202005.0/product-information-management/super-attributes.html">Super Attributes</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/alternative-products-feature-overview.html">Alternative Products</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/product-feature-overview/discontinued-products-overview.html">Discontinued Products</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/product-barcode-feature-overview.html">Barcode Generator</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/product-information-management/product-quantity-restrictions/product-quantity-restrictions-overview.html">Product Quantity Restrictions</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/product-groups-feature-overview.html">Product Groups</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html">Configurable Bundles</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/product-sets-feature-overview.html">Product Sets</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html">Product Labels</a>

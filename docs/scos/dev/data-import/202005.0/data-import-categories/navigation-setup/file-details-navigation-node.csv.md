@@ -9,9 +9,9 @@ redirect_from:
   - /v5/docs/en/file-details-navigation-nodecsv
 ---
 
-This article contains content of the **navigation_node.csv** file to configure [Navigation Node](https://documentation.spryker.com/v5/docs/en/navigation-node-types) information on your Spryker Demo Shop.
+This article contains content of the **navigation_node.csv** file to configure [Navigation Node](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/references/navigation-reference-information.html#navigation-node-types) information on your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
+## Headers & Mandatory Fields
 These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
@@ -42,4 +42,3 @@ A template and an example of the *navigation_node.csv*  file can be downloaded h
 | --- | --- |
 | [navigation_node.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Navigation+Setup/Template+navigation_node.csv) | Navigation Node .csv template file (empty content, contains headers only). |
 | [navigation_node.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Navigation+Setup/navigation_node.csv) | Navigation Node .csv file containing a Demo Shop data sample. |
-

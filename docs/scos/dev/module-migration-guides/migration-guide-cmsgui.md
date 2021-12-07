@@ -25,6 +25,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-api-module.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-api-module.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-api-module.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmsgui.html
 ---
 
 ## Upgrading from Version 4.* to Version 5.*

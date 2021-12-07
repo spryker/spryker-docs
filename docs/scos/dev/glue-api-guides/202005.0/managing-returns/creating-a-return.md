@@ -220,7 +220,7 @@ Sample request: `POST https://glue.mysprykershop.com/returns`
 
 {% info_block infoBox "Info" %}
 
-If you want to adjust results number per page, use the limit parameter, that returns the number of results for a single page, and the offset parameter, that returns results starting from a particular page. See [Paging Through Orders](https://documentation.spryker.com/v5/docs/en/retrieving-order-history#paging-through-orders) for more details.
+If you want to adjust results number per page, use the limit parameter, that returns the number of results for a single page, and the offset parameter, that returns results starting from a particular page. See [Paging Through Orders](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html#paging-through-orders) for more details.
 
 {% endinfo_block %}
 

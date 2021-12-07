@@ -15,10 +15,9 @@ Quick Order page allows your customers to quickly find and buy products in just 
 
 To open Quick Order Page, go to the header of the shop application → **Quick Order**.
 
-![Quick order widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shop+Guide+-+Quick+Order/quick-order-widget.png) 
+![Quick order widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shop+Guide+-+Quick+Order/quick-order-widget.png)
 
 Here you can:
-
 * Create a Quick Order
 * Add Quick Order using Paste Your Order window
 * Add products using Upload concrete products form
@@ -28,8 +27,11 @@ Here you can:
 ## Graphic User Interface
 
 {% info_block infoBox %}
+
 Hover your mouse over the numbers to view their description.
+
 {% endinfo_block %}
+
 <div class="mapster-container">
             <img class="mapster-image" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shop+Guide+-+Quick+Order/quick-order-ui.png" usemap="#Map" data-mapster-config="" />
 <map class="mapster-map" name="Map" id="Map">
@@ -48,13 +50,17 @@ Hover your mouse over the numbers to view their description.
                 <area alt="" id="id13" href="#" shape="rect" coords="905,334,945,375" data-static-state="false" data-key="id13" data-tool-tip="This widget allows shopper to upload an order using a CSV file." />
             </map>
         </div>
-        
+
 {% info_block warningBox %}
+
 You can configure a drop-down list with available carts on project level. By default, this box is hidden.
+
 {% endinfo_block %}
 
 {% info_block infoBox %}
+
 The **Add to Shopping List** button is only available for the authorized users.
+
 {% endinfo_block %}
 ***
 ## Creating a New Quick Order
@@ -64,8 +70,11 @@ To **create a new quick order**, do the following:
 1. On the **Quick Order** page, populate all required information: enter the product SKU or Item Name and the required Quantity.
 
 {% info_block warningBox %}
+
 Keep in mind, that if quantity restrictions apply to the product, they will be reflected here as well. See Quantity Restrictions for Quick Order to learn more about how the quantity limitations are applied to the Quick Order form.
+
 {% endinfo_block %}
+
 2. Click **Create Order**.
 ***
 ## Adding the Products to the Quick Order Form in Bulk
@@ -77,7 +86,9 @@ You can bulk add the products by using **Paste your Order** window. To do so:
 3. The available products will be listed in the Quick Order form.
 
 {% info_block warningBox %}
+
 By default, [SKU, Qty] format is used for filling the form in Spryker B2B Demo Shop.
+
 {% endinfo_block %}
 
 ![Add articles section](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shop+Guide+-+Quick+Order/quick-order-add-articles.png)
@@ -85,17 +96,21 @@ By default, [SKU, Qty] format is used for filling the form in Spryker B2B Demo S
 ## Uploading Products Using Upload Form
 
 {% info_block warningBox %}
+
 This option is only available if you installed File Upload Concrete Products feature.
+
 {% endinfo_block %}
 
 To upload the products using the upload form, do the following:
 
 1. Browse a .csv file by clicking **Browse File** area:
-![Browse file](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shop+Guide+-+Quick+Order/upload-your-order-browse-file.png) 
+![Browse file](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shop+Guide+-+Quick+Order/upload-your-order-browse-file.png)
 
 {% info_block infoBox %}
-You can download a file template by clicking **Click here to download a csv template**:![Download a .csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shop+Guide+-+Quick+Order/upload-your-order-download-template.png
-{% endinfo_block %})
+
+You can download a file template by clicking **Click here to download a csv template**:![Download a .csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shop+Guide+-+Quick+Order/upload-your-order-download-template.png)
+
+{% endinfo_block %}
 
 2. Click **Upload** to add the items to quick order page.
 ***
@@ -105,7 +120,7 @@ To add a quick order to a shopping list, do the following:
 
 1. On the **Quick Order** page, populate all the required information: enter the product SKU or product name and the required quantity.
 2. Select the required Shopping List in the drop-down list, if necessary.
-![Select the required Shopping List](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shop+Guide+-+Quick+Order/select-list-quick-order.png) 
+![Select the required Shopping List](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shop+Guide+-+Quick+Order/select-list-quick-order.png)
 3. Click **Add to Shopping List**.
 
 ## Adding a Quick Order to a Shopping Cart
@@ -116,6 +131,6 @@ To add a quick order to a shopping cart, do the following:
 2. Click **Add to Shopping Cart**.
 ***
 **What's next?**
-* [Go to Checkout](https://documentation.spryker.com/v2/docs/checkout-shop-guide)
+* [Go to Checkout](/docs/scos/user/shop-user-guides/201903.0/shop-guide-checkout/shop-guide-checkout.html)
 
 <!-- Last review date: Mar 06, 2019 -->

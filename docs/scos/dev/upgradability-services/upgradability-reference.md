@@ -23,16 +23,13 @@ template: concept-topic-template
 
 ## A core method is used on the project level
 
-Modules have public and private APIs. The public API includes the entities like facade, plugin stack, dependency list and so on. The private API includes Business model, Factory, Dependency provider, Repository, and Entity manager.
+Modules have public and private APIs. The public API includes the entities like facade, plugin stack, dependency list, etc. This check covers private API entities, including Business model, Factory, Dependency provider, Repository, and Entity manager.
 
-While public API updates always support backward compatibility, the private API updates can break backward compatibility. Minor releases can break backward compatibility in the private API. For example, a method is renamed or removed. If you use this method on the project level, you can get an error during an update.
+While public API updates always support backward compatibility, the private API updates can break backward compatibility. Major and minor releases can break the backward compatibility in the private API. For example, if you use a core method on the project level, and it is updated or removed, you can get the error during an update.
 
+The errors related to this check are prefixed with `IsCoreMethodUsedOnProjectLevel`.
 
-
-In this check, the Evaluator works with Factory, Dependency provider, Repository, and Entity manager.
-Errors related to this check contains prefix `IsCoreMethodUsedOnProjectLevel`.
-
-### How can I avoid this error?
+### Avoiding the error
 
 To avoid the error, override the existing methods with custom ones in the private API.
 

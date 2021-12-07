@@ -180,7 +180,7 @@ entries:
         url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html
       - title: Reviewing pull requests
         url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/reviewing-pull-requests.html
-      - title: Style, formatting and general rules
+      - title: Style, formatting, and general rules
         url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules-for-docs.html
       - title: Markdown syntax
         url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/markdown-syntax.html

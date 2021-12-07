@@ -1,6 +1,6 @@
 ---
-title: Style, syntax, formatting and general rules
-description: Learn how to style and format your writing when creating the docs.
+title: Style, syntax, formatting, and general rules
+description: Learn how to style and format your docs.
 template: concept-topic-template
 ---
 
@@ -18,21 +18,21 @@ The main directory for holding all the documents is `docs` at the root of the pr
 
 #### General
 
-Documents are created using [markdown](https://en.wikipedia.org/wiki/Markdown) and are placed into one of the category/sub-category folders. Each document file must have `.md` extension. You can use a text editor of choice such as [VSCode](https://code.visualstudio.com) or [Atom](https://atom.io) for creating these files. 
+We use [Markdown](https://en.wikipedia.org/wiki/Markdown) (.md) to write documents. All documents reside in the [docs](https://github.com/spryker/spryker-docs/tree/master/docs) directory.  See [Directory structure](#directory-structure) for details on how this directory is organized. You can use any text editor such as [VSCode](https://code.visualstudio.com) or [Atom](https://atom.io) for creating the files in Markdown. 
 
 {% info_block errorBox "Templates" %}
 
-To keep our docs consistent, we have templates for all types of documents. The templates are stored in the `_templates` folder. Therefore, every time you need to create a new document, pick the right template from this folder, copy it to your new page, and write the document based on the structure of the template and instructions therein.
+To keep our docs consistent, we have templates for all types of documents. The templates are stored in the [_templates] (https://github.com/spryker/spryker-docs/tree/master/_templates) directory. Therefore, every time you need to create a new document, pick the right template from this folder, copy it to your new page, and write the document based on the structure of the template and instructions therein.
 
 {% endinfo_block %}
 
-Category/sub-category is just a directory under one of the **realm** directories so feel free to create some new directories for your new categories.
+You can create new pages in any documentation category or sub-category under the **realm** directories (**user**, **dev**). You can also create directories for new categories under the **realm** directories.
 
-For example, to create some new *sample-category* category and a *foo-bar* page under it for a Marketplace business user a new directory called `sample-category` has to be created under the `/docs/marketplace/user`. After that, a file called `foo-bar.md` needs to be placed into that directory.
+For example, to create a new *sample-category* category and a *foo-bar* page under it for a Marketplace business user, you create a new directory called `sample-category` under `/docs/marketplace/user`. After that, create the file `foo-bar.md` in that directory. Thus, the path to your new page would be: `/docs/marketplace/user/sample-category/foo-bar.md`.
 
 {% info_block warningBox "Warning" %}
 
-Maximum nesting level of 3 is supported currently. This means that for each category you can have only one level of sub-categories. This is due to the restriction of the navigation sidebar of the base theme.
+Currently, the maximum nesting level in the documentation categories is 3. This means that for each category you can have only one sub-category. For example, `marketplace/user/features/20201.08/merchant/`, where `features` is the category (first level of nesting), `202108.0` is the version (does not affect the level of nesting) `merchant` is its sub-category (second level of nesting). The third level of nesting would be the .md files under the sub-category.
 
 {% endinfo_block %}
 
@@ -44,7 +44,7 @@ You can use any valid URL characters in the names of your document files/categor
 
 #### Front matter
 
-Every document that needs to be processed by Jekyll must have YAML from matter block. This block consists of key/value pairs delimited by 3 dashes from each side and must come before any content in the document. Example:
+Every document must have YAML front matter block. This block consists of key-value pairs delimited by 3 dashes from each side and must come before any content in the document. Example:
 
 ```
 ---
@@ -57,7 +57,7 @@ This block must include the document’s title. It can also include *tags*, *key
 
 ##### Related articles
 
-To add related articles, in the front matter, add the “related” parameter with the values as in the example below (mind the “link” parameter: no dash before “link”, no slash before “docs”):
+To add related articles, in the front matter, add the _related_ parameter with the values as in the example below. Mind the _link_ parameter: no dash before _link_, no slash before _docs_:
 
 ```md
 related: 
@@ -71,7 +71,7 @@ Always use page.version in the link for related articles, even for unversioned a
 
 {% endinfo_block %}
 
-So for example the whole front matter:
+Example the whole front matter with the related articles:
 
 ```md
 ---
@@ -90,7 +90,7 @@ How it looks on the website:
 
 ##### Setting up redirects
 
-To redirect from one page on our website to another, use the `redirect_from:` parameter in the front matter, press the **tab** button and enter the path starting with `/docs` and containing the exact version, if the document is versioned. For example:
+To redirect from one page on the docs website to another, use the `redirect_from:` parameter in the front matter, press the **tab** button and enter the path starting with `/docs` and containing the exact version, if the document is versioned. For example:
 
 ```md
 redirect_from:  
@@ -115,7 +115,7 @@ Once a new document is created, it must be added to the sidebar navigation. Keep
 
 #### Sidebars
 
-Each **product**/**realm** set has its own sidebar, which is represented by a YAML file in `_data/sidebar` directory and has the name of `{product}_{realm}_sidebar.yml`. So, for example, for Marketplace user documentation section the sidebar file would be called `marketplace_user_sidebar.html`. This file describes all the items in the relevant sidebar. You can read more about the structure of a sidebar [here](http://localhost:4000/get_started.html#sidebar-syntax) (local setup must be running on port 4000). To add the example page to the sidebar navigation we need to put this block under the `folders` key:
+Each _product/realm_ set has its own sidebar, which is represented by a YAML file in the `_data/sidebar` directory. The sidebar name is `{product}_{realm}_sidebar.yml`. So, for example, for Marketplace user documentation, the sidebar file would be called `marketplace_user_sidebar.html`. 
 
 ```
 - title: Sample category
@@ -133,13 +133,13 @@ Each **product**/**realm** set has its own sidebar, which is represented by a YA
 - The **url** key must specify the absolute URL to the document page.
 - The second **output** key must also be present.
 
-### Creating landing pages for main categories
+### Creating landing pages for the main categories
 
-For each main category, like *Setup*, *Feature integration guides,* *HowTos*, etc., create the *index.md.* file. This will allow to open category pages without specific files in the link. For example, let’s do that for the *Glue API guides* section of the developer guide:
+For each main category, like *Setup*, *Feature integration guides,* *HowTos*, etc., you can create the *index.md.* file. This will allow to open category pages without specific files in the link. For example, let’s do that for the *Glue API guides* section of the developer guide:
 
 1. In `docs/marketplace/dev/glue-api-guides`, add the *index.md* file. Make sure you specify the title in the file.
 
-2. In `marketplace_dev_sidebar.yml` file, add URL for the *Glue API guides* element. You don’t have to write *index.html* in the end of the link, the link will work without it:  
+2. In the `marketplace_dev_sidebar.yml` file, add URL for the *Glue API guides* element. You don’t have to write *index.html* in the end of the link, the link will work without it:  
 
 ```
 - title: Glue API guides         

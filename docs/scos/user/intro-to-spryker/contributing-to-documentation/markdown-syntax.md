@@ -21,7 +21,7 @@ Syntax snippets contain text wrapped in braces - `{}`. This is a placeholder tha
 
 {% info_block errorBox "Templates" %}
 
-Make sure to use the templates from the `_templates` folder for the document you are working on. They already contain the commonly used elements for each type of doc.
+Make sure to use the templates from the [_templates](https://github.com/spryker/spryker-docs/tree/master/_templates) folder for the document you are working on. They already contain the commonly used elements for each type of doc.
 
 ![templates folder](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/templates.png)
 
@@ -30,7 +30,7 @@ Make sure to use the templates from the `_templates` folder for the document you
 
 ## Drop-downs
 
-Drop-down syntax:
+To create drop-downs, use this syntax:
 
 ```md
 <details open>
@@ -57,7 +57,7 @@ You need to do the following to update an article:
 
 ### Drop-down with a code snippet
 
-Syntax of the drop-down with a code snippet:
+To create a drop-down with a code snippet inside, use this syntax:
 
 ![drop down with code snippet template](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/drop-down-with-code-snippet-template.png)
 
@@ -71,14 +71,14 @@ Example:
 Make sure to fulfill the requirements: 
 
 - `{drop-down toggle button}` in `<summary>{drop-down toggle button}</summary>` should not undergo any kind of formatting. For example, `<summary>`code.php`</summary>` or `<summary><var>code.php</var></summary>`. Otherwise, the code snippet will be corrupted. 
-- Put a blank row between `<summary>{drop-down toggle button}</summary>` and ````{programming language}`. This will ensure that the code snippet is displayed correctly on the front end.
+- Put a blank row between `<summary>{drop-down toggle button}</summary>` and ````{programming language}`. This will ensure that the code snippet is displayed correctly on the documentation website.
 
 
 {% endinfo_block %}
 
 ## Image and table sizes
 
-Currently, by default, image’s size should not exceed 50% of the content area. Also, 2-column tables also take 50% of the content area’s space.
+Currently, by default, when you add an image to your document, it's size is automatically adjusted so that it does not exceed 50% of the content area. By default, 2-column tables also take 50% of the content area.
 
 If you want your image or a 2-column table to stretch to the content area’s size, wrap the image and the table in `<div>` with the width-100 class. For example:
 
@@ -107,7 +107,7 @@ To make a table as wide as the content area:
 
 ## Ordered and unordered lists in tables
 
-Generally, markdown does not support lists in tables. That's why we write the lists in tables in HTML while the tables remain in Markdown.
+Generally, Markdown does not support lists in tables. That's why we write the lists in tables in HTML while the tables remain in Markdown.
 
 Ordered list in table syntax:
 
@@ -130,7 +130,7 @@ This section describes the Markdown syntax of the notes used only in certain sce
 
 ### Verification
 
-Verification notes are usually used in guides. They describe what a reader can do to find out if the action they have performed was successful. Find the Markdown syntax below:
+Verification notes are usually used in guides. They describe what a reader can do to find out if the action they have performed was successful. Use the following Markdown syntax for the verification notes:
 
 ```
 {% info_block warningBox "Verification" %}
@@ -155,7 +155,7 @@ Make sure that the following modules have been installed in `vendor/spryker`:
 
 ### Info, Warning, Error
 
-*Info*, *Warning* and *Error* notes are used for providing additional emphasis or context in the document. Each of these content types can be seen below.
+*Info*, *Warning*, and *Error* notes are used for providing additional emphasis or context in the document. See syntax and examples of each of these content types below.
 
 - Info syntax:
 
@@ -214,7 +214,7 @@ An entity cannot have a store relation and SynchronizationPool defined for it si
 
 {% info_block infoBox "Info" %}
 
-You can find the templates for notes in the `_templates` > `info-blocks` folder.
+You can find the templates for notes in the [_templates > info-blocks](https://github.com/spryker/spryker-docs/tree/master/_templates/info-blocks) folder.
 
 {% endinfo_block %}
 
@@ -241,29 +241,29 @@ Follow the steps to create an anchor and link to it:
 Make sure to fulfil the requirements:
 
 - If `{anchor-name}` consists of several words, they should be hyphenated as anchor is just a link type;
-- `{anchor-name}` should always correspond to the text you are linking to for consistency. For example, if you are linking to the *Full access rights* text,  the anchor should look like `<a name="full-access-rights"></a>` .
+- `{anchor-name}` should always correspond to the text you are linking to for consistency. For example, if you are linking to a piece of text about full access rights,  the anchor should look like `<a name="full-access"></a>` .
 
 2. Link text to this anchor, depending on the link source:
 
-- When linking to an anchor in a different page, use the usual markdown link syntax and add the anchor name at the end of the link - `[link text](https://[{article URL}#{anchor name})`.
+- When linking to an anchor on a different page, stick to the usual Markdown link syntax and add the anchor name at the end of the link: `[link text](https://{article URL}#{anchor name})`.
   Following the example above, it looks like `[Full access rights](https://docs.spryker.com/docs/scos/user/features/{{site.version}}/shared-carts-feature-overview.html#full-access)`.
 - When linking to an anchor in the same page, use the usual markdown link syntax with a relative URL path - `[link text](#{anchor name})`.
   With the same example, it looks like `[Full access rights](#full-access)`.
 
-Find another example below:
+Here is another example:
 
 ```html
 To integrate GLUE API in your project, you need to:
-* [Installing GLUE](#installing-glue)
+* [Install GLUE](#install-glue)
 * [Enable GLUE](#enable-glue)
 
-1. Installing GLUE  <a name="installing-glue"></a> 
+1. Install GLUE  <a name="install-glue"></a> 
 2. Enable GLUE <a name="enable-glue"></a>
 ```
 
 ## Adding Wistia videos
 
-To add a wistia video, use the following code: `{% wistia {{wistia video code}} %}`, where `{video code}` is the wistia's video code. For example, if you want to add video `https://fast.wistia.com/embed/medias/eiw5ev4gv2/`, your code should be: `{% wistia eiw5ev4gv2 %}`.
+To add a link to a Wistia video, use the following code: `{% wistia {{wistia video code}} %}`, where `{video code}` is the Wistia's video code. For example, if you want to add video `https://fast.wistia.com/embed/medias/eiw5ev4gv2/`, your code should be: `{% wistia eiw5ev4gv2 %}`.
 
 You can also set video’s width and height. For example:
 

@@ -182,13 +182,13 @@ An exclusive discount is a discount that, when applied to a cart, discards all t
 
 {% endinfo_block %}
 
-If a cart is eligible for multiple exclusive discounts, you can [prioritize](#discount-priority) the discounts to define which of the exclusive discounts should prevail over the others. See [LINK TO BO GUIDE] for details on how a Back Office user can set priorities for discounts.
+If a cart is eligible for multiple exclusive discounts, you can [prioritize](#discount-priority) the discounts to define which of the exclusive discounts should prevail over the others. See [Creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#creating-a-voucher) for details on how a Back Office user can set priorities for discounts.
 
 If the exclusive discounts are not prioritized or have the same priorities, the highest-value discount is applied. See [Discount calculation logic](#discount-calculation-logic) for details and examples on how the discounts are calculated.
 
 ### Non-exclusive discount
 
-A non-exclusive discount is a discount that can be combined with other non-exclusive discounts in a single order. As all the discounts are non-exclusive, they are applied together. However, a Back Office user can [prioritize](#discount-priority) the non-exclusive discounts to set the order in which they should apply. See [LINK TO BO GUIDE] for details on how a Back Office user can prioritize the discounts. See [Discount calculation logic](#discount-calculation-logic) for details and examples on how the discounts are calculated based on their priorities.
+A non-exclusive discount is a discount that can be combined with other non-exclusive discounts in a single order. As all the discounts are non-exclusive, they are applied together. However, a Back Office user can [prioritize](#discount-priority) the non-exclusive discounts to set the order in which they should apply. See [Creating a voucher](promotions-discounts-feature-overview.md/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#creating-a-voucher) for details on how a Back Office user can prioritize the discounts. See [Discount calculation logic](#discount-calculation-logic) for details and examples on how the discounts are calculated based on their priorities.
 
 ## Discount validity interval
 

@@ -38,7 +38,8 @@ class EvaluatorCategoryImageEntityManager extends CategoryImageEntityManager
 }
 
 ```
-* the error and recommendation in the output will look like
+
+Related error in the Evaluator output:
 ```bash
 ------------------------------------------------------------------------------------------------------------------------
 ************************************************************************************************************************
@@ -95,11 +96,12 @@ class StorageRouterDependencyProvider extends SprykerShopStorageRouterDependency
 #### Introducing custom methods
 
 To resolve the error:
+
 1. Introduce a new custom method.
 
 {% info_block infoBox "Unique method names" %}
 
-The method name should be unique to the extent impossible to accidentally match the name of a core method introduced in future.
+The method name should be unique to the extent of making it impossible to accidentally match the name of a core method introduced in future.
 
 {% endinfo_block %}
 

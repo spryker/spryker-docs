@@ -29,11 +29,9 @@ YOUR ADVANTAGES:
 * Multiple options to prioritize profiling data based on your own criteria.
 * Automated recognition of errors with precise and detailed leads to causes and bugfixing tips.
 
-{% info_block errorBox "" %}
+## Related Developer articles
 
-[Register](https://app.tideways.io/login) with Tideways now!
-
-{% endinfo_block %}
+* [Installing and configuring Tideways](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways.html)
 
 ---
 

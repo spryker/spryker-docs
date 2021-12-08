@@ -4072,15 +4072,16 @@ entries:
           - "202108.0"
     - title: Operational tools, monitoring, legal, etc.
       nested:
-        - title: Configuring Loggly
-          url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/configuring-loggly.html
         - title: New Relic
           nested:
             - title: Installing and configuring New Relic
               url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/new-relic/installing-and-configuring-new-relic–with–vagrant.html
             - title: Configuring logging
               url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/new-relic/configuring-new-relic-logging.html
-
+        - title: Configuring Loggly
+          url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/configuring-loggly.html
+        - title: Installing and configuring Tideways
+          url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways.html
   - title: Architecture
     url: /docs/scos/dev/architecture/architecture.html
     nested:

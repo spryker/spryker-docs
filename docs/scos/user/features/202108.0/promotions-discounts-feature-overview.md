@@ -262,7 +262,7 @@ Grand total: €382.00
 
 {% info_block infoBox "Info" %}
 
-The assigned priorities can be confusing for customers, as they are not aware of the prioritization. For the scenario above, they might wonder why they get 10% off the pre-discount price of the hockey stick and not, for example, the helmet. Therefore, in the cases like this one, rather than creating prioritization logic for separate discount types, consider adjusting the discount prioritization accordingly to avoid customer confusion.
+As customers are not aware of the prioritization, they may be confused about the assigned priorities. For the scenario above, they might wonder why they get 10% off the pre-discount price of the hockey stick and not, for example, the helmet. Thus, in the cases like this one, instead of creating prioritization logic for separate discount types, consider adjusting the discount priority accordingly to avoid customer confusion.
 
 {% endinfo_block %}
 

@@ -91,7 +91,7 @@ In the *Discount* section, you see the following:
 * The discount ID and name.
 * Type of the discount, its validity period, priority, and status.
 * Identifier for exclusive discounts.
-* Stores the discount belongs to.
+* Stores where the discount applies.
 * Actions that you can do on each specific discount.
 
 By default, the last created discount goes on top of the table. However, you can sort and search the list of discounts.

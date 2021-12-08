@@ -110,7 +110,7 @@ When a cart is evaluated on a level that has a rule and a rule group, the rule g
 Threshold is a minimum number of items in cart that should fulfill all the specified decision rules for the discount to apply.
 The default value is *1* . It means that a discount is applied if at least one item fulfills the discount's decision rules.
 
-In the following example, the discount is applied if there are four items with the Intel Core processor in cart.
+In the following example, the discount is applied if there are four items with the Intel Core processor in the cart.
 ![Threshold](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/threshold.png)
 
 ## Discount application

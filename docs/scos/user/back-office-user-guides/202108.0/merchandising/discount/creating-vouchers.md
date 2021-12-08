@@ -130,7 +130,7 @@ The following table describes the attributes you enter and select in the *Genera
 
 {% info_block infoBox "Info" %}
 
-The name and the description should be meaningful to help other Back Office users understand what the discount does. Besides, the given name is displayed in the customer's cart when redeeming the voucher. Therefore, it must be unique.
+It is important to name and describe the discount in a way that is meaningful for other Back Office users. Besides, the given name is displayed in the customer's cart when redeeming the voucher. Therefore, it must be unique.
 
 {% endinfo_block %}
 

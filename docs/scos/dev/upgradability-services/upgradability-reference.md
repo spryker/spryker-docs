@@ -38,6 +38,19 @@ class EvaluatorCategoryImageEntityManager extends CategoryImageEntityManager
 }
 
 ```
+* the error and recommendation in the output will look like
+```bash
+------------------------------------------------------------------------------------------------------------------------
+************************************************************************************************************************
+Evaluator\Business\Check\IsMethodOverridden\EntityManagerCheck
+Introduce a new custom method without usage of existing one. Override usage of the current method in all usage of public API.
+************************************************************************************************************************
+------------------------------------------------------------------------------------------------------------------------
+Pyz\Zed\EvaluatorSpryker\Persistence\EvaluatorSprykerCategoryImageEntityManager
+{"name":"saveCategoryImageSet","class":"Pyz\\Zed\\EvaluatorSpryker\\Persistence\\EvaluatorSprykerCategoryImageEntityManager"}
+{"parentClass":"Spryker\\Zed\\CategoryImage\\Persistence\\CategoryImageEntityManager"}
+************************************************************************************************************************
+```
 
 {% info_block warningBox "Dependency Provider exception" %}
 

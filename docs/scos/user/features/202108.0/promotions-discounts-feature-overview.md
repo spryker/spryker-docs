@@ -130,7 +130,7 @@ The discount in the example below applies to white products.
 
 The product selection based on the query string is dynamic:
 * If, at some point, the color attribute of a product changes from white to anything else, the product is no longer eligible for a discount.
-* If at some point, a product receives the white color attribute, it becomes eligible for a discount.
+* If, at some point, a product receives the white color attribute, it becomes eligible for a discount.
 
 ### Promotional product
 

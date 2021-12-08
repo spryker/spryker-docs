@@ -39,6 +39,10 @@
                                                 SCOS developer guide
                                                 {% elsif page.product == 'scos' and page.role == 'user' %}
                                                 SCOS users guide
+                                                {% elsif page.product == 'aop' and page.role == 'dev' %}
+                                                App Orchestration Platform developer guide
+                                                {% elsif page.product == 'aop' and page.role == 'user' %}
+                                                App Orchestration Platform users guide
                                                 {% else %}
                                                 Select Product
                                                 {% endif %}
@@ -102,6 +106,32 @@
                                                 <a href="/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html" class="main-nav__drop-link">
                                                 Spryker Cloud Commerce OS
                                                 </a>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a href="/" class="main-nav__drop-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    App Orchestration Platform
+                                                    <i class="main-nav__drop-link-arrow icon-arrow-right"></i>
+                                                </a>
+                                                <ul class="main-nav__drop dropdown-menu">
+                                                    <li>
+                                                        <a href="/docs/aop/dev/setup/system-requirements.html" class="main-nav__drop-link">
+                                                            <span class="main-nav__drop-link-title">
+                                                                <i class="icon-developer"></i>
+                                                                Developer
+                                                            </span>
+                                                            <span class="main-nav__drop-link-subtitle">AOP developer guide</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/docs/aop/user/intro-to-aop/aop-concept.html" class="main-nav__drop-link">
+                                                            <span class="main-nav__drop-link-title">
+                                                                <i class="icon-business"></i>
+                                                                Business User
+                                                            </span>
+                                                            <span class="main-nav__drop-link-subtitle">AOP users guide</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
                                             </li>
                                         </ul>
                                     </div>

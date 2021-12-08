@@ -1,0 +1,10 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+title: App Orchestration Platform Developer Guides
+entries:
+  - product: AOP
+    nested:
+      - title: Setup
+        nested:
+          - title: System requirements
+            url: /docs/aop/dev/setup/system-requirements.html

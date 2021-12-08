@@ -126,6 +126,23 @@ defaults:
     values:
       sidebar: "cloud_dev_sidebar"
       role: "dev"
+  -
+    scope:
+      path: "docs/aop"
+    values:
+      product: "aop"
+  -
+    scope:
+      path: "docs/aop/dev"
+    values:
+      sidebar: "aop_dev_sidebar"
+      role: "dev"
+  -
+    scope:
+      path: "docs/aop/user"
+    values:
+      sidebar: "aop_user_sidebar"
+      role: "user"
 
 versions:
   '201811.0': '201811.0'
@@ -177,6 +194,8 @@ sidebars:
   - cloud_dev_sidebar
   - scos_dev_sidebar
   - scos_user_sidebar
+  - aop_dev_sidebar
+  - aop_user_sidebar
 
 description: "Spryker documentation center."
 # the description is used in the feed.xml file
@@ -205,6 +224,10 @@ algolia:
       title: 'Marketplace Developer'
     - name: 'cloud_dev'
       title: 'Cloud Developer'
+    - name: 'aop_user'
+      title: 'AOP User'
+    - name: 'aop_dev'
+      title: 'AOP Developer'
 
 sass:
     sass_dir: css

@@ -51,7 +51,7 @@ To create a discount voucher:
 
       {% endinfo_block %}
 
-    2. Select the **Discount application type** and define what products the voucher will be applied to. See reference information of the [Discount calculation](#discount-calculation-tab) tab for more details.
+    2. Select the **Discount application type** and define the products to which the voucher should be applied. See reference information of the [Discount calculation](#discount-calculation-tab) tab for more details.
  3. Click **Next**, or select the *Conditions* tab to proceed.
  4. On the *Create new discount* page, in the *Conditions* tab, do the following:
     1. Select the **Apply when** conditions or click **Plain query** and enter the  query manually. See reference information of the [Conditions](#conditions) tab for more details.

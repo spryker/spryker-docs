@@ -219,7 +219,7 @@ You can find the templates for notes in the [_templates > info-blocks](https://g
 
 ## Code snippets in tables
 
-Markdown does not support code snippets in tables. Try to avoid inserting code snippets into tables by all means on the documentation creation stage. If you do end up with a code snippet in a table, choose a solution depending on the conditions:
+Markdown does not support code snippets in tables. Try to avoid inserting code snippets into tables on the documentation creation stage. If you do end up with a code snippet in a table, choose a solution depending on the conditions:
 
 - All the column cells contain code snippets.
 - There are several column cells with code snippets and several column cells with supported content.
@@ -377,7 +377,7 @@ Make sure to fulfil the requirements:
 
 - When linking to an anchor on a different page, stick to the usual Markdown link syntax and add the anchor name at the end of the link: `[link text](https://{article URL}#{anchor name})`.
   Following the example above, it looks like `[Full access rights](https://docs.spryker.com/docs/scos/user/features/{{site.version}}/shared-carts-feature-overview.html#full-access)`.
-- When linking to an anchor in the same page, use the usual markdown link syntax with a relative URL path - `[link text](#{anchor name})`.
+- When linking to an anchor on the same page, stick to the usual Markdown link syntax with a relative URL path - `[link text](#{anchor name})`.
   With the same example, it looks like `[Full access rights](#full-access)`.
 
 Here is another example:

@@ -81,6 +81,6 @@ You can find additional details on the [Touch module release page](https://githu
 9. After these steps, your `Touch` module supports multi-store entities.
 
 <!--**See also:**
-[Learn more about Touch](https://documentation.spryker.com/module_guide/spryker/touch.htm)-->
+[Learn more about Touch](https://docs.spryker.com)-->
 
 <!-- Last review date: Jan 31, 2018 by Karoly Gerner -->

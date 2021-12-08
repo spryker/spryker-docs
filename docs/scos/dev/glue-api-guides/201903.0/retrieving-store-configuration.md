@@ -14,7 +14,7 @@ Depending on your project needs, you can set up a single store that serves all y
 The configuration of the current store in a project can be retrieved via an endpoint provided by the **Stores API**.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue Application Feature Integration](https://documentation.spryker.com/v2/docs/glue-application-feature-integration-201907).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue Application Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html).
 
 ## Usage
 To retrieve store configuration, send a GET request to the following endpoint:
@@ -37,7 +37,7 @@ The endpoint will respond with a **RestStoresResponse**.
 							"code": "EUR",
 							"name": "Euro"
 						},
-						{	
+						{
 							"code": "CHF",
 							"name": "Swiss Franc"
 						}
@@ -124,5 +124,3 @@ The endpoint will respond with a **RestStoresResponse**.
 | name | String | Region name |
 
 \*The fields mentioned are all attributes in the response. Type and ID are not mentioned.
-
-

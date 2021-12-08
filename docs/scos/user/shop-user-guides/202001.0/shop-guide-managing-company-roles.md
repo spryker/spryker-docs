@@ -64,9 +64,9 @@ A role includes a set of permissions that can be enabled/disabled according to y
   - **Remove item from cart** - allows deleting the products from the cart.
   - **Place Order** - allows placing the order. With this permission enabled, a user will have  error when trying to submit the order.
   - **Alter Cart Up to Amount** - allows changing the content of the cart (adding new products, changing the quantity of the existing products etc.) until it hits the limit specified in this permission. When the limit is reached, the buyer will not be able to change the contents of the cart and will get *This action is forbidden* error.
-  - **Buy up to grand total (Requires "Send cart for approval")** - sets a limit for the grand total of the cart. If the amount in the cart is bigger than the limit set in this permission, the user will not be able to proceed to checkout. Works with Send cart for approval permission. This permission is available after enabling the [Approval Process](https://documentation.spryker.com/v4/docs/approval-process-201903) feature.
-  - **Approve up to grand total** - with this permission enabled, a user can approve the the cart. See [Approval Feature Overview](https://documentation.spryker.com/v4/docs/approval-process-overview-201903) for more details.
-  - **Send cart for approval (Requires "Buy up to grand total")** - allows a user to send the cart for approval. Works together with Buy up to grand total permission. See [Approval Feature Overview](https://documentation.spryker.com/v4/docs/approval-process-overview-201903) for more details.
+  - **Buy up to grand total (Requires "Send cart for approval")** - sets a limit for the grand total of the cart. If the amount in the cart is bigger than the limit set in this permission, the user will not be able to proceed to checkout. Works with Send cart for approval permission. This permission is available after enabling the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) feature.
+  - **Approve up to grand total** - with this permission enabled, a user can approve the the cart.
+  - **Send cart for approval (Requires "Buy up to grand total")** - allows a user to send the cart for approval. Works together with Buy up to grand total permission.
 3. Click **Submit**.
 
 ## Deleting a Company Role

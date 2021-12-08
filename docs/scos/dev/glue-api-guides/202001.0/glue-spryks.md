@@ -14,7 +14,7 @@ Spryker SDK facilitates Glue API Resource development by providing a set of code
 
 {% info_block infoBox %}
 
-For more information on _Spryks_, see [Spryk](https://documentation.spryker.com/capabilities/development/development_tools/spryk-201903.htm).
+For more information on _Spryks_, see [Spryk](/docs/scos/dev/sdk/development-tools/spryk-code-generator.html).
 
 {% endinfo_block %}
 
@@ -29,7 +29,7 @@ To perform the requested operations, besides the _Spryks_ called by the user, o
 To call a Spryk, you can use the following console commands:
 
 *   `vendor/bin/console spryk:run {SPRYK NAME}` - to call a _Spryk_ and input the arguments interactively, one-by-one;
-    
+
 *   `vendor/bin/console spryk:run {SPRYK NAME} --{argument name}={argument value}` - to call a _Spryk_ and pass the named arguments in one pass.
 
 ## Glue Module Management

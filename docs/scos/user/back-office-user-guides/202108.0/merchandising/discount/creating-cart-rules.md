@@ -15,7 +15,7 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/managing-discounts.html
 ---
 
-This topic describes how to create a cart rule.
+This guide describes how to create a cart rule.
 
 A cart rule is a discount that is applied automatically when all attached discount conditions are fulfilled and if the cart rule is active. Unlike a voucher code, it does not require any input from the customer.
 

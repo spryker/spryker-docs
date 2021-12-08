@@ -4070,12 +4070,17 @@ entries:
           url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/installing-and-integrating-minubo.html
           include_versions:
           - "202108.0"
-    - title: Marketing and conversion
+    - title: Operational tools, monitoring, legal, etc.
       nested:
-        - title: Operation tools, monitoring, legal, etc.
+        - title: Configuring Loggly
+          url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/configuring-loggly.html
+        - title: New Relic
           nested:
-            - title: Configuring Loggly
-              url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/configuring-loggly.html
+            - title: Installing and configuring New Relic
+              url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/new-relic/installing-and-configuring-new-relic–with–vagrant.html
+            - title: Configuring logging
+              url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/new-relic/configuring-new-relic-logging.html
+
   - title: Architecture
     url: /docs/scos/dev/architecture/architecture.html
     nested:
@@ -4145,7 +4150,7 @@ entries:
     - title: Project development guidelines
       url: /docs/scos/dev/guidelines/project-development-guidelines.html
     - title: Data Processing Guidelines
-      url: /docs/scos/dev/guidelines/data-processing-guidelines.html      
+      url: /docs/scos/dev/guidelines/data-processing-guidelines.html
     - title: Module configuration convention
       url: /docs/scos/dev/guidelines/module-configuration-convention.html
     - title: Making your Spryker shop secure

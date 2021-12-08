@@ -5,74 +5,21 @@ last_updated: Nov 25, 2021
 template: concept-topic-template
 ---
 
-## Method is overridden with a Factory, Dependency Provider, Repository, or Entity Manager extended
+## Method of an extended class is overridden on the project level
 
-### What is the nature of the upgradability error?
-Minor releases can break backward compatibility through private API. In particular, the method can be changed (number of parameters or their types), renamed, or deleted. If you override this method on the project level, you could get an error during the update or get unexpected functionality.
+Factory, Dependency Provider, Repository, and Entity Manager methods belong to the private API. If you extend a core class and override one of the methods, minor releases can cause errors or unexpected changes in functionality.
 
-### Example of code that can cause the upgradability errors
+### Example of code and a related error
 
-#### Factory method overridding
-
-```php
-
-namespace Pyz\Zed\CategoryDataImport\Business;
-
-use Pyz\Zed\CategoryDataImport\Business\Model\CategoryWriterStep;
-use Spryker\Zed\CategoryDataImport\Business\CategoryDataImportBusinessFactory as SprykerCategoryDataImportBusinessFactory;
-
-/**
- * @method \Spryker\Zed\CategoryDataImport\CategoryDataImportConfig getConfig()
- */
-class CategoryDataImportBusinessFactory extends SprykerCategoryDataImportBusinessFactory
-{
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
-     */
-    public function createCategoryImporter()
-    {
-        ...
-    }
-}
-```
-
-#### DependencyProvider method overridding
+For example, the extended class `EvaluatorCategoryImageEntityManager` overrides the core method `CategoryImageEntityManager`.
 
 ```php
-namespace Pyz\Client\Queue;
-
-use Spryker\Client\Kernel\Container;
-use Spryker\Client\Queue\QueueDependencyProvider as BaseQueueDependencyProvider;
-
-class QueueDependencyProvider extends BaseQueueDependencyProvider
-{
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Queue\Model\Adapter\AdapterInterface[]
-     */
-    protected function createQueueAdapters(Container $container)
-    {
-        return [
-            $container->getLocator()->rabbitMq()->client()->createQueueAdapter(),
-        ];
-    }
-}
-```
-
-
-Exception: when a plugin is introduced together with an overriddden method.
-
-
-#### Repository method overridding
-
-```php
-namespace Pyz\Zed\EvaluatorSpryker\Persistence;
+namespace Pyz\Zed\Evaluator\Persistence;
 
 use Generated\Shared\Transfer\CategoryImageSetTransfer;
 use Spryker\Zed\CategoryImage\Persistence\CategoryImageEntityManager;
 
-class EvaluatorSprykerCategoryImageEntityManager extends CategoryImageEntityManager
+class EvaluatorCategoryImageEntityManager extends CategoryImageEntityManager
 {
     /**
      * @param \Generated\Shared\Transfer\CategoryImageSetTransfer $categoryImageSetTransfer
@@ -87,26 +34,45 @@ class EvaluatorSprykerCategoryImageEntityManager extends CategoryImageEntityMana
 
 ```
 
-#### Entity Manager method overridding
-```php
-namespace Pyz\Zed\EvaluatorSpryker\Persistence;
-...
+{% info_block warningBox "Dependency Provider exception" %}
 
-class EvaluatorSprykerCmsSlotBlockRepository  extends CmsSlotBlockRepository
+If you override a method and initialize a plugin, it does not break backward compatibility. For example, in `StorageRouterDependencyProvider`, `StorageRouterDependencyProvider` is overridden with a plugin introduced:
+
+<details>
+<summary markdown='span'>Example of an overridden method with a plugin</summary>
+
+```php
+<?php
+
+namespace Pyz\Yves\StorageRouter;
+
+use SprykerShop\Yves\CatalogPage\Plugin\StorageRouter\CatalogPageResourceCreatorPlugin;
+use SprykerShop\Yves\CmsPage\Plugin\StorageRouter\PageResourceCreatorPlugin;
+use SprykerShop\Yves\ProductDetailPage\Plugin\StorageRouter\ProductDetailPageResourceCreatorPlugin;
+use SprykerShop\Yves\ProductSetDetailPage\Plugin\StorageRouter\ProductSetDetailPageResourceCreatorPlugin;
+use SprykerShop\Yves\RedirectPage\Plugin\StorageRouter\RedirectResourceCreatorPlugin;
+use SprykerShop\Yves\StorageRouter\StorageRouterDependencyProvider as SprykerShopStorageRouterDependencyProvider;
+
+class StorageRouterDependencyProvider extends SprykerShopStorageRouterDependencyProvider
 {
     /**
-     * @param \Generated\Shared\Transfer\CmsSlotBlockCriteriaTransfer $cmsSlotBlockCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\CmsSlotBlockCollectionTransfer
+     * @return \SprykerShop\Yves\StorageRouterExtension\Dependency\Plugin\ResourceCreatorPluginInterface[]
      */
-    public function getCmsSlotBlocks(
-        CmsSlotBlockCriteriaTransfer $cmsSlotBlockCriteriaTransfer
-    ): CmsSlotBlockCollectionTransfer {
-
-        return new CmsSlotBlockCollectionTransfer();
+    protected function getResourceCreatorPlugins(): array
+    {
+        return [
+            new PageResourceCreatorPlugin(),
+            new CatalogPageResourceCreatorPlugin(),
+            new ProductDetailPageResourceCreatorPlugin(),
+            new ProductSetDetailPageResourceCreatorPlugin(),
+            new RedirectResourceCreatorPlugin(),
+        ];
     }
 }
 ```
+
+{% endinfo_block %}
+
 
 ### How can I avoid this error?
 - Introduce a new custom method without usage of existing one.

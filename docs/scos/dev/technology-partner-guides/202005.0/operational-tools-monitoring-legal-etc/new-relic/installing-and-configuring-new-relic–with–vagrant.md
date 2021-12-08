@@ -8,7 +8,7 @@ related:
 
 {% info_block infoBox "New Relic installation in Docker based projects" %}
 
-For installation instructions in Docker based projects, see [Configuring New Relic](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-services.html)
+For installation instructions in Docker based projects, see [Configuring New Relic](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-services.html#configuring-new-relic)
 
 {% endinfo_block %}
 

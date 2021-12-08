@@ -6,6 +6,12 @@ template: howto-guide-template
 
 The `spryker-eco/tideways` module provides a `TidewaysMonitoringExtensionPlugin` to send monitoring information to the tideways service.
 
+{% info_block infoBox "New Relic installation in Docker based projects" %}
+
+For installation instructions in Docker based projects, see [Configuring Tideways](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-services.html#configuring-tideways)
+
+{% endinfo_block %}
+
 ## Installing Tideways
 
 To install Tideways module, run:

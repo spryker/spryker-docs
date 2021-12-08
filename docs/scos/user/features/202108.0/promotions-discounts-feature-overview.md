@@ -210,7 +210,7 @@ Discount prioritization behavior does not depend on the [discount type](#discoun
 * Voucher code discount with priority 3
 * Cart rule discount with priority 4
 
-In this case, the discounts are applied in the order of priority, irrespective of the type.
+In this case, discounts are applied based on their priority, regardless of type.
 
 {% info_block infoBox "Info" %}
 

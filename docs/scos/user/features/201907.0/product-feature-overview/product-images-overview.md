@@ -10,7 +10,7 @@ redirect_from:
   - /v3/docs/en/product-image-management
 ---
 
-Product images make your shop more appealing and give your customers a better idea of what they are buying. The Product Image Management feature allows you to group several images into sets and link them to products. One product can have several named and localized sets of images, for example, to present standard or seasonal highlights. 
+Product images make your shop more appealing and give your customers a better idea of what they are buying. The Product Image Management feature allows you to group several images into sets and link them to products. One product can have several named and localized sets of images, for example, to present standard or seasonal highlights.
 
 Different image sets can be used in CMS Pages and Blocks, for marketing and promotional purposes or simply to increase branding in your store.
 
@@ -30,16 +30,16 @@ You can enjoy the following benefits of the feature:
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/v3/docs/category-image-feature-integration-201907" class="mr-link">Integrate the Category Image feature v. 201907.0 into your project</a></li>
-                <li><a href="https://documentation.spryker.com/v3/docs/product-cart-feature-integration-201907" class="mr-link">Integrate Product + Cart feature v. 201907.0 into your project</a></li>
+                <li><a href="/docs/scos/dev/feature-integration-guides/{{page.version}}/category-image-feature-integration.html" class="mr-link">Integrate the Category Image feature v. 201907.0 into your project</a></li>
+                <li><a href/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html" class="mr-link">Integrate Product + Cart feature v. 201907.0 into your project</a></li>
             </ul>
         </div>
         <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/v4/docs/creating-an-abstract-product" class="mr-link">Assign images to a product</a></li>
-                <li><a href="https://documentation.spryker.com/v4/docs/creating-categories" class="mr-link">Assign images to categories</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html#adding-images" class="mr-link">Assign images to a product</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html" class="mr-link">Assign images to categories</a></li>
                 </ul>
         </div>
          </div>

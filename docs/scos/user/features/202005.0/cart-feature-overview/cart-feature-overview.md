@@ -35,12 +35,13 @@ The main benefits of working with the cart are to create a convenient and predic
 
 **Features:**
 <div>
-<a class="feature-link" href="https://documentation.spryker.com/docs/en/cart-functionality-calculations">Cart Functionality and Calculations</a>   
-<a class="feature-link" href="https://documentation.spryker.com/docs/en/minimum-order-value-201903">Minimum Order Value</a>   
-<a class="feature-link" href="https://documentation.spryker.com/docs/en/shared-cart">Shared Cart</a>   
-<a class="feature-link" href="https://documentation.spryker.com/docs/en/multiple-cart-per-user">Multiple Carts Per User</a>   
-    <a class="feature-link" href="https://documentation.spryker.com/docs/en/cart-widget">Shopping Cart Widget</a>  
-    <a class="feature-link" href="https://documentation.spryker.com/docs/en/cart-notes">Cart Notes</a>  
-    <a class="feature-link" href="https://documentation.spryker.com/docs/en/quick-order-201903">Quick Order</a>
-<a class="feature-link" href="https://documentation.spryker.com/docs/en/unique-url-per-cart-for-easy-sharing-201907">Unique URL per Cart for Easy Sharing</a>   
+<a class="feature-link" href="/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/cart-functionality.html">Cart Functionality</a>
+<a class="feature-link" href="/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculation-3.0.html">Calculation 3.0</a>  
+<a class="feature-link" href="/docs/scos/user/shop-user-guides/{{page.version}}/shop-application-guide/cart/minimum-order-value-feature-overview.html">Minimum Order Value</a>   
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html">Shared Cart</a>   
+<a class="feature-link" href="/docs/scos/user/shop-user-guides/{{page.version}}/shop-application-guide/cart/multiple-carts-per-user-feature-overview.html">Multiple Carts Per User</a>   
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-widget-overview.html">Shopping Cart Widget</a>  
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-notes-overview.html">Cart Notes</a>  
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/quick-add-to-cart-feature-overview.html">Quick Order</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/persistent-cart-sharing-feature-overview.html">Unique URL per Cart for Easy Sharing</a>    
     </div>

@@ -17,6 +17,6 @@ The section is designed to configure URL redirects and forward customers to a di
 **What's next?**
 To know more about how to create a content item, see [Creating a CMS Redirect](/docs/scos/user/back-office-user-guides/{{page.version}}/content/redirects/creating-cms-redirects.html).
 
-To learn how to update and delete CMS redirects, see [Managing CMS Redirects](https://documentation.spryker.com/v2/docs/managing-cms-redirects).
+To learn how to update and delete CMS redirects, see [Managing CMS Redirects](/docs/scos/user/back-office-user-guides/{{page.version}}/content/redirects/managing-cms-redirects.html).
 
 To learn more about attributes you use to create and edit redirects, see [CMS Redirects: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/redirects/references/cms-redirects-references.html).

@@ -8,4 +8,4 @@ entries:
         nested:
 
           - title: AOP concept
-            url: /docs/aop/user/intro-to-aop/aop-concept.html
+            url: /docs/aop/user/intro-to-aop/aop-overview.html

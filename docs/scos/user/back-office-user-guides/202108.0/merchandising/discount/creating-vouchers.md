@@ -118,7 +118,7 @@ The following table describes the attributes you enter and select in the *Genera
 
 | ATTRIBUTE |DESCRIPTION  |
 | --- | --- |
-|STORE RELATION  |Stores you wish the discount to be active in. Multiple stores can be selected.|
+|STORE RELATION  |Stores you wish the discount to be active in. You can select multiple stores.|
 | DISCOUNT TYPE | Drop-down list where you select either *Voucher code* or *Cart rule* discount type. |
 | NAME | A unique name that is displayed in the calculation section of the cart on the Storefront. Should be short, but descriptive. |
 | DESCRIPTION | A summary explaining the promotion. Displayed with eligible products where applicable.

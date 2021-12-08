@@ -99,7 +99,7 @@ By default, the last created discount goes on top of the table. However, you can
 All columns with headers having arrows in the DISCOUNT LIST table are sortable.
 
 **Actions column**
-All the discount management options that you can invoke from the _Actions_ column are described in the following table.
+All the discount management options you can invoke from the _Actions_ column are described in the following table.
 
 | ACTION |DESCRIPTION  |
 | --- | --- |

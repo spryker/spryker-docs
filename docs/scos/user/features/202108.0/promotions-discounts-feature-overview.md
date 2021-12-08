@@ -65,7 +65,7 @@ In this case, the discount is applied if the cart contains 3 items and the purch
 
 Multiple decision rules form a query. A query is a request for information based on the defined parameters. In the Discount feature, a query requests information from a cart to check if it is eligible for the discount. By specifying decision rules, you define the parameters of the query.
 
-In the Back Office, you create decision rules in a Query Builder. The decision rules created in the Query Builder are transformed into a single query.
+In the Back Office, you create decision rules in a Query Builder. Query Builder transforms the decision rules into a single query.
 
 The decision rules from the previous example look as follows in the Query Builder:
 

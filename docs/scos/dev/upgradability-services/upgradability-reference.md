@@ -52,7 +52,7 @@ Pyz\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessUpdater
 ************************************************************************************************************************
 ```
 
-#### Example of overriding a core method on the project error
+#### Example of overriding a core method on the project level
 
 To resolve the error provided in the example, do the following:
 

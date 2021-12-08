@@ -30,7 +30,7 @@ Review the reference information before you start, or just look up the necessary
 To create a discount voucher:
 1. On the *Discount* page,  in the top-right corner, click **Create new discount**.
 2. On the *Create new discount* page, in the *General* tab, do the following:
-    1. In *STORE RELATION*, check the stores you wish the discount to be active in.
+    1. In *STORE RELATION*, select the stores where you wish the discount to be active.
     2. In the *DISCOUNT TYPE* drop-down, select **Voucher codes**.
     3. In the **NAME** field, specify the name for the voucher.
     4. _Optional_:in the **DESCRIPTION** field, enter the description of the voucher.

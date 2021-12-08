@@ -110,7 +110,7 @@ When a cart is evaluated on a level that has a rule and a rule group, the rule g
 Threshold is a minimum number of items in cart that should fulfill all the specified decision rules for the discount to apply.
 The default value is *1* . It means that a discount is applied if at least one item fulfills the discount's decision rules.
 
-In the following example, the discount is applied if there are four items with the Intel Core processor in cart.
+In the following example, the discount is applied if there are four items with the Intel Core processor in the cart.
 ![Threshold](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/threshold.png)
 
 ## Discount application
@@ -123,20 +123,20 @@ There are two types of discount application:
 
 ### Query string
 
-Query String is a discount application type that uses [decision rules](#decision-rule) to dynamically define what products a discount applies to.
+Query String is a discount application type that uses [decision rules](#decision-rule) to dynamically determine which products qualify for discounts.
 
 The discount in the example below applies to white products.
 ![Query collection](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/collection-query.png)
 
 The product selection based on the query string is dynamic:
-* If at some point, the color attribute of a product changes from white to anything else, the product is no longer eligible for a discount.
-* If at some point, a product receives the white color attribute, it becomes eligible for a discount.
+* If, at some point, the color attribute of a product changes from white to anything else, the product is no longer eligible for a discount.
+* If, at some point, a product receives the white color attribute, it becomes eligible for a discount.
 
 ### Promotional product
 
 Promotional product is a discount application type that discounts a particular product at a set quantity, enabling "buy X, get Y" promotions.
 
-When a customer meets the conditions for a promotional product discount, a **Promotional products** section is displayed in the cart, allowing customers to add the available quantity of the discounted product to cart.
+When a customer meets the conditions for a promotional product discount, a **Promotional products** section is displayed in the cart, allowing customers to add the available quantity of the discounted product to the cart.
 ![Promotional product](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/promotional-product-frontend.png)
 
 A Back Office user selects the promotional product by entering an abstract product SKU in the Back Office. Also, they define the maximum quantity of the product to be sold with a discount.
@@ -178,7 +178,7 @@ An exclusive discount is a discount that, when applied to a cart, discards all t
 
 {% info_block infoBox "Promotional products and query string" %}
 
-[Promotional product](#promotional-product) discounts and [query string](#query-string) discounts are separate when it comes to exclusivity. These types of discounts exclude all other discounts only among each other. Promotional product discounts are not affected by exclusive query string discounts, and vice versa.
+[Promotional product](#promotional-product) discounts and [query string](#query-string) discounts are separate when it comes to exclusivity. These types of discounts exclude all other discounts only among each other. Promotional product discounts are not affected by exclusive query string discounts and vice versa.
 
 {% endinfo_block %}
 
@@ -188,11 +188,11 @@ If the exclusive discounts are not prioritized or have the same priorities, the 
 
 ### Non-exclusive discount
 
-A non-exclusive discount is a discount that can be combined with other non-exclusive discounts in a single order. As all the discounts are non-exclusive, they are applied together. However, a Back Office user can [prioritize](#discount-priority) the non-exclusive discounts to set the order in which they should apply. See [LINK TO BO GUIDE] for details on how a Back Office user can set priorities for discounts. See [Discount calculation logic](#discount-calculation-logic) for details and examples on how the discounts are calculated based on their priorities.
+A non-exclusive discount is a discount that can be combined with other non-exclusive discounts in a single order. As all the discounts are non-exclusive, they are applied together. However, a Back Office user can [prioritize](#discount-priority) the non-exclusive discounts to set the order in which they should apply. See [LINK TO BO GUIDE] for details on how a Back Office user can prioritize the discounts. See [Discount calculation logic](#discount-calculation-logic) for details and examples on how the discounts are calculated based on their priorities.
 
 ## Discount validity interval
 
-Validity interval is a time period during which a discount is active and can be applied.
+Validity interval is a period of time during which a discount is active and can be applied.
 
 If a cart is eligible for a discount outside of its validity interval, the cart rule is not applied. If a customer enters a voucher code outside of its validity interval, they get a "Your voucher code is invalid." message.
 

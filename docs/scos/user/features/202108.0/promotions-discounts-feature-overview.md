@@ -123,7 +123,7 @@ There are two types of discount application:
 
 ### Query string
 
-Query String is a discount application type that uses [decision rules](#decision-rule) to dynamically define what products a discount applies to.
+Query String is a discount application type that uses [decision rules](#decision-rule) to dynamically determine which products qualify for discounts.
 
 The discount in the example below applies to white products.
 ![Query collection](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/collection-query.png)

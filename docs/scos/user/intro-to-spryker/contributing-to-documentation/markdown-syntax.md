@@ -23,8 +23,6 @@ Syntax snippets contain text wrapped in braces - `{}`. This is a placeholder tha
 
 Make sure to use the templates from the [_templates](https://github.com/spryker/spryker-docs/tree/master/_templates) folder for the document you are working on. They already contain the commonly used elements for each type of doc.
 
-![templates folder](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/templates.png)
-
 {% endinfo_block %}
 
 
@@ -139,7 +137,7 @@ Verification notes are usually used in guides. They describe what a reader can d
 
 {% endinfo_block %}
 ```
-Find a verification example below:
+Verification example:
 
 {% info_block warningBox "Verification" %}
 
@@ -166,7 +164,7 @@ Your content
 
 {% endinfo_block %}
 ```
-Find an info example:
+Info example:
 
 {% info_block infoBox "Secured variables" %}
 
@@ -185,7 +183,7 @@ Your content
 
 ```
 
-Find a warning example:
+Warning example:
 
 {% info_block warningBox "Important Note" %}
 
@@ -204,7 +202,7 @@ Your content
 
 ```
 
-Find an error example:
+Error example:
 
 {% info_block errorBox %}
 
@@ -225,6 +223,138 @@ Markdown does not support code snippets in tables. Try to avoid inserting code s
 
 - All the column cells contain code snippets.
 - There are several column cells with code snippets and several column cells with supported content.
+
+### Only code snippets
+
+When a table column contains only code snippets, do the following:
+
+1. Remove the column with the code snippet from the table entirely.
+2. Below the table, paste all the code snippets in the following format:
+   
+   ```md
+   <details>
+    <summary>{removed column header name}:{entity name}</summary>
+
+    {code snippet}
+
+    </details>
+  ```
+
+See the example below:
+
+<details>
+<summary>Source table</summary>
+
+![source table](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/source-table.png)
+
+</details>
+
+Published table:
+
+| Storage Type | Target Entity | Example Expected Data Identifier |
+
+| --- | --- | --- |
+
+| Redis | Product Abstract Price | kv:price_product_abstract_merchant_relationship:de:1:1 |
+
+| Redis | Product Concrete Price | kv:price_product_abstract_merchant_relationship:de:1:1 |
+
+<details>
+<summary>Example Expected Data Fragment: Product Abstract Price</summary>
+
+```yaml
+{
+	"prices": {
+		"2": {
+			"EUR": {
+				"priceData": null,
+				"GROSS_MODE": {
+					"DEFAULT": 9922
+				},
+				"NET_MODE": {
+					"DEFAULT": 8922
+				}
+			},
+			"CHF": {
+				"priceData": null,
+				"GROSS_MODE": {
+						"DEFAULT": 11422
+				},
+				"NET_MODE": {
+					"DEFAULT": 10322
+				}
+			}
+		}
+	}
+}
+```
+</details>
+
+<details>
+<summary>Example Expected Data Fragment: Product Concrete Price</summary>
+
+```yaml
+{
+"prices": {
+		"2": {
+			"EUR": {
+				"priceData": null,
+				"GROSS_MODE": {
+					"DEFAULT": 12322
+				},
+				"NET_MODE": {
+					"DEFAULT": 11222
+				}
+			},
+			"CHF": {
+				"priceData": null,
+				"GROSS_MODE": {
+					"DEFAULT": 10122
+				},
+				"NET_MODE": {
+					"DEFAULT": 12522
+				}
+			}
+		}
+	}
+}
+```
+</details>
+
+### Mixed Content 
+
+If you have a table column with cells containing both the code snippets and supported content, do the following:
+
+1. Place the code snippets below the table as described in step 2 of Only Code.
+2. Into the cell or cells from which you removed the code snippets, add See **{drop-down toggle button}** below the table.
+
+<details>
+<summary>Source table</summary>
+
+![source table](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/source-table-2.png)
+
+</details>
+
+Published table:
+
+| Function name | Description | Method signature | Usage example |
+
+| --- | --- | --- | --- |
+
+| `model` | Resolves a model path and returns a string in the following format: `@ShopUi/models/{modelName}.twig`. | function model($modelName: string): string <ul><li>$modelName - model name (required).</li></ol> | `{% extends model('component') %}` | 
+| `define` | This function is used for: <ul><li>creating a default object that can be changed from an incoming context;</li><li>defining tags used to pass properties and contract for a specific component.</li></ul> | | See **Usage Example: define** below. |
+| `qa` | Returns a string in the following format: `data-qa="qa values here"` | `function qa($qaValues: string[] = []): string` | `{{ qa('submit-button') }}` |
+
+<details open>
+<summary>Usage Example: define</summary>
+
+```twig
+{% define data = {
+    items: _widget.productGroupItems,
+} %}
+```
+</details>
+
 
 ## Anchors
 

@@ -67,7 +67,7 @@ In the *Voucher code* tab, do the following:
 3. Set the *ADD RANDOM GENERATED CODE LENGTH* by selecting the value from a drop-down list.
 4. Set *MAX NUMBER OF USES*.
 5. Click **Generate** to complete the process.
-    The voucher codes will be generated according to your specifications. The codes will be displayed in the table at the bottom of the page.
+    The voucher codes are generated according to your specifications. The codes are displayed in the table at the bottom of the page.
 5. Click **Activate** in the top right corner to activate the voucher.
 Even if a voucher is valid and the decision rules are satisfied, a voucher can only be redeemed if it’s currently active.
 

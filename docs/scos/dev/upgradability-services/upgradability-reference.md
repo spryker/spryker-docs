@@ -9,7 +9,12 @@ template: concept-topic-template
 
 Factory, Dependency Provider, Repository, and Entity Manager methods belong to the private API. If you extend a core class and override one of the methods, minor releases can cause errors or unexpected changes in functionality.
 
-### Example of code and a related error
+### Using custom methods on the project level
+
+To avoid the error, instead of overriding the core methods, introduce custom ones in the private API.
+
+
+#### Example of code and a related error
 
 For example, the extended class `EvaluatorCategoryImageEntityManager` overrides the core method `CategoryImageEntityManager`.
 
@@ -74,7 +79,17 @@ class StorageRouterDependencyProvider extends SprykerShopStorageRouterDependency
 {% endinfo_block %}
 
 
-### How can I avoid this error?
-- Introduce a new custom method without usage of existing one.
-- Override usage of the current method in all usage of public API.
-- the method names should be unique to the extend at which the future methods introduced by spryker will not match its name
+#### Introducing custom methods
+
+To resolve the error:
+1. Introduce a new custom method.
+
+{% info_block infoBox "Unique method names" %}
+
+The method name should be unique to the extent impossible to accidentally match the name of a core method introduced in future.
+
+{% endinfo_block %}
+
+2. Replace the core method with the custom one.
+
+When the core method is replaced, re-run the Evaluator. The same error shouldn't be returned.

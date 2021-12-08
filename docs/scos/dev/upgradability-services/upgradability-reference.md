@@ -12,8 +12,6 @@ Modules have public and private APIs. The public API includes the entities like 
 
 While public API updates always support backward compatibility, the private API updates can break backward compatibility. Major and minor releases can break the backward compatibility in the private API. For example, if you use a core method on the project level, and it is updated or removed, you can get the error during an update.
 
-The errors related to this check are prefixed with `IsCoreMethodUsedOnProjectLevel`.
-
 ### Overriding a core method on the project level
 
 To avoid the error, override the core methods with custom ones in the private API.

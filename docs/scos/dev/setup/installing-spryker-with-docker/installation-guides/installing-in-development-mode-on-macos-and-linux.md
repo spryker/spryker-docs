@@ -64,18 +64,12 @@ Make sure that you are in the correct folder by running the `pwd` command.
 
 {% endinfo_block %}
 
-5. In `deploy.dev.yml`, define `image:` with the PHP image compatible with the current release of the Demo Shop:
-
-```yaml
-image: spryker/php:7.3-alpine3.12
-```
-
-6. Clone the Docker SDK repository:
+5. Clone the Docker SDK repository:
 ```bash
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker
 ```
 
-7. Bootstrap local docker setup:
+6. Bootstrap local docker setup:
 ```bash
 docker/sdk bootstrap deploy.dev.yml
 ```
@@ -85,7 +79,7 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
 
 {% endinfo_block %}
 
-8. Update the `hosts` file:
+7. Update the `hosts` file:
 Follow the installation instructions in the white box from the `docker/sdk bootstrap` command execution results to prepare the environment.
 
 {% info_block infoBox %}
@@ -95,7 +89,7 @@ Follow the installation instructions in the white box from the `docker/sdk boots
 {% endinfo_block %}
 
 
-9. Once the job finishes, build and start the instance:
+8. Once the job finishes, build and start the instance:
 
 ```bash
 docker/sdk up

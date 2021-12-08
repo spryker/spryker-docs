@@ -121,8 +121,7 @@ The following table describes the attributes you enter and select in the *Genera
 |STORE RELATION  |Stores you wish the discount to be active in. You can select multiple stores.|
 | DISCOUNT TYPE | Drop-down list where you select either *Voucher code* or *Cart rule* discount type. |
 | NAME | A unique name that is displayed in the calculation section of the cart on the Storefront. Should be short, but descriptive. |
-| DESCRIPTION | A summary explaining the promotion. Displayed with eligible products where applicable.
- |
+| DESCRIPTION | A summary explaining the promotion. Displayed with eligible products where applicable.|
 | PRIORITY | Defines [the discount priority](/docs/scos/user/features/202108.0/promotions-discounts-feature-overview.html#discount-priority). Represented as an integer value from 1 to 9999, 1 being the highest priority and 9999 the lowest. |
 | NON-EXCLUSIVE | Defines the discount exclusivity. Buyers can redeem non-exclusive discounts in conjunction with other non-exclusive discounts.|
 | EXCLUSIVE | Defines the discount exclusivity. When a discount is exclusive, no other discounts may be applied in conjunction. When a cart is eligible for multiple exclusive discounts, the discount with the highest value to the customer is applied. The exception to this is promotional product discounts. Query string discounts and promotional product discounts exclude only among each other. Promotional product discounts are not affected by exclusive query string discounts, and vice versa.|

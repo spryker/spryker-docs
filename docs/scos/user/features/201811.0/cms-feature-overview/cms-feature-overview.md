@@ -16,7 +16,7 @@ redirect_from:
     <img class="dark-mode" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/Document+360/Capabilities+icons/dark/cms.svg"/>
     </div>
     <div class="feature-text-wrap">
-The Spryker Commerce OS offers a feature-rich content management system that allows you to provide the right content at the right place at the right time. The intuitive, user-friendly WYSIWYG editor interface enables you to flexibly create, edit, preview, draft and publish CMS pages, blocks and widgets. Combining dynamic placeholders with CMS content allows you to automatically retrieve and display catalog items to build highly effective and adaptable promotional pages.	
+The Spryker Commerce OS offers a feature-rich content management system that allows you to provide the right content at the right place at the right time. The intuitive, user-friendly WYSIWYG editor interface enables you to flexibly create, edit, preview, draft and publish CMS pages, blocks and widgets. Combining dynamic placeholders with CMS content allows you to automatically retrieve and display catalog items to build highly effective and adaptable promotional pages.
 
 The CMS gives you full control over the content in terms of:
 
@@ -46,5 +46,5 @@ To enhance the visibility of your shop, the Spryker Commerce OS comes with sever
 **Features:**
 
 <div>
-<a class="feature-link" href="https://documentation.spryker.com/v1/docs/cms-page">CMS Page</a>     
-<a class="feature-link" href="https://documentation.spryker.com/v1/docs/cms-block">CMS Block</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html">CMS Page</a>     
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html">CMS Block</a>

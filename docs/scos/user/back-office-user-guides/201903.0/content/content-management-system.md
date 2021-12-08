@@ -55,4 +55,4 @@ To know about how to create and manage CMS blocks, see the following articles:
 To learn more about how to configure URL redirects, see the following article:
 
 * [Creating a URL redirect](/docs/scos/user/back-office-user-guides/{{page.version}}/content/redirects/creating-cms-redirects.html)
-* [Managing CMS Redirects](https://documentation.spryker.com/v2/docs/managing-cms-redirects)
+* [Managing CMS Redirects](/docs/scos/user/back-office-user-guides/{{page.version}}/content/redirects/managing-cms-redirects.html)

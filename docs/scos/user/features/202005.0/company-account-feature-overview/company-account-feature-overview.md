@@ -28,12 +28,12 @@ Provide your B2B Customers with a way to accurately map their business hierarchi
 **Features:**
 
 <div>
-<a class="feature-link" href="https://documentation.spryker.com/v5/docs/en/company-account-overview">Company Account Overview</a>    
-<a class="feature-link" href="https://documentation.spryker.com/v5/docs/en/business-unit-management">Business Unit Management</a>
-<a class="feature-link" href="https://documentation.spryker.com/v5/docs/company-user-roles-and-permissions-overview">Company User Permissions</a>
-<a class="feature-link" href="https://documentation.spryker.com/v5/docs/en/merchants-and-merchant-relations">Merchants and Merchant Relations</a>
-<a class="feature-link" href="https://documentation.spryker.com/v5/docs/en/agent-assist">Agent Assist Agent Assist</a>
-<a class="feature-link" href="https://documentation.spryker.com/v5/docs/en/hide-content-from-logged-out-users">Hide Content from Logged out Users</a>
-<a class="feature-link" href="https://documentation.spryker.com/v5/docs/en/product-restrictions-from-merchant-to-buyer">Product Restrictions from Merchant to Buyer</a>
-<a class="feature-link" href="https://documentation.spryker.com/v5/docs/en/business-on-behalf">Business On Behalf</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html">Company Account Overview</a>    
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-units-overview.html">Business Unit Management</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html">Company User Permissions</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/merchant-b2b-contracts-feature-overview.html">Merchants and Merchant Relations</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/agent-assist-feature-overview.html">Agent Assist</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/customer-access-feature-overview.html">Hide Content from Logged out Users</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/merchant-product-restrictions-feature-overview.html">Product Restrictions from Merchant to Buyer</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-on-behalf-overview.html">Business On Behalf</a>
 </div>

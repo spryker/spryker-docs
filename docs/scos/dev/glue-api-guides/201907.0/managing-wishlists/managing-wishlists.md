@@ -18,7 +18,7 @@ Since wishlists are available for registered users only, the endpoints provided 
 {% endinfo_block %}
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Wishlist API Feature Integration](https://documentation.spryker.com/v3/docs/wishlist-api-feature-integration-201903).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Wishlist API Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-wishlist-feature-integration.html).
 
 ## Creating a Wishlist
 To create a wishlist for a registered user, you need to send a POST request to the following endpoint:
@@ -106,8 +106,8 @@ If there are any wishlists already created for a user, they will be returned in 
 ```js
 {
 		"data": {
-  
- 
+
+
 	{
 		"data": [
 			{

@@ -27,20 +27,26 @@ To assign a block to a category or product, navigate to the  **Content Managemen
  Make sure that the block to be added _exists_, is _active_ and has _not expired_.
  ***
 **To add a CMS block to a CMS page:**
-1. On the **Overview of CMS Pages** page in the _Actions_ column, click **Edit > Placeholders** next to the page you want to add a block to. 
+1. On the **Overview of CMS Pages** page in the _Actions_ column, click **Edit > Placeholders** next to the page you want to add a block to.
 2. On the **Edit Placeholders: [Page Name]** page that opens, switch to the **Placeholders** tab and place your cursor where you want to insert a CMS block.
 3. Enter the following information:
 
     {% raw %}{{{% endraw %} cms_block( {'Block name'} ) {% raw %}}}{% endraw %} where **Block name** is a name of the block.
 
-    {% info_block infoBox %}
-Alternatively, you can create a CMS block on the page manually. To do this, click **Cms content widgets usage information**, copy the **cms_block** code and paste it into the page.
-{% endinfo_block %}
-    
-4. Replace **block_name_placeholder** with the name of the block you want to add to this current page. 
 {% info_block infoBox %}
- You can get a block name in the _Name_ column of the List of CMS blocks on the Overview of CMS Blocks page.
+
+Alternatively, you can create a CMS block on the page manually. To do this, click **Cms content widgets usage information**, copy the **cms_block** code and paste it into the page.
+
 {% endinfo_block %}
+
+4. Replace **block_name_placeholder** with the name of the block you want to add to this current page.
+
+{% info_block infoBox %}
+
+You can get a block name in the _Name_ column of the List of CMS blocks on the Overview of CMS Blocks page.
+
+{% endinfo_block %}
+
 5. To keep the changes, click **Save**.
 ***
 **Tips & Tricks**

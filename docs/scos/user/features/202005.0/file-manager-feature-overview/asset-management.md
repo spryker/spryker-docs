@@ -27,7 +27,9 @@ Dynamic assets are files, added during content and product creation: adding or c
 Static assets are images, fonts, CSS, JS, HTML and PHP files that are available and used by default. All the files are split into folders according to the application they are used for: Zed, Yves or Glue. The PHP and HTML files stored in static asset directories are used for handling errors and showing the platform maintenance messages.
 
 {% info_block infoBox %}
+
 Currently, except for the error handling files, there are no Glue related assets.
+ 
 {% endinfo_block %}
 
 ### Location

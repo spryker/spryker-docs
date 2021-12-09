@@ -2,6 +2,9 @@
 title: Markdown syntax
 description: Learn the markdown syntax and how to create markdown elements in your writing.
 template: concept-topic-template
+related:
+  - title: Style, syntax, formatting, and general rules
+    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html
 ---
 
 This document contains Markdown syntax of the page elements used on our documentation website. You will read about:
@@ -70,7 +73,6 @@ Make sure to fulfill the requirements:
 
 - `{drop-down toggle button}` in `<summary>{drop-down toggle button}</summary>` should not undergo any kind of formatting. For example, `<summary>`code.php`</summary>` or `<summary><var>code.php</var></summary>`. Otherwise, the code snippet will be corrupted. 
 - Put a blank row between `<summary>{drop-down toggle button}</summary>` and ````{programming language}`. This will ensure that the code snippet is displayed correctly on the documentation website.
-
 
 {% endinfo_block %}
 
@@ -231,32 +233,25 @@ When a table column contains only code snippets, do the following:
 1. Remove the column with the code snippet from the table entirely.
 2. Below the table, paste all the code snippets in the following format:
    
-   ```md
-   <details>
-    <summary>{removed column header name}:{entity name}</summary>
+```md
+<details><summary>{removed column header name}:{entity name}</summary>
 
-    {code snippet}
+{code snippet}
 
-    </details>
-  ```
+</details>
+```
 
 See the example below:
 
-<details>
-<summary>Source table</summary>
+Source table:
 
 ![source table](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/source-table.png)
-
-</details>
 
 Published table:
 
 | Storage Type | Target Entity | Example Expected Data Identifier |
-
 | --- | --- | --- |
-
 | Redis | Product Abstract Price | kv:price_product_abstract_merchant_relationship:de:1:1 |
-
 | Redis | Product Concrete Price | kv:price_product_abstract_merchant_relationship:de:1:1 |
 
 <details>
@@ -328,37 +323,36 @@ If you have a table column with cells containing both the code snippets and supp
 1. Place the code snippets below the table as described in step 2 of Only Code.
 2. Into the cell or cells from which you removed the code snippets, add See **{drop-down toggle button}** below the table.
 
-<details>
-<summary>Source table</summary>
+See the example below:
+
+Source table:
 
 ![source table](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/source-table-2.png)
-
-</details>
 
 Published table:
 
 | Function name | Description | Method signature | Usage example |
-
 | --- | --- | --- | --- |
-
-| `model` | Resolves a model path and returns a string in the following format: `@ShopUi/models/{modelName}.twig`. | function model($modelName: string): string <ul><li>$modelName - model name (required).</li></ol> | `{% extends model('component') %}` | 
+| `model` | Resolves a model path and returns a string in the following format: `@ShopUi/models/{modelName}.twig`. | function model($modelName: string): string <ul><li>$modelName - model name (required).</li></ol> | `{% raw %}{% extends model('component') %}{% endraw %}` | 
 | `define` | This function is used for: <ul><li>creating a default object that can be changed from an incoming context;</li><li>defining tags used to pass properties and contract for a specific component.</li></ul> | | See **Usage Example: define** below. |
-| `qa` | Returns a string in the following format: `data-qa="qa values here"` | `function qa($qaValues: string[] = []): string` | `{{ qa('submit-button') }}` |
+| `qa` | Returns a string in the following format: `data-qa="qa values here"` | `function qa($qaValues: string[] = []): string` | `{% raw %}{{ qa('submit-button') }}{% endraw %}` |
 
 <details open>
 <summary>Usage Example: define</summary>
 
 ```twig
+{%- raw -%}
 {% define data = {
     items: _widget.productGroupItems,
 } %}
+{% endraw %}
 ```
 </details>
 
 
 ## Anchors
 
-You don’t have to create anchors for headings. Each heading has its default anchor that corresponds to its text. However, still check **step 2** of this section to learn about important aspects of linking to anchors. 
+You don’t have to create anchors for headings. Each heading has its default anchor that corresponds to its text. However, still check [step 2](#step-2) of this section to learn about important aspects of linking to anchors. 
 
 Follow the steps to create an anchor and link to it:
 
@@ -373,12 +367,13 @@ Make sure to fulfil the requirements:
 - If `{anchor-name}` consists of several words, they should be hyphenated as anchor is just a link type;
 - `{anchor-name}` should always correspond to the text you are linking to for consistency. For example, if you are linking to a piece of text about full access rights,  the anchor should look like `<a name="full-access"></a>` .
 
+<a name="step-2"></a>
 2. Link text to this anchor, depending on the link source:
 
 - When linking to an anchor on a different page, stick to the usual Markdown link syntax and add the anchor name at the end of the link: `[link text](https://{article URL}#{anchor name})`.
-  Following the example above, it looks like `[Full access rights](https://docs.spryker.com/docs/scos/user/features/{{site.version}}/shared-carts-feature-overview.html#full-access)`.
+  Following the example above, it looks like `[Sorting parameters](https://docs.spryker.com/docs/marketplace/dev/glue-api-guides/202108.0/searching-the-product-catalog.html#sorting)`.
 - When linking to an anchor on the same page, stick to the usual Markdown link syntax with a relative URL path - `[link text](#{anchor name})`.
-  With the same example, it looks like `[Full access rights](#full-access)`.
+  With the same example, it looks like `[Sorting parameters](##sorting)`.
 
 Here is another example:
 
@@ -416,12 +411,6 @@ To embed .pdf files, use the following code:
 
 where `http://example.com/the.pdf` is the link to your .pdf file. 
 
-{% info_block infoBox "Info" %}
-
-Use the AWS storage for the .pdf files.
-
-{% endinfo_block %}
-
 
 ## Glossary
 
@@ -441,30 +430,6 @@ Glossary example:
 **Deploy file**
 
 >A YAML file defining Spryker infrastructure and services for Spryker tools used to deploy Spryker applications in different environments.
-
-**Region**
-
-> Defines one or more isolated instances of Spryker applications that have only one persistent database to work with; limits the visibility of a project's **Stores** to operate only with the **Stores** that belong to a **Region**; refers to geographical terms like data centers, regions and continents in the real world.
-
-**Group**
-
-> Defines a group of Spryker applications within a **Region** that is scaled separately from other groups; can be assumed as an auto scaling group in the Cloud.
-
-**Store**
-
->A store related context a request is processed in.
-
-**Application**
-
->A Spryker application, like Zed, Yves or Glue.
-
-**Service**
-
-> An external storage or utility service. Represents service type and configuration. The configuration can be defined on different levels: project-wide, region-wide, store-specific or endpoint-specific with limitations based on the service type.
-
-**Endpoint**
-
-> A point of access to **Application** or **Service**. The key format is `domain[:port]`. By default, the port for HTTP endpoints is 80 . Port is mandatory for TCP endpoints.
 ```
 
 ## Inline code issues

@@ -16,7 +16,7 @@ Docker SDK is shipped with the basic deploy file template: `deploy.base.template
 
 ### Including deploy file templates
 
-To include a deploy file template into an application's configuration, use the [`imports:`](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file-reference-1.0#imports) parameter in the main deploy file of the desired environment.
+To include a deploy file template into an application's configuration, use the [`imports:`](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file-reference-1.0.html#imports) parameter in the main deploy file of the desired environment.
 
 ```yaml
 import:

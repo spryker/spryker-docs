@@ -131,7 +131,7 @@ Depending on the hardware performance, the first project launch can take up to 2
 
 ## Endpoints
 
-To ensure that the installation is successful, make sure you can access the configured endpoints from the Deploy file. See [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file-reference-1.0.html) to learn about the Deploy file.
+To ensure that the installation is successful, make sure you can access the configured endpoints from the Deploy file. See [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html) to learn about the Deploy file.
 
 {% info_block infoBox "RabbitMQ UI credentials" %}
 
@@ -147,7 +147,7 @@ To get the full and up-to-date list of commands, run `docker/sdk help`.
 
 * [Spryker in Docker troubleshooting](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-spryker-in-docker-issues.html)
 * [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html)
-* [Deploy File Reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file-reference-1.0.html)
+* [Deploy File Reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html)
 * [Configuring services](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-services.html)
 * [Setting up a self-signed SSL certificate](/docs/scos/dev/setup/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html)
 * [Additional DevOPS guidelines](/docs/scos/dev/setup/installing-spryker-with-docker/configuration/additional-devops-guidelines.html)

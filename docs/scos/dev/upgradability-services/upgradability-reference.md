@@ -7,7 +7,9 @@ template: concept-topic-template
 
 ## Name is not unique
 
-Names of transfers, transfer properties, database tables and columns, methods, and constants should be unique 
+Names of transfers, transfer properties, database tables and columns, methods, and constants should be unique to the extent of making it impossible to accidentally match the name of a core entity introduced in future.
+
+If minor or major release introduces an entity with the same name, the entity in your project might change behavior or cause errors.
 
 * Check that Transfer is unique and have the prefix
 * Check that Transfer extend Core Transfer, and each property have the prefix
@@ -16,16 +18,26 @@ Names of transfers, transfer properties, database tables and columns, methods, a
 * Check that Method is unique and have the prefix
 * Check that Constant is unique and have the prefix
 
-### What is the nature of the upgradability error?
+### Making entity names unique
 
-Spryker can release within minor or major the same item with the same name but with the different business logic.
+To avoid errors, make the names of entities unique. For example, add the project name as a prefix to names.
 
-###
+#### Examples of code and related errors
 
-#### Check that Transfer is unique and have the prefix
 
-* error output
+`ProductAbstractStore` transfer name is not unique:
 
+```xml
+<?xml version="1.0"?>
+<transfers xmlns="spryker:transfer-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
+    <transfer name="ProductAbstractStore">
+        <property name="productAbstractSku" type="string"/>
+        <property name="storeName" type="string"/>
+    </transfer>
+</transfers>
+```
+
+Related error in the Evaluator output:
 ```bash
 ************************************************************************************************************************
 Evaluator\Business\Check\IsNotUnique\TransferShouldHavePrefixCheck
@@ -38,17 +50,36 @@ ProductAbstractStore
 ************************************************************************************************************************
 ```
 
-* transfer xml
 
+`contentWidgetParameterMap` property name is not unique:
 ```xml
 <?xml version="1.0"?>
 <transfers xmlns="spryker:transfer-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
-    <transfer name="ProductAbstractStore">
-        <property name="productAbstractSku" type="string"/>
-        <property name="storeName" type="string"/>
+    <transfer name="LocaleCmsPageData">
+        <property name="contentWidgetParameterMap" type="array" singular="contentWidgetParameterMap"/>
     </transfer>
 </transfers>
 ```
+
+Related error in the Evaluator output:
+```bash
+************************************************************************************************************************
+Evaluator\Business\Check\IsNotUnique\TransferPropertyShouldHavePrefixCheck
+You should use Pyz prefix for properties in the extended transfer objects on the project level
+************************************************************************************************************************
+------------------------------------------------------------------------------------------------------------------------
+LocaleCmsPageData
+"\/src\/Pyz\/Shared\/Cms\/Transfer\/cms.transfer.xml"
+["contentWidgetParameterMap"]
+------------------------------------------------------------------------------------------------------------------------
+```
+
+
+
+
+
+
+
 
 ##### How can I avoid this error?
 

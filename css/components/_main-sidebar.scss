@@ -1,6 +1,6 @@
 .main-sidebar {
-    padding: 40px 0 0;
-    transition: transform $transition-duration $transition-function;
+    padding-top: 40px;
+    transition: transform $transition-base;
     position: relative;
 
     @include media("<laptop") {
@@ -75,20 +75,19 @@
             position: sticky;
             top: $header-min-height-desktop;
             left: 0;
-            height: calc(100vh - $header-min-height-desktop - $header-content-gap-desktop);
+            height: calc(100vh - #{$header-min-height-desktop + $header-content-gap-desktop});
             flex-direction: column;
         }
 
         @include media(">laptop") {
             top: $header-min-height-widescreen;
-            height: calc(100vh - $header-min-height-widescreen - $header-content-gap-widescreen);
+            height: calc(100vh - #{$header-min-height-widescreen + $header-content-gap-widescreen});
         }
     }
 
     &__opener {
         position: absolute;
         z-index: 3;
-        top: 44px;
         top: 5px;
         right: 0;
         margin: 0 -20px 0 0;
@@ -139,6 +138,7 @@
             opacity: 1 !important;
             flex: 1 1 auto;
             overflow: hidden;
+            padding-bottom: 20px;
         }
     }
 
@@ -146,7 +146,7 @@
         flex: 1 1 auto;
         overflow: hidden;
         width: 310px;
-        transition: width $transition-duration $transition-function;
+        transition: width $transition-base;
 
         @include media("<laptop") {
             width: 270px;
@@ -166,7 +166,7 @@
     }
 
     &__slide {
-        transition: transform $transition-duration $transition-function, opacity $transition-duration $transition-function;
+        transition: transform $transition-base, opacity $transition-base;
         width: 310px;
 
         @include media("<laptop") {
@@ -235,7 +235,7 @@
         margin: 10px 10px 25px 25px;
         flex: 0 0 auto;
         width: 275px;
-        transition: transform $transition-duration $transition-function, opacity $transition-duration $transition-function;
+        transition: transform $transition-base, opacity $transition-base;
 
         @include media("<laptop") {
             width: 235px;
@@ -255,7 +255,7 @@
             flex: 0 0 auto;
             overflow: hidden;
             width: 310px;
-            transition: width $transition-duration $transition-function;
+            transition: width $transition-base;
 
             @include media("<laptop") {
                 width: 270px;

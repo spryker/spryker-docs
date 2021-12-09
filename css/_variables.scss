@@ -41,6 +41,7 @@ $sidebarsWidthTablet: 594px;
 
 $transition-duration: 0.3s;
 $transition-function: linear;
+$transition-base: $transition-duration $transition-function;
 
 // for sticky sidebars
 $header-min-height-desktop: 78px;

@@ -108,7 +108,7 @@ Request sample: `POST https://glue.mysprykershop.com/wishlists/09264b7f-1894-58e
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| sku | String | SKU of a concrete product to add. |
+| sku | String | Concrete or configurable product SKU to add. |
 | displayData  | Array  | Array of variables that are proposed for a Storefront user to set up in the configurator.  |
 | configuration  | Array  | Default configurable product configuration.  |
 | configuratorKey  | String  | Configurator type.  |
@@ -207,12 +207,12 @@ Resonse sample:
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| sku | String | SKU of the added to the wishlist concrete product. |
+| sku | String | Concrete or configurable product SKU added to the wishlist. |
 | displayData  | Array  | Array of variables a Storefront user set up in the configurator.  |
-| configuration  | Array  | Default product configuration.  |
+| configuration  | Array  | Default configurable product configuration.  |
 | configuratorKey  | String  | Configurator type.  |
 | isComplete  | Boolean  | Shows if the configurable product configuration is complete:<div><ul><li>`true`—configuration complete.</li><li>`false`—configuration incomplete.</li></ul></div>  |
-| quantity  | Integer  | Quantity of the product that was added to the wishlist.  |
+| quantity  | Integer  | Quantity of the product added to the wishlist.  |
 | availableQuantity  | Integer  | Product quantity available in the store. |
 
 For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html#abstract-product-prices-response-attributes).
@@ -248,7 +248,7 @@ To update a wishlist item, send the request:
 
 <details><summary>Request sample: add a configurable product to a wishlist</summary>
 
-`PATCH https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items/`
+`PATCH https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items/093_24495843_98bf36f052d23f10a8a081694ad4f45e`
 
 ```json
 {
@@ -302,7 +302,7 @@ To update a wishlist item, send the request:
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| sku | String | SKU of a configurable product to update. |
+| sku | String | Configurable product SKU to update. |
 | displayData  | Array  | Array of variables that are proposed for a Storefront user to set up in the configurator.  |
 | configuration  | Array  | Default configurable product configuration.  |
 | configuratorKey  | String  | Configurator type.  |
@@ -372,7 +372,7 @@ For attribute descriptions of product prices, see [Retrieving abstract product p
             "prices": []
         },
         "links": {
-            "self": "http://glue.de.spryker.local/wishlists/b70e1073-a740-5a48-bb5e-0449a9e51d53/wishlist-items/093_24495843_94a23d655bf161d6ab0088457f4ea2fc"
+            "self": "https://glue.mysprykershop.com/wishlists/b70e1073-a740-5a48-bb5e-0449a9e51d53/wishlist-items/093_24495843_94a23d655bf161d6ab0088457f4ea2fc"
         }
     }
 }
@@ -382,7 +382,7 @@ For attribute descriptions of product prices, see [Retrieving abstract product p
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| sku | String | Concrete product SKU in the wishlist. |
+| sku | String | Updated configurable product SKU. |
 | displayData  | Array  | Array of variables a Storefront user set up in the configurator.  |
 | configuration  | Array  | Updated configurable product configuration.  |
 | configuratorKey  | String  | Configurator type.  |
@@ -407,7 +407,7 @@ To delete wishlist item, send the request:
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}*** | Unique identifier of the wishlist to delete an item from. [Create a wishlist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
-| ***{% raw %}{{{% endraw %}wishlist_item_id{% raw %}}}{% endraw %}*** | Unique identifier of a product or configurable product to delete. To get this identifier, [retrieve a wishlist with items included](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html#retrieve-wishlists) or [add an item to a wishlist](#add-an-item-to-a-wishlist). |
+| ***{% raw %}{{{% endraw %}wishlist_item_id{% raw %}}}{% endraw %}*** | Unique identifier of a concrete or configurable product to delete. To get this identifier, [retrieve a wishlist with items included](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html#retrieve-wishlists) or [add an item to a wishlist](#add-an-item-to-a-wishlist). |
 
 ### Request
 

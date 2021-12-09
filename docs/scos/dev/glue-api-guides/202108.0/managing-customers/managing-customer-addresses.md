@@ -144,8 +144,8 @@ Request sample: `POST http://glue.mysprykershop.com/customers/DE--1/addresses`
 | iso2Code |   | Specifies an ISO 2 Country Code to use. |
 | company | String | Specifies the customer's company. |
 | phone | String | Specifies the customer's phone number. |
-| isDefaultShipping | String | Specifies whether the address should be used as the default shipping address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
-| isDefaultBilling | String | Specifies whether the address should be used as the default billing address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
+| isDefaultShipping | Boolean | Specifies whether the address should be used as the default shipping address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
+| isDefaultBilling | Boolean | Specifies whether the address should be used as the default billing address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
 
 ## Edit an address
 
@@ -184,8 +184,8 @@ Request sample: `PATCH` **http://glue.mysprykershop.com/customers/DE-25/addresse
 | iso2Code | String | Specifies an ISO 2 Country Code to use. |
 | company | String | Specifies the customer's company. |
 | phone | String | Specifies the customer's phone number. |
-| isDefaultShipping | String | Specifies whether the address should be used as the default shipping address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
-| isDefaultBilling | String | Specifies whether the address should be used as the default billing address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
+| isDefaultShipping | Boolean | Specifies whether the address should be used as the default shipping address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
+| isDefaultBilling | Boolean | Specifies whether the address should be used as the default billing address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
 
 ### Response
 
@@ -319,8 +319,8 @@ Sample request: `GET http://glue.mysprykershop.com/customers/DE-25/addresses`
 | iso2Code | String | Specifies an ISO 2 Country Code to use. |
 | company | String | Specifies customer's company. |
 | phone | String | Specifies customer's phone number. |
-| isDefaultShipping | String | Specifies whether the address should be used as the default shipping address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
-| isDefaultBilling | String | Specifies whether the address should be used as the default billing address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
+| isDefaultShipping | Boolean | Specifies whether the address should be used as the default shipping address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
+| isDefaultBilling | Boolean | Specifies whether the address should be used as the default billing address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
 
 ## Retrieve an address
 
@@ -361,8 +361,8 @@ Request sample : `GET http://glue.mysprykershop.com/customers/DE-25/addresses/3a
 | iso2Code | String | Specifies an ISO 2 Country Code to use |
 | company | String | Specifies the customer's company |
 | phone | String | Specifies the customer's phone number |
-| isDefaultShipping | String | Specifies whether the address should be used as the default shipping address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
-| isDefaultBilling | String | Specifies whether the address should be used as the default billing address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
+| isDefaultShipping | Boolean | Specifies whether the address should be used as the default shipping address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
+| isDefaultBilling | Boolean | Specifies whether the address should be used as the default billing address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
 
 If the request is successful, the endpoint returns **RestAddressesResponse** with the requested address.
 

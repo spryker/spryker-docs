@@ -23,7 +23,7 @@ The file should have the following parameters:
 | concrete_sku            | &check;             | String   |                   | Unique                                       | SKU of the concrete product the offer is being created for.  |
 | merchant_reference      | &check;             | String   |                   | Unique                                       | Identifier of the [merchant](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) in the system. |
 | merchant_sku            |               | String   |                   | Unique                                       | SKU of the merchant.                                         |
-| is_active               | &check;             | Integer  |                   | 1—is active</br>0—is not active             | Defines whether the offer is active or not.                  |
+| is_active               | &check;             | Integer  |                   | 1—is active<br>0—is not active             | Defines whether the offer is active or not.                  |
 | approval_status         | &check;             | String   |                   | Can be: <ul><li>waiting_for_approval</li><li>approved</li><li>declined</li></ul> | Defines the [status of the offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html#product-offer-status) in the system. |
 
 ## Import file dependencies
@@ -31,7 +31,7 @@ The file should have the following parameters:
 The file has the following dependencies:
 
 - [merchant.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant.csv.html)
-- [product_concrete.csv](https://documentation.spryker.com/docs/file-details-product-concretecsv)
+- [product_concrete.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
 
 ## Import template file and content example
 

@@ -56,7 +56,7 @@ If you import only abstract products, the following fields must be populated in 
 * product_abstract.category_key
 * product_abstract.url.{LOCALE}
 
-For details on these and other product abstract-related fields, see [File details: product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html#file-details--product_abstract-csv).
+For details on these and other product abstract-related fields, see [File details: product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html).
 
 If you import concrete products as well, the following fields are also mandatory:
 

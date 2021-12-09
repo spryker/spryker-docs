@@ -38,5 +38,5 @@ Order is a B2C/B2B e-commerce domain object. It is another standard e-commerce d
 MerchantOrder is a Marketplace domain object. MerchantOrder is a composition of OrderItems, OrderTotals, OrderShipment, OrderCustomer, and other objects related to a particular Merchant within the one Order. MerchantOrder is the key entity that helps Merchants to fulfill Orders. It is possible to have different OMS flows for different Merchants so that each Merchant can process their MechantOrders with the best flow. Merchants use the MerchantPortal application to fulfill MerchantOrders. (todo: link to this page to MerchantPortal)
 
  
-To learn more about the orders in the Marketplace, see [Marketplace Order Management feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{site.version}}/marketplace-order-management-feature-walkthrough.html).
+To learn more about the orders in the Marketplace, see [Marketplace Order Management feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{site.version}}/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html).
 

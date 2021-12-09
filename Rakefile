@@ -9,14 +9,17 @@ commonOptions = {
   :url_ignore => [
     /mysprykershop.com\/[\.\w\-\/\?]+/,
     /b2c-demo-shop.local\/[\.\w\-\/\?]+/,
-    /zed.de.b2b-demo-shop.local\/[\.\w\-\/\?]+/,
+    /b2b-demo-shop.local\/[\.\w\-\/\?]+/,
     /mydomain.com\/[\.\w\-\/\?]+/,
     /demoshop.local\/[\.\w\-\/\?]+/,
-    /mysprykershop.com:10007\/[\.\w\-\/\?]+/,
+    /zed.mysprykershop.com:10007/,
     /www.pexels.com\/[@\.\w\-\/\?]+/,
     /pixabay.com\/[\.\w\-\/\?]+/,
     /xentral.com\/[\.\w\-\/\?]+/,
-    /github.com\/[\.\w\-\/]+\.md/
+    /github.com\/[\.\w\-\/]+\.md/,
+    /www.virtualbox.org\/[@\.\w\-\/\?]+/,
+    /de.linkedin.com\/[@\.\w\-\/\?]+/,
+    /www.instagram.com\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],
   :typhoeus => {
@@ -25,11 +28,18 @@ commonOptions = {
   },
   :disable_external => false,
   :check_html => true,
+  :validation => {
+    :report_eof_tags => true,
+    :report_invalid_tags => true,
+    :report_mismatched_tags => true,
+    :report_missing_doctype => true,
+    :report_missing_names => true,
+    :report_script_embeds => true,
+  },
   :empty_alt_ignore => true,
-  :only_4xx => true,
+  :only_4xx => false,
   :http_status_ignore => [429],
-  :parallel => { :in_processes => 4},
-  :cache => { :timeframe => '2w' }
+  :parallel => { :in_threads => 3}
 }
 
 task :check_cloud do
@@ -78,10 +88,28 @@ task :check_scos_dev do
   HTMLProofer.check_directory("./_site", options).run
 end
 
+task :check_scos_dev_2020090 do
+  options = commonOptions.dup
+  options[:only_4xx] = false
+  options[:file_ignore] = [
+    /docs\/marketplace\/.+/,
+    /docs\/cloud\/.+/,
+    /docs\/scos\/user\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/201811\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/201903\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/201907\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202001\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202108\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202200\.0\/.+/
+  ]
+  HTMLProofer.check_directory("./_site", options).run
+end
+
 task :check_scos_user do
   options = commonOptions.dup
   options[:file_ignore] = [
-    /docs\/scos\/.+/,
+    /docs\/marketplace\/.+/,
     /docs\/cloud\/.+/,
     /docs\/scos\/dev\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201811\.0\/.+/,
@@ -89,7 +117,6 @@ task :check_scos_user do
     /docs\/scos\/\w+\/[\w-]+\/201907\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202001\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202200\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run

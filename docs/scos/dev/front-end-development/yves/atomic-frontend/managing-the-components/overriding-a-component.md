@@ -128,7 +128,7 @@ As we are not going to change the component template, let us copy the whole of t
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
-</br>
+<br>
 </details>
 
 ## 3. Define Component Styles

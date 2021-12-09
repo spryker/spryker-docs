@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/managing-users
 related:
   - title: User and Rights Management
-    link: docs/scos/dev/feature-walkthroughs/page.version/customer-account-management-feature-walkthrough/user-and-rights-overview.html
+    link: docs/scos/dev/feature-walkthroughs/page.version/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html
 ---
 
 This topic describes how to manage users.
@@ -45,7 +45,8 @@ To create a user record:
 That's it. The created user record appears on the *Users* page.    
 
 **Tips & tricks**
-<br>There is a way to initiate a create-new-user flow while editing a user record. To do that, on the *Edit User* page, in the top right corner, click **Add User**.
+
+There is a way to initiate a create-new-user flow while editing a user record. To do that, on the *Edit User* page, in the top right corner, click **Add User**.
 
 ## Editing users
 
@@ -53,7 +54,7 @@ To edit a user:
 1. In *Users List* > *Action* column, click **Edit**  if you want to change user's details.
 2. Click **Update**.
 
-## Reference information: Createing and editing users
+## Reference information: Creating and editing users
 
 This section describes attributes you see, select, and enter when creating and editing users.
 
@@ -97,7 +98,7 @@ The following table describes the attributes used when creating or updating a us
 | Assigned Groups |List of all groups that are currently available in the system. You can select from one to many values by selecting the appropriate checkboxes. |
 | Agent | Identifies if this is a user agent. See the _Agent User_ section above. |
 | Interface Language |List of the available languages. This defines in what language the user will see the Back Office interface. Once the account language is changed, the respective user will see that their interface is translated into the corresponding language upon their next login.|
-| Status |**Available on the Edit User page only**</br>Identifies if this user is in active status. All records are **Active** upon creation by default. The available values are: **active** (meaning able to log in to Back Office), **blocked** (the user is not able to log in), **deleted** (the user is not able to log in)|
+| Status |**Available on the Edit User page only**<br>Identifies if this user is in active status. All records are **Active** upon creation by default. The available values are: **active** (meaning able to log in to Back Office), **blocked** (the user is not able to log in), **deleted** (the user is not able to log in)|
 
 ## Assigning customers to users
 

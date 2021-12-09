@@ -16,7 +16,7 @@ To learn more about the feature and to find out how end users use it, see [enter
 
 ## Module dependency graph
 
-The 
+The following diagram illustrates the dependencies between the modules for the {Feature name} feature. 
 
 ![Module Dependency Graph](https://confluence-connect.gliffy.net/embed/image/1789259c-a652-4e9c-a1ad-d5f598de43f6.png?utm_medium=live&utm_source=custom)
 <!--
@@ -35,6 +35,9 @@ Table content:
 | {Module name} | {Module description}    |
 
 ## Domain model
+
+The following schema illustrates the {Feature name} domain model:
+
 <!--
 - Domain model SHOULD contain all the entities that were adjusted or introduced by the feature.
 - All the new connections SHOULD also be shown and highlighted properly 

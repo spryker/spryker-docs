@@ -15,6 +15,8 @@ redirect_from:
   - /v5/docs/en/ht-build-product-relation
   - /v4/docs/ht-build-product-relation
   - /v4/docs/en/ht-build-product-relation
+  - /v3/docs/ht-build-product-relation
+  - /v3/docs/en/ht-build-product-relation
   - /v2/docs/ht-build-product-relation
   - /v2/docs/en/ht-build-product-relation
   - /v1/docs/ht-build-product-relation
@@ -80,7 +82,7 @@ It accepts the following arguments:
 | `type` | <ul><li>Is the type which is defined in `\Spryker\Shared\ProductRelation\ProductRelationTypes`</li><li>String value (related-products, up-selling).</li></ul> |
 | `parameter` | <ul><li>Is the parameter for the selected relation type</li><li>This value defers depending on the selected relation types</li></ul> |
 | `title` | Is the title displayed in the carousel component. |
-| `templatePath` | Is the path to the template for rendering the carousel component.</br>For example: `@ProductRelation/partial/product_relation_carousel.twig`. |
+| `templatePath` | Is the path to the template for rendering the carousel component.<br>For example: `@ProductRelation/partial/product_relation_carousel.twig`. |
 
 Each type has a data provider. This data provider reads data from redis and sends it to the template.
 

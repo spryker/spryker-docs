@@ -19,7 +19,7 @@ related:
 ---
 
 {% info_block errorBox %}
-The following feature integration guide expects the basic feature to be in place.</br>The current feature integration Guide only adds the Company Account REST API functionality.
+The following feature integration guide expects the basic feature to be in place.<br>The current feature integration Guide only adds the Company Account REST API functionality.
 {% endinfo_block %}
 
 Follow the steps below to install Company Account feature API.
@@ -31,7 +31,7 @@ To start the feature integration, overview and install the necessary features:
 | --- | --- | --- |
 | Spryker Core | master | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
 | Company account | master | [Company Account](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html) |
-| Customer Account Management | muster | [Customer API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api-customer-account-management-feature-integration.html) |
+| Customer Account Management | muster | [Customer API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) |
 | Uuid generation console | master| UUID Generation Console |
 
 ## 1) Install the required modules using Composer
@@ -241,7 +241,7 @@ select count(*) from spy_company_user where uuid is NULL;
 
 {% info_block infoBox %}
 
-`CompaniesResourcePlugin` GET, `CompanyBusinessUnitsResourcePlugin` GET, `CompanyBusinessUnitAddressesResourcePlugin` GET, `CompanyRolesResourcePlugin` GET, `CompanyUsersResourceRoutePlugin` GET verbs are protected resources. For details, refer to the Configure section of [Configure documentation](/docs/scos/dev/concepts/glue-api/glue-infrastructure.html#resource-routing).
+`CompaniesResourcePlugin` GET, `CompanyBusinessUnitsResourcePlugin` GET, `CompanyBusinessUnitAddressesResourcePlugin` GET, `CompanyRolesResourcePlugin` GET, `CompanyUsersResourceRoutePlugin` GET verbs are protected resources. For details, refer to the Configure section of [Configure documentation](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html#resource-routing).
 
 {% endinfo_block %}
 
@@ -445,7 +445,7 @@ class CustomersRestApiDependencyProvider extends SprykerCustomersRestApiDependen
 }
 ```
 
-</br>
+<br>
 </details>
 
 <details open>

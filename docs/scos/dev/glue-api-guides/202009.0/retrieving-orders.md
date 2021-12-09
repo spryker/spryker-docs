@@ -27,7 +27,6 @@ For detailed information on the modules that provide the API functionality and r
 * [Glue API: Order Management Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html)
 * [Glue API: Measurement Units Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html)
 * [Glue API: Product options feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
-* [Glue API: Product Bundles feature integration](https://documentation.spryker.com/v6/docs/glue-api-product-bundles-feature-integration)
 
 ## Retrieve all orders
 To retrieve a list of all orders made by a registered customer, send the request:
@@ -41,12 +40,12 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 | Header key | Header value | Required | Description |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 | String parameter | Description | Possible values |
 | --- | --- | --- |
-| offset | Ofset of the order at which to begin the response. </br> Works only together with `page[limit]`. </br> To work correctly, the value should be devisable by the value of `page[limit]`. </br> The default value is `0`.  | From `0` to any. |
-| limit | Maximum number of entries to return. </br> Works only together with `page[offset]`. </br> The default value is `10`. | From `1` to any. |
+| offset | Ofset of the order at which to begin the response. <br> Works only together with `page[limit]`. <br> To work correctly, the value should be devisable by the value of `page[limit]`. <br> The default value is `0`.  | From `0` to any. |
+| limit | Maximum number of entries to return. <br> Works only together with `page[offset]`. <br> The default value is `10`. | From `1` to any. |
 
 
 | Request | Usage |
@@ -97,7 +96,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 </details>
 
-
+<div>
 | Attribute | Type | Description |
 | --- | --- | --- |
 | createdAt | String | Date and time when the order was created. |
@@ -110,7 +109,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 | grandTotal | Integer | Grand total of the order. |
 | canceledTotal | Integer | Total canceled amount. |
 | remunerationTotal | Integer | Total sum of remuneration. |
-
+</div>
 
 ## Retrieve an order
 To retrieve detailed information on an order, send the request:
@@ -122,13 +121,13 @@ To retrieve detailed information on an order, send the request:
 
 | Path parameter | Description |
 | --- | --- |
-| order_id | Unique identifier of an order. [Retrieve all orders](#retrieving-all-orders) to get it. |
+| order_id | Unique identifier of an order. [Retrieve all orders](#retrieve-all-orders) to get it. |
 
 ### Request
 
 | Header key | Header value | Required | Description |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 Request sample:
 `GET http://glue.mysprykershop.com/orders/DE--7` — retrieve the order with the `DE--7` order reference. 
@@ -576,11 +575,14 @@ Request sample:
 </details>
 
 **General order information**
+
+<div>
 | Attribute | Type | Description |
 | --- | --- | --- |
 | createdAt | String | Date and time when the order was created. |
 | currencyIsoCode | String | ISO 4217 code of the currency that was selected when placing the order. |
 | priceMode | String | Price mode that was active when placing the order. Possible values:<ul><li>**NET_MODE**—prices before tax.</li><li>**GROSS_MODE**—prices after tax.</li></ul> |
+</div>
 
 **Totals calculations**
 | Attribute | Type | Description |
@@ -594,6 +596,8 @@ Request sample:
 | remunerationTotal | Integer | Total sum of remuneration.|
 
 **Billing and shipping addresses**
+
+<div>
 | Attribute | Type | Description |
 | --- | --- | --- |
 | billingAddress | object | List of attributes describing the billing address of the order. |
@@ -618,7 +622,7 @@ Request sample:
 | iso2Code | String | ISO 2-Letter Country Code to use. |
 | isDefaultShipping | String | Specifies whether the address should be used as the default shipping address of the customer:<ul><li> If the parameter is not set, the default value is **true**.</li><li> If the customer does not have a default shipping address, the value is **true**.</li></ul> |
 | isDefaultBilling | String | Specifies whether the address should be used as the default billing address of the customer<ul><li> If the parameter is not set, the default value is **true**.</li><li> If the customer does not have a default billing address, the value is **true**.</li></ul> |
-
+</div>
 
 **Order item information** 
 

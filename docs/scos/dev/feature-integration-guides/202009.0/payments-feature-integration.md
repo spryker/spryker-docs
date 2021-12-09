@@ -14,7 +14,7 @@ related:
 ---
 
 {% info_block errorBox %}
-The following feature integration guide expects the basic feature to be in place.</br>The current feature integration guide only adds the following functionalities:<ul><li>Payment Back Office UI;</li><li>Payment method per store;</li><li>Payment data import.</li></ul>
+The following feature integration guide expects the basic feature to be in place.<br>The current feature integration guide only adds the following functionalities:<ul><li>Payment Back Office UI;</li><li>Payment method per store;</li><li>Payment data import.</li></ul>
 {% endinfo_block %}
 
 ## Install Feature Core

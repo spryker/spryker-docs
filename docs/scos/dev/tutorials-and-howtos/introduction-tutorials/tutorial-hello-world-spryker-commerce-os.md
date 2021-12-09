@@ -16,6 +16,8 @@ redirect_from:
   - /v5/docs/en/tutorial-hello-world-scos
   - /v4/docs/tutorial-hello-world-scos
   - /v4/docs/en/tutorial-hello-world-scos
+  - /v3/docs/tutorial-hello-world-scos
+  - /v3/docs/en/tutorial-hello-world-scos
   - /v2/docs/tutorial-hello-world-scos
   - /v2/docs/en/tutorial-hello-world-scos
   - /v1/docs/tutorial-hello-world-scos
@@ -34,9 +36,13 @@ Show "Hello World!" string on a web page on your browser. To do so, build a new 
 ## Build the HelloWorld Module
 The steps described in this procedure describe how to build a new module.  To add a new Yves module called **HelloWorld**, do the following:
 1. Go to `/src/Pyz/Yves/` and add a new module called HelloWorld.
+
 {% info_block infoBox %}
+
 A new module is simply a new folder.
+
 {% endinfo_block %}
+
 2. Add a new controller for the module.
 Add a new folder inside the HelloWorld module called `Controller`, and then add the following controller class called `IndexController`:
 
@@ -104,7 +110,9 @@ Go to `RouterDependencyProvider::getRouteProvider()` method in `Router` module a
 5. Finally, add the twig file to render your Hello World page. Add the following folder structure inside the **HelloWorld** module: `Theme/default/views/index`.
 
 {% info_block infoBox %}
+
 This folder structure reflects your theme and controller names. Default is the theme name, and index is the controller name. For every action there is a template with the same name.
+
 {% endinfo_block %}
 
 As your action is called index, add a twig file for your action called `index.twig`:

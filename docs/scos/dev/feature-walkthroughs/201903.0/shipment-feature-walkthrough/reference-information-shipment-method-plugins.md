@@ -10,7 +10,7 @@ redirect_from:
   - /v2/docs/en/shipment-method-plugins
 related:
   - title: Migration Guide - Shipment
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-shipment.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-shipment.html
 ---
 
 The main concerns regarding shipping services are :

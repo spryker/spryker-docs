@@ -62,7 +62,7 @@ To add items to a shopping list, send the request:
 | Attribute | Type | Required | DESCRIPTION |
 | --- | --- | --- | --- |
 | quantity | Ingeger | ✓ | Quantity of the product to add. |
-| sku | String | ✓ | SKU of the product to add. Only [concrete products](https://documentation.spryker.com/v6/docs/products-overview) are allowed. |
+| sku | String | ✓ | SKU of the product to add. Only [concrete products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) are allowed. |
 
 
 
@@ -213,7 +213,7 @@ To change item quantity in a shopping list, send the request:
 
 | Attribute | Type | Required | DESCRIPTION|
 | --- | --- | --- |--- |
-| sku | String | ✓ | SKU of the product you want to change the quantity of. Only [concrete products](https://documentation.spryker.com/v6/docs/products-overview) are allowed. |
+| sku | String | ✓ | SKU of the product you want to change the quantity of. Only [concrete products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) are allowed. |
 | quantity | Integer | ✓ | New quantity of the product. |
 
 ### Response
@@ -341,7 +341,7 @@ If the item is removed successfully, the endpoint returns the `204 No Content` s
 | 001 | Access token is incorrect. |
 | 002 | Access token is missing. |
 | 400 | Provided access token is not an [access token of a сompany user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html). |
-| 901 | Shop list name or item name is not specified or too long.</br>**OR** </br> Item quantity is not specified or too large.|
+| 901 | Shop list name or item name is not specified or too long.<br>**OR** <br> Item quantity is not specified or too large.|
 | 1501 | Shopping list ID or item is not specified. |
 | 1503 |  Specified shopping list is not found. |
 | 1504 |  Specified shopping list item is not found. |

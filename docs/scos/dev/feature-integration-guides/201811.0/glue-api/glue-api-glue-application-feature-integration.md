@@ -27,12 +27,15 @@ composer require spryker/glue-application:"^1.9.1" spryker/glue-application-exte
 ```
 
 {% info_block infoBox "Verification" %}
+
 Make sure that the following modules are installed:
-{% endinfo_block %}
+
 |Module|Expected Directory|
 |---|---|
 |`GlueApplication`|`vendor/spryker/glue-application`|
 |`GlueApplicationExtension`|`vendor/spryker/glue-application-extension`|
+
+{% endinfo_block %}
 
 ### 2) Set up Configuration
 

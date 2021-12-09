@@ -16,7 +16,7 @@ The [Product Options](/docs/scos/user/features/{{page.version}}/product-options-
 
 Options come with their own prices and tax sets. Also, different options can apply to different products. All product options available in a shop are organized in groups.
 
-Although options are applied to abstract products only, the *Product Options* API enables retrieving available options for both [abstract and concrete](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-and-concrete-products.html) products. Also, it enables selecting the necessary options when ordering products and viewing the selected options when an order is complete. For this purpose, product options are retrievable in endpoints related to [products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-information.html) (e.g. `/abstract-products` or `/concrete-products`), [guest carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/managing-carts.html) and [carts of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html) (e.g. `/guest-cart-items` or `/carts/{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}/items`, etc.), as well as [in order history](https://documentation.spryker.com/v5/docs/en/retrieving-order-history).
+Although options are applied to abstract products only, the *Product Options* API enables retrieving available options for both [abstract and concrete](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-and-concrete-products.html) products. Also, it enables selecting the necessary options when ordering products and viewing the selected options when an order is complete. For this purpose, product options are retrievable in endpoints related to [products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-information.html) (e.g. `/abstract-products` or `/concrete-products`), [guest carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/managing-carts.html) and [carts of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html) (e.g. `/guest-cart-items` or `/carts/{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}/items`, etc.), as well as [in order history](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html).
 
 With the help of the data provided by the API resources, you will be able to perform the following tasks:
 
@@ -58,7 +58,7 @@ Each product option is represented by a related resource with the following attr
 
 <details open>
 <summary markdown='span'>Sample Response</summary>
-    
+
 ```json
 {
     "data": {
@@ -167,8 +167,8 @@ Each product option is represented by a related resource with the following attr
     ]
 }
 ```
-    
-</br>
+
+<br>
 </details>
 
 ## Retrieving Product Options for Cart Items
@@ -208,7 +208,7 @@ When accessing guest carts, you need to specify the guest user ID. This is done 
 
 {% endinfo_block %}
 
-Sample requests: 
+Sample requests:
 
 `GET http://glue.mysprykershop.com/carts?include=items,concrete-products,product-options`
 
@@ -250,7 +250,7 @@ Each product option available for every product in the cart is represented by a 
 
 <details open>
 <summary markdown='span'>Sample Response - Guest Cart</summary>
-    
+
 ```json
 {
     "data": {
@@ -379,13 +379,13 @@ Each product option available for every product in the cart is represented by a 
     ]
 }
 ```
-    
-</br>
+
+<br>
 </details>
 
 <details open>
 <summary markdown='span'>Sample Response - Cart of Registered User</summary>
-    
+
 ```json
 {
     "data": [
@@ -524,8 +524,8 @@ Each product option available for every product in the cart is represented by a 
     ]
 }
 ```
-    
-</br>
+
+<br>
 </details>
 
 ### Applying Product Options to Cart Items
@@ -546,7 +546,7 @@ For more details on managing carts of registered users, see [Managing Carts of R
 {% endinfo_block %}
 
 **Request Body**
-    
+
 ```json
 {
     "data": {
@@ -591,7 +591,7 @@ For more details on managing carts of registered users, see [Managing Guest Cart
 {% endinfo_block %}
 
 **Request Body**
-    
+
 ```json
 {
     "data": {
@@ -625,7 +625,7 @@ No matter which type of cart is created or modified, the following attributes sh
 | --- | --- | --- | --- |
 | **sku** | String | yes | Specifies the SKU of the product to add to the cart or to modify. |
 | **quantity** | Integer | yes | Specifies the number of products to be available in the cart. |
-| **productOptions** | Array of **product-option** | no | Specifies the product options to apply to the product.</br></br>Each option must be represented by a JSON object containing only 1 attribute: **sku**. It specifies the SKU of the option to apply.</br></br>**Note**: It is the responsibility of the API Client to track whether the selected items are compatible. For example, the client should not allow a **2**-year and a **4**-year warranty service to be applied to the same product. The API endpoints allow any combination of items, no matter whether they are compatible or not. |
+| **productOptions** | Array of **product-option** | no | Specifies the product options to apply to the product.<br><br>Each option must be represented by a JSON object containing only 1 attribute: **sku**. It specifies the SKU of the option to apply.<br><br>**Note**: It is the responsibility of the API Client to track whether the selected items are compatible. For example, the client should not allow a **2**-year and a **4**-year warranty service to be applied to the same product. The API endpoints allow any combination of items, no matter whether they are compatible or not. |
 
 You can specify a certain product several times with different options. In this case, the product will be added as multiple cart items.
 
@@ -663,7 +663,7 @@ The options applied to the order are specified in the `productOptions` attribute
 | **productOptions** | Array of product-option. | Specifies the product options. |
 
 **Sample response**
-    
+
 ```json
 {
     "data": {
@@ -698,5 +698,4 @@ The options applied to the order are specified in the `productOptions` attribute
 }
 ```
 
-For detailed information and the possible error codes, see [Retrieving Customer's Order History](https://documentation.spryker.com/v5/docs/en/retrieving-order-history).
- 
+For detailed information and the possible error codes, see [Retrieving Customer's Order History](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html).

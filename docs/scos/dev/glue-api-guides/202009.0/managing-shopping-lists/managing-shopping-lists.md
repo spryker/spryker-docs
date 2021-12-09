@@ -14,7 +14,7 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-shopping-lists/managing-shopping-list-items.html
 ---
 
-With the help of the [Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-list.html) feature, company users can manage shopping lists for their company to plan purchasing activities beforehand. Unlike [Wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html), shopping lists contain not only a list of items to be purchased but also the quantity of each item.
+With the help of the [Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html) feature, company users can manage shopping lists for their company to plan purchasing activities beforehand. Unlike [Wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html), shopping lists contain not only a list of items to be purchased but also the quantity of each item.
 
 
 In your development, the resources can help you to enable the shopping list functionality in your application.
@@ -860,7 +860,7 @@ If the shopping list is deleted successfully, the endpoint retruns the `204 No C
 | 001 | Access token is incorrect. |
 | 002 | Access token is missing. |
 | 400 | Provided access token is not an [access token of a сompany user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html). |
-| 901 | Shop list name or item name is not specified or too long.</br>**OR** </br> Item quantity is not specified or too large.|
+| 901 | Shop list name or item name is not specified or too long.<br>**OR** <br> Item quantity is not specified or too large.|
 | 1501 | Shopping list ID or item is not specified. |
 | 1503 |  Specified shopping list is not found. |
 | 1506 | Shopping list with given name already exists. |

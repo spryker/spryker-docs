@@ -45,7 +45,7 @@ To refresh an authentication token, send the request:
 
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
-| refreshToken | string | &check; | Authentication token to refresh the `accessToken`. You can get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer). |
+| refreshToken | string | &check; | Authentication token to refresh the `accessToken`. You can get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
 ### Response
 
@@ -101,7 +101,7 @@ To revoke a refresh token, send the request:
 
 | Header key | Header value | Required | Description |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 
 
@@ -116,7 +116,7 @@ To revoke a refresh token, send the request:
 
 For security purposes, the endpoint always returns the `204 No Content` status code, regardless of any refresh tokens being revoked. 
 
-The tokens are marked as expired on the date and time of the request. You can configure expired tokens to be automatically deleted from the database by setting the lifetime of expired tokens. For details, see [Configuring Outdated Refresh Token Life Time](https://documentation.spryker.com/v6/docs/configuring-outdated-refresh-token-life-time). 
+The tokens are marked as expired on the date and time of the request. You can configure expired tokens to be automatically deleted from the database by setting the lifetime of expired tokens.
 
 
 ## Possible errors
@@ -128,8 +128,8 @@ To view generic errors that originate from the Glue Application, see [Reference 
 
 ## Next steps
 
-* [Authenticate as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/customer-password.html)
-* [Manage customer passwords](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/customer-password.html)
+* [Authenticate as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html)
+* [Manage customer passwords](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-passwords.html)
 
 
 

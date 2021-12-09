@@ -160,7 +160,6 @@ versioned_categories:
     dev:
       - feature-walkthroughs
       - feature-integration-guides
-      - module-migration-guides
       - data-import
       - data-export
       - glue-api-guides
@@ -168,7 +167,6 @@ versioned_categories:
       - the-docker-sdk
       - migration-and-integration
       - legacy-demoshop
-      - sdk
       - technology-partner-guides
 
 # these are defaults used for the frontmatter for these file types
@@ -195,6 +193,7 @@ search: algolia
 algolia:
   application_id: 'IBBSSFT6M1'
   search_only_api_key: '296ac9c40fa95441b2d89d1fd8395bb4'
+  max_record_size: 20000
   indices:
     - name: 'scos_user'
       title: 'SCOS User'

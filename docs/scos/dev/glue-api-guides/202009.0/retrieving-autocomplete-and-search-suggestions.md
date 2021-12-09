@@ -10,12 +10,12 @@ redirect_from:
   - /v6/docs/en/retrieving-suggestions-for-auto-completion-and-search
 related:
   - title: Catalog Search
-    link: docs/scos/dev/glue-api-guides/page.version/catalog-search.html
+    link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.html
   - title: Browsing a Category Tree
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-trees.html
 ---
 
-In addition to [catalog search](/docs/scos/dev/glue-api-guides/{{page.version}}/catalog-search.html), Spryker search engine also provides auto-completion terms and suggestions for products, categories, and CMS pages. The feature allows developers to predict search strings and provide customers with available options.
+In addition to [catalog search](/docs/scos/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html), Spryker search engine also provides auto-completion terms and suggestions for products, categories, and CMS pages. The feature allows developers to predict search strings and provide customers with available options.
 
 In your development, this resource can help you to enhance the customer experience by providing the relevant information for search, product filters, shopping cart, checkout, order history, wishlist, and many more.
 
@@ -226,10 +226,10 @@ To retrieve a search suggestion, send the request:
 
 | Attribute | Type | Description |
 | --- | --- | --- |
-| **completion** | Array | Provides a list of **autocompletion suggestions** for the query string. </br> Each item in the array is a _String_. |
-| **categories** | Array | Contains an array of **categories** matching the search query. </br> Each item in the array is an _Object_ representing a single category. |
-| **cmsPages** | Array | Contains an array of **CMS pages** matching the search query. </br> Each item in the array is an _Object_ representing a single page. |
-| **abstractProducts** | Array | Contains an array of **abstract products** matching the search query. </br> Each item in the array is an _Object_ representing a product. |
+| **completion** | Array | Provides a list of **autocompletion suggestions** for the query string. <br> Each item in the array is a _String_. |
+| **categories** | Array | Contains an array of **categories** matching the search query. <br> Each item in the array is an _Object_ representing a single category. |
+| **cmsPages** | Array | Contains an array of **CMS pages** matching the search query. <br> Each item in the array is an _Object_ representing a single page. |
+| **abstractProducts** | Array | Contains an array of **abstract products** matching the search query. <br> Each item in the array is an _Object_ representing a product. |
 
 
 **Category attributes**
@@ -245,13 +245,16 @@ To retrieve a search suggestion, send the request:
 | **url** | String | Specifies the page URL. |
 
 **Abstract product attributes**
+
+<div>
 | Attribute | Type | Description |
 | --- | --- | --- |
 | **abstractName** | String | Specifies the name of the product. |
 | **abstractSku** | String | Specifies the SKU of the product. |
 | **url** | String | Specifies the product details page. |
 | **price** | Integer | Specifies the product price. |
-| **images** | Object | Provides URLs of the product images. </br>The object consists of **2** items:<ul><li>**externalUrlSmall**—specifies the URL of the product preview image;</li><li> **externalUrlLarge**—specifies the URL of the large product image.</li></ul> |
+| **images** | Object | Provides URLs of the product images. <br>The object consists of **2** items:<ul><li>**externalUrlSmall**—specifies the URL of the product preview image;</li><li> **externalUrlLarge**—specifies the URL of the large product image.</li></ul> |
+</div>
 
 The `url` attribute of categories and abstract products exposes a Search Engine Friendly URL of the resource that represents the respective category or product. For information on how to resolve such a URL and retrieve the corresponding resource, see [Using Search Engine Friendly URLs](/docs/scos/dev/glue-api-guides/{{page.version}}/resolving-search-engine-friendly-urls.html).
 

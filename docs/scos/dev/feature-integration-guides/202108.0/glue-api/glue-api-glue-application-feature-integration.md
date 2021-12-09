@@ -334,7 +334,7 @@ If everything is set up correctly, a request to `http://glue.mysprykershop.com` 
 
 {% info_block warningBox “Verification” %}
 
-Send a GET request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`. Make sure that the response contains the 'ETag' header.</br>Prepare a PATCH request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identitifer{% raw %}}}{% endraw %}`.</br>Add the 'If-Match' header with the value of ETag from the GET response header.</br>Add the request body.
+Send a GET request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`. Make sure that the response contains the 'ETag' header.<br>Prepare a PATCH request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identitifer{% raw %}}}{% endraw %}`.<br>Add the 'If-Match' header with the value of ETag from the GET response header.<br>Add the request body.
 
 ```json
 {
@@ -351,13 +351,13 @@ Send a GET request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESO
 
 {% info_block warningBox “Verification” %}
 
-Send a request with the specified header and body.</br>Make sure that the returned resource contains updated 'ETag'.
+Send a request with the specified header and body.<br>Make sure that the returned resource contains updated 'ETag'.
 
 {% endinfo_block %}
 
 {% info_block warningBox “Verification” %}
 
-Send a GET request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`.</br>Make sure that the response contains the 'ETag' header.</br>Prepare a PATCH request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`.</br>Add the 'If-Match' header with some random value.</br>Add a request body.
+Send a GET request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`.<br>Make sure that the response contains the 'ETag' header.<br>Prepare a PATCH request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`.<br>Add the 'If-Match' header with some random value.<br>Add a request body.
 
 ```json
 {
@@ -381,7 +381,7 @@ Make sure that the response contains the ETag validation error.
 {% info_block warningBox “Verification” %}
 
 
-Make sure that the following endpoint is available:</br>http://mysprykershop.com/stores
+Make sure that the following endpoint is available:<br>http://mysprykershop.com/stores
 
 {% endinfo_block %}
 

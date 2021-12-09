@@ -13,9 +13,9 @@ related:
     link: docs/scos/user/features/page.version/cms-feature-overview/email-as-a-cms-block-overview.html
 ---
 
-You can manage the content of emails you send to customers by editing [email templates via CMS Blocks](https://documentation.spryker.com/v6/docs/email-as-a-cms-block-overview). 
+You can manage the content of emails you send to customers by editing [email templates via CMS Blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html). 
 
-There is a number of default emails that are automatically sent on different occasions like customer registration or order shipment. You can change the default emails by editing their email templates via respective CMS Blocks. See [Default Email Templates](https://documentation.spryker.com/v6/docs/email-as-a-cms-block-overview#default-email-templates) for the full list of the emails with their Email CMS Blocks.
+There is a number of default emails that are automatically sent on different occasions like customer registration or order shipment. You can change the default emails by editing their email templates via respective CMS Blocks. See [Default Email Templates](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html) for the full list of the emails with their Email CMS Blocks.
 
 To start managing the content of emails, go to **Content > Blocks**.
 
@@ -26,7 +26,7 @@ If your development team has introduced a new email for your project, you have t
 
 {% info_block infoBox "Info" %}
 
-You don’t need to create new email CMS Blocks for the [default email templates](https://documentation.spryker.com/v6/docs/email-as-a-cms-block-overview#default-email-templates), instead, you edit the available email CMS Blocks to adjust them to your needs.
+You don’t need to create new email CMS Blocks for the [default email templates](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html), instead, you edit the available email CMS Blocks to adjust them to your needs.
 
 {% endinfo_block %}
 
@@ -75,11 +75,11 @@ To edit an email CMS block:
 
 {% info_block warningBox "Note" %}
 
-If you updated the **name**, pass it to your development team to update the name of the respective [.twig email template](https://documentation.spryker.com/v6/docs/en/email-as-a-cms-block-overview#cms-block-email-template). 
+If you updated the **name**, pass it to your development team to update the name of the respective [.twig email template](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html). 
 
 {% endinfo_block %}
 
-3. Click Save.
+1. Click Save.
 The page refreshes, displaying the message about the successful update of the Email CMS Block.
 
 
@@ -102,7 +102,7 @@ The page refreshed displaying the message about the successful update.
 
 #### Tips & Tricks
 
-* Add a [glossary key](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/managing-glossary.html) to the Email CMS Block. When the email is sent, the key is replaced with the translation you defined for the locale selected by the customer. See [Managing Glossary](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/managing-glossary.html#managing-glossary) to learn how to add translations.
+* Add a [glossary key](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/managing-glossary.html) to the Email CMS Block. When the email is sent, the key is replaced with the translation you defined for the locale selected by the customer. See [Managing Glossary](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/managing-glossary.html) to learn how to add translations.
 
 * Add variables to the Email CMS Block to replace them with customer and order specific details. When the email is sent, the variables are replaced with the actual details. For example, add *firstName*, and it is replaced with the name of the customer the email is sent to. A Developer can provide a full list of variables and create new ones.
 

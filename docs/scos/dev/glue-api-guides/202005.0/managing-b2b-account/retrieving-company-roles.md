@@ -21,7 +21,7 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
 ---
 
-In corporate environments, where users act as company representatives rather than private buyers, companies can leverage [Company Roles](https://documentation.spryker.com/v5/docs/en/company-roles-permissions-overview) in order to distribute scopes and permissions among [Company Users](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html). To identify which roles company users are assigned to, you can use the endpoints provided by the **Company Role API**.
+In corporate environments, where users act as company representatives rather than private buyers, companies can leverage [Company Roles](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html) in order to distribute scopes and permissions among [Company Users](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html). To identify which roles company users are assigned to, you can use the endpoints provided by the **Company Role API**.
 
 {% info_block warningBox "Authentication" %}
 The endpoints provided by this API cannot be accessed anonymously. To access them, you need to impersonate users as **Company Accounts** and pass the authentication tokens received. For details on how to authenticate and retrieve such a token, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html).
@@ -57,7 +57,7 @@ The endpoint responds with a collection of **RestCompanyRoleResponse**, each con
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Sample Response**
-    
+
 ```json
 {
     "data": [
@@ -108,7 +108,7 @@ The endpoint responds with a **RestCompanyRoleResponse** that contains informati
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Sample Response**
-    
+
 ```json
 {
     "data": {
@@ -141,7 +141,7 @@ The response will include the following additional attributes:
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Sample Response**
-    
+
 ```json
 {
     "data": {
@@ -182,5 +182,5 @@ The response will include the following additional attributes:
 | Code | Reason |
 | --- | --- |
 | 401 | The access token is invalid. |
-| 403 | The access token is missing.</br>- OR -</br>The current Company Account is not set.</br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html). |
+| 403 | The access token is missing.<br>- OR -<br>The current Company Account is not set.<br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html). |
 | 404 | The specified role was not found or the user does not have access to it. |

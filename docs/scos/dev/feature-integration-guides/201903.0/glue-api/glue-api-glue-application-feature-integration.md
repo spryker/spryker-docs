@@ -28,11 +28,13 @@ composer require spryker/glue-application:"^1.0.0" --update-with-dependencies
 {% info_block warningBox “Verification” %}
 
 Make sure that the following modules are installed:
-{% endinfo_block %}
+
 
 | Module | Expected directory |
 | --- | --- |
 | GlueApplication | `vendor/spryker/glue-application` |
+
+{% endinfo_block %}
 
 ### 2) Set up Configuration
 Add the necessary parameters to `config/Shared/config_default.php`:
@@ -114,7 +116,7 @@ class GlueBootstrap extends AbstractGlueBootstrap
 }
 ```
 
-</br>
+<br>
 </details>
 
 Create a new entry point for Glue Application:
@@ -145,7 +147,7 @@ $bootstrap
     ->run();
 ```
 
-</br>
+<br>
 </details>
 
 #### Configure web server
@@ -177,7 +179,7 @@ server {
 }
 ```
 
-</br>
+<br>
 </details>
 
 Update hosts configuration by adding the following line (replace ip with your server's IP address):
@@ -229,7 +231,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox “Verification” %}

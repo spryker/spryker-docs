@@ -39,13 +39,13 @@ use SprykerEco\Zed\Adyen\Communication\Plugin\AdyenPaymentMethodFilterPlugin;
 class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\Payment\Dependency\Plugin\Payment\PaymentMethodFilterPluginInterface[]
+     * @return array<\Spryker\Zed\PaymentExtension\Dependency\Plugin\PaymentMethodFilterPluginInterface>
      */
-    protected function getPaymentMethodFilterPlugins()
+    protected function getPaymentMethodFilterPlugins(): array
     {
         return [
             ...
-            new AdyenPaymentMethodFilterPlugin('toggler-radio'),
+            new AdyenPaymentMethodFilterPlugin(),
         ];
     }
 }

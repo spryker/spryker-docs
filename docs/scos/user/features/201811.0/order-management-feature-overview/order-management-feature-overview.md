@@ -26,9 +26,9 @@ Efficiently keep track of your order processing and ensure quick fulfillment. Ma
 
 **Features:**
 <div>
-<a class="feature-link" href="https://documentation.spryker.com/v1/docs/order-process-modelling-state-machines">Order Process Modelling via State Machines</a> 
-<a class="feature-link" href="https://documentation.spryker.com/v1/docs/oms-matrix">OMS \(Order Management System\) Matrix</a>
-<a class="feature-link" href="https://documentation.spryker.com/v1/docs/reorder">Reorder</a>
-<a class="feature-link" href="https://documentation.spryker.com/v1/docs/order-processing">Order Processing</a>
-<a class="feature-link" href="https://documentation.spryker.com/v1/docs/splittable-order-items">Splittable Order Items</a>
+<a class="feature-link" href="/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html">Order Process Modelling via State Machines</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/order-management-feature-overview/oms-order-management-system-matrix.html">OMS \(Order Management System\) Matrix</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/reorder-feature-overview.html">Reorder</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-management-feature-overview.html">Order Processing</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/order-management-feature-overview/splittable-order-items-overview.html">Splittable Order Items</a>
     </div>

@@ -85,7 +85,7 @@ class PaymentsRestApiConfig extends SprykerPaymentsRestApiConfig
 }
 ```
 
-</br>
+<br>
 </details>
 
 
@@ -111,7 +111,7 @@ To have payment methods available for the checkout,  extend `RestPaymentTransfer
 </transfers>
 ```
 
-</br>
+<br>
 </details>
 
 <p>Run the following command to generate transfer changes:
@@ -188,7 +188,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -229,7 +229,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -269,7 +269,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Verification" %}

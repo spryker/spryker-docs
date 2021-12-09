@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/reference-information-shipment-method-plugins
 related:
   - title: Migration Guide - Shipment
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-shipment.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-shipment.html
   - title: Shipment feature overview
     link: docs/scos/user/features/page.version/shipment-feature-overview.html
 ---

@@ -29,7 +29,7 @@ We use [Jenkins](https://jenkins-ci.org/) for cronjob scheduling. Compared to Cr
 
 ## Add a New Job and Run It
 
-Jobs are defined in `config/Zed/cronjobs/jobs.php`
+Jobs are defined in `config/Zed/cronjobs/jenkins.php`
 
 This file contains an array which defines the jobs.
 
@@ -47,7 +47,7 @@ $jobs[] = [
 
 To import this configuration to Jenkins you need to run this command in the console. In a production environment, this is part of the deployment process.
 
-`vendor/bin/console setup:jenkins:generate`
+`vendor/bin/console scheduler:setup`
 
 Now you can open Jenkins on port 10007 and watch your scripts running: [http://zed.mysprykershop.com:10007](http://zed.mysprykershop.com:10007/) (URL works for standard VM, you may use a different host name).
 

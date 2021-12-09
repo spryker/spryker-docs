@@ -11,7 +11,7 @@ related:
   - title: Navigation API feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/navigation-api-feature-integration.html
   - title: Migration Guide - NavigationsRestApi
-    link: docs/scos/dev/module-migration-guides/page.version/glue-api/migration-guide-navigationsrestapi.html
+    link: docs/scos/dev/module-migration-guides/glue-api/migration-guide-navigationsrestapi.html
   - title: Browsing a Category Tree
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-trees.html
   - title: Catalog Search
@@ -19,7 +19,7 @@ related:
 ---
 
 Spryker offers the navigation feature, which enables shoppers to quickly navigate the shop and easily locate the necessary products and other content. For this purpose, backoffice users can create any number of navigations. Navigations come in a tree structure and can incorporate links to CMS pages, categories, as well as any other internal and external links.
-        
+
 The **Navigation API** provides the possibility to retrieve any navigation tree configured in Spryker.
 
 {% info_block infoBox "Info" %}
@@ -33,7 +33,7 @@ For more details on managing navigation trees, see [Navigation](/docs/scos/user/
 {% endinfo_block %}
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Navigation]<!-- (https://documentation.spryker.com/v3/docs/navigation-feature-integration-201907).-->
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Navigation](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-navigation-feature-integration.html).
 
 ## Usage
 To retrieve a navigation tree with detailed information on each node, send a GET request to the following endpoint:
@@ -49,7 +49,7 @@ Navigation IDs are case sensitive.
 {% endinfo_block %}
 
 {% info_block warningBox "Note" %}
-You can also use the **Accept-Language** header to specify the locale.</br>Sample header:</br>`[{"key":"Accept-Language","value":"de, en;q=0.9"}]`where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+You can also use the **Accept-Language** header to specify the locale.<br>Sample header:<br>`[{"key":"Accept-Language","value":"de, en;q=0.9"}]`where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
 {% endinfo_block %}
 
 If the request was successful, the resource responds with a **RestNavigationResponse**.
@@ -59,7 +59,7 @@ If the request was successful, the resource responds with a **RestNavigationResp
 | Field* | Type | Description |
 | --- | --- | --- |
 | name | String | Specifies the tree name. |
-| isActive | Boolean | Specifies whether the tree is active.</br>If the value of the field is *true*, the tree should be displayed to the customer. Otherwise, the tree should be hidden. |
+| isActive | Boolean | Specifies whether the tree is active.<br>If the value of the field is *true*, the tree should be displayed to the customer. Otherwise, the tree should be hidden. |
 | locale | String | Specifies a locale for the tree. |
 | nodes | Array | Specifies an array of node elements that comprise the navigation tree. |
 
@@ -69,7 +69,7 @@ In addition to that, each node element exposes the following fields:
 | --- | --- | --- |
 | title | String | Specifies the title that should be used to display the node anywhere on the frontend. |
 | url | String | Specifies the URL link the node points to.<ul><li>If the `node_type` parameter is set to `cms_page`, `category` or `link`, the URL is relative to the application domain. For example, `/en/product-sets`.</li><li>If the `node_type` parameter is set to external_url, the URL contains an absolute URI. For example, `http://example.com/mypage.html`.</li><li>If the `node_type` parameter is set to label, the URL is always empty, because labels are intended to be text-only elements.</li></ul> |
-| isActive | Boolean | Specifies whether the node is active.</br>If the value of the field is true, the node should be displayed to the customer. Otherwise, the node should be hidden. |
+| isActive | Boolean | Specifies whether the node is active.<br>If the value of the field is true, the node should be displayed to the customer. Otherwise, the node should be hidden. |
 | nodeType | String | Specifies the node type. Should be one of the following values:<ul><li>**label** - specifies a simple label (text-only element);</li><li>**cms_page** - specifies a link to a CMS page;</li><li>**category** - specifies a link to a category page;</li><li>**link** - specifies a link to any page within the shop;</li><li>**external_url** - specifies a link to an external web site.</li></ul> |
 | cssClass | String | Specifies the CSS class to be used to render the node. |
 | validFrom | String | Specifies a date that the node is valid from. |
@@ -80,7 +80,7 @@ In addition to that, each node element exposes the following fields:
 
 <details open>
 <summary markdown='span'>Sample Response</summary>
-    
+
 ```json
 {
     "data": {
@@ -139,8 +139,8 @@ In addition to that, each node element exposes the following fields:
     }
 }
 ```
-    
-</br>
+
+<br>
 </details>
 
 In case if a navigation node represents a category and the value of its `nodeType` property is category, you can retrieve the category information without any extra calls to the `/category-nodes` endpoint. By doing so, you can save time and network traffic.
@@ -161,7 +161,7 @@ To include the category information, you need to extend the response of the reso
 | category-nodes | metaKeywords | String | Meta keywords of the category. |
 | category-nodes | metaDescription | String | Meta description of the category. |
 | category-nodes | isActive | Boolean | Specifies whether the category is active. |
-| category-nodes | order | Integer | Category rank.</br>Allowed range: 1-100, where 100 is the highest rank (located on the same level as the parent node). |
+| category-nodes | order | Integer | Category rank.<br>Allowed range: 1-100, where 100 is the highest rank (located on the same level as the parent node). |
 | category-nodes | children | Array | Specifies an array of node elements that are nested within the current category. |
 | category-nodes | parents | Array | Specifies an array of node elements that are parents for the current category. |
 
@@ -169,7 +169,7 @@ Sample Request: GET *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?*
 
 <details open>
 <summary markdown='span'>Sample Response</summary>
-    
+
 ```json
 {
   "data": {
@@ -1141,8 +1141,8 @@ Sample Request: GET *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?*
   ]
 }
 ```
-    
-</br>
+
+<br>
 </details>
 
 ### Possible Errors
@@ -1151,4 +1151,3 @@ Sample Request: GET *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?*
 | --- | --- |
 | 400 | Navigation ID is not specified. |
 | 404 | Navigation not found. |
-

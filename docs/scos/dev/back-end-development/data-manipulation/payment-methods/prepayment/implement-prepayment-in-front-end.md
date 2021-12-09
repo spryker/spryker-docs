@@ -69,7 +69,7 @@ class PrepaymentDataProvider implements DataProviderInterface
 }
 ```
 
-</br>
+<br>
 </details>
 
 <details open>
@@ -140,7 +140,7 @@ class PrepaymentSubForm extends CheckoutAbstractSubFormType implements SubFormIn
 }
 ```
 
-</br>
+<br>
 </details>
 
 <details open>
@@ -181,7 +181,7 @@ class PrepaymentSubFormPlugin extends AbstractPlugin implements SubFormPluginInt
 }
 ```
 
-</br>
+<br>
 </details>
 
 ## Payment Handler
@@ -231,7 +231,7 @@ class PrepaymentHandler
 }
 ```
 
-</br>
+<br>
 </details>
 
 <details open>
@@ -269,7 +269,7 @@ class PrepaymentHandlerPlugin extends AbstractPlugin implements StepHandlerPlugi
 }
 ```
 
-</br>
+<br>
 </details>
 
 ## Prepayment Twig Template
@@ -296,7 +296,7 @@ Add the Twig template that will be rendered when prepayment method is selected u
 </div>
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block errorBox %}

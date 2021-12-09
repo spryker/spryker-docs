@@ -10,7 +10,7 @@ redirect_from:
 ---
 
 {% info_block errorBox %}
-The following feature integration Guide expects the basic feature to be in place.</br>The current guide only adds the **Checkout API** functionality.
+The following feature integration Guide expects the basic feature to be in place.<br>The current guide only adds the **Checkout API** functionality.
 {% endinfo_block %}
 
 Follow the steps below to install Checkout feature API.
@@ -23,7 +23,7 @@ To start feature integration, overview and install the necessary features:
 | Spryker Core | master | [Glue Application](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
 | Cart | master | [Cart API](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html) |
 | Customer Account Management | master | |
-| Payments | master | [Payments API](https://documentation.spryker.com/v5/docs/en/payments-api-feature-integration-201907) |
+| Payments | master | [Payments API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-payments-feature-integration.html) |
 |Shipments| master | [Shipments API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shipment-feature-integration.html) |
 
 ## 1)  Install the required modules using Composer
@@ -446,7 +446,7 @@ Activate the following plugin(s):
 
 | Plugin | Specification | Prerequisites | Namespace |
 | --- | --- | --- | --- |
-| `SinglePaymentCheckoutRequestAttributesValidatorPlugin` | Used for checkout request data validation.</br>The plugin ensures that a request contains one payment method only. | None | `Spryker\Glue\CheckoutRestApi\Plugin` |
+| `SinglePaymentCheckoutRequestAttributesValidatorPlugin` | Used for checkout request data validation.<br>The plugin ensures that a request contains one payment method only. | None | `Spryker\Glue\CheckoutRestApi\Plugin` |
 
 
 src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php

@@ -82,7 +82,7 @@ If all Permission Groups are requested, the resource responds with a **RestCartP
 *The attributes mentioned are all attributes in the response. Type is not mentioned.
 
 **Sample Response Containing All Groups**
-    
+
 ```json
 {
     "data": [
@@ -116,7 +116,7 @@ If all Permission Groups are requested, the resource responds with a **RestCartP
 ```
 
 **Sample Response Containing Specific Group**
-    
+
 ```json
 {
     "data": {
@@ -156,18 +156,24 @@ Sample requests:
 where **4741fc84-2b9b-59da-bb8d-f4afab5be054** is the ID of the specific cart you need.
 
 {% info_block warningBox "Authentication" %}
+
 To use this endpoint, customers need to authenticate first.  For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+
 {% endinfo_block %}
 
 {% info_block warningBox "Note" %}
+
 You can also use the Accept-Language header to specify the locale.Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+
 {% endinfo_block %}
 
 ### Response
 No matter which of the 2 endpoints you use, the response will consist of a single or multiple **RestCartsResponse** objects containing the requested cart(s).
 
 {% info_block infoBox "Info" %}
-For a detailed list of **RestCartsResponse** attributes, see section *Retrieving Carts* in [Managing Carts of Registered Users](https://documentation.spryker.com/v5/docs/en/managing-carts-of-registered-users-201907#retrieving-carts).
+
+For a detailed list of **RestCartsResponse** attributes, see section *Retrieving Carts* in [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html).
+
 {% endinfo_block %}
 
 **Attributes Added by the Resource Relationships**
@@ -184,7 +190,7 @@ For a detailed list of **RestCartsResponse** attributes, see section *Retrieving
 | company-users | Information on users with whom the cart(s) is shared | isDefault | Boolean | Indicates whether the Company User is the default one for the customer. |
 
 **Sample Response - All Carts**
-    
+
 ```json
 {
     "data": [
@@ -287,7 +293,7 @@ For a detailed list of **RestCartsResponse** attributes, see section *Retrieving
 ```
 
 **Sample Response - Single Cart**
-    
+
 ```json
 {
     "data": {
@@ -382,22 +388,24 @@ Sample request: *POST http://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aef
 where **f23f5cfa-7fde-5706-aefb-ac6c6bbadeab** is the ID of the cart you want to share.
 
 {% info_block warningBox "Authentication" %}
+
 To use this endpoint, customers need to authenticate first.  For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+
 {% endinfo_block %}
 
 **Attributes:**
 
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
-| idCompanyUser | String | v | Specifies the name of the company user you want to share the cart with.</br>The user must belong to the same company as the cart owner. |
+| idCompanyUser | String | v | Specifies the name of the company user you want to share the cart with.<br>The user must belong to the same company as the cart owner. |
 | idCartPermissionGroup | Integer | v | Specifies the ID of the **Cart Permission Group** that provides the desired permissions. |
 
 {% info_block warningBox "Note" %}
-You can also use the **Accept-Language** header to specify the locale.</br>Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+You can also use the **Accept-Language** header to specify the locale.<br>Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
 {% endinfo_block %}
 
 **Sample Request Body:**
-    
+
 ```json
 {
     "data": {
@@ -424,7 +432,7 @@ If a request was successful and a cart was shared, the endpoint responds with a 
 *The attributes mentioned are all attributes in the response. Type is not mentioned.
 
 **Sample Response**
-    
+
 ```json
 {
     "data": {
@@ -462,7 +470,9 @@ Sample request: *PATCH http://glue.mysprykershop.com/shared-carts/4c677a6b-2f65-
 where **4c677a6b-2f65-5645-9bf8-0ef3532bbbccaa** is the ID of the shared cart object.
 
 {% info_block warningBox "Authentication" %}
+
 To use this endpoint, customers need to authenticate first.  For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+
 {% endinfo_block %}
 
 **Attributes:**
@@ -472,11 +482,11 @@ To use this endpoint, customers need to authenticate first.  For details, see [A
 | idCartPermissionGroup | Integer | v | Specifies the ID of the Cart Permission Group that provides the desired permissions. |
 
 {% info_block warningBox "Note" %}
-You can also use the **Accept-Language** header to specify the locale.</br>Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+You can also use the **Accept-Language** header to specify the locale.<br>Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
 {% endinfo_block %}
 
 **Sample Request Body:**
-    
+
 ```json
 {
     "data": {
@@ -499,7 +509,7 @@ If a request was successful and permissions for the shared cart were changed, th
 | idCartPermissionGroup | Integer | Specifies the ID of the Cart Permission Group that describes the permissions granted to the user. |
 
 **Sample Response**
-    
+
 ```json
 {
     "data": {
@@ -535,7 +545,9 @@ Sample request: *DELETE http://glue.mysprykershop.com/shared-carts/4c677a6b-2f65
 where **4c677a6b-2f65-5645-9bf8-0ef3532bbbccaa** is the ID of the shared cart object.
 
 {% info_block warningBox "Authentication" %}
+
 To use this endpoint, customers need to authenticate first.  For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+
 {% endinfo_block %}
 
 ### Response

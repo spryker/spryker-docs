@@ -24,7 +24,7 @@ The [Company Account](/docs/scos/user/features/{{page.version}}/company-account-
 The **Company Accounts API** provides REST access to retrieving Company User information.
 
 {% info_block warningBox "Authentication" %}
-The endpoints provided by this API cannot be accessed anonymously. To access them, you need to impersonate users as Company Accounts and pass the authentication tokens received. For details on how to authenticate and retrieve such a token, see [Logging In as Company User](https://documentation.spryker.com/v3/docs/logging-in-as-company-user-201907).
+The endpoints provided by this API cannot be accessed anonymously. To access them, you need to impersonate users as Company Accounts and pass the authentication tokens received. For details on how to authenticate and retrieve such a token, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html).
 {% endinfo_block %}
 
 In your development, the API can help you to provide information on *Company User Accounts* within the company that the authenticated user belongs to.
@@ -57,7 +57,7 @@ The endpoint responds with a **RestCompanyUserCollectionResponse** that contains
 
 <details open>
 <summary markdown='span'>Sample Response</summary>
-    
+
 ```json
 {
     "data": [
@@ -111,8 +111,8 @@ The endpoint responds with a **RestCompanyUserCollectionResponse** that contains
     }
 }
 ```
-    
-</br>
+
+<br>
 </details>
 
 ## Retrieving Available Company Users
@@ -144,12 +144,12 @@ If the currently logged in user does not have access to any Company User account
 *The attributes mentioned are all attributes in the response. Type is not mentioned.
 
 {% info_block warningBox "Note" %}
-The company user identifier contained in the id member can be used to access the Company User in the future as well as impersonate as that account. For details, see [Logging In as Company User](https://documentation.spryker.com/v3/docs/logging-in-as-company-user-201907).
+The company user identifier contained in the id member can be used to access the Company User in the future as well as impersonate as that account. For details, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html).
 {% endinfo_block %}
 
 <details open>
 <summary markdown='span'>Sample Response</summary>
-    
+
 ```json
 {
     "data": [
@@ -192,14 +192,14 @@ The company user identifier contained in the id member can be used to access the
     }
 }
 ```
-    
-</br>
+
+<br>
 </details>
 
 ## Retrieving Specific Company Users
 To retrieve information on a specific Company User, send a GET request to the following endpoint:
 
-[/company-users/{% raw %}{{{% endraw %}company_user_id{% raw %}}}{% endraw %}](https://documentation.spryker.com/glue_rest_api/rest-api-reference.htm#/company-users)
+[/company-users/{% raw %}{{{% endraw %}company_user_id{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html)
 
 Sample request: *GET http://glue.mysprykershop.com/company-users/e1019900-88c4-5582-af83-2c1ea8775ac5*
 
@@ -225,7 +225,7 @@ If the currently logged in user does not have access to the specified Company Us
 
 <details open>
 <summary markdown='span'>Sample Response</summary>
-    
+
 ```json
 {
     "data": {
@@ -241,8 +241,8 @@ If the currently logged in user does not have access to the specified Company Us
     }
 }
 ```
-    
-</br>
+
+<br>
 </details>
 
 ## Fetching Additional Information
@@ -271,7 +271,7 @@ In this case, the following additional attributes will be added to the response:
 
 <details open>
 <summary markdown='span'>Sample Response</summary>
-    
+
 ```json
 {
     "data": [
@@ -438,7 +438,7 @@ In this case, the following additional attributes will be added to the response:
 }
 ```
 
-</br>
+<br>
 </details>
 
 ### Possible Errors
@@ -446,7 +446,7 @@ In this case, the following additional attributes will be added to the response:
 | Status | Reason |
 | --- | --- |
 | 401 | The access token is invalid. |
-| 403 | The access token is missing.</br>- OR -</br>The current Company Account is not set.</br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](https://documentation.spryker.com/v3/docs/logging-in-as-company-user-201907). |
+| 403 | The access token is missing.<br>- OR -<br>The current Company Account is not set.<br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html). |
 | 404 | The specified Company User was not found or the user does not have permissions to view the account. |
 
 <!-- add to related articles:

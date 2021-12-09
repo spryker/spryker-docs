@@ -267,7 +267,7 @@ class YvesBootstrap extends SprykerYvesBootstrap
 ```
 
 {% info_block warningBox "Verification" %}
-Verify the `CommentWidgetControllerProvider`, log in as a customer and open the link: `mysprykershop.com/comment/0adafdf4-cb26-477d-850d-b26412fbd382/tag/add?returnUrl=/cart`</br>Make sure that the error flash message was shown.
+Verify the `CommentWidgetControllerProvider`, log in as a customer and open the link: `mysprykershop.com/comment/0adafdf4-cb26-477d-850d-b26412fbd382/tag/add?returnUrl=/cart`<br>Make sure that the error flash message was shown.
 {% endinfo_block %}
 
 ### 4) Set up Widgets

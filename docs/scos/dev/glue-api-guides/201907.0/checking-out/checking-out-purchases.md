@@ -73,12 +73,12 @@ To submit a request, the customer needs to have at least one cart with products 
 
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
-| customer | RestCustomerTransfer | x | Information about the customer.</br>For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html). |
-| idCart | RestAddressTransfer | v | ID of the customer's cart.</br> For details, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html). |
-| billingAddress | RestAddressTransfer | x | Customer's billing address.</br>For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html). |
-| shippingAddress | RestAddressesRequestData | x | Customer's shipping address.</br>For details, see [Managing Customers.](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html) |
-| payments | RestPayment | x | Payment options, such as the payment system, method of payment, etc.</br>For details, see [Payment Step](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html#payment-step). |
-| shipment | RestShipmentTransfer | x | Shipment details.</br>For details, see [Shipment Step](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html#shipment-step). |
+| customer | RestCustomerTransfer | x | Information about the customer.<br>For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html). |
+| idCart | RestAddressTransfer | v | ID of the customer's cart.<br> For details, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html). |
+| billingAddress | RestAddressTransfer | x | Customer's billing address.<br>For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html). |
+| shippingAddress | RestAddressesRequestData | x | Customer's shipping address.<br>For details, see [Managing Customers.](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html) |
+| payments | RestPayment | x | Payment options, such as the payment system, method of payment, etc.<br>For details, see [Payment Step](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html#payment-step). |
+| shipment | RestShipmentTransfer | x | Shipment details.<br>For details, see [Shipment Step](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html#shipment-step). |
 
 <details open>
 <summary markdown='span'>Body Sample</summary>
@@ -141,13 +141,13 @@ To submit a request, the customer needs to have at least one cart with products 
 }
 ```
     
-</br>
+<br>
 </details>
 
 In your request, you can use the addresses stored in a customer's account rather than specify them explicitly. To do so, pass the address identifier as a part of the **billingAddress** or the **shippingAddress** fields.
 
 {% info_block infoBox "Info" %}
-The address identifiers will be available in the **addresses** field of the endpoint response. For details, see subsection *Response*.</br>You can also retrieve the IDs by querying the `/customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %}/addresses` endpoint. For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html).
+The address identifiers will be available in the **addresses** field of the endpoint response. For details, see subsection *Response*.<br>You can also retrieve the IDs by querying the `/customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %}/addresses` endpoint. For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html).
 {% endinfo_block %}
 
 {% info_block warningBox "Note" %}
@@ -179,7 +179,7 @@ The following address parts are compulsory: **salutation**, **firstName**, **las
 }
 ```
     
-</br>
+<br>
 </details>
 
 **User Identification**
@@ -188,7 +188,7 @@ In order to access the endpoint, you need to identify the user whose cart you ar
 * If you are checking out a guest cart, you need to include the guest user identifier in the **X-Anonymous-Customer-Unique-Id** header. For details, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html).
 
 {% info_block warningBox "Note" %}
-You can also use the **Accept-Language** header to specify the locale.</br>Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+You can also use the **Accept-Language** header to specify the locale.<br>Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
 {% endinfo_block %}
 
 ### Response
@@ -198,9 +198,9 @@ In case of a successful update, the endpoint responds with information that can 
 
 | Attribute | Description |
 | --- | --- |
-| addresses | An array of customer addresses that can be used for billing and shipping.</br>For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html).|
-| paymentProviders | An array of payment providers that can be used for the checkout.</br>The following information is available for each payment provider:<ul><li>paymentProviderName - specifies the provider name;</li><li>paymentMethods - specifies an array of payment methods. Each method exposes the following fields:<ul><li>paymentMethodName - specifies the method name;</li><li>requiredRequestData - specifies an array of fields required to complete the payment. The actual field list depends on a specific payment provider.</li></ul></li></ul> For details, see [Payment Step](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html#payment-step).|
-| shipmentMethods | Provides information on the available Shipment Methods.</br>Each method exposes the following details:<ul><li>carrierName - specifies the carrier name;</li><li>id - specifies the method ID;</li><li>name - specifies the method name;</li><li>price - specifies the price for this method of shipment;</li><li>taxRate - specifies the tax rate;</li><li>deliveryTime - specifies the delivery time.</li></ul>For details, see [Payment Step](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html#payment-step).</br>You can use the ID provided to use a certain method of payment. |
+| addresses | An array of customer addresses that can be used for billing and shipping.<br>For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html).|
+| paymentProviders | An array of payment providers that can be used for the checkout.<br>The following information is available for each payment provider:<ul><li>paymentProviderName - specifies the provider name;</li><li>paymentMethods - specifies an array of payment methods. Each method exposes the following fields:<ul><li>paymentMethodName - specifies the method name;</li><li>requiredRequestData - specifies an array of fields required to complete the payment. The actual field list depends on a specific payment provider.</li></ul></li></ul> For details, see [Payment Step](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html#payment-step).|
+| shipmentMethods | Provides information on the available Shipment Methods.<br>Each method exposes the following details:<ul><li>carrierName - specifies the carrier name;</li><li>id - specifies the method ID;</li><li>name - specifies the method name;</li><li>price - specifies the price for this method of shipment;</li><li>taxRate - specifies the tax rate;</li><li>deliveryTime - specifies the delivery time.</li></ul>For details, see [Payment Step](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html#payment-step).<br>You can use the ID provided to use a certain method of payment. |
 
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
@@ -443,7 +443,7 @@ In case of a successful update, the endpoint responds with information that can 
 }
 ```
     
-</br>
+<br>
 </details>
 
 ### Possible Errors
@@ -479,12 +479,12 @@ By default, if the checkout is successful, the order is placed and the shopping 
 
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
-| customer | RestCustomerTransfer | v | Information about the customer.</br>For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html). |
-| idCart | RestAddressTransfer | v | ID of the customer's cart.</br>For details, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html). |
-| billingAddress | RestAddressTransfer | v | Customer's billing address.</br>For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html). |
-| shippingAddress | RestAddressesRequestData | v | Customer's shipping address.</br>For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html). |
-| payments | RestPayment | v | Payment options, such as the payment system, method of payment, etc.</br>For details, see [Payment Step](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html#payment-step). |
-| shipment | RestShipmentTransfer | v | Shipment details.</br>For details, see [Shipment Step](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html#shipment-step). |
+| customer | RestCustomerTransfer | v | Information about the customer.<br>For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html). |
+| idCart | RestAddressTransfer | v | ID of the customer's cart.<br>For details, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html). |
+| billingAddress | RestAddressTransfer | v | Customer's billing address.<br>For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html). |
+| shippingAddress | RestAddressesRequestData | v | Customer's shipping address.<br>For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html). |
+| payments | RestPayment | v | Payment options, such as the payment system, method of payment, etc.<br>For details, see [Payment Step](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html#payment-step). |
+| shipment | RestShipmentTransfer | v | Shipment details.<br>For details, see [Shipment Step](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html#shipment-step). |
 
 <details open>
 <summary markdown='span'>Body Sample</summary>
@@ -547,13 +547,13 @@ By default, if the checkout is successful, the order is placed and the shopping 
 }
 ```
     
-</br>
+<br>
 </details>
 
 In your request, you can use the addresses stored in a customer's account rather than specify them explicitly. To do so, pass the address identifier as a part of the **billingAddress** or the **shippingAddress** fields.
 
 {% info_block infoBox "Info" %}
-The address identifiers will be available in the **addresses** field  of the `/checkout-data` endpoint response. For details, see subsection *Response*.</br>You can also retrieve the IDs by querying the `/customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %}/addresses` endpoint. For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html).
+The address identifiers will be available in the **addresses** field  of the `/checkout-data` endpoint response. For details, see subsection *Response*.<br>You can also retrieve the IDs by querying the `/customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %}/addresses` endpoint. For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html).
 {% endinfo_block %}
 
 {% info_block warningBox "Note" %}
@@ -611,16 +611,16 @@ The following address parts are compulsory: **salutation**, **firstName**, **las
 }
 ```
     
-</br>
+<br>
 </details>
 
 **User Identification**
 In order to access the endpoint, you need to identify the user whose cart you are checking out:
-* If you are checking out a cart of a registered user, you need to include the user's authorization token in the request.</br>For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
-* If you are checking out a guest cart, you need to include the guest user identifier in the **X-Anonymous-Customer-Unique-Id** header.</br>For details, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html).
+* If you are checking out a cart of a registered user, you need to include the user's authorization token in the request.<br>For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+* If you are checking out a guest cart, you need to include the guest user identifier in the **X-Anonymous-Customer-Unique-Id** header.<br>For details, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html).
 
 {% info_block warningBox "Note" %}
-You can also use the **Accept-Language** header to specify the locale.</br>Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+You can also use the **Accept-Language** header to specify the locale.<br>Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
 {% endinfo_block %}
 
 ### Response
@@ -660,7 +660,7 @@ Among the attributes returned, there is **orderReference** that can be used to r
 }
 ```
     
-</br>
+<br>
 </details>
 
 You can extend the response with the **orders** resource relationship in order to obtain detailed order information.
@@ -892,7 +892,7 @@ Sample request: *POST http://glue.mysprykershop.com/checkout?include=orders*
 }
 ```
     
-</br>
+<br>
 </details>
 
 ### Possible Errors
@@ -933,11 +933,11 @@ The identifier is specified in the **orderReference** attribute of the `/checkou
 
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
-| paymentIdentifier | String | x | Payment ID.</br>The value of the payment identifier depends on the payment services provider plugin used to process the payment. For details, see section **3. Implement Payload Processor Plugin** in [Interacting with Third Parties via Glue API](/docs/scos/dev/tutorials/201907.0/advanced/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html#3--implement-payload-processor-plugin). |
+| paymentIdentifier | String | x | Payment ID.<br>The value of the payment identifier depends on the payment services provider plugin used to process the payment. For details, see section **3. Implement Payload Processor Plugin** in [Interacting with Third Parties via Glue API](/docs/scos/dev/tutorials/201907.0/advanced/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html#3--implement-payload-processor-plugin). |
 | dataPayload | Array | v | Payload received from the payment service provider. |
 
 {% info_block warningBox "Note" %}
-You can also use the **Accept-Language** header to specify the locale.</br>Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
+You can also use the **Accept-Language** header to specify the locale.<br>Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de** and **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
 {% endinfo_block %}
 
 <details open>
@@ -960,7 +960,7 @@ You can also use the **Accept-Language** header to specify the locale.</br>Sampl
 }
 ```
     
-</br>
+<br>
 </details>
 
 ### Response
@@ -1002,7 +1002,7 @@ If the request was successful, the endpoint will respond with a 201 Created stat
 }
 ```
     
-</br>
+<br>
 </details>
 
 ### Possible Errors

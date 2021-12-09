@@ -18,6 +18,7 @@ related:
 This endpoint allows managing carts by creating, retrieving, and deleting them.
 
 ## Multiple carts
+
 Unlike guest carts, carts of registered users have an unlimited lifetime. Also, if the Multiple Carts feature is [integrated into your project](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-feature-integration.html), and Glue is [enabled for multi-cart operations](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-feature-integration.html), registered users can have an unlimited number of carts.
 
 
@@ -68,7 +69,7 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
-| name | String | &check; | Sets the cart name.</br>This field can be set only if you are using the multiple carts feature. If you are operating in a single-cart environment, an attempt to set the value will result in an error with the "422 Unprocessable Entry" status code. |
+| name | String | &check; | Sets the cart name.<br>This field can be set only if you are using the multiple carts feature. If you are operating in a single-cart environment, an attempt to set the value will result in an error with the "422 Unprocessable Entry" status code. |
 | priceMode | Enum | &check; | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE—prices after tax;</li><li>NET_MODE—prices before tax.</li></ul>For details, see [Net &amp; Gross Prices](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html). |
 | currency | String | &check; | Sets the cart currency. |
 | store | String | &check; | Sets the name of the store where to create the cart. |
@@ -113,10 +114,10 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 | Attribute | Type | Description |
 | --- | --- | --- |
 | priceMode | String | Price mode that was active when the cart was created. |
-| currency | String | Currency that was selected whenthe cart was created. |
+| currency | String | Currency that was selected when the cart was created. |
 | store | String | Store for which the cart was created. |
-| name | String | Specifies a cart name.</br>The field is available in multi-cart environments only. |
-| isDefault | Boolean | Specifies whether the cart is the default one for the customer.</br>The field is available in multi-cart environments only.  |
+| name | String | Specifies a cart name.<br>The field is available in multi-cart environments only. |
+| isDefault | Boolean | Specifies whether the cart is the default one for the customer.<br>The field is available in multi-cart environments only.  |
 
 **Discount Information**
 | Attribute | Type | Description |
@@ -150,11 +151,13 @@ To retrieve all carts, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer) or [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user).  |
 
+<div>
 | Query parameter | Description | Exemplary values |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. |<ul><li>items</li><li>cart-permission-groups</li><li>shared-carts</li><li>company-users</li><li>cart-rules</li><li>promotional-items</li><li>vouchers</li><li>gift-cards</li><li>concrete-products</li><li>product-options</li><li>product-labels</li></ul> |
-{% info_block infoBox "Included resources" %}
+</div>
 
+{% info_block infoBox "Included resources" %}
 
 * To retrieve all the product options of the item in a cart, include `items`, `concrete-products`, and `product-options`.
 * To retrieve information about the company user a cart is shared with, include `shared-carts` and `company-users`.
@@ -928,7 +931,6 @@ To retrieve all carts, send the request:
     ]
 }
 ```
-
 </details>
 
 <details open>
@@ -1130,7 +1132,6 @@ To retrieve all carts, send the request:
     ]
 }
 ```
-
 </details>
 
 <details open>
@@ -1679,22 +1680,23 @@ To retrieve all carts, send the request:
     ]
 }
 ```
-
 </details>
 
 
 <a name="retrieve-a-registered-users-carts-response-attributes"></a>
 
 **General Cart Information**
+
 | Attribute | Type | Description |
 | --- | --- | --- |
 | priceMode | String | Price mode that was active when the cart was created. |
-| currency | String | Currency that was selected whenthe cart was created. |
+| currency | String | Currency that was selected when the cart was created. |
 | store | String | Store for which the cart was created. |
-| name | String | Specifies a cart name.</br>The field is available in multi-cart environments only. |
-| isDefault | Boolean | Specifies whether the cart is the default one for the customer.</br>The field is available in multi-cart environments only.  |
+| name | String | Specifies a cart name.<br>The field is available in multi-cart environments only. |
+| isDefault | Boolean | Specifies whether the cart is the default one for the customer.<br>The field is available in multi-cart environments only.  |
 
 **Discount Information**
+
 | Attribute | Type | Description |
 | --- | --- | --- |
 | displayName | String | Discount name. |
@@ -1702,6 +1704,7 @@ To retrieve all carts, send the request:
 | code | String | Discount code applied to the cart. |
 
 **Totals**
+
 | Attribute | Type | Description |
 | --- | --- | --- |
 | expenseTotal | String | Total amount of expenses (including, e.g., shipping costs). |
@@ -1754,7 +1757,7 @@ To retrieve a particular cart, send the request:
 
 | Path parameter | Description |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
+| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-registered-users-carts) to get it. |
 
 ### Request
 
@@ -1762,9 +1765,12 @@ To retrieve a particular cart, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer) or [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user).  |
 
+<div>
 | Query parameter | Description | Exemplary values |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | <ul><li>items</li><li>cart-permission-groups</li><li>shared-carts</li><li>company-users</li><li>cart-rules</li><li>promotional-items</li><li>vouchers</li><li>gift-cards</li><li>concrete-products</li><li>product-options</li><li>product-labels</li></ul> |
+</div>
+
 {% info_block infoBox "Included resources" %}
 
 * To retrieve all the product options of the item in a cart, include `items`, `concrete-products`, and `product-options`.
@@ -2151,8 +2157,6 @@ To retrieve a particular cart, send the request:
     ]
 }
 ```
-
-</summary>
 </details>
 
 <details open>
@@ -2348,6 +2352,7 @@ To retrieve a particular cart, send the request:
 }
 ```    
 </details>
+
 
 <details open>
 <summary markdown='span'>Response sample with items, respective concrete products, and their product options</summary>
@@ -2597,8 +2602,7 @@ To retrieve a particular cart, send the request:
 ```    
 </details>
 
-<details open>
-    <summary markdown='span'>Response sample with vouchers</summary>
+<details open><summary markdown='span'>Response sample with vouchers</summary>
     
 ```json
 {
@@ -2665,11 +2669,9 @@ To retrieve a particular cart, send the request:
     ]
 }
 ```
-
 </details>
 
-<details open>
-    <summary markdown='span'>Response sample with product labels</summary>
+<details open><summary markdown='span'>Response sample with product labels</summary>
     
 ```json
 {
@@ -2820,11 +2822,10 @@ To retrieve a particular cart, send the request:
     ]
 }
 ```
-
 </details>
 
 
-For the attributes of carts of registered users and included resources, see [Retrieve a registered user's carts](#retrieve-a-registered-users-carts-response-attributes).
+For the attributes of carts of registered users and included resources, see [Retrieve a registered user's carts](#retrieve-registered-users-carts).
 
 For the attributes of other included resources, see:
 * [Add an item to a registered user's cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart-response-attributes)
@@ -2845,7 +2846,7 @@ You can edit the name of the cart, change the currency and price mode. To do tha
 
 | Path parameter | Description |
 | --- | --- |
-| ***cart_uuid*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
+| ***cart_uuid*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-registered-users-carts) to get it. |
 
 
 
@@ -2883,13 +2884,14 @@ Request sample: `https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d3
 }
 ```
 
-
+<div>
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
 | name | String | &check; | Sets the cart name.This field can be set only if you are using the multiple carts feature. If you are operating in a single-cart environment, an attempt to set the value will result in an error with the `422 Unprocessable Entry` status code. Cart name should be unique and should not be longer than 30 characters.|
 | priceMode | Enum | &check | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE - prices after tax;</li><li>NET_MODE - prices before tax.</li></ul>For details, see [Net & Gross Prices](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html). |
 | currency | String | &check; | Sets the cart currency. |
 | store | String | &check; | Sets the name of the store where to create the cart. |
+</div>
 
 ### Response
 
@@ -2935,7 +2937,7 @@ To delete a cart, send the request:
 
 | Path parameter | Description |
 | --- | --- |
-| ***cart_uuid*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
+| ***cart_uuid*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-registered-users-carts) to get it. |
 
 
 

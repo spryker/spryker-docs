@@ -9,7 +9,7 @@ redirect_from:
   - /v6/docs/en/file-details-product-imagecsv
 ---
 
-This article contains content of the *product_image.csv* file to configure [Product Image](https://documentation.spryker.com/v6/docs/product-images-overview) information on your Spryker Demo Shop.
+This article contains content of the *product_image.csv* file to configure [Product Image](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-images-overview.html) information on your Spryker Demo Shop.
 
 ## Headers & mandatory fields 
 These are the header fields to be included in the .csv file:

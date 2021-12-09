@@ -30,7 +30,7 @@ Our exemplary Marketplace state machine provides the following states:
 * Delivered
 * Closed
 
-To learn more about states, see [State Machine Fundamentals](https://documentation.spryker.com/docs/state-machine-cookbook#state-machine-cookbook---part-i---state-machine-fundamentals).
+To learn more about states, see [State Machine Fundamentals](/docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-i-state-machine-fundamentals.html).
 
 {% info_block warningBox "Note" %}
 
@@ -38,8 +38,6 @@ You can set up the states according to your business requirements.
 The status of the Marketplace order is an aggregated state of the Marketplace order items.
 
 {% endinfo_block %}
-
-
 
 <details>
 
@@ -57,14 +55,12 @@ If there are no manually executable events applicable to any of the items, there
 
 ## Merchant state machine
 The Marketplace administrator can define one or several state machines for merchants:
-
 * One as the default one, which will apply automatically to merchant order items in every merchant order.
 * Another state machine for a specific merchant.
 
 Merchant state machine processes merchant order items and works in parallel with the Marketplace state machine.
 The status of the merchant order is aggregated from the merchant order item statuses. The merchant order status gets properly updated when the state of the items changes.
 Our exemplary merchant state machine provides the following states:
-
 1. New
 2. Canceled by merchant
 3. Shipped
@@ -80,4 +76,5 @@ Our exemplary merchant state machine provides the following states:
 </details>
 
 ## Next steps
+
 [Learn how the marketplace and merchant state machines interact with each other](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html)

@@ -195,7 +195,7 @@ Therefore, you can find the XML definition, for example, for the `CustomerGroup`
 If you have third-party modules using our transfer objects, you can easily add additional source directories in your projects. To do so, extend `Spryker\Zed\Transfer\TransferConfig` and return all additional *glob* patterns from `getAdditionalSourceDirectoryGlobPatterns()`.
 
 {% info_block warningBox "Glob patterns" %}
-The Transfer module uses PHP's `glob()` function to resolve paths.</br>For more information, see [PHP documentation](https://php.net/manual/en/function.glob.php).
+The Transfer module uses PHP's `glob()` function to resolve paths.<br>For more information, see [PHP documentation](https://php.net/manual/en/function.glob.php).
 {% endinfo_block %}
 
 Let’s say you have a custom extension package called `my-vendor/my-package` that uses transfer objects. Using Composer, by default, this package will be installed under `vendor/my-vendor/my-package`.
@@ -335,5 +335,5 @@ You can use the following definitions to generate the related code:
 
 * Add shared transfer schema.
 
-See the [Spryk](/docs/scos/dev/sdk/{{site.version}}/development-tools/spryk-code-generator.html) documentation for details.
+See the [Spryk](/docs/scos/dev/sdk/development-tools/spryk-code-generator.html) documentation for details.
  

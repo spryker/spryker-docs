@@ -70,11 +70,12 @@ class ProductPackagingUnitStorageConfig extends SprykerProductPackagingUnitStora
 
 Adjust the schema definition, so entity changes can trigger events.
 
+<div>
 | AFFECTED ENTITY | TRIGGERED EVENTS |
 | --- | --- |
-| spy_product_packaging_unit | Entity.spy_product_packaging_unit.create</br>Entity.spy_product_packaging_unit.update</br>Entity.spy_product_packaging_unit.delete |
-| spy_product_packaging_unit_type | Entity.spy_product_packaging_unit_type.create</br>Entity.spy_product_packaging_unit_type.update</br>Entity.spy_product_packaging_unit_type.delete |
-
+| spy_product_packaging_unit | Entity.spy_product_packaging_unit.create<br>Entity.spy_product_packaging_unit.update<br>Entity.spy_product_packaging_unit.delete |
+| spy_product_packaging_unit_type | Entity.spy_product_packaging_unit_type.create<br>Entity.spy_product_packaging_unit_type.update<br>Entity.spy_product_packaging_unit_type.delete |
+</div>
 
 **src/Pyz/Zed/ProductPackagingUnit/Persistence/Propel/Schema/spy_product_packaging_unit.schema.xml**
 
@@ -142,6 +143,9 @@ Make sure that the following changes have been applied by checking your database
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes in transfer objects have been applied:
+
+| TRANSFER | TYPE | EVENT | PATH |
+| --- | --- | --- | --- |
 | ProductPackagingUnitTransfer | class | created | src/Generated/Shared/Transfer/ProductPackagingUnitTransfer |
 | ProductPackagingUnitAmountTransfer | class | created | src/Generated/Shared/Transfer/ProductPackagingUnitAmountTransfer |
 | ProductPackagingUnitStorageTransfer | class | created | src/Generated/Shared/Transfer/ProductPackagingUnitStorageTransfer |
@@ -160,12 +164,14 @@ Make sure that the following changes in transfer objects have been applied:
 
 Make sure that the changes have been implemented successfully. To do it, trigger the following methods and make sure that the above events have been triggered:
 
+<div>
 | PATH | METHOD NAME |
 | --- | --- |
-| src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnit.php | prepareSaveEventName()</br>addSaveEventToMemory()</br>addDeleteEventToMemory() |
+| src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnit.php | prepareSaveEventName()<br>addSaveEventToMemory()<br>addDeleteEventToMemory() |
 | src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnitType.php | prepareSaveEventName()<br>addSaveEventToMemory()<br>addDeleteEventToMemory() |
 | src/Orm/Zed/ProductPackagingUnitStorage/Persistence/Base/SpyProductPackagingUnitStorage.php | prepareSaveEventName()<br>addSaveEventToMemory()<br>addDeleteEventToMemory() |
 | src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnitType.php | sendToQueue() |
+</div>
 
 {% endinfo_block %}
 
@@ -461,6 +467,7 @@ concrete_sku,lead_product_sku,packaging_unit_type_name,default_amount,is_amount_
 215_124,215_123,packaging_unit_type.ring_500.name,1,0,,,
 ```
 
+<div>
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | concrete_sku | mandatory | string | 218_123 |Concrete product SKU of packaging unit. |
@@ -471,12 +478,15 @@ concrete_sku,lead_product_sku,packaging_unit_type_name,default_amount,is_amount_
 | amount_min | optional | positive integer | 3 | <ul><li>Restricts a customer to buy at least this amount of lead products.</li><li>Effective only if `is_amount_variable = 1`.</li><li>Default value is 1 when not provided.</li></ul> |
 | amount_max | optional | positive integer | 5 | <ul><li>Restricts a customer not to buy more than this value.</li><li>Effective only if `is_amount_variable = 1`.</li><li>Default value remains empty (unlimited) when not provided.</li></ul> |
 | amount_interval | optional | positive integer | 2 | <ul><li>Restricts customers to buy the amount that fits into the interval beginning with `amount_min`.</li><li>Effective only if `is_amount_variable = 1`.</li><li>Default value is `amount_min` when not provided.</li></ul> Min = 3; Max = 10; Interval = 2 <br> Choosable: 3, 5, 7, 9|
+</div>
 
 Register the following plugin to enable data import:
 
+<div>
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | ProductPackagingUnitDataImportPlugin | Imports packaging unit type data into the database. | <ul><li>Requires related product concretes and product abstract to be present in the database already.</li><li>Requires related packaging unit types to be present in the database already.</li></ul> | Spryker\Zed\ProductPackagingUnitDataImport\Communication\Plugin\DataImport |
+</div>
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -870,11 +880,22 @@ Add an item with packaging units to cart.
 
 {% info_block warningBox "Verification" %}
 
-Go through the checkout workflow and make an order.<br><ul><li>Check if the stock is modified respectfully according to your lead product's and packaging unit's configuration.</li><li>Check if the following fields in the `spy_sales_order_item` table are saved:<br><ul><li>`amount`</li><li>`amount_sku`</li><li>`amount_measurement_unit_name`</li><li>`amount_measurement_unit_code`</li><li>`amount_measurement_unit_precision`</li><li>`amount_measurement_unit_conversion`</li><li>`amount_base_measurement_unit_name`</li></ul></li></ul>
+Go through the checkout workflow and make an order>.
+* Check if the stock is modified respectfully according to your lead product's and packaging unit's configuration.
+* Check if the following fields in the `spy_sales_order_item` table are saved:
+  * `amount`
+  * `amount_sku`
+  * `amount_measurement_unit_name`
+  * `amount_measurement_unit_code`
+  * `amount_measurement_unit_precision`
+  * `amount_measurement_unit_conversion`
+  * `amount_base_measurement_unit_name`
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Go to the Zed UI Sales overview and check the order.<br><ul><li>Verify if the correct sales unit is displayed.</li><li>Verify if the correct amount is displayed per sales order item.</li></ul>
+Go to the Zed UI Sales overview and check the order.
+- Verify if the correct sales unit is displayed.
+- Verify if the correct amount is displayed per sales order item.
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
@@ -1004,10 +1025,12 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-{% info_block infoBox "Info" %}
+`ProductPackagingUnitWidget` uses Javascript for some functionality:
 
-`ProductPackagingUnitWidget` uses Javascript for some functionality:<br><table><th>Functionality</th><th>Path</th><tr><td><ul><li>Controls base unit =&gt; sales unit calculations</li><li>Applies product quantity and amount restrictions on sales unit level</li><li>Offers recommendation when invalid quantity or amount is selected</li><li>Maintains stock-based quantity, amount and sales unit information for posting</li></ul></td><td>`vendor/spryker-shop/product-packaging-unit-widget/src/SprykerShop/Yves/ProductPackagingUnitWidget/Theme/default/components/molecules/packaging-unit-quantity-selector/packaging-unit-quantity-selector.ts`</td></tr></table>
-{% endinfo_block %}
+|Functionality|Path|
+|--- |--- |
+|Controls base unit => sales unit calculationsApplies product quantity and amount restrictions on sales unit levelOffers recommendation when invalid quantity or amount is selectedMaintains stock-based quantity, amount and sales unit information for posting|`vendor/spryker-shop/product-packaging-unit-widget/src/SprykerShop/Yves/ProductPackagingUnitWidget/Theme/default/components/molecules/packaging-unit-quantity-selector/packaging-unit-quantity-selector.ts`|
+
 
 Run the following command to enable Javascript and CSS changes:
 
@@ -1016,6 +1039,9 @@ console frontend:yves:build
 ```
 {% info_block warningBox "Verification" %}
 
-<ul><li>Check if the `amount` field appears on the Product Detail page for items with packaging units.</li><li>Check if the `amount` field appears correctly with measurement unit information on the Cart page.</li><li>Check if the `amount` field appears correctly with measurement unit information on the Checkout Summary page.</li><li>Check if the `amount` field appears correctly with measurement unit information on the previous Orders page.</li></ul>
+- Check if the `amount` field appears on the Product Detail page for items with packaging units.
+- Check if the `amount` field appears correctly with measurement unit information on the Cart page.
+- Check if the `amount` field appears correctly with measurement unit information on the Checkout Summary page.
+- Check if the `amount` field appears correctly with measurement unit information on the previous Orders page.
 
 {% endinfo_block %}

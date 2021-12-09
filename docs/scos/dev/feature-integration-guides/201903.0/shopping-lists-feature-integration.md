@@ -51,10 +51,10 @@ Adjust the schema definition so that entity changes can trigger events.
 
 |Affected Entity|Triggered Events|
 |---|---|
-|`spy_shopping_list`|`Entity.spy_shopping_list.create`</br>`Entity.spy_shopping_list.update`</br>`Entity.spy_shopping_list.delete`|
-|`spy_shopping_list_item`|`Entity.spy_shopping_list_item.create`</br>`Entity.spy_shopping_list_item.update`</br>`Entity.spy_shopping_list_item.delete`|
-|`spy_shopping_list_company_user`|`Entity.spy_shopping_list_company_user.create`</br>`Entity.spy_shopping_list_company_user.update`</br>`Entity.spy_shopping_list_company_user.delete`|
-|`spy_shopping_list_company_business_unit`|`Entity.spy_shopping_list_company_business_unit.create`</br>`Entity.spy_shopping_list_company_business_unit.update`</br>`Entity.spy_shopping_list_company_business_unit.delete`|
+|`spy_shopping_list`|`Entity.spy_shopping_list.create`<br>`Entity.spy_shopping_list.update`<br>`Entity.spy_shopping_list.delete`|
+|`spy_shopping_list_item`|`Entity.spy_shopping_list_item.create`<br>`Entity.spy_shopping_list_item.update`<br>`Entity.spy_shopping_list_item.delete`|
+|`spy_shopping_list_company_user`|`Entity.spy_shopping_list_company_user.create`<br>`Entity.spy_shopping_list_company_user.update`<br>`Entity.spy_shopping_list_company_user.delete`|
+|`spy_shopping_list_company_business_unit`|`Entity.spy_shopping_list_company_business_unit.create`<br>`Entity.spy_shopping_list_company_business_unit.update`<br>`Entity.spy_shopping_list_company_business_unit.delete`|
 
 <details open>
 <summary markdown='span'>src/Pyz/Zed/ShoppingList/Persistence/Propel/Schema/spy_shopping_list.schema.xml</summary>
@@ -93,7 +93,7 @@ Adjust the schema definition so that entity changes can trigger events.
  
 </database>
 ```
-</br>
+<br>
 </details>
 
 Run the following commands to apply database changes and generate entity and transfer changes:
@@ -167,10 +167,10 @@ Make sure that the changes were implemented successfully. For this purpose, trig
 
 |Path|Method name|
 |--- |--- |
-|`src/Orm/Zed/ShoppingList/Persistence/Base/SpyShoppingList.php`|`prepareSaveEventName()`</br>`addSaveEventToMemory()`</br>`addDeleteEventToMemory()`|
-|`src/Orm/Zed/ShoppingList/Persistence/Base/SpyShoppingListItem.php`|`prepareSaveEventName()`</br>`addSaveEventToMemory()`</br>`addDeleteEventToMemory()`|
-|`src/Orm/Zed/ShoppingList/Persistence/Base/SpyShoppingListCompanyUser.php`|`prepareSaveEventName()`</br>`addSaveEventToMemory()`</br>`addDeleteEventToMemory()`|
-|`src/Orm/Zed/ShoppingList/Persistence/Base/SpyShoppingList.php`|`prepareSaveEventName()`</br>`addSaveEventToMemory()`</br>`addDeleteEventToMemory()`|
+|`src/Orm/Zed/ShoppingList/Persistence/Base/SpyShoppingList.php`|`prepareSaveEventName()`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`|
+|`src/Orm/Zed/ShoppingList/Persistence/Base/SpyShoppingListItem.php`|`prepareSaveEventName()`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`|
+|`src/Orm/Zed/ShoppingList/Persistence/Base/SpyShoppingListCompanyUser.php`|`prepareSaveEventName()`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`|
+|`src/Orm/Zed/ShoppingList/Persistence/Base/SpyShoppingList.php`|`prepareSaveEventName()`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`|
 
 {% endinfo_block %}
 
@@ -197,7 +197,7 @@ customer.account.shopping_list.quick_add,"Schnell hinzufügen",de_DE
 customer.account.shopping_list.quick_add.submit,Add,en_US
 customer.account.shopping_list.quick_add.submit,Hinzufügen,de_DE
 ```
-</br>
+<br>
 </details>
 
 Run the following console command to import data:
@@ -242,7 +242,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 #### Set up Re-Sync Features
@@ -275,7 +275,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 ### 5) Import Data
@@ -310,7 +310,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 Run the following console command to execute registered installer plugins and install infrastructural data:
@@ -372,7 +372,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 Run the following console command to import data:
@@ -429,7 +429,7 @@ Workstations,127_20723326,1
 Workstations,117_30585828,1
 Workstations,129_30706500,1
 ```
-</br>
+<br>
 </details>
 
 |Column|REQUIRED?|Data Type|Data Example|Data Explanation|
@@ -465,7 +465,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 Run the following console command to import data:
@@ -500,7 +500,7 @@ Workstations,Spryker--2,READ_ONLY
 Workstations,Spryker--3,READ_ONLY
 Workstations,Spryker--6,READ_ONLY
 ```
-</br>
+<br>
 </details>
 
 |Column|REQUIRED?|Data Type|Data Example|Data Explanation|
@@ -534,7 +534,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 Run the following console command to import data:
@@ -564,7 +564,7 @@ Laptops,spryker_systems_HR,FULL_ACCESS
 Cameras,spryker_systems_Zurich,FULL_ACCESS
 Workstations,spryker_systems_Berlin,READ_ONLY
 ```
-</br>
+<br>
 </details>
 
 |Column|REQUIRED?|Data Type|Data Example|Data Explanation|
@@ -600,7 +600,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 Run the following console command to import data:
@@ -624,7 +624,7 @@ Enable the following behaviors by registering the plugins:
 |`ReadShoppingListPermissionPlugin`|Provides the ability to read a certain set of shopping lists on the Zed side using `PermissionAwareTrait`.|None|`Spryker\Zed\ShoppingList\Communication\Plugin`|
 |`WriteShoppingListPermissionPlugin`|Provides the ability to write to a certain set of shopping lists on the Zed side using `PermissionAwareTrait`.|None|`Spryker\Zed\ShoppingList\Communication\Plugin`|
 |`ShoppingListPermissionStoragePlugin`|Retrieves a set of shopping lists permissions related to a certain company user.|None|`Spryker\Zed\ShoppingList\Communication\Plugin`|
-|`ShoppingListPermissionCustomerExpanderPlugin`|Expands `CustomerTransfer::PERMISSIONS` data with a set of permissions that allow the customer to read or write to shopping lists.|Expects `CustomerTransfer` to contain `CompanyUserTransfer` with `idCompanyUser`.</br>(hint: `CompanyUser.CustomerTransferCompanyUserExpanderPlugin`)|`Spryker\Zed\ShoppingList\Communication\Plugin`|
+|`ShoppingListPermissionCustomerExpanderPlugin`|Expands `CustomerTransfer::PERMISSIONS` data with a set of permissions that allow the customer to read or write to shopping lists.|Expects `CustomerTransfer` to contain `CompanyUserTransfer` with `idCompanyUser`.<br>(hint: `CompanyUser.CustomerTransferCompanyUserExpanderPlugin`)|`Spryker\Zed\ShoppingList\Communication\Plugin`|
 |`ShoppingListItemNoteToItemCartNoteMapperPlugin`|Maps shopping list item notes to cart item notes when creating a cart out of a shopping list.|None|`Spryker\Client\ShoppingListNote\Plugin`|
 |`ItemCartNoteToShoppingListItemNoteMapperPlugin`|Maps cart item notes to shopping list notes when creating shopping list out of a cart.|None|`Spryker\Zed\ShoppingListNote\Communication\Plugin`|
 |`ShoppingListItemNoteBeforeDeletePlugin`|Deletes a shopping list item note before deleting a shopping list item.|None|`Spryker\Zed\ShoppingListNote\Communication\Plugin`|
@@ -657,7 +657,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 <details open>
@@ -697,7 +697,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 <details>
@@ -724,7 +724,7 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 <details open>
@@ -751,7 +751,7 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 
@@ -812,7 +812,7 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -1067,7 +1067,7 @@ product_quick_add_widget.form.error.redirect_route_empty,"Redirect Router kann n
 product_quick_add_widget.form.error.sku.empty,"SKU should not be empty",en_US
 product_quick_add_widget.form.error.sku.empty,"SKU kann nicht leer sein",de_DE
 ```
-</br>
+<br>
 </details>
 
 Run the following console command to import data:
@@ -1124,7 +1124,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 **`ShoppingListWidget`** uses Javascript for some functionality:

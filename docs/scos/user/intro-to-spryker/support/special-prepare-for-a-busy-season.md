@@ -23,7 +23,7 @@ We put together this article to help you prepare for a traditionally very busy s
 
 ## DevOps and Hosting Tips
 
-* Follow [Performance guidelines](/docs/scos/dev/guidelines/performance-guidelines.html)
+* Follow [General performance guidelines](/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html)
 * Prepare stand-by/hot-spare compute nodes. Buy it in advance.
 * Prepare sizing of Redis/ElasticSeach/Database services.
 * Make sure you have clear procedures of adding a new compute node to your cluster and remove one from it. It would be good to have it fully automated allowing you to easily change your cluster configuration
@@ -36,7 +36,7 @@ We put together this article to help you prepare for a traditionally very busy s
 
 ## Tips for Developers
 
-* Follow https://documentation.spryker.com/guidelines/performance-guidelines.htm
+* Follow [General performance guidelines](/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html)
 * Disable features, that might have no big value during Black Friday but add additional overhead:
 * Persistent Cart
 * Evaluate project features for the same reason

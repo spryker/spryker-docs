@@ -65,15 +65,15 @@ The Demo shop has been built using and demonstrates the use of the endpoints and
 | Store API | [Retrieving store configuration](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-store-configuration.html) |
 
 ## Running the Example Application
-The app source code can be found in the following GitHub repository: [https://github.com/spryker-shop/b2c-api-react-example](https://github.com/spryker-shop/b2c-api-react-example). You can install it inside [Spryker Development Virtual Machine](/docs/scos/dev/sdk/{{site.version}}/development-virtual-machine-docker-containers-and-console.html) or on a dedicated web server.
+The app source code can be found in the following GitHub repository: [https://github.com/spryker-shop/b2c-api-react-example](https://github.com/spryker-shop/b2c-api-react-example). You can install it inside [Spryker Development Virtual Machine](/docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html) or on a dedicated web server.
 
 For detailed installation steps, see [B2C API React Example Installation](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/b2c-api-react-example/b2c-api-react-example.html).
 
 ## Peeking Requests
 After installing and running the example app, you can try its functionality. Depending on how you installed it, the shop will be available at:
 
-* [`http://glue.de.b2c-demo-shop.local/react/`](http://glue.de.b2c-demo-shop.local/react/) - when installed it in the VM;
-* [http://react.local](http://react.local) - when installed on a separate web server.
+* `http://glue.de.b2c-demo-shop.local/react/` - when installed it in the VM;
+* `http://react.local` - when installed on a separate web server.
 
 To get a list of Glue API requests that were used to build a page:
 

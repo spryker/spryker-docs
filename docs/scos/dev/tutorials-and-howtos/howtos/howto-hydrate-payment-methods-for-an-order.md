@@ -1,5 +1,6 @@
 ---
 title: HowTo - Hydrate Payment Methods for an Order
+description: This doc describes how to use PaymentDependencyProvider::PAYMENT_HYDRATION_PLUGINS and how to add other payment methods into the order.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-hydrate-payment-methods-for-order
@@ -17,17 +18,23 @@ redirect_from:
   - /v4/docs/en/ht-hydrate-payment-methods-for-order
 ---
 
-## Multiple Payments
+{% info_block warningBox "Warning" %}
+
+`PaymentOrderHydratePlugin`  and `PaymentDependencyProvider::PAYMENT_HYDRATION_PLUGINS` are deprecated, the new plugin is `\Spryker\Zed\SalesPayment\Communication\Plugin\Sales\SalesPaymentOrderExpanderPlugin`, which automatically adds all payments from `spy_sales_payment` into `OrderTransfer`.
+
+{% endinfo_block %}
+
+## Multiple payments
+
 Spryker Commerce OS enables to have multiple payments per checkout. Payments are stored in `QuoteTransfer::payments` and persisted when `CheckoutClient::placeOrder` is called in last checkout step.
 
 Each payment method must provide payment amount it shares from order grand total. This amount is stored in `PaymentTransfer::amount` field. When order is placed in last step all payments are persisted to `spy_sales_payment` table.
 
-## Payment Hydration for Order
-The [Sales](/docs/scos/dev/feature-walkthroughs/{{site.version}}/order-management-feature-walkthrough/sales-module-reference-information.html) module provides plugins to hydrate OrderTransfer which is called when `SalesFacade::getOrderByIdSalesOrder` invoked.
+## Payment hydration for order
 
-One of those plugins are `\Spryker\Zed\Payment\Communication\Plugin\Sales\PaymentOrderHydratePlugin` which must be added to `\Pyz\Zed\Sales\SalesDependencyProvider::getOrderHydrationPlugins` plugin stack.
+The [Sales](/docs/scos/dev/feature-walkthroughs/{{site.version}}/order-management-feature-walkthrough/sales-module-reference-information.html) module provides plugins to hydrate `OrderTransfer`, which is called when `SalesFacade::getOrderByIdSalesOrder` invoked.
 
-This plugin invokes the payment hydration plugin stack which must be injected to  ` \Spryker\Zed\Payment\PaymentDependencyProvider::PAYMENT_HYDRATION_PLUGINS`, for example:
+This plugin invokes the payment hydration plugin stack which must be injected to  `\Spryker\Zed\Payment\PaymentDependencyProvider::PAYMENT_HYDRATION_PLUGINS`, for example:
 
 ```php
 <?php
@@ -63,9 +70,8 @@ class PaymentDependencyInjector extends AbstractDependencyInjector
 
 The plugin will receive `OrderTransfer` and `PaymentTransfer` which is the payment you need to hydrate with additional data.
 
-Plugins have to populate the `PaymentTransfer` object and return it back. After this step you should be able to get payment information when calling `SalesFacade::getOrderByIdSalesOrder`. We also included simple Zed UI twig block for payments so it can display a little more information about payment methods used on the Order Detail page.
+Plugins have to populate the `PaymentTransfer` object and return it back. After this step you should be able to get payment information when calling `SalesFacade::getOrderByIdSalesOrder`. We also included simple Zed UI twig block for payments, so it can display more information about payment methods used on the order details page.
 
 To enable it:
-
-* Go to `\Pyz\Zed\Sales\SalesConfig::getSalesDetailExternalBlocksUrls`
+* Go to `\Pyz\Zed\Sales\SalesConfig::getSalesDetailExternalBlocksUrls`.
 * Add` ‘payments’ => ‘/payment/sales/list’`, to `$projectExternalBlocks` array.

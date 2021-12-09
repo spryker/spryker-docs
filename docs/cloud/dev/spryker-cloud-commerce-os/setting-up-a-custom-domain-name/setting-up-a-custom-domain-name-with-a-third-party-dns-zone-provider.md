@@ -68,7 +68,7 @@ groups:
 
 {% endinfo_block %}
 
-See [Deploy File Reference - 1.0](/docs/scos/dev/the-docker-sdk/202108.0/deploy-file-reference-1.0.html) to learn more about deploy file configuration.
+See [Deploy File Reference - 1.0](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file-reference-1.0.html) to learn more about deploy file configuration.
 
 4. Depending on the environment you are setting up the domain for:
 

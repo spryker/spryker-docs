@@ -78,7 +78,7 @@ This section describes the new functionalities released for the Docker SDK.
 The Docker SDK supports two new mailing-related parameters: `name` and `email address`. When sending emails like customer registration, the values of the parameters are used in the `From` field. You can define them in the `regions:services:mail:` section of the desired Deploy file.
 
 #### Documentation
-[Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/202108.0/deploy-file-reference-1.0.html#regions)
+[Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file-reference-1.0.html#regions)
 
 ### Sync solution: Mutagen
 
@@ -92,14 +92,14 @@ The Docker SDK supports [Mutagen](https://mutagen.io/) as the new default sync s
 The Docker SDK supports defining if Xdebug is to be built in Docker images. By default, it is enabled for the development environment and disabled for the production environment. You can define it in the `docker:debug:enabled:` section of the desired Deploy file.
 
 #### Documentation
-[Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/202108.0/deploy-file-reference-1.0.html#docker-debug)
+[Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file-reference-1.0.html#docker-debug)
 
 ### Configurable cors-allow-origin
 
 The Docker SDK supports defining [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) for the Glue API application. You can define it in the `groups: applications: endpoints: cors-allow-origin:` section of the desired Deploy file.
 
 #### Documentation
-[Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/202108.0/deploy-file-reference-1.0.html#groups-applications-endpoints)
+[Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file-reference-1.0.html#groups-applications-endpoints)
 
 ### Accessing private repositories via SSH agent
 
@@ -123,7 +123,7 @@ Images are scanned in the background when they are pushed to AWS ECR, so it does
 The Docker SDK supports configuring `max-request-body-size` per application. It is limited in the code for security reasons, but you can increase or remove the maximum value for selected applications. You can configure `max-request-body-size` in the `groups: applications: application: http: max-request-body-size:` section of the desired Deploy file.
 
 #### Documentation
-[Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/202108.0/deploy-file-reference-1.0.html#groups-applications)
+[Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file-reference-1.0.html#groups-applications)
 
 ### CloudTrail retention time changes
 Cloud Trail logs are now saved for at least 12 months for governance, compliance, operational auditing, and risk auditing of accounts. You can adjust the interval per your requirements.

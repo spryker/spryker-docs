@@ -14,7 +14,7 @@ related:
   - title: Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
 redirect_from:  
-  - /docs/scos/dev/the-docker-sdk/202108.0/deploy-file-reference-1.0.html
+  - /docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file-reference-1.0.html
 ---
 
 This reference page describes version 1 of the Deploy file format. This is the newest version.

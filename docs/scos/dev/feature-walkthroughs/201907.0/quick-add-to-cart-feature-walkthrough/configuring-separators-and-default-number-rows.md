@@ -10,7 +10,7 @@ redirect_from:
   - /v3/docs/ht-configure-separators-default-number-row
 ---
 
-By default, spaces, semicolons, and comas are used as separators in the **Paste your order** form, and there are 8 rows in the [Quick Add to Cart](/docs/scos/user/features/202108.0/configurable-product-feature-overview.html#configurable-product) form. You can redefine the separators for bulk products entry as well as change the number of rows displayed in `src/Pyz/SprykerShop/Yves/QuickOrderPage/QuickOrderPageConfig.php` respectively:
+By default, spaces, semicolons, and comas are used as separators in the **Paste your order** form, and there are 8 rows in the [Quick Add to Cart](/docs/scos/user/features/{{page.version}}/configurable-product-feature-overview.html#configurable-product) form. You can redefine the separators for bulk products entry as well as change the number of rows displayed in `src/Pyz/SprykerShop/Yves/QuickOrderPage/QuickOrderPageConfig.php` respectively:
 
 **src/Pyz/SprykerShop/Yves/QuickOrderPage/QuickOrderPageConfig.php**
 

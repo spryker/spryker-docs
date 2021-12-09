@@ -1,66 +1,52 @@
 ---
-title: Punchout Catalog feature integration
+title: Punchout Catalog Feature Integration
 description: Integrate Punchout Catalog into the Spryker Commerce OS.
-last_updated: Jun 16, 2021
+last_updated: Nov 22, 2019
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/punchout-catalog-feature-integration
-originalArticleId: cde4c7a2-b937-49e0-843c-734a4815dbbd
+originalLink: https://documentation.spryker.com/v3/docs/punchout-catalog-feature-integration
+originalArticleId: b8d0d2d9-c8cd-4e4f-83af-de3d880f5b0d
 redirect_from:
-  - /2021080/docs/punchout-catalog-feature-integration
-  - /2021080/docs/en/punchout-catalog-feature-integration
-  - /docs/punchout-catalog-feature-integration
-  - /docs/en/punchout-catalog-feature-integration
-  - /docs/scos/user/technology-partners/202108.0/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html
+  - /v3/docs/punchout-catalog-feature-integration
+  - /v3/docs/en/punchout-catalog-feature-integration
+  - /docs/scos/user/technology-partners/201907.0/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html
 ---
 
 ## Install Feature Core
-
 ### Prerequisites
-
 To start feature integration, overview, and install the necessary features:
 
-| NAME | VERSION |
+| Name | Version |
 | --- | --- |
-| Spryker Core	 | 202009.0 |
-| Company Account	 | 202009.0 |
-| Cart | 202009.0 |
-| Product | 202009.0 |
-| Vault | 202009.0 |
+| Spryker Core	 | 201907.0 |
+| Company Account	 | 201907.0 |
+| Cart | 201907.0 |
+| Product | 201907.0 |
+| Vault | 201907.0 |
 
 ### 1) Install the Required Modules Using Composer
-
 Run the following command(s) to install the required modules:
 ```bash
 composer require punchout-catalogs/punchout-catalog-spryker: "^2.0.0" --update-with-dependencies
 ```
-{% info_block warningBox "Verification" %}
-
-Make sure that the following modules were installed:
-
-| MODULE | EXPECTED DIRECTORY |
-|---|---|
-| `PunchoutCatalogsSpryker` | `vendor/punchout-catalogs/punchout-catalog-spryker` |
-
+{% info_block infoBox "Verification" %}
+Make sure that the following modules were installed:<table><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`PunchoutCatalogsSpryker`</td><td>`vendor/punchout-catalogs/punchout-catalog-spryker`</td></tr></tbody></table>
 {% endinfo_block %}
 
 ### 2) Set up Configuration
-
 {% info_block errorBox "Attention" %}
-
-The following configuration creates a Zed access-point (for ERPs without authentication). Make sure that your Zed is only accessible through a secured channel and only for the trusted clients (ERPs).
-
-{% endinfo_block %}
+The following configuration creates a Zed access-point (for ERPs
+{% endinfo_block %} without authentication. Make sure that your Zed is only accessible through a secured channel and only for the trusted clients (ERPs).)
 
 Add the following configuration to your project:
 
-| CONFIGURATION | SPECIFICATION | NAMESPACE |
+| Configuration | Specification | Namespace |
 | --- | --- | --- |
 | Update config `KernelConstants::PROJECT_NAMESPACES` and `KernelConstants::CORE_NAMESPACES` | Enables autoloading for Punchout module directories. | None |
 | Update config `AclConstants::ACL_DEFAULT_RULES` | Allow access to `PunchoutCatalog` routes for ALL users. | None |
 | `AuthConfig::getIgnorable()` | Allow access to PunchoutCatalog routes without authentication. | Pyz\Zed\Auth |
 | `PunchoutCatalogConfig::getBaseUrlYves()` | Defines urls for Punchout API endpoints. | Pyz\Zed\PunchoutCatalog |
-
-**config/Shared/config_default.php**
+<details open>
+<summary markdown='span'>config/Shared/config_default.php</summary>
 
 ```php
 <?php
@@ -82,14 +68,14 @@ $config[AclConstants::ACL_DEFAULT_RULES] = [
     ],
 ];
 ```
-
-{% info_block warningBox "Verification" %}
-
+<br>
+</details>
+{% info_block infoBox "Verification" %}
 Make sure that you can access `http://zed.mysprykershop/punchout-catalog/request` URL when logged in as any user, e.g. admin.<br>Make sure that you don't receive class not found exception after  "Setup Behaviour" section plugins registration.
-
 {% endinfo_block %}
 
-**src/Pyz/Zed/Auth/AuthConfig.php**
+<details open>
+<summary markdown='span'>src/Pyz/Zed/Auth/AuthConfig.php</summary>
 
 ```php
 <?php
@@ -111,14 +97,15 @@ class AuthConfig extends SprykerAuthConfig
     }
 }
 ```
+<br>
+</details>
 
-{% info_block warningBox "Verification" %}
-
+{% info_block infoBox "Verification" %}
 Make sure that you can access `http://zed.mysprykershop/punchout-catalog/request` without authentication.
-
 {% endinfo_block %}
 
-**config/Shared/config_default.php**
+<details open>
+<summary markdown='span'>config/Shared/config_default.php</summary>
 
 ```php
 <?php
@@ -146,84 +133,32 @@ class PunchoutCatalogConfig extends SprykerPunchoutCatalogConfig
     }
 }
 ```
-
-{% info_block warningBox "Verification" %}
-
+<br>
+</details>
+{% info_block infoBox "Verification" %}
 Make sure that you do not receive an `MissingYvesUrlConfigurationException` exception when trying to click on the Transfer Cart button on a cart page (this button will be available when the "Feature Frontend" is fully installed).
-
 {% endinfo_block %}
 
 ### 3) Set up Database Schema and Transfer Objects
-
 Run the following commands to apply database changes and generate entity and transfer changes:
 
-```bash
+```
 console transfer:generate
 console propel:install
 console transfer:generate
 ```
-{% info_block warningBox "Verification" %}
-
-Make sure that the following changes applied by checking your database:
-
-| DATABASE ENTITY | TYPE | EVENT |
-|---|---|---|
-| `pgw_punchout_catalog_connection` | table | created |
-| `pgw_punchout_catalog_connection_cart` | table | created |
-| `pgw_punchout_catalog_connection_setup` | table | created |
-| `pgw_punchout_catalog_transaction` | table | created |
-
-{% endinfo_block %}
-
 {% info_block infoBox "Verification" %}
-
-Make sure that the following changes in transfer objects:
-
-| TRANSFER | TYPE | EVENT | PATH |
-|---|---|---|---|
-| `PunchoutCatalogSetupRequest` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogSetupRequest` |
-| `PunchoutCatalogSetupResponse` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogSetupResponse` |
-| `PunchoutCatalogProtocolData` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogProtocolData` |
-| `PunchoutCatalogProtocolDataCart` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogProtocolDataCart` |
-| `PunchoutCatalogProtocolDataOciCredentials` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogProtocolDataOciCredentials` |
-| `PunchoutCatalogProtocolDataCxmlCredentials` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogProtocolDataCxmlCredentials` |
-| `PunchoutCatalogConnectionCriteria` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogConnectionCriteria` |
-| `PunchoutCatalogConnectionCredentialSearch` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogConnectionCredentialSearch` |
-| `PunchoutCatalogConnectionList` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogConnectionList` |
-| `PunchoutCatalogCxmlCredential` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogCxmlCredential` |
-| `PunchoutCatalogOciCredential` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogOciCredential` |
-| `PunchoutCatalogConnection` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogConnection` |
-| `PunchoutCatalogConnectionCart` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogConnectionCart` |
-| `PunchoutCatalogConnectionSetup` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogConnectionSetup` |
-| `PunchoutCatalogCancelRequest` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogCancelRequest` |
-| `PunchoutCatalogCartResponse` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogCartResponse` |
-| `PunchoutCatalogCartResponseField` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogCartResponseField` |
-| `PunchoutCatalogDocumentCart` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogDocumentCart` |
-| `PunchoutCatalogDocumentCartItem` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogDocumentCartItem` |
-| `PunchoutCatalogDocumentCartCustomer` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogDocumentCartCustomer` |
-| `PunchoutCatalogDocumentCustomAttribute` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogDocumentCustomAttribute` |
-| `PunchoutCatalogMapping` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogMapping` |
-| `PunchoutCatalogMappingObject` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogMappingObject` |
-| `PunchoutCatalogMappingObjectField` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogMappingObjectField` |
-| `PunchoutCatalogMappingTransform` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogMappingTransform` |
-| `PunchoutCatalogMappingTransformParams` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogMappingTransformParams` |
-| `PunchoutCatalogCommonContext` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogCommonContext` |
-| `PunchoutCatalogCartRequestContext` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogCartRequestContext` |
-| `PunchoutCatalogCartResponseContext` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogCartResponseContext` |
-| `PunchoutCatalogDocumentCustomer` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogDocumentCustomer` |
-| `PunchoutCatalogDocumentCartItem` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogDocumentCartItem` |
-| `PunchoutCatalogSetupRequestDocument` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogSetupRequestDocument` |
-| `PunchoutCatalogEntryPoint` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogEntryPoint` |
-| `PunchoutCatalogEntryPointFilter` | class | created | `src/Generated/Shared/Transfer/PunchoutCatalogEntryPointFilter` |
-
+Make sure that the following changes applied by checking your database:<table><thead><tr><th>Database Entity</th><th>Type</th><th>Event</th></tr></thead><tbody><tr><td>`pgw_punchout_catalog_connection`</td><td>table</td><td>created</td></tr><tr><td>`pgw_punchout_catalog_connection_cart`</td><td>table</td><td>created</td></tr><tr><td>`pgw_punchout_catalog_connection_setup`</td><td>table</td><td>created</td></tr><tr><td>`pgw_punchout_catalog_transaction`</td><td>table</td><td>created</td></tr></tbody></table>
+{% endinfo_block %}
+{% info_block infoBox "Verification" %}
+Make sure that the following changes in transfer objects:<table><thead><tr><th>Transfer</th><th>Type</th><th>Event</th><th>Path</th></tr></thead><tbody><tr><td>`PunchoutCatalogSetupRequest`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogSetupRequest`</td></tr><tr ><td>`PunchoutCatalogSetupResponse`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogSetupResponse`</td></tr><tr><td>`PunchoutCatalogProtocolData`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogProtocolData`</td></tr><tr><td>`PunchoutCatalogProtocolDataCart`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogProtocolDataCart`</td></tr><tr><td>`PunchoutCatalogProtocolDataOciCredentials`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogProtocolDataOciCredentials`</td></tr><tr><td>`PunchoutCatalogProtocolDataCxmlCredentials`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogProtocolDataCxmlCredentials`</td></tr><tr><td>`PunchoutCatalogConnectionCriteria`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogConnectionCriteria`</td></tr><tr><td>`PunchoutCatalogConnectionCredentialSearch`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogConnectionCredentialSearch`</td></tr><tr><td>`PunchoutCatalogConnectionList`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogConnectionList`</td></tr><tr><td>`PunchoutCatalogCxmlCredential`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogCxmlCredential`</td></tr><tr><td>`PunchoutCatalogOciCredential`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogOciCredential`</td></tr><tr><td>`PunchoutCatalogConnection`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogConnection`</td></tr><tr><td>`PunchoutCatalogConnectionCart`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogConnectionCart`</td></tr><tr><td>`PunchoutCatalogConnectionSetup`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogConnectionSetup`</td></tr><tr><td>`PunchoutCatalogCancelRequest`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogCancelRequest`</td></tr><tr><td>`PunchoutCatalogCartResponse`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogCartResponse`</td></tr><tr><td>`PunchoutCatalogCartResponseField`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogCartResponseField`</td></tr><tr><td>`PunchoutCatalogDocumentCart`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogDocumentCart`</td></tr><tr><td>`PunchoutCatalogDocumentCartItem`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogDocumentCartItem`</td></tr><tr><td>`PunchoutCatalogDocumentCartCustomer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogDocumentCartCustomer`</td></tr><tr><td>`PunchoutCatalogDocumentCustomAttribute`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogDocumentCustomAttribute`</td></tr><tr><td>`PunchoutCatalogMapping`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogMapping`</td></tr><tr><td>`PunchoutCatalogMappingObject`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogMappingObject`</td></tr><tr><td>`PunchoutCatalogMappingObjectField`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogMappingObjectField`</td></tr><tr><td>`PunchoutCatalogMappingTransform`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogMappingTransform`</td></tr><tr><td>`PunchoutCatalogMappingTransformParams`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogMappingTransformParams`</td></tr><tr><td>`PunchoutCatalogCommonContext`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogCommonContext`</td></tr><tr><td>`PunchoutCatalogCartRequestContext`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogCartRequestContext`</td></tr><tr><td>`PunchoutCatalogCartResponseContext`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogCartResponseContext`</td></tr><tr><td>`PunchoutCatalogDocumentCustomer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogDocumentCustomer`</td></tr><tr><td>`PunchoutCatalogDocumentCartItem`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogDocumentCartItem`</td></tr><tr><td>`PunchoutCatalogSetupRequestDocument`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogSetupRequestDocument`</td></tr><tr><td>`PunchoutCatalogEntryPoint`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogEntryPoint`</td></tr><tr><td>`PunchoutCatalogEntryPointFilter`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PunchoutCatalogEntryPointFilter`</td></tr></tbody></table>
 {% endinfo_block %}
 
 ### 4) Add Translations
-
 Append glossary according to your configuration:
 
-<details>
-<summary markdown='span'>data/import/glossary.csv</summary>
+<details open>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```html
 punchout-catalog.connection.list.title,Punch-out Catalog,en_US
@@ -291,28 +226,24 @@ punchout-catalog.error.invalid.mapping.format,Invalid Mapping Format,en_US
 punchout-catalog.error.too-many-company-users,Customer should have only one Company user to login,de_DE
 punchout-catalog.error.too-many-company-users,Customer should have only one Company user to login,en_US
 ```
-
+<br>
 </details>
 
 Run the following console command to import data:
 
-```bash
+```
 console data:import glossary
 ```
 
-{% info_block warningBox "Verification" %}
-
+{% info_block infoBox "Verification" %}
 Make sure that in the database the configured data are added to the `spy_glossary` table.
-
 {% endinfo_block %}
 
 ### 5) Import Data
-
-#### Import Punchout Catalog Data
-
+#### Import Punchout Catalog data
 Prepare your data according to your requirements using our demo data:
 
-<details>
+<details open>
 <summary markdown='span'>vendor/punchout-catalogs/punchout-catalog-spryker/data/import/punchout_catalog_connection.csv</summary>
 
 ```html
@@ -436,10 +367,11 @@ business-unit-mitte-1,user_30,user_30_pass,,1,setup_request,oci,Client 3 - Oci -
   }
 }"
 ```
-
+<br>
 </details>
 
-| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE |
+
+| Column | REQUIRED? | Data Type | Data Example |
 | --- | --- | --- | --- |
 | `business_unit_key` | mandatory | string | `Sales_Department` |
 | `username` | mandatory | string | `user_1` |
@@ -449,12 +381,7 @@ business-unit-mitte-1,user_30,user_30_pass,,1,setup_request,oci,Client 3 - Oci -
 | `type` | mandatory | string | `setup_request` |
 | `format` | mandatory | string | `cxml|oci` |
 | `name` | mandatory | string | `Client 1 - cXml - User 2` |
-| `mapping` | mandatory | string | |
-
-**Data Example for mapping:**
-
-```html
-{
+| `mapping` | mandatory | string | <pre><code>{
   "customer": {
     "fields": {
       "first_name": {
@@ -475,10 +402,8 @@ business-unit-mitte-1,user_30,user_30_pass,,1,setup_request,oci,Client 3 - Oci -
       }
     }
   }
-}
-```
-
-<details>
+} </code></pre>|
+<details open>
 <summary markdown='span'>vendor/punchout-catalogs/punchout-catalog-spryker/data/import/punchout_catalog_connection_cart.csv</summary>
 
 ```html
@@ -810,10 +735,11 @@ Client 3 - cXml - User 3,spryker_sup_5,,composite,line,base64,{}
 Client 2 - cXml - User 20,spryker_sup_5,,composite,line,base64,{}
 Client 3 - Oci - User 3,spryker_sup_5,,composite,line,,{}
 ```
-
+<br>
 </details>
 
-| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE |
+
+| Column | REQUIRED? | Data Type | Data Example |
 | --- | --- | --- | --- |
 | `connection_name` | mandatory | string | `Client 1 - cXml - User 1` |
 | default_supplier_id | mandatory | string | `323332` |
@@ -821,12 +747,7 @@ Client 3 - Oci - User 3,spryker_sup_5,,composite,line,,{}
 | bundle_mode | mandatory | string | `composite | single` |
 | totals_mode | mandatory | string | `list | header` |
 | encoding | mandatory | string | `base64` |
-| mapping | mandatory | string |  |
-
-**Data Example for mapping:**
-
-```php
-{
+| mapping | mandatory | string | {
   "cart": {
     "fields": {
       "grand_total": {
@@ -930,10 +851,9 @@ Client 3 - Oci - User 3,spryker_sup_5,,composite,line,,{}
       }
     }
   }
-}
-```
+} |
 
-<details>
+<details open>
 <summary markdown='span'>vendor/punchout-catalogs/punchout-catalog-spryker/data/import/punchout_catalog_connection_setup.csv</summary>
 
 ```php
@@ -1265,10 +1185,10 @@ Client 3 - cXml - User 3,spryker_sup_5,,composite,line,base64,{}
 Client 2 - cXml - User 20,spryker_sup_5,,composite,line,base64,{}
 Client 3 - Oci - User 3,spryker_sup_5,,composite,line,,{}
 ```
-
+<br>
 </details>
 
-| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
+| Column | REQUIRED? | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 | `connection_name` | mandatory | string | `Client 1 - cXml - User 1` | Name of the PunchoutCatalog connection. |
 | `business_unit_key` | mandatory | string | `Sales_Department` | Allows customers to configure in which BU the new company user should be created (dynamic login mode) |
@@ -1277,13 +1197,14 @@ Client 3 - Oci - User 3,spryker_sup_5,,composite,line,,{}
 
 Register the following plugins to enable data import:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| Plugin | Specification | Prerequisites | Namespace |
 | --- | --- | --- | --- |
 | `PunchoutCatalogConnectionDataImportPlugin` | Imports connections data into the database. | None | `PunchoutCatalog\Zed\PunchoutCatalog\Communication\Plugin\DataImport` |
 | `PunchoutCatalogSetupDataImportPlugin` | Imports connections setup data into the database. | None | `PunchoutCatalog\Zed\PunchoutCatalog\Communication\Plugin\DataImport` |
 | `PunchoutCatalogCartDataImportPlugin` | Imports connections cart data into the database. | None | `PunchoutCatalog\Zed\PunchoutCatalog\Communication\Plugin\DataImport` |
 
-**src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1307,6 +1228,8 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
     }
 }
 ```
+<br>
+</details>
 
 Run the following console command to import data:
 
@@ -1316,19 +1239,15 @@ console data:import punchout-catalog-connection-setup
 console data:import punchout-catalog-connection-cart
 ```
 
-{% info_block warningBox "Verification" %}
-
+{% info_block infoBox "Verification" %}
 Make sure that the configured data are added to the `pgw_punchout_catalog_connection`, `pgw_punchout_catalog_connection_cart`, `pgw_punchout_catalog_connection_setup`  tables in the database.
-
 {% endinfo_block %}
 
 ### 6) Set up Behavior
-
-#### Set up Punchout Catalogs Workflow
-
+#### Setup Punchout Catalogs Workflow
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| Plugin | Specification | Prerequisites | Namespace |
 | --- | --- | --- | --- |
 | `DisallowPunchoutCompanyUserChangePlugin` | Prevets company user change for logged in punchout catalog customers.  | None | `PunchoutCatalog\Client\PunchoutCatalog\Plugin\BusinessOnBehalf.` |
 | `SingleCompanyUserDatabaseStrategyPreCheckPlugin` | Disables persistent cart for Single User `PunchoutCatalog` connection types. | None | `PunchoutCatalog\Client\PunchoutCatalog\Plugin\Quote` |
@@ -1336,7 +1255,8 @@ Enable the following behaviors by registering the plugins:
 | `ImpersonationDetailsCustomerOauthRequestMapperPlugin` | Maps Punchout impersonation details from `CustomerTransfer` into access token request. | None | `PunchoutCatalog\Zed\PunchoutCatalog\Communication\Plugin\OauthCompanyUser` |
 | `ImpersonationDetailsCustomerExpanderPlugin` | Expands `CustomerTransfer` with Punchout impersonation details. | None |`PunchoutCatalog\Zed\PunchoutCatalog\Communication\Plugin\OauthCompanyUser` |
 
-**src/Pyz/Client/BusinessOnBehalf/BusinessOnBehalfDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Client/BusinessOnBehalf/BusinessOnBehalfDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1359,14 +1279,15 @@ class BusinessOnBehalfDependencyProvider extends BaseBusinessOnBehalfDependencyP
     }
 }
 ```
+<br>
+</details>
 
-{% info_block warningBox "Verification" %}
-
+{% info_block infoBox "Verification" %}
 Make sure that you can't change the company user in your account details when you are in progress of transferred cart creation.
-
 {% endinfo_block %}
 
-**src/Pyz/Client/Quote/QuoteDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Client/Quote/QuoteDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1389,14 +1310,15 @@ class QuoteDependencyProvider extends BaseQuoteDependencyProvider
     }
 }
 ```
+<br>
+</details>
 
-{% info_block warningBox "Verification" %}
-
+{% info_block infoBox "Verification" %}
 Make sure that punchout catalogs carts for `SingleUser` connection types do not appear in `spy_quote` DB table.
-
 {% endinfo_block %}
 
-**src/Pyz/Yves/PunchoutCatalog/PunchoutCatalogDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Yves/PunchoutCatalog/PunchoutCatalogDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1422,14 +1344,15 @@ class PunchoutCatalogDependencyProvider extends BasePunchoutCatalogDependencyPro
     }
 }
 ```
+<br>
+</details>
 
-{% info_block warningBox "Verification" %}
-
+{% info_block infoBox "Verification" %}
 Make sure that in transferred cart XML bundled product items has `childBundleItems` section (in case you have Product Bundles feature - otherwise this plugin should not be registered).
-
 {% endinfo_block %}
 
-**src/Pyz/Zed/OauthCompanyUser/OauthCompanyUserDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Zed/OauthCompanyUser/OauthCompanyUserDependencyProvider.php</summary>
 
 ```php
 namespace Pyz\Zed\OauthCompanyUser;
@@ -1437,7 +1360,7 @@ namespace Pyz\Zed\OauthCompanyUser;
 use PunchoutCatalog\Zed\PunchoutCatalog\Communication\Plugin\OauthCompanyUser\ImpersonationDetailsCustomerExpanderPlugin;
 use PunchoutCatalog\Zed\PunchoutCatalog\Communication\Plugin\OauthCompanyUser\ImpersonationDetailsCustomerOauthRequestMapperPlugin;
 use Spryker\Zed\OauthCompanyUser\OauthCompanyUserDependencyProvider as SprykerOauthCompanyUserDependencyProvider;
-
+ImpersonationDetailsCustomerOauthRequestMapperPlugin
 class OauthCompanyUserDependencyProvider extends SprykerOauthCompanyUserDependencyProvider
 {
     /**
@@ -1461,33 +1384,31 @@ class OauthCompanyUserDependencyProvider extends SprykerOauthCompanyUserDependen
     }
 }
 ```
+<br>
+</details>
 
-{% info_block warningBox "Verification" %}
-
+{% info_block infoBox "Verification" %}
 Make sure that when you chose the supplier for transferred cart in ERP, and redirected to the shop - you are logged in.
-
 {% endinfo_block %}
 
 ## Install Feature Frontend
-
 ### Prerequisites
-
 To start feature integration, overview and install the necessary features:
 
-| NAME | VERSION |
+| Name | Version |
 | --- | --- |
-| Cart | 202009.0 |
-| Spryker Core | 202009.0 |
+| Cart | 201907.0 |
+| Spryker Core | 201907.0 |
 
 ### 1) Set up Widgets
-
 Register the following global widgets:
 
-| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
+| Plugin | Description | Prerequisites | Namespace |
 | --- | --- | --- | --- |
 | `PunchoutCatalogCheckoutButtonsWidget` | Displays `Transfer Cart` and `Cancel Cart & Return` buttons on the cart page. | None | `PunchoutCatalog\Yves\PunchoutCatalog\Widget` |
 
-**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1510,10 +1431,13 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     }
 }
 ```
+<br>
+</details>
 
 Adjust codebase to register `PunchoutCatalogCheckoutButtonsWidget` widget.
 
-**src/Pyz/Yves/CartPage/CartPageDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Yves/CartPage/CartPageDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1526,7 +1450,7 @@ use SprykerShop\Yves\CartPage\Dependency\Client\CartPageToCustomerClientBridge;
 
 class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 {
-    public const CLIENT_CUSTOMER = 'CLIENT_CUSTOMER';
+    public const CLIENT_CART = 'CLIENT_CART';
 
     /**
      * @param \Spryker\Yves\Kernel\Container $container
@@ -1555,10 +1479,13 @@ class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
     }
 }
 ```
+<br>
+</details>
 
- **src/Pyz/Yves/CartPage/CartPageFactory.php**
+<details open>
+<summary markdown='span'>src/Pyz/Yves/CartPage/CartPageFactory.php</summary>
 
-```php
+```phph
 <?php
 
 namespace Pyz\Yves\CartPage;
@@ -1577,8 +1504,11 @@ class CartPageFactory extends SprykerCartPageFactory
     }
 }
 ```
+<br>
+</details>
 
-**src/Pyz/Yves/CartPage/Controller/CartController.php**
+<details open>
+<summary markdown='span'>src/Pyz/Yves/CartPage/Controller/CartController.php</summary>
 
 ```php
 namespace Pyz\Yves\CartPage\Controller;
@@ -1607,8 +1537,11 @@ class CartController extends SprykerCartController
         return $data;
     }
 ```
+<br>
+</details>
 
-**src/Pyz/Yves/CartPage/Theme/default/components/molecules/cart-summary/cart-summary.twig**
+<details open>
+<summary markdown='span'>src/Pyz/Yves/CartPage/Theme/default/components/molecules/cart-summary/cart-summary.twig</summary>
 
 ```html
 {% raw %}{%{% endraw %} define data = {
@@ -1637,8 +1570,11 @@ class CartController extends SprykerCartController
         {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
     {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 ```
+<br>
+</details>
 
-**src/Pyz/Yves/CartPage/Theme/default/templates/page-layout-cart/page-layout-cart.twig**
+<details open>
+<summary markdown='span'>src/Pyz/Yves/CartPage/Theme/default/templates/page-layout-cart/page-layout-cart.twig</summary>
 
 ```html
 {% raw %}{%{% endraw %} define data = {
@@ -1653,26 +1589,26 @@ class CartController extends SprykerCartController
      } only {% raw %}%}{% endraw %}
   {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
+<br>
+</details>
 
 Run the following command to enable Javascript and CSS changes:
 ```bash
 console frontend:yves:build
 ```
-{% info_block warningBox "Verification" %}
-
+{% info_block infoBox "Verification" %}
 Make sure that you see `Transfer Cart` and `Cancel Cart & Return` buttons on the cart page for `PunchoutCatalog` carts.
-
 {% endinfo_block %}
 
 ### 2) Enable Controllers
-
 Register the following plugin:
 
-| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
+| Plugin | Description | Prerequisites | Namespace |
 | --- | --- | --- | --- |
 | `PunchoutCatalogControllerProvider` | Provides routes used in `PunchoutCatalogCheckoutButtonsWidget`. | None | `PunchoutCatalog\Yves\PunchoutCatalog\Plugin\Provider` |
 
-**src/Pyz/Yves/ShopApplication/YvesBootstrap.php**
+<details open>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
 
 ```php
 <?php
@@ -1697,18 +1633,17 @@ class YvesBootstrap extends SprykerYvesBootstrap
     }
 }
 ```
+<br>
+</details>
 
-{% info_block warningBox "Verification" %}
-
+{% info_block infoBox "Verification" %}
 Make sure that when you click `Transfer Cart` button on a cart page, it redirects you back to the connected ERP system.
-
 {% endinfo_block %}
 
 ### 3) Set up Behavior
-
 #### Set up Punchout Catalogs Workflow
-
-**src/Pyz/Yves/CustomerPage/Controller/AccessTokenController.php**
+<details open>
+<summary markdown='span'>src/Pyz/Yves/CustomerPage/Controller/AccessTokenController.php</summary>
 
 ```php
 <?php
@@ -1780,9 +1715,9 @@ class AccessTokenController extends SprykerAccessTokenController
     }
 }
 ```
+<br>
+</details>
 
-{% info_block warningBox "Verification" %}
-
+{% info_block infoBox "Verification" %}
 Make sure that when you came to shop from ERP it logins you by the proper user, according to your connection Login Mode preferences, even if previously you were logged in by another customer.
-
 {% endinfo_block %}

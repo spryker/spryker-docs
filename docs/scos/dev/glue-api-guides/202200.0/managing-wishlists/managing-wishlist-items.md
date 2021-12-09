@@ -10,7 +10,7 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
 ---
 
-This endpoint allows to add and remove items from wishlists.
+This endpoint allows you to add and remove items from wishlists.
 
 ## Installation
 
@@ -35,9 +35,7 @@ To add an item to a wishlist, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
-<details><summary>Request sample</summary>
-
-`POST https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items`
+Request sample: `POST https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items`
 
 ```json
 {
@@ -112,7 +110,7 @@ To add an item to a wishlist, send the request:
 | --- | --- | --- |
 | sku | String | SKU of a concrete product to add. |
 | displayData  | Array  | Array of variables that are proposed for a Storefront user to set up in the configurator.  |
-| configuration  | Array  | Default product configuration.  |
+| configuration  | Array  | Default configurable product configuration.  |
 | configuratorKey  | String  | Configurator type.  |
 | isComplete  | Boolean  | Shows if the configurable product configuration is complete:<div><ul><li>`true`—configuration complete.</li><li>`false`—configuration incomplete.</li></ul></div>  |
 | quantity  | Integer  | Quantity of the product that is added to the wishlist.  |
@@ -138,6 +136,7 @@ Resonse sample:
 		}
 	}
 ```
+
 <details><summary>Response sample: add a configurable product to a wishlist</summary>
 
 ```json
@@ -204,7 +203,7 @@ Resonse sample:
 
 </details>
 
-<a name="wishlishlist-items-response-attributes"></a>
+<a name="wishlist-items-response-attributes"></a>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
@@ -219,6 +218,182 @@ Resonse sample:
 For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html#abstract-product-prices-response-attributes).
 
 For attribute desriptions of concrete product availabillity, see [Retrieving concrete product availability](/docs/scos/dev/glue-api-guides/202108.0/managing-products/concrete-products/retrieving-concrete-product-availability.html#concrete-product-availability-response-attributes).
+
+## Update a wishlist item
+
+{% info_block warningBox "Warning" %}
+
+Only a configurable product can be updated.
+
+{% endinfo_block %}
+
+
+To update a wishlist item, send the request:
+
+---
+`PATCH` **/wishlists/*{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}*/wishlist-items/*{% raw %}{{{% endraw %}wishlist_item_id{% raw %}}}{% endraw %}***
+
+---
+
+| PATH PARAMETER | DESCRIPTION |
+| --- | --- |
+| ***{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}*** | Unique identifier of the wishlist to delete an item from. [Create a wishlist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
+| ***{% raw %}{{{% endraw %}wishlist_item_id{% raw %}}}{% endraw %}*** | Unique identifier of a configurable product to update. To get this identifier, [retrieve a wishlist with items included](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html#retrieve-wishlists) or [add a configurable product to a wishlist](#add-an-item-to-a-wishlist). |
+
+### Request
+
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
+| --- | --- | --- | --- |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
+
+<details><summary>Request sample: add a configurable product to a wishlist</summary>
+
+`PATCH https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items/`
+
+```json
+{
+    "data": {
+        "type": "wishlist-items",
+        "attributes": {
+            "sku": "093_24495843",
+            "productConfigurationInstance": {
+                "displayData": "{\"Preferred time of the day\": \"Afternoon\", \"Date\": \"9.10.2021\"}",
+                "configuration": "{\"time_of_day\": \"2\"}",
+                "configuratorKey": "DATE_TIME_CONFIGURATOR",
+                "isComplete": false,
+                "quantity": 4,
+                "availableQuantity": 4,
+                "prices": [
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "netAmount": 23434,
+                        "grossAmount": 42502,
+                        "currency": {
+                            "code": "EUR",
+                            "name": "Euro",
+                            "symbol": "€"
+                        },
+                        "volumePrices": [
+                            {
+                                "netAmount": 150,
+                                "grossAmount": 165,
+                                "quantity": 5
+                            },
+                            {
+                                "netAmount": 145,
+                                "grossAmount": 158,
+                                "quantity": 10
+                            },
+                            {
+                                "netAmount": 140,
+                                "grossAmount": 152,
+                                "quantity": 20
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}
+```
+
+</details>
+
+| ATTRIBUTE | TYPE | DESCRIPTION |
+| --- | --- | --- |
+| sku | String | SKU of a configurable product to update. |
+| displayData  | Array  | Array of variables that are proposed for a Storefront user to set up in the configurator.  |
+| configuration  | Array  | Default configurable product configuration.  |
+| configuratorKey  | String  | Configurator type.  |
+| isComplete  | Boolean  | Shows if the configurable product configuration is complete:<div><ul><li>`true`—configuration complete.</li><li>`false`—configuration incomplete.</li></ul></div>  |
+| quantity  | Integer  | Quantity of the configurable product to update in the wishlist.  |
+| availableQuantity  | Integer  |  Product quantity available in the store. |
+
+For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html#abstract-product-prices-response-attributes).
+
+### Response
+
+<details><summary>Response sample: add a configurable product to a wishlist</summary>
+
+```json
+{
+    "data": {
+        "type": "wishlist-items",
+        "id": "093_24495843_98bf36f052d23f10a8a081694ad4f45e",
+        "attributes": {
+            "productOfferReference": null,
+            "merchantReference": "MER000001",
+            "id": "093_24495843_98bf36f052d23f10a8a081694ad4f45e",
+            "sku": "093_24495843",
+            "availability": {
+                "isNeverOutOfStock": false,
+                "availability": false,
+                "quantity": "0.0000000000"
+            },
+            "productConfigurationInstance": {
+                "displayData": "{\"Preferred time of the day\": \"Afternoon\", \"Date\": \"9.10.2021\"}",
+                "configuration": "{\"time_of_day\": \"2\"}",
+                "configuratorKey": "DATE_TIME_CONFIGURATOR",
+                "isComplete": false,
+                "quantity": 4,
+                "availableQuantity": 4,
+                "prices": [
+                    {
+                        "netAmount": 23434,
+                        "grossAmount": 42502,
+                        "priceTypeName": "DEFAULT",
+                        "volumeQuantity": null,
+                        "currency": {
+                            "code": "EUR",
+                            "name": "Euro",
+                            "symbol": "€"
+                        },
+                        "volumePrices": [
+                            {
+                                "grossAmount": 165,
+                                "netAmount": 150,
+                                "quantity": 5
+                            },
+                            {
+                                "grossAmount": 158,
+                                "netAmount": 145,
+                                "quantity": 10
+                            },
+                            {
+                                "grossAmount": 152,
+                                "netAmount": 140,
+                                "quantity": 20
+                            }
+                        ]
+                    }
+                ]
+            },
+            "prices": []
+        },
+        "links": {
+            "self": "http://glue.de.spryker.local/wishlists/b70e1073-a740-5a48-bb5e-0449a9e51d53/wishlist-items/093_24495843_94a23d655bf161d6ab0088457f4ea2fc"
+        }
+    }
+}
+```
+
+</details>
+
+| ATTRIBUTE | TYPE | DESCRIPTION |
+| --- | --- | --- |
+| sku | String | Concrete product SKU in the wishlist. |
+| displayData  | Array  | Array of variables a Storefront user set up in the configurator.  |
+| configuration  | Array  | Updated configurable product configuration.  |
+| configuratorKey  | String  | Configurator type.  |
+| isComplete  | Boolean  | Shows if the configurable product configuration is complete:<div><ul><li>`true`—configuration complete.</li><li>`false`—configuration incomplete.</li></ul></div>  |
+| quantity  | Integer  | Updated configurable product quantity in the wishlist.  |
+| availableQuantity  | Integer  | Configurable product quantity available in the store. |
+
+For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html#abstract-product-prices-response-attributes).
+
+For attribute descriptions of concrete product availability, see [Retrieving concrete product availability](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-availability.html#concrete-product-availability-response-attributes).
+
 
 ## Delete a wishlist item
 

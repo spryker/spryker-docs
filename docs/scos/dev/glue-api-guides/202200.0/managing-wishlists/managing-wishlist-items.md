@@ -195,7 +195,7 @@ Resonse sample:
             "prices": []
         },
         "links": {
-            "self": "http://glue.de.spryker.local/wishlists/b70e1073-a740-5a48-bb5e-0449a9e51d53/wishlist-items/093_24495843_98bf36f052d23f10a8a081694ad4f45e"
+            "self": "https://glue.mysprykershop.com/wishlists/b70e1073-a740-5a48-bb5e-0449a9e51d53/wishlist-items/093_24495843_98bf36f052d23f10a8a081694ad4f45e"
         }
     }
 }
@@ -217,13 +217,13 @@ Resonse sample:
 
 For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html#abstract-product-prices-response-attributes).
 
-For attribute desriptions of concrete product availabillity, see [Retrieving concrete product availability](/docs/scos/dev/glue-api-guides/202108.0/managing-products/concrete-products/retrieving-concrete-product-availability.html#concrete-product-availability-response-attributes).
+For attribute descriptions of concrete product availability, see [Retrieving concrete product availability](/docs/scos/dev/glue-api-guides/202108.0/managing-products/concrete-products/retrieving-concrete-product-availability.html#concrete-product-availability-response-attributes).
 
 ## Update a wishlist item
 
 {% info_block warningBox "Warning" %}
 
-Only a configurable product can be updated.
+Only configurable products can be updated.
 
 {% endinfo_block %}
 

@@ -5,7 +5,7 @@ last_updated: Nov 25, 2021
 template: concept-topic-template
 ---
 
-## Is not unique - Transfer/Transfer property / DB table / DB column / Method / Constant /
+## Transfer, Transfer property, DB table, DB column, Method, or Constant: Name is not unique
 
 * Check that Transfer is unique and have the prefix
 * Check that Transfer extend Core Transfer, and each property have the prefix

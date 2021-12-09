@@ -1,17 +1,17 @@
 ---
 title: Upgradability reference
-description: Rerference infomation for evaluator and upgrader tools.
+description: Reference information for evaluator and upgrader tools.
 last_updated: Nov 25, 2021
 template: concept-topic-template
 ---
 
 ## Method of an extended class is overridden on the project level
 
-Factory, Dependency Provider, Repository, and Entity Manager methods belong to the private API. If you extend a core class and override one of the methods, minor releases can cause errors or unexpected changes in functionality.
+Factory, Dependency Provider, Repository, and Entity Manager methods belong to the private API. If you extend a core class and override one of its methods, minor releases can cause errors or unexpected changes in functionality.
 
 ### Using custom methods on the project level
 
-To avoid the error, instead of overriding the core methods, introduce custom ones in the private API.
+To avoid the error, instead of overriding the core methods, introduce custom ones.
 
 
 #### Example of code and a related error
@@ -55,7 +55,7 @@ Pyz\Zed\EvaluatorSpryker\Persistence\EvaluatorSprykerCategoryImageEntityManager
 
 {% info_block warningBox "Dependency Provider exception" %}
 
-If you override a method and initialize a plugin, it does not break backward compatibility. For example, in `StorageRouterDependencyProvider`, `StorageRouterDependencyProvider` is overridden with a plugin introduced:
+If you override a method and initialize a plugin, it does not break backward compatibility. For example, in `StorageRouterDependencyProvider`, `SprykerShopStorageRouterDependencyProvider` is overridden with a plugin introduced:
 
 <details>
 <summary markdown='span'>Example of an overridden method with a plugin</summary>
@@ -105,6 +105,6 @@ The method name should be unique to the extent of making it impossible to accide
 
 {% endinfo_block %}
 
-2. Replace the core method with the custom one.
+2. Override the core method with the custom one you've created in the previous step.
 
-When the core method is replaced, re-run the Evaluator. The same error shouldn't be returned.
+When the core method is overriden with a custom one, re-run the Evaluator. The same error shouldn't be returned.

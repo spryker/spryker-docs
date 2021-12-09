@@ -90,6 +90,8 @@ class StorageRouterDependencyProvider extends SprykerShopStorageRouterDependency
 }
 ```
 
+</details>
+
 {% endinfo_block %}
 
 

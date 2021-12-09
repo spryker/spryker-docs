@@ -7,6 +7,7 @@ template: concept-topic-template
 ## What is FeS?
 
 
+
 ## What is the purpose of FeS?
 
 Enables projects to launch multiple front ends quickly. Content managers can quickly request changes. Developers can quickly apply and deploy the changes.
@@ -23,7 +24,12 @@ FeS is designed to be used by devlopers and content managers.
 
 ## How does FeS work?
 
-### Architecture
+Launchpad is designed to launch any kind of apps, however, currently, only the front end app. (do we need to mention it?)
+
+### FeS Architecture
+
+### What is an app/front end template?
+
 
 ## What project can use FeS?
 

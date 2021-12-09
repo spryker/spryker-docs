@@ -574,12 +574,18 @@ function initFeedbackForm() {
     $('.form-collapse').each(function () {
         let container = $(this),
             opener = container.find('.js-form-collapse__opener'),
+            firstStep = container.find('.js-form-collapse__first-step'),
+            secondStep = container.find('.js-form-collapse__second-step'),
+            secondStepOpener = container.find('.js-form-collapse__second-step-opener'),
             close = container.find('.js-form-collapse__close'),
             slide = container.find('.js-form-collapse__slide');
 
-        opener.on('click', function (e) {
-            e.preventDefault();
+        secondStepOpener.on('click', function () {
+            firstStep.hide();
+            secondStep.removeClass('hidden');
+        });
 
+        opener.on('click', function () {
             slide.stop().slideDown(300);
         });
 
@@ -589,6 +595,8 @@ function initFeedbackForm() {
             slide.stop().slideUp(300);
         });
     });
+
+    
 }
 
 function initSidebarToggle() {

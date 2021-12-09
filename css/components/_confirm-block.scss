@@ -1,29 +1,51 @@
 .confirm-block {
-    display: flex;
     background: $grey-lightest;
     border-radius: 4px;
-    padding: 17px 20px;
-    margin: 0 0 15px;
+    padding: 15px 20px;
+    margin: 0 0 10px;
 
     @include media("<tablet") {
         display: block;
         padding: 30px 16px 16px;
     }
 
+    &__flex {
+        display: flex;
+        align-items: center;
+        min-height: 50px;
+    }
+
     &__title {
-        display: block;
         color: $grey-dark;
         flex: 1 1 auto;
         font-size: 20px;
         line-height: 1.4;
         font-weight: 800;
         margin: 0;
-        padding: 10px 0 0;
+        display: flex;
+        align-items: center;
 
         @include media("<tablet") {
             text-align: center;
             padding: 0;
             margin: 0 0 25px;
+        }
+
+        &-icon {
+            margin: 0 15px 0 0;
+            font-size: 18px;
+            background: $grey-darker;
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+        }
+
+        &-text {
+            flex: 1 1 auto;
         }
     }
 
@@ -40,7 +62,7 @@
     }
 
     &__button {
-        margin: 0 0 0 16px;
+        margin: 0 0 0 10px;
         font-size: 12px;
         min-width: 100px;
 

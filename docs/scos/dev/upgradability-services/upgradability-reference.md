@@ -5,7 +5,9 @@ last_updated: Nov 25, 2021
 template: concept-topic-template
 ---
 
-## Transfer, Transfer property, DB table, DB column, Method, or Constant: Name is not unique
+## Name is not unique
+
+Names of transfers, transfer properties, database tables and columns, methods, and constants should be unique 
 
 * Check that Transfer is unique and have the prefix
 * Check that Transfer extend Core Transfer, and each property have the prefix
@@ -18,9 +20,7 @@ template: concept-topic-template
 
 Spryker can release within minor or major the same item with the same name but with the different business logic.
 
-### Example of code that can cause the upgradability errors
-
----
+###
 
 #### Check that Transfer is unique and have the prefix
 
@@ -50,9 +50,9 @@ ProductAbstractStore
 </transfers>
 ```
 
-##### *How can I avoid this error?*
+##### How can I avoid this error?
 
-* Use project specific prefix, e.g Pyz
+Make the name of the transfer unique. For example, add the project name as a prefix.
 
 ##### *Example of code achieving the same result but not causing upgradability errors*
 

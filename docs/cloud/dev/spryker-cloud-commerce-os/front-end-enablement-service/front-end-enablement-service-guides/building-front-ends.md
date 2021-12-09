@@ -1,10 +1,10 @@
 ---
-title: Building a front end
+title: Building front ends
 description: Learn how to build a front end from scratch and publish it
 template: concept-topic-template
 ---
 
-This tutorial describes how to build a front end from scratch using FeS.
+This tutorial describes all the steps of build a front end, from connecting it to a back end to adding content.
 
 * How to connect the front end to the back end.
 * How to add, structure content, and so on.
@@ -12,7 +12,7 @@ This tutorial describes how to build a front end from scratch using FeS.
 
 
 
-## How do I set up an infrustructure for a front end?
+## How do I set up an infrastructure for a front end?
 
 ### How do I connect a repository?
 

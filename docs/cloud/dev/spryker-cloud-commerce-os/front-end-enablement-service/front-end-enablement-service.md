@@ -19,7 +19,7 @@ Mobile-first design.
 
 ## Who the users of FeS are?
 
-FeS is designed to be used by devlopers and content managers.
+FeS is designed to be used by developers and content managers.
 
 ## How does FeS work?
 

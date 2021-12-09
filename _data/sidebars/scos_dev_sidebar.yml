@@ -4081,7 +4081,7 @@ entries:
         - title: Configuring Loggly
           url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/configuring-loggly.html
         - title: Installing and configuring Tideways
-          url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways.html
+          url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
   - title: Architecture
     url: /docs/scos/dev/architecture/architecture.html
     nested:

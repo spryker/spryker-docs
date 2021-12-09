@@ -1,5 +1,5 @@
 ---
-title: Installing and configuring Tideways
+title: Installing and configuring Tideways with Vagrant
 last_updated: Jun 16, 2021
 template: howto-guide-template
 ---

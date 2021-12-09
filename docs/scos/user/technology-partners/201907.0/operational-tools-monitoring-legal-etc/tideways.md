@@ -29,7 +29,7 @@ YOUR ADVANTAGES
 
 ## Related Developer articles
 
-* [Installing and configuring Tideways](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways.html)
+* [Installing and configuring Tideways](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html)
 
 ---
 

@@ -23,11 +23,11 @@ For example, if you are selling a workstation installation service, before purch
 
 ### Configuring a configurable product
 
-To configure a product, from the *Product Details* page, a customer opens a product configurator by clicking the **Configure** button. Then, they are redirected back to the _Product Details_ page and can add the configured product to the wishlist or cart.
+To configure a product, from the *Product Details* page, a customer opens a product configurator by clicking the **Configure** button. Then, they are redirected back to the *Product Details* page and can add the configured product to the wishlist or cart.
 
 ![configure-button-on-product-details-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configure-button-on-product-details-page.png)
 
-After adding a configurable product to the cart, a customer change the product configuration from the *Cart* page.
+After adding a configurable product to the cart, a customer can change the product configuration from the *Cart* page.
 
 ![configure-button-on-the-cart-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configure-button-on-the-cart-page.png)
 
@@ -105,7 +105,7 @@ If the configuration is complete, on entering the *Product details* page, a cust
 ![configurtion-complete-message](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/Features/Configurable+Product+feature+overview/configurtion-complete-message.png)
 
 
-If the configuration is not complete, on entering the *Product details* page, a customer sees a message that the configuration is not complete. To purchase the product, they open the configurator and select a configuration. However, they can add a product with incomplete configuration to a wishlist. In this case, they can finish the configuration from the _Wishlist_ page.
+If the configuration is not complete, on entering the *Product details* page, a customer sees a message that the configuration is not complete. To purchase the product, they open the configurator and select a configuration. However, they can add a product with incomplete configuration to a wishlist. In this case, they can finish the configuration from the *Wishlist* page.
 
 ![incomplete-configurtion-message](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/incomplete-configurtion-message.png)
 

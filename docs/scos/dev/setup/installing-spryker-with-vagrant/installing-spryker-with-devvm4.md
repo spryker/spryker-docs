@@ -74,18 +74,19 @@ For macOS Big Sur, when you install VirtualBox, click **Open System Preferences*
 {% endinfo_block %}
 
 For _macOS Monterey_, they still plan to release a new VirtualBox. For now, do the following:
-    1. Install [this VirtualBox package](https://www.virtualbox.org/download/testcase/VirtualBox-6.1.29r148140.dmg).
-    2. Allow loading of the application the same way as for Big Sur from the previous step. If installation fails, reboot. 
-    3. If installation failed at the previous step, install VirtualBox again and reboot.
-1. Install [VirtualBox Extension pack 6.1.26](https://download.virtualbox.org/virtualbox/6.1.26/Oracle_VM_VirtualBox_Extension_Pack-6.1.26.vbox-extpack)
-    {% info_block infoBox "macOS Monterey" %}
-    
-    Skip this step if you use macOS Monterey, as there is no VirtualBox Extension for it yet. Solution for macOS Monterey from the previous step fixes this issue.
-
-    {% endinfo_block %}
+   1. Install [this VirtualBox package](https://www.virtualbox.org/download/testcase/VirtualBox-6.1.29r148140.dmg).
+   2. Allow loading of the application the same way as for Big Sur from the previous step. If installation fails, reboot. 
+   3. If installation failed at the previous step, install VirtualBox again and reboot.
+3. Install [VirtualBox Extension pack 6.1.26](https://download.virtualbox.org/virtualbox/6.1.26/Oracle_VM_VirtualBox_Extension_Pack-6.1.26.vbox-extpack)
    
-2. Install [Vagrant (latest version)](https://www.vagrantup.com/). For Windows OS, consider the [Installing Vagrant and Git Bash](https://www.jeevisoft.com/installing-vagrant-and-git-bash/) for the installation.
-3. Remove old *vagrant-vbguest* and *vagrant-hostmanager* plugins and install their new versions:
+{% info_block infoBox "macOS Monterey" %}
+    
+Skip this step if you use macOS Monterey, as there is no VirtualBox Extension for it yet. Solution for macOS Monterey from the previous step fixes this issue.
+
+{% endinfo_block %}
+   
+4. Install [Vagrant (latest version)](https://www.vagrantup.com/). For Windows OS, consider the [Installing Vagrant and Git Bash](https://www.jeevisoft.com/installing-vagrant-and-git-bash/) for the installation.
+5. Remove old *vagrant-vbguest* and *vagrant-hostmanager* plugins and install their new versions:
 
 ```bash
 vagrant plugin list
@@ -109,17 +110,97 @@ vagrant plugin install vagrant-hostsupdater vagrant-hostmanager vagrant-vbguest
     vagrant box remove devvm3.0.0
     ```
 
-## Install Spryker virtual machine v. 4.1.0
+## 2. Install Spryker virtual machine v. 4.1.0
 
-Create a folder where you want to place source code:
+1. Create a folder where you want to place source code:
 
 ```bash
 mkdir devvm
 cd devvm						
 ```
 
+2. Initialize the Vagrant environment:
    
+```bash
+vagrant init devv410 https://u220427-sub1:PpiiHzuF2OIUzmcH@u220427-sub1.your-storagebox.de/devvm_v4.1.0.box
+```
+3. Update the Vagrantfile.
+- For _Linux_ and _macOs_:
 
+```bash
+mv Vagrantfile Vagrantfile.bak
+awk '/^end/{print " config.hostmanager.enabled = true\n config.hostmanager.manage_host = true"}1' Vagrantfile.bak > Vagrantfile
+```
+- For _Windows_:
+    1. Open the Vagrantfile with any text editor, for example, Notepad:
+    
+    ```bash
+    notepad Vagrantfile
+    ```
+    2. Add these two lines before _end_ in the Vagrantfile:
+    
+    ```
+    config.hostmanager.enabled = true
+    config.hostmanager.manage_host = true
+    ```
+    3. Save the file.
+4. Build and start the virtual machine.
+- For a B2B Demo Shop:
+  On _Linux_ and _macOs_:
+  ```bash
+  VM_PROJECT=suite SPRYKER_REPOSITORY="git@github.com:spryker-shop/b2b-demo-shop.git" vagrant up
+  ```
+  On _Windows_:
+  ```bash
+  $env:VM_PROJECT = 'suite'; $env:SPRYKER_REPOSITORY = 'git@github.com:spryker-shop/b2b-demo-shop.git'; vagrant up
+  ```
+- For a B2C Demo Shop:
+  <br>On _Linux_ and _macOs_:
+  ```bash
+  VM_PROJECT=suite SPRYKER_REPOSITORY="git@github.com:spryker-shop/b2c-demo-shop.git" vagrant up
+  ```
+  On _Windows_:
+  ```bash
+  $env:VM_PROJECT = 'suite'; $env:SPRYKER_REPOSITORY = 'git@github.com:spryker-shop/b2c-demo-shop.git'; vagrant up
+  ```
+## 3. Install the shop
+1. Log into the virtual machine:
+   ```bash
+   vagrant ssh
+   ```
+   {% info_block infoBox "Info" %}
 
+    At this step, consider disabling Xdebug and enabling OPcache so your application runs faster. See [Application runs slowly](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/other-spryker-in-vagrant-issues/application-runs-slowly.html) for details.
 
+    {% endinfo_block %}
+2. Generate a read-only token on GitHub, in [Settings->Developer Settings->Personal access tokens](https://github.com/settings/tokens).
+3. Run:
+   ```bash
+   composer config --global --auth github-oauth.github.com {your_github_token}
+   ```
+   where `{your_github_token}` is the GitHub token you generated in the previous step.
+4. Run the installation commands:
+   ```bash
+   composer install
+   vendor/bin/install
+   ```
 
+{% info_block infoBox "Info" %}
+
+If your infrastructure presupposes different entry points, note the ports mapping and LEDDC. See [Port numbering](https://github.com/spryker/devvm/tree/develop/saltstack#port-numbering) for details.
+
+{% endinfo_block %}
+
+When the installation process is complete, Spryker Commerce OS is ready to use. It can be accessed via the following links:
+
+**B2B Demo Shop:**
+* `http://de.b2b-demo-shop.local` - front-end (Storefront);
+* `http://zed.de.b2b-demo-shop.local` - backend (the Back Office).
+* `http://glue.de.b2b-demo-shop.local` - REST API (Glue).
+
+**B2C Demo Shop:**
+* `http://de.b2c-demo-shop.local/` - front-end (Storefront);
+* `http://zed.de.b2c-demo-shop.local` - backend (the Back Office).
+* `http://glue.de.b2c-demo-shop.local` - REST API (Glue).
+
+Credentials to access the administrator interface: user `admin@spryker.com` and password `change123`.

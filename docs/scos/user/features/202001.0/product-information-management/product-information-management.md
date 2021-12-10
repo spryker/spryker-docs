@@ -23,8 +23,7 @@ redirect_from:
 ***
 
 Ensure a smooth shopping experience with the powerful product management features that allow you to create a neat and fully customized product catalog. Build appropriate category hierarchies and assign attributes and custom labels to products. Enhance your services by including additional product options like gift wrapping or warranty options. Run effective promotional campaigns via time limited offers and pricing, product recommendations and Shop-the-Look collections.
-         </div>
-</div>
+
 
 Check out this video tutorial on how to build products and manage the product information:
 
@@ -32,18 +31,17 @@ Check out this video tutorial on how to build products and manage the product in
 
 
 **Features:**
-<div>
-<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html">Product Bundles</a>
-<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html#dynamic-product-label">Dynamic Product Labels</a>
-<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html">Product Options</a>
-<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html">Product Relations</a>
-<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html">Product Abstraction</a>
-<a class="feature-link" href="/docs/scos/user/features/202005.0/product-information-management/super-attributes.html">Super Attributes</a>
-<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/alternative-products-feature-overview.html">Alternative Products</a>
-<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/product-feature-overview/discontinued-products-overview.html">Discontinued Products</a>
-<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/product-barcode-feature-overview.html">Barcode Generator</a>
-<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/product-information-management/product-quantity-restrictions/product-quantity-restrictions-overview.html">Product Quantity Restrictions</a>
-<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/product-groups-feature-overview.html">Product Groups</a>
-<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html">Configurable Bundles</a>
-<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/product-sets-feature-overview.html">Product Sets</a>
-<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html">Product Labels</a>
+- [Product Bundles](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html)
+- [Dynamic Product Labels](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html#dynamic-product-label)
+- [Product Options](/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html)
+- [Product Relations](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html)
+- [Product Abstraction](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html)
+- [Super Attributes](/docs/scos/user/features/202005.0/product-information-management/super-attributes.html)
+- [Alternative Products](/docs/scos/user/features/{{page.version}}/alternative-products-feature-overview.html)
+- [Discontinued Products](/docs/scos/user/features/{{page.version}}/product-feature-overview/discontinued-products-overview.html)
+- [Barcode Generator](/docs/scos/user/features/{{page.version}}/product-barcode-feature-overview.html)
+- [Product Quantity Restrictions](/docs/scos/user/features/{{page.version}}/product-information-management/product-quantity-restrictions/product-quantity-restrictions-overview.html)
+- [Product Groups](/docs/scos/user/features/{{page.version}}/product-groups-feature-overview.html)
+- [Configurable Bundles](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html)
+- [Product Sets](/docs/scos/user/features/{{page.version}}/product-sets-feature-overview.html)
+- [Product Labels](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html)

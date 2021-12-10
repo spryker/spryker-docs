@@ -38,9 +38,9 @@ In a Spryker shop, the shopping list widget is displayed in the header. With the
                 <li><a href="/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculation-data-structure.html" class="mr-link">Learn about calculation data structure</a></li>
                 <li><a href="/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculator-plugins.html" class="mr-link">Learn about calculation plugins</a></li>
                 <li><a href="/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-notes-overview.html" class="mr-link">Get a general idea of cart notes</a></li>
-               <li><a href="https://documentation.spryker.com/docs/en/managing-guest-carts" class="mr-link">Manage guest carts via Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/en/managing-carts-of-registered-users" class="mr-link">Manage carts of registered users via Glue API</a></li>
-                <li><a href="https://documentation.spryker.com/docs/cart-feature-integration" class="mr-link">Integrate the Cart geature into your project</a></li>
+               <li><a href="/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html" class="mr-link">Manage guest carts via Glue API</a></li>
+                <li><a href="/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html" class="mr-link">Manage carts of registered users via Glue API</a></li>
+                <li><a href="/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html" class="mr-link">Integrate the Cart geature into your project</a></li>
             </ul>
         </div>
         <!-- col2 -->

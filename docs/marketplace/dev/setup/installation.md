@@ -31,7 +31,7 @@ mkdir spryker-b2c-marketplace && cd spryker-b2c-marketplace
 
 git clone https://github.com/spryker-shop/b2c-demo-marketplace.git ./
 
-git clone git@github.com:spryker/docker-sdk.git docker
+git clone https://github.com/spryker/docker-sdk.git docker
 ```
 
 2. Set up a desired environment:

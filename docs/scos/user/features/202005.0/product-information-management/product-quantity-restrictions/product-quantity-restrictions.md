@@ -22,16 +22,16 @@ The Product Quantity Restrictions feature enables you to easily handle all such 
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/v5/docs/en/product-quantity-restrictions-overview" class="mr-link">Get a general idea of the Product Quantity Restrictions feature</a></li>
-                           </ul>
+                <li><a href="/docs/scos/user/features/{{page.version}}/product-information-management/product-quantity-restrictions/product-quantity-restrictions-overview.html" class="mr-link">Get a general idea of the Product Quantity Restrictions feature</a></li>
+            </ul>
         </div>
         <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                 <li><a href="https://documentation.spryker.com/v5/docs/en/product-quantity-restrictions-overview" class="mr-link">Get a general idea of the Product Quantity Restrictions feature</a></li>
-                <li><a href="https://documentation.spryker.com/v5/docs/creating-a-product-variant" class="mr-link">Enable/disable quantity restrictions for concrete products</a></li>
-                <li><a href="https://documentation.spryker.com/v5/docs/en/updating-a-product-variant" class="mr-link">Set minimum, maximum, interval quantity restrictions for concrete products</a></li>
+                 <li><a href="/docs/scos/user/features/{{page.version}}/product-information-management/product-quantity-restrictions/product-quantity-restrictions-overview.html" class="mr-link">Get a general idea of the Product Quantity Restrictions feature</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/concrete-products/creating-product-variants.html" class="mr-link">Enable/disable quantity restrictions for concrete products</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/concrete-products/editing-product-variants.html" class="mr-link">Set minimum, maximum, interval quantity restrictions for concrete products</a></li>
                 </ul>
         </div>
     </div>

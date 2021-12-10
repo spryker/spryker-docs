@@ -11,7 +11,9 @@ redirect_from:
 ---
 
 {% info_block infoBox %}
+
 Publishing functionality is a part of the backoffice.
+
 {% endinfo_block %}
 
 When you add or edit CMS Pages and Blocks in the backoffice, the changes are not available in your online shop.

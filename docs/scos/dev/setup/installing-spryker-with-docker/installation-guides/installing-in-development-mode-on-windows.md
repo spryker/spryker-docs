@@ -125,8 +125,14 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
 
     {% endinfo_block %}
 
+    {% info_block warningBox "Warning" %}
+
+    Note that some versions of Windows have limitation of number of hostnames per line. It is recommended not to exceed 10 hostnames per line. Split long line into multiple lines if necessary.
+
+    {% endinfo_block %}
+ 
     9. Select **File** > **Save**.
-    10. Close the file.
+    10.  Close the file.
 
 12. Once the job finishes, build and start the instance:
 

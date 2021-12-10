@@ -3494,9 +3494,7 @@ entries:
       - title: Deploy file reference - 1.0
         url: /docs/scos/dev/the-docker-sdk/deploy-file/deploy-file-reference-1.0.html
         include_versions:
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
+        - "202108.0"
       - title: Deploy file inheritance — common use cases
         url: /docs/scos/dev/the-docker-sdk/deploy-file/deploy-file-inheritance-common-use-cases.html
         include_versions:
@@ -3504,6 +3502,12 @@ entries:
     - title: Docker environment infrustructure
       url: /docs/scos/dev/the-docker-sdk/docker-environment-infrastructure.html
       include_versions:
+      - "202001.0"
+      - "202005.0"
+    - title: Deploy file reference - 1.0
+      url: /docs/scos/dev/the-docker-sdk/deploy-file-reference-1.0.html
+      include_versions:
+      - "201907.0"
       - "202001.0"
       - "202005.0"
     - title: Services
@@ -3557,7 +3561,6 @@ entries:
       url: /docs/scos/dev/the-docker-sdk/deploy-file-reference-1.0.html
       include_versions:
       - "202009.0"
-      - "202108.0"
     - title: Docker environment infrastructure
       url: /docs/scos/dev/the-docker-sdk/docker-environment-infrastructure.html
       include_versions:

@@ -81,17 +81,17 @@ protected function addPaymentMethodHandlerPluginCollection(Container $container)
 }
 ```
 
-2. Add controller provider:
+2. Add route provider plugin:
 
-**\Pyz\Yves\ShopApplication\YvesBootstrap**
+**\Pyz\Yves\Router\RouterDependencyProvider**
 
 ```php
- protected function getControllerProviderStack($isSsl)
+protected function getRouteProvider(): array
 {
 	return [
 		...
-		new HeidelpayControllerProvider($isSsl),
-	];>
+		new HeidelpayRouteProviderPlugin(),
+	];
 }
 ```
 

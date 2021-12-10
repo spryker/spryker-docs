@@ -28,18 +28,12 @@ Launchpad is designed to launch any kind of apps, however, currently, only the f
 
 ### FeS Architecture
 
-### What is an app/front end template?
+
+### What is a launchpad? 
+
+### What is a feature?
+
+### What is a template?
 
 
 ## What project can use FeS?
-
-
-
-This document describes the following:
-
-* What FeS is
-* What the purpose of FeS is
-* Who the users of FeS are
-* How FeS works, its architecture
-* What projects can use FeS
-* Provides links to other FeS related docs

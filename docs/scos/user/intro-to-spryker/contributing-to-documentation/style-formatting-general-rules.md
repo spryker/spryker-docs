@@ -42,17 +42,17 @@ To keep our docs consistent, we have templates for all types of documents. The t
 
 | TEMPLATE                                                     | DESCRIPTION                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [back-office-user-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/back-office-user-guide-template.md) | Use this template for creating [Back Office user guides](/docs/scos/user/back-office-user-guides/202108.0/customer/customer-customer-access-customer-groups/managing-customers.html) or [Merchant Portal user guides.](/docs/marketplace/user/merchant-portal-user-guides/202108.0/offers/managing-product-offers.html) |
-| [concept-topic-template](https://github.com/spryker/spryker-docs/blob/master/_templates/concept-topic-template.md) | Use this template for creating general and technical conceptual topics, such as [feature overviews](docs/scos/user/features/202108.0/catalog-feature-overview.htm) or [technical articles](/docs/marketplace/dev/front-end/angular-components.html). |
-| [feature-walkthrough-template](https://github.com/spryker/spryker-docs/blob/master/_templates/feature-walkthrough-template.md) | Use this template for creating feature [walkthrough guides](/docs/marketplace/dev/feature-walkthroughs/202108.0/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html#merchant-orders-in-the-merchant-portal). |
-| [feature-integration-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/feature-integration-guide-template.md) | Use this template while working on the [integration guides](/docs/scos/dev/feature-integration-guides/202108.0/agent-assist-feature-integration.html). Check the [instructions on formatting for the integration guides](https://github.com/spryker/spryker-docs/blob/master/_templates/formatting-templates-for-feature-integration-guides.md). |
-| [glue-api-storefront-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/glue-api-storefront-guide-template.md) | Use this template for creating [Glue API guides](/docs/scos/dev/glue-api-guides/202108.0/managing-b2b-account/retrieving-company-users.html). |
-| [data-export-template](https://github.com/spryker/spryker-docs/blob/master/_templates/data-export-template.md) | Use this template for creating documents on [data export](/docs/scos/dev/data-export/202108.0/data-export-orders-.csv-files-format.html). |
-| [data-import-template](https://github.com/spryker/spryker-docs/blob/master/_templates/data-import-template.md) | Use this template for creating documents on [data import](/docs/marketplace/dev/data-import/202108.0/file-details-merchant-category.csv.html). |
+| [back-office-user-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/back-office-user-guide-template.md) | Use this template for creating [Back Office user guides](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html) or [Merchant Portal user guides.](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html) |
+| [concept-topic-template](https://github.com/spryker/spryker-docs/blob/master/_templates/concept-topic-template.md) | Use this template for creating general and technical conceptual topics, such as [feature overviews](/docs/scos/user/features/{{page.version}}/catalog-feature-overview.html) or [technical articles](/docs/marketplace/dev/front-end/angular-components.html). |
+| [feature-walkthrough-template](https://github.com/spryker/spryker-docs/blob/master/_templates/feature-walkthrough-template.md) | Use this template for creating feature [walkthrough guides](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html#merchant-orders-in-the-merchant-portal). |
+| [feature-integration-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/feature-integration-guide-template.md) | Use this template while working on the [integration guides](/docs/scos/dev/feature-integration-guides/{{page.version}}/agent-assist-feature-integration.html). Check the [instructions on formatting for the integration guides](https://github.com/spryker/spryker-docs/blob/master/_templates/formatting-templates-for-feature-integration-guides.md). |
+| [glue-api-storefront-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/glue-api-storefront-guide-template.md) | Use this template for creating [Glue API guides](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-users.html). |
+| [data-export-template](https://github.com/spryker/spryker-docs/blob/master/_templates/data-export-template.md) | Use this template for creating documents on [data export](/docs/scos/dev/data-export/{{page.version}}/data-export-orders-.csv-files-format.html). |
+| [data-import-template](https://github.com/spryker/spryker-docs/blob/master/_templates/data-import-template.md) | Use this template for creating documents on [data import](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-category.csv.html). |
 | [module-migration-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/module-migration-guide-template.md) | Use this template for creating [module migration guides](/docs/scos/dev/module-migration-guides/migration-guide-merchantgui.html#upgrading-from-version-1-to-version-2). |
-| [troubleshooting-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/troubleshooting-guide-template.md) | Use this template for creating [troubleshooting pages](docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/rabbitmq-zed.critical-phpamqplib-exception-amqpchannelclosedexception-channel-connection-is-closed.html). |
+| [troubleshooting-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/troubleshooting-guide-template.md) | Use this template for creating [troubleshooting pages](/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/rabbitmq-zed.critical-phpamqplib-exception-amqpchannelclosedexception-channel-connection-is-closed.html). |
 | [howto-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/howto-guide-template.md) | Use this template for creating [howto guides](/docs/scos/dev/tutorials-and-howtos/howtos/howto-add-a-new-shipment-method.html#setting-up-the-state-machine). |
-| [best-practices-file-template](https://github.com/spryker/spryker-docs/blob/master/_templates/best-practices-file-template.md) | Use this template for creating [Best practices](/docs/scos/user/back-office-user-guides/202108.0/catalog/products/creating-service-offerings-best-practices.html)docs. |
+| [best-practices-file-template](https://github.com/spryker/spryker-docs/blob/master/_templates/best-practices-file-template.md) | Use this template for creating [Best practices](/docs/scos/user/back-office-user-guides/202108.0/catalog/products/creating-service-offerings-best-practices.html) docs. |
 
 A name of the template you used needs to be added to the front matter.
 
@@ -78,10 +78,10 @@ related:
 ---
 ```
 
-| FRONT MATTER PARAMETER | DESCRIPTION                                                  | FORMAT                                                       | REQUIRED? |
-| ---------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | --------- |
+| FRONT MATTER PARAMETER | DESCRIPTION   | FORMAT | REQUIRED? |
+| ---------------------- | ---------- | -------- | --------- |
 | title                  | The name of the document.                                    | Example title                                                | *✓*       |
-| description            | Short description of what this page is about.                | Learn how to use fronnt matter.                              | *✓*       |
+| description            | Short description of what this page is about.                | Learn how to use the front matter.                              | *✓*       |
 | last_updated           | Last updated date of the page to be displayed on the website. | Jun 16, 2021                                                 |           |
 | template               | [Template](https://github.com/spryker/spryker-docs/tree/master/_templates) based on which the page was created. | feature-integration-guide-template                           | *✓*       |
 | tags                   | Tags                                                         | B2B, B2C                                                     |           |
@@ -189,7 +189,7 @@ the `Merchant feature overview` link will take the user to the `Merchant feature
 
 ## Deleting pages
 
-If you happen to delete the unnecessary or outdated page from the website, make sure to set up a redirect for it. See [Setting up redirects on this page](#setting-up-redirects).
+If you happen to delete the unnecessary or outdated page from the website, make sure to set up a redirect for it. See [Front matter](##front-matter) to learn how to set up redirects.
 
 ## Troubleshooting
 
@@ -209,10 +209,10 @@ This command only solves the problem by being specific to the current project.
 
 Jekyll supports a Liquid templating system. All features can be found on page [Liquid](https://shopify.github.io/liquid/basics/introduction/).
 
- Beware that Liquid syntax uses the same tags as Twig. To prevent Twig tags processing use `{% raw %} //Twig template {% endraw %}`
+ Beware that Liquid syntax uses the same tags as Twig. To prevent Twig tags processing use *{% raw %} //Twig template {% endraw %}*
 
  In case, your page requires a Twig code sample to be inserted, enter the above-mentioned placeholder in the beginning and at the end of the code sample. Example:
 
  ![liquid syntax](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/liquid-syntax.png)
 
- To get rid of the extra lines in the code sample, use `{%- raw -%}code sample{% endraw %}` placeholder.
+ To get rid of the extra lines in the code sample, use *{%- raw -%}code sample{% endraw %}* placeholder.

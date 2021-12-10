@@ -332,9 +332,9 @@ Source table:
 Published table:
 
 <div>
-| Function name | Description | Method signature | Usage example |
+| FUNCTION NAME | DESCRIPTION | METHOD SIGNATURE | USAGE EXAMPLE |
 | --- | --- | --- | --- |
-| `model` | Resolves a model path and returns a string in the following format: `@ShopUi/models/{modelName}.twig`. | function model($modelName: string): string <ul><li>$modelName - model name (required).</li></ol> | `{% raw %}{% extends model('component') %}{% endraw %}` | 
+| `model` | Resolves a model path and returns a string in the following format: `@ShopUi/models/{modelName}.twig`. | function model($modelName: string): string <ul><li>$modelName - model name (required).</li></ul> | `{% raw %}{% extends model('component') %}{% endraw %}` | 
 | `define` | This function is used for: <ul><li>creating a default object that can be changed from an incoming context;</li><li>defining tags used to pass properties and contract for a specific component.</li></ul> | | See **Usage Example: define** below. |
 | `qa` | Returns a string in the following format: `data-qa="qa values here"` | `function qa($qaValues: string[] = []): string` | `{% raw %}{{ qa('submit-button') }}{% endraw %}` |
 </div>

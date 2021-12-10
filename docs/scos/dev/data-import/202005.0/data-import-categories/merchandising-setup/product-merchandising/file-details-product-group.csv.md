@@ -9,9 +9,9 @@ redirect_from:
   - /v5/docs/en/file-details-product-groupcsv
 ---
 
-This article contains content of the **product_group.csv** file to configure [Product Group](https://documentation.spryker.com/v5/docs/en/product-gropus) information on your Spryker Demo Shop.
+This article contains content of the **product_group.csv** file to configure [Product Group](/docs/scos/user/features/{{page.version}}/product-groups-feature-overview.html) information on your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
+## Headers & Mandatory Fields
 These are the header fields to be included in the .csv file:
 
 | Field Name | Mandatory | Type | Other Requirements/Comments | Description |

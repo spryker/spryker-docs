@@ -94,7 +94,7 @@ The roadmap contains features and not architectural items, enhancements, technol
 
 </div>
 
-## FaaS
+## FeS
 
 <div class="width-100">
 

@@ -192,7 +192,7 @@ Configure Elasticsearch localized parameters:
 
 #### RabbitMQ
 
-Configure RabbitMQ permissions and virtual hosts according to the instructions in [Tutorial - Set Up a "Hello World" Queue - Legacy Demoshop](http://documentation.spryker.com/v4/docs/setup-hello-world-queue#rabbitmq-management-ui).
+Configure RabbitMQ permissions and virtual hosts according to the instructions in [Tutorial - Set Up a "Hello World" Queue - Legacy Demoshop](/docs/scos/dev/legacy-demoshop/201811.0/set-up-a-hello-world-queue-legacy-demoshop.html#rabbitmq-management-ui).
 
 #### Hostname
 
@@ -213,7 +213,6 @@ If you want to configure the hostname, set the values for Yves and Zed hostnames
    composer install
    vendor/bin/install
    ```
-
 
  When the installation process is complete, Spryker Commerce OS is ready to use. It can be accessed via the following links:
 

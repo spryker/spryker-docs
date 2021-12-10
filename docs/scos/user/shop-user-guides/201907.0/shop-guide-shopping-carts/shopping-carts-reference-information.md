@@ -17,15 +17,15 @@ Shopping Carts page is the page where you can access your shopping carts. Don't 
 
 There are two ways to open the Shopping Carts page:
 
-1. Via a **Shopping Cart Widget**. Go to the header of the shop application → My Cart → All Carts.! 
-![Shopping cart widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shopping+Carts+-+Reference+Information/shopping-carts-widget.png) 
+1. Via a **Shopping Cart Widget**. Go to the header of the shop application → My Cart → All Carts.!
+![Shopping cart widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shopping+Carts+-+Reference+Information/shopping-carts-widget.png)
 
-2. Via a **Customer Account**. Navigate to your user icon → Overview → Shopping Carts submenu. 
-![Customer account overview](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shopping+Carts+-+Reference+Information/customer-account-overview.png) 
+2. Via a **Customer Account**. Navigate to your user icon → Overview → Shopping Carts submenu.
+![Customer account overview](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shopping+Carts+-+Reference+Information/customer-account-overview.png)
 
 On the Shopping Carts page, you see the following:
 
-![Shopping cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shopping+Carts+-+Reference+Information/shopping-carts-page.png) 
+![Shopping cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shopping+Carts+-+Reference+Information/shopping-carts-page.png)
 
 | # | Element | Description |
 |---|---|---|
@@ -35,7 +35,7 @@ On the Shopping Carts page, you see the following:
 | 4 | **No. of items** | A number of items placed in the cart. |
 | 5 | **Prices** | Displays the prices according to its type: Gross or Net. |
 | 6 | **Total** | Cart total amount. |
-| 7 | **Status** | Displays the status of the cart. See [Approval Process feature overview](https://documentation.spryker.com/v3/docs/approval-process-overview-201903) for more information on statuses. Available only after the Approval Process feature has been integrated into your project. |
+| 7 | **Status** | Displays the status of the cart. See [Approval Process feature overview](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) for more information on statuses. Available only after the Approval Process feature has been integrated into your project. |
 | 8 | **Actions** | A set of actions you can d with a shopping cart. |
 | 9 |  **+ Create Shopping Cart** | Creates a new shopping cart. |
 ***
@@ -44,7 +44,7 @@ On the Shopping Carts page, you see the following:
 You can access a Shopping Cart page by clicking on a respective shopping cart name on the Shopping Carts page:
 ![Shopping cart page overview](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shopping+Carts+-+Reference+Information/shopping-cart-page-overview.png)
 Every Shopping Cart page consists of:
-![Shopping cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shopping+Carts+-+Reference+Information/shopping-cart-page.png) 
+![Shopping cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shopping+Carts+-+Reference+Information/shopping-cart-page.png)
 
 | # | Element | Description |
 |---|---|---|

@@ -56,7 +56,6 @@ To retrieve a list of all orders made by a registered customer, send the request
 | offset | Ofset of the order at which to begin the response. <br> Works only together with `page[limit]`. <br> To work correctly, the value should be devisable by the value of `page[limit]`. <br> The default value is `0`.  | From `0` to any. |
 | limit | Maximum number of entries to return. <br> Works only together with `page[offset]`. <br> The default value is `10`. | From `1` to any. |
 
-
 | REQUEST | USAGE |
 | --- | --- |
 | GET https://glue.mysprykershop.com/orders | Retrieve all orders. |
@@ -1215,9 +1214,8 @@ To retrieve detailed information on an order, send the request:
 }
 
 ```    
+
 </details>
-
-
 
 **General order information**
 
@@ -1228,9 +1226,8 @@ To retrieve detailed information on an order, send the request:
 | currencyIsoCode | String | ISO 4217 code of the currency that was selected when placing the order. |
 | priceMode       | String | Price mode that was active when placing the order. Possible values:<ul><li>**NET_MODE**—prices before tax.</li><li>**GROSS_MODE**—prices after tax.</li></ul> |
 
-
-
 **Totals calculations**
+
 | Attribute                | Type    | Description                                     |
 | ------------------------ | ------- | ----------------------------------------------- |
 | totals                   | Object  | Totals calculations.                            |
@@ -1266,10 +1263,7 @@ To retrieve detailed information on an order, send the request:
 | billingAddress.iso2Code    | String | ISO 2-Letter Country Code to use.                            |
 | shippingAddress            | object | Shipment address of the order. This value is returned only if you submit an order without split delivery. See [Checking out purchases in version 202009.0](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html) to learn how to do that. |
 
-
 **Order item information**
-
-
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --------------------------------------- | ------- | ------------------------------------------------------------ |
@@ -1323,6 +1317,7 @@ To retrieve detailed information on an order, send the request:
 | items.metadata.image                    | String  | Product image URL.                                           |
 
 **Measurement unit calculations**
+
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | salesUnit | Object | List of attributes defining the sales unit to be used for item amount calculation. |

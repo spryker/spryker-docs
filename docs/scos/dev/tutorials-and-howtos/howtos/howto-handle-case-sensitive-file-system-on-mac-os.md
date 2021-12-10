@@ -16,6 +16,8 @@ redirect_from:
   - /v5/docs/en/ht-case-sensitive-file-system-mac
   - /v4/docs/ht-case-sensitive-file-system-mac
   - /v4/docs/en/ht-case-sensitive-file-system-mac
+  - /v3/docs/ht-case-sensitive-file-system-mac
+  - /v3/docs/en/ht-case-sensitive-file-system-mac
   - /v2/docs/ht-case-sensitive-file-system-mac
   - /v2/docs/en/ht-case-sensitive-file-system-mac
   - /v1/docs/ht-case-sensitive-file-system-mac

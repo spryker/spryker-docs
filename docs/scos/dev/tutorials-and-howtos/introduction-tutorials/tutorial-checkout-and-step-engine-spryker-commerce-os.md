@@ -16,6 +16,8 @@ redirect_from:
   - /v5/docs/en/t-checkout-and-step-engine-spryker-commerce-os
   - /v4/docs/t-checkout-and-step-engine-spryker-commerce-os
   - /v4/docs/en/t-checkout-and-step-engine-spryker-commerce-os
+  - /v3/docs/t-checkout-and-step-engine-spryker-commerce-os
+  - /v3/docs/en/t-checkout-and-step-engine-spryker-commerce-os
   - /v2/docs/t-checkout-and-step-engine-spryker-commerce-os
   - /v2/docs/en/t-checkout-and-step-engine-spryker-commerce-os
   - /v1/docs/t-checkout-and-step-engine-spryker-commerce-os

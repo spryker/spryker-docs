@@ -17,10 +17,10 @@ Different Product resources allow you to retrieve all the product information av
 In your development, these resources can help you to retrieve relevant information for your product listing and detail pages, for search, shopping cart, checkout, order history, wishlist and many more.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Products API](https://documentation.spryker.com/v1/docs/products-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Products API](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html).
 
 ## Abstract and Concrete Products
-As Spryker Commerce OS implements product data in a hierarchical structure, this concept is also implemented in the [Product API](https://documentation.spryker.com/v1/docs/products-feature-integration). The API provides separate endpoints for abstract and concrete products. Their names contain the abstract and concrete words, respectively.
+As Spryker Commerce OS implements product data in a hierarchical structure, this concept is also implemented in the [Product API](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html). The API provides separate endpoints for abstract and concrete products. Their names contain the abstract and concrete words, respectively.
 
 ## General Product Information
 To retrieve full information about a product (regardless of whether it is available or not) via REST, use the endpoints listed below.
@@ -828,4 +828,3 @@ Sample response
 | 312 | RESPONSE_CODE_CONCRETE_PRODUCT_SKU_IS_MISSING | Concrete product SKU is not specified. |
 | 313 | RESPONSE_CODE_INVALID_CURRENCY | Currency is invalid. |
 | 314 | RESPONSE_CODE_INVALID_PRICE_MODE | Price mode is invalid. |
-

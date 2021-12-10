@@ -43,18 +43,18 @@ The super attributes drop-down list includes only those selected during the abst
 The merchant relation prices are inherited by Product Variants as well.
 {% endinfo_block %}
     3. Otherwise, enter Original and eventually Default prices for the product for Gross and Net price modes.
-    4. **B2B only:** In the **Merchant Price Dimension**, select the merchant relationship to define a special price per merchant relation. See [Merchants](https://documentation.spryker.com/v5/docs/en/merchants) and [Products: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/references/products-reference-information.html) to know more.
+    4. **B2B only:** In the **Merchant Price Dimension**, select the merchant relationship to define a special price per merchant relation. See [Merchants Custom Prices](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html) and [Products: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/references/products-reference-information.html) to know more.
     5. Select **Quantity** for the product and then select **Never out of stock** if you want the product to never go out of stock.
 6. **Optionally**: Click **Next** to go to the next tab (Image) or select a necessary tab.
     1. In the Image tab, add images for the product and define the image order.
-7. **Optionally**: Click **Next** of select the **Assign bundled products** tab. This tab is used only if you need to create a bundles product. See [Creating and Managing Product Bundles](https://documentation.spryker.com/v5/docs/en/creating-and-managing-product-bundles) to know more.
+7. **Optionally**: Click **Next** of select the **Assign bundled products** tab. This tab is used only if you need to create a bundles product. See [Creating and Managing Product Bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-product-bundles.html) to know more.
 8. Click **Save**.
 
 Once you click **Save**, the page is refreshed and you will see two additional tabs: Discontinue and Product Alternatives. See  [Discontinuing Products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/discontinuing-products.html) and [Adding Product Alternatives](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/adding-product-alternatives.html) to know more.
 
 {% info_block errorBox "Important" %}
 
-To make sure your product wil be shown and searchable in your online store, we highly recommend you to go through the checklist in [HowTo - Make a Product Searchable and Shown on the Storefront](/docs/scos/dev/tutorials/{{page.version}}/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html).
+To make sure your product will be shown and searchable in your online store, we highly recommend you to go through the checklist in [HowTo - Make a Product Searchable and Shown on the Storefront](/docs/scos/dev/tutorials/{{page.version}}/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html).
 
 {% endinfo_block %}
 ***

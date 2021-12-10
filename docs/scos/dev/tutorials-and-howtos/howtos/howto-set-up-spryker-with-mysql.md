@@ -16,6 +16,8 @@ redirect_from:
   - /v5/docs/en/ht-setup-spryker-with-mysql
   - /v4/docs/ht-setup-spryker-with-mysql
   - /v4/docs/en/ht-setup-spryker-with-mysql
+  - /v3/docs/ht-setup-spryker-with-mysql
+  - /v3/docs/en/ht-setup-spryker-with-mysql
   - /v2/docs/ht-setup-spryker-with-mysql
   - /v2/docs/en/ht-setup-spryker-with-mysql
   - /v1/docs/ht-setup-spryker-with-mysql

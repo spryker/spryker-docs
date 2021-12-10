@@ -22,7 +22,7 @@ You can easily promote and sell your products and services across multiple chann
 
 **Features:**
 <div>
-<a class="feature-link" href="https://documentation.spryker.com/v4/docs/multiple-touchpoint-integration">Multiple Touchpoints Integration</a>  
-    <a class="feature-link" href="https://documentation.spryker.com/v4/docs/responsive-design">Responsive Design</a>
-    <a class="feature-link" href="https://documentation.spryker.com/v3/docs/multi-theme-201907">Multi-Theme</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/multi-channel/multiple-touchpoints-integration.html">Multiple Touchpoints Integration</a>  
+    <a class="feature-link" href="/docs/scos/user/features/{{page.version}}/multi-channel/responsive-design.html">Responsive Design</a>
+    <a class="feature-link" href="/docs/scos/user/features/{{page.version}}/multi-channel/multi-theme/multi-theme.html">Multi-Theme</a>
 </div>

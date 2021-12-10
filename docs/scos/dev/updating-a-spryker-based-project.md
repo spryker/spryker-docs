@@ -229,7 +229,7 @@ Automoted tests are must-have for every project in general and are very helpful 
 * Functional tests - cover your Facade methods in Zed
 * Unit tests - cover classes with complex business logic and tricky algorithms
 
-See the [Testing](/docs/scos/dev/guidelines/testing/test-framework.html) section for information on what Spryker has to offer in terms of testing your project's code.
+See the [Testing](/docs/scos/dev/guidelines/testing-guidelines/test-framework.html) section for information on what Spryker has to offer in terms of testing your project's code.
 
 {% info_block infoBox "Note" %}
 

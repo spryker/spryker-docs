@@ -16,6 +16,8 @@ redirect_from:
   - /v5/docs/en/t-testing-tdd-scos
   - /v4/docs/t-testing-tdd-scos
   - /v4/docs/en/t-testing-tdd-scos
+  - /v3/docs/t-testing-tdd-scos
+  - /v3/docs/en/t-testing-tdd-scos
   - /v2/docs/t-testing-tdd-scos
   - /v2/docs/en/t-testing-tdd-scos
   - /v1/docs/t-testing-tdd-scos

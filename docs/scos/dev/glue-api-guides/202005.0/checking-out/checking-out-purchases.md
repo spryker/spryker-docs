@@ -84,10 +84,10 @@ To submit a request, the customer needs to have at least one cart with products 
 | billingAddress | RestAddressTransfer | x | Customer's billing address.<br>For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html). |
 | shippingAddress | RestAddressesRequestData | x | Customer's shipping address.<br>For details, see [Managing Customers.](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html) |
 | payments | RestPayment | x | Payment options, such as the payment system, method of payment, etc.<br>For details, see [Payment Step](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-payment-step.html). |
-| shipment | RestShipmentTransfer | x | Shipment details.<br>For details, see [Shipment Step](https://documentation.spryker.com/v5/docs/en/checkout-steps-201903#shipment-step). |
+| shipment | RestShipmentTransfer | x | Shipment details.<br>For details, see [Shipment Step](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html#shipment-step). |
 
 **Body Sample**
-    
+
 ```json
 {
     "data": {
@@ -157,7 +157,7 @@ The following address parts are compulsory: **salutation**, **firstName**, **las
 {% endinfo_block %}
 
 **Body Sample**
-    
+
 ```json
 {
     "data": {
@@ -194,7 +194,7 @@ In case of a successful update, the endpoint responds with information that can 
 
 <details open>
 <summary markdown='span'>Response sample</summary>
-    
+
 ```json
 {
     "data": {
@@ -267,7 +267,7 @@ In case of a successful update, the endpoint responds with information that can 
     }
 }
 ```
-    
+
 <br>
 </details>
 
@@ -293,12 +293,12 @@ During checkout, customers need to specify the payment and shipment details for 
 
 If you opt to fetch such information, the details include not only the provider names but also such details as the availability, cost, duration of shipment and other important pieces of information that can help customers in making their choice.
 
-To fetch the available payment methods, include the **payment-methods** resource relationship in the response of the *checkout-data* endpoint: 
+To fetch the available payment methods, include the **payment-methods** resource relationship in the response of the *checkout-data* endpoint:
 **POST http://glue.mysprykershop.com/checkout-data?include=payment-methods**
 
 <details open>
 <summary markdown='span'>Response sample</summary>
-   
+
 ```
 {
     "data": {
@@ -379,7 +379,7 @@ To retrieve shipment methods, include the **shipment-methods** resource relation
 
 <details open>
 <summary markdown='span'>Response sample</summary>
-   
+
 ```
 {
     "data": {
@@ -522,7 +522,7 @@ If the payment and/or shipment methods have been specified in the request to the
 
 <details open>
 <summary markdown='span'>Response sample with shipment and payment methods selected</summary>
-   
+
 ```
 {
     "data": {
@@ -605,7 +605,7 @@ By default, if the checkout is successful, the order is placed and the shopping 
 | shipment | RestShipmentTransfer | v | Shipment details.<br>For details, see [Shipment Step](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-shipment-step.html). |
 
 **Body Sample**
-    
+
 ```json
 {
     "data": {
@@ -675,7 +675,7 @@ The following address parts are compulsory: **salutation**, **firstName**, **las
 {% endinfo_block %}
 
 **Body Sample**
-    
+
 ```json
 {
     "data": {
@@ -751,7 +751,7 @@ Among the attributes returned, there is **orderReference** that can be used to r
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Response Sample**
-    
+
 ```json
 {
     "data": {
@@ -772,13 +772,15 @@ Among the attributes returned, there is **orderReference** that can be used to r
 You can extend the response with the **orders** resource relationship in order to obtain detailed order information.
 
 {% info_block infoBox "Info" %}
-For detailed information and a list of attributes, see section [Retrieving Specific Order](https://documentation.spryker.com/v5/docs/en/retrieving-order-history#retrieving-specific-order).
+
+For detailed information and a list of attributes, see section [Retrieving Specific Order](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html).
+
 {% endinfo_block %}
 
 Sample request: *POST http://glue.mysprykershop.com/checkout?include=orders*
 
 **Response Sample**
-    
+
 ```json
 {
     "data": {
@@ -1043,7 +1045,7 @@ You can also use the **Accept-Language** header to specify the locale.<br>Sample
 {% endinfo_block %}
 
 **Sample Request Body**
-    
+
 ```json
 {
   "data": {
@@ -1074,7 +1076,7 @@ If the request was successful, the endpoint will respond with a 201 Created stat
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Response Sample**
-    
+
 ```json
 {
   "data": {
@@ -1105,4 +1107,3 @@ If the request was successful, the endpoint will respond with a 201 Created stat
 | --- | --- |
 | 404 | Order not found. |
 | 422 | Order payment is not updated. |
-

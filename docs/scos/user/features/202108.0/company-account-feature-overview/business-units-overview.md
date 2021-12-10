@@ -33,8 +33,11 @@ The company administrator can create, edit, delete as well as arrange business u
 To create a business unit, its name and email address must be specified.
 
 {% info_block infoBox %}
+
 The user can also select a parent business unit of the newly created unit. If it is not selected, the new business unit will be created with "0" level in hierarchy, i.e. as a parent.
+
 {% endinfo_block %}
+
 ![new-bu.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/new-bu.png)
 
 The parent and child business units are visually differentiated by means of indents. This differentiation is described in the following table:
@@ -55,7 +58,9 @@ The following are special characteristics of business units:
 * Deleting a parent business unit does not delete its children. The hierarchy is kept, and just goes one level up.
 
 {% info_block infoBox %}
+
 A business unit's children that are one level below it, become 0 level parent business units, and their children become 1 level children.
+
 {% endinfo_block %}
 
 * A business unit can be assigned with one or multiple addresses.

@@ -169,7 +169,7 @@ The command syntax is as follows:
 ## Queue Workers
 Queue `Worker` is another useful command that sends the `Task`  to a background process and provides parallel processing. By adjusting the `Worker` config, we can run tasks within a different time slot and with a different amount of processes.
 
-![rabbitmq_worker.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Development/Queue/Queue/rabbitmq_worker.png) 
+![rabbitmq_worker.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Development/Queue/Queue/rabbitmq_worker.png)
 
 **Command syntax:**
 
@@ -196,7 +196,9 @@ $jobs[] = [
 ```
 
 {% info_block infoBox %}
-For more information and examples of how to get started with the Queue module, see [Tutorial - Set Up a "Hello World" Queue](https://documentation.spryker.com/2021080/docs/setup-hello-world-queue).
+
+For more information and examples of how to get started with the Queue module, see [Tutorial - Set Up a "Hello World" Queue](/docs/scos/dev/legacy-demoshop/201811.0/set-up-a-hello-world-queue-legacy-demoshop.html).
+
 {% endinfo_block %}
 
 <!-- Last review date: Apr 9, 2019 by Ehsan Zanjani and Dmitry Beirak -->

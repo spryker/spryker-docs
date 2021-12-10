@@ -4076,6 +4076,7 @@ entries:
           nested:
             - title: Configuring Loggly
               url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/configuring-loggly.html
+              
   - title: Architecture
     url: /docs/scos/dev/architecture/architecture.html
     nested:
@@ -4145,7 +4146,7 @@ entries:
     - title: Project development guidelines
       url: /docs/scos/dev/guidelines/project-development-guidelines.html
     - title: Data Processing Guidelines
-      url: /docs/scos/dev/guidelines/data-processing-guidelines.html      
+      url: /docs/scos/dev/guidelines/data-processing-guidelines.html
     - title: Module configuration convention
       url: /docs/scos/dev/guidelines/module-configuration-convention.html
     - title: Making your Spryker shop secure

@@ -8,6 +8,7 @@ originalArticleId: 57969b58-9ac1-40e5-b10a-a44db4522894
 redirect_from:
   - /v4/docs/eco-punchout-catalogs-feature-integration
   - /v4/docs/en/eco-punchout-catalogs-feature-integration
+  - /docs/scos/user/technology-partners/202001.0/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-feature-integration.html
 ---
 
 ## Install Feature Core
@@ -67,14 +68,14 @@ Enable the following behaviors by registering the plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\PunchoutCatalogs;
- 
+
 use SprykerEco\Zed\PunchoutCatalogs\Communication\Plugin\PunchoutCatalogs\CXmlPunchoutCatalogConnectionFormatPlugin;
 use SprykerEco\Zed\PunchoutCatalogs\Communication\Plugin\PunchoutCatalogs\OciPunchoutCatalogConnectionFormatPlugin;
 use SprykerEco\Zed\PunchoutCatalogs\Communication\Plugin\PunchoutCatalogs\SetupRequestPunchoutCatalogConnectionTypePlugin;
 use SprykerEco\Zed\PunchoutCatalogs\PunchoutCatalogsDependencyProvider as SprykerPunchoutCatalogsDependencyProvider;
- 
+
 class PunchoutCatalogsDependencyProvider extends SprykerPunchoutCatalogsDependencyProvider
 {
     /**
@@ -87,7 +88,7 @@ class PunchoutCatalogsDependencyProvider extends SprykerPunchoutCatalogsDependen
             new CXmlPunchoutCatalogConnectionFormatPlugin(),
         ];
     }
- 
+
     /**
      * @return \SprykerEco\Zed\PunchoutCatalogs\Dependency\Plugin\PunchoutCatalogConnectionTypePluginInterface[]
      */

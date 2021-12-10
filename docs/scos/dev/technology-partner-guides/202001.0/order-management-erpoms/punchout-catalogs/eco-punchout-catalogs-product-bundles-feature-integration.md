@@ -8,6 +8,7 @@ originalArticleId: 1d5d5e64-47f0-45df-b094-b04b869577d3
 redirect_from:
   - /v4/docs/eco-punchout-catalogs-product-bundles-feature-integration
   - /v4/docs/en/eco-punchout-catalogs-product-bundles-feature-integration
+  - /docs/scos/user/technology-partners/202001.0/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html
 ---
 
 ## Install Feature Core
@@ -35,12 +36,12 @@ Enable the following behaviors by registering the plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\PunchoutCatalogs;
- 
+
 use SprykerEco\Zed\PunchoutCatalogs\Communication\Plugin\PunchoutCatalogs\BundleModePunchoutCatalogSetupRequestFormExtensionPlugin;
 use SprykerEco\Zed\PunchoutCatalogs\PunchoutCatalogsDependencyProvider as SprykerPunchoutCatalogsDependencyProvider;
- 
+
 class PunchoutCatalogsDependencyProvider extends SprykerPunchoutCatalogsDependencyProvider
 {
     /**

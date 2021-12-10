@@ -21,12 +21,14 @@ Guest carts come with an expiration date, which means that unregistered users ca
 Only one cart can be created for each guest customer.
 
 {% info_block infoBox %}
-If you want to know how to process carts of registered users, see [Managing Carts of Registered Users](https://documentation.spryker.com/v2/docs/managing-carts-of-registered-users-201907).
+
+If you want to know how to process carts of registered users, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html).
+
 {% endinfo_block %}
 
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Carts API](https://documentation.spryker.com/v2/docs/cart-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Carts API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html).
 
 ## Resources for Accessing Guest Carts
 The `/guest-carts` and `/guest-cart-items` resources provide endpoints to manage carts of users who haven't yet registered in the system or authenticated with the Glue REST API. Such carts provide the possibility for users to place items on a cart without the necessity to provide any registration information.
@@ -603,7 +605,7 @@ No matter which of the 2 endpoints you use, it will respond with a **RestCartsRe
 |  sku| String |	SKU of the product.  |
 | quantity | Integer |Quantity of the given product in the cart.  |
 |  groupKey| String | Unique item identifier. The value is generated based on product parameters. |
-|amount  | Integer | 	Amount of the product in the cart. 
+|amount  | Integer | 	Amount of the product in the cart.
 \*The fields mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Cart item calculation information**
@@ -785,4 +787,3 @@ To assign a guest cart to a new customer, send a request to create a customer an
 {% info_block infoBox %}
 The user's unique identifier is passed in the **X-Anonymous-Customer-Unique-Id** header when creating a cart. It is managed by the API client.
 {% endinfo_block %}
-

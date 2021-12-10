@@ -8,6 +8,7 @@ originalArticleId: 05721975-95e1-4606-9eb1-253c63cdc523
 redirect_from:
   - /v3/docs/file-uploader
   - /v3/docs/en/file-uploader
+  - /v3/docs/file-uploader-feature-overview
 ---
 
 In B2B business environment, media management can become a tricky task for e-commerce store owners. At some point or another a merchant would need their e-commerce shop to include an option to upload the text or media files (e.g. tutorials, instructions, license agreements, additional pictures or photos) for the products and easily manage them within the system.
@@ -22,7 +23,6 @@ File Uploader feature allows a Back Office user to upload files in accordance to
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/v3/docs/file-uploader-feature-overview" class="mr-link">Get a general idea about the File Uploader feature</a></li>
                 <li><a href="#" class="mr-link">Enable Cart Notes in your project</a></li>
             </ul>
         </div>
@@ -30,9 +30,8 @@ File Uploader feature allows a Back Office user to upload files in accordance to
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/v3/docs/file-uploader-feature-overview" class="mr-link">Get a general idea about the File Uploader feature</a></li>
-                <li><a href="https://documentation.spryker.com/v4/docs/managing-file-tree#uploading-files" class="mr-link">Upload files to the Back Office</a></li>
-                <li><a href="https://documentation.spryker.com/v4/docs/adding-content-item-widgets-to-pages-and-blocks#adding-content-item-widgets-to-pages" class="mr-link">Add a File to the Shop Application</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/content/file-manager/managing-file-tree.html#uploading-files" class="mr-link">Upload files to the Back Office</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html#adding-content-item-widgets-to-pages" class="mr-link">Add a File to the Shop Application</a></li>
             </ul>
         </div>
     </div>

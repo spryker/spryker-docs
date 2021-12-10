@@ -11,7 +11,9 @@ redirect_from:
 ---
 
 {% info_block errorBox "Attention!" %}
+
  The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds the **Product Concrete Search Widget** functionality.
+
 {% endinfo_block %}
 
 ## Install Feature Core
@@ -29,11 +31,13 @@ Please overview and install the necessary features before beginning the integrat
 Run the following command to install the required modules:
 
 ```shell
-composer require spryker-feature/product: "^201903.0" --update-with-dependencies 
+composer require spryker-feature/product: "^201903.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that the following module is installed:<table><thead><tr class="TableStyle-PatternedRows2-Head-Header1"><th class="TableStyle-PatternedRows2-HeadE-Regular-Header1">Module</th><th class="TableStyle-PatternedRows2-HeadD-Regular-Header1">Expected Directory</th></tr></thead><tbody><tr class="TableStyle-PatternedRows2-Body-LightRows"><td class="TableStyle-PatternedRows2-BodyB-Regular-LightRows">`ProductSearchWidget`</td><td class="TableStyle-PatternedRows2-BodyA-Regular-LightRows">`vendor/spryker-shop/product-search-widget`</td></tr></tbody></table>
+
 {% endinfo_block %}
 
 ### 2) Add Translations
@@ -41,7 +45,7 @@ Make sure that the following module is installed:<table><thead><tr class="TableS
 Append the glossary according to your configuration:
 
 <details open>
-    <summary markdown='span'>src/data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```yaml
 quick-order.input.placeholder,Search by SKU or Name,en_US
@@ -49,22 +53,25 @@ quick-order.input.placeholder,Suche per SKU oder Name,de_DE
 product_quick_add_widget.form.quantity,"# Qty",en_US
 product_quick_add_widget.form.quantity,"# Anzahl",de_DE
 quick-order.search.no_results,Item cannot be found,en_US
-quick-order.search.no_results,Das produkt konnte nicht gefunden werden.,de_DE 
+quick-order.search.no_results,Das produkt konnte nicht gefunden werden.,de_DE
   ```
 <br>
 </details>
 
 Run the following console command to import data:
 ```shell
-console data:import glossary 
+console data:import glossary
 ```
 {% info_block warningBox "Verification" %}
+
 Make sure that the configured data are added to the `spy_glossary` table in the database.
+
 {% endinfo_block %}
 
 ### 3) Set up Widgets
-  
+
 Register the following plugins to enable widgets:
+
 |Plugin|Description|Prerequisites|Namespace|
 |---|---|---|---|
 |`ProductConcreteSearchWidget`|Allows customers to search for concrete products on the Cart page.|None|  `SprykerShop\Yves\ProductSearchWidget\Widget`|`ProductConcreteAddWidget`|Incorporates `ProductConcreteSearchWidget` and allows customers to search for concrete products and quickly add them to the Cart with the desired quantity.|None|`SprykerShop\Yves\ProductSearchWidget\Widget`|
@@ -99,5 +106,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 </details>
 
 {% info_block warningBox "Verification" %}
+
 Make sure that the following widgets are registered:<table><thead><tr><th>Module</th><th>Test</th></tr></thead><tbody><tr><td>`ProductConcreteSearchWidget`</td><td>Go to the Cart page and make sure the "Quick add to Cart" section is present, so you can search for concrete products by typing their SKU.</td></tr><tr><td>`ProductConcreteAddWidget`</td><td>	Go to the Cart page and make sure the "Quick add to Cart" section is present, so you can add the found products to the Cart with the desired Quantity.</td></tr></tbody></table>
+
 {% endinfo_block %}

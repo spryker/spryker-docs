@@ -27,18 +27,18 @@ The extensive Cart allows your customers to add products to their Cart by simply
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/v1/docs/cart-functionality" class="mr-link">Learn about the Cart module</a></li>
-                <li><a href="https://documentation.spryker.com/v1/docs/calculation" class="mr-link">Learn about the Calculation module</a></li>
-                <li><a href="https://documentation.spryker.com/v1/docs/calculation-data-structure" class="mr-link">Get acquainted with calculation data structure</a></li>
-                <li><a href="https://documentation.spryker.com/v1/docs/calculator-plugins" class="mr-link">Check out calculation plugins</a></li>
-                <li><a href="https://documentation.spryker.com/v1/docs/cart-notes" class="mr-link">Leave notes to cart and to products in cart</a></li>
+                <li><a href="/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/cart-functionality.html" class="mr-link">Learn about the Cart module</a></li>
+                <li><a href="/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculation-3.0.html" class="mr-link">Learn about the Calculation module</a></li>
+                <li><a href="/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculation-data-structure.html" class="mr-link">Get acquainted with calculation data structure</a></li>
+                <li><a href="/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculator-plugins.html" class="mr-link">Check out calculation plugins</a></li>
+                <li><a href="/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-notes-overview.html" class="mr-link">Leave notes to cart and to products in cart</a></li>
             </ul>
         </div>
         <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/v1/docs/cart-functionality" class="mr-link">Understand how Cart functions</a></li>
+                <li><a href="/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/cart-functionality.html" class="mr-link">Understand how Cart functions</a></li>
             </ul>
         </div>
     </div>

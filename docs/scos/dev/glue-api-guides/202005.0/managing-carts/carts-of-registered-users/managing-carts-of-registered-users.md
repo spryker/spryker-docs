@@ -26,7 +26,9 @@ related:
 The **Carts API** provides access to management of customers' shopping carts. Carts come in two different forms: carts for registered customers and carts for guests. In your development, the resources provided by the API can support you in the development of shopping cart functionality.
 
 {% info_block infoBox "Cart types" %}
+
 The following document covers the APIs for carts for **registered customers** only. If you want to know how to access carts of unregistered users, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html).
+
 {% endinfo_block %}
 
 ## Multiple Carts
@@ -42,7 +44,9 @@ To use a Company Account, a customer needs to retrieve a bearer token for the ac
 *  carts shared with the Company Account.
 
 {% info_block infoBox "Authentication" %}
+
 For details on how to receive the token, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html).
+
 {% endinfo_block %}
 
 To be able to access shared carts, the API client needs to access the endpoints provided by the Carts API using the token received when impersonating as the Company Account. Doing so provides access to management of both the user's own carts and the carts shared with the current Company Account based on the bearer token presented.
@@ -52,20 +56,24 @@ Shared carts can be accessed and manipulated the same as regular carts. The only
 By default, there are 2 levels of permissions for shared carts: **read-only** and **full access**. If a user attempts to perform an unauthorized action on a shared cart, the API will respond with the **403 Forbidden** status code.
 
 {% info_block infoBox "Info" %}
+
 For more details, see [Retrieving Cart Permission Groups](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html)
+
 {% endinfo_block %}
 
 To distinguish whether a specific cart is owned by a user directly or shared with them, you need to extend the responses of the endpoints with the **cart-permission-groups** resource relationship.. If a cart is shared with the user, it will contain the relationship, while if a cart is owned by the user directly, the relationship will not be present.
 
 
 {% info_block infoBox "Info" %}
+
 For more details, see section *Retrieving Cart Permission Groups* in [Sharing Company User Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html).
+
 {% endinfo_block %}
 
 
 ## Installation
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Carts API](https://documentation.spryker.com/v5/docs/en/cart-feature-integration)
+* [Carts API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)
 * [Glue API: Measurement Units Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html)
 * [Promotions & Discounts API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
 
@@ -219,7 +227,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
 
 {% endinfo_block %}
 
-#### Response 
+#### Response
 
 <details>
     <summary markdown='span'>Response sample</summary>
@@ -232,7 +240,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
     }
 }
 ```
-    
+
 </details>
 
 <details>
@@ -297,7 +305,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
     }
 }
 ```
-    
+
 </details>
 
 
@@ -425,7 +433,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
     ]
 }
 ```
-    
+
 </details>
 
 
@@ -550,7 +558,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
     ]
 }
 ```
-    
+
 </details>
 
 <details>
@@ -643,7 +651,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
     ]
 }
 ```
-    
+
 </details>
 
 <details>
@@ -787,7 +795,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
     ]
 }
 ```
-    
+
 </details>
 <a name="all-carts-response-attributes"></a>
 
@@ -865,7 +873,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
 |sales-units|is default|Boolean|Defines if the sales unit is selected by default on the product details page.|
 |sales-units|measurementUnitCode|String|Code of the measurement unit. |
 |product-measurement-units|name|String|Measurement unit name.|
-|product-measurement-units|defaultPrecision|Integer|The default ratio between a sales unit and a base unit. It is used when precision for a related sales unit is not specified.| 
+|product-measurement-units|defaultPrecision|Integer|The default ratio between a sales unit and a base unit. It is used when precision for a related sales unit is not specified.|
 |promotional-items| id | String | Unique identifier of the promotional item. The ID can be used to apply the promotion to the given purchase.|
 |promotional-items| sku | String | SKU of the promoted abstract product.|
 |promotional-items| quantity | Integer | Specifies how many promotions can be applied to the given purchase.|
@@ -921,7 +929,7 @@ The `product-measurement-units` and `sales-units` resources can be included only
 To retrieve detailed information on promotional products in the cart, use `promotional-items` with `abstract-products` and `concrete-products`.
 
 {% endinfo_block %}
-#### Response 
+#### Response
 
 <details>
     <summary markdown='span'>Response sample with items, concrete products and cart permission groups</summary>
@@ -1042,7 +1050,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
     ]
 }
 ```
-    
+
 </details>
 
 <details>
@@ -1161,7 +1169,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
     ]
 }
 ```
-    
+
 </details>
 
 <details>
@@ -1222,7 +1230,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
     ]
 }
 ```
-    
+
 </details>
 
 <details>
@@ -1291,7 +1299,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
     ]
 }
 ```
-    
+
 </details>
 
 Find all the related attribute descriptions in [Retrieve All Carts](#all-carts-response-attributes).
@@ -1315,7 +1323,7 @@ To add items to a cart, send the request:
 
 To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
 
-{% endinfo_block %} 
+{% endinfo_block %}
 
 
 
@@ -1516,7 +1524,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     ]
 }
 ```
-    
+
 </details>
 
 <details>
@@ -1559,7 +1567,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
-    
+
 </details>
 
 <details>
@@ -1837,7 +1845,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     ]
 }
 ```
-    
+
 </details>
 
 Cart Rules Information
@@ -2054,7 +2062,7 @@ Request sample: `PATCH http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4
     ]
 }
 ```
-    
+
 </details>
 
 See [Retrieve All Carts](#all-carts-response-attributes) for response attribute descriptions.
@@ -2087,7 +2095,7 @@ where **4741fc84-2b9b-59da-bb8d-f4afab5be054** is the ID of the cart you want to
 
 To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
 
-{% endinfo_block %} 
+{% endinfo_block %}
 
 ### Response
 If the cart is deleted successfully, the endpoint responds with the **204 No Content** status code.
@@ -2100,6 +2108,3 @@ If the cart is deleted successfully, the endpoint responds with the **204 No Con
 | 403 | The access token is missing or the user is not allowed to perform the operation. |
 | 404 | A cart with the specified ID was not found. |
 | 422 |Failed to add an item. |
-
-
-

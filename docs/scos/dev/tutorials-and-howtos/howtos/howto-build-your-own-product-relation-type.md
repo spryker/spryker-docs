@@ -15,6 +15,8 @@ redirect_from:
   - /v5/docs/en/ht-build-product-relation
   - /v4/docs/ht-build-product-relation
   - /v4/docs/en/ht-build-product-relation
+  - /v3/docs/ht-build-product-relation
+  - /v3/docs/en/ht-build-product-relation
   - /v2/docs/ht-build-product-relation
   - /v2/docs/en/ht-build-product-relation
   - /v1/docs/ht-build-product-relation

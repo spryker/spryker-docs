@@ -16,6 +16,8 @@ redirect_from:
   - /v5/docs/en/ht-make-product-shown-on-frontend-by-url
   - /v4/docs/ht-make-product-shown-on-frontend-by-url
   - /v4/docs/en/ht-make-product-shown-on-frontend-by-url
+  - /v3/docs/ht-make-product-shown-on-frontend-by-url
+  - /v3/docs/en/ht-make-product-shown-on-frontend-by-url
   - /v2/docs/ht-make-product-shown-on-frontend-by-url
   - /v2/docs/en/ht-make-product-shown-on-frontend-by-url
   - /v1/docs/ht-make-product-shown-on-frontend-by-url

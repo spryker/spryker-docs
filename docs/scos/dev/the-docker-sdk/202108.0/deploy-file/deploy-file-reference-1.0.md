@@ -14,7 +14,7 @@ related:
   - title: Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
 redirect_from:  
-  - /docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file-reference-1.0.html
+  - /docs/scos/dev/the-docker-sdk/202108.0/deploy-file-reference-1.0.html
 ---
 
 This reference page describes version 1 of the Deploy file format. This is the newest version.
@@ -156,7 +156,7 @@ If you include a deploy file, the included deploy file is merged with the origin
 ### imports: {deploy_file_name}:
 
 Defines the configuration to be used when parsing the included deploy file.
-* `{deploy_file_name}: parameters:` - defines the [dynamic parameters](/01-deploy-file.md#dynamic-parameters) to be used when parsing the included deploy file. In the included deploy file, the parameter name should be wrapped in `%`.
+* `{deploy_file_name}: parameters:` - defines the [dynamic parameters](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html#dynamic-parameters) to be used when parsing the included deploy file. In the included deploy file, the parameter name should be wrapped in `%`.
 
 
 ```yaml

@@ -110,3 +110,19 @@ The method name should be unique to the extent of making it impossible to accide
 2. Override the core method with the custom one you've created in the previous step.
 
 When the core method is overriden with a custom one, re-evaluate the code. The same error shouldn't be returned.
+
+
+
+## Non-public API class was extended or used
+
+### What is the nature of the upgradability error?
+
+
+### Example of code that can cause the error and example of the error itself
+
+<!-- make sure that the error example directly relates to the code example -->
+
+
+### How do I achieve the same result without the error?
+
+<!-- steps and code snippet -->

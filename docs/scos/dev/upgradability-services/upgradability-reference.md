@@ -10,13 +10,13 @@ template: concept-topic-template
 
 Modules have public and private APIs. The public API includes the entities like facade, plugin stack, dependency list, etc. This check covers private API entities, including Business model, Factory, Dependency provider, Repository, and Entity manager.
 
-While public API updates always support backward compatibility, the private API updates can break backward compatibility. Major and minor releases can break the backward compatibility in the private API. For example, if you use a core method on the project level, and it is updated or removed, you can get the error during an update.
+While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility in minor releases is not guaranteed in the private API. For example, if you use a core method on the project level, and it is updated or removed, the error may occur during an update.
 
 ### Overriding a core method on the project level
 
-To avoid the error, override the core methods with custom ones in the private API.
+To avoid the error durring updates and achieve the same result, override the core methods with custom ones in the private API.
 
-#### Example of code and a related error
+#### Example of the code that causes the upgradability error
 
 `CustomerAccessUpdater` uses the `setContentTypesToInaccessible` method from the core level.
 
@@ -82,4 +82,4 @@ src/Pyz/Zed/CustomerAccess/Persistence/CustomerAccessEntityManagerInterface.php
 public function setContentTypesToInaccessible(CustomerAccessTransfer $customerAccessTransfer): CustomerAccessTransfer;
 ```
 
-When the core method is overridden, re-run the Evaluator. The same error shouldn't be returned.
+When the core method is overridden, re-evaluate the code. The same error shouldn't be returned.

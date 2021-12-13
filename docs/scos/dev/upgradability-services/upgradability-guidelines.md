@@ -1,6 +1,6 @@
 ---
-title: Upgradability reference
-description: Rerference infomation for evaluator and upgrader tools.
+title: Upgradability guidelines
+description: Coding guidelines for making a project upgradable.
 last_updated: Nov 25, 2021
 template: concept-topic-template
 ---

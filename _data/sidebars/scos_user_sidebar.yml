@@ -2613,7 +2613,7 @@ entries:
       - title: Adyen
         url: /docs/scos/user/technology-partners/payment-partners/adyen/adyen.html
         nested:
-        - title: Adyen - Integration
+        - title: Integrating Ayden
           url: /docs/scos/user/technology-partners/payment-partners/adyen/adyen-integration-into-a-project.html
         - title: Installing and configuring Ayden
           url: /docs/scos/user/technology-partners/payment-partners/adyen/adyen-installation-and-configuration.html

@@ -13,7 +13,7 @@ redirect_from:
 related:
   - title: Installing and configuring Ayden
     link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-installation-and-configuration.html
-  - title: Adyen - Integration
+  - title: Integrating Ayden
     link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-integration-into-a-project.html
   - title: Integrating Ayden payment methods
     link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-provided-payment-methods.html
@@ -27,25 +27,12 @@ related:
 
 Adyen is a global payment company that allows businesses to accept e-commerce, mobile, and point-of-sale payments. Adyen has more than 3,500 customers and is listed on the stock exchange Euronext. Adyen offers merchants online services for accepting electronic payments by payment methods including credit cards, bank based payments such as debit cards, bank transfer, and real-time bank transfers based on online banking. Adyen's online payment platform connects to payment methods across the world. Payment methods include international credit cards, local cash-based methods, such as Boleto in Brazil, and Internet banking methods, such as iDEAL in the Netherlands. The technology platform acts as a payment gateway, payment service provider and offers risk management and local acquiring. At the present time, Adyen only accepts European companies that generate over 50% of their revenue from the European continent.
 
-## General Information
+## Related Developer articles
 
-The `spryker-eco/adyen` module provides integration of Spryker e-commerce system with Adyen technology partner. It requires the `SprykerEco.AdyenApi` `spryker-eco/adyen-api` module that provides the REST Client for making API calls to the Adyen Payment Provider.
-
-The `SprykerEco.Adyen` module includes integration with:
-
-* Checkout process - payment forms with all necessary fields that are required to make payment request, save order information and so on.
-* OMS (Order Management System) - state machines, all necessary commands for making modification requests and conditions for changing orders status accordingly.
-
-The `SprykerEco.Adyen` module provides the following payment methods:
-* [Credit Card](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#credit-card)
-* [Direct Debit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#direct-debit-sepa-direct-debit)
-* [Klarna Invoice](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#klarna-invoice)
-* [Prepayment](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#prepayment-bank-transfer-iban)
-* [Sofort](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#sofort)
-* [PayPal](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#paypal)
-* [iDeal](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#ideal)
-* [AliPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#alipay)
-* [WeChatPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#wechatpay)
+* [Installing and configuring Ayden](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/installing-and-configuring-ayden.html)
+* [Integrating Ayden](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/integrating-adyen.html)
+* [Integrating Ayden payment methods](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/integrating-adyen-payment-methods.html)
+* [Enabling Ayden filtering payment methods](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/enabling-adyen-filtering-payment-methods.html)
 
 ## Copyright and Disclaimer
 

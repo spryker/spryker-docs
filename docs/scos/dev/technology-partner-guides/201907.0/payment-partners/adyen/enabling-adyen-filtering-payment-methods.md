@@ -11,7 +11,7 @@ redirect_from:
 related:
   - title: Payment Integration - Adyen
     link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen.html
-  - title: Adyen - Integration
+  - title: Integrating Ayden
     link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-integration-into-a-project.html
   - title: Installing and configuring Ayden
     link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-installation-and-configuration.html

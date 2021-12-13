@@ -11,7 +11,7 @@ redirect_from:
 related:
   - title: Payment Integration - Adyen
     link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen.html
-  - title: Adyen - Integration
+  - title: Integrating Ayden
     link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-integration-into-a-project.html
   - title: Integrating Ayden payment methods
     link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-provided-payment-methods.html
@@ -20,6 +20,26 @@ related:
 ---
 
 This topic describes how to install and configure the Adyen module to integrate Adyen into your project.
+
+## Integration overview
+
+The `spryker-eco/adyen` module provides integration of Spryker e-commerce system with Adyen technology partner. It requires the `SprykerEco.AdyenApi` `spryker-eco/adyen-api` module that provides the REST Client for making API calls to the Adyen Payment Provider.
+
+The `SprykerEco.Adyen` module includes integration with:
+
+* Checkout process - payment forms with all necessary fields that are required to make payment request, save order information and so on.
+* OMS (Order Management System) - state machines, all necessary commands for making modification requests and conditions for changing orders status accordingly.
+
+The `SprykerEco.Adyen` module provides the following payment methods:
+* [Credit Card](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#credit-card)
+* [Direct Debit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#direct-debit-sepa-direct-debit)
+* [Klarna Invoice](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#klarna-invoice)
+* [Prepayment](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#prepayment-bank-transfer-iban)
+* [Sofort](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#sofort)
+* [PayPal](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#paypal)
+* [iDeal](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#ideal)
+* [AliPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#alipay)
+* [WeChatPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#wechatpay)
 
 ## Installation
 To install the Adyen module, run the command:

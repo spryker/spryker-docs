@@ -1,5 +1,5 @@
 ---
-title: Integrating Ayden
+title: Integrating Adyen
 description: Integrate the Adyen module into the Spryker Commerce OS.
 last_updated: Aug 12, 2020
 template: concept-topic-template
@@ -11,12 +11,12 @@ redirect_from:
 related:
   - title: Payment Integration - Adyen
     link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen.html
-  - title: Enabling Ayden filtering payment methods
-    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-filtering-payment-methods.html
-  - title: Installing and configuring Ayden
-    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-installation-and-configuration.html
-  - title: Integrating Ayden payment methods
-    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-provided-payment-methods.html
+  - title: Enabling Adyen filtering payment methods
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/enabling-adyen-filtering-payment-methods.html
+  - title: Installing and configuring Adyen
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/installing-and-configuring-adyen.html
+  - title: Integrating Adyen payment methods
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/integrating-adyen-payment-methods.html
 ---
 
 ## Integration into Project

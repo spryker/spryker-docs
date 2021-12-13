@@ -2611,16 +2611,7 @@ entries:
         - title: RatePay- Core Module Structure Diagram
           url: /docs/scos/user/technology-partners/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
       - title: Adyen
-        url: /docs/scos/user/technology-partners/payment-partners/adyen/adyen.html
-        nested:
-        - title: Integrating Ayden
-          url: /docs/scos/user/technology-partners/payment-partners/adyen/adyen-integration-into-a-project.html
-        - title: Installing and configuring Ayden
-          url: /docs/scos/user/technology-partners/payment-partners/adyen/adyen-installation-and-configuration.html
-        - title: Integrating Ayden payment methods
-          url: /docs/scos/user/technology-partners/payment-partners/adyen/adyen-provided-payment-methods.html
-        - title: Enabling Ayden filtering payment methods
-          url: /docs/scos/user/technology-partners/payment-partners/adyen/adyen-filtering-payment-methods.html
+        url: /docs/scos/user/technology-partners/payment-partners/adyen.html
       - title: Computop
         url: /docs/scos/user/technology-partners/payment-partners/computop/computop.html
         include_versions:

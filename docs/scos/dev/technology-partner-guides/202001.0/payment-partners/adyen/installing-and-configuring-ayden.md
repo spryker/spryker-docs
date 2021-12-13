@@ -1,5 +1,5 @@
 ---
-title: Installing and configuring Ayden
+title: Installing and configuring Adyen
 description: Install and configure Adyen module to work in the Spryker Commerce OS.
 last_updated: Oct 13, 2021
 template: concept-topic-template
@@ -11,15 +11,35 @@ redirect_from:
   - /docs/adyen-configuration
   - /docs/en/adyen-configuration
 related:
-  - title: Integrating Ayden
-    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-integration-into-a-project.html
-  - title: Enabling Ayden filtering payment methods
-    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-filtering-payment-methods.html
-  - title: Integrating Ayden payment methods
-    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-provided-payment-methods.html
+  - title: Integrating Adyen
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/integrating-adyen.html
+  - title: Enabling Adyen filtering payment methods
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/enabling-adyen-filtering-payment-methods.html
+  - title: Integrating Adyen payment methods
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/integrating-adyen-payment-methods.html
 ---
 
 This topic describes how to install and configure the Adyen module to integrate Adyen into your project.
+
+## Integration overview
+
+The `spryker-eco/adyen` module provides integration of Spryker e-commerce system with Adyen technology partner. It requires the `SprykerEco.AdyenApi` `spryker-eco/adyen-api` module that provides the REST Client for making API calls to the Adyen Payment Provider.
+
+The `SprykerEco.Adyen` module includes integration with:
+
+* Checkout process - payment forms with all necessary fields that are required to make payment request, save order information and so on.
+* OMS (Order Management System) - state machines, all necessary commands for making modification requests and conditions for changing orders status accordingly.
+
+The `SprykerEco.Adyen` module provides the following payment methods:
+* [Credit Card](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/integrating-adyen-payment-methods.html#credit-card)
+* [Direct Debit](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/integrating-adyen-payment-methods.html#direct-debit-sepa-direct-debit)
+* [Klarna Invoice](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/integrating-adyen-payment-methods.html#klarna-invoice)
+* [Prepayment](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/integrating-adyen-payment-methods.html#prepayment-bank-transfer-iban)
+* [Sofort](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/integrating-adyen-payment-methods.html#sofort)
+* [PayPal](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/integrating-adyen-payment-methods.html#paypal)
+* [iDeal](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/integrating-adyen-payment-methods.html#ideal)
+* [AliPay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/integrating-adyen-payment-methods.html#alipay)
+* [WeChatPay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/integrating-adyen-payment-methods.html#wechatpay)
 
 ## Installation
 

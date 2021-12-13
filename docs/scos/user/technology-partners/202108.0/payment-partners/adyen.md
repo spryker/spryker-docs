@@ -11,14 +11,14 @@ redirect_from:
   - /docs/adyen
   - /docs/en/adyen
 related:
-  - title: Installing and configuring Ayden
-    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-installation-and-configuration.html
-  - title: Integrating Ayden
-    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-integration-into-a-project.html
-  - title: Integrating Ayden payment methods
-    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-provided-payment-methods.html
-  - title: Enabling Ayden filtering payment methods
-    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-filtering-payment-methods.html
+  - title: Installing and configuring Adyen
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/installing-and-configuring-adyen.html
+  - title: Integrating Adyen
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/integrating-adyen.html
+  - title: Integrating Adyen payment methods
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/integrating-adyen-payment-methods.html
+  - title: Enabling Adyen filtering payment methods
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/enabling-adyen-filtering-payment-methods.html
 ---
 
 ## Partner Information
@@ -29,10 +29,10 @@ Adyen is a global payment company that allows businesses to accept e-commerce, m
 
 ## Related Developer articles
 
-* [Installing and configuring Ayden](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/installing-and-configuring-ayden.html)
-* [Integrating Ayden](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/integrating-adyen.html)
-* [Integrating Ayden payment methods](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/integrating-adyen-payment-methods.html)
-* [Enabling Ayden filtering payment methods](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/enabling-adyen-filtering-payment-methods.html)
+* [Installing and configuring Adyen](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/installing-and-configuring-adyen.html)
+* [Integrating Adyen](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/integrating-adyen.html)
+* [Integrating Adyen payment methods](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/integrating-adyen-payment-methods.html)
+* [Enabling Adyen filtering payment methods](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/enabling-adyen-filtering-payment-methods.html)
 
 ## Copyright and Disclaimer
 

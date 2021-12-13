@@ -14,7 +14,7 @@ While public API updates always support backward compatibility, private API upda
 
 ### Overriding a core method on the project level
 
-To avoid the error durring updates and achieve the same result, override the core methods with custom ones in the private API.
+To avoid the error during updates and achieve the same result, override the core methods with custom ones in the private API.
 
 #### Example of the code that causes the upgradability error
 

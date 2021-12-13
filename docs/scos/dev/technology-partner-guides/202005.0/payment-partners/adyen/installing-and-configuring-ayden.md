@@ -1,20 +1,22 @@
 ---
 title: Adyen - Installation and Configuration
 description: Install and configure Adyen module to work in the Spryker Commerce OS.
-last_updated: Aug 27, 2020
+last_updated: Jul 13, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v6/docs/adyen-configuration
-originalArticleId: b9ab092c-0eb0-4765-b3c2-088064fa69e8
+originalLink: https://documentation.spryker.com/v5/docs/adyen-configuration
+originalArticleId: bd3d2216-0bca-4182-a10d-7d8fe5e6ee03
 redirect_from:
-  - /v6/docs/adyen-configuration
-  - /v6/docs/en/adyen-configuration
+  - /v5/docs/adyen-configuration
+  - /v5/docs/en/adyen-configuration
 related:
-  - title: Adyen - Integration into a project
+  - title: Payment Integration - Adyen
+    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen.html
+  - title: Adyen - Integration
     link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-integration-into-a-project.html
-  - title: Adyen - Filtering Payment Methods
-    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-filtering-payment-methods.html
   - title: Adyen - Provided Payment Methods
     link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-provided-payment-methods.html
+  - title: Adyen - Filtering Payment Methods
+    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-filtering-payment-methods.html
 ---
 
 This topic describes how to install and configure the Adyen module to integrate Adyen into your project.
@@ -112,4 +114,3 @@ The link to accept notifications from Adyen looks like https://mysprykershop.com
 You can get your credentials by following the [instruction](https://docs.adyen.com/online-payments/classic-integrations/api-integration-ecommerce).
 
 You can get JS SDK url and generate your origin key by following this [instruction](https://docs.adyen.com/online-payments/classic-integrations/api-integration-ecommerce) from.
-

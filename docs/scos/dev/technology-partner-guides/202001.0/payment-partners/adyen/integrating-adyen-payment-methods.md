@@ -1,13 +1,15 @@
 ---
-title: Adyen - Provided Payment Methods
+title: Integrating Ayden payment methods
 description: Adyen supports credit card, direct debit, Klarna invoice, Prepayment, Sofort,  PayPal, iDeal, AliPay, WeChatPay payment methods that can be integrated into the Spryker Commerce OS.
-last_updated: Aug 27, 2020
+last_updated: Oct 4, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v6/docs/adyen-provided-payment-methods
-originalArticleId: 705b1f0e-c3cc-4f7d-b72f-e91bd27203fd
+originalLink: https://documentation.spryker.com/2021080/docs/adyen-provided-payment-methods
+originalArticleId: f1994f41-32fd-4af3-8e5a-b3a3ce75e39c
 redirect_from:
-  - /v6/docs/adyen-provided-payment-methods
-  - /v6/docs/en/adyen-provided-payment-methods
+  - /2021080/docs/adyen-provided-payment-methods
+  - /2021080/docs/en/adyen-provided-payment-methods
+  - /docs/adyen-provided-payment-methods
+  - /docs/en/adyen-provided-payment-methods
 related:
   - title: Adyen - Installation and Configuration
     link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-installation-and-configuration.html
@@ -20,38 +22,36 @@ related:
 ## Credit Card
 
 Adyen module provides the following integration options:
-
-  *  simple
-   * with 3D Secure authorization
+  * Simple
+  * With 3D Secure authorization
 
 3D Secure integration requires adjustments on the project level:
-
 1. Add an additional Checkout Step. Examplary implementation:
 
 **src/Pyz/Yves/CheckoutPage/Process/Steps/AdyenExecute3DStep.php**
-    
+
  ```php
 <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Yves\CheckoutPage\Process\Steps;
- 
+
 use Pyz\Yves\CheckoutPage\CheckoutPageConfig;
 use Spryker\Shared\Kernel\Transfer\AbstractTransfer;
 use SprykerEco\Shared\Adyen\AdyenConfig;
 use SprykerShop\Yves\CheckoutPage\Process\Steps\AbstractBaseStep;
- 
+
 class AdyenExecute3DStep extends AbstractBaseStep
 {
     /**
      * @var \Pyz\Yves\CheckoutPage\CheckoutPageConfig
      */
     protected $config;
- 
+
     /**
      * @param string $stepRoute
      * @param string $escapeRoute
@@ -63,10 +63,10 @@ class AdyenExecute3DStep extends AbstractBaseStep
         CheckoutPageConfig $config
     ) {
         parent::__construct($stepRoute, $escapeRoute);
- 
+
         $this->config = $config;
     }
- 
+
     /**
      * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
      *
@@ -74,15 +74,11 @@ class AdyenExecute3DStep extends AbstractBaseStep
      */
     public function requireInput(AbstractTransfer $quoteTransfer)
     {
-        if ($quoteTransfer->getPayment()->getPaymentSelection() === AdyenConfig::ADYEN_CREDIT_CARD &&
-            $this->config->isAdyenCreditCard3dSecureEnabled()
-        ) {
-            return true;
-        }
- 
-        return false;
+        return $this->isAdyenCreditCardPayment($quoteTransfer) &&
+            $this->config->isAdyenCreditCard3dSecureEnabled() &&
+            $quoteTransfer->getPayment()->getAdyenRedirect();
     }
- 
+
     /**
      * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
      *
@@ -92,7 +88,7 @@ class AdyenExecute3DStep extends AbstractBaseStep
     {
         return true;
     }
- 
+
     /**
      * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
      *
@@ -106,6 +102,15 @@ class AdyenExecute3DStep extends AbstractBaseStep
         ];
     }
 }
+    /**
+     * @param \Spryker\Shared\Kernel\Transfer\AbstractTransfer $quoteTransfer
+     *
+     * @return bool
+     */
+    protected function isAdyenCreditCardPayment(AbstractTransfer $quoteTransfer): bool
+    {
+        return $quoteTransfer->getPayment() && $quoteTransfer->getPayment()->getPaymentSelection() === AdyenConfig::ADYEN_CREDIT_CARD;
+    }
 ```
 
 2. Add template for this step:
@@ -114,7 +119,7 @@ class AdyenExecute3DStep extends AbstractBaseStep
 
  ```php
 {% raw %}{%{% endraw %} extends template('page-layout-main') {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block body {% raw %}%}{% endraw %}
     <form id="adyenExecute3DStepForm_" name="adyenExecute3DStepForm" method="post" action="{% raw %}{{{% endraw %} _view.action {% raw %}}}{% endraw %}">
         {% raw %}{%{% endraw %} for key, value in _view.fields {% raw %}%}{% endraw %}
@@ -133,14 +138,14 @@ class AdyenExecute3DStep extends AbstractBaseStep
 
  ```php
 <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Yves\CheckoutPage\Process;
- 
+
 use Pyz\Yves\CheckoutPage\Plugin\Provider\CheckoutPageControllerProvider;
 use Pyz\Yves\CheckoutPage\Process\Steps\AdyenExecute3DStep;
 use Pyz\Yves\CheckoutPage\Process\Steps\PlaceOrderStep;
@@ -148,7 +153,7 @@ use Spryker\Yves\StepEngine\Dependency\Step\StepInterface;
 use Spryker\Yves\StepEngine\Process\StepCollection;
 use SprykerShop\Yves\CheckoutPage\Process\StepFactory as SprykerShopStepFactory;
 use SprykerShop\Yves\HomePage\Plugin\Provider\HomePageControllerProvider;
- 
+
 /**
  * @method \Pyz\Yves\CheckoutPage\CheckoutPageConfig getConfig()
  */
@@ -175,7 +180,7 @@ class StepFactory extends SprykerShopStepFactory
             ->addStep($this->createSuccessStep());
         return $stepCollection;
     }
- 
+
     /**
      * @return \Spryker\Yves\StepEngine\Dependency\Step\StepInterface
      */
@@ -214,17 +219,17 @@ class StepFactory extends SprykerShopStepFactory
 
  ```php
  <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Yves\CheckoutPage\Controller;
- 
+
 use SprykerShop\Yves\CheckoutPage\Controller\CheckoutController as SprykerShopCheckoutController;
 use Symfony\Component\HttpFoundation\Request;
- 
+
 /**
  * @method \SprykerShop\Yves\CheckoutPage\CheckoutPageFactory getFactory()
  */
@@ -238,11 +243,11 @@ class CheckoutController extends SprykerShopCheckoutController
     public function adyenExecute3DAction(Request $request)
     {
         $response = $this->createStepProcess()->process($request);
- 
+
         if (!is_array($response)) {
             return $response;
         }
- 
+
         return $this->view(
             $response,
             $this->getFactory()->getCustomerPageWidgetPlugins(),
@@ -258,21 +263,21 @@ class CheckoutController extends SprykerShopCheckoutController
 
  ```php
  <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Yves\CheckoutPage\Plugin\Router;
 
 use Spryker\Yves\Router\Route\RouteCollection;
 use SprykerShop\Yves\CheckoutPage\Plugin\Router\CheckoutPageRouteProviderPlugin as SprykerShopCheckoutPageRouteProviderPlugin;
- 
+
 class CheckoutPageRouteProviderPlugin extends SprykerShopCheckoutPageRouteProviderPlugin
 {
     public const ROUTE_NAME_CHECKOUT_ADYEN_EXECUTE_3D = 'checkout-adyen-execute-3d';
- 
+
     /**
      * Specification:
      * - Adds Routes to the RouteCollection.
@@ -287,10 +292,10 @@ class CheckoutPageRouteProviderPlugin extends SprykerShopCheckoutPageRouteProvid
     {
         $routeCollection = $this->addAdyenExecute3DStepRoute($routeCollection);
         // ...
-        
+
         return $routeCollection;
     }
- 
+
     /**
      * @param \Spryker\Yves\Router\Route\RouteCollection $routeCollection
      *
@@ -312,18 +317,18 @@ class CheckoutPageRouteProviderPlugin extends SprykerShopCheckoutPageRouteProvid
 
  ```php
 <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Yves\CheckoutPage\Process\Steps;
- 
+
 use Spryker\Shared\Kernel\Transfer\AbstractTransfer;
 use SprykerShop\Yves\CheckoutPage\Process\Steps\PlaceOrderStep as SprykerShopPlaceOrderStep;
 use Symfony\Component\HttpFoundation\Request;
- 
+
 class PlaceOrderStep extends SprykerShopPlaceOrderStep
 {
     /**
@@ -335,20 +340,20 @@ class PlaceOrderStep extends SprykerShopPlaceOrderStep
     public function execute(Request $request, AbstractTransfer $quoteTransfer)
     {
         $checkoutResponseTransfer = $this->checkoutClient->placeOrder($quoteTransfer);
- 
+
         if ($checkoutResponseTransfer->getIsExternalRedirect()) {
             $this->externalRedirectUrl = $checkoutResponseTransfer->getRedirectUrl();
         }
- 
+
         if ($checkoutResponseTransfer->getSaveOrder() !== null) {
             $quoteTransfer->setOrderReference($checkoutResponseTransfer->getSaveOrder()->getOrderReference());
         }
- 
+
         $this->setCheckoutErrorMessages($checkoutResponseTransfer);
         $this->checkoutResponseTransfer = $checkoutResponseTransfer;
- 
+
         $quoteTransfer->getPayment()->setAdyenRedirect($checkoutResponseTransfer->getAdyenRedirect());
- 
+
         return $quoteTransfer;
     }
 }
@@ -369,17 +374,17 @@ class PlaceOrderStep extends SprykerShopPlaceOrderStep
 
 ```php
 <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Yves\CheckoutPage;
- 
+
 use SprykerEco\Shared\Adyen\AdyenConstants;
 use SprykerShop\Yves\CheckoutPage\CheckoutPageConfig as SprykerShopCheckoutPageConfig;
- 
+
 class CheckoutPageConfig extends SprykerShopCheckoutPageConfig
 {
     /**
@@ -398,17 +403,17 @@ class CheckoutPageConfig extends SprykerShopCheckoutPageConfig
 
 ```php
 <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Yves\CheckoutPage;
- 
+
 use Pyz\Yves\CheckoutPage\Process\StepFactory;
 use SprykerShop\Yves\CheckoutPage\CheckoutPageFactory as SprykerShopCheckoutPageFactory;
- 
+
 class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 {
     /**
@@ -421,13 +426,13 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 }
 ```
 
-The state machine example can be found in: `vendor/spryker-eco/adyen/config/Zed/Oms/AdyenCreditCard01.xml`
+The state machine example can be found in `vendor/spryker-eco/adyen/config/Zed/Oms/AdyenCreditCard01.xml`
 
 ## Direct Debit (SEPA Direct Debit)
 
 SEPA (Single Euro Payments Area) Direct Debit was introduced by the European Payments Council to create a standardized payments infrastructure within the EU. With SEPA Direct Debit, businesses can process one-off or recurring payments for EU customers, making it a key payment method for businesses looking to expand across Europe.
 
-The state machine example can be found in: `vendor/spryker-eco/adyen/config/Zed/Oms/AdyenDirectDebit01.xml`
+The state machine example can be found in `vendor/spryker-eco/adyen/config/Zed/Oms/AdyenDirectDebit01.xml`
 
 ## Klarna Invoice
 
@@ -435,7 +440,7 @@ Klarna Invoice enables your customers to pay without giving their credit card in
 
 When a customer has checked out an order in your online store he/she will be able to choose Klarna and then the customer needs to type in his/her full social security number (CPR in Denmark). German or Dutch customers have to type in their Birth date. The customer is accepted throughout a credit check, which is done by Klarna. When the customer is accepted, Klarna pays the full amount to your online shop and the customer has to pay the amount directly to Klarna.
 
-State machine example can be found in: `vendor/spryker-eco/adyen/config/Zed/Oms/AdyenKlarnaInvoice01.xml`
+State machine example can be found in `vendor/spryker-eco/adyen/config/Zed/Oms/AdyenKlarnaInvoice01.xml`
 
 ## Prepayment (Bank Transfer IBAN)
 
@@ -443,25 +448,25 @@ Prepayment method is a safe alternative to payments involving credit cards or de
 
 The payment status is transmitted to the shop via a notification from the payment provider(Adyen).
 
-State machine example can be found in: `vendor/spryker-eco/adyen/config/Zed/Oms/AdyenPrepayment01.xml`
+State machine example can be found in `vendor/spryker-eco/adyen/config/Zed/Oms/AdyenPrepayment01.xml`
 
 ## Sofort
 
 SOFORT is the main online direct payment method and works via online banking. It is the predominant online banking method in countries such as Germany, Austria, Switzerland and Belgium, making it a must-have for any business wanting to operate in this area.
 
-State machine example can be found in: `vendor/spryker-eco/adyen/config/Zed/Oms/AdyenSofort01.xml`
+State machine example can be found in `vendor/spryker-eco/adyen/config/Zed/Oms/AdyenSofort01.xml`
 
 ## PayPal
 
 PayPal Holdings, Inc. is an American company operating a worldwide online payments system that supports online money transfers and serves as an electronic alternative to traditional paper methods like cheques and money orders. The company operates as a payment processor for online vendors, auction sites, and other commercial users, for which it charges a fee in exchange for benefits such as one-click transactions and password memory.
 
-State machine example can be found in: `vendor/spryker-eco/adyen/config/Zed/Oms/AdyenPayPal01.xml`
+State machine example can be found in `vendor/spryker-eco/adyen/config/Zed/Oms/AdyenPayPal01.xml`
 
 ## iDeal
 
 The most popular payment method in the Netherlands, iDEAL is an inter-bank system covered by all major Dutch consumer banks.
 
-State machine example can be found in: `vendor/spryker-eco/adyen/config/Zed/Oms/AdyenIdeal01.xml`
+State machine example can be found in `vendor/spryker-eco/adyen/config/Zed/Oms/AdyenIdeal01.xml`
 
 ## AliPay
 
@@ -469,11 +474,10 @@ Alipay is the most widely used third-party online payment service provider in Ch
 
 Alipay is a must-have payment method for any business looking to reach a critical mass of Chinese shoppers both home and abroad. It is available in 70 markets and has already been adopted by over 80,000 retail stores worldwide.
 
-State machine example can be found in: `vendor/spryker-eco/adyen/config/Zed/Oms/AdyenAliPay01.xml`
+State machine example can be found in `vendor/spryker-eco/adyen/config/Zed/Oms/AdyenAliPay01.xml`
 
 ## WeChatPay
 
 WeChat Pay is rapidly becoming a keystone payment method for businesses wanting to reach Chinese shoppers, both home and abroad. Originally a messaging app (like WhatsApp) WeChat has evolved into an ecosystem that allows Chinese shoppers to chat, browse, and make payments, all in one place - making shopping as easy as chatting to your friends.
 
-State machine example can be found in: `vendor/spryker-eco/adyen/config/Zed/Oms/AdyenWeChatPay01.xml`
-
+State machine example can be found in `vendor/spryker-eco/adyen/config/Zed/Oms/AdyenWeChatPay01.xml`

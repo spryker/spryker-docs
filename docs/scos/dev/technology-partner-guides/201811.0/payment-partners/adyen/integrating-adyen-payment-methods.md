@@ -32,29 +32,29 @@ Adyen module provides the following integration options:
 
 <details open>
 <summary markdown='span'>src/Pyz/Yves/CheckoutPage/Process/Steps/AdyenExecute3DStep.php</summary>
-    
+
  ```php
 <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Yves\CheckoutPage\Process\Steps;
- 
+
 use Pyz\Yves\CheckoutPage\CheckoutPageConfig;
 use Spryker\Shared\Kernel\Transfer\AbstractTransfer;
 use SprykerEco\Shared\Adyen\AdyenConfig;
 use SprykerShop\Yves\CheckoutPage\Process\Steps\AbstractBaseStep;
- 
+
 class AdyenExecute3DStep extends AbstractBaseStep
 {
     /**
      * @var \Pyz\Yves\CheckoutPage\CheckoutPageConfig
      */
     protected $config;
- 
+
     /**
      * @param string $stepRoute
      * @param string $escapeRoute
@@ -66,10 +66,10 @@ class AdyenExecute3DStep extends AbstractBaseStep
         CheckoutPageConfig $config
     ) {
         parent::__construct($stepRoute, $escapeRoute);
- 
+
         $this->config = $config;
     }
- 
+
     /**
      * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
      *
@@ -82,10 +82,10 @@ class AdyenExecute3DStep extends AbstractBaseStep
         ) {
             return true;
         }
- 
+
         return false;
     }
- 
+
     /**
      * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
      *
@@ -95,7 +95,7 @@ class AdyenExecute3DStep extends AbstractBaseStep
     {
         return true;
     }
- 
+
     /**
      * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
      *
@@ -119,7 +119,7 @@ class AdyenExecute3DStep extends AbstractBaseStep
 
  ```php
 {% raw %}{%{% endraw %} extends template('page-layout-main') {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block body {% raw %}%}{% endraw %}
     <form id="adyenExecute3DStepForm_" name="adyenExecute3DStepForm" method="post" action="{% raw %}{{{% endraw %} _view.action {% raw %}}}{% endraw %}">
         {% raw %}{%{% endraw %} for key, value in _view.fields {% raw %}%}{% endraw %}
@@ -140,14 +140,14 @@ class AdyenExecute3DStep extends AbstractBaseStep
 
  ```php
 <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Yves\CheckoutPage\Process;
- 
+
 use Pyz\Yves\CheckoutPage\Plugin\Provider\CheckoutPageControllerProvider;
 use Pyz\Yves\CheckoutPage\Process\Steps\AdyenExecute3DStep;
 use Pyz\Yves\CheckoutPage\Process\Steps\PlaceOrderStep;
@@ -155,7 +155,7 @@ use Spryker\Yves\StepEngine\Dependency\Step\StepInterface;
 use Spryker\Yves\StepEngine\Process\StepCollection;
 use SprykerShop\Yves\CheckoutPage\Process\StepFactory as SprykerShopStepFactory;
 use SprykerShop\Yves\HomePage\Plugin\Provider\HomePageControllerProvider;
- 
+
 /**
  * @method \Pyz\Yves\CheckoutPage\CheckoutPageConfig getConfig()
  */
@@ -182,7 +182,7 @@ class StepFactory extends SprykerShopStepFactory
             ->addStep($this->createSuccessStep());
         return $stepCollection;
     }
- 
+
     /**
      * @return \Spryker\Yves\StepEngine\Dependency\Step\StepInterface
      */
@@ -223,17 +223,17 @@ class StepFactory extends SprykerShopStepFactory
 
  ```php
  <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Yves\CheckoutPage\Controller;
- 
+
 use SprykerShop\Yves\CheckoutPage\Controller\CheckoutController as SprykerShopCheckoutController;
 use Symfony\Component\HttpFoundation\Request;
- 
+
 /**
  * @method \SprykerShop\Yves\CheckoutPage\CheckoutPageFactory getFactory()
  */
@@ -247,11 +247,11 @@ class CheckoutController extends SprykerShopCheckoutController
     public function adyenExecute3DAction(Request $request)
     {
         $response = $this->createStepProcess()->process($request);
- 
+
         if (!is_array($response)) {
             return $response;
         }
- 
+
         return $this->view(
             $response,
             $this->getFactory()->getCustomerPageWidgetPlugins(),
@@ -269,21 +269,21 @@ class CheckoutController extends SprykerShopCheckoutController
 
  ```php
  <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Yves\CheckoutPage\Plugin\Provider;
- 
+
 use Silex\Application;
 use SprykerShop\Yves\CheckoutPage\Plugin\Provider\CheckoutPageControllerProvider as SprykerShopCheckoutPageControllerProvider;
- 
+
 class CheckoutPageControllerProvider extends SprykerShopCheckoutPageControllerProvider
 {
     public const CHECKOUT_ADYEN_EXECUTE_3D = 'checkout-adyen-execute-3d';
- 
+
     /**
      * @param \Silex\Application $app
      *
@@ -302,7 +302,7 @@ class CheckoutPageControllerProvider extends SprykerShopCheckoutPageControllerPr
             ->addCheckoutSuccessRoute()
             ->addAdyenExecute3DStepRoute();
     }
- 
+
     /**
      * @return $this
      */
@@ -312,7 +312,7 @@ class CheckoutPageControllerProvider extends SprykerShopCheckoutPageControllerPr
             ->assert('checkout', $this->getAllowedLocalesPattern() . 'checkout|checkout')
             ->value('checkout', 'checkout')
             ->method('GET|POST');
- 
+
         return $this;
     }
 }
@@ -326,18 +326,18 @@ class CheckoutPageControllerProvider extends SprykerShopCheckoutPageControllerPr
 
  ```php
 <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Yves\CheckoutPage\Process\Steps;
- 
+
 use Spryker\Shared\Kernel\Transfer\AbstractTransfer;
 use SprykerShop\Yves\CheckoutPage\Process\Steps\PlaceOrderStep as SprykerShopPlaceOrderStep;
 use Symfony\Component\HttpFoundation\Request;
- 
+
 class PlaceOrderStep extends SprykerShopPlaceOrderStep
 {
     /**
@@ -349,20 +349,20 @@ class PlaceOrderStep extends SprykerShopPlaceOrderStep
     public function execute(Request $request, AbstractTransfer $quoteTransfer)
     {
         $checkoutResponseTransfer = $this->checkoutClient->placeOrder($quoteTransfer);
- 
+
         if ($checkoutResponseTransfer->getIsExternalRedirect()) {
             $this->externalRedirectUrl = $checkoutResponseTransfer->getRedirectUrl();
         }
- 
+
         if ($checkoutResponseTransfer->getSaveOrder() !== null) {
             $quoteTransfer->setOrderReference($checkoutResponseTransfer->getSaveOrder()->getOrderReference());
         }
- 
+
         $this->setCheckoutErrorMessages($checkoutResponseTransfer);
         $this->checkoutResponseTransfer = $checkoutResponseTransfer;
- 
+
         $quoteTransfer->getPayment()->setAdyenRedirect($checkoutResponseTransfer->getAdyenRedirect());
- 
+
         return $quoteTransfer;
     }
 }
@@ -389,17 +389,17 @@ class PlaceOrderStep extends SprykerShopPlaceOrderStep
 
 ```php
 <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Yves\CheckoutPage;
- 
+
 use SprykerEco\Shared\Adyen\AdyenConstants;
 use SprykerShop\Yves\CheckoutPage\CheckoutPageConfig as SprykerShopCheckoutPageConfig;
- 
+
 class CheckoutPageConfig extends SprykerShopCheckoutPageConfig
 {
     /**
@@ -421,17 +421,17 @@ class CheckoutPageConfig extends SprykerShopCheckoutPageConfig
 
 ```php
 <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Yves\CheckoutPage;
- 
+
 use Pyz\Yves\CheckoutPage\Process\StepFactory;
 use SprykerShop\Yves\CheckoutPage\CheckoutPageFactory as SprykerShopCheckoutPageFactory;
- 
+
 class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 {
     /**

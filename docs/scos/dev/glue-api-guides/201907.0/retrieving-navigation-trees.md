@@ -19,7 +19,7 @@ related:
 ---
 
 Spryker offers the navigation feature, which enables shoppers to quickly navigate the shop and easily locate the necessary products and other content. For this purpose, backoffice users can create any number of navigations. Navigations come in a tree structure and can incorporate links to CMS pages, categories, as well as any other internal and external links.
-        
+
 The **Navigation API** provides the possibility to retrieve any navigation tree configured in Spryker.
 
 {% info_block infoBox "Info" %}
@@ -33,7 +33,7 @@ For more details on managing navigation trees, see [Navigation](/docs/scos/user/
 {% endinfo_block %}
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Navigation]<!-- (https://documentation.spryker.com/v3/docs/navigation-feature-integration-201907).-->
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Navigation](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-navigation-feature-integration.html).
 
 ## Usage
 To retrieve a navigation tree with detailed information on each node, send a GET request to the following endpoint:
@@ -80,7 +80,7 @@ In addition to that, each node element exposes the following fields:
 
 <details open>
 <summary markdown='span'>Sample Response</summary>
-    
+
 ```json
 {
     "data": {
@@ -139,7 +139,7 @@ In addition to that, each node element exposes the following fields:
     }
 }
 ```
-    
+
 <br>
 </details>
 
@@ -169,7 +169,7 @@ Sample Request: GET *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?*
 
 <details open>
 <summary markdown='span'>Sample Response</summary>
-    
+
 ```json
 {
   "data": {
@@ -1141,7 +1141,7 @@ Sample Request: GET *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?*
   ]
 }
 ```
-    
+
 <br>
 </details>
 
@@ -1151,4 +1151,3 @@ Sample Request: GET *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?*
 | --- | --- |
 | 400 | Navigation ID is not specified. |
 | 404 | Navigation not found. |
-

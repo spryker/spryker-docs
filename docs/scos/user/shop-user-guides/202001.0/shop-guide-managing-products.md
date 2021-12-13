@@ -86,13 +86,12 @@ To sum up, on the product detail page, you can do the following:
 
 {% info_block warningBox "If you have the Multiple Carts feature enabled, then:" %}
 
-
 Prior to adding a product to the cart, make sure that you’ve selected the cart you need. For this, on top of the page, in the My cart widget, select the cart to which you want to add the product.
 You have the following options to select the shopping cart:
 
-* select the cart from the five carts displayed by default in the widget
-* select the cart from all available carts by clicking **All Carts** in the widget
-* create a new cart by clicking **Create New Cart**. Then, enter the name of the cart in the **Cart Name** field, and click **Submit**. For more information on how to create carts, see [Shop Guide - Creating a Shopping Cart](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-shopping-carts/shop-guide-creating-a-shopping-cart.html).
+* Select the cart from the five carts displayed by default in the widget
+* Select the cart from all available carts by clicking **All Carts** in the widget
+* Create a new cart by clicking **Create New Cart**. Then, enter the name of the cart in the **Cart Name** field, and click **Submit**. For more information on how to create carts, see [Shop Guide - Creating a Shopping Cart](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-shopping-carts/shop-guide-creating-a-shopping-cart.html).
 
 ![Shopping cart widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/shopping-cart-widget.png)
 
@@ -115,7 +114,7 @@ The shopping lists are available only for **B2B** shop users.
 
 {% endinfo_block %}
 
-You can order frequently bought products faster by adding the products to a [shopping list](https://documentation.spryker.com/v4/docs/multiple-and-shared-shopping-lists-overview).
+You can order frequently bought products faster by adding the products to a [shopping list](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html).
 
 **To add a product to the shopping list:**
 

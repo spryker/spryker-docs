@@ -15,8 +15,7 @@ Checkout is a multistep process that a buyer has to go through to check the prod
 
 A typical checkout process includes the following steps:
 
-* [Delivery Address](https://documentation.spryker.com/v2/docs/delivery-address-step-shop-guide)
-* [Shipping](https://documentation.spryker.com/v2/docs/shipping-step-shop-guide)
-* [Payment](https://documentation.spryker.com/v2/docs/payment-step-shop-guide)
-* [Confirm](https://documentation.spryker.com/v2/docs/confirmation-step-shop-guide)
-
+* [Delivery Address](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-address-step.html)
+* [Shipping](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-shipment-step.html)
+* [Payment](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-payment-step.html)
+* [Confirm](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-summary-step.html)

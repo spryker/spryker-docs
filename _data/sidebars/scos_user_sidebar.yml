@@ -2232,7 +2232,7 @@ entries:
         - "202108.0"
       - title: Punchout Catalogs
         include_versions:
-        url: /docs/scos/user/technology-partners/order-management-erpoms/punchout-catalogs/punchout-catalogs-overview.html
+        url: /docs/scos/user/technology-partners/order-management-erpoms/punchout-catalogs/punchout-catalogs.html
         - "201903.0"
         - "201907.0"
         - "202001.0"

@@ -15,6 +15,7 @@ related:
 
 This topic describes the procedures that you need to perform to create, edit, and delete tax sets.
 ***
+
 ## Managing Tax Sets
 
 To start working with tax sets, navigate to the **Taxes > Tax Sets** section.
@@ -27,6 +28,7 @@ Remember how you created the tax rate? To be able to use this taxation rule for 
 2. On the **Create Tax Set** page, enter the tax set name and select one or several tax rates to assign. See [Taxes: Reference information](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-rates/references/tax-rates-reference-information.html) for more details.
 3. Click **Save**.
 ***
+
 ### Editing a Tax Set
 In case you need to change the tax set:
 1. In the **List of tax sets > Actions** column, click **Edit** for a specific tax set.
@@ -39,6 +41,7 @@ You can start editing a tax set while viewing it:
 1. On the **View Tax Rate** page, click **Edit** in the top right corner.
 2. Go over the _Editing a Tax Set_ procedure.
 ***
+
 ### Viewing a Tax Set
 You can review a specific Tax Set details by clicking **View** in the **List of tax sets > Actions** column.
 The **Tax set details** page includes the following information:
@@ -50,17 +53,24 @@ The **Tax set details** page includes the following information:
 
 To return back to the list, click **Back to Tax Sets**.
 ***
+
 ### Deleting Tax Set
 You can permanently delete a tax set from the system.
+
 ***
 **To delete a tax set:**
 1. In the **List of tax sets > Actions** column, click **Delete** for a specific tax set.
 2. On the **Delete Tax Set** page, click **Delete Tax Set** to confirm the action.
 The tax set is deleted.
+
 {% info_block warningBox "Note" %}
+
 Remember that the tax rates assigned to the deleted tax set will become unassigned, but not deleted.
+
 {% endinfo_block %}
- ***
+
+***
+
 **Tips & Tricks**
 You can delete a tax set while viewing it:
 1. On the **View Tax Set** page, click **Delete** in the top right corner.

@@ -115,14 +115,196 @@ When the core method is overriden with a custom one, re-evaluate the code. The s
 
 ## Non-public API class was extended or used
 
-### What is the nature of the upgradability error?
+Private API updates can break backward compatibility. So, backward compatibility in minor releases is not guaranteed in the private API. For example, if you use a core class or method on the project level, and it is updated or removed, the error may occur during an update.
 
+Also there are exceptions, models on project level can extends from Core:
+
+1. Facade, Factory, Entity manager, Repository, Dependency provider, Config, ConfigurationProvider.
+
+2. All models from Kernel, Bootstrap, and Development modules.
+
+### Overriding a core method on the project level
+
+To avoid the error during updates and achieve the same result, provide the custom business model in the private API.
 
 ### Example of code that can cause the error and example of the error itself
 
-<!-- make sure that the error example directly relates to the code example -->
+`CustomerAccessForm` extends from `Spryker\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm` class from the core level.
 
+```php
+<?php
+...
+**
+ * @method \Spryker\Zed\CustomerAccessGui\Communication\CustomerAccessGuiCommunicationFactory getFactory()
+ */
+class CustomerAccessForm extends SprykerCustomerAccessForm
+{
+    public const OPTION_CONTENT_TYPE_ACCESS_MANAGEABLE = 'OPTION_CONTENT_TYPE_ACCESS_MANAGEABLE';
+    public const OPTION_CONTENT_TYPE_ACCESS_NON_MANAGEABLE = 'OPTION_CONTENT_TYPE_ACCESS_NON_MANAGEABLE';
+    public const OPTION_CONTENT_TYPE_ACCESS_NON_MANAGEABLE_DATA = 'OPTION_CONTENT_TYPE_ACCESS_NON_MANAGEABLE_DATA';
+...
+}
+```
+
+Related error in the Evaluator output:
+```text
+------------------------------------------------------------------------------------------------------------------------
+Pyz\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm
+"Please avoid dependency: Spryker\\Zed\\CustomerAccessGui\\Communication\\Form\\CustomerAccessForm in Pyz\\Zed\\CustomerAccessGui\\Communication\\Form\\CustomerAccessForm"
+------------------------------------------------------------------------------------------------------------------------
+```
 
 ### How do I achieve the same result without the error?
 
-<!-- steps and code snippet -->
+To resolve the error provided in the example, do the following:
+
+1. Change extending from `Spryker\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm` to extending from `Spryker\Zed\Kernel\Communication\Form\AbstractType`
+
+2. Copy necessary functionality from the Core.
+
+```php
+<?php
+
+/**
+ * This file is part of the Spryker Commerce OS.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
+namespace Pyz\Zed\CustomerAccessGui\Communication\Form;
+
+use ArrayObject;
+use Spryker\Zed\Kernel\Communication\Form\AbstractType;
+use Symfony\Component\Form\CallbackTransformer;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
+
+/**
+ * @method \Spryker\Zed\CustomerAccessGui\Communication\CustomerAccessGuiCommunicationFactory getFactory()
+ */
+class CustomerAccessForm extends AbstractType
+{
+    public const OPTION_CONTENT_TYPE_ACCESS = 'OPTION_CONTENT_TYPE_ACCESS';
+    public const FIELD_CONTENT_TYPE_ACCESS = 'contentTypeAccess';
+    public const OPTION_CONTENT_TYPE_ACCESS_MANAGEABLE = 'OPTION_CONTENT_TYPE_ACCESS_MANAGEABLE';
+    public const OPTION_CONTENT_TYPE_ACCESS_NON_MANAGEABLE = 'OPTION_CONTENT_TYPE_ACCESS_NON_MANAGEABLE';
+    public const OPTION_CONTENT_TYPE_ACCESS_NON_MANAGEABLE_DATA = 'OPTION_CONTENT_TYPE_ACCESS_NON_MANAGEABLE_DATA';
+    protected const FIELD_CONTENT_TYPE_ACCESS_NON_MANAGEABLE = 'contentTypeAccessNonManageable';
+
+    /**
+     * @param \Symfony\Component\OptionsResolver\OptionsResolver $resolver
+     *
+     * @return void
+     */
+    public function configureOptions(OptionsResolver $resolver): void
+    {
+        $resolver->setRequired(static::OPTION_CONTENT_TYPE_ACCESS_MANAGEABLE);
+        $resolver->setRequired(static::OPTION_CONTENT_TYPE_ACCESS_NON_MANAGEABLE);
+        $resolver->setRequired(static::OPTION_CONTENT_TYPE_ACCESS_NON_MANAGEABLE_DATA);
+        $resolver->setRequired(static::OPTION_CONTENT_TYPE_ACCESS);
+    }
+
+    /**
+     * @param \Symfony\Component\Form\FormBuilderInterface $builder
+     * @param string[] $options
+     *
+     * @return void
+     */
+    public function buildForm(FormBuilderInterface $builder, array $options): void
+    {
+        $this->addContentTypeAccessManageable($builder, $options);
+        $this->addContentTypeAccessNonManageable($builder, $options);
+    }
+
+    /**
+     * @param \Symfony\Component\Form\FormBuilderInterface $builder
+     * @param array $options
+     *
+     * @return $this
+     */
+    protected function addContentTypeAccessManageable(FormBuilderInterface $builder, array $options)
+    {
+        $builder->add(static::FIELD_CONTENT_TYPE_ACCESS, ChoiceType::class, [
+            'expanded' => true,
+            'multiple' => true,
+            'required' => false,
+            'label' => 'Content Types',
+            'choice_label' => 'contentType',
+            'choice_value' => 'contentType',
+            'choices' => $options[static::OPTION_CONTENT_TYPE_ACCESS_MANAGEABLE],
+        ]);
+
+        $builder
+            ->get(static::FIELD_CONTENT_TYPE_ACCESS)
+            ->addModelTransformer(new CallbackTransformer(function ($customerAccess): array {
+                if ($customerAccess) {
+                    return (array)$customerAccess;
+                }
+
+                return [];
+            }, function ($customerAccess): ArrayObject {
+                return new ArrayObject($customerAccess);
+            }));
+
+        return $this;
+    }
+
+    /**
+     * @param \Symfony\Component\Form\FormBuilderInterface $builder
+     * @param array $options
+     *
+     * @return $this
+     */
+    protected function addContentTypeAccessNonManageable(FormBuilderInterface $builder, array $options)
+    {
+        $builder->add(static::FIELD_CONTENT_TYPE_ACCESS_NON_MANAGEABLE, ChoiceType::class, [
+            'mapped' => false,
+            'expanded' => true,
+            'multiple' => true,
+            'required' => false,
+            'disabled' => true,
+            'choice_label' => 'contentType',
+            'choice_value' => 'contentType',
+            'data' => $options[static::OPTION_CONTENT_TYPE_ACCESS_NON_MANAGEABLE_DATA],
+            'choices' => $options[static::OPTION_CONTENT_TYPE_ACCESS_NON_MANAGEABLE],
+        ]);
+
+        return $this;
+    }
+
+    /**
+     * @param \Symfony\Component\Form\FormBuilderInterface $builder
+     * @param array $options
+     *
+     * @return \Spryker\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm
+     */
+    protected function addContentTypeAccess(FormBuilderInterface $builder, array $options)
+    {
+        $builder->add(static::FIELD_CONTENT_TYPE_ACCESS, ChoiceType::class, [
+            'expanded' => true,
+            'multiple' => true,
+            'required' => false,
+            'label' => 'Content Types',
+            'choice_label' => 'contentType',
+            'choice_value' => 'contentType',
+            'choices' => $options[static::OPTION_CONTENT_TYPE_ACCESS],
+        ]);
+
+        $builder
+            ->get(static::FIELD_CONTENT_TYPE_ACCESS)
+            ->addModelTransformer(new CallbackTransformer(function ($customerAccess): array {
+                if ($customerAccess) {
+                    return (array)$customerAccess;
+                }
+
+                return [];
+            }, function ($customerAccess): ArrayObject {
+                return new ArrayObject($customerAccess);
+            }));
+
+        return $this;
+    }
+}
+```
+
+When the extending is avoided, re-evaluate the code. The same error shouldn't be returned.

@@ -192,8 +192,8 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Once you have finished the full integration of the feature, make sure that the actual count of products as a result matches the expectations (filtered correctly).
-{
-	% endinfo_block %}
+
+{% endinfo_block %}
 
 ## Install Feature Frontend
 
@@ -215,6 +215,7 @@ composer require spryker-feature/catalog:"^202001.0" spryker-feature/cms:"^20200
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that the following modules were installed:
 
 |Module|Expected directory|
@@ -226,6 +227,7 @@ Make sure that the following modules were installed:
 {% endinfo_block %}
 
 ### 2) Add Translations
+
 Append glossary according to your language configuration:
 
 src/data/import/glossary.csv
@@ -259,6 +261,7 @@ Make sure that in the database the configured data is added to the `spy_glossary
 ### 3) Enable Controllers
 
 #### Controller Provider List
+
 Register controller provider(s) to the Yves application:
 
 |Provider|Namespace|Enabled Controller|Specification|

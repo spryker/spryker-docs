@@ -32,6 +32,13 @@ redirect_from:
   - /v1/docs/en/installation-guide-b2c
 ---
 
+{% info_block warningBox "Newer DevVM version" %}
+
+These installation guides are for DevVM version 3.1.0. However, there is a newer version of DevVM, 4.1.0. We recommend installing the Spryker Demo Shop on the new DevVM version. See [Installing Spryker with DevVM version 4.1.0](/docs/scos/dev/setup/installing-spryker-with-vagrant/installing-spryker-with-devvm-version-4.1.0.html) for the updated installation instructions.
+
+{% endinfo_block %}
+
+
 To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html) or [B2C](/docs/scos/user/intro-to-spryker/b2c-suite.html) implementations on Mac OS or Linux with Development Virtual Machine, follow the steps below.
 
 ### 1. Install prerequisites
@@ -62,7 +69,7 @@ cd devvm
 2. **Initialize the Vagrant environment**:
 
 ```bash
-vagrant init devv410 https://u220427-sub1:PpiiHzuF2OIUzmcH@u220427-sub1.your-storagebox.de/devvm_v4.1.0.box
+vagrant init devvm3.1.0 https://github.com/spryker/devvm/releases/download/v3.1.0/spryker-devvm.box
 ```
 {% info_block warningBox %}
 

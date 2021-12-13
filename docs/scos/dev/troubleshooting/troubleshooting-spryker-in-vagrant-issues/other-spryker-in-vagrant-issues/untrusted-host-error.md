@@ -1,4 +1,4 @@
--
+---
 title: Untrusted host error
 description: Fix the issue when the Spryker application runs slowly
 template: troubleshooting-guide-template
@@ -6,7 +6,7 @@ template: troubleshooting-guide-template
 
 ## Description
 
-When browsing your project after installation, you get the error like this one:
+When browsing your project after installation, you get an error like this one:
 
 ![Untrusted host error](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/other-spryker-in-vagrant-issues/untrusted-host-error.png)
 

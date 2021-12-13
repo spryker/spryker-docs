@@ -1,19 +1,19 @@
 ---
 title: Installing Spryker with DevVM version 4.1.0
-description: This article provides step-by-step instructions on the B2B or B2C Demo Shop installation on Mac OS, Linux, and Windows with Development Virtual Machine version 4.1.0.
+description: This article provides step-by-step instructions on the B2B or B2C Demo Shop installation on macOS, Linux, and Windows with Development Virtual Machine version 4.1.0.
 last_updated: Dec 10, 2021
 template: howto-guide-template
 ---
 
-The 4.1.0 version of the Development Virtual Machine (DevVM) was released due to Virtualbox and Vagrant updates, as the old DevVM version had issues with the old DevVM boxes and Vagrant configs.
+The 4.1.0 version of the Development Virtual Machine (DevVM) was released due to VirtualBox and Vagrant updates, as the old DevVM version had issues with the old DevVM boxes and Vagrant configs.
 
-The release of the DevVM version 4.1.o also includes fixes for: 
+The release of the DevVM version 4.1.0 also includes fixes for: 
 
-- Virtualbox and Vagrant release 6.1.26
-- New Virtualbox and Vagrant releases 6.1.26+
+- VirtualBox and Vagrant release 6.1.26
+- New VirtualBox and Vagrant releases 6.1.26+
 - Configuration of the network connections
 
-To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html) or [B2C](/docs/scos/user/intro-to-spryker/b2c-suite.html) implementations on MacOs, Linux or Windows, with DevVM version 4.1.0, follow the steps below.
+To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html) or [B2C](/docs/scos/user/intro-to-spryker/b2c-suite.html) implementations on macOs, Linux or Windows, with DevVM version 4.1.0, follow the instructions below.
 
 ## System requirements
 
@@ -22,7 +22,7 @@ x64 CPU and OS with virtualization support in CPU
 
 {% info_block infoBox "Info" %}
 
-M1 MacBooks are not supported yet
+M1 MacBooks are not supported.
 
 {% endinfo_block %}
 
@@ -31,13 +31,13 @@ M1 MacBooks are not supported yet
 
 ## Windows OS prerequisites
 
-If you install the Spryker Demo Shop on Windows, execute the following prerequisites first:
+If you install the Spryker Demo Shop on Windows, make sure you meet the following prerequisites:
 
 1. Disable Windows firewall. See the [official Microsoft documentation](https://support.microsoft.com/en-us/windows/turn-microsoft-defender-firewall-on-or-off-ec0844f7-aebd-0583-67fe-601ecf5d774f) for details on how to do that.
-2. [Disable User Account Control](https://articulate.com/support/article/how-to-turn-user-account-control-on-or-off-in-windows-10).
+2. Disable User Account Control. See [How to Turn User Account Control On or Off in Windows 10 and later](https://articulate.com/support/article/how-to-turn-user-account-control-on-or-off-in-windows-10) for details on how to do that.
 3. Make sure you execute all the actions (opening PowerShell, running GitBash, installing programs, etc.) as the Administrator.
 4. Configure the openSSH Agent service:
-    1. [Enable and start OpenSSH](https://dev.to/aka_anoop/how-to-enable-openssh-agent-to-access-your-github-repositories-on-windows-powershell-1ab8).
+    1. Enable and start OpenSSH. See [How to enable OpenSSH Agent to access your github repositories on Windows PowerShell](https://dev.to/aka_anoop/how-to-enable-openssh-agent-to-access-your-github-repositories-on-windows-powershell-1ab8) for details on how to do that.
     2. Run
     ```bash
     eval `ssh-agent -s`
@@ -51,19 +51,21 @@ If you install the Spryker Demo Shop on Windows, execute the following prerequis
     ```
 
     {% endinfo_block %}
+
     3. Run
     ```bash
     ssh-add {path to the ssh key}
     ```
-5. [Enable symbolic links](https://community.perforce.com/s/article/3472) and reboot.
+5. Enable symbolic links. See [Enabling Symlinks on Windows](https://community.perforce.com/s/article/3472) for details on how to do that.
+6. Reboot your PC.
 
 
 ## 1. Execute prerequisites
 
 To prepare your environment for the set-up, do the following:
 
-1. Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). For Windows OS, consider the [Installing Vagrant and Git Bash](https://www.jeevisoft.com/installing-vagrant-and-git-bash/) for the installation.
-2. For _macOS, Linux and Windows_: Install [VirtualBox 6.1.26](https://download.virtualbox.org/virtualbox/6.1.26/)
+1. Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). For Windows OS, consider [Installing Vagrant and Git Bash](https://www.jeevisoft.com/installing-vagrant-and-git-bash/) for the installation.
+2. For _macOS, Linux_ and _Windows_: Install [VirtualBox 6.1.26](https://download.virtualbox.org/virtualbox/6.1.26/)
    
 {% info_block infoBox "macOS Big Sur" %}
 
@@ -74,9 +76,11 @@ For macOS Big Sur, when you install VirtualBox, click **Open System Preferences*
 {% endinfo_block %}
 
 For _macOS Monterey_, they still plan to release a new VirtualBox. For now, do the following:
+
    1. Install [this VirtualBox package](https://www.virtualbox.org/download/testcase/VirtualBox-6.1.29r148140.dmg).
-   2. Allow loading of the application the same way as for Big Sur from the previous step. If installation fails, reboot. 
-   3. If installation failed at the previous step, install VirtualBox again and reboot.
+   2. Allow application loading the same way as for Big Sur from the previous step. If installation fails, reboot. 
+   3. If installation failed at the previous step, install VirtualBox again and reboot your PC.
+   
 3. Install [VirtualBox Extension pack 6.1.26](https://download.virtualbox.org/virtualbox/6.1.26/Oracle_VM_VirtualBox_Extension_Pack-6.1.26.vbox-extpack)
    
 {% info_block infoBox "macOS Monterey" %}
@@ -85,7 +89,7 @@ Skip this step if you use macOS Monterey, as there is no VirtualBox Extension fo
 
 {% endinfo_block %}
    
-4. Install [Vagrant (latest version)](https://www.vagrantup.com/). For Windows OS, consider the [Installing Vagrant and Git Bash](https://www.jeevisoft.com/installing-vagrant-and-git-bash/) for the installation.
+4. Install [Vagrant (latest version)](https://www.vagrantup.com/). For Windows OS, consider [Installing Vagrant and Git Bash](https://www.jeevisoft.com/installing-vagrant-and-git-bash/) for the installation.
 5. Remove old *vagrant-vbguest* and *vagrant-hostmanager* plugins and install their new versions:
 
 ```bash
@@ -93,7 +97,7 @@ vagrant plugin list
 vagrant plugin install vagrant-hostsupdater vagrant-hostmanager vagrant-vbguest
 ```
 6. Remove all the Vagrant boxes and old configs from the old directories. To do so:
-   1. Run
+   1. Run:
     ```bash
     vagrant destroy -f
     ```
@@ -124,7 +128,7 @@ cd devvm
 ```bash
 vagrant init devv410 https://u220427-sub1:PpiiHzuF2OIUzmcH@u220427-sub1.your-storagebox.de/devvm_v4.1.0.box
 ```
-3. Update the Vagrantfile.
+3. Update the Vagrantfile:
 - For _Linux_ and _macOs_:
 
 ```bash
@@ -173,6 +177,8 @@ awk '/^end/{print " config.hostmanager.enabled = true\n config.hostmanager.manag
     At this step, consider disabling Xdebug and enabling OPcache so your application runs faster. See [Application runs slowly](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/other-spryker-in-vagrant-issues/application-runs-slowly.html) for details.
 
     {% endinfo_block %}
+
+    After this step is complete, you should see the `master` branch: `vagrant@vm-suite /data/shop/development/current (master)`. If you are on _Windows OS_ and don't see `master`, check out [You don't see the master branch after running vagrant-ssh](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/windows-issues/you-dont-see-the-master-branch-after-running-vagrant-ssh.html).
 2. Generate a read-only token on GitHub, in [Settings->Developer Settings->Personal access tokens](https://github.com/settings/tokens).
 3. Run:
    ```bash
@@ -204,3 +210,6 @@ When the installation process is complete, Spryker Commerce OS is ready to use. 
 * `http://glue.de.b2c-demo-shop.local` - REST API (Glue).
 
 Credentials to access the administrator interface: user `admin@spryker.com` and password `change123`.
+
+## Next steps:
+* [Troubleshooting Spryker in Vagrant installation issues](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/troubleshooting-spryker-in-vagrant-installation-issues.html)

@@ -1,4 +1,4 @@
---
+---
 title: Application runs slowly
 description: Fix the issue when the Spryker application runs slowly
 template: troubleshooting-guide-template
@@ -10,7 +10,7 @@ Your Spryker shop runs slowly.
 
 ## Cause
 
-By default, Xdebug is enabled and OPcache is disabled when you run the application. This slows down the application, so consider disabling Xdebug and enabling OPcache. 
+By default, Xdebug is enabled, and OPcache is disabled when you run the application. This slows down the application, so consider disabling Xdebug and enabling OPcache. 
 
 ## Solution
 

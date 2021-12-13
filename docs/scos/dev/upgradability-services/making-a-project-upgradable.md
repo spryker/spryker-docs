@@ -1,6 +1,6 @@
 ---
-title: Customization tiers
-description: Customization tiers for upgradability services
+title: Making a project upgradable
+description: Learn how to make your project upgradable
 last_updated: Nov 25, 2021
 template: concept-topic-template
 ---

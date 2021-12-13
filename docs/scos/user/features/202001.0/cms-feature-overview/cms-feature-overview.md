@@ -45,7 +45,7 @@ To enhance the visibility of your shop, the Spryker Commerce OS comes with sever
 | --- | --- |
 | Page | Pages defined in CMS refer to web pages that are meant to be displayed in the front-end application (Yves). A page is defined by an URL and a template. |
 | Page URL | When accessing the URL assigned to a page defined in CMS, the associated template will be loaded. |
-| Template | The CMS uses Twig templates that are placed under src/Pyz/Yves/Cms/Theme/default/template/ folder. |
+| Template | The CMS uses Twig templates that are placed under `src/Pyz/Yves/Cms/Theme/default/template/` folder. |
 | Placeholder | Placeholders enable putting context to a template; a placeholder has a glossary key assigned, so at runtime, the placeholders are replaced by the corresponding glossary key value, considering the context. |
 | Block | Partial page that can be embedded in other web pages. |
 | URL Redirect | Technique for delivering a page under more then one URL address. When a request is made to an URL that was redirected, a page with a different URL is opened. |
@@ -53,9 +53,7 @@ To enhance the visibility of your shop, the Spryker Commerce OS comes with sever
 
 **Features:**
 
-<div>
-<a class="feature-link" href="/docs/scos/user/features/{{page.version}}0/cms-feature-overview/templates-and-slots-overview.html">Templates & Slots</a>
-<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html">CMS Page</a>     
-<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html">CMS Block</a>
- <a class="feature-link" href="/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html">Content Items</a>
-</div>
+- [Templates & Slots](docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html)
+- [CMS Page](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-page-drafts-and-previews.html)
+- [CMS Block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.htm)
+- [Content Items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html)

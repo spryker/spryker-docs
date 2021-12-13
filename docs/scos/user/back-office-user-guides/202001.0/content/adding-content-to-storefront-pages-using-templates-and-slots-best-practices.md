@@ -23,8 +23,8 @@ This topic describes how to add content to Storefront pages using templates with
 
 Let’s say you have *Sticky Notes* and *Writing Materials* categories, and you want to cross-promote them. You set the following tasks:
 
-*     All the products belonging to the *Sticky Notes* category should display a content block with a link to the *Writing Materials* category and a content block with featured products.
-*     All the products belonging to the *Writing Materials* category should display a content block with a link to the *Writing Materials* category and a content block with top sellers.
+* All the products belonging to the *Sticky Notes* category should display a content block with a link to the *Writing Materials* category and a content block with featured products.
+* All the products belonging to the *Writing Materials* category should display a content block with a link to the *Writing Materials* category and a content block with top sellers.
 
 To do that, you need to create content items, insert them into CMS blocks, assign CMS blocks to slots and select the pages the CMS blocks will be displayed on.
 {% info_block infoBox "Examplary content" %}
@@ -42,8 +42,8 @@ Follow the steps below to add the content.
 
 Create the following content items:
 
-*     Abstract product list of top sellers - *Best Selling Products*
-*     Abstract product list of featured products - *Featured Products*
+* Abstract product list of top sellers - *Best Selling Products*
+* Abstract product list of featured products - *Featured Products*
 
 See [Creating Content Items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html) for more details.
 
@@ -57,10 +57,10 @@ Follow the steps to create the CMS blocks with the needed content:
 
 1. Create the following CMS blocks:
 
-    *     Top selling products reference - *Homepage Top sellers Products*
-    *     Featured products reference - *Homepage Featured Products*
-    *     Writing materials reference - *Category Banner-2*
-    *     Sticky notes reference - *Category Banner-3*
+    * Top selling products reference - *Homepage Top sellers Products*
+    * Featured products reference - *Homepage Featured Products*
+    * Writing materials reference - *Category Banner-2*
+    * Sticky notes reference - *Category Banner-3*
 
 See [Creating a CMS Block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/creating-cms-blocks.html) for more details.
 

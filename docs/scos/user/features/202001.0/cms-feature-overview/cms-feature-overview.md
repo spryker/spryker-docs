@@ -23,8 +23,8 @@ redirect_from:
 ***
 
 The Spryker Commerce OS offers a feature-rich content management system that allows you to provide the right content at the right place at the right time. Easily define the layout of your pages with templates and Slots and create content with Content Items. This multi-dimensional structure allows maximal personalization and Technology Partner CMS Integrations.
-        
-The intuitive, user-friendly WYSIWYG editor interface enables you to flexibly create and edit the content. Combining dynamic placeholders with CMS content allows you to automatically retrieve and display catalog items to build highly effective and adaptable promotional pages.	
+
+The intuitive, user-friendly WYSIWYG editor interface enables you to flexibly create and edit the content. Combining dynamic placeholders with CMS content allows you to automatically retrieve and display catalog items to build highly effective and adaptable promotional pages.
 
 The CMS gives you full control over the content in terms of:
 
@@ -45,7 +45,7 @@ To enhance the visibility of your shop, the Spryker Commerce OS comes with sever
 | --- | --- |
 | Page | Pages defined in CMS refer to web pages that are meant to be displayed in the front-end application (Yves). A page is defined by an URL and a template. |
 | Page URL | When accessing the URL assigned to a page defined in CMS, the associated template will be loaded. |
-| Template | The CMS uses Twig templates that are placed under src/Pyz/Yves/Cms/Theme/default/template/ folder. |
+| Template | The CMS uses Twig templates that are placed under `src/Pyz/Yves/Cms/Theme/default/template/` folder. |
 | Placeholder | Placeholders enable putting context to a template; a placeholder has a glossary key assigned, so at runtime, the placeholders are replaced by the corresponding glossary key value, considering the context. |
 | Block | Partial page that can be embedded in other web pages. |
 | URL Redirect | Technique for delivering a page under more then one URL address. When a request is made to an URL that was redirected, a page with a different URL is opened. |
@@ -53,11 +53,7 @@ To enhance the visibility of your shop, the Spryker Commerce OS comes with sever
 
 **Features:**
 
-<div>
-         <a class="feature-link" href="https://documentation.spryker.com/v4/docs/
-templates-slots">Templates & Slots</a>
-<a class="feature-link" href="https://documentation.spryker.com/v4/docs/cms-page">CMS Page</a>     
-<a class="feature-link" href="https://documentation.spryker.com/v4/docs/
-cms-block">CMS Block</a>
- <a class="feature-link" href="https://documentation.spryker.com/v4/docs/content-items-201907">Content Items</a> 
-    </div>
+- [Templates & Slots](docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html)
+- [CMS Page](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-page-drafts-and-previews.html)
+- [CMS Block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.htm)
+- [Content Items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html)

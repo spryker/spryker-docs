@@ -33,8 +33,8 @@ related:
 
 ## Partner Information
 
-[ABOUT HEIDELPAY](https://www.heidelpay.de/) 
-Heidelpay is an internationally operating payment institution, authorized and regulated by the Federal Financial Supervisory Authority. The Full-Service Payment Provider covers the entire range of services connected to international electronic payment processing. For more than 13 years the company has been successfully realizing projects of online and stationary retailers and currently serves more than 16.000 customers in many different industrial sectors worldwide. 
+[ABOUT HEIDELPAY](https://www.heidelpay.de/)
+Heidelpay is an internationally operating payment institution, authorized and regulated by the Federal Financial Supervisory Authority. The Full-Service Payment Provider covers the entire range of services connected to international electronic payment processing. For more than 13 years the company has been successfully realizing projects of online and stationary retailers and currently serves more than 16.000 customers in many different industrial sectors worldwide.
 
 ## Integrating Heidelpay
 
@@ -57,7 +57,7 @@ To integrate Hidelpay in your project, follow these steps:
 ## Building a State Machine Workflow to Use Heidelpay Payment Methods
 
 We use state machines for handling and managing orders and payments.
-To use Heidelpay, [create a new OMS](http://documentation.spryker.com/v4/docs/oms-state-machine) which includes necessary Heildelpay payment methods. You can use the same state machines or build new ones. The state machine commands and conditions trigger Heidelpay facade calls in order to perform the needed requests to Heidelpay API.
+To use Heidelpay, [create a new OMS](/docs/scos/dev/back-end-development/data-manipulation/creating-an-order-management-system-spryker-commerce-os.html) which includes necessary Heildelpay payment methods. You can use the same state machines or build new ones. The state machine commands and conditions trigger Heidelpay facade calls in order to perform the needed requests to Heidelpay API.
 
 Some examples of the basic and fully functional state machines for each payment method were already built: `vendor/spryker-eco/heidelpay/config/Zed/Oms`
 

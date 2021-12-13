@@ -44,7 +44,7 @@ For increased security, access tokens have a limited lifetime. When receiving an
 | Wishlist - Rename a wishlist | PATCH | http://mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_uuid{% raw %}}}{% endraw %} |
 
 ## Installation
-For instructions on how to install the necessary modules and enable OAuth authentication, see [Customer Account Management Feature Integration](https://documentation.spryker.com/v2/docs/customer-account-management-feature-integration-glue-201907).
+For instructions on how to install the necessary modules and enable OAuth authentication, see [Customer Account Management Feature Integration](/docs/scos/dev/feature-integration-guides/201907.0/customer-account-management-feature-integration.html).
 
 ## User Authentication
 To authenticate a user and receive an access token, send a POST request to the following endpoint:

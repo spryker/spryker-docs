@@ -459,7 +459,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 ### 7) Add console commands
 
-Configure the following console commands with a router cache warmup per endpoint:
+1. Configure the following console commands with a router cache warmup per endpoint:
 
 
 <details open>
@@ -496,6 +496,33 @@ You’ve added the following commands:
 
 - `console router:cache:warm-up:backoffice`
 - `console router:cache:warm-up:backend-gateway`
+
+2. Extend the required installation recipes with route cache warmup commands for `backend` and `backend-gateway` applications:
+
+{% info_block infoBox "Location of installation recipes" %}
+
+By default, installation recipes are located in `config/install/`.
+
+{% endinfo_block %}
+
+```yaml
+env:
+    NEW_RELIC_ENABLED: 0
+
+sections:
+    build:
+        ...
+        router-cache-warmup-backoffice:
+            command: 'vendor/bin/console router:cache:warm-up:backoffice'
+
+        router-cache-warmup-backend-gateway:
+            command: 'vendor/bin/console router:cache:warm-up:backend-gateway'
+        ...
+```        
+
+
+
+
 
 ### 8) Configure the application
 

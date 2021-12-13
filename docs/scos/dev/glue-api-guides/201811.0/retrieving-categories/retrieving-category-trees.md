@@ -18,11 +18,13 @@ In your development, these resources can help you to:
 * Find out which categories a product belongs to
 
 {% info_block infoBox %}
+
 For more information on managing the category tree, see [Category Hierarchy](/docs/scos/user/features/{{page.version}}/catalog-feature-overview.html).
+
 {% endinfo_block %}
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Category API Feature Integration](https://documentation.spryker.com/v1/docs/category-api-feature-integration-201903).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Category API Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-category-management-feature-integration.html).
 
 ## Get Full Category Tree
 To retrieve the full category tree, containing all available nodes and their children, send a GET request to the following endpoint:
@@ -506,5 +508,3 @@ Response sample:
 | --- | --- |
 | 701 | Node ID not specified or invalid. |
 | 703 | A node with the specified ID was not found. |
-
-

@@ -17,8 +17,8 @@ This section allows creating discounts for products.
 * * *
 **What's next?**
 To know how the discounts are created and managed, see the following articles:
-* [Creating a Discount Voucher](https://documentation.spryker.com/v5/docs/en/creating-a-discount-voucher)
-* [Creating a Cart Rule Discount](https://documentation.spryker.com/v5/docs/en/creating-a-cart-rule-discount)
+* [Creating a Discount Voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html)
+* [Creating a Cart Rule Discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html)
 * [Managing Discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/managing-discounts.html)
 
 To know more about the attributes you use to create and manage the discounts, see the following articles:

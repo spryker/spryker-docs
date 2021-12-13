@@ -59,13 +59,13 @@ To start working with CMS pages, see:
 * [Creating a new page](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/creating-cms-pages.html)
 * [Managing CMS page versioning](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/managing-cms-page-versions.html)
 * [Managing CMS pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/managing-cms-pages.html)
-* [Assigning Blocks to CMS, Category and Product pages](https://documentation.spryker.com/v5/docs/en/assigning-blocks-to-category-or-product-pages)
+* [Assigning Blocks to CMS, Category and Product pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-cms-blocks.html)
 
 To start working with CMS blocks, see:
 
 * [Creating a new CMS block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/creating-cms-blocks.html)
 * [Managing CMS block details](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-cms-blocks.html)
-* [Assigning blocks to product and category pages](https://documentation.spryker.com/v5/docs/en/assigning-blocks-to-category-or-product-pages)
+* [Assigning blocks to product and category pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-cms-blocks.html)
 
 To start working with content items , see:
 

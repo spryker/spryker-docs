@@ -19,7 +19,9 @@ This topic describes the procedures that you need to perform to create, edit, an
 ***
 To start working with roles, navigate to the **Users Control -> Roles** section.
 ***
+
 ## Creating a Role
+
 To create a role:
 1. On the **Role list** table view page, click **Add new Role** in the top right corner.
 2. On the **Create new Role** page, enter the name of the role and click **Create**.
@@ -31,8 +33,11 @@ This will redirect you to the **Edit Role** page where you define the permission
     * Permission
 
 See [Adding Rules for Roles](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-roles.html#adding-rules-for-roles) for information on how to create rules.
+
 {% info_block warningBox "Note" %}
+
 You can add from one to many rules to a specific role. Each time you click **Add rule**, the created rule appears in the **Assigned Rules** section.
+
 {% endinfo_block %}
 
 You have set up a role to be assigned to a group.
@@ -42,6 +47,7 @@ In case you need a specific role to have access to all sections, you can put an 
 ***
 
 ## Editing a Role
+
 To edit a role:
 
 1. In the **Role list > Actions** column, click **Edit** for a specific role.  
@@ -50,6 +56,7 @@ To edit a role:
     2. Delete the already assigned rule by clicking **Delete** in the **Assigned Rules > Actions** column.
 
 ### Adding Rules for Roles
+
 In the **Roles** section of the **Edit Role** page, you can define what a user can or cannot do in the Admin UI. To restrict a user from accessing a specific action, you need to specify what bundle (module) and controller this action refers to.
 
 #### Extracting the Bundle, Controller, and Action Values
@@ -111,8 +118,10 @@ See example of the `navigation.xml` file of the AvailabilityGui module:
 </details>
 
 {% info_block infoBox %}
-Information about modules is available in their readme files. Check the [readme file of the AvailabilityGui](https://github.com/spryker/availability-gui/blob/master/README.md
-{% endinfo_block %} module for example.)
+
+Information about modules is available in their readme files. Check the [readme file of the AvailabilityGui](https://github.com/spryker/availability-gui/blob/master/README.md) module for example.)
+
+{% endinfo_block %} 
 
 #### Restricting User Access to Modules and Actions
 
@@ -130,14 +139,17 @@ Imagine you need to deny adding product attributes for a user. Do the following:
 
 {% info_block infoBox %}
 From the `zed.de.b2b-demo-shop.local/product-attribute-gui/attribute/create` link, you can already tell that:<br>
-- _product-attribute-gui_ is bundle,<br>
-- _attribute_ is controller,<br>
-- _create_ is action.<br>
-You can verify the bundle, controller and action values in the [navigation.xml file ](https://github.com/spryker/product-attribute-gui/blob/master/src/Spryker/Zed/ProductAttributeGui/Communication/navigation.xml
-{% endinfo_block %} of the product-attribute-gui module under the *Create a Product Attribute* label:<br>
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Users+Control/Roles%2C+Groups+and+Users/Managing+Roles/Create+attribute.png) )
+    - _product-attribute-gui_ is bundle,<br>
+    - _attribute_ is controller,<br>
+    - _create_ is action.<br>
 
-3. Go back to the **Edit Role** page and fill in the required fields:
+You can verify the bundle, controller and action values in the [navigation.xml file ](https://github.com/spryker/product-attribute-gui/blob/master/src/Spryker/Zed/ProductAttributeGui/Communication/navigation.xml) of the product-attribute-gui module under the *Create a Product Attribute* label:
+
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Users+Control/Roles%2C+Groups+and+Users/Managing+Roles/Create+attribute.png) 
+
+{% endinfo_block %} 
+
+1. Go back to the **Edit Role** page and fill in the required fields:
 **Bundle**: _product-attribute-gui_
 **Controller**: _attriubte_
 **Action**: _create_
@@ -146,7 +158,9 @@ You can verify the bundle, controller and action values in the [navigation.xml f
 
 That's it! When the user with this role clicks **Create a Product Attribute**, they will get the **Access denied** view.
 ***
+
 ## Deleting a Role
+
 To delete a role:
 
 1. In the **Role list > Actions** column, click **Delete** for the role that needs to be deleted.

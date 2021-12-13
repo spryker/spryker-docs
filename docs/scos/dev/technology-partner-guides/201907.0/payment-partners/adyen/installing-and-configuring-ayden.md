@@ -1,5 +1,5 @@
 ---
-title: Adyen - Installation and Configuration
+title: Installing and configuring Ayden
 description: Install and configure Adyen module to work in the Spryker Commerce OS.
 last_updated: Jan 21, 2020
 template: concept-topic-template
@@ -13,9 +13,9 @@ related:
     link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen.html
   - title: Adyen - Integration
     link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-integration-into-a-project.html
-  - title: Adyen - Provided Payment Methods
+  - title: Integrating Ayden payment methods
     link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-provided-payment-methods.html
-  - title: Adyen - Filtering Payment Methods
+  - title: Enabling Ayden filtering payment methods
     link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-filtering-payment-methods.html
 ---
 

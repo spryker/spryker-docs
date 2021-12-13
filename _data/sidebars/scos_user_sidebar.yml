@@ -2615,11 +2615,11 @@ entries:
         nested:
         - title: Adyen - Integration
           url: /docs/scos/user/technology-partners/payment-partners/adyen/adyen-integration-into-a-project.html
-        - title: Adyen - Installation and Configuration
+        - title: Installing and configuring Ayden
           url: /docs/scos/user/technology-partners/payment-partners/adyen/adyen-installation-and-configuration.html
-        - title: Adyen - Provided Payment Methods
+        - title: Integrating Ayden payment methods
           url: /docs/scos/user/technology-partners/payment-partners/adyen/adyen-provided-payment-methods.html
-        - title: Adyen - Filtering Payment Methods
+        - title: Enabling Ayden filtering payment methods
           url: /docs/scos/user/technology-partners/payment-partners/adyen/adyen-filtering-payment-methods.html
       - title: Computop
         url: /docs/scos/user/technology-partners/payment-partners/computop/computop.html

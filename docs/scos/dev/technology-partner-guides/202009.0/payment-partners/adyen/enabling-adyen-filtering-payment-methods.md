@@ -1,5 +1,5 @@
 ---
-title: Adyen - Filtering Payment Methods
+title: Enabling Ayden filtering payment methods
 description: Enable filtering available payment methods depending on the result of /paymentMethods API call in the Spryker Commerce OS.
 last_updated: Aug 27, 2020
 template: concept-topic-template
@@ -9,11 +9,11 @@ redirect_from:
   - /v6/docs/adyen-filter-payment-methods
   - /v6/docs/en/adyen-filter-payment-methods
 related:
-  - title: Adyen - Installation and Configuration
+  - title: Installing and configuring Ayden
     link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-installation-and-configuration.html
-  - title: Adyen - Integration into a project
+  - title: Integrating Ayden
     link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-integration-into-a-project.html
-  - title: Adyen - Provided Payment Methods
+  - title: Integrating Ayden payment methods
     link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-provided-payment-methods.html
 ---
 

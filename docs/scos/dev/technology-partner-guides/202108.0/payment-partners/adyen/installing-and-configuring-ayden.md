@@ -11,11 +11,11 @@ redirect_from:
   - /docs/adyen-configuration
   - /docs/en/adyen-configuration
 related:
-  - title: Adyen - Integration into a project
+  - title: Integrating Ayden
     link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-integration-into-a-project.html
-  - title: Adyen - Filtering Payment Methods
+  - title: Enabling Ayden filtering payment methods
     link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-filtering-payment-methods.html
-  - title: Adyen - Provided Payment Methods
+  - title: Integrating Ayden payment methods
     link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-provided-payment-methods.html
 ---
 

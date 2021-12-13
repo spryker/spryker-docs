@@ -35,8 +35,8 @@ To find out more information about the attributes that you see on the *Edit Disc
 To view a discount, do the following:
 1. On the *Overview of Discounts* page, in the _Actions_ column, click **View**.
 2. On the *View discount* page, do one of the following:
-    1. Ro edit the attributes, click **Edit**.
-    2.  To get back to the *Discount Overview* page, click **List of discounts**.
+    1. To edit the attributes, click **Edit**.
+    2. To get back to the *Discount Overview* page, click **List of discounts**.
 
 ## Adding voucher codes (voucher discount type)
 

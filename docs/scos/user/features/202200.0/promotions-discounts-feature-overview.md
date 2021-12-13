@@ -136,7 +136,8 @@ The product selection based on the query string is dynamic:
 
 Promotional product is a discount application type that discounts a particular product at a set quantity, enabling "buy X, get Y" promotions.
 
-When a customer meets the conditions for a promotional product discount, a **Promotional products** section is displayed in the cart, allowing customers to add the available quantity of the discounted product to the cart.
+When a customer meets the conditions for a promotional product discount, a **Promotional products** section is displayed in the cart and lets customers add the available quantity of the discounted product to the cart. The section consists of the product name, SKU, original and discounted price, and discount description.
+
 ![Promotional product](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/promotional-product-frontend.png)
 
 A Back Office user selects the promotional product by entering an abstract product SKU in the Back Office. Also, they define the maximum quantity of the product to be sold with a discount.
@@ -216,7 +217,7 @@ In this case, discounts are applied based on their priority, regardless of type.
 
 If you have a voucher code and a cart rule with the same priority, both discounts should apply and use the same cart subtotal. See [Scenario 5: Non-exclusive, fixed amount and percentage discounts with the same priority values](#scenario-5-non-exclusive-fixed-amount-and-percentage-discounts-with-the-same-priority-values) for an example.
 
-{% endinfo_block %} 
+{% endinfo_block %}
 
 ## Discount calculation logic
 
@@ -313,7 +314,7 @@ MEMBER5 (5000): $100 - $100*0.05 = $95
 In the presence of exclusive discounts, all non-exclusive discounts are excluded.
 Between the exclusive discounts, the discount with the higher priority is chosen.
 
-#### Scenario 4: Non-exclusive, fixed amount and percentage discounts with the same priority values 
+#### Scenario 4: Non-exclusive, fixed amount and percentage discounts with the same priority values
 
 Cart subtotal: €100
 

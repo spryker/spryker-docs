@@ -71,8 +71,8 @@ In this section you will find information about our Technology Partner Integrati
 ### Personalization & Cross-Selling
 
 <!--* [8Select](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/8select.html)-->
-<!--* [Contentserv](https://documentation.spryker.com/v4/docs/)-->
-* [Econda](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/econda.html)
+<!--* [Contentserv](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/contentserv.html)-->
+* [Econda](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/econda/econda.html)
 * [Nosto](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/nosto.html)
 * [trbo](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/trbo.html)
 
@@ -123,7 +123,7 @@ In this section you will find information about our Technology Partner Integrati
 
 * [Akeneo](/docs/scos/dev/technology-partners/{{page.version}}/product-information-pimerp/akeneo/akeneo.html)
 * [Xentral](/docs/scos/dev/technology-partners/{{page.version}}/order-management-erpoms/xentral.html)
-<!--* [Censhare](https://documentation.spryker.com/v4/docs/)-->
+<!--* [Censhare](/docs/scos/user/technology-partners/{{page.version}}/content-management/censhare.html)-->
 <!--* [Contentserv](/docs/scos/dev/technology-partners/{{page.version}}/product-information-pimerp/contentserv.html)-->
 <!--* [Tradebyte](/docs/scos/dev/technology-partners/{{page.version}}/order-management-erpoms/tradebyte.html)-->
 

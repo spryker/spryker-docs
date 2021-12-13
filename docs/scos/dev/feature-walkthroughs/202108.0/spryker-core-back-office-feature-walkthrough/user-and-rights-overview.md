@@ -38,7 +38,7 @@ Also, you can find bundle names as well as controllers and actions in the file `
 
 ![bundles_navigation.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/bundles_navigation.png)
 
-See [Managing users](/docs/scos/user/back-office-user-guides/202108.0/users/roles-groups-and-users/managing-users.html) to learn how to create and manage users, groups, and roles .
+See [Managing users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html) to learn how to create and manage users, groups, and roles .
 
 <a name="add-acl"></a>
 

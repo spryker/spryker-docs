@@ -12,11 +12,13 @@ redirect_from:
 [Product labels](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) are used to draw your customers' attention to some specific products. Each of them has a name, a priority, and a validity period. The Product Labels API provides endpoints for getting labels via the REST HTTP requests.
 
 {% info_block infoBox "Note" %}
+
 Product labels are available only for abstract products.
+
 {% endinfo_block %}
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Product Labels API](https://documentation.spryker.com/v1/docs/promotions-and-discounts-feature-integration-201907).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Product Labels API](/docs/scos/dev/feature-integration-guides/{{page.version}}/discount-promotion-feature-integration.html).
 
 ## Get Product Label by ID
 To retrieve a product label, send this GET request:

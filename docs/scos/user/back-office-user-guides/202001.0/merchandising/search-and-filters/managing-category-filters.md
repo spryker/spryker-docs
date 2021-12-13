@@ -73,4 +73,4 @@ It is possible to remove either all filters from the active filters at once or j
 ***
 **Tips & Tricks**
 To add the removed filters again, click on the **green plus sign** at the filters you want to add back from Inactive filters.
-![Add a removed filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/add-removed-filter.gif){height="300" width=""}
+![Add a removed filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/add-removed-filter.gif)

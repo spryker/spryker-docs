@@ -39,12 +39,14 @@ Each file should consist of _key_ and _translation_ columns without headers. Exa
 | Add Rule | Regel hinzufügen |
 
 {% info_block warningBox %}
+
 If a translation is missing, the corresponding key is displayed instead.
+
 {% endinfo_block %}
 
 Unlike _Glossary_ section of Zed which is used for managing Front-end(Yves) translations, there is no interface for managing Zed translations currently. All the translations are managed by updating corresponding .csv files directly. Similarly to uploading translation files, you need to regenerate translation cache to reflect the changes after updating them. Use the commands to do that.
 
-Newly created and all the existing modules are shipped with German translation by default. If you want to add a different language, you can follow the instructions from the [Back Office translations feature integration guide](https://documentation.spryker.com/docs/en/back-office-feature-integration).
+Newly created and all the existing modules are shipped with German translation by default. If you want to add a different language, you can follow the instructions from the [Back Office translations feature integration guide](/docs/scos/dev/feature-integration-guides/202108.0/spryker-core-back-office-feature-integration.html).
 
 The scheme below illustrates relations between Translator, UserExtension, User, UserLocale and UserLocaleGui modules:
 

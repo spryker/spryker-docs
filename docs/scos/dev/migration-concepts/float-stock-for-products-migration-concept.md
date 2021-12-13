@@ -81,7 +81,7 @@ console transfer:generate
 | spryker/orders-rest-api | 2.0.0 | [Migration Guide - OrdersRestApi](/docs/scos/dev/module-migration-guides/glue-api/migration-guide-ordersrestapi.html) |
 | spryker/persistent-cart | 2.0.0 | [Migration Guide - PersistentCart](/docs/scos/dev/module-migration-guides/migration-guide-persistentcart.html) |
 | spryker/price-cart-connector | 5.0.0 | [Migration Guide - PriceCartConnector](/docs/scos/dev/module-migration-guides/migration-guide-pricecartconnector.html) |
-| spryker/price-product | 3.0.0 | [Migration Guide - PriceProduct](/docs/scos/dev/module-migration-guides/202108.0/migration-guide-priceproduct.html) |
+| spryker/price-product | 3.0.0 | [Migration Guide - PriceProduct](/docs/scos/dev/module-migration-guides/migration-guide-priceproduct.html) |
 | spryker/price-product-storage | 3.0.0 | [Migration Guide - PriceProductStorage](/docs/scos/dev/module-migration-guides/migration-guide-priceproductstorage.html) |
 | spryker/price-product-volume | 2.0.0 | [Migration Guide - PriceProductVolume](/docs/scos/dev/module-migration-guides/migration-guide-priceproductvolume.html) |
 | spryker/price-product-volume-gui | 2.0.0 | [Migration Guide - PriceProductVolumeGui](/docs/scos/dev/module-migration-guides/migration-guide-priceproductvolumegui.html) |
@@ -116,6 +116,6 @@ console transfer:generate
 | spryker-shop/product-search-widget | 2.0.0 | [Migration Guide - ProductSearchWidget](/docs/scos/dev/module-migration-guides/migration-guide-productsearchwidget.html) |
 | spryker-shop/quick-order-page | 3.0.0 | [Migration Guide - QuickOrderPage](/docs/scos/dev/module-migration-guides/migration-guide-quickorderpage.html) |
 | spryker-shop/shopping-list-page | 0.7.0 | [Migration Guide - ShoppingListPage](/docs/scos/dev/module-migration-guides/migration-guide-shoppinglistpage.html) |
-| spryker-shop/shopping-list-widget | 0.5.0 | [Migration Guide - ShoppingListWidget](/docs/scos/dev/module-migration-guides/202108.0/migration-guide-shoppinglistwidget.html) |
-    
+| spryker-shop/shopping-list-widget | 0.5.0 | [Migration Guide - ShoppingListWidget](/docs/scos/dev/module-migration-guides/migration-guide-shoppinglistwidget.html) |
+
  </details>   

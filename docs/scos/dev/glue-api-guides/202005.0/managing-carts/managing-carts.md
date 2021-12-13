@@ -16,5 +16,5 @@ In your development, the resources provided by the API can support you in the de
 For your convenience, we have created two separate guides based on cart type:
 
 * [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html)
-* [Managing Carts of Registered Users](https://documentation.spryker.com/v5/docs/en/managing-carts-of-registered-users-201907)
+* [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html)
 * [Sharing Company User Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html)

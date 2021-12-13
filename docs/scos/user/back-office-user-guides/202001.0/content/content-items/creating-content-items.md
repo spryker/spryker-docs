@@ -29,7 +29,7 @@ Follow the steps below to select a content item you want to create:
     * [Create a Product Set](#create-a-product-set)
     * [Create a File List](#create-a-file-list)
 
-See [Content Items Types: Module Relations](https://documentation.spryker.com/v4/docs/content-items-types-module-relations-201907) to learn more about the content item types.
+See [Content Items Types: Module Relations](/docs/scos/dev/feature-walkthroughs/{{page.version}}/content-items-feature-walkthrough/content-item-types-module-relations.html) to learn more about the content item types.
 
 See [Content Items: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/references/content-items-reference-information.html) to learn about the attributes on this page.
 
@@ -240,7 +240,7 @@ On the *Create Content Item: File List* page, you can do the following:
 Make sure to click **Save** before clicking **Back to Content Items** or going to any other Back Office section. Otherwise, the changes are discarded.
 
 {% endinfo_block %}
-***
+
 **What's next?**
 The content item is created. Now, you can add it to a CMS block.
 

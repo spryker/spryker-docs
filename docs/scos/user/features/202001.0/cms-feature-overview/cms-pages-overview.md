@@ -45,30 +45,22 @@ This CMS Pages feature is ideal for specific landing pages with dedicated URLs t
 
 **If you are:**
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                 <li><a href="https://documentation.spryker.com/v4/docs/ht-create-cms-templates#adding-a-template-for-a-cms-page" class="mr-link"> Create a template for a CMS page</a></li>
-  <li><a href="https://documentation.spryker.com/v4/docs/content-fields-max-size" class="mr-link">Define maximum length of content fields</a></li>
-<li><a href="https://documentation.spryker.com/v4/docs/cms-extension-points" class="mr-link">Enable an extension point for post activation and deactivation of CMS pages</a></li>
-<li><a href="https://documentation.spryker.com/v4/docs/mg-cms#upgrading-from-version-6-to-version-7" class="mr-link">Migrate the CMS module from version 6.* to version 7.*</a></li>
- <li><a href="https://documentation.spryker.com/v4/docs/mg-cmsstorage#upgrading-from-version-1-to-version-2" class="mr-link">Migrate the CmsStorage module from version 1.* to version 2.*</a></li>
-                <li><a href="https://documentation.spryker.com/v4/docs/en/migration-guide-cmsgui#upgrading-from-version-4-to-version-5" class="mr-link">Migrate the CmsGui module from version 4.* to version 5.*</a></li>
- </li><li><a href="https://documentation.spryker.com/v4/docs/mg-cmspagesearch#upgrading-from-version-1-to-version-2" class="mr-link">Migrate the CmsPageSearch module from version 1.* to version 2.*</a></li>
- </li><li><a href="https://documentation.spryker.com/v4/docs/en/cms-feature-integration-guide" class="mr-link">Integrate the CMS feature into your project </a></li>
-  </li><li><a href="https://documentation.spryker.com/v4/docs/cms-page-search-product-lists-catalog-feature-integration-201903" class="mr-link">Integrate the CMS Page Search + Product Lists + Catalog Feature v. into your project </a></li>
-  </li><li><a href="https://documentation.spryker.com/v4/docs/cms-pages-in-search-results-integration-201903" class="mr-link">Integrate the CMS Page Search + Catalog Feature into your project</a></li>
-   </ul>
-        </div>
-        <!-- col3 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-red">
-                <li class="mr-title">Back Office User</li>
-                  </li><li><a href="https://documentation.spryker.com/v4/docs/creating-a-cms-page" class="mr-link">Create a CMS Page</a></li>
-     </li><li><a href="https://documentation.spryker.com/v4/docs/managing-cms-pages" class="mr-link">Manage a CMS Page</a></li>
-  </li><li><a href="https://documentation.spryker.com/v4/docs/editing-cms-pages" class="mr-link">Edit a CMS Page</a></li>
-    </li><li><a href="https://documentation.spryker.com/v4/docs/cms-pages-versioning" class="mr-link">Manage Versions of a CMS Page</a></li>
-    </li><li><a href="https://documentation.spryker.com/v4/docs/assigning-blocks-to-category-and-product-pages" class="mr-link">Assigning Blocks to Category and Product Pages</a></li>
+- Developer
+
+  - [Create a template for a CMS page](https://documentation.spryker.com/v4/docs/ht-create-cms-templates#adding-a-template-for-a-cms-page)
+  - [Enable an extension point for post activation and deactivation of CMS pages](https://documentation.spryker.com/v4/docs/cms-extension-points)
+  - [Migrate the CMS module from version 6.* to version 7.*](https://documentation.spryker.com/v4/docs/mg-cms#upgrading-from-version-6-to-version-7)
+  - [Migrate the CmsStorage module from version 1.* to version 2.*](https://documentation.spryker.com/v4/docs/mg-cmsstorage#upgrading-from-version-1-to-version-2)
+  - [Migrate the CmsGui module from version 4.* to version 5.*](https://documentation.spryker.com/v4/docs/en/migration-guide-cmsgui#upgrading-from-version-4-to-version-5)
+  - [Migrate the CmsPageSearch module from version 1.* to version 2.*](https://documentation.spryker.com/v4/docs/mg-cmspagesearch#upgrading-from-version-1-to-version-2)
+  - [Integrate the CMS feature into your project](https://documentation.spryker.com/v4/docs/en/cms-feature-integration-guide)
+  - [Integrate the CMS Page Search + Product Lists + Catalog Feature v. into your project](/https://documentation.spryker.com/v4/docs/cms-page-search-product-lists-catalog-feature-integration-201903)
+  - [Integrate the CMS Page Search + Catalog Feature into your project](https://documentation.spryker.com/v4/docs/cms-pages-in-search-results-integration-201903)
+ 
+- Back Office User
+
+  - [Create a CMS Page](https://documentation.spryker.com/v4/docs/creating-a-cms-page)
+  - [Manage a CMS Page](https://documentation.spryker.com/v4/docs/managing-cms-pages)
+  - [Edit a CMS Page](https://documentation.spryker.com/v4/docs/editing-cms-pages)
+  - [Manage Versions of a CMS Page](https://documentation.spryker.com/v4/docs/cms-pages-versioning)
+  - [Assigning Blocks to Category and Product Pages](https://documentation.spryker.com/v4/docs/assigning-blocks-to-category-and-product-pages)

@@ -11,10 +11,10 @@ Factory, Dependency Provider, Repository, and Entity Manager methods belong to t
 
 ### Using custom methods on the project level
 
-To avoid the error, instead of overriding the core methods, introduce custom ones.
+To avoid the error during updates and achieve the same result, instead of overriding the core methods, introduce custom ones.
 
 
-#### Example of code and a related error
+#### Example of code that can cause upgradability errors
 
 For example, the extended class `EvaluatorCategoryImageEntityManager` overrides the core method `CategoryImageEntityManager`.
 
@@ -109,4 +109,4 @@ The method name should be unique to the extent of making it impossible to accide
 
 2. Override the core method with the custom one you've created in the previous step.
 
-When the core method is overriden with a custom one, re-run the Evaluator. The same error shouldn't be returned.
+When the core method is overriden with a custom one, re-evaluate the code. The same error shouldn't be returned.

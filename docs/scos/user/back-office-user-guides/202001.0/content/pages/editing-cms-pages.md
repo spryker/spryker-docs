@@ -41,8 +41,9 @@ To change general information of the page and SEO details:
     * Meta title
     * Meta keywords
     * Meta description 
-***
+
 **Tips & Tricks**
+
 On the **Edit CMS Page: [Page name]** page, you can do the following:
 
 * Publish the current version of the page by clicking **Publish** on the top of the page.
@@ -54,6 +55,7 @@ On the **Edit CMS Page: [Page name]** page, you can do the following:
 * Switch to the list of pages by clicking **Back to CMS** on the top of the page.
 
 ### Selecting the Edit > Placeholders option
+
 To change the title and content of the page:
 1. Select **Edit** > **Placeholders**.
 2.  On the **Edit Placeholders: [Page Name]** editor that opens, insert your cursor into the placeholder where you would like to update the content.
@@ -61,10 +63,13 @@ To change the title and content of the page:
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Pages/Editing+CMS+Pages/placeholders.png) 
 
 {% info_block infoBox %}
-In the placeholders editor, you can insert a banner, abstract product list, product set, and downloadable files using content item widgets. See [Adding Content Item Widgets to a Page](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html#adding-content-item-widgets-to-pages
-{% endinfo_block %} for more details. )
-***
+
+In the placeholders editor, you can insert a banner, abstract product list, product set, and downloadable files using content item widgets. See [Adding Content Item Widgets to a Page](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html#adding-content-item-widgets-to-pages) for more details. 
+
+{% endinfo_block %} 
+
 **Tips & Tricks**
+
 On the **Edit Placeholders: [Page Name]** editor, you can do the following:
 
 * Publish the current version of the page by clicking **Publish** on the top of the page.
@@ -75,6 +80,7 @@ On the **Edit Placeholders: [Page Name]** editor, you can do the following:
 * Remove the published version of the page from the store website by clicking **Deactivate** on the top of the page.
 * Make the page visible on the store website by clicking **Activate** on the top of the page.
 * Switch to the list of pages by clicking **Back to CMS** on the top of the page.
-***
+
 **What's next?**
+
 To know more about the attributes you see, select and enter while managing CMS pages, see [CMS Pages: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/references/cms-pages-reference-information.html).

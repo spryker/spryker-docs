@@ -31,7 +31,7 @@ To create a cart rule discount:
     1. In *STORE RELATION*, check the stores you wish the discount to be active in.
     2. From the *DISCOUNT TYPE* drop-down list, select a cart rule.
     3. In the *NAME* field, specify the name for the discount.
-    4. _Optional_: in the *DESCRIPTION* field, enter the description of the discount. The description is displayed to customers on the Storefront in the cart, in the **Promotional products** section.
+    4. _Optional_: in the *DESCRIPTION* field, enter the description of the discount. The description is displayed in the cart, in the **Promotional products** section.
     5. _Optional_: in the *PRIORITY* field, enter an integer value from 1 to 9999 for the discount priority. For reference information, in the *Create new discount* reference, see [General information tab](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#general-information-tab).
     6. Specify if the discount is exclusive. For reference information, in the *Create new discount* reference, see [General information tab](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#general-information-tab).
     7. Specify the validity interval (lifetime) of the discount.

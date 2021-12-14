@@ -11,7 +11,7 @@ Factory, Dependency Provider, Repository, and Entity Manager methods belong to t
 
 ### Using custom methods on the project level
 
-To unexpected issues and achieve the same result, instead of overriding the core methods, introduce custom ones.
+To avoid unexpected issues and achieve the same result, instead of overriding the core methods, introduce custom ones.
 
 
 #### Example of code that can cause upgradability errors

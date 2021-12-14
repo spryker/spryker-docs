@@ -26,6 +26,7 @@ To start feature integration, overview and install the necessary features:
 | Spryker Core	 | 202001.0 |
 
 ### 1) Install the required modules using Composer
+
 Run the following command to install the required modules:
 
 ```bash
@@ -59,7 +60,11 @@ console transfer:generate
 ```
 
 {% info_block warningBox “Verification” %}
+<<<<<<< Updated upstream
    
+=======
+
+>>>>>>> Stashed changes
 Make sure that the following changes were applied by checking your database:
 
 | Database Entity | Type | Event |
@@ -105,7 +110,6 @@ Make sure that the encryption key is secured in your live environment. This key 
 use Spryker\Shared\Vault\VaultConstants;
  
 $config[VaultConstants::ENCRYPTION_KEY] = "PLEASE ADJUST THIS ENCRYPTION KEY TO SECURE ONE"
-
 ```
 
 {% info_block warningBox "Verification" %}
@@ -114,11 +118,19 @@ Once you have finished the full integration of the feature, make sure that:
 
 You can store and retrieve data from the vault using `VaultFacade`:
 
+<<<<<<< Updated upstream
 `$secret = "actual_secret";` 
 `$vaultFacade->store("secret_category", "secret_id", $secret`
 `assertSame($secret, $vaultFacade->retrieve("secret_category", "secret_id"));`)
 
 {% endinfo_block %};
+=======
+- `$secret = "actual_secret";` 
+- `$vaultFacade->store("secret_category", "secret_id", $secret;`
+- `assertSame($secret, $vaultFacade->retrieve("secret_category", "secret_id"));`
+
+{% endinfo_block %}
+>>>>>>> Stashed changes
 
 #### Redis
 

@@ -102,7 +102,7 @@ Enable the following behaviors by registering the plugins:
 |---|---|---|---|
 |`ProductPriceItemValidatorPlugin`|Checks if the provided product SKU has the price, if no - adds the error message.|None|`Spryker\Client\PriceProductStorage\Plugin\QuickOrder`|
 
-src/Pyz/Client/QuickOrder/QuickOrderDependencyProvider.php
+**src/Pyz/Client/QuickOrder/QuickOrderDependencyProvider.php**
 
 ```php
 <?php
@@ -128,13 +128,18 @@ class QuickOrderDependencyProvider extends SprykerQuickOrderDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
+<<<<<<< Updated upstream
 Make the following checks at https://mysprykershop.com/quick-order : `ProductPriceItemValidatorPlugin` is responsible for prices. Provide SKUs with and without Volume **Price on Quick Add To Cart** page and verify if quantity changes in the row result in the correct price display.
+=======
+Make the following checks at `https://mysprykershop.com/quick-order` : `ProductPriceItemValidatorPlugin` is responsible for prices. Provide SKUs with and without Volume **Price on Quick Add To Cart** page and verify if quantity changes in the row result in the correct price display.
+>>>>>>> Stashed changes
 
 {% endinfo_block %}
 
 ## Install Feature Frontend
 
 ### Prerequisites
+
 To start feature integration, review and install the necessary features:
 
 |Name|Version|
@@ -257,7 +262,7 @@ Register controller provider(s) to Yves application:
 |---|---|---|---|
 |`QuickOrderPageControllerProvider`|`SprykerShop\Yves\QuickOrderPage\Plugin\Provider`|`QuickOrderController`|Provides functionality to display and process the Quick Order table.|
 
-src/Pyz/Yves/ShopApplication/YvesBootstrap.php
+**src/Pyz/Yves/ShopApplication/YvesBootstrap.php**
 
 ```php
 namespace Pyz\Yves\ShopApplication;
@@ -290,6 +295,10 @@ Make sure that the following URLs are available on Yves:
 * https://mysprykershop.com/de/quick-order
 
 ... and for all other configured languages.
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 {% endinfo_block %}
 
 ### 4) Set up Behavior
@@ -304,7 +313,7 @@ Enable the following behaviors by registering the plugins:
 |`QuickOrderCsvFileTemplateStrategyPlugin`|Generates a file template in CSV format, which can be used as a template to upload order items. The link to file download will be under the upload form.|None|`SprykerShop\Yves\QuickOrderPage\Plugin\QuickOrderPage`|
 |`QuickOrderCsvUploadedFileValidatorStrategyPlugin`|Validates CSV header presence, checks mandatory columns based on header.|None|`SprykerShop\Yves\QuickOrderPage\Plugin\QuickOrderPage`|
 
-src/Pyz/Yves/QuickOrderPage/QuickOrderPageDependencyProvider.php
+**src/Pyz/Yves/QuickOrderPage/QuickOrderPageDependencyProvider.php**
  
 ```php
 <?php
@@ -358,4 +367,8 @@ Make the following checks at https://mysprykershop.com/quick-order:
 * `QuickOrderCsvUploadedFileParserStrategyPlugin` is needed for CSV files parsing. Upload CSV file on the Quick Add To Cart page using the provided template and make sure that products appear in the Quick Add To Cart Page form afterward.
 * `QuickOrderCsvUploadedFileValidatorStrategyPlugin` serves for CSV file validation. It checks header presence and validates mandatory columns depending on the header.
 
+<<<<<<< Updated upstream
 {% endinfo_block %}
+=======
+{% endinfo_block %}
+>>>>>>> Stashed changes

@@ -23,7 +23,7 @@ To start feature integration, overview and install the necessary features:
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/reclamations: "^201903.0" --update-with-dependencies`
+composer require spryker-feature/reclamations: "^202001.0" --update-with-dependencies`
 ```
 
 {% info_block warningBox “Verification” %}
@@ -80,7 +80,7 @@ Enable the following behaviors by registering the plugins:
 | --- | --- | --- | --- |
 | `ReclamationSalesTablePlugin` | Expands sales order table with a "Claim" button, that redirects to "Create Reclamation" page, where the whole order or its specific items can be reclaimed. | None | `Spryker\Zed\SalesReclamationGui\Communication\Plugin\Sales` |
 
-src/Pyz/Zed/Sales/SalesDependencyProvider.php
+**src/Pyz/Zed/Sales/SalesDependencyProvider.php**
 
 ```php
 <?php

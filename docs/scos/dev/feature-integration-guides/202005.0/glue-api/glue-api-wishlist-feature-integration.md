@@ -21,9 +21,9 @@ To start feature integration, overview and install the necessary features:
 
 |Name|Version|Integration guide|
 |---|---|---|
-Spryker Core|201907.0|[Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html)|
-|Product|201907.0|[Product API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/products-api-feature-integration.html)|
-|Wishlist| 201907.0 |
+Spryker Core|202005.0|[Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html)|
+|Product|202005.0|[Product API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/products-api-feature-integration.html)|
+|Wishlist| 202005.0 |
 
 ### 1) Install the required modules using Composer
 
@@ -44,6 +44,7 @@ Make sure that the following module has been installed:
 {% endinfo_block %}
 
 ### 2) Set Up Database Schema and Transfer Objects
+
 Run the following commands to apply database changes, and generate entity and transfer changes:
 
 ```bash
@@ -91,6 +92,7 @@ console uuid:update Wishlist spy_wishlist
 ```
 {% info_block infoBox “Info” %}
 
+<<<<<<< Updated upstream
 Make sure that the `uuid` field is populated for all records in the `spy_wishlist` table.
 
 For this purpose, run the following SQL query and make sure that the result is 0 records:
@@ -100,6 +102,16 @@ SELECT COUNT(*) FROM spy_wishlist WHERE uuid IS NULL;
 ```
 
 {% endinfo_block %}
+=======
+{% info_block warningBox “Verification” %}
+
+Make sure that the `uuid` field is populated for all records in the `spy_wishlist` table.
+For this purpose, run the following SQL query and make sure that the result is 0 records:
+
+```
+SELECT COUNT(*) FROM spy_wishlist WHERE uuid IS NULL;
+```
+>>>>>>> Stashed changes
 
 #### Enable resources and relationships
 
@@ -156,6 +168,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+<<<<<<< Updated upstream
 
 {% info_block warningBox “Verification” %}
 
@@ -164,5 +177,16 @@ Make sure that the following endpoints are available:
 - `http:///glue.mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlists-items`
   
 Send a request to `http://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=wishlists` and make sure that the given customer has at least one wishlist. Make sure that the response includes relationships to the `wishlists` resources.
+=======
+</details>
+
+{% info_block warningBox “Verification” %}
+
+Make sure that the following endpoints are available:
+- `http:///glue.mysprykershop.com/wishlists`
+- `http:///glue.mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlists-items`
+
+Send a request to `http://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=wishlists` and make sure that the given customer has at least one wishlist. Make sure that the response includes relationships to the `wishlists` resources.)
+>>>>>>> Stashed changes
 
 {% endinfo_block %}

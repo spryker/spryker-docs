@@ -10,7 +10,9 @@ redirect_from:
 ---
 
 ## Install Feature Core
+
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | Name | Version |
@@ -26,8 +28,12 @@ composer require spryker-feature/resource-sharing: "^202001.0" --update-with-dep
 ```
 
 {% info_block warningBox “Verification” %}
+<<<<<<< Updated upstream
     
 **Verification**
+=======
+
+>>>>>>> Stashed changes
 Make sure that the following modules were installed:
     
 | Module | Expected Directory |
@@ -36,6 +42,10 @@ Make sure that the following modules were installed:
 | `ResourceShareExtension` | `vendor/spryker/resource-share-extension` |
 
 {% endinfo_block %}
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 
 ### 2) Set up Database Schema and Transfer Objects
 
@@ -56,6 +66,10 @@ Make sure that the following changes applied by checking your database:
 | `spy_resource_share` | table | created |
 
 {% endinfo_block %}
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
  
 {% info_block warningBox “Verification” %}
 
@@ -70,6 +84,10 @@ Make sure that the following changes in transfer objects have been applied:
 | `ResourceShareResponse` | class | created | `src/Generated/Shared/Transfer/ResourceShareResponseTransfer` |
 
 {% endinfo_block %}
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
  
 ## Install Feature Frontend
 

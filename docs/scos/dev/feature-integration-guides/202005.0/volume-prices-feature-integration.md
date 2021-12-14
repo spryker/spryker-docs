@@ -14,13 +14,20 @@ related:
 ---
 
 ## Install Feature Core
+
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
+<<<<<<< Updated upstream
 | Spryker Core | master |
 | Prices | master |
+=======
+| Spryker Core | 202005.0 |
+| Prices | 202005.0 |
+>>>>>>> Stashed changes
 
 {% info_block warningBox “Verification” %}
 
@@ -33,6 +40,7 @@ Make sure that the following modules have been installed:
 {% endinfo_block %}
 
 ### 1) Set up Transfer Objects
+
 Run the following commands to generate transfer changes:
 
 ```bash
@@ -126,6 +134,7 @@ Make sure that in the database the configured data has been added to the `spy_pr
 {% endinfo_block %}
 
 ### 3) Set up Behavior
+
 Enable the following behaviors by registering the plugins:
 
 | Plugin | Specification | Prerequisites | Namespace |
@@ -220,8 +229,8 @@ Please overview and install the necessary features before beginning the integrat
 
 | Name | Version |
 | --- | --- |
-| Spryker Core E-commerce |master  |
-| Prices | master |
+| Spryker Core E-commerce |202005.0  |
+| Prices | 202005.0 |
 
 {% info_block warningBox “Verification” %}
 
@@ -258,6 +267,7 @@ Make sure that in the database the configured data has been added to the `spy_gl
 {% endinfo_block %}
 
 ### 2) Set up Widgets
+
 Enable global widgets:
 
 | Widget | Description | Namespace |

@@ -8,8 +8,8 @@ redirect_from:
   - /v5/docs/resource-sharing-feature-integration
   - /v5/docs/en/resource-sharing-feature-integration
 ---
-
 ## Install Feature Core
+
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
@@ -103,7 +103,7 @@ Make sure that the following modules were installed:
 
 Append glossary according to your configuration:
 
-src/data/import/glossary.csv
+**src/data/import/glossary.csv**
 
 ```yaml
 resource_share.activator.error.strategy_expects_logged_in_customer,Please login to access requested shared resource.,en_US

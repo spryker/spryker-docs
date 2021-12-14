@@ -12,7 +12,6 @@ related:
   - title: Volume Prices Feature Overview
     link: docs/scos/user/features/page.version/prices-feature-overview/volume-prices-overview.html
 ---
-
 ## Install Feature Core
 
 ### Prerequisites
@@ -33,6 +32,10 @@ Make sure that the following modules have been installed:
 | `PriceProductVolume` | `vendor/spryker/price-product-volume` |
 
 {% endinfo_block %}
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 
 ### 1) Set up Transfer Objects
 
@@ -242,7 +245,7 @@ Make sure that the following modules have been installed:
 
 Append glossary according to your configuration:
 
-src/data/import/glossary.csv
+**src/data/import/glossary.csv**
 
 ```bash
 page.detail.volume_price.quantity,Quantity,en_US
@@ -304,3 +307,7 @@ Make sure that the following widgets have been registered:
 | `ProductPriceVolumeWidget` | Go to the product detail page for a product with volume prices set, and observe the table in the detail area that contains the volume prices data. |
 
 {% endinfo_block %}
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes

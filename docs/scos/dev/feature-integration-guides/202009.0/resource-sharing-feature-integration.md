@@ -10,19 +10,21 @@ redirect_from:
 ---
 
 ## Install Feature Core
+
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Spryker Core | master |
+| Spryker Core | 202009.0 |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/resource-sharing: "^master" --update-with-dependencies
+composer require spryker-feature/resource-sharing: "^202009.0" --update-with-dependencies
 ```
 
 {% info_block warningBox “Verification” %}
@@ -71,6 +73,7 @@ Make sure that the following changes in transfer objects have been applied:
 {% endinfo_block %}
  
 ## Install Feature Frontend
+
 ### Prerequisites
 
 Please overview and install the necessary features before beginning the integration step.
@@ -99,6 +102,7 @@ Make sure that the following modules were installed:
 {% endinfo_block %}
 
 ### 2) Add Translations
+
 Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
@@ -131,6 +135,7 @@ Make sure that in the database the configured data are added to the `spy_glossar
 {% endinfo_block %}
 
 ### 3) Enable Controllers
+
 #### Route List
 
 Register the following route provider plugins:

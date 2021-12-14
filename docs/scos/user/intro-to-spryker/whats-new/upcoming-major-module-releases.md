@@ -28,8 +28,8 @@ Learn about Marketplace related upcoming major releases [here](/docs/marketplace
 | [Locale](https://github.com/spryker/locale) | Q4 2021 | Adding relation between the Locale and Store objects. |
 | [Currency](https://github.com/spryker/currency) | Q4 2021 | Adding relation between the Currency and Store objects. |
 | [Country](https://github.com/spryker/country) | Q4 2021 | Adding relation between the Country and Store objects. |
-| [Wishlist](https://github.com/spryker/wishlist) | Q2 2022 | Adding wishlist uuid and wishlist item uuid to use it as the main identifier. Changing Customer foreign key relation to reference. |
-| [WishlistsRestApi](https://github.com/spryker/wishlists-rest-api) | Q2 2022 | Using wishlist item uuid as wishlist_item_id for requests. |
-| [WishlistPage](https://github.com/spryker-shop/wishlist-page) | Q2 2022 | Using wishlist uuid and wishlist item uuid as the main identifier. |
-| [WishlistWidget](https://github.com/spryker-shop/wishlist-widget) | Q2 2022 | Using wishlist uuid and wishlist item uuid as the main identifier. |
+| [Wishlist](https://github.com/spryker/wishlist) | Q2 2022 | Adding wishlist UUID and wishlist item UUID to use it as the main identifier. Changing customer foreign key relation to reference. |
+| [WishlistsRestApi](https://github.com/spryker/wishlists-rest-api) | Q2 2022 | Using wishlist item UUID as `wishlist_item_id` for requests. |
+| [WishlistPage](https://github.com/spryker-shop/wishlist-page) | Q2 2022 | Using wishlist UUID and wishlist item UUID as the main identifier. |
+| [WishlistWidget](https://github.com/spryker-shop/wishlist-widget) | Q2 2022 | Using wishlist UUID and wishlist item UUID as the main identifier. |
 

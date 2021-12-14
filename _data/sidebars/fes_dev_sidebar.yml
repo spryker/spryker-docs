@@ -1,0 +1,8 @@
+title: Frontend enablement Service Developer Guides
+entries:
+  - product: Frontend enablement Service
+    nested:
+      - title: Setup
+        nested:
+          - title: System requirements
+            url: /docs/fes/dev/setup/system-requirements.html 

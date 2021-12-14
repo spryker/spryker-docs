@@ -14,6 +14,10 @@ This tutorial describes all the steps of build a front end, from connecting it t
 
 ## How do I set up an infrastructure for a front end?
 
+Log into the Launchpad portal. 
+
+
+
 ### How do I connect a repository?
 
 ### How do I connect a back end?

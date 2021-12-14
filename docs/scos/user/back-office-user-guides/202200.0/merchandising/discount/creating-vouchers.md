@@ -125,7 +125,7 @@ The following table describes the attributes you enter and select in the *Genera
 | PRIORITY | Defines [the discount priority](/docs/scos/user/features/202108.0/promotions-discounts-feature-overview.html#discount-priority). Represented as an integer value from 1 to 9999, 1 being the highest priority and 9999 the lowest. |
 | NON-EXCLUSIVE | Defines the discount exclusivity. Buyers can redeem non-exclusive discounts in conjunction with other non-exclusive discounts.|
 | EXCLUSIVE | Defines the discount exclusivity. When a discount is exclusive, no other discounts may be applied in conjunction. When a cart is eligible for multiple exclusive discounts, the discount with the highest value to the customer is applied. The exception to this is promotional product discounts. Query string discounts and promotional product discounts exclude only among each other. Promotional product discounts are not affected by exclusive query string discounts, and vice versa.|
-| VALID FROM and VALID TO| Vouchers are redeemable/the cart rule is active between Valid From and Valid To dates, inclusive. E.g., a voucher can be redeemed/discount applies to the cart starting from 1/1/2018 until 31/12/2019.|
+| VALID FROM (TIME IN UTC) and VALID TO (TIME IN UTC)| Vouchers are redeemable or the cart rule is active between **VALID FROM (TIME IN UTC)** and **VALID TO (TIME IN UTC)** dates, inclusive. For example, a voucher can be redeemed or discount applies to the cart starting from 01.12.2021 00:00 until 31.01.2022 23:59 by UTC|
 
 {% info_block infoBox "Info" %}
 
@@ -140,7 +140,7 @@ This section contains information you need to know when working with discount ca
 **CALCULATOR TYPE**
 
 The discount can be calculated in two ways:
-* *Percentage*: The discount is calculated as a percentage of the discounted items' prices. If selected, you need to set the percentage value (e.g., 25)
+* *Percentage*: The discount is calculated as a percentage of the discounted items' prices. If selected, you need to set the percentage value (for example, 25)
 * *Fixed amount*: A fixed amount is discounted. If you select this type, you need to specify the amount (Gross, Net, or Both) for each currency used in your store.
 
 Example:
@@ -167,9 +167,9 @@ Use the query builder to construct queries (guided) or the **Plain query** field
 ![Discount_Calculation_Plain Query](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Calculation:+Reference+Information/discount-calculation-plain-query.png)
 
 The query builder lets you combine different conditions with connectors (**AND** and **OR**). Multiple conditions (rules) can be added and grouped in this way. Each condition (rule) consists of:
-* field (e.g., attribute.color)
-* operator (e.g., equal(=))
-* value tokens (e.g., blue)
+* field (for example, attribute.color)
+* operator (for example, equal(=))
+* value tokens (for example, blue)
 
 {% info_block infoBox "Info" %}
 
@@ -291,8 +291,8 @@ This section contains a set of tables that describe fields, value types, and ope
 
 | VALUE | DESCRIPTION |
 | --- | --- |
-| Fields | The available fields may include SKU, item-price, item-quantity, or a variety of attributes (e.g., **currency** on the image above). |
-| Operator | Operator compares the value of a field on the left with the value(s) on the right (e.g., equals (=), greater than (>)). If the expression evaluates to true, the discount can be applied. (operator is **equal** on the image above) |
+| Fields | The available fields may include SKU, item-price, item-quantity, or a variety of attributes (for example, **currency** on the image above). |
+| Operator | Operator compares the value of a field on the left with the value(s) on the right (for example, equals (=), greater than (>)). If the expression evaluates to true, the discount can be applied. (operator is **equal** on the image above) |
 | Value | Value types must match the selected field. The asterisk (*) matches all possible values. (on the image above, the value is **Swiss Franc**)|
 | Combine Conditions | ‘AND’ and ‘OR’ operators are used to combine conditions. (**AND** on the image above) |
 |Grouping|When building more complex queries, conditions may be grouped inside parentheses ‘( )’.|

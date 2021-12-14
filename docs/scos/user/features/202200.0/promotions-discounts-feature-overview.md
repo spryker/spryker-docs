@@ -28,7 +28,7 @@ A Back Office user selects a discount type when [creating a voucher](/docs/scos/
 
 ## Voucher
 
-A Voucher is a discount that applies when a customer enters an active voucher code on the *Cart* page.
+A voucher is a discount that applies when a customer enters an active voucher code on the *Cart* page.
 ![Cart voucher](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/cart_voucher.png)
 
 Once the customer clicks **Redeem code**, the page refreshes to show the discount name, discount value, and available actions: **Remove** and **Clear all**. The **Clear all** action disables all the applied discounts. The **Remove** action disables a single discount.
@@ -39,7 +39,7 @@ You can generate multiple voucher codes for a single voucher. The code has a **M
 You can enter codes manually or use the code generator in the Back Office.
 ![Generate codes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+%26+Discounts/Discount/Discount+Feature+Overview/generate_codes.png)
 
-See [Creating a Voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) to learn how a Back Office user can create a voucher in the Back Office.
+See [Creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) to learn how a Back Office user can create a voucher in the Back Office.
 
 ## Cart rule
 
@@ -48,7 +48,7 @@ A cart rule is a discount that applies to a cart once all the [decision rules](#
 The cart rule is applied automatically. If the decision rules of a discount are fulfilled, the customer can see the discount upon entering the cart. Unlike for [voucher](#voucher), the **Clear all** and **Remove** actions are not displayed for cart rules.
 ![Cart rule](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/cart-cart-rule.png)
 
-See [Creating a Cart Rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html) to learn how a Back Office user can create a cart rule in the Back Office.
+See [Creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html) to learn how a Back Office user can create a cart rule in the Back Office.
 
 ### Decision rule
 
@@ -118,12 +118,12 @@ In the following example, the discount is applied if there are four items with t
 Discount application is a discount configuration option that defines the products to which a discount is applied.
 
 There are two types of discount application:
-* Query String
+* Query string
 * Promotional product
 
 ### Query string
 
-Query String is a discount application type that uses [decision rules](#decision-rule) to dynamically determine which products qualify for discounts.
+Query string is a discount application type that uses [decision rules](#decision-rule) to dynamically determine which products qualify for discounts.
 
 The discount in the example below applies to white products.
 ![Query collection](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/collection-query.png)
@@ -216,7 +216,7 @@ In this case, discounts are applied based on their priority, regardless of type.
 
 If you have a voucher code and a cart rule with the same priority, both discounts should apply and use the same cart subtotal. See [Scenario 5: Non-exclusive, fixed amount and percentage discounts with the same priority values](#scenario-5-non-exclusive-fixed-amount-and-percentage-discounts-with-the-same-priority-values) for an example.
 
-{% endinfo_block %} 
+{% endinfo_block %}
 
 ## Discount calculation logic
 
@@ -313,7 +313,7 @@ MEMBER5 (5000): $100 - $100*0.05 = $95
 In the presence of exclusive discounts, all non-exclusive discounts are excluded.
 Between the exclusive discounts, the discount with the higher priority is chosen.
 
-#### Scenario 4: Non-exclusive, fixed amount and percentage discounts with the same priority values 
+#### Scenario 4: Non-exclusive, fixed amount and percentage discounts with the same priority values
 
 Cart subtotal: €100
 
@@ -381,7 +381,6 @@ Cart subtotal: €100
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of the Promotions & Discounts feature]()  |
 | [Create a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html)  |
 | [Create a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html)  |
 | [Manage discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/managing-discounts.html)  |

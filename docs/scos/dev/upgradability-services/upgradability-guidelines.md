@@ -1,6 +1,6 @@
 ---
-title: Upgradability reference
-description: Rerference infomation for evaluator and upgrader tools.
+title: Upgradability guidelines
+description: Reference information for evaluator and upgrader tools.
 last_updated: Nov 25, 2021
 template: concept-topic-template
 ---
@@ -12,9 +12,9 @@ Modules have public and private APIs. The public API includes the entities like 
 
 While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility in minor releases is not guaranteed in the private API. For example, if you use a core method on the project level, and it is updated or removed, it can cause unexpected issues durning minor updates.
 
-### Overriding a core method on the project level
+### Moving core methods to the project level
 
-To unexpected issues and achieve the same result, override the core methods with custom ones in the private API.
+To unexpected issues and achieve the same result, copy the needed core methods to the project level, rename them and replace the core ones.
 
 #### Example of the code that causes the upgradability error
 
@@ -50,11 +50,11 @@ Pyz\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessUpdater
 ************************************************************************************************************************
 ```
 
-#### Example of overriding a core method on the project level
+#### Example of moving a core method to the project level
 
 To resolve the error provided in the example, do the following:
 
-1. Copy the method from the core to the project level and rename, for example, by adding a prefix.
+1. Copy the method from the core to the project level and rename it, for example, by adding a prefix.
 
 2. Add the method to the class and the interface:
 

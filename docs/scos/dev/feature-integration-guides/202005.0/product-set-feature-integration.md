@@ -42,8 +42,7 @@ vendor/bin/console propel:model:build
 The classes are located in your project under the `\Orm\Zed\ProductSet\Persistence` namespace. 
 
 {% info_block warningBox “Verification” %}
-    
-**Verification**
+
 Make sure that they extend the base classes from the Spryker core, for example:
 
 * `\Orm\Zed\ProductSet\Persistence\SpyProductSet` extends `\Spryker\Zed\ProductSet\Persistence\Propel\AbstractSpyProductSet`
@@ -175,16 +174,3 @@ class ProductSetDependencyProvider extends SprykerProductSetDependencyProvider
 There's a Zed UI to be able to sort Product Sets easily compared to each other under the Reorder Product Sets.
 
 {% endinfo_block %}
-<!--
-### Next Steps
-Integrating the Product Set feature in Yves is completely up to your project’s requirements. The following points summarize how we integrated this feature into our Demoshop:
-
-1. Added controller (`\Pyz\Yves\ProductSet\Controller\ListController`
-{% endinfo_block %} and template to list Product Sets on a specific URL (provided by `\Pyz\Yves\ProductSet\Plugin\Provider\ProductSetControllerProvider`). This controller uses the predefined `ProductSetClient::getProductSetList()` client method, as described Listing Products Sets in Yves. The URL of the list page was added to the main navigation demo data.
-2. To be able to display Product Sets on their own assigned URL, we’ve added a resource creator (`\Pyz\Yves\ProductSet\ResourceCreator\ProductSetResourceCreator`) and added it to the existing resource creator list (`\Pyz\Yves\Collector\CollectorFactory::createResourceCreators()`). This will ensure URL matching and URL generation of Product Sets.
-3. Added controller (`\Pyz\Yves\ProductSet\Controller\DetailController`) and template to display Product Set Detail Page on their assigned URLs. The controller receives a hydrated `StorageProductSetTransfer` object and a list of `StorageProductTransfer` objects provided by the resource creator.
-4. On the Product Set Detail Page we had to ensure that it’s possible to select variants of the abstract products in the Set. The variant selection logic is part of the resource creating process.
-5. We’ve added “Add to cart” buttons per each product and also “Add all to cart” when all variants are selected. To handle adding multiple items to cart at once, we’ve added a custom cart controller action (`\Pyz\Yves\Cart\Controller\CartController::addItemsAction()`).
-
-Check out our [Demoshop](https://github.com/spryker/demoshop) for more detailed examples and ideas regarding the complete Yves integration.
--->

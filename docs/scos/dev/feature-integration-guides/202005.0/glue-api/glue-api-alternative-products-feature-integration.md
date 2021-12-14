@@ -14,7 +14,9 @@ related:
 ---
 
 ## Install Feature API
+
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | Name | Version | Required Sub-Feature |
@@ -31,13 +33,15 @@ Run the following command to install the required modules:
 composer require spryker/alternative-products-rest-api:"^1.0.0" --update-with-dependencies
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
-    Make sure that the following module is installed:
+{% info_block warningBox “Verification” %}
+
+Make sure that the following module is installed:
 
 | Module | Expected Directory |
 | --- | --- |
 | `AlternativeProductsRestApi` | `vendor/spryker/alternative-products-rest-api` |
-</div></section>
+
+{% endinfo_block %}
 
 ## 2) Set up Behavior
 
@@ -48,7 +52,7 @@ Activate the following plugins:
 | `AbstractAlternativeProductsResourceRoutePlugin` | Registers the abstract alternative products resource. | None | `Spryker\Glue\AlternativeProductsRestApi\Plugin\GlueApplication` |
 | `ConcreteAlternativeProductsResourceRoutePlugin` | Registers the concrete alternative products resource. | None | `Spryker\Glue\AlternativeProductsRestApi\Plugin\GlueApplication` |
 
-src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -74,10 +78,11 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
+{% info_block warningBox “Verification” %}
+
 Make sure that the following endpoints are available:
 
 * `http://mysprykershop.comop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/abstract-alternative-products`
 * `http://mysprykershop.comop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/abstract-alternative-products`
 
-</div></section>
+{% endinfo_block %}

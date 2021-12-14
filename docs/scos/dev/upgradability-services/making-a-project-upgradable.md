@@ -37,18 +37,22 @@ So the important question is: How can you safely use Spryker extension points to
 
 Here we list the most frequent customization points & our best practices
 
-### Customization Case/Method 1
+### Customization method 1
 
 
 
-#### Impact on upgradability
+#### How does this customization method affect upgradability?
 
 E.g. Can’t apply minor and patches safely
 
 #### How to make this customization in a compliant, upgradable way? (Guideline)
 
-i.e. what coding principles should I follow
+I.e. what coding principles should I follow
 
-#### Example
+#### Example of customization in a compliant, upgradable way
 
 Check out this detailed example – [link to upgradability guidelines with concrete principles]
+
+### Customization method 2
+
+...

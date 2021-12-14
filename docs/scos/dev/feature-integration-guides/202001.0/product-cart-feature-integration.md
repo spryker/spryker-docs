@@ -10,10 +10,15 @@ redirect_from:
   - /v4/docs/en/product-cart-feature-integration
 ---
 
-{% info_block errorBox "The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds the **Product Image functionality**.)
+{% info_block errorBox “Attention!” %}
+The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds the **Product Image functionality**.
+
+{% endinfo_block %}
 
 ## Install Feature Core
+
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | Name | Version |

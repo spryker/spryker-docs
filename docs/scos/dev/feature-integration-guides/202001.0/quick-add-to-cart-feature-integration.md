@@ -128,11 +128,7 @@ class QuickOrderDependencyProvider extends SprykerQuickOrderDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-<<<<<<< Updated upstream
-Make the following checks at https://mysprykershop.com/quick-order : `ProductPriceItemValidatorPlugin` is responsible for prices. Provide SKUs with and without Volume **Price on Quick Add To Cart** page and verify if quantity changes in the row result in the correct price display.
-=======
 Make the following checks at `https://mysprykershop.com/quick-order` : `ProductPriceItemValidatorPlugin` is responsible for prices. Provide SKUs with and without Volume **Price on Quick Add To Cart** page and verify if quantity changes in the row result in the correct price display.
->>>>>>> Stashed changes
 
 {% endinfo_block %}
 
@@ -295,10 +291,7 @@ Make sure that the following URLs are available on Yves:
 * https://mysprykershop.com/de/quick-order
 
 ... and for all other configured languages.
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
 {% endinfo_block %}
 
 ### 4) Set up Behavior
@@ -367,8 +360,5 @@ Make the following checks at https://mysprykershop.com/quick-order:
 * `QuickOrderCsvUploadedFileParserStrategyPlugin` is needed for CSV files parsing. Upload CSV file on the Quick Add To Cart page using the provided template and make sure that products appear in the Quick Add To Cart Page form afterward.
 * `QuickOrderCsvUploadedFileValidatorStrategyPlugin` serves for CSV file validation. It checks header presence and validates mandatory columns depending on the header.
 
-<<<<<<< Updated upstream
+
 {% endinfo_block %}
-=======
-{% endinfo_block %}
->>>>>>> Stashed changes

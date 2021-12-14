@@ -388,6 +388,14 @@ To integrate GLUE API in your project, you need to:
 2. Enable GLUE <a name="enable-glue"></a>
 ```
 
+## Adding inline images
+
+To add an inline image, use this wrapper: `<div class="inline-img"></div>`. For example:
+
+```
+Click **More** <div class="inline-img">![google-chrome-more-button](link-to-an-image)</div>.
+```
+
 ## Adding Wistia videos
 
 To add a link to a Wistia video, use the following code: `{% wistia {{wistia video code}} %}`, where `{video code}` is the Wistia's video code. For example, if you want to add video `https://fast.wistia.com/embed/medias/eiw5ev4gv2/`, your code should be: `{% wistia eiw5ev4gv2 %}`.

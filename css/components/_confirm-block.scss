@@ -6,13 +6,17 @@
 
     @include media("<tablet") {
         display: block;
-        padding: 30px 16px 16px;
+        padding: 16px;
     }
 
     &__flex {
         display: flex;
         align-items: center;
         min-height: 50px;
+
+        @include media("<tablet") {
+            display: block;
+        }
     }
 
     &__title {
@@ -28,7 +32,9 @@
         @include media("<tablet") {
             text-align: center;
             padding: 0;
-            margin: 0 0 25px;
+            margin: 0 0 20px;
+            justify-content: center;
+            font-size: 18px;
         }
 
         &-icon {
@@ -46,6 +52,10 @@
 
         &-text {
             flex: 1 1 auto;
+
+            @include media("<tablet") {
+                flex-grow: 0;
+            }
         }
     }
 
@@ -57,7 +67,7 @@
             text-align: center;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
         }
     }
 
@@ -67,8 +77,9 @@
         min-width: 100px;
 
         @include media("<tablet") {
-            margin: 0;
-            width: #{calc(50% - 5px)};
+            margin: 0 5px;
+            width: #{calc(50% - 10px)};
+            max-width: 180px;
         }
     }
 }

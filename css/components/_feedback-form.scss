@@ -106,6 +106,10 @@
             background: $white;
             color: $dark;
         }
+
+        &.validation-error {
+            border-color: $red;
+        }
     }
 
     textarea {
@@ -129,8 +133,8 @@
 
     &__close {
         position: absolute;
-        top: -2px;
-        right: -2px;
+        top: 0;
+        right: 0;
         width: 40px;
         height: 40px;
         background: $grey-darker;
@@ -151,5 +155,30 @@
 
     &__relative {
         position: relative;
+    }
+
+    &__slide {
+        position: relative;
+    }
+
+    &__success-message {
+        font-size: 16px;
+        line-height: 28px;
+        text-align: center;
+        font-weight: bold;
+        display: none;
+        position: relative;
+        background: $grey-lightest;
+        padding: 24px;
+        border: 2px solid $grey-lighten;
+        border-top-right-radius: 4px;
+
+        @include media("<tablet") {
+            padding: 50px 20px;
+        }
+
+        p {
+            margin: 0;
+        }
     }
 }

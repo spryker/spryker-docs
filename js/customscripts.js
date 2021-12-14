@@ -571,6 +571,51 @@ function initSidebarAccordion() {
 }
 
 function initFeedbackForm() {
+    let form = $('#feedback-form'),
+        formNative = form.get(0),
+        regEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/,
+        isValid = false,
+        errorClass = 'validation-error',
+        inputs = form.find('.required-field, .required-email'),
+        successMessage = $('.feedback-form__success-message');
+
+    function validateForm() {
+        isValid = true;
+        inputs.each(checkField);
+
+        if(!isValid) {
+            return false;
+        }
+    }
+
+    function checkField(i, item) {
+        let input = $(item);
+
+        // not empty fields
+        if(input.hasClass('required-field')) {
+            setState(input, !input.val().length)
+        }
+
+        // correct email fields
+        if(input.hasClass('required-email')) {
+            setState(input, !regEmail.test(input.val()));
+        }
+    }
+
+    function setState(field, error) {
+        field.removeClass(errorClass);
+
+        if (error) {
+            field.addClass(errorClass);
+
+            field.one('focus', function() {
+                field.removeClass(errorClass);
+            });
+
+            isValid = false;
+        }
+    }
+
     $('.form-collapse').each(function () {
         let container = $(this),
             opener = container.find('.js-form-collapse__opener'),
@@ -586,6 +631,7 @@ function initFeedbackForm() {
         });
 
         opener.on('click', function () {
+            opener.addClass('button--disabled');
             slide.stop().slideDown(300);
         });
 
@@ -593,10 +639,38 @@ function initFeedbackForm() {
             e.preventDefault();
 
             slide.stop().slideUp(300);
+            opener.removeClass('button--disabled');
         });
     });
 
-    
+    async function handleSubmit(event) {
+        event.preventDefault();
+        let data = new FormData(formNative);
+
+        fetch(formNative.action, {
+            method: formNative.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.status === 200) {
+                form.hide();
+                successMessage.show();
+            }
+        }).catch(error => {
+            console.log(error);
+        });
+    }
+
+    $('#feedback-submit').on('click', function(e){
+        e.preventDefault();
+        validateForm();
+
+        if (isValid) {
+            handleSubmit(e);
+        }
+    });
 }
 
 function initSidebarToggle() {

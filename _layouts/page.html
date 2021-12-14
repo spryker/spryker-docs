@@ -118,25 +118,25 @@ layout: default
                 </div>
             </div>
 
-            <div class="js-form-collapse__slide">
-                <form class="feedback-form" action="{{ site.form_endpoints['feedback'] }}" method="POST">
+            <div class="js-form-collapse__slide feedback-form__slide">
+                <form id="feedback-form" class="feedback-form" action="{{ site.form_endpoints['feedback'] }}" method="POST">
                     <h3 class="feedback-form__title" data-toc-skip>Tell us what could be better</h3>
                     <div class="feedback-form__block">
                         <div class="feedback-form__column">
                             <div class="feedback-form__relative">
-                                <input id="feedback-name" type="text" name="name" class="feedback-form__input" placeholder="Name (Optional)">
+                                <input id="feedback-name" type="text" name="name" class="feedback-form__input required-field" placeholder="Name (Optional)">
                                 <label for="feedback-name">Name <mark>(Optional)</mark></label>
                             </div>
                         </div>
                         <div class="feedback-form__column">
                             <div class="feedback-form__relative">
-                                <input id="feedback-email" type="email" name="email" class="feedback-form__input" placeholder="Email (Optional)">
+                                <input id="feedback-email" type="email" name="email" class="feedback-form__input required-email" placeholder="Email (Optional)">
                                 <label for="feedback-email">Email <mark>(Optional)</mark></label>
                             </div>
                         </div>
                         <div class="feedback-form__column feedback-form__column--full">
                             <div class="feedback-form__relative">
-                                <textarea id="feedback-text" name="feedback" class="feedback-form__textarea" placeholder="Type your thoughts here"></textarea>
+                                <textarea id="feedback-text" name="feedback" class="feedback-form__textarea required-field" placeholder="Type your thoughts here"></textarea>
                                 <label for="feedback-text">Type your thoughts here</label>
                             </div>
                         </div>
@@ -144,31 +144,13 @@ layout: default
                     <div class="feedback-form__action-row">
                         <input id="feedback-submit" type="submit" value="Send feedback" class="feedback-form__submit button button--black">
                     </div>
-                    <a href="#" class="feedback-form__close js-form-collapse__close">
-                        <i class="icon-cross"></i>
-                    </a>
                 </form>
-                <script>
-                    let form = document.getElementsByClassName("feedback-form")[0];
-
-                    async function handleSubmit(event) {
-                        event.preventDefault();
-                        let data = new FormData(event.target);
-                        fetch(event.target.action, {
-                            method: form.method,
-                            body: data,
-                            headers: {
-                                'Accept': 'application/json'
-                            }
-                        }).then(response => {
-                            alert("Thanks for your submission!");
-                            form.reset();
-                        }).catch(error => {
-                            alert("Oops! There was a problem submitting your form");
-                        });
-                    }
-                    form.addEventListener("submit", handleSubmit)
-                </script>
+                <div class="feedback-form__success-message">
+                    <p>We appreciate the time you took to share the feedback <br class="mobile-hidden">and will consider it as soon as possible.</p>
+                </div>
+                <a href="#" class="feedback-form__close js-form-collapse__close">
+                    <i class="icon-cross"></i>
+                </a>
             </div>
         </aside>
 

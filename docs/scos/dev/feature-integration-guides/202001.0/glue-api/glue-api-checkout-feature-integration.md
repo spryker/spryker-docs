@@ -9,7 +9,7 @@ redirect_from:
   - /v4/docs/en/checkout-feature-integration-201907
 related:
   - title: Checking Out Purchases and Getting Checkout Data
-    link: docs/scos/dev/glue-api-guides/page.version/checking-out-purchases-and-getting-checkout-data.html
+    link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
 ---
 
 {% info_block errorBox %}
@@ -31,6 +31,7 @@ To start feature integration, overview and install the necessary features:
 |Shipments| 202001.0 | |
 
 ### 1)  Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
@@ -50,6 +51,7 @@ Make sure that the following modules have been installed:
 {% endinfo_block %}
 
 ### 2) Set up Transfer Objects
+
 Run the following command to generate transfer changes:
 
 ```bash
@@ -308,8 +310,6 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 To make sure that `SinglePaymentCheckoutRequestAttributesValidatorPlugin` is activated, send a POST request to the `http://glue.mysprykershop.com/checkout` endpoint with multiple payment methods and make sure that you get the following error:
 
-{% endinfo_block %}
-
 **Multiple Payments Error**
 
 ```json
@@ -323,6 +323,8 @@ To make sure that `SinglePaymentCheckoutRequestAttributesValidatorPlugin` is act
 	]
 }
 ```
+
+{% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 

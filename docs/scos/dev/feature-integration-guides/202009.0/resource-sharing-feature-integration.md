@@ -25,9 +25,8 @@ Run the following command(s) to install the required modules:
 composer require spryker-feature/resource-sharing: "^master" --update-with-dependencies
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
-    
-**Verification**
+{% info_block warningBox “Verification” %}
+
 Make sure that the following modules were installed:
     
 | Module | Expected Directory |
@@ -35,7 +34,7 @@ Make sure that the following modules were installed:
 | `ResourceShare` | `vendor/spryker/resource-share` |
 | `ResourceShareExtension` | `vendor/spryker/resource-share-extension` |
 
-</div></section>
+{% endinfo_block %}
 
 ### 2) Set up Database Schema and Transfer Objects
 
@@ -47,20 +46,18 @@ console propel:install
 console transfer:generate
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
-    
-**Verification**
+{% info_block warningBox “Verification” %}
+
 Make sure that the following changes applied by checking your database:
     
 | Database Entity | Type | Event |
 | --- | --- | --- |
 | `spy_resource_share` | table | created |
 
- </div></section>
+{% endinfo_block %}
  
-<section contenteditable="false" class="warningBox"><div class="content">
-    
-**Verification**
+{% info_block warningBox “Verification” %}
+
 Make sure that the following changes in transfer objects have been applied:
     
 | Transfer | Type | Event | Path |
@@ -71,7 +68,7 @@ Make sure that the following changes in transfer objects have been applied:
 | `ResourceShareRequest` | class | created | `src/Generated/Shared/Transfer/ResourceShareRequestTransfer` |
 | `ResourceShareResponse` | class | created | `src/Generated/Shared/Transfer/ResourceShareResponseTransfer` |
 
-</div></section>
+{% endinfo_block %}
  
 ## Install Feature Frontend
 ### Prerequisites
@@ -80,19 +77,18 @@ Please overview and install the necessary features before beginning the integrat
 
 | Name | Version |
 | --- | --- |
-| Spryker Core | master |
+| Spryker Core | 202009.0 |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/resource-sharing: "^master" --update-with-dependencies
+composer require spryker-feature/resource-sharing: "^202009.0" --update-with-dependencies
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
-    
-**Verification**
+{% info_block warningBox “Verification” %}
+
 Make sure that the following modules were installed:
     
 | Module | Expected Directory |
@@ -100,12 +96,12 @@ Make sure that the following modules were installed:
 | `ResourceSharePage` | `vendor/spryker-shop/resource-share-page` |
 | `ResourceSharePageExtension` | `vendor/spryker-shop/resource-share-page-extension` |
 
-</div></section>
+{% endinfo_block %}
 
 ### 2) Add Translations
 Append glossary according to your configuration:
 
-src/data/import/glossary.csv
+**src/data/import/glossary.csv**
 
 ```yaml
 resource_share.activator.error.strategy_expects_logged_in_customer,Please login to access requested shared resource.,en_US
@@ -129,7 +125,9 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that in the database the configured data are added to the `spy_glossary` table.
+
 {% endinfo_block %}
 
 ### 3) Enable Controllers
@@ -173,5 +171,7 @@ console frontend:yves:build
 ```
 
 {% info_block warningBox "Verification" %}
+
 Go to `http://mysprykershop.com/resource-share/link/uuid` and make sure you see a non-existing resource error message displayed.
+
 {% endinfo_block %}

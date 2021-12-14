@@ -32,13 +32,19 @@ composer require spryker-feature/agent-assist:"^202001.0" --update-with-dependen
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:<table><thead><tr><th>Module</th><th>Expected Directory </th></tr></thead><tbody><tr><td>`Agent`</td><td>`vendor/spryker/agent`</td></tr><tr><td>`AgentGui`</td><td>`vendor/spryker/agent-gui`</td></tr></tbody></table>
+Make sure that the following modules were installed:
+
+|Module|Expected Directory|
+|--- |--- |
+|`Agent`|`vendor/spryker/agent`|
+|`AgentGui`|`vendor/spryker/agent-gui`|
 
 {% endinfo_block %}
 
 ### 2) Set up the Database Schema
 
 Run the following commands to apply database changes and to generate entity and transfer changes.
+
 ```bash
 console transfer:generate
 console propel:install
@@ -47,7 +53,11 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Verify the following changes by checking your database:<table ><thead><tr><td >Database Entity</td><td>Type</td><td>Event</td></tr></thead><tbody><tr><td>`spy_user.is_agent`</td><td>column</td><td>created</td></tr></tbody></table>
+Verify the following changes by checking your database:
+
+|Database Entity|Type|Event|
+|--- |--- |--- |
+|`spy_user.is_agent`|column|created|
 
 {% endinfo_block %}
 
@@ -63,7 +73,7 @@ Enable the following behaviors by registering the plugins:
 |  `UserAgentTableConfigExpanderPlugin` | Adds "is an agent" column to the Zed Users table. | None |  `Spryker\Zed\AgentGui\Communication\Plugin` |
 |  `UserAgentTableDataExpanderPlugin` | Fills "is an agent" column in the Zed Users table. | None |  `Spryker\Zed\AgentGui\Communication\Plugin` |
 
-src/Pyz/Zed/User/UserDependencyProvider.php
+**src/Pyz/Zed/User/UserDependencyProvider.php**
 
 ```php
 <?php
@@ -111,7 +121,14 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following plugins were registered:<table><thead><tr><th>Plugin</th><th>Description</th><th>Prerequisites</th><th>Namespace</th></tr></thead><tbody><tr ><td>`UserAgentFormExpanderPlugin`</td><td>Adds "is an agent" checkbox to the Zed User form.</td><td>None</td><td>`Spryker\Zed\AgentGui\Communication\Plugin`</td></tr><tr><td>`UserAgentTableConfigExpanderPlugin`</td><td>Adds "is an agent" column to the Zed Users table.</td><td>None</td><td>`Spryker\Zed\AgentGui\Communication\Plugin`</td></tr><tr><td>`UserAgentTableDataExpanderPlugin`</td><td>Fills "is an agent" column in the Zed Users table.</td><td>None</td><td>`Spryker\Zed\AgentGui\Communication\Plugin`</td></tr></tbody></table>
+Make sure that the following plugins were registered:
+
+|Plugin|Description|Prerequisites|Namespace|
+|--- |--- |--- |--- |
+|`UserAgentFormExpanderPlugin`|Adds "is an agent" checkbox to the Zed User form.|None|`Spryker\Zed\AgentGui\Communication\Plugin`|
+|`UserAgentTableConfigExpanderPlugin`|Adds "is an agent" column to the Zed Users table.|None|`Spryker\Zed\AgentGui\Communication\Plugin`|
+|`UserAgentTableDataExpanderPlugin`|Fills "is an agent" column in the Zed Users table.|None|`Spryker\Zed\AgentGui\Communication\Plugin`|
+
 
 {% endinfo_block %}
 
@@ -135,7 +152,12 @@ composer require spryker-feature/agent-assist:"^202001.0" --update-with-dependen
 
 {% info_block warningBox "Verification" %}
 
-Verify if the following modules were installed:<table><thead><tr><td>Module</td><td>Expected Directory</td></tr></thead><tbody><tr><td>`AgentPage`</td><td>`vendor/spryker-shop/agent-page`</td></tr><tr><td>`AgentWidget`</td><td>`vendor/spryker-shop/agent-widget`</td></tr></tbody></table>
+Verify if the following modules were installed:
+
+|Module|Expected Directory|
+|--- |--- |
+|`AgentPage`|`vendor/spryker-shop/agent-page`|
+|`AgentWidget`|`vendor/spryker-shop/agent-widget`|
 
 {% endinfo_block %}
 
@@ -191,7 +213,7 @@ Register service provider(s) in the Yves application:
 | --- | --- | --- |
 |  `AgentPageSecurityServiceProvider` |  `SprykerShop\Yves\AgentPage\Plugin\Provider` | Registers security firewalls, access rules, impersonate rules and login/logout handlers for Agent users. |
 
-src/Pyz/Yves/ShopApplication/YvesBootstrap.php
+**src/Pyz/Yves/ShopApplication/YvesBootstrap.php**
 
 ```php
 <?php
@@ -215,7 +237,9 @@ class YvesBootstrap extends SprykerYvesBootstrap
 
 {% info_block warningBox "Verification" %}
 
-Verify the following changes:<br>* Try to open the link:`http://mysprykershop.com/agent/secured`<br>
+Verify the following changes:
+
+* Try to open the link:`http://mysprykershop.com/agent/secured`<br>
 * You should be redirected to`http://mysprykershop.com/agent/login`
 
 {% endinfo_block %}
@@ -278,7 +302,7 @@ Register the following global widget(s):
 | --- | --- | --- |
 |  `AgentControlBarWidget` | Allows agents to select customers and impersonate. |  `SprykerShop\Yves\AgentWidget\Widget` |
 
-src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php
+**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -312,6 +336,10 @@ In case if you have custom layout template, please place the agent widget above 
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets were registered:<table><thead><tr><th>Module</th><th>Test</th></tr></thead><tbody><tr><td>`AgentControlBarWidget`</td><td>Login as an Agent. The control bar widget should appear above the site header.</td></tr></tbody></table>
+Make sure that the following widgets were registered:
+
+|Module|Test|
+|--- |--- |
+|`AgentControlBarWidget`|Login as an Agent. The control bar widget should appear above the site header.|
 
 {% endinfo_block %}

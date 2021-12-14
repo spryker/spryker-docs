@@ -41,9 +41,8 @@ vendor/bin/console propel:model:build
 
 The classes are located in your project under the `\Orm\Zed\ProductSet\Persistence` namespace. 
 
-<section contenteditable="false" class="warningBox"><div class="content">
-    
-**Verification**
+{% info_block warningBox “Verification” %}
+
 Make sure that they extend the base classes from the Spryker core, for example:
 
 * `\Orm\Zed\ProductSet\Persistence\SpyProductSet` extends `\Spryker\Zed\ProductSet\Persistence\Propel\AbstractSpyProductSet`
@@ -57,7 +56,8 @@ Make sure that they extend the base classes from the Spryker core, for example:
 * `\Orm\Zed\ProductSet\Persistence\SpyProductSetDataQuery` extends `\Spryker\Zed\ProductSet\Persistence\Propel\AbstractSpyProductSetDataQuery`
 
 * `\Orm\Zed\ProductSet\Persistence\SpyProductAbstractSetQuery` extends `\Spryker\Zed\ProductSet\Persistence\Propel\AbstractSpyProductAbstractSetQuery`
-</div></section>
+
+{% endinfo_block %}
 
 6. To get the new transfer objects, run the following command:
 

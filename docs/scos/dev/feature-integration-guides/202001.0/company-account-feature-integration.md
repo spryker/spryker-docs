@@ -532,7 +532,7 @@ Log in with a customer who has multiple Company Users and a default one. Check i
 
 {% info_block warningBox "Verification" %}
 
-Make sure that token generation for a company user works. For more information, see [HowTo: Generate a Token for Login](/docs/scos/dev/tutorials-and-howtos/feature-howtos/).
+Make sure that token generation for a company user works. For more information, see [HowTo: Generate a Token for Login]([/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html)).
 
 {% endinfo_block %}
 

@@ -30,7 +30,14 @@ composer require spryker-feature/alternative-products: "^202001.0" --update-with
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:<table><thead><tr><td>Module</td><td>Expected Directory</td></tr></thead><tbody><tr><td>`ProductAlternative`</td><td>`vendor/spryker/product-alternative`</td></tr><tr><td>`ProductAlternativeDataImport`</td><td>`vendor/spryker/product-alternative-data-import`</td></tr><tr><td>`ProductAlternativeGui`</td><td>`vendor/spryker/product-alternative-gui`</td></tr><tr><td>`ProductAlternativeStorage`</td><td>`vendor/spryker/product-alternative-storage`</td></tr></tbody></table>
+Make sure that the following modules were installed:
+
+|Module|Expected Directory|
+|--- |--- |
+|`ProductAlternative`|`vendor/spryker/product-alternative`|
+|`ProductAlternativeDataImport`|`vendor/spryker/product-alternative-data-import`|
+|`ProductAlternativeGui`|`vendor/spryker/product-alternative-gui`|
+|`ProductAlternativeStorage`|`vendor/spryker/product-alternative-storage`|
 
 {% endinfo_block %}
 
@@ -42,7 +49,7 @@ Adjust the schema definition so that entity changes trigger the events.
 |---|---|
 |  `spy_product_alternative` |  `Entity.spy_product_alternative.create` `Entity.spy_product_alternative.update` `Entity.spy_product_alternative.delete` |
 
-src/Pyz/Zed/ProductAlternative/Persistence/Propel/Schema/spy_product_alternative.schema.xml
+**src/Pyz/Zed/ProductAlternative/Persistence/Propel/Schema/spy_product_alternative.schema.xml**
     
 ```xml
 <?xml version="1.0"?>
@@ -62,7 +69,7 @@ src/Pyz/Zed/ProductAlternative/Persistence/Propel/Schema/spy_product_alternative
     
 Set up synchronization queue pools so that non-multistore entities (not store specific entities) get synchronized among stores:
 
-src/Pyz/Zed/ProductAlternativeStorage/Persistence/Propel/Schema/spy_product_alternative_storage.schema.xml
+**src/Pyz/Zed/ProductAlternativeStorage/Persistence/Propel/Schema/spy_product_alternative_storage.schema.xml**
 
 ```xml
  <?xml version="1.0"?>

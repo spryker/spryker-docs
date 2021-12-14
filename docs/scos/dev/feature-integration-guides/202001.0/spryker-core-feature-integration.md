@@ -10,27 +10,30 @@ redirect_from:
 ---
 
 {% info_block errorBox %}
+
 The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds the **Vault** and **Redis** functionality.
+
 {% endinfo_block %}
 
 ## Install Feature Core
+
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Spryker Core	 | {{page.version}} |
+| Spryker Core	 | 202001.0 |
 
 ### 1) Install the required modules using Composer
 Run the following command to install the required modules:
 
 ```bash
-composer require spryker-feature/spryker-core: "^{{page.version}}" --update-with-dependencies
+composer require spryker-feature/spryker-core: "^202001.0" --update-with-dependencies
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
+{% info_block warningBox “Verification” %}
 
-**Verification**
 Make sure that the following modules were installed:
 
 | Module | Expected Directory |
@@ -42,9 +45,11 @@ Make sure that the following modules were installed:
 | `SessionFile` | `vendor/spryker/session-redis` |
 | `StorageExtension` | `vendor/spryker/storage-extension` |
 | `StorageRedis` | `vendor/spryker/storage-redis` |
-</div></section>
+
+{% endinfo_block %}
 
 ### 2) Set up Database Schema and Transfer Objects
+
 Run the following commands to apply the database changes and generate the entity and transfer changes:
 
 ```bash
@@ -53,20 +58,18 @@ console propel:install
 console transfer:generate
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
-
-**Verification**    
+{% info_block warningBox “Verification” %}
+   
 Make sure that the following changes were applied by checking your database:
 
 | Database Entity | Type | Event |
 | --- | --- | --- |
 | `spy_vault_deposit` | table | created |
 
-</div></section>
+{% endinfo_block %}
 
-<section contenteditable="false" class="warningBox"><div class="content">
-
-**Verification**    
+{% info_block warningBox “Verification” %}
+   
 Make sure that the following changes in transfer objects:
 
 | Transfer | Type | Event | Path | 
@@ -75,10 +78,13 @@ Make sure that the following changes in transfer objects:
 | `VaultDeposit` | class | created | `src/Generated/Shared/Transfer/VaultDepositTransfer` |
 | `RedisConfiguration` | class | created | `src/Generated/Shared/Transfer/RedisConfigurationTransfer` |
 | `RedisCredentials` | class | created | `src/Generated/Shared/Transfer/RedisCredentialsTransfer` |
-</div></section>
+
+{% endinfo_block %}
 
 ### 3) Set up Configuration
+
 #### Vault
+
 Add the following configuration to your project:
 
 | Configuration | Specification | Namespace |
@@ -86,10 +92,12 @@ Add the following configuration to your project:
 | `VaultConstants::ENCRYPTION_KEY` | Used to encrypt vault data. | `Spryker\Shared\Vault` |
 
 {% info_block errorBox "Security measures" %}
+
 Make sure that the encryption key is secured in your live environment. This key protects all data stored in the Vault.
+
 {% endinfo_block %}
 
-config/Shared/config_local.php
+**config/Shared/config_local.php**
     
 ```php
 <?php
@@ -101,10 +109,19 @@ $config[VaultConstants::ENCRYPTION_KEY] = "PLEASE ADJUST THIS ENCRYPTION KEY TO 
 ```
 
 {% info_block warningBox "Verification" %}
-Once you have finished the full integration of the feature, make sure that:<br>You can store and retrieve data from the vault using `VaultFacade`:<br>`$secret = "actual_secret";` <br>`$vaultFacade->store("secret_category", "secret_id", $secret
-{% endinfo_block %};`<br>`assertSame($secret, $vaultFacade->retrieve("secret_category", "secret_id"));`)
+
+Once you have finished the full integration of the feature, make sure that:
+
+You can store and retrieve data from the vault using `VaultFacade`:
+
+`$secret = "actual_secret";` 
+`$vaultFacade->store("secret_category", "secret_id", $secret`
+`assertSame($secret, $vaultFacade->retrieve("secret_category", "secret_id"));`)
+
+{% endinfo_block %};
 
 #### Redis
+
 The following Session and Storage configuration constants were deprecated and moved into newly created dedicated modules:
 
 | Deprecated | Specification | Replaced by |
@@ -130,9 +147,10 @@ The following Session and Storage configuration constants were deprecated and mo
 | `StorageRedisConstants::STORAGE_REDIS_CONNECTION_OPTIONS` | Specifies an array of client options for connecting to Redis as key-value storage. | `Spryker\Shared\StorageRedis` |
 
 #### General Storage
+
 * In case of multi-instance Redis setup, extend your project with the following configuration:
 
-config/Shared/config_default.php
+**config/Shared/config_default.php**
 
 ```php
 <?php
@@ -152,12 +170,14 @@ $config[StorageRedisConstants::STORAGE_REDIS_CONNECTION_OPTIONS] = [
 ```
 
 {% info_block warningBox "Note" %}
+
 This configuration is used exclusively. In other words, you can't use any other Redis configuration.
+
 {% endinfo_block %}
 
 * In case of single-instance Redis setup, extend your project with the following configuration:
 
-config/Shared/config_default.php
+**config/Shared/config_default.php**
 
 ```php
 <?php
@@ -174,13 +194,16 @@ $config[StorageRedisConstants::STORAGE_REDIS_DATABASE] = 0;
 ```
 
 {% info_block warningBox "Note" %}
+
 All the values in the examples above should be replaced with the real ones used in the corresponding environment.
+
 {% endinfo_block %}
 
 #### Session Storage
+
 If you're using Redis as session storage, extend your project with the following configuration:
 
-config/Shared/config_default.php
+**config/Shared/config_default.php**
 
 ```php
 <?php
@@ -199,12 +222,14 @@ $config[SessionRedisConstants::LOCKING_LOCK_TTL_MILLISECONDS] = 0;
 ```
 
 {% info_block warningBox "Note" %}
+
 `SessionRedisConfig::SESSION_HANDLER_REDIS_LOCKING` and `SessionRedisConfig::SESSION_HANDLER_REDIS` can be used as values for `SessionConstants::ZED_SESSION_SAVE_HANDLER`.
+
 {% endinfo_block %}
 
 * In case of a multi-instance Redis setup, extend your project with the following configuration:
 
-config/Shared/config_default.php
+**config/Shared/config_default.php**
 
 ```php
 <?php
@@ -223,12 +248,14 @@ $config[SessionRedisConstants::ZED_SESSION_REDIS_CLIENT_OPTIONS] = [
 ```
 
 {% info_block warningBox "Note" %}
+
 This configuration is used exclusively. In other words, you can't use any other Redis configuration.
+
 {% endinfo_block %}
 
 * In case of a single-instance Redis setup, extend your project with the following configuration:
 
-config/Share/config_default.php
+**config/Share/config_default.php**
 
 ```php
 <?php
@@ -244,7 +271,7 @@ $config[SessionRedisConstants::ZED_SESSION_REDIS_DATABASE] = 2;
 
 If you're using file system as session storage, extend your project with the following configuration:
 
-config/Shared/config_default.php
+**config/Shared/config_default.php**
 
 ```php
 <?php
@@ -261,10 +288,13 @@ $config[SessionFileConstants::ZED_SESSION_FILE_PATH] = session_save_path();
 ```
 
 {% info_block warningBox "Note" %}
+
 All the values in the examples above should be replaced with the real ones used in the corresponding environment.
+
 {% endinfo_block %}
 
 ### 3) Set up Behavior
+
 Find the list of all the plugins installed along with new modules:
 
 | Plugin | Specification | Prerequisites | Namespace |
@@ -275,7 +305,7 @@ Find the list of all the plugins installed along with new modules:
 | `ZedSessionRedisLockReleaserPlugin` | Removes session lock from Redis by session id for Zed sessions. It's used when removing previously created locks by running the `session:lock:remove` console command. | None | `Spryker\Zed\SessionRedis\Communication\Plugin\Session` |
 | `StorageRedisPlugin` | Provides a Redis-based storage implementation. | None | `Spryker\Client\StorageRedis\Plugin` |
 
-src/Pyz/Zed/Session/SessionDependencyProvider.php
+**src/Pyz/Zed/Session/SessionDependencyProvider.php**
 
 ```php
 <?php
@@ -314,7 +344,7 @@ class SessionDependencyProvider extends SprykerSessionDependencyProvider
 }
 ```
 
-src/Pyz/Client/Storage/StorageDependencyProvider.php
+**src/Pyz/Client/Storage/StorageDependencyProvider.php**
 
 ```php
 <?php
@@ -338,7 +368,9 @@ class StorageDependencyProvider extends SprykerStorageDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
+
 Visit `zed.mysprykershop.com` and make sure that Zed boots up without errors.
+
 {% endinfo_block %}
 
 Set up the console commands:
@@ -348,7 +380,7 @@ Set up the console commands:
 | `StorageRedisExportRdbConsole` | Exports Redis database as an **rdb** file. | None | `Spryker\Zed\StorageRedis\Communication\Console` |
 | `StorageRedisImportRdbConsole` | Imports an **rdb** file. | None | `Spryker\Zed\StorageRedis\Communication\Console` |
 
-Pyz\Zed\Console\ConsoleDependencyProvider
+**Pyz\Zed\Console\ConsoleDependencyProvider**
 
 ```php
 <?php
@@ -380,18 +412,23 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
+
 To verify that `StorageRedisExportRdbConsole` and `StorageRedisImportRdbConsole` are activated, check if `vendor/bin/console storage:redis:export-rdb` and `vendor/bin/console storage:redis:import-rdb` console commands exist.
+
 {% endinfo_block %}
 
 ## Install Feature Frontend
+
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Spryker Core | {{page.version}} |
+| Spryker Core | 202001.0 |
 
 ### 1) Set up Configuration
+
 Add the following configuration to your project:
 
 | Configuration | Specification | Namespace |
@@ -405,7 +442,7 @@ Add the following configuration to your project:
 | `SessionRedisConstants::YVES_SESSION_REDIS_DATA_SOURCE_NAMES` | Defines the list of DSNs used while connecting to Redis as Yves session storage in replication mode. | `Spryker\Shared\SessionRedis` |
 | `SessionRedisConstants::YVES_SESSION_REDIS_CLIENT_OPTIONS` |Defines the list of client options used while connection to Redis as Yves session storage in replication mode. | `Spryker\Shared\SessionRedis` |
 
-config/Shared/config_default.php
+**config/Shared/config_default.php**
 
 ```php
 <?php
@@ -421,12 +458,14 @@ $config[SessionRedisConstants::YVES_SESSION_TIME_TO_LIVE] = SessionConfig::SESSI
 ```
 
 {% info_block warningBox "Note" %}
+
 `SessionRedisConfig::SESSION_HANDLER_REDIS_LOCKING` and `SessionRedisConfig::SESSION_HANDLER_REDIS` can be used as values for session handler configuration option.
+
 {% endinfo_block %}
 
 * In case of a multi-instance Redis setup, extend your project with the following configuration:
 
-config/Shared/config_default.php
+**config/Shared/config_default.php**
 
 ```php
 <?php
@@ -445,12 +484,14 @@ $config[SessionRedisConstants::YVES_SESSION_REDIS_CLIENT_OPTIONS] = [
 ```
 
 {% info_block warningBox "Note" %}
+
 This configuration is used exclusively. In other words, you can't use any other Redis configuration.
+
 {% endinfo_block %}
 
 * In case of a single-instance Redis setup, extend your project with the following configuration:
 
-config/Share/config_default.php
+**config/Share/config_default.php**
 
 ```php
 <?php
@@ -465,12 +506,14 @@ $config[SessionRedisConstants::YVES_SESSION_REDIS_DATABASE] = 1;
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure you don't use the same Redis database for Yves and Zed sessions.
+
 {% endinfo_block %}
 
 * If you're using file system as session storage, extend your project with the following configuration:
 
-config/Shared/config_default.php
+**config/Shared/config_default.php**
 
 ```php
 <?php
@@ -487,10 +530,13 @@ $config[SessionFileConstants::YVES_SESSION_FILE_PATH] = session_save_path();
 ```
 
 {% info_block warningBox "Note" %}
+
 All the values in the examples above should be replaced with the real ones used in the corresponding environment.
+
 {% endinfo_block %}
 
 ### 2) Set up Behavior
+
 Find the list of all the plugins installed along with new modules:
 
 | Plugin | Specification | Prerequisites | Namespace |
@@ -501,7 +547,7 @@ Find the list of all the plugins installed along with new modules:
 | `ZedSessionRedisLockReleaserPlugin` | Removes session lock from Redis by session id for Zed sessions. It's used when removing previously created locks by running the `session:lock:remove` console command. | None | `Spryker\Zed\SessionRedis\Communication\Plugin\Session` |
 | `StorageRedisPlugin` | Provides a Redis-based storage implementation. | None | `Spryker\Client\StorageRedis\Plugin` |
 
-src/Pyz/Yves/Session/SessionDependencyProvider.php
+**src/Pyz/Yves/Session/SessionDependencyProvider.php**
 
 ```php
 <?php
@@ -529,7 +575,7 @@ class SessionDependencyProvider extends SprykerSessionDependencyProvider
 }
 ```
 
-src/Pyz/Zed/Session/SessionDependencyProvider.php
+**src/Pyz/Zed/Session/SessionDependencyProvider.php**
 
 ```php
 <?php
@@ -558,5 +604,7 @@ class SessionDependencyProvider extends SprykerSessionDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
+
 Visit `mysprykershop.com` and make sure that Yves boots up without errors.
+
 {% endinfo_block %}

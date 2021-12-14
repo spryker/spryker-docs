@@ -14,7 +14,7 @@ While public API updates always support backward compatibility, private API upda
 
 ### Moving core methods to the project level
 
-To avoid unexpected issues and achieve the same result, copy the needed core methods to the project level, rename them and replace the core ones.
+To avoid unexpected issues and achieve the same result, replace the core methods with their copies on the project level.
 
 #### Example of the code that causes the upgradability error
 

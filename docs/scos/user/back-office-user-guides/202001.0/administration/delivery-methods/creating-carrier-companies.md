@@ -24,13 +24,20 @@ To start working with the carrier companies, navigate to the **Administration > 
 **To create a carrier company:**
 1. In the top-right corner of the **Delivery Methods** page, click **Create new carrier company**.
 2. On the **Create new Carrier company** page, enter a name for the carrier company:
+
 {% info_block warningBox %}
- The name you enter will be visible on the **Create new delivery method** page only.
+
+The name you enter will be visible on the **Create new delivery method** page only.
+
 {% endinfo_block %}
+
 4. To activate the carrier company, select the **Enabled?** checkbox. 
 5. To complete the creation, click **Add** .
+
 {% info_block infoBox %}
+
 Click **List of shipment methods**to get back to the list of delivery methods. However, clicking this option **prior to** saving the changes will discard all the changes and take you to the **Delivery Methods** page.
+
 {% endinfo_block %}
 
 ***

@@ -23,8 +23,8 @@ Products are **discontinued** when the manufacturer or a current distributor has
 Discontinued products have a certain period of time when they will still be shown on the website (active_until). After this period ends - the products will become deactivated.
 
 {% info_block warningBox %}
-Only [concrete products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html-
-{% endinfo_block %} can become discontinued.)
+Only [concrete products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) can become discontinued.
+{% endinfo_block %}
 
 The schema below illustrates the relations between discontinued products, abstract and concrete products:
 ![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Discontinued+Products/Discontinued+Products+Feature+Overview/discontinued-schema.png) 

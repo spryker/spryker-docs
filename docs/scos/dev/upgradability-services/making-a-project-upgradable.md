@@ -14,7 +14,7 @@ This documentation aims at helping you customize your Spryker solution in a Spry
 
 ## Customization strategies
 
-There are different strategies you can use to customize your solution. 
+There are different strategies you can use to customize your solution.
 
 Detailed information is available [here](/docs/scos/dev/guidelines/project-development-guidelines.html) and [here](/docs/scos/dev/back-end-development/extending-spryker/extending-the-core.html).
 
@@ -52,5 +52,3 @@ i.e. what coding principles should I follow
 #### Example
 
 Check out this detailed example – [link to upgradability guidelines with concrete principles]
-
-## What are customization tiers?

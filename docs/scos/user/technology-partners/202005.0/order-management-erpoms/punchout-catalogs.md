@@ -1,15 +1,13 @@
 ---
 title: Punchout Catalogs
 description: Connect your platform using cXML or OCI protocol with the buyer's ERP by integrating Punchout Catalogs into the Spryker Commerce OS.
-last_updated: Jul 5, 2021
+last_updated: Sep 15, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/punchout-catalogs
-originalArticleId: 931ad11a-a77a-46a2-8878-73327caee2d3
+originalLink: https://documentation.spryker.com/v5/docs/punchout-catalogs
+originalArticleId: 76e12fcd-e649-4b89-ae0b-72618c692f9d
 redirect_from:
-  - /2021080/docs/punchout-catalogs
-  - /2021080/docs/en/punchout-catalogs
-  - /docs/punchout-catalogs
-  - /docs/en/punchout-catalogs
+  - /v5/docs/punchout-catalogs
+  - /v5/docs/en/punchout-catalogs
 ---
 
 Big e-commerce corporations and business enterprises are always searching for a way to simplify their purchasing process and manage their spendings. In most cases, these companies rely on e-procurement systems (ERPs), like [SAP](https://www.sap.com/index.html) or [Ariba](https://www.ariba.com/) that automate many of the procurement processes and manage their purchase cycle. However, in the B2B environment, these buyers also demand access to an e-commerce interface that will interfere with the procurement system for expanding the market.
@@ -25,6 +23,8 @@ Check out this video to get more details on how Punchout works:
 * [Punchout Catalog feature integration](/docs/scos/dev/technology-partner-guides/{{page.version}}/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html)
 * [Eco - Punchout Catalogs + Product Bundles feature integration](/docs/scos/dev/technology-partner-guides/{{page.version}}/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html)
 * [Eco - Punchout Catalogs feature integration](/docs/scos/dev/technology-partner-guides/{{page.version}}/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-feature-integration.html)
+
+---
 
 ## Copyright and Disclaimer
 

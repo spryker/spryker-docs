@@ -1,13 +1,14 @@
 ---
 title: Eco- Punchout Catalogs + Product Bundles Feature Integration
 description: Integrate Eco- Punchout Catalogs + Product Bundles Feature into the Spryker Commerce OS.
-last_updated: Mar 5, 2020
+last_updated: Nov 22, 2019
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v4/docs/eco-punchout-catalogs-product-bundles-feature-integration
-originalArticleId: 1d5d5e64-47f0-45df-b094-b04b869577d3
+originalLink: https://documentation.spryker.com/v3/docs/eco-punchout-catalogs-product-bundles-feature-integration
+originalArticleId: 7194c77e-5d8c-412d-b73c-22a187c6cdd9
 redirect_from:
-  - /v4/docs/eco-punchout-catalogs-product-bundles-feature-integration
-  - /v4/docs/en/eco-punchout-catalogs-product-bundles-feature-integration
+  - /v3/docs/eco-punchout-catalogs-product-bundles-feature-integration
+  - /v3/docs/en/eco-punchout-catalogs-product-bundles-feature-integration
+  - /docs/scos/user/technology-partners/201907.0/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html  
 ---
 
 ## Install Feature Core
@@ -31,16 +32,17 @@ Enable the following behaviors by registering the plugins:
 | --- | --- | --- | --- |
 | `BundleModePunchoutCatalogSetupRequestFormExtensionPlugin` | Expands punchout catalog connection form with Bundle Mode field. | None |`SprykerEco\Zed\PunchoutCatalogs\Communication\Plugin\PunchoutCatalogs` |
 
-**src/Pyz/Zed/PunchoutCatalogs/PunchoutCatalogsDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Zed/PunchoutCatalogs/PunchoutCatalogsDependencyProvider.php</summary>
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\PunchoutCatalogs;
- 
+
 use SprykerEco\Zed\PunchoutCatalogs\Communication\Plugin\PunchoutCatalogs\BundleModePunchoutCatalogSetupRequestFormExtensionPlugin;
 use SprykerEco\Zed\PunchoutCatalogs\PunchoutCatalogsDependencyProvider as SprykerPunchoutCatalogsDependencyProvider;
- 
+
 class PunchoutCatalogsDependencyProvider extends SprykerPunchoutCatalogsDependencyProvider
 {
     /**
@@ -54,7 +56,8 @@ class PunchoutCatalogsDependencyProvider extends SprykerPunchoutCatalogsDependen
     }
 }
 ```
-
+<br>
+</details>
 {% info_block infoBox "Verification" %}
 Make sure that, when you create new punchout catalog connection, the form contains Bundle Mode field.
 {% endinfo_block %}

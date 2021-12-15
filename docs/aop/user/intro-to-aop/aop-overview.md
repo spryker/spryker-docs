@@ -23,10 +23,12 @@ The main advantages of the AOP are:
 - Quick, no-code integrations
 - Fully functional trials
 - Consumption-based billing
-- Single POC or integration owner
+- Contains only approved and secure apps
+- Always up-to-date apps
 
 ## Accessing the AOP catalog
 
+AOP Catalog is a page inside the Back Office that contains the list of applications you can connect to your shop. 
 You can access the AOP catalog only if you are the SCCOS customer. If you were onboarded after March 31st, 2022, you get the AOP catalog integrated into your Back Office by default. If you were onboarded earlier, follow the AOP installation guide <!---LINK once available-->. Once you complete the installation, the AOP catalog appears in the Back Office:
 
 ![aop-catalog](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/app-orchestration-platform-overview/aop-catalog.png)
@@ -37,7 +39,7 @@ In most cases, to try an app from the AOP catalog, you do the following:
 
 1. In the AOP catalog, select the necessary app and connect it to your shop by clicking the **Connect app** button at the app details page. This takes you to the app provider's website of the selected app.
 2. On the app provider's website, you obtain the necessary credentials.
-3. In the Spryker AOP catalog, at the selected app page, you click **Configure** and enter the credentials obtained from the app provider. Here you also make necessary settings for the app.
+3. In the Spryker AOP catalog, at the selected app details page, you click **Configure** and enter the credentials obtained from the app provider. Here you also make necessary settings for the app.
 
 {% info_block infoBox "Info" %}
 

@@ -174,3 +174,5 @@ class ProductSetDependencyProvider extends SprykerProductSetDependencyProvider
 
 {% info_block warningBox "Sorting Product Sets" %}
 There's a Zed UI to be able to sort Product Sets easily compared to each other under the Reorder Product Sets.
+
+{% endinfo_block %}

@@ -61,7 +61,7 @@ You can create a product configurator as a part of your shop or integrate a thir
 ![examplary-product-configurator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/examplary-product-configurator.png)
 
 
-### How Spryker interacts with a product configurator
+### How a Spryker shop interacts with a product configurator
 
 A Spryker shop interacts with product configurators using parameters. When a customer is redirected from a Spryker shop to the configurator page, the shop passes the customer and product parameters. When the customer is redirected back to the shop, the configurator passes the updated parameters back.
 

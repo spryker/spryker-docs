@@ -24,8 +24,11 @@ For each product set, the following information is presented:
 * The actions that you can do on a product set (View, Edit, Deactivate, Delete)
 ***
 ## Create/Edit Product Set page
+
 The following tables describe the attributes that you enter and select while creating or managing a product set.
+
 **General tab**
+
 | Attribute |Description  |
 | --- | --- |
 | **Name** | The name of your product set. |

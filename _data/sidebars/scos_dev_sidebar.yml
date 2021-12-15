@@ -3488,6 +3488,19 @@ entries:
     - "202009.0"
     - "202108.0"
     nested:
+    - title: Deploy file
+      url: /docs/scos/dev/the-docker-sdk/deploy-file/deploy-file.html
+      nested:
+      include_versions:
+      - "202108.0"
+      - title: Deploy file reference - 1.0
+        url: /docs/scos/dev/the-docker-sdk/deploy-file/deploy-file-reference-1.0.html
+        include_versions:
+        - "202108.0"
+      - title: Deploy file inheritance — common use cases
+        url: /docs/scos/dev/the-docker-sdk/deploy-file/deploy-file-inheritance-common-use-cases.html
+        include_versions:
+        - "202108.0"
     - title: Docker environment infrustructure
       url: /docs/scos/dev/the-docker-sdk/docker-environment-infrastructure.html
       include_versions:
@@ -3550,7 +3563,6 @@ entries:
       url: /docs/scos/dev/the-docker-sdk/deploy-file-reference-1.0.html
       include_versions:
       - "202009.0"
-      - "202108.0"
     - title: Docker environment infrastructure
       url: /docs/scos/dev/the-docker-sdk/docker-environment-infrastructure.html
       include_versions:
@@ -4070,12 +4082,28 @@ entries:
           url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/installing-and-integrating-minubo.html
           include_versions:
           - "202108.0"
-    - title: Marketing and conversion
+    - title: Operational tools, monitoring, legal, etc.
       nested:
-        - title: Operation tools, monitoring, legal, etc.
+        - title: New Relic
           nested:
-            - title: Configuring Loggly
-              url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/configuring-loggly.html
+            - title: Installing and configuring New Relic
+              url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/new-relic/installing-and-configuring-new-relic–with–vagrant.html
+            - title: Configuring logging
+              url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/new-relic/configuring-new-relic-logging.html
+        - title: Configuring Loggly
+          url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/configuring-loggly.html
+        - title: Installing and configuring Tideways
+          url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
+    - title: Order Management (ERPOMS)
+      nested:
+        - title: Punchout Catalogs
+          nested:
+            - title: Punchout Catalog feature integration
+              url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html
+            - title: Eco - Punchout Catalogs feature integration
+              url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-feature-integration.html
+            - title: Eco - Punchout Catalogs + Product Bundles feature integration
+              url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html
   - title: Architecture
     url: /docs/scos/dev/architecture/architecture.html
     nested:
@@ -4145,7 +4173,7 @@ entries:
     - title: Project development guidelines
       url: /docs/scos/dev/guidelines/project-development-guidelines.html
     - title: Data Processing Guidelines
-      url: /docs/scos/dev/guidelines/data-processing-guidelines.html      
+      url: /docs/scos/dev/guidelines/data-processing-guidelines.html
     - title: Module configuration convention
       url: /docs/scos/dev/guidelines/module-configuration-convention.html
     - title: Making your Spryker shop secure

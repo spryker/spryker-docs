@@ -248,7 +248,7 @@ To update a wishlist item, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
-<details><summary>Request sample: add a configurable product to a wishlist</summary>
+<details><summary>Request sample: Update a configurable product in a wishlist</summary>
 
 `PATCH https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items/093_24495843_98bf36f052d23f10a8a081694ad4f45e`
 

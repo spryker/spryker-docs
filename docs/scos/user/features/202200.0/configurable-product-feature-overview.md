@@ -69,7 +69,7 @@ The behavior of the configurator is based on the parameters passed by a shop. Fo
 
 The selected configuration is also passed back to the shop as parameters. The shop uses the parameters to display the selected configuration on all related pages and process the order with the product.
 
-#### Parameter types
+### Parameter types
 
 There are two parameter types: configuration parameters and display parameters.
 

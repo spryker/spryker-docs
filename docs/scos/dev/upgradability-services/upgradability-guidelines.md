@@ -82,4 +82,4 @@ src/Pyz/Zed/CustomerAccess/Persistence/CustomerAccessEntityManagerInterface.php
 public function setContentTypesToInaccessible(CustomerAccessTransfer $customerAccessTransfer): CustomerAccessTransfer;
 ```
 
-When the core method is overridden, re-evaluate the code. The same error shouldn't be returned.
+After replacing the core method with its project-level copy, re-evaluate the code. The same error shouldn't be returned.

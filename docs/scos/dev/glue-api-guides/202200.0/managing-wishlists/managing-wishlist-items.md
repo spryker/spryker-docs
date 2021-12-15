@@ -118,7 +118,7 @@ Request sample: `POST https://glue.mysprykershop.com/wishlists/09264b7f-1894-58e
 | quantity  | Integer  | Quantity of the product that is added to the wishlist.  |
 | availableQuantity  | Integer  |  Product quantity available in the store. |
 
-For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html#abstract-product-prices-response-attributes).
+For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html#response).
 
 ### Response
 

@@ -30,6 +30,7 @@ redirect_from:
   - /v1/docs/en/understanding-spryker
   - /v6/docs/about-spryker
   - /v6/docs/en/about-spryker
+  - /docs/scos/user/intro-to-spryker/whats-new/roadmap.html
 ---
 
 ## What is the Spryker Commerce OS?

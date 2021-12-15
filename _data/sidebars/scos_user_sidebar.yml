@@ -126,8 +126,6 @@ entries:
         url: /docs/scos/user/intro-to-spryker/whats-new/upcoming-major-module-releases.html
       - title: Security updates
         url: /docs/scos/user/intro-to-spryker/whats-new/security-updates.html
-      - title: Roadmap
-        url: /docs/scos/user/intro-to-spryker/whats-new/roadmap.html
     - title: Support
       nested:
       - title: How Spryker Support works

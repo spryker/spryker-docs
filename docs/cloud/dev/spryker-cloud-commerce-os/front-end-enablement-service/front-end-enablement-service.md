@@ -20,16 +20,20 @@ Mobile-first design.
 
 ## Who the users of FeS are?
 
-FeS is designed to be used by devlopers and content managers.
+FeS is designed to be used by developers and content managers.
 
 ## How does FeS work?
 
-Launchpad is designed to launch any kind of apps, however, currently, only the front end app. (do we need to mention it?)
+
 
 ### FeS Architecture
 
+#### Fes API
 
-### What is a launchpad? 
+
+
+
+### What is a launchpad?
 
 ### What is a feature?
 

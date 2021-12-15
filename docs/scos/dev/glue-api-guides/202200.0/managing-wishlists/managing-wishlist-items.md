@@ -316,7 +316,7 @@ For attribute descriptions of product prices, see [Retrieving abstract product p
 
 ### Response
 
-<details><summary>Response sample: add a configurable product to a wishlist</summary>
+<details><summary>Response sample: Update a configurable product in a wishlist</summary>
 
 ```json
 {

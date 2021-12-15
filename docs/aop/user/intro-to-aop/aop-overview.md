@@ -37,9 +37,9 @@ You can access the AOP catalog only if you are the SCCOS customer. If you were o
 
 In most cases, to try an app from the AOP catalog, you do the following:
 
-1. In the AOP catalog, select the necessary app and connect it to your shop by clicking the **Connect app** button at the app details page. This takes you to the app provider's website of the selected app.
+1. In the AOP catalog, select the necessary app and connect it to your shop by clicking the **Connect app** button on the app details page. This takes you to the configuration page of the newly connected app. There you will find a link to the app provider's website in case you need to register with them.
 2. On the app provider's website, you obtain the necessary credentials.
-3. In the Spryker AOP catalog, at the selected app details page, you click **Configure** and enter the credentials obtained from the app provider. Here you also make necessary settings for the app.
+3. In the Spryker AOP catalog, on the selected app details page, you click **Configure** and enter the credentials obtained from the app provider. Here you also make necessary settings for the app.
 
 {% info_block infoBox "Info" %}
 

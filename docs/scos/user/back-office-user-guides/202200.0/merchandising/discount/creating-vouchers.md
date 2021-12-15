@@ -125,7 +125,7 @@ The following table describes the attributes you enter and select in the *Genera
 | PRIORITY | Defines [the discount priority](/docs/scos/user/features/202108.0/promotions-discounts-feature-overview.html#discount-priority). Represented as an integer value from 1 to 9999, 1 being the highest priority and 9999 the lowest. |
 | NON-EXCLUSIVE | Defines the discount exclusivity. Buyers can redeem non-exclusive discounts in conjunction with other non-exclusive discounts.|
 | EXCLUSIVE | Defines the discount exclusivity. When a discount is exclusive, no other discounts may be applied in conjunction. When a cart is eligible for multiple exclusive discounts, the discount with the highest value to the customer is applied. The exception to this is promotional product discounts. Query string discounts and promotional product discounts exclude only among each other. Promotional product discounts are not affected by exclusive query string discounts, and vice versa.|
-| VALID FROM (TIME IN UTC) and VALID TO (TIME IN UTC)| Vouchers are redeemable or the cart rule is active between **VALID FROM (TIME IN UTC)** and **VALID TO (TIME IN UTC)** dates, inclusive. For example, a voucher can be redeemed or discount applies to the cart starting from 01.12.2021 00:00 until 31.01.2022 23:59 by UTC|
+| VALID FROM and VALID TO | Vouchers are redeemable or the cart rule is active between **VALID FROM** and **VALID TO** dates and times (in UTC), inclusive. For example, a voucher can be redeemed or discount applies to the cart starting from 01.12.2021 23:00 until 31.01.2022 22:59, UTC |
 
 {% info_block infoBox "Info" %}
 

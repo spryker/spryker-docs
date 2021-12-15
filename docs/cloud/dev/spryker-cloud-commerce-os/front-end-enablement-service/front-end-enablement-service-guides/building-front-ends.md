@@ -11,16 +11,19 @@ This tutorial describes all the steps of build a front end, from connecting it t
 * Each section links to the more detailed [FeS guides](/docs/cloud/dev/spryker-cloud-commerce-os/front-end-enablement-service/front-end-enablement-service-guides/front-end-enablement-service-guides.html).
 
 
+## How do I log into the Launchpad portal?
+
+Login URL: [launchpad portal](https://launchpad.spryker.com)
+
+### Where do I take login credentials?
+
 
 ## How do I set up an infrastructure for a front end?
-
-Log into the Launchpad portal. 
-
 
 
 ### How do I connect a repository?
 
-### How do I connect a back end?
+### How do I connect my hosting?
 
 ### Anything else I need to configure?
 

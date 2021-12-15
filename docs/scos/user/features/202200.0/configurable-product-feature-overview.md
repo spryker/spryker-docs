@@ -98,7 +98,7 @@ If a price is not provided by the configurator, [a regular product price](/docs/
 
 ### Complete and incomplete configuration
 
-When importing configurable products, a developer defines if the configuration is complete for each product.
+When [importing configurable products](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html), a developer defines if the configuration is complete for each product.
 
 If the configuration is complete, on entering the *Product details* page, a customer sees a message that the configuration is complete. By default, the message is followed by the first 3 descriptive attributes set in the configurator. Under the attributes, there are the **Show** and **Hide** buttons, which allow expanding and collapsing the remaining attributes, respectively. In case the configuration is complete, the customer can purchase the product without opening the configurator and selecting parameters.
 

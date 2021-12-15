@@ -1,29 +1,21 @@
 ---
-title: Upgradability reference
-description: Rerference infomation for evaluator and upgrader tools.
+title: Upgradability guidelines
+description: Reference information for evaluator and upgrader tools.
 last_updated: Nov 25, 2021
 template: concept-topic-template
 ---
 
-## Name is not unique
+## Entity name is not unique
 
-Names of transfers, transfer properties, database tables and columns, methods, and constants should be unique to the extent of making it impossible to accidentally match the name of a core entity introduced in future.
+Names of transfers, transfer properties, database tables, database columns, methods, and constants should be unique. to the extent of making it impossible to accidentally match the name of a core entity introduced in future.
 
-If minor or major release introduces an entity with the same name, the entity in your project might change behavior or cause errors.
-
-* Check that Transfer is unique and have the prefix
-* Check that Transfer extend Core Transfer, and each property have the prefix
-* Check that DB Table is unique and have the prefix
-* Check that DB Column extend Core Table, and each column have the prefix
-* Check that Method is unique and have the prefix
-* Check that Constant is unique and have the prefix
+If minor or major release introduces an entity with the same name, the entity in your project might change behavior or cause issues.
 
 ### Making entity names unique
 
-To avoid errors, make the names of entities unique. For example, add the project name as a prefix to names.
+To avoid unexpected issues and achieve the same result, make the names of entities unique. This section contains examples of transfer, table, and method names. You can apply the same solution to any other entity.
 
 #### Examples of code and related errors
-
 
 `ProductAbstractStore` transfer name is not unique:
 
@@ -50,101 +42,20 @@ ProductAbstractStore
 ************************************************************************************************************************
 ```
 
+`evaluator_spryker` table name is not unique:
 
-`contentWidgetParameterMap` property name is not unique:
 ```xml
 <?xml version="1.0"?>
-<transfers xmlns="spryker:transfer-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
-    <transfer name="LocaleCmsPageData">
-        <property name="contentWidgetParameterMap" type="array" singular="contentWidgetParameterMap"/>
-    </transfer>
-</transfers>
-```
+<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" name="zed" namespace="Orm\Zed\EvaluatorSpryker\Persistence" package="src.Orm.Zed.EvaluatorSpryker.Persistence">
+    <table name="evaluator_spryker" idMethod="native">
+        <column name="id_evaluator_spryker" required="true" type="INTEGER" autoIncrement="true" primaryKey="true"/>
+        <column name="reversed_string" required="true" size="128" type="VARCHAR"/>
 
+        <id-method-parameter value="evaluator_spryker_pk_seq"/>
+    </table>
+</database>
+```
 Related error in the Evaluator output:
-```bash
-************************************************************************************************************************
-Evaluator\Business\Check\IsNotUnique\TransferPropertyShouldHavePrefixCheck
-You should use Pyz prefix for properties in the extended transfer objects on the project level
-************************************************************************************************************************
-------------------------------------------------------------------------------------------------------------------------
-LocaleCmsPageData
-"\/src\/Pyz\/Shared\/Cms\/Transfer\/cms.transfer.xml"
-["contentWidgetParameterMap"]
-------------------------------------------------------------------------------------------------------------------------
-```
-
-
-
-
-
-
-
-
-##### How can I avoid this error?
-
-Make the name of the transfer unique. For example, add the project name as a prefix.
-
-##### *Example of code achieving the same result but not causing upgradability errors*
-
-```xml
-<?xml version="1.0"?>
-<transfers xmlns="spryker:transfer-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
-    <transfer name="PyzProductAbstractStore">
-        <property name="productAbstractSku" type="string"/>
-        <property name="storeName" type="string"/>
-    </transfer>
-</transfers>
-```
----
-
-#### Check that Transfer extend the Core Transfer, and each property has the prefix
-
-* error output
-
-```bash
-************************************************************************************************************************
-Evaluator\Business\Check\IsNotUnique\TransferPropertyShouldHavePrefixCheck
-You should use Pyz prefix for properties in the extended transfer objects on the project level
-************************************************************************************************************************
-------------------------------------------------------------------------------------------------------------------------
-LocaleCmsPageData
-"\/src\/Pyz\/Shared\/Cms\/Transfer\/cms.transfer.xml"
-["contentWidgetParameterMap"]
-------------------------------------------------------------------------------------------------------------------------
-```
-
-* XML source
-
-```xml
-<?xml version="1.0"?>
-<transfers xmlns="spryker:transfer-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
-    <transfer name="LocaleCmsPageData">
-        <property name="contentWidgetParameterMap" type="array" singular="contentWidgetParameterMap"/>
-    </transfer>
-</transfers>
-```
-
-##### *How can I avoid this error?*
-
-* Use project specific prefix, e.g Pyz
-
-##### *Example of code achieving the same result but not causing upgradability errors*
-
-```xml
-<?xml version="1.0"?>
-<transfers xmlns="spryker:transfer-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
-    <transfer name="LocaleCmsPageData">
-        <property name="pyzContentWidgetParameterMap" type="array" singular="contentWidgetParameterMap"/>
-    </transfer>
-</transfers>
-```
-
----
-
-#### Check that DB Table is unique and have the prefix
-
-* error output
 
 ```bash
 ************************************************************************************************************************
@@ -158,99 +69,7 @@ evaluator_spryker
 ************************************************************************************************************************
 ```
 
-* XML source
-
-```xml
-<?xml version="1.0"?>
-<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" name="zed" namespace="Orm\Zed\EvaluatorSpryker\Persistence" package="src.Orm.Zed.EvaluatorSpryker.Persistence">
-    <table name="evaluator_spryker" idMethod="native">
-        <column name="id_evaluator_spryker" required="true" type="INTEGER" autoIncrement="true" primaryKey="true"/>
-        <column name="reversed_string" required="true" size="128" type="VARCHAR"/>
-
-        <id-method-parameter value="evaluator_spryker_pk_seq"/>
-    </table>
-</database>
-```
-
-##### *How can I avoid this error?*
-
-* Use project specific prefix, e.g Pyz
-
-##### *Example of code achieving the same result but not causing upgradability errors*
-
-```xml
-<?xml version="1.0"?>
-<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" name="zed" namespace="Orm\Zed\EvaluatorSpryker\Persistence" package="src.Orm.Zed.EvaluatorSpryker.Persistence">
-    <table name="pyz_evaluator_spryker" idMethod="native">
-        <column name="id_evaluator_spryker" required="true" type="INTEGER" autoIncrement="true" primaryKey="true"/>
-        <column name="reversed_string" required="true" size="128" type="VARCHAR"/>
-
-        <id-method-parameter value="evaluator_spryker_pk_seq"/>
-    </table>
-</database>
-```
-
----
-
-#### Check that DB Column extend Core Table, and each column have the prefix
-
-* error output
-
-```bash
-************************************************************************************************************************
-Evaluator\Business\Check\IsNotUnique\DbColumnCheck
-You should use Pyz prefix for extended db-schema columns on the project level
-************************************************************************************************************************
-------------------------------------------------------------------------------------------------------------------------
-spy_product_abstract
-"\/src\/Pyz\/Zed\/ProductGroup\/Persistence\/Propel\/Schema\/spy_product.schema.xml"
-["color_code"]
-```
-
-* XML source
-
-```xml
-<?xml version="1.0"?>
-<database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:noNamespaceSchemaLocation="http://xsd.propelorm.org/1.6/database.xsd" namespace="Orm\Zed\Product\Persistence" package="src.Orm.Zed.Product.Persistence">
-    <table name="spy_product_abstract" idMethod="native" allowPkInsert="true" phpName="SpyProductAbstract">
-        <column name="color_code" required="false" type="VARCHAR" default="NULL" size="8"/>
-    </table>
-</database>
-```
-
-##### *How can I avoid this error?*
-
-* Use project specific prefix, e.g Pyz
-
-##### *Example of code achieving the same result but not causing upgradability errors*
-
-```xml
-<?xml version="1.0"?>
-<database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:noNamespaceSchemaLocation="http://xsd.propelorm.org/1.6/database.xsd" namespace="Orm\Zed\Product\Persistence" package="src.Orm.Zed.Product.Persistence">
-    <table name="spy_product_abstract" idMethod="native" allowPkInsert="true" phpName="SpyProductAbstract">
-        <column name="pyz_color_code" required="false" type="VARCHAR" default="NULL" size="8"/>
-    </table>
-</database>
-```
-
----
-
-#### Check that Method is unique and have the prefix
-
-* error output
-
-```bash
-************************************************************************************************************************
-Evaluator\Business\Check\IsNotUnique\MethodCheck
-Use project specific prefix, e.g Pyz
-************************************************************************************************************************
-------------------------------------------------------------------------------------------------------------------------
-Pyz\Client\RabbitMq\RabbitMqConfig
-{"name":"getPublishQueueConfiguration","class":"Pyz\\Client\\RabbitMq\\RabbitMqConfig"}
-{"parentClass":"Spryker\\Client\\RabbitMq\\RabbitMqConfig","methods":["getQueueConnections","getMessageConfig","getDefaultQueueConnectionConfig","isRuntimeSettingUpEnabled","getQueueConnectionConfigs","getQueueOptions","getQueueConfiguration","getDefaultBoundQueueNamePrefix","createExchangeOptionTransfer","createQueueOptionTransfer","get","getConfig","setSharedConfig","getSharedConfig","resolveSharedConfig"]}
-```
-
-* PHP source
+`getPublishQueueConfiguration` method name is not unique:
 
 ```php
 /**
@@ -270,11 +89,56 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-##### *How can I avoid this error?*
 
-* Use project specific prefix, e.g Pyz
+Related error in the Evaluator output:
 
-##### *Example of code achieving the same result but not causing upgradability errors*
+```bash
+************************************************************************************************************************
+Evaluator\Business\Check\IsNotUnique\MethodCheck
+Use project specific prefix, e.g Pyz
+************************************************************************************************************************
+------------------------------------------------------------------------------------------------------------------------
+Pyz\Client\RabbitMq\RabbitMqConfig
+{"name":"getPublishQueueConfiguration","class":"Pyz\\Client\\RabbitMq\\RabbitMqConfig"}
+{"parentClass":"Spryker\\Client\\RabbitMq\\RabbitMqConfig","methods":["getQueueConnections","getMessageConfig","getDefaultQueueConnectionConfig","isRuntimeSettingUpEnabled","getQueueConnectionConfigs","getQueueOptions","getQueueConfiguration","getDefaultBoundQueueNamePrefix","createExchangeOptionTransfer","createQueueOptionTransfer","get","getConfig","setSharedConfig","getSharedConfig","resolveSharedConfig"]}
+```
+
+
+
+
+#### Examples of making entity names unique
+
+To resolve the errors provided in the examples, rename the entities. For example, add the project name as a prefix.
+
+Renamed transfer name:
+
+```xml
+<?xml version="1.0"?>
+<transfers xmlns="spryker:transfer-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
+    <transfer name="PyzProductAbstractStore">
+        <property name="productAbstractSku" type="string"/>
+        <property name="storeName" type="string"/>
+    </transfer>
+</transfers>
+```
+---
+
+
+Renamed table name:
+
+```xml
+<?xml version="1.0"?>
+<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" name="zed" namespace="Orm\Zed\EvaluatorSpryker\Persistence" package="src.Orm.Zed.EvaluatorSpryker.Persistence">
+    <table name="pyz_evaluator_spryker" idMethod="native">
+        <column name="id_evaluator_spryker" required="true" type="INTEGER" autoIncrement="true" primaryKey="true"/>
+        <column name="reversed_string" required="true" size="128" type="VARCHAR"/>
+
+        <id-method-parameter value="evaluator_spryker_pk_seq"/>
+    </table>
+</database>
+```
+
+Renamed method name:
 
 ```php
 /**
@@ -294,58 +158,4 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
----
-
-#### Check that Constant is unique and have the prefix
-
-* error output
-
-```bash
-************************************************************************************************************************
-Evaluator\Business\Check\IsNotUnique\ConstantCheck
-Use project specific prefix, e.g Pyz
-************************************************************************************************************************
-------------------------------------------------------------------------------------------------------------------------
-Pyz\Zed\Propel\Communication\Plugin\Application\PropelApplicationPlugin
-{"ADAPTER_CLASS_PATTERN":"Pyz\\Zed\\Propel\\Adapter\\Pdo\\%sAdapter"}
-{"parentClass":"Spryker\\Zed\\Propel\\Communication\\Plugin\\Application\\PropelApplicationPlugin","parentConstants":{"DATA_SOURCE_NAME":"zed"}}
-------------------------------------------------------------------------------------------------------------------------
-```
-
-* PHP source
-
-```php
-<?php
-namespace Pyz\Zed\Propel\Communication\Plugin\Application;
-
-use Spryker\Service\Container\ContainerInterface;
-use Spryker\Zed\Propel\Communication\Plugin\Application\PropelApplicationPlugin as SprykerPropelApplicationPlugin;
-
-class PropelApplicationPlugin extends SprykerPropelApplicationPlugin
-{
-    protected const ADAPTER_CLASS_PATTERN = 'Pyz\Zed\Propel\Adapter\Pdo\%sAdapter';
-    ...
-}
-
-```
-
-##### *How can I avoid this error?*
-
-* Use project specific prefix, e.g Pyz
-
-##### *Example of code achieving the same result but not causing upgradability errors*
-
-```php
-<?php
-namespace Pyz\Zed\Propel\Communication\Plugin\Application;
-
-use Spryker\Service\Container\ContainerInterface;
-use Spryker\Zed\Propel\Communication\Plugin\Application\PropelApplicationPlugin as SprykerPropelApplicationPlugin;
-
-class PropelApplicationPlugin extends SprykerPropelApplicationPlugin
-{
-    protected const PYZ_ADAPTER_CLASS_PATTERN = 'Pyz\Zed\Propel\Adapter\Pdo\%sAdapter';
-    ...
-}
-
-```
+After renaming the entity, re-evaluate the code. The same error shouldn't be returned.

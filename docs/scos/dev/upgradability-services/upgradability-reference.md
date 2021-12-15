@@ -107,6 +107,6 @@ The method name should be unique to the extent of making it impossible to accide
 
 {% endinfo_block %}
 
-2. Override the core method with the custom one you've created in the previous step.
+2. Replace the core method with the custom one you've created in the previous step.
 
 When the core method is overriden with a custom one, re-evaluate the code. The same error shouldn't be returned.

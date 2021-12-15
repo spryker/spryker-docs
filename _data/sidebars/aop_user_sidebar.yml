@@ -4,8 +4,7 @@ title: App Orchestration Platform User Guides
 entries:
   - product: AOP
     nested:
-      - title: Intro to Application Orchestration Platform
+      - title: Intro to App Orchestration Platform
         nested:
-
-          - title: AOP concept
+          - title: App Orchestration Platform overview
             url: /docs/aop/user/intro-to-aop/aop-overview.html

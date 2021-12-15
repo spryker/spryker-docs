@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/punchout-catalog-feature-integration
   - /docs/punchout-catalog-feature-integration
   - /docs/en/punchout-catalog-feature-integration
+  - /docs/scos/user/technology-partners/202108.0/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html
 ---
 
 ## Install Feature Core

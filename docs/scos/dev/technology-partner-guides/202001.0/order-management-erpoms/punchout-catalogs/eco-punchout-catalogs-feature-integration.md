@@ -1,13 +1,14 @@
 ---
 title: Eco- Punchout Catalogs Feature Integration
 description: Integrate Eco- Punchout Catalogs Feature into the Spryker Commerce OS.
-last_updated: Nov 22, 2019
+last_updated: Apr 15, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v2/docs/eco-punchout-catalogs-feature-integration
-originalArticleId: d314f907-61b3-4014-9dd8-10b221eb08d7
+originalLink: https://documentation.spryker.com/v4/docs/eco-punchout-catalogs-feature-integration
+originalArticleId: 57969b58-9ac1-40e5-b10a-a44db4522894
 redirect_from:
-  - /v2/docs/eco-punchout-catalogs-feature-integration
-  - /v2/docs/en/eco-punchout-catalogs-feature-integration
+  - /v4/docs/eco-punchout-catalogs-feature-integration
+  - /v4/docs/en/eco-punchout-catalogs-feature-integration
+  - /docs/scos/user/technology-partners/202001.0/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-feature-integration.html
 ---
 
 ## Install Feature Core
@@ -31,7 +32,7 @@ Run the following command(s) to install the required modules:
 composer require spryker-eco/punchout-catalogs: "^1.0.0" --update-with-dependencies
 ```
 
-{% info_block infoBox "Verification" %}
+{% info_block warningBox "Verification" %}
 Make sure that the following modules were installed:<table><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`PunchoutCatalogs`</td><td>`vendor/spryker-eco/punchout-catalogs`</td></tr></tbody></table>
 {% endinfo_block %}
 
@@ -42,17 +43,14 @@ Add the following configuration to your project:
 | --- | --- | --- |
 | Adjust `codeception.yml` | Enables tests execution for eco modules. | None |
 
-<details open>
-<summary markdown='span'>codeception.yml</summary>
+**codeception.yml**
 
 ```html
 include:
     - vendor/spryker-eco/*/*
 ```
-<br>
-</details>
 
-{% info_block infoBox "Verification" %}
+{% info_block warningBox "Verification" %}
 Make sure that when you run `codeception run`  command it also runs PunchoutCatalogs module tests.
 {% endinfo_block %}
 
@@ -66,19 +64,18 @@ Enable the following behaviors by registering the plugins:
 | `CXmlPunchoutCatalogConnectionFormatPlugin` | Expands punchout catalog connection form `Connection Format` choice field with `xml` option. | None |`SprykerEco\Zed\PunchoutCatalogs\Communication\Plugin\PunchoutCatalogs` |
 | `SetupRequestPunchoutCatalogConnectionTypePlugin` | Expands punchout catalog connection form `Connection Type` choice field with `setup_request` option. | None |`SprykerEco\Zed\PunchoutCatalogs\Communication\Plugin\PunchoutCatalogs` |
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/PunchoutCatalogs/PunchoutCatalogsDependencyProvider.php</summary>
+**src/Pyz/Zed/PunchoutCatalogs/PunchoutCatalogsDependencyProvider.php**
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\PunchoutCatalogs;
- 
+
 use SprykerEco\Zed\PunchoutCatalogs\Communication\Plugin\PunchoutCatalogs\CXmlPunchoutCatalogConnectionFormatPlugin;
 use SprykerEco\Zed\PunchoutCatalogs\Communication\Plugin\PunchoutCatalogs\OciPunchoutCatalogConnectionFormatPlugin;
 use SprykerEco\Zed\PunchoutCatalogs\Communication\Plugin\PunchoutCatalogs\SetupRequestPunchoutCatalogConnectionTypePlugin;
 use SprykerEco\Zed\PunchoutCatalogs\PunchoutCatalogsDependencyProvider as SprykerPunchoutCatalogsDependencyProvider;
- 
+
 class PunchoutCatalogsDependencyProvider extends SprykerPunchoutCatalogsDependencyProvider
 {
     /**
@@ -91,7 +88,7 @@ class PunchoutCatalogsDependencyProvider extends SprykerPunchoutCatalogsDependen
             new CXmlPunchoutCatalogConnectionFormatPlugin(),
         ];
     }
- 
+
     /**
      * @return \SprykerEco\Zed\PunchoutCatalogs\Dependency\Plugin\PunchoutCatalogConnectionTypePluginInterface[]
      */
@@ -103,19 +100,15 @@ class PunchoutCatalogsDependencyProvider extends SprykerPunchoutCatalogsDependen
     }
 }
 ```
-<br>
-</details>
 
-{% info_block infoBox "Verification" %}
+{% info_block warningBox "Verification" %}
 Make sure that on create punchout catalog connection page you can see `Connection Format` choice field with following options [oci,cxml].<br>Make sure that on create punchout catalog connection page you can see `Connection Type` choice field with following options [setup_request].
 {% endinfo_block %}
-
-
 
 Run the following command to enable Javascript and CSS changes:
 ```bash
 console frontend:zed:build
 ```
-{% info_block infoBox "Verification" %}
+{% info_block warningBox "Verification" %}
 Make sure that on a connection creation page, when you change the format from `cxml` to `oci` you can see "Username" field appeared instead of "Sender ID".
 {% endinfo_block %}

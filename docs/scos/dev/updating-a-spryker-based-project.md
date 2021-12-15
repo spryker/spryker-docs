@@ -50,7 +50,7 @@ The most typical reasons for you to update your modules or features are:
 * You want a (new) specific feature or module in your project, which requires a newer version of your module(s).
 * Your project has been started shortly before a new [product release](/docs/scos/user/intro-to-spryker/spryker-release-process.html#product-releases).
 * You experience some issues with the shop that you would like to report/consult about.
-* Besides, if you plan to extend your shop in the future with new features from the ones that are already existing in Spryker or are coming soon (see [Roadmap](/docs/scos/user/intro-to-spryker//whats-new/roadmap.html)) you should be staying up-to-date with your current modules/features. It will ease the new feature installation and reduce the migration efforts, allowing you to get the desired functionality faster.
+* Besides, if you plan to extend your shop in the future with new features from the ones that are already existing in Spryker or are coming soon you should be staying up-to-date with your current modules/features. It will ease the new feature installation and reduce the migration efforts, allowing you to get the desired functionality faster.
 
 {% info_block warningBox "Warning" %}
 

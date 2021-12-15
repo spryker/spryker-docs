@@ -1,13 +1,14 @@
 ---
 title: Punchout Catalog Feature Integration
 description: Integrate Punchout Catalog into the Spryker Commerce OS.
-last_updated: Mar 5, 2020
+last_updated: Nov 22, 2019
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v4/docs/punchout-catalog-feature-integration
-originalArticleId: 62ede901-01df-498d-8e16-2465bd3fff85
+originalLink: https://documentation.spryker.com/v3/docs/punchout-catalog-feature-integration
+originalArticleId: b8d0d2d9-c8cd-4e4f-83af-de3d880f5b0d
 redirect_from:
-  - /v4/docs/punchout-catalog-feature-integration
-  - /v4/docs/en/punchout-catalog-feature-integration
+  - /v3/docs/punchout-catalog-feature-integration
+  - /v3/docs/en/punchout-catalog-feature-integration
+  - /docs/scos/user/technology-partners/201907.0/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html
 ---
 
 ## Install Feature Core
@@ -44,19 +45,19 @@ Add the following configuration to your project:
 | Update config `AclConstants::ACL_DEFAULT_RULES` | Allow access to `PunchoutCatalog` routes for ALL users. | None |
 | `AuthConfig::getIgnorable()` | Allow access to PunchoutCatalog routes without authentication. | Pyz\Zed\Auth |
 | `PunchoutCatalogConfig::getBaseUrlYves()` | Defines urls for Punchout API endpoints. | Pyz\Zed\PunchoutCatalog |
-
-**config/Shared/config_default.php**
+<details open>
+<summary markdown='span'>config/Shared/config_default.php</summary>
 
 ```php
 <?php
 $config[KernelConstants::PROJECT_NAMESPACES] = [
     'PunchoutCatalog',
 ];
- 
+
 $config[KernelConstants::CORE_NAMESPACES] = [
     'PunchoutCatalog',
 ];
- 
+
 $config[AclConstants::ACL_DEFAULT_RULES] = [
 [     
      [
@@ -67,20 +68,22 @@ $config[AclConstants::ACL_DEFAULT_RULES] = [
     ],
 ];
 ```
-
+<br>
+</details>
 {% info_block infoBox "Verification" %}
 Make sure that you can access `http://zed.mysprykershop/punchout-catalog/request` URL when logged in as any user, e.g. admin.<br>Make sure that you don't receive class not found exception after  "Setup Behaviour" section plugins registration.
 {% endinfo_block %}
 
-**src/Pyz/Zed/Auth/AuthConfig.php**
+<details open>
+<summary markdown='span'>src/Pyz/Zed/Auth/AuthConfig.php</summary>
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Auth;
- 
+
 use Spryker\Zed\Auth\AuthConfig as SprykerAuthConfig;
- 
+
 class AuthConfig extends SprykerAuthConfig
 {
     /**
@@ -89,17 +92,20 @@ class AuthConfig extends SprykerAuthConfig
     public function getIgnorable()
     {
         $this->addIgnorable('punchout-catalog', 'request', 'index');
- 
+
         return parent::getIgnorable();
     }
 }
 ```
+<br>
+</details>
 
 {% info_block infoBox "Verification" %}
 Make sure that you can access `http://zed.mysprykershop/punchout-catalog/request` without authentication.
 {% endinfo_block %}
 
-**config/Shared/config_default.php**
+<details open>
+<summary markdown='span'>config/Shared/config_default.php</summary>
 
 ```php
 <?php
@@ -109,7 +115,7 @@ Make sure that you can access `http://zed.mysprykershop/punchout-catalog/request
  */
 namespace Pyz\Zed\PunchoutCatalog;
 use PunchoutCatalog\Zed\PunchoutCatalog\PunchoutCatalogConfig as SprykerPunchoutCatalogConfig;
- 
+
 class PunchoutCatalogConfig extends SprykerPunchoutCatalogConfig
 {
     /**
@@ -118,7 +124,7 @@ class PunchoutCatalogConfig extends SprykerPunchoutCatalogConfig
     protected function getBaseUrlYves(): array
     {
         $domain = getenv('VM_PROJECT') ?: 'suite-nonsplit';
- 
+
         return [
             'DE' => sprintf('http://www.de.%s.local', $domain),
             'AT' => sprintf('http://www.at.%s.local', $domain),
@@ -127,7 +133,8 @@ class PunchoutCatalogConfig extends SprykerPunchoutCatalogConfig
     }
 }
 ```
-
+<br>
+</details>
 {% info_block infoBox "Verification" %}
 Make sure that you do not receive an `MissingYvesUrlConfigurationException` exception when trying to click on the Transfer Cart button on a cart page (this button will be available when the "Feature Frontend" is fully installed).
 {% endinfo_block %}
@@ -135,7 +142,7 @@ Make sure that you do not receive an `MissingYvesUrlConfigurationException` exce
 ### 3) Set up Database Schema and Transfer Objects
 Run the following commands to apply database changes and generate entity and transfer changes:
 
-```bash
+```
 console transfer:generate
 console propel:install
 console transfer:generate
@@ -151,7 +158,7 @@ Make sure that the following changes in transfer objects:<table><thead><tr><th>T
 Append glossary according to your configuration:
 
 <details open>
-<summary markdown='span'>data/import/glossary.csv</summary>
+<summary markdown='span'>src/data/import/glossary.csv</summary>
 
 ```html
 punchout-catalog.connection.list.title,Punch-out Catalog,en_US
@@ -224,7 +231,7 @@ punchout-catalog.error.too-many-company-users,Customer should have only one Comp
 
 Run the following console command to import data:
 
-```bash
+```
 console data:import glossary
 ```
 
@@ -374,12 +381,7 @@ business-unit-mitte-1,user_30,user_30_pass,,1,setup_request,oci,Client 3 - Oci -
 | `type` | mandatory | string | `setup_request` |
 | `format` | mandatory | string | `cxml|oci` |
 | `name` | mandatory | string | `Client 1 - cXml - User 2` |
-| `mapping` | mandatory | string | |
-
-**Data Example for mapping:** 
-
-```html
-{
+| `mapping` | mandatory | string | <pre><code>{
   "customer": {
     "fields": {
       "first_name": {
@@ -400,8 +402,7 @@ business-unit-mitte-1,user_30,user_30_pass,,1,setup_request,oci,Client 3 - Oci -
       }
     }
   }
-}
-```
+} </code></pre>|
 <details open>
 <summary markdown='span'>vendor/punchout-catalogs/punchout-catalog-spryker/data/import/punchout_catalog_connection_cart.csv</summary>
 
@@ -413,21 +414,21 @@ Client 1 - cXml - User 1,spryker_sup_1,100,composite,header,base64,"{
       ""grand_total"": {
         ""path"": ""/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Total[1]/Money[1]""
       },
- 
+
       ""tax_total"": {
         ""path"": ""/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Tax[1]/Money[1]""
       },
       ""tax_description"": {
         ""path"": ""/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Tax[1]/Description[1]""
       },
- 
+
       ""discount_total"": {
         ""path"": ""/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Discount[1]/Money[1]""
       },
       ""discount_description"": {
         ""path"": ""/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Discount[1]/Description[1]""
       },
- 
+
       ""currency"": {
         ""path"": ""/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Total[1]/Money[1]/@currency,/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Tax[1]/Money[1]/@currency,/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Discount[1]/Money[1]/@currency"",
                                 ""append"": true
@@ -567,21 +568,21 @@ Client 1 - cXml - User 2,spryker_sup_3,,single,line,url-encoded,"{
       ""grand_total"": {
         ""path"": ""/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Total[1]/Money[1]""
       },
- 
+
       ""tax_total"": {
         ""path"": ""/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Tax[1]/Money[1]""
       },
       ""tax_description"": {
         ""path"": ""/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Tax[1]/Description[1]""
       },
- 
+
       ""discount_total"": {
         ""path"": ""/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Discount[1]/Money[1]""
       },
       ""discount_description"": {
         ""path"": ""/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Discount[1]/Description[1]""
       },
-                         
+
       ""currency"": {
         ""path"": ""/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Total[1]/Money[1]/@currency,/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Tax[1]/Money[1]/@currency,/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Discount[1]/Money[1]/@currency"",
         ""append"": true
@@ -746,12 +747,7 @@ Client 3 - Oci - User 3,spryker_sup_5,,composite,line,,{}
 | bundle_mode | mandatory | string | `composite | single` |
 | totals_mode | mandatory | string | `list | header` |
 | encoding | mandatory | string | `base64` |
-| mapping | mandatory | string |  |
-
-**Data Example for mapping:**
-
-```php
-{
+| mapping | mandatory | string | {
   "cart": {
     "fields": {
       "grand_total": {
@@ -771,7 +767,7 @@ Client 3 - Oci - User 3,spryker_sup_5,,composite,line,,{}
       "discount_description": {
         "path": "/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Discount[1]/Description[1]"
       },
-                  
+
       "currency": {
         "path": "/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Total[1]/Money[1]/@currency,/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Tax[1]/Money[1]/@currency,/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Discount[1]/Money[1]/@currency",
         "append": true
@@ -855,8 +851,7 @@ Client 3 - Oci - User 3,spryker_sup_5,,composite,line,,{}
       }
     }
   }
-}
-```
+} |
 
 <details open>
 <summary markdown='span'>vendor/punchout-catalogs/punchout-catalog-spryker/data/import/punchout_catalog_connection_setup.csv</summary>
@@ -869,21 +864,21 @@ Client 1 - cXml - User 1,spryker_sup_1,100,composite,header,base64,"{
       ""grand_total"": {
         ""path"": ""/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Total[1]/Money[1]""
       },
- 
+
       ""tax_total"": {
         ""path"": ""/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Tax[1]/Money[1]""
       },
       ""tax_description"": {
         ""path"": ""/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Tax[1]/Description[1]""
       },
- 
+
       ""discount_total"": {
         ""path"": ""/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Discount[1]/Money[1]""
       },
       ""discount_description"": {
         ""path"": ""/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Discount[1]/Description[1]""
       },
- 
+
       ""currency"": {
         ""path"": ""/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Total[1]/Money[1]/@currency,/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Tax[1]/Money[1]/@currency,/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Discount[1]/Money[1]/@currency"",
                                 ""append"": true
@@ -1023,21 +1018,21 @@ Client 1 - cXml - User 2,spryker_sup_3,,single,line,url-encoded,"{
       ""grand_total"": {
         ""path"": ""/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Total[1]/Money[1]""
       },
- 
+
       ""tax_total"": {
         ""path"": ""/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Tax[1]/Money[1]""
       },
       ""tax_description"": {
         ""path"": ""/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Tax[1]/Description[1]""
       },
- 
+
       ""discount_total"": {
         ""path"": ""/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Discount[1]/Money[1]""
       },
       ""discount_description"": {
         ""path"": ""/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Discount[1]/Description[1]""
       },
-                         
+
       ""currency"": {
         ""path"": ""/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Total[1]/Money[1]/@currency,/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Tax[1]/Money[1]/@currency,/cXML/Message[1]/PunchOutOrderMessage[1]/PunchOutOrderMessageHeader[1]/Discount[1]/Money[1]/@currency"",
         ""append"": true
@@ -1208,18 +1203,19 @@ Register the following plugins to enable data import:
 | `PunchoutCatalogSetupDataImportPlugin` | Imports connections setup data into the database. | None | `PunchoutCatalog\Zed\PunchoutCatalog\Communication\Plugin\DataImport` |
 | `PunchoutCatalogCartDataImportPlugin` | Imports connections cart data into the database. | None | `PunchoutCatalog\Zed\PunchoutCatalog\Communication\Plugin\DataImport` |
 
-**src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
 ```php
 <?php
-  
+
 namespace Pyz\Zed\DataImport;
-  
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use PunchoutCatalog\Zed\PunchoutCatalog\Communication\Plugin\DataImport\PunchoutCatalogCartDataImportPlugin;
 use PunchoutCatalog\Zed\PunchoutCatalog\Communication\Plugin\DataImport\PunchoutCatalogConnectionDataImportPlugin;
 use PunchoutCatalog\Zed\PunchoutCatalog\Communication\Plugin\DataImport\PunchoutCatalogSetupDataImportPlugin;
- 
+
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
     protected function getDataImporterPlugins(): array
@@ -1232,6 +1228,8 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
     }
 }
 ```
+<br>
+</details>
 
 Run the following console command to import data:
 
@@ -1257,16 +1255,17 @@ Enable the following behaviors by registering the plugins:
 | `ImpersonationDetailsCustomerOauthRequestMapperPlugin` | Maps Punchout impersonation details from `CustomerTransfer` into access token request. | None | `PunchoutCatalog\Zed\PunchoutCatalog\Communication\Plugin\OauthCompanyUser` |
 | `ImpersonationDetailsCustomerExpanderPlugin` | Expands `CustomerTransfer` with Punchout impersonation details. | None |`PunchoutCatalog\Zed\PunchoutCatalog\Communication\Plugin\OauthCompanyUser` |
 
-**src/Pyz/Client/BusinessOnBehalf/BusinessOnBehalfDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Client/BusinessOnBehalf/BusinessOnBehalfDependencyProvider.php</summary>
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\BusinessOnBehalf;
- 
+
 use PunchoutCatalog\Client\PunchoutCatalog\Plugin\BusinessOnBehalf\DisallowPunchoutCompanyUserChangePlugin;
 use Spryker\Client\BusinessOnBehalf\BusinessOnBehalfDependencyProvider as BaseBusinessOnBehalfDependencyProvider;
- 
+
 class BusinessOnBehalfDependencyProvider extends BaseBusinessOnBehalfDependencyProvider
 {
     /**
@@ -1280,21 +1279,24 @@ class BusinessOnBehalfDependencyProvider extends BaseBusinessOnBehalfDependencyP
     }
 }
 ```
+<br>
+</details>
 
 {% info_block infoBox "Verification" %}
 Make sure that you can't change the company user in your account details when you are in progress of transferred cart creation.
 {% endinfo_block %}
 
-**src/Pyz/Client/Quote/QuoteDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Client/Quote/QuoteDependencyProvider.php</summary>
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\Quote;
- 
+
 use PunchoutCatalog\Client\PunchoutCatalog\Plugin\Quote\SingleCompanyUserDatabaseStrategyPreCheckPlugin;
 use Spryker\Client\Quote\QuoteDependencyProvider as BaseQuoteDependencyProvider;
- 
+
 class QuoteDependencyProvider extends BaseQuoteDependencyProvider
 {
     /**
@@ -1308,21 +1310,24 @@ class QuoteDependencyProvider extends BaseQuoteDependencyProvider
     }
 }
 ```
+<br>
+</details>
 
 {% info_block infoBox "Verification" %}
 Make sure that punchout catalogs carts for `SingleUser` connection types do not appear in `spy_quote` DB table.
 {% endinfo_block %}
 
-**src/Pyz/Yves/PunchoutCatalog/PunchoutCatalogDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Yves/PunchoutCatalog/PunchoutCatalogDependencyProvider.php</summary>
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\PunchoutCatalog;
- 
+
 use PunchoutCatalog\Yves\PunchoutCatalog\Plugin\PunchoutCatalog\ProductBundleCartItemTransformerPlugin;
 use PunchoutCatalog\Yves\PunchoutCatalog\PunchoutCatalogDependencyProvider as BasePunchoutCatalogDependencyProvider;
- 
+
 /**
  * @method \PunchoutCatalog\Yves\PunchoutCatalog\PunchoutCatalogConfig getConfig()
  */
@@ -1339,20 +1344,23 @@ class PunchoutCatalogDependencyProvider extends BasePunchoutCatalogDependencyPro
     }
 }
 ```
+<br>
+</details>
 
 {% info_block infoBox "Verification" %}
 Make sure that in transferred cart XML bundled product items has `childBundleItems` section (in case you have Product Bundles feature - otherwise this plugin should not be registered).
 {% endinfo_block %}
 
-**src/Pyz/Zed/OauthCompanyUser/OauthCompanyUserDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Zed/OauthCompanyUser/OauthCompanyUserDependencyProvider.php</summary>
 
 ```php
 namespace Pyz\Zed\OauthCompanyUser;
- 
+
 use PunchoutCatalog\Zed\PunchoutCatalog\Communication\Plugin\OauthCompanyUser\ImpersonationDetailsCustomerExpanderPlugin;
 use PunchoutCatalog\Zed\PunchoutCatalog\Communication\Plugin\OauthCompanyUser\ImpersonationDetailsCustomerOauthRequestMapperPlugin;
 use Spryker\Zed\OauthCompanyUser\OauthCompanyUserDependencyProvider as SprykerOauthCompanyUserDependencyProvider;
-
+ImpersonationDetailsCustomerOauthRequestMapperPlugin
 class OauthCompanyUserDependencyProvider extends SprykerOauthCompanyUserDependencyProvider
 {
     /**
@@ -1364,7 +1372,7 @@ class OauthCompanyUserDependencyProvider extends SprykerOauthCompanyUserDependen
             new ImpersonationDetailsCustomerOauthRequestMapperPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\OauthCompanyUserExtension\Dependency\Plugin\CustomerExpanderPluginInterface[]
      */
@@ -1376,6 +1384,8 @@ class OauthCompanyUserDependencyProvider extends SprykerOauthCompanyUserDependen
     }
 }
 ```
+<br>
+</details>
 
 {% info_block infoBox "Verification" %}
 Make sure that when you chose the supplier for transferred cart in ERP, and redirected to the shop - you are logged in.
@@ -1397,16 +1407,17 @@ Register the following global widgets:
 | --- | --- | --- | --- |
 | `PunchoutCatalogCheckoutButtonsWidget` | Displays `Transfer Cart` and `Cancel Cart & Return` buttons on the cart page. | None | `PunchoutCatalog\Yves\PunchoutCatalog\Widget` |
 
-**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use PunchoutCatalog\Yves\PunchoutCatalog\Widget\PunchoutCatalogCheckoutButtonsWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
- 
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
@@ -1420,24 +1431,27 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     }
 }
 ```
+<br>
+</details>
 
 Adjust codebase to register `PunchoutCatalogCheckoutButtonsWidget` widget.
 
-**src/Pyz/Yves/CartPage/CartPageDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Yves/CartPage/CartPageDependencyProvider.php</summary>
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\CartPage;
- 
+
 use SprykerShop\Yves\CartPage\CartPageDependencyProvider as SprykerCartPageDependencyProvider;
 use Spryker\Yves\Kernel\Container;
 use SprykerShop\Yves\CartPage\Dependency\Client\CartPageToCustomerClientBridge;
- 
+
 class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 {
-    public const CLIENT_CUSTOMER = 'CLIENT_CUSTOMER';
- 
+    public const CLIENT_CART = 'CLIENT_CART';
+
     /**
      * @param \Spryker\Yves\Kernel\Container $container
      *
@@ -1446,10 +1460,10 @@ class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
     public function provideDependencies(Container $container)
     {
         $container = $this->addCustomerClient($container);
- 
+
         return $container;
     }
- 
+
     /**
      * @param \Spryker\Yves\Kernel\Container $container
      *
@@ -1460,22 +1474,25 @@ class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
         $container[static::CLIENT_CUSTOMER] = function (Container $container) {
             return $container->getLocator()->customer()->client();
         };
- 
+
         return $container;
     }
 }
 ```
- 
- **src/Pyz/Yves/CartPage/CartPageFactory.php**
+<br>
+</details>
 
-```php
+<details open>
+<summary markdown='span'>src/Pyz/Yves/CartPage/CartPageFactory.php</summary>
+
+```phph
 <?php
- 
+
 namespace Pyz\Yves\CartPage;
- 
+
 use SprykerShop\Yves\CartPage\CartPageFactory as SprykerCartPageFactory;
 use SprykerShop\Yves\CartPage\Dependency\Client\CartPageToCustomerClientInterface;
- 
+
 class CartPageFactory extends SprykerCartPageFactory
 {
     /**
@@ -1487,15 +1504,18 @@ class CartPageFactory extends SprykerCartPageFactory
     }
 }
 ```
+<br>
+</details>
 
-**src/Pyz/Yves/CartPage/Controller/CartController.php**
+<details open>
+<summary markdown='span'>src/Pyz/Yves/CartPage/Controller/CartController.php</summary>
 
 ```php
 namespace Pyz\Yves\CartPage\Controller;
- 
+
 use SprykerShop\Yves\CartPage\Controller\CartController as SprykerCartController;
 use SprykerShop\Yves\ShopApplication\Controller\AbstractController;
- 
+
 /**
  * @method \SprykerShop\Yves\CartPage\CartPageFactory getFactory()
  */
@@ -1509,22 +1529,25 @@ class CartController extends SprykerCartController
     protected function executeIndexAction(?array $selectedAttributes): array
     {
         $data = parent::executeIndexAction($selectedAttributes);
- 
+
         $data['customer'] = $$this->getFactory()
             ->getCustomerClient()
             ->getCustomer();
- 
+
         return $data;
     }
 ```
+<br>
+</details>
 
-**src/Pyz/Yves/CartPage/Theme/default/components/molecules/cart-summary/cart-summary.twig**
+<details open>
+<summary markdown='span'>src/Pyz/Yves/CartPage/Theme/default/components/molecules/cart-summary/cart-summary.twig</summary>
 
 ```html
 {% raw %}{%{% endraw %} define data = {
     customer: required,
 } {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} set canProceedToCheckout = data.cart.items is not empty
     and data.isQuoteValid
     and (not is_granted('ROLE_USER') or can('WriteSharedCartPermissionPlugin', data.cart.idQuote))
@@ -1547,14 +1570,17 @@ class CartController extends SprykerCartController
         {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
     {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 ```
+<br>
+</details>
 
-**src/Pyz/Yves/CartPage/Theme/default/templates/page-layout-cart/page-layout-cart.twig**
+<details open>
+<summary markdown='span'>src/Pyz/Yves/CartPage/Theme/default/templates/page-layout-cart/page-layout-cart.twig</summary>
 
 ```html
 {% raw %}{%{% endraw %} define data = {
     customer: _view.customer,
 } {% raw %}%}{% endraw %}
- 
+
   {% raw %}{%{% endraw %} block cartSummary {% raw %}%}{% endraw %}
      {% raw %}{%{% endraw %} include molecule('cart-summary', 'CartPage') with {
          data: {
@@ -1563,6 +1589,8 @@ class CartController extends SprykerCartController
      } only {% raw %}%}{% endraw %}
   {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
+<br>
+</details>
 
 Run the following command to enable Javascript and CSS changes:
 ```bash
@@ -1579,16 +1607,17 @@ Register the following plugin:
 | --- | --- | --- | --- |
 | `PunchoutCatalogControllerProvider` | Provides routes used in `PunchoutCatalogCheckoutButtonsWidget`. | None | `PunchoutCatalog\Yves\PunchoutCatalog\Plugin\Provider` |
 
-**src/Pyz/Yves/ShopApplication/YvesBootstrap.php**
+<details open>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use PunchoutCatalog\Yves\PunchoutCatalog\Plugin\Provider\PunchoutCatalogControllerProvider;
 use SprykerShop\Yves\ShopApplication\YvesBootstrap as SprykerYvesBootstrap;
- 
+
 class YvesBootstrap extends SprykerYvesBootstrap
 {
     /**
@@ -1604,6 +1633,8 @@ class YvesBootstrap extends SprykerYvesBootstrap
     }
 }
 ```
+<br>
+</details>
 
 {% info_block infoBox "Verification" %}
 Make sure that when you click `Transfer Cart` button on a cart page, it redirects you back to the connected ERP system.
@@ -1611,19 +1642,19 @@ Make sure that when you click `Transfer Cart` button on a cart page, it redirect
 
 ### 3) Set up Behavior
 #### Set up Punchout Catalogs Workflow
-
-**src/Pyz/Yves/CustomerPage/Controller/AccessTokenController.php**
+<details open>
+<summary markdown='span'>src/Pyz/Yves/CustomerPage/Controller/AccessTokenController.php</summary>
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\CustomerPage\Controller;
- 
+
 use SprykerShop\Yves\CustomerPage\Controller\AccessTokenController as SprykerAccessTokenController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
- 
+
 /**
  * @method \SprykerShop\Yves\CustomerPage\CustomerPageFactory getFactory()
  */
@@ -1643,30 +1674,30 @@ class AccessTokenController extends SprykerAccessTokenController
             ->getFactory()
             ->getCustomerClient()
             ->getCustomerByAccessToken($token);
- 
+
         if (!$customerResponseTransfer->getIsSuccess()) {
             $this->addErrorMessage(static::GLOSSARY_KEY_INVALID_ACCESS_TOKEN);
             throw new AccessDeniedHttpException();
         }
- 
+
         if ($this->isLoggedInCustomer()) {
             $this->getFactory()
                 ->getCustomerClient()
                 ->logout();
         }
- 
+
         $customerTransfer = $customerResponseTransfer->getCustomerTransfer();
         $token = $this->getFactory()->createUsernamePasswordToken($customerTransfer);
- 
+
         $this->getFactory()
             ->createCustomerAuthenticator()
             ->authenticateCustomer($customerTransfer, $token);
- 
+
         $returnRoute = $this->getReturnRoute($request);
- 
+
         return $this->redirectResponseInternal($returnRoute);
     }
- 
+
     /**
      * @param \Symfony\Component\HttpFoundation\Request|null $request
      *
@@ -1677,13 +1708,15 @@ class AccessTokenController extends SprykerAccessTokenController
         if ($request === null) {
             return static::ROUTE_CUSTOMER_OVERVIEW;
         }
- 
+
         $returnRoute = $request->query->get('returnUrl');
- 
+
         return empty($returnRoute) ? static::ROUTE_CUSTOMER_OVERVIEW : $returnRoute;
     }
 }
 ```
+<br>
+</details>
 
 {% info_block infoBox "Verification" %}
 Make sure that when you came to shop from ERP it logins you by the proper user, according to your connection Login Mode preferences, even if previously you were logged in by another customer.

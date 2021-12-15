@@ -174,7 +174,7 @@ class GlueBootstrap extends AbstractGlueBootstrap
 
 Create a new entry point for Glue Application:
 
-public/Glue/index.php
+**public/Glue/index.php**
 
 ```php
 <?php
@@ -203,8 +203,7 @@ $bootstrap
 
 Create Nginx VHOST configuration:
 
-<details open>
-<summary markdown='span'>/etc/nginx/sites-enabled/DE_development_glue</summary>
+**/etc/nginx/sites-enabled/DE_development_glue**
 
 ```php
 server {
@@ -228,7 +227,6 @@ server {
 	include "spryker/zed.conf";
 }
 ```
-</details>
 
 Update hosts configuration by adding the following line (replace IP with your server's IP address):
 
@@ -237,15 +235,12 @@ Update hosts configuration by adding the following line (replace IP with your se
 ```
 ip glue.mysprykershop.com
 ```
-</details>
 
 {% info_block warningBox “Verification” %}
 
 If everything is set up correctly, you should be able to access http://glue.mysprykershop.com and get a correct JSON response as follows:
 
-
-<details open>
-<summary markdown='span'>Default JSON Response</summary>
+**Default JSON Response**
 
 ```json
 {
@@ -257,12 +252,10 @@ If everything is set up correctly, you should be able to access http://glue.mysp
 	]
 }
 ```
-</details>
 
 {% endinfo_block %}
 
-<details open>
-<summary markdown='span'>\Pyz\Glue\GlueApplication\GlueApplicationDependencyProvider.php</summary>
+**\Pyz\Glue\GlueApplication\GlueApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -316,7 +309,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 	}
 }
 ```
-</details>
 
 {% info_block infoBox "Hint" %}
 
@@ -324,8 +316,7 @@ Use constant of resource name instead of plain string.
 
 {% endinfo_block %}
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/EntityTagsRestApi/EntityTagsRestApiConfig.php</summary>
+**src/Pyz/Glue/EntityTagsRestApi/EntityTagsRestApiConfig.php**
 
 ```php
 <?php
@@ -349,7 +340,6 @@ class EntityTagsRestApiConfig extends SprykerEntityTagsRestApiConfig
 	}
 }
 ```
-</details>
 
 {% info_block warningBox “Verification” %}
 

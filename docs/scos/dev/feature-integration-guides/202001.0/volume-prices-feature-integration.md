@@ -32,10 +32,6 @@ Make sure that the following modules have been installed:
 | `PriceProductVolume` | `vendor/spryker/price-product-volume` |
 
 {% endinfo_block %}
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 
 ### 1) Set up Transfer Objects
 
@@ -307,7 +303,3 @@ Make sure that the following widgets have been registered:
 | `ProductPriceVolumeWidget` | Go to the product detail page for a product with volume prices set, and observe the table in the detail area that contains the volume prices data. |
 
 {% endinfo_block %}
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes

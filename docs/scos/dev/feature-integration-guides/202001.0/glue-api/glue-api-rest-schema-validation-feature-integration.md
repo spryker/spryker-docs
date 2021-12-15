@@ -39,9 +39,7 @@ Make sure that the following modules have been installed:
 | --- | --- |
 | RestRequestValidator | vendor/spryker/rest-request-validator |
 
-
 {% endinfo_block %}
-
 
 ## 2) Set up Behavior
 
@@ -51,11 +49,9 @@ Set up the following behaviors.
 
 Activate the console command provided by the module:
 
-
 | Class | Specification | Prerequisites | Namespace |
 | --- | --- | --- | --- |
 | BuildValidationCacheConsole | Generates a validation cache that is required for request validation | None | 	Spryker\Zed\RestRequestValidator\Communication\Console |
-
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
@@ -101,10 +97,10 @@ Run the following command to generate the validation cache:
 console glue:rest:build-request-validation-cache
 ```
 
-
 {% info_block warningBox "Verification" %}
 
 Make sure that cache has been generated successfully. To do so, verify the contents of the `src/Generated/Glue/Validator` directory. It should contain a directory structure according to your store setup. Each directory should contain a `validation.cache` file with a Yaml of default core validation rules.
+
 ```yaml
 - AT
     - validation.cache
@@ -119,14 +115,9 @@ Make sure that cache has been generated successfully. To do so, verify the conte
 
 Activate the following plugin(s):
 
-
-
 | Plugin | Specification | Prerequisites | Namespace |
 | --- | --- | --- | --- |
 | ValidateRestRequestAttributesPlugin | Validates the `request attributes` section of `POST` and `PATCH` methods. | None | Spryker\Glue\RestRequestValidator\Plugin |
-
-
-
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
@@ -154,32 +145,35 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-
 Make sure that `ValidateRestRequestAttributesPlugin` has been activated:
+
+{% endinfo_block %}
+
 1. Make sure that there is a Glue API feature that uses validation configuration in your project.
+
 2. Create validation configuration:
-    a. Create `src/Pyz/Glue/YourModuleRestApi/Validation/{module}.validation.yaml`.
 
-    b. In the file, describe validation rules for endpoints. See see [Validating REST Request Format](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/validating-rest-request-format.html) for more details. Example:
+    1. Create `src/Pyz/Glue/YourModuleRestApi/Validation/{module}.validation.yaml`.
 
-    ```yaml
-    access-tokens:
-      post:
-        username:
-          - NotBlank
-          - Email
-        password:
-          - NotBlank
-    ```
+    2. In the file, describe validation rules for endpoints. See see [Validating REST Request Format](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/validating-rest-request-format.html) for more details. Example:
 
+        ```yaml
+        access-tokens:
+        post:
+            username:
+             - NotBlank
+             - Email
+            password:
+             - NotBlank
+        ```
+    
+    3. Collect the validation cache:
 
-    c. Collect the validation cache:
+        ```bash
+        console glue:rest:build-request-validation-cache
+        ```
 
-    ```bash
-    console glue:rest:build-request-validation-cache
-    ```
-
-2. Make a call to the endpoint you described in the validation file with invalid data. Request sample:
+3. Make a call to the endpoint you described in the validation file with invalid data. Request sample:
 
 `POST http://mysprykershop.comop.com/access-tokens`
 
@@ -214,6 +208,3 @@ You should get a validation error similar to the following response sample:
         }
     ]
 }
-
-
-{% endinfo_block %}

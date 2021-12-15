@@ -21,13 +21,8 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-<<<<<<< Updated upstream
-| Spryker Core | master |
-| Prices | master |
-=======
 | Spryker Core | 202005.0 |
 | Prices | 202005.0 |
->>>>>>> Stashed changes
 
 {% info_block warningBox “Verification” %}
 

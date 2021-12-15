@@ -17,17 +17,10 @@ To start the feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-<<<<<<< Updated upstream
 | Spryker Core E-commerce |202009.0  |
 |  Cart|202009.0 |
 | Product |202009.0  |
 | Checkout |  202009.0|
-=======
-| Spryker Core E-commerce | 202009.0  |
-|  Cart| 202009.0 |
-| Product | 202009.0  |
-| Checkout |  202009.0 |
->>>>>>> Stashed changes
 
 ### 1) Install the required modules using Composer
 
@@ -135,11 +128,7 @@ class QuickOrderDependencyProvider extends SprykerQuickOrderDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-<<<<<<< Updated upstream
-Make the following checks at https://mysprykershop.com/quick-order : `ProductPriceItemValidatorPlugin` is responsible for prices. Provide SKUs with and without Volume **Price on Quick Add To Cart** page and verify if quantity changes in the row result in the correct price display.
-=======
 Make the following checks at `https://mysprykershop.com/quick-order` : `ProductPriceItemValidatorPlugin` is responsible for prices. Provide SKUs with and without Volume **Price on Quick Add To Cart** page and verify if quantity changes in the row result in the correct price display.
->>>>>>> Stashed changes
 
 {% endinfo_block %}
 

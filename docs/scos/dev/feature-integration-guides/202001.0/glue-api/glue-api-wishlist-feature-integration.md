@@ -101,19 +101,6 @@ SELECT COUNT(*) FROM spy_wishlist WHERE uuid IS NULL;
 ```
 {% endinfo_block %}
 
-<<<<<<< Updated upstream
-{% info_block warningBox “Verification” %}
-
-Make sure that the `uuid` field is populated for all records in the `spy_wishlist` table.
-
-For this purpose, run the following SQL query and make sure that the result is 0 records:
-
-`SELECT COUNT(*) FROM spy_wishlist WHERE uuid IS NULL;`
-
-{% endinfo_block %}
-=======
->>>>>>> Stashed changes
-
 #### Enable resources and relationships
 
 Activate the following plugins:
@@ -168,17 +155,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
-<<<<<<< Updated upstream
-
-{% info_block warningBox “Verification” %}
-
-{% endinfo_block %}(Make sure that the following endpoints are available:
-- `http:///glue.mysprykershop.com/wishlists`
-- `http:///glue.mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlists-items`
-  
-Send a request to `http://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=wishlists` and make sure that the given customer has at least one wishlist. Make sure that the response includes relationships to the `wishlists` resources.
-=======
-</details>
 
 {% info_block warningBox “Verification” %}
 
@@ -187,6 +163,5 @@ Send a request to `http://glue.mysprykershop.com/customers/{% raw %}{{{% endraw 
 - `http:///glue.mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlists-items`
 
 Send a request to `http://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=wishlists` and make sure that the given customer has at least one wishlist. Make sure that the response includes relationships to the `wishlists` resources.)
->>>>>>> Stashed changes
 
 {% endinfo_block %}

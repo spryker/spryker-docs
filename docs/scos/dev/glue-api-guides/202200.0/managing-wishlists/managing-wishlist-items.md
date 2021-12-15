@@ -217,7 +217,7 @@ Resonse sample:
 | quantity  | Integer  | Quantity of the product added to the wishlist.  |
 | availableQuantity  | Integer  | Product quantity available in the store. |
 
-For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html#abstract-product-prices-response-attributes).
+For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html#response).
 
 For attribute descriptions of concrete product availability, see [Retrieving concrete product availability](/docs/scos/dev/glue-api-guides/202108.0/managing-products/concrete-products/retrieving-concrete-product-availability.html#concrete-product-availability-response-attributes).
 

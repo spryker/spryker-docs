@@ -60,11 +60,7 @@ console transfer:generate
 ```
 
 {% info_block warningBox “Verification” %}
-<<<<<<< Updated upstream
-   
-=======
 
->>>>>>> Stashed changes
 Make sure that the following changes were applied by checking your database:
 
 | Database Entity | Type | Event |
@@ -118,19 +114,11 @@ Once you have finished the full integration of the feature, make sure that:
 
 You can store and retrieve data from the vault using `VaultFacade`:
 
-<<<<<<< Updated upstream
-`$secret = "actual_secret";` 
-`$vaultFacade->store("secret_category", "secret_id", $secret`
-`assertSame($secret, $vaultFacade->retrieve("secret_category", "secret_id"));`)
-
-{% endinfo_block %};
-=======
 - `$secret = "actual_secret";` 
 - `$vaultFacade->store("secret_category", "secret_id", $secret;`
 - `assertSame($secret, $vaultFacade->retrieve("secret_category", "secret_id"));`
 
 {% endinfo_block %}
->>>>>>> Stashed changes
 
 #### Redis
 

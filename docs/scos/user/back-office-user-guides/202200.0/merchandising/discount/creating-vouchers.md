@@ -79,7 +79,7 @@ See [Voucher code](#voucher-code) for more information.
 
 **Tips & tricks**
 
-Once you generated voucher codes, you can export them as a .csv file.
+Once you generated voucher codes, you can export them as a CSV file.
 To do that, click **Export** below *Generate*.
 
 ## Reference information: Creating a voucher

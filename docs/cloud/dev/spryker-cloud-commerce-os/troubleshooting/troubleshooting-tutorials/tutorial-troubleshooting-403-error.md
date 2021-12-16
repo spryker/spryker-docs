@@ -3,7 +3,7 @@ title: Tutorial — Troubleshooting 403 error
 description: Learn how to troubleshoot 403 error
 template: troubleshooting-guide-template
 ---
-Some site functionality is not working properly, or you have found in the frontend logs 403 status response code. 
+A website functionality is not working properly, or there is a 403 status response code in the frontend logs.
 
 ## In case if site functionality is not working properly you can check for errors browser console:
 
@@ -11,11 +11,17 @@ Some site functionality is not working properly, or you have found in the fronte
 
 ## In case if you found 403 status response code in the frontend logs or in the browser console:
 
-1. In the AWS management console, go to **Services** > **S3**.
-2. In the **S3** pane, select the **waf-logs** bucket of the desired environment.
-3. Choose desired time log folder (folder structure: year -> month -> day -> hour )
+1. In the AWS Management Console, go to **Services** > **S3**.
+2. In the *Buckets* pane, select the WAF bucket of the desired environment.
+
+
+
+3. According to when the error occurred, navigate to the respective folder by year > month > day > hour.
+
+
+
 4. Select the log file by the **Last modified** column
-5. Download the file and open it in your favorite editor. 
+5. Download the file and open it in your favorite editor.
 6. You can search by **IP address** / **"action":"BLOCK"** / **uri** / **requestId**
 
 Example of blocking request from the log file
@@ -44,4 +50,3 @@ Example of blocking request from the log file
 }
 
 ```
-

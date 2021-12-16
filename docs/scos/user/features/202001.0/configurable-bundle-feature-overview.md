@@ -43,6 +43,7 @@ A Shop User can set up the Configurable Bundle on the **Configurator page**. Con
 | Storefront | Back Office |
 | --- | --- |
 | ![Configurable Bundle Template in the Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Configurable+Bundle+Template+-+back+office.png)  | ![Configurable Bundle Template in the Storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Configurable+Bundle+Template+-+storefront.png)  |
+
 A bundle template can contain an infinite number of the slots.
 
 The example below illustrates how the Configurable Bundle data is saved to the database:
@@ -92,6 +93,7 @@ A Back Office User can [create an unlimited number of slots](/docs/scos/user/bac
 ![Kitchen Configurable Bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/kitchen+slots.png)
 
 {% endinfo_block %}
+
 A slot contains a list of products or even categories to choose from. In Spryker Commerce OS, this functionality is represented via **product lists**. Spryker Back Office User adds the necessary products to the product list to allow buyers to choose among several options in the slot.
 
 {% info_block warningBox "Warning" %}
@@ -113,6 +115,7 @@ Slot `Base Cabinet` may contain a list with five assigned products:
 * Base cabinet with two shelves SKU 12236
 * Base cabinet with pull-out SKU 12237
 * Base cabinet with wire basket SKU 12238
+
 ![Slot Base Cabinet](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Slot+Base+Cabinet.png)
 
 {% endinfo_block %}
@@ -123,6 +126,7 @@ You have picked `Base cabinet with 2 shelves SKU 12236` product to fill the slot
 
 {% endinfo_block %}
 When represented schematically, a configurable bundle looks like this:
+
 ![Config Bundle Schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/slots+scheme.png)
 
 ## Configurable Bundle & Cart and Cart Notes
@@ -229,6 +233,7 @@ The non-splittable product has one sales order item with quantity 3.
 Pay attention, that product splitting logic does not support Packaging Units for the Configurable Bundle products.
 
 {% endinfo_block %}
+
 ## Configurator
 Configurator is a page where a shopper assembles a Configurable Bundle. It allows customers to choose compound and technically feasible product combinations online, making the shopping experience interactive for companies and their customers.
 

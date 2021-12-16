@@ -144,9 +144,9 @@ If all Permission Groups are requested, the resource responds with a **RestCartP
 ## Viewing Permissions for Carts
 To identify whether a cart is shared, send a request to the **/carts** or the **/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}** endpoint with the **shared-carts** resource relationship included. Additionally, to find out with whom carts are shared and what are the access levels, you can include the **company-users** and **cart-permission-groups** relationships.
 
-[/carts](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/carts) - provides information on all carts of a user;
+/carts - provides information on all carts of a user;
 
-[/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/carts) - provides information on a specific cart.
+/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %} - provides information on a specific cart.
 
 ### Request
 Sample requests:
@@ -373,7 +373,7 @@ For a detailed list of **RestCartsResponse** attributes, see section *Retrieving
 ## Sharing Carts
 To share a user's cart, send a POST request to the following endpoint:
 
-[/carts/{% raw %}{{{% endraw %}cart-uuid{% raw %}}}{% endraw %}/shared-carts](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/carts)
+/carts/{% raw %}{{{% endraw %}cart-uuid{% raw %}}}{% endraw %}/shared-carts
 
 ### Request
 

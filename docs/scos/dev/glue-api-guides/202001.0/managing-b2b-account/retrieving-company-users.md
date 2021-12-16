@@ -32,12 +32,12 @@ The endpoints provided by this API cannot be accessed anonymously. To access the
 In your development, the API can help you to provide information on *Company User Accounts* within the company that the authenticated user belongs to.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html#glue-api--company-account-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html).
 
 ## Retrieving All Company Users
 To retrieve a list of all the Company Users that belong to the company of the logged in user, send a GET request to the following endpoint:
 
-[/company-users](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/company-users)
+/company-users
 
 Sample request: *GET http://glue.mysprykershop.com/company-users*
 
@@ -201,7 +201,7 @@ The company user identifier contained in the id member can be used to access the
 ## Retrieving Specific Company Users
 To retrieve information on a specific Company User, send a GET request to the following endpoint:
 
-[/company-users/{% raw %}{{{% endraw %}company_user_id{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/company-users)
+/company-users/{% raw %}{{{% endraw %}company_user_id{% raw %}}}{% endraw %}
 
 Sample request: *GET http://glue.mysprykershop.com/company-users/e1019900-88c4-5582-af83-2c1ea8775ac5*
 

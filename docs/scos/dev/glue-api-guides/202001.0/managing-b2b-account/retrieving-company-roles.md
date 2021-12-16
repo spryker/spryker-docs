@@ -36,7 +36,7 @@ For detailed information on the modules that provide the API functionality and r
 ### Roles Performed by the Current User
 To retrieve information on the Company Roles assigned to the currently logged in Company User, send a GET request to the following endpoint:
 
-[/company-roles/mine](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#//company-roles)
+/company-roles/mine
 
 Sample request: *GET http://glue.mysprykershop.com/company-roles/mine*
 
@@ -82,7 +82,8 @@ The endpoint responds with a collection of **RestCompanyRoleResponse**, each con
 ### Specific Role
 To retrieve information on a specific Company Role, send a GET request to the following endpoint:
 
-[/company-roles/{% raw %}{{{% endraw %}role_id{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#//company-roles)
+/company-roles/{% raw %}{{{% endraw %}role_id{% raw %}}}{% endraw %}
+
 Sample request: *GET http://glue.mysprykershop.com/company-roles/**2f0a9d3e-9e69-53eb-8518-284a0db04376***
 
 where **2f0a9d3e-9e69-53eb-8518-284a0db04376** is the ID of the Company Role you need.

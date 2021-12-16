@@ -13,8 +13,8 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-carts.html
   - title: Sharing Company User Carts
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html
-  - title: Checking Out Purchases and Getting Checkout Data
-    link: docs/scos/dev/glue-api-guides/page.version/checking-out-purchases-and-getting-checkout-data.html
+  - title: Checking Out Purchases
+    link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
   - title: Logging In as Company User
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html
   - title: Multiple Carts feature integration

@@ -7,7 +7,14 @@ template: concept-topic-template
 
 ## Entity name is not unique
 
-Names of transfers, transfer properties, database tables, database columns, methods, and constants should be unique to the extent of making it impossible to accidentally match the name of a core entity introduced in future.
+The names of the following entities should be unique to the extent of making it impossible to accidentally match the name of a core entity introduced in future:
+
+* Transfers
+* Transfer properties
+* Database tables
+* Database columns
+* Methods
+* Constants
 
 If a minor or major release introduces an entity with the same name, the entity in your project might change behavior or cause issues.
 

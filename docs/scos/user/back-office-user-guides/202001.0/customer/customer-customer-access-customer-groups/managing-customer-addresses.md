@@ -24,11 +24,13 @@ This topic describes the procedures of managing customer addresses. You will als
 To start working with customer details, navigate to the **Customers > Customers** section.
 ***
 ## Editing Customer Address
+
 To edit a customer's address:
 1. On the **View Customer** page, scroll down to the **Addresses** section and click **Edit** next to the address to be edited.
 2. On the **Edit address** page, make your changes and click **Save**.
 
 ## Creating Customer Addresses
+
 To create a new address:
 1. On the **View Customer** page, click **Add new Address** in the top right corner of the page.
 2. Enter the new address for the customer.
@@ -43,6 +45,7 @@ If you need to have a different billing address or shipping address, do the foll
 4. Click **Save**.
 
 ## Viewing Customer Orders
+
 To view orders made by a specific customer:
 1. Navigate to the **View Customer** page and scroll down to the **Orders** section.
 2. To find a specific order, start typing either its Order Reference value or any other value that the table with the list of orders contains, in the **Search** field. As you type, the list of matching orders will be created in the table.

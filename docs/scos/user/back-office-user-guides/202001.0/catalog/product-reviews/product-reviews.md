@@ -13,13 +13,15 @@ related:
     link: docs/scos/user/features/page.version/product-rating-and-reviews-feature-overview.html
 ---
 
-The **Product Reviews** section of the Back Office is mostly used by the Customer Service. 
+The **Product Reviews** section of the Back Office is mostly used by the Customer Service.
 
-This section allows approving, rejecting, and deleting the reviews sent by shop users. 
+This section allows approving, rejecting, and deleting the reviews sent by shop users.
 
 {% info_block infoBox %}
-This is how the Customer Service deals with the customers' reviews to create a list of the approved (or rejected
-{% endinfo_block %} product reviews.)
+
+This is how the Customer Service deals with the customers' reviews to create a list of the approved (or rejected product reviews.)
+
+{% endinfo_block %}
 
 ------
 

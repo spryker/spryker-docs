@@ -18,12 +18,13 @@ CMS blocks can be used for adding content such as banners, charts, static links,
 You can create, view and edit CMS block appearance and content in the WYSIWYG editor. In the Blocks section, you can add CMS blocks to a CMS page, a product detail page or a category product page. Also, if you have several stores configured, you can define in which stores CMS blocks can be visible. You can create promotional banners and specify how long the block is available in your online store by setting Valid from and Valid to values. Moreover, you can enable or disable the block per locale by activating or deactivating it in the Back Office.
 
 {% info_block warningBox %}
+
 You can work with CMS blocks after they have been installed for your project.
+
 {% endinfo_block %}
 
 ***
 **What's next?**
-
 * To know more about how to add a CMS block to a page, see [Creating a CMS Block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/creating-cms-blocks.html).
 * To know more about how to update and view CMS blocks, see [Managing CMS Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-cms-blocks.html).
 * To learn more about how to set up the validity period during which a CMS block is visible on the shop website, see [Defining the Validity Period for CMS Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/defining-validity-period-for-cms-blocks.html).

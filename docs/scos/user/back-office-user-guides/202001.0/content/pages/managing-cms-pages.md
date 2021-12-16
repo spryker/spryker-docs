@@ -101,10 +101,9 @@ See [CMS Page: Reference Information](/docs/scos/user/back-office-user-guides/{{
 ***
 
 **Tips & Tricks**
-<br>On the **View CMS Page: [Page name]** page, you can do the following:
 
+On the **View CMS Page: [Page name]** page, you can do the following:
 * Navigate to the page where you can view all available versions for the page, general information of the version you are currently using, and roll back to the previous page version if needed, as well as compare version. To do this, click **Version History** on the top of the page.
-
 * Make changes to page layout or its SEO information by clicking **Edit page** on the top of the page.
 * Add some content to a page by clicking **Edit placeholders**.
 * Remove a published page (make it invisible) from the store website by clicking **Deactivate**.
@@ -124,4 +123,5 @@ To deactivate a page, click **Deactivate** in the _Actions_ column on the _Overv
 ***
 
 **What's next?**
+
 To know more about the attributes you see, select and enter while managing CMS pages, see [CMS Pages: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/references/cms-pages-reference-information.html).

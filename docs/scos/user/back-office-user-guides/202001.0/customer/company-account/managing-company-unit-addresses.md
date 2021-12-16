@@ -15,18 +15,22 @@ related:
 
 This page describes the procedure of creating and managing company unit addresses. The address is created to be assigned to a company business unit.
 ***
+
 To start managing company unit addresses, navigate to the **Company Account > Company Unit Addresses** section.
 ***
+
 ## Creating a Company Unit Address
 
 To create a company business unit:
 1. On the **Overview of Business Unit Addresses** page, click **Create Company Unit Address** in the top right corner.
 2. On the **Create Company Unit Address** page:
-    * Select _company_ and _country_ from the respective drop-down lists (the company values are taken from the **Company Account > Companies** section).
-    * Enter the City, Zip Code, and Street values to complete the address. Number, Addition to address, Comment, and Labels fields are optional. See [Company Account: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/references/company-account-reference-information.html) to know more about the attributes you select and enter.
-3. Once done, click **Save**. 
+   - Select _company_ and _country_ from the respective drop-down lists (the company values are taken from the **Company Account > Companies** section).
+   - Enter the City, Zip Code, and Street values to complete the address. Number, Addition to address, Comment, and Labels fields are optional. See [Company Account: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/references/company-account-reference-information.html) to know more about the attributes you select and enter.
+3. Once done, click **Save**.
 ***
+
 ## Editing Company Unit Address
+
 To edit a company unit address:
 1. On the **Overview of Business Unit Addresses** page in the _Actions_ column, click **Edit Company Unit Address** if you want to change address details such as the Company the address belongs to, Country, City, Zip Code, Street, Number of the building, Additional Information for the address, Comments, and Address labels.
 2. Once done, click **Save**.
@@ -40,5 +44,7 @@ Once the address is created, you can assign it to the business unit.
 
 ***
 **What's next?**
+
 To know more about the attributes you select and enter on the **Create** and **Edit Company Unit Address** pages, see [Company Account: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/references/company-account-reference-information.html).
+
 The next step in the company account setup is to created company roles and users. See the [Managing Company Roles](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-roles.html) and [Managing Company Users](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-users.html) articles.

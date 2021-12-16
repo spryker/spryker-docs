@@ -45,11 +45,13 @@ There are two ways of how you can create a product with a services offering:
 See below for information and step-by-step guides on each of the approaches.
 
 ### Service as a Product Option
+
 {% info_block infoBox "Note" %}
 
 This approach is suitable only for Scenario 1 - that is, when the service is optional.
 
 {% endinfo_block %}
+
 You can make the service, in our example, the installation service, a [product option](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/product-options.html) of the product you sell. In this case, the installation service will not be a separate product, but an optional part of the product. This means that buyers can decide on their own if they need the service.
 
 To implement this approach, you need to create the Service product option and tie it to the respective product.
@@ -63,7 +65,9 @@ To create the product option, do the following:
 5. Activate the option by clicking **Activate** in the *Actions* column of the **Product option list**.
 
 That’s it. The option appears for the product on the Storefront:
+
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Creating+Service+Offerings/service-as-option-storefront.png)
+
 {% info_block infoBox "Note" %}
 
 Keep in mind that depending on the use case you want to implement for your shop, additional development effort may be required on your project's side. For example, if you don’t want to allow buyers to add the Service option more than once if they have a set of specific products in carts.
@@ -89,7 +93,6 @@ If you don’t want to display the Service products in the Storefront so buyers 
 {% endinfo_block %}
 
 2. Create a [Configurable Bundle Template](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html-feature-overview#configurable-bundle-template) with two [slots](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html-feature-overview#configurable-bundle-slots) - one for the physical products, and one for the service:
-
     1. Go to **Products > Configurable Bundle Templates** section and click Create New Template in the top right corner.
     2. On the **Template details** page, enter the name of your bundle template in the **Name** field for the corresponding locale.
     3. Click **Save**. A new tab Slots will appear on the same page.
@@ -100,7 +103,6 @@ If you don’t want to display the Service products in the Storefront so buyers 
     8. Go back to the **Products > Configurable Bundle Templates** section and click **Edit** for the just created Configurable bundle template.
     9. Click **Add slot** and add the Service product to it.
     10. Click **Save**. The Configurable bundle template with two slots, one for physical products and one for service, is now created.
-
  3. Activate the Configurable Bundle Template by clicking **Activate** in the *Actions* column of the **Configurable Bundle Templates** page.
  The configurable bundle now appears on the **Configurable Bundle List** page on the Storefront. Buyers can select the products and add the service if they want:
 

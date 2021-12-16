@@ -123,8 +123,8 @@ Make sure the Product Abstract List has been created:
 
 ![Abstract product list content item](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Items/Creating+Content+Items/apl-create-page.png)
 
-
 ***
+
 **Tips & Tricks**
 On the *Create Content Item: Abstract Product List* page, you can do the following:
 
@@ -176,8 +176,8 @@ Make sure the Product Set has been created:
 
 
 **Tips & Tricks**
-On the **Create Content Item: Product Set** page, you can do the following:
 
+On the **Create Content Item: Product Set** page, you can do the following:
 * Filter the product sets in the **Available Product Sets** table by entering a product set name in the **Search** field.
 * Clear all the fields in a tab by clicking **Clear locale**.
 * Go back to the *Overview of Content Items* page by clicking **Back to Content Items** in the top right corner.
@@ -243,6 +243,5 @@ Make sure to click **Save** before clicking **Back to Content Items** or going t
 
 **What's next?**
 The content item is created. Now, you can add it to a CMS block.
-
 * To learn about adding content item to CMS blocks or a pages, see [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html).
 * To learn about editing content items, see [Editing Content Items](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/editing-content-items.html).

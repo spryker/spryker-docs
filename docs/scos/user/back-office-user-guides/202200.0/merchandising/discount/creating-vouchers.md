@@ -330,4 +330,4 @@ This section contains a set of tables that describe fields, value types, and ope
 |Greater or equal|>=|Number|Checks if the value is greater than or equal to the value of the right operand|
 
 **What's next?**
-<br>See [Managing Discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/managing-discounts.html) to know more about the actions you can do once the discount is created.
+<br>See [Managing Discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/managing-discounts.html) to learn more about the actions you can do once the discount is created.

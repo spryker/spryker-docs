@@ -4,7 +4,7 @@ description: Learn about the App Orchestration Platform and how you can use it.
 template: concept-topic-template
 ---
 
-The App Orchestration Platform (AOP) lets [Spryker Cloud Commerce OS (SCCOS)](/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html) customers to connect, configure, and use the available third-party services, or apps, in their application with a click of a button, without development efforts from their side.
+The App Orchestration Platform (AOP) lets [Spryker Cloud Commerce OS (SCCOS)](/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html) customers connect, configure, and use the available third-party services, or apps, in their application with a click of a button, without development efforts from their side.
 
 ![AOP](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/app-orchestration-platform-overview/aop.png)
 

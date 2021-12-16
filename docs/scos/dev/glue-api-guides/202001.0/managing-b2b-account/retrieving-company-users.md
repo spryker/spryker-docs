@@ -16,7 +16,7 @@ related:
   - title: Retrieving Company Role Information
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-roles.html
   - title: Retrieving Business Unit Information
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-unit-information.html
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-units.html
   - title: Company Account and General Organizational Structure
     link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
 ---

@@ -38,7 +38,7 @@ For detailed information on the modules that provide the API functionality and r
 ### Information on the Business Unit of the User
 To retrieve information on the business unit a user belongs to, send a GET request to the following endpoint:
 
-[/company-business-units/mine](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/company-business-units)
+/company-business-units/mine
 
 Sample request: *GET http://glue.mysprykershop.com/company-business-units/mine*
 
@@ -95,7 +95,7 @@ The endpoint responds with a collection of **RestCompanyBusinessUnitResponse**, 
 ### Information on Specific Business Unit
 To retrieve information on a specific Business Unit, send a GET request to the following endpoint:
 
-[/company-business-units/{% raw %}{{{% endraw %}business_unit_id{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/company-business-units)
+/company-business-units/{% raw %}{{{% endraw %}business_unit_id{% raw %}}}{% endraw %}
 
 Sample request: *GET http://glue.mysprykershop.com/company-business-units/**b8a06475-73f5-575a-b1e9-1954de7a49ef***
 where **b8a06475-73f5-575a-b1e9-1954de7a49ef** is the ID of the Business Unit you need.
@@ -270,7 +270,7 @@ The response will include the following additional attributes:
 ## Retrieving Business Unit Addresses
 To retrieve a Business Unit address, send a GET request to the following endpoint:
 
-[/company-business-unit-addresses/{% raw %}{{{% endraw %}address_id{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/company-business-unit-addresses)
+/company-business-unit-addresses/{% raw %}{{{% endraw %}address_id{% raw %}}}{% endraw %}
 
 Sample request: *GET http://glue.mysprykershop.com/company-business-unit-addresses/**eec036ee-b999-5753-a7dd-8d0710a2312f***
 where **eec036ee-b999-5753-a7dd-8d0710a2312f** is the ID of the Business Unit Address you need.

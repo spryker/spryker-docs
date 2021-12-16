@@ -10,7 +10,7 @@ redirect_from:
   - /v4/docs/en/retrieving-suggestions-for-auto-completion-and-search
 related:
   - title: Catalog Search
-    link: docs/scos/dev/glue-api-guides/page.version/catalog-search.html
+    link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.html
   - title: Browsing a Category Tree
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-trees.html
   - title: Retrieving Product Information

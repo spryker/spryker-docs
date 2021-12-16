@@ -7,7 +7,7 @@ template: concept-topic-template
 
 ## Entity name is not unique
 
-The names of the following entities should be unique to the extent of making it impossible to accidentally match the name of a core entity introduced in future:
+The names of the following entities should be unique:
 
 * Transfers
 * Transfer properties
@@ -116,6 +116,12 @@ Pyz\Client\RabbitMq\RabbitMqConfig
 #### Examples of making entity names unique
 
 To resolve the errors provided in the examples, rename the entities. For example, add the project name as a prefix.
+
+{% info_block infoBox "Future-proof names" %}
+
+The names should be unique to the extent of making it impossible to accidentally match the name of a core entity introduced in future.
+
+{% endinfo_block %}
 
 Renamed transfer name:
 

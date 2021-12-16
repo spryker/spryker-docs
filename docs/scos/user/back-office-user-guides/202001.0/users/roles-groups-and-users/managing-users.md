@@ -65,6 +65,7 @@ The Assign Customers option is used to assign store customers' records to the Ba
 2. In the **Users List > Action** column, select **Assign Customers**.
 3. In the **List of customers > Select customers to assign** table, select the check-box next to the customer you want to assign (multiple customers can be selected).
 4. Click **Save**.
+
 {% info_block infoBox "Info" %}
 
 A customer cannot be assigned to multiple users at a time.
@@ -86,6 +87,7 @@ To de-assign a customer:
 1. In **Users List > Action** column, click **Edit**  if you want to change user's details. See [User: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/references/user-reference-information.html) for  more details.
 2. When the updates are done, click **Update**.
 ***
+
 ## Activating and Deactivating a User
 
 **To activate or deactivate a user:**

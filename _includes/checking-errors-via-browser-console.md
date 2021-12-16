@@ -1,11 +1,3 @@
-1. In the browser window, **right click** > **Inspect**.
-2. In the navigation pane, select **Network**.
-3. Search by the status code e.g. 403
-
-#### For different browsers, it looks a bit different:
-
-- Firefox:
-
-
-- Google Chrome:
-
+1. In the page you want to check for errors, right-click and select **Inspect**.
+2. In the navigation bar of the inspect pane, switch to the  **Network** tab.
+3. Search by the status code of the needed error, for example 403.

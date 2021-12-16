@@ -5,11 +5,17 @@ template: troubleshooting-guide-template
 ---
 A website functionality is not working properly, or there is a 403 status response code in the frontend logs.
 
-## In case if site functionality is not working properly you can check for errors browser console:
+## Checking errors via browser console
 
-{% include searching-for-error-via-browser-console.md %} <!-- To edit, see /_includes/searching-for-error-via-browser-console.md -->
+To check 403 errors via browser console, do the following:
 
-## In case if you found 403 status response code in the frontend logs or in the browser console:
+{% include checking-errors-via-browser-console.md %} <!-- To edit, see /_includes/checking-errors-via-browser-console.md -->
+
+## Checking the WAF rule that triggered the 403 error
+
+If you found 403 status response code in the frontend logs or in the browser console, it is most likely that it had been triggered by a [WAF(web application firewall)](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) rule. Knowing the rule that triggered the error will help you to understand the source of the issue.  
+
+To check the WAF rule that triggered the error, do the following:
 
 1. In the AWS Management Console, go to **Services** > **S3**.
 2. In the *Buckets* pane, select the WAF bucket of the desired environment.

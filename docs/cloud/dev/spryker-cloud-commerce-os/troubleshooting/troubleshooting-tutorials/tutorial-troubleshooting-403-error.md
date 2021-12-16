@@ -14,15 +14,23 @@ A website functionality is not working properly, or there is a 403 status respon
 1. In the AWS Management Console, go to **Services** > **S3**.
 2. In the *Buckets* pane, select the WAF bucket of the desired environment.
 
-
+![select-the-waf-logs-folder]()
 
 3. According to when the error occurred, navigate to the respective folder by year > month > day > hour.
 
+![navigate-by-date-and-time]()
 
+4. Based on the date and time in **Last modified** column, select the needed log file.
 
-4. Select the log file by the **Last modified** column
-5. Download the file and open it in your favorite editor.
-6. You can search by **IP address** / **"action":"BLOCK"** / **uri** / **requestId**
+![select-the-waf-logs-file]()
+
+5. To download the file, select **Download**.
+
+6. Open the file in an editor and search by the following:
+* `clientIp`
+* `"action":"BLOCK"`
+* `uri`
+* `requestId`
 
 Example of blocking request from the log file
 
@@ -31,11 +39,11 @@ Example of blocking request from the log file
 {
 "timestamp":1639057983286,
 "formatVersion":1,
-"webaclId":"arn:aws:wafv2:eu-west-1:407138308974:regional/webacl/<ENVIRONMENT_NAME>-prod-waf/b76ce670-1ded-4ced-bd93-ec066aaef41e",
+"webaclId":"arn:aws:wafv2:eu-west-1:407138308974:regional/webacl/cloud-prod-waf/b76ce670-1ded-4ced-bd93-ec066aaef41e",
 "terminatingRuleId":"managed_sqli_ruleset",
 "terminatingRuleType":"MANAGED_RULE_GROUP",
 "action":"BLOCK","terminatingRuleMatchDetails":[{"conditionType":"SQL_INJECTION","location":"URI","matchedData":["SELECT","1e1","FROM","test"]}],
-"httpSourceName":"ALB","httpSourceId":"407138308974-app/<ENVIRONMENT_NAME>-prod/352755e24d058e25",
+"httpSourceName":"ALB","httpSourceId":"407138308974-app/cloud-prod/352755e24d058e25",
 "ruleGroupList":[{"ruleGroupId":"AWS#AWSManagedRulesPHPRuleSet","terminatingRule":null,"nonTerminatingMatchingRules":[],"excludedRules":null},{"ruleGroupId":"AWS#AWSManagedRulesSQLiRuleSet","terminatingRule":{"ruleId":"SQLi_URIPATH","action":"BLOCK","ruleMatchDetails":null},"nonTerminatingMatchingRules":[],"excludedRules":null}],
 "rateBasedRuleList":[],
 "nonTerminatingMatchingRules":[],

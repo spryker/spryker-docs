@@ -64,7 +64,7 @@ A typical API Client workflow is as follows:
 ## Submitting Checkout Data
 To submit checkout data without order confirmation, you need to use the `/checkout-data` endpoint:
 
-[/checkout-data](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/checkout-data)
+/checkout-data
 
 Sample request: *POST http://glue.mysprykershop.com/checkout-data*
 
@@ -182,7 +182,7 @@ The following address parts are compulsory: **salutation**, **firstName**, **las
 
 **User Identification**
 In order to access the endpoint, you need to identify the user whose cart you are checking out:
-* If you are checking out a cart of a registered user, you need to include the user's authorization token in the request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+* If you are checking out a cart of a registered user, you need to include the user's authorization token in the request. 
 * If you are checking out a guest cart, you need to include the guest user identifier in the **X-Anonymous-Customer-Unique-Id** header. For details, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html).
 
 {% info_block warningBox "Note" %}
@@ -574,7 +574,7 @@ If the payment and/or shipment methods have been specified in the request to the
 ## Placing Orders
 To finalize checkout and place an order, send a POST request to the following endpoint:
 
-[/checkout](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/checkout)
+/checkout
 
 Sample request: *POST http://glue.mysprykershop.com/checkout*
 
@@ -1011,7 +1011,7 @@ When placing an order, you need to check the value of the **redirectURL** attrib
 It is the responsibility of the API Client to redirect the customer to the page and capture the response. For information on how to process it, see information on the payment service provider's API.
 {% endinfo_block %}
 
-The formats of the payloads used in the request and response to the third party page are defined by the respective **Eco** layer module that implements the interaction with the payment provider. For details, see section **3. Implement Payload Processor Plugin** in [Interacting with Third Parties via Glue API](/docs/scos/dev/tutorials/{{page.version}}/advanced/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html#3--implement-payload-processor-plugin).
+The formats of the payloads used in the request and response to the third party page are defined by the respective **Eco** layer module that implements the interaction with the payment provider. For details, see section **3. Implement Payload Processor Plugin** in [Interacting with Third Parties via Glue API](docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html#implement-payload-processor-plugin).
 
 **Interaction Diagram**
 
@@ -1035,7 +1035,7 @@ The identifier is specified in the **orderReference** attribute of the `/checkou
 
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
-| paymentIdentifier | String | x | Payment ID.<br>The value of the payment identifier depends on the payment services provider plugin used to process the payment. For details, see section **3. Implement Payload Processor Plugin** in [Interacting with Third Parties via Glue API](/docs/scos/dev/tutorials/{{page.version}}/advanced/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html#3--implement-payload-processor-plugin). |
+| paymentIdentifier | String | x | Payment ID.<br>The value of the payment identifier depends on the payment services provider plugin used to process the payment. For details, see section **3. Implement Payload Processor Plugin** in [Interacting with Third Parties via Glue API](docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html#implement-payload-processor-plugin). |
 | dataPayload | Array | v | Payload received from the payment service provider. |
 
 {% info_block warningBox "Note" %}

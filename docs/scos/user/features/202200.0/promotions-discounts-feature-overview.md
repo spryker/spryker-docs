@@ -29,6 +29,7 @@ A Back Office user selects a discount type when [creating a voucher](/docs/scos/
 ## Voucher
 
 A voucher is a discount that applies when a customer enters an active voucher code on the *Cart* page.
+
 ![Cart voucher](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/cart_voucher.png)
 
 Once the customer clicks **Redeem code**, the page refreshes to show the discount name, discount value, and available actions: **Remove** and **Clear all**. The **Clear all** action disables all the applied discounts. The **Remove** action disables a single discount.
@@ -37,6 +38,7 @@ Once the customer clicks **Redeem code**, the page refreshes to show the discoun
 You can generate multiple voucher codes for a single voucher. The code has a **Max number of uses** value which defines how many times the code can be redeemed.
 
 You can enter codes manually or use the code generator in the Back Office.
+
 ![Generate codes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+%26+Discounts/Discount/Discount+Feature+Overview/generate_codes.png)
 
 See [Creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) to learn how a Back Office user can create a voucher in the Back Office.
@@ -46,6 +48,7 @@ See [Creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}
 A cart rule is a discount that applies to a cart once all the [decision rules](#decision-rule) linked to the cart rule are fulfilled.
 
 The cart rule is applied automatically. If the decision rules of a discount are fulfilled, the customer can see the discount upon entering the cart. Unlike for [voucher](#voucher), the **Clear all** and **Remove** actions are not displayed for cart rules.
+
 ![Cart rule](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/cart-cart-rule.png)
 
 See [Creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html) to learn how a Back Office user can create a cart rule in the Back Office.
@@ -82,9 +85,11 @@ You can switch between Query Builder and Plain query modes to see how the specif
 Decision rules are combined with *AND* and *OR*  combination operators. With the AND operator, all the rules should be fulfilled for the discount to be applied. With the OR operator, at least one of them should be fulfilled for the discount to be applied.
 
 In the following example, for the discount to apply, a cart should contain 3 items, and the purchase should be made on Wednesday.
+
 ![AND operator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+%26+Discounts/Discount/Discount+Feature+Overview/and-operator.png)
 
 In the following example, for the discount to apply, a cart should either contain 3 items or the purchase should be made on Wednesday.
+
 ![OR operator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+%26+Discounts/Discount/Discount+Feature+Overview/or-operator.png)
 
 {% info_block infoBox "Info" %}
@@ -111,6 +116,7 @@ Threshold is a minimum number of items in cart that should fulfill all the speci
 The default value is *1* . It means that a discount is applied if at least one item fulfills the discount's decision rules.
 
 In the following example, the discount is applied if there are four items with the Intel Core processor in the cart.
+
 ![Threshold](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/threshold.png)
 
 ## Discount application
@@ -126,6 +132,7 @@ There are two types of discount application:
 Query string is a discount application type that uses [decision rules](#decision-rule) to dynamically determine which products qualify for discounts.
 
 The discount in the example below applies to white products.
+
 ![Query collection](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/collection-query.png)
 
 The product selection based on the query string is dynamic:
@@ -136,8 +143,12 @@ The product selection based on the query string is dynamic:
 
 Promotional product is a discount application type that discounts a particular product at a set quantity, enabling "buy X, get Y" promotions.
 
-When a customer meets the conditions for a promotional product discount, a **Promotional products** section is displayed in the cart, allowing customers to add the available quantity of the discounted product to the cart.
-![Promotional product](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/promotional-product-frontend.png)
+When a customer meets the conditions for a promotional product discount, the _Promotional products_ section is displayed in the cart and lets customers add the available quantity of the discounted product. The section consists of the product name, SKU, original and discounted price, and discount description.
+
+![Promotional product](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/promotions-discounts-feature-overview.md/promotional-product-storefront.png)
+<!--
+old image: (https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/promotional-product-frontend.png)
+-->
 
 A Back Office user selects the promotional product by entering an abstract product SKU in the Back Office. Also, they define the maximum quantity of the product to be sold with a discount.
 
@@ -163,6 +174,7 @@ See examples in the table below.
 | €50 | Fixed amount | 10 | €10 | €40 |
 
 A Back Office user defines calculation when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
+
 ![Discount calculation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/discount_calculation.png)
 
 ## Discount exclusiveness
@@ -171,7 +183,8 @@ Discount exclusiveness defines if a discount value of a discount can be combined
 
 A Back Office user defines calculation when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
 
-[Exclusive discount](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/promotions-discounts-feature-overview.md/exclusivity.png)
+![Exclusive discount](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/promotions-discounts-feature-overview.md/exclusivity.png)
+
 
 ### Exclusive discount
 
@@ -200,6 +213,7 @@ If a cart is eligible for a discount outside of its validity interval, the cart 
 A Back Office user defines calculation when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
 
 ![Validity interval](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/promotions-discounts-feature-overview.md/validity-interval.png)
+
 
 ## Discount priority
 

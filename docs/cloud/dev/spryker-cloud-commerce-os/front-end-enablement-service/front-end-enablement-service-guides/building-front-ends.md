@@ -25,9 +25,11 @@ Login URL: [launchpad portal](https://launchpad.spryker.com)
 
 ### How do I connect my hosting?
 
+### How do I connect my back end?
+
 ### Anything else I need to configure?
 
-
+Result: The *List of Applications* page opens with the success message displayed. The application is displayed in the list.
 
 ## How do I add content to the front end?
 
@@ -35,4 +37,14 @@ Login URL: [launchpad portal](https://launchpad.spryker.com)
 
 ## Anything else I can do with content?
 
+
+
+
 ## How do I publish the front end?
+
+To publish the application, do the following:
+
+1. Select the application you want to publish.
+2. In the *Hosting provider* section, select **Install Application**.
+
+...

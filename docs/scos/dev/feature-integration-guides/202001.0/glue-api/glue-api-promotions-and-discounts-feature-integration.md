@@ -69,11 +69,11 @@ Make sure that the following changes have occurred in transfer objects:
 
 Make sure that `SpyProductAbstractStorage` and `SpyProductConcreteStorage` are extended by synchronization behavior with these methods:
 
-| ENTITY | TYPE | EVENT | PATH | METHODS |
-| --- |--- |--- |--- |
-| `SpyProductAbstractStorage` | class | extended | `src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductAbstractStorage` | `syncPublishedMessageForMappings()`<br>`syncUnpublishedMessageForMappings()` |
-| `SpyProductConcreteStorage` | class | created | `src/Generated/Shared/Transfer/RestProductLabelsAttributesTransfer` | |
-| `CartCodeRequestTransfer` | class | extended | `src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductConcreteStorage` | `syncPublishedMessageForMappings()`<br>`syncUnpublishedMessageForMappings()` |
+| ENTITY  | TYPE  | EVENT    | PATH  | METHODS            |
+| --------------------------- | ----- | -------- | ------------ | ---------------------------------------------------------------------------- |
+| `SpyProductAbstractStorage` | class | extended | `src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductAbstractStorage` | `syncPublishedMessageForMappings()` `syncUnpublishedMessageForMappings()` |
+| `SpyProductConcreteStorage` | class | created  | `src/Generated/Shared/Transfer/RestProductLabelsAttributesTransfer`     |                                                                              |
+| `CartCodeRequestTransfer`   | class | extended | `src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductConcreteStorage` | `syncPublishedMessageForMappings()` `syncUnpublishedMessageForMappings()` |
 
 {% endinfo_block %})
 
@@ -166,8 +166,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following endpoint is available:
-- `http://glue.mysprykershop.com/product-labels/{% raw %}{{{% endraw %}idProductLabel{% raw %}}}{% endraw %}`
+Make sure that the following endpoint is available: `http://glue.mysprykershop.com/product-labels/{% raw %}{{{% endraw %}idProductLabel{% raw %}}}{% endraw %}`
 
 **Example response:**
 

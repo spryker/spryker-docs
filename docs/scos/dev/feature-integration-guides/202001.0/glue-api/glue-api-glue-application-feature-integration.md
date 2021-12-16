@@ -238,7 +238,7 @@ ip glue.mysprykershop.com
 
 {% info_block warningBox “Verification” %}
 
-If everything is set up correctly, you should be able to access http://glue.mysprykershop.com and get a correct JSON response as follows:
+If everything is set up correctly, you should be able to access `http://glue.mysprykershop.com` and get a correct JSON response as follows:
 
 **Default JSON Response**
 

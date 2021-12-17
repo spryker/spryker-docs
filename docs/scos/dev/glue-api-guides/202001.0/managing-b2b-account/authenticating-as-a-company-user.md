@@ -31,7 +31,7 @@ To impersonate a customer as a Company User, API clients can use the **Business
 
 {% info_block warningBox "Authentication" %}
 
-Before impersonating as Company Users, customers need to authenticate first. For details on how to do so, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+Before impersonating as Company Users, customers need to authenticate first. 
 
 {% endinfo_block %}
 
@@ -45,11 +45,6 @@ If the [Prices per Merchant Relation \(Customer specific prices\](/docs/scos/use
 
 The same as with B2C resource access tokens, the tokens provided by the API have limited timeframe. When receiving an access token, the response body contains not only the access token itself, but also its lifetime, in seconds, and a **Refresh Token**. When the lifetime expires, the Refresh Token can be exchanged for a new Access Token. The new token will also have a limited lifetime and have a corresponding Refresh Token for future authentication. The default lifetime of the tokens is 8 hours (28800 seconds) for an access token and 1 month (2628000 seconds) for a refresh token. The settings can be changed in the module configuration.
 
-{% info_block infoBox "Info" %}
-
-For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
-
-{% endinfo_block %}
 
 In your development, the endpoint can help you to:
 
@@ -64,13 +59,13 @@ For detailed information on the modules that provide the API functionality and r
 ## Retrieving Available Company Users
 To retrieve a list of all the Company Users available to the currently logged in user, send a GET request to the following endpoint:
 
-[/company-users/mine](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/company-users)
+/company-users/mine
 
 Sample request: *GET http://glue.mysprykershop.com/company-users/mine*
 
 {% info_block infoBox "Authentication Required" %}
 
-To get a list of Company Users, you need to authenticate first and pass an access token as a part of your request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+To get a list of Company Users, you need to authenticate first and pass an access token as a part of your request.
 
 {% endinfo_block %}
 
@@ -346,7 +341,9 @@ POST /company-user-access-tokens
 Sample request: *POST http://glue.mysprykershop.com/company-user-access-tokens*
 
 {% info_block warningBox "Authentication Required" %}
-To access the endpoint, you need to authenticate customers as regular users first and pass an access token as a part of your request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+
+To access the endpoint, you need to authenticate customers as regular users first and pass an access token as a part of your request. 
+
 {% endinfo_block %}
 
 **Attributes**

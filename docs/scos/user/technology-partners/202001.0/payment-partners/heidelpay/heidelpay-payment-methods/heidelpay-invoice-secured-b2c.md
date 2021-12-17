@@ -37,12 +37,12 @@ The following configuration should be made after Heidelpay has been [installed](
 ## Configuration
 ```php
 $config[HeidelpayConstants::CONFIG_HEIDELPAY_TRANSACTION_CHANNEL_INVOICE_SECURED_B2C] = ''; //You can use public test account for testing with channel `31HA07BC8142C5A171749A60D979B6E4` but replace it with real one when you go live. Config should be taken from Heidelpay.
- 
+
 $config[OmsConstants::PROCESS_LOCATION] = [
 	...
 	APPLICATION_ROOT_DIR . '/vendor/spryker-eco/heidelpay/config/Zed/Oms',
 ];
- 
+
 $config[OmsConstants::ACTIVE_PROCESSES] = [
 	...
 	'HeidelpayInvoiceSecuredB2c01',
@@ -63,12 +63,12 @@ All global integration parts of Heidelpay module should be done before the follo
 1. Adjust `CheckoutPageDependencyProvider` on project level to add `InvoiceSecuredB2c` subform and payment method handler.
 
 \Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Yves\CheckoutPage;
- 
+
 use Spryker\Yves\Kernel\Container;
 use Spryker\Yves\StepEngine\Dependency\Plugin\Form\SubFormPluginCollection;
 use Spryker\Yves\StepEngine\Dependency\Plugin\Handler\StepHandlerPluginCollection;
@@ -76,7 +76,7 @@ use SprykerEco\Shared\Heidelpay\HeidelpayConfig;
 use SprykerEco\Yves\Heidelpay\Plugin\HeidelpayHandlerPlugin;
 use SprykerEco\Yves\Heidelpay\Plugin\Subform\HeidelpayInvoiceSecuredB2cSubFormPlugin;
 use SprykerShop\Yves\CheckoutPage\CheckoutPageDependencyProvider as SprykerShopCheckoutPageDependencyProvider;
- 
+
 class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyProvider
 {
 	/**
@@ -89,12 +89,12 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 		$container = parent::provideDependencies($container);
 		$container = $this->extendSubFormPluginCollection($container);
 		$container = $this->extendPaymentMethodHandler($container);
- 
+
 		return $container;
 	}
- 
+
 	...
- 
+
 	/**
 	 * @param \Spryker\Yves\Kernel\Container $container
 	 *
@@ -105,13 +105,13 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 		$container->extend(static::PAYMENT_SUB_FORMS, function (SubFormPluginCollection $subFormPluginCollection) {
 			...
 			$subFormPluginCollection->add(new HeidelpayInvoiceSecuredB2cSubFormPlugin());
- 
+
 			return $subFormPluginCollection;
 		});
- 
+
 		return $container;
 	}
- 
+
 	/**
 	 * @param \Spryker\Yves\Kernel\Container $container
 	 *
@@ -122,10 +122,10 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 		$container->extend(static::PAYMENT_METHOD_HANDLER, function (StepHandlerPluginCollection $stepHandlerPluginCollection) {
 			...
 			$stepHandlerPluginCollection->add(new HeidelpayHandlerPlugin(), HeidelpayConfig::PAYMENT_METHOD_INVOICE_SECURED_B2C);
- 
+
 			return $stepHandlerPluginCollection;
 		});
- 
+
 		return $container;
 	}
 }
@@ -142,7 +142,7 @@ src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig
 	forms: {
 		payment: _view.paymentForm
 	},
- 
+
 	title: 'checkout.step.payment.title' | trans,
 	customForms: {
 		...
@@ -158,9 +158,9 @@ src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Oms;
- 
+
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Oms\Dependency\Plugin\Command\CommandCollectionInterface;
 use Spryker\Zed\Oms\Dependency\Plugin\Condition\ConditionCollectionInterface;
@@ -170,8 +170,8 @@ use SprykerEco\Zed\Heidelpay\Communication\Plugin\Checkout\Oms\Condition\IsAutho
 use SprykerEco\Zed\Heidelpay\Communication\Plugin\Checkout\Oms\Condition\IsFinalizingFailedPlugin;
 use SprykerEco\Zed\Heidelpay\Communication\Plugin\Checkout\Oms\Condition\IsFinalizingFinishedPlugin;
 use SprykerEco\Zed\Heidelpay\Communication\Plugin\Checkout\Oms\Condition\IsOrderPaidPlugin;
- 
- 
+
+
 class OmsDependencyProvider extends SprykerOmsDependencyProvider
 {
 	/**
@@ -183,10 +183,10 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 	{
 		$container = parent::provideBusinessLayerDependencies($container);
 		$container = $this->extendConditionPlugins($container);
- 
+
 		return $container;
 	}
- 
+
 	/**
 	 * @param \Spryker\Zed\Kernel\Container $container
 	 *
@@ -201,10 +201,10 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 			$conditionCollection->add(new IsFinalizingFinishedPlugin(), 'Heidelpay/IsFinalizingFinished');
 			$conditionCollection->add(new IsFinalizingFailedPlugin(), 'Heidelpay/IsFinalizingFailed');
 			$conditionCollection->add(new IsOrderPaidPlugin(), 'Heidelpay/IsOrderPaid');
- 
+
 			return $conditionCollection;
 		});
- 
+
 		return $container;
 	}
 }
@@ -214,7 +214,9 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 After a customer placed an order, we receive payment response with information about bank account information where the customer has to pay. This information is stored into DB in `spy_payment_heidelpay.connector_invoice_account_info`. This information can be sent to the customer in the order confirmation e-mail or customer can be notified about this information in any other way.
 
 {% info_block errorBox "Attention" %}
+
 As far as we receive payment response from Heidelpay asynchronously, we can never be sure that the bank account information is stored in the DB before the customer is redirected to the checkout success page.
+
 {% endinfo_block %}
 
 ## OMS State Machine

@@ -120,7 +120,7 @@ The endpoint responds with a **RestCompanyUserCollectionResponse** that contains
 ## Retrieving Available Company Users
 To retrieve a list of the Company Users that the currently logged in user can impersonate as, send a GET request to the following endpoint:
 
-[/company-users/mine](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#company-users)
+/company-users/mine
 
 Sample request: *GET http://glue.mysprykershop.com/company-users/mine*
 

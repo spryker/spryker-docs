@@ -296,8 +296,7 @@ Make sure that the following endpoints are available:
 Make sure that the following endpoint is available: 
 - `http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}?include=vouchers,cart-rules`
 
-<details open>
-<summary markdown='span'>Example</summary>
+**Example**
 
 ```json
 {
@@ -397,8 +396,7 @@ Make sure that the following endpoint is available:
 Make sure that the following endpoint is available:
 - `http://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest-cart_uuid{% raw %}}}{% endraw %}?include=vouchers,cart-rules`
 
-<details open>
-<summary markdown='span'>Example</summary>
+**Example**
 
 ```json
 {

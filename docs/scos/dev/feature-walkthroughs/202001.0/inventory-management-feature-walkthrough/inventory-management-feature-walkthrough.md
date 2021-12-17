@@ -119,7 +119,7 @@ From Availability module version 6.0 we have added a new configuration option to
 
 For example:
 
-```json
+```php
   'storesWithSharedPersistence' => ['DE', 'AT']
           $stores['DE'] = [
               ... //other options
@@ -144,8 +144,8 @@ To learn more about the feature and to find out how end users use it, see [Inven
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES | GLUE API GUIDES | DATA IMPORT |
+| INTEGRATION GUIDES | 
 |---|---|---|
-| [Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/inventory-management-feature-integration.html) | [Retrieving abstract product availability](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-availability.html) | [File details: product_stock.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html) |
-| [Glue API: Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-inventory-management-feature-integration.html) | [Retrieving concrete product availability](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-availability.html) | [File details: warehouse_address.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html) |
-|  |  | [File details: warehouse_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html) |
+| [Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/inventory-management-feature-integration.html) | 
+
+

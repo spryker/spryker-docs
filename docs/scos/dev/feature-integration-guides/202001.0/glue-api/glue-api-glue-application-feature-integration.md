@@ -343,7 +343,7 @@ class EntityTagsRestApiConfig extends SprykerEntityTagsRestApiConfig
 
 {% info_block warningBox “Verification” %}
 
-If everything is set up correctly, a request to http://glue.mysprykershop.com with the header `[{"key":"Accept-Language","value":"de_DE, de;q=0.9"}]` should result in a response that contains the content-language header set to de_DE.
+If everything is set up correctly, a request to `http://glue.mysprykershop.com` with the header `[{"key":"Accept-Language","value":"de_DE, de;q=0.9"}]` should result in a response that contains the content-language header set to de_DE.
 
 {% endinfo_block %}
 

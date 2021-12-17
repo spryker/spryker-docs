@@ -13,8 +13,6 @@ To learn more about the feature and to find out how end users use it, see [Promo
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES  | MIGRATION GUIDES | GLUE API GUIDES | TUTORIALS AND HOWTOS |
-|---|---|---|---|
-| [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html) | Discount migration guide | [Retrieving promotional items](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-promotional-items.html) | [HowTo - Create discounts based on shipment](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-create-discounts-based-on-shipment.html) |
-|  |  | [Managing discount vouchers in guest carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-discount-vouchers-in-guest-carts.html) |  |
-|  |  | [Managing discount vouchers in guest carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-discount-vouchers-in-guest-carts.html) |  |
+| INTEGRATION GUIDES  | MIGRATION GUIDES | TUTORIALS AND HOWTOS |
+|---|---|---|
+| [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html) | Discount migration guide | | [HowTo - Create discounts based on shipment](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-create-discounts-based-on-shipment.html) |

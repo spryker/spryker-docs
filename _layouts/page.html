@@ -27,30 +27,32 @@ layout: default
 <div class="page-content page-content--post">
 
     <aside class="main-sidebar">
-        <h3 class="main-sidebar__title tablet-show" data-toc-skip>{{ site.data.sidebars[page.sidebar].title }}</h3>
-        <a href="#" class="main-sidebar__opener tablet-hidden js-main-sidebar-switcher">
-            <span class="main-sidebar__opener-decorator"></span>
-            <span class="main-sidebar__opener-decorator"></span>
-            <span class="main-sidebar__opener-decorator"></span>
-        </a>
-        <a href="#" class="main-sidebar__opener tablet-show js-main-sidebar-opener">
-            <span class="main-sidebar__opener-decorator"></span>
-            <span class="main-sidebar__opener-decorator"></span>
-            <span class="main-sidebar__opener-decorator"></span>
-        </a>
-        <div class="main-sidebar__popup">
-            <div class="main-sidebar__inner">
-                <div class="main-sidebar__header">
-                    <a href="#" class="main-sidebar__close"></a>
-                </div>
-                <div class="main-sidebar__slide">
-                    <h3 class="main-sidebar__title" data-toc-skip>{{ site.data.sidebars[page.sidebar].title }}</h3>
-
-                    {% unless page.hide_sidebar %}
-                        <div id="tg-sb-sidebar">
-                            {% render_sidebar %}
-                        </div>
-                    {% endunless %}
+        <div class="main-sidebar__sticky">
+            <div class="main-sidebar__title-wrapper">
+                <h3 class="main-sidebar__title" data-toc-skip>{{ site.data.sidebars[page.sidebar].title }}</h3>
+            </div>
+            <a href="#" class="main-sidebar__opener tablet-hidden js-main-sidebar-switcher">
+                <span class="main-sidebar__opener-decorator"></span>
+                <span class="main-sidebar__opener-decorator"></span>
+                <span class="main-sidebar__opener-decorator"></span>
+            </a>
+            <a href="#" class="main-sidebar__opener tablet-show js-main-sidebar-opener">
+                <span class="main-sidebar__opener-decorator"></span>
+                <span class="main-sidebar__opener-decorator"></span>
+                <span class="main-sidebar__opener-decorator"></span>
+            </a>
+            <div class="main-sidebar__popup">
+                <div class="main-sidebar__inner">
+                    <div class="main-sidebar__header">
+                        <a href="#" class="main-sidebar__close"></a>
+                    </div>
+                    <div class="main-sidebar__slide">
+                        {% unless page.hide_sidebar %}
+                            <div id="tg-sb-sidebar">
+                                {% render_sidebar %}
+                            </div>
+                        {% endunless %}
+                    </div>
                 </div>
             </div>
         </div>

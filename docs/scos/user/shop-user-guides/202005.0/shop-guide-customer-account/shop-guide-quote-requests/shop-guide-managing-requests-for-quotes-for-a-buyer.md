@@ -48,18 +48,21 @@ To add a delivery address and a shipment method:
     * Deliver to multiple addresses to set a delivery address per item. See [Shop Guide - Delivery Address](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-address-step.html) for more information.
 
 3. In the Billing Address section, select the necessary address or add a new one.
+
 {% info_block infoBox "Info" %}
 
-If you want to use the shipping address for the billing address as well, select the **Billing same as shipping** checkbox. 
+If you want to use the shipping address for the billing address as well, select the **Billing same as shipping** checkbox.
 
 {% endinfo_block %}
 
-4. To proceed to the **Shipment** page, click **Next**. 
+4. To proceed to the **Shipment** page, click **Next**.
+
 {% info_block infoBox "Info" %}
 
-On the **Edit Quote Request** page, clicking **Add shipment method** should redirect you to the **Shipment** page. However, if the delivery address has not been specified before, the **Address** page will open to first add the delivery address and then shipment method. 
+On the **Edit Quote Request** page, clicking **Add shipment method** should redirect you to the **Shipment** page. However, if the delivery address has not been specified before, the **Address** page will open to first add the delivery address and then shipment method.
 
 {% endinfo_block %}
+
 5. Select the shipment method and the delivery date (if needed), and click **Save**. The Quote Request will be updated successfully and redirect you to the **Edit Quote Request** page.
 
 **Tips & Tricks**
@@ -86,7 +89,7 @@ Keep in mind that measurement units cannot be updated. You can only add a new pr
 
 2. To add products to the quote request, use one of the following options:
     * On the **Cart** page in the **Quick add to Cart** widget, enter a SKU or a name of the concrete product and its quantity, and click **Add to Cart**.
-![quick-add-to-cart-widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Buyer/quick-add-to-cart-widget.png) 
+![quick-add-to-cart-widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Buyer/quick-add-to-cart-widget.png)
     * From the catalog, select the product, choose the options and quantity, and click **Add to Cart**.
     * On the **Quick Order** page, enter a SKU or a name of the concrete product and its quantity, and click **Add to Cart**. For more information on Quick Order, see [Shop Guide - Quick Order](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-quick-order.html).
     * On the **Shopping list** page, click the shopping list, select the checkboxes for the items you want to add from the shopping list, and click **Add to Cart**. For more information on Quick Order, see [Shop Guide - Shopping Lists](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/shop-guide-shopping-lists.html).
@@ -96,7 +99,7 @@ Keep in mind that measurement units cannot be updated. You can only add a new pr
 **Tips & Tricks**
 If you want to update the item quantity, enter the value in the Quantity field and click the **Refresh** icon.
 
-![change-quantity-in-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Buyer/change-quantity-in-cart.png) 
+![change-quantity-in-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Buyer/change-quantity-in-cart.png)
 ___
 
 ### Updating Delivery Information
@@ -109,7 +112,8 @@ To edit a delivery address and a shipment method:
 If the delivery address hasn’t been defined yet, the Address step will open first. Thus, you’ll need to add the delivery address and then proceed with updating the shipment method.
 
 {% endinfo_block %}
-![update-delivery-information](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Buyer/update-delivery-information.png) 
+
+![update-delivery-information](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Buyer/update-delivery-information.png)
 
 2. On the **Address** page, select the new delivery and billing addresses. See [Shop Guide - Delivery Address](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-address-step.html) for more information on the options you have in the **Select a delivery address** field.
 
@@ -127,23 +131,22 @@ Once the delivery address is defined, the previously added shipment method is re
 
 On the **Address** and **Shipment** pages:
 
-* If you want to discard the changes, click **Cancel** or **Back to Quote** (on top of the page). This will redirect you to the **Edit Quote Request** page and the updated delivery address and shipment method will not be saved. 
-* (for the Shipment page only) If you want to return to the **Address** page, click **Back** at the bottom of the page. 
+* If you want to discard the changes, click **Cancel** or **Back to Quote** (on top of the page). This will redirect you to the **Edit Quote Request** page and the updated delivery address and shipment method will not be saved.
+* (for the Shipment page only) If you want to return to the **Address** page, click **Back** at the bottom of the page.
 
 On the **Edit Quote Request** page, you can return to the **View Quote Request** page by clicking **Back to View**.
 ___
 
 ## Sending an RFQ to a Sales Representative
 To request a lower price for a cart after you created an RFQ, send the RFQ to a Sales Representative:
-
-* On the **Edit Quote Request** page: Click **Send to Agent**. 
-* In the **Customer Account -> Quote Requests** section: Click the **View** icon for the quote request and on the Quote Request page, click **Send to Agent**. 
+* On the **Edit Quote Request** page: Click **Send to Agent**.
+* In the **Customer Account -> Quote Requests** section: Click the **View** icon for the quote request and on the Quote Request page, click **Send to Agent**.
 
 This will send the Quote Request to a Sales Representative for further processing. Once the Sales Representative has started reviewing your RFQ, the RFQ’s status will change to Waiting.
 
 To check the RFQ's status, navigate to the **Customer Account -> Quote Requests** section.
 
-See [Buyer Workflow](https://documentation.spryker.com/v5/docs/en/quotation-process-feature-overview#buyer-workflow) for more information on quote request statuses and workflow.
+See [Buyer Workflow](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html#buyer-workflow) for more information on quote request statuses and workflow.
 ___
 
 ## Processing a Ready RFQ
@@ -154,6 +157,7 @@ To convert an RFQ to cart, on the **View Quote Request** page for the RFQ that i
 After that, you can continue to [Checkout](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-checkout.html).
 
 To request an even better price, **revise** the RFQ.
+
 {% info_block warningBox "Note" %}
 
 RFQ version number changes upon each revision. Check RFQ Versioning to learn about the version change process.
@@ -173,7 +177,6 @@ RFQ version number changes upon each revision. Check RFQ Versioning to learn abo
 {% endinfo_block %}
 ___
 ## Canceling an RFQ
-An RFQ can be canceled in the statuses: Draft, Waiting, and Ready. 
+An RFQ can be canceled in the statuses: Draft, Waiting, and Ready.
 
 To cancel the RFQ, on the **View Quote Request** page, click **Cancel**. The canceled RFQ will acquire the *Canceled* status and will be displayed on the **Customer Account > Quote Request** page with the *Canceled* status.
-

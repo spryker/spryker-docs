@@ -60,7 +60,7 @@ The following table describes the attributes on the pages:
 
 ## Create and Edit Abstract Product List Content Item Page
 The following table describes the attributes on the pages:
- * *CreateContent Item: Abstract Product List* 
+ * *CreateContent Item: Abstract Product List*
  * *Edit Content Item: Abstract Product List*
 
 | Attribute | Description |
@@ -81,7 +81,7 @@ The following table describes the attributes on the pages:
 ## Create and Edit Product Set Content Item Page
 
 The following table describes the attributes on the pages:
- * *CreateContent Item: Product Set* 
+ * *CreateContent Item: Product Set*
  * *Edit Content Item: Product Set*
 
 | Attribute | Description |
@@ -100,7 +100,7 @@ The following table describes the attributes on the pages:
 ## Create and Edit File List Content Item Page
 
 The following table describes the attributes on the pages:
- * *CreateContent Item: File List* 
+ * *CreateContent Item: File List*
  * *Edit Content Item: File List*
 | Attribute | Description |
 | --- | --- |
@@ -121,12 +121,4 @@ The following table describes the attributes on the *Create Content Item: Naviga
 | --- | --- |
 | Name | Name of the content item. |
 | Description | Description of the content item. |
-| Navigation | Field to select an existing navigation element. See [Creating a Navigation Element](https://documentation.spryker.com/v5/docs/en/managing-navigation#creating-a-navigation-element) to learn how to create it. |
-
-
-
-
-
-
-
-
+| Navigation | Field to select an existing navigation element. See [Creating a Navigation Element](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#creating-a-navigation-element) to learn how to create it. |

@@ -64,7 +64,7 @@ _**Read-only**_ permission allows:
 * Grand Total
 
 {% info_block warningBox %}
-With Read-only permission, no cart actions are available to the user.![Read-only cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shared+Cart+Feature+Overview/read-only-cart.png
+With Read-only permission, no cart actions are available to the user. [Read-only cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shared+Cart+Feature+Overview/read-only-cart.png)
 {% endinfo_block %} )
 
 ### Full access

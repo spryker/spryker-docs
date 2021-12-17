@@ -69,21 +69,27 @@ That’s it. The option appears for the product on the Storefront:
 Keep in mind that depending on the use case you want to implement for your shop, additional development effort may be required on your project's side. For example, if you don’t want to allow buyers to add the Service option more than once if they have a set of specific products in carts.
 
 {% endinfo_block %}
+
 ### Service as a Part of a Configurable Bundle List
+
 {% info_block infoBox "Note" %}
 
 This approach is suitable only for Scenario 1 - that is, when the service is optional.
 
 {% endinfo_block %}
+
 One more way to have a product with an optional service offering would be to make the product a [configurable bundle](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html). It means that you create a product (for example, equipment) and suggest another product (Installation service) as a bundle. To create such a configurable bundle product, follow the steps below.
 
 1. Create the *Installation Service* product as a usual abstract product, like you did in the [Prerequisites](/docs/scos/user/back-office-user-guides/{{page.version}}/products/creating-service-offerings.html#prerequisites) section. Make sure you set the **Availability** as *Never out of stock*. See [Managing Products Availability](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html) for details on how to do that.
+
 {% info_block infoBox "Note" %}
 
 If you don’t want to display the Service products in the Storefront so buyers can not find them in the products catalog, don’t check the Searchable checkbox for it in the **General** tab of the **Create/Edit Concrete Product** page.
 
 {% endinfo_block %}
+
 2. Create a [Configurable Bundle Template](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html-feature-overview#configurable-bundle-template) with two [slots](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html-feature-overview#configurable-bundle-slots) - one for the physical products, and one for the service:
+
     1. Go to **Products > Configurable Bundle Templates** section and click Create New Template in the top right corner.
     2. On the **Template details** page, enter the name of your bundle template in the **Name** field for the corresponding locale.
     3. Click **Save**. A new tab Slots will appear on the same page.
@@ -94,6 +100,7 @@ If you don’t want to display the Service products in the Storefront so buyers 
     8. Go back to the **Products > Configurable Bundle Templates** section and click **Edit** for the just created Configurable bundle template.
     9. Click **Add slot** and add the Service product to it.
     10. Click **Save**. The Configurable bundle template with two slots, one for physical products and one for service, is now created.
+
  3. Activate the Configurable Bundle Template by clicking **Activate** in the *Actions* column of the **Configurable Bundle Templates** page.
  The configurable bundle now appears on the **Configurable Bundle List** page on the Storefront. Buyers can select the products and add the service if they want:
 
@@ -104,18 +111,23 @@ If you don’t want to display the Service products in the Storefront so buyers 
 Depending on your specific business needs, you might need additional development effort for your project. For example, if you want to exclude the case when buyers access the service product and add it to the cart without corresponding physical products.
 
 {% endinfo_block %}
+
 ### Custom Project Solution
+
 {% info_block infoBox "Note" %}
 
 This approach can be applied to both Scenario 1 and Scenario 2 - that is when the service is optional or obligatory.
 
 {% endinfo_block %}
+
 If you need an approach that would best suit your specific business needs, we recommend your development team to implement a custom solution for your project. The custom solution can be handled as follows:
 
 #### 1. Identify the respective products with labels
+
 First of all, you need to somehow identify the products for which the custom solution will be applied. We recommend doing this via product labels. For this, create specific labels for the products that require service from your side. The labels can be, for example, *free service, installation service, 1-day service*, etc. See [Creating a Product Label](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/creating-product-labels.html#creating-a-product-label) for details on how to create labels and assign products to them.
 
 #### 2.  Override the Add to Cart functionality
+
 At this step, you need the development team to change the default *Add to Cart* functionality to meet your project’s needs.
 
 The  *Add to Cart* functionality implies a call to both Yves and Zed, which means the development team can execute a back-end logic for it. This logic could be triggered when products with specific labels are added to the cart. For example, it could automatically add the service product to the cart. It could also imply a check, that if another product with the same label is added to cart, the service product is not added, or another service product (for example, a service of another type with another price) is added to cart instead. You could also have a logic that if they buy more than a specific number of the products, the service product is for free.

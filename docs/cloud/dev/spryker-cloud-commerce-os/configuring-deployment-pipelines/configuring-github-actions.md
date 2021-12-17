@@ -434,5 +434,5 @@ image:
 * To learn about workflow configuration, see [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions).
 * To learn how to choose the language and to create a basic template for workflow configuration files, see [Quickstart for GitHub Actions](https://help.github.com/en/actions/getting-started-with-github-actions/starting-with-preconfigured-workflow-templates)
 * To learn about encrypted secrets in a workflow on demand, see [Encrypted secrets](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets)
-* To learn about the Deploy file, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file-reference-1.0.html)
+* To learn about the Deploy file, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html)
 * To learn about configuring services with the Docker SDK, see [Configuring services](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-services.html)

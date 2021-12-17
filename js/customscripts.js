@@ -122,6 +122,10 @@ function initLightbox() {
     $('.post-content img').each(function(i, item){
         let image = $(this);
 
+        if (image.is('.inline-img img')) {
+             return;
+        }
+
         image.wrap('<a href="' + image.attr('src') + '" data-lightbox="content-lightbox"></a>');
     });
 

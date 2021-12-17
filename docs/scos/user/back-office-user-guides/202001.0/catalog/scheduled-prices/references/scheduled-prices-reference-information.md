@@ -21,10 +21,11 @@ This topic contains the reference information that you need to know when working
 
 In the **Import new scheduled prices** section you see the following:
 
-*     Link to the page where the format of the file with price schedules is described.
-*     Schedule name field
-*     File selection button
-*     The button for importing price schedules from the selected file
+* Link to the page where the format of the file with price schedules is described.
+* Schedule name field
+* File selection button
+* The button for importing price schedules from the selected file
+
 In the **Scheduled prices imported** section you see the following:
 
 | Attribute | Description |
@@ -36,6 +37,7 @@ In the **Scheduled prices imported** section you see the following:
 | Number of prices | Number of scheduled prices in an imported list. |
 | Number of products | Number of products which have scheduled prices assigned to them in an imported list. |
 | Actions | Set of actions that you can do with an import. |
+
 ## Import New Scheduled Prices Page Attributes
 
 
@@ -84,9 +86,11 @@ The **Scheduled Prices: Import dry run** page is divided into four sections.
 | **to_included** | The date on which the price specified by the price schedule gets reverted back. |
 
 ## View Import and Edit Import Pages
+
 {% info_block infoBox %}
 Since **View Import and Edit Import** pages have almost the same attributes, you can use the attributes in this section while both viewing and editing imports.
 {% endinfo_block %}
+
 ### General Information Section
 
 | Attribute | Description | View page | Edit page |
@@ -96,6 +100,7 @@ Since **View Import and Edit Import** pages have almost the same attributes, you
 | Imported by and on the | Back office user who imported the list and the time of the import. | Yes | Yes |
 | Number of prices | Number of scheduled prices in the imported list. | Yes | Yes |
 | Number of products | Number of products which have scheduled prices assigned to them in an imported list. | Yes | Yes |
+
 ### Scheduled Prices Inside This Import Section
 
 | Attribute | Description | View page |  Edit page |

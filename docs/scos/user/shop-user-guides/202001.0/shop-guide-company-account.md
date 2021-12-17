@@ -44,8 +44,11 @@ After the company has been registered, it should be approved in the [Back Office
 Once the company is approved, a Company Administrator can go to `/company/overview` page and create (and then also edit and delete) users, addresses, roles and business roles.
 
 {% info_block infoBox %}
+
 A Company Administrator needs to log out and then log in to refresh the changes.
+
 {% endinfo_block %}
+
 Don't forget to check out the video tutorial on setting up [Company](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html) Structure in Spryker [B2B Demo Shop](/docs/scos/user/about-spryker/{{page.version}}/about-spryker.html#spryker-b2b-b2c-demo-shops):
 
 {% wistia qkdgkeannb 960 720 %}

@@ -40,7 +40,9 @@ The *Company Roles* page consists of the following elements:
 ![Create a role](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/create-role.png)
 
 {% info_block infoBox %}
+
 Selecting the **Is Default** check-box means that the new users will be created with this role assigned by default.
+
 {% endinfo_block %}
 
 3.Click **Submit**.

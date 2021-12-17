@@ -19,12 +19,12 @@ To be able to perform the tasks, you need to be logged into an Agent Account. Tr
 {% endinfo_block %}
 
 A Sales Representative can manage the RFQs by:
-
 * Viewing the RFQs for the company.
 * Editing the items in the RFQ.
 * Suggesting prices by editing them directly in the RFQs.
 * Creating RFQs for customers.
 ***
+
 ## Viewing the RFQs
 
 To view the RFQs created both by yourself as a Sales Representative or by customers, hover over the **Quote Request Widget** in the header. In the **Quote Request Widget**, 5 last RFQs are shown. To view all the RFQs, click **View all requests** in the **Quote Request Widget**.

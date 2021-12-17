@@ -24,7 +24,6 @@ This article describes how you, as a Buyer, can manage products in the Storefron
 You, as a Buyer, can manage and perform all the actions on products from the **Product detail page** as well as view main details of the specific product, for example, a price, a product SKU, general description of the product, customer reviews, and other relevant information you may be interested in before making a final purchase decision.
 ***
 You can navigate to a product detail page from:
-
 * Home page by clicking a product card
 * Catalog page by clicking a product card
 * Shopping list by clicking a product name
@@ -81,7 +80,9 @@ To sum up, on the product detail page, you can do the following:
 * Add the product to the shipping list or wishlist (if applicable for the shop)
 * Set a rating and share your feedback about the product
 * Navigate to the PDP pages of other products displayed on the page
+
 ***
+
 ## Adding a Product to Cart
 
 {% info_block warningBox "If you have the Multiple Carts feature enabled, then:" %}
@@ -106,6 +107,7 @@ You have the following options to select the shopping cart:
 
 ![Add to cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/add-to-cart-howto.png)
 ***
+
 ## Adding a Product to Shopping List
 
 {% info_block warningBox %}
@@ -126,8 +128,11 @@ You can order frequently bought products faster by adding the products to a [sho
 **Tips & Tricks**
 
 If you have no shopping lists created in your account, a drop-down list with shopping lists will be unavailable. Clicking **Add to Shopping list** will create a new shopping list with the default name ‘Shopping List’ and add the product to it.
+
 ***
+
 ## Adding a Product Review
+
 With the [Product Reviews](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html) feature, you can share your experience or feedback about using the product.
 
 **To add a review:**

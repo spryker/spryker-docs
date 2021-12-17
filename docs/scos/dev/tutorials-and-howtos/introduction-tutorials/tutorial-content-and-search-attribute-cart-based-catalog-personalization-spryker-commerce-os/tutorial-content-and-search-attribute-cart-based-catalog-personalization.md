@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Content and Search - Attribute-Cart-Based Catalog Personalization - Spryker Commerce OS
+title: Tutorial - Content and Search - Attribute-Cart-Based Catalog Personalization
 description: The tutorial provides a step-by-step solution on how you can arrange your products in the cart by a color attribute
 last_updated: Jun 16, 2021
 template: concept-topic-template

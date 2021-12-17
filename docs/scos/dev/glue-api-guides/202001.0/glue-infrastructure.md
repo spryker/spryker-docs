@@ -16,7 +16,7 @@ Spryker API infrastructure is implemented as a separate layer of Spryker Commerc
 
 **Before You Begin**
 Consider studying the following documents before you begin:
-- [JSON API Specification](https://jsonapi.org/format/implemented) in Spryker
+- [JSON API Specification](https://jsonapi.org/implementations) in Spryker
 - [Swagger Tools Reference](https://swagger.io/) to know how to document your API
 - [REST API Modelling Reference](https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling)
 

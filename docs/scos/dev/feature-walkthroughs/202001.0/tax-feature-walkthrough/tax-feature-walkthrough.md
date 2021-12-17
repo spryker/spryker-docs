@@ -17,8 +17,8 @@ To learn more about the feature and to find out how end users use it, see [Tax f
 
 ## Related Developer articles
 
-| MIGRATION GUIDES | GLUE API GUIDES | 
+| MIGRATION GUIDES |
 |---|---|
-|Tax migration guide | [Retrieving tax sets](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-tax-sets.html) | |
+|Tax migration guide |
 
 

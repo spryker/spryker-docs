@@ -30,7 +30,7 @@ The endpoints provided by this API cannot be accessed anonymously. To access the
 In your development, the endpoint can help you to identify the roles existing in the company of the currently logged in user.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html#glue-api--company-account-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html).
 
 ## Retrieving Company Role Information
 ### Roles Performed by the Current User

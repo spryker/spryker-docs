@@ -6,11 +6,9 @@ template: concept-topic-template
 
 ## What is FeS?
 
-
-
 ## What is the purpose of FeS?
 
-Enables projects to launch multiple front ends quickly. Content managers can quickly request changes. Developers can quickly apply and deploy the changes.
+Enables projects to launch multiple Storefronts quickly. Content managers can quickly request changes. Developers can quickly apply and deploy the changes.
 
 Simplifies front-end creating for both developers and content managers. Enables them to collaborate on creating complex front ends via a simple interface.
 
@@ -24,20 +22,16 @@ FeS is designed to be used by developers and content managers.
 
 ## How does FeS work?
 
+## FeS Architecture
 
+### Fes API
 
-### FeS Architecture
+### What is the launchpad?
 
-#### Fes API
+#### Launchpad architecture
 
+### What is the Vue Storefront?
 
-
-
-### What is a launchpad?
-
-### What is a feature?
-
-### What is a template?
-
+#### What's Vue Storefront's architecture within Spryker?
 
 ## What project can use FeS?

@@ -26,7 +26,7 @@ For example, to create a new *sample-category* category and a *foo-bar* page und
 
 {% info_block warningBox "Warning" %}
 
-Currently, the maximum nesting level in the documentation categories is 3. This means that for each category you can have only one sub-category. For example, `marketplace/user/features/20201.08/merchant/`, where `features` is the category (first level of nesting), `202108.0` is the version (does not affect the level of nesting) `merchant` is the sub-category (second level of nesting). The third level of nesting would be the .md files under the sub-category.
+Currently, the maximum nesting level in the documentation categories is 3. This means that for each category you can have only one sub-category. For example, `marketplace/user/features/202108.0/merchant/`, where `features` is the category (first level of nesting), `202108.0` is the version (does not affect the level of nesting) `merchant` is the sub-category (second level of nesting). The third level of nesting would be the .md files under the sub-category.
 
 {% endinfo_block %}
 
@@ -40,8 +40,8 @@ You can use any valid URL characters in the names of your document files or cate
 
 To keep our docs consistent, we have templates for all types of documents. The templates are stored in the [_templates](https://github.com/spryker/spryker-docs/tree/master/_templates) directory. Therefore, every time you need to create a new document, pick the right template from this folder, copy it to your new page, and write the document based on the structure of the template and instructions therein.
 
-| TEMPLATE                                                     | DESCRIPTION                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| TEMPLATE   | DESCRIPTION  |
+| ---------------- | ---------------- |
 | [back-office-user-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/back-office-user-guide-template.md) | Use this template for creating [Back Office user guides](/docs/scos/user/back-office-user-guides/{{site.version}}/customer/customer-customer-access-customer-groups/managing-customers.html) or [Merchant Portal user guides.](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/offers/managing-product-offers.html) |
 | [concept-topic-template](https://github.com/spryker/spryker-docs/blob/master/_templates/concept-topic-template.md) | Use this template for creating general and technical conceptual topics, such as [feature overviews](/docs/scos/user/features/{{site.version}}/catalog-feature-overview.html) or [technical articles](/docs/marketplace/dev/front-end/angular-components.html). |
 | [feature-walkthrough-template](https://github.com/spryker/spryker-docs/blob/master/_templates/feature-walkthrough-template.md) | Use this template for creating feature [walkthrough guides](/docs/marketplace/dev/feature-walkthroughs/{{site.version}}/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html). |
@@ -78,15 +78,15 @@ related:
 ---
 ```
 
-| FRONT MATTER PARAMETER | DESCRIPTION   | FORMAT | REQUIRED? |
-| ---------------------- | ---------- | -------- | --------- |
-| title                  | The name of the document.                                    | Example title                                                | *✓*       |
-| description            | Short description of what this page is about.                | Learn how to use the front matter.                              | *✓*       |
-| last_updated           | Last updated date of the page to be displayed on the website. | Jun 16, 2021                                                 |           |
-| template               | [Template](https://github.com/spryker/spryker-docs/tree/master/_templates) based on which the page was created. | feature-integration-guide-template                           | *✓*       |
-| tags                   | Tags                                                         | [B2B], [B2C]                                                    |           |
-| redirect_from          | Allows setting up redirects for pages whose location changes or pages that are completely deleted from the documentation. To set up a redirect, press the **tab** button and enter the path starting with `/docs` and containing the exact version, if the document is [versioned](#page-version). | /path/to/a/file.html                                         |           |
-| related                | Shows the list of articles related to the page you are on. To add a related article, press the **tab** button and enter the name of the article in the `title` parameter and the link to the file in the`link` parameter <br />Mind the _link_ parameter: no dash before _link_, no slash before _docs_<br />{% info_block warningBox "Warning" %}<br />Always use _page.version_ in the link for related articles, even for unversioned articles!<br />{% endinfo_block %} | - title: Title of the related page<br/>   link: path/to/a/file.html |           |
+| FRONT MATTER PARAMETER | DESCRIPTION   | FORMAT WITH EXPLANATION | EXAMPLE | REQUIRED? |
+| ---------------------- | ---------- | -------- | --------- | ---------|
+| title                  | The name of the document.  | Text. Keep in mind, that if you have special characters in title like column or apostrophe, the title should be in single quotes.  |   <ul><li>Creating product lists</li><li>'HowTo - Force HTTPS'</li></ul> | *✓*       |
+| description            | Short description of what this page is about. |  Sentence.   | Learn how to use the front matter.  | *✓*       |
+| last_updated           | Last updated date of the page to be displayed on the website. | Date in the format: Mon-DD-YYYY (month abbreviation, day with leading zeros, year)  | Jun 16, 2021  |           |
+| template               | [Template](#templates) based on which the page was created. |  Name of the template from [Github repository](https://github.com/spryker/spryker-docs/tree/master/_templates) excluding the extension of the file (.md). | feature-integration-guide-template | *✓*       |
+| tags                   | Tag names. |  The name of the tag in brackets. |  [B2B], [B2C] |           |
+| redirect_from          | Allows setting up redirects for pages whose location changes or pages that are completely deleted from the documentation. To set up a redirect, press the **tab** button and enter the path starting with `/docs` and containing the exact version, if the document is [versioned](#page-version). | - /path/to/a/file.html  | -/docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting.html  |          |
+| related                | Shows the list of articles related to the page you are on. To add a related article, press the **tab** button and enter the name of the article in the `title` parameter and the link to the file in the `link` parameter. |  Mind the _link_ parameter: no dash before _link_, no slash before _docs_.<br />{% info_block warningBox "Warning" %}<br />Always use _page.version_ in the link for related articles, even for unversioned articles!<br />{% endinfo_block %} | - title: Title of the related page<br/>   link: path/to/a/file.html |           |
 
 You can read more about front matter on the [Jekyll's official website](https://jekyllrb.com/docs/front-matter/).
 
@@ -99,20 +99,19 @@ Once a new document is created, it must be added to the sidebar navigation. Keep
 Each _product/realm_ set has its own sidebar, which is represented by a YAML file in the [_data/sidebar](https://github.com/spryker/spryker-docs/tree/master/_data/sidebars) directory. The sidebar name is `{product}_{realm}_sidebar.yml`. So, for example, for Marketplace user documentation, the sidebar file would be called `marketplace_user_sidebar.html`. The sidebar consists of the list of files files that are present in the navigation. As a best practice, as soon as you create a new page, add it to your sidebar (so you don’t forget about the page).
 
 ```
-- title: Sample category
-  output: web
-  folderitems:
-    - title: Foo bar
-      url: /docs/marketplace/user/sample-category/foo-bar.html
-      output: web 
+- product: SCOS
+  nested:
+  - title: Sample category
+    nested:
+    - title: Intro to Spryker
+      url: /docs/scos/user/sample-category/foo-bar.html
 ```
 
+- The **product** key represents the top level category for the sidebar. It is entered once at the top of the sidebar.
+- The **nested** key describes the nested items of the category - pages or sub-categories.
 - The first **title** key sets the category name as it will be displayed in the sidebar.
-- The **output** key must be preset and must be always set to *web.*
-- The **folderitems** key describes the nested items of the category - pages or sub-categories.
 - The second **title** key in this example sets the page title.
 - The **url** key must specify the absolute URL to the document page.
-- The second **output** key must also be present.
 
 ### Creating landing pages for the main categories
 
@@ -135,7 +134,7 @@ If you now open the Glue API guides category, your page will look like this:
 
 ## Working with versions
 
-We have two types of versions: page versions and the global website version. Page versions are 
+We have two types of versions: page versions and the global website version.
 
 The versions are managed in the *config.yml* file*. 
 
@@ -153,11 +152,11 @@ To add a new version for the versioned categories:
 
 ![files list](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/files-list.png)
 
-You can make a reference to the currently opened version of the versioned page using the `{{page.version}}` variable in text and in links. For example, if you open a document in version `202108.0` in the editor and write there:
+You can make a reference to the currently opened version of the versioned page using the `{% raw %}{{page.version}}{% endraw %}` variable in text and in links. For example, if you open a document in version `202108.0` in the editor and write there:
 
 ```
 This feature requires version {{page.version}} of the Merchants feature.
-For details on the feature, see [Merchant feature overview](/docs/marketplace/user/features/{{page.version}}/merchants/merchants-feature-overview.html).
+For details on the feature, see [Merchant feature overview](/docs/marketplace/user/features/{% raw %}{{page.version}}{% endraw %}/merchants/merchants-feature-overview.html).
 ```
 
 on the website, your text will look like this:
@@ -169,7 +168,7 @@ For details on the feature, see Merchant feature overview(link to merchants-feat
 
 {% info_block infoBox "Info" %}
 
-You can use the `{{page.version}}` variable only when you refer to versioned pages on versioned pages. To make a reference to the latest page version on a versioned page to an unversioned page, use the `{{site.version}}` variable described in the next section. To make a reference on an unversioned page to an unversioned page, do not use any variable.
+You can use the `{% raw %}{{page.version}}{% endraw %}` variable only when you refer to versioned pages on versioned pages. To make a reference to the latest page version on a versioned page to an unversioned page, use the `{% raw %}{{site.version}}{% endraw %}` variable described in the next section. To make a reference on an unversioned page to an unversioned page, do not use any variable.
 
 {% endinfo_block %}
 
@@ -179,10 +178,10 @@ The *global version* is the main website version. Usually, we make the version o
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/site-version.png)
 
-To make a reference to the main (last) website version on either versioned or unversioned pages, use the `{{site.version}}`. For example, if the main version of your website is 2020109.0, if you write 
+To make a reference to the main (last) website version on either versioned or unversioned pages, use the `{% raw %}{{site.version}}{% endraw %}`. For example, if the main version of your website is 2020109.0, if you write 
 
 ```
-For details on the feature, see [Merchant feature overview](/docs/marketplace/user/features/{{site.version}}/merchants/merchants-feature-overview.html).
+For details on the feature, see [Merchant feature overview](/docs/marketplace/user/features/{% raw %}{{site.version}}{% endraw %}/merchants/merchants-feature-overview.html).
 ```
 
 the `Merchant feature overview` link will take the user to the `Merchant feature overview` article in version 2020109.0.
@@ -209,10 +208,10 @@ This command only solves the problem by being specific to the current project.
 
 Jekyll supports a Liquid templating system. All features can be found on page [Liquid](https://shopify.github.io/liquid/basics/introduction/).
 
- Beware that Liquid syntax uses the same tags as Twig. To prevent Twig tags processing use *{% raw %} //Twig template {% endraw %}*
+Beware that Liquid syntax uses the same tags as Twig. To prevent Twig tags processing use *{% raw %} //Twig template {% endraw %}*
 
- In case, your page requires a Twig code sample to be inserted, enter the above-mentioned placeholder in the beginning and at the end of the code sample. Example:
+In case, your page requires a Twig code sample to be inserted, enter the above-mentioned placeholder in the beginning and at the end of the code sample. Example:
 
- ![liquid syntax](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/liquid-syntax.png)
+![liquid syntax](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/liquid-syntax.png)
 
- To get rid of the extra lines in the code sample, use *{%- raw -%}code sample{% endraw %}* placeholder.
+To get rid of the extra lines in the code sample, use *{%- raw -%}code sample{% endraw %}* placeholder.

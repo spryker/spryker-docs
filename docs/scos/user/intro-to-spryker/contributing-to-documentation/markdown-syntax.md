@@ -112,7 +112,7 @@ Generally, Markdown does not support lists in tables. That's why we write the li
 Ordered list in table syntax:
 
 ```md
-|{table header}|{table header}|
+|{Table header}|{Table header}|
 | --- | --- |
 |{text}|<ol><li>{text}</li><li>{text}</li></ol>|
 
@@ -133,11 +133,11 @@ This section describes the Markdown syntax of the notes used only in certain sce
 Verification notes are usually used in guides. They describe what a reader can do to find out if the action they have performed was successful. Use the following Markdown syntax for the verification notes:
 
 ```
-{% info_block warningBox "Verification" %}
+{% raw %}{% info_block warningBox "Verification" %}{% endraw %}
 
-{The verification step}
+The verification step
 
-{% endinfo_block %}
+{% raw %} {% endinfo_block %}{% endraw %}
 ```
 Verification example:
 
@@ -160,57 +160,64 @@ Make sure that the following modules have been installed in `vendor/spryker`:
 - Info syntax:
 
 ```
-{% info_block infoBox "Info" %}
+{% raw %}{% info_block infoBox "Info" %}{% endraw %}
 
 Your content
 
-{% endinfo_block %}
+{% raw %}{% endinfo_block %}{% endraw %}
 ```
+
 Info example:
 
-{% info_block infoBox "Secured variables" %}
+```
+{% raw %}{% info_block infoBox "Secured variables" %}{% endraw %}
 
 To make the values of environment variables hidden in logs, set up secured variables.
 
-{% endinfo_block %}
+{% raw %}{% endinfo_block %}{% endraw %}
+```
 
 - Warning syntax:
 
 ```
-{% info_block warningBox "Warning" %}
+{% raw %}{% info_block warningBox "Warning" %}{% endraw %}
 
 Your content
 
-{% endinfo_block %}
+{% raw %}{% endinfo_block %}{% endraw %}
 
 ```
 
 Warning example:
 
-{% info_block warningBox "Important Note" %}
+```
+{% raw %}{% info_block warningBox "Important Note" %}{% endraw %}
 
 Ensure that Back Office is protected by a secure VPN connection.
 
-{% endinfo_block %}
+{% raw %}{% endinfo_block %}{% endraw %}
+```
 
 - Error syntax:
 
 ```
-{% info_block errorBox "Error" %}
+{% raw %}{% info_block errorBox "Error" %}{% endraw %}
 
 Your content
 
-{% endinfo_block %}
+{% raw %}{% endinfo_block %}{% endraw %}
 
 ```
 
 Error example:
 
-{% info_block errorBox %}
+```
+{% raw %}{% info_block errorBox %}{% endraw %}
 
 An entity cannot have a store relation and SynchronizationPool defined for it simultaneously.
 
-{% endinfo_block %}
+{% raw %}{% endinfo_block %}{% endraw %}
+```
 
 {% info_block infoBox "Info" %}
 
@@ -321,7 +328,7 @@ Published table:
 If you have a table column with cells containing both the code snippets and supported content, do the following:
 
 1. Place the code snippets below the table as described in step 2 of [Only code snippets](#only-code-snippets).
-2. Into the cell or cells from which you removed the code snippets, add See **{drop-down toggle button}** below the table.
+2. Add a `See **[drop-down toggle button]** below` the table into the cell or cells from which you removed the code snippets.
 
 See the example below:
 
@@ -331,13 +338,12 @@ Source table:
 
 Published table:
 
-<div>
+
 | FUNCTION NAME | DESCRIPTION | METHOD SIGNATURE | USAGE EXAMPLE |
 | --- | --- | --- | --- |
-| `model` | Resolves a model path and returns a string in the following format: `@ShopUi/models/{modelName}.twig`. | function model($modelName: string): string <ul><li>$modelName - model name (required).</li></ul> | `{% raw %}{% extends model('component') %}{% endraw %}` | 
-| `define` | This function is used for: <ul><li>creating a default object that can be changed from an incoming context;</li><li>defining tags used to pass properties and contract for a specific component.</li></ul> | | See **Usage Example: define** below. |
-| `qa` | Returns a string in the following format: `data-qa="qa values here"` | `function qa($qaValues: string[] = []): string` | `{% raw %}{{ qa('submit-button') }}{% endraw %}` |
-</div>
+| `model` | Resolves a model path and returns a string in the following format: `{% raw %}@ShopUi/models/{modelName}.twig{% endraw %}`. | `{% raw %}function model($modelName: string){% endraw %}`: string `{% raw %}$modelName{% endraw %}` - model name (required). | `{% raw %}{% extends model('component') %}{% endraw %}` | 
+| `define` | This function is used for: creating a default object that can be changed from an incoming context and defining tags used to pass properties and contract for a specific component. | | See **Usage Example: define** below. |
+| `qa` | Returns a string in the following format: `{% raw %}data-qa="qa values here"{% endraw %}` | `{% raw %}function qa($qaValues: string[] = []): string{% endraw %}` | `{% raw %}{{ qa('submit-button') }}{% endraw %}` |
 
 <details open>
 <summary>Usage Example: define</summary>
@@ -399,13 +405,12 @@ Click **More** <div class="inline-img">![google-chrome-more-button](link-to-an-i
 
 ## Adding Wistia videos
 
-To add a link to a Wistia video, use the following code: `{% wistia {{wistia video code}} %}`, where `{video code}` is the Wistia's video code. For example, if you want to add video `https://fast.wistia.com/embed/medias/eiw5ev4gv2/`, your code should be: `{% wistia eiw5ev4gv2 %}`.
+To add a link to a Wistia video, use the following code: `{% raw %} {% wistia {{wistia video code}} %}{% endraw %}`, where `{video code}` is the Wistia's video code. For example, if you want to add video `https://fast.wistia.com/embed/medias/eiw5ev4gv2/`, your code should be: `{% raw %}{% wistia eiw5ev4gv2 %}{% endraw %}`.
 
 You can also set video’s width and height. For example:
 
-​```md
-{% wistia eiw5ev4gv2 960 720 %}
-```
+`{% raw %}{% wistia eiw5ev4gv2 960 720 %}{% endraw %}`
+
 where 
 960 - is the video’s width 
 720 - is the video’s height
@@ -442,13 +447,3 @@ Glossary example:
 
 >A YAML file defining Spryker infrastructure and services for Spryker tools used to deploy Spryker applications in different environments.
 ```
-
-## Inline code issues
-
-You may encounter an inline code piece that contains Markdown syntax symbols.  For example, “You also need to update Price` >= 4.* and PriceCartConnector` >= 3.* as they provide additional data…”. In this case, we get the following:
-
-- Desired output - “You also need to update `Price` >= 4.* and PriceCartConnector` >= 3.*` as they provide additional data…”. 
-- Usual Markdown syntax - `You also need to update `Price` >= 4.* and PriceCartConnector` >= 3.*` as they provide additional data…`
-- Because of the grave accents (`) in the inline code piece being part of the Markdown syntax, the actual output is - “You also need to update `Price` >= 4.* and PriceCartConnector `>= 3.*` as they provide additional data…”
-
-Avoid this issue by replacing grave accents in the inline code piece with triple grave accents  ( ``` ) -  `You also need to update ```Price` >= 4.* and PriceCartConnector` >= 3.*``` as they provide additional data…`

@@ -1,7 +1,7 @@
 ---
 title: Marketplace Merchant Portal Core feature + CMS integration
 last_updated: Mar 31, 2021
-description: This document describes how to integrate the Merchant Portal Core feature into a Spryker project.
+description: This document describes how to integrate the Merchant Portal Core + CMS feature into a Spryker project.
 template: feature-integration-guide-template
 ---
 
@@ -17,9 +17,9 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | -------------------- | ---------- | ---------|
-| Spryker Core         | dev-master | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
-| CMS      | 202009.0 | [Spryker CMS feature integration](https://documentation.spryker.com/docs/cms)
-| Marketplace Merchant Portal Core | dev-master | [Marketplace Merchant Portal Cor](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/merchant-portal-core-feature-integration.html)
+| Spryker Core         | {{page.version}} | [Spryker Core feature integration](https://documentation.spryker.com/docs/spryker-core-feature-integration) |
+| CMS      | {{page.version}} | [Spryker CMS feature integration](https://documentation.spryker.com/docs/cms)
+| Marketplace Merchant Portal Core | {{page.version}} | [Marketplace Merchant Portal Core](/docs/marketplace/dev/feature-integration-guides/{{ page.version }}/merchant-portal-core-feature-integration.html)
 
 ###  1) Create merchant restore password email templates
 

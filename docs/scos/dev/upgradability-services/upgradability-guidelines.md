@@ -1,5 +1,5 @@
 ---
-title: Upgradability reference
+title: Upgradability guidelines
 description: Reference information for evaluator and upgrader tools.
 last_updated: Nov 25, 2021
 template: concept-topic-template

@@ -22,13 +22,13 @@ FeS is designed to be used by developers and content managers.
 
 ## How does FeS work?
 
-## FeS Architecture
+## What's the architecture of FeS?
 
-### Fes API
+### How does FeS use Glue API?
 
 ### What is the launchpad?
 
-#### Launchpad architecture
+#### What's the launchpad's architecture?
 
 ### What is the Vue Storefront?
 

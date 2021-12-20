@@ -31,13 +31,13 @@ The following table summarizes differences between the Abstract Products and the
 
 | Product data | Abstract Product | Product Variant |
 | --- | --- | --- |
-| SKU | v | v |
-| Name | v | v |
-| Description | v | v |
-| Product attributes | v | v |
-| Super attributes |  | v |
-| Media assets | v | v |
-| Stock |  | v |
+| SKU | ✓ | ✓ |
+| Name | ✓ | ✓ |
+| Description | ✓ | ✓ |
+| Product attributes | ✓ | ✓ |
+| Super attributes |  | ✓ |
+| Media assets | ✓ | ✓ |
+| Stock |  | ✓ |
 
 ## Products Behavior on the Storefront
 On the Storefront, only Abstract Products appear in the Product Catalog and can be searched for. The  Product Variants are always a part of an Abstract Product. Therefore, Abstract Product and all its Product Variants share the same URL.

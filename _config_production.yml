@@ -1,0 +1,6 @@
+plugins:
+  - jekyll-feed
+  - jekyll-last-modified-at
+  - jekyll-include-cache
+  - jekyll-redirect-from
+

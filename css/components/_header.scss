@@ -1,0 +1,334 @@
+.main-header {
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: $header-min-height-widescreen;
+
+    @include media("<laptop") {
+        min-height: $header-min-height-desktop;
+    }
+
+    @include media("<desktop") {
+        min-height: 0;
+    }
+
+    .scroll-down & {
+        @include media("<desktop") {
+            pointer-events: none;
+        }
+    }
+
+    .home-layout &,
+    .search-layout & {
+        pointer-events: auto;
+    }
+
+    &__bg {
+        background: $header-bg-color;
+        box-shadow: 0px 6px 10px 0px rgba($black, 0.05),
+        0px 1px 0px 0px $grey-light,
+        0px 1px 2px 0px rgba($black, 0.05);
+        transition: transform .3s linear, padding .2s linear;
+        padding: 15px 0;
+
+        @include media("<laptop") {
+            padding: 7px 0;
+        }
+
+        @include media("<tablet") {
+            padding: 5px 0;
+        }
+
+        .scroll-down & {
+            @include media("<desktop") {
+                transform: translateY(-128px);
+            }
+            @include media("<tablet") {
+                transform: translateY(-114px);
+            }
+        }
+
+        .toc-active & {
+            @include media("<tablet") {
+                transform: translateY(0);
+            }
+        }
+
+        .page-scrolled & {
+            @include media(">=desktop") {
+                padding: 10px 0;
+            }
+        }
+
+        .home-layout &,
+        .search-layout & {
+            transform: none;
+
+            @include media(">=desktop") {
+                padding: 15px 0;
+            }
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        flex: 1 1 auto;
+
+        &-inner {
+            display: flex;
+            align-items: center;
+            flex: 0 1 auto;
+            position: relative;
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        padding: 0 0 0 15px;
+        flex: 0 0 auto;
+
+        @include media("<laptop") {
+            padding: 0 0 0 24px;
+        }
+
+        .main-header__button {
+            @include media("<tablet") {
+                display: none;
+            }
+        }
+    }
+
+    &__logo {
+        display: block;
+        margin: 0 24px 0 0;
+        flex: 0 0 auto;
+
+        @include media("<tablet") {
+            width: auto;
+            margin: 0 20px 0 0;
+        }
+
+        @include media(">=desktop") {
+            min-width: 155px;
+        }
+
+        img {
+            display: block;
+            width: auto;
+            height: 64px;
+            transition: height .1s linear, opacity .2s linear;
+
+            @include media("<tablet") {
+                height: 54px;
+            }
+
+            .page-scrolled & {
+                @include media(">=desktop") {
+                    height: 40px;
+                    opacity: 0;
+                    pointer-events: none;
+                }
+            }
+
+            .home-layout &,
+            .search-layout & {
+                @include media(">=desktop") {
+                    height: 64px;
+                    opacity: 1;
+                    pointer-events: auto;
+                }
+            }
+        }
+    }
+
+    &__meta {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        flex: none;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.2s linear, transform 0.3s linear;
+        transform: scale(0);
+        transform-origin: 0 50%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include media("<desktop") {
+            display: none;
+        }
+
+        .page-scrolled & {
+            @include media(">=desktop") {
+                pointer-events: auto;
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .home-layout &,
+        .search-layout & {
+            @include media(">=desktop") {
+                display: none;
+            }
+        }
+
+        &-title {
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 16px;
+            line-height: 1.25;
+            font-weight: 800;
+            color: $grey-dark;
+            margin: 0 0 4px;
+        }
+
+        &-subtitle {
+            display: block;
+            font-size: 12px;
+            line-height: 1.25;
+            color: $grey-6;
+        }
+    }
+
+    &__button {
+        .icon-rss {
+            font-size: 16px;
+        }
+    }
+
+    &__search {
+        position: relative;
+        z-index: 3;
+        flex: 1 1 auto;
+        max-width: 612px;
+
+        &-icon {
+            position: absolute;
+            z-index: 4;
+            pointer-events: none;
+            color: $grey;
+            font-size: 16px;
+            top: 10px;
+            left: 5px;
+        }
+
+        input[type="text"],
+        input[type="search"] {
+            display: block;
+            width: 100%;
+            height: 40px;
+            padding: 6px 40px 12px;
+            border: 1px solid transparent;
+            border-bottom-color: $grey-lighten;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 500;
+            color: $grey-darker;
+            background: none;
+            outline: none;
+            outline-width: 0;
+            letter-spacing: .02em;
+            transition: color .3s linear, background .3s linear, border-color .3s linear;
+
+            @include media("<desktop") {
+                height: 56px;
+                padding: 17px 40px;
+                color: $grey-lighten;
+            }
+
+            @include placeholder {
+                color: $grey;
+                transition: opacity 0.2s linear;
+            }
+
+            &:focus {
+                border-bottom-color: $darkest;
+
+                @include placeholder {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    &__search-opener {
+        margin: 0 24px 0 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        color: $grey;
+        transition: .3s linear opacity;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        @include media("<desktop") {
+            display: flex;
+        }
+
+        [class*="icon-"] {
+            font-size: 26px;
+        }
+
+        .home-layout & {
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        &.under-search {
+            .home-layout & {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.header-switcher {
+    position: relative;
+
+    &__sticky {
+        pointer-events: none;
+        opacity: 0;
+        transition: color .3s linear, background .3s linear, border-color .3s linear, box-shadow .3s linear, .3s linear opacity;
+
+        .page-scrolled & {
+            pointer-events: auto;
+            opacity: 1;
+        }
+
+        &:after {
+            content: none !important;
+        }
+    }
+
+    &__default {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: color .3s linear, background .3s linear, border-color .3s linear, box-shadow .3s linear, .3s linear opacity;
+
+        .page-scrolled & {
+            pointer-events: none;
+            opacity: 0;
+        }
+    }
+}

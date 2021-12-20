@@ -1,4 +1,4 @@
-{% info_block warningBox "Warning" %}
+{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in transfer objects:
 

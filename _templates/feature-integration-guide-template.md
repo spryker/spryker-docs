@@ -16,8 +16,6 @@ description: {Meta description}
 tags: [, ]
 ---
 
-
-
 # {Feature Name} feature integration
 
 This document describes how to integrate the [Feature Name feature]({link to a respective feature overview}) into a Spryker project.
@@ -29,12 +27,12 @@ Follow the steps below to install the {Feature Name} feature core.
 ### Prerequisites
 <!-- List the features a project must have before they can integrate the current feature. -->
 
-To start feature integration, integrate the required features:
+To start feature integration, integrate the required features and Glue APIs:
 <!--See feature mapping at [Features](https://release.spryker.com/features). -->
 
-| NAME           | VERSION           |
-| -------------- | ----------------- |
-| {Feature Name} | {feature version} |
+| NAME           | VERSION           | INTEGRATION GUIDE |
+| -------------- | ----------------- | ----------------- |
+| {feature name / Glue API name} | {feature version} | {integration guide link} |
 
 ### 1) Install the required modules using Composer
 <!--Provide one or more console commands with the exact latest version numbers of all required modules. If the Composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
@@ -70,11 +68,11 @@ Add the following configuration:
 {code sample with the updated configuration}
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
+
 <!--Describe how a developer can check they have completed the step correctly.-->
 
----
+{% endinfo_block %}
 
 
 ### Set up database schema and transfer objects
@@ -304,7 +302,7 @@ Expected data fragment example:
 
 Import data as follows:
 
-1. Prepare your data according to your requirements using our demo data:
+1. Prepare your data according to your requirements using the demo data:
 
 ```csv
 {demo data}
@@ -312,7 +310,7 @@ Import data as follows:
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DESCRIPTION |
 | -------- | ------------- | --------------- | --------- |
-| {column_name} | {✓ /  } | {data_type} | {example_of_column_data} | {description} |
+| {column_name} | {&check; /  } | {data_type} | {example_of_column_data} | {description} |
 
 2. Import data:
 
@@ -403,12 +401,12 @@ Follow the steps below to install the {Feature Name} feature front end.
 ### Prerequisites
 <!--Describe the features the project must have before the current feature can be integrated.-->
 
-To start feature integration, integrate the required features:
-<!--See feature mapping at [Features](https://release.spryker.com/features).-->
+To start feature integration, integrate the required features and Glue APIs:
+<!--See feature mapping at [Features](https://release.spryker.com/features). -->
 
-| NAME           | VERSION           |
-| -------------- | ----------------- |
-| {Feature Name} | {feature version} |
+| NAME           | VERSION           | INTEGRATION GUIDE |
+| -------------- | ----------------- | ----------------- |
+| {feature name / Glue API name} | {feature version} | {integration guide link} |
 
 ### 1) Install the required modules using Composer
 <!--Provide the console command\(s\) with the exact latest version numbers of all required modules. If the Composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
@@ -489,8 +487,8 @@ Set up widgets as follows:
 {code snippet with provider setup}
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
+
 <!--Describe how a developer can check they have completed the step correctly.-->
 
 Make sure that the following widgets have been registered by adding the respective code snippets to a Twig template:
@@ -498,6 +496,8 @@ Make sure that the following widgets have been registered by adding the respecti
 | WIDGET   | VERIFICATION                  |
 | -------- | ----------------------------- |
 | {widget} | {steps to verify the changes} |
+
+{% endinfo_block %}
 
 2. Enable Javascript and CSS changes:
 
@@ -510,8 +510,9 @@ console frontend:yves:build
 
 
 ## Related features
-Integrate the following related features:
 
-| FEATURE        | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+Integrate the following related features and Glue APIs:
+
+| NAME        | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | -------------- | -------------------------------- | ----------------- |
-| {Feature Name} | {✓ /  }    | [{Integration guide name}](link to the integration guide) |
+| {feature name / Glue API name} | {&check; /  }    | [{Integration guide name}](link to the integration guide) |

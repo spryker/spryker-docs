@@ -1,6 +1,6 @@
-version: "202106.0"
+version: "202108.0"
 
-repository: spryker/spryker.github.io
+repository: spryker/spryker-docs
 
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
@@ -14,10 +14,10 @@ site_title: Spryker Documentation
 company_name: Spryker
 # this appears in the footer
 
-github_editme_path: spryker/spryker.github.io/blob/master/
+github_editme_path: spryker/spryker-docs/blob/master/
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
-google_analytics: ""
+google_analytics: "G-CPJX4XMTD1"
 # if you have google-analytics ID, put it in. if not, edit this value to blank.
 
 feedback_disable: true
@@ -46,6 +46,10 @@ exclude:
   - package.json
   - package-lock.json
   - gulpfile.js
+  - redirect.html
+  - docs/scos/dev/drafts-dev/
+  - docs/scos/dev/developers-corner/
+
 # these are the files and directories that jekyll will exclude from the build
 
 highlighter: rouge
@@ -54,10 +58,11 @@ highlighter: rouge
 markdown: CommonMarkGhPages
 commonmark:
   options: ["SMART", "FOOTNOTES"]
-  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
+  extensions: ["strikethrough", "autolink", "table"]
 
 plugins:
-  - jekyll-feed
+  - jekyll-last-modified-at
+  - jekyll-include-cache
 
 # filter used to process markdown. note that kramdown differs from github-flavored markdown in some subtle ways
 
@@ -71,34 +76,66 @@ defaults:
       comments: false
       search: true
       topnav: topnav
-  - scope:
-      path: "docs/marketplace"
-      type: "pages"
+  -
+    scope:
+      path: "docs/"
     values:
-      product: marketplace
+      feed: true
+  -
+    scope:
+      path: "docs/marketplace"
+    values:
+      product: "marketplace"
   -
     scope:
       path: "docs/marketplace/dev"
-      type: "pages"
     values:
-      sidebar: marketplace_dev_sidebar
-      product-type: 'marketplace/dev'
+      sidebar: "marketplace_dev_sidebar"
       role: "dev"
   -
     scope:
       path: "docs/marketplace/user"
-      type: "pages"
     values:
-      sidebar: marketplace_user_sidebar
-      product-type: 'marketplace/user'
+      sidebar: "marketplace_user_sidebar"
       role: "user"
-
-# version-related scopes
   -
     scope:
-      path: "docs/**/202106.0"
+      path: "docs/scos"
     values:
-      version: "202106.0"
+      product: "scos"
+  -
+    scope:
+      path: "docs/scos/dev"
+    values:
+      sidebar: "scos_dev_sidebar"
+      role: "dev"
+  -
+    scope:
+      path: "docs/scos/user"
+    values:
+      sidebar: "scos_user_sidebar"
+      role: "user"
+  -
+    scope:
+      path: "docs/cloud"
+    values:
+      product: "cloud"
+  -
+    scope:
+      path: "docs/cloud/dev"
+    values:
+      sidebar: "cloud_dev_sidebar"
+      role: "dev"
+
+versions:
+  '201811.0': '201811.0'
+  '201903.0': '201903.0'
+  '201907.0': '201907.0'
+  '202001.0': '202001.0'
+  '202005.0': 'Code releases 05.20'
+  '202009.0': '202009.0'
+  '202108.0': '202108.0'
+  '202200.0': 'Upcoming'
 
 # versioned categories - these must match corresponding directories
 versioned_categories:
@@ -109,15 +146,37 @@ versioned_categories:
       - merchant-portal-user-guides
     dev:
       - feature-integration-guides
+      - feature-walkthroughs
       - glue-api-guides
       - data-import
       - data-export
+      - legacy-demoshop
+  scos:
+    user:
+      - features
+      - back-office-user-guides
+      - technology-partners
+      - shop-user-guides
+    dev:
+      - feature-walkthroughs
+      - feature-integration-guides
+      - data-import
+      - data-export
+      - glue-api-guides
+      - technology-partner-integration-guides
+      - the-docker-sdk
+      - migration-and-integration
+      - legacy-demoshop
+      - technology-partner-guides
 
 # these are defaults used for the frontmatter for these file types
 
 sidebars:
   - marketplace_dev_sidebar
   - marketplace_user_sidebar
+  - cloud_dev_sidebar
+  - scos_dev_sidebar
+  - scos_user_sidebar
 
 description: "Spryker documentation center."
 # the description is used in the feed.xml file
@@ -134,8 +193,26 @@ search: algolia
 algolia:
   application_id: 'IBBSSFT6M1'
   search_only_api_key: '296ac9c40fa95441b2d89d1fd8395bb4'
+  max_record_size: 20000
   indices:
+    - name: 'scos_user'
+      title: 'SCOS User'
+    - name: 'scos_dev'
+      title: 'SCOS Developer'
     - name: 'marketplace_user'
       title: 'Marketplace User'
     - name: 'marketplace_dev'
       title: 'Marketplace Developer'
+    - name: 'cloud_dev'
+      title: 'Cloud Developer'
+
+sass:
+    sass_dir: css
+    style: compressed
+    sourcemap: never
+
+last-modified-at:
+  date-format: '%Y%m%dT%H%M'
+
+redirect_from:
+  json: false

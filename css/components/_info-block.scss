@@ -1,0 +1,59 @@
+.info-block {
+    margin: 16px 0;
+    padding: 15px 18px;
+    border-radius: 4px;
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: .3px;
+    background: $blue-light;
+    color: $grey-dark;
+    overflow: hidden;
+
+    &__title {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: .07px;
+        font-weight: 600;
+        display: block;
+        padding-bottom: 5px;
+        color: currentColor;
+    }
+
+    &__icon {
+        font-size: 20px;
+        flex: 0 0 auto;
+        margin: 2px 18px 0 0;
+        color: $blue;
+        float: left;
+    }
+
+    &__content {
+        overflow: hidden;
+
+        p {
+            margin-top: 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &--warning {
+        background: $yellow-light;
+
+        .info-block__icon {
+            color: $orange;
+        }
+    }
+
+    &--error {
+        background: $pink-light;
+
+        .info-block__icon {
+            color: $red;
+        }
+    }
+}

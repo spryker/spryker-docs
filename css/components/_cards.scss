@@ -1,0 +1,136 @@
+.cards-block {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+
+    @include media("<desktop") {
+        margin: 0 auto;
+        max-width: 482px;
+    }
+}
+
+.card {
+    width: calc(33.3333% - 16px);
+    margin: 0 8px 15px;
+    background: $white;
+    border: 1px solid $grey-3;
+    color: $grey-dark-2;
+    border-radius: 4px;
+    box-shadow: 0px 20px 30px 0px rgba($black, 0.03),
+    0px 3px 8px 0px rgba($black, 0.02);
+    display: flex;
+    flex-direction: column;
+
+    @include media("<desktop") {
+        width: 100%;
+        margin: 0 auto 32px;
+    }
+
+    @include media("<tablet") {
+        margin-bottom: 16px;
+    }
+
+    &:last-child {
+        @include media("<desktop") {
+            margin-bottom: 0;
+        }
+    }
+
+    &__content {
+        padding: 30px 24px 15px;
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 500;
+        letter-spacing: .02em;
+        min-height: 306px;
+        width: 100%;
+        flex: 1 1 auto;
+
+        @include media("<desktop") {
+            min-height: 0;
+            padding-bottom: 20px;
+        }
+
+        p {
+            margin: 0 0 1em;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+
+    &__heading {
+        display: flex;
+        align-items: center;
+        margin: 0 0 15px;
+
+        &-title {
+            flex: 1 1 auto;
+            font-size: 20px;
+            line-height: 28px;
+            letter-spacing: -.01em;
+            font-weight: 800;
+            padding: 0 !important;
+            margin: 0 !important;
+            color: $dark-2;
+        }
+
+        &-icon {
+            font-size: 30px;
+            flex: 0 0 auto;
+            margin: 0 10px 0 0;
+            min-width: 37px;
+            color: $red;
+        }
+
+        .anchorjs-link {
+            display: none;
+        }
+    }
+
+    &__footer {
+        width: 100%;
+        flex: none;
+    }
+
+    &__links {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 600;
+        letter-spacing: .02em;
+
+        li {
+            &:last-child {
+                a {
+                    border-radius: 0 0 4px 4px;
+                }
+            }
+            &:first-child {
+                a {
+                }
+            }
+        }
+
+        a {
+            color: $darkest;
+            display: block;
+            border-top: 1px solid $grey-3;
+            padding: 15px 24px;
+            text-align: center;
+            transition: background .3s linear, border-color .3s linear;
+            text-decoration: none;
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: $darkest;
+                text-decoration: none;
+                background: $grey-lightest;
+            }
+        }
+    }
+}

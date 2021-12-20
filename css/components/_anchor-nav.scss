@@ -1,0 +1,81 @@
+.anchor {
+    &__container {
+        background: $grey-lightest;
+        border-radius: 4px;
+        padding: 16px 0 10px;
+        margin: 0 0 16px;
+
+        @include media("<laptop") {
+            background: none;
+            margin: 0;
+        }
+
+        & > ul::before {
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            content: "Table of contents";
+            font-weight: bold;
+            color: $darkest;
+            text-align: left;
+            display: block;
+            margin: 0 16px 8px;
+
+            @include media("<laptop") {
+                font-size: 20px;
+                line-height: 28px;
+                font-weight: 800;
+                text-transform: none;
+                margin-bottom: 20px;
+            }
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 12px;
+            line-height: 1.5;
+
+            @include media("<laptop") {
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+            li {
+                margin: 0;
+
+                @include media("<laptop") {
+                    margin-bottom: 8px;
+                }
+            }
+
+            a {
+                color: $grey;
+                text-decoration: none;
+                display: block;
+                border-left: 4px solid transparent;
+                padding: 3px 5px 3px 12px;
+                word-break: break-word;
+
+                @include media("<laptop") {
+                    margin-bottom: 6px;
+                }
+
+                &:hover {
+                    color: $darkest;
+                }
+
+                &.nav-link--shifted {
+                    padding-left: 26px;
+                }
+            }
+        }
+
+        .active {
+            color: $darkest;
+            border-left-color: $red;
+        }
+    }
+}

@@ -1,0 +1,72 @@
+.pagination {
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @include media("<tablet") {
+            margin: 0 -15px;
+        }
+
+        &-item {
+            margin: 0 8px 16px;
+
+            @include media("<tablet") {
+                margin: 0 4px 16px;
+            }
+
+            &--disabled {
+                pointer-events: none;
+            }
+
+            &--active {
+                .pagination__link {
+                    color: $red;
+                    border-color: $red;
+                    pointer-events: none;
+                }
+            }
+
+            &--next,
+            &--prev,
+            &--last,
+            &--first {
+                .pagination__link {
+                    font-size: 20px;
+                    padding: 0 0 2px;
+                }
+            }
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 50px;
+        border: 2px solid $silver;
+        color: $grey;
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 800;
+
+        @include media("<tablet") {
+            height: 40px;
+            width: 40px;
+        }
+
+        &:hover {
+            color: $red;
+            border-color: $red;
+            text-decoration: none;
+        }
+
+        &:after {
+            content: none !important;
+        }
+    }
+}

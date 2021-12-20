@@ -1,0 +1,11 @@
+.form-collapse {
+    margin: 0 0 30px;
+
+    @include media("<tablet") {
+        margin-bottom: 20px;
+    }
+}
+
+.js-form-collapse__slide {
+    display: none;
+}

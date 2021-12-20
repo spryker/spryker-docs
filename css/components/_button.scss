@@ -1,0 +1,102 @@
+.button {
+    display: inline-flex;
+    vertical-align: top;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $silver;
+    color: $grey;
+    font-weight: 800;
+    border-radius: 2px;
+    text-decoration: none;
+    height: 50px;
+    padding: 0 20px;
+    min-width: 130px;
+    transition: color .3s linear, background .3s linear, border-color .3s linear, box-shadow .3s linear;
+
+    &:hover {
+        box-shadow: 0 3px 10px rgba($silver, 0.5);
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+        background: $grey-light;
+        color: $grey-2;
+        border-color: $silver;
+    }
+
+    &:active {
+        box-shadow: none;
+    }
+
+    [class*="icon-"] {
+        margin: 0 .7em 0 0;
+        font-size: 16px;
+    }
+
+    .icon-github {
+        font-size: 20px;
+    }
+
+    &--small {
+        height: 40px;
+        min-width: 100px;
+        font-size: 12px;
+    }
+
+    &--xs {
+        height: 30px;
+        min-width: 0;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 0 8px;
+    }
+
+    &--black {
+        background: $darkest;
+        border-color: $darkest;
+        color: $white;
+
+        &:hover {
+            box-shadow: 0 4px 10px rgba($black, 0.18);
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            text-decoration: none;
+            background: $darkest;
+            border-color: $darkest;
+            color: $white;
+        }
+
+        &:active {
+            box-shadow: none;
+        }
+    }
+
+    &--red {
+        background: $red;
+        border-color: $red;
+        border-width: 1px;
+        color: $white;
+
+        &:hover {
+            box-shadow: 0 4px 10px rgba($red, 0.18);
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            text-decoration: none;
+            background: $red;
+            border-color: $red-dark;
+            color: $white;
+        }
+
+        &:active {
+            box-shadow: none;
+        }
+    }
+}

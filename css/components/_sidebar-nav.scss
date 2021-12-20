@@ -1,0 +1,243 @@
+.sidebar-nav {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    @include media("<desktop") {
+        font-size: 16px;
+    }
+
+    $sel: 'ul';
+    @for $i from 0 through 5 {
+        $sel: if($i == 0, "ul", selector-nest($sel, "ul"));
+
+        #{$sel} {
+            .sidebar-nav {
+                &__opener {
+                    padding-left: 68px + 16px * $i;
+
+                    @include media("<desktop") {
+                        padding-left: 18px + 24px * $i;
+                    }
+
+                    &--small {
+                        left: 32px + 16px * $i;
+
+                        @include media("<desktop") {
+                            left: auto;
+                        }
+                    }
+                }
+
+                &__link {
+                    padding-left: 68px + 16px * $i;
+
+                    @include media("<desktop") {
+                        padding-left: 18px + 24px * $i;
+                    }
+
+                    &--shifted {
+                        padding-left: 68px + 16px * $i;
+
+                        @include media("<desktop") {
+                            padding-left: 18px + 24px * $i;
+                        }
+                    }
+                }
+            }
+
+            [class*=icon-] {
+                left: 28px + 16px * $i;
+
+                @include media("<desktop") {
+                    left: auto;
+                }
+            }
+        }
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: none;
+
+        @include media("<desktop") {
+            background: $grey-lightest;
+        }
+
+        .sidebar-nav__title {
+            font-weight: normal;
+        }
+    }
+
+    li {
+        position: relative;
+    }
+
+    & > li {
+        @include media("<desktop") {
+            border-bottom: 1px solid $grey-lighten;
+        }
+
+        & > .sidebar-nav__link,
+        & > a > .sidebar-nav__title {
+            font-weight: bold;
+        }
+
+        & > ul {
+            @include media("<desktop") {
+                border-top: 1px solid $grey-lighten;
+            }
+        }
+    }
+
+    &__link {
+        color: $dark-2;
+        display: block;
+        border-left: 4px solid transparent;
+        padding: 9px 10px 9px 52px;
+        position: relative;
+        word-break: break-word;
+
+        @include media("<desktop") {
+            border-left-width: 6px;
+            padding: 14px 50px 14px 18px;
+        }
+
+        &:hover {
+            text-decoration: none;
+
+            @include hover {
+                background: $grey-lighten;
+            }
+        }
+
+        &:focus {
+            text-decoration: none;
+        }
+    }
+
+    .active-page-item {
+        & > .sidebar-nav__link {
+            border-left-color: $red;
+            background: $grey-lighten;
+
+            @include media("<desktop") {
+                background: none;
+            }
+        }
+    }
+
+    .active {
+        & > .sidebar-nav__opener {
+            [class*="icon-"] {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    &__opener {
+        color: $dark-2;
+        display: block;
+        padding: 9px 10px 9px 52px;
+        text-decoration: none;
+        display: flex;
+        position: relative;
+        border-left: 4px solid transparent;
+        align-items: center;
+
+        @include media("<desktop") {
+            padding: 14px 50px 14px 18px;
+        }
+
+        &:hover {
+            text-decoration: none;
+
+            @include hover {
+                background: $grey-lighten;
+                [class*="icon-"] {
+                    background: $grey-lighten;
+                }
+            }
+        }
+
+        &:focus {
+            text-decoration: none;
+        }
+
+        [class*="icon-"] {
+            display: block;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background .3s linear;
+            border-radius: 2px;
+            font-size: 10px;
+            color: $grey;
+            margin: 0 16px 0 0;
+            flex: none;
+            position: absolute;
+            z-index: 2;
+            top: 8px;
+            left: 12px;
+
+            @include media("<desktop") {
+                width: 32px;
+                height: 32px;
+                background: $grey-lighten;
+                margin: 0;
+                right: 10px;
+                left: auto;
+                top: 9px;
+            }
+        }
+
+        &--small {
+            position: absolute;
+            top: 8px;
+            z-index: 2;
+            left: 16px;
+            padding: 0 !important;
+            border: 0;
+            margin: 0;
+            border-radius: 2px;
+
+            @include media("<desktop") {
+                background: $grey-lighten;
+                margin: 0;
+                right: 10px;
+                left: auto;
+                top: 9px;
+            }
+
+            &:hover {
+                @include hover {
+                    background: rgba(0,0,0,.15);
+                }
+            }
+
+            .sidebar-nav__title {
+                display: none;
+            }
+
+            [class*="icon-"] {
+                margin: 0;
+                position: static;
+                background: none !important;
+            }
+        }
+    }
+
+    &__title {
+        flex: 1 1 auto;
+        display: block;
+        word-break: break-word;
+        font-weight: normal;
+    }
+}

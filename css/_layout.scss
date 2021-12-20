@@ -1,0 +1,157 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.page-content {
+    flex: 1 1 auto;
+
+    &--center {
+        align-items: center;
+    }
+
+    &--post {
+        display: flex;
+        position: relative;
+
+        @include media("<laptop") {
+            display: grid;
+            grid-column-gap: 30px;
+            grid-row-gap: 0;
+            grid-template-rows: auto 1fr;
+            grid-template-columns: auto auto;
+            grid-template-areas: "a b"
+                                 "a c";
+            padding: 0 24px 0 0;
+        }
+
+        @include media("<desktop") {
+            display: flex;
+            grid-template-areas: none;
+            flex-direction: column;
+            padding: 0;
+        }
+
+        .post-content {
+            @include media("<laptop") {
+                grid-area: c;
+            }
+
+            @include media("<desktop") {
+                grid-area: none;
+                order: 3;
+            }
+        }
+    }
+
+    &--search {
+        padding: 40px 0;
+
+        @include media("<tablet") {
+            padding: 10px 0 30px;
+        }
+
+        .container {
+            max-width: 1078px;
+        }
+    }
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 24px;
+    margin: 0 auto;
+
+    @include media("<tablet") {
+        padding: 0 16px;
+    }
+}
+
+.main-sidebar {
+    flex: 0 0 auto;
+    background: $grey-lightest;
+    position: relative;
+    margin: 0 30px 0 0;
+    display: flex;
+    flex-direction: column;
+
+    @include media("<laptop") {
+        grid-area: a;
+        margin: 0;
+    }
+
+    @include media("<desktop") {
+        margin: 0;
+        order: 1;
+        grid-area: none;
+    }
+}
+
+.post-content {
+    flex: 1 1 auto;
+    padding: $header-content-gap-widescreen 0 30px;
+
+    @include media("<laptop") {
+        padding: 24px 0 30px;
+    }
+
+    @include media("<desktop") {
+        padding: 24px 24px 30px;
+    }
+
+    @include media("<tablet") {
+        padding: 16px 16px 30px;
+    }
+}
+
+.alt-sidebar {
+    flex: 0 0 auto;
+    width: 200px;
+    margin: 0 85px 0 30px;
+    padding: $header-content-gap-widescreen 0 0;
+
+    @include media("<widescreen") {
+        margin: 0 24px 0 30px;
+    }
+
+    @include media("<laptop") {
+        grid-area: b;
+        width: auto;
+        margin: 0;
+        padding: $header-content-gap-desktop 0 0;
+    }
+
+    @include media("<desktop") {
+        order: 2;
+        margin: 0;
+        padding: 24px 24px 0;
+        width: 100%;
+        grid-area: none;
+    }
+
+    @include media("<tablet") {
+        padding: 15px 16px 0;
+    }
+
+    &__sticky {
+        position: sticky;
+        top: $header-min-height-widescreen;
+
+        @include media("<laptop") {
+            position: static;
+            display: flex;
+            align-items: center;
+        }
+    }
+}

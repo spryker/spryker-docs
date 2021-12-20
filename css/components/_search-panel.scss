@@ -1,0 +1,84 @@
+.search-panel {
+    position: relative;
+    margin: 0 0 30px;
+
+    @include media("<tablet") {
+        margin: 0 0 15px;
+    }
+
+    &__icon {
+        position: absolute;
+        z-index: 4;
+        pointer-events: none;
+        color: $grey;
+        font-size: 16px;
+        top: 15px;
+        left: 5px;
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        height: 50px;
+        padding: 14px 40px;
+        border: 1px solid transparent;
+        border-bottom-color: $grey-lighten;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+        color: $grey-darker;
+        background: none;
+        outline: none;
+        outline-width: 0;
+        letter-spacing: .02em;
+        transition: color .3s linear, background .3s linear, border-color .3s linear;
+
+        @include placeholder {
+            color: $grey;
+            transition: opacity 0.2s linear;
+        }
+
+        &:focus {
+            border-bottom-color: $darkest;
+
+            @include placeholder {
+                opacity: 0;
+            }
+        }
+
+        &:placeholder-shown ~ .search-panel__reset {
+            display: none;
+        }
+    }
+
+    &__reset {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 20px;
+        height: 20px;
+        margin: -10px 0 0;
+        border-radius: 2px;
+        background: none;
+        padding: 0;
+        border: 1px solid $grey;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $grey;
+
+        svg {
+            fill: $grey;
+            width: 8px;
+            transition: fill.2s linear;
+        }
+
+        &:hover {
+            border-color: $red;
+            svg {
+                fill: $red;
+            }
+        }
+    }
+}

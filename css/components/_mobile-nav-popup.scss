@@ -1,0 +1,140 @@
+.nav {
+    &-opener {
+        display: none;
+        width: 40px;
+        height: 40px;
+        position: relative;
+        z-index: 2001;
+        margin: 0 0 0 25px;
+        border: 8px solid transparent;
+        border-width: 7px;
+
+        @include media("<tablet") {
+            display: block;
+        }
+
+        &__top {
+            display: block;
+            height: 3px;
+            margin: 0 0 9px;
+            border-radius: 2px;
+            background: $grey;
+            transition: transform 0.3s linear, background 0.3s linear, opacity 0.3s ease;
+            transform-origin: 0 1px;
+        }
+
+        &__center {
+            display: block;
+            height: 3px;
+            margin: 0 0 8px;
+            border-radius: 2px;
+            background: $grey;
+            transition: opacity 0.3s ease;
+        }
+
+        &__bottom {
+            display: block;
+            height: 3px;
+            border-radius: 2px;
+            background: $grey;
+            transition: transform 0.3s linear, background 0.3s linear, opacity 0.3s ease;
+            transform-origin: 0 1px;
+        }
+
+        &.expanded {
+            .nav-opener__top {
+                transform: rotate(45deg) translate(5px, -1px);
+            }
+            .nav-opener__center {
+                opacity: 0;
+            }
+            .nav-opener__bottom {
+                transform: rotate(-45deg) translate(4px, 1px);
+            }
+        }
+    }
+
+    &-popup {
+        @include media(">=desktop") {
+            transition: opacity .2s linear;
+        }
+
+        @include media("<tablet") {
+            display: none;
+            background: $white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2000;
+        }
+
+        @include media(">=tablet") {
+            display: block !important;
+        }
+
+        .page-scrolled & {
+            @include media(">=desktop") {
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+
+        .home-layout &,
+        .search-layout & {
+            @include media(">=desktop") {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+
+        &__inner {
+            @include media("<tablet") {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        &__header {
+            display: none;
+
+            @include media("<tablet") {
+                display: block;
+                flex: 0 0 auto;
+                background: $grey-lightest;
+                padding: 12px 60px 12px 16px;
+                min-height: 64px;
+                width: 100%;
+            }
+
+            &-button {
+                display: none;
+
+                @include media("<tablet") {
+                    display: inline-flex;
+                    background: $white;
+                }
+            }
+        }
+
+        &__content {
+            @include media("<tablet") {
+                flex: 1 1 auto;
+                overflow: auto;
+                width: 100%;
+            }
+        }
+
+        &__footer {
+            display: none;
+            flex: 0 0 auto;
+            width: 100%;
+
+            @include media("<tablet") {
+                display: block;
+            }
+        }
+    }
+}

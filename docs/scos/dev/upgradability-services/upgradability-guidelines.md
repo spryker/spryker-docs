@@ -115,7 +115,7 @@ Pyz\Client\RabbitMq\RabbitMqConfig
 
 #### Examples of making entity names unique
 
-To resolve the errors provided in the examples, rename the entities. For example, add the project name as a prefix.
+To resolve the errors provided in the preceding examples, rename the entities. For example, add the project name as a prefix.
 
 {% info_block infoBox "Future-proof names" %}
 

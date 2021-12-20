@@ -20,15 +20,15 @@ To check the WAF rule that triggered the error, do the following:
 1. In the AWS Management Console, go to **Services** > **S3**.
 2. In the *Buckets* pane, select the WAF bucket of the desired environment.
 
-![select-the-waf-logs-folder]()
+![select-the-waf-logs-folder](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-403-error.md/select-the-waf-logs-folder.png)
 
 3. According to when the error occurred, navigate to the respective folder by year > month > day > hour.
 
-![navigate-by-date-and-time]()
+![navigate-by-date-and-time](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-403-error.md/navigate-by-date-and-time.png)
 
 4. Based on the date and time in **Last modified** column, select the needed log file.
 
-![select-the-waf-logs-file]()
+![select-the-waf-logs-file](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-403-error.md/select-the-waf-logs-file.png)
 
 5. To download the file, select **Download**.
 

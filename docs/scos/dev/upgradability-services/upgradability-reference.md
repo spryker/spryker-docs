@@ -113,15 +113,25 @@ When the core method is overriden with a custom one, re-evaluate the code. The s
 
 
 
-## Non-public API class was extended or used
+## Private API class was extended or used
 
 Private API updates can break backward compatibility. So, backward compatibility in minor releases is not guaranteed in the private API. For example, if you use a core class or method on the project level, and it is updated or removed, the error may occur during an update.
 
-Also there are exceptions, models on project level can extends from Core:
+The following core classes are exceptions, and you can use and extend them on the project level:
 
-1. Facade, Factory, Entity manager, Repository, Dependency provider, Config, ConfigurationProvider.
-
-2. All models from Kernel, Bootstrap, and Development modules.
+* Particular classes:
+  * Facade
+  * Factory
+  * Entity manager
+  * Repository
+  * Dependency provider
+  * Config
+  * ConfigurationProvider
+  
+* All the classes from the modules:
+  * Kernel
+  * Bootstrap
+  * Development
 
 ### Overriding a core method on the project level
 

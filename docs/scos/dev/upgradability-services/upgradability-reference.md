@@ -127,7 +127,7 @@ The following core classes are exceptions, and you can use and extend them on th
   * Dependency provider
   * Config
   * ConfigurationProvider
-  
+
 * All the classes from the modules:
   * Kernel
   * Bootstrap
@@ -170,7 +170,7 @@ To resolve the error provided in the example, do the following:
 
 1. Change extending from `Spryker\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm` to extending from `Spryker\Zed\Kernel\Communication\Form\AbstractType`
 
-2. Copy necessary functionality from the Core.
+2. Copy necessary functionality from the Core. CustomerAccessForm
 
 ```php
 <?php

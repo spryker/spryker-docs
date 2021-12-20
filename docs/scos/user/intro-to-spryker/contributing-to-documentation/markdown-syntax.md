@@ -9,13 +9,13 @@ related:
 
 This document contains Markdown syntax of the page elements used on our documentation website. You will read about:
 
-- Documentation-specific markdown elements
+- Documentation-specific Markdown elements
 - HTML syntax that is used where Markdown is insufficient for our documentation website
 - Solutions to common issues
 
 {% info_block infoBox "Info" %}
 
-General formatting rules and styling rules for markdown can be found at [Basic writing and formatting syntax for Github](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+General formatting rules and styling rules for Markdown can be found at [Basic writing and formatting syntax for Github](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
 {% endinfo_block %}
 
@@ -72,7 +72,7 @@ Example:
 Make sure to fulfill the requirements: 
 
 - `{drop-down toggle button}` in `<summary>{drop-down toggle button}</summary>` should not undergo any kind of formatting. For example, `<summary>`code.php`</summary>` or `<summary><var>code.php</var></summary>`. Otherwise, the code snippet will be corrupted. 
-- Put a blank row between `<summary>{drop-down toggle button}</summary>` and ````{programming language}`. This will ensure that the code snippet is displayed correctly on the documentation website.
+- Put a blank row between `<summary>{drop-down toggle button}</summary>` and _```{programming language}_. This will ensure that the code snippet is displayed correctly on the documentation website.
 
 {% endinfo_block %}
 
@@ -80,7 +80,7 @@ Make sure to fulfill the requirements:
 
 Currently, by default, when you add an image to your document, it's size is automatically adjusted so that it does not exceed 50% of the content area. By default, 2-column tables also take 50% of the content area.
 
-If you want your image or a 2-column table to stretch to the content area’s size, wrap the image and the table in `<div>` with the width-100 class. For example:
+If you want your image or a 2-column table to stretch to the content area’s size, wrap the image and the table in `<div>` with the `width-100` class. For example:
 
 To make an image as wide as the content area:
 
@@ -316,11 +316,11 @@ Published table:
 ```
 </details>
 
-### Mixed Content 
+### Mixed content 
 
 If you have a table column with cells containing both the code snippets and supported content, do the following:
 
-1. Place the code snippets below the table as described in step 2 of Only Code.
+1. Place the code snippets below the table as described in step 2 of [Only code snippets](#only-code-snippets).
 2. Into the cell or cells from which you removed the code snippets, add See **{drop-down toggle button}** below the table.
 
 See the example below:
@@ -356,7 +356,7 @@ Published table:
 
 You don’t have to create anchors for headings. Each heading has its default anchor that corresponds to its text. However, still check [step 2](#step-2) of this section to learn about important aspects of linking to anchors. 
 
-Follow the steps to create an anchor and link to it:
+Follow these steps to create an anchor and link to it:
 
 1. Put the following next to the text you wish to provide a link to:
 
@@ -411,9 +411,9 @@ where
 720 - is the video’s height
 
 
-## Embedding .pdf files
+## Embedding PDF files
 
-To embed .pdf files, use the following code:
+To embed PDF files, use the following code:
 
 ```html
 <embed src="http://example.com/the.pdf" width="500" height="375" 

@@ -7,11 +7,11 @@ related:
     link: docs/scos/user/intro-to-spryker/contributing-to-documentation/markdown-syntax.html
 ---
 
-This page contains details on how to work with the [Spryker docs](https://github.com/spryker/spryker-docs), main style, syntax and formatting rules for creating useful content.
+This page contains details on how to work with the [Spryker docs](https://github.com/spryker/spryker-docs), main style, syntax and formatting rules for creating content.
 
 ## Directory structure
 
-The main directory for holding all the documents is [docs](https://github.com/spryker/spryker-docs/tree/master/docs) at the root of the project. The second layer is **product** directories: [marketplace](https://github.com/spryker/spryker-docs/tree/master/docs/marketplace), [scos](https://github.com/spryker/spryker-docs/tree/master/docs/scos), [cloud](https://github.com/spryker/spryker-docs/tree/master/docs/cloud) etc. Under each **product** directory, there are **realm** directories: [user](https://github.com/spryker/spryker-docs/tree/master/docs/scos/user) and [dev](https://github.com/spryker/spryker-docs/tree/master/docs/scos/dev). Each of these directories contains category directories with optional sub-categories. Category or sub-category directories contain documents. Some categories are versioned to reflect differences for various releases, so each version of the sub-category is located in a separate folder, for example, see [Features](https://github.com/spryker/spryker-docs/tree/master/docs/scos/user/features). For more details on versioning pages, see  section [Working with versions](#working-with-versions) on this page.
+The main directory for holding all the documents is [docs](https://github.com/spryker/spryker-docs/tree/master/docs) at the root of the project. The second layer is **product** directories: [marketplace](https://github.com/spryker/spryker-docs/tree/master/docs/marketplace), [scos](https://github.com/spryker/spryker-docs/tree/master/docs/scos), [cloud](https://github.com/spryker/spryker-docs/tree/master/docs/cloud), etc. Under each **product** directory, there are **realm** directories: [user](https://github.com/spryker/spryker-docs/tree/master/docs/scos/user) and [dev](https://github.com/spryker/spryker-docs/tree/master/docs/scos/dev). Each of these directories contains category directories with optional sub-categories. Category or sub-category directories contain documents. Some categories are versioned to reflect differences for various releases, so each version of the sub-category is located in a separate folder, for example, see [Features](https://github.com/spryker/spryker-docs/tree/master/docs/scos/user/features). For more details on versioning pages, see [Working with versions](#working-with-versions).
 
 ![directory structure](https://confluence-connect.gliffy.net/embed/image/6c2666bb-31e3-40d9-b00f-c616f47351ea.png?utm_medium=live&utm_source=custom)
 
@@ -26,7 +26,7 @@ For example, to create a new *sample-category* category and a *foo-bar* page und
 
 {% info_block warningBox "Warning" %}
 
-Currently, the maximum nesting level in the documentation categories is 3. This means that for each category you can have only one sub-category. For example, `marketplace/user/features/20201.08/merchant/`, where `features` is the category (first level of nesting), `202108.0` is the version (does not affect the level of nesting) `merchant` is its sub-category (second level of nesting). The third level of nesting would be the .md files under the sub-category.
+Currently, the maximum nesting level in the documentation categories is 3. This means that for each category you can have only one sub-category. For example, `marketplace/user/features/20201.08/merchant/`, where `features` is the category (first level of nesting), `202108.0` is the version (does not affect the level of nesting) `merchant` is the sub-category (second level of nesting). The third level of nesting would be the .md files under the sub-category.
 
 {% endinfo_block %}
 
@@ -38,7 +38,7 @@ You can use any valid URL characters in the names of your document files or cate
 
 ### Templates
 
-To keep our docs consistent, we have templates for all types of documents. The templates are stored in the [_templates] (https://github.com/spryker/spryker-docs/tree/master/_templates) directory. Therefore, every time you need to create a new document, pick the right template from this folder, copy it to your new page, and write the document based on the structure of the template and instructions therein.
+To keep our docs consistent, we have templates for all types of documents. The templates are stored in the [_templates](https://github.com/spryker/spryker-docs/tree/master/_templates) directory. Therefore, every time you need to create a new document, pick the right template from this folder, copy it to your new page, and write the document based on the structure of the template and instructions therein.
 
 | TEMPLATE                                                     | DESCRIPTION                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -52,13 +52,13 @@ To keep our docs consistent, we have templates for all types of documents. The t
 | [module-migration-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/module-migration-guide-template.md) | Use this template for creating [module migration guides](/docs/scos/dev/module-migration-guides/migration-guide-merchantgui.html#upgrading-from-version-1-to-version-2). |
 | [troubleshooting-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/troubleshooting-guide-template.md) | Use this template for creating [troubleshooting pages](/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/rabbitmq-zed.critical-phpamqplib-exception-amqpchannelclosedexception-channel-connection-is-closed.html). |
 | [howto-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/howto-guide-template.md) | Use this template for creating [howto guides](/docs/scos/dev/tutorials-and-howtos/howtos/howto-add-a-new-shipment-method.html#setting-up-the-state-machine). |
-| [best-practices-file-template](https://github.com/spryker/spryker-docs/blob/master/_templates/best-practices-file-template.md) | Use this template for creating [Best practices](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/creating-service-offerings-best-practices.html) docs. |
+| [best-practices-file-template](https://github.com/spryker/spryker-docs/blob/master/_templates/best-practices-file-template.md) | Use this template for creating [best practices](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/creating-service-offerings-best-practices.html) docs. |
 
 A name of the template you used needs to be added to the front matter.
 
 ### Front matter
 
-Every document must have YAML front matter block. This block consists of key-value pairs delimited by 3 dashes from each side and must come before any content in the document. The supported parameters on our documentation website are:
+Every document must have a YAML front matter block. This block consists of key-value pairs delimited by 3 dashes from each side and must come before any content in the document. The supported parameters on our documentation website are:
 
 ```
 ---
@@ -84,15 +84,15 @@ related:
 | description            | Short description of what this page is about.                | Learn how to use the front matter.                              | *✓*       |
 | last_updated           | Last updated date of the page to be displayed on the website. | Jun 16, 2021                                                 |           |
 | template               | [Template](https://github.com/spryker/spryker-docs/tree/master/_templates) based on which the page was created. | feature-integration-guide-template                           | *✓*       |
-| tags                   | Tags                                                         | B2B, B2C                                                     |           |
+| tags                   | Tags                                                         | [B2B], [B2C]                                                    |           |
 | redirect_from          | Allows setting up redirects for pages whose location changes or pages that are completely deleted from the documentation. To set up a redirect, press the **tab** button and enter the path starting with `/docs` and containing the exact version, if the document is [versioned](#page-version). | /path/to/a/file.html                                         |           |
-| related                | Shows the list of articles related to the page you are on. To add a related article, press the **tab** button and enter the name of the article in the `title` parameter and the link to the file in the`link` parameter <br />Mind the _link_ parameter: no dash before _link_, no slash before _docs_<br />{% info_block warningBox "Warning" %}<br />Always use page.version in the link for related articles, even for unversioned articles!<br />{% endinfo_block %} | - title: Title of the related page<br/>   link: path/to/a/file.html |           |
+| related                | Shows the list of articles related to the page you are on. To add a related article, press the **tab** button and enter the name of the article in the `title` parameter and the link to the file in the`link` parameter <br />Mind the _link_ parameter: no dash before _link_, no slash before _docs_<br />{% info_block warningBox "Warning" %}<br />Always use _page.version_ in the link for related articles, even for unversioned articles!<br />{% endinfo_block %} | - title: Title of the related page<br/>   link: path/to/a/file.html |           |
 
-You can read more about front matter on Jekyll's official [website](https://jekyllrb.com/docs/front-matter/).
+You can read more about front matter on the [Jekyll's official website](https://jekyllrb.com/docs/front-matter/).
 
 ## Adding documents to the navigation
 
-Once a new document is created, it must be added to the sidebar navigation. Keep in mind that a path to a document file will be fully mapped to a URL of that document except that `.md` extension will be replaced with `.html`. This means that the document from the [example above](#example-document) can be accessed in the browser with zero configuration by visiting `http://localhost:4000/docs/marketplace/user/sample-category/foo-bar.html`.
+Once a new document is created, it must be added to the sidebar navigation. Keep in mind that a path to a document file will be fully mapped to an URL of that document except that `.md` extension will be replaced with `.html`. This means that the document from the [example above](#example-document) can be accessed in the browser with zero configuration by visiting `http://localhost:4000/docs/marketplace/user/sample-category/foo-bar.html`.
 
 ### Sidebars
 
@@ -116,7 +116,7 @@ Each _product/realm_ set has its own sidebar, which is represented by a YAML fil
 
 ### Creating landing pages for the main categories
 
-For each main category, like *Setup*, *Feature integration guides,* *HowTos*, etc., you can create the *index.md.* file. This will allow to open category pages without specific files in the link. For example, let’s do that for the *Glue API guides* section of the developer guide:
+For each main category, like *Setup*, *Feature integration guides,* *HowTos*, etc., you can create the *index.md.* file. This lets you opening category pages without specific files in the link. For example, let’s do that for the *Glue API guides* section of the developer guide:
 
 1. In `docs/marketplace/dev/glue-api-guides`, add the *index.md* file. Make sure you specify the title in the file.
 
@@ -137,18 +137,18 @@ If you now open the Glue API guides category, your page will look like this:
 
 We have two types of versions: page versions and the global website version. Page versions are 
 
-The versions are managed in the *config.yml* file*.* 
+The versions are managed in the *config.yml* file*. 
 
 ### Page version
 
-The *page version* is the version of the **current page**. Therefore, they apply to the [versioned pages](https://github.com/spryker/spryker-docs/tree/master/docs/scos/user/shop-user-guides) only. The page versions reside in the *version-related scopes* section of the *config.yml* file:
+The *page version* is the version of the **current page**. Therefore, page versions apply to the [versioned pages](https://github.com/spryker/spryker-docs/tree/master/docs/scos/user/shop-user-guides) only. The page versions reside in the *version-related scopes* section of the *config.yml* file:
 
 ![config yaml](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/config-yaml.png)
 
 To add a new version for the versioned categories:
 
 1. In the *config.yml* file, *version-related scopes* section add the version with the *scope* and *values* parameters as shown in the picture above.
-2. In the main categories for which the version you added should exist, create the folder named as the *version* value from step one. For example, if  you created version `202221.0` in *config.yml* -> *version-related scopes,* the folder should also be called `202221.0`.
+2. In the main categories for which the version you added should exist, create the folder named as the *version* value from the previous step. For example, if  you created version `202221.0` in *config.yml* -> *version-related scopes,* the folder should also be called `202221.0`.
 3. Add the file that should be in the new version, to the folder:
 
 ![files list](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/files-list.png)

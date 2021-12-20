@@ -100,6 +100,6 @@ For solutions to common issues, see [Spryker in Docker troubleshooting](/docs/sc
 
 ## What documents should I use to start developing and configuring my project?
 
-* [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file-reference-1.0.html)
+* [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file-reference-1.0.html)
 * [Docker SDK configuration reference](/docs/scos/dev/the-docker-sdk/{{page.version}}/docker-sdk-configuration-reference.html)
 * [Configuring services](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-services.html)

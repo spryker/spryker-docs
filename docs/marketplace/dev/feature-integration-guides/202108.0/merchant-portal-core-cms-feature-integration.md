@@ -34,8 +34,7 @@ Set up templates as follows:
 'merchant_restore_password--html',
 constant('APPLICATION_STORE'),
 mail.locale.localeName,
-{mail: mail}
-) }}
+{mail: mail}) }}
 ```
 
 **src/Pyz/Zed/MerchantUserPasswordResetMail/Presentation/Mail/merchant_restore_password.text.twig**
@@ -45,8 +44,7 @@ mail.locale.localeName,
 'merchant_restore_password--text',
 constant('APPLICATION_STORE'),
 mail.locale.localeName,
-{mail: mail}
-) }}
+{mail: mail}) }}
 ```
 
 ### 2) Create CMS blocks

@@ -98,9 +98,9 @@ Follow the steps to create an Abstract Product List:
 
     2.  In the table above the **Add more products** table, sort the added products by clicking **Move Down** or **Move Up**.
 
-See [Content Items: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-items.html#create-and-edit-abstract-product-list-content-item-page) to learn about the attributes on this page.
+See [Content Items: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-items.html) to learn about the attributes on this page.
 
-3. If needed, repeat the previous step in one or more locale-specific tabs.
+1. If needed, repeat the previous step in one or more locale-specific tabs.
 
 {% info_block infoBox "Multi-language setup" %}
 
@@ -150,9 +150,9 @@ Follow the steps to create a Product Set:
 
     {% endinfo_block %}
 
-See [Content Items: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-items.html#create-and-edit-abstract-product-list-content-item-page) to learn about the attributes on this page.
+See [Content Items: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-items.html) to learn about the attributes on this page.
 
-3. If needed, repeat the previous step in one or more locale-specific tabs.
+1. If needed, repeat the previous step in one or more locale-specific tabs.
 
 {% info_block infoBox "Multi-language setup" %}
 
@@ -203,9 +203,9 @@ Follow the steps to create a File List:
 
     2.  In the **Selected Files** table, sort the added files by clicking **Move Down** or **Move Up**.
 
-See [Content Items: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/references/content-items-reference-information.html#create-and-edit-abstract-product-list-content-item-page) to learn about the attributes on this page.
+See [Content Items: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/references/content-items-reference-information.html) to learn about the attributes on this page.
 
-3. If needed, repeat the previous step in one or more locale-specific tabs.
+1. If needed, repeat the previous step in one or more locale-specific tabs.
 
 {% info_block infoBox "Multi-language setup" %}
 

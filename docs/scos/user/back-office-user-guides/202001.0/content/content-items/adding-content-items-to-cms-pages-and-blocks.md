@@ -99,6 +99,5 @@ You can preview how the content item widget will be displayed on the website by 
 {% endinfo_block %}
 
 **What's next?**
-To know more about how to edit a content item widget, see  [Editing Content Item Widgets](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/content-item-widgets/editing-content-item-widgets.html).
 
-To learn more about types of content item widgets and their templates, see articles in the [References](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/content-item-widgets/references/content-item-widgets-templates-reference-information.html) section.
+To learn more about types of content item widgets and their templates, see articles in the [References](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-item-widgets-templates.html) section.

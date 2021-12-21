@@ -30,7 +30,7 @@ This is how a Product Catalog Manager can create a structure to display products
 **What's Next?**
 
 To know how the categories are created and managed, see the following articles:
-* [Creating Categories](/docs/scos/user/back-office-user-guides/{{page.version}}/category/creating-categories.html)
+* [Creating Categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html)
 * [Assigning Products to Categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html)
 * [Managing Categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/managing-categories.html)
 

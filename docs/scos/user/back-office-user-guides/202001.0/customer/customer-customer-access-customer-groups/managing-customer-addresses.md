@@ -14,7 +14,7 @@ related:
   - title: Managing Customers
     link: docs/scos/user/back-office-user-guides/202001.0/customer/customer-customer-access-customer-groups/managing-customers.html
   - title: Managing Customer Access
-    link: docs/scos/user/back-office-user-guides/page.version/customer/customer-customer-access-customer-groups/managing-customer-access.md.html
+    link: docs/scos/user/back-office-user-guides/page.version/customer/customer-customer-access-customer-groups/managing-customer-access.html
   - title: Customer Accounts
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
 ---

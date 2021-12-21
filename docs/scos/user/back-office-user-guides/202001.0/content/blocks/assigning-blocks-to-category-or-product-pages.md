@@ -39,7 +39,7 @@ You can only add existing, active, and not expired block. If the block has not b
 
 {% info_block infoBox %}
 
-See  [CMS Block: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/blocks/references/cms-block-reference-information.html) to learn more about attributes displayed on the **Edit CMS Block: Block ID** page.
+See [CMS Block: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/references/cms-block-reference-information.html) to learn more about attributes displayed on the **Edit CMS Block: Block ID** page.
 
 {% endinfo_block %}  
 
@@ -62,7 +62,7 @@ You can only add existing, active, and not expired block. If the block has not b
 
 {% info_block infoBox %}
 
-See  [CMS Block: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/blocks/references/cms-block-reference-information.html) to learn more about attributes displayed on the **Edit CMS Block: Block ID** page.
+See  [CMS Block: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/references/cms-block-reference-information.html) to learn more about attributes displayed on the **Edit CMS Block: Block ID** page.
 
 {% endinfo_block %}  
 

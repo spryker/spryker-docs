@@ -33,13 +33,13 @@ On entering the page. the following is selected by default:
 
 {% info_block warningBox "Integration required" %}
 
-You can work with slots after the [Templates & Slots feature has been integrated](/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-feature-integration-guide.html) into your project.
+You can work with slots after the [Templates & Slots feature has been integrated](/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-feature-integration.html) into your project.
 
 {% endinfo_block %}
 
 ***
 
 **What's next?**
-* To learn how to add content to Storefront pages using Templates & Slots, see [Adding Content to Storefront Pages Using Templates & Slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/slots/adding-content-to-storefront-pages-using-templates-and-slots.html).
+* To learn how to add content to Storefront pages using Templates & Slots, see [Adding Content to Storefront Pages Using Templates & Slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/adding-content-to-storefront-pages-using-templates-and-slots-best-practices.html).
 * To learn how to activate or deactivate slots, assign CMS blocks to a slot, change the order of CMS blocks assigned to a slot, delete an assignment or select the pages in which a CMS block is displayed, see [Managing Slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html).
 * To learn about the attributes you can see in the **Slots** section, see the [Slots: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/references/slots-reference-information.html) section.

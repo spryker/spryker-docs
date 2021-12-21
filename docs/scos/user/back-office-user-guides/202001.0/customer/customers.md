@@ -37,7 +37,7 @@ This is how a Spryker Admin interacts with other departments to build customers'
 
 To know how to manage customers, customer groups and customer access, see the following articles:
 
-* [Managing Customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customers/customers-customer-access-customer-groups/managing-customers.html), [Managing Customer Addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customer-addresses.html)
+* [Managing Customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html), [Managing Customer Addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customer-addresses.html)
 * [Managing Customer Groups](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customer-groups.html)
 * [Managing Customer Access](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customer-access.html)
 

@@ -50,14 +50,14 @@ A cart rule is a discount that is applied automatically when all attached discou
 
     {% endinfo_block %}
 
-    2. **Calculator fixed**: Enter the prices to be discounted </br>
-    3.  **Calculator percentage**: Enter the values (percentage) to be discounted</br>
+    2. **Calculator fixed**: Enter the prices to be discounted.
+    3. **Calculator percentage**: Enter the values (percentage) to be discounted.
     4. Select the **Discount application type** and define what products the discount will be applied to. See [Discount Calculation: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/references/discount-calculation-reference-information.html) for more information.
- 5. Click **Next**, or select the **Conditions** tab to proceed.
- 6. On the **Create Discount page >Conditions** tab, do the following:
+ 1. Click **Next**, or select the **Conditions** tab to proceed.
+ 2. On the **Create Discount page >Conditions** tab, do the following:
     1. Select the **Apply when** conditions or click **Plain query** and enter the  query manually. See [Discount Conditions: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/references/discount-conditions-reference-information.html).
     2. Enter the value for **The discount can be applied if the query applies for at least X item(s).** field.
-7. Click **Save** to create the new discount.
+5. Click **Save** to create the new discount.
 
 ***
 

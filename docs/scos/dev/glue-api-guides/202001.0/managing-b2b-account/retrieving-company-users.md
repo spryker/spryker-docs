@@ -59,7 +59,7 @@ The endpoint responds with a **RestCompanyUserCollectionResponse** that contains
 
 <details open>
 <summary markdown='span'>Sample Response</summary>
-    
+
 ```json
 {
     "data": [
@@ -113,7 +113,7 @@ The endpoint responds with a **RestCompanyUserCollectionResponse** that contains
     }
 }
 ```
-    
+
 <br>
 </details>
 
@@ -151,7 +151,7 @@ The company user identifier contained in the id member can be used to access the
 
 <details open>
 <summary markdown='span'>Sample Response</summary>
-    
+
 ```json
 {
     "data": [
@@ -194,14 +194,14 @@ The company user identifier contained in the id member can be used to access the
     }
 }
 ```
-    
+
 <br>
 </details>
 
 ## Retrieving Specific Company Users
 To retrieve information on a specific Company User, send a GET request to the following endpoint:
 
-[/company-users/{% raw %}{{{% endraw %}company_user_id{% raw %}}}{% endraw %}](https://documentation.spryker.com/glue_rest_api/rest-api-reference.htm#/company-users)
+[/company-users/{% raw %}{{{% endraw %}company_user_id{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/company-users)
 
 Sample request: *GET http://glue.mysprykershop.com/company-users/e1019900-88c4-5582-af83-2c1ea8775ac5*
 
@@ -227,7 +227,7 @@ If the currently logged in user does not have access to the specified Company Us
 
 <details open>
 <summary markdown='span'>Sample Response</summary>
-    
+
 ```json
 {
     "data": {
@@ -243,7 +243,7 @@ If the currently logged in user does not have access to the specified Company Us
     }
 }
 ```
-    
+
 <br>
 </details>
 
@@ -273,7 +273,7 @@ In this case, the following additional attributes will be added to the response:
 
 <details open>
 <summary markdown='span'>Sample Response</summary>
-    
+
 ```json
 {
     "data": [
@@ -450,4 +450,3 @@ In this case, the following additional attributes will be added to the response:
 | 401 | The access token is invalid. |
 | 403 | The access token is missing.<br>- OR -<br>The current Company Account is not set.<br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html). |
 | 404 | The specified Company User was not found or the user does not have permissions to view the account. |
-

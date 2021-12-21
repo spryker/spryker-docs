@@ -21,7 +21,9 @@ In the table of the **Overview of Product Labels** page, you see the following i
 * Product Label status and the actions that can be initiated
 
 ## Create/Edit a Product Label page
+
 **General tab**
+
 | Name | Description |
 | --- | --- |
 | **Name** | The name of the product label, e.g. Discounts Available. |

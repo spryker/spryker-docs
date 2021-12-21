@@ -22,18 +22,18 @@ With the help of Punch Out, a buyer can configure access from their e-procuremen
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/v3/docs/punchout-feature-overview" class="mr-link">Familiarize yourself with the Punch Out feature</a></li>
-                <li><a href="https://documentation.spryker.com/v3/docs/punchout-catalog-feature-integration" class="mr-link">Integrate Punchout Catalog feature v.201907.0 into your project</a></li>
-                <li><a href="https://documentation.spryker.com/v3/docs/eco-punchout-catalogs-feature-integration" class="mr-link">Integrate Eco: Punchout Catalogs feature v.201907.0 into your project</a></li>
-                  <li><a href="https://documentation.spryker.com/v3/docs/eco-punchout-catalogs-product-bundles-feature-integration" class="mr-link">Integrate Punchout GUI + Product Bundles feature v.201907.0 into your project</a></li>
+                <li><a href="/docs/scos/user/features/{{page.version}}/technology-partner-integrations/punch-out/punch-out-feature-overview.html" class="mr-link">Familiarize yourself with the Punch Out feature</a></li>
+                <li><a href="/docs/scos/user/technology-partners/{{page.version}}/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html" class="mr-link">Integrate Punchout Catalog feature v.201907.0 into your project</a></li>
+                <li><a href="/docs/scos/user/technology-partners/{{page.version}}/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-feature-integration.html" class="mr-link">Integrate Eco: Punchout Catalogs feature v.201907.0 into your project</a></li>
+                  <li><a href="/docs/scos/user/technology-partners/{{page.version}}/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html" class="mr-link">Integrate Punchout GUI + Product Bundles feature v.201907.0 into your project</a></li>
             </ul>
         </div>
          <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/v3/docs/managing-punchout-connections" class="mr-link">Manage Punch Out Connections</a></li>
-                <li><a href="https://documentation.spryker.com/v3/docs/managing-transactions-log" class="mr-link">Manage Transactions Logs</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/punch-out/managing-punch-out-connections.html" class="mr-link">Manage Punch Out Connections</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/punch-out/managing-transactions-log.html" class="mr-link">Manage Transactions Logs</a></li>
             </ul>
         </div>
          </div>

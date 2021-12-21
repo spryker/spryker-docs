@@ -16,6 +16,8 @@ redirect_from:
   - /v5/docs/en/ht-create-register-provider-plugin
   - /v4/docs/ht-create-register-provider-plugin
   - /v4/docs/en/ht-create-register-provider-plugin
+  - /v3/docs/ht-create-register-provider-plugin
+  - /v3/docs/en/ht-create-register-provider-plugin
   - /v2/docs/ht-create-register-provider-plugin
   - /v2/docs/en/ht-create-register-provider-plugin
   - /v1/docs/ht-create-register-provider-plugin

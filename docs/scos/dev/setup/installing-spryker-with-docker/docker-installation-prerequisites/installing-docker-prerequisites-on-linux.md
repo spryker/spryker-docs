@@ -17,7 +17,7 @@ redirect_from:
   - /v4/docs/docker-installation-prerequisites-linux
   - /v4/docs/en/docker-installation-prerequisites-linux
   - /v3/docs/docker-install-prerequisites-linux-201907
-  - /v3/docs/en/docker-install-prerequisites-linux-201907  - 
+  - /v3/docs/en/docker-install-prerequisites-linux-201907  -
   - /2021080/docs/docker-installation-prerequisites
   - /2021080/docs/en/docker-installation-prerequisites
   - /docs/docker-installation-prerequisites
@@ -27,7 +27,7 @@ redirect_from:
 This document describes the prerequisites for installing Spryker in Docker on Linux.
 
 
-## Minimum system requirements
+## System requirements
 
 Review the system and software requirements in the table.
 

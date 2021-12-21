@@ -19,7 +19,9 @@ This article describes the managing actions that you can perform with a product 
 ***
 To start managing product sets, navigate to the **Products > Product Sets** section.
 ***
+
 ## Editing a Product Set
+
 To edit a product set:
 1. In the _Actions_ column of the **Product Sets** table, click **Edit** for the product set you want to update.
 2. On the **Edit Product Set** page, update the needed attributes. The procedure is very similar to the procedure of creating a product set (see _Creating a Product Set_ article for more details). The only difference is that in the **Products** tab, in addition to the **Select Products to assign** table, you will see the **Products in this Set** table at the bottom of the page. In this table you can:
@@ -28,14 +30,18 @@ To edit a product set:
 ![Editing a product set](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Sets/Managing+Product+Sets/editing-product-set.png) 
 
     {% info_block infoBox "Info" %}
-The attributes you see are described in [Product Sets: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-sets/references/product-sets-reference-information.html).
-{% endinfo_block %}
+    
+    The attributes you see are described in [Product Sets: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-sets/references/product-sets-reference-information.html).
+    
+    {% endinfo_block %}
 3. Once done, click **Submit**.
 ***
 **Tips & Tricks**
 On this page, you can click **View** in the top right corner of the page and switch to the **View Product Set** page.
 ***
+
 ## Reordering Product Sets
+
 The weight defines the order of the product sets displayed in the Product Sets section.
 
 If you want to reorder the product sets, you:
@@ -45,7 +51,9 @@ If you want to reorder the product sets, you:
 ![Reordering product sets](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Sets/Managing+Product+Sets/reorder-product-sets.png) 
 
 3. Once done, click **Submit**.
+
 ***
+
 ## Viewing a Product Set
 To view a product set:
 1. In the _Actions_ column of the **Product Sets** table, click **View** for the product set you want to view.
@@ -53,13 +61,17 @@ To view a product set:
     1. Switch to the **Edit Product Set** page by clicking **Edit** in the top right corner.
     2. Deactivate a product set by clicking **Deactivate** in the top right corner.
     3. Open the **View Product Abstract** page of a specific product included in the set by clicking the hyperlinked product name in the _Product details_ column of the **Products** table.
+
 ***
+
 ## Activating/Deactivating a Product Set
 To activate/deactivate a product set: 
 1. In the _Actions_ column of the Product Sets table, click **Deactivate** for a specific product set.
     **Or**
 2. Navigate to the **View Product Set** table and click **Deactivate** in the top right corner.
+
 ***
+
 ## Deleting a Product Set
 **To delete a product set**, click **Delete** in the _Actions_ column of the **Product Sets** page.
 

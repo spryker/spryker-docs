@@ -142,7 +142,7 @@ Make sure to click **Save** before clicking **Back to Content Items** or going t
 Follow the steps to create a Product Set:
 
 1. On the *Create Content Item: Product Set* page, enter **Name** and **Description**. The fields are mandatory.
-2. In the **Defualt** tab, add a product set by clicking **+Add to list** next to it.
+2. In the **Default** tab, add a product set by clicking **+Add to list** next to it.
 
     {% info_block warningBox "Verification" %}
 

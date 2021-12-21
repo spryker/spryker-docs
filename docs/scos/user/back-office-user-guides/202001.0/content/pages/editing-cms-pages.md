@@ -67,7 +67,7 @@ To change the title and content of the page:
 
 {% info_block infoBox %}
 
-In the placeholders editor, you can insert a banner, abstract product list, product set, and downloadable files using content item widgets. See [Adding Content Item Widgets to a Page](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html#adding-content-item-widgets-to-pages) for more details.
+In the placeholders editor, you can insert a banner, abstract product list, product set, and downloadable files using content item widgets. See [Adding Content Item Widgets to a Page](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/content-item-widgets.html) for more details.
 
 {% endinfo_block %}
 

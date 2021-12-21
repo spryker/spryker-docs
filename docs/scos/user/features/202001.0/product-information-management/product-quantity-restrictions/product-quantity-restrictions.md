@@ -16,23 +16,9 @@ The Product Quantity Restrictions feature enables you to easily handle all such 
 
 ## If you are:
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="/docs/scos/user/features/202108.0/non-splittable-products-feature-overview.html" class="mr-link">Get a general idea of the Product Quantity Restrictions feature</a></li>
-                <li><a href="#" class="mr-link">Enable the Product Quantity Restrictions feature in your project</a></li>
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li><a href="/docs/scos/user/features/202108.0/non-splittable-products-feature-overview.html" class="mr-link">Get a general idea of the Product Quantity Restrictions feature</a></li>
-                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/concrete-products/creating-product-variants.html" class="mr-link">Enable/disable quantity restrictions for concrete products</a></li>
-                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/concrete-products/editing-product-variants.html" class="mr-link">Set minimum, maximum, interval quantity restrictions for concrete products</a></li>
-              </ul>
-        </div>
-    </div>
-</div>
+Developer:
+
+- [Get a general idea of the Product Quantity Restrictions feature](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html)
+- [Get a general idea of the Product Quantity Restrictions feature](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html)
+- [Enable/disable quantity restrictions for concrete products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/concrete-products/creating-product-variants.html)
+- [Set minimum, maximum, interval quantity restrictions for concrete products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/concrete-products/updating-product-variants.html)

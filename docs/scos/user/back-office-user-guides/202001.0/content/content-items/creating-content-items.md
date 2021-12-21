@@ -203,7 +203,7 @@ Follow the steps to create a File List:
 
     2.  In the **Selected Files** table, sort the added files by clicking **Move Down** or **Move Up**.
 
-See [Content Items: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/references/content-items-reference-information.html) to learn about the attributes on this page.
+See [Content Items: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-items.html) to learn about the attributes on this page.
 
 1. If needed, repeat the previous step in one or more locale-specific tabs.
 

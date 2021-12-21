@@ -53,27 +53,13 @@ Company roles and permissions and their relation to the organizational structure
 
 ## Permission Types
 Permissions can be simple and complex.
-<table>
-	<th>Permission Type</th>
-	<th>Description</th>
-	<th>Example</th>
-	<tr>
-        <td><b>Simple</b></td>
-		<td>	Simple permissions are those that do not have any logic behind them and answer the question “Does the customer have a permission?”. Simple permissions implement only PermissionPluginInterface (Shared).</td>
-		<td>A Company User is allowed (or not allowed) to access product details page.![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/simple_permissions.png)</td>
-	</tr>
-	<tr>
-        <td><b>Complex</b></td>
-		<td>Complex permissions have some logic behind them and answer the question “Does the customer have a permission with some parameters and business logic?”. Complex permissions implement ExecutablePermissionPluginInterface (Shared).</td>
-		<td>A Company User is allowed (or not allowed) to place an order with grand total over 1000 Euro.![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/complex_permissions.png)
-        </td>
-	</tr>
-    <tr>
-        <td><b>Infrastructural</b></td>
-		<td>Some permissions should not be managed in the UI, but programatically. Infrastructural permissions implement InfrastructuralPermissionPluginInterface (Shared).</td>
-		<td>Read shared cart, which is managed by the Shared Carts feature.</td>
-	</tr>
-</table>
+
+|Permission Type|Description|Example|
+|--- |--- |--- |
+|Simple|Simple permissions are those that do not have any logic behind them and answer the question “Does the customer have a permission?”. Simple permissions implement only PermissionPluginInterface (Shared).|A Company User is allowed (or not allowed) to access product details page.![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/simple_permissions.png)|
+|Complex|Complex permissions have some logic behind them and answer the question “Does the customer have a permission with some parameters and business logic?”. Complex permissions implement ExecutablePermissionPluginInterface (Shared).|A Company User is allowed (or not allowed) to place an order with grand total over 1000 Euro.![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/complex_permissions.png)|
+|Infrastructural|Some permissions should not be managed in the UI, but programatically. Infrastructural permissions implement InfrastructuralPermissionPluginInterface (Shared).|Read shared cart, which is managed by the Shared Carts feature.|
+
 
 {% info_block infoBox %}
 

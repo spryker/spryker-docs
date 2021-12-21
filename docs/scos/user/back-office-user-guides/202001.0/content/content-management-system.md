@@ -70,8 +70,8 @@ To learn more about how to create and edit Content Items, see the following arti
 * [Editing content items details](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/editing-content-items.html)
 
 To learn more about how to add content items widgets to a block or a page and how to manage them, see the following articles:
-* [Inserting a content item widget in a block](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html)
-* [Adding a content item widget to a page](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html)
+* [Inserting a content item widget in a block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/content-item-widgets.html)
+* [Adding a content item widget to a page](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/content-item-widgets.html)
 
 To learn more about how to configure URL redirects, see the following article:
 * [Creating a URL redirect](/docs/scos/user/back-office-user-guides/{{page.version}}/content/redirects/creating-cms-redirects.html)

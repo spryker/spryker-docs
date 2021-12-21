@@ -57,5 +57,5 @@ To enhance the visibility of your shop, the Spryker Commerce OS comes with sever
 
 - [Templates & Slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html)
 - [CMS Page](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-page-drafts-and-previews.html)
-- [CMS Block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.htm)
+- [CMS Block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html)
 - [Content Items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html)

@@ -50,7 +50,7 @@ If the content item types shipped by default are not sufficient for your project
 
 ## Create CMS Blocks
 
-[CMS block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-block.html) serves as the actual content that you insert into Storefront pages.
+[CMS block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html) serves as the actual content that you insert into Storefront pages.
 
 Follow the steps to create the CMS blocks with the needed content:
 
@@ -96,7 +96,7 @@ Follow the steps to select a template with slots:
 2. In the **List of Templates**, select the *Product* template with slots.
     This template with slots is assigned to all the product pages. By selecting it, you select to work with all the product pages at once.
 
-If the templates with slots shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [Template with Slots](/docs/scos/dev/tutorials/{{page.version}}/howtos/feature-howtos/cms/howto-create-cms-templates.html#template-with-slots) for more details.
+If the templates with slots shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [Template with Slots](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#template-with-slots) for more details.
 
 ## Select a Slot
 

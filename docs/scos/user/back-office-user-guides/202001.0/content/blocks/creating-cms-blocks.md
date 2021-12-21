@@ -47,11 +47,11 @@ To create a block:
 
 {% info_block infoBox %}
 
-Templates are project-specific and are usually created by a developer and a business person. If you are missing a CMS Block template, contact them and refer to the [HowTo - Create a CMS Block template](/docs/scos/dev/tutorials/{{page.version}}/howtos/feature-howtos/cms/howto-create-cms-templates.html#adding-a-template-for-a-cms-block).
+Templates are project-specific and are usually created by a developer and a business person. If you are missing a CMS Block template, contact them and refer to the [HowTo - Create a CMS Block template](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-block-template).
 
 {% endinfo_block %}
 
-See [CMS Blocks: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/blocks/references/cms-block-reference-information.html) to learn more about CMS blocks attributes.)
+See [CMS Blocks: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/references/cms-block-reference-information.html) to learn more about CMS blocks attributes.)
 
 3. To save the changes, click **Save**. This will successfully create a block and take you to the **Edit Block Glossary** page.
 

@@ -1013,7 +1013,7 @@ When placing an order, you need to check the value of the **redirectURL** attrib
 It is the responsibility of the API Client to redirect the customer to the page and capture the response. For information on how to process it, see information on the payment service provider's API.
 {% endinfo_block %}
 
-The formats of the payloads used in the request and response to the third party page are defined by the respective **Eco** layer module that implements the interaction with the payment provider. For details, see section **3. Implement Payload Processor Plugin** in [Interacting with Third Parties via Glue API](docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html#implement-payload-processor-plugin).
+The formats of the payloads used in the request and response to the third party page are defined by the respective **Eco** layer module that implements the interaction with the payment provider. For details, see section **3. Implement Payload Processor Plugin** in [Interacting with Third Parties via Glue API](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html#implement-payload-processor-plugin).
 
 **Interaction Diagram**
 

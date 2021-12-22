@@ -4104,6 +4104,18 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-feature-integration.html
             - title: Eco - Punchout Catalogs + Product Bundles feature integration
               url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html
+    - title: Payment partners
+      nested:
+        - title: adyen
+          nested:
+            - title: Installing and configuring adyen
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/installing-and-configuring-adyen.html
+            - title: Integrating adyen
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/integrating-adyen.html
+            - title: Integrating adyen payment methods
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/integrating-adyen-payment-methods.html
+            - title: Enabling adyen filtering payment methods
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/enabling-adyen-filtering-payment-methods.html
     - title: Taxes
       nested:
         - title: Avalara

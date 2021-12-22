@@ -12,7 +12,7 @@ Using the login details provided by your FeS account owner, log into the [Launch
 
 After logging in, the *List of Applications* page opens.
 
-## Creating a Storefront
+## Defining general information
 
 To create a Storefront, do the following:
 
@@ -26,17 +26,21 @@ To create a Storefront, do the following:
 
   *Code Repository provider*, *Hosting provider*, and *Commerce provider* sections appear.
 
-4. In the *Code Repository provider* section, select **Install GitHub organization**.
+## Connecting GitHub repositories
 
-5. On the GitHub page that opens, connect your GitHub organization and grant access to the repository with the VueStorefront application.
+In the *Code Repository provider* section, you are going to grant the Launchpad permission to your GitHub repository with the application. Follow the steps:
+
+1. Select **Install GitHub organization**.
+
+2. On the GitHub page that opens, connect your GitHub organization and grant access to the repository with the VueStorefront application.
 
 This takes you back to the *Create new Application* page.
 
-6. Select the **ORGANISATION** you've connected.
+3. Select the **ORGANISATION** you've connected.
 
-7. Select the **REPOSITORY** with the VueStorefront application.
+4. Select the **REPOSITORY** with the VueStorefront application.
 
-8. Select the **BRANCH** you want to deploy.
+5. Select the **BRANCH** you want to deploy.
 
 We recommend mapping branches to Storefronts as follows:
 * master branch — production Storefront
@@ -44,6 +48,9 @@ We recommend mapping branches to Storefronts as follows:
 
 
 
+##
+
+9. In the *Hosting provider* section, enter a **BASE DIRECTORY**.
 
 ## How do I set up an infrastructure for a front end?
 

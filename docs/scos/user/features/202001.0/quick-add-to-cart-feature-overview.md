@@ -72,7 +72,7 @@ However, separators should be the same for all products entered in this form at 
 {% endinfo_block %}
 
 ## Quantity restrictions for Quick Order
-Quick Order quantity rules fall under limitations set by [quantity restrictions](//docs/scos/user/features/{{page.version}}/product-information-management/product-quantity-restrictions/product-quantity-restrictions.html). Quantity restriction values define the number of items that customers can put into the cart.
+Quick Order quantity rules fall under limitations set by [quantity restrictions](/docs/scos/user/features/{{page.version}}/product-information-management/product-quantity-restrictions/product-quantity-restrictions.html). Quantity restriction values define the number of items that customers can put into the cart.
 
 When manually filling the *SKU/Name* field, the quantity selector allows a visitor to put the valid numbers based on [quantity restrictions](/docs/scos/user/features/{{page.version}}/product-information-management/product-quantity-restrictions/product-quantity-restrictions.html) set for that SKU. That means, for example, if a concrete product has the minimum quantity restriction for 4 units, the interval restriction to 2 units, and the maximum quantity is 12, the shopper can put 4, 6, 8, 10, and 12 items to cart.
 

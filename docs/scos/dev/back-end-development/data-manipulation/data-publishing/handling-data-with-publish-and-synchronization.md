@@ -965,7 +965,7 @@ class MessageStorageReader implements MessageStorageReaderInterface
             ->setReference($idMessage);
 
         $key = $this->synchronizationService
-            ->getStorageKeyBuilder('message')
+            ->getStorageKeyBuilder('message') // "message" is the resource name
             ->generateKey($synchronizationDataTransfer);
 
         $data = $this->storageClient->get($key);

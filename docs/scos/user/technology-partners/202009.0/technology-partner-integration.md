@@ -83,7 +83,7 @@ In this section you will find information about our Technology Partner Integrati
 ## Order Management (ERP/OMS)
 
 * [Tradebyte](/docs/scos/user/technology-partners/{{page.version}}/order-management-erpoms/tradebyte.html)
-* [Punchout Catalogs](/docs/scos/user/technology-partners/{{page.version}}/order-management-erpoms/punchout-catalogs/punchout-catalogs.html)
+* [Punchout Catalogs](/docs/scos/user/technology-partners/{{page.version}}/order-management-erpoms/punchout-catalogs.html)
 
 ## Operational Tools
 

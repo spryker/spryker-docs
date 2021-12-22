@@ -1579,13 +1579,109 @@ To update a request for quote for a customer, send the request:
 |-|-|
 | ***{% raw %}{{{% endraw %}QuotationRequestID{% raw %}}}{% endraw %}*** | Request for quote unique identifier to manage requests for quotes. To get it, [create a quote request](#create-a-request-for-quote). |
 
+### Request
+
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
+|---|---|---|---|
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+
+Request sample: `PATCH https://glue.mysprykershop.com/quote-requests/DE--21-8/`
+
+```json
+{
+    "data": {
+        "type": "quote-requests",
+        "attributes": {
+            "cartUuid": "8fc45eda-cddf-5fec-8291-e2e5f8014398",
+            "metadata": {
+                "purchase_order_number": "3",
+                "delivery_date": "28-12-2021",
+                "note": "Update"
+            }
+        }
+    }
+}
+```
+
+### Response
+
+<details><summary>Response sample</summary>
+
+```json
+{
+    "data": {
+        "type": "quote-requests",
+        "id": "DE--21-8",
+        "attributes": {
+            "quoteRequestReference": "DE--21-8",
+            "status": "draft",
+            "isLatestVersionVisible": true,
+            "createdAt": "2021-12-22 11:19:42.000000",
+            "validUntil": null,
+            "versions": [
+                "DE--21-8-1"
+            ],
+            "shownVersion": {
+                "version": 1,
+                "versionReference": "DE--21-8-1",
+                "createdAt": "2021-12-22 11:19:44.000000",
+                "metadata": {
+                    "purchase_order_number": "3",
+                    "delivery_date": "28-12-2021",
+                    "note": "Update"
+                },
+                "cart": {
+                    "priceMode": "GROSS_MODE",
+                    "store": "DE",
+                    "currency": "EUR",
+                    "totals": {
+                        "expenseTotal": 0,
+                        "discountTotal": 0,
+                        "taxTotal": {
+                            "tax_rate": null,
+                            "amount": 5133
+                        },
+                        "subtotal": 32149,
+                        "grandTotal": 32149,
+                        "priceToPay": 32149
+                    },
+                    "billingAddress": null,
+                    "items": [
+                        {
+                            "groupKey": "044_31040076",
+                            "productOfferReference": null,
+                            "merchantReference": null,
+                            "sku": "044_31040076",
+                            "quantity": 1,
+                            "abstractSku": "044",
+                            "amount": null,
+                            "configuredBundle": null,
+                            "configuredBundleItem": null,
+                            "salesUnit": null,
+                            "calculations": null,
+                            "selectedProductOptions": []
+                        }
+                    ],
+                    "discounts": [],
+                    "shipments": []
+                }
+            }
+        },
+        "links": {
+            "self": "http://glue.de.spryker.local/quote-requests/DE--21-8"
+        }
+    }
+}
+```
+</details>
+
 ## Cancel a request for quote
 
 To cancel a request for quote, send the request:
 
-`POST` **/quote-requests/{% raw %}{{{% endraw %}*QuotationRequestID*{% raw %}}}{% endraw %}/quote-request-cancel**
+`POST` **/quote-requests/{% raw %}{{{% endraw %}*QuotationRequestID*{% raw %}}}{% endraw %}/quote-request-cancel**  
 
-| PATH PARAMETER | DESCRIPTION |s
+| PATH PARAMETER | DESCRIPTION |
 |-|-|
 | ***{% raw %}{{{% endraw %}QuotationRequestID{% raw %}}}{% endraw %}*** | Request for quote unique identifier to manage requests for quotes. To get it, [create a quote request](#create-a-request-for-quote). |
 

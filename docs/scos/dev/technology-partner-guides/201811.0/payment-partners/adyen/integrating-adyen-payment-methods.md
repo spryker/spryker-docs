@@ -10,7 +10,7 @@ redirect_from:
   - /v1/docs/en/adyen-provided-payment-methods
 related:
   - title: Payment Integration - Adyen
-    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen.html
+    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen.html
   - title: Enabling Adyen filtering payment methods
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/enabling-adyen-filtering-payment-methods.html
   - title: Installing and configuring Adyen

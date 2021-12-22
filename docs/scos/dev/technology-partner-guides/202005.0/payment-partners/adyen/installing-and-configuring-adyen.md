@@ -10,7 +10,7 @@ redirect_from:
   - /v5/docs/en/adyen-configuration
 related:
   - title: Payment Integration - Adyen
-    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen.html
+    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen.html
   - title: Integrating Adyen
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/integrating-adyen.html
   - title: Integrating Adyen payment methods

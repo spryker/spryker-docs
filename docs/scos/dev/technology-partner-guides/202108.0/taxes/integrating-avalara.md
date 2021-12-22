@@ -10,12 +10,13 @@ redirect_from:
   - /2021080/docs/en/avalara-tax-integration
   - /docs/avalara-tax-integration
   - /docs/en/avalara-tax-integration
+  - /docs/scos/user/technology-partners/202108.0/taxes/avalara-tax-integration.html
 related:
   - title: Tax feature overview
     link: docs/scos/user/features/page.version/tax-feature-overview.html
 ---
 
-To enable the AvalaraTax partner integration, use the [spryker-eco/avalara-tax](https://github.com/spryker-eco/avalara-tax) module.
+To enable the Avalara partner integration, use the [spryker-eco/avalara-tax](https://github.com/spryker-eco/avalara-tax) module.
 
 ## Install feature core
 
@@ -482,5 +483,5 @@ Open `spy_product_abstract`, and `spy_product` and make sure that all data has b
 
 | FEATURE |REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
 | ---  |---  |---  |
-|Avalara Tax + Product Option  |✓| [Avalara Tax + Product Options feature integration](/docs/scos/user/technology-partners/{{page.version}}/taxes/avalara-tax-product-options-feature-integration.html) |
-|Avalara Tax + Shipment |✓ |[Avalara Tax + Shipment feature integration](/docs/scos/user/technology-partners/{{page.version}}/taxes/avalara-tax-shipment-feature-integration.html) |
+|Avalara Tax + Product Option  |✓| [Avalara Tax + Product Options feature integration](/docs/scos/dev/technology-partner-guides/{{page.version}}/taxes/integrating-avalara-tax-product-options.html) |
+|Avalara Tax + Shipment |✓ |[Avalara Tax + Shipment feature integration](/docs/scos/dev/technology-partner-guides/{{page.version}}/taxes/integrating-avalara-tax-shipment.html) |

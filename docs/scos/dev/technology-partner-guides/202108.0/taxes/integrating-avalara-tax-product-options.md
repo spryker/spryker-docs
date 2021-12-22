@@ -1,5 +1,5 @@
 ---
-title: Avalara Tax + Product Options feature integration
+title: Integrating Avalara Tax + Product Options
 description: Integrate the Avalara Tax + Product Options feature into your project
 last_updated: Jun 18, 2021
 template: concept-topic-template
@@ -10,16 +10,13 @@ redirect_from:
   - /2021080/docs/en/avalara-tax-product-options-feature-integration
   - /docs/avalara-tax-product-options-feature-integration
   - /docs/en/avalara-tax-product-options-feature-integration
+  - /docs/scos/user/technology-partners/202108.0/taxes/avalara-tax-product-options-feature-integration.html
 related:
   - title: Tax feature overview
     link: docs/scos/user/features/page.version/tax-feature-overview.html
 ---
 
-*Avalara* is a software that calculates sales order taxes during checkout in the US market. It provides real-time tax calculation and automatic filing of returns. 
-
-## General information
-
-To enable AvalaraTax + Product Options partner integration, use the [spryker-eco/avalara-tax-product-option](https://github.com/spryker-eco/avalara-tax-product-option) module.
+To enable the AvalaraTax + Product Options component of the Avalara partner integration, use the [spryker-eco/avalara-tax-product-option](https://github.com/spryker-eco/avalara-tax-product-option) module.
 
 ## Install feature core
 
@@ -32,7 +29,7 @@ To start the feature integration, overview and install the necessary features:
 |NAME | VERSION | INTEGRATION GUIDE |
 |--- | --- | --- |
 | Product Options | master |  |
-| Avalara Tax | master | [Avalara Tax integration](/docs/scos/user/technology-partners/{{page.version}}/taxes/avalara-tax-integration.html)|
+| Avalara Tax | master | [Avalara Tax integration](/docs/scos/dev/technology-partner-guides/{{page.version}}/taxes/integrating-avalara.html)|
 
 ### 1) Install the required modules using Composer
 

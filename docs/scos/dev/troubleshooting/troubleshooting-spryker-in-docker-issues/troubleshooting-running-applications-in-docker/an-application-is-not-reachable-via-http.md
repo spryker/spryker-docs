@@ -15,7 +15,8 @@ redirect_from:
 ---
 
 ## Description
-An application like Yves, BackOffice(Zed), or Glue is not reachable after installation.
+An application like Yves, BackOffice(Zed), GlueStorefront(Glue), GlueBackend or MerchantPortal is not reachable after installation.
+
 
 
 ## Solution

@@ -102,7 +102,7 @@ Please visit our [Partners Registry](https://spryker.com/find-a-partner/) for a 
 
 ## Payment Partners
 
-* [Adyen](/docs/scos/user/technology-partners/202108.0/payment-partners/adyen/adyen.html)
+* [Adyen](/docs/scos/user/technology-partners/202108.0/payment-partners/adyen.html)
 * [Amazon Pay](/docs/scos/user/technology-partners/202108.0/payment-partners/amazon-pay/amazon-pay.html)
 * [AfterPay](/docs/scos/user/technology-partners/202108.0/payment-partners/afterpay/afterpay.html)
 * [Arvato](/docs/scos/user/technology-partners/202108.0/payment-partners/arvato/arvato.html)

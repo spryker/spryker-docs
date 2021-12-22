@@ -17,7 +17,10 @@ The topic provides a list of steps to select billing and shipping addresses for 
 
 {% info_block infoBox %}
 
-You can proceed to the *Address* step as a:<ul><li>**registered user**: In the Login step, sign up by filling out the fields marked with * in the form and click **Register**.</li><li>**guest**: In the Login step, fill in the fields marked with *, select the **Accept Terms** checkbox in the **Order as guest** form, and click **Submit**.</li><li>**logged-in user**: Log in to your account on top of the page.</li></ul>
+You can proceed to the *Address* step as a:
+- **registered user**: In the Login step, sign up by filling out the fields marked with * in the form and click **Register**.
+- **guest**: In the Login step, fill in the fields marked with *, select the **Accept Terms** checkbox in the **Order as guest** form, and click **Submit**.
+- **logged-in user**: Log in to your account on top of the page.
 
 {% endinfo_block %}
 
@@ -86,10 +89,11 @@ To assign several addresses to the same order:
 {% info_block infoBox %}
 
 Clicking **Manage your addresses** will redirect you to the *Addresses* section in **Customer Account**. There you can add a new address, view, edit, or delete existing ones.
+
 {% endinfo_block %}
 
 2. In the **Select a delivery address** drop-down menu, select one of the following options for each item:
-    * **Define new addreses** if you want to assign a new address to the item. This will open the form where you need to populate the fields with the necessary information.
+    * **Define new addresses** if you want to assign a new address to the item. This will open the form where you need to populate the fields with the necessary information.
 
     * Existing address for the item
 
@@ -110,5 +114,3 @@ If there are no saved addresses, the **Define new address** option will be displ
 The delivery addresses are added to your items. Now, you need to select shipment methods for each delivery address.
 
 To learn more on how to select a shipment method, see [Shop Guide - Shipment Step](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-shipment-step.html).
-
-<!-- Last review date: Sep 24, 2019 -->

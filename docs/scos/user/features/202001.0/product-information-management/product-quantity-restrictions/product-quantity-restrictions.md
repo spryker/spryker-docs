@@ -18,7 +18,6 @@ The Product Quantity Restrictions feature enables you to easily handle all such 
 
 Developer:
 
-- [Get a general idea of the Product Quantity Restrictions feature](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html)
-- [Get a general idea of the Product Quantity Restrictions feature](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html)
+
 - [Enable/disable quantity restrictions for concrete products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/concrete-products/creating-product-variants.html)
 - [Set minimum, maximum, interval quantity restrictions for concrete products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/concrete-products/updating-product-variants.html)

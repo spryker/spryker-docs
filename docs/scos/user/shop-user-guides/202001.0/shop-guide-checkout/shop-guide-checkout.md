@@ -28,7 +28,9 @@ A typical checkout process includes the following steps:
 * [Summary](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-summary-step.html): View the details, update the information, if needed, and place the order.
 
 ![Checkout process](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/split-delivery-checkout.gif)
+
 ***
+
 **What's next?**
 
 After you added items to cart, it is time to proceed to the *Address* step and enter the delivery information.

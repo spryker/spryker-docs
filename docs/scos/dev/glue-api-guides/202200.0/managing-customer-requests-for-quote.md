@@ -37,6 +37,7 @@ To retrieve relationships to customers, company users, company business units, o
 {% endinfo_block %}
 
 Request sample:
+
 `POST https://glue.mysprykershop.com/quote-requests`
 
 ```json
@@ -542,16 +543,16 @@ Request sample:
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 |---|---|---|
-| quoteRequestReference | String | Reference of the request for quote |
-| status | String | Status of the request for quote. |
-| isLatestVersionVisible | Boolean | Defines if the latest version of the requoest for quote is visible or not:<div><ul><li>`true`—the latest version is shown.</li><li>`false`—the latest version is hidden.</li></ul></div> |
-| createdAt | String | Request for quote creation date.  |
-| validUntil | String | Date untiL which the request for quote is valid.  |
-| versions | Array | Contains an array of all the request for quote versions.  |
-| version | Integer | Request for quote version.  |
-| versionReference | String | Request for quoteversion ID.  |
-| createdAt | String | Order creation date. |
-| metadata | Array | Metadata of the request for quote.  |
+| quoteRequestReference | String | Request for quote ID  |
+| status | String | Request for quote status. For possible values, see [RFQ Statuses](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html#rfq-statuses)   |
+| isLatestVersionVisible | Boolean  | Defines if the latest version of the request for quote is visible or not:<div><ul><li>`true`—the latest version is shown.</li><li>`false`—the latest version is hidden.</li></ul></div>  |
+| createdAt | String  | Request for quote creation date.  |
+| validUntil | String  | Request for quote validity date. |
+| versions | Array  | Array of all request for quote versions. |
+| version | String  | Request for quote current version.  |
+| versionReference | String  | Request for quote version ID.  |
+| createdAt | String  | Request for quote creation date.  |
+| metadata | Object  | Request for quote metadata. |
 
 For attribute description of a cart, see [Managing carts of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html).
 
@@ -1060,7 +1061,7 @@ To retrieve requests for quote for a customer, send the following request:
 
 </details>
 
-For repsonses' attribute descriptions, see [Create a request for quote](#response-attributes) section.
+For attribute descriptions of response samples, see [Response](#response-attributes) in the Create a request for quote section.
 
 ## Retrieve a request for quote
 
@@ -1074,7 +1075,6 @@ To retrieve a request for quote for a customer, send the following request:
 | PATH PARAMETER | DESCRIPTION |
 |-|-|
 | ***{% raw %}{{{% endraw %}QuotationRequestID{% raw %}}}{% endraw %}*** | Request for quote unique identifier to manage requests for quotes. To get it, [create a quote request](#create-a-request-for-quote). |
-
 
 ### Request
 
@@ -1567,6 +1567,8 @@ For responses' attribute descriptions, see [Create a request for quote](#respons
 
 ## Update a request for quote
 
+<!-- check requests and responses for this section with Dev or QA. Then finish this section-->
+
 To update a request for quote for a customer, send the request:
 
 `PATCH` **/quote-requests/*{% raw %}{{{% endraw %}QuotationRequestID{% raw %}}}{% endraw %}***
@@ -1583,7 +1585,7 @@ To cancel a request for quote, send the request:
 
 `POST` **/quote-requests/{% raw %}{{{% endraw %}*QuotationRequestID*{% raw %}}}{% endraw %}/quote-request-cancel**
 
-| PATH PARAMETER | DESCRIPTION |
+| PATH PARAMETER | DESCRIPTION |s
 |-|-|
 | ***{% raw %}{{{% endraw %}QuotationRequestID{% raw %}}}{% endraw %}*** | Request for quote unique identifier to manage requests for quotes. To get it, [create a quote request](#create-a-request-for-quote). |
 
@@ -1612,17 +1614,16 @@ In case of the successful request, `1` is sent in response.
 
 | CODE | REASON |
 |---|---|
-| 001 | Access token is invalid. |
-| 002 | Access token is missing. |
+| 001 | Access token is invalid |
+| 002 | Access token is missing |
 | 101 | Cart with the given UUID is not found. |
 | 102 | Failed to add an item to cart. |
 | 1401 | Rest user is not a company user (wrong access token). |  
 | 4501 | Quote request is not found. |
-| 5402 | Quote request reference is required.  |
-| 5403 | Cart is empty. |
-| 5404 | Wrong Quote Request status for this operation.  |
-| 5405 | Quote Request could not be updated due to parallel-customer interaction.  |
-| 5406 | Something went wrong.  |
-| 5407 | Something went wrong with agent. |
+| 4502 | Quote request reference is required. |
+| 4503 | Cart is empty. |
+| 4504 | Wrong Quote Request status for this operation. |
+| 4505 | Quote Request could not be updated due to parallel-customer interaction. |
+| 4506 | Something went wrong. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

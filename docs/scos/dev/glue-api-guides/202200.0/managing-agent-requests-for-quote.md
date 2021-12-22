@@ -9,7 +9,7 @@ This endpoint allows managing agent requests for quote.
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see <!--paste a link to a IG-->
+For details on the modules that provide the API functionality and how to install them, see <!--paste a link to an IG-->
 
 ## Create a request for quote
 
@@ -36,7 +36,7 @@ To retrieve relationships to customers, company users, company business units, o
 
 {% endinfo_block %}
 
-Sample request: `POST https://glue.mysprykershop.com/agent-quote-requests`
+Request sample: `POST https://glue.mysprykershop.com/agent-quote-requests`
 
 ```json
 {
@@ -177,9 +177,34 @@ Sample request: `POST https://glue.mysprykershop.com/agent-quote-requests`
 
 </details>
 
+<a name="create-request-for-quote-response"></a>
+
+| ATTRIBUTE | TYPE | DESCRIPTION |
+|---|---|---|
+| quoteRequestReference | String | Request for quote ID  |
+| status | String | Request for quote status. For possible values, see [RFQ Statuses](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html#rfq-statuses)   |
+| isLatestVersionVisible | Boolean  | Defines if the latest version of the request for quote is visible or not:<div><ul><li>`true`—the latest version is shown.</li><li>`false`—the latest version is hidden.</li></ul></div>  |
+| createdAt | String  | Request for quote creation date.  |
+| validUntil | String  | Request for quote validity date. |
+| versions | Array  | Array of all request for quote versions. |
+| version | String  | Request for quote current version.  |
+| versionReference | String  | Request for quote version ID.  |
+| createdAt | String  | Request for quote creation date.  |
+| metadata | Object  | Request for quote metadata. |
+
+For attribute descriptions of a cart, see [Managing carts of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html).
+
+For attribute descriptions of shipments, see [Managing customer addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customer-addresses.html).
+
+For attribute descriptions of concrete products, see [Retrieving concrete products](https://docs.spryker.com/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#response).
+
+For attribute descriptions of customers, see [Managing customers](https://docs.spryker.com/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html).
+
+For attribute descriptions of business units, see [Retrieving business units](https://docs.spryker.com/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-units.html).
+
 ## Retrieve requests for quote
 
-To retrieve requests for quote for an agent, send the following request:
+To retrieve requests for quote, send the following request:
 
 ---
 `GET` **/agent-quote-requests**
@@ -194,7 +219,20 @@ To retrieve requests for quote for an agent, send the following request:
 |---|---|---|
 | include | Adds resource relationships to the request. | <div><ul><li>customers</li><li>company-users</li><li>company-business-units</li><li>concrete-products</li></ul></div> |
 
-Sample request: `POST https://glue.mysprykershop.com/agent-quote-requests`
+{% info_block infoBox "Included resources" %}
+
+To retrieve relationships to customers, company users, company business units, or concrete products, include  `customers`, `company-users`, `company-business-units`, or `concrete-products` respectively.
+
+{% endinfo_block %}
+
+Request sample: `GET https://glue.mysprykershop.com/agent-quote-requests`
+
+REQUEST SAMPLE | USAGE |
+|-|-|
+| `GET https://glue.mysprykershop.com/agent-quote-requests?include=customers` | Retrieve a request for quote with customer information included.  |
+| `GET https://glue.mysprykershop.com/agent-quote-requests?include=company-users`  | Retrieve a request for quote with company user information included. |
+| `GET https://glue.mysprykershop.com/agent-quote-requests?include=company-business-units`  | Retrieve a request for quote with information about company business units included.  |
+| `GET https://glue.mysprykershop.com/agent-quote-requests?include=concrete-products`  | Retrieve a request for quote with information about concrete products included. |
 
 ## Response
 
@@ -270,11 +308,39 @@ Sample request: `POST https://glue.mysprykershop.com/agent-quote-requests`
 
 </details>
 
+<!-- add the following responses -->
+<details><summary>Response sample with customers</summary>
+
+```json
+```
+</details>
+
+<details><summary>Response sample with company-users</summary>
+
+```json
+```
+</details>
+
+<details><summary>Response sample with company-business-units</summary>
+
+```json
+```
+
+</details>
+
+<details><summary>Response sample with concrete-products</summary>
+
+```json
+```
+
+</details>
 
 
-## Retrieve an agent request for quote
+For descriptions of response attribute, see [Create a request for quote: Response](#create-request-for-quote-response)
 
-To retrieve a request for quote for an agent, send the following request:
+## Retrieve a request for quote
+
+To retrieve a request for quote, send the following request:
 
 `GET` **/agent-quote-requests/{{QuotationRequestID}}**
 
@@ -293,6 +359,13 @@ To retrieve relationships to customers, company users, company business units, o
 {% endinfo_block %}
 
 Sample request: `GET https://glue.mysprykershop.com/agent-quote-requests/DE--21-22`
+
+REQUEST SAMPLE | USAGE |
+|-|-|
+| `GET https://glue.mysprykershop.com/agent-quote-requests/DE--21-22?include=customers` | Retrieve a request for quote with customer information included.  |
+| `GET https://glue.mysprykershop.com/agent-quote-requestsDE--21-22?include=company-users`  | Retrieve a request for quote with company user information included. |
+| `GET https://glue.mysprykershop.com/agent-quote-requestsDE--21-22?include=company-business-units`  | Retrieve a request for quote with information about company business units included.  |
+| `GET https://glue.mysprykershop.com/agent-quote-requestsDE--21-22?include=concrete-products`  | Retrieve a request for quote with information about concrete products included. |
 
 ## Response
 
@@ -761,7 +834,12 @@ Sample request: `GET https://glue.mysprykershop.com/agent-quote-requests/DE--21-
 
 </details>
 
+For descriptions of response attributes, see the [Response](#create-request-for-quote-response) section of Create a request for quote.
+
+
 ## Cancel a request for quote
+
+<!-- check if it works at all -->
 
 To cancel a request for quote, send the request:
 
@@ -792,23 +870,21 @@ Request sample: `POST https://glue.mysprykershop.com/quote-requests/DE--21-34/ag
 
 In case of the successful request, `1` is sent in response.
 
-
-
 ## Possible errors
 
 | CODE | REASON |
 |---|---|
 | 001 | Access token is invalid |
 | 002 | Access token is missing |
-| 101 | Cart with the given uuid is not found. |
+| 101 | Cart with the given UUID is not found. |
 | 102 | Failed to add an item to cart. |
 | 1401 | Rest user is not a company user (wrong access token) |  
 | 4501 | Quote request is not found. |
-| 5402 | Quote request reference is required.  |
-| 5403 | Cart is empty. |
-| 5404 | Wrong Quote Request status for this operation.  |
-| 5405 | Quote Request could not be updated due to parallel-customer interaction.  |
-| 5406 | Something went wrong.  |
-| 5407 | Something went wrong with agent. |
+| 4502 | Quote request reference is required. |
+| 4503 | Cart is empty. |
+| 4504 | Wrong Quote Request status for this operation. |
+| 4505 | Quote Request could not be updated due to parallel-customer interaction. |
+| 4506 | Something went wrong. |
+| 4507 | Something went wrong with agent. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

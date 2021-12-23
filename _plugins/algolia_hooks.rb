@@ -3,25 +3,47 @@ module Jekyll
         module Hooks
             def self.before_indexing_each(record, node, context)
                 @context = context
+                record[:versions] = self.get_all_page_versions record
 
-                return nil if not self.should_be_indexed record
+                return self.should_be_indexed(record) ? record : nil
+            end
 
-                record
+            def self.get_all_page_versions(record)
+                if not self.is_multiversion record
+                    return @context.config['versions'].values
+                end
+
+                page_url = record[:url]
+                all_pages = @context.pages
+                full_url_pattern = %r{\A#{page_url.gsub(%r{/\d+\.\d+/}, '/\d+\.\d+/')}\Z}
+                versioned_page_urls = all_pages.select do |site_page|
+                  site_page.url.match full_url_pattern
+                end.map(&:url)
+
+                page_versions = versioned_page_urls.map do |url|
+                    self.get_page_version_from_url url
+                end
+
+                return page_versions.select do |page_version|
+                    !self.is_upcoming_version(page_version)
+                end
             end
 
             def self.should_be_indexed(record)
-                page_version = self.get_page_version record
+                return true if not self.is_multiversion record
+
+                page_version = self.get_page_version_from_url record[:url]
 
                 return false if self.is_upcoming_version page_version
 
-                return true if not self.is_multiversion record
-
-                self.is_latest_version page_version, record
+                page_version == record[:versions].max
             end
 
-            def self.get_page_version(record)
-                record[:url].match(%r{/(?<version>\d+\.\d+)/});
-                Regexp.last_match(:version)
+            def self.get_page_version_from_url(url)
+                version_pattern = %r{/(?<page_version>\d+\.\d+)/}
+                version_pattern.match(url)
+
+                return Regexp.last_match(:page_version)
             end
 
             def self.is_upcoming_version(page_version)
@@ -41,31 +63,6 @@ module Jekyll
                     versioned_categories[product][role] == nil
 
                 return versioned_categories[product][role].include? category
-            end
-
-            def self.is_latest_version(version, record)
-                version == self.get_latest_page_version(record)
-            end
-
-            def self.get_latest_page_version(record)
-                page_url = record[:url]
-                all_pages = @context.pages
-                full_url_pattern = %r{\A#{page_url.gsub(%r{/\d+\.\d+/}, '/\d+\.\d+/')}\Z}
-                versioned_page_urls = all_pages.select do |site_page|
-                  site_page.url.match full_url_pattern
-                end.map(&:url)
-
-                version_pattern = %r{/(?<page_version>\d+\.\d+)/}
-                page_versions = versioned_page_urls.map do |url|
-                    version_pattern.match(url)
-                    Regexp.last_match(:page_version)
-                end
-
-                page_versions = page_versions.select do |page_version|
-                    !self.is_upcoming_version(page_version)
-                end
-
-                page_versions.max
             end
         end
     end

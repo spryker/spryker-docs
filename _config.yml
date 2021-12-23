@@ -205,6 +205,10 @@ algolia:
       title: 'Marketplace Developer'
     - name: 'cloud_dev'
       title: 'Cloud Developer'
+  settings:
+    attributesForFaceting:
+      - tags
+      - versions
 
 sass:
     sass_dir: css

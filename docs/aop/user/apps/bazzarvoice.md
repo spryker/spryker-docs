@@ -20,3 +20,29 @@ To enable BazzarVoice match your products to products in other stores and upload
 
 {% endinfo_block %}
 
+When you connect BazzarVoice, the app puts JavaScrip tags into your store, and the JavaScript code tells where to insert the BazzarVoice content - reviews, star ratings or questions and answers.
+
+{% info_block infoBox "Info" %}
+
+If you have BazzarVoice integrated, the Spryker default [Product Ratings and Reviews feature](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html#current-constraints) is turned off. This means that ratings and reviews collected with the default Spryker Product Ratings and Reviews feature are replaced with the BazzareVoice ratings and reviews.
+
+{% endinfo_block %}
+
+## Integrating BazzarVoice into your store
+
+To integrate the BazzarVoice app into your store:
+
+1. In your store's Back Office, go to Apps.
+2. Click BazzarVoice.
+   This takes you to the BazzarVoice app details page.
+3. In the top right corner of the BazzarVoice app details page, click **Connect app**.
+   This takes you to the BazzarVoice site with the signup form.
+4. Fill out the BazzarVoice signup form and submit it.
+   You should receive the BazzarVoice credentials.
+5. Go back to your store's Back Office, to the BazzarVoice app details page.
+6. In the top right corner of the BazzarVoice app details page, click **Cofigure**.
+7. In the *Configure* pane, enter the credentials you received from BazzarVoice.
+
+That's it. You have integrated the BazzarVoice app into your store. Now, configure the app. See the next sections for the configuration details.
+
+## Configuring BazzarVoice for your store

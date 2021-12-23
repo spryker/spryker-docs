@@ -47,13 +47,24 @@ YOUR ADVANTAGES:
 * Continuous development of innovative features
 * Seamless integration
 
-RatePAY is an online service provider that allows merchants to provide their customers secure, customized payment methods. It bears the full risk and takes over the complete processing.
+RatePAY is an online service provider that allows merchants to provide their customers secure, customized payment methods.
 
-RatePAY provides four methods of payment
-* Invoice
-* Prepayment
-* Direct Debit (ELV)
-* Installment
+RatePAY bears the full risk and takes over the complete processing.
+**RatePAY provides four methods of payment**:
+* [Invoice](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-invoice.html)
+* [Prepayment](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-prepayment.html)
+* [Direct Debit (ELV)](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html)
+* [Installment](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-installment.html)
+
+We use state machines for handling and managing orders and payments. To integrate RatePAY payments, a state machine for RatePAY should be created.
+
+A basic and fully functional state machine for each payment method is already built:
+* `RatepayInvoice01.xml`
+* `RatepayPrepayment01.xml`
+* `RatepayElv01.xml`
+* `RatepayInstallment01.xml`
+
+You can use the same state machines or build new ones. The state machine commands and conditions trigger RatePAY facade calls in order to perform the needed requests to RatePAY.
 
 ---
 

@@ -10,13 +10,13 @@ redirect_from:
   - /v4/docs/en/adyen
 related:
   - title: Adyen - Integration
-    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-integration-into-a-project.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/integrating-adyen.html
   - title: Adyen - Provided Payment Methods
-    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-provided-payment-methods.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/integrating-adyen-payment-methods.html
   - title: Adyen - Filtering Payment Methods
-    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-filtering-payment-methods.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/enabling-adyen-filtering-payment-methods.html
   - title: Adyen - Installation and Configuration
-    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen-installation-and-configuration.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/installing-and-configuring-adyen.html
 ---
 
 ## Partner Information
@@ -34,15 +34,15 @@ The `SprykerEco.Adyen` module includes integration with:
 * OMS (Order Management System) - state machines, all necessary commands for making modification requests and conditions for changing orders status accordingly.
 
 The `SprykerEco.Adyen` module provides the following payment methods:
-* [Credit Card](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#credit-card)
-* [Direct Debit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#direct-debit-sepa-direct-debit)
-* [Klarna Invoice](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#klarna-invoice)
-* [Prepayment](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#prepayment-bank-transfer-iban)
-* [Sofort](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#sofort)
-* [PayPal](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#paypal)
-* [iDeal](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#ideal)
-* [AliPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#alipay)
-* [WeChatPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen-provided-payment-methods.html#wechatpay)
+* [Credit Card](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/integrating-adyen-payment-methods.html)
+* [Direct Debit](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/integrating-adyen-payment-methods.html)
+* [Klarna Invoice](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/integrating-adyen-payment-methods.html)
+* [Prepayment](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/integrating-adyen-payment-methods.html)
+* [Sofort](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/integrating-adyen-payment-methods.html)
+* [PayPal](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/integrating-adyen-payment-methods.html)
+* [iDeal](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/integrating-adyen-payment-methods.html)
+* [AliPay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/integrating-adyen-payment-methods.html)
+* [WeChatPay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/integrating-adyen-payment-methods.html)
 
 ## Installation
 

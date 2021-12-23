@@ -4121,11 +4121,11 @@ entries:
         - title: Avalara
           nested:
             - title: Integrating Avalara
-              url: /docs/scos/dev/technology-partner-guides/taxes/integrating-avalara.html
+              url: /docs/scos/dev/technology-partner-guides/taxes/avalara/integrating-avalara.html
             - title: Integrating Avalara Tax + Product Options
-              url: /docs/scos/dev/technology-partner-guides/taxes/integrating-avalara-tax-product-options.html
+              url: /docs/scos/dev/technology-partner-guides/taxes/avalara/integrating-avalara-tax-product-options.html
             - title: Integrating Avalara Tax + Shipment
-              url: /docs/scos/dev/technology-partner-guides/taxes/integrating-avalara-tax-shipment.html
+              url: /docs/scos/dev/technology-partner-guides/taxes/avalara/integrating-avalara-tax-shipment.html
   - title: Architecture
     url: /docs/scos/dev/architecture/architecture.html
     nested:

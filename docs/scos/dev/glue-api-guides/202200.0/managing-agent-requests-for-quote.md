@@ -5,13 +5,14 @@ last_updated: Jun 22, 2021
 template: glue-api-storefront-guide-template
 ---
 
-This endpoint allows managing agent requests for quote.
+This endpoint lets you manage agent requests for quote.
 
 ## Installation
 
 For details on the modules that provide the API functionality and how to install them, see <!--paste a link to an IG-->
 
 ## Create a request for quote
+
 <!-- We can't send this request as the request is bugged. -->
 To create a request for quote for an agent, send the following request:
 
@@ -246,45 +247,189 @@ REQUEST SAMPLE | USAGE |
     "data": [
         {
             "type": "quote-requests",
-            "id": "DE--21-22",
+            "id": "DE--21-1",
             "attributes": {
-                "quoteRequestReference": "DE--21-22",
-                "status": "draft",
+                "quoteRequestReference": "DE--21-1",
+                "status": "closed",
                 "isLatestVersionVisible": true,
-                "createdAt": "2021-11-12 12:16:37.000000",
+                "createdAt": "2021-12-22 10:40:43.000000",
                 "validUntil": null,
                 "versions": [
-                    "DE--21-22-1"
+                    "DE--21-1-1"
                 ],
                 "shownVersion": {
                     "version": 1,
-                    "versionReference": "DE--21-22",
-                    "createdAt": "2021-11-12 12:16:39.000000",
-                    "metadata": [],
+                    "versionReference": "DE--21-1-1",
+                    "createdAt": "2021-12-22 10:40:43.000000",
+                    "metadata": {
+                        "purchase_order_number": 228,
+                        "delivery_date": null,
+                        "note": "test"
+                    },
                     "cart": {
                         "priceMode": "GROSS_MODE",
                         "store": "DE",
                         "currency": "EUR",
                         "totals": {
                             "expenseTotal": 0,
-                            "discountTotal": 0,
+                            "discountTotal": 14341,
                             "taxTotal": {
                                 "tax_rate": null,
-                                "amount": 2708
+                                "amount": 0
                             },
-                            "subtotal": 41393,
-                            "grandTotal": 41393,
-                            "priceToPay": 41393
+                            "subtotal": 143412,
+                            "grandTotal": 129071,
+                            "priceToPay": 129071
                         },
                         "billingAddress": null,
                         "items": [
                             {
-                                "groupKey": "089_29634947",
+                                "groupKey": "115_27295368",
                                 "productOfferReference": null,
                                 "merchantReference": null,
-                                "sku": "089_29634947",
+                                "sku": "115_27295368",
                                 "quantity": 1,
-                                "abstractSku": "089",
+                                "abstractSku": "115",
+                                "amount": null,
+                                "configuredBundle": null,
+                                "configuredBundleItem": null,
+                                "salesUnit": null,
+                                "calculations": null,
+                                "selectedProductOptions": []
+                            },
+                            {
+                                "groupKey": "118_29804739",
+                                "productOfferReference": null,
+                                "merchantReference": null,
+                                "sku": "118_29804739",
+                                "quantity": 1,
+                                "abstractSku": "118",
+                                "amount": null,
+                                "configuredBundle": null,
+                                "configuredBundleItem": null,
+                                "salesUnit": null,
+                                "calculations": null,
+                                "selectedProductOptions": []
+                            },
+                            {
+                                "groupKey": "124_31623088",
+                                "productOfferReference": null,
+                                "merchantReference": null,
+                                "sku": "124_31623088",
+                                "quantity": 1,
+                                "abstractSku": "124",
+                                "amount": null,
+                                "configuredBundle": null,
+                                "configuredBundleItem": null,
+                                "salesUnit": null,
+                                "calculations": null,
+                                "selectedProductOptions": []
+                            },
+                            {
+                                "groupKey": "126_26280142",
+                                "productOfferReference": null,
+                                "merchantReference": null,
+                                "sku": "126_26280142",
+                                "quantity": 1,
+                                "abstractSku": "126",
+                                "amount": null,
+                                "configuredBundle": null,
+                                "configuredBundleItem": null,
+                                "salesUnit": null,
+                                "calculations": null,
+                                "selectedProductOptions": []
+                            },
+                            {
+                                "groupKey": "119_29804808",
+                                "productOfferReference": null,
+                                "merchantReference": null,
+                                "sku": "119_29804808",
+                                "quantity": 1,
+                                "abstractSku": "119",
+                                "amount": null,
+                                "configuredBundle": null,
+                                "configuredBundleItem": null,
+                                "salesUnit": null,
+                                "calculations": null,
+                                "selectedProductOptions": []
+                            },
+                            {
+                                "groupKey": "128_29955336",
+                                "productOfferReference": null,
+                                "merchantReference": null,
+                                "sku": "128_29955336",
+                                "quantity": 1,
+                                "abstractSku": "128",
+                                "amount": null,
+                                "configuredBundle": null,
+                                "configuredBundleItem": null,
+                                "salesUnit": null,
+                                "calculations": null,
+                                "selectedProductOptions": []
+                            },
+                            {
+                                "groupKey": "127_20723326",
+                                "productOfferReference": null,
+                                "merchantReference": null,
+                                "sku": "127_20723326",
+                                "quantity": 1,
+                                "abstractSku": "127",
+                                "amount": null,
+                                "configuredBundle": null,
+                                "configuredBundleItem": null,
+                                "salesUnit": null,
+                                "calculations": null,
+                                "selectedProductOptions": []
+                            },
+                            {
+                                "groupKey": "122_22308524",
+                                "productOfferReference": null,
+                                "merchantReference": null,
+                                "sku": "122_22308524",
+                                "quantity": 1,
+                                "abstractSku": "122",
+                                "amount": null,
+                                "configuredBundle": null,
+                                "configuredBundleItem": null,
+                                "salesUnit": null,
+                                "calculations": null,
+                                "selectedProductOptions": []
+                            },
+                            {
+                                "groupKey": "117_30585828",
+                                "productOfferReference": null,
+                                "merchantReference": null,
+                                "sku": "117_30585828",
+                                "quantity": 1,
+                                "abstractSku": "117",
+                                "amount": null,
+                                "configuredBundle": null,
+                                "configuredBundleItem": null,
+                                "salesUnit": null,
+                                "calculations": null,
+                                "selectedProductOptions": []
+                            },
+                            {
+                                "groupKey": "129_30706500",
+                                "productOfferReference": null,
+                                "merchantReference": null,
+                                "sku": "129_30706500",
+                                "quantity": 1,
+                                "abstractSku": "129",
+                                "amount": null,
+                                "configuredBundle": null,
+                                "configuredBundleItem": null,
+                                "salesUnit": null,
+                                "calculations": null,
+                                "selectedProductOptions": []
+                            },
+                            {
+                                "groupKey": "131_24872891",
+                                "productOfferReference": null,
+                                "merchantReference": null,
+                                "sku": "131_24872891",
+                                "quantity": 1,
+                                "abstractSku": "131",
                                 "amount": null,
                                 "configuredBundle": null,
                                 "configuredBundleItem": null,
@@ -299,13 +444,13 @@ REQUEST SAMPLE | USAGE |
                 }
             },
             "links": {
-                "self": "https://glue.de.69-new.demo-spryker.com/quote-requests/DE--21-22"
-            }
+                "self": "http://glue.de.spryker.local/quote-requests/DE--21-1"
+            },
         }
     ],
     "links": {
-        "self": "https://glue.de.69-new.demo-spryker.com/agent-quote-requests?page"
-    }
+        "self": "http://glue.de.spryker.local/agent-quote-requests?include=customers"
+    },
 }
 ```
 
@@ -1802,11 +1947,15 @@ For descriptions of response attribute, see [Create a request for quote: Respons
 
 To retrieve a request for quote, send the following request:
 
-`GET` **/agent-quote-requests/{{QuotationRequestID}}**
+`GET` **/agent-quote-requests/*{% raw %}{{{% endraw %}QuotationRequestID{% raw %}}}{% endraw %}***
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 |---|---|---|---|
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as an agent assist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/authenticating-as-an-agent-assist.html). |
+
+| PATH PARAMETER | DESCRIPTION |
+|-|-|
+| ***{% raw %}{{{% endraw %}QuotationRequestID{% raw %}}}{% endraw %}*** | Request for quote unique identifier to manage requests for quotes. To get it, [create a quote request](#create-a-request-for-quote). |
 
 | QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 |---|---|---|
@@ -1901,7 +2050,7 @@ REQUEST SAMPLE | USAGE |
 
 </details>
 
-<!-- add the following responses -->
+
 <details><summary>Response sample with customers</summary>
 
 ```json
@@ -4147,7 +4296,7 @@ For descriptions of response attributes, see the [Response](#create-request-for-
 
 ## Revise a request for quote
 
-To revise a request for quote, send the reuqest:
+To revise a request for quote, send the request:
 
 `POST` **/agent-quote-requests/{% raw %}{{{% endraw %}*QuotationRequestID*{% raw %}}}{% endraw %}/agent-quote-request-revise**
 
@@ -4240,6 +4389,35 @@ To revise a request for quote, send the reuqest:
 }
 ```
 </details>
+
+## Send a revised request for quote back to customer
+
+To send a revised request for quote back to customer, send the request
+
+`POST` **/agent-quote-requests/{% raw %}{{{% endraw %}*QuotationRequestID*{% raw %}}}{% endraw %}/agent-quote-request-send-to-customer**
+
+| PATH PARAMETER | DESCRIPTION |
+|-|-|
+| ***{% raw %}{{{% endraw %}QuotationRequestID{% raw %}}}{% endraw %}*** | Request for quote unique identifier to manage requests for quotes. To get it, [create a quote request](#create-a-request-for-quote). |
+
+### Request
+
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
+|---|---|---|---|
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as an agent assist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/authenticating-as-an-agent-assist.html). |
+
+```json
+{
+    "data": {
+        "type": "agent-quote-request-send-to-customer",
+        "attributes": {}
+    }
+}
+```
+
+## Response
+
+In case of the successful request, `1` is sent in response.
 
 ## Cancel a request for quote
 

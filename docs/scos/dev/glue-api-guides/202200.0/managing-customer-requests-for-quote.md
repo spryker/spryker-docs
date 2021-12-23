@@ -5,7 +5,8 @@ last_updated: Nov 15, 2021
 template: glue-api-storefront-guide-template
 ---
 
-This endpoint allows managing customer requests for quote (RFQs).
+This endpoint lets you manage customer requests for quote (RFQs).
+
 
 ## Installation
 
@@ -13,7 +14,7 @@ For details on the modules that provide the API functionality and how to install
 
 ## Create a request for quote
 
-To create a request for quote for a customer, send the following request:
+To create a request for quote, send the request:
 
 ---
 `POST` **/quote-requests**
@@ -566,7 +567,7 @@ For attribute description of business units, see [Retrieving business units](htt
 
 ## Retrieve requests for quote
 
-To retrieve requests for quote for a customer, send the following request:
+To retrieve requests for quote, send the request:
 
 ---
 `GET` **/quote-requests**
@@ -1061,7 +1062,7 @@ To retrieve requests for quote for a customer, send the following request:
 
 </details>
 
-For attribute descriptions of response samples, see [Response](#response-attributes) in the Create a request for quote section.
+For attribute descriptions of response samples, see [Create a request for quote: Response](#response-attributes) in the Create a request for quote section.
 
 ## Retrieve a request for quote
 
@@ -1074,7 +1075,7 @@ To retrieve a request for quote for a customer, send the following request:
 
 | PATH PARAMETER | DESCRIPTION |
 |-|-|
-| ***{% raw %}{{{% endraw %}QuotationRequestID{% raw %}}}{% endraw %}*** | Request for quote unique identifier to manage requests for quotes. To get it, [create a quote request](#create-a-request-for-quote). |
+| ***{% raw %}{{{% endraw %}QuotationRequestID{% raw %}}}{% endraw %}*** | Request for quote unique identifier. To get it, [create a quote request](#create-a-request-for-quote). |
 
 ### Request
 
@@ -1563,7 +1564,7 @@ To retrieve a request for quote for a customer, send the following request:
 
 </details>
 
-For responses' attribute descriptions, see [Create a request for quote](#response-attributes) section.
+For attribute descriptions of response samples, see [Create a request for quote: Response](#response-attributes) in the Create a request for quote section.
 
 ## Update a request for quote
 
@@ -1577,7 +1578,7 @@ To update a request for quote for a customer, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 |-|-|
-| ***{% raw %}{{{% endraw %}QuotationRequestID{% raw %}}}{% endraw %}*** | Request for quote unique identifier to manage requests for quotes. To get it, [create a quote request](#create-a-request-for-quote). |
+| ***{% raw %}{{{% endraw %}QuotationRequestID{% raw %}}}{% endraw %}*** | Request for quote unique identifier. To get it, [create a quote request](#create-a-request-for-quote). |
 
 ### Request
 
@@ -1675,6 +1676,137 @@ Request sample: `PATCH https://glue.mysprykershop.com/quote-requests/DE--21-8/`
 ```
 </details>
 
+For attribute descriptions of response samples, see [Create a request for quote: Response](#response-attributes) in the Create a request for quote section.
+
+## Revise a request for quote
+
+To revise a request for quote, send the request:
+
+`POST` **/quote-requests/*{% raw %}{{{% endraw %}QuotationRequestID{% raw %}}}{% endraw %}*/quote-request-revise**
+
+| PATH PARAMETER | DESCRIPTION |
+|-|-|
+| ***{% raw %}{{{% endraw %}QuotationRequestID{% raw %}}}{% endraw %}*** | Request for quote unique identifier. To get it, [create a quote request](#create-a-request-for-quote). |
+
+### Request
+
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
+|---|---|---|---|
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+
+Request sample: `POST https://glue.mysprykershop.com/quote-requests/DE--21-8/quote-request-revise`
+
+```json
+
+    "data": {
+        "type": "quote-request-revise",
+        "attributes": {}
+    }
+}
+```
+
+### Response
+
+<details><summary>Response sample</summary>
+```json
+{
+    "data": {
+        "type": "quote-requests",
+        "id": "DE--21-8",
+        "attributes": {
+            "quoteRequestReference": "DE--21-8",
+            "status": "draft",
+            "isLatestVersionVisible": true,
+            "createdAt": "2021-12-22 13:08:53.000000",
+            "validUntil": null,
+            "versions": [],
+            "shownVersion": {
+                "version": 3,
+                "versionReference": "DE--21-8-3",
+                "createdAt": "2021-12-22 13:23:17",
+                "metadata": {
+                    "purchase_order_number": "3",
+                    "delivery_date": "Dec. 28, 2021",
+                    "note": "Update"
+                },
+                "cart": {
+                    "priceMode": "GROSS_MODE",
+                    "store": "DE",
+                    "currency": "EUR",
+                    "totals": {
+                        "expenseTotal": 0,
+                        "discountTotal": 0,
+                        "taxTotal": {
+                            "tax_rate": null,
+                            "amount": 5133
+                        },
+                        "subtotal": 32149,
+                        "grandTotal": 32149,
+                        "priceToPay": 32149
+                    },
+                    "billingAddress": null,
+                    "items": [
+                        {
+                            "groupKey": "044_31040076",
+                            "productOfferReference": null,
+                            "merchantReference": null,
+                            "sku": "044_31040076",
+                            "quantity": 1,
+                            "abstractSku": "044",
+                            "amount": null,
+                            "configuredBundle": null,
+                            "configuredBundleItem": null,
+                            "salesUnit": null,
+                            "calculations": null,
+                            "selectedProductOptions": []
+                        }
+                    ],
+                    "discounts": [],
+                    "shipments": []
+                }
+            }
+        },
+        "links": {
+            "self": "http://glue.de.spryker.local/quote-requests/DE--21-8"
+        }
+    }
+}
+```
+</details>
+
+For attribute descriptions of response samples, see [Create a request for quote: Response](#response-attributes) in the Create a request for quote section.
+
+## Send a request for quote to an agent
+
+TO send a request for quote to an agent, send the request:
+
+`POST` **/quote-requests/*{% raw %}{{{% endraw %}QuotationRequestID{% raw %}}}{% endraw %}*/quote-request-send-to-customer**
+
+PATH PARAMETER | DESCRIPTION |
+|-|-|
+| ***{% raw %}{{{% endraw %}QuotationRequestID{% raw %}}}{% endraw %}*** | Request for quote unique identifier. To get it, [create a quote request](#create-a-request-for-quote). |
+
+### Request
+
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
+|---|---|---|---|
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+
+Request sample: `POST https://glue.mysprykershop.com/quote-requests/DE--21-8/quote-request-cancel`
+
+```json
+{
+    "data": {
+        "type": "quote-request-send-to-customer",
+        "attributes": {}
+    }
+}
+```
+
+## Response
+
+In case of the successful request, `1` is sent in response.
+
 ## Cancel a request for quote
 
 To cancel a request for quote, send the request:
@@ -1683,7 +1815,7 @@ To cancel a request for quote, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 |-|-|
-| ***{% raw %}{{{% endraw %}QuotationRequestID{% raw %}}}{% endraw %}*** | Request for quote unique identifier to manage requests for quotes. To get it, [create a quote request](#create-a-request-for-quote). |
+| ***{% raw %}{{{% endraw %}QuotationRequestID{% raw %}}}{% endraw %}*** | Request for quote unique identifier. To get it, [create a quote request](#create-a-request-for-quote). |
 
 ### Request
 
@@ -1691,7 +1823,7 @@ To cancel a request for quote, send the request:
 |---|---|---|---|
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
-Request sample: `POST https://glue.mysprykershop.com/quote-requests/DE--21-34/quote-request-cancel`
+Request sample: `POST https://glue.mysprykershop.com/quote-requests/DE--21-8/quote-request-cancel`
 
 ```json
 {

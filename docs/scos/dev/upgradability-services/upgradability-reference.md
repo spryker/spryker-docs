@@ -168,7 +168,7 @@ Pyz\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm
 
 To resolve the error provided in the example, do the following:
 
-1. Change extending from `Spryker\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm` to extending from `Spryker\Zed\Kernel\Communication\Form\AbstractType`
+1. Introduce new class `src/Pyz/Zed/CustomerAccessGui/Communication/Form/MyCustomerAccessForm.php`
 
 2. Copy necessary functionality from the Core. CustomerAccessForm
 
@@ -183,23 +183,23 @@ To resolve the error provided in the example, do the following:
 namespace Pyz\Zed\CustomerAccessGui\Communication\Form;
 
 use ArrayObject;
-use Spryker\Zed\Kernel\Communication\Form\AbstractType;
 use Symfony\Component\Form\CallbackTransformer;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Spryker\Zed\Kernel\Communication\Form\AbstractType;
 
 /**
  * @method \Spryker\Zed\CustomerAccessGui\Communication\CustomerAccessGuiCommunicationFactory getFactory()
  */
-class CustomerAccessForm extends AbstractType
+class MyCustomerAccessForm extends AbstractType
 {
-    public const OPTION_CONTENT_TYPE_ACCESS = 'OPTION_CONTENT_TYPE_ACCESS';
-    public const FIELD_CONTENT_TYPE_ACCESS = 'contentTypeAccess';
     public const OPTION_CONTENT_TYPE_ACCESS_MANAGEABLE = 'OPTION_CONTENT_TYPE_ACCESS_MANAGEABLE';
     public const OPTION_CONTENT_TYPE_ACCESS_NON_MANAGEABLE = 'OPTION_CONTENT_TYPE_ACCESS_NON_MANAGEABLE';
     public const OPTION_CONTENT_TYPE_ACCESS_NON_MANAGEABLE_DATA = 'OPTION_CONTENT_TYPE_ACCESS_NON_MANAGEABLE_DATA';
     protected const FIELD_CONTENT_TYPE_ACCESS_NON_MANAGEABLE = 'contentTypeAccessNonManageable';
+    public const OPTION_CONTENT_TYPE_ACCESS = 'OPTION_CONTENT_TYPE_ACCESS';
+    public const FIELD_CONTENT_TYPE_ACCESS = 'contentTypeAccess';
 
     /**
      * @param \Symfony\Component\OptionsResolver\OptionsResolver $resolver
@@ -211,7 +211,6 @@ class CustomerAccessForm extends AbstractType
         $resolver->setRequired(static::OPTION_CONTENT_TYPE_ACCESS_MANAGEABLE);
         $resolver->setRequired(static::OPTION_CONTENT_TYPE_ACCESS_NON_MANAGEABLE);
         $resolver->setRequired(static::OPTION_CONTENT_TYPE_ACCESS_NON_MANAGEABLE_DATA);
-        $resolver->setRequired(static::OPTION_CONTENT_TYPE_ACCESS);
     }
 
     /**
@@ -286,7 +285,7 @@ class CustomerAccessForm extends AbstractType
      * @param \Symfony\Component\Form\FormBuilderInterface $builder
      * @param array $options
      *
-     * @return \Spryker\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm
+     * @return $this
      */
     protected function addContentTypeAccess(FormBuilderInterface $builder, array $options)
     {
@@ -314,6 +313,18 @@ class CustomerAccessForm extends AbstractType
 
         return $this;
     }
+}
+```
+
+3. Overwrite method `getCustomerAccessForm` in `src/Pyz/Zed/CustomerAccessGui/Communication/CustomerAccessGuiCommunicationFactory.php`
+```php
+public function getCustomerAccessForm(CustomerAccessTransfer $customerAccessTransfer, array $options)
+{
+    return $this->getFormFactory()->create(
+        MyCustomerAccessForm::class,
+        $customerAccessTransfer,
+        $options
+    );
 }
 ```
 

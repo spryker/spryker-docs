@@ -29,7 +29,7 @@ To start the feature integration, overview and install the necessary features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Shipment | master | [Shipment feature integration guide](/docs/scos/dev/feature-integration-guides/{{page.version}}/shipment-feature-integration.html) |
-| Avalara Tax | master | [Avalara Tax integration](/docs/scos/dev/technology-partner-guides/{{page.version}}/taxes/integrating-avalara.html) |
+| Avalara Tax | master | [Avalara Tax integration](/docs/scos/dev/technology-partner-guides/{{page.version}}/taxes/avalara/integrating-avalara.html) |
 
 ### 1) Install the required modules using Composer
 

@@ -1,16 +1,14 @@
 ---
 title: RatePay - Direct Debit
 description: Integrate direct debit payment through Ratepay into the Spryker-based shop.
-last_updated: Jun 16, 2021
+last_updated: May 19, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/ratepay-direct-debit
-originalArticleId: 5b1a8407-02f1-418e-9f69-98643224753c
+originalLink: https://documentation.spryker.com/v1/docs/ratepay-direct-debit
+originalArticleId: 2cdfdea7-5a65-4daa-9a38-c31c25a3fc65
 redirect_from:
-  - /2021080/docs/ratepay-direct-debit
-  - /2021080/docs/en/ratepay-direct-debit
-  - /docs/ratepay-direct-debit
-  - /docs/en/ratepay-direct-debit
-  - /docs/scos/user/technology-partners/202108.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html
+  - /v1/docs/ratepay-direct-debit
+  - /v1/docs/en/ratepay-direct-debit
+  - /docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html
 related:
   - title: RatePay
     link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay/ratepay.html
@@ -36,28 +34,26 @@ related:
 
 
 ### Payment Flow
-
 ![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/ratepay-ddelv-payment-flow.png)
 
 ### Cancellation Flow
-
 ![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/ratepay-ddelv-payment-flow.png)
 
 ### Partial Cancellation Flow
-
 ![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/ratepay-ddelv-partial-cancellation-flow.png)
 
 ### Refund Flow
-
 ![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/ratepay-ddelv-refund-flow.png)
 
 ## Integrating RatePay
 
-**Direct Debit Payment**—in order to integrate direct debit payment, two simple steps are needed: set RatePAY Direct Debit payment configuration and call the facade functions.
+Direct Debit Payment
+In order to integrate direct debit payment, two simple steps are needed: set RatePAY Direct Debit payment configuration and call the facade functions.
 
 ### Set RatePay Direct Debit Configuration
 
 The configuration to integrate Direct Debit payments using RatePAY is:
+
 * `PROFILE_ID`: merchant's login (required).
 * `SECURITY_CODE`: merchant's password (required).
 * `SHOP_ID`: shop identifier (required).
@@ -73,4 +69,4 @@ The configuration to integrate Direct Debit payments using RatePAY is:
 
 ## Performing Requests
 
-In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. The [RatePAY State Machine Commands and Conditions](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay/technical-details-and-howtos/ratepay-state-machine-commands-and-conditions.html) section gives a summary of them. You can also use the facade methods directly which, however, are invoked by the state machine.
+In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. The [RatePAY State Machine Commands and Conditions](/docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/ratepay-state-machine-commands-and-conditions.html) section gives a summary of them. You can also use the facade methods directly which, however, are invoked by the state machine.

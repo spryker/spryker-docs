@@ -1,16 +1,14 @@
 ---
-title: RatePay Core module structure diagram
+title: RatePay- Core Module Structure Diagram
 description: This article includes module schema with the class structure and flow.
-last_updated: Jun 16, 2021
+last_updated: Aug 27, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/ratepay-structure-diag
-originalArticleId: dfe4133a-18c0-447b-b932-14d3ff410480
+originalLink: https://documentation.spryker.com/v6/docs/ratepay-structure-diag
+originalArticleId: c3d9e6b2-bd4c-4870-8b1a-8f3ba280604f
 redirect_from:
-  - /2021080/docs/ratepay-structure-diag
-  - /2021080/docs/en/ratepay-structure-diag
-  - /docs/ratepay-structure-diag
-  - /docs/en/ratepay-structure-diag
-  - /docs/scos/user/technology-partners/202108.0/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
+  - /v6/docs/ratepay-structure-diag
+  - /v6/docs/en/ratepay-structure-diag
+  - /docs/scos/user/technology-partners/202009.0/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
 related:
   - title: RatePay - Facade
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/technical-details-and-howtos/ratepay-facade.html
@@ -31,5 +29,4 @@ related:
 ---
 
 The RatePay core module uses the following class structure and flow.
-
 ![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/ratepay_core_module_structure.png)

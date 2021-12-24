@@ -1,16 +1,14 @@
 ---
-title: RatePay state machine commands and conditions
+title: RatePay - State Machine Commands and Conditions
 description: This article includes the state machine commands and conditions provided by Ratepay.
-last_updated: Jun 16, 2021
+last_updated: Aug 27, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/ratepay-state-machine
-originalArticleId: 25cb68aa-9d2c-42d2-8ae3-bd8f3ea572f3
+originalLink: https://documentation.spryker.com/v6/docs/ratepay-state-machine
+originalArticleId: 0ec44222-0470-4ba7-9981-d721be5c09b9
 redirect_from:
-  - /2021080/docs/ratepay-state-machine
-  - /2021080/docs/en/ratepay-state-machine
-  - /docs/ratepay-state-machine
-  - /docs/en/ratepay-state-machine
-  - /docs/scos/dev/technology-partner-guides/202108.0/payment-partners/ratepay/technical-details-and-howtos/ratepay-state-machine-commands-and-conditions.html
+  - /v6/docs/ratepay-state-machine
+  - /v6/docs/en/ratepay-state-machine
+  - /docs/scos/user/technology-partners/202009.0/payment-partners/ratepay/technical-details-and-howtos/ratepay-state-machine-commands-and-conditions.html
 related:
   - title: RatePay - Facade
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/technical-details-and-howtos/ratepay-facade.html
@@ -30,9 +28,9 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html
 ---
 
+## Commands
 
-
-## ConfirmDelivery command
+### ConfirmDelivery
 
 * Send delivery confirmation data to RatePAY
 * Response:
@@ -40,7 +38,7 @@ related:
   - Declined: Request format error or delivery confirmation error
 * Plugin: `ConfirmDeliveryPlugin`
 
-## ConfirmPayment command
+### ConfirmPayment
 
 * Send payment confirmation data to RatePAY
 * Response:
@@ -48,7 +46,7 @@ related:
   - Declined: Request format error or payment confirmation error
 * Plugin: `ConfirmPaymentPlugin`
 
-## CancelPayment command
+### CancelPayment
 
 * Send order items cancellation data to RatePAY
 * Response:
@@ -56,7 +54,7 @@ related:
   - Declined: Request format error or order items cancellation error
 * Plugin: `CancelPaymentPlugin`
 
-## RefundPayment command
+### RefundPayment
 
 * Send refund order items data to RatePAY
 * Response:
@@ -66,7 +64,7 @@ related:
 
 ## Conditions
 
-| NAME| DESCRIPTION | PLUGIN |
+| Name | Description | Plugin |
 | --- | --- | --- |
 | `IsRefunded` | Checks transaction status for successful order items refund response | `IsRefundedPlugin` |
 | `IsPaymentConfirmed` | Checks transaction status for successful order items payment response | `IsPaymentConfirmedPlugin` |

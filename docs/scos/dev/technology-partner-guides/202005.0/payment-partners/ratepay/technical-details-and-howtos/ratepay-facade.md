@@ -1,36 +1,36 @@
 ---
 title: RatePay - Facade
 description: This article includes facade methods provided by Ratepay.
-last_updated: Jun 16, 2021
+last_updated: Apr 3, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/ratepay-facade
-originalArticleId: eabf3483-95ab-4ced-91e5-4dd2dd2211db
+originalLink: https://documentation.spryker.com/v5/docs/ratepay-facade
+originalArticleId: c136b06e-c1d3-49fa-a37a-e08e3f618c90
 redirect_from:
-  - /2021080/docs/ratepay-facade
-  - /2021080/docs/en/ratepay-facade
-  - /docs/ratepay-facade
-  - /docs/en/ratepay-facade
-  - /docs/scos/user/technology-partners/202108.0/payment-partners/ratepay/technical-details-and-howtos/ratepay-facade.html
+  - /v5/docs/ratepay-facade
+  - /v5/docs/en/ratepay-facade
+  - /docs/scos/user/technology-partners/202005.0/payment-partners/ratepay/technical-details-and-howtos/ratepay-facade.html
 related:
-  - title: RatePay - Invoice
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-payment-methods/ratepay-invoice.html
-  - title: RatePay - Prepayment
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-payment-methods/ratepay-prepayment.html
+  - title: RatePay
+    link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay/ratepay.html
   - title: RatePay - Payment Workflow
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/technical-details-and-howtos/ratepay-payment-workflow.html
   - title: Disabling address updates from the backend application for RatePay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/technical-details-and-howtos/disabling-address-updates-from-the-backend-application-for-ratepay.html
+  - title: RatePay - Invoice
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-payment-methods/ratepay-invoice.html
   - title: RatePay- Core Module Structure Diagram
     link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
   - title: RatePay - Installment
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-payment-methods/ratepay-installment.html
-  - title: RatePay - Direct Debit
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html
+  - title: RatePay - Prepayment
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-payment-methods/ratepay-prepayment.html
   - title: RatePay - State Machine Commands and Conditions
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/technical-details-and-howtos/ratepay-state-machine-commands-and-conditions.html
+  - title: RatePay - Direct Debit
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html
 ---
 
-| FACADE METHOD | PARAMETER | RETURN | DESCRIPTION |
+| Facade Method | Param | Return | Description |
 | --- | --- | --- | --- |
 | `saveOrderPayment` | `QuoteTransfer`, `CheckoutResponseTransfer` | void | Saves RatePAY payment method data according to quote and checkout response transfer data. |
 | `initPayment` | `QuoteTransfer` | `RatepayResponseTransfer` | Performs the init payment request to RatePAY Gateway to retrieve transaction data. |

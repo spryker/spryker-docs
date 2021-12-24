@@ -1,16 +1,14 @@
 ---
 title: RatePay - Prepayment
 description: Integrate prepayment through Ratepay into the Spryker-based shop.
-last_updated: Jun 16, 2021
+last_updated: Oct 23, 2019
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/ratepay-prepayment
-originalArticleId: a4c45f04-f178-4d8f-aee3-79cc0a24106d
+originalLink: https://documentation.spryker.com/v1/docs/ratepay-prepayment
+originalArticleId: 906d644a-1bdf-45b9-9128-97524ec6a81c
 redirect_from:
-  - /2021080/docs/ratepay-prepayment
-  - /2021080/docs/en/ratepay-prepayment
-  - /docs/ratepay-prepayment
-  - /docs/en/ratepay-prepayment
-  - /docs/scos/user/technology-partners/202108.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-prepayment.html
+  - /v1/docs/ratepay-prepayment
+  - /v1/docs/en/ratepay-prepayment
+  - /docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-prepayment.html
 related:
   - title: RatePay
     link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay/ratepay.html
@@ -32,20 +30,18 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html
 ---
 
-## Payment Flow Scenarios
+## Workflow Scenarios
 
+### Payment Flow
 ![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/ratepay_prepayment_payment_flow.png)
 
-## Cancellation Flow Scenarios
-
+### Cancellation Flow
 ![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/ratepay_prepayment_cancellation_flow.png)
 
-## Partial Cancellation Flow Scenarios
+### Partial Cancellation Flow
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/ratepay_prepayment_payment_flow.pngng)
 
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/ratepay_prepayment_payment_flow.png)
-
-## Refund Flow Scenarios
-
+### Refund Flow
 ![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/payolution_installment_partialrefund_case.png)
 
 ## Integrating RatePay Prepayment Payment
@@ -55,6 +51,7 @@ To integrate prepayment payment: set RatePAY prepayment payment configuration an
 ### Set RatePay Prepayment Configuration
 
 The configuration to integrate prepayment payments using RatePAY is:
+
 * `PROFILE_ID`: merchant's login (required).
 * `SECURITY_CODE`: merchant's password (required).
 * `SHOP_ID`: shop identifier (required).

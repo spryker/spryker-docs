@@ -1,16 +1,14 @@
 ---
 title: RatePay - Invoice
 description: Integrate invoice payment through Ratepay into the Spryker-based shop.
-last_updated: Jun 16, 2021
+last_updated: Dec 26, 2019
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/ratepay-invoice
-originalArticleId: a9b40611-e42e-4529-918d-3fab9774f420
+originalLink: https://documentation.spryker.com/v4/docs/ratepay-invoice
+originalArticleId: 20919e2e-0674-4e0c-b8f7-97173f969a17
 redirect_from:
-  - /2021080/docs/ratepay-invoice
-  - /2021080/docs/en/ratepay-invoice
-  - /docs/ratepay-invoice
-  - /docs/en/ratepay-invoice
-  - /docs/scos/user/technology-partners/202108.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-invoice.html
+  - /v4/docs/ratepay-invoice
+  - /v4/docs/en/ratepay-invoice
+  - /docs/scos/user/technology-partners/202001.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-invoice.html
 related:
   - title: RatePay - Facade
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/technical-details-and-howtos/ratepay-facade.html
@@ -32,52 +30,47 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html
 ---
 
-## Payment Flow Scenario
-
+## Workflow Scenarios
+### Payment Flow
 ![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/ratepay-installment-payment-flow.png)
 
-## Cancellation Flow Scenario
-
+### Cancellation Flow
 ![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/ratepay-invoice-cancellation-flow.png)
 
-## Partial Cancellation Flow Scenario
-
+### Partial Cancellation Flow
 ![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/ratepay-invoice-partial-cancellation-flow.png)
 
-## Refund Flow Scenario
+### Refund Flow
 ![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/ratepay-invoice-refund-flow.png)
 
 
 ## Integrating RatePAY Invoice Payment
-
 To integrate invoice payment, you need to: RatePAY invoice payment configuration and call the facade functions.
 
 ## Setting RatePAY Invoice Configuration
-
 The configuration to integrate invoice payments using RatePAY is:
 
-* `PROFILE_ID`: merchant’s login (required).
+  * `PROFILE_ID`: merchant’s login (required).
 
-* `SECURITY_CODE`: merchant’s password (required).
+  * `SECURITY_CODE`: merchant’s password (required).
 
-* `SHOP_ID`: shop identifier (required).
+  * `SHOP_ID`: shop identifier (required).
 
-* `SYSTEM_ID`: system identifier (required).
+  * `SYSTEM_ID`: system identifier (required).
 
-* `CLIENT_VERSION`: client system version.
+  * `CLIENT_VERSION`: client system version.
 
-* `CLIENT_NAME`: client name.
+  * `CLIENT_NAME`: client name.
 
-* `RATEPAY_REQUEST_VERSION`: request version.
+  * `RATEPAY_REQUEST_VERSION`: request version.
 
-* `RATEPAY_REQUEST_XMLNS_URN`: request XMLNS urn.
+  * `RATEPAY_REQUEST_XMLNS_URN`: request XMLNS urn.
 
-* `MODE`: the mode of the transaction, either test or live (required).
+  * `MODE`: the mode of the transaction, either test or live (required).
 
-* `API_TEST_URL`: test mode API url.
+  * `API_TEST_URL`: test mode API url.
 
-* `API_LIVE_URL`: live mode API url.
+  * `API_LIVE_URL`: live mode API url.
 
 ## Perform Requests
-
-To perform the needed requests,  use the [RatePAY State Machine Commands and Conditions](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay/technical-details-and-howtos/ratepay-state-machine-commands-and-conditions.html) . You can also use the `facademethods`directly which, however, are invoked by the state machine.
+To perform the needed requests,  use the [RatePAY State Machine Commands and Conditions](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay-state-machine-commands-and-conditions.html) . You can also use the `facademethods`directly which, however, are invoked by the state machine.

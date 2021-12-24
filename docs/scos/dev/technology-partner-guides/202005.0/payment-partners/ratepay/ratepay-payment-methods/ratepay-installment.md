@@ -1,16 +1,14 @@
 ---
 title: RatePay - Installment
 description: Integrate installment payment through Ratepay into the Spryker-based shop.
-last_updated: Jun 16, 2021
+last_updated: Sep 15, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/ratepay-installment
-originalArticleId: 3fe65872-d5b3-4c95-8757-6ae7ee0b2d87
+originalLink: https://documentation.spryker.com/v5/docs/ratepay-installment
+originalArticleId: 51b5e8c5-3b82-4733-9ce0-e9738436d95d
 redirect_from:
-  - /2021080/docs/ratepay-installment
-  - /2021080/docs/en/ratepay-installment
-  - /docs/ratepay-installment
-  - /docs/en/ratepay-installment
-  – /docs/scos/user/technology-partners/202108.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-installment.html
+  - /v5/docs/ratepay-installment
+  - /v5/docs/en/ratepay-installment
+  – /docs/scos/user/technology-partners/202005.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-installment.html
 related:
   - title: RatePay
     link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay/ratepay.html
@@ -37,18 +35,15 @@ The shop must implement the Calculation Request operation to calculate an exampl
 ## Workflow Scenarios
 
 ### Payment Flow
-
 ![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/ratepay-installment-payment-flow.png)
 
 ### Cancellation Flow
 ![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/ratepay-installment-cancellation-flow.png)
 
 ### Partial Cancellation Flow
-
 ![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/ratepay-installment-partial-cancellation-flow.png)
 
 ### Refund Flow
-
 ![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/ratepay-installment-refund-flow.png)
 
 ## Integrating RatePAY Installment Payment
@@ -60,11 +55,13 @@ In order to integrate installment payment, two simple steps are needed: set Rate
 The installment requests use two additional types of requests called Configuration and Calculation Requests.
 
 Three groups of configuration are defined:
+
 * transaction configuration for handling the basic requests (init-payment, payment-request, etc)
 * installment configuration for handling configuration
 * calculation for handling calculation requests.
 
 The configuration to integrate Installment payment method using RatePAY is:
+
 * `PROFILE_ID`: merchant's login (required).
 * `SECURITY_CODE`: merchant's password (required).
 * `SHOP_ID`: shop identifier (required).
@@ -83,4 +80,4 @@ You can copy over configs to your config from the RatePAY module's `config.dist.
 
 ### Perform Requests
 
-In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. The [RatePAY State Machine Commands and Conditions](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay/technical-details-and-howtos/ratepay-state-machine-commands-and-conditions.html) section gives a summary of them. You can also use the facade methods directly which, however, are invoked by the state machine.
+In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. The [RatePAY State Machine Commands and Conditions](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay-state-machine-commands-and-conditions.html) section gives a summary of them. You can also use the facade methods directly which, however, are invoked by the state machine.

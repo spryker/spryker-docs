@@ -39,7 +39,7 @@ To retrieve relationships to customers, company users, company business units, o
 
 Request sample: `POST https://glue.mysprykershop.com/agent-quote-requests`
 
-<!-- the following request body has a bug - it should have a cart id attribute to identify for which cart the request is going to be grated -->
+<!-- the following request body has a bug - it should have a cart id attribute to identify for which cart the request is going to be сrated -->
 
 ```json
 {

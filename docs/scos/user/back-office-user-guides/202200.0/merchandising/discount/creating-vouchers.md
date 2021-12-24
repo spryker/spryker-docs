@@ -201,7 +201,7 @@ See [Token description tables](#token-description-tables) for more information.
 
 {% endinfo_block %}
 
-**Discount promotion to product**
+**Promotional product discount**
 
 Sometimes, it is more profitable to give away free products or provide a discount for the products that are not yet in the cart instead of the ones that are already there. This discount application type enables you to do just that. When a customer fulfills the discount conditions, the promotional product appears below other items. The SKU of the promotional product you want to be available for adding to cart is entered in the **Abstract product sku** field. Then, you enter the **Quantity** of the chosen promotional product to be available for adding to cart.
 ![Application type](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Calculation:+Reference+Information/Application+type.png)

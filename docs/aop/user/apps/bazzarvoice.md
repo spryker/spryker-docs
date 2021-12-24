@@ -10,7 +10,7 @@ The BazzarVoice service offers the following UGC:
 
 - [Rating summaries](https://knowledge.bazaarvoice.com/wp-content/conversations/en_US/Display/display_integration.html#rating-summary) (stars)
 - [Product reviews](https://knowledge.bazaarvoice.com/wp-content/conversations/en_US/Display/display_integration.html#reviews)  
-- [Questions and answers](https://knowledge.bazaarvoice.com/wp-content/conversations/en_US/Display/display_integration.html#questions--answers)
+<!---- [Questions and answers](https://knowledge.bazaarvoice.com/wp-content/conversations/en_US/Display/display_integration.html#questions--answers)-->
 
 BazzarVoice uses the content syndication approach, which means that stores using BazzarVoice republish each others' content. For example, if a store within the BazzarVoice's network has got a new product review, this review is shared across all other stores in the network that also have this product.
 
@@ -43,6 +43,19 @@ To integrate the BazzarVoice app into your store:
 6. In the top right corner of the BazzarVoice app details page, click **Cofigure**.
 7. In the *Configure* pane, enter the credentials you received from BazzarVoice.
 
-That's it. You have integrated the BazzarVoice app into your store. Now, configure the app. See the next sections for the configuration details.
+That's it. You have integrated the BazzarVoice app into your store. It usually takes BazzarVoice a few days to process your product feed. Therefore, you should  see the external ratings and reviews from BazzarVoice in about 2-3 days after you integrated the app.
+
+Now, configure the BazzareVoice app for your store. See the next sections for the configuration details.
 
 ## Configuring BazzarVoice for your store
+
+You can configure what BazzarVoice services you want in your store. Do the following:
+
+1. In your store's Back Office, go to BazzarVoice app details page.
+2. In the top right corner, click **Configure**.
+3. In *Settings*->*Select Services* select the services you need:
+   - RATINGS & REVIEWS: The accumulated star ratings along with reviews displays on the product details page.
+   <!---- QUESTIONS & ANSWERS:--> 
+   - INLINE RATINGS: Whenever you have a list of product, for example, in search results, in the product catalog, etc., you can display the star ratings directly in these lists of products.
+   - BAZZARVOICE PIXEL: Adds a single tracking pixel to your shopping cart page and product details page. It allows BazzarVoice to track whether the products that have more UGC have a better conversion rate than products without many ratings and reviews.
+   - CONTAINER PAGE: lets your users add their reviews on the product details page.

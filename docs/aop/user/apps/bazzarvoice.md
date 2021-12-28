@@ -24,7 +24,7 @@ When you connect BazzarVoice, the app puts JavaScrip tags into your store, and t
 
 {% info_block infoBox "Info" %}
 
-If you have BazzarVoice integrated, the Spryker default [Product Ratings and Reviews feature](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html#current-constraints) is turned off. This means that ratings and reviews collected with the default Spryker Product Ratings and Reviews feature are replaced with the BazzareVoice ratings and reviews.
+If you have BazzarVoice integrated, the Spryker default [Product Ratings and Reviews feature](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html) is turned off. This means that ratings and reviews collected with the default Spryker Product Ratings and Reviews feature are replaced with the BazzareVoice ratings and reviews.
 
 {% endinfo_block %}
 
@@ -80,6 +80,6 @@ To configure the stores where you want to turn on the BazzarVoice app, in *Setti
 ## Disconnecting BazzarVoice from your store
 You can always disconnect the BazzarVoice app from your store. For example, after the trial period, you might decide not to continue with the app. 
 
-To disconnect BazzarVoice, on the BazzarVoice app details page, next to the **Configure** button, hold the pointer over <div class="inline-img">https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/bazzarvoice/disconnect-button.png</div> and click **Disconnect**.
+To disconnect BazzarVoice, on the BazzarVoice app details page, next to the **Configure** button, hold the pointer over <div class="inline-img">![disconnect-button](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/bazzarvoice/disconnect-button.png)</div> and click **Disconnect**.
 
-Disconnecting the app removes the BazzarVoice UGC and automatically restores the default Spryker [Product Ratings and Reviews feature](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html#current-constraints) feature.
+Disconnecting the app removes the BazzarVoice UGC and automatically restores the default Spryker [Product Ratings and Reviews feature](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html) feature.

@@ -52,7 +52,9 @@ The **Tax Rate** details page includes the following information:
 
 To return back to the list, click **Back to Tax Rates**.
 ***
+
 ### Deleting Tax Rates
+
 It may happen that the tax rate that has been created some time ago is no longer valid.
 You can permanently delete it from the system.
 ***
@@ -60,15 +62,22 @@ You can permanently delete it from the system.
 1. In the **List of tax rates > Actions** column, click **Delete** for a specific tax rate.
 2. On the **Delete Tax Rate** page, click **Delete Tax Rate** to confirm the action.
 The tax rate is deleted. Remember that it will also be deleted from the Tax Set to which it has been assigned.
+
 {% info_block warningBox "Note" %}
+
 Even if this was the only tax rate assigned to a tax set, the tax set itself will remain.
+
 {% endinfo_block %}
- ***
+
+***
+
 **Tips & Tricks**
 You can delete a tax rate while viewing it:
 1. On the **View Tax Rate** page, click **Delete** in the top-right corner.
 2. On the **Delete Tax Rate** page, confirm your action.
+
 ***
+
 **What's next?**
 You cannot use the tax rate itself for Products, Shipment, and Threshold taxation. You use tax sets instead.
 So you can proceed to the procedure of creating a tax set and assigning it to the tax rate.

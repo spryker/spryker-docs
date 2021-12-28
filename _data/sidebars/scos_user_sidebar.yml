@@ -126,8 +126,6 @@ entries:
         url: /docs/scos/user/intro-to-spryker/whats-new/upcoming-major-module-releases.html
       - title: Security updates
         url: /docs/scos/user/intro-to-spryker/whats-new/security-updates.html
-      - title: Roadmap
-        url: /docs/scos/user/intro-to-spryker/whats-new/roadmap.html
     - title: Support
       nested:
       - title: How Spryker Support works
@@ -1076,11 +1074,14 @@ entries:
           - "201811.0"
           - "201903.0"
           - "201907.0"
+          - "202001.0"
           - "202009.0"
           - "202108.0"
           nested:
           - title: Creating abstract products and product bundles
             url: /docs/scos/user/back-office-user-guides/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html
+            include_versions:
+            - "202001.0"
           - title: Adding scheduled prices to abstract products
             url: /docs/scos/user/back-office-user-guides/catalog/products/abstract-products/adding-scheduled-prices-to-abstract-products.html
             include_versions:
@@ -2231,42 +2232,19 @@ entries:
         - "202009.0"
         - "202108.0"
       - title: Punchout Catalogs
+        url: /docs/scos/user/technology-partners/order-management-erpoms/punchout-catalogs.html
         include_versions:
         - "201903.0"
         - "201907.0"
         - "202001.0"
         - "202005.0"
         - "202009.0"
+      - title: Punchout Catalogs
+        url: /docs/scos/user/technology-partners/order-management-erpoms/punchout-catalogs/punchout-catalogs.html
+        include_versions:
         - "202108.0"
         nested:
-        - title: Punchout Catalog Feature Integration
-          url: /docs/scos/user/technology-partners/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html
-          include_versions:
-          - "201903.0"
-          - "201907.0"
-          - "202001.0"
-          - "202005.0"
-          - "202009.0"
-          - "202108.0"
-        - title: Eco- Punchout Catalogs Feature Integration
-          url: /docs/scos/user/technology-partners/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-feature-integration.html
-          include_versions:
-          - "201903.0"
-          - "201907.0"
-          - "202001.0"
-          - "202005.0"
-          - "202009.0"
-          - "202108.0"
-        - title: Eco- Punchout Catalogs + Product Bundles Feature Integration
-          url: /docs/scos/user/technology-partners/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html
-          include_versions:
-          - "201903.0"
-          - "201907.0"
-          - "202001.0"
-          - "202005.0"
-          - "202009.0"
-          - "202108.0"
-        - title: Punchout Catalogs
+        - title: Punchout Catalogs overview
           url: /docs/scos/user/technology-partners/order-management-erpoms/punchout-catalogs/punchout-catalogs-overview.html
           include_versions:
           - "202108.0"
@@ -2611,16 +2589,7 @@ entries:
         - title: RatePay- Core Module Structure Diagram
           url: /docs/scos/user/technology-partners/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
       - title: Adyen
-        url: /docs/scos/user/technology-partners/payment-partners/adyen/adyen.html
-        nested:
-        - title: Adyen - Integration
-          url: /docs/scos/user/technology-partners/payment-partners/adyen/adyen-integration-into-a-project.html
-        - title: Adyen - Installation and Configuration
-          url: /docs/scos/user/technology-partners/payment-partners/adyen/adyen-installation-and-configuration.html
-        - title: Adyen - Provided Payment Methods
-          url: /docs/scos/user/technology-partners/payment-partners/adyen/adyen-provided-payment-methods.html
-        - title: Adyen - Filtering Payment Methods
-          url: /docs/scos/user/technology-partners/payment-partners/adyen/adyen-filtering-payment-methods.html
+        url: /docs/scos/user/technology-partners/payment-partners/adyen.html
       - title: Computop
         url: /docs/scos/user/technology-partners/payment-partners/computop/computop.html
         include_versions:

@@ -19,7 +19,12 @@ Timed product availability, or product TTL (Time to Live) allows you to define w
 The Timed Product Availability feature is implemented through the `isActive` field by introducing two more fields for product concretes in the Back Office - **Valid from** and **Valid to**. A product can have exactly one "life" - one (or no) start, one (or no) end. If the **Valid from** date has not come yet, or if **Valid to** has been reached, the value of isActive field is set to `false` and the product is invisible for customers. This being said, the product validity settings overrule manual (de)activation of products.
 
 {% info_block infoBox %}
-Which means that, if, for example, the following **conditions** are met: <br>* a product has been manually set to *Deactivated* <br> * this product has **Valid from** and **Valid to** values specified<br> * **Valid to** date lies in the future<br>The **result** is: the product will be displayed until after the time set in "Valid to" field.<br>To deactivate the product in this case, it would be necessary to clear the values in the **Valid from** and **Valid to** fields.
+Which means that, if, for example, the following **conditions** are met:
+* a product has been manually set to *Deactivated* 
+* * this product has **Valid from** and **Valid to** values specified
+* * **Valid to** date lies in the future
+* The **result** is: the product will be displayed until after the time set in "Valid to" field.
+* To deactivate the product in this case, it would be necessary to clear the values in the **Valid from** and **Valid to** fields.
 {% endinfo_block %}
 
 Time set for the product validity **Valid from** and **Valid to** fields is accurate up to the minute. However, technically it is possible to change the accuracy (up to the second or up to the days) via a cronjob. The time is set in GMT by default.

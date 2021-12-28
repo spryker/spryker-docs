@@ -22,9 +22,13 @@ A carrier company refers to a company that provides shipment services (for examp
 ![E-Commerce Manager - Shipment](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/shipment-section.png)
 
 {% info_block infoBox %}
+
 This is how a Spryker Admin interacts with the other departments to set up and manage the shipment methods and carrier companies in the Back Office.
+
 {% endinfo_block %}
+
 ***
+
 **What's next?**
 In order to set the shipment structure, you set up the carrier company first.
 To know more about how you set up and manage the shipment methods and carrier companies, see the following articles:

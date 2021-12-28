@@ -13,6 +13,7 @@ redirect_from:
 This topic contains the reference information that you need to know when working in **Taxes > Tax Sets**.
 
 ## Tax Sets
+
 On the **Overview of Tax Rates** page, you see the following:
 * Tax set ID and name
 * The creation date and actions that you can perform
@@ -20,6 +21,7 @@ On the **Overview of Tax Rates** page, you see the following:
 ### Creating and Editing Tax Set Page Attributes
 
 The following table describes the attributes that are used when creating or updating a tax set.
+
 | Attribute |Description  |
 | --- | --- |
 | **Name** | The name of your tax set, e.g. _Shipment Taxes_. |

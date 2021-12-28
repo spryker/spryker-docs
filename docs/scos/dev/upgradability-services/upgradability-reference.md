@@ -11,7 +11,7 @@ Factory, Dependency Provider, Repository, and Entity Manager methods belong to t
 
 ### Using custom methods on the project level
 
-To avoid the error during updates and achieve the same result, instead of overriding the core methods, introduce custom ones.
+To avoid unexpected issues and achieve the same result, instead of overriding core methods, introduce custom ones.
 
 
 #### Example of code that can cause upgradability errors
@@ -95,7 +95,7 @@ class StorageRouterDependencyProvider extends SprykerShopStorageRouterDependency
 {% endinfo_block %}
 
 
-#### Introducing custom methods
+#### Example of using a custom method on the project level
 
 To resolve the error:
 
@@ -115,9 +115,14 @@ When the core method is overriden with a custom one, re-evaluate the code. The s
 
 ## Private API class was extended or used
 
-Private API updates can break backward compatibility. So, backward compatibility in minor releases is not guaranteed in the private API. For example, if you use a core class or method on the project level, and it is updated or removed, the error may occur during an update.
+Private API updates can break backward compatibility. So, backward compatibility in minor releases is not guaranteed in the private API. For example, you use a core class or method on the project level. If it is updated or removed, it might change behavior or cause issues.
 
 The following core classes are exceptions, and you can use and extend them on the project level:
+
+* All the classes from the modules:
+  * Kernel
+  * Bootstrap
+  * Development
 
 * Particular classes:
   * Facade
@@ -128,16 +133,13 @@ The following core classes are exceptions, and you can use and extend them on th
   * Config
   * ConfigurationProvider
 
-* All the classes from the modules:
-  * Kernel
-  * Bootstrap
-  * Development
 
-### Overriding a core method on the project level
 
-To avoid the error during updates and achieve the same result, provide the custom business model in the private API.
+### Using custom classes on the project level
 
-### Example of code that can cause the error and example of the error itself
+To avoid unexpected issues and achieve the same result, replace core classes with custom ones.
+
+### Example of code that can cause upgradability errors
 
 `CustomerAccessForm` extends from `Spryker\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm` class from the core level.
 
@@ -164,13 +166,17 @@ Pyz\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm
 ------------------------------------------------------------------------------------------------------------------------
 ```
 
-### How do I achieve the same result without the error?
+### Example of replacing a core class with a custom one
 
 To resolve the error provided in the example, do the following:
 
-1. Introduce new class `src/Pyz/Zed/CustomerAccessGui/Communication/Form/MyCustomerAccessForm.php`
+1. Introduce a custom class. For example, `src/Pyz/Zed/CustomerAccessGui/Communication/Form/MyCustomerAccessForm.php`.
 
-2. Copy necessary functionality from the Core. CustomerAccessForm
+2. Copy the needed functionality from `CustomerAccessForm` to `MyCustomerAccessForm`.
+
+
+<details open>
+    <summary markdown='span'>Example of MyCustomerAccessForm</summary>
 
 ```php
 <?php
@@ -316,7 +322,10 @@ class MyCustomerAccessForm extends AbstractType
 }
 ```
 
-3. Overwrite method `getCustomerAccessForm` in `src/Pyz/Zed/CustomerAccessGui/Communication/CustomerAccessGuiCommunicationFactory.php`
+</details>
+
+3. Overwrite the `getCustomerAccessForm` method in `src/Pyz/Zed/CustomerAccessGui/Communication/CustomerAccessGuiCommunicationFactory.php`.
+
 ```php
 public function getCustomerAccessForm(CustomerAccessTransfer $customerAccessTransfer, array $options)
 {
@@ -328,4 +337,4 @@ public function getCustomerAccessForm(CustomerAccessTransfer $customerAccessTran
 }
 ```
 
-When the extending is avoided, re-evaluate the code. The same error shouldn't be returned.
+After replacing the core class with a custom one, re-evaluate the code. The same error shouldn't be returned.

@@ -24,11 +24,13 @@ FeS is designed to be used by developers and content managers.
 
 ## What's the architecture of FeS?
 
-### How does FeS use Glue API?
-
 ### What is the launchpad?
 
-#### What's the launchpad's architecture?
+#### How's the launchpad connected to SCOS?
+
+#### How does launchpad use GitHub and Netlify?
+
+#### How does launchpad use Glue API?
 
 ### What is the Vue Storefront?
 

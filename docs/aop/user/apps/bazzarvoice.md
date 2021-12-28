@@ -8,7 +8,7 @@ The [BazzarVoice](https://www.bazaarvoice.com/) app lets you collect and add use
 
 The BazzarVoice service offers the following UGC: 
 
-- [Rating summaries](https://knowledge.bazaarvoice.com/wp-content/conversations/en_US/Display/display_integration.html#rating-summary) (stars)
+- [Rating summaries](https://knowledge.bazaarvoice.com/wp-content/conversations/en_US/Display/display_integration.html#rating-summary), or star ratings
 - [Product reviews](https://knowledge.bazaarvoice.com/wp-content/conversations/en_US/Display/display_integration.html#reviews)  
 <!---- [Questions and answers](https://knowledge.bazaarvoice.com/wp-content/conversations/en_US/Display/display_integration.html#questions--answers)-->
 
@@ -16,11 +16,11 @@ BazzarVoice uses the content syndication approach, which means that stores using
 
 {% info_block warningBox "Important" %}
 
-To enable BazzarVoice match your products to products in other stores and upload product reviews into your store, you must use UPCs or EANs as unique identifiers for your products.
+To enable BazzarVoice to match your products to products in other stores and upload product reviews into your store, you must use UPCs or EANs as unique identifiers for your products.
 
 {% endinfo_block %}
 
-When you connect BazzarVoice, the app puts JavaScrip tags into your store, and the JavaScript code tells where to insert the BazzarVoice content - reviews, star ratings or questions and answers.
+When you connect BazzarVoice, the app puts JavaScrip tags into your store, and the JavaScript code tells the app where to insert the BazzarVoice content - reviews, star ratings, or questions and answers.
 
 {% info_block infoBox "Info" %}
 
@@ -28,34 +28,58 @@ If you have BazzarVoice integrated, the Spryker default [Product Ratings and Rev
 
 {% endinfo_block %}
 
-## Integrating BazzarVoice into your store
+## BazzarVoice integration and configuration
+
+To integrate or configure BazzarVoice:
+
+1. In your store's Back Office, go to *Apps*.
+2. Click BazzarVoice.
+   This takes you to the BazzarVoice app details page, from where you can do the integration and configuration.
+
+### Integrating BazzarVoice into your store
 
 To integrate the BazzarVoice app into your store:
 
-1. In your store's Back Office, go to Apps.
-2. Click BazzarVoice.
-   This takes you to the BazzarVoice app details page.
-3. In the top right corner of the BazzarVoice app details page, click **Connect app**.
+1. In the top right corner of the BazzarVoice app details page, click **Connect app**.
    This takes you to the BazzarVoice site with the signup form.
-4. Fill out the BazzarVoice signup form and submit it.
+2. Fill out the BazzarVoice signup form and submit it.
    You should receive the BazzarVoice credentials.
-5. Go back to your store's Back Office, to the BazzarVoice app details page.
-6. In the top right corner of the BazzarVoice app details page, click **Cofigure**.
-7. In the *Configure* pane, enter the credentials you received from BazzarVoice.
+3. Go back to your store's Back Office, to the BazzarVoice app details page.
+4. In the top right corner of the BazzarVoice app details page, click **Configure**.
+5. In the *Configure* pane, enter the credentials you received from BazzarVoice.
 
-That's it. You have integrated the BazzarVoice app into your store. It usually takes BazzarVoice a few days to process your product feed. Therefore, you should  see the external ratings and reviews from BazzarVoice in about 2-3 days after you integrated the app.
+That's it. You have integrated the BazzarVoice app into your store. It usually takes BazzarVoice a few days to process your product feed. Therefore, you should see the external ratings and reviews from BazzarVoice in about 2-3 days after you integrated the app.
 
-Now, configure the BazzareVoice app for your store. See the next sections for the configuration details.
+{% info_block infoBox "Info" %}
 
-## Configuring BazzarVoice for your store
+You can do the administration work on the BazzarVoice reviews from the [BazzarVoice portal](https://portal.bazaarvoice.com/signin). For example, you can approve individual reviews. See [Workbench overview](https://knowledge.bazaarvoice.com/wp-content/brandedge-pro-wb/en_US/basics/workbench_overview.html#log-in-to-workbench) for details on how you can manage reviews from the BazzarVoice portal.
 
-You can configure what BazzarVoice services you want in your store. Do the following:
+{% endinfo_block %}
 
-1. In your store's Back Office, go to BazzarVoice app details page.
-2. In the top right corner, click **Configure**.
-3. In *Settings*->*Select Services* select the services you need:
-   - RATINGS & REVIEWS: The accumulated star ratings along with reviews displays on the product details page.
+Now, you can configure the BazzareVoice app for your store.
+
+### Configuring BazzarVoice for your store
+
+For the BazzarVoice app, you can configure the following for your store:
+- BazzarVoice services you need
+- Stores you want the BazzarVoice UGC to be displaed in
+
+To configure the app, on the BazzarVoice app details page, click **Configure**.
+
+To configure the BazzarVoice services:
+
+In *Settings*->*Select Services* select the services you need:
+   - RATINGS & REVIEWS: These are the accumulated star ratings along with reviews that are displayed on the product details page.
    <!---- QUESTIONS & ANSWERS:--> 
-   - INLINE RATINGS: Whenever you have a list of product, for example, in search results, in the product catalog, etc., you can display the star ratings directly in these lists of products.
+   - INLINE RATINGS: This service displays the star ratings directly in these lists of products, for example, in search results, in the product catalog, etc.
    - BAZZARVOICE PIXEL: Adds a single tracking pixel to your shopping cart page and product details page. It allows BazzarVoice to track whether the products that have more UGC have a better conversion rate than products without many ratings and reviews.
-   - CONTAINER PAGE: lets your users add their reviews on the product details page.
+   - CONTAINER PAGE: Lets your users add their reviews on the product details page.
+
+To configure the stores where you want to turn on the BazzarVoice app, in *Settings->Store*, select the stores.
+
+## Disconnecting BazzarVoice from your store
+You can always disconnect the BazzarVoice app from your store. For example, after the trial period, you might decide not to continue with the app. 
+
+To disconnect BazzarVoice, on the BazzarVoice app details page, next to the **Configure** button, hold the pointer over <div class="inline-img">https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/bazzarvoice/disconnect-button.png</div> and click **Disconnect**.
+
+Disconnecting the app removes the BazzarVoice UGC and automatically restores the default Spryker [Product Ratings and Reviews feature](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html#current-constraints) feature.

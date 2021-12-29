@@ -38,7 +38,7 @@ Seamlessly integrate the third-party solutions you need and make your store uniq
         <area shape="rectangle" coords="479,2,711,105" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/operational-tools-monitoring-legal-etc/data-virtuality.html" />
         <area shape="rectangle" coords="2,107,229,197" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/payment-partners/klarna/klarna.html" />
         <area shape="rectangle" coords="230,106,479,196" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/content-management/styla.html" />
-        <area shape="rectangle" coords="480,107,713,197" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay.html" />
+        <area shape="rectangle" coords="480,107,713,197" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay.html" />
         <area shape="rectangle" coords="1,199,230,308" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop.html" />
         <area shape="rectangle" coords="231,196,480,306" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/hosting-providers/continum.html" />
         <area shape="rectangle" coords="481,198,712,308" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/hosting-providers/claranet.html" />

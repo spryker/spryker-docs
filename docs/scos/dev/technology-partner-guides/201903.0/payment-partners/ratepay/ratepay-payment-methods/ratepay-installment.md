@@ -8,7 +8,7 @@ originalArticleId: cde09fb6-93f1-4c5a-97b3-cb804e6e7b65
 redirect_from:
   - /v2/docs/ratepay-installment
   - /v2/docs/en/ratepay-installment
-  – /docs/scos/user/technology-partners/201903.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-installment.html
+  - /docs/scos/user/technology-partners/201903.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-installment.html
 related:
   - title: RatePay
     link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay/ratepay.html

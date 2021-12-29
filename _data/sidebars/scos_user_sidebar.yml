@@ -2566,7 +2566,7 @@ entries:
       - title: Adyen
         url: /docs/scos/user/technology-partners/payment-partners/adyen.html
       - title: RatePay
-        url: /docs/scos/user/technology-partners/payment-partners/ratepay/ratepay.html
+        url: /docs/scos/user/technology-partners/payment-partners/ratepay.html
       - title: Computop
         url: /docs/scos/user/technology-partners/payment-partners/computop/computop.html
         include_versions:

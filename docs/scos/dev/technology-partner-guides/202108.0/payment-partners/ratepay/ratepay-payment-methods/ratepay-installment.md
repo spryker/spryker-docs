@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/ratepay-installment
   - /docs/ratepay-installment
   - /docs/en/ratepay-installment
-  – /docs/scos/user/technology-partners/202108.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-installment.html
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-installment.html
 related:
   - title: RatePay
     link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay/ratepay.html

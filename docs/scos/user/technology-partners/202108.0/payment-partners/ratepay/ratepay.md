@@ -55,6 +55,18 @@ RatePAY provides four methods of payment
 * Direct Debit (ELV)
 * Installment
 
+## Related Developer articles
+
+* [RatePay Core module structure diagram](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratepay/ratepay-core-module-structure-diagram.html)
+* [RatePay state machines](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratepay/ratepay-state-machines.html)
+* [RatePay - Direct Debit](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html)
+* [RatePay - Installment](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-installment.html)
+* [RatePay - Invoice](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-invoice.html)
+* [RatePay - Prepayment](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-prepayment.html)
+* [Disabling address updates from the backend application for RatePay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratepay/technical-details-and-howtos/disabling-address-updates-from-the-backend-application-for-ratepay.html)
+* [RatePay - Facade](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratepay/technical-details-and-howtos/ratepay-facade.html)
+* [RatePay payment workflow](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratepay/technical-details-and-howtos/ratepay-payment-workflow.html)
+* [RatePay state machine commands and conditions](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratepay/technical-details-and-howtos/ratepay-state-machine-commands-and-conditions.html)
 ---
 
 ## Copyright and Disclaimer

@@ -4106,16 +4106,42 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html
     - title: Payment partners
       nested:
-        - title: adyen
+        - title: Adyen
           nested:
-            - title: Installing and configuring adyen
+            - title: Installing and configuring Adyen
               url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/installing-and-configuring-adyen.html
-            - title: Integrating adyen
+            - title: Integrating Adyen
               url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/integrating-adyen.html
-            - title: Integrating adyen payment methods
+            - title: Integrating Adyen payment methods
               url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/integrating-adyen-payment-methods.html
-            - title: Enabling adyen filtering payment methods
+            - title: Enabling Adyen filtering payment methods
               url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/enabling-adyen-filtering-payment-methods.html
+        - title: RatePay
+          nested:
+            - title: RatePay - Payment methods
+              nested:
+                - title: RatePay - Direct Debit
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html
+                - title: RatePay - Prepayment
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-payment-methods/ratepay-prepayment.html
+                - title: RatePay - Installment
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-payment-methods/ratepay-installment.html
+                - title: RatePay - Invoice
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-payment-methods/ratepay-invoice.html
+            - title: Technical details and HowTos
+              nested:
+                - title: RatePay facade
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/technical-details-and-howtos/ratepay-facade.html
+                - title: RatePay payment workflow
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/technical-details-and-howtos/ratepay-payment-workflow.html
+                - title: Disabling address updates from the backend application for RatePay
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/technical-details-and-howtos/ratepay-how-to-disable-address-updates-from-the-backend-application.html
+                - title: RatePay state machine commands and conditions
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/technical-details-and-howtos/ratepay-state-machine-commands-and-conditions.html
+            - title: RatePay Core module structure diagram
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
+            - title: RatePay state machines
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-state-machines.html
   - title: Architecture
     url: /docs/scos/dev/architecture/architecture.html
     nested:

@@ -2563,33 +2563,10 @@ entries:
           - "202001.0"
         - title: Heidelpay - Installation
           url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay-installation.html
-      - title: RatePay
-        url: /docs/scos/user/technology-partners/payment-partners/ratepay/ratepay.html
-        nested:
-        - title: RatePay - Payment methods
-          nested:
-          - title: RatePay - Direct Debit
-            url: /docs/scos/user/technology-partners/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html
-          - title: RatePay - Prepayment
-            url: /docs/scos/user/technology-partners/payment-partners/ratepay/ratepay-payment-methods/ratepay-prepayment.html
-          - title: RatePay - Installment
-            url: /docs/scos/user/technology-partners/payment-partners/ratepay/ratepay-payment-methods/ratepay-installment.html
-          - title: RatePay - Invoice
-            url: /docs/scos/user/technology-partners/payment-partners/ratepay/ratepay-payment-methods/ratepay-invoice.html
-        - title: Technical details and HowTos
-          nested:
-          - title: RatePay - Facade
-            url: /docs/scos/user/technology-partners/payment-partners/ratepay/technical-details-and-howtos/ratepay-facade.html
-          - title: RatePay - Payment Workflow
-            url: /docs/scos/user/technology-partners/payment-partners/ratepay/technical-details-and-howtos/ratepay-payment-workflow.html
-          - title: RatePay - State Machine Commands and Conditions
-            url: /docs/scos/user/technology-partners/payment-partners/ratepay/technical-details-and-howtos/ratepay-state-machine-commands-and-conditions.html
-          - title: RatePay - How to Disable Address Updates from the Backend Application
-            url: /docs/scos/user/technology-partners/payment-partners/ratepay/technical-details-and-howtos/ratepay-how-to-disable-address-updates-from-the-backend-application.html
-        - title: RatePay- Core Module Structure Diagram
-          url: /docs/scos/user/technology-partners/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
       - title: Adyen
         url: /docs/scos/user/technology-partners/payment-partners/adyen.html
+      - title: RatePay
+        url: /docs/scos/user/technology-partners/payment-partners/ratepay/ratepay.html
       - title: Computop
         url: /docs/scos/user/technology-partners/payment-partners/computop/computop.html
         include_versions:

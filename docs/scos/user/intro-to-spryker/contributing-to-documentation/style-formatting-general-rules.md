@@ -186,6 +186,169 @@ For details on the feature, see [Merchant feature overview](/docs/marketplace/us
 
 the `Merchant feature overview` link will take the user to the `Merchant feature overview` article in version 2020109.0.
 
+## Adding a new product
+
+Whenever a new Spryker product is launched, you need to create a separate section for it. Usually, there should be two roles per each product - user and developer. However, there might be exceptions. Here, we consider that you have to create a new product *aop* with user and developer roles.
+
+To add a new product, follow these steps.
+
+### 1. Create sidebars for the new product
+
+In *data->sidebars*, add sidebars for your new product with roles. For each role, there should be a separate .YML file in the following format: {product_name}_{role}_sidebar.yml. To separate the words in the sidebar, use an underscore. For example, for our new *aop* product, we create *aop_dev_sidebar.yml* and *aop_user_sidebar.yml* files.
+
+See [Sidebars](#sidebars) for details on how to populate the sidebar files.
+
+### 2. Add the new product with roles to config file
+
+Now, open the [config.yml](https://github.com/spryker/spryker-docs/blob/master/_config.yml) file and add the new product with its role to it. Do the following:
+
+1. In the *defaults* section, add the new product with its path and product name value to the scope. For example:
+
+```
+-
+    scope:
+      path: "docs/aop"
+    values:
+      product: "aop"
+
+```
+
+2. In the *defaults* section, under the product scope you added in the previous step, add the product roles with their paths and sidebars. The sidebar names should match those you created at step [1. Create sidebars for the new product](#1-create-sidebars-for-the-new-product). For example:
+```
+  -
+    scope:
+      path: "docs/aop/dev"
+    values:
+      sidebar: "aop_dev_sidebar"
+      role: "dev"
+  -
+    scope:
+      path: "docs/aop/user"
+    values:
+      sidebar: "aop_user_sidebar"
+      role: "user"
+```
+3. Optional: If you want to version some of the categories in your new product, in the *versioned_categories* section, add your product name and its categories that should be versioned. For example:
+
+```
+aop:
+    user:
+      - features
+      - back-office-user-guides
+    dev:
+      - feature-integration-guides
+      - feature-walkthroughs
+      - glue-api-guides
+ ``` 
+
+4. In the *sidebars* section, add the sidebars for your new product. The sidebars should match those created at step [1. Create sidebars for the new product](#1-create-sidebars-for-the-new-product). For example:
+
+```
+- aop_dev_sidebar
+- aop_user_sidebar
+```
+5. To index your new product in the search engine, in the *algolia* section, in *indices* add the product name and titles for each role. For example:
+
+```
+- name: 'aop_user'
+  title: 'AOP User'
+- name: 'aop_dev'
+  title: 'AOP Developer'
+```
+
+### 2. Add the product to homepage
+
+Next, you have to add the new product to top navigation on the homepage and to the role boxes on the homepage. Do the following:
+
+1. Go to [_includes/topnav.html](https://github.com/spryker/spryker-docs/blob/master/_includes/topnav.html)
+  1. In the `<div class="main-nav dropdown">` class, add names for your guides following this format:
+  ```
+  {% elsif page.product == '{product_name}' and page.role == 'dev' %}
+  {Product name} developer guide
+  {% elsif page.product == '{product_name}' and page.role == 'user' %}
+  {Product name} users guide
+  ```
+  For example:
+
+  ```
+  {% elsif page.product == 'aop' and page.role == 'dev' %}
+  App Orchestration Platform developer guide
+  {% elsif page.product == 'aop' and page.role == 'user' %}
+  App Orchestration Platform users guide
+  ```
+  2. In `<ul class="main-nav__drop main-nav__drop--mob-static dropdown-menu" aria-labelledby="navbarDropdownMenuLink">`, add the following code under the last `</li>` tag of the already published product:
+   ```
+   
+                                            <li class="dropdown">
+                                                <a href="/" class="main-nav__drop-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    {Product name}
+                                                    <i class="main-nav__drop-link-arrow icon-arrow-right"></i>
+                                                </a>
+                                                <ul class="main-nav__drop dropdown-menu">
+                                                    <li>
+                                                        <a href="/docs/{product-name}/dev/{link-to-main-page-of-dev-guides.html}" class="main-nav__drop-link">
+                                                            <span class="main-nav__drop-link-title">
+                                                                <i class="icon-developer"></i>
+                                                                Developer
+                                                            </span>
+                                                            <span class="main-nav__drop-link-subtitle">{Product name} developer guide</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/docs/{product-name}/user/{link-to-main-page-of-dev-guides.html}" class="main-nav__drop-link">
+                                                            <span class="main-nav__drop-link-title">
+                                                                <i class="icon-business"></i>
+                                                                Business User
+                                                            </span>
+                                                            <span class="main-nav__drop-link-subtitle">AOP users guide</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+   ```
+
+   For example:
+
+   ```
+   
+                                            <li class="dropdown">
+                                                <a href="/" class="main-nav__drop-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    App Orchestration Platform
+                                                    <i class="main-nav__drop-link-arrow icon-arrow-right"></i>
+                                                </a>
+                                                <ul class="main-nav__drop dropdown-menu">
+                                                    <li>
+                                                        <a href="/docs/aop/dev/setup/system-requirements.html" class="main-nav__drop-link">
+                                                            <span class="main-nav__drop-link-title">
+                                                                <i class="icon-developer"></i>
+                                                                Developer
+                                                            </span>
+                                                            <span class="main-nav__drop-link-subtitle">AOP developer guide</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/docs/aop/user/intro-to-aop/aop-overview.html" class="main-nav__drop-link">
+                                                            <span class="main-nav__drop-link-title">
+                                                                <i class="icon-business"></i>
+                                                                Business User
+                                                            </span>
+                                                            <span class="main-nav__drop-link-subtitle">AOP users guide</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+   ```
+2. Go to [_layouts/home.html](https://github.com/spryker/spryker-docs/blob/master/_layouts/home.html)
+   1. In `<h2 class="card__heading-title">Developer guides</h2>` add links to your product's developer guides. For example:
+   ```
+   <li><a href="/docs/aop/dev/setup/system-requirements.html">App Orchestration Platform developer guides</a></li>
+   ```
+   2. In `<h2 class="card__heading-title">Business User guides</h2>` add links to your product's business user guides. For example:
+   ```
+   <li><a href="/docs/aop/user/intro-to-aop/aop-overview.html">App Orchestration Platform user guides</a></li>
+   ```
+
 ## Deleting pages
 
 If you happen to delete the unnecessary or outdated page from the website, make sure to set up a redirect for it. See [Front matter](#front-matter) to learn how to set up redirects.

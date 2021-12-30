@@ -21,7 +21,7 @@ related:
   - title: RatePay - Prepayment
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-payment-methods/ratepay-prepayment.html
   - title: RatePay
-    link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay/ratepay.html
+    link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay.html
   - title: RatePay - Payment Workflow
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/technical-details-and-howtos/ratepay-payment-workflow.html
   - title: RatePay - State Machine Commands and Conditions
@@ -80,4 +80,4 @@ The configuration to integrate invoice payments using RatePAY is:
 
 ## Perform Requests
 
-To perform the needed requests,  use the [RatePAY State Machine Commands and Conditions](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay/technical-details-and-howtos/ratepay-state-machine-commands-and-conditions.html) . You can also use the `facademethods`directly which, however, are invoked by the state machine.
+To perform the needed requests,  use the [RatePAY State Machine Commands and Conditions](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratepay/technical-details-and-howtos/ratepay-state-machine-commands-and-conditions.html) . You can also use the `facademethods`directly which, however, are invoked by the state machine.

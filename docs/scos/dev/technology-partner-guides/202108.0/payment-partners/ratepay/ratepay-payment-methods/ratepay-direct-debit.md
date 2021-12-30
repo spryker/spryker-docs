@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/user/technology-partners/202108.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html
 related:
   - title: RatePay
-    link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay/ratepay.html
+    link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay.html
   - title: RatePay - Payment Workflow
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/technical-details-and-howtos/ratepay-payment-workflow.html
   - title: RatePay - Facade
@@ -73,4 +73,4 @@ The configuration to integrate Direct Debit payments using RatePAY is:
 
 ## Performing Requests
 
-In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. The [RatePAY State Machine Commands and Conditions](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay/technical-details-and-howtos/ratepay-state-machine-commands-and-conditions.html) section gives a summary of them. You can also use the facade methods directly which, however, are invoked by the state machine.
+In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. The [RatePAY State Machine Commands and Conditions](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratepay/technical-details-and-howtos/ratepay-state-machine-commands-and-conditions.html) section gives a summary of them. You can also use the facade methods directly which, however, are invoked by the state machine.

@@ -11,7 +11,7 @@ redirect_from:
   - /docs/scos/user/technology-partners/202001.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-installment.html
 related:
   - title: RatePay
-    link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay/ratepay.html
+    link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay.html
   - title: RatePay - Payment Workflow
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/technical-details-and-howtos/ratepay-payment-workflow.html
   - title: RatePay - Facade

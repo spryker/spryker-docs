@@ -10,7 +10,7 @@ redirect_from:
   - /v1/docs/en/ratepay-state-machine
 related:
   - title: RatePay
-    link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay/ratepay.html
+    link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay.html
   - title: RatePay - Facade
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/technical-details-and-howtos/ratepay-facade.html
   - title: Disabling address updates from the backend application for RatePay

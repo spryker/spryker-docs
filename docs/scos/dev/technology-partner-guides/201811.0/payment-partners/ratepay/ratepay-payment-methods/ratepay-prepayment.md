@@ -11,7 +11,7 @@ redirect_from:
   - /docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-prepayment.html
 related:
   - title: RatePay
-    link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay/ratepay.html
+    link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay.html
   - title: RatePay - Facade
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/technical-details-and-howtos/ratepay-facade.html
   - title: Disabling address updates from the backend application for RatePay

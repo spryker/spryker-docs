@@ -635,7 +635,7 @@ function initFeedbackForm() {
             shortFeedback = container.find('.js-form-collapse__short-feedback');
 
         secondStepOpener.on('click', function (e) {
-            let shortFeedbackValue = $(e.target).data('short-feedback-value');
+            let shortFeedbackValue = $(e.currentTarget).text();
 
             shortFeedback.val(shortFeedbackValue).change();
             firstStep.hide();

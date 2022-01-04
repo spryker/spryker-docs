@@ -262,21 +262,26 @@ Next, you have to add the new product to top navigation on the homepage and to t
 
 1. Go to [_includes/topnav.html](https://github.com/spryker/spryker-docs/blob/master/_includes/topnav.html)
   1. In the `<div class="main-nav dropdown">` class, add names for your guides following this format:
+   
   ```
+  {% raw %}
   {% elsif page.product == '{product_name}' and page.role == 'dev' %}
   {Product name} developer guide
   {% elsif page.product == '{product_name}' and page.role == 'user' %}
   {Product name} users guide
+  {% endraw %}
   ```
   For example:
 
   ```
+  {% raw %}
   {% elsif page.product == 'aop' and page.role == 'dev' %}
   App Orchestration Platform developer guide
   {% elsif page.product == 'aop' and page.role == 'user' %}
   App Orchestration Platform users guide
+  {% endraw %}
   ```
-  2. In `<ul class="main-nav__drop main-nav__drop--mob-static dropdown-menu" aria-labelledby="navbarDropdownMenuLink">`, add the following code under the last `</li>` tag of the already published product:
+  1. In `<ul class="main-nav__drop main-nav__drop--mob-static dropdown-menu" aria-labelledby="navbarDropdownMenuLink">`, add the following code under the last `</li>` tag of the already published product:
    ```
    
                                             <li class="dropdown">
@@ -344,7 +349,7 @@ Next, you have to add the new product to top navigation on the homepage and to t
    ```
    <li><a href="/docs/aop/dev/setup/system-requirements.html">App Orchestration Platform developer guides</a></li>
    ```
-   2. In `<h2 class="card__heading-title">Business User guides</h2>`,add links to your product's business user guides. For example:
+   1. In `<h2 class="card__heading-title">Business User guides</h2>`,add links to your product's business user guides. For example:
    ```
    <li><a href="/docs/aop/user/intro-to-aop/aop-overview.html">App Orchestration Platform user guides</a></li>
    ```

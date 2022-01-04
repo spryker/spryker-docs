@@ -505,8 +505,6 @@ export default register(
 );
 ```
 
-See [Modules to Components Mapping](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/modules_to_components_mapping.pdf)  for description of modules and their components.
-
 ***
 **What's next?**
 The following topics will help you in developing Spryker Atomic Frontend step-by-step:

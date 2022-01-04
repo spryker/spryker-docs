@@ -63,7 +63,7 @@ The list is empty until codes are generated.
 
 On the **Voucher code** tab, do the following:
 1. Enter the **QUANTITY** for voucher codes you want to generate.
-2. *Optional*: In **CUSTOM CODE**, enter any text that you would like to precede the randomly generated characters in each voucher code. You can also use the placeholder ***[code]*** to specify the location.
+2. *Optional*: In **CUSTOM CODE**, enter any text that you would like to precede the randomly generated characters in each voucher code. You can also use the placeholder *[code]* to specify the location.
 3. Set the **ADD RANDOM GENERATED CODE LENGTH** by selecting the value from a drop-down list.
 4. Set **MAX NUMBER OF USES**.
 5. To complete the process, click **Generate**.

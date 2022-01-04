@@ -309,7 +309,7 @@ This section contains a set of tables that describe fields, value types, and ope
 | Operator | Operator compares the value of a field on the left with the value(s) on the right (for example, equals (=), greater than (>)). If the expression evaluates to true, the discount can be applied (operator is **equal** on the preceding image). |
 | Value | Value types must match the selected field. The asterisk (*) matches all possible values (on the preceding image, the value is **Swiss Franc**).|
 | Combine Conditions | 'AND' and 'OR' operators are used to combine conditions (**AND** on the preceding image). |
-|Grouping | When building more complex queries, conditions may be grouped inside parentheses '( )'. Because discount calculations and conditions are applied per item, it is not possible to use groups with 'AND' that each contain SKU parameters. |
+|Grouping | When building more complex queries, conditions may be grouped inside parentheses '( )'. Because discount calculations and conditions are applied per item, it is not possible to use groups with ‘AND’ where each group contains at least one SKU-based rule. |
 
 **Fields and value types (Plain Query)**
 

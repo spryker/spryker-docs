@@ -188,7 +188,7 @@ the `Merchant feature overview` link will take the user to the `Merchant feature
 
 ## Adding a new product
 
-Whenever a new Spryker product is launched, you need to create a separate section for it. Usually, there should be two roles per each product - user and developer. However, there might be exceptions. Here, we consider that you have to create a new product *aop* with the *user* and *developer* roles.
+Whenever a new Spryker product is launched, you need to create a separate section for it. Usually, there are two roles per product - user and developer. However, there might be exceptions. Here, we consider that you have to create a new product *aop* with the *user* and *developer* roles.
 
 To add a new product, follow these steps.
 
@@ -198,7 +198,7 @@ In *data->sidebars*, add sidebars for your new product with roles. For each role
 
 See [Sidebars](#sidebars) for details on how to populate the sidebar files.
 
-### 2. Add the new product with roles to config file
+### 2. Add the new product with roles to the config file
 
 Now, open the [config.yml](https://github.com/spryker/spryker-docs/blob/master/_config.yml) file and add the new product with its role to it. Do the following:
 
@@ -228,7 +228,7 @@ Now, open the [config.yml](https://github.com/spryker/spryker-docs/blob/master/_
       sidebar: "aop_user_sidebar"
       role: "user"
 ```
-3. Optional: If you want to version some of the categories in your new product, in the *versioned_categories* section, add your product name and its categories that should be versioned. For example:
+3. Optional: If you want to version some of the categories in your new product, in the *versioned_categories* section, add your product name and the categories that should be versioned. For example:
 
 ```
 aop:
@@ -256,9 +256,9 @@ aop:
   title: 'AOP Developer'
 ```
 
-### 2. Add the product to homepage
+### 2. Add the product to the homepage
 
-Next, you have to add the new product to top navigation on the homepage and to the role boxes on the homepage. Do the following:
+Next, you have to add the new product to the top navigation on the homepage and to the role boxes on the homepage. Do the following:
 
 1. Go to [_includes/topnav.html](https://github.com/spryker/spryker-docs/blob/master/_includes/topnav.html)
   1. In the `<div class="main-nav dropdown">` class, add names for your guides following this format:

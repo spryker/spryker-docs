@@ -53,7 +53,7 @@ class IndexController extends AbstractController
 
 ## Input Parameters
 
-You can define an input parameter `$request` that is automatically injected. This is a [Symfony\Component\HttpFoundation\Request](http://api.symfony.com/2.3/Symfony/Component/HttpFoundation/Request.html), so you will find methods to fetch the get and post parameters and the session.
+You can define an input parameter `$request` that is automatically injected. This is a [Symfony\Component\HttpFoundation\Request](https://symfony.com/doc/2.3/components/http_foundation/introduction.html#request), so you will find methods to fetch the get and post parameters and the session.
 
 ```php
 <?php

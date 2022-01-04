@@ -188,13 +188,13 @@ the `Merchant feature overview` link will take the user to the `Merchant feature
 
 ## Adding a new product
 
-Whenever a new Spryker product is launched, you need to create a separate section for it. Usually, there should be two roles per each product - user and developer. However, there might be exceptions. Here, we consider that you have to create a new product *aop* with user and developer roles.
+Whenever a new Spryker product is launched, you need to create a separate section for it. Usually, there should be two roles per each product - user and developer. However, there might be exceptions. Here, we consider that you have to create a new product *aop* with the *user* and *developer* roles.
 
 To add a new product, follow these steps.
 
 ### 1. Create sidebars for the new product
 
-In *data->sidebars*, add sidebars for your new product with roles. For each role, there should be a separate .YML file in the following format: {product_name}_{role}_sidebar.yml. To separate the words in the sidebar, use an underscore. For example, for our new *aop* product, we create *aop_dev_sidebar.yml* and *aop_user_sidebar.yml* files.
+In *data->sidebars*, add sidebars for your new product with roles. For each role, there should be a separate .YML file in the following format: `{product_name}_{role}_sidebar.yml`. To separate words in the sidebar, use an underscore. For example, for our new *aop* product, we create *aop_dev_sidebar.yml* and *aop_user_sidebar.yml* sidebar files.
 
 See [Sidebars](#sidebars) for details on how to populate the sidebar files.
 
@@ -213,7 +213,7 @@ Now, open the [config.yml](https://github.com/spryker/spryker-docs/blob/master/_
 
 ```
 
-2. In the *defaults* section, under the product scope you added in the previous step, add the product roles with their paths and sidebars. The sidebar names should match those you created at step [1. Create sidebars for the new product](#1-create-sidebars-for-the-new-product). For example:
+2. In the *defaults* section, under the product scope you added at the previous step, add the product roles with their paths and sidebars. The sidebar names should match those you created at step [1. Create sidebars for the new product](#1-create-sidebars-for-the-new-product). For example:
 ```
   -
     scope:
@@ -247,7 +247,7 @@ aop:
 - aop_dev_sidebar
 - aop_user_sidebar
 ```
-5. To index your new product in the search engine, in the *algolia* section, in *indices* add the product name and titles for each role. For example:
+5. To index your new product in the search engine, in the *algolia* section, in *indices*, add the product name and titles for each role. For example:
 
 ```
 - name: 'aop_user'
@@ -340,14 +340,137 @@ Next, you have to add the new product to top navigation on the homepage and to t
                                             </li>
    ```
 2. Go to [_layouts/home.html](https://github.com/spryker/spryker-docs/blob/master/_layouts/home.html)
-   1. In `<h2 class="card__heading-title">Developer guides</h2>` add links to your product's developer guides. For example:
+   1. In `<h2 class="card__heading-title">Developer guides</h2>`, add links to your product's developer guides. For example:
    ```
    <li><a href="/docs/aop/dev/setup/system-requirements.html">App Orchestration Platform developer guides</a></li>
    ```
-   2. In `<h2 class="card__heading-title">Business User guides</h2>` add links to your product's business user guides. For example:
+   2. In `<h2 class="card__heading-title">Business User guides</h2>`,add links to your product's business user guides. For example:
    ```
    <li><a href="/docs/aop/user/intro-to-aop/aop-overview.html">App Orchestration Platform user guides</a></li>
    ```
+
+### Add CI checks for the new product
+
+You need to add CI checks for each role per project. For this, do the following:
+
+1. In the [ci.yml](https://github.com/spryker/spryker-docs/blob/master/.github/workflows/ci.yml) file, add the `link_validation_check_{project-name}_dev` and `link_validation_check_{project-name}_user` sections following the example below:
+
+```
+  link_validation_check_aop_dev:
+    name: Links validation (check_aop_dev)
+    needs: jekyll_build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
+        with:
+          ruby-version: 2.6
+          bundler-cache: true
+
+      - name: Cache HTMLProofer
+        id: cache-htmlproofer
+        uses: actions/cache@v2
+        with:
+          path: tmp/.htmlproofer
+          key: ${{ runner.os }}-check_aop_dev-htmlproofer
+
+  link_validation_check_aop_user:
+    name: Links validation (check_aop_user)
+    needs: jekyll_build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
+        with:
+          ruby-version: 2.6
+          bundler-cache: true
+
+      - name: Cache HTMLProofer
+        id: cache-htmlproofer
+        uses: actions/cache@v2
+        with:
+          path: tmp/.htmlproofer
+          key: ${{ runner.os }}-check_aop_user-htmlproofer
+
+      - uses: actions/download-artifact@v2
+
+      - name: Unpack artifacts
+        run: tar -xf build-result/result.tar.gz
+
+      - run: bundle exec rake check_aop_user
+
+      - uses: actions/download-artifact@v2
+
+      - name: Unpack artifacts
+        run: tar -xf build-result/result.tar.gz
+
+      - run: bundle exec rake check_aop
+
+```
+2. In the [Rakefile](https://github.com/spryker/spryker-docs/blob/master/Rakefile) file, add checks for each role. Make sure to exclude all other projects and roles from each check by adding path to the new project in `options[:file_ignore]`. Follow this example:
+```
+task :check_aop_user do
+  options = commonOptions.dup
+  options[:file_ignore] = [
+    /docs\/scos\/.+/,
+    /docs\/marketplace\/.+/,
+    /docs\/cloud\/.+/,
+    /docs\/aop\/dev\/.+/,
+  ]
+  HTMLProofer.check_directory("./_site", options).run
+end
+
+task :check_aop_user do
+  options = commonOptions.dup
+  options[:file_ignore] = [
+    /docs\/scos\/.+/,
+    /docs\/marketplace\/.+/,
+    /docs\/cloud\/.+/,
+    /docs\/aop\/dev\/.+/,
+  ]
+  HTMLProofer.check_directory("./_site", options).run
+end
+
+task :check_aop_dev do
+  options = commonOptions.dup
+  options[:file_ignore] = [
+    /docs\/scos\/.+/,
+    /docs\/marketplace\/.+/,
+    /docs\/cloud\/.+/,
+    /docs\/aop\/user\/.+/,
+  ]
+  HTMLProofer.check_directory("./_site", options).run
+end
+
+task :check_aop_dev do
+  options = commonOptions.dup
+  options[:file_ignore] = [
+    /docs\/scos\/.+/,
+    /docs\/marketplace\/.+/,
+    /docs\/cloud\/.+/,
+    /docs\/aop\/user\/.+/,
+  ]
+  HTMLProofer.check_directory("./_site", options).run
+end
+```
+3. In the [Rakefile](https://github.com/spryker/spryker-docs/blob/master/Rakefile) file, in `options[:file_ignore]`, exclude the new project from checks in all other projects and roles. For example:
+
+```
+task :check_mp_dev do
+  options = commonOptions.dup
+  options[:file_ignore] = [
+    /docs\/scos\/.+/,
+    /docs\/cloud\/.+/,
+    /docs\/aop\/.+/,
+    /docs\/marketplace\/user\/.+/,
+  ]
+```
 
 ## Deleting pages
 

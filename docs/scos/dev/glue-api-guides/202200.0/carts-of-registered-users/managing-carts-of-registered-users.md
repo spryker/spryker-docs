@@ -119,7 +119,7 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 | ATTRIBUTE | TYPE  | DESCRIPTION |
 | --- | --- | --- |
 | priceMode | String | Price mode that was active when the cart was created. |
-| currency | String | Currency that was selected whenthe cart was created. |
+| currency | String | Currency that was selected when the cart was created. |
 | store | String | Store for which the cart was created. |
 | name | String | Specifies a cart name.<br>The field is available in multi-cart environments only. |
 | isDefault | Boolean | Specifies whether the cart is the default one for the customer.<br>The field is available in multi-cart environments only.  |
@@ -1409,7 +1409,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                 "averageRating": null,
                 "reviewCount": 0,
                 "name": "Samsung Galaxy Tab S2 SM-T813",
-                "description": "Enjoy greater flexibility  ...than ever before with the Galaxy Tab S2. Remarkably slim and ultra-lightweight, use this device to take your e-books, photos, videos and work-related files with you wherever you need to go. The Galaxy Tab S2’s 4:3 ratio display is optimised for magazine reading and web use. Switch to Reading Mode to adjust screen brightness and change wallpaper - create an ideal eBook reading environment designed to reduce the strain on your eyes. Get greater security with convenient and accurate fingerprint functionality. Activate fingerprint lock by pressing the home button. Use fingerprint verification to restrict / allow access to your web browser, screen lock mode and your Samsung account.",
+                "description": "Enjoy greater flexibility  ...than ever before with the Galaxy Tab S2. Remarkably slim and ultra-lightweight, use this device to take your e-books, photos, videos and work-related files with you wherever you need to go. The Galaxy Tab S2's 4:3 ratio display is optimised for magazine reading and web use. Switch to Reading Mode to adjust screen brightness and change wallpaper - create an ideal eBook reading environment designed to reduce the strain on your eyes. Get greater security with convenient and accurate fingerprint functionality. Activate fingerprint lock by pressing the home button. Use fingerprint verification to restrict / allow access to your web browser, screen lock mode and your Samsung account.",
                 "attributes": {
                     "internal_memory": "3 GB",
                     "processor_model": "APQ8076",
@@ -1700,7 +1700,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | priceMode | String | Price mode that was active when the cart was created. |
-| currency | String | Currency that was selected whenthe cart was created. |
+| currency | String | Currency that was selected when the cart was created. |
 | store | String | Store for which the cart was created. |
 | name | String | Specifies a cart name.<br>The field is available in multi-cart environments only. |
 | isDefault | Boolean | Specifies whether the cart is the default one for the customer.<br>The field is available in multi-cart environments only.  |
@@ -1798,6 +1798,8 @@ To retrieve a particular cart, send the request:
 | `GET https://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398?include=items,concrete-products,product-options` | Retrieve the `8fc45eda-cddf-5fec-8291-e2e5f8014398` cart with items, respective concrete product, and their product options. |
 | `GET https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830?include=vouchers` | Retrieve the `976af32f-80f6-5f69-878f-4ea549ee0830` cart with detailed information on its vouchers. |
 | `GET https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d37d32f92ee9?include=items,concrete-products,product-labels` | Retrieve the `0c3ec260-694a-5cec-b78c-d37d32f92ee9` cart with information about the product labels assigned to the products in the cart. |
+| `GET https://glue.mysprykershop.com/carts/308b51f4-2491-5bce-8cf2-436273b44f9b` | Retrieve the `308b51f4-2491-5bce-8cf2-436273b44f9b` cart with the violated hard and soft minimum thresholds. |
+| `GET https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2` | Retrieve the `1ce91011-8d60-59ef-9fe0-4493ef3628b2` cart with the violated hard maximum threshold. |
 
 
 ### Response
@@ -2296,7 +2298,7 @@ To retrieve a particular cart, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample with with details on gift cards</summary>
+<summary markdown='span'>Response sample with details on gift cards</summary>
 
 ```json
 {
@@ -2834,6 +2836,97 @@ To retrieve a particular cart, send the request:
 
 </details>
 
+<details>
+<summary markdown='span'>Response sample with the violated hard and soft minimum thresholds</summary>
+
+```json
+{
+    "data": {
+        "type": "carts",
+        "id": "308b51f4-2491-5bce-8cf2-436273b44f9b",
+        "attributes": {
+            "priceMode": "GROSS_MODE",
+            "currency": "EUR",
+            "store": "DE",
+            "name": "New Year presents",
+            "isDefault": true,
+            "totals": {
+                "expenseTotal": 5000,
+                "discountTotal": 0,
+                "taxTotal": 1350,
+                "subtotal": 9454,
+                "grandTotal": 14454,
+                "priceToPay": 14454
+            },
+            "discounts": [],
+            "thresholds": [
+                {
+                    "type": "hard-minimum-threshold",
+                    "threshold": 20000,
+                    "fee": null,
+                    "deltaWithSubtotal": 10546,
+                    "message": "You need to add items for €200.00 to pass a recommended threshold. Otherwise, €50 fee will be added."
+                },
+                {
+                    "type": "soft-minimum-threshold-fixed-fee",
+                    "threshold": 100000,
+                    "fee": 5000,
+                    "deltaWithSubtotal": 90546,
+                    "message": "You need to add items for €1,000.00 to pass a recommended threshold. Otherwise, €50.00 fee will be added."
+                },
+            ]
+        },
+        "links": {
+            "self": "https://glue.de.69-new.demo-spryker.com/carts/308b51f4-2491-5bce-8cf2-436273b44f9b"
+        }
+    }
+}
+```
+
+</details>
+
+<details>
+<summary markdown='span'>Response sample with the violated hard maximum threshold</summary>
+
+```json
+{
+    "data": {
+        "type": "carts",
+        "id": "1ce91011-8d60-59ef-9fe0-4493ef3628b2",
+        "attributes": {
+            "priceMode": "GROSS_MODE",
+            "currency": "EUR",
+            "store": "DE",
+            "name": "My Cart",
+            "isDefault": false,
+            "totals": {
+                "expenseTotal": 5000,
+                "discountTotal": 0,
+                "taxTotal": 11976,
+                "subtotal": 70007,
+                "grandTotal": 75007,
+                "priceToPay": 75007
+            },
+            "discounts": [],
+            "thresholds": [
+                {
+                    "type": "hard-maximum-threshold",
+                    "threshold": 5000,
+                    "fee": null,
+                    "deltaWithSubtotal": 65007,
+                    "message": "You need to add items for €50 or less to pass a recommended threshold."
+                }
+            ]
+        },
+        "links": {
+            "self": "https://glue.de.69-new.demo-spryker.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2"
+        }
+    }
+}
+```
+
+</details>
+
 
 For the attributes of carts of registered users and included resources, see [Retrieve a registered user's carts](#retrieve-a-registered-users-carts-response-attributes).
 
@@ -2973,7 +3066,7 @@ If the cart is deleted successfully, the endpoint returns the `204 No Content`�
 | 107 | Failed to create a cart. |
 | 109 | Anonymous customer unique id is empty. |
 | 110 | Customer already has a cart. |
-| 111 | Can’t switch price mode when there are items in the cart. |
+| 111 | Can't switch price mode when there are items in the cart. |
 | 112 | Store data is invalid. |
 | 113 | Cart item could not be added. |
 | 114 | Cart item could not be updated. |

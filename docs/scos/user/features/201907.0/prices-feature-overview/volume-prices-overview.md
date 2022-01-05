@@ -67,7 +67,7 @@ The concrete product can also have its own volume prices different from its abst
 
 A specific volume price for a concrete product has a higher priority over an inherited one from its abstract product.
 
-The volume prices are imported using [data importer](https://github.com/spryker/spryker/blob/master/Bundles/PriceProductDataImport/data/import/product_price.csv). The JSON with volume prices is added to the `price_data.volume_prices` column as shown in the example:
+The volume prices are imported using [data importer](https://github.com/spryker/price-product-data-import/blob/master/data/import/product_price.csv). The JSON with volume prices is added to the `price_data.volume_prices` column as shown in the example:
 ![CSV file containing volume prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Volume+Prices/Volume+Prices+Feature+Overview/volume-prices-csv.png) 
 
 After the import is completed the volume prices are shown on the product detail page:

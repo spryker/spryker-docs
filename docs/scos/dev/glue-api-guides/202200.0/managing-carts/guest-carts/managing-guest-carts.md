@@ -120,7 +120,8 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                         "amount": 10689,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/guest-carts/f8782b6c-848d-595e-b3f7-57374f1ff6d7"
@@ -164,7 +165,8 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                         "amount": 10689,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/guest-carts/f8782b6c-848d-595e-b3f7-57374f1ff6d7"
@@ -259,7 +261,8 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                         "amount": 10689,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/guest-carts/f8782b6c-848d-595e-b3f7-57374f1ff6d7"
@@ -333,7 +336,8 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                         "amount": 10689,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/guest-carts/f8782b6c-848d-595e-b3f7-57374f1ff6d7"
@@ -403,7 +407,8 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                         "amount": 13301,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com.com/guest-carts/7e42298e-9f15-5105-a192-96726a2b9da8"
@@ -654,7 +659,8 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                     "grandTotal": 4500,
                     "priceToPay": 4500
                 },
-                "discounts": []
+                "discounts": [],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/guest-carts/5cc8c1ad-a12a-5a93-9c6e-fd4bc546c81c"
@@ -851,7 +857,8 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                     "grandTotal": 39107,
                     "priceToPay": 39107
                 },
-                "discounts": []
+                "discounts": [],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/guest-carts/4f3e67f7-f18c-55ad-8297-2e09b80cf3ff"
@@ -1171,9 +1178,10 @@ In a **single cart** environment, items from the guest cart have been added to
                     "subtotal": 130000,
                     "grandTotal": 117000
                 },
-                "discounts": [...]
+                "discounts": [...],
+                "thresholds": []
             },
-            "links": {...}
+            "links": {.}
         },
 ```
 

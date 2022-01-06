@@ -230,7 +230,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                         "amount": 3744,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a"
@@ -252,7 +253,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                     "subtotal": 83236,
                     "grandTotal": 74912
                 },
-                "discounts": []
+                "discounts": [],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/482bdbd6-137f-5b58-bd1c-37f3fa735a16"
@@ -298,7 +300,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                         "amount": 4158,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/ac3da9eb-f4fc-5803-94b9-343d6cd4cda4"
@@ -337,7 +340,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                         "amount": 6165,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/e877356a-5d8f-575e-aacc-c790eeb20a27"
@@ -380,7 +384,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                         "amount": 4200,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/8ef901fe-fe47-5569-9668-2db890dbee6d"
@@ -585,7 +590,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                     "subtotal": null,
                     "grandTotal": null
                 },
-                "discounts": []
+                "discounts": [],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/59743e37-0182-5153-9935-77106741a9d2"
@@ -613,7 +619,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                         "amount": 2965,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4"
@@ -651,7 +658,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                         "amount": 10206,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/2b72635a-9363-56f5-9ba7-55631b8ad71e"
@@ -722,7 +730,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                     "subtotal": null,
                     "grandTotal": null
                 },
-                "discounts": []
+                "discounts": [],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/59743e37-0182-5153-9935-77106741a9d2"
@@ -750,7 +759,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                         "amount": 2965,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4"
@@ -788,7 +798,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                         "amount": 10206,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/2b72635a-9363-56f5-9ba7-55631b8ad71e"
@@ -859,7 +870,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                     "grandTotal": null,
                     "priceToPay": null
                 },
-                "discounts": []
+                "discounts": [],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/dc16f734-968d-5a45-92b7-aae5f804f77c?include=shared-carts,company-users"
@@ -882,7 +894,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                     "grandTotal": 12522,
                     "priceToPay": 12522
                 },
-                "discounts": []
+                "discounts": [],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d37d32f92ee9?include=shared-carts,company-users"
@@ -963,7 +976,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                     "subtotal": null,
                     "grandTotal": null
                 },
-                "discounts": []
+                "discounts": [],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/59743e37-0182-5153-9935-77106741a9d2"
@@ -991,7 +1005,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                         "amount": 2965,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4"
@@ -1029,7 +1044,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                         "amount": 10206,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/2b72635a-9363-56f5-9ba7-55631b8ad71e"
@@ -1099,7 +1115,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                         "amount": 1663,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830?include=vouchers"
@@ -1172,7 +1189,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                         "amount": 17352,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/e877356a-5d8f-575e-aacc-c790eeb20a27"
@@ -1238,7 +1256,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                         "amount": 17145,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/e877356a-5d8f-575e-aacc-c790eeb20a27"
@@ -1308,7 +1327,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                         "amount": 19952,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398?include=items,concrete-products,product-options"
@@ -1555,7 +1575,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                     "grandTotal": 3369,
                     "priceToPay": 3369
                 },
-                "discounts": []
+                "discounts": [],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d37d32f92ee9?include=items,concrete-products,product-labels"
@@ -1830,7 +1851,8 @@ To retrieve a particular cart, send the request:
                     "amount": 2965,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4"
@@ -1868,7 +1890,8 @@ To retrieve a particular cart, send the request:
                     "amount": 2965,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4"
@@ -1996,7 +2019,8 @@ To retrieve a particular cart, send the request:
                     "amount": 2965,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4"
@@ -2058,7 +2082,8 @@ To retrieve a particular cart, send the request:
                     "amount": 2965,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4"
@@ -2113,7 +2138,8 @@ To retrieve a particular cart, send the request:
                 "grandTotal": 12522,
                 "priceToPay": 12522
             },
-            "discounts": []
+            "discounts": [],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d37d32f92ee9?include=shared-carts,company-users"
@@ -2195,7 +2221,8 @@ To retrieve a particular cart, send the request:
                     "amount": 2965,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4"
@@ -2263,7 +2290,8 @@ To retrieve a particular cart, send the request:
                     "amount": 11113,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2"
@@ -2390,7 +2418,8 @@ To retrieve a particular cart, send the request:
                     "amount": 19952,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398?include=items,concrete-products,product-options"
@@ -2641,7 +2670,8 @@ To retrieve a particular cart, send the request:
                     "amount": 18489,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830?include=vouchers"
@@ -2703,7 +2733,8 @@ To retrieve a particular cart, send the request:
                 "grandTotal": 3369,
                 "priceToPay": 3369
             },
-            "discounts": []
+            "discounts": [],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d37d32f92ee9?include=items,concrete-products,product-labels"
@@ -2928,6 +2959,16 @@ To retrieve a particular cart, send the request:
 </details>
 
 
+**Threshold attributes**
+
+| ATTRIBUTE | TYPE | DESCRIPTION |
+| --- | --- | --- |
+| type | String | Threshold type. |
+| threshold | Integer | Threshold monetary amount. |
+| fee | Integer | Fee to be paid if the threshold is violated.  |
+| deltaWithSubtotal | Integer | Displays the remaining amount that needs to be added to pass the threshold. |
+| message | String | Message shown to the customer if threshold rules are not met. |
+
 For the attributes of carts of registered users and included resources, see [Retrieve a registered user's carts](#retrieve-a-registered-users-carts-response-attributes).
 
 For the attributes of other included resources, see:
@@ -2993,8 +3034,7 @@ Request sample: `https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d3
 
 Response sample:
 
-```
-json
+```json
 {
     "data": {
         "type": "carts",
@@ -3013,7 +3053,8 @@ json
                 "grandTotal": 571843,
                 "priceToPay": 571843
             },
-            "discounts": []
+            "discounts": [],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d37d32f92ee9"

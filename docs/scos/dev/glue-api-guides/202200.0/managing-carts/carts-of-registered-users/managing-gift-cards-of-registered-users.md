@@ -113,7 +113,8 @@ Response sample:
                     "amount": 4200,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/carts/8ef901fe-fe47-5569-9668-2db890dbee6d"

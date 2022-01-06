@@ -2,6 +2,7 @@
 title: Category Management + promotions & discounts feature integration
 description: This guide provides step-by-step instructions on integrating Category Management + Promotions & Discounts feature into a Spryker-based project.
 template: feature-integration-guide-template
+---
 
 ## Install feature core
 

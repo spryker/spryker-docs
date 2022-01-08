@@ -1,6 +1,6 @@
 ---
 title: Category Management + promotions & discounts feature integration
-description: This guide provides step-by-step instructions on integrating Category Management + Promotions & Discounts feature into a Spryker-based project.
+description: his guide provides step-by-step instructions on integrating into a Spryker-based project the new feature: Addition of a "Category" parameter to calculation and conditions queries in discounts.
 template: feature-integration-guide-template
 ---
 
@@ -21,7 +21,7 @@ To start feature integration, overview, and install the necessary features:
 
 ### 1) Set up behavior
 
-Set up the following behavirors:
+Set up the following behaviors:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -68,7 +68,7 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 Ensure that the plugins work correctly:
 
 1. [Create a discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html) and define its condition as a query string with a *category* field.
-2. Add a product with the defined category to cart.
+2. Add a product assigned to the defined category to cart.
 3. The discount should be applied to the cart.
 
 {% endinfo_block %}

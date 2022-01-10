@@ -2495,6 +2495,16 @@ It is the responsibility of the API Client to track whether the selected items a
 | selectedProductOptions.price | Integer | Product option price in cents. |
 | selectedProductOptions.currencyIsoCode | String | ISO 4217 code of the currency in which the product option price is specified. |
 
+<a name="threshold-attributes">**Threshold attributes**</a>
+
+| ATTRIBUTE | TYPE | DESCRIPTION |
+| --- | --- | --- |
+| type | String | Threshold type. |
+| threshold | Integer | Threshold monetary amount. |
+| fee | Integer | Fee to be paid if the threshold is not reached.  |
+| deltaWithSubtotal | Integer | Displays the remaining amount that needs to be added to pass the threshold. |
+| message | String | Message shown to the customer if the threshold is not fulfilled. |
+
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 |items, bundle-items, bundled-items| sku |String| Unique identifier of the product that was added to the cart.|
@@ -2515,7 +2525,6 @@ It is the responsibility of the API Client to track whether the selected items a
 | vouchers, cart-rules | discountPromotionAbstractSku | String | SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
 | vouchers, cart-rules | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
 
-For the attributes of the included resources, see:
 * [Retrieving Measurement Units](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html)
 * [Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart)
 * [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)

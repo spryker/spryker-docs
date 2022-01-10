@@ -2642,6 +2642,8 @@ It is the responsibility of the API Client to track whether the selected items a
 
 </details>
 
+For the threshold attributes, see [Threshold attributes](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#treshold-attributes).
+
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | guest-cart-items, bundle-items, bundled-items | sku | String | SKU of the product. |

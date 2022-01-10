@@ -51,17 +51,17 @@ entries:
       - title: B2B or B2C Demo Shop installation- Mac OS or Linux, with Development
           Virtual Machine
         url: /docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-mac-os-or-linux-with-development-virtual-machine.html
+      - title: B2B or B2C Demo Shop installation- without Development Virtual Machine
+        url: /docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-without-development-virtual-machine.html
+      - title: B2B or B2C Demo Shop installation- Windows, with Development Virtual
+          Machine
+        url: /docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-windows-with-development-virtual-machine.html
       - title: Debugger
         nested:
         - title: Configuring debugging in Vagrant
           url: /docs/scos/dev/setup/installing-spryker-with-vagrant/debugger-configuration/configuring-debugging-in-vagrant.html
         - title: Configuring debugging in Vagrant with VM below version 91
           url: /docs/scos/dev/setup/installing-spryker-with-vagrant/debugger-configuration/configuring-debugging-in-vagrant-with-vm-below-version-91.html
-      - title: B2B or B2C Demo Shop installation- without Development Virtual Machine
-        url: /docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-without-development-virtual-machine.html
-      - title: B2B or B2C Demo Shop installation- Windows, with Development Virtual
-          Machine
-        url: /docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-windows-with-development-virtual-machine.html
       - title: Virtual Machine Cleanup
         url: /docs/scos/dev/setup/installing-spryker-with-vagrant/virtual-machine-cleanup.html
       - title: Upgrading to the latest version of Node.js inside devwm

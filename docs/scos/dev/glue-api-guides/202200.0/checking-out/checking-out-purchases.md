@@ -1302,7 +1302,7 @@ For the attributes of other included resources, see [Retrieve customer's order](
 | 400 | Bad request. This error can occur due to the following reasons:<ul><li>The POST data is incorrect;</li><li>Neither **Authorization** nor **X-Anonymous-Customer-Unique-Id** headers were provided in the request.</li></ul> |
 | 404 | Order not found. |
 | 422 | Order payment is not updated. Checkout data is incorrect. |
-| 1101 | Checkout   data is invalid. |
+| 1101 | Checkout data is invalid. |
 | 1102 | Order could not be placed. |
 | 1103 | Cart not found. |
 | 1104 | Cart is empty. |

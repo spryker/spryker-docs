@@ -52,7 +52,11 @@ Priority is an internal attribute that we set for cases after having evaluated t
 
 You can see what priority your case was assigned to in the case detail view on the Support and Partner Portal.
 
+<!--
+
 ![image.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/image%28166%29.png)
+
+-->
 
 ### Desired Solution Time
 We recently gave our Partners and Customers the option to specify desired solution times on Request, Change Request and Problem Cases. Emergency cases do not have this field, as they will always be dealt with as soon as possible.
@@ -66,7 +70,10 @@ The case type you choose to create an issue also determines how high it will be 
 
 ## Increasing Priority
 If you feel that your issue is not receiving the attention it deserves, or if you feel you are getting "stuck" and you have already tried to resolve the situation with your support representative directly unsuccessfully, you can ask us to increase the priority of the task. You can do so by using the corresponding button on the Support and Partner Portal.
+
+<!--
 ![image.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/image%28165%29.png)
+-->
 
 There is also a link in the signature of every mail sent by our support representatives that can be used to ask for an increase in priority.
 Both options lead to a form where we ask you to explain why the priority of your case should be increase in relation to the other cases we are currently work on. Please make sure to provide relevant reasons for why we should increase the priority of your request.

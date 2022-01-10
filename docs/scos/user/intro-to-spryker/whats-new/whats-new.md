@@ -41,8 +41,6 @@ To subscribe to our release notes and security updates, see the following articl
 * [Release notes](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html)
 * [Security Updates](/docs/scos/user/intro-to-spryker/whats-new/security-updates.html)
 
-To check our previous release notes, go to the [Releases Archive](/docs/scos/user/intro-to-spryker/releases/releases-archive.html) section.
-
 <!--
 <details>
 <summary markdown='span'>April 2018 Release</summary>

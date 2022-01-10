@@ -121,7 +121,7 @@ Visit [Technology Partners](https://spryker.com/technology-partners/) for a comp
 * [Payone](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution/payolution.html)
 * [Powerpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/powerpay.html)
 * [Ratenkauf by Easycredit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html)
-* [RatePAY](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay.html)
+* [RatePAY](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay.html)
 
  ## Product Information (PIM/ERP)
 

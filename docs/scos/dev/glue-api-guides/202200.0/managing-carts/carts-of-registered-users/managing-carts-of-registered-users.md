@@ -1819,8 +1819,8 @@ To retrieve a particular cart, send the request:
 | `GET https://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398?include=items,concrete-products,product-options` | Retrieve the `8fc45eda-cddf-5fec-8291-e2e5f8014398` cart with items, respective concrete product, and their product options. |
 | `GET https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830?include=vouchers` | Retrieve the `976af32f-80f6-5f69-878f-4ea549ee0830` cart with detailed information on its vouchers. |
 | `GET https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d37d32f92ee9?include=items,concrete-products,product-labels` | Retrieve the `0c3ec260-694a-5cec-b78c-d37d32f92ee9` cart with information about the product labels assigned to the products in the cart. |
-| `GET https://glue.mysprykershop.com/carts/308b51f4-2491-5bce-8cf2-436273b44f9b` | Retrieve the `308b51f4-2491-5bce-8cf2-436273b44f9b` cart with the violated hard and soft minimum thresholds. |
-| `GET https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2` | Retrieve the `1ce91011-8d60-59ef-9fe0-4493ef3628b2` cart with the violated hard maximum threshold. |
+| `GET https://glue.mysprykershop.com/carts/308b51f4-2491-5bce-8cf2-436273b44f9b` | Retrieve the `308b51f4-2491-5bce-8cf2-436273b44f9b` cart with the unfulfilled hard and soft minimum thresholds. |
+| `GET https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2` | Retrieve the `1ce91011-8d60-59ef-9fe0-4493ef3628b2` cart with the unfulfilled hard maximum threshold. |
 
 
 ### Response
@@ -2868,7 +2868,7 @@ To retrieve a particular cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with the violated hard and soft minimum thresholds</summary>
+<summary markdown='span'>Response sample with the unfulfilled hard and soft minimum thresholds</summary>
 
 ```json
 {
@@ -2917,7 +2917,7 @@ To retrieve a particular cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with the violated hard maximum threshold</summary>
+<summary markdown='span'>Response sample with the unfulfilled hard maximum threshold</summary>
 
 ```json
 {
@@ -2965,9 +2965,9 @@ To retrieve a particular cart, send the request:
 | --- | --- | --- |
 | type | String | Threshold type. |
 | threshold | Integer | Threshold monetary amount. |
-| fee | Integer | Fee to be paid if the threshold is violated.  |
+| fee | Integer | Fee to be paid if the threshold is not reached.  |
 | deltaWithSubtotal | Integer | Displays the remaining amount that needs to be added to pass the threshold. |
-| message | String | Message shown to the customer if threshold rules are not met. |
+| message | String | Message shown to the customer if the threshold rules are not met. |
 
 For the attributes of carts of registered users and included resources, see [Retrieve a registered user's carts](#retrieve-a-registered-users-carts-response-attributes).
 
@@ -3098,6 +3098,9 @@ If the cart is deleted successfully, the endpoint returns the `204 No Content`�
 
 | CODE | REASON |
 | --- | --- |
+| 001 | Access token is incorrect. |
+| 002 | Access token is missing. |
+| 003 | Failed to log in the user. |
 | 101 | Cart with given uuid not found. |
 | 102 | Failed to add an item to cart. |
 | 103 | Item with the given group key not found in the cart. |
@@ -3105,7 +3108,6 @@ If the cart is deleted successfully, the endpoint returns the `204 No Content`�
 | 105 | Cart could not be deleted. |
 | 106 | Cart item could not be deleted. |
 | 107 | Failed to create a cart. |
-| 109 | Anonymous customer unique id is empty. |
 | 110 | Customer already has a cart. |
 | 111 | Can't switch price mode when there are items in the cart. |
 | 112 | Store data is invalid. |

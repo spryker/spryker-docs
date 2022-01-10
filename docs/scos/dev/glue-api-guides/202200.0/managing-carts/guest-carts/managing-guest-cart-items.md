@@ -281,7 +281,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 </details>
 
 <details>
-<summary markdown='span'>Request sample with the violated hard and soft minimum thresholds</summary>
+<summary markdown='span'>Request sample with the unfulfilled hard and soft minimum thresholds</summary>
 
 `POST https://glue.mysprykershop.com/carts/308b51f4-2491-5bce-8cf2-436273b44f9b/items`
 
@@ -300,7 +300,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 </details>
 
 <details>
-<summary markdown='span'>Request sample with the violated hard maximum threshold</summary>
+<summary markdown='span'>Request sample with the unfulfilled hard maximum threshold</summary>
 
 `POST https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/items`
 
@@ -2552,7 +2552,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-<summary markdown='span'>Response sample with the violated hard and soft minimum thresholds</summary>
+<summary markdown='span'>Response sample with the unfulfilled hard and soft minimum thresholds</summary>
 
 ```json
 {
@@ -2601,7 +2601,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-<summary markdown='span'>Response sample with the violated hard maximum threshold</summary>
+<summary markdown='span'>Response sample with the unfulfilled hard maximum threshold</summary>
 
 ```json
 {
@@ -3358,5 +3358,12 @@ If the item is deleted successfully, the endpoint returns the â€œ204 No Contentâ
 | 117 | Currency is incorrect. |
 | 118 | Price mode is missing. |
 | 119 | Price mode is incorrect. |
+| 4001 | There was a problem adding or updating the configured bundle. |
+| 4002 | Configurable bundle template was not found. |
+| 4003 | The quantity of the configured bundle should be more than zero. |
+| 4004 | Configured bundle with provided group key was not found in cart. |
+| 4005 | The configured bundle could not be added. |
+| 4006 | The configured bundle could not be updated. |
+| 4007 | The configured bundle could not be removed. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

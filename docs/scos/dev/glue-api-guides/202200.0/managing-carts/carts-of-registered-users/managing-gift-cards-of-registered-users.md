@@ -84,7 +84,7 @@ Response sample: `POST https://glue.mysprykershop.com/carts/8ef901fe-fe47-5569-9
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| code | String | ✓ | Code of the gift card sent to the specified email address after the gift card was purchased. |
+| code | String | |&check; | Code of the gift card sent to the specified email address after the gift card was purchased. |
 ### Response
 Response sample:
 
@@ -161,7 +161,9 @@ For the attributes of the registered user's carts, see [Creating carts of regist
 | gift-cards | isActive | Boolean | Specifies whether the gift card code is redeemed or not. |
 
 ## Removing gift cards
+
 To remove the gift card code from the cart, send the request:
+
 ***
 `DELETE` **/carts/**{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}**/cart-codes/_{% raw %}{{{% endraw %}gift_card_code{% raw %}}}{% endraw %}_**
 ***
@@ -190,10 +192,11 @@ If the item is deleted successfully, the endpoint will respond with a `204 No Co
 | CODE  | REASON |
 | --- | --- |
 | 001| Access token is incorrect. |
-| 003| Access token is missing. |
-| 003| Cart code not found in cart. |
-| 3301| Cart code not found in cart. |
-| 3302| Cart code can't be added. |
+| 002| Access token is missing. |
+| 003 | Failed to log in the user. |
+| 003| Cart code is not found in cart. |
+| 3301 | Cart or voucher with the specified ID was not found. |
+| 3302 | Incorrect voucher code or the voucher could not be applied. |
 | 3303| Cart code can't be removed. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

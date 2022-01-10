@@ -185,6 +185,8 @@ If the item is deleted successfully, the endpoint will respond with a `204 No C
 
 | CODE  | REASON |
 | --- | --- |
+| 101 | Cart with the specified ID is not found. |
+| 109 | `X-Anonymous-Customer-Unique-Id` header is empty. |
 | 3301| Cart code not found in cart. |
 | 3302| Cart code can't be added. |
 | 3303| Cart code can't be removed. |

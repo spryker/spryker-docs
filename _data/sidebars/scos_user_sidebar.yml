@@ -2292,7 +2292,7 @@ entries:
       - "202009.0"
       - "202108.0"
       nested:
-      - title: AfterPay
+      - title: Afterpay
         url: /docs/scos/user/technology-partners/payment-partners/afterpay.html
       - title: BS Payone
         url: /docs/scos/user/technology-partners/payment-partners/bs-payone/bs-payone.html

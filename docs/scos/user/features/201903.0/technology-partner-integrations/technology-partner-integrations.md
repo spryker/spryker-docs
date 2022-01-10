@@ -41,7 +41,7 @@ Seamlessly integrate the third-party solutions you need and make your store uniq
         <area shape="rectangle" coords="1,199,230,308" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop.html" />
         <area shape="rectangle" coords="231,196,480,306" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/hosting-providers/continum.html" />
         <area shape="rectangle" coords="481,198,712,308" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/hosting-providers/claranet.html" />
-        <area shape="rectangle" coords="1,310,232,407" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/payment-partners/afterpay/afterpay.html" />
+        <area shape="rectangle" coords="1,310,232,407" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/payment-partners/afterpay.html" />
         <area shape="rectangle" coords="234,307,482,408" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/econda/econda.html" />
         <area shape="rectangle" coords="483,309,710,406" dragDirection="0" href="/docs/scos/user/technology-partners/202108.0/marketing-and-conversion/analytics/fact-finder.html" />
         <area shape="rectangle" coords="1,408,235,501" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/bs-payone.html" />

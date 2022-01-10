@@ -4,7 +4,7 @@ description: Learn how to integrate AfterPay into Spryker-based project
 last_updated: Jun 16, 2021
 template: howto-guide-template
 related:
-  - title: AfterPay
+  - title: Afterpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/afterpay/afterpay.html
 ---
 

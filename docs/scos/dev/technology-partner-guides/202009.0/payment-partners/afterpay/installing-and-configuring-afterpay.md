@@ -1,5 +1,5 @@
 ---
-title: Installing and configuring AfterPay
+title: Installing and configuring Afterpay
 description: Learn how to install and configure AfterPay into Spryker-based project
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -9,7 +9,7 @@ redirect_from:
   - /v6/docs/afterpay-installation-and-configuration
   - /v6/docs/en/afterpay-installation-and-configuration
 related:
-  - title: AfterPay
+  - title: Afterpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/afterpay/afterpay.html
 ---
 
@@ -21,7 +21,7 @@ Currently, AfterPay does not work correctly with [gift cards](/docs/scos/dev/fea
 
 This document describes how to install and configure AfterPay.
 
-## Installing AfterPay
+## Installing Afterpay
 
 To install AfterPay, install the AfterPay module:
 
@@ -29,7 +29,7 @@ To install AfterPay, install the AfterPay module:
 composer require spryker-eco/after-pay
 ```
 
-## Configuring AfterPay
+## Configuring Afterpay
 
 To set up the AfterPay initial configuration, use the credentials you received from your AfterPay account.
 

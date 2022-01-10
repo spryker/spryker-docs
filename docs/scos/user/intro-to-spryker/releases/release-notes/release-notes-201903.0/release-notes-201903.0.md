@@ -31,7 +31,7 @@ related:
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-split-payment-marketplace.html
   - title: Payment Integration - Adyen
     link: docs/scos/user/technology-partners/page.version/payment-partners/adyen.html
-  - title: AfterPay
+  - title: Afterpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/afterpay/afterpay.html
 ---
 

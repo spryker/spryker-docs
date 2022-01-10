@@ -2783,16 +2783,8 @@ entries:
       include_versions:
       - "202108.0"
       nested:
-      - title: Avalara Tax + Product Options feature integration
-        url: /docs/scos/user/technology-partners/taxes/avalara-tax-product-options-feature-integration.html
-        include_versions:
-        - "202108.0"
-      - title: Avalara Tax integration
-        url: /docs/scos/user/technology-partners/taxes/avalara-tax-integration.html
-        include_versions:
-        - "202108.0"
-      - title: Avalara Tax + Shipment feature integration
-        url: /docs/scos/user/technology-partners/taxes/avalara-tax-shipment-feature-integration.html
+      - title: Avalara
+        url: /docs/scos/user/technology-partners/taxes/avalara.html
         include_versions:
         - "202108.0"
   - title: Shop User Guides

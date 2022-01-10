@@ -2292,6 +2292,8 @@ entries:
       - "202009.0"
       - "202108.0"
       nested:
+      - title: AfterPay
+        url: /docs/scos/user/technology-partners/payment-partners/afterpay.html
       - title: BS Payone
         url: /docs/scos/user/technology-partners/payment-partners/bs-payone/bs-payone.html
         nested:
@@ -2579,11 +2581,6 @@ entries:
           url: /docs/scos/user/technology-partners/payment-partners/crefopay/crefopay-integration-into-a-project.html
       - title: Billie
         url: /docs/scos/user/technology-partners/payment-partners/billie.html
-      - title: AfterPay
-        url: /docs/scos/user/technology-partners/payment-partners/afterpay/afterpay.html
-        nested:
-        - title: Afterpay - Installation and Configuration
-          url: /docs/scos/user/technology-partners/payment-partners/afterpay/afterpay-installation-and-configuration.html
       - title: Powerpay
         url: /docs/scos/user/technology-partners/payment-partners/powerpay.html
       - title: Ratenkauf by Easycredit

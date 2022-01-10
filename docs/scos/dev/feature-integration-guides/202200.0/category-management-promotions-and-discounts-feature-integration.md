@@ -1,6 +1,6 @@
 ---
 title: Category Management + promotions & discounts feature integration
-description: his guide provides step-by-step instructions on integrating into a Spryker-based project the new feature: Addition of a "Category" parameter to calculation and conditions queries in discounts.
+description: This guide provides step-by-step instructions on integrating into a Spryker-based project the new feature: Addition of a "Category" parameter to calculation and conditions queries in discounts.
 template: feature-integration-guide-template
 ---
 
@@ -72,3 +72,12 @@ Ensure that the plugins work correctly:
 3. The discount should be applied to the cart.
 
 {% endinfo_block %}
+
+
+### 2) Build Zed UI frontend
+
+Run the following command to enable Javascript and CSS changes for Zed:
+
+```bash
+console frontend:zed:build
+```

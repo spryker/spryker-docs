@@ -4142,6 +4142,18 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
             - title: RatePay state machines
               url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-state-machines.html
+    - title: Taxes
+      include_versions:
+      - "202108.0"
+      nested:
+        - title: Avalara
+          nested:
+            - title: Integrating Avalara
+              url: /docs/scos/dev/technology-partner-guides/taxes/avalara/integrating-avalara.html
+            - title: Integrating Avalara Tax + Product Options
+              url: /docs/scos/dev/technology-partner-guides/taxes/avalara/integrating-avalara-tax-product-options.html
+            - title: Integrating Avalara Tax + Shipment
+              url: /docs/scos/dev/technology-partner-guides/taxes/avalara/integrating-avalara-tax-shipment.html
   - title: Architecture
     url: /docs/scos/dev/architecture/architecture.html
     nested:

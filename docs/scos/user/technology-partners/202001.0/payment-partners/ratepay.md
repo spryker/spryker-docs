@@ -12,7 +12,7 @@ related:
   - title: RatePay - Payment Workflow
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/technical-details-and-howtos/ratepay-payment-workflow.html
   - title: RatePay - Facade
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-payment-methods/ratepay-facade.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/technical-details-and-howtos/ratepay-facade.html
   - title: RatePay - How to Disable Address Updates from the Backend Application
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/technical-details-and-howtos/disabling-address-updates-from-the-backend-application-for-ratepay.html
   - title: RatePay - Direct Debit
@@ -32,11 +32,11 @@ related:
 ## Partner Information
 
 [ABOUT RatePAY](https://www.ratepay.com/)
-RatePAY is a German Fintech company that offers intelligent payment solutions with 100% loss protection for the handling of the most popular paylater models like invoice and instalments on the internet for the DACH region. Our easy payment methods are among the most popular payment solutions in Germany. One of the reasons lies in the flexibility of our products, since the customer pays only for the goods he decides to keep. As one of only a few payment service companies, RatePAY has been granted a license under the German Payment Services Oversight Act (ZAG) by the Federal Financial Supervisory Authority (BaFin) and is now able to offer customers an even more comprehensive service. Founded in December 2009, the start-up from Berlin has developed itself into a profitable company with more than 140 employees. In April 2017, RatePAY was acquired by the investors Advent International and Bain Capital.
+RatePAY is a German Fintech company that offers intelligent payment solutions with 100% loss protection for the handling of the most popular paylater models like invoice and installments on the internet for the DACH region. Our easy payment methods are among the most popular payment solutions in Germany. One of the reasons lies in the flexibility of our products, since the customer pays only for the goods he decides to keep. As one of only a few payment service companies, RatePAY has been granted a license under the German Payment Services Oversight Act (ZAG) by the Federal Financial Supervisory Authority (BaFin) and is now able to offer customers an even more comprehensive service. Founded in December 2009, the start-up from Berlin has developed itself into a profitable company with more than 140 employees. In April 2017, RatePAY was acquired by the investors Advent International and Bain Capital.
 
 YOUR ADVANTAGES:
 
-* Complete solutions for unsecured methods of payment as invoice, instalments, direct debit and prepayment
+* Complete solutions for unsecured methods of payment as invoice, installments, direct debit and prepayment
 * White label solution
 * B2B and B2C customers
 * Risk and customer management, customer service

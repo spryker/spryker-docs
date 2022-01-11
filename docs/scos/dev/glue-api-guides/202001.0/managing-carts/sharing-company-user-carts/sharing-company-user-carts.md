@@ -52,13 +52,13 @@ Each access type is represented by a **Permission Group**. There are 2 Permissio
 ## Retrieving Cart Permission Groups
 To retrieve all available Permission Groups, send a GET request to the following endpoint:
 
-[/cart-permission-groups](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/cart-permission-groups)
+/cart-permission-groups
 
 Sample request: *GET http://glue.mysprykershop.com/cart-permission-groups*
 
 To retrieve a specific Permission Group, query the following endpoint:
 
-[/cart-permission-groups/{% raw %}{{{% endraw %}permission_group_id{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/cart-permission-groups)
+/cart-permission-groups/{% raw %}{{{% endraw %}permission_group_id{% raw %}}}{% endraw %}
 
 Sample request: *GET http://glue.mysprykershop.com/cart-permission-groups/1*
 
@@ -144,9 +144,9 @@ If all Permission Groups are requested, the resource responds with a **RestCartP
 ## Viewing Permissions for Carts
 To identify whether a cart is shared, send a request to the **/carts** or the **/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}** endpoint with the **shared-carts** resource relationship included. Additionally, to find out with whom carts are shared and what are the access levels, you can include the **company-users** and **cart-permission-groups** relationships.
 
-[/carts](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/carts) - provides information on all carts of a user;
+/carts - provides information on all carts of a user;
 
-[/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/carts) - provides information on a specific cart.
+/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %} - provides information on a specific cart.
 
 ### Request
 Sample requests:
@@ -373,7 +373,7 @@ For a detailed list of **RestCartsResponse** attributes, see section *Retrieving
 ## Sharing Carts
 To share a user's cart, send a POST request to the following endpoint:
 
-[/carts/{% raw %}{{{% endraw %}cart-uuid{% raw %}}}{% endraw %}/shared-carts](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/carts)
+/carts/{% raw %}{{{% endraw %}cart-uuid{% raw %}}}{% endraw %}/shared-carts
 
 ### Request
 
@@ -453,7 +453,7 @@ If a request was successful and a cart was shared, the endpoint responds with a 
 ## Changing Permissions
 To change permissions for a shared cart, send a PATCH request to the following endpoint:
 
-[/shared-carts/{% raw %}{{{% endraw %}shared-cart-uuid{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/shared-carts)
+/shared-carts/{% raw %}{{{% endraw %}shared-cart-uuid{% raw %}}}{% endraw %}
 
 ### Request
 
@@ -527,7 +527,7 @@ If a request was successful and permissions for the shared cart were changed, th
 ## Unsharing Carts
 To stop sharing a cart, send a DELETE request to the following endpoint:
 
-[/shared-carts/{% raw %}{{{% endraw %}shared-cart-uuid{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/shared-carts)
+/shared-carts/{% raw %}{{{% endraw %}shared-cart-uuid{% raw %}}}{% endraw %}
 
 ### Request
 Sample request: *DELETE http://glue.mysprykershop.com/shared-carts/4c677a6b-2f65-5645-9bf8-0ef3532bbbccaa*

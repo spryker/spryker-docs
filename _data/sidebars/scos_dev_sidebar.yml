@@ -381,12 +381,12 @@ entries:
         - "201811.0"
         - "201903.0"
         - "201907.0"
-        - "202001.0"
       - title: Navigation
         url: /docs/scos/dev/feature-walkthroughs/navigation-feature-walkthrough/navigation-feature-walkthrough.html
       - title: Navigation module- reference information
         url: /docs/scos/dev/feature-walkthroughs/navigation-feature-walkthrough/navigation-module-reference-information.html
         include_versions:
+        - "202001.0"
         - "202005.0"
         - "202009.0"
         - "202108.0"
@@ -3579,10 +3579,6 @@ entries:
     - title: Running tests with the Docker SDK
       url: /docs/scos/dev/the-docker-sdk/running-tests-with-the-docker-sdk.html
       include_versions:
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
       - "202009.0"
       - "202108.0"
     - title: Retrieving promotional items

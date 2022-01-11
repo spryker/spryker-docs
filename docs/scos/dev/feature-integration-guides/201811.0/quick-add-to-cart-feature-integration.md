@@ -29,15 +29,15 @@ Run the following command(s) to install the required modules:
 composer require spryker-feature/quick-add-to-cart:"^2018.11.0" --update-with-dependencies
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
+{% info_block warningBox “Verification” %}
 
-**Verification**
 Make sure that the module listed in the following table has been installed:
 
 | Module |Expected Directory  |
 | --- | --- |
 | `QuickOrderPage` | `vendor/spryker-shop/quick-order-page`|
-</div></section> 
+
+{% endinfo_block %} 
 
 ## Set up Transfer Objects
 
@@ -47,9 +47,7 @@ Run the following commands to generate transfer changes:
 console transfer:generate
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
-
-**Verification**
+{% info_block warningBox “Verification” %}
 
 Make sure that the modules listed in the following table have been installed:
 
@@ -58,7 +56,7 @@ Make sure that the modules listed in the following table have been installed:
 | `QuickOrderTransfer`|class |created| `vendor/spryker-shop/quick-order-page`|
 | `QuickOrderItemTransfer`|class |created| `src/Generated/Shared/Transfer/QuickOrderItemTransfer`|
 
-</div></section> 
+{% endinfo_block %}
 
 ## Add Translations
 
@@ -104,13 +102,14 @@ Run the following command to import glossary changes:
 console data:import:glossary
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
-    
-**Verification**
+{% info_block warningBox “Verification” %}
+
 Make sure that in the database the configured data are added to the `spy_glossary` table. 
-</div></section>
+
+{% endinfo_block %}
 
 ## Enable Controllers
+
 ### Controller Provider List
 
 Register controller provider(s) to Yves application:
@@ -119,7 +118,7 @@ Register controller provider(s) to Yves application:
 | --- | --- | --- | --- |
 | ` QuickOrderPageControllerProvider`  | ` SprykerShop\Yves\QuickOrderPage\Plugin\Provider`  | ` QuickOrderController`  |Provides functionality to display and process Quick Order table.  |
 
-<details open><summary markdown='span'>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>
+**src/Pyz/Yves/ShopApplication/YvesBootstrap.php**
    
 ```php
 <?php
@@ -143,12 +142,9 @@ class YvesBootstrap extends SprykerYvesBootstrap
 	}
 }
 ```
- <br>
-</details>
 
-<section contenteditable="false" class="warningBox"><div class="content">
+{% info_block warningBox “Verification” %}
 
-**Verification**
 Make sure that the following URLs are available on Yves: 
 
 * https://example.url/quick-order
@@ -156,6 +152,6 @@ Make sure that the following URLs are available on Yves:
 * https://example.url/de/quick-order. 
 * And for all other configured languages.
 
-</div></section>
+{% endinfo_block %}
 
 <!-- Last review date: Dec 06, 2018 by Stanislav Matveyev, Yuliia Boiko -->

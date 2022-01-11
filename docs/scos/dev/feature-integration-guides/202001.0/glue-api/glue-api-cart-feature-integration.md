@@ -22,7 +22,7 @@ To start feature integration, overview and install the necessary features:
 | Name | Version | Integration guide |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Product | {{page.version}} | [Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/products-feature-integration.html) |
+| Product | {{page.version}} | [Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
 | Glue API: Cart |{{page.version}} | [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html) |
 | Glue API: Login | {{page.version}} | Login API feature integration |
 
@@ -35,10 +35,18 @@ composer require spryker/carts-rest-api:"^5.4.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules have been installed:<table><thead><tr><th>Module</th><th>Expected Directory </th></tr></thead><tbody><tr><td>`CartsRestApi`</td><td>`vendor/spryker/carts-rest-api`</td></tr><tr><td>`CartsRestApiExtension`</td><td>`vendor/spryker/carts-rest-api-extension`</td></tr></tbody></table>
+
+Make sure that the following modules have been installed:
+
+|Module|Expected Directory|
+|--- |--- |
+|`CartsRestApi`|`vendor/spryker/carts-rest-api`|
+|`CartsRestApiExtension`|`vendor/spryker/carts-rest-api-extension`|
+
 {% endinfo_block %}
 
 ## 2) Set up Database Schema and Transfer Objects
+
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
@@ -48,26 +56,67 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes have occurred by checking your database:<table><thead><tr><th>Database entity</th><th>Type</th><th>Event</th></tr></thead><tbody><tr><td>`spy_quote.uuid`</td><td>column	</td><td>added</td></tr></tbody></table>
+
+Make sure that the following changes have occurred by checking your database:
+
+|Database entity|Type|Event|
+|--- |--- |--- |
+|`spy_quote.uuid`|column|added|
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes have occurred in transfer objects:<table><thead><tr><th>Transfer</th><th>Type</th><th>Event</th><th>Path</th></tr></thead><tbody><tr><td>`RestCartsAttributesTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/RestCartsAttributesTransfer`</td></tr><tr><td>`RestCartItemsAttributesTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/RestCartItemsAttributesTransfer`</td></tr><tr><td>`RestItemsAttributesTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/RestItemsAttributesTransfer`</td></tr><tr><td>`RestCartVouchersAttributesTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/RestCartVouchersAttributesTransfer`</td></tr><tr><td>`RestCartsDiscountsTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/RestCartsDiscountsTransfer`</td></tr><tr><td>`RestCartsTotalsTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/RestCartsTotalsTransfer`</td></tr><tr><td>`RestCartItemCalculationsTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/RestCartItemCalculationsTransfer`</td></tr><tr><td>`CartItemRequestTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CartItemRequestTransfer`</td></tr><tr><td>`AssignGuestQuoteRequestTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/AssignGuestQuoteRequestTransfer`</td></tr><tr><td>`CustomerTransfer.companyUserTransfer`</td><td>property</td><td>added</td><td>`src/Generated/Shared/Transfer/CustomerTransfer`</td></tr><tr><td>`CustomerTransfer.customerReference`</td><td>property</td><td>added</td><td>`src/Generated/Shared/Transfer/CustomerTransfer`</td></tr><tr><td>`QuoteTransfer.uuid`</td><td>property</td><td>added</td><td>`src/Generated/Shared/Transfer/QuoteTransfer`</td></tr><tr><td>`QuoteTransfer.companyUserId`</td><td>property</td><td>added</td><td>`src/Generated/Shared/Transfer/QuoteTransfer`</td></tr><tr><td>`QuoteTransfer.uuid`</td><td>property</td><td>added</td><td>`src/Generated/Shared/Transfer/QuoteTransfer`</td></tr><tr><td>`QuoteUpdateRequestAttributesTransfer.customerReference`</td><td>property</td><td>added</td><td>`src/Generated/Shared/Transfer/QuoteUpdateRequestAttributesTransfer`</td></tr><tr><td>`RestUserTransfer.idCompanyUser`</td><td>property</td><td>added</td><td>`src/Generated/Shared/Transfer/RestUserTransfer`</td></tr><tr><td>`RestUserTransfer.surrogateIdentifier`</td><td>property</td><td>added</td><td>`src/Generated/Shared/Transfer/RestUserTransfer`</td></tr><tr><td>`QuoteCriteriaFilterTransfer.idCompanyUser`</td><td>property</td><td>added</td><td>`src/Generated/Shared/Transfer/QuoteCriteriaFilterTransfer`</td></tr><tr><td>`QuoteErrorTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/QuoteErrorTransfer`</td></tr><tr><td>`QuoteResponseTransfer.errors`</td><td>property</td><td>added</td><td>`src/Generated/Shared/Transfer/QuoteResponseTransfer`</td></tr><tr><td>`OauthResponse`</td><td>class</td><td>added</td><td>`src/Generated/Shared/Transfer/OauthResponseTransfer`</td></tr></tbody></table>
+
+Make sure that the following changes have occurred in transfer objects:
+
+|Transfer|Type|Event|Path|
+|--- |--- |--- |--- |
+|`RestCartsAttributesTransfer`|class|created|`src/Generated/Shared/Transfer/RestCartsAttributesTransfer`|
+|`RestCartItemsAttributesTransfer`|class|created|`src/Generated/Shared/Transfer/RestCartItemsAttributesTransfer`|
+|`RestItemsAttributesTransfer`|class|created|`src/Generated/Shared/Transfer/RestItemsAttributesTransfer`|
+|`RestCartVouchersAttributesTransfer`|class|created|`src/Generated/Shared/Transfer/RestCartVouchersAttributesTransfer`|
+|`RestCartsDiscountsTransfer`|class|created|`src/Generated/Shared/Transfer/RestCartsDiscountsTransfer`|
+|`RestCartsTotalsTransfer`|class|created|`src/Generated/Shared/Transfer/RestCartsTotalsTransfer`|
+|`RestCartItemCalculationsTransfer`|class|created|`src/Generated/Shared/Transfer/RestCartItemCalculationsTransfer`|
+|`CartItemRequestTransfer`|class|created|`src/Generated/Shared/Transfer/CartItemRequestTransfer`|
+|`AssignGuestQuoteRequestTransfer`|class|created|`src/Generated/Shared/Transfer/AssignGuestQuoteRequestTransfer`|
+|`CustomerTransfer.companyUserTransfer`|property|added|`src/Generated/Shared/Transfer/CustomerTransfer`|
+|`CustomerTransfer.customerReference`|property|added|`src/Generated/Shared/Transfer/CustomerTransfer`|
+|`QuoteTransfer.uuid`|property|added|`src/Generated/Shared/Transfer/QuoteTransfer`|
+|`QuoteTransfer.companyUserId`|property|added|`src/Generated/Shared/Transfer/QuoteTransfer`|
+|`QuoteTransfer.uuid`|property|added|`src/Generated/Shared/Transfer/QuoteTransfer`|
+|`QuoteUpdateRequestAttributesTransfer.customerReference`|property|added|`src/Generated/Shared/Transfer/QuoteUpdateRequestAttributesTransfer`|
+|`RestUserTransfer.idCompanyUser`|property|added|`src/Generated/Shared/Transfer/RestUserTransfer`|
+|`RestUserTransfer.surrogateIdentifier`|property|added|`src/Generated/Shared/Transfer/RestUserTransfer`|
+|`QuoteCriteriaFilterTransfer.idCompanyUser`|property|added|`src/Generated/Shared/Transfer/QuoteCriteriaFilterTransfer`|
+|`QuoteErrorTransfer`|class|created|`src/Generated/Shared/Transfer/QuoteErrorTransfer`|
+|`QuoteResponseTransfer.errors`|property|added|`src/Generated/Shared/Transfer/QuoteResponseTransfer`|
+|`OauthResponse`|class|added|`src/Generated/Shared/Transfer/OauthResponseTransfer`|
+
 {% endinfo_block %}
 
 ### 3) Set up Behavior
+
 #### Generate UUIDs for the existing quote records without UUID:
 
 ```bash
 console uuid:generate Quote spy_quote
 ```
+
 Run the following command:
 
 {% info_block warningBox "Verification" %}
-Make sure that the uuid field is populated for all records in the spy_quote table. To do so, run the following SQL query for it and make sure that the result is 0 records. <br>`SELECT COUNT(*
-{% endinfo_block %} FROM spy_quote WHERE uuid IS NULL;`)
+
+Make sure that the uuid field is populated for all records in the spy_quote table. To do so, run the following SQL query for it and make sure that the result is 0 records. 
+
+```
+SELECT COUNT(* FROM spy_quote WHERE uuid IS NULL;
+```
+
+{% endinfo_block %} 
 
 #### Enable Validation
+
 Activate the following plugin:
 
 | Plugin | Specification | Prerequisites | Namespace |
@@ -99,8 +148,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 ```
 
 {% info_block warningBox "Verification" %}
-To verify that `AnonymousCustomerUniqueIdValidatorPlugin` is set up correctly, send a request to the endpoint configured to require an anonymous customer id (for example, `http://glue.mysprykershop.com/guest-carts`
-{% endinfo_block %} without a header and check if the following error is returned:)
+
+To verify that `AnonymousCustomerUniqueIdValidatorPlugin` is set up correctly, send a request to the endpoint configured to require an anonymous customer id (for example, `http://glue.mysprykershop.com/guest-carts` without a header and check if the following error is returned:
 
 ```json
 {
@@ -114,7 +163,10 @@ To verify that `AnonymousCustomerUniqueIdValidatorPlugin` is set up correctly, s
 }
 ```
 
+{% endinfo_block %} 
+
 #### Enable resources and relationships
+
 Activate the following plugins:
 
 | Plugin | Specification | Prerequisites | Namespace |
@@ -132,10 +184,25 @@ Activate the following plugins:
 | `AddGuestQuoteItemsToCustomerQuotePostAuthPlugin` | Adds items from a guest quote to a customer quote. | None | `Spryker\Zed\CartsRestApi\Communication\Plugin\AuthRestApi` |
 
 {% info_block infoBox "Info" %}
-Wiring `AddGuestQuoteItemsToCustomerQuotePostAuthPlugin` or `UpdateGuestQuoteToCustomerQuotePostAuthPlugin` depends on the cart behavior strategy (they cannot be wired at the same time).<br>There are two strategies for the behavior of carts: single cart behavior and multiple cart behavior. The difference is that in multiple cart behavior it is allowed to create more than one cart for a customer, unlike the single cart behavior.<br>To apply one of those strategies, wire one of the `QuoteCreatorPlugin` plugins in `CartsRestApiDependencyProvider` (Zed). <br>There are two `QuoteCreatorPlugins` placed in different modules:<ul><li>`Spryker\Zed\CartsRestApi\Communication\Plugin\CartsRestApi\QuoteCreatorPlugin` that doesn't allow creating more than one cart.</li><li>`Spryker\Zed\PersistentCart\Communication\Plugin\CartsRestApi\QuoteCreatorPlugin` that allows creating more than one cart.</li></ul>In case when a **single cart** strategy is applied, the `AddGuestQuoteItemsToCustomerQuotePostAuthPlugin` plugin should be wired in `AuthRestApiDependencyProvider`. <br>In case when a **multiple cart** strategy is applied, the `UpdateGuestQuoteToCustomerQuotePostAuthPlugin` plugin should be wired in `AuthRestApiDependencyProvider`. <br>Wiring plugins is illustrated in the code blocks below.
+
+Wiring `AddGuestQuoteItemsToCustomerQuotePostAuthPlugin` or `UpdateGuestQuoteToCustomerQuotePostAuthPlugin` depends on the cart behavior strategy (they cannot be wired at the same time).
+
+There are two strategies for the behavior of carts: single cart behavior and multiple cart behavior. The difference is that in multiple cart behavior it is allowed to create more than one cart for a customer, unlike the single cart behavior.
+
+To apply one of those strategies, wire one of the `QuoteCreatorPlugin` plugins in `CartsRestApiDependencyProvider` (Zed).
+
+There are two `QuoteCreatorPlugins` placed in different modules:
+- `Spryker\Zed\CartsRestApi\Communication\Plugin\CartsRestApi\QuoteCreatorPlugin` that doesn't allow creating more than one cart.
+- `Spryker\Zed\PersistentCart\Communication\Plugin\CartsRestApi\QuoteCreatorPlugin` that allows creating more than one cart.
+  
+ 
+In case when a **single cart** strategy is applied, the `AddGuestQuoteItemsToCustomerQuotePostAuthPlugin` plugin should be wired in `AuthRestApiDependencyProvider`. 
+In case when a **multiple cart** strategy is applied, the `UpdateGuestQuoteToCustomerQuotePostAuthPlugin` plugin should be wired in `AuthRestApiDependencyProvider`. 
+Wiring plugins is illustrated in the code blocks below.
+
 {% endinfo_block %}
 
-src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -200,7 +267,14 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following endpoints are available:<ul><li>http://glue.mysprykershop.com/carts</li><li>http://glue.mysprykershop.com/guest-carts</li></ul>Send a request to "http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/?include=items". The cart with the given id should have at least one added item. Make sure that the response includes relationships to the items resources.<br>Send a request to "http://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}/?include=items". The guest cart with the given id should have at least one added item. Make sure that the response includes relationships to the items resources.
+
+Make sure that the following endpoints are available:
+- http://glue.mysprykershop.com/carts
+- http://glue.mysprykershop.com/guest-carts
+  
+Send a request to "http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/?include=items". The cart with the given id should have at least one added item. Make sure that the response includes relationships to the items resources.
+Send a request to "http://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}/?include=items". The guest cart with the given id should have at least one added item. Make sure that the response includes relationships to the items resources.
+
 {% endinfo_block %}
 
 **src/Pyz/Glue/CustomersRestApi/CustomersRestApiDependencyProvider.php**
@@ -228,7 +302,9 @@ class CustomersRestApiDependencyProvider extends SprykerCustomersRestApiDependen
 ```
 
 {% info_block warningBox "Verification" %}
+
 To verify that `UpdateCartCreateCustomerReferencePlugin` is installed correctly, check whether the guest cart is converted into a regular cart after new customer registration.
+
 {% endinfo_block %}
 
 **src/Pyz/Zed/AuthRestApi/AuthRestApiDependencyProvider.php**
@@ -256,7 +332,9 @@ class AuthRestApiDependencyProvider extends SprykerAuthRestApiDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
+
 To verify that `UpdateGuestQuoteToCustomerQuotePostAuthPlugin` is installed correctly, check whether a non-empty guest cart is converted into the new customer cart after the customer has been authenticated.
+
 {% endinfo_block %}
 
 **src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php**
@@ -283,8 +361,8 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 ```
 
 {% info_block warningBox "Verification" %}
+
 To verify that `QuoteCreatorPlugin` is installed correctly, send a POST request to "http://glue.mysprykershop.com/carts/" with a valid body. Make sure that you are unable to create more than one cart for the same customer. Otherwise, you receive the following error response:
-{% endinfo_block %}
 
 ```json
 {
@@ -297,3 +375,4 @@ To verify that `QuoteCreatorPlugin` is installed correctly, send a POST request 
     ]
 }
 ```
+{% endinfo_block %}

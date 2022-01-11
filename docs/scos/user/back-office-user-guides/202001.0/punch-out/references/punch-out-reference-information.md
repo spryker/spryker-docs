@@ -13,16 +13,18 @@ redirect_from:
 This topic contains the reference information that you need to know when working in the Punch Out > Connections and Punch Out > Trnsactions Log.
 
 ## Connections
-On the Punch Out Connections page, you see the following:
 
+On the Punch Out Connections page, you see the following:
 * Connection ID and Name
 * Connection type, status, and format
 * Company and business unit the connection is set up for
 * The date when the connection was created
 * The actions you can perform
-![Punch out connections](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Punch+Out/punch-out-connections.png) 
+
+![Punch out connections](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Punch+Out/punch-out-connections.png)
 
 ### Creating and Editing Transferred Cart Connection Page Attributes
+
 The following table describes the attributes that are used when creating or updating a connection:
 
 | Attribute | Description |
@@ -36,7 +38,7 @@ The following table describes the attributes that are used when creating or upda
 | Username | The required field for the OCI connection setup that needs to be sent the buyer's ERP system. The username validates the Punch Out setup request. |
 | Password | The required field for the OCI connection setup that needs to be sent the buyer's ERP system. The password validates the Punch Out setup request. |
 | Type | A drop-down list with the available types of the connection, e.g *Setup Request*. |
-| Set Description length on "Transfer to Requisition" | This field controls the maximum length on the description section for a transferred cart, e.g. 128. Any characters outside the limit will be cut off on a transferred cart. | 
+| Set Description length on "Transfer to Requisition" | This field controls the maximum length on the description section for a transferred cart, e.g. 128. Any characters outside the limit will be cut off on a transferred cart. |
 | Cart Encoding | A drop-down list with the available cart encoding types: base64, url-encoded, no-encoding.This configuration varies based on the buyer's ERP requirements. Base64 is selected by default. |
 | Totals Mode | A drop-down list with the available options: Line and Header. This configuration allows you to set whether the cart total is set in the header or on the line level, and it varies based on the buyer's ERP requirements. The header is not supported using the OCI connection type. |
 | Cart Mapping | JSON mapping definition for cart mapping. |
@@ -47,15 +49,16 @@ The following table describes the attributes that are used when creating or upda
 | Single User | The field appears in case single user login mode is selected. A drop-down list with the user details available for the single-user login. |
 
 ## Transactions Log
-On the **Transactions Log** page, you see the following:
 
-* Transaction ID 
+On the **Transactions Log** page, you see the following:
+* Transaction ID
 * Message Type
 * Business Unit
 * Connection Name
 * Transaction Status
 * Session ID
 * The date when the transaction was created
-![Transaction log](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Punch+Out/transactions-log.png) 
+
+![Transaction log](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Punch+Out/transactions-log.png)
 
 <!-- Last review date: Sep 2, 2019 by Oksana Karasyova  -->

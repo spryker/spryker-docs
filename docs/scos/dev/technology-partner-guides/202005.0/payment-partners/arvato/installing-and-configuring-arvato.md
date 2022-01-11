@@ -1,24 +1,22 @@
 ---
-title: Installing and configuring Arvato 2.0
+title: Installing and configuring Arvato
 description: Provide complete and comprehensive risk management for the eCommerce/mail-order industry, contributing to a high level of modularization and automation.
-last_updated: Jul 31, 2020
+last_updated: Sep 15, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v2/docs/arvato-2-0
-originalArticleId: 22cae388-3a3f-4edd-8741-26f8ace6b402
+originalLink: https://documentation.spryker.com/v5/docs/arvato-2-0
+originalArticleId: fedbe73d-a0db-4f5a-af99-bd186c95a76c
 redirect_from:
-  - /v2/docs/arvato-2-0
-  - /v2/docs/en/arvato-2-0
+  - /v5/docs/arvato-2-0
+  - /v5/docs/en/arvato-2-0
 related:
   - title: Arvato - Store Order 2.0
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/arvato/arvato-store-order.html
-  - title: Arvato - Risk Check 2.0
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/arvato/v.2.0/arvato-risk-check-2.0.html
   - title: Arvato
     link: docs/scos/user/technology-partners/page.version/payment-partners/arvato/arvato.html
 ---
 
 The purpose of developing the risk solution services is to provide a complete and comprehensive risk management for the eCommerce/mail-order industry, contributing to a high level of modularization and automation. Besides the use of pre-configured service modules for risk management, risk solution services comprise process support up to the  outsourcing of the entire operative risk management. All risk management processes are supported by a business intelligence component.
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Arvato/arvato-rss-overview.png) 
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Arvato/arvato-rss-overview.png)
 
 ## Prerequisites
 
@@ -53,8 +51,8 @@ API URLs:
 | Sandbox URL | `https://integration.risk-solution-services.de/rss-services/risk-solution-services.v2.1` |
 
 Services:
-* [Risk Check](/docs/scos/user/technology-partners/201903.0/payment-partners/arvato/v.2.0/arvato-risk-check-2.0.html)
-* [Store Order](/docs/scos/user/technology-partners/201903.0/payment-partners/arvato/v.2.0/arvato-store-order-2.0.html)
+* [Risk Check](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/arvato/arvato-risk-check.html)
+* [Store Order](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/arvato/arvato-store-order.html)
 
 To implement Arvato RSS you should be familiar with concept of extending the
 

@@ -1,13 +1,13 @@
 ---
 title: Installing and configuring Arvato 1.0
 description: Provide complete and comprehensive risk management for the eCommerce/mail-order industry, contributing to a high level of modularization and automation.
-last_updated: May 19, 2020
+last_updated: Sep 15, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v1/docs/arvato-1-0
-originalArticleId: bd839a77-34d7-42ee-b25b-6e4ede991179
+originalLink: https://documentation.spryker.com/v5/docs/arvato-1-0
+originalArticleId: ab38a147-b562-42fb-9e2d-2e67ff083261
 redirect_from:
-  - /v1/docs/arvato-1-0
-  - /v1/docs/en/arvato-1-0
+  - /v5/docs/arvato-1-0
+  - /v5/docs/en/arvato-1-0
 related:
   - title: Arvato - Risk Check 1.0
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/arvato/v.1.0/arvato-risk-check-1.0.html
@@ -43,7 +43,7 @@ API URLs:
 | Sandbox url |`https://integration.risk-solution-services.de/rss-services/risk-solution-services.v2.1`  |
 
 Services:
-* [Risk Check](/docs/scos/user/technology-partners/201811.0/payment-partners/arvato/v.1.0/arvato-risk-check-1.0.html)
+* [Risk Check](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/arvato/v.1.0/arvato-risk-check-1.0.html)
 
 To implement Arvato RSS you should be familiar with concept of extending the Spryker Commerce OS. See [Extending Spryker](/docs/scos/dev/back-end-development/extending-spryker/extending-a-core-module-that-is-used-by-another.html) for more details.
 

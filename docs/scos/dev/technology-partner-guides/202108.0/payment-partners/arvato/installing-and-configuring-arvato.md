@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/arvato-installation-configuration
 related:
   - title: Arvato - Store Order 2.0
-    link: docs/scos/user/technology-partners/page.version/payment-partners/arvato/arvato-store-order.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/arvato/arvato-store-order.html
   - title: Arvato
     link: docs/scos/user/technology-partners/page.version/payment-partners/arvato/arvato.html
 ---
@@ -61,8 +61,8 @@ API URLs:
 | Sandbox URL | `https://integration.risk-solution-services.de/rss-services/risk-solution-services.v2.1` |
 
 Services:
-* [Risk Check](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/arvato/arvato-risk-check.html)
-* [Store Order](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/arvato/arvato-store-order.html)
+* [Risk Check](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/arvato/arvato-risk-check.html)
+* [Store Order](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/arvato/arvato-store-order.html)
 
 To implement Arvato RSS you should be familiar with concept of extending the Spryker Commerce OS. See [Extending Spryker](/docs/scos/dev/back-end-development/extending-spryker/extending-a-core-module-that-is-used-by-another.html) for more details.
 

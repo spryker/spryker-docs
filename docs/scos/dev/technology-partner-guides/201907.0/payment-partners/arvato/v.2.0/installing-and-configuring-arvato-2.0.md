@@ -1,13 +1,13 @@
 ---
 title: Installing and configuring Arvato 2.0
 description: Provide complete and comprehensive risk management for the eCommerce/mail-order industry, contributing to a high level of modularization and automation.
-last_updated: Jul 31, 2020
+last_updated: Jan 20, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v2/docs/arvato-2-0
-originalArticleId: 22cae388-3a3f-4edd-8741-26f8ace6b402
+originalLink: https://documentation.spryker.com/v3/docs/arvato-2-0
+originalArticleId: 720bfcb5-2381-4733-acaa-414c4c0781ad
 redirect_from:
-  - /v2/docs/arvato-2-0
-  - /v2/docs/en/arvato-2-0
+  - /v3/docs/arvato-2-0
+  - /v3/docs/en/arvato-2-0
 related:
   - title: Arvato - Store Order 2.0
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/arvato/arvato-store-order.html
@@ -53,8 +53,8 @@ API URLs:
 | Sandbox URL | `https://integration.risk-solution-services.de/rss-services/risk-solution-services.v2.1` |
 
 Services:
-* [Risk Check](/docs/scos/user/technology-partners/201903.0/payment-partners/arvato/v.2.0/arvato-risk-check-2.0.html)
-* [Store Order](/docs/scos/user/technology-partners/201903.0/payment-partners/arvato/v.2.0/arvato-store-order-2.0.html)
+* [Risk Check](/docs/scos/user/technology-partners/201907.0/payment-partners/arvato/v.2.0/arvato-risk-check-2.0.html)
+* [Store Order](/docs/scos/user/technology-partners/201907.0/payment-partners/arvato/v.2.0/arvato-store-order-2.0.html)
 
 To implement Arvato RSS you should be familiar with concept of extending the
 

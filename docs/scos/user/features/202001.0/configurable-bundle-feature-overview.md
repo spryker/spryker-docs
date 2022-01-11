@@ -33,11 +33,13 @@ Read on to learn more about these elements.
 
 ## Configurable Bundle Template
 Every configurable bundle is created per a template. The **template** is a model that contains the configuration details for the bundle, i.e., the number of slots it may provide, product lists assigned to a slot, etc. A Back Office User creates the template in the Back Office, and the Shop User then uses the template to configure the bundle. See [Configurable Bundle Templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/configurable-bundle-templates.html) on working with templates in the Back Office.
+
 {% info_block infoBox "Example" %}
 
 A shop owner can have various templates: a sport suit, a car, a kitchen set.
 
 {% endinfo_block %}
+
 A Shop User can set up the Configurable Bundle on the **Configurator page**. Configurator is the Storefront representation of the Template that Back Office User creates in the Back Office. See [Configurator](#configurator) to learn more about it.
 
 | Storefront | Back Office |
@@ -253,7 +255,7 @@ All slots are optional, so you can fill, for example, only two slots from the ex
 * The shopper cannot return to the Configurator page from the cart, reorder, or shopping list pages.
 * The following products cannot be displayed in the Configurator:
     - products with the Measurement or Packaging Units
-    - default [product bundles](/docs/scos/user/features/{{page.version}}/product-information-management/product-bundles.html)
+    - default [product bundles](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html)
     - gift cards
 * Product options are not displayed for concrete products.
 * Product labels are not displayed for concrete products.

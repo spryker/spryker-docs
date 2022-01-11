@@ -13,14 +13,17 @@ redirect_from:
 This article includes the information you need to know when working with the **Availability** section in Back Office.
 ***
 ## Overview page
-On the **Overview of Products Availability** page, you see the following: 
+
+On the **Overview of Products Availability** page, you see the following:
 * The SKUs and names of the abstract products and the SKU values is a hyperlink to this product Edit page.
 * The number of product in current stock and the number of reserved products (meaning ordered ones)
 *  The identifier for the bundled product and for those that are **never out of stock** (Yes/No values)
 ***
+
 ## View Product Availability page
+
 On the **View Product Availability** page, you see 2 sections:
-* Abstract product availability 
+* Abstract product availability
 * Variant availability
 
 The Abstract product availability section is not modifiable. It only provides overview information. As the abstract product itself does not have any stock, the Current Stock value will display the summarized value of all its variants.
@@ -33,6 +36,7 @@ Both sections contain the following info:
 * The identifier for the **never out of stock** (Yes/No values)
 ***
 ## Edit Stock page
+
 The following table describes the attributes you see and enter on the Edit Stock page:
 
 | Attribute | Description |
@@ -43,7 +47,8 @@ The following table describes the attributes you see and enter on the Edit Stock
 | **Available in stores** | This value is auto-populated according to your store setup and is not modifiable in UI. This just identifies for which store you define the product availability value. |
 
 ## Availability Calculation: Example
-A good example of availability calculation is a product bundle. 
+
+A good example of availability calculation is a product bundle.
 Let's say you have two products: a Smartphone and three Glass Screen Protectors for it. They are presented in the store as separate items but also included in a bundle.
 
 This means that a customer can either buy those separately from their product details pages or buy a "smartphone+3 glass screen protectors" bundle.

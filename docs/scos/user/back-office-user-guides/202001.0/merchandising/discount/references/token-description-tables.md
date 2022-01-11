@@ -12,9 +12,10 @@ redirect_from:
 
 This topic contains a set of tables that describe fields, value types, and operators you use when building a plain query.
 ***
+
 ## Tokens
 
-![Token](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Token+Description+Tables/tokens.png) 
+![Token](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Token+Description+Tables/tokens.png)
 
 | Value | Description |
 | --- | --- |
@@ -25,6 +26,7 @@ This topic contains a set of tables that describe fields, value types, and opera
 |**Grouping**|When building more complex queries, conditions may be grouped inside parentheses ‘( )’.|
 
 ## Fields and value types (Plain Query)
+
 |Field|Plain Query|Value Type|Description|
 |-|-|-|-|
 |**Calendar week**|calender-week|Number|Week number in a year (1-52)|
@@ -41,6 +43,7 @@ This topic contains a set of tables that describe fields, value types, and opera
 |**Customer Group**|customer-group|String|Any value, use a customer group name for an exact match|
 
 ## Operators (Plain Query)
+
 |**Operator**|Operator for plain query|Value type|Description|
 |-|-|-|-|
 |**Contains**|CONTAINS|String, Number|Checks if the value is contained in the field|

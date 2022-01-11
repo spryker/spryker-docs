@@ -78,7 +78,7 @@ Now the quote contains updated address information and it's possible to retrieve
 The Spryker OS provides a Shipment module and uses method `getAvailableMethods()` to retrieve the shipment methods list and send it back to the customer.
 Once shipping options are updated a buyer can choose one. Usually, shipment methods affect the total price of the order and it must be recalculated using the Calculation module.
 
-### Placing an Order 
+### Placing an Order
 Once all necessary information is saved into Quote, an order is ready to be placed.
 First, perform all related API calls and then persist an order in the database.
 All API related jobs are covered by only one Facade method confirmPurchase() which encapsulates five Amazon Pay API calls to be executed one after another:
@@ -126,8 +126,10 @@ If it is open, then the order must be canceled with a `CancelOrderTransaction` c
 The rest of decline flow includes logic determining where to redirect a buyer. In sandbox mode, for each test account, Amazon provides fake payment methods for emulating error API responses.
 
 {% info_block errorBox "Important" %}
-Even if a response has status code 200 it still may contain Constraint(s
-{% endinfo_block %} in the response body.)
+
+Even if a response has status code `200` it still may contain Constraints (in the response body).
+
+ {% endinfo_block %}
 
 There is one special constraint related to selected payment method `PaymentMethodNotAllowed`. If it occurs (rarely) the buyer should be redirected to the same page with address and payment widgets and be able to choose a different payment method and all other order parameters as well.
 

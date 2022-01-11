@@ -29,7 +29,6 @@ To start managing company roles, navigate to the **Company Account > Company Rol
 ## Creating a Company Role
 
 To create a new company role:
-
 1. On the **Overview of Company Roles** page, click **Add Company User Role** in the top right corner.
 2. On the **Create Company Role** page, enter the required information: select **Company** from the drop-down list and fill in the **Name** of the Company Role.
 3. Selecting **Is Default** means that the role will be applied to all new company users automatically.
@@ -39,18 +38,19 @@ To create a new company role:
 ## Editing a Company Role
 
 To edit a company role:
-
 1. On the **Overview of Company Roles** page in the _Actions_ column, click **Edit**  if you want to change the details for a company role.
 2. On the **Edit Company Role** page, update the needed attributes.
 
 ## Deleting a Company Role
 
 To delete a company role:
-
 1. On the **Overview of Company Roles** page in the _Actions_ column, click **Delete**.
 2. On the confirmation page, click **Delete** company role to confirm the action.
+
   {% info_block infoBox "If you delete a default role, the following message is displayed:" %}
+
   You cannot delete a default role; please set another default role before the delete action.
+
   {% endinfo_block %}
 
 **What's next?**

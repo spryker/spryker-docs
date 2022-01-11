@@ -1,15 +1,13 @@
 ---
 title: Arvato - Installation and Configuration
 description: Provide complete and comprehensive risk management for the eCommerce/mail-order industry, contributing to a high level of modularization and automation.
-last_updated: Jun 16, 2021
+last_updated: Dec 8, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/arvato-installation-configuration
-originalArticleId: 01e4a638-f2ea-4974-8f55-ee85d8745298
+originalLink: https://documentation.spryker.com/v6/docs/arvato-installation-configuration
+originalArticleId: a5fdb1dd-1cbf-46d1-9a88-d7b80f07c948
 redirect_from:
-  - /2021080/docs/arvato-installation-configuration
-  - /2021080/docs/en/arvato-installation-configuration
-  - /docs/arvato-installation-configuration
-  - /docs/en/arvato-installation-configuration
+  - /v6/docs/arvato-installation-configuration
+  - /v6/docs/en/arvato-installation-configuration
 related:
   - title: Arvato - Store Order 2.0
     link: docs/scos/user/technology-partners/page.version/payment-partners/arvato/arvato-store-order.html
@@ -22,10 +20,8 @@ related:
 There is currently an issue when using giftcards with Arvato. Our team is developing a fix for it.
 
 {% endinfo_block %}
-
 The purpose of developing the risk solution services is to provide a complete and comprehensive risk management for the eCommerce/mail-order industry, contributing to a high level of modularization and automation. Besides the use of pre-configured service modules for risk management, risk solution services comprise process support up to the  outsourcing of the entire operative risk management. All risk management processes are supported by a business intelligence component.
-
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Arvato/arvato-rss-overview.png)
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Arvato/arvato-rss-overview.png) 
 
 ## Prerequisites
 
@@ -34,7 +30,7 @@ The authorization data is transferred in the SOAP header and shows the following
 
 In order to send requests, you are supposed to have the following credentials, provided by Arvato:
 
-| PARAMETER NAME | DESCRIPTION |
+| Parameter Name | Description |
 | --- | --- |
 | `ARVATORSS_URL` | Arvato RSS gateway. |
 | `ClientID` | Unique client number in the risk solution services. Will be communicated to the client before the integration |
@@ -42,7 +38,6 @@ In order to send requests, you are supposed to have the following credentials, p
 | `ARVATORSS_PAYMENT_TYPE_MAPPING` | A map of payment names to ArvatoRss specific payment type codes. |
 
 The following information (also present in `config.dist.php`) should be specified in configuration:
-
 ```php
  ArvatoRssConstants::ARVATORSS_URL =& '';
  ArvatoRssConstants::ARVATORSS_CLIENTID = '';
@@ -55,7 +50,7 @@ The following information (also present in `config.dist.php`) should be specifie
 
 API URLs:
 
-| NAME | URL |
+| Name | URL |
 | --- | --- |
 | Production URL | `https://customer.risk-solution-services.de/rss-services/risk-solution-services.v2.1` |
 | Sandbox URL | `https://integration.risk-solution-services.de/rss-services/risk-solution-services.v2.1` |
@@ -64,7 +59,7 @@ Services:
 * [Risk Check](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/arvato/arvato-risk-check.html)
 * [Store Order](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/arvato/arvato-store-order.html)
 
-To implement Arvato RSS you should be familiar with concept of extending the Spryker Commerce OS. See [Extending Spryker](/docs/scos/dev/back-end-development/extending-spryker/extending-a-core-module-that-is-used-by-another.html) for more details.
+To implement Arvato RSS you should be familiar with concept of extending the
 
 ## Installation
 

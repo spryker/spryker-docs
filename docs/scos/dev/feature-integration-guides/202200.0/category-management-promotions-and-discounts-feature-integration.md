@@ -1,8 +1,11 @@
 ---
-title: Category Management + promotions & discounts feature integration
-description: This guide provides step-by-step instructions on integrating into a Spryker-based project the new feature: Addition of a "Category" parameter to calculation and conditions queries in discounts.
+title: Category Management + Promotions & Discounts feature integration
+description: Add the "category" parameter to calculation and conditions queries in the Promotions & Discounts feature.
+last_updated: Jan 11, 2022
 template: feature-integration-guide-template
 ---
+
+This document describes how to add the `category` parameter to calculation and conditions queries in the [Promotions & Discounts](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html) feature.
 
 ## Install feature core
 
@@ -10,14 +13,13 @@ Follow the steps below to install the feature core.
 
 ### Prerequisites
 
-To start feature integration, overview, and install the necessary features:
+To start feature integration, integrate the required features:
 
-
-| NAME                   | VERSION |
-|------------------------| --- |
-| Promotions & Discounts | {{page.version}} |
-| Category Management    | {{page.version}} |
-| Spryker Core           | {{page.version}} |
+| NAME | VERSION | INTEGRATION GUIDE |
+| --- | --- | --- |
+| Promotions & Discounts | {{page.version}} | [Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/promotions-and-discounts-feature-integration.html) |
+| Category Management | {{page.version}} | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Set up behavior
 
@@ -25,7 +27,7 @@ Set up the following behaviors:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| CategoryDecisionRulePlugin | Checks if category matches clause. | None | Spryker\Zed\CategoryDiscountConnector\Communication\Plugin\Discount |
+| CategoryDecisionRulePlugin | Checks if the category matches the clause. | None | Spryker\Zed\CategoryDiscountConnector\Communication\Plugin\Discount |
 | CategoryDiscountableItemCollectorPlugin | Collects discountable items from the given quote by item categories. | None | Spryker\Zed\CategoryDiscountConnector\Communication\Plugin\Discount |
 
 **src/Pyz/Zed/Discount/DiscountDependencyProvider.php**
@@ -68,7 +70,7 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 Ensure that the plugins work correctly:
 
 1. [Create a discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html) and define its condition as a query string with a *category* field.
-2. Add a product assigned to the defined category to cart.
+2. Add a product assigned to the defined category to the cart.
 3. The discount should be applied to the cart.
 
 {% endinfo_block %}
@@ -76,7 +78,7 @@ Ensure that the plugins work correctly:
 
 ### 2) Build Zed UI frontend
 
-Run the following command to enable Javascript and CSS changes for Zed:
+Enable Javascript and CSS changes for Zed:
 
 ```bash
 console frontend:zed:build

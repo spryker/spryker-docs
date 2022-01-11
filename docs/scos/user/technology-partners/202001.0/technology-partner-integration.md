@@ -104,7 +104,7 @@ In this section you will find information about our Technology Partner Integrati
 
 * [Adyen](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/adyen.html)
 * [Amazon Pay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/amazon-pay/amazon-pay.html)
-* [AfterPay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/afterpay/afterpay.html)
+* [AfterPay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/afterpay.html)
 * [Arvato](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/arvato/arvato.html)
 * [Billie](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/billie.html)
 * [Billpay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/billpay/billpay.html)

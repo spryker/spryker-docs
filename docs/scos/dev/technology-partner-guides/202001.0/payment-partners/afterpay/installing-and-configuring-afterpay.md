@@ -10,7 +10,7 @@ redirect_from:
   - /v4/docs/en/afterpay-installation-and-configuration
 related:
   - title: Afterpay
-    link: docs/scos/user/technology-partners/page.version/payment-partners/afterpay/afterpay.html
+    link: docs/scos/user/technology-partners/page.version/payment-partners/afterpay.html
 ---
 
 {% info_block errorBox %}

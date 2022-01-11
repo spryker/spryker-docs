@@ -5,7 +5,7 @@ last_updated: Jun 16, 2021
 template: howto-guide-template
 related:
   - title: Afterpay
-    link: docs/scos/user/technology-partners/page.version/payment-partners/afterpay/afterpay.html
+    link: docs/scos/user/technology-partners/page.version/payment-partners/afterpay.html
 ---
 
 To integrate AfterPay, do the following:

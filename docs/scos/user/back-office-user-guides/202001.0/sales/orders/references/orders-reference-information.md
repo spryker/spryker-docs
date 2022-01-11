@@ -14,6 +14,7 @@ This topic contains the reference information that you need to know when managin
 ***
 
 ## Orders Page
+
 By default, the last created order goes on top of the table. However, you can sort the table by the order number, order reference, created date, customer emails, or the number of items ordered.
 
 On the **Orders** page, you see the following:
@@ -23,6 +24,7 @@ On the **Orders** page, you see the following:
 * Actions that you can do on this page
 
 ## Order Statuses
+
 You can set different statuses for your order. The following describes the statuses you can select:
 
 | Order Status| Description |
@@ -42,4 +44,3 @@ Statuses flow:
 * When you select **Close**, the status becomes closed.
 * In case the customer returns the ordered items: when you select **Return**, the status becomes returned.
 * In case of a return, when you select **Refund**, the status becomes refunded.
-

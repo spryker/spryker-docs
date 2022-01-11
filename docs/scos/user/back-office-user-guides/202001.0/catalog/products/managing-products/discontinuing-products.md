@@ -26,7 +26,9 @@ This means that a product or service that is discontinued is no longer being pro
 Let's say you have such a product for which a newer version is being released and you want to notify your customers that the older version is discontinued. How you do that? You mark the product variant as discontinued.
 
 {% info_block infoBox %}
+
 You always discontinue a product variant, not an abstract product itself.
+
 {% endinfo_block %}
 
 **To discontinue a product:**
@@ -41,7 +43,9 @@ After the product is marked as discontinued, a corresponding label appears on th
 The product with the Discontinued label cannot be added to cart.
 
 {% info_block warningBox "Note" %}
+
 If the product added to the shopping list or wishlist is marked as discontinued, the Discontinued status will appear in the list and the online store customer will not be able to proceed to the checkout.
+
 {% endinfo_block %}
 
 **What's next?**

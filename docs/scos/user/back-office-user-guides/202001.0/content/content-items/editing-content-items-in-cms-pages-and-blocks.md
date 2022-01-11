@@ -22,11 +22,11 @@ To edit a content item widget:
 
 2. In the popover menu, you can click:
     * **Edit Widget**. This will re-open the **Insert a Content Item** pop-up window where you can select another content item of the **same** type and/or another template.
-    
+
     {% info_block warningBox %}
 
     In order to have a different content item type, you need to delete this one and add a new content item type.
-    
+
     {% endinfo_block %}
 
     * **Edit Content Item**. This will open the **Edit Content Item Type: Content Item Key** page in a new tab where you can update content item elements.
@@ -52,7 +52,9 @@ To edit a content item widget:
     * **Edit Widget**. This will re-open the **Insert a Content Item** pop-up window where you can select another content item of the **same** type and/or another template.
 
     {% info_block warningBox %}
+
     In order to have a different content item type, you need to delete this one and add a new content item type.
+
     {% endinfo_block %}
 
     * **Edit Content Item**. This will open the **Edit Content Item Type: [Content Item Key]** page in a new tab where you can update content item elements.

@@ -249,7 +249,7 @@ Request sample: `PATCH http://glue.mysprykershop.com/customers/DE-25`
 		"data" : {
 			"type": "customers"
 			"attributes": {
-					"lastName": "Sonia",
+					"lastName": "Johnson",
 					"email": "sonia@spryker.com",
 				}
 		}

@@ -9,36 +9,35 @@ redirect_from:
   - /v5/docs/quick-order-feature-integration
   - /v5/docs/en/quick-order-feature-integration
 ---
-
-
 ## Install Feature Core
+
 ### Prerequisites
 To start the feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Spryker Core E-commerce |master  |
-|  Cart|master |
-| Product |master  |
-| Checkout |  master|
+| Spryker Core E-commerce | 202005.0 |
+| Cart| 202005.0 |
+| Product | 202005.0 |
+| Checkout |  202005.0 |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/quick-add-to-cart:"^master" --update-with-dependencies
+composer require spryker-feature/quick-add-to-cart:"^202005.0" --update-with-dependencies
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
+{% info_block warningBox “Verification” %}
 
-**Verification**
 Make sure that the following modules were installed:
 
 |Module|Expected Directory|
 |---|---|
 |`QuickOrder`|`vendor/spryker/quick-order`|
-</div></section>
+
+{% endinfo_block %}
 
 ### 2) Set up Transfer Objects
 
@@ -48,18 +47,19 @@ Run the following commands to generate transfer changes:
 console transfer:generate
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
+{% info_block warningBox “Verification” %}
 
-**Verification**
 Make sure that the following changes have been applied in transfer objects:
 
 |Transfer|Type|Event|Path|
 |---|---|---|---|
 |`QuickOrderTransfer`|class|created|`src/Generated/Shared/Transfer/QuickOrderTransfer`|
 |`QuickOrderItemTransfer`|class|created|`src/Generated/Shared/Transfer/QuickOrderItemTransfer`|
-</div></section>
+
+{% endinfo_block %}
 
 ### 3) Add Translations
+
 Feature-specific glossary keys:
 
 **src/data/import/glossary.csv**
@@ -86,7 +86,9 @@ console data:import:glossary
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that in the database the configured data is added to the `spy_glossary` table.
+
 {% endinfo_block %}
 
 ### 4) Set up Behavior
@@ -124,38 +126,41 @@ class QuickOrderDependencyProvider extends SprykerQuickOrderDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
-Make the following checks at https://mysprykershop.com/quick-order : `ProductPriceItemValidatorPlugin` is responsible for prices. Provide SKUs with and without Volume **Price on Quick Add To Cart** page and verify if quantity changes in the row result in the correct price display.
+
+Make the following checks at `https://mysprykershop.com/quick-order` : `ProductPriceItemValidatorPlugin` is responsible for prices. Provide SKUs with and without Volume **Price on Quick Add To Cart** page and verify if quantity changes in the row result in the correct price display.
+
 {% endinfo_block %}
 
 ## Install Feature Frontend
 
 ### Prerequisites
+
 To start feature integration, review and install the necessary features:
 
 |Name|Version|
 |---|---|
-|Spryker Core|master|
-|Cart|master|
-|Product|master|
-|Checkout|master|
+|Spryker Core|202005.0|
+|Cart|202005.0|
+|Product|202005.0|
+|Checkout|202005.0|
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/quick-add-to-cart:"^master" --update-with-dependencies
+composer require spryker-feature/quick-add-to-cart:"^202005.0" --update-with-dependencies
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
+{% info_block warningBox “Verification” %}
 
-**Verification**
 Make sure that the following modules were installed:
 
 |Module	Expected|Directory|
 |---|---|
 |`QuickOrderPage`|`vendor/spryker-shop/quick-order-page`|
-</div></section>
+
+{% endinfo_block %}
 
 ### 2) Add Translations
 
@@ -237,10 +242,13 @@ console data:import:glossary
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that translations data was added to the `spy_glossary` table in the database.
+
 {% endinfo_block %}
 
 ### 3) Enable Controllers
+
 #### Route List
 
 Register the following route provider plugins:
@@ -273,9 +281,8 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
+{% info_block warningBox “Verification” %}
 
-**Verification**
 Make sure that the following URLs are available on Yves:
 
 * `https://mysprykershop.com/quick-order`
@@ -283,9 +290,11 @@ Make sure that the following URLs are available on Yves:
 * `https://mysprykershop.com/de/quick-order`
 
 ... and for all other configured languages.
-</div></section> 
+
+{% endinfo_block %}
 
 ### 4) Set up Behavior
+
 #### Set up additional functionality
 
 Enable the following behaviors by registering the plugins:
@@ -342,12 +351,12 @@ class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyPr
 }
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
+{% info_block warningBox “Verification” %}
 
-**Verification**
 Make the following checks at https://mysprykershop.com/quick-order:
 
 * `QuickOrderCsvFileTemplateStrategyPlugin` provides a template for CSV file uploading. Check if the link for CSV file template is displayed on the Quick Add To Cart page.
 * `QuickOrderCsvUploadedFileParserStrategyPlugin` is needed for CSV files parsing. Upload CSV file on the Quick Add To Cart page using the provided template and make sure that products appear in the Quick Add To Cart Page form afterward.
 * `QuickOrderCsvUploadedFileValidatorStrategyPlugin` serves for CSV file validation. It checks header presence and validates mandatory columns depending on the header.
-</div></section>
+
+{% endinfo_block %}

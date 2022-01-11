@@ -47,20 +47,19 @@ This CMS Pages feature is ideal for specific landing pages with dedicated URLs t
 
 - Developer
 
-  - [Create a template for a CMS page](https://documentation.spryker.com/v4/docs/ht-create-cms-templates#adding-a-template-for-a-cms-page)
-  - [Enable an extension point for post activation and deactivation of CMS pages](https://documentation.spryker.com/v4/docs/cms-extension-points)
-  - [Migrate the CMS module from version 6.* to version 7.*](https://documentation.spryker.com/v4/docs/mg-cms#upgrading-from-version-6-to-version-7)
-  - [Migrate the CmsStorage module from version 1.* to version 2.*](https://documentation.spryker.com/v4/docs/mg-cmsstorage#upgrading-from-version-1-to-version-2)
-  - [Migrate the CmsGui module from version 4.* to version 5.*](https://documentation.spryker.com/v4/docs/en/migration-guide-cmsgui#upgrading-from-version-4-to-version-5)
-  - [Migrate the CmsPageSearch module from version 1.* to version 2.*](https://documentation.spryker.com/v4/docs/mg-cmspagesearch#upgrading-from-version-1-to-version-2)
-  - [Integrate the CMS feature into your project](https://documentation.spryker.com/v4/docs/en/cms-feature-integration-guide)
-  - [Integrate the CMS Page Search + Product Lists + Catalog Feature v. into your project](/https://documentation.spryker.com/v4/docs/cms-page-search-product-lists-catalog-feature-integration-201903)
-  - [Integrate the CMS Page Search + Catalog Feature into your project](https://documentation.spryker.com/v4/docs/cms-pages-in-search-results-integration-201903)
- 
+  - [Create a template for a CMS page](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-page-template)
+  - [Migrate the CMS module from version 6.* to version 7.*](/docs/scos/dev/module-migration-guides/migration-guide-cms.html#upgrading-from-version-6-to-version-7)
+  - [Migrate the CmsStorage module from version 1.* to version 2.*](/docs/scos/dev/module-migration-guides/migration-guide-cmsstorage.html)
+  - [Migrate the CmsGui module from version 4.* to version 5.*](/docs/scos/dev/module-migration-guides/migration-guide-cmsgui.html)
+  - [Migrate the CmsPageSearch module from version 1.* to version 2.*](/docs/scos/dev/module-migration-guides/migration-guide-cmspagesearch.html)
+  - [Integrate the CMS feature into your project](/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-feature-integration.html)
+  - [Integrate the CMS Page Search + Product Lists + Catalog Feature v. into your project](/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-product-lists-catalog-feature-integration.html)
+  - [Integrate the CMS Page Search + Catalog Feature into your project](/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-catalog-feature-integration.html)
+
 - Back Office User
 
-  - [Create a CMS Page](https://documentation.spryker.com/v4/docs/creating-a-cms-page)
-  - [Manage a CMS Page](https://documentation.spryker.com/v4/docs/managing-cms-pages)
-  - [Edit a CMS Page](https://documentation.spryker.com/v4/docs/editing-cms-pages)
-  - [Manage Versions of a CMS Page](https://documentation.spryker.com/v4/docs/cms-pages-versioning)
-  - [Assigning Blocks to Category and Product Pages](https://documentation.spryker.com/v4/docs/assigning-blocks-to-category-and-product-pages)
+  - [Create CMS Pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/creating-cms-pages.html)
+  - [Manage CMS Pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/managing-cms-pages.html)
+  - [Edit CMS Pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/editing-cms-pages.html)
+  - [Manage Versions of a CMS Page](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/managing-cms-page-versions.html)
+  - [Assigning Blocks to Category and Product Pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/assigning-blocks-to-category-or-product-pages.html)

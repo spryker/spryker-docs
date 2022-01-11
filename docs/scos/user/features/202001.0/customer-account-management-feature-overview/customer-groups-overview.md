@@ -16,11 +16,11 @@ The Customer Groups feature allows you to organize customers into groups to help
 
 - Developer
 
-    - [Get a general idea of the Company Account organizational structure](https://documentation.spryker.com/v4/docs/customer-module-overview)
+    - [Get a general idea of the Company Account organizational structure](/docs/scos/dev/feature-walkthroughs/{{page.version}}/customer-account-management-feature-walkthrough/reference-information-customer-module-overview.html)
 
 - Back Office User
 
-    - [Get a general idea of the Company Account organizational structure](https://documentation.spryker.com/v4/docs/customer-module-overview)
-    - [Add a Customer Group](https://documentation.spryker.com/v4/docs/managing-customer-groups#adding-a-customer-group)
-    - [Edit a Customer Group](https://documentation.spryker.com/v4/docs/managing-customer-groups#editing-a-customer-group)
-    - [View a Customer Group](https://documentation.spryker.com/v4/docs/managing-customer-groups#viewing-customer-groups)
+    - [Get a general idea of the Company Account organizational structure](/docs/scos/dev/feature-walkthroughs/{{page.version}}/customer-account-management-feature-walkthrough/reference-information-customer-module-overview.html)
+    - [Add a Customer Group](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customer-groups.html#adding-a-customer-group)
+    - [Edit a Customer Group](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customer-groups.html#editing-a-customer-group)
+    - [View a Customer Group](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customer-groups.html#viewing-customer-groups)

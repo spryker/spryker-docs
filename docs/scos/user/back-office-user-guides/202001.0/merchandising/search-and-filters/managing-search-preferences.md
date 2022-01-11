@@ -15,13 +15,17 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-filter-preferences.html
 ---
 
-This topic describes how you can add new attributes to search and manage the existing search preferences. 
+This topic describes how you can add new attributes to search and manage the existing search preferences.
 ***
+
 To start working with search preferences, navigate to the **Search and Filters > Search Preferences** section.
 ***
+
 **Prerequisites**
+
 When adding a search preference, the **Attribute Key** value is taken from the **Product Attributes > Specific Attribute** entity. Make sure that you are populating the field with an existing attribute key of an attribute assigned to a product; otherwise, the search result will be blank in the online store.
 ***
+
 ## Creating a New Attribute to Search
 
 To create a new attribute to search, do the following:
@@ -33,7 +37,9 @@ To create a new attribute to search, do the following:
 
 This will create a new non-super attribute and register it in the system, so your customers will be able to find products with this attribute in the online store if you enable search preference types for it.
 ***
+
 ## Editing Search Preferences
+
 To edit a search preference:
 1. Find an attribute you want to change the search preferences for in the **Search Preferences** table.
 2. Click **Edit** in the _Actions_ column of the attribute.

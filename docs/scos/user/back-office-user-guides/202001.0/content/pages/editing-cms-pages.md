@@ -17,9 +17,12 @@ related:
 
 The topic describes how to edit CMS pages in the Back Office.
 ***
+
 To start editing CMS pages, navigate to the **Content Management > Pages** section.
 ***
+
 ## Editing CMS Pages
+
 You can edit page layout, modify SEO information or update page content.
 **To edit a page:**
 1. On the **Overview of CMS Pages** page, click **Edit** in the _Actions_ column.
@@ -28,6 +31,7 @@ You can edit page layout, modify SEO information or update page content.
     * Placeholders
 
 ### Selecting the Edit > Page option
+
 To change general information of the page and SEO details:
 1. Select **Edit** > **Page**.
 2.  On the **Edit CMS Page: [Page Name]** page that opens, you can see the following:
@@ -36,16 +40,15 @@ To change general information of the page and SEO details:
     * Template
     * Valid from and Valid to
     * Name and URL per locale
-   
-    In the **SEO** tab (per locale): 
+
+    In the **SEO** tab (per locale):
     * Meta title
     * Meta keywords
-    * Meta description 
+    * Meta description
 
 **Tips & Tricks**
 
 On the **Edit CMS Page: [Page name]** page, you can do the following:
-
 * Publish the current version of the page by clicking **Publish** on the top of the page.
 * View general information about a published page, and its URL and metadata by clicking **View** on the top of the page.
 * Switch to the page where you can edit a title and content of the page by clicking **Edit Placeholders** on the top of the page.
@@ -60,13 +63,13 @@ To change the title and content of the page:
 1. Select **Edit** > **Placeholders**.
 2.  On the **Edit Placeholders: [Page Name]** editor that opens, insert your cursor into the placeholder where you would like to update the content.
 3.  Using options on the editor menu, edit the content of your page.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Pages/Editing+CMS+Pages/placeholders.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Pages/Editing+CMS+Pages/placeholders.png)
 
 {% info_block infoBox %}
 
-In the placeholders editor, you can insert a banner, abstract product list, product set, and downloadable files using content item widgets. See [Adding Content Item Widgets to a Page](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html#adding-content-item-widgets-to-pages) for more details. 
+In the placeholders editor, you can insert a banner, abstract product list, product set, and downloadable files using content item widgets. See [Adding Content Item Widgets to a Page](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/content-item-widgets.html) for more details.
 
-{% endinfo_block %} 
+{% endinfo_block %}
 
 **Tips & Tricks**
 

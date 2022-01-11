@@ -23,6 +23,7 @@ related:
 ***
 To start working with thershold settings, navigate to the **Threshold > Threshold settings** section.
 ***
+
 **To configure the Threshold Settings:**
 1. On the **Edit Threshold Settings** page, select from the drop-down list the tax set that will be applied to the threshold.
 2. Click **Save**.

@@ -10,25 +10,25 @@ redirect_from:
   - /v1/docs/en/amazon-pay-api-demoshop
 related:
   - title: Amazon Pay - Obtaining an Amazon Order Reference and Information About Shipping Addresses
-    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/scos-integration/amazon-pay-obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/scos-integration/amazon-pay-obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
   - title: Amazon Pay - Rendering a “Pay with Amazon” Button on the Cart Page
-    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-rendering-a-pay-with-amazon-button-on-the-cart-page.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-rendering-a-pay-with-amazon-button-on-the-cart-page.html
   - title: Amazon Pay - Support of Bundled Products
-    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-support-of-bundled-products.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-support-of-bundled-products.html
   - title: Amazon Pay - State Machine
-    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-state-machine.html
+    link: ddocs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-state-machine.html
   - title: Amazon Pay - API
     link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/scos-integration/amazon-pay-api.html
   - title: Amazon Pay - Order Reference and Information about Shipping Addresses
-    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-order-reference-and-information-about-shipping-addresses.html
+    link: ddocs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-order-reference-and-information-about-shipping-addresses.html
   - title: Amazon Pay - Configuration for the SCOS
-    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/scos-integration/amazon-pay-configuration-for-the-scos.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/scos-integration/amazon-pay-configuration-for-the-scos.html
   - title: Amazon Pay - Sandbox Simulations
-    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/scos-integration/amazon-pay-sandbox-simulations.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/scos-integration/amazon-pay-sandbox-simulations.html
   - title: Amazon Pay - Sandbox Simulations
-    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-sandbox-simulations.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-sandbox-simulations.html
   - title: Amazon Pay - Email Notifications
-    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-email-notifications.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-email-notifications.html
 ---
 
 So far we discussed the client side implementation provided by Amazon Pay. On the Spryker OS side, the module provides tools for rendering Amazon Pay widgets.
@@ -78,7 +78,7 @@ Now the quote contains updated address information and it's possible to retrieve
 The Spryker OS provides a Shipment module and uses method `getAvailableMethods()` to retrieve the shipment methods list and send it back to the customer.
 Once shipping options are updated a buyer can choose one. Usually, shipment methods affect the total price of the order and it must be recalculated using the Calculation module.
 
-### Placing an Order 
+### Placing an Order
 Once all necessary information is saved into Quote, an order is ready to be placed.
 First, perform all related API calls and then persist an order in the database.
 All API related jobs are covered by only one Facade method confirmPurchase() which encapsulates five Amazon Pay API calls to be executed one after another:

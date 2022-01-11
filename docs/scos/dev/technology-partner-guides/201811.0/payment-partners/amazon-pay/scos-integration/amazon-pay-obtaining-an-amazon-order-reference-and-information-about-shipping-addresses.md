@@ -10,25 +10,25 @@ redirect_from:
   - /v1/docs/en/amazon-order-reference-information
 related:
   - title: Amazon Pay - Refund
-    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-refund.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-refund.html
   - title: Amazon Pay - API
     link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/scos-integration/amazon-pay-api.html
   - title: Amazon Pay - State Machine
     link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/scos-integration/amazon-pay-state-machine.html
   - title: Amazon Pay - Sandbox Simulations
-    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-sandbox-simulations.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-sandbox-simulations.html
   - title: Amazon Pay - Rendering a “Pay with Amazon” Button on the Cart Page
-    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-rendering-a-pay-with-amazon-button-on-the-cart-page.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-rendering-a-pay-with-amazon-button-on-the-cart-page.html
   - title: Amazon Pay - Sandbox Simulations
-    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/scos-integration/amazon-pay-sandbox-simulations.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/scos-integration/amazon-pay-sandbox-simulations.html
   - title: Amazon Pay - Configuration for the SCOS
-    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/scos-integration/amazon-pay-configuration-for-the-scos.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/scos-integration/amazon-pay-configuration-for-the-scos.html
   - title: Amazon Pay - API
-    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-api.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-api.html
   - title: Amazon Pay - Email Notifications
-    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-email-notifications.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-email-notifications.html
   - title: Amazon Pay - Order Reference and Information about Shipping Addresses
-    link: docs/scos/user/technology-partners/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-order-reference-and-information-about-shipping-addresses.html
+    link: ddocs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-order-reference-and-information-about-shipping-addresses.html
 ---
 
 After successful authorization, a buyer will be redirected to an order detils page to enter all the information necessary for placing an order: address of shipment, payment method, delivery method and some calculations about taxes, possible discounts, delivery cost, etc.
@@ -42,7 +42,7 @@ Amazon provides two widgets for choosing shipment and payment information, they 
 The code for both widgets is:
 ```html
 <!-- Place this code in your HTML where you would like the address widget to appear. -->
-<div id="addressBookWidgetDiv"> </div> 
+<div id="addressBookWidgetDiv"> </div>
 
 <!-- Place this code in your HTML where you would like the wallet widget to appear. -->
 <div id="walletWidgetDiv"> </div>
@@ -59,23 +59,23 @@ window.onAmazonPaymentsReady = function() {
 		},
 		onAddressSelect: function(orderReference) {
 		  // Replace the following code with the action that you want
-		  // to perform after the address is selected. The 
-		  // amazonOrderReferenceId can be used to retrieve the address 
-		  // details by calling the GetOrderReferenceDetails operation. 
+		  // to perform after the address is selected. The
+		  // amazonOrderReferenceId can be used to retrieve the address
+		  // details by calling the GetOrderReferenceDetails operation.
 
 		  // If rendering the AddressBook and Wallet widgets
 		  // on the same page, you do not have to provide any additional
 		  // logic to load the Wallet widget after the AddressBook widget.
-		  // The Wallet widget will re-render itself on all subsequent 
-		  // onAddressSelect events, without any action from you. 
+		  // The Wallet widget will re-render itself on all subsequent
+		  // onAddressSelect events, without any action from you.
 		  // It is not recommended that you explicitly refresh it.
 		},
 		design: {
 		  designMode: 'responsive'
 		},
 		onReady: function(orderReference) {
-		  // Enter code here you want to be executed 
-		  // when the address widget has been rendered. 
+		  // Enter code here you want to be executed
+		  // when the address widget has been rendered.
 		},
 		onError: function(error) {
 		  // Your error handling code.
@@ -109,7 +109,7 @@ window.onAmazonPaymentsReady = function() {
 };
 </script>
 
-<script async="async" 
+<script async="async"
 	src='https://static-eu.payments-amazon.com/OffAmazonPayments/gbp/sandbox/lpa/js/Widgets.js'>
 </script>
 ```

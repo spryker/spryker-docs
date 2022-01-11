@@ -10,9 +10,10 @@ redirect_from:
 ---
 
 Configurator is the page in your shop application where you can set up your Configurable Bundle.
-![Configurable Bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Configurator/conf-bundle.gif) 
+![Configurable Bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Configurator/conf-bundle.gif)
 
 ***
+
 **What's next?**
 
 * To learn how configurable bundle templates can be accessed, *Accessing Configurator*.

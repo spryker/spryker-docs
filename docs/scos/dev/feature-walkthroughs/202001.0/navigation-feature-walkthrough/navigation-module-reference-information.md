@@ -8,6 +8,7 @@ originalArticleId: 7da24e6a-47e1-41c5-b84c-fd4c4984d504
 redirect_from:
   - /v4/docs/module-navigation
   - /v4/docs/en/module-navigation
+  - /docs/scos/dev/feature-walkthroughs/page.version/navigation-feature-walkthrough/navigation-module.html
 related:
   - title: Managing Navigation Elements
     link: docs/scos/user/back-office-user-guides/page.version/content/navigation/managing-navigation-elements.html

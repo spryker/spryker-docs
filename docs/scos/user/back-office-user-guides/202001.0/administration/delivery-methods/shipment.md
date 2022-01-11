@@ -34,4 +34,4 @@ In order to set the shipment structure, you set up the carrier company first.
 To know more about how you set up and manage the shipment methods and carrier companies, see the following articles:
 
 * [Creating a Carrier Company](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-carrier-companies.html)
-* [Creating and Managing Shipment Methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/shipment/creating-and-managing-delivery-methods.html)
+* [Creating and Managing Shipment Methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html)

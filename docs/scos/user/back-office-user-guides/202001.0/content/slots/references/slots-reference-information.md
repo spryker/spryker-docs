@@ -13,6 +13,7 @@ redirect_from:
 This topic contains the reference information you need to know when working with Slots in the **Content Management > Slots** section.
 
 ## Overview of Slots
+
 In the **List of Templates** section of the **Overview of Slots** page, you see the following:
 
 | Attribute | Description |
@@ -23,7 +24,6 @@ In the **List of Templates** section of the **Overview of Slots** page, you see 
 | **Number of Slots** | Number of slots in this template. |
 
 In this section, you can:
-
 * Sort templates by ID and Name.
 * Filter templates by ID, Name and Description.
 * Filter slots displayed in the **List of Slots for [name] Template** section by templates.
@@ -52,7 +52,6 @@ By default, all the slots have the **Active** status.
 {% endinfo_block %}
 
 In this section, you can:
-
 * Sort slots by ID, Name, Content Provider and Status.
 * Filter slots by ID, Name, Description and Content Provider.
 * Filter CMS blocks displayed in the **List of assigned Blocks for [name] Slot** section by slots.
@@ -67,7 +66,7 @@ In the **List of assigned Blocks for [name] Slot** section of the **Overview of 
 
 {% info_block infoBox "Info" %}
 
-Apart from the **ID** and **Actions**, the attributes described below depend on the CMS block settings defined in **Content Management > Blocks**. See [CMS Block: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/blocks/references/cms-block-reference-information.html#create-and-edit-cms-block-page) to learn about them.
+Apart from the **ID** and **Actions**, the attributes described below depend on the CMS block settings defined in **Content Management > Blocks**. See [CMS Block: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/references/cms-block-reference-information.html#create-and-edit-cms-block-page) to learn about them.
 
 {% endinfo_block %}
 

@@ -19,10 +19,13 @@ related:
 
 This topic describes the procedures for creating and managing shipment methods.
 ***
+
 **Prerequisites**
 Once you decide to add a new shipment method, make sure that you have a carrier company to assign a shipment method on the list of delivery methods. If you don't have an appropriate carrier, see [Creating Carrier Companies](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-carrier-companies.html). You also need to make sure that you have an appropriate tax set in the **Taxes > Tax Sets** section, see [Taxes](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-rates/taxes.html).
 ***
+
 To start working with the delivery methods, navigate to the **Administration > Shipment > Delivery Methods** section.
+
 ***
 
 ## Creating a Delivery Method
@@ -36,25 +39,25 @@ A delivery method is described by :
 1. In the top-right corner of the **Delivery Methods** page, click **Create new delivery method**. The **Create Delivery Method** page with three tabs opens: **Configuration**, **Price & Tax**, and **Store Relation**.
 2. In the **Configuration** tab, enter and select the following attributes:
   * Delivery Method Key
-  * Name 
+  * Name
   * Carrier
   * Availability Plugin
   * Price Plugin
   * Delivery Time Plugin
-  
-  {% info_block warningBox "Note" %}
-    
-  Regardless if you have multi-currency prices with multiple price modes or just one simple static price (older versions, the price plugin has priority over those prices and allows you to customize and apply logic over delivery price calculation.
-    
-  {% endinfo_block %}
 
-  {% info_block warningBox "Note" %}
-    
-  Keep in mind that Name will be visible in the Storefront.
-  
-  The fields marked with * are required.
-    
-  {% endinfo_block %}
+{% info_block warningBox "Note" %}
+
+Regardless if you have multi-currency prices with multiple price modes or just one simple static price (older versions, the price plugin has priority over those prices and allows you to customize and apply logic over delivery price calculation.
+
+{% endinfo_block %}
+
+{% info_block warningBox "Note" %}
+
+Keep in mind that Name will be visible in the Storefront.
+
+The fields marked with * are required.
+
+{% endinfo_block %}
 
 
 ![Create a delivery method](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/create-delivery-method.png)
@@ -69,27 +72,31 @@ A delivery method is described by :
 
 6. To keep the changes, click **Save**. This will redirect you to the **Delivery Methods** page where you can see the new delivery method on the list and the following message: '*Shipment method has been successfully saved*'.
 ***
+
 ## Editing a Delivery Method
 To update the values you have entered during the delivery method creation:
 1. In the _Actions_ column of the **Delivery Methods** page, click **Edit** for the delivery method you want to update.
 2. Update the needed values.
-    
+
     {% info_block warningBox "Note" %}
-    
+
     Keep in mind that **Delivery Method Key** cannot be edited.
-    
+
     {% endinfo_block %}
 
 4. To keep the changes, click **Save**.
 ***
+
 **Tips & Tricks**
 This is how the Back Office setup looks in the online store:
 **Back Office**
 ![Editing a shipment method](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/editing-shipment-method.png)
 ***
+
 ## Viewing Delivery Methods
 To view the delivery method details, click **View**  in the *Actions* column for the delivery method you want to view. On the **View Delivery Method: [Delivery Method name]** page, you'll see three sections containing delivery method details: **Configuration**, **Store relation**, and **Price & Tax**. See [Delivery Methods: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/references/delivery-methods-reference-information.html) for more details on the attributes you see on the page.
 ***
+
 ## Deleting a Delivery Method
 
 {% info_block warningBox "Note" %}

@@ -14,7 +14,7 @@ With the CMS draft feature the Back Office user can create drafts of CMS pages w
 
 ## Prerequisites
 * Upgrade the `spryker/cms` module to at least 6.2 version. Additional information on how to migrate the `spryker/cms` module can be found in [Migration Guide - CMS](/docs/scos/dev/module-migration-guides/migration-guide-cms.html).
-* If you have the `spryker/cms-collector` module installed, upgrade it to at least 2.0 version. Additional information on how to migrate the `spryker/cms-collector` module can be found in [Migration Guide - CMS Collector](/docs/scos/dev/module-migration-guides/migration-guide-cms.html-collector).
+* If you have the `spryker/cms-collector` module installed, upgrade it to at least 2.0 version. Additional information on how to migrate the `spryker/cms-collector` module can be found in [Migration Guide - CMS Collector](/docs/scos/dev/module-migration-guides/migration-guide-cms-block-collector.html).
 * If you do not have the `spryker/cms-collector` module installed, register your CMS page data expander plugins to the `spryker/cms` module in the `CmsDependencyProvider` dependency provider.
 
 <details open>

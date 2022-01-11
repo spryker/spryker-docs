@@ -2843,7 +2843,7 @@ entries:
       - "202001.0"
       - "202005.0"
     - title: Shop Guide - Company Roles
-      url: /docs/scos/user/shop-user-guides/shop-guide-company-roles.html
+      url: /docs/scos/user/shop-user-guides/shop-guide-managing-company-roles.html
       include_versions:
       - "201811.0"
       - "201903.0"

@@ -1,12 +1,12 @@
 ---
-title: Billpay - Integration
-last_updated: Aug 27, 2020
+title: Integrating Billpay
+last_updated: Nov 22, 2019
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v6/docs/billpay-integration
-originalArticleId: d148ec65-a415-4ba4-8a9d-c757dbd66e00
+originalLink: https://documentation.spryker.com/v4/docs/billpay-integration
+originalArticleId: 9f106f35-5a57-4027-988c-877927dd05d9
 redirect_from:
-  - /v6/docs/billpay-integration
-  - /v6/docs/en/billpay-integration
+  - /v4/docs/billpay-integration
+  - /v4/docs/en/billpay-integration
 related:
   - title: Billpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/billpay/billpay.html

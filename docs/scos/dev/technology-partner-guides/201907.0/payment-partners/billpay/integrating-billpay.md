@@ -1,12 +1,12 @@
 ---
-title: Billpay - Integration
-last_updated: Apr 3, 2020
+title: Integrating Billpay
+last_updated: Nov 22, 2019
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v5/docs/billpay-integration
-originalArticleId: e7f0f510-4f41-4a7e-951c-25024bebcf79
+originalLink: https://documentation.spryker.com/v3/docs/billpay-integration
+originalArticleId: 0432841f-e151-4866-8195-958dc484f087
 redirect_from:
-  - /v5/docs/billpay-integration
-  - /v5/docs/en/billpay-integration
+  - /v3/docs/billpay-integration
+  - /v3/docs/en/billpay-integration
 related:
   - title: Billpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/billpay/billpay.html
@@ -89,3 +89,4 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
  BillpayConstants::PAYMENT_METHOD_INVOICE => 'BillpayInvoice01',
 ];
 ```
+

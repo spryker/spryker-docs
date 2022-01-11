@@ -1,18 +1,18 @@
 ---
-title: Billpay - Integration
-last_updated: Oct 22, 2019
+title: Integrating Billpay
+last_updated: Nov 22, 2019
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v1/docs/billpay-integration
-originalArticleId: 22072a7e-3413-46c9-8b19-7df8894f6eb4
+originalLink: https://documentation.spryker.com/v2/docs/billpay-integration
+originalArticleId: 1acb56ed-5d40-4c94-8e45-d27fce7e1072
 redirect_from:
-  - /v1/docs/billpay-integration
-  - /v1/docs/en/billpay-integration
+  - /v2/docs/billpay-integration
+  - /v2/docs/en/billpay-integration
 related:
   - title: Billpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/billpay/billpay.html
 ---
 
-Billpay offers multiple payment methods (Invoice, Direct Debit, PayLater, Instalment). Availability of payment methods differs from country to country. Please contact Billpay directly or visit the [Billpay website](https://www.billpay.de/en/)  for details.
+Billpay offers multiple payment methods (Invoice, Direct Debit, PayLater, Instalment). Availability of payment methods differs from country to country. Please contact Billpay directly or visit the [Billpay website](https://www.billpay.de/en/)e  for details.
 
 The Billpay module provides integration with the [Invoice with prescoring](https://www.billpay.de/en/business-clients/payment-information/index.html) payment method.
 
@@ -89,3 +89,4 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
  BillpayConstants::PAYMENT_METHOD_INVOICE => 'BillpayInvoice01',
 ];
 ```
+

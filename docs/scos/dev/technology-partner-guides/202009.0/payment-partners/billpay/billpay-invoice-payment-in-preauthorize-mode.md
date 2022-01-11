@@ -1,14 +1,12 @@
 ---
-title: Billpay - Invoice Payment in Preauthorize Mode
-last_updated: Jun 16, 2021
+title: Billpay - Switching invoice payments to a preauthorize mode
+last_updated: Aug 27, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/billpay-payment-methods
-originalArticleId: 139410c0-8709-4f24-8016-b5b8afa7b435
+originalLink: https://documentation.spryker.com/v6/docs/billpay-payment-methods
+originalArticleId: 7747b8d7-909b-4f29-b665-6e36ba1079f5
 redirect_from:
-  - /2021080/docs/billpay-payment-methods
-  - /2021080/docs/en/billpay-payment-methods
-  - /docs/billpay-payment-methods
-  - /docs/en/billpay-payment-methods
+  - /v6/docs/billpay-payment-methods
+  - /v6/docs/en/billpay-payment-methods
 related:
   - title: Billpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/billpay/billpay.html
@@ -19,8 +17,7 @@ Refer to [Billpay payment information](https://www.billpay.de/en/business-client
 The identity and credit check are checked within a single "pre-authorize" call after summary page was submitted.
 This may lead to the "rejection" of the order.
 
-To switch to the authorize mode, **switch Billpay configuration variables** to "pre-authorize" set of configuration variables:
-
+To switch to the authorize mode, <b>switch Billpay configuration variables</b> to "pre-authorize" set of configuration variables:
 ```php
 <?php
 b/config/Shared/config_default.php
@@ -44,8 +41,7 @@ Using the "prescore" scoring model, the identity and credit check is performed b
 
 ### Configuration
 
-To switch to the authorize mode, **switch Billpay configuration variables** to "pre-score" set of the configuration variables:
-
+To switch to the authorize mode, <b>switch Billpay configuration variables</b> to "pre-score" set of the configuration variables:
 ```php
 <?php
 b/config/Shared/config_default.php
@@ -63,10 +59,11 @@ b/config/Shared/config_default.php
 -$config[BillpayConstants::USE_PRESCORE] = 0;
 ```
 
-### Customer Setup
+### Yves
+
+#### Customer Setup
 
 In Yves  `CustomerStep` needs to be extended by calling the `BillpayCustomerHandlerPlugin`:
-
 ```php
 <?php
 /**
@@ -87,7 +84,6 @@ In Yves  `CustomerStep` needs to be extended by calling the `BillpayCustomerHand
  ```
 
 Next, extend the `CheckoutDependencyProvider` to return the `StepHandlerPluginCollection`:
-
 ```php
 <?php
  /**
@@ -108,7 +104,6 @@ Next, extend the `CheckoutDependencyProvider` to return the `StepHandlerPluginCo
  ```
 
 Lastly, change the `CustomerStep` constructor:
-
 ```php
 <?php
  /**
@@ -130,14 +125,13 @@ Lastly, change the `CustomerStep` constructor:
  }
  ```
 
-### Shipment Step
+#### Shipment Step
 
 One of the places we can call prescore is the shipment step.
 
 At this point, the checkout process can provide us with all the information we need to do prescoring.
 
 To do prescoring, add the Billpay client to Shippment step by modifying the StepFactory:
-
 ```php
 <?php
  /**
@@ -224,7 +218,6 @@ Then register the client in `CheckoutDependencyProvider`.
  ```
 
 Now all we need to do is modify the Shippment step constructor:
-
 ```php
 <?php
 /**
@@ -250,8 +243,7 @@ Now all we need to do is modify the Shippment step constructor:
  ```
 
 and add a client call to the execute method:
-
-```php
+```php 
 <?php
  /**
  * @param \Symfony\Component\HttpFoundation\Request $request
@@ -279,9 +271,11 @@ and add a client call to the execute method:
 
 To populate the [Billpay JS widget](https://techdocs.billpay.de/v1/en/For_developers/JavaScript-Widget.html)  with data, use the Twig extension provided in the Billpay module.
 
-To register the Twig extension, add it to YvesBootstrap as follows:
+To register the Twig extension:
 
-```php
+* Add it to YvesBootstrap as follows:
+
+```php 
 protected function registerServiceProviders()
  {
  // other service providers ...
@@ -291,7 +285,7 @@ protected function registerServiceProviders()
 
 **List of all available identifiers**:
 
-| NAME| DESCRIPTION | NOTES |
+| Name | Description | Notes |
 | --- | --- | --- |
 | `salutation` | Customer salutation | Taken from billing address |
 | `firstName` | Customer first name | Taken from billing address |
@@ -318,7 +312,6 @@ You should be able to see the Billpay invoice on payment step of your checkout s
 ## Zed
 
 In Zed  `BillpaySaveOrderPlugin` has to be registered in the `CheckoutDependencyProvider`:
-
 ```php
 <?php
  /**
@@ -337,8 +330,7 @@ In Zed  `BillpaySaveOrderPlugin` has to be registered in the `CheckoutDependency
  ```
 
 Then the following should be added in `OmsDependencyProvider`:
-
-```php
+```php 
 <?php
 /**
  * @param \Spryker\Zed\Kernel\Container $container
@@ -382,5 +374,4 @@ In your checkout process you can now see the Billapay as a payment method in the
 If the link does not work, just click **Maintenance->OMS** to list all registered OMS state machines.
 
 Basic state machine will look somewhat like this and you can use it as sample in your project.
-
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Billpay/basic_OMS_state_machine.png)
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Billpay/basic_OMS_state_machine.png) 

@@ -20,7 +20,7 @@ entries:
         - title: Release notes 202009.0
           url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202009.0/release-notes-202009.0.html
           nested:
-          - title: Security release notes- 202009.0
+          - title: Security release notes 202009.0
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202009.0/security-release-notes-202009.0.html
         - title: Release Notes 202102.0
           nested:
@@ -28,35 +28,35 @@ entries:
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202102.0/performance-release-notes-202102.0.html
           - title: Security release notes- 202102.0 SEC
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202102.0/security-release-notes-202102.0-sec.html
-        - title: Release Notes Code Releases May, 2020
+        - title: Release notes Code Releases May, 2020
           nested:
-          - title: Security Release Notes- Code Releases May, 2020
+          - title: Security Release Notes Code Releases May, 2020
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-code-releases-may-2020/security-release-notes-code-releases-may-2020.html
-          - title: Release Notes- Code Releases May, 2020
+          - title: Release Notes Code Releases May, 2020
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-code-releases-may-2020/release-notes-code-releases-may-2020.html
-        - title: Release Notes 202001.0
+        - title: Release notes 202001.0
           url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202001.0/release-notes-202001.0.html
           nested:
-          - title: Security Release Notes 202001.0
+          - title: Security release notes 202001.0
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202001.0/security-release-notes-202001.0.html
-          - title: Known Issues 202001.0
+          - title: Known issues 202001.0
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202001.0/known-issues-202001.0.html
-        - title: Release Notes 201907.0
+        - title: Release notes 201907.0
           url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-201907.0/release-notes-201907.0.html
           nested:
-          - title: Security Release Notes 201907.0
+          - title: Security release notes 201907.0
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-201907.0/security-release-notes-201907.0.html
-        - title: Release Notes 201903.0
+        - title: Release notes 201903.0
           url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-201903.0/release-notes-201903.0.html
           nested:
-          - title: Security Release Notes 201903.0
+          - title: Security release notes 201903.0
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-201903.0/security-release-notes-201903.0.html
-        - title: Release Notes 2018.12.0
+        - title: Release notes 2018.12.0
           url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-2018.12.0.html
-        - title: Release Notes 2018.11.0
+        - title: Release notes 2018.11.0
           url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-2018.11.0/release-notes-2018.11.0.html
           nested:
-          - title: Security Release Notes 2018.11.0
+          - title: Security release notes 2018.11.0
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-2018.11.0/security-release-notes-2018.11.0.html
     - title: What's new
       url: /docs/scos/user/intro-to-spryker/whats-new/whats-new.html
@@ -164,7 +164,7 @@ entries:
       nested:
       - title: Cart Notes
         url: /docs/scos/user/features/cart-feature-overview/cart-notes-overview.html
-      - title: Shopping Cart Widget
+      - title: Cart Widget
         url: /docs/scos/user/features/cart-feature-overview/cart-widget-overview.html
       - title: Quick Order from the Catalog Page
         url: /docs/scos/user/features/cart-feature-overview/quick-order-from-the-catalog-page-overview.html
@@ -324,6 +324,7 @@ entries:
         - "201907.0"
         - "202001.0"
         - "202005.0"
+        - "202009.0"
         - "202108.0"
       - title: Password management
         url: /docs/scos/user/features/customer-account-management-feature-overview/password-management-overview.html

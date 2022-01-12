@@ -1,5 +1,5 @@
 ---
-title: Shopping Cart Widget Feature Overview
+title: Cart Widget Overview
 description: Many B2B customers use multiple shopping carts. Shopping cart widget allows them to access shopping carts from any place in the online shop in one click.
 last_updated: Sep 14, 2020
 template: concept-topic-template

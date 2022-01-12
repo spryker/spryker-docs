@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/afterpay
 related:
   - title: Afterpay - Installation and Configuration
-    link: docs/scos/user/technology-partners/page.version/payment-partners/afterpay/afterpay-installation-and-configuration.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/afterpay/installing-and-configuring-afterpay.html
 ---
 
 ## Partner Information
@@ -40,6 +40,12 @@ Unlike other pay-after-delivery providers we keep you informed of your customers
 * AfterPay is integrated with Google Analytics, allowing you to use your insights into payment behaviour in your digital marketing and sales analysis
 * Segment and retarget your best customers based on their payment behaviour
 * Easy access to refund data lets you segment customers after net sales together with their payment behaviour
+
+## Related Developer articles
+
+* [Installing and configuring Afterpay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/afterpay/installing-and-configuring-afterpay.html)
+* [Integrating Afterpay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/afterpay/integrating-afterpay.html)
+
 ---
 
 ## Copyright and Disclaimer

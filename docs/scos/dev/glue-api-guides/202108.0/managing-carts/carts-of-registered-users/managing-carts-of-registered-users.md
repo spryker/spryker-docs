@@ -2967,6 +2967,8 @@ If the cart is deleted successfully, the endpoint returns theÂ `204 No Content`Â
 | 001 | Access token is incorrect. |
 | 002 | Access token is missing. |
 | 003 | Failed to log in the user. |
+| 005 | `If-Match` header is missing.  |
+| 006 | `If-Match` header value is invalid. |
 | 101 | Cart with given uuid not found. |
 | 102 | Failed to add an item to cart. |
 | 103 | Item with the given group key is not found in the cart. |

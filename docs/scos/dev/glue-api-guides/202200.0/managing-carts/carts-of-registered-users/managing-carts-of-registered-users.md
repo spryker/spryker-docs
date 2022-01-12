@@ -3096,14 +3096,14 @@ If the cart is deleted successfully, the endpoint returns theÂ `204 No Content`Â
 | 102 | Failed to add an item to cart. |
 | 103 | Item with the given group key not found in the cart. |
 | 104 | Cart uuid is missing. |
-| 105 | Cart could not be deleted. |
-| 106 | Cart item could not be deleted. |
+| 105 | Cart cannot be deleted. |
+| 106 | Cart item cannot be deleted. |
 | 107 | Failed to create a cart. |
 | 110 | Customer already has a cart. |
 | 111 | Can't switch price mode when there are items in the cart. |
 | 112 | Store data is invalid. |
-| 113 | Cart item could not be added. |
-| 114 | Cart item could not be updated. |
+| 113 | Cart item cannot be added. |
+| 114 | Cart item cannot be updated. |
 | 115 | Unauthorized cart action. |
 | 116 | Currency is missing. |
 | 117 | Currency is incorrect. |

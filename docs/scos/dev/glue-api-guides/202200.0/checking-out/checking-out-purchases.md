@@ -1303,7 +1303,7 @@ For the attributes of other included resources, see [Retrieve customer's order](
 | 404 | Order not found. |
 | 422 | Order payment is not updated. Checkout data is incorrect. |
 | 1101 | Checkout data is invalid. |
-| 1102 | Order could not be placed. |
+| 1102 | Order cannot be placed. |
 | 1103 | Cart not found. |
 | 1104 | Cart is empty. |
 | 1105 | One of Authorization or X-Anonymous-Customer-Unique-Id   headers is required. |

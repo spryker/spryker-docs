@@ -239,8 +239,8 @@ If the voucher is deleted successfully, the endpoints returns the `204 No Data` 
 | --- | --- |
 | 101 | Cart with the specified ID is not found. |
 | 109 | `X-Anonymous-Customer-Unique-Id` header is empty. |
-| 3301 | Voucher with the specified ID was not found. |
-| 3302 | Incorrect voucher code or the voucher could not be applied.|
+| 3301 | Voucher with the specified ID is not found. |
+| 3302 | Incorrect voucher code or the voucher cannot be applied.|
 | 3303| Cart code can't be removed. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

@@ -12,7 +12,7 @@ It extends the existing Domain with Merchant and ProductOffer to enable sophisti
 
 {% info_block infoBox "Info" %}
 
-This model is intentionally simplified. Learn more about the core domain objects in [Marketplace Merchant feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-merchant-feature-walkthrough.html) and [Product Offer feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html).
+This model is intentionally simplified. Learn more about the core domain objects in [Marketplace Merchant feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{site.version}}/marketplace-merchant-feature-walkthrough.html) and [Product Offer feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{site.version}}/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html).
 
 {% endinfo_block %}
 
@@ -40,7 +40,7 @@ To learn more about the Product Offer entity, see [Marketplace Product Offer fea
 Order is a B2C/B2B e-commerce domain object. It is another standard e-commerce domain object representing a transaction of buying some goods on a shop by a Customer. In the Marketplace, an Order may contain items that multiple Merchants own. For this reason, Merchants never have access to it. Only the Customer and Marketplace Operator can access Orders.
 
 #### MerchantOrder 
-MerchantOrder is a Marketplace domain object. MerchantOrder is a composition of OrderItems, OrderTotals, OrderShipment, OrderCustomer, and other objects related to a particular Merchant within one Order. MerchantOrder is the key entity that helps Merchants to fulfill Orders. It is possible to have different OMS flows for different Merchants so that each Merchant can process their MechantOrders with the best flow. Merchants use the [Merchant Portal application]((/docs/marketplace/dev/architecture-overview/marketplace-merchant-portal-architecture-overview.html)) to fulfill MerchantOrders.
+MerchantOrder is a Marketplace domain object. MerchantOrder is a composition of OrderItems, OrderTotals, OrderShipment, OrderCustomer, and other objects related to a particular Merchant within one Order. MerchantOrder is the key entity that helps Merchants to fulfill Orders. It is possible to have different OMS flows for different Merchants so that each Merchant can process their MechantOrders with the best flow. Merchants use the [Merchant Portal application](/docs/marketplace/dev/architecture-overview/marketplace-merchant-portal-architecture-overview.html) to fulfill MerchantOrders.
 
 To learn more about the orders in the Marketplace, see [Marketplace Order Management feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{site.version}}/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html).
 

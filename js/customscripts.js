@@ -620,6 +620,10 @@ function initFeedbackForm() {
         }
     }
 
+    $(':input', form).change(function() {
+        form.data('state-changed', true);
+    })
+
     $('.form-collapse').each(function () {
         let container = $(this),
             opener = container.find('.js-form-collapse__opener'),
@@ -627,9 +631,13 @@ function initFeedbackForm() {
             secondStep = container.find('.js-form-collapse__second-step'),
             secondStepOpener = container.find('.js-form-collapse__second-step-opener'),
             close = container.find('.js-form-collapse__close'),
-            slide = container.find('.js-form-collapse__slide');
+            slide = container.find('.js-form-collapse__slide'),
+            shortFeedback = container.find('.js-form-collapse__short-feedback');
 
-        secondStepOpener.on('click', function () {
+        secondStepOpener.on('click', function (e) {
+            let shortFeedbackValue = $(e.currentTarget).text();
+
+            shortFeedback.val(shortFeedbackValue).change();
             firstStep.hide();
             secondStep.removeClass('hidden');
         });
@@ -647,7 +655,17 @@ function initFeedbackForm() {
         });
     });
 
-    async function handleSubmit(event) {
+    $('#feedback-submit').on('click', function(e){
+        e.preventDefault();
+        validateForm();
+
+        if (isValid) {
+            handleFeedbackSubmit(e);
+            form.data('state-changed', false);
+        }
+    });
+
+    async function handleFeedbackSubmit(event) {
         event.preventDefault();
         let data = new FormData(formNative);
 
@@ -667,12 +685,9 @@ function initFeedbackForm() {
         });
     }
 
-    $('#feedback-submit').on('click', function(e){
-        e.preventDefault();
-        validateForm();
-
-        if (isValid) {
-            handleSubmit(e);
+    document.addEventListener('visibilitychange', function() {
+        if (document.visibilityState === 'hidden' && form.data('state-changed')) {
+            navigator.sendBeacon(formNative.action, new FormData(formNative));
         }
     });
 }

@@ -385,7 +385,7 @@ entries:
     - title: Order Management
       url: /docs/scos/user/features/order-management-feature-overview/order-management-feature-overview.html
       nested:
-      - title: Invoice gneration
+      - title: Invoice generation
         url: /docs/scos/user/features/order-management-feature-overview/invoice-generation-overview.html
         include_versions:
         - "202009.0"
@@ -460,7 +460,7 @@ entries:
         - "202108.0"
       - title: Timed product availability
         url: /docs/scos/user/features/product-feature-overview/timed-product-availability-overview.html
-      - title: Product image management
+      - title: Product images overview
         url: /docs/scos/user/features/product-feature-overview/product-images-overview.html
         include_versions:
         - "201907.0"
@@ -541,7 +541,7 @@ entries:
     - title: Search
       url: /docs/scos/user/features/search-feature-overview/search-feature-overview.html
       nested:
-      - title: Filters and Search by Category
+      - title: Category Filters
         url: /docs/scos/user/features/search-feature-overview/category-filters-overview.html
         include_versions:
         - "201811.0"

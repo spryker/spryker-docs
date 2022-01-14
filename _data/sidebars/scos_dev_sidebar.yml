@@ -3241,8 +3241,10 @@ entries:
           nested:
           - title: State machine console commands
             url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/state-machine-console-commands.html
+          - title: Order management system multi-thread  
             url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-management-system-multi-thread.html
-          - title: Order process modelling via state machines
+          - title: Common pitfalls in OMS design
+            url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html
         - title: Multi-Language Setup
           url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html
         - title: Checkout

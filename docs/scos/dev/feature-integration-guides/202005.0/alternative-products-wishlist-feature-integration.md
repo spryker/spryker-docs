@@ -15,8 +15,8 @@ redirect_from:
 To start feature integration, review and install the necessary features:
 |Name|Version|
 |---|---|
-|Alternative Products|master|
-|Wishlist|master|
+|Alternative Products|{{page.version}}|
+|Wishlist|{{page.version}}|
 
 ### 1) Add Translations
 Append glossary according to your configuration:

@@ -1,12 +1,13 @@
 ---
-title: Product Label feature integration
+title: Product Labels feature integration
 last_updated: Nov 22, 2019
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/v2/docs/product-label-feature-integration
-originalArticleId: 08f3bf57-93d7-4e33-b801-8131b44954ca
+originalLink: https://documentation.spryker.com/v4/docs/product-label-feature-integration
+originalArticleId: 51e1eaf7-4779-48c2-b57c-ee5d9ca511f9
 redirect_from:
-  - /v2/docs/product-label-feature-integration
-  - /v2/docs/en/product-label-feature-integration
+  - /v4/docs/product-label-feature-integration
+  - /v4/docs/en/product-label-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202001.0/product-label-feature-integration.html
 ---
 
 ## Prerequisites
@@ -145,7 +146,6 @@ to run this command periodically. In demoshop we've set this to run every minute
 ## Under the Hood
 
 ### Database Schema
-![product_label_db](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/product_label_db.png) 
 
 The `Product Label` module adds three new tables:
 

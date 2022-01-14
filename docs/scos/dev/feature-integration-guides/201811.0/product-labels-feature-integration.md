@@ -1,12 +1,13 @@
 ---
-title: Product Label feature integration
-last_updated: Nov 22, 2019
+title: Product Labels feature integration
+last_updated: May 16, 2019
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/v3/docs/product-label-feature-integration
-originalArticleId: b3054c5d-d671-4c97-83da-25650582618f
+originalLink: https://documentation.spryker.com/v1/docs/product-label-feature-integration
+originalArticleId: 9ad4b707-d37b-493c-a10d-a2b60e8dba9f
 redirect_from:
-  - /v3/docs/product-label-feature-integration
-  - /v3/docs/en/product-label-feature-integration
+  - /v1/docs/product-label-feature-integration
+  - /v1/docs/en/product-label-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/product-label-feature-integration.html
 ---
 
 ## Prerequisites

@@ -1,5 +1,5 @@
 ---
-title: Product Group feature integration
+title: Product Groups feature integration
 description: The guide describes the process of installing the Product Group feature in your project.
 last_updated: Nov 22, 2019
 template: feature-integration-guide-template

@@ -16,8 +16,8 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Cart | master |
-| Non-splittable Products |master |
+| Cart | {{page.version}} |
+| Non-splittable Products |{{page.version}} |
 
 ### 1) Set up Behavior
 #### Adjust Concrete Product Quantity

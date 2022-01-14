@@ -1,16 +1,14 @@
 ---
-title: Content Items API feature integration
+title: Glue API - Content Items feature integration
 description: The guide walks you through the process of installing and configuring the Content Items feature in the project.
-last_updated: Dec 24, 2019
+last_updated: Mar 5, 2020
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/v3/docs/content-items-api-feature-integration
-originalArticleId: afe7bfc3-42ef-4ff8-809d-97ec2dd778ba
+originalLink: https://documentation.spryker.com/v4/docs/glue-api-content-items-api-feature-integration
+originalArticleId: be895e9a-8c1b-412a-98fe-688abefc4741
 redirect_from:
-  - /v3/docs/content-items-api-feature-integration
-  - /v3/docs/en/content-items-api-feature-integration
-related:
-  - title: Glue Infrastructure
-    link: docs/scos/dev/glue-api-guides/page.version/glue-infrastructure.html
+  - /v4/docs/glue-api-content-items-api-feature-integration
+  - /v4/docs/en/glue-api-content-items-api-feature-integration
+  - /docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-api-feature-integration.html
 ---
 
 ## Install Feature API
@@ -74,8 +72,7 @@ Activate the following plugins:
 | `ContentBannerResourceRoutePlugin` | Registers a `/content-banners/{CONTENT-KEY}` resource route. | None | `Spryker\Glue\ContentBannersRestApi\Plugin` |
 | `ContentProductAbstractListRoutePlugin` | Registers a `/content-product-abstract-lists/{CONTENT-KEY}/content-product-abstract` resource route. | None | `Spryker\Glue\ContentProductAbstractListsRestApi\Plugin` |
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php
     
 ```php
 <?php
@@ -103,12 +100,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-<br>
-</details>
-
 {% info_block warningBox “Verification” %}
 
 Make sure that the following endpoints return the result with the all necessary data (for example
 {% endinfo_block %}:<ul><li>http://glue.mysprykershop.com/content-banners/{content_key}</li><li>http://glue.mysprykershop.com/content-product-abstract-lists/{content_key}/content-product-abstract</li></ul>)
-
-<!-- Last review date: Aug 08, 2019 by Stanislav Matveyev, Yuliia Boiko-->

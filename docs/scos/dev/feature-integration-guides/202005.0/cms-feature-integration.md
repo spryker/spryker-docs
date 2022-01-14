@@ -1,5 +1,5 @@
 ---
-title: CMS feature integration Guide
+title: CMS feature integra
 description: The guide describes how to integrate the CMS feature into your project.
 last_updated: Sep 15, 2020
 template: feature-integration-guide-template
@@ -16,16 +16,40 @@ Please overview and install the necessary features before beginning the integrat
 
 | Name | Version |
 | --- | --- |
-| SprykerCore | master |
+| SprykerCore | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/cms:"^master" --update-with-dependencies
+composer require spryker-feature/cms:"^{{page.version}}" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
-Make sure that the following modules have been installed:<table><thead><tr><td>Module</td><td>Expected Directory</td></tr></thead><tbody><tr><td>`Cms`</td><td>`vendor/spryker/cms`</td></tr><tr><td>`CmsBlock`</td><td>`vendor/spryker/cms-block`</td></tr><tr><td>`CmsBlockCategoryStorage`</td><td>`vendor/spryker/cms-block-category-storage`</td></tr><tr><td>`CmsBlockGui`</td><td>`vendor/spryker/cms-block-gui`</td></tr><tr><td>`CmsBlockProductStorage`</td><td>`vendor/spryker/cms-block-product-storage`</td></tr><tr><td>`CmsBlockStorage`</td><td>`vendor/spryker/cms-block-storage`</td></tr><tr><td>`CmsContentWidget`</td><td>`vendor/spryker/cms-content-widget`</td></tr><tr><td>`CmsGui`</td><td>`vendor/spryker/cms-gui`</td></tr><tr><td>`CmsPageDataImport`</td><td>`vendor/spryker/cms-page-data-import`</td></tr><tr><td>`CmsPageSearch`</td><td>`vendor/spryker/cms-page-search`</td></tr><tr><td>`CmsSlot`</td><td>`vendor/spryker/cms-slot`</td></tr><tr><td>`CmsSlotBlock`</td><td>`vendor/spryker/cms-slot-block`</td></tr><tr><td>`CmsSlotBlockDataImport`</td><td>`vendor/spryker/cms-slot-block-data-import`</td></tr><tr><td>`CmsSlotBlockExtension`</td><td>`vendor/spryker/cms-slot-block-extension`</td></tr><tr><td>`CmsSlotBlockGui`</td><td>`vendor/spryker/cms-slot-block-gui`</td></tr><tr><td>`CmsSlotBlockGuiExtension`</td><td>`vendor/spryker/cms-slot-block-gui-extension`</td></tr><tr><td>`CmsSlotDataImport`</td><td>`vendor/spryker/cms-slot-data-import`</td></tr><tr><td>`CmsSlotGui`</td><td>`vendor/spryker/cms-slot-gui`</td></tr><tr><td>`CmsSlotStorage`</td><td>`vendor/spryker/cms-slot-storage`</td></tr><tr><td>`CmsStorage`</td><td>`vendor/spryker/cms-storage`</td></tr></tbody></table>
+Make sure that the following modules have been installed:
+
+|Module|Expected Directory|
+|--- |--- |
+|`Cms`|`vendor/spryker/cms`|
+|`CmsBlock`|`vendor/spryker/cms-block`|
+|`CmsBlockCategoryStorage`|`vendor/spryker/cms-block-category-storage`|
+|`CmsBlockGui`|`vendor/spryker/cms-block-gui`|
+|`CmsBlockProductStorage`|`vendor/spryker/cms-block-product-storage`|
+|`CmsBlockStorage`|`vendor/spryker/cms-block-storage`|
+|`CmsContentWidget`|`vendor/spryker/cms-content-widget`|
+|`CmsGui`|`vendor/spryker/cms-gui`|
+|`CmsPageDataImport`|`vendor/spryker/cms-page-data-import`|
+|`CmsPageSearch`|`vendor/spryker/cms-page-search`|
+|`CmsSlot`|`vendor/spryker/cms-slot`|
+|`CmsSlotBlock`|`vendor/spryker/cms-slot-block`|
+|`CmsSlotBlockDataImport`|`vendor/spryker/cms-slot-block-data-import`|
+|`CmsSlotBlockExtension`|`vendor/spryker/cms-slot-block-extension`|
+|`CmsSlotBlockGui`|`vendor/spryker/cms-slot-block-gui`|
+|`CmsSlotBlockGuiExtension`|`vendor/spryker/cms-slot-block-gui-extension`|
+|`CmsSlotDataImport`|`vendor/spryker/cms-slot-data-import`|
+|`CmsSlotGui`|`vendor/spryker/cms-slot-gui`|
+|`CmsSlotStorage`|`vendor/spryker/cms-slot-storage`|
+|`CmsStorage`|`vendor/spryker/cms-storage`|
+
 {% endinfo_block %}
 
 ### 2) Set up Database Schema and Transfer Objects
@@ -102,11 +126,100 @@ console propel:install
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes have been applied by checking your database.<table><thead><tr><td>Database entity</td><td>Type</td><td>Event</td></tr></thead><tbody><tr><td>`spy_cms_block`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_block_glossary_key_mapping`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_block_storage`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_block_store`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_block_template`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_glossary_key_mapping`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_page`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_page_localized_attributes`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_page_search`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_page_storage`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_page_store`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_slot`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_slot_block`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_slot_block_storage`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_slot_storage`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_slot_template`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_slot_to_cms_slot_template`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_template`</td><td>table</td><td>created</td></tr><tr><td>`spy_cms_version`</td><td>table</td><td>created</td></tr></tbody></table>
+Make sure that the following changes have been applied by checking your database.
+
+|Database entity|Type|Event|
+|--- |--- |--- |
+|`spy_cms_block`|table|created|
+|`spy_cms_block_glossary_key_mapping`|table|created|
+|`spy_cms_block_storage`|table|created|
+|`spy_cms_block_store`|table|created|
+|`spy_cms_block_template`|table|created|
+|`spy_cms_glossary_key_mapping`|table|created|
+|`spy_cms_page`|table|created|
+|`spy_cms_page_localized_attributes`|table|created|
+|`spy_cms_page_search`|table|created|
+|`spy_cms_page_storage`|table|created|
+|`spy_cms_page_store`|table|created|
+|`spy_cms_slot`|table|created|
+|`spy_cms_slot_block`|table|created|
+|`spy_cms_slot_block_storage`|table|created|
+|`spy_cms_slot_storage`|table|created|
+|`spy_cms_slot_template`|table|created|
+|`spy_cms_slot_to_cms_slot_template`|table|created|
+|`spy_cms_template`|table|created|
+|`spy_cms_version`|table|created|
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes have been applied in transfer objects:<table><thead><tr><td>Transfer</td><td>Type</td><td>Event</td><td>Path</td></tr></thead><tbody><tr><td>`SpyCmsTemplateEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsTemplateEntityTransfer`</td></tr><tr><td>`SpyCmsPageEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsPageEntityTransfer`</td></tr><tr><td>`SpyCmsPageStoreEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsPageStoreEntityTransfer`</td></tr><tr><td>`SpyCmsGlossaryKeyMappingEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsGlossaryKeyMappingEntityTransfer`</td></tr><tr><td>`SpyCmsVersionEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsVersionEntityTransfer`</td></tr><tr><td>`SpyCmsBlockTemplateEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsBlockTemplateEntityTransfer`</td></tr><tr><td>`SpyCmsBlockGlossaryKeyMappingEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsBlockGlossaryKeyMappingEntityTransfer`</td></tr><tr><td>`SpyCmsBlockEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsBlockEntityTransfer`</td></tr><tr><td>`SpyCmsBlockStorageEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsBlockStorageEntityTransfer`</td></tr><tr><td>`SpyCmsBlockStoreEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsBlockStoreEntityTransfer`</td></tr><tr><td>`SpyCmsPageStorageEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsPageStorageEntityTransfer`</td></tr><tr><td>`SpyCmsBlockProductStorageEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsBlockProductStorageEntityTransfer`</td></tr><tr><td>`SpyCmsBlockCategoryStorageEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsBlockCategoryStorageEntityTransfer`</td></tr><tr><td>`SpyCmsSlotEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsSlotEntityTransfer`</td></tr><tr><td>`SpyCmsSlotBlockEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsSlotBlockEntityTransfer`</td></tr><tr><td>`SpyCmsSlotStorageEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsSlotStorageEntityTransfer`</td></tr><tr><td>`SpyCmsSlotTemplateEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsSlotTemplateEntity`</td></tr><tr><td>`SpyCmsSlotToCmsSlotTemplateEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyCmsSlotToCmsSlotTemplateEntity`</td></tr><tr><td>`CmsTemplate`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsTemplateTransfer`</td></tr><tr><td>`Page`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PageTransfer`</td></tr><tr><td>`CmsPageLocalizedAttributes`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsPageLocalizedAttributesTransfer`</td></tr><tr><td>`PageKeyMapping`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/PageKeyMappingTransfer`</td></tr><tr><td>`CmsBlock`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsBlockTransfer`</td></tr><tr><td>`CmsPage`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsPageTransfer`</td></tr><tr><td>`CmsPageAttributes`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsPageAttributesTransfer`</td></tr><tr><td>`CmsGlossary`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsGlossaryTransfer`</td></tr><tr><td>`CmsGlossaryAttributes`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsGlossaryAttributesTransfer`</td></tr><tr><td>`CmsPlaceholderTranslation`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsPlaceholderTranslationTransfer`</td></tr><tr><td>`CmsVersion`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsVersionTransfer`</td></tr><tr><td>`CmsVersionData`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsVersionDataTransfer`</td></tr><tr><td>`LocaleCmsPageData`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/LocaleCmsPageDataTransfer`</td></tr><tr><td>`FlattenedLocaleCmsPageDataRequest`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/FlattenedLocaleCmsPageDataRequestTransfer`</td></tr><tr><td>`StoreRelation`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/StoreRelationTransfer`</td></tr><tr><td>`Store`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/StoreTransfer`</td></tr><tr><td>`CmsBlockGlossary`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsBlockGlossaryTransfer`</td></tr><tr><td>`CmsBlockGlossaryPlaceholder`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsBlockGlossaryPlaceholderTransfer`</td></tr><tr><td>`CmsBlockGlossaryPlaceholderTranslation`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsBlockGlossaryPlaceholderTranslationTransfer`</td></tr><tr><td>`CmsBlockTemplate`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsBlockTemplateTransfer`</td></tr><tr><td>`Category`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CategoryTransfer`</td></tr><tr><td>`CmsBlockCategoryPosition`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsBlockCategoryPositionTransfer`</td></tr><tr><td>`CmsBlockProduct`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsBlockProductTransfer`</td></tr><tr><td>`CmsContentWidgetConfigurationList`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsContentWidgetConfigurationListTransfer`</td></tr><tr><td>`CmsContentWidgetConfiguration`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsContentWidgetConfigurationTransfer`</td></tr><tr><td>`CmsContentWidgetFunctions`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsContentWidgetFunctionsTransfer`</td></tr><tr><td>`CmsContentWidgetFunction`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsContentWidgetFunctionTransfer`</td></tr><tr><td>`CmsPageMetaAttributes`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsPageMetaAttributesTransfer`</td></tr><tr><td>`CmsSlot`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsSlotTransfer`</td></tr><tr><td>`CmsSlotBlock`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsSlotBlockTransfer`</td></tr><tr><td>`CmsSlotBlockCollection`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsSlotBlockCollectionTransfer`</td></tr><tr><td>`CmsSlotBlockCondition`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsSlotBlockConditionTransfer`</td></tr><tr><td>`CmsSlotBlockCriteria`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsSlotBlockCriteriaTransfer`</td></tr><tr><td>`CmsSlotBlockStorage`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsSlotBlockStorageTransfer`</td></tr><tr><td>`CmsSlotCriteria`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsSlotCriteriaTransfer`</td></tr><tr><td>`CmsSlotExternalData`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsSlotExternalDataTransfer`</td></tr><tr><td>`CmsSlotParams`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsSlotParamsTransfer`</td></tr><tr><td>`CmsSlotStorage`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsSlotStorageTransfer`</td></tr><tr><td>`CmsSlotTemplate`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsSlotTemplateTransfer`</td></tr><tr><td>`CmsSlotTemplateConfiguration`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CmsSlotTemplateConfigurationTransfer`</td></tr><tr><td>`ConstraintViolation`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ConstraintViolationTransfer`</td></tr><tr><td>`Filter`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/FilterTransfer`</td></tr><tr><td>`Message`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/MessageTransfer`</td></tr><tr><td>`ValidationResponse`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ValidationResponseTransfer`</td></tr></tbody></table>
+Make sure that the following changes have been applied in transfer objects:
+
+|Transfer|Type|Event|Path|
+|--- |--- |--- |--- |
+|`SpyCmsTemplateEntity`|class|created|`src/Generated/Shared/Transfer/SpyCmsTemplateEntityTransfer`|
+|`SpyCmsPageEntity`|class|created|`src/Generated/Shared/Transfer/SpyCmsPageEntityTransfer`|
+|`SpyCmsPageStoreEntity`|class|created|`src/Generated/Shared/Transfer/SpyCmsPageStoreEntityTransfer`|
+|`SpyCmsGlossaryKeyMappingEntity`|class|created|`src/Generated/Shared/Transfer/SpyCmsGlossaryKeyMappingEntityTransfer`|
+|`SpyCmsVersionEntity`|class|created|`src/Generated/Shared/Transfer/SpyCmsVersionEntityTransfer`|
+|`SpyCmsBlockTemplateEntity`|class|created|`src/Generated/Shared/Transfer/SpyCmsBlockTemplateEntityTransfer`|
+|`SpyCmsBlockGlossaryKeyMappingEntity`|class|created|`src/Generated/Shared/Transfer/SpyCmsBlockGlossaryKeyMappingEntityTransfer`|
+|`SpyCmsBlockEntity`|class|created|`src/Generated/Shared/Transfer/SpyCmsBlockEntityTransfer`|
+|`SpyCmsBlockStorageEntity`|class|created|`src/Generated/Shared/Transfer/SpyCmsBlockStorageEntityTransfer`|
+|`SpyCmsBlockStoreEntity`|class|created|`src/Generated/Shared/Transfer/SpyCmsBlockStoreEntityTransfer`|
+|`SpyCmsPageStorageEntity`|class|created|`src/Generated/Shared/Transfer/SpyCmsPageStorageEntityTransfer`|
+|`SpyCmsBlockProductStorageEntity`|class|created|`src/Generated/Shared/Transfer/SpyCmsBlockProductStorageEntityTransfer`|
+|`SpyCmsBlockCategoryStorageEntity`|class|created|`src/Generated/Shared/Transfer/SpyCmsBlockCategoryStorageEntityTransfer`|
+|`SpyCmsSlotEntity`|class|created|`src/Generated/Shared/Transfer/SpyCmsSlotEntityTransfer`|
+|`SpyCmsSlotBlockEntity`|class|created|`src/Generated/Shared/Transfer/SpyCmsSlotBlockEntityTransfer`|
+|`SpyCmsSlotStorageEntity`|class|created|`src/Generated/Shared/Transfer/SpyCmsSlotStorageEntityTransfer`|
+|`SpyCmsSlotTemplateEntity`|class|created|`src/Generated/Shared/Transfer/SpyCmsSlotTemplateEntity`|
+|`SpyCmsSlotToCmsSlotTemplateEntity`|class|created|`src/Generated/Shared/Transfer/SpyCmsSlotToCmsSlotTemplateEntity`|
+|`CmsTemplate`|class|created|`src/Generated/Shared/Transfer/CmsTemplateTransfer`|
+|`Page`|class|created|`src/Generated/Shared/Transfer/PageTransfer`|
+|`CmsPageLocalizedAttributes`|class|created|`src/Generated/Shared/Transfer/CmsPageLocalizedAttributesTransfer`|
+|`PageKeyMapping`|class|created|`src/Generated/Shared/Transfer/PageKeyMappingTransfer`|
+|`CmsBlock`|class|created|`src/Generated/Shared/Transfer/CmsBlockTransfer`|
+|`CmsPage`|class|created|`src/Generated/Shared/Transfer/CmsPageTransfer`|
+|`CmsPageAttributes`|class|created|`src/Generated/Shared/Transfer/CmsPageAttributesTransfer`|
+|`CmsGlossary`|class|created|`src/Generated/Shared/Transfer/CmsGlossaryTransfer`|
+|`CmsGlossaryAttributes`|class|created|`src/Generated/Shared/Transfer/CmsGlossaryAttributesTransfer`|
+|`CmsPlaceholderTranslation`|class|created|`src/Generated/Shared/Transfer/CmsPlaceholderTranslationTransfer`|
+|`CmsVersion`|class|created|`src/Generated/Shared/Transfer/CmsVersionTransfer`|
+|`CmsVersionData`|class|created|`src/Generated/Shared/Transfer/CmsVersionDataTransfer`|
+|`LocaleCmsPageData`|class|created|`src/Generated/Shared/Transfer/LocaleCmsPageDataTransfer`|
+|`FlattenedLocaleCmsPageDataRequest`|class|created|`src/Generated/Shared/Transfer/FlattenedLocaleCmsPageDataRequestTransfer`|
+|`StoreRelation`|class|created|`src/Generated/Shared/Transfer/StoreRelationTransfer`|
+|`Store`|class|created|`src/Generated/Shared/Transfer/StoreTransfer`|
+|`CmsBlockGlossary`|class|created|`src/Generated/Shared/Transfer/CmsBlockGlossaryTransfer`|
+|`CmsBlockGlossaryPlaceholder`|class|created|`src/Generated/Shared/Transfer/CmsBlockGlossaryPlaceholderTransfer`|
+|`CmsBlockGlossaryPlaceholderTranslation`|class|created|`src/Generated/Shared/Transfer/CmsBlockGlossaryPlaceholderTranslationTransfer`|
+|`CmsBlockTemplate`|class|created|`src/Generated/Shared/Transfer/CmsBlockTemplateTransfer`|
+|`Category`|class|created|`src/Generated/Shared/Transfer/CategoryTransfer`|
+|`CmsBlockCategoryPosition`|class|created|`src/Generated/Shared/Transfer/CmsBlockCategoryPositionTransfer`|
+|`CmsBlockProduct`|class|created|`src/Generated/Shared/Transfer/CmsBlockProductTransfer`|
+|`CmsContentWidgetConfigurationList`|class|created|`src/Generated/Shared/Transfer/CmsContentWidgetConfigurationListTransfer`|
+|`CmsContentWidgetConfiguration`|class|created|`src/Generated/Shared/Transfer/CmsContentWidgetConfigurationTransfer`|
+|`CmsContentWidgetFunctions`|class|created|`src/Generated/Shared/Transfer/CmsContentWidgetFunctionsTransfer`|
+|`CmsContentWidgetFunction`|class|created|`src/Generated/Shared/Transfer/CmsContentWidgetFunctionTransfer`|
+|`CmsPageMetaAttributes`|class|created|`src/Generated/Shared/Transfer/CmsPageMetaAttributesTransfer`|
+|`CmsSlot`|class|created|`src/Generated/Shared/Transfer/CmsSlotTransfer`|
+|`CmsSlotBlock`|class|created|`src/Generated/Shared/Transfer/CmsSlotBlockTransfer`|
+|`CmsSlotBlockCollection`|class|created|`src/Generated/Shared/Transfer/CmsSlotBlockCollectionTransfer`|
+|`CmsSlotBlockCondition`|class|created|`src/Generated/Shared/Transfer/CmsSlotBlockConditionTransfer`|
+|`CmsSlotBlockCriteria`|class|created|`src/Generated/Shared/Transfer/CmsSlotBlockCriteriaTransfer`|
+|`CmsSlotBlockStorage`|class|created|`src/Generated/Shared/Transfer/CmsSlotBlockStorageTransfer`|
+|`CmsSlotCriteria`|class|created|`src/Generated/Shared/Transfer/CmsSlotCriteriaTransfer`|
+|`CmsSlotExternalData`|class|created|`src/Generated/Shared/Transfer/CmsSlotExternalDataTransfer`|
+|`CmsSlotParams`|class|created|`src/Generated/Shared/Transfer/CmsSlotParamsTransfer`|
+|`CmsSlotStorage`|class|created|`src/Generated/Shared/Transfer/CmsSlotStorageTransfer`|
+|`CmsSlotTemplate`|class|created|`src/Generated/Shared/Transfer/CmsSlotTemplateTransfer`|
+|`CmsSlotTemplateConfiguration`|class|created|`src/Generated/Shared/Transfer/CmsSlotTemplateConfigurationTransfer`|
+|`ConstraintViolation`|class|created|`src/Generated/Shared/Transfer/ConstraintViolationTransfer`|
+|`Filter`|class|created|`src/Generated/Shared/Transfer/FilterTransfer`|
+|`Message`|class|created|`src/Generated/Shared/Transfer/MessageTransfer`|
+|`ValidationResponse`|class|created|`src/Generated/Shared/Transfer/ValidationResponseTransfer`|
+
 {% endinfo_block %}
 
 ### 3) Add Translations

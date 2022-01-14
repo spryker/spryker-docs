@@ -1,13 +1,17 @@
 ---
 title: Glue API - Content Items API feature integration
 description: The guide walks you through the process of installing and configuring the Content Items feature in the project.
-last_updated: Apr 3, 2020
+last_updated: Dec 24, 2019
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/v5/docs/glue-api-content-items-api-feature-integration
-originalArticleId: e81550ce-cc54-4d5e-8cc9-b2292edb72ee
+originalLink: https://documentation.spryker.com/v3/docs/content-items-api-feature-integration
+originalArticleId: afe7bfc3-42ef-4ff8-809d-97ec2dd778ba
 redirect_from:
-  - /v5/docs/glue-api-content-items-api-feature-integration
-  - /v5/docs/en/glue-api-content-items-api-feature-integration
+  - /v3/docs/content-items-api-feature-integration
+  - /v3/docs/en/content-items-api-feature-integration
+  - /docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-api-feature-integration.html
+related:
+  - title: Glue Infrastructure
+    link: docs/scos/dev/glue-api-guides/page.version/glue-infrastructure.html
 ---
 
 ## Install Feature API
@@ -71,7 +75,8 @@ Activate the following plugins:
 | `ContentBannerResourceRoutePlugin` | Registers a `/content-banners/{CONTENT-KEY}` resource route. | None | `Spryker\Glue\ContentBannersRestApi\Plugin` |
 | `ContentProductAbstractListRoutePlugin` | Registers a `/content-product-abstract-lists/{CONTENT-KEY}/content-product-abstract` resource route. | None | `Spryker\Glue\ContentProductAbstractListsRestApi\Plugin` |
 
-src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php
+<details open>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
     
 ```php
 <?php
@@ -99,7 +104,12 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
+<br>
+</details>
+
 {% info_block warningBox “Verification” %}
 
 Make sure that the following endpoints return the result with the all necessary data (for example
 {% endinfo_block %}:<ul><li>http://glue.mysprykershop.com/content-banners/{content_key}</li><li>http://glue.mysprykershop.com/content-product-abstract-lists/{content_key}/content-product-abstract</li></ul>)
+
+<!-- Last review date: Aug 08, 2019 by Stanislav Matveyev, Yuliia Boiko-->

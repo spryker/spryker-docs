@@ -1,5 +1,5 @@
 ---
-title: Product Labels API feature integration
+title: Glue API - Product Labels feature integration
 description: This guide will navigate you through the process of installing and configuring the Product Labels API feature in Spryker OS.
 last_updated: Jun 19, 2020
 template: feature-integration-guide-template

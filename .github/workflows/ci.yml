@@ -214,7 +214,9 @@ jobs:
           composer install --prefer-dist --no-progress
 
       - name: Run validator command
-        run: php ./validate docs
+        run: |
+          cd ./last_updated_validator
+          php validate docs
 
   page_validation:
     name: Page validation

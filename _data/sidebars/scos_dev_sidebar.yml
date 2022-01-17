@@ -4215,6 +4215,12 @@ entries:
           include_versions:
           - "202009.0"
           - "202108.0"
+        - title: Billpay
+          nested:
+            - title: Billpay - Switching invoice payments to a preauthorize mode
+              url: /docs/scos/user/technology-partners/payment-partners/billpay/billpay-switching-invoice-payments-to-a-preauthorize-mode.html
+            - title: Integrating Billpay
+              url: /docs/scos/user/technology-partners/payment-partners/billpay/integrating-billpay.html
         - title: RatePay
           nested:
             - title: RatePay - Payment methods

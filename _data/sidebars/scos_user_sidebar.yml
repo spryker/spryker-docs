@@ -2352,12 +2352,7 @@ entries:
           - title: PayOne - Integration into the Legacy Demoshop Project
             url: /docs/scos/user/technology-partners/payment-partners/bs-payone/legacy-demoshop-integration/payone-integration-into-the-legacy-demoshop-project.html
       - title: Billpay
-        url: /docs/scos/user/technology-partners/payment-partners/billpay/billpay.html
-        nested:
-        - title: Billpay - Invoice Payment in Preauthorize Mode
-          url: /docs/scos/user/technology-partners/payment-partners/billpay/billpay-invoice-payment-in-preauthorize-mode.html
-        - title: Billpay - Integration
-          url: /docs/scos/user/technology-partners/payment-partners/billpay/billpay-integration.html
+        url: /docs/scos/user/technology-partners/payment-partners/billpay.html
       - title: Klarna
         url: /docs/scos/user/technology-partners/payment-partners/klarna/klarna.html
         nested:

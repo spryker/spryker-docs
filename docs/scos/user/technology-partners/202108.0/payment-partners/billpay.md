@@ -18,6 +18,12 @@ redirect_from:
 
 BillPay is the DACH market leader for the preferred, local payment methods Invoice, Direct Debit and Installments, making real-time financing decisions with 100% liability shift, so merchants carry zero risk.As only a bank account is required, these payment methods ensure full customer reach. In addition, BillPay's solution is multi-channel so orders can be placed online, through mobile web apps, at the POS or over-the-phone.
 
+
+## Related Developer articles
+
+* [Billpay - Switching invoice payments to a preauthorize mode](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/billpay/billpay-switching-invoice-payments-to-a-preauthorize-mode.html)
+* [Integrating Billpay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/billpay/integrating-billpay.html)
+
 ---
 
 ## Copyright and Disclaimer

@@ -213,7 +213,7 @@ Now, open the [config.yml](https://github.com/spryker/spryker-docs/blob/master/_
 
 ```
 
-2. In the *defaults* section, under the product scope you added at the previous step, add the product roles with their paths and sidebars. The sidebar names should match those you created at step [1. Create sidebars for the new product](#1-create-sidebars-for-the-new-product). For example:
+2. In the *defaults* section, under the product scope you added at the previous step, add the product roles with their paths and sidebars. The sidebar names should match those you created at step [1. Create sidebars for the new product](#create-sidebars-for-the-new-product). For example:
 ```
   -
     scope:
@@ -241,7 +241,7 @@ aop:
       - glue-api-guides
  ``` 
 
-4. In the *sidebars* section, add the sidebars for your new product. The sidebars should match those created at step [1. Create sidebars for the new product](#1-create-sidebars-for-the-new-product). For example:
+1. In the *sidebars* section, add the sidebars for your new product. The sidebars should match those created at step [1. Create sidebars for the new product](#create-sidebars-for-the-new-product). For example:
 
 ```
 - aop_dev_sidebar

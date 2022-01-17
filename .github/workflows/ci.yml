@@ -210,7 +210,7 @@ jobs:
 
       - name: Setup
         run: |
-          cd ./last-updated-validator
+          cd ./last_updated_validator
           composer install --prefer-dist --no-progress
 
       - name: Run validator command

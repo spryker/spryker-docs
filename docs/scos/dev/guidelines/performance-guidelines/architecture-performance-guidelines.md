@@ -89,7 +89,11 @@ Spryker uses Propel ORM as a database abstraction layer which allows to stay DBM
 
 Performance is one of the key attributes when it comes to synchronous combinations. Therefore, as a rule of thumb, any database operations must be high performant and be executed fast. If ORM cannot guarantee the high-speed database operation because of the lack of features or complexity, one should avoid using it.
 
-For example, to display products in the Spryker shop, we need to import and propagate data into several databases. For some projects, this is a cumbersome operation due to the big size of data. Therefore, Spryker recommends not to use ORM for these operations, but choose other solutions instead, for example, CTE, PDO, etc. For more information, see [Data importer speed optimization](/docs/scos/dev/data-import/{{site.version}}/data-importer-speed-optimization.html).
+For example, to display products in the Spryker shop, we need to import and propagate data into several databases. For some projects, this is a cumbersome operation due to the big size of data. Therefore, Spryker recommends not to use ORM for these operations, but choose other solutions instead, for example, CTE, PDO, etc. 
+
+For data import of large files it's also important to use bulk processing: consider importing data into the database with chunks of 1000+ elements, the same applies to triggering events. Using bulk processing will save a lot of time for communication with the database and queues.
+
+For more information about improving data import performance, see [Data importer speed optimization](/docs/scos/dev/data-import/{{site.version}}/data-importer-speed-optimization.html).
 
 Features affected by the ORM approach:
 

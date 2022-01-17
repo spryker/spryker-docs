@@ -1189,7 +1189,7 @@ entries:
         include_versions:
         - "202108.0"
       - title: Glue API - Content Items API feature integration
-        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-content-items-api-feature-integration.html
+        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-content-items-feature-integration.html
         include_versions:
         - "201907.0"
         - "202001.0"

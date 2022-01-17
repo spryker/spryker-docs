@@ -12,7 +12,7 @@ related:
     - title: Marketplace and merchant state machines interaction
       link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
     - title: 'How-to: Create a new MerchantOms flow'
-      link: docs/marketplace/dev/howtos/page.version/how-to-create-a-new-merchant-oms-flow.html
+      link: docs/marketplace/dev/howtos/how-to-create-a-new-merchant-oms-flow.html
 ---
 
 

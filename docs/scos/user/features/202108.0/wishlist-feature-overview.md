@@ -10,7 +10,6 @@ redirect_from:
   - /2021080/docs/en/wishlist-feature-overview
   - /docs/wishlist-feature-overview
   - /docs/en/wishlist-feature-overview
-tags: [B2C]
 ---
 
 Help your customers track and save items for later purchase through multiple wishlists, which are connected to the users' accounts.

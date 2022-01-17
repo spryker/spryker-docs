@@ -12,7 +12,9 @@ redirect_from:
 
 This topic contains the reference information you need to know when working with CMS Blocks in the **Content Management** > **Blocks** section.
 ***
+
 ## CMS Blocks Page
+
 On the **Overview of CMS Blocks** page, you see the following:
 
 | Attribute | Description |
@@ -30,7 +32,9 @@ On this page, you can also:
 * Sort blocks Block Id, Name, Template, and Status.
 * Filter content items by Block Id, Name, and Template.
 ***
+
 ## Create and Edit CMS Block Page
+
 The following table describes the attributes you enter when creating or editing a CMS block.
 
 |Attribute  |  Description|
@@ -44,7 +48,9 @@ The following table describes the attributes you enter when creating or editing 
 | **Categories: bottom** | A block or blocks assigned to a category page. The block will appear at the bottom of the page. |
 | **Products** | A block or blocks assigned to a product details page. |
 ***
+
 ## View CMS Block page
+
 The following table describes the attributes you see when viewing a CMS block.
 
 | Attribute | Description |

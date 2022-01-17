@@ -49,7 +49,7 @@ You can also check some entities that are configured as publicly readable:
 See the complete configuration of the PersistenceAcl module at [AclEntityMetadataConfigExpander](https://github.com/spryker/acl-merchant-portal/blob/master/src/Spryker/Zed/AclMerchantPortal/Business/Expander/AclEntity/AclEntityMetadataConfigExpander.php)
   
 ## How to extend the initial Persistence ACL configuration
-Even though the Merchant portal comes with the Persistence ACL configuration, which is fully ready for the full-fledged merchant operation and provides data protection, you can easily extend or override this configuration. To do this, implement `\Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface`.
+Even though the Merchant portal comes with the Persistence ACL configuration, which is fully ready for the full-fledged merchant operation and provides data protection, you can extend or override this configuration. To do this, implement `\Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface`.
 To override the rules that are created automatically when creating a merchant and a user's merchant, it is enough to override such methods as:
 - `\Spryker\Zed\AclMerchantPortal\AclMerchantPortalConfig::getMerchantAclRoleEntityRules()`
 - `\Spryker\Zed\AclMerchantPortal\AclMerchantPortalConfig::getMerchantUserAclRoleEntityRules()`
@@ -60,7 +60,7 @@ Let's consider an exemplary configuration of a new system entity `\Foo\Bar\Merch
 ![Configuration for new entity](https://confluence-connect.gliffy.net/embed/image/dd5b7b6e-2f65-47d8-a641-c52824b0f209.png?utm_medium=live&utm_source=custom)
 
 It is logical to inherit this entity from the merchant and give the merchant users the right to manage data.
-This allows you to restrict access to data so that only the merchant user will have access to them.
+This lets you restrict access to data so that only the merchant user will have access to them.
 
 ```php
 <?php

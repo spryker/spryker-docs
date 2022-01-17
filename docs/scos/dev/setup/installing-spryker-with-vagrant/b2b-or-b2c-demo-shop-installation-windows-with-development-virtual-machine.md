@@ -18,6 +18,7 @@ redirect_from:
   - /v4/docs/en/b2b-demo-shop-installation-windows-with-development-virtual-machine
   - /v4/docs/b2c-demo-shop-installation-windows-with-development-virtual-machine
   - /v4/docs/en/b2c-demo-shop-installation-windows-with-development-virtual-machine
+  - /docs/b2c-demo-shop-installation-windows-with-development-virtual-machine
 
 ---
 

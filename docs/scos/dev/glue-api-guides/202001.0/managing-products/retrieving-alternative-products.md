@@ -18,7 +18,7 @@ related:
   - title: Discontinued Products Feature Overview
     link: docs/scos/user/features/page.version/product-feature-overview/discontinued-products-overview.html
   - title: Catalog Search
-    link: docs/scos/dev/glue-api-guides/page.version/catalog-search.html
+    link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.html
 ---
 
 The _Alternative Products_ feature allows customers to quickly find a substitute product in case if their preferred item runs out of stock or is no longer available for other reasons. The feature is particularly useful when a certain product becomes discontinued. In this case, customers usually seek for a more up-to-date generation of the same product, and suggesting possible alternatives is especially crucial.

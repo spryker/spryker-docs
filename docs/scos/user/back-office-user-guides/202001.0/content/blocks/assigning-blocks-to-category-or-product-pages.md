@@ -11,8 +11,10 @@ redirect_from:
 
 The topic describes how to create a category and a product details page by assigning CMS blocks to those pages.
 ***
+
 This might be useful if you decided to hold a marketing campaign, a set of activities (sales, discounts) geared towards some event or add a banner to the page. In this case, you can embed a CMS block containing the marketing content that will be displayed only on category or product detail pages you specify.
 ***
+
 To start creating the category or product detail pages, navigate to the **Content Management > Blocks** section.
 
 ## Assigning a Block to a Category Page
@@ -25,18 +27,19 @@ To create a category page:
 
 You can only add existing, active, and not expired block. If the block has not been created yet, see the [Creating a CMS Block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/creating-cms-blocks.html) article first.
 
-{% endinfo_block %} 
+{% endinfo_block %}
 
 2. On the **Edit CMS Block: Block ID** page that opens, put a cursor on the container where the CMS block will be displayed depending on your design requirements:
 
     * Categories: top
     * Categories: middle
     * Categories: bottom
-![Position blocks on a category page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Blocks/Assigning+Blocks+to+Category+or+Product+Pages/categories-position.png) 
+
+![Position blocks on a category page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Blocks/Assigning+Blocks+to+Category+or+Product+Pages/categories-position.png)
 
 {% info_block infoBox %}
 
-See  [CMS Block: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/blocks/references/cms-block-reference-information.html) to learn more about attributes displayed on the **Edit CMS Block: Block ID** page.
+See [CMS Block: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/references/cms-block-reference-information.html) to learn more about attributes displayed on the **Edit CMS Block: Block ID** page.
 
 {% endinfo_block %}  
 
@@ -52,17 +55,18 @@ To create a product detail page:
 {% info_block warningBox %}
 
 You can only add existing, active, and not expired block. If the block has not been created yet, see the [Creating a CMS Block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/creating-cms-blocks.html) article first.
-{% endinfo_block %} 
 
-2. Scroll down the page to the **Products** field and put a cursor there. 
+{% endinfo_block %}
+
+2. Scroll down the page to the **Products** field and put a cursor there.
 
 {% info_block infoBox %}
 
-See  [CMS Block: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/blocks/references/cms-block-reference-information.html) to learn more about attributes displayed on the **Edit CMS Block: Block ID** page.
+See  [CMS Block: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/references/cms-block-reference-information.html) to learn more about attributes displayed on the **Edit CMS Block: Block ID** page.
 
 {% endinfo_block %}  
 
-![Assign blocks to a product detail page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Blocks/Assigning+Blocks+to+Category+or+Product+Pages/product-page-block.png) 
+![Assign blocks to a product detail page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Blocks/Assigning+Blocks+to+Category+or+Product+Pages/product-page-block.png)
 
 3. From the drop-down list, select any of the suggested abstract products.  
 4. To keep the changes, click **Save**.

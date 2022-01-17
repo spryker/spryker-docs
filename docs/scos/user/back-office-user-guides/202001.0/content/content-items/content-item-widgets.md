@@ -29,6 +29,6 @@ You can work with widgets after they have been installed for your project.
 
 
 **What's next?**
-To know more about how to add a content item widget to a page or block, see [Adding Content Item Widgets to CMS Pages and Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html).
+To know more about how to add a content item widget to a page or block, see [Adding Content Item Widgets to CMS Pages and Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
 
-To learn more about types of content item widgets and their templates, see articles in the [References](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/content-item-widgets/references/content-item-widgets-templates-reference-information.html) section.
+To learn more about types of content item widgets and their templates, see articles in the [References](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-item-widgets-templates.html) section.

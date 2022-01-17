@@ -21,10 +21,12 @@ related:
 
 This topic describes the procedures for creating and managing company users. This is the final step in the company account setup.
 ***
+
 The company user can be created only if the company role, company, and business unit exist.
 ***
+
 To start managing company users, navigate to the **Company Account > Company Users** section.
-*** 
+***
 
 ## Creating a Company Users
 
@@ -43,7 +45,6 @@ To add a new company user:
 
 This is a very important step in a company account setup.
 To attach a company user to a new company business unit, **within the same company**:
-
 1. On the **Overview of Company Users** page in the _Actions_ column, click **Attach to BU** for a user for which you want to change the assigned business unit.
 2. On the **Attach to Business Unit** page:
   1. Select a business unit you would like the company user to be attached to from the drop-down list.
@@ -51,26 +52,33 @@ To attach a company user to a new company business unit, **within the same compa
 3. Click **Save**.
 
 ## Editing a Company User
+
 To edit a company user:
 1. On the **Overview of Company Users** page in the _Actions_ column, click **Edit** for the user you want to update.
 2. Update the needed values and click **Save**.
-  
-  {% info_block infoBox "Info" %}
-  All values are available for modifications except for the email. The **Email** field is greyed out and is not available for modifications.
-  {% endinfo_block %}
+
+{% info_block infoBox "Info" %}
+
+All values are available for modifications except for the email. The **Email** field is greyed out and is not available for modifications.
+
+{% endinfo_block %}
 
 ## Enabling/Disabling a Company User
 
 If the company User is currently deactivated, there will be the **Enable** option in the _Actions_ column. Click it to activate the user.
 
 And vice versa, if the user is enabled, they can be disabled here. Click **Disable** to deactivate the user.
-![Enabling a company user](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/Managing+Company+Users/enabling-company-user.png) 
+
+![Enabling a company user](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/Managing+Company+Users/enabling-company-user.png)
 
 ## Deleting a Company User
 
 To delete a company user:
-1. On the **Overview of Company Users** page, click **Delete** in the _Actions_ column. 
-2. On the **Company user deletion confirmation** page, confirm the deletion. 
+1. On the **Overview of Company Users** page, click **Delete** in the _Actions_ column.
+2. On the **Company user deletion confirmation** page, confirm the deletion.
+
 {% info_block warningBox "Note" %}
+
 If confirmed, the user will be deleted from everywhere and will no longer be able to log in to the online store.
+
 {% endinfo_block %}

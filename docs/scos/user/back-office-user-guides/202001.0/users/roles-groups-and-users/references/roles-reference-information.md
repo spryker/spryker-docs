@@ -12,9 +12,12 @@ redirect_from:
 
 This topic contains the reference information that you need to know when working in the **Users Control > Roles** section.
 ***
+
 ## Roles Page
+
 On the **Roles** page, you see the creation date, role name, and the actions that you can perform.
 ***
+
 ## Create and Edit Role Page
 
 The following table describes the attributes that are used when creating or updating a role.
@@ -26,4 +29,3 @@ The following table describes the attributes that are used when creating or upda
 |**Controller**  | This identifies the controller responsible for the bundle. |
 | **Action** | This identifies what action can be performed for a specific module.  |
 | **Permission** | Can be either allow or deny. |
-

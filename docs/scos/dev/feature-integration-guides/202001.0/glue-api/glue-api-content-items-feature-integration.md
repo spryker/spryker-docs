@@ -8,7 +8,7 @@ originalArticleId: be895e9a-8c1b-412a-98fe-688abefc4741
 redirect_from:
   - /v4/docs/glue-api-content-items-api-feature-integration
   - /v4/docs/en/glue-api-content-items-api-feature-integration
-  - /docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-api-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-feature-integration.html
 ---
 
 ## Install Feature API

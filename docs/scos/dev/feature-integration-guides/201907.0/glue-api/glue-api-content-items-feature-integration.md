@@ -8,7 +8,7 @@ originalArticleId: afe7bfc3-42ef-4ff8-809d-97ec2dd778ba
 redirect_from:
   - /v3/docs/content-items-api-feature-integration
   - /v3/docs/en/content-items-api-feature-integration
-  - /docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-api-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-feature-integration.html
 related:
   - title: Glue Infrastructure
     link: docs/scos/dev/glue-api-guides/page.version/glue-infrastructure.html

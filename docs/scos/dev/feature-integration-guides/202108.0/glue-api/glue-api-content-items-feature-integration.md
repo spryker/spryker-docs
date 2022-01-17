@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/glue-api-content-items-api-feature-integration
   - /docs/glue-api-content-items-api-feature-integration
   - /docs/en/glue-api-content-items-api-feature-integration
-  - /docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-api-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-feature-integration.html
 ---
 
 ## Install Feature API

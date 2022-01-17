@@ -9,7 +9,7 @@ template: feature-integration-guide-template
 
 The following feature integration guide expects the basic feature to be in place.
 
-The current feature integration guide adds discount prioritization functionality.
+The current feature integration guide adds **Discount Prioritization** and **Discount Valid From and Valid To Supports Time Definition** functionality.
 
 {% endinfo_block %}
 
@@ -75,11 +75,15 @@ Make sure that the following changes have been applied by checking your database
 Make sure that the following changes have been triggered in transfer objects:
 
 
-| TRANSFER                    | TYPE      | EVENT   | PATH                                                     |
-|-----------------------------|-----------|---------|----------------------------------------------------------|
-| Discount.priority           | property  | created | src/Generated/Shared/Transfer/DiscountTransfer           |
-| CalculatedDiscount.priority | property  | created | src/Generated/Shared/Transfer/CalculatedDiscountTransfer |
-| DiscountGeneral.priority    | property  | created | src/Generated/Shared/Transfer/DiscountGeneral            |
+| TRANSFER                     | TYPE     | EVENT   | PATH                                                               |
+|------------------------------|----------|---------|--------------------------------------------------------------------|
+| DiscountConfiguratorResponse | class    | created | src/Generated/Shared/Transfer/DiscountConfiguratorResponseTransfer |
+| DiscountAmountCriteria       | class    | created | src/Generated/Shared/Transfer/DiscountAmountCriteriaTransfer       |
+| Discount.priority            | property | created | src/Generated/Shared/Transfer/DiscountTransfer                     |
+| Discount.minimumItemAmount   | property | created | src/Generated/Shared/Transfer/DiscountTransfer                     |
+| Discount.storeRelation       | property | created | src/Generated/Shared/Transfer/DiscountTransfer                     |
+| CalculatedDiscount.priority  | property | created | src/Generated/Shared/Transfer/CalculatedDiscountTransfer           |
+| DiscountGeneral.priority     | property | created | src/Generated/Shared/Transfer/DiscountGeneral                      |
 
 {% endinfo_block %}
 
@@ -96,6 +100,14 @@ Make sure that discounts are calculated according to their priorities:
     2. Add items to the cart to fulfill discounts' requirements.
 
     3. Check that discounts are applied in the correct order and the calculated discount total is correct.
+
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
+Make sure that **Valid From** and **Valid To** discount form fields can accept date and time.
+
+Make sure, that **Valid From** and **Valid To** dates are persisted correctly in `spy_discount` DB table.
 
 {% endinfo_block %}
 

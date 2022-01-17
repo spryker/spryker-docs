@@ -1,0 +1,26 @@
+#!/usr/bin/env php
+<?php
+require __DIR__.'/vendor/autoload.php';
+
+use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\SingleCommandApplication;
+use Validator\LastUpdatedValidator;
+
+const ROOT_DIR = __DIR__ . '/../';
+
+set_error_handler(function($errno, $errstr, $errfile, $errline) {
+    throw new ErrorException($errstr, 0, $errno, $errfile, $errline);
+});
+
+(new SingleCommandApplication())
+    ->addArgument('dir', InputArgument::REQUIRED)
+    ->setCode(function (InputInterface $input, OutputInterface $output): int {
+        $directory = realpath(ROOT_DIR . $input->getArgument('dir'));
+        $validator = new LastUpdatedValidator($output);
+
+        return $validator->validate($directory) ? Command::SUCCESS : Command::FAILURE;
+    })
+    ->run();

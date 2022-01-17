@@ -201,7 +201,20 @@ jobs:
 
       - run: bundle exec rake check_scos_user
 
+  last_updated_validation:
+    name: last_updated validation
+    runs-on: ubuntu-latest
 
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup
+        run: |
+          cd ./last-updated-validator
+          composer install --prefer-dist --no-progress
+
+      - name: Run validator command
+        run: php validate docs
 
   page_validation:
     name: Page validation

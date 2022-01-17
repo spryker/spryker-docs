@@ -105,7 +105,7 @@ Please visit our [Partners Registry](https://spryker.com/find-a-partner/) for a 
 * [Adyen](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/payment-integration-adyen.html)
 * [Amazon Pay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/amazon-pay/amazon-pay.html)
 * [AfterPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/afterpay.html)
-* [Arvato](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/arvato/arvato.html)
+* [Arvato](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/arvato.html)
 * [Billie](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billie.html)
 * [Billpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billpay/billpay.html)
 * [Braintree](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/braintree/braintree.html)

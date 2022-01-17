@@ -48,7 +48,7 @@ Make sure that the following modules have been installed:
  {% endinfo_block %}
 --------------------
 
-### Set up database schema and transfer objects
+### 2) Set up database schema and transfer objects
 
 1. Apply database changes and generate entity and transfer changes:
 
@@ -85,6 +85,16 @@ Make sure that the following changes have been triggered in transfer objects:
 | CalculatedDiscount.priority  | property | created | src/Generated/Shared/Transfer/CalculatedDiscountTransfer           |
 | DiscountGeneral.priority     | property | created | src/Generated/Shared/Transfer/DiscountGeneral                      |
 
+
+### 4) Set up behavior
+
+Run the following commands to enable Javascript and CSS changes:
+
+```bash
+console frontend:zed:install-dependencies
+console frontend:zed:build
+```
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
@@ -104,6 +114,8 @@ Make sure that discounts are calculated according to their priorities:
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
+
+Make sure that you can see a datetime picker dropdown when you click on **Valid From** and **Valid To** discount form fields.
 
 Make sure that **Valid From** and **Valid To** discount form fields can accept date and time.
 

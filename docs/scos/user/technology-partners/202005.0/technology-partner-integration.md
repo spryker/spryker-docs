@@ -103,7 +103,7 @@ In this section you will find information about our Technology Partner Integrati
 ## Payment Partners
 
 * [Adyen](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen.html)
-* [Amazon Pay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/amazon-pay/amazon-pay.html)
+* [Amazon Pay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/amazon-pay.html)
 * [AfterPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/afterpay.html)
 * [Arvato](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/arvato/arvato.html)
 * [Billie](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billie.html)

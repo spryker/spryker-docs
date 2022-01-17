@@ -6,12 +6,6 @@ related:
     link: docs/scos/dev/module-migration-guides/migration-guide-session.html
 ---
 
-{% info_block infoBox "New Relic installation in Docker based projects" %}
-
-For installation instructions in Docker based projects, see [Configuring New Relic](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-services.html#configuring-new-relic)
-
-{% endinfo_block %}
-
 To install and configure New Relic, do the following.
 
 ## Install New Relic
@@ -46,4 +40,4 @@ Monitoring is a Spryker module that provides a hook to add any monitoring provid
 
 ## New Relic API
 
-You can add custom New Relic events in your application with the API wrapper for New Relic in `\SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin`. To read detailed information about the available API methods, please read the following documentation: [New Relic API](https://docs.newrelic.com/docs/agents/php-agent/php-agent-api).
+You can add custom New Relic events in your application with the API wrapper for New Relic in `\SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin`. To read detailed information about the available API methods, please read the following documentation: [New Relic API](https://docs.newrelic.com/docs/apm/agents/php-agent/php-agent-api/guide-using-php-agent-api/).

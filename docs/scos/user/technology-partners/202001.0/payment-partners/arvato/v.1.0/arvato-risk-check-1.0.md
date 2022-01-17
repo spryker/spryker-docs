@@ -31,7 +31,9 @@ Response can be taken with:
  ```
 
 {% info_block warningBox "Note" %}
+
 The transfer can have all fields empty if error occurred during request.
+
 {% endinfo_block %}
 
 <b>Data, which is sent to Arvato RSS and must be present in the quote:</b>

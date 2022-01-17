@@ -30,9 +30,9 @@ related:
   - title: Heidelpay - Split-payment Marketplace
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-split-payment-marketplace.html
   - title: Payment Integration - Adyen
-    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen.html
-  - title: AfterPay
-    link: docs/scos/user/technology-partners/page.version/payment-partners/afterpay/afterpay.html
+    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen.html
+  - title: Afterpay
+    link: docs/scos/user/technology-partners/page.version/payment-partners/afterpay.html
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of major new features and enhancements released in March of 2019.
@@ -188,11 +188,11 @@ Out-of-the-box the following payment methods are included:
 * QR code payment methods (Alipay, WeChat)
 * further ones can be added to the project
 
-**Documentation**: [Adyen](/docs/scos/user/technology-partners/201903.0/payment-partners/adyen/adyen.html).
+**Documentation**: [Adyen](/docs/scos/user/technology-partners/201903.0/payment-partners/adyen.html).
 
 ### Arvato AfterPay
 In addition to the existing Arvato RSS integration, Spryker has added the AfterPay payment method of Arvato, further extending the overall payment integrations of the Spryker Ecosystem. This invoice payment method includes a risk check of the potential uncertainty behind specific purchases and lowers the overall risk of fraud; used by default for the companies.
 
-**Documentation**: [AfterPay](/docs/scos/user/technology-partners/201903.0/payment-partners/afterpay/afterpay.html).
+**Documentation**: [AfterPay](/docs/scos/user/technology-partners/201903.0/payment-partners/afterpay.html).
 
 Check out [Documentation Updates](/docs/scos/user/intro-to-spryker/whats-new/documentation-updates.html) for all the updates to documentation made with this release.

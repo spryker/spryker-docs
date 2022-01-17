@@ -32,7 +32,9 @@ related:
 ---
 
 {% info_block infoBox "Note" %}
+
 Please refer to `config/Shared/config.dist.php` for the module configuration example.
+
 {% endinfo_block %}
 
 

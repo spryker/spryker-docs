@@ -51,17 +51,17 @@ entries:
       - title: B2B or B2C Demo Shop installation- Mac OS or Linux, with Development
           Virtual Machine
         url: /docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-mac-os-or-linux-with-development-virtual-machine.html
+      - title: B2B or B2C Demo Shop installation- without Development Virtual Machine
+        url: /docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-without-development-virtual-machine.html
+      - title: B2B or B2C Demo Shop installation- Windows, with Development Virtual
+          Machine
+        url: /docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-windows-with-development-virtual-machine.html
       - title: Debugger
         nested:
         - title: Configuring debugging in Vagrant
           url: /docs/scos/dev/setup/installing-spryker-with-vagrant/debugger-configuration/configuring-debugging-in-vagrant.html
         - title: Configuring debugging in Vagrant with VM below version 91
           url: /docs/scos/dev/setup/installing-spryker-with-vagrant/debugger-configuration/configuring-debugging-in-vagrant-with-vm-below-version-91.html
-      - title: B2B or B2C Demo Shop installation- without Development Virtual Machine
-        url: /docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-without-development-virtual-machine.html
-      - title: B2B or B2C Demo Shop installation- Windows, with Development Virtual
-          Machine
-        url: /docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-windows-with-development-virtual-machine.html
       - title: Virtual Machine Cleanup
         url: /docs/scos/dev/setup/installing-spryker-with-vagrant/virtual-machine-cleanup.html
       - title: Upgrading to the latest version of Node.js inside devwm
@@ -381,12 +381,12 @@ entries:
         - "201811.0"
         - "201903.0"
         - "201907.0"
-        - "202001.0"
       - title: Navigation
         url: /docs/scos/dev/feature-walkthroughs/navigation-feature-walkthrough/navigation-feature-walkthrough.html
       - title: Navigation module- reference information
         url: /docs/scos/dev/feature-walkthroughs/navigation-feature-walkthrough/navigation-module-reference-information.html
         include_versions:
+        - "202001.0"
         - "202005.0"
         - "202009.0"
         - "202108.0"
@@ -3241,8 +3241,10 @@ entries:
           nested:
           - title: State machine console commands
             url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/state-machine-console-commands.html
+          - title: Order management system multi-thread  
             url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-management-system-multi-thread.html
-          - title: Order process modelling via state machines
+          - title: Common pitfalls in OMS design
+            url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html
         - title: Multi-Language Setup
           url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html
         - title: Checkout
@@ -3579,10 +3581,6 @@ entries:
     - title: Running tests with the Docker SDK
       url: /docs/scos/dev/the-docker-sdk/running-tests-with-the-docker-sdk.html
       include_versions:
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
       - "202009.0"
       - "202108.0"
     - title: Retrieving promotional items
@@ -4104,6 +4102,62 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-feature-integration.html
             - title: Eco - Punchout Catalogs + Product Bundles feature integration
               url: /docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html
+    - title: Payment partners
+      nested:
+        - title: Adyen
+          nested:
+            - title: Installing and configuring Adyen
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/installing-and-configuring-adyen.html
+            - title: Integrating Adyen
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/integrating-adyen.html
+            - title: Integrating Adyen payment methods
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/integrating-adyen-payment-methods.html
+            - title: Enabling Adyen filtering payment methods
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/enabling-adyen-filtering-payment-methods.html
+        - title: Afterpay
+          nested:
+            - title: Installing and configuring Afterpay
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/afterpay/installing-and-configuring-afterpay.html
+            - title: Integrating Afterpay
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/afterpay/integrating-afterpay.html
+        - title: RatePay
+          nested:
+            - title: RatePay - Payment methods
+              nested:
+                - title: RatePay - Direct Debit
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html
+                - title: RatePay - Prepayment
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-payment-methods/ratepay-prepayment.html
+                - title: RatePay - Installment
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-payment-methods/ratepay-installment.html
+                - title: RatePay - Invoice
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-payment-methods/ratepay-invoice.html
+            - title: Technical details and HowTos
+              nested:
+                - title: RatePay facade
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/technical-details-and-howtos/ratepay-facade.html
+                - title: RatePay payment workflow
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/technical-details-and-howtos/ratepay-payment-workflow.html
+                - title: Disabling address updates from the backend application for RatePay
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/technical-details-and-howtos/disabling-address-updates-from-the-backend-application-for-ratepay.html
+                - title: RatePay state machine commands and conditions
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/technical-details-and-howtos/ratepay-state-machine-commands-and-conditions.html
+            - title: RatePay Core module structure diagram
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
+            - title: RatePay state machines
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-state-machines.html
+    - title: Taxes
+      include_versions:
+      - "202108.0"
+      nested:
+        - title: Avalara
+          nested:
+            - title: Integrating Avalara
+              url: /docs/scos/dev/technology-partner-guides/taxes/avalara/integrating-avalara.html
+            - title: Integrating Avalara Tax + Product Options
+              url: /docs/scos/dev/technology-partner-guides/taxes/avalara/integrating-avalara-tax-product-options.html
+            - title: Integrating Avalara Tax + Shipment
+              url: /docs/scos/dev/technology-partner-guides/taxes/avalara/integrating-avalara-tax-shipment.html
   - title: Architecture
     url: /docs/scos/dev/architecture/architecture.html
     nested:

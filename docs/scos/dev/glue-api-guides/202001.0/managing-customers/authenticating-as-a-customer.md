@@ -29,27 +29,27 @@ For increased security, access tokens have a limited lifetime. When receiving an
 
 | Action | Method | Endpoints |
 | --- | --- | --- |
-| Customer - Get a Customer | GET | http://mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %} |
-| Customer - Update info | PATCH | http://mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %} |
-| Customer - Change password | PATCH | http://mysprykershop.com/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %} |
-| Customer - Delete | DELETE | http://mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %} |
-| Customer - Create a new address | POST | http://mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %}/addresses |
-| Customer - Update existing address | PATCH | http://mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %}/addresses/{% raw %}{{{% endraw %}customer_address_uuid{% raw %}}}{% endraw %} |
-| Customer - Delete the address | DELETE | http://mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %}/addresses/{% raw %}{{{% endraw %}customer_address_uuid{% raw %}}}{% endraw %} |
-| Customer - Get List of Order | GET | http://mysprykershop.com/orders |
-| Customer - Ger Order details | GET | http://mysprykershop.com/orders/{% raw %}{{{% endraw %}order_id{% raw %}}}{% endraw %} |
-| Cart - Create the new cart | POST | http://mysprykershop.com/carts |
-| Cart - Retrieve the cart | GET | http://mysprykershop.com/carts<br>http://mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}<br>Cart - Add an item to the cart | POST | http://mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/items |
-| Cart - Update item quantity | PATCH | http://mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %} |
-| Cart - Remove the cart | DELETE | http://mysprykershop.com/carts/{% raw %}{{{% endraw %}url{% raw %}}}{% endraw %}/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %} |
-| Cart - Remove items from a cart | DELETE | http://mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}concrete_id{% raw %}}}{% endraw %} |
-| Wishlist - Add an item to wishlist | POST | http://mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_uuid{% raw %}}}{% endraw %}/wishlist-items |
-| Wishlist - Create the wishlist | POST | http://mysprykershop.com/wishlists |
-| Wishlist - Delete a wishlist | DELETE | http://mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_uuid{% raw %}}}{% endraw %} |
-| Wishlist - Delete an item into a wishlist | DELETE | http://mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlist-items/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %} |
-| Wishlist - Get list of wishlist | GET | http://mysprykershop.com/wishlists |
-| Wishlist - Get wishlist by ID | GET | http://mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_uuid{% raw %}}}{% endraw %} |
-| Wishlist - Rename a wishlist | PATCH | http://mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_uuid{% raw %}}}{% endraw %} |
+| Customer - Get a Customer | GET | `http://mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %}` |
+| Customer - Update info | PATCH | `http://mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %}` |
+| Customer - Change password | PATCH | `http://mysprykershop.com/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %}` |
+| Customer - Delete | DELETE | `http://mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %}` |
+| Customer - Create a new address | POST | `http://mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %}/addresses`|
+| Customer - Update existing address | PATCH | `http://mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %}/addresses/{% raw %}{{{% endraw %}customer_address_uuid{% raw %}}}{% endraw %}` |
+| Customer - Delete the address | DELETE | `http://mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %}/addresses/{% raw %}{{{% endraw %}customer_address_uuid{% raw %}}}{% endraw %}` |
+| Customer - Get List of Order | GET | `http://mysprykershop.com/orders` |
+| Customer - Ger Order details | GET | `http://mysprykershop.com/orders/{% raw %}{{{% endraw %}order_id{% raw %}}}{% endraw %}` |
+| Cart - Create the new cart | POST | `http://mysprykershop.com/carts` |
+| Cart - Retrieve the cart | GET | `http://mysprykershop.com/carts`<br>`http://mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}`<br>Cart - Add an item to the cart | POST | `http://mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/items` |
+| Cart - Update item quantity | PATCH | `http://mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}` |
+| Cart - Remove the cart | DELETE | `http://mysprykershop.com/carts/{% raw %}{{{% endraw %}url{% raw %}}}{% endraw %}/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}` |
+| Cart - Remove items from a cart | DELETE | `http://mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}concrete_id{% raw %}}}{% endraw %}` |
+| Wishlist - Add an item to wishlist | POST | `http://mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_uuid{% raw %}}}{% endraw %}/wishlist-items` |
+| Wishlist - Create the wishlist | POST | `http://mysprykershop.com/wishlists` |
+| Wishlist - Delete a wishlist | DELETE | `http://mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_uuid{% raw %}}}{% endraw %}` |
+| Wishlist - Delete an item into a wishlist | DELETE | `http://mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlist-items/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}` |
+| Wishlist - Get list of wishlist | GET | `http://mysprykershop.com/wishlists` |
+| Wishlist - Get wishlist by ID | GET | `http://mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_uuid{% raw %}}}{% endraw %}` |
+| Wishlist - Rename a wishlist | PATCH | `http://mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_uuid{% raw %}}}{% endraw %}` |
 
 ## Installation
 For instructions on how to install the necessary modules and enable OAuth authentication, see [Customer Account Management Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html).

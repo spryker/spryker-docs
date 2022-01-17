@@ -11,8 +11,11 @@ redirect_from:
 ---
 
 The following tables describe the attributes that you use when creating and editing concrete and abstract products.
+
 {% info_block warningBox "Note" %}
+
 The set of tabs for Create and Edit pages, as well as for abstract and concrete products, is different. Hence the additional columns with identifiers are added for your convenience.
+
 {% endinfo_block %}
 
 **General tab**
@@ -39,7 +42,9 @@ The set of tabs for Create and Edit pages, as well as for abstract and concrete 
 **Variants tab**
 
 {% info_block warningBox "Note" %}
+
 No values are available for selection when you create a product bundle. When you create a bundle, one product variant will be added by default.
+
 {% endinfo_block %}
 
 * **While creating** an abstract product, you will see a list of super attributes that derive from **Products > Attributes**. You can select as many super attributes as you need and define from one to many values for them (those values will define the difference between the product variants). Please keep in mind that moving forward, you will be able to create product variants only based on the selected super attributes. As well as you need to add at least one super attribute and define at least one value for it in order to be able to add more product variants in the future.

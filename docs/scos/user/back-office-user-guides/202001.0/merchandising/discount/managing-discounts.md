@@ -61,8 +61,10 @@ And you can also do the following:
 ***
 
 ## Activating/Deactivating Discounts
-You can activate/deactivate a discount while editing it. 
 
+You can activate/deactivate a discount while editing it. 
 Click **Activate/Deactivate** in the top-right corner of the **Edit Discount** page.
+
 **OR**
+
 On the **Overview of Discounts** page, click **Activate**/**Deactivate** in the _Actions_ column.

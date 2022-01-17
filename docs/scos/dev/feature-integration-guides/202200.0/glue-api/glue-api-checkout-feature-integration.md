@@ -343,8 +343,10 @@ Make sure that the following changes have been applied in transfer objects:
 | CheckoutDataTransfer.quote                           | property | added      | src/Generated/Shared/Transfer/CheckoutDataTransfer.php       |
 | RestCheckoutDataResponseAttributesTransfer.addresses | property | deprecated | src/Generated/Shared/Transfer/RestCheckoutDataResponseAttributesTransfer.php |
 | QuoteTransfer.salesOrderThresholdValues              | property | added      | src/Generated/Shared/Transfer/QuoteTransfer.php |
-| RestCartsThresholdsTransfer.deltaWithSubtotal        | property | added      | src/Generated/Shared/Transfer/RestCartsThresholdsTransfer.php |
-| RestCartsThresholdsTransfer.message                  | property | added      | src/Generated/Shared/Transfer/RestCartsThresholdsTransfer.php |
+| RestCartsAttributesTransfer                          | class | created      | src/Generated/Shared/Transfer/RestCartsAttributesTransfer.php |
+| SalesOrderThresholdTypeTransfer                      | class | created      | src/Generated/Shared/Transfer/SalesOrderThresholdTypeTransfer.php |
+| SalesOrderThresholdValueTransfer                     | class | created      | src/Generated/Shared/Transfer/SalesOrderThresholdValueTransfer.php |
+| RestCartsThresholdsTransfer                          | class | created      | src/Generated/Shared/Transfer/RestCartsThresholdsTransfer.php |
 
 {% endinfo_block %}
 

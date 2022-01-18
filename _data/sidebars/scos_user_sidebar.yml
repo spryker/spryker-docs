@@ -2353,6 +2353,8 @@ entries:
             url: /docs/scos/user/technology-partners/payment-partners/bs-payone/legacy-demoshop-integration/payone-integration-into-the-legacy-demoshop-project.html
       - title: Billpay
         url: /docs/scos/user/technology-partners/payment-partners/billpay.html
+      - title: Braintree
+        url: /docs/scos/user/technology-partners/payment-partners/braintree.html
       - title: Klarna
         url: /docs/scos/user/technology-partners/payment-partners/klarna/klarna.html
         nested:
@@ -2366,57 +2368,6 @@ entries:
             url: /docs/scos/user/technology-partners/payment-partners/klarna/technical-details-and-howtos/klarna-state-machine-commands-and-conditions.html
           - title: Klarna - Invoice Pay in 14 days
             url: /docs/scos/user/technology-partners/payment-partners/klarna/technical-details-and-howtos/klarna-invoice-pay-in-14-days.html
-      - title: Braintree
-        url: /docs/scos/user/technology-partners/payment-partners/braintree/braintree.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202009.0"
-        - "202108.0"
-        nested:
-        - title: Braintree - Technical Details and HowTos
-          nested:
-          - title: Braintree - Performing Requests for SCOS
-            url: /docs/scos/user/technology-partners/payment-partners/braintree/braintree-technical-details-and-howtos/braintree-performing-requests.html
-          - title: Braintree - Workflow for SCOS
-            url: /docs/scos/user/technology-partners/payment-partners/braintree/braintree-technical-details-and-howtos/braintree-workflow.html
-        - title: Braintree - Configuration for SCOS
-          url: /docs/scos/user/technology-partners/payment-partners/braintree/braintree-installation-and-configuration.html
-        - title: Legacy Demoshop Integration
-          include_versions:
-          - "201811.0"
-          - "201903.0"
-          - "201907.0"
-          - "202001.0"
-          nested:
-          - title: Braintree - Configuration for the Legacy Demoshop
-            url: /docs/scos/user/technology-partners/payment-partners/braintree/legacy-demoshop-integration/braintree-configuration-for-the-legacy-demoshop.html
-            include_versions:
-            - "201811.0"
-            - "201903.0"
-            - "201907.0"
-            - "202001.0"
-          - title: Braintree - Performing Requests for the Legacy Demoshop
-            url: /docs/scos/user/technology-partners/payment-partners/braintree/legacy-demoshop-integration/braintree-performing-requests-for-the-legacy-demoshop.html
-            include_versions:
-            - "201811.0"
-            - "201903.0"
-            - "201907.0"
-            - "202001.0"
-          - title: Braintree - Workflow for Legacy Demoshop
-            url: /docs/scos/user/technology-partners/payment-partners/braintree/legacy-demoshop-integration/braintree-workflow-for-legacy-demoshop.html
-            include_versions:
-            - "201811.0"
-            - "201903.0"
-            - "201907.0"
-            - "202001.0"
-        - title: Integrating Braintree
-          url: /docs/scos/user/technology-partners/payment-partners/braintree/braintree-integration-into-a-project.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
       - title: Heidelpay
         url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay.html
         include_versions:

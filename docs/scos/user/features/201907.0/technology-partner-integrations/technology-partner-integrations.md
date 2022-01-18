@@ -56,7 +56,7 @@ Seamlessly integrate the third-party solutions you need and make your store uniq
         <area shape="rectangle" coords="484,611,711,721" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/payment-partners/amazon-pay/amazon-pay.html" />
         <area shape="rectangle" coords="1,720,241,808" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution/payolution.html" />
         <area shape="rectangle" coords="241,723,486,810" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/hosting-providers/root-360.html" />
-        <area shape="rectangle" coords="486,723,712,807" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/payment-partners/braintree/braintree.html" />
+        <area shape="rectangle" coords="486,723,712,807" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/payment-partners/braintree.html" />
     </map>
 -->
 <!-- ../../Resources/Images/IP Integrations.png" usemap="#map1 -->

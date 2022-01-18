@@ -10,17 +10,17 @@ redirect_from:
   - /v4/docs/en/braintree
 related:
   - title: Braintree - Configuration for SCOS
-    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree-installation-and-configuration.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-installation-and-configuration.html
   - title: Braintree - Performing Requests for SCOS
-    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree-technical-details-and-howtos/braintree-performing-requests.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-performing-requests.html
   - title: Braintree - Performing Requests for the Legacy Demoshop
-    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/legacy-demoshop-integration/braintree-performing-requests-for-the-legacy-demoshop.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/legacy-demoshop-integration/braintree-performing-requests-for-the-legacy-demoshop.html
   - title: Braintree - Workflow for SCOS
-    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree-technical-details-and-howtos/braintree-workflow.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-workflow.html
   - title: Braintree - Workflow for Legacy Demoshop
-    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/legacy-demoshop-integration/braintree-workflow-for-legacy-demoshop.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/legacy-demoshop-integration/braintree-workflow-for-legacy-demoshop.html
   - title: Braintree - Configuration for the Legacy Demoshop
-    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/legacy-demoshop-integration/braintree-configuration-for-the-legacy-demoshop.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/legacy-demoshop-integration/braintree-configuration-for-the-legacy-demoshop.html
 ---
 
 [ABOUT BRAINTREE](https://www.braintreepayments.com/)

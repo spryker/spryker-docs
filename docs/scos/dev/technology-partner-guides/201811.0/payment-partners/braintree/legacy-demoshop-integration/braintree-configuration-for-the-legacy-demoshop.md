@@ -10,11 +10,11 @@ redirect_from:
   - /v1/docs/en/braintree-configuration-legacy-demoshop
 related:
   - title: Braintree
-    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree.html
+    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree.html
   - title: Braintree - Workflow for Legacy Demoshop
-    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/legacy-demoshop-integration/braintree-workflow-for-legacy-demoshop.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/legacy-demoshop-integration/braintree-workflow-for-legacy-demoshop.html
   - title: Braintree - Performing Requests for the Legacy Demoshop
-    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/legacy-demoshop-integration/braintree-performing-requests-for-the-legacy-demoshop.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/legacy-demoshop-integration/braintree-performing-requests-for-the-legacy-demoshop.html
 ---
 
 Add `spryker-eco/braintree` to your project by running `composer require spryker-eco/braintree`.

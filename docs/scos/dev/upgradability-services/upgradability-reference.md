@@ -41,12 +41,12 @@ class EvaluatorCategoryImageEntityManager extends CategoryImageEntityManager
 
 Related error in the Evaluator output:
 ```bash
-------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
 ************************************************************************************************************************
 Evaluator\Business\Check\IsMethodOverridden\EntityManagerCheck
 Introduce a new custom method without usage of existing one. Override usage of the current method in all usage of public API.
 ************************************************************************************************************************
-------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
 Pyz\Zed\EvaluatorSpryker\Persistence\EvaluatorSprykerCategoryImageEntityManager
 {"name":"saveCategoryImageSet","class":"Pyz\\Zed\\EvaluatorSpryker\\Persistence\\EvaluatorSprykerCategoryImageEntityManager"}
 {"parentClass":"Spryker\\Zed\\CategoryImage\\Persistence\\CategoryImageEntityManager"}
@@ -160,10 +160,10 @@ class CustomerAccessForm extends SprykerCustomerAccessForm
 
 Related error in the Evaluator output:
 ```text
-------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
 Pyz\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm
 "Please avoid dependency: Spryker\\Zed\\CustomerAccessGui\\Communication\\Form\\CustomerAccessForm in Pyz\\Zed\\CustomerAccessGui\\Communication\\Form\\CustomerAccessForm"
-------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
 ```
 
 ### Example of replacing a core class with a custom one

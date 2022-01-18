@@ -12,16 +12,16 @@ redirect_from:
   - /docs/en/braintree-integration
 related:
   - title: Installing and configuring Braintree
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-installation-and-configuration.html
+    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree-installation-and-configuration.html
   - title: Braintree - Performing Requests
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-performing-requests.html
+    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree-technical-details-and-howtos/braintree-performing-requests.html
   - title: Braintree - Workflow
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-workflow.html
+    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree-technical-details-and-howtos/braintree-workflow.html
 ---
 
 {% info_block errorBox %}
 
-There is currently an issue when using giftcards with Braintree. Our team is developing a fix for it.
+Gift cards are not compatible with Braintree. We are working on resolving this conflict.
 
 {% endinfo_block %}
 

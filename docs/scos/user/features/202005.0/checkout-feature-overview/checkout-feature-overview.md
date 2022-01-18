@@ -20,10 +20,10 @@ redirect_from:
 ***
 **Business Value**
 * Reduce the dropout rate with a smooth checkout workflow
-*** 
-        
+***
+
 Offer customers a smooth shopping experience and customize the checkout workflow all the way. Add, delete, and configure any step of the process, like customer account login, shipment, and payment methods or checkout overview.
-        
+
  With the Checkout functionality, you can enable customers to select single or multiple products and add wishlist items to their cart, as well as integrate different carriers and delivery methods.
  </div>
 </div>
@@ -31,6 +31,5 @@ Offer customers a smooth shopping experience and customize the checkout workflow
 
 **Features:**
 <div>
-<a class="feature-link" href="https://documentation.spryker.com/docs/en/multi-step-checkout">Multi-Step Checkout</a>  
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html">Multi-Step Checkout</a>  
 </div>
-    

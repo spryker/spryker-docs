@@ -22,7 +22,9 @@ related:
 In the B2B world, users represent their companies rather than act on their own behalf. Such users, called [Company Accounts](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html), are organized in Business Units depending on their job role and the scope of their activity. The endpoints provided by the **Business Unit** and **Business Unit Address** APIs allow retrieving Business Unit information.
 
 {% info_block warningBox "Authentication" %}
-The endpoints provided by this API cannot be accessed anonymously. To access them, you need to impersonate users as Company Accounts and pass the authentication tokens received. For details on how to authenticate and retrieve such a token, see [Logging In as Company User](https://documentation.spryker.com/v3/docs/glue-api-guides/managing-b2b-account/authenticating-as-a-company-user.html)).
+
+The endpoints provided by this API cannot be accessed anonymously. To access them, you need to impersonate users as Company Accounts and pass the authentication tokens received. For details on how to authenticate and retrieve such a token, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html).
+
 {% endinfo_block %}
 
 In your development, the endpoint can help you to provide information on the Business Units available in the company of the currently logged in user.
@@ -62,7 +64,7 @@ The endpoint responds with a collection of **RestCompanyBusinessUnitResponse**, 
 
 <details open>
 <summary markdown='span'>Sample Response</summary>
-    
+
 ```json
 {
     "data": [
@@ -88,7 +90,7 @@ The endpoint responds with a collection of **RestCompanyBusinessUnitResponse**, 
     }
 }
 ```
-    
+
 <br>
 </details>
 
@@ -127,7 +129,7 @@ The endpoint returns a **RestCompanyBusinessUnitResponse** containing informatio
 
 <details open>
 <summary markdown='span'>Sample Response</summary>
-    
+
 ```json
 {
     "data": {
@@ -148,7 +150,7 @@ The endpoint returns a **RestCompanyBusinessUnitResponse** containing informatio
     }
 }
 ```
-    
+
 <br>
 </details>
 
@@ -169,7 +171,7 @@ The response will include the following additional attributes:
 
 <details open>
 <summary markdown='span'>Sample Response</summary>
-    
+
 ```json
 {
     "data": {
@@ -204,7 +206,7 @@ The response will include the following additional attributes:
     ]
 }
 ```
-    
+
 <br>
 </details>
 
@@ -227,7 +229,7 @@ The response will include the following additional attributes:
 
 <details open>
 <summary markdown='span'>Sample Response</summary>
-    
+
 ```json
 {
     "data": {
@@ -267,7 +269,7 @@ The response will include the following additional attributes:
     ]
 }
 ```
-    
+
 <br>
 </details>
 
@@ -276,7 +278,7 @@ The response will include the following additional attributes:
 | Status | Reason |
 | --- | --- |
 | 401 | The access token is invalid. |
-| 403 | The access token is missing.<br>- OR -<br>The current Company Account is not set.<br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](https://documentation.spryker.com/v3/docs/logging-in-as-company-user-201907).|
+| 403 | The access token is missing.<br>- OR -<br>The current Company Account is not set.<br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html).|
 | 404 | The specified Business Unit was not found or the user does not have access to it. |
 
 ## Retrieving Business Unit Addresses
@@ -311,7 +313,7 @@ The endpoint responds with a **RestCompanyBusinessUnitAddressResponse** that con
 
 <details open>
 <summary markdown='span'>Sample Response</summary>
-    
+
 ```json
 {
     "data": {
@@ -333,7 +335,7 @@ The endpoint responds with a **RestCompanyBusinessUnitAddressResponse** that con
     }
 }
 ```
-    
+
 <br>
 </details>
 
@@ -342,7 +344,7 @@ The endpoint responds with a **RestCompanyBusinessUnitAddressResponse** that con
 | Status | Reason |
 | --- | --- |
 | 401 | The access token is invalid. |
-| 403 | The access token is missing.<br>- OR -<br>The current Company Account is not set.<br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](https://documentation.spryker.com/v3/docs/logging-in-as-company-user-201907).|
+| 403 | The access token is missing.<br>- OR -<br>The current Company Account is not set.<br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html).|
 | 404 | The specified Business Unit was not found or the user does not have access to it. |
 
 <!-- add to related articles:

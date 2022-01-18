@@ -17,7 +17,7 @@ related:
   - title: Product Relations
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-relations/product-relations.html
   - title: Catalog Search
-    link: docs/scos/dev/glue-api-guides/page.version/catalog-search.html
+    link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.htmlct-catalog.html
 ---
 
 Using the **Product Relations** feature, sellers can define a list of comparable or additional items for each product. You can display such items, also called Related Products, in search and in the cart together with the products selected by customers. This can help boosting the cross- and up-selling performance of the outlet.
@@ -313,7 +313,7 @@ Sample request: `GET http://mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493
 where `1ce91011-8d60-59ef-9fe0-4493ef3628b2` is the ID of the cart you need items for.
 
 {% info_block infoBox %}
-For details on peculiarities of managing carts of registered users, see [Managing Carts of Registered Users](https://documentation.spryker.com/v2/docs/managing-carts-of-registered-users-201907).
+For details on peculiarities of managing carts of registered users, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html).
 {% endinfo_block %}
 
 ### Response

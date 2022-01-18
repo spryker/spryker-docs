@@ -13,6 +13,7 @@ redirect_from:
 This topic contains the reference information you need to know when creating and managing warehouses in the **Administration > Warehouses** section.
 ***
 ## Warehouses Page
+
 On the Warehouses page, you see the following:
 * All warehouses currently available in the shop application
 * Warehouse ID and name
@@ -28,6 +29,7 @@ On this page, you can:
 
 ***
 ## Create, View and Edit Warehouse pages
+
 The following table describes the attributes you enter when creating, viewing or editing a warehouse.
 
 | Attribute | Description |

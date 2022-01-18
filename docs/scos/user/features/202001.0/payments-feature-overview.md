@@ -34,9 +34,9 @@ The Spryker Commerce OS offers integrations with several payment providers that 
 
 The Spryker Commerce OS supports integration of the following payment providers, which are our official partners:
 
-* [Adyen](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen.html)
-* [AfterPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/afterpay/afterpay.html)
-* [Amazon Pay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/amazon-pay/amazon-pay.html)
+* [Adyen](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen.html)
+* [AfterPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/afterpay.html)
+* [Amazon Pay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/amazon-pay.html)
 * [Arvato](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/arvato/arvato.html)
 * [Billie](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billie.html)
 * [Billpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billpay/billpay.html)
@@ -49,7 +49,7 @@ The Spryker Commerce OS supports integration of the following payment providers,
 * [Payolution](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution/payolution.html)
 * [Powerpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/powerpay.html)
 * [Ratenkauf by Easycredit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html)
-* [RatePay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay.html)
+* [RatePay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay.html)
 
 ## Dummy payment
 

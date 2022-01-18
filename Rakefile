@@ -16,7 +16,14 @@ commonOptions = {
     /www.pexels.com\/[@\.\w\-\/\?]+/,
     /pixabay.com\/[\.\w\-\/\?]+/,
     /xentral.com\/[\.\w\-\/\?]+/,
-    /github.com\/[\.\w\-\/]+\.md/
+    /github.com\/[\.\w\-\/]+\.md/,
+    /www.virtualbox.org\/[@\.\w\-\/\?]+/,
+    /de.linkedin.com\/[@\.\w\-\/\?]+/,
+    /www.instagram.com\/[\.\w\-\/\?]+/,
+    /eur-lex.europa.eu\/[\.\w\-\/\?]+/,
+    /docs.adyen.com\/[\.\w\-\/\?]+/,
+    /www.adyen.com\/[\.\w\-\/\?]+/,
+    /bugs.php.net\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],
   :typhoeus => {

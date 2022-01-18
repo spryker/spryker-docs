@@ -10,20 +10,20 @@ redirect_from:
 ---
 
 ## Install Feature Core
+
 ### Prerequisites
 To start the feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Cart | 201903.0 |
-| Product | 201903.0 |
-| Non-splittable Products (optional) | 201903.0 |
+| Cart | 202001.0 |
+| Product | 202001.0 |
+| Non-splittable Products (optional) | 202001.0 |
 
 ### 1) Check the Installed Modules
 
-<section contenteditable="false" class="warningBox"><div class="content">
+{% info_block warningBox “Verification” %}
 
-**Verification**    
 Make sure that the following modules were installed:
 
 | Module | Expected Directory |
@@ -32,7 +32,8 @@ Make sure that the following modules were installed:
 | `Product` | `vendor/spryker/product` |
 | `ProductQuantity` (optional) | `vendor/spryker/product-quantity` |
 | `ProductSearchWidget` | `vendor/spryker-shop/product-search-widget` |
-</div></section>
+
+{% endinfo_block %}
 
 ### 2) Set up Transfer Objects
 Run the following commands to apply database changes and generate entity and transfer changes:
@@ -41,9 +42,8 @@ Run the following commands to apply database changes and generate entity and tra
 console transfer:generate
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
+{% info_block warningBox “Verification” %}
 
-**Verification**
 Make sure that the following changes are present in the transfer objects:
 
 | Transfer | Type | Event | Path |
@@ -51,12 +51,14 @@ Make sure that the following changes are present in the transfer objects:
 | `CartChangeTransfer` | class | created | `src/Generated/Shared/Transfer/CartChangeTransfer` |
 | `ItemTransfer` | class | created |`src/Generated/Shared/Transfer/ItemTransfer`  |
 | `MessageTransfer` | class | created | `src/Generated/Shared/Transfer/MessageTransfer` |
-</div></section>
+
+{% endinfo_block %}
 
 ### 3) Add Translations
+
 Append glossary according to your language configuration:
 
-src/data/import/glossary.csv
+**src/data/import/glossary.csv**
 
 ```yaml
 cart.quick_add_to_cart,Schnell zum Warenkorb hinzufügen,de_DE
@@ -88,17 +90,20 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that in the database the configured data are added to the `spy_glossary` table.
+
 {% endinfo_block %}
 
 ### 4) Set up Widgets
+
 Enable global widgets:
 
 | Widget | Description | Namespace |
 | --- | --- | --- |
 | `ProductConcreteAddWidget` | Provides a form with the product concrete search and quantity inputs to add the concrete products to cart. | `SprykerShop\Yves\ProductSearchWidget\Widget` |
 
-src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php
+**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -122,25 +127,26 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-<section contenteditable="false" class="..."><div class="content">
+{% info_block warningBox “Verification” %}
     
-**Verification**
 Make sure that the following widgets were registered:
 
 | Module | Test |
 | --- | --- |
 | `ProductConcreteAddWidget` | Go to a cart page. You should see the form with the product search widget, quantity input, and add button. |
-</div></section>
+{% endinfo_block %}
 
 ### 5) Set up Behavior
+
 #### Adjust Concrete Product Quantity
+
 Add the following plugins to your project:
 
 | Plugin | Specification | Prerequisites | Namespace |
 | --- | --- | --- | --- |
 | `CartChangeTransferQuantityNormalizerPlugin` | The plugin is responsible for adjusting concrete products quantity and adding notification messages about that. | `ProductQuantity` and `ProductQuantityStorage` modules should be installed. | `Spryker\Zed\ProductQuantity\Communication\Plugin\Cart\CartChangeTransferQuantityNormalizerPlugin` |
 
-src/Pyz/Zed/Cart/CartDependencyProvider.php
+**src/Pyz/Zed/Cart/CartDependencyProvider.php**
 
 ```php
 <?php

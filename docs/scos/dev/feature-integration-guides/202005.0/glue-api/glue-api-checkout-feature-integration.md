@@ -10,12 +10,15 @@ redirect_from:
 ---
 
 {% info_block errorBox %}
+
 The following feature integration Guide expects the basic feature to be in place.<br>The current guide only adds the **Checkout API** functionality.
+
 {% endinfo_block %}
 
 Follow the steps below to install Checkout feature API.
 
 ## Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide |
@@ -23,10 +26,11 @@ To start feature integration, overview and install the necessary features:
 | Spryker Core | master | [Glue Application](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
 | Cart | master | [Cart API](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html) |
 | Customer Account Management | master | |
-| Payments | master | [Payments API](https://documentation.spryker.com/v5/docs/en/payments-api-feature-integration-201907) |
+| Payments | master | [Payments API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-payments-feature-integration.html) |
 |Shipments| master | [Shipments API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shipment-feature-integration.html) |
 
 ## 1)  Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
@@ -128,7 +132,6 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
     }
 }
 ```
- <br>
 </details>
 
 {% info_block infoBox "Note" %}
@@ -202,7 +205,6 @@ In case the `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isShipmentMethodsMa
             ...
 }
 ```
- <br>
 </details>
 
 
@@ -255,22 +257,21 @@ In case the `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isPaymentProvidersM
             ...
 }
 ```
- <br>
 </details>
-
-
 
 {% endinfo_block %}
 
 ## 3) Set up Transfer Objects
+
 Run the following command to generate transfer changes:
 
 ```bash
 console transfer:generate
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
-    Make sure that the following changes have been applied in transfer objects:
+{% info_block warningBox “Verification” %}
+
+Make sure that the following changes have been applied in transfer objects:
 
 | Transfer | Type | Event | Path |
 | --- | --- | --- | --- |
@@ -311,10 +312,12 @@ console transfer:generate
 | `RestCheckoutResponseTransfer`|class  | created |`src/Generated/Shared/Transfer/RestCheckoutResponseTransfer.php` |
 | `RestErrorMessageTransfer`|class  | created |`src/Generated/Shared/Transfer/RestErrorMessageTransfer.php` |
 
-</div></section>
+{% endinfo_block %}
 
 ## 4) Set up Behavior
+
 ### Enable resources and relationships
+
 Activate the following plugins:
 
 | Plugin | Specification | Prerequisites | Namespace |
@@ -324,7 +327,7 @@ Activate the following plugins:
 | `OrderRelationshipByOrderReferencePlugin` | Adds a relationship to the order entity by order reference. | None | `Spryker\Glue\OrdersRestApi\Plugin` |
 | `OrderPaymentsResourceRoutePlugin` | Registers the `order-payments` resource. | None | `Spryker\Glue\OrderPaymentsRestApi\Plugin` |
 
-src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -370,20 +373,27 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 ```
 
 {% info_block warningBox "Verification" %}
+
 To verify that `CheckoutDataResourcePlugin` is activated, send a *POST* request to `http://glue.mysprykershop.com/checkout-data` and make sure that you get a response different from **404 Not Found**.
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
+
 To verify that `CheckoutResourcePlugin` is activated, send a *POST* request to `http://glue.mysprykershop.com/checkout` and make sure that you get a response different from **404 Not Found**.
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
+
 To verify that `OrderRelationshipByOrderReferencePlugin` is activated, send a *POST* request to `http://glue.mysprykershop.com/checkout?include=orders` and make sure that you get a response that includes a section with the corresponding order resource.
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
+
 To verify that `OrderPaymentsResourceRoutePlugin` is activated, make sure that the following endpoint is available: `http://glue.mysprykershop.com/order-payments`. To do so, send a *POST* request with the following body:
-{% endinfo_block %}
+
 
 ```json
 {
@@ -399,6 +409,8 @@ To verify that `OrderPaymentsResourceRoutePlugin` is activated, make sure that t
 
 For more details, see [Updating Payment Data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out-purchases-and-getting-checkout-data.html#updating-payment-data).
 
+{% endinfo_block %}
+
 ### Configure mapping
 Mappers should be configured on the project level to map the data from the request to `QuoteTransfer`:
 
@@ -407,7 +419,7 @@ Mappers should be configured on the project level to map the data from the reque
 | `CustomerQuoteMapperPlugin` | Adds a mapper that maps Customer information to `QuoteTransfer`. | None | `Spryker\Zed\CustomersRestApi\Communication\Plugin\CheckoutRestApi` |
 | `AddressQuoteMapperPlugin` | Adds a mapper that maps billing and shipping address information to `QuoteTransfer`. | None | `Spryker\Zed\CustomersRestApi\Communication\Plugin\CheckoutRestApi` |
 
-src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php
+**src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
 
 ```json
 <?php
@@ -434,14 +446,19 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 ```
 
 {% info_block warningBox "Verification" %}
+
 To verify that `CustomerQuoteMapperPlugin` is activated, send a *POST* request to `http://glue.mysprykershop.com/checkout` and make sure that the order contains the customer information you provided in the request.
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
+
 To verify that `AddressQuoteMapperPlugin` is activated, send a *POST* request to `http://glue.mysprykershop.com/checkout` and make sure that the order contains the billing and shipping address information you provided in the request.
+
 {% endinfo_block %}
 
 ### Configure the single payment method validator plugin
+
 Activate the following plugin(s):
 
 | Plugin | Specification | Prerequisites | Namespace |
@@ -449,7 +466,7 @@ Activate the following plugin(s):
 | `SinglePaymentCheckoutRequestAttributesValidatorPlugin` | Used for checkout request data validation.<br>The plugin ensures that a request contains one payment method only. | None | `Spryker\Glue\CheckoutRestApi\Plugin` |
 
 
-src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php
+**src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
 
 ```php
 <?php
@@ -474,8 +491,8 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 ```
 
 {% info_block warningBox "Verification" %}
+
 To verify that `SinglePaymentCheckoutRequestAttributesValidatorPlugin` is activated, send a *POST* request to the `http://glue.mysprykershop.com/checkout` endpoint with multiple payment methods and make sure that you get the following error:
-{% endinfo_block %}
 
 ```json
 {
@@ -488,6 +505,7 @@ To verify that `SinglePaymentCheckoutRequestAttributesValidatorPlugin` is activa
 	]
 }
 ```
+{% endinfo_block %}
 
 ## Related Features
 

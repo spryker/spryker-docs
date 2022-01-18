@@ -50,7 +50,7 @@ The persistence layer is responsible for defining and dealing with the database 
 All the business logic is implemented in the Business layer. It usually has several business models to serve the necessary functionality. The Business Layer is located directly above the Persistence layer, so it can access it for the read and write operations.
 
 ### Communication layer
-The Communication layer is the entry point of a module. When a front-end application communicates with the Commerce OS, it accesses the Communication layer first. Then, depending on the request funcitonality, the request is passed further from the Communication layer.
+The Communication layer is the entry point of a module. When a front-end application communicates with the Commerce OS, it accesses the Communication layer first. Then, depending on the request functionality, the request is passed further from the Communication layer.
 
 The Communication Layer is located above the Business layer, so it can access all the business logic in a module. That's how the Communication layer invokes the right business logic when requested.
 
@@ -59,7 +59,7 @@ On the Presentation layer, the view related content is implemented. To get the n
 
 ## Next steps
 
-<!---* To learn how data flows are separated in Spryker Commerce OS, refer to [Commerce OS and frontend apps](https://documentation.spryker.com/2021080/docs/commerce-os-and-frontend-apps).-->
+<!---* To learn how data flows are separated in Spryker Commerce OS, refer to [Commerce OS and frontend apps](https://docs.spryker.com/docs/scos/dev/architecture/conceptual-overview.html).-->
 * To learn about the building blocks of Spryker, see [Programming concepts](/docs/scos/dev/architecture/programming-concepts.html).
 * To learn about Application layers, see [Concept overview](/docs/scos/dev/architecture/conceptual-overview.html).
 * To learn about modular programming, see [Modular programming](https://en.wikipedia.org/wiki/Modular_programming).

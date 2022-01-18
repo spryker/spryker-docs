@@ -23,8 +23,8 @@ related:
     link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/legacy-demoshop-integration/braintree-configuration-for-the-legacy-demoshop.html
 ---
 
-[ABOUT BRAINTREE](https://www.braintreepayments.com/) 
-Braintree, a division of PayPal, is a company based in Chicago that specializes in mobile and web payment systems for ecommerce companies. Braintree emphasizes its easy integrations, multiple payment method options (including PayPal and Venmo), simple pricing, security, and support. Braintree provides its customers with a merchant account and a payment gateway, along with various features including recurring billing, credit card storage, support for mobile and international payments, and PCI compliance solutions. 
+[ABOUT BRAINTREE](https://www.braintreepayments.com/)
+Braintree, a division of PayPal, is a company based in Chicago that specializes in mobile and web payment systems for ecommerce companies. Braintree emphasizes its easy integrations, multiple payment method options (including PayPal and Venmo), simple pricing, security, and support. Braintree provides its customers with a merchant account and a payment gateway, along with various features including recurring billing, credit card storage, support for mobile and international payments, and PCI compliance solutions.
 
 Braintree provides two methods of payment:
 
@@ -49,6 +49,12 @@ The state machine commands and conditions trigger Braintree facade calls in orde
 ### PCI Compliance
 Because of PCI compliance reasons, credit card data is communicated to the third party through JS and AJAX calls (sensitive information stays browser side).
 
+## Related Developer articles
+
+* [Installing and configuring Braintree](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/installing-and-configuring-braintree.html)
+* [Braintree - Workflow](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/braintree-workflow.html)
+* [Braintree - Performing requests](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/braintree-performing-requests.html)
+
 ---
 
 ## Copyright and Disclaimer
@@ -72,5 +78,3 @@ For further information on this partner and integration into Spryker, please con
             "></div>
 </div>
 </div>
-
-

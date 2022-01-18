@@ -5,152 +5,69 @@ last_updated: Nov 25, 2021
 template: concept-topic-template
 ---
 
-The evaluation tool is a utility that performs automated quality checks against our own and industry standards.
+The evaluation tool is a part of Spryker-SDK, that performs automated quality checks against our own and industry standards.
 
 ## Installing the evaluation tool
 
-To install the evaluation tool, run the following command:
+As the evaluation tool is part of Spryker-SDK, we should install it globally into docker/sdk cli and initialize. 
+After that we will be able to run the evaluation commands
 
 ```bash
-composer require --dev spryker-sdk/evaluator
+docker/sdk cli
+composer global require spryker-sdk/sdk "dev-master"
+~/.composer/vendor/spryker-sdk/sdk/bin/console sdk:init:sdk
 ```
 
 ## Using the evaluation tool
 
-To get up-to-date information about using the evaluation tool, run the following command:
-
-```bash
-docker/sdk cli evaluator
-```
+at this moment we have next commands:
+- analyze:php:code-compliance (analyzes project code compliance)
+- analyze:php:code-compliance-report (report code compliance issues)
 
 For detailed instructions, see [Running the evaluation tool](/docs/scos/dev/upgradability-services/running-the-evaluation-tool.html).
 
 ## How the evaluation tool works
 
-The evaluation tool performs a number of checks that are based on the static analysis of our own and third-party tools. Currently, it performs the following checks:
+The evaluation tool performs a number of checks that are based on the static analysis of our own tools. Currently, it performs the following checks:
 
-- [Architecture Sniffer](https://github.com/spryker/architecture-sniffer)
-- [Code Sniffer](https://github.com/spryker/code-sniffer)
-- [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)
-- [PHPStan](https://github.com/phpstan/phpstan)
-- [PHPMD](https://github.com/phpmd/phpmd)
-- [Psalm](https://github.com/vimeo/psalm)
+- Is not unique - Transfer/Transfer property / DB table / DB column / Method / Constant
+- Method is overridden - Factory/DP (not plug-in)/Repository/EntityManager
+- Non public API class was extended or used
 
-We attuned the third-party tools to Spryker, so the e[valuation tool checks that your code is up to date both with the industry and Spryker specific standards.
-
-The evaluation tool provides you with informative output about your code. If all the checks you’ve run are successful, the tool returns a success message.
+The evaluation tool provides you with informative output about your code. If all the checks you’ve run are successful, the tool returns an empty result.
 
 Example of a successful evaluation:
 
 ```bash
-====================================================================================================
-phpcs
-----------------------------------------------------------------------------------------------------
-Finished successfully
-====================================================================================================
-====================================================================================================
-phpmd
-----------------------------------------------------------------------------------------------------
-Finished successfully
-====================================================================================================
-====================================================================================================
-phpstan
-----------------------------------------------------------------------------------------------------
-Finished successfully
-====================================================================================================
-====================================================================================================
-psalm
-----------------------------------------------------------------------------------------------------
-Finished successfully
-====================================================================================================
-Overall evaluation has been finished successfully
+Total messages: 0
 ```
 
 If one or more checks fail, the Evaluation tool returns the errors per check.
 
-
-<details>
-  <summary markdown='span'>Example of a failed evaluation</summary>
-
 ```bash
-====================================================================================================
-phpcs
-----------------------------------------------------------------------------------------------------
-................E 17 / 17 (100%)
+...
+NotUnique:Constant Pyz\Shared\ContentBannerGui\ContentBannerGuiConfig::WIDGET_TEMPLATE_DISPLAY_NAME_SLIDER_WITHOUT_LINK name has to have project namespace, like PYZ_WIDGET_TEMPLATE_DISPLAY_NAME_SLIDER_WITHOUT_LINK.
+------------------ ----------------------------------------------------------------------------------------------------
+NotUnique:DatabaseColumn Database column name has to have project prefix Pyz in src/Pyz/Zed/ExampleStateMachine/Persistence/Propel/Schema/spy_example_state_machine.schema.xml, like pyz_name
+------------------------ ----------------------------------------------------------------------------------------------------
+NotUnique:Method Method name Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider::extendPaymentMethodHandler() should contains project prefix, like pyzExtendPyzPaymentMethodHandler
+---------------- ----------------------------------------------------------------------------------------------------
+NotUnique:TransferName Transfer object name ProductAbstractStore has to have project prefix Pyz in src/Pyz/Shared/Product/Transfer/product.transfer.xml, like PyzProductAbstractStore
+---------------------- ----------------------------------------------------------------------------------------------------
+NotUnique:TransferProperty Transfer property contentWidgetParameterMap for LocaleCmsPageData has to have project prefix Pyz in src/Pyz/Shared/Cms/Transfer/cms.transfer.xml, like pyzContentWidgetParameterMap
+-------------------------- ----------------------------------------------------------------------------------------------------
+PrivateApi:Dependency Please avoid usage of ProductStorageDependencyProvider::FACADE_PRODUCT in Pyz\Zed\ProductStorage\Business\ProductStorageBusinessFactory
+--------------------- ----------------------------------------------------------------------------------------------------
+PrivateApi:Extension Please avoid extension of the PrivateApi SprykerShop\Yves\ContentProductWidget\Twig\ContentProductAbstractListTwigFunctionProvider in Pyz\Yves\ContentProductWidget\Twig\ContentProductAbstractListTwigFunctionProvider
+-------------------- ----------------------------------------------------------------------------------------------------
+PrivateApi:PrivateApiDependencyInBusinessModel Please avoid usage of Spryker\Zed\ProductSet\Business\Model\Touch\ProductSetTouchInterface in Pyz\Zed\ProductSet\Business\Model\ProductSetUpdater
+---------------------------------------------- ----------------------------------------------------------------------------------------------------
+PrivateApi:MethodIsOverwritten Please avoid usage of core method Spryker\Client\Kernel\AbstractFactory::getConfig() in the class Pyz\Client\ExampleProductSalePage\ExampleProductSalePageFactory
+------------------------------ ----------------------------------------------------------------------------------------------------
+...
+Total messages: 244
 
-
-
-FILE: ...tor.tool/src/Evaluator/Communication/Console/EvaluateConsole.php
-----------------------------------------------------------------------
-FOUND 3 ERRORS AFFECTING 2 LINES
-----------------------------------------------------------------------
- 24 | ERROR | [x] Found more than a single empty line between content
- 25 | ERROR | [x] Expected 1 blank line between class members, found
-    |       |     2.
- 25 | ERROR | [x] Method does not have a docblock with return void
-    |       |     statement: configure
-----------------------------------------------------------------------
-PHPCBF CAN FIX THE 3 MARKED SNIFF VIOLATIONS AUTOMATICALLY
-----------------------------------------------------------------------
-
-Time: 664ms; Memory: 14MB
-
-
-
-Finished with errors
-====================================================================================================
-====================================================================================================
-phpmd
-----------------------------------------------------------------------------------------------------
-Finished successfully
-====================================================================================================
-====================================================================================================
-phpstan
-----------------------------------------------------------------------------------------------------
-Finished successfully
-====================================================================================================
-====================================================================================================
-psalm
-----------------------------------------------------------------------------------------------------
-Finished successfully
-====================================================================================================
-Overall evaluation has been finished with errors
 ```
-
-</details>
-
-You can run the evaluation tool to perform all the checks or run a particular check. For example, if only one check returns an error, after troubleshooting it, you might run only the failed check.  
-
-Example of running a particular check:
-
-```bash
-====================================================================================================
-phpcs
-----------------------------------------------------------------------------------------------------
-................E 17 / 17 (100%)
-
-
-
-FILE: ...tor.tool/src/Evaluator/Communication/Console/EvaluateConsole.php
-----------------------------------------------------------------------
-FOUND 1 ERROR AFFECTING 1 LINE
-----------------------------------------------------------------------
- 24 | ERROR | [x] Method does not have a docblock with return void
-    |       |     statement: configure
-----------------------------------------------------------------------
-PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
-----------------------------------------------------------------------
-
-Time: 547ms; Memory: 14MB
-
-
-
-Finished with errors
-====================================================================================================
-Overall evaluation has been finished with errors
-```
-
-
 
 ## Next steps
 

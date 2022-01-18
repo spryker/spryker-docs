@@ -4,7 +4,7 @@ description: Instructions for running the evaluation tool
 last_updated: Nov 25, 2021
 template: concept-topic-template
 ---
-This document describes how to check if code is compliant with Spryker’s and industry standards using the Evaluation tool.
+This document describes how to check if code is compliant with Spryker’s standards using the Evaluation tool as part of Spryker-SDK.
 
 ## Prerequisites
 
@@ -14,38 +14,26 @@ To start working with the Evaluation tool, connect to the Docker SDK CLI contain
 docker/sdk cli
 ```
 
-Get general information about the tool:
+Get general information about the tool and see all available commands related to the evaluation process we may in *analyze* section:
 
 ```bash
-1evaluator
+~/.composer/vendor/spryker-sdk/sdk/bin/console list
 ```
 
-## Running a full evaluation
+## Running evaluation
 
-To perform a full evaluation, run the evaluation tool without any options:
+To perform evaluation, run the evaluation tool with format parameter (at this moment evaluator supports only yaml format):
 
 ```bash
-evaluator evaluate
+~/.composer/vendor/spryker-sdk/sdk/bin/console analyze:php:code-compliance --format=yaml
 ```
 
-## Running a particular check
+as a result, evaluator will create *analyze:php:code-compliance.violations.yaml* into the reports folder
 
-To run a particular check, use the `--filter` option with one or more names of the desired check. For example, to run the PHPStan check, run the following command:
-
+for reading this report we should run:
 ```bash
-evaluator evaluate --filter=phpstan
+~/.composer/vendor/spryker-sdk/sdk/bin/console analyze:php:code-compliance-report
 ```
-
-{% info_block infoBox "" %}
-
-To check the up-to-date list of checks, run the following command:
-
-```bash
-evaluator evaluate -h
-```
-
-{% endinfo_block %}
-
 
 ## Updating the evaluation tool
 

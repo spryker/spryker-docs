@@ -37,8 +37,13 @@ git config --global user.email "{GIT_EMAIL_ADDRESS}"
 
 ## Install the upgrader tool
 
+As the upgrader tool is part of Spryker-SDK, we should install it globally into the *docker/sdk cli* and initialize it.
+After that we will be able to run the upgrader command
+
 ```
-composer global require spryker-sdk/upgrader
+docker/sdk cli
+composer global require spryker-sdk/sdk "dev-master"
+~/.composer/vendor/spryker-sdk/sdk/bin/console sdk:init:sdk
 ```
 
 ## Run the upgrader tool
@@ -47,7 +52,7 @@ To update all the modules and libraries to the latest versions, do the following
 
 1. Run the upgrader tool:
 ```bash
-$HOME/.composer/vendor/bin/upgrader upgrade
+~/.composer/vendor/spryker-sdk/sdk/bin/console upgradability:php:upgrade
 ```
 
 If the upgrade was successful, the upgrader tool created a PR with the updates.

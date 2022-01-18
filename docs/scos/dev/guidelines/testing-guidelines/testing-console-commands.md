@@ -5,13 +5,11 @@ last_updated: Jan 12, 2022
 template: concept-topic-template
 ---
 
-Spryker supports a number of test helpers to assist you in testing your project. This article provides details of how to test console commands.
+Spryker supports several [test helpers](/docs/scos/dev/guidelines/testing-guidelines/test-helpers.html) to assist you in testing your project. This article provides details of how to test console commands with ConsoleHelper.
 
-## ConsoleHelper
+To test console commands, do the following:
 
-To be able to test console commands you need to:
-
-- Add the `\SprykerTest\Zed\Console\Helper\ConsoleHelper` to your `codeception.yml`.
+1. Add `\SprykerTest\Zed\Console\Helper\ConsoleHelper` to the `codeception.yml` file:
 
 ```
 suites:
@@ -23,9 +21,10 @@ suites:
                 - \SprykerTest\Zed\Console\Helper\ConsoleHelper
                 - ...
 ```
+For more information about the `codeception.yml` file, see [Test framework](https://docs.spryker.com/docs/scos/dev/guidelines/testing-guidelines/test-framework.html).
 
-- Create the test directory `tests/PyzTests/Zed/FooModule/Communication/Plugin/Console/` if not present.
-- Add the test class.
+2. Create the test directory `tests/PyzTests/Zed/FooModule/Communication/Plugin/Console/`, if it is not available yet.
+3. Add the test class:
 
 ```
 <?php
@@ -44,7 +43,7 @@ class MyConsoleCommandTest extends Unit
 }
 ```
 
-- Add a test method.
+4. Add the test method:
 ```
 public function testMyConsoleCommand(): void
 {
@@ -65,3 +64,5 @@ public function testMyConsoleCommand(): void
     $this->assertStringContainsString('My console command output.', $commandTester->getDisplay());
 }
 ```
+
+That's it. You are all set to test the console commands.

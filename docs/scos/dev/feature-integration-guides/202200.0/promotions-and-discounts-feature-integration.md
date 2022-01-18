@@ -85,8 +85,24 @@ Make sure that the following changes have been triggered in transfer objects:
 | CalculatedDiscount.priority  | property | created | src/Generated/Shared/Transfer/CalculatedDiscountTransfer           |
 | DiscountGeneral.priority     | property | created | src/Generated/Shared/Transfer/DiscountGeneral                      |
 
+{% endinfo_block %}
 
-### 4) Set up behavior
+### 3) Add translations
+
+Run the following command to generate a new translation cache for Zed:
+
+```bash
+console translator:generate-cache
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that all labels and help tooltips in discount form has English and German translation.
+
+{% endinfo_block %}
+
+
+### 4) Build Zed UI frontend
 
 Run the following commands to enable Javascript and CSS changes:
 
@@ -95,11 +111,9 @@ console frontend:zed:install-dependencies
 console frontend:zed:build
 ```
 
-{% endinfo_block %}
-
 {% info_block warningBox "Verification" %}
 
-Make sure that the discount form has a priority field and the discounts table has a priority column.
+Make sure that the discount form has a priority field and discounts table has a priority column.
 
 Make sure, that the existing discounts in the spy_discount DB table have priority set to 9999.
 
@@ -115,33 +129,15 @@ Make sure that discounts are calculated according to their priorities:
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can see a datetime picker dropdown when you click on **Valid From** and **Valid To** discount form fields.
+Make sure that you can submit `Discount Create` and `Discount Update` forms with specified date and time for **Valid From** and **Valid To** discount form fields:
 
-Make sure that **Valid From** and **Valid To** discount form fields can accept date and time.
-
-Make sure, that **Valid From** and **Valid To** dates are persisted correctly in `spy_discount` DB table.
-
-{% endinfo_block %}
-
----
-
-
-### Add translations
-
-Run the following command to generate a new translation cache for Zed:
-
-1. Append glossary for the feature:
-
-```bash
-console translator:generate-cache
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that all labels and help tooltips in discount form has English and German translation.
+1. In the Back Office, go to **Merchandising** > **Discount**.
+2. Create new discount or update existing one, check that you can see `Discount` form.
+3. Make sure that you can see a datetime picker dropdown when you click on **Valid From** and **Valid To** discount form fields.
+4. Make sure that **Valid From** and **Valid To** discount form fields can accept selected date and time.
+5. Make sure, that **Valid From** and **Valid To** date and time are persisted correctly in `spy_discount` DB table.
 
 {% endinfo_block %}
-
 
 
 [//]: # (---)

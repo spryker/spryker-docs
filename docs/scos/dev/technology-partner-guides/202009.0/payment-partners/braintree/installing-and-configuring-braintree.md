@@ -1,17 +1,15 @@
 ---
-title: Braintree - Installation and configuration
+title: Installing and configuring Braintree
 description: This article contains information on configuring the Braintree module for the Spryker Commerce OS.
-last_updated: Jun 16, 2021
+last_updated: Nov 6, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/braintree-configuration
-originalArticleId: 50dfb6cf-d660-49f5-93cb-6bda88ca88f1
+originalLink: https://documentation.spryker.com/v6/docs/braintree-configuration
+originalArticleId: e8c448d4-84b3-44bf-8968-a79602d97538
 redirect_from:
-  - /2021080/docs/braintree-configuration
-  - /2021080/docs/en/braintree-configuration
-  - /docs/braintree-configuration
-  - /docs/en/braintree-configuration
+  - /v6/docs/braintree-configuration
+  - /v6/docs/en/braintree-configuration
 related:
-  - title: Braintree - Integration into a project
+  - title: Integrating Braintree
     link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree-integration-into-a-project.html
   - title: Braintree - Performing Requests
     link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree-technical-details-and-howtos/braintree-performing-requests.html
@@ -22,27 +20,20 @@ related:
 To configure Braintree module for Spryker Commerce OS (SCOS), do the following:
 
 Add `spryker-eco/braintree` to your project by running the command:
-
 ```bash
 composer require spryker-eco/braintree --update-with-dependencies
 ```
-
 Apply database changes and generate entity and transfer changes:
-
 ```bash
 console transfer:generate
 console propel:install
 console transfer:generate
 ```
-
 Add frontend dependencies to your project by running npm:
-
 ```bash
 npm i braintree-web@^3.55 braintree-web-drop-in@^1.20 paypal-checkout@^4.0 jquery@~3.5
 ```
-
 Build Ffrontend changes:
-
 ```bash
 console frontend:yves:build
 ```
@@ -79,7 +70,7 @@ $config[BraintreeConstants::IS_3D_SECURE] = true;
 $config[BraintreeConstants::FAKE_PAYMENT_METHOD_NONCE] = 'fake-valid-mastercard-nonce';
 
 // if generated one does not work (for example there are some problems with braintree/dropin library) it can be directly set here. Valid one can be retrieved from https://braintree-sample-merchant.herokuapp.com/client_token
-$config[BraintreeConstants::FAKE_CLIENT_TOKEN] = '';
+$config[BraintreeConstants::FAKE_CLIENT_TOKEN] = ''; 
 ```
 
 ## Checkout Configuration
@@ -171,7 +162,7 @@ $container->extend(OmsDependencyProvider::COMMAND_PLUGINS, function (CommandColl
         ->add(new ItemsCapturePlugin(), 'Braintree/ItemsCapture')
         ->add(new OrderCapturePlugin(), 'Braintree/OrderCapture')
         ->add(new ItemsRefundPlugin(), 'Braintree/ItemsRefund')
-        ->add(new OrderRefundPlugin(), 'Braintree/OrderRefund') return $commandCollection; });
+        ->add(new OrderRefundPlugin(), 'Braintree/OrderRefund') return $commandCollection; }); 
 ```
 Also, plugins to split the logic for payment methods were added to the new version of the Braintree module. These plugins don't provide partial operation for the supported payment methods.
 You can use `ItemsCapture` and `ItemsRefund` plugins for Paypal payment methods and `OrderCapture` and `OrderRefund` for Credit card payment method. `CapturePlugin` and `RefundPlugin` as well as relevevant facade methods are deprecated and will be removed with the next major relese.
@@ -215,3 +206,5 @@ protected function getCheckoutPostHooks(Container $container)
 ```
 
 All payment plugins are located in the `SprykerEco\Zed\Braintree\Communication\Plugin\Checkout\` namespace.
+
+

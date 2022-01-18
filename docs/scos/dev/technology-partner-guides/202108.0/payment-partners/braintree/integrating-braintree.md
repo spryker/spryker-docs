@@ -1,5 +1,5 @@
 ---
-title: Braintree - Integration into a project
+title: Integrating Braintree
 description: This guide provides steps to integrate Braintree in the Spryker frontend.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -11,7 +11,7 @@ redirect_from:
   - /docs/braintree-integration
   - /docs/en/braintree-integration
 related:
-  - title: Braintree - Installation and configuration
+  - title: Installing and configuring Braintree
     link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree-installation-and-configuration.html
   - title: Braintree - Performing Requests
     link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree-technical-details-and-howtos/braintree-performing-requests.html
@@ -34,16 +34,16 @@ Before proceeding with the integration, make sure you have [installed and config
 **src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig**
 ```js
 {% raw %}{%{% endraw %} extends template('page-layout-checkout', 'CheckoutPage') {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} define data = {
     backUrl: _view.previousStepUrl,
     forms: {
         payment: _view.paymentForm
     },
- 
+
     title: 'checkout.step.payment.title' | trans
 } {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}
     {% raw %}{%{% endraw %} embed molecule('form') with {
         class: 'box',
@@ -68,7 +68,7 @@ Before proceeding with the integration, make sure you have [installed and config
         {% raw %}{%{% endraw %} block fieldset {% raw %}%}{% endraw %}
             {% raw %}{%{% endraw %} for name, choices in data.form.paymentSelection.vars.choices {% raw %}%}{% endraw %}
                 <h5>{% raw %}{{{% endraw %} ('checkout.payment.provider.' ~ name) | trans {% raw %}}}{% endraw %}</h5>
- 
+
                 <ul class="list spacing-y">
                     {% raw %}{%{% endraw %} for key, choice in choices {% raw %}%}{% endraw %}
                         <li class="list__item spacing-y clear">
@@ -89,7 +89,7 @@ Before proceeding with the integration, make sure you have [installed and config
                                 {% raw %}{%{% endraw %} block fieldset {% raw %}%}{% endraw %}
                                     {% raw %}{%{% endraw %} set templateName = data.form.vars.template_path | replace('/', '-') {% raw %}%}{% endraw %}
                                     {% raw %}{%{% endraw %} set viewName = data.form.vars.template_path | split('/') {% raw %}%}{% endraw %}
- 
+
                                     {% raw %}{{{% endraw %} form_row(embed.toggler, {
                                         required: false,
                                         component: molecule('toggler-radio'),
@@ -98,7 +98,7 @@ Before proceeding with the integration, make sure you have [installed and config
                                             'class-to-toggle': 'is-hidden'
                                         }
                                     }) {% raw %}}}{% endraw %}
- 
+
                                     <div class="col col--sm-12 is-hidden js-payment-method-{% raw %}{{{% endraw %} templateName {% raw %}}}{% endraw %}">
                                         <div class="col col--sm-12 col--md-6">
                                             {% raw %}{%{% endraw %} if 'Braintree' in data.form.vars.template_path {% raw %}%}{% endraw %}
@@ -131,7 +131,7 @@ Add to `summary.twig`:
     },
     ...
 } {% raw %}%}{% endraw %}
- 
+
 {% raw %}{%{% endraw %} embed molecule('form') with {
     class: 'box',
     data: {
@@ -150,4 +150,3 @@ Add to `summary.twig`:
     } only {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} endembed {% raw %}%}{% endraw %}
 ```
-

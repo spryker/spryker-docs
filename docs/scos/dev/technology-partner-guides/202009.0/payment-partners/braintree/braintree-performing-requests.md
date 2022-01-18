@@ -9,9 +9,9 @@ redirect_from:
   - /v6/docs/braintree-performing-requests
   - /v6/docs/en/braintree-performing-requests
 related:
-  - title: Braintree - Installation and configuration
+  - title: Installing and configuring Braintree
     link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree-installation-and-configuration.html
-  - title: Braintree - Integration into a project
+  - title: Integrating Braintree
     link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree-integration-into-a-project.html
   - title: Braintree - Workflow
     link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree-technical-details-and-howtos/braintree-workflow.html

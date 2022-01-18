@@ -2412,7 +2412,7 @@ entries:
             - "201903.0"
             - "201907.0"
             - "202001.0"
-        - title: Braintree - Integration into a project
+        - title: Integrating Braintree
           url: /docs/scos/user/technology-partners/payment-partners/braintree/braintree-integration-into-a-project.html
           include_versions:
           - "202009.0"

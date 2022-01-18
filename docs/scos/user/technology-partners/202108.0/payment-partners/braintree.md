@@ -14,7 +14,7 @@ related:
   - title: Installing and configuring Braintree
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-installation-and-configuration.html
   - title: Integrating Braintree
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-integration-into-a-project.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/integrating-braintree.html
   - title: Braintree - Performing Requests
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-performing-requests.html
   - title: Braintree - Workflow

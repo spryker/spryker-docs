@@ -10,7 +10,7 @@ redirect_from:
   - /v6/docs/en/braintree-configuration
 related:
   - title: Integrating Braintree
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-integration-into-a-project.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/integrating-braintree.html
   - title: Braintree - Performing Requests
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-performing-requests.html
   - title: Braintree - Workflow

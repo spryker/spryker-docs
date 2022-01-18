@@ -32,14 +32,14 @@ The main benefits of working with the cart are to create a convenient and predic
 </div>
 
 **Features:**
-<div>
-<a class="feature-link" href="https://documentation.spryker.com/v4/docs/cart-functionality-calculations">Cart Functionality and Calculations</a>   
-<a class="feature-link" href="https://documentation.spryker.com/v4/docs/cart-rules-discounts">Cart Rules and Discounts</a>   
-<a class="feature-link" href="https://documentation.spryker.com/v4/docs/minimum-order-value-201903">Minimum Order Value</a>   
-<a class="feature-link" href="https://documentation.spryker.com/v4/docs/shared-cart">Shared Cart</a>   
-<a class="feature-link" href="https://documentation.spryker.com/v4/docs/multiple-cart-per-user">Multiple Carts Per User</a>   
-    <a class="feature-link" href="https://documentation.spryker.com/v4/docs/cart-widget">Shopping Cart Widget</a>  
-    <a class="feature-link" href="https://documentation.spryker.com/v4/docs/cart-notes">Cart Notes</a>  
-    <a class="feature-link" href="https://documentation.spryker.com/v4/docs/quick-order-201903">Quick Order</a>
-<a class="feature-link" href="https://documentation.spryker.com/v4/docs/unique-url-per-cart-for-easy-sharing-201907">Unique URL per Cart for Easy Sharing</a>   
-    </div>
+
+- [Cart Functionality](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/cart-functionality.html)
+- [Calculation 3.0](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculation-3-0.html)
+- [Cart Rules and Discounts](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html)
+- [Order Thresholds](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html)
+- [Shared Cart](/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html)
+- [Multiple Carts Per User](/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-feature-overview.html)
+- [Shopping Cart Widget](/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-widget-overview.html)
+- [Cart Notes](/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-notes-overview.html)
+- [Quick Order](/docs/scos/user/features/{{page.version}}/quick-add-to-cart-feature-overview.html)
+- [Unique URL per Cart for Easy Sharing](/docs/scos/user/features/{{page.version}}/persistent-cart-sharing-feature-overview.html)

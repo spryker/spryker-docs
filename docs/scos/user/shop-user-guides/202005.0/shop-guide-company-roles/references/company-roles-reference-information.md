@@ -20,7 +20,7 @@ related:
 
 To open the **Company Roles** page, go to the header of the shop application > Name of your company > Roles.
 
-![Roles header](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/roles-header.png) 
+![Roles header](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/roles-header.png)
 
 On the **Company Roles** page you see the following:
 
@@ -35,7 +35,7 @@ On the **Company Roles** page you see the following:
 
 ## Edit Company Role Page
 This page opens when you try to edit the existing company role.
-![Edit a role](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/edit-role.png) 
+![Edit a role](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/edit-role.png)
 
 The following table describes the permissions you can assign to a role.
 
@@ -50,10 +50,8 @@ The following table describes the permissions you can assign to a role.
 | Remove item from cart | Allows deleting products from the cart. |
 | Place Order |  allows placing the order. With this permission enabled, a user will have  an error when trying to submit the order. |
 | Alter Cart Up to Amount | Allows changing the content of the cart (adding new products, changing the quantity of the existing products etc.) until it hits the limit specified in this permission. When the limit is reached, the buyer will not be able to change the contents of the cart and will get *This action is forbidden* error. |
-|Buy up to grand total (Requires "Send cart for approval")|Sets a limit for the grand total of the cart. If the amount in the cart is bigger than the limit set in this permission, the user will not be able to proceed to checkout. Works with **Send cart for approval** permission. This permission is available after enabling the [Approval Process](https://documentation.spryker.com/v5/docs/en/approval-process-201903) feature.|
-|Approve up to grand total|With this permission enabled, a user can approve the the cart. See [Approval Feature Overview](https://documentation.spryker.com/v5/docs/en/approval-process-overview-201903) for more details.|
-|Send cart for approval (Requires "Buy up to grand total")|Allows a user to send the cart for approval. Works together with Buy up to grand total permission. See [Approval Feature Overview](https://documentation.spryker.com/v5/docs/en/approval-process-overview-201903) for more details.|
+|Buy up to grand total (Requires "Send cart for approval")|Sets a limit for the grand total of the cart. If the amount in the cart is bigger than the limit set in this permission, the user will not be able to proceed to checkout. Works with **Send cart for approval** permission. This permission is available after enabling the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) feature.|
+|Approve up to grand total|With this permission enabled, a user can approve the the cart.|
+|Send cart for approval (Requires "Buy up to grand total")|Allows a user to send the cart for approval. Works together with Buy up to grand total permission.|
 |View Business Unit Orders|Allows searching across the orders of a business unit to which you belong.|
 |View Company Orders| Allows searching across the orders of the whole company (all business units) or exact business unit belonging to that company. This permission provides extended permissions in comparison to  **View Business Unit Orders**.|
-
-

@@ -24,7 +24,7 @@ related:
 Spryker provides the [Company Account](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html) feature that allows purchasing goods and performing other actions on behalf of a user's company. The endpoints provided by the Company API allow retrieving information on companies.
 
 {% info_block warningBox "Authentication" %}
-The endpoints provided by this API cannot be accessed anonymously. To access them, you need to impersonate users as Company Accounts and pass the authentication tokens received. For details on how to authenticate and retrieve such a token, see [Logging In as Company User](https://documentation.spryker.com/v3/docs/logging-in-as-company-user-201907).
+The endpoints provided by this API cannot be accessed anonymously. To access them, you need to impersonate users as Company Accounts and pass the authentication tokens received. For details on how to authenticate and retrieve such a token, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html).
 {% endinfo_block %}
 
 In your development, the API can help you to provide information on the company that the authenticated user belongs to.
@@ -142,7 +142,7 @@ The endpoint responds with a **RestCompanyResponse** containing information on t
 | Code | Reason |
 | --- | --- |
 | 401 | The access token is invalid. |
-| 403 | The access token is missing.<br>- OR -<br>The current Company Account is not set.<br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](https://documentation.spryker.com/v3/docs/logging-in-as-company-user-201907). |
+| 403 | The access token is missing.<br>- OR -<br>The current Company Account is not set.<br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html). |
 | 404 | The specified company was not found, or the user does not have access to it. |
 
 <!-- add to related articles:

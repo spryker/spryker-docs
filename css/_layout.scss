@@ -100,7 +100,7 @@ body {
 
 .post-content {
     flex: 1 1 auto;
-    padding: 40px 0 30px;
+    padding: $header-content-gap-widescreen 0 30px;
 
     @include media("<laptop") {
         padding: 24px 0 30px;
@@ -119,7 +119,7 @@ body {
     flex: 0 0 auto;
     width: 200px;
     margin: 0 85px 0 30px;
-    padding: 40px 0 0;
+    padding: $header-content-gap-widescreen 0 0;
 
     @include media("<widescreen") {
         margin: 0 24px 0 30px;
@@ -129,7 +129,7 @@ body {
         grid-area: b;
         width: auto;
         margin: 0;
-        padding: 22px 0 0;
+        padding: $header-content-gap-desktop 0 0;
     }
 
     @include media("<desktop") {
@@ -146,7 +146,7 @@ body {
 
     &__sticky {
         position: sticky;
-        top: 134px;
+        top: $header-min-height-widescreen;
 
         @include media("<laptop") {
             position: static;

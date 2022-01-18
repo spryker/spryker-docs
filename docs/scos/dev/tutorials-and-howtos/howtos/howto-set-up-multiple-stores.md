@@ -162,7 +162,7 @@ return $stores;
 1. For one or more stores you’ve defined in `config/Shared/stores.php`, define separate store-specific configuration. For example, `config/Shared/config-default_docker_de.php` is the configuration file for the `DE` store in the docker environment.
 
 2. To apply the defined store-specific configuration, adjust the related deploy file in the `environment:` section.
-In the following example, the `docker_de` environment name points to the `config/Shared/config-default_docker_de.php` store-specific configuration file. For more information about this deploy file parameter, see [environment:](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file-reference-1.0.html#environment).
+In the following example, the `docker_de` environment name points to the `config/Shared/config-default_docker_de.php` store-specific configuration file. For more information about this deploy file parameter, see [environment:](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html#environment).
 
 ```yaml
 ....
@@ -272,7 +272,7 @@ We use the following configuration parameters in this example:
 
 * *Store* defines the list of *Stores* and store-specific settings for *Services*.
 
-For more information about deploy file configuration, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file-reference-1.0.html).
+For more information about deploy file configuration, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
 
 ## Defining the store context
 

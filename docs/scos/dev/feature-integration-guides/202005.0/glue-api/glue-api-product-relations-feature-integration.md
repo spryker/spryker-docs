@@ -11,9 +11,11 @@ redirect_from:
 ---
 
 ## Install Feature API
+
 Follow the steps to install the Product Relations feature API.
 
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 |Name|Version|Required Sub-Feature|
@@ -24,22 +26,27 @@ To start feature integration, overview and install the necessary features:
 | Glue API: Products |master|[Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
+
 Run the following command to install the required modules:
 
 ```bash
 composer require spryker/related-products-rest-api:"^1.0.0" spryker/up-selling-products-rest-api:"^1.0.0" --update-with-dependencies
 ```
-<section contenteditable="false" class="warningBox"><div class="content">
-    Make sure that the following modules have been installed:
+
+{% info_block warningBox “Verification” %}
+
+Make sure that the following modules have been installed:
 
 |Module|Expected Directory|
 |---|---|
 |`RelatedProductsRestApi`|`vendor/spryker/related-products-rest-api`|
 |`UpSellingProductsRestApi`|`vendor/spryker/up-selling-products-rest-api`|
-</div></section>
+
+{% endinfo_block %}
 
 ### 2) Set up Behavior
-Set up the following behaviour.
+
+Set up the following behavior.
 
 #### Enable Resources and Relationships
 Activate the following plugins:
@@ -82,8 +89,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% info_block warningBox "Verification" %}
 
 Make sure that the following endpoints are available:
-http://glue.mysprykershop.com/abstract-products/`{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}`e/related-products
-http://glue.mysprykershop.com/carts/`{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}`/up-selling-products
-http://glue.mysprykershop.com/guest-carts/`{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}`/up-selling-products
+`http://glue.mysprykershop.com/abstract-products/`{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}`e/related-products`
+`http://glue.mysprykershop.com/carts/`{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}`/up-selling-products`
+`http://glue.mysprykershop.com/guest-carts/`{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}`/up-selling-products`
 
 {% endinfo_block %}

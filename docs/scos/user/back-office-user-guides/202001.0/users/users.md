@@ -21,7 +21,9 @@ The bigger is the online shop, the more clients it has, the more Back Office use
 ![Users Control - Spryker Admin](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Users+Control/users-control-section.png)
 
 {% info_block infoBox %}
+
 This is how a Spryker Admin interacts with other departments to build a team structure with a specific set of access rules for each specific team member.
+
 {% endinfo_block %}
 
 The Users Control section is structured in the following way:
@@ -36,6 +38,7 @@ These sections are logically connected by the following:
 Thus, first of all, a Spryker Admin identifies the list of roles that each user is going to have in the **Roles** section. Next, the team should be split into groups in the **Groups** section. And finally, the users for each team member are created and assigned to the defined list of groups in the **User** section.
 
 **What's next?**
+
 To know how to manage roles, groups and users, see the following articles:
 * [Managing Roles](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-roles.html)
 * [Managing Groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-groups.html)

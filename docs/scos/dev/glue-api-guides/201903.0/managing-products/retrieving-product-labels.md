@@ -16,7 +16,7 @@ Product labels are available only for abstract products.
 {% endinfo_block %}
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Product Labels API](https://documentation.spryker.com/v2/docs/promotions-and-discounts-feature-integration-201907).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Product Labels API](/docs/scos/dev/feature-integration-guides/{{page.version}}/discount-promotion-feature-integration.html).
 
 ## Get Product Label by ID
 To retrieve a product label, send this GET request:
@@ -26,7 +26,7 @@ Sample request: `GET http://mysprykershop.com/product-labels/3`
 where `3` is the ID of the label you want to retrieve.
 Label IDs can be found in the `Products / Product Labels` section of the administration interface.
 
-![Product Labels 2.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/Product%20Labels%202.png) 
+![Product Labels 2.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/Product%20Labels%202.png)
 
 **Sample Response**
 ```json

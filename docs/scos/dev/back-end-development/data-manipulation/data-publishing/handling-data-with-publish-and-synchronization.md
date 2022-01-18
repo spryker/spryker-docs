@@ -844,7 +844,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
     }
 ```
 
-3. Add `MessageProcessor` for the queue to `\Pyz\Zed\QueueQueueDependencyProvider::getProcessorMessagePlugins()`:
+3. Add `MessageProcessor` for the queue to `\Pyz\Zed\Queue\QueueDependencyProvider::getProcessorMessagePlugins()`:
 
 ```php
 <?php
@@ -858,7 +858,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
     /**
      * @return array
      */
-    protected function getSynchronizationQueueConfiguration(): array
+    protected function getProcessorMessagePlugins(): array
     {
         return [
             ...
@@ -965,7 +965,7 @@ class MessageStorageReader implements MessageStorageReaderInterface
             ->setReference($idMessage);
 
         $key = $this->synchronizationService
-            ->getStorageKeyBuilder('message')
+            ->getStorageKeyBuilder('message') // "message" is the resource name
             ->generateKey($synchronizationDataTransfer);
 
         $data = $this->storageClient->get($key);

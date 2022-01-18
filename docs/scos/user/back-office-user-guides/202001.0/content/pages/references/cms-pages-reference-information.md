@@ -12,7 +12,9 @@ redirect_from:
 
 This topic contains the reference information you need to know when working with CMS Pages in the **Content Management > Blocks** section.
 ***
+
 ## Overview of CMS Pages
+
 On the **Overview of CMS Pages** page, you see the following:
 
 | Attribute | Description |
@@ -32,7 +34,9 @@ On this page, you can also:
 * Filter content items by a sequence number, Name, and Template.
 
 ***
+
 ## Edit CMS Page
+
 The following table describes the attributes you enter when creating or editing a CMS page.
 
 |Attribute |  Description|
@@ -46,7 +50,9 @@ The following table describes the attributes you enter when creating or editing 
 | **SEO** | Meta information that includes a meta title, meta keywords, and a meta description. |
 
 ***
+
 ## View CMS Page page
+
 The following table describes the attributes you see when viewing a CMS block.
 
 | Attribute | Description |

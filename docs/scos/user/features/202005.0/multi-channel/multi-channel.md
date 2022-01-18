@@ -28,7 +28,7 @@ Provide a holistic shopping experience by meeting your customers where they are.
 
 **Features:**
 <div>
-<a class="feature-link" href="https://documentation.spryker.com/docs/en/multiple-touchpoint-integration">Multiple Touchpoints Integration</a>  
-    <a class="feature-link" href="https://documentation.spryker.com/docs/en/responsive-design">Responsive Design</a>
-    <a class="feature-link" href="https://documentation.spryker.com/docs/en/multi-theme-201907">Multi-Theme</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/multi-channel/multiple-touchpoints-integration.html">Multiple Touchpoints Integration</a>  
+    <a class="feature-link" href="/docs/scos/user/features/{{page.version}}/multi-channel/responsive-design.html">Responsive Design</a>
+    <a class="feature-link" href="/docs/scos/user/features/{{page.version}}/multi-channel/multi-theme/multi-theme.html">Multi-Theme</a>
 </div>

@@ -16,7 +16,7 @@ related:
   - title: Retrieving Company Role Information
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-roles.html
   - title: Retrieving Business Unit Information
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-unit-information.html
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-units.html
   - title: Company Account and General Organizational Structure
     link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
 ---
@@ -32,12 +32,12 @@ The endpoints provided by this API cannot be accessed anonymously. To access the
 In your development, the API can help you to provide information on *Company User Accounts* within the company that the authenticated user belongs to.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html#glue-api--company-account-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html).
 
 ## Retrieving All Company Users
 To retrieve a list of all the Company Users that belong to the company of the logged in user, send a GET request to the following endpoint:
 
-[/company-users](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/company-users)
+/company-users
 
 Sample request: *GET http://glue.mysprykershop.com/company-users*
 
@@ -59,7 +59,7 @@ The endpoint responds with a **RestCompanyUserCollectionResponse** that contains
 
 <details open>
 <summary markdown='span'>Sample Response</summary>
-    
+
 ```json
 {
     "data": [
@@ -113,14 +113,14 @@ The endpoint responds with a **RestCompanyUserCollectionResponse** that contains
     }
 }
 ```
-    
+
 <br>
 </details>
 
 ## Retrieving Available Company Users
 To retrieve a list of the Company Users that the currently logged in user can impersonate as, send a GET request to the following endpoint:
 
-[/company-users/mine](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#company-users)
+/company-users/mine
 
 Sample request: *GET http://glue.mysprykershop.com/company-users/mine*
 
@@ -151,7 +151,7 @@ The company user identifier contained in the id member can be used to access the
 
 <details open>
 <summary markdown='span'>Sample Response</summary>
-    
+
 ```json
 {
     "data": [
@@ -194,14 +194,14 @@ The company user identifier contained in the id member can be used to access the
     }
 }
 ```
-    
+
 <br>
 </details>
 
 ## Retrieving Specific Company Users
 To retrieve information on a specific Company User, send a GET request to the following endpoint:
 
-[/company-users/{% raw %}{{{% endraw %}company_user_id{% raw %}}}{% endraw %}](https://documentation.spryker.com/glue_rest_api/rest-api-reference.htm#/company-users)
+/company-users/{% raw %}{{{% endraw %}company_user_id{% raw %}}}{% endraw %}
 
 Sample request: *GET http://glue.mysprykershop.com/company-users/e1019900-88c4-5582-af83-2c1ea8775ac5*
 
@@ -227,7 +227,7 @@ If the currently logged in user does not have access to the specified Company Us
 
 <details open>
 <summary markdown='span'>Sample Response</summary>
-    
+
 ```json
 {
     "data": {
@@ -243,7 +243,7 @@ If the currently logged in user does not have access to the specified Company Us
     }
 }
 ```
-    
+
 <br>
 </details>
 
@@ -273,7 +273,7 @@ In this case, the following additional attributes will be added to the response:
 
 <details open>
 <summary markdown='span'>Sample Response</summary>
-    
+
 ```json
 {
     "data": [
@@ -450,4 +450,3 @@ In this case, the following additional attributes will be added to the response:
 | 401 | The access token is invalid. |
 | 403 | The access token is missing.<br>- OR -<br>The current Company Account is not set.<br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html). |
 | 404 | The specified Company User was not found or the user does not have permissions to view the account. |
-

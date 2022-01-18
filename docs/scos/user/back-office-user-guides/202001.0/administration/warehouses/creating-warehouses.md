@@ -17,6 +17,7 @@ The topic provides steps on how to create a warehouse in the Back Office.
 ***
 To start working with the Warehouses, navigate to the **Administration > Warehouses** section.
 ***
+
 To create a warehouse:
 
 1. On the **Warehouses** page, click **Create Warehouse** in the top right corner.
@@ -28,7 +29,9 @@ The **Create warehouse** page with two tabs opens - **Configuration** and **Stor
 To make your warehouse unavailable for a specific store(s), clear the checkbox for that(those) store(s).
 
 {% info_block warningBox "Note" %}
+
 Keep in mind that if you clear all checkboxes for stores assigned to a specific warehouse, this warehouse won't appear on the **Edit Stock** page.
+
 {% endinfo_block %}
 
 4. To keep the changes, click **Save**. This will redirect you to the **Warehouses** page where you can see the new warehouse in the table and the following message: '*Warehouse has been successfully saved*'.

@@ -42,6 +42,7 @@ In the table below you can find all the Spryker services that you can run health
 By default, all the application endpoints are closed for security reasons. You can check it by opening `http://application.mysprykershop.com/health-check` in a browser or sending a GET curl request to receive the status code 403.
 
 To enable the endpoints, add the following to `/config/Shared/config_default.php`:
+
 ```php
 Spryker\Shared\HealthCheck\HealthCheckConstants;$config[HealthCheckConstants::HEALTH_CHECK_ENABLED] = true;
 ```
@@ -59,6 +60,7 @@ Depending on the application status, you will see:
 When an application service is unavailable, you might want to apply a fix and run a health check for that particular service. To do that, you can specify the application service(s) you want to run a health check for in the request URL. The pattern is `http://application.mysprykershop.com/health-check?services={service},{service}`. For example, `http://glue.mysprykershop.com/health-check?services=storage`.
 
 ## Integration
+
 ### Prerequisites
 
 To start feature integration, overview and install the necessary features:
@@ -66,26 +68,31 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Spryker Core | {{page.version}} |
+| Spryker Core | 202108.0 |
 
 ### 1) Install the Required Modules Using Composer
 
 Run the following command to install the required modules:
+
 ```bash
-composer require spryker-feature/spryker-core: "^{{page.version}}" --update-with-dependencies
+composer require spryker-feature/spryker-core: "^202108.0" --update-with-dependencies
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
+{% info_block warningBox “Verification” %}
+
 Make sure that the following modules have been installed:
 
 | Module | Expected Directory |
 | --- | --- |
 | `HealthCheck` | `vendor/spryker/health-check` |
 |`HealthCheckExtension`|`vendor/spryker/health-check-extension`|
-</div></section>
+
+{% endinfo_block %}
 
 ### 2) Set up Configuration
+
 1. Extend ACL configuration settings:
+
 ```php
 // ACL: Allow or disallow of urls for Zed Admin GUI for ALL users
 $config[AclConstants::ACL_DEFAULT_RULES] = [
@@ -109,6 +116,7 @@ $config[AclConstants::ACL_USER_RULE_WHITELIST] = [
     ],
 ];
 ```
+
 2. Adjust `\Pyz\Zed\Auth\AuthConfig.php` to ignore authentication of Zed application health check requests:
 
 ```php
@@ -251,7 +259,9 @@ Run the following command to apply transfer changes:
 ```bash
 vendor/bin/console transfer:generate
 ```
-<section contenteditable="false" class="warningBox"><div class="content">
+
+{% info_block warningBox “Verification” %}
+
 Make sure that the following changes took place in transfer objects:
 
 | Transfer | Type | Event | Namespace |
@@ -259,6 +269,5 @@ Make sure that the following changes took place in transfer objects:
 | `HealthCheckRequestTransfer` | class | created | `src\Generated\Shared\Transfer\HealthCheckRequestTransfer` |
 | `HealthCheckResponseTransfer` | class | created | `src\Generated\Shared\Transfer\HealthCheckResponseTransfer` |
 | `HealthCheckServiceResponseTransfer` | class | created | `src\Generated\Shared\Transfer\HealthCheckServiceResponseTransfer` |
-</div></section>
 
- <!--_Last review date: Dec 30, 2019_by Dmytro Mykhailov, Andrii Tserkovnyi-->
+{% endinfo_block %}

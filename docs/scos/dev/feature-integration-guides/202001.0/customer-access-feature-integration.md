@@ -18,18 +18,27 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 |---|---|
-| Spryker Core | 201903.0 |
+| Spryker Core | 202001.0 |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/customer-access:"^201903.0" --update-with-dependencies 
+composer require spryker-feature/customer-access:"^202001.0" --update-with-dependencies 
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules were installed:<table><thead><tr><td>Module</td><td>Expected Directory</td></tr></thead><tbody><tr><td>`CustomerAccess`</td><td>`vendor/spryker/customer-access`</td></tr><tr><td>`CustomerAccessPermission`</td><td>`vendor/spryker/customer-access-permission`</td></tr><tr><td>`CustomerAccessStorage`</td><td>`vendor/spryker/customer-access-storage`</td></tr><tr><td>`CustomerAccessGui`</td><td>`vendor/spryker/customer-access-gui`</td></tr></tbody></table>
+
+Make sure that the following modules were installed:
+
+|Module|Expected Directory|
+|--- |--- |
+|`CustomerAccess`|`vendor/spryker/customer-access`|
+|`CustomerAccessPermission`|`vendor/spryker/customer-access-permission`|
+|`CustomerAccessStorage`|`vendor/spryker/customer-access-storage`|
+|`CustomerAccessGui`|`vendor/spryker/customer-access-gui`|
+
 {% endinfo_block %}
 
 ### 2) Set up Configuration
@@ -37,13 +46,15 @@ Make sure that the following modules were installed:<table><thead><tr><td>Module
 Add your custom project configuration to adjust the module behavior.
 
 {% info_block infoBox "Info" %}
+
 These are going to be the setup content types in your system, so make sure that you cover all types of content you would like hidden from unauthenticated users.
+
 {% endinfo_block %}
 
-src/Pyz/Zed/CustomerAccess/CustomerAccessConfig.php
+**src/Pyz/Zed/CustomerAccess/CustomerAccessConfig.php**
 
- ```php
-  <?php
+```php
+<?php
 
 namespace Pyz\Zed\CustomerAccess;
 
@@ -69,7 +80,9 @@ class CustomerAccessConfig extends SprykerCustomerAccessConfig
 ```
 
 {% info_block infoBox "Info" %}
+
 The verification of this step will happen when you import the infrastructural data related to this feature.
+
 {% endinfo_block %}
 
 ### 3) Set up the Database Schema
@@ -82,7 +95,7 @@ Adjust the schema definition so entity changes will trigger events.
 
 src/Pyz/Zed/CustomerAccess/Persistence/Propel/Schema/spy_unauthenticated_customer_access.schema.xml
 
- ```html
+```xml
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\CustomerAccess\Persistence" package="src.Orm.Zed.CustomerAccess.Persistence">
  <table name="spy_unauthenticated_customer_access" idMethod="native" phpName="SpyUnauthenticatedCustomerAccess">
@@ -91,7 +104,7 @@ src/Pyz/Zed/CustomerAccess/Persistence/Propel/Schema/spy_unauthenticated_custome
  </behavior>
  </table>
 </database>
- ```
+```
 
 Run the following commands to apply database changes and generate entity and transfer changes:
 ```bash
@@ -101,16 +114,37 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes by checking your database:<table><thead><tr><td>Database Entity</td><td>Type</td><td>Event</td></tr></thead><tbody><tr><td>`spy_unauthenticated_customer_access`</td><td>table</td><td>created</td></tr><tr><td>`spy_unauthenticated_customer_access_storage`</td><td>table</td><td>created</td></tr></tbody></table>
+Make sure that the following changes by checking your database:
+
+|Database Entity|Type|Event|
+|--- |--- |--- |
+|`spy_unauthenticated_customer_access`|table|created|
+|`spy_unauthenticated_customer_access_storage`|table|created|
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes in transfer objects:<table><thead><tr class="TableStyle-PatternedRows2-Head-Header1"><td>Transfer</td><td>Type</td><td>Event</td><td>Path</td></tr></thead><tbody><tr><td>`CustomerAccess`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CustomerAccessTransfer`</td></tr><tr><td>`ContentTypeAccess`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ContentTypeAccessTransfer`</td></tr><tr><td>`SpyUnauthenticatedCustomerAccessEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/SpyUnauthenticatedCustomerAccessEntity`</td></tr><tr><td>`SpyUnauthenticatedCustomerAccessStorageEntityTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/SpyUnauthenticatedCustomerAccessStorageEntity`</td></tr></tbody></table>
+
+Make sure that the following changes in transfer objects:
+
+|Transfer|Type|Event|Path|
+|--- |--- |--- |--- |
+|`CustomerAccess`|class|created|`src/Generated/Shared/Transfer/CustomerAccessTransfer`|
+|`ContentTypeAccess`|class|created|`src/Generated/Shared/Transfer/ContentTypeAccessTransfer`|
+|`SpyUnauthenticatedCustomerAccessEntity`|class|created|`src/Generated/Shared/SpyUnauthenticatedCustomerAccessEntity`|
+|`SpyUnauthenticatedCustomerAccessStorageEntityTransfer`|class|created|`src/Generated/Shared/SpyUnauthenticatedCustomerAccessStorageEntity`|
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the changes were implemented successfully. For this purpose, trigger the following methods and make sure that the above events have been triggered:<table><thead><tr><td>Path</td><td>Method Name</td></tr></thead><tbody><tr><td>`src/Orm/Zed/CustomerAccess/Persistence/SpyUnauthenticatedCustomerAccess.php`</td><td>`prepareSaveEventName(
-{% endinfo_block %}`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`</td></tr></tbody></table>)
+
+Make sure that the changes were implemented successfully. For this purpose, trigger the following methods and make sure that the above events have been triggered:
+
+|Path|Method Name|
+|--- |--- |
+|`src/Orm/Zed/CustomerAccess/Persistence/SpyUnauthenticatedCustomerAccess.php`|`prepareSaveEventName()``addSaveEventToMemory()``addDeleteEventToMemory()`|
+
+{% endinfo_block %}
 
 ### 3) Configure Export to Redis
 
@@ -122,10 +156,10 @@ This step will publish tables on change (create, edit, delete) to the `spy_unaut
 |---|---|---|---|
 |  `CustomerAccessStorageEventSubscriber` | Registers listeners that are responsible for publishing customer access data based on changes to customer access entities | None |  `Spryker\Zed\CustomerAccessStorage\Communication\Plugin\Event\Subscriber` |
 
-src/Pyz/Zed/Event/EventDependencyProvider.php
+**src/Pyz/Zed/Event/EventDependencyProvider.php**
 
- ```php
-    <?php
+```php
+<?php
 
 namespace Pyz\Zed\Event;
 
@@ -145,8 +179,10 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that when a product list is created, updated or deleted, they are exported (or removed
-{% endinfo_block %} to Redis and Elasticsearch accordingly.)
+
+Make sure that when a product list is created, updated or deleted, they are exported (or removed) to Redis and Elasticsearch accordingly.
+
+{% endinfo_block %} 
 
 | Target Entity | Example Expected Data Identifier | 
 |---|---|
@@ -193,9 +229,9 @@ Make sure that when a product list is created, updated or deleted, they are expo
 |---|---|---|---|
 |  `CustomerAccessSynchronizationDataPlugin` | Allows populating empty storage table with data. | None |  `Spryker\Zed\CustomerAccessStorage\Communication\Plugin\Synchronization` |
 
-src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php
+**src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
- ```php
+```php
 <?php
 
 namespace Pyz\Zed\Synchronization;
@@ -227,7 +263,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 src/Pyz/Zed/Installer/InstallerDependencyProvider.php
 
- ```php
+```php
 <?php
 
 namespace Pyz\Zed\Installer;
@@ -256,7 +292,9 @@ console setup:init-db
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that all configured content types above are saved in the database table `spy_unauthenticated_customer_access` with the configured content type access.
+
 {% endinfo_block %}
 
 ### 6) Set up Behavior
@@ -272,9 +310,9 @@ Enable the following behaviors by registering the plugins:
 |  `SeeShoppingListPermissionPlugin` | Provides ability to add item to shopping list on product detail page | None |  `Spryker\Client\CustomerAccessPermission\Plugin` |
 |  `CustomerAccessPermissionStoragePlugin` | Provides ability to fetch customer access permissions on customer login | None |  `Spryker\Client\CustomerAccessPermission\Plugin` |
 
-src/Pyz/Client/Permission/PermissionDependencyProvider.php
+**src/Pyz/Client/Permission/PermissionDependencyProvider.php**
 
- ```php
+```php
 <?php
 
 namespace Pyz\Client\Permission;
@@ -315,8 +353,16 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that everything works fine (checks should be done for not logged-in customers
-{% endinfo_block %}:<ul><li>`SeePricePermissionPlugin` will show or hide prices at all pages depending on configuration value</li><li>`SeeOrderPlaceSubmitPermissionPlugin` will allow or disallow order submitting after going through the checkout process depending on configuration value</li><li>`SeeAddToCartPermissionPlugin` is responsible for "Add to Cart" button on PDP. It will be available or not depending on configuration value</li><li>`SeeWishlistPermissionPlugin` takes care about "Add to Wishlist" button on PDP. It will be shown or not depending on configuration value</li><li>`SeeShoppingListPermissionPlugin` will allow or disallow adding product to shopping list from PDP depending on configuration value</li><li>`CustomerAccessPermissionStoragePlugin` is responsible for customer permissions retrieving</li></ul>)
+
+Make sure that everything works fine (checks should be done for not logged-in customers:
+- `SeePricePermissionPlugin` will show or hide prices at all pages depending on configuration value
+- `SeeOrderPlaceSubmitPermissionPlugin` will allow or disallow order submitting after going through the checkout process depending on configuration value
+- `SeeAddToCartPermissionPlugin` is responsible for "Add to Cart" button on PDP. It will be available or not depending on configuration value
+- `SeeWishlistPermissionPlugin` takes care about "Add to Wishlist" button on PDP. It will be shown or not depending on configuration value
+- `SeeShoppingListPermissionPlugin` will allow or disallow adding product to shopping list from PDP depending on configuration value
+- `CustomerAccessPermissionStoragePlugin` is responsible for customer permissions retrieving
+
+{% endinfo_block %}
 
 ## Install Feature Frontend
 
@@ -326,12 +372,13 @@ Overview and install the necessary features before beginning the integration ste
 
 | Name | Version |
 |---|---|
-| Spryker Core | 201903.0 |
+| Spryker Core | 202001.0 |
 
 ### 1) Add Translations
+
 Append glossary according to your configuration:
 
-src/data/import/glossary.csv
+**src/data/import/glossary.csv**
 
 ```html
 customer.access.cannot_see_price,Please login to see the price,en_US
@@ -345,5 +392,7 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that in the database the configured data has been added to the `spy_glossary` table.
+
 {% endinfo_block %}

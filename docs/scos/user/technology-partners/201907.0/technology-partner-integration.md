@@ -102,9 +102,9 @@ Please visit our [Partners Registry](https://spryker.com/find-a-partner/) for a 
 
 ## Payment Partners
 
-* [Adyen](/docs/scos/user/technology-partners/202108.0/payment-partners/adyen/adyen.html)
-* [Amazon Pay](/docs/scos/user/technology-partners/202108.0/payment-partners/amazon-pay/amazon-pay.html)
-* [AfterPay](/docs/scos/user/technology-partners/202108.0/payment-partners/afterpay/afterpay.html)
+* [Adyen](/docs/scos/user/technology-partners/202108.0/payment-partners/adyen.html)
+* [Amazon Pay](/docs/scos/user/technology-partners/202108.0/payment-partners/amazon-pay.html)
+* [AfterPay](/docs/scos/user/technology-partners/202108.0/payment-partners/afterpay.html)
 * [Arvato](/docs/scos/user/technology-partners/202108.0/payment-partners/arvato/arvato.html)
 * [Billie](/docs/scos/user/technology-partners/202108.0/payment-partners/billie.html)
 * [Billpay](/docs/scos/user/technology-partners/202108.0/payment-partners/billpay/billpay.html)
@@ -118,7 +118,7 @@ Please visit our [Partners Registry](https://spryker.com/find-a-partner/) for a 
 * [Payone](/docs/scos/user/technology-partners/202108.0/payment-partners/payolution/payolution.html)
 * [Powerpay](/docs/scos/user/technology-partners/202108.0/payment-partners/powerpay.html)
 * [Ratenkauf by Easycredit](/docs/scos/user/technology-partners/202108.0/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html)
-* [RatePAY](/docs/scos/user/technology-partners/202108.0/payment-partners/ratepay/ratepay.html)
+* [RatePAY](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay.html)
 
  ## Poduct Information (PIM/ERP)
 

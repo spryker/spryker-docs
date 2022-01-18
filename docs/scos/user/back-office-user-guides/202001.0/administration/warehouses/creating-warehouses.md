@@ -17,6 +17,7 @@ The topic provides steps on how to create a warehouse in the Back Office.
 ***
 To start working with the Warehouses, navigate to the **Administration > Warehouses** section.
 ***
+
 To create a warehouse:
 
 1. On the **Warehouses** page, click **Create Warehouse** in the top right corner.

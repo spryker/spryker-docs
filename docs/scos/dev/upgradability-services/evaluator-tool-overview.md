@@ -1,51 +1,15 @@
 ---
-title: Evaluation tool overview
-description: Functionalities of the evaluation tool
+title: evaluator tool overview
+description: Functionalities of the evaluator tool
 last_updated: Nov 25, 2021
 template: concept-topic-template
 ---
 
-The evaluation tool is a part of Spryker SDK that performs automated quality checks against our own and industry standards.
+The evaluator tool is a part of Spryker SDK that performs automated quality checks against our own and industry standards.
 
-## Installing the evaluation tool
+## How the evaluator tool works
 
-To install the evaluation tool, do the following:
-
-
-1. Enter the Docker SDK cli:
-```bash
-docker/sdk cli
-```
-
-2. Install Spryker SDK:
-```bash
-composer global require spryker-sdk/sdk "dev-master"
-```
-
-3. Initialize Spryker SDK:
-```bash
-~/.composer/vendor/spryker-sdk/sdk/bin/console sdk:init:sdk
-```
-
-
-## Using the evaluation tool
-
-You can use the evaluation tool as follows:
-* Analyze project code compliance:
-```bash
-analyze:php:code-compliance
-```
-
-* Report code compliance issues:
-```bash
-analyze:php:code-compliance-report
-```
-
-For detailed instructions, see [Running the evaluation tool](/docs/scos/dev/upgradability-services/running-the-evaluation-tool.html).
-
-## How the evaluation tool works
-
-The evaluation tool performs a number of checks that are based on the static analysis of our tools. Currently, it performs the following checks:
+The evaluator tool performs a number of checks that are based on the static analysis of our tools. Currently, it performs the following checks:
 
 * Is not unique:
   * Transfer
@@ -61,7 +25,7 @@ The evaluation tool performs a number of checks that are based on the static ana
   * Entity manager
 * Non-public API class was extended or used
 
-The evaluation tool provides informative output about your code. If all the checks are successful, the tool returns zero messages.
+The evaluator tool provides informative output about your code. If all the checks are successful, the tool returns zero messages.
 
 Evaluation example without compliance errors:
 
@@ -97,6 +61,22 @@ Total messages: 244
 
 ```
 
+## Using the evaluator tool
+
+You can use the evaluator tool as follows:
+* Analyze project code compliance:
+```bash
+analyze:php:code-compliance
+```
+
+* Generate a report about code compliance issues:
+```bash
+analyze:php:code-compliance-report
+```
+
+For detailed instructions, see [Running the evaluator tool](/docs/scos/dev/upgradability-services/running-the-evaluator-tool.html).
+
+
 ## Next steps
 
-[Running the evaluation tool](/docs/scos/dev/upgradability-services/running-the-evaluation-tool.html)
+[Running the evaluator tool](/docs/scos/dev/upgradability-services/running-the-evaluator-tool.html)

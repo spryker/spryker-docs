@@ -32,8 +32,8 @@ If you have BazaarVoice integrated, the Spryker default [Product Ratings and Rev
 
 To integrate or configure BazaarVoice:
 
-1. In your store's Back Office, go to *Apps*.
-2. Click BazaarVoice.
+1. In your store's Back Office, go to **Apps->Catalog**.
+2. Click **BazaarVoice**.
    This takes you to the BazaarVoice app details page, from where you can do the integration and configuration.
 
 ### Integrating BazaarVoice into your store
@@ -62,7 +62,7 @@ Now, you can configure the BazzareVoice app for your store.
 
 For the BazaarVoice app, you can configure the following for your store:
 - BazaarVoice services you need
-- Stores you want the BazaarVoice UGC to be displaed in
+- Stores you want the BazaarVoice UGC to be displayed in
 
 To configure the app, on the BazaarVoice app details page, click **Configure**.
 

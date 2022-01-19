@@ -57,7 +57,7 @@ Automate your processes and implement several shipping and payment integrations.
         <area shape="rectangle" coords="484,503,712,612" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/analytics/minubo.html" />
         <area shape="rectangle" coords="3,612,238,721" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay.html" />
         <area shape="rectangle" coords="238,611,483,720" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/finance-and-accounting/nitrobox.html" />
-        <area shape="rectangle" coords="484,611,711,721" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/payment-partners/amazon-pay/amazon-pay.html" />
+        <area shape="rectangle" coords="484,611,711,721" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/payment-partners/amazon-pay.html" />
         <area shape="rectangle" coords="1,720,241,808" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution/payolution.html" />
         <area shape="rectangle" coords="241,723,486,810" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/hosting-providers/root-360.html" />
         <area shape="rectangle" coords="486,723,712,807" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/payment-partners/braintree.html" />

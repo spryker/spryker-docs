@@ -5,45 +5,73 @@ last_updated: Nov 25, 2021
 template: concept-topic-template
 ---
 
-The evaluation tool is a part of Spryker-SDK, that performs automated quality checks against our own and industry standards.
+The evaluation tool is a part of Spryker SDK that performs automated quality checks against our own and industry standards.
 
 ## Installing the evaluation tool
 
-As the evaluation tool is part of Spryker-SDK, we should install it globally into docker/sdk cli and initialize. 
-After that we will be able to run the evaluation commands
+To install the evaluation tool, do the following:
 
+
+1. Enter the Docker SDK cli:
 ```bash
 docker/sdk cli
+```
+
+2. Install Spryker SDK:
+```bash
 composer global require spryker-sdk/sdk "dev-master"
+```
+
+3. Initialize Spryker SDK:
+```bash
 ~/.composer/vendor/spryker-sdk/sdk/bin/console sdk:init:sdk
 ```
 
+
 ## Using the evaluation tool
 
-at this moment we have next commands:
-- analyze:php:code-compliance (analyzes project code compliance)
-- analyze:php:code-compliance-report (report code compliance issues)
+You can use the evaluation tool as follows:
+* Analyze project code compliance:
+```bash
+analyze:php:code-compliance
+```
+
+* Report code compliance issues:
+```bash
+analyze:php:code-compliance-report
+```
 
 For detailed instructions, see [Running the evaluation tool](/docs/scos/dev/upgradability-services/running-the-evaluation-tool.html).
 
 ## How the evaluation tool works
 
-The evaluation tool performs a number of checks that are based on the static analysis of our own tools. Currently, it performs the following checks:
+The evaluation tool performs a number of checks that are based on the static analysis of our tools. Currently, it performs the following checks:
 
-- Is not unique - Transfer/Transfer property / DB table / DB column / Method / Constant
-- Method is overridden - Factory/DP (not plug-in)/Repository/EntityManager
-- Non public API class was extended or used
+* Is not unique:
+  * Transfer
+  * Transfer property
+  * Database table
+  * Database column
+  * Method
+  * Constant
+* Method is overridden:
+  * Factory
+  * Dependecy provider
+  * Repository
+  * Entity manager
+* Non-public API class was extended or used
 
-The evaluation tool provides you with informative output about your code. If all the checks you’ve run are successful, the tool returns an empty result.
+The evaluation tool provides informative output about your code. If all the checks are successful, the tool returns zero messages.
 
-Example of a successful evaluation:
+Evaluation example without compliance errors:
 
 ```bash
 Total messages: 0
 ```
 
-If one or more checks fail, the Evaluation tool returns the errors per check.
+If one or more checks fail, the tool returns errors per check.
 
+Evaluation example with compliance errors:
 ```bash
 ...
 NotUnique:Constant Pyz\Shared\ContentBannerGui\ContentBannerGuiConfig::WIDGET_TEMPLATE_DISPLAY_NAME_SLIDER_WITHOUT_LINK name has to have project namespace, like PYZ_WIDGET_TEMPLATE_DISPLAY_NAME_SLIDER_WITHOUT_LINK.

@@ -4,7 +4,8 @@ description: Instructions for running the evaluation tool
 last_updated: Nov 25, 2021
 template: concept-topic-template
 ---
-This document describes how to check if code is compliant with Spryker’s standards using the Evaluation tool as part of Spryker-SDK.
+
+This document describes how to check if code is compliant with Spryker’s standards using the Evaluation tool.
 
 ## Prerequisites
 
@@ -20,15 +21,22 @@ Get general information about the tool and see all available commands related to
 ~/.composer/vendor/spryker-sdk/sdk/bin/console list
 ```
 
-## Running evaluation
+## Running an evaluation
 
-To perform evaluation, run the evaluation tool with format parameter (at this moment evaluator supports only yaml format):
+To evaluate your code, run the Evaluator with the output format defined in YAML:
+
+{% info_block infoBox "Output formats" %}
+
+The Evaluator supports only the YAML format.
+
+{% endinfo_block %}
+
 
 ```bash
 ~/.composer/vendor/spryker-sdk/sdk/bin/console analyze:php:code-compliance --format=yaml
 ```
 
-as a result, evaluator will create *analyze:php:code-compliance.violations.yaml* into the reports folder
+The Evaluator creates *analyze:php:code-compliance.violations.yaml* in the reports folder.
 
 for reading this report we should run:
 ```bash

@@ -1,26 +1,26 @@
 ---
-title: Back End API for Merchant Relationships feature integration
-description: Integrate the Back End API for Merchant Relationships into your project
+title: Backend API for Merchant Relationships feature integration
+description: Integrate the Backend API for Merchant Relationships into your project
 template: feature-integration-guide-template
 ---
 
-# Back End API for Merchant Relationships feature integration
+# Backend API for Merchant Relationships feature integration
 
 This document describes how to integrate the [BAPI Merchant Relationships]({link to a respective feature overview}) into a Spryker project.
 
 ## Install feature core
 
-Follow the steps below to install the {Back End API for Merchant Relationships feature core.
+Follow the steps below to install the {Backend API for Merchant Relationships feature core.
 
 ### Prerequisites
 
 To start feature integration, integrate the required features and Glue APIs:
 
-| NAME                              | VERSION           | INTEGRATION GUIDE                                                                                                                                                            |
-|-----------------------------------|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Back End API                      | {{page.version}}  | [Back End API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/back-end-api-feature-integration.html)                                                                         |
-| Merchants and Merchant Relations  | {{page.version}}  | [Merchants and Merchant Relations feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchants-and-merchant-relations-feature-integration.html) |
-| Spryker Core                      | {{page.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)                                         |
+| NAME                            | VERSION           | INTEGRATION GUIDE                                                                                                                                                           |
+|---------------------------------|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Backend API                     | {{page.version}}  | [Backend API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/backend-api-feature-integration.html)                                          |
+| Merchants and Merchant Relations | {{page.version}}  | [Merchants and Merchant Relations feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchants-and-merchant-relations-feature-integration.html) |
+| Spryker Core                    | {{page.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)                                        |
 
 ### 1) Install the required modules using Composer
 

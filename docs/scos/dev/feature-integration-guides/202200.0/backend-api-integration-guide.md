@@ -1,16 +1,16 @@
 ---
-title: Back End API feature integration
-description: Integrate the Back End API into your project
+title: Backend API feature integration
+description: Integrate the Backend API into your project
 template: feature-integration-guide-template
 ---
 
-# Back End API feature integration
+# Backend API feature integration
 
-This document describes how to integrate the [Back End API]({link to a respective feature overview}) into a Spryker project.
+This document describes how to integrate the [Backend API]({link to a respective feature overview}) into a Spryker project.
 
 ## Install feature core
 
-Follow the steps below to install the Back End API feature core.
+Follow the steps below to install the Backend API feature core.
 
 ### Prerequisites
 
@@ -48,7 +48,7 @@ Add the following configuration:
 | CONFIGURATION                      | SPECIFICATION                                                                          | NAMESPACE          |
 |------------------------------------|----------------------------------------------------------------------------------------|--------------------|
 | ApiConstants::ENABLE_API_DEBUG     | Enables the mode when API response is extended with request parameters and stacktrace. | Spryker\Shared\Api |
-| ApiConfig::isApiEnabled()          | Enables Back End API.                                                                  | Spryker\Zed\Api    |
+| ApiConfig::isApiEnabled()          | Enables Backend API.                                                                   | Spryker\Zed\Api    |
 | ApiConfig::getAllowedOrigin()      | Defines the CORS Access-Control-Allowed-Origin header.                                 | Spryker\Zed\Api    |
 | ApiConfig::getSafeHeaderDataKeys() | Defines allowed headers.                                                               | Spryker\Zed\Api    |
 | ApiConfig::getSafeServerDataKeys() | Defines allowed server data keys.                                                      | Spryker\Zed\Api    |
@@ -175,9 +175,9 @@ class ApiConfig extends SprykerApiConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that Back End API is enabled by accessing any back end API resource. 
+Make sure that Backend API is enabled by accessing any backend API resource. 
 
-Make sure, that back end API is extended with request parameters and stacktrace when `ApiConstants::ENABLE_API_DEBUG` is set to `true`.
+Make sure, that backend API is extended with request parameters and stacktrace when `ApiConstants::ENABLE_API_DEBUG` is set to `true`.
 
 {% endinfo_block %}
 
@@ -214,7 +214,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                            | SPECIFICATION                                                                                                                | PREREQUISITES | NAMESPACE                                                   |
 |---------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------|
-| ApiRouterPlugin                                   | Provides `Router` which handles Back End API calls.                                                                          |               | Spryker\Zed\Api\Communication\Plugin\Router                 |
+| ApiRouterPlugin                                   | Provides `Router` which handles backend API calls.                                                                           |               | Spryker\Zed\Api\Communication\Plugin\Router                 |
 | MonitoringRequestTransactionEventDispatcherPlugin | Adds subscriber to listen for controller events.                                                                             |               | Spryker\Zed\Monitoring\Communication\Plugin\EventDispatcher |
 | RouterListenerEventDispatcherPlugin               | Adds a `RouteListener` to the `EventDispatcher`.                                                                             |               | Spryker\Zed\Router\Communication\Plugin\EventDispatcher     |
 | ResponseListenerEventDispatcherPlugin             | Adds a `ResponseListener` to the `EventDispatcher`.                                                                          |               | Spryker\Shared\Http\Plugin\EventDispatcher                  |
@@ -308,7 +308,7 @@ class ApiDependencyProvider extends SprykerApiDependencyProvider
 
 ```
 
-Create a new entry point for Back End API Application:
+Create a new entry point for Backend API Application:
 
 **public/BackendApi/index.php**
 

@@ -1,5 +1,5 @@
 ---
-title: Reference information- orders
+title: Reference information - Orders
 description: The guide provides reference information you see when creating, updating and viewing order details in the Back Office.
 last_updated: Mar 31, 2021
 template: back-office-user-guide-template

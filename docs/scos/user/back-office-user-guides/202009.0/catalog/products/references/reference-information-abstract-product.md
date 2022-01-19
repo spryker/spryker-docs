@@ -1,5 +1,5 @@
 ---
-title: Reference information- abstract product
+title: Reference information - Abstract Product
 description: Use this section to learn more about the attributes you use when creating or updating abstract products in the Back Office.
 last_updated: Apr 26, 2021
 template: back-office-user-guide-template

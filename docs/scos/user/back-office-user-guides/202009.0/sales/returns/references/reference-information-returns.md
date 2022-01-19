@@ -1,5 +1,5 @@
 ---
-title: Reference information- returns
+title: Reference information - Returns
 description: The guide provides reference information you see when working with returns in the Back Office.
 last_updated: Aug 27, 2020
 template: back-office-user-guide-template

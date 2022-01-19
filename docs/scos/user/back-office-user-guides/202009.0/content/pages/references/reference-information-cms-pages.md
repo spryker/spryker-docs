@@ -1,5 +1,5 @@
 ---
-title: Reference information- CMS pages
+title: Reference information - CMS Pages
 description: The guide provides reference information you see when creating, viewing and editing CMS pages in the Back Office.
 last_updated: Jun 15, 2021
 template: back-office-user-guide-template

@@ -1,5 +1,5 @@
 ---
-title: Reference information- product options
+title: Reference information - Product Options
 description: This guide describes the values you use and enter when creating or updating product options in the Back Office.
 last_updated: Aug 27, 2020
 template: back-office-user-guide-template

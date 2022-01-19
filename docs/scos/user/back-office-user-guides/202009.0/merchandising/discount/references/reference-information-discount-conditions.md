@@ -1,5 +1,5 @@
 ---
-title: Reference information- discount conditions
+title: Reference information - Discount Conditions
 description: The guide provides additional information you use when working with discount calculations in the Back Office.
 last_updated: Aug 27, 2020
 template: back-office-user-guide-template

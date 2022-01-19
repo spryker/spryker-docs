@@ -9,7 +9,7 @@ template: feature-integration-guide-template
 
 The following feature integration guide expects the basic feature to be in place.
 
-The current feature integration guide adds **Discount Prioritization** and **Discount Valid From and Valid To Supports Time Definition** functionality.
+The current feature integration guide adds **Discount Prioritization** and **Discount Validity Period Supports HH:MM Time Definition** functionality.
 
 {% endinfo_block %}
 
@@ -97,7 +97,7 @@ console translator:generate-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that all labels and help tooltips in discount form has English and German translation.
+Make sure that all labels and help tooltips in the discount create and edit forms have English and German translations.
 
 {% endinfo_block %}
 
@@ -134,7 +134,7 @@ Make sure that you can submit `Discount Create` and `Discount Update` forms with
 1. In the Back Office, go to **Merchandising** > **Discount**.
 2. Create new discount or update existing one, check that you can see `Discount` form.
 3. Make sure that you can see a datetime picker dropdown when you click on **Valid From** and **Valid To** discount form fields.
-4. Make sure that **Valid From** and **Valid To** discount form fields can accept selected date and time.
+4. Make sure that **Valid From** and **Valid To** discount form fields can accept selected date and time, using keystroke entry for times not falling on the hour.
 5. Make sure, that **Valid From** and **Valid To** date and time are persisted correctly in `spy_discount` DB table.
 
 {% endinfo_block %}

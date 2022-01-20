@@ -9,7 +9,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\SingleCommandApplication;
 use Validator\LastUpdatedValidator;
 
-const ROOT_DIR = __DIR__ . '/../';
+const ROOT_DIR = __DIR__ . '/../../';
 
 set_error_handler(function($errno, $errstr, $errfile, $errline) {
     throw new ErrorException($errstr, 0, $errno, $errfile, $errline);

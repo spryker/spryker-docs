@@ -215,7 +215,7 @@ jobs:
 
       - name: Run validator command
         run: |
-          cd ./last_updated_validator
+          cd ./_plugins/last_updated_validator
           php validate docs
 
   page_validation:

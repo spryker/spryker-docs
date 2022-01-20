@@ -21,13 +21,13 @@ related:
 
  In order to reproduce some edge cases like declined payment or pending capture Amazon provides two solutions. First is special methods marked with red star on payment widget.
 
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Amazon+Pay/00000005.png) 
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Amazon+Pay/00000005.png)
 
 It allows reproducing different cases of decline payment workflow. But there are more edge cases like expired authorisation or pending capture there is only one way to reproduce - pass simulation string as 'SellerNote' parameter of API request. <!-- More information is available here-->
 
 ## How to use the module
 ### Configuration
-In order to use Amazon Pay system as well as related Spryker module, Amazon merchant account has to be created. After that all related credentials must be specified in spryker configuration file. 
+In order to use Amazon Pay system as well as related Spryker module, Amazon merchant account has to be created. After that all related credentials must be specified in spryker configuration file.
 
 ```php
 $config[AmazonpayConstants::CLIENT_ID] must be taken as value of Client Id of Amazon merchant
@@ -35,7 +35,7 @@ $config[AmazonpayConstants::CLIENT_SECRET] must be taken as value of Client Secr
 $config[AmazonpayConstants::SELLER_ID] must be taken as value of Merchant ID of Amazon merchant
 $config[AmazonpayConstants::ACCESS_KEY_ID] must be taken as value of Access Key ID of Amazon merchant
 $config[AmazonpayConstants::SECRET_ACCESS_KEY] must be taken as value of Secret Access Key of Amazon merchant
-$config[AmazonpayConstants::REGION] must be specified in ISO2 format. For example "DE" or "US". 
+$config[AmazonpayConstants::REGION] must be specified in ISO2 format. For example "DE" or "US".
 $config[AmazonpayConstants::SANDBOX] must be set to false in production environment
 $config[AmazonpayConstants::SUCCESS_PAYMENT_URL] must be specified as an URL where customer will be redirected after successful resulf of MFA challenge.
 $config[AmazonpayConstants::FAILURE_PAYMENT_URL] must be specified as an URL where customer will be redirected after unsuccessful resulf of MFA challenge.
@@ -46,7 +46,7 @@ Next, two settings are about behaviour of authorization process and were describ
 ```php
 $config[AmazonpayConstants::AUTH_TRANSACTION_TIMEOUT] according to info from Amazon this value is 1440.
 $config[AmazonpayConstants::CAPTURE_NOW]
-State Machine must be set according to the values of these two settings. 
+State Machine must be set according to the values of these two settings.
 
 $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING][AmazonpayConstants::PAYMENT_METHOD] =
  $config[AmazonpayConstants::CAPTURE_NOW] ? 'AmazonpayPaymentSync01' : 'AmazonpayPaymentAsync01';
@@ -59,7 +59,7 @@ The value `ERRORS_ONLY` is recommended for production so that all errors can be 
 ### Localization
 There's only one related key in glossary: `amazonpay.payment.failed`. It defines the message to display on cart page in case of failed payment.
 
-### Modifications of the Project Code 
+### Modifications of the Project Code
 The module provides not only Facade with all functionality behind but also controllers, templates, javascripts for rendering amazonpay widgets. It is usually very different from one shop to another but on early stage it could be usefull to use what bundle provides.
 
 First of all, AmazonpayControllerProvider must be added to YvesBootstrap. Modify `src/Pyz/Yves/Application/YvesBootstrap.php` as follows:
@@ -74,7 +74,7 @@ protected function getControllerProviderStack($isSsl)
 {
  return [
  new AmazonpayControllerProvider($isSsl),
-// other controllers of a shop 
+// other controllers of a shop
 ```
 
 Next step is rendering Pay with Amazon button. Just insert this line in a proper place of twig template which is normally template of cart page:

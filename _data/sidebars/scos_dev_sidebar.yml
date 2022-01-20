@@ -4154,6 +4154,66 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-refund.html
             - title: Amazon Pay - API
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-api.html
+    - title: Arvato
+      nested:
+        - title: v.1.0
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          nested:
+          - title: Arvato - Risk Check 1.0
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/v.1.0/arvato-risk-check-1.0.html
+            include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+            - "202001.0"
+            - "202005.0"
+          - title: Installing and configuring Arvato 1.0
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/v.1.0/installing-and-configuring-arvato-1.0.html
+            include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+            - "202001.0"
+            - "202005.0"
+        - title: Arvato - Risk Check
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/arvato-risk-check.html
+          include_versions:
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+        - title: Arvato - Store Order
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/arvato-store-order.html
+        - title: v.2.0
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          nested:
+          - title: Arvato - Risk Check 2.0
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/v.2.0/arvato-risk-check-2.0.html
+            include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+          - title: Installing and configuring Arvato 2.0
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/v.2.0/installing-and-configuring-arvato-2.0.html
+            include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+        - title: Installing and configuring Arvato
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/installing-and-configuring-arvato.html
+          include_versions:
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: RatePay
           nested:
             - title: RatePay - Payment methods

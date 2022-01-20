@@ -15,4 +15,4 @@ Browse the troubleshooting tutorials:
 * [Tutorial — Troubleshooting unavailable Yves or Glue](/docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-unavailable-yves-or-glue.html)
 * [Tutorial — Troubleshooting Yves or Zed not restarting after deployment](/docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-yves-or-zed-not-restarting-after-deployment.html)
 * [Tutorial — Troubleshooting 403 error](/docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-403-error.html)
-* [Tutorial — Troubleshooting Jenkins jobs issues](/docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-jenkins-jobs.html)
+* [Tutorial — Troubleshooting failed Jenkins jobs](/docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-failed-jenkins-jobs.html)

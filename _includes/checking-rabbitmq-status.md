@@ -9,7 +9,7 @@ To connect to the RabbitMQ Management interface, you need to check the following
 - `SPRYKER_BROKER_API_PORT`
 
 Check the details as follows:
-{% include checking-a-service-connection-configuration.md %}
+{% include checking-a-service-connection-configuration.md %} <!-- To edit, see /_includes/checking-a-service-connection-configuration.md -->
 
 
 

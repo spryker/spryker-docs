@@ -2,7 +2,6 @@
 <?php
 require __DIR__.'/vendor/autoload.php';
 
-use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -21,6 +20,6 @@ set_error_handler(function($errno, $errstr, $errfile, $errline) {
         $directory = realpath(ROOT_DIR . $input->getArgument('dir'));
         $validator = new LastUpdatedValidator($output);
 
-        return $validator->validate($directory) ? Command::SUCCESS : Command::FAILURE;
+        return $validator->validate($directory);
     })
     ->run();

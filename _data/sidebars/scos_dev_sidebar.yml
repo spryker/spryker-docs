@@ -4156,11 +4156,6 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-api.html
     - title: Arvato
       nested:
-        - title: Installing and configuring Arvato
-          url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/installing-and-configuring-arvato.html
-          include_versions:
-          - "202001.0"
-          - "202005.0"
         - title: v.1.0
           include_versions:
           - "201811.0"
@@ -4178,7 +4173,7 @@ entries:
             - "202001.0"
             - "202005.0"
           - title: Installing and configuring Arvato 1.0
-            url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/v.1.0/arvato-risk-solution-services-integration-1.0.html
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/v.1.0/installing-and-configuring-arvato-1.0.html
             include_versions:
             - "201811.0"
             - "201903.0"
@@ -4207,14 +4202,16 @@ entries:
             - "201903.0"
             - "201907.0"
           - title: Installing and configuring Arvato 2.0
-            url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/v.2.0/arvato-risk-solution-services-integration-2.0.html
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/v.2.0/installing-and-configuring-arvato-2.0.html
             include_versions:
             - "201811.0"
             - "201903.0"
             - "201907.0"
-        - title: Arvato - Installation and Configuration
-          url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/arvato-installation-and-configuration.html
+        - title: Installing and configuring Arvato
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/installing-and-configuring-arvato.html
           include_versions:
+          - "202001.0"
+          - "202005.0"
           - "202009.0"
           - "202108.0"
         - title: Billpay
@@ -4327,6 +4324,8 @@ entries:
         url: /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html
       - title: Available test helpers
         url: /docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
+      - title: Testing console commands
+        url: /docs/scos/dev/guidelines/testing-guidelines/testing-console-commands.html
     - title: Project development guidelines
       url: /docs/scos/dev/guidelines/project-development-guidelines.html
     - title: Data Processing Guidelines

@@ -52,34 +52,46 @@ To check the services and tasks, do the following:
 
 {% include checking-the-status-of-ecs-services-and-tasks.md %} <!-- To edit, see /_includes/checking-the-status-of-ecs-services-and-tasks.md -->
 
+## 4. In case you have got 504 responses from the server 
 
-## 4. Check Redis status
+One of the reasons for 504 response can be reaching out container memory limit.
+
+In this case you have found in zed (boffice) container logs messages like: 
+
+```
+WARNING:[pool worker] child 18, script 'index.php' (request: "GET /index.php") execution timed out (61 sec),terminating
+WARNING:[pool worker] child 18 exited on signal 15 (SIGTERM) after 221.30 seconds from start
+```
+you need to create a support request to check cluster node system logs for OOM killer messages 
+
+
+## 5. Check Redis status
 
 Check the status of Redis via AWS Management Console:
 
 {% include checking-redis-status-via-aws-management-console.md %} <!-- To edit, see /_includes/checking-redis-status-via-aws-managemet-console.md -->
 
 
-## 5. Check Redis system information
+## 6. Check Redis system information
 
 To check Redis system information via a CLI, do the following.
 
 {% include checking-redis-system-information-via-a-cli.md %} <!-- To edit, see /_includes/checking-redis-system-information-via-a-cli.md -->
 
 
-## 6. Check ElasticSearch status
+## 7. Check ElasticSearch status
 
 Check ElasticSearch status via AWS Management Console:
 
 {% include checking-elasticsearch-status-via-aws-management-console.md %} <!-- To edit, see /_includes/checking-elasticsearch-status-via-aws-management-console.md -->
 
-## 7. Check ElasticSearch indices
+## 8. Check ElasticSearch indices
 
 To check ElasticSearch indices via a CLI, do the following.
 
 {% include checking-elasticsearch-indices-via-a-cli.md %} <!-- To edit, see /_includes/checking-elasticsearch-indices-via-a-cli.md -->
 
-## 8. Check the database
+## 9. Check the database
 
 Check the status of the RDS database:
 

@@ -108,7 +108,11 @@ class LastUpdatedValidator
     {
         $relatedDocumentPath = $this->buildRelatedDocumentsPath($relatedDocument['link'], $document);
 
-        if (!$this->validateRelatedDocumentPath($relatedDocumentPath, $document)) {
+        if (empty($relatedDocumentPath)) {
+            $this->logError(
+                sprintf('Related document "%s" does not exist for document %s', $relatedDocument['title'], $document->getPathname())
+            );
+
             return 1;
         }
 
@@ -136,24 +140,12 @@ class LastUpdatedValidator
     }
 
     /**
-     * @param $relatedDocumentPath
+     * @param string $relatedDocumentPath
+     * @param string $documentLastUpdated
      * @param \Symfony\Component\Finder\SplFileInfo $document
      *
-     * @return bool
+     * @return int
      */
-    private function validateRelatedDocumentPath($relatedDocumentPath, SplFileInfo $document): bool
-    {
-        if (empty($relatedDocumentPath)) {
-            $this->logError(
-                sprintf('Related document "%s" does not exist for document %s', $relatedDocumentPath, $document->getPathname())
-            );
-
-            return false;
-        }
-
-        return true;
-    }
-
     private function validatedRelatedDocumentLastUpdated(string $relatedDocumentPath, string $documentLastUpdated, SplFileInfo $document): int
     {
         try {

@@ -1,5 +1,5 @@
 ---
-title: Computop - Installation and configuration
+title: Installing and configuring Computop
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/computop-installation-and-configuration
@@ -50,7 +50,7 @@ $config[ComputopApiConstants::BLOWFISH_PASSWORD] = 'Password for blowfish hashin
 $config[ComputopApiConstants::HMAC_PASSWORD] = 'Password for hmac hashing';
 $config[ComputopConstants::IDEAL_ISSUER_ID] = 'IDeal issuer identifier';
 $config[ComputopConstants::PAYDIREKT_SHOP_KEY] = 'Paydirekt shop key';
-$config[ComputopConstants::PAY_PAL_CLIENT_ID] = 'Paypal Client ID';	
+$config[ComputopConstants::PAY_PAL_CLIENT_ID] = 'Paypal Client ID';
 
 // Init API call endpoints
 $config[ComputopConstants::PAY_NOW_INIT_ACTION] = 'https://www.computop-paygate.com/paynow.aspx';

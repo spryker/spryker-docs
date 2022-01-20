@@ -2467,12 +2467,12 @@ entries:
             url: /docs/scos/user/technology-partners/payment-partners/computop/computop-payment-methods/computop-direct-debit.html
           - title: Computop - Paydirekt
             url: /docs/scos/user/technology-partners/payment-partners/computop/computop-payment-methods/computop-paydirekt.html
-        - title: Computop - Integration into a project
+        - title: Integrating Computop
           url: /docs/scos/user/technology-partners/payment-partners/computop/computop-integration-into-a-project.html
           include_versions:
           - "202009.0"
           - "202108.0"
-        - title: Computop - Installation and configuration
+        - title: Installing and configuring Computop
           url: /docs/scos/user/technology-partners/payment-partners/computop/computop-installation-and-configuration.html
           include_versions:
           - "202009.0"

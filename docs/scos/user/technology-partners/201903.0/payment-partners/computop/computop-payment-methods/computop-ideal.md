@@ -1,5 +1,5 @@
 ---
-title: Computop - iDeal
+title: Integrating the iDeal payment method for Computop
 description: Integrate iDeal payment through Computop into the Spryker-based shop.
 last_updated: Jan 27, 2020
 template: concept-topic-template
@@ -9,19 +9,19 @@ redirect_from:
   - /v2/docs/computop-ideal
   - /v2/docs/en/computop-ideal
 related:
-  - title: Computop - Sofort
+  - title: Integrating the Sofort payment method for Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-sofort.html
   - title: Computop - PayPal
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-paypal.html
-  - title: Computop - PayNow
+  - title: Integrating the PayNow payment method for Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-paynow.html
-  - title: Computop - Easy Credit
+  - title: Integrating the Easy Credit payment method for Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-easy-credit.html
-  - title: Computop - Direct Debit
+  - title: Integrating the Direct Debit payment method for Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-direct-debit.html
   - title: Computop - Credit Card
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-credit-card.html
-  - title: Computop - CRIF
+  - title: Integrating the CRIF payment method for Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-crif.html
   - title: Computop - Paydirekt
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-paydirekt.html

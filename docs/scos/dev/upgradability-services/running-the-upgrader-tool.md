@@ -45,12 +45,7 @@ docker/sdk cli
 
 To install the upgrader tool, do the following:
 
-
-As the upgrader tool is part of Spryker-SDK, we should install it globally into the *docker/sdk cli* and initialize it.
-After that we will be able to run the upgrader command
-
-
-1. In the Docker SDK CLI, install Spryker SDK:
+1. In the Docker SDK CLI, install Spryker SDK globally:
 ```bash
 composer global require spryker-sdk/sdk "dev-master"
 ```
@@ -64,7 +59,7 @@ composer global require spryker-sdk/sdk "dev-master"
 
 To update all the modules and libraries to the latest versions, do the following:
 
-1. Run the upgrader tool:
+1. In the Docker SDK CLI, run the upgrader tool:
 ```bash
 ~/.composer/vendor/spryker-sdk/sdk/bin/console upgradability:php:upgrade
 ```

@@ -25,9 +25,9 @@ Learn about Marketplace related upcoming major releases [here](/docs/marketplace
 | MODULE | DATE | REASON FOR THE MAJOR VERSION |
 | --- | --- | --- |
 | [Search](https://github.com/spryker/search) | Q4 2021 | Getting rid of the ElasticSearch 5.6 support, which is end-of-life with no security fixes. It’s a consequence of the ElasticSearch 7 support. |
-| [Locale](https://github.com/spryker/locale) | Q4 2021 | Adding relation between the Locale and Store objects. |
-| [Currency](https://github.com/spryker/currency) | Q4 2021 | Adding relation between the Currency and Store objects. |
-| [Country](https://github.com/spryker/country) | Q4 2021 | Adding relation between the Country and Store objects. |
+| [Locale](https://github.com/spryker/locale) | Q1 2022 | Adding relation between the Locale and Store objects. |
+| [Currency](https://github.com/spryker/currency) | Q1 2022 | Adding relation between the Currency and Store objects. |
+| [Country](https://github.com/spryker/country) | Q1 2022 | Adding relation between the Country and Store objects. |
 | [Wishlist](https://github.com/spryker/wishlist) | Q2 2022 | Adding wishlist UUID and wishlist item UUID to use it as the main identifier. Changing customer foreign key relation to reference. |
 | [WishlistsRestApi](https://github.com/spryker/wishlists-rest-api) | Q2 2022 | Using wishlist item UUID as `wishlist_item_id` for requests. |
 | [WishlistPage](https://github.com/spryker-shop/wishlist-page) | Q2 2022 | Using wishlist UUID and wishlist item UUID as the main identifier. |

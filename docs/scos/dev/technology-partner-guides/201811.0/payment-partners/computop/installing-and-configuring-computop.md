@@ -4,6 +4,26 @@ last_updated: Nov 4, 2020
 template: howto-guide-template
 ---
 
+The [SprykerEco.Computop](https://github.com/spryker-eco/computop) bundle provides integration of the Computop industry partner with Spryker Commerce OS. It requires the [SprykerEco.ComputopApi](https://github.com/spryker-eco/computop-api) bundle that provides the REST Client for making API calls to the Computop Payment Provider.
+
+The `SprykerEco.Computop` module includes the integrations:
+* Checkout process - payment forms with all the necessary fields that are required to make payment requests, save order information and so on.
+* OMS (Order Management System) - state machines, all necessary commands for making modification requests and conditions for changing order statuses accordingly.
+
+
+The `SprykerEco.Computop` module provides the following payment methods:
+
+* [Credit Card](/docs/scos/user/technology-partners/202009.0/payment-partners/computop/computop-payment-methods/computop-credit-card.html)
+* [Direct Debit](/docs/scos/user/technology-partners/202009.0/payment-partners/computop/computop-payment-methods/computop-direct-debit.html)
+* [EasyCredit](/docs/scos/user/technology-partners/202009.0/payment-partners/computop/computop-payment-methods/computop-easy-credit.html)
+* [iDeal](/docs/scos/user/technology-partners/202009.0/payment-partners/computop/computop-payment-methods/computop-ideal.html)
+* [Paydirekt](/docs/scos/user/technology-partners/202009.0/payment-partners/computop/computop-payment-methods/computop-paydirekt.html)
+* [PayNow](/docs/scos/user/technology-partners/202009.0/payment-partners/computop/computop-payment-methods/computop-paynow.html)
+* [PayPal](/docs/scos/user/technology-partners/202009.0/payment-partners/computop/computop-payment-methods/computop-paypal.html)
+* [SofortÜberweisung](/docs/scos/user/technology-partners/202009.0/payment-partners/computop/computop-payment-methods/computop-sofort.html)
+
+## Installing Computop
+
 To install the payment provider, run:
 ```
 composer require spryker-eco/computop

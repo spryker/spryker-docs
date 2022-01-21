@@ -42,26 +42,16 @@ Paygate is scalable and favoured by merchants in the travel, gaming, gambling, d
 
 Founded in 1997, Computop is a global player for the 21st century. Headquartered in Bamberg, Germany, the company has sales operations in New York, London, and Shanghai. Computop is trusted by the largest global brands worldwide including Samsung, The Otto Group, C&A, Fossil, Metro Cash & Carry, and Swarovski.
 
-## General Information
-We integrate with a wide range of payment methods that can be configured according to your needs and convenience. Payment method flows are configured using state machines.
+The Computop payment partner is shipped with the following payment methods:
 
-The `SprykerEco.Computop` `spryker-eco/computop` bundle provides integration Spryker e-commerce system with Computop industry partner. It requires the `SprykerEco.ComputopApi` `spryker-eco/computop-api` bundle that provides the REST Client for making API calls to the Computop Payment Provider.
-
-The `SprykerEco.Computop` module includes integration with:
-
-* Checkout process - payment forms with all necessary fields that are required to make payment request, save order information and so on.
-* OMS (Order Management System) - state machines, all necessary commands for making modification requests and conditions for changing orders status accordingly.
-
-The `SprykerEco.Computop` module provides the following payment methods:
-
-* [Credit Card](/docs/scos/user/technology-partners/201907.0/payment-partners/computop/computop-credit-card.html)
-* [Direct Debit](/docs/scos/user/technology-partners/201907.0/payment-partners/computop/computop-direct-debit.html)
-* [EasyCredit](/docs/scos/user/technology-partners/201907.0/payment-partners/computop/computop-easy-credit.html)
-* [iDeal](/docs/scos/user/technology-partners/201907.0/payment-partners/computop/computop-ideal.html)
-* [Paydirekt](/docs/scos/user/technology-partners/201907.0/payment-partners/computop/computop-paydirekt.html)
-* [PayNow](/docs/scos/user/technology-partners/201907.0/payment-partners/computop/computop-paynow.html)
-* [PayPal](/docs/scos/user/technology-partners/201907.0/payment-partners/computop/computop-paypal.html)
-* [SofortÜberweisung](/docs/scos/user/technology-partners/201907.0/payment-partners/computop/computop-sofort.html)
+* Credit Card
+* Direct Debit
+* EasyCredit
+* iDeal
+* Paydirekt
+* PayNow
+* PayPal
+* SofortÜberweisung
 
 
 ---

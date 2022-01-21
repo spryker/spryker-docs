@@ -1,15 +1,15 @@
 ---
-title: Billpay - Invoice Payment in Preauthorize Mode
-last_updated: Nov 22, 2019
+title: Billpay - Switching invoice payments to a preauthorize mode
+last_updated: Apr 3, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v3/docs/billpay-payment-methods
-originalArticleId: b46eba2f-0efb-4b86-a176-e8187c323371
+originalLink: https://documentation.spryker.com/v5/docs/billpay-payment-methods
+originalArticleId: 4fdbdebb-5210-46b2-857d-aae0aa0b8c10
 redirect_from:
-  - /v3/docs/billpay-payment-methods
-  - /v3/docs/en/billpay-payment-methods
+  - /v5/docs/billpay-payment-methods
+  - /v5/docs/en/billpay-payment-methods
 related:
   - title: Billpay
-    link: docs/scos/user/technology-partners/page.version/payment-partners/billpay/billpay.html
+    link: docs/scos/user/technology-partners/page.version/payment-partners/billpay.html
 ---
 
 Refer to [Billpay payment information](https://www.billpay.de/en/business-clients/payment-information/) for information about payment methods.

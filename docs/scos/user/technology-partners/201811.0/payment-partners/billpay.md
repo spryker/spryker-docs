@@ -1,19 +1,27 @@
 ---
 title: Billpay
 description: Billpay is the provider for the preferred, local payment methods Invoice, Direct Debit and Installments.
-last_updated: Nov 22, 2019
+last_updated: Oct 22, 2019
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v2/docs/billpay
-originalArticleId: a1249564-83be-4e80-b394-b45211e3ac5e
+originalLink: https://documentation.spryker.com/v1/docs/billpay
+originalArticleId: 9caced27-69ec-419e-bd5b-2893bb59622c
 redirect_from:
-  - /v2/docs/billpay
-  - /v2/docs/en/billpay
+  - /v1/docs/billpay
+  - /v1/docs/en/billpay
 ---
 
 ## Partner Information
 
 [ABOUT BILLPAY](https://www.billpay.de/de/)
 BillPay is the DACH market leader for the preferred, local payment methods Invoice, Direct Debit and Installments, making real-time financing decisions with 100% liability shift, so merchants carry zero risk.As only a bank account is required, these payment methods ensure full customer reach. In addition, BillPay's solution is multi-channel so orders can be placed online, through mobile web apps, at the POS or over-the-phone.
+
+
+## Related Developer articles
+
+* [Billpay - Switching invoice payments to a preauthorize mode](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/billpay/billpay-switching-invoice-payments-to-a-preauthorize-mode.html)
+* [Integrating Billpay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/billpay/integrating-billpay.html)
+
+
 
 ---
 

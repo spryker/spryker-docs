@@ -3,17 +3,24 @@ title: Billpay
 description: Billpay is the provider for the preferred, local payment methods Invoice, Direct Debit and Installments.
 last_updated: Nov 22, 2019
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v3/docs/billpay
-originalArticleId: c01dc5a1-1028-4c02-b48c-be0eef82996a
+originalLink: https://documentation.spryker.com/v2/docs/billpay
+originalArticleId: a1249564-83be-4e80-b394-b45211e3ac5e
 redirect_from:
-  - /v3/docs/billpay
-  - /v3/docs/en/billpay
+  - /v2/docs/billpay
+  - /v2/docs/en/billpay
 ---
 
 ## Partner Information
 
-[ABOUT BILLPAY](https://www.billpay.de/de/) 
-BillPay is the DACH market leader for the preferred, local payment methods Invoice, Direct Debit and Installments, making real-time financing decisions with 100% liability shift, so merchants carry zero risk.As only a bank account is required, these payment methods ensure full customer reach. In addition, BillPay's solution is multi-channel so orders can be placed online, through mobile web apps, at the POS or over-the-phone. 
+[ABOUT BILLPAY](https://www.billpay.de/de/)
+BillPay is the DACH market leader for the preferred, local payment methods Invoice, Direct Debit and Installments, making real-time financing decisions with 100% liability shift, so merchants carry zero risk.As only a bank account is required, these payment methods ensure full customer reach. In addition, BillPay's solution is multi-channel so orders can be placed online, through mobile web apps, at the POS or over-the-phone.
+
+
+## Related Developer articles
+
+* [Billpay - Switching invoice payments to a preauthorize mode](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/billpay/billpay-switching-invoice-payments-to-a-preauthorize-mode.html)
+* [Integrating Billpay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/billpay/integrating-billpay.html)
+
 
 ---
 

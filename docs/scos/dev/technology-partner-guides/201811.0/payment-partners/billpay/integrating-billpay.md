@@ -1,20 +1,18 @@
 ---
-title: Billpay - Integration
-last_updated: Jun 16, 2021
+title: Integrating Billpay
+last_updated: Oct 22, 2019
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/billpay-integration
-originalArticleId: 3d4bf922-652c-45c7-b130-951015ff3b65
+originalLink: https://documentation.spryker.com/v1/docs/billpay-integration
+originalArticleId: 22072a7e-3413-46c9-8b19-7df8894f6eb4
 redirect_from:
-  - /2021080/docs/billpay-integration
-  - /2021080/docs/en/billpay-integration
-  - /docs/billpay-integration
-  - /docs/en/billpay-integration
+  - /v1/docs/billpay-integration
+  - /v1/docs/en/billpay-integration
 related:
   - title: Billpay
-    link: docs/scos/user/technology-partners/page.version/payment-partners/billpay/billpay.html
+    link: docs/scos/user/technology-partners/page.version/payment-partners/billpay.html
 ---
 
-Billpay offers multiple payment methods (Invoice, Direct Debit, PayLater, Instalment). Availability of payment methods differs from country to country. Please contact Billpay directly or visit the [Billpay website](https://www.billpay.de/en/)e  for details.
+Billpay offers multiple payment methods (Invoice, Direct Debit, PayLater, Instalment). Availability of payment methods differs from country to country. Please contact Billpay directly or visit the [Billpay website](https://www.billpay.de/en/)  for details.
 
 The Billpay module provides integration with the [Invoice with prescoring](https://www.billpay.de/en/business-clients/payment-information/index.html) payment method.
 
@@ -26,7 +24,7 @@ See [Configuration Management](/docs/scos/dev/back-end-development/data-manipula
 
 ### Configuration Options:
 
-| NAME | DESCRIPTION |
+| Name | Description |
 | --- | --- |
 | `GATEWAY_URL` | url to Billpay API |
 | `BILLPAY_MERCHANT_ID` | Merchant ID that Billpay will provide to you |
@@ -38,7 +36,6 @@ See [Configuration Management](/docs/scos/dev/back-end-development/data-manipula
 | `USE_PRESCORE` | In if it is necessary to show all Billpay payment methods despite of Billpay prescore response, you can set this option to 0. It should be set to 1 by default. |
 
 When you add options above to your project configuration, it should look somewhat like this:
-
 ```php
 <?php
 $config[BillpayConstants::GATEWAY_URL] = 'https://test-api.billpay.de/xml/offline';
@@ -54,7 +51,6 @@ $config[BillpayConstants::USE_PRESCORE] = 1;
 ## Additional Configuration Options
 
 Payone module provides dependency injectors to extend checkout and order processing. Please add or extend with the corresponding keys:
-
 ```php
 <?php
 $config[KernelConstants::DEPENDENCY_INJECTOR_YVES] = [
@@ -74,7 +70,6 @@ $config[KernelConstants::DEPENDENCY_INJECTOR_ZED] = [
 ```
 
 In order to use the Billpay module state machines,  add the location path to configuration:
-
 ```php
 <?php
 $config[OmsConstants::PROCESS_LOCATION] = [
@@ -88,7 +83,6 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
 ```
 
 We link the OMS state machine with payment method as shown bellow:
-
 ```php
 <?php
 $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [

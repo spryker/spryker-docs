@@ -14,14 +14,14 @@ The `SprykerEco.Computop` module includes the integrations:
 
 The `SprykerEco.Computop` module provides the following payment methods:
 
-* [Credit Card](/docs/scos/user/technology-partners/202009.0/payment-partners/computop/computop-payment-methods/computop-credit-card.html)
-* [Direct Debit](/docs/scos/user/technology-partners/202009.0/payment-partners/computop/computop-payment-methods/computop-direct-debit.html)
-* [EasyCredit](/docs/scos/user/technology-partners/202009.0/payment-partners/computop/computop-payment-methods/computop-easy-credit.html)
-* [iDeal](/docs/scos/user/technology-partners/202009.0/payment-partners/computop/computop-payment-methods/computop-ideal.html)
-* [Paydirekt](/docs/scos/user/technology-partners/202009.0/payment-partners/computop/computop-payment-methods/computop-paydirekt.html)
-* [PayNow](/docs/scos/user/technology-partners/202009.0/payment-partners/computop/computop-payment-methods/computop-paynow.html)
-* [PayPal](/docs/scos/user/technology-partners/202009.0/payment-partners/computop/computop-payment-methods/computop-paypal.html)
-* [SofortÜberweisung](/docs/scos/user/technology-partners/202009.0/payment-partners/computop/computop-payment-methods/computop-sofort.html)
+* [Credit Card](/docs/scos/dev/technology-partner–guides/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-credit-card.html)
+* [Direct Debit](/docs/scos/dev/technology-partner–guides/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-direct-debit.html)
+* [EasyCredit](/docs/scos/dev/technology-partner–guides/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-easy-credit.html)
+* [iDeal](/docs/scos/dev/technology-partner–guides/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-ideal.html)
+* [Paydirekt](/docs/scos/dev/technology-partner–guides/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-paydirekt.html)
+* [PayNow](/docs/scos/dev/technology-partner–guides/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-paynow.html)
+* [PayPal](/docs/scos/dev/technology-partner–guides/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-paypal.html)
+* [SofortÜberweisung](/docs/scos/dev/technology-partner–guides/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-sofort.html)
 
 ## Installing Computop
 

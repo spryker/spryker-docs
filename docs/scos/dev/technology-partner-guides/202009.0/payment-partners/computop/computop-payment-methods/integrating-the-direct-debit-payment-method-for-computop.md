@@ -11,7 +11,7 @@ redirect_from:
 related:
   - title: Integrating the Sofort payment method for Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-sofort.html
-  - title: Computop - PayPal
+  - title: Integrating the PayPal payment method for Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-paypal.html
   - title: Integrating the PayNow payment method for Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-payment-methods/computop-paynow.html

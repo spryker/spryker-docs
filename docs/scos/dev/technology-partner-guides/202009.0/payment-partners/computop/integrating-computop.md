@@ -1102,7 +1102,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 </details>
 
 ## Integration into a project
-To integrate the computop module, make sure you installed and configured it. See [Installing and configuring Computop](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop-installation-and-configuration.html) for details.
+To integrate the computop module, make sure you installed and configured it. See [Installing and configuring Computop](/docs/scos/dev/technology-partner–guides/{{page.version}}/payment-partners/computop/computop-installation-and-configuration.html) for details.
 
 ## Test mode
 

@@ -27,7 +27,7 @@ Gift cards are not compatible with Braintree. We are working on resolving this c
 
 ## Prerequisites
 
-Before proceeding with the integration, make sure you have [installed and configured](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/braintree/installing-and-configuring-braintree.html) the Braintree module.
+Before proceeding with the integration, make sure you have [installed and configured](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/installing-and-configuring-braintree.html) the Braintree module.
 
 ## Frontend integration
 

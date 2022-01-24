@@ -847,6 +847,6 @@ If the wishlist is deleted successfully, the endpoint returns the `204 No Conten
 | 205 | Cannot remove the wishlist. |
 | 209 | ID is not specified. |
 | 210 | Please enter the name using only letters, numbers, underscores, spaces or dashes.  |
-| 901 | The `name` field is empty. |
+| 901 | `name` field is empty. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

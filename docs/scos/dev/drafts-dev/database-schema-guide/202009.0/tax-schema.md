@@ -1,5 +1,5 @@
----last_updated: Aug 27, 2020
-
+---
+last_updated: Aug 27, 2020
 title: Tax Schema
 originalLink: https://documentation.spryker.com/v6/docs/db-schema-tax
 originalArticleId: a7d65feb-d6e5-436a-ba8b-72da46227bab

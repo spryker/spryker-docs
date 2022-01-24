@@ -1,5 +1,5 @@
 ---
-title: CrefoPay - Business to Business Model
+title: Enabling B2B in CrefoPay payments
 description: CrefoPay module provides B2B strategy in payments.
 last_updated: Oct 23, 2019
 template: concept-topic-template
@@ -9,13 +9,13 @@ redirect_from:
   - /v1/docs/crefopay-business-to-business-model
   - /v1/docs/en/crefopay-business-to-business-model
 related:
-  - title: CrefoPay - Integration
+  - title: Integrating CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-integration-into-a-project.html
   - title: CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay.html
-  - title: CrefoPay - Installation and Configuration
+  - title: Installing and configuring CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-installation-and-configuration.html
-  - title: CrefoPay - Provided Payment Methods
+  - title: CrefoPay payment methods
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-provided-payment-methods.html
   - title: CrefoPay - Capture and Refund Processes
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-capture-and-refund-processes.html

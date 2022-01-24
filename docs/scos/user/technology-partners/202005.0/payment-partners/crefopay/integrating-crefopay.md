@@ -1,23 +1,23 @@
 ---
-title: CrefoPay - Integration
+title: Integrating CrefoPay
 description: This article provides instructions on integrating CrefoPay into the Spryker Commerce OS.
-last_updated: Mar 5, 2020
+last_updated: Sep 15, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v4/docs/crefopay-integration
-originalArticleId: da6c458b-dde3-4584-b594-7ec31c9a2dcd
+originalLink: https://documentation.spryker.com/v5/docs/crefopay-integration
+originalArticleId: 01dec6fb-12cd-49da-b7db-b37553151437
 redirect_from:
-  - /v4/docs/crefopay-integration
-  - /v4/docs/en/crefopay-integration
+  - /v5/docs/crefopay-integration
+  - /v5/docs/en/crefopay-integration
 related:
   - title: CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay.html
-  - title: CrefoPay - Installation and Configuration
+  - title: Installing and configuring CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-installation-and-configuration.html
-  - title: CrefoPay - Provided Payment Methods
+  - title: CrefoPay payment methods
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-provided-payment-methods.html
   - title: CrefoPay - Capture and Refund Processes
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-capture-and-refund-processes.html
-  - title: CrefoPay - Business to Business Model
+  - title: Enabling B2B in CrefoPay payments
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-business-to-business-model.html
   - title: CrefoPay - Callback
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-callback.html

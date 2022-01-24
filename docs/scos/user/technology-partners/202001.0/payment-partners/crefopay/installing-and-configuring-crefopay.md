@@ -1,23 +1,23 @@
 ---
-title: CrefoPay - Installation and Configuration
+title: Installing and configuring CrefoPay
 description: This article provides instructions on the installation and configuration of the CrefoPay module for the Spryker Commerce OS.
-last_updated: Sep 15, 2020
+last_updated: Mar 5, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v5/docs/crefopay-configuration
-originalArticleId: 314ad2ea-73cd-406a-a68b-7f9886f109a6
+originalLink: https://documentation.spryker.com/v4/docs/crefopay-configuration
+originalArticleId: 37c6d43b-495f-4d0b-9a60-92f133a0f037
 redirect_from:
-  - /v5/docs/crefopay-configuration
-  - /v5/docs/en/crefopay-configuration
+  - /v4/docs/crefopay-configuration
+  - /v4/docs/en/crefopay-configuration
 related:
-  - title: CrefoPay - Integration
+  - title: Integrating CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-integration-into-a-project.html
   - title: CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay.html
-  - title: CrefoPay - Provided Payment Methods
+  - title: CrefoPay payment methods
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-provided-payment-methods.html
   - title: CrefoPay - Capture and Refund Processes
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-capture-and-refund-processes.html
-  - title: CrefoPay - Business to Business Model
+  - title: Enabling B2B in CrefoPay payments
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-business-to-business-model.html
   - title: CrefoPay - Callback
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-callback.html
@@ -94,7 +94,7 @@ CrefoPayConfig::CREFO_PAY_PAYMENT_METHOD_BILL => 'CrefoPayBill01',
 ];
 ```
 
-See [CrefoPay - Provided Payment Methods](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay-provided-payment-methods.html) for more information on the payment methods provided by CrefoPay.
+See [CrefoPay payment methods](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay-provided-payment-methods.html) for more information on the payment methods provided by CrefoPay.
 
 ## What's next?
-Once you are done with the installation and configuration of the CrefoPay module, [integrate CrefoPay into your project](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay-integration.html).
+Once you are done with the installation and configuration of the CrefoPay module, [integrate CrefoPay into your project](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay-integration-into-a-project.html).

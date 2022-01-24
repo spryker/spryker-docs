@@ -1,23 +1,23 @@
 ---
-title: CrefoPay - Integration
+title: Integrating CrefoPay
 description: This article provides instructions on integrating CrefoPay into the Spryker Commerce OS.
-last_updated: Sep 15, 2020
+last_updated: Apr 23, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v5/docs/crefopay-integration
-originalArticleId: 01dec6fb-12cd-49da-b7db-b37553151437
+originalLink: https://documentation.spryker.com/v6/docs/crefopay-integration
+originalArticleId: 38f2f256-078e-40e6-abbb-ee9a95094bfe
 redirect_from:
-  - /v5/docs/crefopay-integration
-  - /v5/docs/en/crefopay-integration
+  - /v6/docs/crefopay-integration
+  - /v6/docs/en/crefopay-integration
 related:
   - title: CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay.html
-  - title: CrefoPay - Installation and Configuration
+  - title: Installing and configuring CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-installation-and-configuration.html
-  - title: CrefoPay - Provided Payment Methods
+  - title: CrefoPay payment methods
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-provided-payment-methods.html
   - title: CrefoPay - Capture and Refund Processes
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-capture-and-refund-processes.html
-  - title: CrefoPay - Business to Business Model
+  - title: Enabling B2B in CrefoPay payments
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-business-to-business-model.html
   - title: CrefoPay - Callback
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-callback.html
@@ -25,10 +25,16 @@ related:
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-notifications.html
 ---
 
+{% info_block errorBox %}
+
+There is currently an issue when using giftcards with CrefoPay. Our team is developing a fix for it.
+
+{% endinfo_block %}
+
 This article provides step-by-step instructions on integrating the CrefoPay system into your project.
 
 ## Prerequisites
-Prior to integrating CrefoPay into your project, make sure you [installed and configured the CrefoPay module](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay-installation-and-configuration.html).
+Prior to integrating CrefoPay into your project, make sure you [installed and configured the CrefoPay module](/docs/scos/user/technology-partners/202009.0/payment-partners/crefopay/crefopay-installation-and-configuration.html).
 
 ## Integrating CrefoPay into Your Project
 To integrate CrefoPay, do the following:
@@ -443,7 +449,6 @@ Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig
 
 namespace Pyz\Yves\ShopApplication;
 
-use Spryker\Yves\Session\Plugin\ServiceProvider\SessionServiceProvider as SprykerSessionServiceProvider;
 use SprykerEco\Yves\CrefoPay\Plugin\Provider\CrefoPayControllerProvider;
 
 class YvesBootstrap extends SprykerYvesBootstrap
@@ -632,3 +637,4 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
     }
 }
 ```
+

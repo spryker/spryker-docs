@@ -1,23 +1,23 @@
 ---
-title: CrefoPay - Provided Payment Methods
+title: CrefoPay payment methods
 description: CrefoPay supports key payment methods across different regions, channels, and verticals.- bill, cash on delivery, credit card, direct debit, Paypal, cash in advance, sofort payment
-last_updated: Aug 27, 2020
+last_updated: Nov 6, 2019
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v6/docs/crefopay-provided-payment-methods
-originalArticleId: 768f93a5-2edf-4511-bb04-b2c2a6bc2921
+originalLink: https://documentation.spryker.com/v1/docs/crefopay-provided-payment-methods
+originalArticleId: 492a05d4-93dc-4995-b67b-4ba1a828d481
 redirect_from:
-  - /v6/docs/crefopay-provided-payment-methods
-  - /v6/docs/en/crefopay-provided-payment-methods
+  - /v1/docs/crefopay-provided-payment-methods
+  - /v1/docs/en/crefopay-provided-payment-methods
 related:
-  - title: CrefoPay - Integration
+  - title: Integrating CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-integration-into-a-project.html
   - title: CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay.html
-  - title: CrefoPay - Installation and Configuration
+  - title: Installing and configuring CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-installation-and-configuration.html
   - title: CrefoPay - Capture and Refund Processes
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-capture-and-refund-processes.html
-  - title: CrefoPay - Business to Business Model
+  - title: Enabling B2B in CrefoPay payments
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-business-to-business-model.html
   - title: CrefoPay - Callback
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-callback.html

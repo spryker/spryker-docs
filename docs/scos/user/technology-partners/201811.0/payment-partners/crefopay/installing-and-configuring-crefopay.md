@@ -1,23 +1,23 @@
 ---
-title: CrefoPay - Installation and Configuration
+title: Installing and configuring CrefoPay
 description: This article provides instructions on the installation and configuration of the CrefoPay module for the Spryker Commerce OS.
-last_updated: Nov 4, 2020
+last_updated: May 19, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v6/docs/crefopay-configuration
-originalArticleId: 573e73f2-1e69-44ff-8abf-eeb863f39c29
+originalLink: https://documentation.spryker.com/v1/docs/crefopay-configuration
+originalArticleId: e08c223b-cd26-4c57-a977-83eee9370aee
 redirect_from:
-  - /v6/docs/crefopay-configuration
-  - /v6/docs/en/crefopay-configuration
+  - /v1/docs/crefopay-configuration
+  - /v1/docs/en/crefopay-configuration
 related:
-  - title: CrefoPay - Integration
+  - title: Integrating CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-integration-into-a-project.html
   - title: CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay.html
-  - title: CrefoPay - Provided Payment Methods
+  - title: CrefoPay payment methods
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-provided-payment-methods.html
   - title: CrefoPay - Capture and Refund Processes
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-capture-and-refund-processes.html
-  - title: CrefoPay - Business to Business Model
+  - title: Enabling B2B in CrefoPay payments
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-business-to-business-model.html
   - title: CrefoPay - Callback
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-callback.html
@@ -29,13 +29,14 @@ To integrate CrefoPay into your project, first you need to install and configure
 
 ## Installation
 To install the CrefoPay module, run:
-
 ```
 composer require spryker-eco/crefo-pay
 ```
 
 ## Configuration
 ### General Configuration
+You can find all necessary configurations in `vendor/spryker-eco/crefo-pay/config/config.dist.php`.
+
 The table below describes all general configuration keys and their values.
 All necessary configurations can be found in `vendor/spryker-eco/crefo-pay/config/config.dist.php`.
 
@@ -57,16 +58,15 @@ All necessary configurations can be found in `vendor/spryker-eco/crefo-pay/confi
 | `$config [CrefoPayApiConstants::FINISH_API_ENDPOINT]`  | string  | Finish API endpoint.  |
 | `$config [CrefoPayApiConstants::PRIVATE_KEY] ` | string  | Integration private key. Provided by CrefoPay.  |
 | `$config [CrefoPayApiConstants::PUBLIC_KEY]`  | string  | Integration public key. Provided by CrefoPay.  |
-
 ### Specific Configuration
 Add necessary payment methods to State Machine (OMS) configuration in the following file:
-
-inconfig_default.php
+<details open>
+<summary markdown='span'>inconfig_default.php</summary>
 
 ```php
 $config[OmsConstants::PROCESS_LOCATION] = [
     ...
-APPLICATION_ROOT_DIR . '/vendor/spryker-eco/crefo-pay/config/Zed/Oms',
+    APPLICATION_ROOT_DIR . '/vendor/spryker-eco/crefo-pay/config/Zed/Oms',
 ];
 $config[OmsConstants::ACTIVE_PROCESSES] = [
     ...
@@ -81,7 +81,7 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
 ];
 $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
     ...
-CrefoPayConfig::CREFO_PAY_PAYMENT_METHOD_BILL => 'CrefoPayBill01',
+    CrefoPayConfig::CREFO_PAY_PAYMENT_METHOD_BILL => 'CrefoPayBill01',
     CrefoPayConfig::CREFO_PAY_PAYMENT_METHOD_CASH_ON_DELIVERY => 'CrefoPayCashOnDelivery01',
     CrefoPayConfig::CREFO_PAY_PAYMENT_METHOD_DIRECT_DEBIT => 'CrefoPayDirectDebit01',
     CrefoPayConfig::CREFO_PAY_PAYMENT_METHOD_PAY_PAL => 'CrefoPayPayPal01',
@@ -91,8 +91,10 @@ CrefoPayConfig::CREFO_PAY_PAYMENT_METHOD_BILL => 'CrefoPayBill01',
     CrefoPayConfig::CREFO_PAY_PAYMENT_METHOD_CREDIT_CARD_3D => 'CrefoPayCreditCard3D01',
 ];
 ```
+<br>
+</details>
 
-See [CrefoPay - Provided Payment Methods](/docs/scos/user/technology-partners/202009.0/payment-partners/crefopay/crefopay-provided-payment-methods.html) for more information on the payment methods provided by CrefoPay.
+See [CrefoPay payment methods](https://docs.demo-spryker.com/v4/docs/crefopay-provided-payment-methods) for more information on the payment methods provided by CrefoPay.
 
 ## What's next?
-Once you are done with the installation and configuration of the CrefoPay module, [integrate CrefoPay into your project](/docs/scos/user/technology-partners/202009.0/payment-partners/crefopay/crefopay-integration-into-a-project.html).
+Once you are done with the installation and configuration of the CrefoPay module, [integrate CrefoPay into your project](/docs/scos/user/technology-partners/201811.0/payment-partners/crefopay/crefopay-integration.html).

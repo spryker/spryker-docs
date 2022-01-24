@@ -1,23 +1,23 @@
 ---
-title: CrefoPay - Integration
+title: Integrating CrefoPay
 description: This article provides instructions on integrating CrefoPay into the Spryker Commerce OS.
-last_updated: Jul 31, 2020
+last_updated: Mar 5, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v2/docs/crefopay-integration
-originalArticleId: 4d3d995a-2ee6-4765-8bcb-6ff4ebe7a8bc
+originalLink: https://documentation.spryker.com/v4/docs/crefopay-integration
+originalArticleId: da6c458b-dde3-4584-b594-7ec31c9a2dcd
 redirect_from:
-  - /v2/docs/crefopay-integration
-  - /v2/docs/en/crefopay-integration
+  - /v4/docs/crefopay-integration
+  - /v4/docs/en/crefopay-integration
 related:
   - title: CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay.html
-  - title: CrefoPay - Installation and Configuration
+  - title: Installing and configuring CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-installation-and-configuration.html
-  - title: CrefoPay - Provided Payment Methods
+  - title: CrefoPay payment methods
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-provided-payment-methods.html
   - title: CrefoPay - Capture and Refund Processes
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-capture-and-refund-processes.html
-  - title: CrefoPay - Business to Business Model
+  - title: Enabling B2B in CrefoPay payments
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-business-to-business-model.html
   - title: CrefoPay - Callback
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-callback.html
@@ -28,7 +28,7 @@ related:
 This article provides step-by-step instructions on integrating the CrefoPay system into your project.
 
 ## Prerequisites
-Prior to integrating CrefoPay into your project, make sure you [installed and configured the CrefoPay module](/docs/scos/user/technology-partners/201903.0/payment-partners/crefopay/crefopay-installation-and-configuration.html).
+Prior to integrating CrefoPay into your project, make sure you [installed and configured the CrefoPay module](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay-installation-and-configuration.html).
 
 ## Integrating CrefoPay into Your Project
 To integrate CrefoPay, do the following:
@@ -160,8 +160,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 
 2. Extend `ShipmentStep` to add payment methods filtering logic:
 
-<details open>
-<summary markdown='span'>\Pyz\Yves\CheckoutPage\Process\Steps\ShipmentStep</summary>
+\Pyz\Yves\CheckoutPage\Process\Steps\ShipmentStep
 
 ```php
 <?php
@@ -191,13 +190,10 @@ class ShipmentStep extends SprykerShopShipmentStep
     }
 }
 ```
-<br>
-</details>
 
 3. Extend `StepFactory` for the project-level `ShipmentStep` usage:
 
-<details open>
-<summary markdown='span'>\Pyz\Yves\CheckoutPage\Process\StepFactory</summary>
+\Pyz\Yves\CheckoutPage\Process\StepFactory
 
 ```php
 <?php
@@ -252,13 +248,10 @@ class StepFactory extends SprykerShopStepFactory
     }
 }
 ```
-<br>
-</details>
 
 4. Extend `CheckoutPageFactory` for the project-level `StepFactory` usage:
 
-<details open>
-<summary markdown='span'>\Pyz\Yves\CheckoutPage\CheckoutPageFactory</summary>
+\Pyz\Yves\CheckoutPage\CheckoutPageFactory
 
 ```php
 <?php
@@ -284,13 +277,10 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
     }
 }
 ```
-<br>
-</details>
 
 5. Extend checkout page layout to add `jQuery`:
 
-<details open>
-<summary markdown='span'>Pyz/Yves/CheckoutPage/Theme/default/templates/page-layout-checkout/page-layout-checkout.twig</summary>
+Pyz/Yves/CheckoutPage/Theme/default/templates/page-layout-checkout/page-layout-checkout.twig
 
 ```php
 {% raw %}{%{% endraw %} extends template('page-layout-main') {% raw %}%}{% endraw %}
@@ -326,13 +316,10 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 
 {% raw %}{%{% endraw %} block footer {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
-<br>
-</details>
 
 6. Extend payment twig to add CrefoPay payment methods:
 
-<details open>
-<summary markdown='span'>Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
+Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig
 
 ```php
 {% raw %}{%{% endraw %} extends template('page-layout-checkout', 'CheckoutPage') {% raw %}%}{% endraw %}
@@ -446,13 +433,10 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
     {% raw %}{%{% endraw %} endembed {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
-<br>
-</details>
 
 7. Add controller provider:
-<details open>
 
-<summary markdown='span'>\Pyz\Yves\ShopApplication\YvesBootstrap</summary>
+\Pyz\Yves\ShopApplication\YvesBootstrap
 
 ```php
 <?php
@@ -478,13 +462,10 @@ class YvesBootstrap extends SprykerYvesBootstrap
     }
 }
 ```
-<br>
-</details>
 
 8. Add checkout plugins:
 
-<details open>
-<summary markdown='span'>\Pyz\Zed\Checkout\CheckoutDependencyProvider</summary>
+\Pyz\Zed\Checkout\CheckoutDependencyProvider
 
 
 ```php
@@ -528,14 +509,10 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
     }
 }
 ```
-<br>
-</details>
 
 9. Add OMS commands and conditions:
 
-<details open>
-
-<summary markdown='span'>\Pyz\Zed\Oms\OmsDependencyProvider</summary>
+\Pyz\Zed\Oms\OmsDependencyProvider
 
 
 ```php
@@ -628,13 +605,10 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     }
 }
 ```
-<br>
-</details>
 
 10. Extend `PaymentDependencyProvider` to add payment method filter plugin:
 
-<details open>
-<summary markdown='span'>\Pyz\Zed\Payment\PaymentDependencyProvider</summary>
+\Pyz\Zed\Payment\PaymentDependencyProvider
 
 ```php
 <?php
@@ -658,5 +632,3 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
     }
 }
 ```
-<br>
-</details>

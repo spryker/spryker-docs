@@ -48,7 +48,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up database schema and transfer objects
 
-Apply database changes and generate entity and transfer changes:
+1. Apply database changes and generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -121,13 +121,12 @@ Make sure that discounts are calculated according to their priorities:
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can submit the *Discount Create* and *Discount Update* forms with specified date and time for **Valid From** and **Valid To** fields:
+Make sure that you can submit the *Discount Create* and *Discount Update* forms with specified date and time for **Valid From** and **Valid To** discount form fields:
 1. In the Back Office, go to **Merchandising** > **Discount**.
-2. Create a new discount or update an existing one. 
-3. Check that you can see the *Discount* form.
-4. Click on **Valid From** and **Valid To** fields to ensure you can see the datetime drop-down menu.
-5. Make sure **Valid From** and **Valid To** fields can accept the selected date and time, using keystroke entry for times not falling on the hour.
-6. In the `spy_discount` DB table, make sure **Valid From** and **Valid To** date and time are saved correctly.
+2. Create a new discount or update an existing one, check that you can see the *Discount* form.
+3. Click on **Valid From** and **Valid To** fields to ensure you can see the calendar, where you can select specific date and time.
+4. Make sure **Valid From** and **Valid To** fields can accept the selected date and time, using keystroke entry for times not falling on the hour.
+5. In the `spy_discount` DB table, make sure **Valid From** and **Valid To** date and time are saved correctly.
 
 {% endinfo_block %}
 

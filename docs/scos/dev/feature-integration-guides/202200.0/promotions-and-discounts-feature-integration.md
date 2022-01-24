@@ -48,7 +48,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up database schema and transfer objects
 
-1. Apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console transfer:generate

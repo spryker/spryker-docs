@@ -19,7 +19,7 @@ related:
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-installation-and-configuration.html
   - title: CrefoPay - Capture and Refund Processes
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-capture-and-refund-processes.html
-  - title: Enabling B2B in CrefoPay payments
+  - title: CrefoPay — Enabling B2B payments
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-business-to-business-model.html
   - title: CrefoPay - Callback
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-callback.html

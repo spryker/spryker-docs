@@ -1,13 +1,13 @@
 ---
-title: Enabling B2B in CrefoPay payments
+title: CrefoPay — Enabling B2B payments
 description: CrefoPay module provides B2B strategy in payments.
 last_updated: Nov 22, 2019
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v2/docs/crefopay-business-to-business-model
-originalArticleId: 6c20fa20-5f73-4da0-983a-ac6011d09370
+originalLink: https://documentation.spryker.com/v3/docs/crefopay-business-to-business-model
+originalArticleId: e63cde6d-e007-4193-bec2-effb7ea718cc
 redirect_from:
-  - /v2/docs/crefopay-business-to-business-model
-  - /v2/docs/en/crefopay-business-to-business-model
+  - /v3/docs/crefopay-business-to-business-model
+  - /v3/docs/en/crefopay-business-to-business-model
 related:
   - title: Integrating CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-integration-into-a-project.html

@@ -15,7 +15,7 @@ related:
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-integration-into-a-project.html
   - title: Installing and configuring CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-installation-and-configuration.html
-  - title: Enabling B2B in CrefoPay payments
+  - title: CrefoPay — Enabling B2B payments
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-business-to-business-model.html
   - title: CrefoPay payment methods
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-provided-payment-methods.html

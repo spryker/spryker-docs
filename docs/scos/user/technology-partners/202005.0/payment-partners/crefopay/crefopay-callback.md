@@ -1,19 +1,19 @@
 ---
 title: CrefoPay - Callback
 description: Callbacks are redirects performed by the CrefoPay system.
-last_updated: Oct 23, 2019
+last_updated: Apr 3, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v1/docs/crefopay-callback
-originalArticleId: 6b459597-184f-46c2-8bf4-507e27ad2813
+originalLink: https://documentation.spryker.com/v5/docs/crefopay-callback
+originalArticleId: b6e5b737-9eb4-41c2-bc36-e7522aee9fd9
 redirect_from:
-  - /v1/docs/crefopay-callback
-  - /v1/docs/en/crefopay-callback
+  - /v5/docs/crefopay-callback
+  - /v5/docs/en/crefopay-callback
 related:
   - title: Integrating CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-integration-into-a-project.html
   - title: Installing and configuring CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-installation-and-configuration.html
-  - title: Enabling B2B in CrefoPay payments
+  - title: CrefoPay — Enabling B2B payments
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-business-to-business-model.html
   - title: CrefoPay payment methods
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-provided-payment-methods.html

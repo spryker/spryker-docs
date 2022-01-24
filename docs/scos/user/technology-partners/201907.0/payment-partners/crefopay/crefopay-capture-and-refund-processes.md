@@ -1,13 +1,13 @@
 ---
 title: CrefoPay - Capture and Refund Processes
 description: This article describes the capture and refund processes for the Crefopay module in Spryker Commerce OS.
-last_updated: Apr 3, 2020
+last_updated: Nov 22, 2019
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v5/docs/crefopay-capture-refund-processes
-originalArticleId: 37f60927-7ab4-4e82-8ad7-92512dd975ef
+originalLink: https://documentation.spryker.com/v3/docs/crefopay-capture-refund-processes
+originalArticleId: ce753e4f-244a-41b6-8e6d-033e43194b65
 redirect_from:
-  - /v5/docs/crefopay-capture-refund-processes
-  - /v5/docs/en/crefopay-capture-refund-processes
+  - /v3/docs/crefopay-capture-refund-processes
+  - /v3/docs/en/crefopay-capture-refund-processes
 related:
   - title: Integrating CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-integration-into-a-project.html
@@ -17,7 +17,7 @@ related:
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-installation-and-configuration.html
   - title: CrefoPay - Callback
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-callback.html
-  - title: Enabling B2B in CrefoPay payments
+  - title: CrefoPay — Enabling B2B payments
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-business-to-business-model.html
   - title: CrefoPay payment methods
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-provided-payment-methods.html

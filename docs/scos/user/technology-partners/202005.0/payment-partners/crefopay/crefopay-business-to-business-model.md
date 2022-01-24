@@ -1,13 +1,13 @@
 ---
-title: Enabling B2B in CrefoPay payments
+title: CrefoPay — Enabling B2B payments
 description: CrefoPay module provides B2B strategy in payments.
-last_updated: Oct 23, 2019
+last_updated: Apr 3, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v1/docs/crefopay-business-to-business-model
-originalArticleId: e847cdcf-82e3-4d2c-b4e1-c13b21c7ea0b
+originalLink: https://documentation.spryker.com/v5/docs/crefopay-business-to-business-model
+originalArticleId: 1eacc2d6-3736-4b0f-85ac-5e3d5276dabc
 redirect_from:
-  - /v1/docs/crefopay-business-to-business-model
-  - /v1/docs/en/crefopay-business-to-business-model
+  - /v5/docs/crefopay-business-to-business-model
+  - /v5/docs/en/crefopay-business-to-business-model
 related:
   - title: Integrating CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-integration-into-a-project.html
@@ -31,8 +31,9 @@ To enable the B2B business model for CrefoPay:
 
 1. Set `$config[CrefoPayConstants::IS_BUSINESS_TO_BUSINESS]` to true.
 2. Add company data into `QuoteTransfer` on project level. It should be done before customer goes to checkout payment step.
-<details open>
-<summary markdown='span'>Company Data</summary>
+
+**Company Data**
+
 ```php
 $quoteTransfer->setCrefoPayCompany(
     (new CrefoPayApiCompanyTransfer())

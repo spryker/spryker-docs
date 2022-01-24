@@ -1,12 +1,12 @@
 ---
-title: Tutorial — Troubleshooting jenkins jobs
-description: Learn how to troubleshoot jenkins jobs issues
+title: Tutorial — Troubleshooting failed Jenkins jobs
+description: Learn how to troubleshoot Jenkins jobs issues
 template: troubleshooting-guide-template
 ---
 
 A Jenkins jobs failed.
 
-## Checking Jenkins job console output
+## Check the console output of the failed Jenkins job
 
 To analyze the console output of a failed Jenkins job, do the following:
 
@@ -23,7 +23,7 @@ To analyze the console output of a failed Jenkins job, do the following:
 ![jenkins_console_output]
 
 
-## Checking RabbitMQ status
+## Check RabbitMQ status
 
 If the console output contains `AMQPProtocolChannelException`, the issue might be related to RabbitMQ virtual host or queue.
 

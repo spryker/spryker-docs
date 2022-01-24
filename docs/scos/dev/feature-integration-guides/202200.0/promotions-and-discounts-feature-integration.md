@@ -5,15 +5,14 @@ template: feature-integration-guide-template
 ---
 
 
-{% info_block errorBox %}
+{% info_block infoBox %}
 
 The following feature integration guide expects the basic feature to be in place.
 
-The current feature integration guide adds **Discount Prioritization** and **Discount Validity Period Supports HH:MM Time Definition** functionality.
+The current feature integration guide adds the *Discount Prioritization* and *Discount Validity Period Supports HH:MM Time Definition* functionalities.
 
 {% endinfo_block %}
 
----
 
 ## Install feature core
 
@@ -46,7 +45,6 @@ Make sure that the following modules have been installed:
 | Discount  | vendor/spryker/discount  |
 
  {% endinfo_block %}
---------------------
 
 ### 2) Set up database schema and transfer objects
 
@@ -59,10 +57,7 @@ console propel:install
 
 {% info_block warningBox "Verification" %}
 
-
 Make sure that the following changes have been applied by checking your database:
-
-
 
 | DATABASE ENTITY       | TYPE   | EVENT  |
 |-----------------------|--------|--------|
@@ -89,7 +84,7 @@ Make sure that the following changes have been triggered in transfer objects:
 
 ### 3) Add translations
 
-Run the following command to generate a new translation cache for Zed:
+Generate a new translation cache for Zed:
 
 ```bash
 console translator:generate-cache
@@ -104,7 +99,7 @@ Make sure that all labels and help tooltips in the discount create and edit form
 
 ### 4) Build Zed UI frontend
 
-Run the following commands to enable Javascript and CSS changes:
+Enable Javascript and CSS changes:
 
 ```bash
 console frontend:zed:install-dependencies
@@ -115,27 +110,23 @@ console frontend:zed:build
 
 Make sure that the discount form has a priority field and discounts table has a priority column.
 
-Make sure, that the existing discounts in the spy_discount DB table have priority set to 9999.
+Make sure that the existing discounts in the `spy_discount` DB table have priority set to `9999`.
 
 Make sure that discounts are calculated according to their priorities:
-
-    1. Create a couple of percentage discounts with different priorities.
-
-    2. Add items to the cart to fulfill discounts' requirements.
-
-    3. Check that discounts are applied in the correct order and the calculated discount total is correct.
+1. Create a couple of percentage discounts with different priorities.
+2. Add items to the cart to fulfill discounts' requirements.
+3. Check that discounts are applied in the correct order and the calculated discount total is correct.
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can submit `Discount Create` and `Discount Update` forms with specified date and time for **Valid From** and **Valid To** discount form fields:
-
+Make sure that you can submit the *Discount Create* and *Discount Update* forms with specified date and time for **Valid From** and **Valid To** discount form fields:
 1. In the Back Office, go to **Merchandising** > **Discount**.
-2. Create new discount or update existing one, check that you can see `Discount` form.
-3. Make sure that you can see a datetime picker dropdown when you click on **Valid From** and **Valid To** discount form fields.
-4. Make sure that **Valid From** and **Valid To** discount form fields can accept selected date and time, using keystroke entry for times not falling on the hour.
-5. Make sure, that **Valid From** and **Valid To** date and time are persisted correctly in `spy_discount` DB table.
+2. Create a new discount or update an existing one, check that you can see the *Discount* form.
+3. Click on **Valid From** and **Valid To** discount form fields to ensure you can see the datetime drop-down menu.
+4. Make sure **Valid From** and **Valid To** discount form fields can accept the selected date and time, using keystroke entry for times not falling on the hour.
+5. In the `spy_discount` DB table, make sure **Valid From** and **Valid To** date and time are saved correctly.
 
 {% endinfo_block %}
 

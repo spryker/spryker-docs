@@ -3,6 +3,7 @@
 namespace Validator;
 
 use ErrorException;
+use Spatie\YamlFrontMatter\Document;
 use Spatie\YamlFrontMatter\YamlFrontMatter;
 use Symfony\Component\Console\Helper\FormatterHelper;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -43,29 +44,29 @@ class LastUpdatedValidator
         $finder = $this->getFinder($directory);
 
         foreach ($finder as $document) {
-            $documentFrontMatter = YamlFrontMatter::parse($document->getContents())->matter();
+            $parsedDocument = YamlFrontMatter::parse($document->getContents());
 
-            if (!$this->validateParentDocument($documentFrontMatter, $document)) {
+            if (!$this->validateParentDocument($parsedDocument, $document)) {
                 $returnCode = 1;
 
                 continue;
             }
 
-            $returnCode |= $this->validateRelatedDocuments($documentFrontMatter, $document);
+            $returnCode |= $this->validateRelatedDocuments($parsedDocument, $document);
         }
 
         return $returnCode;
     }
 
     /**
-     * @param array $documentFrontMatter
+     * @param \Spatie\YamlFrontMatter\Document $parsedDocument
      * @param \Symfony\Component\Finder\SplFileInfo $document
      *
      * @return bool
      */
-    private function validateParentDocument(array $documentFrontMatter, SplFileInfo $document): bool
+    private function validateParentDocument(Document $parsedDocument, SplFileInfo $document): bool
     {
-        if ($this->getLastUpdated($documentFrontMatter) === null) {
+        if ($parsedDocument->matter('last_updated') === null) {
             $this->logError(sprintf('%s doesn\'t have `last_updated` front matter setting', $document->getPathname()));
 
             return false;
@@ -75,21 +76,19 @@ class LastUpdatedValidator
     }
 
     /**
-     * @param array $documentFrontMatter
+     * @param \Spatie\YamlFrontMatter\Document $parsedDocument
      * @param \Symfony\Component\Finder\SplFileInfo $document
      *
      * @return int
      */
-    private function validateRelatedDocuments(array $documentFrontMatter, SplFileInfo $document): int
+    private function validateRelatedDocuments(Document $parsedDocument, SplFileInfo $document): int
     {
         $returnCode = 0;
-        $relatedDocuments = $this->getRelatedDocuments($documentFrontMatter);
-        $documentLastUpdated = $this->getLastUpdated($documentFrontMatter);
 
-        foreach ($relatedDocuments as $relatedDocument) {
+        foreach ($parsedDocument->matter('related', []) as $relatedDocument) {
             $returnCode |= $this->validateRelatedDocument(
                 $relatedDocument,
-                $documentLastUpdated,
+                $parsedDocument->matter('last_updated'),
                 $document
             );
         }
@@ -149,8 +148,8 @@ class LastUpdatedValidator
     private function validatedRelatedDocumentLastUpdated(string $relatedDocumentPath, string $documentLastUpdated, SplFileInfo $document): int
     {
         try {
-            $relatedDocumentFrontMatter = YamlFrontMatter::parse(file_get_contents($relatedDocumentPath))->matter();
-            $relatedDocumentLastUpdated = $this->getLastUpdated($relatedDocumentFrontMatter);
+            $parsedRelatedDocument = YamlFrontMatter::parse(file_get_contents($relatedDocumentPath));
+            $relatedDocumentLastUpdated = $parsedRelatedDocument->matter('last_updated');
 
             if ($relatedDocumentLastUpdated === null || $documentLastUpdated !== $relatedDocumentLastUpdated) {
                 $this->logError(
@@ -191,26 +190,6 @@ class LastUpdatedValidator
         $formattedBlock = $this->formatterHelper->formatBlock($errorMessages, 'error');
 
         $this->output->writeln($formattedBlock);
-    }
-
-    /**
-     * @param array $documentFrontMatter
-     *
-     * @return array
-     */
-    private function getRelatedDocuments(array $documentFrontMatter): array
-    {
-        return $documentFrontMatter['related'] ?? [];
-    }
-
-    /**
-     * @param array $documentFrontMatter
-     *
-     * @return string|null
-     */
-    private function getLastUpdated(array $documentFrontMatter): ?string
-    {
-        return $documentFrontMatter['last_updated'] ?? null;
     }
 
     /**

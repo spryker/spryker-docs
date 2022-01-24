@@ -765,7 +765,7 @@ entries:
   - title: Back Office User guides
     url: /docs/scos/user/back-office-user-guides/about-back-office-user-guides.html
     nested:
-    - title: Logging in to the Back Office
+    - title: Logging into the Back Office
       url: /docs/scos/user/back-office-user-guides/logging-in-to-the-back-office.html
       include_versions:
       - "202108.0"
@@ -780,8 +780,8 @@ entries:
         - "202001.0"
         - "202005.0"
         nested:
-        - title: Dashboard - Reference Information
-          url: /docs/scos/user/back-office-user-guides/dashboard/references/dashboard-reference-information.html
+        - title: Reference information - Dashboard
+          url: /docs/scos/user/back-office-user-guides/dashboard/references/reference-information-dashboard.html
           include_versions:
           - "201811.0"
           - "201903.0"
@@ -819,15 +819,12 @@ entries:
         - "202005.0"
         - "202009.0"
         nested:
-        - title: Punch Out- Reference Information
-          url: /docs/scos/user/back-office-user-guides/punch-out/references/punch-out-reference-information.html
+        - title: Reference information - Punch Out
+          url: /docs/scos/user/back-office-user-guides/punch-out/references/reference-information-punch-out.html
           include_versions:
           - "201907.0"
           - "202001.0"
           - "202005.0"
-        - title: Reference information- Punchout
-          url: /docs/scos/user/back-office-user-guides/punch-out/references/reference-information-punchout.html
-          include_versions:
           - "202009.0"
     - title: Sales
       nested:
@@ -855,17 +852,14 @@ entries:
           - "202005.0"
           - "202009.0"
           nested:
-          - title: Orders- Reference Information
-            url: /docs/scos/user/back-office-user-guides/sales/orders/references/orders-reference-information.html
+          - title: Reference information - Orders 
+            url: /docs/scos/user/back-office-user-guides/sales/orders/references/reference-information-orders.html
             include_versions:
             - "201811.0"
             - "201903.0"
             - "201907.0"
             - "202001.0"
             - "202005.0"
-          - title: Reference information - orders
-            url: /docs/scos/user/back-office-user-guides/sales/orders/references/reference-information-orders.html
-            include_versions:
             - "202009.0"
       - title: Reclamations
         include_versions:
@@ -893,16 +887,13 @@ entries:
           - "202005.0"
           - "202009.0"
           nested:
-          - title: Reclamations- Reference Information
-            url: /docs/scos/user/back-office-user-guides/sales/reclamations/references/reclamations-reference-information.html
+          - title: Reference information - Reclamations
+            url: /docs/scos/user/back-office-user-guides/sales/reclamations/references/reference-information-reclamations.html
             include_versions:
             - "201903.0"
             - "201907.0"
             - "202001.0"
             - "202005.0"
-          - title: Reference information - reclamations
-            url: /docs/scos/user/back-office-user-guides/sales/reclamations/references/reference-information-reclamations.html
-            include_versions:
             - "202009.0"
       - title: Refunds
         nested:
@@ -925,21 +916,15 @@ entries:
           - "202005.0"
           - "202009.0"
           nested:
-          - title: Return Item States- Reference Information
-            url: /docs/scos/user/back-office-user-guides/sales/returns/references/return-item-states-reference-information.html
-            include_versions:
-            - "202005.0"
-          - title: Returns- Reference Information
-            url: /docs/scos/user/back-office-user-guides/sales/returns/references/returns-reference-information.html
-            include_versions:
-            - "202005.0"
-          - title: Reference information - return item states
+          - title: Reference information - Return Item States
             url: /docs/scos/user/back-office-user-guides/sales/returns/references/reference-information-return-item-states.html
             include_versions:
+            - "202005.0"
             - "202009.0"
-          - title: Reference information - returns
+          - title: Reference information - Returns
             url: /docs/scos/user/back-office-user-guides/sales/returns/references/reference-information-returns.html
             include_versions:
+            - "202005.0"
             - "202009.0"
     - title: Customer
       nested:
@@ -955,16 +940,21 @@ entries:
           url: /docs/scos/user/back-office-user-guides/customer/customer-customer-access-customer-groups/managing-customer-groups.html
         - title: References
           include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
           - "202005.0"
           - "202009.0"
           nested:
-          - title: Customers- Reference Information
-            url: /docs/scos/user/back-office-user-guides/customer/customer-customer-access-customer-groups/references/customers-reference-information.html
-            include_versions:
-            - "202005.0"
-          - title: Reference information- customers
+          - title: Reference information - Customers
             url: /docs/scos/user/back-office-user-guides/customer/customer-customer-access-customer-groups/references/reference-information-customers.html
             include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+            - "202001.0"
+            - "202005.0"
             - "202009.0"
       - title: Company account
         nested:
@@ -987,8 +977,8 @@ entries:
           - "202005.0"
           - "202009.0"
           nested:
-          - title: Company Account- Reference Information
-            url: /docs/scos/user/back-office-user-guides/customer/company-account/references/company-account-reference-information.html
+          - title: Reference information - Company Account
+            url: /docs/scos/user/back-office-user-guides/customer/company-account/references/reference-information-company-account.html
             include_versions:
             - "201811.0"
             - "201903.0"

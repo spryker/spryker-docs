@@ -4223,11 +4223,11 @@ entries:
         - title: Braintree
           nested:
             - title: Braintree - Performing requests
-              url: /docs/scos/user/technology-partners/payment-partners/braintree/braintree-performing-requests.html
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/braintree-performing-requests.html
             - title: Braintree - Workflow
-              url: /docs/scos/user/technology-partners/payment-partners/braintree/braintree-workflow.html
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/braintree-workflow.html
             - title: Installing and configuring Braintree
-              url: /docs/scos/user/technology-partners/payment-partners/braintree/installing-and-configuring-braintree.html
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/installing-and-configuring-braintree.html
             - title: Braintree guides for the Legacy Demoshop
               include_versions:
               - "201811.0"
@@ -4236,21 +4236,21 @@ entries:
               - "202001.0"
               nested:
                 - title: Configuration for the Legacy Demoshop
-                  url: /docs/scos/user/technology-partners/payment-partners/braintree/legacy-demoshop-integration/braintree-configuration-for-the-legacy-demoshop.html
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/legacy-demoshop-integration/braintree-configuration-for-the-legacy-demoshop.html
                   include_versions:
                   - "201811.0"
                   - "201903.0"
                   - "201907.0"
                   - "202001.0"
                 - title: Performing Requests for the Legacy Demoshop
-                  url: /docs/scos/user/technology-partners/payment-partners/braintree/legacy-demoshop-integration/braintree-performing-requests-for-the-legacy-demoshop.html
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/legacy-demoshop-integration/braintree-performing-requests-for-the-legacy-demoshop.html
                   include_versions:
                   - "201811.0"
                   - "201903.0"
                   - "201907.0"
                   - "202001.0"
                 - title: Braintree - Workflow for Legacy Demoshop
-                  url: /docs/scos/user/technology-partners/payment-partners/braintree/legacy-demoshop-integration/braintree-workflow-for-legacy-demoshop.html
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/legacy-demoshop-integration/braintree-workflow-for-legacy-demoshop.html
                   include_versions:
                   - "201811.0"
                   - "201903.0"

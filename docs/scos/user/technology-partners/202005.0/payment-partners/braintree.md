@@ -12,7 +12,7 @@ related:
   - title: Braintree - Performing Requests for SCOS
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-performing-requests.html
   - title: Braintree - Configuration for SCOS
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-installation-and-configuration.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/installing-and-configuring-braintree.html
   - title: Braintree - Workflow for SCOS
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-workflow.html
 ---

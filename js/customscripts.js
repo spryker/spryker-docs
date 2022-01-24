@@ -581,7 +581,8 @@ function initFeedbackForm() {
         isValid = false,
         errorClass = 'validation-error',
         inputs = form.find('.required-field, .required-email'),
-        successMessage = $('.feedback-form__success-message');
+        successMessage = $('.feedback-form__success-message'),
+        formIsSubmitted = false;
 
     function validateForm() {
         isValid = true;
@@ -651,7 +652,10 @@ function initFeedbackForm() {
             e.preventDefault();
 
             slide.stop().slideUp(300);
-            opener.removeClass('button--disabled');
+
+            if (!formIsSubmitted) {
+                opener.removeClass('button--disabled');
+            }
         });
     });
 
@@ -679,6 +683,7 @@ function initFeedbackForm() {
             if (response.status === 200) {
                 form.hide();
                 successMessage.show();
+                formIsSubmitted = true;
             }
         }).catch(error => {
             console.log(error);

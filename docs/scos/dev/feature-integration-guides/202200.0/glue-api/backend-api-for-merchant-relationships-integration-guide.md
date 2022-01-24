@@ -4,13 +4,11 @@ description: Integrate the Backend API for Merchant Relationships into your proj
 template: feature-integration-guide-template
 ---
 
-# Backend API for Merchant Relationships feature integration
-
 This document describes how to integrate the [BAPI Merchant Relationships]({link to a respective feature overview}) into a Spryker project.
 
 ## Install feature core
 
-Follow the steps below to install the {Backend API for Merchant Relationships feature core.
+Follow the steps below to install the Backend API for Merchant Relationships feature core.
 
 ### Prerequisites
 
@@ -27,7 +25,7 @@ To start feature integration, integrate the required features and Glue APIs:
 Install the required modules:
 
 ```bash
-composer require spryker/merchant-relationship-api:"^0.1.0" --update-with-dependencies 
+composer require spryker/merchant-relationship-api:"^0.1.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -41,6 +39,7 @@ Make sure that the following modules have been installed:
 {% endinfo_block %}
 
 ### 2) Set up transfer objects
+
 Generate transfers:
 
 ```bash
@@ -106,10 +105,9 @@ class ApiDependencyProvider extends SprykerApiDependencyProvider
 
 Make sure that the `https://backend-api.mysprykershop.com/api/rest/merchant-relationships` endpoint is available.
 
-Make sure that data is validated by providing invalid merchant reference in request body. 
+Make sure that data is validated by providing an invalid merchant reference in a request body.
 
-<details open>
-<summary markdown='span'>Request Body Example</summary>
+Request body example:
 
 ```json
 {
@@ -134,10 +132,7 @@ Make sure that data is validated by providing invalid merchant reference in requ
 }
 ```
 
-</details>
-
-<details open>
-<summary markdown='span'>Response Example</summary>
+Response example:
 
 ```json
 {
@@ -172,6 +167,5 @@ Make sure that data is validated by providing invalid merchant reference in requ
   "meta": []
 }
 ```
-</details>
 
 {% endinfo_block %}

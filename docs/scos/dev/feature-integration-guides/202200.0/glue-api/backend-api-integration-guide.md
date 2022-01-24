@@ -4,9 +4,7 @@ description: Integrate the Backend API into your project
 template: feature-integration-guide-template
 ---
 
-# Backend API feature integration
-
-This document describes how to integrate the [Backend API]({link to a respective feature overview}) into a Spryker project.
+This document describes how to integrate the [Backend API]({link to a respective feature overview}) feature into a Spryker project.
 
 ## Install feature core
 
@@ -64,7 +62,8 @@ use Spryker\Shared\Api\ApiConstants;
 $config[ApiConstants::ENABLE_API_DEBUG] = (bool)getenv('SPRYKER_DEBUG_ENABLED');
 ```
 
-**src/Pyz/Zed/Api/ApiConfig.php**
+<details>
+<summary markdown='span'>src/Pyz/Zed/Api/ApiConfig.php</summary>
 
 ```php
 <?php
@@ -173,11 +172,13 @@ class ApiConfig extends SprykerApiConfig
 
 ```
 
+</details>
+
 {% info_block warningBox "Verification" %}
 
-Make sure that Backend API is enabled by accessing any backend API resource. 
+Make sure that Backend API is enabled by accessing any backend API resource.
 
-Make sure, that backend API is extended with request parameters and stacktrace when `ApiConstants::ENABLE_API_DEBUG` is set to `true`.
+Make sure that backend API is extended with request parameters and stacktrace when `ApiConstants::ENABLE_API_DEBUG` is set to `true`.
 
 {% endinfo_block %}
 
@@ -344,18 +345,18 @@ Create Nginx VHOST configuration:
 server {
 	# Listener for production/staging - requires external LoadBalancer directing traffic to this port
 	listen 10001;
- 
+
 	# Listener for testing/development - one host only, doesn't require external LoadBalancer
 	listen 80;
- 
+
 	server_name ~^backend-api\\..+\\.com$;
- 
+
 	keepalive_timeout 0;
 	access_log  /data/logs/development/backend-api-access.log extended;
- 
+
 	# entry point for Glue Application
 	root /data/shop/development/current/public/BackendApi;
- 
+
 	set $application_env development;
 	# Binding store
 	set $application_store DE;

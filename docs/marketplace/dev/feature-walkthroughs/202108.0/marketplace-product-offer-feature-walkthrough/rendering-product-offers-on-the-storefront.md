@@ -5,15 +5,15 @@ description: Learn how to render the Merchant Product Offers on the Storefront.
 template: howto-guide-template
 ---
 
-This article explains how to render the Merchant Product Offers on the Storefront.
+This article explains how to render the merchant product offers on the Storefront.
 
 ## Prerequisites
 
-The [MerchantProductOfferWidget](https://github.com/spryker-shop/merchant-product-offer-widget) module is responsible for rendering Product Offers on the Storefront. Make sure it is installed in your project before adding the Product Offers to the Storefront.
+The [MerchantProductOfferWidget](https://github.com/spryker-shop/merchant-product-offer-widget) module is responsible for rendering product offers on the Storefront. Make sure it is installed in your project before adding the product offers to the Storefront.
 
-## Rendering product offers on the Product Details page
+## Rendering product offers on the product details page
 
-To render the MerchantProductOfferWidget on the product detail page, add it to the `product-configurator.twig` molecule at the project and vendor levels.
+To render the MerchantProductOfferWidget on the product details page, add it to the `product-configurator.twig` molecule at the project and vendor levels.
 
 Project level path: `/src/Pyz/Yves/ProductDetailPage/Theme/default/components/molecules/product-configurator/product-configurator.twig`
 
@@ -25,7 +25,7 @@ Widget code: {% widget 'MerchantProductOfferWidget' args [data.product] only %}{
 {% endraw %}
 
 ```
-## Rendering product offers on the Cart page
+## Rendering product offers on the cart page
 
 To render the MerchantProductOfferWidget module to the *Cart* page, add it to the `product-cart-item.twig` molecule at the vendor level:
 
@@ -36,7 +36,7 @@ Widget code: {% widget 'ProductOfferSoldByMerchantWidget' args [data.product] on
 ```
 ## Rendering product offers on the checkout pages
 
-To render the MerchantProductOfferWidget module on the checkout pages, change the *summary-item* molecule at the summary (`/vendor/spryker/spryker-shop/Bundles/CheckoutPage/src/SprykerShop/Yves/CheckoutPage/Theme/default/views/summary/summary.twig`) and shipment (`/vendor/spryker/spryker-shop/Bundles/CheckoutPage/src/SprykerShop/Yves/CheckoutPage/Theme/default/views/shipment/shipment.twig`) steps to the *summery-note* molecule with new data parameters:
+To render the MerchantProductOfferWidget module on the checkout pages, change the *summary-item* molecule at the summary (`/vendor/spryker/spryker-shop/Bundles/CheckoutPage/src/SprykerShop/Yves/CheckoutPage/Theme/default/views/summary/summary.twig`) and shipment (`/vendor/spryker/spryker-shop/Bundles/CheckoutPage/src/SprykerShop/Yves/CheckoutPage/Theme/default/views/shipment/shipment.twig`) steps to the *summery-note* molecule with the new data parameters:
 
 ```twig
 {% raw %}

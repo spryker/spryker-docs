@@ -6,7 +6,7 @@ template: howto-guide-template
 
 [Usercentrics](https://usercentrics.com/) is the Consent Management Platform (CMP) that lets you obtain and manage the consent of your users to use cookies across your store. This helps you to get GDPR, CCPA, and LGPD compliant for websites and apps.
 
-With Usercentrics in place, you don't need to program the cookie consent popup or add them to every single page of your store. Instead, configure the popup in the Usercentrics portal and it automatically adds the popup to your store.
+With Usercentrics in place, you don't need to program the cookie consent popups or add their Javascript code to every single page of your store. Instead, you can configure the popup in the Usercentrics portal and it automatically adds the popup to your store.
 
 This is how the basic cookie consent popup might look if you have Usercentrics integrated into your Spryker store:
 
@@ -31,7 +31,7 @@ To use Usercentrics, you need an account with the [Usercentrics Admin Interface]
 
 {% info_block infoBox "Info" %}
 
-You can configure all the tracking tools and services, as well as the visual representation of the cookie consent popups, in the Usercentrics Admin Interface. See the [Usercentrics knowledge base](https://usercentrics.atlassian.net/servicedesk/customer/portals) for details.
+You can configure all the tracking tools and services, as well as the visual representation of the cookie consent popups for your store, in the Usercentrics Admin Interface. See the [Usercentrics knowledge base](https://usercentrics.atlassian.net/servicedesk/customer/portals) for details.
 
 {% endinfo_block %}
 
@@ -53,32 +53,47 @@ To integrate Usercentics:
 11. Optional: To add more stores with the same or different Setting IDs, click *Add store configuration*.
 
 
-That's it. You have integrated the Usercentrics app into your store. Now, the cookie consent popups should be displayed on every page.
+That's it. You have integrated the Usercentrics app into your store. The app status should change to *Connected*. Now, the cookie consent popups should be displayed on every page.
 
 ### Global settings configuration
-UserCentrics offers 3 possible solutions, a Direct integration, their Smart Data Protector and an integration for customers already using the Google Tag Manager.
 
-For the direct integration
+There are three ways to integrate Usecentrics: via a direct integration, via Usercentrics Smart Data Protector, and an integration for customers already using the Google Tag Manager. In the Spryker Back Office, you can select either Smart Data Protector or Google Tag Manager. Whereas the Smart Data Protector is the preferred and default setting.
 
-This requires the most manual (developer) work and can be used if a customer does not use a 3rd party tool yet.
+{% info_block infoBox "Info" %}
 
-    UserCentrics JS has to be injected with setting ID
+ All of the three approaches require you to configure the tracking tools and services for your store in the [Usercentrics Admin Interface](https://admin.usercentrics.eu/) and get the setting ID.
 
-    Tracking tools used on the shop have to be configured in the UserCentrics Admin Web interface (represented by the settings ID)
+{% endinfo_block %}
 
-    Each tracking tools JS on the shop page has to be deactivated by code and a name attached matching the name in the UserCentrics Admin Web interface
+#### Direct integration
 
-For the Smart Data Protector (preferred)
+The direct integration requires the most manual developer work. You can do the direct integration if you don't use a third-party tracking tool yet.
 
-This can be used if a customer does not use a 3rd party tool yet and requires in the best case not much manual developer work
+The direct integration presupposes that you inject the Usercentrics JavaScrip tag into your site with the setting ID.
+	
+Example script tag for the direct integration:
+	
+```
+<script id="usercentrics-cmp" data-settings-id="apXtrZ9ec" src="https://app.usercentrics.eu/browser-ui/latest/bundle.js" defer></script>
+```
 
-    UserCentrics JS has to be injected with setting ID + Smart Data Protector JS
+where `apXtrZ9ec` is the setting ID that identifies the opt-in configuration of a shop owner on the UserCentrics Admin Interface.
 
-    Tracking tools used on the shop have to be configured in the UserCentrics Admin Web interface, selected from a pre-existing list of tracking tools already supported by UserCentrics (150)
+For the direct integration, you have to programmatically deactivate the JavaScript code of all the tracking tools on the shop pages and assign the names matching those in the UserCentrics Admin Interface.
+   
+For more details on the Usercetrics direct integration, see the [Usercentrics documentation](https://docs.usercentrics.com/#/browser-ui?id=implementation).
 
-    The Smart Data Protector will then automatically be able to manage all tracking tools
+#### Smart Data Protector
 
-    NOTE: Every tracking tool not in the supported list requires a custom manual configuration in the UserCentrics Admin Web interface and corresponding adaption as in the Direct Integration case
+This is the preferred and default setting to configure Usercentrics. You can use it if you don't use a third-party party tracking tool yet and don't want to exert manual developer work.
+
+For this setting, Usercentrics JavaScript tag has to be injected with the setting ID and Smart Data Protector JavaScript code. Once you set up data processing services and got the setting ID for your app from the Usercentrics Admin Interface, the Smart Data Protector can automatically manage all the tracking tools.
+
+{% info_block infoBox "Info" %}
+
+Every data processing service not supported by Usercentrics by default, requires a custom manual configuration in the UserCentrics Admin Interface and corresponding adaption as for the [Direct Integration](#direct-integration) case. For details on the custom services, see [Usercentrics documentaiton on custom data processing services](https://usercentrics.atlassian.net/servicedesk/customer/portal/2/article/185794627).
+
+{% endinfo_block %}
 
 For the Google Tag Manager
 

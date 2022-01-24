@@ -29,6 +29,12 @@ Having separate CMS pages outside of the Spryker store, requires additional conf
 
 To use Usercentrics, you need an account with the [Usercentrics Admin Interface](https://admin.usercentrics.eu/). Before you create it, select the [Usercentrics pricing plan](https://usercentrics.com/pricing/) and then create an account with the Usercentrics Admin Interface.
 
+{% info_block infoBox "Info" %}
+
+You can configure all the tracking tools and services, as well as the visual representation of the cookie consent popups, in the Usercentrics Admin Interface. See the [Usercentrics knowledge base](https://usercentrics.atlassian.net/servicedesk/customer/portals) for details.
+
+{% endinfo_block %}
+
 To integrate Usercentics:
 
 1. In your store's Back Office, go to **Apps->Catalog**.
@@ -42,14 +48,12 @@ To integrate Usercentics:
 6. Go back to your store's Back Office, to the Usercentrics app details page.
 7. In the top right corner of the Usercentrics app details page, click **Configure**.
 8. In the *Configure* pane, in *Global Settings* by default, *Enable Smart Data Protector* is selected. You can either leave this setting, or select *Enable Direct Integration (Works only with Google Tag manager)*. See [Global settings configuration](#global-settings-configuration) for details on these settings.
+9. Select the Store and insert the Setting ID from from step 5.
+10. To activate Usercentrics for the selected store, select *Is active*.
+11. Optional: To add more stores with the same or different Setting IDs, click *Add store configuration*.
 
-{% info_block infoBox "Info" %}
 
-You can configure all the tracking tools and services, as well as the visual representation of the cookie consent popups, in the Usercentrics Admin Interface. See the [Usercentrics knowledge base](https://usercentrics.atlassian.net/servicedesk/customer/portals) for details.
-
-{% endinfo_block %}
-
-That's it. You have integrated the BazaarVoice app into your store. It usually takes BazaarVoice a few days to process your product feed. Therefore, you should see the external ratings and reviews from BazaarVoice in about 2-3 days after you integrated the app.
+That's it. You have integrated the Usercentrics app into your store. Now, the cookie consent popups should be displayed on every page.
 
 ### Global settings configuration
 UserCentrics offers 3 possible solutions, a Direct integration, their Smart Data Protector and an integration for customers already using the Google Tag Manager.

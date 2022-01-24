@@ -37,27 +37,25 @@ Check multiple log groups via Logs Insights as follows. Select the log groups co
 
 ## Deployment fails at the Deploy_Spryker_services step
 
-If a deployment fails at the `Deploy_Spryker_services`, do the following.
-
-### Check ECS services and tasks
-
-Check the ECS services and tasks that are postfixed with:
+If a deployment fails at the `Deploy_Spryker_services`, check the ECS services and tasks that are postfixed with:
 
 {% include checking-the-status-of-ecs-services-and-tasks.md %} <!-- To edit, see /_includes/checking-the-status-of-ecs-services-and-tasks.md -->
 
 
 
-## Deployment fails at the "Deploy_Scheduler" step
+## Deployment fails at the Deploy_Scheduler step
 
-### 1. Check Jenkins status:
+If a deployment fails at the `Deploy_Scheduler`, do the following.
+
+### 1. Check Jenkins status
 
 {% include checking-jenkins-status.md %} <!-- To edit, see /_includes/checking-jenkins-status.md -->
 
-### 2. Check Jenkins system information:
+### 2. Check Jenkins system information
 
 {% include checking-jenkins-system-information.md %} <!-- To edit, see /_includes/checking-jenkins-status.md -->
 
-### 3. Check jenkins logs
+### 3. Check Jenkins logs
 
 Check the build logs via Log groups as follows. Filter the log groups by `jenkins`.
 {% include searching-by-logs.md %} <!-- To edit, see /_includes/searching-by-logs.md -->

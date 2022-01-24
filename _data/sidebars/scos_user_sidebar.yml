@@ -125,6 +125,12 @@ entries:
       nested:
       - title: Building the documentation site
         url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html
+      - title: Reviewing pull requests
+        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/reviewing-pull-requests.html
+      - title: Style, formatting, and general rules
+        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html
+      - title: Markdown syntax
+        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/markdown-syntax.html
   - title: Features
     url: /docs/scos/user/features/features.html
     nested:
@@ -2294,6 +2300,8 @@ entries:
       nested:
       - title: Afterpay
         url: /docs/scos/user/technology-partners/payment-partners/afterpay.html
+      - title: Amazon Pay
+        url: /docs/scos/user/technology-partners/payment-partners/amazon-pay.html
       - title: BS Payone
         url: /docs/scos/user/technology-partners/payment-partners/bs-payone/bs-payone.html
         nested:
@@ -2350,12 +2358,7 @@ entries:
           - title: PayOne - Integration into the Legacy Demoshop Project
             url: /docs/scos/user/technology-partners/payment-partners/bs-payone/legacy-demoshop-integration/payone-integration-into-the-legacy-demoshop-project.html
       - title: Billpay
-        url: /docs/scos/user/technology-partners/payment-partners/billpay/billpay.html
-        nested:
-        - title: Billpay - Invoice Payment in Preauthorize Mode
-          url: /docs/scos/user/technology-partners/payment-partners/billpay/billpay-invoice-payment-in-preauthorize-mode.html
-        - title: Billpay - Integration
-          url: /docs/scos/user/technology-partners/payment-partners/billpay/billpay-integration.html
+        url: /docs/scos/user/technology-partners/payment-partners/billpay.html
       - title: Klarna
         url: /docs/scos/user/technology-partners/payment-partners/klarna/klarna.html
         nested:
@@ -2420,43 +2423,6 @@ entries:
           include_versions:
           - "202009.0"
           - "202108.0"
-      - title: Amazon Pay
-        url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/amazon-pay.html
-        nested:
-        - title: SCOS Integration
-          nested:
-          - title: Amazon Pay - Configuration for the SCOS
-            url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/scos-integration/amazon-pay-configuration-for-the-scos.html
-          - title: Amazon Pay - Obtaining an Amazon Order Reference and Information
-              About Shipping Addresses
-            url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/scos-integration/amazon-pay-obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
-          - title: Amazon Pay - Sandbox Simulations
-            url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/scos-integration/amazon-pay-sandbox-simulations.html
-          - title: Amazon Pay - State Machine
-            url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/scos-integration/amazon-pay-state-machine.html
-          - title: Amazon Pay - API
-            url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/scos-integration/amazon-pay-api.html
-        - title: Legacy Demoshop Integration
-          nested:
-          - title: "Amazon Pay - Rendering a \u201CPay with Amazon\u201D Button on
-              the Cart Page"
-            url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-rendering-a-pay-with-amazon-button-on-the-cart-page.html
-          - title: Amazon Pay - Email Notifications
-            url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-email-notifications.html
-          - title: Amazon Pay - Configuration for the Legacy Demoshop
-            url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-configuration-for-the-legacy-demoshop.html
-          - title: Amazon Pay - Sandbox Simulations
-            url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-sandbox-simulations.html
-          - title: Amazon Pay - Support of Bundled Products
-            url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-support-of-bundled-products.html
-          - title: Amazon Pay - Order Reference and Information about Shipping Addresses
-            url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-order-reference-and-information-about-shipping-addresses.html
-          - title: Amazon Pay - State Machine
-            url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-state-machine.html
-          - title: Amazon Pay - Refund
-            url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-refund.html
-          - title: Amazon Pay - API
-            url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-api.html
       - title: Heidelpay
         url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay.html
         include_versions:
@@ -2622,69 +2588,7 @@ entries:
           - "202009.0"
           - "202108.0"
       - title: Arvato
-        url: /docs/scos/user/technology-partners/payment-partners/arvato/arvato.html
-        nested:
-        - title: Arvato - Risk Solution Services Integration
-          url: /docs/scos/user/technology-partners/payment-partners/arvato/arvato-risk-solution-services-integration.html
-          include_versions:
-          - "202001.0"
-          - "202005.0"
-        - title: v.1.0
-          include_versions:
-          - "201811.0"
-          - "201903.0"
-          - "201907.0"
-          - "202001.0"
-          - "202005.0"
-          nested:
-          - title: Arvato - Risk Check 1.0
-            url: /docs/scos/user/technology-partners/payment-partners/arvato/v.1.0/arvato-risk-check-1.0.html
-            include_versions:
-            - "201811.0"
-            - "201903.0"
-            - "201907.0"
-            - "202001.0"
-            - "202005.0"
-          - title: Arvato - Risk Solution Services Integration 1.0
-            url: /docs/scos/user/technology-partners/payment-partners/arvato/v.1.0/arvato-risk-solution-services-integration-1.0.html
-            include_versions:
-            - "201811.0"
-            - "201903.0"
-            - "201907.0"
-            - "202001.0"
-            - "202005.0"
-        - title: Arvato - Risk Check
-          url: /docs/scos/user/technology-partners/payment-partners/arvato/arvato-risk-check.html
-          include_versions:
-          - "202001.0"
-          - "202005.0"
-          - "202009.0"
-          - "202108.0"
-        - title: Arvato - Store Order
-          url: /docs/scos/user/technology-partners/payment-partners/arvato/arvato-store-order.html
-        - title: v.2.0
-          include_versions:
-          - "201811.0"
-          - "201903.0"
-          - "201907.0"
-          nested:
-          - title: Arvato - Risk Check 2.0
-            url: /docs/scos/user/technology-partners/payment-partners/arvato/v.2.0/arvato-risk-check-2.0.html
-            include_versions:
-            - "201811.0"
-            - "201903.0"
-            - "201907.0"
-          - title: Arvato - Risk Solution Services Integration 2.0
-            url: /docs/scos/user/technology-partners/payment-partners/arvato/v.2.0/arvato-risk-solution-services-integration-2.0.html
-            include_versions:
-            - "201811.0"
-            - "201903.0"
-            - "201907.0"
-        - title: Arvato - Installation and Configuration
-          url: /docs/scos/user/technology-partners/payment-partners/arvato/arvato-installation-and-configuration.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
+        url: /docs/scos/user/technology-partners/payment-partners/arvato.html
     - title: Technology Partner Integration
       url: /docs/scos/user/technology-partners/technology-partner-integration.html
     - title: Operational tools, Monitoring, Legal, etc.

@@ -65,7 +65,7 @@ You can select lower **Memory:** and **Swap:** values than those provided in the
 
 {% endinfo_block %}
 
-5. [Development mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode): Install Mutagen v0.13.0-beta4 for file synchronisation between the container and the host:
+5. [Development mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode): Install Mutagen version `0.13.0-beta4` for file synchronisation between the container and the host:
 ```shell
 cd "$(brew --repo mutagen-io/homebrew-mutagen)" && \
 git checkout bd8b45734ceebb24a9b11cbae7ff9f1623cfb737 && \
@@ -73,7 +73,9 @@ HOMEBREW_NO_AUTO_UPDATE=1 brew install mutagen-io/mutagen/mutagen-beta && \
 cd -
 ```
 
-If you have installed a different version of Mutagen before then you need to uninstall it first and restart the daemon after installing the correct version:
+{% info_block warningBox "Rolling back Mutagen version" %}
+
+If you previously installed a different version of Mutagen, the only way to roll back is to reinstall it. To install Mutagen version `0.13.0-beta4` and restart the Mutagen daemon, run the command:
 ```shell
 brew uninstall mutagen-io/mutagen/mutagen-beta && \
 cd "$(brew --repo mutagen-io/homebrew-mutagen)" && \
@@ -83,7 +85,7 @@ mutagen daemon stop  && \
 mutagen daemon start && \
 cd -
 ```
-
+{% endinfo_block %}
 
 ## Next steps
 

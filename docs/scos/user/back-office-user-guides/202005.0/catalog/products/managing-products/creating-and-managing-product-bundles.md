@@ -1,5 +1,5 @@
 ---
-title: Creating Product Bundles
+title: Creating and Managing Product Bundles
 description: Use the guide to assign product variants to a bundle, set its price, add SEO data and images in the Back Office.
 last_updated: Sep 15, 2020
 template: back-office-user-guide-template
@@ -8,6 +8,7 @@ originalArticleId: 7df569ee-3e01-4bfe-a0de-c63bde54e144
 redirect_from:
   - /v5/docs/creating-product-bundles
   - /v5/docs/en/creating-product-bundles
+  - /docs/scos/user/back-office-user-guides/202005.0/catalog/products/managing-products/creating-product-bundles.html
 related:
   - title: Product Bundles feature overview
     link: docs/scos/user/features/page.version/product-bundles-feature-overview.html

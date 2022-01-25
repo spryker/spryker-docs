@@ -8,6 +8,7 @@ originalArticleId: 93341bd1-3fd9-4ef4-bfdf-20986238256c
 redirect_from:
   - /v6/docs/reference-information-product-attributes
   - /v6/docs/en/reference-information-product-attributes
+  - /docs/scos/user/back-office-user-guides/page.version/catalog/attributes/references/reference-information-product-attributes.html
 ---
 
 This document describes the reference information for managing product attributes, and provides examples of regular and super product attributes.

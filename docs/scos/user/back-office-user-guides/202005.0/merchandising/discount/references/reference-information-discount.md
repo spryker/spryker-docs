@@ -8,6 +8,7 @@ originalArticleId: 3635575d-4a68-4b72-a142-8a1dc8c81bb1
 redirect_from:
   - /v5/docs/discount-reference-information
   - /v5/docs/en/discount-reference-information
+  - /docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/discount-reference-information.html
 ---
 
 This topic provides you with the information that you need to know when working with discounts.

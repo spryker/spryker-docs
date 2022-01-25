@@ -1,5 +1,5 @@
 ---
-title: Updating Product Variants
+title: Editing Product Variants
 description: The guide describes how to update the product variant in the Back Office.
 last_updated: Dec 21, 2019
 template: back-office-user-guide-template
@@ -8,6 +8,7 @@ originalArticleId: 0c02b84f-4f46-4a1d-a454-2a861645adad
 redirect_from:
   - /v4/docs/updating-a-product-variant
   - /v4/docs/en/updating-a-product-variant
+  - /docs/scos/user/back-office-user-guides/page.version/catalog/products/concrete-products/updating-product-variants.html
 related:
   - title: Managing Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html

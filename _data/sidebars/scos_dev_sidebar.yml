@@ -3241,7 +3241,7 @@ entries:
           nested:
           - title: State machine console commands
             url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/state-machine-console-commands.html
-          - title: Order management system multi-thread  
+          - title: Order management system multi-thread
             url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-management-system-multi-thread.html
           - title: Common pitfalls in OMS design
             url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html
@@ -4154,6 +4154,72 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-refund.html
             - title: Amazon Pay - API
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-api.html
+    - title: Arvato
+      nested:
+        - title: v.1.0
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          nested:
+          - title: Arvato - Risk Check 1.0
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/v.1.0/arvato-risk-check-1.0.html
+            include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+            - "202001.0"
+            - "202005.0"
+          - title: Installing and configuring Arvato 1.0
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/v.1.0/installing-and-configuring-arvato-1.0.html
+            include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+            - "202001.0"
+            - "202005.0"
+        - title: Arvato - Risk Check
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/arvato-risk-check.html
+          include_versions:
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+        - title: Arvato - Store Order
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/arvato-store-order.html
+        - title: v.2.0
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          nested:
+          - title: Arvato - Risk Check 2.0
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/v.2.0/arvato-risk-check-2.0.html
+            include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+          - title: Installing and configuring Arvato 2.0
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/v.2.0/installing-and-configuring-arvato-2.0.html
+            include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+        - title: Installing and configuring Arvato
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/installing-and-configuring-arvato.html
+          include_versions:
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+        - title: Billpay
+          nested:
+            - title: Billpay - Switching invoice payments to a preauthorize mode
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/billpay/billpay-switching-invoice-payments-to-a-preauthorize-mode.html
+            - title: Integrating Billpay
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/billpay/integrating-billpay.html
         - title: RatePay
           nested:
             - title: RatePay - Payment methods
@@ -4258,6 +4324,8 @@ entries:
         url: /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html
       - title: Available test helpers
         url: /docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
+      - title: Testing console commands
+        url: /docs/scos/dev/guidelines/testing-guidelines/testing-console-commands.html
     - title: Project development guidelines
       url: /docs/scos/dev/guidelines/project-development-guidelines.html
     - title: Data Processing Guidelines

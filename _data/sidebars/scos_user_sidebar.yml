@@ -927,7 +927,6 @@ entries:
             - "202005.0"
             - "202009.0"
     - title: Customers
-      url: /docs/scos/user/back-office-user-guides/customer/customers.html
       nested:
       - title: Customer, customer access, customer groups
         nested:
@@ -1091,7 +1090,7 @@ entries:
             - "202005.0"
             - "202009.0"
           - title: Reference information - Products
-            url: /docs/scos/user/back-office-user-guides/catalog/products/references/products-reference-information.html
+            url: /docs/scos/user/back-office-user-guides/catalog/products/references/reference-information-products.html
             include_versions:
             - "201811.0"
             - "201903.0"
@@ -1117,7 +1116,7 @@ entries:
           - "202009.0"
           nested:
           - title: Reference information - Category
-            url: /docs/scos/user/back-office-user-guides/202009.0/catalog/category/references/reference-information-category.html
+            url: /docs/scos/user/back-office-user-guides/catalog/category/references/reference-information-category.html
             include_versions:
             - "201811.0"
             - "201903.0"
@@ -1163,7 +1162,7 @@ entries:
           - "202009.0"
           nested:
           - title: Reference information - Availability
-            url: /docs/scos/user/back-office-user-guides/catalog/availability/references/availability-reference-information.html
+            url: /docs/scos/user/back-office-user-guides/catalog/availability/references/reference-information-availability.html
             include_versions:
             - "201811.0"
             - "201903.0"
@@ -1215,7 +1214,7 @@ entries:
           - "202009.0"
           nested:
           - title: Reference information - Product Lists
-            url: /docs/scos/user/back-office-user-guides/catalog/product-lists/references/product-lists-reference-information.html
+            url: /docs/scos/user/back-office-user-guides/catalog/product-lists/references/reference-information-product-lists.html
             include_versions:
             - "201811.0"
             - "201903.0"
@@ -1763,7 +1762,7 @@ entries:
             - "202005.0"
             - "202009.0"
           - title: Reference information - User
-            url: /docs/scos/user/back-office-user-guides/users/roles-groups-and-users/references/user-reference-information.html
+            url: /docs/scos/user/back-office-user-guides/users/roles-groups-and-users/references/reference-information-user.html
             include_versions:
             - "201811.0"
             - "201903.0"

@@ -21,7 +21,7 @@ Check front-end, gateway, and Zed logs described below. Filter log groups by the
 
 {% info_block warningBox "Troubleshooting error 504" %}
 
-If you are troubleshooting response 504, besides errors, pay attention to the warnings. Examples:
+If you are troubleshooting response 504, besides errors, pay attention to warnings. Examples:
 
 
 ```text

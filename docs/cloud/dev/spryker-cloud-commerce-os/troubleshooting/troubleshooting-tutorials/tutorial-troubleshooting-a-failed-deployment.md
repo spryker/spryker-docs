@@ -33,6 +33,8 @@ Check multiple log groups via Logs Insights as follows. Select the log groups co
 
 3. On the page of the step execution, switch to the **Phase details** tab.
 
+4. If one or more of the statuses is not *Succeeded*, check the reason in the *Context* column.
+
 ![phase_details]
 
 ## Deployment fails at the Deploy_Spryker_services step
@@ -55,7 +57,7 @@ If a deployment fails at the `Deploy_Scheduler`, do the following.
 
 {% include checking-jenkins-system-information.md %} <!-- To edit, see /_includes/checking-jenkins-status.md -->
 
-### 3. Check Jenkins logs
+### 3. Check Jenkins deploy logs
 
-Check the build logs via Log groups as follows. Filter the log groups by `jenkins`.
+Check Jenkins deploy logs via Log groups as follows. Filter the log groups by `jenkins`.
 {% include searching-by-logs.md %} <!-- To edit, see /_includes/searching-by-logs.md -->

@@ -9,9 +9,9 @@ template: feature-integration-guide-template
 
 The following feature integration guide expects the basic feature to be in place.
 
-The current feature integration guide adds the *Discount Prioritization* and *Discount Validity Period Supports HH:MM Time Definition* functionalities.
-
 {% endinfo_block %}
+
+The current feature integration guide adds the *Discount Prioritization* and *Discount Validity Period Supports HH:MM Time Definition* functionalities.
 
 
 ## Install feature core

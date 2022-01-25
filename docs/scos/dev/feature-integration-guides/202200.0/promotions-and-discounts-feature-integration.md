@@ -4,16 +4,11 @@ description: Learn how to integrate the Promotions & Discounts feature into a Sp
 template: feature-integration-guide-template
 ---
 
-
 {% info_block errorBox %}
 
-The following feature integration guide expects the basic feature to be in place.
-
-The current feature integration guide adds discount prioritization functionality.
+The following feature integration guide expects the basic feature to be in place. This document describes how to add the *discount prioritization* functionality.
 
 {% endinfo_block %}
-
----
 
 ## Install feature core
 
@@ -40,17 +35,15 @@ composer require spryker-feature/promotions-discounts {{page.version}} --update-
 
 Make sure that the following modules have been installed:
 
-
 | MODULE    | EXPECTED DIRECTORY       |
 |-----------|--------------------------|
 | Discount  | vendor/spryker/discount  |
 
  {% endinfo_block %}
---------------------
 
 ### Set up database schema and transfer objects
 
-1. Apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -59,10 +52,7 @@ console propel:install
 
 {% info_block warningBox "Verification" %}
 
-
 Make sure that the following changes have been applied by checking your database:
-
-
 
 | DATABASE ENTITY       | TYPE   | EVENT  |
 |-----------------------|--------|--------|
@@ -74,7 +64,6 @@ Make sure that the following changes have been applied by checking your database
 
 Make sure that the following changes have been triggered in transfer objects:
 
-
 | TRANSFER                    | TYPE      | EVENT   | PATH                                                     |
 |-----------------------------|-----------|---------|----------------------------------------------------------|
 | Discount.priority           | property  | created | src/Generated/Shared/Transfer/DiscountTransfer           |
@@ -85,28 +74,22 @@ Make sure that the following changes have been triggered in transfer objects:
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the discount form has a priority field and the discounts table has a priority column.
+Make sure that the discount form has the *PRIORITY* field, and the discounts table has the *PRIORITY* column.
 
-Make sure, that the existing discounts in the spy_discount DB table have priority set to 9999.
+Make sure, that the existing discounts in the `spy_discount` DB table have priority set to `9999`.
 
 Make sure that discounts are calculated according to their priorities:
-
-    1. Create a couple of percentage discounts with different priorities.
-
-    2. Add items to the cart to fulfill discounts' requirements.
-
-    3. Check that discounts are applied in the correct order and the calculated discount total is correct.
+1. Create a couple of percentage discounts with different priorities.
+2. To fulfill the discounts' requirements, add items to the cart.
+3. Check that discounts are applied in the correct order and the calculated discount total is correct.
 
 {% endinfo_block %}
 
----
-
-
 ### Add translations
 
-Run the following command to generate a new translation cache for Zed:
+Generate a new translation cache for Zed:
 
-1. Append glossary for the feature:
+Append glossary for the feature:
 
 ```bash
 console translator:generate-cache
@@ -114,11 +97,9 @@ console translator:generate-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that all labels and help tooltips in discount form has English and German translation.
+Make sure that all labels and help tooltips in the discount form has English and German translation.
 
 {% endinfo_block %}
-
-
 
 [//]: # (---)
 

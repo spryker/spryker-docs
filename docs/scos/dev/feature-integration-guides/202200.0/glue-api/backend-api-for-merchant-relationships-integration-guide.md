@@ -4,7 +4,7 @@ description: Integrate the Backend API for Merchant Relationships into your proj
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the [BAPI Merchant Relationships]({link to a respective feature overview}) into a Spryker project.
+This document describes how to integrate the BAPI Merchant Relationships into a Spryker project.
 
 ## Install feature core
 

@@ -4,7 +4,7 @@ description: Integrate the Backend API into your project
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the [Backend API]({link to a respective feature overview}) feature into a Spryker project.
+This document describes how to integrate the Backend API feature into a Spryker project.
 
 ## Install feature core
 
@@ -342,6 +342,8 @@ Create Nginx VHOST configuration:
 **/etc/nginx/sites-enabled/DE_development_glue**
 
 ```php
+<?php
+
 server {
 	# Listener for production/staging - requires external LoadBalancer directing traffic to this port
 	listen 10001;

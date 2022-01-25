@@ -213,4 +213,5 @@ Response sample with default prices and volume prices for an abstract product
 | --- | --- |
 | 307 | Abstract product price is not found (for example, because of the wrong abstract product SKU. |
 | 311 | Abstract product SKU is not specified. |
-| 404 | Request URL or type is wrong. |
+
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

@@ -10,19 +10,19 @@ redirect_from:
   - /v5/docs/en/crefopay-business-to-business-model
 related:
   - title: Integrating CrefoPay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-integration-into-a-project.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/integrating-crefopay.html
   - title: CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay.html
   - title: Installing and configuring CrefoPay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-installation-and-configuration.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/installing-and-configuring-crefopay.html
   - title: CrefoPay payment methods
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-provided-payment-methods.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-payment-methods.html
   - title: CrefoPay capture and refund Processes
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-capture-and-refund-processes.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-capture-and-refund-processes.html
   - title: CrefoPay callbacks
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-callback.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-callbacks.html
   - title: CrefoPay notifications
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-notifications.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-notifications.html
 ---
 
 CrefoPay module enables B2B strategy in payments.

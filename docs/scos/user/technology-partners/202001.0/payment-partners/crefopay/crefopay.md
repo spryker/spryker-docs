@@ -12,11 +12,11 @@ The `SprykerEco.CrefoPay` module includes integration with:
 
 The `SprykerEco.CrefoPay` module provides the following payment methods:
 
-* [Bill](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay-provided-payment-methods.html)
-* [Cash on Delivery](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay-provided-payment-methods.html)
-* [Credit Card](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay-provided-payment-methods.html)
-* [Card with 3D secure](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay-provided-payment-methods.html)
-* [Direct Debit](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay-provided-payment-methods.html)
-* [PayPal](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay-provided-payment-methods.html)
-* [Cash in advance](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay-provided-payment-methods.html)
-* [SofortÜberweisung](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay-provided-payment-methods.html)
+* [Bill](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay-payment-methods.html)
+* [Cash on Delivery](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay-payment-methods.html)
+* [Credit Card](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay-payment-methods.html)
+* [Card with 3D secure](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay-payment-methods.html)
+* [Direct Debit](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay-payment-methods.html)
+* [PayPal](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay-payment-methods.html)
+* [Cash in advance](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay-payment-methods.html)
+* [SofortÜberweisung](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay-payment-methods.html)

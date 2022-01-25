@@ -10,19 +10,19 @@ redirect_from:
   - /v2/docs/en/crefopay-capture-refund-processes
 related:
   - title: Integrating CrefoPay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-integration-into-a-project.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/integrating-crefopay.html
   - title: CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay.html
   - title: Installing and configuring CrefoPay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-installation-and-configuration.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/installing-and-configuring-crefopay.html
   - title: CrefoPay callbacks
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-callback.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-callbacks.html
   - title: CrefoPay — Enabling B2B payments
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-business-to-business-model.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-enabling-b2b-payments.html
   - title: CrefoPay payment methods
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-provided-payment-methods.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-payment-methods.html
   - title: CrefoPay notifications
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-notifications.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-notifications.html
 ---
 
 CrefoPay module can have different capture and refund processes:

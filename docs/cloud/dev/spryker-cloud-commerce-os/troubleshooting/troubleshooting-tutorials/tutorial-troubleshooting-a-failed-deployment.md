@@ -39,7 +39,7 @@ Check multiple log groups via Logs Insights as follows. Select the log groups co
 
 ## Deployment fails at the Deploy_Spryker_services step
 
-If a deployment fails at the `Deploy_Spryker_services`, check the ECS services and tasks that are postfixed with:
+If a deployment fails at the `Deploy_Spryker_services`, check the ECS services that have failed to deploy and their tasks as follows:
 
 {% include checking-the-status-of-ecs-services-and-tasks.md %} <!-- To edit, see /_includes/checking-the-status-of-ecs-services-and-tasks.md -->
 

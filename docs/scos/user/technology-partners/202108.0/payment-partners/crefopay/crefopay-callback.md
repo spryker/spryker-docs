@@ -1,5 +1,5 @@
 ---
-title: CrefoPay - Callback
+title: CrefoPay callbacks
 description: Callbacks are redirects performed by the CrefoPay system.
 last_updated: Jun 16, 2021
 template: concept-topic-template

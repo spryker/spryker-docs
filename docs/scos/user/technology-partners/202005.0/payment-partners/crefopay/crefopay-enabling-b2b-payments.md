@@ -1,13 +1,13 @@
 ---
 title: CrefoPay — Enabling B2B payments
 description: CrefoPay module provides B2B strategy in payments.
-last_updated: Nov 22, 2019
+last_updated: Apr 3, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v2/docs/crefopay-business-to-business-model
-originalArticleId: 6c20fa20-5f73-4da0-983a-ac6011d09370
+originalLink: https://documentation.spryker.com/v5/docs/crefopay-business-to-business-model
+originalArticleId: 1eacc2d6-3736-4b0f-85ac-5e3d5276dabc
 redirect_from:
-  - /v2/docs/crefopay-business-to-business-model
-  - /v2/docs/en/crefopay-business-to-business-model
+  - /v5/docs/crefopay-business-to-business-model
+  - /v5/docs/en/crefopay-business-to-business-model
 related:
   - title: Integrating CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-integration-into-a-project.html
@@ -19,7 +19,7 @@ related:
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-provided-payment-methods.html
   - title: CrefoPay - Capture and Refund Processes
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-capture-and-refund-processes.html
-  - title: CrefoPay - Callback
+  - title: CrefoPay callbacks
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-callback.html
   - title: CrefoPay - Notifications
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-notifications.html
@@ -31,8 +31,9 @@ To enable the B2B business model for CrefoPay:
 
 1. Set `$config[CrefoPayConstants::IS_BUSINESS_TO_BUSINESS]` to true.
 2. Add company data into `QuoteTransfer` on project level. It should be done before customer goes to checkout payment step.
-<details open>
-<summary markdown='span'>Company Data</summary>
+
+**Company Data**
+
 ```php
 $quoteTransfer->setCrefoPayCompany(
     (new CrefoPayApiCompanyTransfer())

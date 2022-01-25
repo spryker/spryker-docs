@@ -1,13 +1,13 @@
 ---
 title: CrefoPay — Enabling B2B payments
 description: CrefoPay module provides B2B strategy in payments.
-last_updated: Oct 23, 2019
+last_updated: Nov 22, 2019
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v1/docs/crefopay-business-to-business-model
-originalArticleId: e847cdcf-82e3-4d2c-b4e1-c13b21c7ea0b
+originalLink: https://documentation.spryker.com/v3/docs/crefopay-business-to-business-model
+originalArticleId: e63cde6d-e007-4193-bec2-effb7ea718cc
 redirect_from:
-  - /v1/docs/crefopay-business-to-business-model
-  - /v1/docs/en/crefopay-business-to-business-model
+  - /v3/docs/crefopay-business-to-business-model
+  - /v3/docs/en/crefopay-business-to-business-model
 related:
   - title: Integrating CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-integration-into-a-project.html
@@ -19,7 +19,7 @@ related:
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-provided-payment-methods.html
   - title: CrefoPay - Capture and Refund Processes
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-capture-and-refund-processes.html
-  - title: CrefoPay - Callback
+  - title: CrefoPay callbacks
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-callback.html
   - title: CrefoPay - Notifications
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-notifications.html

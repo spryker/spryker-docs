@@ -1,13 +1,13 @@
 ---
 title: Klarna
 description: Make paying as simple, safe and above all, smooth as possible by integrating the Klarna payment into the Spryker Commerce OS.
-last_updated: Apr 3, 2020
+last_updated: Nov 22, 2019
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v5/docs/klarna
-originalArticleId: 67eb2b4a-da4d-4e90-b873-fcb2bc854972
+originalLink: https://documentation.spryker.com/v2/docs/klarna
+originalArticleId: 6cc8952b-1870-4edc-a83b-cf63ca7ec8fc
 redirect_from:
-  - /v5/docs/klarna
-  - /v5/docs/en/klarna
+  - /v2/docs/klarna
+  - /v2/docs/en/klarna
 related:
   - title: Klarna payment workflow
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/klarna/technical-details-and-howtos/klarna-payment-workflow.html
@@ -67,4 +67,17 @@ See [Disclaimer](https://github.com/spryker/spryker-documentation).
 ---
 For further information on this partner and integration into Spryker, please contact us.
 
-<div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>
+<div class="hubspot-forms hubspot-forms--docs">
+<div class="hubspot-form" id="hubspot-partners-1">
+            <div class="script-embed" data-code="
+                                            hbspt.forms.create({
+				                                portalId: '2770802',
+				                                formId: '163e11fb-e833-4638-86ae-a2ca4b929a41',
+              	                                onFormReady: function() {
+              		                                const hbsptInit = new CustomEvent('hbsptInit', {bubbles: true});
+              		                                document.querySelector('#hubspot-partners-1').dispatchEvent(hbsptInit);
+              	                                }
+				                            });
+            "></div>
+</div>
+</div>

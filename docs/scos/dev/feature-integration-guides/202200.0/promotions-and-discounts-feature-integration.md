@@ -125,7 +125,7 @@ Make sure that you can submit the *Discount Create* and *Discount Update* forms 
 1. In the Back Office, go to **Merchandising** > **Discount**.
 2. Create a new discount or update an existing one, check that you can see the *Discount* form.
 3. Click on **Valid From** and **Valid To** fields to ensure you can see the calendar, where you can select specific date and time.
-4. Make sure **Valid From** and **Valid To** fields can accept the selected date and time, using keystroke entry for times not falling on the hour.
+4. Make sure **Valid From** and **Valid To** fields can accept the selected date and time (for times not falling on the hour, use kaystroke entry—for example, 13:45).
 5. In the `spy_discount` DB table, make sure **Valid From** and **Valid To** date and time are saved correctly.
 
 {% endinfo_block %}

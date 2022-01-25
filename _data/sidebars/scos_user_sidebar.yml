@@ -2478,24 +2478,7 @@ entries:
           - "202009.0"
           - "202108.0"
       - title: CrefoPay
-        url: /docs/scos/user/technology-partners/payment-partners/crefopay/crefopay.html
-        nested:
-        - title: CrefoPay - Installation and Configuration
-          url: /docs/scos/user/technology-partners/payment-partners/crefopay/crefopay-installation-and-configuration.html
-        - title: CrefoPay - Technical Details and HowTos
-          nested:
-          - title: CrefoPay - Business to Business Model
-            url: /docs/scos/user/technology-partners/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-business-to-business-model.html
-          - title: CrefoPay - Callback
-            url: /docs/scos/user/technology-partners/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-callback.html
-          - title: CrefoPay - Notifications
-            url: /docs/scos/user/technology-partners/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-notifications.html
-          - title: CrefoPay - Capture and Refund Processes
-            url: /docs/scos/user/technology-partners/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-capture-and-refund-processes.html
-        - title: CrefoPay - Provided Payment Methods
-          url: /docs/scos/user/technology-partners/payment-partners/crefopay/crefopay-provided-payment-methods.html
-        - title: CrefoPay - Integration
-          url: /docs/scos/user/technology-partners/payment-partners/crefopay/crefopay-integration-into-a-project.html
+        url: /docs/scos/user/technology-partners/payment-partners/crefopay.html
       - title: Billie
         url: /docs/scos/user/technology-partners/payment-partners/billie.html
       - title: Powerpay

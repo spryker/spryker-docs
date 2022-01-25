@@ -27,7 +27,7 @@ To search by products, send the request:
 
 | QUERY PARAMETER | DESCRIPTION  | POSSIBLE VALUES |
 | ------------------- | ---------------- | ----------------------- |
-| include   | Adds resource relationships to the request.      | abstract-products   |
+| include   | Adds resource relationships to the request.      | abstract-products, concrete-products, product-labels   |
 | q | Restricts the set of the returned items to the provided parameter value. | <ul><li>{% raw %}{{null}}{% endraw %} (empty)</li><li>{% raw %}{{abstract_product_sku}}{% endraw %}</li><li>{% raw %}{{abstract_product_name}}</li><li>{% raw %}{{concrete_product_sku}}{% endraw %}</li><li>{% raw %}{{product_attribute}}{% endraw %} (brand, color, etc.)—to provide multiple product attributes, use `+`</li></ul> |
 | price[min]   | Specifies minimum prices of the products     | {% raw %}{{minimum_price}}{% endraw %}  |
 | price[max]   | Specifies maximum prices of the products  | {% raw %}{{maximum_price}}{% endraw %}  |
@@ -69,7 +69,7 @@ To search by products, send the request:
 | `GET https://glue.mysprykershop.com/catalog-search?q=Sony&page=3` | Set a page to retrieve the search results from. |
 | `GET https://glue.mysprykershop.com/catalog-search?q=Sony&ipp=24` | Set number of products per page.   |
 | `GET https://glue.mysprykershop.com/catalog-search?merchant_name=Spryker` | Filter the results by the *Spryker* merchant name. |
-
+| `GET https://glue.mysprykershop.com/catalog-search?q=001&include=abstract-products,concrete-products,product-offers/` | Search for a product by SKU `001` including its concrete products and product offers.
 ### Response
 
 
@@ -6751,7 +6751,454 @@ To search by products, send the request:
     }
 }
 ```
+</details>
 
+<details>
+<summary markdown='span'>Response sample: Search for a product by SKU including its concrete products and product offers</summary>
+
+```json
+{
+    "data": [
+        {
+            "type": "catalog-search",
+            "id": null,
+            "attributes": {
+                "spellingSuggestion": null,
+                "sort": {
+                    "sortParamNames": [
+                        "rating",
+                        "name_asc",
+                        "name_desc",
+                        "price_asc",
+                        "price_desc",
+                        "popularity"
+                    ],
+                    "sortParamLocalizedNames": {
+                        "rating": "Sort by product ratings",
+                        "name_asc": "Sort by name ascending",
+                        "name_desc": "Sort by name descending",
+                        "price_asc": "Sort by price ascending",
+                        "price_desc": "Sort by price descending",
+                        "popularity": "Sort by popularity"
+                    },
+                    "currentSortParam": null,
+                    "currentSortOrder": null
+                },
+                "pagination": {
+                    "numFound": 1,
+                    "currentPage": 1,
+                    "maxPage": 1,
+                    "currentItemsPerPage": 12,
+                    "config": {
+                        "parameterName": "page",
+                        "itemsPerPageParameterName": "ipp",
+                        "defaultItemsPerPage": 12,
+                        "validItemsPerPageOptions": [
+                            12,
+                            24,
+                            36
+                        ]
+                    }
+                },
+                "abstractProducts": [
+                    {
+                        "abstractSku": "001",
+                        "price": 9999,
+                        "abstractName": "Canon IXUS 160",
+                        "prices": [
+                            {
+                                "priceTypeName": "DEFAULT",
+                                "currency": {
+                                    "code": "EUR",
+                                    "symbol": "€",
+                                    "name": "Euro"
+                                },
+                                "grossAmount": 9999,
+                                "DEFAULT": 9999
+                            },
+                            {
+                                "priceTypeName": "ORIGINAL",
+                                "currency": {
+                                    "code": "EUR",
+                                    "symbol": "€",
+                                    "name": "Euro"
+                                },
+                                "grossAmount": 12564,
+                                "ORIGINAL": 12564
+                            }
+                        ],
+                        "images": [
+                            {
+                                "externalUrlSmall": "https://images.icecat.biz/img/norm/medium/25904006-8438.jpg",
+                                "externalUrlLarge": "https://images.icecat.biz/img/norm/high/25904006-8438.jpg"
+                            }
+                        ]
+                    }
+                ],
+                "valueFacets": [
+                    {
+                        "name": "category",
+                        "localizedName": "Categories",
+                        "docCount": null,
+                        "values": [
+                            {
+                                "value": 1,
+                                "doc_count": 1
+                            },
+                            {
+                                "value": 2,
+                                "doc_count": 1
+                            },
+                            {
+                                "value": 4,
+                                "doc_count": 1
+                            }
+                        ],
+                        "activeValue": null,
+                        "config": {
+                            "parameterName": "category",
+                            "isMultiValued": false
+                        }
+                    },
+                    {
+                        "name": "label",
+                        "localizedName": "Product Labels",
+                        "docCount": null,
+                        "values": [],
+                        "activeValue": null,
+                        "config": {
+                            "parameterName": "label",
+                            "isMultiValued": true
+                        }
+                    },
+                    {
+                        "name": "merchant_name",
+                        "localizedName": "Merchant",
+                        "docCount": null,
+                        "values": [
+                            {
+                                "value": "Budget Cameras",
+                                "doc_count": 1
+                            },
+                            {
+                                "value": "Spryker",
+                                "doc_count": 1
+                            },
+                            {
+                                "value": "Video King",
+                                "doc_count": 1
+                            }
+                        ],
+                        "activeValue": null,
+                        "config": {
+                            "parameterName": "merchant_name",
+                            "isMultiValued": true
+                        }
+                    }
+                ],
+                "rangeFacets": [
+                    {
+                        "name": "price-DEFAULT-EUR-GROSS_MODE",
+                        "localizedName": "Price range",
+                        "min": 9999,
+                        "max": 9999,
+                        "activeMin": 9999,
+                        "activeMax": 9999,
+                        "docCount": null,
+                        "config": {
+                            "parameterName": "price",
+                            "isMultiValued": false
+                        }
+                    },
+                    {
+                        "name": "rating",
+                        "localizedName": "Product Ratings",
+                        "min": 0,
+                        "max": 0,
+                        "activeMin": 0,
+                        "activeMax": 0,
+                        "docCount": null,
+                        "config": {
+                            "parameterName": "rating",
+                            "isMultiValued": false
+                        }
+                    }
+                ],
+                "categoryTreeFilter": [
+                    {
+                        "nodeId": 5,
+                        "name": "Computer",
+                        "docCount": 0,
+                        "children": [
+                            {
+                                "nodeId": 6,
+                                "name": "Notebooks",
+                                "docCount": 0,
+                                "children": []
+                            },
+                            {
+                                "nodeId": 7,
+                                "name": "Pc's/Workstations",
+                                "docCount": 0,
+                                "children": []
+                            },
+                            {
+                                "nodeId": 8,
+                                "name": "Tablets",
+                                "docCount": 0,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "nodeId": 2,
+                        "name": "Cameras & Camcorders",
+                        "docCount": 1,
+                        "children": [
+                            {
+                                "nodeId": 4,
+                                "name": "Digital Cameras",
+                                "docCount": 1,
+                                "children": []
+                            },
+                            {
+                                "nodeId": 3,
+                                "name": "Camcorders",
+                                "docCount": 0,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "nodeId": 11,
+                        "name": "Telecom & Navigation",
+                        "docCount": 0,
+                        "children": [
+                            {
+                                "nodeId": 12,
+                                "name": "Smartphones",
+                                "docCount": 0,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "nodeId": 15,
+                        "name": "Cables",
+                        "docCount": 0,
+                        "children": []
+                    },
+                    {
+                        "nodeId": 16,
+                        "name": "Food",
+                        "docCount": 0,
+                        "children": [
+                            {
+                                "nodeId": 18,
+                                "name": "Fish",
+                                "docCount": 0,
+                                "children": []
+                            },
+                            {
+                                "nodeId": 19,
+                                "name": "Vegetables",
+                                "docCount": 0,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "nodeId": 9,
+                        "name": "Smart Wearables",
+                        "docCount": 0,
+                        "children": [
+                            {
+                                "nodeId": 10,
+                                "name": "Smartwatches",
+                                "docCount": 0,
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            "links": {
+                "self": "https://glue.de.69-new.demo-spryker.com/catalog-search"
+            },
+            "relationships": {
+                "abstract-products": {
+                    "data": [
+                        {
+                            "type": "abstract-products",
+                            "id": "001"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "links": {
+        "self": "https://glue.de.69-new.demo-spryker.com/access-tokens?q=001&include=abstract-products,concrete-products,product-offers",
+        "last": "https://glue.de.69-new.demo-spryker.com/access-tokens?q=001&include=abstract-products,concrete-products,product-offers&page[offset]=0&page[limit]=12",
+        "first": "https://glue.de.69-new.demo-spryker.com/access-tokens?q=001&include=abstract-products,concrete-products,product-offers&page[offset]=0&page[limit]=12"
+    },
+    "included": [
+        {
+            "type": "product-offers",
+            "id": "offer8",
+            "attributes": {
+                "merchantSku": null,
+                "merchantReference": "MER000002",
+                "isDefault": true
+            },
+            "links": {
+                "self": "https://glue.de.69-new.demo-spryker.com/product-offers/offer8"
+            }
+        },
+        {
+            "type": "product-offers",
+            "id": "offer49",
+            "attributes": {
+                "merchantSku": null,
+                "merchantReference": "MER000005",
+                "isDefault": false
+            },
+            "links": {
+                "self": "https://glue.de.69-new.demo-spryker.com/product-offers/offer49"
+            }
+        },
+        {
+            "type": "concrete-products",
+            "id": "001_25904006",
+            "attributes": {
+                "sku": "001_25904006",
+                "isDiscontinued": false,
+                "discontinuedNote": null,
+                "averageRating": null,
+                "reviewCount": 0,
+                "productAbstractSku": "001",
+                "name": "Canon IXUS 160",
+                "description": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results while framing using Live View Control and enjoy sharing them with friends using the 6.8 cm (2.7”) LCD screen. Combine with a Canon Connect Station and you can easily share your photos and movies with the world on social media sites and online albums like irista, plus enjoy watching them with family and friends on an HD TV. Effortlessly enjoy great shots of friends thanks to Face Detection technology. It detects multiple faces in a single frame making sure they remain in focus and with optimum brightness. Face Detection also ensures natural skin tones even in unusual lighting conditions.",
+                "attributes": {
+                    "megapixel": "20 MP",
+                    "flash_range_tele": "4.2-4.9 ft",
+                    "memory_slots": "1",
+                    "usb_version": "2",
+                    "brand": "Canon",
+                    "color": "Red"
+                },
+                "superAttributesDefinition": [
+                    "color"
+                ],
+                "metaTitle": "Canon IXUS 160",
+                "metaKeywords": "Canon,Entertainment Electronics",
+                "metaDescription": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results whi",
+                "attributeNames": {
+                    "megapixel": "Megapixel",
+                    "flash_range_tele": "Flash range (tele)",
+                    "memory_slots": "Memory slots",
+                    "usb_version": "USB version",
+                    "brand": "Brand",
+                    "color": "Color"
+                },
+                "productConfigurationInstance": null
+            },
+            "links": {
+                "self": "https://glue.de.69-new.demo-spryker.com/concrete-products/001_25904006"
+            },
+            "relationships": {
+                "product-offers": {
+                    "data": [
+                        {
+                            "type": "product-offers",
+                            "id": "offer8"
+                        },
+                        {
+                            "type": "product-offers",
+                            "id": "offer49"
+                        }
+                    ]
+                },
+                "abstract-products": {
+                    "data": [
+                        {
+                            "type": "abstract-products",
+                            "id": "001"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "abstract-products",
+            "id": "001",
+            "attributes": {
+                "sku": "001",
+                "merchantReference": "MER000001",
+                "averageRating": null,
+                "reviewCount": 0,
+                "name": "Canon IXUS 160",
+                "description": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results while framing using Live View Control and enjoy sharing them with friends using the 6.8 cm (2.7”) LCD screen. Combine with a Canon Connect Station and you can easily share your photos and movies with the world on social media sites and online albums like irista, plus enjoy watching them with family and friends on an HD TV. Effortlessly enjoy great shots of friends thanks to Face Detection technology. It detects multiple faces in a single frame making sure they remain in focus and with optimum brightness. Face Detection also ensures natural skin tones even in unusual lighting conditions.",
+                "attributes": {
+                    "megapixel": "20 MP",
+                    "flash_range_tele": "4.2-4.9 ft",
+                    "memory_slots": "1",
+                    "usb_version": "2",
+                    "brand": "Canon",
+                    "color": "Red"
+                },
+                "superAttributesDefinition": [
+                    "color"
+                ],
+                "superAttributes": {
+                    "color": [
+                        "Red"
+                    ]
+                },
+                "attributeMap": {
+                    "product_concrete_ids": [
+                        "001_25904006"
+                    ],
+                    "super_attributes": {
+                        "color": [
+                            "Red"
+                        ]
+                    },
+                    "attribute_variants": [],
+                    "attribute_variant_map": {
+                        "1": []
+                    }
+                },
+                "metaTitle": "Canon IXUS 160",
+                "metaKeywords": "Canon,Entertainment Electronics",
+                "metaDescription": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results whi",
+                "attributeNames": {
+                    "megapixel": "Megapixel",
+                    "flash_range_tele": "Flash range (tele)",
+                    "memory_slots": "Memory slots",
+                    "usb_version": "USB version",
+                    "brand": "Brand",
+                    "color": "Color"
+                },
+                "url": "/en/canon-ixus-160-1"
+            },
+            "links": {
+                "self": "https://glue.de.69-new.demo-spryker.com/abstract-products/001"
+            },
+            "relationships": {
+                "concrete-products": {
+                    "data": [
+                        {
+                            "type": "concrete-products",
+                            "id": "001_25904006"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
+```
 </details>
 
 <a name="sorting"></a>
@@ -6838,6 +7285,11 @@ To search by products, send the request:
 | docCount      | Integer  | Number of the found items in the category.    |
 | children      | Array    | Child categories of the category. The child categories have the same parameters.  |
 
+For details of the included resources, see:
+
+- [Retrieving abstract products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/abstract-products/retrieving-abstract-products.html)
+- [Retrieving concrete products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html)
+- [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html)
 
 ## Possible errors
 

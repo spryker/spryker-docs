@@ -12,7 +12,7 @@ related:
   - title: Arvato - Store Order 2.0
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/arvato/arvato-store-order.html
   - title: Arvato
-    link: docs/scos/user/technology-partners/page.version/payment-partners/arvato/arvato.html
+    link: docs/scos/user/technology-partners/page.version/payment-partners/arvato.html
 ---
 
 {% info_block errorBox %}

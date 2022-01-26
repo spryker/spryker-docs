@@ -4156,11 +4156,6 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-api.html
     - title: Arvato
       nested:
-        - title: Installing and configuring Arvato
-          url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/installing-and-configuring-arvato.html
-          include_versions:
-          - "202001.0"
-          - "202005.0"
         - title: v.1.0
           include_versions:
           - "201811.0"
@@ -4178,7 +4173,7 @@ entries:
             - "202001.0"
             - "202005.0"
           - title: Installing and configuring Arvato 1.0
-            url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/v.1.0/arvato-risk-solution-services-integration-1.0.html
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/v.1.0/installing-and-configuring-arvato-1.0.html
             include_versions:
             - "201811.0"
             - "201903.0"
@@ -4207,30 +4202,32 @@ entries:
             - "201903.0"
             - "201907.0"
           - title: Installing and configuring Arvato 2.0
-            url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/v.2.0/arvato-risk-solution-services-integration-2.0.html
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/v.2.0/installing-and-configuring-arvato-2.0.html
             include_versions:
             - "201811.0"
             - "201903.0"
             - "201907.0"
-        - title: Arvato - Installation and Configuration
-          url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/arvato-installation-and-configuration.html
+        - title: Installing and configuring Arvato
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/installing-and-configuring-arvato.html
           include_versions:
+          - "202001.0"
+          - "202005.0"
           - "202009.0"
           - "202108.0"
         - title: Billpay
           nested:
             - title: Billpay - Switching invoice payments to a preauthorize mode
-              url: /docs/scos/user/technology-partners/payment-partners/billpay/billpay-switching-invoice-payments-to-a-preauthorize-mode.html
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/billpay/billpay-switching-invoice-payments-to-a-preauthorize-mode.html
             - title: Integrating Billpay
-              url: /docs/scos/user/technology-partners/payment-partners/billpay/integrating-billpay.html
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/billpay/integrating-billpay.html
         - title: Braintree
           nested:
             - title: Braintree - Performing requests
-              url: /docs/scos/user/technology-partners/payment-partners/braintree/braintree-performing-requests.html
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/braintree-performing-requests.html
             - title: Braintree - Workflow
-              url: /docs/scos/user/technology-partners/payment-partners/braintree/braintree-workflow.html
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/braintree-workflow.html
             - title: Installing and configuring Braintree
-              url: /docs/scos/user/technology-partners/payment-partners/braintree/installing-and-configuring-braintree.html
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/installing-and-configuring-braintree.html
             - title: Braintree guides for the Legacy Demoshop
               include_versions:
               - "201811.0"
@@ -4239,21 +4236,21 @@ entries:
               - "202001.0"
               nested:
                 - title: Configuration for the Legacy Demoshop
-                  url: /docs/scos/user/technology-partners/payment-partners/braintree/legacy-demoshop-integration/braintree-configuration-for-the-legacy-demoshop.html
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/legacy-demoshop-integration/braintree-configuration-for-the-legacy-demoshop.html
                   include_versions:
                   - "201811.0"
                   - "201903.0"
                   - "201907.0"
                   - "202001.0"
                 - title: Performing Requests for the Legacy Demoshop
-                  url: /docs/scos/user/technology-partners/payment-partners/braintree/legacy-demoshop-integration/braintree-performing-requests-for-the-legacy-demoshop.html
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/legacy-demoshop-integration/braintree-performing-requests-for-the-legacy-demoshop.html
                   include_versions:
                   - "201811.0"
                   - "201903.0"
                   - "201907.0"
                   - "202001.0"
                 - title: Braintree - Workflow for Legacy Demoshop
-                  url: /docs/scos/user/technology-partners/payment-partners/braintree/legacy-demoshop-integration/braintree-workflow-for-legacy-demoshop.html
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/legacy-demoshop-integration/braintree-workflow-for-legacy-demoshop.html
                   include_versions:
                   - "201811.0"
                   - "201903.0"

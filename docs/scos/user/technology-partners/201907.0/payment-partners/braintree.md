@@ -10,7 +10,7 @@ redirect_from:
   - /v3/docs/en/braintree
 related:
   - title: Braintree - Configuration for SCOS
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-installation-and-configuration.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/installing-and-configuring-braintree.html
   - title: Braintree - Workflow for SCOS
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-workflow.html
   - title: Braintree - Performing Requests for the Legacy Demoshop

@@ -26,7 +26,7 @@ To start feature integration, integrate the required features and Glue APIs:
 Install the required modules:
 
 ```bash
-composer require spryker/quote-requests-rest-api:"^0.1.4" spryker/quote-request-agents-rest-api:"^0.1.4" --update-with-dependencies
+composer require spryker/quote-requests-rest-api:"^0.1.4" spryker/quote-request-agents-rest-api:"^0.3.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

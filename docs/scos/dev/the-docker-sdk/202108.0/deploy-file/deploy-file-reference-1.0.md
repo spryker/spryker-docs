@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/deploy-file-reference-10
   - /docs/deploy-file-reference-10
   - /docs/en/deploy-file-reference-10
+  - /docs/scos/dev/the-docker-sdk/202108.0/deploy-file-reference-1.0.html  
 related:
   - title: Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
@@ -136,13 +137,27 @@ environment: 'docker'
 
 ### imports:
 
-Defines additional deploy files to be included into a build. The files must exist on a [project or base layer](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html).
+Defines one of the following:
 
+* Imports of additional deploy files to be included into a build. This type of import is more flexible and allows including the same template with different parameters into a build.
+```yaml
+imports:
+    dev_import:
+```     
+
+
+* Additional deploy files to be included into a build.
 ```yaml
 version: 1.0
 imports:
     deploy.base.template.yml:
 ```
+
+
+
+The files must exist on a [project or base layer](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html).
+
+
 
 {% info_block infoBox "Merged deploy files" %}
 
@@ -150,6 +165,11 @@ If you include a deploy file, the included deploy file is merged with the origin
 
 {% endinfo_block %}
 
+
+***
+
+
+###
 
 ***
 

@@ -34,7 +34,7 @@ There is currently an issue when using giftcards with CrefoPay. Our team is deve
 This article provides step-by-step instructions on integrating the CrefoPay system into your project.
 
 ## Prerequisites
-Prior to integrating CrefoPay into your project, make sure you [installed and configured the CrefoPay module](/docs/scos/user/technology-partners/202009.0/payment-partners/crefopay/installing-and-configuring-crefopay.html).
+Prior to integrating CrefoPay into your project, make sure you [installed and configured the CrefoPay module](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/installing-and-configuring-crefopay.html).
 
 ## Integrating CrefoPay into Your Project
 To integrate CrefoPay, do the following:

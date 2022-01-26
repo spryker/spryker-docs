@@ -1,31 +1,31 @@
 ---
-title: Managing guest cart items
-description: Retrieve details about guest cart items and learn what else you can do with the resource.
+title: Managing items in carts of registered users
+description: Retrieve details about the items of the registered users' carts, and learn what else you can do with the resource.
 last_updated: Jun 29, 2021
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-guest-cart-items
-originalArticleId: 55c07d5d-006b-4f81-99b1-92c6a8124688
+originalLink: https://documentation.spryker.com/2021080/docs/managing-items-in-carts-of-registered-users
+originalArticleId: 8dbe18a1-adef-48a8-9ea0-b496f13c5630
 redirect_from:
-  - /2021080/docs/managing-guest-cart-items
-  - /2021080/docs/en/managing-guest-cart-items
-  - /docs/managing-guest-cart-items
-  - /docs/en/managing-guest-cart-items
+  - /2021080/docs/managing-items-in-carts-of-registered-users
+  - /2021080/docs/en/managing-items-in-carts-of-registered-users
+  - /docs/managing-items-in-carts-of-registered-users
+  - /docs/en/managing-items-in-carts-of-registered-users
 related:
-  - title: Managing guest carts
-    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-carts.html
-  - title: Managing gift cards of guest users
-    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html
+  - title: Managing carts of registered users
+    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
+  - title: Managing gift cards of registered users
+    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html
 ---
 
-This endpoint allows you to manage guest cart items.
+This endpoint allows managing items in carts of registered users by adding, changing, and deleting them.
 
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)
 * [Glue API: Measurement Units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html)
+* [Glue API: Product Options feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
 * [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
-* [Glue API: Product options feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
 * [Glue API: Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-bundles-feature-integration.html)
 * [Glue API: Product Bundle + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-bundle-cart-feature-integration.html)
 * [Glue API: Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-feature-integration.html)
@@ -33,114 +33,62 @@ For detailed information on the modules that provide the API functionality and r
 * [Glue API: Configurable Bundle + Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-product-feature-integration.html)
 
 
-## Add items to a guest cart
 
-To add items to a guest cart, send the request:
+## Add an item to a registered user's cart
+
+To add items to a cart, send the request:
 
 ***
-`POST` **/guest-cart-items**
+`POST` **carts/*{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*/items**
 ***
-
-{% info_block infoBox "Creating a guest cart" %}
-
-* If a guest cart does not exist for the current user, and you send a request to add items, the guest cart is created automatically. Otherwise, the items are added to the existing guest cart.
-* Guest users have one cart by default. You can optionally specify its ID by using the following endpoint. The information in this section is valid for both endpoints.
-
-`POST` **/guest-carts/*{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*/guest-cart-items**
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart. To get it, [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
-
-{% endinfo_block %}
+| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html)) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-carts) to get it. |
 
 ### Request
 
-| HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 |&check; | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
-| QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
+| Query parameter | Description | Possible value |
 | --- | --- | --- |
-| include | Adds resource relationships to the request. | <ul><li>guest-cart-items</li><li>concrete-products</li><li>sales-units</li><li>cart-rules</li><li>vouchers</li><li>product-options</li><li>sales-units</li><li>product-measurement-units</li><li>bundle-items</li><li>bundled-items</li><li>abstract-products</li></ul> |
+| include | Adds resource relationships to the request. | <ul><li>items</li><li>product-measurement-units</li><li>sales-units</li><li>cart-rules</li><li>vouchers</li><li>concrete-products</li><li>product-options</li><li>bundle-items</li><li>bundled-items</li><li>abstract-products</li></ul>|
 {% info_block infoBox "Included resources" %}
 
-* To retrieve product options, include `guest-cart-items`, `concrete-products`, and `product-options`.
-* To retrieve product measurement units, include `sales-units` and `product-measurement-units`.
+To retrieve all the product options of the item in a cart, include `concrete-products` and `product-options`.
 
 {% endinfo_block %}
 
 <details>
 <summary markdown='span'>Request sample</summary>
 
-`POST https://glue.mysprykershop.com/guest-cart-items`
-
+`POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items`
 ```json
 {
     "data": {
-        "type": "guest-cart-items",
+        "type": "items",
         "attributes": {
-            "sku": "022_21994751",
-            "quantity": 1
+            "sku": "066_23294028",
+            "quantity": "3"
         }
     }
 }
 ```
+
 </details>
 
-<details>
-<summary markdown='span'>Request sample: adding a promotional item with the cart-rules relationship</summary>
-
-{% info_block infoBox "Cart rules" %}
-
-
-To add the promotional product to cart, make sure that the cart fulfills the cart rules for the promotional item.
-
-{% endinfo_block %}
-
-`POST https://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/guest-cart-items?include=cart-rules`
-
-```json
-{
-    "data": {
-        "type": "guest-cart-items",
-        "attributes": {
-            "sku": "112_306918001",
-            "quantity": "1",
-            "idPromotionalItem": "bfc600e1-5bf1-50eb-a9f5-a37deb796f8a"
-        }
-    }
-}
-```
-</details>
-
-<details>
-<summary markdown='span'>Request sample: adding a gift card</summary>
-
-`POST https://glue.mysprykershop.com/guest-cart-items`
-
-```json
-{
-    "data": {
-        "type": "guest-cart-items",
-        "attributes": {
-            "sku": "666_126",
-            "quantity": "1"
-        }
-    }
-}
-```
-</details>
 
 <details>
 <summary markdown='span'>Request sample with product measurement units and sales units</summary>
 
-`POST https://glue.mysprykershop.com/guest-cart-items?include=sales-units`
+`POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items?include=sales-units,product-measurement-units`
 
 ```json
 {
     "data": {
-        "type": "guest-cart-items",
+        "type": "items",
         "attributes": {
             "sku": "cable-vga-1-2",
             "quantity": 3,
@@ -157,15 +105,15 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 <details>
 <summary markdown='span'>Request sample with cart rules</summary>
 
-`POST https://glue.mysprykershop.com/guest-cart-items?include=cart-rules`
+`POST http://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items?include=cart-rules`
 
 ```json
 {
     "data": {
-        "type": "guest-cart-items",
+        "type": "items",
         "attributes": {
             "sku": "077_24584210",
-            "quantity": 10
+            "quantity": "10"
         }
     }
 }
@@ -176,15 +124,15 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 <details>
 <summary markdown='span'>Request sample with vouchers</summary>
 
-`POST https://glue.mysprykershop.com/guest-cart-items?include=cart-rules`
+`POST http://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items?include=vouchers`
 
 ```json
 {
     "data": {
-        "type": "guest-cart-items",
+        "type": "items",
         "attributes": {
-            "sku": "057_32007641",
-            "quantity": 1
+            "sku": "066_23294028",
+            "quantity": "1"
         }
     }
 }
@@ -192,21 +140,44 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 
 </details>
 
-
-
-
 <details>
-<summary markdown='span'>Request sample with concrete products and product options</summary>
+<summary markdown='span'>Request sample with a promotional item and cart rules</summary>
 
-`POST https://glue.mysprykershop.com/guest-cart-items?include=guest-cart-items,concrete-products,product-options`
+{% info_block infoBox "Cart rules" %}
+
+
+To add the promotional product to the cart, make sure that the cart fulfills the cart rules for the promotional item.
+
+{% endinfo_block %}
+
+`POST https://glue.myspsrykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/items?include=cart-rules`
 
 ```json
 {
     "data": {
-        "type": "guest-cart-items",
+        "type": "items",
         "attributes": {
-            "sku": "181_31995510",
-            "quantity": "4",
+            "sku": "112_306918001",
+            "quantity": "1",
+            "idPromotionalItem": "bfc600e1-5bf1-50eb-a9f5-a37deb796f8a"
+        }
+    }
+}
+```
+</details>
+
+<details>
+<summary markdown='span'>Request sample with concrete products and product options</summary>
+
+`POST http://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398/items?include=concrete-products,product-options`
+
+```json
+{
+    "data": {
+        "type": "items",
+        "attributes": {
+        	"sku": "181_31995510",
+        	"quantity": 6,
             "productOptions": [
             	{
             		"sku": "OP_gift_wrapping"
@@ -218,19 +189,18 @@ To add the promotional product to cart, make sure that the cart fulfills the car
         }
     }
 }
-```    
+```
 </details>
 
 <details>
 <summary markdown='span'>Request sample with bundle items</summary>
 
-
-`POST https://glue.mysprykershop.com/guest-carts/bd873e3f-4670-523d-b5db-3492d2c0bee3/guest-cart-items?include=bundle-items` - Add items to the guest cart with the `bd873e3f-4670-523d-b5db-3492d2c0bee3` ID. Include information about the product bundles in the guest cart into the response.
+`POST https://glue.mysprykershop.com/carts/bd873e3f-4670-523d-b5db-3492d2c0bee3/items?include=bundle-items` - retrieve the cart with the `bd873e3f-4670-523d-b5db-3492d2c0bee3` ID and the product bundles inside it.
 
 ```json
 {
     "data": {
-        "type": "guest-cart-items",
+        "type": "items",
         "attributes": {
             "sku": "214_123",
             "quantity": 1
@@ -244,13 +214,12 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 <details>
 <summary markdown='span'>Request sample with bundle items and bundled items</summary>
 
-
-`POST https://glue.mysprykershop.com/guest-carts/bd873e3f-4670-523d-b5db-3492d2c0bee3/guest-cart-items?include=bundle-items,bundled-items` - Add items to the guest cart with the `bd873e3f-4670-523d-b5db-3492d2c0bee3` ID. Include information about the following into the response: product bundle items in the cart and the products belonging to them.
+`POST https://glue.mysprykershop.com/carts/bd873e3f-4670-523d-b5db-3492d2c0bee3/items?include=bundle-items,bundled-items` - retrieve the cart with the `bd873e3f-4670-523d-b5db-3492d2c0bee3` ID, the product bundles inside it, and the products of the product bundles.
 
 ```json
 {
     "data": {
-        "type": "guest-cart-items",
+        "type": "items",
         "attributes": {
             "sku": "214_123",
             "quantity": 1
@@ -264,12 +233,12 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 <details>
 <summary markdown='span'>Request sample with bundle items, bundled items, concrete products, and abstract products</summary>
 
-`POST https://glue.mysprykershop.com/guest-carts/bd873e3f-4670-523d-b5db-3492d2c0bee3/guest-cart-items?include=bundle-items,bundled-items,concrete-products,abstract-products` - Add items to the guest cart with the `bd873e3f-4670-523d-b5db-3492d2c0bee3` ID. Include information about the following into the response: product bundle items in the cart, the products belonging to them, respective abstract and concrete products.
+`POST https://glue.mysprykershop.com/carts/bd873e3f-4670-523d-b5db-3492d2c0bee3/items?include=bundle-items,bundled-items,concrete-products,abstract-products` - retrieve the cart with the `bd873e3f-4670-523d-b5db-3492d2c0bee3` ID. Retrieve the product bundles inside it, the products of the product bundles, and respective abstract and concrete products.
 
 ```json
 {
     "data": {
-        "type": "guest-cart-items",
+        "type": "items",
         "attributes": {
             "sku": "214_123",
             "quantity": 1
@@ -280,20 +249,60 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 
 </details>
 
+<details>
+<summary markdown='span'>Request sample with the unfulfilled hard and soft minimum thresholds</summary>
+
+`POST https://glue.mysprykershop.com/carts/308b51f4-2491-5bce-8cf2-436273b44f9b/items`
+
+```json
+{
+    "data": {
+        "type": "items",
+        "attributes": {
+            "sku": "118_29804739",
+            "quantity": 1
+        }
+    }
+}
+```
+
+</details>
+
+<details>
+<summary markdown='span'>Request sample with the unfulfilled hard maximum threshold</summary>
+
+`POST https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/items`
+
+
+```json
+{
+    "data": {
+        "type": "items",
+        "attributes": {
+            "sku": "136_24425591",
+            "quantity": 1
+        }
+    }
+}
+```
+
+</details>
+
+
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| sku | String | &check; | Specifies the SKU part number of the item to place on the new guest cart. To use promotions, specify the SKU of one of a product being promoted. Concrete product SKU required. |
-| quantity | Integer | &check; | Specifies the number of items to place on the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
-| idPromotionalItem | String |  | Promotional item ID. You need to specify the ID to apply the promotion benefits. |
+| sku | String | &check; | Specifies the SKU of the concrete product to add to the cart. |
+| quantity | String | &check; | Specifies the number of items to place on the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
 | salesUnit | Object |  | List of attributes defining the sales unit to be used for item amount calculation. |
 | salesUnit.id | Integer |  | Unique identifier of the sales units to calculate the item amount in. |
-| salesUnit.amount | Decimal |  | Amount of the product in the defined sales units. |    
+| salesUnit.amount | Integer |  | Amount of the product in the defined sales units.  |
+| idPromotionalItem | String |  | Promotional item ID. Specify the ID to apply the promotion benefits.  |
 | productOptions | Array |  | List of attributes defining the product option to add to the cart. |
 | productOptions.sku | String |  | Unique identifier of the product option to add to the cart.  |
 
 {% info_block infoBox "Conversion" %}
 
-When defining product amount in sales units, make sure that the correlation between amount and quantity corresponds to the conversion of the defined sales unit. See [Measurement Units Feature Overview](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) to learn more.
+When defining product amount in sales units, make sure that the correlation between amount and quantity corresponds to the conversion of the defined sales unit. See [Measurement Units feature overview](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) to learn more.
 
 {% endinfo_block %}
 
@@ -311,112 +320,27 @@ It is the responsibility of the API Client to track whether the selected items a
 ```json
 {
     "data": {
-        "type": "guest-carts",
-        "id": "380e4a19-6faa-5053-89ff-81a1b5a3dd8a",
+        "type": "carts",
+        "id": "61ab15e9-e24a-5dec-a1ef-fc333bd88b0a",
         "attributes": {
             "priceMode": "GROSS_MODE",
             "currency": "EUR",
             "store": "DE",
-            "name": "Shopping cart",
+            "name": "Christmas presents 1",
             "isDefault": true,
             "totals": {
                 "expenseTotal": 0,
-                "discountTotal": 2600,
-                "taxTotal": 3736,
-                "subtotal": 26000,
-                "grandTotal": 23400
+                "discountTotal": 0,
+                "taxTotal": 18850,
+                "subtotal": 118059,
+                "grandTotal": 118059,
+                "priceToPay": 118059
             },
-            "discounts": [
-                {
-                    "displayName": "10% Discount for all orders above",
-                    "amount": 2600,
-                    "code": null
-                }
-            ]
+            "discounts": [],
+            "thresholds": []
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/guest-carts/380e4a19-6faa-5053-89ff-81a1b5a3dd8a"
-        }
-    },
-    "included": [
-        {
-            "type": "guest-cart-items",
-            "id": "022_21994751",
-            "attributes": {
-                "sku": "022_21994751",
-                "quantity": 1,
-                "groupKey": "022_21994751",
-                "abstractSku": "022",
-                "amount": null,
-                "calculations": {
-                    "unitPrice": 26000,
-                    "sumPrice": 26000,
-                    "taxRate": 19,
-                    "unitNetPrice": 0,
-                    "sumNetPrice": 0,
-                    "unitGrossPrice": 26000,
-                    "sumGrossPrice": 26000,
-                    "unitTaxAmountFullAggregation": 3736,
-                    "sumTaxAmountFullAggregation": 3736,
-                    "sumSubtotalAggregation": 26000,
-                    "unitSubtotalAggregation": 26000,
-                    "unitProductOptionPriceAggregation": 0,
-                    "sumProductOptionPriceAggregation": 0,
-                    "unitDiscountAmountAggregation": 2600,
-                    "sumDiscountAmountAggregation": 2600,
-                    "unitDiscountAmountFullAggregation": 2600,
-                    "sumDiscountAmountFullAggregation": 2600,
-                    "unitPriceToPayAggregation": 23400,
-                    "sumPriceToPayAggregation": 23400
-                },
-                "salesUnit": null,
-                "selectedProductOptions": []
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/guest-carts/380e4a19-6faa-5053-89ff-81a1b5a3dd8a/guest-cart-items/022_21994751"
-            }
-        }
-    ]
-}
-```
-</details>
-
-<details>
-<summary markdown='span'>Response sample: adding a promotional item without the cart-rules relationship</summary>
-
-```json
-{
-    "data": {
-        "type": "guest-carts",
-        "id": "1ce91011-8d60-59ef-9fe0-4493ef3628b2",
-        "attributes": {
-            "priceMode": "GROSS_MODE",
-            "currency": "EUR",
-            "store": "DE",
-            "name": "My Cart",
-            "isDefault": true,
-            "totals": {
-                "expenseTotal": 0,
-                "discountTotal": 13192,
-                "taxTotal": 15107,
-                "subtotal": 113207,
-                "grandTotal": 100015
-            },
-            "discounts": [
-                {
-                    "displayName": "For every purchase above certain value depending on the currency and net/gross price. you get this promotional product for free",
-                    "amount": 2079,
-                    "code": null
-                },
-                {
-                    "displayName": "10% Discount for all orders above",
-                    "amount": 11113,
-                    "code": null
-                }
-            ]
-        },
-        "links": {
-            "self": "https://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2"
+            "self": "https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a"
         }
     }
 }
@@ -425,12 +349,400 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-<summary markdown='span'>Response sample: adding a promotional item with the cart-rules relationship</summary>
+<summary markdown='span'>Response sample with items, product measurement units, and sales units</summary>
 
 ```json
 {
     "data": {
-        "type": "guest-carts",
+        "type": "carts",
+        "id": "482bdbd6-137f-5b58-bd1c-37f3fa735a16",
+        "attributes": {
+            "priceMode": "GROSS_MODE",
+            "currency": "EUR",
+            "store": "DE",
+            "name": "Black Friday Conf Bundle",
+            "isDefault": true,
+            "totals": {
+                "expenseTotal": 0,
+                "discountTotal": 3425,
+                "taxTotal": 4921,
+                "subtotal": 34247,
+                "grandTotal": 30822
+            },
+            "discounts": [
+                {
+                    "displayName": "10% Discount for all orders above",
+                    "amount": 3425,
+                    "code": null
+                }
+            ],
+            "thresholds": []
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/carts/482bdbd6-137f-5b58-bd1c-37f3fa735a16"
+        }
+    },
+    "included": [
+        {
+            "type": "items",
+            "id": "035_17360369",
+            "attributes": {
+                "sku": "035_17360369",
+                "quantity": "1",
+                "groupKey": "035_17360369",
+                "abstractSku": "035",
+                "amount": null,
+                "calculations": {
+                    "unitPrice": 29747,
+                    "sumPrice": 29747,
+                    "taxRate": 19,
+                    "unitNetPrice": 0,
+                    "sumNetPrice": 0,
+                    "unitGrossPrice": 29747,
+                    "sumGrossPrice": 29747,
+                    "unitTaxAmountFullAggregation": 4275,
+                    "sumTaxAmountFullAggregation": 4275,
+                    "sumSubtotalAggregation": 29747,
+                    "unitSubtotalAggregation": 29747,
+                    "unitProductOptionPriceAggregation": 0,
+                    "sumProductOptionPriceAggregation": 0,
+                    "unitDiscountAmountAggregation": 2975,
+                    "sumDiscountAmountAggregation": 2975,
+                    "unitDiscountAmountFullAggregation": 2975,
+                    "sumDiscountAmountFullAggregation": 2975,
+                    "unitPriceToPayAggregation": 26772,
+                    "sumPriceToPayAggregation": 26772
+                },
+                "salesUnit": null,
+                "selectedProductOptions": []
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/carts/482bdbd6-137f-5b58-bd1c-37f3fa735a16/items/035_17360369"
+            }
+        },
+        {
+            "type": "sales-units",
+            "id": "33",
+            "attributes": {
+                "conversion": 1,
+                "precision": 100,
+                "isDisplayed": true,
+                "isDefault": true,
+                "productMeasurementUnitCode": "METR"
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-2/sales-units/33"
+            }
+        },
+        {
+            "type": "items",
+            "id": "cable-vga-1-2_quantity_sales_unit_id_33_amount_1.5_sales_unit_id_33",
+            "attributes": {
+                "sku": "cable-vga-1-2",
+                "quantity": 3,
+                "groupKey": "cable-vga-1-2_quantity_sales_unit_id_33_amount_1.5_sales_unit_id_33",
+                "abstractSku": "cable-vga-1",
+                "amount": "4.5",
+                "calculations": {
+                    "unitPrice": 1500,
+                    "sumPrice": 4500,
+                    "taxRate": 19,
+                    "unitNetPrice": 0,
+                    "sumNetPrice": 0,
+                    "unitGrossPrice": 1500,
+                    "sumGrossPrice": 4500,
+                    "unitTaxAmountFullAggregation": 215,
+                    "sumTaxAmountFullAggregation": 646,
+                    "sumSubtotalAggregation": 4500,
+                    "unitSubtotalAggregation": 1500,
+                    "unitProductOptionPriceAggregation": 0,
+                    "sumProductOptionPriceAggregation": 0,
+                    "unitDiscountAmountAggregation": 150,
+                    "sumDiscountAmountAggregation": 450,
+                    "unitDiscountAmountFullAggregation": 150,
+                    "sumDiscountAmountFullAggregation": 450,
+                    "unitPriceToPayAggregation": 1350,
+                    "sumPriceToPayAggregation": 4050
+                },
+                "salesUnit": {
+                    "id": 33,
+                    "amount": "4.5"
+                },
+                "selectedProductOptions": []
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/carts/482bdbd6-137f-5b58-bd1c-37f3fa735a16/items/cable-vga-1-2_quantity_sales_unit_id_33_amount_1.5_sales_unit_id_33"
+            },
+            "relationships": {
+                "sales-units": {
+                    "data": [
+                        {
+                            "type": "sales-units",
+                            "id": "33"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
+```    
+</details>
+
+<details>
+<summary markdown='span'>Response sample with cart rules</summary>
+
+```json
+{
+    "data": {
+        "type": "carts",
+        "id": "976af32f-80f6-5f69-878f-4ea549ee0830",
+        "attributes": {
+            "priceMode": "GROSS_MODE",
+            "currency": "EUR",
+            "store": "DE",
+            "totals": {
+                "expenseTotal": 0,
+                "discountTotal": 14554,
+                "taxTotal": 20914,
+                "subtotal": 145540,
+                "grandTotal": 130986,
+                "priceToPay": 130986
+            },
+            "discounts": [
+                {
+                    "displayName": "10% Discount for all orders above",
+                    "amount": 14554,
+                    "code": null
+                }
+            ],
+            "thresholds": []
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830"
+        },
+        "relationships": {
+            "cart-rules": {
+                "data": [
+                    {
+                        "type": "cart-rules",
+                        "id": "1"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "cart-rules",
+            "id": "1",
+            "attributes": {
+                "amount": 14554,
+                "code": null,
+                "discountType": "cart_rule",
+                "displayName": "10% Discount for all orders above",
+                "isExclusive": false,
+                "expirationDateTime": "2021-02-27 00:00:00.000000",
+                "discountPromotionAbstractSku": null,
+                "discountPromotionQuantity": null
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/cart-rules/1"
+            }
+        },
+        {
+            "type": "items",
+            "id": "077_24584210",
+            "attributes": {
+                "sku": "077_24584210",
+                "quantity": "10",
+                "groupKey": "077_24584210",
+                "abstractSku": "077",
+                "amount": null,
+                "calculations": {
+                    "unitPrice": 14554,
+                    "sumPrice": 145540,
+                    "taxRate": 19,
+                    "unitNetPrice": 0,
+                    "sumNetPrice": 0,
+                    "unitGrossPrice": 14554,
+                    "sumGrossPrice": 145540,
+                    "unitTaxAmountFullAggregation": 2091,
+                    "sumTaxAmountFullAggregation": 20914,
+                    "sumSubtotalAggregation": 145540,
+                    "unitSubtotalAggregation": 14554,
+                    "unitProductOptionPriceAggregation": 0,
+                    "sumProductOptionPriceAggregation": 0,
+                    "unitDiscountAmountAggregation": 1455,
+                    "sumDiscountAmountAggregation": 14554,
+                    "unitDiscountAmountFullAggregation": 1455,
+                    "sumDiscountAmountFullAggregation": 14554,
+                    "unitPriceToPayAggregation": 13099,
+                    "sumPriceToPayAggregation": 130986
+                },
+                "selectedProductOptions": []
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items/077_24584210"
+            }
+        }
+    ]
+}
+```
+
+</details>
+
+<details>
+<summary markdown='span'>Response sample with vouchers</summary>
+
+```json
+{
+    "data": {
+        "type": "carts",
+        "id": "976af32f-80f6-5f69-878f-4ea549ee0830",
+        "attributes": {
+            "priceMode": "GROSS_MODE",
+            "currency": "EUR",
+            "store": "DE",
+            "totals": {
+                "expenseTotal": 0,
+                "discountTotal": 25766,
+                "taxTotal": 25407,
+                "subtotal": 184893,
+                "grandTotal": 159127,
+                "priceToPay": 159127
+            },
+            "discounts": [
+                {
+                    "displayName": "5% discount on all white products",
+                    "amount": 7277,
+                    "code": null
+                },
+                {
+                    "displayName": "10% Discount for all orders above",
+                    "amount": 18489,
+                    "code": null
+                }
+            ],
+            "thresholds": []
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830"
+        },
+        "relationships": {
+            "vouchers": {
+                "data": [
+                    {
+                        "type": "vouchers",
+                        "id": "sprykercu2d"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "vouchers",
+            "id": "sprykercu2d",
+            "attributes": {
+                "amount": 7277,
+                "code": "sprykercu2d",
+                "discountType": "voucher",
+                "displayName": "5% discount on all white products",
+                "isExclusive": false,
+                "expirationDateTime": "2021-02-27 00:00:00.000000",
+                "discountPromotionAbstractSku": null,
+                "discountPromotionQuantity": null
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/cart-codes/sprykercu2d"
+            }
+        },
+        {
+            "type": "items",
+            "id": "077_24584210",
+            "attributes": {
+                "sku": "077_24584210",
+                "quantity": "10",
+                "groupKey": "077_24584210",
+                "abstractSku": "077",
+                "amount": null,
+                "calculations": {
+                    "unitPrice": 14554,
+                    "sumPrice": 145540,
+                    "taxRate": 19,
+                    "unitNetPrice": 0,
+                    "sumNetPrice": 0,
+                    "unitGrossPrice": 14554,
+                    "sumGrossPrice": 145540,
+                    "unitTaxAmountFullAggregation": 1975,
+                    "sumTaxAmountFullAggregation": 19752,
+                    "sumSubtotalAggregation": 145540,
+                    "unitSubtotalAggregation": 14554,
+                    "unitProductOptionPriceAggregation": 0,
+                    "sumProductOptionPriceAggregation": 0,
+                    "unitDiscountAmountAggregation": 2183,
+                    "sumDiscountAmountAggregation": 21831,
+                    "unitDiscountAmountFullAggregation": 2183,
+                    "sumDiscountAmountFullAggregation": 21831,
+                    "unitPriceToPayAggregation": 12371,
+                    "sumPriceToPayAggregation": 123709
+                },
+                "selectedProductOptions": []
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items/077_24584210"
+            }
+        },
+        {
+            "type": "items",
+            "id": "066_23294028",
+            "attributes": {
+                "sku": "066_23294028",
+                "quantity": "1",
+                "groupKey": "066_23294028",
+                "abstractSku": "066",
+                "amount": null,
+                "calculations": {
+                    "unitPrice": 39353,
+                    "sumPrice": 39353,
+                    "taxRate": 19,
+                    "unitNetPrice": 0,
+                    "sumNetPrice": 0,
+                    "unitGrossPrice": 39353,
+                    "sumGrossPrice": 39353,
+                    "unitTaxAmountFullAggregation": 5655,
+                    "sumTaxAmountFullAggregation": 5655,
+                    "sumSubtotalAggregation": 39353,
+                    "unitSubtotalAggregation": 39353,
+                    "unitProductOptionPriceAggregation": 0,
+                    "sumProductOptionPriceAggregation": 0,
+                    "unitDiscountAmountAggregation": 3935,
+                    "sumDiscountAmountAggregation": 3935,
+                    "unitDiscountAmountFullAggregation": 3935,
+                    "sumDiscountAmountFullAggregation": 3935,
+                    "unitPriceToPayAggregation": 35418,
+                    "sumPriceToPayAggregation": 35418
+                },
+                "selectedProductOptions": []
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items/066_23294028"
+            }
+        }
+    ]
+}
+```
+
+</details>
+
+<details>
+<summary markdown='span'>Response sample: adding a promotional item without cart-rules relationship</summary>
+
+```json
+{
+    "data": {
+        "type": "carts",
         "id": "1ce91011-8d60-59ef-9fe0-4493ef3628b2",
         "attributes": {
             "priceMode": "GROSS_MODE",
@@ -456,10 +768,54 @@ It is the responsibility of the API Client to track whether the selected items a
                     "amount": 11113,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2"
+            "self": "https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2"
+        }
+    }
+}
+```    
+</details>
+
+<details>
+<summary markdown='span'>Response sample: adding a promotional item with cart-rules relationship</summary>
+
+```json
+{
+    "data": {
+        "type": "carts",
+        "id": "1ce91011-8d60-59ef-9fe0-4493ef3628b2",
+        "attributes": {
+            "priceMode": "GROSS_MODE",
+            "currency": "EUR",
+            "store": "DE",
+            "name": "My Cart",
+            "isDefault": true,
+            "totals": {
+                "expenseTotal": 0,
+                "discountTotal": 13192,
+                "taxTotal": 15107,
+                "subtotal": 113207,
+                "grandTotal": 100015
+            },
+            "discounts": [
+                {
+                    "displayName": "For every purchase above certain value depending on the currency and net/gross price. you get this promotional product for free",
+                    "amount": 2079,
+                    "code": null
+                },
+                {
+                    "displayName": "10% Discount for all orders above",
+                    "amount": 11113,
+                    "code": null
+                }
+            ],
+            "thresholds": []
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2"
         },
         "relationships": {
             "cart-rules": {
@@ -478,7 +834,7 @@ It is the responsibility of the API Client to track whether the selected items a
     },
     "included": [
         {
-            "type": "guest-cart-items",
+            "type": "items",
             "id": "134_29759322",
             "attributes": {
                 "sku": "134_29759322",
@@ -511,11 +867,11 @@ It is the responsibility of the API Client to track whether the selected items a
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/guest-cart-items/134_29759322"
+                "self": "https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/items/134_29759322"
             }
         },
         {
-            "type": "guest-cart-items",
+            "type": "items",
             "id": "118_29804739",
             "attributes": {
                 "sku": "118_29804739",
@@ -548,11 +904,11 @@ It is the responsibility of the API Client to track whether the selected items a
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/guest-cart-items/118_29804739"
+                "self": "https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/items/118_29804739"
             }
         },
         {
-            "type": "guest-cart-items",
+            "type": "items",
             "id": "139_24699831",
             "attributes": {
                 "sku": "139_24699831",
@@ -585,11 +941,11 @@ It is the responsibility of the API Client to track whether the selected items a
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/guest-cart-items/139_24699831"
+                "self": "https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/items/139_24699831"
             }
         },
         {
-            "type": "guest-cart-items",
+            "type": "items",
             "id": "136_24425591",
             "attributes": {
                 "sku": "136_24425591",
@@ -622,11 +978,11 @@ It is the responsibility of the API Client to track whether the selected items a
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/guest-cart-items/136_24425591"
+                "self": "https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/items/136_24425591"
             }
         },
         {
-            "type": "guest-cart-items",
+            "type": "items",
             "id": "112_306918001-promotion-1",
             "attributes": {
                 "sku": "112_306918001",
@@ -659,7 +1015,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/guest-cart-items/112_306918001-promotion-1"
+                "self": "https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/items/112_306918001-promotion-1"
             }
         },
         {
@@ -698,169 +1054,42 @@ It is the responsibility of the API Client to track whether the selected items a
         }
     ]
 }
-```
-</details>
-
-<details>
-<summary markdown='span'>Response sample: adding a gift cart</summary>
-
-```json
-{
-    "data": {
-        "type": "guest-carts",
-        "id": "1bbcf8c0-30dc-5d40-9da1-db5289f216fa",
-        "attributes": {
-            "priceMode": "GROSS_MODE",
-            "currency": "EUR",
-            "store": "DE",
-            "name": "Shopping cart",
-            "isDefault": true,
-            "totals": {
-                "expenseTotal": 0,
-                "discountTotal": 5345,
-                "taxTotal": 7680,
-                "subtotal": 56446,
-                "grandTotal": 51101,
-                "priceToPay": 51101
-            },
-            "discounts": [
-                {
-                    "displayName": "10% Discount for all orders above",
-                    "amount": 5345,
-                    "code": null
-                }
-            ]
-        },
-        "links": {
-            "self": "https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-5d40-9da1-db5289f216fa"
-        }
-    },
-    "included": [
-        {
-            "type": "guest-cart-items",
-            "id": "666_126",
-            "attributes": {
-                "sku": "666_126",
-                "quantity": "1",
-                "groupKey": "666_126",
-                "abstractSku": "666",
-                "amount": null,
-                "productOfferReference": null,
-                "merchantReference": null,
-                "calculations": {
-                    "unitPrice": 3000,
-                    "sumPrice": 3000,
-                    "taxRate": 0,
-                    "unitNetPrice": 0,
-                    "sumNetPrice": 0,
-                    "unitGrossPrice": 3000,
-                    "sumGrossPrice": 3000,
-                    "unitTaxAmountFullAggregation": 0,
-                    "sumTaxAmountFullAggregation": 0,
-                    "sumSubtotalAggregation": 3000,
-                    "unitSubtotalAggregation": 3000,
-                    "unitProductOptionPriceAggregation": 0,
-                    "sumProductOptionPriceAggregation": 0,
-                    "unitDiscountAmountAggregation": 0,
-                    "sumDiscountAmountAggregation": 0,
-                    "unitDiscountAmountFullAggregation": 0,
-                    "sumDiscountAmountFullAggregation": 0,
-                    "unitPriceToPayAggregation": 3000,
-                    "sumPriceToPayAggregation": 3000
-                },
-                "salesUnit": null,
-                "selectedProductOptions": []
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-5d40-9da1-db5289f216fa/guest-cart-items/666_126"
-            }
-        },
-        {
-            "type": "guest-cart-items",
-            "id": "023_21758366",
-            "attributes": {
-                "sku": "023_21758366",
-                "quantity": "2",
-                "groupKey": "023_21758366",
-                "abstractSku": "023",
-                "amount": null,
-                "productOfferReference": null,
-                "merchantReference": null,
-                "calculations": {
-                    "unitPrice": 26723,
-                    "sumPrice": 53446,
-                    "taxRate": 19,
-                    "unitNetPrice": 0,
-                    "sumNetPrice": 0,
-                    "unitGrossPrice": 26723,
-                    "sumGrossPrice": 53446,
-                    "unitTaxAmountFullAggregation": 3840,
-                    "sumTaxAmountFullAggregation": 7680,
-                    "sumSubtotalAggregation": 53446,
-                    "unitSubtotalAggregation": 26723,
-                    "unitProductOptionPriceAggregation": 0,
-                    "sumProductOptionPriceAggregation": 0,
-                    "unitDiscountAmountAggregation": 2673,
-                    "sumDiscountAmountAggregation": 5345,
-                    "unitDiscountAmountFullAggregation": 2673,
-                    "sumDiscountAmountFullAggregation": 5345,
-                    "unitPriceToPayAggregation": 24050,
-                    "sumPriceToPayAggregation": 48101
-                },
-                "salesUnit": null,
-                "selectedProductOptions": []
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-5d40-9da1-db5289f216fa/guest-cart-items/023_21758366"
-            }
-        }
-    ]
-}
-```
+```    
 </details>
 
 <details>
 <summary markdown='span'>Response sample with concrete products and product options</summary>
 
 ```json
-{
+    {
     "data": {
-        "type": "guest-carts",
-        "id": "7e42298e-9f15-5105-a192-96726a2b9da8",
+        "type": "carts",
+        "id": "8fc45eda-cddf-5fec-8291-e2e5f8014398",
         "attributes": {
             "priceMode": "GROSS_MODE",
             "currency": "EUR",
             "store": "DE",
-            "name": "Shopping cart",
+            "name": "Christmas presents",
             "isDefault": true,
             "totals": {
                 "expenseTotal": 0,
-                "discountTotal": 13301,
-                "taxTotal": 20711,
-                "subtotal": 143012,
-                "grandTotal": 129711,
-                "priceToPay": 129711
+                "discountTotal": 19952,
+                "taxTotal": 31065,
+                "subtotal": 214518,
+                "grandTotal": 194566,
+                "priceToPay": 194566
             },
             "discounts": [
                 {
                     "displayName": "10% Discount for all orders above",
-                    "amount": 13301,
+                    "amount": 19952,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/guest-carts/7e42298e-9f15-5105-a192-96726a2b9da8"
-        },
-        "relationships": {
-            "guest-cart-items": {
-                "data": [
-                    {
-                        "type": "guest-cart-items",
-                        "id": "181_31995510-3-5"
-                    }
-                ]
-            }
+            "self": "http://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398"
         }
     },
     "included": [
@@ -875,7 +1104,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_1_year_waranty"
+                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_1_year_waranty"
             }
         },
         {
@@ -889,7 +1118,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_2_year_waranty"
+                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_2_year_waranty"
             }
         },
         {
@@ -903,7 +1132,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_3_year_waranty"
+                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_3_year_waranty"
             }
         },
         {
@@ -917,7 +1146,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_insurance"
+                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_insurance"
             }
         },
         {
@@ -931,7 +1160,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_gift_wrapping"
+                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_gift_wrapping"
             }
         },
         {
@@ -943,7 +1172,6 @@ It is the responsibility of the API Client to track whether the selected items a
                 "discontinuedNote": null,
                 "averageRating": null,
                 "reviewCount": 0,
-                "productAbstractSku": "181",
                 "name": "Samsung Galaxy Tab S2 SM-T813",
                 "description": "Enjoy greater flexibility  ...than ever before with the Galaxy Tab S2. Remarkably slim and ultra-lightweight, use this device to take your e-books, photos, videos and work-related files with you wherever you need to go. The Galaxy Tab S2’s 4:3 ratio display is optimised for magazine reading and web use. Switch to Reading Mode to adjust screen brightness and change wallpaper - create an ideal eBook reading environment designed to reduce the strain on your eyes. Get greater security with convenient and accurate fingerprint functionality. Activate fingerprint lock by pressing the home button. Use fingerprint verification to restrict / allow access to your web browser, screen lock mode and your Samsung account.",
                 "attributes": {
@@ -972,7 +1200,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 }
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510"
+                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510"
             },
             "relationships": {
                 "product-options": {
@@ -1002,11 +1230,11 @@ It is the responsibility of the API Client to track whether the selected items a
             }
         },
         {
-            "type": "guest-cart-items",
+            "type": "items",
             "id": "181_31995510-3-5",
             "attributes": {
                 "sku": "181_31995510",
-                "quantity": "4",
+                "quantity": 6,
                 "groupKey": "181_31995510-3-5",
                 "abstractSku": "181",
                 "amount": null,
@@ -1014,45 +1242,43 @@ It is the responsibility of the API Client to track whether the selected items a
                 "merchantReference": null,
                 "calculations": {
                     "unitPrice": 33253,
-                    "sumPrice": 133012,
+                    "sumPrice": 199518,
                     "taxRate": 19,
                     "unitNetPrice": 0,
                     "sumNetPrice": 0,
                     "unitGrossPrice": 33253,
-                    "sumGrossPrice": 133012,
+                    "sumGrossPrice": 199518,
                     "unitTaxAmountFullAggregation": 5177,
-                    "sumTaxAmountFullAggregation": 20711,
-                    "sumSubtotalAggregation": 143012,
+                    "sumTaxAmountFullAggregation": 31065,
+                    "sumSubtotalAggregation": 214518,
                     "unitSubtotalAggregation": 35753,
                     "unitProductOptionPriceAggregation": 2500,
-                    "sumProductOptionPriceAggregation": 10000,
+                    "sumProductOptionPriceAggregation": 15000,
                     "unitDiscountAmountAggregation": 3325,
-                    "sumDiscountAmountAggregation": 13301,
+                    "sumDiscountAmountAggregation": 19952,
                     "unitDiscountAmountFullAggregation": 3325,
-                    "sumDiscountAmountFullAggregation": 13301,
+                    "sumDiscountAmountFullAggregation": 19952,
                     "unitPriceToPayAggregation": 32428,
-                    "sumPriceToPayAggregation": 129711
+                    "sumPriceToPayAggregation": 194566
                 },
-                "configuredBundle": null,
-                "configuredBundleItem": null,
                 "salesUnit": null,
                 "selectedProductOptions": [
                     {
                         "optionGroupName": "Gift wrapping",
                         "sku": "OP_gift_wrapping",
                         "optionName": "Gift wrapping",
-                        "price": 2000
+                        "price": 3000
                     },
                     {
                         "optionGroupName": "Warranty",
                         "sku": "OP_3_year_waranty",
                         "optionName": "Three (3) year limited warranty",
-                        "price": 8000
+                        "price": 12000
                     }
                 ]
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/guest-carts/7e42298e-9f15-5105-a192-96726a2b9da8/guest-cart-items/181_31995510-3-5"
+                "self": "http://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398/items/181_31995510-3-5"
             },
             "relationships": {
                 "concrete-products": {
@@ -1072,376 +1298,12 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product measurement units and sales units</summary>
-
-```json
-{
-    "data": {
-        "type": "guest-carts",
-        "id": "5b598c79-8024-50ec-b682-c0b219387294",
-        "attributes": {
-            "priceMode": "GROSS_MODE",
-            "currency": "EUR",
-            "store": "DE",
-            "name": "Shopping cart",
-            "isDefault": true,
-            "totals": {
-                "expenseTotal": 0,
-                "discountTotal": 0,
-                "taxTotal": 1437,
-                "subtotal": 9000,
-                "grandTotal": 9000
-            },
-            "discounts": []
-        },
-        "links": {
-            "self": "https://glue.mysprykershop.com/guest-carts/5b598c79-8024-50ec-b682-c0b219387294"
-        }
-    },
-    "included": [
-        {
-            "type": "product-measurement-units",
-            "id": "METR",
-            "attributes": {
-                "name": "Meter",
-                "defaultPrecision": 100
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/product-measurement-units/METR"
-            }
-        },
-        {
-            "type": "sales-units",
-            "id": "33",
-            "attributes": {
-                "conversion": 1,
-                "precision": 100,
-                "isDisplayed": true,
-                "isDefault": true,
-                "productMeasurementUnitCode": "METR"
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-2/sales-units/33"
-            },
-            "relationships": {
-                "product-measurement-units": {
-                    "data": [
-                        {
-                            "type": "product-measurement-units",
-                            "id": "METR"
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "type": "guest-cart-items",
-            "id": "cable-vga-1-2_quantity_sales_unit_id_33_amount_1.5_sales_unit_id_33",
-            "attributes": {
-                "sku": "cable-vga-1-2",
-                "quantity": 6,
-                "groupKey": "cable-vga-1-2_quantity_sales_unit_id_33_amount_1.5_sales_unit_id_33",
-                "abstractSku": "cable-vga-1",
-                "amount": "9.0",
-                "calculations": {
-                    "unitPrice": 1500,
-                    "sumPrice": 9000,
-                    "taxRate": 19,
-                    "unitNetPrice": 0,
-                    "sumNetPrice": 0,
-                    "unitGrossPrice": 1500,
-                    "sumGrossPrice": 9000,
-                    "unitTaxAmountFullAggregation": 239,
-                    "sumTaxAmountFullAggregation": 1437,
-                    "sumSubtotalAggregation": 9000,
-                    "unitSubtotalAggregation": 1500,
-                    "unitProductOptionPriceAggregation": 0,
-                    "sumProductOptionPriceAggregation": 0,
-                    "unitDiscountAmountAggregation": 0,
-                    "sumDiscountAmountAggregation": 0,
-                    "unitDiscountAmountFullAggregation": 0,
-                    "sumDiscountAmountFullAggregation": 0,
-                    "unitPriceToPayAggregation": 1500,
-                    "sumPriceToPayAggregation": 9000
-                },
-                "salesUnit": {
-                    "id": 33,
-                    "amount": "9.0"
-                },
-                "selectedProductOptions": []
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/guest-carts/5b598c79-8024-50ec-b682-c0b219387294/guest-cart-items/cable-vga-1-2_quantity_sales_unit_id_33_amount_1.5_sales_unit_id_33"
-            },
-            "relationships": {
-                "sales-units": {
-                    "data": [
-                        {
-                            "type": "sales-units",
-                            "id": "33"
-                        }
-                    ]
-                }
-            }
-        }
-    ]
-}
-```
-</details>
-
-<details>
-<summary markdown='span'>Response sample with cart rules</summary>
-
-```json
-{
-    "data": {
-        "type": "guest-carts",
-        "id": "c9310692-2ab0-5edc-bb41-fee6aa828d55",
-        "attributes": {
-            "priceMode": "GROSS_MODE",
-            "currency": "EUR",
-            "store": "DE",
-            "totals": {
-                "expenseTotal": 0,
-                "discountTotal": 14554,
-                "taxTotal": 20914,
-                "subtotal": 145540,
-                "grandTotal": 130986,
-                "priceToPay": 130986
-            },
-            "discounts": [
-                {
-                    "displayName": "10% Discount for all orders above",
-                    "amount": 14554,
-                    "code": null
-                }
-            ]
-        },
-        "links": {
-            "self": "https://glue.mysprykershop.com/guest-carts/c9310692-2ab0-5edc-bb41-fee6aa828d55"
-        },
-        "relationships": {
-            "cart-rules": {
-                "data": [
-                    {
-                        "type": "cart-rules",
-                        "id": "1"
-                    }
-                ]
-            }
-        }
-    },
-    "included": [
-        {
-            "type": "guest-cart-items",
-            "id": "077_24584210",
-            "attributes": {
-                "sku": "077_24584210",
-                "quantity": 10,
-                "groupKey": "077_24584210",
-                "abstractSku": "077",
-                "amount": null,
-                "calculations": {
-                    "unitPrice": 14554,
-                    "sumPrice": 145540,
-                    "taxRate": 19,
-                    "unitNetPrice": 0,
-                    "sumNetPrice": 0,
-                    "unitGrossPrice": 14554,
-                    "sumGrossPrice": 145540,
-                    "unitTaxAmountFullAggregation": 2091,
-                    "sumTaxAmountFullAggregation": 20914,
-                    "sumSubtotalAggregation": 145540,
-                    "unitSubtotalAggregation": 14554,
-                    "unitProductOptionPriceAggregation": 0,
-                    "sumProductOptionPriceAggregation": 0,
-                    "unitDiscountAmountAggregation": 1455,
-                    "sumDiscountAmountAggregation": 14554,
-                    "unitDiscountAmountFullAggregation": 1455,
-                    "sumDiscountAmountFullAggregation": 14554,
-                    "unitPriceToPayAggregation": 13099,
-                    "sumPriceToPayAggregation": 130986
-                },
-                "selectedProductOptions": []
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/guest-carts/c9310692-2ab0-5edc-bb41-fee6aa828d55/guest-cart-items/077_24584210"
-            }
-        },
-        {
-            "type": "cart-rules",
-            "id": "1",
-            "attributes": {
-                "amount": 14554,
-                "code": null,
-                "discountType": "cart_rule",
-                "displayName": "10% Discount for all orders above",
-                "isExclusive": false,
-                "expirationDateTime": "2022-02-26 00:00:00.000000",
-                "discountPromotionAbstractSku": null,
-                "discountPromotionQuantity": null
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/cart-rules/1"
-            }
-        }
-    ]
-}
-```
-
-</details>
-
-<details>
-<summary markdown='span'>Response sample with vouchers</summary>
-
-```json
-{
-    "data": {
-        "type": "guest-carts",
-        "id": "c9310692-2ab0-5edc-bb41-fee6aa828d55",
-        "attributes": {
-            "priceMode": "GROSS_MODE",
-            "currency": "EUR",
-            "store": "DE",
-            "totals": {
-                "expenseTotal": 0,
-                "discountTotal": 25965,
-                "taxTotal": 25692,
-                "subtotal": 186879,
-                "grandTotal": 160914,
-                "priceToPay": 160914
-            },
-            "discounts": [
-                {
-                    "displayName": "5% discount on all white products",
-                    "amount": 7277,
-                    "code": null
-                },
-                {
-                    "displayName": "10% Discount for all orders above",
-                    "amount": 18688,
-                    "code": null
-                }
-            ]
-        },
-        "links": {
-            "self": "https://glue.mysprykershop.com/guest-carts/c9310692-2ab0-5edc-bb41-fee6aa828d55"
-        },
-        "relationships": {
-            "vouchers": {
-                "data": [
-                    {
-                        "type": "vouchers",
-                        "id": "sprykerku2f"
-                    }
-                ]
-            }
-        }
-    },
-    "included": [
-        {
-            "type": "guest-cart-items",
-            "id": "077_24584210",
-            "attributes": {
-                "sku": "077_24584210",
-                "quantity": 10,
-                "groupKey": "077_24584210",
-                "abstractSku": "077",
-                "amount": null,
-                "calculations": {
-                    "unitPrice": 14554,
-                    "sumPrice": 145540,
-                    "taxRate": 19,
-                    "unitNetPrice": 0,
-                    "sumNetPrice": 0,
-                    "unitGrossPrice": 14554,
-                    "sumGrossPrice": 145540,
-                    "unitTaxAmountFullAggregation": 1975,
-                    "sumTaxAmountFullAggregation": 19752,
-                    "sumSubtotalAggregation": 145540,
-                    "unitSubtotalAggregation": 14554,
-                    "unitProductOptionPriceAggregation": 0,
-                    "sumProductOptionPriceAggregation": 0,
-                    "unitDiscountAmountAggregation": 2183,
-                    "sumDiscountAmountAggregation": 21831,
-                    "unitDiscountAmountFullAggregation": 2183,
-                    "sumDiscountAmountFullAggregation": 21831,
-                    "unitPriceToPayAggregation": 12371,
-                    "sumPriceToPayAggregation": 123709
-                },
-                "selectedProductOptions": []
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/guest-carts/c9310692-2ab0-5edc-bb41-fee6aa828d55/guest-cart-items/077_24584210"
-            }
-        },
-        {
-            "type": "guest-cart-items",
-            "id": "057_32007641",
-            "attributes": {
-                "sku": "057_32007641",
-                "quantity": 1,
-                "groupKey": "057_32007641",
-                "abstractSku": "057",
-                "amount": null,
-                "calculations": {
-                    "unitPrice": 41339,
-                    "sumPrice": 41339,
-                    "taxRate": 19,
-                    "unitNetPrice": 0,
-                    "sumNetPrice": 0,
-                    "unitGrossPrice": 41339,
-                    "sumGrossPrice": 41339,
-                    "unitTaxAmountFullAggregation": 5940,
-                    "sumTaxAmountFullAggregation": 5940,
-                    "sumSubtotalAggregation": 41339,
-                    "unitSubtotalAggregation": 41339,
-                    "unitProductOptionPriceAggregation": 0,
-                    "sumProductOptionPriceAggregation": 0,
-                    "unitDiscountAmountAggregation": 4134,
-                    "sumDiscountAmountAggregation": 4134,
-                    "unitDiscountAmountFullAggregation": 4134,
-                    "sumDiscountAmountFullAggregation": 4134,
-                    "unitPriceToPayAggregation": 37205,
-                    "sumPriceToPayAggregation": 37205
-                },
-                "selectedProductOptions": []
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/guest-carts/c9310692-2ab0-5edc-bb41-fee6aa828d55/guest-cart-items/057_32007641"
-            }
-        },
-        {
-            "type": "vouchers",
-            "id": "sprykerku2f",
-            "attributes": {
-                "amount": 7277,
-                "code": "sprykerku2f",
-                "discountType": "voucher",
-                "displayName": "5% discount on all white products",
-                "isExclusive": false,
-                "expirationDateTime": "2022-02-10 00:00:00.000000",
-                "discountPromotionAbstractSku": null,
-                "discountPromotionQuantity": null
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/guest-carts/c9310692-2ab0-5edc-bb41-fee6aa828d55/cart-codes/sprykerku2f"
-            }
-        }
-    ]
-}
-```
-
-</details>
-
-
-<details>
 <summary markdown='span'>Response sample with bundle items</summary>
 
 ```json
 {
     "data": {
-        "type": "guest-carts",
+        "type": "carts",
         "id": "bd873e3f-4670-523d-b5db-3492d2c0bee3",
         "attributes": {
             "priceMode": "GROSS_MODE",
@@ -1463,10 +1325,11 @@ It is the responsibility of the API Client to track whether the selected items a
                     "amount": 9500,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/guest-carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a"
+            "self": "https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a"
         },
         "relationships": {
             "bundle-items": {
@@ -1516,7 +1379,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/guest-carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/guest-cart-items/214_123/"
+                "self": "https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items/214_123/"
             }
         }
     ]
@@ -1531,7 +1394,7 @@ It is the responsibility of the API Client to track whether the selected items a
 ```json
 {
     "data": {
-        "type": "guest-carts",
+        "type": "carts",
         "id": "bd873e3f-4670-523d-b5db-3492d2c0bee3",
         "attributes": {
             "priceMode": "GROSS_MODE",
@@ -1553,10 +1416,11 @@ It is the responsibility of the API Client to track whether the selected items a
                     "amount": 9500,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/guest-carts/bd873e3f-4670-523d-b5db-3492d2c0bee3"
+            "self": "https://glue.mysprykershop.com/carts/bd873e3f-4670-523d-b5db-3492d2c0bee3"
         },
         "relationships": {
             "bundle-items": {
@@ -1723,7 +1587,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/guest-carts/bd873e3f-4670-523d-b5db-3492d2c0bee3/guest-cart-items/214_123/"
+                "self": "https://glue.mysprykershop.com/carts/bd873e3f-4670-523d-b5db-3492d2c0bee3/items/214_123/"
             },
             "relationships": {
                 "bundled-items": {
@@ -1756,7 +1620,7 @@ It is the responsibility of the API Client to track whether the selected items a
 ```json
 {
     "data": {
-        "type": "guest-carts",
+        "type": "carts",
         "id": "bd873e3f-4670-523d-b5db-3492d2c0bee3",
         "attributes": {
             "priceMode": "GROSS_MODE",
@@ -1778,10 +1642,11 @@ It is the responsibility of the API Client to track whether the selected items a
                     "amount": 9500,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/guest-carts/bd873e3f-4670-523d-b5db-3492d2c0bee3"
+            "self": "https://glue.mysprykershop.com/carts/bd873e3f-4670-523d-b5db-3492d2c0bee3"
         },
         "relationships": {
             "bundle-items": {
@@ -2466,7 +2331,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/guest-carts/bd873e3f-4670-523d-b5db-3492d2c0bee3/guest-cart-items/214_123/"
+                "self": "https://glue.mysprykershop.com/carts/bd873e3f-4670-523d-b5db-3492d2c0bee3/items/214_123/"
             },
             "relationships": {
                 "bundled-items": {
@@ -2501,41 +2366,151 @@ It is the responsibility of the API Client to track whether the selected items a
 
 </details>
 
+<details>
+<summary markdown='span'>Response sample with the unfulfilled hard and soft minimum thresholds</summary>
+
+```json
+{
+    "data": {
+        "type": "carts",
+        "id": "308b51f4-2491-5bce-8cf2-436273b44f9b",
+        "attributes": {
+            "priceMode": "GROSS_MODE",
+            "currency": "EUR",
+            "store": "DE",
+            "name": "New Year presents",
+            "isDefault": true,
+            "totals": {
+                "expenseTotal": 5000,
+                "discountTotal": 0,
+                "taxTotal": 1350,
+                "subtotal": 9454,
+                "grandTotal": 14454,
+                "priceToPay": 14454
+            },
+            "discounts": [],
+            "thresholds": [
+                {
+                    "type": "hard-minimum-threshold",
+                    "threshold": 20000,
+                    "fee": null,
+                    "deltaWithSubtotal": 10546,
+                    "message": "You need to add items for €200.00 to pass a recommended threshold. Otherwise, €50 fee will be added."
+                },
+                {
+                    "type": "soft-minimum-threshold-fixed-fee",
+                    "threshold": 100000,
+                    "fee": 5000,
+                    "deltaWithSubtotal": 90546,
+                    "message": "You need to add items for €1,000.00 to pass a recommended threshold. Otherwise, €50.00 fee will be added."
+                },
+            ]
+        },
+        "links": {
+            "self": "https://glue.de.69-new.demo-spryker.com/carts/308b51f4-2491-5bce-8cf2-436273b44f9b"
+        }
+    }
+}
+```
+
+</details>
+
+<details>
+<summary markdown='span'>Response sample with the unfulfilled hard maximum threshold</summary>
+
+```json
+{
+    "data": {
+        "type": "carts",
+        "id": "1ce91011-8d60-59ef-9fe0-4493ef3628b2",
+        "attributes": {
+            "priceMode": "GROSS_MODE",
+            "currency": "EUR",
+            "store": "DE",
+            "name": "My Cart",
+            "isDefault": false,
+            "totals": {
+                "expenseTotal": 5000,
+                "discountTotal": 0,
+                "taxTotal": 11976,
+                "subtotal": 70007,
+                "grandTotal": 75007,
+                "priceToPay": 75007
+            },
+            "discounts": [],
+            "thresholds": [
+                {
+                    "type": "hard-maximum-threshold",
+                    "threshold": 5000,
+                    "fee": null,
+                    "deltaWithSubtotal": 65007,
+                    "message": "You need to add items or €50 or less to pass a recommended threshold."
+                }
+            ]
+        },
+        "links": {
+            "self": "https://glue.de.69-new.demo-spryker.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2"
+        }
+    }
+}
+```
+
+</details>
+
+<a name="add-an-item-to-a-registered-users-cart-response-attributes"></a>
+
+| ATTRIBUTE | TYPE | DESCRIPTION |
+| --- | --- | --- |
+| sku | String | Product SKU. |
+| quantity | Integer | Quantity of the given product in the cart. |
+| groupKey | String | Unique item identifier. The value is generated based on product properties. |
+| abstractSku | String | Unique identifier of the abstract product owning this concrete product. |
+| amount | Integer | Amount of the products in the cart. |
+| unitPrice | Integer | Single item price without assuming if it is net or gross. This value should be used everywhere the price is displayed. It allows switching tax mode without side effects. |
+| sumPrice | Integer | Sum of all items prices calculated. |
+| taxRate | Integer | Current tax rate in per cent. |
+| unitNetPrice | Integer | Single item net price. |
+| sumNetPrice | Integer | Sum of prices of all items. |
+| unitGrossPrice | Integer | Single item gross price. |
+| sumGrossPrice | Integer | Sum of items gross price. |
+| unitTaxAmountFullAggregation | Integer | Total tax amount for a given item with additions. |
+| sumTaxAmountFullAggregation | Integer | Total tax amount for a given sum of items with additions. |
+| sumSubtotalAggregation | Integer | Sum of subtotals of the items. |
+| unitSubtotalAggregation | Integer | Subtotal for the given item. |
+| unitProductOptionPriceAggregation | Integer | Item total product option price. |
+| sumProductOptionPriceAggregation | Integer | Item total of product options for the given sum of items. |
+| unitDiscountAmountAggregation | Integer | Item total discount amount. |
+| sumDiscountAmountAggregation | Integer | Sum of Item total discount amount. |
+| unitDiscountAmountFullAggregation | Integer | Sum total discount amount with additions. |
+| sumDiscountAmountFullAggregation | Integer | Item total discount amount with additions. |
+| unitPriceToPayAggregation | Integer | Item total price to pay after discounts with additions. |
+| sumPriceToPayAggregation | Integer | Sum of the prices to pay (after discounts).|
+| salesUnit |Object | List of attributes defining the sales unit to be used for item amount calculation. |
+| salesUnit.id | Integer | Numeric value the defines the sales units to calculate the item amount in. |
+| salesUnit.amount | Integer | Amount of product in the defined sales units. |
+| selectedProductOptions | array | List of attributes describing the product options that were added to cart with the product. |
+| selectedProductOptions.optionGroupName | String | Name of the group to which the option belongs. |
+| selectedProductOptions.sku | String | SKU of the product option. |
+| selectedProductOptions.optionName | String | Product option name. |
+| selectedProductOptions.price | Integer | Product option price in cents. |
+| selectedProductOptions.currencyIsoCode | String | ISO 4217 code of the currency in which the product option price is specified. |
+
+<a name="threshold-attributes">**Threshold attributes**</a>
+
+| ATTRIBUTE | TYPE | DESCRIPTION |
+| --- | --- | --- |
+| type | String | Threshold type. |
+| threshold | Integer | Threshold monetary amount. |
+| fee | Integer | Fee to be paid if the threshold is not reached.  |
+| deltaWithSubtotal | Integer | Displays the remaining amount that needs to be added to pass the threshold. |
+| message | String | Message shown to the customer if the threshold is not fulfilled. |
+
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
-| guest-cart-items, bundle-items, bundled-items | sku | String | SKU of the product. |
-| guest-cart-items, bundle-items, bundled-items | quantity | Integer | Quantity of the given product in the cart. |
-| guest-cart-items, bundle-items, bundled-items | groupKey | String | Unique item identifier. The value is generated based on product parameters. |
-| guest-cart-items, bundle-items, bundled-items | abstractSku | String | Unique identifier of the abstract product that owns the concrete product. |
-| guest-cart-items | amount | Integer | Amount of the products in the cart. |
-| guest-cart-items | unitPrice | Integer | Single item price without assuming is it net or gross. This value should be used everywhere a price is disabled. It allows switching the tax mode without side effects. |
-| guest-cart-items | sumPrice | Integer | Sum of all items prices calculated. |
-| guest-cart-items | taxRate | Integer | Current tax rate in per cent. |
-| guest-cart-items | unitNetPrice | Integer | Single item net price. |
-| guest-cart-items | sumNetPrice | Integer | Sum of all items' net price. |
-| guest-cart-items | unitGrossPrice | Integer | Single item gross price. |
-| guest-cart-items | sumGrossPrice | Integer | Sum of items gross price. |
-| guest-cart-items | unitTaxAmountFullAggregation | Integer | Total tax amount for a given item with additions. |
-| guest-cart-items | sumTaxAmountFullAggregation | Integer | Total tax amount for a given amount of items with additions. |
-| guest-cart-items | sumSubtotalAggregation | Integer | Sum of subtotals of the items. |
-| guest-cart-items | unitSubtotalAggregation | Integer | Subtotal for the given item. |
-| guest-cart-items | unitProductOptionPriceAggregation | Integer | Item total product option price. |
-| guest-cart-items | sumProductOptionPriceAggregation | Integer | Item total of product options for the given sum of items. |
-| guest-cart-items | unitDiscountAmountAggregation | Integer | Item total discount amount. |
-| guest-cart-items | sumDiscountAmountAggregation | Integer | Sum Item total discount amount. |
-| guest-cart-items | unitDiscountAmountFullAggregation | Integer | Sum total discount amount with additions. |
-| guest-cart-items | sumDiscountAmountFullAggregation | Integer | Item total discount amount with additions. |
-| guest-cart-items | unitPriceToPayAggregation | Integer | Item total price to pay after discounts with additions. |
-| guest-cart-items | sumPriceToPayAggregation | Integer | Sum of the prices to pay (after discounts). |
-| guest-cart-items | salesUnit | Object | List of attributes defining the sales unit to be used for item amount calculation. |
-| guest-cart-items | salesUnit.id | Integer | Numeric value that defines the sales units to calculate the item amount in. |
-| guest-cart-items | salesUnit.amount | Integer | Amount of product in the defined sales units. |
-| guest-cart-items | selectedProductOptions | array | List of attributes describing the product options that were added to the cart with the product. |
-| guest-cart-items | selectedProductOptions.optionGroupName | String | Name of the group to which the option belongs. |
-| guest-cart-items | selectedProductOptions.sku | String | SKU of the product option. |
-| guest-cart-items | selectedProductOptions.optionName | String | Product option name. |
-| guest-cart-items | selectedProductOptions.price | Integer | Product option price in cents. |
-| guest-cart-items | selectedProductOptions.currencyIsoCode | String | ISO 4217 code of the currency in which the product option price is specified. |
+|items, bundle-items, bundled-items| sku |String| Unique identifier of the product that was added to the cart.|
+|items, bundle-items, bundled-items| quantity |Integer| Quantity of the product that was added to the cart.|
+|items, bundle-items, bundled-items |groupKey| String| Unique identifier of product as a cart item. |The value is generated based on the product’s  properties.|
+|items, bundle-items, bundled-items| abstractSku |String |Unique identifier of the abstract product that owns the concrete product.|
 | product-options | optionGroupName | String | Name of the group to which the option belongs. |
 | product-options | sku | String | SKU of the product option. |
 | product-options | optionName | String | Product option name. |
@@ -2550,35 +2525,36 @@ It is the responsibility of the API Client to track whether the selected items a
 | vouchers, cart-rules | discountPromotionAbstractSku | String | SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
 | vouchers, cart-rules | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
 
-
-For the attributes of the included resources, see:
-* [Retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#guest-cart-response-attributes)
-* [Gift cards of guest users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html)
-* [Retrieving concrete products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+* [Retrieving Measurement Units](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html)
+* [Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart)
+* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 * [Retrieve an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html#abstract-products-response-attributes)
-*  [Retrieving bundled products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-bundled-products.html#bundled-products-response-attributes)
 
-## Add a configurable bundle to a guest cart
+## Add a configurable bundle to a registered user’s cart
 
-To add a configurable bundle to a guest cart, send the request:
+To add a configurable bundle to a registered user’s cart, send the request:
 
 ***
-`POST` **/guest-configurable-bundles?include=items**
+`POST` **/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/configured-bundles**
 ***
+
+
+| PATH PARAMETER | DESCRIPTIO |
+| --- | --- |
+| ***cart_uuid*** | A unique identifier of a cart. [Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-carts) to get it. |
+
 ### Request
 
-| HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
-<details>
-<summary markdown='span'>Request sample</summary>
+| Authorization | string |&check; | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
-`POST https://glue.mysprykershop.com/guest-configurable-bundles?include=items`    
+Request sample: `POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/configured-bundles`
 
 ```json
 {
     "data": {
-        "type": "guest-configurable-bundles",
+        "type": "configured-bundles",
         "attributes": {
             "quantity": 2,
             "templateUuid": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de",
@@ -2598,14 +2574,12 @@ To add a configurable bundle to a guest cart, send the request:
     }
 }
 ```
-</details>
 
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| quantity | Integer | &check; | Number of the configurable bundles to add. |
-| templateUuid | 	
-String | &check; | Unique identifier of the [Configurable Bundle Template](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-configurable-bundle-templates.html). To get it, retrieve all Configurable Bundle Templates. |
+| quantity | Integer | &check; | The number of the configurabke bundles to add. |
+| templateUuid | String | &check; | Unique identifier of the configurable bundle template. To get it, [retrieve all configurable bundle templates](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-configurable-bundle-templates.html#retrieve-all-configurable-bundle-templates). |
 | sku | String | &check; | Specifies the SKU of a product to add to the cart. To use promotions, specify the SKU of a product being promoted. Concrete product SKU required. |
 | quantity | Integer | &check; | Specifies the number of items to add to the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
 | slotUuid | String | &check; | Unique identifier of the slot in the configurable bundle. |
@@ -2613,18 +2587,18 @@ String | &check; | Unique identifier of the [Configurable Bundle Template](/docs
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: add a configurable bunde to a gues cart</summary>
+<summary markdown='span'>Response sample: add a configurable bundle</summary>
 
 ```json
 {
     "data": {
-        "type": "guest-carts",
-        "id": "1bbcf8c0-30dc-5d40-9da1-db5289f216fa",
+        "type": "carts",
+        "id": "61ab15e9-e24a-5dec-a1ef-fc333bd88b0a",
         "attributes": {
             "priceMode": "GROSS_MODE",
             "currency": "EUR",
             "store": "DE",
-            "name": "Shopping cart",
+            "name": "My Cart",
             "isDefault": true,
             "totals": {
                 "expenseTotal": 0,
@@ -2634,21 +2608,22 @@ String | &check; | Unique identifier of the [Configurable Bundle Template](/docs
                 "grandTotal": 98894,
                 "priceToPay": 98894
             },
-            "discounts": []
+            "discounts": [],
+            "thresholds": []
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/carts/1bbcf8c0-30dc-5d40-9da1-db5289f216fa"
+            "self": "https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a"
         },
         "relationships": {
             "items": {
                 "data": [
                     {
                         "type": "items",
-                        "id": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530-112_312526171"
+                        "id": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5fe35ab4d426b4.44302999-112_312526171"
                     },
                     {
                         "type": "items",
-                        "id": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530-047_26408568"
+                        "id": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5fe35ab4d426b4.44302999-047_26408568"
                     }
                 ]
             }
@@ -2657,11 +2632,11 @@ String | &check; | Unique identifier of the [Configurable Bundle Template](/docs
     "included": [
         {
             "type": "items",
-            "id": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530-112_312526171",
+            "id": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5fe35ab4d426b4.44302999-112_312526171",
             "attributes": {
                 "sku": "112_312526171",
                 "quantity": 2,
-                "groupKey": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530-112_312526171",
+                "groupKey": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5fe35ab4d426b4.44302999-112_312526171",
                 "abstractSku": "112",
                 "amount": null,
                 "productOfferReference": null,
@@ -2689,7 +2664,7 @@ String | &check; | Unique identifier of the [Configurable Bundle Template](/docs
                 },
                 "configuredBundle": {
                     "quantity": 2,
-                    "groupKey": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530",
+                    "groupKey": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5fe35ab4d426b4.44302999",
                     "template": {
                         "uuid": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de",
                         "name": "Smartstation Kit"
@@ -2705,16 +2680,16 @@ String | &check; | Unique identifier of the [Configurable Bundle Template](/docs
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-5d40-9da1-db5289f216fa/items/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530-112_312526171"
+                "self": "https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5fe35ab4d426b4.44302999-112_312526171"
             }
         },
         {
             "type": "items",
-            "id": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530-047_26408568",
+            "id": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5fe35ab4d426b4.44302999-047_26408568",
             "attributes": {
                 "sku": "047_26408568",
                 "quantity": 2,
-                "groupKey": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530-047_26408568",
+                "groupKey": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5fe35ab4d426b4.44302999-047_26408568",
                 "abstractSku": "047",
                 "amount": null,
                 "productOfferReference": null,
@@ -2742,7 +2717,7 @@ String | &check; | Unique identifier of the [Configurable Bundle Template](/docs
                 },
                 "configuredBundle": {
                     "quantity": 2,
-                    "groupKey": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530",
+                    "groupKey": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5fe35ab4d426b4.44302999",
                     "template": {
                         "uuid": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de",
                         "name": "Smartstation Kit"
@@ -2758,15 +2733,16 @@ String | &check; | Unique identifier of the [Configurable Bundle Template](/docs
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-5d40-9da1-db5289f216fa/items/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530-047_26408568"
+                "self": "https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5fe35ab4d426b4.44302999-047_26408568"
             }
         }
     ]
 }
-```
+
+```    
 </details>
 
-For the attributes of the response sample, see [Add an item to a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html#add-items-to-a-guest-cart).
+For the attributes of the response sample, see [Add an item a to a registered user's cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart).
 
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -2780,92 +2756,35 @@ For the attributes of the response sample, see [Add an item to a guest cart](/do
 | configuredBundle | uuid | String | Unique identifier of the configurable bundle template in the system. |
 | configuredBundleItem | uuid | String | Unique identifier of the slot in the configurable bundle. |
 
-## Change item quantity in a guest cart
+## Change item quantity
 
-To change item quantity, send the request:
-
-***
-`PATCH` **/guest-carts/*{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*/guest-cart-items/*{% raw %}{{{% endraw %}groupKey{% raw %}}}{% endraw %}***
-***
-
-| PATH PARAMETER | DESCRIPTION |
-| --- | --- |
-| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
-| ***{% raw %}{{{% endraw %}groupKey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it is equal to the item’s SKU. To get it, [retrieve the guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart) with the guest cart items included. |
-
-### Request
-
-
-| HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
-| --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart). |
-
-
-| QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
-| --- | --- | --- |
-| include | Adds resource relationships to the request. | guest-cart-items, concrete-products, product-options, sales-units, product-measurement-units |
-{% info_block infoBox "Included resources" %}
-
-* To retrieve product options, include `guest-cart-items`, `concrete-products`, and `product-options`.
-* To retrieve product measurement units, include `sales-units` and `product-measurement units`
-
-{% endinfo_block %}
-
-
-<details>
-<summary markdown='span'>Request sample</summary>
-
-`PATCH https://glue.mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`    
-
-```json
-{
-	"data": {
-		"type": "guest-cart-items",
-		"attributes": {
-			"sku": "209_12554247",
-			"quantity": 10
-		}
-	}
-}
-```
-</details>
-
-| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
-| --- | --- | --- | --- |
-| sku | String |  | SKU of the item to be updated. |
-| quantity | String | &check; | Quantity of the item to be set. |
-
-For more request body examples, see [Add items to a guest cart](#add-items-to-a-guest-cart)
-
-### Response
-
-If the update is successful, the endpoint returns `RestCartsResponse` with the updated quantity. See [Add items to a guest cart](#add-items-to-a-guest-cart) for examples.
-
-## Change quantity of configurable bundles in a guest cart
-
-To change the quantity of the configurable bundles in a guest cart, send the request:
+To change the number of items in a cart, send the request:
 
 ***
-`PATCH` **/guest-carts/{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}/guest-configured-bundles/{% raw %}{{{% endraw %}bundle_group_key{% raw %}}}{% endraw %}?include=items**
+`PATCH` **/carts/*{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*/items/*{% raw %}{{{% endraw %}item_group_key{% raw %}}}{% endraw %}***
 ***
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
-| ***{% raw %}{{{% endraw %}bundlegroupkey{% raw %}}}{% endraw %}*** | Group key of the configurable bundle. The value is generated based on the Configurable Bundle Template and items selected in the slot. You can get it when [adding the configurable bundle to a guest cart](#add-a-configurable-bundle-to-a-guest-cart). |
+| ***cart_uuid*** | Unique identifier of a cart. [Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-carts) to get it. |
+| ***{% raw %}{{{% endraw %}itemgroupkey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it is equal to the item’s SKU. |
 
 ### Request
 
-| HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart). |
-Request sample: `PATCH https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-5d40-9da1-db5289f216fa/guest-configured-bundles/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530?include=items`
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
+
+
+Request sample:
+`PATCH http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054/items/177_25913296`
+
 ```json
 {
     "data": {
-        "type": "guest-configured-bundles",
+        "type": "items",
         "attributes": {
-            "quantity": 4
+            "quantity": 10
         }
     }
 }
@@ -2873,22 +2792,193 @@ Request sample: `PATCH https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| quantity | String | &check; | Quantity of the items to add. |
+| quantity | String | &check; | Specifies the new quantity of the items. |
 
 ### Response
+
+<details>
+<summary markdown='span'>Response sample</summary>
+
+```json
+{
+    "data": [
+        {
+            "type": "carts",
+            "id": "52493031-cccf-5ad2-9cc7-93d0f738303d",
+            "attributes": {
+                "priceMode": "GROSS_MODE",
+                "currency": "EUR",
+                "store": "DE",
+                "name": "\"All in\" Conf Bundle",
+                "isDefault": true,
+                "totals": {
+                    "expenseTotal": 0,
+                    "discountTotal": 0,
+                    "taxTotal": 718,
+                    "subtotal": 4500,
+                    "grandTotal": 4500
+                },
+                "discounts": [],
+                "thresholds": []
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/carts/52493031-cccf-5ad2-9cc7-93d0f738303d"
+            },
+            "relationships": {
+                "items": {
+                    "data": [
+                        {
+                            "type": "items",
+                            "id": "cable-vga-1-2_quantity_sales_unit_id_33_amount_1.5_sales_unit_id_33"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "links": {
+        "self": "https://glue.mysprykershop.com/items?include=items,concrete-products,cart-permission-groups"
+    },
+    "included": [
+        {
+            "type": "concrete-products",
+            "id": "cable-vga-1-2",
+            "attributes": {
+                "sku": "cable-vga-1-2",
+                "isDiscontinued": false,
+                "discontinuedNote": null,
+                "averageRating": null,
+                "reviewCount": 0,
+                "name": "VGA cable as long as you want",
+                "description": "Screw-in VGA cable with 15-pin male input and output.<p>Supports resolutions at 800x600 (SVGA), 1024x768 (XGA), 1600x1200 (UXGA), 1080p (Full HD), 1920x1200 (WUXGA), and up for high resolution LCD and LED monitors.<p>The VGA cord engineered with molded strain relief connectors for durability, grip treads for easy plugging and unplugging, and finger-tightened screws for a secure connection.<p>Gold-plated connectors; 100% bare copper conductors.<p>Links VGA-equipped computer to any display with 15-pin VGA port.",
+                "attributes": {
+                    "packaging_unit": "As long as you want"
+                },
+                "superAttributesDefinition": [
+                    "packaging_unit"
+                ],
+                "metaTitle": "",
+                "metaKeywords": "",
+                "metaDescription": "",
+                "attributeNames": {
+                    "packaging_unit": "Packaging unit"
+                }
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-2"
+            }
+        },
+        {
+            "type": "items",
+            "id": "cable-vga-1-2_quantity_sales_unit_id_33_amount_1.5_sales_unit_id_33",
+            "attributes": {
+                "sku": "cable-vga-1-2",
+                "quantity": 3,
+                "groupKey": "cable-vga-1-2_quantity_sales_unit_id_33_amount_1.5_sales_unit_id_33",
+                "abstractSku": "cable-vga-1",
+                "amount": "4.5",
+                "calculations": {
+                    "unitPrice": 1500,
+                    "sumPrice": 4500,
+                    "taxRate": 19,
+                    "unitNetPrice": 0,
+                    "sumNetPrice": 0,
+                    "unitGrossPrice": 1500,
+                    "sumGrossPrice": 4500,
+                    "unitTaxAmountFullAggregation": 239,
+                    "sumTaxAmountFullAggregation": 718,
+                    "sumSubtotalAggregation": 4500,
+                    "unitSubtotalAggregation": 1500,
+                    "unitProductOptionPriceAggregation": 0,
+                    "sumProductOptionPriceAggregation": 0,
+                    "unitDiscountAmountAggregation": 0,
+                    "sumDiscountAmountAggregation": 0,
+                    "unitDiscountAmountFullAggregation": 0,
+                    "sumDiscountAmountFullAggregation": 0,
+                    "unitPriceToPayAggregation": 1500,
+                    "sumPriceToPayAggregation": 4500
+                },
+                "salesUnit": {
+                    "id": 33,
+                    "amount": "4.5"
+                },
+                "selectedProductOptions": []
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/carts/52493031-cccf-5ad2-9cc7-93d0f738303d/items/cable-vga-1-2_quantity_sales_unit_id_33_amount_1.5_sales_unit_id_33"
+            },
+            "relationships": {
+                "concrete-products": {
+                    "data": [
+                        {
+                            "type": "concrete-products",
+                            "id": "cable-vga-1-2"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
+```    
+</details>
+
+For the attributes of the included resources, see [Retrieving Concrete Products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html).
+
+## Change quantity of configurable bundles in a registered user’s cart
+
+To change quantity of configurable bundles in a registered user’s cart, send the request:
+
+***
+`PATCH` /carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/configured-bundles/{% raw %}{{{% endraw %}bundle_group_key{% raw %}}}{% endraw %}?include=items
+***
+
+| PATH PARAMETER | DESCRIPTION |
+| --- | --- |
+| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | A unique identifier of a cart.[ Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-carts) to get it. |
+| ***{% raw %}{{{% endraw %}bundlegroupkey{% raw %}}}{% endraw %}*** | Group key of the configurable bundle. The value is generated based on the Configurable Bundle Template and items selected in the slot. You can get it when [adding the configurable bundle to a registered user’s cart](#add-a-configurable-bundle-to-a-registered-users-cart). |
+
+### Request
+
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
+| --- | --- | --- | --- |
+| Authorization | String | &check; | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+
+Request sample:
+
+`PATCH https://mysprykershop.com/carts/e68db76b-1c9b-5fb8-88db-6cbaf8faed76/configured-bundles/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff33dfe3418f6.24909526?include=items`
+
+```json
+{
+    "data": {
+        "type": "configured-bundles",
+        "attributes": {
+            "quantity": 2
+        }
+    }
+}
+```
+
+
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
+| --- | --- | --- | --- |
+| quantity | String | &check; | Specifies the new quantity of items. |
+
+### Response
+
 <details>
 <summary markdown='span'>Response sample</summary>
 
 ```json
 {
     "data": {
-        "type": "guest-carts",
-        "id": "1bbcf8c0-30dc-5d40-9da1-db5289f216fa",
+        "type": "carts",
+        "id": "e68db76b-1c9b-5fb8-88db-6cbaf8faed76",
         "attributes": {
             "priceMode": "GROSS_MODE",
             "currency": "EUR",
             "store": "DE",
-            "name": "Shopping cart",
+            "name": "Test cart",
             "isDefault": true,
             "totals": {
                 "expenseTotal": 0,
@@ -2898,29 +2988,30 @@ Request sample: `PATCH https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-
                 "grandTotal": 296682,
                 "priceToPay": 296682
             },
-            "discounts": []
+            "discounts": [],
+            "thresholds": []
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-5d40-9da1-db5289f216fa"
+            "self": "https://glue.mysprykershop.com/carts/e68db76b-1c9b-5fb8-88db-6cbaf8faed76"
         },
         "relationships": {
             "items": {
                 "data": [
                     {
                         "type": "items",
-                        "id": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530-112_312526171"
+                        "id": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff33dfe3418f6.24909526-112_312526171"
                     },
                     {
                         "type": "items",
-                        "id": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530-047_26408568"
+                        "id": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff33dfe3418f6.24909526-047_26408568"
                     },
                     {
                         "type": "items",
-                        "id": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-6011880fabc988.61063130-112_312526171"
+                        "id": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff3410120ce68.46429593-112_312526171"
                     },
                     {
                         "type": "items",
-                        "id": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-6011880fabc988.61063130-047_26408568"
+                        "id": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff3410120ce68.46429593-047_26408568"
                     }
                 ]
             }
@@ -2929,11 +3020,11 @@ Request sample: `PATCH https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-
     "included": [
         {
             "type": "items",
-            "id": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530-112_312526171",
+            "id": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff33dfe3418f6.24909526-112_312526171",
             "attributes": {
                 "sku": "112_312526171",
                 "quantity": 4,
-                "groupKey": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530-112_312526171",
+                "groupKey": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff33dfe3418f6.24909526-112_312526171",
                 "abstractSku": "112",
                 "amount": null,
                 "productOfferReference": null,
@@ -2961,7 +3052,7 @@ Request sample: `PATCH https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-
                 },
                 "configuredBundle": {
                     "quantity": 4,
-                    "groupKey": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530",
+                    "groupKey": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff33dfe3418f6.24909526",
                     "template": {
                         "uuid": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de",
                         "name": "Smartstation Kit"
@@ -2977,16 +3068,16 @@ Request sample: `PATCH https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-5d40-9da1-db5289f216fa/items/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530-112_312526171"
+                "self": "https://glue.mysprykershop.com/carts/e68db76b-1c9b-5fb8-88db-6cbaf8faed76/items/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff33dfe3418f6.24909526-112_312526171"
             }
         },
         {
             "type": "items",
-            "id": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530-047_26408568",
+            "id": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff33dfe3418f6.24909526-047_26408568",
             "attributes": {
                 "sku": "047_26408568",
                 "quantity": 4,
-                "groupKey": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530-047_26408568",
+                "groupKey": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff33dfe3418f6.24909526-047_26408568",
                 "abstractSku": "047",
                 "amount": null,
                 "productOfferReference": null,
@@ -3014,7 +3105,7 @@ Request sample: `PATCH https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-
                 },
                 "configuredBundle": {
                     "quantity": 4,
-                    "groupKey": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530",
+                    "groupKey": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff33dfe3418f6.24909526",
                     "template": {
                         "uuid": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de",
                         "name": "Smartstation Kit"
@@ -3030,16 +3121,16 @@ Request sample: `PATCH https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-5d40-9da1-db5289f216fa/items/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530-047_26408568"
+                "self": "https://glue.mysprykershop.com/carts/e68db76b-1c9b-5fb8-88db-6cbaf8faed76/items/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff33dfe3418f6.24909526-047_26408568"
             }
         },
         {
             "type": "items",
-            "id": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-6011880fabc988.61063130-112_312526171",
+            "id": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff3410120ce68.46429593-112_312526171",
             "attributes": {
                 "sku": "112_312526171",
                 "quantity": 2,
-                "groupKey": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-6011880fabc988.61063130-112_312526171",
+                "groupKey": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff3410120ce68.46429593-112_312526171",
                 "abstractSku": "112",
                 "amount": null,
                 "productOfferReference": null,
@@ -3067,7 +3158,7 @@ Request sample: `PATCH https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-
                 },
                 "configuredBundle": {
                     "quantity": 2,
-                    "groupKey": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-6011880fabc988.61063130",
+                    "groupKey": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff3410120ce68.46429593",
                     "template": {
                         "uuid": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de",
                         "name": "Smartstation Kit"
@@ -3083,16 +3174,16 @@ Request sample: `PATCH https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-5d40-9da1-db5289f216fa/items/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-6011880fabc988.61063130-112_312526171"
+                "self": "https://glue.mysprykershop.com/carts/e68db76b-1c9b-5fb8-88db-6cbaf8faed76/items/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff3410120ce68.46429593-112_312526171"
             }
         },
         {
             "type": "items",
-            "id": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-6011880fabc988.61063130-047_26408568",
+            "id": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff3410120ce68.46429593-047_26408568",
             "attributes": {
                 "sku": "047_26408568",
                 "quantity": 2,
-                "groupKey": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-6011880fabc988.61063130-047_26408568",
+                "groupKey": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff3410120ce68.46429593-047_26408568",
                 "abstractSku": "047",
                 "amount": null,
                 "productOfferReference": null,
@@ -3120,7 +3211,7 @@ Request sample: `PATCH https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-
                 },
                 "configuredBundle": {
                     "quantity": 2,
-                    "groupKey": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-6011880fabc988.61063130",
+                    "groupKey": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff3410120ce68.46429593",
                     "template": {
                         "uuid": "c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de",
                         "name": "Smartstation Kit"
@@ -3136,58 +3227,63 @@ Request sample: `PATCH https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-5d40-9da1-db5289f216fa/items/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-6011880fabc988.61063130-047_26408568"
+                "self": "https://glue.mysprykershop.com/carts/e68db76b-1c9b-5fb8-88db-6cbaf8faed76/items/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff3410120ce68.46429593-047_26408568"
             }
         }
     ]
 }
-```
+
+```    
 </details>
 
-For the attribute descriptions, see [Managing guest cart items](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html).
+For the attribute descriptions, see [Add a configurable bundle to a registered user’s cart](#add-a-configurable-bundle-to-a-registered-users-cart)
 
-## Remove an item from a guest cart
+## Remove items from a registered user's cart
 
-To remove an item from a guest cart, send the request:
+To remove an item from a registered user's cart, send the request:
 
 ***
-`DELETE` **/guest-carts/*{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}*/guest-cart-items/*{% raw %}{{{% endraw %}groupKey{% raw %}}}{% endraw %}***
+`DELETE` **/carts/*{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*/items/*{% raw %}{{{% endraw %}item_group_key{% raw %}}}{% endraw %}***
 ***
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
-| ***{% raw %}{{{% endraw %}groupKey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it is equal to the item’s SKU. To get it, [retrieve the guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart) with the guest cart items included. |
+| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-carts) to get it. |
+| ***{% raw %}{{{% endraw %}itemgroupkey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it is equal to the item’s SKU. |
+
 
 ### Request
 
-| HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart). |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
-Request sample: `DELETE https://glue.mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`
+Sample request: `DELETE http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054/items/177_25913296`
 
 ### Response
 
-If the item is deleted successfully, the endpoint returns the "204 No Content" status code.
+If the item is deleted successfully, the endpoint returns the `204 No Content` status code.
 
-## Remove a configurable bundle from a guest cart
-To remove a configurable bundle from a guest cart, send the request:
+## Remove a configurable bundle from a registered user’s cart
+
+To remove a configurable bundle from a registered user’s cart, send the request:
 
 ***
-`DELETE` **/guest-carts/{% raw %}{{{% endraw %}quest_cart_id{% raw %}}}{% endraw %}/guest-configured-bundles/{% raw %}{{{% endraw %}bundle_group_key{% raw %}}}{% endraw %}***
+`DELETE` ***/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/configured-bundles/{% raw %}{{{% endraw %}bundle_group_key{% raw %}}}{% endraw %}***
 ***
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart in the system. To get it, [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
-| ***{% raw %}{{{% endraw %}bundlegroupkey{% raw %}}}{% endraw %}*** | Group key of the configurable bundle. The value is generated based on the Configurable Bundle Template and items selected in the slot. You can get it when [adding the configurable bundle to a guest cart](#add-a-configurable-bundle-to-a-guest-cart). |
+| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-carts) to get it. |
+| ***{% raw %}{{{% endraw %}bundle_group_key{% raw %}}}{% endraw %}*** | Group key of the configurable bundle. The value is generated based on the configurable bundle template and items selected in the slot. You can get it when [adding the configurable bundle to a registered user’s cart](#add-a-configurable-bundle-to-a-registered-users-cart). |
 
-| HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
+### Request
+
+| HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart). |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
-Request sample: `DELETE https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-5d40-9da1-db5289f216fa/guest-configured-bundles/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530?include=items`
+Sample request: `DELETE https://mysprykershop.com/carts/e68db76b-1c9b-5fb8-88db-6cbaf8faed76/configured-bundles/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff33dfe3418f6.24909526`
 
 ### Response
 
@@ -3197,14 +3293,16 @@ If the item is deleted successfully, the endpoint returns the “204 No Content�
 
 | CODE | REASON |
 | --- | --- |
-| 101 | Cart with given uuid not found. |
-| 102 | Failed to add an item to cart. |
-| 103 | Item with the given group key not found in the cart. |
+| 001 | Access token is incorrect. |
+| 002 | Access token is missing. |
+| 003 | Failed to log in the user. |
+| 101 | Cart with given uuid is not found. |
+| 102 | Failed to add an item to a cart. |
+| 103 | Item with the given group key is not found in the cart. |
 | 104 | Cart uuid is missing. |
 | 105 | Cart cannot be deleted. |
 | 106 | Cart item cannot be deleted. |
-| 107 | Failed to create cart. |
-| 109 | Anonymous customer unique id is empty. |
+| 107 | Failed to create a cart. |
 | 110 | Customer already has a cart. |
 | 111 | Can’t switch price mode when there are items in the cart. |
 | 112 | Store data is invalid. |
@@ -3215,7 +3313,7 @@ If the item is deleted successfully, the endpoint returns the “204 No Content�
 | 117 | Currency is incorrect. |
 | 118 | Price mode is missing. |
 | 119 | Price mode is incorrect. |
-| 4001 | There is a problem with adding or updating the configured bundle. |
+| 4001 | There was a problem adding or updating the configured bundle. |
 | 4002 | Configurable bundle template is not found. |
 | 4003 | The quantity of the configured bundle should be more than zero. |
 | 4004 | Configured bundle with provided group key is not found in cart. |

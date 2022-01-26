@@ -50,7 +50,7 @@ If the customer email is confirmed successfully, the endpoint returns the `204 N
 
 ## Possible errors
 
-| Code| Reason |
+| CODE| REASON |
 | --- | --- |
 | 423 | Confirmation code is invalid or has been already used. |
 | 901 | Confirmation code is empty. |

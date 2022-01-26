@@ -42,7 +42,7 @@ To retrieve information about an abstract product list content item, send the re
 
 | HEADER KEY | REQUIRED | DESCRIPTION |
 | --- | --- | --- |
-| locale |  | Defines the locale to retreive the content item information for. If not specified, the endpoint returns the information for the *default* locale.  |
+| locale |  | Defines the locale to retrieve the content item information for. If not specified, the endpoint returns the information for the *default* locale.  |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |

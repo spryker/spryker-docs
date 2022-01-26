@@ -1,24 +1,24 @@
 ---
-title: Payolution - Installment Payment
+title: Integrating the installment payment method for Payolution
 description: Integrate installment payment through Payolution into the Spryker-based shop.
-last_updated: Nov 22, 2019
+last_updated: Oct 23, 2019
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v4/docs/payolution-installment
-originalArticleId: 6860b217-92a7-49ec-8194-31bcafcbc574
+originalLink: https://documentation.spryker.com/v1/docs/payolution-installment
+originalArticleId: d0868100-793a-4f5c-9f68-e0d9a3160901
 redirect_from:
-  - /v4/docs/payolution-installment
-  - /v4/docs/en/payolution-installment
+  - /v1/docs/payolution-installment
+  - /v1/docs/en/payolution-installment
 related:
   - title: Payolution - Performing Requests
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/technical-details-and-howtos/payolution-performing-requests.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-performing-requests.html
   - title: Payolution - Workflow
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/technical-details-and-howtos/payolution-workflow.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-workflow.html
   - title: Payolution
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution.html
-  - title: Payolution - Invoice Payment
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution-payment-methods/payolution-invoice-payment.html
+    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution.html
+  - title: Integrating the invoice paymnet method for Payolution
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/integrating-the-invoice-payment-method-for-payolution.html
   - title: Installing and configuring Payolution
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution-installation-and-configuration.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/installing-and-configuring-payolution.html
 ---
 
 ## Installment Scenarios

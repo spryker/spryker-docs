@@ -1,5 +1,5 @@
 ---
-title: Payolution - Installment Payment
+title: Integrating the installment payment method for Payolution
 description: Integrate installment payment through Payolution into the Spryker-based shop.
 last_updated: Apr 3, 2020
 template: concept-topic-template
@@ -10,15 +10,15 @@ redirect_from:
   - /v5/docs/en/payolution-installment
 related:
   - title: Payolution - Performing Requests
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/technical-details-and-howtos/payolution-performing-requests.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-performing-requests.html
   - title: Payolution - Workflow
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/technical-details-and-howtos/payolution-workflow.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-workflow.html
   - title: Payolution
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution.html
-  - title: Payolution - Invoice Payment
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution-payment-methods/payolution-invoice-payment.html
+    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution.html
+  - title: Integrating the invoice paymnet method for Payolution
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/integrating-the-invoice-payment-method-for-payolution.html
   - title: Installing and configuring Payolution
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution-installation-and-configuration.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/installing-and-configuring-payolution.html
 ---
 
 ## Installment Scenarios

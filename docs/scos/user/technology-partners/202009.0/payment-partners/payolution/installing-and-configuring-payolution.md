@@ -10,15 +10,15 @@ redirect_from:
   - /v6/docs/en/payolution-configuration
 related:
   - title: Integrating Payolution
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution-integration-into-a-project.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/integrating-payolution.html
   - title: Payolution - Performing Requests
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/technical-details-and-howtos/payolution-performing-requests.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-performing-requests.html
   - title: Payolution - Workflow
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/technical-details-and-howtos/payolution-workflow.html
-  - title: Payolution - Installment Payment
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution-payment-methods/payolution-installment-payment.html
-  - title: Payolution - Invoice Payment
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution-payment-methods/payolution-invoice-payment.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-workflow.html
+  - title: Integrating the installment payment method for Payolution
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/integrating-the-installment-payment-method-for-payolution.html
+  - title: Integrating the invoice paymnet method for Payolution
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/integrating-the-invoice-payment-method-for-payolution.html
 ---
 
 To integrate Payolution into your project, first you need to install and configure the Payolution module. This topic describes how to do that.

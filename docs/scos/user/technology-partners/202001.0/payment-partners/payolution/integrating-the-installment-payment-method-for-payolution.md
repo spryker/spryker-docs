@@ -1,49 +1,43 @@
 ---
-title: Payolution - Installment Payment
+title: Integrating the installment payment method for Payolution
 description: Integrate installment payment through Payolution into the Spryker-based shop.
-last_updated: Jun 16, 2021
+last_updated: Nov 22, 2019
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/payolution-installment
-originalArticleId: 8859c087-cad6-43e0-8365-caf51c3423cf
+originalLink: https://documentation.spryker.com/v4/docs/payolution-installment
+originalArticleId: 6860b217-92a7-49ec-8194-31bcafcbc574
 redirect_from:
-  - /2021080/docs/payolution-installment
-  - /2021080/docs/en/payolution-installment
-  - /docs/payolution-installment
-  - /docs/en/payolution-installment
+  - /v4/docs/payolution-installment
+  - /v4/docs/en/payolution-installment
 related:
-  - title: Installing and configuring Payolution
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution-installation-and-configuration.html
-  - title: Integrating Payolution
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution-integration-into-a-project.html
   - title: Payolution - Performing Requests
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/technical-details-and-howtos/payolution-performing-requests.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-performing-requests.html
   - title: Payolution - Workflow
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/technical-details-and-howtos/payolution-workflow.html
-  - title: Payolution - Invoice Payment
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution-payment-methods/payolution-invoice-payment.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-workflow.html
+  - title: Payolution
+    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution.html
+  - title: Integrating the invoice paymnet method for Payolution
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/integrating-the-invoice-payment-method-for-payolution.html
+  - title: Installing and configuring Payolution
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/installing-and-configuring-payolution.html
 ---
 
 ## Installment Scenarios
 
 ### Standard Case
-
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Payolution/payolution-installment-standard-case.png)
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Payolution/payolution-installment-standard-case.png) 
 
 ### Full Refund
-
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Payolution/payolution-installment-fullrefund-case.png)
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Payolution/payolution-installment-fullrefund-case.png) 
 
 ### Partial Refund
-
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Payolution/payolution-installment-partialrefund-case.png)
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Payolution/payolution-installment-partialrefund-case.png) 
 
 ## Integrating Payolution Installment Payment
-
 The In order to integrate installment payment, two simple steps are needed: setting Payolution installment payment configuration and calling the facade functions.
 
 ### Setting Payolution Installment Configuration
-
 As installment requests use additional type of requests called Calculation Requests, two groups of configuration are defined: transaction configuration for handling the basic requests (pre-authorization, re-authorization, etc), and calculation configuration for handling calculation requests. The configuration to integrate installment payments using Payolution is:
+
 * `TRANSACTION_GATEWAY_URL`: the gateway URL to connect with Payolution services (required).
 * `CALCULATION_GATEWAY_URL`: the gateway URL to connect with Payolution calculation service (required).
 * `TRANSACTION_SECURITY_SENDER`: the sender id (required).

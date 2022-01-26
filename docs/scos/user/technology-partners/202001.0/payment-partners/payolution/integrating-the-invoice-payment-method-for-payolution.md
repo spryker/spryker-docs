@@ -1,5 +1,5 @@
 ---
-title: Payolution - Invoice Payment
+title: Integrating the invoice paymnet method for Payolution
 description: Integrate invoice payment through Payolution into the Spryker-based shop.
 last_updated: Dec 26, 2019
 template: concept-topic-template
@@ -10,15 +10,15 @@ redirect_from:
   - /v4/docs/en/payolution-invoice
 related:
   - title: Payolution - Performing Requests
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/technical-details-and-howtos/payolution-performing-requests.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-performing-requests.html
   - title: Payolution - Workflow
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/technical-details-and-howtos/payolution-workflow.html
-  - title: Payolution - Installment Payment
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution-payment-methods/payolution-installment-payment.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-workflow.html
+  - title: Integrating the installment payment method for Payolution
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/integrating-the-installment-payment-method-for-payolution.html
   - title: Payolution
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution.html
+    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution.html
   - title: Installing and configuring Payolution
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution-installation-and-configuration.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/installing-and-configuring-payolution.html
 ---
 
 ## Workflow Scenarios
@@ -92,4 +92,4 @@ The configuration to integrate invoice payments using Payolution is:
 * `PAYOLUTION_BCC_EMAIL_ADDRESS`: Payolution email address to send copies of payment details to Payolution.
 
 ### Performing Requests
-In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. See [Payolution — Performing Requests](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution/technical-details-and-howtos/payolution-performing-requests.html) for a summary. You can also use the facade methods directly which, however, are invoked by the state machine.
+In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. See [Payolution — Performing Requests](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/payolution/payolution-performing-requests.html) for a summary. You can also use the facade methods directly which, however, are invoked by the state machine.

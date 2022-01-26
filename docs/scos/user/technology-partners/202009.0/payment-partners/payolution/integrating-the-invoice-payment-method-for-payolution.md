@@ -1,24 +1,24 @@
 ---
-title: Payolution - Invoice Payment
+title: Integrating the invoice paymnet method for Payolution
 description: Integrate invoice payment through Payolution into the Spryker-based shop.
-last_updated: Jan 20, 2020
+last_updated: Aug 27, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v3/docs/payolution-invoice
-originalArticleId: 21c0e62f-7d61-4e8d-b861-ca5dba42d82f
+originalLink: https://documentation.spryker.com/v6/docs/payolution-invoice
+originalArticleId: 284ceb30-1cad-4dd0-af1d-53f4d37eca4e
 redirect_from:
-  - /v3/docs/payolution-invoice
-  - /v3/docs/en/payolution-invoice
+  - /v6/docs/payolution-invoice
+  - /v6/docs/en/payolution-invoice
 related:
-  - title: Payolution - Performing Requests
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/technical-details-and-howtos/payolution-performing-requests.html
-  - title: Payolution - Workflow
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/technical-details-and-howtos/payolution-workflow.html
-  - title: Payolution - Installment Payment
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution-payment-methods/payolution-installment-payment.html
-  - title: Payolution
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution.html
   - title: Installing and configuring Payolution
-    link: docs/scos/user/technology-partners/page.version/payment-partners/payolution/payolution-installation-and-configuration.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/installing-and-configuring-payolution.html
+  - title: Integrating Payolution
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/integrating-payolution.html
+  - title: Payolution - Performing Requests
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-performing-requests.html
+  - title: Payolution - Workflow
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-workflow.html
+  - title: Integrating the installment payment method for Payolution
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/integrating-the-installment-payment-method-for-payolution.html
 ---
 
 ## Workflow Scenarios
@@ -92,4 +92,4 @@ The configuration to integrate invoice payments using Payolution is:
 * `PAYOLUTION_BCC_EMAIL_ADDRESS`: Payolution email address to send copies of payment details to Payolution.
 
 ### Performing Requests
-In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. See [Payolution — Performing Requests](/docs/scos/user/technology-partners/201907.0/payment-partners/payolution/payolution-performing-requests.html) for a summary. You can also use the facade methods directly which, however, are invoked by the state machine.
+In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. See [Payolution — Performing Requests](/docs/scos/user/technology-partners/202009.0/payment-partners/payolution/technical-details-and-howtos/payolution-performing-requests.html) for a summary. You can also use the facade methods directly which, however, are invoked by the state machine.

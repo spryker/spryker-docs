@@ -37,6 +37,47 @@ Check multiple log groups via Logs Insights as follows. Select the log groups co
 
 ![phase_details]
 
+## Deployment fails at the Run_pre-deploy_hook step
+
+1. On the page of the deployment in the `Build_Push_if_not_exist` step, select **Details**.
+
+![execution_details]
+
+2. In the *Action execution failed* window that opens, select **Link to execution details**.
+
+3. If **PRE_BUILD** State: **FAILED** you need to try to run the step again
+
+![retry_run_pre-deploy_hook]
+
+4. If **BUILD** State: **FAILED** you need to check **SPRYKER_HOOK_BEFORE_DEPLOY** script 
+    
+   1. you can find the variable in the environment deploy file or in the execution log 
+   
+   ![SPRYKER_HOOK_BEFORE_DEPLOY_variable]
+   
+   2. if variable isn't set default script will be executed 
+   
+    ```vendor/bin/install -r pre-deploy -vvv```
+
+###Example:
+In my case **SPRYKER_HOOK_BEFORE_DEPLOY** = ```vendor/bin/install -r EU/pre-deploy -vvv```
+    
+![SPRYKER_HOOK_BEFORE_DEPLOY_variable]
+
+it means that in the code repository, I have a **config/install/EU/pre-deploy.yml** file that contains all commands that execute on the BUILD step
+
+![pre-deploy-file]
+
+as you might notice **scheduler:suspendddddddddddd** argument is misspelled, and it is a root cause of the issue
+
+![hook_before_deploy_execution]
+
+In this particular case I just need to fix the command and rerun the deployment afterward
+
+###Conclusion: 
+
+Most of the issues that you may face at the **Run_pre-deploy_hook** step are related to the scripts that contain in the recipe file, you can add an additional debug commands to the script that can help you research the issue.
+
 ## Deployment fails at the Deploy_Spryker_services step
 
 If a deployment fails at the `Deploy_Spryker_services`, check the ECS services that have failed to deploy and their tasks as follows:

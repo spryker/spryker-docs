@@ -92,7 +92,7 @@ CrefoPayConfig::CREFO_PAY_PAYMENT_METHOD_BILL => 'CrefoPayBill01',
 ];
 ```
 
-See [CrefoPay payment methods](/docs/scos/user/technology-partners/202009.0/payment-partners/crefopay/crefopay-payment-methods.html) for more information on the payment methods provided by CrefoPay.
+See [CrefoPay payment methods](/docs/scos/вум/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay-payment-methods.html) for more information on the payment methods provided by CrefoPay.
 
 ## What's next?
-Once you are done with the installation and configuration of the CrefoPay module, [integrate CrefoPay into your project](/docs/scos/user/technology-partners/202009.0/payment-partners/crefopay/integrating-crefopay.html).
+Once you are done with the installation and configuration of the CrefoPay module, [integrate CrefoPay into your project](/docs/scos/вум/technology-partner-guides/{{page.version}}/payment-partners/crefopay/integrating-crefopay.html).

@@ -35,7 +35,7 @@ To view the entry points, in the **List of Punch Out Connections > Actions** col
 
 
 ## Activating and Deactivating a Punch Out Connection
-To activate or deactivate a connection, in the *Actions* column of hte **List of Pubnch Out Connections**, click:
+To activate or deactivate a connection, in the *Actions* column of hte **List of Punch Out Connections**, click:
 * **Activate** to activate a connection
 * **Deactivate** to deactivate a connection
 

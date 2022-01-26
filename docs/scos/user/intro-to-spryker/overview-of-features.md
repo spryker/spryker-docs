@@ -1,5 +1,6 @@
 ---
 title: Overview of features
+last_updated: Jan 26, 2022
 template: concept-topic-template
 redirect_from:
   - /capabilities/features.htm

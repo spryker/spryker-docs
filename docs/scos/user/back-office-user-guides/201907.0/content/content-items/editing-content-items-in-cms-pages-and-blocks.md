@@ -1,7 +1,7 @@
 ---
 title: Editing Content Items in CMS Pages and Blocks
 description: The guide provides instructions for shop owners on how to update content item widgets in pages and blocks from the Back Office.
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/editing-content-item-widgets
 originalArticleId: 73bf6d03-4555-4856-916f-d6712b58c014
@@ -9,10 +9,6 @@ redirect_from:
   - /v3/docs/editing-content-item-widgets
   - /v3/docs/en/editing-content-item-widgets
 related:
-  - title: Content Item Widgets templates- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/content/content-items/references/content-item-widgets-templates-reference-information.html
-  - title: Content Item Widgets types- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/content/content-items/references/content-item-widgets-types-reference-information.html
   - title: Adding Content Item to Pages and Blocks
     link: docs/scos/user/back-office-user-guides/page.version/content/content-items/adding-content-items-to-cms-pages-and-blocks.html
 ---

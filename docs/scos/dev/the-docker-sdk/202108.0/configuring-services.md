@@ -1,7 +1,7 @@
 ---
 title: Configuring services
 description: Learn how to configure services.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/configuring-services
 originalArticleId: 5b51acd3-1f5c-477d-995a-d821e88fd5f8

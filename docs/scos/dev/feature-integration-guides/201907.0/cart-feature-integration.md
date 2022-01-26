@@ -1,6 +1,6 @@
 ---
 title: Glue- Cart feature integration
-last_updated: Jan 21, 2020
+last_updated: Jan 26, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/cart-feature-integration
 originalArticleId: b962e15f-5c4b-4a7d-b7c8-f20685f54066

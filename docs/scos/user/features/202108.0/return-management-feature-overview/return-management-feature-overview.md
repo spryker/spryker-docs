@@ -1,7 +1,7 @@
 ---
 title: Return Management feature overview
 description: This article provides a description for the feature Return Management in the Spryker Commerce OS.
-last_updated: Sep 2, 2021
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/return-management-feature-overview
 originalArticleId: 74024d01-461c-4514-a158-fb22bb729dde
@@ -104,7 +104,7 @@ To define the most suitable return management process for your project, to learn
 ## Video tutorial
 
 Check out this video to get more details on how Return Management works:
-{% wistia eiw5ev4gv2 960 720 %}
+{% wistia kqxwnzjo3o 960 720 %}
 
 ## Current constraints
 

@@ -1,7 +1,7 @@
 ---
 title: Managing discount vouchers in carts of registered users
 description: Learn how to manage discount vouchers in carts of registered users via Glue API.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-discount-vouchers-in-carts-of-registered-users
 originalArticleId: fdd347a8-d5ae-4799-87f5-b4030c57cdec
@@ -231,7 +231,9 @@ If the voucher is deleted successfully, the endpoints returns the `204 No Data` 
 | --- | --- |
 | 001 | Access token is incorrect. |
 | 002 | Access token is missing. |
-| 3301 | Cart and/or voucher with the specified ID was not found. |
-| 3302 | Incorrect voucher code or the voucher could not be applied. |
+| 003 | Failed to log in the user. |
+| 3301 | Cart or voucher with the specified ID is not found. |
+| 3302 | Incorrect voucher code or the voucher cannot be applied. |
+| 3303 | Cart code cannot be removed. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

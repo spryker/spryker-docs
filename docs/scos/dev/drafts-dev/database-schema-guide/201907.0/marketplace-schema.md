@@ -1,5 +1,5 @@
----last_updated: Nov 22, 2019
-
+---
+last_updated: Nov 22, 2019
 title: Marketplace Schema
 originalLink: https://documentation.spryker.com/v3/docs/db-schema-marketplace
 originalArticleId: 064463e7-3ac5-44b1-9bf6-241b34c5c3a2

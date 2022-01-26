@@ -1,7 +1,7 @@
 ---
 title: Reference information- returns
 description: The guide provides reference information you see when working with returns in the Back Office.
-last_updated: Aug 27, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/returns-reference-information
 originalArticleId: 16447e71-1928-49d4-8c5e-963820006bf3

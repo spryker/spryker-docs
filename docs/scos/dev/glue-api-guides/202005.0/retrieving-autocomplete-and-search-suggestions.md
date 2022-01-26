@@ -1,7 +1,7 @@
 ---
 title: Getting Suggestions for Auto-Completion and Search
 description: This article provides information on which endpoints to use to get search and auto-completion suggestions for your products, categories, and CMS fields.
-last_updated: Sep 14, 2020
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-suggestions-for-auto-completion-and-search
 originalArticleId: 5a31882d-7e51-446d-ad7a-8b3826bb0437
@@ -15,8 +15,6 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-trees.html
   - title: Retrieving Product Information
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/retrieving-product-information.html
-  - title: Using Search Engine Friendly URLs
-    link: docs/scos/dev/glue-api-guides/page.version/using-search-engine-friendly-urls.html
 ---
 
 In addition to [catalog search](/docs/scos/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html), Spryker search engine also provides auto-completion terms and suggestions for products, categories, and CMS pages. The feature allows developers to predict search strings and provide customers with available options.

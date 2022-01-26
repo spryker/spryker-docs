@@ -1,7 +1,7 @@
 ---
 title: Managing guest cart items
 description: Retrieve details about guest cart items and learn what else you can do with the resource.
-last_updated: Jun 29, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-guest-cart-items
 originalArticleId: 55c07d5d-006b-4f81-99b1-92c6a8124688
@@ -3201,19 +3201,26 @@ If the item is deleted successfully, the endpoint returns the “204 No Content�
 | 102 | Failed to add an item to cart. |
 | 103 | Item with the given group key not found in the cart. |
 | 104 | Cart uuid is missing. |
-| 105 | Cart could not be deleted. |
-| 106 | Cart item could not be deleted. |
+| 105 | Cart cannot be deleted. |
+| 106 | Cart item cannot be deleted. |
 | 107 | Failed to create cart. |
 | 109 | Anonymous customer unique id is empty. |
 | 110 | Customer already has a cart. |
 | 111 | Can’t switch price mode when there are items in the cart. |
 | 112 | Store data is invalid. |
-| 113 | Cart item could not be added. |
-| 114 | Cart item could not be updated. |
+| 113 | Cart item cannot be added. |
+| 114 | Cart item cannot be updated. |
 | 115 | Unauthorized cart action. |
 | 116 | Currency is missing. |
 | 117 | Currency is incorrect. |
 | 118 | Price mode is missing. |
 | 119 | Price mode is incorrect. |
+| 4001 | There is a problem with adding or updating the configured bundle. |
+| 4002 | Configurable bundle template is not found. |
+| 4003 | The quantity of the configured bundle should be more than zero. |
+| 4004 | Configured bundle with provided group key is not found in cart. |
+| 4005 | The configured bundle cannot be added. |
+| 4006 | The configured bundle cannot be updated. |
+| 4007 | The configured bundle cannot be removed. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

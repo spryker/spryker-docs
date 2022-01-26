@@ -1,6 +1,6 @@
 ---
 title: Email as a CMS block
-last_updated: May 26, 2021
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/email-as-a-cms-block
 originalArticleId: a93a6291-5a46-4cec-984b-84e12cf41ae1

@@ -1,7 +1,7 @@
 ---
 title: Prices feature integration
 description: The guide walks you through the process of installing the Volume Prices feature in your project.
-last_updated: Sep 15, 2020
+last_updated: Jan 26, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/prices-feature-integration
 originalArticleId: 709f91a9-6b6e-48b5-aba9-10b4adcbe8b1
@@ -9,8 +9,6 @@ redirect_from:
   - /v5/docs/prices-feature-integration
   - /v5/docs/en/prices-feature-integration
 related:
-  - title: Glue API - Product Price API feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-price-api-feature-integration.html
   - title: Configurable Bundle feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/configurable-bundle-feature-integration.html
   - title: Product Images + Configurable Bundle feature integration

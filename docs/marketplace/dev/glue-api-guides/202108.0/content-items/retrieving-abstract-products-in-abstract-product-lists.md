@@ -1,5 +1,6 @@
 ---
 title: Retrieving abstract products in abstract product lists
+last_updated: Jan 26, 2022
 description: This glue API document describes how to retrieve abstract products in abstract product lists.
 template: glue-api-storefront-guide-template
 ---

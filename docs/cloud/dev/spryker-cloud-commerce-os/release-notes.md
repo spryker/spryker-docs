@@ -1,5 +1,6 @@
 ---
 title: Release notes
+last_updated: Jan 26, 2022
 description: New features and enhancements for Spryker Cloud Commerce OS.
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/release-notes

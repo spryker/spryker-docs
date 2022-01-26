@@ -1,5 +1,6 @@
 ---
 title: Tutorial — Troubleshooting 403 error
+last_updated: Jan 26, 2022
 description: Learn how to troubleshoot 403 error
 template: troubleshooting-guide-template
 ---

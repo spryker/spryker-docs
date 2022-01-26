@@ -1,6 +1,6 @@
 ---
 title: Shopmacher
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/shopmacher
 originalArticleId: 4e7b39fc-85b1-435f-8396-c4a7dc9f6e79

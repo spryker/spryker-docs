@@ -1,7 +1,7 @@
 ---
 title: Migration guide - Session
 description: Use the guide to perform the Session part of the Silex Migration Effort.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-session
 originalArticleId: 87af16e9-98c1-42d0-910c-89dfedfcab68

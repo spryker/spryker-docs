@@ -1,7 +1,7 @@
 ---
 title: live chat service
 description: Ensure that live chat helps their customers with new leads and
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/live-chat-service
 originalArticleId: c8b0f94f-7551-4dfc-9b6e-f7d45d6f55bc

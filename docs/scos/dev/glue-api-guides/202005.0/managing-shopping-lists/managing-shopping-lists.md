@@ -1,6 +1,6 @@
 ---
 title: Managing Shopping Lists
-last_updated: Oct 30, 2020
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/managing-shopping-lists
 originalArticleId: 46eec688-6802-433f-998d-c6187356f25b

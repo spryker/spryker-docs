@@ -1,5 +1,6 @@
 ---
 title: Retrieving product offer availabilities
+last_updated: Jan 26, 2022
 description: Retrieve Marketplace product offer availabilities via Glue API
 template: glue-api-storefront-guide-template
 ---

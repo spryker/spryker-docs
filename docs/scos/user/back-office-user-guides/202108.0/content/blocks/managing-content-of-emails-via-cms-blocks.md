@@ -1,7 +1,7 @@
 ---
 title: Managing content of emails via CMS blocks
 description: You can manage the content of emails you send to customers by editing email templates via CMS Blocks.
-last_updated: Jun 17, 2021
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-content-of-emails-via-cms-blocks
 originalArticleId: 082e03b7-4dce-4b06-b839-06e2e26a557b

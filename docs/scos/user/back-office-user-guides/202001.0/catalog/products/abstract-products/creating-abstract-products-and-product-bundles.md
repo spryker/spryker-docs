@@ -1,7 +1,7 @@
 ---
 title: Creating an Abstract Product
 description: Use the procedure to create an abstract product, set a price and validity period, define superattributes, images, and a store the product is available in.
-last_updated: Feb 3, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/creating-an-abstract-product
 originalArticleId: 0ee25a3d-2035-475b-893a-46f5317a271a

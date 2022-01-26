@@ -1,7 +1,7 @@
 ---
 title: Migration guide - ProductLabel
 description: Use the guide to update the ProductLabel module to a newer version.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-product-label
 originalArticleId: f991c2ea-e52b-42d0-89ab-2fc645f8ab69

@@ -1,6 +1,6 @@
 ---
 title: REST API Reference
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/rest-api-reference
 originalArticleId: 96669cc3-1ce0-4a93-b5bf-653c48201286

@@ -1,7 +1,7 @@
 ---
 title: Retrieving company roles
 description: Learn how to retrieve company roles via Glue API.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-company-roles
 originalArticleId: 91e7d4fb-7088-4249-bb24-c146c3a63ea4
@@ -163,8 +163,8 @@ To retrieve a company role, send the request:
 | --- | --- |
 | 001 | Authentication token is invalid. |
 | 002 | Authentication token is missing. |
-|2101 | Company role is not found. |
-| 2103 | Current company user is not set. You need to select the current company user with /company-user-access-tokens in order to access the resource collection.
+| 2101 | Company role is not found. |
+| 2103 | Current company user is not set. Select the current company user with `/company-user-access-tokens` to access the resource collection. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 

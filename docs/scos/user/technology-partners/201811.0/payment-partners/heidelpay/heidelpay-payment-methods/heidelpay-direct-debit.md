@@ -1,7 +1,7 @@
 ---
 title: Heidelpay - Direct Debit
 description: Integrate direct debit payment through Heidelpay into the Spryker-based shop.
-last_updated: May 19, 2020
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/heidelpay-direct-debit
 originalArticleId: cba54b1e-33a2-4456-83cf-bd11447f14df

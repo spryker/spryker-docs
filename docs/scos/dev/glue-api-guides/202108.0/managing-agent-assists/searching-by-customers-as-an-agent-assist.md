@@ -1,7 +1,7 @@
 ---
 title: Searching by customers as an agent assist
 description: As an agent assist, search by customers to find the customer reference you want to impersonate.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/searching-by-customers-as-an-agent-assist
 originalArticleId: 7e16c84e-9baf-4c1b-bab3-bb2d1db0a7d9
@@ -316,8 +316,8 @@ To search by customers, send the request:
 
 | CODE  | REASON |
 | --- | --- |
-| 001| Access token is invalid.|
-| 4103| Agent access token is missing.|
+| 001 | Access token is invalid.|
+| 4103 | Agent access token is missing; or the action is available to an agent user only.|
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 

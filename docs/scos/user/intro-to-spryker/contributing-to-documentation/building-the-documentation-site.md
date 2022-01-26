@@ -1,5 +1,6 @@
 ---
 title: Building the documentation site
+last_updated: Jan 26, 2022
 description: Find out how you can build the Spryker documentation site
 template: howto-guide-template
 ---

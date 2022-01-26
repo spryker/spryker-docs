@@ -1,7 +1,7 @@
 ---
 title: Products- Reference Information
 description: Use this section to learn more about attributes you use when working with products in the Back Office.
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/products-reference-information
 originalArticleId: e7481443-dbf7-44b8-b8d3-aa339bb580dd

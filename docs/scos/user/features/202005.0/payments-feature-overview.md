@@ -1,7 +1,7 @@
 ---
 title: Payments feature overview
 description: Orders can be paid with none, one or multiple payment methods that can be selected during checkout. Offer multiple payment methods for a single order.
-last_updated: Apr 3, 2020
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/multiple-payment-methods-per-order
 originalArticleId: 31180997-afc6-475d-9505-5e1b87067e36
@@ -34,10 +34,10 @@ The Spryker Commerce OS supports integration of the following payment providers,
 
 * [Adyen](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen.html)
 * [AfterPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/afterpay.html)
-* [Amazon Pay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/amazon-pay/amazon-pay.html)
-* [Arvato](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/arvato/arvato.html)
+* [Amazon Pay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/amazon-pay.html)
+* [Arvato](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/arvato.html)
 * [Billie](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billie.html)
-* [Billpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billpay/billpay.html)
+* [Billpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billpay.html)
 * [Braintree](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/braintree/braintree.html)
 * [BS Payone](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/bs-payone.html)
 * [Computop](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop.html)

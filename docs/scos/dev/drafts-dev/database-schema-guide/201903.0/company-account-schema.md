@@ -1,5 +1,5 @@
----last_updated: Nov 22, 2019
-
+---
+last_updated: Nov 22, 2019
 title: Company Account Schema
 originalLink: https://documentation.spryker.com/v2/docs/db-schema-company-account
 originalArticleId: a3a97e8c-b5a0-4481-91c0-cab0c1ed5136

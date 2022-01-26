@@ -1,7 +1,7 @@
 ---
 title: Merchant Product Restrictions feature overview
 description: Merchant Product Restrictions allow merchants to define the products that are available to each of their B2B customers.
-last_updated: Sep 11, 2020
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/merchant-product-restrictions-feature-overview
 originalArticleId: bfbaeb8a-2aca-494a-ba32-80844aba5b55

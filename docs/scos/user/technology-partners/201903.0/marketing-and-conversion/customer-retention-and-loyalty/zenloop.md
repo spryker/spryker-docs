@@ -1,7 +1,7 @@
 ---
 title: Zenloop
 description: Collect customer feedback automatically via multiple channels by integrating  Zenlopp into Spryker Commerce OS.
-last_updated: Jan 17, 2020
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/zenloop
 originalArticleId: 3e799cd7-cea2-4bfb-81e0-20046cd629ab

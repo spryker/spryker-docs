@@ -1,7 +1,7 @@
 ---
 title: Exporting data
 description: This article will teach you how to export data from a Spryker shop to an external system
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: data-export-template
 originalLink: https://documentation.spryker.com/2021080/docs/exporting-data
 originalArticleId: 0a38b991-f10c-4f6c-90db-247a62cda2e7

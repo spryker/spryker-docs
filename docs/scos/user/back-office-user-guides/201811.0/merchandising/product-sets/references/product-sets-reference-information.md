@@ -1,7 +1,7 @@
 ---
 title: Product Sets- Reference Information
 description: This guide describes the values you enter when creating or updating product sets in the Back Office.
-last_updated: Oct 23, 2019
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/product-sets-reference-information
 originalArticleId: c29cacfc-18d7-47f3-a53e-68ce31c488ff

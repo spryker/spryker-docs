@@ -1,6 +1,6 @@
 ---
 title:  Calculation data structure
-last_updated: Aug 12, 2021
+last_updated: Jan 26, 2022
 description: This document describes calculation data structure
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/calculation-data-structure

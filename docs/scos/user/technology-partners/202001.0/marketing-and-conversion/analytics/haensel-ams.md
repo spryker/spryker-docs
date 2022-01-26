@@ -1,7 +1,7 @@
 ---
 title: Haensel AMS
 description: Integrate Haensel AMS into Spryker project - a leading technology and data analytics service  that offers you innovative and outstanding machine learning and big data solutions.
-last_updated: Jan 25, 2020
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/haensel-ams
 originalArticleId: 246ad233-9057-41e7-9b5a-710b04b14858

@@ -1,7 +1,7 @@
 ---
 title: Retrieving company users
 description: Learn how to retrieve company users via Glue API.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-company-users
 originalArticleId: 4c9db88b-8496-4989-aff3-d0a676bf1a94
@@ -356,8 +356,9 @@ To retrieve information about a company user, send the request:
 | --- | --- |
 | 001 | Access token is invalid. |
 | 002 | Access token is missing.|
-| 1403| Current company account is not set. |
-| 1404 | Specified company user was not found or the user does not have permissions to view the account. |
+| 1401 | Rest user is not a company user. |
+| 1403 | Current company account is not set. Select the current company user with `/company-user-access-tokens` to access the resource collection. |
+| 1404 | Specified company user is not found or does not have permissions to view the account. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 

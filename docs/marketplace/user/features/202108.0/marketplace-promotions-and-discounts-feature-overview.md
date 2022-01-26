@@ -1,5 +1,6 @@
 ---
 title: Marketplace Promotions and Discounts feature overview
+last_updated: Jan 26, 2022
 description: This document contains concept information for the Marketplace Promotions and Discounts feature.
 template: concept-topic-template
 related:

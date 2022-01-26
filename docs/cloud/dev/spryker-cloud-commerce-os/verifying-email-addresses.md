@@ -1,5 +1,6 @@
 ---
 title: Verifying email addresses
+last_updated: Jan 26, 2022
 description: Learn how to verify email addresses, so that your applications can send emails from them.
 template: howto-guide-template
 ---

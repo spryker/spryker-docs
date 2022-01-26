@@ -1,6 +1,6 @@
 ---
 title: Product Labels feature overview
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/product-label
 originalArticleId: 9981339d-e3a3-4607-82f3-006c0d49729d

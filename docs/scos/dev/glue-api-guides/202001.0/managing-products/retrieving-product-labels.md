@@ -1,7 +1,7 @@
 ---
 title: Accessing Product Labels
 description: The article explores how to retrieve a product label by the label ID or product provided in the Product Labels API.
-last_updated: Mar 4, 2020
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/retrieving-product-labels
 originalArticleId: f14ed0b0-60bd-4089-bb7f-95150ce88ae4

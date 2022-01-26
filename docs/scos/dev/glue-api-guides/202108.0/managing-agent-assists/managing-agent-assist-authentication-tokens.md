@@ -1,7 +1,7 @@
 ---
 title: Managing agent assist authentication tokens
 description: Refresh an agent assist token and revoke an agent assist refresh token.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-agent-assist-authentication-tokens
 originalArticleId: a3ef0b2b-9ad0-4970-9f9f-bf5f2d975c65
@@ -123,9 +123,10 @@ The tokens are marked as expired on the date and time of the request. You can co
 
 | CODE  | REASON |
 | --- | --- |
-|001 | Access token is invalid.  |
-|002 |Access token is missing. |
-|004 |Failed to refresh token.  |
+| 001 | Access token is invalid. |
+| 002 | Access token is missing. |
+| 004 | Failed to refresh token. |
+| 901 | The `refreshToken` attribute is not specified or empty. |
 
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

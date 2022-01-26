@@ -1,6 +1,6 @@
 ---
 title: Retrieving Navigation Trees
-last_updated: Jul 31, 2020
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/retrieving-navigation-trees-201903
 originalArticleId: 361e9429-003a-4a1c-b807-7e6440e2815e
@@ -8,10 +8,6 @@ redirect_from:
   - /v2/docs/retrieving-navigation-trees-201903
   - /v2/docs/en/retrieving-navigation-trees-201903
 related:
-  - title: Navigation API feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/navigation-api-feature-integration.html
-  - title: Catalog Search
-    link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.htmlct-catalog.html
   - title: Browsing a Category Tree
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-trees.html
 ---

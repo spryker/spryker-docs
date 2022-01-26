@@ -1,7 +1,7 @@
 ---
 title: Integrating product CMS blocks
 description: The guide describes the process of installing the Product CMS Block into your project.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/enabling-the-product-cms-block
 originalArticleId: 2fd5636b-9196-4a11-8191-4a97dc7a4406
@@ -12,12 +12,6 @@ redirect_from:
   - /docs/en/enabling-the-product-cms-block
   - /docs/scos/dev/technical-enhancements/enabling-the-product-cms-block.html
 related:
-  - title: CMS Block
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
-  - title: Creating CMS Blocks
-    link: docs/scos/user/back-office-user-guides/page.version/content/blocks/creating-cms-blocks.html
-  - title: Managing CMS Blocks
-    link: docs/scos/user/back-office-user-guides/page.version/content/blocks/managing-cms-blocks.html
   - title: Migration Guide - CMS Block
     link: docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html
   - title: Migration Guide - CMS Block GUI

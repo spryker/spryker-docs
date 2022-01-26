@@ -1,7 +1,7 @@
 ---
 title: Customer Module Overview
 description: This article describes how new customers can be created and managed and how to enable specific features related to customers.
-last_updated: Sep 14, 2020
+last_updated: Jan 26, 2022
 template: feature-walkthrough-template
 originalLink: https://documentation.spryker.com/v5/docs/customer-module-overview
 originalArticleId: 119fad7b-c05f-4797-965c-75d3fea94e71

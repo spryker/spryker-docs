@@ -1,7 +1,7 @@
 ---
 title: RatePay - Invoice
 description: Integrate invoice payment through Ratepay into the Spryker-based shop.
-last_updated: Jul 31, 2020
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/ratepay-invoice
 originalArticleId: 9ce46666-2160-4a32-b81a-9396e95cbfd6

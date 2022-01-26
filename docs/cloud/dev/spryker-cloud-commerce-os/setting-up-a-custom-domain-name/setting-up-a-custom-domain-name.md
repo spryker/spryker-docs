@@ -1,5 +1,6 @@
 ---
 title: Setting up a custom domain name
+last_updated: Jan 26, 2022
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/setting-up-a-custom-domain-name
 originalArticleId: fbf9cb02-2a68-45bd-a404-258011585225

@@ -1,7 +1,7 @@
 ---
 title: Computop - Credit Card
 description: Integrate  Credit Card payment through Computop into the Spryker-based shop.
-last_updated: Dec 26, 2019
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/computop-credit-card
 originalArticleId: d3093d88-80d8-41e8-9bde-fb555897ef4f

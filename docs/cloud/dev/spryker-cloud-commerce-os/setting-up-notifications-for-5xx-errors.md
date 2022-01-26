@@ -1,5 +1,6 @@
 ---
 title: Setting up a notifications for 5xx errors
+last_updated: Jan 26, 2022
 description: Learn how to set up notifications for 5xx errors via SNS
 template: howto-guide-template
 ---

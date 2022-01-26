@@ -1,7 +1,7 @@
 ---
 title: Product Rating & Reviews feature overview
 description: The Product Reviews feature allows customers to add reviews and ratings to abstract products.
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/product-reviews
 originalArticleId: cf2e25ba-68c4-4fdf-b4a9-a5620202c092

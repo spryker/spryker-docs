@@ -1,5 +1,6 @@
 ---
 title: Table Feature Total
+last_updated: Jan 26, 2022
 description: This document provides details about the Table Feature Total component in the Components Library.
 template: concept-topic-template
 ---

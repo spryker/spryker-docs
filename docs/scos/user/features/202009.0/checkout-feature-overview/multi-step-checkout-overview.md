@@ -1,7 +1,7 @@
 ---
 title: Multi-step checkout
 description: The checkout is based on a flexible step engine and can be adjusted to any use case.
-last_updated: May 28, 2021
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/multi-step-checkout
 originalArticleId: a79df6fe-d952-45fa-b041-37a40bed5c64

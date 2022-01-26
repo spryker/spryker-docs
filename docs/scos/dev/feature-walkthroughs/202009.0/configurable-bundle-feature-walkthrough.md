@@ -1,6 +1,6 @@
 ---
 title: Configurable Bundle feature walkthrough
-last_updated: Aug 12, 2021
+last_updated: Jan 26, 2022
 description: The Configurable Bundle feature allows creating a configurable list of items.
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/configurable-bundle-module-relations

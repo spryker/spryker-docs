@@ -1,7 +1,7 @@
 ---
 title: Managing Customer Access
 description: The guide provides a procedure on how a shop owner can define restrictions for actions for non-logged in users.
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/managing-customer-access
 originalArticleId: 556b138b-bc79-4da0-be9b-9ff4a5800c03
@@ -9,12 +9,6 @@ redirect_from:
   - /v2/docs/managing-customer-access
   - /v2/docs/en/managing-customer-access
 related:
-  - title: Managing Customer Groups
-    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customer-groups.html
-  - title: Managing Customer Addresses
-    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customer-addresses.html
-  - title: Managing Customers
-    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customers.html
   - title: Customer Accounts
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
   - title: Customers- Reference Information

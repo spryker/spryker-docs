@@ -1,7 +1,7 @@
 ---
 title: Abstract and Concrete Products
 description: Create and manage abstract and concrete products throughout your online shop in the Back Office.
-last_updated: May 19, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/abstract-and-concrete-products
 originalArticleId: d32d4139-39e9-457d-9cdd-7570ed1bb674

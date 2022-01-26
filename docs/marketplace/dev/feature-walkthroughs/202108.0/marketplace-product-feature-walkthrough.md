@@ -1,14 +1,15 @@
 ---
 title: Marketplace Product feature walkthrough
+last_updated: Jan 26, 2022
 description: A Marketplace Product feature adds merchant information to the product that a merchant sells.
 template: feature-walkthrough-template
 ---
 
 The *Marketplace Product* feature provides a relation between Products and Merchants. 
-`MerchantProductAbstract` is a database table used to store data about relations. The Product features continue to work as before.
-On the Storefront, there are additional plugins and widgets to support the relationship between Products and Merchants.
+`MerchantProductAbstract` is a database table used to store data with the Product and Merchant relations. The [Product features work as in the Spryker Commerce OS](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html).
+However, on the Storefront, there are additional plugins and widgets to support the relation between Products and Merchants.
 Products are extended with the merchant's data and, when purchased, are assigned to the appropriate `MerchantOrder`.
-See [Marketplace Merchant Portal Product Management](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-merchant-portal-product-management-feature-walkthrough.html) to learn more about managing products in the Merchant Portal.
+See [Marketplace Merchant Portal product management](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-merchant-portal-product-management-feature-walkthrough.html) to learn more about managing products in the Merchant Portal.
 
 {% info_block warningBox "User documentation" %}
 

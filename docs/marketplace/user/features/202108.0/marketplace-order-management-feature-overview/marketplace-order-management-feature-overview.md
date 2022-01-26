@@ -1,5 +1,6 @@
 ---
 title: Marketplace Order Management feature overview
+last_updated: Jan 26, 2022
 description: This document contains concept information for the Marketplace order feature in the Spryker Commerce OS.
 template: concept-topic-template
 ---

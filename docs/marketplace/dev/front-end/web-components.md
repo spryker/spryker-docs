@@ -1,5 +1,6 @@
 ---
 title: Web Components
+last_updated: Jan 26, 2022
 description: This document provides details how web components are used and what their function is in the Merchant Portal Frontend.
 template: concept-topic-template
 ---

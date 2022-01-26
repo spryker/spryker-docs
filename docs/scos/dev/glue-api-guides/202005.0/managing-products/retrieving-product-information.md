@@ -1,7 +1,7 @@
 ---
 title: Retrieving Product Information
 description: This article explains how to get various information and resources of an abstract or concrete product, such as availability, price, taxes, and image sets.
-last_updated: Sep 14, 2020
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-product-information
 originalArticleId: b3b5a044-f7aa-40d4-8006-2c8460e86e29

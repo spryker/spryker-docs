@@ -1,5 +1,6 @@
 ---
 title: Tutorial — Troubleshooting a killed process
+last_updated: Jan 26, 2022
 description: Learn how to troubleshoot a killed process
 template: troubleshooting-guide-template
 ---

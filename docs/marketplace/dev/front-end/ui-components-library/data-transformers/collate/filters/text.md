@@ -1,5 +1,6 @@
 ---
 title: Data Transformer Collate Filter Text
+last_updated: Jan 26, 2022
 description: This document provides details about the Data Transformer Collate Filter Text service in the Components Library.
 template: concept-topic-template
 ---

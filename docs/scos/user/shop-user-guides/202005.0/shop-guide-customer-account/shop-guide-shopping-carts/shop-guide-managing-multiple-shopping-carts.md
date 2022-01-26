@@ -1,7 +1,7 @@
 ---
 title: Shop Guide - Managing Multiple Shopping Carts
 description: Use the procedures to update, duplicate, share, or delete a shopping cart, and convert shopping carts into a shopping list, and share shopping carts via links.
-last_updated: Sep 15, 2020
+last_updated: Jan 26, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/shop-guide-managing-shopping-carts
 originalArticleId: efa68d41-79a9-4274-88ab-4f360342bb3e

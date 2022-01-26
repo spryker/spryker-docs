@@ -1,5 +1,6 @@
 ---
 title: Table Column Type Autocomplete
+last_updated: Jan 26, 2022
 description: This document provides details about the Table Column Type Autocomplete in the Components Library.
 template: concept-topic-template
 ---

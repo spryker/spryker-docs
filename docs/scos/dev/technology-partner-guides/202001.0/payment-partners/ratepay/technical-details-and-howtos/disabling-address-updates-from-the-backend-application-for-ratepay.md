@@ -1,7 +1,7 @@
 ---
 title: Disabling address updates from the backend application for RatePay
 description: Disable address updates from the backend application for Ratepay.
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/ratepay-disable-address-updates
 originalArticleId: 11d477f5-1b64-48d1-8f7c-588d7e36eff9

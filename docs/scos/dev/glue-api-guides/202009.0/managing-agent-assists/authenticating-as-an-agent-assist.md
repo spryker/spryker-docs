@@ -1,7 +1,7 @@
 ---
 title: Authenticating as an agent assist
 description: Authenticate as an agent assist on the Storefront.
-last_updated: Mar 10, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/authenticating-as-an-agent-assist
 originalArticleId: 224d201f-0d8b-4990-9792-5cdfdb33f27b

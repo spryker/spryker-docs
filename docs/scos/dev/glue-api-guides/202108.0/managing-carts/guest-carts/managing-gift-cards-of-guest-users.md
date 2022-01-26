@@ -1,7 +1,7 @@
 ---
 title: Managing gift cards of guest users
 description: Retrieve details about gift cards of the guest users, and learn what else you can do with the resource.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-gift-cards-of-guest-users
 originalArticleId: 59818732-fa5a-43df-acd9-3d4ea91ee1ac
@@ -184,6 +184,8 @@ If the item is deleted successfully, the endpoint will respond with a `204 No C
 
 | CODE  | REASON |
 | --- | --- |
+| 101 | Cart with the specified ID is not found. |
+| 109 | `X-Anonymous-Customer-Unique-Id` header is empty. |
 | 3301| Cart code not found in cart. |
 | 3302| Cart code can't be added. |
 | 3303| Cart code can't be removed. |

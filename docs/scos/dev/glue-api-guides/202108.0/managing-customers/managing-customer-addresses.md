@@ -1,7 +1,7 @@
 ---
 title: Managing customer addresses
 description: Create, retrieve and delete customer addresses via Glue API.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-addresses-via-glue-api
 originalArticleId: 83f855ab-83ed-4a69-a087-196f88c0007b
@@ -392,12 +392,15 @@ If the address is deleted successfully, the endpoint returns the `204 No Content
 
 | CODE | REASON |
 | --- | --- |
-| 402 | Customer with the specified ID was not found. |
-| 404 | Specified address could not be found. |
+| 001 | Access token is invalid. |
+| 002 | Access token is missing. |
+| 402 | Customer with the specified ID is not found. |
+| 404 | Specified address cannot be found. |
 | 405 | Customer reference is missing. |
 | 409 | Failed to update an address. |
 | 411 | Unauthorized request. |
 | 412 | No address ID provided. |
+| 901 | One of the following fields is not specified: `salutaion`, `firstName`, `lastName`, `city`, `address1`, `address2`, `zipCode`, `country`, `iso2Code`, `isDefaultShipping`, `isDefaultBilling` |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 

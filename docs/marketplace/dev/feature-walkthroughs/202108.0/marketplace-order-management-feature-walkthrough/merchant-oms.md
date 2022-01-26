@@ -1,5 +1,6 @@
 ---
 title: Merchant Oms
+last_updated: Jan 26, 2022
 description: Merchant Oms provides a dedicated Oms flow for Merchant Orders and their Merchants.
 template: concept-topic-template
 ---

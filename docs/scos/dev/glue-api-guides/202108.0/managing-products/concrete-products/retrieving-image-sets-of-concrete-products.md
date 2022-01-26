@@ -1,7 +1,7 @@
 ---
 title: Retrieving image sets of concrete products
 description: Retrieve image sets of concrete products.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-image-sets-of-concrete-products
 originalArticleId: 77585058-128f-4e20-a4c8-633b62dfabec
@@ -88,6 +88,7 @@ Request sample : `GET http://glue.mysprykershop.com/concrete-products/001_259040
 
 | CODE | REASON |
 | --- | --- |
+| 302 | Concrete product is not found. |
 | 304 | Can't find concrete product image sets. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

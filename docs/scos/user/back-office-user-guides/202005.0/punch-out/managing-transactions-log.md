@@ -1,7 +1,7 @@
 ---
 title: Managing Transactions Log
 description: In this section, you can view data being transmitted during the cart transfer in the Punch out protocol.
-last_updated: Jun 5, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/managing-transactions-log
 originalArticleId: df771a47-370e-4eb5-982c-b2a26b770c84

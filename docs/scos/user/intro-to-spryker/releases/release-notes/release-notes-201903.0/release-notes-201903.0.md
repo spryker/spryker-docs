@@ -1,7 +1,7 @@
 ---
 title: Release Notes 201903.0
 description: This document contains a business level description of major new features and enhancements released in March of 2019.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes-201903-0
 originalArticleId: 2bbb03f8-9482-4221-b53a-409c36125058
@@ -27,12 +27,6 @@ related:
     link: docs/scos/dev/sdk/development-tools/code-sniffer.html
   - title: Architecture Sniffer
     link: docs/scos/dev/sdk/development-tools/architecture-sniffer.html
-  - title: Heidelpay - Split-payment Marketplace
-    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-split-payment-marketplace.html
-  - title: Payment Integration - Adyen
-    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen.html
-  - title: Afterpay
-    link: docs/scos/user/technology-partners/page.version/payment-partners/afterpay.html
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of major new features and enhancements released in March of 2019.

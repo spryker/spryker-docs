@@ -1,7 +1,7 @@
 ---
 title: Checking out purchases
 description: Learn how to check out purchases via Glue API.
-last_updated: Jul 13, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/checking-out-purchases
 originalArticleId: 6da60ad5-47a7-4554-a7e7-d662af2295dd
@@ -1302,6 +1302,14 @@ For the attributes of other included resources, see [Retrieve customer's order](
 | 400 | Bad request. This error can occur due to the following reasons:<ul><li>The POST data is incorrect;</li><li>Neither **Authorization** nor **X-Anonymous-Customer-Unique-Id** headers were provided in the request.</li></ul> |
 | 404 | Order not found. |
 | 422 | Order payment is not updated. Checkout data is incorrect. |
+| 1101 | Checkout data is invalid. |
+| 1102 | Order cannot be placed. |
+| 1103 | Cart is not found. |
+| 1104 | Cart is empty. |
+| 1105 | `Authorization` or `X-Anonymous-Customer-Unique-Id` header is required. |
+| 1106 | Cart cannot be deleted. |
+| 1107 | Multiple payments are not allowed. |
+| 1108 | Payment method "%s" of payment provider "%s" is invalid. |
 
 
 ## Next steps

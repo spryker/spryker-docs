@@ -1,7 +1,7 @@
 ---
 title: Prioritizing Labels
 description: Use the procedure to set a specific order for product labels to display them in the storefront that fits your preferences.
-last_updated: Oct 23, 2019
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/prioritizing-labels
 originalArticleId: c7fec111-9bde-4646-a7bb-05e33ee92f2a

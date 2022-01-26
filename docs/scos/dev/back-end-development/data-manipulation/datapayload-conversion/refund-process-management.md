@@ -1,7 +1,7 @@
 ---
 title: Refund Process Management
 description: The article describes the methods used to calculate the refund, as well as ways of using and extending the Refund module.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/refund-process-management
 originalArticleId: d86ae613-8789-4f31-badb-b758769de71e
@@ -17,8 +17,6 @@ redirect_from:
   - /v4/docs/refund-process-management
   - /v4/docs/en/refund-process-management
 related:
-  - title: Refunds feature overview
-    link: docs/scos/user/features/page.version/refunds-feature-overview.html
   - title: Migration Guide - Refund
     link: docs/scos/dev/module-migration-guides/migration-guide-refund.html
 ---

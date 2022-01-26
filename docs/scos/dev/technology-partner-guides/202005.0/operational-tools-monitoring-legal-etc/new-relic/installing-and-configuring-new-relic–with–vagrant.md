@@ -1,5 +1,6 @@
 ---
 title: Installing and configuring New Relic with Vagrant
+last_updated: Jan 26, 2022
 template: howto-guide-template
 related:
   - title: Migration Guide - Session

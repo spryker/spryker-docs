@@ -1,7 +1,7 @@
 ---
 title: Loggly
 description: Read log messages from a queue and send the messages via https by integrating Loggly into the Spryker Commerce OS.
-last_updated: Jan 20, 2020
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/loggly-queue
 originalArticleId: 1e120e30-d704-42b0-9d23-a5829502b55e

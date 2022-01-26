@@ -1,7 +1,7 @@
 ---
 title: Comments feature overview
 description: Comments feature provides the ability for online owners to add Comments Widget that  allows the customers to leave comments or special requests.
-last_updated: Sep 14, 2020
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/comments-feature-overview
 originalArticleId: 7c077738-136f-485b-b48c-79bf9b0a035c

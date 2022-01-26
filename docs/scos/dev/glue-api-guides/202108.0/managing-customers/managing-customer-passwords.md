@@ -1,7 +1,7 @@
 ---
 title: Managing customer passwords
 description: Change and reset customer password via Glue API
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-passwords
 originalArticleId: 51bec82b-e9f6-4c92-a87d-4f609d8176e8
@@ -149,11 +149,17 @@ If the password reset is successful, the endpoint returns the `204 No Content` s
 
 | CODE | REASON |
 | --- | --- |
+|   |   |
+| 002 | Access token is missing. |
+| 404 | Customer with the specified ID is not found.  |
 | 406 | New password and password confirmation do not match. |
 | 407 | Password change failed. |
-| 408 | Invalid password. |
+| 408 | Old password is invalid.|
 | 411 | Unauthorized request. |
 | 415 | Password Reset Key is invalid. |
+| 420 | The password character set is invalid.  |
+| 422 | `newPassword` and `confirmPassword` values are not identic.  |
+| 901 | `newPassword` and `confirmPassword` are not specified; or the password length is invalid (it should be from 8 to 64 characters). |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 

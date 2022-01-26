@@ -1,6 +1,6 @@
 ---
 title: Retrieving Related Products
-last_updated: Jul 31, 2020
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/retrieving-related-products-201903
 originalArticleId: e6cb2f93-5755-4c51-a4ce-7e97afc94999
@@ -8,16 +8,12 @@ redirect_from:
   - /v2/docs/retrieving-related-products-201903
   - /v2/docs/en/retrieving-related-products-201903
 related:
-  - title: Product Relations API feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/product-relations-api-feature-integration.html
   - title: Retrieving Alternative Products
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/retrieving-alternative-products.html
   - title: Retrieving Product Information
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/retrieving-product-information.html
   - title: Product Relations
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-relations/product-relations.html
-  - title: Catalog Search
-    link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.htmlct-catalog.html
 ---
 
 Using the **Product Relations** feature, sellers can define a list of comparable or additional items for each product. You can display such items, also called Related Products, in search and in the cart together with the products selected by customers. This can help boosting the cross- and up-selling performance of the outlet.

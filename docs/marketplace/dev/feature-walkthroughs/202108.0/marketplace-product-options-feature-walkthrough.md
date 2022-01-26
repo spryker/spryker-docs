@@ -1,5 +1,6 @@
 ---
 title: Marketplace Product Options feature walkthrough
+last_updated: Jan 26, 2022
 description: Marketplace Product Options allows merchants to create their product option groups and values.
 template: feature-walkthrough-template
 ---

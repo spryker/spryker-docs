@@ -1,7 +1,7 @@
 ---
 title: Managing payment methods
 description: Use the guide to view, update, activate, and assign to stores payment methods in the Back Office.
-last_updated: Aug 27, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/managing-payment-methods
 originalArticleId: 4e73018a-e19c-4cad-b657-65a849ef14ee

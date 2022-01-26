@@ -1,7 +1,7 @@
 ---
 title: Managing wishlist items
 description: Add and delete items from wishlists via Glue API.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-wishlist-items
 originalArticleId: 2ce23129-3ad7-4053-9e9d-8f5bf697aa87
@@ -104,9 +104,13 @@ If the item is removed successfully, the endpoint returns the `204 No Content` s
 
 | CODE | REASON |
 | --- | --- |
-| 201 | Cannot find the wishlist. |
-| 206 | Cannot add an item to the wishlist. |
+| 001 | Access token is invalid. |
+| 002 | Access token is missing. |
+| 201 | Wishlist with the specified ID is not found. |
+| 206 | Item with the specified ID cannot be added to the wishlist. |
 | 207 | Cannot remove the item. |
-| 208 | An item with the provided SKU does not exist in the wishlist. |
+| 208 | Item with the provided SKU does not exist in the wishlist. |
+| 209 | ID is not specified. |
+| 901 |`sku` field is empty. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

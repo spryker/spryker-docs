@@ -1,7 +1,7 @@
 ---
 title: Product + cart feature integration
 description: The guide walks you through the process of installing the Product and Cart features in your project.
-last_updated: Aug 27, 2020
+last_updated: Jan 26, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/product-cart-feature-integration
 originalArticleId: f2fd3c1f-fe23-4cae-aeef-239c212b4c56

@@ -1,7 +1,7 @@
 ---
 title: Tooling config file
 description: The article provides information about a tooling config file that contains settings for supported tools and directives.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.tooling-config-fileer.com/2021080/docs/tooling-config-file
 originalArticleId: 535d6b07-76d8-47f1-a4d1-5b404439109e

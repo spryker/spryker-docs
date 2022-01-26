@@ -1,7 +1,7 @@
 ---
 title: Inventory management feature integration
 description: The guide guides you through the process of installing the Warehouse Management functionality into your project.
-last_updated: Jun 17, 2021
+last_updated: Jan 26, 2022
 template: feature-integration-guide-template
 originalLink: /docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html-feature-integration
 originalArticleId: cb79eb0c-0a3a-49c5-a911-ef6f992f1118

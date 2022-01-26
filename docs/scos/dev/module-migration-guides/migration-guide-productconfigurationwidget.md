@@ -1,5 +1,6 @@
 ---
 title: Migration guide - ProductConfigurationWidget
+last_updated: Jan 26, 2022
 description: Learn how to upgrade the ProductConfigurationWidget module to a newer version.
 template: module-migration-guide-template
 ---

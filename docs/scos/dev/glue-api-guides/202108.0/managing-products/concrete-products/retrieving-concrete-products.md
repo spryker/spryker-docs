@@ -1,7 +1,7 @@
 ---
 title: Retrieving concrete products
 description: Retrieve general information about concrete products.
-last_updated: Jun 21, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-concrete-products
 originalArticleId: 4f36b42a-e2a2-46a1-be84-ae9f3b2a1a25
@@ -1660,5 +1660,6 @@ For other attributes of the included resources, see:
 | CODE | REASON |
 | --- | --- |
 | 302 | Concrete product is not found. |
+| 312 | Concrete product is not specified.  |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

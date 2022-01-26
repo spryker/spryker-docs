@@ -1,7 +1,7 @@
 ---
 title: Editing Abstract Products
 description: The guide walks you through the procedure of updating an abstract product in the Back Office.
-last_updated: Feb 5, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/editing-an-abstract-product
 originalArticleId: 59f72a8c-fab0-4992-b850-67b007536c9d
@@ -13,8 +13,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-and-concrete-products.html
   - title: Creating Product Variants
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/concrete-products/creating-product-variants.html
-  - title: Editing Product Variant
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/concrete-products/editing-product-variant.html
   - title: Creating Product Bundles
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/creating-product-bundles.html
   - title: Managing Attributes

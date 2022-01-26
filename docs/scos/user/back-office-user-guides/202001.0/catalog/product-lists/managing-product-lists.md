@@ -1,7 +1,7 @@
 ---
 title: Managing Product Lists
 description: Use these procedures to edit, export, remove a product list or remove products from the product list in the Back Office.
-last_updated: Jan 9, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/managing-product-lists
 originalArticleId: 98ff4c06-311c-43eb-bf01-dc736904057b

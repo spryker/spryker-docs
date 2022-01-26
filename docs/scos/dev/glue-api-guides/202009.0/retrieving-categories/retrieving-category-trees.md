@@ -1,7 +1,7 @@
 ---
 title: Retrieving category trees
 description: Retrieve a full navigation tree with child category nodes.
-last_updated: Feb 9, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/retrieving-category-trees
 originalArticleId: e85112d8-8488-49e4-a3c8-0e943fe85645

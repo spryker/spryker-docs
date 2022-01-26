@@ -1,7 +1,7 @@
 ---
 title: Migration guide - Shipment
 description: Use the guide to learn how to update the Shipment module to a newer version.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-shipment
 originalArticleId: 4c1484d3-4e38-4cc1-b03f-82ef2136ec43
@@ -29,11 +29,6 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-shipment.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-shipment.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-shipment.html
-related:
-  - title: "Reference information: Shipment method plugins"
-    link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
-  - title: Shipment feature overview
-    link: docs/scos/user/features/page.version/shipment-feature-overview.html
 ---
 
 ## Upgrading from version 7.* to 8.*

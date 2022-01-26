@@ -21,9 +21,6 @@ redirect_from:
   - /v2/docs/en/ht-add-new-shipment-method
   - /v1/docs/ht-add-new-shipment-method
   - /v1/docs/en/ht-add-new-shipment-method
-related:
-  - title: "Reference information: Shipment method plugins"
-    link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
 ---
 
 {% info_block infoBox %}

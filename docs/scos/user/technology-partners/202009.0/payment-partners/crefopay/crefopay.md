@@ -1,6 +1,6 @@
 ---
 title: CrefoPay
-last_updated: Aug 27, 2020
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/crefopay
 originalArticleId: acbbb412-a21f-4e15-b648-7ee7bcf3122c

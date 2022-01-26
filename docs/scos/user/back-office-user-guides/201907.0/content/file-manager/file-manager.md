@@ -1,7 +1,7 @@
 ---
 title: File Manager
 description: The section can be used to upload media files, build a file tree structure, view existing files, and set MIME types in the Back Office.
-last_updated: Nov 26, 2019
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/file-manager
 originalArticleId: 3484eeef-7b4d-4299-a8b5-25788647c9ab

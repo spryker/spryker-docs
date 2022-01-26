@@ -1,7 +1,7 @@
 ---
 title: Technology partner integration
 description: Integrate technology partner solutions to boost your Spryker project performance.
-last_updated: Mar 2, 2021
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/technology-partner-integration
 originalArticleId: 30127fa7-875a-47f3-ab00-9b48dc1d29a5
@@ -103,11 +103,11 @@ In this section you will find information about our Technology Partner Integrati
 ## Payment Partners
 
 * [Adyen](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen.html)
-* [Amazon Pay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/amazon-pay/amazon-pay.html)
+* [Amazon Pay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/amazon-pay.html)
 * [AfterPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/afterpay.html)
-* [Arvato](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/arvato/arvato.html)
+* [Arvato](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/arvato.html)
 * [Billie](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billie.html)
-* [Billpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billpay/billpay.html)
+* [Billpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billpay.html)
 * [Braintree](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/braintree/braintree.html)
 * [BS Payone](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/bs-payone.html)
 * [Computop](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop.html)

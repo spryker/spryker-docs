@@ -1,7 +1,7 @@
 ---
 title: Shipment Module Overview
 description: The main concepts regarding shipping that are modeled in the database are shipment carrier and shipment method.
-last_updated: Jul 29, 2020
+last_updated: Jan 26, 2022
 template: feature-walkthrough-template
 originalLink: https://documentation.spryker.com/v1/docs/shipment-module-overview
 originalArticleId: 37041f6b-f7a2-4f72-9758-f897e4102d92

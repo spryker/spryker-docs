@@ -1,7 +1,7 @@
 ---
 title: Retrieving alternative products
 description: Learn how to find alternatives for discontinued products with Glue API.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-alternative-products
 originalArticleId: b910a3a3-e499-4047-bb32-b96e00b94bcb
@@ -39,7 +39,9 @@ For detailed information on the modules that provide the API functionality and r
 Before suggesting an alternative product, check if a product is discontinued by [retrieving a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product).
 
 {% info_block infoBox %}
+
 It is the responsibility of the client to identify if a product is unavailable and when to provide alternatives. The API only provides information on availability, discontinued status and possible alternatives.
+
 {% endinfo_block %}
 
 ## Retrieve abstract alternative products
@@ -226,6 +228,7 @@ To retrieve abstract alternative products, send the request:
 
 
 ## Retrieve concrete alternative products
+
 To retrieve concrete alternative products, send the request:
 
 ---

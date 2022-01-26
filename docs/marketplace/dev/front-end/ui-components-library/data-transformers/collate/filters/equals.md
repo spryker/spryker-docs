@@ -1,5 +1,6 @@
 ---
 title: Data Transformer Collate Filter Equals
+last_updated: Jan 26, 2022
 description: This document provides details about the Data Transformer Collate Filter Equals service in the Components Library.
 template: concept-topic-template
 ---

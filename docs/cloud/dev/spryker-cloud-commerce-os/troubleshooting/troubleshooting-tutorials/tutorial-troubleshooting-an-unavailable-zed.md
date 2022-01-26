@@ -1,5 +1,6 @@
 ---
 title: Tutorial — Troubleshooting an unavailable Zed
+last_updated: Jan 26, 2022
 description: Learn how to troubleshoot an unavailable Zed
 template: troubleshooting-guide-template
 ---
@@ -18,6 +19,21 @@ Check front-end, gateway, and Zed logs described below. Filter log groups by the
 * `mportal`
 * `backapi`
 * `zed`
+
+{% info_block warningBox "Troubleshooting error 504" %}
+
+If you are troubleshooting response 504, besides errors, pay attention to warnings. Examples:
+
+
+```text
+WARNING:[pool worker] child 18, script 'index.php' (request: "GET /index.php") execution timed out (61 sec),terminating
+WARNING:[pool worker] child 18 exited on signal 15 (SIGTERM) after 221.30 seconds from start
+```
+
+Response 504 can be caused by the `zed` or `boffice` container reaching memory limit. If none of the steps in this document reveal the issue, make sure to include these warnings in your support ticket.
+
+{% endinfo_block %}
+
 
 Check logs via Log groups:
 

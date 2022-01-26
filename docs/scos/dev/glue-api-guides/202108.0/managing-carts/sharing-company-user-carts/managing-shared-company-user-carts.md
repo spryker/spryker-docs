@@ -1,7 +1,7 @@
 ---
 title: Managing shared company user carts
 description: Managed shared company user carts via Glue API.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-shared-company-user-carts
 originalArticleId: 87aea51a-e7f0-43a3-a820-b72537b8395b
@@ -111,7 +111,14 @@ If the request is successful, the endpoint returns  `204 No Content` status code
 
 | CODE | REASON |
 | --- | --- |
-| 401 | The access token is invalid. |
-| 403 | The access token is missing. |
-| 404 | Cart not found. |
-| 422 | Failed to share a cart. |
+| 001 | Access token is invalid. |
+| 002 | Access token is missing. |
+| 101 | Cart is not found. |
+| 104 | Cart uuid is missing.  |
+| 2501| Specified permission group is not found or the user does not have access to it. |
+| 2701 | Action is forbidden. |
+| 2702 | Failed to share a cart. |
+| 2703 | Shared cart not found. |
+| 2704 | Shared cart ID is missing. |
+| 2705 | Shared cart is not found. |
+| 2706 | Failed to save the shared cart. |

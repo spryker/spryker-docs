@@ -858,3 +858,9 @@ To retrieve a specific CMS page, send the request:
 </details>
 
 Find all the related attribute descriptions in [Retrieve all CMS Pages](#all-cms-pages).
+
+## Possible errors
+
+| CODE | REASON |
+| --- | --- |
+| 3801 | CMS page is not found. |

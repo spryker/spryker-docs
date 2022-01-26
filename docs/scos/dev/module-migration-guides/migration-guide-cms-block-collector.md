@@ -1,7 +1,7 @@
 ---
 title: Migration Guide - CmsBlockCollector
 description: Use the guide to update versions to the newer ones of the CMS Block Collector module.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-cms-block-collector
 originalArticleId: 3e039058-48d7-4a5c-bae4-2afa9c5cc0d6
@@ -34,8 +34,6 @@ related:
     link: docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html
   - title: Migration Guide - CMS Block GUI
     link: docs/scos/dev/module-migration-guides/migration-guide-cmsblockgui.html
-  - title: CMS Block
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
 ---
 
 ## Upgrading from Version 1.* to Version 2.*

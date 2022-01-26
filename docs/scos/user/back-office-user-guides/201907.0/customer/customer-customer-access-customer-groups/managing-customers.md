@@ -1,7 +1,7 @@
 ---
 title: Managing Customers
 description: This guide provides instructions on how shop owners can add and manage personal information, customer billing, and shipping addresses in the Back Office.
-last_updated: Dec 23, 2019
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/managing-customers
 originalArticleId: 758136cb-3766-438b-8be1-b383615b98b2
@@ -11,12 +11,6 @@ redirect_from:
 related:
   - title: Customer Accounts
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
-  - title: Managing Customer Addresses
-    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customer-addresses.html
-  - title: Managing Customer Access
-    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customer-access.html
-  - title: Managing Customer Groups
-    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customer-groups.html
   - title: Customers- Reference Information
     link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/references/customers-reference-information.html
 ---

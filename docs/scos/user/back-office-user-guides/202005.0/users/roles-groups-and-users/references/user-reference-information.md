@@ -1,7 +1,7 @@
 ---
 title: User- Reference Information
 description: The guide provides additional information about the values you enter when managing users in the Back Office.
-last_updated: Jun 9, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/user-reference-information
 originalArticleId: fe6c97b0-e3d7-46ea-9621-1954008a6763

@@ -1,6 +1,6 @@
 ---
 title: Managing Product Ratings and Reviews
-last_updated: Aug 13, 2020
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/retrieving-ratings-and-reviews
 originalArticleId: 60b37718-78b9-40f9-a3cb-edad3c01af51

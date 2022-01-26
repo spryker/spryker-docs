@@ -1,7 +1,7 @@
 ---
 title: Quotation process + approval process feature integration
 description: Install the Quotation Process and Approval Process features in your project.
-last_updated: Sep 8, 2020
+last_updated: Jan 26, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/quotation-process-approval-process-feature-integration
 originalArticleId: 61bbc585-009f-4763-a98f-46443715c1c2

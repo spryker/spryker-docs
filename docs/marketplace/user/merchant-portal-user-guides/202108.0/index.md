@@ -1,5 +1,6 @@
 ---
 title: Merchant Portal user guides
+last_updated: Jan 26, 2022
 template: concept-topic-template
 ---
 The Merchant Portal user guides describe how merchant users can accomplish their tasks in the Merchant Portal.

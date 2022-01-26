@@ -1,7 +1,7 @@
 ---
 title: Handling concurrent REST requests and caching with entity tags
 description: This article will provide you with information on how to handle concurrent requests and implement client-side caching with the help of entity tags.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/handling-concurrent-rest-requests-and-caching-with-entity-tags
 originalArticleId: cad91b14-3390-44bb-8e8e-4c6b72926dcc
@@ -89,7 +89,7 @@ The following error responses can be returned by the server when a resource supp
 
 | CODE | REASON |
 | --- | --- |
-| 412 | Pre-condition failed.<br>The `If-Match` header value is invalid or outdated. <br>Request the current state of the resource using a `GET` request to obtain a valid tag value. |
-| 428 | Pre-condition required.<br>The `If-Match` header is missing. |
+| 005 | Pre-condition required.<br>The `If-Match` header is missing. |
+| 006 | Pre-condition failed.<br>The `If-Match` header value is invalid or outdated. <br>Request the current state of the resource using a `GET` request to obtain a valid tag value. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

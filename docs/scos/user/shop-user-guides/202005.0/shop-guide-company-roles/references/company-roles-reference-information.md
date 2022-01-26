@@ -1,7 +1,7 @@
 ---
 title: Company Roles- Reference Information
 description: This article provides reference details to the Company Roles feature in Spryker OS.
-last_updated: Sep 14, 2020
+last_updated: Jan 26, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/company-roles-reference-information
 originalArticleId: 1e596019-73ed-47c7-8a5d-50ad8043db0b

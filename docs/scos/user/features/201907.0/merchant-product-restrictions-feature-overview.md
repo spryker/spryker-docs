@@ -1,7 +1,7 @@
 ---
 title: Product Restrictions from Merchant to Buyer Overview
 description: Product Restrictions allow merchants to define the products that are available to each of their B2B customers.
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/product-restrictions-from-merchant-to-buyer-overview
 originalArticleId: 58d9a8b1-c779-4c78-8067-19082226205c

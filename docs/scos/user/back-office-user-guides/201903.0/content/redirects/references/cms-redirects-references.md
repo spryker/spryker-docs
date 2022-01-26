@@ -1,7 +1,7 @@
 ---
 title: CMS Redirects- References
 description: The guide provides reference information you see when creating and updating URL redirects in the Back Office.
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/cms-redirects-references
 originalArticleId: 4129aebb-aa58-4d35-8099-dc6ae924c05e

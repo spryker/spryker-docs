@@ -1,7 +1,7 @@
 ---
 title: Resolving search engine friendly URLs
 description: Learn how to resolve search engine friendly URLs via Glue API.
-last_updated: Jun 22, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/resolving-search-engine-friendly-urls
 originalArticleId: 41034f7a-96b3-47d8-80ab-6ef8c62b8a4b
@@ -149,7 +149,7 @@ Using the information from the response and the Glue server name, you can constr
 
 | CODE | REASON |
 | --- | --- |
-| 404 | The provided URL does not exist. |
-| 422 | The `url` parameter is missing. |
+| 2801 | The `url` parameter is missing. |
+| 2802 | The provided URL does not exist. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

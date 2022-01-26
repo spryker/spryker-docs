@@ -1,7 +1,7 @@
 ---
 title: Impersonating customers as an agent assist
 description: As an agent assist, authenticate as a customer and impersonate them.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/impersonating-customers-as-an-agent-assist
 originalArticleId: 603fa249-5eab-42d0-93c3-3c09f75da9d0
@@ -101,6 +101,7 @@ Request sample: `POST http://glue.mysprykershop.com/agent-customer-impersonation
 | --- | --- |
 | 001 | Access token is invalid. |
 | 4103 | Action is available to an agent user only. |
+| 4104  | Failed to impersonate a customer. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 

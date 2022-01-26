@@ -1,7 +1,7 @@
 ---
 title: Content Item Widgets
 description: This section is designed to add content items to pages and blocks using the content item widgets in the Back Office.
-last_updated: Feb 4, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/content-item-widgets
 originalArticleId: 4576d4b6-5be3-4291-945e-6e06bbda700e
@@ -9,10 +9,6 @@ redirect_from:
   - /v3/docs/content-item-widgets
   - /v3/docs/en/content-item-widgets
 related:
-  - title: Content Item Widgets templates- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/content/content-items/references/content-item-widgets-templates-reference-information.html
-  - title: Content Item Widgets types- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/content/content-items/references/content-item-widgets-types-reference-information.html
   - title: Editing Content Items in CMS Pages and Blocks
     link: docs/scos/user/back-office-user-guides/page.version/content/content-items/editing-content-items-in-cms-pages-and-blocks.html
 ---

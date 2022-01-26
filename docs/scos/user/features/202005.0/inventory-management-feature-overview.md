@@ -1,7 +1,7 @@
 ---
 title: Inventory Management feature overview
 description: Learn how you can manage warehouse, stock, and availability with the Inventory Management feature
-last_updated: Sep 14, 2020
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/inventory-management
 originalArticleId: 9ba75cb8-b7fa-46b3-b55c-45c68202438a

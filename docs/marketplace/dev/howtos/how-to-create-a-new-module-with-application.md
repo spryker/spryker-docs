@@ -1,5 +1,6 @@
 ---
 title: "HowTo: Create a new module with application"
+last_updated: Jan 26, 2022
 description: This document provides details how to create new module with application
 template: howto-guide-template
 ---

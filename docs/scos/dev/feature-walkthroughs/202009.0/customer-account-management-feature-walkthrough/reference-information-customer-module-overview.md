@@ -1,7 +1,7 @@
 ---
 title: Reference information- Customer module overview
 description: This article describes how new customers can be created and managed and how to enable specific features related to customers.
-last_updated: Jan 28, 2021
+last_updated: Jan 26, 2022
 template: feature-walkthrough-template
 originalLink: https://documentation.spryker.com/v6/docs/reference-information-customer-module-overview
 originalArticleId: 0ece9b14-1188-4721-9323-3c0795216485

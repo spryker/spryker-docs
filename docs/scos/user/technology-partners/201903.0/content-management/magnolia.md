@@ -1,7 +1,7 @@
 ---
 title: Magnolia
 description: Connect content and Spryker Commerce OS by integrating Magnolia CMS.
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/magnolia-cms
 originalArticleId: b2d1cb38-631c-474a-9a21-6c720a87e934

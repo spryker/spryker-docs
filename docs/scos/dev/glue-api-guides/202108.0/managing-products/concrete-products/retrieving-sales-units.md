@@ -1,7 +1,7 @@
 ---
 title: Retrieving sales units
 description: Retrieve sales units of concrete products.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-sales-units
 originalArticleId: 4150363f-4c47-4e7c-b7e6-d1430ce864ba
@@ -100,6 +100,7 @@ See [Retrieving Measurement Units](/docs/scos/dev/glue-api-guides/{{page.version
 
 | CODE  | REASON |
 | --- | --- |
-|302| Concrete product is not found. |
+| 302 | Concrete product is not found. |
+| 312  | Concrete product SKU is not specified. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

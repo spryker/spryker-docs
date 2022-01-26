@@ -1,7 +1,7 @@
 ---
 title: Migration guide - Cms
 description: Use the guide to update versions to the newer ones of the CMS module.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-cms
 originalArticleId: 2283a672-1ea2-4ddc-9132-ef0ab1fe4e2f
@@ -30,8 +30,6 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cms.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cms.html
 related:
-  - title: CMS
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-feature-overview.html
   - title: Migration guide - CmsBlock
     link: docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html
   - title: Migration guide - CmsBlockCollector

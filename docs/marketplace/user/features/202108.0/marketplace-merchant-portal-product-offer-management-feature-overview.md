@@ -1,5 +1,6 @@
 ---
 title: Marketplace Merchant Portal Product Offer Management feature overview
+last_updated: Jan 26, 2022
 description: This document describes product offer management in the Merchant Portal.
 template: concept-topic-template
 ---

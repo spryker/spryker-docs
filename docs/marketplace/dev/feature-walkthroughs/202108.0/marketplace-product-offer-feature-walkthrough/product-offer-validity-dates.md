@@ -1,10 +1,11 @@
 ---
 title: Product Offer validity dates
+last_updated: Jan 26, 2022
 description: This article provides reference information about Marketplace Product Offer validity dates in the Spryker Marketplace.
 template: concept-topic-template
 ---
 
-Validity dates define the date range when product offer is active. The Validity Dates entity manipulates the product offer activity field (spy_product_offer.is_active),
+Validity dates define the date range when a product offer is active. The Validity Dates entity manipulates the product offer activity field (`spy_product_offer.is_active`),
 activating and deactivating it based on the validity date range. 
 
 To update the product offer activity by validity dates data, run:
@@ -27,7 +28,7 @@ The following schema illustrates the ProductOffer-ProductOfferValidity domain mo
 
 ## Validity data import
 
-You can import the product offer validity data from [product_offer_validity.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-product-offer-validity.csv.html) by file by running
+You can import the product offer validity data from the[product_offer_validity.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-product-offer-validity.csv.html) file by running
 
 ```bash
 data:import product-offer-validity

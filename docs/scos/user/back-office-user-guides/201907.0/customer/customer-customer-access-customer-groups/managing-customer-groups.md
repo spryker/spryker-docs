@@ -1,7 +1,7 @@
 ---
 title: Managing Customer Groups
 description: The guide provides instructions on how to create, edit, and view customer groups in the Back Office.
-last_updated: Feb 4, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/managing-customer-groups
 originalArticleId: e2627c35-c988-4d8b-8779-7860d162d3b4
@@ -9,12 +9,6 @@ redirect_from:
   - /v3/docs/managing-customer-groups
   - /v3/docs/en/managing-customer-groups
 related:
-  - title: Managing Customer Access
-    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customer-access.html
-  - title: Managing Customers
-    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customers.html
-  - title: Managing Customer Addresses
-    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customer-addresses.html
   - title: Customer Accounts
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
   - title: Customers- Reference Information

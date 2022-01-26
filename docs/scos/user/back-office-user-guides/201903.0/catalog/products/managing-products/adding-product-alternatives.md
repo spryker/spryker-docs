@@ -1,7 +1,7 @@
 ---
 title: Adding Product Alternatives
 description: The guide describes a procedure on how to add or remove alternatives to the products in the Back Office.
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/adding-product-alternatives
 originalArticleId: b68093e5-ceac-4b12-933f-619dc0a1c34c
@@ -15,8 +15,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/abstract-product-reference-information.html
   - title: Concrete Product- Reference Information
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/concrete-product-reference-information.html
-  - title: Editing Product Variant
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/concrete-products/editing-product-variant.html
   - title: Creating Product Variants
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/concrete-products/creating-product-variants.html
 ---

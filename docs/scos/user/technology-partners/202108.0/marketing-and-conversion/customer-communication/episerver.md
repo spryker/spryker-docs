@@ -10,15 +10,6 @@ redirect_from:
   - /2021080/docs/en/episerver
   - /docs/episerver
   - /docs/en/episerver
-related:
-  - title: Episerver - Integration into a project
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
-  - title: Episerver - Installation and Configuration
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
-  - title: Episerver - API Requests
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-api-requests.html
-  - title: Episerver - Order referenced commands
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-order-referenced-commands.html
 ---
 
 ## Partner Information

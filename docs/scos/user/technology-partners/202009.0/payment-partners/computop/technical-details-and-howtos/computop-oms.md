@@ -1,7 +1,7 @@
 ---
 title: Computop - OMS
 description: This article contains information on the state machine commands and conditions for the Computop module in the Spryker Commerce OS.
-last_updated: Aug 27, 2020
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/computop-oms-details
 originalArticleId: ac8607bf-275a-41b4-b683-f178b2b045ff

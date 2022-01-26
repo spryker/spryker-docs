@@ -1,5 +1,6 @@
 ---
 title: Configuring data import from an S3 bucket via Flysystem
+last_updated: Jan 26, 2022
 description: Learn how to import data via an S3 bucket.  
 template: howto-guide-template
 ---

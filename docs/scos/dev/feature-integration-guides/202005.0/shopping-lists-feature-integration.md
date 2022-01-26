@@ -1,6 +1,6 @@
 ---
 title: Shopping Lists feature integration
-last_updated: May 12, 2020
+last_updated: Jan 26, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/shopping-lists-feature-integration
 originalArticleId: 81dae2d5-c8e8-46fc-8d80-71b96e0aa723
@@ -10,8 +10,6 @@ redirect_from:
 related:
   - title: Shopping Lists + Product Options feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/shopping-lists-product-options-feature-integration.html
-  - title: Quick Order + Shopping Lists feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/quick-order-shopping-lists-feature-integration.html
   - title: Glue API - Shopping Lists feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-shopping-lists-feature-integration.html
 ---

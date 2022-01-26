@@ -1,5 +1,6 @@
 ---
 title: Back Office for Marketplace Operator
+last_updated: Jan 26, 2022
 description: This document describes how a Marketplace Operator works in the Back Office.
 template: concept-topic-template
 ---

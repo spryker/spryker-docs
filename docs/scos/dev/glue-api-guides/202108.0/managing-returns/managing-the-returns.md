@@ -1,7 +1,7 @@
 ---
 title: Managing the returns
 description: In this article, you will find information on retrieving the returned items via the Spryker Glue API.
-last_updated: Sep 2, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-the-returns
 originalArticleId: bbe2ab03-1413-46f5-858a-9ca6c0bdb531
@@ -46,7 +46,7 @@ To create a return for a registered user, send the request:
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
-| offset | Ofset of the order at which to begin the response. <br> Works only together with `page[limit]`. <br> To work correctly, the value should be devisable by the value of `page[limit]`. <br> The default value is `0`.  | From `0` to any. |
+| offset | Offset of the order at which to begin the response. <br> Works only together with `page[limit]`. <br> To work correctly, the value should be devisable by the value of `page[limit]`. <br> The default value is `0`.  | From `0` to any. |
 | limit | Maximum number of entries to return. <br> Works only together with `page[offset]`. <br> The default value is `10`. | From `1` to any. |
 
 Request sample: `POST https://glue.mysprykershop.com/returns`
@@ -81,8 +81,7 @@ Request sample: `POST https://glue.mysprykershop.com/returns`
 
 ### Response
 
-<details>
-  <summary markdown='span'>Response sample</summary>
+<details><summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -527,4 +526,8 @@ Sample request: `GET http://glue.mysprykershop.com/returns/DE--1-R3`
 
 | CODE | REASON |
 | --- | --- |
+| 001 | Access token is invalid. |
+| 002 | Access token is missing. |
 | 3601 | Return can't be created. |
+| 3602 | Can't find return by the given return reference. |
+| 3603 | Return contains items from different merchants. |

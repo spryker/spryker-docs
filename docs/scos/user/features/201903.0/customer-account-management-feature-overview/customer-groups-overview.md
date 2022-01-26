@@ -1,7 +1,7 @@
 ---
 title: Customer Groups
 description: The Customer Groups feature allows you to organize customers into groups to help you target users for discounts and promotions.
-last_updated: Feb 9, 2021
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/customer-groups
 originalArticleId: 7ec63fdc-4467-4128-aca0-896141f5b11e

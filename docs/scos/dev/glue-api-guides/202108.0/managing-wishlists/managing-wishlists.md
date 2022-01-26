@@ -1,7 +1,7 @@
 ---
 title: Managing wishlists
 description: Create, update and delete wishlists via Glue API.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-wishlists
 originalArticleId: b4729aa0-f527-4fd0-bf46-6d8e62b3013e
@@ -838,10 +838,15 @@ If the wishlist is deleted successfully, the endpoint returns the `204 No Conten
 
 | CODE | REASON |
 | --- | --- |
-| 201 | Cannot find the wishlist. |
-| 202 | A wishlist with the same name already exists. |
+| 001 | Access token is invalid. |
+| 002 | Access token is missing. |
+| 201 | Wishlist with the specified ID is not found. |
+| 202 | Wishlist with the same name already exists. |
 | 203 | Cannot create a wishlist. |
 | 204 | Cannot update the wishlist. |
 | 205 | Cannot remove the wishlist. |
+| 209 | ID is not specified. |
+| 210 | Please enter the name using only letters, numbers, underscores, spaces or dashes.  |
+| 901 | `name` field is empty. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

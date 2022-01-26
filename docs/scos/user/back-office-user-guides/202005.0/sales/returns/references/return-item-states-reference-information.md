@@ -1,7 +1,7 @@
 ---
 title: Return Item States- Reference Information
 description: This guide provides reference information on  return item states.
-last_updated: Aug 3, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/return-item-states-reference-information
 originalArticleId: f994f1c2-87dd-4ef2-b82c-10f638fc515c
@@ -9,8 +9,6 @@ redirect_from:
   - /v5/docs/return-item-states-reference-information
   - /v5/docs/en/return-item-states-reference-information
 related:
-  - title: Return Management Feature Overview
-    link: /docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html
   - title: Returns- Reference Information
     link: docs/scos/user/back-office-user-guides/page.version/sales/returns/references/returns-reference-information.html
   - title: Managing Returns

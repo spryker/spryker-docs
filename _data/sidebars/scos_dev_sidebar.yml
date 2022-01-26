@@ -4264,6 +4264,8 @@ entries:
         - title: Computop
           include_versions:
           nested:
+          - title: Installing and configuring Computop
+            url: /docs/scos/dev/technology-partner–guides/payment-partners/computop/installing-and-configuring–computop.html
           - title: Computop - OMS
             url: /docs/scos/dev/technology-partner–guides/payment-partners/computop/computop-oms.html
           - title: Computop - API
@@ -4293,9 +4295,6 @@ entries:
             include_versions:
             - "202009.0"
             - "202108.0"
-          - title: Installing and configuring Computop
-            url: /docs/scos/dev/technology-partner–guides/payment-partners/computop/installing-and-configuring–computop.html
-            include_versions:
         - title: RatePay
           nested:
             - title: RatePay - Payment methods

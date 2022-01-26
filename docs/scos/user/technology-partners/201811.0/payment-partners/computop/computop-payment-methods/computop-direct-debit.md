@@ -20,7 +20,7 @@ related:
   - title: Computop - API
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop-api.html
   - title: Computop
-    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop.html
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop.html
   - title: Integrating the iDeal payment method for Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-ideal-payment-method-for-computop.html
   - title: Computop - Credit Card

@@ -10,7 +10,7 @@ redirect_from:
   - /v4/docs/en/computop-sofort
 related:
   - title: Computop
-    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop.html
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop.html
   - title: Integrating the PayNow payment method for Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paynow-payment-method-for-computop.html
   - title: Integrating the Easy Credit payment method for Computop

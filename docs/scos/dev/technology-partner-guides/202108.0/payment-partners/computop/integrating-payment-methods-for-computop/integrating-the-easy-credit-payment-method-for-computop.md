@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/computop-easy-credit
 related:
   - title: Computop
-    link: docs/scos/user/technology-partners/page.version/payment-partners/computop/computop.html
+    link: docs/scos/user/technology-partners/page.version/payment-partners/computop.html
   - title: Integrating the Sofort payment method for Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-sofort-payment-method-for-computop.html
   - title: Integrating the PayPal payment method for Computop

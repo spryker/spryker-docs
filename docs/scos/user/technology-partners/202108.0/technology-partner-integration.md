@@ -112,7 +112,7 @@ Visit [Technology Partners](https://spryker.com/technology-partners/) for a comp
 * [Arvato](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/arvato.html)
 * [Billie](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billie.html)
 * [Billpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billpay.html)
-* [Braintree](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/braintree/braintree.html)
+* [Braintree](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/braintree.html)
 * [BS Payone](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/bs-payone.html)
 * [Computop](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop.html)
 * [CrefoPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay-installation-and-configuration.html)

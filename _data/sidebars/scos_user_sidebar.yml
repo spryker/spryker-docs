@@ -2362,18 +2362,7 @@ entries:
       - title: Braintree
         url: /docs/scos/user/technology-partners/payment-partners/braintree.html
       - title: Klarna
-        url: /docs/scos/user/technology-partners/payment-partners/klarna/klarna.html
-        nested:
-        - title: Technical details and HowTos
-          nested:
-          - title: Klarna - Payment Workflow
-            url: /docs/scos/user/technology-partners/payment-partners/klarna/technical-details-and-howtos/klarna-payment-workflow.html
-          - title: Klarna - Part Payment Flexible
-            url: /docs/scos/user/technology-partners/payment-partners/klarna/technical-details-and-howtos/klarna-part-payment-flexible.html
-          - title: Klarna - State Machine Commands and Conditions
-            url: /docs/scos/user/technology-partners/payment-partners/klarna/technical-details-and-howtos/klarna-state-machine-commands-and-conditions.html
-          - title: Klarna - Invoice Pay in 14 days
-            url: /docs/scos/user/technology-partners/payment-partners/klarna/technical-details-and-howtos/klarna-invoice-pay-in-14-days.html
+        url: /docs/scos/user/technology-partners/payment-partners/klarna.html
       - title: Heidelpay
         url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay.html
         include_versions:

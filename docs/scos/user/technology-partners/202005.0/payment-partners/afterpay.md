@@ -1,7 +1,7 @@
 ---
 title: AfterPay
 description: AfterPay that can be integrated into the Spryker-based project, provides invoice solutions as an unitary brand in nine European countries.
-last_updated: Apr 3, 2020
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/afterpay
 originalArticleId: 3c8f3e6b-d272-4f60-ad43-13507a869e81

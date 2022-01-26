@@ -1,6 +1,6 @@
 ---
 title: Resolving Search Engine Friendly URLs
-last_updated: Mar 4, 2020
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/using-search-engine-friendly-urls
 originalArticleId: a0679496-e71d-49b0-9789-d23e67dd14b0

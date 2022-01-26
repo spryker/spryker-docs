@@ -1,5 +1,6 @@
 ---
 title: Data Transformer Chain
+last_updated: Jan 26, 2022
 description: This document provides details about the Data Transformer Chain service in the Components Library.
 template: concept-topic-template
 ---

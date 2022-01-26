@@ -1,5 +1,6 @@
 ---
 title: Marketplace Wishlist feature overview
+last_updated: Jan 26, 2022
 description: This document contains concept information for the Marketplace Wishlist feature.
 template: concept-topic-template
 ---

@@ -1,7 +1,7 @@
 ---
 title: Templates & Slots Feature Overview
 description: The article describes the Templates & Slots feature that allows content managers to interact with content using a template with slots.
-last_updated: Oct 2, 2020
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/templates-slots-feature-overview
 originalArticleId: 9695e3a5-ee25-405d-9dc9-1d5229332af4

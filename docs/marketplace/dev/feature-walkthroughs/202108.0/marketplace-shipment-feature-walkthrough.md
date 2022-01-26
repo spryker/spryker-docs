@@ -1,6 +1,6 @@
 ---
 title: Marketplace Shipment feature walkthrough
-last_updated: Nov 2, 2021
+last_updated: Jan 26, 2022
 description: The Marketplace Shipment feature provides the connection between Merchant and Shipment.
 template: feature-walkthrough-template
 ---

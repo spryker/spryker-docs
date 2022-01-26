@@ -1,7 +1,7 @@
 ---
 title: Shop Guide - Order History
 description: This guide provides instructions on managing Order History in your Customer Account in a Spryker-based shop.
-last_updated: Sep 14, 2020
+last_updated: Jan 26, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/shop-guide-order-history
 originalArticleId: 25acfa39-f693-469e-8839-e6260365fdc1

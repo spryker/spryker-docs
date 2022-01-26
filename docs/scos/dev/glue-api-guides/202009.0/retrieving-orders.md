@@ -1,7 +1,7 @@
 ---
 title: Retrieving orders
 description: Retrieve all orders of a customer or a particular order via Glue API.
-last_updated: Jun 29, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/retrieving-orders
 originalArticleId: edc0ef42-4039-4fa6-9ed0-f6f4fe31273d

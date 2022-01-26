@@ -1,7 +1,7 @@
 ---
 title: Braintree - Configuration for SCOS
 description: This article contains information on configuring the Braintree module for the Spryker Commerce OS.
-last_updated: Mar 5, 2020
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/braintree-configuration
 originalArticleId: 12d0f07a-5754-432a-a6d0-96bcde537e4a

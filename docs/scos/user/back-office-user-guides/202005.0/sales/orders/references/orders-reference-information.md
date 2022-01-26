@@ -1,7 +1,7 @@
 ---
 title: Orders- Reference Information
 description: The guide provides reference information you see when creating, updating and viewing order details in the Back Office.
-last_updated: Sep 15, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/orders-reference-information
 originalArticleId: f692b3c8-e99f-4326-9a0c-2aa012fe9b76

@@ -1,7 +1,7 @@
 ---
 title: Product Options feature overview
 description: The article describes the creation process of product options and how it is managed in the Back Office
-last_updated: Jul 29, 2020
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/product-options-overview
 originalArticleId: d25fc6cd-4f40-43b9-8b04-82af6a953888

@@ -1,5 +1,6 @@
 ---
 title: Backend API feature integration
+last_updated: Jan 26, 2022
 description: Integrate the Backend API into your project
 template: feature-integration-guide-template
 ---

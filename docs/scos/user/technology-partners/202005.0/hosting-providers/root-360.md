@@ -1,7 +1,7 @@
 ---
 title: Root 360
 description: Integrate Root 360 hosting solution to host Spryker -based project
-last_updated: Apr 3, 2020
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/root360
 originalArticleId: 31864e8d-1cd8-425a-aa4c-c1868165a146

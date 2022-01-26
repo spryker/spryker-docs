@@ -1,5 +1,6 @@
 ---
 title: Connecting a code repository
+last_updated: Jan 26, 2022
 description: Connect a GitHub or Bitbucket code repository to your Spryker Cloud project.
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/connecting-code-repository

@@ -1,5 +1,6 @@
 ---
 title: Retrieving Marketplace orders
+last_updated: Jan 26, 2022
 description: Retrieve information about Marketplace orders via Glue API.
 template: glue-api-storefront-guide-template
 ---

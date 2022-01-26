@@ -1,7 +1,7 @@
 ---
 title: Checking out purchases
 description: Learn how to check out purchases via Glue API.
-last_updated: Jul 13, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/checking-out-purchases
 originalArticleId: 6da60ad5-47a7-4554-a7e7-d662af2295dd

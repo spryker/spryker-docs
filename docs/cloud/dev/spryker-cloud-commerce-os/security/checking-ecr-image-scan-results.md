@@ -1,5 +1,6 @@
 ---
 title: Checking ECR image scan results
+last_updated: Jan 26, 2022
 description: Protect your applications by resolving issues detected by ECR image scans.
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/checking-ecr-image-scan-results

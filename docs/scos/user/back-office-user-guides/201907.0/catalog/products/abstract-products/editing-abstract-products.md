@@ -1,7 +1,7 @@
 ---
 title: Editing an Abstract Product
 description: The guide walks you through the procedure of updating an abstract product in the Back Office.
-last_updated: Feb 4, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/editing-an-abstract-product
 originalArticleId: a9710f66-8f48-49a5-b8a2-3da8dbecd813

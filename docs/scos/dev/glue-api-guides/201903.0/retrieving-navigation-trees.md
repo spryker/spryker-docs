@@ -1,6 +1,6 @@
 ---
 title: Retrieving Navigation Trees
-last_updated: Jul 31, 2020
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/retrieving-navigation-trees-201903
 originalArticleId: 361e9429-003a-4a1c-b807-7e6440e2815e

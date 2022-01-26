@@ -1,5 +1,6 @@
 ---
 title: Locating service credentials
+last_updated: Jan 26, 2022
 description: To connect to Spryker Cloud services, locate the credentials in the AWS Management Console.
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/locating-service-credentials

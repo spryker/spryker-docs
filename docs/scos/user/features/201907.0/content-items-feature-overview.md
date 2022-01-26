@@ -1,7 +1,7 @@
 ---
 title: Content Items Overview
 description: The feature allows working on the content and the content placement separately, meaning, you can easily create and later decide where to insert content
-last_updated: Dec 23, 2019
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/content-items-overview
 originalArticleId: ba7b6561-21c9-43bb-9d45-425f5e908f5f

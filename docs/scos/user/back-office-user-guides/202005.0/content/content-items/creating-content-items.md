@@ -1,7 +1,7 @@
 ---
 title: Creating Content Items
 description: The guide provides a procedure on how to create a content item such as banner, abstract product list, product set, and file list in the Back Office.
-last_updated: Sep 15, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/creating-content-items
 originalArticleId: ee692349-f82c-4570-b390-faedacdde7c6

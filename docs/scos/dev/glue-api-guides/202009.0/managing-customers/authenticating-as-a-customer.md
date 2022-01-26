@@ -1,7 +1,7 @@
 ---
 title: Authenticating as a customer
 description: Retrieve customer authentication tokens to send requests to protected resources.
-last_updated: Feb 9, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/authenticating-as-a-customer
 originalArticleId: 4f692494-e323-4a95-bff8-b45c984c1ff3

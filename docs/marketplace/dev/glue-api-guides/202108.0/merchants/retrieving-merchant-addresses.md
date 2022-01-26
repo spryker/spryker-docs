@@ -1,5 +1,6 @@
 ---
 title: Retrieving merchant addresses
+last_updated: Jan 26, 2022
 description: Retrieve merchant addresses via Glue API
 template: glue-api-storefront-guide-template
 ---

@@ -1,7 +1,7 @@
 ---
 title: Managing Threshold Settings
 description: Use the procedure to select a tax set applied to the threshold fee in the Back Office.
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/managing-threshold-settings
 originalArticleId: 7cfdf21c-d5f7-4acc-9b28-133c30d1ecca

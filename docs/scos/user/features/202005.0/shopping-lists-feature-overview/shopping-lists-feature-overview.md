@@ -9,7 +9,7 @@ redirect_from:
   - /v5/docs/en/multiple-shared-shopping-lists
   - /v5/docs/shopping-list
   - /v5/docs/en/shopping-list
-last_updated: Sep 15, 2020
+last_updated: Jan 26, 2022
 template: concept-topic-template
 ---
 

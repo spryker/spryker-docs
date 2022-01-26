@@ -1,5 +1,6 @@
 ---
 title: Retrieving autocomplete and search suggestions
+last_updated: Jan 26, 2022
 description: This article provides information on which endpoints to use to get search and auto-completion suggestions for your products, categories, and CMS fields
 template: glue-api-storefront-guide-template
 ---

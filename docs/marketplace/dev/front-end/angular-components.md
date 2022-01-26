@@ -1,5 +1,6 @@
 ---
 title: Angular Components
+last_updated: Jan 26, 2022
 description: This document provides details about the Angular Components, and how to create and use them.
 template: concept-topic-template
 ---

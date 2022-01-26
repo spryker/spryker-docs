@@ -1,5 +1,6 @@
 ---
 title: Marketplace Order Management feature walkthrough
+last_updated: Jan 26, 2022
 description: The Marketplace Order Management feature allows Marketplace customers to place orders.
 template: feature-walkthrough-template
 related: 

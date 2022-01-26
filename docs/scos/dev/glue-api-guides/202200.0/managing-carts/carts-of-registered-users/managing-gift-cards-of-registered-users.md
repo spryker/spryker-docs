@@ -1,7 +1,7 @@
 ---
 title: Managing gift cards of registered users
 description: Retrieve details about gift cards of the registered users, and learn what else you can do with the resource.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-gift-cards-of-registered-users
 originalArticleId: 8f557adb-ea3b-498c-872e-b2177d6202ed

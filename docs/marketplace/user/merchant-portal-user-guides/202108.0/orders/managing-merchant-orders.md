@@ -1,5 +1,6 @@
 ---
 title: Managing merchant orders
+last_updated: Jan 26, 2022
 description: This topic describes the actions a merchant can do in the Orders section of the Merchant Portal.
 template: back-office-user-guide-template
 ---

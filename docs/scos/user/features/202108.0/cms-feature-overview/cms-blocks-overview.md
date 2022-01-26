@@ -1,7 +1,7 @@
 ---
 title: CMS blocks overview
 description: With the CMS Block feature, you can easily add promotional banners and define validity date ranges to emphasize specific, time-limited content.
-last_updated: Jul 22, 2021
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/cms-blocks-overview
 originalArticleId: 2b07c846-32ed-42b7-bf71-9c9ecc4f54ba

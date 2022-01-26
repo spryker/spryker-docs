@@ -1,5 +1,6 @@
 ---
 title: Jenkins does not restart
+last_updated: Jan 26, 2022
 description: This article describes how to troubleshoot the most common problems with the jenkins scheulder
 template: troubleshooting-guide-template
 redirect_from:

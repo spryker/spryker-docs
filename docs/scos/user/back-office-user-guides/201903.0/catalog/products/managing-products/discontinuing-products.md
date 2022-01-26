@@ -1,7 +1,7 @@
 ---
 title: Discontinuing Products
 description: Use the guide to make the product variant discontinued in the Back Office.
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/discontinuing-a-product
 originalArticleId: 1ece09fe-4087-4885-b358-785002c59b8d

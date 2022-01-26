@@ -1,6 +1,6 @@
 ---
 title: common solutions
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/common-solutions
 originalArticleId: d69094dd-b80d-466a-813c-d26c3f4f9efe

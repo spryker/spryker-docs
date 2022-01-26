@@ -1,7 +1,7 @@
 ---
 title: Retrieving Protected Resources
 description: The article describes how to retrieve a list of resources protected from unauthorized access.
-last_updated: Sep 15, 2020
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/getting-the-list-of-protected-resources
 originalArticleId: c6730088-7099-4fb7-bf70-d8097f148cb3

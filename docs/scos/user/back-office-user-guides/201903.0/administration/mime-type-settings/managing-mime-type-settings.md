@@ -1,7 +1,7 @@
 ---
 title: Managing MIME Type Settings
 description: Use the procedures to create, edit, delete or activate a MIME type in the Back Office.
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/managing-mime-type-settings
 originalArticleId: 4edef89d-8386-4f2f-9d8a-2a5530fa46ef

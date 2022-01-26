@@ -1,7 +1,7 @@
 ---
 title: Migration guide - DiscountSalesAggregatorConnector
 description: Use the guide to migrate to a newer version of the DiscountSalesAggregatorConnector module.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-discount-sales-aggregator-connector
 originalArticleId: 8ef66591-61d1-4f81-a6de-96b53b89c2e1

@@ -1,7 +1,7 @@
 ---
 title: Managing the returns
 description: In this article, you will find information on retrieving the returned items via the Spryker Glue API.
-last_updated: Sep 2, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-the-returns
 originalArticleId: bbe2ab03-1413-46f5-858a-9ca6c0bdb531

@@ -1,5 +1,6 @@
 ---
 title: "How-To: Create a new GUI module"
+last_updated: Jan 26, 2022
 description: This articles provides details how to create a new GUI module
 template: howto-guide-template
 ---

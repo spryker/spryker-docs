@@ -1,7 +1,7 @@
 ---
 title: Product Options
 description: This section can be used if you want to add some additional services to your product- gift wrappings, insurance, etc.
-last_updated: Jul 31, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/product-options-management
 originalArticleId: 908624e3-01ab-4fd8-ac7b-ed610af6eb5a

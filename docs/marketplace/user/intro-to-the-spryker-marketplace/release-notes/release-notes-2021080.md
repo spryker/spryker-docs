@@ -1,5 +1,6 @@
 ---
 title: Release notes 202108.0
+last_updated: Jan 26, 2022
 description: Release notes for the release 202108.0
 template: concept-topic-template
 ---

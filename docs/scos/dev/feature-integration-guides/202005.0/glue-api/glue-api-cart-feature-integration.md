@@ -1,7 +1,7 @@
 ---
 title: Glue API - Cart feature integration
 description: Install the Cart API feature in your project.
-last_updated: Sep 14, 2020
+last_updated: Jan 26, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/glue-api-cart-feature-integration
 originalArticleId: 38873ba8-2abd-4884-86ed-be6b9f939bfe

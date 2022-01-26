@@ -1,7 +1,7 @@
 ---
 title: Product Relations feature overview
 description: Product Relations is a feature that allows grouping products by attributes for easier navigation and accessibility.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-relations-feature-overview
 originalArticleId: e3195022-f1fb-492c-9b99-3da32dab77c3

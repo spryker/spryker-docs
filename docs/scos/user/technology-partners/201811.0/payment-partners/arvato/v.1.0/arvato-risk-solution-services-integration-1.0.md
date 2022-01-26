@@ -1,7 +1,7 @@
 ---
 title: Installing and configuring Arvato 1.0
 description: Provide complete and comprehensive risk management for the eCommerce/mail-order industry, contributing to a high level of modularization and automation.
-last_updated: May 19, 2020
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/arvato-1-0
 originalArticleId: bd839a77-34d7-42ee-b25b-6e4ede991179

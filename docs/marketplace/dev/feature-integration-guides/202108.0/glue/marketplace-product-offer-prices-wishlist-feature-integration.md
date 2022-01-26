@@ -1,5 +1,6 @@
 ---
 title: "Glue API: Marketplace Product Offer Prices + Wishlist feature integration"
+last_updated: Jan 26, 2022
 description: This document describes how to integrate the Marketplace Product Offer Prices + Wishlist Glue API feature into a Spryker project.
 template: feature-integration-guide-template
 ---

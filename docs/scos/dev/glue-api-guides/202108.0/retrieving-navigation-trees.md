@@ -1,7 +1,7 @@
 ---
 title: Retrieving navigation trees
 description: The topic demonstrates how to retrieve navigation trees with the help of API endpoints.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-navigation-trees
 originalArticleId: 6dba4315-b7d0-485e-880e-b7d4ff125a3a

@@ -1,7 +1,7 @@
 ---
 title: Managing Customers
 description: This article explains how to manage customer accounts and provides detailed information on which endpoints to use to create, anonymize, etc. a customer.
-last_updated: Apr 3, 2020
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/managing-customers-api
 originalArticleId: be5d5720-c020-4b64-a184-7d86673a6deb

@@ -1,7 +1,7 @@
 ---
 title: Managing Customer Groups
 description: The guide provides instructions on how to create, edit, and view customer groups in the Back Office.
-last_updated: Feb 3, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/managing-customer-groups
 originalArticleId: 7139f2ee-79ac-476e-ba59-7180beea9fad

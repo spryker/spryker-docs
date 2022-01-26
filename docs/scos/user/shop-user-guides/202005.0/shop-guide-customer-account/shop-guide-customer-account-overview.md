@@ -1,7 +1,7 @@
 ---
 title: Shop Guide - Customer Account Overview
 description: This guide provides an overview of the Customer Account in Spryker -based shop.
-last_updated: Sep 14, 2020
+last_updated: Jan 26, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/shop-guide-customer-account-overview
 originalArticleId: f6eb3a83-134c-4397-ad7e-0a75c975cc39

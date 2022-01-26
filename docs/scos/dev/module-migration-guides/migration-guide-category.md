@@ -1,7 +1,7 @@
 ---
 title: Migration guide - Category
 description: Use the guide to update versions to the newer ones of the Category module.
-last_updated: Jun 29, 2021
+last_updated: Jan 26, 2022
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-category
 originalArticleId: d1ec0074-7d45-4f72-96c1-3f59cb860e4e

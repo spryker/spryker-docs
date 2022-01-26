@@ -1,5 +1,6 @@
 ---
 title: Product Offer validity dates
+last_updated: Jan 26, 2022
 description: This article provides reference information about Marketplace Product Offer validity dates in the Spryker Marketplace.
 template: concept-topic-template
 ---

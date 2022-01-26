@@ -1,7 +1,7 @@
 ---
 title: Alternative Products Feature Overview
 description: Product alternatives is a great way to ease the user’s product finding process. It lets the user jump over product pages until they find a relevant item.
-last_updated: Sep 14, 2020
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/alternative-products-overview
 originalArticleId: 3e5a0444-129e-413b-bcf6-945d6800094e

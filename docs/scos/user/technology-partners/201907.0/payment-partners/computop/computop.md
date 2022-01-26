@@ -1,7 +1,7 @@
 ---
 title: Computop
 description: Enable merchants and white label customers to process global multichannel payments by integrating Computop into the Spryker Commerce OS.
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/computop
 originalArticleId: feee90bc-5c43-4ac4-a543-f7a83b17610c

@@ -1,7 +1,7 @@
 ---
 title: Amazon Pay - State Machine
 description: This article describes the state machine for the Amazon Pay module in the Spryker Legacy Demoshop.
-last_updated: Aug 27, 2020
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/amazon-pay-state-machine-demoshop
 originalArticleId: 7b5b3fb4-99a0-4972-acfd-403e4522d882

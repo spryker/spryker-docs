@@ -1,7 +1,7 @@
 ---
 title: Managing Customer Addresses
 description: The guide provides procedures  on how to create, update, and view customer addresses in the Back Office
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/managing-customer-addresses
 originalArticleId: be79c3e1-c934-4f1f-ba33-e6e4fd4be28d

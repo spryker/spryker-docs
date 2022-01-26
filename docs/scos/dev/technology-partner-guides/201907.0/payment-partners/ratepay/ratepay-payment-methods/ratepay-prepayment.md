@@ -1,7 +1,7 @@
 ---
 title: RatePay - Prepayment
 description: Integrate prepayment through Ratepay into the Spryker-based shop.
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/ratepay-prepayment
 originalArticleId: eec3217e-94b8-4ae7-853e-3f6258668bf1

@@ -1,5 +1,6 @@
 ---
 title: Tutorial — Troubleshooting an unavailable Zed
+last_updated: Jan 26, 2022
 description: Learn how to troubleshoot an unavailable Zed
 template: troubleshooting-guide-template
 ---

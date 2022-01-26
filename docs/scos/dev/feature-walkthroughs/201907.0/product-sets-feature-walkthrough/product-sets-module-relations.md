@@ -1,5 +1,6 @@
 ---
 title: Product Sets- module relations
+last_updated: Jan 26, 2022
 description: Module relations and database schema of the Product Sets feature.
 template: feature-walkthrough-template
 ---

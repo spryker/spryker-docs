@@ -1,7 +1,7 @@
 ---
 title: Quick Add to Cart feature overview
 description: On the Quick Add to Cart form in the web-shop, a customer can enter product SKU and Quantity and proceed by adding it to cart or by creating an order right away.
-last_updated: Sep 14, 2020
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/quick-order-overview
 originalArticleId: 92fb8a1c-d5af-4641-9cfc-05eea6ea2d51

@@ -1,5 +1,6 @@
 ---
 title: Troubleshooting tutorials
+last_updated: Jan 26, 2022
 description: Learn how to troubleshoot common issues in Spryker Cloud Commerce OS
 template: concept-topic-template
 ---

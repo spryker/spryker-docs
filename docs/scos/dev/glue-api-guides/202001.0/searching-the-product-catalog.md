@@ -1,7 +1,7 @@
 ---
 title: Searching the Product Catalog
 description: This article provides a bunch of sample requests to be used to achieve the implementation of search options and gives explanations of request values.
-last_updated: Jan 24, 2020
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/catalog-search
 originalArticleId: 5c66b9db-fe87-4ce3-b841-c56aa12f817c

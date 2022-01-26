@@ -1,5 +1,6 @@
 ---
 title: Managing account details and settings
+last_updated: Jan 26, 2022
 description: This topic describes what you can do in the My account area of the Merchant Portal.
 template: back-office-user-guide-template
 ---

@@ -1,5 +1,6 @@
 ---
 title: Tutorial — Troubleshooting failing Yves authentication
+last_updated: Jan 26, 2022
 description: Learn what to do when Yves authentication fails
 template: troubleshooting-guide-template
 ---

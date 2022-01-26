@@ -1,7 +1,7 @@
 ---
 title: Token Description Tables
 description: This guide provides reference information in tables about fields and value types, operators you enter when creating a plain query.
-last_updated: Oct 23, 2019
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/token-description-tables
 originalArticleId: d2a8b44c-2c19-4b5d-ac2e-1bdbab371735

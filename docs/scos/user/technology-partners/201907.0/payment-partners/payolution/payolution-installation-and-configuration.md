@@ -1,7 +1,7 @@
 ---
 title: Payolution - Configuration
 description: This article contains information on configuring the Payolution module for the Spryker Commerce OS.
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/payolution-configuration
 originalArticleId: 6db71865-46a6-447f-94d2-a176fdcb2b51

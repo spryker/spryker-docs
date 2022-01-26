@@ -1,5 +1,6 @@
 ---
 title: Tutorial — Troubleshooting unavailable Yves or Glue
+last_updated: Jan 26, 2022
 description: Learn how to troubleshoot unavailable Yves or Glue
 template: troubleshooting-guide-template
 ---

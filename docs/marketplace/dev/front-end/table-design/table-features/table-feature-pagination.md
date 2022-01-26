@@ -1,5 +1,6 @@
 ---
 title: Table Feature Pagination
+last_updated: Jan 26, 2022
 description: This document provides details about the Table Feature Pagination component in the Components Library.
 template: concept-topic-template
 ---

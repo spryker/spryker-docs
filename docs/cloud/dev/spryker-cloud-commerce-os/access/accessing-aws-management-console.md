@@ -1,5 +1,6 @@
 ---
 title: Accessing AWS Management Console
+last_updated: Jan 26, 2022
 description: Access AWS Management Console via the IAM accounts created during the initial setup.
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/accessing-aws-management-console

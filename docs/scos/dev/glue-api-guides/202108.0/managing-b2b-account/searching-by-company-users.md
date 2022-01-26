@@ -1,7 +1,7 @@
 ---
 title: Searching by company users
 description: Learn how to search by company users via Glue API.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/searching-by-company-users
 originalArticleId: a0cc11ce-40e9-4fcf-8cd5-eddd23b02363

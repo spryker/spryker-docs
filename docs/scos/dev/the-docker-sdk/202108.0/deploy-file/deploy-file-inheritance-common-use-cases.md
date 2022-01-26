@@ -1,5 +1,6 @@
 ---
 title: Deploy file inheritance — common use cases
+last_updated: Jan 26, 2022
 description: Examples of using deploy file inheritance
 template: concept-topic-template
 ---

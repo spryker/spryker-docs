@@ -1,7 +1,7 @@
 ---
 title: Slots
 description: The article provides some general information about slots and actions you can perform on them in the Back Office.
-last_updated: Sep 15, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/slots
 originalArticleId: 312ae9ee-5566-4955-af79-5eaa37582d0d

@@ -1,7 +1,7 @@
 ---
 title: Managing Carts of Registered Users
 description: This article describes the endpoints that provide access to shopping carts management functionality for the carts of the registered users.
-last_updated: Aug 13, 2020
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/managing-carts-of-registered-users-201907
 originalArticleId: ee189fe4-1899-4c19-a482-3c58678db3df

@@ -1,5 +1,6 @@
 ---
 title: Building a front end
+last_updated: Jan 26, 2022
 description: Learn how to build a front end from scratch and publish it
 template: concept-topic-template
 ---

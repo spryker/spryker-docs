@@ -1,6 +1,6 @@
 ---
 title: Retrieving Discounts
-last_updated: Aug 13, 2020
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/retrieving-discounts
 originalArticleId: 1527ed38-1a7f-47cb-bd0f-007a9b7367fb

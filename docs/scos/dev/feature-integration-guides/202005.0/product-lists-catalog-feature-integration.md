@@ -1,7 +1,7 @@
 ---
 title: Product Lists + Catalog feature integration
 description: The guide walks you through the process of installing the Product Lists as a catalog  feature in the project.
-last_updated: Sep 14, 2020
+last_updated: Jan 26, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/product-lists-catalog-feature-integration
 originalArticleId: d46051e9-a550-4580-b86c-1b1ead70fe7b

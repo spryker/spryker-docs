@@ -1,7 +1,7 @@
 ---
 title: Braintree - Integration into a project
 description: This guide provides steps to integrate Braintree in the Spryker frontend.
-last_updated: Dec 8, 2020
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/braintree-integration
 originalArticleId: dda0c500-044d-41d2-966d-50947be45522

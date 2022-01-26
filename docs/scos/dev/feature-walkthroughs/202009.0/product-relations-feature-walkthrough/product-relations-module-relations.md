@@ -1,7 +1,7 @@
 ---
 title: Product Relations- module relations
 description: Module relations of the product relations.
-last_updated: Feb 22, 2021
+last_updated: Jan 26, 2022
 template: feature-walkthrough-template
 originalLink: https://documentation.spryker.com/v6/docs/product-relations-module-relations
 originalArticleId: c9fcdd6d-7a44-45af-a75d-e03ccf7ec2f0

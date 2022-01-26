@@ -1,6 +1,6 @@
 ---
 title: Checking Out Purchases and Getting Checkout Data
-last_updated: Jul 31, 2020
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/checking-out-purchases-and-getting-checkout-data
 originalArticleId: 3ad1ce2d-bc09-4eb5-8a1a-7382e450847d

@@ -1,7 +1,7 @@
 ---
 title: Content items feature overview
 description: Content item is a preserved content piece that can be used in multiple pages.
-last_updated: Feb 8, 2021
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/content-items-feature-overview
 originalArticleId: 530f9cd1-1fd1-4b32-80eb-9ee5acb247ac

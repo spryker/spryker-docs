@@ -1,5 +1,6 @@
 ---
 title: Front-end enablement service
+last_updated: Jan 26, 2022
 description: Overview of the front-end enablement service
 template: concept-topic-template
 ---

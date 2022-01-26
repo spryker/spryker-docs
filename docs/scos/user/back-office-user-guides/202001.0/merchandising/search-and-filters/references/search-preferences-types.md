@@ -1,7 +1,7 @@
 ---
 title: Search Preferences Types
 description: This guide provides additional information about search preferences types- full text, full text boosted, suggestion, and completion terms.
-last_updated: Dec 21, 2019
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/search-preferences-types
 originalArticleId: 30de424c-9e02-48de-b938-3031ca4bd24e

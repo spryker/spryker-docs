@@ -1,5 +1,6 @@
 ---
 title: Migration guide - Extending the project
+last_updated: Jan 26, 2022
 description: This document provides details for migration of the marketplace modules to be able to extend the project.
 template: module-migration-guide-template
 ---

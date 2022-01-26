@@ -1,5 +1,6 @@
 ---
 title: Search types overview
+last_updated: Jan 26, 2022
 redirect_from:
   - /2021080/docs/search-types-overview
   - /2021080/docs/en/search-types-overview

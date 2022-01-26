@@ -1,5 +1,6 @@
 ---
 title: Actions Refresh Table
+last_updated: Jan 26, 2022
 description: This document provides details about the Actions Refresh Table service in the Components Library.
 template: concept-topic-template
 ---

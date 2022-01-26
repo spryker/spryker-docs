@@ -1,5 +1,6 @@
 ---
 title: Merchant users overview
+last_updated: Jan 26, 2022
 description: This document contains concept information for the Merchant users feature in the Spryker Commerce OS.
 template: concept-topic-template
 ---

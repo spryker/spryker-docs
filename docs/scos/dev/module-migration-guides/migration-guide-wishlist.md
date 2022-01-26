@@ -1,7 +1,7 @@
 ---
 title: Migration guide - Wishlist
 description: Use the guide to learn how to update the Wishlist module to a newer version.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-wishlist
 originalArticleId: c0987ced-479c-4eba-ae1d-9cfbf76ce0fb

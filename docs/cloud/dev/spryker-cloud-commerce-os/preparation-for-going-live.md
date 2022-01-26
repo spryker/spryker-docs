@@ -1,5 +1,6 @@
 ---
 title: Preparation for going live
+last_updated: Jan 26, 2022
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/preparation-for-going-live
 originalArticleId: 738903ac-4167-47ed-93c8-b225c8041582

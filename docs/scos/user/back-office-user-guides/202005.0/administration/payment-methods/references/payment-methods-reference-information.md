@@ -1,7 +1,7 @@
 ---
 title: Payment Methods- Reference Information
 description: Use the guide to learn additional information about the attributes you can use when managing payment methods in the Back Office.
-last_updated: Jun 11, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/payment-methods-reference-information
 originalArticleId: 44d0f2fd-1637-4979-9774-8c3cec6a9d74

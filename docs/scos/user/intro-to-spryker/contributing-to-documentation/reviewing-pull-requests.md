@@ -1,5 +1,6 @@
 ---
 title: Reviewing pull requests
+last_updated: Jan 26, 2022
 description: Find out how you can propose your changes to a pull request
 template: howto-guide-template
 ---

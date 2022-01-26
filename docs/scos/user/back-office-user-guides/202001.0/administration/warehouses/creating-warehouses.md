@@ -1,7 +1,7 @@
 ---
 title: Creating Warehouses
 description: Use the procedure to create warehouses and define warehouses per specific stores in the Back Office.
-last_updated: Jan 20, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/creating-a-warehouse
 originalArticleId: 6b3ee14f-6e6e-4b58-a7c2-c9ce6fc8322d

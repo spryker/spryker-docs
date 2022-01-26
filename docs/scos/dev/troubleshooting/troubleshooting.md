@@ -1,5 +1,6 @@
 ---
 title: Troubleshooting
+last_updated: Jan 26, 2022
 description: Learn how you can fix technical issues with Spryker
 template: concept-topic-template
 redirect_from:

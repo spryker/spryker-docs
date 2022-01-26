@@ -1,7 +1,7 @@
 ---
 title: Deleting expired refresh tokens
 description: Delete expired refresh tokens by setting their lifetime or manually.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/deleting-expired-refresh-tokens
 originalArticleId: acf43e94-6fa4-46dd-8f39-b971e5f6aa04

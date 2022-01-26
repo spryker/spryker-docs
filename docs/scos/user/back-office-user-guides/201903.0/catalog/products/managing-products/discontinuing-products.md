@@ -11,8 +11,6 @@ redirect_from:
 related:
   - title: Abstract and Concrete Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-and-concrete-products.html
-  - title: Editing Product Variant
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/concrete-products/editing-product-variant.html
   - title: Concrete Product- Reference Information
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/concrete-product-reference-information.html
 ---

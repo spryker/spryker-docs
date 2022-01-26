@@ -22,13 +22,6 @@ redirect_from:
   - /v1/docs/en/release-notes-201907-0
   - /v6/docs/release-notes-201907-0
   - /v6/docs/en/release-notes-201907-0
-related:
-  - title: Managing Carts of Registered Users
-    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
-  - title: PayOne - Cash on Delivery
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/scos-integration/payone-cash-on-delivery.html
-  - title: Heidelpay - Easy Credit
-    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-easy-credit.html
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of major new features and enhancements released in August of 2019.

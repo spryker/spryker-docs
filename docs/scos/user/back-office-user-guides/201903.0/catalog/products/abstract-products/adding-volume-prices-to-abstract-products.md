@@ -11,8 +11,6 @@ redirect_from:
 related:
   - title: Creating Product Variants
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/concrete-products/creating-product-variants.html
-  - title: Editing Product Variant
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/concrete-products/editing-product-variant.html
   - title: Products- Reference Information
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/products-reference-information.html
   - title: Abstract Product- Reference Information

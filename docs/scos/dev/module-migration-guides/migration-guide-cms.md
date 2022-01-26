@@ -30,8 +30,6 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cms.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cms.html
 related:
-  - title: CMS
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-feature-overview.html
   - title: Migration guide - CmsBlock
     link: docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html
   - title: Migration guide - CmsBlockCollector

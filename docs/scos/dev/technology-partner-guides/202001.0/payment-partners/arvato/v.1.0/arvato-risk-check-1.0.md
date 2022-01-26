@@ -9,8 +9,6 @@ redirect_from:
   - /v4/docs/arvato-risk-check-1-0
   - /v4/docs/en/arvato-risk-check-1-0
 related:
-  - title: Installing and configuring Arvato 1.0
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/arvato/v.1.0/arvato-risk-solution-services-integration-1.0.html
   - title: Arvato
     link: docs/scos/user/technology-partners/page.version/payment-partners/arvato.html
 ---

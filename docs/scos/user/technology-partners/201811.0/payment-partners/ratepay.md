@@ -11,8 +11,6 @@ redirect_from:
 related:
   - title: RatePay - Payment Workflow
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/technical-details-and-howtos/ratepay-payment-workflow.html
-  - title: RatePay - Facade
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-payment-methods/ratepay-facade.html
   - title: RatePay - How to Disable Address Updates from the Backend Application
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/technical-details-and-howtos/disabling-address-updates-from-the-backend-application-for-ratepay.html
   - title: RatePay - Direct Debit

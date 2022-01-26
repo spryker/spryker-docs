@@ -13,10 +13,6 @@ related:
     link: docs/scos/user/features/page.version/content-items-feature-overview.html
   - title: Editing Content Items
     link: docs/scos/user/back-office-user-guides/page.version/content/content-items/editing-content-items.html
-  - title: Content Item Widgets types- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/content/content-items/references/content-item-widgets-types-reference-information.html
-  - title: Content Item Widgets templates- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/content/content-items/references/content-item-widgets-templates-reference-information.html
 ---
 
 This topic describes how to create content items in the Back Office.

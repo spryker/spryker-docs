@@ -11,8 +11,6 @@ redirect_from:
 related:
   - title: Arvato - Risk Check 2.0
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/arvato/v.2.0/arvato-risk-check-2.0.html
-  - title: Installing and configuring Arvato 2.0
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/arvato/v.2.0/arvato-risk-solution-services-integration-2.0.html
   - title: Arvato
     link: docs/scos/user/technology-partners/page.version/payment-partners/arvato.html
 ---

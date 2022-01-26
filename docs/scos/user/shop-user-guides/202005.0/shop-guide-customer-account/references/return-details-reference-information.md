@@ -9,8 +9,6 @@ redirect_from:
   - /v5/docs/return-details-reference-information
   - /v5/docs/en/return-details-reference-information
 related:
-  - title: Return Management Feature Overview
-    link: /docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html
   - title: Shop Guide - Creating a Return
     link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-returns-management/shop-guide-creating-a-return.html
   - title: Shop Guide - Printing a Return Slip

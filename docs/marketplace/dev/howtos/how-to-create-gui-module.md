@@ -2,9 +2,6 @@
 title: "How-To: Create a new GUI module"
 description: This articles provides details how to create a new GUI module
 template: howto-guide-template
-related:
-  - title: GUI modules concept
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-merchant-portal-core-feature-walkthrough/gui-modules-concept.html
 ---
 
 This article describes how to create a new GUI module and add it to navigation.

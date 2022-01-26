@@ -11,13 +11,6 @@ redirect_from:
   - /docs/episerver-integration-into-project
   - /docs/en/episerver-integration-into-project
   - /docs/scos/user/technology-partners/202108.0/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
-related:
-  - title: Episerver - Installation and Configuration
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
-  - title: Episerver - Order referenced commands
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-order-referenced-commands.html
-  - title: Episerver - API Requests
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-api-requests.html
 ---
 
 This article provides step-by-step instructions on integrating the Episerver module into your project.

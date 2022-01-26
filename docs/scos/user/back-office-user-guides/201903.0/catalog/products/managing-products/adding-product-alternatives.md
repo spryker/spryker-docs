@@ -15,8 +15,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/abstract-product-reference-information.html
   - title: Concrete Product- Reference Information
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/concrete-product-reference-information.html
-  - title: Editing Product Variant
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/concrete-products/editing-product-variant.html
   - title: Creating Product Variants
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/concrete-products/creating-product-variants.html
 ---

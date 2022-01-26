@@ -9,8 +9,6 @@ redirect_from:
   - /v5/docs/prices-feature-integration
   - /v5/docs/en/prices-feature-integration
 related:
-  - title: Glue API - Product Price API feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-price-api-feature-integration.html
   - title: Configurable Bundle feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/configurable-bundle-feature-integration.html
   - title: Product Images + Configurable Bundle feature integration

@@ -12,12 +12,6 @@ redirect_from:
   - /docs/en/enabling-the-product-cms-block
   - /docs/scos/dev/technical-enhancements/enabling-the-product-cms-block.html
 related:
-  - title: CMS Block
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
-  - title: Creating CMS Blocks
-    link: docs/scos/user/back-office-user-guides/page.version/content/blocks/creating-cms-blocks.html
-  - title: Managing CMS Blocks
-    link: docs/scos/user/back-office-user-guides/page.version/content/blocks/managing-cms-blocks.html
   - title: Migration Guide - CMS Block
     link: docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html
   - title: Migration Guide - CMS Block GUI

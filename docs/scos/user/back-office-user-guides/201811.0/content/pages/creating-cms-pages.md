@@ -9,8 +9,6 @@ redirect_from:
   - /v1/docs/creating-a-cms-page
   - /v1/docs/en/creating-a-cms-page
 related:
-  - title: Managing CMS Page Versions
-    link: docs/scos/user/back-office-user-guides/page.version/content/pages/ managing-cms-page-versions.html
   - title: CMS Page
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
   - title: CMS Pages- Reference Information

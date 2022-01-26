@@ -15,8 +15,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/content/pages/creating-cms-pages.html
   - title: Managing CMS Pages
     link: docs/scos/user/back-office-user-guides/page.version/content/pages/managing-cms-pages.html
-  - title: Managing CMS Page Versions
-    link: docs/scos/user/back-office-user-guides/page.version/content/pages/ managing-cms-page-versions.html
   - title: Assigning Blocks to Category and Product Pages
     link: docs/scos/user/back-office-user-guides/page.version/content/pages/assigning-blocks-to-category-and-product-pages.html
 ---

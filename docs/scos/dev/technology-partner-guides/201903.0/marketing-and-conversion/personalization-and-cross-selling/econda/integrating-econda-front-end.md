@@ -12,12 +12,6 @@ redirect_from:
 related:
   - title: Econda
     link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/personalization-and-cross-selling/econda.html
-  - title: Econda - Exporting CSVs
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/personalization-and-cross-selling/econda/econda-exporting-csvs.html
-  - title: Econda - Tracking
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/personalization-and-cross-selling/econda/econda-tracking.html
-  - title: Econda - Cross Sell
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/personalization-and-cross-selling/econda/econda-cross-sell.html
 ---
 
 {% info_block infoBox "Info" %}

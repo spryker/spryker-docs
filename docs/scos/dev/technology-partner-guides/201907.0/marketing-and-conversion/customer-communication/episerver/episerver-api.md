@@ -10,9 +10,6 @@ redirect_from:
   - /2021080/docs/en/episerver-api-requests
   - /docs/episerver-api-requests
   - /docs/en/episerver-api-requests
-related:
-  - title: Episerver - Installation and Configuration
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
 ---
 
 `\SprykerEco\Zed\Episerver\Business\Api\Adapter\EpiserverApiAdapter` contains all needed data for sending it to Episerver for events.

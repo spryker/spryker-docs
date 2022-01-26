@@ -9,8 +9,6 @@ redirect_from:
   - /v2/docs/creating-and-managing-product-bundles
   - /v2/docs/en/creating-and-managing-product-bundles
 related:
-  - title: Editing Product Variant
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/concrete-products/editing-product-variant.html
   - title: Abstract Product- Reference Information
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/abstract-product-reference-information.html
   - title: Products- Reference Information

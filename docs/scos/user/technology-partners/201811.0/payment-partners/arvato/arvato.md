@@ -9,8 +9,6 @@ redirect_from:
   - /v1/docs/arvato
   - /v1/docs/en/arvato
 related:
-  - title: Installing and configuring Arvato 2.0
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/arvato/v.2.0/arvato-risk-solution-services-integration-2.0.html
   - title: Arvato - Store Order 2.0
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/arvato/arvato-store-order.html
   - title: Arvato - Risk Check 2.0

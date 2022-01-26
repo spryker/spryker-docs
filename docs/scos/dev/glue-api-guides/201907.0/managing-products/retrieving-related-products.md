@@ -8,8 +8,6 @@ redirect_from:
   - /v3/docs/retrieving-related-products-201903
   - /v3/docs/en/retrieving-related-products-201903
 related:
-  - title: Product Relations API feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/product-relations-api-feature-integration.html
   - title: Retrieving Alternative Products
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/retrieving-alternative-products.html
   - title: Retrieving Product Information

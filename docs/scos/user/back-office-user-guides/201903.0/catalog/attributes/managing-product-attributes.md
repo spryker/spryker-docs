@@ -11,8 +11,6 @@ redirect_from:
 related:
   - title: Attributes- Reference Information
     link: docs/scos/user/back-office-user-guides/page.version/catalog/attributes/references/attributes-reference-information.html
-  - title: Creating Product Attributes
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/attributes/creating-product-attribute.html
 ---
 
 This topic describes how you can manage the product attributes.

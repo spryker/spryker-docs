@@ -15,8 +15,6 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-trees.html
   - title: Retrieving Product Information
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/retrieving-product-information.html
-  - title: Using Search Engine Friendly URLs
-    link: docs/scos/dev/glue-api-guides/page.version/using-search-engine-friendly-urls.html
 ---
 
 In addition to [catalog search](/docs/scos/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html), Spryker search engine also provides auto-completion terms and suggestions for products, categories, and CMS pages. The feature allows developers to predict search strings and provide customers with available options.

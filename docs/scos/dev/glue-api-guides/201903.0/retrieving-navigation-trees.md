@@ -8,10 +8,6 @@ redirect_from:
   - /v2/docs/retrieving-navigation-trees-201903
   - /v2/docs/en/retrieving-navigation-trees-201903
 related:
-  - title: Navigation API feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/navigation-api-feature-integration.html
-  - title: Catalog Search
-    link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.htmlct-catalog.html
   - title: Browsing a Category Tree
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-trees.html
 ---

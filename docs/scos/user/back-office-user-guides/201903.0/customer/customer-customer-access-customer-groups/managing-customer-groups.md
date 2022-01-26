@@ -9,12 +9,6 @@ redirect_from:
   - /v2/docs/managing-customer-groups
   - /v2/docs/en/managing-customer-groups
 related:
-  - title: Managing Customer Access
-    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customer-access.html
-  - title: Managing Customers
-    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customers.html
-  - title: Managing Customer Addresses
-    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customer-addresses.html
   - title: Customer Accounts
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
   - title: Customers- Reference Information

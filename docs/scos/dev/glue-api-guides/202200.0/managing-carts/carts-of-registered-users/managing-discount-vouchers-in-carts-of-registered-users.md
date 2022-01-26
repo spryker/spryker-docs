@@ -114,7 +114,8 @@ To apply a discount voucher to a cart of a registered user, send the request:
                     "amount": 7277,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/carts/c9310692-2ab0-5edc-bb41-fee6aa828d55"
@@ -151,7 +152,8 @@ To apply a discount voucher to a cart of a registered user, send the request:
                     "amount": 33253,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {...},
         "relationships": {
@@ -234,6 +236,6 @@ If the voucher is deleted successfully, the endpoints returns the `204 No Data` 
 | 003 | Failed to log in the user. |
 | 3301 | Cart or voucher with the specified ID is not found. |
 | 3302 | Incorrect voucher code or the voucher cannot be applied. |
-| 3303 | Cart code cannot be removed. |
+| 3303 | Cart code can't be removed. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

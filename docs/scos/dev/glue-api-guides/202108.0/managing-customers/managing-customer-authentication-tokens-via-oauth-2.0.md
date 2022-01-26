@@ -126,7 +126,6 @@ To refresh an authentication token, send the request:
 | ERROR NAME | DESCRIPTION |
 |-|-|
 | invalid_request | The refresh token is invalid. |
-| invalid_grant | The provided authorization grant or refresh token is invalid, expired, or. revoked. The provided authorization grant or refresh token does not match the redirection URI used in the authorization request, or was issued to another client. |
+| invalid_grant | The provided authorization grant or refresh token is invalid, expired, or revoked. The provided authorization grant or refresh token does not match the redirection URI used in the authorization request, or was issued to another client. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
-

@@ -280,6 +280,45 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 
 </details>
 
+<details>
+<summary markdown='span'>Request sample with the unfulfilled hard and soft minimum thresholds</summary>
+
+`POST https://glue.mysprykershop.com/carts/308b51f4-2491-5bce-8cf2-436273b44f9b/items`
+
+```json
+{
+    "data": {
+        "type": "items",
+        "attributes": {
+            "sku": "118_29804739",
+            "quantity": 1
+        }
+    }
+}
+```
+
+</details>
+
+<details>
+<summary markdown='span'>Request sample with the unfulfilled hard maximum threshold</summary>
+
+`POST https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/items`
+
+
+```json
+{
+    "data": {
+        "type": "items",
+        "attributes": {
+            "sku": "136_24425591",
+            "quantity": 1
+        }
+    }
+}
+```
+
+</details>
+
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | sku | String | &check; | Specifies the SKU part number of the item to place on the new guest cart. To use promotions, specify the SKU of one of a product being promoted. Concrete product SKU required. |
@@ -332,7 +371,8 @@ It is the responsibility of the API Client to track whether the selected items a
                     "amount": 2600,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/guest-carts/380e4a19-6faa-5053-89ff-81a1b5a3dd8a"
@@ -413,7 +453,8 @@ It is the responsibility of the API Client to track whether the selected items a
                     "amount": 11113,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2"
@@ -456,7 +497,8 @@ It is the responsibility of the API Client to track whether the selected items a
                     "amount": 11113,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2"
@@ -729,7 +771,8 @@ It is the responsibility of the API Client to track whether the selected items a
                     "amount": 5345,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-5d40-9da1-db5289f216fa"
@@ -847,7 +890,8 @@ It is the responsibility of the API Client to track whether the selected items a
                     "amount": 13301,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/guest-carts/7e42298e-9f15-5105-a192-96726a2b9da8"
@@ -1092,7 +1136,8 @@ It is the responsibility of the API Client to track whether the selected items a
                 "subtotal": 9000,
                 "grandTotal": 9000
             },
-            "discounts": []
+            "discounts": [],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/guest-carts/5b598c79-8024-50ec-b682-c0b219387294"
@@ -1215,7 +1260,8 @@ It is the responsibility of the API Client to track whether the selected items a
                     "amount": 14554,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/guest-carts/c9310692-2ab0-5edc-bb41-fee6aa828d55"
@@ -1322,7 +1368,8 @@ It is the responsibility of the API Client to track whether the selected items a
                     "amount": 18688,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/guest-carts/c9310692-2ab0-5edc-bb41-fee6aa828d55"
@@ -1463,7 +1510,8 @@ It is the responsibility of the API Client to track whether the selected items a
                     "amount": 9500,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/guest-carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a"
@@ -1553,7 +1601,8 @@ It is the responsibility of the API Client to track whether the selected items a
                     "amount": 9500,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/guest-carts/bd873e3f-4670-523d-b5db-3492d2c0bee3"
@@ -1778,7 +1827,8 @@ It is the responsibility of the API Client to track whether the selected items a
                     "amount": 9500,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/guest-carts/bd873e3f-4670-523d-b5db-3492d2c0bee3"
@@ -2501,6 +2551,99 @@ It is the responsibility of the API Client to track whether the selected items a
 
 </details>
 
+<details>
+<summary markdown='span'>Response sample with the unfulfilled hard and soft minimum thresholds</summary>
+
+```json
+{
+    "data": {
+        "type": "carts",
+        "id": "308b51f4-2491-5bce-8cf2-436273b44f9b",
+        "attributes": {
+            "priceMode": "GROSS_MODE",
+            "currency": "EUR",
+            "store": "DE",
+            "name": "Shopping Cart",
+            "isDefault": true,
+            "totals": {
+                "expenseTotal": 5000,
+                "discountTotal": 0,
+                "taxTotal": 1350,
+                "subtotal": 9454,
+                "grandTotal": 14454,
+                "priceToPay": 14454
+            },
+            "discounts": [],
+            "thresholds": [
+                {
+                    "type": "hard-minimum-threshold",
+                    "threshold": 20000,
+                    "fee": null,
+                    "deltaWithSubtotal": 10546,
+                    "message": "You need to add items for €200.00 to pass a recommended threshold. Otherwise, €50 fee will be added."
+                },
+                {
+                    "type": "soft-minimum-threshold-fixed-fee",
+                    "threshold": 100000,
+                    "fee": 5000,
+                    "deltaWithSubtotal": 90546,
+                    "message": "You need to add items for €1,000.00 to pass a recommended threshold. Otherwise, €50.00 fee will be added."
+                },
+            ]
+        },
+        "links": {
+            "self": "https://glue.de.69-new.demo-spryker.com/carts/308b51f4-2491-5bce-8cf2-436273b44f9b"
+        }
+    }
+}
+```
+
+</details>
+
+<details>
+<summary markdown='span'>Response sample with the unfulfilled hard maximum threshold</summary>
+
+```json
+{
+    "data": {
+        "type": "carts",
+        "id": "1ce91011-8d60-59ef-9fe0-4493ef3628b2",
+        "attributes": {
+            "priceMode": "GROSS_MODE",
+            "currency": "EUR",
+            "store": "DE",
+            "name": "Shopping Cart",
+            "isDefault": false,
+            "totals": {
+                "expenseTotal": 5000,
+                "discountTotal": 0,
+                "taxTotal": 11976,
+                "subtotal": 70007,
+                "grandTotal": 75007,
+                "priceToPay": 75007
+            },
+            "discounts": [],
+            "thresholds": [
+                {
+                    "type": "hard-maximum-threshold",
+                    "threshold": 5000,
+                    "fee": null,
+                    "deltaWithSubtotal": 65007,
+                    "message": "You need to add items or €50.00 or less to pass a recommended threshold."
+                }
+            ]
+        },
+        "links": {
+            "self": "https://glue.de.69-new.demo-spryker.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2"
+        }
+    }
+}
+```
+
+</details>
+
+For the threshold attributes, see [Threshold attributes](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#treshold-attributes).
+
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | guest-cart-items, bundle-items, bundled-items | sku | String | SKU of the product. |
@@ -2613,7 +2756,7 @@ String | &check; | Unique identifier of the [Configurable Bundle Template](/docs
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: add a configurable bunde to a gues cart</summary>
+<summary markdown='span'>Response sample: add a configurable bundle to a guest cart</summary>
 
 ```json
 {
@@ -2634,7 +2777,8 @@ String | &check; | Unique identifier of the [Configurable Bundle Template](/docs
                 "grandTotal": 98894,
                 "priceToPay": 98894
             },
-            "discounts": []
+            "discounts": [],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/carts/1bbcf8c0-30dc-5d40-9da1-db5289f216fa"
@@ -2898,7 +3042,8 @@ Request sample: `PATCH https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-
                 "grandTotal": 296682,
                 "priceToPay": 296682
             },
-            "discounts": []
+            "discounts": [],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-5d40-9da1-db5289f216fa"
@@ -3215,7 +3360,7 @@ If the item is deleted successfully, the endpoint returns the “204 No Content�
 | 117 | Currency is incorrect. |
 | 118 | Price mode is missing. |
 | 119 | Price mode is incorrect. |
-| 4001 | There is a problem with adding or updating the configured bundle. |
+| 4001 | There was a problem adding or updating the configured bundle. |
 | 4002 | Configurable bundle template is not found. |
 | 4003 | The quantity of the configured bundle should be more than zero. |
 | 4004 | Configured bundle with provided group key is not found in cart. |

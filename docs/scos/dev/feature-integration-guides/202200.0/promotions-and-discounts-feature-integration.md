@@ -4,15 +4,11 @@ description: Learn how to integrate the Promotions & Discounts feature into a Sp
 template: feature-integration-guide-template
 ---
 
+{% info_block errorBox %}
 
-{% info_block infoBox %}
-
-The following feature integration guide expects the basic feature to be in place.
+The following feature integration guide expects the basic feature to be in place. This document describes how to add the *Discount Prioritization* and *discount validity period supports HH:MM time definition* functionality.
 
 {% endinfo_block %}
-
-The current feature integration guide adds the *Discount Prioritization* and *Discount Validity Period Supports HH:MM Time Definition* functionalities.
-
 
 ## Install feature core
 
@@ -39,16 +35,15 @@ composer require spryker-feature/promotions-discounts {{page.version}} --update-
 
 Make sure that the following modules have been installed:
 
-
 | MODULE    | EXPECTED DIRECTORY       |
 |-----------|--------------------------|
 | Discount  | vendor/spryker/discount  |
 
  {% endinfo_block %}
 
-### 2) Set up database schema and transfer objects
+### 2) Set up database schema and transfer objects
 
-1. Apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -67,8 +62,7 @@ Make sure that the following changes have been applied by checking your database
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been triggered in transfer objects:
-
+Make sure that the following changes have been triggered in transfer objects:
 
 | TRANSFER                     | TYPE     | EVENT   | PATH                                                               |
 |------------------------------|----------|---------|--------------------------------------------------------------------|
@@ -82,6 +76,14 @@ Make sure that the following changes have been triggered in transfer objects:
 
 {% endinfo_block %}
 
+{% info_block warningBox "Verification" %}
+
+Make sure that the discount form has the *PRIORITY* field, and the discounts table has the *PRIORITY* column.
+
+Make sure, that the existing discounts in the `spy_discount` DB table have priority set to `9999`.
+
+{% endinfo_block %}
+
 ### 3) Add translations
 
 Generate a new translation cache for Zed:
@@ -92,10 +94,9 @@ console translator:generate-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that all labels and help tooltips in the discount create and edit forms have English and German translations.
+Make sure that all labels and help tooltips in the discount form has English and German translation.
 
 {% endinfo_block %}
-
 
 ### 4) Build Zed UI frontend
 
@@ -108,13 +109,9 @@ console frontend:zed:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the discount form has a priority field and discounts table has a priority column.
-
-Make sure that the existing discounts in the `spy_discount` DB table have priority set to `9999`.
-
 Make sure that discounts are calculated according to their priorities:
 1. Create a couple of percentage discounts with different priorities.
-2. Add items to the cart to fulfill discounts' requirements.
+2. To fulfill the discounts' requirements, add items to the cart.
 3. Check that discounts are applied in the correct order and the calculated discount total is correct.
 
 {% endinfo_block %}
@@ -125,11 +122,10 @@ Make sure that you can submit the *Discount Create* and *Discount Update* forms 
 1. In the Back Office, go to **Merchandising** > **Discount**.
 2. Create a new discount or update an existing one, check that you can see the *Discount* form.
 3. Click on **Valid From** and **Valid To** fields to ensure you can see the calendar, where you can select specific date and time.
-4. Make sure **Valid From** and **Valid To** fields can accept the selected date and time (for times not falling on the hour, use kaystroke entry—for example, 13:45).
+4. Make sure **Valid From** and **Valid To** fields can accept the selected date and time (for times not falling on the hour, use keystroke entry—for example, 13:45).
 5. In the `spy_discount` DB table, make sure **Valid From** and **Valid To** date and time are saved correctly.
 
 {% endinfo_block %}
-
 
 [//]: # (---)
 

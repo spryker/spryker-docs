@@ -60,12 +60,12 @@ Response sample:
                 ]
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/customer-access
+                "self": "https://glue.mysprykershop.com/customer-access"
             }
         }
     ],
     "links": {
-        "self": "https://glue.mysprykershop.com/customer-access
+        "self": "https://glue.mysprykershop.com/customer-access"
     }
 }
 ```

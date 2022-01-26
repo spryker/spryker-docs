@@ -797,6 +797,14 @@ For the attributes of the included resources, see:
 * [Retrieving concrete products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 * [Retrieving abstract products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html#abstract-products-response-attributes)
 
+## Possible errors
+
+| CODE | REASON |
+| --- | --- |
+| 302 | Concrete product is not found. |
+| 312 | Concrete product is ID not specified. |
+
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 
 ## Other management options
 

@@ -6,7 +6,7 @@ template: feature-integration-guide-template
 
 {% info_block errorBox %}
 
-The following feature integration guide expects the basic feature to be in place. This document describes how to add the *Discount Prioritization* and *discount validity period supports HH:MM time definition* functionality.
+The following feature integration guide expects the basic feature to be in place. This document describes how to add the *discount prioritization* and *discount validity period supports HH:MM time definition* functionality.
 
 {% endinfo_block %}
 
@@ -62,7 +62,7 @@ Make sure that the following changes have been applied by checking your database
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been triggered in transfer objects:
+Make sure that the following changes have been triggered in transfer objects:
 
 | TRANSFER                     | TYPE     | EVENT   | PATH                                                               |
 |------------------------------|----------|---------|--------------------------------------------------------------------|

@@ -123,9 +123,10 @@ The tokens are marked as expired on the date and time of the request. You can co
 
 | CODE  | REASON |
 | --- | --- |
-|001 | Access token is invalid.  |
-|002 |Access token is missing. |
-|004 |Failed to refresh token.  |
+| 001 | Access token is invalid. |
+| 002 | Access token is missing. |
+| 004 | Failed to refresh token. |
+| 901 | The `refreshToken` attribute is not specified or empty. |
 
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

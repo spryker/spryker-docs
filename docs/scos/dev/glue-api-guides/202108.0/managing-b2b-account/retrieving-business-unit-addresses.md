@@ -14,8 +14,8 @@ redirect_from:
 
 This endpoint allows retrieving business unit addresses.
 
-
 ## Retrieve a business unit address
+
 To retrieve a business unit address, send the request:
 
 ***
@@ -41,7 +41,7 @@ Request sample: `GET http://glue.mysprykershop.com/company-business-unit-address
 
 <details>
 <summary markdown='span'>Response sample</summary>
-    
+
 ```json
 {
     "data": {
@@ -83,7 +83,7 @@ Request sample: `GET http://glue.mysprykershop.com/company-business-unit-address
 | --- | --- |
 | 001 | Access token is invalid. |
 | 002 | Access token is missing. |
-| 2001 | Сompany business unit address was not found.|
+| 2001 | Сompany business unit address is not found.|
 
 {% info_block infoBox "Note" %}
 

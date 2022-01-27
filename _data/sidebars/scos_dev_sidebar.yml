@@ -4288,20 +4288,20 @@ entries:
         - title: Payolution
           nested:
           - title: Installing and configuring Payolution
-            url: /docs/scos/user/technology-partners/payment-partners/payolution/installing-and-configuring-payolution.html
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/installing-and-configuring-payolution.html
           - title: Integrating Payolution
-            url: /docs/scos/user/technology-partners/payment-partners/payolution/integrating-payolution.html
-          - title: Integrating the invoice paymnet method for Payolution
-            url: /docs/scos/user/technology-partners/payment-partners/payolution/integrating-the-invoice-payment-method-for-payolution.html
-          - title: Integrating the installment payment method for Payolution
-            url: /docs/scos/user/technology-partners/payment-partners/payolution/integrating-the-installment-payment-method-for-payolution.html
-          - title: Payolution - Performing Requests
-            url: /docs/scos/user/technology-partners/payment-partners/payolution/payolution-performing-requests.html
-          - title: Payolution - Workflow
-            url: /docs/scos/user/technology-partners/payment-partners/payolution/payolution-workflow.html
             include_versions:
             - "202009.0"
-            - "202108.0"
+            - "202108.0"          
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/integrating-payolution.html
+          - title: Integrating the invoice paymnet method for Payolution
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/integrating-the-invoice-payment-method-for-payolution.html
+          - title: Integrating the installment payment method for Payolution
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/integrating-the-installment-payment-method-for-payolution.html
+          - title: Payolution - Performing Requests
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution-performing-requests.html
+          - title: Payolution - Workflow
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution-workflow.html
         - title: RatePay
           nested:
             - title: RatePay - Payment methods

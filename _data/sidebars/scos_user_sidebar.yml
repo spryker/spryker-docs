@@ -2498,9 +2498,6 @@ entries:
           - "202108.0"
       - title: Payolution
         url: /docs/scos/user/technology-partners/payment-partners/payolution.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
       - title: Arvato
         url: /docs/scos/user/technology-partners/payment-partners/arvato.html
     - title: Technology Partner Integration

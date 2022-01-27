@@ -31,7 +31,7 @@ redirect_from:
   - /v6/docs/about-spryker
   - /v6/docs/en/about-spryker
   - /docs/scos/user/intro-to-spryker/whats-new/roadmap.html
-  tags: [B2B, B2C]
+tags: [B2B, B2C]
 ---
 
 ## What is the Spryker Commerce OS?

@@ -36,6 +36,6 @@ Depending on the roles and teams in your project, you can limit the access of di
 The following diagram shows what features are used for both **B2B and B2C**, and which are **B2B specific**. 
 {% endinfo_block %}
 
-![B2B and B2C Features\(2\)](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/B2B%20and%20B2C%20Features%282%29.png){height="550" width=""}
+![B2B and B2C features](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.md/b2b-and-b2c-features.png){height="550" width=""}
 
 You can always define what exactly is going to be needed for your specific project.

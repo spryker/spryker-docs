@@ -30,6 +30,7 @@ redirect_from:
   - /v1/docs/en/installation-guide-b2b
   - /v1/docs/installation-guide-b2c
   - /v1/docs/en/installation-guide-b2c
+  - /docs/b2c-demo-shop-installation-mac-os-or-linux-with-devvm
 ---
 
 To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html) or [B2C](/docs/scos/user/intro-to-spryker/b2c-suite.html) implementations on Mac OS or Linux with Development Virtual Machine, follow the steps below.

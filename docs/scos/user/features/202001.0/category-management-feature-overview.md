@@ -28,9 +28,9 @@ A category is a set of products that share a common attribute and, therefore, ca
 
 The product catalog is structured in a category tree, which consists of root, parent, and child categories.
 
-A *root category* is a base category that stands on top of the category hierarchy. Product and child categories are assigned to root categories, but root categories can not be assigned to anything. Also, a store can only be linked to one root category tree, while a root category tree can be linked to multiple stores. Root categories are added through [data import](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category.csv.html) and cannot be created in the Back Office, unlike other categories, which can be added in both ways.
+A *root category* is a base category that stands on top of the category hierarchy. Product and child categories are assigned to root categories, but root categories can not be assigned to anything. Also, a store can only be linked to one root category tree, while a root category tree can be linked to multiple stores. 
 
-A parent category is a category that has products and other categories assigned to it. Categories, assigned to parent categories are referred to as child categories. Products belonging to a child category that is assigned to a parent one belong to the parent category too. You can assign child categories to parent ones via the Back Office or by importing the categories. For information on how to create child categories for the parent categories, see [Creating categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html) and [Managing categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html). For information on how to import the child categories, see [File details: category.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category.csv.html).
+A parent category is a category that has products and other categories assigned to it. Categories, assigned to parent categories are referred to as child categories. Products belonging to a child category that is assigned to a parent one belong to the parent category too. You can assign child categories to parent ones via the Back Office or by importing the categories. For information on how to create child categories for the parent categories, see [Creating categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html) and [Managing categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html).
 
 On the Storefront, in comparison to parent category names, child category names are indented so that they can be identified.
 
@@ -43,7 +43,6 @@ In the image below, the Cameras & Camcorders parent category has the Digital Cam
 
 A Back Office user defines the visual representation of a category on the Storefront by assigning a template to the category. For information on how to do that, see [Creating categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html).
 
-For more information about types of category templates, see [Category page template types](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html#category-page-template-types).
 
 ## Category filters
 
@@ -84,7 +83,7 @@ Currently, the Category Management feature has the following functional constrai
 |---|
 | [Create a category](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html) |
 | [Assign products to categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html) |
-| [Manage categories](/docs.spryker.com/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/managing-categories.html) |
+| [Manage categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/managing-categories.html) |
 
 {% info_block warningBox "Developer guides" %}
 

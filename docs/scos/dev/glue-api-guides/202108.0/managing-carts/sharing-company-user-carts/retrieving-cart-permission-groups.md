@@ -130,9 +130,9 @@ Sample request: `GET http://glue.mysprykershop.com/cart-permission-groups/1`
 
 | CODE | REASON |
 | --- | --- |
-| 001 | The access token is invalid. |
-| 002 | The access token is missing. |
-| 2501| The specified permission group was not found or the user does not have access to it. |
+| 001 | Access token is invalid. |
+| 002 | Access token is missing. |
+| 2501| Specified permission group is not found or the user does not have access to it. |
 
 ## Next steps
 

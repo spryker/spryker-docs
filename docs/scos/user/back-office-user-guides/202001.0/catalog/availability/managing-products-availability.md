@@ -26,10 +26,10 @@ To start working with availability, navigate to **Products > Availability**.
 This section allows inventory managers, or other team members responsible for stock updates, to check the products' stock.
 The main advantage is that you do not need to make any manual calculations. The system does all the calculations automatically and you get the aggregated availability value. You will have a single table with  a comparison of the product's stock value and the ordered value. It also calculates the bundled products stock. See [Availability: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/references/availability-reference-information.html).
 
-## Checking Availability 
+## Checking Availability
 
 **To check** the product availability:
-1. In the _Actions_ column of the **Products availability list** table, click **View** next to the corresponding product item. 
+1. In the _Actions_ column of the **Products availability list** table, click **View** next to the corresponding product item.
 This will take you to the **Product Availability** page. See [Availability: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/references/availability-reference-information.html) for more details.
 2. In case of a multistore setup, in the **Store** drop-down select the store locale to check the product's availability for each specific locale.
 
@@ -50,7 +50,9 @@ This will take you to the **Product Availability** page. See [Availability: Refe
 6. Click **Save**.
 
 {% info_block warningBox "Note" %}
+
 Please note that you are updating the product variant availability, not the bundle availability itself. To see examples on how the bundle availability is calculated, see [Availability: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/references/availability-reference-information.html).
+
 {% endinfo_block %}
 
 **Tips & Tricks**
@@ -64,6 +66,7 @@ You can edit stock for variants from the **Edit Concrete Product** page:
 5. Click **Save**.
 
 {% info_block infoBox "Info" %}
-Once on the **Edit Concrete Product** page, you can update any of the product details you need.
-{% endinfo_block %}
 
+Once on the **Edit Concrete Product** page, you can update any of the product details you need.
+
+{% endinfo_block %}

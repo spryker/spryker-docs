@@ -4,6 +4,17 @@ title: Marketplace Developer Guides
 entries:
   - product: Marketplace
     nested:
+      - title: Setup
+        nested:
+          - title: System requirements
+            url: /docs/marketplace/dev/setup/system-requirements.html
+
+          - title: Infrastructure requirements
+            url: /docs/marketplace/dev/setup/infrastructure-requirements.html
+
+          - title: Installation
+            url: /docs/marketplace/dev/setup/installation.html
+
       - title: Marketplace architecture overview
         nested:
           - title: Marketplace Application composition
@@ -17,17 +28,6 @@ entries:
 
           - title: Marketplace in the Back Office
             url: /docs/marketplace/dev/architecture-overview/marketplace-in-back-office.html
-
-      - title: Setup
-        nested:
-          - title: System requirements
-            url: /docs/marketplace/dev/setup/system-requirements.html
-
-          - title: Infrastructure requirements
-            url: /docs/marketplace/dev/setup/infrastructure-requirements.html
-
-          - title: Installation
-            url: /docs/marketplace/dev/setup/installation.html
 
       - title: Feature walkthroughs
         nested:

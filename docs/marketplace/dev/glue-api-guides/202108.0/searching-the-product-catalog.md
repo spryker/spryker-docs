@@ -7023,7 +7023,7 @@ To search by products, send the request:
                 ]
             },
             "links": {
-                "self": "https://glue.de.69-new.demo-spryker.com/catalog-search"
+                "self": "https://glue.mysprykershop.com/catalog-search"
             },
             "relationships": {
                 "abstract-products": {
@@ -7038,9 +7038,9 @@ To search by products, send the request:
         }
     ],
     "links": {
-        "self": "https://glue.de.69-new.demo-spryker.com/access-tokens?q=001&include=abstract-products,concrete-products,product-offers",
-        "last": "https://glue.de.69-new.demo-spryker.com/access-tokens?q=001&include=abstract-products,concrete-products,product-offers&page[offset]=0&page[limit]=12",
-        "first": "https://glue.de.69-new.demo-spryker.com/access-tokens?q=001&include=abstract-products,concrete-products,product-offers&page[offset]=0&page[limit]=12"
+        "self": "https://glue.mysprykershop.com/access-tokens?q=001&include=abstract-products,concrete-products,product-offers",
+        "last": "https://glue.mysprykershop.com/access-tokens?q=001&include=abstract-products,concrete-products,product-offers&page[offset]=0&page[limit]=12",
+        "first": "https://glue.mysprykershop.com/access-tokens?q=001&include=abstract-products,concrete-products,product-offers&page[offset]=0&page[limit]=12"
     },
     "included": [
         {
@@ -7052,7 +7052,7 @@ To search by products, send the request:
                 "isDefault": true
             },
             "links": {
-                "self": "https://glue.de.69-new.demo-spryker.com/product-offers/offer8"
+                "self": "https://glue.mysprykershop.com/product-offers/offer8"
             }
         },
         {
@@ -7064,7 +7064,7 @@ To search by products, send the request:
                 "isDefault": false
             },
             "links": {
-                "self": "https://glue.de.69-new.demo-spryker.com/product-offers/offer49"
+                "self": "https://glue.mysprykershop.com/product-offers/offer49"
             }
         },
         {
@@ -7104,7 +7104,7 @@ To search by products, send the request:
                 "productConfigurationInstance": null
             },
             "links": {
-                "self": "https://glue.de.69-new.demo-spryker.com/concrete-products/001_25904006"
+                "self": "https://glue.mysprykershop.com/concrete-products/001_25904006"
             },
             "relationships": {
                 "product-offers": {
@@ -7183,7 +7183,7 @@ To search by products, send the request:
                 "url": "/en/canon-ixus-160-1"
             },
             "links": {
-                "self": "https://glue.de.69-new.demo-spryker.com/abstract-products/001"
+                "self": "https://glue.mysprykershop.com/abstract-products/001"
             },
             "relationships": {
                 "concrete-products": {

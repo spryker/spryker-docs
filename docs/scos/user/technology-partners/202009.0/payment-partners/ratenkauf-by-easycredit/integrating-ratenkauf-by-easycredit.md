@@ -1,6 +1,6 @@
 ---
-title: Ratenkauf by Easycredit - Integration into a project
-description: This article provides step-by-step instruction on how to integrate Ratenkauf by Easycredit payment into your project.
+title: Integrating ratenkauf by easyCredit
+description: This article provides step-by-step instruction on how to integrate ratenkauf by easyCredit payment into your project.
 last_updated: Dec 8, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/ratenkauf-integration-into-project
@@ -9,10 +9,10 @@ redirect_from:
   - /v6/docs/ratenkauf-integration-into-project
   - /v6/docs/en/ratenkauf-integration-into-project
 related:
-  - title: Ratenkauf by Easycredit
+  - title: ratenkauf by easyCredit
     link: docs/scos/user/technology-partners/page.version/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html
-  - title: Ratenkauf by Easycredit - Installation and configuration
-    link: docs/scos/user/technology-partners/page.version/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit-installation-and-configuration.html
+  - title: Installing and configuring ratenkauf by easyCredit
+    link: /docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.html
 ---
 
 {% info_block errorBox %}
@@ -21,7 +21,7 @@ There is currently an issue when using giftcards with Ratenkauf. Our team is dev
 
 {% endinfo_block %}
 
-This article provides step-by-step instruction on how to integrate Ratenkauf by Easycredit payment into your project. 
+This article provides step-by-step instruction on how to integrate ratenkauf by easyCredit payment into your project. 
 
 To integrate Easycredit into a Spryker project, do the following:
 

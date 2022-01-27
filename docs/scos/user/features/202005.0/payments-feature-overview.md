@@ -46,7 +46,7 @@ The Spryker Commerce OS supports integration of the following payment providers,
 * [Klarna](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/klarna.html)
 * [Payolution](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution.html)
 * [Powerpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/powerpay.html)
-* [Ratenkauf by Easycredit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html)
+* [ratenkauf by easyCredit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratenkauf-by-easycredit.html)
 * [RatePay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay.html)
 
 ## Dummy payment

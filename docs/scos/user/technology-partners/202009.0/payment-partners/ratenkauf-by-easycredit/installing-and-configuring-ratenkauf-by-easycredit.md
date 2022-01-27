@@ -1,26 +1,23 @@
 ---
-title: Ratenkauf by Easycredit - Installation and configuration
-description: This article contains installation and configuration information for the Ratenkauf by Easycredit module into the Spryker-based shop.
-last_updated: Jun 16, 2021
+title: Installing and configuring ratenkauf by easyCredit
+description: This article contains installation and configuration information for the ratenkauf by easyCredit module into the Spryker-based shop.
+last_updated: Nov 4, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/ratenkauf-by-easycredit-installation-and-configuration
-originalArticleId: fb3e79f2-a44a-464f-8b12-29f294b1adfd
+originalLink: https://documentation.spryker.com/v6/docs/ratenkauf-by-easycredit-installation-and-configuration
+originalArticleId: 9b90e3d4-adc9-4520-8d0e-c9aba6524f70
 redirect_from:
-  - /2021080/docs/ratenkauf-by-easycredit-installation-and-configuration
-  - /2021080/docs/en/ratenkauf-by-easycredit-installation-and-configuration
-  - /docs/ratenkauf-by-easycredit-installation-and-configuration
-  - /docs/en/ratenkauf-by-easycredit-installation-and-configuration
+  - /v6/docs/ratenkauf-by-easycredit-installation-and-configuration
+  - /v6/docs/en/ratenkauf-by-easycredit-installation-and-configuration
 related:
-  - title: Ratenkauf by Easycredit
+  - title: ratenkauf by easyCredit
     link: docs/scos/user/technology-partners/page.version/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html
-  - title: Ratenkauf by Easycredit - Integration into a project
-    link: docs/scos/user/technology-partners/page.version/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit-integration-into-a-project.html
+  - title: Integrating ratenkauf by easyCredit
+    link: /docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratenkauf-by-easycredit/integrating-ratenkauf-by-easycredit.html
 ---
 
 ## Installation
 
 To install Easycredit, run the following command in  console:
-
 ```bash
 composer require spryker-eco/easycredit
 ```
@@ -29,7 +26,7 @@ After installation, run the `propel:install` command or check the following migr
 
 ```php
 CREATE SEQUENCE "spy_payment_easycredit_api_log_pk_seq";
-
+ 
 CREATE TABLE "spy_payment_easycredit_api_log"
 (
     "id_payment_easycredit_api_log" INTEGER NOT NULL,
@@ -44,9 +41,9 @@ CREATE TABLE "spy_payment_easycredit_api_log"
     "updated_at" TIMESTAMP,
     PRIMARY KEY ("id_payment_easycredit_api_log")
 );
-
+ 
 CREATE SEQUENCE "spy_payment_easycredit_order_identifier_pk_seq";
-
+ 
 CREATE TABLE "spy_payment_easycredit_order_identifier"
 (
     "id_payment_easycredit_order_identifier" INTEGER NOT NULL,
@@ -59,7 +56,6 @@ CREATE TABLE "spy_payment_easycredit_order_identifier"
 
 
 ## Configuration
-
 Perform the initial configuration of Easycredit:
 
 ```php
@@ -68,19 +64,19 @@ Perform the initial configuration of Easycredit:
 use SprykerEco\Shared\Easycredit\EasycreditConstants;
 use Spryker\Shared\Oms\OmsConstants;
 use Spryker\Shared\Sales\SalesConstants;
-
+ 
 ...
-
+ 
 $config[OmsConstants::ACTIVE_PROCESSES] = [
     ...
     'Easycredit01',
 ];
-
+ 
 $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
     ...
     'easycredit' => 'Easycredit01',
 ];
-
+ 
 ...
 $config[EasycreditConstants::SHOP_IDENTIFIER] = 'Your shop identifier';
 $config[EasycreditConstants::SHOP_TOKEN] = 'Your shop token';
@@ -89,3 +85,4 @@ $config[EasycreditConstants::SUCCESS_URL] = $config[ApplicationConstants::BASE_U
 $config[EasycreditConstants::CANCELLED_URL] = $config[ApplicationConstants::BASE_URL_YVES] . '/checkout/payment';
 $config[EasycreditConstants::DENIED_URL] = $config[ApplicationConstants::BASE_URL_YVES] . '/checkout/payment';
 ```
+

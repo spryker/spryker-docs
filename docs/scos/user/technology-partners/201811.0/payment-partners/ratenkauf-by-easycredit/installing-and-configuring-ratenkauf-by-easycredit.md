@@ -1,30 +1,30 @@
 ---
-title: Ratenkauf by Easycredit - Installation and Configuration
-description: This article contains installation and configuration information for the Ratenkauf by Easycredit module into the Spryker-based shop.
-last_updated: Mar 5, 2020
+title: Installing and configuring ratenkauf by easyCredit
+description: This article contains installation and configuration information for the ratenkauf by easyCredit module into the Spryker-based shop.
+last_updated: Jul 29, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v4/docs/ratenkauf-by-easycredit-installation-and-configuration
-originalArticleId: be57732d-8c68-4c80-94fc-52a3af521093
+originalLink: https://documentation.spryker.com/v1/docs/ratenkauf-by-easycredit-installation-and-configuration
+originalArticleId: 2fcd3cce-6bf2-48f5-838a-318476b0c6c7
 redirect_from:
-  - /v4/docs/ratenkauf-by-easycredit-installation-and-configuration
-  - /v4/docs/en/ratenkauf-by-easycredit-installation-and-configuration
+  - /v1/docs/ratenkauf-by-easycredit-installation-and-configuration
+  - /v1/docs/en/ratenkauf-by-easycredit-installation-and-configuration
 related:
-  - title: Ratenkauf by Easycredit
+  - title: ratenkauf by easyCredit
     link: docs/scos/user/technology-partners/page.version/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html
 ---
 
 ## Installation
 
-To install Easycredit, run the following command in  console:
+To install Easycredit, run the following command in the console:
 ```bash
 composer require spryker-eco/easycredit
 ```
 
-After installation, run the `propel:install` command or check the following migration:
+After installation, you have to run propel:install command or you can check the following migration:
 
 ```php
 CREATE SEQUENCE "spy_payment_easycredit_api_log_pk_seq";
-
+ 
 CREATE TABLE "spy_payment_easycredit_api_log"
 (
     "id_payment_easycredit_api_log" INTEGER NOT NULL,
@@ -39,9 +39,9 @@ CREATE TABLE "spy_payment_easycredit_api_log"
     "updated_at" TIMESTAMP,
     PRIMARY KEY ("id_payment_easycredit_api_log")
 );
-
+ 
 CREATE SEQUENCE "spy_payment_easycredit_order_identifier_pk_seq";
-
+ 
 CREATE TABLE "spy_payment_easycredit_order_identifier"
 (
     "id_payment_easycredit_order_identifier" INTEGER NOT NULL,
@@ -52,6 +52,13 @@ CREATE TABLE "spy_payment_easycredit_order_identifier"
 );
 ```
 
+To use FE functionality (js / css) with old demoshop, `shop-ui-compatibility` module is necessary required:
+
+```bash
+composer require spryker-eco/shop-ui-compatibility
+```
+
+After installing `shop-ui-compatibility` use procedures described in this migration guide - [Setting up ShopUICompatibility Module in the Legacy Demoshop](/docs/scos/dev/migration-and-integration/201811.0/updating-the-legacy-demoshop-with-scos/setting-up-shopuicompatibility-module-in-the-legacy-demoshop.html).
 
 ## Configuration
 Perform the initial configuration of Easycredit:
@@ -62,19 +69,19 @@ Perform the initial configuration of Easycredit:
 use SprykerEco\Shared\Easycredit\EasycreditConstants;
 use Spryker\Shared\Oms\OmsConstants;
 use Spryker\Shared\Sales\SalesConstants;
-
+ 
 ...
-
+ 
 $config[OmsConstants::ACTIVE_PROCESSES] = [
     ...
     'Easycredit01',
 ];
-
+ 
 $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
     ...
     'easycredit' => 'Easycredit01',
 ];
-
+ 
 ...
 $config[EasycreditConstants::SHOP_IDENTIFIER] = 'Your shop identifier';
 $config[EasycreditConstants::SHOP_TOKEN] = 'Your shop token';
@@ -85,16 +92,16 @@ $config[EasycreditConstants::DENIED_URL] = $config[ApplicationConstants::BASE_UR
 ```
 
 ## Integration
-To integrate Easycredit into your project, do the following:
 
-1. Update `CheckoutPageDependencyProvider` by adding a new payment subform and a payment method handler.
-To show the Easycredit payment method on the payment step, define `SubFormPlugin` and `StepHandlerPlugin`.   
+1. First of all, update `CheckoutPageDependencyProvider` by adding a new payment subform and a payment method handler.
+To show the Easycredit payment method on the payment step, you should define `SubFormPlugin` and `StepHandlerPlugin`.   
 
-CheckoutPageDependencyProvider.php
+<details open>
+<summary markdown='span'>CheckoutPageDependencyProvider.php</summary>
 
 ```php
 public const CLIENT_EASYCREDIT = 'CLIENT_EASYCREDIT';
-
+ 
 ...
     /**
      * @param \Spryker\Yves\Kernel\Container $container
@@ -105,10 +112,10 @@ public const CLIENT_EASYCREDIT = 'CLIENT_EASYCREDIT';
     {
         $container = parent::provideDependencies($container);
         $container = $this->addEasycreditClient($container);
-
+     
         return $container;
     }
-
+ 
     /**
      * @param \Spryker\Yves\Kernel\Container $container
      *
@@ -119,12 +126,12 @@ public const CLIENT_EASYCREDIT = 'CLIENT_EASYCREDIT';
         $container[static::PAYMENT_SUB_FORMS] = function () {
             $subFormPluginCollection = new SubFormPluginCollection();
             $subFormPluginCollection->add(new EasycreditSubFormPlugin());
-
+ 
             return $subFormPluginCollection;
         };
          return $container;
     }
-
+ 
     /**
      * @param \Spryker\Yves\Kernel\Container $container
      *
@@ -137,10 +144,10 @@ public const CLIENT_EASYCREDIT = 'CLIENT_EASYCREDIT';
             $stepHandlerPluginCollection->add(new EasycreditHandlerPlugin(), PaymentTransfer::EASYCREDIT);
              return $stepHandlerPluginCollection;
         };
-
+ 
         return $container;
     }
-
+ 
     /**
      * @param \Spryker\Yves\Kernel\Container $container
      *
@@ -151,17 +158,20 @@ public const CLIENT_EASYCREDIT = 'CLIENT_EASYCREDIT';
         $container[static::CLIENT_EASYCREDIT] = function (Container $container) {
             return $container->getLocator()->easycredit()->client();
         };
-
+ 
         return $container;
     }
 ...
 ```
+<br>
+</details>
 
 2. The next dependency provider you should update is `OmsDependencyProvider`.
 To use commands and conditions for events in OMS,  define them.   
 
-OmsDependencyProvider
-
+<details open>
+<summary markdown='span'>OmsDependencyProvider</summary>
+    
 ```php
 ...
 $container->extend(self::CONDITION_PLUGINS, function (ConditionCollectionInterface $conditionCollection) {
@@ -170,11 +180,14 @@ $container->extend(self::CONDITION_PLUGINS, function (ConditionCollectionInterfa
 });
 ...
 ```
+<br>
+</details>
 
 3. And one more dependency provider to be updated is `CheckoutDependencyProvider`.
 To send requests to Easycredit, you need the technical order identifier value. After adding this plugin, the order identifier will be saved to the database in table `spy_payment_easycredit_order_identifier`.   
 
-CheckoutDependencyProvider
+<details open>
+<summary markdown='span'>CheckoutDependencyProvider</summary>
 
 ```php
 ...
@@ -185,15 +198,18 @@ protected function getCheckoutOrderSavers(Container $container)
         new EasycreditOrderIdentifierPlugin(),
     ];
 }
-
+ 
 ...
 ```
+<br>
+</details>
 
 To use Easycredit requests during the checkout process, you have to create your own checkout steps. To implement the checkout steps, follow the guidelines below:
 
 1. Extend `StepFactory`.
 
-CheckoutPageFactory
+<details open>
+<summary markdown='span'>CheckoutPageFactory</summary>
 
 ```php
 <?php
@@ -214,10 +230,13 @@ class CheckoutPageFactory extends SprykerCheckoutPageFactory
 	}
 }
 ```
+<br>
+</details>
 
 2. Implement `StepFactory` as shown in this example:
 
-StepFactory
+<details open>
+<summary markdown='span'>StepFactory</summary>
 
 ```php
 <?php
@@ -256,15 +275,11 @@ class StepFactory extends SprykerStepFactory
     */
     public function createSummaryStep(): StepInterface
     {
-          return new SprykerShopSummaryStep(
+        return new SummaryStep(
             $this->getProductBundleClient(),
-            $this->getShipmentService(),
-            $this->getConfig(),
-            SprykerShopCheckoutPageControllerProvider::CHECKOUT_SUMMARY,
-            HomePageControllerProvider::ROUTE_HOME,
-            $this->getCheckoutClient()
+            CheckoutPageControllerProvider::CHECKOUT_SUMMARY,
+            HomePageControllerProvider::ROUTE_HOME
         );
-
     }
 
    /**
@@ -275,13 +290,10 @@ class StepFactory extends SprykerStepFactory
         return new ShipmentStep(
             $this->getCalculationClient(),
             $this->getShipmentPlugins(),
-            $this->createShipmentStepPostConditionChecker(),
-            $this->createGiftCardItemsChecker(),
-            SprykerShopCheckoutPageControllerProvider::CHECKOUT_SHIPMENT,
+            CheckoutPageControllerProvider::CHECKOUT_SHIPMENT,
             HomePageControllerProvider::ROUTE_HOME,
             $this->getEasycreditClient()
         );
-
     }
 
     /**
@@ -324,11 +336,14 @@ class StepFactory extends SprykerStepFactory
     }
 }
 ```
+<br>
+</details>
 
 3. Now you can extend the basic steps on the project level and can create your Easycredit step that will be called when a user takes Easycredit as `PaymentMethod`.
 Examples of steps implementations:   
 
-EasycreditStep.php
+<details open>
+<summary markdown='span'>EasycreditStep.php</summary>
 
 ```php
 <?php
@@ -428,11 +443,12 @@ class EasycreditStep extends AbstractBaseStep implements StepWithExternalRedirec
     {
         return true;
     }
+    ```
+<br>
+</details>
 
-```
-
-ShipmentStep.php
-
+<details open>
+<summary markdown='span'>ShipmentStep</summary> 
 ```php
 <?php
 
@@ -480,9 +496,11 @@ class ShipmentStep extends SprykerShipmentStep
     }
 }
 ```
+<br>
+</details>
 
-SummaryStep.php
-
+<details open>
+<summary markdown='span'>SummaryStep</summary> 
 ```php
 <?php
 
@@ -523,10 +541,12 @@ class SummaryStep extends SprykerSummaryStep
     }
 }
 ```
+<br>
+</details>
 
-4. To run the step process for the new Easycredit step, extend the default `CheckoutController` with a new action for handling the Easycredit step.
-
-\CheckoutController
+4. To run the step process for the new Easycredit step, you should extend the default `CheckoutController` with a new action for handling the Easycredit step.
+<details open>
+<summary markdown='span'>CheckoutController</summary>
 
 ```php
 <?php
@@ -549,92 +569,84 @@ class CheckoutController extends SprykerCheckoutController
 	}
 }
 ```
+<br>
+</details>
 
-5. After creating a new action in the checkout controller, define a new route in `CheckoutPageRouteProviderPlugin`.
-
-CheckoutPageRouteProviderPlugin.php
+5. After creating a new action in the checkout controller, define a new route in `CheckoutPageControllerProvider`.
+<details open>
+<summary markdown='span'>CheckoutPageControllerProvider.php</summary>
 
 ```php
 <?php
 
-namespace Pyz\Yves\CheckoutPage\Plugin\Router;
+namespace Pyz\Yves\CheckoutPage\Plugin\Provider;
 
-use SprykerShop\Yves\CheckoutPage\Plugin\Router\CheckoutPageRouteProviderPlugin as SprykerCheckoutPageRouteProviderPlugin;
-use Spryker\Yves\Router\Route\RouteCollection;
+use Silex\Application;
+use SprykerShop\Yves\CheckoutPage\Plugin\Provider\CheckoutPageControllerProvider as BaseCheckoutPageControllerProvider;
 
-class CheckoutPageRouteProviderPlugin extends SprykerCheckoutPageRouteProviderPlugin
+class CheckoutPageControllerProvider extends BaseCheckoutPageControllerProvider
 {
-    public const CHECKOUT_EASY_CREDIT = 'easy-credit';
-    protected const ROUTE_CART = 'cart';
+	public const CHECKOUT_EASY_CREDIT = 'easy-credit';
 
-    /**
-     * Specification:
-     * - Adds Routes to the RouteCollection.
-     *
-     * @api
-     *
-     * @param \Spryker\Yves\Router\Route\RouteCollection $routeCollection
-     *
-     * @return \Spryker\Yves\Router\Route\RouteCollection
-     */
-    public function addRoutes(RouteCollection $routeCollection): RouteCollection
-    {
-        $routeCollection = parent::addRoutes($routeCollection);
+	/**
+	 * @param \Silex\Application $app
+	 *
+	 * @return void
+	 */
+	protected function defineControllers(Application $app)
+	{
+		parent::defineControllers($app);
+		$this->addEasycreditStepRoute();
+	}
 
-        $routeCollection = $this->addEasycreditStepRoute($routeCollection);
-
-        return $routeCollection;
-    }
-
-    /**
-     * @param \Spryker\Yves\Router\Route\RouteCollection $routeCollection
-     */
-    public function addEasycreditStepRoute($routeCollection)
-    {
-        $route = $this->buildRoute('/checkout/easycredit', 'CheckoutPage', 'Checkout', 'easyCredit');
-        $route = $route->setMethods(['GET', 'POST']);
-        $routeCollection->add(static::CHECKOUT_EASY_CREDIT, $route);
-
-        return $routeCollection;
-    }
+	protected function addEasycreditStepRoute()
+	{
+		$this->createController('/{checkout}/easycredit', static::CHECKOUT_EASY_CREDIT, 'CheckoutPage', 'Checkout', 'easyCredit')
+			->assert('checkout', $this->getAllowedLocalesPattern() . 'checkout|checkout')
+			->value('checkout', 'checkout')
+			->method('GET|POST');
+	}
 }
-
 ```
+<br>
+</details>
 
-6. Also, the Easycredit bundle has its own `YvesController` for handling a success response from Easycredit, so you have to define a controller in `RouterDependencyProvider`.
-
-RouterDependencyProvider.php
+6. Also, the Easycredit bundle has its own `YvesController` for handling a success response from Easycredit, so you have to define a controller in `YvesBootstrap`.
+<details open>
+<summary markdown='span'>YvesBootstrap.php</summary>
 
 ```php
 <?php
 
-namespace Pyz\Yves\Router;
+namespace Pyz\Yves\ShopApplication;
 
 ...
-use Pyz\Yves\CheckoutPage\Plugin\Router\CheckoutPageRouteProviderPlugin;
+use SprykerEco\Yves\Easycredit\Plugin\Provider\EasycreditControllerProvider;
 ...
 
-class RouterDependencyProvider extends SprykerRouterDependencyProvider
+class YvesBootstrap extends SprykerYvesBootstrap
 {
-
 	...
-	protected function getRouteProvider(): array
+	protected function getControllerProviderStack($isSsl)
 	{
 		...
-		new CheckoutPageRouteProviderPlugin(),
+		new EasycreditControllerProvider($isSsl),
 		...
 	}
 	...
 }
 ```
+<br>
+</details>
 
-## Frontend Part
+## Frontend part
 
-To show the Easycredit info on the Product Details page, at the Summary and Payment steps, you have to extend some views on the project level .
+Еo show the Easycredit info on the PDP page, and Summary and Payment steps, you have to extend some views on the project level .
 
 You can find some examples below in `[`payment.twig`](#payment-step)`, [`summary.twig`](#summary-step) and [`pdp.twig`](#pdp-page).
 
-payment.twig
+ <details open>
+<summary markdown='span'>payment.twig</summary>
 
 Payment step - `src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig`
 
@@ -724,6 +736,8 @@ Payment step - `src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.tw
     {% raw %}{%{% endraw %} endembed {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
+<br>
+</details>
 
 <details open>
 <summary markdown='span'>summary.twig</summary>
@@ -897,10 +911,12 @@ Summary step - `src/Pyz/Yves/CheckoutPage/Theme/default/views/summary/summary.tw
 	</div>
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
-
+<br>
 </details>
 
-**pdp.twig**
+
+ <details open>
+<summary markdown='span'>pdp.twig</summary>
 
 PDP page - `src/Pyz/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.twig`
 
@@ -991,14 +1007,15 @@ PDP page - `src/Pyz/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.twig`
 
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
+<br>
+</details>
 
-{% info_block infoBox "Note" %}
-
+  {% info_block infoBox "Note" %}
 You might want to configure the product detail page to add some validation and show the Easycredit badge in `src/Pyz/Yves/ProductDetailPage/Theme/default/components/molecules/product-configurator/product-configurator.twig`
-
 {% endinfo_block %}
 
-product-configurator.twig
+<details open>
+<summary markdown='span'>product-configurator.twig</summary>
 
 ```php
 ...
@@ -1021,3 +1038,6 @@ product-configurator.twig
     {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 ...
 ```
+<br>
+</details>
+

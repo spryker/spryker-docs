@@ -4260,8 +4260,7 @@ entries:
                   url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/legacy-demoshop-integration/braintree-workflow-for-legacy-demoshop.html
                   include_versions:
                   - "201811.0"
-                  - "201903.0"
-                  - "201907.0"
+                  - "201903.0"                  - "201907.0"
                   - "202001.0"
             - title: Integrating Braintree
               url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/integrating-braintree.html
@@ -4292,7 +4291,7 @@ entries:
           - title: Integrating Payolution
             include_versions:
             - "202009.0"
-            - "202108.0"          
+            - "202108.0"
             url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/integrating-payolution.html
           - title: Integrating the invoice paymnet method for Payolution
             url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/integrating-the-invoice-payment-method-for-payolution.html
@@ -4302,6 +4301,15 @@ entries:
             url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution-performing-requests.html
           - title: Payolution - Workflow
             url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution-workflow.html
+        - title: ratenkauf by easyCredit
+          nested:
+          - title: Installing and configuring ratenkauf by easyCredit
+            url: /docs/scos/user/technology-partners/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit-installation-and-configuration.html
+          - title: Integrating ratenkauf by easyCredit
+            url: /docs/scos/user/technology-partners/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit-integration-into-a-project.html
+            include_versions:
+            - "202009.0"
+            - "202108.0"
         - title: RatePay
           nested:
             - title: RatePay - Payment methods

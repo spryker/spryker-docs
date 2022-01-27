@@ -1,15 +1,15 @@
 ---
-title: Ratenkauf by Easycredit - Installation and Configuration
-description: This article contains installation and configuration information for the Ratenkauf by Easycredit module into the Spryker-based shop.
-last_updated: Jul 31, 2020
+title: Installing and configuring ratenkauf by easyCredit
+description: This article contains installation and configuration information for the ratenkauf by easyCredit module into the Spryker-based shop.
+last_updated: Nov 22, 2019
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v2/docs/ratenkauf-by-easycredit-installation-and-configuration
-originalArticleId: 8b9932c6-3b23-4cb4-b109-435327224787
+originalLink: https://documentation.spryker.com/v3/docs/ratenkauf-by-easycredit-installation-and-configuration
+originalArticleId: 7d3c7f84-e7a0-4d04-9b8c-5bdf6256c069
 redirect_from:
-  - /v2/docs/ratenkauf-by-easycredit-installation-and-configuration
-  - /v2/docs/en/ratenkauf-by-easycredit-installation-and-configuration
+  - /v3/docs/ratenkauf-by-easycredit-installation-and-configuration
+  - /v3/docs/en/ratenkauf-by-easycredit-installation-and-configuration
 related:
-  - title: Ratenkauf by Easycredit
+  - title: ratenkauf by easyCredit
     link: docs/scos/user/technology-partners/page.version/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html
 ---
 
@@ -58,7 +58,7 @@ To use FE functionality (js / css) with old demoshop, `shop-ui-compatibility` mo
 composer require spryker-eco/shop-ui-compatibility
 ```
 
-After installing `shop-ui-compatibility` use procedures described in this migration guide - [Setting up ShopUICompatibility Module in the Legacy Demoshop](/docs/scos/dev/migration-and-integration/201903.0/updating-the-legacy-demoshop-with-scos/setting-up-shopuicompatibility-module-in-the-legacy-demoshop.html).
+After installing `shop-ui-compatibility` use procedures described in this migration guide - [Setting up ShopUICompatibility Module in the Legacy Demoshop](/docs/scos/dev/migration-and-integration/201907.0/updating-the-legacy-demoshop-with-scos/setting-up-shopuicompatibility-module-in-the-legacy-demoshop.html).
 
 ## Configuration
 Perform the initial configuration of Easycredit:

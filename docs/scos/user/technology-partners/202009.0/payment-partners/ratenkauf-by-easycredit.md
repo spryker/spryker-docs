@@ -1,16 +1,18 @@
 ---
-title: Ratenkauf by Easycredit
-description: Offer a simple and standardized solution for e-commerce and for the point of sale by integrating Ratenkauf by Easycredit into the Spryker Commerce OS.
-last_updated: Jan 25, 2020
+title: ratenkauf by easyCredit
+description: Offer a simple and standardized solution for e-commerce and for the point of sale by integrating ratenkauf by easyCredit into the Spryker Commerce OS.
+last_updated: Aug 27, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v4/docs/ratenkauf-by-easycredit
-originalArticleId: c0f03525-7849-4a45-923d-d6464c730efa
+originalLink: https://documentation.spryker.com/v6/docs/ratenkauf-by-easycredit
+originalArticleId: 43bf139d-4793-411a-b7ce-5a9c6cef8a28
 redirect_from:
-  - /v4/docs/ratenkauf-by-easycredit
-  - /v4/docs/en/ratenkauf-by-easycredit
+  - /v6/docs/ratenkauf-by-easycredit
+  - /v6/docs/en/ratenkauf-by-easycredit
 related:
-  - title: Ratenkauf by Easycredit - Installation and Configuration
-    link: docs/scos/user/technology-partners/page.version/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit-installation-and-configuration.html
+  - title: Installing and configuring ratenkauf by easyCredit
+    link: /docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.html
+  - title: Integrating ratenkauf by easyCredit
+    link: /docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratenkauf-by-easycredit/integrating-ratenkauf-by-easycredit.html
 ---
 
 ## Partner Information

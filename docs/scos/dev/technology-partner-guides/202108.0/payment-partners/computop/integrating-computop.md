@@ -21,7 +21,7 @@ This article provides step-by-step instructions on integrating the Computop modu
 
 ## Prerequisites
 
-Prior to integrating Computop into your project, make sure you [installed and configured the Computop module](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/computop/installing-and-configuring–computop.html).
+Prior to integrating Computop into your project, make sure you [installed and configured the Computop module](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/computop/installing-and-configuring-computop.html).
 
 ## Integrating Computop into your project
 
@@ -1774,7 +1774,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 
 ## Integration into a project
 
-To integrate the computop module, make sure you [installed and configured it](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/computop/installing-and-configuring–computop.html).
+To integrate the computop module, make sure you [installed and configured it](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/computop/installing-and-configuring-computop.html).
 
 ## Test mode
 

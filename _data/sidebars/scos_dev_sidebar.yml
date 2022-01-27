@@ -4265,7 +4265,7 @@ entries:
           include_versions:
           nested:
           - title: Installing and configuring Computop
-            url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/installing-and-configuring–computop.html
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/installing-and-configuring-computop.html
           - title: Computop - OMS
             url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/computop-oms.html
           - title: Computop - API

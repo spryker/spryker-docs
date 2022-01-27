@@ -139,26 +139,27 @@ environment: 'docker'
 
 Defines any of the following:
 
-* Imports of additional deploy files to be included into a build. Supports imports of the same deploy file multiple times.
+* Imports of additional deploy files to be included into a build. Supports imports of the same deploy file multiple times. To define a deploy file and dynamic parameters for this type of import, see [imports: {import_name}:](#imports-import-name).
 ```yaml
 imports:
-    {{deploy_file_name}}:
+    {import_name}:
+    {import_name}:       
 ```     
 
-* An array of additional deploy files to be included into a build. Supports imports of the same deploy file multiple times.
-```yaml
-imports:
-    - template: {deploy_file_name}
-```
-
-* Additional deploy files to be included into a build.
+* Additional deploy files to be included into a build. To define dynamic parameters for this type of import, see [imports: {deploy_file_name}:](#imports-deploy-file-name).
 ```yaml
 version: 1.0
 imports:
     {deploy_file_name}:
+    {deploy_file_name}:
 ```
 
-
+* An array of additional deploy files to be included into a build. Supports imports of the same deploy file multiple times. To define dynamic parameters for this type of import, see [imports: parameters:](#imports-parameters)
+```yaml
+imports:
+    - template: {deploy_file_name}
+    - template: {deploy_file_name}
+```
 
 The files must exist on a [project or base layer](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html).
 
@@ -173,6 +174,21 @@ If you include a deploy file, the included deploy file is merged with the origin
 
 ***
 
+### imports: parameters:
+
+Defines the [dynamic parameters](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html#dynamic-parameters) to be used when parsing the included deploy file. In the included deploy file, the parameter name should be wrapped in `%`.
+
+
+
+
+{% info_block warningBox "" %}
+
+Affects the included deploy file that it follows in an array of included deploy files. To learn how you can add imports for other types of imports, see [imports: {import_name}:](#imports-import-name) and [imports: {deploy_file_name}:](#imports-deploy-file-name).
+
+{% endinfo_block %}
+
+***
+
 
 ### imports: {import_name}:
 
@@ -182,16 +198,6 @@ Defines the configuration of the import:
 
 ***
 
-### imports: parameters:
-
-Defines the [dynamic parameters](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html#dynamic-parameters) to be used when parsing the included deploy file. In the included deploy file, the parameter name should be wrapped in `%`.
-
-
-{% info_block warningBox %}
-
-Affects the included deploy file that it follows in an array of included deploy files. To learn how you can add imports for other types of imports, see [imports: {import_name}:](#imports-import-name) and [imports: {deploy_file_name}:](#imports-deploy-file-name)
-
-{% endinfo_block %}
 
 
 ### imports: {deploy_file_name}:
@@ -205,7 +211,7 @@ version: 1.0
 imports:
     {deploy_file_name}:
       parameters:
-        {dynamic_parameter_name}: '{dynamic_parameter_value}'
+        {dynamic_parameter_name}: '{dynamic_parameter_value}'  
 ```
 Example:
 
@@ -218,12 +224,6 @@ imports:
 ```
 
 ***
-
-
-
-
-
-
 
 ### image:
 

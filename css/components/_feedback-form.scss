@@ -181,4 +181,16 @@
             margin: 0;
         }
     }
+
+    &__error {
+        display: none;
+        color: $red;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 5px 0 0;
+
+        .validation-error ~ & {
+            display: block;
+        }
+    }
 }

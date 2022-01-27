@@ -580,7 +580,7 @@ function initFeedbackForm() {
         regEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/,
         isValid = false,
         errorClass = 'validation-error',
-        inputs = form.find('.required-field, .required-email'),
+        inputs = form.find('.required-field, .required-email, .optional-email'),
         successMessage = $('.feedback-form__success-message'),
         formIsSubmitted = false;
 
@@ -603,6 +603,11 @@ function initFeedbackForm() {
 
         // correct email fields
         if(input.hasClass('required-email')) {
+            setState(input, !regEmail.test(input.val()));
+        }
+
+        // optional email fields
+        if(input.hasClass('optional-email') && input.val().length) {
             setState(input, !regEmail.test(input.val()));
         }
     }

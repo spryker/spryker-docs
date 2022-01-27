@@ -114,7 +114,7 @@ Visit [Technology Partners](https://spryker.com/technology-partners/) for a comp
 * [Billpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billpay.html)
 * [Braintree](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/braintree.html)
 * [BS Payone](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/bs-payone.html)
-* [Computop](/docs/scos/dev/technology-partner–guides/{{page.version}}/payment-partners/computop.html)
+* [Computop](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/computop.html)
 * [CrefoPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay-installation-and-configuration.html)
 * [Heidelpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay.html)
 * [Klarna](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/klarna/klarna.html)

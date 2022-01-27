@@ -137,20 +137,25 @@ environment: 'docker'
 
 ### imports:
 
-Defines one of the following:
+Defines any of the following:
 
-* Imports of additional deploy files to be included into a build. This type of import is more flexible and allows including the same template with different parameters into a build.
+* Imports of additional deploy files to be included into a build. Supports imports of the same deploy file multiple times.
 ```yaml
 imports:
-    dev_import:
+    {{deploy_file_name}}:
 ```     
 
+* An array of additional deploy files to be included into a build. Supports imports of the same deploy file multiple times.
+```yaml
+imports:
+    - template: {deploy_file_name}
+```
 
 * Additional deploy files to be included into a build.
 ```yaml
 version: 1.0
 imports:
-    deploy.base.template.yml:
+    {deploy_file_name}:
 ```
 
 
@@ -169,9 +174,25 @@ If you include a deploy file, the included deploy file is merged with the origin
 ***
 
 
-###
+### imports: {import_name}:
+
+Defines the configuration of the import:
+* `{import_name}: template:` — defines the deploy file to be included into a build  as part of this import.
+* `{import_name}: parameters:` - defines the [dynamic parameters](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html#dynamic-parameters) to be used when parsing the included deploy file. In the included deploy file, the parameter name should be wrapped in `%`.
 
 ***
+
+### imports: parameters:
+
+Defines the [dynamic parameters](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html#dynamic-parameters) to be used when parsing the included deploy file. In the included deploy file, the parameter name should be wrapped in `%`.
+
+
+{% info_block warningBox %}
+
+Affects the included deploy file that it follows in an array of included deploy files. To learn how you can add imports for other types of imports, see [imports: {import_name}:](#imports-import-name) and [imports: {deploy_file_name}:](#imports-deploy-file-name)
+
+{% endinfo_block %}
+
 
 ### imports: {deploy_file_name}:
 

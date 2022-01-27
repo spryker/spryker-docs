@@ -4325,6 +4325,7 @@ entries:
   - title: Guidelines
     nested:
     - title: Coding guidelines
+      url: /docs/scos/dev/guidelines/coding-guidelines/coding-guidelines.html
       nested:
       - title: Code quality
         url: /docs/scos/dev/guidelines/coding-guidelines/code-quality.html

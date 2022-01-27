@@ -16,9 +16,9 @@ The following apps are supported:
 
 <!---Add links to the general apps descriptions, once available-->
 
-All integrations of the apps are built by Spryker and provided in a secure and no-code way for the SCCOS.
+Spryker builds all integrations of the apps and provides them in a secure and no-code way for the SCCOS.
 
-The main advantages of the AOP are:
+The AOP has the following advantages:
 
 - Quick, no-code integrations
 - Fully functional trials
@@ -28,8 +28,8 @@ The main advantages of the AOP are:
 
 ## Accessing the AOP catalog
 
-AOP Catalog is a page inside the Back Office that contains the list of applications you can connect to your shop. 
-You can access the AOP catalog only if you are the SCCOS customer. If you were onboarded after March 31st, 2022, you get the AOP catalog integrated into your Back Office by default. If you were onboarded earlier, follow the AOP installation guide <!---LINK once available-->. Once you complete the installation, the AOP catalog appears in the Back Office:
+The AOP catalog is a page inside the Back Office that contains the list of applications you can connect to your shop. 
+You can access the AOP catalog only if you are the SCCOS customer. If you were onboarded after March 31st, 2022, you get the AOP catalog integrated into your Back Office by default. If you were onboarded earlier, follow the AOP installation guide<!---LINK once available-->. Once you complete the installation, the AOP catalog appears in the Back Office:
 
 ![aop-catalog](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/app-orchestration-platform-overview/aop-catalog.png)
 
@@ -37,13 +37,13 @@ You can access the AOP catalog only if you are the SCCOS customer. If you were o
 
 In most cases, to try an app from the AOP catalog, you do the following:
 
-1. In the AOP catalog, select the necessary app and connect it to your shop by clicking the **Connect app** button on the app details page. This takes you to the configuration page of the newly connected app. There you will find a link to the app provider's website in case you need to register with them.
+1. In the AOP catalog, select the necessary app and connect it to your shop by clicking the **Connect app** button on the app details page. This takes you to the configuration page of the newly connected app. There you can find a link to the app provider's website in case you need to register with them.
 2. On the app provider's website, you obtain the necessary credentials.
 3. In the Spryker AOP catalog, on the selected app details page, you click **Configure** and enter the credentials obtained from the app provider. Here you also make necessary settings for the app.
 
 {% info_block infoBox "Info" %}
 
-Make sure you check the configuration guidelines<!---LINK--> for the app you need, as additional settings in the Back Office might be required for individual apps to run.
+Make sure you check the configuration guidelines<!---LINK--> for the app you need because additional settings in the Back Office might be required for individual apps to run.
 
 {% endinfo_block %}
 

@@ -20,6 +20,16 @@ Spryker OS exposes codebase Projects, which enables a high level of customizatio
 
 The project development, the team is free to decide what approach to use. Spryker recommends considering **Configuration**, **Plug and Play**, and **Project modules** first to get maximum from the Spryker OS codebase, atomic releases, leverage minimum efforts for the integration of the new features and keeping system up to date.
 
+Before jumping on the strategies definition 
+| Development strategy | Spryker OS update support |
+| --- | --- |
+| Configuration | High, you can safely take minor and patch releases |
+| Plug and Play | High, you can safely take minor and patch releases |
+| Project Modules | High, you can safely take minor and patch releases |
+| Spryker OS Module Customization | Reduced, manual check is needed for every update |
+| Spryker OS Module Replacement | No support |
+
+
 ## Development Strategies
 
 ### Configuration
@@ -80,7 +90,7 @@ Consider using the composition design pattern instead of the direct class extens
 In my Project, Order entity should not be hydrated during the buying process (we are building a vitrine). In this case, I need to create `\Pyz\Zed\Sales\Business\Order\OrderReader`, which will extend the existing `\Spryker\Zed\Sales\Business\Order\OrderReader` and replace the implementation of the `findOrderByIdSalesOrdermethod()`, where I will adjust the hydration calls.
 
 {% endinfo_block %}
-Spryker OS support: Reduced, you can safely take patch releases.
+Spryker OS support: Reduced, manual check is needed for every update.
 
 ### Spryker OS Module Replacement
 

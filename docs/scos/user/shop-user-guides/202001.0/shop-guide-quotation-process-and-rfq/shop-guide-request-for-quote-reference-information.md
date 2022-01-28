@@ -12,7 +12,9 @@ redirect_from:
 
 This page contains the information on the UI elements and pages that refer to the Quotation Process & RFQ.
 ***
+
 ## Quote Requests
+
 Quote Requests is the page where you can access all your RFQs. Don't have an RFQ? Start creating it.
 
 On the **Quote Requests** page, you see the following:

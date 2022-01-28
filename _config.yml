@@ -190,6 +190,7 @@ versioned_categories:
       - migration-and-integration
       - legacy-demoshop
       - technology-partner-guides
+      - devops-migration-guides
 
 # these are defaults used for the front matter for these file types
 
@@ -244,3 +245,6 @@ last-modified-at:
 
 redirect_from:
   json: false
+
+form_endpoints:
+  feedback: 'https://formspree.io/f/xdoboyro'

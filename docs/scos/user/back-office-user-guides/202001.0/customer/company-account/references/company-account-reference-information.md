@@ -12,6 +12,7 @@ redirect_from:
 
 This article describes the information that you may need to know when working with the company account setup.
 ***
+
 The following table describes the information that you see on the overview pages of the **Company Account** section.
 
 | Page Name | Information |
@@ -50,7 +51,7 @@ The following table describes the attributes you see, select, or enter while cre
 | **Name** | The name of the business unit you create.|
 | **IBAN** |  The International Bank Account Number. |
 |**BIC**  | The Bank Identifier Code. |
-| **Addresses** |This field is available on the Edit page. This is a multi-select list that includes the values from the Company Unit Addresses section but only those assigned to a company. Meaning the values available for selection are defined by the selected company.| 
+| **Addresses** |This field is available on the Edit page. This is a multi-select list that includes the values from the Company Unit Addresses section but only those assigned to a company. Meaning the values available for selection are defined by the selected company.|
 
 ## Create/Edit Company Unit Address
 

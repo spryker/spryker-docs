@@ -20,7 +20,7 @@ On the page, you can see all the payment methods available in the shop applicati
 * Payment method status
 * Stores in which the payment method is available
 
-![List of payment methods](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Payment+Management/Payment+Methods/References/Payments%3A+Reference+Information/payment-methods-page.png) 
+![List of payment methods](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Payment+Management/Payment+Methods/References/Payments%3A+Reference+Information/payment-methods-page.png)
 
 On the page, you can do the following:
 
@@ -30,6 +30,7 @@ On the page, you can do the following:
 
 ***
 ## View and Edit Payment Method Pages
+
 The following table describes the attributes you see, select, or enter while viewing or editing a payment method.
 
 | Attribute | Description |

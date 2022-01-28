@@ -27,6 +27,6 @@ You can easily design the process to accommodate different checkout types and to
 
 **Features:**
 <div>
-<a class="feature-link" href="/docs/scos/user/features/202108.0/checkout-feature-overview/multi-step-checkout-overview.html">Multi-Step Checkout</a>  
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html">Multi-Step Checkout</a>  
 <a class="feature-link" href="/docs/scos/user/features/{{page.version}}/checkout-feature-overview/define-payment-and-shipment-methods.html">Define Payment & Shipment Methods</a>
 </div>

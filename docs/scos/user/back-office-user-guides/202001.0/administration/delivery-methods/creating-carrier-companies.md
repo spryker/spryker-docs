@@ -31,7 +31,7 @@ The name you enter will be visible on the **Create new delivery method** page on
 
 {% endinfo_block %}
 
-4. To activate the carrier company, select the **Enabled?** checkbox. 
+4. To activate the carrier company, select the **Enabled?** checkbox.
 5. To complete the creation, click **Add** .
 
 {% info_block infoBox %}
@@ -43,4 +43,4 @@ Click **List of shipment methods**to get back to the list of delivery methods. H
 ***
 **What's next?**
 You have now added a new carrier company for your store.
-The next step is to add a new shipment method to it. See [Creating and Managing Delivery Methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/shipment/creating-and-managing-delivery-methods.html) for more details.
+The next step is to add a new shipment method to it. See [Creating and Managing Delivery Methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html) for more details.

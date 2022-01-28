@@ -33,7 +33,7 @@ related:
 
 ## Partner Information
 
- [ABOUT COMPUTOP](https://www.computop.com/de/) 
+ [ABOUT COMPUTOP](https://www.computop.com/de/)
 Computop is a leading international Payment Service Provider that enables merchants and white label customers to process global multichannel payments. Computop’s state of the art and wholly owned payment platform Computop Paygate offers seamless solutions for mobile, online and in store payment transactions. All transactions processed by Computop Paygate are secure as our platform is PCI certified.
 
 Computop offers a global payment management solution that is connected to over 350 payment methods and acquirer connections worldwide, customizable fraud prevention, tokenization and other value added services like currency conversion and debt management that result in secure transaction processing and higher conversion rates.
@@ -50,18 +50,18 @@ The `SprykerEco.Computop` `spryker-eco/computop` bundle provides integration Spr
 The `SprykerEco.Computop` module includes integration with:
 
 * Checkout process - payment forms with all necessary fields that are required to make payment request, save order information and so on.
-* OMS (Order Management System) - state machines, all necessary commands for making modification requests and conditions for changing orders status accordingly.
+* OMS (Order Management System) - state machines, all necessary commands for making modification requests and conditions for changing orders status accordingly. 
 
 The `SprykerEco.Computop` module provides the following payment methods:
 
-* [Credit Card](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop-credit-card.html)
-* [Direct Debit](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop-direct-debit.html)
-* [EasyCredit](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop-easy-credit.html)
-* [iDeal](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop-ideal.html)
-* [Paydirekt](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop-paydirekt.html)
-* [PayNow](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop-paynow.html)
-* [PayPal](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop-paypal.html)
-* [SofortÜberweisung](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/computop/computop-sofort.html)
+* [Credit Card](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-credit-card.html)
+* [Direct Debit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-direct-debit.html)
+* [EasyCredit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-easy-credit.html)
+* [iDeal](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-ideal.html)
+* [Paydirekt](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-paydirekt.html)
+* [PayNow](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-paynow.html)
+* [PayPal](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-paypal.html)
+* [SofortÜberweisung](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop-payment-methods/computop-sofort.html)
 
 To install the payment provider, run:
 ```

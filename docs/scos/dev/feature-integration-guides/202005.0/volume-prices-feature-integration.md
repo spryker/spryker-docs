@@ -14,17 +14,17 @@ related:
 ---
 
 ## Install Feature Core
+
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Spryker Core | master |
-| Prices | master |
+| Spryker Core | 202005.0 |
+| Prices | 202005.0 |
 
-<section contenteditable="false" class="warningBox"><div class="content">
-
-**Verification**
+{% info_block warningBox “Verification” %}
 
 Make sure that the following modules have been installed:
 
@@ -32,17 +32,18 @@ Make sure that the following modules have been installed:
 | --- | --- |
 | `PriceProductVolume` | `vendor/spryker/price-product-volume` |
 
-</div></section>
+{% endinfo_block %}
 
 ### 1) Set up Transfer Objects
+
 Run the following commands to generate transfer changes:
 
 ```bash
 console transfer:generate
 ```
-<section contenteditable="false" class="warningBox"><div class="content">
 
-**Verification**
+{% info_block warningBox “Verification” %}
+
 Make sure that the following changes  in transfer objects have been applied:
 
 | Transfer | Type | Event | Path |
@@ -54,13 +55,16 @@ Make sure that the following changes  in transfer objects have been applied:
 | `PriceProductFilter` |class  | created | `src/Generated/Shared/Transfer/PriceProductFilterTransfer` |
 | `PriceProductCriteria` | class | created | `src/Generated/Shared/Transfer/PriceProductCriteriaTransfer` |
 
-</div></section>
+{% endinfo_block %}
 
 ### 2) Import Data
+
 #### Import Volume Prices
 
 {% info_block infoBox "Info" %}
+
 The following imported entities will be used as _productvol_ in Spryker OS.
+
 {% endinfo_block %}
 
 Prepare your data according to your requirements using our demo data:
@@ -119,10 +123,13 @@ console data:import price-product
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that in the database the configured data has been added to the `spy_product_price` table.
+
 {% endinfo_block %}
 
 ### 3) Set up Behavior
+
 Enable the following behaviors by registering the plugins:
 
 | Plugin | Specification | Prerequisites | Namespace |
@@ -217,19 +224,18 @@ Please overview and install the necessary features before beginning the integrat
 
 | Name | Version |
 | --- | --- |
-| Spryker Core E-commerce |master  |
-| Prices | master |
+| Spryker Core E-commerce |202005.0  |
+| Prices | 202005.0 |
 
-<section contenteditable="false" class="warningBox"><div class="content">
+{% info_block warningBox “Verification” %}
 
-**Verification**
 Make sure that the following modules have been installed:
 
 | Module | Expected directory |
 | --- | --- |
 |`PriceProductVolumeWidget`  |`vendor/spryker-shop/price-product-volume-widget`  |
 
-</div></section>
+{% endinfo_block %}
 
 ### 1) Add Translations
 Append glossary according to your configuration:
@@ -250,10 +256,13 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that in the database the configured data has been added to the `spy_glossary` table.
+
 {% endinfo_block %}
 
 ### 2) Set up Widgets
+
 Enable global widgets:
 
 | Widget | Description | Namespace |
@@ -284,13 +293,12 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
+{% info_block warningBox “Verification” %}
 
-**Verification**
 Make sure that the following widgets have been registered:
 
 | Module | Test |
 | --- | --- |
 | `ProductPriceVolumeWidget` | Go to the product detail page for a product with volume prices set, and observe the table in the detail area that contains the volume prices data. |
 
-</div></section>
+{% endinfo_block %}

@@ -1,5 +1,5 @@
 ---
-title: Reference information - User
+title: Reference information - user
 description: The guide provides additional information about the values you enter when managing users in the Back Office.
 last_updated: Jun 9, 2020
 template: back-office-user-guide-template

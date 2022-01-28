@@ -229,7 +229,7 @@ algolia:
       title: 'Marketplace Developer'
     - name: 'cloud_dev'
       title: 'Cloud Developer'
-    - name: 'fes_dev_dev'
+    - name: 'fes_dev'
       title: 'Frontend enablement Service Developer'
     - name: 'paas_plus_dev'
       title: 'Platform as a Service Plus Developer'

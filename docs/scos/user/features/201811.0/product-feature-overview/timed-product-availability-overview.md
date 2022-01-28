@@ -1,5 +1,5 @@
 ---
-title: Timed Product Availability Overview
+title: Timed Product Availability overview
 description: Timed product availability, or product TTL (Time to Live) allows you to define when your products are available online and when they are not.
 last_updated: Oct 28, 2019
 template: concept-topic-template

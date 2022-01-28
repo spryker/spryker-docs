@@ -1,5 +1,5 @@
 ---
-title: Reference information - Reclamations
+title: Reference information - reclamations
 description: The article provides additional reference information you see when managing Reclamations in the Back Office.
 last_updated: Jun 5, 2020
 template: back-office-user-guide-template

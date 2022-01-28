@@ -58,57 +58,6 @@ entries:
           nested:
           - title: Security Release Notes 2018.11.0
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-2018.11.0/security-release-notes-2018.11.0.html
-      - title: Releases archive
-        url: /docs/scos/user/intro-to-spryker/releases/releases-archive.html
-        nested:
-        - title: 2017
-          nested:
-          - title: Release Notes - August - 2 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-august-2-2017.html
-          - title: Release Notes - June - 2 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-june-2-2017.html
-          - title: Release Notes - October - 2 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-october-2-2017.html
-          - title: Release Notes - August - 1 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-august-1-2017.html
-          - title: Release Notes - October - 1 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-october-1-2017.html
-          - title: Release Notes - June - 1 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-june-1-2017.html
-          - title: Release Notes - April - 2 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-april-2-2017.html
-          - title: Release Notes - December - 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-december-2017.html
-          - title: Release Notes - July - 1 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-july-1-2017.html
-          - title: Release Notes - May - 2 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-may-2-2017.html
-          - title: Release Notes - November - 1 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-november-1-2017.html
-          - title: Release Notes - September - 1 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-september-1-2017.html
-          - title: Release Notes - July - 2 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-july-2-2017.html
-          - title: Release Notes - April - 1 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-april-1-2017.html
-          - title: Release Notes - November - 2 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-november-2-2017.html
-          - title: Release Notes - September - 2 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-september-2-2017.html
-          - title: Release Notes - May - 1 2017
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-may-1-2017.html
-        - title: 2018
-          nested:
-          - title: Release Notes - February - 1 2018
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2018/release-notes-february-1-2018.html
-          - title: Release Notes - February - 2 2018
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2018/release-notes-february-2-2018.html
-          - title: Release Notes - March - 2018
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2018/release-notes-march-2018.html
-          - title: Release Notes - January - 2018
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2018/release-notes-january-2018.html
-          - title: Release Notes - April - 2018
-            url: /docs/scos/user/intro-to-spryker/releases/archive/2018/release-notes-april-2018.html
     - title: What's new
       url: /docs/scos/user/intro-to-spryker/whats-new/whats-new.html
       nested:
@@ -176,6 +125,12 @@ entries:
       nested:
       - title: Building the documentation site
         url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html
+      - title: Reviewing pull requests
+        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/reviewing-pull-requests.html
+      - title: Style, formatting, and general rules
+        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html
+      - title: Markdown syntax
+        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/markdown-syntax.html
   - title: Features
     url: /docs/scos/user/features/features.html
     nested:
@@ -2343,6 +2298,10 @@ entries:
       - "202009.0"
       - "202108.0"
       nested:
+      - title: Afterpay
+        url: /docs/scos/user/technology-partners/payment-partners/afterpay.html
+      - title: Amazon Pay
+        url: /docs/scos/user/technology-partners/payment-partners/amazon-pay.html
       - title: BS Payone
         url: /docs/scos/user/technology-partners/payment-partners/bs-payone/bs-payone.html
         nested:
@@ -2399,12 +2358,9 @@ entries:
           - title: PayOne - Integration into the Legacy Demoshop Project
             url: /docs/scos/user/technology-partners/payment-partners/bs-payone/legacy-demoshop-integration/payone-integration-into-the-legacy-demoshop-project.html
       - title: Billpay
-        url: /docs/scos/user/technology-partners/payment-partners/billpay/billpay.html
-        nested:
-        - title: Billpay - Invoice Payment in Preauthorize Mode
-          url: /docs/scos/user/technology-partners/payment-partners/billpay/billpay-invoice-payment-in-preauthorize-mode.html
-        - title: Billpay - Integration
-          url: /docs/scos/user/technology-partners/payment-partners/billpay/billpay-integration.html
+        url: /docs/scos/user/technology-partners/payment-partners/billpay.html
+      - title: Braintree
+        url: /docs/scos/user/technology-partners/payment-partners/braintree.html
       - title: Klarna
         url: /docs/scos/user/technology-partners/payment-partners/klarna/klarna.html
         nested:
@@ -2418,94 +2374,6 @@ entries:
             url: /docs/scos/user/technology-partners/payment-partners/klarna/technical-details-and-howtos/klarna-state-machine-commands-and-conditions.html
           - title: Klarna - Invoice Pay in 14 days
             url: /docs/scos/user/technology-partners/payment-partners/klarna/technical-details-and-howtos/klarna-invoice-pay-in-14-days.html
-      - title: Braintree
-        url: /docs/scos/user/technology-partners/payment-partners/braintree/braintree.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202009.0"
-        - "202108.0"
-        nested:
-        - title: Braintree - Technical Details and HowTos
-          nested:
-          - title: Braintree - Performing Requests for SCOS
-            url: /docs/scos/user/technology-partners/payment-partners/braintree/braintree-technical-details-and-howtos/braintree-performing-requests.html
-          - title: Braintree - Workflow for SCOS
-            url: /docs/scos/user/technology-partners/payment-partners/braintree/braintree-technical-details-and-howtos/braintree-workflow.html
-        - title: Braintree - Configuration for SCOS
-          url: /docs/scos/user/technology-partners/payment-partners/braintree/braintree-installation-and-configuration.html
-        - title: Legacy Demoshop Integration
-          include_versions:
-          - "201811.0"
-          - "201903.0"
-          - "201907.0"
-          - "202001.0"
-          nested:
-          - title: Braintree - Configuration for the Legacy Demoshop
-            url: /docs/scos/user/technology-partners/payment-partners/braintree/legacy-demoshop-integration/braintree-configuration-for-the-legacy-demoshop.html
-            include_versions:
-            - "201811.0"
-            - "201903.0"
-            - "201907.0"
-            - "202001.0"
-          - title: Braintree - Performing Requests for the Legacy Demoshop
-            url: /docs/scos/user/technology-partners/payment-partners/braintree/legacy-demoshop-integration/braintree-performing-requests-for-the-legacy-demoshop.html
-            include_versions:
-            - "201811.0"
-            - "201903.0"
-            - "201907.0"
-            - "202001.0"
-          - title: Braintree - Workflow for Legacy Demoshop
-            url: /docs/scos/user/technology-partners/payment-partners/braintree/legacy-demoshop-integration/braintree-workflow-for-legacy-demoshop.html
-            include_versions:
-            - "201811.0"
-            - "201903.0"
-            - "201907.0"
-            - "202001.0"
-        - title: Braintree - Integration into a project
-          url: /docs/scos/user/technology-partners/payment-partners/braintree/braintree-integration-into-a-project.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
-      - title: Amazon Pay
-        url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/amazon-pay.html
-        nested:
-        - title: SCOS Integration
-          nested:
-          - title: Amazon Pay - Configuration for the SCOS
-            url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/scos-integration/amazon-pay-configuration-for-the-scos.html
-          - title: Amazon Pay - Obtaining an Amazon Order Reference and Information
-              About Shipping Addresses
-            url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/scos-integration/amazon-pay-obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
-          - title: Amazon Pay - Sandbox Simulations
-            url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/scos-integration/amazon-pay-sandbox-simulations.html
-          - title: Amazon Pay - State Machine
-            url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/scos-integration/amazon-pay-state-machine.html
-          - title: Amazon Pay - API
-            url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/scos-integration/amazon-pay-api.html
-        - title: Legacy Demoshop Integration
-          nested:
-          - title: "Amazon Pay - Rendering a \u201CPay with Amazon\u201D Button on
-              the Cart Page"
-            url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-rendering-a-pay-with-amazon-button-on-the-cart-page.html
-          - title: Amazon Pay - Email Notifications
-            url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-email-notifications.html
-          - title: Amazon Pay - Configuration for the Legacy Demoshop
-            url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-configuration-for-the-legacy-demoshop.html
-          - title: Amazon Pay - Sandbox Simulations
-            url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-sandbox-simulations.html
-          - title: Amazon Pay - Support of Bundled Products
-            url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-support-of-bundled-products.html
-          - title: Amazon Pay - Order Reference and Information about Shipping Addresses
-            url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-order-reference-and-information-about-shipping-addresses.html
-          - title: Amazon Pay - State Machine
-            url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-state-machine.html
-          - title: Amazon Pay - Refund
-            url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-refund.html
-          - title: Amazon Pay - API
-            url: /docs/scos/user/technology-partners/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-api.html
       - title: Heidelpay
         url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay.html
         include_versions:
@@ -2563,42 +2431,10 @@ entries:
           - "202001.0"
         - title: Heidelpay - Installation
           url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay-installation.html
-      - title: RatePay
-        url: /docs/scos/user/technology-partners/payment-partners/ratepay/ratepay.html
-        nested:
-        - title: RatePay - Payment methods
-          nested:
-          - title: RatePay - Direct Debit
-            url: /docs/scos/user/technology-partners/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html
-          - title: RatePay - Prepayment
-            url: /docs/scos/user/technology-partners/payment-partners/ratepay/ratepay-payment-methods/ratepay-prepayment.html
-          - title: RatePay - Installment
-            url: /docs/scos/user/technology-partners/payment-partners/ratepay/ratepay-payment-methods/ratepay-installment.html
-          - title: RatePay - Invoice
-            url: /docs/scos/user/technology-partners/payment-partners/ratepay/ratepay-payment-methods/ratepay-invoice.html
-        - title: Technical details and HowTos
-          nested:
-          - title: RatePay - Facade
-            url: /docs/scos/user/technology-partners/payment-partners/ratepay/technical-details-and-howtos/ratepay-facade.html
-          - title: RatePay - Payment Workflow
-            url: /docs/scos/user/technology-partners/payment-partners/ratepay/technical-details-and-howtos/ratepay-payment-workflow.html
-          - title: RatePay - State Machine Commands and Conditions
-            url: /docs/scos/user/technology-partners/payment-partners/ratepay/technical-details-and-howtos/ratepay-state-machine-commands-and-conditions.html
-          - title: RatePay - How to Disable Address Updates from the Backend Application
-            url: /docs/scos/user/technology-partners/payment-partners/ratepay/technical-details-and-howtos/ratepay-how-to-disable-address-updates-from-the-backend-application.html
-        - title: RatePay- Core Module Structure Diagram
-          url: /docs/scos/user/technology-partners/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
       - title: Adyen
-        url: /docs/scos/user/technology-partners/payment-partners/adyen/adyen.html
-        nested:
-        - title: Adyen - Integration
-          url: /docs/scos/user/technology-partners/payment-partners/adyen/adyen-integration-into-a-project.html
-        - title: Adyen - Installation and Configuration
-          url: /docs/scos/user/technology-partners/payment-partners/adyen/adyen-installation-and-configuration.html
-        - title: Adyen - Provided Payment Methods
-          url: /docs/scos/user/technology-partners/payment-partners/adyen/adyen-provided-payment-methods.html
-        - title: Adyen - Filtering Payment Methods
-          url: /docs/scos/user/technology-partners/payment-partners/adyen/adyen-filtering-payment-methods.html
+        url: /docs/scos/user/technology-partners/payment-partners/adyen.html
+      - title: RatePay
+        url: /docs/scos/user/technology-partners/payment-partners/ratepay.html
       - title: Computop
         url: /docs/scos/user/technology-partners/payment-partners/computop/computop.html
         include_versions:
@@ -2662,11 +2498,6 @@ entries:
           url: /docs/scos/user/technology-partners/payment-partners/crefopay/crefopay-integration-into-a-project.html
       - title: Billie
         url: /docs/scos/user/technology-partners/payment-partners/billie.html
-      - title: AfterPay
-        url: /docs/scos/user/technology-partners/payment-partners/afterpay/afterpay.html
-        nested:
-        - title: Afterpay - Installation and Configuration
-          url: /docs/scos/user/technology-partners/payment-partners/afterpay/afterpay-installation-and-configuration.html
       - title: Powerpay
         url: /docs/scos/user/technology-partners/payment-partners/powerpay.html
       - title: Ratenkauf by Easycredit
@@ -2708,69 +2539,7 @@ entries:
           - "202009.0"
           - "202108.0"
       - title: Arvato
-        url: /docs/scos/user/technology-partners/payment-partners/arvato/arvato.html
-        nested:
-        - title: Arvato - Risk Solution Services Integration
-          url: /docs/scos/user/technology-partners/payment-partners/arvato/arvato-risk-solution-services-integration.html
-          include_versions:
-          - "202001.0"
-          - "202005.0"
-        - title: v.1.0
-          include_versions:
-          - "201811.0"
-          - "201903.0"
-          - "201907.0"
-          - "202001.0"
-          - "202005.0"
-          nested:
-          - title: Arvato - Risk Check 1.0
-            url: /docs/scos/user/technology-partners/payment-partners/arvato/v.1.0/arvato-risk-check-1.0.html
-            include_versions:
-            - "201811.0"
-            - "201903.0"
-            - "201907.0"
-            - "202001.0"
-            - "202005.0"
-          - title: Arvato - Risk Solution Services Integration 1.0
-            url: /docs/scos/user/technology-partners/payment-partners/arvato/v.1.0/arvato-risk-solution-services-integration-1.0.html
-            include_versions:
-            - "201811.0"
-            - "201903.0"
-            - "201907.0"
-            - "202001.0"
-            - "202005.0"
-        - title: Arvato - Risk Check
-          url: /docs/scos/user/technology-partners/payment-partners/arvato/arvato-risk-check.html
-          include_versions:
-          - "202001.0"
-          - "202005.0"
-          - "202009.0"
-          - "202108.0"
-        - title: Arvato - Store Order
-          url: /docs/scos/user/technology-partners/payment-partners/arvato/arvato-store-order.html
-        - title: v.2.0
-          include_versions:
-          - "201811.0"
-          - "201903.0"
-          - "201907.0"
-          nested:
-          - title: Arvato - Risk Check 2.0
-            url: /docs/scos/user/technology-partners/payment-partners/arvato/v.2.0/arvato-risk-check-2.0.html
-            include_versions:
-            - "201811.0"
-            - "201903.0"
-            - "201907.0"
-          - title: Arvato - Risk Solution Services Integration 2.0
-            url: /docs/scos/user/technology-partners/payment-partners/arvato/v.2.0/arvato-risk-solution-services-integration-2.0.html
-            include_versions:
-            - "201811.0"
-            - "201903.0"
-            - "201907.0"
-        - title: Arvato - Installation and Configuration
-          url: /docs/scos/user/technology-partners/payment-partners/arvato/arvato-installation-and-configuration.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
+        url: /docs/scos/user/technology-partners/payment-partners/arvato.html
     - title: Technology Partner Integration
       url: /docs/scos/user/technology-partners/technology-partner-integration.html
     - title: Operational tools, Monitoring, Legal, etc.
@@ -2866,16 +2635,8 @@ entries:
       include_versions:
       - "202108.0"
       nested:
-      - title: Avalara Tax + Product Options feature integration
-        url: /docs/scos/user/technology-partners/taxes/avalara-tax-product-options-feature-integration.html
-        include_versions:
-        - "202108.0"
-      - title: Avalara Tax integration
-        url: /docs/scos/user/technology-partners/taxes/avalara-tax-integration.html
-        include_versions:
-        - "202108.0"
-      - title: Avalara Tax + Shipment feature integration
-        url: /docs/scos/user/technology-partners/taxes/avalara-tax-shipment-feature-integration.html
+      - title: Avalara
+        url: /docs/scos/user/technology-partners/taxes/avalara.html
         include_versions:
         - "202108.0"
   - title: Shop User Guides
@@ -2937,7 +2698,7 @@ entries:
       - "202001.0"
       - "202005.0"
     - title: Shop Guide - Company Roles
-      url: /docs/scos/user/shop-user-guides/shop-guide-company-roles.html
+      url: /docs/scos/user/shop-user-guides/shop-guide-managing-company-roles.html
       include_versions:
       - "201811.0"
       - "201903.0"

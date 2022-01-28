@@ -12,16 +12,19 @@ redirect_from:
 
 This article contains the information you need to know when working with the **Customers** section in Back Office.
 ***
-## Customers page
-On the **Customers** page in the **Customers** > **Customers** section, you see a table with all the registered customers. The following information is included in the table:
 
+## Customers page
+
+On the **Customers** page in the **Customers** > **Customers** section, you see a table with all the registered customers. The following information is included in the table:
 * Date of the customer registration
 * Customer email
 * Customer last name and first name
 * Zip code, city, and country
 * The actions that you can perform on a customer record (**View**, **Edit**, and for _B2B only_: **Attach to company**)
 ***
+
 ## Add Customer/Edit Customer pages
+
 The following table describes the attributes you enter and select when creating or editing customers.
 |Attribute| Description|
 |---|---|
@@ -37,11 +40,15 @@ The following table describes the attributes you enter and select when creating 
 |**Send password token through email**|If the checkbox is selected, after saving the customer data, an email will be sent to the customer containing a link. By accessing the link, the customer will be able to set a password for the account. If you don’t select this option, the customer is still able to set a password for their account, by clicking the reset password link from the shop interface. |
 |Edit page only: **Billing Address**|A drop-down list with the addresses set up for the customer. The selected address defines the billing address for your customer.|
 |Edit page only: **Shipping Address**|A drop-down list with the addresses set up for the customer. The selected address defines the shipping address for your customer.|
-![Add or edit customers page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Customers/Customers%3A+Reference+Information/customers-reference-information.png) 
+
+![Add or edit customers page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Customers/Customers%3A+Reference+Information/customers-reference-information.png)
 
 ***
+
 ## Add New Address page
+
 The following table describes the attributes you enter and select when adding a new customer address.
+
 |Attribute|Description|
 |---|---|
 |**Salutation**<br>**First Name**<br>**Last Name**|Customer's salutation. If the other person is the point of contact for this new address, you need to populate the fields with the respective data. If the customer is the same, populate the fields with the same values.|
@@ -50,14 +57,20 @@ The following table describes the attributes you enter and select when adding a 
 |**Phone**|Customer's phone number.|
 |**Company**|Customer's company.|
 |**Comment**|Any specific comment regarding the customer or customer address (e.g. _"This address is going to be used only if the order costs less than 900 euros."_).|
-![Add new address page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Customers/Customers%3A+Reference+Information/Add+new+address+page.png) 
+![Add new address page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Customers/Customers%3A+Reference+Information/Add+new+address+page.png)
 
 ***
+
 ## B2B: Attach Customer to Company page
+
 The following table describes the attributes that you select while attaching the customer to a company.
+
 {% info_block infoBox "Info" %}
+
 Once you click **Save**, you are redirected to the **Company Account > Company Users** page where your customer's data will be stored.
+
 {% endinfo_block %}
+
 |Attribute|Description|
 |---|---|
 |**Company**|A drop-down list with the companies from the **Company Account > Companies** section. Your selection defines the values available in the **Business Unit** drop-down list, as only the business units of the selected company are going to be displayed.|

@@ -17,6 +17,7 @@ related:
 
 This topic contains the reference information that you need to know when working in the **Scheduled Prices** section.
 ***
+
 ## Import New Scheduled Prices Page
 
 In the **Import new scheduled prices** section you see the following:
@@ -88,7 +89,9 @@ The **Scheduled Prices: Import dry run** page is divided into four sections.
 ## View Import and Edit Import Pages
 
 {% info_block infoBox %}
+
 Since **View Import and Edit Import** pages have almost the same attributes, you can use the attributes in this section while both viewing and editing imports.
+
 {% endinfo_block %}
 
 ### General Information Section

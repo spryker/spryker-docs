@@ -43,62 +43,62 @@ Below, you can find a list of the default protected resources. As Glue API is hi
 
 | ACTION | METHOD | ENDPOINTS|
 | --- | --- | --- |
-| Customer - Retrieve a customer | GET | /customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %} |
-| Customers - Update customer address | PATCH | /customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}/addresses/{% raw %}{{{% endraw %}address_id{% raw %}}}{% endraw %} |
-| Customers - Delete customer address | DELETE | ​/customers​/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}​/addresses​/{addressId} |
-| Customers - Retrieve list of all customer addresses | GET | ​/customers​/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}​/addresses |
-| Customers - Create customer address | POST | /customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}/addresses |
-| Customers - Retrieve customer data | GET | /customers/{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %} |
-| Customers - Update customer data | PATCH | /customers/{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %} |
-| Customers - Anonymize customers | DELETE | /customers/{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %} |
-| Customer password - Update customer password | PATCH | /customer-password/{% raw %}{{{% endraw %}customerPasswordId{% raw %}}}{% endraw %} |
-| Cart codes - Add code to cart. | GET | /carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/cart-codes |
-| Cart codes - Delete code from cart | DELETE | /carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/cart-codes/{code} |
-| Carts - Retrieve cart by id | GET | /carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %} |
-| Carts - Update a cart | PATCH | /carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %} |
-| Carts - Delete cart by id | DELETE | /carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %} |
-| Carts - Retrieve list of all customer's carts | GET | /carts |
-| Carts - Create cart | POST | /carts |
-| Items - Add item to cart | POST | /carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/items |
-| Items - Update cart item quantity | PATCH | /carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}itemId{% raw %}}}{% endraw %} |
-| Items - Remove item from cart | DELETE | /carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}itemId{% raw %}}}{% endraw %} |
-| Companies - Retrieve company by id | GET | /companies/{% raw %}{{{% endraw %}companyId{% raw %}}}{% endraw %} |
-| Companies - Retrieve company collection | GET | /companies |
-| Company business unit addresses - Retrieve company business unit address by id | GET | /company-business-unit-addresses/{% raw %}{{{% endraw %}companyBusinessUnitAddressId{% raw %}}}{% endraw %} |
-| Company business unit addresses - Retrieve company business unit addresses collection | GET | /company-business-unit-addresses |
-| Company roles - Retrieve company role by id | GET | /company-roles/{% raw %}{{{% endraw %}companyRoleId{% raw %}}}{% endraw %} |
-| Company roles - Retrieve company role collection | GET | /company-roles |
-| Company user access token - Create access token for company user | POST | /company-user-access-tokens |
-| Company users - Retrieve company user by id | GET | /company-users/{% raw %}{{{% endraw %}companyUserId{% raw %}}}{% endraw %} |
-| Company users - Retrieve list of company users | GET | /company-users |
-| Orders - Retrieve order by id | GET | /orders/{% raw %}{{{% endraw %}orderId{% raw %}}}{% endraw %} |
-| Orders - Retrieve list of orders | GET | /orders |
-| Product reviews - Create product review | POST | /abstract-products/{% raw %}{{{% endraw %}abstractProductId{% raw %}}}{% endraw %}/product-reviews |
-| Refresh tokens - Revoke customer's refresh token | DELETE | /refresh-tokens/{% raw %}{{{% endraw %}refreshTokenId{% raw %}}}{% endraw %} |
-| Returns - Retrieve return by id | GET | /returns/{% raw %}{{{% endraw %}returnld{% raw %}}}{% endraw %} |
-| Returns - Retrieve list of returns | GET | /returns |
-| Returns - Create return | POST | /returns |
-| Shared-carts - Share cart | POST | /carts/{% raw %}{{{% endraw %}cartld{% raw %}}}{% endraw %}/shared-carts |
-| Shared-carts - Update permission group for shared cart | PATCH | /shared-carts/{% raw %}{{{% endraw %}sharedCartId{% raw %}}}{% endraw %} |
-| Shared-carts - Delete cart sharing | DELETE | /shared-carts/{% raw %}{{{% endraw %}sharedCartId{% raw %}}}{% endraw %} |
-| Shopping list items - Add shopping list item | POST | /shopping-lists/{% raw %}{{{% endraw %}shoppingListId{% raw %}}}{% endraw %}/shopping-list-items |
-| Shopping list items - Update shopping list item | PATCH | /shopping-lists/{% raw %}{{{% endraw %}shoppingListId{% raw %}}}{% endraw %}/shopping-list-items |
-| Shopping list items - Delete shopping list item | DELETE | /shopping-lists/{% raw %}{{{% endraw %}shoppingListId{% raw %}}}{% endraw %}/shopping-list-items |
-| Shopping lists - Retrieve shopping list by id | GET | /shopping-lists/{% raw %}{{{% endraw %}shoppingListId{% raw %}}}{% endraw %} |
-| Shopping lists - Update shopping list by id | PATCH | /shopping-lists/{% raw %}{{{% endraw %}shoppingListId{% raw %}}}{% endraw %} |
-| Shopping lists - Delete shopping list by id | DELETE | /shopping-lists/{% raw %}{{{% endraw %}shoppingListId{% raw %}}}{% endraw %} |
-| Shopping lists - Retrieve list of all customer's shopping lists | GET | /shopping-lists |
-| Shopping lists - Create shopping list | POST | /shopping-lists |
-| Up-selling products - Retrieve list of all up-selling products for cart | GET | /carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/up-selling-products |
-| Vouchers - Add a code to cart | POST | /carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/vouchers |
-| Vouchers - Delete code from cart | DELETE | /carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/vouchers/{% raw %}{{{% endraw %}voucherCode{% raw %}}}{% endraw %} |
-| Wishlist items - Add item to  wishlist | POST  | /wishlists/{% raw %}{{{% endraw %}wishlistId{% raw %}}}{% endraw %}/wishlist-items |
-| Wishlist items - Remove item from wishlist | DELETE | ​/wishlists​/{% raw %}{{{% endraw %}wishlistId{% raw %}}}{% endraw %}​/wishlist-items​/{% raw %}{{{% endraw %}wishlistItemId{% raw %}}}{% endraw %} |
-| Wishlists - Retrieve wishlist data by id | GET | /wishlists/{% raw %}{{{% endraw %}wishlistld{% raw %}}}{% endraw %} |
-| Wishlists - Update customer wishlist | PATCH | /wishlists/{% raw %}{{{% endraw %}wishlistld{% raw %}}}{% endraw %} |
-| Wishlists - Remove customer wishlist | DELETE | /wishlists/{% raw %}{{{% endraw %}wishlistld{% raw %}}}{% endraw %}  |
-| Wishlists - Retrieve all customer wishlists | GET | /wishlists  |
-| Wishlists - Create wishlist | POST | /wishlists |
+| Customer: Retrieve a customer | GET | /customers/{% raw %}{{{% endraw %}customer_reference{% raw %}}}{% endraw %} |
+| Customers: Update customer address | PATCH | /customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}/addresses/{% raw %}{{{% endraw %}address_id{% raw %}}}{% endraw %} |
+| Customers: Delete customer address | DELETE | ​/customers​/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}​/addresses​/{addressId} |
+| Customers: Retrieve list of all customer addresses | GET | ​/customers​/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}​/addresses |
+| Customers: Create customer address | POST | /customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}/addresses |
+| Customers: Retrieve customer data | GET | /customers/{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %} |
+| Customers: Update customer data | PATCH | /customers/{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %} |
+| Customers: Anonymize customers | DELETE | /customers/{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %} |
+| Customer password: Update customer password | PATCH | /customer-password/{% raw %}{{{% endraw %}customerPasswordId{% raw %}}}{% endraw %} |
+| Cart codes: Add code to cart. | GET | /carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/cart-codes |
+| Cart codes: Delete code from cart | DELETE | /carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/cart-codes/{code} |
+| Carts: Retrieve cart by id | GET | /carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %} |
+| Carts: Update a cart | PATCH | /carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %} |
+| Carts: Delete cart by id | DELETE | /carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %} |
+| Carts: Retrieve list of all customer's carts | GET | /carts |
+| Carts: Create cart | POST | /carts |
+| Items: Add item to cart | POST | /carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/items |
+| Items: Update cart item quantity | PATCH | /carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}itemId{% raw %}}}{% endraw %} |
+| Items: Remove item from cart | DELETE | /carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}itemId{% raw %}}}{% endraw %} |
+| Companies: Retrieve company by id | GET | /companies/{% raw %}{{{% endraw %}companyId{% raw %}}}{% endraw %} |
+| Companies: Retrieve company collection | GET | /companies |
+| Company business unit addresses: Retrieve company business unit address by id | GET | /company-business-unit-addresses/{% raw %}{{{% endraw %}companyBusinessUnitAddressId{% raw %}}}{% endraw %} |
+| Company business unit addresses: Retrieve company business unit addresses collection | GET | /company-business-unit-addresses |
+| Company roles: Retrieve company role by id | GET | /company-roles/{% raw %}{{{% endraw %}companyRoleId{% raw %}}}{% endraw %} |
+| Company roles: Retrieve company role collection | GET | /company-roles |
+| Company user access token: Create access token for company user | POST | /company-user-access-tokens |
+| Company users: Retrieve company user by id | GET | /company-users/{% raw %}{{{% endraw %}companyUserId{% raw %}}}{% endraw %} |
+| Company users: Retrieve list of company users | GET | /company-users |
+| Orders: Retrieve order by id | GET | /orders/{% raw %}{{{% endraw %}orderId{% raw %}}}{% endraw %} |
+| Orders: Retrieve list of orders | GET | /orders |
+| Product reviews: Create product review | POST | /abstract-products/{% raw %}{{{% endraw %}abstractProductId{% raw %}}}{% endraw %}/product-reviews |
+| Refresh tokens: Revoke customer's refresh token | DELETE | /refresh-tokens/{% raw %}{{{% endraw %}refreshTokenId{% raw %}}}{% endraw %} |
+| Returns: Retrieve return by id | GET | /returns/{% raw %}{{{% endraw %}returnld{% raw %}}}{% endraw %} |
+| Returns: Retrieve list of returns | GET | /returns |
+| Returns: Create return | POST | /returns |
+| Shared-carts: Share cart | POST | /carts/{% raw %}{{{% endraw %}cartld{% raw %}}}{% endraw %}/shared-carts |
+| Shared-carts: Update permission group for shared cart | PATCH | /shared-carts/{% raw %}{{{% endraw %}sharedCartId{% raw %}}}{% endraw %} |
+| Shared-carts: Delete cart sharing | DELETE | /shared-carts/{% raw %}{{{% endraw %}sharedCartId{% raw %}}}{% endraw %} |
+| Shopping list items: Add shopping list item | POST | /shopping-lists/{% raw %}{{{% endraw %}shoppingListId{% raw %}}}{% endraw %}/shopping-list-items |
+| Shopping list items: Update shopping list item | PATCH | /shopping-lists/{% raw %}{{{% endraw %}shoppingListId{% raw %}}}{% endraw %}/shopping-list-items |
+| Shopping list items: Delete shopping list item | DELETE | /shopping-lists/{% raw %}{{{% endraw %}shoppingListId{% raw %}}}{% endraw %}/shopping-list-items |
+| Shopping lists: Retrieve shopping list by id | GET | /shopping-lists/{% raw %}{{{% endraw %}shoppingListId{% raw %}}}{% endraw %} |
+| Shopping lists: Update shopping list by id | PATCH | /shopping-lists/{% raw %}{{{% endraw %}shoppingListId{% raw %}}}{% endraw %} |
+| Shopping lists: Delete shopping list by id | DELETE | /shopping-lists/{% raw %}{{{% endraw %}shoppingListId{% raw %}}}{% endraw %} |
+| Shopping lists: Retrieve list of all customer's shopping lists | GET | /shopping-lists |
+| Shopping lists: Create shopping list | POST | /shopping-lists |
+| Up-selling products: Retrieve list of all up-selling products for cart | GET | /carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/up-selling-products |
+| Vouchers: Add a code to cart | POST | /carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/vouchers |
+| Vouchers: Delete code from cart | DELETE | /carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/vouchers/{% raw %}{{{% endraw %}voucherCode{% raw %}}}{% endraw %} |
+| Wishlist items: Add item to  wishlist | POST  | /wishlists/{% raw %}{{{% endraw %}wishlistId{% raw %}}}{% endraw %}/wishlist-items |
+| Wishlist items: Remove item from wishlist | DELETE | ​/wishlists​/{% raw %}{{{% endraw %}wishlistId{% raw %}}}{% endraw %}​/wishlist-items​/{% raw %}{{{% endraw %}wishlistItemId{% raw %}}}{% endraw %} |
+| Wishlists: Retrieve wishlist data by id | GET | /wishlists/{% raw %}{{{% endraw %}wishlistld{% raw %}}}{% endraw %} |
+| Wishlists: Update customer wishlist | PATCH | /wishlists/{% raw %}{{{% endraw %}wishlistld{% raw %}}}{% endraw %} |
+| Wishlists: Remove customer wishlist | DELETE | /wishlists/{% raw %}{{{% endraw %}wishlistld{% raw %}}}{% endraw %}  |
+| Wishlists: Retrieve all customer wishlists | GET | /wishlists  |
+| Wishlists: Create wishlist | POST | /wishlists |
 
 ## Accessing protected resources
 

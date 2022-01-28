@@ -87,9 +87,9 @@ Request sample:
 
 | CODE | REASON |
 | --- | --- |
-| 001 | Failed to authenticate a user. This can happen due to the following reasons:<ul><li>Current authenticated customer cannot authenticate as the specified company user;</li><li>Specified company user does not exist;</li><li>Authentication token provided in the request is incorrect.</li></ul> |
-| 002 | Authentication token is missing in the request. |
-| 901 | Company user Id format is incorrect. |
+| 001 | Failed to authenticate a user. This can happen due to the following reasons:<ul><li>Current authenticated customer cannot authenticate as the specified company user.</li><li>Specified company user does not exist.</li><li>Authentication token provided in the request is incorrect.</li></ul> |
+| 002 | Authentication token is missing. |
+| 901 | The `idCompanyUser` attribute is not specified, invalid, or empty. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 

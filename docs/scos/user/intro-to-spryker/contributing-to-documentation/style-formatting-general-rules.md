@@ -476,7 +476,59 @@ task :check_mp_dev do
     /docs\/marketplace\/user\/.+/,
   ]
 ```
+### Configure Algolia search for the new project
+In config.yml, in the *algolia* section, add the project name and title:
 
+
+    - name: 'fes_dev'
+      title: 'Frontend enablement Service Developer'
+
+In the `algolia_config` folder, create the .YML file for your project and exclude all other projects from it:
+
+algolia:
+  index_name: 'fes_dev'
+  files_to_exclude:
+    - index.md
+    - 404.md
+    - search.md
+    - docs/marketplace/user/**/*.md
+    - docs/marketplace/dev/**/*.md
+    - docs/scos/user/**/*.md
+    - docs/scos/dev/**/*.md
+    - docs/paas-plus/dev/**/*.md
+    - docs/cloud/dev**/*.md
+	
+	
+Go to github/workflow/ci and add the files you created in the previous step: (fes_dev in our case)
+
+```
+
+      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_fes_dev.yml
+        env: # Or as an environment variable
+          ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+```
+
+In Algolia, go to https://www.algolia.com/apps/IBBSSFT6M1/indices click **Create Index**. 
+In the opened window, enter the name exactly as you specified it in step 1 in the config.yml file for the *algolia* section
+
+In the created index, go to **Configuration** and add the following attributes:
+title (ordered)
+headings (ordered)
+content (unordered)
+collection,categories,tags (unordered)
+url (ordered)
+
+In the Ranking and sorting, add custom rankings as here: https://www.algolia.com/apps/IBBSSFT6M1/explorer/configuration/scos_dev/ranking-and-sorting
+
+In Language, select "Eglish"
+In Facets, add facets as here: https://www.algolia.com/apps/IBBSSFT6M1/explorer/configuration/scos_dev/facets
+In Highlighting, add the values as here: https://www.algolia.com/apps/IBBSSFT6M1/explorer/configuration/paas_plus_dev/highlighting
+
+In snippeting, add atribute as here: https://www.algolia.com/apps/IBBSSFT6M1/explorer/configuration/scos_dev/snippeting
+
+In the Retrieved attribute, add attributes as here: https://www.algolia.com/apps/IBBSSFT6M1/explorer/configuration/scos_dev/retrieved-attributes
+
+In Deduplication and grouping, add attributes as here: https://www.algolia.com/apps/IBBSSFT6M1/explorer/configuration/paas_plus_dev/deduplication-and-grouping
 ## Deleting pages
 
 If you happen to delete the unnecessary or outdated page from the website, make sure to set up a redirect for it. See [Front matter](#front-matter) to learn how to set up redirects.

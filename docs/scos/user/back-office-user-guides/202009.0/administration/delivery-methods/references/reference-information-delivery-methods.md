@@ -1,5 +1,5 @@
 ---
-title: Reference information - Delivery methods
+title: Reference information - delivery methods
 last_updated: Aug 27, 2020
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/delivery-methods-reference-information

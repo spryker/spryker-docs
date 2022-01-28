@@ -1549,7 +1549,7 @@ entries:
             - "202001.0"
             - "202005.0"
             - "202009.0"
-          - title: Reference information -  Discount Calculation
+          - title: Reference information - Discount Calculation
             url: /docs/scos/user/back-office-user-guides/merchandising/discount/references/reference-information-discount-calculation.html
             include_versions:
             - "201811.0"

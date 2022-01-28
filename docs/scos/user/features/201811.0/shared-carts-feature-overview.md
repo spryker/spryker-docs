@@ -1,5 +1,5 @@
 ---
-title: Shared Carts Feature Overview
+title: Shared Carts feature overview
 description: In B2B world shopping carts can be created and used by different individuals. A shopping cart can be shared with the users of the current business unit.
 last_updated: May 19, 2020
 template: concept-topic-template

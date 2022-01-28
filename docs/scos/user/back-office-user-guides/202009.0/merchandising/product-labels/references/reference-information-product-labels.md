@@ -1,5 +1,5 @@
 ---
-title: Reference information - Product Labels
+title: Reference information - product labels
 description: The guide provides additional information about the values you use when creating or updating product labels in the Back Office.
 last_updated: Sep 8, 2020
 template: back-office-user-guide-template

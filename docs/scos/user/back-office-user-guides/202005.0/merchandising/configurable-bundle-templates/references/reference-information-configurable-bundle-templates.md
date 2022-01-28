@@ -1,5 +1,5 @@
 ---
-title: Reference information - Configurable Bundle Templates
+title: Reference information - Configurable Bundle templates
 description: This article contains reference information for the Configurable Bundle Templates in the Back Office.
 last_updated: Apr 3, 2020
 template: back-office-user-guide-template

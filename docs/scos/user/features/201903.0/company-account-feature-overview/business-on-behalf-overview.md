@@ -1,5 +1,5 @@
 ---
-title: Business On Behalf Overview
+title: Business On Behalf overview
 description: The feature allows having multiple company users per customer account with a possibility to select one company user to be a default user.
 last_updated: Jul 31, 2020
 template: concept-topic-template

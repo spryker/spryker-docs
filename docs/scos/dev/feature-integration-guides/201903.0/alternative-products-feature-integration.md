@@ -148,7 +148,7 @@ Make sure that the changes have been implemented successfully. For this purpose,
     
 {% info_block infoBox "Info" %}
 
-This step will publish tables on change (create, edit, delete) to the `spy_product_alternative_storage`, `spy_product_replacement_for_storage`  and synchronize the data to Storage.
+This step will publish tables on change (create, edit, delete) to the `spy_product_alternative_storage`, `spy_product_replacement_for_storage` and synchronize the data to Storage.
 
 {% endinfo_block %}
 

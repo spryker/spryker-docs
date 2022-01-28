@@ -3173,6 +3173,8 @@ entries:
           url: /docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html
         - title: Query objects - creation and usage
           url: /docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html
+      - title: Adding navigation in the Back Office
+        url: /docs/scos/dev/back-end-development/zed/adding-navigation-in-the-back-office.html
     - title: Cronjobs
       url: /docs/scos/dev/back-end-development/cronjobs/cronjobs.html
       nested:
@@ -3369,8 +3371,6 @@ entries:
         url: /docs/scos/dev/back-end-development/extending-spryker/adding-a-new-module.html
       - title: Extending a core module that is used by another
         url: /docs/scos/dev/back-end-development/extending-spryker/extending-a-core-module-that-is-used-by-another.html
-      - title: Adding navigation in the Back Office
-        url: /docs/scos/dev/back-end-development/extending-spryker/adding-navigation-in-the-back-office.html
       - title: Extending the Core
         url: /docs/scos/dev/back-end-development/extending-spryker/extending-the-core.html
       - title: Extending the Spryker Core functionality

@@ -233,8 +233,8 @@ To retrieve a business unit, send the request:
 | --- | --- |
 | 001 | Access token is invalid. |
 | 002 | Access token is missing. |
-| 1903 | Current company account is not set. |
-| 1901 | Specified business unit was not found or the user does not have access to it. |
+| 1903 | Current company account is not set. Select the current company user with `/company-user-access-tokens` to access the resource collection. |
+| 1901 | Specified business unit is not found or the user does not have access to it. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 

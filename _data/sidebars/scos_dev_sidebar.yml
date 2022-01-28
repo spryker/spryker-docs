@@ -3241,7 +3241,7 @@ entries:
           nested:
           - title: State machine console commands
             url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/state-machine-console-commands.html
-          - title: Order management system multi-thread  
+          - title: Order management system multi-thread
             url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-management-system-multi-thread.html
           - title: Common pitfalls in OMS design
             url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html
@@ -4120,6 +4120,147 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/payment-partners/afterpay/installing-and-configuring-afterpay.html
             - title: Integrating Afterpay
               url: /docs/scos/dev/technology-partner-guides/payment-partners/afterpay/integrating-afterpay.html
+    - title: Amazon Pay
+      nested:
+        - title: SCOS Integration
+          nested:
+            - title: Amazon Pay - Configuration for the SCOS
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/scos-integration/amazon-pay-configuration-for-the-scos.html
+            - title: Amazon Pay - Obtaining an Amazon Order Reference and Information About Shipping Addresses
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/scos-integration/amazon-pay-obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
+            - title: Amazon Pay - Sandbox Simulations
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/scos-integration/amazon-pay-sandbox-simulations.html
+            - title: Amazon Pay - State Machine
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/scos-integration/amazon-pay-state-machine.html
+            - title: Amazon Pay - API
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/scos-integration/amazon-pay-api.html
+        - title: Legacy Demoshop Integration
+          nested:
+            - title: "Amazon Pay - Rendering a \u201CPay with Amazon\u201D Button on the Cart Page"
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-rendering-a-pay-with-amazon-button-on-the-cart-page.html
+            - title: Amazon Pay - Email Notifications
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-email-notifications.html
+            - title: Amazon Pay - Configuration for the Legacy Demoshop
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-configuration-for-the-legacy-demoshop.html
+            - title: Amazon Pay - Sandbox Simulations
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-sandbox-simulations.html
+            - title: Amazon Pay - Support of Bundled Products
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-support-of-bundled-products.html
+            - title: Amazon Pay - Order Reference and Information about Shipping Addresses
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-order-reference-and-information-about-shipping-addresses.html
+            - title: Amazon Pay - State Machine
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-state-machine.html
+            - title: Amazon Pay - Refund
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-refund.html
+            - title: Amazon Pay - API
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-api.html
+    - title: Arvato
+      nested:
+        - title: v.1.0
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          nested:
+          - title: Arvato - Risk Check 1.0
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/v.1.0/arvato-risk-check-1.0.html
+            include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+            - "202001.0"
+            - "202005.0"
+          - title: Installing and configuring Arvato 1.0
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/v.1.0/installing-and-configuring-arvato-1.0.html
+            include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+            - "202001.0"
+            - "202005.0"
+        - title: Arvato - Risk Check
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/arvato-risk-check.html
+          include_versions:
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+        - title: Arvato - Store Order
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/arvato-store-order.html
+        - title: v.2.0
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          nested:
+          - title: Arvato - Risk Check 2.0
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/v.2.0/arvato-risk-check-2.0.html
+            include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+          - title: Installing and configuring Arvato 2.0
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/v.2.0/installing-and-configuring-arvato-2.0.html
+            include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+        - title: Installing and configuring Arvato
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/installing-and-configuring-arvato.html
+          include_versions:
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+        - title: Billpay
+          nested:
+            - title: Billpay - Switching invoice payments to a preauthorize mode
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/billpay/billpay-switching-invoice-payments-to-a-preauthorize-mode.html
+            - title: Integrating Billpay
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/billpay/integrating-billpay.html
+        - title: Braintree
+          nested:
+            - title: Braintree - Performing requests
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/braintree-performing-requests.html
+            - title: Braintree - Workflow
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/braintree-workflow.html
+            - title: Installing and configuring Braintree
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/installing-and-configuring-braintree.html
+            - title: Braintree guides for the Legacy Demoshop
+              include_versions:
+              - "201811.0"
+              - "201903.0"
+              - "201907.0"
+              - "202001.0"
+              nested:
+                - title: Configuration for the Legacy Demoshop
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/legacy-demoshop-integration/braintree-configuration-for-the-legacy-demoshop.html
+                  include_versions:
+                  - "201811.0"
+                  - "201903.0"
+                  - "201907.0"
+                  - "202001.0"
+                - title: Performing Requests for the Legacy Demoshop
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/legacy-demoshop-integration/braintree-performing-requests-for-the-legacy-demoshop.html
+                  include_versions:
+                  - "201811.0"
+                  - "201903.0"
+                  - "201907.0"
+                  - "202001.0"
+                - title: Braintree - Workflow for Legacy Demoshop
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/legacy-demoshop-integration/braintree-workflow-for-legacy-demoshop.html
+                  include_versions:
+                  - "201811.0"
+                  - "201903.0"
+                  - "201907.0"
+                  - "202001.0"
+            - title: Integrating Braintree
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/integrating-braintree.html
+              include_versions:
+              - "202009.0"
+              - "202108.0"
         - title: RatePay
           nested:
             - title: RatePay - Payment methods
@@ -4224,6 +4365,8 @@ entries:
         url: /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html
       - title: Available test helpers
         url: /docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
+      - title: Testing console commands
+        url: /docs/scos/dev/guidelines/testing-guidelines/testing-console-commands.html
     - title: Project development guidelines
       url: /docs/scos/dev/guidelines/project-development-guidelines.html
     - title: Data Processing Guidelines

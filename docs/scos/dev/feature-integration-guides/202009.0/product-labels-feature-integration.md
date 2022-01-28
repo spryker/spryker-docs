@@ -1,5 +1,5 @@
 ---
-title: Product labels feature integration
+title: Product Labels feature integration
 description: This guide provides step-by-step instruction on integrating
 last_updated: Sep 16, 2020
 template: feature-integration-guide-template

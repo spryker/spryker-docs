@@ -1,5 +1,5 @@
 ---
-title: Reference information - Products
+title: Reference information - products
 description: Use this section to learn more about attributes you use when working with products in the Back Office.
 last_updated: Aug 27, 2020
 template: back-office-user-guide-template

@@ -18,7 +18,7 @@ There is currently an issue when using giftcards with Computop. Our team is deve
 This article provides step-by-step instructions on integrating the Computop module into your project.
 
 ## Prerequisites
-Prior to integrating Computop into your project, make sure you [installed and configured the Computop module](/docs/scos/user/technology-partners/202009.0/payment-partners/computop/installing-and-configuring-computop.html).
+Prior to integrating Computop into your project, make sure you [installed and configured the Computop module](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/computop/installing-and-configuring-computop.html).
 
 ## Integrating Computop into your project
 To integrate Computop, do the following:
@@ -65,12 +65,12 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
     ComputopConfig::PAYMENT_METHOD_EASY_CREDIT => 'ComputopEasyCredit01',
 ];
 ```
-  
+
 2. In the `OmsDependencyProvider`, add OMS command and condition plugins:
 
 <details open>
 <summary markdown='span'>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
-    
+
 ```php
 <?php
 
@@ -176,7 +176,7 @@ computopPayNow,Computop PayNow,Computop,Computop,1
 computopPayPal,Computop PayPal,Computop,Computop,1
 computopSofort,Computop Sofort,Computop,Computop,1
 ```
-  
+
 
 **data/import/common/DE/payment_method_store.csv**
 ```yaml
@@ -229,7 +229,7 @@ To configure checkout:
 
 <details open>
     <summary markdown='span'>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
-   
+
 ```php
 <?php
 
@@ -268,7 +268,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
     {
         return [
     		...        
-	
+
             new ComputopPostCheckPlugin(),
         ];
     }
@@ -281,7 +281,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 
 <details open>
     <summary markdown='span'>src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php</summary>
-    
+
 ```php
 <?php
 
@@ -408,7 +408,7 @@ Payment methods like CreditCard, PayNow, EasyCredit require adjustments in the `
 
 <details open>
     <summary markdown='span'>src/Pyz/Yves/CheckoutPage/Process/StepFactory.php</summary>
-    
+
 ```php
 <?php
 
@@ -557,7 +557,7 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 
 <details open>
     <summary markdown='span'>src/Pyz/Yves/CheckoutPage/Controller/CheckoutController.php</summary>
-    
+
 ```php
 <?php=
 
@@ -897,11 +897,11 @@ class SummaryStep extends SprykerShopSummaryStep
 ```
 
 </details>
-  
+
 
 ### CRIF configuration  
 
-To configure [CRIF](/docs/scos/user/technology-partners/202009.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-crif-payment-method-for-computop.html):
+To configure [CRIF](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-crif-payment-method-for-computop.html):
 
 1\. Adjust `PaymentDependencyProvider` to use `ComputopPaymentMethodFilterPlugin`:  
 
@@ -975,12 +975,12 @@ class ShipmentStep extends SprykerShipmentStep
 		ComputopClientInterface $computopClient
     ) {
         parent::__construct(
-			$calculationClient, 
-			$shipmentPlugins, 
-			$postConditionChecker, 
-			$giftCardItemsChecker, 
-			$stepRoute, 
-			$escapeRoute, 
+			$calculationClient,
+			$shipmentPlugins,
+			$postConditionChecker,
+			$giftCardItemsChecker,
+			$stepRoute,
+			$escapeRoute,
 			$checkoutShipmentStepEnterPreCheckPlugins
 		);
 

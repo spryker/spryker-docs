@@ -600,7 +600,7 @@ class SecurityGuiConfig extends SprykerSecurityGuiConfig
 2. In the needed deploy files, replace the `zed` application with `backoffice`, `backend-gateway` and `backend-api` as follows.
 
 <details open>
-    <summary markdown='span'>Example of replacing the application name</summary>
+    <summary markdown='span'>An example of replacing the application name</summary>
 
 ```yaml
 // One "zed" application.

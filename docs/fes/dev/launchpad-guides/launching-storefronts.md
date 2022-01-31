@@ -52,9 +52,9 @@ This takes you back to the *Create a new Application* page.
 
 ## Configuring the build
 
-In the *Hosting provider* section, you need to configure how the Storefront will be deployed to [Netlify](https://www.netlify.com/). In future, you'll also be able to use other hosting providers.
+In the *Hosting provider* section, you configure how the Storefront is deployed to [Netlify](https://www.netlify.com/). In future, you'll also be able to use other hosting providers.
 
-To configure the build configuration, do the following:
+The Launchpad automatically deploys your Storefront to Netlify using a default configuration. If you want to customize the deployment, do the following:
 
 1. Optional: Enter a **BASE DIRECTORY**.
   This is the directory from which a deployment is started. If not specified, the root directory of the repository is used.

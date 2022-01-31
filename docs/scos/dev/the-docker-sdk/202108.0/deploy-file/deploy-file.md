@@ -72,6 +72,35 @@ imports:
 ```
 
 
+### Import types
+
+You can include a deploy file into an application's configuration using one of the following import types.
+
+* File path:
+```yaml
+imports:
+    deploy.base.template.yml:
+    deploy.project.template.yml:
+```      
+
+* Named array:
+```yaml
+imports:
+    base-deploy-file:
+        template: deploy.base.template.yml
+    project-deploy-file:
+        template: deploy.project.template.yml
+```
+
+* Unnamed array:
+```yaml
+imports:
+    - template: deploy.base.template.yml
+    - template: deploy.project.template.yml
+```
+
+Unlike file path import type, named and unnamed import types support importing the same deploy file multiple types. This can be useful when you want to add the same configuration multiple times with different parameters.
+
 
 
 

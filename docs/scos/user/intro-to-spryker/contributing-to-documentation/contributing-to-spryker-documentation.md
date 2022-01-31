@@ -22,7 +22,7 @@ To propose changes to the Spryker documentation, take the following steps:
 3. At the top right corner of the GitHub page, click the **Edit** icon. This launches the edit mode to make changes to the document.
 ![editing-the-document](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-spryker-documentation/2-editing-a-document.png)
 4. On the **Edit file** tab, edit the document.
-5. To complete your editing and propose changes, in the **Propose changes** section, fill the following fields:
+5. To complete your editing and propose changes, in the **Propose changes** section, fill in the following fields:
    * **Create *[document-name.md]***: Give a meaningful name to your commit.
    * **Add an optional extended description...** (optional): Provide an optional detailed description of your commit. For information about commits, see [About commits](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits) in the official GitHub documentation.
 6. Click **Propose changes**. This takes you to the **Comparing changes** page.

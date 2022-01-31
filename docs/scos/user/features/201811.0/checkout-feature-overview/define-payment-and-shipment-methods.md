@@ -1,5 +1,5 @@
 ---
-title: Define Payment & Shipment Methods
+title: Define Payment and Shipment Methods
 last_updated: Oct 24, 2019
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/define-payment-shipment-methods

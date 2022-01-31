@@ -1,5 +1,5 @@
 ---
-title: Quotation process + approval process feature integration
+title: Quotation Process + Approval Process feature integration
 description: Install the Quotation Process and Approval Process features in your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template

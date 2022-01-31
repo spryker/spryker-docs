@@ -1,5 +1,5 @@
 ---
-title: Customer Login by Token
+title: Customer Login by Token overview
 description: With the feature in place, B2B customers can log in to Spryker shop using a token.  In the article, you can find a description of the token structure.
 last_updated: Aug 13, 2020
 template: concept-topic-template
@@ -91,8 +91,6 @@ http://mysprykershop.com/access-token/eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aS
 ```
 
 In Spryker Commerce OS, token generation is performed using a facade method, that is why no GUI is present. To generate a token, see [HowTo - Generate a Token for Login](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html).
-
-Token-based authentication works closely with the [Punch Out](/docs/scos/user/features/{{page.version}}/technology-partner-integrations/punchout/punchout.html) feature. It allows B2B buyers to log in from their ERP system to a Spryker company user account using a token without entering the username and password and buy the products from Spryker e-commerce shop.
 
 To make the feature more flexible, we have implemented the functionality that allows you to disable switching between the Business-on Behalf accounts. E.g., if the user logs in to the pre-defined company account that has Business-on-Behalf feature integrated, the shop owner can disable the ability to switch between the accounts. In case the Business-on-Behalf is disabled, the company user will log in to the default account and will not be able to switch between the company users within their company account.
 

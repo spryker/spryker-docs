@@ -44,10 +44,10 @@ See [Reference Information](/docs/scos/user/shop-user-guides/{{page.version}}/sh
 {% endinfo_block %}
 
 ***
+
 **What's next?**
 
 The Quote Request is created in your Customer Account, but the Sales Representative does not have it yet. So you can do the following:
-
 1. Send the quote to the Sales Representative to negotiate the price.
 2. Cancel the Quote Request, if you created it by mistake or don't need it anymore etc.
 3. Edit the Quote Request by changing the number of products, quantities, measurement units etc. or providing more details (like purchase number, preferred shipment dates and adding comments) on the request.

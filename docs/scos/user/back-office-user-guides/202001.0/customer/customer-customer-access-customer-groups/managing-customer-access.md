@@ -10,19 +10,21 @@ redirect_from:
   - /v4/docs/en/managing-customer-access
 related:
   - title: Managing Customer Groups
-    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customer-groups.html
+    link: docs/scos/user/back-office-user-guides/page.version/customer/customer-customer-access-customer-groups/managing-customer-groups.html
   - title: Managing Customer Addresses
-    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customer-addresses.html
+    link: docs/scos/user/back-office-user-guides/page.version/customer/customer-customer-access-customer-groups/managing-customer-addresses.html
   - title: Managing Customers
-    link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customers.html
+    link: docs/scos/user/back-office-user-guides/page.version/customer/customer-customer-access-customer-groups/managing-customers.html
   - title: Hide Content from Logged out Users Overview
     link: docs/scos/user/features/page.version/customer-access-feature-overview.html
 ---
 
 The Customer Access page was designed to define what information can be viewed for the not-logged-into online store customers.
 ***
+
 To start defining specific restrictions for not logged in customers, navigate to the **Customers > Customer Access** section.
 ***
+
 To define the restrictions:
 1. In the **Customer Access** section, select one of the following content types under the **Hide the following information from not logged in users**:
     * **price** - if selected, no prices will be shown to not logged in customers
@@ -30,8 +32,11 @@ To define the restrictions:
     * **wishlist** - if selected, no **Wishlist** option is available
     * **Shopping List** - if selected, no **Add to Shopping List** option is available
     * **Can place an order** - if selected, the not logged in user is not able to place in order.
-    
+
     {% info_block errorBox "**B2B Only**" %}
+
     This option is selected by default and cannot be deselected.
+
     {% endinfo_block %}
+    
 2. Click **Save** to save the changes.

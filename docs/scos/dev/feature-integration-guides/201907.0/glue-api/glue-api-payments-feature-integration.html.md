@@ -1,5 +1,5 @@
 ---
-title: Glue- Payments feature integration
+title: Glue API - Payments feature integration
 description: This guide will navigate through the process of installing and configuring of the Payments API feature used in Spryker OS.
 last_updated: Nov 22, 2019
 template: feature-integration-guide-template

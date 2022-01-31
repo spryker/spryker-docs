@@ -398,7 +398,7 @@ class DummyResultFormatterPlugin extends AbstractElasticsearchResultFormatterPlu
     {
         $results = [];
 
-        foreach ($resultSet->getResults() as $result) {
+        foreach ($searchResult->getResults() as $result) {
             $results[] = $this->formatResult($result);
         }
 

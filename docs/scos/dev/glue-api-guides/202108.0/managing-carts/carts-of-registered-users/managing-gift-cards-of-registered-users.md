@@ -189,10 +189,11 @@ If the item is deleted successfully, the endpoint will respond with a `204 No Co
 | CODE  | REASON |
 | --- | --- |
 | 001| Access token is incorrect. |
-| 003| Access token is missing. |
-| 003| Cart code not found in cart. |
-| 3301| Cart code not found in cart. |
-| 3302| Cart code can't be added. |
-| 3303| Cart code can't be removed. |
+| 002| Access token is missing. |
+| 003 | Failed to log in the user. |
+| 003| Cart code is not found in cart. |
+| 3301 | Cart or voucher with the specified ID is not found. |
+| 3302 | Incorrect voucher code or the voucher cannot be applied. |
+| 3303| Cart code cannot be removed. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

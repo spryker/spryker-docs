@@ -20,7 +20,11 @@ commonOptions = {
     /www.virtualbox.org\/[@\.\w\-\/\?]+/,
     /de.linkedin.com\/[@\.\w\-\/\?]+/,
     /www.instagram.com\/[\.\w\-\/\?]+/,
-    /eur-lex.europa.eu\/[\.\w\-\/\?]+/
+    /eur-lex.europa.eu\/[\.\w\-\/\?]+/,
+    /docs.adyen.com\/[\.\w\-\/\?]+/,
+    /www.adyen.com\/[\.\w\-\/\?]+/,
+    /bugs.php.net\/[\.\w\-\/\?]+/,
+    /www.vagrantup.com\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],
   :typhoeus => {

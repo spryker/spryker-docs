@@ -19,12 +19,7 @@ This endpoint allows refreshing a company user access token or revoking a refres
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html).
 
-
-
-
 ## Refresh a company user authentication token
-
-
 
 To refresh a company user authentication token, send the request:
 
@@ -75,7 +70,7 @@ Request sample: `POST https://glue.mysprykershop.com/refresh-tokens`
         }
     }
 }
-    
+
 ```
 
 </details>
@@ -122,15 +117,14 @@ To revoke a company user refresh token, send the request:
 
 For security purposes, the endpoint always returns the `204 No Content` status code, regardless of any refresh tokens being revoked.
 
-The tokens are marked as expired on the date and time of the request. You can configure expired tokens to be automatically deleted from the database by setting the lifetime of expired tokens. 
+The tokens are marked as expired on the date and time of the request. You can configure expired tokens to be automatically deleted from the database by setting the lifetime of expired tokens.
 
 ## Possible errors
 
 | CODE  | REASON |
 | --- | --- |
-|001 | Access token is invalid. |    
-|004 |Failed to refresh the token.  | 
-|901 |Refresh token is missing.  | 
+| 001 | Access token is invalid. |    
+| 004 | Failed to refresh the token. |
+| 901 | Refresh token is not specified or empty. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
-

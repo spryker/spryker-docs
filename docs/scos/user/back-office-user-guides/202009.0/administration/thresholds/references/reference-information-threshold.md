@@ -1,5 +1,5 @@
 ---
-title: Reference information- Threshold
+title: Reference information - threshold
 description: The guide provides additional information on thresholds and types of soft thresholds when working with thresholds in the Back Office.
 last_updated: Sep 4, 2020
 template: back-office-user-guide-template

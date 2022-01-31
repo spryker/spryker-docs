@@ -23,7 +23,8 @@ commonOptions = {
     /eur-lex.europa.eu\/[\.\w\-\/\?]+/,
     /docs.adyen.com\/[\.\w\-\/\?]+/,
     /www.adyen.com\/[\.\w\-\/\?]+/,
-    /bugs.php.net\/[\.\w\-\/\?]+/
+    /bugs.php.net\/[\.\w\-\/\?]+/,
+    /www.vagrantup.com\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],
   :typhoeus => {

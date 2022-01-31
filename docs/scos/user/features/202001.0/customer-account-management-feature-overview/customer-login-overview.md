@@ -1,5 +1,5 @@
 ---
-title: Login & Registration Forms
+title: Customer Login overview
 description: Tailor customer registration to your needs. A customer can register with an email address and a password, or you can choose to ask for more details.
 last_updated: Mar 16, 2020
 template: concept-topic-template

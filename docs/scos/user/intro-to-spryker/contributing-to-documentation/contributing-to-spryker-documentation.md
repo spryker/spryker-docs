@@ -13,7 +13,7 @@ This instruction explains how to contribute to the [Spryker documentation](https
 To start contributing to the Spryker documentation, make sure you have a GitHub account.
 For information about how to create a new account to GitHub, see [Signing up for a new GitHub account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account) in the official GitHub documentation.
 
-## Contribute to a Spryker document
+## Contribute to the Spryker documentation
 
 To propose changes to the Spryker documentation, take the following steps:
 1. On [Spryker documentation center](https://docs.spryker.com/), find a document you want to introduce changes to.

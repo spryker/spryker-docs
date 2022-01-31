@@ -1,5 +1,5 @@
 ---
-title: Company user roles and permissions
+title: Company user roles and permissions overview
 description: Usually employees within a company have different roles (purchasing, administration, supervision, etc.). These roles are referred to as Company Roles.
 last_updated: Jun 2, 2021
 template: concept-topic-template

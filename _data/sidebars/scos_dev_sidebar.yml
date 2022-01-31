@@ -1161,6 +1161,7 @@ entries:
       - title: Glue API - Cart feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html
         include_versions:
+        - "201907.0"
         - "202001.0"
         - "202005.0"
         - "202009.0"
@@ -1188,7 +1189,7 @@ entries:
         include_versions:
         - "202108.0"
       - title: Glue API - Content Items API feature integration
-        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-content-items-api-feature-integration.html
+        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-content-items-feature-integration.html
         include_versions:
         - "201907.0"
         - "202001.0"
@@ -1496,7 +1497,7 @@ entries:
       - "201907.0"
       - "202001.0"
       - "202005.0"
-    - title: Cart + non-splittable Products feature integration
+    - title: Cart + Non-splittable Products feature integration
       url: /docs/scos/dev/feature-integration-guides/cart-non-splittable-products-feature-integration.html
       include_versions:
       - "201903.0"
@@ -1508,7 +1509,6 @@ entries:
     - title: Cart feature integration
       url: /docs/scos/dev/feature-integration-guides/cart-feature-integration.html
       include_versions:
-      - "201907.0"
       - "202009.0"
       - "202108.0"
     - title: Category Filters feature integration
@@ -1604,7 +1604,7 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202200.0"
-    - title: Configurable bundle + order management feature integration
+    - title: Configurable Bundle + Order Management feature integration
       url: /docs/scos/dev/feature-integration-guides/configurable-bundle-order-management-feature-integration.html
       include_versions:
       - "202009.0"
@@ -1657,7 +1657,7 @@ entries:
       include_versions:
       - "202009.0"
       - "202108.0"
-    - title: Discontinued products + product labels feature integration
+    - title: Discontinued Products + Product Labels feature integration
       url: /docs/scos/dev/feature-integration-guides/discontinued-products-product-labels-feature-integration.html
       include_versions:
       - "202009.0"
@@ -1702,7 +1702,7 @@ entries:
       url: /docs/scos/dev/feature-integration-guides/multiple-carts-reorder-feature-integration.html
     - title: Multiple Carts + Quick Order feature integration
       url: /docs/scos/dev/feature-integration-guides/multiple-carts-quick-order-feature-integration.html
-    - title: Multi-Store Products feature integration
+    - title: Multi-store Products feature integration
       url: /docs/scos/dev/feature-integration-guides/multi-store-products-feature-integration.html
     - title: Multi-store CMS Block feature integration
       url: /docs/scos/dev/feature-integration-guides/multi-store-cms-block-feature-integration.html
@@ -1839,10 +1839,7 @@ entries:
       - "202108.0"
     - title: Product labels feature integration
       url: /docs/scos/dev/feature-integration-guides/product-labels-feature-integration.html
-      include_versions:
-      - "202009.0"
-      - "202108.0"
-    - title: Product labels + promotions & discounts feature integration
+    - title: Product labels + Promotions and Discounts feature integration
       url: /docs/scos/dev/feature-integration-guides/product-labels-promotions-and-discounts-feature-integration.html
       include_versions:
       - "202009.0"
@@ -1867,7 +1864,7 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-    - title: Product options + order management feature integration
+    - title: Product Options + Order Management feature integration
       url: /docs/scos/dev/feature-integration-guides/product-options-order-management-feature-integration.html
       include_versions:
       - "202009.0"
@@ -1979,7 +1976,7 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-    - title: Return management feature integration
+    - title: Return Management feature integration
       url: /docs/scos/dev/feature-integration-guides/return-management-feature-integration.html
       include_versions:
       - "202009.0"

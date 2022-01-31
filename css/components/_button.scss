@@ -99,4 +99,18 @@
             box-shadow: none;
         }
     }
+
+    &--disabled {
+        pointer-events: none;
+
+        &,
+        &:hover,
+        &:active,
+        &:focus {
+            background: $grey-light;
+            border-color: $grey-light;
+            color: $grey;
+            box-shadow: none;
+        }
+    }
 }

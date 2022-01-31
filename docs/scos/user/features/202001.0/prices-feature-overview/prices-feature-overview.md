@@ -1,5 +1,5 @@
 ---
-title: Price Functionality
+title: Prices feature overview
 description: In the article, you can find the price definition, its types, how the price is inherited and calculated.
 last_updated: Dec 21, 2019
 template: concept-topic-template

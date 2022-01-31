@@ -16,20 +16,20 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Spryker Core | master |
-| Cart | master |
-|Product  | master |
-|Payments  | master |
-| Shipment | master |
-| Order Management | master |
-| Mailing &amp; Notifications | master |
-| Promotions &amp; Discounts | master |
+| Spryker Core | {{page.version}} |
+| Cart | {{page.version}} |
+|Product  | {{page.version}} |
+|Payments  | {{page.version}} |
+| Shipment | {{page.version}} |
+| Order Management | {{page.version}} |
+| Mailing &amp; Notifications | {{page.version}} |
+| Promotions &amp; Discounts | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/gift-cards:"^master" --update-with-dependencies
+composer require spryker-feature/gift-cards:"^{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1070,15 +1070,15 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Spryker Core | master |
-| Cart | master |
-| Checkout | master |
+| Spryker Core | {{page.version}} |
+| Cart | {{page.version}} |
+| Checkout | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/gift-cards:"^master" --update-with-dependencies
+composer require spryker-feature/gift-cards:"^{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

@@ -1,5 +1,5 @@
 ---
-title: Business On Behalf Feature Overview
+title: Business On Behalf overview
 description: The feature allows having multiple company users per customer account with a possibility to select one company user to be a default user.
 last_updated: Nov 22, 2019
 template: concept-topic-template
@@ -12,13 +12,16 @@ redirect_from:
   - /v4/docs/en/business-on-behalf
 ---
 
-Every [business unit](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-unit-management.html) includes some company users that have specific permissions within this business unit. Business on Behalf feature allows having multiple company users per customer account with a possibility to select one company user to be a default user. This default user can switch between the assigned business units.
+Every [business unit](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-units-overview.html) includes some company users that have specific permissions within this business unit. Business on Behalf feature allows having multiple company users per customer account with a possibility to select one company user to be a default user. This default user can switch between the assigned business units.
 
 You can assign a user to multiple business units in the Back Office. After that, a single user will be able to log in to several company accounts and manage all of them via a browser window.
 
 {% info_block warningBox %}
+
 Only customers having more than one Company user can make use of the feature.
+
 {% endinfo_block %}
+
 When you have access to multiple business units, you can:
 
 * capture company information
@@ -48,8 +51,3 @@ Schematically, the relations between modules in the Business on Behalf feature a
 ![business-on-behalf-module-relations.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+on+Behalf/Business+on+Behalf+Feature+Overview/business-on-behalf-module-relations.png) 
 
 `BusinessOnBehalfGui` module provides plugin `BusinessOnBehalfGuiAttachToCompanyButtonCustomerTableActionExpanderPlugin` for Customer module, and `CompanyUserTableAttachToBusinessUnitActionLinksExpanderPlugin` as well as `ReplaceDeleteButtonCompanyUserTableActionLinksExpanderPlugin` plugins for `CompanyUserG` module. Also, `BusinessOnBehalfGui` takes user information from `CompanyUser` module.
-
- <!--
-_Last review date: Mar 14, 2019_ <!-- by Oksana Karasyova -->
-
-

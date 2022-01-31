@@ -23,7 +23,9 @@ After the reclamation has been created, it appears on the [Reclamations](/docs/s
 With the reclamations in place, you can find the problematic issues with orders that a shop owner has (e.g., the product is faulty or broken) and manage them.
 
 {% info_block errorBox %}
+
 Due to the specificity of the state machine for every project, out of the box, the “refunded” state is not reflected in OMS in any way - it is just a mark for the shop administrators signifying that the order has been refunded.
+
 {% endinfo_block %}
 
 The reclamations can have two states - open and closed. The closed state of a reclamation means that there is nothing to do on it anymore, therefore it can not be reopened.

@@ -736,6 +736,10 @@ For the attributes of other included resources, see:
 * [Retrieving concrete product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-prices.html)
 * [Retrieving concrete product image sets](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html)
 
+## Possible errors
+
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+
 ## Other management options
 
 You can use the configurable bundle resource in the following way:

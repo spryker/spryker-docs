@@ -249,7 +249,7 @@ Request sample: `PATCH http://glue.mysprykershop.com/customers/DE-25`
 		"data" : {
 			"type": "customers"
 			"attributes": {
-					"lastName": "Sonia",
+					"lastName": "Johnson",
 					"email": "sonia@spryker.com",
 				}
 		}
@@ -390,10 +390,15 @@ There is an alternative way to retrieve existing subscriptions, for details see 
 | 400 | Customer with the same email address already exists. |
 | 402 | Customer with the specified ID was not found. |
 | 405 | Customer reference is missing. |
+| 406 | New password and password confirmation do not match. |
 | 410 | Failed to save changes. |
 | 414 | Provided gender is invalid. |
-| 422 | Terms of service were not accepted. Note that if you have the [REST Request Format](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/validating-rest-request-format.html) validation enabled, then you will recieve 901 instead of 422. |
+| 420 | The password character set is invalid. |
+| 422 | `newPassword` and `confirmPassword` values are not identic. |
+| 802 | Request is unauthorized. |
+| 901 | Indicates one of the following reasons:<ul><li>Terms of service were not accepted. Note that if you don't have the [REST Request Format](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/validating-rest-request-format.html) validation enabled, then you will recieve the `422` status code instead of the `901` error code.</li><li> `newPassword` and `confirmPassword` are not specified.</li><li>Password length is invalid (it should be from 8 to 64 characters).</li></ul> |
 | 4606 | Request is unauthorized.|
+
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 

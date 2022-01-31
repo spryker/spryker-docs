@@ -20,7 +20,7 @@ To enable BazaarVoice to match your products to products in other stores and upl
 
 {% endinfo_block %}
 
-When you connect BazaarVoice, the app puts JavaScrip tags into your store, and the JavaScript code tells the app where to insert the BazaarVoice content - reviews, star ratings, or questions and answers.
+When you connect BazaarVoice, the app puts JavaScrip tags into your store, and the JavaScript code tells the app where to insert the BazaarVoice content—reviews, star ratings, or questions and answers.
 
 {% info_block infoBox "Info" %}
 
@@ -32,7 +32,7 @@ If you have BazaarVoice integrated, the Spryker default [Product Ratings and Rev
 
 To integrate or configure BazaarVoice:
 
-1. In your store's Back Office, go to **Apps->Catalog**.
+1. In your store's Back Office, go to **Apps > Catalog**.
 2. Click **BazaarVoice**.
    This takes you to the BazaarVoice app details page, from where you can do the integration and configuration.
 
@@ -46,7 +46,7 @@ To integrate the BazaarVoice app into your store:
    You should receive the BazaarVoice credentials.
 3. Go back to your store's Back Office, to the BazaarVoice app details page.
 4. In the top right corner of the BazaarVoice app details page, click **Configure**.
-5. In the *Configure* pane, enter the credentials you received from BazaarVoice.
+5. In the **Configure** pane, enter the credentials you received from BazaarVoice.
 
 That's it. You have integrated the BazaarVoice app into your store. It usually takes BazaarVoice a few days to process your product feed. Therefore, you should see the external ratings and reviews from BazaarVoice in about 2-3 days after you integrated the app.
 
@@ -68,14 +68,14 @@ To configure the app, on the BazaarVoice app details page, click **Configure**.
 
 To configure the BazaarVoice services:
 
-In *Settings*->*Select Services* select the services you need:
+In **Settings > Select Services** select the services that you need:
    - RATINGS & REVIEWS: These are the accumulated star ratings along with reviews that are displayed on the product details page.
    <!---- QUESTIONS & ANSWERS:--> 
    - INLINE RATINGS: This service displays the star ratings directly in these lists of products, for example, in search results, in the product catalog, etc.
-   - BazaarVoice PIXEL: Adds a single tracking pixel to your shopping cart page and product details page. It allows BazaarVoice to track whether the products that have more UGC have a better conversion rate than products without many ratings and reviews.
+   - BazaarVoice PIXEL: Adds a single tracking pixel to your shopping cart page and product details page. It lets BazaarVoice track whether the products that have more UGC have a better conversion rate than products without many ratings and reviews.
    - CONTAINER PAGE: Lets your users add their reviews on the product details page.
 
-To configure the stores where you want to turn on the BazaarVoice app, in *Settings->Store*, select the stores.
+To configure the stores where you want to turn on the BazaarVoice app, in **Settings** > **Store**, select the stores.
 
 ## Disconnecting BazaarVoice from your store
 You can always disconnect the BazaarVoice app from your store. For example, after the trial period, you might decide not to continue with the app. 

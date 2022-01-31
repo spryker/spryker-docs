@@ -99,9 +99,31 @@ imports:
     - template: deploy.project.template.yml
 ```
 
-Unlike file path import type, named and unnamed import types support importing the same deploy file multiple types. This can be useful when you want to add the same configuration multiple times with different parameters.
+Unlike file path import, named and unnamed array imports support including the same deploy file multiple types. This can be useful when you want to add the same configuration multiple times with different parameters.
 
+Example of including the same deploy file with different parameters via a named array import:
 
+```yaml
+imports:
+    project-deploy-file:
+        template: deploy.project.template.yml
+        parameters: 'stage'
+    extended-project-deploy-file:
+        template: deploy.project.template.yml
+        parameters:
+            env_name: 'dev'
+```
+
+Example of including the same deploy file with different parameters via an unnamed array import:
+
+```yaml
+- template: deploy.porject.template.yml
+  parameters:
+      env-name: 'stage'
+- template: deploy.porject.template.yml
+  parameters:
+      env-name: 'dev'
+```
 
 
 

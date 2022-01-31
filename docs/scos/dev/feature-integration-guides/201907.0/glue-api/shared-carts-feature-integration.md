@@ -1,5 +1,5 @@
 ---
-title: Shared Carts feature integration
+title: Glue API - Shared Carts feature integration
 description: The guide walks you through the process of installing and configuring Shared Carts into Spryker OS
 last_updated: Nov 22, 2019
 template: feature-integration-guide-template

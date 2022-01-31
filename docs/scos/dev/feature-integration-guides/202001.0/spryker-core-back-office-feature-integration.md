@@ -1,5 +1,5 @@
 ---
-title: Back Office feature integration
+title: Spryker Core Back Office feature integration
 description: Learn how to add the Translation functionality to the basic Back Office feature. This guide provides step-by-step instructions for the integration process.
 last_updated: Mar 5, 2020
 template: feature-integration-guide-template

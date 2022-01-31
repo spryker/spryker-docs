@@ -19,6 +19,12 @@
     }
 }
 
+.mobile-hidden {
+    @include media("<tablet") {
+        display: none !important;
+    }
+}
+
 .tablet-hidden {
     @include media("<desktop") {
         display: none !important;
@@ -37,4 +43,8 @@
     @include media("<laptop") {
         display: none !important;
     }
+}
+
+.hidden {
+    display: none !important;
 }

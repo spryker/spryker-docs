@@ -1,6 +1,6 @@
 ---
 title: Contributing to Spryker documentation
-description: Learn how you to contribute to Spryker documentation
+description: Learn how you to contribute to the Spryker documentation
 template: howto-guide-template
 ---
 

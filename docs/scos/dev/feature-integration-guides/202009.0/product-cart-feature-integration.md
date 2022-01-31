@@ -1,5 +1,5 @@
 ---
-title: Product + cart feature integration
+title: Product + Cart feature integration
 description: The guide walks you through the process of installing the Product and Cart features in your project.
 last_updated: Aug 27, 2020
 template: feature-integration-guide-template

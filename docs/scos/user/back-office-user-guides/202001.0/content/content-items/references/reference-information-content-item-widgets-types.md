@@ -1,5 +1,5 @@
 ---
-title: Content Item Widgets types- Reference Information
+title: Reference information - Content Item Widgets Types
 description: The guide provides reference information about content widget types and examples of use cases in B2B, B2C demoshops.
 last_updated: Nov 22, 2019
 template: back-office-user-guide-template

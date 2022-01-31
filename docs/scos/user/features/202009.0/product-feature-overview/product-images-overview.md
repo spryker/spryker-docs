@@ -1,5 +1,5 @@
 ---
-title: Product image management
+title: Product images overview
 description: Group several images into sets and link them to products. One product can have several named and localized sets of images.
 last_updated: Feb 15, 2021
 template: concept-topic-template

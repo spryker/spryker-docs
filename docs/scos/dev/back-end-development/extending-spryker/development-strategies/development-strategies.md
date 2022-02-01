@@ -16,7 +16,7 @@ Before proceeding to the strategies definition, check out the following table of
 | Configuration | High, you can safely take minor and patch releases. |
 | Plug and Play | High, you can safely take minor and patch releases. |
 | Project Modules | High, you can safely take minor and patch releases |
-| Spryker OS Module Customization | Reduced, manual check is needed for every update |
+| Spryker OS Module Customization | Reduced, manual check is needed for every update. |
 | Spryker OS Module Replacement | No support |
 
 ## Development strategies

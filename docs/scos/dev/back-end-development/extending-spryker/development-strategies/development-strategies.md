@@ -35,7 +35,7 @@ To adjust Spryker behavior to Project needs, I can extend `\Spryker\Zed\Product\
 
 {% info_block infoBox "Example" %}
 
-In my Project, we don’t calculate refundable amount inside Spryker OS, so I need to extend `\Spryker\Zed\Calculation\CalculationDependencyProvider` by
+In my Project, we don’t calculate a refundable amount inside Spryker OS, so I need to extend `\Spryker\Zed\Calculation\CalculationDependencyProvider` by
 `\Pyz\Zed\Calculation\CalculationDependencyProvider` and remove `RefundableAmountCalculatorPlugin` from the `CalculationDependencyProvider::getQuoteCalculatorPluginStack()` plugin stack.
 
 {% endinfo_block %}

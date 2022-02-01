@@ -21,6 +21,8 @@ redirect_from:
 **Business Value**
 * Expand your business by organizing your products in a fast and efficient way
 ***
+</div>
+</div>
 
 Ensure a smooth shopping experience with the powerful product management features that allow you to create a neat and fully customized product catalog. Build appropriate category hierarchies and assign attributes and custom labels to products. Enhance your services by including additional product options like gift wrapping or warranty options. Run effective promotional campaigns via time limited offers and pricing, product recommendations and Shop-the-Look collections.
 
@@ -40,7 +42,7 @@ Check out this video tutorial on how to build products and manage the product in
 - [Alternative Products](/docs/scos/user/features/{{page.version}}/alternative-products-feature-overview.html)
 - [Discontinued Products](/docs/scos/user/features/{{page.version}}/product-feature-overview/discontinued-products-overview.html)
 - [Barcode Generator](/docs/scos/user/features/{{page.version}}/product-barcode-feature-overview.html)
-- [Product Quantity Restrictions](/docs/scos/user/features/{{page.version}}/product-information-management/product-quantity-restrictions/product-quantity-restrictions-overview.html)
+- [Product Quantity Restrictions](/docs/scos/user/features/{{page.version}}/product-information-management/product-quantity-restrictions/product-quantity-restrictions.html)
 - [Product Groups](/docs/scos/user/features/{{page.version}}/product-groups-feature-overview.html)
 - [Configurable Bundles](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html)
 - [Product Sets](/docs/scos/user/features/{{page.version}}/product-sets-feature-overview.html)

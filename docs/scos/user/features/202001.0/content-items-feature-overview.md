@@ -12,7 +12,7 @@ redirect_from:
   - /v4/docs/en/content-items
 ---
 
-The Content Items feature creates an abstraction layer for content management in the Back Office. It allows content managers to create and preserve small content pieces. Later, they are inserted into [CMS blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-block.html) and, subsequently, into Storefront pages. Content items are rendered on Storefront using [Content Item Widget](#content-item-widget).
+The Content Items feature creates an abstraction layer for content management in the Back Office. It allows content managers to create and preserve small content pieces. Later, they are inserted into [CMS blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html) and, subsequently, into Storefront pages. Content items are rendered on Storefront using [Content Item Widget](#content-item-widget).
 
 ## Content Item
 Content item is the smallest content unit in Spryker. There are four content item types shipped by default:
@@ -26,8 +26,7 @@ You can use each content item for different purposes. For example, the Banner co
 
 A content manager can [create content items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html) in the Back Office > **Content Management** > **Content Items** section.
 A developer can do the following:
-* [Import content items](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-importers/data-importers-overview-and-implementation.html)
-* [Get content items data via API](/docs/scos/dev/glue-api/{{page.version}}/retrieving-content-item-data/retrieving-content-item-data.html)
+* [Get content items data via API](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-content-items/retrieving-banner-content-item-data.html)
 
 See [Content Items Types: Module Relations](/docs/scos/dev/feature-walkthroughs/{{page.version}}/content-items-feature-walkthrough/content-item-types-module-relations.html) for more information on each content item type and module relations.
 
@@ -61,7 +60,7 @@ The schema shows how the Content items feature affects content management in Spr
 
 ![image](https://confluence-connect.gliffy.net/embed/image/b2c37d9d-5350-4535-b437-677bffeb18da.png?utm_medium=live&utm_source=custom)
 
-See [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html) to learn more about working with content item widgets in the WYSIWYG editor.
+See [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html) to learn more about working with content item widgets in the WYSIWYG editor.
 
 ### Content Item Widget Template
 
@@ -99,7 +98,7 @@ You can select a template when inserting a content item widget into a CMS block.
 
 </details>
 
-A developer can create and customize templates. See [Adding a Template for a Content Item Widget](/docs/scos/dev/tutorials/{{page.version}}/howtos/feature-howtos/cms/howto-create-cms-templates.html#adding-a-template-for-a-content-item-widget) for more details.
+A developer can create and customize templates. See [Adding a Template for a Content Item Widget](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#content-item-widget-template) for more details.
 
 
 

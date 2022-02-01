@@ -1,5 +1,5 @@
 ---
-title: Product Attributes
+title: Product Attributes overview
 description: Creating and managing product attributes is the first step in enriching the product data. It is a part of maintaining and improving the online shop.
 last_updated: Nov 22, 2019
 template: concept-topic-template
@@ -23,13 +23,17 @@ One way to describe a characteristic of a product is the attribute mechanism. It
 Common attributes to all variant are stored on the level of the abstract product.
 
 {% info_block infoBox %}
+
 However if they contain language or locale specific data, the localized abstract product attributes are the right location.
+
 {% endinfo_block %}
 
 If attributes like the size of the t-shirt distinguish variants, they are stored on product level.
 
 {% info_block infoBox %}
+
 Again if the attributes are language or locale specific they are stored on localized product attributes.
+
 {% endinfo_block %}
 
 The attribute mechanism is only recommended if the information stored is for display purpose only. As soon as you want to program against it, we recommend extending one of the four tables.
@@ -147,8 +151,11 @@ In this example on the product detail page there will be the possibility to sele
 ![Product attribute management](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Attributes/product_attribute_management.png)
 
 ## Current Constraints
+
 {% info_block infoBox %}
+
 Currently, the feature has the following functional constraints which are going to be resolved in the future.
+
 {% endinfo_block %}
 
 When creating an abstract product, you can define as many super attributes as you want and this will create the same number of variants. You can also add a new variant to an existing product that already has other variants. However:
@@ -159,15 +166,16 @@ When creating an abstract product, you can define as many super attributes as yo
 
 You can define attributes by importing them or inside the Backoffice:
 
-* Define which attribute is a super attribute: [https://github.com/spryker-shop/b2c-demo-shop/blob/master/data/import/product_attribute_key.csv](https://github.com/spryker-shop/b2c-demo-shop/blob/master/data/import/product_attribute_key.csv)
+* Define which attribute is a super attribute
 
-* Define attribute configuration: [https://github.com/spryker-shop/b2c-demo-shop/blob/master/data/import/product_management_attribute.csv](https://github.com/spryker-shop/b2c-demo-shop/blob/master/data/import/product_management_attribute.csv)
-
+* Define attribute configuration
 
 It is possible to import a product without having defined previously its attributes. However:
 
 * attribute values are then non-editable for the product since the Backoffice does not know how to manage them.
 
 {% info_block warningBox %}
+
 It is recommended to always define the attributes that your products will use.
+
 {% endinfo_block %}

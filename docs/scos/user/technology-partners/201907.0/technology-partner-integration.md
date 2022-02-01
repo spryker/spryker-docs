@@ -103,22 +103,22 @@ Please visit our [Partners Registry](https://spryker.com/find-a-partner/) for a 
 ## Payment Partners
 
 * [Adyen](/docs/scos/user/technology-partners/202108.0/payment-partners/adyen.html)
-* [Amazon Pay](/docs/scos/user/technology-partners/202108.0/payment-partners/amazon-pay/amazon-pay.html)
-* [AfterPay](/docs/scos/user/technology-partners/202108.0/payment-partners/afterpay/afterpay.html)
-* [Arvato](/docs/scos/user/technology-partners/202108.0/payment-partners/arvato/arvato.html)
+* [Amazon Pay](/docs/scos/user/technology-partners/202108.0/payment-partners/amazon-pay.html)
+* [AfterPay](/docs/scos/user/technology-partners/202108.0/payment-partners/afterpay.html)
+* [Arvato](/docs/scos/user/technology-partners/202108.0/payment-partners/arvato.html)
 * [Billie](/docs/scos/user/technology-partners/202108.0/payment-partners/billie.html)
-* [Billpay](/docs/scos/user/technology-partners/202108.0/payment-partners/billpay/billpay.html)
+* [Billpay](/docs/scos/user/technology-partners/202108.0/payment-partners/billpay.html)
 * [Braintree](/docs/scos/user/technology-partners/202108.0/payment-partners/braintree/braintree.html)
 * [BS Payone](/docs/scos/user/technology-partners/202108.0/payment-partners/braintree/braintree.html)
-* [Computop](/docs/scos/user/technology-partners/202108.0/payment-partners/computop/computop.html)
-* [CrefoPay](/docs/scos/user/technology-partners/202108.0/payment-partners/computop/computop.html)
+* [Computop](/docs/scos/user/technology-partners/202108.0/payment-partners/computop.html)
+* [CrefoPay](/docs/scos/user/technology-partners/202108.0/payment-partners/computop.html)
 * [Heidelpay](/docs/scos/user/technology-partners/202108.0/payment-partners/heidelpay/heidelpay.html)
 <!--* [Informa Solutions](/docs/scos/user/technology-partners/202108.0/payment-partners/informa-solutions.html)-->
 * [Klarna](/docs/scos/user/technology-partners/202108.0/payment-partners/klarna/klarna.html)
 * [Payone](/docs/scos/user/technology-partners/202108.0/payment-partners/payolution/payolution.html)
 * [Powerpay](/docs/scos/user/technology-partners/202108.0/payment-partners/powerpay.html)
 * [Ratenkauf by Easycredit](/docs/scos/user/technology-partners/202108.0/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html)
-* [RatePAY](/docs/scos/user/technology-partners/202108.0/payment-partners/ratepay/ratepay.html)
+* [RatePAY](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay.html)
 
  ## Poduct Information (PIM/ERP)
 

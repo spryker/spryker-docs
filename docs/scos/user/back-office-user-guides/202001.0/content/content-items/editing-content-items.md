@@ -19,7 +19,7 @@ This topic describes how you can edit content items in the Back Office.
 
 1. On the left-side navigation bar, navigate to the **Content Management** section and select **Content Items**.
 2. In the _Actions_ column of the **List of Content Items** table, click **Edit** next to the item you want to modify. The **Edit Content Item Type: Content Item Key** page opens. 
-3. Make changes to the needed attributes. See [Content Items: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/references/content-items-reference-information.html) to learn more about content item attributes. 
+3. Make changes to the needed attributes. See [Content Items: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-items.html) to learn more about content item attributes. 
 4. To save the updates, click **Save**. The updated content item will be displayed on the grid of _List of Content Items_ and the following message is displayed: '_Content item has been successfully updated._'.
 
 **Tips & Tricks**
@@ -38,4 +38,4 @@ Clicking **Back to Content Items** in the top right corner of the page can trigg
 
 The content item is updated. Now, you can add it via content item widgets to a block or a page if needed.
 
-* To learn more about how to add content item widgets to a block or a page, see [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html).
+* To learn more about how to add content item widgets to a block or a page, see [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).

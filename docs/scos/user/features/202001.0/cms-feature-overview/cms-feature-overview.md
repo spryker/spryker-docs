@@ -1,5 +1,5 @@
 ---
-title: CMS
+title: CMS feature overview
 description: The Spryker Commerce OS offers a feature-rich content management system that allows providing the right content at the right place at the right time.
 last_updated: Oct 28, 2020
 template: concept-topic-template
@@ -16,11 +16,13 @@ redirect_from:
     <img class="dark-mode" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/Document+360/Capabilities+icons/dark/cms.svg"/>
     </div>
     <div class="feature-text-wrap">
-
 ***
 **Business Value**
 * Provide compelling content and stories where your customers need
 ***
+</div>
+</div>
+
 
 The Spryker Commerce OS offers a feature-rich content management system that allows you to provide the right content at the right place at the right time. Easily define the layout of your pages with templates and Slots and create content with Content Items. This multi-dimensional structure allows maximal personalization and Technology Partner CMS Integrations.
 
@@ -53,7 +55,7 @@ To enhance the visibility of your shop, the Spryker Commerce OS comes with sever
 
 **Features:**
 
-- [Templates & Slots](docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html)
+- [Templates & Slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html)
 - [CMS Page](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-page-drafts-and-previews.html)
-- [CMS Block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.htm)
+- [CMS Block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html)
 - [Content Items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html)

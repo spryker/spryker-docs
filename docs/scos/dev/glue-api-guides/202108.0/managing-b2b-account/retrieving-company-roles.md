@@ -163,8 +163,8 @@ To retrieve a company role, send the request:
 | --- | --- |
 | 001 | Authentication token is invalid. |
 | 002 | Authentication token is missing. |
-|2101 | Company role is not found. |
-| 2103 | Current company user is not set. You need to select the current company user with /company-user-access-tokens in order to access the resource collection.
+| 2101 | Company role is not found. |
+| 2103 | Current company user is not set. Select the current company user with `/company-user-access-tokens` to access the resource collection. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 

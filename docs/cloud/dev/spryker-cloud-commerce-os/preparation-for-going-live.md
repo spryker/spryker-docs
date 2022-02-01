@@ -1,5 +1,6 @@
 ---
 title: Preparation for going live
+description: This instruction explains how to prepare a Spryker project for going live.
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/preparation-for-going-live
 originalArticleId: 738903ac-4167-47ed-93c8-b225c8041582
@@ -8,19 +9,21 @@ redirect_from:
   - /docs/en/preparation-for-going-live
 ---
 
-# Spryker Go Live Preparation
+This instruction explains how to prepare a Spryker project for going live.
 
-When you are preparing your Go-Live, consider the following sections and timeframes. 
+# Spryker go-live preparation
+
+When you are preparing your project for go-live, consider the following sections and timeframes. 
 
 {% info_block infoBox "Note" %}
 
-The following suggested timeframes should serve as orientation and might be different for you. Ensure that in the last week leading up to your go-live, none of these tasks are still open.
+The suggested timeframes should serve as orientation and might be different for you. Ensure that in the last week leading up to your go-live, none of the following tasks are still open.
 
 {% endinfo_block %}
 
 ## Until five weeks before go-live:
 
-If you migrate from another shop or project to Spryker (read, the domain you want to use already points to a shop or project), you need a migration plan and a plan to phase out your old project and phase in your new one. 
+If you migrate from another shop or project to Spryker (the domain you want to use already points to a shop or project), you need a migration plan and a plan to phase out your old project and phase in your new one. 
 
 Plan the migration concept from your old project to Spryker thoroughly. Check with your SEO experts on what the strategy for your content and search engine results should be. Prepare this concept before you delegate your DNS to Spryker.
 

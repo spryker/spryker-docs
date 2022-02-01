@@ -40,7 +40,7 @@ The Spryker Commerce OS supports integration of the following payment providers,
 * [Billpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billpay/billpay.html)
 * [Braintree](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/braintree.html)
 * [BS Payone](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/bs-payone.html)
-* [Computop](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop.html)
+* [Computop](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop.html)
 * [CrefoPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay.html)
 * [Heidelpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay.html)
 * [Klarna](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/klarna/klarna.html)

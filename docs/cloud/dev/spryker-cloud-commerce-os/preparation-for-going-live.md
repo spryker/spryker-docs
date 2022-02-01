@@ -27,7 +27,14 @@ When you have delegated DNS to us, you will need to inform us when you want us t
 For example, you have determined that you want to use spryker.com as the domain for your shop. You know how your customers should visit your Storefront and which URL they should use for that. Let's say you want to use the [www.spryker.com](http://www.spryker.com) subdomain for your Storefront.
 
 - **Decide how email sending should be handled.** If you want to send emails using Spryker, decide whether you want to use the Mail Service that Spryker PaaS offers or attach your own Mail Server to your project. In case you want to use ours, validate your DNS name and lift sending restrictions. Let us know the email address you want to send from, and we can help you with the validation. If you have already delegated the NS records, we can set it ourselves.
-- **Optional: Delegate DNS**: In your onboarding questionnaire and interview, you were asked whether you want to delegate the DNS to Spryker. To find out how you can delegate your DNS name, see [Setting up a custom SSL certificate](https://docs.spryker.com/docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-ssl-certificate.html), but pay attention to the important notes down below. Note that this should only be done after you have already clarified your migration plan. Once these records are set on your side, the DNS configuration will be done by Spryker for you. On the one hand, this makes it very easy for us to configure and verify everything on our end without need for action on your side. On the other hand, if you have a lot of DNS records set for your domain name and are planning to set more DNS records in the future, Spryker will need to manage those for you going forward. Also, if you are delegating DNS to us, you should send us your DNS name’s current zone file, so we can set all the records on our side.
+- **Delegate DNS (Optional)**. To find out how to delegate a DNS name, see [Setting up a custom SSL certificate](https://docs.spryker.com/docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-ssl-certificate.html).
+
+{% info_block infoBox "Note" %}
+	
+The DNS delegation should be done after clarifying your migration plan. Once these records are set on your side, the DNS configuration is done by Spryker. This lets us configure and verify everything without the need for action on your side. However, if you have multiple DNS records set for your domain name and plan to set more DNS records later, Spryker needs to manage those for you in the future. Also, to delegate your DNS, send us your DNS name's current zone file to set all the records on our side.
+	
+{% endinfo_block %}
+
 
 
 

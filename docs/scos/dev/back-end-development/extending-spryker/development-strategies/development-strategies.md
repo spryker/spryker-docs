@@ -52,6 +52,7 @@ The existing Spryker modules remain untouched.
 In my Project, we don’t store prices in Spryker OS, but in an external system. I need to create a new module SuperPrice with a new plugin `\Pyz\Zed\SuperPrice\Communication\Plugin\Calculator\PriceCalculatorPlugin` which will perform a call to my Super ERP and gather prices. Once it’s done, I replace default `\Spryker\Zed\Calculation\Communication\Plugin\Calculator\PriceCalculatorPlugin` with my Project `PriceCalculatorPlugin`.
 
 {% endinfo_block %}
+
 Spryker OS support: High, you can safely take minor and patch releases.
 
 ### Project modules

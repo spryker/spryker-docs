@@ -27,7 +27,8 @@ To propose changes to the Spryker documentation, take the following steps:
 5. To complete your editing and propose changes, in the **Propose changes** section, fill in the following fields:
    * **Create *[document-name.md]***: Give a meaningful name to your commit.
    * **Add an optional extended description...** (optional): Provide an optional detailed description of your commit. For information about commits, see [About commits](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits) in the official GitHub documentation.
-6. Click **Propose changes**. This takes you to the **Comparing changes** page.
+6. Click **Propose changes**. 
+   This takes you to the **Comparing changes** page.
 ![proposing-changes](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-spryker-documentation/3-saving-changes.png)
 7. On the **Comparing changes** page, open a pull request by clicking **Create pull request**. For information about pull requests, see [About pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) in the official GitHub documentation.
 ![comparing-changes](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-spryker-documentation/4-creating-a-pull-request.png)

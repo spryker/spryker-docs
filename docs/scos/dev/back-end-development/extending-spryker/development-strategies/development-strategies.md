@@ -13,7 +13,7 @@ Before jumping on the strategies definition, check out the table of Spryker OS u
 
 | DEVELOPMENT STRATEGY | SPYKER OS UPDATE SUPPORT |
 | --- | --- |
-| Configuration | High, you can safely take minor and patch releases |
+| Configuration | High, you can safely take minor and patch releases. |
 | Plug and Play | High, you can safely take minor and patch releases |
 | Project Modules | High, you can safely take minor and patch releases |
 | Spryker OS Module Customization | Reduced, manual check is needed for every update |

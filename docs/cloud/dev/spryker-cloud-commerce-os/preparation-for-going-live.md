@@ -51,5 +51,5 @@ If you have decided to not delegate DNS to Spryker please think about how you wa
 ## One week before go-live
 
 - **Double Check Go Live Date.** If any of the tasks listed previously have not been completed up until now, you either need to postpone your go live, or find ways with us how the above tasks can be completed in time still. Please note that all DNS related topics will be affected by delays that are inherent to the DNS system and we cannot make DNS changes or validations be applied any faster. Reach out to Spryker Support using your Onboarding case *immediately* if you find yourself still struggling with the points above now. Make sure Spryker knows about your Go Live!
-- **Validate that the rollback strategy is still valid**. You planned for the worst case, but is the plan still valid? Please check that everything you need to have to recover from an unforeseen problem with the newest version of the project you are deploying is still available and in place.
+- **Validate that the rollback strategy is still valid**. Check that everything you need to recover from an unforeseen problem with the newest version of the project you are deploying is available and in place.
 - **Build up Go Live Support Team**. Prepare a team that can monitor your Go-Live, react quickly to any problems, and work with Spryker Support or Operations teams.

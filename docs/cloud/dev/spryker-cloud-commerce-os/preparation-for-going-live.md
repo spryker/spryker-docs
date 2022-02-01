@@ -22,7 +22,7 @@ When you have delegated DNS to us, you will need to inform us when you want us t
 
 ## Four weeks before go-live:
 
-- **The DNS Names and strategy for your shop are clear**: This means you know how people will access your shop, and you have verified that you have controlling access to the DNS for the domains you want to use. For example:
+- **The DNS Names and strategy for your shop are clear**. You should know how users access your shop, and you have verified that you have controlling access to the DNS for future domains. 
 
 For example, you have determined that you want to use spryker.com as the domain for your shop. You know how your customers should visit your Storefront and which URL they should use for that. Let's say you want to use the [www.spryker.com](http://www.spryker.com) subdomain for your Storefront.
 

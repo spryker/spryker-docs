@@ -31,7 +31,7 @@ In the *Code Repository provider* section, you are going to grant the Launchpad 
 
 1. Select **Authorize GitHub**.
 
-2. On the GitHub page that opens, authorize your GitHub account.
+2. On the GitHub page that opens, authorize the Launchpad to act on behalf of your GitHub account.
   The account should have access to the repository with the VueStorefront application you want to deploy.
 
 This takes you back to the *Create a new Application* page.

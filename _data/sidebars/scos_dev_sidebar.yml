@@ -3372,7 +3372,7 @@ entries:
         nested:
          - title: Project Modules
           nested:
-            - title: Adding a mew module
+           - title: Adding a new module
             url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/adding-a-new-module.html
         - title: Spryker OS Module Customization
           nested:

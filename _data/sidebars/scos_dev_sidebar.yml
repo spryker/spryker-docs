@@ -3376,7 +3376,7 @@ entries:
             url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/adding-a-new-module.html
         - title: Spryker OS Module Customization
           nested:
-            - title: Extending a core module that is used by another
+           - title: Extending a core module that is used by another
             url: /docs/scos/dev/back-end-development/extending-spryker/extending-a-core-module-that-is-used-by-another.html
           - title: Extending the Core
             url: /docs/scos/dev/back-end-development/extending-spryker/extending-the-core.html

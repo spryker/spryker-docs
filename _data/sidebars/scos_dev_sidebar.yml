@@ -3370,7 +3370,7 @@ entries:
       - title: Development Strategies
         url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies.html
         nested:
-          - title: Project Modules
+         - title: Project Modules
           nested:
             - title: Adding a mew module
             url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/adding-a-new-module.html

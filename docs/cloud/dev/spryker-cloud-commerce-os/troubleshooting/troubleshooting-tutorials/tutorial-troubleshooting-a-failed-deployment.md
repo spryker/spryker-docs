@@ -4,7 +4,7 @@ description: Learn how to troubleshoot a failed deployment
 template: troubleshooting-guide-template
 ---
 
-A deployment fails and there are no errors in the deploy or build output. Based on the step the deployment fails at, do the following:
+A deployment fails, and there are no errors in the deploy or build output. Based on the step the deployment fails at, do the following:
 
 
 ## Deployment fails at the Build_Push_if_not_exist step
@@ -39,29 +39,31 @@ Check multiple log groups via Logs Insights as follows. Select the log groups co
 
 ## Deployment fails at the Run_pre-deploy_hook step
 
+Check step execution details
+
 1. On the page of the deployment in the `Build_Push_if_not_exist` step, select **Details**.
 
 ![execution_details]
 
 2. In the *Action execution failed* window that opens, select **Link to execution details**.
 
-3. If **PRE_BUILD** State: **FAILED** you need to try to run the step again
+3. If **PRE_BUILD** State: **FAILED**, go back to the failed step and, to rerun it, select **Retry**.
 
 ![retry_run_pre-deploy_hook]
 
-4. If **BUILD** State: **FAILED** you need to check **SPRYKER_HOOK_BEFORE_DEPLOY** script 
-    
-   1. you can find the variable in the environment deploy file or in the execution log 
-   
+4. If **BUILD** State: **FAILED** you need to check **SPRYKER_HOOK_BEFORE_DEPLOY** script
+
+   1. you can find the variable in the environment deploy file or in the execution log
+
    ![SPRYKER_HOOK_BEFORE_DEPLOY_variable]
-   
-   2. if variable isn't set default script will be executed 
-   
+
+   2. if variable isn't set default script will be executed
+
     ```vendor/bin/install -r pre-deploy -vvv```
 
 ###Example:
 In my case **SPRYKER_HOOK_BEFORE_DEPLOY** = ```vendor/bin/install -r EU/pre-deploy -vvv```
-    
+
 ![SPRYKER_HOOK_BEFORE_DEPLOY_variable]
 
 it means that in the code repository, I have a **config/install/EU/pre-deploy.yml** file that contains all commands that execute on the BUILD step
@@ -74,7 +76,7 @@ as you might notice **scheduler:suspendddddddddddd** argument is misspelled, and
 
 In this particular case I just need to fix the command and rerun the deployment afterward
 
-###Conclusion: 
+###Conclusion:
 
 Most of the issues that you may face at the **Run_pre-deploy_hook** step are related to the scripts that contain in the recipe file, you can add an additional debug commands to the script that can help you research the issue.
 

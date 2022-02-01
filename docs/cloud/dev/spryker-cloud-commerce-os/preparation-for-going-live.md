@@ -39,7 +39,7 @@ If you have decided to not delegate DNS to Spryker please think about how you wa
 
 - **Verify that your deploy.yml file is set up correctly**. Verify that your project works and works with the final endpoints. You can set both testing and final endpoints in your deploy.yml file. Your developers can now mock a "live" operation of the project with its final endpoints by adjusting their local host entries and test your shop thoroughly.
 - **TLS certificates to be used are provisioned.** If you have delegated DNS to us, we will have created the TLS certificates for your endpoints automatically by now. If you want us to create a TLS certificate for your endpoints but do not want to delegate your DNS to us, we can provide you with the verification records. If you have not received them already, contact us via the [Support Portal](https://support.spryker.com). If you do not delegate your DNS, please make sure that you have provided us with the TLS certificates as detailed in the [Setting up a custom SSL certificate](https://docs.spryker.com/docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-ssl-certificate.html#next-step) instruvtion so we can configure the certificates for you.
-- **Deploy to production:** If you have not already, to make sure to now also deploy regularly to your production environment and run checks, see [Deploying in a production environment](https://docs.spryker.com/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html).
+Make sure to deploy to your production environment and run checks regularly—see [Deploying in a production environment](https://docs.spryker.com/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html).
 
 
 ## Two weeks before go-live

@@ -24,7 +24,8 @@ commonOptions = {
     /docs.adyen.com\/[\.\w\-\/\?]+/,
     /www.adyen.com\/[\.\w\-\/\?]+/,
     /bugs.php.net\/[\.\w\-\/\?]+/,
-    /www.vagrantup.com\/[\.\w\-\/\?]+/
+    /www.vagrantup.com\/[\.\w\-\/\?]+/,
+    /console.aws.amazon.com/\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],
   :typhoeus => {

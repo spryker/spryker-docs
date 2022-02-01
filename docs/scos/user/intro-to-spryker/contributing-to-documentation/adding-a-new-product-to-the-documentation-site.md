@@ -12,7 +12,7 @@ To add a new product, follow these steps.
 
 In *data->sidebars*, add sidebars for your new product with roles. For each role, there should be a separate .YML file in the following format: `{product_name}_{role}_sidebar.yml`. To separate words in the sidebar, use an underscore. For example, for our new *aop* product, we create *aop_dev_sidebar.yml* and *aop_user_sidebar.yml* sidebar files.
 
-See [Sidebars](#sidebars) for details on how to populate the sidebar files.
+See [Sidebars](/docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html#sidebars) for details on how to populate the sidebar files.
 
 ## 2. Add the new product with roles to the config file
 

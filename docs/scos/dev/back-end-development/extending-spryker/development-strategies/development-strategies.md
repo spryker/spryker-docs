@@ -54,7 +54,7 @@ In my Project, we don’t store prices in Spryker OS, but in an external system.
 {% endinfo_block %}
 Spryker OS support: High, you can safely take minor and patch releases.
 
-### Project Modules
+### Project modules
 
 When the Spryker OS does not provide certain functionality, domain object, or concept, we need to create a new Project module where we implement new business requirements.
 

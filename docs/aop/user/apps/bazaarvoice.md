@@ -24,7 +24,7 @@ When you connect BazaarVoice, the app puts JavaScrip tags into your store, and t
 
 {% info_block infoBox "Info" %}
 
-If you have BazaarVoice integrated, the Spryker default [Product Ratings and Reviews feature](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html) is turned off. This means that ratings and reviews collected with the default Spryker Product Ratings and Reviews feature are replaced with the BazzareVoice ratings and reviews.
+If you have BazaarVoice integrated, the Spryker default [Product Ratings and Reviews feature](/docs/scos/user/features/{{site.version}}/product-rating-and-reviews-feature-overview.html) is turned off. This means that ratings and reviews collected with the default Spryker Product Ratings and Reviews feature are replaced with the BazzareVoice ratings and reviews.
 
 {% endinfo_block %}
 
@@ -80,6 +80,6 @@ To configure the stores where you want to turn on the BazaarVoice app, in **Sett
 ## Disconnecting BazaarVoice from your store
 You can always disconnect the BazaarVoice app from your store. For example, after the trial period, you might decide not to continue with the app. 
 
-To disconnect BazaarVoice, on the BazaarVoice app details page, next to the **Configure** button, hold the pointer over <div class="inline-img">![disconnect-button](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/BazaarVoice/disconnect-button.png)</div> and click **Disconnect**.
+To disconnect BazaarVoice, on the BazaarVoice app details page, next to the **Configure** button, hold the pointer over <div class="inline-img">![disconnect-button](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/bazzarvoice/disconnect-button.png)</div> and click **Disconnect**.
 
-Disconnecting the app removes the BazaarVoice UGC and automatically restores the default Spryker [Product Ratings and Reviews feature](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html) feature.
+Disconnecting the app removes the BazaarVoice UGC and automatically restores the default Spryker [Product Ratings and Reviews feature](/docs/scos/user/features/{{site.version}}/product-rating-and-reviews-feature-overview.html) feature.

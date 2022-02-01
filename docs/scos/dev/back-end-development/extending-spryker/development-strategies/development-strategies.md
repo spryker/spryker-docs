@@ -11,7 +11,7 @@ The project development, the team is free to decide what approach to use. Spryke
 
 Before jumping on the strategies definition, check out the table of Spryker OS update support to make the best decision about the customization strategy.
 
-| Development strategy | Spryker OS update support |
+| DEVELOPMENT STRATEGY | SPYKER OS UPDATE SUPPORT |
 | --- | --- |
 | Configuration | High, you can safely take minor and patch releases |
 | Plug and Play | High, you can safely take minor and patch releases |

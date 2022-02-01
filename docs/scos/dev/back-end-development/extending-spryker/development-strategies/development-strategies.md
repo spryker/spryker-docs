@@ -1,11 +1,11 @@
 ---
-title: Development Strategies
+title: Development strategies
 description: This instruction describes the strategies a project team can take while building a Spryker-based project.
 last_updated: Jan 28, 2022
 template: concept-topic-template
 ---
 
-Spryker OS exposes codebase Projects, which enables a high level of customization and can satisfy even the most complex project business requirements.
+Spryker OS exposes codebase projects, which enables a high level of customization and can satisfy even the most complex project business requirements.
 
 In the project development, the team is free to decide what approach to use. Spryker recommends considering *Configuration*, *Plug and Play*, and *Project modules* first to get maximum from the Spryker OS codebase, atomic releases, leverage minimum efforts for the integration of the new features, and keep the system up to date.
 

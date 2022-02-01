@@ -22,7 +22,7 @@ The following suggested timeframes should serve as orientation and might be diff
 
 ## Until five weeks before go-live:
 
-If you migrate from another shop or project to Spryker (read, the domain you want to use already points to a shop or project), you will both need a migration plan, as well as a plan to phase out your old project and phase in your new one. Please note that the migration concept from your old project to Spryker needs to be planned thoroughly. Please check with your SEO experts on what the strategy for your content and search engine results should be. This concept needs to be ready before you delegate your DNS to us (see note on DNS delegation down below)
+If you migrate from another shop or project to Spryker (read, the domain you want to use already points to a shop or project), you will both need a migration plan, as well as a plan to phase out your old project and phase in your new one. Note that the migration concept from your old project to Spryker needs to be planned thoroughly. Check with your SEO experts on what the strategy for your content and search engine results should be. This concept needs to be ready before you delegate your DNS to us (see note on DNS delegation down below)
 
 When you have delegated DNS to us, you will need to inform us when you want us to switch the relevant records from one system to the other. Please also note that DNS propagation is not instant, meaning that you should not "switch off" your old project immediately after the switch was done. Please assign time in your project to plan this if you need to migrate.
 

@@ -22,7 +22,7 @@ Spryker OS exposes codebase Projects, which enables a high level of customizatio
 
 The project development, the team is free to decide what approach to use. Spryker recommends considering **Configuration**, **Plug and Play**, and **Project modules** first to get maximum from the Spryker OS codebase, atomic releases, leverage minimum efforts for the integration of the new features and keeping system up to date.
 
-Before starting the project it is recommended to check available development strategies and define one for your implementation {ADD LINK TO A DEVELOPMENT STRATEGIES}. 
+Before starting the project, we recommend you check available development strategies and define one for your implementation. See [Development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies.html).
 
 ## Development & Tests
 

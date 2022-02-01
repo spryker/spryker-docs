@@ -1,11 +1,11 @@
 ---
 title: Development Strategies
-description: This article describes the strategies a project team can take while building a Spryker-based project.
+description: This instruction describes the strategies a project team can take while building a Spryker-based project.
 last_updated: Jan 28, 2022
 template: concept-topic-template
 ---
 
-Spryker OS exposes codebase Projects, which enables a high level of customization and can satisfy even the most complex Project business requirements.
+Spryker OS exposes codebase Projects, which enables a high level of customization and can satisfy even the most complex project business requirements.
 
 In the project development, the team is free to decide what approach to use. Spryker recommends considering *Configuration*, *Plug and Play*, and *Project modules* first to get maximum from the Spryker OS codebase, atomic releases, leverage minimum efforts for the integration of the new features, and keep the system up to date.
 
@@ -17,9 +17,11 @@ Before proceeding to the strategies definition, check out the following table of
 | Plug and Play | High, you can safely take minor and patch releases. |
 | Project Modules | High, you can safely take minor and patch releases. |
 | Spryker OS Module Customization | Reduced, manual check is needed for every update. |
-| Spryker OS Module Replacement | No support |
+| Spryker OS Module Replacement | No support. |
 
 ## Development strategies
+
+Consider the following development strategies.
 
 ### Configuration
 
@@ -29,16 +31,17 @@ Existing Spryker modules remain untouched.
 
 {% info_block infoBox "Example" %}
 
-To adjust Spryker behavior to Project needs, I can extend `\Spryker\Zed\Product\ProductConfig` on the project and adjust the number of products shown in the suggestion `\Pyz\Zed\Product\ProductConfig::getFilteredProductsLimitDefault()` to 20.
+To adjust Spryker behavior to the project needs, you can extend `\Spryker\Zed\Product\ProductConfig` on the project and adjust the number of products shown in the suggestion `\Pyz\Zed\Product\ProductConfig::getFilteredProductsLimitDefault()` to `20`.
 
 {% endinfo_block %}
 
 {% info_block infoBox "Example" %}
 
-In my Project, we don’t calculate a refundable amount inside Spryker OS, so I need to extend `\Spryker\Zed\Calculation\CalculationDependencyProvider` by
+In your project, you don’t calculate a refundable amount inside Spryker OS, so you need to extend `\Spryker\Zed\Calculation\CalculationDependencyProvider` by
 `\Pyz\Zed\Calculation\CalculationDependencyProvider` and remove `RefundableAmountCalculatorPlugin` from the `CalculationDependencyProvider::getQuoteCalculatorPluginStack()` plugin stack.
 
 {% endinfo_block %}
+
 Spryker OS support: High, you can safely take minor and patch releases.
 
 ### Plug and Play
@@ -49,7 +52,7 @@ The existing Spryker modules remain untouched.
 
 {% info_block infoBox "Example" %}
 
-In my Project, we don’t store prices in Spryker OS, but in an external system. I need to create a new module `SuperPrice` with a new plugin `\Pyz\Zed\SuperPrice\Communication\Plugin\Calculator\PriceCalculatorPlugin`, which performs a call to my Super ERP and gather prices. Once it’s done, I replace default `\Spryker\Zed\Calculation\Communication\Plugin\Calculator\PriceCalculatorPlugin` with my Project `PriceCalculatorPlugin`.
+In your project, you don’t store prices in Spryker OS, but in an external system. You need to create a new module `SuperPrice` with a new plugin `\Pyz\Zed\SuperPrice\Communication\Plugin\Calculator\PriceCalculatorPlugin`, which performs a call to my Super ERP and gather prices. Once it’s done, I replace default `\Spryker\Zed\Calculation\Communication\Plugin\Calculator\PriceCalculatorPlugin` with my Project `PriceCalculatorPlugin`.
 
 {% endinfo_block %}
 
@@ -57,7 +60,7 @@ Spryker OS support: High, you can safely take minor and patch releases.
 
 ### Project modules
 
-When the Spryker OS does not provide certain functionality, domain object, or concept, we need to create a new Project module where we implement new business requirements.
+When the Spryker OS does not provide certain functionality, domain object, or concept, create a new Project module where we implement new business requirements.
 
 The existing Spryker modules remain untouched.
 
@@ -82,6 +85,7 @@ Consider using the composition design pattern instead of the direct class extens
 In my Project, Order entity should not be hydrated during the buying process (we are building a vitrine). In this case, I need to create `\Pyz\Zed\Sales\Business\Order\OrderReader`, which will extend the existing `\Spryker\Zed\Sales\Business\Order\OrderReader` and replace the implementation of the `findOrderByIdSalesOrdermethod()`, where I will adjust the hydration calls.
 
 {% endinfo_block %}
+
 Spryker OS support: Reduced, manual check is needed for every update.
 
 ### Spryker OS Module Replacement
@@ -89,9 +93,11 @@ Spryker OS support: Reduced, manual check is needed for every update.
 When an existing Spryker module provides functionality that doesn’t fit the Project conceptually, there is a possibility to replace a Spryker module completely using the “composer replace” feature.
 
 This option is not available for every module, as sometimes conceptual changes could lead to high development efforts.
+
 {% info_block infoBox "Example" %}
 
 In my Project, the URL should be built in a completely different concept that Spryker offers. In this case, I need to create a Project module Url, provide an implementation for every API function (Facade, Client, Service, etc.) and replace OOTB module `spryker/url` with `my-super-project/url`. Spryker features based on URL will use Project implementation to process URLs.
 
 {% endinfo_block %}
+
 Spryker OS support: No support.

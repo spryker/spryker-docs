@@ -33,7 +33,7 @@ To propose changes to the Spryker documentation, take the following steps:
 ![comparing-changes](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-spryker-documentation/4-creating-a-pull-request.png)
 8. On the **Open a pull request** page, the **Title** field is autopopulated with the name you gave to your commit with proposed changes from step 5.
 9. (Optional) To rename your pull request, delete the autopopulated title and enter a new one.
-10. (Optional) On the **Write** tab, in the **## PR Description** section, add an extended description of your pull request.
+10. Optional: On the **Write** tab, in the **## PR Description** section, add an extended description of your pull request.
 10. Click **Create pull request**.
 ![creating-a-pull-request](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-spryker-documentation/5-naming-the-pr-and-saving-it.png)
 

@@ -18,14 +18,21 @@ The following suggested timeframes should serve as orientation and might be diff
 
 {% endinfo_block %}
 
-
-
 ## Until five weeks before go-live:
 
-If you migrate from another shop or project to Spryker (read, the domain you want to use already points to a shop or project), you will both need a migration plan, as well as a plan to phase out your old project and phase in your new one. Note that the migration concept from your old project to Spryker needs to be planned thoroughly. Check with your SEO experts on what the strategy for your content and search engine results should be. This concept needs to be ready before you delegate your DNS to us (see note on DNS delegation down below)
+If you migrate from another shop or project to Spryker (read, the domain you want to use already points to a shop or project), you need a migration plan and a plan to phase out your old project and phase in your new one. 
+
+Plan the migration concept from your old project to Spryker thoroughly. Check with your SEO experts on what the strategy for your content and search engine results should be. Prepare this concept before you delegate your DNS to Spryker.
+
+If you delegate DNS to Spryker, inform us when you want us to switch the relevant records from one system to the other.
+
+{% info_block infoBox "Note" %}
+
+DNS propagation is not instant. Therefore, do not "switch off" your old project after the switch is done. To migrate, assign time in your project to plan the switch.
+
+{% endinfo_block %}
 
 When you have delegated DNS to us, you will need to inform us when you want us to switch the relevant records from one system to the other. Also note that DNS propagation is not instant, meaning that you should not "switch off" your old project immediately after the switch was done. Assign time in your project to plan this if you need to migrate.
-
 
 ## Four weeks before go-live:
 
@@ -42,15 +49,11 @@ The DNS delegation should be done after clarifying your migration plan. Once the
 	
 {% endinfo_block %}
 
-
-
-
 {% info_block warningBox "Warning" %}
 
 If you do not delegate DNS to Spryker, decide how to deal with customers reaching your shop using the root domain (in our example, this is spryker.com). Spryker cannot provide you with an IP to point the DNS name to because Spryker PaaS works with DNS names for its endpoints exclusively.  You also cannot set a `CNAME` for a root domain. This means that you either find a way to redirect your visitors via another endpoint or delegate your DNS to us to resolve this issue.
 
 {% endinfo_block %}
-
 
 ## Three weeks before go-live
 
@@ -58,12 +61,10 @@ If you do not delegate DNS to Spryker, decide how to deal with customers reachin
 - **TLS certificates to be used are provisioned**. In case of delegation DNS to Spryker, TLS certificates for your endpoints should be created automatically. If you want us to create a TLS certificate for your endpoints but do not want to delegate your DNS, we can provide you with the verification records. If you have not received them already, contact us using the [Support Portal](https://support.spryker.com). If you do not delegate your DNS, make sure to provide us with the TLS certificates as detailed in the [Setting up a custom SSL certificate](https://docs.spryker.com/docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-ssl-certificate.html#next-step) instruction so we can configure the certificates for you.
 Make sure to deploy to your production environment and run checks regularly—see [Deploying in a production environment](https://docs.spryker.com/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html).
 
-
 ## Two weeks before go-live
 
 - **Remove all demo data from your environment**. Ensure that you exclusively work with real data, which will be used after the go-live. Remove all demo data that comes with the Spryker repository, which explicitly includes all demo users (as well as the standard admin user), because having demo users active poses a significant security risk for your project.
 - **Communicate your go-live plan to Spryker**. Make sure to reach out to your Partner or Customer Success Manager and share your go-live plans—the day and time when you want to make your shop accessible to the public. If this time should change, keep us updated. This is mission-critical for DNS switching and the hyper care phase, which Spryker Support provides for you before and after your go-live.
-
 
 ## One week before go-live
 
@@ -80,5 +81,6 @@ All DNS-related topics are affected by delays that are inherent to the DNS syste
 If you find yourself struggling with the preceding points, reach out to Spryker Support using your Onboarding case **immediately**.
 	
 {% endinfo_block %}
+
 - **Validate that the rollback strategy is still valid**. Check that everything you need to recover from an unforeseen problem with the newest version of the project you are deploying is available and in place.
 - **Build up Go Live Support Team**. Prepare a team that can monitor your Go-Live, react quickly to any problems, and work with Spryker Support or Operations teams.

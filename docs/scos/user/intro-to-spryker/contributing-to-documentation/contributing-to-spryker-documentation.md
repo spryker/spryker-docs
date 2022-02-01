@@ -6,7 +6,7 @@ template: howto-guide-template
 
 Our documentation is hosted on GitHub, in the [spryker-docs](https://github.com/spryker/spryker-docs) repository. Therefore, to contribute to Spryker documents, you have to use GitHub. For more information about what GitHub is, see [About Git](https://docs.github.com/en/get-started/using-git/about-git).
 
-This instruction explains how to contribute to the [Spryker documentation](https://docs.spryker.com/) by creating pull requests on GitHub.
+This instruction explains how to contribute to the [Spryker documentation](https://docs.spryker.com/) by creating [pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) on GitHub.
 
 ## Prerequisites
 

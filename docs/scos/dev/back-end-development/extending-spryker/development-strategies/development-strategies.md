@@ -9,7 +9,7 @@ Spryker OS exposes codebase Projects, which enables a high level of customizatio
 
 In the project development, the team is free to decide what approach to use. Spryker recommends considering *Configuration*, *Plug and Play*, and *Project modules* first to get maximum from the Spryker OS codebase, atomic releases, leverage minimum efforts for the integration of the new features, and keep the system up to date.
 
-Before jumping on the strategies definition, check out the table of Spryker OS update support to make the best decision about the customization strategy.
+Before proceeding to the strategies definition, check out the following table of the Spryker OS update support to make the best decision about the customization strategy.
 
 | DEVELOPMENT STRATEGY | SPYKER OS UPDATE SUPPORT |
 | --- | --- |

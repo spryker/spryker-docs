@@ -59,6 +59,7 @@ Spryker OS support: High, you can safely take minor and patch releases.
 When the Spryker OS does not provide certain functionality, domain object, or concept, we need to create a new Project module where we implement new business requirements.
 
 The existing Spryker modules remain untouched.
+
 {% info_block infoBox "Example" %}
 
 In my Project, we would like to introduce Product Label groups. In this case, I need to introduce a new Project module `ProductLabelGroup`, which will provide a new domain object `ProductLabelGroup` in a database (by adding `product_label_group.schema.xml` to Persistence layer to Zed) and call `ProductLabelFacade::findLabelById()` and `ProductLabelFacade::findAllLabels()` to manage the `ProductLabel` to `ProductLabelGroup` relations.

@@ -37,4 +37,4 @@ To propose changes to the Spryker documentation, take the following steps:
 10. Click **Create pull request**.
 ![creating-a-pull-request](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-spryker-documentation/5-naming-the-pr-and-saving-it.png)
 
-Congratulations! Your pull request has been created. Now, it can be picked up by the technical writing team for review and merge.
+Congratulations! Your pull request has been created. Now, it will be picked up by the Spryker docs team for review and merge.

@@ -1,5 +1,5 @@
 ---
 title: App Orchestration Platform installation
-description: {Meta description}
+description: description
 template: howto-guide-template
 ---

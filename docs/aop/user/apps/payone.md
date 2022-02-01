@@ -1,5 +1,5 @@
 ---
 title: Payone
-description: {Meta description}
+description: Description
 template: howto-guide-template
 ---

@@ -1,5 +1,5 @@
 ---
 title: Prerequisites for adding product rating systems
-description: {Meta description}
+description: description
 template: howto-guide-template
 ---

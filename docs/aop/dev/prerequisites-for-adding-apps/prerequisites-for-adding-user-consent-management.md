@@ -1,5 +1,5 @@
 ---
 title: Prerequisites for adding User Consent Management systems
-description: {Meta description}
+description: description
 template: howto-guide-template
 ---

@@ -44,7 +44,7 @@ If you have decided to not delegate DNS to Spryker please think about how you wa
 
 ## Two weeks before go-live
 
-- **Remove all demo data from your environment.** Please make sure that you are now exclusively working with real data that will also be used after the go live. Make sure to remove all demo data that comes with the Spryker repository. This explicitly includes all demo users (as well as the standard admin user). Please double check this is done as having demo users active still will pose a significant security risk for your project.
+- **Remove all demo data from your environment**. Ensure that you exclusively work with real data, which will be used after the go-live. Remove all demo data that comes with the Spryker repository, which explicitly includes all demo users (as well as the standard admin user), because having demo users active poses a significant security risk for your project.
 - **Communicate your go live plan to Spryker**. Please make sure to reach out to your Partner/Customer Success Manager and share your go live plans. This should include the day and time when you want to make your shop accessible to the public. If this time should change, please make sure to keep us updated. This is mission critical for both DNS switching topics, as well as the hypercare phase Spryker Support will provide for you shortly before and after your go live.
 
 

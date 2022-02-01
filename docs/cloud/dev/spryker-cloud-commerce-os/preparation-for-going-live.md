@@ -45,7 +45,11 @@ The DNS delegation should be done after clarifying your migration plan. Once the
 
 
 
-If you have decided to not delegate DNS to Spryker please think about how you want to deal with customers reaching your shop via the root domain (in our example spryker.com). Why is this important? Since our PaaS is working with DNS names for its endpoints almost exclusively, we cannot provide you with an IP to point the DNS name to. It is unfortunate that you also cannot set a CNAME for a root domain. This means, you either find a way to redirect your visitors via another endpoint, or you delegate your DNS to us to resolve this issue.
+{% info_block warningBox "Warning" %}
+
+If you do not delegate DNS to Spryker, decide how to deal with customers reaching your shop using the root domain (in our example, this is spryker.com). Spryker cannot provide you with an IP to point the DNS name to because Spryker PaaS works with DNS names for its endpoints exclusively.  You also cannot set a `CNAME` for a root domain. This means that you either find a way to redirect your visitors via another endpoint or delegate your DNS to us to resolve this issue.
+
+{% endinfo_block %}
 
 
 ## Three weeks before go-live

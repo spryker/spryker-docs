@@ -26,7 +26,7 @@ commonOptions = {
     /bugs.php.net\/[\.\w\-\/\?]+/,
     /pci.payone.de\/[\.\w\-\/\?]+/,
     /www.iso.org\/[\.\w\-\/\?]+/,
-    /www.vagrantup.com\/[\.\w\-\/\?]+/б
+    /www.vagrantup.com\/[\.\w\-\/\?]+/,
     /console.aws.amazon.com/\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],

@@ -66,6 +66,7 @@ The existing Spryker modules remain untouched.
 In my Project, we would like to introduce Product Label groups. In this case, I need to introduce a new Project module `ProductLabelGroup`, which will provide a new domain object `ProductLabelGroup` in a database (by adding `product_label_group.schema.xml` to Persistence layer to Zed) and call `ProductLabelFacade::findLabelById()` and `ProductLabelFacade::findAllLabels()` to manage the `ProductLabel` to `ProductLabelGroup` relations.
 
 {% endinfo_block %}
+
 Spryker OS support: High, you can safely take minor and patch releases.
 
 ### Spryker OS Module Customization

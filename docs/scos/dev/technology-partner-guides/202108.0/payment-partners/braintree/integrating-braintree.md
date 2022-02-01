@@ -12,11 +12,11 @@ redirect_from:
   - /docs/en/braintree-integration
 related:
   - title: Installing and configuring Braintree
-    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/installing-and-configuring-braintree.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/installing-and-configuring-braintree.html
   - title: Braintree - Performing Requests
-    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree-technical-details-and-howtos/braintree-performing-requests.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-performing-requests.html
   - title: Braintree - Workflow
-    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree/braintree-technical-details-and-howtos/braintree-workflow.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-workflow.html
 ---
 
 {% info_block errorBox %}

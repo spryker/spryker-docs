@@ -16,7 +16,7 @@ Templates slots enables content managers to effectively and coherently interact 
 
 {% info_block infoBox %}
 
-Templates and slots is a complex funcitonality which works in conjunction with other functionalities. To use it effectively, make sure you get familiar with the functionalities in the order they are presented:
+Templates and slots is a complex functionality which works in conjunction with other functionalities. To use it effectively, make sure you get familiar with the functionalities in the order they are presented:
 * [CMS Page](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html)
 * [CMS Block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html)
 * [Content Items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html)

@@ -19,7 +19,7 @@ Before jumping on the strategies definition, check out the table of Spryker OS u
 | Spryker OS Module Customization | Reduced, manual check is needed for every update |
 | Spryker OS Module Replacement | No support |
 
-## Development Strategies
+## Development strategies
 
 ### Configuration
 

@@ -10,7 +10,14 @@ redirect_from:
 
 # Spryker Go Live Preparation
 
-You worked hard, and you are almost there. Your Spryker project is ready for Go-Live. This is an exciting period of your project, and we thought it would be valuable to you if we share with you some things you must not forget to look into while preparing your Go-Live. Please note that the timeframes suggested below should serve as orientation and might be different for you. It is important that in the last week leading up to your go-live, none of these tasks are still open!
+When you are preparing your Go-Live, consider the following sections and timeframes. 
+
+{% info_block infoBox "Note" %}
+
+The following suggested timeframes should serve as orientation and might be different for you. Ensure that in the last week leading up to your go-live, none of these tasks are still open.
+
+{% endinfo_block %}
+
 
 
 ## Until five weeks before go-live:

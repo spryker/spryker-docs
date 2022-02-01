@@ -50,6 +50,18 @@ Make sure to deploy to your production environment and run checks regularly—se
 
 ## One week before go-live
 
-- **Double Check Go Live Date.** If any of the tasks listed previously have not been completed up until now, you either need to postpone your go live, or find ways with us how the above tasks can be completed in time still. Please note that all DNS related topics will be affected by delays that are inherent to the DNS system and we cannot make DNS changes or validations be applied any faster. Reach out to Spryker Support using your Onboarding case *immediately* if you find yourself still struggling with the points above now. Make sure Spryker knows about your Go Live!
+- **Double-check the go-live date**. If any of the preceding tasks remain uncompleted, postpone your go-live, or discuss with us how to complete them in time.
+
+{% info_block infoBox "Note" %}
+		
+All DNS-related topics are affected by delays that are inherent to the DNS system, and we cannot apply DNS changes or validations any faster. 
+
+{% endinfo_block %}
+
+{% info_block infoBox "Note" %}
+	
+If you find yourself struggling with the preceding points, reach out to Spryker Support using your Onboarding case **immediately**.
+	
+{% endinfo_block %}
 - **Validate that the rollback strategy is still valid**. Check that everything you need to recover from an unforeseen problem with the newest version of the project you are deploying is available and in place.
 - **Build up Go Live Support Team**. Prepare a team that can monitor your Go-Live, react quickly to any problems, and work with Spryker Support or Operations teams.

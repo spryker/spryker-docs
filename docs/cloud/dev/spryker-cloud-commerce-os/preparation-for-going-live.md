@@ -21,7 +21,7 @@ The suggested timeframes should serve as orientation and might be different for 
 
 {% endinfo_block %}
 
-## Until five weeks before go-live:
+## Until five weeks before go-live
 
 If you migrate from another shop or project to Spryker (the domain you want to use already points to a shop or project), you need a migration plan and a plan to phase out your old project and phase in your new one. 
 
@@ -37,11 +37,9 @@ DNS propagation is not instant. Therefore, do not "switch off" your old project 
 
 When you have delegated DNS to us, you will need to inform us when you want us to switch the relevant records from one system to the other. Also note that DNS propagation is not instant, meaning that you should not "switch off" your old project immediately after the switch was done. Assign time in your project to plan this if you need to migrate.
 
-## Four weeks before go-live:
+## Four weeks before go-live
 
-- **The DNS Names and strategy for your shop are clear**. You should know how users access your shop, and you have verified that you have controlling access to the DNS for future domains. 
-
-For example, you have determined that you want to use spryker.com as the domain for your shop. You know how your customers should visit your Storefront and which URL they should use for that. Let's say you want to use the [www.spryker.com](http://www.spryker.com) subdomain for your Storefront.
+- **The DNS Names and strategy for your shop are clear**. You should know how users access your shop, and you have verified that you have controlling access to the DNS for future domains. <br>For example, you have determined that you want to use spryker.com as the domain for your shop. You know how your customers should visit your Storefront and which URL they should use for that. Let's say you want to use the [www.spryker.com](http://www.spryker.com) subdomain for your Storefront.
 
 - **Decide how email sending should be handled.** If you want to send emails using Spryker, decide whether you want to use the Mail Service that Spryker PaaS offers or attach your own Mail Server to your project. In case you want to use ours, validate your DNS name and lift sending restrictions. Let us know the email address you want to send from, and we can help you with the validation. If you have already delegated the NS records, we can set it ourselves.
 - **Delegate DNS (Optional)**. To find out how to delegate a DNS name, see [Setting up a custom SSL certificate](https://docs.spryker.com/docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-ssl-certificate.html).
@@ -86,4 +84,4 @@ If you find yourself struggling with the preceding points, reach out to Spryker 
 {% endinfo_block %}
 
 - **Validate that the rollback strategy is still valid**. Check that everything you need to recover from an unforeseen problem with the newest version of the project you are deploying is available and in place.
-- **Build up Go Live Support Team**. Prepare a team that can monitor your Go-Live, react quickly to any problems, and work with Spryker Support or Operations teams.
+- **Build up Go-Live Support Team**. Prepare a team that can monitor your Go-Live, react quickly to any problems, and work with Spryker Support or Operations teams.

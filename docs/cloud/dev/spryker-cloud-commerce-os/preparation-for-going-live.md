@@ -79,9 +79,9 @@ All DNS-related topics are affected by delays that are inherent to the DNS syste
 
 {% info_block infoBox "Note" %}
 	
-If you find yourself struggling with the preceding points, reach out to Spryker Support using your Onboarding case **immediately**.
+If you find yourself struggling with the preceding points, reach out to Spryker Support using your Onboarding case *immediately*.
 	
 {% endinfo_block %}
 
 - **Validate that the rollback strategy is still valid**. Check that you have everything you need to recover from an unforeseen problem with the newest version of the project you are deploying.
-- **Build up Go-Live Support Team**. Prepare a team that can monitor your go-lve, react quickly to any problems, and work with the Spryker Support or Operations teams.
+- **Build up Go-Live Support Team**. Prepare a team that can monitor your go-live, react quickly to any problems, and work with the Spryker Support or Operations teams.

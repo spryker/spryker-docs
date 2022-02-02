@@ -1,5 +1,5 @@
 ---
-title: Product Lists- Catalog feature integration
+title: Product Lists + Catalog feature integration
 description: The guide walks you through the process of installing the Product Lists as a catalog  feature in the project.
 last_updated: Nov 22, 2019
 template: feature-integration-guide-template

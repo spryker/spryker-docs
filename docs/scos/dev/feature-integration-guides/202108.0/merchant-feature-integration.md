@@ -15,7 +15,7 @@ related:
     link: docs/scos/user/features/page.version/checkout-feature-overview/order-thresholds-overview.html
 ---
 
-This document describes how to integrate the Merchant feature into a Spryker project.
+This document describes how to integrate the Merchant feature into a Spryker project.
 
 ## Install feature core
 

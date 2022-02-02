@@ -83,5 +83,5 @@ If you find yourself struggling with the preceding points, reach out to Spryker 
 	
 {% endinfo_block %}
 
-- **Validate that the rollback strategy is still valid**. Check that everything you need to recover from an unforeseen problem with the newest version of the project you are deploying is available and in place.
+- **Validate that the rollback strategy is still valid**. Check that you have everything you need to recover from an unforeseen problem with the newest version of the project you are deploying.
 - **Build up Go-Live Support Team**. Prepare a team that can monitor your Go-Live, react quickly to any problems, and work with Spryker Support or Operations teams.

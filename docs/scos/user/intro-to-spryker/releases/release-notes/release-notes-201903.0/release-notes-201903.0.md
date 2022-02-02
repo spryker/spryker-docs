@@ -27,7 +27,7 @@ related:
     link: docs/scos/dev/sdk/development-tools/code-sniffer.html
   - title: Architecture Sniffer
     link: docs/scos/dev/sdk/development-tools/architecture-sniffer.html
-  - title: Heidelpay - Split-payment Marketplace
+  - title: Integrating the Split-payment Marketplace payment method for Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-split-payment-marketplace.html
   - title: Payment Integration - Adyen
     link: docs/scos/user/technology-partners/page.version/payment-partners/adyen.html
@@ -172,7 +172,7 @@ With the market showing an increasing number of marketplaces, Spryker has integr
 
 Customer payments can now be split in the background and assigned to the corresponding vendors when a client buys a product delivered by different vendors. This feature ensures customers can buy several units of the same product sold by different vendors while still going through the checkout with one single order and one single payment.
 
-**Documentation**: [Heidelpay - Split-payment Marketplace](/docs/scos/user/technology-partners/201903.0/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-split-payment-marketplace.html).
+**Documentation**: [Integrating the Split-payment Marketplace payment method for Heidelpay](/docs/scos/user/technology-partners/201903.0/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-split-payment-marketplace.html).
 
 ### Adyen
 Our recently finished Adyen integration covers a wide range of payment methods used both in the DACH region as well as outside of it, thus making sure customers can select the most appropriate payment method.

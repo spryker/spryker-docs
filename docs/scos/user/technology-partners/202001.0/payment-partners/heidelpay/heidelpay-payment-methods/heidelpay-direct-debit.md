@@ -1,5 +1,5 @@
 ---
-title: Heidelpay - Direct Debit
+title: Integrating the Direct Debit payment method for Heidelpay
 description: Integrate direct debit payment through Heidelpay into the Spryker-based shop.
 last_updated: Mar 5, 2020
 template: concept-topic-template
@@ -11,23 +11,23 @@ redirect_from:
 related:
   - title: Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay.html
-  - title: Heidelpay - Credit Card Secure
+  - title: Integrating the Credit Card Secure payment method for Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-credit-card-secure.html
-  - title: Heidelpay - Configuration for SCOS
+  - title: Configuring Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/scos-integration/heidelpay-configuration-for-scos.html
-  - title: Heidelpay - Integration into the Legacy Demoshop
+  - title: Integrating Heidelpay into the Legacy Demoshop
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-integration-into-the-legacy-demoshop.html
-  - title: Heidelpay - Paypal Authorize
+  - title: Integrating the Paypal Authorize payment method for Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-paypal-authorize.html
-  - title: Heidelpay - Integration into SCOS
+  - title: Integrating Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/scos-integration/heidelpay-integration-into-scos.html
-  - title: Heidelpay - Installation
+  - title: Installing Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-installation.html
-  - title: Heidelpay - Workflow for Errors
+  - title: Heidelpay workflow for errors
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/technical-details-and-howtos/heidelpay-workflow-for-errors.html
-  - title: Heidelpay - Easy Credit
+  - title: Integrating the Easy Credit payment method for Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-easy-credit.html
-  - title: Heidelpay - Invoice Secured B2C
+  - title: Integrating the Invoice Secured B2C payment method for Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-invoice-secured-b2c.html
 ---
 

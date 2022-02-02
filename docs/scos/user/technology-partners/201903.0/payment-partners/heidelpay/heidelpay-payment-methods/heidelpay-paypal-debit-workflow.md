@@ -1,5 +1,5 @@
 ---
-title: Heidelpay - Paypal Debit Workflow
+title: Integrating the Paypal Debit payment method for Heidelpay
 description: Integrate Paypal debit workflow payment through Heidelpay into the Spryker-based shop.
 last_updated: Jul 31, 2020
 template: concept-topic-template
@@ -11,23 +11,23 @@ redirect_from:
 related:
   - title: Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay.html
-  - title: Heidelpay - Credit Card Secure
+  - title: Integrating the Credit Card Secure payment method for Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-credit-card-secure.html
-  - title: Heidelpay - Configuration for SCOS
+  - title: Configuring Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/scos-integration/heidelpay-configuration-for-scos.html
-  - title: Heidelpay - Integration into the Legacy Demoshop
+  - title: Integrating Heidelpay into the Legacy Demoshop
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-integration-into-the-legacy-demoshop.html
-  - title: Heidelpay - Paypal Authorize
+  - title: Integrating the Paypal Authorize payment method for Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-paypal-authorize.html
-  - title: Heidelpay - Integration into SCOS
+  - title: Integrating Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/scos-integration/heidelpay-integration-into-scos.html
   - title: Heidelay - Sofort (Online Transfer)
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-sofort-online-transfer.html
-  - title: Heidelpay - Direct Debit
+  - title: Integrating the Direct Debit payment method for Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-direct-debit.html
-  - title: Heidelpay - Installation
+  - title: Installing Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-installation.html
-  - title: Heidelpay - Workflow for Errors
+  - title: Heidelpay workflow for errors
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/technical-details-and-howtos/heidelpay-workflow-for-errors.html
 ---
 
@@ -86,6 +86,6 @@ class HeidelpayPostSavePlugin extends BaseAbstractPlugin implements CheckoutPost
 
  The most important data here is the payment reference ID which can be used for further transactions like capture/cancel/etc. 
 
-In the response Heidelpay expects an URL string which shows where customer has to be redirected. In case  if customer successfully confirmed payment, there should be a link to checkout order success step, in case of failure - checkout payment failed action with error code (see`HeidelpayController::paymentFailedAction()` and [Heidelpay - Workflow for Errors](/docs/scos/user/technology-partners/201903.0/payment-partners/heidelpay/heidelpay-workflow-for-errors.html) section). Heidelpay redirects customer to the given URL and payment process is finished. 
+In the response Heidelpay expects an URL string which shows where customer has to be redirected. In case  if customer successfully confirmed payment, there should be a link to checkout order success step, in case of failure - checkout payment failed action with error code (see`HeidelpayController::paymentFailedAction()` and [Heidelpay workflow for errors](/docs/scos/user/technology-partners/201903.0/payment-partners/heidelpay/heidelpay-workflow-for-errors.html) section). Heidelpay redirects customer to the given URL and payment process is finished. 
 
 Now the order can be considered as "paid".

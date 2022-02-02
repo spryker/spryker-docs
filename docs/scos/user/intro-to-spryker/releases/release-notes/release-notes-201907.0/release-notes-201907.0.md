@@ -27,7 +27,7 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
   - title: PayOne - Cash on Delivery
     link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/scos-integration/payone-cash-on-delivery.html
-  - title: Heidelpay - Easy Credit
+  - title: Integrating the Easy Credit payment method for Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-easy-credit.html
 ---
 
@@ -264,7 +264,7 @@ We have extended our Payone module with the cash-on-delivery payment method. Thi
 ### Heidelpay Easycredit
 We have extended our existing Heidelpay module with the payment method Easycredit, which allows customers to pay via an installment plan. This can help to increase your conversion rates of more expensive products and services.
 
-**Documentation**: [Heidelpay - Easy Credit](/docs/scos/user/technology-partners/201907.0/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-easy-credit.html)
+**Documentation**: [Integrating the Easy Credit payment method for Heidelpay](/docs/scos/user/technology-partners/201907.0/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-easy-credit.html)
 
 ### RatePay
 We have extended our partner portfolio with a RatePay integration that offers 4 payment methods out-of-the-box:

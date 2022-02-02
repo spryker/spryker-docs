@@ -35,8 +35,6 @@ DNS propagation is not instant. Therefore, do not "switch off" your old project 
 
 {% endinfo_block %}
 
-When you have delegated DNS to us, you will need to inform us when you want us to switch the relevant records from one system to the other. Also note that DNS propagation is not instant, meaning that you should not "switch off" your old project immediately after the switch was done. Assign time in your project to plan this if you need to migrate.
-
 ## Four weeks before go-live
 
 - **The DNS Names and strategy for your shop are clear**. You should know how users access your shop, and you should verify that you controll access to the DNS for future domains. <br>For example, you have determined that you want to use spryker.com as the domain for your shop. You know how your customers should visit your Storefront and which URL they should use for that. For example, you might want to use the [www.spryker.com](http://www.spryker.com) subdomain for your Storefront.

@@ -65,7 +65,7 @@ Make sure to deploy to your production environment and run checks regularly—se
 ## Two weeks before go-live
 
 - **Remove all demo data from your environment**. Ensure that you exclusively work with real data, which will be used after the go-live. Remove all demo data that comes with the Spryker repository, which explicitly includes all demo users (as well as the standard admin user), because having demo users active poses a significant security risk for your project.
-- **Communicate your go-live plan to Spryker**. Make sure to reach out to your Partner or Customer Success Manager and share your go-live plans—the day and time when you want to make your shop accessible to the public. If this time should change, keep us updated. This is mission-critical for DNS switching and the hyper care phase, which Spryker Support provides for you before and after your go-live.
+- **Communicate your go-live plan to Spryker**. Make sure to reach out to your Partner or Customer Success Manager and share your go-live plans—the day and time when you want to make your shop accessible to the public. If this time should change, keep us updated. This is mission-critical for DNS switching and the hyper care phase, which Spryker Support does for you before and after your go-live.
 
 ## One week before go-live
 

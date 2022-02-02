@@ -3365,12 +3365,12 @@ entries:
     - title: Extending Spryker
       nested:
       - title: Development strategies
-        url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies.html
+        url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html
         nested:
         - title: Project modules
           nested:
           - title: Adding a new module
-            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/adding-a-new-module.html
+            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html
         - title: Spryker OS module customization
           nested:
           - title: Extending a core module that is used by another

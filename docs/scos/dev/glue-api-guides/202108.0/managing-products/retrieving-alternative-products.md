@@ -39,7 +39,9 @@ For detailed information on the modules that provide the API functionality and r
 Before suggesting an alternative product, check if a product is discontinued by [retrieving a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product).
 
 {% info_block infoBox %}
+
 It is the responsibility of the client to identify if a product is unavailable and when to provide alternatives. The API only provides information on availability, discontinued status and possible alternatives.
+
 {% endinfo_block %}
 
 ## Retrieve abstract alternative products
@@ -226,6 +228,7 @@ To retrieve abstract alternative products, send the request:
 
 
 ## Retrieve concrete alternative products
+
 To retrieve concrete alternative products, send the request:
 
 ---

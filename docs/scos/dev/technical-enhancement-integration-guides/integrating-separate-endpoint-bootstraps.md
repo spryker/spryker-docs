@@ -459,7 +459,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 ### 7) Add console commands
 
-Configure the following console commands with a router cache warmup per endpoint:
+1. Configure the following console commands with a router cache warmup per endpoint:
 
 
 <details open>
@@ -496,6 +496,33 @@ You’ve added the following commands:
 
 - `console router:cache:warm-up:backoffice`
 - `console router:cache:warm-up:backend-gateway`
+
+2. Extend the required installation recipes with route cache warmup commands for `backend` and `backend-gateway` applications:
+
+{% info_block infoBox "Location of installation recipes" %}
+
+By default, installation recipes are located in `config/install/`.
+
+{% endinfo_block %}
+
+```yaml
+env:
+    NEW_RELIC_ENABLED: 0
+
+sections:
+    build:
+        ...
+        router-cache-warmup-backoffice:
+            command: 'vendor/bin/console router:cache:warm-up:backoffice'
+
+        router-cache-warmup-backend-gateway:
+            command: 'vendor/bin/console router:cache:warm-up:backend-gateway'
+        ...
+```        
+
+
+
+
 
 ### 8) Configure the application
 
@@ -570,4 +597,70 @@ class SecurityGuiConfig extends SprykerSecurityGuiConfig
 
 1. Update the Docker SDK to version `1.36.1` or higher.
 
-2. [Development environment](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode): Update the hosts file by running the `docker/sdk boot {deploy_file}` command and following the instructions in the output.
+2. In the needed deploy files, replace the `zed` application with `backoffice`, `backend-gateway` and `backend-api` as follows.
+
+<details open>
+    <summary markdown='span'>An example of replacing the application name</summary>
+
+```yaml
+// One "zed" application.
+
+...
+
+regions:
+   ...
+
+groups:
+   EU:
+    region: EU
+    applications:
+      zed_eu:
+        application: zed
+        endpoints:
+          domain-name.local:
+            store: DE
+...
+
+
+// Separated endpoints: "backoffice", "backend-gateway" and "backend-api".
+
+...
+
+regions:
+   ...
+
+groups:
+   EU:
+    region: EU
+    applications:
+      backoffice_eu:
+        application: backoffice
+        endpoints:
+          backoffice.domain-name.local:
+            store: DE
+          ...  
+      backend-gateway_eu:
+        application: backend-gateway  
+        endpoints:
+          backend-gateway.de.spryker.local:
+            store: DE
+            primal: true  
+          ...
+      backend_api_eu:
+        application: zed
+        endpoints:
+          backend-api.de.spryker.local:
+            store: DE
+            entry-point: BackendApi      
+...
+```
+
+</details>           
+
+3. Update the hosts file by running the `docker/sdk boot {deploy_file}` or `docker/sdk install` command and following the instructions in the output.
+
+4. Run the application:
+
+```bash
+docker/sdk up --build
+```

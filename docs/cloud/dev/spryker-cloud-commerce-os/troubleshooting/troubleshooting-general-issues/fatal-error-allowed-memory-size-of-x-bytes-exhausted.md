@@ -18,7 +18,7 @@ PHP Fatal error: Out of memory (allocated x) (tried to allocate x bytes) in {FIL
 
 ## Solution
 
-Increase `memory_limit` as described in [image: php:](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file-reference-1.0.html#image-php).
+Increase `memory_limit` as described in [image: php:](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html#image-php).
 
 
 {% info_block infoBox "Memory limit for a single command" %}

@@ -1,5 +1,5 @@
 ---
-title: Alternative products + inventory management feature integration
+title: Alternative products + Inventory Management feature integration
 description: The guide walks you through the process of installing the Alternative products and Inventory features into the project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template

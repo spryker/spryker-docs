@@ -1,5 +1,5 @@
 ---
-title: Return management feature integration
+title: Return Management feature integration
 description: This guide provides step-by-step instructions on integrating the Return Management feature into your project.
 last_updated: Sep 8, 2020
 template: feature-integration-guide-template

@@ -44,15 +44,15 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Spryker Core |  dev-master |
-| Mailing & Notifications |  dev-master |
+| Spryker Core |  {{page.version}} |
+| Mailing & Notifications |  {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/order-management: "dev-master" --update-with-dependencies
+composer require spryker-feature/order-management: "{{page.version}}" --update-with-dependencies
 ```
 
 ### Set up Database Schema and Transfer Objects
@@ -949,7 +949,7 @@ Overview and install the necessary features before beginning the integration ste
 
 | Name | Version |
 | --- | --- |
-| Spryker Core | dev-master |
+| Spryker Core | {{page.version}} |
 
 
 
@@ -958,7 +958,7 @@ Overview and install the necessary features before beginning the integration ste
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/order-management: "dev-master" --update-with-dependencies
+composer require spryker-feature/order-management: "{{page.version}}" --update-with-dependencies
 ```
 
 

@@ -31,7 +31,7 @@ Follow the steps below to select a content item you want to create:
 
 See [Content Items Types: Module Relations](/docs/scos/dev/feature-walkthroughs/{{page.version}}/content-items-feature-walkthrough/content-item-types-module-relations.html) to learn more about the content item types.
 
-See [Content Items: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/references/content-items-reference-information.html) to learn about the attributes on this page.
+See [Content Items: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-items.html) to learn about the attributes on this page.
 
 ## Create a Banner
 Follow the steps to create a Banner:
@@ -47,7 +47,7 @@ Follow the steps to create a Banner:
 
 ![Banner content item](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Items/Creating+Content+Items/banner-content-item-page.png)
 
-See [Content Items: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/references/content-items-reference-information.html#create-and-edit-banner-content-item-page) to learn about the attributes on this page.
+See [Content Items: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-items.html#create-and-edit-banner-content-item-page) to learn about the attributes on this page.
 
 3. If needed, repeat the previous step in one or more locale-specific tabs.
 4.
@@ -98,9 +98,9 @@ Follow the steps to create an Abstract Product List:
 
     2.  In the table above the **Add more products** table, sort the added products by clicking **Move Down** or **Move Up**.
 
-See [Content Items: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/references/content-items-reference-information.html#create-and-edit-abstract-product-list-content-item-page) to learn about the attributes on this page.
+See [Content Items: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-items.html) to learn about the attributes on this page.
 
-3. If needed, repeat the previous step in one or more locale-specific tabs.
+1. If needed, repeat the previous step in one or more locale-specific tabs.
 
 {% info_block infoBox "Multi-language setup" %}
 
@@ -123,8 +123,8 @@ Make sure the Product Abstract List has been created:
 
 ![Abstract product list content item](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Items/Creating+Content+Items/apl-create-page.png)
 
-
 ***
+
 **Tips & Tricks**
 On the *Create Content Item: Abstract Product List* page, you can do the following:
 
@@ -142,7 +142,7 @@ Make sure to click **Save** before clicking **Back to Content Items** or going t
 Follow the steps to create a Product Set:
 
 1. On the *Create Content Item: Product Set* page, enter **Name** and **Description**. The fields are mandatory.
-2. In the **Defualt** tab, add a product set by clicking **+Add to list** next to it.
+2. In the **Default** tab, add a product set by clicking **+Add to list** next to it.
 
     {% info_block warningBox "Verification" %}
 
@@ -150,9 +150,9 @@ Follow the steps to create a Product Set:
 
     {% endinfo_block %}
 
-See [Content Items: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/references/content-items-reference-information.html#create-and-edit-abstract-product-list-content-item-page) to learn about the attributes on this page.
+See [Content Items: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-items.html) to learn about the attributes on this page.
 
-3. If needed, repeat the previous step in one or more locale-specific tabs.
+1. If needed, repeat the previous step in one or more locale-specific tabs.
 
 {% info_block infoBox "Multi-language setup" %}
 
@@ -176,8 +176,8 @@ Make sure the Product Set has been created:
 
 
 **Tips & Tricks**
-On the **Create Content Item: Product Set** page, you can do the following:
 
+On the **Create Content Item: Product Set** page, you can do the following:
 * Filter the product sets in the **Available Product Sets** table by entering a product set name in the **Search** field.
 * Clear all the fields in a tab by clicking **Clear locale**.
 * Go back to the *Overview of Content Items* page by clicking **Back to Content Items** in the top right corner.
@@ -203,9 +203,9 @@ Follow the steps to create a File List:
 
     2.  In the **Selected Files** table, sort the added files by clicking **Move Down** or **Move Up**.
 
-See [Content Items: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/references/content-items-reference-information.html#create-and-edit-abstract-product-list-content-item-page) to learn about the attributes on this page.
+See [Content Items: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-items.html) to learn about the attributes on this page.
 
-3. If needed, repeat the previous step in one or more locale-specific tabs.
+1. If needed, repeat the previous step in one or more locale-specific tabs.
 
 {% info_block infoBox "Multi-language setup" %}
 
@@ -240,9 +240,8 @@ On the *Create Content Item: File List* page, you can do the following:
 Make sure to click **Save** before clicking **Back to Content Items** or going to any other Back Office section. Otherwise, the changes are discarded.
 
 {% endinfo_block %}
-***
+
 **What's next?**
 The content item is created. Now, you can add it to a CMS block.
-
-* To learn about adding content item to CMS blocks or a pages, see [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html).
-* To learn about editing content items, see [Editing Content Items](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/editing-content-items.html).
+* To learn about adding content item to CMS blocks or a pages, see [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
+* To learn about editing content items, see [Editing Content Items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/editing-content-items.html).

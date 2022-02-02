@@ -13,7 +13,7 @@ This instruction explains how to prepare a Spryker project for going live.
 
 ## Spryker go-live preparation
 
-When you are preparing your project for go-live, consider the following sections and timeframes. 
+When preparing your project for go-live, consider the following sections and timeframes. 
 
 {% info_block infoBox "Note" %}
 

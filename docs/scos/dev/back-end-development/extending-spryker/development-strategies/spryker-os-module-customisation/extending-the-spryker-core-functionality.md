@@ -20,6 +20,7 @@ redirect_from:
   - /v2/docs/en/t-extend-spryker
   - /v1/docs/t-extend-spryker
   - /v1/docs/en/t-extend-spryker
+  - /docs/scos/dev/back-end-development/extending-spryker/extending-the-spryker-core-functionality.html
 ---
 
 <!--used to be: http://spryker.github.io/tutorials/zed/extending-spryker/-->
@@ -28,7 +29,7 @@ To extend the Spryker-Core functionality and to use the Spryker Engine to develo
 The project consists of two parts : **Spryker Core** and **Project** implementation. They both follow the same structure and the project implementation goes on top of the Spryker Core functionalities.
 
 The picture below shows how a request is being handled:
-![Request handling](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Advanced/Tutorial+Extending+Spryker/request_handling.png) 
+![Request handling](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Advanced/Tutorial+Extending+Spryker/request_handling.png)
 
 ## Project Structure Overview
 The code is divided into three parts:
@@ -106,14 +107,13 @@ class CategoryFacade extends AbstractFacade
 
 ```php
 <?php
-				
+
 namespace Pyz\Zed\Category\Business;
-				
+
 use Spryker\Zed\Category\Business\CategoryFacade as SprykerCategoryFacade;
-				
+
 class CategoryFacade extends SprykerCategoryFacade
 {
   ...
 }
 ```
-

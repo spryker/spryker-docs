@@ -3374,11 +3374,11 @@ entries:
         - title: Spryker OS module customization
           nested:
           - title: Extending a core module that is used by another
-            url: /docs/scos/dev/back-end-development/extending-spryker/extending-a-core-module-that-is-used-by-another.html
+            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-a-core-module-that-is-used-by-another.html
           - title: Extending the Core
-            url: /docs/scos/dev/back-end-development/extending-spryker/extending-the-core.html
+            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-core.html
           - title: Extending the Spryker Core functionality
-            url: /docs/scos/dev/back-end-development/extending-spryker/extending-the-spryker-core-functionality.html
+            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-spryker-core-functionality.html
     - title: Zed UI tables
       nested:
       - title: Creating and configuring Zed tables

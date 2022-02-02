@@ -852,7 +852,7 @@ entries:
           - "202005.0"
           - "202009.0"
           nested:
-          - title: Reference information - Orders 
+          - title: Reference information - Orders
             url: /docs/scos/user/back-office-user-guides/sales/orders/references/reference-information-orders.html
             include_versions:
             - "201811.0"
@@ -1393,7 +1393,7 @@ entries:
             - "201907.0"
             - "202001.0"
             - "202005.0"
-            - "202009.0" 
+            - "202009.0"
       - title: Pages
         nested:
         - title: Creating CMS pages
@@ -1456,7 +1456,7 @@ entries:
           - "202005.0"
           - "202009.0"
           nested:
-          - title: Reference information - Navigation 
+          - title: Reference information - Navigation
             url: /docs/scos/user/back-office-user-guides/content/navigation/references/reference-information-navigation.html
             include_versions:
             - "201811.0"
@@ -1616,7 +1616,7 @@ entries:
             - "201907.0"
             - "202001.0"
             - "202005.0"
-            - "202009.0"      
+            - "202009.0"
       - title: Product relations
         nested:
         - title: Creating product relations
@@ -1835,7 +1835,7 @@ entries:
           - "202005.0"
           - "202009.0"
           nested:
-          - title: Reference information - Warehouses 
+          - title: Reference information - Warehouses
             url: /docs/scos/user/back-office-user-guides/administration/warehouses/references/reference-information-warehouses.html
             include_versions:
             - "202001.0"
@@ -2226,6 +2226,10 @@ entries:
         url: /docs/scos/user/technology-partners/payment-partners/braintree.html
       - title: Computop
         url: /docs/scos/user/technology-partners/payment-partners/computop.html
+      - title: CrefoPay
+        url: /docs/scos/user/technology-partners/payment-partners/crefopay.html
+      - title: Heidelpay
+        url: /docs/scos/dev/technology-partners/payment-partners/heidelpay.html
       - title: Klarna
         url: /docs/scos/user/technology-partners/payment-partners/klarna/klarna.html
         nested:
@@ -2239,69 +2243,11 @@ entries:
             url: /docs/scos/user/technology-partners/payment-partners/klarna/technical-details-and-howtos/klarna-state-machine-commands-and-conditions.html
           - title: Klarna - Invoice Pay in 14 days
             url: /docs/scos/user/technology-partners/payment-partners/klarna/technical-details-and-howtos/klarna-invoice-pay-in-14-days.html
-      - title: Heidelpay
-        url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        nested:
-        - title: SCOS Integration
-          nested:
-          - title: Integrating Heidelpay
-            url: /docs/scos/user/technology-partners/payment-partners/heidelpay/scos-integration/heidelpay-integration-into-scos.html
-          - title: Configuring Heidelpay
-            url: /docs/scos/user/technology-partners/payment-partners/heidelpay/scos-integration/heidelpay-configuration-for-scos.html
-        - title: Heidelpay - Payment methods
-          nested:
-          - title: Integrating the Sofort payment method for Heidelpay
-            url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-sofort-online-transfer.html
-          - title: Integrating the Invoice Secured B2C payment method for Heidelpay
-            url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-invoice-secured-b2c.html
-          - title: Integrating the iDeal payment method for Heidelpay
-            url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-ideal.html
-          - title: Integrating the Easy Credit payment method for Heidelpay
-            url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-easy-credit.html
-          - title: Integrating the Direct Debit payment method for Heidelpay
-            url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-direct-debit.html
-          - title: Integrating the Split-payment Marketplace payment method for Heidelpay
-            url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-split-payment-marketplace.html
-          - title: Integrating the Paypal Debit payment method for Heidelpay
-            url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-paypal-debit-workflow.html
-          - title: Integrating the Paypal Authorize payment method for Heidelpay
-            url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-paypal-authorize.html
-          - title: Integrating the Credit Card Secure payment method for Heidelpay
-            url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-credit-card-secure.html
-        - title: Technical details and HowTos
-          include_versions:
-          - "202009.0"
-          - "202108.0"
-          nested:
-          - title: Heidelpay workflow for errors
-            url: /docs/scos/user/technology-partners/payment-partners/heidelpay/technical-details-and-howtos/heidelpay-workflow-for-errors.html
-          - title: Heidelpay OMS workflow
-            url: /docs/scos/user/technology-partners/payment-partners/heidelpay/technical-details-and-howtos/heidelpay-oms-workflow.html
-            include_versions:
-            - "202009.0"
-            - "202108.0"
-        - title: Integrating Heidelpay into the Legacy Demoshop
-          url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay-integration-into-the-legacy-demoshop.html
-          include_versions:
-          - "201811.0"
-          - "201903.0"
-          - "201907.0"
-          - "202001.0"
-        - title: Installing Heidelpay
-          url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay-installation.html
+
       - title: Adyen
         url: /docs/scos/user/technology-partners/payment-partners/adyen.html
       - title: RatePay
         url: /docs/scos/user/technology-partners/payment-partners/ratepay.html
-      - title: CrefoPay
-        url: /docs/scos/user/technology-partners/payment-partners/crefopay.html
       - title: Billie
         url: /docs/scos/user/technology-partners/payment-partners/billie.html
       - title: Powerpay

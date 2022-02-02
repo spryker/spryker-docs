@@ -60,13 +60,27 @@ Check multiple log groups via Logs Insights as follows. Select the log groups co
 
 ### 2. Check the script of the step
 
-1. In the **Build logs**, you can find the variable in the environment deploy file or in the execution log
+1. In the **Build logs**, check the value of `SPRYKER_HOOK_BEFORE_DEPLOY` variable.
 
-   ![SPRYKER_HOOK_BEFORE_DEPLOY_variable]
+![SPRYKER_HOOK_BEFORE_DEPLOY_variable]
 
-   2. if variable isn't set default script will be executed
+{% info_block infoBox "Deploy file" %}
 
-    ```vendor/bin/install -r pre-deploy -vvv```
+Alternatively, you can check the script of the step in the environment's deploy file.
+
+{% endinfo_block %}
+
+If the variable isn't set, the default script is executed:
+```bash
+vendor/bin/install -r pre-deploy -vvv
+```
+
+2. Check the commands of the script in the deploy file specified in the variable.
+  For example, on the earlier screenshot, the `SPRYKER_HOOK_BEFORE_DEPLOY` variable value is `vendor/bin/install -r EU/pre-deploy -vvv`. This means that you can check the commands of the build step in `config/install/EU/pre-deploy.yml`.
+
+![pre-deploy-file]
+
+In this example, the `scheduler:suspendddddddddddd` is misspelled, and it is the root cause of the issue.
 
 ###Example:
 In my case **SPRYKER_HOOK_BEFORE_DEPLOY** = ```vendor/bin/install -r EU/pre-deploy -vvv```
@@ -75,7 +89,7 @@ In my case **SPRYKER_HOOK_BEFORE_DEPLOY** = ```vendor/bin/install -r EU/pre-depl
 
 it means that in the code repository, I have a **config/install/EU/pre-deploy.yml** file that contains all commands that execute on the BUILD step
 
-![pre-deploy-file]
+
 
 as you might notice **scheduler:suspendddddddddddd** argument is misspelled, and it is a root cause of the issue
 

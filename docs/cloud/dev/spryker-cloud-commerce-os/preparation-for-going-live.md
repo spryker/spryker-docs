@@ -25,7 +25,7 @@ The suggested timeframes should serve as orientation and might be different for 
 
 If you migrate from another shop or project to Spryker (the domain you want to use already points to a shop or a project), you need a migration plan and a plan to phase out your old project and phase in your new one. 
 
-Plan the migration concept from your old project to Spryker thoroughly. Check with your SEO experts on what the strategy for your content and search engine results should be. Prepare this concept before you delegate your DNS to Spryker.
+Plan the migration concept from your old project to Spryker thoroughly. Check with your SEO experts on the strategy for your content and search engine results. 
 
 If you delegate DNS to Spryker, inform us when you want us to switch the relevant records from one system to the other.
 

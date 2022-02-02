@@ -67,17 +67,11 @@ Make sure to deploy to your production environment and run checks regularly—se
 
 ## One week before go-live
 
-- **Double-check the go-live date**. If any of the preceding tasks remain uncompleted, postpone your go-live, or discuss with us how to complete them in time.
-
-{% info_block infoBox "Note" %}
-		
-All DNS-related topics are affected by delays that are inherent to the DNS system, and we cannot apply DNS changes or validations any faster. 
-
-{% endinfo_block %}
+- **Double-check the go-live date**. If any of the preceding tasks remain uncompleted, postpone your go-live, or discuss with us how to complete them in time. All DNS-related topics are affected by delays that are inherent to the DNS system, and we cannot apply DNS changes or validations any faster. 
 
 {% info_block infoBox "Note" %}
 	
-If you find yourself struggling with the preceding points, reach out to Spryker Support using your Onboarding case *immediately*.
+If you struggle with the preceding points, reach out to Spryker Support using your Onboarding case *immediately*.
 	
 {% endinfo_block %}
 

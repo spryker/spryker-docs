@@ -39,7 +39,8 @@ Check multiple log groups via Logs Insights as follows. Select the log groups co
 
 ## Deployment fails at the Run_pre-deploy_hook step
 
-Check step execution details
+
+### 1. Check step execution logs
 
 1. On the page of the deployment in the `Build_Push_if_not_exist` step, select **Details**.
 
@@ -47,13 +48,19 @@ Check step execution details
 
 2. In the *Action execution failed* window that opens, select **Link to execution details**.
 
-3. If **PRE_BUILD** State: **FAILED**, go back to the failed step and, to rerun it, select **Retry**.
+3. In **Build logs**, check the `PRE_BUILD State`.
+
+4. If the state is `FAILED`, go back to the pipeline and rerun the step by selecting **Retry**.
 
 ![retry_run_pre-deploy_hook]
 
-4. If **BUILD** State: **FAILED** you need to check **SPRYKER_HOOK_BEFORE_DEPLOY** script
+5. If the step fails, recheck the `PRE_BUILD State` by following steps 1 to 3.
+  If the state is `FAILED`, [check the script of the step](#2-check-the-script-of-the-step)
 
-   1. you can find the variable in the environment deploy file or in the execution log
+
+### 2. Check the script of the step
+
+1. In the **Build logs**, you can find the variable in the environment deploy file or in the execution log
 
    ![SPRYKER_HOOK_BEFORE_DEPLOY_variable]
 

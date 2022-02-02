@@ -39,7 +39,7 @@ When you have delegated DNS to us, you will need to inform us when you want us t
 
 ## Four weeks before go-live
 
-- **The DNS Names and strategy for your shop are clear**. You should know how users access your shop, and you have verified that you have controlling access to the DNS for future domains. <br>For example, you have determined that you want to use spryker.com as the domain for your shop. You know how your customers should visit your Storefront and which URL they should use for that. Let's say you want to use the [www.spryker.com](http://www.spryker.com) subdomain for your Storefront.
+- **The DNS Names and strategy for your shop are clear**. You should know how users access your shop, and you should verify that you controll access to the DNS for future domains. <br>For example, you have determined that you want to use spryker.com as the domain for your shop. You know how your customers should visit your Storefront and which URL they should use for that. For example, you might want to use the [www.spryker.com](http://www.spryker.com) subdomain for your Storefront.
 
 - **Decide how email sending should be handled.** If you want to send emails using Spryker, decide whether you want to use the Mail Service that Spryker PaaS offers or attach your own Mail Server to your project. In case you want to use ours, validate your DNS name and lift sending restrictions. Let us know the email address you want to send from, and we can help you with the validation. If you have already delegated the NS records, we can set it ourselves.
 - **Delegate DNS (Optional)**. To find out how to delegate a DNS name, see [Setting up a custom SSL certificate](https://docs.spryker.com/docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-ssl-certificate.html).

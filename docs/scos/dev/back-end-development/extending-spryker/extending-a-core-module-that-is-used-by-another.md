@@ -1,5 +1,5 @@
 ---
-title: Extending a Core Module That is Used by Another
+title: Extending a Core Module Used by Another One (with Bridge)
 description: This topic describes how to extend a core module that is used by another core module.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -24,70 +24,159 @@ redirect_from:
   - /v1/docs/en/ht-extend-inuse-core
 ---
 
-This topic describes how to extend a core module that is used by another core module.
+This topic describes how to extend a core module that is used by another core module via bridge.
 
 Extra consideration must be taken when extending core modules that are already in use by another module. 
 
 In the following example, we will extend the `Cart` -> `Calculation` modules.
 
-## Step 1: Modify the Interface
-Add a `foo()` method to `CalculationFacade` on the project level and call it from the `Cart` module. 
+You have to extend modules on project level in the following cases:
 
-The `CalculationFacade` needs to implement the `CartToCalculationInterface` because this interface is used in the `Cart`module. 
+  - **Case 1.** Core module `Cart` uses core module `Calculation`, so `CartBridge` exists. And you need existing `CalculationFacade` method `foo()` in module `Cart`, but `CartBridge` doesn't have method `foo()`.
+  - **Case 2.** Core module `Cart` uses core module `Calculation`, so `CartBridge` exists. And you want to introduce new (not existing) method `foo()` in `CalculationFacade` and use it in Module `Cart`.
 
-You can also add your own interface as follows:
+## Step 1: Modify the FacadeInterface and Facade 
+**For case 2 only**
 
-```php
-<?php
-namespace Pyz\Zed\Cart\Dependency\Facade;
-
-use Spryker\Zed\Cart\Dependency\Facade\CartToCalculationInterface as SprykerCartToCalculationInterface;
-
-interface CartToCalculationInterface extends SprykerCartToCalculationInterface
-{
-    public function foo();
-}
-```
-
-## Step 2: Add the New Method to the Interface
-The interface needs to extend the one from core.
+Extend FacadeInterface and Facade on the project level, add a `foo()` method.
 
 ```php
 <?php
 namespace Pyz\Zed\Calculation\Business;
 
-use Pyz\Zed\Cart\Dependency\Facade\CartToCalculationInterface;
-use Spryker\Zed\Calculation\Business\CalculationFacade as SprykerCalculationFacade;
+use Spryker\Zed\Calculation\Business\CalculationFacadeInterface as SprykerCalculationFacadeInterface;
 
-class CalculationFacade extends SprykerCalculationFacade implements CartToCalculationInterface
+interface CalculationFacadeInterface extends SprykerCalculationFacadeInterface
 {
-    public function foo()
-    {
-        die('<pre><b>'.print_r('!!', true).'</b>'.PHP_EOL.__CLASS__.' '.__LINE__);
-    }
-
+    public function foo(string $bar): int;
 }
 ```
-
-## Step 3: Remove the Bridge
-In the `Cart` module's dependency provider, remove the bridge to directly use the facade.
 
 ```php
-class CartDependencyProvider extends SprykerCartDependencyProvider
-{
+<?php
+namespace Pyz\Zed\Calculation\Business;
 
-public function provideBusinessLayerDependencies(Container $container)
-{
-	self::provideBusinessLayerDependencies($container);
+use Spryker\Zed\Calculation\Business\CalculationFacade as SprykerCalculationFacade;
 
-	$container[self::FACADE_CALCULATION] = function (Container $container) {
-		return $container->getLocator()->calculation()->facade();
-	};
+class CalculationFacade extends SprykerCalculationFacade implements CalculationFacadeInterface
+{
+    public function foo(string $bar): int
+    {
+        return strlen($bar) + 2;
+    }
 }
 ```
 
-{% info_block errorBox %}
-Bridges are for core-level only. If you use them at the project-level, you are doing it wrong!
+## Step 2: Modify the Interface of Bridge and Bridge
+To call `CalculationFacade` method `foo()` from the `Cart` module on the project level 
+you have to extend Bridge + its interface from core and 
+add needed method with the same signature as in `CalculationFacade`. Construct method in project bridge is required. Some doc blocks are missed, but required in real projects.
+
+Interface example for both cases:
+```php
+<?php
+namespace Pyz\Zed\Cart\Dependency\Facade;
+
+use Spryker\Zed\Cart\Dependency\Facade\CartToCalculationFacadeInterface as SprykerCartToCalculationFacadeInterface;
+
+interface CartToCalculationFacadeInterface extends SprykerCartToCalculationFacadeInterface
+{
+    public function foo(string $bar): int;
+}
+```
+Bridge for case 1:
+```php
+<?php
+namespace Pyz\Zed\Cart\Dependency\Facade;
+
+use Spryker\Zed\Cart\Dependency\Facade\CartToCalculationFacadeBridge as SprykerCartToCalculationFacadeBridge;
+
+class CartToCalculationFacadeBridge extends SprykerCartToCalculationFacadeBridge implements CartToCalculationFacadeInterface
+{
+    /** 
+     * @var \Spryker\Zed\Calculation\Business\CalculationFacadeInterface
+     */
+    protected $calculationFacade;
+
+    /** 
+     * @param \Spryker\Zed\Calculation\Business\CalculationFacadeInterface $calculationFacade
+     */
+    public function __construct($calculationFacade)
+    {
+        $this->calculationFacade = $calculationFacade;
+    }
+
+    public function foo(string $bar): int
+    {
+        return $this->calculationFacade->foo($bar);
+    }
+}
+```
+Bridge for case 2:
+```php
+<?php
+namespace Pyz\Zed\Cart\Dependency\Facade;
+
+use Spryker\Zed\Cart\Dependency\Facade\CartToCalculationFacadeBridge as SprykerCartToCalculationFacadeBridge;
+
+class CartToCalculationFacadeBridge extends SprykerCartToCalculationFacadeBridge implements CartToCalculationFacadeInterface
+{
+    /** 
+     * @var \Pyz\Zed\Calculation\Business\CalculationFacadeInterface
+     */
+    protected $calculationFacade;
+
+    /** 
+     * @param \Pyz\Zed\Calculation\Business\CalculationFacadeInterface $calculationFacade
+     */
+    public function __construct($calculationFacade)
+    {
+        $this->calculationFacade = $calculationFacade;
+    }
+
+    public function foo(string $bar): int
+    {
+        return $this->calculationFacade->foo($bar);
+    }
+}
+```
+
+## Step 3: Override DependencyProvider method
+In the `Cart` module's dependency provider set your bridge from project level.
+
+```php
+namespace Pyz\Zed\Cart;
+
+use Pyz\Zed\Cart\Dependency\Facade\CartToCalculationFacadeBridge;
+use Pyz\Zed\Cart\Dependency\Facade\CartToCalculationFacadeInterface;
+
+class CartDependencyProvider extends SprykerCartDependencyProvider
+{
+    // not override, if CalculationFacade is added to needed business/communication layer dependencies on core level
+    public function provideBusinessLayerDependencies(Container $container): Container
+    {
+	    $container = self::provideBusinessLayerDependencies($container);
+        $container = $this->addCalculationFacade($container);
+
+        return $container;
+    }
+
+    // override on project level
+    protected function addCalculationFacade(Container $container): Container
+    {
+        $container->set(static::FACADE_CALCULATION, function (Container $container): CartToCalculationFacadeInterface {
+            return new CartToCalculationFacadeBridge(
+                $container->getLocator()->eventBehavior()->facade()
+            )
+        });
+
+        return $container;
+    }
+}
+```
+
+{% info_block infoBox %}
+Inject **project** bridge's interface in business-models if they use bridge's methods added on **project** level.
 {% endinfo_block %}
 
 {% info_block infoBox "Info" %}

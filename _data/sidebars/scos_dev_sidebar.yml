@@ -3366,7 +3366,7 @@ entries:
       nested:
       - title: Adding a mew module
         url: /docs/scos/dev/back-end-development/extending-spryker/adding-a-new-module.html
-      - title: Extending a core module that is used by another
+      - title: Extending a core module used by another one (with bridge)
         url: /docs/scos/dev/back-end-development/extending-spryker/extending-a-core-module-that-is-used-by-another.html
       - title: Extending the Core
         url: /docs/scos/dev/back-end-development/extending-spryker/extending-the-core.html

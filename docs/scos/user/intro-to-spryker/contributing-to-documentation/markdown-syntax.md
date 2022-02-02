@@ -1,6 +1,6 @@
 ---
 title: Markdown syntax
-last_updated: Jan 26, 2022
+last_updated: Feb 02, 2022
 description: Learn the markdown syntax and how to create markdown elements in your writing.
 template: concept-topic-template
 related:

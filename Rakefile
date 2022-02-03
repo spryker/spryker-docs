@@ -27,6 +27,7 @@ commonOptions = {
     /pci.payone.de\/[\.\w\-\/\?]+/,
     /www.iso.org\/[\.\w\-\/\?]+/,
     /www.vagrantup.com\/[\.\w\-\/\?]+/,
+    /stackoverflow.com\/[\.\w\-\/\?]+/,
     /console.aws.amazon.com\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],

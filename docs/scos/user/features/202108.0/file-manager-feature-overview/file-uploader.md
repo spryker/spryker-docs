@@ -102,7 +102,9 @@ A Back Office user can **Download** and **Delete** the versions.
 ### Add a file to the shop app
 
 {% info_block errorBox %}
+
 Make sure that the File Uploader feature is enabled.
+
 {% endinfo_block %}
 
 To add a file to the Shop App, follow the steps below:

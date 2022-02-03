@@ -1,5 +1,5 @@
 ---
-title: Promotions & Discounts feature overview
+title: Promotions and Discounts feature overview
 description: The feature allows creating different types of discounts and applying multiple in-built discount settings suitable for any business requirements.
 last_updated: Jan 13, 2020
 template: concept-topic-template

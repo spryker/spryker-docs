@@ -1,5 +1,5 @@
 ---
-title: CMS Block
+title: CMS Blocks overview
 description: With the CMS Block feature, you can easily add promotional banners and define validity date ranges to emphasize specific, time-limited content.
 last_updated: Jan 9, 2020
 template: concept-topic-template

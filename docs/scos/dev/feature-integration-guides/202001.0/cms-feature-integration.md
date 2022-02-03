@@ -1,5 +1,5 @@
 ---
-title: CMS feature integration Guide
+title: CMS feature integration
 description: The guide describes how to integrate the CMS feature into your project.
 last_updated: Oct 2, 2020
 template: feature-integration-guide-template

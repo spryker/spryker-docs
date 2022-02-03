@@ -18,9 +18,9 @@ To create a Storefront, do the following:
 
 1. On the *List of Applications* page, select **Create a new application**.
 
-2. On the *Create a new application* page, enter a descriptive **Name** for the Storefront.
+2. On the *Create a new application* page, enter a descriptive **NAME** for the Storefront.
 
-3. For **Type**, select **Spryker VueStorefront**.
+3. For **TYPE**, select **Spryker VueStorefront**.
   In future, you'll be able to create other types of applications. For now, let's stick with the Storefront.
 
   *Code Repository provider*, *Hosting provider*, and *Commerce provider* sections appear.
@@ -34,13 +34,13 @@ In the *Code Repository provider* section, you are going to grant the Launchpad 
 2. On the GitHub page that opens, authorize the Launchpad to act on behalf of your GitHub account.
   The account should have access to the repository with the VueStorefront application you want to deploy.
 
-This takes you back to the *Create a new Application* page.
+This takes you back to the *Create a new application* page.
 
 3. Select **Install GitHub organization**.
 
 4. On the GitHub page that opens, connect your GitHub organization and grant access to the repository with the VueStorefront application.
 
-This takes you back to the *Create a new Application* page.
+This takes you back to the *Create a new application* page.
 
 5. Select the **ORGANISATION** you've connected.
 
@@ -48,7 +48,7 @@ This takes you back to the *Create a new Application* page.
 
 7. Select the **BRANCH** you want to deploy.
 
-
+![Code repository configuration]
 
 ## Configuring the build
 
@@ -75,13 +75,21 @@ In the *Commerce provider* section, you need to connect the Storefront to a [Spr
 
 1. Select a **SPRYKER ENVIRONMENT** to connect this Storefront to.
 
-2. Select a **COMMERCE API**. The selected Glue API will be used to connect this Storefront to the SCCOS instance.
+2. Select a **COMMERCE API**. The selected Glue API will be used to connect this Storefront to the SCCOS instance you've selected in step 1.
 
-2. Select one or more **LOCALES** to be available in this Storefront.
+This shows the locales and currencies of the selected SCCOS instance, and they are preselected.
 
-3. Select one or more **CURRENCIES** to be available in this Storefront.
+3. For **LOCALES**, do the following:
+  1. Optional: Clear the checkboxes of the locales you don't want to display on the Storefront.
+  2. Select a default locale.
 
-4. Select **Create**.
+4. For **CURRENCIES**, do the following:
+  1. Optional: Clear the checkboxes of the currencies you don't want to display on the Storefront.
+  2. Select a default currency.
+
+![Commerce provider configuration]
+
+5. Select **Create**.
 
 The *List of Applications* page opens with the success message displayed. The application is displayed in the list.
 
@@ -93,4 +101,11 @@ To install the application, do the following:
   This opens the the pane of the application.
 
 2. In the *Hosting provider* section, select **Install Application**.
-  This shows the success message. Each time you update the code in the connected repository, the Storefront is automiacally re-deployed to Netlify.
+  This shows the success message and the pane refreshes to show the URL of the application. Select the URL to access the Storefront.
+
+  Each time you update the code in the connected repository, the Storefront is automatically redeployed with the changes displayed on the website.
+
+
+## Next steps
+
+[Editing the configuration of applications](/docs/fes/dev/launchpad-guides/editing-the-configuration-of-applications.html)

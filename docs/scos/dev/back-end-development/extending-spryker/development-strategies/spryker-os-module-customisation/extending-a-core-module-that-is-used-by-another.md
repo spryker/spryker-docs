@@ -22,18 +22,19 @@ redirect_from:
   - /v2/docs/en/ht-extend-inuse-core
   - /v1/docs/ht-extend-inuse-core
   - /v1/docs/en/ht-extend-inuse-core
+  - /docs/scos/dev/back-end-development/extending-spryker/extending-a-core-module-that-is-used-by-another.html
 ---
 
 This topic describes how to extend a core module that is used by another core module.
 
-Extra consideration must be taken when extending core modules that are already in use by another module. 
+Extra consideration must be taken when extending core modules that are already in use by another module.
 
 In the following example, we will extend the `Cart` -> `Calculation` modules.
 
 ## Step 1: Modify the Interface
-Add a `foo()` method to `CalculationFacade` on the project level and call it from the `Cart` module. 
+Add a `foo()` method to `CalculationFacade` on the project level and call it from the `Cart` module.
 
-The `CalculationFacade` needs to implement the `CartToCalculationInterface` because this interface is used in the `Cart`module. 
+The `CalculationFacade` needs to implement the `CartToCalculationInterface` because this interface is used in the `Cart`module.
 
 You can also add your own interface as follows:
 

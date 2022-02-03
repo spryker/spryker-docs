@@ -3364,14 +3364,21 @@ entries:
           url: /docs/scos/dev/back-end-development/data-manipulation/event/adding-events.html
     - title: Extending Spryker
       nested:
-      - title: Adding a mew module
-        url: /docs/scos/dev/back-end-development/extending-spryker/adding-a-new-module.html
-      - title: Extending a core module that is used by another
-        url: /docs/scos/dev/back-end-development/extending-spryker/extending-a-core-module-that-is-used-by-another.html
-      - title: Extending the Core
-        url: /docs/scos/dev/back-end-development/extending-spryker/extending-the-core.html
-      - title: Extending the Spryker Core functionality
-        url: /docs/scos/dev/back-end-development/extending-spryker/extending-the-spryker-core-functionality.html
+      - title: Development strategies
+        url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html
+        nested:
+        - title: Project modules
+          nested:
+          - title: Adding a new module
+            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html
+        - title: Spryker OS module customization
+          nested:
+          - title: Extending a core module that is used by another
+            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-a-core-module-that-is-used-by-another.html
+          - title: Extending the Core
+            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-core.html
+          - title: Extending the Spryker Core functionality
+            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-spryker-core-functionality.html
     - title: Zed UI tables
       nested:
       - title: Creating and configuring Zed tables
@@ -4315,7 +4322,7 @@ entries:
           - title: CrefoPay payment methods
             url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-payment-methods.html
           - title: Integrating CrefoPay
-            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/integrating-crefopay.html            
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/integrating-crefopay.html
         - title: RatePay
           nested:
             - title: RatePay - Payment methods

@@ -1,6 +1,6 @@
 ---
 title: Frontend enablement Service
-description: Spryker Documentation is a central hub for knowledge and information about the Spryker Commerce OS.
+description: Overview of Frontend enablement Service, an application for launching frontends.
 template: concept-topic-template
 ---
 

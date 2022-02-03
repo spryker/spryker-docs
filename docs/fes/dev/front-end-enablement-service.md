@@ -31,7 +31,7 @@ Combined, they let you make changes without developers’ help, decouple and spe
 
 The Launchpad lets developers and content managers create frontend applications and connect them to Spryker backends.
 
-![Spryker Launchpad]
+![Spryker Launchpad](https://spryker.s3.eu-central-1.amazonaws.com/docs/fes/dev/front-end-enablement-service.md/spryker-launchpad.png)
 
 
 The default frontend template is a Storefront based on a [progressive web application (PWA)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) that supports mobile first design and native features.
@@ -43,9 +43,9 @@ The Launchpad is a multi-tenant application that interacts with the following co
 * GitHub repository that stores frontends’ code.
 * Netlify hosting provider, where frontends are built and distributed across a CDN.
 
-![launchpad-architecture]
+![launchpad-architecture](https://confluence-connect.gliffy.net/embed/image/70b3572e-f2a0-40d7-826e-3862d16bdfd7.png?utm_medium=live&utm_source=custom)
 
-The Glue API is used for the following:
+Glue API is used for the following:
 * To connect your SCCOS environments to the Launchpad. When creating a frontend, you can see the list of your environments, locales and currencies.
 * When a frontend is deployed to Netlify, to connect the frontend to the backend in a SCCOS environment.
 
@@ -55,7 +55,7 @@ When you create a frontend, the Launchpad creates a deployment pipeline that fet
 Developers can switch the application between multiple repositories. For example, a developer points a frontend to a development server while testing. After testing, they point it to a production environment and the frontend goes live without having to test it in this environment.
 
 
-![continuous-development]
+![continuous-development](https://spryker.s3.eu-central-1.amazonaws.com/docs/fes/dev/front-end-enablement-service.md/continuous-development.png)
 
 ### Spryker Experience Builder
 The Experience Builder lets content managers manage the structure and layout of frontends without developer’s help. It is in development, and we will release it soon.

@@ -48,7 +48,7 @@ This takes you back to the *Create a new application* page.
 
 7. Select the **BRANCH** you want to deploy.
 
-![Code repository configuration]
+![Code repository configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/fes/dev/launchpad-guides/launching-storefronts.md/code-repository-configuration.png)
 
 ## Configuring the build
 
@@ -87,7 +87,7 @@ This shows the locales and currencies of the selected SCCOS instance, and they a
   1. Optional: Clear the checkboxes of the currencies you don't want to display on the Storefront.
   2. Select a default currency.
 
-![Commerce provider configuration]
+![Commerce provider configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/fes/dev/launchpad-guides/launching-storefronts.md/commerce-provider-configuration.png)
 
 5. Select **Create**.
 
@@ -95,13 +95,16 @@ The *List of Applications* page opens with the success message displayed. The ap
 
 ## Installing the Storefront
 
-To install the application, do the following:
+To make the Storefront live, do the following:
 
 1. Select the application you've created.
   This opens the the pane of the application.
 
 2. In the *Hosting provider* section, select **Install Application**.
-  This shows the success message and the pane refreshes to show the URL of the application. Select the URL to access the Storefront.
+
+![Install application](https://spryker.s3.eu-central-1.amazonaws.com/docs/fes/dev/launchpad-guides/launching-storefronts.md/install-storefront.png)
+
+  This shows the success message, and the pane refreshes to show the URL of the application. Select the URL to access the Storefront.
 
   Each time you update the code in the connected repository, the Storefront is automatically redeployed with the changes displayed on the website.
 

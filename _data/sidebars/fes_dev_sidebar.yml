@@ -1,4 +1,4 @@
-title: Frontend enablement Service Developer Guides
+title: FeS Developer Guides
 entries:
   - product: Frontend enablement Service
     nested:
@@ -11,4 +11,4 @@ entries:
           - title: Installing applications
             url: /docs/fes/dev/launchpad-guides/installing-applications.html
           - title: Editing the configuration of applications
-            url: /docs/fes/dev/launchpad-guides/editing-the-configuration-of-applications.html                        
+            url: /docs/fes/dev/launchpad-guides/editing-the-configuration-of-applications.html

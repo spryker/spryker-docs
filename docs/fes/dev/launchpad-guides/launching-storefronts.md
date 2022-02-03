@@ -80,12 +80,12 @@ In the *Commerce provider* section, you need to connect the Storefront to a [Spr
 This shows the locales and currencies of the selected SCCOS instance, and they are preselected.
 
 3. For **LOCALES**, do the following:
-  1. Optional: Clear the checkboxes of the locales you don't want to display on the Storefront.
-  2. Select a default locale.
+    1. Optional: Clear the checkboxes of the locales you don't want to display on the Storefront.
+    2. Select a default locale.
 
 4. For **CURRENCIES**, do the following:
-  1. Optional: Clear the checkboxes of the currencies you don't want to display on the Storefront.
-  2. Select a default currency.
+    1. Optional: Clear the checkboxes of the currencies you don't want to display on the Storefront.
+    2. Select a default currency.
 
 ![Commerce provider configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/fes/dev/launchpad-guides/launching-storefronts.md/commerce-provider-configuration.png)
 

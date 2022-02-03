@@ -6,7 +6,7 @@ template: concept-topic-template
 
 Frontend enablement Service (FeS) is an application that enables everyone to launch and manage frontends easily and quickly.
 
-It's main objectives are:
+Its main objectives are:
 * To enable business users to manage frontends without developers' help.
 * To give developers more time to focus on the parts of an application that gain more value from their effort, like custom functionality.
 

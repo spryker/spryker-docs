@@ -24,6 +24,7 @@ redirect_from:
   - /v2/docs/en/core-extension
   - /v1/docs/core-extension
   - /v1/docs/en/core-extension
+  - /docs/scos/dev/back-end-development/extending-spryker/extending-the-core.html
 ---
 
 We offer several ways like plugins to hook into the core’s behavior and extend this without modifications. But sometimes this is not enough, so you need to replace a method which is deep in the core.

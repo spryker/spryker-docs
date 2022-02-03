@@ -1,6 +1,6 @@
 ---
-title: Quotation process + approval process feature integration
-description: Install the Quotation Process and Approval Process features in your project.
+title: Quotation Process + Approval Process feature integration
+description: Install the Quotation Process + Approval Process features in your project.
 last_updated: Jan 25, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/quotation-process-approval-process-feature-integration
@@ -12,16 +12,20 @@ redirect_from:
   - /docs/en/quotation-process-approval-process-feature-integration
 ---
 
+This document describes how to integrate the Quotation process + Approval Process feature into a Spryker project.
+
 ## Install feature core
+
+Follow the steps below to install the Quotation process + Approval Process feature core.
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+To start feature integration, integrate the required features:
 
-| NAME              | VERSION          |
+| NAME              | VERSION          | INTEGRATION GUIDE |
 |-------------------|------------------|
-| Quotation Process | {{page.version}} |
-| Approval Process  | {{page.version}} |
+| Quotation Process | {{page.version}} | [Quotation Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quotation-process-feature-integration.html) |
+| Approval Process  | {{page.version}} | [Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/approval-process-feature-integration.html) |
 
 ### 1) Set up behavior
 
@@ -108,7 +112,7 @@ class QuoteRequestDependencyProvider extends SprykerQuoteRequestDependencyProvid
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the **Request For Quote** button is not available on the cart page when the quote is in status "Waiting".
+Make sure that the **Request For Quote** button is not available on the **Cart** page when the quote is in the status *Waiting*.
 
 {% endinfo_block %}
 

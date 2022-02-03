@@ -23,7 +23,7 @@ Follow the steps below to install the Quotation process + Approval Process featu
 To start feature integration, integrate the required features:
 
 | NAME              | VERSION          | INTEGRATION GUIDE |
-|-------------------|------------------|
+|-------------------|------------------|------------------|
 | Quotation Process | {{page.version}} | [Quotation Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quotation-process-feature-integration.html) |
 | Approval Process  | {{page.version}} | [Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/approval-process-feature-integration.html) |
 
@@ -31,11 +31,11 @@ To start feature integration, integrate the required features:
 
 Register the following plugins:
 
-| PLUGIN                                        | SPECIFICATION                                                                     | PREREQUISITES | NAMESPACE                                                   |
-|-----------------------------------------------|-----------------------------------------------------------------------------------|---------------|-------------------------------------------------------------|
-| QuoteApprovalQuoteRequestQuoteCheckPlugin     | Checks if the "Request For Quote" button should be shown on the cart page or not. | None          | Spryker\Client\QuoteApproval\Plugin\QuoteRequest            |
-| QuoteRequestQuoteApprovalUnlockPreCheckPlugin | Prevents quote unlock  by approval process when it is in quotation process.       | None          | Spryker\Zed\QuoteRequest\Communication\Plugin\QuoteApproval |
-| QuoteApprovalQuoteRequestPreCreateCheckPlugin | Checks if the quote doesn't have status "waiting"                                 | None          | Spryker\Zed\QuoteApproval\Communication\Plugin\QuoteRequest |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+|---|---|---|---|
+| QuoteApprovalQuoteRequestQuoteCheckPlugin | Checks if the "Request For Quote" button should be shown on the cart page or not. | None | Spryker\Client\QuoteApproval\Plugin\QuoteRequest |
+| QuoteRequestQuoteApprovalUnlockPreCheckPlugin | Prevents quote unlock  by approval process when it is in quotation process. | None | Spryker\Zed\QuoteRequest\Communication\Plugin\QuoteApproval |
+| QuoteApprovalQuoteRequestPreCreateCheckPlugin | Checks if the quote doesn't have the status `waiting`. | None | Spryker\Zed\QuoteApproval\Communication\Plugin\QuoteRequest |
 
 **src/Pyz/Client/QuoteRequest/QuoteRequestDependencyProvider.php**
 
@@ -113,10 +113,6 @@ class QuoteRequestDependencyProvider extends SprykerQuoteRequestDependencyProvid
 {% info_block warningBox "Verification" %}
 
 Make sure that the **Request For Quote** button is not available on the **Cart** page when the quote is in the status *Waiting*.
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Make sure that when you have locked cart after quotation process and request approval for this cart, the cart should stay locked even if approver declined it.
 

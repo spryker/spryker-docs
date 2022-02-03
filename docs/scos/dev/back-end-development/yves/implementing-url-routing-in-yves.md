@@ -58,7 +58,7 @@ class HelloRouteProviderPlugin extends AbstractRouteProviderPlugin
     
     protected function addHelloRoute(RouteCollection $routeCollection): RouteCollection
     {
-        $route = $this->buildGetRoute('/hello', 'Demo', 'Demo', 'helloAction');
+        $route = $this->buildRoute('/hello', 'Demo', 'Demo', 'helloAction');
         $routeCollection->add(static::ROUTE_HELLO, $route);
     
         return $routeCollection;

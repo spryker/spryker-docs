@@ -45,7 +45,7 @@ In the new created plugin which extends `AbstractRouteProviderPlugin`, you must 
 <?php
 use Spryker\Yves\Router\Plugin\RouteProvider\AbstractRouteProviderPlugin;
 
-class HelloRouteProvider extends AbstractRouteProviderPlugin
+class HelloRouteProviderPlugin extends AbstractRouteProviderPlugin
 {
     private const ROUTE_HELLO = 'hello';
     
@@ -58,7 +58,7 @@ class HelloRouteProvider extends AbstractRouteProviderPlugin
     
     protected function addHelloRoute(RouteCollection $routeCollection): RouteCollection
     {
-        $route = $this->buildRoute('/hello', 'Demo', 'Demo', 'helloAction');
+        $route = $this->buildGetRoute('/hello', 'Demo', 'Demo', 'helloAction');
         $routeCollection->add(static::ROUTE_HELLO, $route);
     
         return $routeCollection;

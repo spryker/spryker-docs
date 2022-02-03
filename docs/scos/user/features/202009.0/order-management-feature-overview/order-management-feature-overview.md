@@ -1,5 +1,5 @@
 ---
-title: Order Management
+title: Order Management feature overview
 description: Efficiently keep track of the order processing and ensure quick fulfillment. With the Order Management, you can keep your order processing running smoothly.
 last_updated: Jun 15, 2021
 template: concept-topic-template
@@ -14,7 +14,7 @@ Bringing flexible shipping options in your online business may have a key impact
 
 In B2B companies, it is important to control the purchases employees make and add order references to the external systems. To keep the order references in your Spryker-based shop, use *Custom Order References* that allow you to link reference used in external systems, such as an ERP, to your internal orders. For example, your company pays the products with the invoice that has a reference. To make it easier to report and track the operations in your external systems, you, as a buyer, can include this reference number into your order.
 
-*Invoice Generation* enables you to generate and send invoices to customers after they placed an order. At the same time, you can also keep the invoices for your records by sending copie of invoices to your own email address.
+*Invoice Generation* enables you to generate and send invoices to customers after they placed an order. At the same time, you can also keep the invoices for your records by sending copy of invoices to your own email address.
 
 With *Order Cancellation*, allow your customers to cancel orders within a defined period and avoid doing it manually on your side on the customer's behalf. For example, a customer may change their mind about the color of an item they have ordered. Instead of contacting support representatives, they can cancel the order right away and re-place it with the desired color.  
 

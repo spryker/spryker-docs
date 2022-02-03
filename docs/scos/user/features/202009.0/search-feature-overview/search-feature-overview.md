@@ -1,5 +1,5 @@
 ---
-title: Search
+title: Search feature overview
 last_updated: Apr 30, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/search

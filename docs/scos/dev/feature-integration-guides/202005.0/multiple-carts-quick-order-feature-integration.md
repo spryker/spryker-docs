@@ -18,9 +18,9 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Multiple Carts | master |
-| Quick Add To Cart | master |
-| Spryker Core |master |
+| Multiple Carts | {{page.version}} |
+| Quick Add To Cart | {{page.version}} |
+| Spryker Core |{{page.version}} |
 
 ### 1) Set up Behavior
 
@@ -66,9 +66,9 @@ Please overview and install the necessary features before beginning the integrat
 
 | Name | Version |
 | --- | --- |
-| Multiple Carts | master |
-| Quick Add To Cart | master |
-| Spryker Core | master |
+| Multiple Carts | {{page.version}} |
+| Quick Add To Cart | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Set up Widgets
 

@@ -301,7 +301,7 @@ We now have an integration with our new payment partner CrefoPay, which will pro
 * Sofort
 * Cash on Delivery
 
-**Documentation**: [CrefoPay](/docs/scos/user/technology-partners/201907.0/payment-partners/crefopay/crefopay-installation-and-configuration.html)
+**Documentation**: [CrefoPay](/docs/scos/user/technology-partners/201907.0/payment-partners/crefopay/installing-and-configuring-crefopay.html)
 
 ***
 ## Technical Enhancements

@@ -30,7 +30,7 @@ There is currently an issue when using giftcards with Payolution. Our team is de
 
 ## Prerequisites
 
-Before proceeding with the integration, make sure you have [installed and configured](/docs/scos/dev/technology-partner-guides/{{page.version}}payment-partners/payolution/installing-and-configuring-payolution.html) the Payolution module.
+Before proceeding with the integration, make sure you have [installed and configured](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/payolution/installing-and-configuring-payolution.html) the Payolution module.
 
 ## Frontend Integration
 

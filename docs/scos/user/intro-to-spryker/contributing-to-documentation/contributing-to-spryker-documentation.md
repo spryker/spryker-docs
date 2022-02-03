@@ -10,7 +10,7 @@ This instruction explains how to contribute to the [Spryker documentation](https
 
 {% info_block infoBox "Info" %}
 
-If you want to create an issue on GitHub, see [Creating an issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue) in the official GitHub documentation.
+You can report an issue with the Spryker documentation via GitHub. For details on how to do that, see [Creating an issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue) in the official GitHub documentation.
 
 {% endinfo_block %}
 

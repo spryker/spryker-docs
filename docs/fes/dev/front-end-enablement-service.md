@@ -52,7 +52,7 @@ Glue API is used for the following:
 #### Repository and hosting provider
 When you create a frontend, the Launchpad creates a deployment pipeline that fetches code from the selected GitHub repository, pushes it to the Netlify hosting provider, and provides automatic configuration to connect the application back to SCCOS. On code changes, the update pipeline rebuilds and deploys the updated frontend automatically.
 
-Developers can switch the application between multiple repositories. For example, a developer points a frontend to a development server while testing. After testing, they point it to a production environment and the frontend goes live without having to test it in this environment.
+Developers can switch the application between multiple repositories. For example, a developer points a frontend to a development server while testing. After testing, they point it to a production environment, and the frontend goes live without having to test it in this environment.
 
 
 ![continuous-development](https://spryker.s3.eu-central-1.amazonaws.com/docs/fes/dev/front-end-enablement-service.md/continuous-development.png)

@@ -61,7 +61,7 @@ Developers can switch the application between multiple repositories. For example
 The Experience Builder lets content managers manage the structure and layout of frontends without developer’s help. It is in development, and we will release it soon.
 
 ## What projects can use FeS?
-Any project running on PaaS and with up-to-date APIs can use FeS for their frontends.
+Any project running on PaaS and with up-to-date APIs can use FeS for its frontends.
 
 ## Who are the users of FeS?
 FeS is designed to be used by both developers and content managers.

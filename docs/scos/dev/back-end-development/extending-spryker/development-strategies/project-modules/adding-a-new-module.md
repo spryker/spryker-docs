@@ -22,10 +22,13 @@ redirect_from:
   - /v2/docs/en/t-add-new-bundle
   - /v1/docs/t-add-new-bundle
   - /v1/docs/en/t-add-new-bundle
+  - /docs/scos/dev/back-end-development/extending-spryker/adding-navigation-in-the-back-office.html
 ---
 
 {% info_block infoBox %}
+
 In this tutorial we will create a test module: `HelloWorld` module; the module’s functionality is to show a ‘Hello world!’ message to the user.
+
 {% endinfo_block %}
 
 When a new concept needs to be defined, a new module needs to be added on the project side to encapsulate that concept. The new module needs to follow the same folder structure and conventions as the ones in Core.
@@ -88,7 +91,7 @@ class HelloWorldDependencyProvider extends AbstractBundleDependencyProvider
 
 Additionally, you can use the code generator to create a module. For this, run `console spryk:run AddModule` that will create the basic module structure.
 
-<!-- for demoshop --> Requesting the URL `https://zed.mysprykershop.com/hello-world` will show the Hello World example. 
+<!-- for demoshop --> Requesting the URL `https://zed.mysprykershop.com/hello-world` will show the Hello World example.
 
 ## Displaying a random salutation message
 
@@ -184,6 +187,7 @@ class IndexController extends AbstractController
     }
 }
 ```
+
 5. Modify the twig template to display the random salutation message instead of the static one we previously defined:
 
 ```php

@@ -125,6 +125,10 @@ entries:
       nested:
       - title: Building the documentation site
         url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html
+      - title: Contributing to the Spryker documentation
+        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-spryker-documentation.html  
+      - title: Reviewing pull requests
+        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/reviewing-pull-requests.html
       - title: Style, formatting, and general rules
         url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html
       - title: Markdown syntax

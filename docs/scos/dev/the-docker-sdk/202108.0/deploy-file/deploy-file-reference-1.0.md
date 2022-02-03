@@ -139,14 +139,14 @@ environment: 'docker'
 
 Defines any of the following:
 
-* Imports of additional deploy files to be included into a build. Supports imports of the same deploy file multiple times. To define a deploy file and dynamic parameters for this type of import, see [imports: {import_name}:](#imports-import-name).
+* Imports of additional deploy files to be included into a build. Supports imports of the same deploy file multiple times. To define a deploy file and dynamic parameters for this type of import, see [imports: {import_name}:](#imports-importname).
 ```yaml
 imports:
     {import_name}:
     {import_name}:       
 ```     
 
-* Additional deploy files to be included into a build. To define dynamic parameters for this type of import, see [imports: {deploy_file_name}:](#imports-deploy-file-name).
+* Additional deploy files to be included into a build. To define dynamic parameters for this type of import, see [imports: {deploy_file_name}:](#imports-deployfilename).
 ```yaml
 version: 1.0
 imports:
@@ -197,7 +197,7 @@ imports:
 
 {% info_block warningBox "" %}
 
-Affects the included deploy file that it follows in an array of included deploy files. To learn how you can add dynamic parameters for other types of imports, see [imports: {import_name}:](#imports-import-name) and [imports: {deploy_file_name}:](#imports-deploy-file-name).
+Affects the included deploy file that it follows in an array of included deploy files. To learn how you can add dynamic parameters for other types of imports, see [imports: {import_name}:](#imports-importname) and [imports: {deploy_file_name}:](#imports-deployfilename).
 
 {% endinfo_block %}
 

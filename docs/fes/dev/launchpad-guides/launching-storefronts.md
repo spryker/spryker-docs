@@ -21,7 +21,7 @@ To create a Storefront, do the following:
 2. On the *Create a new application* page, enter a descriptive **NAME** for the Storefront.
 
 3. For **TYPE**, select **Spryker VueStorefront**.
-  In future, you'll be able to create other types of applications. For now, let's stick with the Storefront.
+  In the future, you'll be able to create other types of applications. For now, let's stick with the Storefront.
 
   *Code Repository provider*, *Hosting provider*, and *Commerce provider* sections appear.
 

@@ -109,7 +109,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| MerchantShipmentOrderItemTemplatePlugin | Shows merchant shipment in shipment section of the ShipmentGui::SallesController |  | Spryker\Zed\MerchantShipmentGui\Communication\ShipmentGui |
+| MerchantShipmentOrderItemTemplatePlugin | Shows merchant shipment in shipment section of the ShipmentGui::SalesController |  | Spryker\Zed\MerchantShipmentGui\Communication\ShipmentGui |
 
 **src/Pyz/Zed/ShipmentGui/ShipmentGuiDependencyProvider.php**
 

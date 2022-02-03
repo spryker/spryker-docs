@@ -67,8 +67,6 @@ The Launchpad automatically deploys your Storefront to Netlify using a default c
 
 For more information about Netlify build configuration, see [Get started with build configuration](https://docs.netlify.com/configure-builds/get-started/).
 
-
-
 ## Connecting SCCOS
 
 In the *Commerce provider* section, you need to connect the Storefront to a [Spryker Cloud Commerce OS (SCCOS)](/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html) environment and select [locales](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html) and [currencies](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multiple-currencies-per-store-configuration.html). Follow the steps below:
@@ -98,7 +96,7 @@ The *List of Applications* page opens with the success message displayed. The ap
 To make the Storefront live, do the following:
 
 1. Select the application you've created.
-  This opens the the pane of the application.
+  This opens the pane of the application.
 
 2. In the *Hosting provider* section, select **Install Application**.
 

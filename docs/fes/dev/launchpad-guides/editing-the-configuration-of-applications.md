@@ -17,7 +17,6 @@ To edit the configuration of an application, do the following:
 4. Select **Save**.
   This reloads the page with the success message displayed.
 
-
 ## Reference information: Editing applications
 
 | Attribute | Description |

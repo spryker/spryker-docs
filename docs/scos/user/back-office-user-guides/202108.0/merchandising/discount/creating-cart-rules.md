@@ -21,7 +21,7 @@ A cart rule is a discount that is applied automatically when all attached discou
 
 ## Prerequisistes
 
-To start working with discounts, go to **Merchandising** > **Discount**.
+To start working with discounts, go to **Merchandising&nbsp;<span aria-label="and then">></span> Discount**.
 
 ## Creating a cart rule discount
 

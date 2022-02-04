@@ -203,7 +203,14 @@ See [Token description tables](#token-description-tables) for more information.
 
 **Promotional product discount**
 
-This discount type lets you discount specific products at a fixed quantity whenever the discount conditions are met. A common use case is for a "buy x, get y" discount where a customer gets an item for free when they buy a certain product or spend a certain amount. The products you are promoting go in the **ABSTRACT PRODUCT SKU(S)** field. The **MAXIMUM QUANTITY** field represents the limit on the number of items eligible for the discount. When a customer fulfills the discount conditions, the promotional products are automatically merchandised below the items in a customer's cart. The customer can either add these products to the cart from this widget or any other place in the shop, and the discount will apply. It is important to note that the promotional product discount only applies if the product is added to the cart after meeting the discount's conditions. If the product is already in the cart before the discount conditions are met, the customer needs to remove and re-add it.
+This discount type lets you discount specific products at a fixed quantity whenever the discount conditions are met. A common use case is for a "buy x, get y" discount, where a customer gets an item for free when they buy a certain product or spend a certain amount. When you create a promotional discount in the Back Office, in the **ABSTRACT PRODUCT SKU(S)** field, you enter comma-separated abstract product SKUs—products you are promoting. The **MAXIMUM QUANTITY** field represents the limit on the number of items eligible for the discount. When a customer fulfills the discount conditions, the promotional products are automatically merchandised below the items in a customer's cart. For example, there are 10 SKUs in **ABSTRACT PRODUCT SKU(S)**, and **MAXIMUM QUANTITY** is set to `1`. If the customer meets the discount conditions, they are eligible for only 1 unit of any of the 10 promotional product SKUs (NOT 1 of each). The customer can add one of these products to the cart from this widget or any other place in the shop, and the discount will apply.
+
+{% info_block infoBox "Note" %}
+
+The promotional product discount only applies if the product is added to the cart after meeting the discount's conditions. If the product is already in the cart before the discount conditions are met, the customer needs to remove and re-add it.
+
+{% endinfo_block %}
+
 ![Application type](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Calculation:+Reference+Information/Application+type.png)
 
 You can either give away promotional products completely for free or provide a discount for these products by specifying the percentage value or a fixed amount to be discounted from the promotional products price (when giving a product for free, the percentage value should be 100%, while the fixed-price value should be equal to a product's price).

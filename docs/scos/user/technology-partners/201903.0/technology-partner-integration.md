@@ -112,7 +112,7 @@ Please visit our [Partners Registry](https://spryker.com/find-a-partner/) for a 
 * [BS Payone](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/bs-payone.html)
 * [Computop](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop.html)
 * [CrefoPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/crefopay.html)
-* [Heidelpay](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/heidelpay.html)
+* [Heidelpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/heidelpay.html)
 <!--* [Informa Solutions](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/informa-solutions.html)-->
 * [Klarna](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/klarna/klarna.html)
 * [Payolution](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution/payolution.html)

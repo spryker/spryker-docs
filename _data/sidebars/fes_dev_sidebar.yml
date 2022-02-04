@@ -5,8 +5,8 @@ entries:
       - title: Frontend enablement Service
         url: /docs/fes/dev/front-end-enablement-service.html
       - title: Launching Storefronts
-        url: /docs/fes/dev/launchpad-guides/launching-storefronts.html
+        url: /docs/fes/dev/launching-storefronts.html
       - title: Installing applications
-        url: /docs/fes/dev/launchpad-guides/installing-applications.html
+        url: /docs/fes/dev/installing-applications.html
       - title: Editing the configuration of applications
-        url: /docs/fes/dev/launchpad-guides/editing-the-configuration-of-applications.html
+        url: /docs/fes/dev/editing-the-configuration-of-applications.html

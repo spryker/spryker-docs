@@ -109,4 +109,4 @@ To make the Storefront live, do the following:
 
 ## Next steps
 
-[Editing the configuration of applications](/docs/fes/dev/launchpad-guides/editing-the-configuration-of-applications.html)
+[Editing the configuration of applications](/docs/fes/dev/editing-the-configuration-of-applications.html)

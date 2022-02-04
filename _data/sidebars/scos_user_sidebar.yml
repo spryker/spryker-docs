@@ -2236,7 +2236,7 @@ entries:
       - title: CrefoPay
         url: /docs/scos/user/technology-partners/payment-partners/crefopay.html
       - title: Heidelpay
-        url: /docs/scos/dev/technology-partners/payment-partners/heidelpay.html
+        url: /docs/scos/user/technology-partners/payment-partners/heidelpay.html
       - title: Klarna
         url: /docs/scos/user/technology-partners/payment-partners/klarna/klarna.html
         nested:

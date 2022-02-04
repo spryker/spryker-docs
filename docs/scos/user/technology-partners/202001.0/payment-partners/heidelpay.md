@@ -14,7 +14,7 @@ related:
   - title: Configuring Heidelpay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/configuring-heidelpay.html
   - title: Installing Heidelpay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/heidelpay-installation.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/installing-heidelpay.html
   - title: Heidelpay workflow for errors
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/heidelpay-workflow-for-errors.html
   - title: Integrating Heidelpay into the Legacy Demoshop

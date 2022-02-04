@@ -1,16 +1,16 @@
 ---
 title: Integrating the Split-payment Marketplace payment method for Heidelpay
 description: Integrate Split payment Marketplace through Heidelpay into the Spryker-based shop.
-last_updated: Nov 22, 2019
+last_updated: Jul 31, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v3/docs/heidelpay-split-payment-marketplace
-originalArticleId: d995f0cf-1f78-41d1-a08a-05a85dbbb32f
+originalLink: https://documentation.spryker.com/v2/docs/heidelpay-split-payment-marketplace
+originalArticleId: 3dbd7223-265a-41a5-b0a1-7c14ac70f84b
 redirect_from:
-  - /v3/docs/heidelpay-split-payment-marketplace
-  - /v3/docs/en/heidelpay-split-payment-marketplace
+  - /v2/docs/heidelpay-split-payment-marketplace
+  - /v2/docs/en/heidelpay-split-payment-marketplace
 related:
   - title: Heidelpay
-    link: docs/scos/dev/technology-partners/page.version/payment-partners/heidelpay.html
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay.html
   - title: Integrating the Credit Card Secure payment method for Heidelpay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-credit-card-secure-payment-method-for-heidelpay.html
   - title: Configuring Heidelpay
@@ -24,7 +24,7 @@ related:
   - title: Integrating Heidelpay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/integrating-heidelpay.html
   - title: Installing Heidelpay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/heidelpay-installation.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/installing-heidelpay.html
   - title: Heidelpay workflow for errors
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/heidelpay-workflow-for-errors.html
   - title: Integrating the Easy Credit payment method for Heidelpay
@@ -33,7 +33,7 @@ related:
 
 ## Setup
 
-The following configuration should be made after Heidelpay has been [installed](/docs/scos/user/technology-partners/201907.0/payment-partners/heidelpay/heidelpay-installation.html) and [integrated](/docs/scos/user/technology-partners/201907.0/payment-partners/heidelpay/configuring-heidelpay.html).
+The following configuration should be made after Heidelpay has been [installed](/docs/scos/user/technology-partners/201903.0/payment-partners/heidelpay/installing-heidelpay.html) and [integrated](/docs/scos/user/technology-partners/201903.0/payment-partners/heidelpay/configuring-heidelpay.html).
 
 ## Configuration
 

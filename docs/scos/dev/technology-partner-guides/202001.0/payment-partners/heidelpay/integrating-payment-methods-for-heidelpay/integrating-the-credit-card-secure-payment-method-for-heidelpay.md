@@ -10,7 +10,7 @@ redirect_from:
   - /v4/docs/en/heidelpay-credit-card
 related:
   - title: Heidelpay
-    link: docs/scos/dev/technology-partners/page.version/payment-partners/heidelpay.html
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay.html
   - title: Configuring Heidelpay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/configuring-heidelpay.html
   - title: Integrating the Direct Debit payment method for Heidelpay
@@ -22,7 +22,7 @@ related:
   - title: Integrating Heidelpay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/integrating-heidelpay.html
   - title: Installing Heidelpay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/heidelpay-installation.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/installing-heidelpay.html
   - title: Heidelpay workflow for errors
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/heidelpay-workflow-for-errors.html
   - title: Integrating the Split-payment Marketplace payment method for Heidelpay
@@ -33,7 +33,7 @@ related:
 
 ## Setup
 
-The following configuration should be made after Heidelpay has been [installed](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/heidelpay/heidelpay-installation.html) and [integrated](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/heidelpay/configuring-heidelpay.html).
+The following configuration should be made after Heidelpay has been [installed](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/heidelpay/installing-heidelpay.html) and [integrated](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/heidelpay/configuring-heidelpay.html).
 
 ## Configuration
 

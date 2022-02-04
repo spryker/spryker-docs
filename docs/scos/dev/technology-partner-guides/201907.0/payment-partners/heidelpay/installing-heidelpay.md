@@ -10,7 +10,7 @@ redirect_from:
   - /v3/docs/en/heidelpay-installation
 related:
   - title: Heidelpay
-    link: docs/scos/dev/technology-partners/page.version/payment-partners/heidelpay.html
+    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay.html
   - title: Integrating Heidelpay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/integrating-heidelpay.html
   - title: Integrating the Credit Card Secure payment method for Heidelpay

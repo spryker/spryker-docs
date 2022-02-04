@@ -22,17 +22,6 @@ redirect_from:
   - /v1/docs/en/release-notes-201903-0
   - /v6/docs/release-notes-201903-0
   - /v6/docs/en/release-notes-201903-0
-related:
-  - title: Code Sniffer
-    link: docs/scos/dev/sdk/development-tools/code-sniffer.html
-  - title: Architecture Sniffer
-    link: docs/scos/dev/sdk/development-tools/architecture-sniffer.html
-  - title: Integrating the Split-payment Marketplace payment method for Heidelpay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-split-payment-marketplace-payment-method-for-heidelpay.html
-  - title: Payment Integration - Adyen
-    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen.html
-  - title: Afterpay
-    link: docs/scos/user/technology-partners/page.version/payment-partners/afterpay.html
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of major new features and enhancements released in March of 2019.

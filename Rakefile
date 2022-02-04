@@ -55,7 +55,9 @@ task :check_cloud do
   options = commonOptions.dup
   options[:file_ignore] = [
     /docs\/scos\/.+/,
+    /docs\/fes\/.+/,
     /docs\/marketplace\/.+/,
+    /docs\/paas-plus\/.+/,
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -65,6 +67,8 @@ task :check_mp_dev do
   options[:file_ignore] = [
     /docs\/scos\/.+/,
     /docs\/cloud\/.+/,
+    /docs\/fes\/.+/,
+    /docs\/paas-plus\/.+/,
     /docs\/marketplace\/user\/.+/,
   ]
   HTMLProofer.check_directory("./_site", options).run
@@ -75,6 +79,8 @@ task :check_mp_user do
   options[:file_ignore] = [
     /docs\/scos\/.+/,
     /docs\/cloud\/.+/,
+    /docs\/fes\/.+/,
+    /docs\/paas-plus\/.+/,
     /docs\/marketplace\/dev\/.+/,
   ]
   HTMLProofer.check_directory("./_site", options).run
@@ -85,6 +91,8 @@ task :check_scos_dev do
   options[:file_ignore] = [
     /docs\/marketplace\/.+/,
     /docs\/cloud\/.+/,
+    /docs\/fes\/.+/,
+    /docs\/paas-plus\/.+/,
     /docs\/scos\/user\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201811\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201903\.0\/.+/,
@@ -104,6 +112,8 @@ task :check_scos_dev_2020090 do
     /docs\/marketplace\/.+/,
     /docs\/cloud\/.+/,
     /docs\/scos\/user\/.+/,
+    /docs\/fes\/.+/,
+    /docs\/paas-plus\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201811\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201903\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201907\.0\/.+/,
@@ -121,12 +131,38 @@ task :check_scos_user do
     /docs\/marketplace\/.+/,
     /docs\/cloud\/.+/,
     /docs\/scos\/dev\/.+/,
+    /docs\/fes\/.+/,
+    /docs\/paas-plus\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201811\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201903\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201907\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202001\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202200\.0\/.+/
+  ]
+  HTMLProofer.check_directory("./_site", options).run
+end
+
+task :check_fes do
+  options = commonOptions.dup
+  options[:file_ignore] = [
+    /docs\/scos\/.+/,
+    /docs\/marketplace\/.+/,
+    /docs\/cloud\/.+/,
+    /docs\/aop\/.+/,
+    /docs\/paas-plus\/.+/,
+  ]
+  HTMLProofer.check_directory("./_site", options).run
+end
+
+task :check_paas_plus do
+  options = commonOptions.dup
+  options[:file_ignore] = [
+    /docs\/scos\/.+/,
+    /docs\/marketplace\/.+/,
+    /docs\/cloud\/.+/,
+    /docs\/aop\/.+/,
+    /docs\/fes\/.+/,
   ]
   HTMLProofer.check_directory("./_site", options).run
 end

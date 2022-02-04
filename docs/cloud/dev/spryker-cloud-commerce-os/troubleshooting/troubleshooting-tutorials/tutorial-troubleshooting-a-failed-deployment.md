@@ -29,7 +29,7 @@ Check multiple log groups via Logs Insights as follows. Select the log groups co
 
 ![execution_details]
 
-2. In the *Action execution failed* window that opens, select **Link to execution details**.
+2. In the **Action execution failed** window that opens, select **Link to execution details**.
 
 3. On the page of the step execution, switch to the **Phase details** tab.
 
@@ -46,7 +46,7 @@ Check multiple log groups via Logs Insights as follows. Select the log groups co
 
 ![execution_details]
 
-2. In the *Action execution failed* window that opens, select **Link to execution details**.
+2. In the **Action execution failed** window that opens, select **Link to execution details**.
 
 3. In **Build logs**, check the `PRE_BUILD State`.
 

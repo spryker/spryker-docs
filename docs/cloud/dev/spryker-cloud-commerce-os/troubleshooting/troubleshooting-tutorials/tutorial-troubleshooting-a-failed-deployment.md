@@ -42,7 +42,7 @@ Check multiple log groups via Logs Insights as follows. Select the log groups co
 
 ### 1. Check step execution logs
 
-1. On the page of the deployment in the `Build_Push_if_not_exist` step, select **Details**.
+1. On the page of the deployment in the `Run_pre-deploy_hook` step, select **Details**.
 
 ![execution_details]
 
@@ -72,7 +72,7 @@ If the variable isn't set, the default script is executed:
 ```bash
 vendor/bin/install -r pre-deploy -vvv
 ```
-This default scripts are located in `config/install/`. This particular one is located in `config/install/pre-deploy`.
+This default scripts are located in `config/install/`. This particular one is located in `config/install/pre-deploy.yml`.
 
 {% info_block infoBox "Deploy file" %}
 

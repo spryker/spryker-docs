@@ -60,9 +60,19 @@ Check multiple log groups via Logs Insights as follows. Select the log groups co
 
 ### 2. Check the script of the step
 
-1. In the **Build logs**, check the value of `SPRYKER_HOOK_BEFORE_DEPLOY` variable.
+To locate the deploy file in which the script is located and check its commands, do the following:
+
+1. In the **Build logs**, check the value of the `SPRYKER_HOOK_BEFORE_DEPLOY` variable.
 
 ![SPRYKER_HOOK_BEFORE_DEPLOY_variable]
+
+In this example, the value `vendor/bin/install -r EU/pre-deploy -vvv` means that the script of the build step is located in `config/install/EU/pre-deploy.yml`.
+
+If the variable isn't set, the default script is executed:
+```bash
+vendor/bin/install -r pre-deploy -vvv
+```
+This default scripts are located in `config/install/`. This particular one is located in `config/install/pre-deploy`.
 
 {% info_block infoBox "Deploy file" %}
 
@@ -70,40 +80,24 @@ Alternatively, you can check the script of the step in the environment's deploy 
 
 {% endinfo_block %}
 
-If the variable isn't set, the default script is executed:
-```bash
-vendor/bin/install -r pre-deploy -vvv
-```
 
-2. Check the commands of the script in the deploy file specified in the variable.
-  For example, on the earlier screenshot, the `SPRYKER_HOOK_BEFORE_DEPLOY` variable value is `vendor/bin/install -r EU/pre-deploy -vvv`. This means that you can check the commands of the build step in `config/install/EU/pre-deploy.yml`.
+
+2. In the deploy file you've located in step 1, check the commands of the script.
 
 ![pre-deploy-file]
 
 In this example, the `scheduler:suspendddddddddddd` is misspelled, and it is the root cause of the issue.
 
-###Example:
-In my case **SPRYKER_HOOK_BEFORE_DEPLOY** = ```vendor/bin/install -r EU/pre-deploy -vvv```
 
-![SPRYKER_HOOK_BEFORE_DEPLOY_variable]
+{% info_block infoBox "Debugging pre-deploy scripts" %}
 
-it means that in the code repository, I have a **config/install/EU/pre-deploy.yml** file that contains all commands that execute on the BUILD step
+As most of the issues at this step are related to its script, we recommend adding debug commands to them.
 
-
-
-as you might notice **scheduler:suspendddddddddddd** argument is misspelled, and it is a root cause of the issue
-
-![hook_before_deploy_execution]
-
-In this particular case I just need to fix the command and rerun the deployment afterward
-
-###Conclusion:
-
-Most of the issues that you may face at the **Run_pre-deploy_hook** step are related to the scripts that contain in the recipe file, you can add an additional debug commands to the script that can help you research the issue.
+{% endinfo_block %}
 
 ## Deployment fails at the Deploy_Spryker_services step
 
-If a deployment fails at the `Deploy_Spryker_services`, check the ECS services that have failed to deploy and their tasks as follows:
+If a deployment fails at the `Deploy_Spryker_services`, check the ECS services that  failed to deploy and their tasks as follows:
 
 {% include checking-the-status-of-ecs-services-and-tasks.md %} <!-- To edit, see /_includes/checking-the-status-of-ecs-services-and-tasks.md -->
 

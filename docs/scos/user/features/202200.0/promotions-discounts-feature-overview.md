@@ -141,16 +141,16 @@ The product selection based on the query string is dynamic:
 
 ### Promotional product
 
-Promotional product is a discount application type that discounts a particular product at a set quantity, enabling "buy X, get Y" promotions.
+Promotional product is a discount application type that discounts particular products at a set quantity, enabling "buy X, get Y" promotions.
 
-When a customer meets the conditions for a promotional product discount, the _Promotional products_ section is displayed in the cart and lets customers add the available quantity of the discounted product. The section consists of the product name, SKU, original and discounted price, and discount description.
+When a customer meets the conditions for a promotional product discount, the **Promotional products** section is displayed in the cart and lets customers add the available quantity of the discounted products. The section consists of the product name, SKU, original and discounted price, and discount description.
 
 ![Promotional product](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/promotions-discounts-feature-overview.md/promotional-product-storefront.png)
 <!--
 old image: (https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/promotional-product-frontend.png)
 -->
 
-A Back Office user selects the promotional product by entering an abstract product SKU in the Back Office. Also, they define the maximum quantity of the product to be sold with a discount.
+A Back Office user selects promotional products by entering comma-separated abstract product SKUs in the Back Office. Also, they define the maximum quantity of the products to be sold with a discount.
 
 ![Collection - promotional product](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/collection-promotional-product.png)
 
@@ -173,7 +173,7 @@ See examples in the table below.
 | €50 | Percentage | 10 | €5 | €45 |
 | €50 | Fixed amount | 10 | €10 | €40 |
 
-A Back Office user defines calculation when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
+A Back Office user defines calculation when [creating  vouchers](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
 
 ![Discount calculation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/discount_calculation.png)
 
@@ -181,7 +181,7 @@ A Back Office user defines calculation when [creating a voucher](/docs/scos/user
 
 Discount exclusiveness defines if a discount value of a discount can be combined with the discount value of other discounts in a single order.
 
-A Back Office user defines calculation when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
+A Back Office user defines calculation when [creating  vouchers](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [creating cart rules](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
 
 ![Exclusive discount](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/promotions-discounts-feature-overview.md/exclusivity.png)
 

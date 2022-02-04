@@ -10,9 +10,9 @@ redirect_from:
   - /v4/docs/en/heidelpay
 related:
   - title: Integrating Heidelpay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/scos-integration/heidelpay-integration-into-scos.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/integrating-heidelpay.html
   - title: Configuring Heidelpay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/scos-integration/heidelpay-configuration-for-scos.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/configuring-heidelpay.html
   - title: Installing Heidelpay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/heidelpay-installation.html
   - title: Heidelpay workflow for errors

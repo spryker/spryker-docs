@@ -4319,11 +4319,11 @@ entries:
         - title: Heidelpay
           nested:
           - title: Installing Heidelpay
-            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/heidelpay-installation.html
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/installing-heidelpay.html
           - title: Integrating Heidelpay
-            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/scos-integration/heidelpay-integration-into-scos.html
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-heidelpay.html
           - title: Configuring Heidelpay
-            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/scos-integration/heidelpay-configuration-for-scos.html
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/configuring-heidelpay.html
           - title: Integrating payment methods for Heidelpay
             nested:
             - title: Integrating the Sofort payment method

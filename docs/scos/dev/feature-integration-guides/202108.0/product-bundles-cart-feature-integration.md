@@ -1,5 +1,5 @@
 ---
-title: Product bundles + cart feature integration
+title: Product Bundles + Cart feature integration
 description: This guide provides step-by-step instructions on integrating Product Bundles + Cart feature into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template

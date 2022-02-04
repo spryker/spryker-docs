@@ -1127,7 +1127,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
 
 | CODE | REASON |
 | --- | --- |
-| 1601 | Navigation not found. |
+| 1601 | Navigation is not found. |
 | 1602 | Navigation ID is not specified. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

@@ -1,5 +1,5 @@
 ---
-title: Product overview
+title: Product feature overview
 description: Detailed overview of the Product feature.
 last_updated: Jun 2, 2021
 template: concept-topic-template
@@ -98,6 +98,6 @@ Besides the Back Office, you can maintain product information in an external Pro
 
 The Spryker Commerce OS supports integration of the following PIM systems:
 
-* [Akeneo](/docs/scos/dev/back-end-development/extending-spryker/extending-the-core.html)
+* [Akeneo](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-core.html)
 * [Censhare PIM](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/censhare-pim.html)
 * [Xentral](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/xentral.html)

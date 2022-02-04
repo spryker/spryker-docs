@@ -43,7 +43,7 @@ Automate your processes and implement several shipping and payment integrations.
         <area shape="rectangle" coords="2,107,229,197" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/payment-partners/klarna/klarna.html" />
         <area shape="rectangle" coords="230,106,479,196" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/content-management/styla.html" />
         <area shape="rectangle" coords="480,107,713,197" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay.html" />
-        <area shape="rectangle" coords="1,199,230,308" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop.html" />
+        <area shape="rectangle" coords="1,199,230,308" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop.html" />
         <area shape="rectangle" coords="231,196,480,306" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/hosting-providers/continum.html" />
         <area shape="rectangle" coords="481,198,712,308" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/hosting-providers/claranet.html" />
         <area shape="rectangle" coords="1,310,232,407" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/payment-partners/afterpay.html" />
@@ -60,7 +60,7 @@ Automate your processes and implement several shipping and payment integrations.
         <area shape="rectangle" coords="484,611,711,721" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/payment-partners/amazon-pay.html" />
         <area shape="rectangle" coords="1,720,241,808" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution/payolution.html" />
         <area shape="rectangle" coords="241,723,486,810" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/hosting-providers/root-360.html" />
-        <area shape="rectangle" coords="486,723,712,807" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/payment-partners/braintree/braintree.html" />
+        <area shape="rectangle" coords="486,723,712,807" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/payment-partners/braintree.html" />
     </map>
 -->
 <!-- ../../Resources/Images/IP Integrations.png" usemap="#map1 -->

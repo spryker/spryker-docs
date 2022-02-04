@@ -37,7 +37,7 @@ Automate your processes and implement several shipping and payment integrations.
 </div>
 <!--
 <map id="map1">
-        <area shape="rectangle" coords="3,2,222,106" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/akeneo/akeneo.html" />
+        <area shape="rectangle" coords="3,2,222,106" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/akeneo.html" />
         <area shape="rectangle" coords="224,1,477,105" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/hosting-providers/metaways.html" />
         <area shape="rectangle" coords="479,2,711,105" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/operational-tools-monitoring-legal-etc/data-virtuality.html" />
         <area shape="rectangle" coords="2,107,229,197" dragDirection="0" href="/docs/scos/user/technology-partners/{{page.version}}/payment-partners/klarna/klarna.html" />

@@ -126,7 +126,7 @@ entries:
       - title: Building the documentation site
         url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html
       - title: Contributing to the Spryker documentation
-        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-spryker-documentation.html  
+        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-spryker-documentation.html
       - title: Reviewing pull requests
         url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/reviewing-pull-requests.html
       - title: Style, formatting, and general rules
@@ -2416,15 +2416,15 @@ entries:
         - "202009.0"
         - "202108.0"
       - title: Akeneo
-        url: /docs/scos/user/technology-partners/product-information-pimerp/akeneo/akeneo.html
+        url: /docs/scos/user/technology-partners/product-information-pimerp/akeneo.html
         include_versions:
         - "202009.0"
         - "202108.0"
         nested:
         - title: Installing and configuring Akeneo
-          url: /docs/scos/user/technology-partners/product-information-pimerp/akeneo/akeneo-installation-and-configuration.html
+          url: /docs/scos/dev/technology-partner-guides/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html
         - title: Akeneo: Console commands
-          url: /docs/scos/user/technology-partners/product-information-pimerp/akeneo/akeneo-console-commands.html
+          url: /docs/scos/dev/technology-partner-guides/product-information-pimerp/akeneo/akeneo-console-commands.html
           include_versions:
           - "202009.0"
           - "202108.0"

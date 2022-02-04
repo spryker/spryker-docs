@@ -1,16 +1,16 @@
 ---
 title: Installing and configuring Akeneo
 description: This article provides installation and configuration details for the Akeneo module in the Spryker-based project.
-last_updated: Sep 15, 2020
+last_updated: Mar 5, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v5/docs/akeneo-installation-configuration
-originalArticleId: 12ad7c8f-cfd1-4cb5-9120-60d4bccf5657
+originalLink: https://documentation.spryker.com/v4/docs/akeneo-installation-configuration
+originalArticleId: 58d95ca9-f124-41b5-9c75-bf2a805fa0d1
 redirect_from:
-  - /v5/docs/akeneo-installation-configuration
-  - /v5/docs/en/akeneo-installation-configuration
+  - /v4/docs/akeneo-installation-configuration
+  - /v4/docs/en/akeneo-installation-configuration
 related:
   - title: Akeneo
-    link: docs/scos/user/technology-partners/page.version/product-information-pimerp/akeneo/akeneo.html
+    link: docs/scos/user/technology-partners/page.version/product-information-pimerp/akeneo.html
 ---
 
 ## Installation
@@ -25,12 +25,13 @@ composer require akeneo/api-php-client:^4.0.0 spryker-eco/akeneo-pim:^1.0.0 spry
 Add `SprykerMiddleware` to your project's core namespaces:
 ```php
 $config[KernelConstants::CORE_NAMESPACES] = [
-    'SprykerShop',
-    'SprykerMiddleware',
-    'SprykerEco',
-    'Spryker',
-];
-```
+ 'SprykerShop',
+ 'SprykerMiddleware',
+ 'SprykerEco',
+ 'Spryker',
+ ];
+ ```
+
 To set up the Akeneo initial configuration, use the credentials you received from your PIM:
 ```php
 $config[AkeneoPimConstants::HOST] = '';
@@ -41,7 +42,7 @@ $config[AkeneoPimConstants::CLIENT_SECRET] = '';
 ```
 
 Next, specify your paths to the additional map files:
-```php
+```xml
 $config[AkeneoPimMiddlewareConnectorConstants::LOCALE_MAP_FILE_PATH] = APPLICATION_ROOT_DIR . '/data/import/maps/locale_map.json';
 $config[AkeneoPimMiddlewareConnectorConstants::ATTRIBUTE_MAP_FILE_PATH] = APPLICATION_ROOT_DIR . '/data/import/maps/attribute_map.json';
 $config[AkeneoPimMiddlewareConnectorConstants::SUPER_ATTRIBUTE_MAP_FILE_PATH] = APPLICATION_ROOT_DIR . '/data/import/maps/super_attribute_map.json';
@@ -60,24 +61,24 @@ $config[AkeneoPimMiddlewareConnectorConstants::TAX_SET] = 1;
 Finally, specify the locales that should be imported to shops and stores in which imported products are to be available, and specify how prices should be mapped according to locales:
 ```php
 $config[AkeneoPimMiddlewareConnectorConstants::LOCALES_FOR_IMPORT] = [
-    'de_DE',
-    'de_AT',
+ 'de_DE',
+ 'de_AT',
 ];
 $config[AkeneoPimMiddlewareConnectorConstants::ACTIVE_STORES_FOR_PRODUCTS] = [
-    'DE',
-    'AT'
+ 'DE',
+ 'AT'
 ];
 $config[AkeneoPimMiddlewareConnectorConstants::LOCALES_TO_PRICE_MAP] = [
-    'de_DE' => [
-        'currency' => 'EUR',
-        'type' => 'DEFAULT',
-        'store' => 'DE',
-    ],
-    'en_US' => [
-        'currency' => 'USD',
-        'type' => 'DEFAULT',
-        'store' => 'US',
-    ],
+ 'de_DE' => [
+ 'currency' => 'EUR',
+ 'type' => 'DEFAULT',
+ 'store' => 'DE',
+ ],
+ 'en_US' => [
+ 'currency' => 'USD',
+ 'type' => 'DEFAULT',
+ 'store' => 'US',
+ ],
 ];
 ```
 
@@ -91,13 +92,12 @@ use SprykerMiddleware\Zed\Process\Communication\Console\ProcessConsole;
 
 protected function getConsoleCommands(Container $container)
 {
-    $commands = [
-        ...
-        new ProcessConsole(),
-    ];
-    ...
- 
-    return $commands;
+ $commands = [
+ ...
+ new ProcessConsole(),
+ ];
+ ...
+ return $commands;
 }
 ```
 
@@ -114,18 +114,18 @@ use SprykerMiddleware\Zed\Process\ProcessDependencyProvider as SprykerProcessDep
 
 class ProcessDependencyProvider extends SprykerProcessDependencyProvider
 {
-    /**
-     * @return \SprykerMiddleware\Zed\Process\Dependency\Plugin\Configuration\ConfigurationProfilePluginInterface[]
-     */
-    protected function getConfigurationProfilePluginsStack(): array
-    {
-        $profileStack = parent::getConfigurationProfilePluginsStack();
-        $profileStack[] = new DefaultConfigurationProfilePlugin();
-        $profileStack[] = new AkeneoPimConfigurationProfilePlugin();
-        $profileStack[] = new DefaultAkeneoPimConfigurationProfilePlugin();
+ /**
+ * @return \SprykerMiddleware\Zed\Process\Dependency\Plugin\Configuration\ConfigurationProfilePluginInterface[]
+ */
+ protected function getConfigurationProfilePluginsStack(): array
+ {
+ $profileStack = parent::getConfigurationProfilePluginsStack();
+ $profileStack[] = new DefaultConfigurationProfilePlugin();
+ $profileStack[] = new AkeneoPimConfigurationProfilePlugin();
+ $profileStack[] = new DefaultAkeneoPimConfigurationProfilePlugin();
 
-        return $profileStack;
-    }
+ return $profileStack;
+ }
 }
 ```
 
@@ -154,17 +154,17 @@ use SprykerEco\Zed\AkeneoPimMiddlewareConnector\Dependency\Plugin\DataImporterPl
 
 class ProductAbstractDataImporterPlugin extends AbstractPlugin implements DataImporterPluginInterface
 {
-    /**
-     * @api
-     *
-     * @param array $data
-     *
-     * @return void
-     */
-    public function import(array $data): void
-    {
-        $this->getFacade()->importProductsAbstract($data);
-    }
+ /**
+ * @api
+ *
+ * @param array $data
+ *
+ * @return void
+ */
+ public function import(array $data): void
+ {
+ $this->getFacade()->importProductsAbstract($data);
+ }
 }
 ```
 
@@ -185,66 +185,66 @@ use Spryker\Zed\EventBehavior\EventBehaviorConfig;
 
 class AkeneoDataImporter implements AkeneoDataImporterInterface
 {
-    /**
-     * @var \Spryker\Zed\DataImport\Business\Model\Publisher\DataImporterPublisherInterface
-     */
-    protected $dataImporterPublisher;
+ /**
+ * @var \Spryker\Zed\DataImport\Business\Model\Publisher\DataImporterPublisherInterface
+ */
+ protected $dataImporterPublisher;
 
-    /**
-     * @var \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetStepBrokerInterface
-     */
-    protected $dataSetStepBroker;
+ /**
+ * @var \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetStepBrokerInterface
+ */
+ protected $dataSetStepBroker;
 
-    /**
-     * @var \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface
-     */
-    protected $dataSet;
+ /**
+ * @var \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface
+ */
+ protected $dataSet;
 
-    /**
-     * @var \Spryker\Zed\DataImportExtension\Dependency\Plugin\DataSetWriterPluginInterface[]
-     */
-    protected $writerPlugins;
+ /**
+ * @var \Spryker\Zed\DataImportExtension\Dependency\Plugin\DataSetWriterPluginInterface[]
+ */
+ protected $writerPlugins;
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\Publisher\DataImporterPublisherInterface $dataImporterPublisher
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetStepBrokerInterface $dataSetStepBroker
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     * @param \Spryker\Zed\DataImportExtension\Dependency\Plugin\DataSetWriterPluginInterface|array $writerPlugins
-     */
-    public function __construct(
-        DataImporterPublisherInterface $dataImporterPublisher,
-        DataSetStepBrokerInterface $dataSetStepBroker,
-        DataSetInterface $dataSet,
-        array $writerPlugins = []
-    ) {
-        $this->dataImporterPublisher = $dataImporterPublisher;
-        $this->dataSetStepBroker = $dataSetStepBroker;
-        $this->dataSet = $dataSet;
-        $this->writerPlugins = $writerPlugins;
-    }
+ /**
+ * @param \Spryker\Zed\DataImport\Business\Model\Publisher\DataImporterPublisherInterface $dataImporterPublisher
+ * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetStepBrokerInterface $dataSetStepBroker
+ * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
+ * @param \Spryker\Zed\DataImportExtension\Dependency\Plugin\DataSetWriterPluginInterface|array $writerPlugins
+ */
+ public function __construct(
+ DataImporterPublisherInterface $dataImporterPublisher,
+ DataSetStepBrokerInterface $dataSetStepBroker,
+ DataSetInterface $dataSet,
+ array $writerPlugins = []
+ ) {
+ $this->dataImporterPublisher = $dataImporterPublisher;
+ $this->dataSetStepBroker = $dataSetStepBroker;
+ $this->dataSet = $dataSet;
+ $this->writerPlugins = $writerPlugins;
+ }
 
-    /**
-     * @param array $data
-     *
-     * @return void
-     */
-    public function import(array $data): void
-    {
-        EventBehaviorConfig::disableEvent();
-        foreach ($data as $item) {
-            $this->dataSet->exchangeArray($item);
-            $this->dataSetStepBroker->execute($this->dataSet);
-            /** @var DataSetWriterPluginInterface $writerPlugin */
-            foreach ($this->writerPlugins as $writerPlugin) {
-                $writerPlugin->write($this->dataSet);
-            }
-        }
-        foreach ($this->writerPlugins as $writerPlugin) {
-            $writerPlugin->write($this->dataSet);
-        }
-        EventBehaviorConfig::enableEvent();
-        $this->dataImporterPublisher->triggerEvents();
-    }
+ /**
+ * @param array $data
+ *
+ * @return void
+ */
+ public function import(array $data): void
+ {
+ EventBehaviorConfig::disableEvent();
+ foreach ($data as $item) {
+ $this->dataSet->exchangeArray($item);
+ $this->dataSetStepBroker->execute($this->dataSet);
+ /** @var DataSetWriterPluginInterface $writerPlugin */
+ foreach ($this->writerPlugins as $writerPlugin) {
+ $writerPlugin->write($this->dataSet);
+ }
+ }
+ foreach ($this->writerPlugins as $writerPlugin) {
+ $writerPlugin->write($this->dataSet);
+ }
+ EventBehaviorConfig::enableEvent();
+ $this->dataImporterPublisher->triggerEvents();
+ }
 }
 ```
 
@@ -253,16 +253,15 @@ Implement facade methods for the `AkeneoPimMiddlewareConnector` module. Example:
 ```php
 class AkeneoPimMiddlewareConnectorFacade extends SprykerAkeneoPimMiddlewareConnectorFacade implements AkeneoPimMiddlewareConnectorFacadeInterface
 ...
-    /**
-     * @param array $data
-     */
-    public function importProductsAbstract(array $data): void
-    {
-        $this->getFactory()
-            ->createProductAbstractImporter()
-            ->import($data);
-    }
-...
+ /**
+ * @param array $data
+ */
+ public function importProductsAbstract(array $data): void
+ {
+ $this->getFactory()
+ ->createProductAbstractImporter()
+ ->import($data);
+ }
 ...
 ```
 
@@ -275,43 +274,43 @@ For better understanding, see the example of the `AkeneoDataImporter` creation f
 AkeneoPimMiddlewareConnectorBusinessFactory
 
  ```php
-...
+ ...
 class AkeneoPimMiddlewareConnectorBusinessFactory extends SprykerAkeneoPimMiddlewareConnectorBusinessFactory
 ...
 
-    /**
-     * @return \Pyz\Zed\AkeneoPimMiddlewareConnector\Business\AkeneoDataImporter\AkeneoDataImporterInterface
-     */
-    public function createProductAbstractImporter()
-    {
-        return new AkeneoDataImporter(
-            $this->createDataImporterPublisher(),
-            $this->createProductAbstractImportDataSetStepBroker(),
-            $this->createDataSet(),
-            $this->getProvidedDependency(AkeneoPimMiddlewareConnectorDependencyProvider::PRODUCT_ABSTRACT_PROPEL_WRITER_PLUGINS)
-        );
-    }
+ /**
+ * @return \Pyz\Zed\AkeneoPimMiddlewareConnector\Business\AkeneoDataImporter\AkeneoDataImporterInterface
+ */
+ public function createProductAbstractImporter()
+ {
+ return new AkeneoDataImporter(
+ $this->createDataImporterPublisher(),
+ $this->createProductAbstractImportDataSetStepBroker(),
+ $this->createDataSet(),
+ $this->getProvidedDependency(AkeneoPimMiddlewareConnectorDependencyProvider::PRODUCT_ABSTRACT_PROPEL_WRITER_PLUGINS)
+ );
+ }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface
-     */
-    public function createDataSet()
-    {
-        return new DataSet();
-    }
+ /**
+ * @return \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface
+ */
+ public function createDataSet()
+ {
+ return new DataSet();
+ }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetStepBrokerInterface
-     *
-     * @throws \Spryker\Zed\Kernel\Exception\Container\ContainerKeyNotFoundException
-     */
-    public function createProductAbstractImportDataSetStepBroker()
-    {
-        $dataSetStepBroker = new DataSetStepBroker();
-        $dataSetStepBroker->addStep(new ProductAbstractStep());
+ /**
+ * @return \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetStepBrokerInterface
+ *
+ * @throws \Spryker\Zed\Kernel\Exception\Container\ContainerKeyNotFoundException
+ */
+ public function createProductAbstractImportDataSetStepBroker()
+ {
+ $dataSetStepBroker = new DataSetStepBroker();
+ $dataSetStepBroker->addStep(new ProductAbstractStep());
 
-        return $dataSetStepBroker;
-    }
+ return $dataSetStepBroker;
+ }
 ...
 ```
 
@@ -330,35 +329,35 @@ use Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface;
 
 class ProductAbstractStep extends ProductAbstractHydratorStep
 {
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
-    protected function importProductAbstract(DataSetInterface $dataSet): void
-    {
-        $productAbstractEntityTransfer = new SpyProductAbstractEntityTransfer();
-        $productAbstractEntityTransfer->setSku($dataSet[static::KEY_ABSTRACT_SKU]);
+ /**
+ * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
+ *
+ * @return void
+ */
+ protected function importProductAbstract(DataSetInterface $dataSet): void
+ {
+ $productAbstractEntityTransfer = new SpyProductAbstractEntityTransfer();
+ $productAbstractEntityTransfer->setSku($dataSet[static::KEY_ABSTRACT_SKU]);
 
-        $productAbstractEntityTransfer
-            ->setColorCode($dataSet[static::KEY_COLOR_CODE])
-            ->setFkTaxSet($dataSet[static::KEY_TAX_ID)
-            ->setAttributes(json_encode($dataSet[static::KEY_ATTRIBUTES]))
-            ->setNewFrom($dataSet[static::KEY_NEW_FROM])
-            ->setNewTo($dataSet[static::KEY_NEW_TO]);
+ $productAbstractEntityTransfer
+ ->setColorCode($dataSet[static::KEY_COLOR_CODE])
+ ->setFkTaxSet($dataSet[static::KEY_TAX_ID)
+ ->setAttributes(json_encode($dataSet[static::KEY_ATTRIBUTES]))
+ ->setNewFrom($dataSet[static::KEY_NEW_FROM])
+ ->setNewTo($dataSet[static::KEY_NEW_TO]);
 
-        $dataSet[static::DATA_PRODUCT_ABSTRACT_TRANSFER] = $productAbstractEntityTransfer;
-    }
+ $dataSet[static::DATA_PRODUCT_ABSTRACT_TRANSFER] = $productAbstractEntityTransfer;
+ }
 
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
-    protected function importProductCategories(DataSetInterface $dataSet): void
-    {
-        $dataSet[static::DATA_PRODUCT_CATEGORY_TRANSFER] = [];
-    }
+ /**
+ * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
+ *
+ * @return void
+ */
+ protected function importProductCategories(DataSetInterface $dataSet): void
+ {
+ $dataSet[static::DATA_PRODUCT_CATEGORY_TRANSFER] = [];
+ }
 }
 ```
 
@@ -371,16 +370,16 @@ For attributes and categories, Spryker has implemented writer steps, so no plugi
 AkeneoPimMiddlewareConnectorBusinessFactory
 
  ```php
-/**
+ /**
  * @return \Pyz\Zed\AkeneoPimMiddlewareConnector\Business\AkeneoDataImporter\AkeneoDataImporterInterface
  */
 public function createCategoryImporter(): AkeneoDataImporterInterface
 {
-    return new AkeneoDataImporter(
-        $this->createDataImporterPublisher(),
-        $this->createCategoryImportDataSetStepBroker(),
-        $this->createDataSet()
-    );
+ return new AkeneoDataImporter(
+ $this->createDataImporterPublisher(),
+ $this->createCategoryImportDataSetStepBroker(),
+ $this->createDataSet()
+ );
 }
 
 /**
@@ -388,10 +387,10 @@ public function createCategoryImporter(): AkeneoDataImporterInterface
  */
 public function createCategoryImportDataSetStepBroker()
 {
-    $dataSetStepBroker = new DataSetStepBroker();
-    $dataSetStepBroker->addStep($this->createCategoryWriteStep());
+ $dataSetStepBroker = new DataSetStepBroker();
+ $dataSetStepBroker->addStep($this->createCategoryWriteStep());
 
-    return $dataSetStepBroker;
+ return $dataSetStepBroker;
 }
 
 /**
@@ -399,7 +398,7 @@ public function createCategoryImportDataSetStepBroker()
  */
 public function createCategoryWriteStep()
 {
-    return new CategoryWriterStep($this->createCategoryReader());
+ return new CategoryWriterStep($this->createCategoryReader());
 }
 
 /**
@@ -407,7 +406,7 @@ public function createCategoryWriteStep()
  */
 public function createCategoryReader(): CategoryReader
 {
-    return new CategoryReader();
+ return new CategoryReader();
 }
 ```
 
@@ -415,22 +414,22 @@ The example demonstrates how you can skip adding plugins for writing data to the
 
 Product import is a more complex operation, so Spryker provides bulk insertion plugins for that. They are faster than the writer steps.
 
-You can use the existing plugins or create your own. The right way to add external plugins is to use dependency providers. We have two types of writer plugins: Propel plugins and PDO plugins. Check the examples for both of them below.
+You can use the existing plugins or create your own. The right way to add external plugins is to use dependency providers. We have two types of writer plugins: Propel plugins and PDO plugins. Check the examples for both of them below.
 
 AkeneoPimMiddlewareConnectorBusinessFactory
 
  ```php
-/**
+ /**
  * @return \Pyz\Zed\AkeneoPimMiddlewareConnector\Business\AkeneoDataImporter\AkeneoDataImporterInterface
  */
 public function createProductAbstractImporter()
 {
-    return new AkeneoDataImporter(
-        $this->createDataImporterPublisher(),
-        $this->createProductAbstractImportDataSetStepBroker(),
-        $this->createDataSet(),
-        $this->getProvidedDependency(AkeneoPimMiddlewareConnectorDependencyProvider::PRODUCT_ABSTRACT_PROPEL_WRITER_PLUGINS)
-    );
+ return new AkeneoDataImporter(
+ $this->createDataImporterPublisher(),
+ $this->createProductAbstractImportDataSetStepBroker(),
+ $this->createDataSet(),
+ $this->getProvidedDependency(AkeneoPimMiddlewareConnectorDependencyProvider::PRODUCT_ABSTRACT_PROPEL_WRITER_PLUGINS)
+ );
 }
 ```
 
@@ -440,23 +439,23 @@ AkeneoPimMiddlewareConnectorDependencyProvider
  ...
 class AkeneoPimMiddlewareConnectorDependencyProvider extends SprykerAkeneoPimMiddlewareConnectorDependencyProvider
 {
-    public const PRODUCT_ABSTRACT_PROPEL_WRITER_PLUGINS = 'PRODUCT_ABSTRACT_PROPEL_WRITER_PLUGINS';
+ public const PRODUCT_ABSTRACT_PROPEL_WRITER_PLUGINS = 'PRODUCT_ABSTRACT_PROPEL_WRITER_PLUGINS';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
-    protected function addProductAbstractPropelWriterPlugins(Container $container): Container
-    {
-        $container[static::PRODUCT_ABSTRACT_PROPEL_WRITER_PLUGINS] = function () {
-            return [
-                new ProductAbstractPropelWriterPlugin(),
-            ];
-        };
+ /**
+ * @param \Spryker\Zed\Kernel\Container $container
+ *
+ * @return \Spryker\Zed\Kernel\Container
+ */
+ protected function addProductAbstractPropelWriterPlugins(Container $container): Container
+ {
+ $container[static::PRODUCT_ABSTRACT_PROPEL_WRITER_PLUGINS] = function () {
+ return [
+ new ProductAbstractPropelWriterPlugin(),
+ ];
+ };
 
-        return $container;
-    }
+ return $container;
+ }
 
 ...
 }
@@ -476,14 +475,14 @@ AkeneoPimMiddlewareConnectorDependencyProvider
  */
 protected function addProductAbstractPropelWriterPlugins(Container $container): Container
 {
-    $container[static::PRODUCT_ABSTRACT_PROPEL_WRITER_PLUGINS] = function () {
-        return [
-            new ProductAbstractPropelWriterPlugin(),
-            new ProductAbstractStorePropelWriterPlugin(),
-        ];
-    };
+ $container[static::PRODUCT_ABSTRACT_PROPEL_WRITER_PLUGINS] = function () {
+ return [
+ new ProductAbstractPropelWriterPlugin(),
+ new ProductAbstractStorePropelWriterPlugin(),
+ ];
+ };
 
-    return $container;
+ return $container;
 }
 ```
 
@@ -534,4 +533,3 @@ The section below explains how Spryker treats multi-select attribues from Akeneo
 
 1. On a project level, you can change `DefaultProductImportDictionary` instead of using the `EnrichAttributes` translator function or extending it.
 2. Price attributes (`pim_catalog_price_collection`), except the one with `attribute_key = 'price'`, are skipped. For correct import, products should contain an attribute with `attribute_type pim_catalog_price_collection` and `attribute_key 'price'`. 
-

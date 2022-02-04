@@ -1,16 +1,16 @@
 ---
 title: Installing and configuring Akeneo
 description: This article provides installation and configuration details for the Akeneo module in the Spryker-based project.
-last_updated: May 19, 2020
+last_updated: Jul 31, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v1/docs/akeneo-installation-configuration
-originalArticleId: 26ad93ae-58cf-484c-800c-b99ee756ef0b
+originalLink: https://documentation.spryker.com/v2/docs/akeneo-installation-configuration
+originalArticleId: 3437d1fa-af82-43a5-9e58-33db10e4366a
 redirect_from:
-  - /v1/docs/akeneo-installation-configuration
-  - /v1/docs/en/akeneo-installation-configuration
+  - /v2/docs/akeneo-installation-configuration
+  - /v2/docs/en/akeneo-installation-configuration
 related:
   - title: Akeneo
-    link: docs/scos/user/technology-partners/page.version/product-information-pimerp/akeneo/akeneo.html
+    link: docs/scos/user/technology-partners/page.version/product-information-pimerp/akeneo.html
 ---
 
 ## Installation

@@ -17,15 +17,15 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Spryker Core | master |
-| Order Management | master |
-| Persistent Cart | master |
+| Spryker Core | {{page.version}} |
+| Order Management | {{page.version}} |
+| Persistent Cart | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/custom-order-reference: "master" --update-with-dependencies
+composer require spryker-feature/custom-order-reference: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -178,16 +178,16 @@ Please overview and install the necessary features before beginning the integrat
 
 | Name | Version |
 | --- | --- |
-| Spryker Core | master |
-| Cart | master |
-| Checkout | master |
-| Customer Account Management | master |
+| Spryker Core | {{page.version}} |
+| Cart | {{page.version}} |
+| Checkout | {{page.version}} |
+| Customer Account Management | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/custom-order-reference: "master" --update-with-dependencies
+composer require spryker-feature/custom-order-reference: "{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

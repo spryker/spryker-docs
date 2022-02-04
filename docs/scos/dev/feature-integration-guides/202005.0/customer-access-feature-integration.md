@@ -18,14 +18,14 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 |---|---|
-| Spryker Core | master |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/customer-access:"^master" --update-with-dependencies 
+composer require spryker-feature/customer-access:"^{{page.version}}" --update-with-dependencies 
 ```
 
 {% info_block warningBox "Verification" %}
@@ -326,7 +326,7 @@ Overview and install the necessary features before beginning the integration ste
 
 | Name | Version |
 |---|---|
-| Spryker Core | master |
+| Spryker Core | {{page.version}} |
 
 ### 1) Add Translations
 Append glossary according to your configuration:

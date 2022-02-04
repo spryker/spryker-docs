@@ -12,11 +12,11 @@ related:
   - title: Klarna
     link: docs/scos/user/technology-partners/page.version/payment-partners/klarna.html
   - title: Klarna payment workflow
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/klarna/technical-details-and-howtos/klarna-payment-workflow.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/klarna/klarna-payment-workflow.html
   - title: Klarna - Part Payment Flexible
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/klarna/technical-details-and-howtos/klarna-part-payment-flexible.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/klarna/klarna-part-payment-flexible.html
   - title: Klarna state machine commands and conditions
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/klarna/technical-details-and-howtos/klarna-state-machine-commands-and-conditions.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/klarna/klarna-state-machine-commands-and-conditions.html
 ---
 
 ## Payment Workflow Scenarios

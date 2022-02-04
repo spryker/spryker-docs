@@ -1,5 +1,5 @@
 ---
-title: Company Account and General Organizational Structure
+title: Company Accounts overview
 description: In the context of permissions management, the top level of a B2B business model hierarchy is a Company. Each company has its organizational structure.
 last_updated: Dec 21, 2019
 template: concept-topic-template

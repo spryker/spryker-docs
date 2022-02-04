@@ -1,5 +1,5 @@
 ---
-title: Cart- Non-Splittable Products feature integration
+title: Cart- Non-splittable Products feature integration
 description: The guide describes the process of installing the Cart and Non-Splittable Products features into your project
 last_updated: Dec 24, 2019
 template: feature-integration-guide-template

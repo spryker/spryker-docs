@@ -55,7 +55,7 @@ Check multiple log groups via Logs Insights as follows. Select the log groups co
 ![retry_run_pre-deploy_hook]
 
 5. If the step fails, recheck the `PRE_BUILD State` by following steps 1 to 3.
-  If the state is `FAILED`, [check the script of the step](/docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-a-failed-deployment.md#2-check-the-script-of-the-step)
+  If the state is `FAILED`, follow the steps in the later section. 
 
 
 ### 2. Check the script of the step

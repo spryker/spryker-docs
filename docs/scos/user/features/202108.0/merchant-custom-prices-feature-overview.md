@@ -11,7 +11,7 @@ redirect_from:
   - /docs/merchant-custom-prices-feature-overview
   - /docs/en/merchant-custom-prices-feature-overview
 related:
-  - title: 'HowTo: Manage merchant custom prices for products via data import'
+  - title: "HowTo: Manage merchant custom prices for products via data import"
 		link: docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/how-to-manage-merchant-custom-prices-for-products-via-data-import.html
 ---
 

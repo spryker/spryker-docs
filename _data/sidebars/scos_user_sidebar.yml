@@ -125,6 +125,10 @@ entries:
       nested:
       - title: Building the documentation site
         url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html
+      - title: Contributing to the Spryker documentation
+        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-spryker-documentation.html  
+      - title: Reviewing pull requests
+        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/reviewing-pull-requests.html
       - title: Style, formatting, and general rules
         url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html
       - title: Markdown syntax
@@ -855,7 +859,7 @@ entries:
           - "202005.0"
           - "202009.0"
           nested:
-          - title: Reference information - Orders 
+          - title: Reference information - Orders
             url: /docs/scos/user/back-office-user-guides/sales/orders/references/reference-information-orders.html
             include_versions:
             - "201811.0"
@@ -1396,7 +1400,7 @@ entries:
             - "201907.0"
             - "202001.0"
             - "202005.0"
-            - "202009.0" 
+            - "202009.0"
       - title: Pages
         nested:
         - title: Creating CMS pages
@@ -1459,7 +1463,7 @@ entries:
           - "202005.0"
           - "202009.0"
           nested:
-          - title: Reference information - Navigation 
+          - title: Reference information - Navigation
             url: /docs/scos/user/back-office-user-guides/content/navigation/references/reference-information-navigation.html
             include_versions:
             - "201811.0"
@@ -1619,7 +1623,7 @@ entries:
             - "201907.0"
             - "202001.0"
             - "202005.0"
-            - "202009.0"      
+            - "202009.0"
       - title: Product relations
         nested:
         - title: Creating product relations
@@ -1838,7 +1842,7 @@ entries:
           - "202005.0"
           - "202009.0"
           nested:
-          - title: Reference information - Warehouses 
+          - title: Reference information - Warehouses
             url: /docs/scos/user/back-office-user-guides/administration/warehouses/references/reference-information-warehouses.html
             include_versions:
             - "202001.0"
@@ -2230,18 +2234,7 @@ entries:
       - title: Computop
         url: /docs/scos/user/technology-partners/payment-partners/computop.html
       - title: Klarna
-        url: /docs/scos/user/technology-partners/payment-partners/klarna/klarna.html
-        nested:
-        - title: Technical details and HowTos
-          nested:
-          - title: Klarna - Payment Workflow
-            url: /docs/scos/user/technology-partners/payment-partners/klarna/technical-details-and-howtos/klarna-payment-workflow.html
-          - title: Klarna - Part Payment Flexible
-            url: /docs/scos/user/technology-partners/payment-partners/klarna/technical-details-and-howtos/klarna-part-payment-flexible.html
-          - title: Klarna - State Machine Commands and Conditions
-            url: /docs/scos/user/technology-partners/payment-partners/klarna/technical-details-and-howtos/klarna-state-machine-commands-and-conditions.html
-          - title: Klarna - Invoice Pay in 14 days
-            url: /docs/scos/user/technology-partners/payment-partners/klarna/technical-details-and-howtos/klarna-invoice-pay-in-14-days.html
+        url: /docs/scos/user/technology-partners/payment-partners/klarna.html
       - title: Heidelpay
         url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay.html
         include_versions:

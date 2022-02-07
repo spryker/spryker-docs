@@ -1,5 +1,5 @@
 ---
-title: Media Management
+title: File Manager feature overview
 description: Reduce your bounce rate and create an enhanced shopping experience by providing impactful visuals while simultaneously maintaining fast response times.
 last_updated: May 19, 2020
 template: concept-topic-template

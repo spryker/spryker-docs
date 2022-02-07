@@ -1,5 +1,5 @@
 ---
-title: Customer Account Management
+title: Customer Account Management feature overview
 description: Let your customers create an account to save their contact details, addresses, order history and preferences, such as language and shipping options.
 last_updated: Jun 16, 2021
 template: concept-topic-template

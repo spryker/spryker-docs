@@ -1,5 +1,5 @@
 ---
-title: Store API feature integration
+title: Glue API - Store feature integration
 last_updated: Nov 22, 2019
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/store-api-feature-integration

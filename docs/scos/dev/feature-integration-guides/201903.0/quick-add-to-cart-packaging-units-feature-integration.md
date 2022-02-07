@@ -1,5 +1,5 @@
 ---
-title: Quick Order- Packaging Units feature integration
+title: Quick Add to Cart + Packaging Units feature integration
 description: Quick Add to Cart + Packaging Units allow buying products in different packaging units. This guide describes how to integrate this feature into your project.
 last_updated: Nov 22, 2019
 template: feature-integration-guide-template

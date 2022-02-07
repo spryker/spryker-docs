@@ -1,5 +1,5 @@
 ---
-title: Product bundles + return management feature integration
+title: Product Bundles + Return Management feature integration
 description: This guide provides step-by-step instructions on integrating Product Bundles + Return Management feature into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template

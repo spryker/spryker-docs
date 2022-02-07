@@ -6,7 +6,7 @@ template: concept-topic-template
 ---
 This document describes how to upgrade all the modules to the latest versions.
 
-## Prerequisites
+## GitHub prerequisites
 
 To start working with the upgrader tool, do the following:
 
@@ -40,6 +40,9 @@ To start working with the upgrader tool, do the following:
 ```bash
 docker/sdk cli
 ```
+
+## How do I configure the upgrader tool to work with GitLab?
+
 
 ## Install the upgrader tool
 

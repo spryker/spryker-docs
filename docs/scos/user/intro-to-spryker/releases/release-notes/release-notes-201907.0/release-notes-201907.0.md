@@ -257,7 +257,7 @@ We have extended our Payone module with the cash-on-delivery payment method. Thi
 ### Heidelpay Easycredit
 We have extended our existing Heidelpay module with the payment method Easycredit, which allows customers to pay via an installment plan. This can help to increase your conversion rates of more expensive products and services.
 
-**Documentation**: [Integrating the Easy Credit payment method for Heidelpay](/docs/scos/user/technology-partners/201907.0/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-easy-credit-payment-method-for-heidelpay.html)
+**Documentation**: [Integrating the Easy Credit payment method for Heidelpay](/docs/scos/dev/technology-partner-guides/{{site.version}}/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-easy-credit-payment-method-for-heidelpay.html)
 
 ### RatePay
 We have extended our partner portfolio with a RatePay integration that offers 4 payment methods out-of-the-box:

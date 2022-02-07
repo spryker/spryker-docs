@@ -6,7 +6,7 @@ template: howto-guide-template
 
 {% info_block warningBox "B2B only" %}
 
-You can apply the approaches described in this article only if your project follows the B2B model, as the [merchant custom prices](https://docs.spryker.com/docs/scos/user/features/202108.0/merchant-custom-prices-feature-overview.html) is only the B2B feature. Also, keep in mind that these approaches don't work for the Marketplace product offers.
+You can apply the approaches described in this article only if your project follows the B2B model, as the [merchant custom prices](https://docs.spryker.com/docs/scos/user/features/{{site.version}}/merchant-custom-prices-feature-overview.html) is only the B2B feature. Also, keep in mind that these approaches don't work for the Marketplace product offers.
 
 {% endinfo_block %}
 
@@ -32,7 +32,7 @@ To assign special product prices to merchants, you can do the following:
 3. Create a separate data import .CSV files for each merchant relationship. For example, you could have a file `price-product-merchant-relationship-mr001.csv`, where `mr001` is the merchant relation key you defined in the previous step. In this file, you would then specify product prices for this specific merchant.
 4. Then, you can do one of the following:
 - Set specific default prices for this merchant manually.
-That means, if you provide say 20% discount on a product for merchant relation `mr001` and change the default price for the product in the [product price file](https://docs.spryker.com/docs/scos/dev/data-import/202108.0/data-import-categories/catalog-setup/pricing/file-details-product-price.csv.html), you would have to go to the `price-product-merchant-relationship-mr001.csv` file and change the price for this merchant as well. Because changing the general default product price does not automatically change the merchant custom price for this product. Thus, with every change of the default product price, you have to manually change the every merchant custom price of this product.
+That means, if you provide say 20% discount on a product for merchant relation `mr001` and change the default price for the product in the [product price file](https://docs.spryker.com/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/pricing/file-details-product-price.csv.html), you would have to go to the `price-product-merchant-relationship-mr001.csv` file and change the price for this merchant as well. Because changing the general default product price does not automatically change the merchant custom price for this product. Thus, with every change of the default product price, you have to manually change the every merchant custom price of this product.
 This option can work for a relatively small amount of products and merchants you provide the specific prices for. For big amount of this data, to avoid too much manual work, we recommend considering the next option.
 - Create a custom script that would automatically adjust merchant-specific prices upon the default price change.
 In your ERP, you might have the base, or default price, defined along with the percentage of discount for your merchants. The script would handle the relation between the default price and the discount for merchants to define the specific price for the merchants. 

@@ -1,5 +1,5 @@
 ---
-title: Reference information- concrete product
+title: Reference information - concrete product
 description: Use this section to learn more about the attributes you use when creating or updating product variants in the Back Office.
 last_updated: Feb 24, 2021
 template: back-office-user-guide-template

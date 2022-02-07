@@ -41,7 +41,7 @@ redirect_from:
   - /v4/docs/installation-guide-b2c
   - /v4/docs/en/installation-guide-b2c
   - /v4/docs/installation-guide-b2b
-  - /v4/docs/en/installation-guide-b2b  - 
+  - /v4/docs/en/installation-guide-b2b  -
   - /2021080/docs/installation-guide-b2c
   - /2021080/docs/en/installation-guide-b2c
   - /docs/installation-guide-b2c
@@ -134,7 +134,7 @@ To configure and customize your Spryker Commerce OS, do the following:
 
 Before you start developing, set up and get to know your debugging environment. To learn how to configure debugging, see one of the following:
 * [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html)
-* [Configuring debugging in Vagrant](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-vagrant.html)
+* [Configuring debugging in DevVM](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-devvm.html)
 
 {% info_block infoBox %}
 In a production setup, Zed must be covered with a VPN, Basic Auth or IP whitelisting.

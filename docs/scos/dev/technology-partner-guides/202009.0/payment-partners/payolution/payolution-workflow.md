@@ -21,7 +21,7 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-performing-requests.html
 ---
 
-Both [invoice](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/payolution/payolution-payment-methods/payolution-invoice-payment.html) and [installment](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/payolution/payolution-payment-methods/payolution-installment-payment.html) payemnt methods utilize the same request flow. It basically consists of the following requests:
+Both [invoice](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/payolution/integrating-the-invoice-payment-method-for-payolution.html) and [installment](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/payolution/integrating-the-installment-payment-method-for-payolution.html) payemnt methods utilize the same request flow. It basically consists of the following requests:
 
 * Calculation (for installment only): to calculate the installment amounts, dues, and durations.
 * Pre-check (optional): to check the user information in order to make sure that all the needed information is correct before doing the actual pre-authorization.
@@ -33,4 +33,4 @@ Both [invoice](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment
 
 ![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Payolution/payolution-workflow.png)  
 
-See Payolution - [Performing Requests](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/payolution/technical-details-and-howtos/payolution-performing-requests.html) for detailed information on the requests.
+See Payolution - [Performing Requests](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/payolution/payolution-performing-requests.html) for detailed information on the requests.

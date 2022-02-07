@@ -1,5 +1,5 @@
 ---
-title: B2B or B2C Demo Shop installation- Mac OS or Linux, with Development Virtual Machine
+title: Installing Spryker with DevVM on MacOS and Linux
 description: This article provides step-by-step instructions on the B2B or B2C Demo Shop installation on Mac OS or Linux with Development Virtual Machine.
 last_updated: Oct 18, 2021
 template: howto-guide-template
@@ -31,9 +31,10 @@ redirect_from:
   - /v1/docs/installation-guide-b2c
   - /v1/docs/en/installation-guide-b2c
   - /docs/b2c-demo-shop-installation-mac-os-or-linux-with-devvm
+  - /docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-mac-os-or-linux-with-development-virtual-machine.html
 ---
 
-To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html) or [B2C](/docs/scos/user/intro-to-spryker/b2c-suite.html) implementations on Mac OS or Linux with Development Virtual Machine, follow the steps below.
+To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html) or [B2C](/docs/scos/user/intro-to-spryker/b2c-suite.html) implementations on MacOS or Linux with development virtual machine (DevVM), follow the steps below.
 
 ### 1. Install prerequisites
 

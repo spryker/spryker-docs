@@ -1,5 +1,5 @@
 ---
-title: Virtual Machine Cleanup
+title: Cleaning up DevVM
 description: If you need to cleanup the environment set up in the virtual machine, you can either do this by running a script or execute the cleanup steps manually.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,11 +22,12 @@ redirect_from:
   - /v2/docs/en/vm-cleanup
   - /v1/docs/vm-cleanup
   - /v1/docs/en/vm-cleanup
+  - /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/virtual-machine-cleanup.html
 ---
 
 <!-- Used to be: http://spryker.github.io/getting-started/installation/virtual-machine-cleanup/ -->
 
-If you need to cleanup the environment set up in the virtual machine, you can either do this by running a script or execute the cleanup steps manually.
+If you need to cleanup the environment set up in the DevVM, you can either do this by running a script or execute the cleanup steps manually.
 
 ## VM Cleanup - Automatic
 To cleanup the VM:

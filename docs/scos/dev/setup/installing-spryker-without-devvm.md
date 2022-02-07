@@ -1,5 +1,5 @@
 ---
-title: B2B or B2C Demo Shop installation- without Development Virtual Machine
+title: Installing Spryker without DevVM
 description: Learn how to install a B2B or a B2C Demo Shop without the Development Virtual Machine
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -18,9 +18,10 @@ redirect_from:
   - /v4/docs/en/b2b-demo-shop-installation-without-development-virtual-machine
   - /v4/docs/b2c-demo-shop-installation-without-development-virtual-machine
   - /v4/docs/en/b2c-demo-shop-installation-without-development-virtual-machine
+  - /docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-without-development-virtual-machine.html
 ---
 
-To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html) or [B2C](/docs/scos/user/intro-to-spryker/b2c-suite.html) implementations without the Development Virtual Machine, follow the steps below.
+To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html) or [B2C](/docs/scos/user/intro-to-spryker/b2c-suite.html) implementations without the development virtual machine (DevVM), follow the steps below.
 
 ### Minimum requirements
 

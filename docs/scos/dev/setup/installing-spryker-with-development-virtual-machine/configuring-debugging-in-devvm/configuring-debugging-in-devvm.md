@@ -1,5 +1,5 @@
 ---
-title: Configuring debugging in Vagrant
+title: Configuring debugging in DevVM
 description: This article describes how to setup debugging in your development environment.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,13 +22,14 @@ redirect_from:
   - /v2/docs/en/debugging-setup
   - /v1/docs/debugging-setup
   - /v1/docs/en/debugging-setup
+  - /docs/scos/dev/setup/installing-spryker-with-vagrant/debugger-configuration/configuring-debugging-in-vagrant.html
 ---
 
 This article describes how to configure debugging in your development environment.
 
 {% info_block warningBox %}
 
-To configure debugging for the VM below version 91, see [Configuring debugging in Vagrant with VM below version 91](/docs/scos/dev/setup/installing-spryker-with-vagrant/debugger-configuration/configuring-debugging-in-vagrant-with-vm-below-version-91.html).
+To configure debugging for the VM below version 91, see [Configuring debugging in Vagrant with VM below version 91](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-vagrant-with-vm-below-version-91.html).
 
 {% endinfo_block %}
 

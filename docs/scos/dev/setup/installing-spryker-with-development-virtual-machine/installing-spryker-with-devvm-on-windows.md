@@ -1,5 +1,5 @@
 ---
-title: B2B or B2C Demo Shop installation- Windows, with Development Virtual Machine
+title: Installing Spryker with DevVM on Windows
 description: Learn how to install a B2B or a B2C Demo Shop B2B or B2C Demo Shop on Windows, with Development Virtual Machine
 last_updated: Oct 18, 2021
 template: howto-guide-template
@@ -19,10 +19,11 @@ redirect_from:
   - /v4/docs/b2c-demo-shop-installation-windows-with-development-virtual-machine
   - /v4/docs/en/b2c-demo-shop-installation-windows-with-development-virtual-machine
   - /docs/b2c-demo-shop-installation-windows-with-development-virtual-machine
+  - /docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-windows-with-development-virtual-machine.html
 
 ---
 
-To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html) or [B2C](/docs/scos/user/intro-to-spryker/b2c-suite.html) implementations on Windows, with Development Virtual Machine, follow the steps below.
+To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html) or [B2C](/docs/scos/user/intro-to-spryker/b2c-suite.html) implementations on Windows with development virtual machine (DevVM), follow the steps below.
 
 ### 1. Install prerequisites
 

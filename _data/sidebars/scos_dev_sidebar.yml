@@ -3886,6 +3886,8 @@ entries:
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html
           - title: HowTo - Import Packaging Units
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-packaging-units.html
+          - title: 'HowTo: Manage merchant custom prices for products via data import'
+            url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/how-to-manage-merchant-custom-prices-for-products-via-data-import.html
         - title: HowTo - Generate a Token for Login
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html
         - title: HowTo - Use Blocks

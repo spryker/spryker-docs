@@ -33,7 +33,7 @@ related:
 
 {% info_block errorBox %}
 
-Heidelpay is not compatible with [gift cards](/docs/scos/dev/feature-walkthroughs/{page.version}/gift-cards-feature-walkthrough.html). We are working on a solution.
+Heidelpay is not compatible with [gift cards](/docs/scos/dev/feature-walkthroughs/{{page.version}}/gift-cards-feature-walkthrough.html). We are working on a solution.
 
 {% endinfo_block %}
 

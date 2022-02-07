@@ -9,7 +9,7 @@ redirect_from:
   - /v6/docs/akeneo
   - /v6/docs/en/akeneo
 related:
-  - title: Akeneo: Console commands
+  - title: Akeneo — Console commands
     link: docs/scos/user/technology-partners/page.version/product-information-pimerp/akeneo/akeneo-console-commands.html
   - title: Installing and configuring Akeneo
     link: docs/scos/user/technology-partners/page.version/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html

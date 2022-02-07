@@ -4348,7 +4348,7 @@ entries:
         nested:
         - title: Installing and configuring Akeneo
           url: /docs/scos/dev/technology-partner-guides/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html
-        - title: Akeneo: Console commands
+        - title: Akeneo — Console commands
           url: /docs/scos/dev/technology-partner-guides/product-information-pimerp/akeneo/akeneo-console-commands.html
           include_versions:
           - "202009.0"

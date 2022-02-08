@@ -1,19 +1,19 @@
 ---
-title: Amazon Pay - Configuration for the SCOS
+title: Configuring Amazon Pay
 description: Configure and integrate Amazon Pay into the Spryker Commerce OS by following the instructions from this article.
 last_updated: Jan 27, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v1/docs/amazon-pay-configuration-scos
-originalArticleId: 99fa3a6b-4fa9-45c0-8d55-fa45e89f2b27
+originalLink: https://documentation.spryker.com/v4/docs/amazon-pay-configuration-scos
+originalArticleId: d208efd7-e041-4e4f-a216-494c96764592
 redirect_from:
-  - /v1/docs/amazon-pay-configuration-scos
-  - /v1/docs/en/amazon-pay-configuration-scos
+  - /v4/docs/amazon-pay-configuration-scos
+  - /v4/docs/en/amazon-pay-configuration-scos
 related:
   - title: Amazon Pay - Obtaining an Amazon Order Reference and Information About Shipping Addresses
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/scos-integration/amazon-pay-obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
   - title: Amazon Pay - Refund
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-refund.html
-  - title: Amazon Pay - API
+  - title: Amazon Pay API
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/scos-integration/amazon-pay-api.html
   - title: Amazon Pay - Sandbox Simulations
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-sandbox-simulations.html
@@ -21,7 +21,7 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-rendering-a-pay-with-amazon-button-on-the-cart-page.html
   - title: Amazon Pay - Sandbox Simulations
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/scos-integration/amazon-pay-sandbox-simulations.html
-  - title: Amazon Pay - API
+  - title: Amazon Pay API
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-api.html
   - title: Amazon Pay - Email Notifications
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-email-notifications.html
@@ -32,7 +32,9 @@ related:
 ---
 
 {% info_block infoBox "Note" %}
+
 Please refer to `config/Shared/config.dist.php` for the module configuration example.
+
 {% endinfo_block %}
 
 

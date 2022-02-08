@@ -64,7 +64,7 @@ Computop PSP integration supports PSD2. For CreditCard and PayNow payment method
 
 Push notifications speed up order placement process for customers. They allow to place orders regardless of the authorization of cards or money transfer for payment methods such as Sofortüberweisung or IDeal. After a customer places an order, they are redirected to the checkout success page. When authorization or money transfer is complete, Computop notifies the shop via a push notification. Order status is updated according to the push notification and the order moves forward in the state machine.
 
-## Related Developer articles
+## Related Developer guides
 
 * [Integrating Computop](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/computop/integrating-computop.html)
 * [Installing and configuring Computop](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/computop/installing-and-configuring-computop.html)

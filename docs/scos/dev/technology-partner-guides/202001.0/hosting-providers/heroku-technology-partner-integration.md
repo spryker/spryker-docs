@@ -1,5 +1,5 @@
 ---
-title: Heroku technology partner integration
+title: Integrating Heroku
 last_updated: Jan 25, 2020
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/hosting-provider-continum-1

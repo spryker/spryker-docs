@@ -38,7 +38,7 @@ Unlike other pay-after-delivery providers we keep you informed of your customers
 * Easy access to refund data lets you segment customers after net sales together with their payment behaviour
 
 
-## Related Developer articles
+## Related Developer guides
 
 * [Installing and configuring Afterpay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/afterpay/installing-and-configuring-afterpay.html)
 * [Integrating Afterpay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/afterpay/integrating-afterpay.html)

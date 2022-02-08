@@ -53,7 +53,7 @@ RatePAY provides four methods of payment
 * Direct Debit (ELV)
 * Installment
 
-## Related Developer articles
+## Related Developer guides
 
 * [RatePay Core module structure diagram](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratepay/ratepay-core-module-structure-diagram.html)
 * [RatePay state machines](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratepay/ratepay-state-machines.html)

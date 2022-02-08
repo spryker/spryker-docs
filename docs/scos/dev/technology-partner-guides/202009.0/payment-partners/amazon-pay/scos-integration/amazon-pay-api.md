@@ -1,5 +1,5 @@
 ---
-title: Amazon Pay - API
+title: Amazon Pay API
 description: This article provides details on the API structure of the Amazon Pay module in Spryker Commerce OS.
 last_updated: Aug 27, 2020
 template: concept-topic-template
@@ -9,7 +9,7 @@ redirect_from:
   - /v6/docs/amazon-pay-api
   - /v6/docs/en/amazon-pay-api
 related:
-  - title: Amazon Pay - Configuration for the SCOS
+  - title: Configuring Amazon Pay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/scos-integration/amazon-pay-configuration-for-the-scos.html
   - title: Amazon Pay - State Machine
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/scos-integration/amazon-pay-state-machine.html

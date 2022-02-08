@@ -1,17 +1,15 @@
 ---
-title: Amazon Pay - Configuration for the SCOS
+title: Configuring Amazon Pay
 description: Configure and integrate Amazon Pay into the Spryker Commerce OS by following the instructions from this article.
-last_updated: Jun 16, 2021
+last_updated: Mar 5, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/amazon-pay-configuration-scos
-originalArticleId: d1f60f40-489d-4942-aba1-6439efcdbc47
+originalLink: https://documentation.spryker.com/v6/docs/amazon-pay-configuration-scos
+originalArticleId: e5eeeb03-9c0a-43cb-ac59-82c90661af07
 redirect_from:
-  - /2021080/docs/amazon-pay-configuration-scos
-  - /2021080/docs/en/amazon-pay-configuration-scos
-  - /docs/amazon-pay-configuration-scos
-  - /docs/en/amazon-pay-configuration-scos
+  - /v6/docs/amazon-pay-configuration-scos
+  - /v6/docs/en/amazon-pay-configuration-scos
 related:
-  - title: Amazon Pay - API
+  - title: Amazon Pay API
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/scos-integration/amazon-pay-api.html
   - title: Amazon Pay - State Machine
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/scos-integration/amazon-pay-state-machine.html
@@ -28,9 +26,7 @@ There is currently an issue when using giftcards with Amazon Pay. Our team is de
 {% endinfo_block %}
 
 {% info_block infoBox "Note" %}
-
 Please refer to `config/Shared/config.dist.php` for the module configuration example.
-
 {% endinfo_block %}
 
 
@@ -69,6 +65,7 @@ $config[AmazonPayConstants::SANDBOX] = true;
 The `ERROR_REPORT_LEVEL` parameter is used for internal purposes and specifies the log verbosity level.
 
 There are three options:
+
 1. Log all API responses.
 2. Log errors only.
 3. Disable logging.
@@ -206,13 +203,13 @@ To make Spryker Eco themes usable, add the following line into the function `add
 $paths[] = APPLICATION_VENDOR_DIR . '/spryker-eco/%1$s/src/SprykerEco/Yves/%1$s/Theme/' . $themeName;
 ```
 
-In the section **include** of `tsconfig.json`, add the following:
+In the section <b>include</b> of `tsconfig.json`, add the following:
 
 ```php
 "./vendor/spryker-eco/**/*",
 ```
 
-In the section **paths** of `frontend/settings.js`, add the following:
+In the section <b>paths</b> of `frontend/settings.js`, add the following:
 
 ```php
 // eco folders
@@ -222,13 +219,13 @@ eco: {
 },
 ```
 
-In the section **module.exports** property **dirs** of `frontend/settings.js` add the following:
+In the section <b>module.exports</b> property <b>dirs</b> of `frontend/settings.js` add the following:
 
 ```php
 path.join(context, paths.eco.modules),
 ```
 
-No matter how many **SprykerEco** modules you are using, these changes are required to be made only once.
+No matter how many <b>SprykerEco</b> modules you are using, these changes are required to be made only once.
 
 Make sure to rebuild front-end script by running `npm run yves`.
 

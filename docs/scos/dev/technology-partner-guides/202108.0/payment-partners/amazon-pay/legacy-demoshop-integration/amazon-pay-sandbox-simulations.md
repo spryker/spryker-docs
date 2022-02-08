@@ -10,12 +10,13 @@ redirect_from:
   - /2021080/docs/en/amazon-pay-simulations-demoshop
   - /docs/amazon-pay-simulations-demoshop
   - /docs/en/amazon-pay-simulations-demoshop
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-sandbox-simulations.html
 related:
   - title: Amazon Pay - Configuration for the Legacy Demoshop
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-configuration-for-the-legacy-demoshop.html
   - title: Amazon Pay - Refund
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-refund.html
-  - title: Amazon Pay - API
+  - title: Amazon Pay API
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-api.html
   - title: Amazon Pay - Email Notifications
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-email-notifications.html

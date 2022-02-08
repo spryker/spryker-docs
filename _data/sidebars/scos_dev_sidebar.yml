@@ -46,26 +46,22 @@ entries:
           url: /docs/scos/dev/setup/installing-spryker-with-docker/configuration/additional-devops-guidelines.html
       - title: Database access credentials
         url: /docs/scos/dev/setup/installing-spryker-with-docker/database-access-credentials.html
-    - title: Installing Spryker with Vagrant
+    - title: Installing Spryker with Development Virtual Machine
       nested:
-      - title: B2B or B2C Demo Shop installation- Mac OS or Linux, with Development
-          Virtual Machine
-        url: /docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-mac-os-or-linux-with-development-virtual-machine.html
-      - title: B2B or B2C Demo Shop installation- without Development Virtual Machine
-        url: /docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-without-development-virtual-machine.html
-      - title: B2B or B2C Demo Shop installation- Windows, with Development Virtual
-          Machine
-        url: /docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-windows-with-development-virtual-machine.html
-      - title: Debugger
+      - title: Installing on MacOS and Linux
+        url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html
+      - title: Installing on Windows
+        url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-windows.html
+      - title: Configuring debugging
         nested:
-        - title: Configuring debugging in Vagrant
-          url: /docs/scos/dev/setup/installing-spryker-with-vagrant/debugger-configuration/configuring-debugging-in-vagrant.html
-        - title: Configuring debugging in Vagrant with VM below version 91
-          url: /docs/scos/dev/setup/installing-spryker-with-vagrant/debugger-configuration/configuring-debugging-in-vagrant-with-vm-below-version-91.html
-      - title: Virtual Machine Cleanup
-        url: /docs/scos/dev/setup/installing-spryker-with-vagrant/virtual-machine-cleanup.html
-      - title: Upgrading to the latest version of Node.js inside devwm
-        url: /docs/scos/dev/setup/installing-spryker-with-vagrant/upgrading-to-the-latest-version-of-node.js-inside-devwm.html
+        - title: Configuring debugging in DevVM
+          url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-devvm.html
+        - title: Configuring debugging in a DevVM below version 91
+          url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-a-devvm-below-version-91.html
+      - title: Cleaning up DevVM
+        url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/cleaning-up-devvm.html
+      - title: Updating Node.js to the latest version
+        url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/updating-node.js-in-devvm-to-the-latest-version.html
     - title: Post-Installation Steps and Additional Info
       url: /docs/scos/dev/setup/post-installation-steps-and-additional-info.html
     - title: Composer
@@ -4323,6 +4319,62 @@ entries:
             url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-payment-methods.html
           - title: Integrating CrefoPay
             url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/integrating-crefopay.html
+        - title: Heidelpay
+          nested:
+          - title: Installing Heidelpay
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/installing-heidelpay.html
+          - title: Integrating Heidelpay
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-heidelpay.html
+          - title: Configuring Heidelpay
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/configuring-heidelpay.html
+          - title: Integrating payment methods for Heidelpay
+            nested:
+            - title: Integrating the Sofort payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-sofort-payment-method-for-heidelpay.html
+            - title: Integrating the Invoice Secured B2C payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-invoice-secured-b2c-payment-method-for-heidelpay.html
+            - title: Integrating the iDeal payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-ideal-payment-method-for-heidelpay.html
+            - title: Integrating the Easy Credit payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-easy-credit-payment-method-for-heidelpay.html
+            - title: Integrating the Direct Debit payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-direct-debit-payment-method-for-heidelpay.html
+            - title: Integrating the Split-payment Marketplace payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-split-payment-marketplace-payment-method-for-heidelpay.html
+            - title: Integrating the Paypal Debit payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-paypal-debit-payment-method-for-heidelpay.html
+            - title: Integrating the Paypal Authorize payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-paypal-authorize-payment-method-for-heidelpay.html
+            - title: Integrating the Credit Card Secure payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-credit-card-secure-payment-method-for-heidelpay.html
+          - title: Workflow for errors
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/heidelpay-workflow-for-errors.html
+          - title: OMS workflow
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/heidelpay-oms-workflow.html
+          - title: Integrating Heidelpay into the Legacy Demoshop
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-heidelpay-into-the-legacy-demoshop.html
+            include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+            - "202001.0"
+        - title: Payolution
+          nested:
+          - title: Installing and configuring Payolution
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/installing-and-configuring-payolution.html
+          - title: Integrating Payolution
+            include_versions:
+            - "202009.0"
+            - "202108.0"
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/integrating-payolution.html
+          - title: Integrating the invoice paymnet method for Payolution
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/integrating-the-invoice-payment-method-for-payolution.html
+          - title: Integrating the installment payment method for Payolution
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/integrating-the-installment-payment-method-for-payolution.html
+          - title: Payolution - Performing Requests
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution-performing-requests.html
+          - title: Payolution - Workflow
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution-workflow.html            
         - title: RatePay
           nested:
             - title: Integrating payment methods for RatePay
@@ -4355,7 +4407,7 @@ entries:
         nested:
         - title: Installing and configuring Akeneo
           url: /docs/scos/dev/technology-partner-guides/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html
-        - title: Akeneo: Console commands
+        - title: Akeneo — Console commands
           url: /docs/scos/dev/technology-partner-guides/product-information-pimerp/akeneo/akeneo-console-commands.html
           include_versions:
           - "202009.0"

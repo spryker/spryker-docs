@@ -22,13 +22,6 @@ redirect_from:
   - /v1/docs/en/release-notes-201907-0
   - /v6/docs/release-notes-201907-0
   - /v6/docs/en/release-notes-201907-0
-related:
-  - title: Managing Carts of Registered Users
-    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
-  - title: PayOne - Cash on Delivery
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/scos-integration/payone-cash-on-delivery.html
-  - title: Heidelpay - Easy Credit
-    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-easy-credit.html
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of major new features and enhancements released in August of 2019.
@@ -264,7 +257,7 @@ We have extended our Payone module with the cash-on-delivery payment method. Thi
 ### Heidelpay Easycredit
 We have extended our existing Heidelpay module with the payment method Easycredit, which allows customers to pay via an installment plan. This can help to increase your conversion rates of more expensive products and services.
 
-**Documentation**: [Heidelpay - Easy Credit](/docs/scos/user/technology-partners/201907.0/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-easy-credit.html)
+**Documentation**: [Integrating the Easy Credit payment method for Heidelpay](/docs/scos/dev/technology-partner-guides/{{site.version}}/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-easy-credit-payment-method-for-heidelpay.html)
 
 ### RatePay
 We have extended our partner portfolio with a RatePay integration that offers 4 payment methods out-of-the-box:

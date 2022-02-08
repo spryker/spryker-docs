@@ -1,5 +1,5 @@
 ---
-title: Akeneo: Console commands
+title: Akeneo — Console commands
 description: This guide provides the console commands for the Akeneo module.
 last_updated: Feb 23, 2021
 template: concept-topic-template
@@ -10,7 +10,7 @@ redirect_from:
   - /v6/docs/en/akeneo-console-commands
 ---
 
-The following console commands are available in your project after successful [installation](/docs/scos/user/technology-partners/202009.0/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html) of the Akeneo module. Run them one by one.
+The following console commands are available in your project after successful [installation](/docs/scos/dev/technology-partner-guides/{{page.version}}/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html) of the Akeneo module. Run them one by one.
 ```bash
 1) Command to import super attributes:
 vendor/bin/console middleware:process:run -p SUPER_ATTRIBUTE_IMPORT_PROCESS -o data/import/maps/super_attribute_map.json
@@ -52,5 +52,4 @@ The section below explains how Spryker treats multi-select attribues from Akeneo
   - `pim_catalog_price_collection`-->
 
 1. On a project level, you can change `DefaultProductImportDictionary` instead of using the `EnrichAttributes` translator function or extending it.
-2. Price attributes (`pim_catalog_price_collection`), except the one with `attribute_key = 'price'`, are skipped. For correct import, products should contain an attribute with `attribute_type pim_catalog_price_collection` and `attribute_key 'price'`. 
-
+2. Price attributes (`pim_catalog_price_collection`), except the one with `attribute_key = 'price'`, are skipped. For correct import, products should contain an attribute with `attribute_type pim_catalog_price_collection` and `attribute_key 'price'`.

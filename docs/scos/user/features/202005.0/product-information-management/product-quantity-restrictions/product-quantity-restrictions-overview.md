@@ -15,6 +15,10 @@ On the *Edit product* page of the Administration interface, the administrator ca
 The shop administrator can either enable or disable the quantity restrictions in the *Quantity restrictions* tab for products. If they are enabled, the minimum and interval values must be specified, and maximum value is optional. If the quantity restrictions are not set, basic rules are applied - minimum quantity is 1 and no maximum restriction.
 
 ## Current Constraints
-According to the current setup, quantity suggestions in the quantity restrictions do not work with the shopping lists. A buyer can add any quantity of the product in the shopping list. It can lead to a situation where the customer is forced to guess what amount should be added from a shopping list - because they will not see quantity suggestion on the shopping list page. However, when they add this product from a shopping list to a shopping cart, an error message will appear notifying the buyer that a selected amount cannot be added (if any quantity restrictions were set up for this product).
+According to the current setup, quantity suggestions in the quantity restrictions do not work with the shopping lists and wish lists.
+
+A buyer can add any quantity of the product in the shopping list. It can lead to a situation where the customer is forced to guess what amount should be added from a shopping list - because they will not see quantity suggestion on the shopping list page.
+
+However, when they add this product from a shopping list or a wish list to a shopping cart, an error message will appear notifying the buyer that a selected amount cannot be added (if any quantity restrictions were set up for this product).
 
 <!-- Last review date: Jul 08, 2019 -->

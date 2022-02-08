@@ -28,6 +28,7 @@ commonOptions = {
     /www.iso.org\/[\.\w\-\/\?]+/,
     /www.vagrantup.com\/[\.\w\-\/\?]+/,
     /stackoverflow.com\/[\.\w\-\/\?]+/,
+    /symfony.com\/[\.\w\-\/\?]+/,    
     /console.aws.amazon.com\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],

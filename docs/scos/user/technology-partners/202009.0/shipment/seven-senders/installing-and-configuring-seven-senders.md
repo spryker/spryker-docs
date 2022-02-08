@@ -1,4 +1,7 @@
-
+---
+title: Installing and configuring Seven Senders
+template: howto-guide-template
+---
 
 
 This document describes how to install and configure the Seven Senders technology partner.

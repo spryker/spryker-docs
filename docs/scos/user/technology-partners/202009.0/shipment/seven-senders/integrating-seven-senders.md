@@ -1,3 +1,7 @@
+---
+title: Integrating Seven Senders
+template: howto-guide-template
+---
 
 This document describes how to integrate the Seven Senders technology partner.
 

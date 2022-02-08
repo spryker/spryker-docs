@@ -10,20 +10,20 @@ redirect_from:
   - /v6/docs/en/ratepay-facade
   - /docs/scos/user/technology-partners/202009.0/payment-partners/ratepay/technical-details-and-howtos/ratepay-facade.html
 related:
-  - title: RatePay - Invoice
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-payment-methods/ratepay-invoice.html
+  - title: Integrating the Invoice payment method for RatePay
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/integrating-payment-methods-for-ratepay/ratepay-invoice.html
   - title: RatePay - Prepayment
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-payment-methods/ratepay-prepayment.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/integrating-payment-methods-for-ratepay/ratepay-prepayment.html
   - title: RatePay - Payment Workflow
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/technical-details-and-howtos/ratepay-payment-workflow.html
   - title: Disabling address updates from the backend application for RatePay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/technical-details-and-howtos/disabling-address-updates-from-the-backend-application-for-ratepay.html
   - title: RatePay- Core Module Structure Diagram
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
-  - title: RatePay - Installment
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-payment-methods/ratepay-installment.html
-  - title: RatePay - Direct Debit
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html
+  - title: Integrating the Installment payment method for RatePay
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/integrating-payment-methods-for-ratepay/ratepay-installment.html
+  - title: Integrating the Direct Debit payment method for RatePay
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/integrating-payment-methods-for-ratepay/ratepay-direct-debit.html
   - title: RatePay - State Machine Commands and Conditions
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/technical-details-and-howtos/ratepay-state-machine-commands-and-conditions.html
 ---

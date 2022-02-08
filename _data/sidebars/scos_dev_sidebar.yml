@@ -3497,7 +3497,7 @@ entries:
     - title: Deploy file
       url: /docs/scos/dev/the-docker-sdk/deploy-file/deploy-file.html
       include_versions:
-      - "202108.0"        
+      - "202108.0"
       nested:
       - title: Deploy file reference - 1.0
         url: /docs/scos/dev/the-docker-sdk/deploy-file/deploy-file-reference-1.0.html
@@ -4325,16 +4325,16 @@ entries:
             url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/integrating-crefopay.html
         - title: RatePay
           nested:
-            - title: RatePay - Payment methods
+            - title: Integrating payment methods for RatePay
               nested:
-                - title: RatePay - Direct Debit
-                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html
+                - title: Integrating the Direct Debit payment method for RatePay
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/integrating-payment-methods-for-ratepay/ratepay-direct-debit.html
                 - title: RatePay - Prepayment
-                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-payment-methods/ratepay-prepayment.html
-                - title: RatePay - Installment
-                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-payment-methods/ratepay-installment.html
-                - title: RatePay - Invoice
-                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-payment-methods/ratepay-invoice.html
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/integrating-payment-methods-for-ratepay/ratepay-prepayment.html
+                - title: Integrating the Installment payment method for RatePay
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/integrating-payment-methods-for-ratepay/ratepay-installment.html
+                - title: Integrating the Invoice payment method for RatePay
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/integrating-payment-methods-for-ratepay/ratepay-invoice.html
             - title: Technical details and HowTos
               nested:
                 - title: RatePay facade
@@ -4360,6 +4360,20 @@ entries:
           include_versions:
           - "202009.0"
           - "202108.0"
+    - title: Shipment
+      nested:
+      - title: Seven Senders
+        nested:
+          - title: Installing and configuring Seven Senders
+            url: /docs/scos/dev/technology-partner-guides/shipment/seven-senders/installing-and-configuring-seven-senders.html
+          - title: Integrating Seven Senders
+            url: /docs/scos/dev/technology-partner-guides/shipment/seven-senders/integrating-seven-senders.html
+          - title: API requests
+            url: /docs/scos/dev/technology-partner-guides/shipment/seven-senders/seven-senders-api-requests.html
+          - title: Mappers
+            url: /docs/scos/dev/technology-partner-guides/shipment/seven-senders/seven-senders-mappers.html
+          - title: Persistance layer
+            url: /docs/scos/dev/technology-partner-guides/shipment/seven-senders/seven-senders-persistance-layer.html
     - title: Taxes
       include_versions:
       - "202108.0"

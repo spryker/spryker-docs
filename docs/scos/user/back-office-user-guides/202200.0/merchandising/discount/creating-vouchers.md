@@ -207,7 +207,7 @@ This discount type lets you discount specific products at a fixed quantity whene
 
 {% info_block infoBox "Note" %}
 
-The promotional product discount only applies if the product is added to the cart after meeting the discount's conditions. If the product is already in the cart before the discount conditions are met, the customer needs to remove and re-add it.
+The promotional product discount only applies if the product is added to the cart from the Promotional Products cart widget. If the product is already in the cart before the discount conditions are met, the customer needs to remove and re-add it from the widget.
 
 {% endinfo_block %}
 

@@ -3170,6 +3170,8 @@ entries:
           url: /docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html
         - title: Query objects - creation and usage
           url: /docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html
+      - title: Adding navigation in the Back Office
+        url: /docs/scos/dev/back-end-development/zed/adding-navigation-in-the-back-office.html
     - title: Cronjobs
       url: /docs/scos/dev/back-end-development/cronjobs/cronjobs.html
       nested:
@@ -3362,16 +3364,21 @@ entries:
           url: /docs/scos/dev/back-end-development/data-manipulation/event/adding-events.html
     - title: Extending Spryker
       nested:
-      - title: Adding a mew module
-        url: /docs/scos/dev/back-end-development/extending-spryker/adding-a-new-module.html
-      - title: Extending a core module that is used by another
-        url: /docs/scos/dev/back-end-development/extending-spryker/extending-a-core-module-that-is-used-by-another.html
-      - title: Adding navigation in the Back Office
-        url: /docs/scos/dev/back-end-development/extending-spryker/adding-navigation-in-the-back-office.html
-      - title: Extending the Core
-        url: /docs/scos/dev/back-end-development/extending-spryker/extending-the-core.html
-      - title: Extending the Spryker Core functionality
-        url: /docs/scos/dev/back-end-development/extending-spryker/extending-the-spryker-core-functionality.html
+      - title: Development strategies
+        url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html
+        nested:
+        - title: Project modules
+          nested:
+          - title: Adding a new module
+            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html
+        - title: Spryker OS module customization
+          nested:
+          - title: Extending a core module that is used by another
+            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-a-core-module-that-is-used-by-another.html
+          - title: Extending the Core
+            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-core.html
+          - title: Extending the Spryker Core functionality
+            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-spryker-core-functionality.html
     - title: Zed UI tables
       nested:
       - title: Creating and configuring Zed tables
@@ -3489,9 +3496,9 @@ entries:
     nested:
     - title: Deploy file
       url: /docs/scos/dev/the-docker-sdk/deploy-file/deploy-file.html
-      nested:
       include_versions:
-      - "202108.0"
+      - "202108.0"        
+      nested:
       - title: Deploy file reference - 1.0
         url: /docs/scos/dev/the-docker-sdk/deploy-file/deploy-file-reference-1.0.html
         include_versions:
@@ -3500,6 +3507,13 @@ entries:
         url: /docs/scos/dev/the-docker-sdk/deploy-file/deploy-file-inheritance-common-use-cases.html
         include_versions:
         - "202108.0"
+    - title: Deploy file reference - 1.0
+      url: /docs/scos/dev/the-docker-sdk/deploy-file-reference-1.0.html
+      include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
     - title: Docker environment infrustructure
       url: /docs/scos/dev/the-docker-sdk/docker-environment-infrastructure.html
       include_versions:
@@ -4258,6 +4272,74 @@ entries:
               include_versions:
               - "202009.0"
               - "202108.0"
+        - title: Computop
+          include_versions:
+          nested:
+          - title: Installing and configuring Computop
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/installing-and-configuring-computop.html
+          - title: Computop - OMS
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/computop-oms.html
+          - title: Computop - API
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/computop-api.html
+          - title: Integrating payment methods for Computop
+            nested:
+            - title: Integrating the Sofort payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-sofort-payment-method-for-computop.html
+            - title: Integrating the PayPal payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paypal-payment-method-for-computop.html
+            - title: Integrating the Easy Credit payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-easy-credit-payment-method-for-computop.html
+            - title: Integrating the CRIF payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-crif-payment-method-for-computop.html
+            - title: Integrating the iDeal payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-ideal-payment-method-for-computop.html
+            - title: Integrating the PayNow payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paynow-payment-method-for-computop.html
+            - title: Integrating the Сredit Сard payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-credit-card-payment-method-for-computop.html
+            - title: Integrating the Direct Debit payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-direct-debit-payment-method-for-computop.html
+            - title: Integrating the Paydirekt payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paydirekt-payment-method-for-computop.html
+          - title: Integrating Computop
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-computop.html
+            include_versions:
+            - "202009.0"
+            - "202108.0"
+        - title: CrefoPay
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay.html
+          nested:
+          - title: Installing and configuring CrefoPay
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/installing-and-configuring-crefopay.html
+          - title: CrefoPay — Enabling B2B payments
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-enabling-b2b-payments.html
+          - title: CrefoPay callbacks
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-callbacks.html
+          - title: CrefoPay notifications
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-notifications.html
+          - title: CrefoPay capture and refund processes
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-capture-and-refund-processes.html
+          - title: CrefoPay payment methods
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-payment-methods.html
+          - title: Integrating CrefoPay
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/integrating-crefopay.html
+        - title: Payolution
+          nested:
+          - title: Installing and configuring Payolution
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/installing-and-configuring-payolution.html
+          - title: Integrating Payolution
+            include_versions:
+            - "202009.0"
+            - "202108.0"          
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/integrating-payolution.html
+          - title: Integrating the invoice paymnet method for Payolution
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/integrating-the-invoice-payment-method-for-payolution.html
+          - title: Integrating the installment payment method for Payolution
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/integrating-the-installment-payment-method-for-payolution.html
+          - title: Payolution - Performing Requests
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution-performing-requests.html
+          - title: Payolution - Workflow
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution-workflow.html
         - title: RatePay
           nested:
             - title: RatePay - Payment methods
@@ -4322,6 +4404,7 @@ entries:
   - title: Guidelines
     nested:
     - title: Coding guidelines
+      url: /docs/scos/dev/guidelines/coding-guidelines/coding-guidelines.html
       nested:
       - title: Code quality
         url: /docs/scos/dev/guidelines/coding-guidelines/code-quality.html

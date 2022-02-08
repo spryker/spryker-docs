@@ -125,12 +125,19 @@ entries:
       nested:
       - title: Building the documentation site
         url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html
+      - title: Contributing to the Spryker documentation
+        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-spryker-documentation.html  
       - title: Reviewing pull requests
         url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/reviewing-pull-requests.html
       - title: Style, formatting, and general rules
         url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html
       - title: Markdown syntax
         url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/markdown-syntax.html
+      - title: Reviewing pull requests
+        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/reviewing-pull-requests.html
+      - title: Adding a new product to the documentation site
+        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/adding-a-new-product-to-the-documentation-site.html
+
   - title: Features
     url: /docs/scos/user/features/features.html
     nested:
@@ -863,7 +870,7 @@ entries:
           - "202005.0"
           - "202009.0"
           nested:
-          - title: Reference information - Orders 
+          - title: Reference information - Orders
             url: /docs/scos/user/back-office-user-guides/sales/orders/references/reference-information-orders.html
             include_versions:
             - "201811.0"
@@ -1404,7 +1411,7 @@ entries:
             - "201907.0"
             - "202001.0"
             - "202005.0"
-            - "202009.0" 
+            - "202009.0"
       - title: Pages
         nested:
         - title: Creating CMS pages
@@ -1467,7 +1474,7 @@ entries:
           - "202005.0"
           - "202009.0"
           nested:
-          - title: Reference information - Navigation 
+          - title: Reference information - Navigation
             url: /docs/scos/user/back-office-user-guides/content/navigation/references/reference-information-navigation.html
             include_versions:
             - "201811.0"
@@ -1627,7 +1634,7 @@ entries:
             - "201907.0"
             - "202001.0"
             - "202005.0"
-            - "202009.0"      
+            - "202009.0"
       - title: Product relations
         nested:
         - title: Creating product relations
@@ -1846,7 +1853,7 @@ entries:
           - "202005.0"
           - "202009.0"
           nested:
-          - title: Reference information - Warehouses 
+          - title: Reference information - Warehouses
             url: /docs/scos/user/back-office-user-guides/administration/warehouses/references/reference-information-warehouses.html
             include_versions:
             - "202001.0"
@@ -2235,19 +2242,10 @@ entries:
         url: /docs/scos/user/technology-partners/payment-partners/billpay.html
       - title: Braintree
         url: /docs/scos/user/technology-partners/payment-partners/braintree.html
+      - title: Computop
+        url: /docs/scos/user/technology-partners/payment-partners/computop.html
       - title: Klarna
-        url: /docs/scos/user/technology-partners/payment-partners/klarna/klarna.html
-        nested:
-        - title: Technical details and HowTos
-          nested:
-          - title: Klarna - Payment Workflow
-            url: /docs/scos/user/technology-partners/payment-partners/klarna/technical-details-and-howtos/klarna-payment-workflow.html
-          - title: Klarna - Part Payment Flexible
-            url: /docs/scos/user/technology-partners/payment-partners/klarna/technical-details-and-howtos/klarna-part-payment-flexible.html
-          - title: Klarna - State Machine Commands and Conditions
-            url: /docs/scos/user/technology-partners/payment-partners/klarna/technical-details-and-howtos/klarna-state-machine-commands-and-conditions.html
-          - title: Klarna - Invoice Pay in 14 days
-            url: /docs/scos/user/technology-partners/payment-partners/klarna/technical-details-and-howtos/klarna-invoice-pay-in-14-days.html
+        url: /docs/scos/user/technology-partners/payment-partners/klarna.html
       - title: Heidelpay
         url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay.html
         include_versions:
@@ -2309,67 +2307,8 @@ entries:
         url: /docs/scos/user/technology-partners/payment-partners/adyen.html
       - title: RatePay
         url: /docs/scos/user/technology-partners/payment-partners/ratepay.html
-      - title: Computop
-        url: /docs/scos/user/technology-partners/payment-partners/computop/computop.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-        nested:
-        - title: Technical details and HowTos
-          nested:
-          - title: Computop - OMS
-            url: /docs/scos/user/technology-partners/payment-partners/computop/technical-details-and-howtos/computop-oms.html
-          - title: Computop - API
-            url: /docs/scos/user/technology-partners/payment-partners/computop/technical-details-and-howtos/computop-api.html
-        - title: Computop - Payment methods
-          nested:
-          - title: Computop - Sofort
-            url: /docs/scos/user/technology-partners/payment-partners/computop/computop-payment-methods/computop-sofort.html
-          - title: Computop - PayPal
-            url: /docs/scos/user/technology-partners/payment-partners/computop/computop-payment-methods/computop-paypal.html
-          - title: Computop - Easy Credit
-            url: /docs/scos/user/technology-partners/payment-partners/computop/computop-payment-methods/computop-easy-credit.html
-          - title: Computop - CRIF
-            url: /docs/scos/user/technology-partners/payment-partners/computop/computop-payment-methods/computop-crif.html
-          - title: Computop - iDeal
-            url: /docs/scos/user/technology-partners/payment-partners/computop/computop-payment-methods/computop-ideal.html
-          - title: Computop - PayNow
-            url: /docs/scos/user/technology-partners/payment-partners/computop/computop-payment-methods/computop-paynow.html
-          - title: Computop - Credit Card
-            url: /docs/scos/user/technology-partners/payment-partners/computop/computop-payment-methods/computop-credit-card.html
-          - title: Computop - Direct Debit
-            url: /docs/scos/user/technology-partners/payment-partners/computop/computop-payment-methods/computop-direct-debit.html
-          - title: Computop - Paydirekt
-            url: /docs/scos/user/technology-partners/payment-partners/computop/computop-payment-methods/computop-paydirekt.html
-        - title: Computop - Integration into a project
-          url: /docs/scos/user/technology-partners/payment-partners/computop/computop-integration-into-a-project.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
-        - title: Computop - Installation and configuration
-          url: /docs/scos/user/technology-partners/payment-partners/computop/computop-installation-and-configuration.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
       - title: CrefoPay
-        url: /docs/scos/user/technology-partners/payment-partners/crefopay/crefopay.html
-        nested:
-        - title: CrefoPay - Installation and Configuration
-          url: /docs/scos/user/technology-partners/payment-partners/crefopay/crefopay-installation-and-configuration.html
-        - title: CrefoPay - Technical Details and HowTos
-          nested:
-          - title: CrefoPay - Business to Business Model
-            url: /docs/scos/user/technology-partners/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-business-to-business-model.html
-          - title: CrefoPay - Callback
-            url: /docs/scos/user/technology-partners/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-callback.html
-          - title: CrefoPay - Notifications
-            url: /docs/scos/user/technology-partners/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-notifications.html
-          - title: CrefoPay - Capture and Refund Processes
-            url: /docs/scos/user/technology-partners/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-capture-and-refund-processes.html
-        - title: CrefoPay - Provided Payment Methods
-          url: /docs/scos/user/technology-partners/payment-partners/crefopay/crefopay-provided-payment-methods.html
-        - title: CrefoPay - Integration
-          url: /docs/scos/user/technology-partners/payment-partners/crefopay/crefopay-integration-into-a-project.html
+        url: /docs/scos/user/technology-partners/payment-partners/crefopay.html
       - title: Billie
         url: /docs/scos/user/technology-partners/payment-partners/billie.html
       - title: Powerpay
@@ -2388,30 +2327,7 @@ entries:
           - "202009.0"
           - "202108.0"
       - title: Payolution
-        url: /docs/scos/user/technology-partners/payment-partners/payolution/payolution.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-        nested:
-        - title: Technical details and HowTos
-          nested:
-          - title: Payolution - Performing Requests
-            url: /docs/scos/user/technology-partners/payment-partners/payolution/technical-details-and-howtos/payolution-performing-requests.html
-          - title: Payolution - Workflow
-            url: /docs/scos/user/technology-partners/payment-partners/payolution/technical-details-and-howtos/payolution-workflow.html
-        - title: Payolution - Payment methods
-          nested:
-          - title: Payolution - Invoice Payment
-            url: /docs/scos/user/technology-partners/payment-partners/payolution/payolution-payment-methods/payolution-invoice-payment.html
-          - title: Payolution - Installment Payment
-            url: /docs/scos/user/technology-partners/payment-partners/payolution/payolution-payment-methods/payolution-installment-payment.html
-        - title: Payolution - Installation and Configuration
-          url: /docs/scos/user/technology-partners/payment-partners/payolution/payolution-installation-and-configuration.html
-        - title: Payolution - Integration into a project
-          url: /docs/scos/user/technology-partners/payment-partners/payolution/payolution-integration-into-a-project.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
+        url: /docs/scos/user/technology-partners/payment-partners/payolution.html
       - title: Arvato
         url: /docs/scos/user/technology-partners/payment-partners/arvato.html
     - title: Technology Partner Integration

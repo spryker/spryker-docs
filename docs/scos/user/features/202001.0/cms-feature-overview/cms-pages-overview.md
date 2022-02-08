@@ -41,7 +41,7 @@ With the CMS Pages feature, you can:
 * specify exact to and from dates to make CMS Pages publicly available within a defined time period;
 * assign a CMS Page to a specific locale thus making it visible or hidden for a specific store (the Multi-store CMS feature).
 
-This CMS Pages feature is ideal for specific landing pages with dedicated URLs to promote content and products, i.e., for marketing campaigns.
+This CMS Pages feature is ideal for specific landing pages with dedicated URLs to promote content and products, for example, for marketing campaigns.
 
 **If you are:**
 

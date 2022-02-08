@@ -41,7 +41,7 @@ redirect_from:
   - /v4/docs/installation-guide-b2c
   - /v4/docs/en/installation-guide-b2c
   - /v4/docs/installation-guide-b2b
-  - /v4/docs/en/installation-guide-b2b  - 
+  - /v4/docs/en/installation-guide-b2b  -
   - /2021080/docs/installation-guide-b2c
   - /2021080/docs/en/installation-guide-b2c
   - /docs/installation-guide-b2c
@@ -78,11 +78,11 @@ Choose an installation guide that suits your needs best:
 
 | Operating system | B2B Shop or B2C Shop |
 | --- | --- |
-| DevVM on Linux / Mac OS | [B2B or B2C Demo Shop installation: Mac OS or Linux, with Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-mac-os-or-linux-with-development-virtual-machine.html) |
-| DevVM on Windows | [B2B or B2C Demo Shop installation: Windows, with Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-windows-with-development-virtual-machine.html) |
+| DevVM on Linux / Mac OS | [B2B or B2C Demo Shop installation: Mac OS or Linux, with Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html) |
+| DevVM on Windows | [B2B or B2C Demo Shop installation: Windows, with Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-without-devvm.html) |
 
 ### Independent Installation
-Alternatively, you can install Spryker on an operating system that fulfills Spryker [System requirements](/docs/scos/dev/setup/system-requirements.html) without the virtual machine or Docker images. See [B2B or B2C Demo Shop installation: without Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-without-development-virtual-machine.html) for details.
+Alternatively, you can install Spryker on an operating system that fulfills Spryker [System requirements](/docs/scos/dev/setup/system-requirements.html) without the virtual machine or Docker images. See [B2B or B2C Demo Shop installation: without Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-windows.html) for details.
 
 {% info_block warningBox %}
 
@@ -134,7 +134,7 @@ To configure and customize your Spryker Commerce OS, do the following:
 
 Before you start developing, set up and get to know your debugging environment. To learn how to configure debugging, see one of the following:
 * [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html)
-* [Configuring debugging in Vagrant](/docs/scos/dev/setup/installing-spryker-with-vagrant/debugger-configuration/configuring-debugging-in-vagrant.html)
+* [Configuring debugging in DevVM](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-devvm.html)
 
 {% info_block infoBox %}
 In a production setup, Zed must be covered with a VPN, Basic Auth or IP whitelisting.

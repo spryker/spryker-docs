@@ -8,26 +8,26 @@ originalArticleId: 6125acb9-5793-41e8-b953-43c9d80d8a04
 redirect_from:
   - /v4/docs/ratepay-direct-debit
   - /v4/docs/en/ratepay-direct-debit
-  - /docs/scos/user/technology-partners/202001.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay/ratepay-direct-debit.html
+  - /docs/scos/user/technology-partners/202001.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-direct-debit-payment-method-for-ratepay.html
 related:
   - title: RatePay
     link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay.html
   - title: RatePay - Payment Workflow
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/technical-details-and-howtos/ratepay-payment-workflow.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-payment-workflow.html
   - title: RatePay - Facade
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/technical-details-and-howtos/ratepay-facade.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-facade.html
   - title: Disabling address updates from the backend application for RatePay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/technical-details-and-howtos/disabling-address-updates-from-the-backend-application-for-ratepay.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/disabling-address-updates-from-the-backend-application-for-ratepay.html
   - title: Integrating the Invoice payment method for RatePay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/integrating-payment-methods-for-ratepay/ratepay-invoice.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-invoice-payment-method-for-ratepay.html
   - title: RatePay- Core Module Structure Diagram
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
   - title: Integrating the Installment payment method for RatePay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/integrating-payment-methods-for-ratepay/ratepay-installment.html
-  - title: RatePay - Prepayment
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/integrating-payment-methods-for-ratepay/ratepay-prepayment.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-installment-payment-method-for-ratepay.html
+  - title: Integrating the Prepayment payment method for RatePay
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-prepayment-payment-method-for-ratepay.html
   - title: RatePay - State Machine Commands and Conditions
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/technical-details-and-howtos/ratepay-state-machine-commands-and-conditions.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-state-machine-commands-and-conditions.html
 ---
 
 ## Workflow Scenarios
@@ -45,7 +45,7 @@ related:
 ### Refund Flow
 ![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Ratepay/ratepay-ddelv-refund-flow.png)
 
-## Integrating RatePay
+## Integrating Direct Debit
 
 Direct Debit Payment
 In order to integrate direct debit payment, two simple steps are needed: set RatePAY Direct Debit payment configuration and call the facade functions.
@@ -69,4 +69,4 @@ The configuration to integrate Direct Debit payments using RatePAY is:
 
 ## Performing Requests
 
-In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. The [RatePAY State Machine Commands and Conditions](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratepay/technical-details-and-howtos/ratepay-state-machine-commands-and-conditions.html) section gives a summary of them. You can also use the facade methods directly which, however, are invoked by the state machine.
+In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. The [RatePAY State Machine Commands and Conditions](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratepay/ratepay-state-machine-commands-and-conditions.html) section gives a summary of them. You can also use the facade methods directly which, however, are invoked by the state machine.

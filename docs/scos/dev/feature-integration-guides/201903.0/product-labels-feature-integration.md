@@ -56,7 +56,7 @@ class CollectorDependencyProvider extends SprykerCollectorDependencyProvider
 } 
 ```
 
-To provide product label information for Search documents, you need to extend your product search collector by adding a new `search-result-data` entry (i.e. `id_product_labels`) for products. The data of this field can be easily read with the `ProductLabelFacade::findLabelIdsByIdProductAbstract()` method.
+To provide product label information for Search documents, you need to extend your product search collector by adding a new `search-result-data` entry (for example, `id_product_labels`) for products. The data of this field can be easily read with the `ProductLabelFacade::findLabelIdsByIdProductAbstract()` method.
 
 ### Data Setup
 

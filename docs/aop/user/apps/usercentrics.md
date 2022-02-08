@@ -6,7 +6,7 @@ template: howto-guide-template
 
 [Usercentrics](https://usercentrics.com/) is the Consent Management Platform (CMP) that lets you obtain and manage the consent of your users to use cookies across your store. Usercentrics helps you get GDPR, CCPA, and LGPD compliant by allowing your customers to decide which tracking cookies they want to accept or reject.
 
-You can configure different sets of tracking tools, called *Settings* in Usercentrcis. You can use the different sets of tracking tools for different countries of your store, depending on their legal requirements. Every set of tracking tools has its unique setting ID. To comply with the legislation of each country you have in your shop, you can configure which setting ID is to be used in which Spryker store.
+Based on the tracking tools you use in your storefronts, you can define different sets of tracking tool configurations, called *Settings* in Usercentrics. You can use these different settings for different countries of your store, depending on their legal requirements for user consent and data privacy. Every setting has its unique setting ID. To comply with the legislation of each country you have in your shop, you can configure which setting ID is to be used in which Spryker store.
 
 {% info_block infoBox "Info" %}
 
@@ -14,7 +14,7 @@ The integration of Usercentrics requires the injection of a JavaScript source fi
 
 {% endinfo_block %}
 
-To track your users' behavior in your store, you can use various tracking tools or data processing services provided by Usercentrics by default or integrate the custom ones. The tracking tools you defined in Usercentrics are displayed on the Storefront in the cookie consent popup so users can consent to which tracking tools they agree.
+To manage your users' consent to the various tracking tools or data processing services you use to track their behavior in your store, you can use Usercentrics support of default tracking tools or integrate the custom ones. The tracking tools you defined in Usercentrics are displayed on the Storefront in the Usercentrics cookie consent popup so users can consent to which tracking tools they agree.
 
 With Usercentrics in place, you don't need to program the cookie consent popups or add their JavaScript code to every single page of your store. Instead, you can configure the popup in the Usercentrics portal, and it automatically adds the popup to your store. You can achieve this with the [Smart Data Protector setting](#smart-data-protector) from Usercentrics.
 
@@ -37,7 +37,7 @@ Having separate CMS pages outside of the Spryker store requires additional confi
 
 ## Usercentrics integration and configuration
 
-To use Usercentrics, you need an account with Usercentrics. To create it, select the [Usercentrics pricing plan](https://usercentrics.com/pricing/) and then create an account with the [Usercentrics Admin Interface](https://admin.usercentrics.eu/).
+To use Usercentrics, you need an account with Usercentrics. To create it, select the [Usercentrics pricing plan](https://usercentrics.com/pricing/) and then create an account that will let you access the [Usercentrics Admin Interface](https://admin.usercentrics.eu/).
 
 {% info_block infoBox "Info" %}
 
@@ -95,7 +95,7 @@ For more details on the Usercetrics direct integration, see the [Usercentrics do
 
 #### Smart Data Protector
 
-The [Smart Data Protector](https://docs.usercentrics.com/#/smart-data-protector) blocks the data processing services you added to your store and activates them only for customers that gave their consent to do so. The Smart Data Protector is the preferred and default setting to configure Usercentrics. You can apply it if you don't use a third-party tracking tool yet and don't want to use developers' work.
+The [Smart Data Protector](https://docs.usercentrics.com/#/smart-data-protector) blocks the data processing services you added to your store and activates them only for customers that gave their consent to do so. The Smart Data Protector is the preferred and default setting to configure Usercentrics using Spryker. You can apply it if you don't use a third-party tracking tool yet and don't want to use developers' work.
 
 For this setting, Usercentrics JavaScript tag has to be injected with the setting ID and Smart Data Protector JavaScript code. Once you set up data processing services and got the setting ID for your app from the Usercentrics Admin Interface, the Smart Data Protector automatically manages all the tracking tools, and no manual work is required from your side.
 

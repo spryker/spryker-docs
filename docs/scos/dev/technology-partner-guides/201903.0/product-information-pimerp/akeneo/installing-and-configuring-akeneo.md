@@ -1,16 +1,16 @@
 ---
-title: Akeneo - Installation and Configuration
+title: Installing and configuring Akeneo
 description: This article provides installation and configuration details for the Akeneo module in the Spryker-based project.
-last_updated: Mar 5, 2020
+last_updated: Jul 31, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v4/docs/akeneo-installation-configuration
-originalArticleId: 58d95ca9-f124-41b5-9c75-bf2a805fa0d1
+originalLink: https://documentation.spryker.com/v2/docs/akeneo-installation-configuration
+originalArticleId: 3437d1fa-af82-43a5-9e58-33db10e4366a
 redirect_from:
-  - /v4/docs/akeneo-installation-configuration
-  - /v4/docs/en/akeneo-installation-configuration
+  - /v2/docs/akeneo-installation-configuration
+  - /v2/docs/en/akeneo-installation-configuration
 related:
   - title: Akeneo
-    link: docs/scos/user/technology-partners/page.version/product-information-pimerp/akeneo/akeneo.html
+    link: docs/scos/user/technology-partners/page.version/product-information-pimerp/akeneo.html
 ---
 
 ## Installation
@@ -142,7 +142,8 @@ Inside the module, implement plugins for writing data (categories, attributes, a
 
 Find an examplary plugin implementation below.
 
-ProductAbstractDataImporterPlugin.php
+ <details open>
+<summary markdown='span'>ProductAbstractDataImporterPlugin.php</summary>
 
  ```php
  <?php
@@ -167,10 +168,13 @@ class ProductAbstractDataImporterPlugin extends AbstractPlugin implements DataIm
  }
 }
 ```
+<br>
+</details>
 
 Implement your own `DataImporter` for importing products to the shop database. It can be a business module inside the `AkeneoPimMiddlewareConnector` module. Example:
 
-AkeneoDataImporter.php
+ <details open>
+<summary markdown='span'>AkeneoDataImporter.php</summary>
 
  ```php
  <?php
@@ -247,6 +251,9 @@ class AkeneoDataImporter implements AkeneoDataImporterInterface
  }
 }
 ```
+<br>
+</details>
+
 
 Implement facade methods for the `AkeneoPimMiddlewareConnector` module. Example:
 
@@ -271,7 +278,8 @@ Business Factory method is used for Importer creation. Determine the data writin
 
 For better understanding, see the example of the `AkeneoDataImporter` creation for importing abstract products in `AkeneoPimMiddlewareConnectorBusinessFactory.`
 
-AkeneoPimMiddlewareConnectorBusinessFactory
+<details open>
+<summary markdown='span'>AkeneoPimMiddlewareConnectorBusinessFactory</summary>
 
  ```php
  ...
@@ -313,10 +321,13 @@ class AkeneoPimMiddlewareConnectorBusinessFactory extends SprykerAkeneoPimMiddle
  }
 ...
 ```
+<br>
+</details>
 
 As you can see, in `DataSetStepBroker,` you can add your own steps for preparing data for writers. You can find ready made steps in the `DataImport` module or implement your own steps. Example:
 
-ProductAbstractStep
+ <details open>
+<summary markdown='span'>ProductAbstractStep</summary>
 
  ```php
  <?php
@@ -360,6 +371,8 @@ class ProductAbstractStep extends ProductAbstractHydratorStep
  }
 }
 ```
+<br>
+</details>
 
 You can change default data mappers and translators for overriding keys or values. By default, Akeneo has a list of predefined mappers, translators and validators for each  import type, but it can be adjusted to meet your requirements. Check the [middleware documentation](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/spryker-middleware.html) for more details.
 
@@ -367,7 +380,8 @@ You also need to take care of that data that is to be written to the database. T
 
 For attributes and categories, Spryker has implemented writer steps, so no plugins are required for that. Example:
 
-AkeneoPimMiddlewareConnectorBusinessFactory
+ <details open>
+<summary markdown='span'>AkeneoPimMiddlewareConnectorBusinessFactory</summary>
 
  ```php
  /**
@@ -409,6 +423,8 @@ public function createCategoryReader(): CategoryReader
  return new CategoryReader();
 }
 ```
+<br>
+</details>
 
 The example demonstrates how you can skip adding plugins for writing data to the database.
 
@@ -416,7 +432,8 @@ Product import is a more complex operation, so Spryker provides bulk insertion p
 
 You can use the existing plugins or create your own. The right way to add external plugins is to use dependency providers. We have two types of writer plugins: Propel plugins and PDO plugins. Check the examples for both of them below.
 
-AkeneoPimMiddlewareConnectorBusinessFactory
+ <details open>
+<summary markdown='span'>AkeneoPimMiddlewareConnectorBusinessFactory</summary>
 
  ```php
  /**
@@ -432,8 +449,11 @@ public function createProductAbstractImporter()
  );
 }
 ```
+<br>
+</details>
 
-AkeneoPimMiddlewareConnectorDependencyProvider
+ <details open>
+<summary markdown='span'>AkeneoPimMiddlewareConnectorDependencyProvider</summary>
 
  ```php
  ...
@@ -460,12 +480,15 @@ class AkeneoPimMiddlewareConnectorDependencyProvider extends SprykerAkeneoPimMid
 ...
 }
 ```
+<br>
+</details>
 
 When we use only `ProductAbstractPropelWriterPlugin`, `ProductStores`, `ProductPrices`, etc are not imported. If you want to import something other than products, you need to add more writer plugins.
 
 For example, if you want to import a product store, provide one more plugin in dependency provider.
 
-AkeneoPimMiddlewareConnectorDependencyProvider
+ <details open>
+<summary markdown='span'>AkeneoPimMiddlewareConnectorDependencyProvider</summary>
 
  ```php
  /**
@@ -485,6 +508,8 @@ protected function addProductAbstractPropelWriterPlugins(Container $container): 
  return $container;
 }
 ```
+<br>
+</details>
 
 In case you add more writer plugins, you might have to add more steps to dataset step broker.
 
@@ -532,4 +557,4 @@ The section below explains how Spryker treats multi-select attribues from Akeneo
   - `pim_catalog_price_collection`-->
 
 1. On a project level, you can change `DefaultProductImportDictionary` instead of using the `EnrichAttributes` translator function or extending it.
-2. Price attributes (`pim_catalog_price_collection`), except the one with `attribute_key = 'price'`, are skipped. For correct import, products should contain an attribute with `attribute_type pim_catalog_price_collection` and `attribute_key 'price'`. 
+2. Price attributes (`pim_catalog_price_collection`), except the one with `attribute_key = 'price'`, are skipped. For correct import, products should contain an attribute with `attribute_type pim_catalog_price_collection` and `attribute_key 'price'`.

@@ -1,16 +1,16 @@
 ---
 title: Akeneo
 description: Provide product information management solutions through the existing IT environment by integrating Akeneo into the Spryker-based shop.
-last_updated: Apr 3, 2020
+last_updated: Nov 22, 2019
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v5/docs/akeneo
-originalArticleId: b3e9ce3f-c6e1-4324-bf97-9146c242849a
+originalLink: https://documentation.spryker.com/v2/docs/akeneo
+originalArticleId: 679367fb-1a3b-4d08-b9a1-f7fe0a89eca1
 redirect_from:
-  - /v5/docs/akeneo
-  - /v5/docs/en/akeneo
+  - /v2/docs/akeneo
+  - /v2/docs/en/akeneo
 related:
-  - title: Akeneo - Installation and Configuration
-    link: docs/scos/user/technology-partners/page.version/product-information-pimerp/akeneo/akeneo-installation-and-configuration.html
+  - title: Installing and configuring Akeneo
+    link: docs/scos/dev/technology-partner-guides/page.version/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html
 ---
 
 ## Partner Information
@@ -39,5 +39,18 @@ See [Disclaimer](https://github.com/spryker/spryker-documentation).
 ---
 For further information on this partner and integration into Spryker, please contact us.
 
-<div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>
+<div class="hubspot-forms hubspot-forms--docs">
+<div class="hubspot-form" id="hubspot-partners-1">
+            <div class="script-embed" data-code="
+                                            hbspt.forms.create({
+				                                portalId: '2770802',
+				                                formId: '163e11fb-e833-4638-86ae-a2ca4b929a41',
+              	                                onFormReady: function() {
+              		                                const hbsptInit = new CustomEvent('hbsptInit', {bubbles: true});
+              		                                document.querySelector('#hubspot-partners-1').dispatchEvent(hbsptInit);
+              	                                }
+				                            });
+            "></div>
+</div>
+</div>
 

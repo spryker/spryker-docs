@@ -1,6 +1,6 @@
 ---
 title: Integrating separate endpoint bootstraps
-last_updated: Jul 23, 2021
+last_updated: Fab 8, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/separating-different-endpoint-bootstraps
 originalArticleId: 9f42f274-0278-4632-8a9f-0279c3ed4675
@@ -14,7 +14,7 @@ redirect_from:
 
 Gateway and ZedRestApi requests require a different stack of plugins to be processed with. Separation of the application bootstrapping into individual endpoints reduces the number of wired plugins which improves the performance of request processing.
 
-To separate application bootstrapping into individual endpoints, follow the steps below.
+To separate application bootstrapping into individual endpoints, take the following steps:
 
 ### 1) Update modules using Composer
 
@@ -47,7 +47,7 @@ Update the required module:
 "@spryker/oryx-for-zed": "~2.11.3"
 ```
 
-2. Add copy command `&& node ./node_modules/@spryker/oryx-for-zed/lib/copy.mp` to every `zed` script in the `package.json`, e.g.:
+2. Add the copy command `&& node ./node_modules/@spryker/oryx-for-zed/lib/copy.mp` to every `zed` script in the `package.json`, for example:
 
 ```json
 "zed": "node ./node_modules/@spryker/oryx-for-zed/build && node ./node_modules/@spryker/oryx-for-zed/lib/copy.mp",
@@ -66,7 +66,6 @@ npm install
 ```bash
 npm run zed
 ```
-
 
 ### 3) Add application entry points
 
@@ -122,8 +121,7 @@ $bootstrap
     ->run();
 ```
 
-<details open>
-    <summary markdown='span'>public/Backoffice/index.php</summary>
+**public/Backoffice/index.php**
 
 ```php
 <?php
@@ -150,12 +148,10 @@ $bootstrap
     ->run();
 ```
 
-</details>
-
 2. Add the following error pages:
 
-<details open>
-    <summary markdown='span'>public/Backoffice/errorpage/4xx.html</summary>
+<details>
+<summary markdown='span'>public/Backoffice/errorpage/4xx.html</summary>
 
 ```html
 <!DOCTYPE html>
@@ -202,7 +198,7 @@ $bootstrap
 
 
 <details open>
-    <summary markdown='span'>public/Backoffice/errorpage/5xx.html</summary>
+<summary markdown='span'><b>public/Backoffice/errorpage/5xx.html</b></summary>
 
 ```html
 <!DOCTYPE html>
@@ -251,8 +247,8 @@ $bootstrap
 
     1. Add the maintenance page:
 
-    <details open>
-        <summary markdown='span'>public/Backoffice/maintenance/index.html</summary>
+<details open>
+<summary markdown='span'><b>public/Backoffice/maintenance/index.html</b></summary>
 
     ```html
     <!DOCTYPE html>
@@ -287,8 +283,6 @@ $bootstrap
     </html>
     ```
 
-    </details>
-
     2. Configure the page you’ve added in step 1 to be displayed when the error `503` occurs:
 
     **public/Backoffice/maintenance/maintenance.php**
@@ -310,16 +304,14 @@ $bootstrap
 ### 4) Separate application plugin stacks
 
 1. Replace `ApplicationDependencyProvider::getApplicationPlugins();` with separate plugin stacks per endpoint:
-
--  `ApplicationDependencyProvider::getBackofficeApplicationPlugins()`
-- `ApplicationDependencyProvider::getBackendGatewayApplicationPlugins()`
-- `ApplicationDependencyProvider::getBackendApiApplicationPlugins()`
+  -  `ApplicationDependencyProvider::getBackofficeApplicationPlugins()`
+  - `ApplicationDependencyProvider::getBackendGatewayApplicationPlugins()`
+  - `ApplicationDependencyProvider::getBackendApiApplicationPlugins()`
 
 2. Add the following methods:
 
-
 <details open>
-    <summary markdown='span'>src/Pyz/Zed/Application/ApplicationDependencyProvider.php</summary>
+<summary markdown='span'><b>src/Pyz/Zed/Application/ApplicationDependencyProvider.php</b></summary>
 
 ```php
 class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
@@ -398,7 +390,7 @@ Update `src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php` with 
 
 
 <details open>
-    <summary markdown='span'>src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php</summary>
 
 ```php
 class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider
@@ -441,7 +433,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 Replace `RouterDependencyProvider::getRouterPlugins();`  with two new methods:
 
 <details open>
-    <summary markdown='span'>src/Pyz/Zed/Router/RouterDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Router/RouterDependencyProvider.php</summary>
 
 ```php
 //
@@ -476,9 +468,8 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 1. Configure the following console commands with a router cache warmup per endpoint:
 
-
-<details open>
-    <summary markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
+<details>
+<summary markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
 
 ```php
 //src/Pyz/Zed/Console/ConsoleDependencyProvider.php
@@ -508,7 +499,6 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 </details>
 
 You’ve added the following commands:
-
 - `console router:cache:warm-up:backoffice`
 - `console router:cache:warm-up:backend-gateway`
 
@@ -543,8 +533,8 @@ sections:
 
 1. Configure the Back Office error page, default port, and the ACL rule for the rest endpoint:
 
-<details open>
-    <summary markdown='span'>config/Shared/config_default.php</summary>
+<details>
+<summary markdown='span'>config/Shared/config_default.php</summary>
 
 ```php
 // >>> ERROR HANDLING
@@ -614,8 +604,8 @@ class SecurityGuiConfig extends SprykerSecurityGuiConfig
 
 2. In the needed deploy files, replace the `zed` application with `backoffice`, `backend-gateway` and `backend-api` as follows.
 
-<details open>
-    <summary markdown='span'>Example of replacing the application name</summary>
+<details>
+<summary markdown='span'>Example of replacing the application name</summary>
 
 ```yaml
 // One "zed" application.

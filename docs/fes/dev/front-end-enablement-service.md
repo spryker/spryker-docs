@@ -65,3 +65,7 @@ Any project running on PaaS and with up-to-date APIs can use FeS for its fronten
 
 ## Who are the users of FeS?
 FeS is designed to be used by both developers and content managers.
+
+## Next steps
+
+[Launching Storefronts](/docs/fes/dev/launching-storefronts.html)

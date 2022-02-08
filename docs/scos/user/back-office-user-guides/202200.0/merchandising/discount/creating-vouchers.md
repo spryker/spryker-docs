@@ -213,7 +213,7 @@ The promotional product discount only applies if the product is added to the car
 
 ![Application type](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/back-office-user-guides/merchandising/discount/creating-vouchers.md/202200.0/application-type.png)
 
-You can either give away promotional products completely for free or provide a discount for these products by specifying the percentage value or a fixed amount to be discounted from the promotional products' price (when giving a product for free, the percentage value should be 100%, while the fixed-price value should be equal to a product's price).
+You can either give away promotional products completely for free or provide a discount for these products by specifying the percentage value or a fixed amount to be discounted from the promotional products' price. When giving a product for free, the percentage value should be 100%. Using a fixed amount discount for a free product is also possible, where the amount is equal to a product's price, but it is not recommended due to the possibility of price fluctuations and differences across multiple products.
 
 #### <a name="conditions"></a>Conditions
 

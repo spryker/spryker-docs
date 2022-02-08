@@ -44,14 +44,29 @@ Update the required module:
 1. Specify the module version in `package.json`:
 
 ```json
-"@spryker/oryx-for-zed": "~2.11.1"
+"@spryker/oryx-for-zed": "~2.11.3"
 ```
 
-2. Update the module to the specified version:
+2. Add copy command `&& node ./node_modules/@spryker/oryx-for-zed/lib/copy.mp` to every `zed` script in the `package.json`, eg:
+
+```json
+"zed": "node ./node_modules/@spryker/oryx-for-zed/build && node ./node_modules/@spryker/oryx-for-zed/lib/copy.mp",
+"zed:watch": "node ./node_modules/@spryker/oryx-for-zed/build --dev && node ./node_modules/@spryker/oryx-for-zed/lib/copy.mp",
+"zed:production": "node ./node_modules/@spryker/oryx-for-zed/build --prod && node ./node_modules/@spryker/oryx-for-zed/lib/copy.mp",
+```
+
+3. Update the module to the specified version:
 
 ```bash
 npm install
 ```
+
+4. Build zed assets:
+
+```bash
+npm run zed
+```
+
 
 ### 3) Add application entry points
 

@@ -151,7 +151,7 @@ $bootstrap
 2. Add the following error pages:
 
 <details>
-<summary markdown='span'><b>public/Backoffice/errorpage/4xx.html</b></summary>
+<summary markdown='span'>public/Backoffice/errorpage/4xx.html</summary>
 
 ```html
 <!DOCTYPE html>
@@ -197,7 +197,7 @@ $bootstrap
 </details>
 
 <details>
-<summary markdown='span'><b>public/Backoffice/errorpage/5xx.html</b></summary>
+<summary markdown='span'>public/Backoffice/errorpage/5xx.html</summary>
 
 ```html
 <!DOCTYPE html>
@@ -284,6 +284,7 @@ $bootstrap
     2. Configure the page you’ve added in step 1 to be displayed when the error `503` occurs:
 
     **public/Backoffice/maintenance/maintenance.php**
+
     ```php
     <?php
 
@@ -309,7 +310,7 @@ $bootstrap
 2. Add the following methods:
 
 <details>
-<summary markdown='span'><b>src/Pyz/Zed/Application/ApplicationDependencyProvider.php</b></summary>
+<summary markdown='span'>src/Pyz/Zed/Application/ApplicationDependencyProvider.php</summary>
 
 ```php
 class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
@@ -386,9 +387,7 @@ Update `src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php` with 
 
 2. Add the following two methods:
 
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php</summary>
+**src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php**
 
 ```php
 class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider
@@ -424,14 +423,11 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 }
 ```
 
-</details>
-
 ### 6) Separate router plugin stacks
 
 Replace `RouterDependencyProvider::getRouterPlugins();`  with two new methods:
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/Router/RouterDependencyProvider.php</summary>
+**src/Pyz/Zed/Router/RouterDependencyProvider.php**
 
 ```php
 //
@@ -460,14 +456,11 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
-</details>
-
 ### 7) Add console commands
 
 1. Configure the following console commands with a router cache warmup per endpoint:
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
 ```php
 //src/Pyz/Zed/Console/ConsoleDependencyProvider.php
@@ -493,8 +486,6 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
   return $commands;
 }    
 ```
-
-</details>
 
 You’ve added the following commands:
 - `console router:cache:warm-up:backoffice`
@@ -522,10 +513,6 @@ sections:
             command: 'vendor/bin/console router:cache:warm-up:backend-gateway'
         ...
 ```        
-
-
-
-
 
 ### 8) Configure the application
 
@@ -585,7 +572,7 @@ $config[AclConstants::ACL_DEFAULT_RULES] = [
 
 </details>
 
-2. To open new entry points for external API systems, add the following paths to `src/Pyz/Zed/SecurityGui/SecurityGuiConfig.php`.
+2. To open new entry points for external API systems, add the following paths to `src/Pyz/Zed/SecurityGui/SecurityGuiConfig.php`:
 
 ```php
 class SecurityGuiConfig extends SprykerSecurityGuiConfig
@@ -599,7 +586,6 @@ class SecurityGuiConfig extends SprykerSecurityGuiConfig
 ### 9) Update the Docker SDK
 
 1. Update the Docker SDK to version `1.36.1` or higher.
-
 2. In the needed deploy files, replace the `zed` application with `backoffice`, `backend-gateway` and `backend-api` as follows.
 
 <details>

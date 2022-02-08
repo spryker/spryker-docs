@@ -47,7 +47,7 @@ Update the required module:
 "@spryker/oryx-for-zed": "~2.11.3"
 ```
 
-2. Add copy command `&& node ./node_modules/@spryker/oryx-for-zed/lib/copy.mp` to every `zed` script in the `package.json`, eg:
+2. Add copy command `&& node ./node_modules/@spryker/oryx-for-zed/lib/copy.mp` to every `zed` script in the `package.json`, e.g.:
 
 ```json
 "zed": "node ./node_modules/@spryker/oryx-for-zed/build && node ./node_modules/@spryker/oryx-for-zed/lib/copy.mp",

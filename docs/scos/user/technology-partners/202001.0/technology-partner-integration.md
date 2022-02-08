@@ -112,7 +112,7 @@ Visit [Technology Partners](https://spryker.com/technology-partners/) for a comp
 * [CrefoPay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/installing-and-configuring-crefopay.html)
 * [Heidelpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/heidelpay.html)
 * [Klarna](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/klarna.html)
-* [Payone](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution/payolution.html)
+* [Payone](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution.html)
 * [Powerpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/powerpay.html)
 * [Ratenkauf by Easycredit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html)
 * [RatePAY](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay.html)

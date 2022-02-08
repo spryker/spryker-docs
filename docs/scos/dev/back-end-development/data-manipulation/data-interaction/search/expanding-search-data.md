@@ -1,4 +1,8 @@
-
+---
+title: Expanding search data
+description: Learn how to expand entity data and create new data types in the search.
+template: howto-guide-template
+---
 
 This document describes how to expand entity data and create new data types in the search.
 

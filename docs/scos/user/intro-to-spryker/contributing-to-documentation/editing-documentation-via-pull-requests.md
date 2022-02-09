@@ -1,6 +1,6 @@
 ---
-title: Editing documentation via pill requests
-description: Learn how you to contribute to Spryker documentation
+title: Editing documentation via pull requests
+description: Learn how you can propose changes to the Spryker docs
 template: howto-guide-template
 redirect_from:
    - /docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-spryker-documentation.html

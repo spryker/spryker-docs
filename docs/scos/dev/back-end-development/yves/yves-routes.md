@@ -52,7 +52,7 @@ class ApplicationRouteProviderPlugin extends AbstractRouteProviderPlugin
     public function addRoutes(RouteCollection $routeCollection): RouteCollection
     {
         $routeCollection = $this->addHomeRoute($routeCollection);
-        $routeCollection = $this->addImpintRoute($routeCollection);
+        $routeCollection = $this->addImprintRoute($routeCollection);
         
         return $routeCollection;
     }
@@ -75,7 +75,7 @@ class ApplicationRouteProviderPlugin extends AbstractRouteProviderPlugin
      *
      * @return \Spryker\Yves\Router\Route\RouteCollection
      */
-    protected function addImpintRoute(RouteCollection $routeCollection): RouteCollection
+    protected function addImprintRoute(RouteCollection $routeCollection): RouteCollection
     {
         $route = $this->buildRoute('/', 'Application', 'Static', 'imprintAction');
         $routeCollection->add(static::ROUTE_NAME_IMPRINT, $route);

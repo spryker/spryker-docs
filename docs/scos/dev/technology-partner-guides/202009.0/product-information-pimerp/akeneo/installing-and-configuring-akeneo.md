@@ -1,24 +1,21 @@
 ---
-title: Akeneo - Installation and Configuration
+title: Installing and configuring Akeneo
 description: This article provides installation and configuration details for the Akeneo module in the Spryker-based project.
-last_updated: Jun 16, 2021
+last_updated: Nov 6, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/akeneo-installation-configuration
-originalArticleId: 6a718976-7056-4705-938d-8bb11243e918
+originalLink: https://documentation.spryker.com/v6/docs/akeneo-installation-configuration
+originalArticleId: 291773e9-0839-4e73-a241-b5ca7c421667
 redirect_from:
-  - /2021080/docs/akeneo-installation-configuration
-  - /2021080/docs/en/akeneo-installation-configuration
-  - /docs/akeneo-installation-configuration
-  - /docs/en/akeneo-installation-configuration
+  - /v6/docs/akeneo-installation-configuration
+  - /v6/docs/en/akeneo-installation-configuration
 related:
   - title: Akeneo
-    link: docs/scos/user/technology-partners/page.version/product-information-pimerp/akeneo/akeneo.html
+    link: docs/scos/user/technology-partners/page.version/product-information-pimerp/akeneo.html
 ---
 
 ## Installation
 
-To install AkeneoPim, add `AkeneoPimMiddlewareConnector` by running the console command. Set `akeneo/api-php-client` version that you need:
-
+To install AkeneoPim, add `AkeneoPimMiddlewareConnector` by running the console command. Set `akeneo/api-php-client` version that you need.
 ```bash
 composer require akeneo/api-php-client:^4.0.0 spryker-eco/akeneo-pim:^1.0.0 spryker-eco/akeneo-pim-middleware-connector:^1.0.0
 ```
@@ -26,7 +23,6 @@ composer require akeneo/api-php-client:^4.0.0 spryker-eco/akeneo-pim:^1.0.0 spry
 ## Global Configuration
 
 Add `SprykerMiddleware` to your project's core namespaces:
-
 ```php
 $config[KernelConstants::CORE_NAMESPACES] = [
     'SprykerShop',
@@ -35,9 +31,7 @@ $config[KernelConstants::CORE_NAMESPACES] = [
     'Spryker',
 ];
 ```
-
 To set up the Akeneo initial configuration, use the credentials you received from your PIM:
-
 ```php
 $config[AkeneoPimConstants::HOST] = '';
 $config[AkeneoPimConstants::USERNAME] = '';
@@ -47,7 +41,6 @@ $config[AkeneoPimConstants::CLIENT_SECRET] = '';
 ```
 
 Next, specify your paths to the additional map files:
-
 ```php
 $config[AkeneoPimMiddlewareConnectorConstants::LOCALE_MAP_FILE_PATH] = APPLICATION_ROOT_DIR . '/data/import/maps/locale_map.json';
 $config[AkeneoPimMiddlewareConnectorConstants::ATTRIBUTE_MAP_FILE_PATH] = APPLICATION_ROOT_DIR . '/data/import/maps/attribute_map.json';
@@ -55,19 +48,16 @@ $config[AkeneoPimMiddlewareConnectorConstants::SUPER_ATTRIBUTE_MAP_FILE_PATH] = 
 ```
 
 This being done, specify the ID of the category template that should be assigned to the  imported categories:
-
 ```php
 $config[AkeneoPimMiddlewareConnectorConstants::FK_CATEGORY_TEMPLATE] = 1;
 ```
 
 Next, specify the name of a tax set for the imported products:
-
 ```php
 $config[AkeneoPimMiddlewareConnectorConstants::TAX_SET] = 1;
 ```
 
 Finally, specify the locales that should be imported to shops and stores in which imported products are to be available, and specify how prices should be mapped according to locales:
-
 ```php
 $config[AkeneoPimMiddlewareConnectorConstants::LOCALES_FOR_IMPORT] = [
     'de_DE',
@@ -94,7 +84,6 @@ $config[AkeneoPimMiddlewareConnectorConstants::LOCALES_TO_PRICE_MAP] = [
 ## Dependency Configuration
 
 Add Middleware Process console command to `src/Pyz/Zed/Console/ConsoleDependencyProvider.php` in your project:
-
 ```php
 ...
 use SprykerMiddleware\Zed\Process\Communication\Console\ProcessConsole;
@@ -107,13 +96,12 @@ protected function getConsoleCommands(Container $container)
         new ProcessConsole(),
     ];
     ...
-
+ 
     return $commands;
 }
 ```
 
 Create `ProcessDependencyProvider` on a project level for specifying `ConfigurationPlugins`. Add `src/Pyz/Zed/Process/ProcessDependencyProvider.php` file:
-
 ```php
 <?php
 
@@ -154,9 +142,9 @@ Inside the module, implement plugins for writing data (categories, attributes, a
 
 Find an examplary plugin implementation below.
 
-**ProductAbstractDataImporterPlugin.php**
+ProductAbstractDataImporterPlugin.php
 
-```php
+ ```php
  <?php
 
 namespace Pyz\Zed\AkeneoPimMiddlewareConnector\Communication\Plugin;
@@ -182,9 +170,9 @@ class ProductAbstractDataImporterPlugin extends AbstractPlugin implements DataIm
 
 Implement your own `DataImporter` for importing products to the shop database. It can be a business module inside the `AkeneoPimMiddlewareConnector` module. Example:
 
-**AkeneoDataImporter.php**
+AkeneoDataImporter.php
 
-```php
+ ```php
  <?php
 
 namespace Pyz\Zed\AkeneoPimMiddlewareConnector\Business\AkeneoDataImporter;
@@ -284,7 +272,7 @@ Business Factory method is used for Importer creation. Determine the data writin
 
 For better understanding, see the example of the `AkeneoDataImporter` creation for importing abstract products in `AkeneoPimMiddlewareConnectorBusinessFactory.`
 
-**AkeneoPimMiddlewareConnectorBusinessFactory**
+AkeneoPimMiddlewareConnectorBusinessFactory
 
  ```php
 ...
@@ -329,7 +317,7 @@ class AkeneoPimMiddlewareConnectorBusinessFactory extends SprykerAkeneoPimMiddle
 
 As you can see, in `DataSetStepBroker,` you can add your own steps for preparing data for writers. You can find ready made steps in the `DataImport` module or implement your own steps. Example:
 
-**ProductAbstractStep**
+ProductAbstractStep
 
  ```php
  <?php
@@ -380,7 +368,7 @@ You also need to take care of that data that is to be written to the database. T
 
 For attributes and categories, Spryker has implemented writer steps, so no plugins are required for that. Example:
 
-**AkeneoPimMiddlewareConnectorBusinessFactory**
+AkeneoPimMiddlewareConnectorBusinessFactory
 
  ```php
 /**
@@ -429,7 +417,7 @@ Product import is a more complex operation, so Spryker provides bulk insertion p
 
 You can use the existing plugins or create your own. The right way to add external plugins is to use dependency providers. We have two types of writer plugins: Propel plugins and PDO plugins. Check the examples for both of them below.
 
-**AkeneoPimMiddlewareConnectorBusinessFactory**
+AkeneoPimMiddlewareConnectorBusinessFactory
 
  ```php
 /**
@@ -446,7 +434,7 @@ public function createProductAbstractImporter()
 }
 ```
 
-**AkeneoPimMiddlewareConnectorDependencyProvider**
+AkeneoPimMiddlewareConnectorDependencyProvider
 
  ```php
  ...
@@ -478,7 +466,7 @@ When we use only `ProductAbstractPropelWriterPlugin`, `ProductStores`, `ProductP
 
 For example, if you want to import a product store, provide one more plugin in dependency provider.
 
-**AkeneoPimMiddlewareConnectorDependencyProvider**
+AkeneoPimMiddlewareConnectorDependencyProvider
 
  ```php
  /**
@@ -500,3 +488,4 @@ protected function addProductAbstractPropelWriterPlugins(Container $container): 
 ```
 
 In case you add more writer plugins, you might have to add more steps to dataset step broker.
+

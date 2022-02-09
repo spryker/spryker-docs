@@ -4401,6 +4401,17 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
             - title: RatePay state machines
               url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-state-machines.html
+    - title: Product information (PIMERP)
+      nested:
+      - title: Akeneo
+        nested:
+        - title: Installing and configuring Akeneo
+          url: /docs/scos/dev/technology-partner-guides/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html
+        - title: Akeneo — Console commands
+          url: /docs/scos/dev/technology-partner-guides/product-information-pimerp/akeneo/akeneo-console-commands.html
+          include_versions:
+          - "202009.0"
+          - "202108.0"
     - title: Taxes
       include_versions:
       - "202108.0"
@@ -4413,6 +4424,7 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/taxes/avalara/integrating-avalara-tax-product-options.html
             - title: Integrating Avalara Tax + Shipment
               url: /docs/scos/dev/technology-partner-guides/taxes/avalara/integrating-avalara-tax-shipment.html
+
   - title: Architecture
     url: /docs/scos/dev/architecture/architecture.html
     nested:

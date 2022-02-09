@@ -1,16 +1,16 @@
 ---
 title: Akeneo
 description: Provide product information management solutions through the existing IT environment by integrating Akeneo into the Spryker-based shop.
-last_updated: Jan 25, 2020
+last_updated: Apr 3, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v4/docs/akeneo
-originalArticleId: 417c5dfa-b982-4df0-84bf-e16ff2b842de
+originalLink: https://documentation.spryker.com/v5/docs/akeneo
+originalArticleId: b3e9ce3f-c6e1-4324-bf97-9146c242849a
 redirect_from:
-  - /v4/docs/akeneo
-  - /v4/docs/en/akeneo
+  - /v5/docs/akeneo
+  - /v5/docs/en/akeneo
 related:
-  - title: Akeneo - Installation and Configuration
-    link: docs/scos/user/technology-partners/page.version/product-information-pimerp/akeneo/akeneo-installation-and-configuration.html
+  - title: Installing and configuring Akeneo
+    link: docs/scos/dev/technology-partner-guides/page.version/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html
 ---
 
 ## Partner Information

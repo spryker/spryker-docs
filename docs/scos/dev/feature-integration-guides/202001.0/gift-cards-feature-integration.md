@@ -1304,7 +1304,7 @@ Register the following controller provider(s) in the Yves application:
 
 | Provider | Namespace | Enabled Controller | Controller Specifcation |
 | --- | --- | --- | --- |
-| `CartCodeWidgetControllerProvider` |`SprykerShop\Yves\CartCodeWidget\Plugin\Provider`  | `CartCodeWidget/CodeController` | `Handles add, remove and clear of cart codes for of the activated CartCodePlugins (i.e. gift card code, voucher code, etc.) of the cart.` |
+| `CartCodeWidgetControllerProvider` |`SprykerShop\Yves\CartCodeWidget\Plugin\Provider`  | `CartCodeWidget/CodeController` | `Handles add, remove and clear of cart codes for of the activated CartCodePlugins (for example, gift card code, voucher code, etc.) of the cart.` |
 
 **src/Pyz/Yves/ShopApplication/YvesBootstrap.php**
 

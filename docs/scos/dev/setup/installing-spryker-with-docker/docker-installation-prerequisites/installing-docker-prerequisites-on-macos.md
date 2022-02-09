@@ -31,7 +31,7 @@ Review the system and software requirements in the table and configure them usin
 | --- | --- |
 | Docker | 18.09.1 or higher |
 | Docker Compose | 1.28 or 1.29 |  
-| vCPU | 2 or more |
+| vCPU | 4 or more |
 | RAM  | 4GB or more |
 | Swap  | 2GB or more |
 

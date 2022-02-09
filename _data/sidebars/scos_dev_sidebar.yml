@@ -3859,22 +3859,8 @@ entries:
     - title: About Tutorials
       url: /docs/scos/dev/tutorials-and-howtos/tutorials-and-howtos.html
     - title: HowTos
+      url: /docs/scos/dev/tutorials-and-howtos/howtos/about-howtos.html
       nested:
-      - title: HowTo - Replace key-value storage with database
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-key-value-storage-with-database.html
-      - title: HowTo - Force HTTPS
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-force-https.html
-      - title: HowTo - Change the Default Behavior of Event Triggering in the AvailabilityStorage
-          Module
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-change-the-default-behavior-of-event-triggering-in-the-availabilitystorage-module.html
-      - title: HowTo - Build Your Own Product Relation Type
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-build-your-own-product-relation-type.html
-      - title: HowTo - Set up multiple stores
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html
-      - title: HowTo - Integrate and Use Precise Decimal Numbers
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-integrate-and-use-precise-decimal-numbers.html
-      - title: HowTo - Create and Register a MailTypePlugin
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html
       - title: Feature HowTos
         url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/feature-howtos.html
         nested:
@@ -3887,7 +3873,7 @@ entries:
           - title: HowTo - Import Packaging Units
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-packaging-units.html
           - title: 'HowTo: Manage merchant custom prices for products via data import'
-            url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/how-to-manage-merchant-custom-prices-for-products-via-data-import.html
+            url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/how-to-manage-business-unit-specific-prices-via-data-import.html
         - title: HowTo - Generate a Token for Login
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html
         - title: HowTo - Use Blocks
@@ -3927,6 +3913,30 @@ entries:
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-implement-customer-approval-process-based-on-a-generic-state-machine.html
         - title: HowTo - Emailing Invoices Using BCC
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-emailing-invoices-using-bcc.html
+      - title: Glue API HowTos
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/glue-api-howtos.html
+        nested:
+        - title: Configuring Glue for cross-origin requests
+          url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-glue-for-cross-origin-requests.html
+        - title: Configuring Visibility of the Included Section
+          url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-visibility-of-the-included-section.html
+        - title: Managing customer access to Glue API resources
+          url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/managing-customer-access-to-glue-api-resources.html
+      - title: HowTo - Replace key-value storage with database
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-key-value-storage-with-database.html
+      - title: HowTo - Force HTTPS
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-force-https.html
+      - title: HowTo - Change the Default Behavior of Event Triggering in the AvailabilityStorage
+          Module
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-change-the-default-behavior-of-event-triggering-in-the-availabilitystorage-module.html
+      - title: HowTo - Build Your Own Product Relation Type
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-build-your-own-product-relation-type.html
+      - title: HowTo - Set up multiple stores
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html
+      - title: HowTo - Integrate and Use Precise Decimal Numbers
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-integrate-and-use-precise-decimal-numbers.html
+      - title: HowTo - Create and Register a MailTypePlugin
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html
       - title: HowTo - Handle twenty five million prices in Spryker Commerce OS
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-twenty-five-million-prices-in-spryker-commerce-os.html
       - title: HowTo - Customize HTTP Headers in AJAX Request
@@ -3973,19 +3983,8 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-case-sensitive-file-system-on-mac-os.html
       - title: HowTo - Create and Register a Mail Provider
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mail-provider.html
-      - title: Glue API HowTos
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/glue-api-howtos.html
-        nested:
-        - title: Configuring Glue for cross-origin requests
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-glue-for-cross-origin-requests.html
-        - title: Configuring Visibility of the Included Section
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-visibility-of-the-included-section.html
-        - title: Managing customer access to Glue API resources
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/managing-customer-access-to-glue-api-resources.html
       - title: HowTo - Get Ready for VAT (tax) Changes in Germany
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-get-ready-for-vat-tax-changes-in-germany.html
-      - title: About HowTos
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/about-howtos.html
       - title: HowTo - Reset a Docker environment
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-reset-a-docker-environment.html
       - title: HowTo - Allow Zed CSS/JS on a project

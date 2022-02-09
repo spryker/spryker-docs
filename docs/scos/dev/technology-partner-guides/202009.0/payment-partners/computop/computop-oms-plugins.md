@@ -1,13 +1,13 @@
 ---
-title: Computop - OMS
+title: Computop - OMS plugins
 description: This article contains information on the state machine commands and conditions for the Computop module in the Spryker Commerce OS.
-last_updated: Nov 22, 2019
+last_updated: Aug 27, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v2/docs/computop-oms-details
-originalArticleId: 3cef4aea-0ad8-4c29-b6e9-7940e15b9f1a
+originalLink: https://documentation.spryker.com/v6/docs/computop-oms-details
+originalArticleId: ac8607bf-275a-41b4-b683-f178b2b045ff
 redirect_from:
-  - /v2/docs/computop-oms-details
-  - /v2/docs/en/computop-oms-details
+  - /v6/docs/computop-oms-details
+  - /v6/docs/en/computop-oms-details
 related:
   - title: Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop.html
@@ -19,8 +19,8 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paynow-payment-method-for-computop.html
   - title: Integrating the Easy Credit payment method for Computop
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-easy-credit-payment-method-for-computop.html
-  - title: Computop - API
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/computop-api.html
+  - title: Computop API calls
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/computop-api-calls.html
   - title: Integrating the iDeal payment method for Computop
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-ideal-payment-method-for-computop.html
   - title: Integrating the Direct Debit payment method for Computop

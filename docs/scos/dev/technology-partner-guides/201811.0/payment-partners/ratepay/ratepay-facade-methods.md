@@ -1,14 +1,14 @@
 ---
-title: RatePay - Facade
+title: RatePay facade methods
 description: This article includes facade methods provided by Ratepay.
-last_updated: Nov 22, 2019
+last_updated: Sep 24, 2019
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v3/docs/ratepay-facade
-originalArticleId: de8c5255-70ee-4040-9a71-cd5951cc215b
+originalLink: https://documentation.spryker.com/v1/docs/ratepay-facade
+originalArticleId: 0e9449c2-661f-44bc-a0e6-47310294ffdb
 redirect_from:
-  - /v3/docs/ratepay-facade
-  - /v3/docs/en/ratepay-facade
-  - /docs/scos/user/technology-partners/201907.0/payment-partners/ratepay/ratepay-facade.html
+  - /v1/docs/ratepay-facade
+  - /v1/docs/en/ratepay-facade
+  - /docs/scos/user/technology-partners/201811.0/payment-partners/ratepay/ratepay-facade-methods.html
 related:
   - title: RatePay
     link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay.html

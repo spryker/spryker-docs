@@ -10,8 +10,8 @@ redirect_from:
   - /v6/docs/en/ratepay-structure-diag
   - /docs/scos/user/technology-partners/202009.0/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
 related:
-  - title: RatePay - Facade
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-facade.html
+  - title: RatePay facade methods
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-facade-methods.html
   - title: Disabling address updates from the backend application for RatePay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/disabling-address-updates-from-the-backend-application-for-ratepay.html
   - title: Integrating the Prepayment payment method for RatePay

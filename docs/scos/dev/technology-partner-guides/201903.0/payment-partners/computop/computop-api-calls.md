@@ -1,13 +1,13 @@
 ---
-title: Computop - API
+title: Computop API calls
 description: This article provides details on the API structure of the Computop module in the Spryker Commerce OS.
-last_updated: Aug 27, 2020
+last_updated: Nov 22, 2019
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v6/docs/computop-api-details
-originalArticleId: c1eb3c2d-b318-4393-8e43-fea8e677d820
+originalLink: https://documentation.spryker.com/v2/docs/computop-api-details
+originalArticleId: 05879934-f16e-41d3-b54c-1957c84c48de
 redirect_from:
-  - /v6/docs/computop-api-details
-  - /v6/docs/en/computop-api-details
+  - /v2/docs/computop-api-details
+  - /v2/docs/en/computop-api-details
 related:
   - title: Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop.html

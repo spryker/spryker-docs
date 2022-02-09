@@ -1509,6 +1509,8 @@ entries:
       - "202108.0"
     - title: Catalog + Order Management feature integration
       url: /docs/scos/dev/feature-integration-guides/catalog-order-management-feature-integration.html
+      include_versions:
+      - "202108.0"
     - title: Category Filters feature integration
       url: /docs/scos/dev/feature-integration-guides/category-filters-feature-integration.html
     - title: Checkout feature integration

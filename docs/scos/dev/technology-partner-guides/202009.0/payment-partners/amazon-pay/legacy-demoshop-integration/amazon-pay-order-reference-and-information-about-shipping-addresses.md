@@ -13,8 +13,8 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-configuration-for-the-legacy-demoshop.html
   - title: Amazon Pay - Refund
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-refund.html
-  - title: Amazon Pay API
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-api.html
+  - title: Handling orders with Amazon Pay API
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/legacy-demoshop-handling-orders-with-amazon-pay-api.html
   - title: Amazon Pay - Email Notifications
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-email-notifications.html
   - title: Amazon Pay - Sandbox Simulations
@@ -52,11 +52,11 @@ All necessary credentials have to be specified the same way and in order to retr
 
 The first of them to use is `onOrderReferenceCreate`, which provides an Amazon order reference ID.
 
-This ID is a unique identifier of an order, created on Amazon's side and is required for Amazon Pay API calls.
+This ID is a unique identifier of an order, created on Amazon's side and is required for Handling orders with Amazon Pay API calls.
 
 Other important callbacks are `onAddressSelect` and `onPaymentSelect`. These callbacks are triggered after selecting shipment address information and payment method respectively. Callbacks are client side notifications informing that an event has happened.
 
-Use the Amazon Pay API to retrieve data and run order operations.
+Use the Handling orders with Amazon Pay API to retrieve data and run order operations.
 
 ### Checkout Step Rendering
 

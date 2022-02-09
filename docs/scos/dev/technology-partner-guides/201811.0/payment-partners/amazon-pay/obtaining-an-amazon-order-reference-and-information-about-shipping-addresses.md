@@ -11,8 +11,8 @@ redirect_from:
 related:
   - title: Amazon Pay - Refund
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-refund.html
-  - title: Amazon Pay API
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/amazon-pay-api.html
+  - title: Handling orders with Amazon Pay API
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/handling-orders-with-amazon-pay-api.html
   - title: Amazon Pay - State Machine
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/amazon-pay-state-machine.html
   - title: Amazon Pay - Sandbox Simulations
@@ -23,8 +23,8 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/amazon-pay-sandbox-simulations.html
   - title: Configuring Amazon Pay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/configuring-amazon-pay.html
-  - title: Amazon Pay API
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-api.html
+  - title: Handling orders with Amazon Pay API
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/legacy-demoshop-handling-orders-with-amazon-pay-api.html
   - title: Amazon Pay - Email Notifications
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-email-notifications.html
   - title: Amazon Pay - Order Reference and Information about Shipping Addresses
@@ -119,8 +119,8 @@ All necessary credentials have to be specified the same way and in order to retr
 
 The first of them to use is `onOrderReferenceCreate` which provides an Amazon order reference id.
 
-This ID is a unique identifier of the order, created on Amazon's side and is required Amazon Pay API calls.
+This ID is a unique identifier of the order, created on Amazon's side and is required Handling orders with Amazon Pay API calls.
 
 Other important callbacks are `onAddressSelect` and `onPaymentSelect`. These callbacks are triggered after selecting shipment address information and payment method respectively. Callbacks are client-side notifications that an event has happened.
 
-Use the Amazon Pay API to retrieve data and run order operations.
+Use the Handling orders with Amazon Pay API to retrieve data and run order operations.

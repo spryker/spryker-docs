@@ -13,8 +13,8 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
   - title: Amazon Pay - Refund
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-refund.html
-  - title: Amazon Pay API
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/amazon-pay-api.html
+  - title: Handling orders with Amazon Pay API
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/handling-orders-with-amazon-pay-api.html
   - title: Amazon Pay - State Machine
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/amazon-pay-state-machine.html
   - title: Amazon Pay - Sandbox Simulations
@@ -23,8 +23,8 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-rendering-a-pay-with-amazon-button-on-the-cart-page.html
   - title: Configuring Amazon Pay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/configuring-amazon-pay.html
-  - title: Amazon Pay API
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-api.html
+  - title: Handling orders with Amazon Pay API
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/legacy-demoshop-handling-orders-with-amazon-pay-api.html
   - title: Amazon Pay - Email Notifications
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-email-notifications.html
   - title: Amazon Pay - Order Reference and Information about Shipping Addresses
@@ -62,7 +62,7 @@ State Machine must be set according to the values of these two settings.
 
 $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING][AmazonpayConstants::PAYMENT_METHOD] =
  $config[AmazonpayConstants::CAPTURE_NOW] ? 'AmazonpayPaymentSync01' : 'AmazonpayPaymentAsync01';
-And one setting is spryker related only. It is a level of logging of Amazon Pay API calls
+And one setting is spryker related only. It is a level of logging of Handling orders with Amazon Pay API calls
 $config[AmazonpayConstants::ERROR_REPORT_LEVEL]
 ```
 
@@ -95,7 +95,7 @@ Next step is rendering Pay with Amazon button. Just insert this line in a proper
 {% raw %}{{{% endraw %} render(path('amazonpay_paybutton')) {% raw %}}}{% endraw %}
 ```
 
-Make sure that the button is rendered and works properly. In the sandbox mode it is necessary to have Amazon Pay test account. Once buyer is signed in with his credentials, he must be redirected to the checkout page and Amazon Order Reference Id has to be passed. On the checkout page two widgets must be displayed as well as button for confirming purchase. Delivery method selection has to be build on merchant side and Amazon provides nothing for it. Nevertheless, it always depends on the country and therefore it has to be refreshed after the delivery address is selected from the widget. For this Amazon provides JavaScript callback `onAddressSelect`. In the bundle it triggers internal controller `getShipmentMethodsAction()` which triggers Facade's method `addSelectedAddressToQuote()`. This method retrieves selected location via Amazon Pay API and writes it to Quote. After that, it is possible to retrieve available shipment methods.
+Make sure that the button is rendered and works properly. In the sandbox mode it is necessary to have Amazon Pay test account. Once buyer is signed in with his credentials, he must be redirected to the checkout page and Amazon Order Reference Id has to be passed. On the checkout page two widgets must be displayed as well as button for confirming purchase. Delivery method selection has to be build on merchant side and Amazon provides nothing for it. Nevertheless, it always depends on the country and therefore it has to be refreshed after the delivery address is selected from the widget. For this Amazon provides JavaScript callback `onAddressSelect`. In the bundle it triggers internal controller `getShipmentMethodsAction()` which triggers Facade's method `addSelectedAddressToQuote()`. This method retrieves selected location via Handling orders with Amazon Pay API and writes it to Quote. After that, it is possible to retrieve available shipment methods.
 
 For that purpose Spryker provides Shipment Bundle and its client with method `getAvailableMethods()`.
 

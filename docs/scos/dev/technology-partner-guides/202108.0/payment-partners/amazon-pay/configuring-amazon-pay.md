@@ -11,8 +11,8 @@ redirect_from:
   - /docs/amazon-pay-configuration-scos
   - /docs/en/amazon-pay-configuration-scos
 related:
-  - title: Amazon Pay API
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/amazon-pay-api.html
+  - title: Handling orders with Amazon Pay API
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/handling-orders-with-amazon-pay-api.html
   - title: Amazon Pay - State Machine
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/amazon-pay-state-machine.html
   - title: Amazon Pay - Sandbox Simulations

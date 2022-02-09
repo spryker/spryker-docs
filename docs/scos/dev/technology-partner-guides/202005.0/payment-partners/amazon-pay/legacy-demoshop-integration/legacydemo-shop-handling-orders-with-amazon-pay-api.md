@@ -1,5 +1,5 @@
 ---
-title: Amazon Pay API
+title: Legacy Demoshop — Handling orders with Amazon Pay API
 description: This article provides details on the API structure of the Amazon Pay module in Spryker Legacy Demoshop.
 last_updated: Apr 3, 2020
 template: concept-topic-template
@@ -17,8 +17,8 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-support-of-bundled-products.html
   - title: Amazon Pay - State Machine
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-state-machine.html
-  - title: Amazon Pay API
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/amazon-pay-api.html
+  - title: Handling orders with Amazon Pay API
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/handling-orders-with-amazon-pay-api.html
   - title: Amazon Pay - Order Reference and Information about Shipping Addresses
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-order-reference-and-information-about-shipping-addresses.html
   - title: Configuring Amazon Pay
@@ -33,7 +33,7 @@ related:
 
 So far we discussed the client side implementation provided by Amazon Pay. On the Spryker OS side, the module provides tools for rendering Amazon Pay widgets.
 
-Another part of the implementation is the Amazon Pay API function wrapper, implemented as a Facade.
+Another part of the implementation is the Handling orders with Amazon Pay API function wrapper, implemented as a Facade.
 
 Each API call involves similar classes from the module:
 
@@ -52,7 +52,7 @@ Since it is a standard Spryker OS practice, an entry point is a public method of
 * Calling Facade method.
 * Facade creates a related transaction handler or a collection of transaction handlers.
 * The transaction handler has execute method expecting an AmazonCallTransfer object as a parameter.
-* The transaction handler passes a transfer object to the adapter which is responsible for direct communication with the Amazon Pay API. Using the provided SDK it converts API responses into transfer objects using converters. Apart from adapters and converters, the rest of the code does not know anything about Amazon Pay API details and only works with Spryker OS transfer objects.
+* The transaction handler passes a transfer object to the adapter which is responsible for direct communication with the Handling orders with Amazon Pay API. Using the provided SDK it converts API responses into transfer objects using converters. Apart from adapters and converters, the rest of the code does not know anything about Handling orders with Amazon Pay API details and only works with Spryker OS transfer objects.
 * If not all order items, belonging to a logical group, where requested for the update, a new group is created for affected order items.
 * The transaction handler returns a modified transfer object. All information related to Amazon Pay is stored into AmazonpayPaymentTransfer transfer object and into the database.
 
@@ -78,10 +78,10 @@ Now the quote contains updated address information and it's possible to retrieve
 The Spryker OS provides a Shipment module and uses method `getAvailableMethods()` to retrieve the shipment methods list and send it back to the customer.
 Once shipping options are updated a buyer can choose one. Usually, shipment methods affect the total price of the order and it must be recalculated using the Calculation module.
 
-### Placing an Order 
+### Placing an Order
 Once all necessary information is saved into Quote, an order is ready to be placed.
 First, perform all related API calls and then persist an order in the database.
-All API related jobs are covered by only one Facade method confirmPurchase() which encapsulates five Amazon Pay API calls to be executed one after another:
+All API related jobs are covered by only one Facade method confirmPurchase() which encapsulates five Handling orders with Amazon Pay API calls to be executed one after another:
 
 1. `SetOrderReferenceDetails` for specifying order total amount
 2. `ConfirmOrderReference` for confirming the order

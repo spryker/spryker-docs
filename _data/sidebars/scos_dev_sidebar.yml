@@ -1507,6 +1507,8 @@ entries:
       include_versions:
       - "202009.0"
       - "202108.0"
+    - title: Catalog + Order Management feature integration
+      url: /docs/scos/dev/feature-integration-guides/catalog-order-management-feature-integration.html
     - title: Category Filters feature integration
       url: /docs/scos/dev/feature-integration-guides/category-filters-feature-integration.html
     - title: Checkout feature integration
@@ -3278,6 +3280,8 @@ entries:
             url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-query.html
           - title: Configuring Search for Multi-Currency
             url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html
+          - title: Expanding search data
+            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expanding-search-data.html
         - title: Transfering data between Yves and Zed
           url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/transfering-data-between-yves-and-zed.html
         - title: Defining the Module Dependencies- Dependency Provider
@@ -4133,39 +4137,39 @@ entries:
           url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/configuring-amazon-pay.html
         - title: Obtaining an Amazon Order Reference and information about shipping addresses
           url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
-        - title: Amazon Pay - Sandbox Simulations
+        - title: Sandbox Simulations
           url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/amazon-pay-sandbox-simulations.html
-        - title: Amazon Pay - State Machine
+        - title: State Machine
           url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/amazon-pay-state-machine.html
-        - title: Amazon Pay API
-          url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/amazon-pay-api.html
+        - title: Handling orders with Amazon Pay API
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/handling-orders-with-amazon-pay-api.html
         - title: Legacy Demoshop Integration
           include_versions:
           - "201811.0"
-          - "201903.0"  
+          - "201903.0"
           - "201907.0"
           - "202001.0"
           - "202005.0"
           - "202009.0"
           nested:
-            - title: "Amazon Pay - Rendering a \u201CPay with Amazon\u201D Button on the Cart Page"
+            - title: "Rendering a \u201CPay with Amazon\u201D Button on the Cart Page"
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-rendering-a-pay-with-amazon-button-on-the-cart-page.html
-            - title: Amazon Pay - Email Notifications
+            - title: Email Notifications
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-email-notifications.html
-            - title: Amazon Pay - Configuration for the Legacy Demoshop
+            - title: Configuration for the Legacy Demoshop
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-configuration-for-the-legacy-demoshop.html
-            - title: Amazon Pay - Sandbox Simulations
+            - title: Sandbox Simulations
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-sandbox-simulations.html
-            - title: Amazon Pay - Support of Bundled Products
+            - title: Support of Bundled Products
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-support-of-bundled-products.html
-            - title: Amazon Pay - Order Reference and Information about Shipping Addresses
+            - title: Order Reference and Information about Shipping Addresses
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-order-reference-and-information-about-shipping-addresses.html
-            - title: Amazon Pay - State Machine
+            - title: State Machine
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-state-machine.html
-            - title: Amazon Pay - Refund
+            - title: Refund
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-refund.html
-            - title: Amazon Pay API
-              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-api.html
+            - title: Handling orders with Amazon Pay API
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/legacy-demoshop-handling-orders-with-amazon-pay-api.html
     - title: Arvato
       nested:
         - title: v.1.0
@@ -4379,7 +4383,7 @@ entries:
           - title: Payolution - Performing Requests
             url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution-performing-requests.html
           - title: Payolution - Workflow
-            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution-workflow.html            
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution-workflow.html
         - title: RatePay
           nested:
             - title: Integrating payment methods for RatePay

@@ -1,5 +1,5 @@
 ---
-title: Amazon Pay API
+title: Handling orders with Amazon Pay API
 description: This article provides details on the API structure of the Amazon Pay module in Spryker Commerce OS.
 last_updated: Sep 19, 2019
 template: concept-topic-template
@@ -21,8 +21,8 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-rendering-a-pay-with-amazon-button-on-the-cart-page.html
   - title: Amazon Pay - Sandbox Simulations
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/amazon-pay-sandbox-simulations.html
-  - title: Amazon Pay API
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-api.html
+  - title: Handling orders with Amazon Pay API
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/legacy-demoshop-handling-orders-with-amazon-pay-api.html
   - title: Amazon Pay - Email Notifications
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-email-notifications.html
   - title: Amazon Pay - Order Reference and Information about Shipping Addresses
@@ -33,7 +33,7 @@ related:
 
 So far we discussed the client-side implementation provided by Amazon Pay. On the Spryker side, the bundle provides the tools for rendering Amazon Pay widgets.
 
-Another part of the implementation is the Amazon Pay API function wrapper, implemented as a Facade.
+Another part of the implementation is the Handling orders with Amazon Pay API function wrapper, implemented as a Facade.
 
 Each API call involves similar classes from the module:
 
@@ -52,7 +52,7 @@ Since it is a standard Spryker OS practice, an entry point is a public method of
 * Calling Facade method.
 * Facade creates a related transaction handler or a collection of transaction handlers.
 * The transaction handler has execute method expecting an AmazonCallTransfer object as a parameter.
-* The transaction handler passes a transfer object to the adapter which is responsible for direct communication with the Amazon Pay API. Using the provided SDK it converts API responses into transfer objects using converters. Apart from adapters and converters, the rest of the code does not know anything about Amazon Pay API details and only works with Spryker OS transfer objects.
+* The transaction handler passes a transfer object to the adapter which is responsible for direct communication with the Handling orders with Amazon Pay API. Using the provided SDK it converts API responses into transfer objects using converters. Apart from adapters and converters, the rest of the code does not know anything about Handling orders with Amazon Pay API details and only works with Spryker OS transfer objects.
 * If not all order items, belonging to a logical group, where requested for the update, a new group is created for affected order items.
 * The transaction handler returns a modified transfer object. All information related to Amazon Pay is stored into.
 
@@ -84,9 +84,9 @@ Once shipment options are updated a buyer can choose one. Usually, the shipment 
 
 ## Placing an Order
 
-Once all necessary information is selected, an order is ready to be placed. 
+Once all necessary information is selected, an order is ready to be placed.
 First, call all related API calls and then persist an order in the database.
-All API related jobs are covered by only one Facade method confirmPurchase() which encapsulates three Amazon Pay API calls to be executed one by one: 
+All API related jobs are covered by only one Facade method confirmPurchase() which encapsulates three Handling orders with Amazon Pay API calls to be executed one by one:
 
 1. `SetOrderReferenceDetails` for specifying order total amount
 2.  `ConfirmOrderReference` for confirming the order
@@ -121,12 +121,12 @@ The next step is to authorize the order. It's a separate operation because in te
 
 ## Authorization in Asynchronous and Synchronous Modes. CaptureNow Setting
 
-The authorization API call is configurable and it reflects the whole payment process. First, an important setting is transaction_timeout which defines the maximum number of minutes allocated for the Authorise operation call to be processed, after which the authorization is automatically declined and you cannot capture funds against the authorization. The value zero means that the authorization result has to be returned immediately and it is asynchronous authorization. For the synchronous authorization, the value must be above zero but less than maximal possible 1440.  Another important setting is CaptureNow. It can only be true or false and if set to true then both requests - Authorisation and Capture will be done in one step, within Authorise API call. Both setting are independent and may have all possible values. The whole order process and related State Machine depend on these settings and can be very different. 
+The authorization API call is configurable and it reflects the whole payment process. First, an important setting is transaction_timeout which defines the maximum number of minutes allocated for the Authorise operation call to be processed, after which the authorization is automatically declined and you cannot capture funds against the authorization. The value zero means that the authorization result has to be returned immediately and it is asynchronous authorization. For the synchronous authorization, the value must be above zero but less than maximal possible 1440.  Another important setting is CaptureNow. It can only be true or false and if set to true then both requests - Authorisation and Capture will be done in one step, within Authorise API call. Both setting are independent and may have all possible values. The whole order process and related State Machine depend on these settings and can be very different.
 
 ## Handling Declined Payments. Synchronous Workflow
-Amazon Pay documentation defines a workflow which has to be implemented on a merchant side. 
+Amazon Pay documentation defines a workflow which has to be implemented on a merchant side.
 {image}
-In some cases, declined payments involves additional API calls. This is why there is an additional transaction collection called `HandleDeclinedOrderTransaction`. This call goes after the Authorization step and encapsulates two transaction objects: 
+In some cases, declined payments involves additional API calls. This is why there is an additional transaction collection called `HandleDeclinedOrderTransaction`. This call goes after the Authorization step and encapsulates two transaction objects:
 
 `GetOrderReferenceDetailsTransaction` which was used previously and `CancelOrderTransaction`.
 
@@ -145,15 +145,15 @@ Even if a response has status code 200 it still may contain Constraint(s
 There is one special constraint related to the selected payment method `PaymentMethodNotAllowed`. If it occurs (rarely) the buyer should be redirected to the same page with address and payment widgets and be able to choose a different payment method and all other order parameters as well.
 
 ## Handling Declined Payments. Asynchronous Workflow
-Unlike the synchronous authorisation, it is impossible to get the result of the authorization in the response. Authorization object stays in Pending state until authorized. Capture and Refund requests can also be processed in the same way and Amazon provides Internet Payment Notification (IPN) in order to notify the shop about the new status of any asynchronous request. IPN message is an HTTP request with some special Amazon-related headers and the body which is XML string containing all data. The merchant has to specify URL for receiving and processing IPN messages. The Bundle provides two Facade's methods 
+Unlike the synchronous authorisation, it is impossible to get the result of the authorization in the response. Authorization object stays in Pending state until authorized. Capture and Refund requests can also be processed in the same way and Amazon provides Internet Payment Notification (IPN) in order to notify the shop about the new status of any asynchronous request. IPN message is an HTTP request with some special Amazon-related headers and the body which is XML string containing all data. The merchant has to specify URL for receiving and processing IPN messages. The Bundle provides two Facade's methods
 
 `convertAmazonpayIpnRequest`(array `$headers`, `$body`) for converting Amazon request (which is HTTP headers and body) to the transfer object. For each type of IPN request Spryker provides related transfer object and method `convertAmazonpayIpnRequest()` returns one of them. For the processing of these transfer objects the Facade's method `handleAmazonpayIpnRequest` (`AbstractTransfer``$ipnRequestTransfer`) should be called. It `AbstractTransfer` type for its argument and it works with all types of IPN related transfer objects. A typical flow of a successful flow usually involves pending statuses of authorization and capture requests. Therefor related IPN messages have to be received and processed correctly. For retrieving same information Amazon provides also `GetAuthorizationDetails` and `GetCaptureDetails` functions and in Spryker, it is possible to update the pending statuses with State machine buttons. Once the button is clicked, the shop makes a related API call, receives a response and if the state is not pending then it updates order status according to the response message. The final status of a success flow is "capture completed". After that only Refund is available and refund workflow is asynchronous only and works in a similar way as asynchronous authorization.
 
-The more tricky case is authorization declined workflow. It is similar to synchronous decline which was described above but everything goes asynchronously and involves additional IPN messages. First of all, Authorisation IPN comes with "Declined" state of authorization status. Another important information here is ReasonCode and it affects all further steps of the process. For the reason codes, `TransactionTimedOut` and `AmazonRejected` the order simply goes to "authorization declined" state but for the 
+The more tricky case is authorization declined workflow. It is similar to synchronous decline which was described above but everything goes asynchronously and involves additional IPN messages. First of all, Authorisation IPN comes with "Declined" state of authorization status. Another important information here is ReasonCode and it affects all further steps of the process. For the reason codes, `TransactionTimedOut` and `AmazonRejected` the order simply goes to "authorization declined" state but for the
 
-InvalidPaymentMethod the customer has to change the payment method to the correct one. In this case, order receives "authorization suspended" status and Amazon sends two additional IPN messages: `OrderNotification` with the state "Open" comes in after payment method is changed by buyer and Authorisation notification as a result of authorization of a new payment method. If the new payment method passes authorization successfully then the order goes to the "auth open" state and it is possible to request a capture. In both decline cases, it is important to notify the buyer about it by email since it's the only way for him to know that payment is not possible. The text of the email letter has to be different for `InvalidPaymentMethod` case. 
+InvalidPaymentMethod the customer has to change the payment method to the correct one. In this case, order receives "authorization suspended" status and Amazon sends two additional IPN messages: `OrderNotification` with the state "Open" comes in after payment method is changed by buyer and Authorisation notification as a result of authorization of a new payment method. If the new payment method passes authorization successfully then the order goes to the "auth open" state and it is possible to request a capture. In both decline cases, it is important to notify the buyer about it by email since it's the only way for him to know that payment is not possible. The text of the email letter has to be different for `InvalidPaymentMethod` case.
 
-Another tricky moment about asynchronous flow is "Authorisation expired" situation. Each time the shop requests capture in the asynchronous mode it should check the current status of authorisation. Capture is only possible where the status of authorisation is "Open". If authorisation has status "Closed" and `ReasonCode` is either `ExpiredUnused` or `SellerClosed` then an order should be reauthorized with `CaptureNow` setting enabled. 
+Another tricky moment about asynchronous flow is "Authorisation expired" situation. Each time the shop requests capture in the asynchronous mode it should check the current status of authorisation. Capture is only possible where the status of authorisation is "Open". If authorisation has status "Closed" and `ReasonCode` is either `ExpiredUnused` or `SellerClosed` then an order should be reauthorized with `CaptureNow` setting enabled.
 
 ## Refund
 After successful authorization and capture processes order receives the status "capture completed". From this state only one operation is possible and it is Refund. A refund can be partial if more than one item set to refund or full.

@@ -10,7 +10,7 @@ redirect_from:
   - /v2/docs/en/akeneo
 related:
   - title: Installing and configuring Akeneo
-    link: docs/scos/user/technology-partners/page.version/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html
+    link: docs/scos/dev/technology-partner-guides/page.version/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html
 ---
 
 ## Partner Information

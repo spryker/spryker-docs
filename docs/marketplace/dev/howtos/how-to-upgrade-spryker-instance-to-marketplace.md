@@ -46,4 +46,4 @@ Please rebuild your app in order to apply all the changes regarding database ent
 Depending on the virtualization solution you use, follow the recommendations below.
 
 - [Docker based instance build](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html)
-- [Vagrant based instance build](/docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-mac-os-or-linux-with-development-virtual-machine.html)
+- [Vagrant based instance build](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html)

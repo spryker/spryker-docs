@@ -9,7 +9,7 @@ This topic describes how to add a product variant for an abstract product.
 
 ## Prerequisites
 
-To create a product variant, navigate to **Catalog** > **Products** section.
+To create a product variant, navigate to **Catalog&nbsp;<span aria-label="and then">></span> Products** section.
 
 Review the reference information before you start, or just look up the necessary information as you go through the process.
 
@@ -18,18 +18,18 @@ Review the reference information before you start, or just look up the necessary
 To create a product variant:
 
 1. Next to the abstract product you want to create a variant for, select **Edit**.
-2. On the *Edit Abstract* page, select **Add Variant**.
-3. In the *General* tab, do the following:
+2. On the **Edit Abstract** page, select **Add Variant**.
+3. In the **General** tab, do the following:
     1. Define a **SKU**:
         * Enter a **SKU**.<br>OR
         * Select **Autogenerate SKU**.
-    2. Under *Super attributes*, define one or more super attributes:
+    2. Under **Super attributes**, define one or more super attributes:
         * Select a value.
         * Select **Use custom value** and, in the field the appears below, enter the value.
     3. Add product name and description and select **Searchable** if you want your product to be searchable by its name in the online store.
     4. **Opionally**: Enter **Valid From** and **Valid To** dates to specify when the product should go online in the web-shop.
-    5. Go to the *Price & Stock* tab.
-4. In the *Price & Tax* tab, set prices and taxes for products:
+    5. Go to the **Price & Stock** tab.
+4. In the **Price & Tax** tab, set prices and taxes for products:
     1. To take the prices over from the abstract product, select **Use prices from abstract product**.
 
     {% info_block warningBox "Note" %}
@@ -41,10 +41,10 @@ To create a product variant:
     2. Otherwise, enter Original and eventually Default prices for the product for Gross and Net price modes.
     3. **B2B only:** In **Merchant Price Dimension**, select the merchant relationship to define a special price per merchant relation.
     4. Select **Quantity** for the product and then select **Never out of stock** if you want the product to never go out of stock.
-5. **Optionally**: Click **Next** to go to the *Image* to add images for the product and define the image order.
-6. **Optionally**: Click **Next** of select the *Assign bundled products* tab to create a bundles product. See [Creating and Managing Product Bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) to know more.
+5. Optional: Click **Next** to go to **Image** to add images for the product and define the image order.
+6. Optional: Click **Next** of select the **Assign bundled products** tab to create a bundles product. For more information, see [Creating and managing product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html).
 7. Click **Save**.
-The page is refreshed and you can see two additional tabs: *Discontinue* and* Product Alternatives*. See  [Discontinuing products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/discontinuing-products.html) and [Adding product alternatives](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/adding-product-alternatives.html) to know more.
+The page is refreshed and you can see two additional tabs: **Discontinue** and **Product Alternatives**. See  [Discontinuing products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/discontinuing-products.html) and [Adding product alternatives](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/adding-product-alternatives.html) to know more.
 
 {% info_block errorBox "Important" %}
 
@@ -75,7 +75,7 @@ This section describes the attributes you enter and select when  creating a prod
 | ATTRIBUTE |DESCRIPTION | CREATE CONCRETE PRODUCT | UPDATE CONCRETE PRODUCT|
 | --- | --- | --- | --- |
 |Use prices from abstract product|Once the checkbox is selected, the prices from the abstract product are taken over.|**Yes**|**No**|
-|Merchant Price Dimension|**B2B Only**<br>The drop-down list that allows you to select a merchant relation and set up a specific price for a specific merchant.<br>If the Default value is selected, the prices will be the same for everyone.<br>The values available for selection derive from **Merchants > Merchant Relations**.<br>Only one value can be selected.|**Yes**|**Yes**|
+|Merchant Price Dimension|**B2B Only**<br>The drop-down list that allows you to select a merchant relation and set up a specific price for a specific merchant.<br>If the Default value is selected, the prices will be the same for everyone.<br>The values available for selection derive from **Merchants&nbsp;<span aria-label="and then">></span> Merchant Relations**.<br>Only one value can be selected.|**Yes**|**Yes**|
 | Gross price<br>Net price | The price value for gross and net mode.<br>For concrete products, the prices are inherited from their abstract product and can be updated while editing the concrete product.|**Yes**  |**Yes**  |
 |Default<br>Original|Default prices are the prices your customers will pay, whereas original prices are the "previous prices" in case you want to display promotions. If you specify only a default price, it will be displayed just like a normal product price. However, if both prices are specified, the original one will appear crossed out in the shop.|**Yes**|**Yes**|
 |Add Product Volume Price<br>Edit Product Volume Price|Once selected, the Add volume price (Edit volume price) page opens. This option allows you to define specific prices for a specific quantity of products that a customer selects. Works only in case of Default prices.<br>**Add Product Volume Price** appears only when the price for a currency was set up and saved.<br>**Edit Product Volume Price** appears only what the volume price was already set up for a currency.|**No**|**Yes**|

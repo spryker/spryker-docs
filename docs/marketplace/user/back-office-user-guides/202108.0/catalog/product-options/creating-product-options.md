@@ -18,22 +18,22 @@ Each section in this article contains reference information. Make sure to review
 
 To create a product option, follow these steps:
 
-1. On the *Product option list* page, select **Create product option** in the top right corner.
-    This opens the  with *General Information* and *Products* tabs.
-2. On the *Create new Product Options* page, enter a **Group name translation key**.
+1. On the **Product option list** page, select **Create product option** in the top right corner.
+    This opens the  with **General Information** and **Products** tabs.
+2. On the **Create new Product Options** page, enter a **Group name translation key**.
 3. Select a **Tax set**.
-4. In the *Option Values* section, enter an **Option name translation key**.
+4. In the **Option Values** section, enter an **Option name translation key**.
 5. Enter a **SKU** or proceed with the auto-generated one.
-6. In the *Prices* section, enter **Gross price** and **Net price** for all the desired stores and currencies.
+6. In the **Prices** section, enter **Gross price** and **Net price** for all the desired stores and currencies.
 7. Optional: To add one more product options value, select **Add option**, and repeat step 5.
-8. In the *Translation* section, enter **Group name** and **Option name** for all the locales.
+8. In the **Translation** section, enter **Group name** and **Option name** for all the locales.
 9. To save the changes, select **Save**.
     This refreshes the page with the success message displayed.
 10. [Assign products to the product option](#assigning-products-to-a-product-option).  
 
 **Tips and tricks**
-* To remove an option value, click **Remove** next to the *Option name translation key* and *SKU* fields.
-* To copy a **Group name** or **Option name** from one locale to another, select the *Copy* icon next to the desired value.
+* To remove an option value, next to the **Option name translation key** and **SKU** fields, click **Remove**.
+* To copy a **Group name** or **Option name** from one locale to another, select the **Copy** icon next to the desired value.
 
 ### Reference information: Creating a product option
 
@@ -53,25 +53,23 @@ The following table describes the attributes you enter and select while creating
 ## Assigning products to a product option
 
 To assign products to a product option, follow these steps:
-1. On the *Edit product option* page, switch to **Products** tab.
+1. On the **Edit product option** page, switch to the **Products** tab.
 2. Select the desired products.
-3. Select **Save**
+3. Select **Save**.
     This refreshes the page with the success message displayed.
 
 <a name=activating-a-product-option></a>
 
 {% info_block infoBox "Activating product options" %}
 
-To display the product option on the Storefront, activate it by selecting **Activate** in the top right corner.
+To display the product option on the Storefront, in the top right corner of the page, activate it by selecting **Activate** .
 
 {% endinfo_block %}     
 
 **Tips and tricks**
 
 * To select all the products on the page, select **Deselect all on the page**. This is usually useful when you filter the products using the search field.
-* After selecting products, you can view the products to be assigned in the **Products to be assigned** subtab. To unselect a product from being assigned, select **Remove** next to the desired product.
-
-
+* After selecting products, you can view the products to be assigned on the **Products to be assigned** subtab. To unselect a product from being assigned, select **Remove** next to the desired product.
 
 ## Product option examples on the Storefront
 

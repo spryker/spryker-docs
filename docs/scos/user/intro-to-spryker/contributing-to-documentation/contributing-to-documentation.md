@@ -1,6 +1,6 @@
 ---
-title: Adding a new product to the documentation site
-description: Learn how to add a new product to the Spryker docs.
+title: Contributing to documentation
+description: Learn how you can contribute to the Spryker docs.
 template: howto-guide-template
 ---
 

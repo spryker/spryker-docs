@@ -56,4 +56,4 @@ ORDER BY `spy_sales_order`.`updated_at` DESC;
 ## Dynamic segments
 Since segments are defined using a many-to-many table, projects can create dynamic segments. 
 
-By handling events such as `Product created` and `Product updated`, you can maintain a special segment of products (e.g. red products).
+By handling events such as `Product created` and `Product updated`, you can maintain a special segment of products (for example,red products).

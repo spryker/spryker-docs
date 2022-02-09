@@ -68,7 +68,7 @@ The product offer prices support:
 * Store
 * Currency
 
-Product offer price follows the [concrete product price inheritance model](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html#price-inheritance). So if the Merchant doesn't set a price in the offer, it is taken from the concrete product. Otherwise, the product offer price has a higher priority and substitutes the concrete product price if it is indicated. If at least one price is defined for the offer (e.g., original), it is valid for this offer even if the concrete product has a default price (sales price), but the offer does not. See [Price types](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html#price-inheritance) for details on the price types.
+Product offer price follows the [concrete product price inheritance model](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html#price-inheritance). So if the Merchant doesn't set a price in the offer, it is taken from the concrete product. Otherwise, the product offer price has a higher priority and substitutes the concrete product price if it is indicated. If at least one price is defined for the offer (for example, original), it is valid for this offer even if the concrete product has a default price (sales price), but the offer does not. See [Price types](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html#price-inheritance) for details on the price types.
 
 Merchants can define product offer prices in the Merchant Portal when they [create product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html#creating-a-product-offer) or [import product offer prices](/docs/marketplace/dev/data-import/{{page.version}}/file-details-price-product-offer.csv.html).
 
@@ -128,7 +128,7 @@ Customers can add product offers to a wishlist for future purchase. Merchant inf
 ## Current constraints
 
 * B2B Merchant-specific prices do not work with product offer prices.
-* All cart-related B2B features (e.g., Quick Order, RFQ, Approval Process, etc.) will be supported later.
+* All cart-related B2B features (for example, Quick Order, RFQ, Approval Process, etc.) will be supported later.
 * Availability Notification is not supported.
 
 ## Related Business User articles

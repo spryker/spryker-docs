@@ -25,7 +25,7 @@ The file should have the following parameters:
 | currency                 | &check;             | String   |                   | Defined in the [ISO code](https://en.wikipedia.org/wiki/ISO_4217). | Currency of the price.                                       |
 | value_net                |               | Integer  |                   | Empty price values are imported as zeros.                    | Net price in cents.                                          |
 | value_gross              |               | Integer  |                   | Empty price values are imported as zeros.                    | Gross price in cents.                                        |
-| price_data.volume_prices |               | Array    |                   |                                                              | Price data which can be used to define alternative prices, i.e volume prices, overwriting the given net or gross price values. |
+| price_data.volume_prices |               | Array    |                   |                                                              | Price data which can be used to define alternative prices, that is, volume prices, overwriting the given net or gross price values. |
 
 ## Import file dependencies
 

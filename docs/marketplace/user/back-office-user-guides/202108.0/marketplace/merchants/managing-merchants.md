@@ -49,7 +49,7 @@ This tab contains information about the contact person. The contact person infor
 
 | ATTRIBUTE | DESCRIPTION | REQUIRED? |
 |-|-|-|
-| Title | Formal salutation for your contact person (e.g., Mr, Ms, Mrs, Dr). There is no default value selected. |  |
+| Title | Formal salutation for your contact person (for example, Mr, Ms, Mrs, Dr). There is no default value selected. |  |
 | Role | Text field where you can define the role the contact person performs. |  |
 | Phone | Text field where you can enter the phone number of the contact person. |  |
 | First Name | Text field where you can specify the first name of the contact person. | &check; |
@@ -150,7 +150,7 @@ This tab contains information about the contact person. The contact person infor
 
 | ATTRIBUTE | DESCRIPTION | REQUIRED? |
 |-|-|-|
-| Title | Formal salutation for your contact person (e.g., Mr, Ms, Mrs, Dr). There is no default value selected. |  |
+| Title | Formal salutation for your contact person (for example, Mr, Ms, Mrs, Dr). There is no default value selected. |  |
 | Role | Text field where you can define the role the contact person performs. |  |
 | Phone | Text field where you can enter or change the phone number of the contact person. |  |
 | First Name | Text field where you can specify the first name of the contact person. | &check; |

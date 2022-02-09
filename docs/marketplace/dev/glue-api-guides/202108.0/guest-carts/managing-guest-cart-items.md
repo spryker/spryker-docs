@@ -1674,7 +1674,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | -------------- | ----------- | --------------------- |
-| expenseTotal | String | Total amount of expenses (including, e.g., shipping costs). |
+| expenseTotal | String | Total amount of expenses (including, for example, shipping costs). |
 | discountTotal| Integer | Total amount of discounts applied to the cart.  |
 | taxTotal | String | Total amount of taxes to be paid.   |
 | subTotal   | Integer | Subtotal of the cart.  |

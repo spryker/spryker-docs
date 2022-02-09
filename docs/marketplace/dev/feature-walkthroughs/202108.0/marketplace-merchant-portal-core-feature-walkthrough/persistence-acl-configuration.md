@@ -5,7 +5,7 @@ description: Learn how to you can configure Persistence ACL
 template: concept-topic-template
 ---
 
-Merchant Portal comes with the pre-configured [Persistence ACL](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html) feature to secure sensitive data. 
+Merchant Portal comes with the pre-configured [Persistence ACL](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html) feature to secure sensitive data.
 
 By default, the feature creates and assigns a set of ACL roles to merchant users to restrict access to other merchant data in the system.
 
@@ -37,7 +37,7 @@ The diagram above is simplified and does not represent the entire configuration.
 As the diagram shows, the configuration is represented by three main composite objects:
 - `ProductOffer`
 - `MerchantProduct`
-- `SalesOrder` 
+- `SalesOrder`
 
 They all inherit from `Merchant`, which is also a composite object.
 Each merchant has its own data segment. Thanks to this, the merchant users have access exclusively to the data of their merchant.  
@@ -47,7 +47,7 @@ You can also check some entities that are configured as publicly readable:
 - `\Orm\Zed\Currency\Persistence\SpyCurrency`
 
 See the complete configuration of the PersistenceAcl module at [AclEntityMetadataConfigExpander](https://github.com/spryker/acl-merchant-portal/blob/master/src/Spryker/Zed/AclMerchantPortal/Business/Expander/AclEntity/AclEntityMetadataConfigExpander.php)
-  
+
 ## How to extend the initial Persistence ACL configuration
 Even though the Merchant portal comes with the Persistence ACL configuration, which is fully ready for the full-fledged merchant operation and provides data protection, you can extend or override this configuration. To do this, implement `\Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface`.
 To override the rules that are created automatically when creating a merchant and a user's merchant, it is enough to override such methods as:
@@ -72,7 +72,7 @@ use Generated\Shared\Transfer\AclEntityParentMetadataTransfer;
 use Orm\Zed\Merchant\Persistence\SpyMerchant;
 use Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
-    
+
 class AclEntityMetadataConfigExpanderPlugin extends AbstractPlugin implements AclEntityMetadataConfigExpanderPluginInterface
 {
     /**
@@ -90,7 +90,7 @@ class AclEntityMetadataConfigExpanderPlugin extends AbstractPlugin implements Ac
                         ->setEntityName(SpyMerchant::class)
                 )
         );
-        
+
         return $aclEntityMetadataConfigTransfer;
     }
 }

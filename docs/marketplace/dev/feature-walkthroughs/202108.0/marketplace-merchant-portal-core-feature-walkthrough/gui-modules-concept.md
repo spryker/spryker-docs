@@ -14,7 +14,7 @@ This articles provides a short overview of the GUI (graphical user interface) mo
 GUI modules have the main purpose of providing logic for the functioning of the Merchant Portal pages and components for merchant management. The Core GUI modules can be identified by the suffix `MerchantPortalGui` (`DashboardMerchantPortalGui`, `ProductOfferMerchantPortalGui`).
 
 Typical GUI modules include:
-- - Controllers for displaying Merchant Portal pages and corresponding logic (forms, data mappers, etc. );
+- - Controllers for displaying Merchant Portal pages and corresponding logic (forms, data mappers);
 - GUI tables and corresponding logic for configuration, data provisioning, etc.;
 - Twig templates;
 - Frontend components;

@@ -55,8 +55,8 @@ To remove an attribute from an abstract product:
 | ATTRIBUTE | DESCRIPTION |
 | ---------------- | --------------------------- |
 | Attribute     | Name of the attribute, for example, *color*.                 |
-| Default       | Values of you attribute, for example, if the attribute is *color*, its values can be *red*, *green*, *black*, etc. This value is used for all locales without a specific value. |
-| Locale value (e.g. DE_DE) | Translation of the attribute values for other locales. |
+| Default       | Values of you attribute, for example, if the attribute is *color*, its values can be *red*, *green*, or *black*. This value is used for all locales without a specific value. |
+| Locale value (for example, DE_DE) | Translation of the attribute values for other locales. |
 
 ## Next steps
 

@@ -216,7 +216,7 @@ class AclDependencyProvider extends SprykerAclDependencyProvider
 }
 ```
 
-Use the following example if you want to enable ACL Entity for the whole Application, e.g. for the Merchant Portal:
+Use the following example if you want to enable ACL Entity for the whole Application, for example,for the Merchant Portal:
 
 **src/Pyz/Zed/MerchantPortalApplication/MerchantPortalApplicationDependencyProvider.php**
 

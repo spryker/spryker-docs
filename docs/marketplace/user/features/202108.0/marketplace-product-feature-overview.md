@@ -55,7 +55,7 @@ Also, Marketplace administrators can edit products, if needed, and create produc
 
 
 ## Marketplace products in the Merchant Portal
-Merchants create and manage their products <!---LINK--> in the Merchant Portal. They can define prices, stock, attributes etc. for their products. See Managing merchant products <!---LINK--> for details on how to do that.
+Merchants create and manage their products <!---LINK--> in the Merchant Portal. They can define prices, stock, and attributes for their products. See Managing merchant products <!---LINK--> for details on how to do that.
 
 ## Related Business User articles
 

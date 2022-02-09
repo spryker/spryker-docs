@@ -26,7 +26,7 @@ These are the header fields to be included in the .csv file:
 | currency  | No   | String  | N/A   | Defines in which currency the price is.  |
 | value_net | No    | Integer | N/A   | Sets the net price.  |
 | value_gross  | No  | Integer | N/A    | Sets the gross price.  |
-| price_data.volume_prices | No    | String  | N/A  | Price data which can be used to define alternative prices, i.e volume prices, overwriting the given net or gross price values. |
+| price_data.volume_prices | No    | String  | N/A  | Price data which can be used to define alternative prices, that is, volume prices, overwriting the given net or gross price values. |
 
 *N/A: Not applicable.
 

@@ -19,7 +19,7 @@ The merchant order consists of the merchant order items, which are the items (pr
 | Canceled total   | Amount to be returned in case the order was canceled. `Canceled total = Merchant Order grand total - Merchant Order expense total` |
 | Discount total  | Total discount amount.    |
 | Merchant Order grand total   | Total amount the customer needs to pay after the discounts have been applied. |
-| Merchant Order expense total  | Total expenses amount (e.g., shipping).   |
+| Merchant Order expense total  | Total expenses amount (for example, shipping).   |
 | Merchant Order refund total  | Total refundable amount.   |
 | Merchant Order subtotal  | Total amount before taxes and discounts.  |
 | Merchant Order tax total  | Total tax amount from the grand total.   |

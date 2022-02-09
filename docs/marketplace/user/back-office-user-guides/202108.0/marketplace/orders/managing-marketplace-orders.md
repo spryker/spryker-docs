@@ -336,4 +336,4 @@ To edit a billing address:
 | Company City Zip Code Po box | Customer's company, city, zip code, and post office box number. |
 | Phone Cell phone | Customer's phone numbers. |
 | Description | Description of the order. |
-| Comment | Any specific comment regarding the customer or customer address (e.g., "*This address is going to be used only if the order costs less than 900 euros.*"). |
+| Comment | Any specific comment regarding the customer or customer address (for example, "*This address is going to be used only if the order costs less than 900 euros.*"). |

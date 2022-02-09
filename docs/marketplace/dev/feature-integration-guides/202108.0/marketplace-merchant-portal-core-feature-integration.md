@@ -578,7 +578,7 @@ Now it is time to install project dependencies:
 yarn install
 ```
 
-Check if the marketplace packages are located in the `node_modules/@spryker` folder (e.g., utils).
+Check if the marketplace packages are located in the `node_modules/@spryker` folder (for example, utils).
 
 ### 5) Install Marketplace builder
 

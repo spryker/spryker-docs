@@ -61,7 +61,7 @@ Let's say the Smartphone with a flash memory equals 16GB is no longer popular, a
 
 ## Product bundles
 
-Let's say you want to simplify the user journey and allow buying a bundle of products that are commonly used together (e.g., pens, notebooks, copy paper, and other stationery). You create a bundle for that purpose.
+Let's say you want to simplify the user journey and allow buying a bundle of products that are commonly used together (for example, pens, notebooks, copy paper, and other stationery). You create a bundle for that purpose.
 
 ![bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Managing+products/Products:+Reference+Information/Bundle.gif)
 

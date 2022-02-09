@@ -44,7 +44,7 @@ Low on Stock—the total number of offers that have less than 5 in the stock.
 
 #### Validity
 
-Valid—The total number of valid offers, i.e., offers that have no validity dates or *Valid From & Valid To* includes today's date.
+Valid—The total number of valid offers, that is,  offers that have no validity dates or *Valid From & Valid To* includes today's date.
 
 Expiring in 5 days—The total number of offers that will expire in the next 5 days.
 
@@ -56,7 +56,7 @@ Offline—the total number of offline offers.
 
 #### On Marketplace
 
-The total number of offers that are available on the Storefront, i.e., all of the orders that:
+The total number of offers that are available on the Storefront, that is,  all of the orders that:
 
 * Have no validity dates or *Valid From & Valid To* includes today's date.
 * Are online.

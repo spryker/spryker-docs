@@ -1885,7 +1885,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| expenseTotal | String | Total amount of expenses (including, e.g., shipping costs). |
+| expenseTotal | String | Total amount of expenses (including, for example, shipping costs). |
 | discountTotal | Integer | Total amount of discounts applied to the cart. |
 | taxTotal | Integer | Total amount of taxes to be paid. |
 | subTotal | Integer | Subtotal of the cart. |
@@ -1940,7 +1940,7 @@ For the attributes of other included resources, see:
 
 Guest carts are anonymous as they are not related to any user. If a user registers or logs in, the guest cart is automatically assigned to their account.
 
-To assign a guest cart to a customer, i.e., merge the carts, include the unique identifier associated with the customer in the *X-Anonymous-Customer-Unique-Id* header of the authentication request if it is an existing customer, or request to create a customer account if it is a new one.
+To assign a guest cart to a customer, that is, merge the carts, include the unique identifier associated with the customer in the *X-Anonymous-Customer-Unique-Id* header of the authentication request if it is an existing customer, or request to create a customer account if it is a new one.
 
 Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/scos/user/features/{{page.version}}/multiple-carts-feature-overview.html) environment:
 

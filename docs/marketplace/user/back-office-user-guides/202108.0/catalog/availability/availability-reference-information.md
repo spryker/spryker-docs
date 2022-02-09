@@ -20,6 +20,7 @@ On the *Overview of Products Availability* page, you see the following:
 {% info_block infoBox "Info" %}
 
 For multi-store projects, you can filter the products according to the store the product is available.
+
 {% endinfo_block %}
 
 {% info_block infoBox "Info" %}
@@ -85,4 +86,4 @@ This means that a customer can either buy those separately from their product de
 Each product has its own stock and availability value if bought separately.
 But in the case of a bundle, the availability is calculated based on each item’s availability taking into account their *quantity in the bundle*.
 
-Even if each item is available on its own, but the availability does not meet the minimum quantity for a bundle (e.g., there are only two glass screen protectors, but the bundle goes with three), then the whole bundle is *unavailable*.
+Even if each item is available on its own, but the availability does not meet the minimum quantity for a bundle (for example, there are only two glass screen protectors, but the bundle goes with three), then the whole bundle is *unavailable*.

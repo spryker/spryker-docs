@@ -40,7 +40,7 @@ The file should have the following parameters:
 | price_product_offer.currency                 |               | String   |                   | Defined in the [ISO code](https://en.wikipedia.org/wiki/ISO_4217). | Currency of the price.                                       |
 | price_product_offer.value_net                |               | Integer  |                   | Empty price values will be imported as zeros.                | Net price in cents.                                          |
 | price_product_offer.value_gross              |               | Integer  |                   | Empty price values will be imported as zeros.                | Gross price in cents.                                        |
-| price_product_offer.price_data.volume_prices |               | Array    |                   |                                                              | Price data which can be used to define alternative prices, i.e volume prices, overwriting the given net or gross price values. |
+| price_product_offer.price_data.volume_prices |               | Array    |                   |                                                              | Price data which can be used to define alternative prices, that is, volume prices, overwriting the given net or gross price values. |
 | product_offer_validity.valid_from            |               | Datetime |                   |                                                              | Date and time from which the offer is active.                |
 | product_offer_validity.valid_to              |               | Datetime |                   |                                                              | Date and time  till which the offer is active.               |
 

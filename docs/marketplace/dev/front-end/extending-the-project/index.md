@@ -26,7 +26,7 @@ If not, follow the steps from the [Migration guide - Extending the project](/doc
 
 ## Extending/customizing configuration modules
 
-There are several modules having global configuration in `app.module.ts `(e.g. `LocaleModule`, `DefaultUnsavedChangesConfigModule`, `DefaultTableConfigModule`) that influence any component in each module.
+There are several modules having global configuration in `app.module.ts `(for example,`LocaleModule`, `DefaultUnsavedChangesConfigModule`, `DefaultTableConfigModule`) that influence any component in each module.
 
 To extend/customize or override the default configuration, you must add a module with the proper static methods to the `app.module.ts` imports. Below, you can find an example with table configuration:
 

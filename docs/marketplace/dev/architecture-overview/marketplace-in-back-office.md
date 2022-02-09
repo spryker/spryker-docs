@@ -25,6 +25,6 @@ Marketplace offers two types of GUI modules for the Back Office:
 {% info_block warningBox  %}
 
 Don't put any business logic into your GUI modules.
-In all cases, business logic should reside in a principal module (e.g., `ProductGui` resides in `Product`).
+In all cases, business logic should reside in a principal module (for example, `ProductGui` resides in `Product`).
 
 {% endinfo_block %}

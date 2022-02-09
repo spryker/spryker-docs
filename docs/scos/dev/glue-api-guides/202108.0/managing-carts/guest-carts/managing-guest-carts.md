@@ -64,7 +64,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 | --- | --- | --- | --- |
 | X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | Guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value.|
 
-| PATH PARAMETER | DESCRIPTION | Possible values |
+| QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | <ul><li>guest-cart-items</li><li>cart-rules</li><li>promotional-items</li><li>gift-cards</li><li>vouchers</li><li>product-options</li><li>sales-units</li><li>product-measurement-units</li><li>product-labels</li></ul>|
 

@@ -4133,19 +4133,24 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/payment-partners/afterpay/integrating-afterpay.html
     - title: Amazon Pay
       nested:
-        - title: SCOS Integration
-          nested:
-            - title: Configuring Amazon Pay
-              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/scos-integration/amazon-pay-configuration-for-the-scos.html
-            - title: Amazon Pay - Obtaining an Amazon Order Reference and Information About Shipping Addresses
-              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/scos-integration/amazon-pay-obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
-            - title: Amazon Pay - Sandbox Simulations
-              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/scos-integration/amazon-pay-sandbox-simulations.html
-            - title: Amazon Pay - State Machine
-              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/scos-integration/amazon-pay-state-machine.html
-            - title: Amazon Pay API
-              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/scos-integration/amazon-pay-api.html
+        - title: Configuring Amazon Pay
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/configuring-amazon-pay.html
+        - title: Obtaining an Amazon Order Reference and information about shipping addresses
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
+        - title: Amazon Pay - Sandbox Simulations
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/amazon-pay-sandbox-simulations.html
+        - title: Amazon Pay - State Machine
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/amazon-pay-state-machine.html
+        - title: Amazon Pay API
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/amazon-pay-api.html
         - title: Legacy Demoshop Integration
+          include_versions:
+          - "201811.0"
+          - "201903.0"  
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
           nested:
             - title: "Amazon Pay - Rendering a \u201CPay with Amazon\u201D Button on the Cart Page"
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-rendering-a-pay-with-amazon-button-on-the-cart-page.html

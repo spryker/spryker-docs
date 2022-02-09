@@ -76,7 +76,7 @@ To be able to use Product Alternatives API, first, you need to have the Alternat
 {% endinfo_block %}
 
 ## Checking Whether Product is Discontinued
-Before suggesting an alternative product, first, check if a product is still available, i.e. not discontinued. To check if a product is discontinued, see [Retrieve Concrete Products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-information.html#retrieve-concrete-products).
+Before suggesting an alternative product, first, check if a product is still available, for example, not discontinued. To check if a product is discontinued, see [Retrieve Concrete Products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-information.html#retrieve-concrete-products).
 
 
 

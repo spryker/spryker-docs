@@ -46,26 +46,22 @@ entries:
           url: /docs/scos/dev/setup/installing-spryker-with-docker/configuration/additional-devops-guidelines.html
       - title: Database access credentials
         url: /docs/scos/dev/setup/installing-spryker-with-docker/database-access-credentials.html
-    - title: Installing Spryker with Vagrant
+    - title: Installing Spryker with Development Virtual Machine
       nested:
-      - title: B2B or B2C Demo Shop installation- Mac OS or Linux, with Development
-          Virtual Machine
-        url: /docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-mac-os-or-linux-with-development-virtual-machine.html
-      - title: B2B or B2C Demo Shop installation- without Development Virtual Machine
-        url: /docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-without-development-virtual-machine.html
-      - title: B2B or B2C Demo Shop installation- Windows, with Development Virtual
-          Machine
-        url: /docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-windows-with-development-virtual-machine.html
-      - title: Debugger
+      - title: Installing on MacOS and Linux
+        url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html
+      - title: Installing on Windows
+        url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-windows.html
+      - title: Configuring debugging
         nested:
-        - title: Configuring debugging in Vagrant
-          url: /docs/scos/dev/setup/installing-spryker-with-vagrant/debugger-configuration/configuring-debugging-in-vagrant.html
-        - title: Configuring debugging in Vagrant with VM below version 91
-          url: /docs/scos/dev/setup/installing-spryker-with-vagrant/debugger-configuration/configuring-debugging-in-vagrant-with-vm-below-version-91.html
-      - title: Virtual Machine Cleanup
-        url: /docs/scos/dev/setup/installing-spryker-with-vagrant/virtual-machine-cleanup.html
-      - title: Upgrading to the latest version of Node.js inside devwm
-        url: /docs/scos/dev/setup/installing-spryker-with-vagrant/upgrading-to-the-latest-version-of-node.js-inside-devwm.html
+        - title: Configuring debugging in DevVM
+          url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-devvm.html
+        - title: Configuring debugging in a DevVM below version 91
+          url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-a-devvm-below-version-91.html
+      - title: Cleaning up DevVM
+        url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/cleaning-up-devvm.html
+      - title: Updating Node.js to the latest version
+        url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/updating-node.js-in-devvm-to-the-latest-version.html
     - title: Post-Installation Steps and Additional Info
       url: /docs/scos/dev/setup/post-installation-steps-and-additional-info.html
     - title: Composer
@@ -3364,14 +3360,21 @@ entries:
           url: /docs/scos/dev/back-end-development/data-manipulation/event/adding-events.html
     - title: Extending Spryker
       nested:
-      - title: Adding a mew module
-        url: /docs/scos/dev/back-end-development/extending-spryker/adding-a-new-module.html
-      - title: Extending a core module that is used by another
-        url: /docs/scos/dev/back-end-development/extending-spryker/extending-a-core-module-that-is-used-by-another.html
-      - title: Extending the Core
-        url: /docs/scos/dev/back-end-development/extending-spryker/extending-the-core.html
-      - title: Extending the Spryker Core functionality
-        url: /docs/scos/dev/back-end-development/extending-spryker/extending-the-spryker-core-functionality.html
+      - title: Development strategies
+        url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html
+        nested:
+        - title: Project modules
+          nested:
+          - title: Adding a new module
+            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html
+        - title: Spryker OS module customization
+          nested:
+          - title: Extending a core module that is used by another
+            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-a-core-module-that-is-used-by-another.html
+          - title: Extending the Core
+            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-core.html
+          - title: Extending the Spryker Core functionality
+            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-spryker-core-functionality.html
     - title: Zed UI tables
       nested:
       - title: Creating and configuring Zed tables
@@ -3489,9 +3492,9 @@ entries:
     nested:
     - title: Deploy file
       url: /docs/scos/dev/the-docker-sdk/deploy-file/deploy-file.html
-      nested:
       include_versions:
       - "202108.0"
+      nested:
       - title: Deploy file reference - 1.0
         url: /docs/scos/dev/the-docker-sdk/deploy-file/deploy-file-reference-1.0.html
         include_versions:
@@ -3500,6 +3503,13 @@ entries:
         url: /docs/scos/dev/the-docker-sdk/deploy-file/deploy-file-inheritance-common-use-cases.html
         include_versions:
         - "202108.0"
+    - title: Deploy file reference - 1.0
+      url: /docs/scos/dev/the-docker-sdk/deploy-file-reference-1.0.html
+      include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
     - title: Docker environment infrustructure
       url: /docs/scos/dev/the-docker-sdk/docker-environment-infrastructure.html
       include_versions:
@@ -4258,32 +4268,164 @@ entries:
               include_versions:
               - "202009.0"
               - "202108.0"
+        - title: Computop
+          include_versions:
+          nested:
+          - title: Installing and configuring Computop
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/installing-and-configuring-computop.html
+          - title: Computop - OMS
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/computop-oms.html
+          - title: Computop - API
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/computop-api.html
+          - title: Integrating payment methods for Computop
+            nested:
+            - title: Integrating the Sofort payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-sofort-payment-method-for-computop.html
+            - title: Integrating the PayPal payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paypal-payment-method-for-computop.html
+            - title: Integrating the Easy Credit payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-easy-credit-payment-method-for-computop.html
+            - title: Integrating the CRIF payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-crif-payment-method-for-computop.html
+            - title: Integrating the iDeal payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-ideal-payment-method-for-computop.html
+            - title: Integrating the PayNow payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paynow-payment-method-for-computop.html
+            - title: Integrating the Сredit Сard payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-credit-card-payment-method-for-computop.html
+            - title: Integrating the Direct Debit payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-direct-debit-payment-method-for-computop.html
+            - title: Integrating the Paydirekt payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paydirekt-payment-method-for-computop.html
+          - title: Integrating Computop
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-computop.html
+            include_versions:
+            - "202009.0"
+            - "202108.0"
+        - title: CrefoPay
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay.html
+          nested:
+          - title: Installing and configuring CrefoPay
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/installing-and-configuring-crefopay.html
+          - title: CrefoPay — Enabling B2B payments
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-enabling-b2b-payments.html
+          - title: CrefoPay callbacks
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-callbacks.html
+          - title: CrefoPay notifications
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-notifications.html
+          - title: CrefoPay capture and refund processes
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-capture-and-refund-processes.html
+          - title: CrefoPay payment methods
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-payment-methods.html
+          - title: Integrating CrefoPay
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/integrating-crefopay.html
+        - title: Heidelpay
+          nested:
+          - title: Installing Heidelpay
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/installing-heidelpay.html
+          - title: Integrating Heidelpay
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-heidelpay.html
+          - title: Configuring Heidelpay
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/configuring-heidelpay.html
+          - title: Integrating payment methods for Heidelpay
+            nested:
+            - title: Integrating the Sofort payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-sofort-payment-method-for-heidelpay.html
+            - title: Integrating the Invoice Secured B2C payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-invoice-secured-b2c-payment-method-for-heidelpay.html
+            - title: Integrating the iDeal payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-ideal-payment-method-for-heidelpay.html
+            - title: Integrating the Easy Credit payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-easy-credit-payment-method-for-heidelpay.html
+            - title: Integrating the Direct Debit payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-direct-debit-payment-method-for-heidelpay.html
+            - title: Integrating the Split-payment Marketplace payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-split-payment-marketplace-payment-method-for-heidelpay.html
+            - title: Integrating the Paypal Debit payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-paypal-debit-payment-method-for-heidelpay.html
+            - title: Integrating the Paypal Authorize payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-paypal-authorize-payment-method-for-heidelpay.html
+            - title: Integrating the Credit Card Secure payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-credit-card-secure-payment-method-for-heidelpay.html
+          - title: Workflow for errors
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/heidelpay-workflow-for-errors.html
+          - title: OMS workflow
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/heidelpay-oms-workflow.html
+          - title: Integrating Heidelpay into the Legacy Demoshop
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-heidelpay-into-the-legacy-demoshop.html
+            include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+            - "202001.0"
+        - title: Payolution
+          nested:
+          - title: Installing and configuring Payolution
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/installing-and-configuring-payolution.html
+          - title: Integrating Payolution
+            include_versions:
+            - "202009.0"
+            - "202108.0"
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/integrating-payolution.html
+          - title: Integrating the invoice paymnet method for Payolution
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/integrating-the-invoice-payment-method-for-payolution.html
+          - title: Integrating the installment payment method for Payolution
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/integrating-the-installment-payment-method-for-payolution.html
+          - title: Payolution - Performing Requests
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution-performing-requests.html
+          - title: Payolution - Workflow
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution-workflow.html            
         - title: RatePay
           nested:
-            - title: RatePay - Payment methods
+            - title: Integrating payment methods for RatePay
               nested:
-                - title: RatePay - Direct Debit
-                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html
-                - title: RatePay - Prepayment
-                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-payment-methods/ratepay-prepayment.html
-                - title: RatePay - Installment
-                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-payment-methods/ratepay-installment.html
-                - title: RatePay - Invoice
-                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-payment-methods/ratepay-invoice.html
+                - title: Integrating the Direct Debit payment method for RatePay
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-direct-debit-payment-method-for-ratepay.html
+                - title: Integrating the Prepayment payment method for RatePay
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-prepayment-payment-method-for-ratepay.html
+                - title: Integrating the Installment payment method for RatePay
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-installment-payment-method-for-ratepay.html
+                - title: Integrating the Invoice payment method for RatePay
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-invoice-payment-method-for-ratepay.html
             - title: Technical details and HowTos
               nested:
                 - title: RatePay facade
-                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/technical-details-and-howtos/ratepay-facade.html
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-facade.html
                 - title: RatePay payment workflow
-                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/technical-details-and-howtos/ratepay-payment-workflow.html
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-payment-workflow.html
                 - title: Disabling address updates from the backend application for RatePay
-                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/technical-details-and-howtos/disabling-address-updates-from-the-backend-application-for-ratepay.html
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/disabling-address-updates-from-the-backend-application-for-ratepay.html
                 - title: RatePay state machine commands and conditions
-                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/technical-details-and-howtos/ratepay-state-machine-commands-and-conditions.html
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-state-machine-commands-and-conditions.html
             - title: RatePay Core module structure diagram
               url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
             - title: RatePay state machines
               url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-state-machines.html
+    - title: Product information (PIMERP)
+      nested:
+      - title: Akeneo
+        nested:
+        - title: Installing and configuring Akeneo
+          url: /docs/scos/dev/technology-partner-guides/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html
+        - title: Akeneo — Console commands
+          url: /docs/scos/dev/technology-partner-guides/product-information-pimerp/akeneo/akeneo-console-commands.html
+          include_versions:
+          - "202009.0"
+          - "202108.0"
+    - title: Shipment
+      nested:
+      - title: Seven Senders
+        nested:
+          - title: Installing and configuring Seven Senders
+            url: /docs/scos/dev/technology-partner-guides/shipment/seven-senders/installing-and-configuring-seven-senders.html
+          - title: Integrating Seven Senders
+            url: /docs/scos/dev/technology-partner-guides/shipment/seven-senders/integrating-seven-senders.html
+          - title: API requests
+            url: /docs/scos/dev/technology-partner-guides/shipment/seven-senders/seven-senders-api-requests.html
+          - title: Mappers
+            url: /docs/scos/dev/technology-partner-guides/shipment/seven-senders/seven-senders-mappers.html
+          - title: Persistance layer
+            url: /docs/scos/dev/technology-partner-guides/shipment/seven-senders/seven-senders-persistance-layer.html
     - title: Taxes
       include_versions:
       - "202108.0"
@@ -4296,6 +4438,7 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/taxes/avalara/integrating-avalara-tax-product-options.html
             - title: Integrating Avalara Tax + Shipment
               url: /docs/scos/dev/technology-partner-guides/taxes/avalara/integrating-avalara-tax-shipment.html
+
   - title: Architecture
     url: /docs/scos/dev/architecture/architecture.html
     nested:

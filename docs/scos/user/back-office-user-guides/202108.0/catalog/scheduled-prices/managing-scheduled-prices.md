@@ -133,7 +133,8 @@ To delete an import:
 
 {% info_block errorBox %}
 
-<ul><li>All the scheduled prices located in an import are deleted when the import is deleted.</li><li>Performing this action triggers the scheduled prices cron job to be run for the products which have had corresponding scheduled prices in this import.</li></ul>
+- All the scheduled prices located in an import are deleted when the import is deleted.
+- Performing this action triggers the scheduled prices cron job to be run for the products which have had corresponding scheduled prices in this import.
 
 {% endinfo_block %}
 

@@ -762,7 +762,7 @@ You can use the demoshop's `cart-item.twig` as a template for your own project.
 <br>
 </details>
 
-Seemingly complex, you can simplify the code if your implementation does not support narrowing down of attributes (only one super attribute per product, i.e. T-shirt size).
+Seemingly complex, you can simplify the code if your implementation does not support narrowing down of attributes (only one super attribute per product, for example, T-shirt size).
 
 <details open>
 <summary markdown='span'>The following snippet should help:</summary>

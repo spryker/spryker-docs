@@ -269,10 +269,10 @@ We have extended our partner portfolio with a RatePay integration that offers 4 
 
 **Documentation**:
 
-* [RatePay - Prepayment](/docs/scos/user/technology-partners/201907.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-prepayment.html)
-* [RatePay - Invoice](/docs/scos/user/technology-partners/201907.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-invoice.html)
-* [RatePay - Direct Debit](/docs/scos/user/technology-partners/201907.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html)
-* [RatePay - Installment](/docs/scos/user/technology-partners/201907.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-installment.html)
+* [Integrating the Prepayment payment method for RatePay](/docs/scos/user/technology-partners/201907.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-prepayment-payment-method-for-ratepay.html)
+* [Integrating the Invoice payment method for RatePay](/docs/scos/user/technology-partners/201907.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-invoice-payment-method-for-ratepay.html)
+* [Integrating the Direct Debit payment method for RatePay](/docs/scos/user/technology-partners/201907.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-direct-debit-payment-method-for-ratepay.html)
+* [Integrating the Installment payment method for RatePay](/docs/scos/user/technology-partners/201907.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-installment-payment-method-for-ratepay.html)
 
 ### Episerver
 We now have a new integration of our new partner Episerver and their online platform to support newsletters as well as the transactional notifications required in the usual e-commerce transactions.

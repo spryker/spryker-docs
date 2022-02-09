@@ -51,8 +51,8 @@ Because of PCI compliance reasons, credit card data is communicated to the third
 
 ## Related Developer guides
 
-* [Integrating Braintree](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/integrating-braintree.html)
 * [Installing and configuring Braintree](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/installing-and-configuring-braintree.html)
+* [Integrating Braintree](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/integrating-braintree.html)
 * [Braintree - Request workflow](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/braintree-request-workflow.html)
 * [Braintree - Performing requests](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/braintree-performing-requests.html)
 

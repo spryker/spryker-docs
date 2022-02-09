@@ -7,7 +7,7 @@ related:
     link: docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html
 ---
 
-This document contains Markdown syntax of the page elements used on our documentation website. You will read about:
+This document contains Markdown syntax of the page elements used on our documentation website, specifically:
 
 - Documentation-specific Markdown elements
 - HTML syntax that is used where Markdown is insufficient for our documentation website

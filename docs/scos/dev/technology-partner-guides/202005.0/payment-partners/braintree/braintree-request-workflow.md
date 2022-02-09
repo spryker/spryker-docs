@@ -1,19 +1,19 @@
 ---
-title: Braintree - Workflow for SCOS
+title: Braintree - Request workflow
 description: This article describes the request flow for the Braintree module in the Spryker Commerce OS.
-last_updated: Nov 22, 2019
+last_updated: Apr 3, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v4/docs/braintree-workflow
-originalArticleId: 0043459a-60b5-439c-aa78-fd0bc2f5d282
+originalLink: https://documentation.spryker.com/v5/docs/braintree-workflow
+originalArticleId: de1d1ff6-f069-46b6-b6ec-92779cfb46a5
 redirect_from:
-  - /v4/docs/braintree-workflow
-  - /v4/docs/en/braintree-workflow
+  - /v5/docs/braintree-workflow
+  - /v5/docs/en/braintree-workflow
 related:
   - title: Braintree
     link: docs/scos/user/technology-partners/page.version/payment-partners/braintree.html
-  - title: Braintree - Performing Requests for SCOS
+  - title: Braintree - Performing Requests
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-performing-requests.html
-  - title: Braintree - Configuration for SCOS
+  - title: Installing and configuring Braintree
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/installing-and-configuring-braintree.html
 ---
 

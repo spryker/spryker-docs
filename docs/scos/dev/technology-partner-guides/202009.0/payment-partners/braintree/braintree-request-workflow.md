@@ -1,20 +1,20 @@
 ---
-title: Braintree - Workflow for SCOS
+title: Braintree - Request workflow
 description: This article describes the request flow for the Braintree module in the Spryker Commerce OS.
-last_updated: Nov 22, 2019
+last_updated: Aug 27, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v3/docs/braintree-workflow
-originalArticleId: 16bdc0c3-670f-4536-ab24-1ab6abb65998
+originalLink: https://documentation.spryker.com/v6/docs/braintree-workflow
+originalArticleId: 01e0bd69-5d0f-47bc-a163-ebc814adc5c9
 redirect_from:
-  - /v3/docs/braintree-workflow
-  - /v3/docs/en/braintree-workflow
+  - /v6/docs/braintree-workflow
+  - /v6/docs/en/braintree-workflow
 related:
-  - title: Braintree
-    link: docs/scos/user/technology-partners/page.version/payment-partners/braintree.html
-  - title: Braintree - Performing Requests for SCOS
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-performing-requests.html
-  - title: Braintree - Configuration for SCOS
+  - title: Installing and configuring Braintree
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/installing-and-configuring-braintree.html
+  - title: Integrating Braintree
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/integrating-braintree.html
+  - title: Braintree - Performing Requests
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-performing-requests.html
 ---
 
 Both credit card and PayPal utilize the same request flow in

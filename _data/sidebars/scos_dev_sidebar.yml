@@ -3872,7 +3872,7 @@ entries:
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html
           - title: HowTo - Import Packaging Units
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-packaging-units.html
-          - title: HowTo - Manage business unit-specific prices via data import
+          - title: HowTo - Manage business unit specific prices via data import
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/how-to-manage-business-unit-specific-prices-via-data-import.html
         - title: HowTo - Generate a Token for Login
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html

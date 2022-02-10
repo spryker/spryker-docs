@@ -19,7 +19,7 @@ To edit general settings of an abstract product:
 
 1. Next to the product you want to edit, select **Edit**.
     This takes you to the **Edit Product Abstract [SKU]** page.
-2. In the *General* tab, update **Store relations**.
+2. On the **General** tab, update **Store relations**.
 3. Update **Name** and **Description** for the desired locales.
 4. Update **New from** and **New to** dates.
 5. Select **Save**.

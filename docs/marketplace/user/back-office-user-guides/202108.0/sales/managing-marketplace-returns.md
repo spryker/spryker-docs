@@ -5,14 +5,13 @@ description: This guide explains how to manage marketplace returns in the Back O
 template: back-office-user-guide-template
 ---
 
-After a [marketplace return](/docs/marketplace/user/features/{{page.version}}/marketplace-return-management-feature-overview.html) has been created by a Back Office user or by a [shop user](/docs/marketplace/user/features/{{page.version}}/marketplace-return-management-feature-overview.html#marketplace-return-management-on-the-storefront), it appears on the *Sales* > *Returns* page. On this page, you can manage the returns as follows:
-
+After a [marketplace return](/docs/marketplace/user/features/{{page.version}}/marketplace-return-management-feature-overview.html) has been created by a Back Office user or by a [shop user](/docs/marketplace/user/features/{{page.version}}/marketplace-return-management-feature-overview.html#marketplace-return-management-on-the-storefront), it appears on the **Sales&nbsp;<span aria-label="and then">></span> Returns** page. On this page, you can manage the returns as follows:
 - Set the return states.
 - Print the return slip.
 
 ## Prerequisites
 
-To start managing the marketplace returns, navigate to **Sales** > **Returns**.
+To start managing the marketplace returns, navigate to **Sales*&nbsp;<span aria-label="and then">></span> Returns**.
 
 Review the reference information before you start, or just look up the necessary information as you go through the process.
 
@@ -24,20 +23,18 @@ To set and track the return statuses, you trigger the return states.
 
 To trigger the return states:
 
-1. On the *Returns* page, click **View** in the *Actions* column. This takes you to the *Overview of Return: [Return reference]*.
-2. In the *Trigger all matching state section* of the *Overview of Return: [Return reference]* page, click the necessary state. The return state changes, and the new states that you can trigger appear. See [Marketplace return item states](#marketplace-return-item-states) for information on the return item states and the flow.
+1. On the **Returns** page, in the **Actions** column, click **View**. This takes you to the **Overview of Return: [Return reference]**.
+2. In the **Trigger all matching state section** of the **Overview of Return: [Return reference]** page, click the necessary state. The return state changes, and the new states that you can trigger appear. See [Marketplace return item states](#marketplace-return-item-states) for information on the return item states and the flow.
 
-
-
- **Info**
+ {% info_block infoBox "Info" %}
 
 The triggered return states are reflected in the Customer Account on the Storefront,  informing customers about the statuses of their returns.
 
-------
+ {% endinfo_block %}
 
-**Tips & Tricks**
+**Tips & tricks**
 
-To trigger the return states for all the items in the return, click the states at the *Trigger all matching states* field. To trigger the return states for individual items of the return, trigger the states in the *Trigger event* column for the necessary items.
+To trigger the return states for all the items in the return, click the states at the **Trigger all matching states** field. To trigger the return states for individual items of the return, trigger the states in the **Trigger event** column for the necessary items.
 
 ------
 
@@ -47,8 +44,7 @@ This section holds reference information related to setting the marketplace retu
 
 #### List of Returns page
 
-On the *Returns* page, you see the following:
-
+On the **Returns** page, you see the following:
 - Return ID
 - Return reference
 - Order reference
@@ -59,20 +55,20 @@ On the *Returns* page, you see the following:
 
 By default, the last created return goes on top of the table. However, you can sort and search the list of returns.
 
-All columns with headers having arrows in the *List of Returns* table are sortable.
+All columns with headers having arrows in the **List of Returns** table are sortable.
 
 ##### Actions column
 
-All the return management options that you can invoke from the *Actions* column on the *List of Returns* page are described in the following table.
+All the return management options that you can invoke from the **Actions** column on the **List of Returns** page are described in the following table.
 
-| ACTION     | DESCRIPTION                                                  |
-| --------- | ----------------------------------------------------------- |
-| View       | Takes you to the *Overview of Return: [Return reference]* page. Here, you can find all the information about the chosen review. |
-| Print Slip | Takes you to the print version of the return slip.           |
+| ACTION     | DESCRIPTION     |
+| --------- | ------------ |
+| View | Takes you to the *Overview of Return: [Return reference]* page. Here, you can find all the information about the chosen review. |
+| Print Slip | Takes you to the print version of the return slip. |
 
 #### Overview of Return: [Return Reference] page
 
-The following table describes the attributes on the *Overview of Return: [Return reference]* page when you view a return.
+The following table describes the attributes on the **Overview of Return: [Return reference]** page when you view a return.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Back+Office+user+guides/Sales/marketplace-return-back-office.png)
 
@@ -92,7 +88,7 @@ The returned items section displays information on the returned items.
 
 ##### Marketplace return item states
 
-You can trigger the following states for the returns on the *Overview of Returns [Return ID]* page:
+You can trigger the following states for the returns on the **Overview of Returns [Return ID]** page:
 
 | RETURN STATE    | DESCRIPTION           |
 | ---------------------- | ------------------------------------- |
@@ -102,7 +98,7 @@ You can trigger the following states for the returns on the *Overview of Returns
 
 ##### Total section
 
-The Total section displays the total amount of items to be returned.
+The **Total** section displays the total amount of items to be returned.
 
 ##### General information section
 
@@ -134,10 +130,9 @@ The Total section displays the total amount of items to be returned.
 For all returns, irrespective of their statuses, you can print the automatically generated [return slip](/docs/marketplace/user/back-office-user-guides/{{page.version}}/sales/managing-marketplace-returns.html#marketplace-return-item-states).
 
 To print the return slip:
-
-- In the *Actions* column on the *List of Returns* page, click **Print slip**.
-- On the *Return Overview [Return reference]* page, click **Print Return Slip**.
+- In the **Actions** column on the **List of Returns** page, click **Print slip**.
+- On the **Return Overview [Return reference]** page, click **Print Return Slip**.
 
 This takes you to the page with the print version of the return slip.
 
-For reference information about *the List of Returns* and *Return Overview [Return reference] pages,* on this page, see [List of Returns](#list-of-returns-page) and [Overview [Return reference\]](#list-of-returns-page), respectively.
+For reference information about **the List of Returns** and **Return Overview [Return reference] pages**, on this page, see [List of Returns](#list-of-returns-page) and [Overview [Return reference](#list-of-returns-page), respectively.

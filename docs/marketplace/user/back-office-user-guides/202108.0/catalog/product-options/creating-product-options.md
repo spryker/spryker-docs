@@ -8,7 +8,7 @@ This article describes how to create Marketplace product options.
 
 ## Prerequisites
 
-To start working with product options, go to **Catalog** > **Product Options**.
+To start working with product options, go to **Catalog&nbsp;<span aria-label="and then">></span> Product Options**.
 
 There should be an existing tax set to apply it to the [product option group](/docs/marketplace/user/features/{{page.version}}/marketplace-product-options-feature-overview.html). See [Managing tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/managing-tax-sets.html) for detailed instructions on creating tax sets.
 
@@ -81,4 +81,4 @@ And the values available in the drop-down lists are the product options:
 
 ## Next steps
 
-* [Managing product options](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html)
+[Managing product options](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html)

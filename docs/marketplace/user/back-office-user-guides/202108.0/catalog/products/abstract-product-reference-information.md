@@ -11,7 +11,7 @@ The following tables describe the attributes that you use when creating and edit
 
 {% info_block infoBox "Info" %}
 
-The set of tabs for the *Create* and *Edit* pages, as well as for abstract and concrete products, is different. Hence, the additional columns with identifiers are added for your convenience.
+The set of tabs for the **Create** and **Edit** pages, as well as for abstract and concrete products, is different. Hence, the additional columns with identifiers are added for your convenience.
 
 {% endinfo_block %}
 
@@ -43,9 +43,9 @@ No values are available for selection when you create a product bundle. When you
 
 {% endinfo_block %}
 
-* **While creating** an abstract product, you see a list of super attributes that derive from [Catalog > Attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/managing-product-attributes.html). You can select as many super attributes as you need and define from one to many values for them (those values will define the difference between the product variants). Please keep in mind that moving forward, you will be able to create product variants only based on the selected super attributes. To add more product variants in the future, add at least one super attribute and define at least one value for it.
+* *While creating* an abstract product, you see a list of super attributes that derive from [Catalog > Attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/managing-product-attributes.html). You can select as many super attributes as you need and define from one to many values for them (those values will define the difference between the product variants). Please keep in mind that moving forward, you will be able to create product variants only based on the selected super attributes. To add more product variants in the future, add at least one super attribute and define at least one value for it.
 
-* **While editing the abstract product/product bundle**, you see a table that displays the product variants that exist for this abstract product. From this page, you can view, edit, and manage attributes [for the product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/managing-product-attributes.html).
+* *While editing the abstract product/product bundle*, you see a table that displays the product variants that exist for this abstract product. From this page, you can view, edit, and manage attributes [for the product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/managing-product-attributes.html).
 
 ### SEO tab
 
@@ -66,7 +66,7 @@ No values are available for selection when you create a product bundle. When you
 
 ## Scheduled Prices tab
 
-In this tab, there is a table with the scheduled prices imported via a CSV file. The following information is available:
+On this tab, there is a table with the scheduled prices imported via a CSV file. The following information is available:
 
 * Currency, store, net, and gross price values.
 
@@ -77,6 +77,6 @@ On this page, you can view all the information entered while creating or editing
 
 {% info_block infoBox "Info" %}
 
-For the [Marketplace](/docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-concept.html) projects, you can check what Merchant owns the product on this page.
+For the [Marketplace](/docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-concept.html) projects, you can check what merchant owns the product on this page.
 
 {% endinfo_block %}

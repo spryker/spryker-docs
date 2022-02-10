@@ -9,7 +9,7 @@ This topic describes how to view and manage [merchant product offers](/docs/mark
 
 ## Prerequisites
 
-To start working with offers, go to **Marketplace** > **Offers**.
+To start working with offers, go to **Marketplace&nbsp;<span aria-label="and then">></span> Offers**.
 
 These instructions assume that there is an existing offer created by the Merchant in the Merchant Portal.
 
@@ -19,9 +19,9 @@ Each section contains reference information. Make sure to review it before you s
 
 Only approved and active offers are available for purchase on the Storefront.
 
-To approve an offer, on the *Offers* page, in the *Actions* column, click **Approve** next to the offer you want to approve.
+To approve an offer, on the **Offers** page, in the **Actions** column, click **Approve** next to the offer you want to approve.
 
-You can deny the offer by clicking **Deny** on the *Offers* page in the *Actions* column.
+You can deny the offer by clicking **Deny** on the **Offers** page in the **Actions** column.
 
 **Tips & tricks**
 
@@ -31,7 +31,7 @@ You can sort by offers belonging to a certain Merchant:
 
 ### Reference information: Approving or denying offers
 
-On the *Offers* page, there is a table with all the offers available in the Marketplace. The table includes:
+On the **Offers** page, there is a table with all the offers available in the Marketplace. The table includes:
 
 * Offer ID
 * Reference  
@@ -43,7 +43,7 @@ On the *Offers* page, there is a table with all the offers available in the Mark
 * Stores
 * Actions
 
-By default, the table is sorted by the *Offer ID* value.
+By default, the table is sorted by the **Offer ID** value.
 
 You can sort the table by other values (*Name* and *Status*) using the sorting icon in the needed column.
 
@@ -51,11 +51,11 @@ You can sort the table by other values (*Name* and *Status*) using the sorting i
 
 ## Viewing an offer
 
-To view an offer, on the *Offers* page, in the *Actions* column, click **View** next to the offer you want to view.
+To view an offer, on the **Offers** page, in the **Actions** column, next to the offer you want to view, click **View**. 
 
 ### Reference information: Viewing an offers
 
-The following table describes the attributes on the *View Offer:[Offer Reference]* page:
+The following table describes the attributes on the **View Offer:[Offer Reference]** page:
 
 | SECTION | ATTRIBUTE | DESCRIPTION |
 |-|-|-|
@@ -75,4 +75,4 @@ The following table describes the attributes on the *View Offer:[Offer Reference
 
 ## Related articles
 
-* [Merchant Product Offer feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html)
+[Merchant Product Offer feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html)

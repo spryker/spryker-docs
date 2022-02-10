@@ -31,7 +31,7 @@ To be able to add product variants after creating an abstract product,  add at l
 To create an abstract product:
 1. In the top right corner, click **+Create Product**.
  This takes you to the **Create a Product** page.
-2. In the **General** tab, define general settings:
+2. On the **General** tab, define general settings:
  1. Select one or more **Store relations**.
  2. In **SKU Prefix**, enter an SKU prefix.
  3. In **Name** and **Description**, enter a name and description for all the locales.
@@ -87,7 +87,7 @@ On the **Variants** tab, define product variants:
 
 ### Reference information: Defining product variants
 
-On the **Variants** tab, you can see all the existing [super attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html#super-attributes). You can [create](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) or [manage](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/managing-product-attributes.html) super attributes in **Catalog** > **Attributes**.
+On the **Variants** tab, you can see all the existing [super attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html#super-attributes). You can [create](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) or [manage](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/managing-product-attributes.html) super attributes in **Catalog&nbsp;<span aria-label="and then">></span> Attributes**.
 
 You can select as many super attributes as you need and define one or more values for them. For each product attribute value you select, a product variant will be created. After creating the abstract product, you will be able to create new product variants based on the super attributes you select when creating the abstract product.
 

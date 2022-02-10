@@ -19,7 +19,7 @@ To create a product variant:
 
 1. Next to the abstract product you want to create a variant for, select **Edit**.
 2. On the **Edit Abstract** page, select **Add Variant**.
-3. In the **General** tab, do the following:
+3. On the **General** tab, do the following:
     1. Define a **SKU**:
         * Enter a **SKU**.<br>OR
         * Select **Autogenerate SKU**.
@@ -29,7 +29,7 @@ To create a product variant:
     3. Add product name and description and select **Searchable** if you want your product to be searchable by its name in the online store.
     4. **Opionally**: Enter **Valid From** and **Valid To** dates to specify when the product should go online in the web-shop.
     5. Go to the **Price & Stock** tab.
-4. In the **Price & Tax** tab, set prices and taxes for products:
+4. On the **Price & Tax** tab, set prices and taxes for products:
     1. To take the prices over from the abstract product, select **Use prices from abstract product**.
 
     {% info_block warningBox "Note" %}
@@ -104,4 +104,5 @@ Once you select to discontinue the product, you can add a note about that on thi
 The only field available is **Add Product Alternative by Name or SKU**. Here it is enough to enter three characters of a product name or SKU to see the autosuggested product list. From one to many values can be selected. If there is no need to set up an alternative product, you can skip this tab.
 
 **What's next?**
+
 Once you have set things up, you will most likely need to know what managing actions you can do with your products. See articles in the [Managing products](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/managing-products.html) section.

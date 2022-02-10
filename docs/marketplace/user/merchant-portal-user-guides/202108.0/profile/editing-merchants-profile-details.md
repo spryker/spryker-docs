@@ -24,11 +24,11 @@ The merchant's *Business Info* includes the details on contact person and genera
 
 {% endinfo_block %}
 
-To edit the merchant's business info, in the *Business Info* tab, edit the merchant details and click **Save**.
+To edit the merchant's business info, on the **Business Info** tab, edit the merchant details and click **Save**.
 
 ### Reference information: Editing merchant's business info
 
-This section describes the attributes you enter and select when editing the merchant's business info in the *Business Info* tab. This tab includes business details that are not displayed in the Storefront. This information is needed for the initial merchant setup and further collaboration between the merchant and Marketplace administrator.
+This section describes the attributes you enter and select when editing the merchant's business info on the **Business Info** tab. This tab includes business details that are not displayed in the Storefront. This information is needed for the initial merchant setup and further collaboration between the merchant and Marketplace administrator.
 
 #### Contact Person Details section
 
@@ -57,15 +57,15 @@ This section contains general information on the company the merchant has.
 
 {% info_block infoBox "Info" %}
 
-The *Online Profile* section allows managing the information displayed on the *Merchant Profile* page in the Storefront.
+The **Online Profile** section allows managing the information displayed on the **Merchant Profile** page in the Storefront.
 
 {% endinfo_block %}
 
-To edit the merchant's online profile, in the *Online Profile* tab, edit the necessary details and click **Save**.
+To edit the merchant's online profile, in the **Online Profile** tab, edit the necessary details and click **Save**.
 
 ### Reference information: Editing merchant's online profile
 
-This section describes attributes you see when editing he merchant's online profile in the *Online Profile* tab. This  tab contains the information that will further be displayed on the [Merchant Profile page on the Storefront](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-profile).
+This section describes attributes you see when editing he merchant's online profile on the **Online Profile** tab. This  tab contains the information that will further be displayed on the [Merchant Profile page on the Storefront](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-profile).
 
 #### Store Profile URL
 
@@ -120,4 +120,4 @@ This section describes attributes you see when editing he merchant's online prof
 
 ### What’s Next?
 
-Review the *My Offers* section to know more about product offers you can create.
+Review the **My Offers** section to know more about product offers you can create.

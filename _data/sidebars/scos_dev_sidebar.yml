@@ -1509,6 +1509,8 @@ entries:
       - "202108.0"
     - title: Catalog + Order Management feature integration
       url: /docs/scos/dev/feature-integration-guides/catalog-order-management-feature-integration.html
+      include_versions:
+      - "202108.0"      
     - title: Category Filters feature integration
       url: /docs/scos/dev/feature-integration-guides/category-filters-feature-integration.html
     - title: Checkout feature integration
@@ -4244,7 +4246,7 @@ entries:
               - "202009.0"
               - "202108.0"
             - title: Installing and configuring Braintree
-              url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/installing-and-configuring-braintree.html                       
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/installing-and-configuring-braintree.html
             - title: Performing requests
               url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/braintree-performing-requests.html
             - title: Request workflow

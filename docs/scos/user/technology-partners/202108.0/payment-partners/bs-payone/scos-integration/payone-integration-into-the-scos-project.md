@@ -1,6 +1,6 @@
 ---
-title: PayOne - Integration into the SCOS Project
-description: Integrate Payone into the Spryker Commerce OS by following the instructions from this article.
+title: PayOne - Integration PayPal express checkout into the SCOS Project
+description: Integrate Payone PayPal express checkout into the Spryker Commerce OS by following the instructions from this article.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/payone-integration-with-project-scos

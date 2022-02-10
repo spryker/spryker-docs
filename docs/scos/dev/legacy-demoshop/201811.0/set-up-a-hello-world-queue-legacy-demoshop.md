@@ -50,15 +50,16 @@ The management UI is used for managing queues in the RabbitMQ UI therefore, we n
 The `Queue` module needs at least one queue adapter.
 
 **To check if the RabbitMQ adapter is already registered in the Queue module:**
-In the Demoshop, open `QueueDependencyProvider.php` and `check/add` the RabbitMQ adapter inside `createQueueAdapters()`:
+In the Demoshop, open `\Pyz\Client\Queue\QueueDependencyProvider` and `check/add` the RabbitMQ adapter inside `createQueueAdapters()`:
 **Example:**
 
 ```php
-getLocator()-&gt;rabbitMq()-&gt;client()-&gt;createQueueAdapter(),
+    protected function createQueueAdapters(Container $container)
+    {
+        return [
+            $container->getLocator()->rabbitMq()->client()->createQueueAdapter(),
         ];
     }
-}
-?&gt;
 ```
 
 ## Creating a Simple Queue
@@ -76,26 +77,41 @@ As mentioned, we can have different queue adapters for different queues. In this
 To configure a queue work with a queue adapter, add the following lines to `config_default.php`:
 
 ```php
- [
-        QueueConfig::CONFIG_QUEUE_ADAPTER =&gt; \Spryker\Client\RabbitMq\Model\RabbitMqAdapter::class,
+    [
+        QueueConfig::CONFIG_QUEUE_ADAPTER => \Spryker\Client\RabbitMq\Model\RabbitMqAdapter::class,
     ],
 ];
-
-...
-?&gt;
-Adding Queue Configuration to RabbitMQ
 ```
 
-The next step is to extend `RabbitMqConfig.php` in our project and then pass our configuration to `getQueueOptions()`:
+### Adding Queue Configuration to RabbitMQ
+
+The next step is to extend `\Pyz\Client\RabbitMq\RabbitMqConfig` in our project, create a new method to handle the hello queue configuration and then add it to `getQueueConfiguration()`:
 
 **Code sample**
 
 ```php
-append($this-&gt;createQueueOption('hello', 'hello.error'));
-
-        return $queueOptionCollection;
+    protected function getQueueConfiguration(): array
+    {
+        return array_merge(
+            [
+                EventConstants::EVENT_QUEUE => [
+                    EventConfig::EVENT_ROUTING_KEY_RETRY => EventConstants::EVENT_QUEUE_RETRY,
+                    EventConfig::EVENT_ROUTING_KEY_ERROR => EventConstants::EVENT_QUEUE_ERROR,
+                ],
+                $this->get(LogConstants::LOG_QUEUE_NAME),
+            ],
+            $this->getPublishQueueConfiguration(),
+            $this->getSynchronizationQueueConfiguration(),
+            $this->getHelloWorldQueueConfiguration(),
+        );
     }
-?&gt;
+
+    protected function getHelloWorldQueueConfiguration(): array
+    {
+        return [
+            'hello',
+        ];
+    }
 ```
 
  {% info_block infoBox "Note" %}
@@ -131,18 +147,22 @@ The final step is to call `QueueClient::sendMessage()` and the trigger will be s
 **Code sample**
 
 ```php
-setBody('Hello, World!');
+    /**
+     * @param \Symfony\Component\HttpFoundation\Request $request
+     *
+     * @return array
+     */
+		public function sendAction(Request $request): array
+    {
+        $queueSendTransfer = (new QueueSendMessageTransfer())->setBody('Hello, World!');
 
-        $queueClient = $this-&gt;getFactory()-&gt;getQueueClient();
-        $queueClient-&gt;sendMessage('hello', $queueSendTransfer);
+        $queueClient = $this->getFactory()->getQueueClient();
+        $queueClient->sendMessage('hello', $queueSendTransfer);
 
         return [
-            'success' =&gt; true
+            'success' => true
         ];
     }
-}
-
-?&gt;
 ```
 
 Next, we call the action.
@@ -164,13 +184,21 @@ To create another action for receiving a message from the `hello` queue:
 **Code sample**
 
 ```php
-getFactory()-&gt;getQueueClient();
+    /**
+     * @param \Symfony\Component\HttpFoundation\Request $request
+     *
+     * @return array
+     */
+		public function receiveAction(Request $request): array
+    {
 
-        $queueReceiveMessageTransfer = $queueClient-&gt;receiveMessage('hello', $this-&gt;createReceiverOption());
+        $queueClient = $this->getFactory()->getQueueClient();
+
+        $queueReceiveMessageTransfer = $queueClient->receiveMessage('hello', $this->createReceiverOption());
 
         return [
-            'message' =&gt; $queueReceiveMessageTransfer-&gt;getQueueMessage()-&gt;getBody(),
-            'success' =&gt; true
+            'message' => $queueReceiveMessageTransfer->getQueueMessage()->getBody(),
+            'success' => true
         ];
     }
 
@@ -180,14 +208,13 @@ getFactory()-&gt;getQueueClient();
     protected function createReceiverOption()
     {
         $rabbitmqReceiveOptionTransfer = new RabbitMqConsumerOptionTransfer();
-        $rabbitmqReceiveOptionTransfer-&gt;setNoAck(false); /* it prevents the queue to delete the message until we send the `acknowledging` */
+        /* this prevents the queue to delete the message until we send the `acknowledging` */
+      	$rabbitmqReceiveOptionTransfer->setNoAck(false); 
 
         return [
-            'rabbitmq' =&gt; $rabbitmqReceiveOptionTransfer
+            'rabbitmq' => $rabbitmqReceiveOptionTransfer
         ];
     }
-
-?&gt;
 ```
 
 Result: you should be able to see this:
@@ -204,3 +231,4 @@ The `Queue` module provides specific commands for listening to queues, fetching 
 
 ```bash
 /vendor/bin/console queue:task:start
+```

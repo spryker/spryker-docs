@@ -7,8 +7,6 @@ entries:
     url: /docs/scos/dev/developer-getting-started-guide.html
   - title: Setup
     nested:
-    - title: System Requirements
-      url: /docs/scos/dev/setup/system-requirements.html
     - title: Installing Spryker with Docker
       url: /docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
       nested:
@@ -62,6 +60,10 @@ entries:
         url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/cleaning-up-devvm.html
       - title: Updating Node.js to the latest version
         url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/updating-node.js-in-devvm-to-the-latest-version.html
+    - title: Installing Spryker without DevVM
+      url: /docs/scos/dev/setup/installing-spryker-without-devvm.html      
+    - title: System Requirements
+      url: /docs/scos/dev/setup/system-requirements.html
     - title: Post-Installation Steps and Additional Info
       url: /docs/scos/dev/setup/post-installation-steps-and-additional-info.html
     - title: Composer
@@ -4381,8 +4383,8 @@ entries:
             url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/integrating-the-installment-payment-method-for-payolution.html
           - title: Performing requests
             url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution-performing-requests.html
-          - title: Payolution - Workflow
-            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution-workflow.html
+          - title: Payolution request flow
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution-request-flow.html
         - title: RatePay
           nested:
             - title: Facade methods

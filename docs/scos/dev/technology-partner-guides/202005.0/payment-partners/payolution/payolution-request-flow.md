@@ -1,13 +1,13 @@
 ---
-title: Payolution - Workflow
+title: Payolution request flow
 description: This article describes the request flow for Payolution.
-last_updated: Oct 23, 2019
+last_updated: Sep 15, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v1/docs/payolution-workflow
-originalArticleId: 6165d233-bd54-4328-9c00-fdb2a933d874
+originalLink: https://documentation.spryker.com/v5/docs/payolution-workflow
+originalArticleId: f2860a87-e64e-4786-890f-8ea480c78fe8
 redirect_from:
-  - /v1/docs/payolution-workflow
-  - /v1/docs/en/payolution-workflow
+  - /v5/docs/payolution-workflow
+  - /v5/docs/en/payolution-workflow
 related:
   - title: Integrating the invoice paymnet method for Payolution
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/integrating-the-invoice-payment-method-for-payolution.html
@@ -21,7 +21,7 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-performing-requests.html
 ---
 
-Both invoice and installment utilize the same request flow. It basically consists of the following requests:
+Both [invoice](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution/payolution-provided-payment-methods/payolution-invoice-payment.html) and [installment](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution/payolution-provided-payment-methods/payolution-installment-payment.html) payemnt methods utilize the same request flow. It basically consists of the following requests:
 
 * Calculation (for installment only): to calculate the installment amounts, dues, and durations.
 * Pre-check (optional): to check the user information in order to make sure that all the needed information is correct before doing the actual pre-authorization.
@@ -32,3 +32,5 @@ Both invoice and installment utilize the same request flow. It basically consist
 * Refund: to refund the buyer when returning products.
 
 ![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Payolution/payolution-workflow.png)  
+
+See Payolution - [Performing Requests](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution/payolution-performing-requests.html) for detailed information on the requests.

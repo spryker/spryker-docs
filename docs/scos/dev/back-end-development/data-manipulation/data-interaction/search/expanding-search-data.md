@@ -12,13 +12,13 @@ To expand the search data with a `foo` entity, do the following:
 
 1. Expand `ProductPageLoadTransfer` object with `foo` data:
 
-  1. Add your data to the transfer:
+    1. Add your data to the transfer:
 ```xml
 <transfer name="ProductPayload">
     <property name="foo" type="int"/>
 </transfer>
 ```
-  2. Implement `ProductPageDataLoaderPluginInterface` as follows. This plugin expands `ProductPageLoadTransfer` with data and returns the modified object.
+    2. Implement `ProductPageDataLoaderPluginInterface` as follows. This plugin expands `ProductPageLoadTransfer` with data and returns the modified object.
 
 <details>
     <summary markdown='span'>ProductPageDataLoaderPluginInterface implementation example</summary>
@@ -68,14 +68,14 @@ class FooPageDataLoaderPlugin implements ProductPageDataLoaderPluginInterface
 
 2. Expand `ProductAbstractPageSearch` object with `foo` data:
 
-  1. Add your data to transfer:
+    1. Add your data to transfer:
 
   ```xml
   <transfer name="ProductPageSearch">
       <property name="foo" type="int"/>
   </transfer>
   ```
-  2. Implement `ProductPageDataExpanderPluginInterface` as follows. This plugin expands the provided `ProductAbstractPageSearchTransfer` object's data by `foo`.
+    2. Implement `ProductPageDataExpanderPluginInterface` as follows. This plugin expands the provided `ProductAbstractPageSearchTransfer` object's data by `foo`.
 
 <details>
   <summary markdown='span'>ProductPageDataExpanderPluginInterface implementation example</summary>

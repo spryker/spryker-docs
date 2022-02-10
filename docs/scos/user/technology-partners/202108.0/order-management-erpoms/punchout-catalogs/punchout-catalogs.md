@@ -20,7 +20,7 @@ Check out this video to get more details on how Punchout works:
 
 {% wistia ntehv57yxb 960 720 %}
 
-## Related Developer articles
+## Related Developer guides
 
 * [Punchout Catalog feature integration](/docs/scos/dev/technology-partner-guides/{{page.version}}/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html)
 * [Eco - Punchout Catalogs + Product Bundles feature integration](/docs/scos/dev/technology-partner-guides/{{page.version}}/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html)

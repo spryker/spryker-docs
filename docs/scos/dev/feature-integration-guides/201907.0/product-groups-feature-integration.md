@@ -71,7 +71,7 @@ The `ProductGroup` module is shipped with a twig extension that provides the `sp
 
 `spyProductGroupItems()` accepts two parameters:
 1. **$idProductAbstract**: Reference of an abstract product by its ID field.
-2. **$template**: Template path used to render the product group items (i.e. `"@ProductGroup/partials/product-group-items.twig"`).
+2. **$template**: Template path used to render the product group items (for example, `"@ProductGroup/partials/product-group-items.twig"`).
 
 To enable this twig function, you’ll need to register `\Spryker\Yves\ProductGroup\Plugin\Provider\ProductGroupTwigServiceProvider` in your application’s bootstrap.
 
@@ -96,7 +96,7 @@ class YvesBootstrap
 }
 ```
 
-Below there is an example of rendering product group items in a Yves twig template (i.e. on catalog and product detail pages):
+Below there is an example of rendering product group items in a Yves twig template (for example, on catalog and product detail pages):
 
 ```php
 {% raw %}{{{% endraw %} spyProductGroupItems(idProductAbstract, '@ProductGroup/partials/product-group-items.twig') {% raw %}}}{% endraw %}

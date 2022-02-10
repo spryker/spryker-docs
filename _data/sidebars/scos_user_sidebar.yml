@@ -776,8 +776,19 @@ entries:
       url: /docs/scos/user/back-office-user-guides/logging-in-to-the-back-office.html
       include_versions:
       - "202108.0"
-    - title: Dashboard
+    - title: Viewing dashboard
       url: /docs/scos/user/back-office-user-guides/dashboard/viewing-dashboard.html
+      include_versions:
+      - "202108.0"
+      - "202009.0"
+    - title: Viewing dashboard
+      url: /docs/scos/user/back-office-user-guides/dashboard/viewing-dashboard.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
       nested:
       - title: References
         include_versions:
@@ -803,7 +814,7 @@ entries:
       - "202009.0"
       - "202108.0"
       nested:
-      - title: Managing Punch Out connections
+      - title: Managing punch out connections
         url: /docs/scos/user/back-office-user-guides/punch-out/managing-punch-out-connections.html
         include_versions:
         - "201907.0"

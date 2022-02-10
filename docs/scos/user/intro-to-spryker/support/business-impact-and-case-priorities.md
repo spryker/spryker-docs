@@ -42,7 +42,7 @@ Here are some examples of cases with P1 business impact
 ## Priorities
 Priority is an internal attribute that we set for cases after having evaluated them. There are 4 Priorities that we assign to cases.
 
-**Urgent** - Urgent cases have the highest priority for us. Since there can only be a very limited number of urgent cases for us to be able to operate, we assign this priority only to the most severe cases (i.e. Security Incidents or Infrastructure Outages)
+**Urgent** - Urgent cases have the highest priority for us. Since there can only be a very limited number of urgent cases for us to be able to operate, we assign this priority only to the most severe cases (for example, Security Incidents or Infrastructure Outages)
 
 **High** - High Priority cases are delt with with priority if there are no Urgent cases in the backlog, or not all support representatives are currently busy working on Urgent cases.
 

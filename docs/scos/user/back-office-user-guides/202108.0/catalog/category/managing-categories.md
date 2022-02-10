@@ -161,7 +161,7 @@ Select such a template to have slots for this category page. Slots can embed con
 
 To delete a category:
 
- 1. In the *Actions* drop-down, select **Delete** next to a specific category.
+1. In the *Actions* drop-down, select **Delete** next to a specific category.
 You are taken to the *Delete category [Category name]* page.
 On *Delete category [Category name]*, you see detailed information about everything that will be de-assigned, moved, or deleted along with that category.
 2. Select the checkbox next to **Yes, I am sure** to confirm your awareness and click **Delete**.

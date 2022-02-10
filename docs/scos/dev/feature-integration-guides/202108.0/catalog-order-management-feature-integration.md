@@ -1,5 +1,5 @@
 ---
-title: Category filters feature integration
+title: Catalog + Order Management feature integration
 description: Learn how to integrate the Catalog + Order Management feature connector into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -236,6 +236,6 @@ vendor/bin/console scheduler:setup
 
 1. Place several orders.
 2. Go to a Catalog page.
-   Make sure that you can sort by popularity.
+   Make sure that you can sort products by popularity.
 
 {% endinfo_block %}

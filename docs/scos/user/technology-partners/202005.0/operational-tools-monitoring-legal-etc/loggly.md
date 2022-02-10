@@ -17,7 +17,7 @@ The Loggly module provides a plugin to read log messages from a queue and send t
 
 To integrate this plugin you need to have the `QueueHandler` enabled in your Logger configuration. <!-- as described [here](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/spryker-middleware.html).-->
 
-## Related Developer articles
+## Related Developer guides
 
 * [Configuring Loggly](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/configuring-loggly.html)
 

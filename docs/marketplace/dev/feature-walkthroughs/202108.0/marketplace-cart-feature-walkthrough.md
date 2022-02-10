@@ -5,7 +5,7 @@ description: Buyers can add notes to carts of their orders.
 template: feature-walkthrough-template
 ---
 
-The *Marketplace Cart* feature allows buyers to add notes to their carts, and Marketplace administrators can view these notes.
+The *Marketplace Cart* feature lets buyers add notes to their carts, and Marketplace administrators can view these notes.
 
 {% info_block warningBox "User documentation" %}
 

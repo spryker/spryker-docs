@@ -22,7 +22,7 @@ One of the fundamental concepts of the Persistence ACL module is an entity rule.
 
 ## Scope
 
-The concept of scopes is very flexible. It allows you to create any rules that suit the needs of your system. For example:
+The concept of scopes is very flexible. It lets you create any rules that suit the needs of your system. For example:
 
 - Grant read-only access to "All Products".
 - Grant read-write access to "All Products".

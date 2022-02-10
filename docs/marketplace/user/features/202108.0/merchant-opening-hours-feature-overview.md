@@ -1,7 +1,7 @@
 ---
 title: Merchant Opening Hours feature overview
 last_updated: Jul 27, 2021
-description: The Merchant Opening Hours feature allows you to define opening hours for a merchant.
+description: The Merchant Opening Hours feature lets you define opening hours for a merchant.
 template: concept-topic-template
 ---
 

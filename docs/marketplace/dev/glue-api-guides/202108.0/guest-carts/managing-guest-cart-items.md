@@ -4,7 +4,7 @@ description: Retrieve details about guest cart items and learn what else you can
 template: glue-api-storefront-guide-template
 ---
 
-This endpoint allows you to manage guest cart items.
+This endpoint lets you manage guest cart items.
 
 ## Installation
 

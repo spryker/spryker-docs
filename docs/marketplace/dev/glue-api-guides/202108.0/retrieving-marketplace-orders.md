@@ -11,7 +11,7 @@ In your development, this resource can help you to:
 - Make the order history available to customers.
 - Make order details available to enable reordering functionality.
 
-The **Marketplace Order Management API** allows you to retrieve all orders made by a registered customer.
+The **Marketplace Order Management API** lets you retrieve all orders made by a registered customer.
 
 
 ## Installation

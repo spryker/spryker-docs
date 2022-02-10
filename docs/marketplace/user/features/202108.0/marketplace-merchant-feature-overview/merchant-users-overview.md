@@ -51,7 +51,7 @@ Merchant users have access only to the information related to their organization
 ## Merchant user workflow
 
 1. The Marketplace administrator creates a merchant and approves it.
-2. When the Merchant is approved, the corresponding merchant user(s) can be created in **Back Office > Merchant > Users**.
+2. When the Merchant is approved, the corresponding merchant user(s) can be created in **Back Office&nbsp;<span aria-label="and then">></span> Merchant&nbsp;<span aria-label="and then">></span> Users**.
 3. After the merchant user is created, they need to be activated <!--LINK TO BO GUIDE HOW TO ACTIVATE A MERCHANT USER--> to be able to log in to the Merchant Portal.
 4. The “Reset Password” email is sent to the activated merchant user.
 5. After the password is reset, the merchant user is able to log in to the Merchant Portal.

@@ -4,7 +4,7 @@ description: This document contains concept information for the Marketplace Cart
 template: concept-topic-template
 ---
 
-The *Marketplace Cart Notes* feature allows you to include a "Notes" field on the cart page. Buyers can add notes to a particular item or the whole cart, for example, some special instructions about how to prepare and deliver an order.
+The *Marketplace Cart Notes* feature lets you include a "Notes" field on the cart page. Buyers can add notes to a particular item or the whole cart, for example, some special instructions about how to prepare and deliver an order.
 
 Cart and item notes on the Storefront:
 

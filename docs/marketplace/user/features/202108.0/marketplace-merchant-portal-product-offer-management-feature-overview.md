@@ -11,7 +11,7 @@ In a marketplace environment, merchants manage [product offers](/docs/marketplac
 
 Merchants create product offers based on the products that exist in the marketplace. When creating an offer, they can see full information about products, including the number of existing offers for each of them.
 
-One merchant can create multiple offers for the same product. When cfreating product offers, the number of product offers for a product includes their own existing product offers.
+One merchant can create multiple offers for the same product. When creating product offers, the number of product offers for a product includes their own existing product offers.
 
 Merchants define the following settings when creating product offers:
 

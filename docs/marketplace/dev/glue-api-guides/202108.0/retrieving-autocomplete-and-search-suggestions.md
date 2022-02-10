@@ -4,7 +4,7 @@ description: This article provides information on which endpoints to use to get 
 template: glue-api-storefront-guide-template
 ---
 
-In addition to [catalog search](/docs/scos/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html), Glue API allows you to retrieve autocomplete suggestions for products, categories, and CMS pages. The feature allows developers to predict search strings and provide customers with available options.
+In addition to [catalog search](/docs/scos/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html), Glue API lets you retrieve autocomplete suggestions for products, categories, and CMS pages. The feature allows developers to predict search strings and provide customers with available options.
 
 In your development, this resource can help you to enhance the customer experience by providing the relevant information for search, product filters, shopping cart, checkout, order history, wishlist, and many more.
 

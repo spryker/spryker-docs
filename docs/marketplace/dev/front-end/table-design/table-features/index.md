@@ -72,7 +72,7 @@ export class TableCustomFeatureComponent extends TableFeatureComponent<
 
 There are two ways to use the Table Feature:
 
-- Via HTML tag (as a component) being projected into the Table Component—this allows users to control how the Table Feature is loaded on the page, but it does not control its loading from the Table Configuration.
+- Via HTML tag (as a component) being projected into the Table Component—this lets users control how the Table Feature is loaded on the page, but it does not control its loading from the Table Configuration.
 
     ```html
     <spy-table>
@@ -103,7 +103,7 @@ To add a feature via the registry, register the feature in the Table Module usin
 In the table configuration, you can enable or disable, and configure any feature.
 
 ```html
-<spy-table 
+<spy-table
     [config]="{
         ...,
         title: {

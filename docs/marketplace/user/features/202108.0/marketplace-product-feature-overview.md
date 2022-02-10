@@ -21,7 +21,7 @@ The marketplace products are displayed on the Storefront when the following cond
 
 ### Merchant product on the product details page
 
-Marketplace product appears on top of the the *Sold by* list together with the product offers from other merchants. For a buyer, it doesn't matter whether they are buying a product offer or a merchant product, however in the system, different entities are defined.
+Marketplace product appears on top of the *Sold by* list together with the product offers from other merchants. For a buyer, it doesn't matter whether they are buying a product offer or a merchant product. However, in the system, different entities are defined.
 
 Product price on top of the product details page is taken from the merchant product or the product offer. It depends on the option selected in the *Sold by* box.
 

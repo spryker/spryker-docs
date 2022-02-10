@@ -4,7 +4,7 @@ description: This document contains concept information for the Merchants featur
 template: concept-topic-template
 ---
 
-*Merchant* is a seller of goods or services, either a business or a private person working in the Marketplace environment. Merchants manage their business in the *Merchant Portal*. The *Merchant Portal* allows merchants to upload and manage merchant products and [offers](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html), define prices and stock, fulfill orders, and edit merchant profile information. Merchant can have employees who can access the Merchant Portal and perform actions on the merchant's behalf there. These employees are referred to as [*merchant users*](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html).  
+*Merchant* is a seller of goods or services, either a business or a private person working in the Marketplace environment. Merchants manage their business in the *Merchant Portal*. The *Merchant Portal* lets merchants upload and manage merchant products and [offers](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html), define prices and stock, fulfill orders, and edit merchant profile information. Merchant can have employees who can access the Merchant Portal and perform actions on the merchant's behalf there. These employees are referred to as *[merchant users](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html)*.  
 
 Merchant is the core entity of the Spryker Marketplace and the second main entity after customers since the Marketplace connects the buying customers and the selling customers.
 Every merchant in the Spryker Marketplace has a unique identifier in the system called *Merchant SKU*. 
@@ -76,7 +76,7 @@ To make the selling activity efficient, merchants can provide their working sche
 
 ### Merchant links on the Storefront pages
 
-Marketplace Storefront allows buyers to check what merchants are the owners of the offers and products the customers are buying. The respective merchant names with the link to the merchant profile page are available:
+Marketplace Storefront lets buyers check what merchants are the owners of the offers and products the customers are buying. The respective merchant names with the link to the merchant profile page are available:
 
 * On the product detail page
 

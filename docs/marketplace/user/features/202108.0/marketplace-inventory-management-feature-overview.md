@@ -4,7 +4,7 @@ description: This document contains concept information for the Marketplace Prod
 template: concept-topic-template
 ---
 
-The *Marketplace Inventory Management* feature allows maintaining stock and availability of merchant products and product offers that are sold in the Marketplace.
+The *Marketplace Inventory Management* feature enables maintaining stock and availability of merchant products and product offers that are sold in the Marketplace.
 In the context of the inventory management, the *warehouse* is the physical place where your products are stored, and stock is the number of products available in the warehouse.
 
 ## Marketplace warehouse management

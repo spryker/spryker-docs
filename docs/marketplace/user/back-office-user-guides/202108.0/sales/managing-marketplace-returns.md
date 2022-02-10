@@ -135,4 +135,4 @@ To print the return slip:
 
 This takes you to the page with the print version of the return slip.
 
-For reference information about **the List of Returns** and **Return Overview [Return reference] pages**, on this page, see [List of Returns](#list-of-returns-page) and [Overview [Return reference](#list-of-returns-page), respectively.
+For reference information about **the List of Returns** and **Return Overview [Return reference]** pages, on this page, see [List of Returns](#list-of-returns-page) and [Overview [Return reference](#list-of-returns-page), respectively.

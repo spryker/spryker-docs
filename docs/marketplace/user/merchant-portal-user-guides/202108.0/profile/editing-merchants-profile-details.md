@@ -11,7 +11,7 @@ This topic describes how to edit merchant's profile details in the Merchant Port
 
 To start managing a merchant profile, navigate to the **Merchant Portal** > **Profile**.
 
-This section allows [merchant users](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html) to check and update the merchant profile information.
+This section lets [merchant users](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html) check and update the merchant profile information.
 
 Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
 

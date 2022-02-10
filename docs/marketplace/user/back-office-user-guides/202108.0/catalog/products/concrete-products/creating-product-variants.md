@@ -27,7 +27,7 @@ To create a product variant:
         * Select a value.
         * Select **Use custom value** and, in the field the appears below, enter the value.
     3. Add product name and description and select **Searchable** if you want your product to be searchable by its name in the online store.
-    4. **Opionally**: Enter **Valid From** and **Valid To** dates to specify when the product should go online in the web-shop.
+    4. Optional: Enter **Valid From** and **Valid To** dates to specify when the product should go online in the web-shop.
     5. Go to the **Price & Stock** tab.
 4. On the **Price & Tax** tab, set prices and taxes for products:
     1. To take the prices over from the abstract product, select **Use prices from abstract product**.
@@ -75,10 +75,10 @@ This section describes the attributes you enter and select when  creating a prod
 | ATTRIBUTE |DESCRIPTION | CREATE CONCRETE PRODUCT | UPDATE CONCRETE PRODUCT|
 | --- | --- | --- | --- |
 |Use prices from abstract product|Once the checkbox is selected, the prices from the abstract product are taken over.|**Yes**|**No**|
-|Merchant Price Dimension|**B2B Only**<br>The drop-down list that allows you to select a merchant relation and set up a specific price for a specific merchant.<br>If the Default value is selected, the prices will be the same for everyone.<br>The values available for selection derive from **Merchants&nbsp;<span aria-label="and then">></span> Merchant Relations**.<br>Only one value can be selected.|**Yes**|**Yes**|
+|Merchant Price Dimension|**B2B Only**<br>The drop-down list that lets you select a merchant relation and set up a specific price for a specific merchant.<br>If the Default value is selected, the prices will be the same for everyone.<br>The values available for selection derive from **Merchants&nbsp;<span aria-label="and then">></span> Merchant Relations**.<br>Only one value can be selected.|**Yes**|**Yes**|
 | Gross price<br>Net price | The price value for gross and net mode.<br>For concrete products, the prices are inherited from their abstract product and can be updated while editing the concrete product.|**Yes**  |**Yes**  |
 |Default<br>Original|Default prices are the prices your customers will pay, whereas original prices are the "previous prices" in case you want to display promotions. If you specify only a default price, it will be displayed just like a normal product price. However, if both prices are specified, the original one will appear crossed out in the shop.|**Yes**|**Yes**|
-|Add Product Volume Price<br>Edit Product Volume Price|Once selected, the Add volume price (Edit volume price) page opens. This option allows you to define specific prices for a specific quantity of products that a customer selects. Works only in case of Default prices.<br>**Add Product Volume Price** appears only when the price for a currency was set up and saved.<br>**Edit Product Volume Price** appears only what the volume price was already set up for a currency.|**No**|**Yes**|
+|Add Product Volume Price<br>Edit Product Volume Price|Once selected, the Add volume price (Edit volume price) page opens. This option lets you define specific prices for a specific quantity of products that a customer selects. Works only in case of Default prices.<br>**Add Product Volume Price** appears only when the price for a currency was set up and saved.<br>**Edit Product Volume Price** appears only what the volume price was already set up for a currency.|**No**|**Yes**|
 |(Stock) Type|Display-only field that displays warehouses according to your store|**Yes**|**Yes**|
 |(Stock) Quantity|The number of items available in the warehouse.|**Yes**|**Yes**|
 |(Stock) Never out of stock|The check-box that once selected will make the product always available to be purchased.|**Yes**|**Yes**|

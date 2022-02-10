@@ -4,7 +4,7 @@ description: This document contains concept information for the Marketplace Retu
 template: concept-topic-template
 ---
 
-*Marketplace Return Management* feature allows you to create and manage returns for a merchant order in a Spryker Marketplace Demo Shop.
+*Marketplace Return Management* feature lets you create and manage returns for a merchant order in a Spryker Marketplace Demo Shop.
 
 Once an order has been shipped, the registered buyer or a Back Office user can initiate a return of the whole marketplace order or its individual items. For details on what items can be returned, see [Returnable items and a return policy](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html#returnable-items-and-a-return-policy). For details on how a Back Office user can create returns, see [Managing marketplace orders](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/orders/managing-marketplace-orders.html).
 

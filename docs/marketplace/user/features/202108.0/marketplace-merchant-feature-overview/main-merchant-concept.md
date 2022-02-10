@@ -4,7 +4,7 @@ description: This document contains concept information for the main merchant in
 template: concept-topic-template
 ---
 
-The Spryker Marketplace platform offers sales opportunities to everyone. To help support the [Enterprise Marketplace](/docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-concept.html) model, not only the 3rd party merchants but also the company-owner of the Marketplace store can sell their products and offers online. We call this company the **main merchant**.
+The Spryker Marketplace platform offers sales opportunities to everyone. To help support the [Enterprise Marketplace](/docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-concept.html) model, not only the 3rd party merchants but also the company owner of the Marketplace store can sell their products and offers online. We call this company the *main merchant*.
 
 Thus, the main merchant acts as a common [marketplace merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) having all its characteristics.
 
@@ -15,24 +15,14 @@ Being both the [Marketplace Operator](/docs/marketplace/user/intro-to-the-spryke
 ## Main merchant state machine
 
 To manage merchant orders of the main merchant, the *Main merchant state machine* exists. Out of the box, the main merchant state machine provides the following states:
-
 - created
-
 - new
-
 - canceled
-
 - left the merchant location
-
 - arrived at the distribution center
-
 - shipped
-
 - delivered
-
 - closed
-
-
 
 The workflow of the Main merchant state machine is schematically displayed in the diagram below:
 

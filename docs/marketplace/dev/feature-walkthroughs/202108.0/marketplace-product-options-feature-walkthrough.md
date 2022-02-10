@@ -1,10 +1,10 @@
 ---
 title: Marketplace Product Options feature walkthrough
-description: Marketplace Product Options allows merchants to create their product option groups and values.
+description: Marketplace Product Options lets merchants create their product option groups and values.
 template: feature-walkthrough-template
 ---
 
-The *Marketplace Product Options* feature allows merchants to create their product option groups and values. Currently, you can [import product options](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-option-group.csv.html) where you specify the merchant reference.
+The *Marketplace Product Options* feature lets merchants create their product option groups and values. Currently, you can [import product options](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-option-group.csv.html) where you specify the merchant reference.
 
 {% info_block warningBox "User documentation" %}
 

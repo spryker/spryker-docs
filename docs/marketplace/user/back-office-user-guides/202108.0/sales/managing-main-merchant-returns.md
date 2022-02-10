@@ -5,7 +5,7 @@ description: This guide explains how to manage main merchant returns in the Back
 template: back-office-user-guide-template
 ---
 
-**My Returns** allows you to manage the returns as follows:
+**My Returns** lets you manage the returns as follows:
 
 - Create a return for the customer.
 - Set the return states.

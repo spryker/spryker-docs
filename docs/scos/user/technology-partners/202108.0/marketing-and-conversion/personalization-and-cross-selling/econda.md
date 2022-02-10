@@ -30,7 +30,7 @@ YOUR ADVANTAGES:
 * Item-2-item recommendations, thanks to the most innovative data mining and machine learning process (up to 25% of turnover share with good recommendations)
 * Personalization and individualization with the very latest KI methods (up to 40% increase in turnover share, an increase of up to 800% in mailing success.)
 
-## Related Developer articles
+## Related Developer guides
 
 * [Installing Econda](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/econda/installing-econda.html)
 * [Integrating Econda](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda.html)

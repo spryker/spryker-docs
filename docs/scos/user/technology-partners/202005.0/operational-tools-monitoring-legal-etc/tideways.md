@@ -26,7 +26,7 @@ YOUR ADVANTAGES
 * multiple options to prioritize profiling data based on your own criteria
 * automated recognition of errors with precise and detailed leads to causes and bugfixing tips
 
-## Related Developer articles
+## Related Developer guides
 
 * [Installing and configuring Tideways](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html)
 

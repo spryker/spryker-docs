@@ -44,7 +44,7 @@ The state machine commands and conditions trigger Braintree facade calls in orde
 Because of PCI compliance reasons, credit card data is communicated to the third party through JS and AJAX calls (sensitive information stays browser side).
 
 
-## Related Developer articles
+## Related Developer guides
 
 * [Installing and configuring Braintree](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/installing-and-configuring-braintree.html)
 * [Braintree - Workflow](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/braintree-workflow.html)

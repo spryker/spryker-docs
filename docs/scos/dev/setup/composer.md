@@ -89,7 +89,7 @@ Staring from November 2021, all Spryker modules require PHP 7.4 as a minimum ver
     },
 },
 ```
-Make sure to adjust this platform version to your production environment. So if you use 8.0.10 for example, this should be also reflected here to have a matching local installation.
+Make sure to adjust this platform version to your production environment. So if you use 8.0.10 for example, this should be also reflected here to have a matching local installation including all dependencies and their compatible versions.
 
 {% info_block infoBox %}
 Make sure every minor or patch release is applied before upgrading to a major released version.
@@ -99,7 +99,7 @@ Make sure every minor or patch release is applied before upgrading to a major re
 
 To update all the modules, run the following command:
 
-```php
+```
 composer update "spryker/*"
 ```
 
@@ -107,19 +107,18 @@ This will fetch the latest matching versions (according to your `composer.json` 
 
 To check what major updates are available without changing `composer.json`, run:
 
-```php
-php composer.phar outdated
+```
+composer outdated
 ```
 
 Just for the modules that have been extended (factory and classes have been overwritten) the version number needs to be changed and updates need to be performed manually.
 
 For any installation that does not require working in vendor directories, make sure to always use `install` with `--prefer-dist` flag:
 
-{% info_block infoBox %}
-
-`composer install --prefer-dist` to use deployment like download of all packages.
-
-{% endinfo_block %}
+```
+composer install --prefer-dist
+```
+to use deployment-like download of all packages as zip files. This also dramatically speeds it up as side-effect.
 
 
 ## Replace Spryker Module Dependencies

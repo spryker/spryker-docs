@@ -1,20 +1,20 @@
 ---
-title: Enabling Adyen filtering payment methods
+title: Enabling filtering of payment methods for Ayden
 description: Enable filtering available payment methods depending on the result of /paymentMethods API call in the Spryker Commerce OS.
-last_updated: Jun 16, 2021
+last_updated: May 14, 2020
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/adyen-filter-payment-methods
-originalArticleId: 5e090a05-3c2f-43d4-9775-8d9c212f3923
+originalLink: https://documentation.spryker.com/v5/docs/adyen-filter-payment-methods
+originalArticleId: 49464b8f-9788-4edf-a44c-992245d22862
 redirect_from:
-  - /2021080/docs/adyen-filter-payment-methods
-  - /2021080/docs/en/adyen-filter-payment-methods
-  - /docs/adyen-filter-payment-methods
-  - /docs/en/adyen-filter-payment-methods
+  - /v5/docs/adyen-filter-payment-methods
+  - /v5/docs/en/adyen-filter-payment-methods
 related:
-  - title: Installing and configuring Adyen
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/installing-and-configuring-adyen.html
+  - title: Payment Integration - Adyen
+    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen.html
   - title: Integrating Adyen
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/integrating-adyen.html
+  - title: Installing and configuring Adyen
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/installing-and-configuring-adyen.html
   - title: Integrating Adyen payment methods
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/integrating-adyen-payment-methods.html
 ---
@@ -39,13 +39,13 @@ use SprykerEco\Zed\Adyen\Communication\Plugin\AdyenPaymentMethodFilterPlugin;
 class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\PaymentExtension\Dependency\Plugin\PaymentMethodFilterPluginInterface>
+     * @return \Spryker\Zed\Payment\Dependency\Plugin\Payment\PaymentMethodFilterPluginInterface[]
      */
-    protected function getPaymentMethodFilterPlugins(): array
+    protected function getPaymentMethodFilterPlugins()
     {
         return [
             ...
-            new AdyenPaymentMethodFilterPlugin(),
+            new AdyenPaymentMethodFilterPlugin('toggler-radio'),
         ];
     }
 }

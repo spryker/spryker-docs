@@ -1,13 +1,15 @@
 ---
-title: Enabling Adyen filtering payment methods
+title: Enabling filtering of payment methods for Ayden
 description: Enable filtering available payment methods depending on the result of /paymentMethods API call in the Spryker Commerce OS.
-last_updated: Aug 27, 2020
+last_updated: Jun 16, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v6/docs/adyen-filter-payment-methods
-originalArticleId: f49b4ef8-9548-4181-906c-dc2a3154023e
+originalLink: https://documentation.spryker.com/2021080/docs/adyen-filter-payment-methods
+originalArticleId: 5e090a05-3c2f-43d4-9775-8d9c212f3923
 redirect_from:
-  - /v6/docs/adyen-filter-payment-methods
-  - /v6/docs/en/adyen-filter-payment-methods
+  - /2021080/docs/adyen-filter-payment-methods
+  - /2021080/docs/en/adyen-filter-payment-methods
+  - /docs/adyen-filter-payment-methods
+  - /docs/en/adyen-filter-payment-methods
 related:
   - title: Installing and configuring Adyen
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/installing-and-configuring-adyen.html
@@ -37,13 +39,13 @@ use SprykerEco\Zed\Adyen\Communication\Plugin\AdyenPaymentMethodFilterPlugin;
 class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\Payment\Dependency\Plugin\Payment\PaymentMethodFilterPluginInterface[]
+     * @return array<\Spryker\Zed\PaymentExtension\Dependency\Plugin\PaymentMethodFilterPluginInterface>
      */
-    protected function getPaymentMethodFilterPlugins()
+    protected function getPaymentMethodFilterPlugins(): array
     {
         return [
             ...
-            new AdyenPaymentMethodFilterPlugin('toggler-radio'),
+            new AdyenPaymentMethodFilterPlugin(),
         ];
     }
 }

@@ -108,21 +108,21 @@ Please visit our [Partners Registry](https://spryker.com/find-a-partner/) for a 
 * [Arvato](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/arvato.html)
 * [Billie](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billie.html)
 * [Billpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billpay.html)
-* [Braintree](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/braintree/braintree.html)
+* [Braintree](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/braintree.html)
 * [BS Payone](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/bs-payone.html)
-* [Computop](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop.html)
-* [CrefoPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay.html)
-* [Heidelpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay.html)
+* [Computop](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop.html)
+* [CrefoPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/crefopay.html)
+* [Heidelpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/heidelpay.html)
 <!--* [Informa Solutions](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/informa-solutions.html)-->
-* [Klarna](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/klarna/klarna.html)
-* [Payolution](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution/payolution.html)
+* [Klarna](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/klarna.html)
+* [Payolution](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution.html)
 * [Powerpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/powerpay.html)
 * [Ratenkauf by Easycredit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html)
 * [RatePAY](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay.html)
 
  ## Poduct Information (PIM/ERP)
 
-* [Akeneo](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/akeneo/akeneo.html)
+* [Akeneo](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/akeneo.html)
 * [Xentral](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/xentral.html)
 <!--* [Censhare](/docs/scos/user/technology-partners/{{page.version}}/content-management/censhare.html)-->
 <!--* [Contentserv](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/contentserv.html)-->

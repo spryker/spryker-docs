@@ -2275,8 +2275,8 @@ entries:
         url: /docs/scos/user/technology-partners/payment-partners/payolution.html
       - title: Arvato
         url: /docs/scos/user/technology-partners/payment-partners/arvato.html
-    - title: Technology Partner Integration
-      url: /docs/scos/user/technology-partners/technology-partner-integration.html
+    - title: Technology partners
+      url: /docs/scos/user/technology-partners/technology-partners.html
     - title: Operational tools, Monitoring, Legal, etc.
       nested:
       - title: PlusServer

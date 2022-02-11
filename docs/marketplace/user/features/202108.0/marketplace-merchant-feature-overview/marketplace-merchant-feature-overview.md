@@ -4,10 +4,10 @@ description: This document contains concept information for the Merchants featur
 template: concept-topic-template
 ---
 
-*Merchant* is a seller of goods or services, either a business or a private person working in the Marketplace environment. Merchants manage their business in the *Merchant Portal*. The *Merchant Portal* lets merchants upload and manage merchant products and [offers](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html), define prices and stock, fulfill orders, and edit merchant profile information. Merchant can have employees who can access the Merchant Portal and perform actions on the merchant's behalf there. These employees are referred to as *[merchant users](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html)*.  
+A *merchant* is a seller of goods or services, either a business or a private person working in the Marketplace environment. Merchants manage their business in the *Merchant Portal*. The Merchant Portal lets merchants upload and manage merchant products and [offers](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html), define prices and stock, fulfill orders, and edit merchant profile information. Merchants can have employees who can access the Merchant Portal and perform actions on the merchant's behalf there. These employees are referred to as *[merchant users](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html)*.  
 
-Merchant is the core entity of the Spryker Marketplace and the second main entity after customers since the Marketplace connects the buying customers and the selling customers.
-Every merchant in the Spryker Marketplace has a unique identifier in the system called *Merchant SKU*. 
+A merchant is the core entity of the Spryker Marketplace and the second main entity after customers since the Marketplace connects buying customers and selling customers.
+Every merchant in the Spryker Marketplace has a unique identifier in the system called *merchant SKU*. 
 You can [create merchants in the Back Office](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#creating-merchants) or [import merchants](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant.csv.html).
 
 {% info_block infoBox "Note" %}
@@ -18,7 +18,7 @@ After you created a merchant, you can not delete it completely. You can only [de
 
 ## Merchant statuses
 
-The Marketplace administrator manages merchants and sets their statuses in the Back Office. Merchant statuses define the level of access of the specific merchant to:
+A Marketplace administrator manages merchants and sets their statuses in the Back Office. Merchant statuses define the level of access of the specific merchant to:
 
 * The Merchant Portal:
     * *Waiting for approval*. Once the merchant record is created, this status is applied.
@@ -40,7 +40,7 @@ The Marketplace administrator manages merchants and sets their statuses in the
 | Active | N/A | &check; |
 | Inactive | N/A | ✗ |
 
-See [Approving and denying merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#approving-and-denying-merchants) and [Activating and deactivating merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants) for details on how to change the merchant user statuses and (de)activate merchants in the Back Office.
+See [Approving and denying merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#approving-and-denying-merchants) and [Activating and deactivating merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants) for details on how to change the merchant user statuses and activate or deactivate merchants in the Back Office.
 
 Schematically, the merchant status change flow looks like this:
 
@@ -48,7 +48,7 @@ Schematically, the merchant status change flow looks like this:
 
 ## Merchant category
 
-You can group merchants by categories to make your working process more efficient and simplify merchants search for customers. See [Merchant Category](/docs/marketplace/user/features/{{page.version}}/merchant-category-feature-overview.html) for details.
+You can group merchants by categories to make your working process more efficient and simplify merchants' search for customers. See [Merchant Category](/docs/marketplace/user/features/{{page.version}}/merchant-category-feature-overview.html) for details.
 
 ## Merchants on the Storefront
 
@@ -58,7 +58,7 @@ On the Storefront, customers can check the relevant merchant information on the 
 
 {% info_block infoBox "Note" %}
 
-The merchant profile page is available only if the merchant is [Active](#merchant-statuses) .
+The merchant profile page is available only if the merchant is [Active](#merchant-statuses).
 
 {% endinfo_block %}
 

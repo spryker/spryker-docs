@@ -95,9 +95,9 @@ Once the product is created, it needs to be [activated](/docs/marketplace/user/m
 | ATTRIBUTE            | DESCRIPTION             |
 | --------------------- | ------------------------------------ |
 | Concrete Product SKU     | Unique product identifier that is used to track unique information related to the product. |
-| Autogenerate SKU         | Check the box if you want the SKU to be generated automatically. By default, -1 is added to the abstract product SKU prefix. For example, `product-1` |
+| Autogenerate SKU         | Select the attribute if you want the SKU to be generated automatically. By default, -1 is added to the abstract product SKU prefix. For example, `product-1` |
 | Concrete Product Name    | The name of the concrete product that is displayed for the product on the Storefront. |
-| Same as Abstract Product | Check the box if you want the name of the abstract product to be used for the concrete product as well. |
+| Same as Abstract Product | Select the attribute if you want the name of the abstract product to be used for the concrete product as well. |
 
 ### Reference information: Create an Abstract Product with multiple Concrete Products
 

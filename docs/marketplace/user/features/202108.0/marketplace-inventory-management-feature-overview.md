@@ -9,11 +9,11 @@ In the context of the inventory management, the *warehouse* is the physical plac
 
 ## Marketplace warehouse management
 
-When a merchant is created, the corresponding warehouse is created for this merchant. The warehouse name is composed of the following parts: `merchant name + merchant reference + warehouse + index starting with 1, 2, etc.`
+When a merchant is created, the corresponding warehouse is created for this merchant. The warehouse name is composed of the following parts: `merchant name` + `merchant reference` + `warehouse` + `index` (starting with 1, 2, etc.).
 
 {% info_block infoBox "Example" %}
 
-"Spryker MER000001 Warehouse 1" where `Spryker` is the merchant name, MER000001 is the merchant reference, and the index is 1 as it is the first warehouse created.
+"Spryker MER000001 Warehouse 1" where `Spryker` is the merchant name, `MER000001` is the merchant reference, and the index is `1`W as it is the first warehouse created.
 
 {% endinfo_block %}
 
@@ -39,7 +39,7 @@ Product offer availability calculation differs from the calculation of concrete 
 
 | CONCRETE PRODUCT AVAILABILITY   | PRODUCT OFFER AVAILABILITY   |
 | --------------------- | ------------------------ |
-| Formula: Concrete product availability = Concrete product quantity – Concrete product reservations | Formula: Offer availability = Offer quantity – Offer reservations |
+| Formula: Concrete product availability = Concrete product quantity - Concrete product reservations | Formula: Offer availability = Offer quantity - Offer reservations |
 
 Offer availability is considered on the Storefront: 
 * On the product details page while adding the offer to cart.

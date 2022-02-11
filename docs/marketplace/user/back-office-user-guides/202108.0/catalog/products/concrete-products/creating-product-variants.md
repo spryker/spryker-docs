@@ -81,7 +81,7 @@ This section describes the attributes you enter and select when  creating a prod
 |Add Product Volume Price<br>Edit Product Volume Price|Once selected, the Add volume price (Edit volume price) page opens. This option lets you define specific prices for a specific quantity of products that a customer selects. Works only in case of Default prices.<br>**Add Product Volume Price** appears only when the price for a currency was set up and saved.<br>**Edit Product Volume Price** appears only what the volume price was already set up for a currency.|**No**|**Yes**|
 |(Stock) Type|Display-only field that displays warehouses according to your store|**Yes**|**Yes**|
 |(Stock) Quantity|The number of items available in the warehouse.|**Yes**|**Yes**|
-|(Stock) Never out of stock|The check-box that once selected will make the product always available to be purchased.|**Yes**|**Yes**|
+|(Stock) Never out of stock|The checkbox that once selected will make the product always available to be purchased.|**Yes**|**Yes**|
 
 
 #### Image tab

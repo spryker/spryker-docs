@@ -75,7 +75,7 @@ The table below provides an overview of the statuses that are displayed at this 
 | Customer                  | Storefront      | Refunded   |
 
 ## Order item’s status progress: Sent to Merchant
-When the system has payment confirmation, it performs the operations to split the marketplace order into one or several merchant orders. The state of the marketplace order item becomes*Sent to Merchant*. The merchant orders are created, and each of the items that they contain shows a state according to each Merchant’s state machine. The first state is *New*.
+When the system has payment confirmation, it performs the operations to split the marketplace order into one or several merchant orders. The state of the marketplace order item becomes *Sent to Merchant*. The merchant orders are created, and each of the items that they contain shows a state according to each Merchant’s state machine. The first state is *New*.
 
 ![Order item’s status progress: Sent to Merchant](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Order+Management/sent-to-merchant.png)
 
@@ -101,7 +101,7 @@ The table below provides an overview of the statuses that are displayed at this 
 | Customer    | Storefront      | Canceled    |
 
 ## Order item’s status progress: Shipped by Merchant
-The merchant ships the item to the customer address. To input this information on Merchant Portal, the merchant triggers the event manually (**Shipped** action button) or through the import of the new state via a CSV file. The item’s state on the merchant state machine moves to *Shipped*. The Marketplace administrator also needs to make use of this info. They need to see that the item was also shipped in the Marketplace state machine.
+The merchant ships the item to the customer address. To input this information on Merchant Portal, the merchant triggers the event manually (the **Shipped** action button) or through the import of the new state via a CSV file. The item’s state on the merchant state machine moves to *Shipped*. The Marketplace administrator also needs to make use of this info. They need to see that the item was also shipped in the Marketplace state machine.
 
 ![Order Item’s Status Progress: Shipped by Merchant](https://confluence-connect.gliffy.net/embed/image/6cea2d2f-1797-47ba-8a99-938aef05fc90.png?utm_medium=live&utm_source=custom)
 

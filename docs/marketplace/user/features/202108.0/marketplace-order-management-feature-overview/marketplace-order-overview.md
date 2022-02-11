@@ -4,7 +4,7 @@ description: This document contains concept information for the Marketplace orde
 template: concept-topic-template
 ---
 
-When customer places an order on the Marketplace, the *Marketplace order* is created in the system. The Marketplace order, in comparison to a regular order in Spryker Commerce OS, contains information about merchants and one or several [merchant orders](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/merchant-order-overview.html). Thus, the Marketplace order represents a list of items a customer has bought from one or multiple merchants in a single order.
+When a customer places an order on the Marketplace, the *Marketplace order* is created in the system. The Marketplace order, in comparison to a regular order in Spryker Commerce OS, contains information about merchants and one or several [merchant orders](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/merchant-order-overview.html). Thus, the Marketplace order represents a list of items a customer has bought from one or multiple merchants in a single order.
 
 ![Marketplace order](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Marketplace+order+feature+overview/marketplace-order.png)
 
@@ -15,9 +15,9 @@ From the customer perspective, the Marketplace order is a single order with prod
 
 ![Marketplace order structure](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+order+management/Marketplace+Order+Management+feature+overview/Marketplace+Order+schema.png)
 
-The items in the Marketplace order are grouped by merchant and split into different shipments automatically by default. However, you can change this behavior on the project level according to your business requirements. During the checkout, customers can check how many shipments to expect and select different delivery addresses or methods based on their items. To learn more about multiple shipments, see [Split Delivery feature overview](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/split-delivery-overview.html).
+The items in the Marketplace order are grouped by merchant and split into different shipments automatically by default. However, you can change this behavior on the project level according to your business requirements. During the checkout, customers can check how many shipments to expect and select different delivery addresses or methods based on their items. To learn more about multiple shipments, the see [Split Delivery feature overview](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/split-delivery-overview.html).
 
-As the Marketplace order contains details about offers and products a customer has bought from multiple merchants, the Marketplace order list with the related information is only available to the Marketplace administrator in the Back Office. <!---See LINK TO BACK OFFICE FOR ORDERS for details on how Marketplace administrators can manage Marketplace orders in the Back Office.--> Each [merchant order](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/merchant-order-overview.html) can be accessed and managed by the relevant merchant in the Merchant Portal.<!---See LINK TO MERCHANT PORTAL FOR ORDERS for details on how merchants can manage their orders orders in the Merchant Portal.-->
+As the Marketplace order contains details about offers and products a customer has bought from multiple merchants, the Marketplace order list with the related information is only available to the Marketplace administrator in the Back Office. <!---See LINK TO BACK OFFICE FOR ORDERS for details on how Marketplace administrators can manage Marketplace orders in the Back Office.--> Each [merchant order](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/merchant-order-overview.html) can be accessed and managed by the relevant merchant in the Merchant Portal.<!---See LINK TO MERCHANT PORTAL FOR ORDERS for details on how merchants can manage their orders in the Merchant Portal.-->
 
 ![Merchant order in the Merchant Portal](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Marketplace+order+feature+overview/merchant-order-in-merchant-portal.png)
 
@@ -64,6 +64,8 @@ In some cases, due to rounding, the amounts of Marketplace order totals can diff
 ## Next steps
 * [Learn about the merchant orders](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/merchant-order-overview.html)
 * [Learn about the Marketplace and merchant state machines](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html)
+
+## Related Business User articles
 
 |FEATURE OVERVIEWS  |MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
 |---------|---------|---------|

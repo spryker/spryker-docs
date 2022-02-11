@@ -10,19 +10,19 @@ Thus, the main merchant acts as a common [marketplace merchant](/docs/marketplac
 
 ## Main merchant orders and returns
 
-Being both the [Marketplace Operator](/docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-personas.html) and the seller, and already performing tasks in the Back Office, the main merchant manages their [merchant orders](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/merchant-order-overview.html) also in the Back Office. See [Managing main merchant orders](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/orders/managing-merchant-orders.html) for details.
+Being both a [marketplace operator](/docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-personas.html) and a seller and already performing tasks in the Back Office, the main merchant manages their [merchant orders](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/merchant-order-overview.html) also in the Back Office. For details, see [Managing main merchant orders](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/orders/managing-merchant-orders.html).
 
 ## Main merchant state machine
 
-To manage merchant orders of the main merchant, the *Main merchant state machine* exists. Out of the box, the main merchant state machine provides the following states:
-- created
-- new
-- canceled
-- left the merchant location
-- arrived at the distribution center
-- shipped
-- delivered
-- closed
+To manage merchant orders of the main merchant, the *main merchant state machine* exists. Out of the box, the main merchant state machine provides the following states:
+- Created
+- New
+- Canceled
+- Left the merchant location
+- Arrived at the distribution center
+- Shipped
+- Delivered
+- Closed
 
 The workflow of the Main merchant state machine is schematically displayed in the diagram below:
 
@@ -30,6 +30,6 @@ The workflow of the Main merchant state machine is schematically displayed in th
 
 ## Main merchant returns
 
-If the [Marketplace Return Management](/docs/marketplace/user/features/{{page.version}}/marketplace-return-management-feature-overview.html) feature is integrated into the project, the main merchant state machine obtains an additional return subprocess and the flow looks like this:
+If the [Marketplace Return Management](/docs/marketplace/user/features/{{page.version}}/marketplace-return-management-feature-overview.html) feature is integrated into the project, the main merchant state machine obtains an additional return subprocess, and the flow looks like this:
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Merchant/Main+merchant+concept/marketplace-main-merchant-return-process.png)

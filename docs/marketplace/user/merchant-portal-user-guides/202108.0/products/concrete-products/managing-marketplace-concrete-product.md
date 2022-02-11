@@ -55,15 +55,15 @@ To edit an existing marketplace concrete product:
 | PANE    | ATTRIBUTE     | DESCRIPTION | REQUIRED? |
 | -------------- | ---------------- | ----------- | --------- |
 | Status         |                  | Defines the status of the concrete product. |           |
-|                |  Concrete Product is online    | The selected check box makes the product active and available in store. |               |
+|                |  Concrete Product is online    | The selected checkbox makes the product active and available in store. |               |
 | Stock          |                  | Defines the stock of the concrete product. |           |
 |                 |   Reserved Stock           | Number of items of this concrete product that are reserved according to *Orders*. |               |
 |                  |  Quantity                 | Number of items available in the warehouse. The default is 0. | ✓ |
-|                  |  Always in Stock           | The selected check box makes the product always available for purchase. |               |
+|                  |  Always in Stock           | The selected checkbox makes the product always available for purchase. |               |
 | Name                  |  | Name of your product displayed on the Storefront. | ✓ |
-|               |  Use Abstract Product name for all locales   | Select the check box to take over the name of the abstract. |              |
+|               |  Use Abstract Product name for all locales   | Select the checkbox to take over the name of the abstract. |              |
 | Description           |  | Product description. |           |
-|              |  Use Abstract Product description for all locales    | Select the check box to take over the description of the abstract.. |       |
+|              |  Use Abstract Product description for all locales    | Select the checkbox to take over the description of the abstract.. |       |
 | Validity Dates & Time |  | Defines the period of time when the product is in active state. The **Valid from** date triggers the activation, while the **Valid to** date triggers the deactivation. Either no dates can be selected, or both. |           |
 | Price                 |  | In this pane, you can manage prices for your concrete product. See [Managing marketplace concrete product prices](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing marketplace-concrete-product-prices.html) for more details. |           |
 | Images                |  | In this pane, you can manage image sets for your concrete product. See [Managing concrete product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-products-image-sets.html) for more details. |           |

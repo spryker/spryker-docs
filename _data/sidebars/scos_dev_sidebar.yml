@@ -4104,8 +4104,11 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/new-relic/installing-and-configuring-new-relic–with–vagrant.html
             - title: Configuring logging
               url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/new-relic/configuring-new-relic-logging.html
-        - title: Configuring Loggly
-          url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/configuring-loggly.html
+        - title: Loggly
+          url: /dev/technology-partner-guides/operational-tools-monitoring-legal-etc/loggly/loggly.html
+          nested:
+            - title: Configuring Loggly
+              url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/loggly/configuring-loggly.html
         - title: Installing and configuring Tideways
           url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
     - title: Order Management (ERPOMS)

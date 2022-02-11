@@ -13,13 +13,12 @@ related:
     link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
 ---
 
-The Loggly module provides a plugin to read log messages from a queue and send the messages via https to [Loggly](https://www.loggly.com/).
-
-To integrate this plugin you need to have the `QueueHandler` enabled in your Logger configuration. <!-- as described [here](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/spryker-middleware.html).-->
+Loggly is a SaaS solution for log data management. With Loggly’s log management software, you’re able to bring logs from the depths of your entire infrastructure to one place where you can track activity and analyze trends.
 
 ## Related Developer guides
 
-* [Configuring Loggly](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/configuring-loggly.html)
+* [Loggly](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/loggly/loggly.html)
+* [Configuring Loggly](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/loggly/configuring-loggly.html)
 
 ---
 

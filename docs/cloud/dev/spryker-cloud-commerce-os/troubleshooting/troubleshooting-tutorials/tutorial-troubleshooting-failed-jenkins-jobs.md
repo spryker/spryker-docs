@@ -4,28 +4,26 @@ description: Learn how to troubleshoot Jenkins jobs issues
 template: troubleshooting-guide-template
 ---
 
-A Jenkins jobs failed.
+A Jenkins job failed.
 
 ## 1. Check the console output of the failed Jenkins job
 
-To analyze the console output of a failed Jenkins job, do the following:
-
 1. In the Jenkins dashboard, select the name of the failed job.
-  This takes you to the page of the job.
+
 ![jenkins_dashboard]
 
-2. In the *Build History* section, select the latest failed build > **Console Output**.
+  This takes you to the page of the job.
+
+
+2. In the **Build History** section, select the latest failed build number&nbsp;<span aria-label="and then">></span> **Console Output**.
 
 ![jenkins_failed_job_menu]
 
-3. In the *Console Output*, search the log for an error.
+3. In the **Console Output**, search the log for errors.
 
 ![jenkins_console_output]
 
-
-## 2. Check RabbitMQ status
-
-If the console output contains `AMQPProtocolChannelException`, the issue might be related to RabbitMQ virtual host or queue.
+If the log contains `AMQPProtocolChannelException`, the issue can be related to RabbitMQ virtual host or queue.
 
 Error messages examples:
 
@@ -36,6 +34,10 @@ Zed.CRITICAL: PhpAmqpLib\Exception\AMQPProtocolChannelException - NOT_FOUND no q
 Zed.CRITICAL: PhpAmqpLib\Exception\AMQPConnectionClosedException - NOT_ALLOWED - vhost at_queue not found
 ```
 
-In this case, check RabbitMQ status as follows:
+
+In this case, [Check RabbitMQ status](#check-rabbit-mq-status).
+
+
+## 2. Check RabbitMQ status
 
 {% include checking-rabbitmq-status.md %} <!-- To edit, see /_includes/checking-rabbitmq-status.md -->

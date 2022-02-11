@@ -11,8 +11,8 @@ redirect_from:
 related:
   - title: Payolution - Performing Requests
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-performing-requests.html
-  - title: Payolution - Workflow
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-workflow.html
+  - title: Payolution request flow
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-request-flow.html
   - title: Integrating the installment payment method for Payolution
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/integrating-the-installment-payment-method-for-payolution.html
   - title: Payolution

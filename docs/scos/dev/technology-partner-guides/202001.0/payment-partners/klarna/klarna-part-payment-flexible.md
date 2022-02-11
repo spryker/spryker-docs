@@ -12,11 +12,11 @@ related:
   - title: Klarna
     link: docs/scos/user/technology-partners/page.version/payment-partners/klarna.html
   - title: Klarna payment workflow
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/klarna/technical-details-and-howtos/klarna-payment-workflow.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/klarna/klarna-payment-workflow.html
   - title: Klarna - Invoice Pay in 14 days
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/klarna/technical-details-and-howtos/klarna-invoice-pay-in-14-days.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/klarna/klarna-invoice-pay-in-14-days.html
   - title: Klarna state machine commands and conditions
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/klarna/technical-details-and-howtos/klarna-state-machine-commands-and-conditions.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/klarna/klarna-state-machine-commands-and-conditions.html
 ---
 
 ## Payment Workflow Scenarios
@@ -50,4 +50,4 @@ The configuration to integrate `Part Payment` using Klarna is:
 You can copy over configuration to your config file from the Klarna bundles `config.dist.php` file.
 
 ## Perform Requests
-In order to perform the needed requests, you can easily use the implemented [Klarna State Machine Commands and Conditions](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/klarna/technical-details-and-howtos/klarna-state-machine-commands-and-conditions.html). The next section gives you a summary of them.
+In order to perform the needed requests, you can easily use the implemented [Klarna State Machine Commands and Conditions](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/klarna/klarna-state-machine-commands-and-conditions.html). The next section gives you a summary of them.

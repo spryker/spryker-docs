@@ -15,8 +15,8 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/integrating-payolution.html
   - title: Payolution - Performing Requests
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-performing-requests.html
-  - title: Payolution - Workflow
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-workflow.html
+  - title: Payolution request flow
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-request-flow.html
   - title: Integrating the installment payment method for Payolution
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/integrating-the-installment-payment-method-for-payolution.html
 ---
@@ -92,4 +92,4 @@ The configuration to integrate invoice payments using Payolution is:
 * `PAYOLUTION_BCC_EMAIL_ADDRESS`: Payolution email address to send copies of payment details to Payolution.
 
 ### Performing Requests
-In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. See [Payolution — Performing Requests](/docs/scos/user/technology-partners/202009.0/payment-partners/payolution/technical-details-and-howtos/payolution-performing-requests.html) for a summary. You can also use the facade methods directly which, however, are invoked by the state machine.
+In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. See [Payolution — Performing Requests](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/payolution/payolution-performing-requests.html) for a summary. You can also use the facade methods directly which, however, are invoked by the state machine.

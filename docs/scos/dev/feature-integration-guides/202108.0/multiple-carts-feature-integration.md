@@ -1,5 +1,5 @@
 ---
-title: Multiple carts feature integration
+title: Multiple Carts feature integration
 description: Multiple Carts allows customers to manage multiple shopping carts in one account. The guide describes how to integrate the feature into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template

@@ -110,11 +110,11 @@ Please visit our [Partners Registry](https://spryker.com/find-a-partner/) for a 
 * [Billpay](/docs/scos/user/technology-partners/202108.0/payment-partners/billpay.html)
 * [Braintree](/docs/scos/user/technology-partners/202108.0/payment-partners/braintree/braintree.html)
 * [BS Payone](/docs/scos/user/technology-partners/202108.0/payment-partners/braintree/braintree.html)
-* [Computop](/docs/scos/user/technology-partners/202108.0/payment-partners/computop/computop.html)
-* [CrefoPay](/docs/scos/user/technology-partners/202108.0/payment-partners/computop/computop.html)
+* [Computop](/docs/scos/user/technology-partners/202108.0/payment-partners/computop.html)
+* [CrefoPay](/docs/scos/user/technology-partners/202108.0/payment-partners/computop.html)
 * [Heidelpay](/docs/scos/user/technology-partners/202108.0/payment-partners/heidelpay/heidelpay.html)
 <!--* [Informa Solutions](/docs/scos/user/technology-partners/202108.0/payment-partners/informa-solutions.html)-->
-* [Klarna](/docs/scos/user/technology-partners/202108.0/payment-partners/klarna/klarna.html)
+* [Klarna](/docs/scos/user/technology-partners/202108.0/payment-partners/klarna.html)
 * [Payone](/docs/scos/user/technology-partners/202108.0/payment-partners/payolution.html)
 * [Powerpay](/docs/scos/user/technology-partners/202108.0/payment-partners/powerpay.html)
 * [ratenkauf by easyCredit](/docs/scos/user/technology-partners/202108.0/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html)
@@ -122,7 +122,7 @@ Please visit our [Partners Registry](https://spryker.com/find-a-partner/) for a 
 
  ## Poduct Information (PIM/ERP)
 
-* [Akeneo](/docs/scos/user/technology-partners/202108.0/product-information-pimerp/akeneo/akeneo.html)
+* [Akeneo](/docs/scos/user/technology-partners/202108.0/product-information-pimerp/akeneo.html)
 * [Xentral](/docs/scos/user/technology-partners/202108.0/product-information-pimerp/xentral.html)
 <!--* [Censhare](/docs/scos/user/technology-partners/202108.0/content-management/censhare.html)-->
 <!--* [Contentserv](/docs/scos/user/technology-partners/202108.0/marketing-and-conversion/personalization-and-cross-selling/contentserv.html)-->

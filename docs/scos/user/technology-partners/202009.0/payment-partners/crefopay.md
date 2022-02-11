@@ -19,8 +19,8 @@ The services available on the unique CrefoPay platform offered by CrefoPayment G
 
 ## What's next?
 
-* [Installing and configuring CrefoPay](/docs/scos/user/technology-partners/202009.0/payment-partners/crefopay/installing-and-configuring-crefopay.html)
-* [Integrating CrefoPay](/docs/scos/user/technology-partners/202009.0/payment-partners/crefopay/integrating-crefopay.html)
+* [Installing and configuring CrefoPay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/installing-and-configuring-crefopay.html)
+* [Integrating CrefoPay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/integrating-crefopay.html)
 
 
 ---

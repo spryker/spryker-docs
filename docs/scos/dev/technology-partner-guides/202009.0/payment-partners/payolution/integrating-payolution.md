@@ -12,8 +12,8 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/installing-and-configuring-payolution.html
   - title: Payolution - Performing Requests
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-performing-requests.html
-  - title: Payolution - Workflow
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-workflow.html
+  - title: Payolution request flow
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-request-flow.html
   - title: Integrating the installment payment method for Payolution
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/integrating-the-installment-payment-method-for-payolution.html
   - title: Integrating the invoice paymnet method for Payolution
@@ -27,7 +27,7 @@ There is currently an issue when using giftcards with Payolution. Our team is de
 {% endinfo_block %}
 
 ## Prerequisites
-Before proceeding with the integration, make sure you have [installed and configured](/docs/scos/user/technology-partners/202009.0/payment-partners/payolution/payolution-installation-and-configuration.html) the Payolution module.
+Before proceeding with the integration, make sure you have [installed and configured](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/payolution/installing-and-configuring-payolution.html) the Payolution module.
 
 ## Frontend Integration
 To show Payolution on Frontend, extend the payment view:

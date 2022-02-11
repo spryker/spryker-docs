@@ -7,7 +7,7 @@ related:
     link: docs/scos/user/intro-to-spryker/contributing-to-documentation/markdown-syntax.html
 ---
 
-This page contains details on how to work with the [Spryker docs](https://github.com/spryker/spryker-docs), main style, syntax and formatting rules for creating content.
+This document describes the sructure, main style, syntax and formatting rules of the [Spryker documents](https://github.com/spryker/spryker-docs).
 
 ## Directory structure
 
@@ -17,7 +17,7 @@ The main directory for holding all the documents is [docs](https://github.com/sp
 
 ## Creating documents and categories
 
-We use [Markdown](https://en.wikipedia.org/wiki/Markdown) (.md) to write documents. All documents reside in the [docs](https://github.com/spryker/spryker-docs/tree/master/docs) directory.  See [Directory structure](#directory-structure) for details on how this directory is organized. You can use any text editor such as [VSCode](https://code.visualstudio.com) or [Atom](https://atom.io) for creating the files in Markdown. 
+We use [Markdown](https://en.wikipedia.org/wiki/Markdown) (.md) to write documents. All documents reside in the [docs](https://github.com/spryker/spryker-docs/tree/master/docs) directory.  See [Directory structure](#directory-structure) for details on how this directory is organized. You can use any text editor such as [VSCode](https://code.visualstudio.com) or [Atom](https://atom.io) for creating the files in Markdown. For information about specific Markdown syntax for documentation, see [Markdown syntax](/docs/scos/user/intro-to-spryker/contributing-to-documentation/markdown-syntax.html).
 
 You can create new pages in any documentation category or sub-category under the **realm** directories (**user**, **dev**). You can also create directories for new categories under the **realm** directories.
 
@@ -26,7 +26,7 @@ For example, to create a new *sample-category* category and a *foo-bar* page und
 
 {% info_block warningBox "Warning" %}
 
-Currently, the maximum nesting level in the documentation categories is 3. This means that for each category you can have only one sub-category. For example, `marketplace/user/features/202108.0/merchant/`, where `features` is the category (first level of nesting), `202108.0` is the version (does not affect the level of nesting) `merchant` is the sub-category (second level of nesting). The third level of nesting would be the .md files under the sub-category.
+Currently, the maximum nesting level in the documentation categories is 3. This means that for each category you can have only one sub-category. For example, `marketplace/user/features/202108.0/merchant/`, where `features` is the category (first level of nesting), `202108.0` is the version (does not affect the level of nesting) `merchant` is the sub-category (second level of nesting). The third level of nesting are the .md files under the sub-category.
 
 {% endinfo_block %}
 
@@ -54,7 +54,11 @@ To keep our docs consistent, we have templates for all types of documents. The t
 | [howto-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/howto-guide-template.md) | Use this template for creating [howto guides](/docs/scos/dev/tutorials-and-howtos/howtos/howto-add-a-new-shipment-method.html#setting-up-the-state-machine). |
 | [best-practices-file-template](https://github.com/spryker/spryker-docs/blob/master/_templates/best-practices-file-template.md) | Use this template for creating [best practices](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/creating-service-offerings-best-practices.html) docs. |
 
-A name of the template you used needs to be added to the front matter.
+{% info_block warningBox "Warning" %}
+
+Make sure that the front matter of your document contains the name of the template.
+
+{% endinfo_block %}
 
 ### Front matter
 
@@ -80,23 +84,23 @@ related:
 
 | FRONT MATTER PARAMETER | DESCRIPTION   | FORMAT WITH EXPLANATION | EXAMPLE | REQUIRED? |
 | ---------------------- | ---------- | -------- | --------- | ---------|
-| title                  | The name of the document.  | Text. Keep in mind, that if you have special characters in title like column or apostrophe, the title should be in single quotes.  |   <ul><li>Creating product lists</li><li>'HowTo - Force HTTPS'</li></ul> | *✓*       |
+| title                  | The name of the document.  | Text. Keep in mind, that if you have special characters in title like column or apostrophe, the title should be in single quotes.  |   <ul><li>Creating product lists</li><li>'HowTo: Force HTTPS'</li></ul> | *✓*       |
 | description            | Short description of what this page is about. |  Sentence.   | Learn how to use the front matter.  | *✓*       |
 | last_updated           | Last updated date of the page to be displayed on the website. | Date in the format: Mon-DD-YYYY (month abbreviation, day with leading zeros, year)  | Jun 16, 2021  |           |
-| template               | [Template](#templates) based on which the page was created. |  Name of the template from [Github repository](https://github.com/spryker/spryker-docs/tree/master/_templates) excluding the extension of the file (.md). | feature-integration-guide-template | *✓*       |
+| template               | [Template](#templates) based on which the page was created. |  Name of the template from [Github repository](https://github.com/spryker/spryker-docs/tree/master/_templates) without the extension of the file (.md). | feature-integration-guide-template | *✓*       |
 | tags                   | Tag names. |  The name of the tag in brackets. |  [B2B], [B2C] |           |
 | redirect_from          | Allows setting up redirects for pages whose location changes or pages that are completely deleted from the documentation. To set up a redirect, press the **tab** button and enter the path starting with `/docs` and containing the exact version, if the document is [versioned](#page-version). | - /path/to/a/file.html  | -/docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting.html  |          |
 | related                | Shows the list of articles related to the page you are on. To add a related article, press the **tab** button and enter the name of the article in the `title` parameter and the link to the file in the `link` parameter. |  Mind the _link_ parameter: no dash before _link_, no slash before _docs_. Always use _page.version_ in the link for related articles, even for unversioned articles! | - title: Title of the related page<br/>   link: path/to/a/file.html |           |
 
-You can read more about front matter on the [Jekyll's official website](https://jekyllrb.com/docs/front-matter/).
+For more information about front matter, see the [Jekyll's official website](https://jekyllrb.com/docs/front-matter/).
 
 ## Adding documents to the navigation
 
-Once a new document is created, it must be added to the sidebar navigation. Keep in mind that a path to a document file will be fully mapped to an URL of that document except that `.md` extension will be replaced with `.html`. This means that the document from the [example above](#example-document) can be accessed in the browser with zero configuration by visiting `http://localhost:4000/docs/marketplace/user/sample-category/foo-bar.html`.
+Once you created a new document, you must add to the sidebar navigation. Keep in mind that a path to a document file will be fully mapped to an URL of that document except that `.md` extension will be replaced with `.html`. This means that the document from the [example above](#example-document) can be accessed in the browser with zero configuration by visiting `http://localhost:4000/docs/marketplace/user/sample-category/foo-bar.html`.
 
 ### Sidebars
 
-Each _product/realm_ set has its own sidebar, which is represented by a YAML file in the [_data/sidebar](https://github.com/spryker/spryker-docs/tree/master/_data/sidebars) directory. The sidebar name is `{product}_{realm}_sidebar.yml`. So, for example, for Marketplace user documentation, the sidebar file would be called `marketplace_user_sidebar.html`. The sidebar consists of the list of files files that are present in the navigation. As a best practice, as soon as you create a new page, add it to your sidebar (so you don’t forget about the page).
+Each _product/realm_ set has its own sidebar, which is represented by a YAML file in the [_data/sidebar](https://github.com/spryker/spryker-docs/tree/master/_data/sidebars) directory. The sidebar name is `{product}_{realm}_sidebar.yml`. So, for example, for the Marketplace user documentation, the sidebar file is called `marketplace_user_sidebar.html`. The sidebar consists of the list of files files that are present in the navigation. As a best practice, as soon as you create a new page, add it to your sidebar (so you don’t forget about the page).
 
 ```
 - product: SCOS
@@ -108,14 +112,14 @@ Each _product/realm_ set has its own sidebar, which is represented by a YAML fil
 ```
 
 - The **product** key represents the top level category for the sidebar. It is entered once at the top of the sidebar.
-- The **nested** key describes the nested items of the category - pages or sub-categories.
+- The **nested** key describes the nested items of the category—pages or sub-categories.
 - The first **title** key sets the category name as it will be displayed in the sidebar.
 - The second **title** key in this example sets the page title.
 - The **url** key must specify the absolute URL to the document page.
 
 ### Creating landing pages for the main categories
 
-For each main category, like *Setup*, *Feature integration guides,* *HowTos*, etc., you can create the *index.md.* file. This lets you opening category pages without specific files in the link. For example, let’s do that for the *Glue API guides* section of the developer guide:
+For each main category, like *Setup*, *Feature integration guides,* *HowTos*, etc., you can create the *index.md.* file. This lets you open category pages without specific files in the link. For example, let’s do that for the *Glue API guides* section of the developer guide:
 
 1. In `docs/marketplace/dev/glue-api-guides`, add the *index.md* file. Make sure you specify the title in the file.
 
@@ -128,7 +132,7 @@ For each main category, like *Setup*, *Feature integration guides,* *HowTos*, et
 
 3. Save the changes.
 
-If you now open the Glue API guides category, your page will look like this:
+If you now open the Glue API guides category, your page looks like this:
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/landing-page-for-category.png)
 
@@ -185,297 +189,6 @@ For details on the feature, see [Merchant feature overview](/docs/marketplace/us
 ```
 
 the `Merchant feature overview` link will take the user to the `Merchant feature overview` article in version 2020109.0.
-
-## Adding a new product
-
-Whenever a new Spryker product is launched, you need to create a separate section for it. Usually, there are two roles per product - user and developer. However, there might be exceptions. Here, we consider that you have to create a new product *aop* with the *user* and *developer* roles.
-
-To add a new product, follow these steps.
-
-### 1. Create sidebars for the new product
-
-In *data->sidebars*, add sidebars for your new product with roles. For each role, there should be a separate .YML file in the following format: `{product_name}_{role}_sidebar.yml`. To separate words in the sidebar, use an underscore. For example, for our new *aop* product, we create *aop_dev_sidebar.yml* and *aop_user_sidebar.yml* sidebar files.
-
-See [Sidebars](#sidebars) for details on how to populate the sidebar files.
-
-### 2. Add the new product with roles to the config file
-
-Now, open the [config.yml](https://github.com/spryker/spryker-docs/blob/master/_config.yml) file and add the new product with its role to it. Do the following:
-
-1. In the *defaults* section, add the new product with its path and product name value to the scope. For example:
-
-```
--
-    scope:
-      path: "docs/aop"
-    values:
-      product: "aop"
-
-```
-
-2. In the *defaults* section, under the product scope you added at the previous step, add the product roles with their paths and sidebars. The sidebar names should match those you created at step [1. Create sidebars for the new product](#create-sidebars-for-the-new-product). For example:
-```
-  -
-    scope:
-      path: "docs/aop/dev"
-    values:
-      sidebar: "aop_dev_sidebar"
-      role: "dev"
-  -
-    scope:
-      path: "docs/aop/user"
-    values:
-      sidebar: "aop_user_sidebar"
-      role: "user"
-```
-3. Optional: If you want to version some of the categories in your new product, in the *versioned_categories* section, add your product name and the categories that should be versioned. For example:
-
-```
-aop:
-    user:
-      - features
-      - back-office-user-guides
-    dev:
-      - feature-integration-guides
-      - feature-walkthroughs
-      - glue-api-guides
- ``` 
-
-1. In the *sidebars* section, add the sidebars for your new product. The sidebars should match those created at step [1. Create sidebars for the new product](#create-sidebars-for-the-new-product). For example:
-
-```
-- aop_dev_sidebar
-- aop_user_sidebar
-```
-5. To index your new product in the search engine, in the *algolia* section, in *indices*, add the product name and titles for each role. For example:
-
-```
-- name: 'aop_user'
-  title: 'AOP User'
-- name: 'aop_dev'
-  title: 'AOP Developer'
-```
-
-### 2. Add the product to the homepage
-
-Next, you have to add the new product to the top navigation on the homepage and to the role boxes on the homepage. Do the following:
-
-1. Go to [_includes/topnav.html](https://github.com/spryker/spryker-docs/blob/master/_includes/topnav.html)
-  1. In the `<div class="main-nav dropdown">` class, add names for your guides following this format:
-   
-  ```
-  {% raw %}
-  {% elsif page.product == '{product_name}' and page.role == 'dev' %}
-  {Product name} developer guide
-  {% elsif page.product == '{product_name}' and page.role == 'user' %}
-  {Product name} users guide
-  {% endraw %}
-  ```
-  For example:
-
-  ```
-  {% raw %}
-  {% elsif page.product == 'aop' and page.role == 'dev' %}
-  App Orchestration Platform developer guide
-  {% elsif page.product == 'aop' and page.role == 'user' %}
-  App Orchestration Platform users guide
-  {% endraw %}
-  ```
-  1. In `<ul class="main-nav__drop main-nav__drop--mob-static dropdown-menu" aria-labelledby="navbarDropdownMenuLink">`, add the following code under the last `</li>` tag of the already published product:
-   ```
-   
-                                            <li class="dropdown">
-                                                <a href="/" class="main-nav__drop-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    {Product name}
-                                                    <i class="main-nav__drop-link-arrow icon-arrow-right"></i>
-                                                </a>
-                                                <ul class="main-nav__drop dropdown-menu">
-                                                    <li>
-                                                        <a href="/docs/{product-name}/dev/{link-to-main-page-of-dev-guides.html}" class="main-nav__drop-link">
-                                                            <span class="main-nav__drop-link-title">
-                                                                <i class="icon-developer"></i>
-                                                                Developer
-                                                            </span>
-                                                            <span class="main-nav__drop-link-subtitle">{Product name} developer guide</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/docs/{product-name}/user/{link-to-main-page-of-dev-guides.html}" class="main-nav__drop-link">
-                                                            <span class="main-nav__drop-link-title">
-                                                                <i class="icon-business"></i>
-                                                                Business User
-                                                            </span>
-                                                            <span class="main-nav__drop-link-subtitle">AOP users guide</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-
-   ```
-
-   For example:
-
-   ```
-   
-                                            <li class="dropdown">
-                                                <a href="/" class="main-nav__drop-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    App Orchestration Platform
-                                                    <i class="main-nav__drop-link-arrow icon-arrow-right"></i>
-                                                </a>
-                                                <ul class="main-nav__drop dropdown-menu">
-                                                    <li>
-                                                        <a href="/docs/aop/dev/setup/system-requirements.html" class="main-nav__drop-link">
-                                                            <span class="main-nav__drop-link-title">
-                                                                <i class="icon-developer"></i>
-                                                                Developer
-                                                            </span>
-                                                            <span class="main-nav__drop-link-subtitle">AOP developer guide</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/docs/aop/user/intro-to-aop/aop-overview.html" class="main-nav__drop-link">
-                                                            <span class="main-nav__drop-link-title">
-                                                                <i class="icon-business"></i>
-                                                                Business User
-                                                            </span>
-                                                            <span class="main-nav__drop-link-subtitle">AOP users guide</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-   ```
-2. Go to [_layouts/home.html](https://github.com/spryker/spryker-docs/blob/master/_layouts/home.html)
-   1. In `<h2 class="card__heading-title">Developer guides</h2>`, add links to your product's developer guides. For example:
-   ```
-   <li><a href="/docs/aop/dev/setup/system-requirements.html">App Orchestration Platform developer guides</a></li>
-   ```
-   1. In `<h2 class="card__heading-title">Business User guides</h2>`,add links to your product's business user guides. For example:
-   ```
-   <li><a href="/docs/aop/user/intro-to-aop/aop-overview.html">App Orchestration Platform user guides</a></li>
-   ```
-
-### Add CI checks for the new product
-
-You need to add CI checks for each role per project. For this, do the following:
-
-1. In the [ci.yml](https://github.com/spryker/spryker-docs/blob/master/.github/workflows/ci.yml) file, add the `link_validation_check_{project-name}_dev` and `link_validation_check_{project-name}_user` sections following the example below:
-
-```
-  link_validation_check_aop_dev:
-    name: Links validation (check_aop_dev)
-    needs: jekyll_build
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
-        with:
-          ruby-version: 2.6
-          bundler-cache: true
-
-      - name: Cache HTMLProofer
-        id: cache-htmlproofer
-        uses: actions/cache@v2
-        with:
-          path: tmp/.htmlproofer
-          key: ${{ runner.os }}-check_aop_dev-htmlproofer
-
-  link_validation_check_aop_user:
-    name: Links validation (check_aop_user)
-    needs: jekyll_build
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
-        with:
-          ruby-version: 2.6
-          bundler-cache: true
-
-      - name: Cache HTMLProofer
-        id: cache-htmlproofer
-        uses: actions/cache@v2
-        with:
-          path: tmp/.htmlproofer
-          key: ${{ runner.os }}-check_aop_user-htmlproofer
-
-      - uses: actions/download-artifact@v2
-
-      - name: Unpack artifacts
-        run: tar -xf build-result/result.tar.gz
-
-      - run: bundle exec rake check_aop_user
-
-      - uses: actions/download-artifact@v2
-
-      - name: Unpack artifacts
-        run: tar -xf build-result/result.tar.gz
-
-      - run: bundle exec rake check_aop
-
-```
-2. In the [Rakefile](https://github.com/spryker/spryker-docs/blob/master/Rakefile) file, add checks for each role. Make sure to exclude all other projects and roles from each check by adding path to the new project in `options[:file_ignore]`. Follow this example:
-```
-task :check_aop_user do
-  options = commonOptions.dup
-  options[:file_ignore] = [
-    /docs\/scos\/.+/,
-    /docs\/marketplace\/.+/,
-    /docs\/cloud\/.+/,
-    /docs\/aop\/dev\/.+/,
-  ]
-  HTMLProofer.check_directory("./_site", options).run
-end
-
-task :check_aop_user do
-  options = commonOptions.dup
-  options[:file_ignore] = [
-    /docs\/scos\/.+/,
-    /docs\/marketplace\/.+/,
-    /docs\/cloud\/.+/,
-    /docs\/aop\/dev\/.+/,
-  ]
-  HTMLProofer.check_directory("./_site", options).run
-end
-
-task :check_aop_dev do
-  options = commonOptions.dup
-  options[:file_ignore] = [
-    /docs\/scos\/.+/,
-    /docs\/marketplace\/.+/,
-    /docs\/cloud\/.+/,
-    /docs\/aop\/user\/.+/,
-  ]
-  HTMLProofer.check_directory("./_site", options).run
-end
-
-task :check_aop_dev do
-  options = commonOptions.dup
-  options[:file_ignore] = [
-    /docs\/scos\/.+/,
-    /docs\/marketplace\/.+/,
-    /docs\/cloud\/.+/,
-    /docs\/aop\/user\/.+/,
-  ]
-  HTMLProofer.check_directory("./_site", options).run
-end
-```
-3. In the [Rakefile](https://github.com/spryker/spryker-docs/blob/master/Rakefile) file, in `options[:file_ignore]`, exclude the new project from checks in all other projects and roles. For example:
-
-```
-task :check_mp_dev do
-  options = commonOptions.dup
-  options[:file_ignore] = [
-    /docs\/scos\/.+/,
-    /docs\/cloud\/.+/,
-    /docs\/aop\/.+/,
-    /docs\/marketplace\/user\/.+/,
-  ]
-```
 
 ## Deleting pages
 

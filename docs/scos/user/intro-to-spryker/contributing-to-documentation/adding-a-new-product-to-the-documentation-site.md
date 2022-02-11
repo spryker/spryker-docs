@@ -10,7 +10,7 @@ To add a new product, follow these steps.
 
 ## 1. Create sidebars for the new product
 
-In *data->sidebars*, add sidebars for your new product with roles. For each role, there should be a separate .YML file in the following format: `{product_name}_{role}_sidebar.yml`. To separate words in the sidebar, use an underscore. For example, for our new *aop* product, we create *aop_dev_sidebar.yml* and *aop_user_sidebar.yml* sidebar files.
+In *data->sidebars*, add sidebars for your new product with roles. For each role, there should be a separate YML file in the following format: `{product_name}_{role}_sidebar.yml`. To separate words in the sidebar, use an underscore. For example, for our new *aop* product, we create *aop_dev_sidebar.yml* and *aop_user_sidebar.yml* sidebar files.
 
 See [Sidebars](/docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html#sidebars) for details on how to populate the sidebar files.
 
@@ -29,7 +29,7 @@ Now, open the [config.yml](https://github.com/spryker/spryker-docs/blob/master/_
 
 ```
 
-2. In the *defaults* section, under the product scope you added at the previous step, add the product roles with their paths and sidebars. The sidebar names should match those you created at step [1. Create sidebars for the new product](#create-sidebars-for-the-new-product). For example:
+2. In the *defaults* section, under the product scope you added at the previous step, add the product roles with their paths and sidebars. The sidebar names should match those you created in [step 1. Create sidebars for the new product](#create-sidebars-for-the-new-product). For example:
 ```
   -
     scope:
@@ -57,7 +57,7 @@ aop:
       - glue-api-guides
  ``` 
 
-4. In the *sidebars* section, add the sidebars for your new product. The sidebars should match those created at step [1. Create sidebars for the new product](#create-sidebars-for-the-new-product). For example:
+4. In the *sidebars* section, add the sidebars for your new product. The sidebars should match those created in [step 1. Create sidebars for the new product](#create-sidebars-for-the-new-product). For example:
 
 ```
 - aop_dev_sidebar
@@ -168,7 +168,7 @@ Next, you have to add the new product to the top navigation on the homepage and 
    ```
    <li><a href="/docs/aop/dev/setup/system-requirements.html">App Orchestration Platform developer guides</a></li>
    ```
-    b. In `<h2 class="card__heading-title">Business User guides</h2>`,add links to your product's business user guides. For example:
+    b. In `<h2 class="card__heading-title">Business User guides</h2>`, add links to your product's business user guides. For example:
    ```
    <li><a href="/docs/aop/user/intro-to-aop/aop-overview.html">App Orchestration Platform user guides</a></li>
    ```
@@ -303,7 +303,7 @@ Make sure you completed [step 5](#step-five) from the *Add the new product with 
 
 {% endinfo_block %}
 
-To configure the Algolia search for your product, you need to configure the search in the spryker-docs repository, and then in the Algolia app for Spryker docs.
+To configure the Algolia search for your product, you need to configure the search in the *spryker-docs* repository, and then in the Algolia app for Spryker docs.
 
 ### Configuring the Algolia search in the repository
 
@@ -316,7 +316,7 @@ To configure the Algolia search for your project in the repository, do the follo
       title: 'App Orchestration Platform'
 ```
 
-2. In the [algolia_config](https://github.com/spryker/spryker-docs/tree/master/algolia_config) folder, create the .YML file for your project and exclude all other projects from it:
+2. In the [algolia_config](https://github.com/spryker/spryker-docs/tree/master/algolia_config) folder, create the YML file for your project and exclude all other projects from it:
 
 ```
 algolia:
@@ -333,7 +333,7 @@ algolia:
     - docs/cloud/dev**/*.md
 
 ```
-3. In the same [algolia_config](https://github.com/spryker/spryker-docs/tree/master/algolia_config) folder, go to the .YML file of each project and exclude the newly created project from them.
+3. In the same [algolia_config](https://github.com/spryker/spryker-docs/tree/master/algolia_config) folder, go to the YML file of each project and exclude the newly created project from them.
 	
 4. Go to the [github/workflow/ci](https://github.com/spryker/spryker-docs/blob/master/.github/workflows/ci.yml) file and add the files you created at step 2:
 
@@ -349,7 +349,7 @@ algolia:
 Now you need to configure the search in the Algolia app of the Spryker docs. Do the following:
 
 1. Go to https://www.algolia.com/apps/IBBSSFT6M1/indices click **Create Index**. 
-2. In the opened window, enter the name exactly as you specified at [step 1](#configuring-the-algolia-search-in-the-repository) where you adjusted the config.yml file for the *algolia* section.
+2. In the opened window, enter the name exactly as you specified in [step 1](#configuring-the-algolia-search-in-the-repository) where you adjusted the config.yml file for the *algolia* section.
 3. In the created index, go to **Configuration** and add the attributes as for the [scos_dev project](https://www.algolia.com/apps/IBBSSFT6M1/explorer/configuration/scos_dev/searchable-attributes).
 4. In **RELEVANCE ESSENTIALS > Ranking and sorting**, add custom rankings as for the [scos_dev project](https://www.algolia.com/apps/IBBSSFT6M1/explorer/configuration/scos_dev/ranking-and-sorting).
 5. In **RELEVANCE OPTIMIZATIONS > Language**, select *English*.

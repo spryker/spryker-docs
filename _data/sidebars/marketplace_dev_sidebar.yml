@@ -471,8 +471,6 @@ entries:
           
           - title: "File details: merchant_product_approval_status_default.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-approval-status-default.csv.html
-            include_versions:
-            - "202200.0"
 
       - title: Front-end
         nested:

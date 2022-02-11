@@ -7,6 +7,8 @@ The [marketplace operator](/docs/marketplace/user/intro-to-the-spryker-marketpla
 
 The Marketplace Product Approval Process allows marketplace owners to verify the products of merchants before showing them to customers.
 
+Thus, only the approved and active products within the validity dates range and existing for the defined store are displayed in the Storefront.
+
 ## Product lifecycle
 
 {% info_block warningBox "Note" %}
@@ -26,7 +28,7 @@ A product can have one of the following statuses:
 
 {% info_block infoBox "Info" %}
 
-You can configure the logic of statuses on the project level.
+You can configure the logic of the statuses on the project level.
 
 {% endinfo_block %}
 
@@ -42,4 +44,4 @@ In order for the marketplace product to be displayed in the Storefront, every [m
 
 ## Marketplace Product Approval data import
 
-A marketplace owner can set a default approval status for marketplace products owned by a certain merchant via data import. See [File details: merchant_product_approval_status_default.csv](docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-approval-status-default.csv.md) to learn more how to do it.
+A marketplace owner can set a default approval status for marketplace products owned by a certain merchant via data import. See [File details: merchant_product_approval_status_default.csv](docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-approval-status-default.csv.html) to learn more how to do it.

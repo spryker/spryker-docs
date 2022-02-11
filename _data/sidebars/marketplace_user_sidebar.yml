@@ -96,8 +96,6 @@ entries:
 
         - title: Marketplace Product Approval Process 
           url: /docs/marketplace/user/features/marketplace-product-approval-process-feature-overview.html
-          include_versions:
-            - "202200.0"
       
       - title: Back Office user guides
         nested:

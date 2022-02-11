@@ -11,8 +11,8 @@ redirect_from:
   - /docs/scos/user/technology-partners/202009.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-invoice-payment-method-for-ratepay.html
   - /docs/scos/user/technology-partners/202009.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-invoice-payment-method-for-ratepay.html
 related:
-  - title: RatePay - Facade
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-facade.html
+  - title: RatePay facade methods
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-facade-methods.html
   - title: Disabling address updates from the backend application for RatePay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/disabling-address-updates-from-the-backend-application-for-ratepay.html
   - title: RatePay- Core Module Structure Diagram

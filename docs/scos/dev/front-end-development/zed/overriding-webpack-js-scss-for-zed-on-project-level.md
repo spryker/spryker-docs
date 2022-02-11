@@ -116,7 +116,7 @@ To extend JS modules from the core level, use [aliases](#aliases). To add a JS m
 ```
 require('{% raw %}{%{% endraw %}AliasName{% raw %}%}{% endraw %}/path/to/file.js');
 // OR
-var ModuleName = reqiure('{% raw %}{%{% endraw %}AliasName{% raw %}%}{% endraw %}/path/to/file.js');
+var ModuleName = require('{% raw %}{%{% endraw %}AliasName{% raw %}%}{% endraw %}/path/to/file.js');
 ```
 ## SCSS
 

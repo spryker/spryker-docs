@@ -17,8 +17,8 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/integrating-braintree.html
   - title: Braintree - Performing Requests
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-performing-requests.html
-  - title: Braintree - Workflow
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-workflow.html
+  - title: Braintree - Request workflow
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-request-workflow.html
 ---
 
 [ABOUT BRAINTREE](https://www.braintreepayments.com/)
@@ -51,9 +51,9 @@ Because of PCI compliance reasons, credit card data is communicated to the third
 
 ## Related Developer guides
 
-* [Integrating Braintree](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/integrating-braintree.html)
 * [Installing and configuring Braintree](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/installing-and-configuring-braintree.html)
-* [Braintree - Workflow](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/braintree-workflow.html)
+* [Integrating Braintree](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/integrating-braintree.html)
+* [Braintree - Request workflow](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/braintree-request-workflow.html)
 * [Braintree - Performing requests](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/braintree-performing-requests.html)
 
 

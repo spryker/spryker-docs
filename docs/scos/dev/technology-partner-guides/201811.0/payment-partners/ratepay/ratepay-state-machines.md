@@ -13,4 +13,4 @@ A basic and fully functional state machine for each payment method is already bu
 * `RatepayElv01.xml`
 * `RatepayInstallment01.xml`
 
-You can use the same state machines or build new ones. The state machine commands and conditions trigger RatePAY facade calls in order to perform the needed requests to RatePAY.
+You can use the same state machines or build new ones. The state machine commands and conditions trigger RatePay facade methods calls in order to perform the needed requests to RatePAY.

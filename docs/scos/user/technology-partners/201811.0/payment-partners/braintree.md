@@ -9,18 +9,18 @@ redirect_from:
   - /v1/docs/braintree
   - /v1/docs/en/braintree
 related:
-  - title: Braintree - Performing Requests for SCOS
+  - title: Braintree - Performing Requests
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-performing-requests.html
-  - title: Braintree - Workflow for Legacy Demoshop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/legacy-demoshop-integration/braintree-workflow-for-legacy-demoshop.html
+  - title: Braintree - Request workflow for Legacy Demoshop
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-guides-for-the-legacy-demoshop/braintree-workflow-for-legacy-demoshop.html
   - title: Braintree - Performing Requests for the Legacy Demoshop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/legacy-demoshop-integration/braintree-performing-requests-for-the-legacy-demoshop.html
-  - title: Braintree - Configuration for SCOS
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-guides-for-the-legacy-demoshop/braintree-performing-requests-for-the-legacy-demoshop.html
+  - title: Installing and configuring Braintree
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/installing-and-configuring-braintree.html
   - title: Braintree - Configuration for the Legacy Demoshop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/legacy-demoshop-integration/braintree-configuration-for-the-legacy-demoshop.html
-  - title: Braintree - Workflow for SCOS
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-workflow.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-guides-for-the-legacy-demoshop/braintree-configuration-for-the-legacy-demoshop.html
+  - title: Braintree - Request workflow
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-request-workflow.html
 ---
 
 [ABOUT BRAINTREE](https://www.braintreepayments.com/)
@@ -53,7 +53,7 @@ Because of PCI compliance reasons, credit card data is communicated to the third
 ## Related Developer guides
 
 * [Installing and configuring Braintree](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/installing-and-configuring-braintree.html)
-* [Braintree - Workflow](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/braintree-workflow.html)
+* [Braintree - Request workflow](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/braintree-request-workflow.html)
 * [Braintree - Performing requests](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/braintree-performing-requests.html)
 
 

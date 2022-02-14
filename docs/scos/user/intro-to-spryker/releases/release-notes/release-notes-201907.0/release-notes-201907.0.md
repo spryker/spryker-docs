@@ -282,7 +282,7 @@ We now have a new integration of our new partner Episerver and their online plat
 ### Easycredit Direct Integration
 We have now a new integration of our new partner TeamBank AG and their payment method ratenkauf by easyCredit, which allows customers to pay via an installment plan. This can help to increase your conversion rates of the more expensive products and services.
 
-**Documentation**: [Installing and configuring ratenkauf by easyCredit](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.html)
+**Documentation**: [Installing and configuring ratenkauf by easyCredit](/docs/scos/dev/technology-partner-guides/{{site.version}}/payment-partners/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.html)
 
 ### CrefoPay
 We now have an integration with our new payment partner CrefoPay, which will provide the following payment methods out-of-the-box including partial operations and B2B:
@@ -294,7 +294,7 @@ We now have an integration with our new payment partner CrefoPay, which will pro
 * Sofort
 * Cash on Delivery
 
-**Documentation**: [CrefoPay](/docs/scos/user/technology-partners/201907.0/payment-partners/crefopay/installing-and-configuring-crefopay.html)
+**Documentation**: [CrefoPay](/docs/scos/dev/technology-partner-guides/{{site.version}}/payment-partners/crefopay/installing-and-configuring-crefopay.html)
 
 ***
 ## Technical Enhancements

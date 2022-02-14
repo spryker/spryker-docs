@@ -4391,9 +4391,9 @@ entries:
         - title: ratenkauf by easyCredit
           nested:
           - title: Installing and configuring ratenkauf by easyCredit
-            url: /docs/scos/user/technology-partners/payment-partners/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.html
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.html
           - title: Integrating ratenkauf by easyCredit
-            url: /docs/scos/user/technology-partners/payment-partners/ratenkauf-by-easycredit/integrating-ratenkauf-by-easycredit.html
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/ratenkauf-by-easycredit/integrating-ratenkauf-by-easycredit.html
             include_versions:
             - "202009.0"
             - "202108.0"

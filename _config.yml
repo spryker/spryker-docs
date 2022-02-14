@@ -150,7 +150,7 @@ defaults:
        role: "dev"
   -
     scope:
-      path: "docs/pbc"
+      path: "docs/pbc/all-roles"
     values:
       product: "pbc"
   -
@@ -250,8 +250,8 @@ algolia:
       title: 'Frontend enablement Service Developer'
     - name: 'paas_plus_dev'
       title: 'Platform as a Service Plus Developer'
-    - name: 'pbc_dev'
-      title: `PBC Developer`
+    - name: 'pbc_all_roles'
+      title: 'Packaged Product Capabilities'
 
 sass:
     sass_dir: css

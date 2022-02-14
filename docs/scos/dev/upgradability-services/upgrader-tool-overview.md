@@ -74,9 +74,9 @@ Pushes the changes to GitHub using the authentication details in the environment
 
 ### 7. Creates a PR
 
-Creates a PR using [PHP GitHub API](https://github.com/KnpLabs/php-github-api). After the PR is created, you can review and merge it to apply the updates.
-
-#### How does the upgrader create a PR via GitLab?
+GitHub integration: creates a PR using [PHP GitHub API](https://github.com/KnpLabs/php-github-api). 
+GitLab integration: creates a PR using [PHP GitLab API](https://github.com/GitLabPHP/Client). 
+After the PR is created, you can review and merge it to apply the updates.
 
 ### 8. Optional: Rolls back the changes
 

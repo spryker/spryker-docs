@@ -52,7 +52,7 @@ Upon receiving a request object, the `Resource` module needs to provide it with 
 
 ![Glue Application Module](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Glue+Infrastructure/communication.png)
 
-A `Resource` Resource module can communicate with the Storage, Search and Spryker Commerce OS (Zed) using a Client only.
+A `Resource` module can communicate with the Storage, Search and Spryker Commerce OS (Zed) using a Client only.
 
 ### Resource routing
 

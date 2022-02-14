@@ -2,6 +2,9 @@
 title: HowTo - Manage business unit specific prices via data import
 last_updated: Feb 04, 2022
 template: howto-guide-template
+related: 
+  - title: Merchant Custom Prices feature overview
+    link: docs/scos/user/features/page.version/merchant-custom-prices-feature-overview.html
 ---
 
 {% info_block warningBox "B2B only" %}
@@ -26,7 +29,7 @@ To assign special product prices to merchants, you can do the following:
 
 1. In the `merchant_relationship.csv` file, define the merchant relation keys. For details, see the [example in the Spryker B2B Demo Shop](https://github.com/spryker-shop/b2b-demo-shop/blob/master/data/import/common/common/merchant_relationship.csv).
 2. To import merchant relations, run 
-   ```Bash
+   ```
    console data:import merchant-relationship
    ```
 3. For each merchant relationship, create separate data import CSV files. For example, you can have a file `price-product-merchant-relationship-mr001.csv`, where `mr001` is the merchant relation key you defined in the previous step. In this file, you specify product prices for this specific merchant.

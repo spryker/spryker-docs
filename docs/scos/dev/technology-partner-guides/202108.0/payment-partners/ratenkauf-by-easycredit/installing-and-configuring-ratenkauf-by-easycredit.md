@@ -12,9 +12,9 @@ redirect_from:
   - /docs/en/ratenkauf-by-easycredit-installation-and-configuration
 related:
   - title: ratenkauf by easyCredit
-    link: docs/scos/user/technology-partners/page.version/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html
+    link: docs/scos/user/technology-partners/page.version/payment-partners/ratenkauf-by-easycredit.html
   - title: Integrating ratenkauf by easyCredit
-    link: /docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratenkauf-by-easycredit/integrating-ratenkauf-by-easycredit.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratenkauf-by-easycredit/integrating-ratenkauf-by-easycredit.html
 ---
 
 ## Installation

@@ -45,10 +45,10 @@ Quote from [Flysytem's official documentation](http://flysystem.thephpleague.com
 ### Module Dependency Graph
 The Flysystem Module provides plugins which integrate [thephpleague/flysystem](https://github.com/thephpleague/flysystem) vendor package and implement FileSystem's plugin interface.
 
-![File_System_Dependencies](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Development/File+System/file_system_dependencies.png) 
+![File_System_Dependencies](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Development/File+System/file_system_dependencies.png)
 
 ## Flysystem Service API
-Flysystem's Service API is almost exactly like [Flysystem's API](http://flysystem.thephpleague.com/api/) with only one distinction,
+Flysystem's Service API is almost exactly like [Flysystem's API](https://flysystem.thephpleague.com/docs/usage/filesystem-api/) with only one distinction,
 
 it takes an additional mandatory parameter containing a pre-configured filesystem name.
 

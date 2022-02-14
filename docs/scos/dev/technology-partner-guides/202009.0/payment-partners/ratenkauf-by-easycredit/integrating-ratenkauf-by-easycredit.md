@@ -10,9 +10,9 @@ redirect_from:
   - /v6/docs/en/ratenkauf-integration-into-project
 related:
   - title: ratenkauf by easyCredit
-    link: docs/scos/user/technology-partners/page.version/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html
+    link: docs/scos/user/technology-partners/page.version/payment-partners/ratenkauf-by-easycredit.html
   - title: Installing and configuring ratenkauf by easyCredit
-    link: /docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.html
 ---
 
 {% info_block errorBox %}
@@ -21,7 +21,7 @@ There is currently an issue when using giftcards with Ratenkauf. Our team is dev
 
 {% endinfo_block %}
 
-This article provides step-by-step instruction on how to integrate ratenkauf by easyCredit payment into your project. 
+This article provides step-by-step instruction on how to integrate ratenkauf by easyCredit payment into your project.
 
 To integrate Easycredit into a Spryker project, do the following:
 
@@ -32,7 +32,7 @@ CheckoutPageDependencyProvider.php
 
 ```php
 public const CLIENT_EASYCREDIT = 'CLIENT_EASYCREDIT';
- 
+
 ...
     /**
      * @param \Spryker\Yves\Kernel\Container $container
@@ -43,10 +43,10 @@ public const CLIENT_EASYCREDIT = 'CLIENT_EASYCREDIT';
     {
         $container = parent::provideDependencies($container);
         $container = $this->addEasycreditClient($container);
-     
+
         return $container;
     }
- 
+
     /**
      * @param \Spryker\Yves\Kernel\Container $container
      *
@@ -57,12 +57,12 @@ public const CLIENT_EASYCREDIT = 'CLIENT_EASYCREDIT';
         $container[static::PAYMENT_SUB_FORMS] = function () {
             $subFormPluginCollection = new SubFormPluginCollection();
             $subFormPluginCollection->add(new EasycreditSubFormPlugin());
- 
+
             return $subFormPluginCollection;
         };
          return $container;
     }
- 
+
     /**
      * @param \Spryker\Yves\Kernel\Container $container
      *
@@ -75,10 +75,10 @@ public const CLIENT_EASYCREDIT = 'CLIENT_EASYCREDIT';
             $stepHandlerPluginCollection->add(new EasycreditHandlerPlugin(), PaymentTransfer::EASYCREDIT);
              return $stepHandlerPluginCollection;
         };
- 
+
         return $container;
     }
- 
+
     /**
      * @param \Spryker\Yves\Kernel\Container $container
      *
@@ -89,7 +89,7 @@ public const CLIENT_EASYCREDIT = 'CLIENT_EASYCREDIT';
         $container[static::CLIENT_EASYCREDIT] = function (Container $container) {
             return $container->getLocator()->easycredit()->client();
         };
- 
+
         return $container;
     }
 ...
@@ -99,7 +99,7 @@ public const CLIENT_EASYCREDIT = 'CLIENT_EASYCREDIT';
 To use commands and conditions for events in OMS,  define them.   
 
 **OmsDependencyProvider**
-    
+
 ```php
 ...
 $container->extend(self::CONDITION_PLUGINS, function (ConditionCollectionInterface $conditionCollection) {
@@ -123,7 +123,7 @@ protected function getCheckoutOrderSavers(Container $container)
         new EasycreditOrderIdentifierPlugin(),
     ];
 }
- 
+
 ...
 ```
 
@@ -366,7 +366,7 @@ class EasycreditStep extends AbstractBaseStep implements StepWithExternalRedirec
     {
         return true;
     }
-    
+
 ```
 
 **ShipmentStep.php**

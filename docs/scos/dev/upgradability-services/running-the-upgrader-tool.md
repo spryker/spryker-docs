@@ -6,7 +6,7 @@ template: concept-topic-template
 ---
 This document describes how to upgrade all the modules to the latest versions.
 
-## GitHub prerequisites
+## Prerequisites
 
 To start working with the upgrader tool, do the following:
 

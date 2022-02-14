@@ -153,13 +153,13 @@ defaults:
       path: "docs/aop"
     values:
       product: "aop"
--
+  -
     scope:
       path: "docs/aop/dev"
     values:
       sidebar: "aop_dev_sidebar"
       role: "dev"
--
+  -
     scope:
       path: "docs/aop/user"
     values:

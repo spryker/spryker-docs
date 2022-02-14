@@ -58,18 +58,9 @@ task :check_aop_user do
     /docs\/scos\/.+/,
     /docs\/marketplace\/.+/,
     /docs\/cloud\/.+/,
-    /docs\/aop\/dev\/.+/,
-  ]
-  HTMLProofer.check_directory("./_site", options).run
-end
-
-task :check_aop_user do
-  options = commonOptions.dup
-  options[:file_ignore] = [
-    /docs\/scos\/.+/,
-    /docs\/marketplace\/.+/,
-    /docs\/cloud\/.+/,
-    /docs\/aop\/dev\/.+/,
+    /docs\/aop\/dev\/.+/,    
+    /docs\/fes\/.+/,
+    /docs\/paas-plus\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -80,18 +71,9 @@ task :check_aop_dev do
     /docs\/scos\/.+/,
     /docs\/marketplace\/.+/,
     /docs\/cloud\/.+/,
-    /docs\/aop\/user\/.+/,
-  ]
-  HTMLProofer.check_directory("./_site", options).run
-end
-
-task :check_aop_dev do
-  options = commonOptions.dup
-  options[:file_ignore] = [
-    /docs\/scos\/.+/,
-    /docs\/marketplace\/.+/,
-    /docs\/cloud\/.+/,
-    /docs\/aop\/user\/.+/,
+    /docs\/aop\/user\/.+/,    
+    /docs\/fes\/.+/,
+    /docs\/paas-plus\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end

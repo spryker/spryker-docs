@@ -1,0 +1,6 @@
+title: PBC guides
+entries:
+  - product: PBC
+    nested:
+      - title: Frontend enablement Service
+        url: /docs/fes/dev/front-end-enablement-service.html

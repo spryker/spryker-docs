@@ -54,6 +54,13 @@ jobs:
           path: tmp/.htmlproofer
           key: ${{ runner.os }}-check_aop_dev-htmlproofer
 
+      - uses: actions/download-artifact@v2
+
+      - name: Unpack artifacts
+        run: tar -xf build-result/result.tar.gz
+
+      - run: bundle exec rake check_aop_dev
+
   link_validation_check_aop_user:
     name: Links validation (check_aop_user)
     needs: jekyll_build

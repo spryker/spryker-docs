@@ -17,8 +17,8 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paypal-payment-method-for-computop.html
   - title: Integrating the PayNow payment method for Computop
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paynow-payment-method-for-computop.html
-  - title: Computop - API
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/computop-api.html
+  - title: Computop API calls
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/computop-api-calls.html
   - title: Integrating the Direct Debit payment method for Computop
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-direct-debit-payment-method-for-computop.html
   - title: Integrating the iDeal payment method for Computop
@@ -29,8 +29,8 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paydirekt-payment-method-for-computop.html
   - title: Integrating the CRIF payment method for Computop
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-crif-payment-method-for-computop.html
-  - title: Computop - OMS
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/computop-oms.html
+  - title: Computop - OMS plugins
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/computop-oms-plugins.html
 ---
 
 Example State Machine:

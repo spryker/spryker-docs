@@ -42,7 +42,7 @@ Learn more about Spryker **Oryx** frontend helper:
  [Oryx's globbing system](/docs/scos/dev/front-end-development/zed/oryx-builder-overview-and-setup.html), enables Webpack to automatically find and load entry points.
 
 ### Yves
-On a project level, you can pass your own entry points directly in the Webpack configuration. We recommend also using `theoryx.find()` API to import any Yves related code. This way, you will get every frontend feature developed in the core (i.e. payments method UI).
+On a project level, you can pass your own entry points directly in the Webpack configuration. We recommend also using `theoryx.find()` API to import any Yves related code. This way, you will get every frontend feature developed in the core (for example, payments method UI).
 
 ```php
 const settings = {

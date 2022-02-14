@@ -114,15 +114,15 @@ Please visit our [Partners Registry](https://spryker.com/find-a-partner/) for a 
 * [CrefoPay](/docs/scos/user/technology-partners/202108.0/payment-partners/computop.html)
 * [Heidelpay](/docs/scos/user/technology-partners/202108.0/payment-partners/heidelpay/heidelpay.html)
 <!--* [Informa Solutions](/docs/scos/user/technology-partners/202108.0/payment-partners/informa-solutions.html)-->
-* [Klarna](/docs/scos/user/technology-partners/202108.0/payment-partners/klarna/klarna.html)
-* [Payone](/docs/scos/user/technology-partners/202108.0/payment-partners/payolution/payolution.html)
+* [Klarna](/docs/scos/user/technology-partners/202108.0/payment-partners/klarna.html)
+* [Payone](/docs/scos/user/technology-partners/202108.0/payment-partners/payolution.html)
 * [Powerpay](/docs/scos/user/technology-partners/202108.0/payment-partners/powerpay.html)
 * [Ratenkauf by Easycredit](/docs/scos/user/technology-partners/202108.0/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html)
 * [RatePAY](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay.html)
 
  ## Poduct Information (PIM/ERP)
 
-* [Akeneo](/docs/scos/user/technology-partners/202108.0/product-information-pimerp/akeneo/akeneo.html)
+* [Akeneo](/docs/scos/user/technology-partners/202108.0/product-information-pimerp/akeneo.html)
 * [Xentral](/docs/scos/user/technology-partners/202108.0/product-information-pimerp/xentral.html)
 <!--* [Censhare](/docs/scos/user/technology-partners/202108.0/content-management/censhare.html)-->
 <!--* [Contentserv](/docs/scos/user/technology-partners/202108.0/marketing-and-conversion/personalization-and-cross-selling/contentserv.html)-->

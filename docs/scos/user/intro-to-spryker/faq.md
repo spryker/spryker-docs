@@ -42,7 +42,7 @@ As vendors of an operating system, our task is to ensure quick development of ap
    
 ## What is Spryker's solution for omnichannel?
     
-In our world, omnichannel is a collection of apps in use, i.e., a webshop plus POS plus mobile as one possible combination. Within the operating system, we are trying to offer an increasing number of pre-installed capabilities and demo apps so that every customer can put it to work to reflect their own use case as quickly as possible. In order to avoid duplicating logic such as search, discount, payment etc. per individual channel, these items are offered or stored in the operating system. This approach significantly improves cycles of customer-facing apps building and testing.
+In our world, omnichannel is a collection of apps in use, for example, a webshop plus POS plus mobile as one possible combination. Within the operating system, we are trying to offer an increasing number of pre-installed capabilities and demo apps so that every customer can put it to work to reflect their own use case as quickly as possible. In order to avoid duplicating logic such as search, discount, payment etc. per individual channel, these items are offered or stored in the operating system. This approach significantly improves cycles of customer-facing apps building and testing.
    
 ## Is Spryker a shop system?
  
@@ -50,7 +50,7 @@ No. Spryker is an operating system for commerce. In our world, a B2C shop is onl
 
 ## Do I need my own team or can I work with an agency?
 
-The choice is yours. You can either divide tasks and work in the OS internally, using agencies to build specific apps, or handle each app separately (i.e., an agency builds a webshop and you build a voice/chatbot).
+The choice is yours. You can either divide tasks and work in the OS internally, using agencies to build specific apps, or handle each app separately (for example, an agency builds a webshop and you build a voice/chatbot).
 
 ## What are "Capabilities" in your OS?
 
@@ -58,7 +58,7 @@ Capabilities are groups of features that are composed of modules, such as cart, 
 
 ## How expensive is an average Spryker project?
 
-The price depends on the number of apps and on the type of app you are going to build. As a rule of thumb, it is possible to build and deploy a single slimline app for most standard use cases (i.e., a voice app for Alexa or a simple chatbot) within a few weeks. The aim is to keep each app simple and relevant and to lock away as much of it in the OS as possible. This means that building a standard, run-of-the-mill webshop with Spryker does not take longer than with other systems. Spryker's real strength, however, is the variety of apps. So, building a B2C case with 4-5 apps (e.g., a shop, a web app, a chatbot, voice, and POS) using a standard system,  would be a complex, very expensive, and frustratingly slow undertaking. Unlike standard systems, such a use case is part of Spryker's DNA. Besides, in IoT scenarios, Spryker is actually better than most of other solutions due to the absence of dedicated technology.
+The price depends on the number of apps and on the type of app you are going to build. As a rule of thumb, it is possible to build and deploy a single slimline app for most standard use cases (for example, a voice app for Alexa or a simple chatbot) within a few weeks. The aim is to keep each app simple and relevant and to lock away as much of it in the OS as possible. This means that building a standard, run-of-the-mill webshop with Spryker does not take longer than with other systems. Spryker's real strength, however, is the variety of apps. So, building a B2C case with 4-5 apps (e.g., a shop, a web app, a chatbot, voice, and POS) using a standard system,  would be a complex, very expensive, and frustratingly slow undertaking. Unlike standard systems, such a use case is part of Spryker's DNA. Besides, in IoT scenarios, Spryker is actually better than most of other solutions due to the absence of dedicated technology.
 
 ## How might an MVP look like?
 

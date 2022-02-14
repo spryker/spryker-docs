@@ -29,9 +29,9 @@ You always discontinue a product variant, not an abstract product itself.
 
 ## Prerequisites
 
- To discontinue products for a concrete product, navigate to **Catalog** > **Products**.
+To discontinue products for a concrete product, navigate to **Catalog** > **Products**.
 
- Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or just look up the necessary information as you go through the process.
 
 ## Discontinuing products
 
@@ -54,7 +54,7 @@ If the product added to the shopping list or wishlist is marked as discontinued,
 
 ### Reference information: Discontinuing products
 
- This section explains what happens on the Storefront after discontinuing a product.
+This section explains what happens on the Storefront after discontinuing a product.
 Let's say the Smartphone with a flash memory equals 16GB is no longer popular, and it is more efficient for you to discontinue it. However, you need to propose some replacements for it to make sure that the user journey will be successful.
 You will discontinue this product variant and set up other products to be displayed as alternatives.
 ![Discontinued and alternatives](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Managing+products/Products:+Reference+Information/Discontinued-and-Alternative.gif)

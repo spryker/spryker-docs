@@ -122,15 +122,23 @@ entries:
     - title: Spryker videos
       url: /docs/scos/user/intro-to-spryker/spryker-videos.html
     - title: Contributing to documentation
+      url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-documentation.html
       nested:
       - title: Building the documentation site
         url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html
-      - title: Reviewing pull requests
-        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/reviewing-pull-requests.html
+      - title: Editing documentation via pull requests
+        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/editing-documentation-via-pull-requests.html
+      - title: Reporting documentation issues
+        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/reporting-documentation-issues.html
       - title: Style, formatting, and general rules
         url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html
       - title: Markdown syntax
         url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/markdown-syntax.html
+      - title: Reviewing pull requests
+        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/reviewing-pull-requests.html
+      - title: Adding a new product to the documentation site
+        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/adding-a-new-product-to-the-documentation-site.html
+
   - title: Features
     url: /docs/scos/user/features/features.html
     nested:
@@ -769,8 +777,19 @@ entries:
       url: /docs/scos/user/back-office-user-guides/logging-in-to-the-back-office.html
       include_versions:
       - "202108.0"
-    - title: Dashboard
+    - title: Viewing dashboard
       url: /docs/scos/user/back-office-user-guides/dashboard/viewing-dashboard.html
+      include_versions:
+      - "202108.0"
+      - "202009.0"
+    - title: Viewing dashboard
+      url: /docs/scos/user/back-office-user-guides/dashboard/viewing-dashboard.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
       nested:
       - title: References
         include_versions:
@@ -796,7 +815,7 @@ entries:
       - "202009.0"
       - "202108.0"
       nested:
-      - title: Managing Punch Out connections
+      - title: Managing punch out connections
         url: /docs/scos/user/back-office-user-guides/punch-out/managing-punch-out-connections.html
         include_versions:
         - "201907.0"
@@ -852,7 +871,7 @@ entries:
           - "202005.0"
           - "202009.0"
           nested:
-          - title: Reference information - Orders 
+          - title: Reference information - Orders
             url: /docs/scos/user/back-office-user-guides/sales/orders/references/reference-information-orders.html
             include_versions:
             - "201811.0"
@@ -1393,7 +1412,7 @@ entries:
             - "201907.0"
             - "202001.0"
             - "202005.0"
-            - "202009.0" 
+            - "202009.0"
       - title: Pages
         nested:
         - title: Creating CMS pages
@@ -1456,7 +1475,7 @@ entries:
           - "202005.0"
           - "202009.0"
           nested:
-          - title: Reference information - Navigation 
+          - title: Reference information - Navigation
             url: /docs/scos/user/back-office-user-guides/content/navigation/references/reference-information-navigation.html
             include_versions:
             - "201811.0"
@@ -1616,7 +1635,7 @@ entries:
             - "201907.0"
             - "202001.0"
             - "202005.0"
-            - "202009.0"      
+            - "202009.0"
       - title: Product relations
         nested:
         - title: Creating product relations
@@ -1835,7 +1854,7 @@ entries:
           - "202005.0"
           - "202009.0"
           nested:
-          - title: Reference information - Warehouses 
+          - title: Reference information - Warehouses
             url: /docs/scos/user/back-office-user-guides/administration/warehouses/references/reference-information-warehouses.html
             include_versions:
             - "202001.0"
@@ -2226,82 +2245,16 @@ entries:
         url: /docs/scos/user/technology-partners/payment-partners/braintree.html
       - title: Computop
         url: /docs/scos/user/technology-partners/payment-partners/computop.html
-      - title: Klarna
-        url: /docs/scos/user/technology-partners/payment-partners/klarna/klarna.html
-        nested:
-        - title: Technical details and HowTos
-          nested:
-          - title: Klarna - Payment Workflow
-            url: /docs/scos/user/technology-partners/payment-partners/klarna/technical-details-and-howtos/klarna-payment-workflow.html
-          - title: Klarna - Part Payment Flexible
-            url: /docs/scos/user/technology-partners/payment-partners/klarna/technical-details-and-howtos/klarna-part-payment-flexible.html
-          - title: Klarna - State Machine Commands and Conditions
-            url: /docs/scos/user/technology-partners/payment-partners/klarna/technical-details-and-howtos/klarna-state-machine-commands-and-conditions.html
-          - title: Klarna - Invoice Pay in 14 days
-            url: /docs/scos/user/technology-partners/payment-partners/klarna/technical-details-and-howtos/klarna-invoice-pay-in-14-days.html
+      - title: CrefoPay
+        url: /docs/scos/user/technology-partners/payment-partners/crefopay.html
       - title: Heidelpay
-        url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        nested:
-        - title: SCOS Integration
-          nested:
-          - title: Heidelpay - Integration into SCOS
-            url: /docs/scos/user/technology-partners/payment-partners/heidelpay/scos-integration/heidelpay-integration-into-scos.html
-          - title: Heidelpay - Configuration for SCOS
-            url: /docs/scos/user/technology-partners/payment-partners/heidelpay/scos-integration/heidelpay-configuration-for-scos.html
-        - title: Heidelpay - Payment methods
-          nested:
-          - title: Heidelpay - Sofort (Online Transfer)
-            url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-sofort-online-transfer.html
-          - title: Heidelpay - Invoice Secured B2C
-            url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-invoice-secured-b2c.html
-          - title: Heidelpay - iDeal
-            url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-ideal.html
-          - title: Heidelpay - Easy Credit
-            url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-easy-credit.html
-          - title: Heidelpay - Direct Debit
-            url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-direct-debit.html
-          - title: Heidelpay - Split-payment Marketplace
-            url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-split-payment-marketplace.html
-          - title: Heidelpay - Paypal Debit Workflow
-            url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-paypal-debit-workflow.html
-          - title: Heidelpay - Paypal Authorize
-            url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-paypal-authorize.html
-          - title: Heidelpay - Credit Card Secure
-            url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-credit-card-secure.html
-        - title: Technical details and HowTos
-          include_versions:
-          - "202009.0"
-          - "202108.0"
-          nested:
-          - title: Heidelpay - Workflow for Errors
-            url: /docs/scos/user/technology-partners/payment-partners/heidelpay/technical-details-and-howtos/heidelpay-workflow-for-errors.html
-          - title: Heidelpay -  OMS Workflow
-            url: /docs/scos/user/technology-partners/payment-partners/heidelpay/technical-details-and-howtos/heidelpay-oms-workflow.html
-            include_versions:
-            - "202009.0"
-            - "202108.0"
-        - title: Heidelpay - Integration into the Legacy Demoshop
-          url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay-integration-into-the-legacy-demoshop.html
-          include_versions:
-          - "201811.0"
-          - "201903.0"
-          - "201907.0"
-          - "202001.0"
-        - title: Heidelpay - Installation
-          url: /docs/scos/user/technology-partners/payment-partners/heidelpay/heidelpay-installation.html
+        url: /docs/scos/user/technology-partners/payment-partners/heidelpay.html
+      - title: Klarna
+        url: /docs/scos/user/technology-partners/payment-partners/klarna.html
       - title: Adyen
         url: /docs/scos/user/technology-partners/payment-partners/adyen.html
       - title: RatePay
         url: /docs/scos/user/technology-partners/payment-partners/ratepay.html
-      - title: CrefoPay
-        url: /docs/scos/user/technology-partners/payment-partners/crefopay.html
       - title: Billie
         url: /docs/scos/user/technology-partners/payment-partners/billie.html
       - title: Powerpay
@@ -2320,30 +2273,7 @@ entries:
           - "202009.0"
           - "202108.0"
       - title: Payolution
-        url: /docs/scos/user/technology-partners/payment-partners/payolution/payolution.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-        nested:
-        - title: Technical details and HowTos
-          nested:
-          - title: Payolution - Performing Requests
-            url: /docs/scos/user/technology-partners/payment-partners/payolution/technical-details-and-howtos/payolution-performing-requests.html
-          - title: Payolution - Workflow
-            url: /docs/scos/user/technology-partners/payment-partners/payolution/technical-details-and-howtos/payolution-workflow.html
-        - title: Payolution - Payment methods
-          nested:
-          - title: Payolution - Invoice Payment
-            url: /docs/scos/user/technology-partners/payment-partners/payolution/payolution-payment-methods/payolution-invoice-payment.html
-          - title: Payolution - Installment Payment
-            url: /docs/scos/user/technology-partners/payment-partners/payolution/payolution-payment-methods/payolution-installment-payment.html
-        - title: Payolution - Installation and Configuration
-          url: /docs/scos/user/technology-partners/payment-partners/payolution/payolution-installation-and-configuration.html
-        - title: Payolution - Integration into a project
-          url: /docs/scos/user/technology-partners/payment-partners/payolution/payolution-integration-into-a-project.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
+        url: /docs/scos/user/technology-partners/payment-partners/payolution.html
       - title: Arvato
         url: /docs/scos/user/technology-partners/payment-partners/arvato.html
     - title: Technology Partner Integration
@@ -2409,15 +2339,15 @@ entries:
         - "202009.0"
         - "202108.0"
       - title: Akeneo
-        url: /docs/scos/user/technology-partners/product-information-pimerp/akeneo/akeneo.html
+        url: /docs/scos/user/technology-partners/product-information-pimerp/akeneo.html
         include_versions:
         - "202009.0"
         - "202108.0"
         nested:
-        - title: Akeneo - Installation and Configuration
-          url: /docs/scos/user/technology-partners/product-information-pimerp/akeneo/akeneo-installation-and-configuration.html
-        - title: Akeneo - Console commands
-          url: /docs/scos/user/technology-partners/product-information-pimerp/akeneo/akeneo-console-commands.html
+        - title: Installing and configuring Akeneo
+          url: /docs/scos/dev/technology-partner-guides/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html
+        - title: Akeneo — Console commands
+          url: /docs/scos/dev/technology-partner-guides/product-information-pimerp/akeneo/akeneo-console-commands.html
           include_versions:
           - "202009.0"
           - "202108.0"

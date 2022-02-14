@@ -92,7 +92,7 @@ To retrieve `NEW_RELIC_DEPLOYMENT_API_URL`, see the official documentation about
 
 For example: `https://api.newrelic.com/v2/applications/12345/deployments.json`
 
-However, the latest version (1.1.0) of the module allows passing a list of IDs to record multiple deployments (for example, Yves and Zed for different stores) at once. In that case, you have to modify the config using the %s as a placeholder in the deployment URL:
+However, the latest version (1.1.0)  of the module allows passing a list of IDs to be able to record multiple deployments (for example, Yves and Zed for different stores) at once. In that case, the config has to be modified using the %s as a placeholder in the deployment URL:
 
 ```
 $config[\SprykerEco\Shared\NewRelic\NewRelicEnv::NEW_RELIC_DEPLOYMENT_API_URL] =

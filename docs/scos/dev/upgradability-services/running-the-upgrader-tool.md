@@ -11,20 +11,6 @@ This document describes how to upgrade all the modules to the latest versions.
 To start working with the upgrader tool, do the following:
 
 1. To enable the upgrader tool to commit and push changes, adjust your project’s Git and environment configuration as follows:
-  * Add a GitHub token with the permissions to push branches and create PRs:
-  ```bash
-  export GITHUB_ACCESS_TOKEN={GITHUB_TOCKEN}
-  ```
-
-  * Add the organization name:
-  ```bash
-  export GITHUB_ORGANIZATION={ORGANIZATION_NAME}
-  ```
-
-  * Add the repository name:
-  ```bash
-  export GITHUB_REPOSITORY={REPOSITORY_NAME}
-  ```
 
   * Add a global Git username:
   ```bash
@@ -35,14 +21,50 @@ To start working with the upgrader tool, do the following:
   ```bash
   git config --global user.email "{GIT_EMAIL_ADDRESS}"
   ```
+  
+1.1 For using GitHub version controll system: 
+
+  * Define GitHub source code provider:
+  ```bash
+  export SOURCE_CODE_PROVIDER=github
+  ```
+
+  * Add a GitHub token with the permissions to push branches and create PRs:
+  ```bash
+  export ACCESS_TOKEN={GITHUB_TOCKEN}
+  ```
+
+  * Add the organization name:
+  ```bash
+  export ORGANIZATION_NAME={ORGANIZATION_NAME}
+  ```
+
+  * Add the repository name:
+  ```bash
+  export REPOSITORY_NAME={REPOSITORY_NAME}
+  ```
+
+1.2 For using GitLab version controll system: 
+
+  * Define GitLab source code provider:
+  ```bash
+  export SOURCE_CODE_PROVIDER=gitlab
+  ```
+
+  * Add a GitLab token with the permissions to push branches and create PRs:
+  ```bash
+  export ACCESS_TOKEN={GITLAB_TOCKEN}
+  ```
+
+ * Add a GitLab project ID:
+  ```bash
+  export GITLAB_PROJECT_ID={GITLAB_PROJECT_ID}
+  ```
 
 2. Connect to the Docker SDK CLI container:
 ```bash
 docker/sdk cli
 ```
-
-## How do I configure the upgrader tool to work with GitLab?
-
 
 ## Install the upgrader tool
 

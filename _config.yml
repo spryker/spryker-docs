@@ -127,27 +127,27 @@ defaults:
       sidebar: "cloud_dev_sidebar"
       role: "dev"
   -
-     scope:
-       path: "docs/fes"
-     values:
-       product: "frontend-enablement-service"
+    scope:
+      path: "docs/fes"
+    values:
+      product: "frontend-enablement-service"
   -
-     scope:
-       path: "docs/fes/dev"
-     values:
-       sidebar: "fes_dev_sidebar"
-       role: "dev"
+    scope:
+      path: "docs/fes/dev"
+    values:
+      sidebar: "fes_dev_sidebar"
+      role: "dev"
   -
-     scope:
-       path: "docs/paas-plus"
-     values:
-       product: "platform-as-a-service-plus"
+    scope:
+      path: "docs/paas-plus"
+    values:
+      product: "platform-as-a-service-plus"
   -
-     scope:
-       path: "docs/paas-plus/dev"
-     values:
-       sidebar: "paas_plus_dev_sidebar"
-       role: "dev"
+    scope:
+      path: "docs/paas-plus/dev"
+    values:
+      sidebar: "paas_plus_dev_sidebar"
+      role: "dev"
   -
     scope:
       path: "docs/aop"

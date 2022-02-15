@@ -32,11 +32,13 @@ You should have a merchant relationship set up in **Merchants** > **Merchant Rel
     2. Select a type of the product list, either Whitelist or Blacklist.
     3. The owner type is Merchant Relationship by default and currently the only option.
     4. In the _Merchant relationship_ drop-down list, select the **Merchant relationship** you are creating the product list for. The values are taken from the **Merchant** > **Merchant Relations** section and are displayed in the _[Merchant Name] - [Business Unit]_ format.
+    5. 
     {% info_block infoBox "Note" %}
 
     Once the general information is added, you can save the changes and proceed to the other setup in a later event. In case you want to make a full setup at a time, click **Next** to proceed to the **Assign Categories** tab, or just click on it.
 
     {% endinfo_block %}
+
 3. In the **Categories** tab, select from one to many categories in the **Categories** field.
     
     {% info_block infoBox "Note" %
@@ -49,8 +51,10 @@ You should have a merchant relationship set up in **Merchants** > **Merchant Rel
 
 4. In the **Assign Products** tab, do one of the following:
     1. Click **Browse** in the **Import Product List** area. Select the file to be uploaded. The file should contain **product_list_key** and **concrete_sku**.
+   
     **OR**
-    2. In the **Select Products to assign** table, select the products that will be added to the list in the **Selected** column.
+
+    1. In the **Select Products to assign** table, select the products that will be added to the list in the **Selected** column.
 5. Once you are satisfied with the setup, click **Save**.
 
 ***
@@ -62,6 +66,7 @@ When you assign products, you can use the search field to filter the products by
 Please note that if all concrete products belonging to the abstract one are selected the entire abstract product is also selected. If an abstract product is selected, all concrete products belonging to that abstract are also selected.
 When you assign categories, in the **Categories** field, start typing the name of the Category you wish to assign to a product list. The auto-suggested matching results are reflected in the drop-down list.
 ***
+
 **What's next?**
 
 * To learn what managing actions you can do with the product lists, see the [Managing Product Lists](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/managing-product-lists.html) article.

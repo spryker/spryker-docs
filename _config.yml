@@ -150,15 +150,15 @@ defaults:
        role: "dev"
   -
     scope:
-      path: "docs/pbc/all-roles"
+      path: "docs/pbc"
     values:
       product: "pbc"
   -
     scope:
-      path: "docs/pbc/dev"
+      path: "docs/pbc/all-roles"
     values:
-      sidebar: "pbc_dev_sidebar"
-      role: "dev"
+      sidebar: "pbc_all_roles_sidebar"
+      role: "all-roles"
 
 
 versions:
@@ -204,8 +204,8 @@ versioned_categories:
       - technology-partner-guides
       - devops-migration-guides
   pbc:
-    dev:
-      - packaged-business-capabilities
+    all-roles:
+      - tax-management
 
 # these are defaults used for the front matter for these file types
 
@@ -217,7 +217,7 @@ sidebars:
   - scos_user_sidebar
   - fes_dev_sidebar
   - paas_plus_dev_sidebar
-  - pbc_dev_sidebar
+  - pbc_all_roles_sidebar
 
 description: "Spryker documentation center."
 # the description is used in the feed.xml file

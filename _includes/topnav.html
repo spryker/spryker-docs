@@ -43,8 +43,8 @@
                                                 Frontend enablement Service
                                                 {% elsif page.product == 'platform-as-a-service-plus' and page.role == 'dev' %}
                                                 Platform as a Service Plus
-                                                {% elsif page.product == 'packages-business-capabilities' and page.role == 'dev' %}
-                                                Packages Business Capabilities developer guide
+                                                {% elsif page.product == 'packages-business-capabilities' and page.role == 'all-roles' %}
+                                                Packages Business Capabilities
                                                 {% else %}
                                                 Select Product
                                                 {% endif %}
@@ -119,22 +119,10 @@
                                                 Platform as a Service Plus
                                                 </a>
                                             </li> -->
-                                            <li class="dropdown">
-                                                <a href="/" class="main-nav__drop-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    Packages Business Capabilities
-                                                    <i class="main-nav__drop-link-arrow icon-arrow-right"></i>
+                                            <li>
+                                                <a href="/docs/pbc/all-roles/pbc-landing.html" class="main-nav__drop-link">
+                                                Packaged Business Capabilities
                                                 </a>
-                                                <ul class="main-nav__drop dropdown-menu">
-                                                    <li>
-                                                        <a href="/docs/{product-name}/dev/{link-to-main-page-of-dev-guides.html}" class="main-nav__drop-link">
-                                                            <span class="main-nav__drop-link-title">
-                                                                <i class="icon-developer"></i>
-                                                                Developer
-                                                            </span>
-                                                            <span class="main-nav__drop-link-subtitle">{Product name} developer guide</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
                                             </li>
                                         </ul>
                                     </div>

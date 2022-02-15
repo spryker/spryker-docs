@@ -335,3 +335,6 @@ jobs:
       - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_fes_dev.yml
         env: # Or as an environment variable
           ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_pbc_all_roles.yml
+        env: # Or as an environment variable
+          ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}

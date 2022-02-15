@@ -35,7 +35,7 @@ Zed.CRITICAL: PhpAmqpLib\Exception\AMQPConnectionClosedException - NOT_ALLOWED -
 ```
 
 
-In this case, [Check RabbitMQ status](#2-check-rabbitmq-status).
+In this case, [Check RabbitMQ status](#check-rabbitmq-status).
 
 
 ## 2. Check RabbitMQ status

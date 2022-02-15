@@ -8,7 +8,7 @@ This topic describes the actions a merchant can do in the Orders section of the 
 
 ## Prerequisites
 
-To start managing merchant orders, navigate to **Merchant Portal** > **Orders**.
+To start managing merchant orders, navigate to **Merchant Portal&nbsp;<span aria-label="and then">></span> Orders**.
 
 You manage merchant orders by changing the states of the items inside the order. This way, you can see that item was delivered or returned.
 
@@ -18,7 +18,7 @@ Each section contains reference information. Make sure to review it before you s
 
 To change the state of items in a merchant order:
 
-1. In the list of orders, click the order you want to change the state for or click **Details** next to it. You are taken to the *Order [Order ID]* page.
+1. In the list of orders, click the order you want to change the state for or click **Details** next to it. You are taken to the **Order *[Order ID]*** page.
 2. In the upper right corner, click the corresponding trigger button to update the state. The page refreshes to show the message about the successful state change.
 3. Repeat step 2 until you get the desired order state. The succession of the steps depends on the merchant state machine that is set up.
 
@@ -29,8 +29,8 @@ To change the state of items in a merchant order:
 
 To change the state of a single item in a merchant order:
 
-1. In the list of orders, click the order line or click **Details** next to the order you want to change the status for. You are taken to the *Order [Order ID]* page.
-2. Switch to the *Items* tab.
+1. In the list of orders, click the order line or click **Details** next to the order you want to change the status for. You are taken to the **Order *[Order ID]*** page.
+2. Switch to the **Items** tab.
 3. Next to the item you want to change the state for, click the corresponding state. The page refreshes to show the message about the successful state change.
 
 ![change-the-states-of-a-single-item](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Merchant+Portal+user+guides/Orders/change-the-states-of-a-single-item.gif)
@@ -38,9 +38,9 @@ To change the state of a single item in a merchant order:
 **Tips & tricks**
 <br>To update the states of the merchant order items in bulk:
 
-1. In the list of orders, click the order you want to change the state for or click **Details** next to it. You are taken to the *Order [Order ID]* page.
+1. In the list of orders, click the order you want to change the state for or click **Details** next to it. You are taken to the **Order *[Order ID]*** page.
 
-2. Navigate to the *Items* tab of the *Order [Order ID]* page.
+2. Navigate to the **Items** tab of the **Order *[Order ID]*** page.
 
 3. Select in checkboxes the products you want to update the state of, and click the available button state that appeared after the selection. You can also click a button state on the top right of the drawer to update the state of all the items that match this state.
 
@@ -58,7 +58,7 @@ This section describes attributes you see when you change merchant order states.
 
 #### Orders table
 
-*Orders* is the table that appears when you open the Orders section in the navigation menu in the Merchant Portal.
+**Orders** is the table that appears when you open the Orders section in the navigation menu in the Merchant Portal.
 
 By default, the last created order goes on top of the table. However, you can sort the table by:
 
@@ -72,15 +72,15 @@ By default, the last created order goes on top of the table. However, you can so
 * Store
 
 **Tips & tricks**
-<br>You can rearrange the order of the columns, hide and show the columns again by clicking the settings cogwheel next to the table.
+<br>You can rearrange the order of the columns hide and show the columns again by clicking the settings cogwheel next to the table.
 
 ![rearrange-the-order-of-the-columns](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Merchant+Portal+user+guides/Orders/rearrange-the-order-of-the-columns.png)
 
 #### Order [Order ID] page
 
-The *Order [Order ID]* page is the page that opens in the drawer when you click one of the orders in the Orders table.
+The **Order *[Order ID]** page is the page that opens in the drawer when you click one of the orders in the Orders table.
 
-The following table describes the sections on the *[Order ID]* page:
+The following table describes the sections on the ***[Order ID]*** page:
 
 | TAB | SECTION | DESCRIPTION |
 |---|---|---|
@@ -91,7 +91,7 @@ The following table describes the sections on the *[Order ID]* page:
 | Items | Order Items | Contains information on every item in the merchant order, including: <ul><li>Item SKU</li><li>Image</li><li>Name</li><li>Quantity</li><li>Current state</li><li>Merchant SKU (if exists)</li><li>Offer reference</li><li>Included product options (if exist)</li><li>Comment</li><li>States that can be triggered</li></ul>|
 
 **Tips & tricks**
-<br>You can search the items in the merchant order and filter them according to their state by selecting the necessary state in the *State* drop-down menu.
+<br>You can search the items in the merchant order and filter them according to their state by selecting the necessary state in the **State** drop-down menu.
 
 #### Merchant order states
 
@@ -120,14 +120,14 @@ Once the return is created by the customer in the Storefront or by the Back Offi
 
 To execute a return:
 
-1. In the list of orders, click Details next to the order you want to return. You are taken to the *Order [Order ID]* page.
+1. In the list of orders, click Details next to the order you want to return. You are taken to the **Order *[Order ID]*** page.
 2. In the upper right corner, click **Execute return**. The page refreshes to show the message about the successful state change.
 
 ### Canceling returns
 
 To cancel a return:
 
-1. In the list of orders, click **Details** next to the order you want to cancel the return for. You are taken to the *Order [Order ID]* page.
+1. In the list of orders, click **Details** next to the order you want to cancel the return for. You are taken to the **Order *[Order ID]*** page.
 2. In the upper right corner, click **Cancel return**. The page refreshes to show the message about the successful state change.
 
 ## Canceling merchant orders
@@ -140,13 +140,12 @@ To cancel a return:
 
 To cancel an order:
 
-1. In the list of orders, click the order you want to cancel or click **Details** next to it. You are taken to the *Order [Order ID]* drawer.
+1. In the list of orders, click the order you want to cancel or click **Details** next to it. You are taken to the **Order *[Order ID]*** drawer.
 2. In the upper left corner, click **Cancel**.
    The page refreshes to show the updated merchant order state.
 
 **Tips & tricks**
 <br>You can filter the existing merchant orders by:
-
 * Creation date
 * Stores where the order belongs
 * Merchant order states

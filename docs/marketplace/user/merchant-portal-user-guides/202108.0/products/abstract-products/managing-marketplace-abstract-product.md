@@ -9,23 +9,21 @@ This document describes how to manage marketplace abstract products in the Merch
 
 ## Prerequisites
 
-To start working with marketplace abstract products, go to the **Merchant Portal** > **Products**.
+To start working with marketplace abstract products, go to the **Merchant Portall&nbsp;<span aria-label="and then">></span> Products**.
 
 This article contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
 
 
 ## Filtering and sorting marketplace abstract products
 
-The following drop-down menus can be used to filter the marketplace abstract products on the *Products* page:
-
+The following drop-down menus can be used to filter the marketplace abstract products on the **Products** page:
 - Categories where the abstract product belongs
 - Visibility (defines whether the product is online or offline)
 - Stores where the abstract product is available.
 
 The page refreshes and displays the available options as soon as the filter parameters are selected.
 
-To sort the existing abstract products, select one or more sorting parameters from the drop-down menu on the *Products* page. Choose among the following sort criteria:
-
+To sort the existing abstract products, select one or more sorting parameters from the drop-down menu on the **Products** page. Choose among the following sort criteria:
 - SKU
 - Name
 - Number of variants
@@ -37,11 +35,11 @@ By default, the table is sorted descendingly by SKU.
 
 To edit the existing marketplace abstract product:
 
-1. Next to the abstract product, you want to edit, hover over the three dots and click **Manage Product** or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab.
-2. In the *Name & Description* pane, edit *Name* and *Description* for every locale.
-3. In the *Stores* pane, in the drop-down menu select the stores where the product is available.
-4. In the *Tax Set* pane, in the drop-down menu, select the necessary tax set.
-5. In the *Categories* pane, in the drop-down menu, select the categories where your product belongs.
+1. Next to the abstract product, you want to edit, hover over the three dots and click **Manage Product** or just click the line. This takes you to the ***[Product name]***, **Abstract Product Details** tab.
+2. In the **Name & Description** pane, edit **Name** and **Description** for every locale.
+3. In the **Stores** pane, in the drop-down menu select the stores where the product is available.
+4. In the **Tax Set** pane, in the drop-down menu, select the necessary tax set.
+5. In the **Categories** pane, in the drop-down menu, select the categories where your product belongs.
 
 
 ### Reference information: [Product name] drawer, Abstract Product Details tab

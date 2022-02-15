@@ -4,28 +4,27 @@ description: This topic describes the actions a Merchant can do in the Offers se
 template: back-office-user-guide-template
 ---
 
-This topic describes the actions a Merchant can do in the Offers section in the Merchant Portal.
+This topic describes the actions a merchant can do in the **Offers** section of the Merchant Portal.
 
 ## Prerequisites
 
-To start managing product offers, navigate to the **Merchant Portal** > **Offers**.
+To start managing product offers, navigate to the **Merchant Portal&nbsp;<span aria-label="and then">></span> Offers**.
 
 Review the reference information in this article before you start, or just look up the necessary information as you go through the process.
 
 ## Creating a product offer
 
-To create a product offer:
-
+To create a product offer, take the following steps:
 1. Click **Add Offer**.
-2. From the list of concrete products, select the  product you want to create an offer for.
-  The *Create Offer* drawer opens.
+2. From the list of concrete products, select the product you want to create an offer for.
+  The **Create Offer** drawer opens.
 3. Optional: To make the offer active after creating it, select **Offer is Active**.
 4. Optional: Enter a **Merchant SKU**.
 5. Select one or more **Stores**.
 6. Enter a **Quantity**.
 7. Optional: To always display the product offer as available on the Storefront, select **Always in Stock**.
-8. To add prices, in the *Price* section, do the following:
-  1. select **Add**.
+8. To add prices, in the **Price** section, do the following:
+  1. Select **Add**.
   2. Select a **STORE**.
   3. Select a **CURRENCY**.
   4. Optional: Enter any of the prices:
@@ -34,7 +33,7 @@ To create a product offer:
     * **NET ORIGINAL**
     * **GROSS ORIGINAL**
   5. Optional: Enter a **VOLUME QUANTITY**.
-  6. Repeat steps 1-5 until you add all the desired prices.
+  6. Repeat sub-steps 1-5 of step 5 until you add all the desired prices.
 9. Optional: Select **Validity Dates**.
 10. Scroll up and select **Create**.
 
@@ -45,7 +44,6 @@ To create a product offer:
 ## Editing a product offer
 
 To edit an existing product offer:
-
 1. From the list of offers, select the offer you want to edit.
 2. In the drawer, change the desired fields
 3. Select **Save**.
@@ -56,22 +54,20 @@ To edit an existing product offer:
 
 ## Reference information: Creating and editing product offers
 
-This section describes attributes you see when creating and editing product offer.
+This section describes attributes you see when creating and editing product offers.
 
 On all the pages described below, you can rearrange, hide, and show columns by clicking the settings cogwheel next to the tables.
 
 ### Offers page
 
-On the *Offers* page you do the following:
-
+On the **Offers** page you do the following:
 * Filter product offers using the filtering menu at the top of the page.
 * Sort product offers by clicking on the desired column name.
 * Using the search field in the top right corner, search product offers by the criteria: offer reference, merchant reference, and product SKU.
 
 ### Create Offer page
 
-On the *Create Offer* page, you see the list of products you can create an offer for. On this page, you can do the following:
-
+On the **Create Offer** page, you see the list of products you can create an offer for. On this page, you can do the following:
 * Filter products using the filtering menu at the top of the page.
 * Sort products by clicking on the desired column name.
 * Using the search field in the top right corner, search products by the criteria: product name and product SKU.
@@ -79,7 +75,7 @@ On the *Create Offer* page, you see the list of products you can create an offer
 
 ### Create and edit offer drawers
 
-The following table describes the attributes on the *Create offer* and *Edit offer* drawers:
+The following table describes the attributes on the **Create offer** and **Edit offer** drawers:
 
 | ATTRIBUTE     | DESCRIPTION |
 | ------------- |  ------------- |

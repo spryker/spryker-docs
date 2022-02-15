@@ -9,7 +9,7 @@ This document describes how to create marketplace abstract products.
 
 ## Prerequisites
 
-To start working with marketplace abstract products, go to **Merchant Portal > Products**.
+To start working with marketplace abstract products, go to **Merchant Portal&nbsp;<span aria-label="and then">></span> Products**.
 
 This article contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
 
@@ -17,7 +17,7 @@ This article contains reference information. Make sure to review it before you s
 
 To create a new abstract product:
 
-1. On the *Products* page, click **Create Product**. *Create Abstract Product* drawer opens.
+1. On the **Products** page, click **Create Product**. The **Create Abstract Product** drawer opens.
 
 2. Define the following settings:
 
@@ -25,7 +25,7 @@ To create a new abstract product:
 
    2. Enter a **Name** for the default locale. The rest of the locales will be defined once the product is created.
 
-   3. Select **Abstract product has 1 concrete product** if you are creating an abstract product that doesn't require variants. *Create an Abstract Product with 1 Concrete Product* drawer opens.
+   3. Select **Abstract product has 1 concrete product** if you are creating an abstract product that doesn't require variants. The **Create an Abstract Product with 1 Concrete Product** drawer opens.
 
    {% info_block warningBox "Warning" %}
 
@@ -43,7 +43,7 @@ To create a new abstract product:
       If you chose **Abstract product has 1 concrete product**:<br>
 
 
-      1. On the *Create an Abstract Product with 1 Concrete Product* drawer, enter a **Concrete Product SKU**.
+      1. On the **Create an Abstract Product with 1 Concrete Product** drawer, enter a **Concrete Product SKU**.
       2. Enter a **Concrete Product Name**.
       3. To finish the product creation, click **Create**.
 
@@ -101,7 +101,7 @@ Once the product is created, it needs to be [activated](/docs/marketplace/user/m
 
 ### Reference information: Create an Abstract Product with multiple Concrete Products
 
-You can select as many super attributes as you need and define one or more values for them. When you select a product attribute value, a concrete product based on this value is displayed. In the *Concrete Products’ Preview* pane you can view the products to be created.
+You can select as many super attributes as you need and define one or more values for them. When you select a product attribute value, a concrete product based on this value is displayed. In the **Concrete Products’ Preview** pane you can view the products to be created.
 
 By selecting **Autogenerate SKUs**, the SKU numbers for the variants are generated automatically, based on the SKU prefix of their abstract product.
 

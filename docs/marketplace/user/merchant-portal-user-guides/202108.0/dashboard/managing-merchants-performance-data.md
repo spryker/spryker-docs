@@ -7,7 +7,7 @@ template: back-office-user-guide-template
 
 This topic describes what information you can check in the dashboard of the Merchant Portal.
 
-*Dashboard**  is the hub for merchants' important business and performance data. It lets merchants monitor their own store inside the Marketplace by having a snapshot view of the most crucial information.
+*Dashboard*  is the hub for merchants' important business and performance data. It lets merchants monitor their own store inside the Marketplace by having a snapshot view of the most crucial information.
 
 **Dashboard**  is the first page a merchant sees after logging into the Merchant Portal.
 

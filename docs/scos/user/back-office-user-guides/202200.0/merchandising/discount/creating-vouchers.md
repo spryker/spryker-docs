@@ -21,7 +21,7 @@ Vouchers are codes that customers can redeem during checkout. Voucher codes are 
 
 ## Prerequisites
 
-To start working with discounts, navigate to **Merchandising&nbsp;> Discount**.
+To start working with discounts, navigate to **Merchandising&nbsp;<span aria-label="and then">></span> Discount**.
 
 Review the reference information before you start, or just look up the necessary information as you go through the process.
 
@@ -33,11 +33,11 @@ To create a discount voucher:
     1. In **STORE RELATION**, select the stores where you want the discount to be active.
     2. In the **DISCOUNT TYPE** drop-down, select **Voucher codes**.
     3. In the **NAME** field, specify the name of the voucher.
-    4. _Optional_: in the **DESCRIPTION** field, enter the description of the voucher.
-    5. _Optional_: in the **PRIORITY** field, enter an integer value from `1` to `9999` for the discount voucher priority. For reference information, see [General Information tab](#general-information-tab).
+    4. Optional: in the **DESCRIPTION** field, enter the description of the voucher.
+    5. Optional: in the **PRIORITY** field, enter an integer value from `1` to `9999` for the discount voucher priority. For reference information, see [General Information tab](#general-information-tab).
     6. Specify if the voucher is exclusive. For reference information, see [General information tab](#general-information-tab).
     7. Specify the validity interval (lifetime) of the voucher.
-3. To proceed, click **Next** or select the **Discount calculation** tab.
+3. To proceed to the **Discount calculation** tab, click **Next**.
 4. On the **Discount calculation** tab, do the following:
     1.  In the **CALCULATOR TYPE** drop-down, select either **Percentage** or **Fixed amount**. For reference information, see the [Discount calculation tab](#discount-calculation-tab).
 
@@ -50,7 +50,7 @@ To create a discount voucher:
       {% endinfo_block %}
 
     2. Select the **Discount application type** and define the products to which the voucher should be applied. See reference information of the [Discount calculation](#discount-calculation-tab) tab for more details.
-5. Click **Next**, or select the **Conditions** tab to proceed.
+5. To proceed to the **Conditions** tab, click **Next**.
 6. On the **Conditions** tab, do the following:
     1. Select the **APPLY WHEN** conditions or click **Plain query** and enter the  query manually. See reference information of the [Conditions](#conditions) tab for more details.
     2. Enter the value for the **THE DISCOUNT CAN BE APPLIED IF THE QUERY APPLIES FOR AT LEAST X ITEM(S).** field.

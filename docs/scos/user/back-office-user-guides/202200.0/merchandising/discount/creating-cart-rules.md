@@ -21,7 +21,7 @@ A cart rule is a discount that is applied automatically when all attached discou
 
 ## Prerequisites
 
-To start working with discounts, go to **Merchandising&nbsp;> Discount**.
+To start working with discounts, go to **Merchandising&nbsp;<span aria-label="and then">></span> Discount**.
 
 ## Creating a cart rule discount
 
@@ -35,7 +35,7 @@ To create a cart rule discount:
    5. Optional: in the **PRIORITY** field, enter an integer value from `1` to `9999` for the discount priority. <br>For reference information, in the **Create vouchers** guide, see [General information tab](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#general-information-tab).
    6. Specify if the discount is exclusive. For reference information, in the **Create vouchers** guide, see [General information tab](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#general-information-tab).
    7. Specify the validity interval (lifetime) of the discount.
-   8. Click **Next** or select the **Discount calculation** tab to proceed.
+   8. To proceed to the **Discount calculation** tab, click **Next**.
 3. On the **Discount calculation** tab, do the following:
    1. In the **CALCULATOR TYPE** drop-down, select either **Percentage** or **Fixed amount**. For reference information, in the **Create vouchers** guide, see the [Discount calculation tab](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#discount-calculation-tab) section.
 
@@ -48,7 +48,7 @@ To create a cart rule discount:
       {% endinfo_block %}
 
    2. Select the **DISCOUNT APPLICATION TYPE** and define which products are eligible for the discount. For reference information, in the **Create vouchers** guide, see the [Discount calculation tab](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#discount-calculation-tab) section.
-   3. Click **Next**, or select the **Conditions** tab to proceed.
+   3. To proceed to the **Conditions** tab, click **Next**.
 4. On the **Conditions** tab, do the following:
     1. Select the **APPLY WHEN** conditions or click **Plain query** and enter the query manually. For reference information, see [Conditions](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#conditions).
     2. Enter the value for **THE DISCOUNT CAN BE APPLIED IF THE QUERY APPLIES FOR AT LEAST X ITEM(S).** field.

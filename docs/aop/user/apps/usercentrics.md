@@ -47,7 +47,7 @@ To use Usercentrics, you need an account with Usercentrics. To create it, select
 
 {% info_block infoBox "Info" %}
 
-You can configure the data processing services and the visual representation of the cookie consent popups for your store, in the Usercentrics Admin Interface. See the [Usercentrics knowledge base](https://usercentrics.atlassian.net/servicedesk/customer/portals) for details.
+You can configure the data processing services and the visual representation of the cookie consent dialogs for your store in the Usercentrics Admin Interface. For details, see the [Usercentrics knowledge base](https://usercentrics.atlassian.net/servicedesk/customer/portals).
 
 {% endinfo_block %}
 

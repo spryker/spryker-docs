@@ -21,7 +21,7 @@ Vouchers are codes that customers can redeem during checkout. Voucher codes are 
 
 ## Prerequisites
 
-To start working with discounts, navigate to **Merchandising** > **Discount**.
+To start working with discounts, navigate to **Merchandising&nbsp;> Discount**.
 
 Review the reference information before you start, or just look up the necessary information as you go through the process.
 
@@ -44,10 +44,8 @@ To create a discount voucher:
       {% info_block warningBox "Note" %}
 
       The next step varies based on the selected calculator type:
-
-      1. *Fixed amount*: Enter the amounts (per currency and price mode, if applicable) to be discounted.
-
-      2. *Percentage*: Enter the percent value to be discounted.
+      * Fixed amount: Enter the amounts (per currency and price mode, if applicable) to be discounted.
+      * Percentage: Enter the percent value to be discounted.
 
       {% endinfo_block %}
 
@@ -63,7 +61,7 @@ The list is empty until codes are generated.
 
 On the **Voucher code** tab, do the following:
 1. Enter the **QUANTITY** for voucher codes you want to generate.
-2. *Optional*: In **CUSTOM CODE**, enter any text that you would like to precede the randomly generated characters in each voucher code. You can also use the placeholder *[code]* to specify the location.
+2. Optional: In **CUSTOM CODE**, enter any text that you would like to precede the randomly generated characters in each voucher code. You can also use the placeholder *[code]* to specify the location.
 3. Set the **ADD RANDOM GENERATED CODE LENGTH** by selecting the value from a drop-down list.
 4. Set **MAX NUMBER OF USES**.
 5. To complete the process, click **Generate**.
@@ -81,7 +79,7 @@ See [Voucher code](#voucher-code) for more information.
 **Tips & tricks**
 
 Once you generated voucher codes, you can export them as a CSV file.
-To do that, below *Generate*, click **Export** .
+To do that, below **Generate**, click **Export**.
 
 ## Reference information: Creating a voucher
 
@@ -102,7 +100,7 @@ All columns with headers having arrows in the DISCOUNT LIST table are sortable.
 
 **Actions column**
 
-All the discount management options you can invoke from the *Actions* column are described in the following table.
+All the discount management options you can invoke from the **Actions** column are described in the following table.
 
 | ACTION |DESCRIPTION  |
 | --- | --- |
@@ -113,19 +111,19 @@ All the discount management options you can invoke from the *Actions* column are
 
 ### Create new discount page
 
-This section describes attributes you select and enter on the *Create Discount* and *Edit Discount* pages when creating and editing a discount.
+This section describes attributes you select and enter on the **Create Discount** and **Edit Discount** pages when creating and editing a discount.
 
 #### General information tab
 
-The following table describes the attributes you enter and select in the *General information* tab:
+The following table describes the attributes you enter and select in the **General information** tab:
 
 | ATTRIBUTE |DESCRIPTION  |
 | --- | --- |
 |STORE RELATION  |Stores the discount is to be active in. You can select multiple stores.|
 | DISCOUNT TYPE | Drop-down list where you select either *Voucher code* or *Cart rule* discount type. |
-| NAME | A unique name that is displayed in the calculation section of the cart on the Storefront. Should be short, but descriptive. |
-| DESCRIPTION | A summary explaining the promotion. Displayed with eligible products where applicable.|
-| PRIORITY | Defines [the discount priority](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html#discount-priority). Represented as an integer value from 1 to 9999, 1 being the highest priority and 9999 the lowest. |
+| NAME | Unique name that is displayed in the calculation section of the cart on the Storefront. Should be short, but descriptive. |
+| DESCRIPTION | Summary explaining the promotion. Displayed with eligible products where applicable.|
+| PRIORITY | Defines [the discount priority](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html#discount-priority). Represented as an integer value from `1` to `9999`, `1` being the highest priority and `9999` the lowest. |
 | NON-EXCLUSIVE | Defines the discount exclusivity. Buyers can redeem non-exclusive discounts in conjunction with other non-exclusive discounts.|
 | EXCLUSIVE | Defines the discount exclusivity. When a discount is exclusive, no other discounts may be applied in conjunction. When a cart is eligible for multiple exclusive discounts, the discount with the highest value to the customer is applied. The exception to this is promotional product discounts. Query string discounts and promotional product discounts exclude only among each other. Promotional product discounts are not affected by exclusive query string discounts and conversely.|
 | VALID FROM and VALID TO | Vouchers are redeemable or the cart rule is active between **VALID FROM** and **VALID TO** dates and times (in UTC), inclusive. For example, a voucher can be redeemed or discount applies to the cart starting from 01.12.2021 23:00 until 31.01.2022 22:59, UTC. |
@@ -138,13 +136,13 @@ It is important to name and describe the discount in a way that is meaningful fo
 
 #### <a name="discount-calculation-tab"></a>Discount calculation tab
 
-This section contains information you need to know when working with discount calculations in the *Discount calculation* tab.
+This section contains information you need to know when working with discount calculations on the **Discount calculation** tab.
 
 **CALCULATOR TYPE**
 
 The discount can be calculated in two ways:
-* *Percentage*: The discount is calculated as a percentage of the discounted items' prices. If selected, you need to set the percentage value (for example, 25)
-* *Fixed amount*: A fixed amount is discounted. If you select this type, you need to specify the amount (Gross, Net, or Both) for each currency used in your store.
+* Percentage: The discount is calculated as a percentage of the discounted items' prices. If selected, you need to set the percentage value (for example, 25)
+* Fixed amount: A fixed amount is discounted. If you select this type, you need to specify the amount (Gross, Net, or Both) for each currency used in your store.
 
 Example:
 
@@ -174,9 +172,9 @@ Use the query builder to construct queries (guided) or the **Plain query** field
 ![Discount_Calculation_Plain Query](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Calculation:+Reference+Information/discount-calculation-plain-query.png)
 
 The query builder lets you combine different conditions with connectors (**AND** and **OR**). Multiple conditions (rules) can be added and grouped in this way. Each condition (rule) consists of:
-* Field (for example, attribute.color)
-* Operator (for example, equal(=))
-* Value tokens (for example, blue)
+* Field (for example, `attribute.color`)
+* Operator (for example, `equal(=)`)
+* Value tokens (for example, `blue`)
 
 {% info_block infoBox "Info" %}
 
@@ -217,7 +215,7 @@ You can either give away promotional products completely for free or provide a d
 
 #### <a name="conditions"></a>Conditions
 
-This section provides information that you need to know when working with discount conditions in the *Conditions* tab.
+This section provides information that you need to know when working with discount conditions on the **Conditions** tab.
 
 Conditions are also called decision rules.
 
@@ -271,9 +269,9 @@ The setup will look like the following:
 
 #### <a name="voucher-code"></a>Voucher code tab
 
-This section describes the information that you need to know when working with voucher codes in the *Voucher code* tab.
+This section describes the information that you need to know when working with voucher codes on the **Voucher code** tab.
 
-You enter and select the following attributes in **Edit Discount** > **Voucher code**:
+You enter and select the following attributes in **Edit Discount&nbsp;> Voucher code**:
 
 | ATTRIBUTE | DESCRIPTION |  
 | --- | --- |

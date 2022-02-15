@@ -16,7 +16,7 @@ This topic describes how to manage discounts.
 
 ## Prerequisites
 
-To manage discounts, navigate to **Merchandising** > **Discount**.
+To manage discounts, navigate to **Merchandising&nbsp;> Discount**.
 
 ## Editing a discount
 

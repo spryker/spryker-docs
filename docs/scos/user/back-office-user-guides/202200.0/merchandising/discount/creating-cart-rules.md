@@ -21,41 +21,38 @@ A cart rule is a discount that is applied automatically when all attached discou
 
 ## Prerequisites
 
-To start working with discounts, go to **Merchandising** > **Discount**.
+To start working with discounts, go to **Merchandising&nbsp;> Discount**.
 
 ## Creating a cart rule discount
 
 To create a cart rule discount:
 1. On the **Discount** page, in the top right corner, click **Create new discount**.
 2. On the **Create new discount** page, in the **General Information** tab, do the following:
-    1. In **STORE RELATION**, select the stores you want the discount to be active in.
-    2. For **DISCOUNT TYPE**, select **Cart rule**.
-    3. Enter a  **NAME**.
-    4. _Optional_: in the **DESCRIPTION** field, enter a summary that explains the discount and helps the customer understand why they are eligible for the discount and what they can receive.<br>The description is displayed in the cart, in the **Promotional products** section (when applicable).
-    5. Optional: In the **PRIORITY** field, enter an integer value from `1` to `9999` for the discount priority. <br>For reference information, in the **Create vouchers** guide, see [General information tab](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#general-information-tab).
-    6. Specify if the discount is exclusive. For reference information, in the **Create vouchers** guide, see [General information tab](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#general-information-tab).
-    7. Specify the validity interval (lifetime) of the discount.
-* Click **Next** or select the **Discount calculation** tab to proceed.
+   1. In **STORE RELATION**, select stores you wish the discount to be active in.
+   1. For **DISCOUNT TYPE**, select **Cart rule**.
+   1. In the **NAME** field, specify the name for the discount. <br>It is displayed in the **Cart calculation** section along with the applied discount amount.
+   1. Optional: in the **DESCRIPTION** field, enter a summary that explains the discount and helps the customer understand why they are eligible for the discount and what they can receive.<br>The description is displayed in the cart, in the **Promotional products** section when the discount is applicable.
+   1. Optional: in the **PRIORITY** field, enter an integer value from `1` to `9999` for the discount priority. <br>For reference information, in the **Create vouchers** guide, see [General information tab](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#general-information-tab).
+   1. Specify if the discount is exclusive. For reference information, in the **Create vouchers** guide, see [General information tab](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#general-information-tab).
+   1. Specify the validity interval (lifetime) of the discount.
+   1. Click **Next** or select the **Discount calculation** tab to proceed.
+3. On the **Discount calculation** tab, do the following:
+   1. In the **CALCULATOR TYPE** drop-down, select either **Percentage** or **Fixed amount**. For reference information, in the **Create vouchers** guide, see the [Discount calculation tab](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#discount-calculation-tab) section.
 
-* On the **Discount calculation** tab, do the following:
-    1.  In the **CALCULATOR TYPE** drop-down, select either **Percentage** or **Fixed amount**. For reference information, in the **Create vouchers** guide, see the [Discount calculation tab](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#discount-calculation-tab) section.
+      {% info_block warningBox "Note" %}
 
-        {% info_block warningBox "Note" %}
+      The next step varies based on the selected calculator type:
+      * **Fixed amount**: Enter the amounts (per currency and price mode, if applicable) to be discounted.
+      * **Percentage**: Enter the percent value to be discounted.
 
-        The next step varies based on the selected calculator type:
+      {% endinfo_block %}
 
-          a. *Fixed amount*: Enter the amounts (per currency and price mode, if applicable) to be discounted.
-
-          b. *Percentage*: Enter the percent value to be discounted.
-
-        {% endinfo_block %}
-
-    2. Select the **DISCOUNT APPLICATION TYPE** and define which products are eligible for the discount. For reference information, in the **Create vouchers** guide, see the [Discount calculation tab](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#discount-calculation-tab) section.
- * Click **Next**, or select the **Conditions** tab to proceed.
- * On the **Conditions** tab, do the following:
+   2. Select the **DISCOUNT APPLICATION TYPE** and define which products are eligible for the discount. For reference information, in the **Create vouchers** guide, see the [Discount calculation tab](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#discount-calculation-tab) section.
+   3. Click **Next**, or select the **Conditions** tab to proceed.
+4. On the **Conditions** tab, do the following:
     1. Select the **APPLY WHEN** conditions or click **Plain query** and enter the query manually. For reference information, see [Conditions](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#conditions).
     2. Enter the value for **THE DISCOUNT CAN BE APPLIED IF THE QUERY APPLIES FOR AT LEAST X ITEM(S).** field.
-* To create the new discount, click **Save**.
+5. To create the new discount, click **Save**.
 
 
 **What's next?**

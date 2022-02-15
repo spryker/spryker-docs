@@ -18,30 +18,29 @@ To start working with the product lists, navigate to the **Products > Product Li
 ***
 
 **Prerequisites**
+
 You should have a merchant relationship set up in **Merchants** > **Merchant Relations** in order to create a product list.
 ***
 
 **To create a product list:**
-1. Click **Create Product List** in the top right corner of the **Overview of Product Lists** page.
-    On the **Create a Product List** page you see the following tabs:
-    * General Information
-    * Assign Categories
-    * Assign Products
+1. Click **Create Product List** in the top right corner of the **Overview of Product Lists** page. On the **Create a Product List** page you see the following tabs:
+   * General Information
+   * Assign Categories
+   * Assign Products
 2. In the **General Information** tab:
-    1. Enter the title of the product list.
-    2. Select a type of the product list, either Whitelist or Blacklist.
-    3. The owner type is Merchant Relationship by default and currently the only option.
-    4. In the _Merchant relationship_ drop-down list, select the **Merchant relationship** you are creating the product list for. The values are taken from the **Merchant** > **Merchant Relations** section and are displayed in the _[Merchant Name] - [Business Unit]_ format.
-    5. 
-    {% info_block infoBox "Note" %}
+   1. Enter the title of the product list.
+   2. Select a type of the product list, either Whitelist or Blacklist.
+   3. The owner type is Merchant Relationship by default and currently the only option.
+   4. In the _Merchant relationship_ drop-down list, select the **Merchant relationship** you are creating the product list for. The values are taken from the **Merchant** > **Merchant Relations** section and are displayed in the _[Merchant Name] - [Business Unit]_ format. 
+        {% info_block infoBox "Note" %}
 
-    Once the general information is added, you can save the changes and proceed to the other setup in a later event. In case you want to make a full setup at a time, click **Next** to proceed to the **Assign Categories** tab, or just click on it.
+        Once the general information is added, you can save the changes and proceed to the other setup in a later event. In case you want to make a full setup at a time, click **Next** to proceed to the **Assign Categories** tab, or just click on it.
 
-    {% endinfo_block %}
+        {% endinfo_block %}
 
 3. In the **Categories** tab, select from one to many categories in the **Categories** field.
     
-    {% info_block infoBox "Note" %
+    {% info_block infoBox "Note" %}
     
     This step is optional as you can either add the categories to the list **OR** add specific products instead. You can also do both.
 

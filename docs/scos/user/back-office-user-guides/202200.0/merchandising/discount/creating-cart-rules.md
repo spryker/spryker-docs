@@ -33,7 +33,7 @@ To create a cart rule discount:
     3. Enter a  **NAME**.
     4. _Optional_: in the **DESCRIPTION** field, enter a summary that explains the discount and helps the customer understand why they are eligible for the discount and what they can receive.<br>The description is displayed in the cart, in the **Promotional products** section (when applicable).
     5. Optional: In the **PRIORITY** field, enter an integer value from `1` to `9999` for the discount priority. <br>For reference information, in the **Create vouchers** guide, see [General information tab](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#general-information-tab).
-    6. Specify if the discount is exclusive. For reference information, in the **Create vouchers** guide, see [General information tab](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#general-information-tab).
+    6. Select if the discount should be **NON-EXCLUSIVE** or **EXCLUSIVE**. 
     7. Specify the validity interval (lifetime) of the discount.
 * Click **Next** or select the **Discount calculation** tab to proceed.
 

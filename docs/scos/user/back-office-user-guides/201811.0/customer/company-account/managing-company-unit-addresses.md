@@ -47,6 +47,9 @@ Once the address is created, you can assign it to the business unit.
 4. Once done, click **Save**.
 
 ***
+
 **What's next?**
+
 To know more about the attributes you select and enter on the **Create** and **Edit Company Unit Address** pages, see [Company Account: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/references/company-account-reference-information.html).
+
 The next step in the company account setup is to created company roles and users. See the [Managing Company Roles](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-roles.html) and [Managing Company Users](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-users.html) articles.

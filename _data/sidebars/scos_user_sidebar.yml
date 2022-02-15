@@ -419,6 +419,8 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
+      - title: OMS (Order management system) matrix
+        url: /docs/scos/user/features/order-management-feature-overview/oms-order-management-system-matrix.html
       - title: Custom order reference
         url: /docs/scos/user/features/order-management-feature-overview/custom-order-reference-overview.html
         include_versions:

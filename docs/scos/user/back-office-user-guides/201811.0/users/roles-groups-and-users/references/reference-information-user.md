@@ -13,13 +13,16 @@ redirect_from:
 
 This topic contains the reference information that you need to know when working in the **Users Control > Users** section.
 ***
+
 ## User Page
+
 On the **Users** page, you see the following:
 * Users' emails and first and last names
 * Last login date and status
 * Identifier of an agent user
 * Actions that you can perform
 ***
+
 ## Agent User
 
 While creating or editing a user, you can make a specific user to be an agent. 
@@ -39,10 +42,15 @@ In the **Search** field on the top, he searches for the customer email. Once fou
 
 Since now he can perform the same actions as a regular customer. Once all needed actions are done and the order is placed, he clicks **End Customer Assistance**. 
 {% info_block infoBox %}
-Click to see how it looks on Yves.<br>![Agent User](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Users+Control/User:+Reference+Information/Agent+User.gif
-{% endinfo_block %}{height="40" width="40"})
+
+Click to see how it looks on Yves.<br>![Agent User](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Users+Control/User:+Reference+Information/Agent+User.gif)
+
+{% endinfo_block %}
+
 ***
+
 ## Create and Edit User Page Attributes
+
 The following table describes the attributes that are used when creating or updating a user.
 
 | Attribute |Description  |

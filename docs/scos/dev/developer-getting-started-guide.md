@@ -86,7 +86,7 @@ Alternatively, you can install Spryker on an operating system that fulfills Spry
 
 {% info_block warningBox %}
 
-After installing, make sure to have a look at [Post-Installation steps and additional info](/docs/scos/dev/setup/post-installation-steps-and-additional-info.html) for tips on fine-tuning Spryker.
+After installing, make sure to have a look at [Post-Installation steps and additional info](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-after-installing-with-devvm.html) for tips on fine-tuning Spryker.
 
 {% endinfo_block %}
 
@@ -99,7 +99,7 @@ To define your strategy of taking Spryker updates, learn about our [module and f
 
 {% endinfo_block %}
 
-We use [Composer](/docs/scos/dev/setup/composer.html) to install and manage module dependencies.
+We use [Composer](/docs/scos/dev/setup/managing-scos-dependencies-with-composer.html) to install and manage module dependencies.
 Run the following Composer commands depending on what you want to do:
 * To install the dependencies you listed in the `composer.json` file of the project: `composer install`.
 *  To update all the modules for your project: `composer update "spryker/*"`.

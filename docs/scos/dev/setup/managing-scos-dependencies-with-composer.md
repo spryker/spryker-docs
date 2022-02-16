@@ -1,5 +1,5 @@
 ---
-title: Composer
+title: Managing SCOS dependencies with Composer
 description: Spryker Commerce OS uses Composer as a dependency manager.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/composer  
   - /v1/docs/composer
   - /v1/docs/en/composer  
+  - /docs/scos/dev/setup/managing-scos-dependencies-with-composer.html
 ---
 
 Spryker Commerce OS uses [Composer](https://getcomposer.org/) as a dependency manager. Composer allows declaring the libraries your project depends on and the versions required as well as it will manage them for you. Composer is downloaded as `composer.phar` file (PHP archive). To start using Composer in your project, all you need is a `composer.json` file. The file defines the required dependencies and is located in the root folder of the project.

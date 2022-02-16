@@ -1,6 +1,6 @@
 ---
 title: Installing Spryker with Development Virtual Machine
-description:
+description: All the necessary information for installing Spryker with Development Virtual Machine.
 template: howto-guide-template
 ---
 
@@ -15,13 +15,9 @@ Before you start installing Spryker DevVM, make sure to fulfill the [system requ
 
 ## Installation
 
-If you've already selected an installation mode, follow one of the guides below:
-* [Installing in Development mode on MacOS and Linux](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-macos-and-linux.html)
-* [Installing in Development mode on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-windows.html)
-* [Installing in Demo mode on MacOS and Linux](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-macos-and-linux.html)
-* [Installing in Demo mode on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-windows.html)
-* [Integrating Docker into existing projects](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html)
-* [Running production](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/running-production.html)
+To install Spryker, follow one of the guides below:
+* [Installing Spryker with DevVM on MacOS and Linux](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-development-virtual-machine.html)
+* [Installing Spryker with DevVM on Windows](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-windows.html)
 
 
 ## Configuration

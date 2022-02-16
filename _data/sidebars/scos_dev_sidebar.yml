@@ -64,10 +64,10 @@ entries:
       url: /docs/scos/dev/setup/installing-spryker-without-devvm.html
     - title: System Requirements
       url: /docs/scos/dev/setup/system-requirements.html
-    - title: Post-Installation Steps and Additional Info
-      url: /docs/scos/dev/setup/post-installation-steps-and-additional-info.html
-    - title: Composer
-      url: /docs/scos/dev/setup/composer.html
+    - title: Configuring Spryker after installing with DevVM
+      url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-after-installing-with-devvm.html
+    - title: Managing SCOS dependencies with Composer
+      url: /docs/scos/dev/setup/managing-scos-dependencies-with-composer.html
     - title: Configuring the database server
       url: /docs/scos/dev/setup/configuring-the-database-server.html
     - title: Redis Configuration

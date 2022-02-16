@@ -419,6 +419,8 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
+      - title: OMS (Order management system) matrix
+        url: /docs/scos/user/features/order-management-feature-overview/oms-order-management-system-matrix.html
       - title: Custom order reference
         url: /docs/scos/user/features/order-management-feature-overview/custom-order-reference-overview.html
         include_versions:
@@ -1246,6 +1248,12 @@ entries:
         - title: Viewing product barcodes
           url: /docs/scos/user/back-office-user-guides/catalog/product-barcodes/viewing-product-barcodes.html
       - title: Scheduled prices
+        include_versions:
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         nested:
         - title: Creating scheduled prices
           url: /docs/scos/user/back-office-user-guides/catalog/scheduled-prices/creating-scheduled-prices.html
@@ -1790,6 +1798,13 @@ entries:
             - "202005.0"
             - "202009.0"
     - title: Marketplace
+      include_versions: 
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
       nested:
       - title: Merchants and merchant relations
         include_versions:

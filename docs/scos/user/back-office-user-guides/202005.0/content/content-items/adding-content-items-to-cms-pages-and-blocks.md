@@ -19,7 +19,9 @@ Prior to adding a content item widget to a block or a page, make sure that the p
 
 {% endinfo_block %}
 ***
+
 ## Adding Content Item Widgets to Pages
+
 To add a content item widget to a page:
 
 1. Navigate to the **Content Management** menu and select **Pages**.

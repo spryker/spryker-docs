@@ -21,20 +21,29 @@ related:
 
 This topic describes the procedure of setting up category filters.
 ***
+
 To start setting up the category filters, navigate to the **Search and Filters > Category Filters** section.
 ***
+
 **Prerequisites**
+
 To set up a category filter, you need to have a filter preference setup in the **Search and Filters > Filter Preferences** section.
 {% info_block errorBox "Note" %}
+
 Before adding a filter to the category, make sure that the product (with an attribute with a specific attribute key for which a filter preference exists is assigned to this specific category. Otherwise, the filter will not bring any results once selected in the online store.
+
 {% endinfo_block %}
+
 ***
+
 On the **Overview of Category Filters** page, you see the **Root nodes list**, **Category tree**, and 
 **Category Filters for** sections. You select the root in the **Root nodes list** by clicking on it and the **Category tree** section is updated to show the categories in the node.
 
 To manage the category filters, you click on a specific category and the **Category Filters for** section appears displaying the active filters that are already assigned to a category and the **Add filter** field.
 ***
+
 ## Adding a Filter to a Category
+
 This procedure will show you how to customize filter behavior by adding the filters to category.
 
 **To add a filter to the category:**
@@ -52,7 +61,9 @@ This procedure will show you how to customize filter behavior by adding the filt
 5. After selecting the filter, click **Add**. The filter will appear in the **Active filters** list.
 6. Once done, click **Save**.
 ***
+
 **Tips & Tricks**
+
 Clicking **Reset to global settings** in **Category Filters for [Category name]** will remove the customized filter settings.
 ![Reset to global settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/reset-to-global-settings.png) 
 
@@ -73,6 +84,8 @@ It is possible to remove either all filters from the active filters at once or j
 ![Removing a single filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/remove-single-filter.gif) 
 
 ***
+
 **Tips & Tricks**
+
 To add the removed filters again, click on the **green plus sign** at the filters you want to add back from Inactive filters.
-![Add a removed filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/add-removed-filter.gif){height="300" width=""}
+![Add a removed filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/add-removed-filter.gif)

@@ -46,24 +46,31 @@ The query builder lets you combine different conditions with connectors (**AND**
 * operator (e.g. equal: **=**)
 * value tokens (e.g. **blue**) 
 {% info_block infoBox "Info" %}
+
 The fields and values are defined by your shop data.
+
 {% endinfo_block %}
 
 These tokens are used to build plain queries too. The pattern of the plain query is as follows:
 ![Plain Query Pattern](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Calculation:+Reference+Information/plain-query-pattern.png) 
 
 You can find plain query examples in the following table.
+
 |Plain query|Explanation|
 |---|---|
 |day-of-week = '1'|Discount applies if the order is placed on Monday.|
 |shipment-carrier != '1' AND price-mode = 'GROSS_MODE'|Discount applies if the shipment carrier with the attribute "1" is not chosen and gross pricing is selected.|
 |currency != 'EUR' OR price-mode = 'GROSS_MODE'|Discount applies if the selected currency is not Euro or the pricing mode is gross.|
 {% info_block infoBox "Info" %}
-See [Token Description Tables](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/references/token-description-tables.html
-{% endinfo_block %} for more information.)
+
+See [Token Description Tables](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/references/token-description-tables.html) for more information.
+
+{% endinfo_block %}
 
 ### Discount promotion to product
+
 Sometimes, it is more profitable to give away free products or provide a discount for the products that are not yet in the cart instead of the ones that are already there. This discount application type enables you to do just that. When a customer fulfills the discount conditions, the promotional product appears below other items. The SKU of the promotional product you wish to be available for adding to cart is entered in the **Abstract product sku** field. Then, you enter the **Quantity** of the chosen promotional product to be available for adding to cart.
 ![Application type](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Calculation:+Reference+Information/Application+type.png) 
 ***
+
 You can either give away the promotional product completely for free or provide a discount for this product by specifying the percentage value or a fixed amount to be discounted from the promotional product's price (when giving the product for free, the percentage value should be 100%, while the fixed-price value should be equal to the product's price).

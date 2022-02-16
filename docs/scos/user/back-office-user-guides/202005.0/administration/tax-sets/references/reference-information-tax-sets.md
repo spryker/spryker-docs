@@ -21,7 +21,8 @@ On the **Overview of Tax Rates** page, you see the following:
 ### Creating and Editing Tax Set Page Attributes
 
 The following table describes the attributes that are used when creating or updating a tax set.
-| Attribute |Description  |
+
+| Attribute | Description  |
 | --- | --- |
 | **Name** | The name of your tax set, e.g. _Shipment Taxes_. |
 | **Country** |A list of tax rates available in the Taxes > Tax Rates section. You can assign from one to many values by selecting the checkboxes next. |

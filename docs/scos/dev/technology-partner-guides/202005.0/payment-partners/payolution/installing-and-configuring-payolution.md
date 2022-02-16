@@ -13,8 +13,8 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/integrating-the-installment-payment-method-for-payolution.html
   - title: Payolution - Performing Requests
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-performing-requests.html
-  - title: Payolution - Workflow
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-workflow.html
+  - title: Payolution request flow
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-request-flow.html
   - title: Payolution
     link: docs/scos/user/technology-partners/page.version/payment-partners/payolution.html
   - title: Integrating the invoice paymnet method for Payolution

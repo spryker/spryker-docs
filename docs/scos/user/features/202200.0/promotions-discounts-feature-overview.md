@@ -16,7 +16,7 @@ redirect_from:
   - /docs/en/promotions-discounts
 ---
 
-The _Promotions & Discounts_ feature enables shop owners to provide free value to their customers by discounting a percentage or a fixed sum of an order's subtotal or an item's price on predefined conditions.
+The *Promotions & Discounts* feature enables shop owners to provide free value to their customers by discounting a percentage or a fixed sum of an order's subtotal or an item's price on predefined conditions.
 
 ## Discount types
 
@@ -28,7 +28,7 @@ A Back Office user selects a discount type when [creating a voucher](/docs/scos/
 
 ## Voucher
 
-A voucher is a discount that applies when a customer enters an active voucher code on the *Cart* page.
+A *voucher* is a discount that applies when a customer enters an active voucher code on the *Cart* page.
 
 ![Cart voucher](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/cart_voucher.png)
 
@@ -45,7 +45,7 @@ See [Creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}
 
 ## Cart rule
 
-A cart rule is a discount that applies to a cart once all the [decision rules](#decision-rule) linked to the cart rule are fulfilled.
+A *cart rule* is a discount that applies to a cart once all the [decision rules](#decision-rule) linked to the cart rule are fulfilled.
 
 The cart rule is applied automatically. If the decision rules of a discount are fulfilled, the customer can see the discount upon entering the cart. Unlike for [voucher](#voucher), the **Clear all** and **Remove** actions are not displayed for cart rules.
 
@@ -55,7 +55,7 @@ See [Creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.versio
 
 ### Decision rule
 
-A decision rule is a condition assigned to a discount that should be fulfilled for the discount to apply.
+A *decision rule* is a condition assigned to a discount that should be fulfilled for the discount to apply.
 
 A discount can have one or more decision rules. Find an exemplary combination below:
 
@@ -100,7 +100,7 @@ When rules are combined by the OR operator, they do not exclude each other. If a
 
 #### Decision rule group
 
-A rule group is a separate set of rules with its own combination operator.
+A *rule group* is a separate set of rules with its own combination operator.
 
 ![Decision rule group](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+%26+Discounts/Discount/Discount+Feature+Overview/decision-rule-group.png)
 
@@ -150,7 +150,15 @@ When a customer meets conditions for a promotional product discount, the **Promo
 old image: (https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/promotional-product-frontend.png)
 -->
 
-A Back Office user selects promotional products by entering comma-separated abstract product SKUs in the Back Office. Also, they define the maximum quantity of the products to be sold with a discount.
+A Back Office user selects promotional products by entering comma-separated abstract product SKUs in the Back Office. Also, they define the maximum quantity of the products to be sold with a discount. For example, there are 10 SKUs in **ABSTRACT PRODUCT SKU(S)**, and **MAXIMUM QUANTITY** is set to `1`. If a customer fulfills the discount conditions, they are eligible for one unit of any of the 10 promotional products, not one of each. However, if **MAXIMUM QUANTITY** is set to `3`, they can select 3 units of any of the promotional products in any combination. The promotional products are automatically merchandised below the items in a customer's cart. The customer can add one of these products to the cart from this widget, and the discount will apply.
+
+{% info_block infoBox "Note" %}
+
+The promotional product discount only applies if the product is added to the cart from the **Promotional Products cart** widget. If the product is already in the cart before the discount conditions are met, the customer needs to remove and re-add it from the widget.
+
+{% endinfo_block %}
+
+A Back Office user can either give away promotional products completely for free or provide a discount for these products by specifying the percentage value or a fixed amount to be discounted from the promotional products' price. When giving a product for free, the percentage value should be 100%. Using a fixed amount discount for a free product is also possible, where the amount is equal to a product's price, but it is not recommended due to the possibility of price fluctuations and differences across multiple products.
 
 ![Collection - promotional product](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/promotions-discounts-feature-overview.md/202200.0/collection-promotional-product.png)
 

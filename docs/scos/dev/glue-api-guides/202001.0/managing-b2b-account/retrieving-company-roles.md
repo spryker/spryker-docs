@@ -30,13 +30,13 @@ The endpoints provided by this API cannot be accessed anonymously. To access the
 In your development, the endpoint can help you to identify the roles existing in the company of the currently logged in user.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html#glue-api--company-account-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html).
 
 ## Retrieving Company Role Information
 ### Roles Performed by the Current User
 To retrieve information on the Company Roles assigned to the currently logged in Company User, send a GET request to the following endpoint:
 
-[/company-roles/mine](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#//company-roles)
+/company-roles/mine
 
 Sample request: *GET http://glue.mysprykershop.com/company-roles/mine*
 
@@ -82,7 +82,8 @@ The endpoint responds with a collection of **RestCompanyRoleResponse**, each con
 ### Specific Role
 To retrieve information on a specific Company Role, send a GET request to the following endpoint:
 
-[/company-roles/{% raw %}{{{% endraw %}role_id{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#//company-roles)
+/company-roles/{% raw %}{{{% endraw %}role_id{% raw %}}}{% endraw %}
+
 Sample request: *GET http://glue.mysprykershop.com/company-roles/**2f0a9d3e-9e69-53eb-8518-284a0db04376***
 
 where **2f0a9d3e-9e69-53eb-8518-284a0db04376** is the ID of the Company Role you need.
@@ -182,5 +183,5 @@ The response will include the following additional attributes:
 | Code | Reason |
 | --- | --- |
 | 401 | The access token is invalid. |
-| 403 | The access token is missing.</br>- OR -</br>The current Company Account is not set.</br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html). |
+| 403 | The access token is missing.<br>- OR -<br>The current Company Account is not set.<br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html). |
 | 404 | The specified role was not found or the user does not have access to it. |

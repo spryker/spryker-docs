@@ -37,7 +37,7 @@ To create a product set:
     If you have multiple languages, you will be required to fill in the same information in all languages.
     4. At the bottom of the **General** tab, you will find Product Set Key, Weight and a checkbox for Active. Enter the values for the attributes.
 3. Select **Next** to proceed to the *Products* tab, or just click on it.
-    The *Product* tab is where you select products to includ in your product set.
+    The *Product* tab is where you select products to include in your product set.
 4. To add products, simply select the checkbox next to your desired products in the **Selected** column. You can use the available search tool on the top right of the *Select Products to assign* tab on this page. You can select as many products as needed—there is no limit.
 
 {% info_block errorBox "Important" %}
@@ -114,7 +114,7 @@ The following tables describe the attributes that you enter and select while cre
 | ATTRIBUTE | DESCRIPTION|
 | --- | --- |
 | Image Set Name | Name of your image set. No spaces are allowed, please use an underscore or dash. |
-| Small Image URL</br>Large Image URL | Allows adding images via a URL. Make sure the image you are adding is available from a public URL. This means any images in a private Dropbox or Google folder will not work. |
+| Small Image URL<br>Large Image URL | Allows adding images via a URL. Make sure the image you are adding is available from a public URL. This means any images in a private Dropbox or Google folder will not work. |
 | Sort OrderIf you add several images to an active image set, specify the order in which they are to be shown in the front end and back end using Sort Order fields. The order of images is defined by order of entered numbers where the image set with the sort order "0" is the first to be shown. |  
 
 #### Product set example

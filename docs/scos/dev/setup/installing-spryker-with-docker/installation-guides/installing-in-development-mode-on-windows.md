@@ -32,6 +32,17 @@ Follow the steps to install Spryker in Development mode:
 1. Open Ubuntu.
 2. Open a terminal.
 3. Create a new folder and navigate into it.
+
+    {% info_block warningBox "Important" %}
+
+    Avoid using folders that are under a Windows filesystem, because it will slow down all operations significantly (the reason is because Ubuntu <-> Windows filesystem sync).
+
+    Wrong: /mnt/c/Users/jdoe/Desktop/project
+
+    Correct: /home/jdoe/workspace/project
+
+    {% endinfo_block %}
+
 4. Depending on the desired [Demo Shop](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2bb2c-demo-shops):
     * Clone the B2C repository:
 
@@ -42,7 +53,7 @@ Follow the steps to install Spryker in Development mode:
     * Clone the B2B repository:
 
     ```bash
-    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202108.0  --single-branch ./b2b-demo-shop
+    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202108.0  --single-branch ./b2b-demo-shop
     ```
 
 5. Depending on the repository you've cloned, navigate into the cloned folder:
@@ -114,8 +125,14 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
 
     {% endinfo_block %}
 
+    {% info_block warningBox "Warning" %}
+
+    Note that some versions of Windows have limitation of number of hostnames per line. It is recommended not to exceed 10 hostnames per line. Split long line into multiple lines if necessary.
+
+    {% endinfo_block %}
+ 
     9. Select **File** > **Save**.
-    10. Close the file.
+    10.  Close the file.
 
 12. Once the job finishes, build and start the instance:
 
@@ -131,7 +148,7 @@ Depending on the hardware performance, the first project launch can take up to 2
 
 ## Endpoints
 
-To ensure that the installation is successful, make sure you can access the configured endpoints from the Deploy file. See [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file-reference-1.0.html) to learn about the Deploy file.
+To ensure that the installation is successful, make sure you can access the configured endpoints from the Deploy file. See [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html) to learn about the Deploy file.
 
 {% info_block infoBox "RabbitMQ UI credentials" %}
 
@@ -145,9 +162,9 @@ To get the full and up-to-date list of commands, run `docker/sdk help`.
 
 ## Next steps
 
-* [Spryker in Docker troubleshooting](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html)
+* [Spryker in Docker troubleshooting](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-spryker-in-docker-issues.html)
 * [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html)
-* [Deploy File Reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file-reference-1.0.html)
+* [Deploy File Reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html)
 * [Configuring services](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-services.html)
 * [Setting up a self-signed SSL certificate](/docs/scos/dev/setup/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html)
 * [Additional DevOPS guidelines](/docs/scos/dev/setup/installing-spryker-with-docker/configuration/additional-devops-guidelines.html)

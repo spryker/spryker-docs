@@ -30,14 +30,14 @@ Spryker Glue REST API comes with a set of predefined APIs out of the box. You ha
 
 {% info_block infoBox %}
 
-The following guide relies on your knowledge of the structure of a Glue REST API resource module and the behavior of its constituents. For more details, see the [Resource Modules](/docs/scos/dev/back-end-development/glue-api/glue-infrastructure.html#resource-modules) section in **Glue Infrastructure**.
+The following guide relies on your knowledge of the structure of a Glue REST API resource module and the behavior of its constituents. For more details, see the [Resource Modules](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-infrastructure.html#resource-modules) section in **Glue Infrastructure**.
 
 {% endinfo_block %}
 
 ## Prerequisites:
 To complete this tutorial, you need to comply with the following prerequisites:
 
-* [Install Spryker Development Machine](/docs/scos/dev/sdk/{{site.version}}/development-virtual-machine-docker-containers-and-console.html);
+* [Install Spryker Development Machine](/docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html);
 * [Enable Glue Rest API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-installation-and-configuration.html);
 * [Integrate Products API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html).
 
@@ -51,7 +51,7 @@ Also, let us assume that you modified the product storage data to match your pro
 
 {% info_block warningBox %}
 
-For more details, see [Database schema for product attributes](/docs/scos/user/features/product-feature-overview/product-attributes-overview.html#database-schema-for-product-attributes) and [Extending the Database Schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).
+For more details, see [Database schema for product attributes](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-attributes-overview.html) and [Extending the Database Schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).
 
 {% endinfo_block %}
 

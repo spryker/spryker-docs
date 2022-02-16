@@ -1,5 +1,5 @@
 ---
-title: Product + cart feature integration
+title: Product + Cart feature integration
 description: The guide walks you through the process of installing the Product and Cart features in your project.
 last_updated: Aug 27, 2020
 template: feature-integration-guide-template
@@ -12,8 +12,9 @@ related:
   - title: Product image management
     link: docs/scos/user/features/page.version/product-feature-overview/product-images-overview.html
 ---
-
-{% info_block errorBox "The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds the **Product Image functionality**.)
+{% info_block errorBox "Error" %}
+The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds the **Product Image functionality**.
+{% endinfo_block %}
 
 ## Install Feature Core
 ### Prerequisites
@@ -31,16 +32,15 @@ Run the following command(s) to install the required modules:
 composer require spryker/product-image-cart-connector:"^1.1.0" --update-with-dependencies
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
-    
-**Verification**
+{% info_block warningBox “Verification” %}
     
 Make sure that the following modules have been installed:
     
 | Module | Expected Directory |
 | --- | --- |
 | `ProductImageCartConnector` | `vendor/spryker/product-image-cart-connector` |
-</div></section>
+
+{% endinfo_block %}
 
 ### 2) Set up Transfer Objects
 Run the following command to generate transfer objects:
@@ -56,8 +56,7 @@ Register the following plugins:
 | --- | --- | --- | --- |
 | `ProductImageCartPlugin` | Expands `ItemsTransfers` from `CartChangeTransfer` with `ProductImages`. | None | `Spryker\Zed\ProductImageCartConnector\Communication\Plugin` |
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
+**src/Pyz/Zed/Cart/CartDependencyProvider.php**
     
 ```php
 <?php
@@ -83,9 +82,10 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 	}
 }
 ```
-<br>
-</details>
 
-@(Warning" %}
-Verification
-{% endinfo_block %}(Check cart product image expander plugins - make sure you can see images related to cart items in the cart page in Yves. )
+
+{% info_block warningBox “Verification” %}
+
+Check cart product image expander plugins - make sure you can see images related to cart items in the cart page in Yves. 
+
+{% endinfo_block %}

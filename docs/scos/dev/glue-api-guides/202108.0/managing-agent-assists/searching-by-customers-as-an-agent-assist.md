@@ -45,8 +45,8 @@ To search by customers, send the request:
 | STRING PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | q | The value to search for in the list of customers. If you enter a part of an email address, first name, or last name, the endpoint returns all the customer entries partially matching the search query. To search by a customer reference, enter full customer reference. | {% raw %}{{{% endraw %}customerEmail{% raw %}}}{% endraw %}, {% raw %}{{{% endraw %}firstName{% raw %}}}{% endraw %}, {% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}, {% raw %}{{{% endraw %}lastName{% raw %}}}{% endraw %} |
-| page[offset] | The offset of the item at which to begin the response. </br> Works only together with `page[limit]`. </br> To work correctly, the value should be devisable by the value of `page[limit]`. </br> The default value is `0`.  | From `0` to any. |
-| page[limit] | The maximum number of entries to return. </br> Works only together with `page[offset]`. </br> The default value is `10`. | From `1` to any. |
+| page[offset] | The offset of the item at which to begin the response. <br> Works only together with `page[limit]`. <br> To work correctly, the value should be devisable by the value of `page[limit]`. <br> The default value is `0`.  | From `0` to any. |
+| page[limit] | The maximum number of entries to return. <br> Works only together with `page[offset]`. <br> The default value is `10`. | From `1` to any. |
 
 | REQUEST | USAGE |
 | --- | --- |
@@ -316,8 +316,8 @@ To search by customers, send the request:
 
 | CODE  | REASON |
 | --- | --- |
-| 001| Access token is invalid.|
-| 4103| Agent access token is missing.|
+| 001 | Access token is invalid.|
+| 4103 | Agent access token is missing; or the action is available to an agent user only.|
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 

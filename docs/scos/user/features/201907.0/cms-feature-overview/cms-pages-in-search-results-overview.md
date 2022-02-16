@@ -1,5 +1,5 @@
 ---
-title: CMS Pages in Search Results
+title: CMS pages in search results overview
 description: The CMS Pages in Search Results feature allows searching not only for products but for CMS pages content as well.
 last_updated: Jan 13, 2020
 template: concept-topic-template
@@ -27,8 +27,8 @@ To sum it up, this advanced tool for browsing and searching will not only enhanc
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/v2/docs/cms-page-search-product-lists-catalog-feature-integration-201903" class="mr-link">Integrate CMS page search + Product Lists + Catalog Feature v. 201903.0 into your project</a></li>
-                <li><a href="https://documentation.spryker.com/v2/docs/cms-pages-in-search-results-integration-201903" class="mr-link">Integrate CMS page search + Catalog Feature v. 201903.0 into your project</a></li>
+                <li><a href="/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-product-lists-catalog-feature-integration.html" class="mr-link">Integrate CMS page search + Product Lists + Catalog Feature v. 201903.0 into your project</a></li>
+                <li><a href="/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-catalog-feature-integration.htm" class="mr-link">Integrate CMS page search + Catalog Feature v. 201903.0 into your project</a></li>
             </ul>
         </div>
          <!-- col2 -->
@@ -42,7 +42,7 @@ To sum it up, this advanced tool for browsing and searching will not only enhanc
         <div class="mr-col">
             <ul class="mr-list mr-list-red">
                 <li class="mr-title">Shop User</li>
-                <li><a href="https://documentation.spryker.com/v4/docs/searching-within-cms-pages" class="mr-link">Search within CMS Pages</a></li> 
+                <li><a href="/docs/scos/user/shop-user-guides/{{page.version}}/searching-within-cms-pages.html" class="mr-link">Search within CMS Pages</a></li> 
             </ul>
         </div>
     </div>

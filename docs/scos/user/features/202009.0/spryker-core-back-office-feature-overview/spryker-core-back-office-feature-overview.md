@@ -49,7 +49,7 @@ The following diagram shows what features are used for both **B2B and B2C**, and
 
 {% endinfo_block %}
 
-![B2B and B2C Features\(2\)](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/B2B%20and%20B2C%20Features%282%29.png)
+![B2B and B2C features](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.md/b2b-and-b2c-features.png)
 
 You can always define what exactly is going to be needed for your specific project.
 
@@ -107,7 +107,6 @@ Each of the Identity Managers is an ECO module that should be developed separate
 |---|
 | [Get a general idea of the Back Office Translations](/docs/scos/user/features/{{page.version}}/spryker-core-back-office-feature-overview/back-office-translations-overview.html) |
 | **Work with the Back Office**: |
-| [Log in to the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/logging-in-to-the-back-office.html) |
 | [View Dashboard](/docs/scos/user/back-office-user-guides/{{page.version}}/dashboard/viewing-dashboard.html) |
 | [Mange Punch Out](/docs/scos/user/back-office-user-guides/{{page.version}}/punch-out/managing-punch-out-connections.html) |
 | [View Order Matrix](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/order-matrix/viewing-the-order-matrix.html) |

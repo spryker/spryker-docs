@@ -17,11 +17,11 @@ related:
   - title: Retrieving Company Role Information
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-roles.html
   - title: Retrieving Business Unit Information
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-unit-information.html
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-units.html
 ---
 
 {% info_block errorBox %}
-The following feature integration guide expects the basic feature to be in place.</br>The current feature integration Guide only adds the Company Account REST API functionality.
+The following feature integration guide expects the basic feature to be in place.<br>The current feature integration Guide only adds the Company Account REST API functionality.
 {% endinfo_block %}
 
 Follow the steps below to install Company Account feature API.
@@ -447,7 +447,7 @@ class CustomersRestApiDependencyProvider extends SprykerCustomersRestApiDependen
 }
 ```
 
-</br>
+<br>
 </details>
 
 <details open>

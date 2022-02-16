@@ -1,5 +1,5 @@
 ---
-title: Glue API - Products feature integration
+title: Glue API - Product feature integration
 description: This guide will navigate you through the process of installing and configuring the Product API feature in Spryker OS.
 last_updated: Oct 30, 2020
 template: feature-integration-guide-template
@@ -17,9 +17,9 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | Master | [Feature API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Product |master |  |
-| Price | master |  |
+| Spryker Core | 202009.0 | [Feature API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Product |202009.0 |  |
+| Price | 202009.0 |  |
 
 ###1) Install the required modules using Composer
 Run the following command to install the required modules:
@@ -52,7 +52,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes haveoccurred in transfer objects:
+Make sure that the following changes have occurred in transfer objects:
 
 | Transfer | Type | Event | Path |
 | --- | --- | --- | --- |
@@ -75,8 +75,8 @@ Make sure that `SpyProductAbstractStorage` and `SpyProductConcreteStorage` are e
 
 | Entity | Type | Event | Path | Methods |
 | --- | --- | --- | --- | --- |
-| `SpyProductAbstractStorage` | class | extended | `src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductAbstractStorage` | `syncPublishedMessageForMappings()`,</br>`syncUnpublishedMessageForMappings()` |
-| `SpyProductConcreteStorage` | class | extended | `src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductConcreteStorage` | `syncPublishedMessageForMappings()`,</br>`syncUnpublishedMessageForMappings()` |
+| `SpyProductAbstractStorage` | class | extended | `src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductAbstractStorage` | `syncPublishedMessageForMappings()`,<br>`syncUnpublishedMessageForMappings()` |
+| `SpyProductConcreteStorage` | class | extended | `src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductConcreteStorage` | `syncPublishedMessageForMappings()`,<br>`syncUnpublishedMessageForMappings()` |
 
 
 {% endinfo_block %}
@@ -134,7 +134,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -209,7 +209,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -286,7 +286,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -342,7 +342,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -405,7 +405,7 @@ Make sure that the response contains `category-nodes` as a relationship, and tha
 }
 ```
 
-</br>
+<br>
 </details>
 
 

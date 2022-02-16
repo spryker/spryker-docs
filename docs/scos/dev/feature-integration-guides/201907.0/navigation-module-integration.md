@@ -75,8 +75,8 @@ The `Navigation` module ships with a twig extension that provides the `spyNaviga
 
 `spyNavigation()` accepts two parameters:
 
-* `$navigationKey`: Reference of a navigation menu by its key field (i.e. "MAIN_NAVIGATION").
-* `$template`: Template path used to render the navigation menu (i.e. `"@application/layout/navigation/main.twig"`).
+* `$navigationKey`: Reference of a navigation menu by its key field (for example, "MAIN_NAVIGATION").
+* `$template`: Template path used to render the navigation menu (for example, `"@application/layout/navigation/main.twig"`).
 
 To enable the navigation twig function, register `\Spryker\Yves\Navigation\Plugin\Provider\NavigationTwigServiceProvider` in your application’s bootstrap.
 
@@ -165,7 +165,7 @@ In `Pyz/Yves/Application/Theme/default/layout/navigation/main.twig` we traverse 
     </div>
 ```
     
-</br>
+<br>
 </details>
 
 The children nodes are rendered recursively by `Pyz/Yves/Application/Theme/default/layout/navigation/_partials/nodes.twig`.
@@ -207,7 +207,7 @@ The children nodes are rendered recursively by `Pyz/Yves/Application/Theme/defau
     </ul>
 ```
     
-</br>
+<br>
 </details>
 
 To prevent code duplication we implemented the `Pyz/Yves/Application/Theme/default/layout/navigation/_partials/base-node.twig` template which we use to render a node by embedding it in the templates above.
@@ -243,6 +243,6 @@ This is also the place where we take the visibility controller parameters into a
 {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 ```
 
-</br>
+<br>
 </details>
 

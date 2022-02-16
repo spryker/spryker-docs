@@ -16,6 +16,10 @@ redirect_from:
   - /v5/docs/en/installation-guide-development-mode
   - /v4/docs/installation-guide-development-mode
   - /v4/docs/en/installation-guide-development-mode
+  - /2021080/docs/installation-guide-development-mode
+  - /2021080/docs/en/installation-guide-development-mode
+  - /docs/installation-guide-development-mode
+  - /docs/en/installation-guide-development-mode
 ---
 
 This document describes how to install Spryker in [Development Mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode) on MacOS and Linux.
@@ -42,7 +46,7 @@ Follow the steps to install Spryker in Development mode:
     * Clone the B2B repository:
 
     ```bash
-    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202108.0  --single-branch ./b2b-demo-shop
+    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202108.0  --single-branch ./b2b-demo-shop
     ```
 
 4. Depending on the repository you've cloned, navigate into the cloned folder:
@@ -60,18 +64,12 @@ Make sure that you are in the correct folder by running the `pwd` command.
 
 {% endinfo_block %}
 
-5. In `deploy.dev.yml`, define `image:` with the PHP image compatible with the current release of the Demo Shop:
-
-```yaml
-image: spryker/php:7.3-alpine3.12
-```
-
-6. Clone the Docker SDK repository:
+5. Clone the Docker SDK repository:
 ```bash
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker
 ```
 
-7. Bootstrap local docker setup:
+6. Bootstrap local docker setup:
 ```bash
 docker/sdk bootstrap deploy.dev.yml
 ```
@@ -81,7 +79,7 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
 
 {% endinfo_block %}
 
-8. Update the `hosts` file:
+7. Update the `hosts` file:
 Follow the installation instructions in the white box from the `docker/sdk bootstrap` command execution results to prepare the environment.
 
 {% info_block infoBox %}
@@ -91,7 +89,7 @@ Follow the installation instructions in the white box from the `docker/sdk boots
 {% endinfo_block %}
 
 
-9. Once the job finishes, build and start the instance:
+8. Once the job finishes, build and start the instance:
 
 ```bash
 docker/sdk up
@@ -105,7 +103,7 @@ Depending on the hardware performance, the first project launch can take up to 2
 
 ## Endpoints
 
-To ensure that the installation is successful, make sure you can access the configured endpoints from the Deploy file. See [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file-reference-1.0.html) to learn about the Deploy file.
+To ensure that the installation is successful, make sure you can access the configured endpoints from the Deploy file. See [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html) to learn about the Deploy file.
 
 {% info_block infoBox "RabbitMQ UI credentials" %}
 
@@ -119,9 +117,9 @@ To get the full and up-to-date list of commands, run `docker/sdk help`.
 
 ## Next steps
 
-* [Spryker in Docker troubleshooting](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html)
+* [Spryker in Docker troubleshooting](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-spryker-in-docker-issues.html)
 * [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html)
-* [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file-reference-1.0.html)
+* [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html)
 * [Configuring services](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-services.html)
 * [Setting up a self-signed SSL certificate](/docs/scos/dev/setup/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html)
 * [Additional DevOPS guidelines](/docs/scos/dev/setup/installing-spryker-with-docker/configuration/additional-devops-guidelines.html)

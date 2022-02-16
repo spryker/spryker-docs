@@ -1,5 +1,5 @@
 ---
-title: Sales data export feature integration
+title: Sales Data Export feature integration
 description: Integrate the Sales Data Export feature into your project.
 last_updated: Aug 27, 2020
 template: feature-integration-guide-template
@@ -10,7 +10,7 @@ redirect_from:
   - /v6/docs/en/sales-data-export-feature-integration
 related:
   - title: Data export
-    link: docs/scos/dev/sdk/page.version/data-export.html
+    link: docs/scos/dev/sdk/data-export.html
 ---
 
 ## Install Feature Core

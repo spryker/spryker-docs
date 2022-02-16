@@ -1,5 +1,5 @@
 ---
-title: Templates & Slots Feature Overview
+title: Templates and Slots Overview
 description: The article describes the Templates & Slots feature that allows content managers to interact with content using a template with slots.
 last_updated: Sep 14, 2020
 template: concept-topic-template
@@ -303,7 +303,7 @@ This section describes how Slot Widget works with the Spryker CMS Blocks content
 {% info_block infoBox %}
 
 
-* By default, names are used as unique identifiers of CMS blocks while Slot Widget requires keys. To enable Slot Widget to work with CMS blocks, [upgrade](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-cmsblock.html#upgrading-from-version-2-to-version-3) the `CMSBlock` module in your project for CMS Blocks to have keys.
+* By default, names are used as unique identifiers of CMS blocks while Slot Widget requires keys. To enable Slot Widget to work with CMS blocks, [upgrade](/docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html#upgrading-from-version-2-to-version-3) the `CMSBlock` module in your project for CMS Blocks to have keys.
 
 
 {% endinfo_block %}

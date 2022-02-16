@@ -102,12 +102,12 @@ $config[VaultConstants::ENCRYPTION_KEY] = "PLEASE ADJUST THIS ENCRYPTION KEY TO 
 
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Verification" %}
-Once you have finished the full integration of the feature, make sure that:</br>You can store and retrieve data from the vault using `VaultFacade`:</br>`$secret = "actual_secret";` </br>`$vaultFacade->store("secret_category", "secret_id", $secret
-{% endinfo_block %};`</br>`assertSame($secret, $vaultFacade->retrieve("secret_category", "secret_id"));`)
+Once you have finished the full integration of the feature, make sure that:<br>You can store and retrieve data from the vault using `VaultFacade`:<br>`$secret = "actual_secret";` <br>`$vaultFacade->store("secret_category", "secret_id", $secret
+{% endinfo_block %};`<br>`assertSame($secret, $vaultFacade->retrieve("secret_category", "secret_id"));`)
 
 #### Redis
 The following Session and Storage configuration constants were deprecated and moved into newly created dedicated modules:
@@ -157,7 +157,7 @@ $config[StorageRedisConstants::STORAGE_REDIS_CONNECTION_OPTIONS] = [
 ];
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Note" %}
@@ -183,7 +183,7 @@ $config[StorageRedisConstants::STORAGE_REDIS_PASSWORD] = false;
 $config[StorageRedisConstants::STORAGE_REDIS_DATABASE] = 0;
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Note" %}
@@ -212,7 +212,7 @@ $config[SessionRedisConstants::LOCKING_RETRY_DELAY_MICROSECONDS] = 0;
 $config[SessionRedisConstants::LOCKING_LOCK_TTL_MILLISECONDS] = 0;
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Note" %}
@@ -240,7 +240,7 @@ $config[SessionRedisConstants::ZED_SESSION_REDIS_CLIENT_OPTIONS] = [
 ];
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Note" %}
@@ -264,7 +264,7 @@ $config[SessionRedisConstants::ZED_SESSION_REDIS_PASSWORD] = false;
 $config[SessionRedisConstants::ZED_SESSION_REDIS_DATABASE] = 2;
 ```
 
-</br>
+<br>
 </details>
 
 If you're using file system as session storage, extend your project with the following configuration:
@@ -286,7 +286,7 @@ $config[SessionFileConstants::ZED_SESSION_TIME_TO_LIVE] = SessionConfig::SESSION
 $config[SessionFileConstants::ZED_SESSION_FILE_PATH] = session_save_path();
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Note" %}
@@ -344,7 +344,7 @@ class SessionDependencyProvider extends SprykerSessionDependencyProvider
 }
 ```
 
-</br>
+<br>
 </details>
 
 <details open>
@@ -371,7 +371,7 @@ class StorageDependencyProvider extends SprykerStorageDependencyProvider
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -417,7 +417,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -462,7 +462,7 @@ $config[SessionConstants::YVES_SESSION_SAVE_HANDLER] = SessionRedisConfig::SESSI
 $config[SessionRedisConstants::YVES_SESSION_TIME_TO_LIVE] = SessionConfig::SESSION_LIFETIME_1_HOUR;
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Note" %}
@@ -490,7 +490,7 @@ $config[SessionRedisConstants::YVES_SESSION_REDIS_CLIENT_OPTIONS] = [
 ];
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Note" %}
@@ -514,7 +514,7 @@ $config[SessionRedisConstants::YVES_SESSION_REDIS_PASSWORD] = false;
 $config[SessionRedisConstants::YVES_SESSION_REDIS_DATABASE] = 1;
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -540,7 +540,7 @@ $config[SessionFileConstants::YVES_SESSION_TIME_TO_LIVE] = SessionConfig::SESSIO
 $config[SessionFileConstants::YVES_SESSION_FILE_PATH] = session_save_path();
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Note" %}
@@ -587,7 +587,7 @@ class SessionDependencyProvider extends SprykerSessionDependencyProvider
 }
 ```
 
-</br>
+<br>
 </details>
 
 <details open>
@@ -619,7 +619,7 @@ class SessionDependencyProvider extends SprykerSessionDependencyProvider
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Verification" %}

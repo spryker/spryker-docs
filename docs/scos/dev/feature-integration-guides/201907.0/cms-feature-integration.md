@@ -1,5 +1,5 @@
 ---
-title: CMS feature integration Guide
+title: CMS feature integration
 description: Multi-store CMS Pages feature allows making CMS pages visible or hidden on the store website. The guide describes how to integrate the feature into your project.
 last_updated: Dec 24, 2019
 template: feature-integration-guide-template
@@ -123,7 +123,7 @@ page_2,AT
 | `store_name` | Yes | String | `DE` | Country Code for the store this page will be displayed for. |
 
 {% info_block warningBox "Verification" %}
-Verify installation by using data importers with the pages that are loaded into multiple stores.</br>`console data:import cms-page-store`</br>You should see store settings for pages in Zed are configured as specified in your CSV files.
+Verify installation by using data importers with the pages that are loaded into multiple stores.<br>`console data:import cms-page-store`<br>You should see store settings for pages in Zed are configured as specified in your CSV files.
 {% endinfo_block %}
 
 ### 4) Set up Behavior
@@ -161,6 +161,6 @@ class CmsGuiDependencyProvider extends SprykerCmsGuiDependencyProvider
 </details>
 
 {% info_block warningBox "Verification" %}
-Editing CMS pages in Zed should show a toggle for all available stores.</br>Once you have finished the full integration of the feature, make sure that CMS Pages will only be available in their specific stores in Yves.
+Editing CMS pages in Zed should show a toggle for all available stores.<br>Once you have finished the full integration of the feature, make sure that CMS Pages will only be available in their specific stores in Yves.
 {% endinfo_block %}
 

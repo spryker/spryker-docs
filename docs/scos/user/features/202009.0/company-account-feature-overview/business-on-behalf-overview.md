@@ -1,5 +1,5 @@
 ---
-title: Business on behalf
+title: Business on behalf overview
 description: Business on behalf allows having multiple company users per customer account with a possibility to select one company user to be a default user.
 last_updated: Jun 2, 2021
 template: concept-topic-template
@@ -10,7 +10,7 @@ redirect_from:
   - /v6/docs/en/business-on-behalf
 ---
 
-Every [business unit](/docs/scos/user/features/{{page.version}}/company-account/company-account-feature-overview/business-units.html) includes some company users that have specific permissions within this business unit. The *Business on Behalf* feature allows having multiple company users per customer account with a possibility to select one company user to be a default user. This default user can switch between the assigned business units.
+Every [business unit](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-units-overview.html) includes some company users that have specific permissions within this business unit. The *Business on Behalf* feature allows having multiple company users per customer account with a possibility to select one company user to be a default user. This default user can switch between the assigned business units.
 
 For example, as a shop owner, you might have a financial manager in your company, who, for audit purposes, should be able to access company business units' accounts to check their order histories, shopping lists, etc.
 
@@ -48,28 +48,3 @@ The aim of the Business on Behalf feature is having one-to-many relationships:
 
 Company users can assign and unassign a company business unit to their accounts on the storefront:
 ![business-on-behalf-select-company-business-unit.gif](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+on+Behalf/Business+on+Behalf+Feature+Overview/business-on-behalf-select-company-business-unit.gif)
-
-
-
-#### If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/mg-business-on-behalf-data-import#upgrading-from-version-1-1-0-to-version-2-0-0" class="mr-link">Migrate the BusinessOnBehalfDataImport module from version 1.* to version 2.*</a></li>
-                <li><a href="https://documentation.spryker.com/docs/company-account-integration" class="mr-link">Enable business on behalf by integrating the Company Account feature into your project</a></li>
-            </ul>
-        </div>
-         <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/managing-company-users#attaching-a-company-user-to-a-business-unit" class="mr-link">Attach a company user to a business unit</a></li>
-                <li><a href="https://documentation.spryker.com/docs/customers-reference-information#b2b--attach-customer-to-company-page" class="mr-link">Attach a customer to a company</a></li>
-               </ul>
-        </div>
-        </div>
-</div>

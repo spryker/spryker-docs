@@ -1,5 +1,5 @@
 ---
-title: Alternative products + product label feature integration
+title: Alternative products + Product Label feature integration
 description: The guide describes the procedure that you need to perform in order to integrate the Alternative Products + Product Label feature into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -96,7 +96,7 @@ Enable the following behavior types by registering the plugins:
 |---|---|---|---|
 |PostProductAlternativeCreatePlugin|After the product alternative is created, adds product alternatives availability label to the abstract product.|None|Spryker\Zed\ProductAlternativeProductLabelConnector\Communication\Plugin|
 |PostProductAlternativeDeletePlugin|After the product alternative is deleted, removes product alternatives availability label from the abstract product.|None|Spryker\Zed\ProductAlternativeProductLabelConnector\Communication\Plugin|
-|ProductAlternativeLabelUpdaterPlugin|Used to persist alternative product label relation changes into the database. </br>The plugin is called when the `ProductLabelRelationUpdaterConsole` command is executed.|None|Spryker\Zed\ProductAlternativeProductLabelConnector\Communication\Plugin|
+|ProductAlternativeLabelUpdaterPlugin|Used to persist alternative product label relation changes into the database. <br>The plugin is called when the `ProductLabelRelationUpdaterConsole` command is executed.|None|Spryker\Zed\ProductAlternativeProductLabelConnector\Communication\Plugin|
 
 **src/Pyz/Zed/ProductAlternative/ProductAlternativeDependencyProvider.php**
 

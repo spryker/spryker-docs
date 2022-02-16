@@ -16,20 +16,20 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Spryker Core | master |
-| Cart | master |
-|Product  | master |
-|Payments  | master |
-| Shipment | master |
-| Order Management | master |
-| Mailing &amp; Notifications | master |
-| Promotions &amp; Discounts | master |
+| Spryker Core | {{page.version}} |
+| Cart | {{page.version}} |
+|Product  | {{page.version}} |
+|Payments  | {{page.version}} |
+| Shipment | {{page.version}} |
+| Order Management | {{page.version}} |
+| Mailing &amp; Notifications | {{page.version}} |
+| Promotions &amp; Discounts | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/gift-cards:"^master" --update-with-dependencies
+composer require spryker-feature/gift-cards:"^{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -190,7 +190,7 @@ Make sure that propel entities have been generated successfully by checking thei
 ### 4) Import Data
 #### Gift Card Configuration Data
 {% info_block infoBox "Info" %}
-The following step imports abstract and concrete gift card configurations. Implementation for the data importer is not provided by Spryker Core, so you need to implement it on project level.</br></br>You can find an exemplary implementation [here](https://github.com/spryker-shop/suite/commit/f38bc5264e9964d2d2da5a045c0305973b3cb556#diff-e854f9b396bdaa07ca6276f168aaa76a
+The following step imports abstract and concrete gift card configurations. Implementation for the data importer is not provided by Spryker Core, so you need to implement it on project level.<br><br>You can find an exemplary implementation [here](https://github.com/spryker-shop/suite/commit/f38bc5264e9964d2d2da5a045c0305973b3cb556#diff-e854f9b396bdaa07ca6276f168aaa76a
 {% endinfo_block %} (only Console and DataImport module changes are relevant). The following data import examples are based on this implementation.)
 
 **data/import/gift_card_abstract_configuration.csv**
@@ -1070,15 +1070,15 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Spryker Core | master |
-| Cart | master |
-| Checkout | master |
+| Spryker Core | {{page.version}} |
+| Cart | {{page.version}} |
+| Checkout | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/gift-cards:"^master" --update-with-dependencies
+composer require spryker-feature/gift-cards:"^{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

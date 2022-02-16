@@ -16,6 +16,8 @@ redirect_from:
   - /v5/docs/en/ht-force-https
   - /v4/docs/ht-force-https
   - /v4/docs/en/ht-force-https
+  - /v3/docs/ht-force-https
+  - /v3/docs/en/ht-force-https
   - /v2/docs/ht-force-https
   - /v2/docs/en/ht-force-https
   - /v1/docs/ht-force-https
@@ -48,7 +50,7 @@ $config[ApplicationConstants::YVES_SSL_ENABLED] = true;
 Before a controller is resolved, the application will check if the request is secure and that the requested resource is not excluded from HTTPS.
 
 {% info_block infoBox "Info" %}
-If the request is not secure and not excluded from HTTPS, the application will return a redirect response if the page was requested with HTTP.</br>If the request is secure and the page is excluded from HTTPS, the application will allow requests with HTTP.
+If the request is not secure and not excluded from HTTPS, the application will return a redirect response if the page was requested with HTTP.<br>If the request is secure and the page is excluded from HTTPS, the application will allow requests with HTTP.
 {% endinfo_block %}
 
 ### Allow Pages to Use HTTP

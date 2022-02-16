@@ -12,7 +12,7 @@ related:
   - title: CMS Block
     link: docs/scos/user/back-office-user-guides/page.version/content/blocks/cms-block.html
   - title: Migration Guide - CMS Block
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-cmsblock.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html
 ---
 
 Category blocks are blocks that can be embedded into the category template.
@@ -258,25 +258,6 @@ class CmsBlockGuiDependencyProvider extends CmsBlockGuiCmsBlockGuiDependencyProv
 }
 ```
 
-<!--
-### Usage for Demoshop
-
-Adding a template for the new block is done in the same way as for static blocks.
-
-Create a new Twig template under the `src/Pyz/Yves/CmsBlock/Theme/default/template/` folder. We'll call it `categorySale.twig` and it will have the following structure :
-
-```php
-<!-- CMS_BLOCK_PLACEHOLDER : "saleMessage" -->
-<!-- CMS_BLOCK_PLACEHOLDER : "saleInterval" -->
-<!--<blockquote>
-	{% raw %}{{{% endraw %} spyCmsBlockPlaceholder('saleMessage') | raw {% raw %}}}{% endraw %}
-
-	<footer>
-		{% raw %}{{{% endraw %} spyCmsBlockPlaceholder('saleInterval') | raw {% raw %}}}{% endraw %}
-	</footer>
-</blockquote>
-```
--->
 **To configure the block:**
 1. In the Zed UI, go to the CMS section  and navigate to the blocks section.
 2. Click Create CMS Block to create a new block. 

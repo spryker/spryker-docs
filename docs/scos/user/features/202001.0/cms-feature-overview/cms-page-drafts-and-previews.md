@@ -13,8 +13,8 @@ redirect_from:
 With the CMS draft feature the Back Office user can create drafts of CMS pages without affecting the current live version of the page. It is possible to preview draft version of content before publishing it to see how the page will look like when it is live. This article will tell you how to enable the preview draft page feature.
 
 ## Prerequisites
-* Upgrade the `spryker/cms` module to at least 6.2 version. Additional information on how to migrate the `spryker/cms` module can be found in [Migration Guide - CMS](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-cms.html).
-* If you have the `spryker/cms-collector` module installed, upgrade it to at least 2.0 version. Additional information on how to migrate the `spryker/cms-collector` module can be found in [Migration Guide - CMS Collector](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-cms.html-collector).
+* Upgrade the `spryker/cms` module to at least 6.2 version. Additional information on how to migrate the `spryker/cms` module can be found in [Migration Guide - CMS](/docs/scos/dev/module-migration-guides/migration-guide-cms.html).
+* If you have the `spryker/cms-collector` module installed, upgrade it to at least 2.0 version. Additional information on how to migrate the `spryker/cms-collector` module can be found in [Migration Guide - CMS Collector](/docs/scos/dev/module-migration-guides/migration-guide-cms-block-collector.html).
 * If you do not have the `spryker/cms-collector` module installed, register your CMS page data expander plugins to the `spryker/cms` module in the `CmsDependencyProvider` dependency provider.
 
 <details open>
@@ -40,8 +40,6 @@ class CmsDependencyProvider extends SprykerCmsDependencyProvider
     }
 }
 ```
-
-</br>
 </details>
 
 * Optionally, upgrade the `spryker/cms-gui` module to at least 4.3 version if you want to have access to the Yves [preview pages from the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/managing-cms-pages.html#previewing-cms-pages).
@@ -71,13 +69,11 @@ class CmsDependencyProvider extends SprykerCmsDependencyProvider
         return $localeCmsPageDataRequestTransfer->getFlattenedLocaleCmsPageData();
     }
 ```
-
-</br>
 </details>
 
-3. The retrieved CMS data structure should match the Storage's data structure at this point.
-4. You can use your original CMS page rendering twig to display the preview version.
-5. Check out our [Demoshop](https://github.com/spryker/demoshop) for more detailed examples and ideas regarding the complete Yves integration.
+1. The retrieved CMS data structure should match the Storage's data structure at this point.
+2. You can use your original CMS page rendering twig to display the preview version.
+3. Check out our [Demoshop](https://github.com/spryker/demoshop) for more detailed examples and ideas regarding the complete Yves integration.
 
 ## Configuring Yves Preview Page Access from the Back Office - Optional
 
@@ -94,11 +90,9 @@ class CmsDependencyProvider extends SprykerCmsDependencyProvider
     $config[CmsGuiConstants::CMS_PAGE_PREVIEW_URI] = '/en/cms/preview/%d';
     ...
 ```
-
-</br>
 </details>
 
-2. Optionally add the **Preview** button group item to the "List of CMS pages" in the Back Office by registering the `CmsPageTableExpanderPlugin` plugin to access the preview page.
+1. Optionally add the **Preview** button group item to the "List of CMS pages" in the Back Office by registering the `CmsPageTableExpanderPlugin` plugin to access the preview page.
 
 <details open>
 <summary markdown='span'>Example of page table expander plugin registration:</summary>
@@ -123,11 +117,9 @@ class CmsGuiDependencyProvider extends SprykerCmsGuiDependencyProvider
     }
 }
 ```
-
-</br>
 </details>
 
-3. Optionally add the **Preview** action button to the **Edit Placeholders** in the Back Office by registering the `CreateGlossaryExpanderPlugin` plugin to access the preview page.
+1. Optionally add the **Preview** action button to the **Edit Placeholders** in the Back Office by registering the `CreateGlossaryExpanderPlugin` plugin to access the preview page.
 
 <details open>
 <summary markdown='span'>Example of glossary expander plugin registration:</summary>
@@ -152,8 +144,6 @@ class CmsGuiDependencyProvider extends SprykerCmsGuiDependencyProvider
      }
 }
 ```
-
-</br>
 </details>
 
 ## Restricting Access to Preview Page

@@ -51,7 +51,7 @@ In this section you will find information about our Technology Partner Integrati
 ### Analytics
 
 * [ChannelPilot Analytics](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/analytics/channelpilot-analytics.html)
-* [FactFinder](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/analytics/fact-finder/fact-finder.html)
+* [FactFinder](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/analytics/fact-finder.html)
 * [Haensel AMS](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/analytics/haensel-ams.html)
 * [Mindlab](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/analytics/mindlab.html)
 * [Minubo](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/analytics/minubo.html)
@@ -59,7 +59,7 @@ In this section you will find information about our Technology Partner Integrati
 ### Customer Communication
 
 * [Dotdigital](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/dotdigital.html)
-* [Episerver](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/episerver/episerver.html)
+* [Episerver](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/episerver.html)
 * [Inxmail](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/inxmail.html)
 
 ### Customer Retention & Loyalty
@@ -72,7 +72,7 @@ In this section you will find information about our Technology Partner Integrati
 
 <!--* [8Select](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/8select.html)-->
 <!--* [Contentserv](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/contentserv.html)-->
-* [Econda](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/econda/econda.html)
+* [Econda](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/econda.html)
 * [Nosto](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/nosto.html)
 * [trbo](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/trbo.html)
 
@@ -83,7 +83,7 @@ In this section you will find information about our Technology Partner Integrati
 ## Order Management (ERP/OMS)
 
 * [Tradebyte](/docs/scos/user/technology-partners/{{page.version}}/order-management-erpoms/tradebyte.html)
-* [Punchout Catalogs](/docs/scos/user/technology-partners/{{page.version}}/order-management-erpoms/punchout-catalogs/punchout-catalogs.html)
+* [Punchout Catalogs](/docs/scos/user/technology-partners/{{page.version}}/order-management-erpoms/punchout-catalogs.html)
 
 ## Operational Tools
 
@@ -102,27 +102,26 @@ In this section you will find information about our Technology Partner Integrati
 
 ## Payment Partners
 
-* [Adyen](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen.html)
-* [Amazon Pay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/amazon-pay/amazon-pay.html)
-* [AfterPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/afterpay/afterpay.html)
-* [Arvato](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/arvato/arvato.html)
+* [Adyen](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen.html)
+* [Amazon Pay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/amazon-pay.html)
+* [AfterPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/afterpay.html)
+* [Arvato](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/arvato.html)
 * [Billie](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billie.html)
-* [Billpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billpay/billpay.html)
-* [Braintree](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/braintree/braintree.html)
+* [Billpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/billpay.html)
+* [Braintree](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/braintree.html)
 * [BS Payone](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/bs-payone.html)
-* [Computop](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop/computop.html)
-* [CrefoPay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/crefopay/crefopay-installation-and-configuration.html)
-* [Heidelpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/heidelpay/heidelpay.html)
-<!--* [Informa Solutions](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/informa-solutions.html)-->
-* [Klarna](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/klarna/klarna.html)
-* [Payone](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution/payolution.html)
+* [Computop](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/computop.html)
+* [CrefoPay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/installing-and-configuring-crefopay.html)
+* [Heidelpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/heidelpay.html)
+* [Klarna](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/klarna.html)
+* [Payone](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution.html)
 * [Powerpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/powerpay.html)
 * [Ratenkauf by Easycredit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html)
-* [RatePAY](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay/ratepay.html)
+* [RatePAY](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay.html)
 
  ## Product Information (PIM/ERP)
 
-* [Akeneo](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/akeneo/akeneo.html)
+* [Akeneo](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/akeneo.html)
 * [Xentral](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/xentral.html)
 <!--* [Censhare](/docs/scos/user/technology-partners/{{page.version}}/content-management/censhare.html)-->
 <!--* [Contentserv](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/contentserv.html)-->

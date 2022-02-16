@@ -1650,7 +1650,7 @@ For other attributes of the included resources, see:
 * [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html#measurement-units-response-attributes)
 * [Retrieve image sets of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html#concrete-image-sets-response-attributes)
 * [Retrieve availability of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-availability.html#concrete-product-availability-response-attributes)
-* [Retrieve prices of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-prices.html#concrete-product-prices-response-attributes)
+* [Retrieve prices of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-prices.html#response)
 * [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
 * [Retrieve product ratings and reviews](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-product-ratings-and-reviews.html#product-ratings-and-reviews-response-attributes)
 
@@ -1660,5 +1660,6 @@ For other attributes of the included resources, see:
 | CODE | REASON |
 | --- | --- |
 | 302 | Concrete product is not found. |
+| 312 | Concrete product is not specified.  |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

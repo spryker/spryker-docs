@@ -16,6 +16,8 @@ redirect_from:
   - /v5/docs/en/ht-make-product-shown-on-frontend-by-url
   - /v4/docs/ht-make-product-shown-on-frontend-by-url
   - /v4/docs/en/ht-make-product-shown-on-frontend-by-url
+  - /v3/docs/ht-make-product-shown-on-frontend-by-url
+  - /v3/docs/en/ht-make-product-shown-on-frontend-by-url
   - /v2/docs/ht-make-product-shown-on-frontend-by-url
   - /v2/docs/en/ht-make-product-shown-on-frontend-by-url
   - /v1/docs/ht-make-product-shown-on-frontend-by-url
@@ -33,7 +35,7 @@ There are a number of conditions that should be fulfilled to make your product s
 
 * It is assigned to categories. See the [Category](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/category/assigning-products-to-categories.html) section for details on how to assign products to categories.
 * It is in stock in the warehouse for the current store. See the [Availability](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/availability/managing-products-availability.html) section to learn how to check products' availability.
-* The product's status is **Active**. See the [Products](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/managing-products/managing-products.html#activating-a-product) section to learn how to manage products, including status change.
+* The product's status is **Active**. See the [Products](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/managing-products/managing-products.html#activating-products) section to learn how to manage products, including status change.
 * It has a price in the current locale. See the [Products](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/managing-products/managing-products.html) section for more details.
 * It has been marked as searchable in the Back Office. See the [Products](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/concrete-products/creating-product-variants.html) section for more details
 * It has product variants - abstract product will not be displayed on Yves unless it has product variants. See [Products](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/concrete-products/creating-product-variants.html) to learn how to create product variants.

@@ -10,19 +10,19 @@ redirect_from:
   - /v6/docs/en/retrieving-navigation-trees
 related:
   - title: Migration Guide - NavigationsRestApi
-    link: docs/scos/dev/module-migration-guides/page.version/glue-api/migration-guide-navigationsrestapi.html
+    link: docs/scos/dev/module-migration-guides/glue-api/migration-guide-navigationsrestapi.html
   - title: Browsing a Category Tree
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-trees.html
   - title: Catalog Search
-    link: docs/scos/dev/glue-api-guides/page.version/catalog-search.html
+    link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.html
 ---
 
-The Navigation <!-- add link to feature overview later --> feature enables back-end developers to create navigtaion elements for Storefront. The navigation elements help shop users to navigate the shop and locate the necessary products and other content. Navigation elements can be linked to CMS pages, categories, as well as internal and external links. 
+The [Navigation](/docs/scos/user/features/{{page.version}}/navigation-feature-overview.html)  feature enables back-end developers to create navigation elements for Storefront. The navigation elements help shop users to navigate the shop and locate the necessary products and other content. Navigation elements can be linked to CMS pages, categories, as well as internal and external links. 
         
 A navigation element with its child nodes forms a navigation tree. You can only retrieve the entire navigation tree but not a navigation element.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Navigation](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-navigation-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Navigation feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-navigation-feature-integration.html).
 
 ## Retrieving a navigation tree
 To retrieve a navigation tree, send the request:
@@ -1096,7 +1096,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
 }
 ```
     
-</br>
+<br>
 </details>
 
 
@@ -1106,12 +1106,12 @@ If a navigation tree has a category child node, include the `category-nodes` res
 | Field | Type | Description |
 | --- | --- | --- |
 | name | String | Specifies the tree name. |
-| isActive | Boolean | Specifies whether the tree is active.</br>If the value of the field is *true*, the tree should be displayed to the customer. Otherwise, the tree should be hidden. |
+| isActive | Boolean | Specifies whether the tree is active.<br>If the value of the field is *true*, the tree should be displayed to the customer. Otherwise, the tree should be hidden. |
 | locale | String | Specifies a locale for the tree. |
 | nodes | Array | Specifies an array of node elements that comprise the navigation tree. |
 | title | String | Specifies the title that should be used to display the node anywhere on the frontend. |
 | url | String | Specifies the URL link the node points to.<ul><li>If the `node_type` parameter is set to `cms_page`, `category` or `link`, the URL is relative to the application domain. For example, `/en/product-sets`.</li><li>If the `node_type` parameter is set to external_url, the URL contains an absolute URI. For example, `http://example.com/mypage.html`.</li><li>If the `node_type` parameter is set to label, the URL is always empty, because labels are intended to be text-only elements.</li></ul> |
-| isActive | Boolean | Specifies whether the node is active.</br>If the value of the field is true, the node should be displayed to the customer. Otherwise, the node should be hidden. |
+| isActive | Boolean | Specifies whether the node is active.<br>If the value of the field is true, the node should be displayed to the customer. Otherwise, the node should be hidden. |
 | nodeType | String | Specifies the node type. Should be one of the following values:<ul><li>**label**—specifies a simple label (text-only element).</li><li>**cms_page**—specifies a link to a CMS page;</li><li>**category**—specifies a link to a category page.</li><li>**link**—specifies a link to any page within the shop.</li><li>**external_url**—specifies a link to an external web site.</li></ul> |
 | cssClass | String | Specifies the CSS class to be used to render the node. |
 | validFrom | String | Specifies a date that the node is valid from. |
@@ -1127,7 +1127,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
 | category-nodes | metaKeywords | String | Meta keywords of the category. |
 | category-nodes | metaDescription | String | Meta description of the category. |
 | category-nodes | isActive | Boolean | Specifies whether the category is active. |
-| category-nodes | order | Integer | Category rank.</br>Allowed range: 1–100, where 100 is the highest rank (located on the same level as the parent node). |
+| category-nodes | order | Integer | Category rank.<br>Allowed range: 1–100, where 100 is the highest rank (located on the same level as the parent node). |
 | category-nodes | children | Array | Specifies an array of node elements that are nested within the current category. |
 | category-nodes | parents | Array | Specifies an array of node elements that are parents for the current category. |
 

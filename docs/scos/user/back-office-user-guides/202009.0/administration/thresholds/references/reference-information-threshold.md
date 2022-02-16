@@ -1,5 +1,5 @@
 ---
-title: Reference information- Threshold
+title: Reference information - threshold
 description: The guide provides additional information on thresholds and types of soft thresholds when working with thresholds in the Back Office.
 last_updated: Sep 4, 2020
 template: back-office-user-guide-template
@@ -37,7 +37,7 @@ The following table describes the attributes used to configure thresholds:
 | --- | --- |
 |**Store and Currency** | Defines the store to which the threshold is applied and the currency in which it is displayed. |
 |**Enter threshold value**| Depending on the threshold type, defines the value that should be reached or not reached.|
-|**Message** |A short message that informs the customer about the threshold conditions. For example, _You should add items for {% raw %}{{{% endraw %}threshold{% raw %}}}{% endraw %} to pass a recommended threshold. You can't proceed with checkout._ </br></br> Enter {% raw %}{{{% endraw %}threshold{% raw %}}}{% endraw %} or {% raw %}{{{% endraw %}fee{% raw %}}}{% endraw %} to reference the threshold name or the defined fee respectively. When the message is rendered on the Storefront, the placeholders are replaced with the values from **Enter threshold value** and **Enter flexible fee** or **Enter fixed fee** fields. |
+|**Message** |A short message that informs the customer about the threshold conditions. For example, _You should add items for {% raw %}{{{% endraw %}threshold{% raw %}}}{% endraw %} to pass a recommended threshold. You can't proceed with checkout._ <br><br> Enter {% raw %}{{{% endraw %}threshold{% raw %}}}{% endraw %} or {% raw %}{{{% endraw %}fee{% raw %}}}{% endraw %} to reference the threshold name or the defined fee respectively. When the message is rendered on the Storefront, the placeholders are replaced with the values from **Enter threshold value** and **Enter flexible fee** or **Enter fixed fee** fields. |
 | **Enter fixed fee** | Adds this value to cart if the threshold is not reached. |
 | **Enter flexible fee** | A percentage of an order's sub-total that is added to cart if the threshold is not reached.|
 

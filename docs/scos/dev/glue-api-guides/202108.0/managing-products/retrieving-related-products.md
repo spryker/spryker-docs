@@ -603,9 +603,9 @@ To get related items of an abstract product, send the request:
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | product labels | name | String | Specifies the label name. |
-| product labels | isExclusive | Boolean | Indicates whether the label is `exclusive`.</br>If the attribute is set to true, the current label takes precedence over other labels the product might have. This means that only the current label should be displayed for the product, and all other possible labels should be hidden. |
-| product labels | position | Integer | Indicates the label priority.</br>Labels should be indicated on the frontend according to their priority, from the highest (**1**) to the lowest, unless a product has a label with the `isExclusive` attribute set.|
-| product labels | frontEndReference | String |Specifies the label custom label type (CSS class).</br>If the attribute is an empty string, the label should be displayed using the default CSS style. |
+| product labels | isExclusive | Boolean | Indicates whether the label is `exclusive`.<br>If the attribute is set to true, the current label takes precedence over other labels the product might have. This means that only the current label should be displayed for the product, and all other possible labels should be hidden. |
+| product labels | position | Integer | Indicates the label priority.<br>Labels should be indicated on the frontend according to their priority, from the highest (**1**) to the lowest, unless a product has a label with the `isExclusive` attribute set.|
+| product labels | frontEndReference | String |Specifies the label custom label type (CSS class).<br>If the attribute is an empty string, the label should be displayed using the default CSS style. |
 
 ## Retrieve upselling products of a registered user's cart
 
@@ -618,7 +618,7 @@ To get upselling items for all products in a cart of a registered customer, send
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}}*** | ID of a cart to get upselling items of. [Retrieve all carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-all-carts) to get it. |
+| ***{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}}*** | ID of a cart to get upselling items of. [Retrieve all carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-carts) to get it. |
 
 ### Request
 
@@ -1321,7 +1321,7 @@ See [Retrieving Related Items of an Abstract Product](#related-product-attribute
 | 101 | Сart with the specified ID was not found. |
 | 104 | Cart ID is missing. |
 | 109 | Anonymous customer unique ID is empty. |
-| 301 | Abstract product not found. |
-| 311 | Abstract product ID not specified. |
+| 301 | Abstract product is not found. |
+| 311 | Abstract product ID is not specified. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

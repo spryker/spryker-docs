@@ -15,6 +15,8 @@ redirect_from:
   - /v5/docs/en/ht-create-personalized-prices
   - /v4/docs/ht-create-personalized-prices
   - /v4/docs/en/ht-create-personalized-prices
+  - /v3/docs/ht-create-personalized-prices
+  - /v3/docs/en/ht-create-personalized-prices
   - /v2/docs/ht-create-personalized-prices
   - /v2/docs/en/ht-create-personalized-prices
   - /v1/docs/ht-create-personalized-prices

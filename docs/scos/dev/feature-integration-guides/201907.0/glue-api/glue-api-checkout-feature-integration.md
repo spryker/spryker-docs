@@ -1,5 +1,5 @@
 ---
-title: Checkout feature integration
+title: Glue API - Checkout feature integration
 last_updated: Jan 21, 2020
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/checkout-feature-integration-201907
@@ -10,7 +10,7 @@ redirect_from:
 ---
 
 {% info_block errorBox %}
-The following feature integration Guide expects the basic feature to be in place.</br>The current guide only adds the **Checkout API** functionality.
+The following feature integration Guide expects the basic feature to be in place.<br>The current guide only adds the **Checkout API** functionality.
 {% endinfo_block %}
 
 ## Install Feature API
@@ -132,7 +132,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -206,7 +206,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -230,7 +230,7 @@ Activate the following plugin(s):
 
 | Plugin | Specification | Prerequisites | Namespace |
 | --- | --- | --- | --- |
-| `SinglePaymentCheckoutRequestAttributesValidatorPlugin` | Used for checkout request data validation.</br>The plugin ensures that a request contains one payment method only. | None | `Spryker\Glue\CheckoutRestApi\Plugin` |
+| `SinglePaymentCheckoutRequestAttributesValidatorPlugin` | Used for checkout request data validation.<br>The plugin ensures that a request contains one payment method only. | None | `Spryker\Glue\CheckoutRestApi\Plugin` |
 | `ShipmentMethodCheckoutDataValidatorPlugin` | Verifies whether the specified shipment method is valid. | None | `Spryker\Zed\ShipmentsRestApi\Communication\Plugin\CheckoutRestApi` |
 
 <details open>
@@ -258,7 +258,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 <details open>
@@ -289,7 +289,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox "Verification" %}

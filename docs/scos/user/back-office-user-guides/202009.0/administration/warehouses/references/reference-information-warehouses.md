@@ -1,5 +1,5 @@
 ---
-title: Reference information- Warehouses
+title: Reference information - warehouses
 description: The guide provides additional information on the values you enter when creating and updating warehouses in the Back Office.
 last_updated: Aug 27, 2020
 template: back-office-user-guide-template
@@ -33,7 +33,7 @@ The following table describes the attributes you enter when creating, viewing or
 | Attribute | Description |
 | --- | --- |
 | Name | Name of the warehouse. |
-| Is this warehouse available? | *Yes* - the warehouse is active.</br>*No* - the warehouse is inactive. |
+| Is this warehouse available? | *Yes* - the warehouse is active.<br>*No* - the warehouse is inactive. |
 | Store relation | Store(s) in which the warehouse is available. |
 
 

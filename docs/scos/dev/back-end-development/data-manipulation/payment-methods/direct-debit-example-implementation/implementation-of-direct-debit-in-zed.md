@@ -26,9 +26,9 @@ redirect_from:
 
 This article provides the instructions on how to implement the Direct Debit payment method and integrate it into Checkout, State Machine, and OMS on the back-end side.
 
-## Persisting Payment Details
+## Persisting payment details
 
-The payment details for the Direct Debit payment method need to be persisted in the database.
+The payment details for the Direct Debit payment method should be persisted in the database.
 
 To persist the payment details, do the following:
 
@@ -123,13 +123,13 @@ class PaymentMethodsQueryContainer extends AbstractQueryContainer
 }
 ```
 
-## Saving Direct Debit Payment Details
+## Saving Direct Debit payment details
 
-To add the logic for saving and viewing the direct debit payment details on the business layer and expose them using the `PaymentMethodsFacade`, do the following:
+To add the logic for saving and viewing the Direct Debit payment details on the business layer and expose them using the `PaymentMethodsFacade`, do the following:
 
 1. In the `Business/Reader/ ` folder, add the `DirectDebitReader` class. This will implement the logic for **viewing** the Direct Debit payment details.
 
-**Code sample:**
+<details><summary>Code sample</summary>
 
 ```php
 <?php
@@ -184,9 +184,11 @@ class DirectDebitReader
 
 }
 ```
+</details>
 
-2. In the `Business/Writer/` folder, add the `DirectDebitWriter` class. This will implement the logic for **saving** the Direct Debit payment details.		    
-**Code sample:**
+2. In the `Business/Writer/` folder, add the `DirectDebitWriter` class. This implements the logic for **saving** the Direct Debit payment details.		    
+
+<details><summary>Code sample:</summary>
 
 ```php
 <?php
@@ -201,39 +203,39 @@ use Pyz\Shared\PaymentMethods\PaymentMethodsConstants;
 class DirectDebitWriter
 {
 	/**
-	* @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-	* @param \Generated\Shared\Transfer\CheckoutResponseTransfer $checkoutResponseTransfer
-	*
-	* @return void
-	*/
-	public function saveOrderPayment(QuoteTransfer $quoteTransfer, CheckoutResponseTransfer $checkoutResponseTransfer)
-	{
-		if ($quoteTransfer->requirePayment()->getPayment()->requirePaymentMethodsDirectDebit()->getPaymentMethod() == PaymentMethodsConstants::PAYMENT_METHOD_DIRECTDEBIT) {
-			$this->saveDirectDebit($quoteTransfer, $checkoutResponseTransfer);
-		}
-	}
+     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
+     * @param \Generated\Shared\Transfer\SaveOrderTransfer $saveOrderTransfer
+     *
+     * @return void
+     */
+    public function saveOrderPayment(QuoteTransfer $quoteTransfer, SaveOrderTransfer $saveOrderTransfer)
+    {
+        if ($quoteTransfer->requirePayment()->getPayment()->requirePaymentMethodsDirectDebit()->getPaymentMethod() == PaymentMethodsConstants::PAYMENT_METHOD_NAME_DIRECT_DEBIT) {
+            $this->saveDirectDebit($quoteTransfer, $saveOrderTransfer);
+        }
+    }
 
-	/**
-	* @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-	* @param \Generated\Shared\Transfer\CheckoutResponseTransfer $checkoutResponseTransfer
-	*
-	* @throws \Propel\Runtime\Exception\PropelException
-	*
-	* @return void
-	*/
-	protected function saveDirectDebit(QuoteTransfer $quoteTransfer, CheckoutResponseTransfer $checkoutResponseTransfer)
-	{
-		$entity = new SpyPaymentDirectDebit();
+    /**
+     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
+     * @param \Generated\Shared\Transfer\SaveOrderTransfer $saveOrderTransfer
+     *
+     * @return void
+     */
+    protected function saveDirectDebit(QuoteTransfer $quoteTransfer, SaveOrderTransfer $saveOrderTransfer)
+    {
+        $entity = new SpyPaymentDirectDebit();
 
-		$directDebitTransfer = $quoteTransfer->requirePayment()->getPayment()->requirePaymentMethodsDirectDebit()->getPaymentmethodsdirectdebit();
+        $directDebitTransfer = $quoteTransfer->requirePayment()->getPayment()->requirePaymentMethodsDirectDebit()->getPaymentmethodsdirectdebit();
 
-		$entity->fromArray($directDebitTransfer->toArray());
-		$entity->setFkSalesOrder($checkoutResponseTransfer->getSaveOrder()->getIdSalesOrder());
+        $entity->fromArray($directDebitTransfer->toArray());
+        $entity->setFkSalesOrder($saveOrderTransfer->getIdSalesOrder());
 
-		$entity->save();
-	}
+        $entity->save();
+    }
 }
 ```
+
+</details>
 
 3. Implement the `PaymentMethodsBusinessFactory` to get instances for these 2 classes:
 
@@ -271,7 +273,7 @@ class PaymentMethodsBusinessFactory extends AbstractBusinessFactory
 
 4. Expose the `save/retrieve` Direct Debit payment details using the `PaymentMethodsFacade`:
 
-**Code sample:**
+<details><summary>Code sample:</summary>
 
 ```php
 <?php
@@ -289,15 +291,15 @@ class PaymentMethodsFacade extends AbstractFacade
 {
 
 	/**
-	* @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-	* @param \Generated\Shared\Transfer\CheckoutResponseTransfer $checkoutResponseTransfer
-	*
-	* @return void
-	*/
-	public function saveOrderPayment(QuoteTransfer $quoteTransfer, CheckoutResponseTransfer $checkoutResponseTransfer)
-	{
-		$this->getFactory()->createDirectDebitWriter()->saveOrderPayment($quoteTransfer, $checkoutResponseTransfer);
-	}
+     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
+     * @param \Generated\Shared\Transfer\SaveOrderTransfer $saveOrderTransfer
+     *
+     * @return void
+     */
+    public function saveOrderPayment(QuoteTransfer $quoteTransfer, SaveOrderTransfer $saveOrderTransfer)
+    {
+        $this->getFactory()->createDirectDebitWriter()->saveOrderPayment($quoteTransfer, $saveOrderTransfer);
+    }
 
 	/**
 	* @param int $idSalesOrder
@@ -322,9 +324,11 @@ class PaymentMethodsFacade extends AbstractFacade
 }
 ```
 
-### Listing Direct Debit Payment Details in Zed UI
+</details>
 
-In Zed, when looking over the details on a submitted order, you need to see the payment details.
+### Listing Direct Debit payment details in Zed UI
+
+In Zed, when looking over the details on a submitted order, check the payment details.
 
 To view the payment details, do the following:
 
@@ -406,21 +410,20 @@ class SalesController extends AbstractController
 }
 ```
 
-Information will be available here: `/payment-methods/sales/list?id-sales-order=1`
+Information is available here: `/payment-methods/sales/list?id-sales-order=1`
 
-### Integrating the Direct Debit Method into Checkout
+### Integrating the Direct Debit Method into the checkout
 
-To integrate the Direct Debit method into the checkout, you need to implement these 3 plugins:
+To integrate the Direct Debit method into the checkout, implement these 3 plugins:
+* `PaymentMethodsDirectDebitCheckoutPreConditionPlugin`
+* `PaymentMethodsDirectDebitCheckoutDoSaveOrderPlugin`
+* `PaymentMethodsDirectDebitCheckoutPostSavePlugin`
 
-* `DirectDebitPostCheckPlugin`
-* `DirectDebitPreCheckPlugin`
-* `DirectDebitSaveOrderPlugin`
-
-To do this, perform the following steps:
+To do this, take the following steps:
 
 1. In Zed, add the following 3 plugins to the `Communication/Plugin/Checkout/` folder of the new module you've created (`PaymentMethods`).
 
-**DirectDebitPreCheckPlugin**
+**PaymentMethodsDirectDebitCheckoutPreConditionPlugin**
 
 ```php
 <?php
@@ -429,143 +432,149 @@ namespace Pyz\Zed\PaymentMethods\Communication\Plugin\Checkout;
 
 use Generated\Shared\Transfer\CheckoutResponseTransfer;
 use Generated\Shared\Transfer\QuoteTransfer;
+use Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPreConditionPluginInterface;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
-use Spryker\Zed\Payment\Dependency\Plugin\Checkout\CheckoutPreCheckPluginInterface;
 
 
-class DirectDebitPreCheckPlugin extends AbstractPlugin implements CheckoutPreCheckPluginInterface
+class PaymentMethodsDirectDebitCheckoutPreConditionPlugin extends AbstractPlugin implements CheckoutPreConditionPluginInterface
+
 {
+  /**
+   * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
+   * @param \Generated\Shared\Transfer\CheckoutResponseTransfer $checkoutResponseTransfer
+   *
+   * @return bool
+   */
+  public function checkCondition(QuoteTransfer $quoteTransfer, CheckoutResponseTransfer $checkoutResponseTransfer)
+  {
+      checkoutResponseTransfer->setIsSuccess(true);
 
-	/**
-	* @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-	* @param \Generated\Shared\Transfer\CheckoutResponseTransfer $checkoutResponseTransfer
-	*
-	* @return bool
-	*/
-	public function execute(QuoteTransfer $quoteTransfer, CheckoutResponseTransfer $checkoutResponseTransfer)
-	{
-		$checkoutResponseTransfer->setIsSuccess(true);
-
-		return true;
-	}
-
+      return true;
+  }
 }
 ```
 
-**DirectDebitSaveOrderPlugin**
+**PaymentMethodsDirectDebitCheckoutDoSaveOrderPlugin**
 
 ```php
 <?php
 
 namespace Pyz\Zed\PaymentMethods\Communication\Plugin\Checkout;
 
+use Generated\Shared\Transfer\QuoteTransfer;
+use Generated\Shared\Transfer\SaveOrderTransfer;
+use Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutDoSaveOrderInterface;
+use Spryker\Zed\Kernel\Communication\AbstractPlugin;
+
+/**
+ * @method \Pyz\Zed\PaymentMethods\Business\PaymentMethodsFacade getFacade()
+ */
+class PaymentMethodsDirectDebitCheckoutDoSaveOrderPlugin extends AbstractPlugin implements CheckoutDoSaveOrderInterface
+{
+    /**
+     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
+     * @param \Generated\Shared\Transfer\SaveOrderTransfer $saveOrderTransfer
+     *
+     * @return void
+     */
+    public function saveOrder(QuoteTransfer $quoteTransfer, SaveOrderTransfer $saveOrderTransfer)
+    {
+        $this->getFacade()->saveOrderPayment($quoteTransfer, $saveOrderTransfer);
+    }
+}
+
+
+```
+
+**PaymentMethodsDirectDebitCheckoutPostSavePlugin**
+
+```php
+<?php
+
 use Generated\Shared\Transfer\CheckoutResponseTransfer;
 use Generated\Shared\Transfer\QuoteTransfer;
+use Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPostSaveInterface;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
-use Spryker\Zed\Payment\Dependency\Plugin\Checkout\CheckoutSaveOrderPluginInterface;
 
-    /**
-    * @method \Pyz\Zed\PaymentMethods\Business\PaymentMethodsFacade getFacade()
-     */
-    class DirectDebitSaveOrderPlugin extends AbstractPlugin implements                      CheckoutSaveOrderPluginInterface
-    {
-
+/**
+ * @method \Pyz\Zed\PaymentMethods\Business\PaymentMethodsFacadeInterface getFacade()
+ * @method \Pyz\Zed\PaymentMethods\PaymentMethodsConfig getConfig()
+ */
+class PaymentMethodsDirectDebitCheckoutPostSavePlugin extends AbstractPlugin implements CheckoutPostSaveInterface
+{
     /**
      * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
      * @param \Generated\Shared\Transfer\CheckoutResponseTransfer $checkoutResponseTransfer
      *
-     * @return void
+     * @return \Generated\Shared\Transfer\CheckoutResponseTransfer
      */
-    public function execute(QuoteTransfer $quoteTransfer, CheckoutResponseTransfer $checkoutResponseTransfer)
+    public function executeHook(QuoteTransfer $quoteTransfer, CheckoutResponseTransfer $checkoutResponseTransfer)
     {
-      $this->getFacade()->saveOrderPayment($quoteTransfer, $checkoutResponseTransfer);
+        return $checkoutResponseTransfer;
     }
-				}
-
-```
-
-**DirectDebitPostCheckPlugin**
-
-```php
-<?php
-namespace Pyz\Zed\PaymentMethods\Communication\Plugin\Checkout;
-
-use Generated\Shared\Transfer\CheckoutResponseTransfer;
-use Generated\Shared\Transfer\QuoteTransfer;
-use Spryker\Zed\Kernel\Communication\AbstractPlugin;
-use Spryker\Zed\Payment\Dependency\Plugin\Checkout\CheckoutPostCheckPluginInterface;
-
-class DirectDebitPostCheckPlugin extends AbstractPlugin implements CheckoutPostCheckPluginInterface
-{
-	/**
-	* @api
-	*
-	* @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-	* @param \Generated\Shared\Transfer\CheckoutResponseTransfer $checkoutResponseTransfer
-	*
-	* @return \Generated\Shared\Transfer\CheckoutResponseTransfer
-	*/
-	public function execute(QuoteTransfer $quoteTransfer, CheckoutResponseTransfer $checkoutResponseTransfer)
-	{
-		return $checkoutResponseTransfer;
-	}
 }
 ```
 
-2. Inject these 3 plugins in the `PaymentMethods` module by creating a `PaymentDependencyInjector` under the `Dependency/Injector/` folder:
+2. In  the `Checkout` module, add these 3 plugins to the related methods (plugin stacks) in `CheckoutDependencyProvider`.
 
-**Code sample:**
+<details><summary>Code sample</summary>
 
 ```php
 <?php
-namespace Pyz\Zed\PaymentMethods\Dependency\Injector;
+namespace Pyz\Zed\Checkout;
 
-use Pyz\Zed\PaymentMethods\Communication\Plugin\Checkout\DirectDebitPostCheckPlugin;
-use Pyz\Zed\PaymentMethods\Communication\Plugin\Checkout\DirectDebitPreCheckPlugin;
-use Pyz\Zed\PaymentMethods\Communication\Plugin\Checkout\DirectDebitSaveOrderPlugin;
+use Pyz\Zed\PaymentMethods\Communication\Plugin\Checkout\PaymentMethodsDirectDebitCheckoutPreConditionPlugin;
+use Pyz\Zed\PaymentMethods\Communication\Plugin\Checkout\PaymentMethodsDirectDebitCheckoutDoSaveOrderPlugin;
+use Pyz\Zed\PaymentMethods\Communication\Plugin\Checkout\PaymentMethodsDirectDebitCheckoutPostSavePlugin;
+use Spryker\Zed\Checkout\CheckoutDependencyProvider as SprykerCheckoutDependencyProvider;
 use Spryker\Zed\Kernel\Container;
-use Pyz\Shared\PaymentMethods\PaymentMethodsConstants;
-use Spryker\Zed\Kernel\Dependency\Injector\AbstractDependencyInjector;
-use Spryker\Zed\Payment\Dependency\Plugin\Checkout\CheckoutPluginCollection;
-use Spryker\Zed\Payment\PaymentDependencyProvider;
 
-class PaymentDependencyInjector extends AbstractDependencyInjector
+
+class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 {
-
-	/**
-	* @param \Spryker\Zed\Kernel\Container $container
-	*
-	* @return \Spryker\Zed\Kernel\Container
-	*/
-	public function injectBusinessLayerDependencies(Container $container)
-	{
-		$container = $this->injectPaymentPlugins($container);
-
-		return $container;
-	}
-
-	/**
-	* @param \Spryker\Zed\Kernel\Container $container
-	*
-	* @return \Spryker\Zed\Kernel\Container
-	*/
-	protected function injectPaymentPlugins(Container $container)
-	{
-		$container->extend(PaymentDependencyProvider::CHECKOUT_PLUGINS, function (CheckoutPluginCollection $pluginCollection) {
-			$pluginCollection->add(new DirectDebitPreCheckPlugin(), PaymentMethodsConstants::PROVIDER, PaymentDependencyProvider::CHECKOUT_PRE_CHECK_PLUGINS);
-			$pluginCollection->add(new DirectDebitSaveOrderPlugin(), PaymentMethodsConstants::PROVIDER, PaymentDependencyProvider::CHECKOUT_ORDER_SAVER_PLUGINS);
-			$pluginCollection->add(new DirectDebitPostCheckPlugin(), PaymentMethodsConstants::PROVIDER, PaymentDependencyProvider::CHECKOUT_POST_SAVE_PLUGINS);
-
-			return $pluginCollection;
-		});
-
-		return $container;
-	}
-
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return \Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPreConditionPluginInterface[]
+     */
+    protected function getCheckoutPreConditions(Container $container)
+    {
+        return [
+            ...
+            new PaymentMethodsDirectDebitCheckoutPreConditionPlugin(),
+        ];
+    }
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return \Spryker\Zed\Checkout\Dependency\Plugin\CheckoutSaveOrderInterface[]|\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutDoSaveOrderInterface[]
+     */
+    protected function getCheckoutOrderSavers(Container $container)
+    {
+        return [
+            ...
+            new PaymentMethodsDirectDebitCheckoutDoSaveOrderPlugin(),
+        ];
+    }
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return \Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPostSaveInterface[]
+     */
+    protected function getCheckoutPostHooks(Container $container)
+    {
+        return [
+            ...
+            new PaymentMethodsDirectDebitCheckoutPostSavePlugin(),
+        ];
+    }
 }
 ```
 
-## Configuring Dependency Injectors for Yves and Zed
+</details>
+
+## Configuring dependency injectors for Yves and Zed
+
 Add injectors for Zed and Yves and `ActiveProcess` and Statemachine mapping to the `config\Shared\config_default.php` file:
 
 ```php
@@ -576,9 +585,6 @@ $config[KernelConstants::DEPENDENCY_INJECTOR_YVES] = [
 	],
 ];
 $config[KernelConstants::DEPENDENCY_INJECTOR_ZED] = [
-	'Payment' => [
-		PaymentMethodsConstants::PROVIDER,
-	],
 	'Oms' => [
 		PaymentMethodsConstants::PROVIDER,
 	],
@@ -592,11 +598,11 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 ];
 ```
 
-## Integrating the Direct Debit Payment Method into State Machine
+## Integrating the Direct Debit Payment Method into a state machine
 
 After the preceding procedures have been completed, set up a state machine, which is dedicated for processing orders that use Direct Debit as a payment type. For this purpose, add the `paymentMethodsDirectDebit.xml ` file with the following content to the `config/Zed/oms/` folder:
 
-**Code sample:**
+<details><summary>Code sample</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -694,7 +700,7 @@ After the preceding procedures have been completed, set up a state machine, whic
     </transitions>
 
     <events>
-        <event name="capture direct debit" manual="true" />
+        <event name="capture Direct Debit" manual="true" />
         <event name="payment received" manual="true" />
         <event name="ship order" manual="true" />
         <event name="ready for return"  onEnter="true" />
@@ -708,8 +714,8 @@ After the preceding procedures have been completed, set up a state machine, whic
 </statemachine>
 ```
 
-***
+</details>
 
 **What's next?**
 
-After the Direct Debit payment method has been created and integrated in the back-end, you need to [identify the new Direct Debit payment type in the shared layer](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-the-shared-layer.html).
+After the Direct Debit payment method has been created and integrated in the back-end, [identify the new Direct Debit payment type in the shared layer](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-the-shared-layer.html).

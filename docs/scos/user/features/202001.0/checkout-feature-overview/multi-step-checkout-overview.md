@@ -21,30 +21,16 @@ The checkout is based on a flexible step engine and can be adjusted to any use c
 * Hooks for the integration of any payment or shipment methods
 * Progress bar to navigate between checkout steps
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/v4/docs/checkout-steps-201903" class="mr-link">Get a general idea of the Checkout steps</a></li>
-                <li><a href="https://documentation.spryker.com/v4/docs/checkout-process-201903" class="mr-link">Get a general idea of the Checkout process</a></li>  
-                <li><a href="https://documentation.spryker.com/v4/docs/mg-checkout#upgrading-from-version-4---to-version-6-0-0" class="mr-link">Migrate the Checkout module from version 4.* to version 6.0.0</a></li> 
-                <li><a href="https://documentation.spryker.com/v4/docs/migration-guide-checkoutpage#upgrading-from-version-2-to-version-3" class="mr-link">Migrate the CheckoutPage module from version 2.* to version 3.*</a></li>
-            </ul>
-        </div>
-        <!-- col3 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-red">
-                <li class="mr-title">Shop User</li>
-                <li><a href="https://documentation.spryker.com/v4/docs/checkout-steps-201903" class="mr-link">Get a general idea of the Checkout steps</a></li>
-                <li><a href="https://documentation.spryker.com/v4/docs/checkout-process-201903" class="mr-link">Get a general idea of the Checkout process</a></li>
-                <li><a href="https://documentation.spryker.com/v4/docs/address-step-shop-guide-201911" class="mr-link">Perform the Address Step</a></li>
-                <li><a href="https://documentation.spryker.com/v4/docs/shipment-step-shop-guide-201911" class="mr-link">Perform the Shipment Step</a></li>
-                <li><a href="payment-step-shop-guide-201911" class="mr-link">Perform the Payment Step</a></li>
-                 <li><a href="https://documentation.spryker.com/v4/docs/summary-step-shop-guide-201911" class="mr-link">Perform the Summary Step</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+Developer:
+- [Get a general idea of the Checkout steps](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html)
+- [Get a general idea of the Checkout process](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/checkout-feature-overview.html)
+- [Migrate the Checkout module from version 4.* to version 6.0.0](/docs/scos/dev/module-migration-guides/migration-guide-checkout.html#upgrading-from-version-4-to-version-600)
+- [Migrate the CheckoutPage module from version 2.* to version 3.*](/docs/scos/dev/module-migration-guides/migration-guide-checkoutpage.html)
 
+Shop User:
+- [Get a general idea of the Checkout steps](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html)
+- [Get a general idea of the Checkout process](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/checkout-feature-overview.html)
+- [Perform the Address Step](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-address-step.html)
+- [Perform the Shipment Step](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-shipment-step.html)
+- [Perform the Payment Step](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-payment-step.html)
+- [Perform the Summary Step](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-summary-step.html)

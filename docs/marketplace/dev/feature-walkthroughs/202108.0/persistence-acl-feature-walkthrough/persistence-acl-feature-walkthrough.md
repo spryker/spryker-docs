@@ -1,13 +1,13 @@
 ---
 title: Persistence ACL feature walkthrough
-last_updated: Sep 14, 2021
-template: concept-topic-template
+last_updated: Nov 05, 2021
+description: With the Persistence ACL feature, you can manage authorization at the database entity level, or even within a set of entities or segments.
+template: feature-walkthrough-template
 ---
 
-## Overview
-With the Persistence ACL feature, you may manage authorization at the database entity level, or even within a set of entities (segments). This feature enables a flexible system of inheritance of rights, simplifying the configuration of access. 
+With the Persistence ACL feature, you can manage authorization at the database entity level, or even within a set of entities or segments. This feature enables a flexible system of inheritance of rights, simplifying the configuration of access. 
 
-The Persistence ACL runs in the Persistence layer, as its name suggests. Next, we will discuss the peculiarities and capabilities of the module.
+Persistence ACL runs in the Persistence layer, as its name suggests.
 
 ## Limitations
 The module is based on the Propel ORM (namely Propel Behavior and Propel Hooks). If you are not using `PropelOrm` to interact with data in your system, this module will not work.
@@ -63,22 +63,22 @@ Query execution is performed using the following hooks:
 
 - `preDeleteQuery`
 
-A query sent to the database is intercepted and modified with additional joins to limit the results of the query to only those records available to the current user. If the user attempts to perform a restricted action on an Active Record model (such as updating, deleting, or creating), an `\Spryker\Zed\AclEntity\Persistence\Exception\OperationNotAuthorizedException` is thrown.
+A query sent to the database is intercepted and modified with additional joins to limit the results of the query to only those records available to the current user. If the user attempts to perform a restricted action on an Active Record model (such as updating, deleting, or creating), then `\Spryker\Zed\AclEntity\Persistence\Exception\OperationNotAuthorizedException` is thrown.
 
 ## Learn more
 
-- [Configuration](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/configuration.html)
+- [Configuration](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html)
 - [Rules and scopes](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/rules-and-scopes.html) 
 - [Execution flow](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/execution-flow.html) 
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  | REFERENCES  |
-|---------|---------|
-| [ACL feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/acl-feature-integration.html)   | [Configuration](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/configuration.html) |
-|  | [Execution flow](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/execution-flow.html) |
-|  | [Rules and scopes](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/rules-and-scopes.html) |
-|  | [Global scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/global-scope.html) |
-|  | [Segment scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/segment-scope.html) |
-|  | [Inherited scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/inherited-scope.html) |
-|  | [Composite entity](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html) |
+|INTEGRATION GUIDES  | REFERENCES  | HOWTOS  |
+|---------|---------|---------|
+| [ACL feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/acl-feature-integration.html)   | [Persistence ACL feature configuration](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html) | [HowTo: Split products by stores](/docs/marketplace/dev/howtos/how-to-split-products-by-stores.html)|
+|  | [Execution flow](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/execution-flow.html) |    |
+|  | [Rules and scopes](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/rules-and-scopes.html) |    |
+|  | [Global scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/global-scope.html) |    |
+|  | [Segment scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/segment-scope.html) |  |
+|  | [Inherited scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/inherited-scope.html) |  |
+|  | [Composite entity](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html) |   |

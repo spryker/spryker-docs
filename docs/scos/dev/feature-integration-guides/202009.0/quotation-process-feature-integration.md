@@ -1,5 +1,5 @@
 ---
-title: Quotation process feature integration
+title: Quotation Process feature integration
 description: Install the Quotation Process feature in your project.
 last_updated: Sep 8, 2020
 template: feature-integration-guide-template
@@ -39,7 +39,15 @@ composer require spryker-feature/quotation-process: "202009.0" --update-with-dep
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules were installed:<table><thead><tr><td>Module</td><td>Expected Directory</td></tr></thead><tbody><tr><td>`QuoteRequest`</td><td>`vendor/spryker/quote-request`</td></tr><tr><td>`QuoteRequestExtension`</td><td>`vendor/spryker/quote-request-extension`</td></tr><tr><td>`QuoteRequestAgent`</td><td>`vendor/spryker/quote-request-agent`</td></tr><tr><td>`QuoteRequestDataImport`</td><td>`vendor/spryker/quote-request-data-import`</td></tr></tbody></table>
+Make sure that the following modules were installed:
+
+|Module|Expected Directory|
+|--- |--- |
+|`QuoteRequest`|`vendor/spryker/quote-request`|
+|`QuoteRequestExtension`|`vendor/spryker/quote-request-extension`|
+|`QuoteRequestAgent`|`vendor/spryker/quote-request-agent`|
+|`QuoteRequestDataImport`|`vendor/spryker/quote-request-data-import`|
+
 {% endinfo_block %}
 
 ### 2) Set up Configuration
@@ -167,11 +175,32 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes applied by checking your database:<table><thead><tr><td>Database Entity</td> <td>Type</td><td>Event</td></tr></thead><tbody><tr><td>`spy_quote_request`</td><td>table</td><td>created</td></tr><tr><td>`spy_quote_request_version`</td><td>table</td><td>created</td></tr></tbody></table>
+Make sure that the following changes applied by checking your database:
+
+|Database Entity|Type|Event|
+|--- |--- |--- |
+|`spy_quote_request`|table|created|
+|`spy_quote_request_version`|table|created|
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes in transfer objects:<table><thead><tr><td>Transfer</td><td>Type</td><td>Event</td><td>Path</td></tr></thead><tbody><tr><td>`SpyQuoteRequestEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyQuoteRequestEntityTransfer`</td></tr><tr><td>`SpyQuoteRequestVersionEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyQuoteRequestVersionEntityTransfer`</td></tr><tr><td>`CompanyUserCriteria`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CompanyUserCriteria`</td></tr><tr><td>`QuoteRequestFilter`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/QuoteRequestFilter`</td></tr><tr><td>`QuoteRequestResponse`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/QuoteRequestResponse`</td></tr><tr><td>`QuoteRequestCollection`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/QuoteRequestCollection`</td></tr><tr><td>`QuoteRequestVersionCollection`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/QuoteRequestVersionCollection`</td></tr><tr><td>`QuoteRequest`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/QuoteRequest`</td></tr><tr><td>`QuoteRequestVersion`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/QuoteRequestVersion`</td></tr><tr><td>`QuoteRequestVersionFilter`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/QuoteRequestVersionFilter`</td></tr></tbody></table>
+
+Make sure that the following changes in transfer objects:
+
+|Transfer|Type|Event|Path|
+|--- |--- |--- |--- |
+|`SpyQuoteRequestEntity`|class|created|`src/Generated/Shared/Transfer/SpyQuoteRequestEntityTransfer`|
+|`SpyQuoteRequestVersionEntity`|class|created|`src/Generated/Shared/Transfer/SpyQuoteRequestVersionEntityTransfer`|
+|`CompanyUserCriteria`|class|created|`src/Generated/Shared/Transfer/CompanyUserCriteria`|
+|`QuoteRequestFilter`|class|created|`src/Generated/Shared/Transfer/QuoteRequestFilter`|
+|`QuoteRequestResponse`|class|created|`src/Generated/Shared/Transfer/QuoteRequestResponse`|
+|`QuoteRequestCollection`|class|created|`src/Generated/Shared/Transfer/QuoteRequestCollection`|
+|`QuoteRequestVersionCollection`|class|created|`src/Generated/Shared/Transfer/QuoteRequestVersionCollection`|
+|`QuoteRequest`|class|created|`src/Generated/Shared/Transfer/QuoteRequest`|
+|`QuoteRequestVersion`|class|created|`src/Generated/Shared/Transfer/QuoteRequestVersion`|
+|`QuoteRequestVersionFilter`|class|created|`src/Generated/Shared/Transfer/QuoteRequestVersionFilter`|
+
 {% endinfo_block %}
 
 ### 4) Add Translations
@@ -272,6 +301,7 @@ class QuoteDependencyProvider extends BaseQuoteDependencyProvider
 Make sure editing quote request items does not trigger new quote creation in persistence.
 
 {% endinfo_block %}
+
 **Pyz\Client\PersistentCart\PersistentCartDependencyProvider.php**
 
 ```php
@@ -299,7 +329,9 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
 Make sure that you can edit quote request items.
 
 {% endinfo_block %}
+
 **Pyz\Zed\Console\ConsoleDependencyProvider.php**
+
 ```php
 <?php
  
@@ -328,12 +360,15 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that status of quote request with outdated Valid Until changes to closed after you run `console quote-request:close-outdated` command.
 
 {% endinfo_block %}
+
 **Pyz/Client/Cart/CartDependencyProvider.php**
+
 ```php
 <?php
  
@@ -379,6 +414,7 @@ To start feature integration, overview and install the necessary features:
 |Agent Assist  | 202009.0 |
 
 ### 1) Install Require Modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
@@ -781,5 +817,16 @@ console frontend:yves:build
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following widgets were registered:<table><thead><tr><td>Module</td><td>Test</td></tr></thead><tbody><tr><td>`QuoteRequestMenuItemWidget`</td><td>Log in as a company user, go to **My Account** page, make sure that you see "Requests for Quote" link.</td></tr><tr><td>`QuoteRequestCreateWidget`</td><td>Log in as a company user, go to **Quote** page, make sure that you have some products in the cart. Make sure that you see **Request For Quote** button.</td></tr><tr><td>`QuoteRequestCartWidget`</td><td>After you've pressed the **Edit Items** button on request for a quote, make sure that you see "Save" and **Send To Agent** buttons on a cart page.</td></tr><tr><td>`QuoteRequestCancelWidget`</td><td>Make sure that you see the **Cancel** button on the quote request page.</td></tr><tr><td>`QuoteRequestAgentOverviewWidget`</td><td>When you logged in as an agent make sure that you see a list of quote requests.</td></tr><tr><td>`QuoteRequestAgentCancelWidget`</td><td>Make sure that when you logged in as an agent you can see the **Cancel** button for each quote request.</td></tr><tr><td>`QuoteRequestActionsWidget`</td><td>Make sure that when you edit RFQ shipping data as a buyer, you can see **Cancel**, **Save**, and **Back** buttons on the shipment method page and **Back** button on the shipping address page.</td></tr></tbody></table>
+Make sure that the following widgets were registered:
+
+|Module|Test|
+|--- |--- |
+|`QuoteRequestMenuItemWidget`|Log in as a company user, go to **My Account** page, make sure that you see "Requests for Quote" link.|
+|`QuoteRequestCreateWidget`|Log in as a company user, go to **Quote** page, make sure that you have some products in the cart. Make sure that you see **Request For Quote** button.|
+|`QuoteRequestCartWidget`|After you've pressed the **Edit Items** button on request for a quote, make sure that you see "Save" and **Send To Agent** buttons on a cart page.|
+|`QuoteRequestCancelWidget`|Make sure that you see the **Cancel** button on the quote request page.|
+|`QuoteRequestAgentOverviewWidget`|When you logged in as an agent make sure that you see a list of quote requests.|
+|`QuoteRequestAgentCancelWidget`|Make sure that when you logged in as an agent you can see the **Cancel** button for each quote request.|
+|`QuoteRequestActionsWidget`|Make sure that when you edit RFQ shipping data as a buyer, you can see **Cancel**, **Save**, and **Back** buttons on the shipment method page and **Back** button on the shipping address page.|
+
 {% endinfo_block %}

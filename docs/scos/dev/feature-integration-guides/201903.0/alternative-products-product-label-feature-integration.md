@@ -1,5 +1,5 @@
 ---
-title: Alternative Products- Product Label feature integration
+title: Alternative Products + Product Label feature integration
 description: The guide describes the procedure that you need to perform in order to integrate the Alternative Products + Product Label feature into your project.
 last_updated: Nov 22, 2019
 template: feature-integration-guide-template
@@ -61,7 +61,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 Run the following console command to:
@@ -82,7 +82,7 @@ Enable the following behavior types by registering the plugins:
 |---|---|---|---|
 |`PostProductAlternativeCreatePlugin`|After the product alternative is created, adds product alternatives availability label to the abstract product.|None|`Spryker\Zed\ProductAlternativeProductLabelConnector\Communication\Plugin`|
 |`PostProductAlternativeDeletePlugin`|After the product alternative is deleted, removes product alternatives availability label from the abstract product.|None|`Spryker\Zed\ProductAlternativeProductLabelConnector\Communication\Plugin`|
-|`ProductAlternativeLabelUpdaterPlugin`|Used to persist alternative product label relation changes into the database. </br>The plugin is called when the `ProductLabelRelationUpdaterConsole` command is executed.|None|`Spryker\Zed\ProductAlternativeProductLabelConnector\Communication\Plugin`|
+|`ProductAlternativeLabelUpdaterPlugin`|Used to persist alternative product label relation changes into the database. <br>The plugin is called when the `ProductLabelRelationUpdaterConsole` command is executed.|None|`Spryker\Zed\ProductAlternativeProductLabelConnector\Communication\Plugin`|
 
 <details open>
 <summary markdown='span'>src/Pyz/Zed/ProductAlternative/ProductAlternativeDependencyProvider.php</summary>
@@ -119,7 +119,7 @@ class ProductAlternativeDependencyProvider extends SprykerProductAlternativeDepe
     }
 }
 ```
-</br>
+<br>
 </details>
 
 <details open>
@@ -146,11 +146,11 @@ class ProductLabelDependencyProvider extends SprykerProductLabelDependencyProvid
     }
 }
 ```
-</br>
+<br>
 </details>
 
 {% info_block infoBox "Verification" %}
-**Make sure, that**:</br>When you add product alternatives, it adds the corresponding label to the product.</br>When you remove product alternatives, it removes the corresponding label from the product.
+**Make sure, that**:<br>When you add product alternatives, it adds the corresponding label to the product.<br>When you remove product alternatives, it removes the corresponding label from the product.
 {% endinfo_block %}
 
 <!-- Last review date: Mar. 28th, 2019 by  Karoly Gerner, Anastasija Datsun-->

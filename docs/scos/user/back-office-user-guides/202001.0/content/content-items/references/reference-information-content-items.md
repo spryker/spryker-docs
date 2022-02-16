@@ -1,5 +1,5 @@
 ---
-title: Content Items- Reference Information
+title: Reference information - Content Items
 description: The guide provides reference information you work with when creating, updating and viewing content items in the Back Office.
 last_updated: Mar 31, 2020
 template: back-office-user-guide-template
@@ -13,6 +13,7 @@ redirect_from:
 This topic contains the reference information you need to know when working with content items in the Content Management > Content Items section.
 
 ## Content Items Page
+
 In the **Content Items** section, you see the following:
 
 | Attribute | Description |
@@ -36,6 +37,7 @@ On this page, you can also:
 
 ***
 ## Create and Edit Banner Content Item Page
+
 The following table describes the attributes you must enter when creating or editing a **Banner** content item.
 
 | Attribute | Description |
@@ -50,6 +52,7 @@ The following table describes the attributes you must enter when creating or edi
 ***
 
 ## Create and Edit Abstract Product List Content Item Page
+
 The following table describes the attributes you see on the **Create and Edit Abstract Product List content item** page.
 
 | Attribute | Description |
@@ -68,6 +71,7 @@ The following table describes the attributes you see on the **Create and Edit Ab
 |**Selected** | A column that contains **+ Add to list** you can click to add a product to the top table so that it can be added to the Abstract Product List content item.|
 ***
 ## Create and Edit Product Set Content Item Page
+
 The following table describes the attributes you see on the **Create and Edit Product Set content item** page.
 
 | Attribute | Description |
@@ -78,12 +82,13 @@ The following table describes the attributes you see on the **Create and Edit Pr
 | **Actions (top table)**| A column that contains **Delete** you can click to remove the product set from the list. |
 | **Available Product Sets** |  A bottom table that displays product sets available in the database.|
 |**ID**  | A sequence number. |
-|  **Name** </br>(in the top table) |A name of the product set. |
+|  **Name** <br>(in the top table) |A name of the product set. |
 | **# of Products** | Displays the number of products available in the product set. |
 |**Status**  | Shows the status of the product set: active or inactive. |
 |**Actions (bottom table)**  |A column that contains **+ Add** you can click to add a product set to the top table so that it can be added to the Product Set content item. |
 ***
 ## Create and Edit File List Content Item Page
+
 The following table describes the attributes you see on the **Create and Edit File List content item** page.
 
 | Attribute | Description |

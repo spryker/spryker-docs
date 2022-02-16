@@ -119,8 +119,8 @@ Below you will find the list of the new/updated documentation released as part o
 <details>
 <summary markdown='span'>Migration guides</summary>
 
-* [PriceProductSchedule migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-priceproductschedule.html)
-* [PriceProductScheduleGui migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-priceproductschedulegui.html)
+* [PriceProductSchedule migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/migration-guide-priceproductschedule.html)
+* [PriceProductScheduleGui migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/migration-guide-priceproductschedulegui.html)
 
 </details>
 <details>
@@ -159,9 +159,9 @@ Below you will find the list of the new/updated documentation released as part o
 <summary markdown='span'>Migration guides</summary>
 
 
-* [CmsBlock - migration from v. 2.* to v. 3.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cmsblock.html#upgrading-from-version-2-to-version-3)
-* [CmsBlockStorage - migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cmsblockstorage.html)
-* [CmsBlockWidget - migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-cmsblockwidget.html)
+* [CmsBlock - migration from v. 2.* to v. 3.*](/docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html#upgrading-from-version-2-to-version-3)
+* [CmsBlockStorage - migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/migration-guide-cmsblockstorage.html)
+* [CmsBlockWidget - migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/migration-guide-cmsblockwidget.html)
 
 
 </details>
@@ -233,10 +233,10 @@ Below you will find the list of the new/updated documentation released as part o
 <details>
 <summary markdown='span'>Migration guides</summary>
 
-* [ConfigurableBundle migration from v. 1* to v. 2*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-configurablebundle.html)
-* [ConfigurableBundleStorage migration from v. 1* to v. 2*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-configurablebundlestorage.html)
-* [MerchantRelationshipProductListGui migration from v. 1* to v. 2*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-merchantrelationshipproductlistgui.html)
-* [ProductListGui migration from v. 1* to v. 2*](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-productlistgui.html)
+* [ConfigurableBundle migration from v. 1* to v. 2*](/docs/scos/dev/module-migration-guides/migration-guide-configurablebundle.html)
+* [ConfigurableBundleStorage migration from v. 1* to v. 2*](/docs/scos/dev/module-migration-guides/migration-guide-configurablebundlestorage.html)
+* [MerchantRelationshipProductListGui migration from v. 1* to v. 2*](/docs/scos/dev/module-migration-guides/migration-guide-merchantrelationshipproductlistgui.html)
+* [ProductListGui migration from v. 1* to v. 2*](/docs/scos/dev/module-migration-guides/migration-guide-productlistgui.html)
 
 </details>
 <details>
@@ -266,9 +266,6 @@ Below you will find the list of the new/updated documentation released as part o
 
 </details>
 
-
-
-</details>
 
 * [Ratings and Reviews API](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/managing-product-ratings-and-reviews.html)
 
@@ -300,8 +297,8 @@ Below you will find the list of the new/updated documentation released as part o
 ### Spryker in Docker
 
 * [Queue Worker](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#queue)
-* [Deploy File Reference](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file-reference-1.0.html)
-* [Health checks](/docs/scos/dev/technical-enhancements/health-checks.html)
+* [Deploy File Reference](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html)
+* [Health checks](/docs/scos/dev/technical-enhancement-integration-guides/integrating-health-checks.html)
 * [Asset Management](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/asset-management.html)
 <details>
 <summary markdown='span'>Feature overview</summary>
@@ -313,7 +310,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details>
 <summary markdown='span'>Integration guide</summary>
 
-[Custom Location for Static Assets](/docs/scos/dev/technical-enhancements/custom-location-for-static-assets.html)
+[Custom Location for Static Assets](/docs/scos/dev/technical-enhancement-integration-guides/integrating-custom-location-for-static-assets.html)
 
 </details>
 

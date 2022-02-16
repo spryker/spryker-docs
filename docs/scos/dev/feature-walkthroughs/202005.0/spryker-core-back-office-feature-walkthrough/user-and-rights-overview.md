@@ -3,11 +3,12 @@ title: Users and rights overview
 last_updated: Aug 20, 2021
 description: User and rights management is a general term that describes the security functionality for controlling user access to perform various roles throughout the system
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/v5/docs/permission-acl-management
-originalArticleId: 4be8917d-9d80-4508-8de7-57f01916d3c3
+originalLink: https://documentation.spryker.com/docs/user-and-rights-overview
+originalArticleId: 4006b24f-fd0a-480a-9589-d2b822fdbde3
 redirect_from:
-- /v5/docs/permission-acl-management
-- /v5/docs/en/permission-acl-management
+- /v5/docs/user-and-rights-management
+- /v5/docs/en/user-and-rights-management
+- /docs/scos/dev/feature-walkthroughs/202005.0/customer-account-management-feature-walkthrough/user-and-rights-overview.html
 ---
 
 User and rights management is a general term that describes the security functionality for controlling user access to perform various roles throughout the system.
@@ -20,7 +21,7 @@ In the Spryker Commerce OS user and rights management is implemented in the foll
 
 ## Users and customers
 
-It is important to distinguish between users and customers. A user works with the back-end side of the store and handles the store maintenance such as creating users and assigning them to roles that will allow them to perform actions such as editing the CMS, activating and deactivating products and managing discounts. A customer on the other hand is the final consumer of the online store i.e. the person who places orders. Customers are also managed in Zed but in a different section.
+It is important to distinguish between users and customers. A user works with the back-end side of the store and handles the store maintenance such as creating users and assigning them to roles that will allow them to perform actions such as editing the CMS, activating and deactivating products and managing discounts. A customer on the other hand is the final consumer of the online store for example, the person who places orders. Customers are also managed in Zed but in a different section.
 
 Users are assigned to groups. Groups are a collection of Roles e.g. customer-care, root, 3rd party etc. Roles have Resources (rules) assigned to them. Resources (rules) are used to assign specific privileges to a Role for example, a Sales Representative Role or a System Administrator Role. Resources are always /module/controller/action and you can use * as placeholder.
 
@@ -33,9 +34,9 @@ The Auth, ACL and User bundles are configured and managed through the Zed user i
 
 Also, you can find bundle names as well as controllers and actions in the file `communication/navigation.xml`. For example:
 
-![bundles_navigation.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/bundles_navigation.png)
+![bundles_navigation.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.md/bundles_navigation.png)
 
-See [Managing users](https://documentation.spryker.com/docs/managing-users) to learn how to create and manage users, groups, and roles .
+See [Managing users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html) to learn how to create and manage users, groups, and roles .
 
 <a name="add-acl"></a>
 
@@ -113,24 +114,3 @@ In the example, we grant the user **winner@spryker.com** access to all Zed resou
 
 
 
-## If you are:
-
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/spryker-core-back-office-feature-integration" class="mr-link">Enable Users and Rights by integrating the Spryker Core Back Office feature into your project</a></li></ul>
-        </div>
-  <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/managing-roles" class="mr-link">Create and manage roles</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-groups" class="mr-link">Create and manage groups</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-users" class="mr-link">Create and manage users</a></li>
-            </ul>
-        </div>
- </div>
-</div>

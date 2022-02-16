@@ -1,5 +1,5 @@
 ---
-title: Quick Order- Measurement Units feature integration
+title: Quick Add to Cart + Measurement Units feature integration
 description: Quick Add to Cart + Measurement Units allow selling products by any unit of measure with a click. This guide describes how to integrate this feature into your project.
 last_updated: Dec 24, 2019
 template: feature-integration-guide-template
@@ -55,7 +55,7 @@ class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyPr
 </details>
 
 {% info_block warningBox "Verification" %}
-Make the following checks at  https://mysprykershop.com/quick-order:</br> `QuickOrderFormMeasurementUnitColumnPlugin` adds the *Measuring Unit* column to the **Quick Add To Cart** page. Check if the column is displayed on the page.
+Make the following checks at  https://mysprykershop.com/quick-order:<br> `QuickOrderFormMeasurementUnitColumnPlugin` adds the *Measuring Unit* column to the **Quick Add To Cart** page. Check if the column is displayed on the page.
 {% endinfo_block %}
 
 |Plugin|Specification|Prerequisites|Namespace|

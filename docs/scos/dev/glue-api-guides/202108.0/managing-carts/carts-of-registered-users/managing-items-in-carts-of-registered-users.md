@@ -44,7 +44,7 @@ To add items to a cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html)) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
+| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html)) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-carts) to get it. |
 
 ### Request
 
@@ -2392,7 +2392,7 @@ To add a configurable bundle to a registered user’s cart, send the request:
 
 | PATH PARAMETER | DESCRIPTIO |
 | --- | --- |
-| ***cart_uuid*** | A unique identifier of a cart. [Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
+| ***cart_uuid*** | A unique identifier of a cart. [Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-carts) to get it. |
 
 ### Request
 
@@ -2617,7 +2617,7 @@ To change the number of items in a cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***cart_uuid*** | Unique identifier of a cart. [Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
+| ***cart_uuid*** | Unique identifier of a cart. [Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-carts) to get it. |
 | ***{% raw %}{{{% endraw %}itemgroupkey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it is equal to the item’s SKU. |
 
 ### Request
@@ -2785,8 +2785,8 @@ To change quantity of configurable bundles in a registered user’s cart, send t
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | A unique identifier of a cart.[ Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
-| ***{% raw %}{{{% endraw %}bundlegroupkey{% raw %}}}{% endraw %}*** | Group key of the configurable bundle. The value is generated based on the Configurable Bundle Template and items selected in the slot. You can get it when [adding the configurable bundle to a registered user’s cart](#add-a-configurable-bundle-to-a-registered-user’s-cart). |
+| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | A unique identifier of a cart.[ Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-carts) to get it. |
+| ***{% raw %}{{{% endraw %}bundlegroupkey{% raw %}}}{% endraw %}*** | Group key of the configurable bundle. The value is generated based on the Configurable Bundle Template and items selected in the slot. You can get it when [adding the configurable bundle to a registered user’s cart](#add-a-configurable-bundle-to-a-registered-users-cart). |
 
 ### Request
 
@@ -3085,7 +3085,7 @@ Request sample:
 ```    
 </details>
 
-For the attribute descriptions, see [Add a configurable bundle to a registered user’s cart](#add-a-configurable-bundle-to-a-registered-user’s-cart)
+For the attribute descriptions, see [Add a configurable bundle to a registered user’s cart](#add-a-configurable-bundle-to-a-registered-users-cart)
 
 ## Remove items from a registered user's cart
 
@@ -3097,7 +3097,7 @@ To remove an item from a registered user's cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
+| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-carts) to get it. |
 | ***{% raw %}{{{% endraw %}itemgroupkey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it is equal to the item’s SKU. |
 
 
@@ -3124,7 +3124,7 @@ To remove a configurable bundle from a registered user’s cart, send the reques
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-carts) to get it. |
-| ***{% raw %}{{{% endraw %}bundle_group_key{% raw %}}}{% endraw %}*** | Group key of the configurable bundle. The value is generated based on the configurable bundle template and items selected in the slot. You can get it when [adding the configurable bundle to a registered user’s cart](#add-a-configurable-bundle-to-a-registered-user’s-cart). |
+| ***{% raw %}{{{% endraw %}bundle_group_key{% raw %}}}{% endraw %}*** | Group key of the configurable bundle. The value is generated based on the configurable bundle template and items selected in the slot. You can get it when [adding the configurable bundle to a registered user’s cart](#add-a-configurable-bundle-to-a-registered-users-cart). |
 
 ### Request
 
@@ -3142,23 +3142,32 @@ If the item is deleted successfully, the endpoint returns the “204 No Content�
 
 | CODE | REASON |
 | --- | --- |
-| 101 | Cart with given uuid not found. |
+| 001 | Access token is incorrect. |
+| 002 | Access token is missing. |
+| 003 | Failed to log in the user. |
+| 101 | Cart with given uuid is not found. |
 | 102 | Failed to add an item to a cart. |
-| 103 | Item with the given group key not found in the cart. |
+| 103 | Item with the given group key is not found in the cart. |
 | 104 | Cart uuid is missing. |
-| 105 | Cart could not be deleted. |
-| 106 | Cart item could not be deleted. |
+| 105 | Cart cannot be deleted. |
+| 106 | Cart item cannot be deleted. |
 | 107 | Failed to create a cart. |
-| 109 | Anonymous customer unique id is empty. |
 | 110 | Customer already has a cart. |
 | 111 | Can’t switch price mode when there are items in the cart. |
 | 112 | Store data is invalid. |
-| 113 | Cart item could not be added. |
-| 114 | Cart item could not be updated. |
+| 113 | Cart item cannot be added. |
+| 114 | Cart item cannot be updated. |
 | 115 | Unauthorized cart action. |
 | 116 | Currency is missing. |
 | 117 | Currency is incorrect. |
 | 118 | Price mode is missing. |
 | 119 | Price mode is incorrect. |
+| 4001 | There was a problem adding or updating the configured bundle. |
+| 4002 | Configurable bundle template is not found. |
+| 4003 | The quantity of the configured bundle should be more than zero. |
+| 4004 | Configured bundle with provided group key is not found in cart. |
+| 4005 | The configured bundle cannot be added. |
+| 4006 | The configured bundle cannot be updated. |
+| 4007 | The configured bundle cannot be removed. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

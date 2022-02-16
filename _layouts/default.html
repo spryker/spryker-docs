@@ -35,9 +35,9 @@
     {{content}}
         <!-- id="tg-sb-content" -->
     {% include footer.html %}
+    {% if site.google_analytics %}
+    {% include google_analytics.html %}
+    {% endif %}
 </div>
 </body>
-{% if site.google_analytics %}
-{% include google_analytics.html %}
-{% endif %}
 </html>

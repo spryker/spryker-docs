@@ -16,7 +16,7 @@ Templates slots enables content managers to effectively and coherently interact 
 
 {% info_block infoBox %}
 
-Templates and slots is a complex funcitonality which works in conjunction with other functionalities. To use it effectively, make sure you get familiar with the functionalities in the order they are presented:
+Templates and slots is a complex functionality which works in conjunction with other functionalities. To use it effectively, make sure you get familiar with the functionalities in the order they are presented:
 * [CMS Page](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html)
 * [CMS Block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html)
 * [Content Items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html)
@@ -304,7 +304,7 @@ This section describes how Slot Widget works with the Spryker CMS Blocks content
 {% info_block infoBox %}
 
 
-* By default, names are used as unique identifiers of CMS blocks while Slot Widget requires keys. To enable Slot Widget to work with CMS blocks, [upgrade](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-cmsblock.html#upgrading-from-version-2-to-version-3) the `CMSBlock` module in your project for CMS Blocks to have keys.
+* By default, names are used as unique identifiers of CMS blocks while Slot Widget requires keys. To enable Slot Widget to work with CMS blocks, [upgrade](/docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html#upgrading-from-version-2-to-version-3) the `CMSBlock` module in your project for CMS Blocks to have keys.
 
 
 {% endinfo_block %}

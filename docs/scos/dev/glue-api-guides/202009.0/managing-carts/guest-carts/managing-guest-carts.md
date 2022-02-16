@@ -1034,7 +1034,7 @@ For the attributes of other included resources, see:
 
 Guest carts are anonymous as they are not related to any user. If a user registers or logs in, the guest cart is automatically assigned to their account.
 
-To assign a guest cart to a customer, i.e., merge the carts, include the unique identifier associated with the customer in the *X-Anonymous-Customer-Unique-Id* header of the authentication request if it is an existing customer, or request to create a customer account if it is a new one.
+To assign a guest cart to a customer, for example, merge the carts, include the unique identifier associated with the customer in the *X-Anonymous-Customer-Unique-Id* header of the authentication request if it is an existing customer, or request to create a customer account if it is a new one.
 
 Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/scos/user/features/{{page.version}}/multiple-carts-feature-overview.html) environment:
 
@@ -1121,7 +1121,7 @@ Request sample: `GET https://glue.myspsrykershop.com/carts`
 
 | Header key | Header value | Required | Description |
 | --- | --- | --- | --- |
-| Authorization | string | v | Alphanumeric string that authenticates the customer you want to change the password of. Get it by [authenticating as a customer](https://documentation.spryker.com/authenticating-as-a-customer).  |
+| Authorization | string | v | Alphanumeric string that authenticates the customer you want to change the password of. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 In the **multi-cart** environment, the guest cart has been converted to a regular cart. You can see it in the list of carts with the id `9183f604-9b2c-53d9-acbf-cf59b9b2ff9f`.
 

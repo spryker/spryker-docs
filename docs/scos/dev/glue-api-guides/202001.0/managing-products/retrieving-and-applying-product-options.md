@@ -16,7 +16,7 @@ The [Product Options](/docs/scos/user/features/{{page.version}}/product-options-
 
 Options come with their own prices and tax sets. Also, different options can apply to different products. All product options available in a shop are organized in groups.
 
-Although options are applied to abstract products only, the *Product Options* API enables retrieving available options for both [abstract and concrete](/docs/scos/user/back-office-user-guides/{{page.version}}/products/products/abstract-and-concrete-products.html) products. Also, it enables selecting the necessary options when ordering products and viewing the selected options when an order is complete. For this purpose, product options are retrievable in endpoints related to [products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-information.html) (e.g. `/abstract-products` or `/concrete-products`), [guest carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/managing-carts.html) and [carts of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html) (e.g. `/guest-cart-items` or `/carts/{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}/items`, etc.), as well as [in order history](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html).
+Although options are applied to abstract products only, the *Product Options* API enables retrieving available options for both [abstract and concrete](/docs/scos/user/features/202108.0/product-feature-overview/product-feature-overview.html) products. Also, it enables selecting the necessary options when ordering products and viewing the selected options when an order is complete. For this purpose, product options are retrievable in endpoints related to [products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-information.html) (e.g. `/abstract-products` or `/concrete-products`), [guest carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/managing-carts.html) and [carts of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html) (e.g. `/guest-cart-items` or `/carts/{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}/items`, etc.), as well as [in order history](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html).
 
 With the help of the data provided by the API resources, you will be able to perform the following tasks:
 
@@ -168,7 +168,7 @@ Each product option is represented by a related resource with the following attr
 }
 ```
     
-</br>
+<br>
 </details>
 
 ## Retrieving Product Options for Cart Items
@@ -190,8 +190,7 @@ Endpoints for **carts of registered users**:
 
 {% info_block warningBox "Authentication" %}
 
-Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
-
+Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. 
 {% endinfo_block %}
 
 Endpoints for **guest carts:**
@@ -380,7 +379,7 @@ Each product option available for every product in the cart is represented by a 
 }
 ```
     
-</br>
+<br>
 </details>
 
 <details open>
@@ -525,7 +524,7 @@ Each product option available for every product in the cart is represented by a 
 }
 ```
     
-</br>
+<br>
 </details>
 
 ### Applying Product Options to Cart Items
@@ -541,7 +540,7 @@ Sample Request:
 
 {% info_block infoBox "Info" %}
 
-For more details on managing carts of registered users, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/managing-carts.html-of-registered-users-201907).
+For more details on managing carts of registered users, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html).
 
 {% endinfo_block %}
 
@@ -569,7 +568,7 @@ For more details on managing carts of registered users, see [Managing Carts of R
 
 {% info_block warningBox "Authentication" %}
 
-Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. 
 
 {% endinfo_block %}
 
@@ -586,7 +585,7 @@ Sample Requests:
 
 {% info_block infoBox "Info" %}
 
-For more details on managing carts of registered users, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html).
+For more details on managing carts of registered users, see [Managing carts of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html).
 
 {% endinfo_block %}
 
@@ -625,12 +624,12 @@ No matter which type of cart is created or modified, the following attributes sh
 | --- | --- | --- | --- |
 | **sku** | String | yes | Specifies the SKU of the product to add to the cart or to modify. |
 | **quantity** | Integer | yes | Specifies the number of products to be available in the cart. |
-| **productOptions** | Array of **product-option** | no | Specifies the product options to apply to the product.</br></br>Each option must be represented by a JSON object containing only 1 attribute: **sku**. It specifies the SKU of the option to apply.</br></br>**Note**: It is the responsibility of the API Client to track whether the selected items are compatible. For example, the client should not allow a **2**-year and a **4**-year warranty service to be applied to the same product. The API endpoints allow any combination of items, no matter whether they are compatible or not. |
+| **productOptions** | Array of **product-option** | no | Specifies the product options to apply to the product.<br><br>Each option must be represented by a JSON object containing only 1 attribute: **sku**. It specifies the SKU of the option to apply.<br><br>**Note**: It is the responsibility of the API Client to track whether the selected items are compatible. For example, the client should not allow a **2**-year and a **4**-year warranty service to be applied to the same product. The API endpoints allow any combination of items, no matter whether they are compatible or not. |
 
 You can specify a certain product several times with different options. In this case, the product will be added as multiple cart items.
 
 ### Response
-The endpoints respond with information on the cart or item that is being created or modified. For detailed information and the possible error codes, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/managing-carts.html-of-registered-users-201907) and [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html).
+The endpoints respond with information on the cart or item that is being created or modified. For detailed information and the possible error codes, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html) and [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html).
 
 ## Retrieving Product Options for Orders
 To retrieve the product options applied to order items, send a *GET* request to retrieve the order information.
@@ -640,7 +639,7 @@ Endpoint: `/orders/{% raw %}{{{% endraw %}order_id{% raw %}}}{% endraw %}` - ret
 
 {% info_block warningBox "Authentication" %}
 
-Orders cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+Orders cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. 
 
 {% endinfo_block %}
 

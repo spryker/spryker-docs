@@ -1,5 +1,5 @@
 ---
-title: Back Office feature integration
+title: Spryker Core Back Office feature integration
 description: Learn how to add the Translation functionality to the basic Back Office feature. This guide provides step-by-step instructions for the integration process.
 last_updated: Mar 5, 2020
 template: feature-integration-guide-template
@@ -256,7 +256,7 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that plugins work: </br>1. Log into back office.</br>2. Go to the *User Control>User* section.</br>3. Click **Add New User**.</br>4. Check that the **Interface language*** field is available on the *Create new User* page.
+Make sure that plugins work: <br>1. Log into back office.<br>2. Go to the *User Control>User* section.<br>3. Click **Add New User**.<br>4. Check that the **Interface language*** field is available on the *Create new User* page.
 {% endinfo_block %}
 
 #### Set Up Console Commands

@@ -12,7 +12,7 @@ related:
   - title: Authentication and Authorization
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
   - title: Retrieving Business Unit Information
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-unit-information.html
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-units.html
   - title: Retrieving Company Role Information
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-roles.html
   - title: Retrieving Company User Information
@@ -53,7 +53,7 @@ In your development, the endpoint can help you to:
 * Allow users to benefit from prices specific to their company.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html#glue-api--company-account-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html).
 
 ## Retrieving Available Company Users
 To retrieve a list of all the Company Users available to the currently logged in user, send a GET request to the following endpoint:
@@ -73,7 +73,7 @@ The endpoint responds with a `RestCompanyUserCollectionResponse` that contains
 
 | Attribute* | Type | Description |
 | --- | --- | --- |
-| id | String | Specifies the Company User ID.</br>You can use the ID to impersonate as the Company User via the `/company-user-access-tokens` endpoint. |
+| id | String | Specifies the Company User ID.<br>You can use the ID to impersonate as the Company User via the `/company-user-access-tokens` endpoint. |
 | isActive | Boolean | Indicates whether the Company User is active. |
 | isDefault | Boolean | Indicates whether the Company User is the default one for the logged in customer. |
 
@@ -320,7 +320,7 @@ In this case, the following additional attributes will be added to the response:
 }
 ```
     
-</br>
+<br>
 </details>
 
 ### Possible Errors
@@ -345,7 +345,7 @@ To access the endpoint, you need to authenticate customers as regular users firs
 
 | Attribute | Type | Description |
 | --- | --- | --- |
-| idCompanyUser | String | Specifies the ID of the Company User to impersonate.</br>Company User IDs can be retrieved using the **/company-users/mine** endpoint. |
+| idCompanyUser | String | Specifies the ID of the Company User to impersonate.<br>Company User IDs can be retrieved using the **/company-users/mine** endpoint. |
 
 **Sample Request:**
     

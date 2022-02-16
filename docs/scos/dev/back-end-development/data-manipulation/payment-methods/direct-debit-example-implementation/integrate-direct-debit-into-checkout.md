@@ -94,8 +94,7 @@ class CheckoutPageDependencyInjector implements DependencyInjectorInterface
 
 ```
 
-</br>
-</details>
+<br>
 
 <!--{% info_block errorBox %}
 If you re-created this example in Demoshop, perform some adjustments on the `selectPayment()` from `checkout.js`.

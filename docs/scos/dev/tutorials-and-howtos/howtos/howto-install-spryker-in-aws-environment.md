@@ -16,6 +16,8 @@ redirect_from:
   - /v5/docs/en/ht-install-spryker-in-aws-environment
   - /v4/docs/ht-install-spryker-in-aws-environment
   - /v4/docs/en/ht-install-spryker-in-aws-environment
+  - /v3/docs/ht-install-spryker-in-aws-environment
+  - /v3/docs/en/ht-install-spryker-in-aws-environment
   - /v2/docs/ht-install-spryker-in-aws-environment
   - /v2/docs/en/ht-install-spryker-in-aws-environment
   - /v1/docs/ht-install-spryker-in-aws-environment
@@ -1917,7 +1919,7 @@ mysqlslap --host= {% raw %}{{{% endraw %}RDS_ENDPOINT{% raw %}}}{% endraw %} --u
 ```
 
 {% info_block infoBox "Benchmark result examples:" %}
-Average number of seconds to run all queries: 0.739 seconds - db.t2.small </br>Average number of seconds to run all queries: 0.485 seconds - db.t2.medium
+Average number of seconds to run all queries: 0.739 seconds - db.t2.small <br>Average number of seconds to run all queries: 0.485 seconds - db.t2.medium
 {% endinfo_block %}
 
 #### Redis Latency Check
@@ -1929,7 +1931,7 @@ redis-cli --latency -h {% raw %}{{{% endraw %}ELASTICACHE_ENDPOINT{% raw %}}}{% 
 
 {% info_block infoBox "Benchmark result examples:" %}
 
-avg: 0.48 (20038 samples) - cache.t2.micro </br>avg: 0.31 (20047 samples) - cache.t2.medium)
+avg: 0.48 (20038 samples) - cache.t2.micro <br>avg: 0.31 (20047 samples) - cache.t2.medium)
 
 {% endinfo_block %}
 

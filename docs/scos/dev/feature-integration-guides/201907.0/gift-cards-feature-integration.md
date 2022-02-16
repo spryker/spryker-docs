@@ -202,7 +202,7 @@ Make sure that propel entities have been generated successfully by checking thei
 ### 4) Import Data
 #### Gift Card Configuration Data
 {% info_block infoBox "Info" %}
-The following step imports abstract and concrete gift card configurations. Implementation for the data importer is not provided by Spryker Core, so you need to implement it on project level.</br></br>You can find an exemplary implementation [here](https://github.com/spryker-shop/suite/commit/f38bc5264e9964d2d2da5a045c0305973b3cb556#diff-e854f9b396bdaa07ca6276f168aaa76a
+The following step imports abstract and concrete gift card configurations. Implementation for the data importer is not provided by Spryker Core, so you need to implement it on project level.<br><br>You can find an exemplary implementation [here](https://github.com/spryker-shop/suite/commit/f38bc5264e9964d2d2da5a045c0305973b3cb556#diff-e854f9b396bdaa07ca6276f168aaa76a
 {% endinfo_block %} (only Console and DataImport module changes are relevant). The following data import examples are based on this implementation.)
 
 <details open>
@@ -1275,7 +1275,7 @@ Register the following controller provider(s) in the Yves application:
 
 | Provider | Namespace | Enabled Controller | Controller Specifcation |
 | --- | --- | --- | --- |
-| `CartCodeWidgetControllerProvider` |`SprykerShop\Yves\CartCodeWidget\Plugin\Provider`  | `CartCodeWidget/CodeController` | `Handles add, remove and clear of cart codes for of the activated CartCodePlugins (i.e. gift card code, voucher code, etc.) of the cart.` |
+| `CartCodeWidgetControllerProvider` |`SprykerShop\Yves\CartCodeWidget\Plugin\Provider`  | `CartCodeWidget/CodeController` | `Handles add, remove and clear of cart codes for of the activated CartCodePlugins (for example, gift card code, voucher code, etc.) of the cart.` |
 
 <details open>
 <summary markdown='span'>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>

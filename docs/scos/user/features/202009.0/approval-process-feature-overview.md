@@ -82,7 +82,7 @@ The company has the following company users:
 
 | Person | Role | Description |
 | --- | --- | --- |
-| Company Employee | Buyer | Has the *Buy up to grand total* permission set to €500 and submits quote A with the cart total €400.</br>The *Send cart for approval* permission is enabled. |
+| Company Employee | Buyer | Has the *Buy up to grand total* permission set to €500 and submits quote A with the cart total €400.<br>The *Send cart for approval* permission is enabled. |
 | Manager | Approver  | Has the *Approve up to grand total* permission for €600. |
 | Head of the department | Approver  | Has the *Approve up to grand total* permission set to €1000. |
 | Head of the department | Buyer  | Has the *Buy up to grand total* permission set to €1000.  |
@@ -97,7 +97,7 @@ The company has the following company users:
 
 | Person | Role | Description |
 | --- | --- | --- |
-| Company Employee | Buyer | Has the *Buy up to grand total* permission set to €500 and submits quote B with the cart total €600.</br> The *Send cart for approval* permission is enabled. |
+| Company Employee | Buyer | Has the *Buy up to grand total* permission set to €500 and submits quote B with the cart total €600.<br> The *Send cart for approval* permission is enabled. |
 | Manager | Approver  | Has the *Approve up to grand total* permission set to €600. |
 | Head of the department | Approver  | Has the *Approve up to grand total* permission set to €1000. |
 | Head of the department | Buyer  | Has the *Buy up to grand total* permission set to €1000.  |
@@ -112,7 +112,7 @@ The company has the following company users:
 
 | Person | Role | Description |
 | --- | --- | --- |
-| Company Employee | Buyer | Has the *Buy up to grand total* €500 permission and submits quote C with the cart total €900.</br>The *Send cart for approval permission* is enabled. |
+| Company Employee | Buyer | Has the *Buy up to grand total* €500 permission and submits quote C with the cart total €900.<br>The *Send cart for approval permission* is enabled. |
 | Manager | Approver  | Has the *Approve up to grand total* permission set to €600. |
 | Head of the department | Approver  | Has the *Approve up to grand total* permission set to €1000. |
 
@@ -126,7 +126,7 @@ The company has the following company users:
 
 | Person | Role | Description |
 | --- | --- | --- |
-| Company Employee | Buyer | Has the *Buy up to grand total* €500 permission and submits quote D with the cart total €1200.</br>The *Send cart for approval* permission is enabled. |
+| Company Employee | Buyer | Has the *Buy up to grand total* €500 permission and submits quote D with the cart total €1200.<br>The *Send cart for approval* permission is enabled. |
 | Manager | Approver  | Has the *Approve up to grand total* permission for €600. |
 | Head of the department | Approver  | Has the *Approve up to grand total* permission set to €1000. |
 

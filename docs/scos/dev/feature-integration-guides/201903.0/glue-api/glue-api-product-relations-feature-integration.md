@@ -1,5 +1,5 @@
 ---
-title: Product Relations API feature integration
+title: Glue API - Product Relations feature integration
 description: This guide will navigate you through the process of installing and configuring the Product Relations feature in Spryker OS.
 last_updated: Nov 22, 2019
 template: feature-integration-guide-template
@@ -72,11 +72,11 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block infoBox "Verification" %}
-Make sure that the following endpoints are available:</br>http://glue.mysprykershop.com/abstract-products/`{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}`/related-products</br>http://glue.mysprykershop.com/carts/`{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}`/up-selling-products</br>http://glue.mysprykershop.com/guest-carts/`{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}`/up-selling-products
+Make sure that the following endpoints are available:<br>http://glue.mysprykershop.com/abstract-products/`{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}`/related-products<br>http://glue.mysprykershop.com/carts/`{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}`/up-selling-products<br>http://glue.mysprykershop.com/guest-carts/`{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}`/up-selling-products
 {% endinfo_block %}
 
 <!-- Last review date: Mar 14, 2019* by  Volodymyr Volkov-->

@@ -12,7 +12,7 @@ related:
   - title: Authentication and Authorization
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
   - title: Retrieving Business Unit Information
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-unit-information.html
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-units.html
   - title: Retrieving Company Role Information
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-roles.html
   - title: Retrieving Company User Information
@@ -30,20 +30,21 @@ In the B2B context, buyers typically represent a company and act on its behalf. 
 To impersonate a customer as a Company User, API clients can use the **Business on Behalf API**. It provides REST access to retrieve a list of the Company Users available to the currently logged in user and impersonate as any user available to them.
 
 {% info_block warningBox "Authentication" %}
-Before impersonating as Company Users, customers need to authenticate first. For details on how to do so, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+
+Before impersonating as Company Users, customers need to authenticate first. 
+
 {% endinfo_block %}
 
 During the impersonation process, customers receive an Access Token. The token can be used to access any B2B REST API resources, such as Companies, Business Units, Carts etc. Also, authenticated company users will benefit from the [merchant-specific prices](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html) available to them (applied to certain business units as a rule) instead of the default ones. Also, you can customize the behavior of your API client to match the user's company, job role, business unit, and scope.
 
 {% info_block infoBox "Info" %}
-If the [Prices per Merchant Relation \(Customer specific prices\
-{% endinfo_block %}](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html) feature is enabled in your project, all prices returned by Spryker REST API are the prices specific to the Company of the current Company User (if any).)
+
+If the [Prices per Merchant Relation \(Customer specific prices\](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html) feature is enabled in your project, all prices returned by Spryker REST API are the prices specific to the Company of the current Company User (if any).
+
+{% endinfo_block %}
 
 The same as with B2C resource access tokens, the tokens provided by the API have limited timeframe. When receiving an access token, the response body contains not only the access token itself, but also its lifetime, in seconds, and a **Refresh Token**. When the lifetime expires, the Refresh Token can be exchanged for a new Access Token. The new token will also have a limited lifetime and have a corresponding Refresh Token for future authentication. The default lifetime of the tokens is 8 hours (28800 seconds) for an access token and 1 month (2628000 seconds) for a refresh token. The settings can be changed in the module configuration.
 
-{% info_block infoBox "Info" %}
-For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
-{% endinfo_block %}
 
 In your development, the endpoint can help you to:
 
@@ -53,17 +54,19 @@ In your development, the endpoint can help you to:
 * Allow users to benefit from prices specific to their company.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html#glue-api--company-account-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html).
 
 ## Retrieving Available Company Users
 To retrieve a list of all the Company Users available to the currently logged in user, send a GET request to the following endpoint:
 
-[/company-users/mine](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/company-users)
+/company-users/mine
 
 Sample request: *GET http://glue.mysprykershop.com/company-users/mine*
 
 {% info_block infoBox "Authentication Required" %}
-To get a list of Company Users, you need to authenticate first and pass an access token as a part of your request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+
+To get a list of Company Users, you need to authenticate first and pass an access token as a part of your request.
+
 {% endinfo_block %}
 
 ### Response
@@ -73,7 +76,7 @@ The endpoint responds with a `RestCompanyUserCollectionResponse` that contains
 
 | Attribute* | Type | Description |
 | --- | --- | --- |
-| id | String | Specifies the Company User ID.</br>You can use the ID to impersonate as the Company User via the `/company-user-access-tokens` endpoint. |
+| id | String | Specifies the Company User ID.<br>You can use the ID to impersonate as the Company User via the `/company-user-access-tokens` endpoint. |
 | isActive | Boolean | Indicates whether the Company User is active. |
 | isDefault | Boolean | Indicates whether the Company User is the default one for the logged in customer. |
 
@@ -320,7 +323,7 @@ In this case, the following additional attributes will be added to the response:
 }
 ```
     
-</br>
+<br>
 </details>
 
 ### Possible Errors
@@ -333,19 +336,21 @@ In this case, the following additional attributes will be added to the response:
 ## Impersonating as a Company User
 To impersonate a user as a Company Account and receive a B2B access token, send a POST request to the following endpoint:
 
-[/company-user-access-tokens](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/company-user-access-tokens)
+POST /company-user-access-tokens
 
 Sample request: *POST http://glue.mysprykershop.com/company-user-access-tokens*
 
 {% info_block warningBox "Authentication Required" %}
-To access the endpoint, you need to authenticate customers as regular users first and pass an access token as a part of your request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+
+To access the endpoint, you need to authenticate customers as regular users first and pass an access token as a part of your request. 
+
 {% endinfo_block %}
 
 **Attributes**
 
 | Attribute | Type | Description |
 | --- | --- | --- |
-| idCompanyUser | String | Specifies the ID of the Company User to impersonate.</br>Company User IDs can be retrieved using the **/company-users/mine** endpoint. |
+| idCompanyUser | String | Specifies the ID of the Company User to impersonate.<br>Company User IDs can be retrieved using the **/company-users/mine** endpoint. |
 
 **Sample Request:**
     
@@ -403,8 +408,7 @@ If the request was successful, the endpoint responds with a **RestCompanyUserAc
 | 422 | The Company User Id format is incorrect. |
  
 ##  Accessing B2B Resources
-After impersonating as a Company User, you can access the resources provided to B2B customers using the access token received via the **/company-user-access-tokens** endpoint. When accessing the resources, you need to pass the token in the Authorization header. For details, see [Accessing Resources](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html#accessing-resources).
+After impersonating as a Company User, you can access the resources provided to B2B customers using the access token received via the **/company-user-access-tokens** endpoint. When accessing the resources, you need to pass the token in the Authorization header. 
 
 ## Refreshing the Access Token
-You can refresh an access token issued for a Company User the same as any other access token issued by Glue API. For details, see [Refreshing Tokens](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html#refreshing-tokens).
-
+You can refresh an access token issued for a Company User the same as any other access token issued by Glue API. 

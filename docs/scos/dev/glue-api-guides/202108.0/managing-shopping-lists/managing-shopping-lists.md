@@ -849,9 +849,9 @@ If the shopping list is deleted successfully, the endpoint retruns the `204 No C
 | 001 | Access token is incorrect. |
 | 002 | Access token is missing. |
 | 400 | Provided access token is not an [access token of a сompany user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html). |
-| 901 | Shop list name or item name is not specified or too long.</br>**OR** </br> Item quantity is not specified or too large.|
+| 901 | Shop list name or item name is not specified or too long.<br>**OR** <br> Item quantity is not specified or too large.|
 | 1501 | Shopping list ID or item is not specified. |
-| 1503 |  Specified shopping list is not found. |
+| 1503 | Specified shopping list is not found. |
 | 1506 | Shopping list with given name already exists. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

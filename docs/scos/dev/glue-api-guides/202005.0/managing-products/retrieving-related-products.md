@@ -16,7 +16,7 @@ related:
   - title: Product Relations Feature Overview
     link: docs/scos/user/features/page.version/product-relations-feature-overview.html
   - title: Catalog Search
-    link: docs/scos/dev/glue-api-guides/page.version/catalog-search.html
+    link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.html
 ---
 
 Using the **Product Relations** feature, sellers can define a list of comparable or additional items for each product. You can display such items, also called Related Products, in search and in the cart together with the products selected by customers. This can help boosting the cross- and up-selling performance of the outlet.
@@ -630,9 +630,9 @@ To get related items of an abstract product, send the request:
 | Included resource | Attribute | Type | Description |
 | --- | --- | --- | --- |
 | product labels | name | String | Specifies the label name. |
-| product labels | isExclusive | Boolean | Indicates whether the label is `exclusive`.</br>If the attribute is set to true, the current label takes precedence over other labels the product might have. This means that only the current label should be displayed for the product, and all other possible labels should be hidden. |
-| product labels | position | Integer | Indicates the label priority.</br>Labels should be indicated on the frontend according to their priority, from the highest (**1**) to the lowest, unless a product has a label with the `isExclusive` attribute set.|
-| product labels | frontEndReference | String |Specifies the label custom label type (CSS class).</br>If the attribute is an empty string, the label should be displayed using the default CSS style. |
+| product labels | isExclusive | Boolean | Indicates whether the label is `exclusive`.<br>If the attribute is set to true, the current label takes precedence over other labels the product might have. This means that only the current label should be displayed for the product, and all other possible labels should be hidden. |
+| product labels | position | Integer | Indicates the label priority.<br>Labels should be indicated on the frontend according to their priority, from the highest (**1**) to the lowest, unless a product has a label with the `isExclusive` attribute set.|
+| product labels | frontEndReference | String |Specifies the label custom label type (CSS class).<br>If the attribute is an empty string, the label should be displayed using the default CSS style. |
 
 
 
@@ -1143,7 +1143,7 @@ See [Retrieving Related Items of an Abstract Product](#related-product-attribute
 ## Possible Errors
 | Code | Reason |
 | --- | --- |
-| 400 | Cart ID is missing. </br>Abstract product ID not specified. </br>Cart ID is missing. |
-| 404 | A cart with the specified ID was not found. </br>Abstract product not found. |
+| 400 | Cart ID is missing. <br>Abstract product ID not specified. <br>Cart ID is missing. |
+| 404 | A cart with the specified ID was not found. <br>Abstract product not found. |
 
 

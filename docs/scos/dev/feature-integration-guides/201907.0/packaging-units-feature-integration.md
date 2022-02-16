@@ -1,5 +1,5 @@
 ---
-title: Product Packaging Unit feature integration
+title: Packaging Units feature integration
 description: The Product Packaging Unit Feature allows defining packaging units per abstract product. This guide describes how to integrate the feature into your project.
 last_updated: Nov 22, 2019
 template: feature-integration-guide-template
@@ -30,7 +30,14 @@ Run the following command(s) to install the required modules:
 `composer require spryker-feature/packaging-units:"^201903.0" --update-with-dependencies`
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules have been installed:<table><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`ProductPackagingUnit`</td><td>`vendor/spryker/product-packaging-unit`</td></tr><tr><td>`ProductPackagingUnitDataImport`</td><td>`vendor/spryker/product-packaging-unit-data-import`</td></tr><tr><td>`ProductPackagingUnitStorage`</td><td>`vendor/spryker/product-packaging-unit-storage`</td></tr></tbody></table>
+Make sure that the following modules have been installed:
+
+|Module|Expected Directory|
+|--- |--- |
+|`ProductPackagingUnit`|`vendor/spryker/product-packaging-unit`|
+|`ProductPackagingUnitDataImport`|`vendor/spryker/product-packaging-unit-data-import`|
+|`ProductPackagingUnitStorage`|`vendor/spryker/product-packaging-unit-storage`|
+
 {% endinfo_block %}
 
 
@@ -58,24 +65,25 @@ class ProductPackagingUnitStorageConfig extends SprykerProductPackagingUnitStora
 	}
 }
 ```
-<br>
 </details>
 
 ### 3) Set up the Database Schema and Transfer Objects
 
 Adjust the schema definition so that entity changes can trigger events.
 
+<div>
 |  Affected entity| Triggered events |
 | --- | --- |
 | `spy_product_packaging_unit` | <ul><li>`Entity.spy_product_packaging_unit.create`</li><li>`Entity.spy_product_packaging_unit.update`</li><li>`Entity.spy_product_packaging_unit.delete`</li></ul> |
 | `spy_product_packaging_unit_type` | <ul><li>`Entity.spy_product_packaging_unit_type.creat`</li><li>`Entity.spy_product_packaging_unit_type.update`</li><li>`Entity.spy_product_packaging_unit_type.delete`</li></ul> |
 | `spy_product_packaging_unit_amount` | <ul><li>`Entity.spy_product_packaging_unit_amount.create`</li><li>`Entity.spy_product_packaging_unit_amount.update`</li><li>`Entity.spy_product_packaging_unit_amount.delete`</li></ul> |
 | `spy_product_packaging_lead_product` | <ul><li>`Entity.spy_product_packaging_lead_product.create`</li><li>`Entity.spy_product_packaging_lead_product.update`</li><li>`Entity.spy_product_packaging_lead_product.delete`</li></ul> |
+</div>
 
 <details open>
 <summary markdown='span'>src/Pyz/Zed/ProductPackagingUnit/Persistence/Propel/Schema/spy_product_packaging_unit.schema.xml<summary markdown='span'>
 
-```html
+```xml
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\ProductPackagingUnit\Persistence" package="src.Orm.Zed.ProductPackagingUnit.Persistence">
 
@@ -104,7 +112,6 @@ Adjust the schema definition so that entity changes can trigger events.
 		</table>
 </database>
 ```
-<br>
 </details>
 
 Set up synchronization queue pools so that non-multistore entities (not store-specific entities) can be synchronized among stores:
@@ -112,7 +119,7 @@ Set up synchronization queue pools so that non-multistore entities (not store-sp
 <details open>
 <summary markdown='span'>src/Pyz/Zed/ProductPackagingUnitStorage/Persistence/Propel/Schema/spy_product_abstract_packaging_storage.schema.xml</summary>
 
-```html
+```xml
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		name="zed"
@@ -128,7 +135,6 @@ Set up synchronization queue pools so that non-multistore entities (not store-sp
 
 </database>
 ```
-<br>
 </details>
 
 Run the following commands to apply the database changes and generate entity and transfer changes:
@@ -139,16 +145,56 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes have been applied by checking your database:<table><thead><tr><th>Database Entity</th><th>Type</th><th>Event</th></tr></thead><tbody><tr><td>`spy_product_packaging_unit`</td><td>table</td><td>created</td></tr><tr><td>`spy_product_packaging_unit_type`</td><td>table</td><td>created</td></tr><tr><td>`spy_product_packaging_unit_amount`</td><td>table</td><td>created</td></tr><tr><td>`spy_product_packaging_lead_product`</td><td>table</td><td>created</td></tr><tr><td>`spy_product_abstract_packaging_storage`</td><td>table</td><td>created</td></tr><tr><td>`spy_sales_order_item.amount`</td><td>column</td><td>created</td></tr><tr><td>`spy_sales_order_item.amount_sku`</td><td>column</td><td>created</td></tr></tbody></table>
+Make sure that the following changes have been applied by checking your database:
+
+|Database Entity|Type|Event|
+|--- |--- |--- |
+|`spy_product_packaging_unit`|table|created|
+|`spy_product_packaging_unit_type`|table|created|
+|`spy_product_packaging_unit_amount`|table|created|
+|`spy_product_packaging_lead_product`|table|created|
+|`spy_product_abstract_packaging_storage`|table|created|
+|`spy_sales_order_item.amount`|column|created|
+|`spy_sales_order_item.amount_sku`|column|created|
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes in transfer objects have been applied:<table><thead><tr><th>Transfer</th><th>Type</th><th>Event</th><th>Path</th></tr></thead><tbody><tr><td>`ProductPackagingUnitType`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductPackagingUnitTypeTransfer`</td></tr><tr><td>`ProductPackagingUnitTypeTranslation`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductPackagingUnitTypeTranslationTransfer`</td></tr><tr><td>`ProductPackagingUnit`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductPackagingUnitTransfer`</td></tr><tr><td>`ProductPackagingUnitAmount`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductPackagingUnitAmountTransfer`</td></tr><tr><td>`ProductPackagingLeadProduct`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductPackagingLeadProductTransfer`</td></tr><tr><td>`Item`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ItemTransfer`</td></tr><tr><td>`ProductConcretePackagingStorage`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductConcretePackagingStorageTransfer`</td></tr><tr><td>`ProductAbstractPackagingStorage`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductAbstractPackagingStorageTransfer`</td></tr><tr><td>`SpyProductPackagingLeadProductEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductPackagingLeadProductEntityTransfer`</td></tr><tr><td>`SpyProductPackagingUnitAmountEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductPackagingUnitAmountEntityTransfer`</td></tr><tr><td>`SpyProductPackagingUnitEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductPackagingUnitEntityTransfer`</td></tr><tr><td>`SpyProductPackagingUnitTypeEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductPackagingUnitTypeEntityTransfer`</td></tr><tr><td>`SpyProductAbstractPackagingStorageEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductAbstractPackagingStorageEntityTransfer`</td></tr><tr><td>`SpySalesOrderItemEntityTransfer.amount`</td><td>property</td><td>created</td><td>`src/Generated/Shared/Transfer/SpySalesOrderItemEntityTransfer`</td></tr><tr><td>`SpySalesOrderItemEntityTransfer.amountSku`</td><td>property</td><td>created</td><td>`src/Generated/Shared/Transfer/SpySalesOrderItemEntityTransfer`</td></tr></tbody></table>
+Make sure that the following changes in transfer objects have been applied:
+
+|Transfer|Type|Event|Path|
+|--- |--- |--- |--- |
+|`ProductPackagingUnitType`|class|created|`src/Generated/Shared/Transfer/ProductPackagingUnitTypeTransfer`|
+|`ProductPackagingUnitTypeTranslation`|class|created|`src/Generated/Shared/Transfer/ProductPackagingUnitTypeTranslationTransfer`|
+|`ProductPackagingUnit`|class|created|`src/Generated/Shared/Transfer/ProductPackagingUnitTransfer`|
+|`ProductPackagingUnitAmount`|class|created|`src/Generated/Shared/Transfer/ProductPackagingUnitAmountTransfer`|
+|`ProductPackagingLeadProduct`|class|created|`src/Generated/Shared/Transfer/ProductPackagingLeadProductTransfer`|
+|`Item`|class|created|`src/Generated/Shared/Transfer/ItemTransfer`|
+|`ProductConcretePackagingStorage`|class|created|`src/Generated/Shared/Transfer/ProductConcretePackagingStorageTransfer`|
+|`ProductAbstractPackagingStorage`|class|created|`src/Generated/Shared/Transfer/ProductAbstractPackagingStorageTransfer`|
+|`SpyProductPackagingLeadProductEntity`|class|created|`src/Generated/Shared/Transfer/SpyProductPackagingLeadProductEntityTransfer`|
+|`SpyProductPackagingUnitAmountEntity`|class|created|`src/Generated/Shared/Transfer/SpyProductPackagingUnitAmountEntityTransfer`|
+|`SpyProductPackagingUnitEntity`|class|created|`src/Generated/Shared/Transfer/SpyProductPackagingUnitEntityTransfer`|
+|`SpyProductPackagingUnitTypeEntity`|class|created|`src/Generated/Shared/Transfer/SpyProductPackagingUnitTypeEntityTransfer`|
+|`SpyProductAbstractPackagingStorageEntity`|class|created|`src/Generated/Shared/Transfer/SpyProductAbstractPackagingStorageEntityTransfer`|
+|`SpySalesOrderItemEntityTransfer.amount`|property|created|`src/Generated/Shared/Transfer/SpySalesOrderItemEntityTransfer`|
+|`SpySalesOrderItemEntityTransfer.amountSku`|property|created|`src/Generated/Shared/Transfer/SpySalesOrderItemEntityTransfer`|
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the changes have been implemented successfully. For this purpose, trigger the following methods and make sure that the above events have been triggered:<table><thead><tr><th>Path</th><th>Method name</th></tr></thead><tbody><tr><td>`src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingLeadProduct.php`</td><td><ul><li>`prepareSaveEventName(
-{% endinfo_block %}`</li><li>`addSaveEventToMemory()`</li><li>`addDeleteEventToMemory()`</li></ul></td></tr><tr><td>`src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnit.php`</td><td><ul><li>`prepareSaveEventName()`</li><li>`addSaveEventToMemory()`</li><li>`addDeleteEventToMemory()`</li></ul></td></tr><tr><td>`src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnitAmount.php`</td><td><ul><li>`prepareSaveEventName()`</li><li>`addSaveEventToMemory()`</li><br /><li>`addDeleteEventToMemory()`</li></ul></td></tr><tr><td>`src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnitType.php`</td><td><ul><li>`prepareSaveEventName()`</li><br /><li>`addSaveEventToMemory()`</li><br /><li>`addDeleteEventToMemory()`</li></ul></td></tr><tr><td>`src/Orm/Zed/ProductPackagingUnitStorage/Persistence/Base/SpyProductAbstractPackagingStorage.php`</td><td>`sendToQueue()`</td></tr></tbody></table>)
+
+Make sure that the changes have been implemented successfully. For this purpose, trigger the following methods and make sure that the above events have been triggered:
+
+|Path|Method name|
+|--- |--- |
+|`src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingLeadProduct.php`|`prepareSaveEventName(
+{% endinfo_block %}``addSaveEventToMemory()``addDeleteEventToMemory()`|
+|`src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnit.php`|`prepareSaveEventName()``addSaveEventToMemory()``addDeleteEventToMemory()`|
+|`src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnitAmount.php`|`prepareSaveEventName()``addSaveEventToMemory()``addDeleteEventToMemory()`|
+|`src/Orm/Zed/ProductPackagingUnit/Persistence/Base/SpyProductPackagingUnitType.php`|`prepareSaveEventName()``addSaveEventToMemory()``addDeleteEventToMemory()`|
+|`src/Orm/Zed/ProductPackagingUnitStorage/Persistence/Base/SpyProductAbstractPackagingStorage.php`|`sendToQueue()`|
+
 
 ### 4) Add Translations
 
@@ -170,7 +216,6 @@ cart.pre.check.amount.interval.failed,Amount interval requirements for product S
 cart.pre.check.amount.is_not_variable.failed,Standardbetrag für Produkt SKU '%sku%' ist überschritten.,de_DE
 cart.pre.check.amount.is_not_variable.failed,Default amount requirements for product SKU '%sku%' are not fulfilled.,en_US
 ```
-<br>
 </details>
 
 {% info_block infoBox "Info" %}
@@ -185,7 +230,6 @@ Infrastructural record's glossary keys:
 packaging_unit_type.item.name,Item,en_US
 packaging_unit_type.item.name,Stück,de_DE
 ```
-<br>
 </details>
 
 Demo data glossary keys:
@@ -212,7 +256,6 @@ packaging_unit_type.pack_100.name,Pack 100,de_DE
 packaging_unit_type.pack_mixed.name,Mixed Screws boxes,en_US
 packaging_unit_type.pack_mixed.name,Gemischte Schraubenkästen,de_D
 ```
-<br>
 </details>
 
 Run the following console command to import data:
@@ -257,7 +300,6 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 	}
 }
 ```
-<br>
 </details>
 
 #### Set up Re-Generate and Re-Sync Features
@@ -268,6 +310,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
 <details open>
 <summary markdown='span'>src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php</summary>
+
 ```php
 <?php
 
@@ -289,7 +332,6 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 	}
 }
 ```
-<br>
 </details>
 
 ### 6) Import Data
@@ -329,10 +371,10 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 		}
 	}
 ```
-<br>
 </details>
 
 Run the following console command to execute registered installer plugins and install infrastructural data:
+
 ```bash
 console setup:init-db
 ```
@@ -358,7 +400,6 @@ packaging_unit_type.pack_20.name
 packaging_unit_type.pack_100.name
 packaging_unit_type.pack_500.name
 ```
-<br>
 </details>
 
 | Column | REQUIRED? |Data Type  |Data Example  |Data Explanation  |
@@ -392,10 +433,10 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 	}
 }
 ```
-<br>
 </details>
 
 Run the following console command to import data:
+
 ```bash
 console data:import product-packaging-unit-type
 ```    
@@ -425,9 +466,9 @@ concrete_sku,is_lead_product,has_lead_product,packaging_unit_type_name,default_a
 215_124,0,0,packaging_unit_type.ring_500.name,1,0,,,
 216_123,1,,packaging_unit_type.item.name,,,,,
 ```
-<br>
 </details>
 
+<div>
 | Column | REQUIRED? | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
 | `concrete_sku` | mandatory | string | 218_123 | Glossary key that will be used for display. Each name needs a glossary key definition for all configured locales. |
@@ -439,12 +480,15 @@ concrete_sku,is_lead_product,has_lead_product,packaging_unit_type_name,default_a
 | `amount_min` | optional | positive integer | 3 | <ul><li>Restricts a customer to buy at least this amount of lead products.</li><li>Effective only if `is_variable = 1`.</li><li>the default value is 1 when not provided.</li></ul> |
 | `amount_max` | optional | positive integer | 5 | <ul><li>Restricts a customer not to not buy more than this value.</li><li>Effective only if `is_variable = 1`.</li><li>The default value remains empty (unlimited) when not provided.</li></ul> |
 | `amount_interval` | optional | positive integer | 2 | <ul><li>Restricts customers to buy an amount that fits into the interval beginning with `amount_min`.</li><li>Effective only if `is_variable = 1`.</li><li>The default value is amount_min when not provided.</li></ul> Min = 3; Max = 10; Interval = 2 <br> Choosable: 3, 5, 7, 9|
+</div>
 
 Register the following plugin to enable data import:
 
+<div>
 |Plugin  | Specification |Prerequisites  |  Namespace|
 | --- | --- | --- | --- |
 | `ProductPackagingUnitDataImportPlugin` | Imports packaging unit type data into the database. | <ul><li>Requires related product concretes and product abstract to be present in the database already.</li><li>Requires related packaging unit types to be present in the database already.</li></ul> | `Spryker\Zed\ProductPackagingUnitDataImport\Communication\Plugin\DataImport` |
+</div>
 
 <details open>
 <summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
@@ -467,7 +511,6 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 	}
 }
 ```
-<br>
 </details>
 
 Run the following console command to import data:
@@ -592,7 +635,6 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 	}
 }
 ```
-<br>
 </details>
 
 <details open>
@@ -622,7 +664,6 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 	}
 }
 ```
-<br>
 </details>
 
 <details open>
@@ -652,7 +693,6 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
 	}
 }
 ```
-<br>
 </details>
 
 <details open>
@@ -682,7 +722,6 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 	}
 }
 ```
-<br>
 </details>
 
 
@@ -725,7 +764,6 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 	}
 }
 ```
-<br>
 </details>
 
 <details open>
@@ -755,7 +793,6 @@ class StockDependencyProvider extends SprykerStockDependencyProvider
 	}
 }
 ```
-<br>
 </details>
 
 <details open>
@@ -782,7 +819,6 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 	}
 }
 ```
-<br>
 </details>
 
 <details open>
@@ -809,19 +845,35 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
 	}
 }
 ```
-<br>
 </details>
 
 {% info_block warningBox "Verification" %}
-Add an item with packaging units to the cart.<br><ul><li>Check if the `amount`, `amountSalesUnit`, `amountLeadProduct` and `productPackagingUnit` fields in `ItemTransfer` get fully populated.</li><li>Check if amount restriction works as expected.</li><li>Check if availability is validated respectfully according to your lead product's and packaging unit's configuration.</li><li>Check if item grouping in the cart works as expected.</li><li>Check if variable amount changes affect unit prices in `ItemTransfer`.</li><li>Check if quantity and amount are merged correctly when a group key matches.</li></ul>
+Add an item with packaging units to the cart.
+- Check if the `amount`, `amountSalesUnit`, `amountLeadProduct` and `productPackagingUnit` fields in `ItemTransfer` get fully populated.
+- Check if amount restriction works as expected.
+- Check if availability is validated respectfully according to your lead product's and packaging unit's configuration.
+- Check if item grouping in the cart works as expected.
+- Check if variable amount changes affect unit prices in `ItemTransfer`.
+- Check if quantity and amount are merged correctly when a group key matches.
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Go through the checkout workflow and make an order.<br><ul><li>Check if the stock is modified respectfully according to your lead product's and packaging unit's configuration.</li><li>Check if the following fields in the `spy_sales_order_item` table are saved:<br><ul><li>`amount`</li><li>`amount_sku`</li><li>`amount_measurement_unit_name`</li><li>`amount_measurement_unit_code`</li><li>`amount_measurement_unit_precision`</li><li>`amount_measurement_unit_conversion`</li><li>`amount_base_measurement_unit_name`</li></ul></li></ul>
+Go through the checkout workflow and make an order.
+- Check if the stock is modified respectfully according to your lead product's and packaging unit's configuration.
+- Check if the following fields in the `spy_sales_order_item` table are saved:
+  - `amount`
+  - `amount_sku`
+  - `amount_measurement_unit_name`
+  - `amount_measurement_unit_code`
+  - `amount_measurement_unit_precision`
+  - `amount_measurement_unit_conversion`
+  - `amount_base_measurement_unit_name`
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Go to the Zed UI Sales overview and check the order.<br><ul><li>Verify if the correct sales unit is displayed.</li><li>Verify if the correct amount is displayed per sales order item.</li></ul>
+Go to the Zed UI Sales overview and check the order.
+- Verify if the correct sales unit is displayed.
+- Verify if the correct amount is displayed per sales order item.
 {% endinfo_block %}
 
 ## Install Feature Frontend
@@ -840,7 +892,12 @@ Run the following command(s) to install the required modules:
 composer require spryker-feature/packaging-units: "^2018.11.0" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
-Make sure that the following modules have been installed:<table><th>Module</th><th>Expected Directory</th><tr><td>`ProductPackagingUnitWidget`</td><td>`vendor/spryker-shop/product-packaging-unit-widget`</td></tr></table>
+Make sure that the following modules have been installed:
+
+|Module|Expected Directory|
+|--- |--- |
+|`ProductPackagingUnitWidget`|`vendor/spryker-shop/product-packaging-unit-widget`|
+
 {% endinfo_block %}
 
 ### 2) Add Translations
@@ -924,11 +981,15 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 	}
 }
 ```
-<br>
 </details>
 
 {% info_block infoBox "Info" %}
-`ProductPackagingUnitWidget` uses Javascript for some functionality:<br><table><th>Functionality</th><th>Path</th><tr><td><ul><li>Controls base unit =&gt; sales unit calculations</li><li>Applies product quantity and amount restrictions on sales unit level</li><li>Offers recommendation when invalid quantity or amount is selected</li><li>Maintains stock-based quantity, amount and sales unit information for posting</li></ul></td><td>`vendor/spryker-shop/product-packaging-unit-widget/src/SprykerShop/Yves/ProductPackagingUnitWidget/Theme/default/components/molecules/packaging-unit-quantity-selector/packaging-unit-quantity-selector.ts`</td></tr></table>
+`ProductPackagingUnitWidget` uses Javascript for some functionality:
+
+|Functionality|Path|
+|--- |--- |
+|Controls base unit => sales unit calculationsApplies product quantity and amount restrictions on sales unit levelOffers recommendation when invalid quantity or amount is selectedMaintains stock-based quantity, amount and sales unit information for posting|`vendor/spryker-shop/product-packaging-unit-widget/src/SprykerShop/Yves/ProductPackagingUnitWidget/Theme/default/components/molecules/packaging-unit-quantity-selector/packaging-unit-quantity-selector.ts`|
+
 {% endinfo_block %}
 
 Run the following command to enable Javascript and CSS changes:
@@ -936,5 +997,8 @@ Run the following command to enable Javascript and CSS changes:
 console frontend:yves:build
 ```
 {% info_block warningBox "Verification" %}
-<ul><li>Check if the amount field appears on the Product Detail page for items with packaging units.</li><li>Check if the amount field appears correctly with measurement unit information on the Cart page.</li><li>Check if the amount field appears correctly with measurement unit information on the Checkout Summary page.</li><li>Check if the amount field appears correctly with measurement unit information on the previous Orders page.</li></ul>
+- Check if the amount field appears on the Product Detail page for items with packaging units.
+- Check if the amount field appears correctly with measurement unit information on the Cart page.
+- Check if the amount field appears correctly with measurement unit information on the Checkout Summary page.
+- Check if the amount field appears correctly with measurement unit information on the previous Orders page.
 {% endinfo_block %}

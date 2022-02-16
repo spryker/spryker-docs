@@ -74,7 +74,7 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| name | String | &check; | Sets the cart name.</br>This field can be set only if you are using the multiple carts feature. If you are operating in a single-cart environment, an attempt to set the value will result in an error with the "422 Unprocessable Entry" status code. |
+| name | String | &check; | Sets the cart name.<br>This field can be set only if you are using the multiple carts feature. If you are operating in a single-cart environment, an attempt to set the value will result in an error with the "422 Unprocessable Entry" status code. |
 | priceMode | Enum | &check; | Sets the price mode to be used for the cart. Possible values:<ul><li>GROSS_MODE—prices after tax;</li><li>NET_MODE—prices before tax.</li></ul>For details, see [Net &amp; Gross Prices](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html). |
 | currency | String | &check; | Sets the cart currency. |
 | store | String | &check; | Sets the name of the store where to create the cart. |
@@ -121,8 +121,8 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 | priceMode | String | Price mode that was active when the cart was created. |
 | currency | String | Currency that was selected whenthe cart was created. |
 | store | String | Store for which the cart was created. |
-| name | String | Specifies a cart name.</br>The field is available in multi-cart environments only. |
-| isDefault | Boolean | Specifies whether the cart is the default one for the customer.</br>The field is available in multi-cart environments only.  |
+| name | String | Specifies a cart name.<br>The field is available in multi-cart environments only. |
+| isDefault | Boolean | Specifies whether the cart is the default one for the customer.<br>The field is available in multi-cart environments only.  |
 
 **Discount Information**
 
@@ -1702,8 +1702,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 | priceMode | String | Price mode that was active when the cart was created. |
 | currency | String | Currency that was selected whenthe cart was created. |
 | store | String | Store for which the cart was created. |
-| name | String | Specifies a cart name.</br>The field is available in multi-cart environments only. |
-| isDefault | Boolean | Specifies whether the cart is the default one for the customer.</br>The field is available in multi-cart environments only.  |
+| name | String | Specifies a cart name.<br>The field is available in multi-cart environments only. |
+| isDefault | Boolean | Specifies whether the cart is the default one for the customer.<br>The field is available in multi-cart environments only.  |
 
 **Discount Information**
 
@@ -2164,7 +2164,6 @@ To retrieve a particular cart, send the request:
 }
 ```
 
-</summary>
 </details>
 
 <details>
@@ -2965,19 +2964,23 @@ If the cart is deleted successfully, the endpoint returns the `204 No Content`�
 
 | CODE | REASON |
 | --- | --- |
+| 001 | Access token is incorrect. |
+| 002 | Access token is missing. |
+| 003 | Failed to log in the user. |
+| 005 | `If-Match` header is missing.  |
+| 006 | `If-Match` header value is invalid. |
 | 101 | Cart with given uuid not found. |
 | 102 | Failed to add an item to cart. |
-| 103 | Item with the given group key not found in the cart. |
+| 103 | Item with the given group key is not found in the cart. |
 | 104 | Cart uuid is missing. |
-| 105 | Cart could not be deleted. |
-| 106 | Cart item could not be deleted. |
+| 105 | Cart cannot be deleted. |
+| 106 | Cart item cannot be deleted. |
 | 107 | Failed to create a cart. |
-| 109 | Anonymous customer unique id is empty. |
 | 110 | Customer already has a cart. |
-| 111 | Can’t switch price mode when there are items in the cart. |
+| 111 | Cannot switch price mode when there are items in the cart. |
 | 112 | Store data is invalid. |
-| 113 | Cart item could not be added. |
-| 114 | Cart item could not be updated. |
+| 113 | Cart item cannot be added. |
+| 114 | Cart item cannot be updated. |
 | 115 | Unauthorized cart action. |
 | 116 | Currency is missing. |
 | 117 | Currency is incorrect. |

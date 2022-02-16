@@ -30,6 +30,7 @@ redirect_from:
   - /v1/docs/en/understanding-spryker
   - /v6/docs/about-spryker
   - /v6/docs/en/about-spryker
+  - /docs/scos/user/intro-to-spryker/whats-new/roadmap.html
 ---
 
 ## What is the Spryker Commerce OS?
@@ -98,5 +99,4 @@ This documentation site contains lots of information on Spryker Commerce OS. Sel
 * [User Guides](/docs/scos/user/back-office-user-guides/{{site.version}}/about-back-office-user-guides.html): step-by-step Backoffice and Storefront user guides.
 * [Developer Guides](/docs/scos/dev/developer-getting-started-guide.html): technical information and guides for developers.
 * [Technology Partners](/docs/scos/user/technology-partners/{{site.version}}/technology-partner-integration.html): Spryker technology partners information and integration guides.
-* [Migration and Integration Guides](/docs/scos/dev/migration-and-integration/{{site.version}}/about-migration-and-integration-guides.html): instructions on how to migrate to newer versions of modules or features.
 * [Tutorials](/docs/scos/dev/tutorials-and-howtos/tutorials-and-howtos.html): tutorials and HowTos.

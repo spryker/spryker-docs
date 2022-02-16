@@ -1,5 +1,5 @@
 ---
-title: Catalog feature integration
+title: Glue API - Catalog feature integration
 last_updated: Dec 27, 2019
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/catalog-api-feature-integration
@@ -9,7 +9,7 @@ redirect_from:
   - /v3/docs/en/catalog-api-feature-integration
 related:
   - title: Catalog Search
-    link: docs/scos/dev/glue-api-guides/page.version/catalog-search.html
+    link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.html
   - title: Getting Suggestions for Auto-Completion and Search
     link: docs/scos/dev/glue-api-guides/page.version/getting-suggestions-for-auto-completion-and-search.html
 ---
@@ -134,7 +134,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox “Verification” %}

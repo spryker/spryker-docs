@@ -9,14 +9,27 @@ commonOptions = {
   :url_ignore => [
     /mysprykershop.com\/[\.\w\-\/\?]+/,
     /b2c-demo-shop.local\/[\.\w\-\/\?]+/,
-    /zed.de.b2b-demo-shop.local\/[\.\w\-\/\?]+/,
+    /b2b-demo-shop.local\/[\.\w\-\/\?]+/,
     /mydomain.com\/[\.\w\-\/\?]+/,
     /demoshop.local\/[\.\w\-\/\?]+/,
-    /mysprykershop.com:10007\/[\.\w\-\/\?]+/,
+    /zed.mysprykershop.com:10007/,
     /www.pexels.com\/[@\.\w\-\/\?]+/,
     /pixabay.com\/[\.\w\-\/\?]+/,
     /xentral.com\/[\.\w\-\/\?]+/,
-    /github.com\/[\.\w\-\/]+\.md/
+    /github.com\/[\.\w\-\/]+\.md/,
+    /www.virtualbox.org\/[@\.\w\-\/\?]+/,
+    /de.linkedin.com\/[@\.\w\-\/\?]+/,
+    /www.instagram.com\/[\.\w\-\/\?]+/,
+    /eur-lex.europa.eu\/[\.\w\-\/\?]+/,
+    /docs.adyen.com\/[\.\w\-\/\?]+/,
+    /www.adyen.com\/[\.\w\-\/\?]+/,
+    /bugs.php.net\/[\.\w\-\/\?]+/,
+    /pci.payone.de\/[\.\w\-\/\?]+/,
+    /www.iso.org\/[\.\w\-\/\?]+/,
+    /www.vagrantup.com\/[\.\w\-\/\?]+/,
+    /stackoverflow.com\/[\.\w\-\/\?]+/,
+    /symfony.com\/[\.\w\-\/\?]+/,    
+    /console.aws.amazon.com\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],
   :typhoeus => {
@@ -25,18 +38,27 @@ commonOptions = {
   },
   :disable_external => false,
   :check_html => true,
+  :validation => {
+    :report_eof_tags => true,
+    :report_invalid_tags => true,
+    :report_mismatched_tags => true,
+    :report_missing_doctype => true,
+    :report_missing_names => true,
+    :report_script_embeds => true,
+  },
   :empty_alt_ignore => true,
-  :only_4xx => true,
+  :only_4xx => false,
   :http_status_ignore => [429],
-  :parallel => { :in_processes => 4},
-  :cache => { :timeframe => '2w' }
+  :parallel => { :in_threads => 3}
 }
 
 task :check_cloud do
   options = commonOptions.dup
   options[:file_ignore] = [
     /docs\/scos\/.+/,
+    /docs\/fes\/.+/,
     /docs\/marketplace\/.+/,
+    /docs\/paas-plus\/.+/,
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -46,6 +68,8 @@ task :check_mp_dev do
   options[:file_ignore] = [
     /docs\/scos\/.+/,
     /docs\/cloud\/.+/,
+    /docs\/fes\/.+/,
+    /docs\/paas-plus\/.+/,
     /docs\/marketplace\/user\/.+/,
   ]
   HTMLProofer.check_directory("./_site", options).run
@@ -56,6 +80,8 @@ task :check_mp_user do
   options[:file_ignore] = [
     /docs\/scos\/.+/,
     /docs\/cloud\/.+/,
+    /docs\/fes\/.+/,
+    /docs\/paas-plus\/.+/,
     /docs\/marketplace\/dev\/.+/,
   ]
   HTMLProofer.check_directory("./_site", options).run
@@ -66,6 +92,8 @@ task :check_scos_dev do
   options[:file_ignore] = [
     /docs\/marketplace\/.+/,
     /docs\/cloud\/.+/,
+    /docs\/fes\/.+/,
+    /docs\/paas-plus\/.+/,
     /docs\/scos\/user\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201811\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201903\.0\/.+/,
@@ -78,19 +106,64 @@ task :check_scos_dev do
   HTMLProofer.check_directory("./_site", options).run
 end
 
-task :check_scos_user do
+task :check_scos_dev_2020090 do
   options = commonOptions.dup
+  options[:only_4xx] = false
   options[:file_ignore] = [
-    /docs\/scos\/.+/,
+    /docs\/marketplace\/.+/,
     /docs\/cloud\/.+/,
-    /docs\/scos\/dev\/.+/,
+    /docs\/scos\/user\/.+/,
+    /docs\/fes\/.+/,
+    /docs\/paas-plus\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201811\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201903\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201907\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202001\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202108\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202200\.0\/.+/
+  ]
+  HTMLProofer.check_directory("./_site", options).run
+end
+
+task :check_scos_user do
+  options = commonOptions.dup
+  options[:file_ignore] = [
+    /docs\/marketplace\/.+/,
+    /docs\/cloud\/.+/,
+    /docs\/scos\/dev\/.+/,
+    /docs\/fes\/.+/,
+    /docs\/paas-plus\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/201811\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/201903\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/201907\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202001\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202200\.0\/.+/
+  ]
+  HTMLProofer.check_directory("./_site", options).run
+end
+
+task :check_fes do
+  options = commonOptions.dup
+  options[:file_ignore] = [
+    /docs\/scos\/.+/,
+    /docs\/marketplace\/.+/,
+    /docs\/cloud\/.+/,
+    /docs\/aop\/.+/,
+    /docs\/paas-plus\/.+/,
+  ]
+  HTMLProofer.check_directory("./_site", options).run
+end
+
+task :check_paas_plus do
+  options = commonOptions.dup
+  options[:file_ignore] = [
+    /docs\/scos\/.+/,
+    /docs\/marketplace\/.+/,
+    /docs\/cloud\/.+/,
+    /docs\/aop\/.+/,
+    /docs\/fes\/.+/,
   ]
   HTMLProofer.check_directory("./_site", options).run
 end

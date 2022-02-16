@@ -9,45 +9,47 @@ redirect_from:
   - /v4/docs/en/glue-api-payments-feature-integration
 ---
 
-<section contenteditable="false" class="errorBox"><div class="content">
+{% info_block errorBox “Attention!” %}
 
 **The following feature integration Guide expects the basic feature to be in place.**
 The current guide only adds the Payment Management API functionality.
-</div></section>
+
+{% endinfo_block %}
 
 Follow the steps below to install Payments feature API.
 
 ## Prerequisites
+
 To start the feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | master | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html)  |
-| Payments | master |  |
+| Spryker Core | 202001.0 | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html)  |
+| Payments | 202001.0 |  |
 
 ## 1)  Install the required modules using Composer
+
 Run the following command to install the required modules:
 
 ```bash
 composer require spryker/payments-rest-api:"1.1.0" --update-with-dependencies
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
-
-**Verification**
+{% info_block warningBox “Verification” %}
     
 Make sure that the following modules are installed:
 
 | Module | Expected Directory |
 | --- | --- |
 | `PaymentsRestApi` | `vendor/spryker/payments-rest-api` |
-</div></section>
+
+{% endinfo_block %}
 
 ## 2) Set Up Configuration
+
 Put all the payment methods available in the shop to  `CheckoutRestApiConfig`, for example:
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php</summary>
+**src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php**
     
 ```php
 <?php
@@ -82,22 +84,19 @@ class PaymentsRestApiConfig extends SprykerPaymentsRestApiConfig
 }
 ```
 
-</br>
-</details>
-
-<section contenteditable="false" class="warningBox"><div class="content">
-
-**Verification**
+{% info_block warningBox “Verification” %}
     
 Make sure that calling `Pyz\Zed\Payment\PaymentConfig::getSalesPaymentMethodTypes()` returns an array of the payment methods available in the shop grouped by the payment provider.
-</div></section>
+
+{% endinfo_block %}
 
 ## 3) Set Up Transfer Objects
+
 ### Install payment methods
+
 In order to have payment methods available for the checkout, you need to extend `RestPaymentTransfer` with project-specific payment method transfers installed in your project:
 
-<details open>
-<summary markdown='span'>src/Pyz/Shared/CheckoutRestApi/Transfer/checkout_rest_api.transfer.xml</summary>
+**src/Pyz/Shared/CheckoutRestApi/Transfer/checkout_rest_api.transfer.xml**
 
 ```xml
 <?xml version="1.0"?>
@@ -113,20 +112,14 @@ In order to have payment methods available for the checkout, you need to extend 
  
 </transfers>
 ```
-    
-</br>
-</details>
 
-<p>Run the following command to generate transfer changes:
+Run the following command to generate transfer changes:
 
 ```bash
 console transfer:generate
 ```
-</p>
 
-<section contenteditable="false" class="warningBox"><div class="content">
-
-**Verification**
+{% info_block warningBox “Verification” %}s="content">
     
 Make sure that the following changes have occurred:
 
@@ -134,11 +127,15 @@ Make sure that the following changes have occurred:
 | --- | --- | --- | --- |
 | `RestCheckoutRequestAttributes` | class | created | `src/Generated/Shared/Transfer/RestCheckoutRequestAttributesTransfer.php` |
 | `RestPayment` | class | created | `src/Generated/Shared/Transfer/RestPaymentTransfer.php` |
-</div></section>
-<section contenteditable="false" class="warningBox"><div class="content">
+
+{% endinfo_block %}
+
+
+{% info_block warningBox “Verification” %}
 
 Make sure that the newly generated transfer object `src/Generated/Shared/Transfer/RestPaymentTransfer.php` contains the `DummyPayment`, `DummyPaymentInvoice`, and `DummyPaymentCreditCard` fields.
-</div></section>
+
+{% endinfo_block %}
 
 ## 4) Set Up Behavior
 ### Add the required data to the database
@@ -173,7 +170,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox “Verification” %}

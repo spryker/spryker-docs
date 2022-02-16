@@ -1,5 +1,5 @@
 ---
-title: Product Reviews feature integration
+title: Product Rating and Reviews feature integration
 description: The guide walks you through the process of installing the Product Reviews feature in your project.
 last_updated: Apr 3, 2020
 template: feature-integration-guide-template
@@ -69,7 +69,7 @@ This command will generate some new classes in your project under `\Orm\Zed\Prod
         }
     }
 ```
- </br>
+ <br>
  </details>
 
 

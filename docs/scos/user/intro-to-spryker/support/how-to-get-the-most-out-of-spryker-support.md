@@ -27,9 +27,12 @@ Quick response and resolution times are not worth much if our messages cannot re
 
 If you are not sure how you can whitelist these email addresses, forward this request to your IT department or help desk. They will know how it can be done.
 
+<!--
 ![image.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/image%28136%29.png)
 
 *Photo by [@Startup-Stock-Photos](https://www.pexels.com/@startup-stock-photos)*
+
+-->
 
 ## Include all the intel
 
@@ -60,9 +63,10 @@ The bad news is, that much more often than not, this will achieve quite the oppo
 With Spryker Support it is not necessary to send a message to multiple people via various channels, as we will do that for you. We have clearly defined escalation rules (for an overview, look here) that make sure that every important stakeholder is informed. Raising a case with us also ensures SLA coverage, orderly tracking of all communication in a central, audited, and secure place. By only using our official points of contact to raise cases with us, you are doing us and yourself a big favor.
 
 ## Provide Feedback
+<!--
 ![image.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/image%28135%29.png)
 *Photo by [athree23](https://pixabay.com/de/users/athree23-6195572/)*
-
+-->
 We want to measure ourselves to your high standards and exceed expectations. One important step towards our goal of providing the best support experience in the industry is receiving feedback. When we close a with you, the notification email will include a link to a short survey. Please provide honest, stern feedback. Tell us how satisfied you were with our service and how easy or hard it was to work together with us. You have additional comments? Great! The survey also includes a comment field so you can include your feedback there.
 
 We take your feedback very seriously. Our Support Lead will read and follow up on your feedback.

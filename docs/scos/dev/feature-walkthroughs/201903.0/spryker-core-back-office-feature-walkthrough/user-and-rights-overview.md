@@ -8,6 +8,7 @@ originalArticleId: b24343bc-ba1b-4dad-aa74-162a43bf923a
 redirect_from:
   - /v2/docs/permission-acl-management
   - /v2/docs/en/permission-acl-management
+  - /docs/scos/dev/feature-walkthroughs/201903.0/customer-account-management-feature-walkthrough/user-and-rights-overview.html
 ---
 
 User and rights management is a general term that describes the security functionality for controlling user access to perform various roles throughout the system.
@@ -20,7 +21,7 @@ In the Spryker Commerce OS user and rights management is implemented in the foll
 
 ## Users and customers
 
-It is important to distinguish between users and customers. A user works with the back-end side of the store and handles the store maintenance such as creating users and assigning them to roles that will allow them to perform actions such as editing the CMS, activating and deactivating products and managing discounts. A customer on the other hand is the final consumer of the online store i.e. the person who places orders. Customers are also managed in Zed but in a different section.
+It is important to distinguish between users and customers. A user works with the back-end side of the store and handles the store maintenance such as creating users and assigning them to roles that will allow them to perform actions such as editing the CMS, activating and deactivating products and managing discounts. A customer on the other hand is the final consumer of the online store for example, the person who places orders. Customers are also managed in Zed but in a different section.
 
 Users are assigned to groups. Groups are a collection of Roles e.g. customer-care, root, 3rd party etc. Roles have Resources (rules) assigned to them. Resources (rules) are used to assign specific privileges to a Role for example, a Sales Representative Role or a System Administrator Role. Resources are always /module/controller/action and you can use * as placeholder.
 
@@ -33,9 +34,9 @@ The Auth, ACL and User bundles are configured and managed through the Zed user i
 
 Also, you can find bundle names as well as controllers and actions in the file `communication/navigation.xml`. For example:
 
-![bundles_navigation.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/bundles_navigation.png)
+![bundles_navigation.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.md/bundles_navigation.png)
 
-See [Managing users](https://documentation.spryker.com/docs/managing-users) to learn how to create and manage users, groups, and roles .
+See [Managing users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html) to learn how to create and manage users, groups, and roles .
 
 <a name="add-acl"></a>
 
@@ -121,15 +122,15 @@ In the example, we grant the user **winner@spryker.com** access to all Zed resou
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/spryker-core-back-office-feature-integration" class="mr-link">Enable Users and Rights by integrating the Spryker Core Back Office feature into your project</a></li></ul>
+                <li><a href="/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html" class="mr-link">Enable Users and Rights by integrating the Spryker Core Back Office feature into your project</a></li></ul>
         </div>
   <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/docs/managing-roles" class="mr-link">Create and manage roles</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-groups" class="mr-link">Create and manage groups</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-users" class="mr-link">Create and manage users</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-roles.html" class="mr-link">Create and manage roles</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-groups.html" class="mr-link">Create and manage groups</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html" class="mr-link">Create and manage users</a></li>
             </ul>
         </div>
  </div>

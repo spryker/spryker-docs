@@ -54,7 +54,7 @@ class IndexController extends AbstractController
 
 ## Input Parameters
 
-You can define an input parameter `$request` that is automatically injected. This is a [Symfony\Component\HttpFoundation\Request](http://api.symfony.com/2.3/Symfony/Component/HttpFoundation/Request.html), so you can find methods to fetch the get and post parameters and the session.
+You can define an input parameter `$request` that is automatically injected. This is a Symfony\Component\HttpFoundation\Request, so you can find methods to fetch the get and post parameters and the session.
 
 ```php
 <?php
@@ -130,4 +130,4 @@ You might use the following definitions to generate related code:
 * `vendor/bin/console spryk:run AddZedCommunicationController` - Add Zed Communication Controller
 * `vendor/bin/console spryk:run AddZedCommunicationControllerAction` - Add Zed Communication Controller Method
 
-See the [Spryk](/docs/scos/dev/sdk/{{site.version}}/development-tools/spryk-code-generator.html) documentation for details.
+See the [Spryk](/docs/scos/dev/sdk/development-tools/spryk-code-generator.html) documentation for details.

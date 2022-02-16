@@ -1,5 +1,5 @@
 ---
-title: Glue- Payments feature integration
+title: Glue API - Payments feature integration
 description: This guide will navigate through the process of installing and configuring of the Payments API feature used in Spryker OS.
 last_updated: Nov 22, 2019
 template: feature-integration-guide-template
@@ -92,7 +92,7 @@ class PaymentConfig extends SprykerPaymentConfig
 }
 ```
 
-</br>
+<br>
 </details>
 
 <section contenteditable="false" class="warningBox"><div class="content">
@@ -124,7 +124,7 @@ In order to have payment methods available for the checkout, you need to extend 
 </transfers>
 ```
     
-</br>
+<br>
 </details>
 
 <p>Run the following command to generate transfer changes:
@@ -183,7 +183,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox “Verification” %}

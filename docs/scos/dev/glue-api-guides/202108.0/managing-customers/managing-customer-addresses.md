@@ -144,8 +144,8 @@ Request sample: `POST http://glue.mysprykershop.com/customers/DE--1/addresses`
 | iso2Code |   | Specifies an ISO 2 Country Code to use. |
 | company | String | Specifies the customer's company. |
 | phone | String | Specifies the customer's phone number. |
-| isDefaultShipping | String | Specifies whether the address should be used as the default shipping address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
-| isDefaultBilling | String | Specifies whether the address should be used as the default billing address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
+| isDefaultShipping | Boolean | Specifies whether the address should be used as the default shipping address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
+| isDefaultBilling | Boolean | Specifies whether the address should be used as the default billing address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
 
 ## Edit an address
 
@@ -184,8 +184,8 @@ Request sample: `PATCH` **http://glue.mysprykershop.com/customers/DE-25/addresse
 | iso2Code | String | Specifies an ISO 2 Country Code to use. |
 | company | String | Specifies the customer's company. |
 | phone | String | Specifies the customer's phone number. |
-| isDefaultShipping | String | Specifies whether the address should be used as the default shipping address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
-| isDefaultBilling | String | Specifies whether the address should be used as the default billing address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
+| isDefaultShipping | Boolean | Specifies whether the address should be used as the default shipping address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
+| isDefaultBilling | Boolean | Specifies whether the address should be used as the default billing address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
 
 ### Response
 
@@ -319,8 +319,8 @@ Sample request: `GET http://glue.mysprykershop.com/customers/DE-25/addresses`
 | iso2Code | String | Specifies an ISO 2 Country Code to use. |
 | company | String | Specifies customer's company. |
 | phone | String | Specifies customer's phone number. |
-| isDefaultShipping | String | Specifies whether the address should be used as the default shipping address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
-| isDefaultBilling | String | Specifies whether the address should be used as the default billing address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
+| isDefaultShipping | Boolean | Specifies whether the address should be used as the default shipping address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
+| isDefaultBilling | Boolean | Specifies whether the address should be used as the default billing address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
 
 ## Retrieve an address
 
@@ -361,8 +361,8 @@ Request sample : `GET http://glue.mysprykershop.com/customers/DE-25/addresses/3a
 | iso2Code | String | Specifies an ISO 2 Country Code to use |
 | company | String | Specifies the customer's company |
 | phone | String | Specifies the customer's phone number |
-| isDefaultShipping | String | Specifies whether the address should be used as the default shipping address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
-| isDefaultBilling | String | Specifies whether the address should be used as the default billing address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
+| isDefaultShipping | Boolean | Specifies whether the address should be used as the default shipping address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
+| isDefaultBilling | Boolean | Specifies whether the address should be used as the default billing address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
 
 If the request is successful, the endpoint returns **RestAddressesResponse** with the requested address.
 
@@ -392,12 +392,15 @@ If the address is deleted successfully, the endpoint returns the `204 No Content
 
 | CODE | REASON |
 | --- | --- |
-| 402 | Customer with the specified ID was not found. |
-| 404 | Specified address could not be found. |
+| 001 | Access token is invalid. |
+| 002 | Access token is missing. |
+| 402 | Customer with the specified ID is not found. |
+| 404 | Specified address cannot be found. |
 | 405 | Customer reference is missing. |
 | 409 | Failed to update an address. |
 | 411 | Unauthorized request. |
 | 412 | No address ID provided. |
+| 901 | One of the following fields is not specified: `salutaion`, `firstName`, `lastName`, `city`, `address1`, `address2`, `zipCode`, `country`, `iso2Code`, `isDefaultShipping`, `isDefaultBilling` |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 

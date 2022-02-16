@@ -50,9 +50,9 @@ To search by products, send the request:
 | color | Specifies the product color | {% raw %}{{{% endraw %}color{% raw %}}}{% endraw %} |
 | storage_capacity[] | Specifies the storage capacity of a product | {% raw %}{{{% endraw %}storage_capacity{% raw %}}}{% endraw %} |
 | rating[min] | Specifies the minimum rating of a product | {% raw %}{{{% endraw %}rating{% raw %}}}{% endraw %} |
-| category | Specifies the category to search the products in | {% raw %}{{{% endraw %}category_node_id{% raw %}}}{% endraw %}</br>For the category node IDs, [retrieve the category tree](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-trees.html). |
+| category | Specifies the category to search the products in | {% raw %}{{{% endraw %}category_node_id{% raw %}}}{% endraw %}<br>For the category node IDs, [retrieve the category tree](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-trees.html). |
 | currency | Sets a currency | {currency{% raw %}}}{% endraw %} |
-| sort | Sorts the search results | For the list of possible values, run the catalog search request and find the list in the `sortParamNames` array.</br>For the default Spryker Demo Shop sorting parameters, see [Sorting parameters](#sorting). |
+| sort | Sorts the search results | For the list of possible values, run the catalog search request and find the list in the `sortParamNames` array.<br>For the default Spryker Demo Shop sorting parameters, see [Sorting parameters](#sorting). |
 | page | Sets the number of the search results page from which the results are retrieved | {% raw %}{{{% endraw %}page_number{% raw %}}}{% endraw %} |
 | ipp | Sets the number of products per page | {% raw %}{{{% endraw %}number_of_products{% raw %}}}{% endraw %} |
 
@@ -6700,8 +6700,8 @@ For other abstract product attributes, see:
 
 | CODE | REASON  |
 | -------- | ------------ |
-| 501      | Invalid currency.   |
-| 502      | Invalid price mode.  |
+| 313      | Currency is invalid.   |
+| 314      | Price mode is invalid.  |
 | 503      | Invalid type (non-integer) of one of the request parameters:<ul><li>rating</li><li>rating.min</li><li>rating.max</li><li>page.limit</li><li>page.offset</li><li>category</li></ul> |
 
 For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

@@ -33,13 +33,15 @@ Run the following command to install the required modules:
 composer require spryker/product-labels-rest-api:"^1.0.1" --update-with-dependencies
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
-    Make sure that the following module is installed:
+{% info_block warningBox “Verification” %}
+
+Make sure that the following module is installed:
 
 | Module | Expected Directory |
 | --- | --- |
 | `ProductLabelsRestApi` | `vendor/spryker/product-labels-rest-api` |
-</div></section>
+
+{% endinfo_block %}
 
 ## 2) Set up Transfer Objects
 
@@ -49,13 +51,15 @@ Run the following commands to generate transfer changes:
 console transfer:generate
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
-    Make sure that the following changes are present in transfer objects:
+{% info_block warningBox “Verification” %}
+
+Make sure that the following changes are present in transfer objects:
 
 | Transfer | Type | Event | Path |
 | --- | --- | --- | --- |
 | `RestProductLabelsAttributesTransfer` | class | created | `	src/Generated/Shared/Transfer/RestProductLabelsAttributesTransfer` |
-</div></section>
+
+{% endinfo_block %}
 
 ## 3) Set up Behavior
 Set up the following behaviors.
@@ -111,8 +115,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
-
-</br>
 </details>
 
 {% info_block warningBox "Verification" %}

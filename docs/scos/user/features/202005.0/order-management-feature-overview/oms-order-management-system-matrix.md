@@ -18,7 +18,7 @@ Many start ups in the eCommerce world have gone through an automation approach o
 
 They have started highly manually: every step from order to fulfillment was done by a support team. A typical culture of heroes. With increasing amount of sales orders, the entire process or subprocesses have been automated, for example with a lot of if-then-else statements. This easily ends up in unmaintainable spaghetti code. Others have introduced an ERP system, which results in a distributed logic between shop and ERP. In both cases the documentation of the implemented process can only be found in the code and development efficiency decreases with the increasing complexity. But this has also an effect on operations: Support teams need to use many tools to understand the flow of a sales order. Process insight and process performance indicators are missing. Typically there are a set of KPI aggregated in a Data Warehouse, but KPI reflect a result, if you want to understand why a specific result was realized Process Performance Indicators allow to dig deeper.
 
-<!-- * See [State Machine Patterns](https://documentation.spryker.com/v5/docs/en/state-machine-patterns)-->
+<!-- * See [State Machine Patterns](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html)-->
 
 ## Process Management as a Solution?
 Business Process Management is a management discipline that focuses on processes rather than on departments or functional units. Processes describe how and where value is created for a customer. Typically processes start outside of the company, are then processed within to finally end outside again.

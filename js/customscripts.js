@@ -32,7 +32,38 @@ $( document ).ready(function() {
     initPageScrolling();
 
     initPostAnchor();
+
+    initHubspotForm();
 });
+
+function initHubspotForm() {
+    let formContainer = $('.js-hubspot-form');
+
+    if (!formContainer.length) return;
+
+    let hubspotPopup = $('.hubspot-submitted').popup({
+        animSpeed: 500,
+        box: '.hubspot-submitted__popup',
+        close: '.hubspot-submitted__close',
+        overlay: '.hubspot-submitted__popup-overlay',
+        preventScroll: true,
+    });
+
+    hbspt.forms.create({
+        portalId: formContainer.data('portalId'),
+        formId: formContainer.data('formId'),
+        submitButtonClass: 'button button--red hubspot-form__submit',
+        target: '#' + formContainer.attr('id'),
+        onFormReady: function() {},
+        onFormSubmitted: function(){
+            hubspotPopup.open();
+
+            setTimeout(function(){
+                hubspotPopup.close();
+            }, 5000);
+        },
+    });
+}
 
 function initAnchors() {
     anchors.add('.post-content h2:not([data-toc-skip]),.post-content h3:not([data-toc-skip]),.post-content h4:not([data-toc-skip]),.post-content h5:not([data-toc-skip])');
@@ -90,6 +121,10 @@ function initPageScrolling() {
 function initLightbox() {
     $('.post-content img').each(function(i, item){
         let image = $(this);
+
+        if (image.is('.inline-img img')) {
+             return;
+        }
 
         image.wrap('<a href="' + image.attr('src') + '" data-lightbox="content-lightbox"></a>');
     });
@@ -211,71 +246,71 @@ $.fn.popup = function (options) {
         options
     );
 
+    let page = jQuery(window),
+        holder = $(this),
+        body = $('body'),
+        popup = holder.find(options.box),
+        opener = holder.find(options.opener),
+        close = holder.find(options.close),
+        overlay = holder.find(options.overlay),
+        links = options.anchorLinks,
+        bodyClass = options.bodyClass,
+        menuIsOpened = false,
+        menuIsAnimated = false,
+        preventScroll = false;
+
+    function toggleMenu() {
+        menuIsAnimated = !menuIsAnimated;
+
+        if (!menuIsAnimated) {
+            return;
+        }
+
+        if (menuIsOpened) {
+            opener.removeClass('expanded');
+
+            if (options.preventScroll) {
+                body.removeClass(bodyClass);
+            }
+
+            popup.fadeOut(300, function () {
+                switchMenuState();
+            });
+
+            if (options.overlay) {
+                overlay.fadeOut(300);
+            }
+
+            if (typeof options.hidePopup === 'function') {
+                options.hidePopup();
+            }
+        } else {
+            opener.addClass('expanded');
+
+            if (options.preventScroll) {
+                body.addClass(bodyClass);
+            }
+
+            popup.fadeIn(300, function () {
+                switchMenuState();
+            });
+
+            if (options.overlay) {
+                overlay.fadeIn(300);
+            }
+
+            if (typeof options.showPopup === 'function') {
+                options.showPopup();
+            }
+        }
+    }
+
+    function switchMenuState() {
+        menuIsOpened = !menuIsOpened;
+        menuIsAnimated = !menuIsAnimated;
+    }
+
     let popupFunc = function () {
-        let page = jQuery(window),
-            holder = $(this),
-            body = $('body'),
-            popup = holder.find(options.box),
-            opener = holder.find(options.opener),
-            close = holder.find(options.close),
-            overlay = holder.find(options.overlay),
-            links = options.anchorLinks,
-            bodyClass = options.bodyClass,
-            menuIsOpened = false,
-            menuIsAnimated = false,
-            preventScroll = false;
-
-        function toggleMenu() {
-            menuIsAnimated = !menuIsAnimated;
-
-            if (!menuIsAnimated) {
-                return;
-            }
-
-            if (menuIsOpened) {
-                opener.removeClass('expanded');
-
-                if (options.preventScroll) {
-                    body.removeClass(bodyClass);
-                }
-
-                popup.fadeOut(300, function () {
-                    switchMenuState();
-                });
-
-                if (options.overlay) {
-                    overlay.fadeOut(300);
-                }
-
-                if (typeof options.hidePopup === 'function') {
-                    options.hidePopup();
-                }
-            } else {
-                opener.addClass('expanded');
-
-                if (options.preventScroll) {
-                    body.addClass(bodyClass);
-                }
-
-                popup.fadeIn(300, function () {
-                    switchMenuState();
-                });
-
-                if (options.overlay) {
-                    overlay.fadeIn(300);
-                }
-
-                if (typeof options.showPopup === 'function') {
-                    options.showPopup();
-                }
-            }
-        }
-
-        function switchMenuState() {
-            menuIsOpened = !menuIsOpened;
-            menuIsAnimated = !menuIsAnimated;
-        }
-
         if (links) {
             popup.on('click', function (e) {
                 if ( e.target.classList.contains(links) && window.innerWidth < 1280 && !menuIsAnimated) {
@@ -299,6 +334,15 @@ $.fn.popup = function (options) {
             toggleMenu();
         });
     };
+
+    this.close = function() {
+        menuIsOpened = true;
+        toggleMenu();
+    }
+
+    this.open = function() {
+        toggleMenu();
+    }
 
     return this.each(popupFunc);
 };
@@ -531,15 +575,81 @@ function initSidebarAccordion() {
 }
 
 function initFeedbackForm() {
+    let form = $('#feedback-form'),
+        formNative = form.get(0),
+        regEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/,
+        isValid = false,
+        errorClass = 'validation-error',
+        inputs = form.find('.required-field, .required-email, .optional-email'),
+        successMessage = $('.feedback-form__success-message'),
+        formIsSubmitted = false;
+
+    function validateForm() {
+        isValid = true;
+        inputs.each(checkField);
+
+        if(!isValid) {
+            return false;
+        }
+    }
+
+    function checkField(i, item) {
+        let input = $(item);
+
+        // not empty fields
+        if(input.hasClass('required-field')) {
+            setState(input, !input.val().length)
+        }
+
+        // correct email fields
+        if(input.hasClass('required-email')) {
+            setState(input, !regEmail.test(input.val()));
+        }
+
+        // optional email fields
+        if(input.hasClass('optional-email') && input.val().length) {
+            setState(input, !regEmail.test(input.val()));
+        }
+    }
+
+    function setState(field, error) {
+        field.removeClass(errorClass);
+
+        if (error) {
+            field.addClass(errorClass);
+
+            field.one('focus', function() {
+                field.removeClass(errorClass);
+            });
+
+            isValid = false;
+        }
+    }
+
+    $(':input', form).change(function() {
+        form.data('state-changed', true);
+    })
+
     $('.form-collapse').each(function () {
         let container = $(this),
             opener = container.find('.js-form-collapse__opener'),
+            firstStep = container.find('.js-form-collapse__first-step'),
+            secondStep = container.find('.js-form-collapse__second-step'),
+            secondStepOpener = container.find('.js-form-collapse__second-step-opener'),
             close = container.find('.js-form-collapse__close'),
-            slide = container.find('.js-form-collapse__slide');
+            slide = container.find('.js-form-collapse__slide'),
+            shortFeedback = container.find('.js-form-collapse__short-feedback');
 
-        opener.on('click', function (e) {
-            e.preventDefault();
+        secondStepOpener.on('click', function (e) {
+            let shortFeedbackValue = $(e.currentTarget).text();
 
+            shortFeedback.val(shortFeedbackValue).change();
+            firstStep.hide();
+            secondStep.removeClass('hidden');
+        });
+
+        opener.on('click', function () {
+            opener.addClass('button--disabled');
             slide.stop().slideDown(300);
         });
 
@@ -547,7 +657,48 @@ function initFeedbackForm() {
             e.preventDefault();
 
             slide.stop().slideUp(300);
+
+            if (!formIsSubmitted) {
+                opener.removeClass('button--disabled');
+            }
         });
+    });
+
+    $('#feedback-submit').on('click', function(e){
+        e.preventDefault();
+        validateForm();
+
+        if (isValid) {
+            handleFeedbackSubmit(e);
+            form.data('state-changed', false);
+        }
+    });
+
+    async function handleFeedbackSubmit(event) {
+        event.preventDefault();
+        let data = new FormData(formNative);
+
+        fetch(formNative.action, {
+            method: formNative.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.status === 200) {
+                form.hide();
+                successMessage.show();
+                formIsSubmitted = true;
+            }
+        }).catch(error => {
+            console.log(error);
+        });
+    }
+
+    document.addEventListener('visibilitychange', function() {
+        if (document.visibilityState === 'hidden' && form.data('state-changed')) {
+            navigator.sendBeacon(formNative.action, new FormData(formNative));
+        }
     });
 }
 

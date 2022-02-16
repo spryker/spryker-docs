@@ -16,6 +16,8 @@ redirect_from:
   - /v5/docs/en/t-checkout-and-step-engine-spryker-commerce-os
   - /v4/docs/t-checkout-and-step-engine-spryker-commerce-os
   - /v4/docs/en/t-checkout-and-step-engine-spryker-commerce-os
+  - /v3/docs/t-checkout-and-step-engine-spryker-commerce-os
+  - /v3/docs/en/t-checkout-and-step-engine-spryker-commerce-os
   - /v2/docs/t-checkout-and-step-engine-spryker-commerce-os
   - /v2/docs/en/t-checkout-and-step-engine-spryker-commerce-os
   - /v1/docs/t-checkout-and-step-engine-spryker-commerce-os
@@ -545,7 +547,7 @@ public function voucherAction(Request $request)
 
 {% info_block infoBox "Info" %}
 
-The step has a form now and receives the voucher code value from the customer. Go to the [shop](http://www.de.suite.local/) and try it out.
+The step has a form now and receives the voucher code value from the customer. Go to the shop `http://www.de.suite.local/` and try it out.
 
 {% endinfo_block %}
 
@@ -582,7 +584,5 @@ public function execute(Request $request, AbstractTransfer $quoteTransfer)
 ```
 
 {% info_block infoBox "Info" %}
-
 Done and ready for testing! <ol><li>Go to the shop.</li><li>Add any product to cart.</li><li>Go the checkout and enter any of the available voucher codes.</li></ol><br>You should receive a discount on your order.
-
 {% endinfo_block %}

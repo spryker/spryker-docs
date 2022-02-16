@@ -1,5 +1,5 @@
 ---
-title: "Glue API: Customer Account Management feature integration"
+title: Glue API - Customer Account Management feature integration
 description: This guide will navigate through the process of installing and configuring of the Customer API feature used in Spryker OS.
 last_updated: Nov 22, 2019
 template: feature-integration-guide-template
@@ -16,7 +16,7 @@ related:
 ---
 
 {% info_block errorBox %}
-The following feature integration guide expects the basic feature to be in place.</br>The current feature integration guide only adds the Oauth, Auth Rest API and Customers Rest API functionality.
+The following feature integration guide expects the basic feature to be in place.<br>The current feature integration guide only adds the Oauth, Auth Rest API and Customers Rest API functionality.
 {% endinfo_block %}
 
 ## Install Feature API
@@ -62,7 +62,7 @@ $config[OauthConstants::OAUTH_CLIENT_IDENTIFIER] = 'some-client-identifier';
 $config[OauthConstants::OAUTH_CLIENT_SECRET] = 'some-client-secret';
 ```
 
-</br>
+<br>
 </details>
 
 ### 3) Set Up Database Schema and Transfer Objects
@@ -260,7 +260,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 <details open>
@@ -299,7 +299,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 }
 ```
 
-</br>
+<br>
 </details>
 
 <details open>
@@ -329,7 +329,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 }
 ```
 
-</br>
+<br>
 </details>
 
 Run the following command to set up OAuth client:
@@ -354,7 +354,7 @@ Make sure that the following endpoints are available:<ul><li>http://mysprykersho
 
 {% info_block warningBox “Verification” %}
 
-Send a request to *http://mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=addresses*. Make sure that the response includes relationships to the addresses resources.</br>The Customer with the given ID should have at least one address.
+Send a request to *http://mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=addresses*. Make sure that the response includes relationships to the addresses resources.<br>The Customer with the given ID should have at least one address.
 {% endinfo_block %}
 
 {% info_block warningBox “Verification” %}
@@ -377,7 +377,7 @@ To verify `AccessTokenRestRequestValidatorPlugin` is set up correctly, you'll ne
 }
 ```
 
-</br>
+<br>
 </details>
 
 <details open>
@@ -395,7 +395,7 @@ To verify `AccessTokenRestRequestValidatorPlugin` is set up correctly, you'll ne
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox “Verification” %}

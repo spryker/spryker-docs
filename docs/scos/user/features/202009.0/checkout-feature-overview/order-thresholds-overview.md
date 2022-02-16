@@ -1,5 +1,5 @@
 ---
-title: Order thresholds
+title: Order Thresholds feature overview
 description: Order thresholds allow you to control the values of the orders your customers place. You can define a maximum or a minimum value that should be reached for an order to be placed.
 last_updated: May 28, 2021
 template: concept-topic-template
@@ -20,7 +20,7 @@ For example, if the hard maximum threshold is €3000, and a customer adds items
 
 A Back Office user can enter a message that is displayed in cart when the hard maximum threshold is reached.
 
-See [Setting up a maximum hard threshold](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-global-thresholds.html#setting-up-a-hard-threshold) to learn how a Back Office user configures the maximum hard threshold.
+See [Setting up a maximum hard threshold](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-global-thresholds.html#setting-up-a-hard-maximum-threshold) to learn how a Back Office user configures the maximum hard threshold.
 
 
 ## Minimum thresholds
@@ -32,7 +32,7 @@ A *hard minimum* threshold is a minimum threshold that under no conditions allow
 
 For example, if the hard minimum threshold value is €400, and a customer adds products for €195 to cart, they cannot place the order. If the customer adds more products and the order subtotal becomes equal to or greater than €400, they can place the order.
 
-See [Setting up a minimum hard threshold](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-global-thresholds.html#setting-up-a-hard-threshold) to learn how a Back Office user configures the minimum hard threshold.
+See [Setting up a minimum hard threshold](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-global-thresholds.html#setting-up-a-hard-minimum-threshold) to learn how a Back Office user configures the minimum hard threshold.
 
 
 ### Soft minimum threshold
@@ -46,7 +46,7 @@ The following soft minimum thresholds are shipped by default:
 
 Fees for the soft thresholds are based on sub-total order values. Fixed and flexible fees are added in a separate line as expenses for orders.
 
-See [Setting up a minimum soft threshold](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-global-thresholds.html#setting-up-a-soft-threshold) to learn how a Back Office user configures the minimum soft threshold.
+See [Setting up a minimum soft threshold](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-global-thresholds.html#setting-up-a-soft-minimum-threshold) to learn how a Back Office user configures the minimum soft threshold.
 
 
 #### Soft minimum threshold with a message

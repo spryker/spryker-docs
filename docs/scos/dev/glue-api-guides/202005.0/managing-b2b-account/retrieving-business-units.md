@@ -32,7 +32,7 @@ The endpoints provided by this API cannot be accessed anonymously. To access the
 In your development, the endpoint can help you to provide information on the Business Units available in the company of the currently logged in user.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html#glue-api--company-account-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html).
 
 ## Retrieving General Business Unit Information
 ### Information on the Business Unit of the User
@@ -264,7 +264,7 @@ The response will include the following additional attributes:
 | Status | Reason |
 | --- | --- |
 | 401 | The access token is invalid. |
-| 403 | The access token is missing.</br>- OR -</br>The current Company Account is not set.</br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html).|
+| 403 | The access token is missing.<br>- OR -<br>The current Company Account is not set.<br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html).|
 | 404 | The specified Business Unit was not found or the user does not have access to it. |
 
 ## Retrieving Business Unit Addresses
@@ -326,5 +326,5 @@ The endpoint responds with a **RestCompanyBusinessUnitAddressResponse** that con
 | Status | Reason |
 | --- | --- |
 | 401 | The access token is invalid. |
-| 403 | The access token is missing.</br>- OR -</br>The current Company Account is not set.</br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html).|
+| 403 | The access token is missing.<br>- OR -<br>The current Company Account is not set.<br>This can occur if you didn't properly impersonate the user as a Company User Account. For details on how to do so, see [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html).|
 | 404 | The specified Business Unit was not found or the user does not have access to it. |

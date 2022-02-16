@@ -1,5 +1,5 @@
 ---
-title: Order management feature integration
+title: Order Management feature integration
 last_updated: Sep 8, 2020
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/order-management-feature-integration
@@ -29,7 +29,6 @@ The current feature integration guide only adds the following functionalities:
 *     Order cancellation behavior
 *     Show `display names` for order item states 
 *     Invoice generation
-
 
 {% endinfo_block %}
 
@@ -72,6 +71,7 @@ Make sure that the following changes have been applied in database:
 | `spy_sales_order_invoice` | table | created |
 
 {% endinfo_block %}
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been applied in transfer objects:
@@ -93,6 +93,7 @@ Make sure that the following changes have been applied in transfer objects:
 Set up the following configuration.
 
 #### 2.1) Configure OMS
+
 {% info_block infoBox "Info" %}
 
 The `cancellable` flag allows to proceed to the `order cancel` process.
@@ -102,8 +103,11 @@ The `display` attribute allows to attach the `display name` attribute to specifi
 The` DummyInvoice` sub-process allows triggering `invoice-generate` events.
 
 {% endinfo_block %}
+
 Create the OMS sub-process file.
+
 **config/Zed/oms/DummySubprocess/DummyInvoice01.xml**
+
 ```xml
 <?xml version="1.0"?>
 <statemachine
@@ -146,9 +150,8 @@ The verification of the invoice state machine configuration will be checked in a
 
 Using the `DummyPayment01.xml` process as an example, adjust your OMS state-machine configuration according to your project’s requirements.
 
-<details open>
-    <summary markdown='span'>config/Zed/oms/DummyPayment01.xml</summary>
-    
+**config/Zed/oms/DummyPayment01.xml**
+
 ```xml
 <?xml version="1.0"?>
 <statemachine
@@ -298,7 +301,7 @@ Using the `DummyPayment01.xml` process as an example, adjust your OMS state-mach
 
 </statemachine>
 ```
-</details>
+
 
 {% info_block warningBox "Verification" %}
 
@@ -308,7 +311,7 @@ Ensure that you’ve configured the OMS:
 
 2. Select *DummyPayment01 [preview-version]*.
 
-2. Ensure that the `new`, `payment pending`, `paid`, and `confirmed` states keep the `cancellable` tag inside.
+3. Ensure that the `new`, `payment pending`, `paid`, and `confirmed` states keep the `cancellable` tag inside.
 
 4. Ensure that `invoice generated` state was added.
 
@@ -320,6 +323,7 @@ Adjust configuration according to your project’s needs:
 
 
 **src/Pyz/Zed/Oms/OmsConfig.php**
+
 ```php
 <?php
 
@@ -354,11 +358,13 @@ Once you've finished [setting up behavior](#set-up-behavior), ensure that, on t
 
 
 {% endinfo_block %}
+
 #### 3.2) Configure Order Invoice Template
 
 Adjust configuration according to your project’s needs:
 
 **src/Pyz/Zed/SalesInvoice/SalesInvoiceConfig.php**
+
 ```php
 <?php
 
@@ -380,8 +386,8 @@ class SalesInvoiceConfig extends SprykerSalesInvoiceConfig
 }
 ```
 Add oder invoice twig template. For example:
-<details open>
-    <summary markdown='span'>src/Pyz/Zed/SalesInvoice/Presentation/Invoice/Invoice.twig</summary>
+
+**src/Pyz/Zed/SalesInvoice/Presentation/Invoice/Invoice.twig**
     
 ```html
 {# @var order \Generated\Shared\Transfer\OrderTransfer #}
@@ -604,7 +610,6 @@ Add oder invoice twig template. For example:
 </body>
 </html>
 ```
-</details>
 
 {% info_block warningBox "Verification" %}
 
@@ -613,8 +618,8 @@ The verification of the invoice template configuration will be checked in a late
 {% endinfo_block %}
 
 
+### 4) Add Translations
 
- ### 4) Add Translations
 {% info_block errorBox %}
 
 An `oms.state.` prefixed translation key is a combination of the `OmsConfig::getFallbackDisplayNamePrefix()` and a normalized state machine name. If you have different OMS state-machine states or a fallback display name prefix, adjust the corresponding translations.
@@ -805,7 +810,9 @@ Ensure that, on the following pages, each order contains the `isCancellable` fl
 | Plugin | Specification | Prerequisites | Namespace |
 | --- | --- | --- | --- |
 | `OrderInvoiceMailTypePlugin` | An email type that prepares invoice email for an order. | cell | cell |
+
 **src/Pyz/Zed/Mail/MailDependencyProvider.php**
+
 ```php
 <?php
 
@@ -913,6 +920,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 Adjust scheduler project configuration:
 
 **config/Zed/cronjobs/jenkins.php**
+
 ```php
 /* Order invoice */
 $jobs[] = [
@@ -923,7 +931,9 @@ $jobs[] = [
     'stores' => $allStores,
 ];
 ```
+
 To apply scheduler configuration update, run next commands:
+
 ```bash
 vendor/bin/console scheduler:suspend
 vendor/bin/console scheduler:setup
@@ -934,6 +944,7 @@ vendor/bin/console scheduler:resume
 Once all invoice related configuration was set up, ensure that the right order invoice template was assigned to the order (`spy_sales_order_invoice`) after moving at least 1 item in the order to `invoice generated` state based on your `DummyInvoice01.xml` and `SalesInvoiceConfig::getOrderInvoiceTemplatePath()` configuration.
 
 {% endinfo_block %}
+
 {% info_block warningBox "Verification" %}
 
 The email with the invoice based on the configured invoice template should be sent to the email address of the order’s customer within the scheduled (5 mins) time.
@@ -952,8 +963,6 @@ Overview and install the necessary features before beginning the integration ste
 | --- | --- |
 | Spryker Core | 202009.0 |
 
-
-
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
@@ -961,7 +970,6 @@ Run the following command(s) to install the required modules:
 ```bash
 composer require spryker-feature/order-management: "202009.0" --update-with-dependencies
 ```
-
 
 ### 2) Add Translations
 
@@ -991,9 +999,7 @@ Ensure that, in the database, the configured data has been added to the `spy_glo
 
 ### 3) Enable Controllers
 
-Register the following route provider(s) on the Storefront:
-
- 
+Register the following route provider(s) on the Storefront: 
 
 | Provider | Namespace |
 | --- | --- |
@@ -1087,7 +1093,6 @@ Ensure that:
 * You can see the aggregated order item states in the *item state* table column on the *Customer Overview* and *Order History* pages on the Storefront;
 * Aggregated return item states are displayed on the *Return Page* on the Storefront.
 * Item states are displayed on the *Order Details* and *Return Details* pages on the Storefront.
-
 
 {% endinfo_block %}
 

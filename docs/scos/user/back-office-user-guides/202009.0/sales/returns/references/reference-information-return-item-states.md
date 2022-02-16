@@ -1,5 +1,5 @@
 ---
-title: Reference information- return item states
+title: Reference information - return item states
 description: This guide provides reference information on  return item states.
 last_updated: Aug 27, 2020
 template: back-office-user-guide-template
@@ -10,7 +10,7 @@ redirect_from:
   - /v6/docs/en/return-item-states-reference-information
 related:
   - title: Return Management Feature Overview
-    link: /docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html
+    link: docs/scos/user/features/page.version/return-management-feature-overview/return-management-feature-overview.html
   - title: Managing Returns
     link: docs/scos/user/back-office-user-guides/page.version/sales/returns/managing-returns.html
 ---

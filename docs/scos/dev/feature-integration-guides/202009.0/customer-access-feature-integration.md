@@ -1,5 +1,5 @@
 ---
-title: Customer access feature integration
+title: Customer Access feature integration
 description: The guide walks you through the process of installing the Customer Access feature in the project.
 last_updated: Aug 27, 2020
 template: feature-integration-guide-template
@@ -29,7 +29,15 @@ composer require spryker-feature/customer-access:"^master" --update-with-depende
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules were installed:<table><thead><tr><td>Module</td><td>Expected Directory</td></tr></thead><tbody><tr><td>`CustomerAccess`</td><td>`vendor/spryker/customer-access`</td></tr><tr><td>`CustomerAccessPermission`</td><td>`vendor/spryker/customer-access-permission`</td></tr><tr><td>`CustomerAccessStorage`</td><td>`vendor/spryker/customer-access-storage`</td></tr><tr><td>`CustomerAccessGui`</td><td>`vendor/spryker/customer-access-gui`</td></tr></tbody></table>
+Make sure that the following modules were installed:
+
+|Module|Expected Directory|
+|--- |--- |
+|`CustomerAccess`|`vendor/spryker/customer-access`|
+|`CustomerAccessPermission`|`vendor/spryker/customer-access-permission`|
+|`CustomerAccessStorage`|`vendor/spryker/customer-access-storage`|
+|`CustomerAccessGui`|`vendor/spryker/customer-access-gui`|
+
 {% endinfo_block %}
 
 ### 2) Set up Configuration
@@ -101,16 +109,35 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes by checking your database:<table><thead><tr><td>Database Entity</td><td>Type</td><td>Event</td></tr></thead><tbody><tr><td>`spy_unauthenticated_customer_access`</td><td>table</td><td>created</td></tr><tr><td>`spy_unauthenticated_customer_access_storage`</td><td>table</td><td>created</td></tr></tbody></table>
+Make sure that the following changes by checking your database:
+
+|Database Entity|Type|Event|
+|--- |--- |--- |
+|`spy_unauthenticated_customer_access`|table|created|
+|`spy_unauthenticated_customer_access_storage`|table|created|
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes in transfer objects:<table><thead><tr class="TableStyle-PatternedRows2-Head-Header1"><td>Transfer</td><td>Type</td><td>Event</td><td>Path</td></tr></thead><tbody><tr><td>`CustomerAccess`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CustomerAccessTransfer`</td></tr><tr><td>`ContentTypeAccess`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ContentTypeAccessTransfer`</td></tr><tr><td>`SpyUnauthenticatedCustomerAccessEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/SpyUnauthenticatedCustomerAccessEntity`</td></tr><tr><td>`SpyUnauthenticatedCustomerAccessStorageEntityTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/SpyUnauthenticatedCustomerAccessStorageEntity`</td></tr></tbody></table>
+Make sure that the following changes in transfer objects:
+
+|Transfer|Type|Event|Path|
+|--- |--- |--- |--- |
+|`CustomerAccess`|class|created|`src/Generated/Shared/Transfer/CustomerAccessTransfer`|
+|`ContentTypeAccess`|class|created|`src/Generated/Shared/Transfer/ContentTypeAccessTransfer`|
+|`SpyUnauthenticatedCustomerAccessEntity`|class|created|`src/Generated/Shared/SpyUnauthenticatedCustomerAccessEntity`|
+|`SpyUnauthenticatedCustomerAccessStorageEntityTransfer`|class|created|`src/Generated/Shared/SpyUnauthenticatedCustomerAccessStorageEntity`|
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the changes were implemented successfully. For this purpose, trigger the following methods and make sure that the above events have been triggered:<table><thead><tr><td>Path</td><td>Method Name</td></tr></thead><tbody><tr><td>`src/Orm/Zed/CustomerAccess/Persistence/SpyUnauthenticatedCustomerAccess.php`</td><td>`prepareSaveEventName(
-{% endinfo_block %}`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`</td></tr></tbody></table>)
+Make sure that the changes were implemented successfully. For this purpose, trigger the following methods and make sure that the above events have been triggered:
+
+|Path|Method Name|
+|--- |--- |
+|`src/Orm/Zed/CustomerAccess/Persistence/SpyUnauthenticatedCustomerAccess.php`|`prepareSaveEventName()`<br>`addSaveEventToMemory()`<br>`addDeleteEventToMemory()`|
+
+{% endinfo_block %}
 
 ### 3) Configure Export to Redis
 
@@ -315,8 +342,15 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that everything works fine (checks should be done for not logged-in customers
-{% endinfo_block %}:<ul><li>`SeePricePermissionPlugin` will show or hide prices at all pages depending on configuration value</li><li>`SeeOrderPlaceSubmitPermissionPlugin` will allow or disallow order submitting after going through the checkout process depending on configuration value</li><li>`SeeAddToCartPermissionPlugin` is responsible for "Add to Cart" button on PDP. It will be available or not depending on configuration value</li><li>`SeeWishlistPermissionPlugin` takes care about "Add to Wishlist" button on PDP. It will be shown or not depending on configuration value</li><li>`SeeShoppingListPermissionPlugin` will allow or disallow adding product to shopping list from PDP depending on configuration value</li><li>`CustomerAccessPermissionStoragePlugin` is responsible for customer permissions retrieving</li></ul>)
+Make sure that everything works fine (checks should be done for not logged-in customers:
+- `SeePricePermissionPlugin` will show or hide prices at all pages depending on configuration value
+- `SeeOrderPlaceSubmitPermissionPlugin` will allow or disallow order submitting after going through the checkout process depending on configuration value
+- `SeeAddToCartPermissionPlugin` is responsible for "Add to Cart" button on PDP. It will be available or not depending on configuration value
+- `SeeWishlistPermissionPlugin` takes care about "Add to Wishlist" button on PDP. It will be shown or not depending on configuration value
+- `SeeShoppingListPermissionPlugin` will allow or disallow adding product to shopping list from PDP depending on configuration value
+- `CustomerAccessPermissionStoragePlugin` is responsible for customer permissions retrieving
+
+{% endinfo_block %}
 
 ## Install Feature Frontend
 

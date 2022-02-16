@@ -48,11 +48,11 @@ Upon receiving an API request, the `GlueApplication` module verifies whether the
 
 ![Glue Application Module](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Glue+Infrastructure/glue-application-module.png)
 
-Upon receiving a request object, the `Resource` module needs to provide it with a valid response. Responses are provided as **API Response Objects**. To build them, `Resource` modules use the `RestApi\Spryker\Glue\Kernel\AbstractFactory::getResourceBuilder()` method which returns the `RestResourceBuilderInterface` objects. The `GlueApplication` Resource module serializes such objects into the response format and then passes them to the requestor.
+Upon receiving a request object, the `Resource` module needs to provide it with a valid response. Responses are provided as **API Response Objects**. To build them, `Resource` modules use the `RestApi\Spryker\Glue\Kernel\AbstractFactory::getResourceBuilder()` method which returns the `RestResourceBuilderInterface` objects. The `GlueApplication` module serializes such objects into the response format and then passes them to the requestor.
 
 ![Glue Application Module](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Glue+Infrastructure/communication.png)
 
-A `Resource` Resource module can communicate with the Storage, Search and Spryker Commerce OS (Zed) using a Client only.
+A `Resource` module can communicate with the Storage, Search and Spryker Commerce OS (Zed) using a Client only.
 
 ### Resource routing
 
@@ -330,7 +330,7 @@ If we add relationships to the `wishlist-items` and `concrete-products` resource
 }
 ```
 
-</br>
+<br>
 </details>
 
 #### Possible implementations

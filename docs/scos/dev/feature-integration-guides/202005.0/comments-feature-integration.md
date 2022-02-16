@@ -16,8 +16,8 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Spryker Core | master |
-| Customer Account Management | master |
+| Spryker Core | {{page.version}} |
+| Customer Account Management | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
@@ -266,7 +266,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
-Verify the `CommentWidgetRouteProviderPlugin`, log in as a customer and open the link: `mysprykershop.com/comment/0adafdf4-cb26-477d-850d-b26412fbd382/tag/add?returnUrl=/cart`</br>Make sure that the error flash message was shown.
+Verify the `CommentWidgetRouteProviderPlugin`, log in as a customer and open the link: `mysprykershop.com/comment/0adafdf4-cb26-477d-850d-b26412fbd382/tag/add?returnUrl=/cart`<br>Make sure that the error flash message was shown.
 {% endinfo_block %}
 
 ### 4) Set up Widgets

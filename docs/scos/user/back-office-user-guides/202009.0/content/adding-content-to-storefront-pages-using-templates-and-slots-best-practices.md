@@ -1,5 +1,5 @@
 ---
-title: Adding content to storefront pages using templates & slots- Best practices
+title: Adding content to storefront pages using templates & slots - Best practices
 description: Templates with slots allows managing all the Storefront content in the Back Office.
 last_updated: Aug 27, 2020
 template: back-office-user-guide-template
@@ -27,7 +27,7 @@ Let’s say you have *Sticky Notes* and *Writing Materials* categories, and you 
 To do that, you need to create content items, insert them into CMS blocks, assign CMS blocks to slots and select the pages the CMS blocks will be displayed on.
 {% info_block infoBox "Examplary content" %}
 
-All the content used in this guide is shipped by default in our [Demo Shops](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2b-b2c-demo-shops).
+All the content used in this guide is shipped by default in our [Demo Shops](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2bb2c-demo-shops).
 
 {% endinfo_block %}
  
@@ -45,7 +45,7 @@ Create the following content items:
 
 See [Creating Content Items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html) for more details.
 
-If the content item types shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [HowTo - Create a Content Item](/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/feature-howtos/cms/howto-create-a-content-item.html) for more details.
+If the content item types shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [HowTo - Create a Content Item](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-custom-content-item.html) for more details.
 
 ## Create CMS Blocks
 
@@ -99,7 +99,7 @@ Follow the steps to select a template with slots:
 2. In the **List of Templates**, select the *Product* template with slots. 
     This template with slots is assigned to all the product pages. By selecting it, you select to work with all the product pages at once.
 
-If the templates with slots shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [Template with Slots](/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/feature-howtos/cms/howto-create-cms-templates.html#template-with-slots) for more details.
+If the templates with slots shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [Template with Slots](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#template-with-slots) for more details.
 
 ## Select a Slot
 

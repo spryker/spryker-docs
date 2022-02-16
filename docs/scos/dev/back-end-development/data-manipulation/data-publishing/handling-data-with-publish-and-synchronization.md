@@ -12,6 +12,8 @@ redirect_from:
   - /docs/en/handling-data-with-publish-and-synchronization
   - /v6/docs/handling-data-with-publish-and-synchronization
   - /v6/docs/en/handling-data-with-publish-and-synchronization
+  - /docs/t-handling-data-publish-and-sync-scos
+  - /docs/en/t-handling-data-publish-and-sync-scos
 ---
 
 Publish and Synchronization (P&S) allows exporting data from Spryker back end (Zed) to external endpoints. The default external endpoints are Redis and Elasticsearch. The endpoints are usually used by the front end (Yves) or API (Glue).
@@ -22,38 +24,35 @@ In this step-by-step tutorial, you will learn how P&S works and how to export d
 Follow the steps below to create the following:
 
 * Data source module
-
 * Zed database table
-
 * Data publishing module
-
 
 1. Create the HelloWorld module by creating the `HelloWorld` folder in Zed. The module is the source of data for publishing:
 
 2. Create `spy_hello_world_message` table in database:
 
-    a.  Inside the `HelloWorld` module, define the table schema by creating `\Pyz\Zed\HelloWorld\Persistence\Propel\Schema\spy_hello_world.schema.xml`:
+        a.  Inside the `HelloWorld` module, define the table schema by creating `\Pyz\Zed\HelloWorld\Persistence\Propel\Schema\spy_hello_world.schema.xml`:
 
-    ```xml
-    {% raw %}
-    <?xml version="1.0"?>
-    <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\HelloWorld\Persistence" package="src.Orm.Zed.HelloWorld.Persistence">
-      <table name="spy_hello_world_message" idMethod="native" allowPkInsert="true">
-          <column name="id_hello_world_message" type="INTEGER" autoIncrement="true" primaryKey="true"/>
-          <column name="name" required="true" type="VARCHAR" />
-          <column name="message" required="false" type="LONGVARCHAR" />
-          <id-method-parameter value="spy_hello_world_message_pk_seq"/>
-      </table>
-    </database>
-    {% endraw %}
-    ```
+        ```xml
+        {% raw %}
+        <?xml version="1.0"?>
+        <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\HelloWorld\Persistence" package="src.Orm.Zed.HelloWorld.Persistence">
+        <table name="spy_hello_world_message" idMethod="native" allowPkInsert="true">
+            <column name="id_hello_world_message" type="INTEGER" autoIncrement="true" primaryKey="true"/>
+            <column name="name" required="true" type="VARCHAR" />
+            <column name="message" required="false" type="LONGVARCHAR" />
+            <id-method-parameter value="spy_hello_world_message_pk_seq"/>
+        </table>
+        </database>
+        {% endraw %}
+        ```
 
-    b. Based on the schema, create the table in database:
+        b. Based on the schema, create the table in database:
 
-    ```bash
-    console propel:install
-    ```
-    c. Create the HelloWorldStorage module by creating the `HelloWorldStorage` folder in Zed. The module is responsible for exporting data to Redis.
+        ```bash
+        console propel:install
+        ```
+        c. Create the HelloWorldStorage module by creating the `HelloWorldStorage` folder in Zed. The module is responsible for exporting data to Redis.
 
 {% info_block infoBox %}
 
@@ -845,7 +844,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
     }
 ```
 
-3. Add `MessageProcessor` for the queue to `\Pyz\Zed\QueueQueueDependencyProvider::getProcessorMessagePlugins()`:
+3. Add `MessageProcessor` for the queue to `\Pyz\Zed\Queue\QueueDependencyProvider::getProcessorMessagePlugins()`:
 
 ```php
 <?php
@@ -859,7 +858,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
     /**
      * @return array
      */
-    protected function getSynchronizationQueueConfiguration(): array
+    protected function getProcessorMessagePlugins(): array
     {
         return [
             ...
@@ -966,7 +965,7 @@ class MessageStorageReader implements MessageStorageReaderInterface
             ->setReference($idMessage);
 
         $key = $this->synchronizationService
-            ->getStorageKeyBuilder('message')
+            ->getStorageKeyBuilder('message') // "message" is the resource name
             ->generateKey($synchronizationDataTransfer);
 
         $data = $this->storageClient->get($key);

@@ -1,5 +1,5 @@
 ---
-title: Product Group feature integration
+title: Product Groups feature integration
 description: The guide describes the process of installing the Product Group feature in your project.
 last_updated: Sep 14, 2020
 template: feature-integration-guide-template
@@ -52,7 +52,7 @@ Make sure that the following modules have been installed:
 
 | Affected Entity | Triggered Events |
 | --- | --- |
-| spy_product_abstract_group | Entity.spy_product_abstract_group.create </br> Entity.spy_product_abstract_group.update</br> Entity.spy_product_abstract_group.delete |
+| spy_product_abstract_group | Entity.spy_product_abstract_group.create <br> Entity.spy_product_abstract_group.update<br> Entity.spy_product_abstract_group.delete |
 
 
 
@@ -140,7 +140,7 @@ Make sure that the changes have been implemented successfully. To do it, trigger
 
 | Path | Method Name |
 | --- | --- |
-| src/Orm/Zed/ProductGroup/Persistence/Base/SpyProductAbstractGroup.php | prepareSaveEventName() </br> addSaveEventToMemory() </br> addDeleteEventToMemory() |
+| src/Orm/Zed/ProductGroup/Persistence/Base/SpyProductAbstractGroup.php | prepareSaveEventName() <br> addSaveEventToMemory() <br> addDeleteEventToMemory() |
 
 
 

@@ -168,7 +168,7 @@ If the request is successful and the Abstract Product List content item with the
 }
 ```
     
-</br>
+<br>
 </details>
 
 ## Retrieving Other Resources for Abstract Product Lists
@@ -289,7 +289,7 @@ If the request is successful and the abstract product image sets with the specif
 }
 ```
     
-</br>
+<br>
 </details>
 
 ### Getting Information on Availability for Abstract Products
@@ -450,7 +450,7 @@ If the request is successful and the availability of abstract products with the 
 ]
 ```
 
-</br>
+<br>
 </details>
 
 ### Getting Prices for Abstract Products
@@ -637,7 +637,7 @@ The following additional attributes will be added to the response:
 }
 ```
 
-</br>
+<br>
 </details>
 
 ### Getting Information on the Category Assigned to Abstract Products
@@ -885,7 +885,7 @@ The following additional attributes will be added to the response:
 }
 ```
     
-</br>
+<br>
 </details>
 
 ### Getting Information on Tax Sets to Abstract Products
@@ -1112,7 +1112,7 @@ The following additional attributes will be added to the response:
 }
 ```
     
-</br>
+<br>
 </details>
 
 ### Getting Product Labels of Abstract Products
@@ -1126,7 +1126,7 @@ The following additional attributes will be added to the response:
 | Field* | Type | Description |
 | --- | --- | --- |
 | name | string | Name of a product label. |
-| isExclusive | boolean | Indicates if the label is Exclusive, i.e. takes precedence over other labels the product might have so that only this label can be displayed for the product. |
+| isExclusive | boolean | Indicates if the label is Exclusive, for example, takes precedence over other labels the product might have so that only this label can be displayed for the product. |
 | position | integer | Number of the position in the priority set. |
 | frontEndReference | string | Defines the custom product label type. |
 
@@ -1229,7 +1229,7 @@ The following additional attributes will be added to the response:
 }
 ```
     
-</br>
+<br>
 </details>
 
 ## Retrieving Specific Attribute of Abstract Product

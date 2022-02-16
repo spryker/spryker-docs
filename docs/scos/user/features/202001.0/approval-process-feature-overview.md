@@ -32,11 +32,11 @@ In the B2B industry, approvals are referred to shopping carts and items in the c
 
 For the approval process, you can set specific permissions for the Approver and Buyer roles:
 
-* *Buy up to grand total* permission that restricts the cart checkout when the cart grand total amount reaches the limit specified in this permission. It is mandatory if you want to use the Approval Process feature. To configure this permission, use [this step-by-step instruction](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-approval-process.html#configuring-buy-up-to-grand-total-permission).
+* *Buy up to grand total* permission that restricts the cart checkout when the cart grand total amount reaches the limit specified in this permission. It is mandatory if you want to use the Approval Process feature. To configure this permission, use [this step-by-step instruction](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-approval-process.html#configuring-codebuy-up-to-grand-totalcode-permission).
 
 * *Send cart for approval* permission that allows a Buyer to send a cart for approval to their manager. Without this permission, the buyer cannot see the Request for Approval widget.
 
-* *Approve up to grand total* permission that allows an Approver to approve the carts that do not hit the cart grand total limit specified there. See [Configuring Approve up to grand total Permission](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-approval-process.html#configuring-approve-up-to-grand-total-permission) to learn how to set up the permission in the Storefront.
+* *Approve up to grand total* permission that allows an Approver to approve the carts that do not hit the cart grand total limit specified there. See [Configuring Approve up to grand total Permission](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-approval-process.html#configuring-codeapprove-up-to-grand-totalcode-permission) to learn how to set up the permission in the Storefront.
 
 Every approval request, in turn, can have three statuses:
 
@@ -80,7 +80,7 @@ The company has the following company users:
 
 | Person | Role | Description |
 | --- | --- | --- |
-| Company Employee | Buyer | Has *Buy up to grand total* €500 permission and submits a quote A with the cart total €400.</br>*Send cart for approval* permission is enabled. |
+| Company Employee | Buyer | Has *Buy up to grand total* €500 permission and submits a quote A with the cart total €400.<br>*Send cart for approval* permission is enabled. |
 | Manager | Approver  | Has *Approve up to grand total* permission for €600. |
 | Head of the department | Approver  | Has *Approve up to grand total* permission for €1000. |
 | Head of the department | Buyer  | Has *Buy up to grand total* €1000 permission.  |
@@ -95,7 +95,7 @@ The company has the following company users:
 
 | Person | Role | Description |
 | --- | --- | --- |
-| Company Employee | Buyer | Has *Buy up to grand total* €500 permission and submits a quote B with the cart total €600.</br>*Send cart for approval* permission is enabled. |
+| Company Employee | Buyer | Has *Buy up to grand total* €500 permission and submits a quote B with the cart total €600.<br>*Send cart for approval* permission is enabled. |
 | Manager | Approver  | Has *Approve up to grand total* permission for €600. |
 | Head of the department | Approver  | Has *Approve up to grand total* permission for €1000. |
 | Head of the department | Buyer  | Has *Buy up to grand total* €1000 permission.  |
@@ -110,7 +110,7 @@ The company has the following company users:
 
 | Person | Role | Description |
 | --- | --- | --- |
-| Company Employee | Buyer | Has *Buy up to grand total* €500 permission and submits a quote C with the cart total €900.</br>*Send cart for approval permission* is enabled. |
+| Company Employee | Buyer | Has *Buy up to grand total* €500 permission and submits a quote C with the cart total €900.<br>*Send cart for approval permission* is enabled. |
 | Manager | Approver  | Has *Approve up to grand total* permission for €600. |
 | Head of the department | Approver  | Has *Approve up to grand total* permission for €1000. |
 
@@ -124,7 +124,7 @@ The company has the following company users:
 
 | Person | Role | Description |
 | --- | --- | --- |
-| Company Employee | Buyer | Has *Buy up to grand total* €500 permission and submits a quote D with the cart total €1200.</br>*Send cart for approval permission* is enabled. |
+| Company Employee | Buyer | Has *Buy up to grand total* €500 permission and submits a quote D with the cart total €1200.<br>*Send cart for approval permission* is enabled. |
 | Manager | Approver  | Has *Approve up to grand total* permission for €600. |
 | Head of the department | Approver  | Has *Approve up to grand total* permission for €1000. |
 

@@ -1,5 +1,5 @@
 ---
-title: Reference information- concrete product
+title: Reference information - concrete product
 description: Use this section to learn more about the attributes you use when creating or updating product variants in the Back Office.
 last_updated: Feb 24, 2021
 template: back-office-user-guide-template
@@ -17,24 +17,24 @@ The set of tabs for Create and Edit pages, as well as for abstract and concrete 
 **General tab**
 | Attribute |Description | Create Concrete Product|Update Concrete Product|
 | --- | --- | --- | --- | 
-|**Store relation**  | Defines the store for which the product can be available.</br>You can select multiple values. | **No**|**No**|
+|**Store relation**  | Defines the store for which the product can be available.<br>You can select multiple values. | **No**|**No**|
 | **SKU Prefix** | A number that you assign to the product will help to track unique information related to that product. | **Yes**|**Display Only**|
 | **Autogenerate SKU** | Allows the system to autogenerate the SKU once you click **Save**. | **Yes**|**No**|
-| **Super Attributes** | This section is only available if you have added more than one super attribute and defined more than one value for it.</br>E.g. if you selected the **color** to be a super attribute and defined **green**, **white**, and **black**, you will see "**color**" in this section and a drop-down with the colors you defined.</br>Only one value can be selected. |**Yes**|**No**|
+| **Super Attributes** | This section is only available if you have added more than one super attribute and defined more than one value for it.<br>E.g. if you selected the **color** to be a super attribute and defined **green**, **white**, and **black**, you will see "**color**" in this section and a drop-down with the colors you defined.<br>Only one value can be selected. |**Yes**|**No**|
 | **Name** | The name of your product that will be displayed in the online store for your customers. | | **Yes**|**Yes** |
 | **Description** | The description of the product that your customer sees in the online store. | **Yes** |**Yes** |
 | **Searchable** | A checkbox that defines if the concrete product can be searched via the Search function in the online store. If not selected, no values will be displayed when searching for this product. | **Yes** | **Yes**|
-| **Valid from**</br>**Valid to**  | Defines the period of time when the product is in active state. The **Valid from** date triggers the activation, while the **Valid to** date triggers the deactivation. Either no dates can be selected, or both. |**Yes** |**Yes** |
+| **Valid from**<br>**Valid to**  | Defines the period of time when the product is in active state. The **Valid from** date triggers the activation, while the **Valid to** date triggers the deactivation. Either no dates can be selected, or both. |**Yes** |**Yes** |
 
 
 **Price & Stock tab**
 | Attribute |Description | Create Concrete Product|Update Concrete Product|
 | --- | --- | --- | --- |
 |**Use prices from abstract product**|Once the checkbox is selected, the prices from the abstract product are taken over.|**Yes**|**No**|
-|**Merchant Price Dimension**|**B2B Only**</br>The drop-down list that allows you to select a merchant relation and set up a specific price for a specific merchant.</br>If the Default value is selected, the prices will be the same for everyone.</br>The values available for selection derive from **Merchants > Merchant Relations**.</br>Only one value can be selected.|**Yes**|**Yes**|
-| **Gross price**</br>**Net price** | The price value for gross and net mode.</br>For concrete products, the prices are inherited from their abstract product and can be updated while editing the concrete product.|**Yes**  |**Yes**  | 
-|**Default**</br>**Original**|Default prices are the prices your customers will pay, whereas original prices are the "previous prices" in case you want to display promotions. If you specify only a default price, it will be displayed just like a normal product price. However, if both prices are specified, the original one will appear crossed out in the shop.|**Yes**|**Yes**|
-|**Add Product Volume Price**</br>**Edit Product Volume Price**|Once selected, the **Add volume price** (**Edit volume price**) page opens. This option allows you to define specific prices for a specific quantity of products that a customer selects. Works only in case of Default prices.</br>**Add Product Volume Price** appears only when the price for a currency was set up and saved.</br>**Edit Product Volume Price** appears only what the volume price was already set up for a currency.|**No**|**Yes**|
+|**Merchant Price Dimension**|**B2B Only**<br>The drop-down list that allows you to select a merchant relation and set up a specific price for a specific merchant.<br>If the Default value is selected, the prices will be the same for everyone.<br>The values available for selection derive from **Merchants > Merchant Relations**.<br>Only one value can be selected.|**Yes**|**Yes**|
+| **Gross price**<br>**Net price** | The price value for gross and net mode.<br>For concrete products, the prices are inherited from their abstract product and can be updated while editing the concrete product.|**Yes**  |**Yes**  | 
+|**Default**<br>**Original**|Default prices are the prices your customers will pay, whereas original prices are the "previous prices" in case you want to display promotions. If you specify only a default price, it will be displayed just like a normal product price. However, if both prices are specified, the original one will appear crossed out in the shop.|**Yes**|**Yes**|
+|**Add Product Volume Price**<br>**Edit Product Volume Price**|Once selected, the **Add volume price** (**Edit volume price**) page opens. This option allows you to define specific prices for a specific quantity of products that a customer selects. Works only in case of Default prices.<br>**Add Product Volume Price** appears only when the price for a currency was set up and saved.<br>**Edit Product Volume Price** appears only what the volume price was already set up for a currency.|**No**|**Yes**|
 |(Stock) **Type**|Display-only field that displays warehouses according to your store|**Yes**|**Yes**|
 |(Stock) **Quantity**|The number of items available in the warehouse.|**Yes**|**Yes**|
 |(Stock) **Never out of stock**|The check-box that once selected will make the product always available to be purchased.|**Yes**|**Yes**|

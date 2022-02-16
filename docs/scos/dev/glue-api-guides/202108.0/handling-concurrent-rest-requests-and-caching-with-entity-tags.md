@@ -89,7 +89,7 @@ The following error responses can be returned by the server when a resource supp
 
 | CODE | REASON |
 | --- | --- |
-| 412 | Pre-condition failed.</br>The `If-Match` header value is invalid or outdated. </br>Request the current state of the resource using a `GET` request to obtain a valid tag value. |
-| 428 | Pre-condition required.</br>The `If-Match` header is missing. |
+| 005 | Pre-condition required.<br>The `If-Match` header is missing. |
+| 006 | Pre-condition failed.<br>The `If-Match` header value is invalid or outdated. <br>Request the current state of the resource using a `GET` request to obtain a valid tag value. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

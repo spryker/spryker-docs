@@ -16,7 +16,7 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | 201903.0	 | Glue Application feature integration |
+| Spryker Core | 201907.0	 | Glue Application feature integration |
 
 ### 1) Install the required modules using Composer
 Run the following command to install the required modules:
@@ -103,7 +103,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox “Verification” %}
@@ -155,7 +155,7 @@ class DocumentationGeneratorRestApiDependencyProvider extends SprykerDocumentati
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox “Verification” %}

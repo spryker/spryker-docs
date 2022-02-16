@@ -27,7 +27,7 @@ redirect_from:
 We at Spryker follow the [PSR-2 standards](http://www.php-fig.org/psr/psr-2/) as the coding style guide. To achieve a styled codebase, we integrated the well known [PHP-CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) and [PHPCodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
 
 ## Code Sniffer and Fixer
-[Code Sniffer](/docs/scos/dev/sdk/{{site.version}}/development-tools/code-sniffer.html) helps to keep the code clean and to prevent simple mistakes. To make the most of the Code Sniffer, follow the recommendations below.
+[Code Sniffer](/docs/scos/dev/sdk/development-tools/code-sniffer.html) helps to keep the code clean and to prevent simple mistakes. To make the most of the Code Sniffer, follow the recommendations below.
 
 ### Automate code style correction
 
@@ -198,9 +198,10 @@ Bottom line: use `void` if nothing is expected to be returned, use `null` otherw
 
 So semantically, this makes no sense. In this case, no default value may be used, and a first argument is actually required for the first *if* statement to make sense (`$this-&gt;foo($requiredArgument)`). You can still pass `null`, of course, to break out early. Default values may only be used if they still make this method do an operation (apart from returning `early`).
 
-### Datetimes
+### Date and time
 
-Always use UTC Datetimes when you are storing and processing them. The only place Datetimes should be converted to a different timezone is in the Presentation layer.
+Always use UTC date and time when you are storing and processing them. The only place dates and times should be converted to a different time zone is in the Presentation layer.
+Storing the dates in a common time zone ensures consistency, as the time zone could be used in different contexts. For example, in a US shop, a customer from California (GMT-8) might place an order on the Storefront and a Back Office manager from New York (GMT -5) might need to know when the order was placed. Having the date time in a common time zone ensures that the timestamps are the same and accurate for the same operation, irrespective of the use case scenario.
 
 ### Deprecations
 

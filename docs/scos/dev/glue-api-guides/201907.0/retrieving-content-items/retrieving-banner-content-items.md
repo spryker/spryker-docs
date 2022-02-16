@@ -17,7 +17,9 @@ The **Banner API** implements REST API endpoint that provides the possibility to
 In your development, these resources can help you get relevant information for your Banner content item for all or a specific locale. For example, you can view what page address your banner is linked to or what details are displayed for a specific locale.
 
 {% info_block infoBox %}
+
 For more information on creating and managing content items in CMS, see [Content Items](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-items/content-items.html).
+
 {% endinfo_block %}
 
 ## Installation
@@ -26,20 +28,22 @@ For details on the modules that provide the API functionality and how to install
 ## Retrieving Banner Content Item Data
 To retrieve the Banner content item data, send a GET request to the following endpoint:
 
-/content-banners/{content_item_key} 
+/content-banners/{content_item_key}
 
 Sample request: _GET http://mysprykershop.com/content-banners/br-3_
 where **content-banners** is the content item type and **br-3** is the key of the Banner content item you want to retrieve.
 
 {% info_block infoBox %}
+
 The locale must be specified in the **header** of the GET request. If no locale is specified, data from the **default** locale will be returned.
+
 {% endinfo_block %}
 
 If the request is successful and the Banner content item with the specified content item key has been found, the endpoint will respond with **RestContentBannerResponse**.
 
 <details open>
 <summary markdown='span'>Sample response:</summary>
-    
+
 ```php
 {
 	"data": {
@@ -58,8 +62,8 @@ If the request is successful and the Banner content item with the specified cont
 	}
 }
 ```
-    
-</br>
+
+<br>
 </details>
 
 

@@ -1,5 +1,5 @@
 ---
-title: Content Items- Reference Information
+title: Reference information - Content Items
 description: The guide provides reference information you work with when creating, updating and viewing content items in the Back Office.
 last_updated: Sep 15, 2020
 template: back-office-user-guide-template
@@ -60,7 +60,7 @@ The following table describes the attributes on the pages:
 
 ## Create and Edit Abstract Product List Content Item Page
 The following table describes the attributes on the pages:
- * *CreateContent Item: Abstract Product List* 
+ * *CreateContent Item: Abstract Product List*
  * *Edit Content Item: Abstract Product List*
 
 | Attribute | Description |
@@ -81,7 +81,7 @@ The following table describes the attributes on the pages:
 ## Create and Edit Product Set Content Item Page
 
 The following table describes the attributes on the pages:
- * *CreateContent Item: Product Set* 
+ * *CreateContent Item: Product Set*
  * *Edit Content Item: Product Set*
 
 | Attribute | Description |
@@ -92,7 +92,7 @@ The following table describes the attributes on the pages:
 | **Actions (top table)**| A column that contains **Delete** you can click to remove the product set from the list. |
 | **Available Product Sets** |  A bottom table that displays product sets available in the database.|
 |**ID**  | A sequence number. |
-|  **Name** </br>(in the top table) |A name of the product set. |
+|  **Name** <br>(in the top table) |A name of the product set. |
 | **# of Products** | Displays the number of products available in the product set. |
 |**Status**  | Shows the status of the product set: active or inactive. |
 |**Actions (bottom table)**  |A column that contains **+ Add** you can click to add a product set to the top table so that it can be added to the Product Set content item. |
@@ -100,7 +100,7 @@ The following table describes the attributes on the pages:
 ## Create and Edit File List Content Item Page
 
 The following table describes the attributes on the pages:
- * *CreateContent Item: File List* 
+ * *CreateContent Item: File List*
  * *Edit Content Item: File List*
 | Attribute | Description |
 | --- | --- |
@@ -121,12 +121,4 @@ The following table describes the attributes on the *Create Content Item: Naviga
 | --- | --- |
 | Name | Name of the content item. |
 | Description | Description of the content item. |
-| Navigation | Field to select an existing navigation element. See [Creating a Navigation Element](https://documentation.spryker.com/v5/docs/en/managing-navigation#creating-a-navigation-element) to learn how to create it. |
-
-
-
-
-
-
-
-
+| Navigation | Field to select an existing navigation element. See [Creating a Navigation Element](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#creating-a-navigation-element) to learn how to create it. |

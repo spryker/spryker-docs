@@ -1,5 +1,5 @@
 ---
-title: Reference information- CMS block
+title: Reference information - CMS block
 description: The guide provides reference information you need when managing CMS blocks in the Back Office.
 last_updated: Sep 11, 2020
 template: back-office-user-guide-template
@@ -18,7 +18,7 @@ On the **Overview of CMS Blocks** page, you see the following:
 | Attribute | Description - regular CMS Block | Description - Email CMS Block |
 | --- | --- | --- |
 | **Block ID** | A sequence number. | A sequence number. |
-| **Name** | The name of a CMS block. | The name of a CMS block. <br> This name is used by developers to assign the block to its [.twig email template](https://documentation.spryker.com/v6/docs/email-as-a-cms-block-overview#email-template).
+| **Name** | The name of a CMS block. | The name of a CMS block. <br> This name is used by developers to assign the block to its [.twig email template](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html).
 | **Template** | Defines a placeholder structure of the CMS block. | Defines the placeholder structure of the Email CMS block. |
 | **Status** | A block status that can be active (visible in the online store) or inactive (invisible in the online store). | Irrelevant. |
 | **Stores** | Locale(s) for which the block will visible on the store website. | Irrelevant. |

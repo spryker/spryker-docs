@@ -13,9 +13,12 @@ redirect_from:
 A Spryker-based shop ships with a comprehensive, intuitive administration area comprised of numerous features that give you a strong hold over the customization of your store. Here you can tailor features to your specific needs, manage orders, products, customers, modify look & feel of your store by, for example, designing the eye-catching marketing campaigns and promotions, and much more.
 
 The Spryker Back Office provides you with a variety of sections that are logically connected to each other. 
+
 {% info_block infoBox "Spryker Back Office" %}
-It provides the product and content management capabilities, categories and navigation building blocks, search and filter customizations, barcode generator, order handling, company structure creation (_for B2B users_
-{% endinfo_block %}, merchant-buyer contracts' setup.)
+
+It provides the product and content management capabilities, categories and navigation building blocks, search and filter customizations, barcode generator, order handling, company structure creation (_for B2B users_, merchant-buyer contracts' setup).
+
+{% endinfo_block %}
 
 With Spryker Back Office you can:
 * Manage orders placed by your customers as well as create orders for customers
@@ -34,9 +37,11 @@ Depending on the roles and teams in your project, you can limit the access of di
 
 **Back Office provides both, B2B and B2C capabilities.**
 {% info_block infoBox "Info" %}
+
 The following diagram shows what features are used for both **B2B and B2C**, and which are **B2B specific**. 
+
 {% endinfo_block %}
 
-![B2B and B2C Features\(2\)](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/B2B%20and%20B2C%20Features%282%29.png){height="550" width=""}
+![B2B and B2C features](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.md/b2b-and-b2c-features.png)
 
 You can always define what exactly is going to be needed for your specific project.

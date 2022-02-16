@@ -1,5 +1,5 @@
 ---
-title: Reference information- category
+title: Reference information - category
 description: The guide provides reference information you see when working with categories in the Back Office.
 last_updated: Jun 8, 2021
 template: back-office-user-guide-template
@@ -72,7 +72,7 @@ The following table describes the attributes you use when creating or updating a
 | **Additional Parents**| A drop-down list with categories under which you can locate your specific category in addition to the Parent.  Several values can be selected.|
 |**Template**|A drop-down list with templates that you select to define the look of your category in the online store. (See _Category Page Template Types_)|
 |**Translations**| In this section you define the meta details. Their purpose is to improve search ranking in the search engines.|
-|**Translations: Name**|The name that serves as an ID for the back end.</br>The name that will be displayed to the customer on the shop website is rendered with the help of the category key.|
+|**Translations: Name**|The name that serves as an ID for the back end.<br>The name that will be displayed to the customer on the shop website is rendered with the help of the category key.|
 |**Translations: Meta Title**|The title that describes the category.|
 |**Translations: Meta Description**|The description of the category. The text you enter as meta information will not be displayed on the website to the customer but will be located in the HTML code of the category page. |
 |**Translations: Meta Keywords**|The keywords that are suitable for the category.|

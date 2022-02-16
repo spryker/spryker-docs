@@ -15,6 +15,8 @@ redirect_from:
   - /v5/docs/en/url-handling-new-entity
   - /v4/docs/url-handling-new-entity
   - /v4/docs/en/url-handling-new-entity
+  - /v3/docs/url-handling-new-entity
+  - /v3/docs/en/url-handling-new-entity
   - /v2/docs/url-handling-new-entity
   - /v2/docs/en/url-handling-new-entity
   - /v1/docs/url-handling-new-entity
@@ -147,7 +149,7 @@ This router gets a stack of `\Pyz\Yves\Collector\Creator\ResourceCreatorInterfac
 
 {% info_block infoBox %}
 
-This means that, if a `URL /foo` is linked to a `my_entity` record, then there must be a `ResourceCreator` for this URL that handle a `my_entity` type of resources and forwards the right information about the Controller to the Router that handles the request. </br> If there is no `ResourceCreator` registered for the `my_entity` resource type, a 404 page not found will be issued.
+This means that, if a `URL /foo` is linked to a `my_entity` record, then there must be a `ResourceCreator` for this URL that handle a `my_entity` type of resources and forwards the right information about the Controller to the Router that handles the request. <br> If there is no `ResourceCreator` registered for the `my_entity` resource type, a 404 page not found will be issued.
 
 {% endinfo_block %}
 

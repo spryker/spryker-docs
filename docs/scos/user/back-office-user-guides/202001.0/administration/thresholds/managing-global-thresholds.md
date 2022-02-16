@@ -23,7 +23,9 @@ This topic describes the procedures for managing thresholds per merchant relatio
 ***
 To start working with Merchant Relationships global threshold, navigate to the **Threshold > Global threshold** section.
 ***
+
 ## Setting up a Hard Threshold
+
 To set up a hard threshold for a merchant relation:
 1. On the **Edit Global threshold** page in the **Store and Currency** drop-down list, select the store and currency for which you configure the minimum order value.
 2. Populate the **Enter threshold value** field.
@@ -32,7 +34,9 @@ To set up a hard threshold for a merchant relation:
 
 See [Threshold: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/references/threshold-reference-information.html) to know more about the hard threshold.
 ***
+
 ## Setting up a Soft Threshold
+
 To set up a soft threshold for a merchant relation:
 1. On the **Edit Global threshold** page in the **Store and Currency** drop-down list, select the store and currency for which you configure the minimum order value.
 2. **Do not** populate the _Hard Threshold_ section.
@@ -49,7 +53,9 @@ To set up a soft threshold for a merchant relation:
 
 See [Threshold: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/references/threshold-reference-information.html) to know more about the soft threshold and its types.
 ***
+
 ## Setting up both Hard and Soft Threshold
+
 To set up both threshold types:
 1. Populate both the **Hard Threshold** and **Soft Threshold** sections following the procedures described above.
 2. Click **Save**.

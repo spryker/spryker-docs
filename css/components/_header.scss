@@ -4,10 +4,10 @@
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 94px;
+    min-height: $header-min-height-widescreen;
 
     @include media("<laptop") {
-        min-height: 78px;
+        min-height: $header-min-height-desktop;
     }
 
     @include media("<desktop") {

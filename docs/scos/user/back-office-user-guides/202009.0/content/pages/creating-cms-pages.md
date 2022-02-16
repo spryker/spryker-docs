@@ -34,24 +34,24 @@ To create a page:
 
 {% info_block infoBox %}
 
-Templates are project-specific and are usually created by a developer and a business person. If you are missing a CMS Page template, contact them and refer to the [HowTo - Create a CMS Page template](/docs/scos/dev/tutorials-and-howtos/202009.0/howtos/feature-howtos/cms/howto-create-cms-templates.html#adding-a-template-for-a-cms-page).
+Templates are project-specific and are usually created by a developer and a business person. If you are missing a CMS Page template, contact them and refer to the [HowTo - Create a CMS Page template](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-page-template).
 
 {% endinfo_block %}
 
     * **Optional**: Enter **Valid from** and **Valid to** if you want to define the validity period during which your page will be available in the shop.
     * Enter **Name** and **URL** of the page per locale. This is a **mandatory** step.
 
-4. In the **SEO** tab, enter meta information: title, keywords, and description. The meta details are important for SEO purposes, such as optimizing webpage ranking by search engines and improving website usability.
-5. To keep the changes, click **Save**.
+1. In the **SEO** tab, enter meta information: title, keywords, and description. The meta details are important for SEO purposes, such as optimizing webpage ranking by search engines and improving website usability.
+2. To keep the changes, click **Save**.
 
 **Tips & Tricks**
 
 * Keep in mind that by default, store relation is enabled for all stores. To hide your page per specific locale(s), clear checkboxes per that(those) locale(s).
-</br>
+<br>
 * Please consider the following cases:
     * If **Is searchable** is selected, but **store relation** is turned off for all stores, the CMS page will not be displayed and will not be searchable.
     * If **Is searchable** is not selected, but **store relation** is turned on, the CMS page will be shown but will not be searchable.
- </br>
+ <br>
  * If you want to create **different** versions of the page per locale, add the general information to the section in the corresponding language.
 
 ***

@@ -22,7 +22,7 @@ These are the header fields to be included in the .csv file:
 | **payment_method_name** | Yes | String | N/A | Name of the payment method. |
 | **payment_provider_key** | Yes | String | N/A | Identifier of the payment provider. |
 | **payment_provider_name** | Yes | String | N/A| Name of the payment provider. |
-| **is_active** | No | Boolean | <ul><li>True = 1</li><li>False = 0</li><li>If empty, it will be set to 0 (false).</li> | Status indicating whether the payment method is active or not. |
+| **is_active** | No | Boolean | <ul><li>True = 1</li><li>False = 0</li><li>If empty, it will be set to 0 (false).</li></ul> | Status indicating whether the payment method is active or not. |
 *N/A: Not applicable.
 
 ## Dependencies

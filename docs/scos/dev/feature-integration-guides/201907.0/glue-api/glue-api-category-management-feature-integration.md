@@ -1,5 +1,5 @@
 ---
-title: Category Management feature integration
+title: Glue API - Category Management feature integration
 description: This guide will navigate you through the process of installing and configuring the Category API feature in Spryker OS.
 last_updated: Dec 27, 2019
 template: feature-integration-guide-template
@@ -92,7 +92,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
+<br>
 </details>
 
 {% info_block warningBox “Verification” %}

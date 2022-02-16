@@ -40,11 +40,11 @@ To edit general settings of an abstract product:
 
 | ATTRIBUTE | DESCRIPTION | 
 | --- | --- |
-| Store relation  | Defines the [stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) the product is available in.</br>You can select multiple values. |
+| Store relation  | Defines the [stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) the product is available in.<br>You can select multiple values. |
 | SKU Prefix | Unique product identifier that helps to track unique information related to the product. |
 | Name | Name that's displayed for the product on the Storefront. |
 | Description | Description that's displayed for the product on the Storefront. |
-| New from</br>New to  | Defines the period of time for which: </br><ul><li>A [dynamic product label](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) *New* is assigned to the product.</li><li>The product is assigned to the *New* [category](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html)</li></ul></br> You can either select no dates or both. |
+| New from<br>New to  | Defines the period of time for which: <br><ul><li>A [dynamic product label](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) *New* is assigned to the product.</li><li>The product is assigned to the *New* [category](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html)</li></ul><br> You can either select no dates or both. |
 
 ## Editing prices of an abstract product
 
@@ -64,11 +64,11 @@ The following table describes the attributes you enter and select when editing p
     
 | ATTRIBUTE | DESCRIPTION | 
 | --- | --- |
-|Merchant Price Dimension| B2B only</br>Defines the [merchant](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html) the prices apply to.</br>If **Default prices** is selected, the prices apply to all customers.</br>To [manage merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html) go to **Marketplace** > **Merchant Relations**. |
-| Gross price</br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price  before tax.</br>If a product variant of the abstract product does not have a price, it [inherits](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html#product-information-inheritance) the price you enter here. |
-|Default</br>Original| A default price is the price a customer pays for the product. An original price is a price displayed as a strikethrough beside the default price on the Storefront. The original price is optional and is usually used to indicate a price change. |
-|Add Product Volume Price</br>Edit Product Volume Price| This option allows you to define the prices that are based on the quantity of products that a customer selects. Works only with the default prices.</br>Add Product Volume Price appears only when the price for a currency was set up and saved.</br>Edit Product Volume Price appears only what the volume price was already set up for a currency.||✓|
-|Tax Set|The conditions under which a product is going to be taxed.</br>The values available for selection derive from Taxes > Tax Sets</br>Only one value can be selected.|
+|Merchant Price Dimension| B2B only<br>Defines the [merchant](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html) the prices apply to.<br>If **Default prices** is selected, the prices apply to all customers.<br>To [manage merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html) go to **Marketplace** > **Merchant Relations**. |
+| Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price  before tax.<br>If a product variant of the abstract product does not have a price, it [inherits](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html#product-information-inheritance) the price you enter here. |
+|Default<br>Original| A default price is the price a customer pays for the product. An original price is a price displayed as a strikethrough beside the default price on the Storefront. The original price is optional and is usually used to indicate a price change. |
+|Add Product Volume Price<br>Edit Product Volume Price| This option allows you to define the prices that are based on the quantity of products that a customer selects. Works only with the default prices.<br>Add Product Volume Price appears only when the price for a currency was set up and saved.<br>Edit Product Volume Price appears only what the volume price was already set up for a currency.||✓|
+|Tax Set|The conditions under which a product is going to be taxed.<br>The values available for selection derive from Taxes > Tax Sets<br>Only one value can be selected.|
 
 ## Editing volume pirces of an abstract product
 
@@ -77,7 +77,7 @@ To edit volume prices of an abstract product:
 1. Next to the product you want to edit add volume prices of, select **Edit**.
 2. On the *Edit Product Abstract [SKU]* page, switch to the *Price & Tax* tab.
 3. Next to the store you want to edit volume prices for, select **> Edit Product Volume Price**.
-4. On the *Add volume prices* page, enter a **Qunatity**.
+4. On the *Add volume prices* page, enter a **Quantity**.
 5. Enter a **Gross price**.
 6. Optional: Enter a **Net price**.
 7. Optional: To add more volume prices than the number of the rows displayed on the page, select **Save and add more rows**.
@@ -85,9 +85,9 @@ To edit volume prices of an abstract product:
 9. Select **Save and exit**.
     This opens the *Edit Product Abstract [SKU]* page with the success message displayed. 
     
-### Reference information: Editing volume pirces of an abstract product
+### Reference information: Editing volume prices of an abstract product
 
-The following table describes the attributes you enter and select when editing volume pirces of an abstract product.
+The following table describes the attributes you enter and select when editing volume prices of an abstract product.
     
 | ATTRIBUTE | DESCRIPTION | 
 | --- | --- |
@@ -136,7 +136,7 @@ To edit product images:
         *  **Large Image URL**
         *  **Sort order**
     * To delete large and small images, select **Delete image**.
-    * To delete an image set with its images, selecte **Delete image set**.
+    * To delete an image set with its images, select **Delete image set**.
 5. Repeat step *4* until you update images for all the desired locales.
 6.  Select **Save**.
     The page refreshes with the success message displayed.

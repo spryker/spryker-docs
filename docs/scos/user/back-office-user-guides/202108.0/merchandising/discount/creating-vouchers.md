@@ -261,7 +261,7 @@ You enter and select the following attributes in **Edit Discount** > **Voucher c
 | Max number of uses (0 = Infinite usage) | Defines the maximum number of times a voucher code can be redeemed in a cart. |  
 
 Use the placeholder **[code]** to indicate the position you want random characters to be added to.
-</br>**For example:**
+<br>**For example:**
    * **123[code]** (the randomly generated code will be added right after the custom code);
    *  **[code]123** (the randomly generated code will be added in front of the custom code).
 
@@ -297,7 +297,7 @@ This section contains a set of tables that describe fields, value types, and ope
 
 |FIELD|PLAIN QUERY|VALUE TYPE|DESCRIPTION|
 |-|-|-|-|
-|Calendar week|calender-week|Number|Week number in a year (1-52)|
+|Calendar week|calendar-week|Number|Week number in a year (1-52)|
 |Day of week|day-of-week|Number|Day of week (1-7)|
 |Grand total|grand-total|Number (Decimal)|Sum of all totals|
 |Subtotal|sub-total|Number (Decimal)|Sum of item prices w/o shipment expenses and discounts|

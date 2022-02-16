@@ -50,7 +50,7 @@ The most typical reasons for you to update your modules or features are:
 * You want a (new) specific feature or module in your project, which requires a newer version of your module(s).
 * Your project has been started shortly before a new [product release](/docs/scos/user/intro-to-spryker/spryker-release-process.html#product-releases).
 * You experience some issues with the shop that you would like to report/consult about.
-* Besides, if you plan to extend your shop in the future with new features from the ones that are already existing in Spryker or are coming soon (see [Roadmap](/docs/scos/user/intro-to-spryker//whats-new/roadmap.html)) you should be staying up-to-date with your current modules/features. It will ease the new feature installation and reduce the migration efforts, allowing you to get the desired functionality faster.
+* Besides, if you plan to extend your shop in the future with new features from the ones that are already existing in Spryker or are coming soon you should be staying up-to-date with your current modules/features. It will ease the new feature installation and reduce the migration efforts, allowing you to get the desired functionality faster.
 
 {% info_block warningBox "Warning" %}
 
@@ -61,7 +61,7 @@ The more outdated your module versions become, the more effort will be needed to
 But how often should you be taking care of the updates?
 
 **The most reasonable strategy - is sticking to the Spryker release cycle** and updating your current modules whenever there is a new release announcement. [Subscribe to the release notes](/docs/scos/user/intro-to-spryker/releases/releases.html) if you want to know about the new release right after it happened.
-During the active development phase, it would make sense to do updates more often, i.e., monthly.
+During the active development phase, it would make sense to do updates more often, for example, monthly.
 
 ## Features vs. individual module updates
 
@@ -209,7 +209,7 @@ php -d memory_limit=-1 composer.phar require "spryker/sales:^8.0.0"
 ```
 If no extra dependencies are found, *composer.json* will be updated, respectively. Otherwise, see the [Troubleshooting](#troubleshooting) section at the end of the article, *In case when update is not possible* part.
 
-2. [Check the migration guide](/docs/scos/dev/module-migration-guides/{{site.version}}/about-migration-guides.html) for the respective major module version. See the [Sales](/docs/scos/dev/module-migration-guides/{{site.version}}/migration-guide-sales.html) migration guide for example. Find the section for your module version and complete all the steps it contains.
+2. [Check the migration guide](/docs/scos/dev/module-migration-guides/about-migration-guides.html) for the respective major module version. See the [Sales](/docs/scos/dev/module-migration-guides/migration-guide-sales.html) migration guide for example. Find the section for your module version and complete all the steps it contains.
 3.  Check for project changes, just like for the *minor* updates in the section above. Go to  `https://github.com/[module-name-here]/compare/[your-version]…[available-version]` and check if there are any changes that might conflict with your business logic.
 
 ## Test after each iteration
@@ -229,7 +229,7 @@ Automoted tests are must-have for every project in general and are very helpful 
 * Functional tests - cover your Facade methods in Zed
 * Unit tests - cover classes with complex business logic and tricky algorithms
 
-See the [Testing](/docs/scos/dev/guidelines/testing/test-framework.html) section for information on what Spryker has to offer in terms of testing your project's code.
+See the [Testing](/docs/scos/dev/guidelines/testing-guidelines/test-framework.html) section for information on what Spryker has to offer in terms of testing your project's code.
 
 {% info_block infoBox "Note" %}
 
@@ -240,9 +240,9 @@ The goal of the automoted tests in case of updates is not to have a 100% code co
 ### 2. Run code analysis tools
 
 We find the following static code analysis tools the most helpful for running after the update and strongly recommend that you use them:
-* [PhpStan](https://github.com/phpstan/phpstan):  helps you find incompatible interface signatures, undefined method calls, missing classes, use of deprecated methods (phpstan-deprecation-rules) and many more. See [PHPStan](/docs/scos/dev/sdk/{{site.version}}/development-tools/phpstan.html) for information on how to install and use the tool.
-* [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer): keeps the project code clean  and consistent after the update. See [Code Sniffer](/docs/scos/dev/sdk/{{site.version}}/development-tools/code-sniffer.html) for information on how to use the tool.
-* [Architecture Sniffer](https://github.com/spryker/architecture-sniffer): helps you maintain the quality of the architecture. See [Architecture Sniffer](/docs/scos/dev/sdk/{{site.version}}/development-tools/architecture-sniffer.html) for information on how to run the tool.
+* [PhpStan](https://github.com/phpstan/phpstan):  helps you find incompatible interface signatures, undefined method calls, missing classes, use of deprecated methods (phpstan-deprecation-rules) and many more. See [PHPStan](/docs/scos/dev/sdk/development-tools/phpstan.html) for information on how to install and use the tool.
+* [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer): keeps the project code clean  and consistent after the update. See [Code Sniffer](/docs/scos/dev/sdk/development-tools/code-sniffer.html) for information on how to use the tool.
+* [Architecture Sniffer](https://github.com/spryker/architecture-sniffer): helps you maintain the quality of the architecture. See [Architecture Sniffer](/docs/scos/dev/sdk/development-tools/architecture-sniffer.html) for information on how to run the tool.
 
 ### 3. Make other possible checks
 
@@ -261,7 +261,7 @@ One of the most common issue projects face during the upgrade, is the situation,
 Usually, when you're inheriting a class from Spryker, you want to change its behavior. But before extending the class, check if you can do the following:
 * **Configure the behavior**. Check your environment and module configs. If configuration can fit your needs - that would be the best solution.
 * Change the behavior by **introducing a new plugin or an event listener**. If the behavior you want to inherit is triggered by one of the plugins in a plugin stack or by an event listener, just add a new plugin and introduce a new class at the project level (potentially, implementing some interface). You don't need inheritance in this case.
-* **Use a composition pattern**. There is a lot of information on the internet for *composition vs. inheritance* that will help you to understand the pattern. The main idea is to introduce a new class at the project level and to use the class you wanted to inherit as a constructor dependency, i.e., kind of "wrapping". Even though this is a very good practice, it might not work in cases when you want to change protected methods.
+* **Use a composition pattern**. There is a lot of information on the internet for *composition vs. inheritance* that will help you to understand the pattern. The main idea is to introduce a new class at the project level and to use the class you wanted to inherit as a constructor dependency, for example, kind of "wrapping". Even though this is a very good practice, it might not work in cases when you want to change protected methods.
 * **Do you really need the inheritance?** In case of heavy customizations, think if you really need to extend the existing Spryker class. Replacing it by introducing a new class at the project level and instantiating it in the corresponding factory instead of the Spryker one - would be the preferred way to go.
 
 ### 2. Follow the best practices for inheritance
@@ -392,7 +392,7 @@ Please let us know in case if anything goes wrong with your update. Feel free to
 
 * You found an issue in the code while reviewing the diff in a Spryker repo.
 * After running autotests / testing the website you found an issue that broke the website. If this is not a project-related conflict and other projects can potentially be affected, please report the issue as soon as you can.
-* There are missing steps in a [migration guide](/docs/scos/dev/module-migration-guides/{{site.version}}/about-migration-guides.html) in our documentation.
+* There are missing steps in a [migration guide](/docs/scos/dev/module-migration-guides/about-migration-guides.html) in our documentation.
 
 Reach us out at:
 * **Support and community**: share your problem / solution or learn from others in our [community slack](http://slackcommunity.spryker.com/).

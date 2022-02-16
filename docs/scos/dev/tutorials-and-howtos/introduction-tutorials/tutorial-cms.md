@@ -16,6 +16,8 @@ redirect_from:
   - /v5/docs/en/t-cms
   - /v4/docs/t-cms
   - /v4/docs/en/t-cms
+  - /v3/docs/t-cms
+  - /v3/docs/en/t-cms
   - /v2/docs/t-cms
   - /v2/docs/en/t-cms
   - /v1/docs/t-cms
@@ -49,7 +51,7 @@ Go back to the [page](https://mysprykershop.com/de/contact) and have a look at t
 | [CMS Manual](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview.html)  |
 |  [Implementing URL Routing in Yves](/docs/scos/dev/back-end-development/yves/implementing-url-routing-in-yves.html)| Steps to implement URL Routing in Yves |
 | [Glossary Creation](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/glossary/managing-glossary.html) |Glossary module documentation  |
-| [Cronjob Scheduling](/docs/scos/dev/sdk/{{site.version}}/cronjob-scheduling.html) | Set up cron jobs in Jenkins |
+| [Cronjob Scheduling](/docs/scos/dev/sdk/cronjob-scheduling.html) | Set up cron jobs in Jenkins |
 
 <!-- Last review date: Sep 11, 2017_
 

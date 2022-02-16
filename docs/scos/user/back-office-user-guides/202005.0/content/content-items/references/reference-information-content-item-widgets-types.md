@@ -1,5 +1,5 @@
 ---
-title: Content Item Widgets types- Reference Information
+title: Reference information - Content Item Widgets types
 description: The guide provides reference information about content widget types and examples of use cases in B2B, B2C demoshops.
 last_updated: Apr 3, 2020
 template: back-office-user-guide-template
@@ -64,7 +64,7 @@ Template used: Product Set for landing pages
 The widget allows you to insert a File List content item that will be displayed as a link or icon to download the file, such as video, image, zip, pdf, etc on a page or block.
 
 {% info_block infoBox %}
-Keep in mind that you can add only files uploaded to **File Manager**. Thus, if you make any changes to files in the File Manager section, for example, remove the file, these changes will be applied in the Content Items section as well. </br>See the _File Uploader Feature Overview_ article to learn more about file types that can be uploaded to File Manager.
+Keep in mind that you can add only files uploaded to **File Manager**. Thus, if you make any changes to files in the File Manager section, for example, remove the file, these changes will be applied in the Content Items section as well. <br>See the _File Uploader Feature Overview_ article to learn more about file types that can be uploaded to File Manager.
 {% endinfo_block %}
 
 **Use case example:** This widget can be used, for example, to submit some additional information or attach a pdf promotion presentation of your products to a page.

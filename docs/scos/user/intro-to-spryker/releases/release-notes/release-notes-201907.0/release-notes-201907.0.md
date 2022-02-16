@@ -22,13 +22,6 @@ redirect_from:
   - /v1/docs/en/release-notes-201907-0
   - /v6/docs/release-notes-201907-0
   - /v6/docs/en/release-notes-201907-0
-related:
-  - title: Managing Carts of Registered Users
-    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
-  - title: PayOne - Cash on Delivery
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/scos-integration/payone-cash-on-delivery.html
-  - title: Heidelpay - Easy Credit
-    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-easy-credit.html
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of major new features and enhancements released in August of 2019.
@@ -36,8 +29,8 @@ The Spryker Commerce OS is an end-to-end solution for digital commerce. This doc
 For information about installing the Spryker Commerce OS see [Getting Started Guide](/docs/scos/dev/developer-getting-started-guide.html).
 
 Check out our release notes video for the quick illustration of the new features and improvements:
-<iframe src="https://spryker.wistia.com/embed/iframe/l3hx8apvdq" title="Spryker Release Notes 201903.0" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen="0" mozallowfullscreen="0" webkitallowfullscreen="0" oallowfullscreen="0" msallowfullscreen="0" width="640" height="480"></iframe>
 
+{% wistia l3hx8apvdq 960 720 %}
 
 ## Spryker Commerce OS
 
@@ -51,7 +44,7 @@ When **Gift Cards** are applied, they are treated as a separate payment method. 
 ![Gift Cards reintegration](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image5.png)
 
 **Documentation:**
-Feature documentation: [Gift Cards](/docs/scos/user/features/{{site.version}}/gift-cards-feature-overview.html)
+Feature documentation: [Gift Cards](/docs/scos/user/features/201907.0/gift-cards-feature-overview.html)
 
 ### Scheduled Prices
 Spryker now supports price defining prices that will take effect the next day/week/month at a specific time.
@@ -70,7 +63,7 @@ View the Scheduled Prices defined for a specific product:
 * You cannot schedule prices for a merchant relation
 * You cannot schedule prices for a volume price
 
-**Documentation**: [Scheduled Prices](/docs/scos/user/features/{{site.version}}/scheduled-prices-feature-overview.html)
+**Documentation**: [Scheduled Prices](/docs/scos/user/features/201907.0/scheduled-prices-feature-overview.html)
 
 ### Defining the Order of Appearance for Images
 
@@ -78,7 +71,7 @@ In the Back Office, you can now define the order in which your images appear. Fo
 
 ![Reorder images](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image10.png)
 
-**Documentation**: [Product Image Management](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-images-overview.html)
+**Documentation**: [Product Image Management](/docs/scos/user/features/201907.0/product-feature-overview/product-images-overview.html)
 ***
 ## CMS
 ### CMS Content Items
@@ -100,8 +93,8 @@ The Content Manager manages the **Content Items** in the Back Office while the a
 
 **Documentation**:
 
-* [Content Items](/docs/scos/user/features/{{site.version}}/content-items-feature-overview.html)
-* [Content Item Widgets](/docs/scos/user/features/{{site.version}}/content-items-feature-overview.html)
+* [Content Items](/docs/scos/user/features/201907.0/content-items-feature-overview.html)
+* [Content Item Widgets](/docs/scos/user/features/201907.0/content-items-feature-overview.html)
 ***
 ## Spryker Glue REST API
 In this release, we’ve focused on exposing B2B functionality for our **B2B Front End API**.
@@ -116,36 +109,36 @@ In the B2B context, buyers typically represent a company and act on its behalf. 
 ### Business on Behalf API
 To impersonate a customer as a Company User, API clients can use the **Business on Behalf API**. It provides REST access to retrieve a list of the Company Users available to the currently logged in user and impersonate them as any user from that list.
 
-**Documentation**: [B2B Logging in as Company User](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html)
+**Documentation**: [B2B Logging in as Company User](/docs/scos/dev/glue-api-guides/201907.0/managing-b2b-account/authenticating-as-a-company-user.html)
 
 ### Company Account API
 In the B2B environment, users are organized in Business Units depending on the scope of their activity in the company for better manageability and accountability. Users also get roles assigned to them depending on their level of responsibility and hierarchy in the organization. The endpoints provided by the **Company Account API** allow you to retrieve Business Unit, Business unit addresses, and Company Roles information.
 
 **Documentation**:  
 
-* [Retrieving Company Information](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/retrieving-companies.html)
-* [Retrieving Business Unit Information](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/retrieving-business-units.html)
-* [Retrieving Company User Information](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/retrieving-company-users.html)
-* [Retrieving Company Role Information](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/retrieving-company-roles.html)
+* [Retrieving Company Information](/docs/scos/dev/glue-api-guides/201907.0/managing-b2b-account/retrieving-companies.html)
+* [Retrieving Business Unit Information](/docs/scos/dev/glue-api-guides/201907.0/managing-b2b-account/retrieving-business-units.html)
+* [Retrieving Company User Information](/docs/scos/dev/glue-api-guides/201907.0/managing-b2b-account/retrieving-company-users.html)
+* [Retrieving Company Role Information](/docs/scos/dev/glue-api-guides/201907.0/managing-b2b-account/retrieving-company-roles.html)
 
 ### OAuth + Customer Account
 Provides a way to authorize access to resources related to the level of permissions of each user, to update and revoke those permissions as well as manage the level of access of the company users to API resources according to their existing permissions at every given moment, everything is handled by the access token.
 
 **Documentation**:
 
-* [Security and Authentication](/docs/scos/dev/glue-api-guides/{{site.version}}/security-and-authentication.html)
-* [B2B Logging in as Company User](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html)
-* [Retrieving Company Role Information](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/retrieving-company-roles.html)
+* [Security and Authentication](/docs/scos/dev/glue-api-guides/201907.0/security-and-authentication.html)
+* [B2B Logging in as Company User](/docs/scos/dev/glue-api-guides/201907.0/managing-b2b-account/authenticating-as-a-company-user.html)
+* [Retrieving Company Role Information](/docs/scos/dev/glue-api-guides/201907.0/managing-b2b-account/retrieving-company-roles.html)
 
 ### Multicart API
 In the B2B world, company users can create and manage multiple carts according to their shopping needs and different purposes. With the Multicart API, users can create, manage and update multiple carts, assign products to each of them, update and delete items.
 
-**Documentation**: [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html)
+**Documentation**: [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/201907.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html)
 
 ### Shared Carts API
 Users may also decide to work in a collaborative way and share their carts with other members of their Business Units, assign different levels of permissions to them and manage those permissions with ease. That’s the purpose of our Shared Carts API.
 
-**Documentation**: [Shared Carts API](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/sharing-company-user-carts/managing-shared-company-user-carts.html)
+**Documentation**: [Shared Carts API](/docs/scos/dev/glue-api-guides/201907.0/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html)
 
 ### Payments by Third Party Providers API
 In many cases, you may decide to provide your buyers and users with alternative payment methods that are handled completely by third party providers. The Payments by third Party Providers API provides you an endpoint to retrieve the payment completion order from those external providers to continue with the order according to your workflow.
@@ -153,7 +146,7 @@ In many cases, you may decide to provide your buyers and users with alternative 
 **Documentation**:
 
 * [Interacting with Third Party Payment Providers via Glue API](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html)
-* [B2B-B2C Checking Out Purchases and Getting Checkout Data](/docs/scos/dev/glue-api-guides/{{site.version}}/checking-out/checking-out-purchases.html)
+* [B2B-B2C Checking Out Purchases and Getting Checkout Data](/docs/scos/dev/glue-api-guides/201907.0/checking-out/checking-out-purchases.html)
 
 Additionally, the following APIs were modified to support B2B use cases (they work now both for B2C and B2B) :
 
@@ -193,7 +186,7 @@ B2B, B2C demo shops and master suite are covered at the moment.
 
 The following OSs are supported: Linux, Mac, and Windows 10 Pro.
 
-**Documentation**: [Spryker in Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/the-docker-sdk.html)
+**Documentation**: [Spryker in Docker](/docs/scos/dev/the-docker-sdk/201907.0/the-docker-sdk.html)
 ***
 ## B2B
 ### Request for Quote
@@ -208,7 +201,7 @@ The feature also supports an alternative flow when a customer and salesperson ha
 #### Compatibility Issues:
 Request for Quote v. 2.0.0  does not support bundles
 
-**Documentation**: [Request for Quote](/docs/scos/user/features/{{site.version}}/quotation-process-feature-overview.html)
+**Documentation**: [Request for Quote](/docs/scos/user/features/201907.0/quotation-process-feature-overview.html)
 
 ### Punchout
 This new functionality allows the B2B buyers to access Spryker’s online shop from within their ERP or procurement system.
@@ -231,7 +224,7 @@ Even better - conversation about the order can continue after the order had been
 
 ![Multiple comments](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image2.png)
 
-**Documentation**: [Comments](/docs/scos/user/features/{{site.version}}/comments-feature-overview.html)
+**Documentation**: [Comments](/docs/scos/user/features/201907.0/comments-feature-overview.html)
 
 ### Unique URL for Easy Cart Sharing
 This is a general feature that allows creating and sharing URL for any entity in the Spryker Commerce OS. With the **Persistent Cart Sharing** feature, you can quickly and easily share cart through communication channel like WhatsApp, Slack, or any other messenger, email, or social network.
@@ -244,27 +237,27 @@ Cart in the Preview mode can also be shared with users in your company because i
 
 ![Unique URL for Easy Cart Sharing](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+201907.0/image4.png)
 
-**Documentation**: [Unique URL per Cart for Easy Sharing](/docs/scos/user/features/{{site.version}}/resource-sharing-feature-overview.html)
+**Documentation**: [Unique URL per Cart for Easy Sharing](/docs/scos/user/features/201907.0/resource-sharing-feature-overview.html)
 
 ### Other Improvements
 
 * Vault - We introduce the Vault place where you can store valuable information and get it from there by ID in an encrypted form and vice versa
-    **Documentation**: [Vault for Tokens](/docs/scos/user/features/{{site.version}}/spryker-core-feature-overview/vault-for-tokens-overview.html)
+    **Documentation**: [Vault for Tokens](/docs/scos/user/features/201907.0/spryker-core-feature-overview/vault-for-tokens-overview.html)
 
 * Customer Login by Token - Ability to log in to the Spryker Commerce OS by token
-    **Documentation**: [Customer Login by Token](/docs/scos/user/features/{{site.version}}/company-account-feature-overview/customer-login-by-token-overview.html)
+    **Documentation**: [Customer Login by Token](/docs/scos/user/features/201907.0/company-account-feature-overview/customer-login-by-token-overview.html)
 
 ***
 ## Partner Integrations
 ### Payone Cash on Delivery
 We have extended our Payone module with the cash-on-delivery payment method. This can now be used by merchants to address some of the most skeptical customers who wish to pay for the order only once they have the product in their hands.
 
-**Documentation**: [Payone - Cash on Delivery](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/bs-payone/scos-integration/payone-cash-on-delivery.html)
+**Documentation**: [Payone - Cash on Delivery](/docs/scos/user/technology-partners/201907.0/payment-partners/bs-payone/scos-integration/payone-cash-on-delivery.html)
 
 ### Heidelpay Easycredit
 We have extended our existing Heidelpay module with the payment method Easycredit, which allows customers to pay via an installment plan. This can help to increase your conversion rates of more expensive products and services.
 
-**Documentation**: [Heidelpay - Easy Credit](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-easy-credit.html)
+**Documentation**: [Integrating the Easy Credit payment method for Heidelpay](/docs/scos/dev/technology-partner-guides/{{site.version}}/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-easy-credit-payment-method-for-heidelpay.html)
 
 ### RatePay
 We have extended our partner portfolio with a RatePay integration that offers 4 payment methods out-of-the-box:
@@ -276,20 +269,20 @@ We have extended our partner portfolio with a RatePay integration that offers 4 
 
 **Documentation**:
 
-* [RatePay - Prepayment](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-prepayment.html)
-* [RatePay - Invoice](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-invoice.html)
-* [RatePay - Direct Debit](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html)
-* [RatePay - Installment](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/ratepay/ratepay-payment-methods/ratepay-installment.html)
+* [Integrating the Prepayment payment method for RatePay](/docs/scos/user/technology-partners/201907.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-prepayment-payment-method-for-ratepay.html)
+* [Integrating the Invoice payment method for RatePay](/docs/scos/user/technology-partners/201907.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-invoice-payment-method-for-ratepay.html)
+* [Integrating the Direct Debit payment method for RatePay](/docs/scos/user/technology-partners/201907.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-direct-debit-payment-method-for-ratepay.html)
+* [Integrating the Installment payment method for RatePay](/docs/scos/user/technology-partners/201907.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-installment-payment-method-for-ratepay.html)
 
 ### Episerver
 We now have a new integration of our new partner Episerver and their online platform to support newsletters as well as the transactional notifications required in the usual e-commerce transactions.
 
-**Documentation**: [Episerver](/docs/scos/user/technology-partners/{{site.version}}/marketing-and-conversion/customer-communication/episerver/episerver.html)
+**Documentation**: [Episerver](/docs/scos/user/technology-partners/201907.0/marketing-and-conversion/customer-communication/episerver.html)
 
 ### Easycredit Direct Integration
 We have now a new integration of our new partner TeamBank AG and their payment method Ratenkauf by Easycredit, which allows customers to pay via an installment plan. This can help to increase your conversion rates of the more expensive products and services.
 
-**Documentation**: [Ratenkauf by Easycredit - Installation and Configuration](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit-installation-and-configuration.html)
+**Documentation**: [Ratenkauf by Easycredit - Installation and Configuration](/docs/scos/user/technology-partners/201907.0/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit-installation-and-configuration.html)
 
 ### CrefoPay
 We now have an integration with our new payment partner CrefoPay, which will provide the following payment methods out-of-the-box including partial operations and B2B:
@@ -301,7 +294,7 @@ We now have an integration with our new payment partner CrefoPay, which will pro
 * Sofort
 * Cash on Delivery
 
-**Documentation**: [CrefoPay](/docs/scos/user/technology-partners/{{site.version}}/payment-partners/crefopay/crefopay-installation-and-configuration.html)
+**Documentation**: [CrefoPay](/docs/scos/user/technology-partners/201907.0/payment-partners/crefopay/installing-and-configuring-crefopay.html)
 
 ***
 ## Technical Enhancements
@@ -316,7 +309,7 @@ Redis Sentinel configuration is available on the project side. Make use of Redis
 
 <!--**Documenation**: ToDo https://spryker.atlassian.net/wiki/spaces/DOCS/pages/965214417/WIP+HowTo+-+Integrate+Redis+refactoring+TE-1558 -->
 
-### Module Constrainter
+### Module Constrainer
 Once a project extends or customizes Spryker functionalities of certain modules they should be constrained to ~ in project composer.json. This will help to avoid potentially dangerous updates of these modules.
 From now on Spryker provides a tool which helps to identify such modules and automatically suggest module constraints. Check it out:
 

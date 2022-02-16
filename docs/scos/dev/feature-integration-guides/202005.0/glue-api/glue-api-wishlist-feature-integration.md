@@ -16,29 +16,35 @@ related:
 Follow the steps below to install Wishlist feature API.
 
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
+
 |Name|Version|Integration guide|
 |---|---|---|
-Spryker Core|201907.0|[Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html)|
-|Product|201907.0|[Product API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/products-api-feature-integration.html)|
-|Wishlist| 201907.0 |
+Spryker Core|202005.0|[Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html)|
+|Product|202005.0|[Product API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/products-api-feature-integration.html)|
+|Wishlist| 202005.0 |
 
 ### 1) Install the required modules using Composer
+
 Run the following command to install the required modules:
 
 ```bash
 composer require spryker/wishlists-rest-api:"^1.0.0" --update-with-dependencies
 ```
-<section contenteditable="false" class="warningBox"><div class="content">
-    Make sure that the following module has been installed:
+
+{% info_block warningBox “Verification” %}
+
+Make sure that the following module has been installed:
 
 |Module|Expected directory|
 |---|---|
 |`WishlistsRestApi`|`vendor/spryker/wishlists-rest-apiWishlistItems`|
 
-</div></section>
+{% endinfo_block %}
 
 ### 2) Set Up Database Schema and Transfer Objects
+
 Run the following commands to apply database changes, and generate entity and transfer changes:
 
 ```bash
@@ -47,15 +53,18 @@ console propel:install
 console transfer:generate
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
-    Make sure that the following changes have occurred in the database:
+{% info_block warningBox “Verification” %}
+
+Make sure that the following changes have occurred in the database:
 
 |Database entity|Type|Event|
 |---|---|---|
 |`spy_wishlist.uuid`|column|added|
-</div></section>
 
-<section contenteditable="false" class="warningBox"><div class="content">
+{% endinfo_block %}
+
+{% info_block warningBox “Verification” %}
+
 Make sure that the following changes have occurred in transfer objects:
 
 |Transfer|Type|Event|Path|
@@ -63,13 +72,17 @@ Make sure that the following changes have occurred in transfer objects:
 |`RestWishlistItemsAttributesTransfer`|class|created|`src/Generated/Shared/Transfer/RestWishlistItemsAttributesTransfer`|
 |`RestWishlistsAttributesTransfer`|class|created|`src/Generated/Shared/Transfer/RestWishlistsAttributesTransfer`|
 |`WishlistTransfer.uuid`|property|added|`src/Generated/Shared/Transfer/WishlistTransfer`|
-</div></section>
+
+{% endinfo_block %}
 
 ### 3) Set Up Behavior
+
 #### Migrate data in the database
 
 {% info_block infoBox %}
+
 The following steps generate UUIDs for existing entities in the `spy_wishlist` table.
+
 {% endinfo_block %}
 
 Run the following command:
@@ -77,8 +90,28 @@ Run the following command:
 ```bash
 console uuid:update Wishlist spy_wishlist
 ```
+{% info_block infoBox “Info” %}
 
-{% info_block warningBox "(Make sure that the `uuid` field is populated for all records in the `spy_wishlist` table.</br>For this purpose, run the following SQL query and make sure that the result is 0 records:</br>`SELECT COUNT(*) FROM spy_wishlist WHERE uuid IS NULL;`)
+Make sure that the `uuid` field is populated for all records in the `spy_wishlist` table.
+
+For this purpose, run the following SQL query and make sure that the result is 0 records:
+
+```bash
+SELECT COUNT(*) FROM spy_wishlist WHERE uuid IS NULL;
+```
+
+{% endinfo_block %}
+
+{% info_block warningBox “Verification” %}
+
+Make sure that the `uuid` field is populated for all records in the `spy_wishlist` table.
+For this purpose, run the following SQL query and make sure that the result is 0 records:
+
+```
+SELECT COUNT(*) FROM spy_wishlist WHERE uuid IS NULL;
+```
+
+{% endinfo_block %}
 
 #### Enable resources and relationships
 
@@ -91,10 +124,7 @@ Activate the following plugins:
 |WishlistRelationshipByResourceIdPlugin|Adds the `wishlists` resource as a relationship to the customers resource.|None|Spryker\Glue\WishlistsRestApi\Plugin|
 | ConcreteProductBySkuResourceRelationshipPlugin | Adds the `concrete-products` resource as a relationship to the `wishlist-items` resource. | None | Spryker\Glue\ProductsRestApi\Plugin\GlueApplication |
 
-
-
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -139,15 +169,12 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-</br>
-</details>
+{% info_block warningBox “Verification” %}
 
-@(Warning" %}
+Make sure that the following endpoints are available:
+- `http:///glue.mysprykershop.com/wishlists`
+- `http:///glue.mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlists-items`
+  
+Send a request to `http://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=wishlists` and make sure that the given customer has at least one wishlist. Make sure that the response includes relationships to the `wishlists` resources.
 
-{% endinfo_block %}(Make sure that the following endpoints are available:<ul><li>`http:///glue.mysprykershop.com/wishlists`</li><li>`http:///glue.mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlists-items`</li></ul>Send a request to `http://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=wishlists` and make sure that the given customer has at least one wishlist. Make sure that the response includes relationships to the `wishlists` resources.)
-
-**See also:**
-
-* [Managing Wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists.html)
-
-*Last review date: Aug 02, 2019* <!-- by  Tihran Voitov, Yuliia Boiko-->
+{% endinfo_block %}

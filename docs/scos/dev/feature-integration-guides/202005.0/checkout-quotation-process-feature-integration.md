@@ -19,8 +19,8 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Checkout | master |
-| Quotation Process | master |
+| Checkout | {{page.version}} |
+| Quotation Process | {{page.version}} |
 
 ### 1) Set up Behavior
 Register the following plugins:
@@ -71,7 +71,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that you can't see the **Checkout** button on the Quote request items edit page.</br>Make sure that after you placed an order form quote request, a quote request has a closed status.
+Make sure that you can't see the **Checkout** button on the Quote request items edit page.<br>Make sure that after you placed an order form quote request, a quote request has a closed status.
 {% endinfo_block %}
 
 ## Install Feature Frontend
@@ -80,8 +80,8 @@ Please overview and install the necessary features before beginning the integrat
 
 | Name | Version |
 | --- | --- |
-| Checkout | master |
-| Quotation Process | master |
+| Checkout | {{page.version}} |
+| Quotation Process | {{page.version}} |
 
 ### Set up Behavior
 #### Set up Quote Request Workflow

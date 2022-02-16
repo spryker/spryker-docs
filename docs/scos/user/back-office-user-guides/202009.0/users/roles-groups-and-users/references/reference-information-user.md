@@ -1,5 +1,5 @@
 ---
-title: Reference information- User
+title: Reference information - user
 description: The guide provides additional information about the values you enter when managing users in the Back Office.
 last_updated: Aug 27, 2020
 template: back-office-user-guide-template
@@ -38,7 +38,7 @@ In the **Search** field on the top, he searches for the customer email. Once fou
 
 Since now he can perform the same actions as a regular customer. Once all needed actions are done and the order is placed, he clicks **End Customer Assistance**. 
 {% info_block infoBox %}
-Click to see how it looks on Yves.</br>![Agent User](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Users+Control/User:+Reference+Information/Agent+User.gif
+Click to see how it looks on Yves.<br>![Agent User](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Users+Control/User:+Reference+Information/Agent+User.gif
 {% endinfo_block %}{height="40" width="40"})
 
 ## Create and Edit User Page Attributes
@@ -54,4 +54,4 @@ The following table describes the attributes that are used when creating or upda
 |**Assigned Groups**|The list of all groups that are currently available in the system. You can select from one to many values by selecting the appropriate checkboxes. |
 |**Agent**| Identifies if this is a user agent. See the _Agent User_ section above. |
 |**Interface Language**|The list of the available languages. This defines in what language the user will see the Back Office interface. Once the account language is changed, the respective user will see that their interface is translated into the corresponding language upon their next login.|
-|**Status**|**Available on the Edit User page only**</br>Identifies if this user is in active status. All records are **Active** upon creation by default. The available values are: **active** (meaning able to log in to Back Office), **blocked** (the user is not able to log in), **deleted** (the user is not able to log in)|
+|**Status**|**Available on the Edit User page only**<br>Identifies if this user is in active status. All records are **Active** upon creation by default. The available values are: **active** (meaning able to log in to Back Office), **blocked** (the user is not able to log in), **deleted** (the user is not able to log in)|

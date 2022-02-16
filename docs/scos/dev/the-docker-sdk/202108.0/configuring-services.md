@@ -12,29 +12,14 @@ redirect_from:
   - /docs/en/configuring-services
 related:
   - title: Deploy File Reference - 1.0
-    link: docs/scos/dev/the-docker-sdk/page.version/deploy-file-reference-1.0.html
+    link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file-reference-1.0.html
   - title: Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
 ---
 
 
 
-This document describes configuration options of the services shipped with Spryker in Docker by default.  Find the list of the services below:
-
-* Database
-* ElasticSearch
-* Kibana UI
-* RabbitMQ
-* Swagger UI
-* Redis
-* Redis GUI
-* MailHog
-* Blackfire
-* New Relic
-* WebDriver
-* Dashboard
-* Tideways
-
+This document describes configuration options of the services shipped with Spryker in Docker by default.
 
 {% info_block infoBox %}
 
@@ -60,7 +45,9 @@ git clone https://github.com/spryker/docker-sdk.git ./docker
 {% endinfo_block %}
 
 ## Database services
-[MariaDB](https://mariadb.org/) is provided as a service by default, but you can switch to MySQL or PostgreSQL as described below.
+[MariaDB](https://mariadb.org/) is provided as a service by default. MariaDB is about 40% faster on write operations when compared, for example, to PostgreSQL.
+
+Anyway, you can switch to MySQL or PostgreSQL as described below.
 
 ### MariaDB
 [MariaDB](https://mariadb.org/) is a community-developed, commercially supported fork of the [MySQL](https://www.mysql.com/) relational database management system.

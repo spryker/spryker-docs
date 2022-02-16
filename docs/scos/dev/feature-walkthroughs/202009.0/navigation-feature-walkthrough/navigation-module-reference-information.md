@@ -12,9 +12,9 @@ related:
   - title: Managing Navigation Elements
     link: docs/scos/user/back-office-user-guides/page.version/content/navigation/managing-navigation-elements.html
   - title: Migration Guide - Navigation
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-navigation.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-navigation.html
   - title: Migration Guide - NavigationGui
-    link: docs/scos/dev/module-migration-guides/page.version/migration-guide-navigationgui.html
+    link: docs/scos/dev/module-migration-guides/migration-guide-navigationgui.html
   - title: Navigation Module Integration
     link: docs/scos/dev/feature-integration-guides/page.version/navigation-module-integration.html
 ---
@@ -27,7 +27,7 @@ The following node types are available:
 * **Label**: These nodes do not link to any specific URL, they are used for grouping other nodes.
 * **Category**: Nodes can be assigned to category node URLs.
 * **CMS Page**: Nodes can be assigned to CMS page URLs.
-* **Link**: These nodes link to internal pages in Yves, i.e. login, registration, etc.
+* **Link**: These nodes link to internal pages in Yves, for example, login, registration, etc.
 * **External URL**: These nodes link to external URLs (typically tabs opened in a new browser).
 You can control and adjust Navigation node appearance and add icons by assigning custom CSS classes to them.
 

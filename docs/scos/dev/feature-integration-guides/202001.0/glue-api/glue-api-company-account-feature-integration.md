@@ -17,25 +17,29 @@ related:
   - title: Retrieving Company Role Information
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-roles.html
   - title: Retrieving Business Unit Information
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-unit-information.html
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-units.html
 ---
 
 {% info_block errorBox %}
-The following feature integration guide expects the basic feature to be in place.</br>The current feature integration Guide only adds the Company Account REST API functionality.
+
+The following feature integration guide expects the basic feature to be in place.<br>The current feature integration Guide only adds the Company Account REST API functionality.
+
 {% endinfo_block %}
 
 ## Install Feature API
+
 ### Prerequisites
+
 To start the feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | 201907.0 | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
-| Company account | 201907.0 | [Company Account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html) |
-| Customer Account Management | 201907.0 | [Customer API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/customer-account-management-feature-integration-glue.html) |
-| Uuid generation console | 201907.0 | UUID Generation Console |
+| Spryker Core | 202001.0 | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
+| Company account | 202001.0 | [Company Account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html) |
+| Uuid generation console | 202001.0 | UUID Generation Console |
 
 ### 1) Install the required modules using Composer
+
 Run the following command to install the required modules:
 
 ```bash
@@ -44,8 +48,8 @@ composer require spryker/company-user-auth-rest-api:"^2.0.0" spryker/oauth-compa
 
 {% info_block warningBox “Verification” %}
 
-
 Make sure that the following modules are installed:
+
 | Module | Expected Directory |
 | --- | --- |
 | `CompanyUserAuthRestApi` | `vendor/spryker/company-user-auth-rest-api` |
@@ -60,6 +64,7 @@ Make sure that the following modules are installed:
 {% endinfo_block %}
 
 ### 2) Set Up Database Schema and Transfer Objects
+
 Run the following commands to generate transfer changes:
 
 ```bash
@@ -69,7 +74,6 @@ console transfer:generate
 ```
 
 {% info_block warningBox “Verification” %}
-
 
 Make sure that the following changes have occurred:
 
@@ -110,7 +114,6 @@ Make sure that the following changes have occurred:
 
 {% info_block warningBox “Verification” %}
 
-
 Verify that the following changes have occurred in the database:
 
 | Database entity | Type | Event |
@@ -124,6 +127,7 @@ Verify that the following changes have occurred in the database:
 {% endinfo_block %}
 
 ### 3) Set Up Behavior
+
 #### Generate UUIDs for existing Company records that do not have UUIDs
 
 Run the following command:
@@ -131,14 +135,14 @@ Run the following command:
 ```bash
 console uuid:generate Company spy_company
 ```
+
 {% info_block warningBox “Verification” %}
 
-
 Make sure that the UUID field is populated for all records in the `spy_company table`. To do so, run the following SQL query and make sure that the result contains **0** records:
+
 ```sql
 select count(*) from spy_company where uuid is NULL;
 ```
-
 {% endinfo_block %}
 
 #### Generate UUIDs for the existing Company Business Unit records that do not have UUIDs
@@ -148,8 +152,8 @@ Run the following command:
 ```bash
 console uuid:generate CompanyBusinessUnit spy_company_business_unit
 ```
-{% info_block warningBox “Verification” %}
 
+{% info_block warningBox “Verification” %}
 
 Make sure that the UUID field is populated for all records in the `spy_company_business_unit` table. To do so, run the following SQL query and make sure that the result contains **0** records:
 
@@ -166,8 +170,8 @@ Run the following command:
 ```bash
 console uuid:generate CompanyRole spy_company_role
 ```
-{% info_block warningBox “Verification” %}
 
+{% info_block warningBox “Verification” %}
 
 Make sure that the UUID field is populated for all records in the `spy_company_role` table. To do so, run the following SQL query and make sure that the result contains **0** records:
 
@@ -184,8 +188,8 @@ Run the following command:
 ```bash
 console uuid:generate CompanyUnitAddress spy_company_unit_address
 ```
-{% info_block warningBox “Verification” %}
 
+{% info_block warningBox “Verification” %}
 
 Make sure that the UUID field is populated for all records in the `spy_company_unit_address` table. To do so, run the following SQL query and make sure that the result contains **0** records:
 
@@ -202,10 +206,11 @@ Run the following command:
 ```bash
 console uuid:generate CompanyUser spy_company_user
 ```
+
 {% info_block warningBox “Verification” %}
 
-
 Make sure that the UUID field is populated for all records in the `spy_company_user` table. To do so, run the following SQL query and make sure that the result contains **0** records:
+
 ```sql
 select count(*) from spy_company_user where uuid is NULL;
 ```
@@ -216,7 +221,7 @@ select count(*) from spy_company_user where uuid is NULL;
 
 {% info_block infoBox %}
 
-`CompaniesResourcePlugin` GET, `CompanyBusinessUnitsResourcePlugin` GET, `CompanyBusinessUnitAddressesResourcePlugin` GET, `CompanyRolesResourcePlugin` GET, `CompanyUsersResourceRoutePlugin` GET verbs are protected resources. For details, refer to the Configure section of [Configure documentation](/docs/scos/dev/concepts/glue-api/glue-infrastructure.html#resource-routing).
+`CompaniesResourcePlugin` GET, `CompanyBusinessUnitsResourcePlugin` GET, `CompanyBusinessUnitAddressesResourcePlugin` GET, `CompanyRolesResourcePlugin` GET, `CompanyUsersResourceRoutePlugin` GET verbs are protected resources. For details, refer to the Configure section of [Configure documentation](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html#resource-routing).
 
 {% endinfo_block %}
 
@@ -245,7 +250,7 @@ Activate the following plugins:
 | `PermissionOauthCustomerIdentifierExpanderPlugin` | If `idCompanyUser` is set in `CustomerIdentifierTransfer`, expands `CustomerIdentifierTransfer` with a collection of permissions. | None | `Spryker\Zed\OauthPermission\Communication\Plugin\OauthCustomerConnector` |
 | `CompanyUserAccessTokensResourceRoutePlugin` | Registers the `company-user-access-tokens` resource | None | `Spryker\Glue\CompanyUserAuthRestApi\Plugin\GlueApplication` |
 
-src/Pyz/Zed/OauthCustomerConnector/OauthCustomerConnectorDependencyProvider.php
+**src/Pyz/Zed/OauthCustomerConnector/OauthCustomerConnectorDependencyProvider.php**
 
 ```php
 <?php
@@ -271,7 +276,7 @@ class OauthCustomerConnectorDependencyProvider extends SprykerOauthCustomerConne
 }
 ```
 
-src/Pyz/Glue/AuthRestApi/AuthRestApiDependencyProvider.php
+**src/Pyz/Glue/AuthRestApi/AuthRestApiDependencyProvider.php**
 
 ```php
 <?php
@@ -295,7 +300,7 @@ class AuthRestApiDependencyProvider extends SprykerAuthRestApiDependencyProvider
 }
 ```
 
-src/Pyz/Zed/OauthCompanyUser/OauthCompanyUserDependencyProvider.php
+**src/Pyz/Zed/OauthCompanyUser/OauthCompanyUserDependencyProvider.php**
 
 ```php
 <?php
@@ -319,7 +324,7 @@ class OauthCompanyUserDependencyProvider extends SprykerOauthCompanyUserDependen
 }
 ```
 
-src/Pyz/Zed/Oauth/OauthDependencyProvider.php
+**src/Pyz/Zed/Oauth/OauthDependencyProvider.php**
 
 ```php
 <?php
@@ -343,7 +348,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 }
 ```
 
-src/Pyz/Zed/OauthPermission/OauthPermissionConfig.php
+**src/Pyz/Zed/OauthPermission/OauthPermissionConfig.php**
 
 ```php
 <?php
@@ -367,7 +372,7 @@ class OauthPermissionConfig extends SprykerOauthPermissionConfig
 }
 ```
 
-src/Pyz/Glue/CustomersRestApi/CustomersRestApiDependencyProvider.php
+**src/Pyz/Glue/CustomersRestApi/CustomersRestApiDependencyProvider.php**
 
 ```php
 <?php
@@ -478,12 +483,9 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
-
-</br>
 </details>
 
 {% info_block warningBox “Verification” %}
-
 
 To verify that everything is set up correctly, first, you need to authenticate as a regular customer. Then, to get the ID of the Company Users you can impersonate as, send a `GET` request to `http://glue.mysprykershop.com/company-users/mine`.
 
@@ -546,7 +548,6 @@ To verify that all the required data is provided in the access token, go to [jwt
 
 {% info_block warningBox “Verification” %}
 
-
 Make sure that the permission data is filtered out based on the record in the `spy_oauth_access_token` table. For this purpose, you can run the following SQL query and make sure that the result doesn't have any permissions-related data from the `user_identifier` column.
 
 ```sql
@@ -557,7 +558,6 @@ SELECT * FROM spy_oauth_access_token WHERE user_identifier LIKE '%{"id_company_u
 
 {% info_block warningBox “Verification” %}
 
-
 Send a `GET` request to `http://glue.mysprykershop.com/companies/mine`. Make sure that the response contains a collection of resources with the companies that your current Company User belongs to.
 
 Send a `GET` request to `http://glue.mysprykershop.com/companies/{% raw %}{{{% endraw %}company_uuid{% raw %}}}{% endraw %}`. Make sure that the response contains a single company resource that your current Company User belongs to.
@@ -565,7 +565,6 @@ Send a `GET` request to `http://glue.mysprykershop.com/companies/{% raw %}{{{% e
 {% endinfo_block %}
 
 {% info_block warningBox “Verification” %}
-
 
 Send a `GET` request to `http://glue.mysprykershop.com/company-business-units/mine?include=companies,company-business-unit-addresses`. Make sure that the response contains a collection of resources with the company business units that your current Company User belongs to. Make sure that the `companies` and `addresses` relationships are present.
 
@@ -575,13 +574,11 @@ Send a `GET` request to `http://glue.mysprykershop.com/company-business-units/{%
 
 {% info_block warningBox “Verification” %}
 
-
 Send a `GET` request to `http://glue.mysprykershop.com/company-business-unit-addresses/{% raw %}{{{% endraw %}company_business_unit_address_uuid{% raw %}}}{% endraw %}`. Make sure that response contains a single company business unit address resource that your current company has.
 
 {% endinfo_block %}
 
 {% info_block warningBox “Verification” %}
-
 
 Send a `GET` request to `http://glue.mysprykershop.com/company-roles/mine?include=companies`. Make sure that the response contains the collection of resources with all company roles that your current Company User has. Make sure that the `companies` relationship is present.
 
@@ -590,7 +587,6 @@ Send a `GET` request to `http://glue.mysprykershop.com/company-roles/{% raw %}{{
 {% endinfo_block %}
 
 {% info_block warningBox “Verification” %}
-
 
 Send a `GET` request to `http://glue.mysprykershop.com/company-users?include=company-roles,companies,company-business-units,customers`. Make sure that the response contains a collection of resources with all the Company Users in your current company. Make sure that the `company-roles`, `companies`, `company-business-units` and `customers` relationships are present.
 

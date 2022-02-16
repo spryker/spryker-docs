@@ -15,7 +15,7 @@ data:import --config data/import/common/combined_merchant_product_offer_import_c
 
 {% info_block infoBox "Info" %}
 
-See [Importing Data with a Configuration File](https://documentation.spryker.com/docs/importing-data-with-configuration-file) to learn more about bulk importing with the help of the configuration file.
+See [Importing Data with a Configuration File](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html) to learn more about bulk importing with the help of the configuration file.
 
 {% endinfo_block %}
 
@@ -29,12 +29,12 @@ The file should have the following parameters:
 | merchant_product_offer.concrete_sku          | &check;             | String   |                   | Unique                                                       | SKU of the concrete product the offer is being created for.  |
 | merchant_product_offer.merchant_reference    | &check;             | String   |                   | Unique                                                       | Identifier of the merchant owing the product offer in the system. |
 | merchant_product_offer.merchant_sku          |               | String   |                   | Unique                                                       | Identifier of the [merchant](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) in the system. |
-| merchant_product_offer.is_active             |               | Integer  |                   | 1—is active</br> 0—is not active                             | Defines whether the offer is active or not.                  |
+| merchant_product_offer.is_active             |               | Integer  |                   | 1—is active<br> 0—is not active                             | Defines whether the offer is active or not.                  |
 | merchant_product_offer.approval_status       | &check;             | String   |                   | Can be:<ul><li>waiting_for_approval</li><li>approved</li><li>denied</li></ul>  | Defines the [status of the offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html#offer-approval-status) in the system. |
 | merchant_product_offer_store.store_name      |               | String   |                   |                                                              | Name of the store where the offer belongs.                   |
 | product_offer_stock.stock_name               |               | String   |                   | Stock name is defined as described in the [merchant warehouse](/docs/marketplace/user/features/{{site.version}}/marketplace-inventory-management-feature-overview.html#marketplace-warehouse-management). | Name of the stock.                                           |
 | product_offer_stock.quantity                 |               | Integer  |                   |                                                              | Number of product offers that are in stock.                  |
-| product_offer_stock.is_never_out_of_stock    |               | Integer  |                   | 1—option is enabled</br> 0—option is disabled.               | Allows the offer to be never out of stock. |
+| product_offer_stock.is_never_out_of_stock    |               | Integer  |                   | 1—option is enabled<br> 0—option is disabled.               | Allows the offer to be never out of stock. |
 | price_product_offer.price_type               |               | String   |                   | Can be DEFAULT or ORIGINAL.                                  | Price type of the product offer.                             |
 | price_product_offer.store                    |               | String   |                   | Value previously defined in the *stores.php* project configuration. | Store where the merchant product offer belongs.              |
 | price_product_offer.currency                 |               | String   |                   | Defined in the [ISO code](https://en.wikipedia.org/wiki/ISO_4217). | Currency of the price.                                       |

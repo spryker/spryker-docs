@@ -1,6 +1,7 @@
 ---
 title: Rules and scopes
-last_updated: Sep 14, 2021
+last_updated: Nov 05, 2021
+description: The rule, in contrast to the configuration, is tied to the user (and his role) and determines the user's rights towards the entity.
 template: concept-topic-template
 ---
 
@@ -51,9 +52,9 @@ Depending on the scope, the system behaves differently. Read the documentation f
 
 If a user performs any operation on an entity for which he has no rules, the default rule is triggered. The default rule can be configured both within a specific class and in a general context. 
 
-A class context takes precedence over a general context. Persistence ACL feature is especially useful when all database tables are connected simultaneously. See [configuration](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/configuration.html#connect-persistence-acl-feature-to-all-database-tables) for more details. Thus, you can define publicly available entities such as `Country`, `Currency`, `Region`, etc. 
+A class context takes precedence over a general context. Persistence ACL feature is especially useful when all database tables are connected simultaneously. See [configuration](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html#connect-persistence-acl-feature-to-all-database-tables) for more details. Thus, you can define publicly available entities such as `Country`, `Currency`, `Region`, etc. 
 
-The default rule configuration is described in the [configuration document](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/configuration.html).
+The default rule configuration is described in the [configuration document](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html).
 
 {% info_block infoBox "Info" %}
 

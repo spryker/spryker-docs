@@ -50,7 +50,7 @@ To redeem a gift card, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart to redeem the gift card in. To get it, [create](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart) or [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#retrieveaguestcart). |
+| ***{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart to redeem the gift card in. To get it, [create](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart) or [retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
 
 ### Request
 
@@ -144,7 +144,7 @@ Response sample:
     ]
 }
 ```
-For the guest cart attributes, see [Creating Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#creating-a-guest-cart).
+For the guest cart attributes, see [Creating Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart).
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
@@ -184,6 +184,8 @@ If the item is deleted successfully, the endpoint will respond with a `204 No C
 
 | CODE  | REASON |
 | --- | --- |
+| 101 | Cart with the specified ID is not found. |
+| 109 | `X-Anonymous-Customer-Unique-Id` header is empty. |
 | 3301| Cart code not found in cart. |
 | 3302| Cart code can't be added. |
 | 3303| Cart code can't be removed. |

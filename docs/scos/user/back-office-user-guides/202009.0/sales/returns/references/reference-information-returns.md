@@ -1,5 +1,5 @@
 ---
-title: Reference information- returns
+title: Reference information - returns
 description: The guide provides reference information you see when working with returns in the Back Office.
 last_updated: Aug 27, 2020
 template: back-office-user-guide-template
@@ -10,7 +10,7 @@ redirect_from:
   - /v6/docs/en/returns-reference-information
 related:
   - title: Return Management Feature Overview
-    link: /docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html
+    link: docs/scos/user/features/page.version/return-management-feature-overview/return-management-feature-overview.html
   - title: Managing Returns
     link: docs/scos/user/back-office-user-guides/page.version/sales/returns/managing-returns.html
 ---

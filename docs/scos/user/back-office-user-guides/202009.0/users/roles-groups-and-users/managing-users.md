@@ -10,7 +10,7 @@ redirect_from:
   - /v6/docs/en/managing-users
 related:
   - title: User and Rights Management
-    link: docs/scos/dev/feature-walkthroughs/page.version/customer-account-management-feature-walkthrough/user-and-rights-overview.html
+    link: docs/scos/dev/feature-walkthroughs/page.version/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html
 ---
 
 This topic describes how to manage users.
@@ -38,11 +38,12 @@ You have already done the primary setup (you have created a [role](/docs/scos/us
     * Agent
     * Interface language
 
-{% info_block infoBox %}
+{% info_block infoBox "Info" %}
 
  See [User: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/references/reference-information-user.html) for details on these attributes.
 
-{% endinfo_block %}       
+{% endinfo_block %} 
+
 3. Click **Create**.
 
 That's it. The created user record appears on the *Users* page.    
@@ -59,6 +60,7 @@ The *Assign Customers* option is used to assign store customers' records to the 
 2. In the **Users List > Action** column, select **Assign Customers**.
 3. In the **List of customers > Select customers to assign** table, select the check-box next to the customer you want to assign (multiple customers can be selected).
 4. Click **Save**.
+
 {% info_block infoBox %}
 
 A customer cannot be assigned to multiple users at a time.
@@ -93,6 +95,9 @@ If a user has deactivated themselves, this user will get logged out immediately 
 **To delete a user:**
  1. In the **Users List > Action** column, click **Delete**.
 2. On the **Warning** page, click **Delete** to confirm the action.
+
 {% info_block infoBox %}
+
 The user's status in the _Status_ column will change to _Deleted_, however, the user will still stay in the **Users List** table. If the user has deleted themselves, this user will get logged out immediately and the message about the successful deletion will be shown.
+
 {% endinfo_block %}

@@ -1,5 +1,5 @@
 ---
-title: Customer Accounts
+title: Customer Account Management feature overview
 description: Let your customers create an Account to save their contact details, addresses, order history and preferences, such as language and shipping options.
 last_updated: Mar 16, 2020
 template: concept-topic-template
@@ -25,14 +25,14 @@ There are slight differences in customer accounts' information for the B2B and B
 
 | Customer Account Sections | B2B Shop | B2C Shop |
 | --- | --- | --- |
-| Overview | v | v|
-| Profile | v | v |
-| Addresses | v | v |
-| Order History | v | v |
-| Newsletter | v | v |
-| Shopping Lists | v |  |
-| Shopping Carts | v |  |
-| Wishlist |  | v |
+| Overview | ✓ | ✓|
+| Profile | ✓ | ✓ |
+| Addresses | ✓ | ✓ |
+| Order History | ✓ | ✓ |
+| Newsletter | ✓ | ✓ |
+| Shopping Lists | ✓ |  |
+| Shopping Carts | ✓ |  |
+| Wishlist |  | ✓ |
 
 As a Back Office user, you can view and edit your customer's account details and check their orders and order history. For internal references, each customer account can be enhanced with notes. This will allow an easier customer management
 in your organization.

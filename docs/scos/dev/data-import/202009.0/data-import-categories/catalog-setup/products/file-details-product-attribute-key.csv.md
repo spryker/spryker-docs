@@ -9,7 +9,7 @@ redirect_from:
   - /v6/docs/en/file-details-product-attribute-keycsv
 ---
 
-This article contains content of the **product_attribute_key.csv** file to configure [Product Attribute](https://documentation.spryker.com/v6/docs/products-overview) information on your Spryker Demo Shop.
+This article contains content of the **product_attribute_key.csv** file to configure [Product Attribute](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html) information on your Spryker Demo Shop.
 
 ## Headers & Mandatory Fields 
 These are the header fields to be included in the .csv file:

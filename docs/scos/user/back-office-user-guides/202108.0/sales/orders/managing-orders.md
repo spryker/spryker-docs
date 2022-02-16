@@ -16,7 +16,7 @@ related:
   - title: Reclamations Feature Overview
     link: docs/scos/user/features/page.version/reclamations-feature-overview.html
   - title: Return Management Feature Overview
-    link: /docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html
+    link: docs/scos/user/features/page.version/return-management-feature-overview/return-management-feature-overview.html
 ---
 
 This article describes how to manage orders.
@@ -132,7 +132,7 @@ This section describes attributes you see when creating a return.
 
 By default, the last created order goes on top of the table. However, you can sort the table by the order number, order reference, created date, customer emails, or the number of items ordered.
 
-On the *Orders* page, you see the followning:
+On the *Orders* page, you see the following:
 
 * Order number, reference, and the creation date.
 * Customer name and email.
@@ -188,7 +188,7 @@ This section describes the attributes you see when viewing the returns for order
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| Return reference | Reference number of the return.  </br>The return reference of the **registered users** contains the store, customer ID, and the number of returns made by this customer. For example, DE-35-2 means that the return was made in the DE store by a user with ID 35, and this is the 2nd return of that user.</br>The return reference of the **guest users** contains the store, G identifier of the guest return, and the number of the return in this store. For example, DE-G3 means that this is the 3rd guest return in the DE store. <section contenteditable="false" class="errorBox"><div class="content">You can filter out the guest returns on the list of returns by typing *G* in the search field.</div></section> |
+| Return reference | Reference number of the return.  <br>The return reference of the **registered users** contains the store, customer ID, and the number of returns made by this customer. For example, DE-35-2 means that the return was made in the DE store by a user with ID 35, and this is the 2nd return of that user.<br>The return reference of the **guest users** contains the store, G identifier of the guest return, and the number of the return in this store. For example, DE-G3 means that this is the 3rd guest return in the DE store. <section contenteditable="false" class="errorBox"><div class="content">You can filter out the guest returns on the list of returns by typing *G* in the search field.</div></section> |
 | Items | Number of items in the return. |
 | Remuneration total | Total remuneration. |
 | Actions | Actions you can perform on the return. |
@@ -215,7 +215,7 @@ To [claim an order](/docs/scos/user/features/{{page.version}}/reclamations-featu
     The page refreshes to show the success message about reclamation creation.
 
 **Tips & tricks**
-<br>laiming an order does not change the status of the order or the items inside the order. When a reclamation is created, a sales team member processes the order manually.
+<br>Claiming an order does not change the status of the order or the items inside the order. When a reclamation is created, a sales team member processes the order manually.
 
 ### Reference information: Claiming orders
 
@@ -255,13 +255,13 @@ To edit a billing address:
 
 ### Reference information: Editing billing addresses
 
-The followning table describes the attributes you enter and select when adding a new customer address.
+The following table describes the attributes you enter and select when adding a new customer address.
 
 | ATTRIBUTE | DESCRIPTION |
 |---|---|
-|Salutation</br>First Name</br>Last Name | Customer's salutation. If the other person is the point of contact for this new address, you need to populate the fields with the respective data. If the customer is the same, populate the fields with the same values.|
-|Address line 1</br>Address line 2</br>Address line 3|The fields where you enter the address information except for the city, zip code, and country.|
-|City</br>Zip Code</br>Country|City, zip code, and country of the customer.|
+|Salutation<br>First Name<br>Last Name | Customer's salutation. If the other person is the point of contact for this new address, you need to populate the fields with the respective data. If the customer is the same, populate the fields with the same values.|
+|Address line 1<br>Address line 2<br>Address line 3|The fields where you enter the address information except for the city, zip code, and country.|
+|City<br>Zip Code<br>Country|City, zip code, and country of the customer.|
 |Phone|Customer's phone number.|
 |Company|Customer's company.|
 |Comment|Any specific comment regarding the customer or customer address (e.g., _"This address is going to be used only if the order costs less than 900 euros."_).|

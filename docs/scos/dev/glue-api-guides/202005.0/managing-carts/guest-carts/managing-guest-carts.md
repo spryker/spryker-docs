@@ -1058,9 +1058,9 @@ Even though guest users have one cart by default, you can optionally specify its
 | promotional-items | quantity | Integer | Specifies how many promotions can be applied to the given purchase. |
 | promotional-items | sku | String | SKU of the promoted **abstract** product. |
 | product-labels | name | String | Specifies the label name. |
-| product-labels | isExclusive | Boolean | Indicates whether the label is `exclusive`.</br>If the attribute is set to true, the current label takes precedence over other labels the product might have. This means that only the current label should be displayed for the product, and all other possible labels should be hidden. |
-| product-labels | position | Integer | Indicates the label priority.</br>Labels should be indicated on the frontend according to their priority, from the highest (**1**) to the lowest, unless a product has a label with the `isExclusive` attribute set.|
-| product-labels | frontEndReference | String |Specifies the label custom label type (CSS class).</br>If the attribute is an empty string, the label should be displayed using the default CSS style. |
+| product-labels | isExclusive | Boolean | Indicates whether the label is `exclusive`.<br>If the attribute is set to true, the current label takes precedence over other labels the product might have. This means that only the current label should be displayed for the product, and all other possible labels should be hidden. |
+| product-labels | position | Integer | Indicates the label priority.<br>Labels should be indicated on the frontend according to their priority, from the highest (**1**) to the lowest, unless a product has a label with the `isExclusive` attribute set.|
+| product-labels | frontEndReference | String |Specifies the label custom label type (CSS class).<br>If the attribute is an empty string, the label should be displayed using the default CSS style. |
 
 Find all other related attribute descriptions in [Creating a Guest Cart](#creating-guest-carts-response-attributes).    
 
@@ -1785,7 +1785,7 @@ In case of a successful update, the endpoint responds with a **RestCartsResponse
 
 Guest carts are anonymous as they are not related to any user. If a user registers or logs in, the guest cart is automatically assigned to their account.
 
-To assign a guest cart to a customer, i.e. merge the carts, include the unique identifier associated with the customer in the *X-Anonymous-Customer-Unique-Id* header of the authentication request if it is an existing customer, or request to create a customer account if it is a new one.
+To assign a guest cart to a customer, for example, merge the carts, include the unique identifier associated with the customer in the *X-Anonymous-Customer-Unique-Id* header of the authentication request if it is an existing customer, or request to create a customer account if it is a new one.
 
 Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/scos/user/features/{{page.version}}/multiple-carts-feature-overview.html) environment:
 

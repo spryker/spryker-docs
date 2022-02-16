@@ -1,5 +1,5 @@
 ---
-title: Alternative products + discontinued products feature integration
+title: Alternative products + Discontinued Products feature integration
 description: This guide describes all the steps needed to be performed in order to integrate the Alternative Products + Discontinued Products features into your project.
 last_updated: Dec 3, 2020
 template: feature-integration-guide-template
@@ -82,7 +82,7 @@ Make sure that you can see alternatives for products that are marked as **discon
 
 {% info_block infoBox "Store relation" %}
 
-If the [Product Label feature](/docs/scos/user/features/{{page.version}}/product-labels/product-labels.html) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by re-importing [product_label_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
+If the [Product Label feature](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by re-importing [product_label_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
 
 
 {% endinfo_block %}

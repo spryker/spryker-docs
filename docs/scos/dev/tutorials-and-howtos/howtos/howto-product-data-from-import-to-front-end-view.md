@@ -15,6 +15,8 @@ redirect_from:
   - /v5/docs/en/ht-product-data-import-frontend
   - /v4/docs/ht-product-data-import-frontend
   - /v4/docs/en/ht-product-data-import-frontend
+  - /v3/docs/ht-product-data-import-frontend
+  - /v3/docs/en/ht-product-data-import-frontend
   - /v2/docs/ht-product-data-import-frontend
   - /v2/docs/en/ht-product-data-import-frontend
   - /v1/docs/ht-product-data-import-frontend

@@ -1,5 +1,5 @@
 ---
-title: Shopping lists feature integration
+title: Shopping Lists feature integration
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/shopping-lists-feature-integration
@@ -63,10 +63,10 @@ Adjust the schema definition so that entity changes can trigger events.
 
 | AFFECTED ENTITY | TRIGGERED EVENTS |
 | --- | --- |
-| spy_shopping_list | Entity.spy_shopping_list.create</br>Entity.spy_shopping_list.update</br>Entity.spy_shopping_list.delete |
-| spy_shopping_list_item | Entity.spy_shopping_list_item.create</br>Entity.spy_shopping_list_item.update</br>Entity.spy_shopping_list_item.delete |
-| spy_shopping_list_company_user | Entity.spy_shopping_list_company_user.create</br>Entity.spy_shopping_list_company_user.update</br>Entity.spy_shopping_list_company_user.delete |
-| spy_shopping_list_company_business_unit | Entity.spy_shopping_list_company_business_unit.create`</br>Entity.spy_shopping_list_company_business_unit.update</br>Entity.spy_shopping_list_company_business_unit.delete |
+| spy_shopping_list | Entity.spy_shopping_list.create<br>Entity.spy_shopping_list.update<br>Entity.spy_shopping_list.delete |
+| spy_shopping_list_item | Entity.spy_shopping_list_item.create<br>Entity.spy_shopping_list_item.update<br>Entity.spy_shopping_list_item.delete |
+| spy_shopping_list_company_user | Entity.spy_shopping_list_company_user.create<br>Entity.spy_shopping_list_company_user.update<br>Entity.spy_shopping_list_company_user.delete |
+| spy_shopping_list_company_business_unit | Entity.spy_shopping_list_company_business_unit.create`<br>Entity.spy_shopping_list_company_business_unit.update<br>Entity.spy_shopping_list_company_business_unit.delete |
 
 **src/Pyz/Zed/ShoppingList/Persistence/Propel/Schema/spy_shopping_list.schema.xml**
 
@@ -196,10 +196,10 @@ Make sure that the changes were implemented successfully. For this purpose, trig
 
 | PATH | METHOD NAME |
 | --- | --- |
-| src/Orm/Zed/ShoppingList/Persistence/Base/SpyShoppingList.php | prepareSaveEventName()</br>addSaveEventToMemory()</br>addDeleteEventToMemory() |
-| src/Orm/Zed/ShoppingList/Persistence/Base/SpyShoppingListItem.php | prepareSaveEventName()</br>addSaveEventToMemory()</br>addDeleteEventToMemory() |
-| src/Orm/Zed/ShoppingList/Persistence/Base/SpyShoppingListCompanyUser.php | prepareSaveEventName()</br>addSaveEventToMemory()</br>addDeleteEventToMemory() |
-| src/Orm/Zed/ShoppingList/Persistence/Base/SpyShoppingList.php | prepareSaveEventName()</br>addSaveEventToMemory()</br>addDeleteEventToMemory() |
+| src/Orm/Zed/ShoppingList/Persistence/Base/SpyShoppingList.php | prepareSaveEventName()<br>addSaveEventToMemory()<br>addDeleteEventToMemory() |
+| src/Orm/Zed/ShoppingList/Persistence/Base/SpyShoppingListItem.php | prepareSaveEventName()<br>addSaveEventToMemory()<br>addDeleteEventToMemory() |
+| src/Orm/Zed/ShoppingList/Persistence/Base/SpyShoppingListCompanyUser.php | prepareSaveEventName()<br>addSaveEventToMemory()<br>addDeleteEventToMemory() |
+| src/Orm/Zed/ShoppingList/Persistence/Base/SpyShoppingList.php | prepareSaveEventName()<br>addSaveEventToMemory()<br>addDeleteEventToMemory() |
 
 {% endinfo_block %}
 
@@ -793,7 +793,7 @@ Enable the following behaviors by registering the plugins:
 | ReadShoppingListPermissionPlugin | Provides the ability to read a certain set of shopping lists on the Zed side using `PermissionAwareTrait`. | None | Spryker\Zed\ShoppingList\Communication\Plugin |
 | WriteShoppingListPermissionPlugin | Provides the ability to write to a certain set of shopping lists on the Zed side using `PermissionAwareTrait`. | None | Spryker\Zed\ShoppingList\Communication\Plugin |
 | ShoppingListPermissionStoragePlugin | Retrieves a set of shopping lists permissions related to a certain company user. | None | Spryker\Zed\ShoppingList\Communication\Plugin |
-| ShoppingListPermissionCustomerExpanderPlugin | Expands `CustomerTransfer::PERMISSIONS` data with a set of permissions that allow the customer to read or write to shopping lists. | Expects `CustomerTransfer` to contain `CompanyUserTransfer` with `idCompanyUser`.</br>(hint: `CompanyUser.CustomerTransferCompanyUserExpanderPlugin`) | Spryker\Zed\ShoppingList\Communication\Plugin |
+| ShoppingListPermissionCustomerExpanderPlugin | Expands `CustomerTransfer::PERMISSIONS` data with a set of permissions that allow the customer to read or write to shopping lists. | Expects `CustomerTransfer` to contain `CompanyUserTransfer` with `idCompanyUser`.<br>(hint: `CompanyUser.CustomerTransferCompanyUserExpanderPlugin`) | Spryker\Zed\ShoppingList\Communication\Plugin |
 | ShoppingListItemProductConcreteActiveAddItemPreCheckPlugin | Checks if the product concrete within the shopping list item is active. | None) | Spryker\Zed\ShoppingList\Communication\Plugin |
 | ShoppingListItemNoteToItemCartNoteMapperPlugin | Maps shopping list item notes to cart item notes when creating a cart out of a shopping list. | None | Spryker\Client\ShoppingListNote\Plugin |
 | ItemCartNoteToShoppingListItemNoteMapperPlugin | Maps cart item notes to shopping list notes when creating shopping list out of a cart. | None | Spryker\Zed\ShoppingListNote\Communication\Plugin |

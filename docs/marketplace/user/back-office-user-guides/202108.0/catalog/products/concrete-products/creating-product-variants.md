@@ -31,6 +31,7 @@ To create a product variant:
     5. Go to the *Price & Stock* tab.
 4. In the *Price & Tax* tab, set prices and taxes for products:
     1. To take the prices over from the abstract product, select **Use prices from abstract product**.
+
     {% info_block warningBox "Note" %}
 
     The merchant relation prices are inherited by Product Variants as well.
@@ -41,13 +42,13 @@ To create a product variant:
     3. **B2B only:** In **Merchant Price Dimension**, select the merchant relationship to define a special price per merchant relation.
     4. Select **Quantity** for the product and then select **Never out of stock** if you want the product to never go out of stock.
 5. **Optionally**: Click **Next** to go to the *Image* to add images for the product and define the image order.
-6. **Optionally**: Click **Next** of select the *Assign bundled products* tab to create a bundles product. See [Creating and Managing Product Bundles](https://documentation.spryker.com/v4/docs/creating-and-managing-product-bundles) to know more.
+6. **Optionally**: Click **Next** of select the *Assign bundled products* tab to create a bundles product. See [Creating and Managing Product Bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) to know more.
 7. Click **Save**.
-The page is refreshed and you can see two additional tabs: *Discontinue* and* Product Alternatives*. See  [Discontinuing products](https://documentation.spryker.com/docs/discontinuing-a-product) and [Adding product alternatives](https://documentation.spryker.com/docs/adding-product-alternatives) to know more.
+The page is refreshed and you can see two additional tabs: *Discontinue* and* Product Alternatives*. See  [Discontinuing products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/discontinuing-products.html) and [Adding product alternatives](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/adding-product-alternatives.html) to know more.
 
 {% info_block errorBox "Important" %}
 
-To make sure your product will be shown and searchable in your online store, we highly recommend you to go through the checklist in [HowTo - Make a Product Searchable and Shown on the Storefront](https://documentation.spryker.com/docs/ht-make-product-shown-on-frontend-by-url).
+To make sure your product will be shown and searchable in your online store, we highly recommend you to go through the checklist in [HowTo - Make a Product Searchable and Shown on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html).
 
 {% endinfo_block %}
 
@@ -59,14 +60,14 @@ This section describes the attributes you enter and select when  creating a prod
 
 | ATTRIBUTE |DESCRIPTION | CREATE CONCRETE PRODUCT | UPDATE CONCRETE PRODUCT|
 | --- | --- | --- | --- |
-|Store relation  | Defines the store for which the product can be available.</br>You can select multiple values. | **No**|**No**|
+|Store relation  | Defines the store for which the product can be available.<br>You can select multiple values. | **No**|**No**|
 | SKU Prefix | A number that you assign to the product will help to track unique information related to that product. | **Yes**|**Display Only**|
 | Autogenerate SKU | Allows the system to autogenerate the SKU once you click **Save**. | **Yes**|**No**|
-| Super Attributes | This section is only available if you have added more than one super attribute and defined more than one value for it.</br>E.g. if you selected the **color** to be a super attribute and defined **green**, **white**, and **black**, you will see "**color**" in this section and a drop-down with the colors you defined.</br>Only one value can be selected. |**Yes**|**No**|
+| Super Attributes | This section is only available if you have added more than one super attribute and defined more than one value for it.<br>E.g. if you selected the **color** to be a super attribute and defined **green**, **white**, and **black**, you will see "**color**" in this section and a drop-down with the colors you defined.<br>Only one value can be selected. |**Yes**|**No**|
 | Name | The name of your product that will be displayed in the online store for your customers. | | **Yes**|**Yes** |
 | Description | The description of the product that your customer sees in the online store. | **Yes** |**Yes** |
 | Searchable | A checkbox that defines if the concrete product can be searched via the Search function in the online store. If not selected, no values will be displayed when searching for this product. | **Yes** | **Yes**|
-| Valid from</br>Valid to  | Defines the period of time when the product is in active state. The **Valid from** date triggers the activation, while the **Valid to** date triggers the deactivation. Either no dates can be selected, or both. |**Yes** |**Yes** |
+| Valid from<br>Valid to  | Defines the period of time when the product is in active state. The **Valid from** date triggers the activation, while the **Valid to** date triggers the deactivation. Either no dates can be selected, or both. |**Yes** |**Yes** |
 
 
 #### Price & Stock tab
@@ -74,10 +75,10 @@ This section describes the attributes you enter and select when  creating a prod
 | ATTRIBUTE |DESCRIPTION | CREATE CONCRETE PRODUCT | UPDATE CONCRETE PRODUCT|
 | --- | --- | --- | --- |
 |Use prices from abstract product|Once the checkbox is selected, the prices from the abstract product are taken over.|**Yes**|**No**|
-|Merchant Price Dimension|**B2B Only**</br>The drop-down list that allows you to select a merchant relation and set up a specific price for a specific merchant.</br>If the Default value is selected, the prices will be the same for everyone.</br>The values available for selection derive from **Merchants > Merchant Relations**.</br>Only one value can be selected.|**Yes**|**Yes**|
-| Gross price</br>Net price | The price value for gross and net mode.</br>For concrete products, the prices are inherited from their abstract product and can be updated while editing the concrete product.|**Yes**  |**Yes**  |
-|Default</br>Original|Default prices are the prices your customers will pay, whereas original prices are the "previous prices" in case you want to display promotions. If you specify only a default price, it will be displayed just like a normal product price. However, if both prices are specified, the original one will appear crossed out in the shop.|**Yes**|**Yes**|
-|Add Product Volume Price</br>Edit Product Volume Price|Once selected, the Add volume price (Edit volume price) page opens. This option allows you to define specific prices for a specific quantity of products that a customer selects. Works only in case of Default prices.</br>**Add Product Volume Price** appears only when the price for a currency was set up and saved.</br>**Edit Product Volume Price** appears only what the volume price was already set up for a currency.|**No**|**Yes**|
+|Merchant Price Dimension|**B2B Only**<br>The drop-down list that allows you to select a merchant relation and set up a specific price for a specific merchant.<br>If the Default value is selected, the prices will be the same for everyone.<br>The values available for selection derive from **Merchants > Merchant Relations**.<br>Only one value can be selected.|**Yes**|**Yes**|
+| Gross price<br>Net price | The price value for gross and net mode.<br>For concrete products, the prices are inherited from their abstract product and can be updated while editing the concrete product.|**Yes**  |**Yes**  |
+|Default<br>Original|Default prices are the prices your customers will pay, whereas original prices are the "previous prices" in case you want to display promotions. If you specify only a default price, it will be displayed just like a normal product price. However, if both prices are specified, the original one will appear crossed out in the shop.|**Yes**|**Yes**|
+|Add Product Volume Price<br>Edit Product Volume Price|Once selected, the Add volume price (Edit volume price) page opens. This option allows you to define specific prices for a specific quantity of products that a customer selects. Works only in case of Default prices.<br>**Add Product Volume Price** appears only when the price for a currency was set up and saved.<br>**Edit Product Volume Price** appears only what the volume price was already set up for a currency.|**No**|**Yes**|
 |(Stock) Type|Display-only field that displays warehouses according to your store|**Yes**|**Yes**|
 |(Stock) Quantity|The number of items available in the warehouse.|**Yes**|**Yes**|
 |(Stock) Never out of stock|The check-box that once selected will make the product always available to be purchased.|**Yes**|**Yes**|
@@ -103,4 +104,4 @@ Once you select to discontinue the product, you can add a note about that on thi
 The only field available is **Add Product Alternative by Name or SKU**. Here it is enough to enter three characters of a product name or SKU to see the autosuggested product list. From one to many values can be selected. If there is no need to set up an alternative product, you can skip this tab.
 
 **What's next?**
-Once you have set things up, you will most likely need to know what managing actions you can do with your products. See articles in the [Managing products](https://documentation.spryker.com/docs/managing-products) section.
+Once you have set things up, you will most likely need to know what managing actions you can do with your products. See articles in the [Managing products](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/managing-products.html) section.

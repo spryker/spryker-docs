@@ -29,7 +29,15 @@ Run the following command(s) to install the required modules:
 composer require spryker-feature/category-image:"^master" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
-Make sure that the following modules were installed:<table><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`CategoryImage`</td><td>`vendor/spryker/category-image`</td></tr><tr><td>`CategoryImageGui`</td><td>`vendor/spryker/category-image-gui`</td></tr><tr><td>`CategoryImageStorage`</td><td>`vendor/spryker/category-image-storage`</td></tr><tr><td>`CategoryExtension`</td><td>`vendor/spryker/category-extension`</td></tr></tbody></table>
+Make sure that the following modules were installed:
+
+|Module|Expected Directory|
+|--- |--- |
+|`CategoryImage`|`vendor/spryker/category-image`|
+|`CategoryImageGui`|`vendor/spryker/category-image-gui`|
+|`CategoryImageStorage`|`vendor/spryker/category-image-storage`|
+|`CategoryExtension`|`vendor/spryker/category-extension`|
+
 {% endinfo_block %}
 
 
@@ -38,9 +46,9 @@ Adjust the schema definition so entity changes will trigger events.
 
 | Affected entity | Triggered events |
 | --- | --- |
-| `spy_category_image_set` | `Entity.spy_category_image_set.create`</br>`Entity.spy_category_image_set.update`</br>`Entity.spy_category_image_set.delete` |
-| `spy_category_image` | `Entity.spy_category_image_set.create`</br>`Entity.spy_category_image_set.update`</br>`Entity.spy_category_image_set.delete` |
-| `spy_category_image_set_to_category_image` | `Entity.spy_category_image_set_to_category_image.create`</br>`Entity.spy_category_image_set_to_category_image.update`</br>`Entity.spy_category_image_set_to_category_image.delete` |
+| `spy_category_image_set` | `Entity.spy_category_image_set.create`<br>`Entity.spy_category_image_set.update`<br>`Entity.spy_category_image_set.delete` |
+| `spy_category_image` | `Entity.spy_category_image_set.create`<br>`Entity.spy_category_image_set.update`<br>`Entity.spy_category_image_set.delete` |
+| `spy_category_image_set_to_category_image` | `Entity.spy_category_image_set_to_category_image.create`<br>`Entity.spy_category_image_set_to_category_image.update`<br>`Entity.spy_category_image_set_to_category_image.delete` |
 
 **src/Pyz/Zed/CategoryImage/Persistence/Propel/Schema/spy_category_image.schema.xml**
     
@@ -97,16 +105,43 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes have been applied by checking your database.<table><thead><tr><th>Database Entity</th><th>Type</th><th>Event</th></tr></thead><tbody><tr><td>`spy_category_image_set`</td><td>table</td><td>created</td></tr><tr><td>`spy_category_image`</td><td>table</td><td>created</td></tr><tr><td>`spy_category_image_set_to_category_image`</td><td>table</td><td>created</td></tr><tr><td>`spy_category_image_storage`</td><td>table</td><td>created</td></tr></tbody></table>
+Make sure that the following changes have been applied by checking your database.
+
+|Database Entity|Type|Event|
+|--- |--- |--- |
+|`spy_category_image_set`|table|created|
+|`spy_category_image`|table|created|
+|`spy_category_image_set_to_category_image`|table|created|
+|`spy_category_image_storage`|table|created|
+
 {% endinfo_block %}
 
 {% info_block warningBox “Verification” %}
 
-Make sure that propel entities have been generated successfully by checking their existence. Also, change the generated entity classes to extend from Spryker core classes.<table><thead><tr><th>Class path</th><th>Extends</th></tr></thead><tbody><tr><td>`src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImage.php`</td><td>`Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImage`</td></tr><tr><td>`src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageQuery.php`</td><td>`Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageQuery`</td></tr><tr><td>`src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageSet.php`</td><td>`Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageSet`</td></tr><tr><td>`src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageSetQuery.php`</td><td>`Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageSetQuery`</td></tr><tr><td>`src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageSetToCategoryImage.php`</td><td>`Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageSetToCategoryImage`</td></tr><tr><td>`src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageSetToCategoryImageQuery.php`</td><td>`Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageSetToCategoryImageQuery`</td></tr><tr><td>`src/Orm/Zed/CategoryImageStorage/Persistence/Base/SpyCategoryImageStorage.php`</td><td>`Spryker\Zed\CategoryImageStorage\Persistence\Propel\AbstractSpyCategoryImageStorage`</td></tr><tr><td>`src/Orm/Zed/CategoryImageStorage/Persistence/Base/SpyCategoryImageStorageQuery.php`</td><td>`Spryker\Zed\CategoryImageStorage\Persistence\Propel\AbstractSpyCategoryImageStorageQuery`</td></tr></tbody></table>
+Make sure that propel entities have been generated successfully by checking their existence. Also, change the generated entity classes to extend from Spryker core classes.
+
+|Class path|Extends|
+|--- |--- |
+|`src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImage.php`|`Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImage`|
+|`src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageQuery.php`|`Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageQuery`|
+|`src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageSet.php`|`Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageSet`|
+|`src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageSetQuery.php`|`Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageSetQuery`|
+|`src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageSetToCategoryImage.php`|`Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageSetToCategoryImage`|
+|`src/Orm/Zed/CategoryImage/Persistence/Base/SpyCategoryImageSetToCategoryImageQuery.php`|`Spryker\Zed\CategoryImage\Persistence\Propel\AbstractSpyCategoryImageSetToCategoryImageQuery`|
+|`src/Orm/Zed/CategoryImageStorage/Persistence/Base/SpyCategoryImageStorage.php`|`Spryker\Zed\CategoryImageStorage\Persistence\Propel\AbstractSpyCategoryImageStorage`|
+|`src/Orm/Zed/CategoryImageStorage/Persistence/Base/SpyCategoryImageStorageQuery.php`|`Spryker\Zed\CategoryImageStorage\Persistence\Propel\AbstractSpyCategoryImageStorageQuery`|
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes have been implemented in transfer objects:<table><thead><tr><th>Transfer</th><th>Type</th><th>Event</th><th>Path</th></tr></thead><tbody><tr><td>`CategoryImageSetTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CategoryImageSetTransfer.php`</td></tr><tr><td>`CategoryImageTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CategoryImageTransfer.php`</td></tr><tr><td>`CategoryTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CategoryTransfer.php`</td></tr></tbody></table>
+Make sure that the following changes have been implemented in transfer objects:
+
+|Transfer|Type|Event|Path|
+|--- |--- |--- |--- |
+|`CategoryImageSetTransfer`|class|created|`src/Generated/Shared/Transfer/CategoryImageSetTransfer.php`|
+|`CategoryImageTransfer`|class|created|`src/Generated/Shared/Transfer/CategoryImageTransfer.php`|
+|`CategoryTransfer`|class|created|`src/Generated/Shared/Transfer/CategoryTransfer.php`|
+
 {% endinfo_block %}
 
 
@@ -376,7 +411,12 @@ composer require spryker-feature/category-image:"^master" --update-with-dependen
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules have been installed:<table><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`CategoryImageStorageWidget`</td><td>`vendor/spryker-shop/category-image-storage-widget`</td></tr></tbody></table>
+Make sure that the following modules have been installed:
+
+|Module|Expected Directory|
+|--- |--- |
+|`CategoryImageStorageWidget`|`vendor/spryker-shop/category-image-storage-widget`|
+
 {% endinfo_block %}
 
 ### 2) Set up Widgets
@@ -411,6 +451,12 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following widgets have been registered:<table><thead><tr><th>Module</th><th>Test</th></tr></thead><tbody><tr><td>`CategoryImageStorageWidget`</td><td>Make sure you have category image data in your storage. Then, render the widget for all the categories that have images assigned.</td></tr></tbody></table>
+
+Make sure that the following widgets have been registered:
+
+|Module|Test|
+|--- |--- |
+|`CategoryImageStorageWidget`|Make sure you have category image data in your storage. Then, render the widget for all the categories that have images assigned.|
+
 {% endinfo_block %}
 

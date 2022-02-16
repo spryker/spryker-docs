@@ -1,5 +1,5 @@
 ---
-title: Alternative Products- Wishlist feature integration
+title: Alternative Products + Wishlist feature integration
 description: The guide walks you through the process of installing the Alternative products and Wishlist features into the project.
 last_updated: Nov 22, 2019
 template: feature-integration-guide-template
@@ -64,7 +64,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 	}
 }
 ```
-</br>
+<br>
 </details>
 
 Run the following command to enable Javascript and CSS changes:

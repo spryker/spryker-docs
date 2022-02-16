@@ -104,7 +104,7 @@ To define the most suitable return management process for your project, to learn
 ## Video tutorial
 
 Check out this video to get more details on how Return Management works:
-{% wistia eiw5ev4gv2 960 720 %}
+{% wistia kqxwnzjo3o 960 720 %}
 
 ## Current constraints
 

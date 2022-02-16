@@ -14,7 +14,7 @@ related:
   - title: User- Reference Information
     link: docs/scos/user/back-office-user-guides/page.version/users/roles-groups-and-users/references/user-reference-information.html
   - title: User and Rights Management
-    link: docs/scos/dev/feature-walkthroughs/page.version/customer-account-management-feature-walkthrough/user-and-rights-overview.html
+    link: docs/scos/dev/feature-walkthroughs/page.version/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html
 ---
 
 This topic describes how to manage users.
@@ -27,7 +27,9 @@ You can do the following:
 * Edit a user
 * Deactivate/activate a user
 * Delete a user from the system
+
 ***
+
 ## Creating Users
 
 You have already done the primary setup (you have created a role and group), so now it is time to add an actual user record to the system.
@@ -41,9 +43,13 @@ You have already done the primary setup (you have created a role and group), so 
     * Assigned groups
     * Agent
     * Interface language.
-    {% info_block infoBox %}
-See [User: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/references/user-reference-information.html
-{% endinfo_block %} to know more about these attributes.)
+    
+{% info_block infoBox "Info" %}
+
+See [User: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/references/user-reference-information.html) to know more about these attributes.
+
+{% endinfo_block %}
+
 3. Click **Create**.
     
 
@@ -59,7 +65,11 @@ The Assign Customers option is used to assign store customers' records to the Ba
 2. In the **Users List > Action** column, select **Assign Customers**. 
 3. In the **List of customers > Select customers to assign** table, select the check-box next to the customer you want to assign (multiple customers can be selected).
 4. Click **Save**.
-{% info_block infoBox "A customer cannot be assigned to multiple users at a time.)
+{% info_block infoBox "Info" %}
+
+A customer cannot be assigned to multiple users at a time.
+
+{% endinfo_block %}
 
 **Tips & Tricks**
 To de-assign a customer: 
@@ -75,16 +85,23 @@ To de-assign a customer:
 ## Activating and Deactivating a User
 **To activate or deactivate a user:**
 1.In the **Users List > Action** column, click **Activate** (or **Deactivate**).
-@(Info" %}
 
-{% endinfo_block %}(If a user has deactivated themselves, this user will get logged out immediately and the message about the successful deactivation will be shown)
+{% info_block infoBox "Info" %}
+
+If a user has deactivated themselves, this user will get logged out immediately and the message about the successful deactivation will be shown.
+
+{% endinfo_block %}
+
 2. The status in the _Status_ column will be changed to *Active* or *Deactivated* depending on the action you performed.
  
  ## Deleting a User 
 **To delete a user:**
  1. In the **Users List > Action** column, click **Delete**.
 2. On the **Warning** page, click **Delete** to confirm the action.
+
 {% info_block infoBox %}
+
 The user's status in the _Status_ column will change to _Deleted_, however, the user will still stay in the **Users List** table. If the user has deleted themselves, this user will get logged out immediately and the message about the successful deletion will be shown.
+
 {% endinfo_block %}
 

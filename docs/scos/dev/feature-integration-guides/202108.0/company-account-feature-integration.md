@@ -1,5 +1,5 @@
 ---
-title: Company account feature integration
+title: Company Account feature integration
 description: The guide walks you through the process of installing Business on Behalf, Company Account Storage, and Company Account OAuth functionality into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -60,8 +60,8 @@ Adjust the schema definition so entity changes will trigger events.
 
 | AFFECTED ENTITY | TRIGGERED EVENTS |
 | --- | --- |
-| spy_company | Entity.spy_company.update</br>Entity.spy_company.delete |
-| spy_company_user | Entity.spy_company_user.create</br>Entity.spy_company_user.update</br>Entity.spy_company_user.delete |
+| spy_company | Entity.spy_company.update<br>Entity.spy_company.delete |
+| spy_company_user | Entity.spy_company_user.create<br>Entity.spy_company_user.update<br>Entity.spy_company_user.delete |
 
 **src/Pyz/Zed/CompanyUser/Persistence/Propel/Schema/spy_company_user.schema.xml**
 

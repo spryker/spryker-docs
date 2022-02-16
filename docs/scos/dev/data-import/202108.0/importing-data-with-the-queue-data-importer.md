@@ -34,7 +34,7 @@ Queue data import is designed to be done in two separate steps.
 1. Data is relocated from the original data source into the queues. Each resource, like abstract product data, is imported into a dedicated queue without pre-processing.
 2. Data in a queue is consumed and imported into a persistent storage. If you already have data in the queues, skip this part and check [Tutorial - Replacing a default data importer with the queue data importer](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-replacing-a-default-data-importer-with-the-queue-data-importer.html). 
 
-## Exporing data from CSV to queue 
+## Exporting data from CSV to queue 
 
 If your provide data in the .CSV format, you can import it to the queues.
 The [DataImport](https://github.com/spryker/data-import) module has classes responsible for providing the preconfigured queue writer instances to the data import facilities. It is configured on the project level.
@@ -43,7 +43,7 @@ To import data into a message queue, use an instance of `Spryker\Zed\DataImport\
 
 Do the following:
 1. Provide two pieces of configuration to a queue writer's `::write()` method:
-* Queue name—the name of the resource-based queue, which stores the imported data between the steps (i.e., `import.product_abstract`).
+* Queue name—the name of the resource-based queue, which stores the imported data between the steps (for example, `import.product_abstract`).
 * Chunk size—the size of the chunks in which data is written to a queue.
 2. Define a dedicated configuration method in `Pyz\Zed\DataImport\DataImportConfig`:
 

@@ -22,6 +22,10 @@ redirect_from:
   - /v2/docs/en/t-oms-and-state-machines-spryker-commerce-os
   - /v1/docs/t-oms-and-state-machines-spryker-commerce-os
   - /v1/docs/en/t-oms-and-state-machines-spryker-commerce-os
+  - /2021080/docs/oms-state-machine
+  - /2021080/docs/en/oms-state-machine
+  - /docs/oms-state-machine
+  - /docs/en/oms-state-machine
 ---
 
 {% info_block infoBox %}

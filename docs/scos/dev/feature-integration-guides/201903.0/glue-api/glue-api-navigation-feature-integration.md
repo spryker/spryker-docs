@@ -1,5 +1,5 @@
 ---
-title: Navigation API feature integration
+title: Glue API Navigation feature integration
 description: This guide will navigate you through the process of installing and configuring the Navigation feature in Spryker OS.
 last_updated: Nov 22, 2019
 template: feature-integration-guide-template
@@ -100,5 +100,5 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 ```
 
 {% info_block infoBox "Verification" %}
-Make sure that the following endpoint is available:</br>http://mysprykershop.com/navigations/`{navigationId}`
+Make sure that the following endpoint is available:<br>http://mysprykershop.com/navigations/`{navigationId}`
 {% endinfo_block %}

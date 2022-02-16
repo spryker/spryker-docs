@@ -16,23 +16,33 @@ Please overview and install the necessary features before beginning the integrat
 
 | Name | Version |
 | --- | --- |
-| CMS |201903.0  |
+| CMS |202001.0  |
 
 ### 1) Install the required modules using Composer
+
 #### Implementation
+
 Run the following command(s) to install the required modules:
 `composer require spryker/cms-content-widget-cms-block-connector:"^1.0.0" --update-with-dependencie`
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules were installed:<table><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`CmsContentWidgetCmsBlockConnector`</td><td>`vendor/spryker/cms-content-widget-cms-block-connector`</td></tr></tbody></table>
+
+Make sure that the following modules were installed:
+
+|Module|Expected Directory|
+|--- |--- |
+|`CmsContentWidgetCmsBlockConnector`|`vendor/spryker/cms-content-widget-cms-block-connector`|
+
 {% endinfo_block %}
 
 
 ### 2) Set up Configuration
+
 #### Implementation
+
 Add the following configuration to your project:
 
-src/Pyz/Zed/CmsContentWidget/CmsContentWidgetConfig.php
+**src/Pyz/Zed/CmsContentWidget/CmsContentWidgetConfig.php**
 
 ```php
 <?php
@@ -58,19 +68,23 @@ class CmsContentWidgetConfig extends SprykerCmsContentConfig
 ```
 
 {% info_block warningBox "Verification" %}
+
 Verify that the new `cms_block` option is visible in the widget drop-down on the CMS Block Editor in Zed UI.
+
 {% endinfo_block %}
 
 
 ### 3) Set up Widgets
+
 #### Implementation
+
 Add the following plugin to your project:
 
 |Plugin  | Specification | Prerequisites | Namespace |
 | --- | --- | --- | --- |
 |  `CmsBlockContentWidgetPlugin`| Creates a new Widget for editing CMS Blocks. |None  | `Spryker\Yves\CmsContentWidgetCmsBlockConnector\Plugin` |
 
-src/Pyz/Yves/CmsContentWidget/CmsContentWidgetDependencyProvider.php
+**src/Pyz/Yves/CmsContentWidget/CmsContentWidgetDependencyProvider.php**
 
 ```php
 <?php
@@ -100,5 +114,10 @@ class CmsContentWidgetDependencyProvider extends SprykerCmsContentWidgetDependen
 ```
 
 {% info_block warningBox "Verification" %}
-1. Create two new CMS blocks:</br><ul><li>BlockA - Add some text to it.</li><li>BlockB - Add a <var>cms_block(['BlockA']
-{% endinfo_block %}</var> reference to it.</li></ul></br>2. Add BlockB to a CMS Page.</br>3. Verify that the new `cms_block` option is rendered correctly in Yves when viewing the new CMS Page.)
+
+1. Create two new CMS blocks:
+   - BlockA - Add some text to it.
+   - BlockB - Add a `cms_block(['BlockA']` reference to it.
+2. Add BlockB to a CMS Page.<br>3. Verify that the new `cms_block` option is rendered correctly in Yves when viewing the new CMS Page.
+
+{% endinfo_block %}

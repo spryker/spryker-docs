@@ -21,15 +21,15 @@ To point a domain to your application, point it to the respective load balancer 
     * *{project_name}-prod*
 
 3. In the *Load balancer:{load balancer name}* section, select **Copy** ![copy icon](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Setting+up+a+custom+domain+name/Setting+up+a+custom+domain+name+with+a+third-party+DNS+zone+provider/copy-icon.png) next to the DNS name field.
- 
+
 4. On the side of the DNS zone provider, set up a CNAME record using the copied *DNS name* as the record value. Refer to the DNS zone provider’s documentation for details.
 
 
 ## 2. Define domain names
 
-In Spryker Cloud Commerce OS, infrastructure deployment is based on the application configuration. 
+In Spryker Cloud Commerce OS, infrastructure deployment is based on the application configuration.
 
-Domains are defined in a [deploy.*.yml](https://documentation.spryker.com/docs/deploy-file-reference-10) file used by the [Docker SDK](https://documentation.spryker.com/docs/docker-sdk) tool to build applications.
+Domains are defined in a [deploy.*.yml](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html) file used by the [Docker SDK](/docs/scos/dev/the-docker-sdk/{{site.version}}/the-docker-sdk.html) tool to build applications.
 
 To define a custom domain, edit `deploy.{project_name}-prod.yml` for the production environment or `deploy.{project_name}-staging.yml` for the staging environment:
 
@@ -68,9 +68,9 @@ groups:
 
 {% endinfo_block %}
 
-See [Deploy File Reference - 1.0](https://documentation.spryker.com/docs/deploy-file-reference-10) to learn more about deploy file configuration.
+See [Deploy File Reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html) to learn more about deploy file configuration.
 
-4. Depending on the environment you are setting up the domain for: 
+4. Depending on the environment you are setting up the domain for:
 
 * [Deploy the application in the production environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html).
 
@@ -79,4 +79,3 @@ See [Deploy File Reference - 1.0](https://documentation.spryker.com/docs/deploy-
 ## Next step
 
 [Setting up a custom SSL certificate](/docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-ssl-certificate.html)
- 

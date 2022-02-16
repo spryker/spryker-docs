@@ -3977,6 +3977,8 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-add-a-new-shipment-method.html
       - title: HowTo - Notify About Unsupported Browsers
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-notify-about-unsupported-browsers.html
+      - title: HowTo - Overcome current limitations with the Multi-store functionality
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-overcome-current-limitations-with-the-multistore-functionality.html
       - title: HowTo - Set up Stores with Multiple Locales
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-stores-with-multiple-locales.html
       - title: HowTo - Handle graceful shutdown

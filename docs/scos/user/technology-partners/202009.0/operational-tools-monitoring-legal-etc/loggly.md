@@ -142,7 +142,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-## Related Developer articles
+## Related Developer guides
 
 * [Configuring Loggly](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/configuring-loggly.html)
 

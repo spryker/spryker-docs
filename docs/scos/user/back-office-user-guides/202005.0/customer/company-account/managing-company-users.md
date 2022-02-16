@@ -23,6 +23,7 @@ This topic describes how to manage company users.
 
 To start working with company users, go to the **Company Account** > **Company Users** section.
 ***
+
 ## Prerequisites
 The company user can be created only if the company role, company, and business unit exist.
 
@@ -51,9 +52,12 @@ To attach a company user to a new company business unit, **within the same compa
 To edit a company user:
 1. On the **Overview of Company Users** page in the _Actions_ column, click **Edit** for the user you want to update.
 2. Update the needed values and click **Save**.
+
     {% info_block infoBox "Info" %}
-All values are available for modifications except for the email. The **Email** field is greyed out and is not available for modifications.
-{% endinfo_block %}
+
+    All values are available for modifications except for the email. The **Email** field is greyed out and is not available for modifications.
+
+    {% endinfo_block %}
 
 ## Enabling and Disabling a Company User
 
@@ -67,6 +71,9 @@ And vice versa, if the user is enabled, they can be disabled here. Click **Disab
 To delete a company user:
 1. On the **Overview of Company Users** page, click **Delete** in the _Actions_ column.
 2. On the **Company user deletion confirmation** page, confirm the deletion.
+
 {% info_block warningBox "Note" %}
+
 If confirmed, the user will be deleted from everywhere and will no longer be able to log in to the online store.
+
 {% endinfo_block %}

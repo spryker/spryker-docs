@@ -89,23 +89,7 @@ Staring from November 2021, all Spryker modules require PHP 7.4 as a minimum ver
     },
 },
 ```
-
-To install the composer version checker inside your VM run the following command:
-
-```php
-composer global require sllh/composer-versions-check
-```
-
-After composer update finishes, it will output the warning to help keeping track of the upgrades:
-
-```php
-{count} packages are not up to date:
-
-- spryker/{module-name} (2.0.2) latest is 3.0.0
-...
-```
-
-That means that you are currently running version 2.0.2 of the module, and a new major version 3.0.0 of this module is available.
+Make sure to adjust this platform version to your production environment. So if you use 8.0.10 for example, this should be also reflected here to have a matching local installation including all dependencies and their compatible versions.
 
 {% info_block infoBox %}
 Make sure every minor or patch release is applied before upgrading to a major released version.
@@ -115,7 +99,7 @@ Make sure every minor or patch release is applied before upgrading to a major re
 
 To update all the modules, run the following command:
 
-```php
+```
 composer update "spryker/*"
 ```
 
@@ -123,28 +107,19 @@ This will fetch the latest matching versions (according to your `composer.json` 
 
 To check what major updates are available without changing `composer.json`, run:
 
-```php
-php composer.phar outdated
+```
+composer outdated
 ```
 
 Just for the modules that have been extended (factory and classes have been overwritten) the version number needs to be changed and updates need to be performed manually.
 
-To speed up the composer update process, use the [Prestissimo Composer tool](https://github.com/hirak/prestissimo). It will speed up the execution of the composer update and or composer install commands both for local development and in server deployments.
+For any installation that does not require working in vendor directories, make sure to always use `install` with `--prefer-dist` flag:
 
-{% info_block infoBox %}
-
-`composer install` command will install the defined dependencies for your project.
-
-{% endinfo_block %}
-
-
-To install the tool, run:
-
-```php
-composer global require hirak/prestissimo
 ```
+composer install --prefer-dist
+```
+to use deployment-like download of all packages as zip files. This also dramatically speeds it up as side-effect.
 
-Execute `composer update` command at least weekly to assert you have the latest fixes.
 
 ## Replace Spryker Module Dependencies
 

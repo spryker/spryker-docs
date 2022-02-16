@@ -8,3 +8,5 @@ algolia:
     - docs/marketplace/user/**/*.md
     - docs/cloud/dev/**/*.md
     - docs/scos/dev/**/*.md
+    - docs/paas-plus/dev/**/*.md
+    - docs/fes/dev/**/*.md

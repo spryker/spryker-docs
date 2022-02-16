@@ -84,7 +84,7 @@ $config[StorageConstants::STORAGE_PREDIS_CLIENT_OPTIONS] = [
 ];
 ```
 
-The configuration under `StorageConstants::STORAGE_PREDIS_CLIENT_CONFIGURATION` is to be used exclusively, i.e. no other storage configuration will be used for the Redis client. If the configuration parameters are not set under the `StorageConstants::STORAGE_PREDIS_CLIENT_CONFIGURATION` key, the Redis client will fall back to the regular configuration described above.
+The configuration under `StorageConstants::STORAGE_PREDIS_CLIENT_CONFIGURATION` is to be used exclusively, for example, no other storage configuration will be used for the Redis client. If the configuration parameters are not set under the `StorageConstants::STORAGE_PREDIS_CLIENT_CONFIGURATION` key, the Redis client will fall back to the regular configuration described above.
 
 ## Advanced Configuration for Redis Session Storage
 

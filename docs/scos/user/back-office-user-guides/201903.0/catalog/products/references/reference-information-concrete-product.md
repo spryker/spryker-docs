@@ -13,9 +13,13 @@ redirect_from:
 
 The following tables describe the attributes that you use when creating and editing concrete and abstract products.
 {% info_block warningBox "Note" %}
+
 The set of tabs for Create and Edit pages, as well as for abstract and concrete products, is different. Hence the additional columns with identifiers are added for your convenience.
+
 {% endinfo_block %}
+
 **General tab**
+
 | Attribute |Description | Create Concrete Product|Update Concrete Product|
 | --- | --- | --- | --- | 
 |**Store relation**  | Defines the store for which the product can be available.<br>You can select multiple values. | **No**|**No**|
@@ -27,8 +31,9 @@ The set of tabs for Create and Edit pages, as well as for abstract and concrete 
 | **Searchable** | A checkbox that defines if the concrete product can be searched via the Search function in the online store. If not selected, no values will be displayed when searching for this product. | **Yes** | **Yes**|
 | **Valid from**<br>**Valid to**  | Defines the period of time when the product is in active state. The **Valid from** date triggers the activation, while the **Valid to** date triggers the deactivation. Either no dates can be selected, or both. |**Yes** |**Yes** |
 
----
+
 **Price & Stock tab**
+
 | Attribute |Description | Create Concrete Product|Update Concrete Product|
 | --- | --- | --- | --- |
 |**Use prices from abstract product**|Once the checkbox is selected, the prices from the abstract product are taken over.|**Yes**|**No**|
@@ -40,8 +45,9 @@ The set of tabs for Create and Edit pages, as well as for abstract and concrete 
 |(Stock) **Quantity**|The number of items available in the warehouse.|**Yes**|**Yes**|
 |(Stock) **Never out of stock**|The check-box that once selected will make the product always available to be purchased.|**Yes**|**Yes**|
 
----
+
 **Image tab**
+
 | Attribute |Description | Create Concrete Product | Update Concrete Product |
 | --- | --- | --- | --- |
 |**Image Set Name**|The name of your image set.|**Yes**|**Yes**|
@@ -49,21 +55,25 @@ The set of tabs for Create and Edit pages, as well as for abstract and concrete 
 |**Large**|The link to the image that is going to be used on the product details page.|**Yes**|**Yes**|
 |**Sort Order**|If you add several images to an active image set, specify the order in which they are to be shown in the front end and back end using Sort Order fields. The order of images is defined by the order of entered numbers where the image set with sort order "0" is the first to be shown.|**Yes**|**Yes**|
 
----
+
 **Assign bundled products tab**
+
 On this tab, you see a table with the concrete products that you can select to be included in a bundle of a specific variant. If you do need to create a bundle, do not select the values and skip the tab.
 
----
+
 **Discontinue tab**
+
 Available on the Edit page only.
 Once you select to discontinue the product, you can add a note about that on this tab.
 
----
+
 **Product Alternatives tab**
+
 The only field available is **Add Product Alternative by Name or SKU**. Here it is enough to enter three characters of a product name or SKU to see the autosuggested product list. From one to many values can be selected. If there is no need to set up an alternative product, you can skip this tab. 
 
----
+
 **Scheduled Prices tab**
+
 On this tab, you see a table with the scheduled prices imported via a CSV file. The following information is available:
 * Currency, store, net, and gross price values
 * Start from (included) and Finish at (included) values that identify a period of time when a specific price is going to be set for a product automatically.

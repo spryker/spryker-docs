@@ -13,24 +13,26 @@ redirect_from:
 
 This topic describes the reference information for working with product relations.
 ***
+
 ## Product relations page
+
 On the page, you can see product relations, including the following information:
 
-*     Product relation key
-*     Abstract product SKU and name
-*     Relation type: up-selling or related-products
-*     Status of the product relation: Active or Inactive
-*     Stores in which the product relation is displayed
-*     Number of products assigned to the 
-*     product relation
+* Product relation key
+* Abstract product SKU and name
+* Relation type: up-selling or related-products
+* Status of the product relation: Active or Inactive
+* Stores in which the product relation is displayed
+* Number of products assigned to the 
+* Product relation
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Relations/Product+Relations%3A+Reference+Information/202006.0/product-relations-list.png) 
 
 On the page, you can do the following:
 
-*     Create, view, edit or delete a product relation
-*     Sort product relations by ID, Product Relation Key, Abstract SKU, Abstract Product Name, Relation type, Status, and # of Products
-*     Search product relations by SKU, Product Relation Key, and Abstract Product Name 
+* Create, view, edit or delete a product relation
+* Sort product relations by ID, Product Relation Key, Abstract SKU, Abstract Product Name, Relation type, Status, and # of Products
+* Search product relations by SKU, Product Relation Key, and Abstract Product Name 
 ***
 
 

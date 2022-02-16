@@ -12,10 +12,15 @@ redirect_from:
 ---
 
 The following tables describe the attributes that you use when creating and editing concrete and abstract products.
+
 {% info_block warningBox "Note" %}
+
 The set of tabs for Create and Edit pages, as well as for abstract and concrete products, is different. Hence the additional columns with identifiers are added for your convenience.
+
 {% endinfo_block %}
+
 **General tab**
+
 | Attribute |Description | Create Concrete Product|Update Concrete Product|
 | --- | --- | --- | --- | 
 |**Store relation**  | Defines the store for which the product can be available.<br>You can select multiple values. | **No**|**No**|
@@ -28,7 +33,9 @@ The set of tabs for Create and Edit pages, as well as for abstract and concrete 
 | **Valid from**<br>**Valid to**  | Defines the period of time when the product is in active state. The **Valid from** date triggers the activation, while the **Valid to** date triggers the deactivation. Either no dates can be selected, or both. |**Yes** |**Yes** |
 
 ---
+
 **Price & Stock tab**
+
 | Attribute |Description | Create Concrete Product|Update Concrete Product|
 | --- | --- | --- | --- |
 |**Use prices from abstract product**|Once the checkbox is selected, the prices from the abstract product are taken over.|**Yes**|**No**|
@@ -42,6 +49,7 @@ The set of tabs for Create and Edit pages, as well as for abstract and concrete 
 
 ---
 **Image tab**
+
 | Attribute |Description | Create Concrete Product | Update Concrete Product |
 | --- | --- | --- | --- |
 |**Image Set Name**|The name of your image set.|**Yes**|**Yes**|

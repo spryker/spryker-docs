@@ -27,6 +27,7 @@ On the **Customers** page in the **Customers** > **Customers** section, you see 
 ## Add Customer/Edit Customer pages
 
 The following table describes the attributes you enter and select when creating or editing customers.
+
 |Attribute| Description|
 |---|---|
 | **Email**|An email address that will be linked to the new account. The email address is important for completing the registration (by accessing the link that will be sent by email) or for later use of the forgot password functionality. On the Edit customer page, this field is greyed out and not available for modifications.|

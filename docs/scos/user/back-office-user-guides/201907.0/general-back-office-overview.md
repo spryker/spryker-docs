@@ -13,8 +13,9 @@ A Spryker-based shop ships with a comprehensive, intuitive administration area c
 
 The Spryker Back Office provides you with a variety of sections that are logically connected to each other. 
 {% info_block infoBox "Spryker Back Office" %}
-It provides the product and content management capabilities, categories and navigation building blocks, search and filter customizations, barcode generator, order handling, company structure creation (_for B2B users_
-{% endinfo_block %}, merchant-buyer contracts' setup.)
+It provides the product and content management capabilities, categories and navigation building blocks, search and filter customizations, barcode generator, order handling, company structure creation (_for B2B users_, merchant-buyer contracts' setup.)
+
+{% endinfo_block %}
 
 With Spryker Back Office you can:
 * Manage orders placed by your customers as well as create orders for customers
@@ -36,6 +37,6 @@ Depending on the roles and teams in your project, you can limit the access of di
 The following diagram shows what features are used for both **B2B and B2C**, and which are **B2B specific**. 
 {% endinfo_block %}
 
-![B2B and B2C features](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.md/b2b-and-b2c-features.png){height="550" width=""}
+![B2B and B2C features](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.md/b2b-and-b2c-features.png)
 
 You can always define what exactly is going to be needed for your specific project.

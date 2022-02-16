@@ -3,6 +3,7 @@ title: "Managing stocks in a multi-store environment: Best practices"
 last_updated: Aug 13, 2021
 description: This article explains how to choose and implement the most suitable warehouse management workflow using the Inventory Management feature.
 template: concept-topic-template
+related:
     - title: HowTo - Overcome current limitations with the Multi-store functionality
       link: docs/scos/dev/tutorials-and-howtos/howtos/howto-overcome-current-limitations-with-the-multistore-functionality.html
 ---

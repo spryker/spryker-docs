@@ -27,4 +27,4 @@ However, with this approach, you can encounter some issues like:
 
 Anyway, this approach is preferable and more efficient than the first one, and you generally should consider following it any time you face limitations with the current Multi-store functionality.
 
-For more use-cases and solutions relating to products and their stocks in the multi-store environment, see [Managing stocks in a multi-store environment: Best practices](/docs/scos/dev/feature-walkthroughs/{[site.version}}/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html).
+For more use-cases and solutions relating to products and their stocks in the multi-store environment, see [Managing stocks in a multi-store environment: Best practices](/docs/scos/dev/feature-walkthroughs/{{site.version}}/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html).

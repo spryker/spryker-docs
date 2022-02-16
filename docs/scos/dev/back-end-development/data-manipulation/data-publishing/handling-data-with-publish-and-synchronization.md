@@ -639,7 +639,7 @@ namespace Pyz\Zed\HelloWorldStorage\Business\Deleter;
 
 ..
 
-class HelloWorldStorageDeleter implements HelloWorldStorageWriterInterface
+class HelloWorldStorageDeleter implements HelloWorldStorageDeleterInterface
 {
     /**
      * @param \Generated\Shared\Transfer\EventEntityTransfer[] $eventTransfers

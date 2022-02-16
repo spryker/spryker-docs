@@ -31,15 +31,18 @@ Extra consideration must be taken when extending core modules that are already i
 
 In the following example, we will extend the `Cart` -> `Calculation` modules.
 
-## Step 1: Modify the Interface
+- **Case 1.** The core module `Cart` uses the core module `Calculation`, so `CartBridge` exists. And you need an existing `CalculationFacade` method `foo()` in module `Cart`, but `CartBridge` doesn't have the method `foo()`.
+ - **Case 2.** The core module `Cart` uses the core module `Calculation`, so `CartBridge` exists. And you want to introduce a new (not existing) method `foo()` in `CalculationFacade` and use it in the module `Cart`.
+
+## Step 1: Modify the interface
+
 Add a `foo()` method to `CalculationFacade` on the project level and call it from the `Cart` module.
 
-The `CalculationFacade` needs to implement the `CartToCalculationInterface` because this interface is used in the `Cart`module.
+The `CalculationFacade` needs to implement the `CartToCalculationInterface` because this interface is used in the `Cart` module.
 
 ## Step 1: Modify the FacadeInterface and Facade
-**For case 2 only**
 
-Extend FacadeInterface and Facade on the project level, add a `foo()` method.
+For case 2 only: Extend `FacadeInterface` and `Facade` on the project level, add a `foo()` method.
 
 ```php
 <?php
@@ -68,12 +71,15 @@ class CalculationFacade extends SprykerCalculationFacade implements CalculationF
 }
 ```
 
-## Step 2: Modify the Interface of Bridge and Bridge
-To call `CalculationFacade` method `foo()` from the `Cart` module on the project level
-you have to extend Bridge + its interface from core and
-add needed method with the same signature as in `CalculationFacade`. Construct method in project bridge is required. Some doc blocks are missed, but required in real projects.
+## Step 2: Modify the interface of Bridge and Bridge
 
-Interface example for both cases:
+To call `CalculationFacade` method `foo()` from the `Cart` module on the project level, do the following:
+1. Extend Bridge and its interface from the core.
+2. Add the needed method with the same signature as in `CalculationFacade`.
+
+Constructing the method in the project bridge is required. Some doc blocks are missed, but required in real projects.
+
+An interface example for both cases:
 ```php
 <?php
 namespace Pyz\Zed\Cart\Dependency\Facade;
@@ -85,6 +91,7 @@ interface CartToCalculationFacadeInterface extends SprykerCartToCalculationFacad
     public function foo(string $bar): int;
 }
 ```
+
 Bridge for case 1:
 ```php
 <?php
@@ -113,6 +120,7 @@ class CartToCalculationFacadeBridge extends SprykerCartToCalculationFacadeBridge
     }
 }
 ```
+
 Bridge for case 2:
 ```php
 <?php
@@ -143,7 +151,7 @@ class CartToCalculationFacadeBridge extends SprykerCartToCalculationFacadeBridge
 ```
 
 ## Step 3: Override DependencyProvider method
-In the `Cart` module's dependency provider set your bridge from project level.
+In the `Cart` module's dependency provider, set your bridge from project level.
 
 ```php
 namespace Pyz\Zed\Cart;
@@ -177,9 +185,13 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 ```
 
 {% info_block infoBox %}
-Inject **project** bridge's interface in business-models if they use bridge's methods added on **project** level.
+
+Inject the *project* bridge's interface in business models if they use the bridge's methods added on the project level.
+
 {% endinfo_block %}
 
 {% info_block infoBox "Info" %}
-The described case is only practical when you are “between” two core-bundles and you want to make it right. For you own modules, use the general module-interface (e.g. `MyModuleInterface`).
+
+The described case is only practical when you are *between* two core bundles, and you want to make it right. For you own modules, use the general module interface (for example, `MyModuleInterface`).
+
 {% endinfo_block %}

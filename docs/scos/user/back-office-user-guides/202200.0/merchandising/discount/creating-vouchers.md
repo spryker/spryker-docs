@@ -81,11 +81,11 @@ See [Voucher code](#voucher-code) for more information.
 Once you generated voucher codes, you can export them as a CSV file.
 To do that, below **Generate**, click **Export**.
 
-## Reference information: Creating vouchers
+### Reference information: Creating vouchers
 
 This section contains reference information you select and enter when creating vouchers.
 
-### General information tab
+#### General information tab
 
 The following table describes the attributes you enter and select on the **General information** tab:
 
@@ -94,10 +94,10 @@ The following table describes the attributes you enter and select on the **Gener
 | STORE RELATION |Stores your voucher codes are to be active in. You can select multiple stores.|
 | DISCOUNT TYPE | Drop-down list where you select either **Voucher code** or **Cart rule** discount type. |
 | NAME | Unique name that is displayed in the **Cart calculation** section along with the applied discount amount on the Storefront. Should be short, but descriptive. |
-| DESCRIPTION | Explains the discount and helps a customer understand why they are eligible for the discount and what they can receive. The description is displayed in the cart, in the **Promotional products** section if the discount is applicable to a product in the cart.|
+| DESCRIPTION | Explains the voucher and helps a customer understand why they are eligible for the discount and what they can receive. The description is displayed in the cart, in the **Promotional products** section if the discount is applicable to a product in the cart.|
 | PRIORITY | Defines [the discount priority](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html#discount-priority). Represented as an integer value from `1` to `9999`, `1` being the highest priority and `9999` the lowest. |
-| NON-EXCLUSIVE | Defines the discount exclusivity. Customers can redeem non-exclusive discounts in conjunction with other non-exclusive discounts.|
-| EXCLUSIVE | Defines the discount exclusivity. When a discount is exclusive, no other discounts may be applied in conjunction. When a cart is eligible for multiple exclusive discounts, the discount with the highest value to the customer is applied. The exception to this is promotional product discounts. Query string discounts and promotional product discounts exclude only among each other. Promotional product discounts are not affected by exclusive query string discounts and conversely.|
+| NON-EXCLUSIVE | Defines the c exclusivity. Customers can redeem non-exclusive discounts in conjunction with other non-exclusive discounts.|
+| EXCLUSIVE | Defines the voucher's exclusivity. When a discount is exclusive, no other discounts may be applied in conjunction. When a cart is eligible for multiple exclusive discounts, the discount with the highest value to the customer is applied. The exception to this is promotional product discounts. Query string discounts and promotional product discounts exclude only among each other. Promotional product discounts are not affected by exclusive query string discounts and conversely.|
 | VALID FROM and VALID TO | Vouchers are redeemable between **VALID FROM** and **VALID TO** dates and times (in UTC), inclusive. For example, a voucher can be redeemed starting from `01.12.2021 23:00` until `31.01.2022 22:59`, UTC. |
 
 {% info_block infoBox "Info" %}
@@ -110,11 +110,10 @@ Name and describe discounts in a way that is meaningful for other Back Office us
 
 This section contains information you need to know when working with discount calculations on the **Discount calculation** tab.
 
-#### CALCULATOR TYPE
-
-The discount can be calculated in two ways:
-* **Percentage**: A discount is calculated as a percentage of the discounted items' prices. If selected, you need to set the percentage value (for example, `25`).
-* **Fixed amount**: A fixed amount is discounted. If you select this type, you need to specify the amount (gross, net, or both) for each currency used in your store.
+**CALCULATOR TYPE**
+<br>The discount can be calculated in two ways:
+* **Percentage**: A discount is calculated as a percentage of the discounted items' prices. If selected, in the **VALUE** field, set the percentage value (for example, `25`).
+* **Fixed amount**: A fixed amount is discounted. If you select this type, specify the amount (**Gross price**, **Net price**, or both) for each currency used in your store.
 
 Example:
 
@@ -123,14 +122,13 @@ Example:
 | 50 € | Percentage | 10 |5 € | 45 € |
 | 50 €| Fixed amount | 10 €| 10 €| 40 €|
 
-#### DISCOUNT APPLICATION TYPE
-
-You can select one of the following options:
+**DISCOUNT APPLICATION TYPE**
+<br>You can select one of the following options:
 * QUERY STRING
 * PROMOTIONAL PRODUCT
 
 **QUERY STRING**
-<br>You can use a query to define discount conditions. Only products that satisfy the query's conditions are discountable. Queries also define if the discount is applied to one or several products. Discount conditions are set by using either the *query builder* or by specifying a **Plain query**.
+<br>Selecting **QUERY STRING**, you can use a query to define discount conditions. Only products that satisfy the query's conditions are discountable. Queries also define if the discount is applied to one or several products. Discount conditions are set by using either the *query builder* or by specifying a **Plain query**.
 
 Use the query builder to construct queries (guided) or the **Plain query** field to enter them (free text). You can switch between both modes by clicking the corresponding button (note that incomplete queries cannot be transferred between the two modes).
 
@@ -161,9 +159,9 @@ You can find plain query examples in the following table.
 
 |PLAIN QUERY|EXPLANATION|
 |---|---|
-|day-of-week = '1'|Discount applies if the order is placed on Monday.|
-|shipment-carrier != '1' AND price-mode = 'GROSS_MODE'|Discount applies if the shipment carrier with the attribute "1" is not chosen and gross pricing is selected.|
-|currency != 'EUR' OR price-mode = 'GROSS_MODE'|Discount applies if the selected currency is not Euro or the pricing mode is gross.|
+|`day-of-week = 1'| Discount applies if the order is placed on Monday.|
+|`shipment-carrier != 1 AND price-mode = GROSS_MODE'| Discount applies if the shipment carrier with the attribute `1` is not chosen and gross pricing is selected.|
+|`currency != EUR OR price-mode = GROSS_MODE'| Discount applies if the selected currency is not Euro or the pricing mode is gross.|
 
 {% info_block infoBox "Info" %}
 
@@ -171,11 +169,8 @@ For more information about tokens, see [Token description tables](#token-descrip
 
 {% endinfo_block %}
 
-**Promotional product discount**
-
-#### PROMOTIONAL PRODUCT
-
-The **PROMOTONAL PRODUCT** discount type lets you discount specific products at a fixed quantity when the discount conditions are met. A common use case is a "buy x, get y" discount, where a customer gets an item for free when they buy a certain product or spend a certain amount.
+**PROMOTIONAL PRODUCT**
+<br>The **PROMOTONAL PRODUCT** discount type lets you discount specific products at a fixed quantity when the discount conditions are met. A common use case is a "buy x, get y" discount, where a customer gets an item for free when they buy a certain product or spend a certain amount.
 
 The following table describes attributes you enter if for **DISCOUNT APPICATION TYPE**, you select **PROMOTIONAL PRODUCT**:
 
@@ -186,61 +181,55 @@ The following table describes attributes you enter if for **DISCOUNT APPICATION 
 
 ![Application type](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/back-office-user-guides/merchandising/discount/creating-vouchers.md/202200.0/application-type.png)
 
-
-### Conditions tab
+#### Conditions tab
 
 This section provides information that you need to know when working with discount conditions on the **Conditions** tab.
 
-Conditions are also called *decision rules*. Vouchers can be linked to one or more conditions. Vouchers are only redeemed if all linked conditions are satisfied.
-
-The conditions are created in the form of a query and may be entered as a plain query or by the Query builder. For more details, see the [Discount calculation tab](#discount-calculation-tab) section.
+Conditions, also called *decision rules*, are created in the form of a query and may be entered as a plain query or by the Query builder. Vouchers can be linked to one or more conditions and can be only redeemed if all linked conditions are satisfied. For more details, see the [Discount calculation tab](#discount-calculation-tab) section.
 
 {% info_block infoBox "Info" %}
 
-If you do not need to add a condition, you can leave the query builder empty.
+If you do not need to add a condition, leave the query builder empty.
 
 {% endinfo_block %}
 
 **Example:**
 <br>Discount is applied if five or more items are in the cart and it is Tuesday or Wednesday.
+
 ![Discount Condition](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/discount-condition.png)
 
-The minimum order amount value specifies the threshold which should be reached for the products in a cart with a certain attribute to be discounted. When added to cart, products with the attribute specified by a query are measured against the threshold. By default, the minimum order amount value is 1. It means that any discount is applied if the number of items (that meet the rules) inside the cart is superior or equal to 1.
+The minimum order amount value specifies the threshold which should be reached for the products in a cart with a certain attribute to be discounted. When added to cart, products with the attribute specified by a query are measured against the threshold. By default, the minimum order amount value is `1`. It means that any discount is applied if the number of items (that meet the rules) inside the cart is superior or equal to `1`.
 
 **Example**:
 <br>Discount is applied if 4 or more items with the Intel Core processor are in the cart.
+
 ![Threshold](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/threshold.png)
 
-**More Advanced Example**
-
-To create a discount that will have an extensive number of conditions, you use the condition **groups**. Meaning you collect different rules under different groups and split them into separate chunks.
+**More advanced example**:
+<br>To create a discount that has an extensive number of conditions, use the condition **groups**. Meaning you collect different rules under different groups and split them into separate chunks.
 Let's say you have received a task to create a discount with the following conditions:
 
-**B2B Scenario**
+**B2B scenario**:
+<br>The discount is going to be applied if one of the following is fulfilled:
+* The `price-mode` is `Gross mode`, and the subtotal amount is greater or equal to `€100` (Euro) `OR` `115` CHF (Swiss Franc).
+* The price mode is `Net Mode`, and the subtotal amount is greater or equal: `€80` (Euro) `OR` `95` CHF (Swiss Franc).
 
-The discount is going to be applied if one of the following is fulfilled:
-* The price mode is **Gross**, and the subtotal amount is greater or equal: 100 € (Euro) **OR** 115 CHF (Swiss Franc)
-
-**OR**
-
-* The price mode is **Net**, and the subtotal amount is greater or equal: 80 € (Euro) **OR** 95 CHF (Swiss Franc)
-
-The setup will look like the following:
+The setup looks like the following:
 ![B2B scenario](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/b2b-scenario.png)
 
 **B2C scenario**
 <br>The discount is going to be applied if one of the following is fulfilled:
-* On Tuesday, and the item `color` is `red`, this item does not have the label `NEW`, and the customer adds at least two items (or more) to a cart.
-* On Thursday, and the item `color` is `white`, this item does not have the label `NEW`, and the customer adds at least two items (or more) to a cart.
+* On **Tuesday**, and the item `color` is `red`, this item does not have the label `NEW`, and the customer adds at least two items (or more) to a cart.
+* On **Thursday**, and the item `color` is `white`, this item does not have the label `NEW`, and the customer adds at least two items (or more) to a cart.
 
 The setup should look like as follows:
 ![B2C scenario](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/b2c-scenario.png)
 
-### Voucher code tab
+#### Voucher code tab
 
 This section describes the information that you need to know when working with voucher codes on the **Voucher code** tab.
 
-You enter and select the following attributes in **Edit Discount&nbsp;> Voucher code**:
+You enter and select the following attributes on the **Voucher code** tab:
 
 | ATTRIBUTE | DESCRIPTION |  
 | --- | --- |
@@ -265,9 +254,8 @@ Use the placeholder *`[code]`* to indicate the position you want random characte
 
 ![Voucher code](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Voucher+Codes:+Reference+Information/voucher-code.png)
 
-**Voucher Code Pool**
-
-The voucher codes of a discount are all contained in the same voucher code pool. One customer may only redeem one voucher code per pool per cart.
+**Voucher code pool**
+<br>The voucher codes of a discount are all contained in the same voucher code pool. One customer may only redeem one voucher code per pool per cart.
 
 #### Token description tables
 
@@ -282,7 +270,7 @@ This section contains a set of tables that describe fields, value types, and ope
 | Fields | The available fields may include `SKU`, `item-price`, `item-quantity`, or a variety of attributes (for example, `currency` on the preceding image). |
 | Operator | Operator compares the value of a field on the left with the value(s) on the right (for example, equals (`=`), greater than (`>`)). If the expression evaluates to true, the discount can be applied (operator is `equal` on the previous image). |
 | Value | Value types must match the selected field. The asterisk (*) matches all possible values (on the preceding image, the value is `Swiss Franc`).|
-| Combine Conditions | 'AND' and 'OR' operators are used to combine conditions (**AND** on the preceding image). |
+| Combine Conditions | `AND` and `OR` operators are used to combine conditions (`AND` on the preceding image). |
 |Grouping | When building more complex queries, conditions may be grouped inside parentheses. Because discount calculations and conditions are applied per item, you can not use groups with `AND` where each group contains at least one SKU-based rule. |
 
 **Fields and value types (Plain query)**

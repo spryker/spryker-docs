@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/managing-discounts
 ---
 
-This topic describes how to manage discounts.
+This guide describes how to manage discounts.
 
 ## Prerequisites
 
@@ -23,12 +23,6 @@ To manage discounts, navigate to **Merchandising&nbsp;<span aria-label="and then
 To edit a discount, do the following:
 1. On the **Overview of Discounts** page, click **Edit** in the **Actions** column.
 2. Update the attributes and click **Save**.
-
-{% info_block infoBox %}
-
-For more information about the attributes on the **Edit Discount** page, see [Reference information: Creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#reference-information-creating-a-voucher).
-
-{% endinfo_block %}
 
 ## Viewing a discount
 
@@ -44,12 +38,237 @@ You can add voucher codes while editing the discount entity.
 And you can also do the following:
 1. On the **Overview of Discounts** page, in the **Actions** column, click **Add code**.
 You are redirected to the **Voucher codes** tab of the **Edit Discount** page.
-    Follow the steps described in [Creating a discount voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html).
+2. Follow the steps described in [Creating a discount voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html).
 3. Click **Save**.
 
 ## Activating and deactivating discounts
 
 You can activate or deactivate a discount while editing it by one of the following steps:
-
 * In the top-right corner of the **Edit Discount** page, click **Activate** or **Deactivate**.
 * On the **Overview of Discounts** page, in the **Actions** column, click **Activate** or **Deactivate**.
+
+### Reference information: Managing discounts
+
+This section contains reference information you select and enter when creating vouchers.
+
+#### General information tab
+
+The following table describes the attributes you enter and select on the **General information** tab:
+
+| ATTRIBUTE |DESCRIPTION  |
+| --- | --- |
+| STORE RELATION |Stores your voucher codes are to be active in. You can select multiple stores.|
+| DISCOUNT TYPE | Drop-down list where you select either **Voucher code** or **Cart rule** discount type. |
+| NAME | Unique name that is displayed in the **Cart calculation** section along with the applied discount amount on the Storefront. Should be short, but descriptive. |
+| DESCRIPTION | Explains the voucher and helps a customer understand why they are eligible for the discount and what they can receive. The description is displayed in the cart, in the **Promotional products** section if the discount is applicable to a product in the cart.|
+| PRIORITY | Defines [the discount priority](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html#discount-priority). Represented as an integer value from `1` to `9999`, `1` being the highest priority and `9999` the lowest. |
+| NON-EXCLUSIVE | Defines the c exclusivity. Customers can redeem non-exclusive discounts in conjunction with other non-exclusive discounts.|
+| EXCLUSIVE | Defines the voucher's exclusivity. When a discount is exclusive, no other discounts may be applied in conjunction. When a cart is eligible for multiple exclusive discounts, the discount with the highest value to the customer is applied. The exception to this is promotional product discounts. Query string discounts and promotional product discounts exclude only among each other. Promotional product discounts are not affected by exclusive query string discounts and conversely.|
+| VALID FROM and VALID TO | Vouchers are redeemable between **VALID FROM** and **VALID TO** dates and times (in UTC), inclusive. For example, a voucher can be redeemed starting from `01.12.2021 23:00` until `31.01.2022 22:59`, UTC. |
+
+{% info_block infoBox "Info" %}
+
+Name and describe discounts in a way that is meaningful for other Back Office users. Besides, the given name is displayed in the customer's cart when redeeming the voucher. Therefore, it must be unique.
+
+{% endinfo_block %}
+
+#### Discount calculation tab
+
+This section contains information you need to know when working with discount calculations on the **Discount calculation** tab.
+
+**CALCULATOR TYPE**
+<br>The discount can be calculated in two ways:
+* **Percentage**: A discount is calculated as a percentage of the discounted items' prices. If selected, in the **VALUE** field, set the percentage value (for example, `25`).
+* **Fixed amount**: A fixed amount is discounted. If you select this type, specify the amount (**Gross price**, **Net price**, or both) for each currency used in your store.
+
+Example:
+
+| PRODUCT PRICE | CALCULATOR PLUGIN | AMOUNT | DISCOUNT APPLIED | PRICE TO PAY |
+| --- | --- | --- | --- | --- |
+| 50 € | Percentage | 10 |5 € | 45 € |
+| 50 €| Fixed amount | 10 €| 10 €| 40 €|
+
+**DISCOUNT APPLICATION TYPE**
+<br>You can select one of the following options:
+* QUERY STRING
+* PROMOTIONAL PRODUCT
+
+**QUERY STRING**
+<br>Selecting **QUERY STRING**, you can use a query to define discount conditions. Only products that satisfy the query's conditions are discountable. Queries also define if the discount is applied to one or several products. Discount conditions are set by using either the *query builder* or by specifying a **Plain query**.
+
+Use the query builder to construct queries (guided) or the **Plain query** field to enter them (free text). You can switch between both modes by clicking the corresponding button (note that incomplete queries cannot be transferred between the two modes).
+
+**Query builder**
+
+![Discount_Calculation_Query](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Calculation:+Reference+Information/query-string.png)
+
+**Plain query**
+
+![Discount_Calculation_Plain Query](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Calculation:+Reference+Information/discount-calculation-plain-query.png)
+
+The query builder lets you combine different conditions with connectors (**AND** and **OR**). Multiple conditions (rules) can be added and grouped in this way. Each condition (rule) consists of:
+* Field (for example, `attribute.color`)
+* Operator (for example, `equal(=)`)
+* Value tokens (for example, `blue`)
+
+{% info_block infoBox "Info" %}
+
+The fields and values are defined by your shop data.
+
+{% endinfo_block %}
+
+These tokens are used to build plain queries too. The pattern of the plain query is as follows:
+
+![Plain Query Pattern](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Calculation:+Reference+Information/plain-query-pattern.png)
+
+You can find plain query examples in the following table.
+
+|PLAIN QUERY|EXPLANATION|
+|---|---|
+|`day-of-week = 1'| Discount applies if the order is placed on Monday.|
+|`shipment-carrier != 1 AND price-mode = GROSS_MODE'| Discount applies if the shipment carrier with the attribute `1` is not chosen and gross pricing is selected.|
+|`currency != EUR OR price-mode = GROSS_MODE'| Discount applies if the selected currency is not Euro or the pricing mode is gross.|
+
+{% info_block infoBox "Info" %}
+
+For more information about tokens, see [Token description tables](#token-description-tables).
+
+{% endinfo_block %}
+
+**PROMOTIONAL PRODUCT**
+<br>The **PROMOTONAL PRODUCT** discount type lets you discount specific products at a fixed quantity when the discount conditions are met. A common use case is a "buy x, get y" discount, where a customer gets an item for free when they buy a certain product or spend a certain amount.
+
+The following table describes attributes you enter if for **DISCOUNT APPICATION TYPE**, you select **PROMOTIONAL PRODUCT**:
+
+| ATTRIBUTE | DESCRIPTION |
+| --- | --- |
+| ABSTRACT PRODUCT SKU(S) | Stores comma-separated abstract product SKUs—products to promote. |
+| MAXIMUM QUANTITY | Represents the limit on the number of units eligible for the discount. |
+
+![Application type](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/back-office-user-guides/merchandising/discount/creating-vouchers.md/202200.0/application-type.png)
+
+#### Conditions tab
+
+This section provides information that you need to know when working with discount conditions on the **Conditions** tab.
+
+Conditions, also called *decision rules*, are created in the form of a query and may be entered as a plain query or by the Query builder. The cart rule is redeemed only if every condition linked to it is satisfied. Vouchers can be linked to one or more conditions. Vouchers are only redeemed if all linked conditions are satisfied.
+
+The conditions are created in the form of a query and may be entered as a plain query or via the query builder. (See the [Discount calculation tab](#discount-calculation-tab) section for more details.)
+{% info_block infoBox "Info" %}
+
+If you do not need to add a condition, leave the query builder empty.
+
+{% endinfo_block %}
+
+**Example:**
+<br>Discount is applied if five or more items are in the cart and it is Tuesday or Wednesday.
+
+![Discount Condition](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/discount-condition.png)
+
+The minimum order amount value specifies the threshold which should be reached for the products in a cart with a certain attribute to be discounted. When added to cart, products with the attribute specified by a query are measured against the threshold. By default, the minimum order amount value is `1`. It means that any discount is applied if the number of items (that meet the rules) inside the cart is superior or equal to `1`.
+
+**Example**:
+<br>Discount is applied if 4 or more items with the Intel Core processor are in the cart.
+
+![Threshold](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/threshold.png)
+
+**More advanced example**:
+<br>To create a discount that has an extensive number of conditions, use the condition **groups**. Meaning you collect different rules under different groups and split them into separate chunks.
+Let's say you have received a task to create a discount with the following conditions:
+
+**B2B scenario**:
+<br>The discount is going to be applied if one of the following is fulfilled:
+* The `price-mode` is `Gross mode`, and the subtotal amount is greater or equal to `€100` (Euro) `OR` `115` CHF (Swiss Franc).
+* The price mode is `Net Mode`, and the subtotal amount is greater or equal: `€80` (Euro) `OR` `95` CHF (Swiss Franc).
+
+The setup looks like the following:
+![B2B scenario](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/b2b-scenario.png)
+
+**B2C scenario**
+<br>The discount is going to be applied if one of the following is fulfilled:
+* On **Tuesday**, and the item `color` is `red`, this item does not have the label `NEW`, and the customer adds at least two items (or more) to a cart.
+* On **Thursday**, and the item `color` is `white`, this item does not have the label `NEW`, and the customer adds at least two items (or more) to a cart.
+
+The setup should look like as follows:
+![B2C scenario](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/b2c-scenario.png)
+
+#### Voucher code tab
+
+This section describes the information that you need to know when working with voucher codes on the **Voucher code** tab.
+
+You enter and select the following attributes on the **Voucher code** tab:
+
+| ATTRIBUTE | DESCRIPTION |  
+| --- | --- |
+| QUANTITY | Number of vouchers you want to generate. |  
+| CUSTOM CODE | When generating a single voucher code, you can enter it manually. To create multiple codes at once, **ADD RANDOM GENERATED CODE LENGTH** to the custom code.|  
+| ADD RANDOM GENERATED CODE LENGTH | This value defines the number of random characters to be added to the custom code. If you do not add any custom value, select this value to automatically generate the codes with the length you select. |  
+| MAX NUMBER OF USES (0 = INFINITE USAGE) | Defines the maximum number of times a voucher code can be redeemed in a cart. |
+
+Use the placeholder *`[code]`* to indicate the position you want random characters to be added to.
+
+**For example:**
+   * **123[code]**: The randomly generated code will be added right after the custom code.
+   * **[code]123**: The randomly generated code will be added in front of the custom code.
+
+**Maximum number of uses**
+
+| VALUE | BEHAVIOR |  
+| --- | --- |
+| 0 | Infinitely redeemable. |  
+| 1 | Voucher can be redeemed once. |  
+| n > 1 | Voucher can be redeemed *n* times. |  
+
+![Voucher code](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Voucher+Codes:+Reference+Information/voucher-code.png)
+
+**Voucher code pool**
+<br>The voucher codes of a discount are all contained in the same voucher code pool. One customer may only redeem one voucher code per pool per cart.
+
+#### Token description tables
+
+This section contains a set of tables that describe fields, value types, and operators you use when building a plain query.
+
+**Tokens**
+
+![Token](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Token+Description+Tables/tokens.png)
+
+| VALUE | DESCRIPTION |
+| --- | --- |
+| Fields | The available fields may include `SKU`, `item-price`, `item-quantity`, or a variety of attributes (for example, `currency` on the preceding image). |
+| Operator | Operator compares the value of a field on the left with the value(s) on the right (for example, equals (`=`), greater than (`>`)). If the expression evaluates to true, the discount can be applied (operator is `equal` on the previous image). |
+| Value | Value types must match the selected field. The asterisk (*) matches all possible values (on the preceding image, the value is `Swiss Franc`).|
+| Combine Conditions | `AND` and `OR` operators are used to combine conditions (`AND` on the preceding image). |
+|Grouping | When building more complex queries, conditions may be grouped inside parentheses. Because discount calculations and conditions are applied per item, you can not use groups with `AND` where each group contains at least one SKU-based rule. |
+
+**Fields and value types (Plain query)**
+
+|FIELD|PLAIN QUERY|VALUE TYPE|DESCRIPTION|
+|-|-|-|-|
+|Calendar week|calender-week|Number|Week number in a year (1-52)|
+|Day of week|day-of-week|Number|Day of week (1-7).|
+|Grand total|grand-total|Number (Decimal)|Sum of all totals.|
+|Subtotal|sub-total|Number (Decimal)|Sum of item prices w/o shipment expenses and discounts.|
+|Item price|item-price|Number (Decimal)|Price of one item.|
+|Item quantity|item-quantity|Number|Number of items.|
+|Month|month|Number|Month of the year (1-12)|
+|SKU|sku|String|Any value depends on how SKUs are stored.|
+|Time|time|hour:minute|Time of the day.|
+|Total quantity|total-quantity|Number|Total cart quantity.|
+|Attribute|attribute.*|String, number|Any value.|
+|Customer Group|customer-group|String|Any value, use a customer group name for an exact match.|
+| Category | category | String | Any product category or sub-category. Includes any sub-categories that fall within its navigation tree.  |
+
+**Operators (Plain Query)**
+
+|OPERATOR|OPERATOR FOR PLAIN QUERY|VALUE TYPE|DESCRIPTION|
+|-|-|-|-|
+|Contains|CONTAINS|String, Number|Checks if the value is contained in the field.|
+|Doesn't contain|DOES NOT CONTAIN|String, Number | Checks if the value is not contained in the field.|
+|Equal|=|String, Number|Checks if the value is equal to the value of the right operand.|
+|Not Equal|!=|String, Number|Checks if the value is not equal to the value of the right operand.|
+|In|IS IN|List|Values need to be semicolon-separated.|
+|Not In|IS NOT IN|List|Values need to be semicolon-separated.|
+|Less|<|Number|Checks if the value is less than the value of the right operand.|
+|Less or equal|<=|Number|Checks if the value is less than or equal to the value of the right operand.|
+|Greater|>|Number|Checks if the value is greater than the value of the right operand.|
+|Greater or equal|>=|Number|Checks if the value is greater than or equal to the value of the right operand.|

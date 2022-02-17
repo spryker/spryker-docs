@@ -174,9 +174,9 @@ For more information about tokens, see [Token description tables](#token-descrip
 {% endinfo_block %}
 
 **PROMOTIONAL PRODUCT**
-<br>The **PROMOTONAL PRODUCT** discount type lets you discount specific products at a fixed quantity when the discount conditions are met. A common use case is a "buy x, get y" discount, where a customer gets an item for free when they buy a certain product or spend a certain amount.
+<br>The **PROMOTIONAL PRODUCT** discount type lets you discount specific products at a fixed quantity when the discount conditions are met. A common use case is a "buy x, get y" discount, where a customer gets an item for free when they buy a certain product or spend a certain amount.
 
-The following table describes attributes you enter if for **DISCOUNT APPICATION TYPE**, you select **PROMOTIONAL PRODUCT**:
+The following table describes attributes you enter if, for **DISCOUNT APPLICATION TYPE**, you select **PROMOTIONAL PRODUCT**:
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |

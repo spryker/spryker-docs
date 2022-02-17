@@ -68,7 +68,7 @@ The following table describes the attributes you enter and select on the **Gener
 
 | ATTRIBUTE |DESCRIPTION  |
 | --- | --- |
-| STORE RELATION | Stores that your cart rules is to be active in. You can select multiple stores.|
+| STORE RELATION | Stores that your cart rule is to be active in. You can select multiple stores.|
 | DISCOUNT TYPE | Drop-down list where you select either **Voucher codes** or **Cart rule** discount type. |
 | NAME | Unique name that is displayed in the **Cart calculation** section along with the applied discount amount on the Storefront. Should be short, but descriptive. |
 | DESCRIPTION | Explains the discount and helps a customer understand why they are eligible for the discount and what they can receive. The description is displayed in the cart, in the **Promotional products** section if the discount is applicable to a product in the cart.|
@@ -77,7 +77,7 @@ The following table describes the attributes you enter and select on the **Gener
 | EXCLUSIVE | Defines the discount exclusivity. When a discount is exclusive, no other discounts may be applied in conjunction. When a cart is eligible for multiple exclusive discounts, the discount with the highest value to the customer is applied. The exception to this is promotional product discounts. Query string discounts and promotional product discounts exclude only among each other. Promotional product discounts are not affected by exclusive query string discounts and conversely.|
 | VALID FROM and VALID TO | Cart rule is active between **VALID FROM** and **VALID TO** dates and times (in UTC), inclusive. For example, a discount applies to the cart starting from 01.12.2021 23:00 until 31.01.2022 22:59, UTC. |
 
-<div class="width-100">
+</div>
 
 {% info_block infoBox "Info" %}
 
@@ -150,9 +150,9 @@ For more information about tokens, see [Token description tables](#token-descrip
 {% endinfo_block %}
 
 **PROMOTIONAL PRODUCT**
-<br>The **PROMOTONAL PRODUCT** discount type lets you discount specific products at a fixed quantity when the discount conditions are met. A common use case is a "buy x, get y" discount, where a customer gets an item for free when they buy a certain product or spend a certain amount.
+<br>The **PROMOTIONAL PRODUCT** discount type lets you discount specific products at a fixed quantity when the discount conditions are met. A common use case is a "buy x, get y" discount, where a customer gets an item for free when they buy a certain product or spend a certain amount.
 
-The following table describes attributes you enter if for **DISCOUNT APPICATION TYPE**, you select **PROMOTIONAL PRODUCT**:
+The following table describes attributes you enter if, for **DISCOUNT APPLICATION TYPE**, you select **PROMOTIONAL PRODUCT**:
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |

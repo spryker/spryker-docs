@@ -5,7 +5,7 @@ description: This document describes the merchant_product.csv file to configure 
 template: import-file-template
 ---
 
-This document describes the `merchant_product.csv` file to configure [merchant product ](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1569063519/Merchant+Products)information in your Spryker shop.
+This document describes the `merchant_product.csv` file to configure [marketplace product](/docs/marketplace/user/features/{{page.version}}/marketplace-product-feature-overview.html) information in your Spryker shop.
 
 To import the file, run
 

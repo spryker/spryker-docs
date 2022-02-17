@@ -14,7 +14,7 @@ Below, you will find a step-by-step checklist that you will be able to follow th
 
 ## Prerequisites
 
-Before you start installing Spryker DevVM, make sure to fulfill the [system requirements](/docs/scos/dev/setup/system-requirements.html).
+Before you start installing Spryker DevVM, make sure to fulfill the [DevVM system requirements](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/devvm-system-requirements.html).
 
 ## Installation
 
@@ -28,3 +28,4 @@ To install Spryker, follow one of the guides below:
 Once you have a running instance, the following documents will help you adjust the project to your requirements:
 * [Configuring Spryker after installing with DevVM](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-after-installing-with-devvm.html)
 * [Updating Node.js in DevVM to the latest version](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/updating-node.js-in-devvm-to-the-latest-version.html)
+* [Configuring database servers](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html)

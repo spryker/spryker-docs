@@ -1,5 +1,5 @@
 ---
-title: Additional DevOPS guidelines
+title: Adjusting Jenkins for a Docker environment
 description: DevOPS guidelines for running Spryker in Docker.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -20,9 +20,7 @@ redirect_from:
   - /v3/docs/en/additional-devops-information-201907
 ---
 
-This document provides additional DevOPS guidelines for running Spryker in Docker.
 
-## Adjust Jenkins for Docker Environment
 Follow the steps to adjust the Jenkins scheduler to docker like environments:
 1. Update the scheduler configuration settings in `src/Pyz/Zed/Scheduler/SchedulerDependencyProvider.php`:
 

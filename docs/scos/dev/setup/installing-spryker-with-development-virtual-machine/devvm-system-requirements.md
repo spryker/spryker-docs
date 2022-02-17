@@ -1,5 +1,5 @@
 ---
-title: System Requirements
+title: DevVM system requirements
 description: This article provides the configuration that a system must have in order for the Spryker project to run smoothly and efficiently.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -24,6 +24,7 @@ redirect_from:
   - /v1/docs/en/system-requirements
   - /v4/docs/supported-browsers
   - /v4/docs/en/supported-browsers
+  - /docs/scos/dev/setup/system-requirements.html
 ---
 
 | Operating System                          | Native: LinuxOnly via VM: MacOS and MS Windows               |

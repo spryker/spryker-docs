@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/upgrading-to-the-latest-version-of-node.js-inside-devwm.html
 ---
 
-As per [Spryker system requirements](/docs/scos/dev/setup/system-requirements.html), we recommend using 12.x version of Node.js. In the [devvm version 3.1.0](https://github.com/spryker/devvm/releases/tag/v3.1.0), we have added support of Node.js 12.x. Earlier devvm versions require a manual upgrade of Node.js.
+As per [Spryker DevVM system requirements](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/devvm-system-requirements.html), we recommend using 12.x version of Node.js. In the [devvm version 3.1.0](https://github.com/spryker/devvm/releases/tag/v3.1.0), we have added support of Node.js 12.x. Earlier devvm versions require a manual upgrade of Node.js.
 
 So if you are:
 

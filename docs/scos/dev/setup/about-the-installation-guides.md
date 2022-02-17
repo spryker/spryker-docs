@@ -42,7 +42,7 @@ Check out the [Developer Getting Started Guide](/docs/scos/dev/developer-getting
 For additional information and resources see:
 
 * [Configuring Spryker after installing with DevVM](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-after-installing-with-devvm.html) - for steps you should take after you have installed Spryker
-* [Configuring the Database Server](/docs/scos/dev/setup/configuring-the-database-server.html) – if you want to switch a database
+* [Configuring the Database Server](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-database-servers.html) – if you want to switch a database
 * [Installation Troubleshooting](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/databases-and-services-issues/peer-authentication-failed-for-user-postgres.html) - for frequently encountered issues
 * [Configuring debugging in DevVM](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-devvm.html) – how to install and use the Xdebug module
 * For a list of our available GitHub Repositories, see [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html), [B2C](/docs/scos/user/intro-to-spryker/b2c-suite.html), [Master Suite](/docs/scos/user/intro-to-spryker/master-suite.html).

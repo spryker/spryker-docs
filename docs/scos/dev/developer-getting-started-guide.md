@@ -122,7 +122,7 @@ To configure and customize your Spryker Commerce OS, do the following:
 
 1. To define how to manage and configure the settings in configuration files, see [Configuration management](/docs/scos/dev/back-end-development/data-manipulation/configuration-management.html).
 2. Configure your environment:
-    *   [Database](/docs/scos/dev/setup/configuring-the-database-server.html)
+    *   [Database](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-database-servers.html)
     *   [Redis](/docs/scos/dev/setup/redis-configuration.html)
     <!---*   [ElasticSearch](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-elasticsearch.html)-->
     *   [Queue](/docs/scos/dev/back-end-development/data-manipulation/queue/queue.html)

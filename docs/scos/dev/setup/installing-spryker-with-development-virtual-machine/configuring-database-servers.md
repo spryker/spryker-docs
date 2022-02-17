@@ -1,5 +1,5 @@
 ---
-title: Configuring the database server
+title: Configuring database servers
 description: This article describes how you can change your database server (MySQL or PostgreSQL).
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/configure-database-server
   - /v1/docs/configure-database-server
   - /v1/docs/en/configure-database-server
+  - /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-the-database-server.html
 ---
 
 This article describes how you can change your database server.

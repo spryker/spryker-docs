@@ -68,8 +68,8 @@ entries:
       url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-after-installing-with-devvm.html
     - title: Managing SCOS dependencies with Composer
       url: /docs/scos/dev/setup/managing-scos-dependencies-with-composer.html
-    - title: Configuring the database server
-      url: /docs/scos/dev/setup/configuring-the-database-server.html
+    - title: Configuring database servers
+      url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-database-servers.html
     - title: Redis Configuration
       url: /docs/scos/dev/setup/redis-configuration.html
     - title: Install module structure and configuration

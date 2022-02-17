@@ -61,7 +61,7 @@ The list is empty until codes are generated.
 
 On the **Voucher code** tab, do the following:
 1. Enter the **QUANTITY** for voucher codes you want to generate.
-2. Optional: In **CUSTOM CODE**, enter any text that you would like to precede the randomly generated characters in each voucher code. You can also use the placeholder ***`[code]`*** to specify the location.
+2. Optional: In **CUSTOM CODE**, enter any text that you would like to precede the randomly generated characters in each voucher code. You can also use the placeholder *`[code]`* to specify the location.
 3. Set the **ADD RANDOM GENERATED CODE LENGTH** by selecting the value from a drop-down list.
 4. Set **MAX NUMBER OF USES**.
 5. To complete the process, click **Generate**.
@@ -89,6 +89,8 @@ This section contains reference information you select and enter when creating v
 
 The following table describes the attributes you enter and select on the **General information** tab:
 
+<div class="width-100">
+
 | ATTRIBUTE |DESCRIPTION  |
 | --- | --- |
 | STORE RELATION |Stores your voucher codes are to be active in. You can select multiple stores.|
@@ -98,7 +100,9 @@ The following table describes the attributes you enter and select on the **Gener
 | PRIORITY | Defines [the discount priority](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html#discount-priority). Represented as an integer value from `1` to `9999`, `1` being the highest priority and `9999` the lowest. |
 | NON-EXCLUSIVE | Defines the c exclusivity. Customers can redeem non-exclusive discounts in conjunction with other non-exclusive discounts.|
 | EXCLUSIVE | Defines the voucher's exclusivity. When a discount is exclusive, no other discounts may be applied in conjunction. When a cart is eligible for multiple exclusive discounts, the discount with the highest value to the customer is applied. The exception to this is promotional product discounts. Query string discounts and promotional product discounts exclude only among each other. Promotional product discounts are not affected by exclusive query string discounts and conversely.|
-| VALID FROM and VALID TO | Vouchers are redeemable between **VALID FROM** and **VALID TO** dates and times (in UTC), inclusive. For example, a voucher can be redeemed starting from `01.12.2021 23:00` until `31.01.2022 22:59`, UTC. |
+| VALID FROM and VALID TO | Vouchers are redeemable between **VALID FROM** and **VALID TO** dates and times (in UTC), inclusive. For example, a voucher can be redeemed starting from 01.12.2021 23:00 until 31.01.2022 22:59, UTC. |
+
+<div class="width-100">
 
 {% info_block infoBox "Info" %}
 

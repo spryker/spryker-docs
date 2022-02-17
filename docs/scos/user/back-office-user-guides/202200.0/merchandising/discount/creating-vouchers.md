@@ -93,16 +93,16 @@ The following table describes the attributes you enter and select on the **Gener
 
 | ATTRIBUTE |DESCRIPTION  |
 | --- | --- |
-| STORE RELATION |Stores your voucher codes are to be active in. You can select multiple stores.|
+| STORE RELATION |Stores your voucher codes will be active in. You can select multiple stores.|
 | DISCOUNT TYPE | Drop-down list where you select either **Voucher code** or **Cart rule** discount type. |
-| NAME | Unique name that is displayed in the **Cart calculation** section along with the applied discount amount on the Storefront. Should be short, but descriptive. |
-| DESCRIPTION | Explains the voucher and helps a customer understand why they are eligible for the discount and what they can receive. The description is displayed in the cart, in the **Promotional products** section if the discount is applicable to a product in the cart.|
+| NAME | Unique name that will be displayed in the **Cart calculation** section along with the applied discount amount on the Storefront. Should be short, but descriptive. |
+| DESCRIPTION | Explains the voucher and helps a customer understand why they are eligible for the discount and what they can receive. The description will be displayed in the cart, in the **Promotional products** section if the discount is applicable to a product in the cart.|
 | PRIORITY | Defines [the discount priority](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html#discount-priority). Represented as an integer value from `1` to `9999`, `1` being the highest priority and `9999` the lowest. |
-| NON-EXCLUSIVE | Defines the c exclusivity. Customers can redeem non-exclusive discounts in conjunction with other non-exclusive discounts.|
+| NON-EXCLUSIVE | Defines the exclusivity. Customers can redeem non-exclusive discounts in conjunction with other non-exclusive discounts.|
 | EXCLUSIVE | Defines the voucher's exclusivity. When a discount is exclusive, no other discounts may be applied in conjunction. When a cart is eligible for multiple exclusive discounts, the discount with the highest value to the customer is applied. The exception to this is promotional product discounts. Query string discounts and promotional product discounts exclude only among each other. Promotional product discounts are not affected by exclusive query string discounts and conversely.|
-| VALID FROM and VALID TO | Vouchers are redeemable between **VALID FROM** and **VALID TO** dates and times (in UTC), inclusive. For example, a voucher can be redeemed starting from 01.12.2021 23:00 until 31.01.2022 22:59, UTC. |
+| VALID FROM and VALID TO | Vouchers will be redeemable between **VALID FROM** and **VALID TO** dates and times (in UTC), inclusive. For example, a voucher can be redeemed starting from 01.12.2021 23:00 until 31.01.2022 22:59, UTC. |
 
-<div class="width-100">
+</div>
 
 {% info_block infoBox "Info" %}
 
@@ -163,9 +163,9 @@ You can find plain query examples in the following table.
 
 |PLAIN QUERY|EXPLANATION|
 |---|---|
-|`day-of-week = 1'| Discount applies if the order is placed on Monday.|
-|`shipment-carrier != 1 AND price-mode = GROSS_MODE'| Discount applies if the shipment carrier with the attribute `1` is not chosen and gross pricing is selected.|
-|`currency != EUR OR price-mode = GROSS_MODE'| Discount applies if the selected currency is not Euro or the pricing mode is gross.|
+|`day-of-week = '1'`|Discount applies if the order is placed on Monday.|
+|`shipment-carrier != '1' AND price-mode = 'GROSS_MODE'` | Discount applies if the shipment carrier with the attribute `1` is not chosen, and gross pricing is selected.|
+|`currency != 'EUR' OR price-mode = 'GROSS_MODE'` | Discount applies if the selected currency is not Euro, or the pricing mode is gross.|
 
 {% info_block infoBox "Info" %}
 
@@ -180,7 +180,7 @@ The following table describes attributes you enter if, for **DISCOUNT APPLICATIO
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| ABSTRACT PRODUCT SKU(S) | Stores comma-separated abstract product SKUs—products to promote. |
+| ABSTRACT PRODUCT SKU(S) | Stores comma-separated abstract product SKUs—products which will be promoted. |
 | MAXIMUM QUANTITY | Represents the limit on the number of units eligible for the discount. |
 
 ![Application type](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/back-office-user-guides/merchandising/discount/creating-vouchers.md/202200.0/application-type.png)
@@ -237,9 +237,9 @@ You enter and select the following attributes on the **Voucher code** tab:
 
 | ATTRIBUTE | DESCRIPTION |  
 | --- | --- |
-| QUANTITY | Number of vouchers you want to generate. |  
+| QUANTITY | Number of vouchers you that will be generated. |  
 | CUSTOM CODE | When generating a single voucher code, you can enter it manually. To create multiple codes at once, **ADD RANDOM GENERATED CODE LENGTH** to the custom code.|  
-| ADD RANDOM GENERATED CODE LENGTH | This value defines the number of random characters to be added to the custom code. If you do not add any custom value, select this value to automatically generate the codes with the length you select. |  
+| ADD RANDOM GENERATED CODE LENGTH | This value defines the number of random characters that will be added the custom code. If you do not add any custom value, select this value to automatically generate the codes with the length you select. |  
 | MAX NUMBER OF USES (0 = INFINITE USAGE) | Defines the maximum number of times a voucher code can be redeemed in a cart. |
 
 Use the placeholder *`[code]`* to indicate the position you want random characters to be added to.

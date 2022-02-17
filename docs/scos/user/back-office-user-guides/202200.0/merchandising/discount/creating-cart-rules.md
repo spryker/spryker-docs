@@ -68,14 +68,14 @@ The following table describes the attributes you enter and select on the **Gener
 
 | ATTRIBUTE |DESCRIPTION  |
 | --- | --- |
-| STORE RELATION | Stores that your cart rule is to be active in. You can select multiple stores.|
+| STORE RELATION | Stores that your cart rule will be active in. You can select multiple stores.|
 | DISCOUNT TYPE | Drop-down list where you select either **Voucher codes** or **Cart rule** discount type. |
-| NAME | Unique name that is displayed in the **Cart calculation** section along with the applied discount amount on the Storefront. Should be short, but descriptive. |
-| DESCRIPTION | Explains the discount and helps a customer understand why they are eligible for the discount and what they can receive. The description is displayed in the cart, in the **Promotional products** section if the discount is applicable to a product in the cart.|
+| NAME | Unique name that will be displayed in the **Cart calculation** section along with the applied discount amount on the Storefront. Should be short, but descriptive. |
+| DESCRIPTION | Explains the discount and helps a customer understand why they are eligible for the discount and what they can receive. The description will be displayed in the cart, in the **Promotional products** section if the discount is applicable to a product in the cart.|
 | PRIORITY | Defines [the discount priority](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html#discount-priority). Represented as an integer value from `1` to `9999`, `1` being the highest priority and `9999` the lowest. |
 | NON-EXCLUSIVE | Defines the discount exclusivity. Customers can redeem non-exclusive discounts in conjunction with other non-exclusive discounts.|
 | EXCLUSIVE | Defines the discount exclusivity. When a discount is exclusive, no other discounts may be applied in conjunction. When a cart is eligible for multiple exclusive discounts, the discount with the highest value to the customer is applied. The exception to this is promotional product discounts. Query string discounts and promotional product discounts exclude only among each other. Promotional product discounts are not affected by exclusive query string discounts and conversely.|
-| VALID FROM and VALID TO | Cart rule is active between **VALID FROM** and **VALID TO** dates and times (in UTC), inclusive. For example, a discount applies to the cart starting from 01.12.2021 23:00 until 31.01.2022 22:59, UTC. |
+| VALID FROM and VALID TO | Cart rule will be active between **VALID FROM** and **VALID TO** dates and times (in UTC), inclusive. For example, a discount applies to the cart starting from 01.12.2021 23:00 until 31.01.2022 22:59, UTC. |
 
 </div>
 
@@ -139,9 +139,9 @@ You can find plain query examples in the following table.
 
 |PLAIN QUERY|EXPLANATION|
 |---|---|
-|day-of-week = '1'|Discount applies if the order is placed on Monday.|
-|shipment-carrier != '1' AND price-mode = 'GROSS_MODE' | Discount applies if the shipment carrier with the attribute `1` is not chosen, and gross pricing is selected.|
-|currency != 'EUR' OR price-mode = 'GROSS_MODE' | Discount applies if the selected currency is not Euro, or the pricing mode is gross.|
+|`day-of-week = '1'`|Discount applies if the order is placed on Monday.|
+|`shipment-carrier != '1' AND price-mode = 'GROSS_MODE'` | Discount applies if the shipment carrier with the attribute `1` is not chosen, and gross pricing is selected.|
+|`currency != 'EUR' OR price-mode = 'GROSS_MODE'` | Discount applies if the selected currency is not Euro, or the pricing mode is gross.|
 
 {% info_block infoBox "Info" %}
 
@@ -156,7 +156,7 @@ The following table describes attributes you enter if, for **DISCOUNT APPLICATIO
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| ABSTRACT PRODUCT SKU(S) | Stores comma-separated abstract product SKUs—products to promote. |
+| ABSTRACT PRODUCT SKU(S) | Stores comma-separated abstract product SKUs—products which will be promoted. |
 | MAXIMUM QUANTITY | Represents the limit on the number of units eligible for the discount. |
 
 ![Application type](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/back-office-user-guides/merchandising/discount/creating-vouchers.md/202200.0/application-type.png)
@@ -215,7 +215,7 @@ This section contains a set of tables that describe fields, value types, and ope
 
 | VALUE | DESCRIPTION |
 | --- | --- |
-| Fields | The available fields may include `SKU`, `item-price`, `item-quantity`, or a variety of attributes (for example, `currency` on the preceding image). |
+| Fields | Available fields may include `SKU`, `item-price`, `item-quantity`, or a variety of attributes (for example, `currency` on the preceding image). |
 | Operator | Operator compares the value of a field on the left with the value(s) on the right (for example, equals (`=`), greater than (`>`)). If the expression evaluates to true, the discount can be applied (operator is `equal` on the previous image). |
 | Value | Value types must match the selected field. The asterisk (*) matches all possible values (on the preceding image, the value is `Swiss Franc`).|
 | Combine Conditions | `AND` and `OR` operators are used to combine conditions (`AND` on the preceding image). |

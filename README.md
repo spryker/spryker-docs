@@ -10,10 +10,10 @@ To contribute, do the following:
 4. Select the article. 
 5. Click the pencil icon in the top right menu to edit the article.
 6. Once you are done with editing, write a message briefly explaining what you changed and click  **Propose changes**. You will see a a diff of your changes compared to the current version of the master branch.
-5.	Click **Create pull request**.
-6.	Click **Create pull request** again to confirm the creation.
-7. Set a respective [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels#applying-a-label) for your pull request (*in progress*, *tech review needed*, *TW review needed*, etc.) so we know if it's ready for review and merge.
-8. 
+7.	Click **Create pull request**.
+8.	Click **Create pull request** again to confirm the creation.
+9. Set a respective [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels#applying-a-label) for your pull request (*in progress*, *tech review needed*, *TW review needed*, etc.) so we know if it's ready for review and merge.
+
 ---
 
 **Note**

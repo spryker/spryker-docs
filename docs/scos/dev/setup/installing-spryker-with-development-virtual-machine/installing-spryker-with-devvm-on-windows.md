@@ -25,29 +25,31 @@ redirect_from:
 
 To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html) or [B2C](/docs/scos/user/intro-to-spryker/b2c-suite.html) implementations on Windows with development virtual machine (DevVM), follow the steps below.
 
-### 1. Install prerequisites
+## 1. Install prerequisites
 
-To set up your environment, install the following prerequisites:
+To set up your environment, do the following:
 
-* [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-* [VirtualBox 5.2.2](https://www.virtualbox.org/wiki/Download_Old_Builds_5_2)
-* [Vagrant 2.0.0+](https://www.vagrantup.com/downloads.html)
-* *vagrant-vbguest* and *vagrant-hostmanager* plugins:
+1. Install the following prerequisites:
+    * [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+    * [VirtualBox 5.2.2](https://www.virtualbox.org/wiki/Download_Old_Builds_5_2)
+    * [Vagrant 2.0.0+](https://www.vagrantup.com/downloads.html)
+
+2. Install *vagrant-vbguest* and *vagrant-hostmanager* plugins:
 
 ```bash
-vagrant plugin install vagrant-vbguest
+vagrant plugin install vagrant-vbguest &&
 vagrant plugin install vagrant-hostmanager
 ```
 
-### 2. Install Spryker Virtual Machine
+## 2. Install Spryker DevVM
 
 To install the VM, you need to run the following commands. For this purpose, use `Git Bash` command prompt with administrative privileges.
 
-1. **Launch Git Bash:**
+1. Launch Git Bash:
 
 * Click **Start**.
 
-* Start typing "Git Bash".
+* Start typing `Git Bash`.
 
 * In the search results, right-click **Git Bash** and select **Run as administrator**.
 ![Run git bash as administrator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/B2B+Demo+Shop+Installation+Guide/run-git-bash-as-administrator.png)
@@ -225,5 +227,8 @@ When the installation process is complete, Spryker Commerce OS is ready to use. 
 
 Credentials to access the administrator interface: user `admin@spryker.com` and password `change123`.
 
-## Next steps:
+## Next steps
+
 * [Troubleshooting installation issues](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/troubleshooting-spryker-in-vagrant-installation-issues.html)
+
+* [Configuring Spryker after installing with DevVM](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-spryker-after-installing-with-devvm.html)

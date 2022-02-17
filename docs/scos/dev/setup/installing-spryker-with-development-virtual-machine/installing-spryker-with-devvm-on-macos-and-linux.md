@@ -41,14 +41,14 @@ To install the [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html) 
 To set up your environment, do the following:
 
 1. Install the following prerequisites:
-  * [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-  * [VirtualBox 5.2.2+](https://www.virtualbox.org/wiki/Downloads)
-  * [Vagrant 2.0.0+](https://www.vagrantup.com/downloads.html)
+    * [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+    * [VirtualBox 5.2.2+](https://www.virtualbox.org/wiki/Downloads)
+    * [Vagrant 2.0.0+](https://www.vagrantup.com/downloads.html)
 
 2. Install *vagrant-vbguest* and *vagrant-hostmanager* plugins:
 
 ```bash
-vagrant plugin install vagrant-vbguest
+vagrant plugin install vagrant-vbguest &&
 vagrant plugin install vagrant-hostmanager
 ```
 
@@ -140,4 +140,6 @@ Back Office credentials
 * user `admin@spryker.com` and password `change123`.
 
 ## Next steps
+
 * [Troubleshooting installation issues](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/troubleshooting-spryker-in-vagrant-installation-issues.html)
+* [Configuring Spryker after installing with DevVM](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-spryker-after-installing-with-devvm.html)

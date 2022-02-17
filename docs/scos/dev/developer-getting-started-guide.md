@@ -86,7 +86,7 @@ Alternatively, you can install Spryker on an operating system that fulfills Spry
 
 {% info_block warningBox %}
 
-After installing, make sure to have a look at [Post-Installation steps and additional info](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-after-installing-with-devvm.html) for tips on fine-tuning Spryker.
+After installing, make sure to have a look at [Post-Installation steps and additional info](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-spryker-after-installing-with-devvm.html) for tips on fine-tuning Spryker.
 
 {% endinfo_block %}
 
@@ -122,7 +122,7 @@ To configure and customize your Spryker Commerce OS, do the following:
 
 1. To define how to manage and configure the settings in configuration files, see [Configuration management](/docs/scos/dev/back-end-development/data-manipulation/configuration-management.html).
 2. Configure your environment:
-    *   [Database](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-database-servers.html)
+    *   [Database](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html)
     *   [Redis](/docs/scos/dev/setup/redis-configuration.html)
     <!---*   [ElasticSearch](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-elasticsearch.html)-->
     *   [Queue](/docs/scos/dev/back-end-development/data-manipulation/queue/queue.html)

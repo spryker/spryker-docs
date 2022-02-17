@@ -57,11 +57,11 @@ entries:
       - title: Configuring Spryker
         nested:
           - title: Configuring Spryker after installing
-            url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-after-installing-with-devvm.html
+            url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-spryker-after-installing-with-devvm.html
           - title: Configuring database servers
-            url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-database-servers.html
+            url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html
           - title: Updating Node.js to the latest version
-            url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/updating-node.js-in-devvm-to-the-latest-version.html
+            url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/updating-node.js-in-devvm-to-the-latest-version.html
       - title: Configuring debugging
         nested:
         - title: Configuring debugging

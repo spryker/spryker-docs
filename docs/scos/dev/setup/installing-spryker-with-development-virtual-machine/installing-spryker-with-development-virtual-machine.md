@@ -26,7 +26,7 @@ To install Spryker, follow one of the guides below:
 ## Configuration
 
 Once you have a running instance, the following documents will help you adjust the project to your requirements:
-* [Configuring Spryker after installing with DevVM](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-after-installing-with-devvm.html)
-* [Updating Node.js in DevVM to the latest version](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/updating-node.js-in-devvm-to-the-latest-version.html)
+* [Configuring Spryker after installing with DevVM](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-spryker-after-installing-with-devvm.html)
+* [Updating Node.js in DevVM to the latest version](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/updating-node.js-in-devvm-to-the-latest-version.html)
 * [Configuring database servers](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html)
 * [Configuring debugging in DevVM](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-devvm.html)

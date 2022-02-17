@@ -137,4 +137,6 @@ For now, you can not do the following things with Jarvis:
 
 
 ## Reference
-To see Spryker Jarvis in action, check out this video: {% wistia t1o6z2o5n %}
+To see Spryker Jarvis in action, check out this video: 
+
+{% wistia t1o6z2o5n 720 480 %}

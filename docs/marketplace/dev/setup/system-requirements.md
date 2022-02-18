@@ -1,5 +1,5 @@
 ---
-title: System requirements
+title: DevVM system requirements
 Descriptions: System infrastructure requirements for the Spryker Marketplace with Merchant Portal
 template: howto-guide-template
 ---

@@ -18,6 +18,8 @@ This guide describes how to manage discounts.
 
 To manage discounts, navigate to **Merchandising&nbsp;<span aria-label="and then">></span> Discount**.
 
+Review the reference information before you start, or just look up the necessary information as you go through the process.
+
 ## Editing a discount
 
 To edit a discount, do the following:
@@ -61,8 +63,8 @@ The following table describes the attributes you enter and select on the **Gener
 | --- | --- |
 | STORE RELATION |Stores that your voucher codes or a cart rule are active in. You can select multiple stores.|
 | DISCOUNT TYPE | Drop-down list where you select either **Voucher code** or **Cart rule** discount type. |
-| NAME | Unique name that is displayed in the **Cart calculation** section along with the applied discount amount on the Storefront. Should be short, but descriptive. |
-| DESCRIPTION | Explains the voucher and helps a customer understand why they are eligible for the discount and what they can receive. The description is displayed in the cart, in the **Promotional products** section if the discount is applicable to a product in the cart.|
+| NAME | Unique name that will be displayed in the cart, in the **Available discounts** section on the Storefront, if the voucher or cart rule is valid. Should be short, but descriptive. |
+| DESCRIPTION | Explains the voucher or cart rule and helps a customer understand why they are eligible for the discount and what they can receive. The description will be displayed in the **Cart calculation** section along with the applied discount amount if the voucher or cart rule is applicable to a product in the cart.|
 | PRIORITY | Defines [the discount priority](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html#discount-priority). Represented as an integer value from `1` to `9999`, `1` being the highest priority and `9999` the lowest. |
 | NON-EXCLUSIVE | Defines the exclusivity. Customers can redeem non-exclusive discounts in conjunction with other non-exclusive discounts.|
 | EXCLUSIVE | Defines the voucher's exclusivity. When a discount is exclusive, no other discounts may be applied in conjunction. When a cart is eligible for multiple exclusive discounts, the discount with the highest value to the customer is applied. The exception to this is promotional product discounts. Query string discounts and promotional product discounts exclude only among each other. Promotional product discounts are not affected by exclusive query string discounts and conversely.|
@@ -135,7 +137,7 @@ You can find plain query examples in the following table.
 
 {% info_block infoBox "Info" %}
 
-For more information about tokens, see [Token description tables](#token-description-tables).
+For more information about tokens, on this page, see [Token description tables](#token-description-tables).
 
 {% endinfo_block %}
 

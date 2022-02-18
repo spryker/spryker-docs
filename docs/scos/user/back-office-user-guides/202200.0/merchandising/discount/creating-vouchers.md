@@ -53,28 +53,22 @@ To create a discount voucher:
 5. To proceed to the **Conditions** tab, click **Next**.
 6. On the **Conditions** tab, do the following:
     1. Select the **APPLY WHEN** conditions or click **Plain query** and enter the query manually.
-    2. Enter the value for the **THE DISCOUNT CAN BE APPLIED IF THE QUERY APPLIES FOR AT LEAST X ITEM(S).** field.
+    2. Enter the value for the **THE DISCOUNT CAN BE APPLIED IF THE QUERY APPLIES FOR AT LEAST X ITEM(S)** field.
 7. To create the new voucher, click **Save**.
 
-When you click **Save**, an additional tab named **Voucher Codes** appears. Here, you can generate, view, and export voucher codes (if they were already created).
+When you click **Save**, an additional tab named **Voucher codes** appears. Here, you can generate, view, and export voucher codes (if they were already created).
 The list is empty until codes are generated.
 
 On the **Voucher code** tab, do the following:
 1. Enter the **QUANTITY** for voucher codes you want to generate.
 2. Optional: In **CUSTOM CODE**, enter any text that you would like to precede the randomly generated characters in each voucher code. You can also use the placeholder *`[code]`* to specify the location.
-3. Set the **ADD RANDOM GENERATED CODE LENGTH** by selecting the value from a drop-down list.
+3. Set the **ADD RANDOM GENERATED CODE LENGTH** by selecting the value from the drop-down list.
 4. Set **MAX NUMBER OF USES**.
 5. To complete the process, click **Generate**.
     The voucher codes are generated according to your specifications. The codes are displayed in the table at the bottom of the page.
 5. To activate the voucher, in the top right corner, click **Activate**.
 
 Even if a voucher is valid and the decision rules are satisfied, a voucher can only be redeemed if it's currently active.
-
-{% info_block infoBox %}
-
-See [Voucher code](#voucher-code) for more information.
-
-{% endinfo_block %}
 
 **Tips & tricks**
 
@@ -95,8 +89,8 @@ The following table describes the attributes you enter and select on the **Gener
 | --- | --- |
 | STORE RELATION |Stores your voucher codes will be active in. You can select multiple stores.|
 | DISCOUNT TYPE | Drop-down list where you select either **Voucher code** or **Cart rule** discount type. |
-| NAME | Unique name that will be displayed in the **Cart calculation** section along with the applied discount amount on the Storefront. Should be short, but descriptive. |
-| DESCRIPTION | Explains the voucher and helps a customer understand why they are eligible for the discount and what they can receive. The description will be displayed in the cart, in the **Promotional products** section if the discount is applicable to a product in the cart.|
+| NAME | Unique name that will be displayed in the cart, in the **Available discounts** section on the Storefront, if the voucher is valid. Should be short, but descriptive. |
+| DESCRIPTION | Explains the voucher and helps a customer understand why they are eligible for the discount and what they can receive. The description will be displayed in the **Cart calculation** section along with the applied discount amount if the discount voucher is applicable to a product in the cart.|
 | PRIORITY | Defines [the discount priority](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html#discount-priority). Represented as an integer value from `1` to `9999`, `1` being the highest priority and `9999` the lowest. |
 | NON-EXCLUSIVE | Defines the exclusivity. Customers can redeem non-exclusive discounts in conjunction with other non-exclusive discounts.|
 | EXCLUSIVE | Defines the voucher's exclusivity. When a discount is exclusive, no other discounts may be applied in conjunction. When a cart is eligible for multiple exclusive discounts, the discount with the highest value to the customer is applied. The exception to this is promotional product discounts. Query string discounts and promotional product discounts exclude only among each other. Promotional product discounts are not affected by exclusive query string discounts and conversely.|
@@ -169,7 +163,7 @@ You can find plain query examples in the following table.
 
 {% info_block infoBox "Info" %}
 
-For more information about tokens, see [Token description tables](#token-description-tables).
+For more information about tokens, on this page, see [Token description tables](#token-description-tables).
 
 {% endinfo_block %}
 

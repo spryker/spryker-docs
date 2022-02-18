@@ -149,16 +149,16 @@ defaults:
        sidebar: "paas_plus_dev_sidebar"
        role: "dev"
   -
-    scope:
-      path: "docs/pbc"
-    values:
-      product: "pbc"
+     scope:
+       path: "docs/pbc"
+     values:
+       product: "pbc"
   -
-    scope:
-      path: "docs/pbc/all-roles"
-    values:
-      sidebar: "pbc_all_roles_sidebar"
-      role: "all-roles"
+     scope:
+       path: "docs/pbc/all-roles"
+     values:
+       sidebar: "pbc_all_roles_sidebar"
+       role: "all-roles"
 
 
 versions:

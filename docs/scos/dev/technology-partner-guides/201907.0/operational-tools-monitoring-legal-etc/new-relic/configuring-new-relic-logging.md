@@ -7,7 +7,7 @@ This document describes how to configure different types of New Relic logging.
 
 ## Configuring request logging
 
-Every request is automatically logged by New Relic. The name of the requests will be the name of the used route for Yves and the `[module]/[controller]/[action]` for Zed. Also, URL request and the host are stored as custom parameters for each request.
+Every request is automatically logged by New Relic. The name of the requests is the name of the used route for Yves and the `[module]/[controller]/[action]` for Zed. Also, the URL request and the host are stored as custom parameters for each request.
 
 To enable the New Relic monitoring extension, add it to the `MonitoringDependencyProvider` in your project:
 
@@ -47,7 +47,7 @@ $config[MonitoringConstants::IGNORABLE_TRANSACTIONS] = [
 
 ## Error Logging
 
-Every error will be logged in New Relic along with its detailed stack trace.
+Every error is logged in New Relic along with its detailed stack trace.
 
 ## Configuring console command logging
 
@@ -81,14 +81,14 @@ public function getEventSubscriber(Container $container)
 
 ### Configuring deployment Logging
 
-To be able to use the deployment recording feature of New Relic, add your `api_key` and `deployment_api_url` to the project config. The API key is generated in your New Relic account. Open your account settings in New Relic and enable the API Access on the Data Sharing page. Once done, you'll get your API key. For more details, see [API Explorer](https://rpm.newrelic.com/api/explore).
+To use the deployment recording feature of New Relic, add your `api_key` and `deployment_api_url` to the project config. The API key is generated in your New Relic account. Open your account settings in New Relic and enable the API Access on the Data Sharing page. Once done, you get your API key. For more details, see [API Explorer](https://rpm.newrelic.com/api/explore).
 
 ```php
 $config[\SprykerEco\Shared\NewRelic\NewRelicEnv::NEW_RELIC_API_KEY] = 'YOUR_API_KEY';
 $config[\SprykerEco\Shared\NewRelic\NewRelicEnv::NEW_RELIC_DEPLOYMENT_API_URL] = 'NEW_RELIC_DEPLOYMENT_API_URL';
 ```
 
-The `NEW_RELIC_DEPLOYMENT_API_URL` can be retrieved from the official documentation about [Record Deployment](https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/record-deployments). It should contain the environment application ID you want to register the deployment for.
+To retrieve `NEW_RELIC_DEPLOYMENT_API_URL`, see the official documentation about [Record Deployment](https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/record-deployments). The document should contain the environment application ID you want to register the deployment for.
 
 For example: `https://api.newrelic.com/v2/applications/12345/deployments.json`
 

@@ -128,6 +128,28 @@ defaults:
       role: "dev"
   -
     scope:
+      path: "docs/fes"
+    values:
+      product: "frontend-enablement-service"
+  -
+    scope:
+      path: "docs/fes/dev"
+    values:
+      sidebar: "fes_dev_sidebar"
+      role: "dev"
+  -
+    scope:
+      path: "docs/paas-plus"
+    values:
+      product: "platform-as-a-service-plus"
+  -
+    scope:
+      path: "docs/paas-plus/dev"
+    values:
+      sidebar: "paas_plus_dev_sidebar"
+      role: "dev"
+  -
+    scope:
       path: "docs/aop"
     values:
       product: "aop"
@@ -143,7 +165,7 @@ defaults:
     values:
       sidebar: "aop_user_sidebar"
       role: "user"
-
+  -
      scope:
        path: "docs/fes"
      values:
@@ -165,7 +187,6 @@ defaults:
      values:
        sidebar: "paas_plus_dev_sidebar"
        role: "dev"
-
 
 versions:
   '201811.0': '201811.0'
@@ -222,6 +243,8 @@ sidebars:
   - aop_user_sidebar
   - fes_dev_sidebar
   - paas_plus_dev_sidebar
+  - aop_dev_sidebar
+  - aop_user_sidebar
 
 description: "Spryker documentation center."
 # the description is used in the feed.xml file
@@ -258,6 +281,10 @@ algolia:
       title: 'Frontend enablement Service Developer'
     - name: 'paas_plus_dev'
       title: 'Platform as a Service Plus Developer'
+    - name: 'aop_user'
+      title: 'AOP User'
+    - name: 'aop_dev'
+      title: 'AOP Developer'
 
 sass:
     sass_dir: css

@@ -1,5 +1,5 @@
 ---
-title: App Orchestration Platform Commercial Terms
-description: Learn about the App Orchestration Platform  Commercial Terms.
-template: concept-topic-template
+title: Commercial terms
+description: description
+template: howto-guide-template
 ---

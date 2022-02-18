@@ -1,5 +1,5 @@
 ---
 title: Payone
-description: Learn about the Payone app.
-template: concept-topic-template
+description: Description
+template: howto-guide-template
 ---

@@ -127,7 +127,7 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
 
     {% info_block warningBox "Warning" %}
 
-    Note that some versions of Windows have limitation of number of hostnames per line. It is recommended not to exceed 10 hostnames per line. Split long line into multiple lines if necessary.
+    Some versions of Windows have a limitation of the number of hostnames per line. It is recommended not to exceed 10 hostnames per line. Split a long line into multiple lines if necessary.
 
     {% endinfo_block %}
  
@@ -148,7 +148,7 @@ Depending on the hardware performance, the first project launch can take up to 2
 
 ## Endpoints
 
-To ensure that the installation is successful, make sure you can access the configured endpoints from the Deploy file. See [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html) to learn about the Deploy file.
+To ensure that the installation is successful, make sure you can access the configured endpoints from the Deploy file. For more information about the Deploy file, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
 
 {% info_block infoBox "RabbitMQ UI credentials" %}
 

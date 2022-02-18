@@ -1,5 +1,5 @@
 ---
-title: Installation
-Descriptions: Installation details for App Orchestration Platform.
+title: App Orchestration Platform installation
+description: description
 template: howto-guide-template
 ---

@@ -1,5 +1,5 @@
 ---
-title: Prerequisites for adding user consent management
-Descriptions: Prerequisites for adding user consent management.
+title: Prerequisites for adding User Consent Management systems
+description: description
 template: howto-guide-template
 ---

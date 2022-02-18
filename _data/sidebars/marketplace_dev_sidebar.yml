@@ -6,7 +6,7 @@ entries:
     nested:
       - title: Setup
         nested:
-          - title: System requirements
+          - title: DevVM system requirements
             url: /docs/marketplace/dev/setup/system-requirements.html
 
           - title: Infrastructure requirements

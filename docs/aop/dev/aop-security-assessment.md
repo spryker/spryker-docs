@@ -1,12 +1,12 @@
 ---
 title: AOP Security Assessment
-Descriptions: This document outlines the Threat modeling and Security Assessment requirements and process for apps listed on Spryker’s App Catalog or App Store.
+Descriptions: This document outlines the threat modeling and security assessment requirements and process for apps listed on Spryker’s App Catalog or App Store.
 template: howto-guide-template
 ---
 
 ## Introduction
 
-This document outlines the Threat modeling and Security Assessment requirements and process for apps listed on Spryker’s App Catalog or App Store. It covers the following app types:
+This document outlines the threat modeling and security assessment requirements and process for apps listed on Spryker’s App Catalog or App Store. It covers the following app types:
 
 - Pure API integrations (with 3rd party services and vendors)
 - Apps extending the Spryker Cloud Commerce Operating System (SCCOS)

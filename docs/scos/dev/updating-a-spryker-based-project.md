@@ -50,7 +50,7 @@ The most typical reasons for you to update your modules or features are:
 * You want a (new) specific feature or module in your project, which requires a newer version of your module(s).
 * Your project has been started shortly before a new [product release](/docs/scos/user/intro-to-spryker/spryker-release-process.html#product-releases).
 * You experience some issues with the shop that you would like to report/consult about.
-* Besides, if you plan to extend your shop in the future with new features from the ones that are already existing in Spryker or are coming soon (see [Roadmap](/docs/scos/user/intro-to-spryker//whats-new/roadmap.html)) you should be staying up-to-date with your current modules/features. It will ease the new feature installation and reduce the migration efforts, allowing you to get the desired functionality faster.
+* Besides, if you plan to extend your shop in the future with new features from the ones that are already existing in Spryker or are coming soon you should be staying up-to-date with your current modules/features. It will ease the new feature installation and reduce the migration efforts, allowing you to get the desired functionality faster.
 
 {% info_block warningBox "Warning" %}
 
@@ -61,7 +61,7 @@ The more outdated your module versions become, the more effort will be needed to
 But how often should you be taking care of the updates?
 
 **The most reasonable strategy - is sticking to the Spryker release cycle** and updating your current modules whenever there is a new release announcement. [Subscribe to the release notes](/docs/scos/user/intro-to-spryker/releases/releases.html) if you want to know about the new release right after it happened.
-During the active development phase, it would make sense to do updates more often, i.e., monthly.
+During the active development phase, it would make sense to do updates more often, for example, monthly.
 
 ## Features vs. individual module updates
 
@@ -261,7 +261,7 @@ One of the most common issue projects face during the upgrade, is the situation,
 Usually, when you're inheriting a class from Spryker, you want to change its behavior. But before extending the class, check if you can do the following:
 * **Configure the behavior**. Check your environment and module configs. If configuration can fit your needs - that would be the best solution.
 * Change the behavior by **introducing a new plugin or an event listener**. If the behavior you want to inherit is triggered by one of the plugins in a plugin stack or by an event listener, just add a new plugin and introduce a new class at the project level (potentially, implementing some interface). You don't need inheritance in this case.
-* **Use a composition pattern**. There is a lot of information on the internet for *composition vs. inheritance* that will help you to understand the pattern. The main idea is to introduce a new class at the project level and to use the class you wanted to inherit as a constructor dependency, i.e., kind of "wrapping". Even though this is a very good practice, it might not work in cases when you want to change protected methods.
+* **Use a composition pattern**. There is a lot of information on the internet for *composition vs. inheritance* that will help you to understand the pattern. The main idea is to introduce a new class at the project level and to use the class you wanted to inherit as a constructor dependency, for example, kind of "wrapping". Even though this is a very good practice, it might not work in cases when you want to change protected methods.
 * **Do you really need the inheritance?** In case of heavy customizations, think if you really need to extend the existing Spryker class. Replacing it by introducing a new class at the project level and instantiating it in the corresponding factory instead of the Spryker one - would be the preferred way to go.
 
 ### 2. Follow the best practices for inheritance

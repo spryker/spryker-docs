@@ -36,26 +36,32 @@ To start working with product sets, go to **Merchandising** > **Product Sets** s
     The **Product** tab is where you will select which products should be included in your product set.
 4. To add products, simply select the checkbox next to your desired products in the **Selected** column. You can use the available search tool on the top right of the **Select Products to assign** tab on this page. You can select as many products as needed — there is no limit.
     {% info_block errorBox "Important" %}
-Any Product Set requires a minimum of two Products.
-{% endinfo_block %}
+
+    Any Product Set requires a minimum of two Products.
+
+    {% endinfo_block %}
+
 5. Select **Next** to proceed to the **SEO** tab, or just click on it.
     This tab is used to add a piece of friendly SEO information for your product set to improve the search.
 6. On the **SEO** tab, enter the SEO information for your product set. See [Product Sets: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-sets/references/product-sets-reference-information.html) to know more about the SEO attributes. Fill in all this information for any languages your store requires. None of the SEO descriptions or title will be shown in the online store.
 7. Select the **Next** to proceed to the **Images** tab, or just click on it.
 8. In the **Images** tab, click **Add image set**.
 9. Enter the name of your image set and add the URLs to the images. For more information about the attributes you enter, see [Product Sets: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-sets/references/product-sets-reference-information.html). You can select as many images as you would like in your image set by selecting **Add Image**.
-Following the same procedure, choose images particular to your different online stores.
+    Following the same procedure, choose images particular to your different online stores.
+    
     {% info_block infoBox "Info" %}
-If you do not specify different images for your different stores, the system will use the photos displayed in the **Default** drop-down
-{% endinfo_block %}
+    
+    If you do not specify different images for your different stores, the system will use the photos displayed in the **Default** drop-down
+    
+    {% endinfo_block %}
 10. Once you are satisfied with the setup, click **Submit**.
 
-{% info_block infoBox "Activating a product set" %}
+    {% info_block infoBox "Activating a product set" %}
 
-If you did not select the **Active** checkbox on in the *General* tab, your product set is inactive.
-To activate it, click **Activate** on the **View Product Set** page, or select **Activate** in the _Actions_ column of the **Product Sets** page.
+    If you did not select the **Active** checkbox on in the *General* tab, your product set is inactive.
+    To activate it, click **Activate** on the **View Product Set** page, or select **Activate** in the _Actions_ column of the **Product Sets** page.
 
-{% endinfo_block %}
+    {% endinfo_block %}
 
 
 ***

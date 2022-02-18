@@ -1,5 +1,5 @@
 ---
-title: Order History API feature integration
+title: Glue API - Order History feature integration
 description: This guide will navigate through the process of installing and configuring of the Order History API feature used in Spryker OS.
 last_updated: Nov 4, 2019
 template: feature-integration-guide-template

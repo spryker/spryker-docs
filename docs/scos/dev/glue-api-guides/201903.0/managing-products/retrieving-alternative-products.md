@@ -13,7 +13,7 @@ related:
   - title: Retrieving Product Information
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/retrieving-product-information.html
   - title: Catalog Search
-    link: docs/scos/dev/glue-api-guides/page.version/catalog-search.html
+    link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.htmlct-catalog.html
 ---
 
 The _Alternative Products_ feature allows customers to quickly find a substitute product in case if their preferred item runs out of stock or is no longer available for other reasons. The feature is particularly useful when a certain product becomes discontinued. In this case, customers usually seek for a more up-to-date generation of the same product, and suggesting possible alternatives is especially crucial.
@@ -75,7 +75,7 @@ To be able to use Product Alternatives API, first, you need to have the Alternat
 {% endinfo_block %}
 
 ## Checking Whether Product is Discontinued
-Before suggesting an alternative product, first, you need to identify whether a product is still available, i.e. not discontinued. For this purpose, the response of the `/concrete-products` endpoint has been extended with the following attributes:
+Before suggesting an alternative product, first, you need to identify whether a product is still available, for example, not discontinued. For this purpose, the response of the `/concrete-products` endpoint has been extended with the following attributes:
 
 | Attribute | Type | Description |
 | --- | --- | --- |

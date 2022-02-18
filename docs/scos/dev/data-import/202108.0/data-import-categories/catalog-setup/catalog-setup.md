@@ -21,10 +21,10 @@ We recommend setting up the Catalog after having done the [Commerce Setup](/docs
 
 This section will help you import the necessary product-related data to be able to sell products/services in your online store. We have structured it into four main categories focusing on the following topics:
 
-*     [Categories](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/categories.html)
-*     [Products](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/products.html)
-*     [Pricing](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/pricing/pricing.html)
-*     [Stocks](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/stocks.html)
+* [Categories](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/categories.html)
+* [Products](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/products.html)
+* [Pricing](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/pricing/pricing.html)
+* [Stocks](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/stocks.html)
 
 Within the [Categories](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/categories.html) section, you will find all information about the data imports required to set up categories that can be used in your online store as well as whether they are active, searchable in the menu, etc.
 

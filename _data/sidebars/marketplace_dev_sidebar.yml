@@ -4,6 +4,17 @@ title: Marketplace Developer Guides
 entries:
   - product: Marketplace
     nested:
+      - title: Setup
+        nested:
+          - title: System requirements
+            url: /docs/marketplace/dev/setup/system-requirements.html
+
+          - title: Infrastructure requirements
+            url: /docs/marketplace/dev/setup/infrastructure-requirements.html
+
+          - title: Installation
+            url: /docs/marketplace/dev/setup/installation.html
+
       - title: Marketplace architecture overview
         nested:
           - title: Marketplace Application composition
@@ -17,17 +28,6 @@ entries:
 
           - title: Marketplace in the Back Office
             url: /docs/marketplace/dev/architecture-overview/marketplace-in-back-office.html
-
-      - title: Setup
-        nested:
-          - title: System requirements
-            url: /docs/marketplace/dev/setup/system-requirements.html
-
-          - title: Infrastructure requirements
-            url: /docs/marketplace/dev/setup/infrastructure-requirements.html
-
-          - title: Installation
-            url: /docs/marketplace/dev/setup/installation.html
 
       - title: Feature walkthroughs
         nested:
@@ -313,7 +313,7 @@ entries:
                 url: /docs/marketplace/dev/feature-integration-guides/glue/prices-marketplace-wishlist-feature-integration.html
 
               - title: "Glue API: Marketplace Product Offer Volume Prices feature integration"
-                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-volume-prices.html
+                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-volume-prices-feature-integration.html
 
               - title: "Glue API: Marketplace Return Management feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-return-management-feature-integration.html

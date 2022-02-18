@@ -479,7 +479,7 @@ The command is executed by the worker which is defined as a job in Jenkins:
 ```
 {vagrant@spryker-vagrant ➜  current git:(master) ✗  console queue:task:start publish.hello_world
 Store: DE | Environment: development
-Hello World!
+Hello World Writer!
 ```
 
 {% info_block warningBox "Verification" %}
@@ -639,7 +639,7 @@ namespace Pyz\Zed\HelloWorldStorage\Business\Deleter;
 
 ..
 
-class HelloWorldStorageDeleter implements HelloWorldStorageWriterInterface
+class HelloWorldStorageDeleter implements HelloWorldStorageDeleterInterface
 {
     /**
      * @param \Generated\Shared\Transfer\EventEntityTransfer[] $eventTransfers
@@ -844,7 +844,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
     }
 ```
 
-3. Add `MessageProcessor` for the queue to `\Pyz\Zed\QueueQueueDependencyProvider::getProcessorMessagePlugins()`:
+3. Add `MessageProcessor` for the queue to `\Pyz\Zed\Queue\QueueDependencyProvider::getProcessorMessagePlugins()`:
 
 ```php
 <?php
@@ -858,7 +858,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
     /**
      * @return array
      */
-    protected function getSynchronizationQueueConfiguration(): array
+    protected function getProcessorMessagePlugins(): array
     {
         return [
             ...
@@ -965,7 +965,7 @@ class MessageStorageReader implements MessageStorageReaderInterface
             ->setReference($idMessage);
 
         $key = $this->synchronizationService
-            ->getStorageKeyBuilder('message')
+            ->getStorageKeyBuilder('message') // "message" is the resource name
             ->generateKey($synchronizationDataTransfer);
 
         $data = $this->storageClient->get($key);

@@ -1,5 +1,5 @@
 ---
-title: Glue API - Promotions & Discounts feature integration
+title: Glue API - Promotions and Discounts feature integration
 description: Use the guide to install the Promotions and Discounts feature in your project.
 last_updated: Sep 9, 2020
 template: feature-integration-guide-template
@@ -11,7 +11,9 @@ redirect_from:
 ---
 
 ## Install Feature API
+
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide |
@@ -21,6 +23,7 @@ To start feature integration, overview and install the necessary features:
 | Promotions & Discounts | {{page.version}} |  |
 
 ### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
@@ -29,10 +32,18 @@ composer require spryker/cart-codes-rest-api:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules have been installed:<table><thead><tr><th>Module</th><th>Expected Directory </th></tr></thead><tbody><tr><td>`ProductLabelsRestApi`</td><td>`vendor/spryker/product-labels-rest-api`</td></tr><tr><td>`CartCodesRestApi`</td><td>`vendor/spryker/cart-codes-rest-api`</td></tr></tbody></table>
+
+Make sure that the following modules have been installed:
+
+|Module|Expected Directory|
+|--- |--- |
+|`ProductLabelsRestApi`|`vendor/spryker/product-labels-rest-api`|
+|`CartCodesRestApi`|`vendor/spryker/cart-codes-rest-api`|
+
 {% endinfo_block %}
 
 ### 2) Set up Database Schema and Transfer Objects
+
 Run the following commands to generate transfer changes:
 
 ```bash
@@ -42,15 +53,34 @@ console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes have occurred in transfer objects:<table><thead><tr><th>Transfer</th><th>Type</th><th>Event</th><th>Path</th></tr></thead><tbody><tr><td>`RestProductLabelsAttributesTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/RestDiscountsAttributesTransfer`</td></tr><tr><td>`RestDiscountsAttributesTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/RestProductLabelsAttributesTransfer`</td></tr><tr><td>`CartCodeRequestTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CartCodeRequestTransfer`</td></tr><tr><td>`CartCodeResponseTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/CartCodeResponseTransfer`</td></tr></tbody></table>
+
+Make sure that the following changes have occurred in transfer objects:
+
+|Transfer|Type|Event|Path|
+|--- |--- |--- |--- |
+|`RestProductLabelsAttributesTransfer`|class|created|`src/Generated/Shared/Transfer/RestDiscountsAttributesTransfer`|
+|`RestDiscountsAttributesTransfer`|class|created|`src/Generated/Shared/Transfer/RestProductLabelsAttributesTransfer`|
+|`CartCodeRequestTransfer`|class|created|`src/Generated/Shared/Transfer/CartCodeRequestTransfer`|
+|`CartCodeResponseTransfer`|class|created|`src/Generated/Shared/Transfer/CartCodeResponseTransfer`|
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that `SpyProductAbstractStorage` and `SpyProductConcreteStorage` are extended by synchronization behavior with these methods:<table><thead><tr><th>Entity</th><th>Type</th><th>Event</th><th>Path</th><th>Methods</th></tr></thead><tbody><tr><td>`SpyProductAbstractStorage`</td><td>class</td><td>extended</td><td>`src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductAbstractStorage`</td><td>`syncPublishedMessageForMappings(
-{% endinfo_block %}`,<br>`syncUnpublishedMessageForMappings()`</td></tr><tr><td>`SpyProductConcreteStorage`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/RestProductLabelsAttributesTransfer`</td></tr><tr><td>`CartCodeRequestTransfer`</td><td>class</td><td>extended</td><td>`src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductConcreteStorage`</td><td>`syncPublishedMessageForMappings()`,<br>`syncUnpublishedMessageForMappings()`</td></tr></tbody></table>)
+
+Make sure that `SpyProductAbstractStorage` and `SpyProductConcreteStorage` are extended by synchronization behavior with these methods:
+
+| ENTITY  | TYPE  | EVENT    | PATH  | METHODS            |
+| --------------------------- | ----- | -------- | ------------ | ---------------------------------------------------------------------------- |
+| `SpyProductAbstractStorage` | class | extended | `src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductAbstractStorage` | `syncPublishedMessageForMappings()` `syncUnpublishedMessageForMappings()` |
+| `SpyProductConcreteStorage` | class | created  | `src/Generated/Shared/Transfer/RestProductLabelsAttributesTransfer`     |                                                                              |
+| `CartCodeRequestTransfer`   | class | extended | `src/Orm/Zed/ProductStorage/Persistence/Base/SpyProductConcreteStorage` | `syncPublishedMessageForMappings()` `syncUnpublishedMessageForMappings()` |
+
+{% endinfo_block %})
 
 ### 3) Set up Behavior
+
 #### Enable resources and relationships
+
 Activate the following plugin:
 
 | Plugin | Specification | Prerequisites | Namespace |
@@ -63,8 +93,7 @@ Activate the following plugin:
 | `CartRuleByQuoteResourceRelationshipPlugin` | Adds the **cart-rules** resource as a relationship by quote. | None | `Spryker\Glue\CartCodesRestApi\Plugin\GlueApplication` |
 | `VoucherByQuoteResourceRelationshipPlugin` | Adds the **vouchers** resource as a relationship by quote. | None | `Spryker\Glue\CartCodesRestApi\Plugin\GlueApplication` |
 
-<details open>
-   <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
     
 ```php
 <?php
@@ -135,12 +164,9 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
-<br>
-</details>
-
 {% info_block warningBox "Verification" %}
-Make sure that the following endpoint is available:<ul><li>`http://glue.mysprykershop.com/product-labels/{% raw %}{{{% endraw %}idProductLabel{% raw %}}}{% endraw %}`</li></ul>
-{% endinfo_block %}
+
+Make sure that the following endpoint is available: `http://glue.mysprykershop.com/product-labels/{% raw %}{{{% endraw %}idProductLabel{% raw %}}}{% endraw %}`
 
 **Example response:**
 
@@ -161,10 +187,11 @@ Make sure that the following endpoint is available:<ul><li>`http://glue.myspryke
     }
 }
 ```
+{% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
+
 Send a request to `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}?include=product-labels` and verify whether the abstract product with the given SKU has at least one assigned product label and the response includes relationships to the **product-labels** resources.
-{% endinfo_block %}
 
 **Example response:**
 
@@ -207,10 +234,11 @@ Send a request to `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{%
     ]
 }
 ```
+{% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
+
 Send a request to `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}?include=product-labels` and verify whether the concrete product with the given SKU has at least one assigned product label and the response includes relationships to the **product-labels** resources.
-{% endinfo_block %}
 
 **Example response:**
 
@@ -253,17 +281,22 @@ Send a request to `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{%
     ]
 }
 ```
-
-{% info_block warningBox "Verification" %}
-Make sure that the following endpoints are available:<ul><li>`http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/vouchers`</li><li>`http://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}/vouchers`</li></ul>
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the following endpoint is available:<ul><li>`http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}?include=vouchers,cart-rules`</li></ul>
+
+Make sure that the following endpoints are available:
+- `http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/vouchers`
+- `http://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}/vouchers`
+
 {% endinfo_block %}
 
-<details open>
-<summary markdown='span'>Example</summary>
+{% info_block warningBox "Verification" %}
+
+Make sure that the following endpoint is available: 
+- `http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}?include=vouchers,cart-rules`
+
+**Example**
 
 ```json
 {
@@ -356,16 +389,14 @@ Make sure that the following endpoint is available:<ul><li>`http://glue.myspryke
     ]
 }
 ```
-
-<br>
-</details>
-
-{% info_block warningBox "Verification" %}
-Make sure that the following endpoint is available:<ul><li>`http://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest-cart_uuid{% raw %}}}{% endraw %}?include=vouchers,cart-rules`</li></ul>
 {% endinfo_block %}
 
-<details open>
-<summary markdown='span'>Example</summary>
+{% info_block warningBox "Verification" %}
+
+Make sure that the following endpoint is available:
+- `http://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest-cart_uuid{% raw %}}}{% endraw %}?include=vouchers,cart-rules`
+
+**Example**
 
 ```json
 {
@@ -458,6 +489,4 @@ Make sure that the following endpoint is available:<ul><li>`http://glue.myspryke
     ]
 }
 ```
-
-<br>
-</details>
+{% endinfo_block %}

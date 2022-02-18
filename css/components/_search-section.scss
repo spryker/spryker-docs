@@ -9,6 +9,7 @@
 
     @include media("<tablet") {
         padding: 90px 0;
+        background-image: url('../images/search-section-bg-sm.png');
     }
 
     &__title {

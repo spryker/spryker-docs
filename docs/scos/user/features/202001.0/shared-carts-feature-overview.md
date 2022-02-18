@@ -1,5 +1,5 @@
 ---
-title: Shared Cart Feature Overview
+title: Shared Carts feature overview
 description: In B2B world shopping carts can be created and used by different individuals. A shopping cart can be shared with the users of the current business unit.
 last_updated: Nov 22, 2019
 template: concept-topic-template
@@ -64,7 +64,7 @@ _**Read-only**_ permission allows:
 * Grand Total
 
 {% info_block warningBox %}
-With Read-only permission, no cart actions are available to the user.![Read-only cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shared+Cart+Feature+Overview/read-only-cart.png
+With Read-only permission, no cart actions are available to the user. [Read-only cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shared+Cart+Feature+Overview/read-only-cart.png)
 {% endinfo_block %} )
 
 ### Full access

@@ -10,18 +10,18 @@ redirect_from:
   - /v4/docs/en/powerpay
 related:
   - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
+    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Payment Information
-[ABOUT POWERPAY](https://getpowerpay.com/)
+[ABOUT POWERPAY](https://powerpay.org/index.php)
 Omni-channel payment solutions for the 21st century
 
 powerpay21 is a Global FinTech Network that provides payment products and solutions for merchants whether offline or online.
 We gained worldwide payments expertise that delivers results for our merchants. From delivering omni-channel payment solutions to controlling risk and fraud to delivering higher conversion ratios, businesses across the world have trusted us and have benefited from our merchant solutions. powerpay21 is committed to outstanding service, out-of-the box solutions and long-lasting relationships.
 
 **Acquiring through powercash21:**
-Operating as a Payments Institution with a license granted by the Central Bank of Cyprus. (Company No: HE289380; License No: 115.1.2.9/2018) (www.centralbank.gov.cy) Principal member of Visa and MasterCard Certified on the Omnipay platform for card present and card not present.
+Operating as a Payments Institution with a license granted by the Central Bank of Cyprus. (Company No: HE289380; License No: 115.1.2.9/2018) (`www.centralbank.gov.cy`) Principal member of Visa and MasterCard Certified on the Omnipay platform for card present and card not present.
 
 **Prepaid debit cards via powercard21 – both Visa and MasterCard:**
 Boutique prepaid issuing programs, White labelled programs and a Bespoke Bank Management Suite (BMS) providing financial institutions, customer service and program administrators with a comprehensive online suite of functions and reports.

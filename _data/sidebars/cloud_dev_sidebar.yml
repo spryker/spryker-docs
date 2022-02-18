@@ -1,4 +1,4 @@
-title: Spryker Cloud engineer guides
+title: SCCOS Engineer guides
 entries:
   - product: CLOUD
     nested:
@@ -100,6 +100,10 @@ entries:
                 url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-a-killed-process.html
               - title: Troubleshooting an unavailable Zed
                 url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-an-unavailable-zed.html
+              - title: Troubleshooting failing Yves authentication
+                url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-failing-yves-authentication.html
+              - title: Troubleshooting error 403
+                url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-403-error.html
               - title: Troubleshooting unavailable Yves or Glue
                 url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-unavailable-yves-or-glue.html
               - title: Troubleshooting Yves or Zed not restarting after deployment

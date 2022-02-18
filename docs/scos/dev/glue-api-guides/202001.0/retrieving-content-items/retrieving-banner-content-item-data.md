@@ -20,16 +20,22 @@ The **Banner API** implements REST API endpoint that provides the possibility to
 In your development, these resources can help you get relevant information for your Banner content item for all or a specific locale. For example, you can view what page address your banner is linked to or what details are displayed for a specific locale.
 
 {% info_block infoBox %}
-For more information on creating and managing content items in CMS, see [Content Items](https://documentation.spryker.com/v4/docs/content-items-guide-201907).
+
+For more information on creating and managing content items in CMS, see:
+To learn how to create and manage content items in CMS, see:
+* [Creating Content Items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html).
+* [Editing Content Items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/editing-content-items.html).
+* [Editing Content Items in CMS Pages and Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/editing-content-items-in-cms-pages-and-blocks.html).
+* 
 {% endinfo_block %}
 
 ## Installation
-For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-api-feature-integration.html).
+For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-feature-integration.html).
 
 ## Retrieving Banner Content Item Data
 To retrieve the Banner content item data, send a GET request to the following endpoint:
 
-/content-banners/{content_item_key} 
+/content-banners/{content_item_key}
 
 Sample request: _GET http://mysprykershop.com/content-banners/br-3_
 where **content-banners** is the content item type and **br-3** is the key of the Banner content item you want to retrieve.
@@ -41,7 +47,7 @@ The locale must be specified in the **header** of the GET request. If no locale 
 If the request is successful and the Banner content item with the specified content item key has been found, the endpoint will respond with **RestContentBannerResponse**.
 
 **Sample response:**
-    
+
 ```php
 {
 	"data": {
@@ -76,5 +82,3 @@ If the request is successful and the Banner content item with the specified cont
 | 2201 | Content not found. |
 |2202  | Content key is missing. |
 | 2203 | Content type is invalid. |
-
-

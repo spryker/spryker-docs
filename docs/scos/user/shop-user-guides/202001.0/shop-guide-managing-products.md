@@ -24,7 +24,6 @@ This article describes how you, as a Buyer, can manage products in the Storefron
 You, as a Buyer, can manage and perform all the actions on products from the **Product detail page** as well as view main details of the specific product, for example, a price, a product SKU, general description of the product, customer reviews, and other relevant information you may be interested in before making a final purchase decision.
 ***
 You can navigate to a product detail page from:
-
 * Home page by clicking a product card
 * Catalog page by clicking a product card
 * Shopping list by clicking a product name
@@ -58,7 +57,7 @@ On the product detail page, you can view some general product information that i
 | 4 | **Product price (default and original)** | *Default* price is the actual current price in the currency you’ve selected, while an *original* price (strikeout) is the price that has been applied before the default price is used due to some product promotion. |
 | 5 | **Ratings** | Product star rating. |
 | 6 | **Product group** | Set of products grouped by color. |
-| 7 | **Product options** | Additional items you can purchase along with the product. The examples can be gift wrapping, warranty, and insurance. See [Product Options Overview](/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html#product-options-overview) for more information. |
+| 7 | **Product options** | Additional items you can purchase along with the product. The examples can be gift wrapping, warranty, and insurance. See [Product Options Overview](/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html) for more information. |
 | 8 | **Add to Cart section** | Section you can use to add a product to a cart. See the Adding a Product to Cart section for more details. |
 | 9 | **Add to Shopping list section** | Section you can use to add a product to a shopping list. See the Adding a Product to Shopping List section for more details. |
 | 10 | **Add to Wishlist section** | Section you can use to add a product to a wishlist. See the Adding a Product to Wishlist section for more details. |
@@ -81,18 +80,19 @@ To sum up, on the product detail page, you can do the following:
 * Add the product to the shipping list or wishlist (if applicable for the shop)
 * Set a rating and share your feedback about the product
 * Navigate to the PDP pages of other products displayed on the page
+
 ***
+
 ## Adding a Product to Cart
 
 {% info_block warningBox "If you have the Multiple Carts feature enabled, then:" %}
 
-
 Prior to adding a product to the cart, make sure that you’ve selected the cart you need. For this, on top of the page, in the My cart widget, select the cart to which you want to add the product.
 You have the following options to select the shopping cart:
 
-* select the cart from the five carts displayed by default in the widget
-* select the cart from all available carts by clicking **All Carts** in the widget
-* create a new cart by clicking **Create New Cart**. Then, enter the name of the cart in the **Cart Name** field, and click **Submit**. For more information on how to create carts, see [Shop Guide - Creating a Shopping Cart](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-shopping-carts/shop-guide-creating-a-shopping-cart.html).
+* Select the cart from the five carts displayed by default in the widget
+* Select the cart from all available carts by clicking **All Carts** in the widget
+* Create a new cart by clicking **Create New Cart**. Then, enter the name of the cart in the **Cart Name** field, and click **Submit**. For more information on how to create carts, see [Shop Guide - Creating a Shopping Cart](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-shopping-carts/shop-guide-creating-a-shopping-cart.html).
 
 ![Shopping cart widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/shopping-cart-widget.png)
 
@@ -107,6 +107,7 @@ You have the following options to select the shopping cart:
 
 ![Add to cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/add-to-cart-howto.png)
 ***
+
 ## Adding a Product to Shopping List
 
 {% info_block warningBox %}
@@ -115,7 +116,7 @@ The shopping lists are available only for **B2B** shop users.
 
 {% endinfo_block %}
 
-You can order frequently bought products faster by adding the products to a [shopping list](https://documentation.spryker.com/v4/docs/multiple-and-shared-shopping-lists-overview).
+You can order frequently bought products faster by adding the products to a [shopping list](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html).
 
 **To add a product to the shopping list:**
 
@@ -127,8 +128,11 @@ You can order frequently bought products faster by adding the products to a [sho
 **Tips & Tricks**
 
 If you have no shopping lists created in your account, a drop-down list with shopping lists will be unavailable. Clicking **Add to Shopping list** will create a new shopping list with the default name ‘Shopping List’ and add the product to it.
+
 ***
+
 ## Adding a Product Review
+
 With the [Product Reviews](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html) feature, you can share your experience or feedback about using the product.
 
 **To add a review:**
@@ -175,8 +179,8 @@ If you have several wishlists in your account, then first, select the wishlist t
 
 **What’s next?**
 
-After you added the product to the cart, you can proceed with the checkout. For more information, see [Shop Guide - Checkout](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-checkout.html#shop-guide---checkout).
+After you added the product to the cart, you can proceed with the checkout. For more information, see [Shop Guide - Checkout](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-checkout.html).
 
-To learn how to create and manage shopping lists, see [Shop Guide - Shopping Lists](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-shopping-lists.html#shop-guide---shopping-lists).
+To learn how to create and manage shopping lists, see [Shop Guide - Shopping Lists](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-shopping-lists.html).
 
 To learn how to create and manage wishlists, see [Shop Guide - Managing Wishlists](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-wishlists.html).

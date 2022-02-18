@@ -15,11 +15,11 @@ Roles page allows your shop owner to manage the roles for your company.
 
 To open the Company Roles page, go to the header of the shop application → Name of your company → Roles.
 
-![Roles header](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/roles-header.png) 
+![Roles header](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/roles-header.png)
 
 ## Graphic User Interface
 
-![Roles GUI](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/roles-gui.png) 
+![Roles GUI](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/roles-gui.png)
 
 The *Company Roles* page consists of the following elements:
 
@@ -37,7 +37,7 @@ The *Company Roles* page consists of the following elements:
 
 1. On the **Company Roles** page, click **+Create New Role**.
 2. Enter the name of the role.
-![Create a role](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/create-role.png) 
+![Create a role](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/create-role.png)
 
 {% info_block infoBox %}
 Selecting the **Is Default** check-box means that the new users will be created with this role assigned by default.
@@ -52,7 +52,7 @@ You can edit the existing role settings by completing the steps below:
 1. On the **Company Roles** page, click![Edit icon](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/edit-icon.png) next to the company user you would like to edit.
 2. Update the necessary settings.
 
-![Edit a role](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/edit-role.png) 
+![Edit a role](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/edit-role.png)
 
 A role includes a set of permissions that can be enabled/disabled according to your needs by switching the toggle in Enable column.
   - **Add company users** - allows adding company users. With this permission enabled, a user will have Create User button on the Company Users page.
@@ -64,17 +64,17 @@ A role includes a set of permissions that can be enabled/disabled according to y
   - **Remove item from cart** - allows deleting the products from the cart.
   - **Place Order** - allows placing the order. With this permission enabled, a user will have  error when trying to submit the order.
   - **Alter Cart Up to Amount** - allows changing the content of the cart (adding new products, changing the quantity of the existing products etc.) until it hits the limit specified in this permission. When the limit is reached, the buyer will not be able to change the contents of the cart and will get *This action is forbidden* error.
-  - **Buy up to grand total (Requires "Send cart for approval")** - sets a limit for the grand total of the cart. If the amount in the cart is bigger than the limit set in this permission, the user will not be able to proceed to checkout. Works with Send cart for approval permission. This permission is available after enabling the [Approval Process](https://documentation.spryker.com/v1/docs/approval-process-201903) feature.
-  - **Approve up to grand total** - with this permission enabled, a user can approve the the cart. See [Approval Feature Overview](https://documentation.spryker.com/v1/docs/approval-process-overview-201903) for more details.
-  - **Send cart for approval (Requires "Buy up to grand total")** - allows a user to send the cart for approval. Works together with Buy up to grand total permission. See [Approval Feature Overview](https://documentation.spryker.com/v1/docs/approval-process-overview-201903) for more details.
+  - **Buy up to grand total (Requires "Send cart for approval")** - sets a limit for the grand total of the cart. If the amount in the cart is bigger than the limit set in this permission, the user will not be able to proceed to checkout. Works with Send cart for approval permission. This permission is available after enabling the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) feature.
+  - **Approve up to grand total** - with this permission enabled, a user can approve the the cart. See [Approval Feature ](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) for more details.
+  - **Send cart for approval (Requires "Buy up to grand total")** - allows a user to send the cart for approval. Works together with Buy up to grand total permission. See [Approval Feature Overview](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html) for more details.
 3. Click **Submit**.
 
 ## Deleting a Company Role
 
 You can delete a company user by clicking ![Delete icon](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/delete-icon.png) icon next to the company user you are going to delete. Confirm the removal by clicking **Delete**.
 
-![Delete a role](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/delete-role.png) 
+![Delete a role](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Company+Roles/delete-role.png)
 
-Don't forget to check out the video tutorial on setting up the [Company Roles](https://documentation.spryker.com/v1/docs/company-roles-permissions-overview) in Spryker [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html):
+Don't forget to check out the video tutorial on setting up the [Company Roles](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html) in Spryker [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html):
 
 {% wistia 72qy3slwjo 960 720 %}

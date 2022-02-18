@@ -1,5 +1,5 @@
 ---
-title: Company user roles and permissions
+title: Company user roles and permissions overview
 description: Usually employees within a company have different roles (purchasing, administration, supervision, etc.). These roles are referred to as Company Roles.
 last_updated: Jun 2, 2021
 template: concept-topic-template
@@ -12,14 +12,11 @@ redirect_from:
   - /v6/docs/en/company-roles-reference-information
 ---
 
-
-
-
 Usually employees within a company have different roles (e.g. purchasing, administration, supervision, etc.). These roles are related to Company Users and are referred to as **Company Roles**. A role can be default (“is_default” flag), which means that it is used for all new users automatically.
 
 Upon initial creation of the first Company User, the default role is Admin. After the Admin user has been created, he/she creates the structure of the company and can define the default role to be used further on.
 
-![roles.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/roles.png) 
+![roles.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/roles.png)
 
 ## Permissions
 Each Company role contains a set of permissions in the form of **Permission** keys attributed to them.
@@ -43,14 +40,16 @@ Here is another example of the connection between company roles and permissions:
 One and the same user can have several Company Roles assigned to them. It means that the same user can be Junior Sales Manager and Team Leader, which in its turn implies that this user has permissions assigned to both roles: Junior Sales Manager and Team Leader. Here it should be noted that the permissions, entitling the user with more rights, win.
 
 {% info_block infoBox %}
+
 For example, suppose Junior Sales Managers are allowed to place an order for up to 1000 Euro, whereas Team Leaders can place orders for up to 2000 Euro. If a user has both roles assigned to him, he/she will be allowed to place orders for up to 2000 Euro, and not 1000 Euro.<br>Or, for example, if Junior Sales Managers are not allowed to view specific products, but Team Leaders can, the users having both Junior Sales Manager and Team Leader roles will be allowed to view those products.
+
 {% endinfo_block %}
 
-![roles-permissions.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/roles-permissions.png) 
+![roles-permissions.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/roles-permissions.png)
 
 Company roles and permissions and their relation to the organizational structure can be schematically represented as follows:
 
-![roles_structure.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/roles_structure.png) 
+![roles_structure.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/roles_structure.png)
 
 ## Permission types
 Permissions can be simple and complex.
@@ -63,27 +62,38 @@ Permissions can be simple and complex.
 
 
 {% info_block infoBox %}
+
 Some of the Permissions can be configured for specific roles, for example, “allow adding no more than X items to cart” for junior support engineer.<br>Or for example, some specific products are not allowed to be viewed by anyone, but Admin and Top Managers.<br>These values are referred to as **Company Role Permissions**.
+
 {% endinfo_block %}
 
 Permission can also be **Yves-side** and **Zed-side**.
 
 * **Yves permissions** do not need to get any data from the database. They refer to key-value storage, or to search to check the right for actions.
+
 {% info_block infoBox %}
+
 For example, the permission to view a product, a page, or permission to place an order, permission to place an order with grand total less X, would be Yves-side permissions.
+
 {% endinfo_block %}
 
 * Permissions that require some data from the database or some additional business-logic on top to check the rights for actions, are referred to as **Zed permissions**.
 
 {% info_block infoBox %}
-For example, the permission to add to cart up to X [order value] would be the Zed-side permission. In this case the process of permissions check would be as follows:<ul><li>After the user clicked **Add to cart**, the request comes to Zed and the pre-checks are made following the “add to cart” request.</li><li>After that, the calculations are run. The calculations apply discounts per item, and then per cart (total).<br>The logic behind this is simple: a user might have a discount for a specific item, and a discount for order starting from a specific order value. The order value would be calculated taken the discount per items into account, and therefore the discount per cart would be applied after all discounts per items have been calculated.</li><li>After the calculations have been made, the cart is saved.</li></ul>
+
+For example, the permission to add to cart up to X [order value] would be the Zed-side permission. In this case the process of permissions check would be as follows:
+* fter the user clicked **Add to cart**, the request comes to Zed and the pre-checks are made following the “add to cart” request.
+* After that, the calculations are run. The calculations apply discounts per item, and then per cart (total).
+  <br>The logic behind this is simple: a user might have a discount for a specific item, and a discount for order starting from a specific order value. The order value would be calculated taken the discount per items into account, and therefore the discount per cart would be applied after all discounts per items have been calculated.
+* After the calculations have been made, the cart is saved.
+
 {% endinfo_block %}
 
 Obviously, the permissions can not be checked at the step when user just clicks **Add to cart**, because actual order value has not been calculated yet (pre-checks have not been made yet, discounts have not been calculated). Also, the permissions check request can not be started after the cart has been updated - that would be too late, as, the cart has already been persisted. The request for rights check is made somewhere in between - specifically, right after the discounts have been calculated. That is why the so-called “termination hooks” have been implemented deep in logic, where the permissions checks are made.
 
 The termination hooks (plugin stack) do not allow the permissions sneak into the business logic foundation so it will remain clean from the permissions and not overwhelmed with “can” “if not; then…” etc.
 
-![termination_hooks.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/termination_hooks.png) 
+![termination_hooks.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/termination_hooks.png)
 
 The termination hooks are performed one by one, and process termination can happen for any reason, and one of them would be the permissions.
 
@@ -112,7 +122,7 @@ Every company role includes a set of permissions that can be enabled/disabled ac
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/mg-companyuser#upgrading-from-version-1-0-0-to-version-2-0-0" class="mr-link">Migrate the CompanyUser module from version 1.* to version 2.*</a></li>
+                <li><a href="/docs/scos/dev/module-migration-guides/migration-guide-companyuser.html#upgrading-from-version-100-to-version-200" class="mr-link">Migrate the CompanyUser module from version 1.* to version 2.*</a></li>
                 <li><a href="/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html" class="mr-link">Authenticate as company user via Glue API</a></li>
                 <li><a href="/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-users.html" class="mr-link">Retrieve information about company users via Glue API</a></li>
                 <li><a href="/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-roles.html" class="mr-link">Retrieve information about company roles via Glue API</a></li>
@@ -122,8 +132,8 @@ Every company role includes a set of permissions that can be enabled/disabled ac
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office user</li>
-                <li><a href="https://documentation.spryker.com/docs/managing-company-users" class="mr-link">Manage company users</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-company-roles" class="mr-link">Manage company roles</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-users.html" class="mr-link">Manage company users</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-roles.html" class="mr-link">Manage company roles</a></li>
             </ul>
         </div>
         </div>

@@ -10,7 +10,7 @@ redirect_from:
   - /v4/docs/en/trustpilot
 related:
   - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
+    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information
@@ -37,4 +37,3 @@ See [Disclaimer](https://github.com/spryker/spryker-documentation).
 For further information on this partner and integration into Spryker, please contact us.
 
 <div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>
-

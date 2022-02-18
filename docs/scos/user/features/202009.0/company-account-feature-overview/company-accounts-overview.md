@@ -1,5 +1,5 @@
 ---
-title: Company accounts
+title: Company accounts overview
 description: In the context of permissions management, the top level of a B2B business model hierarchy is a Company. Each company has its organizational structure.
 last_updated: Jun 1, 2021
 template: concept-topic-template
@@ -19,7 +19,6 @@ The top level of every B2B business model hierarchy is a *company*. The company 
 {% info_block warningBox "Company statuses" %}
 
 On initial registration of a company, in the Back Office, it appears with the *Pending* status. After the company has been checked, it gets the *Approved* status.
-
 
 ![companies_overview.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account/Company+Account+Feature+Overview/companies_overview.png)
 
@@ -107,7 +106,7 @@ Company users can perform the following actions on the Storefront:
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
                 <li><a href="/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html" class="mr-link">Get a general idea of company user roles and permissions</a></li>
-                <li><a href="https://documentation.spryker.com/docs/mg-companyuser#upgrading-from-version-1-0-0-to-version-2-0-0" class="mr-link">Migrate the CompanyUser module from version 1.* to version 2.*</a></li>
+                <li><a href="/docs/scos/dev/module-migration-guides/migration-guide-companyuser.html#upgrading-from-version-100-to-version-200" class="mr-link">Migrate the CompanyUser module from version 1.* to version 2.*</a></li>
                 <li><a href="/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html" class="mr-link">Enable company accounts by integrating the Company Account feature into your project</a></li>
             <li><a href="/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-companies.html" class="mr-link">Retrieve company information via Glue API</a></li>    
             </ul>
@@ -117,10 +116,10 @@ Company users can perform the following actions on the Storefront:
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
                 <li><a href="/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html" class="mr-link">Get a general idea of company user roles and permissions</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-companies" class="mr-link">Create and manage companies</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-company-units" class="mr-link">Create and manage business units</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-company-unit-addresses" class="mr-link">Create and manage company unit addresses</a></li>
-                <li><a href="https://documentation.spryker.com/docs/managing-company-users" class="mr-link">Create and manage company users</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-companies.html" class="mr-link">Create and manage companies</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-units.html" class="mr-link">Create and manage business units</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-unit-addresses.html" class="mr-link">Create and manage company unit addresses</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-unit-addresses.html" class="mr-link">Create and manage company users</a></li>
             </ul>
         </div>
     </div>

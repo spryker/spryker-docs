@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/episerver-order-referenced-commands
   - /docs/episerver-order-referenced-commands
   - /docs/en/episerver-order-referenced-commands
+  - /docs/scos/user/technology-partners/202108.0/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-order-referenced-commands.html
 related:
   - title: Episerver - Integration into a project
     link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html

@@ -20,32 +20,11 @@ Check out this video to get more details on how Punchout works:
 
 {% wistia ntehv57yxb 960 720 %}
 
-## If you are:
+## Related Developer guides
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="/docs/scos/user/technology-partners/202108.0/order-management-erpoms/punchout-catalogs/punchout-catalogs-overview.html" class="mr-link">Get a general idea of the Punchout Catalogs partner integration</a></li>
-                <li>Integrate Punchout Catalogs into your project:</li>
-                <li><a href="/docs/scos/user/technology-partners/202108.0/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html" class="mr-link">Integrate the Punchout Catalog feature</a></li>
-                <li><a href="/docs/scos/user/technology-partners/202108.0/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-feature-integration.html" class="mr-link">Integrate Eco: Punchout Catalogs feature</a></li>
-                  <li><a href="/docs/scos/user/technology-partners/202108.0/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html" class="mr-link">Integrate the Eco: Punchout Catalogs + Product Bundles feature</a></li>
-            </ul>
-        </div>
-         <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="/docs/scos/user/back-office-user-guides/202108.0/punch-out/managing-punch-out-connections.html" class="mr-link">Manage punchout connections</a></li>
-                <li><a href="/docs/scos/user/back-office-user-guides/202108.0/punch-out/managing-transactions-log.html" class="mr-link">Manage transactions logs</a></li>
-            </ul>
-        </div>
-         </div>
-</div>
----
+* [Punchout Catalog feature integration](/docs/scos/dev/technology-partner-guides/{{page.version}}/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html)
+* [Eco - Punchout Catalogs + Product Bundles feature integration](/docs/scos/dev/technology-partner-guides/{{page.version}}/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html)
+* [Eco - Punchout Catalogs feature integration](/docs/scos/dev/technology-partner-guides/{{page.version}}/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-feature-integration.html)
 
 ## Copyright and Disclaimer
 

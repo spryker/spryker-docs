@@ -1,5 +1,5 @@
 ---
-title: Shopping Cart
+title: Cart
 description: The Spryker Commerce OS offers a powerful and feature rich online shopping cart that acts as a gateway for customer and order management.
 last_updated: Jan 13, 2020
 template: concept-topic-template
@@ -26,10 +26,10 @@ The main benefits of working with the cart are to create a convenient and predic
 
 **Features:**
 <div>
-<a class="feature-link" href="https://documentation.spryker.com/v1/docs/cart-functionality-calculations">Cart Functionality and Calculations</a>   
-<a class="feature-link" href="https://documentation.spryker.com/v1/docs/cart-rules-discounts">Cart Rules and Discounts</a>   
-<a class="feature-link" href="https://documentation.spryker.com/v1/docs/shared-cart">Shared Cart</a>   
-<a class="feature-link" href="https://documentation.spryker.com/v1/docs/multiple-cart-per-user">Multiple Carts Per User</a>   
-    <a class="feature-link" href="https://documentation.spryker.com/v1/docs/cart-widget">Shopping Cart Widget</a>  
-    <a class="feature-link" href="https://documentation.spryker.com/v1/docs/cart-notes">Cart Notes</a>  
+<a class="feature-link" href="/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/cart-functionality-and-calculations.html">Cart Functionality and Calculations</a>   
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html">Cart Rules and Discounts</a>   
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html">Shared Cart</a>   
+<a class="feature-link" href="/docs/scos/user/shop-user-guides/{{page.version}}/shop-application-guide/cart/multiple-carts-per-user-feature-overview.html">Multiple Carts Per User</a>   
+    <a class="feature-link" href="/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-widget-overview.html">Shopping Cart Widget</a>  
+    <a class="feature-link" href="/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-notes-overview.html">Cart Notes</a>  
     </div>

@@ -1,5 +1,5 @@
 ---
-title: CMS Block
+title: CMS Blocks overview
 description: With the CMS Block feature, you can easily add promotional banners and define validity date ranges to emphasize specific, time-limited content.
 last_updated: Jul 31, 2020
 template: concept-topic-template
@@ -37,22 +37,22 @@ Blocks help to place content in certain places in your template, so you can easi
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/v2/docs/product-block" class="mr-link">Install and configure a Product Block</a></li>
-<li><a href="https://documentation.spryker.com/v2/docs/enabling-category-cms-block" class="mr-link">Install and configure a Category Block</a></li>
-<li><a href="https://documentation.spryker.com/v2/docs/cms-block-multistore" class="mr-link">Enable multi-store management for CMS blocks</a></li>
-<li><a href="https://documentation.spryker.com/v2/docs/mg-cms-collector#upgrading-from-version-1-to-version-2" class="mr-link">Migrate CMS Collector module from version 1.* to version 2.*</a></li>
-<li><a href="https://documentation.spryker.com/v2/docs/mg-cms-block#upgrading-from-version-1-to-version-2" class="mr-link">Migrate CMS Block module from version 1.* to version 2.*</a></li>
-<li><a href="https://documentation.spryker.com/v2/docs/mg-cms-block-category-connector#migration-guide---cms-block-category-connector" class="mr-link">Migrate CMS Block Category Connector module from version 1.* to version 2.*</a></li>
-<li><a href="https://documentation.spryker.com/v2/docs/mg-cms-block-category-connector-console" class="mr-link">Migrate CMS Block Category Connector Console module from version 1.* to version 2.*</a></li>
-<li><a href="https://documentation.spryker.com/v2/docs/mg-cms-block-collector#upgrading-from-version-1-to-version-2" class="mr-link">Migrate CMS Block Collector  module from version 1.* to version 2.*</a></li>
-<li><a href="https://documentation.spryker.com/v2/docs/mg-cms-block-gui#upgrading-from-version-1-to-version-2" class="mr-link">Migrate CMS Block GUI  module from version 1.* to version 2.*</a></li>
+                <li><a href="/docs/scos/dev/feature-integration-guides/{{page.version}}/installing-the-product-cms-block.html" class="mr-link">Install and configure a Product Block</a></li>
+<li><a href="/docs/scos/dev/feature-integration-guides/{{page.version}}/installing-the-category-cms-blocks.html" class="mr-link">Install and configure a Category Block</a></li>
+<li><a href="/docs/scos/dev/feature-integration-guides/{{page.version}}/multi-store-cms-block-feature-integration.html" class="mr-link">Enable multi-store management for CMS blocks</a></li>
+<li><a href="/docs/scos/dev/module-migration-guides/migration-guide-cmscollector.html" class="mr-link">Migrate CMS Collector module from version 1.* to version 2.*</a></li>
+<li><a href="/docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html" class="mr-link">Migrate CMS Block module from version 1.* to version 2.*</a></li>
+<li><a href="/docs/scos/dev/module-migration-guides/migration-guide-cms-block-category-connector.html" class="mr-link">Migrate CMS Block Category Connector module from version 1.* to version 2.*</a></li>
+<li><a href="/docs/scos/dev/module-migration-guides/migration-guide-cmsblockcategoryconnector-migration-console.html" class="mr-link">Migrate CMS Block Category Connector Console module from version 1.* to version 2.*</a></li>
+<li><a href="/docs/scos/dev/module-migration-guides/migration-guide-cms-block-collector.html" class="mr-link">Migrate CMS Block Collector  module from version 1.* to version 2.*</a></li>
+<li><a href="/docs/scos/dev/module-migration-guides/migration-guide-cmsblockgui.html" class="mr-link">Migrate CMS Block GUI  module from version 1.* to version 2.*</a></li>
     </ul>
         </div>
         <!-- col2 -->
         <div class="mr-col">
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
-                <li><a href="https://documentation.spryker.com/v2/docs/creating-a-cms-block" class="mr-link">Create a CMS Block</a></li>
-                <li><a href="https://documentation.spryker.com/v2/docs/managing-cms-blocks" class="mr-link">Manage CMS Blocks</a></li>
-                <li><a href="https://documentation.spryker.com/v2/docs/defining-validity-period-for-cms-blocks" class="mr-link">Define validity period for CMS Blocks</a></li>
-                <li><a href="https://documentation.spryker.com/v2/docs/assigning-blocks-to-category-or-product-pages " class="mr-link">Assign Blocks to Category or Product pages</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/creating-cms-blocks.html" class="mr-link">Create a CMS Block</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-cms-blocks.html" class="mr-link">Manage CMS Blocks</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/defining-validity-period-for-cms-blocks.html" class="mr-link">Define validity period for CMS Blocks</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/assigning-blocks-to-category-or-product-pages.html" class="mr-link">Assign Blocks to Category or Product pages</a></li>

@@ -38,7 +38,7 @@ To retrieve prices of a concrete product, send the request:
 
 | REQUEST | USAGE |
 |-|-|
-| `GET http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices` | Retrieve the prices of the 001_25904006 product. |
+| `GET http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices` | Retrieve the prices of the `001_25904006` product. |
 | `GET http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices?currency=CHF&priceMode=GROSS_MODE` | Retrieve the gross price of the 001_25904006 product in Swiss Franc. |
 
 | STRING PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
@@ -213,6 +213,7 @@ To retrieve prices of a concrete product, send the request:
 
 | CODE | REASON |
 |-|-|
+| 302 | Concrete product is not found. |
 | 308 | Can't find concrete product prices. |
 | 312 | Concrete product sku is not specified. |
 | 302 | Concrete product is not found. |

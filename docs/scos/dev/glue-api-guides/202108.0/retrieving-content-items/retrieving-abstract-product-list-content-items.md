@@ -21,7 +21,7 @@ This endpoint allows retrieving information about abstract product list content 
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-api-feature-integration.html).
+For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-feature-integration.html).
 
 <a name="product-list"></a>
 
@@ -42,7 +42,7 @@ To retrieve information about an abstract product list content item, send the re
 
 | HEADER KEY | REQUIRED | DESCRIPTION |
 | --- | --- | --- |
-| locale |  | Defines the locale to retreive the content item information for. If not specified, the endpoint returns the information for the *default* locale.  |
+| locale |  | Defines the locale to retrieve the content item information for. If not specified, the endpoint returns the information for the *default* locale.  |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
@@ -212,7 +212,7 @@ To retrieve information about an abstract product list content item, send the re
 </details>
 
 
-For the attributes of the included resource, see [Retrieving abstract products](/docs/marketplace/dev/glue-api-guides/202108.0/abstract-products/retrieving-abstract-products.html)
+For the attributes of the included resource, see [Retrieving abstract products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/abstract-products/retrieving-abstract-products.html)
 
 ## Retrieve Abstract Product List with its abstract products
 

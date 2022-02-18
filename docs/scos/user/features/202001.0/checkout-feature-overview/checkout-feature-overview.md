@@ -1,5 +1,5 @@
 ---
-title: Checkout
+title: Checkout feature overview
 description: The checkout workflow is a multi-step process that can be fullly customized to fit your needs.
 last_updated: Mar 25, 2020
 template: concept-topic-template
@@ -31,7 +31,7 @@ Offer customers a smooth shopping experience and customize the checkout workflow
 
 **Features:**
 <div>
-<a class="feature-link" href="https://documentation.spryker.com/v4/docs/multi-step-checkout">Multi-Step Checkout</a>  
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html">Multi-Step Checkout</a>  
 <a class="feature-link" href="https://documentation.spryker.com/v4/docs/define-payment-shipment-methods">Define Payment & Shipment Methods</a>
 </div>
     

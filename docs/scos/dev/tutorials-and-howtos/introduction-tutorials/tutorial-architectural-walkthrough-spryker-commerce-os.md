@@ -16,6 +16,8 @@ redirect_from:
   - /v5/docs/en/tutorial-architecture-walkthrough-scos
   - /v4/docs/tutorial-architecture-walkthrough-scos
   - /v4/docs/en/tutorial-architecture-walkthrough-scos
+  - /v3/docs/tutorial-architecture-walkthrough-scos
+  - /v3/docs/en/tutorial-architecture-walkthrough-scos
   - /v2/docs/tutorial-architecture-walkthrough-scos
   - /v2/docs/en/tutorial-architecture-walkthrough-scos
   - /v1/docs/tutorial-architecture-walkthrough-scos
@@ -318,7 +320,7 @@ To build the communication between Yves and Zed, we need the **Client**. Buildin
 
     use Spryker\Client\Kernel\AbstractClient;
 
-    class HelloSprykerClient extends AbstractClient implements  HelloSprykerClientInterface
+    class HelloSprykerClient extends AbstractClient implements HelloSprykerClientInterface
     {
 	    // Your code goes here
     }		
@@ -342,7 +344,7 @@ To build the communication between Yves and Zed, we need the **Client**. Buildin
 
     use Spryker\Client\ZedRequest\Stub\ZedRequestStub;
 
-    class HelloSprykerStub extends ZedRequestStub implements    HelloSprykerStubInterface
+    class HelloSprykerStub extends ZedRequestStub implements HelloSprykerStubInterface
     {
 	    // Your code goes here
     }									
@@ -362,7 +364,7 @@ namespace Pyz\Client\HelloSpryker;
 use Spryker\Client\Kernel\AbstractDependencyProvider;
 use Spryker\Client\Kernel\Container;
 
-class HelloSprykerDependencyProvider extends    AbstractDependencyProvider
+class HelloSprykerDependencyProvider extends AbstractDependencyProvider
 {
     const CLIENT_ZED_REQUEST = 'CLIENT_ZED_REQUEST';
 
@@ -385,7 +387,7 @@ class HelloSprykerDependencyProvider extends    AbstractDependencyProvider
     */
     protected function addZedRequestClient(Container $container)
     {
-	    $container[static::CLIENT_ZED_REQUEST] = function (Container    $container) {
+	    $container[static::CLIENT_ZED_REQUEST] = function (Container $container) {
 		    return $container->getLocator()->zedRequest()->client();
 	    };
 
@@ -410,7 +412,7 @@ public function createZedHelloSprykerStub()
 */
 protected function getZedRequestClient()
 {
-    return $this-   >getProvidedDependency(HelloSprykerDependencyProvider::CLIENT_ZED_R EQUEST);
+    return $this->getProvidedDependency(HelloSprykerDependencyProvider::CLIENT_ZED_R EQUEST);
 }								
 ```							
 
@@ -443,7 +445,7 @@ This method will call the Zed module **HelloSpryker**.<br>The first parameter in
 /**
 * @param HelloSprykerTransfer $helloSprykerTransfer
 *
-    * @return HelloSprykerTransfer|\Spryker\Shared\Kernel\Transfer\TransferInterface
+* @return HelloSprykerTransfer|\Spryker\Shared\Kernel\Transfer\TransferInterface
 */
 public function reverseString(HelloSprykerTransfer $helloSprykerTransfer)
 {
@@ -462,7 +464,7 @@ Let's get everything hooked together:
 namespace Pyz\Zed\HelloSpryker\Communication\Controller;
 
 use Generated\Shared\Transfer\HelloSprykerTransfer;
-use     Spryker\Zed\Kernel\Communication\Controller\AbstractGatewayController;
+use Spryker\Zed\Kernel\Communication\Controller\AbstractGatewayController;
 
 class GatewayController extends AbstractGatewayController
 {
@@ -471,7 +473,7 @@ class GatewayController extends AbstractGatewayController
     *
     * @return HelloSprykerTransfer
     */
-    public function reverseStringAction(HelloSprykerTransfer    $helloSprykerTransfer)
+    public function reverseStringAction(HelloSprykerTransfer $helloSprykerTransfer)
     {
 	    return $this->getFacade()
 		    ->reverseString($helloSprykerTransfer);
@@ -544,7 +546,7 @@ protected function saveReversedString(HelloSprykerTransfer $helloSprykerTransfer
 {
     $helloSprykerEntity = new PyzHelloSpryker();
 
-    $helloSprykerEntity->setReversedString($helloSprykerTransfer-   >getReversedString())->save();
+    $helloSprykerEntity->setReversedString($helloSprykerTransfer->getReversedString())->save();
 }
 ```					
 
@@ -572,7 +574,7 @@ namespace Pyz\Zed\HelloSpryker\Persistence;
 
 use Spryker\Zed\Kernel\Persistence\AbstractQueryContainer;
 
-class HelloSprykerQueryContainer extends AbstractQueryContainer     implements HelloSprykerQueryContainerInterface
+class HelloSprykerQueryContainer extends AbstractQueryContainer implements HelloSprykerQueryContainerInterface
 {
     /**
     * @param $idHelloSpryker
@@ -630,7 +632,6 @@ class HelloSprykerQueryContainer extends AbstractQueryContainer     implements H
 	    $helloSprykerTransfer = new HelloSprykerTransfer();
 	    $helloSprykerTransfer->fromArray($helloSprykerEntity->toArray(), true);
 
-
 	    return $helloSprykerTransfer;
     }							
     ```
@@ -659,7 +660,7 @@ namespace Pyz\Zed\HelloSpryker;
 use Spryker\Zed\Kernel\AbstractBundleDependencyProvider;
 use Spryker\Zed\Kernel\Container;
 
-class HelloSprykerDependencyProvider extends    AbstractBundleDependencyProvider
+class HelloSprykerDependencyProvider extends AbstractBundleDependencyProvider
 {
     const FACADE_STRING_REVERSER = 'FACADE_STRING_REVERSER';
 
@@ -668,7 +669,7 @@ class HelloSprykerDependencyProvider extends    AbstractBundleDependencyProvider
     *
     * @return \Spryker\Zed\Kernel\Container
     */
-    public function provideBusinessLayerDependencies(Container  $container)
+    public function provideBusinessLayerDependencies(Container $container)
     {
 	    $container = $this->addStringReverserFacade($container);
 
@@ -682,7 +683,7 @@ class HelloSprykerDependencyProvider extends    AbstractBundleDependencyProvider
     */
     protected function addStringReverserFacade(Container $container)
     {
-	    $container[static::FACADE_STRING_REVERSER] = function (Container    $container) {
+	    $container[static::FACADE_STRING_REVERSER] = function (Container $container) {
 		    return $container->getLocator()->stringReverser()->facade();
 	    };
 
@@ -699,7 +700,7 @@ class HelloSprykerDependencyProvider extends    AbstractBundleDependencyProvider
 */
 protected function getStringReverserFacade()
 {
-    return $this-   >getProvidedDependency(HelloSprykerDependencyProvider::FACADE_STRIN G_REVERSER);
+    return $this->getProvidedDependency(HelloSprykerDependencyProvider::FACADE_STRIN G_REVERSER);
 }						
 ```
 

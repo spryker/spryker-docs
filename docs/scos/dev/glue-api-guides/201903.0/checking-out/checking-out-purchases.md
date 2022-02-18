@@ -19,7 +19,7 @@ In order to create a checkout experience, we offer an endpoint that provides you
 Apart from that, the API also provides an endpoint that allows placing an order.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Checkout API](https://documentation.spryker.com/v2/docs/glue-api-checkout-feature-integration).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Checkout API](/docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-checkout-feature-integration.html).
 
 ## Place Order
 To place an order, send a POST request to the following endpoint:
@@ -35,15 +35,17 @@ A request should contain:
 * Also, the customer's cart should not be empty.
 
 **Attributes**
+
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
 | customer | RestCustomersRegisterRequestData | ✓ | Information about the customer<br>For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html). |
-| idCart | RestAddressesRequestData | ✓ | ID of the customer's cart<br>For details, see [Managing Carts of Registered Users](https://documentation.spryker.com/v2/docs/managing-carts-of-registered-users-201907). |
+| idCart | RestAddressesRequestData | ✓ | ID of the customer's cart<br>For details, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html). |
 | billingAddress | RestAddressesRequestData |  ✓| Customer's billing address<br>For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html). |
 | shippingAddress | RestAddressesRequestData |  ✓| Customer's shipping address<br>For details, see [Managing Customers](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html). |
 | payments | RestPayment | ✓| Payment options, such as the payment system, method of payment, etc<br>For details, see [Payment Step](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html#payment-step). |
 
 **Sample Request Body**
+
 ```js
 {
     "data": {
@@ -331,7 +333,7 @@ The basic response will provide you with an **order reference** that can be used
 	]
 }
 ```
-<br>
+
 </details>
 
 The **included** section of the response contains additional order details.
@@ -364,6 +366,7 @@ The **included** section of the response contains additional order details.
 \*The fields mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Calculated Discounts for Items**
+
 | Field* | Type | Description |
 | --- | --- | --- |
 | unitAIntedermount | Integer | Discount value appliled to each order item of the<br>corresponding product.<br>sumAmount | Integer | Sum of all the discount values applied to the order items of the<br>corresponding products.<br>displayName | String | Name of the discount applied |
@@ -374,6 +377,7 @@ The **included** section of the response contains additional order details.
 \*The fields mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Included Item Calculation**
+
 | Field* | Type | Description |
 | --- | --- | --- |
 | unitGrossPrice | Integer | Single item gross price. |
@@ -404,6 +408,7 @@ The **included** section of the response contains additional order details.
 | taxAmountAfterCancellation | Integer | Tax amount after cancellation, recalculated using tax average. |
 
 \* The fields mentioned are all attributes in the response. Type and ID are not mentioned.
+
 **Expenses**
 
 | Field* | Type | Description |
@@ -424,6 +429,7 @@ The **included** section of the response contains additional order details.
 | taxAmountAfterCancellation | Integer | Tax amount after cancellation, recalculated using tax average. |
 
 \*The fields mentioned are all attributes in the response. Type and ID are not mentioned.
+
 **Billing and Shipping Addresses**
 
 | Field* | Type | Description |
@@ -444,6 +450,7 @@ The **included** section of the response contains additional order details.
 | iso2Code | String | ISO 2 Country Code to use. |
 
 \*The fields mentioned are all attributes in the response. Type and ID are not mentioned.
+
 **Payments**
 
 | Field* | Type | Description |
@@ -458,14 +465,18 @@ The **included** section of the response contains additional order details.
 To get information on a particular order, send the following POST request:
 `/checkout-data`
 Sample request: `POST http://mysprykershop.com/checkout-data`
+
 {% info_block errorBox "Authentication" %}
+
 To use this endpoint:<ul><li>**Registered** customers need to authenticate first. For details, see [Authentication and Authorization]().</li><li>For **anonymous** users, you need to add their _X-Anonymous-Customer-Unique-Id_ in the request header. For details, see Managing Guest Carts.</li></ul>
+
 {% endinfo_block %}
 
 ### Request
 To request order details, the POST body must contain the order reference received during checkout.
 
 _Minimum required data_
+
 ```js
 {
     "data": {
@@ -478,7 +489,9 @@ _Minimum required data_
 ```
 
 Alternatively, you can pass the whole of the checkout request body, the same as during checkout.
+
 **Full request**
+
 ```js
 {
     "data": {
@@ -540,8 +553,11 @@ Alternatively, you can pass the whole of the checkout request body, the same as 
 ```
 
 ### Response
+
 The endpoint responds with a **RestCheckoutDataResponse** containing the checkout data.
+
 **Sample Response**
+
 ```js
 {
     "data": {
@@ -650,9 +666,11 @@ The endpoint responds with a **RestCheckoutDataResponse** containing the checkou
 ```
 
 **Sample Response:**
+
 The following checkout data is included in the response:
 
 **Addresses**
+
 | Field* | Type | Description |
 | --- | --- | --- |
 | id | String | Address ID. |
@@ -672,6 +690,7 @@ The following checkout data is included in the response:
 | isDefaultBilling | Boolean | Specifies whether the address should be used as the default billing address of the customer. If the parameter is not set, the default value is **true**. |
 
 \*The fields mentioned are all attributes in the response. Type and ID are not mentioned.
+
 **Payment Provider and Payment Method**
 
 | Field* | Type | Description |
@@ -681,6 +700,7 @@ The following checkout data is included in the response:
 | requiredRequestData | Array |  List of fields that needs to be provided to use this payment method when placing the order. |
 
 \*The fields mentioned are all attributes in the response. Type and ID are not mentioned.
+
 **Shipment carrier and shipment method Data**
 
 | Field* | Type | Description |

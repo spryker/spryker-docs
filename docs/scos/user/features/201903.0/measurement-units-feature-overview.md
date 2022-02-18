@@ -42,7 +42,7 @@ The schema below illustrates relations between products and measurement units, w
 * **precision** - ratio between a sales unit and a base unit. For example, a base unit is "item", and user selects "kg" as a sales unit.
 * **is_displayed** - If true, then the value is shown in shop.
 * **is_default** - If true then the unit is shown as default unit in shop.
-![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+%26+Measurement+Units/Measurement+Units/Measurement+Units+Feature+Overview/product_units_relation.png) 
+![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+%26+Measurement+Units/Measurement+Units/Measurement+Units+Feature+Overview/product_units_relation.png)
 
 Let's take an example to better understand the feature. Suppose, 1 apple (1=factor) weights 0,1 Kg, then ratio will be 10 (1kg = 10 apples). If the precision is 100, the user can specify a number as 0.40 Kg (which will be 4 apples). Likewise, if in this case the user selects kg and precision is set to "1", it's quantity in sales units on the cart page will be "0", as precision 1 implies that no digits are shown after the decimal sign. Actually,
 
@@ -61,10 +61,10 @@ If a global unit conversion exists between the base and sales unit, then factor 
 | All the standard conversion ratios are defined in `Bundles/UtilMeasurementUnitConversion/src/Spryker/Service/UtilMeasurementUnitConversion/Model/MeasurementUnitConverter.php`. | Conversion, precision, as well as is_displayed and is_default parameters can be defined in `spy_product_measrument_sales_unit table`. <br> Name of the measurement unit and some other data are stored to the `sales_order_item`.<br> |
 
 ## Current Constraints
-- In the Spryker Commerce OS you cannot define measurement units for products. Currently, they are imported into the database manually. 
+- In the Spryker Commerce OS you cannot define measurement units for products. Currently, they are imported into the database manually.
 - We strive to shift all business logic to our backend, however, with Measurements Units, a part of the calculations (e.g. quantity restrictions) are performed on Yves.
 - On the shopping cart as well as the shopping list page, products do not have a dropdown to change the measurement units. You can select a measurement unit on the product details page only.
 - A shopper cannot reorder the items with the selected measurement units as they are not added automatically. They should be added manually on the product details page.
-- In the [Quick Order](https://documentation.spryker.com/v2/docs/quick-add-to-cart) form and [search widget](/docs/scos/user/features/{{page.version}}/product-feature-overview/search-widget-for-concrete-products-overview.html), the products use the default measurement units that cannot be changed.
+- In the [Quick Order](/docs/scos/user/features/{{page.version}}/quick-add-to-cart-feature-overview.html) form and [search widget](/docs/scos/user/features/{{page.version}}/product-feature-overview/search-widget-for-concrete-products-overview.html), the products use the default measurement units that cannot be changed.
 
 <!-- Last review date: Feb 6, 2018-- by Karoy Gerner, Anastasija Datsun -->

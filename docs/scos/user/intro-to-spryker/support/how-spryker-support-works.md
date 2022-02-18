@@ -17,10 +17,11 @@ We believe that you can only deliver great support when you are on the same page
 
 ## Our Performance Metrics
 
+<!--
 ![image.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/image%28130%29.png)
 
 *picture by [@goumbik](https://www.pexels.com/@goumbik)*
-
+-->
 
 ### First Response Time
 
@@ -54,8 +55,10 @@ If you rate us low, we would like to ask you in a comment, why. Depending on you
 
 ## Our Processes
 
+<!--
 ![image.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/image%28131%29.png)
 
+-->
 
 Our internal processes are designed with speed and reliability in mind. We use a state of the art case management system wired up directly with our internal communication tool to provide the best possible visibility to incoming communication.
 

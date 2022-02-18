@@ -10,20 +10,21 @@ redirect_from:
 ---
 
 ## Install Feature Core
+
 ### Prerequisites
+
 To start the feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Cart | master |
-| Product | master |
-| Non-splittable Products (optional) | master |
+| Cart | 202005.0 |
+| Product | 202005.0 |
+| Non-splittable Products (optional) | 202005.0 |
 
 ### 1) Check the Installed Modules
 
-<section contenteditable="false" class="warningBox"><div class="content">
+{% info_block warningBox “Verification” %}
 
-**Verification**    
 Make sure that the following modules were installed:
 
 | Module | Expected Directory |
@@ -32,18 +33,19 @@ Make sure that the following modules were installed:
 | `Product` | `vendor/spryker/product` |
 | `ProductQuantity` (optional) | `vendor/spryker/product-quantity` |
 | `ProductSearchWidget` | `vendor/spryker-shop/product-search-widget` |
-</div></section>
+
+{% endinfo_block %}
 
 ### 2) Set up Transfer Objects
+
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
 console transfer:generate
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
+{% info_block warningBox “Verification” %}
 
-**Verification**
 Make sure that the following changes are present in the transfer objects:
 
 | Transfer | Type | Event | Path |
@@ -51,9 +53,11 @@ Make sure that the following changes are present in the transfer objects:
 | `CartChangeTransfer` | class | created | `src/Generated/Shared/Transfer/CartChangeTransfer` |
 | `ItemTransfer` | class | created |`src/Generated/Shared/Transfer/ItemTransfer`  |
 | `MessageTransfer` | class | created | `src/Generated/Shared/Transfer/MessageTransfer` |
-</div></section>
+
+{% endinfo_block %}
 
 ### 3) Add Translations
+
 Append glossary according to your language configuration:
 
 **src/data/import/glossary.csv**
@@ -88,10 +92,13 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that in the database the configured data are added to the `spy_glossary` table.
+
 {% endinfo_block %}
 
 ### 4) Set up Widgets
+
 Enable global widgets:
 
 | Widget | Description | Namespace |
@@ -122,18 +129,20 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-<section contenteditable="false" class="..."><div class="content">
-    
-**Verification**
+{% info_block warningBox “Verification” %}
+
 Make sure that the following widgets were registered:
 
 | Module | Test |
 | --- | --- |
 | `ProductConcreteAddWidget` | Go to a cart page. You should see the form with the product search widget, quantity input, and add button. |
-</div></section>
+
+{% endinfo_block %}
 
 ### 5) Set up Behavior
+
 #### Adjust Concrete Product Quantity
+
 Add the following plugins to your project:
 
 | Plugin | Specification | Prerequisites | Namespace |

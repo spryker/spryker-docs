@@ -1,5 +1,5 @@
 ---
-title: Customer Login by Token
+title: Customer Login by Token overview
 description: With the feature in place, B2B customers can log in to Spryker shop using a token.  In the article, you can find a description of the token structure.
 last_updated: Sep 15, 2020
 template: concept-topic-template
@@ -100,7 +100,6 @@ Module Relations for Customer Login by Token feature are schematically represent
 
 ![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Customer+Login+by+Token/Customer+Login+by+Token+Feature+Overview/customer-login-by-token-module-relations.png)
 
-
 ## If you are:
 
 <div class="mr-container">
@@ -109,8 +108,8 @@ Module Relations for Customer Login by Token feature are schematically represent
         <div class="mr-col">
             <ul class="mr-list mr-list-green">
                 <li class="mr-title">Developer</li>
-                <li><a href="https://documentation.spryker.com/docs/howto-generate-a-token-for-login" class="mr-link">Generate a Token for Login</a></li>
-                <!---<li><a href="https://documentation.spryker.com/docs/ht-disable-accounts-switch-for-bob-201907" class="mr-link">HowTo - Disable Accounts Switch for Business on Behalf</a></li>-->
+                <li><a href="/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html" class="mr-link">Generate a Token for Login</a></li>
+                <!---<li><a href="/docs/scos/dev/feature-walkthroughs/201907.0/company-account-feature-walkthrough/disabling-accounts-switch-for-business-on-behalf.html" class="mr-link">HowTo - Disable Accounts Switch for Business on Behalf</a></li>-->
                  <li><a href="/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html" class="mr-link">Enable customer login by token by integrating the Company Account feature into your project</a></li>
             </ul>
         </div>

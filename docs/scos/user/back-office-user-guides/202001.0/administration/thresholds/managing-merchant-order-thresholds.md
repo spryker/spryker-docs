@@ -20,9 +20,11 @@ related:
 This topic describes the procedures for managing thresholds per merchant relation.
 ***
 To start working with Merchant Relationships thresholds, navigate to the **Threshold > Merchant relationships** section.
-***
+
 {% info_block warningBox "Note" %}
+
 Thresholds for merchant relationships do work only for a certain merchant relationship that was created in the **Merchant Relations** section in the Back Office.
+
 {% endinfo_block %}
 
 This type of threshold is managed by editing a specific merchant relation.
@@ -30,6 +32,7 @@ This type of threshold is managed by editing a specific merchant relation.
 The list of available merchant relations in the Merchant relationships table is build based on the relations that were previously added to the **Merchant > Merchant Relations** section in the Back Office. So those need to be created you can proceed to the minimum order value setup.
 Every merchant relationship can have both hard and soft threshold. The thresholds need to be configured for every store and currency.
 ***
+
 ## Setting up a Hard Threshold
 
 To set up a hard threshold for a specific merchant relation:
@@ -41,6 +44,7 @@ To set up a hard threshold for a specific merchant relation:
 
 See [Threshold: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/references/threshold-reference-information.html) to know more about the hard threshold.
 ***
+
 ## Setting up a Soft Threshold
 
 To set up a soft threshold for a merchant relation:
@@ -60,6 +64,7 @@ To set up a soft threshold for a merchant relation:
 
 See [Threshold: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/references/threshold-reference-information.html) to know more about the soft threshold and its types.
 ***
+
 ## Setting up both Hard and Soft Threshold
 
 To set up both threshold types:

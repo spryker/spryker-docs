@@ -23,7 +23,7 @@ redirect_from:
 This document describes the prerequisites for installing Spryker in Docker on MacOS.
 
 
-## Minimum system requirements
+## System requirements
 
 Review the system and software requirements in the table and configure them using the following instructions.
 
@@ -31,7 +31,7 @@ Review the system and software requirements in the table and configure them usin
 | --- | --- |
 | Docker | 18.09.1 or higher |
 | Docker Compose | 1.28 or 1.29 |  
-| vCPU | 2 or more |
+| vCPU | 4 or more |
 | RAM  | 4GB or more |
 | Swap  | 2GB or more |
 
@@ -39,34 +39,56 @@ Review the system and software requirements in the table and configure them usin
 ## Installing and configuring required software
 Follow the steps to install and configure the required software:
 1. Download and install [Docker Desktop (Mac)](https://desktop.docker.com/mac/stable/amd64/Docker.dmg).
+
 2. Accept the privilege escalation request "Docker Desktop needs privileged access.".
 {% info_block infoBox %}
 Signup for Docker Hub is not required.
 {% endinfo_block %}
 
-3. Go to ![whale](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+Install+Prerequisites+-+MacOS/whale-x.png) > **Preferences**  > **Command Line** and **Enable experimental features**.
+3. In the Docker Desktop, go to preferences by selecting the gear in the top right corner.
 
+4. In the *General* seciton of *Preferences*, clear the **Use Docker Compose V2** checkbox.
 
-4. Update Memory and Swap Limits:
+5. Update Memory and Swap Limits:
 
-    1. Go to ![whale](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+Install+Prerequisites+-+MacOS/whale-x.png) > **Preferences**  > **Resources** > **ADVANCED**.
+    1. Go to **Resources** > **ADVANCED**.
     2. Set **CPUs:** to "4" or higher.
     3. Set **Memory:** to "4.00 GB" or higher.
     4. Set **Swap:** to "2.00 GB" or higher.
     5. Set the desired **Disk image size:**.
     6. Select the desired **Disk image location**.
-    7. Click **Apply & Restart**.
+    7. Select **Apply & Restart**.
 
 {% info_block warningBox %}
 
-You can set lower **Memory:** and **Swap:** limit values. However, the default limits won't be sufficient to run the application, so make sure to increase them.
+You can select lower **Memory:** and **Swap:** values than those provided in the instructions. However, the default ones won't be sufficient to run the application.
 
 {% endinfo_block %}
 
-5. [Development mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode): Install Mutagen:
+5. [Development mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode): Install Mutagen version `0.13.0-beta4` for file synchronisation between the container and the host:
 ```shell
-brew install mutagen-io/mutagen/mutagen-beta
+brew tap mutagen-io/homebrew-mutagen && \
+cd "$(brew --repo mutagen-io/homebrew-mutagen)" && \
+git checkout bd8b45734ceebb24a9b11cbae7ff9f1623cfb737 && \
+HOMEBREW_NO_AUTO_UPDATE=1 brew install mutagen-io/mutagen/mutagen-beta && \
+cd - && \
+brew pin mutagen-io/mutagen/mutagen-beta
 ```
+
+{% info_block warningBox "Rolling back Mutagen version" %}
+
+If you previously installed a different version of Mutagen, the only way to roll back is to reinstall it. To install Mutagen version `0.13.0-beta4` and restart the Mutagen daemon, run the command:
+```shell
+brew uninstall mutagen-io/mutagen/mutagen-beta && \
+cd "$(brew --repo mutagen-io/homebrew-mutagen)" && \
+git checkout bd8b45734ceebb24a9b11cbae7ff9f1623cfb737 && \
+HOMEBREW_NO_AUTO_UPDATE=1 brew install mutagen-io/mutagen/mutagen-beta && \
+mutagen daemon stop  && \
+mutagen daemon start && \
+cd - && \
+brew pin mutagen-io/mutagen/mutagen-beta
+```
+{% endinfo_block %}
 
 ## Next steps
 

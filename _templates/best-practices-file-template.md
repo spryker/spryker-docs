@@ -30,4 +30,4 @@ template: best-practices-guide-template
 
 <!-- Give links to the related feature overviews and guides.
 
-Example: [Building a return management process: Best practices](https://documentation.spryker.com/docs/building-a-return-management-process-best-practices#building-a-return-management-process--best-practices)-->
+Example: [Building a return management process: Best practices](/docs/scos/user/features/{{site.version}}/return-management-feature-overview/building-a-return-management-process-best-practices.html#scenario-1-typical-return-process-for-b2c-models)-->

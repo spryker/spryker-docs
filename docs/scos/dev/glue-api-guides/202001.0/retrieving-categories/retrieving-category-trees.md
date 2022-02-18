@@ -19,7 +19,7 @@ In your development, these resources can help you to:
 * Find out which categories a product belongs to
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Category API Feature Integration](https://documentation.spryker.com/v4/docs/category-api-feature-integration-201903).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Category API Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-category-management-feature-integration.html).
 
 ## Get Full Category Tree
 To retrieve the full category tree, containing all available nodes and their children, send the request:
@@ -39,7 +39,7 @@ Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]`
 | --- | --- | --- |
 | Accept-Language | de, en;q=0.9 | locales and probability |
 
-### Reponse 
+### Reponse
 <details open>
 <summary markdown='span'>Response sample </summary>
 
@@ -167,7 +167,7 @@ To get all categories a product belongs to, you can send the request:
 |Path parameter| Description |
 |---|---|
 | sku | SKU of a product to retrieve categories for. |
-See [Retrieving Product Information](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-information.html) to learn more about this resource. 
+See [Retrieving Product Information](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-information.html) to learn more about this resource.
 
 ### Request
 Request sample : `GET http://mysprykershop.com/abstract-products/058?include=category-nodes`
@@ -426,7 +426,7 @@ Request sample : `GET http://mysprykershop.com/category-nodes/5`
 
 <details open>
 <summary markdown='span'>Response sample</summary>
-    
+
 ```js
 {
 		"data": {
@@ -515,5 +515,3 @@ Request sample : `GET http://mysprykershop.com/category-nodes/5`
 | --- | --- |
 | 701 | Node ID not specified or invalid. |
 | 703 | A node with the specified ID was not found. |
-
-

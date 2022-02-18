@@ -10,7 +10,7 @@ A URL redirect is a special entity that consists of a source URL (which is provi
 
 ## Manual redirects
 
-In the Back Office, you can create custom URL redirects from not yet existing URLs to other internal or external URLs with different status codes. See [Creating CMS redirects](https://documentation.spryker.com/docs/creating-cms-redirects) for details.
+In the Back Office, you can create custom URL redirects from not yet existing URLs to other internal or external URLs with different status codes. See [Creating CMS redirects](/docs/scos/user/back-office-user-guides/{{page.version}}/content/redirects/creating-cms-redirects.html) for details.
 
 ## Automatic redirects
 

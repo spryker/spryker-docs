@@ -30,9 +30,13 @@ There is no difference between how you initiate the flow. In any event, you will
 **To assign one or more products to a category:**
 1. Select the checkbox next to the product(s) you want to assign in the _Selected_ column.
 2. If you need to select all products displayed on the page, select **Select all** at the bottom of the table. 
-    {% info_block infoBox %}
-If you do not see the needed product on the page, there is no need to navigate through the pages manually. Use the **Search** field to find your product. You can use either the SKU or Name value to find the needed product.
-{% endinfo_block %}
+
+  {% info_block infoBox %}
+
+  If you do not see the needed product on the page, there is no need to navigate through the pages manually. Use the **Search** field to find your product. You can use either the SKU or Name value to find the needed product.
+
+  {% endinfo_block %}
+  
 3. Once done, click **Save**.
 
 

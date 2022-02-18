@@ -1,5 +1,5 @@
 ---
-title: Product Tax Sets API feature integration
+title: Glue API - Product Tax Sets feature integration
 description: This guide will navigate you through the process of installing and configuring the Product Tax Sets API feature in Spryker OS.
 last_updated: Nov 4, 2019
 template: feature-integration-guide-template

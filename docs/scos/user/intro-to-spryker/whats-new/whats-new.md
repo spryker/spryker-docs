@@ -28,7 +28,7 @@ redirect_from:
 
 Used to be http://spryker.github.io/getting-started/whats-new/
 
-Learn more about the new [GDPR regulations](https://documentation.spryker.com/guidelines/guidelines-for-new-gdpr-rules.htm) taking affect on May the 25th, 2018.
+Learn more about the new [GDPR regulations](/docs/scos/user/intro-to-spryker/support/guidelines-for-new-gdpr-rules.html) taking affect on May the 25th, 2018.
 
 Click  here for information on how to navigate through the Academy.
 -->
@@ -41,29 +41,27 @@ To subscribe to our release notes and security updates, see the following articl
 * [Release notes](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html)
 * [Security Updates](/docs/scos/user/intro-to-spryker/whats-new/security-updates.html)
 
-To check our previous release notes, go to the [Releases Archive](/docs/scos/user/intro-to-spryker/releases/releases-archive.html) section.
-
 <!--
 <details>
 <summary markdown='span'>April 2018 Release</summary>
-    
-[Release Notes - April - 2018](https://documentation.spryker.com/about_spryker/releases/archive/2018/release-notes-april-1-2018.htm)
-    
+
+[Release Notes - April - 2018](/docs/scos/user/intro-to-spryker/releases/archive/2018/release-notes-april-2018.html)
+
 
 * New: Reorder
 * New: Own Orders of Customers in the Administration Interface
 * Improved: Checkout Shipment Pre-Check Plugin
 * Improved: Country on the Order Details Page in the Administrator Interface
-* Improved: Extension Points for Post (De)activation of CMS Pages and Categories Update 
+* Improved: Extension Points for Post (De)activation of CMS Pages and Categories Update
 
 <br>
 </details>
 
 <details>
 <summary markdown='span'>March 2018 Release</summary>
-    
-[Release Notes - March - 2018](https://documentation.spryker.com/about_spryker/releases/archive/2018/release-notes-march-1-2018.htm)
-    
+
+[Release Notes - March - 2018](/docs/scos/user/intro-to-spryker/releases/archive/2018/release-notes-march-2018.html)
+
 
 * New: Gift Cards
 * New: Setting a New Password For the Administration Interface Users
@@ -76,9 +74,9 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 
 <details>
 <summary markdown='span'>February 2018 - Release #2</summary>
-    
-[Release Notes - February - 2 2018](https://documentation.spryker.com/about_spryker/releases/archive/2018/release-notes-february-2-2018.htm)
-    
+
+[Release Notes - February - 2 2018](/docs/scos/user/intro-to-spryker/releases/archive/2018/release-notes-february-2-2018.html)
+
 
 * New: CMS Blocks Per Store
 * New: Discounts Per Store
@@ -92,9 +90,9 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 
 <details>
 <summary markdown='span'>February 2018 - Release #1</summary>
-    
-[Release Notes - February - 1 2018](https://documentation.spryker.com/about_spryker/releases/archive/2018/release-notes-february-2018.htm)
-    
+
+[Release Notes - February - 1 2018](/docs/scos/user/intro-to-spryker/releases/archive/2018/release-notes-february-1-2018.html)
+
 
 * New: Product Search Widget
 * New: Multi-Store Product Abstract
@@ -107,9 +105,9 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 
 <details>
 <summary markdown='span'>January 2018 Release</summary>
-    
-[Release Notes - January - 2018](https://documentation.spryker.com/about_spryker/releases/archive/2018/release-notes-january-2018.htm)
-    
+
+[Release Notes - January - 2018](/docs/scos/user/intro-to-spryker/releases/archive/2018/release-notes-january-2018.html)
+
 
 * New: Multi-Currency Product Options
 * New: Category Filters
@@ -125,9 +123,9 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 
 <details>
 <summary markdown='span'>December 2017 Release</summary>
-    
-[Release Notes - December - 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-december-2017.htm)
-    
+
+[Release Notes - December - 2017](/docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-december-2017.html)
+
 
 * New: Initial Release of Heidelpay Module
 * New: Arvato RSS Release 2.0.0
@@ -143,9 +141,9 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 
 <details>
 <summary markdown='span'>November 2017 - Release #2</summary>
-    
-[Release Notes - November - 2 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-november-2-2017.htm)
-    
+
+[Release Notes - November - 2 2017](/docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-november-2-2017.html)
+
 * Improved: Inspinia Update
 * Improved: Filter Out Certain Orders from Listing in Yves Customer Account
 * Improved: Limits for Sequence Numbers
@@ -157,9 +155,9 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 
 <details>
 <summary markdown='span'>November 2017 - Release #1</summary>
-    
-[Release Notes - November - 1 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-november-1-2017.htm)
-    
+
+[Release Notes - November - 1 2017](/docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-november-1-2017.html)
+
 * New: Multi-currency for Shipments
 * New: Introducing Infrastructure for Upcoming Publish &amp; Synchronisation
 * Improved: State Machine Sub-process Reuse
@@ -172,8 +170,8 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 
 <details>
 <summary markdown='span'>October 2017 - Release #2</summary>
-    
-[Release Notes - October - 2 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-october-2-2017.htm)
+
+[Release Notes - October - 2 2017](/docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-october-2-2017.html)
 
 * New: Multi-currency for Discounts
 * Improved: Twig Data Access Optimisation
@@ -185,8 +183,8 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 
 <details>
 <summary markdown='span'>October 2017 - Release #1</summary>
-    
-[Release Notes - October - 1 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-october-1-2017.html)
+
+[Release Notes - October - 1 2017](/docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-october-1-2017.html)
 
 * New: CMS Page Preview
 * New: Validity Dates for Navigation Nodes
@@ -209,8 +207,8 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 
 <details>
 <summary markdown='span'>September 2017 - Release #2</summary>
-    
-[Release Notes - September - 2 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-september-2-2017.htm)
+
+[Release Notes - September - 2 2017](/docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-september-2-2017.html)
 
 * New: Discount Promotion Products
 * New: Product Reviews and Ratings
@@ -233,7 +231,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 <details>
 <summary markdown='span'>September 2017 - Release #1</summary>
 
-[Release Notes - September - 1 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-september-1-2017.htm)
+[Release Notes - September - 1 2017](/docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-september-1-2017.html)
 
 * New: Attribute Management for High Number of Attributes
 * New: Remove Payment when Cart is Modified
@@ -249,7 +247,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 <details>
 <summary markdown='span'>August 2017 - Release #2</summary>
 
-[Release Notes - August - 2 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-august-2-2017.htm)
+[Release Notes - August - 2 2017](/docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-august-2-2017.html)
 
 * New: Order Details Improvement
 * Improved: Enable isSearchable Checkbox for CMS Page
@@ -266,7 +264,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 <details>
 <summary markdown='span'>August 2017 - Release #1</summary>
 
-[Release Notes - August - 1 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-august-1-2017.htm)
+[Release Notes - August - 1 2017](/docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-august-1-2017.html)
 
 * New: Shipment Discount
 * Improved: Create Injection Points for Project Logic for Twig
@@ -289,7 +287,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 <details>
 <summary markdown='span'>July 2017 - Release #2</summary>
 
-[Release Notes - July - 2 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-july-2-2017.htm)
+[Release Notes - July - 2 2017](/docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-july-2-2017.html)
 
 * New: Filter by Product Labels
 * New: Data Importers
@@ -305,7 +303,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 <details>
 <summary markdown='span'>July 2017 - Release #1</summary>
 
-[Release Notes - July - 1 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-july-1-2017.htm)
+[Release Notes - July - 1 2017](/docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-july-1-2017.html)
 
 * New: Selecting Product Variant in the Cart
 * New: Improvements and New Features for CMS Blocks
@@ -330,7 +328,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 <details>
 <summary markdown='span'>June 2017 - Release #2</summary>
 
-[Release Notes - June - 2 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-june-2-2017.htm)
+[Release Notes - June - 2 2017](/docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-june-2-2017.html)
 
 * New: Delete Customer Account
 * New: Product Sets
@@ -345,7 +343,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 <details>
 <summary markdown='span'>June 2017 - Release #1</summary>
 
-[Release Notes - June - 1 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-june-1-2017.htm)
+[Release Notes - June - 1 2017](/docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-june-1-2017.html)
 
 * Improved: Session Service Provider Enhancement
 * Improved: Autoload Entry for BC
@@ -359,7 +357,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 <details>
 <summary markdown='span'>May 2017 - Release #2</summary>
 
-[Release Notes - May - 2 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-may-2-2017.htm)
+[Release Notes - May - 2 2017](/docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-may-2-2017.html)
 
 * New: CMS Page Draft and Page Versioning
 * New: Rest API - BETA
@@ -375,7 +373,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 <details>
 <summary markdown='span'>May 2017 - Release #1</summary>
 
-[Release Notes - May - 1 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-may-1-2017.htm)
+[Release Notes - May - 1 2017](/docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-may-1-2017.html)
 
 * New: Product Groups
 * Improved: CodeStyle checker
@@ -387,7 +385,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 <details>
 <summary markdown='span'>April 2017 - Release #2</summary>
 
-[Release Notes - April - 2 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-april-2-2017.htm)
+[Release Notes - April - 2 2017](/docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-april-2-2017.html)
 
 * New: Multiple Wishlists
 * New: Generated Directory Removal
@@ -402,7 +400,7 @@ To check our previous release notes, go to the [Releases Archive](/docs/scos/use
 <details>
 <summary markdown='span'>April 2017 - Release #1</summary>
 
-[Release Notes - April - 1 2017](https://documentation.spryker.com/about_spryker/releases/archive/2017/release-notes-april-1-2017.htm)
+[Release Notes - April - 1 2017](/docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-april-1-2017.html)
 
 * New: Product Relations
 * New: Event module

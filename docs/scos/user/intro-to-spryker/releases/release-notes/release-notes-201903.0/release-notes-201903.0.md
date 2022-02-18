@@ -22,17 +22,6 @@ redirect_from:
   - /v1/docs/en/release-notes-201903-0
   - /v6/docs/release-notes-201903-0
   - /v6/docs/en/release-notes-201903-0
-related:
-  - title: Code Sniffer
-    link: docs/scos/dev/sdk/development-tools/code-sniffer.html
-  - title: Architecture Sniffer
-    link: docs/scos/dev/sdk/development-tools/architecture-sniffer.html
-  - title: Heidelpay - Split-payment Marketplace
-    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-split-payment-marketplace.html
-  - title: Payment Integration - Adyen
-    link: docs/scos/user/technology-partners/page.version/payment-partners/adyen/adyen.html
-  - title: AfterPay
-    link: docs/scos/user/technology-partners/page.version/payment-partners/afterpay/afterpay.html
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of major new features and enhancements released in March of 2019.
@@ -172,7 +161,7 @@ With the market showing an increasing number of marketplaces, Spryker has integr
 
 Customer payments can now be split in the background and assigned to the corresponding vendors when a client buys a product delivered by different vendors. This feature ensures customers can buy several units of the same product sold by different vendors while still going through the checkout with one single order and one single payment.
 
-**Documentation**: [Heidelpay - Split-payment Marketplace](/docs/scos/user/technology-partners/201903.0/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-split-payment-marketplace.html).
+**Documentation**: [Integrating the Split-payment Marketplace payment method for Heidelpay](/docs/scos/dev/technology-partner-guides/{{site.version}}/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-split-payment-marketplace-payment-method-for-heidelpay.html).
 
 ### Adyen
 Our recently finished Adyen integration covers a wide range of payment methods used both in the DACH region as well as outside of it, thus making sure customers can select the most appropriate payment method.
@@ -188,11 +177,11 @@ Out-of-the-box the following payment methods are included:
 * QR code payment methods (Alipay, WeChat)
 * further ones can be added to the project
 
-**Documentation**: [Adyen](/docs/scos/user/technology-partners/201903.0/payment-partners/adyen/adyen.html).
+**Documentation**: [Adyen](/docs/scos/user/technology-partners/201903.0/payment-partners/adyen.html).
 
 ### Arvato AfterPay
 In addition to the existing Arvato RSS integration, Spryker has added the AfterPay payment method of Arvato, further extending the overall payment integrations of the Spryker Ecosystem. This invoice payment method includes a risk check of the potential uncertainty behind specific purchases and lowers the overall risk of fraud; used by default for the companies.
 
-**Documentation**: [AfterPay](/docs/scos/user/technology-partners/201903.0/payment-partners/afterpay/afterpay.html).
+**Documentation**: [AfterPay](/docs/scos/user/technology-partners/201903.0/payment-partners/afterpay.html).
 
 Check out [Documentation Updates](/docs/scos/user/intro-to-spryker/whats-new/documentation-updates.html) for all the updates to documentation made with this release.

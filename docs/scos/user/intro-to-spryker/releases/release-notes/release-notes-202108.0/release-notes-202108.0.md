@@ -78,7 +78,7 @@ This section describes the new functionalities released for the Docker SDK.
 The Docker SDK supports two new mailing-related parameters: `name` and `email address`. When sending emails like customer registration, the values of the parameters are used in the `From` field. You can define them in the `regions:services:mail:` section of the desired Deploy file.
 
 #### Documentation
-[Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/202108.0/deploy-file-reference-1.0.html#regions)
+[Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html#regions)
 
 ### Sync solution: Mutagen
 
@@ -92,14 +92,14 @@ The Docker SDK supports [Mutagen](https://mutagen.io/) as the new default sync s
 The Docker SDK supports defining if Xdebug is to be built in Docker images. By default, it is enabled for the development environment and disabled for the production environment. You can define it in the `docker:debug:enabled:` section of the desired Deploy file.
 
 #### Documentation
-[Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/202108.0/deploy-file-reference-1.0.html#docker-debug)
+[Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html#docker-debug)
 
 ### Configurable cors-allow-origin
 
 The Docker SDK supports defining [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) for the Glue API application. You can define it in the `groups: applications: endpoints: cors-allow-origin:` section of the desired Deploy file.
 
 #### Documentation
-[Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/202108.0/deploy-file-reference-1.0.html#groups-applications-endpoints)
+[Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html#groups-applications-endpoints)
 
 ### Accessing private repositories via SSH agent
 
@@ -123,7 +123,7 @@ Images are scanned in the background when they are pushed to AWS ECR, so it does
 The Docker SDK supports configuring `max-request-body-size` per application. It is limited in the code for security reasons, but you can increase or remove the maximum value for selected applications. You can configure `max-request-body-size` in the `groups: applications: application: http: max-request-body-size:` section of the desired Deploy file.
 
 #### Documentation
-[Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/202108.0/deploy-file-reference-1.0.html#groups-applications)
+[Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html#groups-applications)
 
 ### CloudTrail retention time changes
 Cloud Trail logs are now saved for at least 12 months for governance, compliance, operational auditing, and risk auditing of accounts. You can adjust the interval per your requirements.
@@ -249,7 +249,7 @@ We have done a complete revamp of the Spryker external libraries where we are de
 
 * [Symfony 5 integration](/docs/scos/dev/technical-enhancement-integration-guides/integrating-symfony-5.html)
 * [Chromium browser for tests](/docs/scos/dev/technical-enhancement-integration-guides/integrating-chromium-browser-for-tests.html)
-* [Test framework](/docs/scos/dev/guidelines/testing/test-framework.html)
+* [Test framework](/docs/scos/dev/guidelines/testing-guidelines/test-framework.html)
 * [Migrating from Twig v1 to Twig v3](/docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html)
 * [Supported versions of PHP](/docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html)
 
@@ -265,7 +265,7 @@ We are making available a **testing infrastructure** specifically for the Publis
 We have also extended the testing framework so that you can include your tests.
 
 #### Documentation
-[Test framework](/docs/scos/dev/guidelines/testing/test-framework.html)
+[Test framework](/docs/scos/dev/guidelines/testing-guidelines/test-framework.html)
 
 ### Transfer strict mode
 We have introduced the **strict mode** and type hints for transfer objects in function arguments and return types. This allows for safer and cleaner code, raises the code legibility and the checking capacity of our validation tools. We maintain the flexibility to define as Strict, specific transfers or even fields within transfers.

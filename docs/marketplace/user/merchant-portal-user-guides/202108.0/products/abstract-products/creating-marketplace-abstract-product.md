@@ -58,13 +58,15 @@ To create a new abstract product:
 
         {% endinfo_block %}
 
-3. Once done, click **Create**.
+3. Сlick **Create**.
 
 4. Click **Next**.
 
-Once the product is created, [activated](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product.html#activating-and-deactivating-a-concrete-product) it. Only active marketplace products are displayed on the Marketplace Storefront.
+Only active marketplace products are displayed on the Marketplace Storefront. To activate your marketplace product, see [Managing marketplace concrete products](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product.html#activating-and-deactivating-a-concrete-product).
 
-### Reference information: Create abstract product
+### Reference information: Create Abstract Product drawer
+
+The following table describes attributes you select and enter on the **Create Abstract Product** drawer.
 
 | ATTRIBUTE             | DESCRIPTION       |
 | ----------------------------- | ------------------------------------ |
@@ -73,7 +75,9 @@ Once the product is created, [activated](/docs/marketplace/user/merchant-portal-
 | Abstract product has 1 concrete product         | Select this option when you want your abstract product to have a single concrete product. |
 | Abstract product has multiple concrete products | Select this option when you want your abstract product to have multiple concrete products. |
 
-### Reference information: Create an Abstract Product with 1 Concrete Product
+### Reference information: Create an Abstract Product with 1 Concrete Product drawer
+
+The following table describes attributes you select and enter on the **Create an Abstract Product with 1 Concrete Product** drawer.
 
 | ATTRIBUTE            | DESCRIPTION             |
 | --------------------- | ------------------------------------ |
@@ -82,7 +86,7 @@ Once the product is created, [activated](/docs/marketplace/user/merchant-portal-
 | Concrete Product Name    | The name of the concrete product that is displayed for the product on the Storefront. |
 | Same as Abstract Product | Select the attribute if you want the name of the abstract product to be used for the concrete product as well. |
 
-### Reference information: Create an Abstract Product with multiple Concrete Products
+### Reference information: Create an Abstract Product with Multiple Concrete Products drawer
 
 You can select as many super attributes as you need and define one or more values for them. When you select a product attribute value, a concrete product based on this value is displayed. In the **Concrete Products’ Preview** pane you can view the products to be created.
 

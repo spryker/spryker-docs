@@ -438,7 +438,7 @@ For date formatting, [ISO-8601](https://www.iso.org/iso-8601-date-and-time-forma
 
 Example:
 * request: 1985-07-01T01:22:11+02:00
-* in storage and responses: 1985-06-31T11:22:11+00:00
+* in storage and responses: 1985-06-30T23:22:11+00:00
 
 ### Prices
 Prices are always returned both in cents and as an integer.

@@ -897,7 +897,11 @@ function initToc() {
         },
     };
 
-    $('nav[data-toggle="toc"]').each(function (i, el) {
+    let nav = $('nav[data-toggle="toc"]');
+
+    if (!nav.length) return;
+
+    nav.each(function (i, el) {
         Toc.init({
             $nav: $(el),
             $scope: $('.post-content h2, .post-content h3'),

@@ -4,10 +4,11 @@ pre {
     color: $white;
     padding: 10px;
     word-break: break-word;
+    margin-top: 53px;
 }
 
 .highlight {
-    margin: 0 0 1em;
+    margin-bottom: 1em;
 
     & &,
     pre {
@@ -88,8 +89,9 @@ pre {
     align-items: center;
     justify-content: flex-end;
     padding: 3px 14px;
-    margin: 15px 0 0;
+    margin: 1em 0 0;
 
+    & + .highlight,
     & + pre {
         margin-top: 0;
     }

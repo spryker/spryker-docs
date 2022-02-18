@@ -127,7 +127,7 @@ To trigger Xdebug in CLI, prepend environment variables to commands as shown in 
 XDEBUG_CONFIG="remote_host=10.10.0.1" PHP_IDE_CONFIG="serverName=zed.mysprykershop.com" vendor/bin/console <command>
 ```
 
-The value of `serverName` should should correspond to the server name you've entered when [configuring servers](#configuring-servers).
+The value of `serverName` should should correspond to the server name you've entered when [configuring servers](#configure-phpstorm--servers).
 
 ## Configuring a Google Chrome helper for Xdebug
 

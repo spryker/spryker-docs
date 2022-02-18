@@ -146,5 +146,9 @@ $config[ApplicationConstants::HOST_YVES] = 'www.de.XXX.local';
 
 The first key is responsible for proper call from Yves to Zed, while the second one is used for domain name used for session cookies.
 
+<!--
+
 ## Upgrading to a newer version
 To check for newer released versions, we recommend that you follow the steps described in [Core Updates](/docs/scos/dev/setup/managing-scos-dependencies-with-composer.html#core-updates).
+
+-->

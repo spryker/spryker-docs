@@ -7,11 +7,11 @@ template: concept-topic-template
 
 {% info_block infoBox "Info" %}
 
-Learn about the SCOS related upcoming major releases [here](/docs/scos/user/intro-to-spryker/whats-new/upcoming-major-module-releases.html).
+To learn about the SCOS related upcoming major releases, see [Upcoming major module releases](/docs/scos/user/intro-to-spryker/whats-new/upcoming-major-module-releases.html).
 
 {% endinfo_block %}
 
-[Major module releases](/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html) might require some development efforts from projects. To help you plan in advance, check out the table below for information on modules for which we plan major releases.
+[Major module releases](/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html) might require some development efforts from projects. To help you plan in advance, check out the following table for information on modules for which we plan major releases.
 
 
 | MODULE | DATE | REASON FOR THE MAJOR VERSION |

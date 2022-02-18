@@ -23,63 +23,46 @@ To create a new abstract product:
 
    1. Enter an **SKU Prefix**.
 
-   2. Enter a **Name** for the default locale. The rest of the locales will be defined once the product is created.
+   2. Enter a **Name** for the default locale. The rest of the locales are defined once the product is created.
 
-   3. Select **Abstract product has 1 concrete product** if you are creating an abstract product that doesn't require variants. The **Create an Abstract Product with 1 Concrete Product** drawer opens.
+   3. Depending on whether your abstract product requires adding variants or no, take one of the following steps:
+      - If you are creating an abstract product that doesn't require variants, select **Abstract product has 1 concrete product**. The **Create an Abstract Product with 1 Concrete Product** drawer opens.
+        1. On the **Create an Abstract Product with 1 Concrete Product** drawer, enter a **Concrete Product SKU**.
+        2. Enter a **Concrete Product Name**.
+        3. To finish the product creation, click **Create**.
 
-   {% info_block warningBox "Warning" %}
+          ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/merchant+portal+user+guides/Products/create-abstract-product-with-one-variant-mp.gif)
 
-   It is not possible to save the abstract product unless it is accompanied by at least one concrete product.
+          {% info_block warningBox "Warning" %}
 
-   {% endinfo_block %}
+          You can not save an abstract product unless it is accompanied by at least one concrete product.
 
+          {% endinfo_block %}
+      -  If the abstract product that you are creating requires variants, select **Abstract product has multiple concrete products**.
+        1. Select a super attribute that defines the variation of your concrete products.
+        2. In the field next to the super attribute you've selected, select one or more values for each super attribute. Upon adding the super attribute values, the preview of the concrete products is displayed.
 
-   Select **Abstract product has multiple concrete products** if the abstract product you are creating will require variants.
+        {% info_block infoBox "Info" %}
 
-   4. Click **Next**. <br>
+        Removing a super attribute or its value removes the related concrete products or concrete product values from the preview.
 
-   <br>
+        {% endinfo_block %}
 
-      If you chose **Abstract product has 1 concrete product**:<br>
+        3. Optional: Add more super attributes by clicking the **Add** button. Repeat this step until you select at least one value for each selected super attribute.
 
+        ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/merchant+portal+user+guides/Products/create-abstract-product-with-multiple-variants-mp.gif)
 
-      1. On the **Create an Abstract Product with 1 Concrete Product** drawer, enter a **Concrete Product SKU**.
-      2. Enter a **Concrete Product Name**.
-      3. To finish the product creation, click **Create**.
+        {% info_block infoBox "Info" %}
 
+        You can remove a concrete product from the preview list by clicking the **Remove** icon.
 
-
-      ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/merchant+portal+user+guides/Products/create-abstract-product-with-one-variant-mp.gif)
-
-
-
-      If you chose **Abstract product has multiple concrete products**:<br>
-
-   <br>
-
-      1. Select a super attribute that defines the variation of your concrete products.
-      2. In the field next to the super attribute you've selected, select one or more values for each super attribute. Upon adding the super attribute values, the preview of the concrete products is displayed.
-
-      {% info_block infoBox "Info" %}
-
-      Removing a super attribute or its value removes the related concrete products or concrete product values from the preview.
-
-      {% endinfo_block %}
-
-      1. Optional: Add more super attributes by clicking the **Add** button. Repeat this step until you select at least one value for each selected super attribute.
-
-      ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/merchant+portal+user+guides/Products/create-abstract-product-with-multiple-variants-mp.gif)
-
-      {% info_block infoBox "Info" %}
-
-      You can remove a concrete product from the preview list by clicking the **Remove** icon.
-
-      {% endinfo_block %}
+        {% endinfo_block %}
 
 3. Once done, click **Create**.
 
+4. Click **Next**.
 
-Once the product is created, it needs to be [activated](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product.html#activating-and-deactivating-a-concrete-product). Only active marketplace products are displayed on the Marketplace Storefront.
+Once the product is created, [activated](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product.html#activating-and-deactivating-a-concrete-product) it. Only active marketplace products are displayed on the Marketplace Storefront.
 
 ### Reference information: Create abstract product
 

@@ -145,7 +145,7 @@ To cancel an order:
    The page refreshes to show the updated merchant order state.
 
 **Tips & tricks**
-<br>You can filter the existing merchant orders by:
+<br>You can filter the existing merchant orders by the following:
 * Creation date
 * Stores where the order belongs
 * Merchant order states

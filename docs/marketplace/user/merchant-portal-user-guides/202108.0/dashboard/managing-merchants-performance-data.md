@@ -19,9 +19,9 @@ Each section contains reference information. Make sure to review it before you s
 
 ## Managing offers in Dashboard
 
-To manage the existing offers in the system, click **Manage Offer**. You get redirected to the **Offers** page of the Merchant Portal. <!-- add a link when available -->
+To manage the existing offers in the system, click **Manage Offer**. This takes you to the **Offers** page of the Merchant Portal. <!-- add a link when available -->
 
-To create a new offer, click **Add Offer**. See Creating a product offer <!-- add a link when available --> for more detailed instructions on how to create a new offer in the Merchant Portal.
+To create a new offer, click **Add Offer**. For more detailed instructions on how to create a new offer in the Merchant Portal, see creating a product offer <!-- add a link when available -->
 
 ### Reference information: Managing offers in Dashboard
 
@@ -55,7 +55,7 @@ Offline—the total number of offline offers.
 
 #### On Marketplace
 
-The total number of offers that are available on the Storefront, that is,  all of the orders that:
+The total number of offers that are available on the Storefront, that is,  all of the orders that meet the following criteria:
 
 * Have no validity dates or **Valid From & Valid To** includes today's date.
 * Are online.
@@ -74,7 +74,7 @@ This section contains the attributes description you see when managing orders in
 
 ![orders-widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/merchant+portal+user+guides/dashboard+reference+information/orders-widget.png)
 
-The Orders widget provides the following information:
+The **Orders** widget provides the following information:
 
 `Orders 2`—the total number of orders in the Merchant Portal.
 

@@ -32,7 +32,7 @@ Automate your processes and implement several shipping and payment integrations.
 
 **Features**
 <div>
-<a class="feature-link" href="/docs/scos/user/technology-partners/{{page.version}}/technology-partner-integration.html">Check out the full list of our Technology Partners</a>
+<a class="feature-link" href="/docs/scos/user/technology-partners/{{page.version}}/technology-partners.html">Check out the full list of our Technology Partners</a>
 <a class="feature-link" href="/docs/scos/user/features/{{page.version}}/technology-partner-integrations/punch-out/punch-out.html">Punch Out</a>
 </div>
 <!--

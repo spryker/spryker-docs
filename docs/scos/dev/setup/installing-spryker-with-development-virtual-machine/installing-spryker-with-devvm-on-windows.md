@@ -23,7 +23,7 @@ redirect_from:
 
 ---
 
-To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html) or [B2C](/docs/scos/user/intro-to-spryker/b2c-suite.html) implementations on Windows with development virtual machine (DevVM), follow the steps below.
+To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html) or [B2C](/docs/scos/user/intro-to-spryker/b2c-suite.html) implementations on Windows with Spryker development virtual machine (DevVM), follow the steps below.
 
 ## 1. Install prerequisites
 
@@ -43,189 +43,183 @@ vagrant plugin install vagrant-hostmanager
 
 ## 2. Install Spryker DevVM
 
-To install the VM, you need to run the following commands. For this purpose, use `Git Bash` command prompt with administrative privileges.
-
 1. Launch Git Bash:
 
-* Click **Start**.
+    1. Click **Start**.
 
-* Start typing `Git Bash`.
+    2. Start typing `Git Bash`.
 
-* In the search results, right-click **Git Bash** and select **Run as administrator**.
+    3. In the search results, right-click **Git Bash** and select **Run as administrator**.
 ![Run git bash as administrator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/B2B+Demo+Shop+Installation+Guide/run-git-bash-as-administrator.png)
 
-2. **Create the folder in which you want the source code to be placed:**
+2. Create a folder for the DevVM:
 
 ```bash
 mkdir devvm
-cd devvm
 ```
 
-3. **Initialize the Vagrant environment**:
+3. Navigate to the folder you've created:
+
+```bash
+cd devvm				
+```
+
+4. Initialize the Vagrant environment:
 
 ```bash
 vagrant init devv410 https://u220427-sub1:PpiiHzuF2OIUzmcH@u220427-sub1.your-storagebox.de/devvm_v4.1.0.box
 ```
 {% info_block warningBox %}
 
-For _Spryker Core_ version **201907.0** or prior, you need to use an older version of the development machine:
+For _Spryker Core_ version 201907.0 or prior, initialize an older version of DevVM:
 ```bash
 vagrant init devvm2.3.1 https://github.com/spryker/devvm/releases/download/v2.3.1/spryker-devvm.box
 ```
 
 {% endinfo_block %}
 
-4. **Update the Vagrantfile**:
-
-Add hostmanager plugin configuration:
+5. Add hostmanager plugin configuration to the Vagrantfile:
 
 ```bash
-mv Vagrantfile Vagrantfile.bak
+mv Vagrantfile Vagrantfile.bak &&
 awk '/^end/{print "  config.hostmanager.enabled = true\n  config.hostmanager.manage_host = true"}1' Vagrantfile.bak &gt; Vagrantfile
 ```
 
-5. **Build and start the virtual machine**:
+6. Build and start the DevVM without cloning the Demo Shop:
 
-{% info_block warningBox %}
+    * For the B2B Demo Shop:
+    ```bash
+    VM_SKIP_SF="1" VM_PROJECT=b2b-demo-shop SPRYKER_REPOSITORY="https://github.com/spryker-shop/b2b-demo-shop.git" vagrant up
+    ```
 
-This step creates the VM without cloning the actual codebase. It will be done in the **step 3.8**.
+    * For the B2C Demo Shop:
+    ```bash
+    VM_SKIP_SF="1" VM_PROJECT=b2c-demo-shop SPRYKER_REPOSITORY="https://github.com/spryker-shop/b2c-demo-shop.git" vagrant up
+    ```
 
-{% endinfo_block %}
+### 3. Configure the DevVM
 
-* For a B2B Demo Shop:
-```bash
-VM_SKIP_SF="1" VM_PROJECT=b2b-demo-shop SPRYKER_REPOSITORY="https://github.com/spryker-shop/b2b-demo-shop.git" vagrant up
-```
-* For a B2C Demo Shop:
-```bash
-VM_SKIP_SF="1" VM_PROJECT=b2c-demo-shop SPRYKER_REPOSITORY="https://github.com/spryker-shop/b2c-demo-shop.git" vagrant up
-```
-
-### 3. Install the shop
-
-1. **Log into the VM:**
+1. Log into the DevVM:
 
 ```bash
 vagrant ssh
 ```
 
-2. **Update the network configuration of the VM:**
+2. Update the network configuration of the DevVM:
 
 ```bash
 sudo sed -i "s/eth1/eth1 $(ip -o -4 route show to default | cut -d ' ' -f 5)/g; s/create mask = 0775/create mask = 0777/g; s/directory mask = 0775/directory mask = 0777\n  force user = vagrant\n  force group = vagrant/g"  /etc/samba/smb.conf
 ```
 
-3. **Add the Samba server to the autoload configuration and restart it:**
+3. Add the Samba server to the autoload configuration and restart it:
 
 ```bash
-sudo systemctl enable smbd.service nmbd.service
+sudo systemctl enable smbd.service nmbd.service &&
 sudo /etc/init.d/samba restart
 ```
 
-4. **Update PHP and Jenkins configuration:**
+4. Update PHP and Jenkins configuration:
 
 ```bash
-sudo sed -i 's/user = www-data/user = vagrant/g'  /etc/php/7.4/fpm/pool.d/*.conf
-sudo sed -i 's/=www-data/=vagrant/g' /etc/default/jenkins-devtest
+sudo sed -i 's/user = www-data/user = vagrant/g'  /etc/php/7.4/fpm/pool.d/*.conf &&
+sudo sed -i 's/=www-data/=vagrant/g' /etc/default/jenkins-devtest &&
 sudo chown -R vagrant:vagrant /data/shop/devtest/shared/data/common/jenkins
 ```
 
-5. **Restart PHP and Jenkins:**
+5. Restart PHP and Jenkins:
 
 ```bash
-sudo /etc/init.d/php7.4-fpm restart
+sudo /etc/init.d/php7.4-fpm restart &&
 sudo /etc/init.d/jenkins-devtest restart
 ```
 
-6. **Change permissions for the project directory:**
+6. Change the permissions of the project directory:
 
 ```bash
-sudo chown vagrant:vagrant .
+sudo chown vagrant:vagrant . &&
 sudo chmod og+rwx .
 ```
 
-7. **Mount the share in Windows:**
+7. Mount the share in Windows:
 
-    1. Start Windows Command Prompt. To do this, press `Win+R`, type `cmd` and press `Enter`.
+    1. To start Windows Command Prompt, do the following:
+        1. Press `Win+R`.
+        2. Enter `cmd`.
+        3. Press `Enter`.
 
-    2. Execute the following command to mount the share as a network drive:
+    2. Mount the share as a network drive:
 
        ```bash
        net use s: \\spryker-vagrant\project\current /persistent:yes
        ```
+This mounts the share as the `s:` drive.
 
-    {% info_block infoBox %}
-    The share will be mounted as the s: drive.
-    {% endinfo_block %}
 
-8. **Copy the codebase to the VM:**
+## 4. Install the Demo Shop
 
-**For a B2B Demo Shop:**
+1. Clone the needed Demo Shop to the VM:
 
-1. Logout from the VM and clone the codebase into the `c:\b2b-demo-shop` directory by executing the following commands in Git Bash:
+    * Clone the B2B Demo Shop:
+
+        1. Log out from the VM.
+        2. In Git Bash, clone the Demo Shop:
+        ```bash
+        cd /c/ &&
+        git clone https://github.com/spryker-shop/b2b-demo-shop.git
+        ```
+
+        3. In Windows Command Prompt, move the `c:\b2b-demo-shop` directory to the network drive:
+        ```bash
+        xcopy C:\b2b-demo-shop s: /he
+        ```    
+          `s:` - is the network drive you've mounted in the previous step.
+
+    * Clone the B2C Demo Shop:
+        1. Log out from the VM.
+        2. In Git Bash, clone the Demo Shop:
+        ```bash
+        cd /c/ &&
+        git clone https://github.com/spryker-shop/b2c-demo-shop.git
+        ```
+        3. In Windows Command Prompt, move the `c:\b2c-demo-shop` directory to the network drive:
+        ```bash
+        xcopy C:\b2c-demo-shop s: /he
+        ```
+        where:
+          `s:` - is the network drive you've mounted in the previous step.
+
+
+2. In Git Bash, go to the `devvm` folder you've created in [Install Spryker DevVM](#install-spryker-devvm).
+
+3. DevVM version below 2.2.0: Set the maximum number of connections to 65535:
 ```bash
-cd /c/
-git clone https://github.com/spryker-shop/b2b-demo-shop.git
+ulimit -n 65535
 ```
-2. In Windows Command Prompt, execute the command to move the `c:\b2b-demo-shop` directory to the network drive:
+
+4. Install the Demo Shop:
 ```bash
-xcopy C:\b2b-demo-shop s: /he
+vagrant ssh
+composer install
+vendor/bin/install
 ```
-where:
-* **s:** - is the network drive you have mounted in the previous step.
 
-**For a B2C Demo Shop:**
-1. Logout from the VM and clone the codebase into the `c:\b2c-demo-shop` directory by executing the following commands in Git Bash:
-```bash
-cd /c/
-git clone https://github.com/spryker-shop/b2c-demo-shop.git
-```
-2. In Windows Command Prompt, execute the command to move the `c:\b2c-demo-shop` directory to the network drive:
-```bash
-xcopy C:\b2c-demo-shop s: /he
-```
-where:
-* **s:** - is the network drive you have mounted in the previous step.
+This installs all required dependencies, and runs the installation process. Also, this installs demo data and exports it to Redis and Elasticsearch.
 
- {% info_block infoBox %}
+When the installation process is complete, you can access your Spryker Commerce OS via the following links:
 
-Make sure that the codebase has been copied completely.
+* B2B Demo Shop:
+    * `http://de.b2b-demo-shop.local` - frontend (Storefront)
+    * `http://zed.de.b2b-demo-shop.local` - backend (the Back Office)
+    * `http://glue.de.b2b-demo-shop.local` - REST API (Glue)
 
-{% endinfo_block %}
+* B2C Demo Shop:
+    * `http://de.b2c-demo-shop.local` - frontend (Storefront)
+    * `http://zed.de.b2c-demo-shop.local` - backend (the Back Office)
+    * `http://glue.de.b2c-demo-shop.local` - REST API (Glue)
 
-9. **Run the installation commands:**
-
-     1. Switch back to Git Bash
-     2. Go to the devvm folder you have created in the step **2.1**
-     3. Run the following commands:
-
-          ```bash
-          vagrant ssh
-          composer install
-          vendor/bin/install
-          ```
-
-{% info_block warningBox %}
-
-If you are using a devvm version lower than 2.2.0, run the `ulimit -n 65535` command first.
-
-{% endinfo_block %}
-
-Executing these steps will install all required dependencies, and run the installation process. Also, this will install the demo data and export it to `Redis` and `Elasticsearch`.
-
-When the installation process is complete, Spryker Commerce OS is ready to use. It can be accessed via the following links:
-
-**B2B Demo Shop:**
-* `http://de.b2b-demo-shop.local` - front-end (Storefront);
-* `http://zed.de.b2b-demo-shop.local` - backend (the Back Office).
-* `http://glue.de.b2b-demo-shop.local` - REST API (Glue).
-
-**B2C Demo Shop:**
-* `http://de.b2c-demo-shop.local` - front-end (Storefront);
-* `http://zed.de.b2c-demo-shop.local` - backend (the Back Office).
-* `http://glue.de.b2c-demo-shop.local` - REST API (Glue).
-
-Credentials to access the administrator interface: user `admin@spryker.com` and password `change123`.
+Back Office credentials:
+* EMAIL: `admin@spryker.com`
+* PASSWORD: `change123`
 
 ## Next steps
 

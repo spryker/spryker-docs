@@ -1,20 +1,20 @@
 ---
-title: Installing Spryker with Development Virtual Machine
-description: All the necessary information for installing Spryker with Development Virtual Machine.
+title: Installing Spryker with development virtual machine
+description: All the necessary information for installing Spryker with development virtual machine.
 template: howto-guide-template
 redirect_from:
   - docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/cleaning-up-devvm.html
   - docs/scos/dev/setup/cleaning-up-devvm.html
 ---
 
-This section is a complete stack for running Spryker in [Development Virtual Machine (DevVM)](https://github.com/spryker/devvm).
+This section is a complete stack for running Spryker in [development virtual machine (DevVM)](https://github.com/spryker/devvm).
 
 
 Below, you will find a step-by-step checklist that you will be able to follow through all the stages to start working with Spryker in DevVM.
 
 ## Prerequisites
 
-Before you start installing Spryker DevVM, make sure to fulfill the [DevVM system requirements](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/devvm-system-requirements.html).
+Before you start installing DevVM, make sure to fulfill the [DevVM system requirements](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/devvm-system-requirements.html).
 
 ## Installation
 

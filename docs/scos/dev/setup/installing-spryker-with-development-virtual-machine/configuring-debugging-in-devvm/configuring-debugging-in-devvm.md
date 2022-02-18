@@ -33,9 +33,7 @@ To configure debugging for the VM below version 91, see [Configuring debugging i
 
 {% endinfo_block %}
 
-## Installing the Xdebug module
-
-To install the Xdebug module:
+## 1. Install the Xdebug module
 
 1. Install Xdebug:
 
@@ -43,34 +41,34 @@ To install the Xdebug module:
 sudo -i apt-get install php-xdebug
 ```
 
-2. Enable Xdebug by updating `/etc/php/7.4/mods-available/xdebug.ini` with the following:
+2. Depending on the needed version, enable Xdebug by updating `/etc/php/7.4/mods-available/xdebug.ini` with one of the following:
 
-Xdebug v3
+    * Xdebug v3
 
-```bash
- xdebug.mode=debug
- xdebug.client_host=10.10.0.1
- # This is needed to prevent max recursion exception when Twig templates are very complicated
- xdebug.max_nesting_level=1000
- # Disable Opcache to avoid IDE issues
- opcache.enable=0
- opcache.enable_cli=0
-```
+    ```bash
+     xdebug.mode=debug
+     xdebug.client_host=10.10.0.1
+     # This is needed to prevent max recursion exception when Twig templates are very complicated
+     xdebug.max_nesting_level=1000
+     # Disable Opcache to avoid IDE issues
+     opcache.enable=0
+     opcache.enable_cli=0
+    ```
 
-Xdebug v2
+    * Xdebug v2
 
-```bash
- xdebug.remote_enable=1
- xdebug.remote_host=10.10.0.1
- # This is needed to prevent max recursion exception when Twig templates are very complicated
- xdebug.max_nesting_level=1000
- # Disable Opcache to avoid IDE issue
- opcache.enable=0
- opcache.enable_cli=0
-```
+    ```bash
+     xdebug.remote_enable=1
+     xdebug.remote_host=10.10.0.1
+     # This is needed to prevent max recursion exception when Twig templates are very complicated
+     xdebug.max_nesting_level=1000
+     # Disable Opcache to avoid IDE issue
+     opcache.enable=0
+     opcache.enable_cli=0
+    ```
 
 
-3. Enable module and restart PHP-FPM:
+3. Enable the module and restart PHP-FPM:
 
 ```bash
 sudo -i bash -c "phpenmod xdebug && systemctl restart php7.4-fpm.service"
@@ -85,7 +83,7 @@ sudo -i bash -c "phpdismod xdebug && systemctl restart php7.4-fpm.service"
 
 {% endinfo_block %}
 
-## Configuring servers
+## 2. Configure PhpStorom servers
 
 Define servers in PhpStorm:
 1. In PhpStorm, go to **Preferences** > **Languages & Frameworks** > **PHP** > **Servers**.
@@ -98,7 +96,7 @@ Define servers in PhpStorm:
 3. Add another server for Yves. Copy the settings from the previous step, but, for **Host**, enter `~^www\.de\..+\.local$`.
 
 
-## Configuring debugger
+## 3. Configure debugger
 
 1. In PhpStorm, go to **Preferences** > **Languages & Frameworks** > **PHP** > **Debug**.
 
@@ -123,13 +121,13 @@ To debug with PhpStorm:
 
 ### Debugging console commands
 
-To trigger Xdebug in CLI, prepend environment variables to commands as follows.
+To trigger Xdebug in CLI, prepend environment variables to commands as shown in the following example.
 
 ```bash
 XDEBUG_CONFIG="remote_host=10.10.0.1" PHP_IDE_CONFIG="serverName=zed.mysprykershop.com" vendor/bin/console <command>
 ```
 
-The value of `serverName` should reflect the server name you've entered when [configuring servers](#configuring-servers).
+The value of `serverName` should should correspond to the server name you've entered when [configuring servers](#configuring-servers).
 
 ## Configuring a Google Chrome helper for Xdebug
 

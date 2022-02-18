@@ -48,7 +48,7 @@ entries:
     - title: Installing Spryker with Development Virtual Machine
       url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-development-virtual-machine.html
       nested:
-      - title: System requirements
+      - title: DevVM system requirements
         url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/devvm-system-requirements.html
       - title: Installing on MacOS and Linux
         url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html

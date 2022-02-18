@@ -38,7 +38,7 @@ To install the [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html) 
 
 ## 1. Install prerequisites
 
-To set up your environment, do the following:
+To set up your environment, do the following.
 
 1. Install the following prerequisites:
     * [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
@@ -66,7 +66,7 @@ mkdir devvm
 cd devvm				
 ```
 
-2. Initialize the Vagrant environment:
+3. Initialize the Vagrant environment:
 
 ```bash
 vagrant init devv410 https://u220427-sub1:PpiiHzuF2OIUzmcH@u220427-sub1.your-storagebox.de/devvm_v4.1.0.box
@@ -80,14 +80,14 @@ vagrant init devvm2.3.1 https://github.com/spryker/devvm/releases/download/v2.3.
 
 {% endinfo_block %}
 
-3. Add hostmanager plugin configuration to the Vagrantfile:
+4. Add hostmanager plugin configuration to the Vagrantfile:
 
 ```bash
 mv Vagrantfile Vagrantfile.bak &&
 awk '/^end/{print "  config.hostmanager.enabled = true\n  config.hostmanager.manage_host = true"}1' Vagrantfile.bak > Vagrantfile
 ```
 
-4. Build and start the DevVM:
+5. Build and start the DevVM with the needed Demo Shop:
     * With B2B Demo Shop:
 
     ```bash
@@ -99,11 +99,11 @@ awk '/^end/{print "  config.hostmanager.enabled = true\n  config.hostmanager.man
     VM_PROJECT=b2c-demo-shop SPRYKER_REPOSITORY="https://github.com/spryker-shop/b2c-demo-shop.git" vagrant up
     ```
 
-This builds and runs the VM, and copies the repository to the `project` subfolder of the VM (e.g. `~/devvm/project`). The subfolder is mounted inside the VM to `/data/shop/development/current`.
+This builds and runs the DevVM, and copies the repository to the `project` subfolder of the DevVM (e.g. `~/devvm/project`). The subfolder is mounted inside the DevVM to `/data/shop/development/current`.
 
 ## 3. Install the shop
 
-1. Log into the VM:
+1. Log into the DevVM:
 
 ```bash
 vagrant ssh
@@ -114,7 +114,7 @@ vagrant ssh
 ulimit -n 65535
 ```
 
-3. Run the installation commands:
+3. Install the Demo Shop:
 
 ```bash
 composer install &&
@@ -127,17 +127,18 @@ This installs all required dependencies, and runs the installation process. Also
 When the installation process is complete, you can access your Spryker Commerce OS via the following links:
 
 * B2B Demo Shop:
-    * `http://de.b2b-demo-shop.local` - front-end (Storefront);
-    * `http://zed.de.b2b-demo-shop.local` - backend (the Back Office).
-    * `http://glue.de.b2b-demo-shop.local` - REST API (Glue).
+    * `http://de.b2b-demo-shop.local` - frontend (Storefront)
+    * `http://zed.de.b2b-demo-shop.local` - backend (the Back Office)
+    * `http://glue.de.b2b-demo-shop.local` - REST API (Glue)
 
 * B2C Demo Shop:
-    * `http://de.b2c-demo-shop.local/` - front-end (Storefront);
-    * `http://zed.de.b2c-demo-shop.local` - backend (the Back Office).
-    * `http://glue.de.b2c-demo-shop.local` - REST API (Glue).
+    * `http://de.b2c-demo-shop.local/` - frontend (Storefront)
+    * `http://zed.de.b2c-demo-shop.local` - backend (the Back Office)
+    * `http://glue.de.b2c-demo-shop.local` - REST API (Glue)
 
-Back Office credentials
-* user `admin@spryker.com` and password `change123`.
+Back Office credentials:
+* EMAIL: `admin@spryker.com`
+* PASSWORD: `change123`
 
 ## Next steps
 

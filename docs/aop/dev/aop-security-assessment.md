@@ -9,12 +9,8 @@ template: howto-guide-template
 This document outlines the Threat modeling and Security Assessment requirements and process for apps listed on Spryker’s App Catalog or App Store. It covers the following app types:
 
 - Pure API integrations (with 3rd party services and vendors)
-
 - Apps extending the Spryker Cloud Commerce Operating System (SCCOS)
-
 - Hybrid apps
-
-  
 
 ## AOP security
 
@@ -41,12 +37,12 @@ The Threat model document will be shared in a PDF, Word or HTML format and will 
 - Document as many potential threats to the AOP app (PBC) as possible.
 - Security controls that may be put in place to reduce the likelihood or impact of a potential threat.
 
-During Threat modeling, the following list of risks and threat libraries sources are recommended to define the possible threats an application might be facing:
+During threat modeling, the following list of risks and threat libraries sources are recommended to define the possible threats an application might be facing:
 
-1. Risks with OWASP Top 10.
-2. Testing Procedure with OWASP ASVS.
-3. Risks with SANS Top 25.
-4. Microsoft STRIDE.
+1. Risks with [OWASP Top 10](https://owasp.org/www-project-top-ten/).
+2. Testing Procedure with [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/).
+3. Risks with [SANS Top 25](https://www.sans.org/top25-software-errors).
+4. Microsoft [STRIDE](https://en.wikipedia.org/wiki/STRIDE_%28security%29).
 
 ## Security assessment and testing
 
@@ -60,10 +56,10 @@ Every app that clears the review successfully will be awarded a badge of Securit
 
 Penetration testing should be conducted in accordance with or based on the following methodologies and recommendations:
 
-- Web Security Testing Guide – OWASP WSTG
-- The Penetration Testing Execution Standard – PTES
-- Open Source Security Testing Methodology Manual – OSSTMM
-- Payment Card Industry Data Security Standard – PCI DSS
+- Web Security Testing Guide – [OWASP WSTG](https://owasp.org/www-project-web-security-testing-guide/)
+- The Penetration Testing Execution Standard – [PTES](http://www.pentest-standard.org/index.php/Main_Page)
+- Open Source Security Testing Methodology Manual – [OSSTMM](https://www.isecom.org/OSSTMM.3.pdf)
+- Payment Card Industry Data Security Standard – [PCI DSS](https://www.pcisecuritystandards.org/document_library?category=pcidss&document=pci_dss)
 
 ## Testing requirements
 
@@ -78,7 +74,7 @@ Spryker will be provided with the following information for conducting a test:
 
 Test results will be shared in a PDF, Word, or HTML format and will contain the following information:
 
-- The type/classification of the vulnerability - (XSS, SQL Injection, CSRF, etc.) according to OWASP, CWE, or NIST NVD.
+- The type/classification of the vulnerability - (XSS, SQL Injection, CSRF, etc.) according to [OWASP](https://owasp.org/www-community/vulnerabilities/), [CWE](https://cwe.mitre.org/data/definitions/699.html), or [NIST NVD](https://nvd.nist.gov/vuln/).
 - The location of the issue within the code or steps to reproduce the issue (e.g. example of a network request triggering the vulnerability).
 - Recommendation on how to fix or mitigate it.
 As stated earlier, these results will not cover the entire code base. 
@@ -125,11 +121,17 @@ For each app, a review fee of EUR 2500 / USD 3000 will be applicable. This amoun
 The fee covers an initial round of testing and up to two rounds of re-tests in case the application fails to pass the earlier rounds. If more testing is required because the partner hasn’t been able to address issues with earlier rounds of testing, each additional round will require a fee of EUR 800/USD 1000.
 Note: As stated earlier, Spryker will provide a few examples of vulnerabilities with the expectation that the partner does a thorough review of their app and fix any issues across the app.
 
+## Threat modeling process
+
+The diagram below demonstrates threat modeling process:
+
+![image 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/aop-security-assessment/image2.jpg)
+
 ## Security assessment process
 
 The diagram below demonstrates security assessment procedure:
 
-![](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/aop-security-assessment/image1.jpg)
+![image 1](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/aop-security-assessment/image1.jpg)
 
 ## Review results
 

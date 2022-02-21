@@ -310,11 +310,10 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 ```
 
 </details>
-
 {% endinfo_block %}
 
 ## Related features
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE | 
 | - | - | - | 
-| Shopping List feature | | [Glue API: Merchant Opening Hours feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/merchant-opening-hours-feature-integration.html)|
+| Merchant Portal - Marketplace Add Product Offer And Merchant Product To Shopping List feature integration| | [Merchant Portal - Marketplace Add Product Offer And Merchant Product To Shopping List feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-add-offer-and-merchant-product-to-shopping-list-feature-integration.html)|

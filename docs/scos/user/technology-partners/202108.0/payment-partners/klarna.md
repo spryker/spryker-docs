@@ -60,6 +60,13 @@ A basic and fully functional state machine is already available (KlarnaPayment01
 The [Klarna State Machine Commands and Conditions](klarna-state-machine.htm) trigger the operations exposed by the KlarnaFacade in order to perform the needed requests to Klarna.
 -->
 
+## Related Developer guides
+
+* [Klarna - Invoice Pay in 14 days](/docs/scos/dev/technology-partner-guides/{{page.history}}/payment-partners/klarna/klarna-invoice-pay-in-14-days.html)
+* [Klarna - Part Payment Flexible](/docs/scos/dev/technology-partner-guides/{{page.history}}/payment-partners/klarna/klarna-part-payment-flexible.html)
+* [Klarna payment workflow](/docs/scos/dev/technology-partner-guides/{{page.history}}/payment-partners/klarna/klarna-payment-workflow.html)
+* [Klarna state machine commands and conditions](/docs/scos/dev/technology-partner-guides/{{page.history}}/payment-partners/klarna/klarna-state-machine-commands-and-conditions.html)
+
 ---
 
 ## Copyright and Disclaimer

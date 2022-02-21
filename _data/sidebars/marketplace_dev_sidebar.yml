@@ -259,6 +259,9 @@ entries:
           - title: Merchant Portal - Marketplace Merchant Portal Product Offer Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-portal-product-offer-management-feature-integration.html
 
+          - title: Merchant Portal - Marketplace Add Offer And Merchant Product To Shopping List feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-offer-and-merchant-product-to-shopping-list-feature-integration.html
+
           - title: Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature-integration.html
 

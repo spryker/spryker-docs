@@ -19,6 +19,7 @@ commonOptions = {
     /github.com\/[\.\w\-\/]+\.md/,
     /www.virtualbox.org\/[@\.\w\-\/\?]+/,
     /de.linkedin.com\/[@\.\w\-\/\?]+/,
+    /www.linkedin.com\/[@\.\w\-\/\?]+/,
     /www.instagram.com\/[\.\w\-\/\?]+/,
     /eur-lex.europa.eu\/[\.\w\-\/\?]+/,
     /docs.adyen.com\/[\.\w\-\/\?]+/,
@@ -29,6 +30,7 @@ commonOptions = {
     /www.vagrantup.com\/[\.\w\-\/\?]+/,
     /stackoverflow.com\/[\.\w\-\/\?]+/,
     /symfony.com\/[\.\w\-\/\?]+/,
+    /code.jquery.com\/[\.\w\-\/\?]+/,    
     /console.aws.amazon.com\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],

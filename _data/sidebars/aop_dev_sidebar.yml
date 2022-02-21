@@ -8,3 +8,5 @@ entries:
         nested:
           - title: System requirements
             url: /docs/aop/dev/setup/system-requirements.html
+      - title: AOP Security Assessment
+        url: /docs/aop/dev/aop-security-assessment.html

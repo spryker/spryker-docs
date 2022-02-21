@@ -49,7 +49,6 @@ The Flysystem module provides plugins which integrate [thephpleague/flysystem](h
 ![File_System_Dependencies](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Development/File+System/file_system_dependencies.png)
 
 ## Flysystem Service API
-
 Flysystem's Service API is almost exactly like [Flysystem's API](https://flysystem.thephpleague.com/docs/usage/filesystem-api/) with only one distinction,
 
 it takes an additional mandatory parameter containing a pre-configured filesystem name.

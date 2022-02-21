@@ -4,5 +4,5 @@ entries:
     nested:
       - title: Setup
         nested:
-          - title: System requirements
+          - title: DevVM system requirements
             url: /docs/paas-plus/dev/setup/system-requirements.html 

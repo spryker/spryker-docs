@@ -24,7 +24,7 @@ redirect_from:
 This document describes the prerequisites for installing Spryker in Docker on Windows.
 
 
-## System requirements
+## DevVM system requirements
 
 Review the system and software requirements in the table.
 

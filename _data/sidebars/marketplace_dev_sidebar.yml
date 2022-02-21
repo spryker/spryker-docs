@@ -318,6 +318,9 @@ entries:
               - title: "Glue API: Marketplace Return Management feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-return-management-feature-integration.html
 
+              - title: "Glue API: Marketplace Shopping List feature integration"
+                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-shopping-list-feature-integration.html
+
       - title: Glue API guides
         nested:
           - title: Abstract products

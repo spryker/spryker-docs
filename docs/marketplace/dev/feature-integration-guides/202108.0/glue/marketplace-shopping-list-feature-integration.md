@@ -25,8 +25,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-MY FEATURE PACKAGE NAME
-composer require spryker-feature/shopping-list-api:"^0.1.0"
+composer require spryker-feature/marketplace-shopping-lists-api
 ```
 
 {% info_block warningBox "Verification" %}

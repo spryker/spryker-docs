@@ -335,7 +335,7 @@ console data:import console data:import product-offer-shopping-list-item
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the imported data is added to the  tables.
+Make sure that the imported data is added to the spy_shopping_list_item table.
 {% endinfo_block %}
 
 ### 5) Add required functionality to Product storage

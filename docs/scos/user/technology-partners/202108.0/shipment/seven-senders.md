@@ -34,6 +34,14 @@ YOUR ADVANTAGES:
 * Multi-carrier solution: the optimal carrier for each parcel
 * Straightforward connection to the own online shop through our APIs and partner plugins
 
+## Related Developer guides
+
+* [Installing and configuring Seven Senders](/docs/scos/dev/technology-partner-guides/{{page.history}}/shipment/seven-senders/installing-and-configuring-seven-senders.html)
+* [Integrating Seven Senders](/docs/scos/dev/technology-partner-guides/{{page.history}}/shipment/seven-senders/integrating-seven-senders.html)
+* [Seven Senders — API requests](/docs/scos/dev/technology-partner-guides/{{page.history}}/shipment/seven-senders/seven-senders-api-requests.html)
+* [Seven Senders — Mappers](/docs/scos/dev/technology-partner-guides/{{page.history}}/shipment/seven-senders/seven-senders-mappers.html)
+* [Seven Senders — Persistence layer](/docs/scos/dev/technology-partner-guides/{{page.history}}/shipment/seven-senders/seven-senders-persistance-layer.html)
+
 ---
 
 ## Copyright and Disclaimer

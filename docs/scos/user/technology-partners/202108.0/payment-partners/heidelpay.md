@@ -18,6 +18,14 @@ redirect_from:
 
 Heidelpay is an internationally operating payment institution, authorized and regulated by the Federal Financial Supervisory Authority. The Full-Service Payment Provider covers the entire range of services connected to international electronic payment processing. For more than 13 years the company has been successfully realizing projects of online and stationary retailers and currently serves more than 16.000 customers in many different industrial sectors worldwide.
 
+## Related Developer guides
+
+* [Installing Heidelpay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/heidelpay/installing-heidelpay.html)
+* [Integrating Heidelpay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/heidelpay/integrating-heidelpay.html)
+* [Configuring Heidelpay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/heidelpay/configuring-heidelpay.html)
+* [Installing Heidelpay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/heidelpay/installing-heidelpay.html)
+* [Installing Heidelpay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/heidelpay/installing-heidelpay.html)
+
 ---
 
 ## Copyright and Disclaimer

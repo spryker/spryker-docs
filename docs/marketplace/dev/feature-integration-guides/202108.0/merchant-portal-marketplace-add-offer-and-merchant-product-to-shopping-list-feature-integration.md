@@ -494,4 +494,4 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | -|
 | Shop Guide - Shopping Lists |  |  [Shop Guide - Shopping Lists](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-shopping-lists.html)  |
-| Marketplace Product and Product Offer Shopping List Api Integration |  |  [Marketplace Product and Product Offer Shopping List API integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-packaging-units-feature-integration.html)  |
+| Glue API: Marketplace Shopping List feature integration |  |  [Glue API: Marketplace Shopping List feature integration](/docs/marketplace/dev/feature-integration-guides/glue/{{page.version}}/marketplace-shopping-list-feature-integration.html)  |

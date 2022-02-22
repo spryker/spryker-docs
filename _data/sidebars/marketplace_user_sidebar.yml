@@ -94,6 +94,9 @@ entries:
         - title: Marketplace Merchant Portal Product Offer Management
           url: /docs/marketplace/user/features/marketplace-merchant-portal-product-offer-management-feature-overview.html
 
+        - title: Marketplace Shopping List
+          url: /docs/marketplace/user/features/marketplace-shopping-list-feature-overview.html
+
       - title: Back Office user guides
         nested:
 

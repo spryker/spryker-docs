@@ -29,15 +29,22 @@
     {% endif %}
 </head>
 <body class="{{page.layout}}-layout">
-<div class="page-wrapper">
-    {% include topnav.html %}
-    <!-- Page Content -->
-    {{content}}
-        <!-- id="tg-sb-content" -->
-    {% include footer.html %}
-    {% if site.google_analytics %}
-    {% include google_analytics.html %}
-    {% endif %}
-</div>
+    <div class="page-wrapper">
+        {% include topnav.html %}
+        <!-- Page Content -->
+        {{content}}
+            <!-- id="tg-sb-content" -->
+        {% include footer.html %}
+        {% if site.google_analytics %}
+            {% include google_analytics.html %}
+        {% endif %}
+        {% if site.google_tag_manager %}
+            <!-- Google Tag Manager (noscript) -->
+            <noscript>
+                <iframe src="https://www.googletagmanager.com/ns.html?id={{site.google_tag_manager}}" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+            </noscript>
+            <!-- End Google Tag Manager (noscript) -->
+        {% endif %}
+    </div>
 </body>
 </html>

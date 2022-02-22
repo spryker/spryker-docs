@@ -34,15 +34,15 @@ Make sure that the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 |-|-|
-| MerchantStock | vendor/spryker/merchant-stock |
-| MerchantStockDataImport | vendor/spryker/merchant-stock-data-import |
-| MerchantStockGui | vendor/spryker/merchant-stock-gui |
-| ProductOfferStock | vendor/spryker/product-offer-stock |
-| ProductOfferStockDataImport | vendor/spryker/product-offer-stock-data-import |
-| ProductOfferStockGui | vendor/spryker/product-offer-stock-gui |
-| ProductOfferStockGuiExtension | vendor/spryker/product-offer-stock-gui-extension |
-| ProductOfferAvailability | vendor/spryker/product-offer-availability |
-| ProductOfferAvailabilityStorage | vendor/spryker/product-offer-availability-storage |
+| MerchantProduct | vendor/spryker/merchant-product |
+| MerchantProductOffer | vendor/spryker/merchant-product-offer |
+| MerchantProductOfferShoppingListsRestApi | vendor/spryker/merchant-product-offer-shopping-lists-api |
+| MerchantProductShoppingListsRestApi | vendor/spryker/merchant-product-shopping-lists-api |
+| ProductOfferShoppingList | vendor/spryker/product-offer-shopping-list |
+| ProductOfferShoppingListsRestApi | vendor/spryker/product-offer-shopping-lists-rest-api |
+| ShoppingList | vendor/spryker/shopping-list |
+| ShoppingListsRestApi | vendor/spryker/shopping-lists-rest-api |
+| ProductOffersRestApi | vendor/spryker/product-offers-rest-api |
 
 {% endinfo_block %}
 
@@ -76,7 +76,7 @@ Make sure that the following changes have been applied in transfer objects:
 | ----------- |-------------------------------------------------------------------------------------------| ------------- | ------------- |
 | MerchantByMerchantReferenceResourceRelationshipPlugin | Adds `merchant` resources as relationship by Product Offer reference.                     |   | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
 | ProductOfferAvailabilitiesByProductOfferReferenceResourceRelationshipPlugin | Adds `product offer availabilities` resources as relationship by Product Offer reference. |   | Spryker\Glue\ProductOfferAvailabilitiesRestApi\Plugin\GlueApplication |
-| ProductOffersByProductOfferReferenceResourceRelationshipPlugin | Adds `product offers` resources as relationship by Product Offer reference.               |   | Spryker\Glue\MerchantProductOffersRestApi\Plugin\GlueApplication |
+| ProductOffersByProductOfferReferenceResourceRelationshipPlugin | Adds `product offers` resources as relationship by Product Offer reference.               |   | Spryker\Glue\ProductOffersRestApi\Plugin\GlueApplication |
 | ProductOfferPriceByProductOfferReferenceResourceRelationshipPlugin | Adds `product offer prices` resources as relationship by Product Offer reference.         |   | Spryker\Glue\ProductOfferPricesRestApi\Plugin\GlueApplication |
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
@@ -316,4 +316,4 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE | 
 | - | - | - | 
-| Merchant Portal - Marketplace Add Product Offer And Merchant Product To Shopping List feature integration| | [Merchant Portal - Marketplace Add Product Offer And Merchant Product To Shopping List feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-add-offer-and-merchant-product-to-shopping-list-feature-integration.html)|
+| TODO ADD CORRECT LINKS Merchant Portal - Marketplace Add Product Offer And Merchant Product To Shopping List feature integration| | [Merchant Portal - Marketplace Add Product Offer And Merchant Product To Shopping List feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-add-offer-and-merchant-product-to-shopping-list-feature-integration.html)|

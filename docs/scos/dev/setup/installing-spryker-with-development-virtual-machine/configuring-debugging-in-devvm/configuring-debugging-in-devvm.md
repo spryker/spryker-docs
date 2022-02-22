@@ -83,7 +83,7 @@ sudo -i bash -c "phpdismod xdebug && systemctl restart php7.4-fpm.service"
 
 {% endinfo_block %}
 
-## 2. Configure PhpStorom servers
+## 2. Configure PhpStorm servers
 
 Define servers in PhpStorm:
 1. In PhpStorm, go to **Preferences** > **Languages & Frameworks** > **PHP** > **Servers**.
@@ -127,7 +127,7 @@ To trigger Xdebug in CLI, prepend environment variables to commands as shown in 
 XDEBUG_CONFIG="remote_host=10.10.0.1" PHP_IDE_CONFIG="serverName=zed.mysprykershop.com" vendor/bin/console <command>
 ```
 
-The value of `serverName` should should correspond to the server name you've entered when configuring servers.
+The value of `serverName` should should correspond to the server name you've entered when [configuring servers](#configure-phpstorm-servers).
 
 ## Configuring a Google Chrome helper for Xdebug
 

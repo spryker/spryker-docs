@@ -84,7 +84,7 @@ algolia:
       title: 'AOP Developer'
 ```
 
-## 2. Add the product to the homepage
+## 3. Add the product to the homepage
 
 To add the new product to the top navigation and the role boxes on the homepage, do the following:
 
@@ -166,7 +166,7 @@ To add the new product to the top navigation and the role boxes on the homepage,
                             ...    
     ```
 
-## Add CI checks for the product
+## 4. Add CI checks for the product
 
 To add CI checks for the product per role, do the following:
 
@@ -230,8 +230,9 @@ To add CI checks for the product per role, do the following:
       - run: bundle exec rake check_aop
 
 ```
-2. In the [Rakefile](https://github.com/spryker/spryker-docs/blob/master/Rakefile) file, add checks for each role. Make sure to exclude all other projects and roles from each check by adding the path to the new project in `options[:file_ignore]`. Follow this example:
+2. In `Rakefile`, add checks for each role. In `options[:file_ignore]` of both checks, exclude all other projects and roles. For example:
 ```
+...
 task :check_aop_user do
   options = commonOptions.dup
   options[:file_ignore] = [
@@ -276,9 +277,10 @@ task :check_aop_dev do
   HTMLProofer.check_directory("./_site", options).run
 end
 ```
-3. In the [Rakefile](https://github.com/spryker/spryker-docs/blob/master/Rakefile) file, in `options[:file_ignore]`, exclude the new project from checks in all other projects and roles. For example:
+3. In the `Rakefile`, in `options[:file_ignore]` of all the existing tasks, exclude the new project from checks. For example:
 
 ```
+...
 task :check_mp_dev do
   options = commonOptions.dup
   options[:file_ignore] = [
@@ -287,24 +289,23 @@ task :check_mp_dev do
     /docs\/aop\/.+/,
     /docs\/marketplace\/user\/.+/,
   ]
+...  
 ```
-## Configure the Algolia search for the new project
+## 5. Configure the Algolia search for the new project
 
 {% info_block warningBox "Prerequisites" %}
 
-Make sure you completed [step 5](#step-five) from the *Add the new product with roles to the config file section*.
+Make sure you completed [step 5](#step-five) from the *Add the new product with roles to the config file* section.
 
 {% endinfo_block %}
 
-To configure the Algolia search for your product, you need to configure the search in the *spryker-docs* repository, and then in the Algolia app for Spryker docs.
+To configure the Algolia search for the product, you need to configure the search in the *spryker-docs* repository and the Algolia app for Spryker docs.
 
-### Configuring the Algolia search in the repository
+### Configure the Algolia search in the repository
 
-To configure the Algolia search for your project in the repository, do the following:
+1. In the `_config.yml`, in the `algolia` section, add the project name and title:
 
-1. In the [config.yml](https://github.com/spryker/spryker-docs/blob/master/_config.yml) file, in the *algolia* section, add the project name and title:
-
-```
+```yaml
     - name: 'aop'
       title: 'App Orchestration Platform'
 ```

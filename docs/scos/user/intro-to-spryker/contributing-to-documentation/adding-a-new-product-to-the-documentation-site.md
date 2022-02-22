@@ -4,33 +4,36 @@ description: Learn how to add a new product to the Spryker docs.
 template: howto-guide-template
 ---
 
-Whenever a new Spryker product is launched, you need to create a separate section for it. Usually, there are two roles per product—user and developer. However, there might be exceptions. In this article, we consider that you have to create a new product *aop* with the *user* and *developer* roles.
+When we launch a new product, you need to create a separate section for it. Usually, there are two roles per product — user and developer. In this article, we assume that you need to create a new product *aop* with the *user* and *dev* roles.
 
 To add a new product, follow these steps.
 
-## 1. Create sidebars for the new product
+## 1. Create sidebars for the product
 
-In *data->sidebars*, add sidebars for your new product with roles. For each role, there should be a separate YML file in the following format: `{product_name}_{role}_sidebar.yml`. To separate words in the sidebar, use an underscore. For example, for our new *aop* product, we create *aop_dev_sidebar.yml* and *aop_user_sidebar.yml* sidebar files.
+In `_data/sidebars`, create sidebars for the new product per role. For each role, there should be a separate YML file in the following format: `{product_name}_{role}_sidebar.yml`. For example, for the *aop* product with user and developer roles, create `aop_dev_sidebar.yml` and `aop_user_sidebar.yml` sidebar files.
 
-See [Sidebars](/docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html#sidebars) for details on how to populate the sidebar files.
+To learn how to populate sidebar files, see [Sidebars](/docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html#sidebars).
 
-## 2. Add the new product with roles to the config file
+## 2. Add the product to the configuration
 
-Now, open the [config.yml](https://github.com/spryker/spryker-docs/blob/master/_config.yml) file and add the new product with its role to it. Do the following:
+To add the new product with its roles to the configuration, in `_config.yml`, do the following:
 
-1. In the *defaults* section, add the new product with its path and product name value to the scope. For example:
+1. In the `defaults:` section, add the new product with its path and product name value to the scope. For example:
 
-```
--
+```yaml
+defaults:
+  ...
+  -
     scope:
       path: "docs/aop"
     values:
       product: "aop"
-
 ```
 
-2. In the *defaults* section, under the product scope you added at the previous step, add the product roles with their paths and sidebars. The sidebar names should match those you created in [step 1. Create sidebars for the new product](#create-sidebars-for-the-new-product). For example:
-```
+2. Under the product scope you have added in the previous step, add the product roles with their paths and sidebars. The sidebar names should match those you've created in [1. Create sidebars for the new product](#create-sidebars-for-the-new-product). For example:
+
+```yaml
+  ...
   -
     scope:
       path: "docs/aop/dev"
@@ -44,10 +47,12 @@ Now, open the [config.yml](https://github.com/spryker/spryker-docs/blob/master/_
       sidebar: "aop_user_sidebar"
       role: "user"
 ```
-3. Optional: If you want to version some of the categories in your new product, in the *versioned_categories* section, add your product name and the categories that should be versioned. For example:
+3. Optional: To version one or more categories in your new product, in the `versioned_categories:` section, add the product name and the categories to version. For example:
 
-```
-aop:
+```yaml
+versioned_categories:
+  ...
+  aop:
     user:
       - features
       - back-office-user-guides
@@ -55,86 +60,53 @@ aop:
       - feature-integration-guides
       - feature-walkthroughs
       - glue-api-guides
- ``` 
+ ```
 
-4. In the *sidebars* section, add the sidebars for your new product. The sidebars should match those created in [step 1. Create sidebars for the new product](#create-sidebars-for-the-new-product). For example:
+4. In the `sidebars:` section, add the names of the sidebars you've created in [1. Create sidebars for the new product](#create-sidebars-for-the-new-product). For example:
 
-```
-- aop_dev_sidebar
-- aop_user_sidebar
+```yaml
+sidebars:
+  ...
+  - aop_dev_sidebar
+  - aop_user_sidebar
 ```
 <a name="step-five"></a>
-5. To index your new product in the search engine, in the *algolia* section, in *indices*, add the product name and titles for each role. For example:
+5. To index the product in the search engine, in `algolia: indices:`, add the product name and titles for each role. For example:
 
-```
-- name: 'aop_user'
-  title: 'AOP User'
-- name: 'aop_dev'
-  title: 'AOP Developer'
+```yaml
+algolia:
+  ...
+  indices:
+    ...
+    - name: 'aop_user'
+      title: 'AOP User'
+    - name: 'aop_dev'
+      title: 'AOP Developer'
 ```
 
 ## 2. Add the product to the homepage
 
-Next, you have to add the new product to the top navigation on the homepage and to the role boxes on the homepage. Do the following:
+To add the new product to the top navigation and the role boxes on the homepage, do the following:
 
-1. Go to [_includes/topnav.html](https://github.com/spryker/spryker-docs/blob/master/_includes/topnav.html)
-   
-  a. In the `<div class="main-nav dropdown">` class, add names for your guides following this format:
-   
-  ```
-  {% raw %}
-  {% elsif page.product == '{product_name}' and page.role == 'dev' %}
-  {Product name} developer guide
-  {% elsif page.product == '{product_name}' and page.role == 'user' %}
-  {Product name} users guide
-  {% endraw %}
-  ```
-  For example:
-
-  ```
-  {% raw %}
-  {% elsif page.product == 'aop' and page.role == 'dev' %}
-  App Orchestration Platform developer guide
-  {% elsif page.product == 'aop' and page.role == 'user' %}
-  App Orchestration Platform users guide
-  {% endraw %}
-  ```
-  b. In `<ul class="main-nav__drop main-nav__drop--mob-static dropdown-menu" aria-labelledby="navbarDropdownMenuLink">`, add the following code under the last `</li>` tag of the already published product:
-   ```
-   
-                                            <li class="dropdown">
-                                                <a href="/" class="main-nav__drop-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    {Product name}
-                                                    <i class="main-nav__drop-link-arrow icon-arrow-right"></i>
-                                                </a>
-                                                <ul class="main-nav__drop dropdown-menu">
-                                                    <li>
-                                                        <a href="/docs/{product-name}/dev/{link-to-main-page-of-dev-guides.html}" class="main-nav__drop-link">
-                                                            <span class="main-nav__drop-link-title">
-                                                                <i class="icon-developer"></i>
-                                                                Developer
-                                                            </span>
-                                                            <span class="main-nav__drop-link-subtitle">{Product name} developer guide</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/docs/{product-name}/user/{link-to-main-page-of-dev-guides.html}" class="main-nav__drop-link">
-                                                            <span class="main-nav__drop-link-title">
-                                                                <i class="icon-business"></i>
-                                                                Business User
-                                                            </span>
-                                                            <span class="main-nav__drop-link-subtitle">AOP users guide</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-
-   ```
-
-   For example:
-
-   ```
-   
+1. In `_includes/topnav.html`, in the `<div class="main-nav dropdown">` class, add the names for the new guides. For example:
+```html
+{% raw %}
+<div class="main-nav dropdown">
+    <a href="/" class="main-nav__opener {% if page.layout == 'home' %}main-nav__opener--grey{% endif %} nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="main-nav__opener-label">Select Product</span>
+        <span class="main-nav__opener-text">
+            ...
+            {% elsif page.product == 'aop' and page.role == 'dev' %}
+            App Orchestration Platform developer guide
+            {% elsif page.product == 'aop' and page.role == 'user' %}
+            App Orchestration Platform users guide
+            ...
+{% endraw %}
+```
+2. In `<ul class="main-nav__drop main-nav__drop--mob-static dropdown-menu" aria-labelledby="navbarDropdownMenuLink">`, add the product under the last existing product. For example:
+```html
+                                        <ul class="main-nav__drop main-nav__drop--mob-static dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            ...
                                             <li class="dropdown">
                                                 <a href="/" class="main-nav__drop-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     App Orchestration Platform
@@ -161,9 +133,9 @@ Next, you have to add the new product to the top navigation on the homepage and 
                                                     </li>
                                                 </ul>
                                             </li>
-   ```
+```
 2. Go to [_layouts/home.html](https://github.com/spryker/spryker-docs/blob/master/_layouts/home.html):<br>
-   
+
     a. In `<h2 class="card__heading-title">Developer guides</h2>`, add links to your product's developer guides. For example:
    ```
    <li><a href="/docs/aop/dev/setup/system-requirements.html">App Orchestration Platform developer guides</a></li>
@@ -334,7 +306,7 @@ algolia:
 
 ```
 3. In the same [algolia_config](https://github.com/spryker/spryker-docs/tree/master/algolia_config) folder, go to the YML file of each project and exclude the newly created project from them.
-	
+
 4. Go to the [github/workflow/ci](https://github.com/spryker/spryker-docs/blob/master/.github/workflows/ci.yml) file and add the files you created at step 2:
 
 ```
@@ -348,7 +320,7 @@ algolia:
 
 Now you need to configure the search in the Algolia app of the Spryker docs. Do the following:
 
-1. Go to https://www.algolia.com/apps/IBBSSFT6M1/indices click **Create Index**. 
+1. Go to https://www.algolia.com/apps/IBBSSFT6M1/indices click **Create Index**.
 2. In the opened window, enter the name exactly as you specified in [step 1](#configuring-the-algolia-search-in-the-repository) where you adjusted the config.yml file for the *algolia* section.
 3. In the created index, go to **Configuration** and add the attributes as for the [scos_dev project](https://www.algolia.com/apps/IBBSSFT6M1/explorer/configuration/scos_dev/searchable-attributes).
 4. In **RELEVANCE ESSENTIALS > Ranking and sorting**, add custom rankings as for the [scos_dev project](https://www.algolia.com/apps/IBBSSFT6M1/explorer/configuration/scos_dev/ranking-and-sorting).

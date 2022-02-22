@@ -134,24 +134,45 @@ To add the new product to the top navigation and the role boxes on the homepage,
                                                 </ul>
                                             </li>
 ```
-2. Go to [_layouts/home.html](https://github.com/spryker/spryker-docs/blob/master/_layouts/home.html):<br>
+3. In `_layouts/home.html`, do the following:
 
-    a. In `<h2 class="card__heading-title">Developer guides</h2>`, add links to your product's developer guides. For example:
-   ```
-   <li><a href="/docs/aop/dev/setup/system-requirements.html">App Orchestration Platform developer guides</a></li>
-   ```
-    b. In `<h2 class="card__heading-title">Business User guides</h2>`, add links to your product's business user guides. For example:
-   ```
-   <li><a href="/docs/aop/user/intro-to-aop/aop-overview.html">App Orchestration Platform user guides</a></li>
-   ```
+    1. In `<h2 class="card__heading-title">Developer guides</h2>`, add a link to the document that should open when a user opens the developer guide of the product. For example:
 
-## Add CI checks for the new product
+    ```html
+                                <h2 class="card__heading-title">Developer guides</h2>
+                            </div>                            
+                            <p>Developer guides are intended for backend developers, frontend developers, and devOps engineers. They cover all the technical aspects of the Spryker products and will help you to improve your understanding of the system, install your Spryker project, and customize it to your needs.</p>
+                        </div>                        
+                        <div class="card__footer">
+                            <ul class="card__links">
+                                ...
+                                <li><a href="/docs/aop/dev/setup/system-requirements.html">App Orchestration Platform developeguides</a></li>                            
+                            ...    
 
-You need to add CI checks for each role per project. For this, do the following:
+    ```
 
-1. In the [ci.yml](https://github.com/spryker/spryker-docs/blob/master/.github/workflows/ci.yml) file, add the `link_validation_check_{project-name}_dev` and `link_validation_check_{project-name}_user` sections following the example below:
 
-```
+
+    2. In `<h2 class="card__heading-title">Business User guides</h2>`, add a link to the document that should open when a user opens the developer guide of the product. For example:
+    ```html
+                                <h2 class="card__heading-title">Business User guides</h2>
+                            </div>
+                            <p>Business User guides will help shop administrators and shop owners manage their stores from the shop administration area or the Back Office.</p>                        
+                        </div>
+                        <div class="card__footer">
+                            <ul class="card__links">                                        
+                                ...
+                                <li><a href="/docs/aop/user/intro-to-aop/aop-overview.html">App Orchestration Platform user guides</a></li>
+                            ...    
+    ```
+
+## Add CI checks for the product
+
+To add CI checks for the product per role, do the following:
+
+1. In `ci.yml`, add CI configuration per role as follows:
+
+```yaml
   link_validation_check_aop_dev:
     name: Links validation (check_aop_dev)
     needs: jekyll_build

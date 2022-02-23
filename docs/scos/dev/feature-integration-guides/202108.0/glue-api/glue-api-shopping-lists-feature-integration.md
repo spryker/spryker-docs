@@ -192,11 +192,11 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 To verify that the `ShoppingListsResourcePlugin` resource route plugin and the `ShoppingListItemByShoppingListResourceRelationshipPlugin`, `ConcreteProductBySkuResourceRelationshipPlugin` relationship plugins are set up correctly, make sure that following endpoint and relationships are available:
 
-* http://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}?include=shopping-list-items,concrete-products
+* https://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}?include=shopping-list-items,concrete-products
 
 Check the response:
 <details open>
-<summary markdown='span'>GET http://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}?include=shopping-list-items,concrete-products</summary>
+<summary markdown='span'>GET https://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}?include=shopping-list-items,concrete-products</summary>
    
 ```json
 {
@@ -212,7 +212,7 @@ Check the response:
                 "createdAt": "2020-03-16 13:07:38.286054"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/shopping-lists/adb17f85-953f-565a-a4ce-e5cb02405f83?include=shopping-list-items,concrete-products"
+                "self": "https://glue.mysprykershop.com/shopping-lists/adb17f85-953f-565a-a4ce-e5cb02405f83?include=shopping-list-items,concrete-products"
             },
             "relationships": {
                 "shopping-list-items": {
@@ -227,7 +227,7 @@ Check the response:
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/shopping-lists?include=shopping-list-items,concrete-products"
+        "self": "https://glue.mysprykershop.com/shopping-lists?include=shopping-list-items,concrete-products"
     },
     "included": [
         {
@@ -266,7 +266,7 @@ Check the response:
                 }
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/115_27295368"
+                "self": "https://glue.mysprykershop.com/concrete-products/115_27295368"
             }
         },
         {
@@ -277,7 +277,7 @@ Check the response:
                 "sku": "115_27295368"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/shopping-lists/adb17f85-953f-565a-a4ce-e5cb02405f83/shopping-list-items/0615fe0d-fdbe-576b-a220-3398b9965d73"
+                "self": "https://glue.mysprykershop.com/shopping-lists/adb17f85-953f-565a-a4ce-e5cb02405f83/shopping-list-items/0615fe0d-fdbe-576b-a220-3398b9965d73"
             },
             "relationships": {
                 "concrete-products": {
@@ -300,7 +300,7 @@ Check the response:
 {% info_block warningBox "Verification" %}
 To verify that the `ShoppingListItemsResourcePlugin` is set up correctly, make sure that the following endpoint is available:
 
-* http://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}/shopping-list-items
+* https://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}/shopping-list-items
 
 Post a request with the following body:
 
@@ -320,7 +320,7 @@ Post a request with the following body:
 
 Check the response:
 
-**POST http://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}/shopping-list-items**
+**POST https://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}/shopping-list-items**
    
 ```json
 {
@@ -332,7 +332,7 @@ Check the response:
             "sku": "218_1234"
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/shopping-lists/d8c5539b-774e-509b-87a9-58cead6a1486/shopping-list-items/c3e12dfb-05e5-51c3-ae8f-ba2f07b6bd17"
+            "self": "https://glue.mysprykershop.com/shopping-lists/d8c5539b-774e-509b-87a9-58cead6a1486/shopping-list-items/c3e12dfb-05e5-51c3-ae8f-ba2f07b6bd17"
         }
     }
 }

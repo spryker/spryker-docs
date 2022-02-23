@@ -554,9 +554,9 @@ To retrieve detailed information on an order, send the request:
 
 | REQUEST | USAGE |
 | ----------------- | ------------------ |
-| `GET http://glue.mysprykershop.com/orders/DE--6`   | Retrieve information about the `DE--6` order.  |
+| `GET https://glue.mysprykershop.com/orders/DE--6`   | Retrieve information about the `DE--6` order.  |
 | `GET https://glue.mysprykershop.com/orders/DE--6?include=order-shipments` | Retrieve information about the order with the id `DE--6` with order shipments included. |
-| `GET http://glue.mysprykershop.com/orders/DE--3?include=merchants` | Retrieve order `DE--3` with merchants included.|
+| `GET https://glue.mysprykershop.com/orders/DE--3?include=merchants` | Retrieve order `DE--3` with merchants included.|
 
 ### Response
 

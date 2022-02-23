@@ -16,6 +16,7 @@ This endpoint allows retrieving the products that belong to a bundle.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
+
 * [Glue API: Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-bundles-feature-integration.html)
 * [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
 * [Glue API: Cart feature integration - ongoing](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)
@@ -48,9 +49,9 @@ To retrieve related abstract products, include both `concrete-products` and `abs
 
 | REQUEST SAMPLE | USAGE |
 | --- | --- |
-| `GET https://glue.mysprykershop.com/concrete-products/214_123/bundled-products` | Retrieve bundled products of the product bundle with SKU `214_123`. |
-|`GET https://glue.mysprykershop.com/concrete-products/214_123/bundled-products?include=concrete-products` |Retrieve bundled products of the product bundle with SKU `214_123` and detailed information about corresponding concrete products.|
-|`GET https://glue.mysprykershop.com/concrete-products/214_123/bundled-products?include=concrete-products,abstract-products` |Retrieve bundled products of the product bundle with SKU `214_123` and detailed information about corresponding concrete and abstract products.|
+| GET https://glue.mysprykershop.com/concrete-products/214_123/bundled-products | Retrieve bundled products of the product bundle with SKU `214_123`. |
+| GET https://glue.mysprykershop.com/concrete-products/214_123/bundled-products?include=concrete-products |Retrieve bundled products of the product bundle with SKU `214_123` and detailed information about corresponding concrete products.|
+| GET https://glue.mysprykershop.com/concrete-products/214_123/bundled-products?include=concrete-products,abstract-products |Retrieve bundled products of the product bundle with SKU `214_123` and detailed information about corresponding concrete and abstract products.|
 
 ### Response
 
@@ -99,7 +100,6 @@ To retrieve related abstract products, include both `concrete-products` and `abs
     }
 }
 ```
-
 </details>
 
 <details>
@@ -299,7 +299,6 @@ To retrieve related abstract products, include both `concrete-products` and `abs
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -783,7 +782,6 @@ To retrieve related abstract products, include both `concrete-products` and `abs
     ]
 }
 ```
-
 </details>
 
 <a name="bundled-products-response-attributes"></a>
@@ -794,6 +792,7 @@ To retrieve related abstract products, include both `concrete-products` and `abs
 |quantity |Integer| Quantity of the product in the bundle.|
 
 For the attributes of the included resources, see:
+
 * [Retrieving concrete products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 * [Retrieving abstract products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html#abstract-products-response-attributes)
 

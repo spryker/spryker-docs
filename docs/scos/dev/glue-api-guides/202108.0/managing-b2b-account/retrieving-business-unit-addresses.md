@@ -33,11 +33,10 @@ To retrieve a business unit address, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | &check; | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
-Request sample: `GET http://glue.mysprykershop.com/company-business-unit-addresses/eec036ee-b999-5753-a7dd-8d0710a2312f`
+Request sample: `GET https://glue.mysprykershop.com/company-business-unit-addresses/eec036ee-b999-5753-a7dd-8d0710a2312f`
 
 
 ### Response
-
 
 <details>
 <summary markdown='span'>Response sample</summary>
@@ -58,12 +57,11 @@ Request sample: `GET http://glue.mysprykershop.com/company-business-unit-address
             "comment": ""
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/company-business-unit-addresses/eec036ee-b999-5753-a7dd-8d0710a2312f"
+            "self": "https://glue.mysprykershop.com/company-business-unit-addresses/eec036ee-b999-5753-a7dd-8d0710a2312f"
         }
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

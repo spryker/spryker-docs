@@ -28,9 +28,9 @@ Apart from that, ETags can also boost API performance via caching. They can be
 When a client requests a resource that supports ETag optimization and is authorized to use it, the Glue API server responds with a REST response. It contains an identifier of the current state of the resource in the ETag header.
 
 Sample request:
-`GET http://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab`
+`GET https://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab`
 
-```
+```json
 Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNhO...
 ...
@@ -38,7 +38,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNhO...
 
 Sample response:
 
-```
+```json
 HTTP/1.1 200 OK
 Content-Type: application/json
 Date: Thu, 18 Jun 2019 12:55:31 GMT
@@ -48,9 +48,9 @@ ETag: "cc89022a51522f705c44fcfced188cc8"
 
 When updating the resource, the client must pass the Etag in the `If-Match` header. For example:
 
-`PATCH http://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab`
+`PATCH https://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab`
 
-```
+```json
 Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNhO...
 If-Match: "cc89022a51522f705c44fcfced188cc8"
@@ -59,7 +59,7 @@ If-Match: "cc89022a51522f705c44fcfced188cc8"
 
 If the resource is updated successfully, the server returns a new ETag:
 
-```
+```json
 HTTP/1.1 200 OK
 Content-Type: application/json
 Date: Thu, 18 Jun 2019 12:55:31 GMT

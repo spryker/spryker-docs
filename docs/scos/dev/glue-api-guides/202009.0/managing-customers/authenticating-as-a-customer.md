@@ -79,7 +79,7 @@ If you are authenticating as a newly created customer, make sure to verify your 
             "idCompanyUser": "ebf4b55a-cab0-5ed0-8fb7-525a3eeedeac"
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/access-tokens"
+            "self": "https://glue.mysprykershop.com/access-tokens"
         }
     }
 }

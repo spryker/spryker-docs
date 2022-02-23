@@ -40,7 +40,7 @@ To retrieve information on the company a user belongs to, send a GET request to 
 
 companies/mine
 
-Sample request: *GET http://glue.mysprykershop.com/companies/mine*
+Sample request: *GET https://glue.mysprykershop.com/companies/mine*
 
 {% info_block warningBox "Note" %}
 You can use the Accept-Language header to specify the locale.Sample header: [{"key":"Accept-Language","value":"de, en;q=0.9"}]where de, en are the locales; q=0.9 is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
@@ -73,12 +73,12 @@ The endpoint responds with a collection of **RestCompanyResponse** consisting of
                 "status": "approved"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/companies/88efe8fb-98bd-5423-a041-a8f866c0f913"
+                "self": "https://glue.mysprykershop.com/companies/88efe8fb-98bd-5423-a041-a8f866c0f913"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/companies/mine"
+        "self": "https://glue.mysprykershop.com/companies/mine"
     }
 }
 ```
@@ -88,7 +88,7 @@ To retrieve information on a specific company, send a GET request to the followi
 
 /companies/{% raw %}{{{% endraw %}company_id{% raw %}}}{% endraw %}
 
-Sample request: *GET http://glue.mysprykershop.com/companies/**59b6c025-cc00-54ca-b101-191391adf2af***
+Sample request: *GET https://glue.mysprykershop.com/companies/**59b6c025-cc00-54ca-b101-191391adf2af***
 where **59b6c025-cc00-54ca-b101-191391adf2af** is the ID of the company you need.
 
 {% info_block infoBox "Info" %}
@@ -125,7 +125,7 @@ The endpoint responds with a **RestCompanyResponse** containing information on t
             "status": "approved"
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/companies/59b6c025-cc00-54ca-b101-191391adf2af"
+            "self": "https://glue.mysprykershop.com/companies/59b6c025-cc00-54ca-b101-191391adf2af"
         }
     }
 }

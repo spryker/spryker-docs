@@ -15,6 +15,7 @@ redirect_from:
 Company users can share their carts with others so that multiple representatives of the same company can work together on the same order. In addition to that, users can choose what type of access they want to grant to different users. This endoint allows retrieving cart permission groups of a company.
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Shared Carts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shared-carts-feature-integration.html).
 
 ## Retrieve cart permission groups
@@ -31,7 +32,7 @@ To retrieve cart permission groups, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
-Request sample : `GET http://glue.mysprykershop.com/cart-permission-groups`
+Request sample : `GET https://glue.mysprykershop.com/cart-permission-groups`
 
 ### Response
 
@@ -49,7 +50,7 @@ Request sample : `GET http://glue.mysprykershop.com/cart-permission-groups`
                 "isDefault": true
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/cart-permission-groups/1"
+                "self": "https://glue.mysprykershop.com/cart-permission-groups/1"
             }
         },
         {
@@ -60,16 +61,15 @@ Request sample : `GET http://glue.mysprykershop.com/cart-permission-groups`
                 "isDefault": false
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/cart-permission-groups/2"
+                "self": "https://glue.mysprykershop.com/cart-permission-groups/2"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/cart-permission-groups"
+        "self": "https://glue.mysprykershop.com/cart-permission-groups"
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -97,7 +97,7 @@ To retrieve a cart permission group, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
-Sample request: `GET http://glue.mysprykershop.com/cart-permission-groups/1`
+Sample request: `GET https://glue.mysprykershop.com/cart-permission-groups/1`
 
 ### Response
 
@@ -114,7 +114,7 @@ Sample request: `GET http://glue.mysprykershop.com/cart-permission-groups/1`
             "isDefault": true
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/cart-permission-groups/1"
+            "self": "https://glue.mysprykershop.com/cart-permission-groups/1"
         }
     }
 }

@@ -190,8 +190,8 @@ In certain cases, applications are required to revoke tokens explicitly, for exa
 
 Sample requests:
 
-* `DELETE http://glue.mysprykershop.com/refresh-tokens/mine`
-* `DELETE http://glue.mysprykershop.com/refresh-tokens/def50200e880ff70949d88a7ab15169c082970c450ce42b77`
+* `DELETE https://glue.mysprykershop.com/refresh-tokens/mine`
+* `DELETE https://glue.mysprykershop.com/refresh-tokens/def50200e880ff70949d88a7ab15169c082970c450ce42b77`
 
 where `def50200e880ff70949d88a7ab15169c082970c450ce42b77` is the refresh token you want to invalidate. The token should be the same as specified in the `refresh-token` attribute of the authentication response.
 

@@ -97,7 +97,7 @@ To create a cart, send the request:
 {% endinfo_block %}
 
 ### Request
-Sample request: `POST http://glue.mysprykershop.com/carts`
+Sample request: `POST https://glue.mysprykershop.com/carts`
 ```json
 {
    "data":{
@@ -145,7 +145,7 @@ Response sample:
                 "isDefault": true
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab"
+                "self": "https://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab"
             }
         }
     ]
@@ -204,11 +204,11 @@ To use this endpoint, customers need to authenticate. For details, see [Authenti
 
 | Request | Usage |
 | --- | --- |
-| `GET http://glue.mysprykershop.com/carts` | Retrieve all carts of a user.  |
-| `GET http://glue.mysprykershop.com/carts?include=items,concrete-products,cart-permission-groups` | Retrieve all carts of a user with concrete products and cart pemission groups included. |
-| `GET http://glue.mysprykershop.com/carts?include=items, sales-units,product-measurement-units` | Retrieve all carts of a user with product measurement units and sales units included. |
-| `GET http://glue.mysprykershop.com/carts?include=promotional-items`| Retrieve informaton about promotional items for the cart.|
-| `GET http://glue.mysprykershop.com/carts?include=promotional-items,abstract-products,concrete-product`| Retrieve detailed information on the promotional items for the cart.|
+| `GET https://glue.mysprykershop.com/carts` | Retrieve all carts of a user.  |
+| `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,cart-permission-groups` | Retrieve all carts of a user with concrete products and cart pemission groups included. |
+| `GET https://glue.mysprykershop.com/carts?include=items, sales-units,product-measurement-units` | Retrieve all carts of a user with product measurement units and sales units included. |
+| `GET https://glue.mysprykershop.com/carts?include=promotional-items`| Retrieve informaton about promotional items for the cart.|
+| `GET https://glue.mysprykershop.com/carts?include=promotional-items,abstract-products,concrete-product`| Retrieve detailed information on the promotional items for the cart.|
 
 
 | String parameter | Description | Exemplary values |
@@ -236,7 +236,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
 {
     "data": [],
     "links": {
-        "self": "http://glue.mysprykershop.com/carts"
+        "self": "https://glue.mysprykershop.com/carts"
     }
 }
 ```
@@ -274,7 +274,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a"
+                "self": "https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a"
             }
         },
         {
@@ -296,12 +296,12 @@ To retrieve detailed information on promotional products in the cart, use `promo
                 "discounts": []
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/482bdbd6-137f-5b58-bd1c-37f3fa735a16"
+                "self": "https://glue.mysprykershop.com/carts/482bdbd6-137f-5b58-bd1c-37f3fa735a16"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/carts"
+        "self": "https://glue.mysprykershop.com/carts"
     }
 }
 ```
@@ -334,7 +334,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
                 "discounts": []
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/52493031-cccf-5ad2-9cc7-93d0f738303d"
+                "self": "https://glue.mysprykershop.com/carts/52493031-cccf-5ad2-9cc7-93d0f738303d"
             },
             "relationships": {
                 "items": {
@@ -349,7 +349,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/items?include=items,concrete-products,cart-permission-groups"
+        "self": "https://glue.mysprykershop.com/items?include=items,concrete-products,cart-permission-groups"
     },
     "included": [
         {
@@ -377,7 +377,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
                 }
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-2"
+                "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-2"
             }
         },
         {
@@ -417,7 +417,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/52493031-cccf-5ad2-9cc7-93d0f738303d/items/cable-vga-1-2_quantity_sales_unit_id_33_amount_1.5_sales_unit_id_33"
+                "self": "https://glue.mysprykershop.com/carts/52493031-cccf-5ad2-9cc7-93d0f738303d/items/cable-vga-1-2_quantity_sales_unit_id_33_amount_1.5_sales_unit_id_33"
             },
             "relationships": {
                 "concrete-products": {
@@ -462,12 +462,12 @@ To retrieve detailed information on promotional products in the cart, use `promo
                 "discounts": []
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/52493031-cccf-5ad2-9cc7-93d0f738303d"
+                "self": "https://glue.mysprykershop.com/carts/52493031-cccf-5ad2-9cc7-93d0f738303d"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/items?include=sales-units,product-measurement-units"
+        "self": "https://glue.mysprykershop.com/items?include=sales-units,product-measurement-units"
     },
     "included": [
         {
@@ -478,7 +478,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
                 "defaultPrecision": 100
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-measurement-units/METR"
+                "self": "https://glue.mysprykershop.com/product-measurement-units/METR"
             }
         },
         {
@@ -492,7 +492,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
                 "productMeasurementUnitCode": "METR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-2/sales-units/33"
+                "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-2/sales-units/33"
             },
             "relationships": {
                 "product-measurement-units": {
@@ -542,7 +542,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/52493031-cccf-5ad2-9cc7-93d0f738303d/items/cable-vga-1-2_quantity_sales_unit_id_33_amount_1.5_sales_unit_id_33"
+                "self": "https://glue.mysprykershop.com/carts/52493031-cccf-5ad2-9cc7-93d0f738303d/items/cable-vga-1-2_quantity_sales_unit_id_33_amount_1.5_sales_unit_id_33"
             },
             "relationships": {
                 "sales-units": {
@@ -629,12 +629,12 @@ To retrieve detailed information on promotional products in the cart, use `promo
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/1f1662c4-01e1-50d1-877d-95534d1b1833"
+                "self": "https://glue.mysprykershop.com/carts/1f1662c4-01e1-50d1-877d-95534d1b1833"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/access-tokens?include=promotional-items"
+        "self": "https://glue.mysprykershop.com/access-tokens?include=promotional-items"
     },
     "included": [
         {
@@ -908,10 +908,10 @@ To use this endpoint, customers need to authenticate. For details, see [Authenti
 
 | Request | Usage |
 | --- | --- |
-| `GET http://glue.mysprykershop.com/carts/52493031-cccf-5ad2-9cc7-93d0f738303d?include=items,concrete-products,cart-permission-groups` | Retrieve the  `52493031-cccf-5ad2-9cc7-93d0f738303d` cart with its items, related concrete products and cart permission groups included. |
-| `GET http://glue.mysprykershop.com/carts/52493031-cccf-5ad2-9cc7-93d0f738303d?include=items,sales-units,product-measurement-units` | Retrieve the  `52493031-cccf-5ad2-9cc7-93d0f738303d` cart with its item. The information about item amount is defined in sales units and the related product measurement units are included. |
-| `GET http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2?include=promotional-items ` | Retrieve the  `1ce91011-8d60-59ef-9fe0-4493ef3628b2` cart with its promotional items. |
-| `GET http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2?include=promotional-items ` | Retrieve the  `1ce91011-8d60-59ef-9fe0-4493ef3628b2` cart with details information on its promotional items. |
+| `GET https://glue.mysprykershop.com/carts/52493031-cccf-5ad2-9cc7-93d0f738303d?include=items,concrete-products,cart-permission-groups` | Retrieve the  `52493031-cccf-5ad2-9cc7-93d0f738303d` cart with its items, related concrete products and cart permission groups included. |
+| `GET https://glue.mysprykershop.com/carts/52493031-cccf-5ad2-9cc7-93d0f738303d?include=items,sales-units,product-measurement-units` | Retrieve the  `52493031-cccf-5ad2-9cc7-93d0f738303d` cart with its item. The information about item amount is defined in sales units and the related product measurement units are included. |
+| `GET https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2?include=promotional-items ` | Retrieve the  `1ce91011-8d60-59ef-9fe0-4493ef3628b2` cart with its promotional items. |
+| `GET https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2?include=promotional-items ` | Retrieve the  `1ce91011-8d60-59ef-9fe0-4493ef3628b2` cart with details information on its promotional items. |
 
 
 
@@ -955,7 +955,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
             "discounts": []
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/carts/52493031-cccf-5ad2-9cc7-93d0f738303d"
+            "self": "https://glue.mysprykershop.com/carts/52493031-cccf-5ad2-9cc7-93d0f738303d"
         },
         "relationships": {
             "items": {
@@ -994,7 +994,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
                 }
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-2"
+                "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-2"
             }
         },
         {
@@ -1034,7 +1034,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/52493031-cccf-5ad2-9cc7-93d0f738303d/items/cable-vga-1-2_quantity_sales_unit_id_33_amount_1.5_sales_unit_id_33"
+                "self": "https://glue.mysprykershop.com/carts/52493031-cccf-5ad2-9cc7-93d0f738303d/items/cable-vga-1-2_quantity_sales_unit_id_33_amount_1.5_sales_unit_id_33"
             },
             "relationships": {
                 "concrete-products": {
@@ -1077,7 +1077,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
             "discounts": []
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/carts/52493031-cccf-5ad2-9cc7-93d0f738303d"
+            "self": "https://glue.mysprykershop.com/carts/52493031-cccf-5ad2-9cc7-93d0f738303d"
         }
     },
     "included": [
@@ -1089,7 +1089,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
                 "defaultPrecision": 100
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-measurement-units/METR"
+                "self": "https://glue.mysprykershop.com/product-measurement-units/METR"
             }
         },
         {
@@ -1103,7 +1103,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
                 "productMeasurementUnitCode": "METR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-2/sales-units/33"
+                "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-2/sales-units/33"
             },
             "relationships": {
                 "product-measurement-units": {
@@ -1153,7 +1153,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/52493031-cccf-5ad2-9cc7-93d0f738303d/items/cable-vga-1-2_quantity_sales_unit_id_33_amount_1.5_sales_unit_id_33"
+                "self": "https://glue.mysprykershop.com/carts/52493031-cccf-5ad2-9cc7-93d0f738303d/items/cable-vga-1-2_quantity_sales_unit_id_33_amount_1.5_sales_unit_id_33"
             },
             "relationships": {
                 "sales-units": {
@@ -1202,7 +1202,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
             ]
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2"
+            "self": "https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2"
         },
         "relationships": {
             "promotional-items": {
@@ -1224,7 +1224,7 @@ To retrieve detailed information on promotional products in the cart, use `promo
                 "quantity": 2
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/promotional-items/bfc600e1-5bf1-50eb-a9f5-a37deb796f8a"
+                "self": "https://glue.mysprykershop.com/promotional-items/bfc600e1-5bf1-50eb-a9f5-a37deb796f8a"
             }
         }
     ]
@@ -1329,7 +1329,7 @@ To use this endpoint, customers need to authenticate. For details, see [Authenti
 
 ### Request
 
-`POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items?include=sales-units,product-measurement-units`
+`POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items?include=sales-units,product-measurement-units`
 
 ```json
 {
@@ -1416,7 +1416,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
             ]
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/carts/482bdbd6-137f-5b58-bd1c-37f3fa735a16"
+            "self": "https://glue.mysprykershop.com/carts/482bdbd6-137f-5b58-bd1c-37f3fa735a16"
         }
     },
     "included": [
@@ -1454,7 +1454,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/482bdbd6-137f-5b58-bd1c-37f3fa735a16/items/035_17360369"
+                "self": "https://glue.mysprykershop.com/carts/482bdbd6-137f-5b58-bd1c-37f3fa735a16/items/035_17360369"
             }
         },
         {
@@ -1468,7 +1468,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
                 "productMeasurementUnitCode": "METR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-2/sales-units/33"
+                "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-2/sales-units/33"
             }
         },
         {
@@ -1508,7 +1508,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/482bdbd6-137f-5b58-bd1c-37f3fa735a16/items/cable-vga-1-2_quantity_sales_unit_id_33_amount_1.5_sales_unit_id_33"
+                "self": "https://glue.mysprykershop.com/carts/482bdbd6-137f-5b58-bd1c-37f3fa735a16/items/cable-vga-1-2_quantity_sales_unit_id_33_amount_1.5_sales_unit_id_33"
             },
             "relationships": {
                 "sales-units": {
@@ -1562,7 +1562,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
             ]
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2"
+            "self": "https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2"
         }
     }
 }
@@ -1605,7 +1605,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
             ]
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2"
+            "self": "https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2"
         },
         "relationships": {
             "cart-rules": {
@@ -1657,7 +1657,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/items/134_29759322"
+                "self": "https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/items/134_29759322"
             }
         },
         {
@@ -1694,7 +1694,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/items/118_29804739"
+                "self": "https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/items/118_29804739"
             }
         },
         {
@@ -1731,7 +1731,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/items/139_24699831"
+                "self": "https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/items/139_24699831"
             }
         },
         {
@@ -1768,7 +1768,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/items/136_24425591"
+                "self": "https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/items/136_24425591"
             }
         },
         {
@@ -1805,7 +1805,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/items/112_306918001-promotion-1"
+                "self": "https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/items/112_306918001-promotion-1"
             }
         },
         {
@@ -1822,7 +1822,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
                 "discountPromotionQuantity": 2
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/cart-rules/6"
+                "self": "https://glue.mysprykershop.com/cart-rules/6"
             }
         },
         {
@@ -1839,7 +1839,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
                 "discountPromotionQuantity": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/cart-rules/1"
+                "self": "https://glue.mysprykershop.com/cart-rules/1"
             }
         }
     ]
@@ -1963,7 +1963,7 @@ Request sample: `PATCH http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4
                 "discounts": []
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/52493031-cccf-5ad2-9cc7-93d0f738303d"
+                "self": "https://glue.mysprykershop.com/carts/52493031-cccf-5ad2-9cc7-93d0f738303d"
             },
             "relationships": {
                 "items": {
@@ -1978,7 +1978,7 @@ Request sample: `PATCH http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/items?include=items,concrete-products,cart-permission-groups"
+        "self": "https://glue.mysprykershop.com/items?include=items,concrete-products,cart-permission-groups"
     },
     "included": [
         {
@@ -2006,7 +2006,7 @@ Request sample: `PATCH http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4
                 }
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-2"
+                "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-2"
             }
         },
         {
@@ -2046,7 +2046,7 @@ Request sample: `PATCH http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/52493031-cccf-5ad2-9cc7-93d0f738303d/items/cable-vga-1-2_quantity_sales_unit_id_33_amount_1.5_sales_unit_id_33"
+                "self": "https://glue.mysprykershop.com/carts/52493031-cccf-5ad2-9cc7-93d0f738303d/items/cable-vga-1-2_quantity_sales_unit_id_33_amount_1.5_sales_unit_id_33"
             },
             "relationships": {
                 "concrete-products": {
@@ -2087,7 +2087,7 @@ You cannot delete a cart if it is the customer's only cart. If you attempt to de
 {% endinfo_block %}
 
 ### Request
-Request sample: `DELETE http://glue.mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054`
+Request sample: `DELETE https://glue.mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054`
 
 where **4741fc84-2b9b-59da-bb8d-f4afab5be054** is the ID of the cart you want to delete.
 

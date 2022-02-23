@@ -44,7 +44,7 @@ To retrieve ratings and reviews, send the request:
 | page[offset] | Offset of the item at which to begin the response.  | From `0` to any. |
 | page[limit] | Maximum number of entries to return. | From `1` to any. |
 
-Request sample: `GET http://glue.mysprykershop.com/abstract-products/035/product-reviews`
+Request sample: `GET https://glue.mysprykershop.com/abstract-products/035/product-reviews`
 
 ### Response
 
@@ -64,7 +64,7 @@ Request sample: `GET http://glue.mysprykershop.com/abstract-products/035/product
                 "description": "The specs are good, but the build quality desires to be better."
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-reviews/40"
+                "self": "https://glue.mysprykershop.com/product-reviews/40"
             }
         },
         {
@@ -77,19 +77,18 @@ Request sample: `GET http://glue.mysprykershop.com/abstract-products/035/product
                 "description": "Powerful processor, bright screen and beatiful design - what else do you need?"
         },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-reviews/42"
+                "self": "https://glue.mysprykershop.com/product-reviews/42"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/abstract-products/139/product-reviews",
-        "last": "http://glue.mysprykershop.com/abstract-products/139/product-reviews?page[offset]=10&page[limit]=10",
-        "first": "http://glue.mysprykershop.com/abstract-products/139/product-reviews?page[offset]=0&page[limit]=10",
-        "next": "http://glue.mysprykershop.com/abstract-products/139/product-reviews?page[offset]=10&page[limit]=10"
+        "self": "https://glue.mysprykershop.com/abstract-products/139/product-reviews",
+        "last": "https://glue.mysprykershop.com/abstract-products/139/product-reviews?page[offset]=10&page[limit]=10",
+        "first": "https://glue.mysprykershop.com/abstract-products/139/product-reviews?page[offset]=0&page[limit]=10",
+        "next": "https://glue.mysprykershop.com/abstract-products/139/product-reviews?page[offset]=10&page[limit]=10"
     }
 }
 ```
-
 </details>
 
 <a name="product-ratings-and-reviews-response-attributes"></a>
@@ -120,7 +119,7 @@ To provide a rating and a review of a products, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer) or [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user).  |
 
-Sample request: `POST http://glue.mysprykershop.com/abstract-products/139/product-reviews`
+Sample request: `POST https://glue.mysprykershop.com/abstract-products/139/product-reviews`
 
 ```json
 {

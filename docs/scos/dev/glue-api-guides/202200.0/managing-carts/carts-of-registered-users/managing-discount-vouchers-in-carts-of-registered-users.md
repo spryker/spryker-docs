@@ -22,6 +22,7 @@ related:
 This endpoint allows managing discount vouchers in carts of registered users.
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html).
 
 ## Apply a discount voucher to a cart of a registered user
@@ -61,7 +62,6 @@ To apply a discount voucher to a cart of a registered user, send the request:
     }
 }
 ```
-
 </details>
 
 <details>
@@ -79,7 +79,6 @@ To apply a discount voucher to a cart of a registered user, send the request:
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
@@ -123,7 +122,6 @@ To apply a discount voucher to a cart of a registered user, send the request:
     }
 }
 ```
-
 </details>
 
 <details>
@@ -182,13 +180,12 @@ To apply a discount voucher to a cart of a registered user, send the request:
                 "discountPromotionQuantity": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/vouchers/mydiscount-qa1ma?include=vouchers"
+                "self": "https://glue.mysprykershop.com/vouchers/mydiscount-qa1ma?include=vouchers"
             }
         }
     ]
 }
 ```
-
 </details>
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |

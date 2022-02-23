@@ -64,7 +64,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 <details>
 <summary markdown='span'>Request sample</summary>
 
-`POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items`
+`POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items`
 ```json
 {
     "data": {
@@ -83,7 +83,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 <details>
 <summary markdown='span'>Request sample with product measurement units and sales units</summary>
 
-`POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items?include=sales-units,product-measurement-units`
+`POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items?include=sales-units,product-measurement-units`
 
 ```json
 {
@@ -105,7 +105,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 <details>
 <summary markdown='span'>Request sample with cart rules</summary>
 
-`POST http://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items?include=cart-rules`
+`POST https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items?include=cart-rules`
 
 ```json
 {
@@ -124,7 +124,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 <details>
 <summary markdown='span'>Request sample with vouchers</summary>
 
-`POST http://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items?include=vouchers`
+`POST https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items?include=vouchers`
 
 ```json
 {
@@ -169,7 +169,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 <details>
 <summary markdown='span'>Request sample with concrete products and product options</summary>
 
-`POST http://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398/items?include=concrete-products,product-options`
+`POST https://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398/items?include=concrete-products,product-options`
 
 ```json
 {
@@ -1043,7 +1043,7 @@ It is the responsibility of the API Client to track whether the selected items a
             ]
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398"
+            "self": "https://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398"
         }
     },
     "included": [
@@ -1058,7 +1058,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_1_year_waranty"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_1_year_waranty"
             }
         },
         {
@@ -1072,7 +1072,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_2_year_waranty"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_2_year_waranty"
             }
         },
         {
@@ -1086,7 +1086,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_3_year_waranty"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_3_year_waranty"
             }
         },
         {
@@ -1100,7 +1100,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_insurance"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_insurance"
             }
         },
         {
@@ -1114,7 +1114,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_gift_wrapping"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_gift_wrapping"
             }
         },
         {
@@ -1154,7 +1154,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 }
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510"
             },
             "relationships": {
                 "product-options": {
@@ -1232,7 +1232,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398/items/181_31995510-3-5"
+                "self": "https://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398/items/181_31995510-3-5"
             },
             "relationships": {
                 "concrete-products": {

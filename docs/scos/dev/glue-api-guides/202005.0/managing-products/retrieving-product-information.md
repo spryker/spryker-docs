@@ -52,7 +52,7 @@ To retrieve general information about an abstract product, send the request:
 
 * For performance and bandwidth usage optimization, we recommend filtering out only the needed information using the `fields` string parameter.
 
-* If you include more resources, you can still use the `fields` string parameter to return only the needed fields. For example, `GET http://glue.mysprykershop.com/abstract-products/001?include=concrete-products&fields[abstract-products]=name,description&fields[concrete-products]=name,image`.
+* If you include more resources, you can still use the `fields` string parameter to return only the needed fields. For example, `GET https://glue.mysprykershop.com/abstract-products/001?include=concrete-products&fields[abstract-products]=name,description&fields[concrete-products]=name,image`.
 
 
 {% endinfo_block %}
@@ -60,8 +60,8 @@ To retrieve general information about an abstract product, send the request:
 
 | Request | Usage |
 | --- | --- |
-| `GET http://glue.mysprykershop.com/abstract-products/001` | Retrieve general information about the abstract product. |
-| `GET http://glue.mysprykershop.com/abstract-products/001?include=product-labels` | Retrieve general information about the abstract product with its assigned product lables included. |
+| `GET https://glue.mysprykershop.com/abstract-products/001` | Retrieve general information about the abstract product. |
+| `GET https://glue.mysprykershop.com/abstract-products/001?include=product-labels` | Retrieve general information about the abstract product with its assigned product lables included. |
 
 
 
@@ -124,7 +124,7 @@ To retrieve general information about an abstract product, send the request:
             "url": "/en/canon-ixus-160-1"
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/abstract-products/001"
+            "self": "https://glue.mysprykershop.com/abstract-products/001"
         }
     }
 }
@@ -168,7 +168,7 @@ To retrieve general information about an abstract product, send the request:
                 "frontEndReference": ""
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-labels/3"
+                "self": "https://glue.mysprykershop.com/product-labels/3"
             }
         },
         {
@@ -181,7 +181,7 @@ To retrieve general information about an abstract product, send the request:
                 "frontEndReference": "highlight"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-labels/5"
+                "self": "https://glue.mysprykershop.com/product-labels/5"
             }
         }
     ]
@@ -253,7 +253,7 @@ To retrieve general information about a concrete product, send the request:
 
 * For performance and bandwidth usage optimization, we recommend filtering out only the needed information using the `fields` string parameter.
 
-* If you include more resources, you can still use the `fields` string parameter to return only the needed fields. For example, `GET http://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units&fields[concrete-products]=name,description&fields[sales-units]=conversion,precision`.
+* If you include more resources, you can still use the `fields` string parameter to return only the needed fields. For example, `GET https://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units&fields[concrete-products]=name,description&fields[sales-units]=conversion,precision`.
 
 
 {% endinfo_block %}   
@@ -261,9 +261,9 @@ To retrieve general information about a concrete product, send the request:
 Sample requests:
 | Request  | Usage |
 | --- | --- |
-| `GET http://glue.mysprykershop.com/concrete-products/001_25904006` | Get information about the `001_25904006` product.  |
-| `GET http://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units,product-measurement-units` | Get information about the `fish-1-1` product with the information on its sales units and product mesurement units included. |
-| `GET http://glue.mysprykershop.com/concrete-products/001_25904006?include=product-labels` | Retrieve information about the `001_25904006` product with product labels included.  |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006` | Get information about the `001_25904006` product.  |
+| `GET https://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units,product-measurement-units` | Get information about the `fish-1-1` product with the information on its sales units and product mesurement units included. |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-labels` | Retrieve information about the `001_25904006` product with product labels included.  |
 
   
 
@@ -309,7 +309,7 @@ Sample requests:
             }
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/concrete-products/001_25904006"
+            "self": "https://glue.mysprykershop.com/concrete-products/001_25904006"
         }
     }
 }
@@ -347,7 +347,7 @@ Sample requests:
             }
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-1?include=sales-units,product-measurement-units"
+            "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-1?include=sales-units,product-measurement-units"
         },
         "relationships": {
             "product-measurement-units": {
@@ -377,7 +377,7 @@ Sample requests:
                 "defaultPrecision": 100
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-measurement-units/METR"
+                "self": "https://glue.mysprykershop.com/product-measurement-units/METR"
             }
         },
         {
@@ -391,7 +391,7 @@ Sample requests:
                 "productMeasurementUnitCode": "METR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/sales-units/32"
+                "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-1/sales-units/32"
             },
             "relationships": {
                 "product-measurement-units": {
@@ -450,7 +450,7 @@ Sample requests:
             }
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/concrete-products/001_25904006"
+            "self": "https://glue.mysprykershop.com/concrete-products/001_25904006"
         }
     }
 }
@@ -503,7 +503,7 @@ To retrieve availability of an abstract product, send the request:
 
 ### Request
 
-Request sample : `GET http://glue.mysprykershop.com/abstract-products/001/abstract-product-availabilities`
+Request sample : `GET https://glue.mysprykershop.com/abstract-products/001/abstract-product-availabilities`
 
 ### Response
 
@@ -519,11 +519,11 @@ Response sample:
             "quantity": 10
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/abstract-products/001/abstract-product-availabilities"
+            "self": "https://glue.mysprykershop.com/abstract-products/001/abstract-product-availabilities"
         }
     }],
     "links": {
-        "self": "http://glue.mysprykershop.com/abstract-products/001/abstract-product-availabilities"
+        "self": "https://glue.mysprykershop.com/abstract-products/001/abstract-product-availabilities"
     }
 }
 ```
@@ -550,7 +550,7 @@ Response sample:
 
 ### Request
 
-Request sample: `GET http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-availabilities`
+Request sample: `GET https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-availabilities`
 
 
 ### Response
@@ -567,11 +567,11 @@ Response sample:
             "isNeverOutOfStock": false
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-availabilities"
+            "self": "https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-availabilities"
         }
     }],
     "links": {
-        "self": "http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-availabilities"
+        "self": "https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-availabilities"
     }
 }
 ```
@@ -604,8 +604,8 @@ To retrieve price of an abstract prdocut, send the request:
 
 | Request  | Usage |
 | --- | --- |
-| `GET http://glue.mysprykershop.com/abstract-products/001/abstract-product-prices` | Retrieve the price of the `001` product.  |
-| `GET http://glue.mysprykershop.com/abstract-products/001/abstract-product-prices?currency=CHF&priceMode=GROSS_MODE` | Retrieve the gross price of the `001` product in Swiss Franc. |
+| `GET https://glue.mysprykershop.com/abstract-products/001/abstract-product-prices` | Retrieve the price of the `001` product.  |
+| `GET https://glue.mysprykershop.com/abstract-products/001/abstract-product-prices?currency=CHF&priceMode=GROSS_MODE` | Retrieve the gross price of the `001` product in Swiss Franc. |
 
 | String parameter | Description | Exemplary values |
 | --- | --- | --- |
@@ -651,12 +651,12 @@ Response sample:
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/abstract-products/001/abstract-product-prices"
+                "self": "https://glue.mysprykershop.com/abstract-products/001/abstract-product-prices"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/abstract-products/001/abstract-product-prices"
+        "self": "https://glue.mysprykershop.com/abstract-products/001/abstract-product-prices"
     }
 }
 ```
@@ -695,12 +695,12 @@ Response sample with a gross price in Swiss Franc:
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/abstract-products/001/abstract-product-prices"
+                "self": "https://glue.mysprykershop.com/abstract-products/001/abstract-product-prices"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/abstract-products/001/items?currency=CHF&priceMode=GROSS_MODE"
+        "self": "https://glue.mysprykershop.com/abstract-products/001/items?currency=CHF&priceMode=GROSS_MODE"
     }
 }
 ```
@@ -741,8 +741,8 @@ To retrieve price of an concrete prdocut, send the request:
 
 | Request  | Usage |
 | --- | --- |
-| `GET http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices` | Retrieve the price of the `001_25904006` product.  |
-| `GET  http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices?currency=CHF&priceMode=GROSS_MODE` | Retrieve the gross price of the `001_25904006` product in Swiss Franc. |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices` | Retrieve the price of the `001_25904006` product.  |
+| `GET  https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices?currency=CHF&priceMode=GROSS_MODE` | Retrieve the gross price of the `001_25904006` product in Swiss Franc. |
 
 | String parameter | Description | Exemplary values |
 | --- | --- | --- |
@@ -787,12 +787,12 @@ Response sample:
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices"
+                "self": "https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices"
+        "self": "https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices"
     }
 }
 ```
@@ -831,12 +831,12 @@ Response sample with a gross price in Swiss Franc:
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices"
+                "self": "https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/concrete-products/001_25904006/items?currency=CHF&priceMode=GROSS_MODE"
+        "self": "https://glue.mysprykershop.com/concrete-products/001_25904006/items?currency=CHF&priceMode=GROSS_MODE"
     }
 }
 ```
@@ -869,7 +869,7 @@ To retrieve tax rates of a product, send the request:
 
 ### Request
 
-Request sample: `GET http://glue.mysprykershop.com/abstract-products/209/product-tax-sets`
+Request sample: `GET https://glue.mysprykershop.com/abstract-products/209/product-tax-sets`
 
 ### Response
 
@@ -962,12 +962,12 @@ Sample response
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/abstract-products/177/product-tax-sets"
+                "self": "https://glue.mysprykershop.com/abstract-products/177/product-tax-sets"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/abstract-products/177/product-tax-sets"
+        "self": "https://glue.mysprykershop.com/abstract-products/177/product-tax-sets"
     }
 }
 ```
@@ -1001,7 +1001,7 @@ To retrieve image sets of an abstract product, send the request:
 
 ### Request
 
-Request sample : `GET http://glue.mysprykershop.com/abstract-products/001/abstract-product-image-sets`
+Request sample : `GET https://glue.mysprykershop.com/abstract-products/001/abstract-product-image-sets`
 
 
 ### Response
@@ -1028,12 +1028,12 @@ Sample response
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/abstract-products/177/abstract-product-image-sets"
+                "self": "https://glue.mysprykershop.com/abstract-products/177/abstract-product-image-sets"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/abstract-products/177/abstract-product-image-sets"
+        "self": "https://glue.mysprykershop.com/abstract-products/177/abstract-product-image-sets"
     }
 }
 ```
@@ -1061,7 +1061,7 @@ To retrieve image sets of a concrete product, send the request:
 | ***{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}*** | SKU of a concrete product to get the image sets of. |
 
 ### Request
-Request sample : `GET http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-image-sets`
+Request sample : `GET https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-image-sets`
 
 
 ### Response
@@ -1090,12 +1090,12 @@ Sample response
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/177_25913296/concrete-product-image-sets"
+                "self": "https://glue.mysprykershop.com/concrete-products/177_25913296/concrete-product-image-sets"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/concrete-products/177_25913296/concrete-product-image-sets"
+        "self": "https://glue.mysprykershop.com/concrete-products/177_25913296/concrete-product-image-sets"
     }
 }
 ```
@@ -1122,7 +1122,7 @@ To get sales unit of a product, send the request:
 |***{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}*** | SKU of a concrete product to get sales units for. |
 
 ### Request
-Request sample: `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1-2/sales-units`
+Request sample: `GET https://glue.mysprykershop.com/concrete-products/cable-vga-1-2/sales-units`
 
 ### Response
 Response sample:
@@ -1141,7 +1141,7 @@ Response sample:
                 "productMeasurementUnitCode": "CMET"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-2/sales-units/34"
+                "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-2/sales-units/34"
             }
         },
         {
@@ -1155,12 +1155,12 @@ Response sample:
                 "productMeasurementUnitCode": "METR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-2/sales-units/33"
+                "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-2/sales-units/33"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-2/sales-units"
+        "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-2/sales-units"
     }
 }
 ```

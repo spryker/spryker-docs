@@ -77,7 +77,6 @@ Request sample: `GET https://glue.mysprykershop.com/return-reasons`
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

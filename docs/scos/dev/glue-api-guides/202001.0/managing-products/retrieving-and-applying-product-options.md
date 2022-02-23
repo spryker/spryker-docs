@@ -36,7 +36,7 @@ Endpoints:
 * `/abstract-products`
 * `/concrete-products`
 
-Sample request: `GET http://glue.mysprykershop.com/concrete-products/181_31995510?include=product-options`
+Sample request: `GET https://glue.mysprykershop.com/concrete-products/181_31995510?include=product-options`
 
 where **181_31995510** is the SKU of the product you want to retrieve options for.
 
@@ -105,7 +105,7 @@ Each product option is represented by a related resource with the following attr
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_1_year_waranty"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_1_year_waranty"
             }
         },
         {
@@ -119,7 +119,7 @@ Each product option is represented by a related resource with the following attr
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_2_year_waranty"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_2_year_waranty"
             }
         },
         {
@@ -133,7 +133,7 @@ Each product option is represented by a related resource with the following attr
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_3_year_waranty"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_3_year_waranty"
             }
         },
         {
@@ -147,7 +147,7 @@ Each product option is represented by a related resource with the following attr
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_insurance"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_insurance"
             }
         },
         {
@@ -161,7 +161,7 @@ Each product option is represented by a related resource with the following attr
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_gift_wrapping"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_gift_wrapping"
             }
         }
     ]
@@ -209,13 +209,13 @@ When accessing guest carts, you need to specify the guest user ID. This is done 
 
 Sample requests: 
 
-`GET http://glue.mysprykershop.com/carts?include=items,concrete-products,product-options`
+`GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-options`
 
-`GET http://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/?include=guest-cart-items,concrete-products,product-options`
+`GET https://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/?include=guest-cart-items,concrete-products,product-options`
 
-`POST http://glue.mysprykershop.com/guest-cart-items?include=guest-cart-items,concrete-products,product-option`
+`POST https://glue.mysprykershop.com/guest-cart-items?include=guest-cart-items,concrete-products,product-option`
 
-`PATCH http://glue.mysprykershop.com/carts/f9a3f045-02c2-5d47-b397-8ac1f5c63e27/items/181_31995510?include=guest-cart-items,concrete-products,product-option`
+`PATCH https://glue.mysprykershop.com/carts/f9a3f045-02c2-5d47-b397-8ac1f5c63e27/items/181_31995510?include=guest-cart-items,concrete-products,product-option`
 
 {% info_block warningBox "Performance" %}
 
@@ -291,7 +291,7 @@ Each product option available for every product in the cart is represented by a 
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/guest-carts/a460ac71-06ee-5018-b6d6-a2191d183f24/guest-cart-items/181_31995510-3-5"
+                "self": "https://glue.mysprykershop.com/guest-carts/a460ac71-06ee-5018-b6d6-a2191d183f24/guest-cart-items/181_31995510-3-5"
             },
             "relationships": {
                 "concrete-products": {
@@ -315,7 +315,7 @@ Each product option available for every product in the cart is represented by a 
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_1_year_waranty"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_1_year_waranty"
             }
         },
         {
@@ -329,7 +329,7 @@ Each product option available for every product in the cart is represented by a 
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_2_year_waranty"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_2_year_waranty"
             }
         },
         {
@@ -343,7 +343,7 @@ Each product option available for every product in the cart is represented by a 
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_3_year_waranty"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_3_year_waranty"
             }
         },
         {
@@ -357,7 +357,7 @@ Each product option available for every product in the cart is represented by a 
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_insurance"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_insurance"
             }
         },
         {
@@ -371,7 +371,7 @@ Each product option available for every product in the cart is represented by a 
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_gift_wrapping"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_gift_wrapping"
             }
         },
         }
@@ -460,7 +460,7 @@ Each product option available for every product in the cart is represented by a 
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_1_year_waranty"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_1_year_waranty"
             }
         },
         {
@@ -474,7 +474,7 @@ Each product option available for every product in the cart is represented by a 
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_2_year_waranty"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_2_year_waranty"
             }
         },
         {
@@ -488,7 +488,7 @@ Each product option available for every product in the cart is represented by a 
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_3_year_waranty"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_3_year_waranty"
             }
         },
         {
@@ -502,7 +502,7 @@ Each product option available for every product in the cart is represented by a 
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_insurance"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_insurance"
             }
         },
         {
@@ -516,7 +516,7 @@ Each product option available for every product in the cart is represented by a 
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_gift_wrapping"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_gift_wrapping"
             }
         },
         ...
@@ -643,11 +643,11 @@ Orders cannot be accessed anonymously. For this reason, you always need to pass 
 
 {% endinfo_block %}
 
-Sample request: `GET http://glue.mysprykershop.com/orders/DE--3`
+Sample request: `GET https://glue.mysprykershop.com/orders/DE--3`
 
 {% info_block warningBox "Tip" %}
 
-You can also receive product option information immediately after checkout id complete by including the necessary information in the checkout call: *POST http://glue.mysprykershop.com/checkout?include=orders*
+You can also receive product option information immediately after checkout id complete by including the necessary information in the checkout call: *POST https://glue.mysprykershop.com/checkout?include=orders*
 
 {% endinfo_block %}
 

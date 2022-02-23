@@ -20,8 +20,6 @@ This endpoint allows retrieving availability of concrete products.
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-inventory-management-feature-integration.html)
 
-
-
 ## Retrieve availability of a concrete product
 
 ---
@@ -35,7 +33,7 @@ For detailed information on the modules that provide the API functionality and r
 
 ### Request
 
-Request sample: `GET http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-availabilities`
+Request sample: `GET https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-availabilities`
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 
@@ -56,15 +54,14 @@ To view generic errors that originate from the Glue Application, see [Reference 
             "isNeverOutOfStock": false
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-availabilities"
+            "self": "https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-availabilities"
         }
     }],
     "links": {
-        "self": "http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-availabilities"
+        "self": "https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-availabilities"
     }
 }
 ```
-
 </details>
 
 <a name="concrete-product-availability-response-attributes"></a>

@@ -21,7 +21,7 @@ This endpoint allows authenticating as a customer. As an authenticated customer,
 
 {% info_block warningBox %}
 
-This endpoint does not comply with OAuth 2.0. If your project requires such compliance, use the `/token`endpoint. For details about the `/token`endpoint, see [Managing customer authentication tokens via OAuth 2.0](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html).
+This endpoint does not comply with OAuth 2.0. If your project requires such compliance, use the `/token` endpoint. For details about the `/token` endpoint, see [Managing customer authentication tokens via OAuth 2.0](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html).
 
 {% endinfo_block %}
 
@@ -88,12 +88,11 @@ Note that depending on the Login feature configuration for your project, too man
             "idCompanyUser": "ebf4b55a-cab0-5ed0-8fb7-525a3eeedeac"
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/access-tokens"
+            "self": "https://glue.mysprykershop.com/access-tokens"
         }
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

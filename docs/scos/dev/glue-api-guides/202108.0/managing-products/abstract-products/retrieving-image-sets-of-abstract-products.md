@@ -38,7 +38,7 @@ To retrieve image sets of an abstract product, send the request:
 
 ### Request
 
-Request sample: `GET http://glue.mysprykershop.com/abstract-products/001/abstract-product-image-sets`
+Request sample: `GET https://glue.mysprykershop.com/abstract-products/001/abstract-product-image-sets`
 
 ### Response
 
@@ -65,16 +65,15 @@ Request sample: `GET http://glue.mysprykershop.com/abstract-products/001/abstrac
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/abstract-products/177/abstract-product-image-sets"
+                "self": "https://glue.mysprykershop.com/abstract-products/177/abstract-product-image-sets"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/abstract-products/177/abstract-product-image-sets"
+        "self": "https://glue.mysprykershop.com/abstract-products/177/abstract-product-image-sets"
     }
 }
 ```
-
 </details>
 
 <a name="abstract-product-sets-response-attributes"></a>

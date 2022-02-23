@@ -191,7 +191,6 @@ Request sample: `POST https://glue.mysprykershop.com/returns`
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -256,7 +255,7 @@ To retrieve returns, send the request:
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
-| offset | Ofset of the order at which to begin the response. <br> Works only together with `page[limit]`. <br> To work correctly, the value should be devisable by the value of `page[limit]`. <br> The default value is `0`.  | From `0` to any. |
+| offset | Offset of the order at which to begin the response. <br> Works only together with `page[limit]`. <br> To work correctly, the value should be devisable by the value of `page[limit]`. <br> The default value is `0`.  | From `0` to any. |
 | limit | Maximum number of entries to return. <br> Works only together with `page[offset]`. <br> The default value is `10`. | From `1` to any. |
 
 Request sample: `GET https://glue.mysprykershop.com/returns`
@@ -323,7 +322,6 @@ Request sample: `GET https://glue.mysprykershop.com/returns`
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -358,7 +356,7 @@ To retrieve a return, send the request:
 | offset | Ofset of the order at which to begin the response. <br> Works only together with `page[limit]`. <br> To work correctly, the value should be devisable by the value of `page[limit]`. <br> The default value is `0`.  | From `0` to any. |
 | limit | Maximum number of entries to return. <br> Works only together with `page[offset]`. <br> The default value is `10`. | From `1` to any. |
 
-Sample request: `GET http://glue.mysprykershop.com/returns/DE--1-R3`
+Sample request: `GET https://glue.mysprykershop.com/returns/DE--1-R3`
 
 ### Response
 
@@ -473,7 +471,6 @@ Sample request: `GET http://glue.mysprykershop.com/returns/DE--1-R3`
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

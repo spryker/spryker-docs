@@ -35,8 +35,6 @@ composer require spryker/checkout-rest-api:"3.5.0" spryker/order-payments-rest-a
 
 {% info_block warningBox "Verification" %}
 
-
-
 Make sure that the following modules have been installed:
 
 | MODULE                      | EXPECTED DIRECTORY                     |
@@ -161,7 +159,7 @@ For the `checkout-data` endpoint to keep returning shipment methods, keep `Pyz\G
 {% info_block warningBox "Verification" %}
 
 
-If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isShipmentMethodsMappedToAttributes()` is true, make sure the shipping method attributes are returned in the `shipmentMethods` after sending the `POST http://glue.mysprykershop.com/checkout-data` request:
+If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isShipmentMethodsMappedToAttributes()` is true, make sure the shipping method attributes are returned in the `shipmentMethods` after sending the `POST https://glue.mysprykershop.com/checkout-data` request:
 
 <details open>
 <summary markdown='span'>Response sample</summary>
@@ -238,7 +236,7 @@ For the `checkout-data` endpoint to keep returning payment methods, keep `Checko
 {% info_block warningBox "Verification" %}
 
 
-If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isPaymentProvidersMappedToAttributes()` is true, make sure the payment methods attributes are returned in the `paymentProviders `attribute after sending the `POST http://glue.mysprykershop.com/checkout-data` request:
+If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isPaymentProvidersMappedToAttributes()` is true, make sure the payment methods attributes are returned in the `paymentProviders `attribute after sending the `POST https://glue.mysprykershop.com/checkout-data` request:
 
 <details open>
 <summary markdown='span'>Response sample</summary>
@@ -282,8 +280,8 @@ If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isPaymentProvidersMappedToAt
             ],
             ...
 }
- ```
- </details>
+```
+</details>
 
 {% endinfo_block %}
 
@@ -426,9 +424,9 @@ Make sure that the following plugins are activated:
 
 | PLUGIN    | TEST   |
 | ------------------- | --------------------- |
-| CheckoutDataResourcePlugin              | Check if you get a valid response by sending the `POST http://glue.mysprykershop.com/checkout-data` request. |
-| CheckoutResourcePlugin                  | Check if you get a valid response by sending the `POST http://glue.mysprykershop.com/checkout` request. |
-| OrderRelationshipByOrderReferencePlugin | Check if you get order information from the `orders` resource by sending the `POST http://glue.mysprykershop.com/checkout?include=orders` request. |
+| CheckoutDataResourcePlugin              | Check if you get a valid response by sending the `POST https://glue.mysprykershop.com/checkout-data` request. |
+| CheckoutResourcePlugin                  | Check if you get a valid response by sending the `POST https://glue.mysprykershop.com/checkout` request. |
+| OrderRelationshipByOrderReferencePlugin | Check if you get order information from the `orders` resource by sending the `POST https://glue.mysprykershop.com/checkout?include=orders` request. |
 
 {% endinfo_block %}
 
@@ -437,7 +435,7 @@ Make sure that the following plugins are activated:
 
 To make sure that `OrderPaymentsResourceRoutePlugin` is activated, check if you get a valid response by sending the following request:
 
-**http://glue.mysprykershop.com/order-payments**
+**https://glue.mysprykershop.com/order-payments**
 
 ```json
 {
@@ -494,9 +492,9 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-To make sure that `CustomerQuoteMapperPlugin` is activated, send the `POST http://glue.mysprykershop.com/checkout` request and check that the returned order information contains the customer information you have provided in the request.
+To make sure that `CustomerQuoteMapperPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout` request and check that the returned order information contains the customer information you have provided in the request.
 
-To make sure that `AddressQuoteMapperPlugin` is activated, send a `POST http://glue.mysprykershop.com/checkout` request and check that the returned order information contains the billing and shipping address information you have provided in the request.
+To make sure that `AddressQuoteMapperPlugin` is activated, send a `POST https://glue.mysprykershop.com/checkout` request and check that the returned order information contains the billing and shipping address information you have provided in the request.
 
 {% endinfo_block %}
 
@@ -538,7 +536,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-To make sure that `SinglePaymentCheckoutRequestAttributesValidatorPlugin` is activated, check that the following error is returned by sending the `POST http://glue.mysprykershop.com/checkout` request.
+To make sure that `SinglePaymentCheckoutRequestAttributesValidatorPlugin` is activated, check that the following error is returned by sending the `POST https://glue.mysprykershop.com/checkout` request.
 
 ```json
 {
@@ -558,8 +556,8 @@ To make sure that `SinglePaymentCheckoutRequestAttributesValidatorPlugin` is act
 
 Activate the following plugins:
 
-| PLUGIN  | SPECIFICATION                                                                                | PREREQUISITES | NAMESPACE   |
-| -------------------------- |----------------------------------------------------------------------------------------------| ----------- | --------------- |
+| PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE   |
+| -------------------------- |------------------------| ----------- | --------------- |
 | SalesOrderThresholdRestCartAttributesMapperPlugin | Maps `QuoteTransfer.salesOrderThresholdValues` to `RestCartsAttributesTransfer.thresholds`.  | None          | Spryker\Glue\SalesOrderThresholdsRestApi\Plugin\CartsRestApi |
 | SalesOrderThresholdCartTerminationPlugin | Finds applicable thresholds and expands quote with sales order thresholds data.              | None          | Spryker\Zed\SalesOrderThreshold\Communication\Plugin\Cart |
 | SalesOrderThresholdQuoteExpanderPlugin | Finds applicable thresholds and expands quote with sales order thresholds data.              | None          | Spryker\Zed\SalesOrderThresholdsRestApi\Communication\Plugin\CartsRestApi |
@@ -672,7 +670,7 @@ Ensure that the plugins work correctly:
 
 1. [Setting up Minimum Hard Threshold](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-global-thresholds.html).
 2. Add a product to the cart with a price less minimum threshold value.
-3. Check that the following error is returned by sending the `GET http://glue.mysprykershop.com/carts/{cart-uuid}` request.
+3. Check that the following error is returned by sending the `GET https://glue.mysprykershop.com/carts/{cart-uuid}` request.
 
 ```json
 {
@@ -711,7 +709,7 @@ Ensure that the plugins work correctly:
 }
 ```
 
-4. Check that the following error is returned by sending the `POST http://glue.mysprykershop.com/checkout-data` request.
+4. Check that the following error is returned by sending the `POST https://glue.mysprykershop.com/checkout-data` request.
 
 ```json
 {
@@ -726,7 +724,7 @@ Ensure that the plugins work correctly:
 ```
 
 5. Add more products to cart to satisfy minimum threshold.
-6. Check result by sending the `GET http://glue.mysprykershop.com/carts/{cart-uuid}` request.
+6. Check result by sending the `GET https://glue.mysprykershop.com/carts/{cart-uuid}` request.
 
 ```json
 {
@@ -757,7 +755,7 @@ Ensure that the plugins work correctly:
 }
 ```
 
-7. Check result by sending the `POST http://glue.mysprykershop.com/checkout-data` request.
+7. Check result by sending the `POST https://glue.mysprykershop.com/checkout-data` request.
 
 ```json
 {

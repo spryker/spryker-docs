@@ -48,7 +48,6 @@ Ensure that the following modules have been installed:
 {% endinfo_block %}
 
 
-
 ## 2) Set up database schema and transfer objects
 
 Apply database changes and generate entity and transfer changes:
@@ -71,7 +70,6 @@ Ensure that the following changes have occurred in the database:
 
 
 {% info_block warningBox "Verification" %}
-
 
 Ensure that the following changes have occurred in transfer objects:
 
@@ -131,7 +129,7 @@ Activate the following plugin:
 
 | PLUGIN   | SPECIFICATION  | PREREQUISITES | NAMESPACE   |
 | ---------------- | ---------------- | ------------ | ------------- |
-| AnonymousCustomerUniqueIdValidatorPlugin | Validates a REST resource request before processing it. Checks if `X-Anonymous-Customer-Unique-Id` header is set and can be used for requested resource.  |               | Spryker\Glue\CrtsRestApi\Plugin\Vlidator |
+| AnonymousCustomerUniqueIdValidatorPlugin | Validates a REST resource request before processing it. Checks if `X-Anonymous-Customer-Unique-Id` header is set and can be used for requested resource.  |               | Spryker\Glue\CartsRestApi\Plugin\Validator |
  
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
@@ -161,7 +159,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-To ensure that `AnonymousCustomerUniqueIdValidatorPlugin` is set up correctly, send a request without an anonymous customer ID to an endpoint that requires it. For example, send the `GET http://glue.mysprykershop.com/guest-carts` request and check that the following error is returned:
+To ensure that `AnonymousCustomerUniqueIdValidatorPlugin` is set up correctly, send a request without an anonymous customer ID to an endpoint that requires it. For example, send the `GET https://glue.mysprykershop.com/guest-carts` request and check that the following error is returned:
 
 ```json
 {
@@ -174,7 +172,6 @@ To ensure that `AnonymousCustomerUniqueIdValidatorPlugin` is set up correctly, s
     ]
 }
 ```
-
 
 {% endinfo_block %}
 
@@ -202,10 +199,6 @@ class CartsRestApiConfig extends SprykerCartsRestApiConfig
 
 Activate the following plugins:
 
-
-
-
-
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ------------------- | ----------------- | ------------ | -------------------- |
 | CartsResourceRoutePlugin                           | Registers the `carts` resource.                              |               | Spryker\Glue\CartsRestApi\Plugin\ResourceRoute               |
@@ -223,21 +216,16 @@ Activate the following plugins:
 | GuestCartItemsByQuoteResourceRelationshipPlugin    | Adds the `guest-cart-items` resource as a relationship to the `guest-carts` resource. |               | Spryker\Glue\CartsRestApi\Plugin\GlueApplication             |
 | CustomerCartsResourceRoutePlugin                   | Configuration for resource routing, how HTTP methods map to controller actions, and if actions are protected. |               | Spryker\Glue\CartsRestApi\Plugin\ResourceRoute               |
 
-
-
 {% info_block infoBox %}
 
 There are two cart behavior strategies: single cart and multicart. Unlike the single-cart behavior, the multicart one allows creating more than one cart for a customer. Depending on the selected strategy, from the plugin pairs in the table below, wire only one plugin into the respective provider. 
 
 {% endinfo_block %}
 
-
-
 | PROVIDER   | SINGLE-CART BEHAVIOR    | MULTICART BEHAVIOR   |
 | ------------------- | ------------------- | -------------------- |
 | CartsRestApiDependencyProvider (Zed) | Spryker\Zed\CartsRestApi\Communication\Plugin\CartsRestApi\QuoteCreatorPlugin | Spryker\Zed\PersistentCart\Communication\Plugin\CartsRestApi\QuoteCreatorPlugin |
 | AuthRestApiDependencyProvider        | AddGuestQuoteItemsToCustomerQuotePostAuthPlugin              | UpdateGuestQuoteToCustomerQuotePostAuthPlugin                |
-
 
 
 <details open>
@@ -312,28 +300,23 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-
-Ensure that the `http://glue.mysprykershop.com/carts` endpoint is available:
+Ensure that the `https://glue.mysprykershop.com/carts` endpoint is available:
 
 1. [Create one or more carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart).
-2. Send the request: `GET http://glue.mysprykershop.com/carts/`.
+2. Send the request: `GET https://glue.mysprykershop.com/carts/`.
 3. Check that the response contains the list of carts of the customer you are [authenticated](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html) with.
-
 
 {% endinfo_block %}
 
 
 
-
 {% info_block warningBox "Verification" %}
 
-
-Ensure that the `http://glue.mysprykershop.com/guest-carts` endpoint is available:
+Ensure that the `https://glue.mysprykershop.com/guest-carts` endpoint is available:
 
 1. [Create a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart).
-2 Send the request: `GET http://glue.mysprykershop.com/carts/`.
+2 Send the request: `GET https://glue.mysprykershop.com/carts/`.
 3. Check that the response contains the cart you have created.
-
 
 {% endinfo_block %}
 
@@ -344,9 +327,8 @@ Ensure that the `http://glue.mysprykershop.com/guest-carts` endpoint is availabl
 Ensure that the `items` resource relationships is registered as a relationship of the `carts` resource:
 
 1. [Add one or more items to cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart).
-2. Send the request: `GET http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/?include=items`.
+2. Send the request: `GET https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/?include=items`.
 3. Check that the response contains the relationships to the `items` resource.
-
 
 {% endinfo_block %}
 
@@ -355,13 +337,11 @@ Ensure that the `items` resource relationships is registered as a relationship o
 
 {% info_block warningBox "Verification" %}
 
-
 Ensure that the `guest-cart-items` resource relationship is registered as a relationship of the `guest-carts` resource:
 
 1. [Add one or more items to cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html#add-items-to-a-guest-cart).
-2 Send the request: `GET http://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}/?include=guest-cart-items`.
+2 Send the request: `GET https://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}/?include=guest-cart-items`.
 3. Check that the response contains the relationships to the `guest-cart-items` resource.
-
 
 {% endinfo_block %}
 
@@ -369,13 +349,12 @@ Ensure that the `guest-cart-items` resource relationship is registered as a rela
 
 {% info_block warningBox "Verification" %}
 
-
 Make sure that the `https://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}/carts` endpoint is available.
 
 
-**src/Pz/Glue/CstomersRestApi/CustomersRestApiDependencyProvider.php**
+**src/Pz/Glue/CustomersRestApi/CustomersRestApiDependencyProvider.php**
 
-```
+```php
 <?php
 
 namespace Pyz\Glue\CustomersRestApi;
@@ -409,7 +388,7 @@ To ensure that you've installed `UpdateCartCreateCustomerReferencePlugin`, check
 
 **src/Pyz/Zed/AuthRestApi/AuthRestApiDependencyProvider.php**
 
-```
+```php
 <?php
 
 namespace Pyz\Zed\AuthRestApi;
@@ -471,8 +450,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 
 {% info_block warningBox "Verification" %}
 
-
-To verify that `Spryker\Zed\CartsRestApi\Communication\Plugin\CartsRestApi\QuoteCreatorPlugin` is installed correctly, send the `POST http://glue.mysprykershop.com/carts/` request with a valid body. Ensure that you cannot create more than one cart for the same customer. If you try to create more than one cart, you should receive the following error response:
+To verify that `Spryker\Zed\CartsRestApi\Communication\Plugin\CartsRestApi\QuoteCreatorPlugin` is installed correctly, send the `POST https://glue.mysprykershop.com/carts/` request with a valid body. Ensure that you cannot create more than one cart for the same customer. If you try to create more than one cart, you should receive the following error response:
 
 ```json
 {
@@ -485,7 +463,6 @@ To verify that `Spryker\Zed\CartsRestApi\Communication\Plugin\CartsRestApi\Quote
     ]
 }
 ```
-
 
 {% endinfo_block %}
 

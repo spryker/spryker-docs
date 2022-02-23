@@ -111,7 +111,6 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
         }
 }
 ```
-
 </details>
 
 **General cart information**
@@ -143,7 +142,7 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 | grandTotal | Integer | Grand total of the cart.  |
 
 
-## Retrieve a registered user's carts
+## Retrieve registered user's carts
 
 To retrieve all carts, send the request:
 
@@ -175,17 +174,17 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 | REQUEST | USAGE |
 | --- | --- |
-| `GET https://glue.mysprykershop.com/carts` | Retrieve all carts of a user. |
-| `GET https://glue.mysprykershop.com/carts?include=items` | Retrieve all carts of a user with the items in them included.  |
-| `GET https://glue.mysprykershop.com/carts?include=cart-permission-groups` | Retrieve all carts of a user with cart permission groups included. |
-| `GET https://glue.mysprykershop.com/carts?include=shared-carts` | Retrieve all carts of a user with shared carts. |
-| `GET https://glue.mysprykershop.com/carts?include=shared-carts,company-users` | Retrieve all carts of a user with information about shared carts and the company uses they are shared with. |
-| `GET https://glue.mysprykershop.com/carts?include=cart-rules` | Retrieve all carts of a user with cart rules. |
-| `GET https://glue.mysprykershop.com/carts?include=vouchers` | Retrieve all carts of a user with information about applied vouchers. |
-| `GET https://glue.mysprykershop.com/carts?include=promotional-items` | Retrieve information about promotional items for the cart. |
-| `GET https://glue.mysprykershop.com/carts?include=gift-cards` | Retrieve all carts of a user with applied gift cards. |
-| `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-options` | Retrieve all carts of a user with items, respective concrete product, and their product options. |
-| `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-labels` | Retrieve all carts of a user with information about concrete products and the product labels assigned to the products in the carts. |
+| GET https://glue.mysprykershop.com/carts | Retrieve all carts of a user. |
+| GET https://glue.mysprykershop.com/carts?include=items | Retrieve all carts of a user with the items in them included.  |
+| GET https://glue.mysprykershop.com/carts?include=cart-permission-groups | Retrieve all carts of a user with cart permission groups included. |
+| GET https://glue.mysprykershop.com/carts?include=shared-carts | Retrieve all carts of a user with shared carts. |
+| GET https://glue.mysprykershop.com/carts?include=shared-carts,company-users | Retrieve all carts of a user with information about shared carts and the company uses they are shared with. |
+| GET https://glue.mysprykershop.com/carts?include=cart-rules | Retrieve all carts of a user with cart rules. |
+| GET https://glue.mysprykershop.com/carts?include=vouchers | Retrieve all carts of a user with information about applied vouchers. |
+| GET https://glue.mysprykershop.com/carts?include=promotional-items | Retrieve information about promotional items for the cart. |
+| GET https://glue.mysprykershop.com/carts?include=gift-cards | Retrieve all carts of a user with applied gift cards. |
+| GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-options | Retrieve all carts of a user with items, respective concrete product, and their product options. |
+| GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-labels | Retrieve all carts of a user with information about concrete products and the product labels assigned to the products in the carts. |
 
 ### Response
 
@@ -1710,7 +1709,6 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
     ]
 }
 ```
-
 </details>
 
 
@@ -1808,19 +1806,19 @@ To retrieve a particular cart, send the request:
 
 | REQUEST | USAGE |
 | --- | --- |
-| `GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4` | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart. |
-| `GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=items` | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with its items, related concrete products and cart permission groups included. |
-| `GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=cart-permission-groups` | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with its cart permissions included. |
-| `GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=shared-carts` | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with details on the shared cart. |
-| `GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=shared-carts,company-users` | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with information about shared carts and the company uses they are shared with. |
-| `GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=cart-rules` | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with cart rules. |
-| `GET https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2?include=promotional-items` | Retrieve the `1ce91011-8d60-59ef-9fe0-4493ef3628b2` cart with its promotional items. |
-| `GET https://glue.mysprykershop.com/carts/8ef901fe-fe47-5569-9668-2db890dbee6d?include=gift-cards` | Retrieve the `8ef901fe-fe47-5569-9668-2db890dbee6` cart with detailed information on its gift cards. |
-| `GET https://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398?include=items,concrete-products,product-options` | Retrieve the `8fc45eda-cddf-5fec-8291-e2e5f8014398` cart with items, respective concrete product, and their product options. |
-| `GET https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830?include=vouchers` | Retrieve the `976af32f-80f6-5f69-878f-4ea549ee0830` cart with detailed information on its vouchers. |
-| `GET https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d37d32f92ee9?include=items,concrete-products,product-labels` | Retrieve the `0c3ec260-694a-5cec-b78c-d37d32f92ee9` cart with information about the product labels assigned to the products in the cart. |
-| `GET https://glue.mysprykershop.com/carts/308b51f4-2491-5bce-8cf2-436273b44f9b` | Retrieve the `308b51f4-2491-5bce-8cf2-436273b44f9b` cart with the unfulfilled hard and soft minimum thresholds. |
-| `GET https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2` | Retrieve the `1ce91011-8d60-59ef-9fe0-4493ef3628b2` cart with the unfulfilled hard maximum threshold. |
+| GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4 | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart. |
+| GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=items | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with its items, related concrete products and cart permission groups included. |
+| GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=cart-permission-groups | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with its cart permissions included. |
+| GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=shared-carts | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with details on the shared cart. |
+| GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=shared-carts,company-users | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with information about shared carts and the company uses they are shared with. |
+| GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=cart-rules | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with cart rules. |
+| GET https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2?include=promotional-items | Retrieve the `1ce91011-8d60-59ef-9fe0-4493ef3628b2` cart with its promotional items. |
+| GET https://glue.mysprykershop.com/carts/8ef901fe-fe47-5569-9668-2db890dbee6d?include=gift-cards | Retrieve the `8ef901fe-fe47-5569-9668-2db890dbee6` cart with detailed information on its gift cards. |
+| GET https://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398?include=items,concrete-products,product-options | Retrieve the `8fc45eda-cddf-5fec-8291-e2e5f8014398` cart with items, respective concrete product, and their product options. |
+| GET https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830?include=vouchers | Retrieve the `976af32f-80f6-5f69-878f-4ea549ee0830` cart with detailed information on its vouchers. |
+| GET https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d37d32f92ee9?include=items,concrete-products,product-labels | Retrieve the `0c3ec260-694a-5cec-b78c-d37d32f92ee9` cart with information about the product labels assigned to the products in the cart. |
+| GET https://glue.mysprykershop.com/carts/308b51f4-2491-5bce-8cf2-436273b44f9b | Retrieve the `308b51f4-2491-5bce-8cf2-436273b44f9b` cart with the unfulfilled hard and soft minimum thresholds. |
+| GET https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2 | Retrieve the `1ce91011-8d60-59ef-9fe0-4493ef3628b2` cart with the unfulfilled hard maximum threshold. |
 
 
 ### Response
@@ -2191,7 +2189,6 @@ To retrieve a particular cart, send the request:
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -2708,7 +2705,6 @@ To retrieve a particular cart, send the request:
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -2864,7 +2860,6 @@ To retrieve a particular cart, send the request:
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -2913,7 +2908,6 @@ To retrieve a particular cart, send the request:
     }
 }
 ```
-
 </details>
 
 <details>
@@ -2955,7 +2949,6 @@ To retrieve a particular cart, send the request:
     }
 }
 ```
-
 </details>
 
 For the threshold attributes, see [Threshold attributes](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#treshold-attributes).
@@ -2963,12 +2956,12 @@ For the threshold attributes, see [Threshold attributes](/docs/scos/dev/glue-api
 For the attributes of carts of registered users and included resources, see [Retrieve a registered user's carts](#retrieve-a-registered-users-carts-response-attributes).
 
 For the attributes of other included resources, see:
-* [Add an item to a registered user's cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart-response-attributes)
+* [Add an item to a registered user's cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart-response-attributes).
 * [Managing gift cards of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html).
 * [Cart permission groups](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html).
 * [Managing items in carts of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html).
-* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
-* [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
+* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes).
+* [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes).
 
 ## Edit a cart
 
@@ -3052,7 +3045,6 @@ Response sample:
         }
     }
 }
-
 ```
 
 ## Delete a cart

@@ -170,7 +170,6 @@ Make sure that the `concrete-products` resource is expanded with the product con
     }
 }
 ```
-
 </details>
 
 {% endinfo_block %}
@@ -565,7 +564,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-
 Make sure that the `items` resource is expanded with the product configuration properties. For an example, see the following response to the `POST https://glue.mysprykershop.com/carts/2f0a0b59-b988-5829-8fd3-6d636fc8ea33/items?include=items` request:
 
 <details>
@@ -619,7 +617,6 @@ Make sure that the `items` resource is expanded with the product configuration p
     }
 }
 ```
-
 </details>
 
 <details>
@@ -743,7 +740,6 @@ Make sure that the `items` resource is expanded with the product configuration p
     ]
 }
 ```
-
 </details>
 
 {% endinfo_block %}
@@ -793,7 +789,6 @@ class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependen
     }
 }
 ```
-
 </details>
 
 **src/Pyz/Glue/ProductConfigurationWishlistsRestApi/ProductConfigurationWishlistsRestApiDependencyProvider.php**
@@ -866,8 +861,6 @@ class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependen
 }
 ```
 
-</details>
-
 {% info_block warningBox "Verification" %}
 
 Ensure that wishlist item CRUD operations support configurable products.
@@ -893,7 +886,6 @@ For an example, see the following response to the `POST https://glue.mysprykersh
   }
 }
 ```
-
 </details>
 
 <details>
@@ -927,7 +919,6 @@ For an example, see the following response to the `POST https://glue.mysprykersh
   }
 }
 ```
-
 </details>
 
 {% endinfo_block %}

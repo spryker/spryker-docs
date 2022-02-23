@@ -58,29 +58,29 @@ To search by products, send the request:
 
 | REQUEST   | USAGE |
 | --------------- | -------------- |
-| `GET https://glue.mysprykershop.com/catalog-search?q=`       | Search for all available products.   |
-| `GET https://glue.mysprykershop.com/catalog-search?q=058`       | Search for an abstract product by SKU *058*.   |
-| `GET https://glue.mysprykershop.com/catalog-search?q=058&include=abstract-products` | Search for an abstract product by SKU *058* with the included product details. |
-| `GET https://glue.mysprykershop.com/catalog-search?q=Acer Liquid Jade` | Search for an abstract product by *Acer Liquid Jade* name.    |
-| `GET https://glue.mysprykershop.com/catalog-search?q=058_261755504` | Search for a concrete product by SKU *058_261755504*.  |
-| `GET https://glue.mysprykershop.com/catalog-search?q=sony+red` | Search for products by multiple attributes (brand *Sony* and *red* color). |
-| `GET https://glue.mysprykershop.com/catalog-search?q=sony&price%5Bmin%5D=99.99&price%5Bmax%5D=150` | Search for products within a minimum (*99.99*) and maximum (*150*) price range. |
-| `GET https://glue.mysprykershop.com/catalog-search?q=sony`   |  Search for products of the *Sony* brand.   |
-| `GET https://glue.mysprykershop.com/catalog-search?label[]=NEW&label[]=SALE %` | Search for products with the *NEW* and *SALE*  labels. |
-| `GET https://glue.mysprykershop.com/catalog-search?weight[]=45 g` | Search for products by the *45 g* weight.  |
-| `GET https://glue.mysprykershop.com/catalog-search?color[]=Blue` |Search for products by the *Blue* color.   |
-| `GET https://glue.mysprykershop.com/catalog-search?storage_capacity[]=32 GB` | Search for products by the *32 GB* storage capacity. |
-| `GET https://glue.mysprykershop.com/catalog-search?rating[min]=4` | Search for products by the rating *4*.     |
-| `GET https://glue.mysprykershop.com/catalog-search?category=6` | Search for products by the category node ID *6*.    |
-| `GET https://glue.mysprykershop.com/catalog-search?currency=CHF` | Define the *CHF* currency for the search result products.   |
-| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=name_asc` | Set sorting order ascending.  |
-| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=name_desc` | Set sorting order descending.   |
-| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=rating` | Sort found products by rating.   |
-| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=price_asc` | Sort found products by price ascending.   |
-| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=popularity` | Sort found products by popularity. <br>**Note: This is valid for Master Suite only and has not been integrated into B2B/B2C Suites yet.** |
-| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&page=3` | Set a page to retrieve the search results from. |
-| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&ipp=24` | Set number of products per page.   |
-| `GET https://glue.mysprykershop.com/catalog-search?merchant_name=Spryker` | Filter the results by Merchant name. <br>**Note: This option is available only if you have upgraded your shop to the Marketplace provided by Spryker.** |
+| GET https://glue.mysprykershop.com/catalog-search?q=       | Search for all available products.   |
+| GET https://glue.mysprykershop.com/catalog-search?q=058       | Search for an abstract product by SKU *058*.   |
+| GET https://glue.mysprykershop.com/catalog-search?q=058&include=abstract-products | Search for an abstract product by SKU *058* with the included product details. |
+| GET https://glue.mysprykershop.com/catalog-search?q=Acer Liquid Jade | Search for an abstract product by *Acer Liquid Jade* name.    |
+| GET https://glue.mysprykershop.com/catalog-search?q=058_261755504 | Search for a concrete product by SKU *058_261755504*.  |
+| GET https://glue.mysprykershop.com/catalog-search?q=sony+red | Search for products by multiple attributes (brand *Sony* and *red* color). |
+| GET https://glue.mysprykershop.com/catalog-search?q=sony&price%5Bmin%5D=99.99&price%5Bmax%5D=150 | Search for products within a minimum (*99.99*) and maximum (*150*) price range. |
+| GET https://glue.mysprykershop.com/catalog-search?q=sony   |  Search for products of the *Sony* brand.   |
+| GET https://glue.mysprykershop.com/catalog-search?label[]=NEW&label[]=SALE % | Search for products with the *NEW* and *SALE*  labels. |
+| GET https://glue.mysprykershop.com/catalog-search?weight[]=45 g | Search for products by the *45 g* weight.  |
+| GET https://glue.mysprykershop.com/catalog-search?color[]=Blue |Search for products by the *Blue* color.   |
+| GET https://glue.mysprykershop.com/catalog-search?storage_capacity[]=32 GB | Search for products by the *32 GB* storage capacity. |
+| GET https://glue.mysprykershop.com/catalog-search?rating[min]=4 | Search for products by the rating *4*.     |
+| GET https://glue.mysprykershop.com/catalog-search?category=6 | Search for products by the category node ID *6*.    |
+| GET https://glue.mysprykershop.com/catalog-search?currency=CHF | Define the *CHF* currency for the search result products.   |
+| GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=name_asc | Set sorting order ascending.  |
+| GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=name_desc | Set sorting order descending.   |
+| GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=rating | Sort found products by rating.   |
+| GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=price_asc | Sort found products by price ascending.   |
+| GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=popularity | Sort found products by popularity. <br>**Note: This is valid for Master Suite only and has not been integrated into B2B/B2C Suites yet.** |
+| GET https://glue.mysprykershop.com/catalog-search?q=Sony&page=3 | Set a page to retrieve the search results from. |
+| GET https://glue.mysprykershop.com/catalog-search?q=Sony&ipp=24 | Set number of products per page.   |
+| GET https://glue.mysprykershop.com/catalog-search?merchant_name=Spryker | Filter the results by Merchant name. <br>**Note: This option is available only if you have upgraded your shop to the Marketplace provided by Spryker.** |
 
 ### Response
 
@@ -89,6 +89,7 @@ To search by products, send the request:
 *Sort by popularity* Valid for Master Suite only and has not been integrated into B2B/B2C Suites yet.
 
 {% endinfo_block %}
+
 <details>
 <summary markdown='span'>Response sample: Empty search criteria</summary>
 
@@ -452,7 +453,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Respnse sample: Search for an abstract product</summary>
+<summary markdown='span'>Response sample: Search for an abstract product</summary>
 
 ```json
 {
@@ -2207,7 +2208,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Respnse sample: Search by brand</summary>
+<summary markdown='span'>Response sample: Search by brand</summary>
 
 ```json
 {
@@ -6055,7 +6056,6 @@ To search by products, send the request:
     }
 }
 ```
-
 </details>
 
 <details>

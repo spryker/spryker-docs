@@ -39,8 +39,8 @@ To retrieve prices of a concrete product, send the request:
 
 | Request  | Usage |
 | --- | --- |
-| `GET http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices` | Retrieve the price of the `001_25904006` product.  |
-| `GET  http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices?currency=CHF&priceMode=GROSS_MODE` | Retrieve the gross price of the `001_25904006` product in Swiss Franc. |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices` | Retrieve the price of the `001_25904006` product.  |
+| `GET  https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices?currency=CHF&priceMode=GROSS_MODE` | Retrieve the gross price of the `001_25904006` product in Swiss Franc. |
 
 | String parameter | Description | Exemplary values |
 | --- | --- | --- |
@@ -87,12 +87,12 @@ To retrieve prices of a concrete product, send the request:
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices"
+                "self": "https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices"
+        "self": "https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices"
     }
 }
 ```
@@ -134,12 +134,12 @@ To retrieve prices of a concrete product, send the request:
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices"
+                "self": "https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/concrete-products/001_25904006/items?currency=CHF&priceMode=GROSS_MODE"
+        "self": "https://glue.mysprykershop.com/concrete-products/001_25904006/items?currency=CHF&priceMode=GROSS_MODE"
     }
 }
 ```

@@ -38,6 +38,7 @@ For detailed information on the modules that provide the API functionality and r
 * [Glue API: Configurable Bundle + Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-product-feature-integration.html)
 
 ## Retrieve all orders
+
 To retrieve a list of all orders made by a registered customer, send the request:
 
 ---
@@ -53,7 +54,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 | STRING PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
-| offset | Ofset of the order at which to begin the response. <br> Works only together with `page[limit]`. <br> To work correctly, the value should be devisable by the value of `page[limit]`. <br> The default value is `0`.  | From `0` to any. |
+| offset | Offset of the order at which to begin the response. <br> Works only together with `page[limit]`. <br> To work correctly, the value should be devisable by the value of `page[limit]`. <br> The default value is `0`.  | From `0` to any. |
 | limit | Maximum number of entries to return. <br> Works only together with `page[offset]`. <br> The default value is `10`. | From `1` to any. |
 
 | REQUEST | USAGE |
@@ -68,7 +69,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 <details>
 <summary markdown='span'>Response sample with one order</summary>
 
-```
+```json
 {
     "data": [
         {
@@ -97,7 +98,6 @@ To retrieve a list of all orders made by a registered customer, send the request
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -122,7 +122,7 @@ To retrieve detailed information on an order, send the request:
 
 ---
 
-| PATH PARAMETER     | DESCRIPTON                                                   |
+| PATH PARAMETER     | DESCRIPTION                                                   |
 | ------------------ | ------------------------------------------------------------ |
 | ***{% raw %}{{{% endraw %}order_id{% raw %}}}{% endraw %}*** | Unique identifier of an order. [Retrieve all orders](#retrieve-all-orders) to get it. |
 
@@ -132,11 +132,11 @@ To retrieve detailed information on an order, send the request:
 | ------------- | ------------ | -------- | ------------------------------------------------------------ |
 | Authorization | string       | ✓        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
-| String parameter | Description                                 | Possible values                                       |
+| STRING PARAMETER | DESCRIPTION                                | POSSIBLE VALUES                                      |
 | ---------------- | ------------------------------------------- | ----------------------------------------------------- |
 | include          | Adds resource relationships to the request. | order-shipments, concrete-products, abstract-products |
 
-| Request                                                      | Usage                                                        |
+| REQUEST                                                      | USAGE                                                        |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | GET https://glue.mysprykershop.com/orders/DE--1              | Retrieve information about the order with the id `DE--6`.      |
 | GET https://glue.mysprykershop.com/orders/DE--6?include=order-shipments | Retrieve information about the order with the id `DE--6` with order shipments included. |
@@ -359,7 +359,6 @@ To retrieve detailed information on an order, send the request:
     }
 }
 ```
-
 </details>
 
 <details>
@@ -655,7 +654,6 @@ To retrieve detailed information on an order, send the request:
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -1212,9 +1210,7 @@ To retrieve detailed information on an order, send the request:
         }
     }
 }
-
 ```    
-
 </details>
 
 **General order information**
@@ -1228,7 +1224,7 @@ To retrieve detailed information on an order, send the request:
 
 **Totals calculations**
 
-| Attribute                | Type    | Description                                     |
+| ATTRIBUTE                | TYPE    | DESCRIPTION                                     |
 | ------------------------ | ------- | ----------------------------------------------- |
 | totals                   | Object  | Totals calculations.                            |
 | totals.expenseTotal      | Integer | Total amount of expenses (e.g. shipping costs). |
@@ -1241,7 +1237,7 @@ To retrieve detailed information on an order, send the request:
 
 **Billing and shipping addresses**
 
-| Attribute                  | Type   | Description                                                  |
+| ATTRIBUTE                  | TYPE   | DESCRIPTION                                                  |
 | -------------------------- | ------ | ------------------------------------------------------------ |
 | billingAddress             | object | List of attributes describing the billing address of the order. |
 | billingAddress.salutation  | String | Salutation to use when addressing the customer.              |
@@ -1306,7 +1302,7 @@ To retrieve detailed information on an order, send the request:
 | items.idShipment                        | Integer | Unique identifier of the shipment to which the item belongs. To retrieve all the shipments of the order, include the `order-shipments` resource into the request.|
 | items.bundleItemIdentifier                    | Integer | Defines the relation between the bundle and its items. The items of the bundle have the same value in the relatedBundleItemIdentifier attribute. |
 | items.relatedBundleItemIdentifier             | Integer | Defines the relation between the item and its bundle. The bundle to which this the item belongs has the same value in the bundleItemIdentifier attribute. |
-| items.salesOrderConfiguredBundle | Object | Contains information about the purhased configurable bundle. |
+| items.salesOrderConfiguredBundle | Object | Contains information about the purchased configurable bundle. |
 | items.idSalesOrderConfiguredBundle |Integer | Unique identifier of the purchased configured bundle.|
 | items.idSalesOrderConfiguredBundle.configurableBundleTemplateUuid|String |Unique identifier of the configurable bundle template in the system. |
 | items.idSalesOrderConfiguredBundle.name | String|Name of the configured bundle. |
@@ -1331,7 +1327,7 @@ To retrieve detailed information on an order, send the request:
 **Calculated discounts for items**
 
 | ATTRIBUTE                             | TYPE    | DESCRIPTION                                                  |
-| :------------------------------------ | :------ | :----------------------------------------------------------- |
+| ------------------------------------ | ------ | --------------------------------------------------------- |
 | items.calculatedDiscounts             | Array   | List of attributes describing the discount calculated for this item. |
 | items.calculatedDiscounts.unitAmount  | Integer | Discount value applied to this order item.                  |
 | items.calculatedDiscounts.sumAmount   | Integer | Sum of the discount values applied to this order item.       |
@@ -1343,8 +1339,8 @@ To retrieve detailed information on an order, send the request:
 **Product options**
 
 | ATTRIBUTE                            | TYPE    | DESCRIPTION                                            |
-| :----------------------------------- | :------ | :----------------------------------------------------- |
-| items.productOptions                 | Array   | Lst of product options ordered with this item.         |
+| ----------------------------------- | ------ | ---------------------------------------------------- |
+| items.productOptions                 | Array   | List of product options ordered with this item.         |
 | items.productOptions.optionGroupName | String  | Name of the group to which the product option belongs. |
 | items.productOptions.sku             | String  | SKU of the product option.                             |
 | items.productOptions.optionName      | String  | Name of the product option.                            |
@@ -1353,7 +1349,7 @@ To retrieve detailed information on an order, send the request:
 **Calculated discounts**
 
 | ATTRIBUTE                       | TYPE    | DESCRIPTION                                                  |
-| :------------------------------ | :------ | :----------------------------------------------------------- |
+| ------------------------------ | ------ | ----------------------------------------------------------- |
 | calculatedDiscounts             | Array   | Discounts applied to this order item.                        |
 | calculatedDiscounts.unitAmount  | Integer | Amount of the discount provided by the given item for each unit of the product, in cents. |
 | calculatedDiscounts.sumAmount   | Integer | Total amount of the discount provided by the given item, in cents. |
@@ -1365,7 +1361,7 @@ To retrieve detailed information on an order, send the request:
 **Expenses**
 
 | ATTRIBUTE               | TYPE    | DESCRIPTION                       |
-| :---------------------- | :------ | :-------------------------------- |
+| ---------------------- | ------ | -------------------------------- |
 | expenses                | array   | Additional expenses of the order. |
 | expenses.type           | String  | Expense type.                     |
 | expenses.name           | String  | Expense name.                     |
@@ -1401,8 +1397,8 @@ To retrieve detailed information on an order, send the request:
 | -------- | ----- | ----------------------- |
 | shipments | object | Information about the shipments used in this order. This value is returned only if you submit an order without split delivery. To learn how to do that, see [Checking out purchases](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html). To see all the attributes that are returned when retrieving orders without split delivery, see [Retrieving orders](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html). To retrieve shipment details, include the order-shipments resource in the request. |
 
-| INCLUDED resource | ATTRIBUTE | TYPE |
-| :-------------------- | :------------------------- | :------- |
+| INCLUDED RESOURCE | ATTRIBUTE | TYPE |
+| ------------------- | ------------------------ | ------- |
 | order-shipments       | itemUuids                  | String   |
 | order-shipments       | methodName                 | String   |
 | order-shipments       | carrierName                | String   |

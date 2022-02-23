@@ -24,7 +24,7 @@ Once a client requests a resource that supports optimization via ETags, and prov
 **Sample Request**
 
 ```
-GET http://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab
+GET https://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab
 
 Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNhO...
@@ -44,7 +44,7 @@ ETag: "cc89022a51522f705c44fcfced188cc8"
 When updating the resource, the client must pass the Etag in the If-Match header, for example:
 
 ```
-PATCH http://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab
+PATCH https://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab
 
 Content-Type: application/json
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNhO...

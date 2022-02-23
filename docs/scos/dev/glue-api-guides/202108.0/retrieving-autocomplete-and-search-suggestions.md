@@ -39,13 +39,13 @@ To retrieve a search suggestion, send the request:
 
 | Request | Description |
 | --- | --- |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions` | Retrieve suggestions for an empty search string. |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=` | Retrieve suggestions for an empty search string |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**c**` | Retrieve suggestions for one letter. |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**co**` | Retrieve suggestions for two letters. |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**com**` | Retrieve suggestions for three letters |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**computer**` | Retrieve suggestions for the word `computer`. |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**telecom+%26+navigation**` | Retrieve suggestions for the phrase `telecom&navigation`. |
+| GET https://glue.mysprykershop.com/catalog-search-suggestions | Retrieve suggestions for an empty search string. |
+| GET https://glue.mysprykershop.com/catalog-search-suggestions?q= | Retrieve suggestions for an empty search string |
+| GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**c** | Retrieve suggestions for one letter. |
+| GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**co** | Retrieve suggestions for two letters. |
+| GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**com** | Retrieve suggestions for three letters |
+| GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**computer** | Retrieve suggestions for the word `computer`. |
+| GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**telecom+%26+navigation** | Retrieve suggestions for the phrase `telecom&navigation`. |
 
 ### Response
 
@@ -207,16 +207,15 @@ To retrieve a search suggestion, send the request:
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/catalog-search-suggestions?q=comp"
+                "self": "https://glue.mysprykershop.com/catalog-search-suggestions?q=comp"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/catalog-search-suggestions?q=comp"
+        "self": "https://glue.mysprykershop.com/catalog-search-suggestions?q=comp"
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

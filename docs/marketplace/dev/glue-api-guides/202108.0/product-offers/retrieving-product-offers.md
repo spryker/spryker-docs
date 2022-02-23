@@ -59,7 +59,7 @@ To retrieve the product offers, send the request:
             "isDefault": false
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/product-offers/offer56"
+            "self": "https://glue.mysprykershop.comm/product-offers/offer56"
         }
     }
 }
@@ -143,7 +143,7 @@ To retrieve the product offers, send the request:
             "isDefault": false
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/product-offers/offer101?include=product-offer-prices,product-offer-availabilities"
+            "self": "https://glue.mysprykershop.comm/product-offers/offer101?include=product-offer-prices,product-offer-availabilities"
         },
         "relationships": {
             "product-offer-availabilities": {
@@ -166,7 +166,7 @@ To retrieve the product offers, send the request:
                 "quantity": "0.0000000000"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-offers/offer101/product-offer-availabilities"
+                "self": "https://glue.mysprykershop.comm/product-offers/offer101/product-offer-availabilities"
             }
 
         }
@@ -190,7 +190,7 @@ To retrieve the product offers, send the request:
             "isDefault": false
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/product-offers/offer101?include=product-offer-prices,product-offer-availabilities,merchants"
+            "self": "https://glue.mysprykershop.comm/product-offers/offer101?include=product-offer-prices,product-offer-availabilities,merchants"
         },
         "merchants": {
                 "data": [
@@ -230,7 +230,7 @@ To retrieve the product offers, send the request:
                 }
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/merchants/MER000006"
+                "self": "https://glue.mysprykershop.comm/merchants/MER000006"
             }
         }
     ]

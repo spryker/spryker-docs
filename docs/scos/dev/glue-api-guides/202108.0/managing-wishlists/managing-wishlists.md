@@ -17,6 +17,7 @@ The Wishlists API allows creating list and deleting [wishlists](/docs/scos/user/
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
+
 * [Glue API: Wishlist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-wishlist-feature-integration.html)
 * [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
 * [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-labels-feature-integration.html)
@@ -75,7 +76,6 @@ Sample request: `POST https://glue.mysprykershop.com/wishlists`
 		}
 	}
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -124,7 +124,6 @@ To retrieve all wishlists of a customer, send the request:
 		}
 	}
 ```
-
 </details>
 
 <details>
@@ -156,7 +155,6 @@ To retrieve all wishlists of a customer, send the request:
 		}
 	}
 ```
-
 </details>
 
 <details>
@@ -206,7 +204,6 @@ To retrieve all wishlists of a customer, send the request:
     ]
 }
 ```
-
 </details>
 
 
@@ -307,7 +304,6 @@ To retrieve all wishlists of a customer, send the request:
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -428,7 +424,6 @@ To retrieve all wishlists of a customer, send the request:
     ]
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -495,7 +490,6 @@ To retrieve wishlist items, send the request:
     }
 }
 ```
-
 </details>
 
 <details>
@@ -540,7 +534,6 @@ To retrieve wishlist items, send the request:
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -633,7 +626,6 @@ To retrieve wishlist items, send the request:
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -749,14 +741,13 @@ To retrieve wishlist items, send the request:
     ]
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | name | String | Name of the wishlist. |
 | numberOfItems | Integer | Number of items in the wishlist. |
-| createdAt | String | Сreation date of the wishlist. |
+| createdAt | String | Creation date of the wishlist. |
 | updatedAt | String | Date of the last update. |
 
 For attributes of the included resources, see:

@@ -174,7 +174,7 @@ To verify that you’ve activated `PriceProductVolumeRestProductPricesAttributes
 
 1.  Create an abstract product with a volume price.
     
-2.  Send the request `GET http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/abstract-product-prices` request and make sure that the response contains volume prices data.
+2.  Send the request `GET https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/abstract-product-prices` request and make sure that the response contains volume prices data.
 
 {% endinfo_block %}
  

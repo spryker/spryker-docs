@@ -124,14 +124,14 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% info_block infoBox %}
 Make sure the following endpoints are available:
 {% endinfo_block %}
-* `http://glue.mysprykershop.com/catalog-search?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}`
-* `http://glue.mysprykershop.com/catalog-search-suggestions?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}`
+* `https://glue.mysprykershop.com/catalog-search?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}`
+* `https://glue.mysprykershop.com/catalog-search-suggestions?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}`
 {% info_block infoBox %}
-Make a request to `http://glue.mysprykershop.com/catalog-search?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}&include=abstract-products`. Make sure the response includes relationships to `abstract-products` resources.
+Make a request to `https://glue.mysprykershop.com/catalog-search?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}&include=abstract-products`. Make sure the response includes relationships to `abstract-products` resources.
 {% endinfo_block %}
 
 {% info_block infoBox %}
-Make a request to `http://glue.mysprykershop.com/catalog-search-suggestions?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}&include=abstract-products`. Make sure the response includes relationships to `abstract-products` resources.
+Make a request to `https://glue.mysprykershop.com/catalog-search-suggestions?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}&include=abstract-products`. Make sure the response includes relationships to `abstract-products` resources.
 {% endinfo_block %}
 
 _Last review date: Apr 10, 2019_

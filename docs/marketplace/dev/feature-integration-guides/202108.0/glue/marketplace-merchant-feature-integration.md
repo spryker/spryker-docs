@@ -162,16 +162,16 @@ class UrlsRestApiDependencyProvider extends SprykerUrlsRestApiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the `MerchantsResourceRoutePlugin` plugin is set up by sending the request `GET http://glue.mysprykershop.com/merchants/{% raw %}{{merchantReference}}{% endraw %}`, `http://glue.mysprykershop.com/merchants`.
+Make sure that the `MerchantsResourceRoutePlugin` plugin is set up by sending the request `GET https://glue.mysprykershop.com/merchants/{% raw %}{{merchantReference}}{% endraw %}`, `https://glue.mysprykershop.com/merchants`.
 
-Make sure that the pagination is working by sending the request `GET http://glue.mysprykershop.com/merchants?offset=1&limit=1`.
+Make sure that the pagination is working by sending the request `GET https://glue.mysprykershop.com/merchants?offset=1&limit=1`.
 
-Make sure that the `MerchantAddressesResourceRoutePlugin` plugin is set up by sending the request `GET http://glue.mysprykershop.com/merchants/{% raw %}{{merchantReference}}{% endraw %}/merchant-addresses`.
+Make sure that the `MerchantAddressesResourceRoutePlugin` plugin is set up by sending the request `GET https://glue.mysprykershop.com/merchants/{% raw %}{{merchantReference}}{% endraw %}/merchant-addresses`.
 
-Make sure that the `MerchantAddressByMerchantReferenceResourceRelationshipPlugin` plugin is set up by sending the request `GET http://glue.mysprykershop.com/merchants/{% raw %}{{merchantReference}}{% endraw %}?include=merchant-addresses`. The response should include the `merchant-addresses` resource along with the merchants.
+Make sure that the `MerchantAddressByMerchantReferenceResourceRelationshipPlugin` plugin is set up by sending the request `GET https://glue.mysprykershop.com/merchants/{% raw %}{{merchantReference}}{% endraw %}?include=merchant-addresses`. The response should include the `merchant-addresses` resource along with the merchants.
 
-Make sure that after sending the request `GET http://glue.mysprykershop.com/url-resolver?url={% raw %}{{merchantUrl}{% endraw %}`, the merchant entity type and ID is returned in response.
+Make sure that after sending the request `GET https://glue.mysprykershop.com/url-resolver?url={% raw %}{{merchantUrl}{% endraw %}`, the merchant entity type and ID is returned in response.
 
-Make sure that by sending the request `GET http://glue.mysprykershop.com/orders?include=merchant`, merchant attributes are returned in response.
+Make sure that by sending the request `GET https://glue.mysprykershop.com/orders?include=merchant`, merchant attributes are returned in response.
 
 {% endinfo_block %}

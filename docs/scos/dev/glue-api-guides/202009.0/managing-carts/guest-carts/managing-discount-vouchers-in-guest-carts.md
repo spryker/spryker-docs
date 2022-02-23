@@ -181,7 +181,7 @@ To apply a discount voucher to a guest cart, send the request:
                 "discountPromotionQuantity": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/vouchers/mydiscount-qa1ma?include=vouchers"
+                "self": "https://glue.mysprykershop.com/vouchers/mydiscount-qa1ma?include=vouchers"
             }
         }
     ]
@@ -225,7 +225,7 @@ To remove a discount voucher, send the request:
 
 
 
-Request sample: `DELETE http://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers/mydiscount-we3ca`
+Request sample: `DELETE https://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers/mydiscount-we3ca`
 
 ### Response
 

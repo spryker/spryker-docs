@@ -48,12 +48,11 @@ Make sure that the following modules have been installed:
 
 ```bash
 console transfer:generate
-console prolel:install 
+console propel:install 
 console transfer:generate 
 ```
 
 {% info_block warningBox "Verification" %}
-
 
 Make sure that the following changes have been applied in the database:
 
@@ -187,7 +186,6 @@ class UrlsRestApiDependencyProvider extends SprykerUrlsRestApiDependencyProvider
 }
 ```
 
- 
 
 {% info_block warningBox "Verification" %}
 

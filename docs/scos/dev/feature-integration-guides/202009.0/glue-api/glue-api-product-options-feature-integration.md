@@ -104,9 +104,9 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make a GET request to `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}product_abstract_sku{% raw %}}}{% endraw %}/?include=product-options`. Abstract product with a given SKU should have at least one related product option. Make sure that the response includes relationships to product options resources.
+Make a GET request to `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}product_abstract_sku{% raw %}}}{% endraw %}/?include=product-options`. Abstract product with a given SKU should have at least one related product option. Make sure that the response includes relationships to product options resources.
 
-Make a GET request to `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}product_concrete_sku{% raw %}}}{% endraw %}/?include=product-options`. Abstract product to which concrete product with a given SKU belongs should have at least one related product option. Make sure that the response includes relationships to product options resources.
+Make a GET request to `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}product_concrete_sku{% raw %}}}{% endraw %}/?include=product-options`. Abstract product to which concrete product with a given SKU belongs should have at least one related product option. Make sure that the response includes relationships to product options resources.
 
 {% endinfo_block %}
 
@@ -181,11 +181,11 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 
 {% info_block warningBox "Verification" %}
 
-Make a GET request to `http://glue.mysprykershop.com/carts?include=items`.  Included cart items should have `selectedProductOptions` property with product options chosen for an item.
+Make a GET request to `https://glue.mysprykershop.com/carts?include=items`.  Included cart items should have `selectedProductOptions` property with product options chosen for an item.
 
-Make a GET request to `http://glue.mysprykershop.com/guest-carts?include=guest-cart-items`. Included guest cart items should have `selectedProductOptions` property with product options chosen for an item.
+Make a GET request to `https://glue.mysprykershop.com/guest-carts?include=guest-cart-items`. Included guest cart items should have `selectedProductOptions` property with product options chosen for an item.
 
-Make a POST request to `http://glue.mysprykershop.com/carts{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/items`. The request body example is attached below. Specified product options should be attached to the item.
+Make a POST request to `https://glue.mysprykershop.com/carts{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/items`. The request body example is attached below. Specified product options should be attached to the item.
 ```yaml
 {
     "data": {
@@ -238,7 +238,7 @@ class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-Make a GET request to `http://glue.mysprykershop.com/orders/{% raw %}{{{% endraw %}order_uuid{% raw %}}}{% endraw %}`. Returned order items should have `productOptions` property with product options chosen for an item.
+Make a GET request to `https://glue.mysprykershop.com/orders/{% raw %}{{{% endraw %}order_uuid{% raw %}}}{% endraw %}`. Returned order items should have `productOptions` property with product options chosen for an item.
 
 {% endinfo_block %}
 

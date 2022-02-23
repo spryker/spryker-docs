@@ -273,35 +273,35 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 {% info_block warningBox “Verification” %}
 
 Make sure that the following endpoints return carts shared with the customer by other users (you can compare the YVES carts and carts GLUE returns
-{% endinfo_block %}:<ul><li>http://glue.mysprykershop.com/carts</li></ul>)
+{% endinfo_block %}:<ul><li>https://glue.mysprykershop.com/carts</li></ul>)
 
 {% info_block warningBox “Verification” %}
 
-Make a request to *http://glue.mysprykershop.com/carts/?include=cart-permission-groups* and make sure that shared carts resources will get a relationship to the correct cart-permission-groups resource.<br>Make a request to *http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/?include=cart-permission-groups*. Make sure that a single cart item (no matter owned by customers or shared with them
+Make a request to *https://glue.mysprykershop.com/carts/?include=cart-permission-groups* and make sure that shared carts resources will get a relationship to the correct cart-permission-groups resource.<br>Make a request to *https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/?include=cart-permission-groups*. Make sure that a single cart item (no matter owned by customers or shared with them
 {% endinfo_block %} is returned.)
 
 {% info_block warningBox “Verification” %}
 
 Make sure that the following endpoints return carts shared with the customer by other users (you can compare the YVES carts and carts GLUE returns
-{% endinfo_block %}:<ul><li>*http://glue.mysprykershop.com/carts*</li></ul>)
+{% endinfo_block %}:<ul><li>*https://glue.mysprykershop.com/carts*</li></ul>)
 
 {% info_block warningBox “Verification” %}
 
-Make a request to *http://glue.mysprykershop.com/carts/?include=shared-carts,cart-permission-groups,company-users* and make sure that the carts shared with the other users will get the shared-cart resource as a relationship. Each shared carts resource, in turn, will get a relationship to the cart permission group associated with the relationship and company user with whom the cart is shared.<br>Make a request to *http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/?include=shared-carts,cart-permission-groups,company-users*. Make sure that a single cart is returned with those relationships too.
+Make a request to *https://glue.mysprykershop.com/carts/?include=shared-carts,cart-permission-groups,company-users* and make sure that the carts shared with the other users will get the shared-cart resource as a relationship. Each shared carts resource, in turn, will get a relationship to the cart permission group associated with the relationship and company user with whom the cart is shared.<br>Make a request to *https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/?include=shared-carts,cart-permission-groups,company-users*. Make sure that a single cart is returned with those relationships too.
 {% endinfo_block %}
 
 {% info_block warningBox “Verification” %}
 
-To make sure that `CartPermissionGroupsResourceRoutePlugin` is installed correctly, make a call to the *http://glue.mysprykershop.com/cart-permission-groups* resource it provides. <br>The request to *http://glue.mysprykershop.com/cart-permission-groups/:uuid* should return a single `cart-permission-groups` resource.
+To make sure that `CartPermissionGroupsResourceRoutePlugin` is installed correctly, make a call to the *https://glue.mysprykershop.com/cart-permission-groups* resource it provides. <br>The request to *https://glue.mysprykershop.com/cart-permission-groups/:uuid* should return a single `cart-permission-groups` resource.
 {% endinfo_block %}
 
 {% info_block warningBox “Verification” %}
 
-To make sure that `SharedCartsResourceRoutePlugin` is installed correctly, make several calls to the /shared-carts resource it provides. It should be possible to make a POST call to *http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/shared-carts* with the following body:
+To make sure that `SharedCartsResourceRoutePlugin` is installed correctly, make several calls to the /shared-carts resource it provides. It should be possible to make a POST call to *https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/shared-carts* with the following body:
 {% endinfo_block %}
 
 <details open>
-<summary markdown='span'>POST http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/shared-carts</summary>
+<summary markdown='span'>POST https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/shared-carts</summary>
 
 ```json
 {
@@ -320,11 +320,11 @@ To make sure that `SharedCartsResourceRoutePlugin` is installed correctly, make 
 
 {% info_block warningBox “Verification” %}
 
-The same plugin, `SharedCartsResourceRoutePlugin`, allows accepting a PATCH request to *http://glue.mysprykershop.com/shared-carts/{% raw %}{{{% endraw %}sharedcartuuid{% raw %}}}{% endraw %}*:
+The same plugin, `SharedCartsResourceRoutePlugin`, allows accepting a PATCH request to *https://glue.mysprykershop.com/shared-carts/{% raw %}{{{% endraw %}sharedcartuuid{% raw %}}}{% endraw %}*:
 {% endinfo_block %}
 
 <details open>
-<summary markdown='span'>PATCH http://glue.mysprykershop.com/shared-carts/{% raw %}{{{% endraw %}shared_cart_uuid{% raw %}}}{% endraw %}</summary>
+<summary markdown='span'>PATCH https://glue.mysprykershop.com/shared-carts/{% raw %}{{{% endraw %}shared_cart_uuid{% raw %}}}{% endraw %}</summary>
 
 ```json
 {
@@ -342,7 +342,7 @@ The same plugin, `SharedCartsResourceRoutePlugin`, allows accepting a PATCH requ
 
 {% info_block warningBox “Verification” %}
 
-To delete cart sharing, send a DELETE request to *http://glue.mysprykershop.com/shared-carts/{% raw %}{{{% endraw %}sharedcartuuid{% raw %}}}{% endraw %}*. 204 status will mean that the action was successful.
+To delete cart sharing, send a DELETE request to *https://glue.mysprykershop.com/shared-carts/{% raw %}{{{% endraw %}sharedcartuuid{% raw %}}}{% endraw %}*. 204 status will mean that the action was successful.
 {% endinfo_block %}
 
 <!-- Last review date: Aug 05, 2019 Eugenia Poidenko, Yuliia Boiko-->

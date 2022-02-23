@@ -40,8 +40,8 @@ Make sure that the following modules are installed:
 Add the necessary parameters to `config/Shared/config_default.php`:
 
 ```
-$config[GlueApplicationConstants::GLUE_APPLICATION_DOMAIN] = 'http://glue.mysprykershop.com';
-$config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = 'http://glue.mysprykershop.com';
+$config[GlueApplicationConstants::GLUE_APPLICATION_DOMAIN] = 'https://glue.mysprykershop.com';
+$config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = 'https://glue.mysprykershop.com';
 $config[GlueApplicationConstants::GLUE_APPLICATION_REST_DEBUG] = false;
 ```
 {% info_block infoBox %}
@@ -192,7 +192,7 @@ ip glue.mysprykershop.com
 
 {% info_block warningBox “Verification” %}
 
-If everything is set up correctly, you should be able to access `http://glue.mysprykershop.com` and get a correct JSON response as follows:
+If everything is set up correctly, you should be able to access `https://glue.mysprykershop.com` and get a correct JSON response as follows:
 {% endinfo_block %}
 
 ```json
@@ -236,7 +236,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox “Verification” %}
 
-If everything is set up correctly, request to `http://glue.mysprykershop.com` with header `[{"key":"Accept-Language","value":"de_DE, de;q=0.9"}]` should result in a response that contains the content-language header set to de_DE.
+If everything is set up correctly, request to `https://glue.mysprykershop.com` with header `[{"key":"Accept-Language","value":"de_DE, de;q=0.9"}]` should result in a response that contains the content-language header set to de_DE.
 {% endinfo_block %}
 
 <!-- Last review date: Jul 10, 2019 by Ahmed Saaba and Volodymyr Volkov-->

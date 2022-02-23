@@ -46,12 +46,12 @@ Response sample:
                 "quantity": "0.0000000000"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-offers/offer56/product-offer-availabilities"
+                "self": "https://glue.mysprykershop.com/product-offers/offer56/product-offer-availabilities"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/product-offers/offer56/product-offer-availabilities"
+        "self": "https://glue.mysprykershop.com/product-offers/offer56/product-offer-availabilities"
     }
 }
 ```

@@ -33,7 +33,7 @@ To retrieve tax sets of a product, send the request:
 
 ### Request
 
-Request sample: `GET http://glue.mysprykershop.com/abstract-products/209/product-tax-sets`
+Request sample: `GET https://glue.mysprykershop.com/abstract-products/209/product-tax-sets`
 
 ### Response
 
@@ -127,16 +127,15 @@ Request sample: `GET http://glue.mysprykershop.com/abstract-products/209/product
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/abstract-products/177/product-tax-sets"
+                "self": "https://glue.mysprykershop.com/abstract-products/177/product-tax-sets"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/abstract-products/177/product-tax-sets"
+        "self": "https://glue.mysprykershop.com/abstract-products/177/product-tax-sets"
     }
 }
 ```
-
 </details>
 
 <a name="tax-sets-response-attributes"></a>

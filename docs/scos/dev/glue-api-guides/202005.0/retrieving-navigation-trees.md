@@ -39,7 +39,7 @@ To retrieve a navigation tree, send the request:
 
 ### Request
 
-Sample request: `GET http://glue.mysprykershop.com/navigations/SOCIAL_LINKS`
+Sample request: `GET https://glue.mysprykershop.com/navigations/SOCIAL_LINKS`
 
 
 | String parameter | Description | Exemplary values |
@@ -115,7 +115,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
             ]
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/navigations/SOCIAL_LINKS"
+            "self": "https://glue.mysprykershop.com/navigations/SOCIAL_LINKS"
         }
     }
 }
@@ -477,7 +477,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
       "isActive": true
     },
     "links": {
-      "self": "http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION"
+      "self": "https://glue.mysprykershop.com/navigations/MAIN_NAVIGATION"
     },
     "relationships": {
       "category-nodes": {
@@ -566,7 +566,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
         "order": 60
       },
       "links": {
-        "self": "http://glue.mysprykershop.com/category-nodes/13"
+        "self": "https://glue.mysprykershop.com/category-nodes/13"
       }
     },
     {
@@ -596,7 +596,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
         "order": 50
       },
       "links": {
-        "self": "http://glue.mysprykershop.com/category-nodes/14"
+        "self": "https://glue.mysprykershop.com/category-nodes/14"
       }
     },
     {
@@ -638,7 +638,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
         "order": 70
       },
       "links": {
-        "self": "http://glue.mysprykershop.com/category-nodes/10"
+        "self": "https://glue.mysprykershop.com/category-nodes/10"
       }
     },
     {
@@ -680,7 +680,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
         "order": 80
       },
       "links": {
-        "self": "http://glue.mysprykershop.com/category-nodes/12"
+        "self": "https://glue.mysprykershop.com/category-nodes/12"
       }
     },
     {
@@ -722,7 +722,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
         "order": 80
       },
       "links": {
-        "self": "http://glue.mysprykershop.com/category-nodes/11"
+        "self": "https://glue.mysprykershop.com/category-nodes/11"
       }
     },
     {
@@ -764,7 +764,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
         "order": 70
       },
       "links": {
-        "self": "http://glue.mysprykershop.com/category-nodes/9"
+        "self": "https://glue.mysprykershop.com/category-nodes/9"
       }
     },
     {
@@ -806,7 +806,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
         "order": 100
       },
       "links": {
-        "self": "http://glue.mysprykershop.com/category-nodes/4"
+        "self": "https://glue.mysprykershop.com/category-nodes/4"
       }
     },
     {
@@ -848,7 +848,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
         "order": 90
       },
       "links": {
-        "self": "http://glue.mysprykershop.com/category-nodes/3"
+        "self": "https://glue.mysprykershop.com/category-nodes/3"
       }
     },
     {
@@ -890,7 +890,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
         "order": 100
       },
       "links": {
-        "self": "http://glue.mysprykershop.com/category-nodes/6"
+        "self": "https://glue.mysprykershop.com/category-nodes/6"
       }
     },
     {
@@ -932,7 +932,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
         "order": 90
       },
       "links": {
-        "self": "http://glue.mysprykershop.com/category-nodes/7"
+        "self": "https://glue.mysprykershop.com/category-nodes/7"
       }
     },
     {
@@ -974,7 +974,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
         "order": 80
       },
       "links": {
-        "self": "http://glue.mysprykershop.com/category-nodes/8"
+        "self": "https://glue.mysprykershop.com/category-nodes/8"
       }
     },
     {
@@ -1038,7 +1038,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
         "order": 100
       },
       "links": {
-        "self": "http://glue.mysprykershop.com/category-nodes/5"
+        "self": "https://glue.mysprykershop.com/category-nodes/5"
       }
     },
     {
@@ -1091,7 +1091,7 @@ If a navigation tree has a category child node, include the `category-nodes` res
         "order": 90
       },
       "links": {
-        "self": "http://glue.mysprykershop.com/category-nodes/2"
+        "self": "https://glue.mysprykershop.com/category-nodes/2"
       }
     }
   ]

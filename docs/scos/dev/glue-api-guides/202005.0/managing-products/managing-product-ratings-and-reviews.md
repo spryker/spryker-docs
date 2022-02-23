@@ -43,7 +43,7 @@ To retrieve all ratings and reviews for a specific abstract product, send a *GET
 
 */abstract-products/{% raw %}{{{% endraw %}product_sku{% raw %}}}{% endraw %}/product-reviews*
 
-Sample request: `GET http://glue.mysprykershop.com/abstract-products/035/product-reviews`
+Sample request: `GET https://glue.mysprykershop.com/abstract-products/035/product-reviews`
 
 where **035** is the SKU of the product you want to retrieve ratings and reviews for.
 
@@ -53,14 +53,14 @@ To do so, send a request as follows:
 
 */abstract-products/{% raw %}{{{% endraw %}product_sku{% raw %}}}{% endraw %}?**include=product-reviews***
 
-Sample request: `GET http://glue.mysprykershop.com/abstract-products/035?include=product-reviews`
+Sample request: `GET https://glue.mysprykershop.com/abstract-products/035?include=product-reviews`
 
 **Concrete products**
 To fetch a list of ratings and reviews for a concrete product (for example, its parent abstract product), send a request for the concrete product information and include the ratings and reviews as a relationship:
 
 */concrete-products/{% raw %}{{{% endraw %}product_sku{% raw %}}}{% endraw %}?**include=product-reviews***
 
-Sample request: `GET http://glue.mysprykershop.com/concrete-products/035_17360369?include=product-reviews`
+Sample request: `GET https://glue.mysprykershop.com/concrete-products/035_17360369?include=product-reviews`
 
 where **035_17360369** is the SKU of the product you want to retrieve ratings and reviews for.
 
@@ -95,7 +95,7 @@ Specifies the full text of a review. |
                 "description": "The specs are good, but the build quality desires to be better."
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-reviews/40"
+                "self": "https://glue.mysprykershop.com/product-reviews/40"
             }
         },
         {
@@ -108,15 +108,15 @@ Specifies the full text of a review. |
                 "description": "Powerful processor, bright screen and beatiful design - what else do you need?"
         },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-reviews/42"
+                "self": "https://glue.mysprykershop.com/product-reviews/42"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/abstract-products/139/product-reviews",
-        "last": "http://glue.mysprykershop.com/abstract-products/139/product-reviews?page[offset]=10&page[limit]=10",
-        "first": "http://glue.mysprykershop.com/abstract-products/139/product-reviews?page[offset]=0&page[limit]=10",
-        "next": "http://glue.mysprykershop.com/abstract-products/139/product-reviews?page[offset]=10&page[limit]=10"
+        "self": "https://glue.mysprykershop.com/abstract-products/139/product-reviews",
+        "last": "https://glue.mysprykershop.com/abstract-products/139/product-reviews?page[offset]=10&page[limit]=10",
+        "first": "https://glue.mysprykershop.com/abstract-products/139/product-reviews?page[offset]=0&page[limit]=10",
+        "next": "https://glue.mysprykershop.com/abstract-products/139/product-reviews?page[offset]=10&page[limit]=10"
     }
 }
 ```
@@ -156,7 +156,7 @@ Specifies the full text of a review. |
                 "description": "The specs are good, but the build quality desires to be better."
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-reviews/40"
+                "self": "https://glue.mysprykershop.com/product-reviews/40"
             }
         },
         {
@@ -169,7 +169,7 @@ Specifies the full text of a review. |
                 "description": "Powerful processor, bright screen and beatiful design - what else do you need?"
         },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-reviews/42"
+                "self": "https://glue.mysprykershop.com/product-reviews/42"
             }
         }
     ]
@@ -211,7 +211,7 @@ Specifies the full text of a review. |
                 "description": "The specs are good, but the build quality desires to be better."
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-reviews/40"
+                "self": "https://glue.mysprykershop.com/product-reviews/40"
             }
         },
         {
@@ -224,7 +224,7 @@ Specifies the full text of a review. |
                 "description": "Powerful processor, bright screen and beatiful design - what else do you need?"
         },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-reviews/42"
+                "self": "https://glue.mysprykershop.com/product-reviews/42"
             }
         }
     ]
@@ -259,12 +259,12 @@ The average rating for any product, abstract or concrete, is returned as a part 
 
 * **abstract** products
 Endpoint - */abstract-products/{% raw %}{{{% endraw %}product_sku{% raw %}}}{% endraw %}*
-Sample request - `GET http://glue.mysprykershop.com/abstract-products/035`
+Sample request - `GET https://glue.mysprykershop.com/abstract-products/035`
 
 * **concrete** products
 Endpoint - */concrete-products/{% raw %}{{{% endraw %}product_sku{% raw %}}}{% endraw %}*
 
-Sample request - `GET http://glue.mysprykershop.com/concrete-products/035_17360369`
+Sample request - `GET https://glue.mysprykershop.com/concrete-products/035_17360369`
 
 where **035** and **035_17360369** are the SKUs of the products you want to retrieve average ratings for.
 
@@ -323,7 +323,7 @@ Ratings and reviews can be posted for **abstract** products only.
 ### Request
 The request should contain the rating a customer assigned to the product and their respective review. A review consists of a short summary, which is required, and a more detailed description, which is optional.
 
-Sample request: `POST http://glue.mysprykershop.com/abstract-products/139/product-reviews`
+Sample request: `POST https://glue.mysprykershop.com/abstract-products/139/product-reviews`
 
 where **139** is the SKU of the **abstract** product a customer wants to rate and/or review.
 

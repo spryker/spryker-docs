@@ -38,7 +38,7 @@ To retrieve information on the Company Roles assigned to the currently logged in
 
 /company-roles/mine
 
-Sample request: *GET http://glue.mysprykershop.com/company-roles/mine*
+Sample request: *GET https://glue.mysprykershop.com/company-roles/mine*
 
 {% info_block warningBox "Note" %}
 You can use the **Accept-Language** header to specify the locale.Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de**, **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
@@ -69,12 +69,12 @@ The endpoint responds with a collection of **RestCompanyRoleResponse**, each con
                 "isDefault": true
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/company-roles/2f0a9d3e-9e69-53eb-8518-284a0db04376"
+            "self": "https://glue.mysprykershop.com/company-roles/2f0a9d3e-9e69-53eb-8518-284a0db04376"
         }
     }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/company-roles/mine"
+        "self": "https://glue.mysprykershop.com/company-roles/mine"
     }
 }
 ```
@@ -84,7 +84,7 @@ To retrieve information on a specific Company Role, send a GET request to the fo
 
 /company-roles/{% raw %}{{{% endraw %}role_id{% raw %}}}{% endraw %}
 
-Sample request: *GET http://glue.mysprykershop.com/company-roles/**2f0a9d3e-9e69-53eb-8518-284a0db04376***
+Sample request: *GET https://glue.mysprykershop.com/company-roles/**2f0a9d3e-9e69-53eb-8518-284a0db04376***
 
 where **2f0a9d3e-9e69-53eb-8518-284a0db04376** is the ID of the Company Role you need.
 
@@ -120,7 +120,7 @@ The endpoint responds with a **RestCompanyRoleResponse** that contains informati
             "isDefault": true
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/company-roles/2f0a9d3e-9e69-53eb-8518-284a0db04376"
+            "self": "https://glue.mysprykershop.com/company-roles/2f0a9d3e-9e69-53eb-8518-284a0db04376"
         }
     }
 }
@@ -129,7 +129,7 @@ The endpoint responds with a **RestCompanyRoleResponse** that contains informati
 ### Fetching Additional Information
 You can extend the response with the companies resource relationship in order to obtain information on the company where the role was created.
 
-Sample request: *GET http://glue.mysprykershop.com/company-roles/2f0a9d3e-9e69-53eb-8518-284a0db04376?include=companies*
+Sample request: *GET https://glue.mysprykershop.com/company-roles/2f0a9d3e-9e69-53eb-8518-284a0db04376?include=companies*
 
 The response will include the following additional attributes:
 
@@ -171,7 +171,7 @@ The response will include the following additional attributes:
                 "status": "approved"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/companies/0818f408-cc84-575d-ad54-92118a0e4273"
+                "self": "https://glue.mysprykershop.com/companies/0818f408-cc84-575d-ad54-92118a0e4273"
             }
         }
     ]

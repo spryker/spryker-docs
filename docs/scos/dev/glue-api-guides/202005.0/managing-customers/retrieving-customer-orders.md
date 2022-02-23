@@ -43,7 +43,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 ### Request
 Request sample: 
-`GET http://glue.mysprykershop.com/orders`
+`GET https://glue.mysprykershop.com/orders`
 
 ### Response
 The endpoint responds with an array of orders placed by the authenticated customer. In the response, each order will have a unique identifier. It is specified in the **id** attribute. You can use the ID to retrieve detailed order information. Also, **self** links will be provided to access an order. individually using the REST API.
@@ -71,12 +71,12 @@ The endpoint responds with an array of orders placed by the authenticated custom
                 "priceMode": "GROSS_MODE"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/orders/DE--1"
+                "self": "https://glue.mysprykershop.com/orders/DE--1"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/orders"
+        "self": "https://glue.mysprykershop.com/orders"
     }
 }
 ```
@@ -132,15 +132,15 @@ When paging is enabled, the **links** section of the JSON response will contain 
                 "priceMode": "GROSS_MODE"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/orders/DE--1"
+                "self": "https://glue.mysprykershop.com/orders/DE--1"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/orders?page[offset]=2&amp;page[limit]=2",
-        "last": "http://glue.mysprykershop.com/orders?page[offset]=2&amp;page[limit]=2",
-        "first": "http://glue.mysprykershop.com/orders?page[offset]=0&amp;page[limit]=2",
-        "prev": "http://glue.mysprykershop.com/orders?page[offset]=0&amp;page[limit]=2"
+        "self": "https://glue.mysprykershop.com/orders?page[offset]=2&amp;page[limit]=2",
+        "last": "https://glue.mysprykershop.com/orders?page[offset]=2&amp;page[limit]=2",
+        "first": "https://glue.mysprykershop.com/orders?page[offset]=0&amp;page[limit]=2",
+        "prev": "https://glue.mysprykershop.com/orders?page[offset]=0&amp;page[limit]=2"
     }
 }
 ```
@@ -161,7 +161,7 @@ To retrieve detailed information on an order, send the request:
 | order_id | A unique identifier of an order. [Retrieve all orders](#retrieving-all-orders) to get it. |
 
 ### Request
-Request sample: `GET http://glue.mysprykershop.com/orders/DE--1`
+Request sample: `GET https://glue.mysprykershop.com/orders/DE--1`
 
 ### Response
 

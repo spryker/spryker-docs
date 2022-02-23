@@ -25,17 +25,17 @@ The formats of the payloads used in the request and response to the third-party 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Storefront+Guides/Checking+Out+Purchases+and+Getting+Checkout+Data/multi-step-checkout-glue-storefront.png)
 
 
-
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Checkout API Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-checkout-feature-integration.html).
 
 ## Update payment data
+
 To update payment with a payload from a third-party payment provider, send the request:
 
 ***
 `POST` **/order-payments**
 ***
-
 
 
 ### Request
@@ -66,19 +66,13 @@ To update payment with a payload from a third-party payment provider, send the r
   }
 }
 ```
-
 </details>
-
-
-
-
 
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | paymentIdentifier | String |  | Unique payment identifier. To get it, [place. an order](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html#place-an-order). The value depends on the payment services provider plugin used to process the payment. For details, see [3. Implement Payload Processor Plugin](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html#implement-payload-processor-plugin). |
-| dataPayload | Array | v | Payload from the payment service provider. The attributes of the payload depend on the selected payment service provider. |
-
+| dataPayload | Array | &check; | Payload from the payment service provider. The attributes of the payload depend on the selected payment service provider. |
 
 
 ### Response

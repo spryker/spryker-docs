@@ -22,6 +22,7 @@ This endpoint allows to manage guest carts.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
+
 * [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)
 * [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
 * [Glue API: Product options feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
@@ -86,7 +87,6 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 | `GET https://glue.mysprykershop.com/guest-carts?include=sales-units,product-measurement-units` | Retrieve a guest cart with information about its items, sales units, and product measurement units. |
 | `GET https://glue.mysprykershop.com/guest-carts?include=vouchers` | Retrieve a guest cart with information about vouchers. |
 | `GET https://glue.mysprykershop.com/guest-carts?include=concrete-products,product-labels` | Retrieve a guest cart with information about concrete products and the product labels assigned to the products in it. |
-
 
 
 ### Response
@@ -633,7 +633,6 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -810,7 +809,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "discountPromotionQuantity": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/vouchers/mydiscount-yu8je"
+                "self": "https://glue.mysprykershop.com/vouchers/mydiscount-yu8je"
             }
         },
         {
@@ -827,13 +826,12 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "discountPromotionQuantity": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/cart-rules/1"
+                "self": "https://glue.mysprykershop.com/cart-rules/1"
             }
         }
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -981,7 +979,6 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
-
 </details>
 
 <a name="guest-cart-response-attributes"></a>
@@ -1033,6 +1030,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 For the attributes of other included resources, see:
+
 * [Managing guest cart items](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html)
 * [Retrieving measurement units](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html)
 * [Retrieving concrete products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
@@ -1059,6 +1057,7 @@ Below, you can see an exemplary workflow for converting a guest cart into a regu
 1. The customer adds items to a guest cart.
 
 Request sample: `POST https://glue.myspsrykershop.com/guest-cart-items`
+
 ```json
 {
     "data": {
@@ -1077,6 +1076,7 @@ Request sample: `POST https://glue.myspsrykershop.com/guest-cart-items`
 | X-Anonymous-Customer-Unique-Id | guest-user-001 | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value.. |
 
 **Response sample**
+
 ```json
 {
     "data": {
@@ -1091,6 +1091,7 @@ Request sample: `POST https://glue.myspsrykershop.com/guest-cart-items`
 2. The customer logs in.
 
 Request sample: `POST https://glue.myspsrykershop.com/access-tokens`
+
 ```json
 {
     "data": {
@@ -1125,6 +1126,7 @@ Request sample: `POST https://glue.myspsrykershop.com/access-tokens`
     }
 }
 ```
+
 3. The customer requests a list of his own carts.
 
 Request sample: `GET https://glue.myspsrykershop.com/carts`
@@ -1160,6 +1162,7 @@ In the **multi-cart** environment, the guest cart has been converted to a regu
 In a **single cart** environment, items from the guest cart have been added to the user's own cart.
 
 **Response body**
+
 ```json
 {
     "data": [

@@ -59,7 +59,6 @@ To redeem a gift card, send the request:
 | X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | ✓ | Guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
 
 
-
 <details>
 <summary markdown='span'>Request sample</summary>
 
@@ -82,6 +81,7 @@ To redeem a gift card, send the request:
 | code | String | ✓ | Code of the gift card sent to the specified email address after the gift card was purchased. |
 
 ### Response
+
 Response sample:
 
 ```json
@@ -145,6 +145,7 @@ Response sample:
     ]
 }
 ```
+
 For the guest cart attributes, see [Creating Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart).
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |

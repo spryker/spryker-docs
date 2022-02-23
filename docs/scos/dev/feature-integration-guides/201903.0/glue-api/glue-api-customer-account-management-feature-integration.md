@@ -224,7 +224,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox “Verification” %}
 
-Make sure that the following endpoints are available:<ul><li>http://glue.mysprykershop.com/customers</li><li>http://glue.mysprykershop.com/addresses</li><li>http://glue.mysprykershop.com/customer-password</li><li>http://glue.mysprykershop.com/customer-forgotten-password</li><li>http://glue.mysprykershop.com/customer-restore-password</li></ul>Send a request to *http://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=addresses*. Make sure that the response includes relationships to the `addresses` resources.<br>*The Customer with the given ID should have at least one address*. 
+Make sure that the following endpoints are available:<ul><li>https://glue.mysprykershop.com/customers</li><li>https://glue.mysprykershop.com/addresses</li><li>https://glue.mysprykershop.com/customer-password</li><li>https://glue.mysprykershop.com/customer-forgotten-password</li><li>https://glue.mysprykershop.com/customer-restore-password</li></ul>Send a request to *https://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=addresses*. Make sure that the response includes relationships to the `addresses` resources.<br>*The Customer with the given ID should have at least one address*. 
 {% endinfo_block %}
 
 *Last review date: Apr 11, 2019*

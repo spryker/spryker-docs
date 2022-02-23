@@ -553,7 +553,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% info_block warningBox “Verification” %}
 
 
-To verify that everything is set up correctly, first, you need to authenticate as a regular customer. Then, to get the ID of the Company Users you can impersonate as, send a `GET` request to `http://glue.mysprykershop.com/company-users/mine`.
+To verify that everything is set up correctly, first, you need to authenticate as a regular customer. Then, to get the ID of the Company Users you can impersonate as, send a `GET` request to `https://glue.mysprykershop.com/company-users/mine`.
 
 http://mysprykershop.com/company-users/mine response
 
@@ -573,7 +573,7 @@ http://mysprykershop.com/company-users/mine response
 }
 ```
 
-To log in as a Company User, send a `POST` request to `http://glue.mysprykershop.com/company-user-access-tokens` passing the ID of the necessary Company User in the request. Make sure that the response contains all the necessary data.
+To log in as a Company User, send a `POST` request to `https://glue.mysprykershop.com/company-user-access-tokens` passing the ID of the necessary Company User in the request. Make sure that the response contains all the necessary data.
 
 http://mysprykershop.com/company-user-access-tokens request
 
@@ -659,44 +659,44 @@ To make sure the `CompanyUserRestUserValidatorPlugin` is setup correctly, make s
 {% info_block warningBox “Verification” %}
 
 
-Send a `GET` request to `http://glue.mysprykershop.com/companies/mine`. Make sure that the response contains a collection of resources with the companies that your current Company User belongs to.
+Send a `GET` request to `https://glue.mysprykershop.com/companies/mine`. Make sure that the response contains a collection of resources with the companies that your current Company User belongs to.
 
-Send a `GET` request to `http://glue.mysprykershop.com/companies/{% raw %}{{{% endraw %}company_uuid{% raw %}}}{% endraw %}`. Make sure that the response contains a single company resource that your current Company User belongs to.
-
-{% endinfo_block %}
-
-{% info_block warningBox “Verification” %}
-
-
-Send a `GET` request to `http://glue.mysprykershop.com/company-business-units/mine?include=companies,company-business-unit-addresses`. Make sure that the response contains a collection of resources with the company business units that your current Company User belongs to. Make sure that the `companies` and `addresses` relationships are present.
-
-Send a `GET` request to `http://glue.mysprykershop.com/company-business-units/{% raw %}{{{% endraw %}company_business_unit_uuid{% raw %}}}{% endraw %}?include=companies,company-business-unit-addresses`. Make sure that the response contains a single company business unit resource that your current Company User belongs to. Make sure that the `companies` and `addresses` relationships are present.
+Send a `GET` request to `https://glue.mysprykershop.com/companies/{% raw %}{{{% endraw %}company_uuid{% raw %}}}{% endraw %}`. Make sure that the response contains a single company resource that your current Company User belongs to.
 
 {% endinfo_block %}
 
 {% info_block warningBox “Verification” %}
 
 
-Send a `GET` request to `http://glue.mysprykershop.com/company-business-unit-addresses/{% raw %}{{{% endraw %}company_business_unit_address_uuid{% raw %}}}{% endraw %}`. Make sure that response contains a single company business unit address resource that your current company has.
+Send a `GET` request to `https://glue.mysprykershop.com/company-business-units/mine?include=companies,company-business-unit-addresses`. Make sure that the response contains a collection of resources with the company business units that your current Company User belongs to. Make sure that the `companies` and `addresses` relationships are present.
+
+Send a `GET` request to `https://glue.mysprykershop.com/company-business-units/{% raw %}{{{% endraw %}company_business_unit_uuid{% raw %}}}{% endraw %}?include=companies,company-business-unit-addresses`. Make sure that the response contains a single company business unit resource that your current Company User belongs to. Make sure that the `companies` and `addresses` relationships are present.
 
 {% endinfo_block %}
 
 {% info_block warningBox “Verification” %}
 
 
-Send a `GET` request to `http://glue.mysprykershop.com/company-roles/mine?include=companies`. Make sure that the response contains the collection of resources with all company roles that your current Company User has. Make sure that the `companies` relationship is present.
-
-Send a `GET` request to `http://glue.mysprykershop.com/company-roles/{% raw %}{{{% endraw %}company_role_uuid{% raw %}}}{% endraw %}?include=companies`. Make sure that the response contains a single company role resource that your current Company User has. Make sure that the `companies` relationship is present.
+Send a `GET` request to `https://glue.mysprykershop.com/company-business-unit-addresses/{% raw %}{{{% endraw %}company_business_unit_address_uuid{% raw %}}}{% endraw %}`. Make sure that response contains a single company business unit address resource that your current company has.
 
 {% endinfo_block %}
 
 {% info_block warningBox “Verification” %}
 
 
-Send a `GET` request to `http://glue.mysprykershop.com/company-users?include=company-roles,companies,company-business-units,customers`. Make sure that the response contains a collection of resources with all the Company Users in your current company. Make sure that the `company-roles`, `companies`, `company-business-units` and `customers` relationships are present.
+Send a `GET` request to `https://glue.mysprykershop.com/company-roles/mine?include=companies`. Make sure that the response contains the collection of resources with all company roles that your current Company User has. Make sure that the `companies` relationship is present.
 
-Send a `GET` request to `http://glue.mysprykershop.com/company-roles/mine?include=company-roles,companies,company-business-units,customers`. Make sure that the response contains a collection of resources with all the Company Users that the current user can impersonate as. Make sure that the `company-roles`, `companies`, `company-business-units` and `customers` relationships are present.
+Send a `GET` request to `https://glue.mysprykershop.com/company-roles/{% raw %}{{{% endraw %}company_role_uuid{% raw %}}}{% endraw %}?include=companies`. Make sure that the response contains a single company role resource that your current Company User has. Make sure that the `companies` relationship is present.
 
-Send a `GET` request to `http://glue.mysprykershop.com/company-users/{% raw %}{{{% endraw %}company_user_uuid{% raw %}}}{% endraw %}?include=company-roles,companies,company-business-units,customers`. Make sure that the response contains a single Company User. Make sure that the `company-roles`, `companies`, `company-business-units` and `customers` relationships are present.
+{% endinfo_block %}
+
+{% info_block warningBox “Verification” %}
+
+
+Send a `GET` request to `https://glue.mysprykershop.com/company-users?include=company-roles,companies,company-business-units,customers`. Make sure that the response contains a collection of resources with all the Company Users in your current company. Make sure that the `company-roles`, `companies`, `company-business-units` and `customers` relationships are present.
+
+Send a `GET` request to `https://glue.mysprykershop.com/company-roles/mine?include=company-roles,companies,company-business-units,customers`. Make sure that the response contains a collection of resources with all the Company Users that the current user can impersonate as. Make sure that the `company-roles`, `companies`, `company-business-units` and `customers` relationships are present.
+
+Send a `GET` request to `https://glue.mysprykershop.com/company-users/{% raw %}{{{% endraw %}company_user_uuid{% raw %}}}{% endraw %}?include=company-roles,companies,company-business-units,customers`. Make sure that the response contains a single Company User. Make sure that the `company-roles`, `companies`, `company-business-units` and `customers` relationships are present.
 
 {% endinfo_block %}

@@ -346,8 +346,8 @@ This endpoint returns only [active](/docs/marketplace/user/features/{{page.versi
 
 | USAGE | DESCRIPTION |
 | -------------------- | ---------------------- |
-| `GET http://glue.mysprykershop.com/merchants/MER000006` | Retrieve the merchant with the `MER000006` ID. |
-| `GET http://glue.mysprykershop.com/merchants/MER000006?include=merchant-addresses,merchant-opening-hours` | Retrieve the merchant with the `MER000006` ID, including merchant addresses and opening hours. |
+| `GET https://glue.mysprykershop.com/merchants/MER000006` | Retrieve the merchant with the `MER000006` ID. |
+| `GET https://glue.mysprykershop.com/merchants/MER000006?include=merchant-addresses,merchant-opening-hours` | Retrieve the merchant with the `MER000006` ID, including merchant addresses and opening hours. |
 
 ### Response
 

@@ -29,7 +29,7 @@ To retrieve prices of a product offer, send the request:
 
 ### Request
 
-Request sample: `GET http://glue.mysprykershop.com/product-offers/offer54/product-offer-prices`
+Request sample: `GET https://glue.mysprykershop.com/product-offers/offer54/product-offer-prices`
 
 ### Response
 
@@ -66,12 +66,12 @@ Response sample:
             },
 
             "links": {
-                "self": "http://glue.mysprykershop.com/product-offers/offer54/product-offer-prices"
+                "self": "https://glue.mysprykershop.com/product-offers/offer54/product-offer-prices"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/product-offers/offer54/product-offer-prices"
+        "self": "https://glue.mysprykershop.com/product-offers/offer54/product-offer-prices"
     }
 }
 ```

@@ -57,13 +57,13 @@ When accessing guest carts, you need to specify the guest user ID. This is done 
 
 {% endinfo_block %}
 
-Sample request: `POST http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers`
+Sample request: `POST https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers`
 
 where **1ce91011-8d60-59ef-9fe0-4493ef3628b2** is the UUID of the customer’s cart.
 
 {% info_block warningBox "Verification" %}
 
-You can also include the vouchers resource relationship to obtain detailed information on the discount provided by the voucher in the response data. Example: `POST http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers?include=vouchers`
+You can also include the vouchers resource relationship to obtain detailed information on the discount provided by the voucher in the response data. Example: `POST https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers?include=vouchers`
 
 {% endinfo_block %}
 
@@ -150,7 +150,7 @@ If you included the `vouchers` resource relationship in your request URL, the re
                 "discountPromotionQuantity": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/vouchers/mydiscount-qa1ma?include=vouchers"
+                "self": "https://glue.mysprykershop.com/vouchers/mydiscount-qa1ma?include=vouchers"
             }
         }
     ]
@@ -206,11 +206,11 @@ When accessing guest carts, you need to specify the guest user ID. This is done 
 
 **Sample requests:**
 
-`GET http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2?include=vouchers`
+`GET https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2?include=vouchers`
 
-`GET http://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2?include=cart-rules`
+`GET https://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2?include=cart-rules`
 
-`GET http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2?include=vouchers,cart-rules`
+`GET https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2?include=vouchers,cart-rules`
 
 where **1ce91011-8d60-59ef-9fe0-4493ef3628b2** is the cart ID.
 
@@ -295,7 +295,7 @@ The section also includes the voucher **ID** that can be used in the future to u
                 "discountPromotionQuantity": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/vouchers/mydiscount-yu8je"
+                "self": "https://glue.mysprykershop.com/vouchers/mydiscount-yu8je"
             }
         },
         {
@@ -312,7 +312,7 @@ The section also includes the voucher **ID** that can be used in the future to u
                 "discountPromotionQuantity": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/cart-rules/1"
+                "self": "https://glue.mysprykershop.com/cart-rules/1"
             }
         }
     ]
@@ -352,7 +352,7 @@ When accessing guest carts, you need to specify the guest user ID. This is done 
 
 {% endinfo_block %}
 
-Sample request: `DELETE http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers/mydiscount-we3ca`
+Sample request: `DELETE https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers/mydiscount-we3ca`
 
 where:
 

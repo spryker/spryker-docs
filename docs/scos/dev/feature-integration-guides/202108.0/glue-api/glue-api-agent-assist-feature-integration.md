@@ -219,9 +219,7 @@ Ensure that, when `Authorization` and `X-Agent-Authorization` headers are sent, 
 
 ## Related features
 
-
 Integrate the following related features:
-
 
 | FEATURE | INTEGRATION GUIDE |
 | --- | --- |

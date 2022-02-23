@@ -32,6 +32,7 @@ After sending a request, the cart is deleted, and you cannot make any changes in
 The endpoint also provides information on whether it is necessary to redirect the user to a third-party page to complete the payment.
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html)
 * [Glue API: Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shipment-feature-integration.html)
@@ -63,7 +64,6 @@ By default, if checkout is successful, the order is placed, and the cart is dele
 | Authorization | String | Required when checking out a [cart of registered user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html). | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
 
-
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request.	 | orders, order-shipments |
@@ -76,6 +76,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 
 <details>
 <summary markdown='span'>Request sample with one shipment</summary>
+
 `POST https://glue.mysprykershop.com/checkout`
 
 ```json
@@ -136,11 +137,11 @@ To retrieve order shipments, include `orders` and `order-shipments`.
     }
 }
 ```
-
 </details>
 
 <details>
 <summary markdown='span'>Request sample with a split shipment</summary>
+
 `POST https://glue.mysprykershop.com/checkout?include=orders`
 
 ```json
@@ -222,13 +223,13 @@ To retrieve order shipments, include `orders` and `order-shipments`.
     }
 }
 ```
-
 </details>
 
 
 <details>
 <summary markdown='span'>Request sample with one shipment, order information, and shipment information</summary>
-`POST glue.de.spryker.local/checkout?include=orders,order-shipments`
+
+`POST https://glue.mysprykershop.com/checkout?include=orders,order-shipments`
 
 ```json
 {
@@ -290,12 +291,12 @@ To retrieve order shipments, include `orders` and `order-shipments`.
     }
 }
 ```
-
 </details>
 
 
 <details>
 <summary markdown='span'>Request sample with a split shipment and addresses passed as IDs</summary>
+
 `POST https://glue.mysprykershop.com/checkout`
 
 ```json
@@ -664,7 +665,6 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -681,7 +681,7 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
             "isExternalRedirect": null
         },
         "links": {
-            "self": "glue.mysprykershop.com/checkout?include=orders"
+            "self": "https://glue.mysprykershop.com/checkout?include=orders"
         },
         "relationships": {
             "orders": {
@@ -1255,16 +1255,14 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
         }
     ]
 }
-
 ```    
 </details>
-
 
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | orderReference | String | Unique identifier of the order. |
-| redirectUrl | String | The URL to perform the payment verification requested by the selected payment method. After completing verification, ensure to [update payment data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/updating-payment-data.html#update-payment-data). If the value is `null` or empty, no additional verification is reuiqred. |
+| redirectUrl | String | The URL to perform the payment verification requested by the selected payment method. After completing verification, ensure to [update payment data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/updating-payment-data.html#update-payment-data). If the value is `null` or empty, no additional verification is required. |
 | isExternalRedirect | Boolean | Defines if the customer is redirected to an external URL. |
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |

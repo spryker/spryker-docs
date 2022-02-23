@@ -57,6 +57,8 @@ Request sample: `POST https://glue.mysprykershop.com/wishlists/09264b7f-1894-58e
 
 ### Response
 
+Response sample:
+
 ```json
 {
 		"data": {

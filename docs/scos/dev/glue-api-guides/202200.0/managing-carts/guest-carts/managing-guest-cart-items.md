@@ -22,6 +22,7 @@ This endpoint allows you to manage guest cart items.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
+
 * [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)
 * [Glue API: Measurement Units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html)
 * [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
@@ -92,7 +93,6 @@ To add items to a guest cart, send the request:
 <summary markdown='span'>Request sample: adding a promotional item with the cart-rules relationship</summary>
 
 {% info_block infoBox "Cart rules" %}
-
 
 To add the promotional product to cart, make sure that the cart fulfills the cart rules for the promotional item.
 
@@ -170,7 +170,6 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
-
 </details>
 
 <details>
@@ -189,10 +188,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
-
 </details>
-
-
 
 
 <details>
@@ -238,7 +234,6 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
-
 </details>
 
 <details>
@@ -258,7 +253,6 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
-
 </details>
 
 <details>
@@ -277,7 +271,6 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
-
 </details>
 
 <details>
@@ -296,7 +289,6 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
-
 </details>
 
 <details>
@@ -316,7 +308,6 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
@@ -462,7 +453,6 @@ It is the responsibility of the API Client to track whether the selected items a
     }
 }
 ```
-
 </details>
 
 <details>
@@ -1112,7 +1102,6 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -1334,7 +1323,6 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -1478,7 +1466,6 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 
@@ -1570,7 +1557,6 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -1796,7 +1782,6 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -2548,7 +2533,6 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -2597,7 +2581,6 @@ It is the responsibility of the API Client to track whether the selected items a
     }
 }
 ```
-
 </details>
 
 <details>
@@ -2639,7 +2622,6 @@ It is the responsibility of the API Client to track whether the selected items a
     }
 }
 ```
-
 </details>
 
 For the threshold attributes, see [Threshold attributes](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#treshold-attributes).
@@ -3003,7 +2985,9 @@ To change the quantity of the configurable bundles in a guest cart, send the req
 | HEADER KEY | HEADER VALUE EXAMPLE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart). |
+
 Request sample: `PATCH https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-5d40-9da1-db5289f216fa/guest-configured-bundles/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-60118379365c56.34709530?include=items`
+
 ```json
 {
     "data": {
@@ -3020,6 +3004,7 @@ Request sample: `PATCH https://glue.mysprykershop.com/guest-carts/1bbcf8c0-30dc-
 | quantity | String | &check; | Quantity of the items to add. |
 
 ### Response
+
 <details>
 <summary markdown='span'>Response sample</summary>
 
@@ -3317,6 +3302,7 @@ Request sample: `DELETE https://glue.mysprykershop.com/guest-carts/2506b65c-164b
 If the item is deleted successfully, the endpoint returns the "204 No Content" status code.
 
 ## Remove a configurable bundle from a guest cart
+
 To remove a configurable bundle from a guest cart, send the request:
 
 ***

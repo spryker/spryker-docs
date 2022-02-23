@@ -80,8 +80,8 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 | `GET https://glue.mysprykershop.com/guest-carts?include=concrete-products,product-labels` | Retrieve a guest cart with information about concrete products and the product labels assigned to the products in it. |
 | `GET https://glue.mysprykershop.com/guest-carts?include=promotional-items,abstract-products,concrete-product`| Retrieve detailed information on the promotional items for the guest cart. |
 | `GET https://glue.mysprykershop.com/guest-carts?include=items,concrete-products,product-offers` | Retrieve all guest carts of a user with information about product offers. |
-| `GET http://glue.mysprykershop.com/guest-carts?include=items,concrete-products,product-offers,product-offer-availabilities` | Retrieve all guest carts of a user with product offer availabilities. |
-| `GET http://glue.mysprykershop.com/guest-carts?include=items,concrete-products,product-offers,product-offer-prices` | Retrieve all guest carts of a user with product offer prices. |
+| `GET https://glue.mysprykershop.com/guest-carts?include=items,concrete-products,product-offers,product-offer-availabilities` | Retrieve all guest carts of a user with product offer availabilities. |
+| `GET https://glue.mysprykershop.com/guest-carts?include=items,concrete-products,product-offers,product-offer-prices` | Retrieve all guest carts of a user with product offer prices. |
 | `GET https://glue.mysprykershop.com/guest-carts/f0d01709-4dea-5ac3-8ceb-873875446ab0?include=guest-cart-items,merchants` | Retrieve a guest cart with items and respective merchants included. |
 
 
@@ -800,7 +800,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "discountPromotionQuantity": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/vouchers/mydiscount-yu8je"
+                "self": "https://glue.mysprykershop.com/vouchers/mydiscount-yu8je"
             }
         },
         {
@@ -817,7 +817,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "discountPromotionQuantity": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/cart-rules/1"
+                "self": "https://glue.mysprykershop.com/cart-rules/1"
             }
         }
     ]

@@ -18,7 +18,9 @@ related:
 This endpoint allows retrieving sales units of concrete products.
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
+
 * [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html).
 * [Glue API: Measurement Units Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html).
 
@@ -37,7 +39,7 @@ To retrieve sales units of a concrete product, send the request:
 
 ### Request
 
-Request sample: `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1-2/sales-units`
+Request sample: `GET https://glue.mysprykershop.com/concrete-products/cable-vga-1-2/sales-units`
 
 ### Response
 
@@ -58,7 +60,7 @@ Request sample: `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1
                 "productMeasurementUnitCode": "CMET"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-2/sales-units/34"
+                "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-2/sales-units/34"
             }
         },
         {
@@ -72,16 +74,15 @@ Request sample: `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1
                 "productMeasurementUnitCode": "METR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-2/sales-units/33"
+                "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-2/sales-units/33"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-2/sales-units"
+        "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-2/sales-units"
     }
 }
 ```
-
 </details>
 
 <a name="sales-units-response-attributes"></a>

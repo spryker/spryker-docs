@@ -50,11 +50,11 @@ To search by customers, send the request:
 
 | REQUEST | USAGE |
 | --- | --- |
-| `GET http://glue.mysprykershop.com/agent-customer-search` | Return the list of all customers. |
-| `GET http://glue.mysprykershop.com/agent-customer-search?page[limit]=5&page[offset]=5` | Return a list of 5 customer entires starting from the 6th entry. |
-| `GET http://glue.mysprykershop.com/agent-customer-search?q=sonia@spryker.com` | Search for the customer with the `sonia@spryker.com` email address. |
-| `GET http://glue.mysprykershop.com/agent-customer-search?q=spencor` | Search for the customer with the `spencor` name. |
-| `GET http://glue.mysprykershop.com/agent-customer-search?q=DE--5` | Search for the customer with the `DE--5` customer reference. |
+| GET https://glue.mysprykershop.com/agent-customer-search | Return the list of all customers. |
+| GET https://glue.mysprykershop.com/agent-customer-search?page[limit]=5&page[offset]=5 | Return a list of 5 customer entires starting from the 6th entry. |
+| GET https://glue.mysprykershop.com/agent-customer-search?q=sonia@spryker.com | Search for the customer with the `sonia@spryker.com` email address. |
+| GET https://glue.mysprykershop.com/agent-customer-search?q=spencor | Search for the customer with the `spencor` name. |
+| GET https://glue.mysprykershop.com/agent-customer-search?q=DE--5 | Search for the customer with the `DE--5` customer reference. |
 
 ### Response
 
@@ -131,20 +131,18 @@ To search by customers, send the request:
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/agent-customer-search"
+                "self": "https://glue.mysprykershop.com/agent-customer-search"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/agent-customer-search",
-        "last": "http://glue.mysprykershop.com/agent-customer-search?page[offset]=20&page[limit]=10",
-        "first": "http://glue.mysprykershop.com/agent-customer-search?page[offset]=0&page[limit]=10",
-        "next": "http://glue.mysprykershop.com/agent-customer-search?page[offset]=10&page[limit]=10"
+        "self": "https://glue.mysprykershop.com/agent-customer-search",
+        "last": "https://glue.mysprykershop.com/agent-customer-search?page[offset]=20&page[limit]=10",
+        "first": "https://glue.mysprykershop.com/agent-customer-search?page[offset]=0&page[limit]=10",
+        "next": "https://glue.mysprykershop.com/agent-customer-search?page[offset]=10&page[limit]=10"
     }
 }
-
 ```
-
 </details>
 
 <details><summary markdown='span'>Response sample of search with page limit and page offset</summary>
@@ -190,20 +188,19 @@ To search by customers, send the request:
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/agent-customer-search?page[offset]=5&page[limit]=5"
+                "self": "https://glue.mysprykershop.com/agent-customer-search?page[offset]=5&page[limit]=5"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/agent-customer-search?page[offset]=5&page[limit]=5",
-        "last": "http://glue.mysprykershop.com/agent-customer-search?page[offset]=25&page[limit]=5",
-        "first": "http://glue.mysprykershop.com/agent-customer-search?page[offset]=0&page[limit]=5",
-        "prev": "http://glue.mysprykershop.com/agent-customer-search?page[offset]=0&page[limit]=5",
-        "next": "http://glue.mysprykershop.com/agent-customer-search?page[offset]=10&page[limit]=5"
+        "self": "https://glue.mysprykershop.com/agent-customer-search?page[offset]=5&page[limit]=5",
+        "last": "https://glue.mysprykershop.com/agent-customer-search?page[offset]=25&page[limit]=5",
+        "first": "https://glue.mysprykershop.com/agent-customer-search?page[offset]=0&page[limit]=5",
+        "prev": "https://glue.mysprykershop.com/agent-customer-search?page[offset]=0&page[limit]=5",
+        "next": "https://glue.mysprykershop.com/agent-customer-search?page[offset]=10&page[limit]=5"
     }
 }
 ```
-
 </details>
 
 <details><summary markdown='span'>Response sample of search by email address</summary>
@@ -225,18 +222,17 @@ To search by customers, send the request:
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/agent-customer-search?q=sonia@spryker.com"
+                "self": "https://glue.mysprykershop.com/agent-customer-search?q=sonia@spryker.com"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/agent-customer-search?q=sonia@spryker.com",
-        "last": "http://glue.mysprykershop.com/agent-customer-search?q=sonia@spryker.com&page[offset]=0&page[limit]=10",
-        "first": "http://glue.mysprykershop.com/agent-customer-search?q=sonia@spryker.com&page[offset]=0&page[limit]=10"
+        "self": "https://glue.mysprykershop.com/agent-customer-search?q=sonia@spryker.com",
+        "last": "https://glue.mysprykershop.com/agent-customer-search?q=sonia@spryker.com&page[offset]=0&page[limit]=10",
+        "first": "https://glue.mysprykershop.com/agent-customer-search?q=sonia@spryker.com&page[offset]=0&page[limit]=10"
     }
 }    
 ```
-
 </details>
 
 <details><summary markdown='span'>Response sample of search by name</summary>
@@ -258,18 +254,17 @@ To search by customers, send the request:
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/agent-customer-search?q=spencor"
+                "self": "https://glue.mysprykershop.com/agent-customer-search?q=spencor"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/agent-customer-search?q=spencor",
-        "last": "http://glue.mysprykershop.com/agent-customer-search?q=spencor&page[offset]=0&page[limit]=10",
-        "first": "http://glue.mysprykershop.com/agent-customer-search?q=spencor&page[offset]=0&page[limit]=10"
+        "self": "https://glue.mysprykershop.com/agent-customer-search?q=spencor",
+        "last": "https://glue.mysprykershop.com/agent-customer-search?q=spencor&page[offset]=0&page[limit]=10",
+        "first": "https://glue.mysprykershop.com/agent-customer-search?q=spencor&page[offset]=0&page[limit]=10"
     }
 }   
 ```
-
 </details>
 
 <details><summary markdown='span'>Response sample of search by customer reference</summary>
@@ -291,18 +286,17 @@ To search by customers, send the request:
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/agent-customer-search?q=de--5"
+                "self": "https://glue.mysprykershop.com/agent-customer-search?q=de--5"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/agent-customer-search?q=de--5",
-        "last": "http://glue.mysprykershop.com/agent-customer-search?q=de--5&page[offset]=0&page[limit]=10",
-        "first": "http://glue.mysprykershop.com/agent-customer-search?q=de--5&page[offset]=0&page[limit]=10"
+        "self": "https://glue.mysprykershop.com/agent-customer-search?q=de--5",
+        "last": "https://glue.mysprykershop.com/agent-customer-search?q=de--5&page[offset]=0&page[limit]=10",
+        "first": "https://glue.mysprykershop.com/agent-customer-search?q=de--5&page[offset]=0&page[limit]=10"
     }
 }    
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

@@ -132,7 +132,7 @@ Also, a module should contain the transfer definition in `src/Pyz/Shared/Resourc
 
 | ResourcesRestApi | DESCRIPTION |
 | --- | --- |
-| `resources_rest_api.transfer.xml` | Contains API transfer definintions. |
+| `resources_rest_api.transfer.xml` | Contains API transfer definitions. |
 
 The resulting folder structure on the example of the WishlistsRestApi Resource module looks as follows:
 
@@ -221,9 +221,9 @@ Let us consider the following REST Response example. It contains information on 
 
 **Request:**
 
-*GET http://glue.mysprykershop.com/wishlists/cbf84323-e54d-5774-8c02-4c90e107afe6*
+*GET https://glue.mysprykershop.com/wishlists/cbf84323-e54d-5774-8c02-4c90e107afe6*
 
-```js
+```json
 	{
     "data": {
         "type": "wishlists",
@@ -235,7 +235,7 @@ Let us consider the following REST Response example. It contains information on 
             "updatedAt": "2019-07-05 13:13:52.811524"
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/wishlists/cbf84323-e54d-5774-8c02-4c90e107afe6"
+            "self": "https://glue.mysprykershop.com/wishlists/cbf84323-e54d-5774-8c02-4c90e107afe6"
         }
     }
 }
@@ -246,12 +246,12 @@ If we add relationships to the `wishlist-items` and `concrete-products` resource
 
 **Request:**
 
-*GET http://glue.mysprykershop.com/wishlists/cbf84323-e54d-5774-8c02-4c90e107afe6?include=wishlist-items,concrete-products*
+*GET https://glue.mysprykershop.com/wishlists/cbf84323-e54d-5774-8c02-4c90e107afe6?include=wishlist-items,concrete-products*
 
 <details>
 <summary markdown='span'>Code sample:</summary>
 
-```js
+```json
 {
     "data": {
         "type": "wishlists",
@@ -303,7 +303,7 @@ If we add relationships to the `wishlist-items` and `concrete-products` resource
                 }
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/021_21081475"
+                "self": "https://glue.mysprykershop.com/concrete-products/021_21081475"
             }
         },
         {
@@ -313,7 +313,7 @@ If we add relationships to the `wishlist-items` and `concrete-products` resource
                 "sku": "021_21081475"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/wishlist-items/021_21081475"
+                "self": "https://glue.mysprykershop.com/concrete-products/wishlist-items/021_21081475"
             },
             "relationships": {
                 "concrete-products": {
@@ -329,8 +329,6 @@ If we add relationships to the `wishlist-items` and `concrete-products` resource
     ]
 }
 ```
-
-<br>
 </details>
 
 #### Possible implementations
@@ -339,7 +337,7 @@ To add relationships between two resources, you can either implement the Resourc
 
 *Option 1: With a separate module*
 
-![implementation-wiht-separate-module.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Glue+Infrastructure/implementation-wiht-separate-module.png)
+![implementation-with-separate-module.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Glue+Infrastructure/implementation-wiht-separate-module.png)
 
 _Option 2: Without module_
 

@@ -34,7 +34,7 @@ For detailed information on the modules that provide the API functionality and r
 To get a search suggestion, you need to send a _GET_ request to the following endpoint:  
 `/catalog-search-suggestions`
 
-Sample request: `GET http://glue.mysprykershop.com/catalog-search-suggestions?q=comp`
+Sample request: `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=comp`
 
 To include search queries in your request, use the **q** URL parameter. Below you can find the most common queries to use:
 
@@ -258,12 +258,12 @@ Although CMS pages also expose the `url` parameter, resolving of CMS page SEF UR
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/catalog-search-suggestions?q=comp"
+                "self": "https://glue.mysprykershop.com/catalog-search-suggestions?q=comp"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/catalog-search-suggestions?q=comp"
+        "self": "https://glue.mysprykershop.com/catalog-search-suggestions?q=comp"
     }
 }
 ```

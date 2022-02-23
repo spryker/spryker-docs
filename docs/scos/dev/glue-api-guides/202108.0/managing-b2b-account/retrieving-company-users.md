@@ -101,7 +101,6 @@ Sample request: `GET https://glue.mysprykershop.com/company-users`
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -156,7 +155,6 @@ To retrieve information about a company user, send the request:
     }
 }
 ```
-
 </details>
 
 <details>
@@ -327,7 +325,6 @@ To retrieve information about a company user, send the request:
     ]
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

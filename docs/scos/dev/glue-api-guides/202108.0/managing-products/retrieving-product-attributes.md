@@ -29,6 +29,7 @@ For detailed information on the modules that provide the API functionality and r
 ## Retrieve all product attributes
 
 To retrieve all product attributes, send the request:
+
 ***
 `GET` **/product-management-attributes**
 ***
@@ -143,7 +144,6 @@ Request sample: `https://glue.mysprykershop.com/product-management-attributes`
     }
 }
 ```
-
 </details>
 
 
@@ -178,6 +178,7 @@ Request sample: `https://glue.mysprykershop.com/product-management-attributes/st
 
 <details>
 <summary markdown='span'>Response sample - retrieve a product attribute</summary>
+
 ```json
 {
     "data": {

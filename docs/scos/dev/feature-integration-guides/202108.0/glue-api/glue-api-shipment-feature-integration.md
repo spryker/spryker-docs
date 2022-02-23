@@ -195,8 +195,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-* To make sure that `ShipmentMethodsByCheckoutDataResourceRelationshipPlugin` is activated, check that the information from the `shipment-methods` resource is returned by sending the `POST http://glue.mysprykershop.com/checkout-data?include=shipment-methods` request.
-* To make sure that `OrderShipmentByOrderResourceRelationshipPlugin` is activated, make sure that the information from the `order-shipments` resource is returned by sending the `GET http://glue.mysprykershop.com/orders?include=order-shipments` request.
+* To make sure that `ShipmentMethodsByCheckoutDataResourceRelationshipPlugin` is activated, check that the information from the `shipment-methods` resource is returned by sending the `POST https://glue.mysprykershop.com/checkout-data?include=shipment-methods` request.
+* To make sure that `OrderShipmentByOrderResourceRelationshipPlugin` is activated, make sure that the information from the `order-shipments` resource is returned by sending the `GET https://glue.mysprykershop.com/orders?include=order-shipments` request.
 * To make sure that `ShipmentMethodsByShipmentResourceRelationshipPlugin` is activated, make sure that the information from the `shipment-methods` resource is returned by sending the `GET http://glue.http://mysprykershop.com /shipments?include=shipment-methods` request.
 * To make sure that `ShipmentsByCheckoutDataResourceRelationshipPlugin` is activated, make sure that the information from the `shipments` resource is returned by sending the `POST http://glue.http://mysprykershop.com /checkout-data?include=shipments` request.
 
@@ -270,9 +270,9 @@ class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProv
 {% info_block warningBox "Verification" %}
 
 
-* To make sure that `ShipmentQuoteMapperPlugin` is activated, send the `POST http://glue.mysprykershop.com/checkout` request and check that the order contains the shipment method you’ve provided in the request.
-* To verify that `ShipmentQuoteMapperPlugin` is activated, send the `POST http://glue.mysprykershop.com/checkout?include=shipments` and check that the order contains the shipments you’ve provided in the request.
-* To verify that `ShipmentRestOrderDetailsAttributesMapperPlugin` is activated, send the `GET http://glue.mysprykershop.com/orders?include=order-shipments` request and make sure that the order contains the shipments you’ve provided in the request.
+* To make sure that `ShipmentQuoteMapperPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout` request and check that the order contains the shipment method you’ve provided in the request.
+* To verify that `ShipmentQuoteMapperPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout?include=shipments` and check that the order contains the shipments you’ve provided in the request.
+* To verify that `ShipmentRestOrderDetailsAttributesMapperPlugin` is activated, send the `GET https://glue.mysprykershop.com/orders?include=order-shipments` request and make sure that the order contains the shipments you’ve provided in the request.
 
 
 {% endinfo_block %}
@@ -339,7 +339,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-To make sure that `SelectedShipmentMethodCheckoutDataResponseMapperPlugin` is activated, send the `POST http://glue.mysprykershop.com/checkout-data` request endpoint with shipment a method id and check that, in the response, the `selectedShipmentMethods` is not empty:
+To make sure that `SelectedShipmentMethodCheckoutDataResponseMapperPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout-data` request endpoint with shipment a method id and check that, in the response, the `selectedShipmentMethods` is not empty:
 
 **Response sample**
 
@@ -374,7 +374,7 @@ To make sure that `SelectedShipmentMethodCheckoutDataResponseMapperPlugin` is ac
 
 {% info_block warningBox "Verification" %}
 
-To verify that `ShipmentMethodCheckoutDataValidatorPlugin` is activated, send the `POST http://glue.mysprykershop.com/checkout` request and check that you get the error saying that a shipment method is not found.
+To verify that `ShipmentMethodCheckoutDataValidatorPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout` request and check that you get the error saying that a shipment method is not found.
 
 {% endinfo_block %}
 
@@ -470,7 +470,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-To make sure that the plugins are activated, send the `POST http://glue.mysprykershop.com/checkout` request with invalid shipments and check that errors are returned.
+To make sure that the plugins are activated, send the `POST https://glue.mysprykershop.com/checkout` request with invalid shipments and check that errors are returned.
 
 {% endinfo_block %}
 

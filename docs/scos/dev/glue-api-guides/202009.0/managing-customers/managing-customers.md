@@ -33,7 +33,7 @@ To create a customer, send the request:
 
 ### Request
 
-Request sample: `POST http://glue.mysprykershop.com/customers`
+Request sample: `POST https://glue.mysprykershop.com/customers`
 
 ```json
 {
@@ -86,7 +86,7 @@ Request sample: `POST http://glue.mysprykershop.com/customers`
 			"updatedAt": "2018-11-06 08:15:02.694668"
 		},
 		"links": {
-			"self": "http://glue.mysprykershop.com/customers/DE--25"
+			"self": "https://glue.mysprykershop.com/customers/DE--25"
 		}
 	}
 }
@@ -153,7 +153,7 @@ Request sample: `GET https://glue.mysprykershop.com/customers`
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/customers"
+        "self": "https://glue.mysprykershop.com/customers"
     }
 }
 ```
@@ -182,7 +182,7 @@ To retrieve information about a customer, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
-Request sample: `GET http://glue.mysprykershop.com/customers/DE-25`
+Request sample: `GET https://glue.mysprykershop.com/customers/DE-25`
 
 
 ### Response
@@ -205,7 +205,7 @@ Request sample: `GET http://glue.mysprykershop.com/customers/DE-25`
 				"updatedAt": "2018-11-06 08:15:02.694668"
 			},
 			"links": {
-				"self": "http://glue.mysprykershop.com/customers/DE--25"
+				"self": "https://glue.mysprykershop.com/customers/DE--25"
 			}
 		}
 	}
@@ -247,7 +247,7 @@ To edit a customer account, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer which you want to edit. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
-Request sample: `PATCH http://glue.mysprykershop.com/customers/DE-25`
+Request sample: `PATCH https://glue.mysprykershop.com/customers/DE-25`
 
 ```json
 {

@@ -58,17 +58,17 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 
 | REQUEST | USAGE |
 |-|-|
-| `GET https://glue.mysprykershop.com/customers/DE--1/carts` | Retrieve all carts of a user. |
-| `GET https://glue.mysprykershop.com/customers/DE--1/?include=items` | Retrieve all carts of a user with the items in them included. |
-| `GET https://glue.mysprykershop.com/customers/DE--1/?include=cart-permission-groups` | Retrieve all carts of a user with cart permission groups included. |
-| `GET https://glue.mysprykershop.com/customers/DE--1/?include=shared-carts` | Retrieve all carts of a user with shared carts. |
-| `GET https://glue.mysprykershop.com/customers/DE--1/?include=shared-carts,company-users` | Retrieve all carts of a user with information about shared carts and the company uses they are shared with. |
-| `GET https://glue.mysprykershop.com/customers/DE--1/?include=cart-rules` | Retrieve all carts of a user with cart rules. |
-| `GET https://glue.mysprykershop.com/customers/DE--1/?include=vouchers` | Retrieve all carts of a user with information about applied vouchers. |
-| `GET https://glue.mysprykershop.com/customers/DE--1/?include=promotional-items` | Retrieve information about promotional items for the cart. |
-| `GET https://glue.mysprykershop.com/customers/DE--1/?include=gift-cards` | Retrieve all carts of a user with applied gift cards. |
-| `GET https://glue.mysprykershop.com/customers/DE--1/?include=items,concrete-products,product-options` | Retrieve all carts of a user with items, respective concrete product, and their product options. |
-| `GET https://glue.mysprykershop.com/customers/DE--1/?include=items,concrete-products,product-labels` | Retrieve all carts of a user with information about concrete products and the product labels assigned to the products in the carts. |
+| GET https://glue.mysprykershop.com/customers/DE--1/carts | Retrieve all carts of a user. |
+| GET https://glue.mysprykershop.com/customers/DE--1/?include=items | Retrieve all carts of a user with the items in them included. |
+| GET https://glue.mysprykershop.com/customers/DE--1/?include=cart-permission-groups | Retrieve all carts of a user with cart permission groups included. |
+| GET https://glue.mysprykershop.com/customers/DE--1/?include=shared-carts | Retrieve all carts of a user with shared carts. |
+| GET https://glue.mysprykershop.com/customers/DE--1/?include=shared-carts,company-users | Retrieve all carts of a user with information about shared carts and the company uses they are shared with. |
+| GET https://glue.mysprykershop.com/customers/DE--1/?include=cart-rules | Retrieve all carts of a user with cart rules. |
+| GET https://glue.mysprykershop.com/customers/DE--1/?include=vouchers | Retrieve all carts of a user with information about applied vouchers. |
+| GET https://glue.mysprykershop.com/customers/DE--1/?include=promotional-items | Retrieve information about promotional items for the cart. |
+| GET https://glue.mysprykershop.com/customers/DE--1/?include=gift-cards | Retrieve all carts of a user with applied gift cards. |
+| GET https://glue.mysprykershop.com/customers/DE--1/?include=items,concrete-products,product-options | Retrieve all carts of a user with items, respective concrete product, and their product options. |
+| GET https://glue.mysprykershop.com/customers/DE--1/?include=items,concrete-products,product-labels | Retrieve all carts of a user with information about concrete products and the product labels assigned to the products in the carts. |
 
 ### Response
 
@@ -82,7 +82,6 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     }
 }
 ```
-
 </details>
 
 <details><summary markdown='span'>Response sample: multiple carts</summary>
@@ -146,7 +145,6 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     }
 }
 ```
-
 </details>
 
 <details><summary markdown='span'>Response sample with items</summary>
@@ -439,7 +437,6 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     ]
 }
 ```
-
 </details>
 
 <details><summary markdown='span'>Response sample with cart permission groups</summary>
@@ -575,7 +572,6 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     ]
 }
 ```
-
 </details>
 
 <details><summary markdown='span'>Response sample with shared carts</summary>
@@ -711,7 +707,6 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     ]
 }
 ```
-
 </details>
 
 <details><summary markdown='span'>Response sample with shared carts and company users they are shared with</summary>
@@ -815,7 +810,6 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     ]
 }
 ```
-
 </details>
 
 <details><summary markdown='span'>Response sample with cart rules</summary>
@@ -946,7 +940,6 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     ]
 }
 ```
-
 </details>
 
 <details><summary markdown='span'>Response sample with vouchers</summary>
@@ -1016,7 +1009,6 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     ]
 }
 ```
-
 </details>
 
 <details><summary markdown='span'>Response sample with a promotional item</summary>
@@ -1082,7 +1074,6 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     ]
 }
 ```
-
 </details>
 
 <details><summary markdown='span'>Response sample with gift cards applied</summary>
@@ -1151,9 +1142,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
         }
     ]
 }
-
 ```
-
 </details>
 
 <details><summary markdown='span'>Response sample with items, concrete products, and product options</summary>
@@ -1406,7 +1395,6 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     ]
 }
 ```
-
 </details>
 
 <details><summary markdown='span'>Response sample with product labels</summary>
@@ -1565,7 +1553,6 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     ]
 }
 ```
-
 </details>
 
 #### General cart information

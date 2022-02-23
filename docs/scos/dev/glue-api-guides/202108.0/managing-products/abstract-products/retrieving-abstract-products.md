@@ -27,7 +27,6 @@ For detailed information on the modules that provide the API functionality and r
 * [Glue API: Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-price-feature-integration.html)
 
 
-
 ## Retrieve an abstract product
 
 To retrieve general information about an abstract product, send the request:
@@ -54,36 +53,30 @@ To retrieve general information about an abstract product, send the request:
 To include `bundled products`, include `concrete-products` and `bundled-products` into the request.
 
 {% endinfo_block %}
+
 {% info_block warningBox "Performance" %}
 
 * For performance and bandwidth usage optimization, we recommend filtering out only the needed information using the `fields` string parameter.
 
-* If you include more resources, you can still use the `fields` string parameter to return only the needed fields. For example, `GET http://glue.mysprykershop.com/abstract-products/001?include=concrete-products&fields[abstract-products]=name,description&fields[concrete-products]=name,image`.
-
+* If you include more resources, you can still use the `fields` string parameter to return only the needed fields. For example, `GET https://glue.mysprykershop.com/abstract-products/001?include=concrete-products&fields[abstract-products]=name,description&fields[concrete-products]=name,image`.
 
 {% endinfo_block %}
 
 
 | REQUEST | USAGE |
 | --- | --- |
-| `GET http://glue.mysprykershop.com/abstract-products/001` | Retrieve information about the abstract product with SKU `001`. |
-| `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-image-sets` | Retrieve information about the abstract product with SKU `001` with its image sets. |
-| `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-availabilities` | Retrieve information about the abstract product with SKU `001` with its availability. |
-| `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `001` with its default prices. |
-| `GET https://glue.mysprykershop.com/abstract-products/093?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `093` with its prices (default and [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html)). |
-| `GET https://glue.mysprykershop.com/abstract-products/001?include=category-nodes` | Retrieve information about the abstract product with SKU `001` with the category nodes it belongs to. |
-| `GET https://glue.mysprykershop.com/abstract-products/001?include=product-tax-sets` | Retrieve information about the abstract product with SKU `001` with its tax sets. |
-| `GET http://glue.mysprykershop.com/abstract-products/001?include=product-labels` | Retrieve information about the abstract product with SKU `001` with its assigned product lables. |
-| `GET https://glue.mysprykershop.com/abstract-products/001?include=concrete-products` | Retrieve information about the abstract product with SKU `001` with its concrete products. |
-| `GET https://glue.mysprykershop.com/abstract-products/001?include=product-options`| Retrieve information about the abstract product with SKU `001` with its product options. |
-| `GET https://glue.mysprykershop.com/abstract-products/035?include=product-reviews` | Retrieve information about the abstract product with SKU `001` with its product reviews. |
-| `GET http://glue.mysprykershop.com/abstract-products/214?included=bundled-products,concrete-products,abstract-products` | Retrieve the abstract product with `SKU 214`, its concrete product bundle and the bundled products inside. Retrieve the abstract products that own the concrete product bundle and the concrete bundled products inside it. |
-
-
-
-
-
-
+| GET https://glue.mysprykershop.com/abstract-products/001 | Retrieve information about the abstract product with SKU `001`. |
+| GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-image-sets | Retrieve information about the abstract product with SKU `001` with its image sets. |
+| GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-availabilities | Retrieve information about the abstract product with SKU `001` with its availability. |
+| GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-prices | Retrieve information about the abstract product with SKU `001` with its default prices. |
+| GET https://glue.mysprykershop.com/abstract-products/093?include=abstract-product-prices | Retrieve information about the abstract product with SKU `093` with its prices (default and [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html)). |
+| GET https://glue.mysprykershop.com/abstract-products/001?include=category-nodes | Retrieve information about the abstract product with SKU `001` with the category nodes it belongs to. |
+| GET https://glue.mysprykershop.com/abstract-products/001?include=product-tax-sets | Retrieve information about the abstract product with SKU `001` with its tax sets. |
+| GET https://glue.mysprykershop.com/abstract-products/001?include=product-labels | Retrieve information about the abstract product with SKU `001` with its assigned product labels. |
+| GET https://glue.mysprykershop.com/abstract-products/001?include=concrete-products | Retrieve information about the abstract product with SKU `001` with its concrete products. |
+| GET https://glue.mysprykershop.com/abstract-products/001?include=product-options| Retrieve information about the abstract product with SKU `001` with its product options. |
+| GET https://glue.mysprykershop.com/abstract-products/035?include=product-reviews | Retrieve information about the abstract product with SKU `001` with its product reviews. |
+| GET https://glue.mysprykershop.com/abstract-products/214?included=bundled-products,concrete-products,abstract-products | Retrieve the abstract product with `SKU 214`, its concrete product bundle and the bundled products inside. Retrieve the abstract products that own the concrete product bundle and the concrete bundled products inside it. |
 
 
 ### Response
@@ -143,15 +136,14 @@ To include `bundled products`, include `concrete-products` and `bundled-products
             "url": "/en/canon-ixus-160-1"
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/abstract-products/001"
+            "self": "https://glue.mysprykershop.com/abstract-products/001"
         }
     }
 }
 ```
+</details>
 
- </details>
-
- <details>
+<details>
 <summary markdown='span'>Response sample with image sets</summary>
 
 ```json
@@ -243,11 +235,10 @@ To include `bundled products`, include `concrete-products` and `bundled-products
     ]
 }
 ```
+</details>
 
- </details>
 
-
- <details>
+<details>
 <summary markdown='span'>Response sample with product availability</summary>
 
 ```json
@@ -330,8 +321,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
     ]
 }
 ```
-
- </details>
+</details>
 
 <details> <summary markdown='span'>Response sample with default product prices</summary>
 
@@ -436,7 +426,6 @@ To include `bundled products`, include `concrete-products` and `bundled-products
     ]
 }
 ```
-
 </details>
 
 <details> <summary markdown='span'>Response sample with volume prices</summary>
@@ -551,7 +540,6 @@ To include `bundled products`, include `concrete-products` and `bundled-products
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -732,8 +720,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
     ]
 }
 ```
-
- </details>
+</details>
 
 
 <details>
@@ -895,8 +882,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
     ]
 }
 ```
-
- </details>
+</details>
 
 
 <details>
@@ -935,7 +921,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
                 "frontEndReference": ""
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-labels/3"
+                "self": "https://glue.mysprykershop.com/product-labels/3"
             }
         },
         {
@@ -948,14 +934,13 @@ To include `bundled products`, include `concrete-products` and `bundled-products
                 "frontEndReference": "highlight"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-labels/5"
+                "self": "https://glue.mysprykershop.com/product-labels/5"
             }
         }
     ]
 }
 ```
-
- </details>
+</details>
 
 
 <details>
@@ -1068,8 +1053,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
     ]
 }
 ```
-
- </details>
+</details>
 
 
 <details>
@@ -1176,8 +1160,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
     ]
 }
 ```
-
- </details>
+</details>
 
 
 
@@ -1300,8 +1283,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
     ]
 }
 ```
-
- </details>
+</details>
 
 
 
@@ -1926,10 +1908,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
     ]
 }
 ```
-
 </details>
-
-
 
 
 
@@ -1962,6 +1941,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 | product-options | currencyIsoCode | String | Specifies the ISO 4217 code of the currency in which the product option price is specified. |
 
 For the attributes of other included resources, see:
+
 * [Retrieve image sets of an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html#abstract-product-sets-response-attributes)
 * [Retrieve availability of an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-availability.html#abstract-product-availability-response-attributes)
 * [Retrieve prices of an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html)

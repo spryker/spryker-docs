@@ -53,8 +53,8 @@ To get related items of an abstract product, send the request:
 
 | REQUEST | USAGE |
 | --- | --- |
-| `GET http://glue.mysprykershop.com/abstract-products/122/related-products` | Retrieve related products of the specified product. |
-| `GET http://glue.mysprykershop.com/abstract-products/122/related-products?include=product-labels` | Retrieve related products of the specified product. Product labels assigned to the related products are included. |
+| GET https://glue.mysprykershop.com/abstract-products/122/related-products | Retrieve related products of the specified product. |
+| GET https://glue.mysprykershop.com/abstract-products/122/related-products?include=product-labels | Retrieve related products of the specified product. Product labels assigned to the related products are included. |
 
 ### Response
 
@@ -359,7 +359,7 @@ To get related items of an abstract product, send the request:
                 "url": "/en/lenovo-thinkcentre-e73-128"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/abstract-products/128"
+                "self": "https://glue.mysprykershop.com/abstract-products/128"
             },
             "relationships": {
                 "product-labels": {
@@ -435,7 +435,7 @@ To get related items of an abstract product, send the request:
                 "url": "/en/lenovo-thinkcenter-e73-129"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/abstract-products/129"
+                "self": "https://glue.mysprykershop.com/abstract-products/129"
             }
         },
         {
@@ -501,7 +501,7 @@ To get related items of an abstract product, send the request:
                 "url": "/en/lenovo-thinkstation-p300-130"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/abstract-products/130"
+                "self": "https://glue.mysprykershop.com/abstract-products/130"
             }
         },
         {
@@ -555,12 +555,12 @@ To get related items of an abstract product, send the request:
                 "url": "/en/lenovo-thinkstation-p900-131"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/abstract-products/131"
+                "self": "https://glue.mysprykershop.com/abstract-products/131"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/abstract-products/122/related-products?include=product-labels"
+        "self": "https://glue.mysprykershop.com/abstract-products/122/related-products?include=product-labels"
     },
     "included": [
         {
@@ -573,13 +573,12 @@ To get related items of an abstract product, send the request:
                 "frontEndReference": "highlight"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-labels/5"
+                "self": "https://glue.mysprykershop.com/product-labels/5"
             }
         }
     ]
 }
 ```
-
 </details>
 
 <a name="related-product-attributes"></a>
@@ -628,8 +627,8 @@ To get upselling items for all products in a cart of a registered customer, send
 
 | REQUEST | USAGE |
 | --- | --- |
-| `GET GET http://mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/up-selling-products` | Retrieve upselling products of the specified cart. |
-| `GET http://glue.mysprykershop.com/carts/f9a3f045-02c2-5d47-b397-8ac1f5c63e27/up-selling-products?include=product-labels` | Retrieve upselling products of the specified cart. Product labels assigned to the upselling products are included. |
+| GET GET http://mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/up-selling-products | Retrieve upselling products of the specified cart. |
+| GET https://glue.mysprykershop.com/carts/f9a3f045-02c2-5d47-b397-8ac1f5c63e27/up-selling-products?include=product-labels | Retrieve upselling products of the specified cart. Product labels assigned to the upselling products are included. |
 
 ### Response
 
@@ -691,7 +690,7 @@ To get upselling items for all products in a cart of a registered customer, send
                 "url": "/en/asus-zenpad-z380c-1b-163"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/abstract-products/163"
+                "self": "https://glue.mysprykershop.com/abstract-products/163"
             }
         },
         {
@@ -746,7 +745,7 @@ To get upselling items for all products in a cart of a registered customer, send
                 "url": "/en/asus-zenpad-z380c-1b-164"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/abstract-products/164"
+                "self": "https://glue.mysprykershop.com/abstract-products/164"
             }
         },
         {
@@ -808,7 +807,7 @@ To get upselling items for all products in a cart of a registered customer, send
                 "url": "/en/asus-zenpad-z580ca-165"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/abstract-products/165"
+                "self": "https://glue.mysprykershop.com/abstract-products/165"
             }
         },
         {
@@ -872,16 +871,15 @@ To get upselling items for all products in a cart of a registered customer, send
                 "url": "/en/asus-zenpad-z580ca-1b-166"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/abstract-products/166"
+                "self": "https://glue.mysprykershop.com/abstract-products/166"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/up-selling-products"
+        "self": "https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/up-selling-products"
     }
 }
 ```
-
 </details>
 
 <details>
@@ -973,7 +971,6 @@ To get upselling items for all products in a cart of a registered customer, send
         }
     ]
 }
-
 ```
 </details>
 
@@ -1004,8 +1001,8 @@ To retrieve upselling products of a guest cart, send the request:
 
 | REQUEST | USAGE |
 | --- | --- |
-| `GET http://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/up-selling-products` | Retrieve upselling products of the specified cart. |
-| `GET http://glue.mysprykershop.com/guest-carts/f9a3f045-02c2-5d47-b397-8ac1f5c63e27/up-selling-products?include=product-labels` | Retrieve upselling products of the specified cart. Product labels assigned to the upselling products are included. |
+| GET https://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/up-selling-products | Retrieve upselling products of the specified cart. |
+| GET https://glue.mysprykershop.com/guest-carts/f9a3f045-02c2-5d47-b397-8ac1f5c63e27/up-selling-products?include=product-labels | Retrieve upselling products of the specified cart. Product labels assigned to the upselling products are included. |
 
 ### Response
 
@@ -1208,7 +1205,6 @@ To retrieve upselling products of a guest cart, send the request:
     }
 }
 ```
-
 </details>
 
 <details>
@@ -1246,7 +1242,7 @@ To retrieve upselling products of a guest cart, send the request:
                 "frontEndReference": ""
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-labels/3"
+                "self": "https://glue.mysprykershop.com/product-labels/3"
             }
         },
         {
@@ -1259,7 +1255,7 @@ To retrieve upselling products of a guest cart, send the request:
                 "frontEndReference": "highlight"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-labels/5"
+                "self": "https://glue.mysprykershop.com/product-labels/5"
             }
         },
         {
@@ -1309,7 +1305,6 @@ To retrieve upselling products of a guest cart, send the request:
     ]
 }
 ```
-
 </details>
 
 See [Retrieving Related Items of an Abstract Product](#related-product-attributes) for the list of response attributes.

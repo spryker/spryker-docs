@@ -39,7 +39,7 @@ To retrieve a navigation tree with detailed information on each node, send a GET
 
 /navigations/{% raw %}{{{% endraw %}navigation_id{% raw %}}}{% endraw %}
 
-Sample request: GET *http://glue.mysprykershop.com/navigations/**SOCIAL_LINKS***
+Sample request: GET *https://glue.mysprykershop.com/navigations/**SOCIAL_LINKS***
 
 where **SOCIAL_LINKS** is the ID of the navigation tree you want to retrieve.
 
@@ -132,7 +132,7 @@ In addition to that, each node element exposes the following fields:
             ]
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/navigations/SOCIAL_LINKS"
+            "self": "https://glue.mysprykershop.com/navigations/SOCIAL_LINKS"
         }
     }
 }
@@ -160,7 +160,7 @@ To include the category information, you need to extend the response of the reso
 | category-nodes | children | Array | Specifies an array of node elements that are nested within the current category. |
 | category-nodes | parents | Array | Specifies an array of node elements that are parents for the current category. |
 
-Sample Request: GET *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?**include=category-nodes***
+Sample Request: GET *https://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?**include=category-nodes***
 
 <details open>
 <summary markdown='span'>Sample Response</summary>
@@ -516,7 +516,7 @@ Sample Request: GET *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?*
       "isActive": true
     },
     "links": {
-      "self": "http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION"
+      "self": "https://glue.mysprykershop.com/navigations/MAIN_NAVIGATION"
     },
     "relationships": {
       "category-nodes": {
@@ -605,7 +605,7 @@ Sample Request: GET *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?*
         "order": 60
       },
       "links": {
-        "self": "http://glue.mysprykershop.com/category-nodes/13"
+        "self": "https://glue.mysprykershop.com/category-nodes/13"
       }
     },
     {
@@ -635,7 +635,7 @@ Sample Request: GET *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?*
         "order": 50
       },
       "links": {
-        "self": "http://glue.mysprykershop.com/category-nodes/14"
+        "self": "https://glue.mysprykershop.com/category-nodes/14"
       }
     },
     {
@@ -677,7 +677,7 @@ Sample Request: GET *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?*
         "order": 70
       },
       "links": {
-        "self": "http://glue.mysprykershop.com/category-nodes/10"
+        "self": "https://glue.mysprykershop.com/category-nodes/10"
       }
     },
     {
@@ -719,7 +719,7 @@ Sample Request: GET *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?*
         "order": 80
       },
       "links": {
-        "self": "http://glue.mysprykershop.com/category-nodes/12"
+        "self": "https://glue.mysprykershop.com/category-nodes/12"
       }
     },
     {
@@ -761,7 +761,7 @@ Sample Request: GET *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?*
         "order": 80
       },
       "links": {
-        "self": "http://glue.mysprykershop.com/category-nodes/11"
+        "self": "https://glue.mysprykershop.com/category-nodes/11"
       }
     },
     {
@@ -803,7 +803,7 @@ Sample Request: GET *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?*
         "order": 70
       },
       "links": {
-        "self": "http://glue.mysprykershop.com/category-nodes/9"
+        "self": "https://glue.mysprykershop.com/category-nodes/9"
       }
     },
     {
@@ -845,7 +845,7 @@ Sample Request: GET *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?*
         "order": 100
       },
       "links": {
-        "self": "http://glue.mysprykershop.com/category-nodes/4"
+        "self": "https://glue.mysprykershop.com/category-nodes/4"
       }
     },
     {
@@ -887,7 +887,7 @@ Sample Request: GET *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?*
         "order": 90
       },
       "links": {
-        "self": "http://glue.mysprykershop.com/category-nodes/3"
+        "self": "https://glue.mysprykershop.com/category-nodes/3"
       }
     },
     {
@@ -929,7 +929,7 @@ Sample Request: GET *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?*
         "order": 100
       },
       "links": {
-        "self": "http://glue.mysprykershop.com/category-nodes/6"
+        "self": "https://glue.mysprykershop.com/category-nodes/6"
       }
     },
     {
@@ -971,7 +971,7 @@ Sample Request: GET *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?*
         "order": 90
       },
       "links": {
-        "self": "http://glue.mysprykershop.com/category-nodes/7"
+        "self": "https://glue.mysprykershop.com/category-nodes/7"
       }
     },
     {
@@ -1013,7 +1013,7 @@ Sample Request: GET *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?*
         "order": 80
       },
       "links": {
-        "self": "http://glue.mysprykershop.com/category-nodes/8"
+        "self": "https://glue.mysprykershop.com/category-nodes/8"
       }
     },
     {
@@ -1077,7 +1077,7 @@ Sample Request: GET *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?*
         "order": 100
       },
       "links": {
-        "self": "http://glue.mysprykershop.com/category-nodes/5"
+        "self": "https://glue.mysprykershop.com/category-nodes/5"
       }
     },
     {
@@ -1130,7 +1130,7 @@ Sample Request: GET *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?*
         "order": 90
       },
       "links": {
-        "self": "http://glue.mysprykershop.com/category-nodes/2"
+        "self": "https://glue.mysprykershop.com/category-nodes/2"
       }
     }
   ]

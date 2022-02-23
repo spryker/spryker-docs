@@ -33,7 +33,7 @@ To subscribe to availability notifications for an out-of-stock product, send the
 
 <details><summary markdown='span'>Request sample</summary>
 
-POST https://glue.mysprykershop.com/availability-notifications
+`POST https://glue.mysprykershop.com/availability-notifications`
 
 ```json
 {
@@ -73,14 +73,13 @@ POST https://glue.mysprykershop.com/availability-notifications
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 |-|-|-|
 | localeName | string | Locale of the subscribed customer. |
 | email | string | Customer email where the product availability notifications are sent to. |
-| sku | string | SKU of the product the customer recieves notifications about. |
+| sku | string | SKU of the product the customer receives notifications about. |
 
 ## Unsubscribe from availability notifications
 

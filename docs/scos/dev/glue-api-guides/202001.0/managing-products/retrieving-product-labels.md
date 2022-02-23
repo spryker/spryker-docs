@@ -29,7 +29,7 @@ To retrieve a product label, send the following GET request:
 
 **/product-labels/{% raw %}{{{% endraw %}label-id{% raw %}}}{% endraw %}**
 
-Sample request: *GET http://glue.mysprykershop.com/product-labels/3*
+Sample request: *GET https://glue.mysprykershop.com/product-labels/3*
 
 where **3** is the ID of the label you want to retrieve.
 
@@ -65,7 +65,7 @@ The endpoint responds with information on the requested product label, including
             "frontEndReference": ""
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/product-labels/3"
+            "self": "https://glue.mysprykershop.com/product-labels/3"
         }
     }
 }
@@ -86,7 +86,7 @@ To retrieve all labels for a product, send a GET request to the following endpoi
 * **/concrete-products/{% raw %}{{{% endraw %}product-sku{% raw %}}}{% endraw %}/abstract-alternative-products?include=product-labels** - for *abstract alternative* products;
 * **/concrete-products/{% raw %}{{{% endraw %}product-sku{% raw %}}}{% endraw %}/concrete-alternative-products?include=product-labels** - for *concrete alternative* products.
 
-Sample request: *GET http://glue.mysprykershop.com/abstract-products/001?include=product-labels*
+Sample request: *GET https://glue.mysprykershop.com/abstract-products/001?include=product-labels*
 
 where **001** is the SKU of the product you need labels for.
 
@@ -128,7 +128,7 @@ The endpoint responds with information on the requested product, and the labels 
                 "frontEndReference": ""
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-labels/3"
+                "self": "https://glue.mysprykershop.com/product-labels/3"
             }
         },
         {
@@ -141,7 +141,7 @@ The endpoint responds with information on the requested product, and the labels 
                 "frontEndReference": "highlight"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-labels/5"
+                "self": "https://glue.mysprykershop.com/product-labels/5"
             }
         }
     ]
@@ -206,7 +206,7 @@ The endpoint responds with information on the requested cart, including the prod
                 "frontEndReference": ""
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-labels/3"
+                "self": "https://glue.mysprykershop.com/product-labels/3"
             }
         },
         {
@@ -219,7 +219,7 @@ The endpoint responds with information on the requested cart, including the prod
                 "frontEndReference": "highlight"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-labels/5"
+                "self": "https://glue.mysprykershop.com/product-labels/5"
             }
         },
         {
@@ -279,7 +279,7 @@ To retrieve labels for all products in a wishlist, send a GET request to the fol
 * */wishlists?include=wishlist-items,concrete-products,product-labels* - **all** wishlists of a customer;
 * */wishlists/**{% raw %}{{{% endraw %}wishlist_ID{% raw %}}}{% endraw %}**?include=wishlist-items,concrete-products,product-labels* - specific wishlist.
 
-Sample request: `GET http://glue.mysprykershop.com/wishlists/19154981-f490-56b5-9537-359703a2ed08?include=wishlist-items,concrete-products,product-labels`
+Sample request: `GET https://glue.mysprykershop.com/wishlists/19154981-f490-56b5-9537-359703a2ed08?include=wishlist-items,concrete-products,product-labels`
 
 where **19154981-f490-56b5-9537-359703a2ed08** is the ID of the wishlist you need labels for.
 
@@ -321,7 +321,7 @@ The endpoint responds with information on the requested wishlist, including the 
                 "frontEndReference": ""
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-labels/3"
+                "self": "https://glue.mysprykershop.com/product-labels/3"
             }
         },
         {
@@ -334,7 +334,7 @@ The endpoint responds with information on the requested wishlist, including the 
                 "frontEndReference": "highlight"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-labels/5"
+                "self": "https://glue.mysprykershop.com/product-labels/5"
             }
         },
         {

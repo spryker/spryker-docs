@@ -21,9 +21,11 @@ This endpoint allows retrieving information about banner content items.
 
 
 ## Installation
+
 For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-feature-integration.html).
 
 ## Retrieve a banner content item
+
 To retrieve information about a banner content item, send the request:
 
 ***
@@ -38,7 +40,7 @@ To retrieve information about a banner content item, send the request:
 
 | HEADER KEY | REQUIRED | DESCRIPTION |
 | --- | --- | --- |
-| locale |  | Defines the locale to retreive the content item information for. If not specified, the endpoint returns the information for the *default* locale.  |
+| locale |  | Defines the locale to retrieve the content item information for. If not specified, the endpoint returns the information for the *default* locale.  |
 
 Request sample : `GET https://glue.mysprykershop.com/content-banners/br-3`
 

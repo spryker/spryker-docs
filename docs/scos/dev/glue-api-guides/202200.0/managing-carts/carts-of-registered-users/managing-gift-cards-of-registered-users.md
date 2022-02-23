@@ -85,7 +85,9 @@ Response sample: `POST https://glue.mysprykershop.com/carts/8ef901fe-fe47-5569-9
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | code | String | |&check; | Code of the gift card sent to the specified email address after the gift card was purchased. |
+
 ### Response
+
 Response sample:
 
 ```json
@@ -149,6 +151,7 @@ Response sample:
     ]
 }
 ```
+
 For the attributes of the registered user's carts, see [Creating carts of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart).
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |

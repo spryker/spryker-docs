@@ -208,7 +208,7 @@ Let us consider the following REST Response example. It contains information on 
 
 **Request:**
 
-*GET http://glue.mysprykershop.com/wishlists/cbf84323-e54d-5774-8c02-4c90e107afe6*
+*GET https://glue.mysprykershop.com/wishlists/cbf84323-e54d-5774-8c02-4c90e107afe6*
 
 ```js
 	{
@@ -222,7 +222,7 @@ Let us consider the following REST Response example. It contains information on 
             "updatedAt": "2019-07-05 13:13:52.811524"
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/wishlists/cbf84323-e54d-5774-8c02-4c90e107afe6"
+            "self": "https://glue.mysprykershop.com/wishlists/cbf84323-e54d-5774-8c02-4c90e107afe6"
         }
     }
 }
@@ -233,7 +233,7 @@ If we add relationships to the `wishlist-items` and `concrete-products` resource
 
 **Request:**
 
-*GET http://glue.mysprykershop.com/wishlists/cbf84323-e54d-5774-8c02-4c90e107afe6?include=wishlist-items,concrete-products*
+*GET https://glue.mysprykershop.com/wishlists/cbf84323-e54d-5774-8c02-4c90e107afe6?include=wishlist-items,concrete-products*
 
 <details open>
 <summary markdown='span'>Code sample:</summary>
@@ -290,7 +290,7 @@ If we add relationships to the `wishlist-items` and `concrete-products` resource
                 }
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/021_21081475"
+                "self": "https://glue.mysprykershop.com/concrete-products/021_21081475"
             }
         },
         {
@@ -300,7 +300,7 @@ If we add relationships to the `wishlist-items` and `concrete-products` resource
                 "sku": "021_21081475"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/wishlist-items/021_21081475"
+                "self": "https://glue.mysprykershop.com/concrete-products/wishlist-items/021_21081475"
             },
             "relationships": {
                 "concrete-products": {

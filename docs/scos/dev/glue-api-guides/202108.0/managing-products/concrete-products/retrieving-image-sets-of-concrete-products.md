@@ -37,7 +37,8 @@ To retrieve image sets of a concrete product, send the request:
 | ***{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}*** | SKU of a concrete product to get the image sets of. |
 
 ### Request
-Request sample : `GET http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-image-sets`
+
+Request sample : `GET https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-image-sets`
 
 ### Response
 
@@ -64,16 +65,15 @@ Request sample : `GET http://glue.mysprykershop.com/concrete-products/001_259040
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/177_25913296/concrete-product-image-sets"
+                "self": "https://glue.mysprykershop.com/concrete-products/177_25913296/concrete-product-image-sets"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/concrete-products/177_25913296/concrete-product-image-sets"
+        "self": "https://glue.mysprykershop.com/concrete-products/177_25913296/concrete-product-image-sets"
     }
 }
 ```
-
 </details>
 
 <a name="concrete-image-sets-response-attributes"></a>

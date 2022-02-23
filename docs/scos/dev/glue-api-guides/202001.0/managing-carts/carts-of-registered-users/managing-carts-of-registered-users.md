@@ -63,7 +63,7 @@ By default, there are 2 levels of permissions for shared carts: **read-only** an
 For more details, see section *Retrieving Cart Permission Groups* in [Sharing Company User Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html).
 {% endinfo_block %}
 
-To distinguish whether a specific cart is owned by a user directly or shared with them, you need to extend the responses of the endpoints with the **cart-permission-groups** resource relationship. For example, if you want to get all carts available to a company user and distinguish which of them are shared, send the following request: *GET http://glue.mysprykershop.com/carts?**include=cart-permission-groups***. If a cart is shared with the user, it will contain the relationship, while if a cart is owned by the user directly, the relationship will not be present.
+To distinguish whether a specific cart is owned by a user directly or shared with them, you need to extend the responses of the endpoints with the **cart-permission-groups** resource relationship. For example, if you want to get all carts available to a company user and distinguish which of them are shared, send the following request: *GET https://glue.mysprykershop.com/carts?**include=cart-permission-groups***. If a cart is shared with the user, it will contain the relationship, while if a cart is owned by the user directly, the relationship will not be present.
 
 {% info_block infoBox "Info" %}
 For details on using the endpoint, see section *Retrieving Carts*.
@@ -111,7 +111,7 @@ The following example represents **2** carts available to a user, where:
                 "isDefault": true
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/cart-permission-groups/1"
+                "self": "https://glue.mysprykershop.com/cart-permission-groups/1"
             }
         }
     ]
@@ -128,7 +128,7 @@ To create a cart for a registered user, send a *POST* request to the following e
 /carts
 
 ### Request
-Sample request: *POST http://glue.mysprykershop.com/carts*
+Sample request: *POST https://glue.mysprykershop.com/carts*
 
 {% info_block warningBox "Note" %}
 Carts created via Glue API are always set as the default carts for the user.
@@ -229,7 +229,7 @@ Totals
                 "isDefault": true
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab"
+                "self": "https://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab"
             }
         }
     ]
@@ -250,13 +250,13 @@ To access all available carts, send a GET request to the following endpoint:
 
 /carts
 
-Sample request: *GET http://glue.mysprykershop.com/carts*
+Sample request: *GET https://glue.mysprykershop.com/carts*
 
 To get a specific cart by ID, use the following endpoint:
 
 /carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}
 
-Sample request: *GET http://glue.mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054*
+Sample request: *GET https://glue.mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054*
 
 where **4741fc84-2b9b-59da-bb8d-f4afab5be054** is the ID of the cart you need.
 
@@ -321,12 +321,12 @@ Totals
                 }
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/f8cfd611-4611-57d7-bc70-f81cee96a6af"
+                "self": "https://glue.mysprykershop.com/carts/f8cfd611-4611-57d7-bc70-f81cee96a6af"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/carts"
+        "self": "https://glue.mysprykershop.com/carts"
     }
 }
 ```
@@ -337,7 +337,7 @@ Totals
 {
     "data": [],
     "links": {
-        "self": "http://glue.mysprykershop.com/carts"
+        "self": "https://glue.mysprykershop.com/carts"
     }
 }
 ```
@@ -346,7 +346,7 @@ To find out which products are placed in the cart, you can extend the response o
 
 Apart from that, you can identify permissions granted to users for each cart shared with them. To do so, extend the response with the cart-permission-groups resource relationship. 
 
-Sample request: *GET http://glue.mysprykershop.com/carts?include=items,concrete-products,cart-permission-groups*
+Sample request: *GET https://glue.mysprykershop.com/carts?include=items,concrete-products,cart-permission-groups*
 
 The response will include the following additional attributes:
 
@@ -410,7 +410,7 @@ The response will include the following additional attributes:
                 "isDefault": true
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab?include=items"
+                "self": "https://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab?include=items"
             },
             "relationships": {
                 "items": {
@@ -425,7 +425,7 @@ The response will include the following additional attributes:
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/carts?include=items"
+        "self": "https://glue.mysprykershop.com/carts?include=items"
     },
     "included": [
         {
@@ -463,7 +463,7 @@ The response will include the following additional attributes:
                 "customer": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab/items/136_24425591"
+                "self": "https://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab/items/136_24425591"
             }
         }
     ]
@@ -485,7 +485,7 @@ To add items to a cart, send a POST request to the following endpoint:
 
 ### Request
 
-Sample request: *POST http://glue.mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054/items*
+Sample request: *POST https://glue.mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054/items*
 
 where **4741fc84-2b9b-59da-bb8d-f4afab5be054** is the ID of the cart you need.
 
@@ -618,7 +618,7 @@ You cannot delete a cart if it is the customer's only cart. If you attempt to de
 {% endinfo_block %}
 
 ### Request
-Sample request: *DELETE http://glue.mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054*
+Sample request: *DELETE https://glue.mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054*
 
 where **4741fc84-2b9b-59da-bb8d-f4afab5be054** is the ID of the cart you want to delete.
 

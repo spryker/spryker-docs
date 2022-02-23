@@ -127,7 +127,7 @@ For SEO purposes, Spryker automatically generates Search Engine Friendly (SEF) U
 
 SEF URLs can significantly boost the SEO presence of your product store and increase its search engine ranking.
 
-To facilitate their usage, Spryker Glue provides an endpoint that allows resolving a SEO-friendly URL, for example, `http://mysprykershop.com/en/canon-powershot-n-35`, into a URL of the relevant product resource in Glue API, for example, `http://glue.mysprykershop.com/abstract-products/035`. This capability is provided by the **URLs API**.
+To facilitate their usage, Spryker Glue provides an endpoint that allows resolving a SEO-friendly URL, for example, `http://mysprykershop.com/en/canon-powershot-n-35`, into a URL of the relevant product resource in Glue API, for example, `https://glue.mysprykershop.com/abstract-products/035`. This capability is provided by the **URLs API**.
 
 ## Installation
 To enable the API functionality, you need to install version **201911** of Spryker Glue API. For detailed information and installation instructions, see [GLUE: Spryker Core Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html).
@@ -138,7 +138,7 @@ To resolve a SEO-friendly link into a Glue URL, send a GET request to the follow
 **/url-resolver**
 
 ### Request
-Sample request: *GET http://glue.mysprykershop.com/url-resolver?url=**/de/acer-aspire-s7-134***
+Sample request: *GET https://glue.mysprykershop.com/url-resolver?url=**/de/acer-aspire-s7-134***
 
 where **/de/acer-aspire-s7-134** is the SEF URL you want to resolve, without the server name and scheme.
 
@@ -174,12 +174,12 @@ If the request was successful, the endpoint responds with the type and unique id
                 "entityId": "134"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/url-resolver?url=/de/acer-aspire-s7-134"
+                "self": "https://glue.mysprykershop.com/url-resolver?url=/de/acer-aspire-s7-134"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/url-resolver?url=/de/acer-aspire-s7-134"
+        "self": "https://glue.mysprykershop.com/url-resolver?url=/de/acer-aspire-s7-134"
     }
 }
 ```
@@ -196,19 +196,19 @@ If the request was successful, the endpoint responds with the type and unique id
                 "entityId": "5"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/url-resolver?url=/en/computer"
+                "self": "https://glue.mysprykershop.com/url-resolver?url=/en/computer"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/url-resolver?url=/en/computer"
+        "self": "https://glue.mysprykershop.com/url-resolver?url=/en/computer"
     }
 }
 ```
 
 **Glue Resource Link**
 
-Using the information of the above sample response and the Glue server name, you can construct the Glue resource URL, for example: *http://glue.mysprykershop.com/abstract-products/134*.
+Using the information of the above sample response and the Glue server name, you can construct the Glue resource URL, for example: *https://glue.mysprykershop.com/abstract-products/134*.
 
 ### Possible Errors
 

@@ -27,7 +27,7 @@ This endpoint returns only [active](/docs/marketplace/user/features/{{page.versi
 
 ### Request
 
-Request sample: `GET http://glue.mysprykershop.com/merchants/MER000001/merchant-addresses`
+Request sample: `GET https://glue.mysprykershop.com/merchants/MER000001/merchant-addresses`
 
 ### Response
 

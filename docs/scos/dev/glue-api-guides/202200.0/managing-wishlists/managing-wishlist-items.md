@@ -15,6 +15,7 @@ This endpoint allows you to add and remove items from wishlists.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
+
 * [Wishlist API Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-wishlist-feature-integration.html)
 * [Glue API - Product Configuration feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-configuration-feature-integration.html)
 
@@ -103,7 +104,6 @@ Request sample: `POST https://glue.mysprykershop.com/wishlists/09264b7f-1894-58e
     }
 }
 ```
-
 </details>
 
 <a name="request-attributes-description"></a>
@@ -122,7 +122,7 @@ For attribute descriptions of product prices, see [Retrieving abstract product p
 
 ### Response
 
-Resonse sample:
+Response sample:
 
 ```json
 {
@@ -202,7 +202,6 @@ Resonse sample:
     }
 }
 ```
-
 </details>
 
 <a name="wishlist-items-response-attributes"></a>
@@ -301,7 +300,6 @@ To update a wishlist item, send the request:
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -381,7 +379,6 @@ For attribute descriptions of product prices, see [Retrieving abstract product p
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

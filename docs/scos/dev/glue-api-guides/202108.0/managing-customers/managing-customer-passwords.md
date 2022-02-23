@@ -44,7 +44,7 @@ To change a customer's password, send the request:
 | Authorization | string | &check; | Alphanumeric string that authenticates the customer you want to change the password of. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
 
-Request sample: `PATCH http://glue.mysprykershop.com/customer-password/DE--21`
+Request sample: `PATCH https://glue.mysprykershop.com/customer-password/DE--21`
 
 ```json
 {

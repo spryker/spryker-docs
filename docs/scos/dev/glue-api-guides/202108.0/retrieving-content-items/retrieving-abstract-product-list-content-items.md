@@ -50,9 +50,8 @@ To retrieve information about an abstract product list content item, send the re
 
 | SAMPLE REQUEST | USAGE |
 | --- | --- |
-| `GET https://glue.mysprykershop.com/content-product-abstract-lists/apl-1` | Retrieve information about the abstract product list with ID `apl-1`. |
-| `GET https://glue.mysprykershop.com/content-product-abstract-lists/apl-1?include=abstract-products` | Retrieve information about the abstract product list with id `apl-1`. Include information about its abstact products. |
-.
+| GET https://glue.mysprykershop.com/content-product-abstract-lists/apl-1 | Retrieve information about the abstract product list with ID `apl-1`. |
+| GET https://glue.mysprykershop.com/content-product-abstract-lists/apl-1?include=abstract-products | Retrieve information about the abstract product list with id `apl-1`. Include information about its abstract products. |
 
 <details>
 <summary markdown='span'>Response sample: Abstract Product List content item</summary>
@@ -68,7 +67,6 @@ To retrieve information about an abstract product list content item, send the re
     }
 }
 ```
-
 </details>
 
 <details>
@@ -208,7 +206,6 @@ To retrieve information about an abstract product list content item, send the re
     ]
 }
 ```
-
 </details>
 
 
@@ -230,7 +227,7 @@ To retrieve an Abstract Product List content item with its abstract products, yo
 
 | HEADER KEY | REQUIRED | DESCRIPTION |
 | --- | --- | --- |
-| locale |  | Defines the locale to retreive the content item information for. If not specified, the endpoint returns the information for the *default* locale.  |
+| locale |  | Defines the locale to retrieve the content item information for. If not specified, the endpoint returns the information for the *default* locale.  |
 
 Request sample: ` GET https://mysprykershop.com/content-product-abstract-lists/apl-1/abstract-products`
 

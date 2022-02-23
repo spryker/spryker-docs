@@ -66,7 +66,7 @@ To submit checkout data without order confirmation, you need to use the `/checko
 
 /checkout-data
 
-Sample request: *POST http://glue.mysprykershop.com/checkout-data*
+Sample request: *POST https://glue.mysprykershop.com/checkout-data*
 
 ### Request
 A request should contain the ID of the customer's cart that is being checked out. All other fields are optional.
@@ -262,7 +262,7 @@ In case of a successful update, the endpoint responds with information that can 
             ]
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/checkout-data"
+            "self": "https://glue.mysprykershop.com/checkout-data"
         }
     }
 }
@@ -294,7 +294,7 @@ During checkout, customers need to specify the payment and shipment details for 
 If you opt to fetch such information, the details include not only the provider names but also such details as the availability, cost, duration of shipment and other important pieces of information that can help customers in making their choice.
 
 To fetch the available payment methods, include the **payment-methods** resource relationship in the response of the *checkout-data* endpoint:
-**POST http://glue.mysprykershop.com/checkout-data?include=payment-methods**
+**POST https://glue.mysprykershop.com/checkout-data?include=payment-methods**
 
 <details open>
 <summary markdown='span'>Response sample</summary>
@@ -336,7 +336,7 @@ To fetch the available payment methods, include the **payment-methods** resource
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/payment-methods/1"
+                "self": "https://glue.mysprykershop.com/payment-methods/1"
             }
         },
         {
@@ -358,7 +358,7 @@ To fetch the available payment methods, include the **payment-methods** resource
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/payment-methods/2"
+                "self": "https://glue.mysprykershop.com/payment-methods/2"
             }
         }
     ]
@@ -375,7 +375,7 @@ To fetch the available payment methods, include the **payment-methods** resource
 | requiredRequestData | Object | Array of attributes required by the given method to effectuate a purchase. The exact attribute list depends on the specific provider. |
 
 To retrieve shipment methods, include the **shipment-methods** resource relationship:
-**POST http://glue.mysprykershop.com/checkout-data?include=shipment-methods**
+**POST https://glue.mysprykershop.com/checkout-data?include=shipment-methods**
 
 <details open>
 <summary markdown='span'>Response sample</summary>
@@ -427,7 +427,7 @@ To retrieve shipment methods, include the **shipment-methods** resource relation
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/shipment-methods/1"
+                "self": "https://glue.mysprykershop.com/shipment-methods/1"
             }
         },
         {
@@ -442,7 +442,7 @@ To retrieve shipment methods, include the **shipment-methods** resource relation
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/shipment-methods/2"
+                "self": "https://glue.mysprykershop.com/shipment-methods/2"
             }
         },
         {
@@ -457,7 +457,7 @@ To retrieve shipment methods, include the **shipment-methods** resource relation
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/shipment-methods/3"
+                "self": "https://glue.mysprykershop.com/shipment-methods/3"
             }
         },
         {
@@ -472,7 +472,7 @@ To retrieve shipment methods, include the **shipment-methods** resource relation
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/shipment-methods/4"
+                "self": "https://glue.mysprykershop.com/shipment-methods/4"
             }
         },
         {
@@ -487,7 +487,7 @@ To retrieve shipment methods, include the **shipment-methods** resource relation
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/shipment-methods/5"
+                "self": "https://glue.mysprykershop.com/shipment-methods/5"
             }
         }
     ]
@@ -516,7 +516,7 @@ To further assist users with selecting the payment and shipment methods they wan
 
 In the following example request, shipment methods are sorted by attributes carrierName (**ascending**) and defaultNetPrice (**descending**):
 
-**POST http://glue.mysprykershop.com/checkout-data?include=shipment-methods&sort=shipment-methods.carrierName,-shipment-methods.defaultNetPrice**
+**POST https://glue.mysprykershop.com/checkout-data?include=shipment-methods&sort=shipment-methods.carrierName,-shipment-methods.defaultNetPrice**
 
 If the payment and/or shipment methods have been specified in the request to the /checkout-data endpoint, they are returned in the `selectedPaymentMethods` and the `selectedShipmentMethods` attribute, respectively:
 
@@ -576,7 +576,7 @@ To finalize checkout and place an order, send a POST request to the following en
 
 /checkout
 
-Sample request: *POST http://glue.mysprykershop.com/checkout*
+Sample request: *POST https://glue.mysprykershop.com/checkout*
 
 ### Request
 A request should contain:
@@ -765,7 +765,7 @@ Among the attributes returned, there is **orderReference** that can be used to r
             "isExternalRedirect": null
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/checkout"
+            "self": "https://glue.mysprykershop.com/checkout"
         },
     },
 }
@@ -777,7 +777,7 @@ You can extend the response with the **orders** resource relationship in order t
 For detailed information and a list of attributes, see section [Retrieving Specific Order](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html#retrieving-specific-order).
 {% endinfo_block %}
 
-Sample request: *POST http://glue.mysprykershop.com/checkout?include=orders*
+Sample request: *POST https://glue.mysprykershop.com/checkout?include=orders*
 
 **Response Sample**
 
@@ -992,7 +992,7 @@ Sample request: *POST http://glue.mysprykershop.com/checkout?include=orders*
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/orders/DE--3"
+                "self": "https://glue.mysprykershop.com/orders/DE--3"
             }
         }
     ]
@@ -1024,7 +1024,7 @@ If the user is redirected to a third-party page for payment verification, you ne
 
 /order-payments
 
-Sample request: *POST http://glue.mysprykershop.com/order-payments*
+Sample request: *POST https://glue.mysprykershop.com/order-payments*
 
 ### Request
 Your request should contain the payload related to the order. The request can include an optional payment identifier, if necessary.
@@ -1092,11 +1092,11 @@ If the request was successful, the endpoint will respond with a 201 Created stat
       ]
     },
     "links": {
-      "self": "http://glue.mysprykershop.com/order-payments/1ce91011-8d60-59ef-9fe0-4493ef36bbfe"
+      "self": "https://glue.mysprykershop.com/order-payments/1ce91011-8d60-59ef-9fe0-4493ef36bbfe"
     }
   },
   "links": {
-    "self": "http://glue.mysprykershop.com/order-payments/86791011-8d60-59ef-9fe0-4493ef36bbfe"
+    "self": "https://glue.mysprykershop.com/order-payments/86791011-8d60-59ef-9fe0-4493ef36bbfe"
   }
 }
 ```

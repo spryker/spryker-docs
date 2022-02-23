@@ -32,8 +32,8 @@ To retrieve prices of an abstract product, send the request:
 
 | REQUEST | USAGE |
 | --- | --- |
-| `GET http://glue.mysprykershop.com/abstract-products/001/abstract-product-prices` | Retrieve the price of the 001 product. |
-| `GET http://glue.mysprykershop.com/abstract-products/001/abstract-product-prices?currency=CHF&priceMode=GROSS_MODE` | Retrieve the gross price of the 001 product in Swiss Franc. |
+| `GET https://glue.mysprykershop.com/abstract-products/001/abstract-product-prices` | Retrieve the price of the 001 product. |
+| `GET https://glue.mysprykershop.com/abstract-products/001/abstract-product-prices?currency=CHF&priceMode=GROSS_MODE` | Retrieve the gross price of the 001 product in Swiss Franc. |
 
 
 | STRING PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
@@ -76,22 +76,19 @@ To retrieve prices of an abstract product, send the request:
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/abstract-products/001/abstract-product-prices"
+                "self": "https://glue.mysprykershop.com/abstract-products/001/abstract-product-prices"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/abstract-products/001/abstract-product-prices"
+        "self": "https://glue.mysprykershop.com/abstract-products/001/abstract-product-prices"
     }
 }
 ```
-
 </details>
 
 <details>  
-<summary markdown='span'>
-Response sample with default prices and volume prices for an abstract product
-</summary>
+<summary markdown='span'>Response sample with default prices and volume prices for an abstract product</summary>
 
 ```json    
 {
@@ -140,9 +137,7 @@ Response sample with default prices and volume prices for an abstract product
         "self": "https://glue.mysprykershop.com/abstract-products/093/abstract-product-prices"
     }
 }
-
 ```
-
 </details>
 
 <details><summary markdown='span'>Response sample with a gross price in Swiss Franc for an abstract product</summary>
@@ -179,16 +174,15 @@ Response sample with default prices and volume prices for an abstract product
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/abstract-products/001/abstract-product-prices"
+                "self": "https://glue.mysprykershop.com/abstract-products/001/abstract-product-prices"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/abstract-products/001/items?currency=CHF&priceMode=GROSS_MODE"
+        "self": "https://glue.mysprykershop.com/abstract-products/001/items?currency=CHF&priceMode=GROSS_MODE"
     }
 }
 ```
-
 </details>
 
 <a name="abstract-product-prices-response-attributes"></a>

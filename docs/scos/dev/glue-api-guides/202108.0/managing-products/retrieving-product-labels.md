@@ -38,7 +38,7 @@ To retrieve a product label, send the request:
 
 ### Request
 
-Request sample: `GET http://glue.mysprykershop.com/product-labels/3`
+Request sample: `GET https://glue.mysprykershop.com/product-labels/3`
 
 ### Response
 
@@ -57,12 +57,11 @@ Request sample: `GET http://glue.mysprykershop.com/product-labels/3`
             "frontEndReference": ""
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/product-labels/3"
+            "self": "https://glue.mysprykershop.com/product-labels/3"
         }
     }
 }
 ```
-
 </details>
 
 <a name="product-labels-response-attributes"></a>

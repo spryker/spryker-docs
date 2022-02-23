@@ -181,7 +181,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-To verify `PaymentMethodsByCheckoutDataResourceRelationshipPlugin` is activated, send a POST request to `http://glue.mysprykershop.com/checkout-data?include=payment-methods` and make sure that `checkout-data` resource has a relationship to the `payment-methods` resources.
+To verify `PaymentMethodsByCheckoutDataResourceRelationshipPlugin` is activated, send a POST request to `https://glue.mysprykershop.comm/checkout-data?include=payment-methods` and make sure that `checkout-data` resource has a relationship to the `payment-methods` resources.
 
 {% endinfo_block %}
 
@@ -219,7 +219,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-To verify that `PaymentsQuoteMapperPlugin` is activated, send a POST request to `http://glue.mysprykershop.com/checkout` and make sure the order contains the payment method you provided in the request.
+To verify that `PaymentsQuoteMapperPlugin` is activated, send a POST request to `https://glue.mysprykershop.comm/checkout` and make sure the order contains the payment method you provided in the request.
 
 {% endinfo_block %}
 
@@ -256,7 +256,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-To verify that `SelectedPaymentMethodCheckoutDataResponseMapperPlugin` is activated, send a POST request to the `http://glue.mysprykershop.com/checkout-data` endpoint with payment method name and payment provider name, and make sure that you get not empty `selectedPaymentMethods` attribute in the response:
+To verify that `SelectedPaymentMethodCheckoutDataResponseMapperPlugin` is activated, send a POST request to the `https://glue.mysprykershop.comm/checkout-data` endpoint with payment method name and payment provider name, and make sure that you get not empty `selectedPaymentMethods` attribute in the response:
 
 {% endinfo_block %}
 

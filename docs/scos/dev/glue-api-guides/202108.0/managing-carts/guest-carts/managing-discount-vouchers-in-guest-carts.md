@@ -184,7 +184,7 @@ To apply a discount voucher to a guest cart, send the request:
                 "discountPromotionQuantity": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/vouchers/mydiscount-qa1ma?include=vouchers"
+                "self": "https://glue.mysprykershop.com/vouchers/mydiscount-qa1ma?include=vouchers"
             }
         }
     ]
@@ -225,7 +225,7 @@ To remove a discount voucher, send the request:
 | X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | Guest user's unique identifier. The value should correspond to the value used when [creating the guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart). |
 
 
-Request sample: `DELETE http://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers/mydiscount-we3ca`
+Request sample: `DELETE https://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers/mydiscount-we3ca`
 
 ### Response
 

@@ -44,7 +44,7 @@ To add an address to a customer, send the request:
 
 ### Request
 
-Request sample: `POST http://glue.mysprykershop.com/customers/DE--1/addresses`
+Request sample: `POST https://glue.mysprykershop.com/customers/DE--1/addresses`
 
 <details>
 <summary markdown='span'>Request sample body</summary>
@@ -72,7 +72,6 @@ Request sample: `POST http://glue.mysprykershop.com/customers/DE--1/addresses`
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
@@ -125,7 +124,6 @@ Request sample: `POST http://glue.mysprykershop.com/customers/DE--1/addresses`
     }
 }
 ```
-
 </details>
 
 <a name="add-an-address-response-attributes"></a>
@@ -163,7 +161,7 @@ To edit an address, send the request:
 
 ### Request
 
-Request sample: `PATCH` **http://glue.mysprykershop.com/customers/DE-25/addresses/3a6ee102-007f-5245-aaec-af5b6e05685b**
+Request sample: `PATCH` **https://glue.mysprykershop.com/customers/DE-25/addresses/3a6ee102-007f-5245-aaec-af5b6e05685b**
 
 <details>
 <summary markdown='span'>Request sample body</summary>
@@ -214,12 +212,11 @@ Request sample: `PATCH` **http://glue.mysprykershop.com/customers/DE-25/addresse
 				"isDefaultBilling": false
 			},
 			"links": {
-				"self": "http://glue.mysprykershop.com.com/customers/DE--25/addresses/"
+				"self": "https://glue.mysprykershop.com.com/customers/DE--25/addresses/"
 			}
 		}
 	}
 ```
-
 </details>
 
 For response attributes, see [Add an address](#add-an-address-response-attributes).
@@ -239,7 +236,7 @@ To retrieve a list of customer's addresses, send the request:
 
 ### Request
 
-Sample request: `GET http://glue.mysprykershop.com/customers/DE-25/addresses`
+Sample request: `GET https://glue.mysprykershop.com/customers/DE-25/addresses`
 
 
 ### Response
@@ -270,7 +267,7 @@ Sample request: `GET http://glue.mysprykershop.com/customers/DE-25/addresses`
 						"isDefaultBilling": true
 					},
 					"links": {
-						"self": "http://glue.mysprykershop.com/customers/DE--25/addresses/3a6ee102-007f-5245-aaec-af5b6e05685b"
+						"self": "https://glue.mysprykershop.com/customers/DE--25/addresses/3a6ee102-007f-5245-aaec-af5b6e05685b"
 					}
 				},
 				{
@@ -293,16 +290,15 @@ Sample request: `GET http://glue.mysprykershop.com/customers/DE-25/addresses`
 						"isDefaultBilling": false
 					},
 					"links": {
-						"self": "http://glue.mysprykershop.com/customers/DE--25/addresses/5f00ce65-dd64-5b49-ad3c-f5fae475e7e6"
+						"self": "https://glue.mysprykershop.com/customers/DE--25/addresses/5f00ce65-dd64-5b49-ad3c-f5fae475e7e6"
 					}
 				}
 			],
 			"links": {
-				"self": "http://glue.mysprykershop.com/customers/DE--25/addresses"
+				"self": "https://glue.mysprykershop.com/customers/DE--25/addresses"
 			}
 	}
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -338,7 +334,7 @@ To retrieve an address, send the request:
 
 ### Request
 
-Request sample : `GET http://glue.mysprykershop.com/customers/DE-25/addresses/3a6ee102-007f-5245-aaec-af5b6e05685b`
+Request sample : `GET https://glue.mysprykershop.com/customers/DE-25/addresses/3a6ee102-007f-5245-aaec-af5b6e05685b`
 
 ### Response
 
@@ -382,7 +378,7 @@ To delete an address, send the request:
 
 ### Request
 
-Request sample: `DELETE http://glue.mysprykershop.com/customers/DE-25/addresses/3a6ee102-007f-5245-aaec-af5b6e05685b`
+Request sample: `DELETE https://glue.mysprykershop.com/customers/DE-25/addresses/3a6ee102-007f-5245-aaec-af5b6e05685b`
 
 ### Response
 

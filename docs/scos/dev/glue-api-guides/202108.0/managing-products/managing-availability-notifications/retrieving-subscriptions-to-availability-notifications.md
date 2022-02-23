@@ -37,8 +37,6 @@ Request sample: `GET https://glue.mysprykershop.com/my-availability-notification
 <details><summary markdown='span'>Response sample</summary>
 
 ```json
-Response
-
 {
     "data": [
         {
@@ -68,9 +66,7 @@ Response
     ],
     "links": []
 }
-
 ```
-
 </details>
 
 ## Other management options

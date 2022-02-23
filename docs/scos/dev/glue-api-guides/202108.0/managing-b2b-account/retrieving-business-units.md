@@ -40,7 +40,7 @@ To retrieve a business unit, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}business_unit_id{% raw %}}}{% endraw %}*** | Unique identifier of a business unit to retireve information for. Enter `mine` to retireve information on the business unit of the current authenticated company user.  |
+| ***{% raw %}{{{% endraw %}business_unit_id{% raw %}}}{% endraw %}*** | Unique identifier of a business unit to retrieve information for. Enter `mine` to retrieve information on the business unit of the current authenticated company user.  |
 
 ### Request
 
@@ -54,10 +54,10 @@ To retrieve a business unit, send the request:
 
 | REQUEST | USAGE |
 | --- | --- |
-| GET http://glue.mysprykershop.com/company-business-units/mine | Retrive business units of the current authenticated company user. |
-| GET http://glue.mysprykershop.com/company-business-units/b8a06475-73f5-575a-b1e9-1954de7a49ef | Retrieve the business unit with the unique identifier `b8a06475-73f5-575a-b1e9-1954de7a49ef`. |
-| GET http://glue.mysprykershop.com/company-business-units/32b44d30-3c2d-5f0a-91d3-e66adad10dc1?include=companies | Retrieve the business unit with the unique identifier `b8a06475-73f5-575a-b1e9-1954de7a49ef` and related companies included. |
-| GET http://glue.mysprykershop.com/company-business-units/32b44d30-3c2d-5f0a-91d3-e66adad10dc1?include=company-business-unit-addresses | Retrieve the business unit with the unique identifier `b8a06475-73f5-575a-b1e9-1954de7a49ef` and related business unit addresses included.  |
+| GET https://glue.mysprykershop.com/company-business-units/mine | Retrieve business units of the current authenticated company user. |
+| GET https://glue.mysprykershop.com/company-business-units/b8a06475-73f5-575a-b1e9-1954de7a49ef | Retrieve the business unit with the unique identifier `b8a06475-73f5-575a-b1e9-1954de7a49ef`. |
+| GET https://glue.mysprykershop.com/company-business-units/32b44d30-3c2d-5f0a-91d3-e66adad10dc1?include=companies | Retrieve the business unit with the unique identifier `b8a06475-73f5-575a-b1e9-1954de7a49ef` and related companies included. |
+| GET https://glue.mysprykershop.com/company-business-units/32b44d30-3c2d-5f0a-91d3-e66adad10dc1?include=company-business-unit-addresses | Retrieve the business unit with the unique identifier `b8a06475-73f5-575a-b1e9-1954de7a49ef` and related business unit addresses included.  |
 
 #### Response
 
@@ -80,16 +80,15 @@ To retrieve a business unit, send the request:
                 "defaultBillingAddress": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/company-business-units/5a6032dc-fbce-5d0d-9d57-11ade1947bac"
+                "self": "https://glue.mysprykershop.com/company-business-units/5a6032dc-fbce-5d0d-9d57-11ade1947bac"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/company-business-units/mine"
+        "self": "https://glue.mysprykershop.com/company-business-units/mine"
     }
 }
 ```
-
 </details>
 
 <details><summary markdown='span'>Response sample with business units of a company user</summary>
@@ -109,12 +108,11 @@ To retrieve a business unit, send the request:
             "defaultBillingAddress": null
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/company-business-units/b8a06475-73f5-575a-b1e9-1954de7a49ef"
+            "self": "https://glue.mysprykershop.com/company-business-units/b8a06475-73f5-575a-b1e9-1954de7a49ef"
         }
     }
 }
 ```
-
 </details>
 
 
@@ -148,13 +146,12 @@ To retrieve a business unit, send the request:
                 "status": "approved"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/companies/0818f408-cc84-575d-ad54-92118a0e4273"
+                "self": "https://glue.mysprykershop.com/companies/0818f408-cc84-575d-ad54-92118a0e4273"
             }
         }
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -193,13 +190,12 @@ To retrieve a business unit, send the request:
                 "comment": ""
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/company-business-unit-addresses/19a55c0d-7bf0-580c-a9e8-6edacdc1ecde"
+                "self": "https://glue.mysprykershop.com/company-business-unit-addresses/19a55c0d-7bf0-580c-a9e8-6edacdc1ecde"
             }
         }
     ]
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

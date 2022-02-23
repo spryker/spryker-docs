@@ -61,7 +61,7 @@ To retrieve a list of all the Company Users available to the currently logged in
 
 /company-users/mine
 
-Sample request: *GET http://glue.mysprykershop.com/company-users/mine*
+Sample request: *GET https://glue.mysprykershop.commm/company-users/mine*
 
 {% info_block infoBox "Authentication Required" %}
 
@@ -95,7 +95,7 @@ The endpoint responds with a `RestCompanyUserCollectionResponse` that contains
                 "isDefault": false
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/company-users/4c677a6b-2f65-5645-9bf8-0ef3532bead1"
+                "self": "https://glue.mysprykershop.commm/company-users/4c677a6b-2f65-5645-9bf8-0ef3532bead1"
             }
         },
         {
@@ -106,7 +106,7 @@ The endpoint responds with a `RestCompanyUserCollectionResponse` that contains
                 "isDefault": false
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/company-users/cfbe2644-a9bd-581b-977b-e72d1c9a9c54"
+                "self": "https://glue.mysprykershop.commm/company-users/cfbe2644-a9bd-581b-977b-e72d1c9a9c54"
             }
         },
         {
@@ -117,12 +117,12 @@ The endpoint responds with a `RestCompanyUserCollectionResponse` that contains
                 "isDefault": false
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/company-users/e1019900-88c4-5582-af83-2c1ea8775ac5"
+                "self": "https://glue.mysprykershop.commm/company-users/e1019900-88c4-5582-af83-2c1ea8775ac5"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/company-users/mine"
+        "self": "https://glue.mysprykershop.commm/company-users/mine"
     }
 }
 ```
@@ -133,7 +133,7 @@ If the currently logged in user does not have access to any Company User account
 
 To help customers with selecting the necessary Company User, you can provide additional information, such as the company and business unit that each account belongs to. Also, you can identify which roles the corporate accounts can perform within the company. To fetch such information, extend the response of the endpoint with the **companies** and **company-business-units**, and **company-roles** resource relationships.
 
-Sample request: *GET http://glue.mysprykershop.com/company-users/min?**include=companies,company-business-units,company-roles***
+Sample request: *GET https://glue.mysprykershop.commm/company-users/min?**include=companies,company-business-units,company-roles***
 
 In this case, the following additional attributes will be added to the response:
 
@@ -200,7 +200,7 @@ In this case, the following additional attributes will be added to the response:
                 "isDefault": false
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/company-users/cfbe2644-a9bd-581b-977b-e72d1c9a9c54?include=companies,company-business-units"
+                "self": "https://glue.mysprykershop.commm/company-users/cfbe2644-a9bd-581b-977b-e72d1c9a9c54?include=companies,company-business-units"
             },
             "relationships": {
                 "companies": {
@@ -257,7 +257,7 @@ In this case, the following additional attributes will be added to the response:
                 "status": "approved"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/companies/88efe8fb-98bd-5423-a041-a8f866c0f913"
+                "self": "https://glue.mysprykershop.commm/companies/88efe8fb-98bd-5423-a041-a8f866c0f913"
             }
         },
         {
@@ -273,7 +273,7 @@ In this case, the following additional attributes will be added to the response:
                 "defaultBillingAddress": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/b2ea10b2-263a-5cd9-88dc-747309f0534a"
+                "self": "https://glue.mysprykershop.commm/b2ea10b2-263a-5cd9-88dc-747309f0534a"
             }
         },
         {
@@ -289,7 +289,7 @@ In this case, the following additional attributes will be added to the response:
                 "defaultBillingAddress": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/company-business-units/35752ce6-e25f-5d04-8bef-d46b2c359695"
+                "self": "https://glue.mysprykershop.commm/company-business-units/35752ce6-e25f-5d04-8bef-d46b2c359695"
             }
         },
         {
@@ -305,7 +305,7 @@ In this case, the following additional attributes will be added to the response:
                 "defaultBillingAddress": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/company-business-units/5a6032dc-fbce-5d0d-9d57-11ade1947bac"
+                "self": "https://glue.mysprykershop.commm/company-business-units/5a6032dc-fbce-5d0d-9d57-11ade1947bac"
             }
         },
         {
@@ -316,7 +316,7 @@ In this case, the following additional attributes will be added to the response:
                 "isDefault": true
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/company-roles/50c647a4-d27f-5d82-a587-1d0b7cc6b58d"
+                "self": "https://glue.mysprykershop.commm/company-roles/50c647a4-d27f-5d82-a587-1d0b7cc6b58d"
             }
         }
     ]
@@ -338,7 +338,7 @@ To impersonate a user as a Company Account and receive a B2B access token, send 
 
 POST /company-user-access-tokens
 
-Sample request: *POST http://glue.mysprykershop.com/company-user-access-tokens*
+Sample request: *POST https://glue.mysprykershop.commm/company-user-access-tokens*
 
 {% info_block warningBox "Authentication Required" %}
 
@@ -393,7 +393,7 @@ If the request was successful, the endpoint responds with a **RestCompanyUserAc
             "refreshToken": "def50200d7338763c798a0600f18e"
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/company-user-access-tokens"
+            "self": "https://glue.mysprykershop.commm/company-user-access-tokens"
         }
     }
 }

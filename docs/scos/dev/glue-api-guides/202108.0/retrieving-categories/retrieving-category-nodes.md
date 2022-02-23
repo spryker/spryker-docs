@@ -36,14 +36,14 @@ To retrieve a category node, send the request:
 
 ### Request
 
-Request sample : `GET http://glue.mysprykershop.com/category-nodes/5`
+Request sample : `GET https://glue.mysprykershop.com/category-nodes/5`
 
 ### Response
 
 <details>
 <summary markdown='span'>Response sample</summary>
 
-```js
+```json
 {
     "data": {
         "type": "category-nodes",
@@ -111,7 +111,7 @@ Request sample : `GET http://glue.mysprykershop.com/category-nodes/5`
             ]
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/category-nodes/5"
+            "self": "https://glue.mysprykershop.com/category-nodes/5"
         }
     }
 }

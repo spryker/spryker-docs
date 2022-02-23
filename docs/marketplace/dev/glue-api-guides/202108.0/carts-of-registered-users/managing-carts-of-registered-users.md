@@ -175,9 +175,9 @@ To retrieve all carts, send the request:
 | `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-options` | Retrieve all carts with items, respective concrete product, and their product options included. |
 | `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-labels` | Retrieve all carts with the included information: concrete products and the product labels assigned to the products in the carts. |
 | `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-offers` | Retrieve all carts with product offers included. |
-| `GET http://glue.mysprykershop.com/carts?include=items,concrete-products,product-offers,product-offer-availabilities` | Retrieve all carts with product offer availabilities included. |
-| `GET http://glue.mysprykershop.com/carts?include=items,concrete-products,product-offers,product-offer-prices` | Retrieve all carts with product offer prices included. |
-| `GET http://glue.mysprykershop.com/carts?include=merchants` | Retrieve all carts with merchants included. |
+| `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-offers,product-offer-availabilities` | Retrieve all carts with product offer availabilities included. |
+| `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-offers,product-offer-prices` | Retrieve all carts with product offer prices included. |
+| `GET https://glue.mysprykershop.com/carts?include=merchants` | Retrieve all carts with merchants included. |
 
 
 ### Response
@@ -2282,12 +2282,12 @@ To retrieve all carts, send the request:
                 "discounts": []
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a"
+                "self": "https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/items?include=merchants"
+        "self": "https://glue.mysprykershop.com/items?include=merchants"
     },
     "included": [
         {
@@ -2317,7 +2317,7 @@ To retrieve all carts, send the request:
                 "categories": []
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/merchants/MER000001"
+                "self": "https://glue.mysprykershop.com/merchants/MER000001"
             }
         },
         {
@@ -2359,7 +2359,7 @@ To retrieve all carts, send the request:
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items/020_21081478"
+                "self": "https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items/020_21081478"
             },
             "relationships": {
                 "merchants": {
@@ -2506,10 +2506,10 @@ To retrieve a registered user's cart, send the request:
 | `GET https://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398?include=items,concrete-products,product-options` | Retrieve the `8fc45eda-cddf-5fec-8291-e2e5f8014398` cart with items, respective concrete product, and their product options. |
 | `GET https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830?include=vouchers` | Retrieve the `976af32f-80f6-5f69-878f-4ea549ee0830` cart with detailed information on its vouchers. |
 | `GET https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d37d32f92ee9?include=items,concrete-products,product-labels` | Retrieve the `0c3ec260-694a-5cec-b78c-d37d32f92ee9` cart with information about the product labels assigned to the products in the cart. |
-| `GET http://glue.mysprykershop.com/carts/bef3732e-bc7a-5c07-a40c-f38caf1c40ff?include=items,concrete-products,product-offers` |Retrieve the `bef3732e-bc7a-5c07-a40c-f38caf1c40ff` cart with details on product offers.|
-| `GET http://glue.mysprykershop.com/carts/bef3732e-bc7a-5c07-a40c-f38caf1c40ff?include=items,concrete-products,product-offers,product-offer-availabilities` |Retrieve the `bef3732e-bc7a-5c07-a40c-f38caf1c40ff` cart with details on product offer availabilities.|
-| `GET http://glue.mysprykershop.com/carts/bef3732e-bc7a-5c07-a40c-f38caf1c40ff?include=items,concrete-products,product-offers,product-offer-prices` |Retrieve the `bef3732e-bc7a-5c07-a40c-f38caf1c40ff` cart with details on product offer prices.|
-| `GET http://glue.mysprykershop.com/carts/54a8290f-a2f6-58db-ae5d-ad4d04aad6ae?include=items,merchants` | Retrieve the `54a8290f-a2f6-58db-ae5d-ad4d04aad6ae` cart with detailed information on merchant products. |
+| `GET https://glue.mysprykershop.com/carts/bef3732e-bc7a-5c07-a40c-f38caf1c40ff?include=items,concrete-products,product-offers` |Retrieve the `bef3732e-bc7a-5c07-a40c-f38caf1c40ff` cart with details on product offers.|
+| `GET https://glue.mysprykershop.com/carts/bef3732e-bc7a-5c07-a40c-f38caf1c40ff?include=items,concrete-products,product-offers,product-offer-availabilities` |Retrieve the `bef3732e-bc7a-5c07-a40c-f38caf1c40ff` cart with details on product offer availabilities.|
+| `GET https://glue.mysprykershop.com/carts/bef3732e-bc7a-5c07-a40c-f38caf1c40ff?include=items,concrete-products,product-offers,product-offer-prices` |Retrieve the `bef3732e-bc7a-5c07-a40c-f38caf1c40ff` cart with details on product offer prices.|
+| `GET https://glue.mysprykershop.com/carts/54a8290f-a2f6-58db-ae5d-ad4d04aad6ae?include=items,merchants` | Retrieve the `54a8290f-a2f6-58db-ae5d-ad4d04aad6ae` cart with detailed information on merchant products. |
 
 
 ### Response

@@ -30,7 +30,7 @@ To be able to add product variants after creating an abstract product,  add at l
 
 To create an abstract product:
 1. In the top right corner, click **+Create Product**.
- This takes you to the **Create a Product** page.
+The **Create a Product** page opens.
 2. On the **General** tab, define general settings:
  1. Select one or more **Store relations**.
  2. In **SKU Prefix**, enter an SKU prefix.

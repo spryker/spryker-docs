@@ -9,7 +9,7 @@ This document describes how to edit a marketplace concrete product in the Mercha
 
 ## Prerequisites
 
-To start working with marketplace concrete products, go to the **Merchant Portal** > **Products**.  Hover over the three dots next to the abstract product for which you manage a concrete product and click **Manage Product** or just click the line. This takes you to the *[Product name]* drawer. Navigate to the *Concrete Products* tab.
+To start working with marketplace concrete products, go to the **Merchant Portal&nbsp;<span aria-label="and then">></span> Products**.  Hover over the three dots next to the abstract product for which you manage a concrete product and click **Manage Product** or just click the line. The *[Product name]* drawer opens. Navigate to the *Concrete Products* tab.
 
 This article contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
 
@@ -32,7 +32,7 @@ By default, the table is sorted descendingly by SKU.
 
 To activate a marketplace concrete product:
 
-1. On the *Concrete Products* page, next to the concrete product you want to activate, hover over the three dots and click **Manage Product** or just click the line. This takes you to the *Concrete Product SKU, Name* page.
+1. On the *Concrete Products* page, next to the concrete product you want to activate, hover over the three dots and click **Manage Product** or just click the line. The *Concrete Product SKU, Name* page opens.
 2. In the *Status* pane, select *Concrete Product is online* to make the concrete product online.
 3. Click **Save**.
 
@@ -42,7 +42,7 @@ To deactivate the product, deselect *Concrete Product is online* to make the con
 
 To edit an existing marketplace concrete product:
 
-1. On the *Concrete Products* page, next to the concrete product you want to edit, hover over the three dots and click **Manage Product** or just click the line. This takes you to the *Concrete Product SKU, Name* page.
+1. On the *Concrete Products* page, next to the concrete product you want to edit, hover over the three dots and click **Manage Product** or just click the line. The *Concrete Product SKU, Name* page opens.
 2. In the *Stock* pane, populate the *Quantity* field.
 3. In the *Name* pane, edit *Name* for every locale.
 4. In the *Description* pane, edit *Description* for every locale.

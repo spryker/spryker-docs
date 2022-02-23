@@ -156,7 +156,7 @@ The following table describes attributes you enter if, for **DISCOUNT APPLICATIO
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| ABSTRACT PRODUCT SKU(S) | Stores comma-separated abstract product SKUs—products which will be promoted. |
+| ABSTRACT PRODUCT SKU(S) | Comma-separated abstract product SKUs — products that will be offered with a discount. |
 | MAXIMUM QUANTITY | Represents the limit on the number of units eligible for the discount. |
 
 ![Application type](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/back-office-user-guides/merchandising/discount/creating-vouchers.md/202200.0/application-type.png)

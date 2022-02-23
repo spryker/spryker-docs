@@ -2274,21 +2274,10 @@ entries:
         url: /docs/scos/user/technology-partners/payment-partners/billie.html
       - title: Powerpay
         url: /docs/scos/user/technology-partners/payment-partners/powerpay.html
-      - title: Ratenkauf by Easycredit
-        url: /docs/scos/user/technology-partners/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-        nested:
-        - title: Ratenkauf by Easycredit - Installation and Configuration
-          url: /docs/scos/user/technology-partners/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit-installation-and-configuration.html
-        - title: Ratenkauf by Easycredit - Integration into a project
-          url: /docs/scos/user/technology-partners/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit-integration-into-a-project.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
       - title: Payolution
         url: /docs/scos/user/technology-partners/payment-partners/payolution.html
+      - title: ratenkauf by easyCredit
+        url: /docs/scos/user/technology-partners/payment-partners/ratenkauf-by-easycredit.html
       - title: Arvato
         url: /docs/scos/user/technology-partners/payment-partners/arvato.html
     - title: Technology partners

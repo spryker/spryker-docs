@@ -10,11 +10,9 @@ This document provides details on how to set up the Spryker Merchant Portal.
 To start using Merchant Portal, install Spryker demo-shop:
 1. Use [this repository](https://github.com/spryker-shop/suite) for the Marketplace project installation.  
 2. Install the project using one of the following guides:
-    - [Spryker installation using Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html)
-    - Spryker installation using Vagrant:
-        - [DevVM on Linux / Mac OS](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html)
-        - [DevVM on Windows](/docs/scos/dev/setup/installing-spryker-without-devvm.html)
-        - [Without DevVM](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-windows.html)
+* [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html)
+* [Installing Spryker with Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-development-virtual-machine.html)
+* [Installing Spryker without Development Virtual Machine or Docker](/docs/scos/dev/setup/installing-spryker-without-development-virtual-machine-or-docker.html)
 
 
 ## Requirements

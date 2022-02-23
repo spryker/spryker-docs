@@ -35,7 +35,7 @@ To create a cart rule discount:
    3. In the **NAME** field, specify the name for the discount.
    4. Optional: in the **DESCRIPTION** field, enter a summary that explains the discount.
    5. Optional: in the **PRIORITY** field, enter an integer value from `1` to `9999` for the discount priority.
-   6. Specify if the discount is either **NON-EXLUSIVE** or **EXCLUSINVE**.
+   6. Specify if the discount is **NON-EXLUSIVE** or **EXCLUSINVE**.
    7. In **VALID FROM** and **VALID TO**, Specify the validity interval (lifetime) of the discount.
    8. To proceed to the **Discount calculation** tab, click **Next**.
 3. On the **Discount calculation** tab, do the following:

@@ -18,7 +18,7 @@ This guide describes how to manage discounts.
 
 To manage discounts, navigate to **Merchandising&nbsp;<span aria-label="and then">></span> Discount**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the [reference information](#reference-information-managing-discounts) before you start, or just look up the necessary information as you go through the process.
 
 ## Editing a discount
 

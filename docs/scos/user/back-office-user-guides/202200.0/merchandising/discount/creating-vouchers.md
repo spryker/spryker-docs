@@ -23,7 +23,7 @@ Vouchers are codes that customers can redeem during checkout. Voucher codes are 
 
 To start working with discounts, navigate to **Merchandising&nbsp;<span aria-label="and then">></span> Discount**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the [reference information](#reference-information-creating-vouchers) before you start, or just look up the necessary information as you go through the process.
 
 ## Creating vouchers
 
@@ -33,8 +33,8 @@ To create a discount voucher:
     1. In **STORE RELATION**, select the stores where you want the discount to be active.
     2. In the **DISCOUNT TYPE** drop-down, select **Voucher codes**.
     3. In the **NAME** field, specify the name of the voucher.
-    4. Optional: in the **DESCRIPTION** field, enter the description of the voucher.
-    5. Optional: in the **PRIORITY** field, enter an integer value from `1` to `9999` for the discount voucher priority.
+    4. Optional: In the **DESCRIPTION** field, enter the description of the voucher.
+    5. Optional: In the **PRIORITY** field, enter an integer value from `1` to `9999` for the discount voucher priority.
     6. Specify if the voucher is exclusive.
     7. Specify the validity interval (lifetime) of the voucher.
 3. To proceed to the **Discount calculation** tab, click **Next**.

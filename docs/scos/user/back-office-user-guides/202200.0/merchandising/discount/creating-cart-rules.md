@@ -23,7 +23,7 @@ A cart rule is a discount that is applied automatically when all attached discou
 
 To start working with discounts, go to **Merchandising&nbsp;<span aria-label="and then">></span> Discount**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the [reference information](#reference-information-creating-cart-rule-discounts) before you start, or just look up the necessary information as you go through the process.
 
 ## Creating cart rule discounts
 
@@ -33,10 +33,10 @@ To create a cart rule discount:
    1. In **STORE RELATION**, select the stores you want the discount to be active in.
    2. For **DISCOUNT TYPE**, select **Cart rule**.
    3. In the **NAME** field, specify the name for the discount.
-   4. Optional: in the **DESCRIPTION** field, enter a summary that explains the discount.
-   5. Optional: in the **PRIORITY** field, enter an integer value from `1` to `9999` for the discount priority.
+   4. Optional: In the **DESCRIPTION** field, enter a summary that explains the discount.
+   5. Optional: In the **PRIORITY** field, enter an integer value from `1` to `9999` for the discount priority.
    6. Specify if the discount is **NON-EXLUSIVE** or **EXCLUSINVE**.
-   7. Select **VALID FROM** and **VALID TO** dates. 
+   7. Select **VALID FROM** and **VALID TO** dates.
    8. To proceed to the **Discount calculation** tab, click **Next**.
 3. On the **Discount calculation** tab, do the following:
    1. Select a **CALCULATOR TYPE**.

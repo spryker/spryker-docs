@@ -39,7 +39,7 @@ To create a cart rule discount:
    7. In **VALID FROM** and **VALID TO**, Specify the validity interval (lifetime) of the discount.
    8. To proceed to the **Discount calculation** tab, click **Next**.
 3. On the **Discount calculation** tab, do the following:
-   1. In the **CALCULATOR TYPE** drop-down, select either **Percentage** or **Fixed amount**.
+   1. Select a **CALCULATOR TYPE**.
 
       {% info_block warningBox "Note" %}
 

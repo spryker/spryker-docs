@@ -30,7 +30,7 @@ Review the reference information before you start, or just look up the necessary
 To create a cart rule discount:
 1. On the **Discount** page, in the top right corner, click **Create new discount**.
 2. On the **Create new discount** page, in the **General Information** tab, do the following:
-   1. In **STORE RELATION**, select stores you wish the discount to be active in.
+   1. In **STORE RELATION**, select the stores you want the discount to be active in.
    2. For **DISCOUNT TYPE**, select **Cart rule**.
    3. In the **NAME** field, specify the name for the discount.
    4. Optional: in the **DESCRIPTION** field, enter a summary that explains the discount.

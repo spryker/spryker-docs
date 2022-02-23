@@ -91,7 +91,7 @@ This section contains information you need to know when working with discount ca
 
 
 **CALCULATOR TYPE**
-<br>The discount can be calculated in two ways:
+A discount can be calculated in two ways:
 * **Percentage**: A discount is calculated as a percentage of the discounted items' prices. If selected, in the **VALUE** field, set the percentage value (for example, `25`).
 * **Fixed amount**: A fixed amount is discounted. If you select this type, specify the amount (**Gross price**, **Net price**, or both) for each currency used in your store.
 

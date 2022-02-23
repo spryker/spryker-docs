@@ -173,6 +173,8 @@ To add CI checks for the product per role, do the following:
 1. In `ci.yml`, add CI configuration per role as follows:
 
 ```yaml
+jobs:
+  ...
   link_validation_check_aop_dev:
     name: Links validation (check_aop_dev)
     needs: jekyll_build
@@ -193,6 +195,13 @@ To add CI checks for the product per role, do the following:
         with:
           path: tmp/.htmlproofer
           key: ${{ runner.os }}-check_aop_dev-htmlproofer
+
+      - uses: actions/download-artifact@v2
+
+      - name: Unpack artifacts
+        run: tar -xf build-result/result.tar.gz
+
+      - run: bundle exec rake check_aop_dev
 
   link_validation_check_aop_user:
     name: Links validation (check_aop_user)
@@ -221,14 +230,6 @@ To add CI checks for the product per role, do the following:
         run: tar -xf build-result/result.tar.gz
 
       - run: bundle exec rake check_aop_user
-
-      - uses: actions/download-artifact@v2
-
-      - name: Unpack artifacts
-        run: tar -xf build-result/result.tar.gz
-
-      - run: bundle exec rake check_aop
-
 ```
 2. In `Rakefile`, add checks for each role. In `options[:file_ignore]` of both checks, exclude all other projects and roles. For example:
 ```
@@ -239,18 +240,9 @@ task :check_aop_user do
     /docs\/scos\/.+/,
     /docs\/marketplace\/.+/,
     /docs\/cloud\/.+/,
-    /docs\/aop\/dev\/.+/,
-  ]
-  HTMLProofer.check_directory("./_site", options).run
-end
-
-task :check_aop_user do
-  options = commonOptions.dup
-  options[:file_ignore] = [
-    /docs\/scos\/.+/,
-    /docs\/marketplace\/.+/,
-    /docs\/cloud\/.+/,
-    /docs\/aop\/dev\/.+/,
+    /docs\/aop\/dev\/.+/,    
+    /docs\/fes\/.+/,
+    /docs\/paas-plus\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -261,23 +253,14 @@ task :check_aop_dev do
     /docs\/scos\/.+/,
     /docs\/marketplace\/.+/,
     /docs\/cloud\/.+/,
-    /docs\/aop\/user\/.+/,
-  ]
-  HTMLProofer.check_directory("./_site", options).run
-end
-
-task :check_aop_dev do
-  options = commonOptions.dup
-  options[:file_ignore] = [
-    /docs\/scos\/.+/,
-    /docs\/marketplace\/.+/,
-    /docs\/cloud\/.+/,
-    /docs\/aop\/user\/.+/,
+    /docs\/aop\/user\/.+/,    
+    /docs\/fes\/.+/,
+    /docs\/paas-plus\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
 ```
-3. In the `Rakefile`, in `options[:file_ignore]` of all the existing tasks, exclude the new project from checks. For example:
+3. In `Rakefile`, in `options[:file_ignore]` of all the existing checks, exclude the new project for both roles. For example:
 
 ```
 ...
@@ -303,16 +286,15 @@ To configure the Algolia search for the product, you need to configure the searc
 
 ### Configure the Algolia search in the repository
 
-1. In the `_config.yml`, in the `algolia` section, add the project name and title:
+
+
+
+1. In `algolia_config`, create YML configuration files per role. For example, `algolia_config/_aop_dev.yml` and `algolia_config/_aop_user.yml`.
+
+
+2. In both files, exclude generic pages and the pages of all the existing project from indexing. Example:
 
 ```yaml
-    - name: 'aop'
-      title: 'App Orchestration Platform'
-```
-
-2. In the [algolia_config](https://github.com/spryker/spryker-docs/tree/master/algolia_config) folder, create the YML file for your project and exclude all other projects from it:
-
-```
 algolia:
   index_name: 'aop'
   files_to_exclude:
@@ -327,30 +309,133 @@ algolia:
     - docs/cloud/dev**/*.md
 
 ```
-3. In the same [algolia_config](https://github.com/spryker/spryker-docs/tree/master/algolia_config) folder, go to the YML file of each project and exclude the newly created project from them.
-
-4. Go to the [github/workflow/ci](https://github.com/spryker/spryker-docs/blob/master/.github/workflows/ci.yml) file and add the files you created at step 2:
-
+3. In the Algolia configuration file of each existing project, exclude the project for both roles from indexing. Example:
+**algolia_config/_scos_dev.yml**
+```yaml
+algolia:
+  index_name: 'scos_dev'
+  files_to_exclude:
+    - index.md
+    - 404.md
+    - search.md
+    - docs/marketplace/user/**/*.md
+    - docs/marketplace/dev/**/*.md
+    - docs/cloud/dev/**/*.md
+    - docs/scos/user/**/*.md
+    - docs/paas-plus/dev/**/*.md
+    - docs/aop/dev/**/*.md
+    - docs/aop/user/**/*.md   
 ```
 
-      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_fes_dev.yml
+4. In `ci.yml`, add the Algolia configuration files you've created. Example:
+
+```yaml
+jobs:
+  ...
+  algolia_search:
+    ...
+    steps:
+      ...
+      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_aop_dev.yml
         env: # Or as an environment variable
           ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_aop_user.yml
+        env: # Or as an environment variable
+          ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}          
 ```
+
 
 ### Configuring the Algolia search in the Algolia app
 
-Now you need to configure the search in the Algolia app of the Spryker docs. Do the following:
+To configure the search in the Algolia app of the Spryker docs, do the following.
 
-1. Go to https://www.algolia.com/apps/IBBSSFT6M1/indices click **Create Index**.
-2. In the opened window, enter the name exactly as you specified in [step 1](#configuring-the-algolia-search-in-the-repository) where you adjusted the config.yml file for the *algolia* section.
-3. In the created index, go to **Configuration** and add the attributes as for the [scos_dev project](https://www.algolia.com/apps/IBBSSFT6M1/explorer/configuration/scos_dev/searchable-attributes).
-4. In **RELEVANCE ESSENTIALS > Ranking and sorting**, add custom rankings as for the [scos_dev project](https://www.algolia.com/apps/IBBSSFT6M1/explorer/configuration/scos_dev/ranking-and-sorting).
-5. In **RELEVANCE OPTIMIZATIONS > Language**, select *English*.
-6. In **FILTERING AND FACETING > Facets**, add facets as for the [scos_dev project](https://www.algolia.com/apps/IBBSSFT6M1/explorer/configuration/scos_dev/facets).
-7. In **PAGINATION AND DISPLAY > Highlighting**, add the values as for the [scos_dev project](https://www.algolia.com/apps/IBBSSFT6M1/explorer/configuration/paas_plus_dev/highlighting).
-8. In **PAGINATION AND DISPLAY > Snippeting**, add attribute as for the [scos_dev project](https://www.algolia.com/apps/IBBSSFT6M1/explorer/configuration/scos_dev/snippeting).
-9. In **SEARCH BEHAVIOR > Retrieved attribute**, add attributes as for the [scos_dev project](https://www.algolia.com/apps/IBBSSFT6M1/explorer/configuration/scos_dev/retrieved-attributes)
-10. In **SEARCH BEHAVIOR > Deduplication and grouping**, add the attributes as for the [scos_dev project](https://www.algolia.com/apps/IBBSSFT6M1/explorer/configuration/paas_plus_dev/deduplication-and-grouping).
+
+#### Create an index
+
+1. Go to [Indices](https://www.algolia.com/apps/IBBSSFT6M1/indices)
+2. Select **Create Index**.
+3. In the **Create index** window, enter the name exactly as you specified in [step 1](#configuring-the-algolia-search-in-the-repository) where you adjusted the config.yml file for the *algolia* section.
+  This shows a success message and opens the page of the created index.
+
+#### Add searchable attributes   
+1. Click the **Configuration** tab.
+2. Click **+  Add a Searchable Attribute**.
+3. Enter `title` and press `Enter`.
+4. Repeat steps 2-3 until you add the following attributes in the provided order:
+    * title
+    * headings
+    * content
+    * collection,categories,tags
+    * url
+
+#### Add ranking attributes
+
+1. Go to **RELEVANCE ESSENTIALS > Ranking and Sorting**.
+2. Click **+  Add custom ranking attribute**.
+3. Enter `date` and press `Enter`.
+4. Repeat steps 2-3 until you add the following attributes in the provided order:
+    * date
+    * custom_ranking.heading
+    * custom_ranking.position
+
+#### Configure languages
+
+1. Go to **RELEVANCE OPTIMIZATIONS > Language**.
+2. In the **Index Languages** section, click **+ Select one or more languages**.
+3. Enter `English` and press `Enter`.
+4. In the **Query Languages** section, click **+ Select one or more languages**.
+5. Enter `English` and press `Enter`.
+6. Toggle **Ignore plural**.
+7. Enter `English` and press `Enter`.
+
+#### Add facet attributes
+
+1. Go to **FILTERING AND FACETING > Facets**.
+2. Click **+  Add an Attrribute**.
+3. Enter `categories` and press `Enter`.
+4. Repeat steps 2-3 until you add the following attributes in the provided order:
+    * categories
+    * collection
+    * tags
+    * title
+    * type
+
+#### Configure highliting
+
+1. Go to **PAGINATION AND DISPLAY > Highlighting**.
+2. In the **Attributes to highlight** section, click **+  Add an Attrribute**.
+3. Enter `categories` and press `Enter`.
+4. Repeat steps 2-3 until you add the following attributes in the provided order:
+    * categories
+    * collection
+    * content
+    * headings
+    * html
+    * tags
+    * title
+    * type
+5. In the **Highlight prefix tag** section, replace the default value with `<em class="ais-Highlight">`.    
+
+
+#### Add snippeting attributes
+
+1. Go to **PAGINATION AND DISPLAY > Snippeting**.
+2. Click **+  Add an Attrribute**.
+3. Enter `content` and press `Enter`.
+
+#### Add unretrievable attributes
+
+1. Go to **SEARCH BEHAVIOR > Retrieved attributes**.
+2. In the **Unretrievable attributes** section, click **+  Add an Attrribute**.
+3. Enter `custom_ranking` and press `Enter`.
+
+
+#### Configure duplicating and grouping
+
+1. Go to **SEARCH BEHAVIOR > Deduplication and Grouping**.
+2. For **Distinct**, select **true**.
+3. In the **Attribute for Distinct** section, enter `url` and press `Enter`.
+
+
 
 That's it. Now, you should be able to search within your new projects at the Spryker docs website.

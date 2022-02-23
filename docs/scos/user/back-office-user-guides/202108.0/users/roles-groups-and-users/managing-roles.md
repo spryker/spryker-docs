@@ -12,48 +12,61 @@ redirect_from:
   - /docs/en/managing-roles
 ---
 
-This topic describes the procedures that you need to perform to create, edit, and delete roles.
+This document describes how to create, edit, and delete roles.
 
 ## Prerequisites
 
-To start working with roles, go to **Users** > **Roles**.
+To start working with roles, go to **Users** > **User Roles**.
 
 Review the reference information before you start, or just look up the necessary information as you go through the process.
 
 ## Creating roles
 
 To create a role:
-1. On the *Role list* table view page, in the top right corner, click **Add new Role**.
-2. On the *Create new Role* page, enter the name of the role and click **Create**.
-This redirects you to the *Edit Role* page, where you define the permissions for this role to possess.
-3. In the *Rule* section, enter and select the following and click **Add Rule**:
-    * Bundle
-    * Controller
-    * Action
-    * Permission
+
+1. On the **User Roles** page, click **Add new Role**.
+2. On the **Create new Role** page, enter a **NAME** and click **Create**.
+    This opens the **Edit Role** page with the success message displayed.
+3. In the **Rule** pane, enter a **BUNDLE**.
+4. Enter a **CONTROLLER**.
+5. Enter an **ACTION**.
+6. Select a **PERMISSION**
+7. Click **Add Rule**.
+      The page refreshes with the success message displayed and the ruled displayed in the **Assigned Rules** section.
+8. Repeat steps 3-7 until you add all the needed rules.       
 
 See [Adding rules for roles](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-roles.html#adding-rules-for-roles) for information on how to create rules.
 
-{% info_block warningBox "Note" %}
 
-You can add from one to many rules to a specific role. Each time you click **Add rule**, the created rule appears in the *Assigned Rules* section.
 
-{% endinfo_block %}
+### Reference information: Creating roles
 
-You have set up a role to be assigned to a group.
+The following table describes the attributes you enter and select when {task} a/an {entity}:
+
+| ATTRIBUTE | DESCRIPTION |
+| --- | --- |
+|{attribute name} | {attribute description} |
+
 
 **Tips & tricks**
 <br>In case you need a specific role to have access to all sections, you can put an asterisk (*) value for a bundle, controller, and action. Add _allow for permission_. This grants access to everything you see in Back Office and allow to perform any action.
 
-
 ## Editing roles
 
-<br>To edit a role:
+To edit a role:
 
-1. In the *Role list* > *Actions* column,  for a specific role, click **Edit**.
-2. On the *Edit Role* page, you can:
-    * Add more rules to the role.
-    * Delete the already assigned rule by clicking **Delete** in the *Assigned Rules* > *Actions* column.
+1. On the **User Roles** page, click **Edit** next to the role you want to edit.
+2. In the **Role** pane, update the **NAME** and click **Save**.
+3. In the **Rule** pane, enter a **BUNDLE**.
+4. Enter a **CONTROLLER**.
+5. Enter an **ACTION**.
+6. Select a **PERMISSION**
+7. Click **Add Rule**.
+      The page refreshes with the success message displayed and the ruled displayed in the **Assigned Rules** section.
+8. Repeat steps 3-7 until you add all the needed rules.
+9. In the **Assigned Rules** section, delete one or more rules by clicking **Delete** next to the rules you want to delete.
+
+After you update the name, add or delete a rule, the changes are saved automatically. After you finish editing the role, to go back to the list of roles, in the top right corner, click **< List of roles**.
 
 ### Adding rules for roles
 

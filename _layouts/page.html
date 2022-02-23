@@ -27,32 +27,30 @@ layout: default
 <div class="page-content page-content--post">
 
     <aside class="main-sidebar">
-        <div class="main-sidebar__sticky">
-            <div class="main-sidebar__title-wrapper">
-                <h3 class="main-sidebar__title" data-toc-skip>{{ site.data.sidebars[page.sidebar].title }}</h3>
-            </div>
-            <a href="#" class="main-sidebar__opener tablet-hidden js-main-sidebar-switcher">
-                <span class="main-sidebar__opener-decorator"></span>
-                <span class="main-sidebar__opener-decorator"></span>
-                <span class="main-sidebar__opener-decorator"></span>
-            </a>
-            <a href="#" class="main-sidebar__opener tablet-show js-main-sidebar-opener">
-                <span class="main-sidebar__opener-decorator"></span>
-                <span class="main-sidebar__opener-decorator"></span>
-                <span class="main-sidebar__opener-decorator"></span>
-            </a>
-            <div class="main-sidebar__popup">
-                <div class="main-sidebar__inner">
-                    <div class="main-sidebar__header">
-                        <a href="#" class="main-sidebar__close"></a>
-                    </div>
-                    <div class="main-sidebar__slide">
-                        {% unless page.hide_sidebar %}
-                            <div id="tg-sb-sidebar">
-                                {% render_sidebar %}
-                            </div>
-                        {% endunless %}
-                    </div>
+        <h3  data-toc-skip>{{ site.data.sidebars[page.sidebar].title }}</h3>
+        <a href="#" class="main-sidebar__opener tablet-hidden js-main-sidebar-switcher" aria-label="sidebar desktop opener">
+            <span class="main-sidebar__opener-decorator"></span>
+            <span class="main-sidebar__opener-decorator"></span>
+            <span class="main-sidebar__opener-decorator"></span>
+        </a>
+        <a href="#" class="main-sidebar__opener tablet-show js-main-sidebar-opener" aria-label="sidebar mobile opener">
+            <span class="main-sidebar__opener-decorator"></span>
+            <span class="main-sidebar__opener-decorator"></span>
+            <span class="main-sidebar__opener-decorator"></span>
+        </a>
+        <div class="main-sidebar__popup">
+            <div class="main-sidebar__inner">
+                <div class="main-sidebar__header">
+                    <a href="#" class="main-sidebar__close"></a>
+                </div>
+                <div class="main-sidebar__slide">
+                    <h3 class="main-sidebar__title" data-toc-skip>{{ site.data.sidebars[page.sidebar].title }}</h3>
+
+                    {% unless page.hide_sidebar %}
+                        <div id="tg-sb-sidebar">
+                            {% render_sidebar %}
+                        </div>
+                    {% endunless %}
                 </div>
             </div>
         </div>
@@ -197,7 +195,7 @@ layout: default
     </aside>
 
     <div class="post-anchor">
-        <a href="#" class="post-anchor__button">
+        <a href="#" class="post-anchor__button" aria-label="scroll top">
             <i class="icon-arrow-up"></i>
         </a>
     </div>

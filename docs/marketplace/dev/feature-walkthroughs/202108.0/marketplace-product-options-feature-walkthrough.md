@@ -38,4 +38,4 @@ The following schema illustrates the Marketplace Product Options domain model:
 
 | INTEGRATION GUIDES | DATA IMPORT |
 | ---- | --- |
-| <!---LINK--> | [File details: merchant product option group](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-option-group.csv.html) |
+| [Marketplace Product Options feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-option-feature-integration.html) | [File details: merchant product option group](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-option-group.csv.html) |

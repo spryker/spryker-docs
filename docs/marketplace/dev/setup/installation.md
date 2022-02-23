@@ -22,7 +22,7 @@ Depending on the OS you use, check out the following installation prerequisites:
 
 ## Requirements
 
-For the recommended system requirements, see [System requirements](/docs/marketplace/dev/setup/system-requirements.html).
+For the recommended DevVM system requirements, see [DevVM system requirements](/docs/marketplace/dev/setup/system-requirements.html).
 
 ## Installing the B2C Demo Marketplace
 

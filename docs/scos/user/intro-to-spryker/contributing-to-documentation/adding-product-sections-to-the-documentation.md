@@ -1,7 +1,9 @@
 ---
-title: Adding a new product to the documentation site
+title: Adding product sections to the documentation
 description: Learn how to add a new product to the Spryker docs.
 template: howto-guide-template
+redirect_from:
+  - /docs/scos/user/intro-to-spryker/contributing-to-documentation/adding-a-new-product-to-the-documentation-site.html
 ---
 
 When we launch a new product, you need to create a separate section for it. Usually, there are two roles per product — user and developer. In this article, we assume that you need to create a new product *aop* with the *user* and *dev* roles.
@@ -33,6 +35,7 @@ defaults:
 2. Under the product scope you have added in the previous step, add the product roles with their paths and sidebars. The sidebar names should match those you've created in [1. Create sidebars for the new product](#create-sidebars-for-the-new-product). For example:
 
 ```yaml
+defaults:
   ...
   -
     scope:
@@ -69,19 +72,6 @@ sidebars:
   ...
   - aop_dev_sidebar
   - aop_user_sidebar
-```
-<a name="step-five"></a>
-5. To index the product in the search engine, in `algolia: indices:`, add the product name and titles for each role. For example:
-
-```yaml
-algolia:
-  ...
-  indices:
-    ...
-    - name: 'aop_user'
-      title: 'AOP User'
-    - name: 'aop_dev'
-      title: 'AOP Developer'
 ```
 
 ## 3. Add the product to the homepage
@@ -276,18 +266,9 @@ task :check_mp_dev do
 ```
 ## 5. Configure the Algolia search for the new project
 
-{% info_block warningBox "Prerequisites" %}
-
-Make sure you completed [step 5](#step-five) from the *Add the new product with roles to the config file* section.
-
-{% endinfo_block %}
-
 To configure the Algolia search for the product, you need to configure the search in the *spryker-docs* repository and the Algolia app for Spryker docs.
 
 ### Configure the Algolia search in the repository
-
-
-
 
 1. In `algolia_config`, create YML configuration files per role. For example, `algolia_config/_aop_dev.yml` and `algolia_config/_aop_user.yml`.
 
@@ -343,7 +324,20 @@ jobs:
         env: # Or as an environment variable
           ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}          
 ```
+<a name="add-product-names-for-the-search"></a>
 
+5. In `_config.yml`, in the `algolia: indices:` section, add indexes for products per role. For example:
+
+```yaml
+algolia:
+  ...
+  indices:
+    ...
+    - name: 'aop_user'
+      title: 'AOP User'
+    - name: 'aop_dev'
+      title: 'AOP Developer'
+```
 
 ### Configuring the Algolia search in the Algolia app
 
@@ -352,9 +346,9 @@ To configure the search in the Algolia app of the Spryker docs, do the following
 
 #### Create an index
 
-1. Go to [Indices](https://www.algolia.com/apps/IBBSSFT6M1/indices)
+1. In the Algloia web interface, go to [Indices](https://www.algolia.com/apps/IBBSSFT6M1/indices).
 2. Select **Create Index**.
-3. In the **Create index** window, enter the name exactly as you specified in [step 1](#configuring-the-algolia-search-in-the-repository) where you adjusted the config.yml file for the *algolia* section.
+3. In the **Create index** window, enter the **Index name**
   This shows a success message and opens the page of the created index.
 
 #### Add searchable attributes   

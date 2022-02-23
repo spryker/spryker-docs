@@ -136,7 +136,7 @@ entries:
         url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/markdown-syntax.html
       - title: Reviewing pull requests
         url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/reviewing-pull-requests.html
-      - title: Adding a new product to the documentation site
+      - title: Adding product sections to the documentation
         url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/adding-a-new-product-to-the-documentation-site.html
 
   - title: Features

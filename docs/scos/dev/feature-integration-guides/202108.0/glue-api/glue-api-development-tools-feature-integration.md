@@ -15,6 +15,7 @@ redirect_from:
 This document describes how to integrate the Glue: Development Tools feature into a Spryker project.
 
 ## Prerequisites
+
 To start feature integration, integrate the required features:
 
 | NAME | VERSION |

@@ -47,7 +47,6 @@ Make sure that the following modules have been installed:
 {% endinfo_block %}
 
 
-
 ## 2) Set up transfer objects
 
 Generate transfer changes:
@@ -126,7 +125,6 @@ console data:import glossary
 
 Make sure that in the database the configured data has been added to the `spy_glossary` table.
 
-
 {% endinfo_block %}
 
 
@@ -203,7 +201,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% endinfo_block %}
 
 
-
 ###  Configure mapping
 
 To map the data from requests to `QuoteTransfer`, configure the following mappers on the project level:
@@ -269,18 +266,15 @@ class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-
 * To make sure that `ShipmentQuoteMapperPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout` request and check that the order contains the shipment method you’ve provided in the request.
 * To verify that `ShipmentQuoteMapperPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout?include=shipments` and check that the order contains the shipments you’ve provided in the request.
 * To verify that `ShipmentRestOrderDetailsAttributesMapperPlugin` is activated, send the `GET https://glue.mysprykershop.com/orders?include=order-shipments` request and make sure that the order contains the shipments you’ve provided in the request.
-
 
 {% endinfo_block %}
 
 ### Configure the shipment method validator plugin and selected shipment method mapper plugin
 
 Activate the following plugin(s):
-
 
 | PLUGIN   | SPECIFICATION    | PREREQUISITES | NAMESPACE   |
 | ----------------- | ------------------------- | ---------- | -------------------- |
@@ -466,15 +460,11 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 ```
 </details>
 
-
-
 {% info_block warningBox "Verification" %}
 
 To make sure that the plugins are activated, send the `POST https://glue.mysprykershop.com/checkout` request with invalid shipments and check that errors are returned.
 
 {% endinfo_block %}
-
-
 
 
 ## Related features

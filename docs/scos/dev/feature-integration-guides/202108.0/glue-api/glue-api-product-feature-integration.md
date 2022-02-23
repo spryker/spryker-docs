@@ -204,6 +204,7 @@ Activate the following plugins:
 |ProductAbstractByProductAbstractSkuResourceRelationshipPlugin |Adds the `abstract-products` resource as a relationship to the `concrete-products` resource. |None| Spryker\Glue\ProductsRestApi\Plugin\GlueApplication|
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
+
 ```php
 <?php
 
@@ -346,9 +347,6 @@ Activate the following plugins:
 | ConcreteProductPricesRoutePlugin |Registers the `concrete-product-prices` resource. |None| Spryker\Glue\ProductPricesRestApi\Plugin |
 | AbstractProductPricesByResourceIdResourceRelationshipPlugin |Adds the `abstract-product-prices-resource` as a relationship to the `abstract-products` resource. |None | Spryker\Glue\ProductPricesRestApi\Plugin\GlueApplication |
 | ConcreteProductPricesByResourceIdResourceRelationshipPlugin |Adds the `concrete-product-prices-resource` as a relationship to the `concrete-products` resource. |None | Spryker\Glue\ProductPricesRestApi\Plugin\GlueApplication|
-
-
-
 
 
 

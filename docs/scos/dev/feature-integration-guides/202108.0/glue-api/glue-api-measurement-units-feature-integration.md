@@ -15,6 +15,7 @@ redirect_from:
 Follow the steps below to install Measurement units feature API.
 
 ## Prerequisites
+
 To start the feature integration, overview and install the necessary features:
 
 | NAME | VERSION | LINK |
@@ -23,6 +24,7 @@ To start the feature integration, overview and install the necessary features:
 | Product Measurement Units | {{page.version}} | [Product Measurement Units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-measurement-unit-feature-integration.html) |
 
 ## 1)  Install the required modules using Composer
+
 Run the following command to install the required modules:
 
 ```bash
@@ -54,7 +56,6 @@ console transfer:generate
 
 Make sure that `SpyProductMeasurementUnitStorage` and `SpyProductConcreteStorage` have been extended with synchronization behavior, namely with the methods:
 
-
 | ENTITY | TYPE | EVENT | PATH | METHODS |
 | --- | --- | --- | --- | --- |
 | SpyProductMeasurementUnitStorage | class | extended | src/Orm/Zed/ProductMeasurementUnitStorage/Persistence/Base/SpyProductMeasurementUnitStorage | syncPublishedMessageForMappings(), syncUnpublishedMessageForMappings() |
@@ -82,9 +83,11 @@ Make sure that the following changes have occurred:
 
 
 ## 3) Set up behavior
+
 Set up the following behaviors.
 
 ### Re-export data to storage
+
 Run the following commands to reload abstract and concrete product data to the Storage:
 
 ```bash
@@ -97,12 +100,12 @@ console event:trigger -r product_concrete
 Make sure that the following Redis keys exist and there is data in them:
 
 * `kv:product_measurement_unit:code:{% raw %}{{{% endraw %}product_measurement_unit_code{% raw %}}}{% endraw %}`
-
 * `kv:product_concrete:{% raw %}{{{% endraw %}locale_name{% raw %}}}{% endraw %}:sku:{% raw %}{{{% endraw %}sku_product_concrete{% raw %}}}{% endraw %}`
 
 {% endinfo_block %}
 
 ### Enable resources and relationships
+
 Activate the following plugins:
 
 

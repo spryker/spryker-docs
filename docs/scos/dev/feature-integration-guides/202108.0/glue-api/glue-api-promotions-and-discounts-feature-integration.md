@@ -27,7 +27,7 @@ To start feature integration, overview and install the necessary features:
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Product | {{page.version}} | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
-| Promotions & Discounts | {{page.version}} |  |
+| Promotions & Discounts | {{page.version}} | [Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/202108.0/promotions-and-discounts-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 
@@ -167,6 +167,7 @@ class QuoteConfig extends SprykerQuoteConfig
 
 
 ### Enable resources and relationships
+
 Activate the following plugin:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
@@ -271,8 +272,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 ```
 </details>
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
+**src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php**
 
 ```php
 
@@ -296,10 +296,8 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
     }
 }
 ```
-</details>
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
+**src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php**
 
 ```php
 
@@ -323,12 +321,12 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
     }
 }
 ```
-</details>
 
 
 {% info_block warningBox "Verification" %}
 
 Make sure that the following endpoint is available:
+
 - `https://glue.mysprykershop.com/product-labels/{% raw %}{{ idProductLabel }}{% endraw %}`
 
 **Example response:**
@@ -427,7 +425,6 @@ To check `ProductLabelsRelationshipByResourceIdPlugin` plugin installation, send
 }
 ```
 
-
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
@@ -475,7 +472,6 @@ To check `ProductLabelByProductConcreteSkuResourceRelationshipPlugin` plugin ins
     ]
 }
 ```
-
 
 {% endinfo_block %}
 
@@ -590,7 +586,6 @@ To verify installation of `CartRuleByQuoteResourceRelationshipPlugin` and `Vouch
 ```
 </details>
 
-
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
@@ -694,7 +689,6 @@ Make sure that the cart-rules and vouchers relationships are also available for 
 }
 ```
 </details>
-
 
 {% endinfo_block %}
 
@@ -864,9 +858,7 @@ Make sure that the following relations are available:
     ]
 }
 ```
- <br>
 </details>
-
 
 {% endinfo_block %}
 

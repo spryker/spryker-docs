@@ -15,14 +15,16 @@ redirect_from:
 ## Install Feature API
 
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Feature API](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Return Management | {{page.version}} | Feature |
+| Return Management | {{page.version}} | [Return Management feature integration](/docs/scos/dev/feature-integration-guides/202108.0/return-management-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
@@ -125,6 +127,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% info_block warningBox "Verification" %}
 
 Make sure that following endpoints are available now:
+
 - `https://glue.mysprykershop.com/returns`
 - `https://glue.mysprykershop.com/return-reasons`
 

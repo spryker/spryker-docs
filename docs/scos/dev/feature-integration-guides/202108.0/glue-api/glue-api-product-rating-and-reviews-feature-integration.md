@@ -85,12 +85,13 @@ console event:trigger -r product_concrete
 
 Make sure that there is data in Redis with keys:
 
-`kv:product_abstract:{% raw %}{{{% endraw %}store_name{% raw %}}}{% endraw %}:{% raw %}{{{% endraw %}locale_name{% raw %}}}{% endraw %}:sku:{% raw %}{{{% endraw %}sku_product_abstract{% raw %}}}{% endraw %}`
-`kv:product_concrete:{% raw %}{{{% endraw %}locale_name{% raw %}}}{% endraw %}:sku:{% raw %}{{{% endraw %}sku_product_concrete{% raw %}}}{% endraw %}`
+- `kv:product_abstract:{% raw %}{{{% endraw %}store_name{% raw %}}}{% endraw %}:{% raw %}{{{% endraw %}locale_name{% raw %}}}{% endraw %}:sku:{% raw %}{{{% endraw %}sku_product_abstract{% raw %}}}{% endraw %}`
+- `kv:product_concrete:{% raw %}{{{% endraw %}locale_name{% raw %}}}{% endraw %}:sku:{% raw %}{{{% endraw %}sku_product_concrete{% raw %}}}{% endraw %}`
 
 {% endinfo_block %}
 
 #### Enable resources
+
 Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
@@ -129,7 +130,7 @@ Make sure that the following endpoint is available:
 <details open>
 <summary markdown='span'>Example</summary>
 
-```yaml
+```json
 {
     "data": [
         {
@@ -210,6 +211,7 @@ Make sure that the following endpoint is available:
 {% endinfo_block %}
 
 #### Enable relationships
+
 Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
@@ -302,7 +304,7 @@ Make sure that `averageRating` and `reviewCount` attributes are present in concr
 <details open>
 <summary markdown='span'>Example</summary>
 
-```yaml
+```json
 {
     "data": {
         "type": "abstract-products",
@@ -459,7 +461,7 @@ Make sure that the response contains product-reviews as a relationship and produ
 <details open>
 <summary markdown='span'>Example</summary>
 
-```yaml
+```json
 {
     "data": {
         "type": "concrete-products",

@@ -26,7 +26,7 @@ The current feature integration guide only adds the [Add product to cart from th
 
 To start feature integration, overview and install the necessary features:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
 | Spryker Core | {{page.version}} |
 
@@ -39,6 +39,7 @@ composer require spryker-feature/cart {{page.version}} --update-with-dependencie
 ```
 
 ### 2) Add translations
+
 Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
@@ -55,13 +56,14 @@ Run the following console command to import data:
 ```bash
 console data:import glossary
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that above keys and corresponding translations are present in the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 
-## Install feature frontend
+## Install feature front end
 
 ### Prerequisites
 

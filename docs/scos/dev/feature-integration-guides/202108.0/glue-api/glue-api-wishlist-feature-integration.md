@@ -18,6 +18,7 @@ related:
 Follow the steps below to install Wishlist feature API.
 
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 |NAME|VERSION|INTEGRATION GUIDE|
@@ -33,6 +34,7 @@ Run the following command to install the required modules:
 ```bash
 composer require spryker/wishlists-rest-api:"^1.0.0" --update-with-dependencies
 ```
+
 {% info_block warningBox “Verification” %}
 
 Make sure that the following module has been installed:

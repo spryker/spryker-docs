@@ -39,7 +39,6 @@ To start feature integration, integrate the required features:
 | Customer Account Management | {{page.version}} | [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
 
 
-
 ## 1) Install the required modules using Composer
 
 Install the required modules:
@@ -163,7 +162,6 @@ console propel:install
 console transfer:generate
 ```
 
-
 {% info_block warningBox "Verification" %}
 
 Ensure that the following changes have occurred in the database:
@@ -177,9 +175,7 @@ Ensure that the following changes have occurred in the database:
 | spy_oauth_scope                                       | table  | created |
 | spy_oauth_refresh_token                               | table  | created |
 
-
 {% endinfo_block %}
-
 
 
 {% info_block warningBox "Verification" %}
@@ -576,6 +572,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 ```
 </details>
 
+
 **src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
 
 ```php
@@ -720,6 +717,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 ```bash
 console setup:init-db
 ```
+
 {% info_block warningBox "Verification" %}
 
 Ensure that the OAuth client has been added to the `spy_oauth_client table`:

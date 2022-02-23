@@ -16,8 +16,9 @@ Functionally, Spryker API can be split into 2 parts: API infrastructure (GLUE) a
 
 To integrate GLUE API in your project, you need to:
 
-- [ Install GLUE](#installing-glue)
-- [2. Enable GLUE](#enabling-glue)
+- [1. Installing GLUE](#1-installing-glue)
+- [2. Enabling GLUE](#2-enabling-glue)
+- [Integrate REST API resources](#integrate-rest-api-resources)
 
 
 
@@ -169,6 +170,7 @@ where  **<your_glue_domain>**  is the URL domain you want to use for GLUE. If yo
 {% info_block infoBox "Tip" %}
 
 If you want to enable GLUE application debugging, set the `GLUE_APPLICATION_REST_DEBUG` variable to true.
+
 {% endinfo_block %}
 
 6. Enable customer authentication via OAuth tokens (optional)
@@ -196,6 +198,7 @@ use Spryker\Glue\AuthRestApi\Plugin\GlueApplication\TokenResourceRoutePlugin;
 use Spryker\Glue\AuthRestApi\Plugin\RefreshTokensResourceRoutePlugin;
 use Spryker\Glue\AuthRestApi\Plugin\RestUserFinderByAccessTokenPlugin.;..
 ```
+
 Add OAuth resource plugins:
 
 ```php

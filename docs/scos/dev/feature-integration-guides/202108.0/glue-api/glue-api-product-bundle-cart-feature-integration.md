@@ -19,7 +19,7 @@ Follow the steps below to integrate the Glue API: Product Bundle + Cart feature.
 To start the feature integration, overview and install the necessary features:
 
 
-| Name | Version | Integration guide |
+| NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Product Bundles |{{page.version}}| [Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-bundles-feature-integration.html)|
@@ -31,9 +31,9 @@ Run the following command to install the required modules:
 ```bash
 composer require spryker/product-bundle-carts-rest-api:"^1.0.0" --update-with-dependencies
 ```
+
+
 {% info_block warningBox "Verification" %}
-
-
 
 Ensure that the following module has been installed:
 
@@ -41,10 +41,10 @@ Ensure that the following module has been installed:
 | --- | --- |
 | ProductBundleCartsRestApi | vendor/spryker/product-bundle-carts-rest-api |
 
-
 {% endinfo_block %}
 
 ## 2) Set up transfer objects
+
 ```bash
 console transfer:generate
 ```
@@ -65,6 +65,7 @@ Ensure that the following changes have been applied in the transfer objects:
 | CartItemRequestTransfer| class| created |src/Generated/Shared/Transfer/CartItemRequestTransfer|
 
 {% endinfo_block %}
+
 ## 3) Set up behavior
 
 Activate the following plugins:
@@ -78,8 +79,7 @@ Activate the following plugins:
 | BundleItemQuoteItemReadValidatorPlugin |Checks if `CartItemRequestTransfer` is a bundle item in `QuoteTransfer` before performing update or delete operations on it. |None |Spryker\Zed\ProductBundleCartsRestApi\Communication\Plugin|
 
 
-<details open>
-    <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<details open><summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -135,17 +135,14 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
-
 </details>
 
 
 {% info_block warningBox "Verification" %}
 
-
 Ensure that you have activated the plugins:
 
-
-| Request | Test |
+| REQUEST | TEST |
 | --- | --- |
 | `GET https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}?include=bundle-items`<br> `GET https://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}?include=bundle-items` | The `bundle-items` resource is returned as a relationship. |
 | `GET https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}?include=bundle-items,bundled-items` <br> `GET https://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}?include=bundle-items,bundled-items`| The `bundle-items` resource has a relationship of the `bundled-items` resource.|
@@ -154,6 +151,7 @@ Ensure that you have activated the plugins:
 {% endinfo_block %}
 
 **src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php**
+
 ```php
 <?php
 
@@ -189,6 +187,7 @@ Ensure that you have activated the plugins:
 {% endinfo_block %}
 
 **src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php**
+
 ```php
 <?php
 
@@ -210,12 +209,12 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Ensure that you can:
 
 *   Edit bundle item quantity: `PATCH https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}bundleItemGroupKey{% raw %}}}{% endraw %}`.
-
 *   Delete a bundle from cart: `DELETE https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}bundleItemGroupKey{% raw %}}}{% endraw %}`.
 
 {% endinfo_block %}

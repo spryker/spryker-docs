@@ -191,7 +191,7 @@ Register the following plugins:
 
 **src/Pyz/Client/Permission/PermissionDependencyProvider.php**
  
- ```php
+```php
 <?php
  
 namespace Pyz\Client\Permission;
@@ -219,7 +219,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 
 **src/Pyz/Zed/Permission/PermissionDependencyProvider.php**
 
- ```php
+```php
 <?php
  
 namespace Pyz\Zed\Permission;
@@ -379,13 +379,13 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 }
 ```
 
-{% info_block warningBox "Verfication" %}
+{% info_block warningBox "Verification" %}
 
-Check that the customer without PlaceOrderPermission cannot proceed to checkout.
+Check that the customer without `PlaceOrderPermission` cannot proceed to checkout.
 
 {% endinfo_block %}
 
-## Install feature frontend
+## Install feature front end
 
 ### Prerequisites
 
@@ -398,6 +398,7 @@ To start feature integration, review and install the necessary features:
 | Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
+
 Run the following command to install the required modules:
 
 ```bash
@@ -529,6 +530,7 @@ Check that the customer with the sent approval request cannot open the payment s
 
 
 ### 4) Set up widgets
+
 Register the following global widgets:
 
 | WIDGET | DESCRIPTION | PREREQUISITES | NAMESPACE |
@@ -539,7 +541,7 @@ Register the following global widgets:
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
- ```php
+```php
 <?php
  
 namespace Pyz\Yves\ShopApplication;

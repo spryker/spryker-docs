@@ -132,9 +132,13 @@ Make sure that the following endpoints are available:
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
+
 Make the request to `http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-image-sets`. The abstract product with the given SKU should have at least one image set. Make sure that the response includes relationships to the `abstract-product-image-sets` resources.
+
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
+
 Make the request to `http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=abstract-product-image-sets`. The concrete product with the given SKU should have at least one image set. Make sure that the response includes relationships to the `concrete-product-image-sets` resources.
+
 {% endinfo_block %}

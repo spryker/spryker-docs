@@ -35,7 +35,7 @@ composer require spryker/product-bundles-rest-api:"^1.0.0" --update-with-depend
 
 {% info_block warningBox "Verification" %}
 
- Make sure that the following module has been installed:
+Make sure that the following module has been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |

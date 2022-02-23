@@ -22,7 +22,7 @@ To start feature integration, overview and install the necessary features:
 | NAME | VERSION | REQUIRED  SUB-FEATURE|
 |---|---|---|
 |Spryker Core| {{page.version}} |[Glue Application](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html)|
-|Product Relation|master||
+|Product Relation| {{page.version}} | [Product relations feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-relations-feature-integration.html)|
 |Cart| {{page.version}}| [Cart API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html) ||
 Product| {{page.version}} |[Products API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)|
 
@@ -91,9 +91,10 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% info_block warningBox "Verification" %}
 
 Make sure that the following endpoints are available:
-`https://glue.mysprykershop.com/abstract-products/`{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}`e/related-products`
-`https://glue.mysprykershop.com/carts/`{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}`/up-selling-products`
-`https://glue.mysprykershop.com/guest-carts/`{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}`/up-selling-products`
+
+- `https://glue.mysprykershop.com/abstract-products/`{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}`e/related-products`
+- `https://glue.mysprykershop.com/carts/`{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}`/up-selling-products`
+- `https://glue.mysprykershop.com/guest-carts/`{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}`/up-selling-products`
 
 {% endinfo_block %}
 

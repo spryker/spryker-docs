@@ -136,10 +136,9 @@ SELECT COUNT(*) FROM spy_shopping_list_item WHERE uuid IS NULL;
 | ConcreteProductBySkuResourceRelationshipPlugin | Adds the `concrete-products` resource as a relationship to the `shopping-list-items` resource. | None | Spryker\Glue\ProductsRestApi\Plugin\GlueApplication |
 
 <details open>
-<summary markdown='span'>
-src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
     
-```
+```php
 <?php
  
 namespace Pyz\Glue\GlueApplication;
@@ -298,6 +297,7 @@ Check the response:
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
+
 To verify that the `ShoppingListItemsResourcePlugin` is set up correctly, make sure that the following endpoint is available:
 
 * https://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}/shopping-list-items

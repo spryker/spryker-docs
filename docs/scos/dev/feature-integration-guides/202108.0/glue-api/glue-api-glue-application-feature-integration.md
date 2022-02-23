@@ -42,6 +42,7 @@ Make sure that the following modules are installed:
 {% endinfo_block %}
 
 ### 2) Set up configuration
+
 Add the necessary parameters to `config/Shared/config_default.php`:
 
 **config/Shared/config_default.php**
@@ -69,6 +70,7 @@ $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = 'https:/
 ```
 
 #### Allow CORS requests to any domain
+
 Adjust `config/Shared/config_default.php`:
 
 **config/Shared/config_default.php**
@@ -78,12 +80,19 @@ $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = '*';
 ```
 
 {% info_block warningBox “Verification” %}
-To make sure the CORS headers are set up correctly, send an `OPTIONS` request to any valid GLUE resource with Origin header `https://glue.mysprykershop.com/` and see the correct JSON response:<ul><li>Verify that the access-control-allow-origin header exists and is the same as set in config</li><li>Verify that the access-control-allow-methods header exists and contains all available methods</li><li>Make POST, PATCH or DELETE request (can choose any of available one
- and verify that response headers are the same</li></ul>
- {% endinfo_block %}
+
+To make sure the CORS headers are set up correctly, send an `OPTIONS` request to any valid GLUE resource with Origin header `https://glue.mysprykershop.com/` and see the correct JSON response:
+- Verify that the access-control-allow-origin header exists and is the same as set in config
+- Verify that the access-control-allow-methods header exists and contains all available methods
+- Make POST, PATCH or DELETE request (can choose any of available one and verify that response headers are the same
+
+{% endinfo_block %}
 
 {% info_block infoBox %}
-<ul><li>When the `GlueApplicationConfig::isEagerRelationshipsLoadingEnabled` option is set to "false", no relationship will be loaded, unless they are explicitly specified in the "included" query parameter (e.g. `/abstract-products?include=abstract-product-prices`).</li><li>When the `GlueApplicationConfig::isEagerRelationshipsLoadingEnabled()` option is set to "true", all resource relationships will be loaded by default unless you pass empty "include" query parameter (e.g. `/abstract-products?include=`). If you specify needed relationships in the "included" query parameter, only required relationships will be added to response data.</li></ul>
+
+- When the `GlueApplicationConfig::isEagerRelationshipsLoadingEnabled` option is set to "false", no relationship will be loaded, unless they are explicitly specified in the "included" query parameter (e.g. `/abstract-products?include=abstract-product-prices`).
+- When the `GlueApplicationConfig::isEagerRelationshipsLoadingEnabled()` option is set to "true", all resource relationships will be loaded by default unless you pass empty "include" query parameter (e.g. `/abstract-products?include=`). If you specify needed relationships in the "included" query parameter, only required relationships will be added to response data.
+  
 {% endinfo_block %}
 
 ### 3) Set up transfer objects
@@ -114,6 +123,7 @@ Make sure that the following changes have occurred:
 {% endinfo_block %}
 
 ### 4) Set Up Behavior
+
 Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
@@ -187,6 +197,7 @@ $bootstrap
 ```
 
 #### Configure web server
+
 Create Nginx VHOST configuration:
 
 **/etc/nginx/sites-enabled/DE_development_glue**
@@ -224,6 +235,7 @@ ip glue.mysprykershop.com
 
 
 {% info_block warningBox “Verification” %}
+
 If everything is set up correctly, you should be able to access `https://glue.mysprykershop.com` and get a correct JSON response as follows:
 
 **Default JSON Response**
@@ -295,7 +307,9 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 ```
 
 {% info_block infoBox "Hint" %}
-Use constant of resource name instead of plain string.
+
+Use constant of resource name instead of the plain string.
+
 {% endinfo_block %}
 
 **src/Pyz/Glue/EntityTagsRestApi/EntityTagsRestApiConfig.php**
@@ -357,7 +371,11 @@ Send a request with the specified header and body.<br>Make sure that the returne
 
 {% info_block warningBox “Verification” %}
 
-Send a GET request to `https://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`.<br>Make sure that the response contains the 'ETag' header.<br>Prepare a PATCH request to `https://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`.<br>Add the 'If-Match' header with some random value.<br>Add a request body.
+Send a GET request to `https://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`.<br>Make sure that the response contains the 'ETag' header.
+
+Prepare a PATCH request to `https://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`.<br>Add the 'If-Match' header with some random value.
+
+Add a request body.
 
 ```json
 {
@@ -380,8 +398,7 @@ Make sure that the response contains the ETag validation error.
 		
 {% info_block warningBox “Verification” %}
 
-
-Make sure that the following endpoint is available:<br>http://mysprykershop.com/stores
+Make sure that the following endpoint is available: `https://mysprykershop.com/stores`.
 
 {% endinfo_block %}
 

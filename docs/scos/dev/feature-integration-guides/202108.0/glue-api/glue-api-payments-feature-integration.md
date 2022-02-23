@@ -32,7 +32,7 @@ To start the feature integration, overview and install the necessary features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html)  |
-| Payments | {{page.version}} |  |
+| Payments | {{page.version}} | [Payments feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/payments-feature-integration.html) |
 
 ## 1)  Install the required modules using Composer
 
@@ -151,6 +151,7 @@ Make sure that the following changes have occurred:
 ## 4) Set up behavior
 
 ### Enable resources and relationships
+
 Activate the following plugin:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |

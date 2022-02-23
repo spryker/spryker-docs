@@ -22,6 +22,7 @@ The current feature integration Guide only adds the Company Account REST API fun
 ## Install Feature API
 
 ### Prerequisites
+
 To start the feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
@@ -158,6 +159,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% info_block warningBox "Verification" %}
 
 Make that following endpoint is available:
+
 `https://glue.mysprykershop.com/customer-access`
 
 **Sample response**

@@ -57,7 +57,6 @@ Generate the transfer changes:
 console transfer:generate
 ```
 
-
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes have occurred:
@@ -91,13 +90,11 @@ Activate the following plugins:
 {% endinfo_block %}
 
 
-
 | PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE  |
 | -------------------- | --------------------- | ------------ | --------------- |
 | OrdersResourceRoutePlugin               | Registers the `orders` resource.                             | None          | Spryker\Glue\OrdersRestApi\Plugin |
 | OrderRelationshipByOrderReferencePlugin | Adds the `orders` resource as a relationship by order reference. | None          | Spryker\Glue\OrdersRestApi\Plugin |
 | CustomerOrdersResourceRoutePlugin       | Adds the configuration for resource routing, mapping of HTTP methods to controller actions and defines if actions are protected. | None          | Spryker\Glue\OrdersRestApi\Plugin |
-
 
 
 <details open>
@@ -149,7 +146,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 
 
-
 {% info_block warningBox "Verification" %}
 
 To verify that `OrdersResourceRoutePlugin` is set up correctly, make sure that the following endpoints are available:
@@ -158,7 +154,6 @@ To verify that `OrdersResourceRoutePlugin` is set up correctly, make sure that t
 - `https://glue.mysprykershop.comm/orders/{% raw %}{{{% endraw %}order_reference{% raw %}}}{% endraw %}`
 
 {% endinfo_block %}
-
 
 
 {% info_block warningBox "Verification" %}

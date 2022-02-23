@@ -61,8 +61,6 @@ Ensure that, after finishing customer impersonation, the session shopping list c
 
 {% endinfo_block %}
 
-
-
 ## Related features
 
 Integrate the following related features:

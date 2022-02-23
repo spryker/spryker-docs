@@ -69,6 +69,7 @@ Make sure that the following changes have been applied in transfer objects:
 ### 3) Set up behavior
 
 #### Enable relationships
+
 Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |

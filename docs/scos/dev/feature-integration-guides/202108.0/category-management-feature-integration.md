@@ -462,7 +462,6 @@ Configure tables to be published to the `spy_category_image_storage`, `spy_cate
 
 1.  Set up publisher plugins:
 
-
 |PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE|
 |--- | --- | --- | ---|
 |CategoryDeletePublisherPlugin | Unpublishes category node data by the `SpyCategory` entity events. ||  Spryker\Zed\CategoryStorage\Communication\Plugin\Publisher\Category |
@@ -703,13 +702,9 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 Make sure that the `category-node` and `category-tree` trigger plugins work correctly:
 
 1.  Fill the `spy_category` table with some data.
-
 2.  Run the `console publish:trigger-events -r category_node` command.
-
 3.  Run the `console publish:trigger-events -r category_tree` command.
-
 4.  Make sure that the `spy_category_node_storage` and `spy_category_tree_storage` tables have been filled with respective data.
-
 5.  Make sure that, in your system, storage entries are displayed with `kv:category_node:{store}:{locale}:{id}` and `kv:category_tree:{store}:{locale}:{id}` masks.
 
 {% endinfo_block %}
@@ -719,11 +714,8 @@ Make sure that the `category-node` and `category-tree` trigger plugins work corr
 Make sure that *category-node*, *category-tree* synchronization plugins works correctly:
 
 1.  Fill the `spy_category_node_storage`, `spy_category_tree_storage` tables with some data.
-
 2.  Run the `console sync:data -r category_node` command.
-
 3.  Run the `console sync:data -r category_tree` command.
-
 4.  Check that, in your system, the storage entries are displayed with the `kv:category_node:{store}:{locale}:{id}` and `kv:category_tree:{store}:{locale}:{id}` masks.
 
 {% endinfo_block %}    
@@ -731,7 +723,6 @@ Make sure that *category-node*, *category-tree* synchronization plugins works co
 {% info_block warningBox "Verification" %}
 
 Make sure that when a category is created or edited through ORM, it is exported to Redis and Elasticsearch accordingly.
-
 
 | STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 | ---  | --- | --- |
@@ -782,8 +773,7 @@ Make sure that when a category is created or edited through ORM, it is exported 
 ```
 
 
-<details open>
-    <summary markdown='span'>EXAMPLE EXPECTED DATA FRAGMENT: category_node:de:de_de:5</summary>
+<details open><summary markdown='span'>EXAMPLE EXPECTED DATA FRAGMENT: category_node:de:de_de:5</summary>
 
 ```yaml
 {

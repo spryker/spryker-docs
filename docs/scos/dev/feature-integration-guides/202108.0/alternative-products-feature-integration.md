@@ -40,6 +40,7 @@ composer require spryker-feature/alternative-products: "{{page.version}}" --upda
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that the following modules were installed:
 
 | MODULE | EXPECTED DIRECTORY |
@@ -157,7 +158,9 @@ Make sure that the changes have been implemented successfully. For this purpose,
 ### 3) Configure export to Redis
 
 {% info_block infoBox "Info" %}
+
 This step will publish tables on change (create, edit, delete to the `spy_product_alternative_storage`, `spy_product_replacement_for_storage`  and synchronize the data to Storage.)
+
 {% endinfo_block %}
 
 #### Set up event listeners
@@ -256,7 +259,9 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 #### Import product alternatives
 
 {% info_block infoBox "Info" %}
+
 The following imported entities will be used as alternative products in the Spryker OS.
+
 {% endinfo_block %}
 
 Prepare your data according to your requirements using our demo data:
@@ -316,7 +321,9 @@ console data:import product-alternative
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that, in the database, the configured data has been added to the `spy_product_alternative` table.
+
 {% endinfo_block %}
 
 ### 5) Set up behavior
@@ -422,7 +429,7 @@ Make sure that when you edit any product variant in Zed you have "Product Altern
 
 {% endinfo_block %}
 
-## Install feature frontend
+## Install feature front end
 
 ### Prerequisites
 
@@ -438,7 +445,7 @@ Please overview and install the necessary features before beginning the integrat
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/alternative-products: "^202009.0" --update-with-dependencies
+composer require spryker-feature/alternative-products: "^{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -477,7 +484,9 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that in the database the configured data are added to the `spy_glossary` table.
+
 {% endinfo_block %}
 
 ### 3) Set up widgets
@@ -522,11 +531,13 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 ```
 
 Run the following command to enable Javascript and CSS changes:
+
 ```bash
 console frontend:yves:build
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that the following widgets were registered:
 
 | MODULE | TEST |

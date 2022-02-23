@@ -4,9 +4,6 @@ description: Learn how to integrate the Catalog + Order Management feature conne
 template: feature-integration-guide-template
 ---
 
-
-
-
 This document describes how to integrate the Catalog + Order Management feature connector into a Spryker project.
 
 ## 1) Install the required modules using Composer
@@ -14,19 +11,15 @@ This document describes how to integrate the Catalog + Order Management feature 
 Install the required modules:
 
 ```shell
-composer require spryker/sales-product-connector:"^1.6.0" --update-with-dependencie
+composer require spryker/sales-product-connector:"^1.6.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
 
-
-
-
-
 Make sure that the following modules have been installed:
 
-| **MODULE**                    | **EXPECTED DIRECTORY**                       |
-| :---------------------------- | :------------------------------------------- |
+| MODULE                   | EXPECTED DIRECTORY                      |
+| ---------------------------- | ------------------------------------------- |
 | Product                       | vendor/spryker/product                       |
 | Catalog                       | vendor/spryker/catalog                       |
 | Product Page Search           | vendor/spryker/product-page-search           |
@@ -42,12 +35,12 @@ Generate transfer changes:
 console transfer:generate
 ```
 
-
 {% info_block warningBox "Verification" %}
+
 Make sure that the following changes have been applied in transfer objects:
 
 | TRANSFER           | TYPE     | EVENT   | PATH                                            |
-| :----------------- | :------- | :------ | :---------------------------------------------- |
+| ----------------- | ------- | ------ | --------------------------------------------- |
 | popularity         | property | Created | src/Generated/Shared/Transfer/ProductPayload    |
 | idProductAbstract  | property | Created |                                                 |
 | popularity         | property | Created | src/Generated/Shared/Transfer/ProductPageSearch |
@@ -66,8 +59,8 @@ Make sure that the following changes have been applied in transfer objects:
 
 Register the following plugins:
 
-| PLUGIN                                    | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                                    |
-| :---------------------------------------- | :----------------------------------------------------------- | :------------ | :----------------------------------------------------------- |
+| PLUGIN    | SPECIFICATION    | PREREQUISITES | NAMESPACE     |
+| --------------------- | -------------------- | ------------ | ---------------------------- |
 | ProductPopularityDataExpanderPlugin       | Expands the provided `ProductAbstractPageSearch` transfer object's data with popularity. |               | Spryker\Zed\SalesProductConnector\Communication\Plugin\ProductPageSearch |
 | ProductPopularityMapExpanderPlugin        | Adds product popularity related data to product abstract search data. |               | Spryker\Zed\SalesProductConnector\Communication\Plugin\ProductPageSearch |
 | ProductPopularityPageDataLoaderPlugin     | Expands the `ProductPageLoadTransfer` object with popularity data. |               | Spryker\Zed\SalesProductConnector\Communication\Plugin\ProductPageSearch |
@@ -75,8 +68,7 @@ Register the following plugins:
 | PopularitySortConfigTransferBuilderPlugin | Builds a popularity sort configuration transfer for a catalog page. |               | Spryker\Client\SalesProductConnector\Plugin\PopularitySortConfigTransferBuilderPlugin |
 
 
-<details>
-  <summary markdown='span'>/src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
+<details><summary markdown='span'>/src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -123,11 +115,9 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
     }
 }
 ```
-
 </details>
 
-<details>
-  <summary markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
+<details><summary markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -154,11 +144,9 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     }
 }
 ```
-
 </details>
 
-<details>
-  <summary markdown='span'>src/Pyz/Client/Catalog/CatalogDependencyProvider.php</summary>
+<details><summary markdown='span'>src/Pyz/Client/Catalog/CatalogDependencyProvider.php</summary>
 
 ```php  
 <?php
@@ -181,7 +169,6 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
     }
 }
 ```
-
 </details>
 
 
@@ -191,6 +178,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 1. Append the glossary for the feature:
 
 **data/import/common/common/glossary.csv**
+
 ```csv
 key,translation,locale
 catalog.sort.popularity,Sort by popularity,en_US
@@ -204,7 +192,6 @@ catalog.sort.popularity,Sortieren nach Beliebtheit,de_DE
 console data:import glossary
 ```
 
-
 {% info_block warningBox "Verification" %}
 
 Make sure that the configured data has been added to the `spy_glossary` table in the database.
@@ -216,6 +203,7 @@ Make sure that the configured data has been added to the `spy_glossary` table in
 1. Enable the `page-product-abstract-refresh` console command in the cron-job list:
 
 **config/Zed/cronjobs/jenkins.php**
+
 ```php
 $jobs[] = [
     'name' => 'page-product-abstract-refresh',
@@ -236,6 +224,7 @@ vendor/bin/console scheduler:setup
 
 1. Place several orders.
 2. Go to a Catalog page.
-   Make sure that you can sort products by popularity.
+
+Make sure that you can sort products by popularity.
 
 {% endinfo_block %}

@@ -61,7 +61,9 @@ $config[GlueApplicationConstants::GLUE_APPLICATION_REST_DEBUG] = false;
 #### Add global CORS policy
 
 {% info_block infoBox %}
+
 `GLUE_APPLICATION_CORS_ALLOW_ORIGIN` should be configured for every domain used in the project.
+
 {% endinfo_block %}
 
 Adjust `config/Shared/config_default.php`:
@@ -85,6 +87,7 @@ $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = '*';
 {% info_block warningBox "Verification" %}
 
 To make sure that the CORS headers are set up correctly, send the OPTIONS request to any valid GLUE resource with the `Origin` header `https://glue.mysprykershop.com/` and see the correct JSON response:
+
 * Verify that the `access-control-allow-origin` header is present and is the same to the one set in `config`.
 * Verify that the `access-control-allow-methods` header is present and contains all available methods.
 * Send POST, PATCH, or DELETE requests (can choose any of available ones), and verify that the response headers are the same.
@@ -94,6 +97,7 @@ To make sure that the CORS headers are set up correctly, send the OPTIONS reques
 #### Configure included section
 
 {% info_block infoBox %}
+
   -  When the `GlueApplicationConfig::isEagerRelationshipsLoadingEnabled()` option is set to `false`, no relationship is loaded, unless they are explicitly specified in the include query parameter (e.g., `/abstract-products?include=abstract-product-prices`). 
   - When the `GlueApplicationConfig::isEagerRelationshipsLoadingEnabled()` option is set to `true`, all resource relationships is loaded by default unless you pass the empty include query parameter (e.g., `/abstract-products?include=`). If you specify needed relationships in the include query parameter, only required relationships are added to response data.
   
@@ -491,6 +495,7 @@ https://glue.mysprykershop.com/url-resolver/?url=/product-abstract-url
 To make sure `CategoryNodeRestUrlResolverAttributesTransferProviderPlugin` is set up correctly, request the category URL via the /URLs API endpoint, and ensure you receive the correct resource identifier in response.
 
 **Request body**
+
 ```json
 https://glue.mysprykershop.com/url-resolver/?url=/category-url
 {

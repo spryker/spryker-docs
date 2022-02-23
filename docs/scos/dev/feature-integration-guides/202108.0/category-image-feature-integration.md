@@ -143,6 +143,7 @@ Make sure that propel entities have been generated successfully by checking thei
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
+
 Make sure that the following changes have been implemented in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |

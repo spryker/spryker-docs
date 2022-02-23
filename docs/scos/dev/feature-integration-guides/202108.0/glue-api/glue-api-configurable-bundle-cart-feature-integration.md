@@ -49,6 +49,7 @@ Make sure that the following module has been installed:
 Enable validation of the `X-Anonymous-Customer-Unique-Id` guest header for the new resource: `guest-configured-bundles`.
 
 **src/Pyz/Glue/CartsRestApi/CartsRestApiConfig.php**
+
 ```php
 <?php
 
@@ -110,7 +111,6 @@ Make sure that the following changes have been applied in the transfer objec
 | CurrencyTransfer | class | created | src/Generated/Shared/Transfer/CurrencyTransfer |
 | StoreTransfer | class | created | src/Generated/Shared/Transfer/StoreTransfer|
 
-
 {% endinfo_block %}
 
 ## 4) Set up behavior
@@ -152,9 +152,9 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that:  
-* The `configured-bundles` resource is available by sending the request: `POST https://glue.mysprykershop.com/carts/:uuid/configured-bundles`.
+Make sure that: 
 
+* The `configured-bundles` resource is available by sending the request: `POST https://glue.mysprykershop.com/carts/:uuid/configured-bundles`.
 * The `guest-configured-bundles` resource is available by sending the request: `POST https://glue.mysprykershop.com/guest-carts/:uuid/guest-configured-bundles`.
 
 {% endinfo_block %}
@@ -202,7 +202,6 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 ## Related features
 
 Integrate the following related features:
-
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | --- | --- | --- |

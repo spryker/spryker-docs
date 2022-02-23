@@ -1,10 +1,10 @@
 ---
 title: Managing account details and settings
-description: This topic describes what you can do in the My account area of the Merchant Portal.
+description: This document describes what you can do in the My account area of the Merchant Portal.
 template: back-office-user-guide-template
 ---
 
-This topic describes how to manage merchant user account details in the Merchant Portal.
+This document describes how to manage merchant user account details in the Merchant Portal.
 
 ## Prerequisites
 

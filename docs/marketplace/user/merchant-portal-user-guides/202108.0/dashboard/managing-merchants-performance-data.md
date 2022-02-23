@@ -1,11 +1,11 @@
 ---
 title: Managing merchant's performance data
 last_updated: Nov 13, 2020
-description: This topic describes what information you can check in Dashboard of the Merchant Portal.
+description: This document describes what information you can check in Dashboard of the Merchant Portal.
 template: back-office-user-guide-template
 ---
 
-This topic describes what information you can check in the dashboard of the Merchant Portal.
+This document describes what information you can check in the dashboard of the Merchant Portal.
 
 *Dashboard*  is the hub for merchants' important business and performance data. It lets merchants monitor their own store inside the Marketplace by having a snapshot view of the most crucial information.
 
@@ -43,9 +43,9 @@ Low on Stock—the total number of offers that have less than 5 in the stock.
 
 #### Validity
 
-Valid—The total number of valid offers, that is,  offers that have no validity dates or **Valid From & Valid To** includes today's date.
+Valid—the total number of valid offers, that is, offers that have no validity dates or **Valid From & Valid To** includes today's date.
 
-Expiring in 5 days—The total number of offers that will expire in the next 5 days.
+Expiring in 5 days—the total number of offers that will expire in the next 5 days.
 
 #### Visibility
 

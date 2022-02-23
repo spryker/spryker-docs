@@ -1,7 +1,7 @@
 ---
 title: Managing marketplace orders
 last_updated: Jul 15, 2021
-description: This topic describes how to manage marketplace orders in the Back Office.
+description: This document describes how to manage marketplace orders in the Back Office.
 template: back-office-user-guide-template
 ---
 

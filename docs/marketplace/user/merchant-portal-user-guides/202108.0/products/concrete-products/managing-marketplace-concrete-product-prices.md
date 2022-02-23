@@ -11,8 +11,8 @@ This topic describes how to manage marketplace concrete product prices in the Me
 
 To start working with the marketplace concrete products, take the following steps:
 1. Go to **Merchant Portal&nbsp;<span aria-label="and then">></span> Products**.
-2. Hover over the three dots next to the abstract product for which you manage a concrete product and click **Manage Product** or just click the line.
-3. The **[Product name]** drawer. Navigate to the **Concrete Products** tab.
+2. Hover over the three dots next to the abstract product for which you manage a concrete product and click **Manage Product** or just click the line. The **[Product name]** drawer opens.
+3. Navigate to the **Concrete Products** tab.
 
 This article contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
 
@@ -25,8 +25,8 @@ To add a new price for a marketplace concrete product:
 3. In the **Price** pane, click **+Add**. The empty cells appear in the table below.
 4. From the drop-down menu **Store**, select the store for which the price is created.
 5. From the drop-down menu **Currency**, select the currency in which the price is defined.
-6. For **NET DEFAULT** cell, enter a price. Use `.` or `,` separators.
-7. For **GROSS DEFAULT** cell, enter a price. Use `.` or `,` separators.
+6. For the **NET DEFAULT** cell, enter a price. Use `.` or `,` separators.
+7. For the **GROSS DEFAULT** cell, enter a price. Use `.` or `,` separators.
 8. Optional: For the **GROSS DEFAULT** cell, enter a price. Use `.` or `,` separators.
 9. Optional: For the **NET ORIGINAL** cell, enter a price. Use `.` or `,` separators.
 10. Optional: For the **GROSS ORIGINAL** cell, enter a price. Use `.` or `,` separators.
@@ -36,7 +36,7 @@ To add a new price for a marketplace concrete product:
 
 To stop creating a new price, click **Cancel**.
 
-To keep the prices of the abstract product, check **Use Abstract Product price for all locales**.
+To keep the prices of the abstract product, select **Use Abstract Product price for all locales**.
 
 ## Editing marketplace concrete product prices
 
@@ -67,7 +67,7 @@ To remove price of a marketplace concrete product:
 | Gross default  | Item price after tax.   |
 | Net original   | Item price before tax displayed as a strikethrough beside the default price on the Storefront. It is usually used to indicate a price change. |
 | Gross original |Item price after tax displayed as a strikethrough beside the default price on the Storefront. It is usually used to indicate a price change. |
-| Quantity       | Number of items for which the price is defined. This field id used to define the volume prices for the concrete product.  |
+| Quantity       | Number of items for which the price is defined. This field ID used to define the volume prices for the concrete product.  |
 
 ### Adding volume prices
 

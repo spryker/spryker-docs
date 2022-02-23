@@ -6,7 +6,7 @@ template: back-office-user-guide-template
 
 ---
 
-This topic describes the attributes that you see and enter on different product pages.
+This document describes the attributes that you see and enter on different product pages.
 
 ---
 

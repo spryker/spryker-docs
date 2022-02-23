@@ -1,10 +1,10 @@
 ---
 title: Managing product offers
-description: This topic describes the actions a Merchant can do in the Offers section in the Merchant Portal.
+description: This document describes the actions a Merchant can do in the Offers section in the Merchant Portal.
 template: back-office-user-guide-template
 ---
 
-This topic describes the actions a merchant can do in the **Offers** section of the Merchant Portal.
+This document describes the actions a merchant can do in the **Offers** section of the Merchant Portal.
 
 ## Prerequisites
 

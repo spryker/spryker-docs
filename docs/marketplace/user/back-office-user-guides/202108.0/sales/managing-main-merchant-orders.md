@@ -230,24 +230,24 @@ The following table describes the attributes you enter and select when creating 
 | ATTRIBUTE  | DESCRIPTION   | REQUIRED |
 | ----------------------- | ---------------- | ----------- |
 | Delivery Address                 | Dropdown menu where you can select the delivery address. By default, *New Address* is selected. |              |
-| Salutation   | Salutation to use when addressing the customer.  | ✓ |
-| First Name  | Customer's first name.  | ✓ |
+| Salutation   | Salutation to use when addressing the customer.  | &check; |
+| First Name  | Customer's first name.  | &check; |
 | Middle name  | Customer's middle name.   |   |
-| Last name   | Customer's last name.   | ✓ |
-| Email   | Customer’s email address.   | ✓ |
-| Country   | Drop-down menu with the list of countries to select.  | ✓ |
-| Address 1 | 1st line of the customer's address.  | ✓ |
-| Address 2  | 2nd line of the customer's address.  | ✓ |
+| Last name   | Customer's last name.   | &check; |
+| Email   | Customer’s email address.   | &check; |
+| Country   | Drop-down menu with the list of countries to select.  | &check; |
+| Address 1 | 1st line of the customer's address.  | &check; |
+| Address 2  | 2nd line of the customer's address.  | &check; |
 | Company  | Customer’s company name.  |     |
-| City   | Customer’s city.  | ✓  |
-| ZIP code  | ZIP code.   | ✓  |
+| City   | Customer’s city.  | &check;  |
+| ZIP code  | ZIP code.   | &check;  |
 | Phone  | Customer’s phone number.  |      |
 | Cell Phone  | Customer’s cell phone number.   |   |
 | Description   | Description of the shipping address.  |   |
 | Comment   | Comment to the shipping address.  |              |
-| Shipment method   | Drop-down menu with the list of all the available shipment methods in the system. You can select only one. | ✓  |
+| Shipment method   | Drop-down menu with the list of all the available shipment methods in the system. You can select only one. | &check;  |
 | Requested delivery date | Date by which the order should be delivered. |    |
-| Order items inside this shipment | Check the order items you create or edit the shipment for.   | ✓   |
+| Order items inside this shipment | Check the order items you create or edit the shipment for.   | &check;   |
 
 ## Editing main merchant shipment
 

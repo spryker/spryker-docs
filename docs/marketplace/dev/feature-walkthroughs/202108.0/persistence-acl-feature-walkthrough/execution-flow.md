@@ -53,7 +53,7 @@ $merchantCollection = $merchantQuery->find();
 | 5 | null | 15 | `Orm\Zed\Merchant\Persistence\SpyMerchant` | 6 | 0 |
 | 6 | 138 | 15 | `Orm\Zed\Merchant\Persistence\SpyMerchant` | 1 | 1 |
 
-All rules with id `1`, `3`, `4` are filtered out since they do not belong to `Orm\Zed\Merchant\Persistence\SpyMerchant`. The rule with id `5` is filtered out since it does not relate to query operation (query has read operation, but rule is configured for `create` and `update` actions). For the given query, only the rules with ids `2` and `6` will be considered. They both have `segment` scope. 
+All rules with ID `1`, `3`, `4` are filtered out since they do not belong to `Orm\Zed\Merchant\Persistence\SpyMerchant`. The rule with ID `5` is filtered out since it does not relate to query operation (query has read operation, but rule is configured for `create` and `update` actions). For the given query, only the rules with ids `2` and `6` will be considered. They both have `segment` scope.
 
 The Persistence ACL modifies the query so that only records that the user has access to are returned:
 
@@ -64,9 +64,9 @@ SELECT * FROM `spy_merchant` order by `updated_at`;
 
 Query after the Persistence ACL:
 ```sql
-SELECT `spy_merchant`.* 
+SELECT `spy_merchant`.*
 FROM `spy_merchant`
-  INNER JOIN `spy_acl_entity_segment_merchant` 
+  INNER JOIN `spy_acl_entity_segment_merchant`
     ON (`spy_merchant`.`id_merchant` = `spy_acl_entity_segment_merchant`.`fk_merchant`
       AND `spy_acl_entity_segment_merchant`.`fk_acl_entity_segment` IN (12, 138))
 ORDER BY `spy_merchant`.`updated_at`;
@@ -74,7 +74,7 @@ ORDER BY `spy_merchant`.`updated_at`;
 
 ## Model action processing flow
 
-Model actions are generally handled the same way as queries, but there are certain differences: 
+Model actions are generally handled the same way as queries, but there are certain differences:
 
 Exceptions are thrown if a user performs unauthorized actions on the Active Record model (create, update or delete).
 
@@ -102,6 +102,6 @@ $productAbstractEntity->save();
 | 3 | null | 15 | `Orm\Zed\Store\Persistence\SpyStore` | 1  | 0 |
 | 4 | null | 16 | `Orm\Zed\Product\Persistence\SpyProductAbstract` | 7 | 0 |
 
-The rules with id `1` and `3` are filtered out since they do not belong to `Orm\Zed\Product\Persistence\SpyProductAbstract`. Because rule ID `2` does not grant permission to `create`, the rule with ID `4` will apply instead, and the creation will be allowed.
+The rules with ID `1` and `3` are filtered out since they do not belong to `Orm\Zed\Product\Persistence\SpyProductAbstract`. Because rule ID `2` does not grant permission to `create`, the rule with ID `4` will apply instead, and the creation will be allowed.
 
-If there were no rule with id `4`, a `Spryker\Zed\AclEntity\Persistence\Exception\OperationNotAuthorizedException` would be thrown.
+If there were no rule with ID `4`, a `Spryker\Zed\AclEntity\Persistence\Exception\OperationNotAuthorizedException` would be thrown.

@@ -5,7 +5,7 @@ description: This guide explains how to create product variants in Marketplace.
 template: back-office-user-guide-template
 ---
 
-This topic describes how to add a product variant for an abstract product.
+This document describes how to add a product variant for an abstract product.
 
 ## Prerequisites
 

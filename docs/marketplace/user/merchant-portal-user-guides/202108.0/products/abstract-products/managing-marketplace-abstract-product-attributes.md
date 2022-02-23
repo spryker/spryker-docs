@@ -5,7 +5,7 @@ description: This document describes how to manage marketplace abstract product 
 template: back-office-user-guide-template
 ---
 
-This topic describes how to manage attributes of the marketplace abstract products in the Merchant Portal.
+This document describes how to manage attributes of the marketplace abstract products in the Merchant Portal.
 
 ## Prerequisites
 

@@ -48,11 +48,11 @@ The following table describes attributes you select and enter in the ***[Product
 
 | ATTRIBUTE   | DESCRIPTION  | REQUIRED? |
 | ----------- | -------------- | --------- |
-| Name        | Name of your product displayed on the Storefront. It is set per locale. | ✓         |
+| Name        | Name of your product displayed on the Storefront. It is set per locale. | &check;         |
 | Description | Description of the product displayed on the Storefront. It is set per locale. |           |
 | Stores      | Defines the [stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) the product is available in.<br/>You can select multiple values. |           |
 | Price       | In this pane, you can manage prices for your abstract product. See [Managing abstract product prices](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-prices.html) for more details. |           |
-| Tax Set     | The conditions under which a product is going to be taxed.<br/>The values available for selection derive from Taxes > Tax Sets<br/>Only one value can be selected. | ✓         |
+| Tax Set     | The conditions under which a product is going to be taxed.<br/>The values available for selection derive from Taxes > Tax Sets<br/>Only one value can be selected. | &check;         |
 | Images      | In this pane, you can manage image sets for your abstract product. See [Managing abstract product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-image-sets.html) for more details. |           |
 | Attributes  | In this pane, you can manage attributes for your product. See [Managing abstract product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-attributes.html) for more details. |           |
 | Categories  | Defines the [categories](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html) the product is displayed in. |           |

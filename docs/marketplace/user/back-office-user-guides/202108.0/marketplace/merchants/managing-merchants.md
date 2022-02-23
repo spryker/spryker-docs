@@ -5,7 +5,7 @@ description: This guide explains how to create and manage merchant records on th
 template: back-office-user-guide-template
 ---
 
-On the **Merchants** page, you can manage the merchants' records and facilitate the merchant registration and approval process, as well as apply any changes to the existing merchants' records. This topic describes the procedures of creating and managing merchant records.
+On the **Merchants** page, you can manage the merchants' records and facilitate the merchant registration and approval process, as well as apply any changes to the existing merchants' records. This document describes the procedures of creating and managing merchant records.
 
 ---
 

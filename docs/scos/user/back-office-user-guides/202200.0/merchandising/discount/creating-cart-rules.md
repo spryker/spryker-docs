@@ -53,7 +53,7 @@ To create a cart rule discount:
    3. To proceed to the **Conditions** tab, click **Next**.
 4. On the **Conditions** tab, do the following:
     1. Select the **APPLY WHEN** conditions or click **Plain query** and enter the query manually.
-    2. Enter the value for **THE DISCOUNT CAN BE APPLIED IF THE QUERY APPLIES FOR AT LEAST X ITEM(S).** field.
+    2. For **THE DISCOUNT CAN BE APPLIED IF THE QUERY APPLIES FOR AT LEAST X ITEM(S).**, enter a numeric value.
 5. To create the new discount, click **Save**.
 
 ### Reference information: Creating cart rule discounts

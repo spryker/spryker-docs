@@ -40,11 +40,11 @@ To create a cart rule discount:
    8. To proceed to the **Discount calculation** tab, click **Next**.
 3. On the **Discount calculation** tab, do the following:
    1. Select a **CALCULATOR TYPE**.
-
+Week number in
       {% info_block warningBox "Note" %}
 
       The next step varies based on the calculator type that you select:
-      * **Fixed amount**: Enter the amounts (per currency and price mode, if applicable) to be discounted.
+      * **Fixed amount**: Enter the amounts per currency and price mode, if applicable, to be discounted.
       * **Percentage**: Enter the percent value to be discounted.
 
       {% endinfo_block %}
@@ -92,8 +92,8 @@ This section contains information you need to know when working with discount ca
 
 **CALCULATOR TYPE**
 A discount can be calculated in two ways:
-* **Percentage**: A discount is calculated as a percentage of the discounted items' prices. If selected, in the **VALUE** field, set the percentage value (for example, `25`).
-* **Fixed amount**: A fixed amount is discounted. If you select this type, specify the amount (**Gross price**, **Net price**, or both) for each currency used in your store.
+* **Percentage**: A discount is calculated as a percentage of the discounted items' prices. If selected, in the **VALUE** field, set the percentage value—for example, `25`.
+* **Fixed amount**: A fixed amount is discounted. If you select this type, for each currency used in your store, specify the amount:**Gross price**, **Net price**, or both.
 
 Example:
 
@@ -110,7 +110,7 @@ Example:
 **QUERY STRING**
 <br>You can use a query to define discount conditions. Only products that satisfy the query's conditions are discountable. Queries also define if the discount is applied to one or several products. Discount conditions are set by using either the *query builder* or by specifying a **Plain query**.
 
-Use the query builder to construct queries (guided) or the **Plain query** field to enter them (free text). You can switch between both modes by clicking the corresponding button (note that incomplete queries cannot be transferred between the two modes).
+Use the query builder to construct queries or the **Plain query** field to enter them. You can switch between both modes by clicking the corresponding button, but note that incomplete queries cannot be transferred between the two modes.
 
 **Query builder**
 
@@ -120,10 +120,10 @@ Use the query builder to construct queries (guided) or the **Plain query** field
 
 ![Discount_Calculation_Plain Query](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Calculation:+Reference+Information/discount-calculation-plain-query.png)
 
-The query builder lets you combine different conditions with connectors (**AND** and **OR**). Multiple conditions (rules) can be added and grouped in this way. Each condition (rule) consists of:
-* Field (for example, `attribute.color`)
-* Operator (for example, `equal(=)`)
-* Value tokens (for example, `blue`)
+The query builder lets you combine different conditions with connectors **AND** and **OR**. Multiple conditions, also known as rules, can be added and grouped in this way. Each condition consists of:
+* Field—for example, `attribute.color`
+* Operator—for example, `equal(=)`
+* Value tokens—for example, `blue`
 
 {% info_block infoBox "Info" %}
 
@@ -156,7 +156,7 @@ The following table describes attributes you enter if, for **DISCOUNT APPLICATIO
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| ABSTRACT PRODUCT SKU(S) | Comma-separated abstract product SKUs — products that will be offered with a discount. |
+| ABSTRACT PRODUCT SKU(S) | Comma-separated abstract product SKUs—products that will be offered with a discount. |
 | MAXIMUM QUANTITY | Maximum number of product units that can be discounted. |
 
 ![Application type](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/back-office-user-guides/merchandising/discount/creating-vouchers.md/202200.0/application-type.png)
@@ -165,7 +165,7 @@ The following table describes attributes you enter if, for **DISCOUNT APPLICATIO
 
 This section provides information that you need to know when working with discount conditions on the **Conditions** tab.
 
-Conditions, also called *decision rules*, are created in the form of a query and may be entered as a plain query or by the Query builder.  A cart rule can have one or more conditions linked to it. The cart rule is redeemed only if every condition linked to it is satisfied. For more details, see the [Discount calculation tab](#discount-calculation-tab) section.
+Conditions, also called *decision rules*, are created in the form of a query and may be entered as a plain query or by the Query builder. A cart rule can have one or more conditions linked to it. The cart rule is redeemed only if every condition linked to it is satisfied. For more details, see the [Discount calculation tab](#discount-calculation-tab) section.
 
 {% info_block infoBox "Info" %}
 
@@ -178,7 +178,7 @@ If you do not need to add a condition, leave the query builder empty.
 
 ![Discount Condition](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/discount-condition.png)
 
-The minimum order amount value specifies the threshold which should be reached for the products in a cart with a certain attribute to be discounted. When added to cart, products with the attribute specified by a query are measured against the threshold. By default, the minimum order amount value is `1`. It means that any discount is applied if the number of items (that meet the rules) inside the cart is superior or equal to `1`.
+The minimum order amount value specifies the threshold which should be reached for the products in a cart with a certain attribute to be discounted. When added to cart, products with the attribute specified by a query are measured against the threshold. By default, the minimum order amount value is `1`. It means that any discount is applied if the number of items that meet the rules inside the cart is superior or equal to `1`.
 
 **Example**:
 <br>Discount is applied if 4 or more items with the Intel Core processor are in the cart.
@@ -191,16 +191,16 @@ Let's say you have received a task to create a discount with the following condi
 
 **B2B scenario**:
 <br>The discount is going to be applied if one of the following is fulfilled:
-* The `price-mode` is `Gross mode`, and the subtotal amount is greater or equal to `€100` (Euro) `OR` `115` CHF (Swiss Franc).
-* The price mode is `Net Mode`, and the subtotal amount is greater or equal: `€80` (Euro) `OR` `95` CHF (Swiss Franc).
+* The `price-mode` is `Gross mode`, and the subtotal amount is greater or equal to `100` Euro `OR` `115` Swiss Franc.
+* The price mode is `Net Mode`, and the subtotal amount is greater or equal: `80` Euro `OR` `95` Swiss Franc.
 
 The setup looks like the following:
 ![B2B scenario](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/b2b-scenario.png)
 
 **B2C scenario**
 <br>The discount is going to be applied if one of the following is fulfilled:
-* On **Tuesday**, and the item `color` is `red`, this item does not have the label `NEW`, and the customer adds at least two items (or more) to a cart.
-* On **Thursday**, and the item `color` is `white`, this item does not have the label `NEW`, and the customer adds at least two items (or more) to a cart.
+* On **Tuesday**, and the item `color` is `red`, this item does not have the label `NEW`, and the customer adds at least two items or more to a cart.
+* On **Thursday**, and the item `color` is `white`, this item does not have the label `NEW`, and the customer adds at least two items or more to a cart.
 
 The setup should look like as follows:
 ![B2C scenario](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/b2c-scenario.png)
@@ -215,29 +215,29 @@ This section contains a set of tables that describe fields, value types, and ope
 
 | VALUE | DESCRIPTION |
 | --- | --- |
-| Fields | Available fields may include `SKU`, `item-price`, `item-quantity`, or a variety of attributes (for example, `currency` on the preceding image). |
-| Operator | Operator compares the value of a field on the left with the value(s) on the right (for example, equals (`=`), greater than (`>`)). If the expression evaluates to true, the discount can be applied (operator is `equal` on the previous image). |
-| Value | Value types must match the selected field. The asterisk (*) matches all possible values (on the preceding image, the value is `Swiss Franc`).|
-| Combine Conditions | `AND` and `OR` operators are used to combine conditions (`AND` on the preceding image). |
+| Fields | Available fields may include `SKU`, `item-price`, `item-quantity`, or a variety of attributes—for example, `currency` on the preceding image. |
+| Operator | Operator compares the value of a field on the left with the values on the right—for example, equals (`=`), greater than (`>`). If the expression evaluates to true, the discount can be applied—operator is `equal` on the previous image). |
+| Value | Value types must match the selected field. The asterisk (*) matches all possible values. On the preceding image, the value is `Swiss Franc`.|
+| Combine Conditions | `AND` and `OR` operators are used to combine conditions —`AND` on the preceding image. |
 |Grouping | When building more complex queries, conditions may be grouped inside parentheses. Because discount calculations and conditions are applied per item, you can not use groups with `AND` where each group contains at least one SKU-based rule. |
 
-**Fields and value types (Plain query)**
+**Fields and value types—plain query**
 
 |FIELD|PLAIN QUERY|VALUE TYPE|DESCRIPTION|
 |-|-|-|-|
-|Calendar week|calender-week|Number|Week number in a year (1-52)|
-|Day of week|day-of-week|Number|Day of week (1-7).|
+|Calendar week|calender-week|Number|Week number in a year—from 1 to 52.|
+|Day of week|day-of-week|Number|Day of week—from 1 to 7.|
 |Grand total|grand-total|Number (Decimal)|Sum of all totals.|
 |Subtotal|sub-total|Number (Decimal)|Sum of item prices w/o shipment expenses and discounts.|
 |Item price|item-price|Number (Decimal)|Price of one item.|
 |Item quantity|item-quantity|Number|Number of items.|
-|Month|month|Number|Month of the year (1-12)|
+|Month|month|Number|Month of the year—from 1 to 12.|
 |SKU|sku|String|Any value depends on how SKUs are stored.|
 |Time|time|hour:minute|Time of the day.|
 |Total quantity|total-quantity|Number|Total cart quantity.|
 |Attribute|attribute.*|String, number|Any value.|
 |Customer Group|customer-group|String|Any value, use a customer group name for an exact match.|
-| Category | category | String | Any product category or sub-category. Includes any sub-categories that fall within its navigation tree.  |
+| Category | category | String | Any product category or sub-category. Includes any sub-categories that fall within its navigation tree. |
 
 **Operators (Plain Query)**
 

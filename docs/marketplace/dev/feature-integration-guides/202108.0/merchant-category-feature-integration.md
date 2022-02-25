@@ -237,7 +237,8 @@ Prepare your data according to your requirements using the following format:
 **data/import/common/common/marketplace/merchant_category.csv**
 
 ```yaml
-category_key,merchant_reference 2
+category_key,merchant_reference
+demoshop,MER000001
 ```
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |

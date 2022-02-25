@@ -41,7 +41,6 @@ Make sure the following modules have been installed:
 | MerchantProductOptionDataImport | vendor/spryker/merchant-product-option-data-import |
 | MerchantProductOptionGui | vendor/spryker/merchant-product-option-gui |
 | MerchantProductOptionStorage | vendor/spryker/merchant-product-option-storage |
-| MerchantProductOptionExtension | vendor/spryker/merchant-product-option-extension |
 
 {% endinfo_block %}
 

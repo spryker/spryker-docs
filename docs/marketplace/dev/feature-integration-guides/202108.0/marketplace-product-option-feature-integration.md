@@ -100,7 +100,7 @@ Make sure that the following changes were applied in transfer objects:
 
 Append glossary according to your configuration:
 
-**src/data/import/glossary.csv**
+**data/import/common/common/glossary.csv**
 
 ```yaml
 checkout.item.option.pre.condition.validation.error.exists,"Product option of %name% is not available anymore.",en_US

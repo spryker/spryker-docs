@@ -1410,7 +1410,7 @@ Verify that the following modules were installed:
 
 Append glossary according to your configuration:
 
-**src/data/import/glossary.csv**
+**data/import/common/common/glossary.csv**
 
 ```csv
 merchant_product_offer.view_seller,View Seller,en_US

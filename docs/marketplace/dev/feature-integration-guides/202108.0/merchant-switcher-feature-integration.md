@@ -108,7 +108,7 @@ Make sure that the following changes were applied in transfer objects:
 
 Append glossary according to your configuration:
 
-**src/data/import/glossary.csv**
+**data/import/common/common/glossary.csv**
 
 ```yaml
 merchant_switcher.message,Switch from %currentMerchant% to %newMerchant%? Due to different availability, not all products may be added to your shopping cart.,en_US

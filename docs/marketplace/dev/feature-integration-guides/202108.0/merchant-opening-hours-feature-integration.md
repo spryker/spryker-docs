@@ -541,7 +541,7 @@ Verify if the following modules were installed:
 
 Append glossary according to your configuration:
 
-**src/data/import/glossary.csv**
+**data/import/common/common/glossary.csv**
 
 ```yaml
 merchant_opening_hours.opening_hours_title,Opening Hours,en_US 

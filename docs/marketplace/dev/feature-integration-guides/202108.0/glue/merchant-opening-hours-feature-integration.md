@@ -24,7 +24,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/merchant-opening-hours-rest-api:"^0.1.0"
+composer require spryker/merchant-opening-hours-rest-api:"^1.0.0"
 ```
 
 {% info_block warningBox "Verification" %}

@@ -84,7 +84,8 @@ Adjust the schema definition so entity changes will trigger events:
 Generate entity and transfer changes:
 
 ```bash
-console transfer:generate console propel:install console transfer:generate
+console propel:install 
+console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
@@ -544,6 +545,34 @@ Append glossary according to your configuration:
 **data/import/common/common/glossary.csv**
 
 ```yaml
+merchant_weekday_schedule.new_year,New Year's Day,en_US
+merchant_weekday_schedule.new_year,Neujahrstag,de_DE
+merchant_weekday_schedule.good_friday,Good Friday,en_US
+merchant_weekday_schedule.good_friday,Karfreitag,de_DE
+merchant_weekday_schedule.easter_sunday,Easter Sunday,en_US
+merchant_weekday_schedule.easter_sunday,Ostersonntag,de_DE
+merchant_weekday_schedule.easter_monday,Easter Monday,en_US
+merchant_weekday_schedule.easter_monday,Ostermontag,de_DE
+merchant_weekday_schedule.may_day,May Day,en_US
+merchant_weekday_schedule.may_day,Maifeiertag,de_DE
+merchant_weekday_schedule.ascension_of_christ,Ascension of Christ,en_US
+merchant_weekday_schedule.ascension_of_christ,Christi Himmelfahrt,de_DE
+merchant_weekday_schedule.whit_sunday,Whit Sunday,en_US
+merchant_weekday_schedule.whit_sunday,Pfingstsonntag,de_DE
+merchant_weekday_schedule.whit_monday,Whit Monday,en_US
+merchant_weekday_schedule.whit_monday,Pfingstmontag,de_DE
+merchant_weekday_schedule.corpus_christi,Corpus Christi,en_US
+merchant_weekday_schedule.corpus_christi,Fronleichnam,de_DE
+merchant_weekday_schedule.day_of_german_unity,Day of German unity,en_US
+merchant_weekday_schedule.day_of_german_unity,Tag der Deutschen Einheit,de_DE
+merchant_weekday_schedule.all_saints_day,All Saints' Day,en_US
+merchant_weekday_schedule.all_saints_day,Allerheiligen,de_DE
+merchant_weekday_schedule.1st_christmas_day,1st Christmas day,en_US
+merchant_weekday_schedule.1st_christmas_day,1. Weihnachtstag,de_DE
+merchant_weekday_schedule.2nd_christmas_day,2nd Christmas day,en_US
+merchant_weekday_schedule.2nd_christmas_day,2. Weihnachtstag,de_DE
+merchant_weekday_schedule.sunday_opening,Sunday Opening,en_US
+merchant_weekday_schedule.sunday_opening,Verkaufsoffener Sonntag,de_DE
 merchant_opening_hours.opening_hours_title,Opening Hours,en_US 
 merchant_opening_hours.opening_hours_title,Öffnungszeiten,de_DE 
 merchant_opening_hours.special_opening_hours_title,Special Opening Hours,en_US 

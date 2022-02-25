@@ -105,7 +105,7 @@ Make sure that the following changes have occurred in transfer objects:
 |---|---|---|---|
 | MerchantProfileAddress | class | Created | src/Generated/Shared/Transfer/MerchantProfileAddressTransfer |
 | MerchantProfileCollection | class | Created | src/Generated/Shared/Transfer/MerchantProfileCollectionTransfer|
-| MerchantProfileCriteriaFilter | class | Created | src/Generated/Shared/Transfer/MerchantProfileCriteriaFilterTransfer |
+| MerchantProfileCriteria | class | Created | src/Generated/Shared/Transfer/MerchantProfileCriteriaTransfer |
 | MerchantProfileGlossaryAttributeValues | class | Created | src/Generated/Shared/Transfer/MerchantProfileGlossaryAttributeValuesTransfer |
 | MerchantProfileLocalizedGlossaryAttributes | class | Created | src/Generated/Shared/Transfer/MerchantProfileLocalizedGlossaryAttributesTransfer |
 | MerchantSearch | class | Created | src/Generated/Shared/Transfer/MerchantSearchTransfer |
@@ -147,7 +147,7 @@ Enable the following behaviors by registering the plugins:
 | MerchantUserTabMerchantFormTabExpanderPlugin | Adds an extra tab to merchant edit and create forms for editing and creating merchant user information. |   | Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui |
 | MerchantUserViewMerchantUpdateFormViewExpanderPlugin | Expands merchant `FormView` with the data for the merchant user tab. |   | Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui |
 
-<details><summary markdown='span'>src/Pyz/Zed/Merchant/MerchantDependencyProvider</summary>
+<details><summary markdown='span'>src/Pyz/Zed/Merchant/MerchantDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -201,7 +201,7 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
 
 Make sure that:
 
-* When you create a merchant using `MerchantFacade::updateMerchant()`, its profile also gets created.
+* When you create a merchant using `MerchantFacade::createMerchant()`, its profile also gets created.
 * When you update a merchant using `MerchantFacade::updateMerchant()`, its profile also gets updated.
 * When you fetch a merchant using `MerchantFacade::findOne()`, its profile data also gets fetched.
 * When you deactivate a merchant in the *Merchants* section of the Back Office, its merchant users are deactivated in the *Users* section.
@@ -1427,12 +1427,6 @@ class UrlStorageDependencyProvider extends SprykerUrlDependencyProvider
     }
 }
 ```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that you can open the merchant page at link `http://yves.de.demo-spryker.com/de/merchant/spryker`.
-
-{% endinfo_block %}
 
 2. Enable Javascript and CSS changes:
 

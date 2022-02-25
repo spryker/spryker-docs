@@ -126,11 +126,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             OrdersRestApiConfig::RESOURCE_ORDERS,
             new MerchantsByOrderResourceRelationshipPlugin()
         );
-        
-        $resourceRelationshipCollection->addRelationship(
-            MerchantProductOffersRestApiConfig::RESOURCE_PRODUCT_OFFERS,
-            new MerchantByMerchantReferenceResourceRelationshipPlugin()
-        );
 
         return $resourceRelationshipCollection;
     }

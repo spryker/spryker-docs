@@ -114,7 +114,7 @@ Enable the following behaviors by registering the plugins:
 | - | - | - | - |
 | MerchantProductOfferPreAddToCartPlugin | Sets the product offer reference to the item transfer |  | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\CartPage |
 
-**src/Pyz/Yves/Cart/CartDependencyProvider.php**
+**src/Pyz/Yves/CartPage/CartPageDependencyProvider.php**
 
 ```
 <?php

@@ -1330,7 +1330,7 @@ Make sure that a default product offer is given when retrieving product concrete
 
 Make sure that validity data is saved when saving a product offer.
 
-Make sure Merchant and Product Offer Validity sections exist on the product offer edit page in `ProductOfferGui`.
+Make sure Merchant and Product Offer Validity sections exist on the product offer view page in `ProductOfferGui`.
 
 Make sure the Merchant column is in the Product Offers list in `ProductOfferGui`.
 

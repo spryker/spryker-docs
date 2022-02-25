@@ -87,7 +87,6 @@ We also recommend using `ConcreteProductsByProductConcreteIdsResourceRelationsh
 Run the following commands to update the database and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

@@ -32,7 +32,6 @@ Verify that the following modules were installed:
 ### 2) Set up the Database Schema and Transfer Objects
 Run the following commands to apply database changes and generate entity and transfer changes:
 ```yaml
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

@@ -186,7 +186,6 @@ Once you've finished Setup Behaviour step, make sure that:<ul><li>NoPayment01 st
 Run the following commands to apply database changes and to generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

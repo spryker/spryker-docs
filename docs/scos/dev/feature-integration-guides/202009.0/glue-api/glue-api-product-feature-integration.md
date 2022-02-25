@@ -45,7 +45,6 @@ Make sure that the following modules were installed:
 Run the following commands to apply the database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

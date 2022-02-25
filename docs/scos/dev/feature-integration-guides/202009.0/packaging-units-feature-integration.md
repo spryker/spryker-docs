@@ -120,7 +120,6 @@ Set up synchronization queue pools, so non-multistore entities (not store-specif
 Run the following commands to apply the database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

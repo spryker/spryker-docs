@@ -30,7 +30,6 @@ Make sure that the following modules were installed:<table><thead><tr><th>Module
 ### 2) Set up Database Schema and Transfer Objects
 Run the following commands to apply database changes and generate entity and transfer changes:
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

@@ -39,7 +39,6 @@ Make sure that the following modules have been installed:<table><thead><tr><th>M
 Run the following commands to apply the database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

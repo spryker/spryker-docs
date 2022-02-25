@@ -69,7 +69,6 @@ Adjust the schema definition to guarantee unique identifier for each option grou
 Apply database changes and to generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

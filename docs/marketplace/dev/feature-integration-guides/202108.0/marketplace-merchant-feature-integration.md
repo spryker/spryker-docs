@@ -73,7 +73,6 @@ Set up database schema:
 2. Apply database changes, generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

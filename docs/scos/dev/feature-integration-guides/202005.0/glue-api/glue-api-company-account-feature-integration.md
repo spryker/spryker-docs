@@ -90,7 +90,6 @@ class CompanyUsersRestApiConfig extends SprykerCompanyUsersRestApiConfig
 Run the following commands to generate transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

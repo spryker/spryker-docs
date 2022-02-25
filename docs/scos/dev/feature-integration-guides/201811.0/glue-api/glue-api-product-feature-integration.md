@@ -36,7 +36,6 @@ Make sure that the following module is installed:
 **Implementation**
 Run the following commands to apply database changes and generate entity and transfer changes:
 ```
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

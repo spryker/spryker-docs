@@ -44,7 +44,6 @@ Verify that the following modules were installed:
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```yaml
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

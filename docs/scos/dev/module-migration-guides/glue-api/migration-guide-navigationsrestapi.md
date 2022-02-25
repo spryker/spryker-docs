@@ -73,7 +73,6 @@ If you do not have the spryker/url-storage module in your project - you need to 
 On your local development environment you may run:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

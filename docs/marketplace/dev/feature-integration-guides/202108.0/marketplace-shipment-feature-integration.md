@@ -81,7 +81,6 @@ Make sure that `ShipmentService::groupItemsByShipment()` groups items by shipmen
 Apply the database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

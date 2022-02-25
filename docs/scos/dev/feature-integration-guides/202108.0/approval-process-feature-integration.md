@@ -89,7 +89,6 @@ Make sure that the configuration returns the billing address and payment keys.
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

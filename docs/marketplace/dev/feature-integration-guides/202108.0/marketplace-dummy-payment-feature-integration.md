@@ -106,7 +106,7 @@ Enable the following behaviors by registering the plugins:
 | --------- | ------- | ----- | ------------- |
 | MerchantProductItemPaymentMethodFilterPlugin | If not all order items contain of product reference, then filters dummy marketplace payment methods out. |  | Spryker\Zed\DummyMarketplacePayment\Communication\Plugin\Payment\MerchantProductItemPaymentMethodFilterPlugin |
 
-**Pyz\Zed\Payment\PaymentDependencyProvider.php**
+**src/Pyz/Zed/Payment/PaymentDependencyProvider.php**
 
 ```php
 <?php
@@ -219,7 +219,7 @@ Enable the following behaviors by registering the plugins:
 | DummyMarketplacePaymentHandlerPlugin | Expands Payment transfer with payment provider and payment selection. |  | Spryker\Yves\DummyMarketplacePayment\Plugin\StepEngine\DummyMarketplacePaymentHandlerPlugin |
 | DummyMarketplacePaymentInvoiceSubFormPlugin | Creates sub form for Invoice payment method. |  | Spryker\Yves\DummyMarketplacePayment\Plugin\StepEngine\SubForm\DummyMarketplacePaymentInvoiceSubFormPlugin |
 
-**Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider.php**
+**src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php**
 
 ```php
 <?php

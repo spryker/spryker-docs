@@ -975,7 +975,6 @@ namespace Pyz\Zed\MerchantOms;
 use Pyz\Zed\MerchantOms\Communication\Plugin\Oms\CancelMarketplaceOrderItemCommandPlugin;
 use Pyz\Zed\MerchantOms\Communication\Plugin\Oms\DeliverMarketplaceOrderItemCommandPlugin;
 use Pyz\Zed\MerchantOms\Communication\Plugin\Oms\ShipByMerchantMarketplaceOrderItemCommandPlugin;
-use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\MerchantOms\MerchantOmsDependencyProvider as SprykerMerchantOmsDependencyProvider;
 
 class MerchantOmsDependencyProvider extends SprykerMerchantOmsDependencyProvider
@@ -1028,7 +1027,7 @@ class MerchantSalesOrderMerchantUserGuiDependencyProvider extends SprykerMerchan
 </details>
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Shipment/ShipmentDependencyProvider.php**</summary>
+<summary markdown='span'>src/Pyz/Zed/Shipment/ShipmentDependencyProvider.php</summary>
 
 ```php
 <?php

@@ -970,6 +970,7 @@ class PriceProductStorageDependencyProvider extends SprykerPriceProductStorageDe
 namespace Pyz\Client\MerchantProductOfferStorage;
 
 use Spryker\Client\MerchantProductOfferStorage\MerchantProductOfferStorageDependencyProvider as SprykerMerchantProductOfferStorageDependencyProvider;
+use Spryker\Client\MerchantProductOfferStorageExtension\Dependency\Plugin\ProductOfferStorageCollectionSorterPluginInterface;
 use Spryker\Client\PriceProductOfferStorage\Plugin\MerchantProductOfferStorage\LowestPriceProductOfferStorageCollectionSorterPlugin;
 use Spryker\Client\PriceProductOfferStorage\Plugin\MerchantProductOfferStorage\PriceProductOfferStorageExpanderPlugin;
 
@@ -1003,7 +1004,7 @@ class MerchantProductOfferStorageDependencyProvider extends SprykerMerchantProdu
 namespace Pyz\Service\PriceProduct;
 
 use Spryker\Service\PriceProduct\PriceProductDependencyProvider as SprykerPriceProductDependencyProvider;
-use Spryker\Service\PriceProductOfferStorage\Plugin\PriceProduct\PriceProductOfferPriceProductFilterPlugin;
+use Spryker\Service\PriceProductOffer\Plugin\PriceProduct\PriceProductOfferPriceProductFilterPlugin;
 use Spryker\Service\PriceProductOfferVolume\Plugin\PriceProductOffer\PriceProductOfferVolumeFilterPlugin;
 
 class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvider
@@ -1023,7 +1024,7 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 }
 ```
 
-**src/Pyz/Client/PriceProductOffer/PriceProductOfferDependencyProvider.php**
+**src/Pyz/Zed/PriceProductOffer/PriceProductOfferDependencyProvider.php**
 
 ```php
 <?php

@@ -24,7 +24,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/product-offer-prices-rest-api:"^0.4.0" --update-with-dependencies
+composer require spryker/product-offer-prices-rest-api:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

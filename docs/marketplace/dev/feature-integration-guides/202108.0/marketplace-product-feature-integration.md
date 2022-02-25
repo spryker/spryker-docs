@@ -312,7 +312,7 @@ Make sure the `de_page` Elasticsearch index for any product that belongs (see `s
 
 {% endinfo_block %}
 
-**src/Pyz/Client/ProductStorage/ProductStorageDependencyProvider.php**
+**src/Pyz/Zed/ProductStorage/ProductStorageDependencyProvider.php**
 
 ```php
 <?php
@@ -546,7 +546,6 @@ Register the following plugins to enable widgets:
 | PLUGIN  | DESCRIPTION | Prerequisites | NAMESPACE |
 | ----------- | ----------- | ---------- | --------- |
 | MerchantProductWidget | Displays alternative product. |  | SprykerShop\Yves\MerchantProductWidget\Widget |
-| ProductSoldByMerchantWidget | Displays merchant product. |  | SprykerShop\Yves\MerchantProductWidget\Widget |
 
 ```php
 <?php
@@ -590,7 +589,7 @@ Make sure that when you add merchant product to cart, on a cart page is has the 
 
 Append glossary according to your configuration:
 
-**src/data/import/common/common/glossary.csv**
+**data/import/common/common/glossary.csv**
 
 ```
 merchant_product.message.invalid,Product "%sku%" with Merchant "%merchant_reference%" not found.,en_US

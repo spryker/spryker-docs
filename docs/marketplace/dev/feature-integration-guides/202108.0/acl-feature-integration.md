@@ -25,7 +25,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker-feature/acl: "{{page.version}}" --update-with-dependencies
+composer require spryker-feature/acl:"{{page.version}}" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
 
@@ -79,7 +79,6 @@ Make sure that the following changes have been applied in transfer objects:
 |   AclEntitySegment | object | Created | src/Generated/Shared/Transfer/AclEntitySegmentTransfer |
 |   AclEntitySegmentRequest | object | Created | src/Generated/Shared/Transfer/AclEntitySegmentRequestTransfer |
 |   AclEntityRuleRequest | object | Created | src/Generated/Shared/Transfer/AclEntityRuleRequestTransfer |
-|   AclEntityRule | object | Created | src/Generated/Shared/Transfer/AclEntityRuleTransfer |
 |   AclEntityRuleCollection | object | Created | src/Generated/Shared/Transfer/AclEntityRuleCollectionTransfer |
 |   AclEntitySegmentResponse | object | Created | src/Generated/Shared/Transfer/AclEntitySegmentResponseTransfer |
 |   AclEntitySegmentCriteria | object | Created | src/Generated/Shared/Transfer/AclEntitySegmentCriteriaTransfer |
@@ -120,6 +119,13 @@ Enable the following behaviors by registering the plugins:
 **src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php**
 
 ```php
+<?php
+
+namespace Pyz\Zed\EventDispatcher;
+
+use Spryker\Zed\Acl\Communication\Plugin\EventDispatcher\AccessControlEventDispatcherPlugin;
+use Spryker\Zed\EventDispatcher\EventDispatcherDependencyProvider as SprykerEventDispatcherDependencyProvider;
+
 class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider
 {
     /**
@@ -137,6 +143,13 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 **src/Pyz/Zed/ZedNavigation/ZedNavigationDependencyProvider.php**
 
 ```php
+<?php
+
+namespace Pyz\Zed\ZedNavigation;
+
+use Spryker\Zed\Acl\Communication\Plugin\Navigation\AclNavigationItemCollectionFilterPlugin;
+use Spryker\Zed\ZedNavigation\ZedNavigationDependencyProvider as SprykerZedNavigationDependencyProvider;
+
 class ZedNavigationDependencyProvider extends SprykerZedNavigationDependencyProvider
 {
     /**
@@ -154,6 +167,13 @@ class ZedNavigationDependencyProvider extends SprykerZedNavigationDependencyProv
 **src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
 
 ```php
+<?php
+
+namespace Pyz\Zed\Installer;
+
+use Spryker\Zed\Acl\Communication\Plugin\AclInstallerPlugin;
+use Spryker\Zed\Installer\InstallerDependencyProvider as SprykerInstallerDependencyProvider;
+
 class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 {
     /**
@@ -171,7 +191,15 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 **src/Pyz/Zed/User/UserDependencyProvider.php**
 
 ```php
-class InstallerDependencyProvider extends SprykerUserDependencyProvider
+<?php
+
+namespace Pyz\Zed\User;
+
+use Spryker\Zed\Acl\Communication\Plugin\GroupPlugin;
+use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\User\UserDependencyProvider as SprykerUserDependencyProvider;
+
+class UserDependencyProvider extends SprykerUserDependencyProvider
 {
     /**
      * @param \Spryker\Zed\Kernel\Container $container
@@ -192,6 +220,14 @@ class InstallerDependencyProvider extends SprykerUserDependencyProvider
 **src/Pyz/Zed/Acl/AclDependencyProvider.php**
 
 ```php
+<?php
+
+namespace Pyz\Zed\Acl;
+
+use Spryker\Zed\Acl\AclDependencyProvider as SprykerAclDependencyProvider;
+use Spryker\Zed\AclEntity\Communication\Plugin\Acl\AclEntityAclRolePostSavePlugin;
+use Spryker\Zed\AclEntity\Communication\Plugin\Acl\AclRulesAclRolesExpanderPlugin;
+
 class AclDependencyProvider extends SprykerAclDependencyProvider
 {
     /**
@@ -221,6 +257,13 @@ Use the following example if you want to enable ACL Entity for the whole Applica
 **src/Pyz/Zed/MerchantPortalApplication/MerchantPortalApplicationDependencyProvider.php**
 
 ```php
+<?php
+
+namespace Pyz\Zed\MerchantPortalApplication;
+
+use Spryker\Zed\AclEntity\Communication\Plugin\Application\AclEntityApplicationPlugin;
+use Spryker\Zed\MerchantPortalApplication\MerchantPortalApplicationDependencyProvider as SprykerMerchantPortalApplicationDependencyProvider;
+
 class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalApplicationDependencyProvider
 {
    /**

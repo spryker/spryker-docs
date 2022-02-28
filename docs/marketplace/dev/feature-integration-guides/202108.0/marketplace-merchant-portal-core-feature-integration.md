@@ -268,7 +268,7 @@ class AclDependencyProvider extends SprykerAclDependencyProvider
 
 #### 2. Enable Merchant Portal infrastructural plugins.
 
-**src/Pyz/Zed/Acl/AclDependencyProvider.php**
+**src/Pyz/Zed/MerchantPortalApplication/MerchantPortalApplicationDependencyProvider.php**
 
 ```php
 <?php
@@ -354,8 +354,6 @@ Make sure that the following changes have been applied in transfer objects:
 
 | TRANSFER  | TYPE  | EVENT | PATH  |
 | ----------- | ----- | ------- | -------------------- |
-| MerchantDashboardCard | class | created | src/Generated/Shared/Transfer/MerchantDashboardCardTransfer  |
-| MerchantDashboardActionButton | class | created | src/Generated/Shared/Transfer/MerchantDashboardActionButtonTransfer |
 | GuiTableDataRequest | class | Created | src/Generated/Shared/Transfer/GuiTableDataRequestTransfer |
 | GuiTableConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableConfigurationTransfer |
 | GuiTableColumnConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableColumnConfigurationTransfer |
@@ -400,7 +398,8 @@ Follow the steps below to install the Merchant Portal Core feature front end.
 
 **Environment requirements:**
 
-- NodeJs v12+
+- NPM v6 (higher versions have problems with workspace)
+- NodeJs v12-14
 - Yarn v2 (or latest Yarn v1)
 
 **Spryker requirements:**
@@ -559,6 +558,7 @@ Add the `.yarn` folder and download `plugin-workspace-tools.js` and `yarn-2.0.0-
 ```bash
 mkdir .yarn && mkdir .yarn/plugins && mkdir .yarn/releases
 wget -O .yarn/plugins/@yarnpkg/plugin-workspace-tools.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/.yarn/plugins/%40yarnpkg/plugin-workspace-tools.js
+wget -O .yarn/plugins/@yarnpkg/plugin-interactive-tools.cjs https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/.yarn/plugins/%40yarnpkg/plugin-interactive-tools.cjs
 wget -O .yarn/releases/yarn-2.3.3.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/.yarn/releases/yarn-2.3.3.js
 ```
 
@@ -592,11 +592,11 @@ wget -O frontend/merchant-portal/entry-points.js https://raw.githubusercontent.c
 wget -O frontend/merchant-portal/html-transform.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/frontend/merchant-portal/html-transform.js
 wget -O frontend/merchant-portal/jest.config.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/frontend/merchant-portal/jest.config.js
 wget -O frontend/merchant-portal/mp-paths.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/frontend/merchant-portal/mp-paths.js
-wget -O frontend/merchant-portal/test-setup.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/frontend/merchant-portal/test-setup.js
+wget -O frontend/merchant-portal/test-setup.ts https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/frontend/merchant-portal/test-setup.ts
 wget -O frontend/merchant-portal/tsconfig.spec.json https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/frontend/merchant-portal/tsconfig.spec.json
 wget -O frontend/merchant-portal/update-config-paths.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/frontend/merchant-portal/update-config-paths.js
 wget -O frontend/merchant-portal/utils.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/frontend/merchant-portal/utils.js
-wget -O frontend/merchant-portal/webpack.config.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/frontend/merchant-portal/webpack.config.js
+wget -O frontend/merchant-portal/webpack.config.ts https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/frontend/merchant-portal/webpack.config.ts
 ```
 
 **frontend/merchant-portal/webpack.config.ts**
@@ -642,7 +642,7 @@ If you want to configure deployment configuration to automatically install and b
 
 - Remove existing Yves and Zed dependencies install commands from deployment Yaml:
 
- yves-isntall-dependencies and yves-isntall-dependencies
+ yves-install-dependencies and zed-install-dependencies
 
 - Update project install dependencies command dependencies-install command to:
 
@@ -778,6 +778,8 @@ use Spryker\Zed\Acl\AclConfig as SprykerAclConfig;
 
 class AclConfig extends SprykerAclConfig
 {
+    protected const RULE_TYPE_DENY = 'deny';
+
     /**
      * @param string[][] $installerRules
      *
@@ -850,3 +852,11 @@ console navigation:build-cache
 Log in to the **Merchant Portal** and make sure that the MyAccount and Logout button are visible in the overlay of the secondary navigation, when clicking on the profile picture.
 
 {% endinfo_block %}
+
+## Related features
+
+Integrate the following related features:
+
+| FEATURE        | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| - | - | -|
+| Merchant Portal | &check;  |  [Merchant Portal feature integration ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-feature-integration.html) |

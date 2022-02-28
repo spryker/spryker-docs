@@ -43,16 +43,16 @@ To debug an event message with a specific listener mapped to it, use the `vendor
 
 ```bash
 // Triggers ProductAbstractStoragePublishListener for the product abstract with ID equal to 1.
-vendor/bin/console event:trigger:listener Spryker\\Zed\\ProductStorage\\Communication\\Plugin\\Event\\Listener\\ProductAbstractStoragePublishListener id=1
+vendor/bin/console event:trigger:listener 'Spryker\\Zed\\ProductStorage\\Communication\\Plugin\\Event\\Listener\\ProductAbstractStoragePublishListener' id=1
 
 // Triggers ProductAbstractStoragePublishListener for the product abstract with {additional data} and ID equal to 1 .
-vendor/bin/console event:trigger:listener Spryker\\Zed\\ProductStorage\\Communication\\Plugin\\Event\\Listener\\ProductAbstractStoragePublishListener id=1{additional data}
+vendor/bin/console event:trigger:listener 'Spryker\\Zed\\ProductStorage\\Communication\\Plugin\\Event\\Listener\\ProductAbstractStoragePublishListener' id=1{additional data}
 
 // Triggers ProductAbstractStoragePublishListener for the product abstract with ID equal to 1. The output is in json format.
-vendor/bin/console event:trigger:listener Spryker\\Zed\\ProductStorage\\Communication\\Plugin\\Event\\Listener\\ProductAbstractStoragePublishListener {\"id\":1} -f json
+vendor/bin/console event:trigger:listener 'Spryker\\Zed\\ProductStorage\\Communication\\Plugin\\Event\\Listener\\ProductAbstractStoragePublishListener' {\"id\":1} -f json
 
 // Triggers ProductAbstractStoragePublishListener for the product abstract with the  PRODUCT_ABSTRACT_PUBLISH event name and ID equal to 1. The output is in json format.
-vendor/bin/console event:trigger:listener Spryker\\Zed\\ProductStorage\\Communication\\Plugin\\Event\\Listener\\ProductAbstractStoragePublishListener {\"id\":1} -f json -e PRODUCT_ABSTRACT_PUBLISH
+vendor/bin/console event:trigger:listener 'Spryker\\Zed\\ProductStorage\\Communication\\Plugin\\Event\\Listener\\ProductAbstractStoragePublishListener' {\"id\":1} -f json -e PRODUCT_ABSTRACT_PUBLISH
 ```
 
 <!-- Last review date: Mar 9, 2019 -by Oleksandr Myrnyi, Andrii Tserkovnyi-->

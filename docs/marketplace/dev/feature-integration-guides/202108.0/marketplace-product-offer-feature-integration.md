@@ -968,6 +968,36 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
+**data/import/local/full_EU.yml**
+
+```yml
+version: 0
+
+actions:
+  - data_entity: merchant-product-offer
+    source: data/import/common/common/marketplace/merchant_product_offer.csv
+  - data_entity: merchant-product-offer-store
+    source: data/import/common/DE/merchant_product_offer_store.csv
+  - data_entity: merchant-product-offer-store
+    source: data/import/common/AT/merchant_product_offer_store.csv
+  - data_entity: product-offer-validity
+    source: data/import/common/common/marketplace/product_offer_validity.csv
+```
+
+**data/import/local/full_US.yml**
+
+```yml
+version: 0
+
+actions:
+  - data_entity: merchant-product-offer
+    source: data/import/common/common/marketplace/merchant_product_offer.csv
+  - data_entity: merchant-product-offer-store
+    source: data/import/common/US/merchant_product_offer_store.csv
+  - data_entity: product-offer-validity
+    source: data/import/common/common/marketplace/product_offer_validity.csv
+```
+
 Import data:
 
 ```bash

@@ -565,6 +565,26 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
+**data/import/local/full_EU.yml**
+
+```yml
+version: 0
+
+actions:
+  - data_entity: merchant-oms-process
+    source: data/import/common/common/marketplace/merchant_oms_process.csv
+```
+
+**data/import/local/full_US.yml**
+
+```yml
+version: 0
+
+actions:
+  - data_entity: merchant-oms-process
+    source: data/import/common/common/marketplace/merchant_oms_process.csv
+```
+
 3. Import data:
 
 ```bash

@@ -785,6 +785,28 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
+**data/import/local/full_EU.yml**
+
+```yml
+version: 0
+
+actions:
+  - data_entity: price-product-offer
+    source: data/import/common/DE/price_product_offer.csv
+  - data_entity: price-product-offer
+    source: data/import/common/AT/price_product_offer.csv
+```
+
+**data/import/local/full_US.yml**
+
+```yml
+version: 0
+
+actions:
+  - data_entity: price-product-offer
+    source: data/import/common/US/price_product_offer.csv
+```
+
 Import data:
 
 ```bash

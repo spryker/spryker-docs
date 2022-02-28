@@ -273,6 +273,26 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
+**data/import/local/full_EU.yml**
+
+```yml
+version: 0
+
+actions:
+  - data_entity: merchant-category
+    source: data/import/common/common/marketplace/merchant_category.csv
+```
+
+**data/import/local/full_US.yml**
+
+```yml
+version: 0
+
+actions:
+  - data_entity: merchant-category
+    source: data/import/common/common/marketplace/merchant_category.csv
+```
+
 Import data:
 
 ```bash

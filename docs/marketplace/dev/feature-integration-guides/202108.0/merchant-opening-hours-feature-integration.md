@@ -498,6 +498,30 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
+**data/import/local/full_EU.yml**
+
+```yml
+version: 0
+
+actions:
+  - data_entity: merchant-opening-hours-date-schedule
+    source: data/import/common/common/marketplace/merchant_open_hours_date_schedule.csv
+  - data_entity: merchant-opening-hours-weekday-schedule
+    source: data/import/common/common/marketplace/merchant_open_hours_week_day_schedule.csv
+```
+
+**data/import/local/full_US.yml**
+
+```yml
+version: 0
+
+actions:
+  - data_entity: merchant-opening-hours-date-schedule
+    source: data/import/common/common/marketplace/merchant_open_hours_date_schedule.csv
+  - data_entity: merchant-opening-hours-weekday-schedule
+    source: data/import/common/common/marketplace/merchant_open_hours_week_day_schedule.csv
+```
+
 Import data:
 
 ```bash

@@ -1262,6 +1262,10 @@ version: 0
 actions:
   - data_entity: merchant-user
     source: data/import/common/common/merchant_user.csv
+  - data_entity: merchant-profile
+    source: data/import/common/common/marketplace/merchant_profile.csv
+  - data_entity: merchant-profile-address
+    source: data/import/common/common/marketplace/merchant_profile_address.csv
  ```
 
 6. Import data.

@@ -1498,6 +1498,63 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
+**src/Pyz/Yves/ProductDetailPage/Controller/ProductController.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\ProductDetailPage\Controller;
+
+use Generated\Shared\Transfer\ProductStorageCriteriaTransfer;
+use SprykerShop\Yves\ProductDetailPage\Controller\ProductController as SprykerShopProductController;
+
+class ProductController extends SprykerShopProductController
+{
+    protected function executeDetailAction(array $productData, Request $request): array
+    {
+        $shopContextTransfer = $this->getFactory()
+            ->createShopContextResolver()
+            ->resolve();
+
+        $productStorageCriteriaTransfer = (new ProductStorageCriteriaTransfer())
+            ->fromArray($shopContextTransfer->toArray());
+
+        $productViewTransfer = $this->getFactory()
+            ->getProductStorageClient()
+            ->mapProductStorageData($productData, $this->getLocale(), $this->getSelectedAttributes($request));
+            ->mapProductStorageData($productData, $this->getLocale(), $this->getSelectedAttributes($request), $productStorageCriteriaTransfer);
+        ...
+    }
+}
+```
+
+**src/Pyz/Yves/ProductDetailPage/Theme/default/components/molecules/product-configurator/product-configurator.twig**
+
+```twig
+...
+{% widget 'AddToCartFormWidget' args [config, data.product, isDisabled, options] only %}
+    {% block embeddedData %}
+        ...
+        {% if merchantProductOfferWidget %}
+            {% widget merchantProductOfferWidget with
+                {
+                    embed: {
+                        hasMerchantProduct: merchantProductWidget and merchantProductWidget.merchantProductView is defined and merchantProductWidget.merchantProductView,
+                        productOffersCount: merchantProductOfferWidget.productOffers | length
+                    }
+                }
+            %}
+                {% block content %}
+                    {% set isRadioButtonVisible = embed.productOffersCount + embed.hasMerchantProduct > 1 %}
+                    {{ parent() }}
+                {% endblock %}
+            {% endwidget %}
+        {% endif %}
+    {% endblock %}
+{% endwidget %}
+...
+```
+
 Enable Javascript and CSS changes:
 
 ```bash

@@ -508,11 +508,32 @@ Make sure that the following changes have been triggered in transfer objects:
 
 ### 4) Add translations
 
+Append glossary according to your configuration:
+
+**data/import/common/common/glossary.csv**
+
+```csv
+merchant_sales_order.merchant_order_id,Merchant Order ID,en_US
+merchant_sales_order.merchant_order_id,Händlerbestell-ID,de_DE
+```
+
+Import data:
+
+```bash
+console data:import glossary
+```
+
 Generate a new translation cache for Zed:
 
 ```bash
 console translator:generate-cache
 ```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+
+{% endinfo_block %}
 
 ### 5) Import data
 
@@ -1073,11 +1094,58 @@ class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 
 </details>
 
+<details>
+<summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Yves\ShopApplication;
+
+use SprykerShop\Yves\MerchantSalesOrderWidget\Widget\MerchantOrderReferenceForItemsWidget;
+use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
+
+class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
+{
+    /**
+     * @return string[]
+     */
+    protected function getGlobalWidgets(): array
+    {
+        return [
+            MerchantOrderReferenceForItemsWidget::class,
+         ];
+    }
+    
+}
+
+```
+
+</details>
+
+**src/Pyz/Yves/CustomerPage/Theme/default/components/molecules/order-detail-table/order-detail-table.twig**
+
+```twig
+{% extends molecule('order-detail-table', '@SprykerShop:CustomerPage') %}
+
+{% block body %}
+    {% for shipmentGroup in data.shipmentGroups %}
+        <article class="grid grid--gap spacing-bottom spacing-bottom--big">
+            ...
+            {% widget 'MerchantOrderReferenceForItemsWidget' args [shipmentGroup.items] only %}{% endwidget %}
+            ...
+        </article>
+    {% endfor %}
+{% endblock %}
+```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the Merchant State Machine is executed on merchant orders after the order has been split.
 
 Make sure that when retrieving an order in the *Sales* module, it is split by the merchant order and that the Order state is derived from the Merchant State Machine.
+
+Make sure that after splitting the order into merchants' orders their ids are displayed on order detail page in Yves.
 
 {% endinfo_block %}
 

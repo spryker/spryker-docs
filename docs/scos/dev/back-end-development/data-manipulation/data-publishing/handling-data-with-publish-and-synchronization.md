@@ -653,16 +653,16 @@ class HelloWorldStorageDeleter implements HelloWorldStorageDeleterInterface
             ->find();
 
         foreach ($messages as $message) {
-            $messageStorageTransfer = new HelloWorldStorageTransfer();
-            $messageStorageTransfer->fromArray($message->toArray(), true);
-            $this->store($message->getIdHelloWorldMessage(), $messageStorageTransfer);
+            $this->delete($message->getIdHelloWorldMessage());
         }
     }
 
     /**
+     * @param int $idMessage
+     *
      * @return void
      */
-    protected function store($idMessage, HelloWorldStorageTransfer $messageStorageTransfer): void
+    protected function delete(int $idMessage): void
     {
         SpyHelloWorldMessageStorageQuery::create()
             ->filterByFkHelloWorldMessage($idMessage)

@@ -662,7 +662,7 @@ class HelloWorldStorageDeleter implements HelloWorldStorageDeleterInterface
      *
      * @return void
      */
-    private function delete(int $idMessage): void
+    protected function delete(int $idMessage): void
     {
         SpyHelloWorldMessageStorageQuery::create()
             ->filterByFkHelloWorldMessage($idMessage)

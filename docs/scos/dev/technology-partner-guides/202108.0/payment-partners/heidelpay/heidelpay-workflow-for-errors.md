@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/heidelpay-error-workflow
   - /docs/heidelpay-error-workflow
   - /docs/en/heidelpay-error-workflow
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/heidelpay/technical-details-and-howtos/heidelpay-workflow-for-errors.html
 related:
   - title: Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay.html
@@ -29,6 +30,7 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-easy-credit-payment-method-for-heidelpay.html
   - title: Integrating the Invoice Secured B2C payment method for Heidelpay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-invoice-secured-b2c-payment-method-for-heidelpay.html
+
 ---
 
 From the user's perspective, there is almost no difference between successful and unsuccessful order flow.

@@ -35,7 +35,7 @@ To create a cart rule discount:
    3. In the **NAME** field, specify the name for the discount.
    4. Optional: In the **DESCRIPTION** field, enter a summary that explains the discount.
    5. Optional: In the **PRIORITY** field, enter an integer value from `1` to `9999` for the discount priority.
-   6. Specify if the discount is **NON-EXLUSIVE** or **EXCLUSINVE**.
+   6. Specify if the discount is **NON-EXCLUSIVE** or **EXCLUSIVE**.
    7. Select **VALID FROM** and **VALID TO** dates.
    8. To proceed to the **Discount calculation** tab, click **Next**.
 3. On the **Discount calculation** tab, do the following:
@@ -87,7 +87,7 @@ This section contains information you need to know when working with discount ca
 **CALCULATOR TYPE**
 A discount can be calculated in two ways:
 * **Percentage**: A discount is calculated as a percentage of the discounted items' prices. If selected, in the **VALUE** field, set the percentage value—for example, `25`.
-* **Fixed amount**: A fixed amount is discounted. If you select this type, for each currency used in your store, specify the amount:**Gross price**, **Net price**, or both.
+* **Fixed amount**: A fixed amount is discounted. If you select this type, for each currency used in your store, specify the amount: **Gross price**, **Net price**, or both.
 
 Example:
 
@@ -168,7 +168,7 @@ If you do not need to add a condition, leave the query builder empty.
 {% endinfo_block %}
 
 **Example:**
-<br>Discount is applied if five or more items are in the cart and it is Tuesday or Wednesday.
+<br>Discount is applied if five or more items are in the cart, and it is Tuesday or Wednesday.
 
 ![Discount Condition](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/discount-condition.png)
 
@@ -196,7 +196,7 @@ The setup looks like the following:
 * On **Tuesday**, and the item `color` is `red`, this item does not have the label `NEW`, and the customer adds at least two items or more to a cart.
 * On **Thursday**, and the item `color` is `white`, this item does not have the label `NEW`, and the customer adds at least two items or more to a cart.
 
-The setup should look like as follows:
+The setup should be as follows:
 ![B2C scenario](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/b2c-scenario.png)
 
 #### Token description tables

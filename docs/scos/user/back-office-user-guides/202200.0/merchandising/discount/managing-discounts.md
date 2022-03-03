@@ -85,7 +85,7 @@ This section contains information you need to know when working with discount ca
 **CALCULATOR TYPE**
 <br>The discount can be calculated in two ways:
 * **Percentage**: A discount is calculated as a percentage of the discounted items' prices. If selected, in the **VALUE** field, set the percentage value—for example, `25`.
-* **Fixed amount**: A fixed amount is discounted. If you select this type, for each currency used in your store, specify the amount:**Gross price**, **Net price**, or both.
+* **Fixed amount**: A fixed amount is discounted. If you select this type, for each currency used in your store, specify the amount: **Gross price**, **Net price**, or both.
 
 Example:
 
@@ -167,7 +167,7 @@ If you do not need to add a condition, leave the query builder empty.
 {% endinfo_block %}
 
 **Example:**
-<br>Discount is applied if five or more items are in the cart and it is Tuesday or Wednesday.
+<br>Discount is applied if five or more items are in the cart, and it is Tuesday or Wednesday.
 
 ![Discount Condition](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/discount-condition.png)
 
@@ -195,7 +195,7 @@ The setup looks like the following:
 * On **Tuesday**, and the item `color` is `red`, this item does not have the label `NEW`, and the customer adds at least two items or more to a cart.
 * On **Thursday**, and the item `color` is `white`, this item does not have the label `NEW`, and the customer adds at least two items or more to a cart.
 
-The setup should look like as follows:
+The setup should be as follows:
 ![B2C scenario](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/b2c-scenario.png)
 
 #### Voucher code tab
@@ -214,7 +214,7 @@ You enter and select the following attributes on the **Voucher code** tab:
 Use the placeholder *`[code]`* to indicate the position you want random characters to be added to.
 
 **For example:**
-   * **123[code]**: The randomly generated code will be added right after the custom code.
+   * **123[code]**: The randomly generated code will be added after the custom code.
    * **[code]123**: The randomly generated code will be added in front of the custom code.
 
 **Maximum number of uses**

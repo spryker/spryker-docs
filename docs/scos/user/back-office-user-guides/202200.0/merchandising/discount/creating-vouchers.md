@@ -31,11 +31,11 @@ To create a discount voucher:
 1. On the **Discount** page, in the top-right corner, click **Create new discount**.
 2. On the **Create new discount** page, on the **General Information** tab, do the following:
    1. In **STORE RELATION**, select the stores where you want the discount to be active.
-   2. In the **DISCOUNT TYPE** drop-down, select **Voucher codes**.
+   2. For **DISCOUNT TYPE**, select **Voucher codes**.
    3. In the **NAME** field, specify the name of the voucher.
    4. Optional: In the **DESCRIPTION** field, enter the description of the voucher.
    5. Optional: In the **PRIORITY** field, enter an integer value from `1` to `9999` for the discount voucher priority.
-   6. Specify if the discount is **NON-EXLUSIVE** or **EXCLUSINVE**.
+   6. Specify if the discount is **NON-EXCLUSIVE** or **EXCLUSIVE**.
    7. Select **VALID FROM** and **VALID TO** dates.
    8. To proceed to the **Discount calculation** tab, click **Next**.
 3. On the **Discount calculation** tab, do the following:
@@ -43,12 +43,13 @@ To create a discount voucher:
    2. Based on the calculator type you've selected, do the following:
     * **Fixed amount**: Enter the amounts per currency and price mode, if applicable, to be discounted.
     * **Percentage**: Enter the percent value to be discounted.
-   3. Select the **Discount application type** and define the products to which the voucher should be applied.
-5. To proceed to the **Conditions** tab, click **Next**.
-6. On the **Conditions** tab, do the following:
+   3. Select a **DISCOUNT APPLICATION TYPE**.
+   4. Define which products are eligible for the discount.
+   5. To proceed to the **Conditions** tab, click **Next**.
+4. On the **Conditions** tab, do the following:
     1. Select the **APPLY WHEN** conditions or click **Plain query** and enter the query manually.
     2. Enter the value for the **THE DISCOUNT CAN BE APPLIED IF THE QUERY APPLIES FOR AT LEAST X ITEM(S)** field.
-7. To create the new voucher, click **Save**.
+5. To create the new voucher, click **Save**.
 
 When you click **Save**, an additional tab named **Voucher codes** appears. Here, you can generate, view, and export voucher codes (if they were already created).
 The list is empty until codes are generated.
@@ -105,7 +106,7 @@ This section contains information you need to know when working with discount ca
 **CALCULATOR TYPE**
 <br>The discount can be calculated in two ways:
 * **Percentage**: A discount is calculated as a percentage of the discounted items' prices. If selected, in the **VALUE** field, set the percentage value—for example, `25`.
-* **Fixed amount**: A fixed amount is discounted. If you select this type, for each currency used in your store, specify the amount:**Gross price**, **Net price**, or both.
+* **Fixed amount**: A fixed amount is discounted. If you select this type, for each currency used in your store, specify the amount: **Gross price**, **Net price**, or both.
 
 Example:
 
@@ -136,7 +137,7 @@ The query builder lets you combine different conditions with connectors **AND** 
 * Field—for example, `attribute.color`
 * Operator—for example, `equal(=)`
 * Value tokens—for example, `blue`
-e
+
 {% info_block infoBox "Info" %}
 
 The fields and values are defined by your shop data.
@@ -187,7 +188,7 @@ If you do not need to add a condition, leave the query builder empty.
 {% endinfo_block %}
 
 **Example:**
-<br>Discount is applied if five or more items are in the cart and it is Tuesday or Wednesday.
+<br>Discount is applied if five or more items are in the cart, and it is Tuesday or Wednesday.
 
 ![Discount Condition](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/discount-condition.png)
 
@@ -215,7 +216,7 @@ The setup looks like the following:
 * On **Tuesday**, and the item `color` is `red`, this item does not have the label `NEW`, and the customer adds at least two items or more to a cart.
 * On **Thursday**, and the item `color` is `white`, this item does not have the label `NEW`, and the customer adds at least two items or more to a cart.
 
-The setup should look like as follows:
+The setup should be as follows:
 ![B2C scenario](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/b2c-scenario.png)
 
 #### Voucher code tab
@@ -301,4 +302,4 @@ This section contains a set of tables that describe fields, value types, and ope
 
 **What's next?**
 
-See [Managing Discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/managing-discounts.html) to learn more about the actions you can do once the discount is created.
+To learn more about the actions you can do once the discount is created, see [Managing discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/managing-discounts.html)

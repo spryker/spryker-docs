@@ -4106,7 +4106,7 @@ entries:
             - title: Configuring logging
               url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/new-relic/configuring-new-relic-logging.html
         - title: Loggly
-          url: /dev/technology-partner-guides/operational-tools-monitoring-legal-etc/loggly/loggly.html
+          url: /docs/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/loggly/loggly.html
           nested:
             - title: Configuring Loggly
               url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/loggly/configuring-loggly.html

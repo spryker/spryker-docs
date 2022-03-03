@@ -10,7 +10,7 @@ redirect_from:
   - /v1/docs/en/fact-finder-web-components
 related:
   - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
+    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Installation

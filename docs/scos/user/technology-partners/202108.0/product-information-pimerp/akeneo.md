@@ -34,6 +34,12 @@ YOUR ADVANTAGES:
 * Simple translation workflows
 * Supplier / dealer portal functionalities
 
+## Related Developer guides
+
+* [Installing and configuring Akeneo](/docs/scos/dev/technology-partner-guides/{{page.version}}/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html)
+* [Akeneo — Console commands](/docs/scos/dev/technology-partner-guides/{{page.version}}/product-information-pimerp/akeneo/akeneo-console-commands.html)
+
+
 ---
 
 ## Copyright and Disclaimer

@@ -6,7 +6,7 @@ entries:
     nested:
       - title: Setup
         nested:
-          - title: System requirements
+          - title: DevVM system requirements
             url: /docs/marketplace/dev/setup/system-requirements.html
 
           - title: Infrastructure requirements
@@ -313,7 +313,7 @@ entries:
                 url: /docs/marketplace/dev/feature-integration-guides/glue/prices-marketplace-wishlist-feature-integration.html
 
               - title: "Glue API: Marketplace Product Offer Volume Prices feature integration"
-                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-volume-prices.html
+                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-volume-prices-feature-integration.html
 
               - title: "Glue API: Marketplace Return Management feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-return-management-feature-integration.html

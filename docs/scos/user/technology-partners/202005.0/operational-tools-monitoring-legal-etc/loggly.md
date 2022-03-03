@@ -10,7 +10,7 @@ redirect_from:
   - /v5/docs/en/loggly-queue
 related:
   - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
+    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 Loggly is a SaaS solution for log data management. With Loggly’s log management software, you’re able to bring logs from the depths of your entire infrastructure to one place where you can track activity and analyze trends.

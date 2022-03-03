@@ -62,10 +62,10 @@ The following table describes the attributes you enter and select on the **Gener
 | ATTRIBUTE |DESCRIPTION  |
 | --- | --- |
 | STORE RELATION |Stores that your voucher codes or a cart rule are active in. You can select multiple stores.|
-| DISCOUNT TYPE | Drop-down list where you select either **Voucher code** or **Cart rule** discount type. |
+| DISCOUNT TYPE | Drop-down list where you change your discount type:<ul><li>**[Voucher codes](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html#voucher)**: A discount that applies when a customer enters an active voucher code on the *Cart* page.**</li><li>[Cart rule](docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html#cart-rule)**: A discount that applies to a cart once all conditions assigned to a discount are fulfilled.</li></ul>. |
 | NAME | Unique name that will be displayed in the cart, in the **Available discounts** section on the Storefront, if the voucher or cart rule is valid. Should be short, but descriptive. |
 | DESCRIPTION | Explains the voucher or cart rule and helps a customer understand why they are eligible for the discount and what they can receive. The description will be displayed in the **Cart calculation** section along with the applied discount amount if the voucher or cart rule is applicable to a product in the cart.|
-| PRIORITY | Defines [the discount priority](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html#discount-priority). Represented as an integer value from `1` to `9999`, `1` being the highest priority and `9999` the lowest. |
+| PRIORITY | Defines the order in which the discounts are applied.[The discount priority](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html#discount-priority) is represented as an integer value from `1` to `9999`, `1` being the highest priority and `9999` the lowest. |
 | NON-EXCLUSIVE | Defines the exclusivity. Customers can redeem non-exclusive discounts in conjunction with other non-exclusive discounts.|
 | EXCLUSIVE | Defines the voucher's exclusivity. When a discount is exclusive, no other discounts may be applied in conjunction. When a cart is eligible for multiple exclusive discounts, the discount with the highest value to the customer is applied. The exception to this is promotional product discounts. Query string discounts and promotional product discounts exclude only among each other. Promotional product discounts are not affected by exclusive query string discounts and conversely.|
 | VALID FROM and VALID TO | Vouchers are redeemable between **VALID FROM** and **VALID TO** dates and times (in UTC), inclusive. For example, a voucher can be redeemed starting from 01.12.2021 23:00 until 31.01.2022 22:59, UTC. |
@@ -80,7 +80,7 @@ Name and describe discounts in a way that is meaningful for other Back Office us
 
 #### Discount calculation tab
 
-This section contains information you need to know when working with discount calculations on the **Discount calculation**qu
+This section contains information you need to know when working with discount calculations on the **Discount calculation**.
 
 **CALCULATOR TYPE**
 <br>The discount can be calculated in two ways:

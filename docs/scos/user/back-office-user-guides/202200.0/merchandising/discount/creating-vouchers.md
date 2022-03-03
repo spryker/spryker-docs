@@ -30,26 +30,20 @@ Review the [reference information](#reference-information-creating-vouchers) bef
 To create a discount voucher:
 1. On the **Discount** page, in the top-right corner, click **Create new discount**.
 2. On the **Create new discount** page, on the **General Information** tab, do the following:
-    1. In **STORE RELATION**, select the stores where you want the discount to be active.
-    2. In the **DISCOUNT TYPE** drop-down, select **Voucher codes**.
-    3. In the **NAME** field, specify the name of the voucher.
-    4. Optional: In the **DESCRIPTION** field, enter the description of the voucher.
-    5. Optional: In the **PRIORITY** field, enter an integer value from `1` to `9999` for the discount voucher priority.
-    6. Specify if the voucher is exclusive.
-    7. Specify the validity interval (lifetime) of the voucher.
-3. To proceed to the **Discount calculation** tab, click **Next**.
-4. On the **Discount calculation** tab, do the following:
-    1.  In the **CALCULATOR TYPE** drop-down, select either **Percentage** or **Fixed amount**.
-
-      {% info_block warningBox "Note" %}
-
-      The next step varies based on the selected calculator type:
-      * **Fixed amount**: Enter the amounts per currency and price mode, if applicable, to be discounted.
-      * **Percentage**: Enter the percent value to be discounted.
-
-      {% endinfo_block %}
-
-    2. Select the **Discount application type** and define the products to which the voucher should be applied.
+   1. In **STORE RELATION**, select the stores where you want the discount to be active.
+   2. In the **DISCOUNT TYPE** drop-down, select **Voucher codes**.
+   3. In the **NAME** field, specify the name of the voucher.
+   4. Optional: In the **DESCRIPTION** field, enter the description of the voucher.
+   5. Optional: In the **PRIORITY** field, enter an integer value from `1` to `9999` for the discount voucher priority.
+   6. Specify if the discount is **NON-EXLUSIVE** or **EXCLUSINVE**.
+   7. Select **VALID FROM** and **VALID TO** dates.
+   8. To proceed to the **Discount calculation** tab, click **Next**.
+3. On the **Discount calculation** tab, do the following:
+   1. Select a **CALCULATOR TYPE**.
+   2. Based on the calculator type you've selected, do the following:
+    * **Fixed amount**: Enter the amounts per currency and price mode, if applicable, to be discounted.
+    * **Percentage**: Enter the percent value to be discounted.
+   3. Select the **Discount application type** and define the products to which the voucher should be applied.
 5. To proceed to the **Conditions** tab, click **Next**.
 6. On the **Conditions** tab, do the following:
     1. Select the **APPLY WHEN** conditions or click **Plain query** and enter the query manually.
@@ -88,10 +82,10 @@ The following table describes the attributes you enter and select on the **Gener
 | ATTRIBUTE |DESCRIPTION  |
 | --- | --- |
 | STORE RELATION |Stores your voucher codes will be active in. You can select multiple stores.|
-| DISCOUNT TYPE | Drop-down list where you select either **Voucher code** or **Cart rule** discount type. |
+| DISCOUNT TYPE | Drop-down list where you select one of the following discount types:<ul><li>**[Voucher codes](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html#voucher)**: A discount that applies when a customer enters an active voucher code on the *Cart* page.**</li><li>[Cart rule](docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html#cart-rule)**: A discount that applies to a cart once all conditions assigned to a discount are fulfilled.</li></ul>. |
 | NAME | Unique name that will be displayed in the cart, in the **Available discounts** section on the Storefront, if the voucher is valid. Should be short, but descriptive. |
 | DESCRIPTION | Explains the voucher and helps a customer understand why they are eligible for the discount and what they can receive. The description will be displayed in the **Cart calculation** section along with the applied discount amount if the discount voucher is applicable to a product in the cart.|
-| PRIORITY | Defines [the discount priority](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html#discount-priority). Represented as an integer value from `1` to `9999`, `1` being the highest priority and `9999` the lowest. |
+| PRIORITY | Defines the order in which the discounts are applied.[The discount priority](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html#discount-priority) is represented as an integer value from `1` to `9999`, `1` being the highest priority and `9999` the lowest. |
 | NON-EXCLUSIVE | Defines the exclusivity. Customers can redeem non-exclusive discounts in conjunction with other non-exclusive discounts.|
 | EXCLUSIVE | Defines the voucher's exclusivity. When a discount is exclusive, no other discounts may be applied in conjunction. When a cart is eligible for multiple exclusive discounts, the discount with the highest value to the customer is applied. The exception to this is promotional product discounts. Query string discounts and promotional product discounts exclude only among each other. Promotional product discounts are not affected by exclusive query string discounts and conversely.|
 | VALID FROM and VALID TO | Vouchers will be redeemable between **VALID FROM** and **VALID TO** dates and times (in UTC), inclusive. For example, a voucher can be redeemed starting from 01.12.2021 23:00 until 31.01.2022 22:59, UTC. |

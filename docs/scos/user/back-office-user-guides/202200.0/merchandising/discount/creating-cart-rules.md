@@ -40,18 +40,12 @@ To create a cart rule discount:
    8. To proceed to the **Discount calculation** tab, click **Next**.
 3. On the **Discount calculation** tab, do the following:
    1. Select a **CALCULATOR TYPE**.
-
-      {% info_block warningBox "Note" %}
-
-      The next step varies based on the calculator type that you select:
-      * **Fixed amount**: Enter the amounts per currency and price mode, if applicable, to be discounted.
-      * **Percentage**: Enter the percent value to be discounted.
-
-      {% endinfo_block %}
-
-   2. Select a **DISCOUNT APPLICATION TYPE**.
-   3. Define which products are eligible for the discount.
-   4. To proceed to the **Conditions** tab, click **Next**.
+   2. Based on the calculator type you've selected, do the following:
+    * **Fixed amount**: Enter the amounts per currency and price mode, if applicable, to be discounted.
+    * **Percentage**: Enter the percent value to be discounted.
+   3. Select a **DISCOUNT APPLICATION TYPE**.
+   4. Define which products are eligible for the discount.
+   5. To proceed to the **Conditions** tab, click **Next**.
 4. On the **Conditions** tab, do the following:
     1. Select the **APPLY WHEN** conditions or click **Plain query** and enter the query manually.
     2. For **THE DISCOUNT CAN BE APPLIED IF THE QUERY APPLIES FOR AT LEAST X ITEM(S).**, enter a numeric value.
@@ -70,10 +64,10 @@ The following table describes the attributes you enter and select on the **Gener
 | ATTRIBUTE |DESCRIPTION  |
 | --- | --- |
 | STORE RELATION | Stores that your cart rule will be active in. You can select multiple stores.|
-| DISCOUNT TYPE | Drop-down list where you select either **[Voucher codes]()** or **[Cart rule*]()* discount type. |
+| DISCOUNT TYPE | Drop-down list where you select one of the following discount types:<ul><li>**[Voucher codes](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html#voucher)**: A discount that applies when a customer enters an active voucher code on the *Cart* page.**</li><li>[Cart rule](docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html#cart-rule)**: A discount that applies to a cart once all conditions assigned to a discount are fulfilled.</li></ul>. |
 | NAME | Unique name that will be displayed in the cart, in the **Available discounts** section on the Storefront, if the cart rule is valid. Should be short, but descriptive. |
 | DESCRIPTION | Describes the discount and helps a customer understand why they are eligible for the discount and what they can receive. The description will be displayed in the **Cart calculation** section along with the applied discount amount if the discount is applicable to a product in the cart.|
-| PRIORITY | Defines [the discount priority](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html#discount-priority). Represented as an integer value from `1` to `9999`, `1` being the highest priority and `9999` the lowest. |
+| PRIORITY | Defines the order in which the discounts are applied.[The discount priority](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html#discount-priority) is represented as an integer value from `1` to `9999`, `1` being the highest priority and `9999` the lowest. |
 | NON-EXCLUSIVE | Defines the discount exclusivity. Customers can redeem non-exclusive discounts in conjunction with other non-exclusive discounts.|
 | EXCLUSIVE | Defines the discount exclusivity. When a discount is exclusive, no other discounts may be applied in conjunction. When a cart is eligible for multiple exclusive discounts, the discount with the highest value to the customer is applied. The exception to this is promotional product discounts. Query string discounts and promotional product discounts exclude only among each other. Promotional product discounts are not affected by exclusive query string discounts and conversely.|
 | VALID FROM and VALID TO | Cart rule will be active between **VALID FROM** and **VALID TO** dates and times (in UTC), inclusive. For example, a discount applies to the cart starting from 01.12.2021 23:00 until 31.01.2022 22:59, UTC. |
@@ -82,14 +76,13 @@ The following table describes the attributes you enter and select on the **Gener
 
 {% info_block infoBox "Info" %}
 
-Name and describe discounts in a way that is meaningful for other Back Office users. Besides, the given name is displayed in the customer's cart. Therefore, it must be unique.
+Name and describe discounts in a way that is meaningful for other Back Office users. A discount name is displayed in a customer's cart and must be unique.
 
 {% endinfo_block %}
 
 #### Discount calculation tab
 
 This section contains information you need to know when working with discount calculations on the **Discount calculation** tab.
-
 
 **CALCULATOR TYPE**
 A discount can be calculated in two ways:

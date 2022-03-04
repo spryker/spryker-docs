@@ -159,7 +159,8 @@ This section provides information that you need to know when working with discou
 
 Conditions, also called *decision rules*, are created in the form of a query and may be entered as a plain query or by the Query builder. The cart rule is redeemed only if every condition linked to it is satisfied. Vouchers can be linked to one or more conditions. Vouchers are only redeemed if all linked conditions are satisfied.
 
-The conditions are created in the form of a query and may be entered as a plain query or via the query builder. (See the [Discount calculation tab](#discount-calculation-tab) section for more details.)
+The conditions are created in the form of a query and may be entered as a plain query or via the query builder. For more detail, see the [Discount calculation tab](#discount-calculation-tab) section.
+
 {% info_block infoBox "Info" %}
 
 If you do not need to add a condition, leave the query builder empty.

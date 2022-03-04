@@ -107,6 +107,8 @@ entries:
         url: /docs/scos/user/intro-to-spryker/support/how-to-contact-spryker-support.html
       - title: Understanding Project and Core Level Fixes
         url: /docs/scos/user/intro-to-spryker/support/understanding-project-and-core-level-fixes.html
+    - title: Roadmap
+      url: /docs/scos/user/intro-to-spryker/roadmap.html
     - title: FAQ
       url: /docs/scos/user/intro-to-spryker/faq.html
     - title: B2C Suite
@@ -1798,7 +1800,7 @@ entries:
             - "202005.0"
             - "202009.0"
     - title: Marketplace
-      include_versions: 
+      include_versions:
       - "201903.0"
       - "201907.0"
       - "202001.0"

@@ -20,7 +20,9 @@ The [Loggly](https://github.com/spryker-eco/loggly) module provides a plugin to 
 
 ## Related Developer guides
 
-* [Configuring Loggly](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/configuring-loggly.html)
+
+* [Loggly](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/loggly/loggly.html)
+* [Configuring Loggly](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/loggly/configuring-loggly.html)
 
 
 

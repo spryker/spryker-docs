@@ -12,7 +12,8 @@ related:
     link: docs/scos/user/technology-partners/page.version/payment-partners/billpay.html
 ---
 
-Refer to [Billpay payment information](https://www.billpay.de/) for information about payment methods.
+
+Refer to [Billpay payment information](https://www.billpay.de/en/klarna-group-for-business/) for information about payment methods.
 
 The identity and credit check are checked within a single "pre-authorize" call after summary page was submitted.
 This may lead to the "rejection" of the order.
@@ -243,7 +244,7 @@ Now all we need to do is modify the Shippment step constructor:
  ```
 
 and add a client call to the execute method:
-```php 
+```php
 <?php
  /**
  * @param \Symfony\Component\HttpFoundation\Request $request
@@ -275,7 +276,7 @@ To register the Twig extension:
 
 * Add it to YvesBootstrap as follows:
 
-```php 
+```php
 protected function registerServiceProviders()
  {
  // other service providers ...
@@ -330,7 +331,7 @@ In Zed  `BillpaySaveOrderPlugin` has to be registered in the `CheckoutDependency
  ```
 
 Then the following should be added in `OmsDependencyProvider`:
-```php 
+```php
 <?php
 /**
  * @param \Spryker\Zed\Kernel\Container $container
@@ -374,4 +375,4 @@ In your checkout process you can now see the Billapay as a payment method in the
 If the link does not work, just click **Maintenance->OMS** to list all registered OMS state machines.
 
 Basic state machine will look somewhat like this and you can use it as sample in your project.
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Billpay/basic_OMS_state_machine.png) 
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Billpay/basic_OMS_state_machine.png)

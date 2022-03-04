@@ -42,7 +42,7 @@ To create a cart rule discount:
 
         The next step varies based on the selected calculator type:
           * **Calculator fixed**: Enter the amount to be discounted.
-          * **Calculator percentage**: Enter the values (percentage) to be discounted.
+          * **Calculator percentage**: Enter the value (percentage) to be discounted.
 
         {% endinfo_block %}
 

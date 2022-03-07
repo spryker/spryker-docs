@@ -27,12 +27,6 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-notifications.html
 ---
 
-{% info_block errorBox %}
-
-There is currently an issue when using giftcards with CrefoPay. Our team is developing a fix for it.
-
-{% endinfo_block %}
-
 This article provides step-by-step instructions on integrating the CrefoPay system into your project.
 
 ## Prerequisites

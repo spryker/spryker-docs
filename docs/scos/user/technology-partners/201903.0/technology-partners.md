@@ -117,7 +117,7 @@ Please visit our [Partners Registry](https://spryker.com/find-a-partner/) for a 
 * [Klarna](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/klarna.html)
 * [Payolution](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/payolution.html)
 * [Powerpay](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/powerpay.html)
-* [Ratenkauf by Easycredit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit.html)
+* [ratenkauf by easyCredit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratenkauf-by-easycredit.html)
 * [RatePAY](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/ratepay.html)
 
  ## Poduct Information (PIM/ERP)

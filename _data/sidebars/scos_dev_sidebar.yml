@@ -6,11 +6,12 @@ entries:
   - title: Developer getting started guide
     url: /docs/scos/dev/developer-getting-started-guide.html
   - title: Setup
+    url: /docs/scos/dev/setup/setup.html
     nested:
     - title: Installing Spryker with Docker
       url: /docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
       nested:
-      - title: Docker Installation Prerequisites
+      - title: Installing Docker prerequisites
         nested:
         - title: Installing Docker prerequisites on MacOS
           url: /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html
@@ -20,7 +21,7 @@ entries:
           url: /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl1.html
         - title: Installing Docker prerequisites on Windows with WSL2
           url: /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html
-      - title: Installation Guides
+      - title: Choosing an installatiion mode and installing
         nested:
         - title: Choosing an installation mode
           url: /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html
@@ -36,40 +37,41 @@ entries:
           url: /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html
         - title: Running production
           url: /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/running-production.html
-      - title: Configuration
+      - title: Configuring
         nested:
         - title: Setting up a self-signed SSL certificate
           url: /docs/scos/dev/setup/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html
-        - title: Additional DevOPS guidelines
-          url: /docs/scos/dev/setup/installing-spryker-with-docker/configuration/additional-devops-guidelines.html
+        - title: Adjusting Jenkins for a Docker environment
+          url: /docs/scos/dev/setup/installing-spryker-with-docker/configuration/adjusting-jenkins-for-a-docker-environment.html
       - title: Database access credentials
         url: /docs/scos/dev/setup/installing-spryker-with-docker/database-access-credentials.html
     - title: Installing Spryker with Development Virtual Machine
+      url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-development-virtual-machine.html
       nested:
+      - title: DevVM system requirements
+        url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/devvm-system-requirements.html
       - title: Installing on MacOS and Linux
         url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html
       - title: Installing on Windows
         url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-windows.html
+      - title: Configuring Spryker
+        nested:
+          - title: Configuring Spryker after installing
+            url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-spryker-after-installing-with-devvm.html
+          - title: Configuring database servers
+            url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html
+          - title: Updating Node.js to the latest version
+            url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/updating-node.js-in-devvm-to-the-latest-version.html
       - title: Configuring debugging
         nested:
-        - title: Configuring debugging in DevVM
+        - title: Configuring debugging
           url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-devvm.html
         - title: Configuring debugging in a DevVM below version 91
           url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-a-devvm-below-version-91.html
-      - title: Cleaning up DevVM
-        url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/cleaning-up-devvm.html
-      - title: Updating Node.js to the latest version
-        url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/updating-node.js-in-devvm-to-the-latest-version.html
-    - title: Installing Spryker without DevVM
-      url: /docs/scos/dev/setup/installing-spryker-without-devvm.html
-    - title: System Requirements
-      url: /docs/scos/dev/setup/system-requirements.html
-    - title: Post-Installation Steps and Additional Info
-      url: /docs/scos/dev/setup/post-installation-steps-and-additional-info.html
-    - title: Composer
-      url: /docs/scos/dev/setup/composer.html
-    - title: Configuring the database server
-      url: /docs/scos/dev/setup/configuring-the-database-server.html
+    - title: Installing Spryker without Development Virtual Machine or Docker
+      url: /docs/scos/dev/setup/installing-spryker-without-development-virtual-machine-or-docker.html
+    - title: Managing SCOS dependencies with Composer
+      url: /docs/scos/dev/setup/managing-scos-dependencies-with-composer.html
     - title: Redis Configuration
       url: /docs/scos/dev/setup/redis-configuration.html
     - title: Install module structure and configuration
@@ -1653,7 +1655,6 @@ entries:
       - "202001.0"
       - "202005.0"
       - "202009.0"
-      - "202108.0"
     - title: Promotions and Discounts feature integration
       url: /docs/scos/dev/feature-integration-guides/promotions-and-discounts-feature-integration.html
       include_versions:
@@ -4104,8 +4105,11 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/new-relic/installing-and-configuring-new-relic–with–vagrant.html
             - title: Configuring logging
               url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/new-relic/configuring-new-relic-logging.html
-        - title: Configuring Loggly
-          url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/configuring-loggly.html
+        - title: Loggly
+          url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/loggly/loggly.html
+          nested:
+            - title: Configuring Loggly
+              url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/loggly/configuring-loggly.html
         - title: Installing and configuring Tideways
           url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
     - title: Order Management (ERPOMS)
@@ -4388,6 +4392,15 @@ entries:
             url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution-performing-requests.html
           - title: Payolution request flow
             url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution-request-flow.html
+        - title: ratenkauf by easyCredit
+          nested:
+          - title: Installing and configuring ratenkauf by easyCredit
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.html
+          - title: Integrating ratenkauf by easyCredit
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/ratenkauf-by-easycredit/integrating-ratenkauf-by-easycredit.html
+            include_versions:
+            - "202009.0"
+            - "202108.0"
         - title: RatePay
           nested:
             - title: Facade methods

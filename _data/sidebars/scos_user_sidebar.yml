@@ -1286,8 +1286,8 @@ entries:
             - "202009.0"
     - title: Content
       nested:
-      - title: Adding content to the Storefront pages using templates and slots
-        url: /docs/scos/user/back-office-user-guides/content/adding-content-to-storefront-pages-using-templates-and-slots-best-practices.html
+      - title: "Best practices: Adding content to the Storefront pages using templates and slots"
+        url: /docs/scos/user/back-office-user-guides/content/best-practices-adding-content-to-the-storefront-pages-using-templates-and-slots.html
         include_versions:
         - "202001.0"
         - "202005.0"
@@ -1798,7 +1798,7 @@ entries:
             - "202005.0"
             - "202009.0"
     - title: Marketplace
-      include_versions: 
+      include_versions:
       - "201903.0"
       - "201907.0"
       - "202001.0"

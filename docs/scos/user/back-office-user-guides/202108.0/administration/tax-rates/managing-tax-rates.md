@@ -18,7 +18,7 @@ This document describes how to create, edit, and delete [tax rates](/docs/scos/u
 
 To start working with tax rates, go to **Administration** > **Tax Rates**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating tax rates
 

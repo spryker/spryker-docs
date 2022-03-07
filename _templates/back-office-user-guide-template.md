@@ -14,11 +14,11 @@ To start working with {entities}, go to **{section}** > **{section}**.
 <!-- Additional actions that should be done in a section different from the one you are describing. -->
 
 <!-- If your guide has only one Reference information section, copy and paste the following text:-->
-Before you start, review the reference information, or just look up the necessary information as you go through the process.
+Before you start, review the reference information, or look up the necessary information as you go through the process.
 
 <!-- If your guide has more than one Reference information section, copy and paste the following text: -->
 
-Each section contains reference information. Review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Review it before you start, or look up the necessary information as you go through the process.
 
 ## {Task 1} {entities} <!-- in gerund, i.e., Managing abstract products -->
 

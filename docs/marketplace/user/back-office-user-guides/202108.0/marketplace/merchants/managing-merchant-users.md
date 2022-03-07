@@ -15,7 +15,7 @@ To start managing merchant users:
 1. Navigate to the **Marketplace** > **Merchants**.
 2. Next to the merchant you want to create a merchant user for, click **Edit** in the *Actions* column. You are taken to the *Edit Merchant: [Merchant ID]* page.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Creating a merchant user
 

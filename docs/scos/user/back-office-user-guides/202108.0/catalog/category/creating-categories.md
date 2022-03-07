@@ -25,7 +25,7 @@ This topic describes how to create categories.
 
 To start creating categories, go to **Catalog** > **Categories**
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 
 ## Creating a category

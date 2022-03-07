@@ -25,7 +25,7 @@ This article describes how to manage CMS pages.
 
 To start managing CMS pages, got to **Content** > **Pages**.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Previewing CMS pages
 

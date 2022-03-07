@@ -23,7 +23,7 @@ This topic describes how to create content items in the Back Office.
 
 To start working with content items, go to **Content** > **Content Items**.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 
 ## Select a content item

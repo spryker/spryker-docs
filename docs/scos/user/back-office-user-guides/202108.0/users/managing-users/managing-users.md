@@ -1,6 +1,6 @@
 ---
-title: Managing users
-description: The procedures help create, edit, activate/deactivate or delete Back Office users, set a language to the Back Office user account, and make a user be an agent.
+title: Creating users
+description: Learn how to create users in the Back Office
 last_updated: Aug 2, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-users
@@ -15,38 +15,34 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html
 ---
 
-This topic describes how to manage users.
+This topic describes how to create users in the Back Office.
 
-To start managing users, go to **Users** > **Users**.
+## Prerequisites
 
-You can do the following:
-* Create a new user record
-* Assign customers to a specific user
-* Edit a user
-* Deactivate/activate a user
-* Delete a user from the system
+1. Create at least one user group. See [Creating user groups]().
+2. To start working with users, go to **Users** > **Users**.
+
+Review the [reference information](#reference-information-creating-users) before you start, or look up the necessary information as you go through the process.
 
 ## Creating users
 
 You have already done the primary setup (you have created a [role](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-roles.html) and [group](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-groups.html), so now it is time to add an actual user record to the system.
 
-To create a user record:
-1. In the top right corner of the *User* page, click **Add New User**.
-2. Enter and select the following attributes:
 
-    * E-mail, Password, Repeat Password
-    * First Name and Last Name
-    * Assigned groups
-    * Agent
-    * Interface language
+1. On the **Users** page, click **Add New User**.
+2. On the **Create new User** page, enter an **E-MAIL**.
+3. Enter a **PASSWORD**.
+4. For **REPEAT PASSWORD**, enter the same password once again.
+5. Enter a **FIRST NAME**.
+6. Enter a **LAST NAME**.
+7. For **ASSIGNED GROUPS**, select one or more user groups you want to assign this user to.
+8. If you want this user to be an agent, select **THIS USER IS AN AGENT**.
+9. Select an **INTERFACE LANGUAGE**.
+10. Click **Create**.
 
-3. Click **Create**.
+This opens the **Users** page with the success message displayed. The created user is displayed in the list.
 
-That's it. The created user record appears on the *Users* page.    
 
-**Tips & tricks**
-
-There is a way to initiate a create-new-user flow while editing a user record. To do that, on the *Edit User* page, in the top right corner, click **Add User**.
 
 ## Editing users
 
@@ -99,49 +95,3 @@ The following table describes the attributes used when creating or updating a us
 | Agent | Identifies if this is a user agent. See the _Agent User_ section above. |
 | Interface Language |List of the available languages. This defines in what language the user will see the Back Office interface. Once the account language is changed, the respective user will see that their interface is translated into the corresponding language upon their next login.|
 | Status |**Available on the Edit User page only**<br>Identifies if this user is in active status. All records are **Active** upon creation by default. The available values are: **active** (meaning able to log in to Back Office), **blocked** (the user is not able to log in), **deleted** (the user is not able to log in)|
-
-## Assigning customers to users
-
-The *Assign Customers* option is used to assign store customers' records to the Back office user records. This is done to enable the Back Office user to preview the CMS Pages in the online store (see [CMS Pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/managing-cms-pages.html#previewing-cms-pages) set of topics).
-
-To assign a customer:
-1. Navigate to the *Users* page.
-2. In the *Users List* > *Action* column, select **Assign Customers**.
-3. In the *List of customers* > *Select customers to assign* table, select the check-box next to the customer you want to assign (multiple customers can be selected).
-4. Click **Save**.
-
-{% info_block infoBox %}
-
-A customer cannot be assigned to multiple users at a time.
-
-{% endinfo_block %}
-
-**Tips & tricks**
-<br>To de-assign a customer:
-1. On the *Assign Customers to User* page, scroll down to the *Assigned customer*s table.
-2. Remove the check-box next to the customer(s) that needs to become unassigned, and click **Save**.
-
-## Activating and deactivating users
-
-To activate or deactivate a user:
-1. In the *Users List* > *Action* column, click **Activate** (or **Deactivate**).
-
-{% info_block infoBox %}
-
-If a user has deactivated themselves, this user will get logged out immediately and the message about the successful deactivation will be shown.
-
-{% endinfo_block %}
-
-2. The status in the _Status_ column will be changed to *Active* or *Deactivated* depending on the action you performed.
-
- ## Deleting users
-
-To delete a user:
- 1. In the *Users List* > *Action* column, click **Delete**.
-2. On the *Warning* page, click **Delete** to confirm the action.
-
-{% info_block infoBox %}
-
-The user's status in the *Status* column will change to *Deleted*. However, the user still stays in the *Users List* table. If the user has deleted themselves, this user will get logged out immediately and the message about the successful deletion will be shown.
-
-{% endinfo_block %}

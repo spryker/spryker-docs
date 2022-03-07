@@ -13,7 +13,7 @@ To start managing merchant orders for the [main merchant](/docs/marketplace/user
 
 The instructions assume that there is an existing order with the *New* status.
 
-Each section in this article contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section in this article contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Viewing main merchant orders
 

@@ -23,7 +23,7 @@ To start working with attributes, go to **Catalog** > **Attributes**.
 
 A new product usually needs a super attribute and a regular attribute. The super attribute is used to distinguish product variants and the regular attributes is used to define product characteristics.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating product attributes
 

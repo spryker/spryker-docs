@@ -160,7 +160,7 @@ To add the new product to the top navigation and the role boxes on the homepage,
 
 To add CI checks for the product per role, do the following:
 
-1. In `ci.yml`, add CI configuration per role as follows:
+1. In `.github/workflows/ci.yml`, add CI configuration per role as follows:
 
 ```yaml
 jobs:
@@ -270,7 +270,7 @@ To configure the Algolia search for the product, you need to configure the searc
 
 ### Configure the Algolia search in the repository
 
-1. In `algolia_config`, create YML configuration files per role. For example, `algolia_config/_aop_dev.yml` and `algolia_config/_aop_user.yml`.
+1. In `algolia_config/`, create YML configuration files per role. For example, `algolia_config/_aop_dev.yml` and `algolia_config/_aop_user.yml`.
 
 
 2. In both files, exclude generic pages and the pages of all the existing project from indexing. Example:
@@ -308,7 +308,7 @@ algolia:
     - docs/aop/user/**/*.md   
 ```
 
-4. In `ci.yml`, add the Algolia configuration files you've created. Example:
+4. In `.github/workflows/ci.yml`, add the Algolia configuration files you've created. Example:
 
 ```yaml
 jobs:

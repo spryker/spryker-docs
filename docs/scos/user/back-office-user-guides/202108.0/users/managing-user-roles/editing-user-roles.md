@@ -1,5 +1,5 @@
 ---
-title: Editing roles
+title: Editing user roles
 description: Learn how to edit roles in the Back Office.
 template: back-office-user-guide-template
 ---
@@ -10,7 +10,7 @@ This document describes how to edit roles in the Back Office.
 
 To start working with roles, go to **Users** > **User Roles**.
 
-Review the [reference information](#reference-information-editing-roles) before you start, or just look up the necessary information as you go through the process.
+Review the [reference information](#reference-information-editing-roles) before you start, or look up the necessary information as you go through the process.
 
 ## Editing roles
 

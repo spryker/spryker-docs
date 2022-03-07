@@ -1,5 +1,5 @@
 ---
-title: Adding content to storefront pages using templates & slots- Best practices
+title: "Best practices: Adding content to the Storefront pages using templates and slots"
 description: Templates with slots allows managing all the Storefront content in the Back Office.
 last_updated: Jul 9, 2021
 template: back-office-user-guide-template
@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/adding-content-to-storefront-pages-using-templates-slots-best-practices
   - /docs/adding-content-to-storefront-pages-using-templates-slots-best-practices
   - /docs/en/adding-content-to-storefront-pages-using-templates-slots-best-practices
+  - /docs/scos/user/back-office-user-guides/202108.0/content/adding-content-to-storefront-pages-using-templates-and-slots-best-practices.html
 related:
   - title: Managing Slots
     link: docs/scos/user/back-office-user-guides/page.version/content/slots/managing-slots.html

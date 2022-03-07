@@ -17,7 +17,7 @@ This article contains reference information. Make sure to review it before you s
 
 To add meta information for a product:
 
-1. Next to the abstract product, you want to add meta information for, hover over the three dots and click **Manage Product**, or just click the line. This takes you to the ***[Product name]***, **Abstract Product Details** tab.
+1. Next to the abstract product, you want to add meta information for, hover over the three dots and click **Manage Product**, or just click the line. This takes you to the **_[Product name]_**, **Abstract Product Details** tab.
 2. Scroll down to the **SEO** pane.
 3. Fill the following fields for the desired locales:
       	- Meta title
@@ -30,7 +30,7 @@ To add meta information for a product:
 
 To modify meta information for a product:
 
-1. Next to the abstract product, you want to edit meta information for, hover over the three dots and click **Manage Product**, or just click the line. This takes you to the ***[Product name]***, **Abstract Product Details** tab.
+1. Next to the abstract product, you want to edit meta information for, hover over the three dots and click **Manage Product**, or just click the line. This takes you to the **_[Product name]_**, **Abstract Product Details** tab.
 2. Scroll down to the **SEO** pane.
 3. Update the following fields for the desired locales:
     - Meta title

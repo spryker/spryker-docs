@@ -78,7 +78,7 @@ By default, the last created order goes on top of the table. However, you can so
 
 #### Order [Order ID] page
 
-The **Order *[Order ID]** page is the page that opens in the drawer when you click one of the orders in the Orders table.
+The **Order *[Order ID]*** page is the page that opens in the drawer when you click one of the orders in the Orders table.
 
 The following table describes the sections on the ***[Order ID]*** page:
 
@@ -100,21 +100,21 @@ The merchant can set different states for the order depending on the state machi
 | ORDER STATE | DESCRIPTION |
 |---|---|
 | new | Initial order state. |
-| Cancel | Select this state to cancel the order. When triggering this state, the item status becomes *canceled by merchant*. |
-| Ship | Select this state once the order is shipped. When you trigger this state, the item status becomes *shipped*. |
-| Deliver | Select this state once the order is delivered to the shopper. When you select **deliver**, the state becomes *delivered*. |
-| Send to distribution | Select this state once the order is at the distribution center. When you trigger this state, the item status becomes *left the merchant location*. |
-| Confirm at center | Select this state when the distribution center confirmed the order arrival. When you trigger this state, the item status becomes *arrived at distribution center*. |
-| Execute return | Select this state when you want to execute the return. When you trigger this state, the item status becomes *returned*. |
-| Refund | Select this state if a refund was issued to the customer for the order. When you trigger this state, the item status becomes *refunded*. |
-| Cancel the return | Select this state when the return cannot be fulfilled. When you trigger this state, the item status becomes *return canceled*. |
-| Send return back to customer | Select this state when you shipped the returned item back to the customer. When you trigger this state, the item status becomes *shipped to customer*. |
-| Deliver return | Select this state when the returned item is delivered back to the customer. When you trigger this state, the item status becomes *delivered*. |
-| Closed | Order becomes *closed* when the Back Office user closes it in the Back Office. |
+| Cancel | Select this state to cancel the order. When triggering this state, the item status becomes `canceled by merchant`. |
+| Ship | Select this state once the order is shipped. When you trigger this state, the item status becomes `shipped`. |
+| Deliver | Select this state once the order is delivered to the shopper. When you select **deliver**, the state becomes `delivered`. |
+| Send to distribution | Select this state once the order is at the distribution center. When you trigger this state, the item status becomes `left the merchant location`. |
+| Confirm at center | Select this state when the distribution center confirmed the order arrival. When you trigger this state, the item status becomes `arrived at distribution center`. |
+| Execute return | Select this state when you want to execute the return. When you trigger this state, the item status becomes `returned`. |
+| Refund | Select this state if a refund was issued to the customer for the order. When you trigger this state, the item status becomes `refunded`. |
+| Cancel the return | Select this state when the return cannot be fulfilled. When you trigger this state, the item status becomes `return canceled`. |
+| Send return back to customer | Select this state when you shipped the returned item back to the customer. When you trigger this state, the item status becomes `shipped to customer`. |
+| Deliver return | Select this state when the returned item is delivered back to the customer. When you trigger this state, the item status becomes `delivered`. |
+| Closed | Order becomes `closed` when the Back Office user closes it in the Back Office. |
 
 ## Managing merchant returns
 
-Once the return is created by the customer in the Storefront or by the Back Office user in the Back Office, the order obtains the *waiting for return* state.
+Once the return is created by the customer in the Storefront or by the Back Office user in the Back Office, the order obtains the `waiting for return` state.
 
 ### Executing returns
 

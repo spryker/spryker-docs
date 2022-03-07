@@ -24,22 +24,20 @@ To create a product offer, take the following steps:
 6. Enter a **Quantity**.
 7. Optional: To always display the product offer as available on the Storefront, select **Always in Stock**.
 8. To add prices, in the **Price** section, do the following:
-  1. Select **Add**.
-  2. Select a **STORE**.
-  3. Select a **CURRENCY**.
-  4. Optional: Enter any of the prices:
-    * **NET DEFAULT**
-    * **GROSS DEFAULT**
-    * **NET ORIGINAL**
-    * **GROSS ORIGINAL**
-  5. Optional: Enter a **VOLUME QUANTITY**.
-  6. Repeat sub-steps 1-5 of step 5 until you add all the desired prices.
+    1. Select **Add**.
+    2. Select a **STORE**.
+    3. Select a **CURRENCY**.
+    4. Optional: Enter any of the prices:
+        * **NET DEFAULT**
+        * **GROSS DEFAULT**
+        * **NET ORIGINAL**
+        * **GROSS ORIGINAL**
+    5. Optional: Enter a **VOLUME QUANTITY**.
+    6. Repeat sub-steps 1-5 of step 5 until you add all the desired prices.
 9. Optional: Select **Validity Dates**.
 10. Scroll up and select **Create**.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Merchant+Portal+user+guides/Offers/creating-product-offers.gif)
-
-
 
 ## Editing a product offer
 
@@ -49,8 +47,6 @@ To edit an existing product offer:
 3. Select **Save**.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Merchant+Portal+user+guides/Offers/edit-offers.gif)
-
-
 
 ## Reference information: Creating and editing product offers
 

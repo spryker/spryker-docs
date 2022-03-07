@@ -7,13 +7,14 @@ template: back-office-user-guide-template
 
 This document describes what information you can check in the dashboard of the Merchant Portal.
 
-*Dashboard*  is the hub for merchants' important business and performance data. It lets merchants monitor their own store inside the Marketplace by having a snapshot view of the most crucial information.
+*Dashboard* is a hub for merchants' important business and performance data. It lets merchants monitor their own store inside the Marketplace by having a snapshot view of the most crucial information.
 
-**Dashboard**  is the first page a merchant sees after logging into the Merchant Portal.
+**Dashboard** is the first page a merchant sees after logging into the Merchant Portal.
 
 ## Prerequisites
 
 To start working with the dashboard, navigate to **Merchant Portal&nbsp;<span aria-label="and then">></span> Dashboard**.
+
 Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
 
 
@@ -55,7 +56,7 @@ Offline—the total number of offline offers.
 
 #### On Marketplace
 
-The total number of offers that are available on the Storefront, that is,  all of the orders that meet the following criteria:
+The total number of offers that are available on the Storefront, that is, all of the orders that meet the following criteria:
 
 * Have no validity dates or **Valid From & Valid To** includes today's date.
 * Are online.
@@ -63,7 +64,7 @@ The total number of offers that are available on the Storefront, that is,  all o
 
 ## Managing orders in Dashboard
 
-To manage orders, click **Manage Orders**. You get redirected to the **Orders** page of the Merchant Portal.<!-- add a link when available -->
+To manage orders, click **Manage Orders**. The **Orders** page of the Merchant Portal opens.<!-- add a link when available -->
 
 
 ### Reference information: Managing orders in Dashboard

@@ -38,17 +38,18 @@ To create a new abstract product:
           You can not save an abstract product unless it is accompanied by at least one concrete product.
 
           {% endinfo_block %}
+
       -  If the abstract product that you are creating requires variants, select **Abstract product has multiple concrete products**.
-        1. Select a super attribute that defines the variation of your concrete products.
-        2. In the field next to the super attribute you've selected, select one or more values for each super attribute. Upon adding the super attribute values, the preview of the concrete products is displayed.
+          1. Select a super attribute that defines the variation of your concrete products.
+          2. In the field next to the super attribute you've selected, select one or more values for each super attribute. Upon adding the super attribute values, the preview of the concrete products is displayed.
 
-        {% info_block infoBox "Info" %}
+          {% info_block infoBox "Info" %}
 
-        Removing a super attribute or its value removes the related concrete products or concrete product values from the preview.
+          Removing a super attribute or its value removes the related concrete products or concrete product values from the preview.
 
-        {% endinfo_block %}
+          {% endinfo_block %}
 
-        3. Optional: Add more super attributes by clicking the **Add** button. Repeat this step until you select at least one value for each selected super attribute.
+          3. Optional: Add more super attributes by clicking the **Add** button. Repeat this step until you select at least one value for each selected super attribute.
 
         ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/merchant+portal+user+guides/Products/create-abstract-product-with-multiple-variants-mp.gif)
 

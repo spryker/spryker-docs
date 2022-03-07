@@ -9,7 +9,7 @@ This document describes how to manage marketplace abstract products in the Merch
 
 ## Prerequisites
 
-To start working with marketplace abstract products, go to the **Merchant Portall&nbsp;<span aria-label="and then">></span> Products**.
+To start working with marketplace abstract products, go to the **Merchant Portal&nbsp;<span aria-label="and then">></span> Products**.
 
 This article contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
 
@@ -35,7 +35,7 @@ By default, the table is sorted descendingly by SKU.
 
 To edit the existing marketplace abstract product:
 
-1. Next to the abstract product, you want to edit, hover over the three dots and click **Manage Product** or just click the line. This takes you to the ***[Product name]***, **Abstract Product Details** tab.
+1. Next to the abstract product, you want to edit, hover over the three dots and click **Manage Product** or just click the line. This takes you to the **_[Product name]_**, **Abstract Product Details** tab.
 2. In the **Name & Description** pane, edit **Name** and **Description** for every locale.
 3. In the **Stores** pane, in the drop-down menu select the stores where the product is available.
 4. In the **Tax Set** pane, in the drop-down menu, select the necessary tax set.

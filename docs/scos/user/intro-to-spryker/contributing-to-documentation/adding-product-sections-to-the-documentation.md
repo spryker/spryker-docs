@@ -140,9 +140,6 @@ To add the new product to the top navigation and the role boxes on the homepage,
                             ...    
 
     ```
-
-
-
     2. In `<h2 class="card__heading-title">Business User guides</h2>`, add a link to the document that should open when a user opens the developer guide of the product. For example:
     ```html
                                 <h2 class="card__heading-title">Business User guides</h2>
@@ -272,8 +269,7 @@ To configure the Algolia search for the product, you need to configure the searc
 
 1. In `algolia_config/`, create YML configuration files per role. For example, `algolia_config/_aop_dev.yml` and `algolia_config/_aop_user.yml`.
 
-
-2. In both files, exclude generic pages and the pages of all the existing project from indexing. Example:
+2. In both files, exclude generic pages and the pages of all the existing projects from indexing. Example:
 
 ```yaml
 algolia:
@@ -342,8 +338,6 @@ algolia:
 ### Configuring the Algolia search in the Algolia app
 
 To configure the search in the Algolia app of the Spryker docs, do the following.
-
-
 #### Create an index
 
 1. In the Algloia web interface, go to [Indices](https://www.algolia.com/apps/IBBSSFT6M1/indices).
@@ -409,8 +403,6 @@ To configure the search in the Algolia app of the Spryker docs, do the following
     * title
     * type
 5. In the **Highlight prefix tag** section, replace the default value with `<em class="ais-Highlight">`.    
-
-
 #### Add snippeting attributes
 
 1. Go to **PAGINATION AND DISPLAY > Snippeting**.
@@ -422,14 +414,9 @@ To configure the search in the Algolia app of the Spryker docs, do the following
 1. Go to **SEARCH BEHAVIOR > Retrieved attributes**.
 2. In the **Unretrievable attributes** section, click **+  Add an Attrribute**.
 3. Enter `custom_ranking` and press `Enter`.
-
-
 #### Configure duplicating and grouping
 
 1. Go to **SEARCH BEHAVIOR > Deduplication and Grouping**.
 2. For **Distinct**, select **true**.
 3. In the **Attribute for Distinct** section, enter `url` and press `Enter`.
-
-
-
 That's it. Now, you should be able to search within your new projects at the Spryker docs website.

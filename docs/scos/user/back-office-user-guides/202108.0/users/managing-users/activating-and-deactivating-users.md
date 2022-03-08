@@ -5,6 +5,7 @@ last_updated: Aug 2, 2021
 template: back-office-user-guide-template
 ---
 
+This document describes how to activate and deactivate users in the Back Office.
 
 ## Prerequisites
 

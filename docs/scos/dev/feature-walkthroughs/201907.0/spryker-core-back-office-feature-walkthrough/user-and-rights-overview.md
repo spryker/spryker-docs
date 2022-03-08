@@ -36,7 +36,7 @@ Also, you can find bundle names as well as controllers and actions in the file `
 
 ![bundles_navigation.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.md/bundles_navigation.png)
 
-See [Managing users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html) to learn how to create and manage users, groups, and roles .
+See [Managing users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html) to learn how to create and manage users, groups, and roles .
 
 <a name="add-acl"></a>
 
@@ -129,8 +129,8 @@ In the example, we grant the user **winner@spryker.com** access to all Zed resou
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
                 <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-roles.html" class="mr-link">Create and manage roles</a></li>
-                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-groups.html" class="mr-link">Create and manage groups</a></li>
-                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html" class="mr-link">Create and manage users</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-groups/creating-user-groups.html" class="mr-link">Create and manage groups</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html" class="mr-link">Create and manage users</a></li>
             </ul>
         </div>
  </div>

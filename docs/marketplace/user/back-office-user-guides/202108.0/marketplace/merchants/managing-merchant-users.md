@@ -35,7 +35,7 @@ To create a merchant user, do the following:
 
 4. Click **Create**.
 
-By default, each merchant user obtains the role of Merchant Portal Administrator. To change it, [edit the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html#editing-users) user record.
+By default, each merchant user obtains the role of Merchant Portal Administrator. To change it, [edit the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/editing-users.html) user record.
 
 ### Reference information: Creating a merchant user
 

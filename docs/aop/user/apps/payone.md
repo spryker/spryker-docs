@@ -68,6 +68,27 @@ To activate a payment method:
 
 Now that you have activated the payment method, it should be available for your customers in the checkout.
 
+## Credit card payment flow
+
+When customers pay with the credit card (with optional support of 3DS), the flow is as follows:
+
+1. Customer provides their credit card payment credentials and pay the required amount for the placed order.
+2. The customer's credit card data is validated.
+3. The customer receives a payment message, whether the payment (authorization) was successful or not.
+   
+When paying with a credit card, customers can:
+
+1. Repeat payments as often as they want if the payment (authorization) has failed, or cancel and close the payment page.
+2. Cancel an entire order before shipment and receive the money back, that is, void the existing pre-authorization, without being charged a fee.
+3. Cancel an order after it is ready for shipment and receive the money back, that is, trigger a refund.
+
+When customers pay with a credit card, a shop owner can:
+
+1. Charge customers once the order is ready to be shipped, that is, capture the funds.
+2. Cancel the entire customer order, that is, void the existing pre-authorization. In this case, the customer is not charged anything.
+3. Cancel one or more items of a customer's order before shipment. The customer is not charged for the canceled items 
+ 
+
 ## State machine for Payone
 
 For the Payone app to function properly, you need to provide a [state machine](https://docs.spryker.com/docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-i-state-machine-fundamentals.html#state-machine-components) for it.

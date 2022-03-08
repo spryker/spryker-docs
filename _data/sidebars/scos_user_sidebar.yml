@@ -107,6 +107,8 @@ entries:
         url: /docs/scos/user/intro-to-spryker/support/how-to-contact-spryker-support.html
       - title: Understanding Project and Core Level Fixes
         url: /docs/scos/user/intro-to-spryker/support/understanding-project-and-core-level-fixes.html
+    - title: Roadmap
+      url: /docs/scos/user/intro-to-spryker/roadmap.html
     - title: FAQ
       url: /docs/scos/user/intro-to-spryker/faq.html
     - title: B2C Suite

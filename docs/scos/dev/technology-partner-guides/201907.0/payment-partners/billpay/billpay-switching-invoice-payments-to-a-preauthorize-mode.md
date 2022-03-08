@@ -12,7 +12,7 @@ related:
     link: docs/scos/user/technology-partners/page.version/payment-partners/billpay.html
 ---
 
-Refer to [Billpay payment information](https://www.billpay.de/en/business-clients/payment-information/) for information about payment methods.
+Refer to [Billpay payment information](https://www.billpay.de/en/klarna-group-for-business/) for information about payment methods.
 
 The identity and credit check are checked within a single "pre-authorize" call after summary page was submitted.
 This may lead to the "rejection" of the order.

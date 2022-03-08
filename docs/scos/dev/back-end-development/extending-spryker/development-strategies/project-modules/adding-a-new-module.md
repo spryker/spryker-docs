@@ -22,7 +22,7 @@ redirect_from:
   - /v2/docs/en/t-add-new-bundle
   - /v1/docs/t-add-new-bundle
   - /v1/docs/en/t-add-new-bundle
-  - /docs/scos/dev/back-end-development/extending-spryker/adding-navigation-in-the-back-office.html
+  - /docs/scos/dev/back-end-development/extending-spryker/adding-a-new-module.html
 ---
 
 {% info_block infoBox %}

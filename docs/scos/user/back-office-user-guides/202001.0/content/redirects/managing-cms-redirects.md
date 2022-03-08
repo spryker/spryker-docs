@@ -25,18 +25,20 @@ To start managing CMS redirects, navigate to the **Content Management > Redirect
    - Redirect status code
 3. To keep the changes, click **Save**.
 
-{% info_block infoBox %}
+  {% info_block infoBox %}
 
-See [CMS Redirects: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/redirects/references/cms-redirects-references.html) to learn more information about the attributes you need to enter.
+  See [CMS Redirects: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/redirects/references/cms-redirects-references.html) to learn more information about the attributes you need to enter.
 
-{% endinfo_block %}
+  {% endinfo_block %}
 
-{% info_block warningBox %}
+  {% info_block warningBox %}
 
-Keep in mind that if you modify the **existing** URL from which a redirect is configured, a new URL will be created and added to the list of CMS redirects.
+  Keep in mind that if you modify the **existing** URL from which a redirect is configured, a new URL will be created and added to the list of CMS redirects.
 
-{% endinfo_block %}
+  {% endinfo_block %}
+
 ***
+
 **Tips & Tricks**
 
 On the **Edit a CMS redirect** page, you can do the following:

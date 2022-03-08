@@ -86,11 +86,3 @@ JSON_PARTIAL_OUTPUT_ON_ERROR | JSON_PRETTY_PRINT
 
 ## Development Tools
 We recommend using [Postman](https://www.getpostman.com/) to import resource endpoints and to send API requests. This allows testing the functionality including request type, headers and post data. It is fairly easy to use and provides a visually very clean output.
-
-## ToDos
-The next pre-release is planned to contain the following:
-
-* Auth layer (e.g. basic token auth)
-* API docs parsing and an overview at `https://zed.mysprykershop.com/api` of all resource endpoints
-* Better abstraction and invertion of control for {module}Api code via ApiQueryBuilder module
-* Useful customer feedback/requests

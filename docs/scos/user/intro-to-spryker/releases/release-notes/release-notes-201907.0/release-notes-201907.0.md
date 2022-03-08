@@ -22,13 +22,6 @@ redirect_from:
   - /v1/docs/en/release-notes-201907-0
   - /v6/docs/release-notes-201907-0
   - /v6/docs/en/release-notes-201907-0
-related:
-  - title: Managing Carts of Registered Users
-    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
-  - title: PayOne - Cash on Delivery
-    link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/scos-integration/payone-cash-on-delivery.html
-  - title: Heidelpay - Easy Credit
-    link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-easy-credit.html
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of major new features and enhancements released in August of 2019.
@@ -264,7 +257,7 @@ We have extended our Payone module with the cash-on-delivery payment method. Thi
 ### Heidelpay Easycredit
 We have extended our existing Heidelpay module with the payment method Easycredit, which allows customers to pay via an installment plan. This can help to increase your conversion rates of more expensive products and services.
 
-**Documentation**: [Heidelpay - Easy Credit](/docs/scos/user/technology-partners/201907.0/payment-partners/heidelpay/heidelpay-payment-methods/heidelpay-easy-credit.html)
+**Documentation**: [Integrating the Easy Credit payment method for Heidelpay](/docs/scos/dev/technology-partner-guides/{{site.version}}/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-easy-credit-payment-method-for-heidelpay.html)
 
 ### RatePay
 We have extended our partner portfolio with a RatePay integration that offers 4 payment methods out-of-the-box:
@@ -276,10 +269,10 @@ We have extended our partner portfolio with a RatePay integration that offers 4 
 
 **Documentation**:
 
-* [RatePay - Prepayment](/docs/scos/user/technology-partners/201907.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-prepayment.html)
-* [RatePay - Invoice](/docs/scos/user/technology-partners/201907.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-invoice.html)
-* [RatePay - Direct Debit](/docs/scos/user/technology-partners/201907.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html)
-* [RatePay - Installment](/docs/scos/user/technology-partners/201907.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-installment.html)
+* [Integrating the Prepayment payment method for RatePay](/docs/scos/user/technology-partners/201907.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-prepayment-payment-method-for-ratepay.html)
+* [Integrating the Invoice payment method for RatePay](/docs/scos/user/technology-partners/201907.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-invoice-payment-method-for-ratepay.html)
+* [Integrating the Direct Debit payment method for RatePay](/docs/scos/user/technology-partners/201907.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-direct-debit-payment-method-for-ratepay.html)
+* [Integrating the Installment payment method for RatePay](/docs/scos/user/technology-partners/201907.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-installment-payment-method-for-ratepay.html)
 
 ### Episerver
 We now have a new integration of our new partner Episerver and their online platform to support newsletters as well as the transactional notifications required in the usual e-commerce transactions.
@@ -287,9 +280,9 @@ We now have a new integration of our new partner Episerver and their online plat
 **Documentation**: [Episerver](/docs/scos/user/technology-partners/201907.0/marketing-and-conversion/customer-communication/episerver.html)
 
 ### Easycredit Direct Integration
-We have now a new integration of our new partner TeamBank AG and their payment method Ratenkauf by Easycredit, which allows customers to pay via an installment plan. This can help to increase your conversion rates of the more expensive products and services.
+We have now a new integration of our new partner TeamBank AG and their payment method ratenkauf by easyCredit, which allows customers to pay via an installment plan. This can help to increase your conversion rates of the more expensive products and services.
 
-**Documentation**: [Ratenkauf by Easycredit - Installation and Configuration](/docs/scos/user/technology-partners/201907.0/payment-partners/ratenkauf-by-easycredit/ratenkauf-by-easycredit-installation-and-configuration.html)
+**Documentation**: [Installing and configuring ratenkauf by easyCredit](/docs/scos/dev/technology-partner-guides/{{site.version}}/payment-partners/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.html)
 
 ### CrefoPay
 We now have an integration with our new payment partner CrefoPay, which will provide the following payment methods out-of-the-box including partial operations and B2B:
@@ -301,7 +294,7 @@ We now have an integration with our new payment partner CrefoPay, which will pro
 * Sofort
 * Cash on Delivery
 
-**Documentation**: [CrefoPay](/docs/scos/user/technology-partners/201907.0/payment-partners/crefopay/installing-and-configuring-crefopay.html)
+**Documentation**: [CrefoPay](/docs/scos/dev/technology-partner-guides/{{site.version}}/payment-partners/crefopay/installing-and-configuring-crefopay.html)
 
 ***
 ## Technical Enhancements

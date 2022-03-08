@@ -1,0 +1,8 @@
+title: Platform as a Service Plus Developer Guides
+entries:
+  - product: Platform as a Service Plus
+    nested:
+      - title: Setup
+        nested:
+          - title: DevVM system requirements
+            url: /docs/paas-plus/dev/setup/system-requirements.html 

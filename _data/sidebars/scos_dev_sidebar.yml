@@ -6,13 +6,12 @@ entries:
   - title: Developer getting started guide
     url: /docs/scos/dev/developer-getting-started-guide.html
   - title: Setup
+    url: /docs/scos/dev/setup/setup.html
     nested:
-    - title: System Requirements
-      url: /docs/scos/dev/setup/system-requirements.html
     - title: Installing Spryker with Docker
       url: /docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
       nested:
-      - title: Docker Installation Prerequisites
+      - title: Installing Docker prerequisites
         nested:
         - title: Installing Docker prerequisites on MacOS
           url: /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html
@@ -22,7 +21,7 @@ entries:
           url: /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl1.html
         - title: Installing Docker prerequisites on Windows with WSL2
           url: /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html
-      - title: Installation Guides
+      - title: Choosing an installatiion mode and installing
         nested:
         - title: Choosing an installation mode
           url: /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html
@@ -38,40 +37,41 @@ entries:
           url: /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html
         - title: Running production
           url: /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/running-production.html
-      - title: Configuration
+      - title: Configuring
         nested:
         - title: Setting up a self-signed SSL certificate
           url: /docs/scos/dev/setup/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html
-        - title: Additional DevOPS guidelines
-          url: /docs/scos/dev/setup/installing-spryker-with-docker/configuration/additional-devops-guidelines.html
+        - title: Adjusting Jenkins for a Docker environment
+          url: /docs/scos/dev/setup/installing-spryker-with-docker/configuration/adjusting-jenkins-for-a-docker-environment.html
       - title: Database access credentials
         url: /docs/scos/dev/setup/installing-spryker-with-docker/database-access-credentials.html
-    - title: Installing Spryker with Vagrant
+    - title: Installing Spryker with Development Virtual Machine
+      url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-development-virtual-machine.html
       nested:
-      - title: B2B or B2C Demo Shop installation- Mac OS or Linux, with Development
-          Virtual Machine
-        url: /docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-mac-os-or-linux-with-development-virtual-machine.html
-      - title: B2B or B2C Demo Shop installation- without Development Virtual Machine
-        url: /docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-without-development-virtual-machine.html
-      - title: B2B or B2C Demo Shop installation- Windows, with Development Virtual
-          Machine
-        url: /docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-windows-with-development-virtual-machine.html
-      - title: Debugger
+      - title: DevVM system requirements
+        url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/devvm-system-requirements.html
+      - title: Installing on MacOS and Linux
+        url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html
+      - title: Installing on Windows
+        url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-windows.html
+      - title: Configuring Spryker
         nested:
-        - title: Configuring debugging in Vagrant
-          url: /docs/scos/dev/setup/installing-spryker-with-vagrant/debugger-configuration/configuring-debugging-in-vagrant.html
-        - title: Configuring debugging in Vagrant with VM below version 91
-          url: /docs/scos/dev/setup/installing-spryker-with-vagrant/debugger-configuration/configuring-debugging-in-vagrant-with-vm-below-version-91.html
-      - title: Virtual Machine Cleanup
-        url: /docs/scos/dev/setup/installing-spryker-with-vagrant/virtual-machine-cleanup.html
-      - title: Upgrading to the latest version of Node.js inside devwm
-        url: /docs/scos/dev/setup/installing-spryker-with-vagrant/upgrading-to-the-latest-version-of-node.js-inside-devwm.html
-    - title: Post-Installation Steps and Additional Info
-      url: /docs/scos/dev/setup/post-installation-steps-and-additional-info.html
-    - title: Composer
-      url: /docs/scos/dev/setup/composer.html
-    - title: Configuring the database server
-      url: /docs/scos/dev/setup/configuring-the-database-server.html
+          - title: Configuring Spryker after installing
+            url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-spryker-after-installing-with-devvm.html
+          - title: Configuring database servers
+            url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html
+          - title: Updating Node.js to the latest version
+            url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/updating-node.js-in-devvm-to-the-latest-version.html
+      - title: Configuring debugging
+        nested:
+        - title: Configuring debugging
+          url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-devvm.html
+        - title: Configuring debugging in a DevVM below version 91
+          url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-a-devvm-below-version-91.html
+    - title: Installing Spryker without Development Virtual Machine or Docker
+      url: /docs/scos/dev/setup/installing-spryker-without-development-virtual-machine-or-docker.html
+    - title: Managing SCOS dependencies with Composer
+      url: /docs/scos/dev/setup/managing-scos-dependencies-with-composer.html
     - title: Redis Configuration
       url: /docs/scos/dev/setup/redis-configuration.html
     - title: Install module structure and configuration
@@ -1511,6 +1511,10 @@ entries:
       include_versions:
       - "202009.0"
       - "202108.0"
+    - title: Catalog + Order Management feature integration
+      url: /docs/scos/dev/feature-integration-guides/catalog-order-management-feature-integration.html
+      include_versions:
+      - "202108.0"
     - title: Category Filters feature integration
       url: /docs/scos/dev/feature-integration-guides/category-filters-feature-integration.html
     - title: Checkout feature integration
@@ -1651,7 +1655,6 @@ entries:
       - "202001.0"
       - "202005.0"
       - "202009.0"
-      - "202108.0"
     - title: Promotions and Discounts feature integration
       url: /docs/scos/dev/feature-integration-guides/promotions-and-discounts-feature-integration.html
       include_versions:
@@ -3282,6 +3285,8 @@ entries:
             url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-query.html
           - title: Configuring Search for Multi-Currency
             url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html
+          - title: Expanding search data
+            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expanding-search-data.html
         - title: Transfering data between Yves and Zed
           url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/transfering-data-between-yves-and-zed.html
         - title: Defining the Module Dependencies- Dependency Provider
@@ -3496,9 +3501,9 @@ entries:
     nested:
     - title: Deploy file
       url: /docs/scos/dev/the-docker-sdk/deploy-file/deploy-file.html
-      nested:
       include_versions:
       - "202108.0"
+      nested:
       - title: Deploy file reference - 1.0
         url: /docs/scos/dev/the-docker-sdk/deploy-file/deploy-file-reference-1.0.html
         include_versions:
@@ -3507,6 +3512,13 @@ entries:
         url: /docs/scos/dev/the-docker-sdk/deploy-file/deploy-file-inheritance-common-use-cases.html
         include_versions:
         - "202108.0"
+    - title: Deploy file reference - 1.0
+      url: /docs/scos/dev/the-docker-sdk/deploy-file-reference-1.0.html
+      include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
     - title: Docker environment infrustructure
       url: /docs/scos/dev/the-docker-sdk/docker-environment-infrastructure.html
       include_versions:
@@ -3866,22 +3878,8 @@ entries:
     - title: About Tutorials
       url: /docs/scos/dev/tutorials-and-howtos/tutorials-and-howtos.html
     - title: HowTos
+      url: /docs/scos/dev/tutorials-and-howtos/howtos/about-howtos.html
       nested:
-      - title: HowTo - Replace key-value storage with database
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-key-value-storage-with-database.html
-      - title: HowTo - Force HTTPS
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-force-https.html
-      - title: HowTo - Change the Default Behavior of Event Triggering in the AvailabilityStorage
-          Module
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-change-the-default-behavior-of-event-triggering-in-the-availabilitystorage-module.html
-      - title: HowTo - Build Your Own Product Relation Type
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-build-your-own-product-relation-type.html
-      - title: HowTo - Set up multiple stores
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html
-      - title: HowTo - Integrate and Use Precise Decimal Numbers
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-integrate-and-use-precise-decimal-numbers.html
-      - title: HowTo - Create and Register a MailTypePlugin
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html
       - title: Feature HowTos
         url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/feature-howtos.html
         nested:
@@ -3893,6 +3891,8 @@ entries:
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html
           - title: HowTo - Import Packaging Units
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-packaging-units.html
+          - title: HowTo - Manage business unit specific prices via data import
+            url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/how-to-manage-business-unit-specific-prices-via-data-import.html
         - title: HowTo - Generate a Token for Login
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html
         - title: HowTo - Use Blocks
@@ -3932,6 +3932,30 @@ entries:
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-implement-customer-approval-process-based-on-a-generic-state-machine.html
         - title: HowTo - Emailing Invoices Using BCC
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-emailing-invoices-using-bcc.html
+      - title: Glue API HowTos
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/glue-api-howtos.html
+        nested:
+        - title: Configuring Glue for cross-origin requests
+          url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-glue-for-cross-origin-requests.html
+        - title: Configuring Visibility of the Included Section
+          url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-visibility-of-the-included-section.html
+        - title: Managing customer access to Glue API resources
+          url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/managing-customer-access-to-glue-api-resources.html
+      - title: HowTo - Replace key-value storage with database
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-key-value-storage-with-database.html
+      - title: HowTo - Force HTTPS
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-force-https.html
+      - title: HowTo - Change the Default Behavior of Event Triggering in the AvailabilityStorage
+          Module
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-change-the-default-behavior-of-event-triggering-in-the-availabilitystorage-module.html
+      - title: HowTo - Build Your Own Product Relation Type
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-build-your-own-product-relation-type.html
+      - title: HowTo - Set up multiple stores
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html
+      - title: HowTo - Integrate and Use Precise Decimal Numbers
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-integrate-and-use-precise-decimal-numbers.html
+      - title: HowTo - Create and Register a MailTypePlugin
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html
       - title: HowTo - Handle twenty five million prices in Spryker Commerce OS
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-twenty-five-million-prices-in-spryker-commerce-os.html
       - title: HowTo - Customize HTTP Headers in AJAX Request
@@ -3978,19 +4002,8 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-case-sensitive-file-system-on-mac-os.html
       - title: HowTo - Create and Register a Mail Provider
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mail-provider.html
-      - title: Glue API HowTos
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/glue-api-howtos.html
-        nested:
-        - title: Configuring Glue for cross-origin requests
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-glue-for-cross-origin-requests.html
-        - title: Configuring Visibility of the Included Section
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-visibility-of-the-included-section.html
-        - title: Managing customer access to Glue API resources
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/managing-customer-access-to-glue-api-resources.html
       - title: HowTo - Get Ready for VAT (tax) Changes in Germany
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-get-ready-for-vat-tax-changes-in-germany.html
-      - title: About HowTos
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/about-howtos.html
       - title: HowTo - Reset a Docker environment
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-reset-a-docker-environment.html
       - title: HowTo - Allow Zed CSS/JS on a project
@@ -3999,54 +4012,10 @@ entries:
     nested:
     - title: Hosting Providers
       nested:
-      - title: Heroku technology partner integration
-        url: /docs/scos/dev/technology-partner-guides/hosting-providers/heroku-technology-partner-integration.html
+      - title: Integrating Heroku
+        url: /docs/scos/dev/technology-partner-guides/hosting-providers/integrating-heroku.html
     - title: Marketing and conversion
       nested:
-      - title: Customer communication
-        nested:
-        - title: Episerver guides
-          nested:
-          - title: Integrating Episerver
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
-          - title: Installing and configuring Episerver
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
-          - title: Episerver API
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/episerver-api.html
-          - title: Episerver order reference commands
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html
-        - title: Inxmail guides
-          nested:
-          - title: Integrating Inxmail
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/integrating-inxmail.html
-          - title: Installing and configuring Inxmail
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/installing-and-configuring-inxmail.html
-          - title: Inxmail API requests
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/inxmail-api-requests.html
-          - title: Inxmail order referenced commands
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/inxmail-order-referenced-commands.html
-      - title: Personalization and cross-selling
-        nested:
-        - title: Econda
-          nested:
-          - title: Installing Econda
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/installing-econda.html
-          - title: Integrating Econda
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda.html
-          - title: Integrating Econda front end
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda-front-end.html
-            include_versions:
-            - "201811.0"
-            - "201903.0"
-            - "201907.0"
-            - "202001.0"
-            - "202005.0"
-          - title: Integrating Econda cross-selling
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda-cross-selling.html
-          - title: Adding the Econda tracking code
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/adding-the-econda-tracking-code.html
-          - title: Exporting Econda data
-            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/exporting-econda-data.html
       - title: Analytics
         nested:
         - title: FACT-Finder
@@ -4084,6 +4053,50 @@ entries:
           url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/installing-and-integrating-minubo.html
           include_versions:
           - "202108.0"
+      - title: Customer communication
+        nested:
+        - title: Episerver guides
+          nested:
+          - title: Integrating Episerver
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
+          - title: Installing and configuring Episerver
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
+          - title: API
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/episerver-api.html
+          - title: Order reference commands
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html
+        - title: Inxmail guides
+          nested:
+          - title: Installing and configuring Inxmail
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/installing-and-configuring-inxmail.html
+          - title: Integrating Inxmail
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/integrating-inxmail.html
+          - title: API requests
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/inxmail-api-requests.html
+          - title: Order referenced commands
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/inxmail-order-referenced-commands.html
+      - title: Personalization and cross-selling
+        nested:
+        - title: Econda
+          nested:
+          - title: Installing Econda
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/installing-econda.html
+          - title: Integrating Econda
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda.html
+          - title: Integrating Econda front end
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda-front-end.html
+            include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+            - "202001.0"
+            - "202005.0"
+          - title: Integrating Econda cross-selling
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda-cross-selling.html
+          - title: Adding the Econda tracking code
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/adding-the-econda-tracking-code.html
+          - title: Exporting Econda data
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/exporting-econda-data.html
     - title: Operational tools, monitoring, legal, etc.
       nested:
         - title: New Relic
@@ -4092,8 +4105,11 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/new-relic/installing-and-configuring-new-relic–with–vagrant.html
             - title: Configuring logging
               url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/new-relic/configuring-new-relic-logging.html
-        - title: Configuring Loggly
-          url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/configuring-loggly.html
+        - title: Loggly
+          url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/loggly/loggly.html
+          nested:
+            - title: Configuring Loggly
+              url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/loggly/configuring-loggly.html
         - title: Installing and configuring Tideways
           url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
     - title: Order Management (ERPOMS)
@@ -4114,10 +4130,10 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/installing-and-configuring-adyen.html
             - title: Integrating Adyen
               url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/integrating-adyen.html
-            - title: Integrating Adyen payment methods
+            - title: Integrating payment methods
               url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/integrating-adyen-payment-methods.html
-            - title: Enabling Adyen filtering payment methods
-              url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/enabling-adyen-filtering-payment-methods.html
+            - title: Enabling filtering of payment methods
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/enabling-filtering-of-payment-methods-for-adyen.html
         - title: Afterpay
           nested:
             - title: Installing and configuring Afterpay
@@ -4126,40 +4142,52 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/payment-partners/afterpay/integrating-afterpay.html
     - title: Amazon Pay
       nested:
-        - title: SCOS Integration
-          nested:
-            - title: Amazon Pay - Configuration for the SCOS
-              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/scos-integration/amazon-pay-configuration-for-the-scos.html
-            - title: Amazon Pay - Obtaining an Amazon Order Reference and Information About Shipping Addresses
-              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/scos-integration/amazon-pay-obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
-            - title: Amazon Pay - Sandbox Simulations
-              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/scos-integration/amazon-pay-sandbox-simulations.html
-            - title: Amazon Pay - State Machine
-              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/scos-integration/amazon-pay-state-machine.html
-            - title: Amazon Pay - API
-              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/scos-integration/amazon-pay-api.html
+        - title: Configuring Amazon Pay
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/configuring-amazon-pay.html
+        - title: Obtaining an Amazon Order Reference and information about shipping addresses
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
+        - title: Sandbox Simulations
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/amazon-pay-sandbox-simulations.html
+        - title: State Machine
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/amazon-pay-state-machine.html
+        - title: Handling orders with Amazon Pay API
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/handling-orders-with-amazon-pay-api.html
         - title: Legacy Demoshop Integration
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
           nested:
-            - title: "Amazon Pay - Rendering a \u201CPay with Amazon\u201D Button on the Cart Page"
+            - title: "Rendering a \u201CPay with Amazon\u201D Button on the Cart Page"
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-rendering-a-pay-with-amazon-button-on-the-cart-page.html
-            - title: Amazon Pay - Email Notifications
+            - title: Email Notifications
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-email-notifications.html
-            - title: Amazon Pay - Configuration for the Legacy Demoshop
+            - title: Configuration for the Legacy Demoshop
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-configuration-for-the-legacy-demoshop.html
-            - title: Amazon Pay - Sandbox Simulations
+            - title: Sandbox Simulations
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-sandbox-simulations.html
-            - title: Amazon Pay - Support of Bundled Products
+            - title: Support of Bundled Products
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-support-of-bundled-products.html
-            - title: Amazon Pay - Order Reference and Information about Shipping Addresses
+            - title: Order Reference and Information about Shipping Addresses
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-order-reference-and-information-about-shipping-addresses.html
-            - title: Amazon Pay - State Machine
+            - title: State Machine
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-state-machine.html
-            - title: Amazon Pay - Refund
+            - title: Refund
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-refund.html
-            - title: Amazon Pay - API
-              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-api.html
+            - title: Handling orders with Amazon Pay API
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/legacy-demoshop-integration/legacy-demoshop-handling-orders-with-amazon-pay-api.html
     - title: Arvato
       nested:
+        - title: Installing and configuring Arvato
+          url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/installing-and-configuring-arvato.html
+          include_versions:
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: v.1.0
           include_versions:
           - "201811.0"
@@ -4211,27 +4239,25 @@ entries:
             - "201811.0"
             - "201903.0"
             - "201907.0"
-        - title: Installing and configuring Arvato
-          url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/installing-and-configuring-arvato.html
-          include_versions:
-          - "202001.0"
-          - "202005.0"
-          - "202009.0"
-          - "202108.0"
         - title: Billpay
           nested:
-            - title: Billpay - Switching invoice payments to a preauthorize mode
-              url: /docs/scos/dev/technology-partner-guides/payment-partners/billpay/billpay-switching-invoice-payments-to-a-preauthorize-mode.html
             - title: Integrating Billpay
               url: /docs/scos/dev/technology-partner-guides/payment-partners/billpay/integrating-billpay.html
+            - title: Billpay - Switching invoice payments to a preauthorize mode
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/billpay/billpay-switching-invoice-payments-to-a-preauthorize-mode.html
         - title: Braintree
           nested:
-            - title: Braintree - Performing requests
-              url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/braintree-performing-requests.html
-            - title: Braintree - Workflow
-              url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/braintree-workflow.html
             - title: Installing and configuring Braintree
               url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/installing-and-configuring-braintree.html
+            - title: Integrating Braintree
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/integrating-braintree.html
+              include_versions:
+              - "202009.0"
+              - "202108.0"
+            - title: Performing requests
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/braintree-performing-requests.html
+            - title: Request workflow
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/braintree-request-workflow.html
             - title: Braintree guides for the Legacy Demoshop
               include_versions:
               - "201811.0"
@@ -4240,40 +4266,34 @@ entries:
               - "202001.0"
               nested:
                 - title: Configuration for the Legacy Demoshop
-                  url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/legacy-demoshop-integration/braintree-configuration-for-the-legacy-demoshop.html
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/braintree-guides-for-the-legacy-demoshop/braintree-configuration-for-the-legacy-demoshop.html
                   include_versions:
                   - "201811.0"
                   - "201903.0"
                   - "201907.0"
                   - "202001.0"
                 - title: Performing Requests for the Legacy Demoshop
-                  url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/legacy-demoshop-integration/braintree-performing-requests-for-the-legacy-demoshop.html
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/braintree-guides-for-the-legacy-demoshop/braintree-performing-requests-for-the-legacy-demoshop.html
                   include_versions:
                   - "201811.0"
                   - "201903.0"
                   - "201907.0"
                   - "202001.0"
-                - title: Braintree - Workflow for Legacy Demoshop
-                  url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/legacy-demoshop-integration/braintree-workflow-for-legacy-demoshop.html
+                - title: Braintree - Request workflow for Legacy Demoshop
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/braintree-guides-for-the-legacy-demoshop/braintree-workflow-for-legacy-demoshop.html
                   include_versions:
                   - "201811.0"
                   - "201903.0"
                   - "201907.0"
                   - "202001.0"
-            - title: Integrating Braintree
-              url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/integrating-braintree.html
-              include_versions:
-              - "202009.0"
-              - "202108.0"
         - title: Computop
-          include_versions:
           nested:
           - title: Installing and configuring Computop
             url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/installing-and-configuring-computop.html
-          - title: Computop - OMS
-            url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/computop-oms.html
-          - title: Computop - API
-            url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/computop-api.html
+          - title: OMS plugins
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/computop-oms-plugins.html
+          - title: API calls
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/computop-api-calls.html
           - title: Integrating payment methods for Computop
             nested:
             - title: Integrating the Sofort payment method
@@ -4304,44 +4324,132 @@ entries:
           nested:
           - title: Installing and configuring CrefoPay
             url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/installing-and-configuring-crefopay.html
-          - title: CrefoPay — Enabling B2B payments
-            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-enabling-b2b-payments.html
-          - title: CrefoPay callbacks
-            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-callbacks.html
-          - title: CrefoPay notifications
-            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-notifications.html
-          - title: CrefoPay capture and refund processes
-            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-capture-and-refund-processes.html
-          - title: CrefoPay payment methods
-            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-payment-methods.html
           - title: Integrating CrefoPay
             url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/integrating-crefopay.html
+          - title: Enabling B2B payments
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-enabling-b2b-payments.html
+          - title: Callbacks
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-callbacks.html
+          - title: Notifications
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-notifications.html
+          - title: Capture and refund processes
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-capture-and-refund-processes.html
+          - title: Payment methods
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-payment-methods.html
+        - title: Heidelpay
+          nested:
+          - title: Installing Heidelpay
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/installing-heidelpay.html
+          - title: Integrating Heidelpay
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-heidelpay.html
+          - title: Configuring Heidelpay
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/configuring-heidelpay.html
+          - title: Integrating payment methods for Heidelpay
+            nested:
+            - title: Integrating the Sofort payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-sofort-payment-method-for-heidelpay.html
+            - title: Integrating the Invoice Secured B2C payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-invoice-secured-b2c-payment-method-for-heidelpay.html
+            - title: Integrating the iDeal payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-ideal-payment-method-for-heidelpay.html
+            - title: Integrating the Easy Credit payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-easy-credit-payment-method-for-heidelpay.html
+            - title: Integrating the Direct Debit payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-direct-debit-payment-method-for-heidelpay.html
+            - title: Integrating the Split-payment Marketplace payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-split-payment-marketplace-payment-method-for-heidelpay.html
+            - title: Integrating the Paypal Debit payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-paypal-debit-payment-method-for-heidelpay.html
+            - title: Integrating the Paypal Authorize payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-paypal-authorize-payment-method-for-heidelpay.html
+            - title: Integrating the Credit Card Secure payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-credit-card-secure-payment-method-for-heidelpay.html
+          - title: Workflow for errors
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/heidelpay-workflow-for-errors.html
+          - title: OMS workflow
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/heidelpay-oms-workflow.html
+          - title: Integrating Heidelpay into the Legacy Demoshop
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-heidelpay-into-the-legacy-demoshop.html
+            include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+            - "202001.0"
+        - title: Payolution
+          nested:
+          - title: Installing and configuring Payolution
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/installing-and-configuring-payolution.html
+          - title: Integrating Payolution
+            include_versions:
+            - "202009.0"
+            - "202108.0"
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/integrating-payolution.html
+          - title: Integrating the invoice paymnet method
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/integrating-the-invoice-payment-method-for-payolution.html
+          - title: Integrating the installment payment method for
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/integrating-the-installment-payment-method-for-payolution.html
+          - title: Performing requests
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution-performing-requests.html
+          - title: Payolution request flow
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution-request-flow.html
+        - title: ratenkauf by easyCredit
+          nested:
+          - title: Installing and configuring ratenkauf by easyCredit
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.html
+          - title: Integrating ratenkauf by easyCredit
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/ratenkauf-by-easycredit/integrating-ratenkauf-by-easycredit.html
+            include_versions:
+            - "202009.0"
+            - "202108.0"
         - title: RatePay
           nested:
-            - title: RatePay - Payment methods
-              nested:
-                - title: RatePay - Direct Debit
-                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-payment-methods/ratepay-direct-debit.html
-                - title: RatePay - Prepayment
-                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-payment-methods/ratepay-prepayment.html
-                - title: RatePay - Installment
-                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-payment-methods/ratepay-installment.html
-                - title: RatePay - Invoice
-                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-payment-methods/ratepay-invoice.html
-            - title: Technical details and HowTos
-              nested:
-                - title: RatePay facade
-                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/technical-details-and-howtos/ratepay-facade.html
-                - title: RatePay payment workflow
-                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/technical-details-and-howtos/ratepay-payment-workflow.html
-                - title: Disabling address updates from the backend application for RatePay
-                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/technical-details-and-howtos/disabling-address-updates-from-the-backend-application-for-ratepay.html
-                - title: RatePay state machine commands and conditions
-                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/technical-details-and-howtos/ratepay-state-machine-commands-and-conditions.html
-            - title: RatePay Core module structure diagram
+            - title: Facade methods
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-facade-methods.html
+            - title: Payment workflow
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-payment-workflow.html
+            - title: Disabling address updates from the backend application
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/disabling-address-updates-from-the-backend-application-for-ratepay.html
+            - title: State machine commands and conditions
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-state-machine-commands-and-conditions.html
+            - title: Core module structure diagram
               url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
-            - title: RatePay state machines
+            - title: State machines
               url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-state-machines.html
+            - title: Integrating payment methods for RatePay
+              nested:
+                - title: Integrating the Direct Debit payment method
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-direct-debit-payment-method-for-ratepay.html
+                - title: Integrating the Prepayment payment method
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-prepayment-payment-method-for-ratepay.html
+                - title: Integrating the Installment payment method
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-installment-payment-method-for-ratepay.html
+                - title: Integrating the Invoice payment method
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-invoice-payment-method-for-ratepay.html
+    - title: Product information (PIMERP)
+      nested:
+      - title: Akeneo
+        nested:
+        - title: Installing and configuring Akeneo
+          url: /docs/scos/dev/technology-partner-guides/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html
+        - title: Akeneo — Console commands
+          url: /docs/scos/dev/technology-partner-guides/product-information-pimerp/akeneo/akeneo-console-commands.html
+          include_versions:
+          - "202009.0"
+          - "202108.0"
+    - title: Shipment
+      nested:
+      - title: Seven Senders
+        nested:
+          - title: Installing and configuring Seven Senders
+            url: /docs/scos/dev/technology-partner-guides/shipment/seven-senders/installing-and-configuring-seven-senders.html
+          - title: Integrating Seven Senders
+            url: /docs/scos/dev/technology-partner-guides/shipment/seven-senders/integrating-seven-senders.html
+          - title: API requests
+            url: /docs/scos/dev/technology-partner-guides/shipment/seven-senders/seven-senders-api-requests.html
+          - title: Mappers
+            url: /docs/scos/dev/technology-partner-guides/shipment/seven-senders/seven-senders-mappers.html
+          - title: Persistance layer
+            url: /docs/scos/dev/technology-partner-guides/shipment/seven-senders/seven-senders-persistance-layer.html
     - title: Taxes
       include_versions:
       - "202108.0"
@@ -4354,6 +4462,7 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/taxes/avalara/integrating-avalara-tax-product-options.html
             - title: Integrating Avalara Tax + Shipment
               url: /docs/scos/dev/technology-partner-guides/taxes/avalara/integrating-avalara-tax-shipment.html
+
   - title: Architecture
     url: /docs/scos/dev/architecture/architecture.html
     nested:

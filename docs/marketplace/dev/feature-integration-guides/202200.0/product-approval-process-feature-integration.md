@@ -89,7 +89,27 @@ Make sure that the following changes have been triggered in transfer objects:
 
 ### 3) Add translations
 
-Generate new translation cache for Zed:
+Add translations as follows:
+
+1. Append glossary according to your configuration:
+
+ ```yaml
+product-approval.message.not-approved,Product sku %sku% is not active.,en_US
+product-approval.message.not-approved,Produkt sku %sku% ist nicht aktiv.,de_DE
+```
+
+Run the following command(s) to add the glossary keys:
+
+```bash
+console data:import:glossary
+```
+
+{% info_block warningBox “Verification” %}
+
+Make sure that in the database the configured data are added to the `spy_glossary` table.
+{% endinfo_block %}
+
+2. Generate new translation cache for Zed:
 
 ```bash
 console translator:generate-cache

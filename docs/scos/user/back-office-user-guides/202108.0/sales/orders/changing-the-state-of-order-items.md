@@ -1,5 +1,5 @@
 ---
-title: Managing orders
+title: Changing the state of order items
 description: The guide provides instructions on how to manage orders including setting statuses for the order, claiming and commenting on orders in the Back Office.
 last_updated: Aug 10, 2021
 template: back-office-user-guide-template
@@ -19,12 +19,7 @@ related:
     link: docs/scos/user/features/page.version/return-management-feature-overview/return-management-feature-overview.html
 ---
 
-This article describes how to manage orders.
-
-You manage orders by:
-* Changing statuses of an order, or in item inside the order
-* Commenting on orders (comments can be viewed by other Sales team members)
-* Updating internal custom order reference
+This article describes how to change the state of order items.
 
 ## Prerequisites
 
@@ -34,43 +29,36 @@ The instructions assume that there is an existing order with the **Payment pendi
 
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
-## Changing order statuses
+## Changing the state of all the items in an order
 
-To change the status of an order:
+1. On the **Orders** page, click **View** next to the order containing the items you want to change the state of.
+    This opens the **Order Overview** page.
+2. In the **TRIGGER ALL MATCHING STATES INSIDE THIS ORDER** pane, click **Pay**.
 
-1. In the *List of orders* table, click **View** next to the order you want to change the status of.
-You are taken to the *View Order: [Order ID]* page.
-2. In the *Trigger all matching states inside this order* section, click **pay**. The page refreshes to show the message about the successful status change. In the *Trigger all matching states inside this order* section, you can see the **ship** button.
-3. Repeat step 2 until you get the desired order status.
+    The page refreshes with the success message displayed. You can check the new state of the items in the order in the **ORDER ITEMS** pane.  
+3. Repeat step 2 until the items are in the needed state.
 
-To change the status of the items in a shipment:
+## Changing the state of items in a shipment
 
-1. In *List of orders*, click **View** next to the order owning the items you want to change the status of.
-You are taken to the *View Order: [Order ID]* page.
-2. Scroll down to the desired shipment.
-3. Select the checkbox next to the products you want to change the status of.
-4. In the *Trigger all matching states of order inside this shipment* section, click **pay**.
-  The page refreshes to show the message about the successful status change. In the *Trigger all matching states of order inside this shipment* section of the modified shipment, you can see the **ship** button.
-5. Repeat step 4 until you get the desired shipment status.
-
-
-To change the status of an item:
-
-1. In *List of orders*, click **View** next to the order owning the items you want to change the status of.
-You are taken to the *View Order: [order ID]* page.
-2. Scroll down to the desired item.
-3. In the _Trigger event_ column next to the desired product, click **pay**.
-The page refreshes to show the message about the successful status change. In the _Trigger event_ column next to the product, you can see the **ship** button.
+1. On the **Orders** page, click **View** next to the order containing the shipment you want to change the state of.
+    This opens the **Order Overview** page.    
+2. In the **ORDER ITEMS** pane, in the desired shipment, select the checkboxes next to the products you want to change the state of. If you want to change the state of all the items in the shipment, don't select any checkboxes.
+3. In the **TRIGGER ALL MATCHING STATES OF ORDER INSIDE THIS SHIPMENT** pane, click **Pay**.
+    The page refreshes with the success message displayed.
+4. Repeat step 2-3 until you get the needed  status.
 
 
-**Tips & tricks**
-<br>To change the status of all the items inside a shipment at once, click **pay** in the *Trigger all matching states of order inside this shipment* section of the corresponding shipment.
+## Changing the state of an item
 
-The order statuses you set here do not always have the same wording on the Storefront. For details on how you can display custom names for statuses on the Storefront, see [HowTo - Display custom names for order item states on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
+1. On the **Orders** page, click **View** next to the order containing the item you want to change the state of.
+    This opens the **Order Overview** page.
+2. In the **ORDER ITEMS** pane, next to the needed item, click **Pay**.
+    The page refreshes with the success message displayed.
+3. Repeat step 2 until you get the needed order state.         
 
-### Reference information: Changing order statuses
+### Reference information: Changing the state of order items
 
-You can set different statuses for your order. The followning describes the statuses you can select:
+You can set different statuses for your order. The following table describes the statuses you can select:
 
 | ORDER STATUS | DESCRIPTION |
 | --- | --- |
@@ -84,7 +72,7 @@ You can set different statuses for your order. The followning describes the stat
 | Return | Select this state if the customer returns you either all or several items from the order.  |
 | Refund | Select this state in case of a refund.|
 
-Statuses flow:
+States flow:
 * **Payment pending**—the initial order statuses.
 * **Canceled**—state  of the order after it is canceled by the customer on the Storefront or by the Back Office user.
 * When you select **Pay**, the state becomes **Confirmed**.
@@ -97,67 +85,13 @@ Statuses flow:
 * In case the customer returns the ordered items: when you select **Return**, the status becomes returned.
 * In case of a return, when you select **Refund**, the status becomes refunded.
 
-## Creating returns
+### State names
 
-If a sales order item is[ returnable](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html), you can create a return for it. Keep in mind that you can create returns for both the registered and guest users. Creating a return from the Back Office is the only way for the *guest users* to return an order.
-
-If a sales order item is[ returnable](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html), you can create a return for it. Keep in mind that you can create returns for both the registered and guest users. Creating a return from the Back Office is the only way for the *guest users* to return an order.
+The order statuses you set here do not always have the same wording on the Storefront. For details on how you can display custom names for statuses on the Storefront, see [HowTo - Display custom names for order item states on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
 
 
-To create a return:
 
-1. On the *View Order: [Order ID]* page, click **Return** in the top right corner. This opens the *Create Return* page.
-2. On the *Create Return* page, select the items you want to return and optionally the return reason for the items.
 
-{% info_block warningBox "Note" %}
-
-For a [Configurable Bundle](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html), you can’t select to return an entire Configurable Bundle, but you can select to return separate items from it.
-The [Product Bundles](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
-
-{% endinfo_block %}
-
-3. Click **Create return**. This creates the return and takes you to the *Overview of Return* *[Return reference]* page, where you can change the return states.
-
-{% info_block infoBox "Info" %}
-
-You can create returns for the items that are in *Exported* or *Delivered* states only.
-
-{% endinfo_block %}
-
-### Reference information: Creating returns
-
-This section describes attributes you see when creating a return.
-
-**Orders page**
-
-By default, the last created order goes on top of the table. However, you can sort the table by the order number, order reference, created date, customer emails, or the number of items ordered.
-
-On the *Orders* page, you see the following:
-
-* Order number, reference, and the creation date.
-* Customer name and email.
-* Order state, the grand total of the order, and the number of items ordered.
-* Actions that you can do on this page.
-
-By default, the last created order goes on top of the table. However, you can sort and search the list of orders.
-
-All columns with headers having arrows in the *List of Returns* table are sortable.
-
-**Create Return page**
-
-| SECTION | ATTRIBUTE | DESCRIPTION |
-|-|-|-|
-| General information |   |   |
-|   | Order reference | Reference of the order the return will be created for. It takes you to the *View Order: [Order ID]* page, where you can view and manage the order. |
-| Select Items to Return |   |   |
-|   | Fulfilled by merchant | Name of the merchant the item belongs to. It takes you to the *Edit Merchant: [Merchant ID]* page, where you can view and edit information about this merchant. |
-|   | Merchant Order Reference | Reference of the merchant order in the system. |
-|   | Product | List of all items that will be included in the return. |
-|   | Quantity | Product quantity. |
-|   | Price | Product price. |
-|   | Total | Total amount paid for the item. |
-|   | Return policy | Return policy an item will be controlled by. |
-|   | State | Return state for the item. |
 
 ## Viewing the returns for orders
 

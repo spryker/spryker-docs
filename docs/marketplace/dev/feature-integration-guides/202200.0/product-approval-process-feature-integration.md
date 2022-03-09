@@ -476,7 +476,7 @@ Follow the steps to import product approval data:
 <details open>
 <summary markdown='span'>data/import/common/common/product_abstract_approval_status.csv</summary>
 
-```csv
+```yaml
 sku,approval_status
 001,approved
 002,approved

@@ -126,7 +126,7 @@ Follow the steps to import product approval data:
 <details open>
     <summary markdown='span'>data/import/common/common/marketplace/merchant_product_approval_status_default.csv</summary>
 
-```csv
+```yaml
 merchant_reference,approval_status
 MER000002,approved
 ```

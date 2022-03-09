@@ -18,6 +18,7 @@ redirect_from:
   - /v4/docs/en/spryker-in-docker-troubleshooting
   - /v3/docs/spryker-in-docker-troubleshooting
   - /v3/docs/en/spryker-in-docker-troubleshooting
+  - /docs/spryker-in-docker-troubleshooting
 ---
 
 This section includes guidance for problems related to issues you might encounter with your Spryker-based project in the Docker environment.  

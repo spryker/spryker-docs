@@ -81,7 +81,7 @@ If a user chooses to log in via a third-party, the user is redirected to the OAu
 If a user who does not exist in the Spryker database logs in for the first time, the following happens:
 
 * Based on the third-party system’s user data such as first name, last name, and email, the Back Office user is created and visible on the [*Users* page](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html) in the Back Office.
-* The user is assigned to the default [group](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-groups/creating-user-groups.html).
+* The user is assigned to the default [group](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-groups/creating-user-groups.html).
 
 With Strategy 1, the login process looks like this:
 

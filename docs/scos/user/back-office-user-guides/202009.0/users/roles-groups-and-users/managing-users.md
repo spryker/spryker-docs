@@ -26,7 +26,7 @@ You can do the following:
 
 ## Creating users
 
-You have already done the primary setup (you have created a [role](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-roles.html) and [group](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-groups/creating-user-groups.html)), so now it is time to add an actual user record to the system.
+You have already done the primary setup (you have created a [role](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-roles.html) and [group](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-groups/creating-user-groups.html)), so now it is time to add an actual user record to the system.
 
 **To create a user record**:
 1. Click **Add New User** in the top right corner of the **User** page.

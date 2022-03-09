@@ -13,7 +13,7 @@ redirect_from:
   - /docs/order-matrix-reference-information
 ---
 
-The *Overview of Order Matrix* page displays the information about ordered items.
+The **Overview of Order Matrix** page displays the information about ordered items.
 
 ## Prerequisites
 
@@ -28,4 +28,4 @@ On the **Overview of Order Matrix** page, you see the following information:
 
 The numbers are hyperlinked. If selected, you will be redirected to the **Overview of Orders** page. The table will display only the order(s) that contains the items with the selected status.
 
-For example, you have five items with the *exported* status. On the *Overview of Order Matrix* page, if you click **5**, the *Overview of Orders* page is displayed, filtered by orders with the exported items only.
+For example, you have five items with the **exported** status. On the **Overview of Order Matrix** page, if you click **5**, the **Overview of Orders** page is displayed, filtered by orders with the exported items only.

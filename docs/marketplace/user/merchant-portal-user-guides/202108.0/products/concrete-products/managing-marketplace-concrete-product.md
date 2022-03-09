@@ -49,7 +49,7 @@ To edit an existing marketplace concrete product:
 3. In the **Name** pane, edit **Name** for every locale.
 4. In the **Description** pane, edit **Description** for every locale.
 5. In the **Validity Dates & Time** pane, populate the **Valid from** and **Valid to** fields.
-6. In the **Searchability** pane, from the drop-down menu select the locales where the product is searchable.
+6. In the **Searchability** pane, from the drop-down menu, select the locales where the product is searchable.
 7. Click **Save**.
 
 ### Reference information: Concrete Product SKU, Name page

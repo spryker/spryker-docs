@@ -5,11 +5,11 @@ last_updated: Aug 2, 2021
 template: back-office-user-guide-template
 ---
 
-This document describes how to assign customers to users, so that users can [preview CMS pages](docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/managing-cms-pages.html#previewing-cms-pages) as the customers that are assigned to them. This is especially relevent for B2B scenarios. For example, users can see company specific prices and product lists.
+This document describes how to assign customers to users, so that users can [preview CMS pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/managing-cms-pages.html#previewing-cms-pages) as the customers that are assigned to them. This is especially relevent for B2B scenarios. For example, users can see company specific prices and product lists.
 
 {% info_block warningBox "Assigning a customer to multiple users" %}
 
-You can assign each customer to only one user. 
+You can assign each customer to only one user.
 
 {% endinfo_block %}
 

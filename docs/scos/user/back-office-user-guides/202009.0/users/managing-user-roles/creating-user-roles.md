@@ -35,9 +35,6 @@ Review the [reference information](#reference-information-creating-user-roles) b
       The page refreshes with the success message displayed and the rule displayed in the **Assigned Rules** section.
 8. Repeat steps 3-7 until you add all the needed rules.       
 
-See [Adding rules for roles](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-roles.html#adding-rules-for-roles) for information on how to create rules.
-
-
 
 ### Reference information: Creating user roles
 

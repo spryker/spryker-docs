@@ -23,11 +23,11 @@ To add a new price for a marketplace abstract product:
 3. In the **Price** pane, click **+Add**. The empty cells appear in the following table.
 4. From the drop-down menu **Store**, select the store for which the price is created.
 5. From the drop-down menu **Currency**, select the currency in which the price is defined.
-6. For **NET DEFAULT** cell, enter a price. Use `.` or `,` separators.
-7. For **GROSS DEFAULT** cell, enter a price. Use `.` or `,` separators.
-8. Optional: For **NET ORIGINAL** cell, enter a price. Use `.` or `,` separators.
-9. Optional: For **GROSS ORIGINAL** cell, enter a price. Use `.` or `,` separators.
-10. For **QUANTITY** cell, enter the number of items. By default, the quantity is 1. See [Adding volume prices](#adding-volume-prices) for an example.
+6. For the **NET DEFAULT** cell, enter a price. Use `.` or `,` separators.
+7. For the **GROSS DEFAULT** cell, enter a price. Use `.` or `,` separators.
+8. Optional: For the **NET ORIGINAL** cell, enter a price. Use `.` or `,` separators.
+9. Optional: For the **GROSS ORIGINAL** cell, enter a price. Use `.` or `,` separators.
+10. For the **QUANTITY** cell, enter the number of items. By default, the quantity is 1. See [Adding volume prices](#adding-volume-prices) for an example.
 
 **Tips and tricks**
 <br>Click **Cancel** to stop creating a new price.

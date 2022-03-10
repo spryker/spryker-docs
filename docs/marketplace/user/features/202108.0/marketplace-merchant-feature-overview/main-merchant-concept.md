@@ -24,7 +24,7 @@ To manage merchant orders of the main merchant, the *main merchant state machine
 - Delivered
 - Closed
 
-The workflow of the Main merchant state machine is schematically displayed in the diagram below:
+The workflow of the main merchant state machine is schematically displayed in the diagram below:
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Merchant/Main+merchant+concept/main-merchant-state-machine-new.png)
 

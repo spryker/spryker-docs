@@ -54,7 +54,7 @@ You can group merchants by categories to make your working process more efficien
 
 ### Merchant profile
 
-On the Storefront, customers can check the relevant merchant information on the *Merchant Profile* page.
+On the Storefront, customers can check the relevant merchant information on the **Merchant Profile** page.
 
 {% info_block infoBox "Note" %}
 
@@ -72,7 +72,7 @@ The information for the merchant profile can be defined:
 
 
 ### Merchant opening hours
-To make the selling activity efficient, merchants can provide their working schedule that will display to buyers on the Storefront. See [Merchant Opening Hours feature overview](/docs/marketplace/user/features/{{page.version}}/merchant-opening-hours-feature-overview.html) for details.
+To make the selling activity efficient, merchants can provide their working schedule that will display to buyers on the Storefront. For details, see [Merchant Opening Hours feature overview](/docs/marketplace/user/features/{{page.version}}/merchant-opening-hours-feature-overview.html).
 
 ### Merchant links on the Storefront pages
 
@@ -99,7 +99,7 @@ Marketplace Storefront lets buyers check what merchants are the owners of the of
 In the Spryker Marketplace, you can search for the products sold by a specific merchant by entering the merchant name in the search field. The search results contain the merchant products and/or the abstract products the merchant product offers are related to. The search suggestions and the auto-completion functionality provide the merchant products and offers by the merchant name.
 ![Search by merchant name](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Merchants/Merchants+feature+overview/search-by-merchant-name.gif)
 
-In the catalog and search results pages, there is the merchant multi-select filter. This filter allows shoppers to see only the products with the product offers belonging to the selected merchant. See [Standard Filters](/docs/scos/user/features/{{page.version}}/search-feature-overview/standard-filters-overview.html) documentation for more details on the filters available in the Spryker Commerce OS.
+In the catalog and search results pages, there is the merchant multi-select filter. This filter allows shoppers to see only the products with the product offers belonging to the selected merchant. For more details about filters available in the Spryker Commerce OS, see [Standard filters overview](/docs/scos/user/features/{{page.version}}/search-feature-overview/standard-filters-overview.html).
 
 ![Merchant search filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Merchants/Merchants+feature+overview/merchant-filter.gif)
 

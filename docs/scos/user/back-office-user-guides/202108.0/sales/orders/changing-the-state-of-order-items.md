@@ -58,7 +58,17 @@ Each section contains reference information. Make sure to review it before you s
 
 ### Reference information: Changing the state of order items
 
+| ATTRIBUTE | DESCRIPTION |
+| --- | --- |
+| Order reference | Reference number of the order.|
+| Order date | Date when the order was placed. |
+| Unique Product Quantity | Number of unique products in the order. |
+
+
+
 You can set different statuses for your order. The following table describes the statuses you can select:
+
+
 
 | ORDER STATUS | DESCRIPTION |
 | --- | --- |
@@ -73,8 +83,8 @@ You can set different statuses for your order. The following table describes the
 | Refund | Select this state in case of a refund.|
 
 States flow:
-* **Payment pending**—the initial order statuses.
-* **Canceled**—state  of the order after it is canceled by the customer on the Storefront or by the Back Office user.
+* **Payment pending**: the initial order status.
+* **Canceled**: state  of the order after it is canceled by the customer on the Storefront or by the Back Office user.
 * When you select **Pay**, the state becomes **Confirmed**.
 * When you select **Skip Timeout**, the state becomes **Exported**.
 * When you select **Cancel**, the state becomes **Cancelled**.
@@ -89,56 +99,6 @@ States flow:
 
 The order statuses you set here do not always have the same wording on the Storefront. For details on how you can display custom names for statuses on the Storefront, see [HowTo - Display custom names for order item states on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
 
-
-
-
-
-## Viewing the returns for orders
-
-If returns have been created for an order, they are displayed on the *View Order: [Order ID]* page in the *Returns* section.
-
-{% info_block infoBox "Info" %}
-
-Returns of the registered and guest users have different return references. See [Returns Section](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html#returns-section) for details on the return references.
-
-{% endinfo_block %}
-
-To view details on a return, click **View** in the Actions column of the *Returns* table. This takes you to the *Overview of Return: [Return ID]* page. See [Managing Returns](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/managing-returns.html) for information on how you can manage the returns on this page.
-
-### Reference information: Viewing the returns for orders
-
-This section describes the attributes you see when viewing the returns for orders.
-
-#### Order Overview section
-
-| ATTRIBUTE | DESCRIPTION |
-| --- | --- |
-| Order reference | Reference number of the order.|
-| Order date | Date when the order was placed. |
-| Unique Product Quantity | Number of unique products in the order. |
-
-#### Returns section
-<a name="returns-section"></a>
-
-| ATTRIBUTE | DESCRIPTION |
-| --- | --- |
-| Return reference | Reference number of the return.  <br>The return reference of the **registered users** contains the store, customer ID, and the number of returns made by this customer. For example, DE-35-2 means that the return was made in the DE store by a user with ID 35, and this is the 2nd return of that user.<br>The return reference of the **guest users** contains the store, G identifier of the guest return, and the number of the return in this store. For example, DE-G3 means that this is the 3rd guest return in the DE store. <section contenteditable="false" class="errorBox"><div class="content">You can filter out the guest returns on the list of returns by typing *G* in the search field.</div></section> |
-| Items | Number of items in the return. |
-| Remuneration total | Total remuneration. |
-| Actions | Actions you can perform on the return. |
-
-## Editing custom order references
-
-To edit a custom order reference:
-
-1. In *List of orders*, click **View** next to the order you want to update the custom order reference of.
-2. In the *Custom Order Reference* section of the *View Order: [Order ID]* page, click **Edit Reference**.
-![edit-custom-order-reference](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Sales/Managing+Orders/edit-custom-order-reference.png)
-3. Update the custom order reference.
-4. Click **Save**.
-
-**Tips & tricks**
-<br>To remove the custom order reference, clear the *Custom Order Reference* field and click **Save**.
 
 ## Claiming orders
 

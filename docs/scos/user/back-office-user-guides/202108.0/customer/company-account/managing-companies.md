@@ -18,7 +18,7 @@ This topic describes how to manage company records.
 
 To start managing a company record, go to **Customers** > **Companies**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating companies
 

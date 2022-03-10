@@ -13,7 +13,7 @@ After a [marketplace return](/docs/marketplace/user/features/{{page.version}}/ma
 
 To start managing the marketplace returns, navigate to **Sales*&nbsp;<span aria-label="and then">></span> Returns**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Setting the marketplace return states
 

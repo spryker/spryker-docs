@@ -15,7 +15,7 @@ To start managing merchant users:
 1. Navigate to the **Marketplace&nbsp;<span aria-label="and then">></span> Merchants**.
 2. Next to the merchant you want to create a merchant user for, click **Edit** in the **Actions** column. You are taken to the **Edit Merchant: [Merchant ID]** page.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Creating a merchant user
 
@@ -35,7 +35,7 @@ To create a merchant user, do the following:
 
 4. Click **Create**.
 
-By default, each merchant user obtains the role of Merchant Portal Administrator. To change it, [edit the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html#editing-users) user record.
+By default, each merchant user obtains the role of Merchant Portal Administrator. To change it, [edit the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/editing-users.html) user record.
 
 ### Reference information: Creating a merchant user
 

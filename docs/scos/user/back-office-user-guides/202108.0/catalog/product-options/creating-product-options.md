@@ -25,7 +25,7 @@ You should have an appropriate Tax Set created in the *Taxes* section in order t
 
 Let's say you want to add additional options to your product, like a warranty or a gift box. Those are exactly the things that are created in the *Product Options* section. Such options will have their own prices, and the user will be able to select the most suitable one.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Creating a product option
 

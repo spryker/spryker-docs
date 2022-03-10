@@ -10,7 +10,7 @@ This document describes the actions a merchant can do in the **Offers** section 
 
 To start managing product offers, navigate to the **Merchant Portal&nbsp;<span aria-label="and then">></span> Offers**.
 
-Review the reference information in this article before you start, or just look up the necessary information as you go through the process.
+Review the reference information in this article before you start, or look up the necessary information as you go through the process.
 
 ## Creating a product offer
 

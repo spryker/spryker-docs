@@ -13,7 +13,7 @@ On the **Merchants** page, you can manage the merchants' records and facilitate 
 
 To start managing merchants, navigate **Marketplace&nbsp;<span aria-label="and then">></span> Merchants**.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Creating merchants
 

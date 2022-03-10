@@ -11,7 +11,7 @@ This document describes how to manage attributes of the marketplace concrete pro
 
 To start working with marketplace concrete products, go to the **Merchant Portal&nbsp;<span aria-label="and then">></span> Products**.  Hover over the three dots next to the abstract product for which you manage a concrete product and click **Manage Product** or just click the line. The **[Product name]** drawer opens. Navigate to the **Concrete Products** tab.
 
-This article contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+This article contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Adding marketplace concrete product attributes
 

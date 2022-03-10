@@ -11,7 +11,7 @@ This document describes how to create marketplace abstract products.
 
 To start working with marketplace abstract products, go to **Merchant Portal&nbsp;<span aria-label="and then">></span> Products**.
 
-This article contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+This article contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Creating a marketplace abstract product
 

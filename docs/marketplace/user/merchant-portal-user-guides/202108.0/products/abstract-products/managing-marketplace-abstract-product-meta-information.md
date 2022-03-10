@@ -11,7 +11,7 @@ This document describes how to manage marketplace abstract product meta informat
 
 To start working with marketplace abstract products, go to **Merchant Portall&nbsp;<span aria-label="and then">></span> Products**.
 
-This article contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+This article contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Adding abstract product meta information
 

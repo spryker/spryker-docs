@@ -15,7 +15,7 @@ This document describes what information you can check in the dashboard of the M
 
 To start working with the dashboard, navigate to **Merchant Portal&nbsp;<span aria-label="and then">></span> Dashboard**.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 
 ## Managing offers in Dashboard

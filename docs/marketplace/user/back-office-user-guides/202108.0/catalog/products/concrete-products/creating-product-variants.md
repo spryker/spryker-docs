@@ -11,7 +11,7 @@ This document describes how to add a product variant for an abstract product.
 
 To create a product variant, navigate to **Catalog&nbsp;<span aria-label="and then">></span> Products** section.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating a product variant
 

@@ -12,7 +12,7 @@ To start working with product options, go to **Catalog&nbsp;<span aria-label="an
 
 There should be an existing tax set to apply it to the [product option group](/docs/marketplace/user/features/{{page.version}}/marketplace-product-options-feature-overview.html). See [Managing tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/managing-tax-sets.html) for detailed instructions on creating tax sets.
 
-Each section in this article contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section in this article contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Creating a product option
 

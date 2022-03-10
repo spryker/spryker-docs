@@ -21,7 +21,7 @@ This topic describes how to manage customer addresses and view orders.
 
 To start working with customer details, go to **Customers** > **Customers**.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Adding customer addresses
 

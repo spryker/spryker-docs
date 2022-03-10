@@ -15,7 +15,7 @@ To start working with marketplace concrete products, take the following steps:
    The ***[Product name]*** drawer opens.
 3. Navigate to the **Concrete Products** tab.
 
-This article contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+This article contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ##  Adding images for marketplace concrete products
 

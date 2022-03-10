@@ -12,7 +12,7 @@ This document describes how to manage product options.
 To start working with product options, go to **Catalog&nbsp;<span aria-label="and then">></span> Product Options**.
 
 
-Each section in this article contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section in this article contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 
 ## Filtering product options by merchants

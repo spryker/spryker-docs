@@ -19,7 +19,7 @@ Each section contains reference information. Make sure to review it before you s
 
 ## Viewing returns for the main merchant
 
-To view details on a return, in the **Actions** column of the return, click **View**.
+To view details about a return, in the **Actions** column of the return, click **View**.
 
 This takes you to the **Overview of Return: [Return reference]** page where you can view the return details, set the return statuses, and [print the return slip](#printing-a-main-merchant-return-slip).
 

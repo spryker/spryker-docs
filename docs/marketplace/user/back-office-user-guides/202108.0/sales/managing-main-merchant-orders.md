@@ -137,7 +137,7 @@ The following table describes the attributes on the **View Order [Order ID]** pa
   <tr>
     <td>Merchant order items</td>
     <td></td>
-    <td>Section with details on every merchant order item with its products and shipment information.</td>
+    <td>Section with details about every merchant order item with its products and shipment information.</td>
   </tr>
   <tr>
     <td></td>

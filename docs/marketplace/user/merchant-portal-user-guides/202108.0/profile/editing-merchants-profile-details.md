@@ -20,7 +20,7 @@ Each section contains reference information. Make sure to review it before you s
 
 {% info_block infoBox "Info" %}
 
-The merchant's **Business Info** includes the details on contact person and general merchant company information.
+The merchant's **Business Info** includes the details about contact person and general merchant company information.
 
 {% endinfo_block %}
 

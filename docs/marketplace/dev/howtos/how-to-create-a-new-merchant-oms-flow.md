@@ -4,7 +4,7 @@ description: This articles provides details how to create new MerchantOms flow
 template: howto-guide-template
 ---
 
-This article provides the details on how to create a new MerchantOms flow.
+This article provides the details about how to create a new MerchantOms flow.
 
 To create a new MerchantOms flow, follow the steps:
 
@@ -18,14 +18,14 @@ To create a new MerchantOms flow, follow the steps:
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd">
 	<!-- Used as example XML for OMS implementation -->
- 
+
 	<process name="MarketplacePayment01" main="true">
 		<states>
 		</states>
- 
+
 		<transitions>
 		</transitions>
- 
+
 		<events>
 		</events>
 	</process>
@@ -89,7 +89,7 @@ Open the configuration file `config/Shared/config_default.php`(`config_default-d
 ```php
 $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
     DummyPaymentConfig::PAYMENT_METHOD_INVOICE => 'MarketplacePayment01',
-];	
+];
 ```
 
 7. To assign the `MerchantOms` flow to a `Merchant`, you can use the `MerchantOmsDataImport` module.
@@ -99,7 +99,7 @@ Fill in the `merchant_oms_process.csv` as shown in the example below:
 merchant_reference,merchant_oms_process_name
 MER000001,MainMerchantStateMachine
 ```
-and run the following command: 
+and run the following command:
 
 ```bash
 data:import merchant-oms-process

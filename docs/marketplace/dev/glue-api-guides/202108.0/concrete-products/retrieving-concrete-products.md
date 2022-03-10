@@ -986,7 +986,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 </details>
 
 <details>
-<summary markdown='span'>Response sample with details on the abstract product and the merchant who sells the concrete product</summary>
+<summary markdown='span'>Response sample with details about the abstract product and the merchant who sells the concrete product</summary>
 
 ```json
 {

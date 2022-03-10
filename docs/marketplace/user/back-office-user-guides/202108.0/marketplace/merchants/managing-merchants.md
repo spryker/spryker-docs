@@ -41,7 +41,7 @@ This tab contains the main merchant information.
 | Is Active | Checkbox that gets the merchant profile page on the Storefront online once checked. |  |
 | Store Relation | List of stores where the merchant is present. |  |
 | Merchant URL | Text field where, during editing, you can update the URL that is used to access the merchant profile. The profile URL is specified per locale. | &check; |
-| Warehouses | Name of the Warehouse assigned to the merchant. For more details on the warehouses, see [Merchant Warehouse](/docs/marketplace/user/features/{{page.version}}/marketplace-inventory-management-feature-overview.html#marketplace-warehouse-management). |  |
+| Warehouses | Name of the Warehouse assigned to the merchant. For more details about the warehouses, see [Merchant Warehouse](/docs/marketplace/user/features/{{page.version}}/marketplace-inventory-management-feature-overview.html#marketplace-warehouse-management). |  |
 
 #### Contact Person Details tab
 
@@ -115,8 +115,8 @@ The following table describes the attributes you enter and select when editing m
 On the **Overview of Merchants** page, you see a table with all the merchants. The following information is included in the table:
 * Merchant ID
 * Merchant Name
-* Approval status. For more details on the statuses a merchant profile may have, check the [merchant statuses](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) section.
-* Status (active/inactive). For more details on the statuses a merchant profile may have, check the [merchant statuses](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) section.
+* Approval status. For more details about the statuses a merchant profile may have, check the [merchant statuses](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) section.
+* Status (active/inactive). For more details about the statuses a merchant profile may have, check the [merchant statuses](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) section.
 * Stores
 * Actions
 
@@ -141,7 +141,7 @@ This tab contains the main merchant information.
 | Is Active | Checkbox that gets the merchant profile page on the Storefront online once checked. |  |
 | Store Relation | List of stores where the merchant is present. |  |
 | Merchant URL | Text field where, during editing, you can update the URL that is used to access the merchant profile. The profile URL is specified per locale. | &check; |
-| Warehouses | Name of the Warehouse assigned to the merchant. For more details on the warehouses, see [Merchant Warehouse](/docs/marketplace/user/features/{{page.version}}/marketplace-inventory-management-feature-overview.html#marketplace-warehouse-management). |  |
+| Warehouses | Name of the Warehouse assigned to the merchant. For more details about the warehouses, see [Merchant Warehouse](/docs/marketplace/user/features/{{page.version}}/marketplace-inventory-management-feature-overview.html#marketplace-warehouse-management). |  |
 
 #### Contact Person Details tab
 

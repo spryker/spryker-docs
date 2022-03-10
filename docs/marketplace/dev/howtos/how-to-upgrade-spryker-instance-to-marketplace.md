@@ -4,7 +4,7 @@ description: This article provides details how to upgrade Spryker instance to th
 template: howto-guide-template
 ---
 
-This article provides details on how to upgrade the existing instance of Spryker Shop to the Marketplace.
+This article provides details about how to upgrade the existing instance of Spryker Shop to the Marketplace.
 
 ## 1) Add core features
 

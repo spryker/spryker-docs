@@ -19,7 +19,7 @@ Specify reasons for returning the sales order items.
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, [see Glue API: Marketplace Return Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-return-management-feature-integration.html).
+For details about the modules that provide the API functionality and how to install them, [see Glue API: Marketplace Return Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-return-management-feature-integration.html).
 
 ## Create a return
 
@@ -689,7 +689,7 @@ To retrieve a return, send the Request sample:
 
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve a return with the details on merchants</summary>
+<details><summary markdown='span'>Response sample: retrieve a return with the details about merchants</summary>
 
 ```json
 {

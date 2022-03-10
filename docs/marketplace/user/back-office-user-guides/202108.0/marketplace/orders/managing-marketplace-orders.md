@@ -72,7 +72,7 @@ All columns with headers having arrows in **List of orders** are sortable.
 |   | Email | Customer’s email address. |
 |   | Previous orders count | Number of orders the customer has submitted. |
 |   | Billing address | Address that is used for billing purposes. |
-| Merchant orders |   | Section with details on every merchant order with its products and Shipment information. |
+| Merchant orders |   | Section with details about every merchant order with its products and Shipment information. |
 |   | Fulfilled by Merchant | Contains the name of the Merchant this order belongs to. |
 |   | Order Reference | Merchant order reference. |
 |   | Delivery Address | Address used for delivery. |
@@ -98,7 +98,7 @@ To change the state of several items in the order:
 
 1. In the **List of orders** table, in the **Actions** column, click **View** next to the order you want to change the state of.
 You are taken to the **View Order: [order ID]** page.
-2. In the **Trigger all matching states inside this order** section, click **the next available state**. See [Marketplace and Merchant state machines feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html) for details on the available states.
+2. In the **Trigger all matching states inside this order** section, click **the next available state**. For details about the available states, see [Marketplace and Merchant state machines feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html).
 The page refreshes to show the message about the successful state change. The order will obtain the updated state. In the **Trigger all matching states inside this order** section, you can see the **Cancel** button.
 3. Repeat step 2 until you get the desired order state.
 
@@ -108,7 +108,7 @@ To change the state of the order items in a shipment:
 You are taken to the **View Order: [order ID]** page.
 2. Scroll down to the desired shipment.
 3. Select the checkbox next to the products you want to change the state of.
-4. In the **Trigger all matching states of order inside this shipment** section, click **the next available state**.  See [Marketplace and Merchant state machines feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html) for details on the available states.
+4. In the **Trigger all matching states of order inside this shipment** section, click **the next available state**.  For details about the available states, see [Marketplace and Merchant state machines feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html).
 The page refreshes to show the message about the successful state change. In the **Trigger all matching states of order inside this shipment** section of the modified shipment, you can see the updated state.
 5. Repeat step 4 until you get the desired shipment state.
 
@@ -117,7 +117,7 @@ To change the state of an item in the merchant order:
 1. In **List of orders**, click **View** next to the order possessing the items you want to change the state of.
 You are taken to the **View Order: [order ID]** page.
 2. Scroll down to the desired item.
-3. In the **Trigger event** column next to the desired product, click **the next available state**. For details on the available states, see [Marketplace and Merchant state machines feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html).
+3. In the **Trigger event** column next to the desired product, click **the next available state**. For details about the available states, see [Marketplace and Merchant state machines feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html).
 The page refreshes to show the message about the successful state change. In the **Trigger event** column next to the product, you can see the **Cancel** button.
 
 ### Reference information: Changing marketplace order states
@@ -218,7 +218,7 @@ Once a return has been created, it acquires the *Waiting for return* state. You 
 
 If returns have been created for a marketplace order, they are displayed on the **View Order: [Order ID]** page, in the **Returns** section.
 
-To view details on a return, navigate to the **Returns** page, and in the **Actions** column of the **List of Returns** table, click **View**.
+To view details about a return, navigate to the **Returns** page, and in the **Actions** column of the **List of Returns** table, click **View**.
 This takes you to the **Overview of Return: [Return ID]** page.
 For information about how you can manage the returns on this page, see Managing marketplace returns<!-- when https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2464809228/Back+Office+Managing+marketplace+returns+MP-4080 published, add-a-link-->.
 

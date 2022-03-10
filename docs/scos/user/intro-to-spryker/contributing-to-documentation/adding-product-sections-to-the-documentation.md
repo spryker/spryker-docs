@@ -65,7 +65,7 @@ versioned_categories:
       - glue-api-guides
  ```
 
-4. In the `sidebars:` section, add the names of the sidebars you've created in [1. Create sidebars for the new product](#create-sidebars-for-the-new-product). For example:
+4. In the `sidebars:` section, add the names of the sidebars you've created in [1. Create sidebars for the new product](#create-sidebars-for-the-product). For example:
 
 ```yaml
 sidebars:

@@ -58,7 +58,7 @@ You can use the Preview mode from either the **Overview of CMS Pages** page or t
 1. On the **Overview of CMS Pages** page, click **View** and select **Preview** from the drop-down list next to the page whose draft you want to view.
 2. The page in the Preview mode will be opened in a new tab of your browser.
 
-**To preview a draft of your CMS page from the Edit Placeholders editor**, see the [Editing Placeholders](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/editing-cms-pages.html#selecting-the-placeholders-option) section.
+**To preview a draft of your CMS page from the Edit Placeholders editor**, see the [Editing Placeholders](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/editing-cms-pages.html#selecting-the-edit-gt-placeholders-option) section.
 
 ***
 
@@ -72,7 +72,7 @@ You can publish your page either from the **Overview of CMS Pages** page or from
 1. On the **Overview of CMS Pages** page, click **Publish** in the _Actions_ column.
 2. The page will be successfully published.
 
-**To publish a page from the Edit Placeholders editor**, see the [Editing Placeholders](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/editing-cms-pages.html#selecting-the-placeholders-option) section.
+**To publish a page from the Edit Placeholders editor**, see the [Editing Placeholders](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/editing-cms-pages.html#selecting-the-edit-gt-placeholders-option) section.
 
 ***
 
@@ -101,10 +101,9 @@ See [CMS Page: Reference Information](/docs/scos/user/back-office-user-guides/{{
 ***
 
 **Tips & Tricks**
-<br>On the **View CMS Page: [Page name]** page, you can do the following:
 
+On the **View CMS Page: [Page name]** page, you can do the following:
 * Navigate to the page where you can view all available versions for the page, general information of the version you are currently using, and roll back to the previous page version if needed, as well as compare version. To do this, click **Version History** on the top of the page.
-
 * Make changes to page layout or its SEO information by clicking **Edit page** on the top of the page.
 * Add some content to a page by clicking **Edit placeholders**.
 * Remove a published page (make it invisible) from the store website by clicking **Deactivate**.
@@ -124,4 +123,5 @@ To deactivate a page, click **Deactivate** in the _Actions_ column on the _Overv
 ***
 
 **What's next?**
+
 To know more about the attributes you see, select and enter while managing CMS pages, see [CMS Pages: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/references/cms-pages-reference-information.html).

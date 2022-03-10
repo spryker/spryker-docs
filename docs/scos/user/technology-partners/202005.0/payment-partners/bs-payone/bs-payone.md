@@ -51,14 +51,14 @@ We integrate with a wide range of payment methods that can be configured accordi
 
 Payone provides the following methods of payment:
 
-* [Credit Card](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-credit-card-payment.html)
-* [Direct Debit](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-direct-debit-payment.html)
-* [Online Transfer](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-online-transfer-payment.html)
-* [Paypal](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-paypal-payment.html)
-* [Prepayment](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-prepayment.html)
-* [Invoice](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-invoice-payment.html)
-* [Security Invoice](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-security-invoice-payment.html)
-* [Paypal Express Checkout](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-paypal-payment.html-express-checkout)
+* [Credit Card](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-credit-card-payment.html)
+* [Direct Debit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-direct-debit-payment.html)
+* [Online Transfer](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-online-transfer-payment.html)
+* [Paypal](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-paypal-payment.html)
+* [Prepayment](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-prepayment.html)
+* [Invoice](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-invoice-payment.html)
+* [Security Invoice](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-security-invoice-payment.html)
+* [Paypal Express Checkout](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-paypal-payment.html-express-checkout)
 
 We use state machines for handling and managing orders and payments. To integrate Payone payments, a state machine for Payone should be created.
 
@@ -217,7 +217,7 @@ Optionally configure security firewall for `/payone` route to accept `Transactio
 Excerpt from PAYONE Platform Channel Server API document:
 
     <br>
-According to the configuration of your payment portal you will receive the data and the status for each payment processed via the URL you have submitted. The data transfer is based on simple HTTP-POST request (key/value pairs). The `TransactionStatus` is sent from the following IP addresses: 185.60.20.0/24 (i.e. 185.60.20.1 to 185.60.20.254). Please configure your firewall to allow incoming packets from these IP addresses.
+According to the configuration of your payment portal you will receive the data and the status for each payment processed via the URL you have submitted. The data transfer is based on simple HTTP-POST request (key/value pairs). The `TransactionStatus` is sent from the following IP addresses: 185.60.20.0/24 (for example, 185.60.20.1 to 185.60.20.254). Please configure your firewall to allow incoming packets from these IP addresses.
 
 To provide payment details for rendering on frontend, add Payone client to the Checkout and to the Customer module:
 

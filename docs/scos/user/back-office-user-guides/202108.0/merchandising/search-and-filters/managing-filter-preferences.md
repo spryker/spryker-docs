@@ -34,8 +34,9 @@ To create a filter preference:
 3. Click **Save**.
 
 **Tips & tricks**
-<br>The filter is created by it will not be available for use unless you synchronize the filter preferences.
+- The filter is created by it will not be available for use unless you synchronize the filter preferences.
 To do the synchronization, in the top right corner of the *Filter Preferences* page, click **Synchronize filter preference**
+- There is no way to specify specific categories when creating filters. If, however, products within a category do not contain values for the attribute to which the filter is assigned, the filter does not appear on the Storefront. For example, if you created a category filter, it is assigned to all of the default categories.  However, it only appears for those products on the Storefront that have attributes that this category filter has.
 
 ## Editing filter preferences
 

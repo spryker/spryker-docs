@@ -1,5 +1,5 @@
 ---
-title: Alternative Products- Discontinued Products feature integration
+title: Alternative Products + Discontinued Products feature integration
 description: This guide describes all the steps needed to be performed in order to integrate the Alternative Products + Discontinued Products features into your project.
 last_updated: Nov 22, 2019
 template: feature-integration-guide-template

@@ -29,7 +29,7 @@ Spelling suggestions provide the users with alternative search terms when the se
 
 Translation: *Unfortunately there were 0 results for your exact search term “**hammer holk**”. Did you possibly mean **hammer holz**?*
 
-This is one of the simplest features you can build with Elasticsearch and also one that your users expect to see. Elasticsearch has a highly configurable [term suggester](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-suggesters-term.html), which enables suggestions based on the edit distance between indexed terms and search terms. We recommend putting all attributes that are suitable for spelling suggestions (i.e. short strings such as product and category names where you are sure that they are spelled correctly) into a single document field:
+This is one of the simplest features you can build with Elasticsearch and also one that your users expect to see. Elasticsearch has a highly configurable [term suggester](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-suggesters-term.html), which enables suggestions based on the edit distance between indexed terms and search terms. We recommend putting all attributes that are suitable for spelling suggestions (for example, short strings such as product and category names where you are sure that they are spelled correctly) into a single document field:
 
 ```php
 "suggestion_terms": [

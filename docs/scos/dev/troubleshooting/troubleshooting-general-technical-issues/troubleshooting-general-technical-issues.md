@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/troubleshooting-general-technical-issues
   - /v6/docs/troubleshooting-general-technical-issues
   - /v6/docs/en/troubleshooting-general-technical-issues
+  - /docs/general-troubleshooting
 ---
 
 This section helps you troubleshoot general technical issues you might encounter when running your Spryker-based project.

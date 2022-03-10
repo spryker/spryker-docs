@@ -1,5 +1,5 @@
 ---
-title: Checkout
+title: Checkout feature overview
 description: The checkout workflow is a multi-step process that can be fullly customized to fit your needs.
 last_updated: May 19, 2020
 template: concept-topic-template
@@ -27,6 +27,6 @@ You can easily design the process to accommodate different checkout types and to
 
 **Features:**
 <div>
-<a class="feature-link" href="/docs/scos/user/features/202108.0/checkout-feature-overview/multi-step-checkout-overview.html">Multi-Step Checkout</a>  
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html">Multi-Step Checkout</a>  
 <a class="feature-link" href="/docs/scos/user/features/{{page.version}}/checkout-feature-overview/define-payment-and-shipment-methods.html">Define Payment & Shipment Methods</a>
 </div>

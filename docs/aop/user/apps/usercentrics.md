@@ -91,9 +91,9 @@ The direct integration is the most basic and, at the same time, the most cumbers
 {% endinfo_block %}
 
 The direct integration presupposes that you inject the Usercentrics JavaScrip tag into your site with the setting ID.
-	
+
 Example script tag for the direct integration:
-	
+
 ```
 <script id="usercentrics-cmp" data-settings-id="apXtrZ9ec" src="https://app.usercentrics.eu/browser-ui/latest/bundle.js" defer></script>
 ```
@@ -101,7 +101,7 @@ Example script tag for the direct integration:
 where `apXtrZ9ec` is the setting ID that identifies configuration of the data processing services for your store in the Usercentrics Admin Interface.
 
 For the direct integration, you have to programmatically deactivate the JavaScript code of all the tracking tools on the shop pages and give tools the names that match those in the Usercentrics Admin Interface.
-   
+
 For more details about the Usercetrics direct integration, see the [Usercentrics documentation](https://docs.usercentrics.com/#/direct-implementation-guide).
 
 #### Smart Data Protector

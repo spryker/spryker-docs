@@ -5,7 +5,7 @@ last_updated: Nov 05, 2021
 template: feature-walkthrough-template
 ---
 
-The *Marketplace Merchant* feature allows you to create, read, and update merchants in the Marketplace.
+The *Marketplace Merchant* feature lets you create, read, and update merchants in the Marketplace.
 
 {% info_block warningBox "User documentation" %}
 
@@ -23,7 +23,7 @@ The following diagram illustrates the dependencies between the modules for the M
 
 | MODULE | DESCRIPTION |
 | --- | --- |
-| [MerchantProfile](https://github.com/spryker/merchant-profile) | Provides data structure, facade methods and plugins for extending merchant by merchant profile data. |
+| [MerchantProfile](https://github.com/spryker/merchant-profile) | Provides data structure, facade methods, and plugins for extending merchant by merchant profile data. |
 | [MerchantProfileDataImport](https://github.com/spryker/merchant-profile-data-import) | Importer for `MerchantProfile` data. |
 | [MerchantProfileGui](https://github.com/spryker/merchant-profile-gui) | Provides Zed UI interface for merchant profile management. |
 | [MerchantSearch](https://github.com/spryker/merchant-search) | Manages Elasticsearch documents for merchant entities. |
@@ -31,13 +31,13 @@ The following diagram illustrates the dependencies between the modules for the M
 | [MerchantStorage](https://github.com/spryker/merchant-storage) | Manages storage for merchant entities. |
 | [MerchantUserGui](https://github.com/spryker/merchant-user-gui) | Provides Zed UI interface for merchant users management. |
 | [MerchantPage](https://github.com/spryker-shop/merchant-page) | Contains the merchant page for the shop and its components. |
-| [MerchantProfileWidget](https://github.com/spryker-shop/merchant-profile-widget) | Provides a merchant-profile molecule for for introducing merchant profile information. |
+| [MerchantProfileWidget](https://github.com/spryker-shop/merchant-profile-widget) | Provides a merchant-profile molecule for introducing merchant profile information. |
 | [MerchantWidget](https://github.com/spryker-shop/merchant-widget) | Provides widget to display merchant information. |
-| [MerchantProfileMerchantPortalGui](https://github.com/spryker/merchant-profile-merchant-portal-gui) | Provides Zed UI interface for merchant profile management for the Merchant portal. |
+| [MerchantProfileMerchantPortalGui](https://github.com/spryker/merchant-profile-merchant-portal-gui) | Provides Zed UI interface for merchant profile management for the Merchant Portal. |
 | [MerchantRestApi](https://github.com/spryker/merchants-rest-api) | Provides REST API endpoints to manage merchants. |
 | [MerchantRestApiExtension](https://github.com/spryker/merchants-rest-api-extension) | Provides plugin interfaces to extend the `MerchantsRestApi` module from the other modules. |
 | [Merchant](https://github.com/spryker/merchant) | Provides DB structure and facade methods to save, update, or remove merchants. |
-| [MerchantUser](https://github.com/spryker/merchant-user) | Provides data structure, facade methods and plugins for user relation to merchant. |
+| [MerchantUser](https://github.com/spryker/merchant-user) | Provides data structure, facade methods, and plugins for user relation to merchant. |
 
 
 ## Domain model

@@ -88,6 +88,7 @@ Request sample : `GET http://glue.mysprykershop.com/concrete-products/001_259040
 
 | CODE | REASON |
 | --- | --- |
+| 302 | Concrete product is not found. |
 | 304 | Can't find concrete product image sets. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

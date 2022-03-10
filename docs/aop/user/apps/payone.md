@@ -20,12 +20,11 @@ You can have multiple accounts with Payone. For example, you can have different 
 
 For the *Payone Credit Card* payment method, we support the following modes:
 
-- *Preauthorization and Capture*: After a customer entered the credit card details during the checkout, the merchant preauthorizes or reserves the payable amount on the customer’s credit card. As soon as the items have shipped, this amount is captured. Capture kicks off the process of moving money from the customer’s credit card to the merchant’s account. The preauthorization and capture mode is good for physical goods. It ensures that in case if the ordered items are no more available, or customer cancels the order, the merchant does not have to return the money and pay anything for the additional transaction.
-- *Authorization*: The payable amount is charged the credit card immediately, without blocking the funds. The authorization mode is good for digital products, as they become available immediately with no wait time for shipping.
+- *Preauthorization and Capture*: After a customer entered the credit card details during the checkout, the merchant preauthorizes or reserves the payable amount on the customer’s credit card. As soon as the items have shipped, this amount is captured. Capture kicks off the process of moving money from the customer’s credit card to the seller’s account. The preauthorization and capture mode is good for physical goods. It ensures that in case if the ordered items are no more available, or customer cancels the order, the seller does not have to return the money and pay anything for the additional transaction.
 - *3DS*: Messaging protocol that enables consumer authentication with their card issuer when making online purchases.
 - *PCI DSS Compliance via SAQ A*: A set of security standards designed to ensure that you accept, process, store or transmit credit card information in a secure environment.
 
-For the *Payone Paypal* payment method, we support just *Preauthorization and Capture*.
+For the *Payone Paypal* payment method, we support only *Preauthorization and Capture*.
 
 ## Payone integration and configuration
 
@@ -57,7 +56,8 @@ In case if the app was connected successfully, a corresponding message appears a
 
 ### Activating the payment methods
 
-You need to activate the added payment methods so they become available for your customers on the Storefront.
+After integrating Payone, you have to activate the added payment methods so they become available for your customers on the Storefront.
+
 To activate a payment method:
 
 1. Go to **Administration -> Payment methods**.
@@ -78,16 +78,37 @@ When customers pay with the credit card (with optional support of 3DS), the flow
    
 When paying with a credit card, customers can:
 
-1. Repeat payments as often as they want if the payment (authorization) has failed, or cancel and close the payment page.
-2. Cancel an entire order before shipment and receive the money back, that is, void the existing pre-authorization, without being charged a fee.
-3. Cancel an order after it is ready for shipment and receive the money back, that is, trigger a refund.
+- Repeat payments as often as they want if the payment (authorization) has failed, or cancel and close the payment page.
+- Cancel an entire order before shipment and receive the money back, that is, void the existing pre-authorization, without being charged a fee.
+- Cancel an order after it is ready for shipment and receive the money back, that is, trigger a refund.
+- Return an order or its items of it after it has been successfully shipped and is refunded for the returned items or the entire order.
 
 When customers pay with a credit card, a shop owner can:
 
-1. Charge customers once the order is ready to be shipped, that is, capture the funds.
-2. Cancel the entire customer order, that is, void the existing pre-authorization. In this case, the customer is not charged anything.
-3. Cancel one or more items of a customer's order before shipment. The customer is not charged for the canceled items 
- 
+- Charge customers once the order is ready to be shipped, that is, capture the funds.
+- Cancel the entire customer order, that is, void the existing pre-authorization. In this case, the customer is not charged anything.
+- Cancel one or more items of a customer's order before shipment. The customer is not charged for the canceled items.
+
+## PayPal payment flow
+
+When customers pay with PayPal, the flow is as follows:
+
+1. Customer is redirected to the PayPal website where they have to authorize.
+2. On the PayPal website, customer either cancels or validates the transaction.
+3. Customer is taken to the checkout page with the message of either successful or canceled order.
+
+When paying with PayPal, customers can:
+
+- Cancel an entire order before shipment and receive the money back, that is, void the existing pre-authorization, without being charged a fee.
+- Cancel an order after it is ready for shipment and receive the money back, that is, trigger a refund.
+- Return an order or its items of it after it has been successfully shipped and is refunded for the returned items or the entire order.
+
+When customers pay with PayPal, a shop owner can:
+
+- Charge customers once the order is ready to be shipped, that is, capture the funds.
+- Cancel the entire customer order, that is, void the existing pre-authorization. In this case, the customer is not charged anything.
+- Cancel one or more items of a customer's order before shipment. The customer is not charged for the canceled items.
+
 
 ## State machine for Payone
 

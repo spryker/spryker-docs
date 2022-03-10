@@ -18,7 +18,7 @@ This topic provides a list of steps to create a redirect in the Back Office.
 
 To start working with the CMS redirects, navigate to the **Content** > **Redirects** section.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating a CMS redirect
 

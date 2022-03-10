@@ -21,7 +21,7 @@ This page describes the procedure of creating and managing company unit addresse
 
 To start working with company unit addresses, go to **Customers** > **Company Unit Addresses**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating company unit addresses
 

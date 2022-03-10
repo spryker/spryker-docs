@@ -41,8 +41,8 @@ Thus, first of all, a Spryker Admin identifies the list of roles that each user 
 
 To know how to manage roles, groups and users, see the following articles:
 * [Managing Roles](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-roles.html)
-* [Managing Groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-groups.html)
-* [Managing Users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html)
+* [Managing Groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-groups/creating-user-groups.html)
+* [Managing Users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html)
 
 To know more about the attributes you use to manage roles, groups, and users, see the following articles:
 * [Roles: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/references/roles-reference-information.html)

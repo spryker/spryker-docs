@@ -2,6 +2,8 @@
 title: Release notes 202108.0
 description: Release notes for the release 202108.0
 template: concept-topic-template
+redirect_from:
+  - /docs.spryker.com/docs/marketplace/user/release-notes/release-notes-2021080.html
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-title: Data export Merchant Orders .csv files format
+title: Data export Merchant Orders CSV files format
 last_updated: May 27, 2021
 description: This article contains content of merchant-orders, merchant order-items, and merchant-order-expenses.
 template: import-file-template
@@ -64,7 +64,7 @@ Check out the [merchant-orders.csv sample file](https://spryker.s3.eu-central-1.
 
 These are the header fields included in the `merchant_order_items.csv` file:
 
-| DEFAULT SEQUENCE | .CSV COLUMN HEADER NAME | REQUIRED? | TYPE | OTHER REQUIREMENTS / COMMENTS | DESCRIPTION |
+| DEFAULT SEQUENCE | CSV COLUMN HEADER NAME | REQUIRED? | TYPE | OTHER REQUIREMENTS / COMMENTS | DESCRIPTION |
 |-|-|-|-|-|-|
 | 1 | merchant_order_reference | &check; | String | Unique | Merchant order reference identifier |
 | 2 | marketplace_order_reference | &check; | String | Unique | Marketplace order reference identifier. |
@@ -132,7 +132,7 @@ Check out the [merchant-order-items.csv sample file](https://spryker.s3.eu-centr
 
 These are the header fields included in the `merchant_order_expenses.csv` file.
 
-| DEFAULT SEQUENCE | .CSV COLUMN HEADER NAME | REQUIRED? | TYPE | OTHER REQUIREMENTS / COMMENTS | DESCRIPTION |
+| DEFAULT SEQUENCE | CSV COLUMN HEADER NAME | REQUIRED? | TYPE | OTHER REQUIREMENTS / COMMENTS | DESCRIPTION |
 |-|-|-|-|-|-|
 | 1 | merchant_order_reference | &check; | String | Unique | Merchant order reference identification |
 | 2 | marketplace_order_reference | &check; | String | Unique | Marketplace order reference identification. |

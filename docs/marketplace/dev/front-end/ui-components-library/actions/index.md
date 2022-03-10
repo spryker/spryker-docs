@@ -8,10 +8,10 @@ This document explains the Actions service in the Components Library.
 
 ## Overview
 
-Using Action Handlers, the Actions service handles specific actions based on a specific format within a specific context (such as a Table, Overlay, HTTP Response, etc.).
-As a result, the backend can control what the UI looks like without changing anything on the frontend (for example, updating tables, closing drawers, etc.).
+Using Action Handlers, the Actions service handles specific actions based on a specific format within a specific context (such as a Table, Overlay, HTTP Response).
+As a result, the backend can control what the UI looks like without changing anything on the frontend (for example, updating tables, closing drawers).
 
-The context within which Actions are handled is defined by the invoker of the Action (Table, Button, Http, etc.).
+The context within which Actions are handled is defined by the invoker of the Action (Table, Button, Http).
 
 ```html
 <spy-button-action

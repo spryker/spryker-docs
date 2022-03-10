@@ -19,7 +19,7 @@ Storefront API is a REST API-based storefront application for customers. This is
 Yves is a customer-facing HTML-based storefront application where customers browse the catalog and place orders.
 
 ### Backend Gateway
-Backend Gateway is a Storefront-oriented application. This is where a storefront (Yves/Glue) changes the state of the system (stock reservations, order placement, payments, etc.).
+Backend Gateway is a Storefront-oriented application. This is where a storefront (Yves/Glue) changes the state of the system (stock reservations, order placement, payments).
 
 ### Merchant Portal
 Merchant Portal is a merchant-focused application. Merchants use the Merchant Portal to manage their catalog and fulfill customer orders. Check out [Merchant Portal's architecture](/docs/marketplace/dev/architecture-overview/marketplace-merchant-portal-architecture-overview.html) for more details.

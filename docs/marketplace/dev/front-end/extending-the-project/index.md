@@ -1,6 +1,6 @@
 ---
 title: Extending the project
-description: This document provides details on how to extend the new project.
+description: This document provides details about how to extend the new project.
 template: howto-guide-template
 ---
 

@@ -22,7 +22,11 @@ As the Marketplace order contains details about offers and products a customer h
 ![Merchant order in the Merchant Portal](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Marketplace+order+feature+overview/merchant-order-in-merchant-portal.png)
 
 ## Marketplace and merchant order states machines
-You can coordinate the Marketplace and merchant orders processing by triggering the state machine events. See [Marketplace and merchant state machines](/docs/marketplace/user/features/{{page.version}}//marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html) for details on the Marketplace and merchant order state machines and [Marketplace and merchant state machine interactions](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html) for details on how the two state machines interact with each other.
+You can coordinate the Marketplace and merchant orders processing by triggering the state machine events.
+
+For details about the Marketplace and merchant order state machines, see [Marketplace and merchant state machines](/docs/marketplace/user/features/{{page.version}}//marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html).
+
+For details about how the two state machines interact with each other, see [Marketplace and merchant state machine interactions](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html).
 
 ## Marketplace order calculation
 By default, calculations for the Marketplace order items are performed using the item price (product offer price or the price inherited from the concrete or abstract product), their totals, subtotal aggregation, and tax information.

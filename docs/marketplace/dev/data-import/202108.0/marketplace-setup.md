@@ -7,7 +7,7 @@ template: import-file-template
 
 The Marketplace setup category contains data required to set up the Marketplace environment.
 
-The table below provides details on Marketplace setup data importers, their purpose, .csv files, dependencies, and other details. Each data importer contains links to .csv files to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
+The table below provides details about Marketplace setup data importers, their purpose, CSV files, dependencies, and other details. Each data importer contains links to CSV files to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
 
 | DATA IMPORTER | PURPOSE | CONSOLE COMMAND | FILE(S) | DEPENDENCIES |
 |-|-|-|-|-|

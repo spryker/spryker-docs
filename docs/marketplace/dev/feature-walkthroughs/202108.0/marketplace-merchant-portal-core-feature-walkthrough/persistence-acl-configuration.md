@@ -19,7 +19,7 @@ This ensures the correct operation of the Merchant Portal, and at the same time,
 
 ### New merchant
 When a new `Merchant` entity is added to the system, a merchant-specific role is automatically created.
-This role is automatically added to all merchant users, letting them operate with the merchant-specific data: `ProductOffer`, `ProductOrder`, etc.
+This role is automatically added to all merchant users, letting them operate with the merchant-specific data: `ProductOffer`, `ProductOrder`.
 
 ### New merchant user
 When a `MerchantUser` entity is added to the system, a merchant user-specific role is automatically created.

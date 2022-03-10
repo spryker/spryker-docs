@@ -1,6 +1,6 @@
 ---
 title: Marketplace Return Management feature walkthrough
-description: This article provides technical details on the Marketplace Return Management feature.
+description: This article provides technical details about the Marketplace Return Management feature.
 template: feature-walkthrough-template
 ---
 

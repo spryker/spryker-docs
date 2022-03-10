@@ -1,6 +1,6 @@
 ---
 title: Marketplace Product Options feature overview
-description: The Marketplace Product Options feature allows merchants and Marketplace administrators to create product option groups.
+description: The Marketplace Product Options feature lets merchants and Marketplace administrators create product option groups.
 template: concept-topic-template
 ---
 
@@ -19,7 +19,11 @@ Each product option is defined by:
 
 {% info_block infoBox "Info" %}
 
-Currently, you can create and manage general product options via the Back Office, however, you can only import merchant product options. See [Creating a product option](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html) for details on how you can create product options in the Back Office, [Managing product options](/docs/marketplace/user/back-office-user-guides/{{ page.version}}/catalog/product-options/creating-product-options.html) on how you can manage the product options in the Back Office, and [File details: merchant product option group](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-option-group.csv.html) on how you can import merchant product options.
+Currently, you can create and manage general product options via the Back Office. However, you can only import merchant product options.
+
+* For details about how you can create product options in the Back Office, see [Creating a product option](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html).
+* For details about how you can manage the product options in the Back Office, see [Managing product options](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html).
+* For details about how you can import merchant product options, see [File details: merchant product option group](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-option-group.csv.html).
 
 {% endinfo_block %}
 

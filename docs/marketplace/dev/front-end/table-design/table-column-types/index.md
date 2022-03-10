@@ -167,7 +167,7 @@ export interface ColumnTypeOptions {
 export enum ColumnTypeOptionsType {
     /** Value will be compared with strict equality */
     Literal = 'literal',
-    /** Value must be any Javascript type (String, Number, etc.)  */
+    /** Value must be any Javascript type (String, Number)  */
     TypeOf = 'typeOf',
     /** Value will be compared with every array item. May be recursive */
     ArrayOf = 'arrayOf',

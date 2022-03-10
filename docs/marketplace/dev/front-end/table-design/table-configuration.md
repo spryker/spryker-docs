@@ -4,7 +4,7 @@ description: This articles provides details about the table configuration.
 template: concept-topic-template
 ---
 
-This article provides details on how to configure the table.
+This article provides details about how to configure the table.
 
 ## Overview
 

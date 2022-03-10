@@ -20,7 +20,7 @@ Component configuration:
 - `disableRowKey` - disables the row that contains the mentioned column `id` (see the example below).   
 
 ```html
-<spy-table 
+<spy-table
     [config]="{
         dataSource: { ... },
         columns: [ ... ],
@@ -44,12 +44,12 @@ Take a closer look at all the options available.
         - `value` - sets the default value to the newly added row's cell.  
 
 - `create`:  
-    - `addButon` - this object holds the `Add button` configuration such as `title`, `icon`, `size`, etc.
+    - `addButon` - this object holds the `Add button` configuration such as `title`, `icon`, `size`.
     - `cancelButon` - an object with the `Cancel button` configuration like `title` and `icon`.
     - `disableForCols` - an array with the cell `ids` to be disabled.  
     - `formInputName` - creates an `input[type=hidden]` element with the specific name.  
     - `initialData` - initials data for cells and objects with errors for rows and cells.  
-  
+
 - `update`:
     - `url` - a request url.  
     - `saveButon` - an object with the `Save button` configuration such as `title` and `icon` (displayed in the `update` popup).  
@@ -57,7 +57,7 @@ Take a closer look at all the options available.
     - `disableForCols` - an array with the cell `ids` to be disabled.  
 
 ```html
-<spy-table 
+<spy-table
     [config]="{
         dataSource: { ... },
         columns: [ ... ],
@@ -121,7 +121,7 @@ Register the component:
     imports: [
         TableModule.forRoot(),
         TableModule.withFeatures({
-            editable: () => 
+            editable: () =>
                 import('@spryker/table.feature.editable').then(
                     (m) => m.TableEditableFeatureModule,
                 ),   
@@ -232,7 +232,7 @@ export interface TableEditableEventData<T = unknown> {
 
 export class TableEditableEvent<T = unknown> extends CustomEvent<TableEditableEventData<T>> {
     static readonly eventName = 'spy-table-editable';
-  
+
     constructor(detail: TableEditableEventData<T>) {
         super(TableEditableEvent.eventName, {
             bubbles: true,

@@ -9,7 +9,7 @@ This document explains the Table Feature extension in the Components Library.
 
 ## Overview
 
-The table has the ability to add custom features/components to the defined table locations (`TableFeatureLocation`). By default, the table has a simplified view. However, you can embed additional components to the specified locations and extend the table (title, pagination, totals, etc.).
+The table has the ability to add custom features/components to the defined table locations (`TableFeatureLocation`). By default, the table has a simplified view. However, you can embed additional components to the specified locations and extend the table (title, pagination, totals).
 
 A Table Feature is an Angular Component encapsulating a piece of UI that is targeted to a specific location within a Table Component or that may provide additional functionality.
 
@@ -159,6 +159,6 @@ There are multiple standard Table Features that are shipped with the UI library:
 - [Search](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-search.html) - allows searching within the data set.
 - [Selectable](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-selectable.html) - allows selecting multiple rows.
 - [Settings](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-settings.html) - allows customizing columns of the table (show/hide and reorder).
-- [Sync State](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-sync-state.html) - allows syncing the state of the table with browser URL (like pagination, filters, sorting, etc.).
+- [Sync State](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-sync-state.html) - allows syncing the state of the table with browser URL (like pagination, filters, sorting).
 - [Title](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-title.html) - renders the title of the table.
 - [Total](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-total.html) - renders the total number of the data set.

@@ -10,7 +10,7 @@ This document explains the Data Transformers service in the Components Library.
 ## Overview
 
 Data Transformers are responsible for transforming data from one form to another based on a certain configuration.
-As a result, backend systems can manipulate data without changing the frontend at all (such as table datasource, select datasource, etc.).
+As a result, backend systems can manipulate data without changing the frontend at all (such as table datasource, select datasource).
 
 Anyone may use the Data Transformer Service to modify data by configuring a specific `DataTransformer`.
 

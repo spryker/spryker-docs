@@ -15,7 +15,7 @@ GUI modules have the main purpose of providing logic for the functioning of the 
 
 Typical GUI modules include:
 - - Controllers for displaying Merchant Portal pages and corresponding logic (forms, data mappers);
-- GUI tables and corresponding logic for configuration, data provisioning, etc.;
+- GUI tables and corresponding logic for configuration, and data provisioning.
 - Twig templates;
 - Frontend components;
 - Plugins for extending existing GUI tables, forms etc.;

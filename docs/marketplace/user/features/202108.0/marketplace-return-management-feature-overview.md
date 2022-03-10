@@ -6,7 +6,7 @@ template: concept-topic-template
 
 *Marketplace Return Management* feature lets you create and manage returns for a merchant order in a Spryker Marketplace Demo Shop.
 
-Once an order has been shipped, the registered buyer or a Back Office user can initiate a return of the whole marketplace order or its individual items. For details on what items can be returned, see [Returnable items and a return policy](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html#returnable-items-and-a-return-policy). For details on how a Back Office user can create returns, see [Managing marketplace orders](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/orders/managing-marketplace-orders.html).
+Once an order has been shipped, the registered buyer or a Back Office user can initiate a return of the whole marketplace order or its individual items. For information about what items can be returned, see [Returnable items and a return policy](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html#returnable-items-and-a-return-policy). For information about how a Back Office user can create returns, see [Managing marketplace orders](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/orders/managing-marketplace-orders.html).
 
 
 {% info_block warningBox "Note" %}
@@ -33,7 +33,7 @@ The relation of the sales order items statuses and the return states is as follo
 
 Buyers and Back Office users (Marketplace administrator and [main merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/main-merchant-concept.html)) can have a paper version of the return by printing the automatically generated *return slip*. The return slip contains:
 * The return and marketplace sales order references.
-* Details on the returnable marketplace sales order items.
+* Details about the returnable marketplace sales order items.
 * A barcode generated based on the return reference.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Return+Management/marketplace-return-slip.png)
@@ -50,7 +50,7 @@ One return can include products only from one merchant.
 
 {% endinfo_block %}
 
-Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the merchant [processes the return](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/orders/managing-marketplace-orders.html#creating-a-marketplace-return). See [Return items states](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/orders/managing-marketplace-orders.html#reference-information-creating-a-marketplace-return) for details on the return states.
+Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the merchant [processes the return](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/orders/managing-marketplace-orders.html#creating-a-marketplace-return). For details about the return states, see [Return items states](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/orders/managing-marketplace-orders.html#reference-information-creating-a-marketplace-return).
 
 All the returns created by the buyer or by the Back Office user for the buyer are listed on the *Returns* page in the *Customer Account*. From here, the buyer can view the return details and print the return slip.
 
@@ -64,7 +64,7 @@ A Back Office user can create returns for the [returnable items](/docs/scos/user
 
 ## Marketplace Return Management in the Merchant Portal
 
-Merchants process their returns in the Merchant Portal. See [Merchant Portal guide: Managing merchant orders ](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/orders/managing-merchant-orders.html)for details on how to manage the merchant returns.
+Merchants process their returns in the Merchant Portal. For details about how to manage the merchant returns, see [Merchant Portal guide: Managing merchant orders ](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/orders/managing-merchant-orders.html).
 
 ## Related Business User articles
 

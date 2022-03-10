@@ -1,6 +1,6 @@
 ---
 title: Marketplace Wishlist feature walkthrough
-description: This article provides technical details on the Marketplace Wishlist feature.
+description: This article provides technical details about the Marketplace Wishlist feature.
 template: feature-walkthrough-template
 ---
 

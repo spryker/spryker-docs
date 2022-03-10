@@ -8,7 +8,7 @@ Product Offer and data related to it is cached to enhance performance.
 
 {% info_block infoBox "" %}
 
-See [Using and configuring Redis as a key-value storage](/docs/scos/dev/back-end-development/client/using-and-configuring-redis-as-a-key-value-storage.html) for details on how to use and configure Redis as a key-value storage.
+For details about how to use and configure Redis as a key-value storage, see [Using and configuring Redis as a key-value storage](/docs/scos/dev/back-end-development/client/using-and-configuring-redis-as-a-key-value-storage.html).
 
 {% endinfo_block %}
 
@@ -22,7 +22,7 @@ The following modules are used for the Product Offer storage:
 
 {% info_block infoBox "" %}
 
-Use `Client` of the `MerchantProductOfferStorage` module for getting the cached data.  See [Client](/docs/scos/dev/back-end-development/client/client.html) for details on how to use Client.
+For details about how to use Client, use `Client` of the `MerchantProductOfferStorage` module for getting the cached data.  See [Client](/docs/scos/dev/back-end-development/client/client.html).
 
 {% endinfo_block %}
 

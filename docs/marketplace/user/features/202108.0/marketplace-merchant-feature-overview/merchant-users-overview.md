@@ -46,7 +46,7 @@ If a merchant is [denied](/docs/marketplace/user/features/{{page.version}}/marke
 {% endinfo_block %}
 
 Upon entering the Merchant Portal, a separate area with a different navigation menu is displayed to a merchant user.
-Merchant users have access only to the information related to their organization through the Merchant Portal application (profile, products, offers, orders, etc.); that is, merchant users have their own area and do not access the Back Office.
+Merchant users have access only to the information related to their organization through the Merchant Portal application (profile, products, offers, orders); that is, merchant users have their own area and do not access the Back Office.
 
 ## Merchant user workflow
 

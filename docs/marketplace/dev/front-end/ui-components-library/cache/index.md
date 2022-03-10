@@ -9,9 +9,9 @@ This document explains the Cache service in the Component Library.
 ## Overview
 
 Cache Service is responsible for caching arbitrary operations based on the configuration.
-This allows backend systems to use caching without changing the front-end at all (ex. http datasource, etc.).
+This allows backend systems to use caching without changing the front-end at all (ex. http datasource).
 
-Cache Service uses Cache Strategy to define caching algorithm (static, cache first, freshness first, etc.).
+Cache Service uses Cache Strategy to define caching algorithm (static, cache first, freshness first).
 
 ```html
 <spy-select

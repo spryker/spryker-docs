@@ -18,7 +18,7 @@ On the **Products** page, you see the following:
 * The tax set applied to this product.
 * The number of variants this product has.
 * The status of the product (active/inactive).
-* Product type (product, gift card, product bundle, etc.).
+* Product type (product, gift card, product bundle).
 * Stores where the product is available (in case you have multiple stores in your project).
 
 {% info_block infoBox "Info" %}

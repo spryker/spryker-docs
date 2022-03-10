@@ -24,7 +24,7 @@ To retrieve a search suggestion, send the request:
 
 | QUERY PARAMETER | DESCRIPTION  | POSSIBLE VALUES|
 | ---------------- | -------------------- | -------------------- |
-| q    | Restricts the returned items to the values of the provided parameters. | <ul><li>{% raw %}{{abstract_product_sku}}{% endraw %}</li><li>{% raw %}{{concrete_product_sku}}{% endraw %}</li><li>{% raw %}{{abstract_product_name}}{% endraw %}</li><li>{% raw %}{{product_attribute}} (for example, brand, color, etc.)—to provide multiple product attributes, use '+'</li><li>{% raw %}{{category_name}}{% endraw %}</li></ul> |
+| q    | Restricts the returned items to the values of the provided parameters. | <ul><li>{% raw %}{{abstract_product_sku}}{% endraw %}</li><li>{% raw %}{{concrete_product_sku}}{% endraw %}</li><li>{% raw %}{{abstract_product_name}}{% endraw %}</li><li>{% raw %}{{product_attribute}} (for example, brand, color)—to provide multiple product attributes, use '+'</li><li>{% raw %}{{category_name}}{% endraw %}</li></ul> |
 | include | Adds resource relationships to the request. | abstract-products  |
 | currency | Sets a currency. | {% raw %}{{currency}}{% endraw %} |
 | priceMode  | Sets a price mode.  | <ul><li>NET_MODE</li><li>GROSS_MODE</li></ul> |

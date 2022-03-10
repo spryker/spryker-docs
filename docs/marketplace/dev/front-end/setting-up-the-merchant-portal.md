@@ -4,7 +4,7 @@ description: This document provides details about setting up Spryker Marketplace
 template: howto-guide-templat
 ---
 
-This document provides details on how to set up the Spryker Merchant Portal.
+This document provides details about how to set up the Spryker Merchant Portal.
 
 ## Prerequisites
 To start using Merchant Portal, install Spryker demo-shop:

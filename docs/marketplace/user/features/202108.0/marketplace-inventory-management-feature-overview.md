@@ -9,7 +9,7 @@ In the context of the inventory management, the *warehouse* is the physical plac
 
 ## Marketplace warehouse management
 
-When a merchant is created, the corresponding warehouse is created for this merchant. The warehouse name is composed of the following parts: `merchant name` + `merchant reference` + `warehouse` + `index` (starting with 1, 2, etc.).
+When a merchant is created, the corresponding warehouse is created for this merchant. The warehouse name is composed of the following parts: `merchant name` + `merchant reference` + `warehouse` + `index` (starting with 1, 2).
 
 {% info_block infoBox "Example" %}
 
@@ -17,7 +17,7 @@ When a merchant is created, the corresponding warehouse is created for this merc
 
 {% endinfo_block %}
 
-A warehouse can be assigned to a single store or shared between several stores. See [Managing warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/managing-warehouses.html) for details on how you can manage warehouses and stores in the Back Office.
+A warehouse can be assigned to a single store or shared between several stores. For details about how you can manage warehouses and stores in the Back Office, see [Managing warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/managing-warehouses.html).
 
 ## Marketplace stock management
 

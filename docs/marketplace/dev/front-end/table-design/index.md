@@ -8,7 +8,7 @@ This article describes the Table Design in the Components Library.
 
 ## Overview
 
-A Table Component is an arrangement of data in rows and columns, or possibly in a more complex structure (with sorting, filtering, pagination, row selections, infinite scrolling, etc.).
+A Table Component is an arrangement of data in rows and columns, or possibly in a more complex structure (with sorting, filtering, pagination, row selections, infinite scrolling).
 It is an essential building block of a user interface.
 
 A basic Table Component is `<spy-table [config]="config"></spy-table>` where `config` is:
@@ -73,7 +73,7 @@ export class AppModule {}
 
 ### Columns
 
-Columns in a Table are defined by the [Column Type](/docs/marketplace/dev/front-end/table-design/table-column-types/) and rendered within the columns (text, image, link, etc.).
+Columns in a Table are defined by the [Column Type](/docs/marketplace/dev/front-end/table-design/table-column-types/) and rendered within the columns (text, image, link).
 A new Column Type may be created and registered to the table.
 
 The Column component must implement `TableColumn` interface with the defined config and then be registered to the Root Module via `TableModule.withColumnComponents()`:
@@ -94,7 +94,7 @@ export class AppModule {}
 
 ### Filters
 
-Table Component does not contain any filters a table usually will have (filtering, searching, etc.).
+Table Component does not contain any filters a table usually will have (filtering, searching).
 The Core Table Component has just a view of the columns and data and has built-in sorting.
 
 To use [Filter components](/docs/marketplace/dev/front-end/table-design/table-filters/), the Table Module must implement a specific interface (TableConfig) and then be registered to the Root Module via `TableModule.withFilterComponents()`:

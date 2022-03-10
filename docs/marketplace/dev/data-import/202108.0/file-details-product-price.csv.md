@@ -15,7 +15,7 @@ data:import product-price
 
 ## Headers & Mandatory Fields
 
-These are the header fields to be included in the .csv file:
+These are the header fields to be included in the CSV file:
 
 | FIELD NAME    | MANDATORY  | TYPE  | OTHER REQUIREMENTS/COMMENTS | DESCRIPTION  |
 | ------------------ | ------------- | ----- | ------------- | ------------------- |
@@ -44,5 +44,5 @@ A template and an example of the *product_price.csv* file can be downloaded here
 
 | FILE | DESCRIPTION |
 | --- | --- |
-| [product_price.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Pricing/Template+product_price.csv) | Product Price .csv template file (empty content, contains headers only). |
-| [product_price.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Pricing/product_price.csv) | Product Price .csv file containing a Demo Shop data sample.  |
+| [product_price.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Pricing/Template+product_price.csv) | Product Price CSV template file (empty content, contains headers only). |
+| [product_price.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Pricing/product_price.csv) | Product Price CSV file containing a Demo Shop data sample.  |

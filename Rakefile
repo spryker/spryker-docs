@@ -31,7 +31,8 @@ commonOptions = {
     /stackoverflow.com\/[\.\w\-\/\?]+/,
     /symfony.com\/[\.\w\-\/\?]+/,
     /code.jquery.com\/[\.\w\-\/\?]+/,    
-    /console.aws.amazon.com\/[\.\w\-\/\?]+/
+    /console.aws.amazon.com\/[\.\w\-\/\?]+/,
+    /shopify.github.io\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],
   :typhoeus => {

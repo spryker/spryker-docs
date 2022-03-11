@@ -1,7 +1,7 @@
 ---
 title: Product Barcode feature overview
 description: The Barcode Generator can be used for any kind of entity, and by default, we provide a solution for products.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/barcode-generator-feature-overview
 originalArticleId: 81a48e7c-d1b6-4ecf-b339-98218c95b6ca

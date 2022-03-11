@@ -1,7 +1,7 @@
 ---
 title: Heidelpay
 description: Heidelpay is an internationally operating payment institution, authorized and regulated by the Federal Financial Supervisory Authority.
-last_updated: Oct 23, 2020
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/heidelpay
 originalArticleId: a62df4c4-3958-4334-a60f-f8d49b9afaff

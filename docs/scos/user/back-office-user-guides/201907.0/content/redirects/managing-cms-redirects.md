@@ -11,8 +11,6 @@ redirect_from:
 related:
   - title: Creating CMS Redirects
     link: docs/scos/user/back-office-user-guides/page.version/content/redirects/creating-cms-redirects.html
-  - title: CMS Redirects- References
-    link: docs/scos/user/back-office-user-guides/page.version/content/redirects/references/cms-redirects-references.html
 ---
 
 This topic provides a list of steps to edit or delete a redirect in the Back Office.

@@ -11,8 +11,6 @@ redirect_from:
 related:
   - title: Product Options feature overview
     link: docs/scos/user/features/page.version/product-options-feature-overview.html
-  - title: Product Options- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/product-options/references/product-options-reference-information.html
   - title: Managing Product Options
     link: docs/scos/user/back-office-user-guides/page.version/catalog/product-options/managing-product-options.html
 ---

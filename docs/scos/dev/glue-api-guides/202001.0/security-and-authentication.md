@@ -1,7 +1,7 @@
 ---
 title: Security and Authentication
 description: This article describes the authorization mechanism used in Spryker, the modules that provide it, as well as user scopes, database tables, and extension points.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/security-and-authentication
 originalArticleId: cac46c96-b5f3-4789-b489-98d67945a669

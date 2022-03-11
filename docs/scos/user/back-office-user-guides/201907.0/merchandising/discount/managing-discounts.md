@@ -9,12 +9,6 @@ redirect_from:
   - /v3/docs/managing-discounts
   - /v3/docs/en/managing-discounts
 related:
-  - title: Discount- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/discount-reference-information.html
-  - title: Discount Calculation- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/discount-calculation-reference-information.html
-  - title: Discount Conditions- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/discount-conditions-reference-information.html
   - title: Token Description Tables
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/token-description-tables.html
   - title: Voucher Codes- Reference Information

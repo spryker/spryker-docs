@@ -15,8 +15,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/sales/reclamations/managing-reclamations.html
   - title: Managing Orders
     link: docs/scos/user/back-office-user-guides/page.version/sales/orders/managing-orders.html
-  - title: Orders- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/references/orders-reference-information.html
   - title: Viewing the Order Matrix
     link: docs/scos/user/back-office-user-guides/page.version/sales/order-matrix/viewing-the-order-matrix.html
   - title: Reclamations Feature Overview

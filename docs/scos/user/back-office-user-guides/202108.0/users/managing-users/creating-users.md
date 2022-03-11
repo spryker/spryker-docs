@@ -1,7 +1,7 @@
 ---
 title: Creating users
 description: Learn how to create users in the Back Office
-last_updated: Aug 2, 2021
+last_updated: Mar 11, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-users
 originalArticleId: 835c1e16-904a-4ed9-82c8-50244c7b0ff2

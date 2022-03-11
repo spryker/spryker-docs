@@ -1,7 +1,7 @@
 ---
 title: Editing Product Variants
 description: The guide describes how to update the product variant in the Back Office.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/updating-a-product-variant
 originalArticleId: 0c02b84f-4f46-4a1d-a454-2a861645adad

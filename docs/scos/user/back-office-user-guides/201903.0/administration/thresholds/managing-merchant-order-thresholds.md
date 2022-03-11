@@ -11,8 +11,6 @@ redirect_from:
 related:
   - title: Managing Merchant Relations
     link: docs/scos/user/back-office-user-guides/page.version/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html
-  - title: Threshold- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/references/threshold-reference-information.html
 ---
 
 This topic describes the procedures for managing thresholds per merchant relation.

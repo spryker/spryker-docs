@@ -1,7 +1,7 @@
 ---
 title: Customer password
 description: Change and reset customer password via Glue API
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/customer-password
 originalArticleId: c92edbdb-d857-46af-b09c-3a744d1e7247

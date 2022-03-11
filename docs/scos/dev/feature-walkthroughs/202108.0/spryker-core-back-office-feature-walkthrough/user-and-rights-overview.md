@@ -1,6 +1,6 @@
 ---
 title: Users and rights overview
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 description: User and rights management is a general term that describes the security functionality for controlling user access to perform various roles throughout the system
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/docs/user-and-rights-overview

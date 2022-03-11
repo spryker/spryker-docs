@@ -1,6 +1,6 @@
 ---
 title: Glue Infrastructure
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/glue-infrastructure
 originalArticleId: 6eb164f7-7c51-4b3d-8d8d-eb3bc41ce1e5

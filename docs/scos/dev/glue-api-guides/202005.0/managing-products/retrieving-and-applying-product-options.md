@@ -1,6 +1,6 @@
 ---
 title: Retrieving and Applying Product Options
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-and-applying-product-options
 originalArticleId: e6b8bc1c-46dc-4116-bbcd-4905bd2c9347

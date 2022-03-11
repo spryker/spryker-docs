@@ -1,6 +1,6 @@
 ---
 title: Glue API - Customer Account Management feature integration
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-customer-account-management-feature-integration
 originalArticleId: fa53308d-8078-477d-9297-7597d51afbcf

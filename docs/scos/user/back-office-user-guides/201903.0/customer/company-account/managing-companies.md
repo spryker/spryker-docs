@@ -17,8 +17,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-roles.html
   - title: Managing Company Units
     link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-units.html
-  - title: Company Account- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/references/company-account-reference-information.html
 ---
 
 This topic describes how you create and manage company records, which is the initial step in setting up the company infrastructure.

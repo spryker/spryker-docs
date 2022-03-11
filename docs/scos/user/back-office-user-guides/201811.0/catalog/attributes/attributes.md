@@ -9,8 +9,6 @@ redirect_from:
   - /v1/docs/attributes
   - /v1/docs/en/attributes
 related:
-  - title: Attributes- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/attributes/references/attributes-reference-information.html
   - title: Product Attributes
     link: docs/scos/user/features/page.version/product-feature-overview/product-attributes-overview.html
 ---

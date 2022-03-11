@@ -11,8 +11,6 @@ redirect_from:
 related:
   - title: Managing Orders
     link: docs/scos/user/back-office-user-guides/page.version/sales/orders/managing-orders.html
-  - title: Orders- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/references/orders-reference-information.html
   - title: Viewing Refunds
     link: docs/scos/user/back-office-user-guides/page.version/sales/refunds/viewing-refunds.html
   - title: Viewing the Order Matrix

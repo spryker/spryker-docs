@@ -1,7 +1,7 @@
 ---
 title: Continum
 description: Integrate Continum hosting solution to host Spryker-based project.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/continum
 originalArticleId: efc5b68e-b18f-41f6-90fb-8c30c2ac4a9a

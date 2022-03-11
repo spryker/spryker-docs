@@ -1,7 +1,7 @@
 ---
 title: Product Labels feature integration
 description: This guide provides step-by-step instruction on integrating
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-labels-feature-integration
 originalArticleId: ccfbad69-0d8f-4f79-b10d-5e1c930fc9be

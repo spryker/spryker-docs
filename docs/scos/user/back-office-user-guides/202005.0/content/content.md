@@ -1,7 +1,7 @@
 ---
 title: Content
 description: The section is designed to create and manage the content of your shop in the Back Office.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/content
 originalArticleId: 80191d58-a5a2-4d82-ab75-913eb10d83ce

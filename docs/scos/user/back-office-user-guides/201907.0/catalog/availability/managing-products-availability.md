@@ -21,8 +21,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/adding-product-alternatives.html
   - title: Adding Volume Prices to Abstract Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html
-  - title: Availability- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/availability/references/availability-reference-information.html
 ---
 
 This topic describes the actions you can do in the **Availability** section of  the Back Office.

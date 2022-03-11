@@ -1,6 +1,6 @@
 ---
 title: Configuring Outdated Refresh Token Life Time
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/configuring-outdated-refresh-token-life-time
 originalArticleId: b695d109-b38a-430f-b0c4-b9fc86284bf8

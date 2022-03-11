@@ -1,7 +1,7 @@
 ---
 title: Comments + Order Management feature integration
 description: The guide walks you through the process of installing the Comments + Order Management feature into the project.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/comments-order-management-feature-integration
 originalArticleId: 2bf29780-07d5-4518-8510-77b7ba549836

@@ -1,7 +1,7 @@
 ---
 title: Discontinued Products overview
 description: Discontinued products are shown during a certain period of time after the manufacturer or a distributor announces that the product is no longer produced.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/discontinued-products-overview
 originalArticleId: af292911-5ff6-4eff-8914-fe14ff521a72

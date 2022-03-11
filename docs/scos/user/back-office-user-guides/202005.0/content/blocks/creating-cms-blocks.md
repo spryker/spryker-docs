@@ -1,7 +1,7 @@
 ---
 title: Creating CMS Block
 description: The guide provides instructions on how to create a CMS block in the Back Office.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/creating-cms-block
 originalArticleId: ccddd931-b24e-44b8-b814-1ba94ddcaa4b

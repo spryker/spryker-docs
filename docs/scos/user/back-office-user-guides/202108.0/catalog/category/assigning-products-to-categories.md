@@ -1,7 +1,7 @@
 ---
 title: Assigning products to categories
 description: The guide provides instructions on how to assign products to the category in the Back Office.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/assigning-products-to-categories
 originalArticleId: 4c14098e-c5c1-4f63-9957-202bca4a638a

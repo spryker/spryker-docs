@@ -15,10 +15,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/concrete-products/creating-product-variants.html
   - title: Managing Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
-  - title: Products- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/products-reference-information.html
-  - title: Abstract Product- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/abstract-product-reference-information.html
 ---
 
 This article describes the procedure of editing abstract products.

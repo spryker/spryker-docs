@@ -1,7 +1,7 @@
 ---
 title: Alternative products + Discontinued Products feature integration
 description: This guide describes all the steps needed to be performed in order to integrate the Alternative Products + Discontinued Products features into your project.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/alternative-products-discontinued-products-feature-integration
 originalArticleId: eb447174-6a43-4adb-8914-747a9771c4a9

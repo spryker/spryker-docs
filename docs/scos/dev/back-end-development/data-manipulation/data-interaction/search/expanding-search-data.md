@@ -1,5 +1,6 @@
 ---
 title: Expanding search data
+last_updated: Mar 11, 2022
 description: Learn how to expand entity data and create new data types in the search.
 template: howto-guide-template
 ---

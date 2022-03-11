@@ -1,7 +1,7 @@
 ---
 title: Creating carrier companies
 description: Use the procedure to create a carrier company and activate it in the Back Office.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-a-carrier-company
 originalArticleId: 7335402c-f389-47c0-952c-59d19580cf37

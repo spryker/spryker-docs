@@ -1,7 +1,7 @@
 ---
 title: Integrating the PayNow payment method for Computop
 description: Integrate PayNow payment through Computop into the Spryker-based shop.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/computop-paynow
 originalArticleId: 1b14e718-0267-4e49-8b41-c4c147191f03
@@ -11,8 +11,6 @@ redirect_from:
 related:
   - title: Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop.html
-  - title: Integrating the Sofort payment method for Computop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-sofort-payment-method-for-computop.html
   - title: Integrating the PayPal payment method for Computop
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paypal-payment-method-for-computop.html
   - title: Integrating the Easy Credit payment method for Computop

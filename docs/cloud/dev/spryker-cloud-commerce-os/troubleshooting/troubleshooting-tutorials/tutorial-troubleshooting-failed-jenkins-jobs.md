@@ -1,5 +1,6 @@
 ---
 title: Tutorial — Troubleshooting failed Jenkins jobs
+last_updated: Mar 11, 2022
 description: Learn how to troubleshoot Jenkins jobs issues
 template: troubleshooting-guide-template
 ---

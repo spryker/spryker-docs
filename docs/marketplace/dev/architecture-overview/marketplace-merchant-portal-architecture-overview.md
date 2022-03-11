@@ -1,6 +1,6 @@
 ---
 title: Merchant Portal architecture overview
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 description: This document explains how a Spryker Marketplace MerchantPortal is designed. 
 template: concept-topic-template
 ---

@@ -1,7 +1,7 @@
 ---
 title: Integrating the Invoice Secured B2C payment method for Heidelpay
 description: Integrate invoice secured B2C payment through Heidelpay into the Spryker-based shop.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/heidelpay-invoice-secured-b2c
 originalArticleId: edb5c21a-b865-4445-92c9-060a7d1b4c1d

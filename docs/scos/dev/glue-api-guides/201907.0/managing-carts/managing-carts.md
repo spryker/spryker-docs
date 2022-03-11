@@ -1,6 +1,6 @@
 ---
 title: Managing Carts
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/managing-carts
 originalArticleId: 83d0f103-8732-43fd-a15d-b470c444907f

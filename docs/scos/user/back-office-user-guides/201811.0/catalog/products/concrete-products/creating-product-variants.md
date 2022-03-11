@@ -15,10 +15,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
   - title: Editing Product Variants
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/concrete-products/editing-product-variants.html
-  - title: Products- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/products-reference-information.html
-  - title: Concrete Product- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/concrete-product-reference-information.html
 ---
 
 This topic describes the procedure you need to follow in order to add a new product variant to the abstract product.

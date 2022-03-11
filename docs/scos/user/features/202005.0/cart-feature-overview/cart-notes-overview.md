@@ -1,7 +1,7 @@
 ---
 title: Cart Notes overview
 description: Customers can add notes to a particular item or the whole cart, e.g some special instructions about how to prepare and deliver an order.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/cart-notes-overview
 originalArticleId: 2236e017-3e77-42ab-a08d-0951184f3f27

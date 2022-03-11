@@ -1,7 +1,7 @@
 ---
 title: Computop API calls
 description: This article provides details on the API structure of the Computop module in the Spryker Commerce OS.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/computop-api-details
 originalArticleId: c1eb3c2d-b318-4393-8e43-fea8e677d820

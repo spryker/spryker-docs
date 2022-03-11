@@ -1,7 +1,7 @@
 ---
 title: CMS pages in search results overview
 description: The CMS Pages in Search Results feature allows searching not only for products but for CMS pages content as well.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/cms-pages-in-search-results-overview
 originalArticleId: 0509e00d-9839-4136-81dd-10ff197cda0d

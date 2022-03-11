@@ -9,10 +9,6 @@ redirect_from:
   - /v1/docs/managing-groups
   - /v1/docs/en/managing-groups
 related:
-  - title: Roles- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/users/roles-groups-and-users/references/roles-reference-information.html
-  - title: User- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/users/roles-groups-and-users/references/user-reference-information.html
   - title: Managing Roles
     link: docs/scos/user/back-office-user-guides/page.version/users/roles-groups-and-users/managing-roles.html
   - title: Managing Users

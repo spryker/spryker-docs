@@ -1,7 +1,7 @@
 ---
 title: Product Information Management
 description: Ensure a smooth shopping experience with the powerful product management features that allow you to create a neat and fully customized product catalog.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/product-information-management
 originalArticleId: c43fd57c-638d-4a65-98f3-729583c59a36

@@ -1,10 +1,8 @@
 ---
 title: 'How-To: Split products by stores'
+last_updated: Mar 11, 2022
 description: This document provides details on how to split products by stores.
 template: howto-guide-template
-related:
-    - title: Persistence ACL feature walkthrough
-      link: docs/marketplace/dev/feature-walkthroughs/page.version/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html
 ---
 This article explains how you can split products by stores. For more clarity, we consider an example of a shop with two stores: DE and AT. For each store, we want to create separate _Product Manager_ roles:
 

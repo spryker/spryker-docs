@@ -1,7 +1,7 @@
 ---
 title: Nitrobox
 description: Integrate Nitrobox to model, automate and API control customer financial processes.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/nitrobox
 originalArticleId: 6f0a9ca1-dfe5-4331-94dd-c89fe217ad63

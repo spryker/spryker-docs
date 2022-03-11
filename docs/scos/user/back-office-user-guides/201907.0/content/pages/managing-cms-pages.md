@@ -1,7 +1,7 @@
 ---
 title: Managing CMS Pages
 description: The guide provides instructions on how to preview, publish, update and activate or deactivate CMS pages in the Back Office.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/managing-cms-pages
 originalArticleId: 07dc98c4-0a9f-4c03-a546-2d332ad7d899
@@ -17,8 +17,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/content/pages/managing-cms-page-versions.html
   - title: Assigning Blocks to Category or Product Pages
     link: docs/scos/user/back-office-user-guides/page.version/content/blocks/assigning-blocks-to-category-or-product-pages.html
-  - title: CMS Pages- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/content/pages/references/cms-pages-reference-information.html
 ---
 
 This article describes the managing actions you can perform on CMS pages:

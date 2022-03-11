@@ -11,8 +11,6 @@ redirect_from:
 related:
   - title: Customer Accounts
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
-  - title: Customers- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/customer/references/customers-reference-information.html
 ---
 
 This article describes how you can create and manage customer groups.

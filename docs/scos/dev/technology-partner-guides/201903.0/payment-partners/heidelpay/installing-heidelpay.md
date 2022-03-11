@@ -1,7 +1,7 @@
 ---
 title: Installing Heidelpay
 description: This article contains installation information for the Heidelpay module into the Spryker Legacy Demoshop.
-last_updated: Nov 22, 2019
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/heidelpay-installation
 originalArticleId: 8d842c97-7455-4933-b3a3-012dedb5537b
@@ -23,8 +23,6 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-paypal-authorize-payment-method-for-heidelpay.html
   - title: Heidelpay workflow for errors
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/heidelpay-workflow-for-errors.html
-  - title: Integrating Heidelpay into the Legacy Demoshop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/integrating-heidelpay-into-the-legacy-demoshop.html
   - title: Integrating the Split-payment Marketplace payment method for Heidelpay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-split-payment-marketplace-payment-method-for-heidelpay.html
   - title: Integrating the Easy Credit payment method for Heidelpay

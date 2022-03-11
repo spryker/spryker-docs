@@ -9,12 +9,6 @@ redirect_from:
   - /v1/docs/creating-and-managing-product-bundles
   - /v1/docs/en/creating-and-managing-product-bundles
 related:
-  - title: Products- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/products-reference-information.html
-  - title: Abstract Product- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/abstract-product-reference-information.html
-  - title: Concrete Product- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/concrete-product-reference-information.html
   - title: Managing Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
   - title: Discontinuing Products

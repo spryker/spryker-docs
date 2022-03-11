@@ -1,5 +1,6 @@
 ---
 title: Loggly
+last_updated: Mar 11, 2022
 description: Overview of the Loggly integration.
 template: concept-topic-template
 ---

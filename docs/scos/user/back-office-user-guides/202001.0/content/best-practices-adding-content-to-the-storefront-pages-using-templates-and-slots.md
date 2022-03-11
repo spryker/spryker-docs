@@ -9,8 +9,6 @@ redirect_from:
   - /v4/docs/adding-content-to-storefront-pages-using-templates-slots
   - /v4/docs/en/adding-content-to-storefront-pages-using-templates-slots
 related:
-  - title: Slots- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/content/slots/references/slots-reference-information.html
   - title: Managing Slots
     link: docs/scos/user/back-office-user-guides/page.version/content/slots/managing-slots.html
   - title: Templates & Slots Feature Overview

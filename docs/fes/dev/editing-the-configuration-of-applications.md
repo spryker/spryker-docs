@@ -1,5 +1,6 @@
 ---
 title: Editing the configuration of applications
+last_updated: Mar 11, 2022
 description: Learn how to edit the configuration of applications via Spryker Launchpad
 template: howto-guide-template
 ---

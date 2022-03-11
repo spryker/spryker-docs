@@ -1,7 +1,7 @@
 ---
 title: Sharing Company User Carts
 description: This article describes the endpoints that provide the possibility to share and unshare carts of registered users.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/sharing-company-user-carts-201907
 originalArticleId: a3b21add-72fb-42a5-ab1e-3b57f53d195b

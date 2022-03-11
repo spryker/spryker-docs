@@ -11,8 +11,6 @@ redirect_from:
 related:
   - title: Managing Configurable Bundle Templates
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html
-  - title: Configurable Bundle Templates- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/configurable-bundle-templates/references/configurable-bundle-templates-reference-information.html
   - title: Configurable Bundle Feature Overview
     link: docs/scos/user/features/page.version/configurable-bundle-feature-overview.html
 ---

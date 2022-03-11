@@ -1,7 +1,7 @@
 ---
 title: Computop API calls
 description: This article provides details on the API structure of the Computop module in the Spryker Commerce OS.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/computop-api-details
 originalArticleId: 05879934-f16e-41d3-b54c-1957c84c48de
@@ -25,8 +25,6 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-easy-credit-payment-method-for-computop.html
   - title: Integrating the Paydirekt payment method for Computop
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paydirekt-payment-method-for-computop.html
-  - title: Integrating the CRIF payment method for Computop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-crif-payment-method-for-computop.html
 ---
 
 ## Authorization Call:

@@ -1,5 +1,6 @@
 ---
 title: Editing documentation via pull requests
+last_updated: Mar 11, 2022
 description: Learn how you can propose changes to the Spryker docs
 template: howto-guide-template
 redirect_from:

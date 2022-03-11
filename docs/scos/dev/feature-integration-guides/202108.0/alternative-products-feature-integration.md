@@ -1,7 +1,7 @@
 ---
 title: Alternative products feature integration
 description: This guide walks you through the process of installing the Alternative Products feature into your project.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/alternative-products-feature-integration
 originalArticleId: 580bc0b9-af9d-43ab-8752-0c4dddbc8c9b

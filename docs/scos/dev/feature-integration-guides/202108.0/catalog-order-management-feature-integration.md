@@ -1,5 +1,6 @@
 ---
 title: Catalog + Order Management feature integration
+last_updated: Mar 11, 2022
 description: Learn how to integrate the Catalog + Order Management feature connector into a Spryker project.
 template: feature-integration-guide-template
 ---

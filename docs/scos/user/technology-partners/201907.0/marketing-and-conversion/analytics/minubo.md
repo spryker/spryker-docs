@@ -1,7 +1,7 @@
 ---
 title: Minubo
 description: Integrate Minubo -  infrastructure and processes provider for a fast-growing omnichannel business.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/minubo
 originalArticleId: 047e3e2f-02bc-4d55-aaab-a4cd1b3ee0cc

@@ -1,7 +1,7 @@
 ---
 title: Customer Login overview
 description: Tailor customer registration to your needs. A customer can register with an email address and a password, or you can choose to ask for more details.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/login-registration-forms
 originalArticleId: 03ca9e18-50e7-468d-83aa-478b2f636e1f

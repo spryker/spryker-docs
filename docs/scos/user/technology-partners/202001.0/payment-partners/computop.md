@@ -1,7 +1,7 @@
 ---
 title: Computop
 description: Enable merchants and white label customers to process global multichannel payments by integrating Computop into the Spryker Commerce OS.
-last_updated: Jan 25, 2020
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/computop
 originalArticleId: 149d9263-e69b-42ab-bcb2-c6f798092aa2
@@ -9,8 +9,6 @@ redirect_from:
   - /v4/docs/computop
   - /v4/docs/en/computop
 related:
-  - title: Integrating the Sofort payment method for Computop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-sofort-payment-method-for-computop.html
   - title: Integrating the PayPal payment method for Computop
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paypal-payment-method-for-computop.html
   - title: Computop API calls
@@ -27,8 +25,6 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-easy-credit-payment-method-for-computop.html
   - title: Integrating the Paydirekt payment method for Computop
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paydirekt-payment-method-for-computop.html
-  - title: Integrating the CRIF payment method for Computop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-crif-payment-method-for-computop.html
 ---
 
 ## Partner Information

@@ -21,10 +21,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/adding-product-alternatives.html
   - title: Adding Volume Prices to Abstract Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html
-  - title: Concrete Product- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/concrete-product-reference-information.html
-  - title: Products- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/products-reference-information.html
 ---
 
 This topic describes the procedure you need to follow in order to add a new product variant to the abstract product.

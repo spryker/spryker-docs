@@ -23,8 +23,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html
   - title: Managing Attributes
     link: docs/scos/user/back-office-user-guides/page.version/catalog/attributes/managing-product-attributes.html
-  - title: Abstract Product- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/abstract-product-reference-information.html
 ---
 
 This topic describes the procedures that you need to follow in order to create an abstract product and its variants.

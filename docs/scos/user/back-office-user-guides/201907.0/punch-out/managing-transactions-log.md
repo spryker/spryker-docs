@@ -13,8 +13,6 @@ related:
     link: docs/scos/user/features/page.version/technology-partner-integrations/punch-out/punch-out.html
   - title: Punch Out Feature Overview
     link: docs/scos/user/features/page.version/technology-partner-integrations/punch-out/punch-out-feature-overview.html
-  - title: Punch Out- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/punch-out/references/punch-out-reference-information.html
   - title: Managing Punch Out Connections
     link: docs/scos/user/back-office-user-guides/page.version/punch-out/managing-punch-out-connections.html
 ---

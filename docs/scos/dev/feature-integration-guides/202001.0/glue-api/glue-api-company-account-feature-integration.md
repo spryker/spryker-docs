@@ -1,6 +1,6 @@
 ---
 title: Glue API - Company Account feature integration
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/glue-api-company-account-api-feature-integration
 originalArticleId: bc3d1e6d-c991-49a3-b1a5-c93c67409c48

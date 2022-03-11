@@ -1,7 +1,7 @@
 ---
 title: Abstract and Concrete Products
 description: Create and manage abstract and concrete products throughout your online shop in the Back Office.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/abstract-and-concrete-products
 originalArticleId: 2e472700-a972-49f4-8f13-09f2189dda0f
@@ -15,8 +15,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/editing-abstract-products.html
   - title: Creating Product Variants
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/concrete-products/creating-product-variants.html
-  - title: Updating Product Variants
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/concrete-products/updating-product-variants.html
   - title: Managing Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
 ---

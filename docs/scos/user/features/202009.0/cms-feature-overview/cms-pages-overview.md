@@ -1,7 +1,7 @@
 ---
 title: CMS pages overview
 description: Summary of the CMS page functionality.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/cms-page
 originalArticleId: 06a6ddcb-d70d-4c16-a341-db0c9cbcae81

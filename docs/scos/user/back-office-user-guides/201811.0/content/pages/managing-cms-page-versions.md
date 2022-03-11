@@ -1,7 +1,7 @@
 ---
 title: Managing CMS Page Versions
 description: The guide provides instructions on how to view CMS page versions, roll back to a specific version or view SEO information in the Back Office.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/cms-pages-versioning
 originalArticleId: 898c8975-afad-4205-bb75-d74b53a96443
@@ -19,8 +19,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/content/pages/managing-cms-pages.html
   - title: Assigning Blocks to Category and Product Pages
     link: docs/scos/user/back-office-user-guides/page.version/content/pages/assigning-blocks-to-category-and-product-pages.html
-  - title: CMS Pages- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/content/pages/references/cms-pages-reference-information.html
 ---
 
 This article describes how you can manage versions of CMS pages: view general information, SEO details, compare CMS versions, and roll back to the selected version or discard changes to a page.

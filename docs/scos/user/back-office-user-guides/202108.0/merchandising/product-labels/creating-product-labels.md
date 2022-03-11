@@ -1,7 +1,7 @@
 ---
 title: Creating product labels
 description: Back Office guide for creating product labels.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-product-labels
 originalArticleId: fddd9b4b-1aec-473d-922d-e56f7040ee2e

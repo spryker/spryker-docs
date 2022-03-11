@@ -1,5 +1,6 @@
 ---
 title: "Best practices: Managing users and their permissions with roles and groups"
+last_updated: Mar 11, 2022
 description: Learn how to manage users and their permissions with roles and groups
 template: back-office-user-guide-template
 ---

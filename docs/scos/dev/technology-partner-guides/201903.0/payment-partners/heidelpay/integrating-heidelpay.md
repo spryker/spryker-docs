@@ -1,7 +1,7 @@
 ---
 title: Integrating Heidelpay
 description: This article contains information on integrating the Heidelpay module into the Spryker Commerce OS.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/heidelpay-integration-scos
 originalArticleId: 14990f17-7df5-46cc-9f57-c91f480bb058
@@ -17,8 +17,6 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/configuring-heidelpay.html
   - title: Integrating the Direct Debit payment method for Heidelpay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-direct-debit-payment-method-for-heidelpay.html
-  - title: Integrating Heidelpay into the Legacy Demoshop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/integrating-heidelpay-into-the-legacy-demoshop.html
   - title: Integrating the Paypal Authorize payment method for Heidelpay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-paypal-authorize-payment-method-for-heidelpay.html
   - title: Installing Heidelpay

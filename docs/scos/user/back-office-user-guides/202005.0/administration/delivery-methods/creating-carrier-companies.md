@@ -11,8 +11,6 @@ redirect_from:
 related:
   - title: Creating and Managing Delivery Methods
     link: docs/scos/user/back-office-user-guides/page.version/administration/delivery-methods/creating-and-managing-delivery-methods.html
-  - title: Delivery Methods- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/administration/delivery-methods/references/delivery-methods-reference-information.html
   - title: Shipment feature overview
     link: docs/scos/user/features/page.version/shipment-feature-overview.html
 ---

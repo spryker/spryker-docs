@@ -13,8 +13,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/scheduled-prices/creating-scheduled-prices.html
   - title: Managing Scheduled Prices
     link: docs/scos/user/back-office-user-guides/page.version/catalog/scheduled-prices/managing-scheduled-prices.html
-  - title: Scheduled Prices- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/scheduled-prices/references/scheduled-prices-reference-information.html
   - title: Scheduled Prices Feature Overview
     link: docs/scos/user/features/page.version/scheduled-prices-feature-overview.html
 ---

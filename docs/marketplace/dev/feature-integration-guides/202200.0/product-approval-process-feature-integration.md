@@ -2,11 +2,14 @@
 title: Product Approval Process feature integration
 description: Learn how to integrate the Product Approval Process feature into a Spryker project.
 template: feature-integration-guide-template
+last_updated: Mar 11, 2022
 ---
+
+This document describes how to integrate the Product Approval Process feature into a Spryker project.
 
 ## Install feature core
 
-Follow the steps below to install the Product Approval Process feature core.
+Follow the steps below to install the Marketplace Product Approval Process feature core.
 
 ### Prerequisites
 
@@ -41,7 +44,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up database schema and transfer objects
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -56,10 +59,6 @@ Make sure that the following changes have been applied by checking your database
 | DATABASE ENTITY                       | TYPE   | EVENT   |
 |---------------------------------------|--------|---------|
 | spy_product_abstract.approval_status  | column | added   |
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been triggered in transfer objects:
 
@@ -98,15 +97,16 @@ product-approval.message.not-approved,Product sku %sku% is not active.,en_US
 product-approval.message.not-approved,Produkt sku %sku% ist nicht aktiv.,de_DE
 ```
 
-Run the following command(s) to add the glossary keys:
+Add the glossary keys:
 
 ```bash
 console data:import:glossary
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
 Make sure that in the database the configured data are added to the `spy_glossary` table.
+
 {% endinfo_block %}
 
 2. Generate new translation cache for Zed:
@@ -123,21 +123,20 @@ console translator:generate-cache
 |-------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------------|
 | ProductApprovalCartPreCheckPlugin                           | Checks the approval status for products.                                                                                 | None          | Spryker\Zed\ProductApproval\Communication\Plugin\Cart                 |
 | ProductApprovalPreReloadItemsPlugin                         | Checks and removes not approved product items.                                                                           | None          | Spryker\Zed\ProductApproval\Communication\Plugin\Cart                 |
-| ProductApprovalCheckoutPreConditionPlugin                   | Returns `false` response if at least one quote item transfer has items with not approved product.                        | None          | Spryker\Zed\ProductApproval\Communication\Plugin\Checkout             | 
-| ProductApprovalProductAbstractPreCreatePlugin               | Expands `ProductAbstract` transfer with default approval status if `ProductAbstract.approvalStatus` property is not set. | None          | Spryker\Zed\ProductApproval\Communication\Plugin\Product              | 
-| ProductApprovalProductConcreteCollectionFilterPlugin        | Filters out products which have not `approved` status.                                                                   | None          | Spryker\Zed\ProductApproval\Communication\Plugin\ProductPageSearch    | 
-| ProductApprovalProductPageSearchCollectionFilterPlugin      | Filters out products which have not `approved` status.                                                                   | None          | Spryker\Zed\ProductApproval\Communication\Plugin\ProductPageSearch    | 
-| ProductApprovalProductAbstractStorageCollectionFilterPlugin | Filters out abstract products which have not `approved` status.                                                          | None          | Spryker\Zed\ProductApproval\Communication\Plugin\ProductStorage       | 
-| ProductApprovalProductConcreteStorageCollectionFilterPlugin | Filters out products which have not `approved` status.                                                                   | None          | Spryker\Zed\ProductApproval\Communication\Plugin\ProductStorage       | 
-| ProductApprovalProductAbstractEditViewExpanderPlugin        | Expands view data with abstract product approval status data.                                                            | None          | Spryker\Zed\ProductApprovalGui\Communication\Plugin\ProductManagement | 
-| ProductApprovalProductTableActionExpanderPlugin             | Expands product table with abstract product approval status actions.                                                     | None          | Spryker\Zed\ProductApprovalGui\Communication\Plugin\ProductManagement | 
-| ProductApprovalProductTableConfigurationExpanderPlugin      | Expands `ProductTable` configuration with abstract product approval status column.                                       | None          | Spryker\Zed\ProductApprovalGui\Communication\Plugin\ProductManagement | 
-| ProductApprovalProductTableDataBulkExpanderPlugin           | Expands product table items with abstract product approval status.                                                       | None          | Spryker\Zed\ProductApprovalGui\Communication\Plugin\ProductManagement | 
-| ProductApprovalProductTableQueryCriteriaExpanderPlugin      | Expands query criteria with approval status column.                                                                      | None          | Spryker\Zed\ProductApprovalGui\Communication\Plugin\ProductManagement | 
+| ProductApprovalCheckoutPreConditionPlugin                   | Returns `false` response if at least one quote item transfer has items with not approved product.                        | None          | Spryker\Zed\ProductApproval\Communication\Plugin\Checkout             |
+| ProductApprovalProductAbstractPreCreatePlugin               | Expands `ProductAbstract` transfer with default approval status if `ProductAbstract.approvalStatus` property is not set. | None          | Spryker\Zed\ProductApproval\Communication\Plugin\Product              |
+| ProductApprovalProductConcreteCollectionFilterPlugin        | Filters out products which have not `approved` status.                                                                   | None          | Spryker\Zed\ProductApproval\Communication\Plugin\ProductPageSearch    |
+| ProductApprovalProductPageSearchCollectionFilterPlugin      | Filters out products which have not `approved` status.                                                                   | None          | Spryker\Zed\ProductApproval\Communication\Plugin\ProductPageSearch    |
+| ProductApprovalProductAbstractStorageCollectionFilterPlugin | Filters out abstract products which have not `approved` status.                                                          | None          | Spryker\Zed\ProductApproval\Communication\Plugin\ProductStorage       |
+| ProductApprovalProductConcreteStorageCollectionFilterPlugin | Filters out products which have not `approved` status.                                                                   | None          | Spryker\Zed\ProductApproval\Communication\Plugin\ProductStorage       |
+| ProductApprovalProductAbstractEditViewExpanderPlugin        | Expands view data with abstract product approval status data.                                                            | None          | Spryker\Zed\ProductApprovalGui\Communication\Plugin\ProductManagement |
+| ProductApprovalProductTableActionExpanderPlugin             | Expands product table with abstract product approval status actions.                                                     | None          | Spryker\Zed\ProductApprovalGui\Communication\Plugin\ProductManagement |
+| ProductApprovalProductTableConfigurationExpanderPlugin      | Expands `ProductTable` configuration with abstract product approval status column.                                       | None          | Spryker\Zed\ProductApprovalGui\Communication\Plugin\ProductManagement |
+| ProductApprovalProductTableDataBulkExpanderPlugin           | Expands product table items with abstract product approval status.                                                       | None          | Spryker\Zed\ProductApprovalGui\Communication\Plugin\ProductManagement |
+| ProductApprovalProductTableQueryCriteriaExpanderPlugin      | Expands query criteria with approval status column.                                                                      | None          | Spryker\Zed\ProductApprovalGui\Communication\Plugin\ProductManagement |
 
 
-<details open>
-    <summary markdown='span'>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
+**src/Pyz/Zed/Cart/CartDependencyProvider.php**
 
 ```php
 <?php
@@ -177,10 +176,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 }
 ```
 
-</details>
-
-<details open>
-<summary markdown='span'>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
+**src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php**
 
 ```php
 <?php
@@ -207,10 +203,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 }
 ```
 
-</details>
-
-<details open>
-<summary markdown='span'>src/Pyz/Zed/Product/ProductDependencyProvider.php</summary>
+**src/Pyz/Zed/Product/ProductDependencyProvider.php**
 
 ```php
 <?php
@@ -234,10 +227,7 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
 }
 ```
 
-</details>
-
-<details open>
-<summary markdown='span'>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
+**src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php**
 
 ```php
 <?php
@@ -272,10 +262,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 }
 ```
 
-</details>
-
-<details open>
-<summary markdown='span'>src/Pyz/Zed/ProductStorage/ProductStorageDependencyProvider.php</summary>
+**src/Pyz/Zed/ProductStorage/ProductStorageDependencyProvider.php**
 
 ```php
 <?php
@@ -310,10 +297,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 }
 ```
 
-</details>
-
-<details open>
-<summary markdown='span'>src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php</summary>
+<details><summary markdown='span'>src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -385,7 +369,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, the shop owner can approve products so customers can follow the review process in his company.
+Make sure that the shop owner can approve products so customers can follow the review process in his company.
 
 {% endinfo_block %}
 
@@ -393,10 +377,9 @@ Make sure that, the shop owner can approve products so customers can follow the 
 
 | PLUGIN                                                      | SPECIFICATION                                                                                                            | PREREQUISITES | NAMESPACE                                                             |
 |-------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------------|
-| ProductApprovalAddItemPreCheckPlugin                        | Checks the product approval status for shopping list item.                                                               | None          | Spryker\Zed\ProductApproval\Communication\Plugin\ShoppingList         | 
+| ProductApprovalAddItemPreCheckPlugin                        | Checks the product approval status for shopping list item.                                                               | None          | Spryker\Zed\ProductApproval\Communication\Plugin\ShoppingList         |
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/ShoppingList/ShoppingListDependencyProvider.php</summary>
+**src/Pyz/Zed/ShoppingList/ShoppingListDependencyProvider.php**
 
 ```php
 <?php
@@ -420,11 +403,9 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 }
 ```
 
-</details>
-
 {% info_block warningBox "Verification" %}
 
-Make sure that, shopping list item can't be added to shopping list with not approved status.
+Make sure that shopping list item can't be added to shopping list with not approved status.
 
 {% endinfo_block %}
 
@@ -432,10 +413,9 @@ Make sure that, shopping list item can't be added to shopping list with not appr
 
 | PLUGIN                                          | SPECIFICATION                                                                                            | PREREQUISITES | NAMESPACE                                                                               |
 |-------------------------------------------------|----------------------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------------------------------|
-| ProductApprovalStatusProductTableExpanderPlugin | Expands GuiTableConfigurationTransfer and GuiTableDataResponseTransfer.data with approval status column. | None          | Spryker\Zed\ProductMerchantPortalGui\Communication\Plugin\ProductOfferMerchantPortalGui | 
+| ProductApprovalStatusProductTableExpanderPlugin | Expands GuiTableConfigurationTransfer and GuiTableDataResponseTransfer.data with approval status column. | None          | Spryker\Zed\ProductMerchantPortalGui\Communication\Plugin\ProductOfferMerchantPortalGui |
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/ProductOfferMerchantPortalGui/ProductOfferMerchantPortalGuiDependencyProvider.php</summary>
+**src/Pyz/Zed/ProductOfferMerchantPortalGui/ProductOfferMerchantPortalGuiDependencyProvider.php**
 
 ```php
 <?php
@@ -459,11 +439,9 @@ class ProductOfferMerchantPortalGuiDependencyProvider extends SprykerProductOffe
 }
 ```
 
-</details>
-
 {% info_block warningBox "Verification" %}
 
-Make sure that, `GuiTableDataResponseTransfer.data` was extended with approval status column.
+Make sure that `GuiTableDataResponseTransfer.data` was extended with approval status column.
 
 {% endinfo_block %}
 
@@ -473,7 +451,7 @@ Follow the steps to import product approval data:
 
 1. Prepare data according to your requirements using the following demo data:
 
-<details open>
+<details>
 <summary markdown='span'>data/import/common/common/product_abstract_approval_status.csv</summary>
 
 ```yaml
@@ -707,11 +685,10 @@ cable-vga-1,approved
 
 </details>
 
-
 | COLUMN          | Required | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                                                |
 |-----------------|----------|-----------|--------------|-----------------------------------------------------------------|
-| concrete_sku    | ✓        | string    | 214          | Unique abstract product identifier.                             |
-| approval_status | ✓        | string    | approved     | Product status (draft, waiting_for_approval, approved, denied). | 
+| concrete_sku    | &check;        | string    | 214          | Unique abstract product identifier.                             |
+| approval_status | &check;        | string    | approved     | Product status (draft, waiting_for_approval, approved, denied). |
 
 2. Register the following data import plugins:
 
@@ -719,10 +696,7 @@ cable-vga-1,approved
 |------------------------------------------------|---------------------------------------------|---------------|-----------------------------------------------------------------------|
 | ProductAbstractApprovalStatusDataImportPlugin  | Imports abstract product approval statuses. | None          | Spryker\Zed\ProductApprovalDataImport\Communication\Plugin\DataImport |
 
-
-
-<details open>
-<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+**src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
 ```php
 <?php
@@ -746,9 +720,8 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-</details>
-
 3. Import data:
+
 ```bash
 console data:import product-approval-status
 ```

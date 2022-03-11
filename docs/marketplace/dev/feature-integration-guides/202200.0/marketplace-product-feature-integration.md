@@ -1,8 +1,8 @@
 ---
 title: Marketplace Product feature integration
-last_updated: Mar 8, 2022
 description: This document describes the process how to integrate the Marketplace Product feature into a Spryker project.
 template: feature-integration-guide-template
+last_updated: Mar 11, 2022
 ---
 
 This document describes how to integrate the Marketplace Product feature into a Spryker project.
@@ -202,13 +202,14 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that you can create a new product in the Merchant Portal and observe it after creation in the product data table.
 
 {% endinfo_block %}
 
-**src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php**
+<details><summary markdown='span'>src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -252,7 +253,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
             new MerchantProductAbstractListActionViewDataExpanderPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractEditViewExpanderPluginInterface>
      */
@@ -266,6 +267,8 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 }
 ```
 
+</details>
+
 {% info_block warningBox "Verification" %}
 
 Make sure that you can filter products by merchant in `http://zed.de.demo-spryker.com/product-management`.
@@ -273,7 +276,7 @@ Make sure that you can see the merchant name in `http://zed.de.demo-spryker.com/
 
 {% endinfo_block %}
 
-**src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php**
+<details><summary markdown='span'>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -320,6 +323,8 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
     }
 }
 ```
+
+</details>
 
 {% info_block warningBox "Verification" %}
 
@@ -517,7 +522,7 @@ Register the following plugins to enable data import:
 | ------------------ | ----------------- | --------- | -------------------------- |
 | MerchantProductDataImportPlugin | Imports merchant product data into the database. |           | Spryker\Zed\MerchantProductDataImport\Communication\Plugin |
 
- **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
+**src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
 ```php
 <?php
@@ -597,7 +602,7 @@ console frontend:yves:build
 
 Make sure that  for the merchant products you can see the merchant name on the product details page.
 
-Make sure that when you add merchant product to cart, on a cart page is has the *Sold By* widget displayed.
+Make sure that when you add merchant product to cart, on a cart page is has the **Sold By** widget displayed.
 
 {% endinfo_block %}
 

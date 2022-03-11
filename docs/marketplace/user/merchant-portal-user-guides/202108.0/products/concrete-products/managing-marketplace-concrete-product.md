@@ -58,9 +58,9 @@ To edit an existing marketplace concrete product:
 |                |  Concrete Product is online    | The selected check box makes the product active and available in store. |               |
 | Stock          |                  | Defines the stock of the concrete product. |           |
 |                 |   Reserved Stock           | Number of items of this concrete product that are reserved according to *Orders*. |               |
-|                  |  Quantity                 | Number of items available in the warehouse. The default is 0. | ✓ |
+|                  |  Quantity                 | Number of items available in the warehouse. The default is 0. | &check; |
 |                  |  Always in Stock           | The selected check box makes the product always available for purchase. |               |
-| Name                  |  | Name of your product displayed on the Storefront. | ✓ |
+| Name                  |  | Name of your product displayed on the Storefront. | &check; |
 |               |  Use Abstract Product name for all locales   | Select the check box to take over the name of the abstract. |              |
 | Description           |  | Product description. |           |
 |              |  Use Abstract Product description for all locales    | Select the check box to take over the description of the abstract.. |       |

@@ -2,7 +2,10 @@
 title: Marketplace Product Approval Process feature integration
 description: Learn how to integrate the Marketplace Product Approval Process feature into a Spryker project.
 template: feature-integration-guide-template
+last_updated: Mar 11, 2022
 ---
+
+This document describes how to integrate the Marketplace Product Approval Process feature into a Spryker project.
 
 ## Install feature core
 
@@ -39,7 +42,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up database schema and transfer objects
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -90,8 +93,7 @@ Enable the following behaviors by registering the plugins:
 | MerchantProductApprovalProductAbstractPreCreatePlugin | Expands product abstract transfer with default merchant product approval status when `ProductAbstractTransfer::approvalStatus` is null. | None          | Spryker\Zed\MerchantProductApproval\Communication\Plugin\Product    |
 
 
-<details open>
-    <summary markdown='span'>src/Pyz/Zed/Product/ProductDependencyProvider.php</summary>
+**src/Pyz/Zed/Product/ProductDependencyProvider.php**
 
 ```php
 <?php
@@ -115,29 +117,23 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
 }
 ```
 
-</details>
-
 ### 5) Import data
 
 Follow the steps to import product approval data:
 
 1. Prepare data according to your requirements using the following demo data:
 
-<details open>
-    <summary markdown='span'>data/import/common/common/marketplace/merchant_product_approval_status_default.csv</summary>
+**data/import/common/common/marketplace/merchant_product_approval_status_default.csv**
 
 ```yaml
 merchant_reference,approval_status
 MER000002,approved
 ```
 
-</details>
-
-
 | COLUMN             | Required | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                                        |
 |--------------------|----------|-----------|--------------|---------------------------------------------------------|
-| merchant_reference | ✓        | string    | MER000002    | Unique merchant identifier.                             |
-| approval_status    | ✓        | string    | approved     | Status (draft, waiting_for_approval, approved, denied). | 
+| merchant_reference | &check;        | string    | MER000002    | Unique merchant identifier.                             |
+| approval_status    | &check;        | string    | approved     | Status (draft, waiting_for_approval, approved, denied). |
 
 2. Register the following data import plugins:
 
@@ -145,9 +141,7 @@ MER000002,approved
 |-------------------------------------------------------|--------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------|
 | MerchantProductApprovalStatusDefaultDataImportPlugin  | Iterates over the data sets and imports merchant default product approval statuses into the database.  | None          | Spryker\Zed\MerchantProductApprovalDataImport\Communication\Plugin\DataImport  |
 
-
-<details open>
-<summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
+**src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
 ```php
 <?php
@@ -171,9 +165,8 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-</details>
-
 3. Import data:
+
 ```bash
 console data:import merchant-product-approval-status-default
 ```

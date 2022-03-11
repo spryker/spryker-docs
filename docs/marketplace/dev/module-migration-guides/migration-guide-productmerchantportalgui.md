@@ -22,13 +22,18 @@ This release is a part of the **Product Approval** concept migration. When you u
 composer require spryker/product-merchant-portal-gui: "^2.0.0" --update-with-dependencies
 ```
 
-2. Generate new translation cache for Zed:
+2. Update the generated classes:
+```bash
+console transfer:generate
+```
+
+3. Generate new translation cache for Zed:
 
 ```bash
 console translator:generate-cache
 ```
 
-3. Run the following command to enable Javascript and CSS changes for Zed:
+4. Run the following command to enable Javascript and CSS changes for Zed:
 
 ```bash
 console frontend:zed:build

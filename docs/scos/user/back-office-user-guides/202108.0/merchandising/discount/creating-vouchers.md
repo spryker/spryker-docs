@@ -23,7 +23,7 @@ Vouchers are codes that customers can redeem during checkout. Voucher codes are 
 
 To start working with discounts, navigate to **Merchandising** > **Discount**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating a voucher
 
@@ -297,7 +297,7 @@ This section contains a set of tables that describe fields, value types, and ope
 
 |FIELD|PLAIN QUERY|VALUE TYPE|DESCRIPTION|
 |-|-|-|-|
-|Calendar week|calender-week|Number|Week number in a year (1-52)|
+|Calendar week|calendar-week|Number|Week number in a year (1-52)|
 |Day of week|day-of-week|Number|Day of week (1-7)|
 |Grand total|grand-total|Number (Decimal)|Sum of all totals|
 |Subtotal|sub-total|Number (Decimal)|Sum of item prices w/o shipment expenses and discounts|

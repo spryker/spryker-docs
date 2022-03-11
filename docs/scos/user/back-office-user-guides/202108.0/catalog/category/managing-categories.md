@@ -28,7 +28,7 @@ This topic describes how to manage categories:
 
 To start managing categories, go to **Catalog** > **Category**.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Ordering products in categories
 
@@ -161,7 +161,7 @@ Select such a template to have slots for this category page. Slots can embed con
 
 To delete a category:
 
- 1. In the *Actions* drop-down, select **Delete** next to a specific category.
+1. In the *Actions* drop-down, select **Delete** next to a specific category.
 You are taken to the *Delete category [Category name]* page.
 On *Delete category [Category name]*, you see detailed information about everything that will be de-assigned, moved, or deleted along with that category.
 2. Select the checkbox next to **Yes, I am sure** to confirm your awareness and click **Delete**.

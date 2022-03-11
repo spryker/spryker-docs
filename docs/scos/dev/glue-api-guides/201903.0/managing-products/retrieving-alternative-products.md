@@ -73,7 +73,7 @@ To be able to use Product Alternatives API, first, you need to have the Alternat
 {% endinfo_block %}
 
 ## Checking Whether Product is Discontinued
-Before suggesting an alternative product, first, you need to identify whether a product is still available, i.e. not discontinued. For this purpose, the response of the `/concrete-products` endpoint has been extended with the following attributes:
+Before suggesting an alternative product, first, you need to identify whether a product is still available, for example, not discontinued. For this purpose, the response of the `/concrete-products` endpoint has been extended with the following attributes:
 
 | Attribute | Type | Description |
 | --- | --- | --- |

@@ -27,7 +27,7 @@ You can either view or close the reclamation from the _Actions_ column of the *L
 
 {% endinfo_block %}
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Viewing reclamations
 
@@ -46,7 +46,7 @@ Click **View** next to the order you want to view the reclamation for. You are t
 ## Closing reclamations
 
 To close a reclamation, click **Close** next to the order you want to close the reclamation for.
-The state of the reclamation chages from **Open** to **Closed** in the _State_ column.
+The state of the reclamation changes from **Open** to **Closed** in the _State_ column.
 
 **Tips & tricks**
 <br>While viewing a reclamation, you can:

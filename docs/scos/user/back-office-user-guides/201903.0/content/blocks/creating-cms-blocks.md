@@ -20,13 +20,16 @@ To start working with the CMS blocks, navigate to the **Content Management > Blo
 Here you can create a new CMS block, specify for which store and how long it will be visible in the online store, as well as create category or product detail pages.
 
 ## Creating a CMS Block
+
 To create a block:
 
 1. On the **Overview of CMS Blocks** page,  click  **Create block** in the top right corner.
 2. On the **Create CMS Block** page that opens, enter the block details:
-{% info_block warningBox %}
-**Store relation**, **Template**, and **Name** must be filled in. All other fields are optional.
-{% endinfo_block %}
+  {% info_block warningBox %}
+  
+  **Store relation**, **Template**, and **Name** must be filled in. All other fields are optional.
+  
+  {% endinfo_block %}
 
 * Store relation
 * Template
@@ -38,7 +41,9 @@ To create a block:
 * Products
 
 {% info_block infoBox %}
+
 Templates are project-specific and are usually created by a developer and a business person. If you are missing a CMS Block template, contact them and refer to the [HowTo - Create a CMS Block template](/docs/scos/dev/tutorials/201903.0/howtos/feature-howtos/cms/howto-create-cms-templates.html#adding-a-template-for-a-cms-block).
+
 {% endinfo_block %}
 
 See [CMS Blocks: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/blocks/references/cms-block-reference-information.html) to learn more about CMS blocks attributes.)
@@ -46,6 +51,7 @@ See [CMS Blocks: Reference Information](/docs/scos/user/back-office-user-guides/
 3. To save the changes, click **Save**. This will successfully create a block and take you to the **Edit Block Glossary** page.
 
 ***
+
 **What's next?**
 
 A new block has been created. Now, you can add the content if needed.

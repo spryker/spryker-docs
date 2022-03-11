@@ -1,5 +1,5 @@
 ---
-title: Product feature integration
+title: Glue API - Product feature integration
 description: This guide will navigate you through the process of installing and configuring the Product API feature in Spryker OS.
 last_updated: Jan 26, 2022
 template: feature-integration-guide-template

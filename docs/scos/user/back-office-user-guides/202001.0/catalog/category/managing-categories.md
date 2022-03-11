@@ -96,6 +96,7 @@ If at some point of time you need to delete a category, you will use the **Categ
 Products assigned to this category will not be deleted. They will be de-assigned and continue to exist in the system. If the same products are assigned to other categories, they will stay assigned to those.
 
 {% endinfo_block %}
+
 ***
 
 **Tips & Tricks**

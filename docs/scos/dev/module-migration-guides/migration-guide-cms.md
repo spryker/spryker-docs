@@ -259,7 +259,7 @@ To install the module, `"spryker/cms-block": "^1.0.0"` with Composer is required
 
 After running the last command, you’ll find some new classes in your project under the `\Orm\Zed\Cms\Persistence` namespace.
 
-It’s important to make sure that they are extending the base classes from the core, i.e.
+It’s important to make sure that they are extending the base classes from the core, for example: 
 * `Orm\Zed\Cms\Persistence\SpyCmsBlock` extends `Spryker\Zed\CmsBlock\Persistence\Propel\AbstractSpyCmsBlock`
 * `Orm\Zed\Cms\Persistence\SpyCmsBlockQuery` extends `Spryker\Zed\CmsBlock\Persistence\Propel\AbstractSpyCmsBlockQuery.`
 
@@ -513,7 +513,7 @@ To start Database migration, run the following commands:
 * `vendor/bin/console propel:migrate`
 * `vendor/bin/console propel:model:build`
 
-After running the last command, you will find some new classes in your project under the `\Orm\Zed\Cms\Persistence` namespace. It is important to make sure that they are extending the base classes from the core, i.e.
+After running the last command, you will find some new classes in your project under the `\Orm\Zed\Cms\Persistence` namespace. It is important to make sure that they are extending the base classes from the core, for example: 
 
 * `Orm\Zed\Cms\Persistence\SpyCmsVersion` extends  `Spryker\Zed\Cms\Persistence\Propel\SpyCmsVersion`
 
@@ -667,4 +667,4 @@ We have extended CMS pages with localized attributes such as name and HTML meta 
 * `vendor/bin/console propel:diff`, also manual review is necessary for the generated migration file.
 * `vendor/bin/console propel:migrate`
 * `vendor/bin/console propel:model:build`
-* After running the last command you’ll find some new classes in your project under the `\Orm\Zed\Cms\Persistence` namespace. It’s important to make sure that they are extending the base classes from the core, i.e. `Orm\Zed\Cms\Persistence\SpyCmsPageLocalizedAttributes` extends `Spryker\Zed\Cms\Persistence\Propel\AbstractSpyCmsPageLocalizedAttributes`, and `Orm\Zed\Cms\Persistence\SpyCmsPageLocalizedAttributesQuery` extends `Spryker\Zed\Cms\Persistence\Propel\AbstractSpyCmsPageLocalizedAttributesQuery`.
+* After running the last command you’ll find some new classes in your project under the `\Orm\Zed\Cms\Persistence` namespace. It’s important to make sure that they are extending the base classes from the core, for example, `Orm\Zed\Cms\Persistence\SpyCmsPageLocalizedAttributes` extends `Spryker\Zed\Cms\Persistence\Propel\AbstractSpyCmsPageLocalizedAttributes`, and `Orm\Zed\Cms\Persistence\SpyCmsPageLocalizedAttributesQuery` extends `Spryker\Zed\Cms\Persistence\Propel\AbstractSpyCmsPageLocalizedAttributesQuery`.

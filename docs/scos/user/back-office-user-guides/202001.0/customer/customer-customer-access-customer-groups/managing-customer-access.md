@@ -33,7 +33,7 @@ To define the restrictions:
     * **Shopping List** - if selected, no **Add to Shopping List** option is available
     * **Can place an order** - if selected, the not logged in user is not able to place in order.
 
-    {% info_block errorBox "**B2B Only**" %}
+    {% info_block errorBox "B2B Only" %}
 
     This option is selected by default and cannot be deselected.
 

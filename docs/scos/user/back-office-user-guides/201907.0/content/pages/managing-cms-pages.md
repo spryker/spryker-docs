@@ -25,12 +25,17 @@ This article describes the managing actions you can perform on CMS pages:
 publish, view, preview, edit, and activate or deactivate CMS pages.
 
 ***
+
 To start managing CMS pages, navigate to the **Content Management** > **Pages** section.
 ***
+
 ## Previewing CMS Pages
 If you would like to see how your page will look like before you publish it, you can preview it in your browser.
+
 {% info_block warningBox "Note" %}
- To be able to preview a draft of your page, you need to link your Zed account to an Yves account.
+
+To be able to preview a draft of your page, you need to link your Zed account to an Yves account.
+
 {% endinfo_block %}
 
 **To link a Zed customer to an Yves customer:**
@@ -38,9 +43,12 @@ If you would like to see how your page will look like before you publish it, you
 1. Navigate to **Users Control** > **User**.
 2. On the **Users list** page, click **Assign Customers to User: Zed account e-mail** in the _Actions_ column. This will take you to the **Assign Customers** page.
 3. Select a user you would like to assign to your Zed account.
-    {% info_block warningBox "Note" %}
-Keep in mind that a customer **cannot** be assigned to multiple users at a time.
-{% endinfo_block %}
+  {% info_block warningBox "Note" %}
+  
+  Keep in mind that a customer **cannot** be assigned to multiple users at a time.
+
+  {% endinfo_block %}
+
 4. To keep the changes, click **Save**.
 
 After you linked your Yves customer to your Zed user, make sure that you are logged in to Zed with your Zed account and logged in to Yves with the assigned customer account.
@@ -57,6 +65,7 @@ You can use the Preview mode from either the **Overview of CMS Pages** page or t
 ***
 
 ## Publishing a Page
+
 Until now we have created a draft of the page and added some content. Thus, to keep changes and display them on the shop website, you need to publish them.
 
 You can publish your page either from the **Overview of CMS Pages** page or from the **Edit Placeholders** editor.
@@ -67,25 +76,30 @@ You can publish your page either from the **Overview of CMS Pages** page or from
 
 **To publish a page from the Edit Placeholders editor**, see the [Edit Placeholders](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/editing-cms-pages.html#selecting-the-placeholders-option) section.
 ***
+
 ## Viewing a Page
+
 To view a page:
 1. On the **Overview of CMS Pages** page, click **View** in the _Actions_ column.
 2. From the drop-down list, you can select the following options:
-    *  **Preview**: This option allows you to see the way the page will look like in the online store before publishing it.
-    *  **In Zed**: This option opens the View CMS Page editor that includes general information about a published page, as well as its URL and metadata.
-    *  **In Shop**: This option opens a live page in the online store. 
-    *  **Version History**: This option opens the Version History: Page name page that displays all available versions of the page and general information of the version you are currently using.
+  * **Preview**: This option allows you to see the way the page will look like in the online store before publishing it.
+  * **In Zed**: This option opens the View CMS Page editor that includes general information about a published page, as well as its URL and metadata.
+  * **In Shop**: This option opens a live page in the online store. 
+  * **Version History**: This option opens the Version History: Page name page that displays all available versions of the page and general information of the version you are currently using.
  3. To view the page details in Zed, click **View > In Zed**.
  4. On the **View CMS Page: [Page name]** page that opens, the following information is available:
-    * General information
-    * URLs
-    * SEO information
-    * Placeholders
+  * General information
+  * URLs
+  * SEO information
+  * Placeholders
 
 {% info_block infoBox %}
-See  [CMS Page: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/references/cms-pages-reference-information.html
-{% endinfo_block %}  to learn more about attributes on this page.)
+
+See  [CMS Page: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/references/cms-pages-reference-information.html)  to learn more about attributes on this page.
+
+{% endinfo_block %}
 ***
+
 **Tips & Tricks**
 On the **View CMS Page: [Page name]** page, you can do the following:
 
@@ -102,12 +116,15 @@ On the **View CMS Page: [Page name]** page, you can do the following:
 * Return to the _Overview of CMS pages_ page by clicking **Back to CMS**.
 
 ***
+
 ## Activating and Deactivating Pages
+
 You can activate (make visible in the shop application) or deactivate (make invisible in the shop application) CMS pages.
 
 To activate a page, click **Activate** in the _Actions_ column on the _Overview of CMS Pages_ page.
 
 To deactivate a page, click **Deactivate** in the _Actions_ column on the _Overview of CMS Pages_ page. This will change the status to Inactive and remove the page from the store website.
+
 ***
 **What's next?**
 To know more about the attributes you see, select and enter while managing CMS pages, see the [CMS Pages: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/references/cms-pages-reference-information.html) article. 

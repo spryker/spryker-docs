@@ -34,6 +34,6 @@ Every merchant can view only the shipment of their product offers and products o
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Marketplace Shipment](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-shipment-feature-walkthrough.html) feature walkthrough <!---LINK--> for developers.
+Are you a developer? See [Marketplace Shipment](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-shipment-feature-walkthrough.html) feature walkthrough for developers.
 
 {% endinfo_block %}

@@ -29,7 +29,7 @@ The following table describes attributes you see when viewing refunds on the *Ov
 
 | ATTRIBUTE | DESCRIPTION  |
 | --- | --- |
-| Refind Id| ID of a specific refund. |
+| Refund Id| ID of a specific refund. |
 |Sales Order Id  | ID of the order that derives from **Sales** > **Orders**. |
 | Refund date | Date when a specific refund has been created.|
 | Amount | Amount of money to refund. This amount value derives from Item Total in **Sales** > **Orders**.|

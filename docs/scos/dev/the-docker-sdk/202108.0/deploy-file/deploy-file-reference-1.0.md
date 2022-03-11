@@ -1,7 +1,7 @@
 ---
 title: Deploy file reference - 1.0
 description: Use this reference to create a deploy file for building environment for Spryker in Docker.
-last_updated: Jan 26, 2022
+last_updated: Jun 30, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/deploy-file-reference-10
 originalArticleId: 9bba41b4-3fc7-4129-a2b7-8e98d32b5f20
@@ -10,10 +10,12 @@ redirect_from:
   - /2021080/docs/en/deploy-file-reference-10
   - /docs/deploy-file-reference-10
   - /docs/en/deploy-file-reference-10
-  - /docs/scos/dev/the-docker-sdk/202108.0/deploy-file-reference-1.0.html
+  - /docs/scos/dev/the-docker-sdk/202108.0/deploy-file-reference-1.0.html  
 related:
   - title: Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
+redirect_from:  
+  - /docs/scos/dev/the-docker-sdk/202108.0/deploy-file-reference-1.0.html
 ---
 
 This reference page describes version 1 of the Deploy file format. This is the newest version.
@@ -135,13 +137,33 @@ environment: 'docker'
 
 ### imports:
 
-Defines additional deploy files to be included into a build. The files must exist on a [project or base layer](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html).
+Defines any of the following:
 
+* Imports of additional deploy files to be included into a build. Supports imports of the same deploy file multiple times. To define a deploy file and dynamic parameters for this type of import, see [imports: {import_name}:](#imports-importname).
+```yaml
+imports:
+    {import_name}:
+    {import_name}:       
+```     
+
+* Additional deploy files to be included into a build. To define dynamic parameters for this type of import, see [imports: {deploy_file_name}:](#imports-deployfilename).
 ```yaml
 version: 1.0
 imports:
-    deploy.base.template.yml:
+    {deploy_file_name}:
+    {deploy_file_name}:
 ```
+
+* An array of additional deploy files to be included into a build. Supports imports of the same deploy file multiple times. To define dynamic parameters for this type of import, see [imports: parameters:](#imports-parameters)
+```yaml
+imports:
+    - template: {deploy_file_name}
+    - template: {deploy_file_name}
+```
+
+The files must exist on a [project or base layer](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html).
+
+
 
 {% info_block infoBox "Merged deploy files" %}
 
@@ -151,6 +173,64 @@ If you include a deploy file, the included deploy file is merged with the origin
 
 
 ***
+
+### imports: parameters:
+
+Defines the [dynamic parameters](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html#dynamic-parameters) to be used when parsing the included deploy file. In the included deploy file, the parameter name should be wrapped in `%`.
+
+```yaml
+imports:
+  - template: {deploy_file_name}
+    parameters:
+      {dynamic_parameter_name}: '{dynamic_parameter_value}'
+      {dynamic_parameter_name}: '{dynamic_parameter_value}'
+```            
+
+Example:
+```yaml
+imports:
+  - template: deploy.porject.yml
+    parameters:
+      env-name: 'dev'
+      locale: 'en'
+```
+
+{% info_block warningBox "" %}
+
+Affects the included deploy file that it follows in an array of included deploy files. To learn how you can add dynamic parameters for other types of imports, see [imports: {import_name}:](#imports-importname) and [imports: {deploy_file_name}:](#imports-deployfilename).
+
+{% endinfo_block %}
+
+***
+
+
+### imports: {import_name}:
+
+Defines the configuration of the import:
+* `{import_name}: template:` — defines the deploy file to be included into a build  as part of this import.
+* `{import_name}: parameters:` - defines the [dynamic parameters](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html#dynamic-parameters) to be used when parsing the included deploy file. In the included deploy file, the parameter name should be wrapped in `%`.
+
+```yaml
+imports:
+    {import_name}:
+        template: {deploy_file_name}
+        parameters:
+          {dynamic_parameter_name}: '{dynamic_parameter_value}'
+          {dynamic_parameter_name}: '{dynamic_parameter_value}'
+```
+Example:
+```yaml
+imports:
+    base:
+        template: deploy.base.template.yml
+        parameters:
+          env_name: 'dev'
+          locale: 'en'
+```
+
+***
+
+
 
 ### imports: {deploy_file_name}:
 
@@ -164,6 +244,7 @@ imports:
     {deploy_file_name}:
       parameters:
         {dynamic_parameter_name}: '{dynamic_parameter_value}'
+        {dynamic_parameter_name}: '{dynamic_parameter_value}'  
 ```
 Example:
 
@@ -173,15 +254,10 @@ imports:
     deploy.base.template.yml:
       parameters:
         env_name: 'dev'
+        locale: 'en'
 ```
 
 ***
-
-
-
-
-
-
 
 ### image:
 

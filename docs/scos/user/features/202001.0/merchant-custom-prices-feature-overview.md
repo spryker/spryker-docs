@@ -1,5 +1,5 @@
 ---
-title: Prices per Merchant Relation Feature Overview
+title: Merchant Custom Prices feature overview
 description: This feature relates to prices set for individual merchant relations. Customers see only prices applying to them, based on their merchant relation.
 last_updated: Jan 26, 2022
 template: concept-topic-template

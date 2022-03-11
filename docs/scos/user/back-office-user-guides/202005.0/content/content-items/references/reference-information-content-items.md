@@ -1,5 +1,5 @@
 ---
-title: Content Items- Reference Information
+title: Reference information - Content Items
 description: The guide provides reference information you work with when creating, updating and viewing content items in the Back Office.
 last_updated: Jan 26, 2022
 template: back-office-user-guide-template

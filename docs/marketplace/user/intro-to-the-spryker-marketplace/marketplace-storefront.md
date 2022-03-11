@@ -42,7 +42,7 @@ On the *Cart* page, a merchant reference is displayed for each product. The merc
 At the Shipment checkout step, a merchant reference is displayed for each item. The merchant names are clickable and lead to the merchant profile pages.
 
 
-If a customer is ordering products from multiple merchants, the products are going to be shipped from multiple locations, so the shipments <!---LINK--> are automatically grouped by merchants.
+If a customer is ordering products from multiple merchants, the products are going to be shipped from multiple locations, so the [shipments](/docs/marketplace/user/features/{{site.version}}/marketplace-shipment-feature-overview.html) are automatically grouped by merchants.
 
 ![Shipment step](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Marketplace+Storefront/shipment-step.png)
 

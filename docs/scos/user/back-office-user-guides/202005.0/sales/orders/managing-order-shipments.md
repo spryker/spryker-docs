@@ -48,9 +48,12 @@ To edit shipment details:
     * Edit a delivery address and a shipment method (without any impact on the order totals). To do this, click a respective field and select the shipment item from the drop-down menu.
     * Define a delivery date. To do this, click the **Respective delivery date** field and select the date you want your shipment to be delivered.
     * Move items from the other order shipments to the current one. To do this, scroll down to the *Order items inside this shipment* section and select the checkbox for the necessary order item. By default, order items included in the current shipment are disabled.
+  
     {% info_block warningBox %}
-The shipment is automatically deleted if it doesn't contain any items.
-{% endinfo_block %}
+
+    The shipment is automatically deleted if it doesn't contain any items.
+    
+    {% endinfo_block %}
 3. Once done, click **Save** to keep the changes. This will take you to the **View Order: [Order ID]** page with the following message: '*Shipment has been successfully edited'*.
 
 **Tips & Tricks**

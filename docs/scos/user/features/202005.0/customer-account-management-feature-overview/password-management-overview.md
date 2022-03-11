@@ -1,5 +1,5 @@
 ---
-title: Password Management Feature Overview
+title: Password Management Overview
 description: Spryker offers multiple ways of managing customer account passwords.
 last_updated: Jan 26, 2022
 template: concept-topic-template

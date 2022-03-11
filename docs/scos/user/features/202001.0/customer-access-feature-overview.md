@@ -1,5 +1,5 @@
 ---
-title: Hide Content from Logged out Users Overview
+title: Customer Access feature overview
 description: Hide Content from Logged out Users allows deciding whether certain information is visible to logged out users or not
 last_updated: Jan 26, 2022
 template: concept-topic-template
@@ -12,7 +12,7 @@ redirect_from:
   - /v4/docs/en/hide-content-from-logged-out-users
 ---
 
-Hide Content from Logged out Users allows Store Administrators to decide whether a certain information is visible to logged out users or not.
+Customer Access feature allows Store Administrators to decide whether a certain information is visible to logged out users or not.
 
 After enabling the feature in your project, Store Administrator can see a new submenu **Customer Access** under **Customer** menu. Using Customer Access submenu, Store Administrator can hide the following content types:
 

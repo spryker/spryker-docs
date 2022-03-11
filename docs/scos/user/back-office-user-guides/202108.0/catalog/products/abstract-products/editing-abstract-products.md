@@ -21,7 +21,7 @@ This document describes how to edit abstract products.
 
 To start working with abstract products, go to  **Catalog** > **Products**.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process. 
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process. 
 
 ## Editing general settings of an abstract product
     
@@ -77,7 +77,7 @@ To edit volume prices of an abstract product:
 1. Next to the product you want to edit add volume prices of, select **Edit**.
 2. On the *Edit Product Abstract [SKU]* page, switch to the *Price & Tax* tab.
 3. Next to the store you want to edit volume prices for, select **> Edit Product Volume Price**.
-4. On the *Add volume prices* page, enter a **Qunatity**.
+4. On the *Add volume prices* page, enter a **Quantity**.
 5. Enter a **Gross price**.
 6. Optional: Enter a **Net price**.
 7. Optional: To add more volume prices than the number of the rows displayed on the page, select **Save and add more rows**.
@@ -85,9 +85,9 @@ To edit volume prices of an abstract product:
 9. Select **Save and exit**.
     This opens the *Edit Product Abstract [SKU]* page with the success message displayed. 
     
-### Reference information: Editing volume pirces of an abstract product
+### Reference information: Editing volume prices of an abstract product
 
-The following table describes the attributes you enter and select when editing volume pirces of an abstract product.
+The following table describes the attributes you enter and select when editing volume prices of an abstract product.
     
 | ATTRIBUTE | DESCRIPTION | 
 | --- | --- |
@@ -136,7 +136,7 @@ To edit product images:
         *  **Large Image URL**
         *  **Sort order**
     * To delete large and small images, select **Delete image**.
-    * To delete an image set with its images, selecte **Delete image set**.
+    * To delete an image set with its images, select **Delete image set**.
 5. Repeat step *4* until you update images for all the desired locales.
 6.  Select **Save**.
     The page refreshes with the success message displayed.

@@ -9,7 +9,7 @@ originalLink: https://documentation.spryker.com/v5/docs/docker-installation-prer
 This document describes the prerequisites for installing Spryker in Docker on Windows.
 
 
-## System requirements
+## System requirements for installing Spryker with Docker
 
 Review the system and software requirements in the table.
 

@@ -32,7 +32,7 @@ To start managing orders, go to **Sales** > **Orders**.
 
 The instructions assume that there is an existing order with the *Payment pending* status.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Changing order statuses
 
@@ -132,7 +132,7 @@ This section describes attributes you see when creating a return.
 
 By default, the last created order goes on top of the table. However, you can sort the table by the order number, order reference, created date, customer emails, or the number of items ordered.
 
-On the *Orders* page, you see the followning:
+On the *Orders* page, you see the following:
 
 * Order number, reference, and the creation date.
 * Customer name and email.
@@ -215,7 +215,7 @@ To [claim an order](/docs/scos/user/features/{{page.version}}/reclamations-featu
     The page refreshes to show the success message about reclamation creation.
 
 **Tips & tricks**
-<br>laiming an order does not change the status of the order or the items inside the order. When a reclamation is created, a sales team member processes the order manually.
+<br>Claiming an order does not change the status of the order or the items inside the order. When a reclamation is created, a sales team member processes the order manually.
 
 ### Reference information: Claiming orders
 
@@ -255,7 +255,7 @@ To edit a billing address:
 
 ### Reference information: Editing billing addresses
 
-The followning table describes the attributes you enter and select when adding a new customer address.
+The following table describes the attributes you enter and select when adding a new customer address.
 
 | ATTRIBUTE | DESCRIPTION |
 |---|---|

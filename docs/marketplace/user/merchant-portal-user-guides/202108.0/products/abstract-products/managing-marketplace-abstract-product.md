@@ -11,7 +11,7 @@ This document describes how to manage marketplace abstract products in the Merch
 
 To start working with marketplace abstract products, go to the **Merchant Portal** > **Products**.
 
-This article contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+This article contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 
 ## Filtering and sorting marketplace abstract products

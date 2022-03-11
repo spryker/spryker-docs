@@ -33,7 +33,7 @@ Make sure you have a [company role](/docs/scos/user/back-office-user-guides/{{pa
 
 {% endinfo_block %}
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating company users
 

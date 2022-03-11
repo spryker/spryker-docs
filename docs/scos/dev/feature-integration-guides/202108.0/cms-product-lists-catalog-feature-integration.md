@@ -1,6 +1,6 @@
 ---
-title: CMS + product lists + catalog feature integration
-last_updated: Jan 26, 2022
+title: CMS + Product Lists + Catalog feature integration
+last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/cms-page-search-product-lists-catalog-feature-integration
 originalArticleId: c395ad85-27ce-44f2-a18f-69fce0d46ba6

@@ -1,5 +1,5 @@
 ---
-title: Approval process feature integration
+title: Approval Process feature integration
 description: This guide describes all steps needed to be performed in order to integrate the Approval Process feature into your project.
 last_updated: Jan 26, 2022
 template: feature-integration-guide-template

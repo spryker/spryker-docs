@@ -1,5 +1,5 @@
 ---
-title: Product + order management feature integration
+title: Product + Order Management feature integration
 description: This guide provides step-by-step instructions on integrating Product + Order Management feature into your project.
 last_updated: Jan 26, 2022
 template: feature-integration-guide-template

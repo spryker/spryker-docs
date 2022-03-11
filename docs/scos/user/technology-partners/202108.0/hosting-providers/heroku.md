@@ -12,6 +12,11 @@ Heroku is a container-based cloud Platform as a Service (PaaS). Developers use H
 
 Heroku is fully managed, giving developers the freedom to focus on their core product without the distraction of maintaining servers, hardware, or infrastructure. The Heroku experience provides services, tools, workflows, and polyglot support—all designed to enhance developer productivity.
 
+## Related Developer guides
+
+* [Integrating Heroku](/docs/scos/dev/technology-partner-guides/{{page.version}}/hosting-providers/integrating-heroku.html).
+
+
 ---
 
 ## Copyright and Disclaimer
@@ -19,7 +24,3 @@ Heroku is fully managed, giving developers the freedom to focus on their core pr
 See [Disclaimer](https://github.com/spryker/spryker-documentation).
 
 ---
-
-## Integration
-
-To learn how to integrate Heroku into a Spryker project, see [Heroku technology partner integration](/docs/scos/dev/technology-partner-guides/{{page.version}}/hosting-providers/heroku-technology-partner-integration.html).

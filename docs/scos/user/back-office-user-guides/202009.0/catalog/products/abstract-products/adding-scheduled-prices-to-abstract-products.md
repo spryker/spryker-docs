@@ -16,7 +16,7 @@ This document describes how to add scheduled prices to abstract products.
 
 To start working with abstract products, go to  **Catalog > Products**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process. 
+Review the reference information before you start, or look up the necessary information as you go through the process. 
 
 ## Adding a scheduled price to an abstract product
 

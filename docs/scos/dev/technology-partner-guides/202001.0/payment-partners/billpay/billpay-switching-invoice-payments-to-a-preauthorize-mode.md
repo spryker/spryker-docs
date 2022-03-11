@@ -12,7 +12,7 @@ related:
     link: docs/scos/user/technology-partners/page.version/payment-partners/billpay.html
 ---
 
-Refer to [Billpay payment information](https://www.billpay.de/en/business-clients/payment-information/) for information about payment methods.
+Refer to [Billpay payment information](https://www.billpay.de/en/klarna-group-for-business/) for information about payment methods.
 
 The identity and credit check are checked within a single "pre-authorize" call after summary page was submitted.
 This may lead to the "rejection" of the order.
@@ -290,10 +290,10 @@ protected function registerServiceProviders()
 | `salutation` | Customer salutation | Taken from billing address |
 | `firstName` | Customer first name | Taken from billing address |
 | `lastName` | Customer last name | Taken from billing address |
-| `address` | Customer billing address street name | i.e. Main Street |
-| `addressNo` | Customer billing address street name extension | i.e. 3a |
-| `zip` | Billing address postal number | i.e. 10317 |
-| `city` | Billing address city | i.e. Berlin |
+| `address` | Customer billing address street name | for example, Main Street |
+| `addressNo` | Customer billing address street name extension | for example, 3a |
+| `zip` | Billing address postal number | for example, 10317 |
+| `city` | Billing address city | for example, Berlin |
 | `phone` | Customer telephone number |  |
 | `dateOfBirth` | Customer date of birth | Entered at payment step |
 | `cartAmount` | Total value of cart items with discounts | Equal to cart amount |

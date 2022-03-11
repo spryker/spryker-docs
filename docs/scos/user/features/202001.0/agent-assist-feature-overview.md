@@ -18,7 +18,7 @@ An **Agent** is a person with unrivaled product knowledge who can help customers
 
 You can create an Agent user in the Back Office under _Users Control → User_.
 
-In fact, any Administration Interface user can be an Agent. All you need to do for that is select the *This user is an Agent* checkbox on the *User create/edit page*, and the user gets the Agent mark. See [Adding New Users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html) to learn more about how to create a new Agent user in the Back Office.
+In fact, any Administration Interface user can be an Agent. All you need to do for that is select the *This user is an Agent* checkbox on the *User create/edit page*, and the user gets the Agent mark. See [Adding New Users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html) to learn more about how to create a new Agent user in the Back Office.
 
 ![zed-agent-assist.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Agent+Assist/Agent+Assist+Feature+Overview/zed-agent-assist.png) 
 

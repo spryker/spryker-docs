@@ -51,5 +51,5 @@ See [Conceptual Overview](/docs/scos/dev/architecture/conceptual-overview.html) 
 Zed is divided into three parts:
 
 * Business layer, containing the entire business logic;
-* Persistence layer, responsible for the database structure, connections to it, i.e., for the data persistence;
+* Persistence layer, responsible for the database structure, connections to it, for example, for the data persistence;
 * Communication layer, enabling the connection to the external providers.

@@ -19,7 +19,6 @@ redirect_from:
 
 In Spryker, we welcome contributions in all forms, be it detailed Issues or PRs(Pull Requests). As PRs directly show the changes and the context, we verify and ship them faster. Therefore, *PRs are the preferred method of contribution*.
 
-If you've submitted an issue to our [support portal](https://spryker.force.com/support/s/), add a link to the related PR. It helps us to resolve issues faster.
 
 ## Licenses
 Spryker uses different licenses: our proprietary licenses and common open-source licenses. In general, you can contribute to our public repositories - [spryker](https://github.com/spryker), [spryker-shop](https://github.com/spryker-shop), [spryker-feature](https://github.com/spryker-feature). Read `CONTRIBUTING.md` of a module before opening a PR.
@@ -31,8 +30,8 @@ To contribute to a Spryker repository:
 
 If we cannot merge a PR due to our release process, we manually introduce the change. Once the change is released, we inform you by closing the Pull Request. We also provide the link to the relevant release or releases so you can check your changes. Issue integration process is shown in the following diagram.
 
+3. Create a Support Case in (https://spryker.force.com/support/s/) and link your pull request inside it.
 <div style="text-align:center;"><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Code+Contribution+Guide/code-contirubtion.png" alt="code-contirubtion.png"></div>
-
 
 
 ## When will you process my request?

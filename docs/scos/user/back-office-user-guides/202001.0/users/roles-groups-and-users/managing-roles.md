@@ -184,4 +184,4 @@ To do that:
 
 **What's next?**
 
-You need to create a group to assign this role to it. See the [Creating a Group](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-groups.html#creating-a-group) section in _Managing Groups_.
+You need to create a group to assign this role to it. See the [Creating a Group](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-groups/creating-user-groups.html#creating-a-group) section in _Managing Groups_.

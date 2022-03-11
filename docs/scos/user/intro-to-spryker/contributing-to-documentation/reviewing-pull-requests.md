@@ -1,7 +1,6 @@
 ---
 title: Reviewing pull requests
-last_updated: Jan 26, 2022
-description: Find out how you can propose your changes to a pull request
+description: Learn how you can propose your changes to a pull request
 template: howto-guide-template
 ---
 
@@ -23,7 +22,7 @@ Keep in mind that you won't see the old text in the *View file* mode. Only new t
 
 {% endinfo_block %}
 
-1. Hover over the line of text where you'd like to add a comment and click the blue comment icon. A comment field appears:
+2. Hover over the line of text where you'd like to add a comment and click the blue comment icon. A comment field appears:
 ![Comment field](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/comment-box.png)
 
 3. In the comment field, enter your comment and click **Start a review**:
@@ -41,7 +40,7 @@ Keep in mind that suggesting a change is preferable in case of typos, restructur
 
 Before you submit your review, your line comments are pending and only visible to you. You can edit pending comments anytime before you submit your review.
 
-4. *Optional:* After you finish reviewing each file, you can mark the file as viewed. This collapses the file, helping you identify the files you still need to review:
+4. Optional: After you finish reviewing each file, you can mark the file as viewed. This collapses the file, helping you identify the files you still need to review:
 ![Viewed files](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/viewed.png)
 
 5. Once you are done reviewing all the files, click **Review changes** in the top right corner and select either *Comment*, *Approve* or *Request changes*.

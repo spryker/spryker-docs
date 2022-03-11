@@ -1,7 +1,7 @@
 ---
 title: Creating CMS Pages
 description: The guide provides a procedure to create a CMS page, make it searchable per store in the Back Office.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/creating-a-cms-page
 originalArticleId: 4526f95f-0538-4618-887d-818b2c0e5695
@@ -11,8 +11,6 @@ redirect_from:
 related:
   - title: CMS Page
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
-  - title: CMS Pages- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/content/pages/references/cms-pages-reference-information.html
   - title: Editing CMS Pages
     link: docs/scos/user/back-office-user-guides/page.version/content/pages/editing-cms-pages.html
   - title: Managing CMS Pages

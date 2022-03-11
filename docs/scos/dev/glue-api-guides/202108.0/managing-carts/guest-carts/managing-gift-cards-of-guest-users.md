@@ -1,7 +1,7 @@
 ---
 title: Managing gift cards of guest users
 description: Retrieve details about gift cards of the guest users, and learn what else you can do with the resource.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-gift-cards-of-guest-users
 originalArticleId: 59818732-fa5a-43df-acd9-3d4ea91ee1ac

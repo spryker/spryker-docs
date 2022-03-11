@@ -1,7 +1,7 @@
 ---
 title: Integrating the Easy Credit payment method for Heidelpay
 description: Integrate easy credit payment through Heidelpay into the Spryker-based shop.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/heidelpay-easy-credit
 originalArticleId: b5cf874b-d881-4590-a404-2fbe494b68fe

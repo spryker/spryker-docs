@@ -1,7 +1,7 @@
 ---
 title: ChannelPilot Analytics
 description: Integrate ChannelPilot Analytics - an innovative, cloud-based marketing solution for online merchants to increase their website traffic and reach.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/channelpilot-analytics
 originalArticleId: 89b65ec7-5102-45ca-9538-89e98696be93

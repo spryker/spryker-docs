@@ -21,12 +21,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/creating-product-bundles.html
   - title: Adding Volume Prices
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html
-  - title: Products- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/products-reference-information.html
-  - title: Abstract Product- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/abstract-product-reference-information.html
-  - title: Concrete Product- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/concrete-product-reference-information.html
 ---
 
 This article describes the procedure of setting the alternatives for the products.

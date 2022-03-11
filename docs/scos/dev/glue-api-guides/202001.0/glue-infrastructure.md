@@ -1,7 +1,7 @@
 ---
 title: Glue Infrastructure
 description: The guide will walk you through the process of handling API requests at the Glue layer, including GlueApplication, Resource, and Relationship Modules.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/glue-infrastructure
 originalArticleId: fe5fb514-4ce9-40b6-8583-58312927d66a

@@ -1,7 +1,7 @@
 ---
 title: Creating Product Sets
 description: Use the procedure to create a product set with the entered required values in the Back Office.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/creating-a-product-set
 originalArticleId: e038a583-445a-4f3f-a6c1-df0a96019c09
@@ -9,8 +9,6 @@ redirect_from:
   - /v4/docs/creating-a-product-set
   - /v4/docs/en/creating-a-product-set
 related:
-  - title: Product Sets- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/references/product-sets-reference-information.html
   - title: Product Sets feature overview
     link: docs/scos/user/features/page.version/product-sets-feature-overview.html
 ---

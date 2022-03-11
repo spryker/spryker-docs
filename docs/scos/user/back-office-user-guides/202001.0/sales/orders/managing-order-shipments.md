@@ -1,7 +1,7 @@
 ---
 title: Managing Order Shipments
 description: The guide provides steps on how to view and update delivery address, shipment method and delivery dates for the shipment, create a shipment in the Back Office.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/managing-order-shipments
 originalArticleId: 8d66abb2-f37e-49fc-b4f2-3ec26ebffd9c
@@ -11,8 +11,6 @@ redirect_from:
 related:
   - title: Managing Orders
     link: docs/scos/user/back-office-user-guides/page.version/sales/orders/managing-orders.html
-  - title: Orders- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/references/orders-reference-information.html
   - title: Split Delivery Overview
     link: docs/scos/user/features/page.version/order-management-feature-overview/split-delivery-overview.html
 ---

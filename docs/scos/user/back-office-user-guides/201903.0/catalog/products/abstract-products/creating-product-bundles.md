@@ -8,13 +8,6 @@ originalArticleId: 06b19531-1215-4c3d-a1f7-bab215664671
 redirect_from:
   - /v2/docs/creating-and-managing-product-bundles
   - /v2/docs/en/creating-and-managing-product-bundles
-related:
-  - title: Abstract Product- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/abstract-product-reference-information.html
-  - title: Products- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/products-reference-information.html
-  - title: Concrete Product- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/concrete-product-reference-information.html
 ---
 
 This article describes how you add the product bundles and manage them.

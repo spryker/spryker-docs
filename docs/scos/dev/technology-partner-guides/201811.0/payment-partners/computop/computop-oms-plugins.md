@@ -1,7 +1,7 @@
 ---
 title: Computop - OMS plugins
 description: This article contains information on the state machine commands and conditions for the Computop module in the Spryker Commerce OS.
-last_updated: Oct 23, 2019
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/computop-oms-details
 originalArticleId: 22ab5611-d105-455b-9afa-30c7610ed3bb
@@ -27,8 +27,6 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-direct-debit-payment-method-for-computop.html
   - title: Integrating the Сredit Сard payment method for Computop
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-credit-card-payment-method-for-computop.html
-  - title: Integrating the CRIF payment method for Computop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-crif-payment-method-for-computop.html
 ---
 
 The following plugins are used for performing calls to Paygate during OMS operation.

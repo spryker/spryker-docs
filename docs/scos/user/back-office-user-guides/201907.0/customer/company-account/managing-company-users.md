@@ -9,8 +9,6 @@ redirect_from:
   - /v3/docs/managing-company-users
   - /v3/docs/en/managing-company-users
 related:
-  - title: Company Account- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/references/company-account-reference-information.html
   - title: Managing Company Roles
     link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-roles.html
   - title: Managing Company Units

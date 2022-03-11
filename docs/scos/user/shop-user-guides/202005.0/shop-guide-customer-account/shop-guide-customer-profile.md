@@ -1,7 +1,7 @@
 ---
 title: Shop Guide - Customer Profile
 description: This guide provides instructions on managing Customer Profile in the Spryker-based shop.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/shop-guide-customer-profile
 originalArticleId: 52b5fa02-cab2-4fca-8708-e2044e86f418

@@ -1,7 +1,7 @@
 ---
 title: Shop Guide - Wishlists
 description: Use the guide to learn how to create, view, edit or remove wishlists in a Spryker-based shop.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/shop-guide-wishlists
 originalArticleId: c2bb243c-bdd6-48dd-96df-15e2bf91779d

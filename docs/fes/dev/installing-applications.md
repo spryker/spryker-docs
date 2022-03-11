@@ -1,5 +1,6 @@
 ---
 title: Installing applications
+last_updated: Mar 11, 2022
 description: Learn how to install applications via Spryker Launchpad
 template: howto-guide-template
 ---

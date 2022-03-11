@@ -8,8 +8,6 @@ redirect_from:
   - /v4/docs/managing-scheduled-prices
   - /v4/docs/en/managing-scheduled-prices
 related:
-  - title: Scheduled Prices- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/scheduled-prices/references/scheduled-prices-reference-information.html
   - title: Creating Scheduled Prices
     link: docs/scos/user/back-office-user-guides/page.version/catalog/scheduled-prices/creating-scheduled-prices.html
   - title: Scheduled Prices Feature Overview

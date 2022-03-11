@@ -1,7 +1,7 @@
 ---
 title: Shop Guide - Customer Addresses
 description: This guide provides instructions on managing Customer Addresses in the Spryker-based shop.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/shop-guide-customer-addresses
 originalArticleId: e6d211cd-e665-4c47-a652-0914a4d407e2

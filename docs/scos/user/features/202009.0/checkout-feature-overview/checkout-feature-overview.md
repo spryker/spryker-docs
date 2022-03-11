@@ -1,7 +1,7 @@
 ---
 title: Checkout feature overview
 description: The checkout workflow is a multi-step process that can be fullly customized to fit your needs.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/checkout
 originalArticleId: 8eab3b28-125f-4c0a-9857-08080466f3a0

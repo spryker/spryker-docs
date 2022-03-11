@@ -13,8 +13,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-filter-preferences.html
   - title: Managing Search Preferences
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-search-preferences.html
-  - title: Reference- Search Preferences
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/references/reference-search-preferences.html
 ---
 
 This topic describes the procedure of setting up category filters.

@@ -1,6 +1,6 @@
 ---
 title: Browsing a Category Tree
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/retrieving-category-trees
 originalArticleId: 674be3f7-9956-4eb5-ba94-93cc789d9e66

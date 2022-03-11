@@ -17,8 +17,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-unit-addresses.html
   - title: Managing Companies
     link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-companies.html
-  - title: Company Account- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/references/company-account-reference-information.html
 ---
 
 This topic describes the procedures of creating and managing company roles. This is one of the steps in the Company Account setup.

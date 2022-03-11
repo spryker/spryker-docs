@@ -1,7 +1,7 @@
 ---
 title: Business Units overview
 description: Once a company administrator has created a company, and it has been activated and approved, they can start building the organizational structure.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/business-units-overview
 originalArticleId: 7b1313e3-9240-4a26-a9ef-b00a8eb20fad

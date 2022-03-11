@@ -1,7 +1,7 @@
 ---
 title: Heidelpay workflow for errors
 description: This article describes the procedure for handling errors in Heidelpay.
-last_updated: Nov 22, 2019
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/heidelpay-error-workflow
 originalArticleId: c33374a2-71af-4cdc-84a0-c8b9c8b98101
@@ -15,8 +15,6 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-credit-card-secure-payment-method-for-heidelpay.html
   - title: Configuring Heidelpay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/configuring-heidelpay.html
-  - title: Integrating Heidelpay into the Legacy Demoshop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/integrating-heidelpay-into-the-legacy-demoshop.html
   - title: Integrating the Paypal Authorize payment method for Heidelpay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-paypal-authorize-payment-method-for-heidelpay.html
   - title: Integrating Heidelpay

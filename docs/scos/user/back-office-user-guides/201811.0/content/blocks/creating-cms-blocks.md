@@ -1,7 +1,7 @@
 ---
 title: Creating CMS Blocks
 description: The guide provides instructions on how to create a CMS block in the Back Office.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/creating-cms-block
 originalArticleId: 6de8f15b-76d1-4618-bf82-487709d347af
@@ -15,8 +15,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/content/blocks/managing-cms-blocks.html
   - title: Defining Validity Period for CMS Blocks
     link: docs/scos/user/back-office-user-guides/page.version/content/blocks/defining-validity-period-for-cms-blocks.html
-  - title: CMS Block- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/content/blocks/references/cms-block-reference-information.html
 ---
 
 This topic provides a list of steps to create a CMS block in Back Office.

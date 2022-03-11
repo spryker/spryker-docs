@@ -1,7 +1,7 @@
 ---
 title: Integrating the Paypal Debit payment method for Heidelpay
 description: Integrate Paypal debit workflow payment through Heidelpay into the Spryker-based shop.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/heidelpay-paypal-debit
 originalArticleId: bb225b18-b6b8-4219-b7e8-f91ba8d0c075
@@ -15,8 +15,6 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-credit-card-secure-payment-method-for-heidelpay.html
   - title: Configuring Heidelpay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/configuring-heidelpay.html
-  - title: Integrating Heidelpay into the Legacy Demoshop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/integrating-heidelpay-into-the-legacy-demoshop.html
   - title: Integrating the Paypal Authorize payment method for Heidelpay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-paypal-authorize-payment-method-for-heidelpay.html
   - title: Integrating Heidelpay

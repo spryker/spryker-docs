@@ -1,6 +1,6 @@
 ---
 title: Glue API - Shipment feature integration
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-shipment-feature-integration
 originalArticleId: a324452c-5bf0-49f9-a6d8-fd59abf3b414

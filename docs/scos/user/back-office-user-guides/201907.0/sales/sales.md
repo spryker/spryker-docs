@@ -19,10 +19,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/sales/refunds/viewing-refunds.html
   - title: Viewing the Order Matrix
     link: docs/scos/user/back-office-user-guides/page.version/sales/order-matrix/viewing-the-order-matrix.html
-  - title: Reclamations- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/sales/reclamations/references/reclamations-reference-information.html
-  - title: Orders- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/references/orders-reference-information.html
   - title: Order Management
     link: docs/scos/user/features/page.version/order-management-feature-overview/order-management-feature-overview.html
   - title: Reclamations Feature Overview

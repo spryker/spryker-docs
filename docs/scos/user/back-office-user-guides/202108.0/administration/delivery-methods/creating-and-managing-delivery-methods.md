@@ -1,7 +1,7 @@
 ---
 title: Creating and managing delivery methods
 description: Use the procedures to create a delivery method, activate it, set a price and tax set, and define a delivery method per store in the Back Office.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-and-managing-shipment-methods
 originalArticleId: 66d6acae-6c36-404a-b6fb-0dbd9d71d193

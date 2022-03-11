@@ -9,8 +9,6 @@ redirect_from:
   - /v2/docs/managing-product-sets
   - /v2/docs/en/managing-product-sets
 related:
-  - title: Product Sets- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/references/product-sets-reference-information.html
   - title: Creating Product Sets
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/creating-product-sets.html
 ---

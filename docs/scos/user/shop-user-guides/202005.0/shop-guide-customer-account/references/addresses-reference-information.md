@@ -1,7 +1,7 @@
 ---
 title: Addresses- Reference Information
 description: This article provides reference details for Customer Addresses in the Spryker shop.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/addresses-reference-information
 originalArticleId: f8e811a8-3bf9-4541-8be1-0b59d1c9af76

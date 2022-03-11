@@ -1,7 +1,7 @@
 ---
 title: Defining Validity Period for CMS Blocks
 description: The guide provides a procedure to set a validity period for a CMS block during which it will be displayed in the online store.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/defining-validity-period-for-cms-blocks
 originalArticleId: d6bea867-4ceb-4d7c-b2ea-04cf235f8e94

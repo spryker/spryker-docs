@@ -11,8 +11,6 @@ redirect_from:
 related:
   - title: Product Labels feature overview
     link: docs/scos/user/features/page.version/product-labels-feature-overview.html
-  - title: Product Labels- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-labels/references/product-labels-reference-information.html
 ---
 
 This topic describes how you create and activate product labels.

@@ -1,7 +1,7 @@
 ---
 title: Editing CMS Pages
 description: The guide provides instructions on how to update page layout, SEO data and page content in the Back Office.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/editing-cms-pages
 originalArticleId: b621d411-3e0f-4d26-886e-691fdb2b2b4f
@@ -9,8 +9,6 @@ redirect_from:
   - /v2/docs/editing-cms-pages
   - /v2/docs/en/editing-cms-pages
 related:
-  - title: CMS Pages- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/content/pages/references/cms-pages-reference-information.html
   - title: CMS Page
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
   - title: CMS Pages Versioning

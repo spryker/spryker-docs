@@ -1,7 +1,7 @@
 ---
 title: Shipment + Cart feature integration
 description: This guide provides step-by-step instruction on integrating Shipment + Cart feature into the Spryker-based project.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/shipment-cart-feature-integration
 originalArticleId: a5618db0-4ee1-462e-8165-aedc13881e07

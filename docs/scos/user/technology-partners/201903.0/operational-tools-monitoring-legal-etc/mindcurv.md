@@ -1,6 +1,6 @@
 ---
 title: Mindcurv
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/mindcurv
 originalArticleId: 704de34c-8163-453b-a245-4ccb2d30fa9e

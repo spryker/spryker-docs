@@ -11,8 +11,6 @@ redirect_from:
 related:
   - title: Managing Merchant Order Thresholds
     link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/managing-merchant-order-thresholds.html
-  - title: Threshold- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/references/threshold-reference-information.html
   - title: Managing Threshold Settings
     link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/managing-threshold-settings.html
 ---

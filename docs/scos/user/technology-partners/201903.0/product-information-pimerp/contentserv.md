@@ -1,6 +1,6 @@
 ---
 title: Contentserv
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/contentserv
 originalArticleId: e4632a61-3b1b-48a5-ad7b-ab38bb6a1084

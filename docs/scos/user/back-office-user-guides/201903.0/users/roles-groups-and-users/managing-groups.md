@@ -9,10 +9,6 @@ redirect_from:
   - /v2/docs/managing-groups
   - /v2/docs/en/managing-groups
 related:
-  - title: Roles- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/users/roles-groups-and-users/references/roles-reference-information.html
-  - title: User- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/users/roles-groups-and-users/references/user-reference-information.html
   - title: Company User Roles and Permissions Feature Overview
     link: docs/scos/user/features/page.version/company-account-feature-overview/company-user-roles-and-permissions-overview.html
   - title: User and Rights Management

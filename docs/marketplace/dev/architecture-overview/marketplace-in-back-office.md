@@ -1,5 +1,6 @@
 ---
 title: Marketplace in the Back Office
+last_updated: Mar 11, 2022
 description: This document explains how Marketplace functionality is presented in the Back Office.
 template: concept-topic-template
 related:

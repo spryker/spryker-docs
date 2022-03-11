@@ -1,7 +1,7 @@
 ---
 title: Glue API - Customer Access feature integration
 description: Use the guide to install the Customer Access API feature in your project.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/glue-api-customer-access-feature-integration
 originalArticleId: a2a5d787-e23a-43c4-aee3-ca875ab76280

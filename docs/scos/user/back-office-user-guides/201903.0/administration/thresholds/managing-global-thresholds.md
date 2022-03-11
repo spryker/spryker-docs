@@ -13,8 +13,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/managing-merchant-order-thresholds.html
   - title: Managing Threshold Settings
     link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/managing-threshold-settings.html
-  - title: Threshold- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/references/threshold-reference-information.html
 ---
 
 This topic describes the procedures for managing thresholds per merchant relation.

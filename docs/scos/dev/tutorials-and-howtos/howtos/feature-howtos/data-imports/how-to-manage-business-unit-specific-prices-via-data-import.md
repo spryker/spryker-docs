@@ -1,10 +1,7 @@
 ---
 title: HowTo - Manage business unit specific prices via data import
-last_updated: Feb 04, 2022
+last_updated: Mar 11, 2022
 template: howto-guide-template
-related: 
-  - title: Merchant Custom Prices feature overview
-    link: docs/scos/user/features/page.version/merchant-custom-prices-feature-overview.html
 ---
 
 {% info_block warningBox "B2B only" %}

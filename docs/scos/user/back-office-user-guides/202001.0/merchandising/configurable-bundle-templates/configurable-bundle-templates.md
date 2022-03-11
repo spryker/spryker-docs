@@ -1,7 +1,7 @@
 ---
 title: Configurable Bundle Templates
 description: This guide contains details on working with the Configurable Bundle Templates in the Back Office.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/configurable-bundle-templates
 originalArticleId: 81a607c3-f0b8-496f-970e-be63f58d989b
@@ -13,8 +13,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html
   - title: Creating Configurable Bundle Templates
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/configurable-bundle-templates/creating-configurable-bundle-templates.html
-  - title: Configurable Bundle Templates- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/configurable-bundle-templates/references/configurable-bundle-templates-reference-information.html
   - title: Configurable Bundle Feature Overview
     link: docs/scos/user/features/page.version/configurable-bundle-feature-overview.html
 ---

@@ -1,7 +1,7 @@
 ---
 title: Checking Out Purchases and Getting Checkout Data
 description: This article will help you set up the endpoint functionality for creating checkout experience, like placing orders and retrieving checkout information.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/checking-out-purchases-and-getting-checkout-data-201907
 originalArticleId: 7924cb82-d6f6-4f5f-a132-4177692d54fa

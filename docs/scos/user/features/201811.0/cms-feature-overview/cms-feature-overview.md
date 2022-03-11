@@ -1,7 +1,7 @@
 ---
 title: CMS feature overview
 description: The Spryker Commerce OS offers a feature-rich content management system that allows providing the right content at the right place at the right time.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/cms
 originalArticleId: e72a74c5-67b1-4864-8a86-1f58e184229e

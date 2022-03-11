@@ -13,8 +13,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/category/assigning-products-to-categories.html
   - title: Managing Categories
     link: docs/scos/user/back-office-user-guides/page.version/catalog/category/managing-categories.html
-  - title: Category- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/category/references/category-reference-information.html
 ---
 
 This topic describes how you create categories.

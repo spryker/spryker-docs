@@ -1,7 +1,7 @@
 ---
 title: Technology partners
 description: Technology partner solutions to boost your Spryker project performance.
-last_updated: Sep 7, 2021
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/technology-partner-integration
 originalArticleId: d4b53f3f-475e-4e02-aa21-79db417a1325

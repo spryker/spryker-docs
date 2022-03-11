@@ -15,8 +15,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/category/managing-categories.html
   - title: Category Management feature overview
     link: docs/scos/user/features/page.version/category-management-feature-overview.html
-  - title: Category- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/category/references/category-reference-information.html
 ---
 
 This topic describes the steps you need to perform to assign a product(s) to the category.

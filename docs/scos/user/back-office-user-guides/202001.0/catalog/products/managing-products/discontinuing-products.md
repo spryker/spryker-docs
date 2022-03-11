@@ -1,7 +1,7 @@
 ---
 title: Discontinuing Products
 description: Use the guide to make the product variant discontinued in the Back Office.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/discontinuing-a-product
 originalArticleId: afea6342-98ff-4afe-ae96-f6d248a07c6c
@@ -9,8 +9,6 @@ redirect_from:
   - /v4/docs/discontinuing-a-product
   - /v4/docs/en/discontinuing-a-product
 related:
-  - title: Updating Product Variants
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/concrete-products/updating-product-variants.html
   - title: Creating and Managing Product Bundles
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/creating-and-managing-product-bundles.html
   - title: Adding Product Alternatives

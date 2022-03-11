@@ -1,7 +1,7 @@
 ---
 title: Heidelay - Sofort (Online Transfer)
 description: Integrate Sofort payment through Heidelpay into the Spryker-based shop.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/heidelpay-sofort
 originalArticleId: 008f2689-26aa-447e-b334-2f980c7bd72c

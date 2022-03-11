@@ -17,8 +17,6 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/retrieving-product-labels.html
   - title: Creating Product Labels
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-labels/creating-product-labels.html
-  - title: Product Labels- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-labels/references/product-labels-reference-information.html
 ---
 
 This article describes how you can prioritize the labels.

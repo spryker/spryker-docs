@@ -1,7 +1,7 @@
 ---
 title: Shop Guide - Managing Requests for Quotes for a Buyer
 description: The guide provides procedures on how to send a request for quote, negotiate the price, update or cancel an RFQ.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/managing-rfqs-for-buyer-shop-guide
 originalArticleId: c70d37b0-fcfa-41bf-b7a2-f945e194f0a1

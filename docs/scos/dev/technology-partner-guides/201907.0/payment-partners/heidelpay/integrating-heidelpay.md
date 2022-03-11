@@ -1,7 +1,7 @@
 ---
 title: Integrating Heidelpay
 description: This article contains information on integrating the Heidelpay module into the Spryker Commerce OS.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/heidelpay-integration-scos
 originalArticleId: 2599e4c5-1a32-433f-be4c-c833db7e704c

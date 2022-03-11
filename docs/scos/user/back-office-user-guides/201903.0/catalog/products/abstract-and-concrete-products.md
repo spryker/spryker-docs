@@ -11,8 +11,6 @@ redirect_from:
 related:
   - title: Editing Abstract Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/editing-abstract-products.html
-  - title: Abstract Product- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/abstract-product-reference-information.html
   - title: Creating Product Variants
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/concrete-products/creating-product-variants.html
   - title: Managing Products
@@ -25,8 +23,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/adding-product-alternatives.html
   - title: Adding Volume Prices to Abstract Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html
-  - title: Products- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/products-reference-information.html
 ---
 
 Products can extensively vary, for example, in size or color. In order to provide a nice shopping experience to your customers, the different Variants, or Concrete Products, are grouped under an Abstract Product. 

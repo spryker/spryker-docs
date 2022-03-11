@@ -15,8 +15,6 @@ related:
     link: docs/scos/user/features/page.version/technology-partner-integrations/punch-out/punch-out.html
   - title: Managing Transactions Log
     link: docs/scos/user/back-office-user-guides/page.version/punch-out/managing-transactions-log.html
-  - title: Punch Out- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/punch-out/references/punch-out-reference-information.html
 ---
 
 This topic describes how to create and manage the Punch Out connections.

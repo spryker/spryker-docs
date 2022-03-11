@@ -1,7 +1,7 @@
 ---
 title: Authentication and authorization
 description: Information about Glue API authentication and authorization.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/authentication-and-authorization
 originalArticleId: fb5a9256-1188-427e-a4d1-2c2d8c60a5e3

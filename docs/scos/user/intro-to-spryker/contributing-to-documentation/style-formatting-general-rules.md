@@ -74,7 +74,6 @@ tags: [new, B2B, B2C]
 redirect_from: 
 	-/docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting.html
 	-/docs/marketplace/dev/feature-integration-guides/202108.0/combined-product-offer-import-integration.html
-related:
 	- title: How to extend an existing Gui table
 		link: docs/marketplace/dev/howtos/how-to-extend-gui-table.html
   - title: Sales Data Export feature integration

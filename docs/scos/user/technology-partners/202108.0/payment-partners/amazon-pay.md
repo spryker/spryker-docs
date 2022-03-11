@@ -13,7 +13,6 @@ redirect_from:
 related:
   - title: Obtaining an Amazon Order Reference and information about shipping addresses
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
-  - title: Amazon Pay - Rendering a “Pay with Amazon” Button on the Cart Page
   - title: Configuring Amazon Pay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/configuring-amazon-pay.html
   - title: Handling orders with Amazon Pay API

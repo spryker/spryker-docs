@@ -1,7 +1,7 @@
 ---
 title: Reference information - returns
 description: The guide provides reference information you see when working with returns in the Back Office.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/returns-reference-information
 originalArticleId: 984cf6f9-27d0-46ea-a1f6-48265bdbe57b
@@ -10,8 +10,6 @@ redirect_from:
   - /v5/docs/en/returns-reference-information
   - /docs/scos/user/back-office-user-guides/202005.0/sales/returns/references/returns-reference-information.html
 related:
-  - title: Return Item States- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/sales/returns/references/return-item-states-reference-information.html
   - title: Managing Returns
     link: docs/scos/user/back-office-user-guides/page.version/sales/returns/managing-returns.html
 ---

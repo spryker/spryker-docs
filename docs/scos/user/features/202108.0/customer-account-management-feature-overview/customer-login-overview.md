@@ -1,6 +1,6 @@
 ---
 title: Customer Login overview
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-login-overview
 originalArticleId: 7641234a-88aa-4031-85e1-c67aa38eb030

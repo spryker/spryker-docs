@@ -11,8 +11,6 @@ redirect_from:
 related:
   - title: Abstract and Concrete Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-and-concrete-products.html
-  - title: Concrete Product- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/concrete-product-reference-information.html
 ---
 
 This article describes what steps you need to follow to discontinue the product.

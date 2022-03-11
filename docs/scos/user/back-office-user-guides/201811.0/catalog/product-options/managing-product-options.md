@@ -13,8 +13,6 @@ related:
     link: docs/scos/user/features/page.version/product-options-feature-overview.html
   - title: Creating Product Options
     link: docs/scos/user/back-office-user-guides/page.version/catalog/product-options/creating-product-options.html
-  - title: Product Options- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/product-options/references/product-options-reference-information.html
 ---
 
 This article describes the managing actions that you can perform with the product options. 

@@ -1,7 +1,7 @@
 ---
 title: Managing orders
 description: The guide provides instructions on how to manage orders including setting statuses for the order, claiming and commenting on orders in the Back Office.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/managing-orders
 originalArticleId: a33f6851-0c08-41bd-a08c-0ccd62abf089

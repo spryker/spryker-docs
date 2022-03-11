@@ -1,6 +1,6 @@
 ---
 title: Calculator plugins
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 description: This article covers the available calculator plugins along with their examples.
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/calculator-plugins

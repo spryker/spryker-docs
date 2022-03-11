@@ -1,7 +1,7 @@
 ---
 title: Shop Guide - Newsletter
 description: This guide provides instructions on managing a Newsletter subscription in a Customer Account in an Spryker-based shop.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/shop-guide-newsletter
 originalArticleId: a86667b8-6c4b-4de8-acd4-8e9432d9af42

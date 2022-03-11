@@ -1,7 +1,7 @@
 ---
 title: Creating a Product Option
 description: Use this procedure to create a product option along with its values in the Back Office.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/creating-a-product-option
 originalArticleId: 9d330e5c-aae8-4a45-96b2-f29de65bc2f1

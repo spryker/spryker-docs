@@ -1,6 +1,6 @@
 ---
 title: Shared Carts feature integration
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/shared-carts-feature-integration
 originalArticleId: 03a19655-ff4d-40ec-9e2f-a2a3d9e7e658

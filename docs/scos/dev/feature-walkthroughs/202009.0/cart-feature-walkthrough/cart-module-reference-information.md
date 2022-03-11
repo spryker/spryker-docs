@@ -1,6 +1,6 @@
 ---
 title: "Cart module: Reference information"
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 description: The extensive Cart allows your customers to add products to their Cart by simply selecting the desired quantity.
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/cart-module-reference-information

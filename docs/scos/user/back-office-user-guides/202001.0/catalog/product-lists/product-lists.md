@@ -1,7 +1,7 @@
 ---
 title: Product Lists
 description: The section is used to define product restrictions for product sets by adding them to an appropriate product list in the Back Office.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/product-lists
 originalArticleId: de49ce84-8730-4c7c-8346-d2053684e0e3

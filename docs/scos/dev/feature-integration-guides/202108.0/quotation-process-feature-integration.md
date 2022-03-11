@@ -1,7 +1,7 @@
 ---
 title: Quotation Process feature integration
 description: Install the Quotation Process feature in your project.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/quotation-process-feature-integration
 originalArticleId: 27d7dd23-8926-4ad2-b45d-fb3753e6d1a3

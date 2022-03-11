@@ -1,7 +1,7 @@
 ---
 title: CMS extension points- reference information
 description: The CMS module provides an extension point for post activation and deactivation of CMS pages.
-last_updated: Jan 26, 2022
+last_updated: Mar 11, 2022
 template: feature-walkthrough-template
 originalLink: https://documentation.spryker.com/v6/docs/reference-information-cms-extension-points
 originalArticleId: 8be2a709-8929-4079-924e-4d56e2e8dda3

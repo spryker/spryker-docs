@@ -9,12 +9,6 @@ redirect_from:
   - /v1/docs/adding-volume-prices
   - /v1/docs/en/adding-volume-prices
 related:
-  - title: Products- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/products-reference-information.html
-  - title: Abstract Product- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/abstract-product-reference-information.html
-  - title: Concrete Product- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/concrete-product-reference-information.html
   - title: Creating an Abstract Product
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html
   - title: Creating Product Variants

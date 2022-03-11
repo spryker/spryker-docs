@@ -786,7 +786,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Make sure that features which use Redis to read product data (i.e., Product Details Page, Product relations, etc. don't show it when a product is restricted for the customer.)
+Make sure that features which use Redis to read product data (for example, Product Details Page, Product relations, etc. don't show it when a product is restricted for the customer.)
 
 {% endinfo_block %}
 

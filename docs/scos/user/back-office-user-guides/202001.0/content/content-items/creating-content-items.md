@@ -50,7 +50,7 @@ Follow the steps to create a Banner:
 See [Content Items: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-items.html#create-and-edit-banner-content-item-page) to learn about the attributes on this page.
 
 3. If needed, repeat the previous step in one or more locale-specific tabs.
-4.
+
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:

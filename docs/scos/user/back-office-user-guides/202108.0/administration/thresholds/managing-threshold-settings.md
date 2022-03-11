@@ -23,10 +23,10 @@ The *Threshold settings* page allows you to select a tax set that is applied to 
 
 ## Prerequisites
 
-To start working with Thershold Settings, navigate to **Administration** > **Threshold Settings**.
+To start working with threshold settings, navigate to **Administration** > **Threshold Settings**.
 
 ## Managing Threshold Settings
 
-To configure Threshold Settings:
+To configure threshold settings:
 1. On the *Edit Threshold Settings* page, from the drop-down list, select the tax set that will be applied to the threshold.
 2. Click **Save**.

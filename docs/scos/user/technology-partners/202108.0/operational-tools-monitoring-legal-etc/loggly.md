@@ -12,15 +12,17 @@ redirect_from:
   - /docs/en/loggly-queue
 related:
   - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
+    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 The [Loggly](https://github.com/spryker-eco/loggly) module provides a plugin to read log messages from a queue and send the messages via https to [Loggly](https://www.loggly.com/).
 
 
-## Related Developer articles
+## Related Developer guides
 
-* [Configuring Loggly](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/configuring-loggly.html)
+
+* [Loggly](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/loggly/loggly.html)
+* [Configuring Loggly](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/loggly/configuring-loggly.html)
 
 
 

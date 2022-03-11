@@ -22,13 +22,13 @@ related:
 This article describes how to update the product variant added during the abstract product setup.
 The described procedure is also valid for an existing product variant.
 
-## Prerequisistes
+## Prerequisites
 
 To start working with product variants, go to **Catalog** > **Products**.
 
 The procedure you are going to perform is very similar to the procedure described in the Creating a product variant article. For details, see  [Creating a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/concrete-products/creating-product-variants.html).
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Editing a product variant
 

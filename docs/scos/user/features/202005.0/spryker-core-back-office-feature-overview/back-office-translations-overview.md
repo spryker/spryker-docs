@@ -1,6 +1,5 @@
 ---
-title: Back Office Translations Feature Overview
-last_updated: Jan 26, 2022
+title: Back Office Translations Overview
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/back-office-translations-overview
 redirect_from:

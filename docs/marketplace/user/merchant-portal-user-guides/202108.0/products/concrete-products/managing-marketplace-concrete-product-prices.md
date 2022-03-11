@@ -11,7 +11,7 @@ This topic describes how to manage marketplace concrete product prices in the Me
 
 To start working with the marketplace concrete products, go to **Merchant Portal** > **Products**.  Hover over the three dots next to the abstract product for which you manage a concrete product and click **Manage Product** or just click the line. This takes you to the *[Product name]* drawer. Navigate to the *Concrete Products* tab.
 
-This article contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+This article contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Adding a marketplace concrete product price
 

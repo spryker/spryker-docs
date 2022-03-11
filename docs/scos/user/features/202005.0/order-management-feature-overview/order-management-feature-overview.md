@@ -1,5 +1,5 @@
 ---
-title: Order Management
+title: Order Management feature overview
 description: Efficiently keep track of the order processing and ensure quick fulfillment. With the Order Management, you can keep your order processing running smoothly.
 last_updated: Jan 26, 2022
 template: concept-topic-template
@@ -29,13 +29,10 @@ Efficiently keep track of your order processing and ensure quick fulfillment. Ma
 </div>
 
 **Features:**
-<div>
-<div>
-<a class="feature-link" href="/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html">Order Process Modelling via State Machines</a>
-<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/order-management-feature-overview/oms-order-management-system-matrix.html">OMS \(Order Management System\) Matrix</a>
-<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/reorder-feature-overview.html">Reorder</a>
-<!-- <a class="feature-link" href="/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-management-feature-overview.html">Order Processing</a> -->
-<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/order-management-feature-overview/splittable-order-items-overview.html">Splittable Order Items</a>
-<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/reclamations-feature-overview.html">Reclamations</a>
-<a class="feature-link" href=/docs/scos/user/features/{{page.version}}/order-management-feature-overview/split-delivery-overview.html">Split Delivery</a>
-    </div>
+
+- [Order Process Modelling via State Machines](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html)
+- [OMS \(Order Management System\) Matrix](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/oms-order-management-system-matrix.html)
+- [Reorder](/docs/scos/user/features/{{page.version}}/reorder-feature-overview.html)
+- [Splittable Order Items](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/splittable-order-items-overview.html)
+- [Reclamations](/docs/scos/user/features/{{page.version}}/reclamations-feature-overview.html)
+- [Split Delivery](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/split-delivery-overview.html)

@@ -32,7 +32,7 @@ To start working with products:
 1. To be able to create product variants of abstract products, [create at least one super attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html).
 2. Go to  **Catalog > Products**.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
  
 {% info_block warningBox "Adding super attributes" %}

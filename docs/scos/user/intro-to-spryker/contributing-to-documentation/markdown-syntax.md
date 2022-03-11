@@ -8,7 +8,7 @@ related:
     link: docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html
 ---
 
-This document contains Markdown syntax of the page elements used on our documentation website. You will read about:
+We use Markdown to write the Spryker documentation. This document contains Markdown syntax of the page elements used on the Spryker documentation website, specifically:
 
 - Documentation-specific Markdown elements
 - HTML syntax that is used where Markdown is insufficient for our documentation website
@@ -16,16 +16,16 @@ This document contains Markdown syntax of the page elements used on our document
 
 {% info_block infoBox "Info" %}
 
-General formatting rules and styling rules for Markdown can be found at [Basic writing and formatting syntax for Github](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+For general formatting rules and styling rules for Markdown, see [Basic writing and formatting syntax for Github](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
 {% endinfo_block %}
 
 
-Syntax snippets contain text wrapped in braces - `{}`. This is a placeholder that should be replaced with what the text inside describes. The braces should be removed as well.
+Syntax snippets contain text wrapped in braces - `{}`. This is a placeholder that you should replace with what the text inside describes. Also, remove the braces.
 
 {% info_block errorBox "Templates" %}
 
-Make sure to use the templates from the [_templates](https://github.com/spryker/spryker-docs/tree/master/_templates) folder for the document you are working on. They already contain the commonly used elements for each type of doc.
+Make sure to use the templates from the [_templates](https://github.com/spryker/spryker-docs/tree/master/_templates) folder for the document you are working on. They already contain the commonly used elements for each type of document.
 
 {% endinfo_block %}
 
@@ -79,7 +79,7 @@ Make sure to fulfill the requirements:
 
 ## Image and table sizes
 
-Currently, by default, when you add an image to your document, it's size is automatically adjusted so that it does not exceed 50% of the content area. By default, 2-column tables also take 50% of the content area.
+Currently, by default, when you add an image to your document, its size is automatically adjusted so that it does not exceed 50% of the content area. By default, 2-column tables also take 50% of the content area.
 
 If you want your image or a 2-column table to stretch to the content area’s size, wrap the image and the table in `<div>` with the `width-100` class. For example:
 
@@ -127,7 +127,7 @@ This is how the table will look:
 
 ## Notes
 
-This section describes the Markdown syntax of the notes used only in certain scenarios. This also means that you can't use this syntax in any other scenarios.
+This section describes the Markdown syntax of the notes used only in certain scenarios. That means that you can't use this syntax in any other scenarios.
 
 ### Verification
 
@@ -229,7 +229,7 @@ You can find the templates for notes in the [_templates > info-blocks](https://g
 
 ## Code snippets in tables
 
-Markdown does not support code snippets in tables. Try to avoid inserting code snippets into tables on the documentation creation stage. If you do end up with a code snippet in a table, choose a solution depending on the conditions:
+Markdown does not support code snippets in tables. Try to avoid inserting code snippets into tables where possible. If you do end up with a code snippet in a table, choose a solution depending on the conditions:
 
 - All the column cells contain code snippets.
 - There are several column cells with code snippets and several column cells with supported content.
@@ -326,7 +326,7 @@ Published table:
 
 ### Mixed content 
 
-If you have a table column with cells containing both the code snippets and supported content, do the following:
+If you have a table column with cells containing both code snippets and supported content, do the following:
 
 1. Place the code snippets below the table as described in step 2 of [Only code snippets](#only-code-snippets).
 2. Add a `See **[drop-down toggle button]** below` the table into the cell or cells from which you removed the code snippets.
@@ -398,10 +398,10 @@ To integrate GLUE API in your project, you need to:
 
 ## Adding inline images
 
-To add an inline image, use this wrapper: `<div class="inline-img"></div>`. For example:
+To add an inline image, use this wrapper: `<span class="inline-img"></span>`. For example:
 
 ```
-Click **More** <div class="inline-img">![google-chrome-more-button](link-to-an-image)</div>.
+Click **More** <span class="inline-img">![google-chrome-more-button](link-to-an-image)</span>.
 ```
 
 ## Adding Wistia videos

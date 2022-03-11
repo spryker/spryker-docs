@@ -27,7 +27,7 @@ Here, you can:
 
 To start working with scheduled prices, go to **Catalog** > **Scheduled Prices**.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Viewing scheduled price imports
 
@@ -133,7 +133,8 @@ To delete an import:
 
 {% info_block errorBox %}
 
-<ul><li>All the scheduled prices located in an import are deleted when the import is deleted.</li><li>Performing this action triggers the scheduled prices cron job to be run for the products which have had corresponding scheduled prices in this import.</li></ul>
+- All the scheduled prices located in an import are deleted when the import is deleted.
+- Performing this action triggers the scheduled prices cron job to be run for the products which have had corresponding scheduled prices in this import.
 
 {% endinfo_block %}
 

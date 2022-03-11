@@ -1,5 +1,5 @@
 ---
-title: Reference information- scheduled prices
+title: Reference information - scheduled prices
 description: The guide provides additional information about the values you use when working with scheduled prices in the Back Office.
 last_updated: Jan 26, 2022
 template: back-office-user-guide-template

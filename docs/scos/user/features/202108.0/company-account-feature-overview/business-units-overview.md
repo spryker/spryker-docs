@@ -34,7 +34,7 @@ To create a business unit, its name and email address must be specified.
 
 {% info_block infoBox %}
 
-The user can also select a parent business unit of the newly created unit. If it is not selected, the new business unit will be created with "0" level in hierarchy, i.e. as a parent.
+The user can also select a parent business unit of the newly created unit. If it is not selected, the new business unit will be created with "0" level in hierarchy, for example, as a parent.
 
 {% endinfo_block %}
 

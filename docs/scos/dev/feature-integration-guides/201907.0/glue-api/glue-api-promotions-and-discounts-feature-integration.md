@@ -1,5 +1,5 @@
 ---
-title: GLUE- Promotions & Discounts feature integration
+title: GLUE API - Promotions and Discounts feature integration
 description: The guide walks you through the process of installing Promotions&Discounts feature into the project
 last_updated: Jan 26, 2022
 template: feature-integration-guide-template

@@ -22,18 +22,16 @@ redirect_from:
   - /v2/docs/en/redis-configruation
 ---
 
-## Preface
-
 In Spryker, Redis is used in two scenarios:
 
 * key-value storage (modules: `Spryker.Storage`, `Spryker.Collector` and `Spryker.Heartbeat`)
 * session data storage (modules: `Spryker.Session`)
 
-Each scenario utilizes a separate set of configuration values.
+Each scenario uses a separate set of configuration values.
 
 Advanced configuration allows to use Redis in replication mode, including support for Redis Sentinel.
 
-## Standard Configuration
+## Standard configuration
 
 Standard Redis client configuration uses the environment configuration values set under keys which are defined as constants in `config/Shared/config_default.php`. The standard environment configuration would look like this:
 
@@ -45,9 +43,9 @@ $config[StorageConstants::STORAGE_REDIS_PASSWORD] = false;
 $config[StorageConstants::STORAGE_REDIS_DATABASE] = 0;
 ```
 
-## Advanced Configuration for Redis Key-Value Storage
+## Advanced configuration for Redis key-value storage
 
-To be able to use Redis replication, one should define connection parameters using `StorageConstants::STORAGE_PREDIS_CLIENT_CONFIGURATION` value as key. Under this key, an array of DSN strings, which identify specific Redis nodes, should be set. In addition to configuration parameters, a set of configuration options has to be specified to enable Redis replication facilities. These options need to be stored under the `StorageConstants::STORAGE_PREDIS_CLIENT_OPTIONS` key.
+To be able to use Redis replication, you need to define connection parameters using `StorageConstants::STORAGE_PREDIS_CLIENT_CONFIGURATION` value as key. Under this key, an array of DSN strings, which identify specific Redis nodes, should be set. In addition to configuration parameters, a set of configuration options has to be specified to enable Redis replication facilities. These options need to be stored under the `StorageConstants::STORAGE_PREDIS_CLIENT_OPTIONS` key.
 
 Example (regular master-slave replication):
 
@@ -84,9 +82,9 @@ $config[StorageConstants::STORAGE_PREDIS_CLIENT_OPTIONS] = [
 ];
 ```
 
-The configuration under `StorageConstants::STORAGE_PREDIS_CLIENT_CONFIGURATION` is to be used exclusively, i.e. no other storage configuration will be used for the Redis client. If the configuration parameters are not set under the `StorageConstants::STORAGE_PREDIS_CLIENT_CONFIGURATION` key, the Redis client will fall back to the regular configuration described above.
+The configuration under `StorageConstants::STORAGE_PREDIS_CLIENT_CONFIGURATION` is to be used exclusively, for example, no other storage configuration will be used for the Redis client. If the configuration parameters are not set under the `StorageConstants::STORAGE_PREDIS_CLIENT_CONFIGURATION` key, the Redis client will fall back to the regular configuration described above.
 
-## Advanced Configuration for Redis Session Storage
+## Advanced configuration for Redis session storage
 
 All the configuration concepts described above are relevant for configuring Redis as a session storage. Two things to be considered are the name of configuration constants and the fact that Yves and Zed sessions have separate storages with distinct configuration sets. Redis session configuration uses constants from `\Spryker\Shared\Session\SessionConstants`. Configuration for Yves session to use Redis Sentinel would look like this:
 

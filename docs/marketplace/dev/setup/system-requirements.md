@@ -1,6 +1,5 @@
 ---
-title: System requirements
-last_updated: Jan 26, 2022
+title: DevVM system requirements
 Descriptions: System infrastructure requirements for the Spryker Marketplace with Merchant Portal
 template: howto-guide-template
 ---
@@ -16,7 +15,7 @@ template: howto-guide-template
 | **RabbitMQ**                                  | Version 3.6+                                                 |
 | **Jenkins (for cronjob management)**          | Version 1.6.x or 2.x          |
 | **Graphviz (for statemachine visualization)** | 2.x                                                          |
-|**Symphony**| Version >= 4.0 |
+|**Symfony**| Version >= 4.0 |
 |**Node.js**| Version >= 12.0.0 |
 |**Yarn**| Version >= 2.0.0 && <= 2.3.x |
 |**Intranet**| Back Office application (Zed) must be secured in an Intranet (using VPN, Basic Auth, IP Allowlist, DMZ, etc.) |

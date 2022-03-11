@@ -20,12 +20,19 @@
     font-variant: normal;
     text-transform: none;
     line-height: 1;
+    font-display: block;
 
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-thumb-down:before {
+  content: "\e919";
+}
+.icon-thumb-up:before {
+  content: "\e91a";
+}
 .icon-check:before {
   content: "\e918";
 }
@@ -33,71 +40,71 @@
   content: "\e917";
 }
 .icon-article:before {
-    content: "\e915";
+  content: "\e915";
 }
 .icon-copy:before {
-    content: "\e916";
+  content: "\e916";
 }
 .icon-warning:before {
-    content: "\e914";
+  content: "\e914";
 }
 .icon-github:before {
-    content: "\e910";
+  content: "\e910";
 }
 .icon-arrow-down:before {
-    content: "\e90c";
+  content: "\e90c";
 }
 .icon-arrow-up:before {
-    content: "\e90d";
+  content: "\e90d";
 }
 .icon-arrow-left:before {
-    content: "\e90e";
+  content: "\e90e";
 }
 .icon-arrow-right:before {
-    content: "\e90f";
+  content: "\e90f";
 }
 .icon-error:before {
-    content: "\e911";
+  content: "\e911";
 }
 .icon-info:before {
-    content: "\e912";
+  content: "\e912";
 }
 .icon-note:before {
-    content: "\e913";
+  content: "\e913";
 }
 .icon-business:before {
-    content: "\e900";
+  content: "\e900";
 }
 .icon-cloud:before {
-    content: "\e901";
+  content: "\e901";
 }
 .icon-developer:before {
-    content: "\e902";
+  content: "\e902";
 }
 .icon-email:before {
-    content: "\e903";
+  content: "\e903";
 }
 .icon-facebook:before {
-    content: "\e904";
+  content: "\e904";
 }
 .icon-instagram:before {
-    content: "\e905";
+  content: "\e905";
 }
 .icon-linkedin:before {
-    content: "\e906";
+  content: "\e906";
 }
 .icon-location:before {
-    content: "\e907";
+  content: "\e907";
 }
 .icon-rss:before {
-    content: "\e908";
+  content: "\e908";
 }
 .icon-search:before {
-    content: "\e909";
+  content: "\e909";
 }
 .icon-twitter:before {
-    content: "\e90a";
+  content: "\e90a";
 }
 .icon-youtube:before {
-    content: "\e90b";
+  content: "\e90b";
 }

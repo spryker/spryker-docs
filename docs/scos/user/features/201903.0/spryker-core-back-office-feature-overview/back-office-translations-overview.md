@@ -1,6 +1,5 @@
 ---
-title: Back Office Translations Feature Overview
-last_updated: Jan 26, 2022
+title: Back Office Translations overview
 description: Back Office Translations feature allows a user with administrative rights to translate the Back Office into different languages in a per-user manner.
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/back-office-translations-overview
@@ -12,6 +11,7 @@ redirect_from:
 
 ---
 title: Back Office Translations overview
+last_updated: Aug 20, 2021
 description: The Back Office Translations feature introduces a way to translate the Administration interface (Zed) into different languages in a per-user manner.
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/back-office-translations-overview

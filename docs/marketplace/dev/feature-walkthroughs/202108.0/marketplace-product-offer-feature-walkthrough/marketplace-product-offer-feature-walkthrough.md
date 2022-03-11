@@ -1,7 +1,7 @@
 ---
 title: Marketplace Product Offer feature walkthrough
 last_updated: Apr 23, 2021
-description: Product Offer is created when merchants want to sell products already available on Marketplace.
+description: Product Offer is created when a merchant wants to sell products already available on the Marketplace.
 template: feature-walkthrough-template
 redirect_from: /docs/marketplace/dev/feature-walkthroughs/202108.0/marketplace-product-offer-feature-walkthrough/rendering-merchant-product-offers-on-the-storefront.html
 ---
@@ -21,23 +21,26 @@ To learn more about the feature and to find out how end users use it, see [Marke
 
 {% endinfo_block %}
 
+## Module dependency graph
 
-## Main Marketplace Product Offer feature modules
+The following diagram illustrates the dependencies between the modules for the Marketplace Product Offer feature. 
+
+![Module Dependency Graph](https://confluence-connect.gliffy.net/embed/image/73bc50f6-4822-485c-bd0e-d19646a761f3.png?utm_medium=live&utm_source=custom)
 
 The table below lists the main modules of the Marketplace Product Offer feature.
 
-| NAME | DESCRIPTION | MANAGED ENTITIES  |
-| -------------------- | ---------- | ----------------- |
-| [MerchantProductOffer](https://github.com/spryker/merchant-product-offer) | <ul><li>Provides collection of product offers by request.</li><li>Extends `ProductOffer` with merchant information.</li><li> Used by `MerchantSwitcher` for enabling the merchant functionality.</li></ul>  | SpyProductOffer |
-| [ProductOffer](https://github.com/spryker/product-offer) | Provides the main create-read-update product offer functionality.  | SpyProductOffer |
-| [ProductOfferValidity](https://github.com/spryker/product-offer-validity) | Defines validity period for an offer | SpyProductOfferValidity |
-| [Shop.MerchantProductOfferWidget](https://github.com/spryker-shop/merchant-product-offer-widget) | Provides merchant product offer information for `spryker-shop`. | - |
+| NAME | DESCRIPTION |
+| -------------------- | ---------- |
+| [MerchantProductOffer](https://github.com/spryker/merchant-product-offer) | Provides a collection of product offers by request. Extends `ProductOffer` with the merchant information. Used by `MerchantSwitcher` for enabling the merchant functionality.  |
+| [ProductOffer](https://github.com/spryker/product-offer) | Provides the main create-read-update product offer functionality.  |
+| [ProductOfferValidity](https://github.com/spryker/product-offer-validity) | Defines validity period for an offer. |
+| [Shop.MerchantProductOfferWidget](https://github.com/spryker-shop/merchant-product-offer-widget) | Provides merchant product offer information for the `spryker-shop`. |
 
-## Entity diagram
+## Domain model
 
-The following schema illustrates the relations in the Marketplace Product Offer entity:
+The following schema illustrates the domain model of the Marketplace Product Offer feature:
 
-![Entity diagram](https://confluence-connect.gliffy.net/embed/image/6a64677b-090a-4dbf-86a5-8e9d8afa1a68.png?utm_medium=live&utm_source=custom)
+![Domain model](https://confluence-connect.gliffy.net/embed/image/681c5f0c-4a17-4255-9033-7777a6127ce0.png?utm_medium=live&utm_source=custom)
 
 ## Related Developer articles
 

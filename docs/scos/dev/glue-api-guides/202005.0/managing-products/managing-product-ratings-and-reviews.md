@@ -53,7 +53,7 @@ To do so, send a request as follows:
 Sample request: `GET http://glue.mysprykershop.com/abstract-products/035?include=product-reviews`
 
 **Concrete products**
-To fetch a list of ratings and reviews for a concrete product (i.e. its parent abstract product), send a request for the concrete product information and include the ratings and reviews as a relationship:
+To fetch a list of ratings and reviews for a concrete product (for example, its parent abstract product), send a request for the concrete product information and include the ratings and reviews as a relationship:
 
 */concrete-products/{% raw %}{{{% endraw %}product_sku{% raw %}}}{% endraw %}?**include=product-reviews***
 

@@ -1,5 +1,5 @@
 ---
-title: Reference information- category
+title: Reference information - category
 description: The guide provides reference information you see when working with categories in the Back Office.
 last_updated: Jun 8, 2021
 template: back-office-user-guide-template

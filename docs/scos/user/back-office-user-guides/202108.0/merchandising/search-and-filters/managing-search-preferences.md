@@ -25,7 +25,7 @@ To start working with search preferences, go to **Merchandising** > **Search Pre
 
 When adding a search preference, the **Attribute Key** value is taken from the **Product Attributes > Specific Attribute** entity. Make sure that you are populating the field with an existing attribute key of an attribute assigned to a product; otherwise, the search result will be blank in the online store.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating new attributes to search
 
@@ -109,7 +109,7 @@ Instead of this, you might want to consider enabling search preference types for
 
 {% info_block infoBox "Example" %}
 
-There is a new device in your shop which is popular on the market for its video recording properties. You know that users are very interested in a device with such property and they might search for products by it.<br>Suppose, you have created the _video_recording_ attribute in your shop with the values **Geotaging** and **Autofocus**.<br>However, suppose there are other attributes having the same values.<br>Since you want to advertise the specific new device more, it would make sense for you to disable, or at least to restrict the number of active search preference types for all other attributes with **Geotagging** and **Autofocus** values and enable an individual (or even all) search preference types for the _video_recording_.<br>This way you will make the _video_recording_ product attribute searchable and therefore the products with this attribute will stand out in the search results when your customers search by attributes.
+There is a new device in your shop which is popular on the market for its video recording properties. You know that users are very interested in a device with such property and they might search for products by it.<br>Suppose, you have created the _video_recording_ attribute in your shop with the values **Geotagging** and **Autofocus**.<br>However, suppose there are other attributes having the same values.<br>Since you want to advertise the specific new device more, it would make sense for you to disable, or at least to restrict the number of active search preference types for all other attributes with **Geotagging** and **Autofocus** values and enable an individual (or even all) search preference types for the _video_recording_.<br>This way you will make the _video_recording_ product attribute searchable and therefore the products with this attribute will stand out in the search results when your customers search by attributes.
 
 {% endinfo_block %}
 

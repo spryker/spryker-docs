@@ -33,7 +33,7 @@ _Destructive deploy_ is a pipeline that includes all the stages of a complete CI
 Regardless of the pipeline type, deployment is divided into three stages:
 
 1. `pre-deploy`
-2. `install`  
+2. `install`
 3. `post-deploy`
 
 
@@ -65,18 +65,18 @@ image:
     SPRYKER_HOOK_AFTER_DEPLOY: "true"
     SPRYKER_HOOK_INSTALL: "vendor/bin/install -r US/production --no-ansi -vvv"
     SPRYKER_HOOK_DESTRUCTIVE_INSTALL: "vendor/bin/install -r US/destructive --no-ansi -vvv"
-...    
+...
 ```
 
 Any shell commands specified in environment variables as hooks are executed with a shell inside the CodeBuild runtime. For example:
 
 ```yaml
 ...
-environment:  
-  SPRYKER\_HOOK\_BEFORE\_DEPLOY: “touch /some/file && echo OK || echo FAIL“  
-  SPRYKER\_HOOK\_AFTER\_DEPLOY: “curl http://some.host.com:<port>/notify“  
-  SPRYKER\_HOOK\_INSTALL: “chmod +x ./some\_custom\_script.sh && ./some\_custom\_scipt.sh“  
-  SPRYKER\_HOOK\_DESTRUCTIVE\_INSTALL: “vendor/bin/install -r destructive --no-ansi -vvv“
+environment:
+  SPRYKER_HOOK_BEFORE_DEPLOY: “touch /some/file && echo OK || echo FAIL“
+  SPRYKER_HOOK_AFTER_DEPLOY: “curl http://some.host.com:<port>/notify“
+  SPRYKER_HOOK_INSTALL: “chmod +x ./some_custom_script.sh && ./some_custom_scipt.sh“
+  SPRYKER_HOOK_DESTRUCTIVE_INSTALL: “vendor/bin/install -r destructive --no-ansi -vvv“
 ...
  ```
 

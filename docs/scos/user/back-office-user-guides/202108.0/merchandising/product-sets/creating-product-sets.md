@@ -23,7 +23,7 @@ You create a product set to improve the customer's shopping experience. You coll
 
 To start working with product sets, go to **Merchandising** > **Product Sets**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating product sets
 
@@ -37,7 +37,7 @@ To create a product set:
     If you have multiple languages, you will be required to fill in the same information in all languages.
     4. At the bottom of the **General** tab, you will find Product Set Key, Weight and a checkbox for Active. Enter the values for the attributes.
 3. Select **Next** to proceed to the *Products* tab, or just click on it.
-    The *Product* tab is where you select products to includ in your product set.
+    The *Product* tab is where you select products to include in your product set.
 4. To add products, simply select the checkbox next to your desired products in the **Selected** column. You can use the available search tool on the top right of the *Select Products to assign* tab on this page. You can select as many products as needed—there is no limit.
 
 {% info_block errorBox "Important" %}

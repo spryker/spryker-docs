@@ -33,7 +33,7 @@ Make sure to [create a company](/docs/scos/user/back-office-user-guides/{{page.v
 
 {% endinfo_block %}
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating a company role
 

@@ -1,5 +1,5 @@
 ---
-title: Resource sharing feature integration
+title: Resource Sharing feature integration
 last_updated: Aug 27, 2020
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/resource-sharing-feature-integration

@@ -1,5 +1,5 @@
 ---
-title: Product Bundles
+title: Product Bundles feature overview
 description: With the Product Bundles feature you can freely tie individual items together and sell them as a package.
 last_updated: Jan 26, 2022
 template: concept-topic-template

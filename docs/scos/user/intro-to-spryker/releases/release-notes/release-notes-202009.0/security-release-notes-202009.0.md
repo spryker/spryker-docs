@@ -176,7 +176,7 @@ composer update spryker/acl spryker/business-on-behalf-gui spryker/cms spryker/c
 
 ## Vulnerabilities in 3rd-party dependencies
 ### jQuery: Passing HTML from untrusted sources
-Passing an HTML code containing `<option>` elements from untrusted sources, even after sanitizing them, to one of the jQuery's DOM manipulation methods (i.e. `.html()`, `.append()`, and others) may execute untrusted code in browser.
+Passing an HTML code containing `<option>` elements from untrusted sources, even after sanitizing them, to one of the jQuery's DOM manipulation methods (for example, `.html()`, `.append()`, and others) may execute untrusted code in browser.
 
 This problem is patched in jQuery 3.5.0.
 

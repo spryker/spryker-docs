@@ -32,6 +32,7 @@ To set up a category filter, you need to have a filter preference setup in the *
 Before adding a filter to the category, make sure that the product (with an attribute with a specific attribute key for which a filter preference exists is assigned to this specific category. Otherwise, the filter will not bring any results once selected in the online store.
 
 {% endinfo_block %}
+
 ***
 
 On the **Overview of Category Filters** page, you see the **Root nodes list**, **Category tree**, and

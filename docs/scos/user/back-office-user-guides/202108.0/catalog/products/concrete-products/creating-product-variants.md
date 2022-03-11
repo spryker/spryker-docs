@@ -25,7 +25,7 @@ This topic describes how to add a product variant for an abstract product.
 
 To create a product variant, navigate to **Catalog** > **Products** section.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating a product variant
 
@@ -41,7 +41,7 @@ To create a product variant:
         * Select a value.
         * Select **Use custom value** and, in the field the appears below, enter the value.
     3. Add product name and description and select **Searchable** if you want your product to be searchable by its name in the online store.
-    4. **Opionally**: Enter **Valid From** and **Valid To** dates to specify when the product should go online in the web-shop.
+    4. **Optionally**: Enter **Valid From** and **Valid To** dates to specify when the product should go online in the web-shop.
     5. Go to the *Price & Stock* tab.
 4. In the *Price & Tax* tab, set prices and taxes for products:
     1. To take the prices over from the abstract product, select **Use prices from abstract product**.

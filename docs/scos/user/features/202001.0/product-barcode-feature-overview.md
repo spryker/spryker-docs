@@ -1,5 +1,5 @@
 ---
-title: Barcode Generator Feature Overview
+title: Product Barcode feature overview
 description: The Barcode Generator can be used for any kind of entity, and by default, we provide a solution for products.
 last_updated: Jan 26, 2022
 template: concept-topic-template

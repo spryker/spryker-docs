@@ -71,7 +71,7 @@ At the same time, IO operations have limited scalability. This means that we nee
 
 The first step in achieving this is to establish a data pipeline, where inconsistent data sets do not reach Spryker Data Importers and are managed on the data export phase (e.g., by ERP, Middleware).
 
-When a clean data pipeline is not possible by system requirements, you can establish runtime validations. They should prevent inconsistent data coming to the persistence layer and reduce pollution of the DB connection with invalid SQL queries. In this case, we spend CPU time for validation, which remains highly scalable until business models are stateless.
+When a clean data pipeline is not possible by DevVM system requirements, you can establish runtime validations. They should prevent inconsistent data coming to the persistence layer and reduce pollution of the DB connection with invalid SQL queries. In this case, we spend CPU time for validation, which remains highly scalable until business models are stateless.
 
 We recommend collecting import statistics and logs to identify new reasons for data inconsistency and implement relevant validators. Example: while importing summer collection, we found that new products are missing category assignment. In this case, we implement a category validator that will clean the data up before propagating it to persistence.
 

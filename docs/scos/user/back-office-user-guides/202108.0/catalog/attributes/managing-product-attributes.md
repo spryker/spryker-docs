@@ -21,7 +21,7 @@ This topic describes how to manage product attributes.
 
 To start managing attributes, go to **Catalog** > **Attributes**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Viewing product attributes
 
@@ -35,7 +35,7 @@ To edit the product attribute, select **Edit** in the top right corner of the pa
 
 To edit a product attribute:
 1. Select **Edit** next to the product attribute you want to edit.
-    On the *Edit Product Attributes* page that opends, the **Attribute Key**, **Input type**, and **Super attribute** are disabled. You can define them only when [creating a product attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html).
+    On the *Edit Product Attributes* page that opens, the **Attribute Key**, **Input type**, and **Super attribute** are disabled. You can define them only when [creating a product attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html).
 2. Update **Predefined Values**:
     * Delete one or more predefined values by selecting **x** next to the each value you want to remove.
     * Add predefined values:
@@ -65,7 +65,7 @@ This section describes attributes that you see, select and enter when editing pr
 | ATTRIBUTE |DESCRIPTION |
 | --- | --- |
 | Attribute Key |  Name of the attribute, for example, `color`. |
-| Input type | Ddata format of the of the attribute value. |
+| Input type | Data format of the of the attribute value. |
 | Super attribute | Defined if the product attribute is a super attribute. Super attributes distinguish concrete products of an abstract product.  |
 | Predefined values | Values for you attribute, e.g., if the attribute is a *color*, the values for it can be _red_, _green_, _black_, etc. |
 | Allow input any value other than predefined ones | Checkbox that defines whether you can enter the values other than the predefined ones when creating or updating a product variant. |

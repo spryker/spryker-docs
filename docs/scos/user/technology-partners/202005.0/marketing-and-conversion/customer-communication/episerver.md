@@ -22,7 +22,7 @@ YOUR ADVANTAGES:
 * Increased engagement: Deliver seamless experiences, get smarter segmentation, and increase engagement and conversions.
 
 
-## Related Developer articles
+## Related Developer guides
 
 * [Episerver API](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/episerver/episerver-api.html)
 * [Episerver order reference commands](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html)

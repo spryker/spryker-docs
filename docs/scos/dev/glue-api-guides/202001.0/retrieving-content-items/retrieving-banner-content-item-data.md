@@ -30,7 +30,7 @@ To learn how to create and manage content items in CMS, see:
 {% endinfo_block %}
 
 ## Installation
-For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-api-feature-integration.html).
+For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-feature-integration.html).
 
 ## Retrieving Banner Content Item Data
 To retrieve the Banner content item data, send a GET request to the following endpoint:

@@ -9,7 +9,7 @@ redirect_from:
   - /v4/docs/en/baqend
 related:
   - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
+    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ---

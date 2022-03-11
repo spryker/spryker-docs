@@ -17,10 +17,10 @@ Please overview and install the necessary features before beginning the integrat
 
 | Name | Version |
 | --- | --- |
-| Cms | master |
-| Product lists | master |
-| Catalog | master |
-| Customer | master |
+| Cms | {{page.version}} |
+| Product lists | {{page.version}} |
+| Catalog | {{page.version}} |
+| Customer | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 

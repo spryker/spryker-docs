@@ -11,7 +11,7 @@ This topic describes how to manage attributes of the marketplace abstract produc
 
 To start working with marketplace abstract products, go to **Merchant Portal** > **Products**.
 
-This article contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+This article contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Adding marketplace abstract product attributes
 

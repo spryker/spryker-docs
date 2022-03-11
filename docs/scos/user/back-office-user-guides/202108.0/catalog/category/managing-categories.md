@@ -28,7 +28,7 @@ This topic describes how to manage categories:
 
 To start managing categories, go to **Catalog** > **Category**.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Ordering products in categories
 

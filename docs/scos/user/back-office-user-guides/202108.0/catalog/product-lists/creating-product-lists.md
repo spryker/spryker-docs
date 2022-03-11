@@ -20,7 +20,7 @@ You can consider product lists as conditions under which companies see products 
 
 To start working with product lists, go to **Catalog** > **Product Lists**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating product lists
 

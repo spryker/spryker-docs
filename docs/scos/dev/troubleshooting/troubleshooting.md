@@ -4,6 +4,7 @@ description: Learn how you can fix technical issues with Spryker
 template: concept-topic-template
 redirect_from:
     - /docs/installation-troubleshooting
+    - /docs/troubleshooting
 ---
 
 This section gives answers to common troubleshooting questions and includes the following topics:

@@ -18,7 +18,7 @@ This topic describes how to create and manage the Punch Out connections.
 
 To start working with connections, go to the *Punch Out* section.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Creating punch out connections
 

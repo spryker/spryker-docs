@@ -27,7 +27,7 @@ Here, inventory managers or other team members responsible for stock updates can
 
 The main advantage is that you do not need to make any manual calculations. The system does all the calculations automatically, and you get the aggregated availability value. You will have a single table with a comparison of the product's stock value and the ordered value. It also calculates the bundled products stock.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Checking availability
 

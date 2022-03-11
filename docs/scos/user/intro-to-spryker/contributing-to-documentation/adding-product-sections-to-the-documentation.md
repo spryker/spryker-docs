@@ -32,7 +32,7 @@ defaults:
       product: "aop"
 ```
 
-2. Under the product scope you have added in the previous step, add the product roles with their paths and sidebars. The sidebar names should match those you've created in [1. Create sidebars for the new product](#create-sidebars-for-the-new-product). For example:
+2. Under the product scope you have added in the previous step, add the product roles with their paths and sidebars. The sidebar names should match those you've created in [1. Create sidebars for the product](#create-sidebars-for-the-product). For example:
 
 ```yaml
 defaults:
@@ -65,7 +65,7 @@ versioned_categories:
       - glue-api-guides
  ```
 
-4. In the `sidebars:` section, add the names of the sidebars you've created in [1. Create sidebars for the new product](#create-sidebars-for-the-new-product). For example:
+4. In the `sidebars:` section, add the names of the sidebars you've created in [1. Create sidebars for the new product](#create-sidebars-for-the-product). For example:
 
 ```yaml
 sidebars:

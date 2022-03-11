@@ -1767,10 +1767,12 @@ entries:
       - title: "Best practices: Managing users and their permissions with roles and groups"
         include_versions:
         - "202108.0"
+        - "202009.0"        
         url: /docs/scos/user/back-office-user-guides/users/best-practices-managing-users-and-their-permissions-with-roles-and-groups.html
       - title: Managing user roles
         include_versions:
         - "202108.0"
+        - "202009.0"
         nested:
         - title: Creating user roles
           url: /docs/scos/user/back-office-user-guides/users/managing-user-roles/creating-user-roles.html
@@ -1779,6 +1781,7 @@ entries:
       - title: Managing user groups
         include_versions:
         - "202108.0"
+        - "202009.0"
         nested:
         - title: Creating user groups
           url: /docs/scos/user/back-office-user-guides/users/managing-user-groups/creating-user-groups.html
@@ -1786,7 +1789,8 @@ entries:
           url: /docs/scos/user/back-office-user-guides/users/managing-user-groups/editing-user-groups.html
       - title: Managing users
         include_versions:
-        - "202108.0"         
+        - "202108.0"
+        - "202009.0"
         nested:
         - title: Creating users
           url: /docs/scos/user/back-office-user-guides/users/managing-users/creating-users.html
@@ -1805,7 +1809,6 @@ entries:
         - "201907.0"
         - "202001.0"
         - "202005.0"
-        - "202009.0"
         nested:
         - title: Managing roles
           url: /docs/scos/user/back-office-user-guides/users/roles-groups-and-users/managing-roles.html
@@ -1823,7 +1826,6 @@ entries:
             - "201907.0"
             - "202001.0"
             - "202005.0"
-            - "202009.0"
           - title: Reference information - User
             url: /docs/scos/user/back-office-user-guides/users/roles-groups-and-users/references/reference-information-user.html
             include_versions:
@@ -1832,7 +1834,6 @@ entries:
             - "201907.0"
             - "202001.0"
             - "202005.0"
-            - "202009.0"
     - title: Marketplace
       include_versions:
       - "201903.0"

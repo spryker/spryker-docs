@@ -129,7 +129,7 @@ In the example, we grant the user **winner@spryker.com** access to all Zed resou
             <ul class="mr-list mr-list-blue">
                 <li class="mr-title"> Back Office User</li>
                 <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-roles.html" class="mr-link">Create and manage roles</a></li>
-                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-groups/creating-user-groups.html" class="mr-link">Create and manage groups</a></li>
+                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-groups/creating-user-groups.html" class="mr-link">Create and manage groups</a></li>
                 <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html" class="mr-link">Create and manage users</a></li>
             </ul>
         </div>

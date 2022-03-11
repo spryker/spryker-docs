@@ -1,42 +1,34 @@
 ---
-title: Creating user roles
-description: Learn how to create roles in the Back Office.
-last_updated: Aug 2, 2021
+title: Editing user roles
+description: Learn how to edit user roles in the Back Office.
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-roles
-originalArticleId: 646ae8f6-32b9-440d-8cdf-c720d046de25
-redirect_from:
-  - /2021080/docs/managing-roles
-  - /2021080/docs/en/managing-roles
-  - /docs/managing-roles
-  - /docs/en/managing-roles
-  - /docs/scos/user/back-office-user-guides/202108.0/users/roles-groups-and-users/managing-roles.html
 ---
 
-This document describes how to create user roles in the Back Office.
+This document describes how to edit user roles in the Back Office.
 
 ## Prerequisites
 
-1. If you are new to the **Users** section, you might want to start with [Best practices: Managing users and their permissions with roles and groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/best-practices-managing-users-and-their-permissions-with-roles-and-groups.html).
-2. To start working with roles, go to **Users** > **User Roles**.
+To start working with user roles, go to **Users** > **User Roles**.
 
-Review the [reference information](#reference-information-creating-user-roles) before you start, or look up the necessary information as you go through the process.
+Review the [reference information](#reference-information-editing-roles) before you start, or look up the necessary information as you go through the process.
 
-## Creating roles
+## Editing roles
 
-1. On the **User Roles** page, click **Add new Role**.
-2. On the **Create new Role** page, enter a **NAME** and click **Create**.
-    This opens the **Edit Role** page with the success message displayed.
-3. In the **Rule** pane, enter a **BUNDLE**.
-4. Enter a **CONTROLLER**.
-5. Enter an **ACTION**.
-6. Select a **PERMISSION**
-7. Click **Add Rule**.
-      The page refreshes with the success message displayed and the rule displayed in the **Assigned Rules** section.
-8. Repeat steps 3-7 until you add all the needed rules.       
+1. On the **User Roles** page, click **Edit** next to the role you want to edit.
+2. In the **Role** pane, update the **NAME**.
+3. If you updated the **NAME**, click **Save**.
+4. In the **Rule** pane, to add a rule, do the following:
+    1. Enter a **BUNDLE**.
+    4. Enter a **CONTROLLER**.
+    5. Enter an **ACTION**.
+    6. Select a **PERMISSION**.
+    7. Click **Add Rule**.
+      The page refreshes with the success message displayed and the ruled displayed in the **Assigned Rules** section.
+5. Repeat steps 3-7 until you add all the needed rules.
+6. In the **Assigned Rules** section, delete one or more rules by clicking **Delete** next to the rules you want to delete.
+    This refershes the page with the success message displayed. The rule is no longer displayed in the list.
 
-
-### Reference information: Creating user roles
+### Reference information: Editing roles
 
 The following table describes the attributes you enter and select when creating roles:
 
@@ -47,7 +39,6 @@ The following table describes the attributes you enter and select when creating 
 | CONTROLLER | Depending on the **PERMISSION**, allows or denies access to a  subsection of the Back Office. You can check this value by going to the needed subsection and looking it up in the URL. For example, in `https://backoffice.de.b2b-demo-shop.local/product-attribute-gui/attribute/create`, `attribute` is a controller. |
 | ACTION | Depending on the **PERMISSION**, allows or denies access to making actions. You can check this value by going to the needed action and looking it up in the URL. For example, in `https://backoffice.de.b2b-demo-shop.local/product-attribute-gui/attribute/create`, `create` is an action.
 | PERMISSION | Denies or allows access to the **BUNDLE**, **CONTROLLER**, and **ACTION**. |
-
 
 **Tips and tricks**
 
@@ -97,8 +88,3 @@ See the example of the `navigation.xml` file of the AvailabilityGui module:
 ```
 
 </details>
-
-
-## Next steps
-
-[Creating user groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-groups/creating-user-groups.html)

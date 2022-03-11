@@ -42,7 +42,7 @@ To start managing CMS redirects, navigate to the **Content Management > Redirect
 
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 
 On the **Edit a CMS redirect** page, you can do the following:
 

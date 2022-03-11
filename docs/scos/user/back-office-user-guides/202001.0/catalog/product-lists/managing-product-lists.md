@@ -24,7 +24,7 @@ To edit a product list:
     2. (Un)assign product category or individual products to a list.
 3. Once done, click **Save**.
 ***
-**Tips & Tricks**
+**Tips and tricks**
 
 On this page, you can:
 * Check what Configurable Bundle uses the list in the **Used By** tab.

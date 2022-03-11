@@ -1,6 +1,6 @@
 ---
 title: Editing billing addresses in orders
-description: Learn how to create reclamations in the Back Office
+description: Learn how to edit order billing addresses in the Back Office
 template: back-office-user-guide-template
 ---
 
@@ -20,39 +20,27 @@ Review the [reference information](#reference-information-claiming-orders) befor
     The **Edit Address** page opens.  
 
 3. Update any of the address details and click **Save**.
-    * Select a ****.
-    * Enter a ****.
-    * Enter a ****.
-    * Enter a ****.
-    * Enter an ****.
-    * Select a ****.
-    * For **** and ****, enter an address.
-    * Enter a ****.
-    * Enter a ****.
-    * Enter a ****.
-    * Enter a ****.
+    This opens the **Order Overview** page with the success message displayed.
 
 ### Reference information: Editing billing addresses
 
-The following table describes the attributes you enter and select when adding a new customer address.
+The following table describes the attributes you enter and select when editing billing addresses in orders.
 
 | ATTRIBUTE | DESCRIPTION |
 |---|---|
 | SALUTATION | Customer's salutation. |
-| FIRST NAME |
-| MIDDLE NAME |
-| LAST NAME |
-| EMAIL |
-| COUNTRY |
-| ADDRESS 1 |
-| ADDRESS 2 |
-| COMPANY |
-| CITY |
-| ZIP CODE |
-| PO BOX |
-| 
-|Address line 1<br>Address line 2<br>Address line 3|The fields where you enter the address information except for the city, zip code, and country.|
-|City<br>Zip Code<br>Country|City, zip code, and country of the customer.|
-|Phone|Customer's phone number.|
-|Company|Customer's company.|
-|Comment|Any specific comment regarding the customer or customer address (e.g., _"This address is going to be used only if the order costs less than 900 euros."_).|
+| FIRST NAME | Customer's first name. |
+| MIDDLE NAME | Customer's middle name. |
+| LAST NAME | Customer's last name. |
+| EMAIL | Customer's email address. |
+| COUNTRY | Customer's country. |
+| ADDRESS 1 | Customer's address. |
+| ADDRESS 2 | Additional details of the customer's address. |
+| COMPANY | Customer's company. |
+| CITY | Customer's city. |
+| ZIP CODE | Customer's ZIP code. |
+| PO BOX | Customer's PO box. |
+| PHONE | Customer's phone number. |
+| CELL PHONE | Customer's cell phone number. |
+| DESCRIPTION | A short description of this address. |
+| COMMENT | A comment about this address. For example, "This address is going to be used only if the order costs less than 900 euros.".|

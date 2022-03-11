@@ -59,7 +59,7 @@ In case you need to update any values that you have entered during the shipment 
 3. Once done, click **Save**.
    
 ***
-**Tips & Tricks**
+**Tips and tricks**
 
 This is how the Back Office setup looks in the online store:
 **Back Office**

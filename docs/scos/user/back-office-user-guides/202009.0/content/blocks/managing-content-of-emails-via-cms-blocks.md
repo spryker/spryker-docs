@@ -88,7 +88,7 @@ To edit the content of an Email CMS Block:
 
 1. In the *Actions* column of the *Overview of CMS Blocks* page, select **Edit Placeholder** next to the Email CMS Block you want to update.
 
-2. On the *Edit Block Glossary: {Block ID}* page, update the content of the email CMS block. You can use plain text to create content of the emails, or apply glossary keys and variables. See **Tips & Tricks** for details.
+2. On the *Edit Block Glossary: {Block ID}* page, update the content of the email CMS block. You can use plain text to create content of the emails, or apply glossary keys and variables. See **Tips and tricks** for details.
 
 {% info_block warningBox "Content items" %}
 
@@ -100,7 +100,7 @@ Content Items are not rendered in emails.
 The page refreshed displaying the message about the successful update. 
 
 
-#### Tips & Tricks
+#### Tips and tricks
 
 * Add a [glossary key](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/managing-glossary.html) to the Email CMS Block. When the email is sent, the key is replaced with the translation you defined for the locale selected by the customer. See [Managing Glossary](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/managing-glossary.html) to learn how to add translations.
 

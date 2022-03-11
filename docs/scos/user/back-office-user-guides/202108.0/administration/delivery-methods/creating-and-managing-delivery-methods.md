@@ -105,7 +105,7 @@ Keep in mind that **Delivery Method Key** cannot be edited.
 
 3. To keep the changes, click **Save**. For more details on the attributes, see the [Reference information: Creating delivery methods](#reference-information-creating-delivery-methods) section.
 
-**Tips & tricks**
+**Tips and tricks**
 <br>This is how the Back Office setup looks in the online store:
 
 ![Editing a shipment method](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/editing-shipment-method.png)

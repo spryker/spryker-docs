@@ -92,7 +92,7 @@ According to the use case described in the Abstract and Concrete Products articl
 6.  Click **Save**.
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 
 Once you click **Save**, the page is refreshed. You will see the **Edit Product** page. You can start editing your product variants right from here by navigating to the **Variants** tab.
 ***

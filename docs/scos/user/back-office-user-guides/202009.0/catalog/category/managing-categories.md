@@ -89,7 +89,7 @@ Products assigned to this category will not be deleted. They will be de-assigned
 
 {% endinfo_block %}
 
-**Tips & Tricks**
+**Tips and tricks**
 If your category contains any nested categories, you can re-sort them by a simple drag-and-drop action:
 1. To get to **Re-sort View**, click **Re-sort child categories** for a specific category on the table view page.
 2. Once in **Re-sort View**, play around by dragging & dropping categories. 

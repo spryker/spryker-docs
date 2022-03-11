@@ -60,7 +60,7 @@ In case you need to update any values that you have entered during the shipment 
 2. Update the needed values.
 3. Once done, click **Save**.
 ***
-<!-- **Tips & Tricks**
+<!-- **Tips and tricks**
 This is how the Back Office setup looks in the online store:
 **Back Office**
 ![Editing a shipment method](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Shipment/Creating+and+Managing+Shipment+Methods/editing-shipment-method.png)

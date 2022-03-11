@@ -40,7 +40,7 @@ To edit a product set:
 
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 
 On this page, you can click **View** in the top right corner of the page and switch to the **View Product Set** page.
 ***

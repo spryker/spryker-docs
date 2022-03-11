@@ -39,7 +39,7 @@ The feature is available only for **logged-in** users.
 
 ![Creating a wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Wishlists/create-wishlist.png) 
 
-**Tips & Tricks**
+**Tips and tricks**
 
 You can also create a wishlist from the product detail page when adding a product to the wishlist. For more information on how to create a wishlist on the product detail page, see *Shop Guide - Managing Products*. <!-- add a link once published https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1165492794/Under+PO+Review+Shop+Guide+-+Managing+Products#Adding-a-Product-to-Wishlist -->
 ***

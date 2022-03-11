@@ -40,7 +40,7 @@ In the ever-changing business world, there is a chance that the taxation policie
 2. On the **Edit Tax Rate** page, change the attributes. See [Taxes: Reference information](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-rates/references/tax-rates-reference-information.html) for more details.
 3. Click **Save**.
 ***
-**Tips & Tricks**
+**Tips and tricks**
 You can start editing a tax rate while viewing it:
 1. On the **View Tax Rate** page, click **Edit** in the top right corner.
 2. Go over the _Editing a Tax Rate_ procedure.
@@ -79,7 +79,7 @@ Even if this was the only tax rate assigned to a tax set, the tax set itself wil
 
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 
 You can delete a tax rate while viewing it:
 1. On the **View Tax Rate** page, click **Delete** in the top-right corner.

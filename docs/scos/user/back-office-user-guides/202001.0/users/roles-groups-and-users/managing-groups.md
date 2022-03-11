@@ -69,7 +69,7 @@ This action will not delete the user itself. It will just delete the association
 
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 
 In case you need to know what roles are assigned to a specific group without initiating the update flow, do the following:
 1. On the **Groups** table view page, click the hyperlinked value in the _Roles_ column.

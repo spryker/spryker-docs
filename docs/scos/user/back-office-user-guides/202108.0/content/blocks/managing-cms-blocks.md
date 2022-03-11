@@ -37,7 +37,7 @@ To view a block:
     * General information
     * Placeholders
 
-**Tips & tricks**
+**Tips and tricks**
 <br>On the *View CMS Block: [Block ID]* page, you can do the following:
 * Edit a block's general information and layout by clicking **Edit block** in the top right corner of the page.
 * Edit a block's content and insert CMS widgets by clicking **Edit placeholders** in the top right corner of the page.
@@ -63,7 +63,7 @@ To edit a placeholder:
 2. On the *Edit Block Glossary: [Block ID]* page, you can update a title or content of the CMS block, as well as insert a content item widget. For more details, see [Adding content item widgets to a block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html#adding-content-item-widgets-to-blocks).
 3. To save the updates, click **Save**. The updated block is displayed on the grid of *List of CMS Blocks*.
 
-**Tips & tricks**
+**Tips and tricks**
 <br>On the *Edit Block Glossary: [Block ID]* page, you can do the following:
 * Edit a block general information and layout by clicking **Edit block** in the top right corner of the page.
 * Make a CMS block invisible on the store website by clicking **Deactivate** in the top right corner of the page.
@@ -81,7 +81,7 @@ To edit a CMS block:
     * Define the validity period for your block to be visible on the Storefront.
 
 
-**Tips & tricks**
+**Tips and tricks**
 <br>On the *Edit CMS Block: [Block ID]* page, you can do the following:
 * Return to the page where you can edit block title and content. For this, click **Edit placeholders** in the top right corner of the page.
 * Make the CMS block invisible on the store website by clicking **Deactivate** in the top right corner of the page.

@@ -19,7 +19,7 @@ To activate a product:
 Starting now, the product is visible to the customers of your online store.
 Please keep in mind that each variant needs to be activated in order to be visible to your customers.
 
-**Tips & tricks**
+**Tips and tricks**
 <br>If you want to hide the product variant from your customers at some point of time, you just deactivate it using the same procedure described above. This deactivates only the product variant. The abstract product is active until at least one its variant is active.
 
 ## Viewing a product
@@ -28,7 +28,7 @@ If you need to review the product details without actually editing them, do the 
 1. In the _Actions_ column of the abstract product you want to view, click **View**.
 2. On the *View Product* page, you can navigate to the view product variant, initiate the editing flow for it, or manage its attributes.
 
-**Tips & Tricks**
+**Tips and tricks**
 <br>If you notice something you would like to change for your product, in the top right corner of the page, click **Edit**.
 
 ### Filtering product options by merchants

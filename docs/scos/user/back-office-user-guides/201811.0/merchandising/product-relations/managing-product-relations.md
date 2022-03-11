@@ -53,7 +53,7 @@ There are 2 places where you can view the product relation:
 ![Product relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Relations/Managing+Product+Relations/product-relations.png) 
 
 ***
-**Tips & Tricks**
+**Tips and tricks**
 When you select the **View in Shop** option, keep the following in mind:
 * No matter what relation type is, you will be redirected to the abstract PDP page. So if the relation type is upselling, you will not be able to see the **Similar products** section until you add the product to cart and actually navigate to that cart.
 * The relation you want to view in the online store must be active. If inactive, you will be redirected to the PDP, but there will be no **Similar products** section for the abstract product. The same applies to upselling.

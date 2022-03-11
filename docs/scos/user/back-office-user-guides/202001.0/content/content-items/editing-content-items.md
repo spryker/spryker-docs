@@ -22,7 +22,7 @@ This topic describes how you can edit content items in the Back Office.
 3. Make changes to the needed attributes. See [Content Items: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-items.html) to learn more about content item attributes. 
 4. To save the updates, click **Save**. The updated content item will be displayed on the grid of _List of Content Items_ and the following message is displayed: '_Content item has been successfully updated._'.
 
-**Tips & Tricks**
+**Tips and tricks**
 
 On the **Edit Content Item Type: Content Item Key** page, you can:
 

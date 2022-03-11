@@ -29,7 +29,7 @@ To edit a Configurable Bundle Template:
     - (Un)assign product category or individual products to slots.
   ***
 
-**Tips & Tricks**
+**Tips and tricks**
 On this page, you can return to the list of Configurable Bundle Templates by clicking **Back to Template List** in the top right corner of the page.
 
 ### Creating a Slot for a Configurable Bundle Template

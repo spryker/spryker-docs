@@ -32,7 +32,7 @@ See [CMS Redirects: Reference Information](/docs/scos/user/back-office-user-guid
 If you modify the **existing** URL from which a redirect is configured, a new URL will be created and added to the list of CMS redirects.
 {% endinfo_block %}
 
-**Tips & Tricks**
+**Tips and tricks**
 On the **Edit a CMS redirect** page, you can do the following:
 
 * Create a new CMS redirect by clicking **+Add CMS Redirect** in the top right corner of the page.

@@ -38,7 +38,7 @@ To create a new shipment for the order:
 3. In the *Order items inside this shipment* section, select the order items you want to be delivered in this shipment. 
 4. To keep the changes, click **Save**. This will take you to the **View Order: [Order ID]** page where you can see the new order shipment.
 
-**Tips & Tricks**
+**Tips and tricks**
 Clicking **Back to Order** in the top right corner of the page prior to saving the changes will discard all the changes and take you to the **View Order: [Order ID]** page.
 
 ## Editing Shipment Details
@@ -56,7 +56,7 @@ To edit shipment details:
     {% endinfo_block %}
 3. Once done, click **Save** to keep the changes. This will take you to the **View Order: [Order ID]** page with the following message: '*Shipment has been successfully edited'*.
 
-**Tips & Tricks**
+**Tips and tricks**
 Clicking **Back to Order** in the top right corner of the page can trigger different actions:
 * Selecting this option prior to saving the changes will discard all the changes and then take you to the *List of Orders* page.
 * Selecting this option after the changes have been saved will redirect you to the *List of Orders* page.

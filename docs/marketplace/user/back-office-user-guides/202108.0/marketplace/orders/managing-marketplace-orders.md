@@ -143,7 +143,7 @@ Marketplace order states flow:
 * If the customer returns the ordered items: when you select **Return**, the state becomes *Waiting for return*. The merchant needs to execute the return in the Merchant Portal.
 * Once the return is executed for the merchant order in the Merchant Portal, the state becomes *Refunded*.
 
-**Tips & tricks**
+**Tips and tricks**
 To change the state of all the items inside a shipment at once, click **the next available state** in the *Trigger all matching states of order inside this shipment* section of the corresponding shipment.
 
 For reference information about the *Orders* and *View Order: [order ID]* pages, on this page, see:
@@ -278,7 +278,7 @@ To edit a custom order reference:
 
 ![edit-a-custom-order-reference-for-a-marketplace-order](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Back+Office+user+guides/Marketplace/Orders/Managing+marketplace+orders/edit-a-custom-order-reference-for-a-marketplace-order.png)
 
-**Tips & tricks**
+**Tips and tricks**
 <br>To remove the custom order reference, clear the Custom Order Reference field and click **Save**.
 
 ## Claiming marketplace orders
@@ -290,7 +290,7 @@ To claim a marketplace order:
 3. Click **Create Reclamation**.
 <br>The page refreshes to show the success message about reclamation creation.
 
-**Tips & tricks**
+**Tips and tricks**
 <br>Claiming an order does not change the state of the order or the items inside the order. When a reclamation is created, a sales team member processes the order manually.
 
 ### Reference information: Create reclamation page
@@ -312,7 +312,7 @@ To comment on the marketplace order:
 4. Click **Send Message**.
 The page refreshes to show the success message about comment creation. Your message is displayed in the *Comments* section.
 
-**Tips & tricks**
+**Tips and tricks**
 
 * To send an email to a customer, on the *Overview of Orders* page, click the hyperlinked customer email in the Email column.
 * To view customer details:

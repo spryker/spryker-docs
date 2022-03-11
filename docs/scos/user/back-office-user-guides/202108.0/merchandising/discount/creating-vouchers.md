@@ -76,7 +76,7 @@ See [Voucher code](#voucher-code) for more information.
 
 {% endinfo_block %}
 
-**Tips & tricks**
+**Tips and tricks**
 <br>Once you generated voucher codes, you can export them as a .csv file.
 To do that, click **Export** below *Generate*.
 

@@ -38,7 +38,7 @@ For a new product in your store, you need to create both super attribute and pro
    
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 
 If you want to apply this translation to other languages, click **Copy to other languages** icon next to the translation field.
 ***

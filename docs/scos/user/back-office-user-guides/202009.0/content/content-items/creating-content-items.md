@@ -103,7 +103,7 @@ Make sure the banner has been created:
 {% endinfo_block %}
 
 
-**Tips & Tricks**
+**Tips and tricks**
 On the *Create Content Item: Banner* page, you can do the following:
 
 * Clear all the fields in a tab by clicking **Clear locale**.
@@ -173,7 +173,7 @@ Make sure the abstract product list has been created:
 
 {% endinfo_block %}
 
-**Tips & tricks**
+**Tips and tricks**
 On the *Create Content Item: Abstract Product List* page, you can do the following:
 
 * Filter the products in the *Add more products* table by entering a product name or SKU in the *Search* field.
@@ -245,7 +245,7 @@ Make sure the product set has been created:
 
 {% endinfo_block %}
 
-**Tips & tricks**
+**Tips and tricks**
 On the *Create Content Item: Product Set* page, you can do the following:
 
 * Filter the product sets in the *Available Product Sets* table by entering a product set name in the **Search** field.
@@ -318,7 +318,7 @@ Make sure the file list has been created:
 
 {% endinfo_block %}
 
-**Tips & tricks**
+**Tips and tricks**
 On the *Create Content Item: File List* page, you can do the following:
 
 * Filter the files in the *Available Files* table by entering a file name in the *Search* field.

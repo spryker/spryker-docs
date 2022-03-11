@@ -66,7 +66,7 @@ See [Scheduled Prices: Reference Information](/docs/scos/user/back-office-user-g
 Performing this action triggers the scheduled prices cron job to be run for the product for which this scheduled price has been added.
 {% endinfo_block %}
 
-**Tips & Tricks**
+**Tips and tricks**
 In the Edit Scheduled Price page, you can return to the **Edit Import** page. To do this, click **Back to the import**.
 
 ## Downloading Scheduled Price Imports

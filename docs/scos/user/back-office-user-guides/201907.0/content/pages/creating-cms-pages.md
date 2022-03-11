@@ -50,7 +50,7 @@ To create a page:
 4. In the **SEO** tab, enter meta information: title, keywords, and description. The meta details are important for SEO purposes, such as optimizing webpage ranking by search engines and improving website usability.
 5. To keep the changes, click **Save**.
 ***
-**Tips & Tricks**
+**Tips and tricks**
 
 * Keep in mind that by default, store relation is enabled for all stores. To hide your page per specific locale(s), clear checkboxes per that(those) locale(s).
 * Please consider the following cases:

@@ -28,7 +28,7 @@ To view a block:
 
 See [CMS Block: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/references/cms-block-reference-information.html)  to learn more about attributes on this page.
 
-**Tips & Tricks**
+**Tips and tricks**
 On the **View CMS Block: Block ID** page, you can do the following:
 
 * Edit a block general information and layout by clicking **Edit block** in the top right corner of the page.
@@ -43,7 +43,7 @@ To edit a placeholder:
 2. On the **Edit Block Glossary: Block ID** page that opens, you can update a title or content of the CMS block, as well as insert a content item widget. See [Adding Content Item Widgets to a Block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html#adding-content-item-widgets-to-blocks) for more details.
 3. To save the updates, click **Save**. The updated block will be displayed on the grid of List of CMS Blocks.
 
-**Tips & Tricks**
+**Tips and tricks**
 On the **Edit Block Glossary: Block ID** page, you can do the following:
 
 * Edit a block general information and layout by clicking **Edit block** in the top right corner of the page.
@@ -68,7 +68,7 @@ See [CMS Blocks: Reference Information](/docs/scos/user/back-office-user-guides/
 
 {% endinfo_block %}  
 
-**Tips & Tricks**
+**Tips and tricks**
 On the **Edit CMS Block: Block ID** page, you can do the following:
 
 * Return to the page where you can edit block title and content. For this, click **Edit placeholders** in the top right corner of the page.

@@ -40,7 +40,7 @@ The triggered return states are reflected in the Customer Account on the Storefr
 
 ------
 
-**Tips & Tricks**
+**Tips and tricks**
 
 To trigger the return states for all the items in the return, click the states at the *Trigger all matching states* field. To trigger the return states for individual items of the return, trigger the states in the *Trigger event* column for the necessary items.
 

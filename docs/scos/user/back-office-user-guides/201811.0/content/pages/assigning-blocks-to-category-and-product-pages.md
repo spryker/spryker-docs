@@ -49,7 +49,7 @@ Make sure that the block to be added _exists_, is _active_ and has _not expired_
 5. To keep the changes, click **Save**.
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 
 If you want to create different versions of the page per locale, add the general information to the section in the corresponding language.
 ***

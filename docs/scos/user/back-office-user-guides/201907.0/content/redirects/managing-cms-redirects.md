@@ -44,7 +44,7 @@ Keep in mind that if you modify the **existing** URL from which a redirect is co
 {% endinfo_block %}
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 On the **Edit a CMS redirect** page, you can do the following:
 
 * Create a new CMS redirect by clicking **+Add CMS Redirect** in the top right corner of the page.

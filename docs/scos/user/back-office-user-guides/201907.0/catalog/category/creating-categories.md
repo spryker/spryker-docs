@@ -66,6 +66,6 @@ The Create page is split into two tabs: **General** and **Image**:
 4. Click **Save**. 
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 * When you already know the exact parent category under which the category that you create is going to be nested, you can click **Add category to this node** for a specific parent category. This will redirect you to the **Create category** page where you can perform the steps described above. The only difference is that the **Parent** field will be autopopulated with the needed value. 
 * The same products can be assigned to multiple categories.

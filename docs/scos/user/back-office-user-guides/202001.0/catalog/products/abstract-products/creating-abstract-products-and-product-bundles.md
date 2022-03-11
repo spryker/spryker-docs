@@ -79,7 +79,7 @@ According to the use case described in the Abstract and Concrete Products articl
        3.  If you need several images/image sets, click either **Add image** or **Add image set** respectively and repeat the procedure.
 10. Click **Save**.
 
-**Tips & Tricks**
+**Tips and tricks**
 Once you click **Save**, the page is refreshed. You will see the **Edit Product** page. You can start editing your product variants right from here by navigating to the **Variants** tab.
 
 **What's next?**

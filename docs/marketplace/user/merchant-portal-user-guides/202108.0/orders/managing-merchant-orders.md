@@ -22,7 +22,7 @@ To change the state of items in a merchant order:
 2. In the upper right corner, click the corresponding trigger button to update the state. The page refreshes to show the message about the successful state change.
 3. Repeat step 2 until you get the desired order state. The succession of the steps depends on the merchant state machine that is set up.
 
-**Tips & tricks**
+**Tips and tricks**
 <br>Merchant order items can have multiple trigger buttons. When you click one of those buttons, only items with a manually executable event will be updated. All other items will remain in that state until their trigger has been performed. For more details, see [Marketplace state machine](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html#marketplace-state-machine)
 
 ### Changing merchant order item states
@@ -35,7 +35,7 @@ To change the state of a single item in a merchant order:
 
 ![change-the-states-of-a-single-item](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Merchant+Portal+user+guides/Orders/change-the-states-of-a-single-item.gif)
 
-**Tips & tricks**
+**Tips and tricks**
 <br>To update the states of the merchant order items in bulk:
 
 1. In the list of orders, click the order you want to change the state for or click **Details** next to it. You are taken to the *Order [Order ID]* page.
@@ -71,7 +71,7 @@ By default, the last created order goes on top of the table. However, you can so
 * No. of items
 * Store
 
-**Tips & tricks**
+**Tips and tricks**
 <br>You can rearrange the order of the columns, hide and show the columns again by clicking the settings cogwheel next to the table.
 
 ![rearrange-the-order-of-the-columns](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Merchant+Portal+user+guides/Orders/rearrange-the-order-of-the-columns.png)
@@ -90,7 +90,7 @@ The following table describes the sections on the *[Order ID]* page:
 | Items | Shipments | Contains information about shipments, such as the number of shipments, delivery address, shipment carrier and delivery method, and the requested date. |
 | Items | Order Items | Contains information on every item in the merchant order, including: <ul><li>Item SKU</li><li>Image</li><li>Name</li><li>Quantity</li><li>Current state</li><li>Merchant SKU (if exists)</li><li>Offer reference</li><li>Included product options (if exist)</li><li>Comment</li><li>States that can be triggered</li></ul>|
 
-**Tips & tricks**
+**Tips and tricks**
 <br>You can search the items in the merchant order and filter them according to their state by selecting the necessary state in the *State* drop-down menu.
 
 #### Merchant order states
@@ -144,7 +144,7 @@ To cancel an order:
 2. In the upper left corner, click **Cancel**.
    The page refreshes to show the updated merchant order state.
 
-**Tips & tricks**
+**Tips and tricks**
 <br>You can filter the existing merchant orders by:
 
 * Creation date

@@ -48,7 +48,7 @@ Click **View** next to the order you want to view the reclamation for. You are t
 To close a reclamation, click **Close** next to the order you want to close the reclamation for.
 The state of the reclamation changes from **Open** to **Closed** in the _State_ column.
 
-**Tips & tricks**
+**Tips and tricks**
 <br>While viewing a reclamation, you can:
 * Navigate to the *View Order* page of the order that is claimed.
 * Navigate to the *View Product Abstract* page of the product that is in the claimed order.

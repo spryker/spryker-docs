@@ -41,7 +41,7 @@ The *Create a Product List* page opens.
     *  Assign products to the list manually: in the *Selected* column of the *Select Products to assign* table, select the products to add to the list.
  5. Select **Save**. The page refreshes with the success message displayed.
 
-**Tips & tricks**
+**Tips and tricks**
 
 * When assigning products, you can filter products by entering a product name or SKU in the search field.
 * To double-check the list of products that are to be assigned, switch to the **Products to be assigned** table.

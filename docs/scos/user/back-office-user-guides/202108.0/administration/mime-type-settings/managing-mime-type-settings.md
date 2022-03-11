@@ -51,7 +51,7 @@ There are two ways to allow a MIME type:
 * On the *MIME Type Settings* page, in the _Is Allowed_ column, select the checkbox  and click **Save**.
     ![MIME type settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/File+Manager/Managing+MIME+Type+Settings/mime-type-settings.gif)
 
-**Tips & tricks**
+**Tips and tricks**
 <br>If you create a MIME type but do not allow it, no constraints are going to be applied. 
 If you create the MIME types as follows:
 ![Tips](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/File+Manager/Managing+MIME+Type+Settings/tips-one.png)

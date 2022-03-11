@@ -66,7 +66,7 @@ To edit a customer:
     *  You see two additional drop-down lists: **Billing Address** and **Shipping Address**. The values in those fields appear only if the addresses were added to the customer profile on the Storefront or from the **Back Office** > **View** customer-specific page. Those are not available for modifications from the *Edit Customer* page.
 3. Update the needed values and click **Save**.
 
-**Tips & tricks**
+**Tips and tricks**
 <br>From the *Edit customer* page, you can:
 * Switch to the *View* customer page, where you can manage the addresses by adding a new address or updating the existing one (see the _Viewing Customer Details_ section below).
 * Delete the customer record (see the _Deleting a Customer Record_ section below).

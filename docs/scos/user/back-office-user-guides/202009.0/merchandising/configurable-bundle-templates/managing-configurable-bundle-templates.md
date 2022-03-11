@@ -84,7 +84,7 @@ To assign products to slot in a configurable bundle template:
 6. Select **Save**.
 The page refreshes with the success message displayed.
 
-**Tips & Tricks**
+**Tips and tricks**
 * To double-check the list of products that are to be assigned, switch to the **Products to be assigned** tab.
 
 #### Deassigning products from slots in configurable bundle templates
@@ -96,7 +96,7 @@ To deassign a product from a slot in a configurable bundle template:
 3. Select **Save**.
 The page refreshes with the success message displayed.
 
-**Tips & Tricks**
+**Tips and tricks**
 * To double-check the list of products that are to be deassigned, switch to the **Products to be deassigned** tab.
 
 

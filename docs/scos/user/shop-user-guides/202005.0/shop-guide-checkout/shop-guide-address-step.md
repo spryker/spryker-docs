@@ -43,7 +43,7 @@ If there are no pre-saved addresses, the **Define new address** option is displa
 2. Fill in all the required information.
 3. To proceed to the *Shipment* step, click **Next**.
 
-**Tips & Tricks**
+**Tips and tricks**
 
 The **Save new address to address book** and **Billing same as shipping** options are enabled by default:
 
@@ -60,7 +60,7 @@ To use one of the addresses you created before:
 2. In the *Billing Address* section, select an existing billing address or create a new one.
 3. To proceed to the *Shipment* step, click **Next**.
 
-**Tips & Tricks**
+**Tips and tricks**
 
 The **Billing same as shipping** option is enabled by default:
 

@@ -34,7 +34,7 @@ On the *View Product Relation: [Product relation key]* page, you can see the inf
 * The abstract product the relation is displayed for.
  Number, SKU, name, price, category, and the status of the related products.
 
-**Tips & tricks**
+**Tips and tricks**
 <br>In the upper right corner of the page, click:
 * **Edit**:  To edit the product relation you are viewing.
 * **List of product relations**: To return to the list of product relations.
@@ -50,7 +50,7 @@ To edit a product relation:
 
 3. To keep the changes, click **Save**.
 
-**Tips & tricks**
+**Tips and tricks**
 <br>To return to the list of product relations, in the upper right corner of the page, click **List of product relations**
 
 {% info_block warningBox "Saving changes" %}

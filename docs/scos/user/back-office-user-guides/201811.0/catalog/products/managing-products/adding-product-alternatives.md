@@ -51,7 +51,7 @@ Once the setup is completed, the page is refreshed to display the table with the
 To remove any alternative product, click **Remove** in the _Actions_ column.
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 
 The product alternatives will be displayed on the concrete product page only when it is out of stock or discontinued. In any other case, no alternatives are displayed. However, for each product added as an alternative one, a **Replacement for** section is going to be displayed:
 ![Replacement for](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Managing+products/Adding+Product+Alternatives/replacement-for.png)

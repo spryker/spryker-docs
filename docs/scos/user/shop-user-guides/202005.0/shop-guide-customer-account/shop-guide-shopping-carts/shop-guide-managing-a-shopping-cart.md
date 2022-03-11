@@ -36,7 +36,7 @@ To update the cart name:
 1. Click the **Edit** icon next to the name. The **Edit [Cart Name]** page opens.
 2. On the page, enter the new value and click **Save**.
 
-**Tips & Tricks**
+**Tips and tricks**
 If you want to discard the changes, click **Back**.
 ***
 ## Managing Order Items Details

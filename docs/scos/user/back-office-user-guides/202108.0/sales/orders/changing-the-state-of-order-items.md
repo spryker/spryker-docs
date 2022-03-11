@@ -58,17 +58,7 @@ Each section contains reference information. Make sure to review it before you s
 
 ### Reference information: Changing the state of order items
 
-| ATTRIBUTE | DESCRIPTION |
-| --- | --- |
-| Order reference | Reference number of the order.|
-| Order date | Date when the order was placed. |
-| Unique Product Quantity | Number of unique products in the order. |
-
-
-
 You can set different statuses for your order. The following table describes the statuses you can select:
-
-
 
 | ORDER STATUS | DESCRIPTION |
 | --- | --- |
@@ -95,10 +85,6 @@ States flow:
 * In case the customer returns the ordered items: when you select **Return**, the status becomes returned.
 * In case of a return, when you select **Refund**, the status becomes refunded.
 
-### State names
+#### State names
 
 The order statuses you set here do not always have the same wording on the Storefront. For details on how you can display custom names for statuses on the Storefront, see [HowTo - Display custom names for order item states on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
-
-
-**Next steps**
-To learn how you can manage the created returns, see [Managing returns](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/managing-returns.html).

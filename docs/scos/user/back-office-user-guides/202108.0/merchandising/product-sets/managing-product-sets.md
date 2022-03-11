@@ -37,7 +37,7 @@ The attributes you see are described in [Reference Information: Creating product
 
 3. Click **Submit**.
 
-**Tips & tricks**
+**Tips and tricks**
 <br>On this page, in the top right corner, you can click **View** and switch to the *View Product Set* page.
 
 ## Reordering product sets

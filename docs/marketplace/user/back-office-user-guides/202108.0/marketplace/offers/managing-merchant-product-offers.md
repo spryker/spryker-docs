@@ -23,7 +23,7 @@ To approve an offer, on the *Offers* page, in the *Actions* column, click **Appr
 
 You can deny the offer by clicking **Deny** on the *Offers* page in the *Actions* column.
 
-**Tips & tricks**
+**Tips and tricks**
 
 You can sort by offers belonging to a certain Merchant:
 

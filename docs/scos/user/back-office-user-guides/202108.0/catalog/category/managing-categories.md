@@ -178,7 +178,7 @@ Child categories of the deleted category are assigned to its parent categories.
 
 {% endinfo_block %}
 
-**Tips & tricks**
+**Tips and tricks**
 <br>If your category contains any nested categories, you can re-sort them by a simple drag-and-drop action:
 1. To get to *Re-sort View*, for a specific category on the table view page, click *Re-sort child categories*.
 2. Once in **Re-sort View**, you can drag and drop categories.

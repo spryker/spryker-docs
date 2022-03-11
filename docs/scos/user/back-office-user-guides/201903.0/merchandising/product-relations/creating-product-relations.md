@@ -35,7 +35,7 @@ To start working with product relations, navigate to the **Products > Product Re
    4. Click **Save** so that your changes are saved and the table automatically updated to display the abstract product(s) that meet the specified rules/groups.
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 
 You can delete a rule or group by clicking **Delete** for a specific entry.
 When adding the query, you can check the products that meet those criteria.
@@ -56,7 +56,7 @@ Your product relation is created, but not active.
 To activate the created product relation, click **Activate** in the top-right corner of the Edit Product Relations page.
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 
 On this page, you also can:
 * Click **View** in the _Actions_ column to view the assigned abstract product in Back Office.

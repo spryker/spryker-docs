@@ -66,7 +66,7 @@ As another example, the customer may contact you to provide additional details a
 3. Click **Send Message**.
 Your message appears in the *Comments* section.
 ***
-**Tips & Tricks**
+**Tips and tricks**
 You can send an email to the customer, review the customer details, and edit the customer addresses.
 <br>**To send an email to your customer:**
 On the **Overview of Orders** page, click the hyperlinked customer email in the _Email_ column.

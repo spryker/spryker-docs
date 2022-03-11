@@ -46,7 +46,7 @@ To change general information of the page and SEO details:
     * Meta keywords
     * Meta description
 
-**Tips & Tricks**
+**Tips and tricks**
 
 On the **Edit CMS Page: [Page name]** page, you can do the following:
 * Publish the current version of the page by clicking **Publish** on the top of the page.
@@ -71,7 +71,7 @@ In the placeholders editor, you can insert a banner, abstract product list, prod
 
 {% endinfo_block %}
 
-**Tips & Tricks**
+**Tips and tricks**
 
 On the **Edit Placeholders: [Page Name]** editor, you can do the following:
 

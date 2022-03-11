@@ -51,7 +51,7 @@ Templates are project-specific and are usually created by a developer and busine
 4. In the *SEO* tab, enter meta-information: title, keywords, and description. The meta details are important for SEO purposes, such as optimizing webpage ranking by search engines and improving website usability.
 5. To keep the changes, click **Save**.
 
-**Tips & tricks**
+**Tips and tricks**
 
 * Keep in mind that by default, **Store Relation** is enabled for all stores. To hide your page per specific locale(s), clear checkboxes per that(those) locale(s).
 

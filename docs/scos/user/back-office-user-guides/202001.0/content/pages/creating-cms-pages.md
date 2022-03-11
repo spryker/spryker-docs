@@ -53,7 +53,7 @@ To create a page:
 
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 * Keep in mind that by default, store relation is enabled for all stores. To hide your page per specific locale(s), clear checkboxes per that(those) locale(s).
 * Please consider the following cases:
   - If **Is searchable** is selected, but **store relation** is turned off for all stores, the CMS page will not be displayed and will not be searchable.

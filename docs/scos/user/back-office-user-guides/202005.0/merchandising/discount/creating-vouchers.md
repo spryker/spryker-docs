@@ -74,7 +74,7 @@ On the **Voucher code** tab, do the following:
 
   {% endinfo_block %}
 ***
-**Tips & Tricks**
+**Tips and tricks**
 Once you generated voucher codes, you can export them as a **.csv** file.
 To do that, click **Export** below **Generate**.
 ***

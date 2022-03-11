@@ -62,7 +62,7 @@ On the **Edit product option** page, click **Activate** in the top right corner.
 On the **Product option list** page, click **Activate** for a specific product option in the _Actions_ column.
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 
 While creating a product option, if you want to remove some product from the selected, clear checkboxes next to the products you selected or click **Deselect all on the page** (this will remove all products from the to-be-assigned list you selected on this page).
 

@@ -121,7 +121,7 @@ The triggered return states are reflected in the [customer account on the Storef
 
 {% endinfo_block %}
 
-**Tips & tricks**
+**Tips and tricks**
 <br>To trigger the return states for all the items in the return, click the states at the *Trigger all matching states* field. To trigger the return states for individual items of the return, trigger the states in the *Trigger event* column for the necessary items.
 
 ### Reference information: Setting return statuses

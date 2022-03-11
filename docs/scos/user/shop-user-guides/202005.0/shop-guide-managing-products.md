@@ -124,7 +124,7 @@ You can order frequently bought products faster by adding the products to a [sho
 
 ![Add to shopping list](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Managing+Products/add-to-shopping-list-howto.png) 
 
-**Tips & Tricks**
+**Tips and tricks**
 
 If you have no shopping lists created in your account, a drop-down list with shopping lists will be unavailable. Clicking **Add to Shopping list** will create a new shopping list with the default name ‘Shopping List’ and add the product to it.
 ***
@@ -152,7 +152,7 @@ If you have not been logged in, the **Sign Up / Sign In** page opens.
 
 3. To keep the changes, click **Submit**. The review will be saved and sent to the shop administrator for further processing.
 
-**Tips & Tricks**
+**Tips and tricks**
 
 If you want to discard the changes you’ve added, click **Cancel**.
 ***

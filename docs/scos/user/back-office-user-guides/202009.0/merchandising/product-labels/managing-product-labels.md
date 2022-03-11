@@ -31,7 +31,7 @@ On the *View Product Label: “{product label name}”*  page, the following inf
 * translations of the product label name 
 * products to which the product label is applied
 
-**Tips & Tricks**
+**Tips and tricks**
 
 On the *View Product Label: “{product label name}”*  page, you can:
 
@@ -52,7 +52,7 @@ To edit a product label:
 The page is refreshed to show the message about successful product label update.
 
 
-**Tips & Tricks**
+**Tips and tricks**
 
 In the *Assigned Products* subtab of the *Products* tab, clear the check box next to a product to deassign it from the label.
 

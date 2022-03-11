@@ -50,7 +50,7 @@ Make sure the selected products are listed in the *Selected products to assign (
 8. Click **Save**.
 The page refreshes to display the success message about product label creation.
 
-**Tips & Tricks**
+**Tips and tricks**
 * Below the table, click **Select All** to assign the label to all the products in the *Available products* tab.
 * Filter the products in the *Available products* tab by entering its name, SKU, or category name in the **Search** field.
 * In the *Selected* column of the *Selected products to assign ({number of products})*, click **Remove** to remove a selected product.

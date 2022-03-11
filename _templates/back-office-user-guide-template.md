@@ -25,7 +25,7 @@ Each section contains reference information. Review it before you start, or look
 To {task} a/an {entity}:
 1. ...
 
-**Tips & tricks**
+**Tips and tricks**
 <!-- <br>A list of useful information relevant only to the task you've described. -->
 
 ### Reference information: {Task 1} a/an {entity} <!-- Task 1 in gerund, i.e., Reference information: Managing abstract products -->

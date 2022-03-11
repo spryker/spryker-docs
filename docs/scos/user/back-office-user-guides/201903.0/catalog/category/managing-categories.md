@@ -99,7 +99,7 @@ If at some point of time you need to delete a category, you will use the **Categ
 
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 
 If your category contains any nested categories, you can re-sort them by a simple drag-and-drop action:
 1. To get to **Re-sort View**, click **Re-sort child categories** for a specific category on the table view page.

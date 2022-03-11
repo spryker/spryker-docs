@@ -37,7 +37,7 @@ To update a tax rate:
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Taxes/Managing+Tax+Rates/editing-tax-rate.png) 
 
-### Tips & tricks
+### Tips and tricks
 You can start editing a tax rate while viewing it:
 1. On the *View Tax Rate* page, click **Edit** in the top right corner.
 2. Go over the [*Editing a Tax Rate*](#editing-a-tax-rate) procedure.
@@ -73,7 +73,7 @@ The tax rate is deleted. Remember that it will also be deleted from the [tax set
 Even if this was the only tax rate assigned to a tax set, the tax set itself will remain.
 {% endinfo_block %}
 
-### Tips & tricks
+### Tips and tricks
 You can delete a tax rate while viewing it:
 1. On the *View Tax Rate* page, click **Delete** in the top-right corner.
 2. On the *Delete Tax Rate* page, confirm your action.

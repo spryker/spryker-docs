@@ -69,7 +69,7 @@ To assign products to a product list:
     *  Assign products to the list manually: In the *Selected* column of the *Select Products to assign* table, select the products to assign to the list.
  5. Select **Save**. The page refreshes with the success message displayed.
 
-**Tips & tricks**
+**Tips and tricks**
 <br>To double-check the list of products that are to be assigned, switch to the *Products to be assigned* tab.
 
 ## Deassigning products form a product list
@@ -81,7 +81,7 @@ To deassign products from a product list:
 4. Select **Save**.
     The page refreshes with the success message displayed.
 
-**Tips & tricks**
+**Tips and tricks**
 <br>To double-check the list of products that are to be deassigned, switch to the *Products to be deassigned* tab.
 
 ## Exporting a product list

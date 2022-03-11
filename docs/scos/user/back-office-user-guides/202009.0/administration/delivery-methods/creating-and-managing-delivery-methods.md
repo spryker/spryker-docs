@@ -84,7 +84,7 @@ Keep in mind that **Delivery Method Key** cannot be edited.
 
 1. To keep the changes, click **Save**.
 
-**Tips & Tricks**
+**Tips and tricks**
 This is how the Back Office setup looks in the online store:
 **Back Office**
 ![Editing a shipment method](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/editing-shipment-method.png)

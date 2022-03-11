@@ -42,7 +42,7 @@ Keep in mind that if you modify the **existing** URL from which a redirect is co
 {% endinfo_block %}
 
 ***
-**Tips & Tricks**
+**Tips and tricks**
 
 On the **Edit a CMS redirect** page, you can do the following:
 

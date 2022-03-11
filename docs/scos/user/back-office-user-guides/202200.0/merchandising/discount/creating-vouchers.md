@@ -65,7 +65,7 @@ On the **Voucher code** tab, do the following:
 
 Even if a voucher is valid and the decision rules are satisfied, a voucher can only be redeemed if it's currently active.
 
-**Tips & tricks**
+**Tips and tricks**
 
 Once you generated voucher codes, you can export them as a CSV file.
 To do that, below **Generate**, click **Export**.

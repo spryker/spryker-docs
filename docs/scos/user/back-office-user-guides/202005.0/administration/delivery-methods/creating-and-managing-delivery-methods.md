@@ -82,7 +82,7 @@ To update the values you have entered during the delivery method creation:
   {% endinfo_block %}
 3. To keep the changes, click **Save**.
 
-**Tips & Tricks**
+**Tips and tricks**
 This is how the Back Office setup looks in the online store:
 **Back Office**
 ![Editing a shipment method](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/editing-shipment-method.png)

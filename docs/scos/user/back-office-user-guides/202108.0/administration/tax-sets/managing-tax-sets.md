@@ -40,7 +40,7 @@ In case you need to change the tax set:
 2. On the *Edit Tax Set* page, change the attributes.
 3. Click **Save**.
 
-**Tips & tricks**
+**Tips and tricks**
 <br>You can start editing a tax set while viewing it:
 1. On the *View Tax Rate* page, in the top right corner, click **Edit**.
 2. Go over the [*Editing a tax set*](#editing-a-tax-set) procedure.
@@ -80,7 +80,7 @@ Remember that the tax rates assigned to the deleted tax set become unassigned bu
 
 {% endinfo_block %}
 
-**Tips & tricks**
+**Tips and tricks**
 <br>You can delete a tax set while viewing it:
 1. On the *View Tax Set* page, in the top right corner, click **Delete**.
 2. On the *Delete Tax Set* page, confirm your action.

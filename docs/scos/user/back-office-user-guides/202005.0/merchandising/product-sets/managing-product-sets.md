@@ -35,7 +35,7 @@ To edit a product set:
     {% endinfo_block %}
 3. Once done, click **Submit**.
 
-**Tips & Tricks**
+**Tips and tricks**
 On this page, you can click **View** in the top right corner of the page and switch to the **View Product Set** page.
 
 ## Reordering Product Sets

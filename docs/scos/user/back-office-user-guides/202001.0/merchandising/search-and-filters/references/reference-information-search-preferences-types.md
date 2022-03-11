@@ -71,7 +71,7 @@ The _storage_media_ attribute has **SSD** and **Flash** values. If **Include for
 
 ![Completion terms](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Search+Preferences+Types/completion-terms.png)
 
-**Tips & Tricks**
+**Tips and tricks**
 
 When you first decide on activating search preference types for attributes, keep in mind, that enabling all of them is **highly unrecommended**, as this will result in a huge list of search results.
 Instead of this, you might want to consider enabling search preference types for only those attributes that you really want your users to find while searching, or the attributes that refer to products you want to appear in the search results above all.

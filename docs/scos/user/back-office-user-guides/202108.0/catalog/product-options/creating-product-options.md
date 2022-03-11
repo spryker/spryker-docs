@@ -68,7 +68,7 @@ The following table describes the attributes you enter and select while creating
 |Group name | Name of your option group. |
 | Option name | Name of your option. |
 
-**Tips & tricks**
+**Tips and tricks**
 <br>While creating a product option, if you want to remove some product from the selected, clear check boxes next to the products you selected or click **Deselect all on the page** (this will remove all products from the to-be-assigned list you selected on this page).
 
 You can switch between **All products** and **Products to be assigned** view by selecting the respective options on the top of the products table.

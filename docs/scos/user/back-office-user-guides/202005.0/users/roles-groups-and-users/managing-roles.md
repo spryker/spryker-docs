@@ -37,7 +37,7 @@ You can add from one to many rules to a specific role. Each time you click **Add
 
 You have set up a role to be assigned to a group. 
 
-**Tips & Tricks**
+**Tips and tricks**
 In case you need a specific role to have access to all sections, you can put an asterisk (*) value for a bundle, controller, and action. Add _allow for permission_. This will grant access to everything you see in Back Office and allow to perform any action.
 
 
@@ -152,7 +152,7 @@ To delete a role:
 1. In the **Role list > Actions** column, click **Delete** for the role that needs to be deleted.
 2. This action will permanently delete the record. 
 
-**Tips & Tricks**
+**Tips and tricks**
 While updating the role, you can initiate a new role creation flow.
 
 To do that:

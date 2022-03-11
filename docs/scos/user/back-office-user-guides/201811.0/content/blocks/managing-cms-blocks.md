@@ -47,7 +47,7 @@ When the lists are empty, this block is not assigned to any category or product 
 
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 
 On the **View CMS Block: Block ID** page, you can do the following:
 
@@ -66,7 +66,7 @@ To edit a placeholder:
 3. To save the updates, click **Save**. The updated block will be displayed on the grid of List of CMS Blocks.
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 
 On the **Edit Block Glossary: Block ID** page, you can do the following:
 
@@ -97,7 +97,7 @@ See  [CMS Blocks: Reference Information](/docs/scos/user/back-office-user-guides
 
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 
 On the **Edit CMS Block: Block ID** page, you can do the following:
 

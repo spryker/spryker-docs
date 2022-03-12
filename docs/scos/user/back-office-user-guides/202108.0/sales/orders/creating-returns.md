@@ -10,7 +10,7 @@ If a sales order item is [returnable](/docs/scos/user/features/{{page.version}}/
 
 ## Prerequisites
 
-You can create returns for the items that are in **Exported** or **Delivered** states only. To learn how to change item states, see [Changing the state of order items](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/changing-the-state-of-order-items).
+You can create returns for the items that are in **Exported** or **Delivered** states only. To learn how to change item states, see [Changing the state of order items](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/changing-the-state-of-order-items.html).
 
 To start managing orders, go to **Sales** > **Orders**.
 
@@ -41,7 +41,7 @@ This section describes the attributes you see when creating a return.
 | Order reference | Unique identifier of the order for which you are creating a return. Click to go to the order's page where you can view and edit it. |
 | Fulfilled by merchant | Name of the merchant the item belongs to. Click to go to merchant's page where you can view and edit their information. |
 | Merchant Order Reference | Unique identifier of the merchant order. |
-| Product | All the items in the order. For returning, you can only select the items that are in **Exported** or **Delivered** state. To learn how to change item states, see [Changing the state of order items](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/changing-the-state-of-order-items). |
+| Product | All the items in the order. For returning, you can only select the items that are in **Exported** or **Delivered** state. To learn how to change item states, see [Changing the state of order items](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/changing-the-state-of-order-items.html). |
 | Quantity | Product quantity in the order. |
 | Price | Product price in the order. |
 | Total | Total amount paid for the item. |

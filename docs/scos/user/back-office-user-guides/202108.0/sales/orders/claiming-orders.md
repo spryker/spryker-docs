@@ -4,7 +4,7 @@ description: Learn how to create reclamations in the Back Office
 template: back-office-user-guide-template
 ---
 
-This document describes how to create [order reclamations](/docs/scos/user/features/{{page.version}}/reclamations-feature-overview.html).
+This document describes how to create [order reclamations](/docs/scos/user/features/{{page.version}}/reclamations-feature-overview.html) in the Back Office.
 
 ## Prerequisites
 

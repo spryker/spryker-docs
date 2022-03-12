@@ -857,15 +857,53 @@ entries:
           url: /docs/scos/user/back-office-user-guides/sales/order-matrix/viewing-the-order-matrix.html
       - title: Orders
         nested:
+        - title: Changing the state of order items
+          url: /docs/scos/user/back-office-user-guides/sales/orders/changing-the-state-of-order-items.html
+          include_versions:
+          - "202108.0"
+        - title: Claiming orders
+          url: /docs/scos/user/back-office-user-guides/sales/orders/claiming-orders.html
+          include_versions:
+          - "202108.0"
+        - title: Commenting orders
+          url: /docs/scos/user/back-office-user-guides/sales/orders/commenting-orders.html
+          include_versions:
+          - "202108.0"
+        - title: Creating returns
+          url: /docs/scos/user/back-office-user-guides/sales/orders/creating-returns.html
+          include_versions:
+          - "202108.0"
+        - title: Editing billing addresses in orders
+          url: /docs/scos/user/back-office-user-guides/sales/orders/editing-billing-addresses-in-orders.html
+          include_versions:
+          - "202108.0"
+        - title: Adding and removing custom order references
+          url: /docs/scos/user/back-office-user-guides/sales/orders/adding-and-removing-custom-order-references.html
+          include_versions:
+          - "202108.0"
+        - title: Editing shipments
+          url: /docs/scos/user/back-office-user-guides/sales/orders/editing-shipments.html
+          include_versions:
+          - "202108.0"
+        - title: Viewing returns of an order
+          url: /docs/scos/user/back-office-user-guides/sales/orders/viewing-returns-of-an-order.html
+          include_versions:
+          - "202108.0"
         - title: Managing orders
           url: /docs/scos/user/back-office-user-guides/sales/orders/managing-orders.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
         - title: Managing order shipments
           url: /docs/scos/user/back-office-user-guides/sales/orders/managing-order-shipments.html
           include_versions:
           - "202001.0"
           - "202005.0"
           - "202009.0"
-          - "202108.0"
         - title: References
           include_versions:
           - "201811.0"
@@ -1767,7 +1805,7 @@ entries:
       - title: "Best practices: Managing users and their permissions with roles and groups"
         include_versions:
         - "202108.0"
-        - "202009.0"        
+        - "202009.0"
         url: /docs/scos/user/back-office-user-guides/users/best-practices-managing-users-and-their-permissions-with-roles-and-groups.html
       - title: Managing user roles
         include_versions:

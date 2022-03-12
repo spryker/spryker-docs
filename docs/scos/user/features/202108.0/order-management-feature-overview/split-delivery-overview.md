@@ -53,7 +53,7 @@ Here you can perform the following actions on shipments:
 * Move items between shipments.
 * Change the state of each item or all items per shipment.
 
-See [Orders](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html) for more details on how to create and manage shipments in the Back Office.
+See [Creating shipments](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-shipments.html) for more details on how to create and manage shipments in the Back Office.
 
 ## Constraints
 
@@ -74,8 +74,8 @@ With Split Delivery, Product Bundles items can be shipped to different delivery 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create a shipment](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-order-shipments.html#creating-a-new-shipment-for-an-order) |
-| [Edit a shipment](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-order-shipments.html#editing-shipment-details) |
+| [Create shipments](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-shipments.html) |
+| [Editing shipments](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/editing-shipments.html) |
 
 {% info_block warningBox "Developer guides" %}
 

@@ -10,7 +10,7 @@ This document describes how to edit billing addresses in orders.
 
 To start managing orders, go to **Sales** > **Orders**.
 
-Review the [reference information](#reference-information-claiming-orders) before you start, or look up the necessary information as you go through the process.
+Review the [reference information](#reference-information-editing-billing-addresses) before you start, or look up the necessary information as you go through the process.
 
 ## Editing billing addresses
 
@@ -22,7 +22,7 @@ Review the [reference information](#reference-information-claiming-orders) befor
 3. Update any of the address details and click **Save**.
     This opens the **Order Overview** page with the success message displayed.
 
-### Reference information: Editing billing addresses
+## Reference information: Editing billing addresses
 
 The following table describes the attributes you enter and select when editing billing addresses in orders.
 

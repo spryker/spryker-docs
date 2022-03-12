@@ -1,6 +1,6 @@
 ---
 title: Changing the state of order items
-description: The guide provides instructions on how to manage orders including setting statuses for the order, claiming and commenting on orders in the Back Office.
+description: Learn how to change the state of order items in the Back Office.
 last_updated: Aug 10, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-orders
@@ -10,13 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-orders
   - /docs/managing-orders
   - /docs/en/managing-orders
-related:
-  - title: Order Management
-    link: docs/scos/user/features/page.version/order-management-feature-overview/order-management-feature-overview.html
-  - title: Reclamations Feature Overview
-    link: docs/scos/user/features/page.version/reclamations-feature-overview.html
-  - title: Return Management Feature Overview
-    link: docs/scos/user/features/page.version/return-management-feature-overview/return-management-feature-overview.html
+  - /docs/scos/user/back-office-user-guides/202108.0/sales/orders/managing-orders.html
 ---
 
 This article describes how to change the state of order items.
@@ -27,7 +21,7 @@ To start managing orders, go to **Sales** > **Orders**.
 
 The instructions assume that there is an existing order with the **Payment pending** status.
 
-Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
+Review the [reference information](#reference-information-changing-the-state-of-order-items) before you start, or look up the necessary information as you go through the process.
 
 ## Changing the state of all the items in an order
 
@@ -56,7 +50,7 @@ Each section contains reference information. Make sure to review it before you s
     The page refreshes with the success message displayed.
 3. Repeat step 2 until you get the needed order state.         
 
-### Reference information: Changing the state of order items
+## Reference information: Changing the state of order items
 
 You can set different statuses for your order. The following table describes the statuses you can select:
 

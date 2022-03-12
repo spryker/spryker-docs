@@ -1,8 +1,10 @@
 ---
-title: Managing custom order references
-description: Learn how to manage custom order references in the Back Office
+title: Adding and removing custom order references
+description: Learn how to add and remove custom order references in the Back Office
 template: back-office-user-guide-template
 ---
+
+This document describes how to add and remove custom order references in the Back Office.
 
 ## Prerequisites
 

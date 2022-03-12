@@ -4,6 +4,13 @@ description: Learn how to view returns of an order in the Back Office
 template: back-office-user-guide-template
 ---
 
+This document describes how to view returns of an order in the Back Office.
+
+## Prerequisites
+
+To start working with orders, go to **Sales** > **Orders**.
+
+Review the [reference information](#reference-information-viewing-returns-of-an-order) before you start, or look up the necessary information as you go through the process.
 
 ## Viewing returns of an order
 

@@ -24,9 +24,6 @@ If you create or edit a shipment of an order created by a customer, the grand to
 {% endinfo_block %}
 
 
-
-
-
 ## Editing shipments
 
 1. In the **ORDER ITEMS** section, next to the shipment you want to edit, click **Edit Shipment**.
@@ -44,3 +41,28 @@ If you create or edit a shipment of an order created by a customer, the grand to
 A shipment that does not contain any items is automatically deleted.
 
 {% endinfo_block %}
+
+## Reference information: Editing shipments
+
+The following table describes the attributes you enter and select when editing billing addresses in orders.
+
+| ATTRIBUTE | DESCRIPTION |
+|---|---|
+| DELIVERY ADDRESS | The address that the customer selected to deliver the items to. Also allows to add a new address. |
+| SALUTATION | Customer's salutation. |
+| FIRST NAME | Customer's first name. |
+| MIDDLE NAME | Customer's middle name. |
+| LAST NAME | Customer's last name. |
+| EMAIL | Customer's email address. |
+| COUNTRY | Customer's country. |
+| ADDRESS 1 | Customer's address. |
+| ADDRESS 2 | Additional details of the customer's address. |
+| COMPANY | Customer's company. |
+| CITY | Customer's city. |
+| ZIP CODE | Customer's ZIP code. |
+| PHONE | Customer's phone number. |
+| CELL PHONE | Customer's cell phone number. |
+| DESCRIPTION | A short description of this address. |
+| COMMENT | A comment about this address. For example, "Only for small packages".|
+| SHIPMENT METHOD | The delivery company which the customer selected to handle the items. |
+| REQUESTED DELIVERY DATE | The preferred delivery date that the customer selected for this shipment. |

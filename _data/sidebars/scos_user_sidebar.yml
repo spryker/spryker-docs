@@ -861,8 +861,8 @@ entries:
           url: /docs/scos/user/back-office-user-guides/sales/orders/changing-the-state-of-order-items.html
           include_versions:
           - "202108.0"
-        - title: Claiming orders
-          url: /docs/scos/user/back-office-user-guides/sales/orders/claiming-orders.html
+        - title: Creating reclamations
+          url: /docs/scos/user/back-office-user-guides/sales/orders/creating-reclamations.html
           include_versions:
           - "202108.0"
         - title: Commenting orders

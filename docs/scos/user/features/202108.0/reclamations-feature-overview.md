@@ -40,7 +40,7 @@ In the Back Office in the order list, a Back Office user doesn't have the functi
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create a new order-related reclamation](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-order-reclamations.html)  |
+| [Create a new order-related reclamation](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-reclamations.html)  |
 | [View reclamations](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/reclamations/viewing-reclamations.html)  |
 | [Changing the state of order items in reclamations](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/reclamations/changing-the-state-of-order-items-in-reclamations.html)  |
 

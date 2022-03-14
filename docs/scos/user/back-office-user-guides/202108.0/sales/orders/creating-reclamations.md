@@ -10,7 +10,7 @@ This document describes how to create [order reclamations](/docs/scos/user/featu
 
 To start managing orders, go to **Sales** > **Orders**.
 
-Review the [reference information](#reference-information-claiming-orders) before you start, or look up the necessary information as you go through the process.
+Review the [reference information](#reference-information-creating-reclamations) before you start, or look up the necessary information as you go through the process.
 
 ## Creating reclamations
 
@@ -22,7 +22,7 @@ Review the [reference information](#reference-information-claiming-orders) befor
 **Tips and tricks**
 Claiming an order does not change the state of the items in the order. When a reclamation is created, a sales team member processes the order manually.
 
-### Reference information: Claiming orders
+### Reference information: Creating reclamations
 
 | ATTRIBUTE | DESCRIPTION |
 |-|-|

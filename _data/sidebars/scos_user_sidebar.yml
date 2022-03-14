@@ -938,7 +938,7 @@ entries:
         - title: Changing the state of order items in reclamations
           url: /docs/scos/user/back-office-user-guides/sales/reclamations/changing-the-state-of-order-items-in-reclamations.html
           include_versions:
-          - "202108.0"          
+          - "202108.0"
         - title: Managing reclamations
           url: /docs/scos/user/back-office-user-guides/sales/reclamations/managing-reclamations.html
           include_versions:
@@ -964,9 +964,7 @@ entries:
             - "202005.0"
             - "202009.0"
       - title: Refunds
-        nested:
-        - title: Viewing refunds
-          url: /docs/scos/user/back-office-user-guides/sales/refunds/viewing-refunds.html
+        url: /docs/scos/user/back-office-user-guides/sales/refunds/viewing-refunds.html          
       - title: Returns
         include_versions:
         - "202005.0"

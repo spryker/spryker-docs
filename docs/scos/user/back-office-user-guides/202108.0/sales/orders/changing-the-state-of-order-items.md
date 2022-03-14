@@ -77,7 +77,7 @@ States flow:
 * When you select **Stock-update**, the state becomes **Delivered**.
 * When you select **Close**, the state becomes closed.
 * In case the customer returns the ordered items: when you select **Return**, the status becomes returned.
-* In case of a return, when you select **Refund**, the status becomes refunded.
+* In case of a return, when you select **Refund**, the status becomes **Refunded**.
 
 ### State names
 

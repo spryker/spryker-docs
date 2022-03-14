@@ -13,7 +13,7 @@ To start working with offers, go to **Marketplace** > **Offers**.
 
 These instructions assume that there is an existing offer created by the Merchant in the Merchant Portal.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Approving or denying offers
 

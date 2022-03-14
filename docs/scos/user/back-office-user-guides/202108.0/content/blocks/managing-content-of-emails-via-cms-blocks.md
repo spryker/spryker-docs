@@ -23,7 +23,7 @@ There is a number of default emails that are automatically sent on different occ
 
 To start managing the content of emails, go to **Content > Blocks**.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Creating an email CMS block
 

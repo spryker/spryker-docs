@@ -15,7 +15,7 @@ This topic describes what information you can check in the dashboard of the Merc
 
 To start working with the dashboard, navigate to **Merchant Portal** > **Dashboard**.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 
 ## Managing offers in Dashboard

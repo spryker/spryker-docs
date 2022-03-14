@@ -16,7 +16,7 @@ Before you can create tax sets, make sure you have [tax rates](/docs/scos/user/b
 
 To start working with tax sets, go to **Administration > Tax Sets**.
 
-Some sections contain reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Some sections contain reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Creating a tax set
 To be able to use this taxes for products, threshold, or shipment methods, you need to create a tax set and assign the tax rate to it.

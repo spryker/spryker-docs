@@ -27,7 +27,7 @@ Here, you can:
 
 To start working with scheduled prices, go to **Catalog** > **Scheduled Prices**.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Viewing scheduled price imports
 

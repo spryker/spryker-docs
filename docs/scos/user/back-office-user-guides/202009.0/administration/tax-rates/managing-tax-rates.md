@@ -15,7 +15,7 @@ This document describes how to create, edit, and delete [tax rates](/docs/scos/u
 ## Prerequisites
 To start working with tax rates, go to **Administration > Tax Rates**.
 
-Some sections contain reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Some sections contain reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Creating a tax rate
 To define a rate under which the product, shipment, or a threshold are going to be taxed, you need to create a tax rate. 

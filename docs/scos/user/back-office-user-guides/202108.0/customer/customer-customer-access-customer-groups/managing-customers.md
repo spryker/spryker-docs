@@ -21,7 +21,7 @@ This article describes how to manage customers.
 
 To start managing customers, navigate to **Customers** > **Customers**.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Creating customers
 

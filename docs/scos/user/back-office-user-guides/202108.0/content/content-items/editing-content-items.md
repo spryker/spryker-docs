@@ -21,7 +21,7 @@ This topic describes how to edit content items in the Back Office.
 
 To start working with abstract products, go to **Catalog** > **Products**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Editing a content item
 

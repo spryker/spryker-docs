@@ -11,7 +11,7 @@ This topic describes how to manage merchant user account details in the Merchant
 To start working with the merchant user’s account, go to **Merchant Portal > My account**.
 To open *My account* page, in the top right corner of the Merchant Portal, click the user icon and then click **My account**.
 
-Some sections contain reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Some sections contain reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Changing personal details
 

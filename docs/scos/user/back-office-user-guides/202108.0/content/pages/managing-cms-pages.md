@@ -23,9 +23,11 @@ This article describes how to manage CMS pages.
 
 ## Prerequisites
 
-To start managing CMS pages, got to **Content** > **Pages**.
+1. To preview CMS pages as a specific customer, [assign the customer to your user](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/assigning-customers-to-users.html).
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+2. To start managing CMS pages, got to **Content** > **Pages**.
+
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Previewing CMS pages
 

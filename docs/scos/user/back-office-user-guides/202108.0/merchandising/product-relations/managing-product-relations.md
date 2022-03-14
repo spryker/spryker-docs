@@ -21,7 +21,7 @@ This topic describes how you manage product relations.
 
 To start working with product relations, go to **Merchandising** > **Product Relations**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Viewing product relations
 

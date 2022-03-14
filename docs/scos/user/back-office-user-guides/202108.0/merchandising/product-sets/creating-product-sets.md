@@ -23,7 +23,7 @@ You create a product set to improve the customer's shopping experience. You coll
 
 To start working with product sets, go to **Merchandising** > **Product Sets**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating product sets
 

@@ -27,7 +27,7 @@ If you want to manage a CMS block for [email](/docs/scos/user/features/{{page.ve
 
 To start managing CMS blocks, go to **Content Management** > **Blocks**.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Viewing CMS blocks
 

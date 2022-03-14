@@ -11,7 +11,7 @@ This document describes how to create marketplace concrete products.
 
 To start working with marketplace concrete products, go to **Merchant Portal** > **Products**.
 
-This article contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+This article contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Creating a marketplace concrete product
 

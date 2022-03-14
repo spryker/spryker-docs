@@ -18,7 +18,7 @@ This topic describes how to manage redirects in the Back Office.
 
 To start managing CMS redirects, go to **Content** > **Redirects**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Editing a CMS redirect
 

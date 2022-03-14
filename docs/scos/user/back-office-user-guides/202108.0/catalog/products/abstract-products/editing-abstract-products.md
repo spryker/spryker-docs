@@ -21,7 +21,7 @@ This document describes how to edit abstract products.
 
 To start working with abstract products, go to  **Catalog** > **Products**.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process. 
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process. 
 
 ## Editing general settings of an abstract product
     

@@ -12,7 +12,7 @@ To start managing merchant orders, navigate to **Merchant Portal** > **Orders**.
 
 You manage merchant orders by changing the states of the items inside the order. This way, you can see that item was delivered or returned.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Changing merchant order states
 

@@ -32,7 +32,7 @@ To start managing orders, go to **Sales** > **Orders**.
 
 The instructions assume that there is an existing order with the *Payment pending* status.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Changing order statuses
 

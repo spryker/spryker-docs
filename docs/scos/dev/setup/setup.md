@@ -2,6 +2,8 @@
 title: Setup
 description: All the options of installing Spryker Commerce OS
 template: concept-topic-template
+redirect_from:
+  - /docs/about-installation
 ---
 
 This section contains instructions for installing Spryker Commerce OS on premises.

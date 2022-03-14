@@ -17,21 +17,22 @@ related:
 
 This article describes how to manage filter preferences.
 
-To start working with the filter preferences, navigate to the **Merchandising** > **Filter Settings** section.
-
 ## Prerequisites
 
-Make sure that the attribute you are going to create a filter preference for is created and assigned to a product.
+1. [Create a product attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) for the filter that you are going to create.
+2. Add the product attribute to a product by creating a product or by editing a product.
+3. To start working with the filter preferences, go to **Merchandising** > **Filter Preferences**.
+
 
 ## Creating filter preferences
 
 To create a filter preference:
-1. In the top right corner of the *Filter preferences* page, click **Create filter**.
-2. On the *Create filter* page, do the following:
-    1. Enter the attribute key to the respective field. The attribute key can be found in **Product Attributes > Attributes Key** of a specific attribute.
-    2. In the **Filter Type** drop-down, select either multi-select or range.
-    3. Enter the translations for all locations set up in your store.
-3. Click **Save**.
+1. On the **Filter Preferences** page, click **Create filter**.
+2. On the **Create Filter** page, enter an **ATTRIBUTE KEY**.
+3. Select a **FILTER TYPE**.   either multi-select or range.
+4. Enter a **FILTER NAME** for each locale.
+5. Click **Save**.
+    This opens the **View Filter** page with a success message displayed.
 
 **Tips and tricks**
 - The filter is created by it will not be available for use unless you synchronize the filter preferences.
@@ -41,14 +42,26 @@ To do the synchronization, in the top right corner of the *Filter Preferences* p
 ## Editing filter preferences
 
 To edit a filter preference:
-1. In the _Actions_ column of the *Filter preferences* table, click **Edit** for the filter you need to update.
-2. Update the needed values.
-    **Attribute key** is greyed out and is not available for modifications.
+1. Next to the filter you want to edit, click **Edit**.
+2. Update any of the following:
+    * Select a **FILTER TYPE**
+    * Enter a **FILTER NAME** for any locale.
  3. Click **Save**.
- 4. On the *View filter* page, in the top right corner, click **List of filters**.
- 5. On the *Filter preferences* page, click **Synchronize filter preferences**.
+    This opens the **View Filter** page with a success message displayed.    
+ 4. Click **List of filters**.
+ 5. On the **Filter preferences** page, to sync the changes, click **Synchronize filter preferences**.
+    This refreshes the page with a success message displayed.
+
+
+
+
+**Attribute key** is greyed out and is not available for modifications.
+
 
 ## Viewing and deleting filter preferences
+
+
+ attribute key to the respective field. The attribute key can be found in **Product Attributes > Attributes Key** of a specific attribute.
 
  *To view a filter*, click **View** in the _Actions_ column for a specific filter.
 

@@ -27,7 +27,8 @@ Adyen module provides the following integration options:
 
 3D Secure integration requires adjustments on the project level. Do the following:
 
-1. Add additional checkout step. Exemplary implementation:
+1. Add one more checkout step. 
+Exemplary implementation:
 
 **src/Pyz/Yves/CheckoutPage/Process/Steps/AdyenExecute3DStep.php**
 
@@ -114,7 +115,7 @@ class AdyenExecute3DStep extends AbstractBaseStep
     }
 ```
 
-2. Add template for this step:
+2. Add a template for this step:
 
 **src/Pyz/Yves/CheckoutPage/Theme/default/views/adyen/execute_3d.twig**
 
@@ -494,7 +495,7 @@ The state machine example is available in `vendor/spryker-eco/adyen/config/Zed/O
 
 WeChat Pay is rapidly becoming a keystone payment method for businesses wanting to reach Chinese shoppers, both home and abroad. Originally a messaging app (like WhatsApp) WeChat has evolved into an ecosystem that allows Chinese shoppers to chat, browse, and make payments, all in one place - making shopping as easy as chatting to your friends.
 
-{% endinfo_block %}
+{% info_block infoBox "Info" %}
 
 The state machine example is available in `vendor/spryker-eco/adyen/config/Zed/Oms/AdyenWeChatPay01.xml`.
 

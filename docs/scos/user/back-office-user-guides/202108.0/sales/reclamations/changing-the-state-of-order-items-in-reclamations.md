@@ -1,56 +1,47 @@
 ---
-title: Changing the state of order items
-description: Learn how to change the state of order items in the Back Office.
+title: Changing the state of order items in reclamations
+description: Learn how to change the state of order items in reclamations in the Back Office.
 last_updated: Aug 10, 2021
 template: back-office-user-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/managing-orders
-originalArticleId: 6d125a8a-63ca-4ddc-bb74-1526aa1fe44b
-redirect_from:
-  - /2021080/docs/managing-orders
-  - /2021080/docs/en/managing-orders
-  - /docs/managing-orders
-  - /docs/en/managing-orders
-  - /docs/scos/user/back-office-user-guides/202108.0/sales/orders/managing-orders.html
 ---
 
-This article describes how to change the state of order items.
+This document describes how to change the state of order items in reclamations. Each reclamation is linked to the order it was created from. When you change the state of an order in a reclamation, you change it in the linked order.
 
 ## Prerequisites
 
-To start managing orders, go to **Sales** > **Orders**.
-
 The instructions assume that there is an existing order with the **Payment pending** status.
+
+To start working with item states in reclamations, do the following:
+1. Go to **Sales** > **Reclamations**.
+    This opens the **Reclamations** page.
+2. Next to the reclamation containing the items you want to change the state of, click **View**.
+    This opens the **View reclamation** page.  
+
+
 
 Review the [reference information](#reference-information-changing-the-state-of-order-items) before you start, or look up the necessary information as you go through the process.
 
-## Changing the state of all the items in an order
+## Changing the state of all the items in a reclamation
 
-1. On the **Orders** page, click **View** next to the order containing the items you want to change the state of.
-    This opens the **Order Overview** page.
-2. In the **TRIGGER ALL MATCHING STATES INSIDE THIS ORDER** pane, click **Pay**.
+1. In the **TRIGGER ALL MATCHING STATES** pane, click **Pay**.
+    This refreshes the page with a success message displayed. The updated **State** is displayed for all the items.
+2. Repeat step 1 until you get the needed state.
 
-    The page refreshes with the success message displayed. You can check the new state of the items in the order in the **ORDER ITEMS** pane.  
-3. Repeat step 2 until the items are in the needed state.
+## Changing the state of an item in a reclamation
 
-## Changing the state of items in a shipment
+1. In the **ORDER {order reference} ITEMS:** pane, next to the item you want to change the state of, click **Pay**.
+    This refreshes the page with a success message displayed. The updated **State** is displayed for the item.
+2. Repeat step 1 until you get the needed state.
 
-1. On the **Orders** page, click **View** next to the order containing the shipment you want to change the state of.
-    This opens the **Order Overview** page.    
-2. In the **ORDER ITEMS** pane, in the desired shipment, select the checkboxes next to the products you want to change the state of. If you want to change the state of all the items in the shipment, don't select any checkboxes.
-3. In the **TRIGGER ALL MATCHING STATES OF ORDER INSIDE THIS SHIPMENT** pane, click **Pay**.
-    The page refreshes with the success message displayed.
-4. Repeat step 2-3 until you get the needed  status.
+## Changing the state of multiple items in a reclamation
+
+1. In the **ORDER {order reference} ITEMS:** pane, select the items you want to change the state of.
+2. In the **TRIGGER ALL MATCHING STATES** pane, click **Pay**.
+    This refreshes the page with a success message displayed. The updated **State** is displayed for the selected items.
+3. Repeat steps 1-2 until you get the needed state.         
 
 
-## Changing the state of an item
-
-1. On the **Orders** page, click **View** next to the order containing the item you want to change the state of.
-    This opens the **Order Overview** page.
-2. In the **ORDER ITEMS** pane, next to the needed item, click **Pay**.
-    The page refreshes with the success message displayed.
-3. Repeat step 2 until you get the needed order state.         
-
-## Reference information: Changing the state of order items
+## Reference information: Changing the state of order items in reclamations
 
 The following table describes the states you can select for order items.
 

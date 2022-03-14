@@ -931,6 +931,14 @@ entries:
         - "202009.0"
         - "202108.0"
         nested:
+        - title: Viewing reclamations
+          url: /docs/scos/user/back-office-user-guides/sales/reclamations/viewing-reclamations.html
+          include_versions:
+          - "202108.0"
+        - title: Changing the state of order items in reclamations
+          url: /docs/scos/user/back-office-user-guides/sales/reclamations/changing-the-state-of-order-items-in-reclamations.html
+          include_versions:
+          - "202108.0"          
         - title: Managing reclamations
           url: /docs/scos/user/back-office-user-guides/sales/reclamations/managing-reclamations.html
           include_versions:
@@ -939,7 +947,6 @@ entries:
           - "202001.0"
           - "202005.0"
           - "202009.0"
-          - "202108.0"
         - title: References
           include_versions:
           - "201903.0"

@@ -32,7 +32,7 @@ commonOptions = {
     /symfony.com\/[\.\w\-\/\?]+/,
     /code.jquery.com\/[\.\w\-\/\?]+/,
     /console.aws.amazon.com\/[\.\w\-\/\?]+/,
-    /www.computop.com/[\.\w\-\/\?]+/,    
+    /www.computop.com\/[\.\w\-\/\?]+/,    
     /shopify.github.io\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],

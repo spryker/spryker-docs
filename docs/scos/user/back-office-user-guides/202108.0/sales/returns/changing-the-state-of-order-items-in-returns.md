@@ -1,7 +1,6 @@
 ---
 title: Changing the state of order items in returns
 description: Learn how to change the state of order items in returns in the Back Office.
-last_updated: Aug 10, 2021
 template: back-office-user-guide-template
 ---
 
@@ -41,7 +40,7 @@ Review the [reference information](#reference-information-changing-the-state-of-
 3. Repeat steps 1-2 until you get the needed state.         
 
 
-## Reference information: Changing the state of order items in reclamations
+## Reference information: Changing the state of order items in returns
 
 The following table describes the states you can select for order items.
 
@@ -49,10 +48,6 @@ The following table describes the states you can select for order items.
 | --- | --- |
 | Execute return | Select this state after the customer returned an item.  |
 | Refund | Select this state after you refunded a returned item.|
-| cancel-return | You can trigger this state after the *Waiting for return* state. Select this state if either the customer doesn’t want to make the return anymore, or you cancel the return due to the return policy, or for other reasons. When triggering this state, the return status is changed to *Canceled*. |
-| ship-return | You can trigger this state after the *Cancel* return state. Select this state if you shipped the canceled return back to the customer. The return status is changed to *Shipped to customer.* |
-| delivery-return | You can trigger this state after *Shipped to customer*. Select this state if the return has been delivered to the customer. The return status is changed to *Delivered*. |
-| close | You can trigger this state after the *Delivered* state. Select this state to close the return. The return status is changed to *Closed*. |
 
 States flow:
 * **waiting for return**: the initial order stated for returns.

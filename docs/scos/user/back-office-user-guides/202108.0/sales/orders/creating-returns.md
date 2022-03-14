@@ -18,7 +18,7 @@ To start managing orders, go to **Sales** > **Orders**.
 
 1. On the **Orders** page, next to the order you want to return, click **View**.
 2. On the **Order Overview** page, click **Return**.
-3. On the **Create Return** page, select the items you want to return.
+3. On the **Create Return** page, select the items that are to be returned.
 
 {% info_block warningBox "Returning bundles" %}
 
@@ -30,7 +30,7 @@ You can return [product bundles](/docs/scos/user/features/{{page.version}}/produ
 
 4. Optional: For **Select reason**, select a reason for returning the items.
 5. Click **Create return**.
-    This creates the return and opens the **Overview of Return** page.
+    This creates the return and opens the **Return Overview** page.
 
 ### Reference information: Creating returns
 

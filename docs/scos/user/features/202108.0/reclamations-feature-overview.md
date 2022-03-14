@@ -18,7 +18,7 @@ The _Reclamations_ feature is a simple, yet effective way for administrators to 
 
 Once a Back Office user has received a claim regarding an order from the customer, they can go to [Overview of Orders](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/claiming-orders.html) in the Back Office and click **Claim** to register the claim for the order (for all items or separate items of the order).
 
-After the reclamation has been created, it appears on the [Reclamations](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/reclamations/managing-reclamations.html) page under the **Sales** menu in the Back Office. Each reclamation is linked to a specific order by order ID, however, one and the same order can have more than one reclamation.
+After the reclamation has been created, it appears on the [Reclamations](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/reclamations/viewing-reclamations.html) page under the **Sales** menu in the Back Office. Each reclamation is linked to a specific order by order ID, however, one and the same order can have more than one reclamation.
 
 With the reclamations in place, you can find the problematic issues with orders that a shop owner has (e.g., the product is faulty or broken) and manage them.
 
@@ -40,9 +40,9 @@ In the Back Office in the order list, a Back Office user doesn't have the functi
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create an order linked to a reclamation](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/reclamations/managing-reclamations.html)  |
-| [Create a new order-related reclamation](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/claiming-orders.html)  |
-| [Manage reclamations](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/reclamations/managing-reclamations.html)  |
+| [Create a new order-related reclamation](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-order-reclamations.html)  |
+| [View reclamations](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/reclamations/viewing-reclamations.html)  |
+| [Changing the state of order items in reclamations](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/reclamations/changing-the-state-of-order-items-in-reclamations.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

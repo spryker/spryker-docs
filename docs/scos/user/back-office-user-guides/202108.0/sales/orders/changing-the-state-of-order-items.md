@@ -52,7 +52,7 @@ Review the [reference information](#reference-information-changing-the-state-of-
 
 ## Reference information: Changing the state of order items
 
-You can set different statuses for your order. The following table describes the statuses you can select:
+The following table describes the states you can select for order items.
 
 | ORDER STATUS | DESCRIPTION |
 | --- | --- |
@@ -79,6 +79,6 @@ States flow:
 * In case the customer returns the ordered items: when you select **Return**, the status becomes returned.
 * In case of a return, when you select **Refund**, the status becomes refunded.
 
-#### State names
+### State names
 
 The order statuses you set here do not always have the same wording on the Storefront. For details on how you can display custom names for statuses on the Storefront, see [HowTo - Display custom names for order item states on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).

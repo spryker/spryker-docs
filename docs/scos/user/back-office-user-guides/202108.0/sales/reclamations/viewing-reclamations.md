@@ -1,5 +1,5 @@
 ---
-title: Managing reclamations
+title: Viewing reclamations
 description: Learn how to manage order reclamations in the Back Office.
 last_updated: Jun 23, 2021
 template: back-office-user-guide-template
@@ -10,18 +10,19 @@ redirect_from:
   - /2021080/docs/en/managing-reclamations
   - /docs/managing-reclamations
   - /docs/en/managing-reclamations
+  - /docs/scos/user/back-office-user-guides/202108.0/sales/reclamations/managing-reclamations.html
 related:
   - title: Reclamations Feature Overview
     link: docs/scos/user/features/page.version/reclamations-feature-overview.html
 ---
 
-This document describes how to manage [order reclamations](/docs/scos/user/features/{{page.version}}/reclamations-feature-overview.html) in the Back Office.
+This document describes how to view [order reclamations](/docs/scos/user/features/{{page.version}}/reclamations-feature-overview.html) in the Back Office.
 
 ## Prerequisites
 
 To start working with reclamations, go to **Sales** > **Reclamations**.
 
-Review the reference information before you start, or look up the necessary information as you go through the process.
+Review the [reference information](#reference-information-viewing-reclamations) before you start, or look up the necessary information as you go through the process.
 
 ## Viewing reclamations
 
@@ -39,11 +40,3 @@ To go to the order a reclamation was created for, click the order reference.
 | Unit Price (GROSS_MODE) | Item price without taxes. |
 | Item Total |Total amount paid for the item.|
 | State | Current state of the item. Clicking the state shows the state. |
-
-
-
-
-## Closing reclamations
-
-To close a reclamation, click **Close** next to the order you want to close the reclamation for.
-The state of the reclamation changes from **Open** to **Closed** in the _State_ column.

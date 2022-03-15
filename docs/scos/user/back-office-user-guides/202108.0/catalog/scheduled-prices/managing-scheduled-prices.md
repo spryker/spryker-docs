@@ -27,7 +27,7 @@ Here, you can:
 
 To start working with scheduled prices, go to **Catalog** > **Scheduled Prices**.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Viewing scheduled price imports
 
@@ -100,7 +100,7 @@ Performing this action triggers the scheduled prices cron job to be run for the 
 
 {% endinfo_block %}
 
-**Tips & tricks**
+**Tips and tricks**
 <br>In the Edit Scheduled Price page, you can return to the *Edit Import* page. To do this, click **Back to the import**.
 
 ### Reference information: Editing scheduled prices

@@ -14,7 +14,7 @@ After a [marketplace return](/docs/marketplace/user/features/{{page.version}}/ma
 
 To start managing the marketplace returns, navigate to **Sales** > **Returns**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Setting the marketplace return states
 
@@ -35,7 +35,7 @@ The triggered return states are reflected in the Customer Account on the Storefr
 
 ------
 
-**Tips & Tricks**
+**Tips and tricks**
 
 To trigger the return states for all the items in the return, click the states at the *Trigger all matching states* field. To trigger the return states for individual items of the return, trigger the states in the *Trigger event* column for the necessary items.
 

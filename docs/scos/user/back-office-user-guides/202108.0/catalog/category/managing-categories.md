@@ -28,7 +28,7 @@ This topic describes how to manage categories:
 
 To start managing categories, go to **Catalog** > **Category**.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Ordering products in categories
 
@@ -178,7 +178,7 @@ Child categories of the deleted category are assigned to its parent categories.
 
 {% endinfo_block %}
 
-**Tips & tricks**
+**Tips and tricks**
 <br>If your category contains any nested categories, you can re-sort them by a simple drag-and-drop action:
 1. To get to *Re-sort View*, for a specific category on the table view page, click *Re-sort child categories*.
 2. Once in **Re-sort View**, you can drag and drop categories.

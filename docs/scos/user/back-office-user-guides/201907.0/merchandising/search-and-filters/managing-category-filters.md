@@ -50,7 +50,7 @@ This procedure will show you how to customize filter behavior by adding the filt
 5. After selecting the filter, click **Add**. The filter will appear in the **Active filters** list.
 6. Once done, click **Save**.
 ***
-**Tips & Tricks**
+**Tips and tricks**
 Clicking **Reset to global settings** in **Category Filters for [Category name]** will remove the customized filter settings.
 ![Reset to global settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/reset-to-global-settings.png) 
 
@@ -71,6 +71,6 @@ It is possible to remove either all filters from the active filters at once or j
 ![Removing a single filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/remove-single-filter.gif) 
 
 ***
-**Tips & Tricks**
+**Tips and tricks**
 To add the removed filters again, click on the **green plus sign** at the filters you want to add back from Inactive filters.
 ![Add a removed filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/add-removed-filter.gif){height="300" width=""}

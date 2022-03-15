@@ -39,7 +39,7 @@ To start managing CMS redirects, navigate to the **Content Management > Redirect
 
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 
 On the **Edit a CMS redirect** page, you can do the following:
 * Create a new CMS redirect by clicking **+Add CMS Redirect** in the top right corner of the page.

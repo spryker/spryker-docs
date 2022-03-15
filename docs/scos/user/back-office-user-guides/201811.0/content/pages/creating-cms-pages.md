@@ -55,7 +55,7 @@ To create a page:
 5. To keep the changes, click **Save**.
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 
 * Keep in mind that by default, store relation is enabled for all stores. To hide your page per specific locale(s), clear checkboxes per that(those) locale(s).
 

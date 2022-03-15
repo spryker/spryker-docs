@@ -32,7 +32,7 @@ To update the password for the Merchant Portal:
 5. Click **Save**.
 
 
-**Tips & Tricks**
+**Tips and tricks**
 
 Click on the show/hide password icon in the corresponding password field to double-check that you entered the right information.
 

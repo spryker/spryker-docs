@@ -1,7 +1,7 @@
 ---
 title: Marketplace Merchant feature integration
 last_updated: Mar 7, 2022
-description: This integration guide provides steps on how to integrate the Merchants feature into a Spryker project.
+description: This integration guide describes how to integrate the Merchants feature into a Spryker project.
 template: feature-integration-guide-template
 ---
 
@@ -149,7 +149,7 @@ Enable the following behaviors by registering the plugins:
 | MerchantProductOfferStorageExpanderPlugin            | Returns `ProductOfferStorage` transfer object expanded with `Merchant`.                                  |               | Spryker\Client\MerchantStorage\Plugin\ProductOfferStorage |
 | MerchantProductOfferStorageFilterPlugin              | Filters `ProductOfferCollection` transfer object by active and approved merchant.                        |               | Spryker\Zed\MerchantStorage\Communication\Plugin\ProductOfferStorage |
 
-<details><summary markdown='span'>src/Pyz/Zed/Merchant/MerchantDependencyProvider</summary>
+<details><summary markdown='span'>src/Pyz/Zed/Merchant/MerchantDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -353,6 +353,7 @@ Add marketplace section to `navigation.xml`:
 ```
 
 Execute the following command:
+
 ```bash
 console navigation:build-cache
 ```
@@ -538,6 +539,7 @@ Make sure that when merchant profile entities are created or updated through ORM
 This step publishes tables on change (create, edit) to `spy_merchant_search` and synchronizes the data to Search.
 
 1. Setup event listeners and publishers by registering the plugins:
+
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
 ```php
@@ -565,6 +567,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 ```
 
 2. Register synchronization queue:
+
 **src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
 
 ```php
@@ -680,7 +683,6 @@ class MerchantSearchConfig extends SprykerMerchantSearchConfig
 {% info_block warningBox "Verification" %}
 
 Make sure that when merchant entities are created or updated through ORM, they are exported to Elastica accordingly.
-
 
 | TARGET ENTITY | EXAMPLE OF EXPECTED DATA IDENTIFIER |
 |---|---|
@@ -872,8 +874,8 @@ Make sure that when merchant entities are created or updated through ORM, they a
     }
   ]
 }
+```
 
- ```
  </details>
 
 6. Set up result formatters:
@@ -934,6 +936,7 @@ class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyPr
     }
 }
 ```
+
 8. Add the `merchant` resource to the supported search sources:
 
 ```php
@@ -974,6 +977,7 @@ MER000005,Merchandise Manager,Mr,Jason,Weidmann,030/123456789,https://d2s0ynfc62
 Budget Cameras is offering a great selection of digital cameras with the lowest prices.","DSLR- und spiegellose Kameras sind bei Filmemachern mit knappem Budget bei weitem am beliebtesten, wenn sie sich bestimmte Spezialkameras nicht leisten können.
 Budget Cameras bietet eine große Auswahl an Digitalkameras mit den niedrigsten Preisen.",https://d2s0ynfc62ej12.cloudfront.net/merchant/budgetcameras-banner.png,https://d2s0ynfc62ej12.cloudfront.net/merchant/budgetcameras-banner.png,2-4 days,2-4 Tage,"<p><span style=""font-weight: bold;"">General Terms</span><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><span style=""font-weight: bold;"">Using your Information</span><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to allow us to deliver the type of content and product offerings in which you are most interested.<br><br><span style=""font-weight: bold;"">Protecting visitor information</span><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>","<p><span style=""font-weight: bold;"">§ 1 Geltungsbereich &amp; Abwehrklausel</span><br><br>(1) Für die über diesen Internet-Shop begründeten Rechtsbeziehungen zwischen dem Betreiber des Shops (nachfolgend „Anbieter“) und seinen Kunden gelten ausschließlich die folgenden Allgemeinen Geschäftsbedingungen in der jeweiligen Fassung zum Zeitpunkt der Bestellung. <br><br>(2) Abweichende Allgemeine Geschäftsbedingungen des Kunden werden zurückgewiesen.<br><br><span style=""font-weight: bold;"">§ 2 Zustandekommen des Vertrages</span><br><br>(1) Die Präsentation der Waren im Internet-Shop stellt kein bindendes Angebot des Anbieters auf Abschluss eines Kaufvertrages dar. Der Kunde wird hierdurch lediglich aufgefordert, durch eine Bestellung ein Angebot abzugeben. <br><br>(2) Durch das Absenden der Bestellung im Internet-Shop gibt der Kunde ein verbindliches Angebot gerichtet auf den Abschluss eines Kaufvertrages über die im Warenkorb enthaltenen Waren ab. Mit dem Absenden der Bestellung erkennt der Kunde auch diese Geschäftsbedingungen als für das Rechtsverhältnis mit dem Anbieter allein maßgeblich an. <br><br>(3) Der Anbieter bestätigt den Eingang der Bestellung des Kunden durch Versendung einer Bestätigungs-Email. Diese Bestellbestätigung stellt noch nicht die Annahme des Vertragsangebotes durch den Anbieter dar. Sie dient lediglich der Information des Kunden, dass die Bestellung beim Anbieter eingegangen ist. Die Erklärung der Annahme des Vertragsangebotes erfolgt durch die Auslieferung der Ware oder eine ausdrückliche Annahmeerklärung.<br><br><span style=""font-weight: bold;"">§ 3 Eigentumsvorbehalt</span><br><br>Die gelieferte Ware verbleibt bis zur vollständigen Bezahlung im Eigentum des Anbieters.<br><br><span style=""font-weight: bold;"">§ 4 Fälligkeit</span><br><br>Die Zahlung des Kaufpreises ist mit Vertragsschluss fällig.</p>","You have the right to withdraw from this contract within 14 days without giving any reason. The withdrawal period will expire after 14 days from the day on which you acquire, or a third party other than the carrier and indicated by you acquires, physical possession of the last good. You may use the attached model withdrawal form, but it is not obligatory. To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.","Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag, an dem Sie oder ein von Ihnen benannter Dritter, der nicht der Beförderer ist, die letzte Ware in Besitz genommen hat. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist. Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.",<p>Budget Cameras<br><br>Spitalerstraße 3<br>20095 Hamburg<br>DE<br><br>Phone: 030 1234567<br>Email: support@budgetcamerasonline.com<br><br>Represented by<br>Managing Director: Max Mustermann<br>Register Court: Hamburg<br>Register Number: HXX 134305<br></p>,<p>Budget Cameras<br><br>Spitalerstraße 3<br>20095 Hamburg<br>DE<br><br>Phone: 030 1234567<br>Email: support@budgetcamerasonline.com<br><br>Vertreten durch<br>Geschäftsführer: Max Mustermann<br>Registergericht: Hamburg<br>Registernummer: HXX 134305<br></p>,Budget Cameras values the privacy of your personal data.,Für die Abwicklung ihrer Bestellung gelten auch die Datenschutzbestimmungen von Budget Cameras.,1,+49 30 234567500
 ```
+
 </details>
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
@@ -1069,9 +1073,7 @@ console data:import merchant-profile
 console data:import merchant-profile-address
 ```
 
-
 To import merchant user data, perform the following steps:
-
 1. Prepare merchant user data according to your requirements using the demo data:
 
 **/data/import/common/common/marketplace/merchant_user.csv**
@@ -1085,7 +1087,6 @@ MER000006,michele@sony-experts.com
 |-|-|-|-|-|
 | merchant_reference | &check; | String | MER000006  | Identifier of the merchant in the system. Have to be unique. |
 | username | &check; | String | `michele@sony-experts.com`  | Username of the merchant user. It is an email address that is used for logging into the Merchant Portal as a merchant user.  |
-
 
 2. Create the Step model for writing merchant user data.
 
@@ -1191,6 +1192,7 @@ class MerchantUserWriterStep implements DataImportStepInterface
     }
 }
 ```
+
 </details>
 
 3. Add the merchant user import type to full import (if needed).
@@ -1227,7 +1229,8 @@ class DataImportConfig extends SprykerDataImportConfig
 
 4. Enable merchant user data import command.
 
-**src/Pyz/Zed/DataImport/Business/DataImportBusinessFactory.php**
+<details>
+<summary markdown='span'>src/Pyz/Zed/DataImport/Business/DataImportBusinessFactory.php</summary>
 
 ```php
 <?php
@@ -1286,6 +1289,8 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
     }
 }
 ```
+
+</details>
 
 5. Create and prepare your data import configuration files according to your requirements using our demo config template:
 
@@ -1506,6 +1511,6 @@ Make sure that you can view merchant profile data at `http://yves.de.demo-spryke
 
 Integrate the following related features:
 
-| FEATURE        | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | -|
 | Marketplace Merchant API | &check;  |  [Marketplace Merchant feature integration ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-merchant-feature-integration.html) |

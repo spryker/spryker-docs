@@ -155,7 +155,7 @@ To configure export to Redis and Elasticsearch, take the following steps:
 | MerchantProductConcreteProductOfferWritePublisherPlugin | Retrieves all active product offers by `merchantIds`, publish active product offers data to `ProductConcreteProductOffersStorage`.            |           | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteProductOffer |
 | MerchantProductOfferWritePublisherPlugin                | Queries all active product offer with the given merchantIds, stores data as json encoded to storage table.                                    |           | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\Merchant |
 
-**src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
+<details><summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -208,6 +208,8 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```
+
+</details>
 
 #### Set up event listeners
 
@@ -560,6 +562,7 @@ offer416,112_306918001,MER000002,,1,approved
 offer417,112_312526191,MER000005,,1,approved
 offer418,112_312526172,MER000002,,1,approved
 ```
+
 </details>
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
@@ -960,6 +963,7 @@ offer416,AT
 offer417,AT
 offer418,AT
 ```
+
 </details>
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
@@ -1217,7 +1221,7 @@ class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependency
 }
 ```
 
-**src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php**
+<details><summary markdown='span'>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1267,6 +1271,8 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
     }
 }
 ```
+
+</details>
 
 **src/Pyz/Client/ProductOfferStorage/ProductOfferStorageDependencyProvider.php**
 
@@ -1318,7 +1324,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 }
 ```
 
-**src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php**
+<details><summary markdown='span'>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1363,6 +1369,8 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
     }
 }
 ```
+
+</details>
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 

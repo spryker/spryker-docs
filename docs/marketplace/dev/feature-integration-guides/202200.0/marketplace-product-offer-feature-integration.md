@@ -146,8 +146,8 @@ To configure export to Redis and Elasticsearch, take the following steps:
 
 #### Set up publisher plugins:
 
-| PLUGIN                                                  | SPECIFICATION                                                                                                                                 | PREREQUISITES | NAMESPACE |
-|---------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------| ----------- | ---------------- |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+|--|--| ----------- | ---------------- |
 | ProductConcreteProductOffersDeletePublisherPlugin       | Finds and deletes product concrete offer storage entities by the given concreteSkus.                                                          |           | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers |
 | ProductConcreteProductOffersWritePublisherPlugin        | Queries all active product offer with the given concreteSkus, stores data as json encoded to storage table.                                   |           | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers |
 | ProductOfferDeletePublisherPlugin                       | Finds and deletes product offer storage entities with the given productOfferReferences, sends delete message to queue based on module config. |           | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer |
@@ -213,7 +213,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 #### Set up event listeners
 
-| PLUGIN | SPECIFICATION                                                                            | PREREQUISITES | NAMESPACE |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --------------- |------------------------------------------------------------------------------------------| ----------- | ---------------- |
 | MerchantProductOfferSearchEventSubscriber  | Registers listeners responsible for publishing merchant product offer search to storage. |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Event\Subscriber |
 | MerchantSearchEventSubscriber              | Registers listeners responsible for publishing merchant search to storage.               |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Event\Subscriber |
@@ -1173,7 +1173,7 @@ class SearchElasticsearchDependencyProvider extends SprykerSearchElasticsearchDe
 }
 ```
 
-**src/Pyz/Zed/ProductOfferGui/ProductOfferGuiDependencyProvider.php**
+<details><summary markdown='span'>src/Pyz/Zed/ProductOfferGui/ProductOfferGuiDependencyProvider.php</summary>**
 
 ```php
 <?php
@@ -1220,6 +1220,8 @@ class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependency
     }
 }
 ```
+
+</details>
 
 <details><summary markdown='span'>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
 

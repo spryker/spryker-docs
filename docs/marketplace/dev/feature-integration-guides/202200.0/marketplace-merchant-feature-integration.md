@@ -268,7 +268,7 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you edit a merchant in the *Merchants* section of the Back Office, you can see merchant profile related tabs: Contact Person, Merchant Profile, Legal Information, Merchant User.
+Make sure that when you edit a merchant in the **Merchants** section of the Back Office, you can see merchant profile related tabs: **Contact Person**, **Merchant Profile**, **Legal Information**, **Merchant User**.
 
 {% endinfo_block %}
 
@@ -876,7 +876,7 @@ Make sure that when merchant entities are created or updated through ORM, they a
 }
 ```
 
- </details>
+</details>
 
 6. Set up result formatters:
 

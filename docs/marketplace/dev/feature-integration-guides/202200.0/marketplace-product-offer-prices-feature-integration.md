@@ -822,7 +822,8 @@ Enable the following behaviors by registering the plugins:
 | PriceProductOfferProductOfferViewSectionPlugin | Returns template for render price product offer information |   | Spryker\Zed\PriceProductOfferGui\Communication\Plugin\ProductOfferGui |
 | PriceProductVolumeValidatorPlugin | Validates volume prices. |   | Spryker\Zed\PriceProductVolume\Communication\Plugin\PriceProduct |
 
-**src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php**
+<details>
+<summary markdown='span'>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -868,7 +869,10 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
 }
 ```
 
-**src/Pyz/Zed/PriceProduct/PriceProductDependencyProvider.php**
+</details>
+
+<details>
+<summary markdown='span'>src/Pyz/Zed/PriceProduct/PriceProductDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -926,6 +930,8 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
     }
 }
 ```
+
+</details>
 
 **src/Pyz/Client/PriceProductStorage/PriceProductStorageDependencyProvider.php**
 
@@ -1004,7 +1010,7 @@ class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDe
 
 namespace Pyz\Service\PriceProduct;
 
-use Spryker\Service\PriceProduct\PriceProductDependencyProvider as SprykerPriceProductDependencyProvider;
+use Spryker\Service\Pri123ceProduct\PriceProductDependencyProvider as SprykerPriceProductDependencyProvider;
 use Spryker\Service\PriceProductOfferStorage\Plugin\PriceProduct\PriceProductOfferPriceProductFilterPlugin;
 use Spryker\Service\PriceProductOfferVolume\Plugin\PriceProductOffer\PriceProductOfferVolumeFilterPlugin;
 
@@ -1025,7 +1031,8 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 }
 ```
 
-**src/Pyz/Client/PriceProductOffer/PriceProductOfferDependencyProvider.php**
+<details>
+<summary markdown='span'>src/Pyz/Client/PriceProductOffer/PriceProductOfferDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1070,6 +1077,8 @@ class PriceProductOfferDependencyProvider extends SprykerPriceProductOfferDepend
     }
 }
 ```
+
+</details>
 
 **src/Pyz/Client/PriceProductOfferStorage/PriceProductOfferStorageDependencyProvider.php**
 
@@ -1121,13 +1130,13 @@ class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when a product offer is selected, its price is shown as the current price.
+Make sure that when a product offer is selected, and its price is shown as the current price.
 
-Make sure that product offer prices are saved when Product Concrete and product offer prices are saved.
+Make sure that product offer prices are saved when a product concrete and product offer prices are saved.
 
 Make sure that product offers are sorted by the lowest price first when fetched as a collection with product concrete.
 
-Make sure that when a product offer with a volume price is selected and the selected quantity is over a certain threshold, its volume price is shown instead of the normal price.
+Make sure that when a product offer with a volume price is selected, and the selected quantity is over a certain threshold, its volume price is shown instead of the normal price.
 
 {% endinfo_block %}
 

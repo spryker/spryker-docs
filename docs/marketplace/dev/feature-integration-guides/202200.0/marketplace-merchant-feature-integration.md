@@ -453,6 +453,8 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 |---|---|---|---|
 | SynchronizationStorageQueueMessageProcessorPlugin | Configures all merchant profile messages to synchronize with Redis and marks messages as failed in case of an error. |   | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
+**src/Pyz/Zed/MerchantStorage/MerchantStorageConfig.php**
+
 ```php
 <?php
 
@@ -472,6 +474,8 @@ class MerchantStorageConfig extends BaseMerchantStorageConfig
     }
 }
 ```
+
+**src/Pyz/Zed/Queue/QueueDependencyProvider.php**
 
 ```php
 <?php
@@ -504,6 +508,8 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
 | MerchantSynchronizationDataPlugin | Enables the content of an entire storage table to be synchronized into Storage. |   | Spryker\Zed\MerchantStorage\Communication\Plugin\Synchronization |
+
+**src/Pyz/Zed/MerchantStorage/MerchantStorageConfig.php**
 
 ```php
 <?php
@@ -884,6 +890,8 @@ Make sure that when merchant entities are created or updated through ORM, they a
 |---|---|---|---|
 | MerchantSearchResultFormatterPlugin | Maps raw data from Elasticsearch to MerchantSearchCollectionTransfer.    | Spryker\Client\MerchantSearch\Plugin\Elasticsearch\ResultFormatter |
 
+**src/Pyz/Client/MerchantSearch/MerchantSearchDependencyProvider.php**
+
 ```php
 <?php
 
@@ -912,6 +920,8 @@ class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyPr
 |----|----|----|----|
 | PaginatedMerchantSearchQueryExpanderPlugin | Allows using pagination for merchant search. |   | Spryker\Client\MerchantSearch\Plugin\Elasticsearch\Query |
 | StoreQueryExpanderPlugin | Allows searching to filter out merchants that do not belong to the current store. |   | Spryker\Client\SearchElasticsearch\Plugin\QueryExpander |
+
+**src/Pyz/Client/MerchantSearch/MerchantSearchDependencyProvider.php**
 
 ```php
 <?php

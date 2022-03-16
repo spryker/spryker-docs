@@ -463,7 +463,7 @@ Make sure that Merchant Portal has "Dashboard" menu section.
 Add the `angular.json` file.
 
 ```bash
-wget -O angular.json https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/angular.json
+wget -O angular.json https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/angular.json
 ```
 
 Rename default `tsconfig` to `tsconfig.yves.json`. Create marketplace-specific `tsconfig` files (`tsconfig.json`, `tsconfig.mp.json`)

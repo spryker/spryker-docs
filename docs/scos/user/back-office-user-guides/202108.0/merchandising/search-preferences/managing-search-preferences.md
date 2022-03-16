@@ -21,16 +21,16 @@ This topic describes how to manage search preferences.
 
 ## Prerequisites
 
-To start working with search preferences, go to **Merchandising** > **Search Preferences** section.
+1. [Create a product attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) for the search preference that you are going to create.
+2. Add the product attribute to a product by [creating a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) or by [editing a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/editing-abstract-products.html).
+3. To start working with filter preferences, go to **Merchandising** > **Search Preferences**.
 
-When adding a search preference, the **Attribute Key** value is taken from the **Product Attributes > Specific Attribute** entity. Make sure that you are populating the field with an existing attribute key of an attribute assigned to a product; otherwise, the search result will be blank in the online store.
+Review the [reference information]() before you start, or look up the necessary information as you go through the process.
 
-Review the reference information before you start, or look up the necessary information as you go through the process.
-
-## Creating new attributes to search
+## Creating search attributes
 
 To create a new attribute to search, do the following:
-1.  In the top right corner of the *Search Preferences* page, click **Add attribute to search**.
+1. On the **Search Preferences** page, click **Add attribute to search**.
 2. On the *Add attribute to search* page, enter the attribute key and (optionally) specify "Yes" or "No" for search preference types.
 3. Click **Save**.
 4. On the *Search Preferences* page, click **Synchronize search preferences** for your changes to take effect.

@@ -92,7 +92,7 @@ Please note that you are updating the product variant availability, not the bund
 
 {% endinfo_block %}
 
-**Tips & tricks**
+**Tips and tricks**
 <br>You can edit stock for variants from the *Edit Concrete Product* page:
 1. Navigate to the *Edit Product Abstract* using one of the following options:
     1.  **Products** > **Products** > **Edit**.

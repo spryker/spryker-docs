@@ -56,7 +56,7 @@ These are the parameters included in the `merchant_orders.csv` file:
 | 37 | merchant_order_totals_refund_total |   | Number | Original value is multiplied by 100 before it is stored in this field. | Refund total of the order totals for this merchant. |
 | 38 | merchant_order_totals_subtotal |   | Number | Original value is multiplied by 100 before it is stored in this field. | Subtotal of the order totals for this merchant. |
 | 39 | merchant_order_totals_tax_total |   | Number | Original value is multiplied by 100 before it is stored in this field. | Tax total of the order totals for this merchant. |
-| 40 | merchant_order_comments |   | Object | Comments are presented in a JSON array format: order_comments {% raw %}{{username, message, created_at, updated_at},...}{% endraw %} | Comments added by the customer to the sales order for this merchant. Username may be a different name from the customer’s first, middle, or last name, e. g., a nickname. |
+| 40 | merchant_order_comments |   | Object | Comments are presented in a JSON array format: order_comments {% raw %}{{username, message, created_at, updated_at},...}{% endraw %} | Comments added by the customer to the sales order for this merchant. Username may be a different name from the customer’s first, middle, or last name—for example, a nickname. |
 
 Check out the [merchant-orders.csv sample file](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Data+Export/merchant-orders.csv).
 

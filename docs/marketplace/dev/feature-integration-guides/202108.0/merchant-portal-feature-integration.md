@@ -46,7 +46,7 @@ $ yarn mp:build:production
 
 Install the needed packages for the Merchant Portal with dependencies, see the available list [here](https://github.com/spryker/?q=merchant-portal-gui)
 
-| NAME | VERSION | LINK |
+| NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ----- | ---------- |
 | Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Marketplace Merchant Portal Core | {{page.version}}  | [Marketplace Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html) |

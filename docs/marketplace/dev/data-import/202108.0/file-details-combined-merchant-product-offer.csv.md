@@ -7,7 +7,7 @@ template: import-file-template
 
 This document describes the `combined_merchant_product_offer.csv` file to configure [Merchant product offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html) information in your Spryker shop.
 
-To import the file, run
+To import the file, run:
 
 ```bash
 data:import --config data/import/common/combined_merchant_product_offer_import_config_{store}.yml
@@ -15,7 +15,7 @@ data:import --config data/import/common/combined_merchant_product_offer_import_c
 
 {% info_block infoBox "Info" %}
 
-See [Importing Data with a Configuration File](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html) to learn more about bulk importing with the help of the configuration file.
+To learn more about bulk importing with the help of the configuration file, see [Importing data with a configuration file](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html).
 
 {% endinfo_block %}
 
@@ -49,7 +49,7 @@ The file should have the following parameters:
 The file has the following dependencies:
 
 - [merchant.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant.csv.html)
-- *stores.php* configuration file of the demo shop PHP project  
+- `stores.php` configuration file of the demo shop PHP project  
 
 ## Import template file and content example
 

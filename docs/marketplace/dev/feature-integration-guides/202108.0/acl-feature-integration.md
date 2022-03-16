@@ -249,7 +249,7 @@ Make sure that the request doesn't succeed for users without permission.
 
 Make sure that the user can see only the allowed menu links.
 
-Make sure that `spy_acl_role` `spy_acl_group` `spy_acl_user_has_group` tables contain default data.
+Make sure that `spy_acl_role`, `spy_acl_group`, and `spy_acl_user_has_group` tables contain default data.
 
 Make sure that current User transfer contains appropriate Acl groups inside.
 

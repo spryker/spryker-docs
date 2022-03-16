@@ -244,7 +244,7 @@ class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you view some product offer at `http://zed.de.demo-spryker.com/product-offer-gui/view?id-product-offer={idProductOffer}}`, you can see the `Stock` section.
+Make sure that when you view some product offer at `http://zed.de.demo-spryker.com/product-offer-gui/view?id-product-offer={{idProductOffer}}`, you can see the `Stock` section.
 
 {% endinfo_block %}
 

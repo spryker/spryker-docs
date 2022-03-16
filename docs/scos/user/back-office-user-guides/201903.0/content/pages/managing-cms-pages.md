@@ -99,7 +99,7 @@ See  [CMS Page: Reference Information](/docs/scos/user/back-office-user-guides/{
 {% endinfo_block %}
 
 ***
-**Tips & Tricks**
+**Tips and tricks**
 
 On the **View CMS Page: [Page name]** page, you can do the following:
 

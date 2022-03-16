@@ -17,7 +17,7 @@ To start feature integration, integrate the required features:
 
 | NAME                     | VERSION            | INTEGRATION GUIDE                                                                                                                                                   |
 |--------------------------|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core             | {{page.version}}   | [Spryker Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)                         |
+| Spryker Core             | {{page.version}}   | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)                         |
 | Marketplace Product      | {{page.version}}   | [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-feature-integration.html)           |
 | Product Approval Process | {{page.version}}   | [Product Approval Process feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/product-approval-process-feature-integration.html) |
 

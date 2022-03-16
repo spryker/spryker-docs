@@ -31,20 +31,21 @@ Review the [reference information]() before you start, or look up the necessary 
 
 To create a new attribute to search, do the following:
 1. On the **Search Preferences** page, click **Add attribute to search**.
-2. On the *Add attribute to search* page, enter the attribute key and (optionally) specify "Yes" or "No" for search preference types.
-3. Click **Save**.
-4. On the *Search Preferences* page, click **Synchronize search preferences** for your changes to take effect.
+2. On the **Add Attribute to Search** page, enter an **ATTRIBUTE KEY**.
+3. Select **Yes** or **No** for the following:
+    * **FULL TEXT**
+    * **FULL TEXT BOOSTED**
+    * **SUGGESTION TERMS**
+    * **COMPLETION TERMS**
+4. Click **Save**.
+    This opens the **Search Preferences** page with a success message displayed.
+5. Optional: To start using the created search attribute, click **Synchronize search preferences**.
+    This refreshes the page with a success message displayed.
+
 
 This creates a new non-super attribute and registers it in the system, so your customers will be able to find products with this attribute in the online store if you enable search preference types for it.
 
-## Editing search preferences
 
-To edit a search preference:
-1. In the *Search Preferences* table, find an attribute you want to change the search preferences for.
-2. In the _Actions_ column of the attribute, click **Edit** .
-3. On the *Edit search preferences* page, you can define how the attribute will behave for search by specifying _Yes_ or _No_ for the **Full text**, **Full text boosted**, **Suggestion terms**, or **Completion terms** fields.
-4. Click **Save**.
-5. On the *Search Preferences* page, click **Synchronize search preferences** for your changes to take effect.
 
 ## Reference information
 
@@ -52,64 +53,44 @@ This section describes attributes you see and enter when creating  new attribute
 
 There is a set of search preferences' types that you can specify for your attribute key. All of those types possess different features.
 
-### Full text
+### FULL TEXT
 
-Full text implies that, if set to **Yes**, the attributes will be included for full-text search. It means that a user will be able to find products when they search for a text which is present in the value of a searchable attribute.
+Defines if an attribute is to be included for full-text search. Customers will be able to find products when they search for a text which is present in the value of a searchable attribute.
 
 **Example**
 The _focus_adjustment_ attribute key has the following values:
 * Auto
 * Auto/Manual
 
-If **Include for full text** is set to Yes for this attribute, then, when typing any of the values of this attribute in the **Search** field of the online store, all words will be searched, and the full phrase will have a higher weight than separate words from it. Meaning, if **Auto/Manual** is typed, the results having **Auto/Manual** value for the Focus Adjustment attribute will be displayed first in the search results flyout:
+With **FULL TEXT** enabled, when a customer enters a full name of the attribute's value, all words are searched, and the full phrase has a higher weight than separate words from it. Meaning, if they search for *Auto* or *Manual*, the results containing *Auto* or *Manual* for the Focus Adjustment attribute are displayed first in the search results flyout:
 ![Full text](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Search+Preferences+Types/full-text.png)
 
-### Full text boosted
+### FULL TEXT BOOSTED
 
-Full text boosted implies that, if set to **Yes**, the attributes will be included for full text boosted. It means that the attribute values of these specific attributes will receive a higher relevance than other attributes having the same values.
+Defines if attribute values of an attribute are to receive a higher relevance than the same attribute values of other attributes.
 
-**Example**
-The *white-balance* and *light_exposure_modes* attributes both have *manual* attribute value, but:
-* *white-balance* has the *Include for full-text search* value set to **Yes**
-*  *light_exposure_modes* has *Include for full text boosted* set to **Yes**
-
-We have assigned the _white-balance_ attribute to product Canon LEGRIA HF R606, and the _light_exposure_modes_ attribute to product Sony Cyber-shot DSC-W830.
-
-In this case, when typing *manual* in the *Search* field on the web-shop, the product Sony Cyber-shot DSC-W830 with the *manual* attribute value appears higher in the list of results than the product with the *white-balance* attribute having the same *manual* attribute value:
+For example, the *white-balance* and *light_exposure_modes* attributes have the *manual* attribute value. The *white-balance* attribute is assigned to *Canon LEGRIA HF R606*, and *light_exposure_modes* attribute is assigned to *Sony Cyber-shot DSC-W830*. You enable **FULL TEXT BOOSTED** only for *light_exposure_modes*. When a customer searches for *manual*, Sony Cyber-shot DSC-W830 appears higher in the list of results than the product with the *white-balance* attribute.
 ![Full text boosted](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Search+Preferences+Types/full-text-boosted-attribute-values.png)
 
-{% info_block infoBox "Info" %}
+It can also happen that **FULL TEXT BOOSTED** is enabled for two attributes with the same value. In this case, in the search results, the order of the respective products is defined by Elasticsearch. You can improve this by  customizing its analyzers.
 
-If several attributes having the same values have been included for full text boosted, they all will appear in the search results. Their order is provided by Elasticsearch and can be further improved by customizing its analyzers.
+### SUGGESTION TERMS
 
-{% endinfo_block %}
-
-### Suggestion terms
-
-Suggestion terms implies that, if set to **Yes**, the attributes will be included for a suggestion. This search preferences type implements the "_did you mean_" search functionality which provides alternative suggestions when a user may have misspelled a search term.
-
-**Example**
-The _storage_media_ attribute has the **SSD** and **Flash** values. If **Include for suggestion** has been set to **Yes**, then when a user types _flashs_ in the **Search** field, the search results page will contain a box with suggested search term "_flash_".
+Defines if alternative search terms are to be provided if a search item is misspelled. For example, the *storage_media* attribute has the *SSD* and *Flash* values. With **SUGGESTION TERMS** enabled, when a customer searches for `flashs`, the search results page contains a a suggested search term _flash_.
 ![Include for suggestion](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Search+Preferences+Types/include-for-suggestion.png)
 
-And vise versa, if you don't include an attribute for the suggestion, when a user searches by its values and misspells them, there will be no result for the user's search.
-![Do not include for suggestion](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Search+Preferences+Types/do-not-include-for-suggestion.png)
+### COMPLETION TERMS
 
-### Completion terms
+Defines if auto-completion suggestions should appear when customers search for the values of this attribute.
 
-Completion terms implies that, if set to **Yes**, the attributes will be included for completion. It means that typing a word in the search field brings up predictions, which makes it easy to finish entering the search form.
-
-**Example**
-The _storage_media_ attribute has **SSD** and **Flash** values. If **Include for completion** has been set to **Yes**, then when user types "_fla_" in the search field, the search term will be autocompleted with "_sh_," and there will be a list of suggested terms in the search results flyout:
+For example, the _storage_media_ attribute has *SSD* and *Flash* values. With  **COMPLETION TERMS** enabled, when a customer enters `fla` in the search field, the search term will be autocompleted with "_sh_," and there will be a list of suggested terms in the search results flyout:
 ![Completion terms](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Search+Preferences+Types/completion-terms.png)
 
-**Tips and tricks**
-<br>When you first decide on activating search preference types for attributes, keep in mind, that enabling all of them is **highly unrecommended**, as this will result in a huge list of search results.
-Instead of this, you might want to consider enabling search preference types for only those attributes that you really want your users to find while searching, or the attributes that refer to products you want to appear in the search results above all.
+####
 
-{% info_block infoBox "Example" %}
+Enabling search preferences for a big number of attributes will result in a huge list of search results. We recommend enabling search preferences only for the attributes that you really want your customers to find.
 
-There is a new device in your shop which is popular on the market for its video recording properties. You know that users are very interested in a device with such property and they might search for products by it.<br>Suppose, you have created the _video_recording_ attribute in your shop with the values **Geotagging** and **Autofocus**.<br>However, suppose there are other attributes having the same values.<br>Since you want to advertise the specific new device more, it would make sense for you to disable, or at least to restrict the number of active search preference types for all other attributes with **Geotagging** and **Autofocus** values and enable an individual (or even all) search preference types for the _video_recording_.<br>This way you will make the _video_recording_ product attribute searchable and therefore the products with this attribute will stand out in the search results when your customers search by attributes.
+For example, There is a new device in your shop which is popular on the market for its video recording properties. You know that users are very interested in a device with such property and they might search for products by it.<br>Suppose, you have created the _video_recording_ attribute in your shop with the values **Geotagging** and **Autofocus**.<br>However, suppose there are other attributes having the same values.<br>Since you want to advertise the specific new device more, it would make sense for you to disable, or at least to restrict the number of active search preference types for all other attributes with **Geotagging** and **Autofocus** values and enable an individual (or even all) search preference types for the _video_recording_.<br>This way you will make the _video_recording_ product attribute searchable and therefore the products with this attribute will stand out in the search results when your customers search by attributes.
 
 {% endinfo_block %}
 

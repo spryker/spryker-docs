@@ -95,6 +95,12 @@ The default command is `vendor/bin/install -r pre-deploy -vvv`.
 
 The CodeBuild project of this stage is named `Run_pre-deploy_for_<project_name>`. It uses the currently running application image in the ECS cluster as an environment image, and all Zed environment variables are accessible.
 
+{% info_block warningBox "Updating the pre-deploy hook" %}
+
+The CodeBuild project of the pre-deploy hook uses a *currently running* application image. If you add a new command to the hook, it is added to the hook during the next deployment. So, after updating the hook's configuration, the command only runs starting from the second deployment.
+
+{% endinfo_block %}
+
 The default configuration in `buildspec.yml` looks as follows:
 
 ![pre-deploy-spec](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Deployment+pipelines/Deployment+pipelines/pre-deploy-buildspec.png)

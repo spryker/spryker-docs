@@ -979,6 +979,8 @@ entries:
           - "202108.0"
         - title: Changing the state of order items in returns
           url: /docs/scos/user/back-office-user-guides/sales/returns/changing-the-state-of-order-items-in-returns.html
+          include_versions:
+          - "202108.0"
         - title: References
           include_versions:
           - "202005.0"

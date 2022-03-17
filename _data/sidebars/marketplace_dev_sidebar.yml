@@ -406,6 +406,8 @@ entries:
         nested:
           - title: Data export Merchant Orders .csv files format
             url: /docs/marketplace/dev/data-export/data-export-merchant-orders-csv-files-format.html
+            include_versions:
+            - "202108.0"
 
       - title: Data import
         nested:
@@ -414,6 +416,8 @@ entries:
 
           - title: "File details: merchant.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant.csv.html
+            include_versions:
+            - "202108.0"
 
           - title: "File details: merchant-profile.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-profile.csv.html
@@ -462,6 +466,8 @@ entries:
 
           - title: "File details: combined-merchant-product-offer.csv"
             url: /docs/marketplace/dev/data-import/file-details-combined-merchant-product-offer.csv.html
+            include_versions:
+            - "202108.0"
 
           - title: "File details: merchant-product.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product.csv.html

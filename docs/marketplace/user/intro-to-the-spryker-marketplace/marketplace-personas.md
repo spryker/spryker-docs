@@ -4,7 +4,7 @@ description: This document describes key users that cooperate with each other in
 template: concept-topic-template
 ---
 
-A marketplace extension provided by Spryker Cloud Commerce OS covers a wide range of needs for sellers and buyers and presupposes the fulfillment of multiple actions by various types of users in different areas of the Marketplace. This article describes the different types of users - personas, that function within the Marketplace.
+A marketplace extension provided by Spryker Cloud Commerce OS covers a wide range of needs for sellers and buyers and presupposes the fulfillment of multiple actions by various types of users in different areas of the Marketplace. This document describes the different types of users - personas, that function within the Marketplace.
 
 A *Marketplace* is a type of e-commerce website where products or services are delivered and fulfilled by multiple sellers or *merchants* to the buyers, whereas transactions are processed by the Marketplace operator.
 

@@ -1,6 +1,6 @@
 ---
 title: Product Offer storage
-description: This article provides reference information about Marketplace Product Offer storage.
+description: This document provides reference information about Marketplace Product Offer storage.
 template: concept-topic-template
 ---
 

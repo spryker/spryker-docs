@@ -1,10 +1,10 @@
 ---
 title: Installation
-description: This article describes how to get started with the B2C Demo Marketplace.
+description: This document describes how to get started with the B2C Demo Marketplace.
 template: concept-topic-template
 ---
 
-This article describes how to get started with the B2C Demo Marketplace.
+This document describes how to get started with the B2C Demo Marketplace.
 
 {% info_block infoBox "Info" %}
 

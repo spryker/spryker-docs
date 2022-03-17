@@ -4,7 +4,7 @@ description: This articles provides details how to create new MerchantOms flow
 template: howto-guide-template
 ---
 
-This article provides the details about how to create a new MerchantOms flow.
+This document provides the details about how to create a new MerchantOms flow.
 
 To create a new MerchantOms flow, follow the steps:
 

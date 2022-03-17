@@ -11,7 +11,7 @@ related:
     link: docs/marketplace/dev/howtos/how-to-add-new-guitable-filter-type.html
 ---
 
-This article describes how to extend an existing Gui table in the Merchant Portal.
+This document describes how to extend an existing Gui table in the Merchant Portal.
 With this step by step instructions you will learn how to extend a Gui table with a new text column and a new select filter.
 
 ## Prerequisites

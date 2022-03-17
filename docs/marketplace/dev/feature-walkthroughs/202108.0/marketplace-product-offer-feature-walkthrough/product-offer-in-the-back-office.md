@@ -1,6 +1,6 @@
 ---
 title: Product Offer in the Back Office
-description: This article provides reference information about product offers in the Back Office.
+description: This document provides reference information about product offers in the Back Office.
 template: concept-topic-template
 ---
 

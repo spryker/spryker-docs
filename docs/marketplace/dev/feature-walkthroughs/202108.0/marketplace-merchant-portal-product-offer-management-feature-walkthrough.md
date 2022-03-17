@@ -1,6 +1,6 @@
 ---
 title: Marketplace Merchant Portal Product Offer Management feature walkthrough
-description: This article provides reference information about product offers in the Merchant Portal.
+description: This document provides reference information about product offers in the Merchant Portal.
 template: feature-walkthrough-template
 ---
 

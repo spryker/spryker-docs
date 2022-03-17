@@ -1,10 +1,10 @@
 ---
 title: Infrastructure requirements
-description: This article provides the required system infrastructure requirements for a Spryker Marketplace project.
+description: This document provides the required system infrastructure requirements for a Spryker Marketplace project.
 template: concept-topic-template
 ---
 
-This article describes the system infrastructure requirements that help mitigate security risks for the Spryker Marketplace projects.
+This document describes the system infrastructure requirements that help mitigate security risks for the Spryker Marketplace projects.
 When you host your Spryker application in [SCCOS](/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html), these requirements will be configured for you out of the box. If your system infrastructure (cloud PaaS or on-premise) is managed, you must ensure these security requirements are met.
 
 ## Applications resources visibility

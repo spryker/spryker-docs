@@ -11,7 +11,7 @@ related:
     link: docs/marketplace/dev/howtos/how-to-add-new-guitable-filter-type.html
 ---
 
-This article describes how to create a new Gui table in Merchant Portal.
+This document describes how to create a new Gui table in Merchant Portal.
 With this step by step instructions you will create a new Gui table with filters, search, sorting and an `http` data source type from scratch.
 
 ## Prerequisites

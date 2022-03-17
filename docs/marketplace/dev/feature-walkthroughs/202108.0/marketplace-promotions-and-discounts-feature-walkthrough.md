@@ -1,6 +1,6 @@
 ---
 title: Marketplace Promotions and Discounts feature walkthrough
-description: This article provides technical details about the Marketplace Promotions and Discounts feature.
+description: This document provides technical details about the Marketplace Promotions and Discounts feature.
 template: feature-walkthrough-template
 ---
 

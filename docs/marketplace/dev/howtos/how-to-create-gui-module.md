@@ -7,7 +7,7 @@ related:
     link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-merchant-portal-core-feature-walkthrough/gui-modules-concept.html
 ---
 
-This article describes how to create a new GUI module and add it to navigation.
+This document describes how to create a new GUI module and add it to navigation.
 
 ## Prerequisites
 

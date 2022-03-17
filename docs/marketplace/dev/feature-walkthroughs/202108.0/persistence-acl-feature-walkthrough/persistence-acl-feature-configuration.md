@@ -4,7 +4,7 @@ last_updated: Nov 05, 2021
 description: In this article, you will learn how to configure the Persistence ACL feature.
 template: concept-topic-template
 ---
-This article describes how you can configure the [Persistence ACL feature](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html).
+This document describes how you can configure the [Persistence ACL feature](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html).
 
 The Persistence ACL functionality is based on the Propel behavior. You can enable the feature in two different ways:
 - [Create a connection with one or more database tables](#connect-persistence-acl-feature-to-one-or-more-database-tables).

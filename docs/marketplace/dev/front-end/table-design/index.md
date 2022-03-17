@@ -1,10 +1,10 @@
 ---
 title: Table Design
-description: This article describes the Table Design in the Components Library.
+description: This document describes the Table Design in the Components Library.
 template: concept-topic-template
 ---
 
-This article describes the Table Design in the Components Library.
+This document describes the Table Design in the Components Library.
 
 ## Overview
 

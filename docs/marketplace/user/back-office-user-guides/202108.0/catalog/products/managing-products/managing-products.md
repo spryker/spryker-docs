@@ -5,7 +5,7 @@ description: This guide explains how to manage abstract and concrete products in
 template: back-office-user-guide-template
 ---
 
-This article describes how to manage abstract and concrete products.
+This document describes how to manage abstract and concrete products.
 
 To start managing products, go to **Catalog&nbsp;<span aria-label="and then">></span> **Products**.
 

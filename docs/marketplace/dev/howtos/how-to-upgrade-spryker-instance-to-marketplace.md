@@ -1,10 +1,10 @@
 ---
 title: "How-To: Upgrade Spryker instance to the Marketplace"
-description: This article provides details how to upgrade Spryker instance to the Marketplace.
+description: This document provides details how to upgrade Spryker instance to the Marketplace.
 template: howto-guide-template
 ---
 
-This article provides details about how to upgrade the existing instance of Spryker Shop to the Marketplace.
+This document provides details about how to upgrade the existing instance of Spryker Shop to the Marketplace.
 
 ## 1) Add core features
 

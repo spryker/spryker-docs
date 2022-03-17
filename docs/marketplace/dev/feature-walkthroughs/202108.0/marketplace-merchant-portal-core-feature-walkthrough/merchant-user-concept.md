@@ -4,7 +4,7 @@ description: Merchant User in Merchant portal.
 template: concept-topic-template
 ---
 
-This article provides a short overview of Merchant User concept in the Spryker Marketplace.
+This document provides a short overview of Merchant User concept in the Spryker Marketplace.
 
 ## Merchant User structure
 

@@ -11,7 +11,7 @@ related:
     link: docs/marketplace/dev/howtos/how-to-add-new-guitable-filter-type.html
 ---
 
-This article describes how to add new column types to a Gui table.
+This document describes how to add new column types to a Gui table.
 
 ## Prerequisites
 

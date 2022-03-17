@@ -38,7 +38,7 @@ git clone https://github.com/spryker-shop/b2c-demo-marketplace.git ./
 git clone https://github.com/spryker/docker-sdk.git docker
 ```
 
-2. Set up environment you need:
+2. Set up the environment you need:
 
 - [Development environment](#setting-up-a-development-environment)
 - [Production-like environment](#setting-up-a-production-like-environment)

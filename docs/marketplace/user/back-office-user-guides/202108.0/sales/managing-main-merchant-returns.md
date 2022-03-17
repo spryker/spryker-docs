@@ -15,7 +15,7 @@ template: back-office-user-guide-template
 
 To start managing the returns for the [main merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/main-merchant-concept.html), navigate to **Sales** > **My Returns**.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Viewing returns for the main merchant
 
@@ -40,7 +40,7 @@ The triggered return states are reflected in the Customer Account on the Storefr
 
 ------
 
-**Tips & Tricks**
+**Tips and tricks**
 
 To trigger the return states for all the items in the return, click the states at the *Trigger all matching states* field. To trigger the return states for individual items of the return, trigger the states in the *Trigger event* column for the necessary items.
 

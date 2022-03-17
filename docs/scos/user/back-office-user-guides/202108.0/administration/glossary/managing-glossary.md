@@ -18,7 +18,7 @@ This article describes how to manage translations.
 
 To start managing translations, go to the **Administration** > **Glossary** section.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating a new translation
 

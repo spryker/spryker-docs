@@ -37,7 +37,7 @@ To start working with products:
 1. To create product variants of abstract products, [create at least one super attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html).
 2. Go to  **Catalog > Products**.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 {% info_block warningBox "Adding super attributes" %}
 
@@ -178,7 +178,7 @@ The following table describes the attributes you enter and select when adding im
 |Large| Link to the image that will be displayed for the product on the *Product details* page. |
 |Sort Order| Arranges the images displayed for the product in an ascending order. The smallest number is `0`. |
 
-**Tips & tricks**
+**Tips and tricks**
 <br>To delete an image set with all its pictures, select **Delete image set**.
 <!---
 To convert an abstract product into a product bundle, you can update the **Assign bundled products** tab for a variant. The product will automatically be transformed into a bundle. -->

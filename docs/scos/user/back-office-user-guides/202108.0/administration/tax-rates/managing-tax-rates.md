@@ -18,7 +18,7 @@ This document describes how to create, edit, and delete [tax rates](/docs/scos/u
 
 To start working with tax rates, go to **Administration** > **Tax Rates**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating tax rates
 
@@ -68,7 +68,7 @@ For more details on the reference information of the attributes, see the [Refere
 
 To return back to the list, click **Back to Tax Rates**.
 
-**Tips & tricks**
+**Tips and tricks**
 <br>You can start editing a tax rate while viewing it:
 1. On the *View Tax Rate* page, click **Edit** in the top right corner.
 2. Go over the [Editing tax rates](#editing-tax-rates) procedure.
@@ -87,7 +87,7 @@ Even if you delete the only tax rate assigned to a tax set, the tax set itself r
 
 {% endinfo_block %}
 
-**Tips & tricks**
+**Tips and tricks**
 <br>You can delete a tax rate while viewing it:
 1. On the *View Tax Rate* page, click **Delete** in the top-right corner.
 2. On the *Delete Tax Rate* page, confirm your action.

@@ -80,7 +80,7 @@ Performing this action triggers the scheduled prices cron job to be run for the 
 
 {% endinfo_block %}
 
-**Tips & Tricks**
+**Tips and tricks**
 In the Edit Scheduled Price page, you can return to the **Edit Import** page. To do this, click **Back to the import**.
 
 ## Downloading Scheduled Price Imports

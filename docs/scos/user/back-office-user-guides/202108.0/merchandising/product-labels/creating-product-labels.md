@@ -21,7 +21,7 @@ This topic describes how to create and activate product labels.
 
 To start working with product labels, go to **Merchandising** > **Product Labels**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating product labels
 
@@ -58,7 +58,7 @@ Make sure the selected products are listed in the *Selected products to assign (
 8. Click **Save**.
 The page refreshes to display the success message about product label creation.
 
-**Tips & tricks**
+**Tips and tricks**
 
 * Below the table, click **Select All** to assign the label to all the products in the *Available products* tab.
 * Filter the products in the *Available products* tab by entering its name, SKU, or category name in the **Search** field.

@@ -31,7 +31,7 @@ You always discontinue a product variant, not an abstract product itself.
 
 To discontinue products for a concrete product, navigate to **Catalog** > **Products**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Discontinuing products
 

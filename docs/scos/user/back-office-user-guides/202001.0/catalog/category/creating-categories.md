@@ -64,7 +64,7 @@ Even though you can add several image sets and several images to an image set, o
         * When adding several images to the image set that is active for the category, the image with the lowest Sort Order field value is applied to the category. If there are several images with the same value, the image which has been added first is applied. The lowest possible value is "0".
 3. Click **Save**.
 
-**Tips & Tricks**
+**Tips and tricks**
 
 * When you already know the exact parent category under which the category that you create is going to be nested, you can click **Add category to this node** for a specific parent category. This will redirect you to the **Create category** page where you can perform the steps described above. The only difference is that the **Parent** field will be autopopulated with the needed value.
 * The same products can be assigned to multiple categories.

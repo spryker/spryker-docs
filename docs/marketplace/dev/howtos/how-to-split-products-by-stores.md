@@ -2,7 +2,7 @@
 title: 'How-To: Split products by stores'
 description: This document provides details on how to split products by stores.
 template: howto-guide-template
-related: 
+related:
     - title: Persistence ACL feature walkthrough
       link: docs/marketplace/dev/feature-walkthroughs/page.version/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html
 ---
@@ -44,10 +44,10 @@ The database tables structure below relates to our use case:
 **.src/Pyz/Zed/Product/Persistence/Propel/Schema/spy_product.schema.xml**
 ```xml
 <?xml version="1.0"?>
-<database 
+<database
         xmlns="spryker:schema-01"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-        name="zed" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        name="zed"
         xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
         namespace="Orm\Zed\Product\Persistence"
         package="src.Orm.Zed.Product.Persistence">
@@ -67,8 +67,8 @@ The database tables structure below relates to our use case:
 **.src/Pyz/Zed/Store/Persistence/Propel/Schema/spy_store.schema.xml**
 ```xml
 <?xml version="1.0"?>
-<database xmlns="spryker:schema-01" 
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<database xmlns="spryker:schema-01"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           name="zed"
           xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
           namespace="Orm\Zed\Store\Persistence"
@@ -145,7 +145,7 @@ class ProductAclEntityMetadataConfigExpanderPlugin extends AbstractPlugin implem
                 ->setHasSegmentTable(true)
                 ->setDefaultGlobalOperationMask(AclEntityConstants::OPERATION_MASK_READ)
         );
-        
+
         return $aclEntityMetadataConfigTransfer;
     }
 }
@@ -154,7 +154,7 @@ The code above shows:
 
 - The inheritance model of `Product` from `Store`.
 - The segmentation support for `Store`.
-- Default access mask with `Read` permission for `Store`, which is required for the login process. 
+- Default access mask with `Read` permission for `Store`, which is required for the login process.
 
 3. Add the plugin to `AclEntityDependencyProvider`:
 
@@ -211,7 +211,7 @@ console propel:install
 ### 2. Configure the data importers
 
 1. Extend `DataImportConfig`:
-   
+
 **.src/Pyz/Zed/DataImport/DataImportConfig.php**
 ```php
 <?php
@@ -294,7 +294,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . AclEntityDataImportConfig::IMPORT_TYPE_ACL_ENTITY_SEGMENT_CONNECTOR),
         ];
         // ...
-        
+
         return $commands;
 ```
 
@@ -362,7 +362,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
   source: data/import/common/common/acl_entity_segment_connector.csv
 ```
 
-## 4. Add the required data 
+## 4. Add the required data
 Next, you should create the appropriate `AclRoles`, `AclGroups`, `AclEntityRules`, and `AclEntitySegments` entities by following the instructions below.
 
 ### 1. Add AclRoles
@@ -441,7 +441,7 @@ console data:import:acl-entity-segment
 Next, you need to link the segment data created in the previous step, with US and AT `Store`. To do so:
 
 1. Find out the DE and AT `Store`s identifiers:
-   
+
 ```sql
 SELECT id_store, name FROM spy_store;
 ```
@@ -457,7 +457,7 @@ Orm\Zed\Store\Persistence\SpyStore,id_store,1,store_de
 Orm\Zed\Store\Persistence\SpyStore,id_store,2,store_at
 ```
 3. To link `AclEntitySegment` and `Store`, run:
-   
+
 ```shell
 console data:import:acl-entity-segment-connector
 ```
@@ -530,14 +530,14 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 
         return $plugins;
     }
-    
+
     // ...
 }
 ```
 ## 6. Set up users
 At this stage, the Persistence Acl feature is installed and configured to support the desired case.
 The only thing left is to add an appropriate group (_DE product manager_ or _AT product manager_) to the required user.
-You can do this through the Back Office. See [Managing groups](/docs/scos/user/back-office-user-guides/{{site.version}}/users/roles-groups-and-users/managing-groups.html) for details on how you can do that. Make sure to [assign corresponding `AclRule`](/docs/scos/dev/feature-walkthroughs/{{site.version}}/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html) to the roles as well.
+You can do this through the Back Office. See [Managing groups](/docs/scos/user/back-office-user-guides/{{site.version}}/users/managing-user-groups/creating-user-groups.html) for details on how you can do that. Make sure to [assign corresponding `AclRule`](/docs/scos/dev/feature-walkthroughs/{{site.version}}/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html) to the roles as well.
 
 When you add the _DE product manager_ group to a user, only `Products` related to the DE store become available to that user.
 If the user needs access to both DE and AT stores, add two groups,_DE product manager_ and _AT product manager_, at once.

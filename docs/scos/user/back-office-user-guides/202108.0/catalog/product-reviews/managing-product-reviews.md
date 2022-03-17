@@ -53,5 +53,5 @@ Keep in mind that there is no confirmation screen or pop-up shown. The review is
 
 {% endinfo_block %}
 
-**Tips & tricks**
+**Tips and tricks**
 <br>You can quickly navigate to the **View Product Abstract** or **View Customer** page in the Back Office. Click the hyperlinked **Product Name** or **Customer** value in the **List of product reviews** table.

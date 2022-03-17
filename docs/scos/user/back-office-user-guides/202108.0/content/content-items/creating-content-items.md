@@ -23,7 +23,7 @@ This topic describes how to create content items in the Back Office.
 
 To start working with content items, go to **Content** > **Content Items**.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 
 ## Select a content item
@@ -100,7 +100,7 @@ Make sure the banner has been created:
 
 {% endinfo_block %}
 
-**Tips & Tricks**
+**Tips and tricks**
 <br>On the *Create Content Item: Banner* page, you can do the following:
 * Clear all the fields in a tab by clicking **Clear locale**.
 * Go back to the *Overview of Content Items* page by clicking **Back to Content Items** in the top right corner.
@@ -167,7 +167,7 @@ Make sure the abstract product list has been created:
 
 {% endinfo_block %}
 
-**Tips & tricks**
+**Tips and tricks**
 <br>On the *Create Content Item: Abstract Product List* page, you can do the following:
 
 * Filter the products in the *Add more products* table by entering a product name or SKU in the *Search* field.
@@ -238,7 +238,7 @@ Make sure the product set has been created:
 
 {% endinfo_block %}
 
-**Tips & tricks**
+**Tips and tricks**
 <br>On the *Create Content Item: Product Set* page, you can do the following:
 
 * Filter the product sets in the *Available Product Sets* table by entering a product set name in the **Search** field.
@@ -311,7 +311,7 @@ Make sure the file list has been created:
 
 {% endinfo_block %}
 
-**Tips & tricks**
+**Tips and tricks**
 <br>On the *Create Content Item: File List* page, you can do the following:
 
 * Filter the files in the *Available Files* table by entering a file name in the *Search* field.

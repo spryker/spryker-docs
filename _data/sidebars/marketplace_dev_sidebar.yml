@@ -411,8 +411,6 @@ entries:
 
           - title: "File details: merchant.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant.csv.html
-            include_versions:
-            - "202108.0"
 
           - title: "File details: merchant-profile.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-profile.csv.html

@@ -14,7 +14,6 @@ Follow the steps below to install the Marketplace Product Approval Process featu
 ### Prerequisites
 
 To start feature integration, integrate the required features:
-<!--
 
 | NAME         | VERSION            | INTEGRATION GUIDE                                                                                                                    |
 |--------------|--------------------|--------------------------------------------------------------------------------------------------------------------------------------|
@@ -23,7 +22,6 @@ To start feature integration, integrate the required features:
 | Cart         | {{page.version}}   | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html)                 |
 | Checkout     | {{page.version}}   | [Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html)         |
 
--->
 
 ### 1) Install the required modules using Сomposer
 

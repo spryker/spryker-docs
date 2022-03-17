@@ -32,10 +32,10 @@ entries:
       - title: Feature walkthroughs
         nested:
 
-          - title: Marketplace Merchant 
+          - title: Marketplace Merchant
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-feature-walkthrough.html
 
-          - title: Marketplace Product Offer 
+          - title: Marketplace Product Offer
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
             nested:
               - title: Product Offer in the Back Office
@@ -92,23 +92,23 @@ entries:
 
               - title: Persistence ACL feature configuration
                 url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html
-              
+
               - title: Rules and scopes
                 url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/rules-and-scopes.html
                 nested:
-                  
+
                   - title: Global scope
                     url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/global-scope.html
-                  
+
                   - title: Segment scope
                     url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/segment-scope.html
-                  
+
                   - title: Inherited scope
                     url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/inherited-scope.html
-                  
+
                   - title: Composite entity
                     url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html
-              
+
               - title: Execution flow
                 url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/execution-flow.html
 
@@ -121,7 +121,7 @@ entries:
           - title: Merchant Portal
             nested:
 
-              - title: Marketplace Merchant Portal Core 
+              - title: Marketplace Merchant Portal Core
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-core-feature-walkthrough/marketplace-merchant-portal-core-feature-walkthrough.html
                 nested:
 
@@ -136,7 +136,7 @@ entries:
 
               - title: Marketplace Merchant Portal Product Management
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-product-management-feature-walkthrough.html
-              
+
               - title: Marketplace Merchant Portal Product Offer Management
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-product-offer-management-feature-walkthrough.html
 
@@ -192,6 +192,9 @@ entries:
 
           - title: Marketplace Product feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-feature-integration.html
+            include_versions:
+            - "202108.0"
+            - "202200.0"
 
           - title: Marketplace Product + Cart feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-cart-feature-integration.html
@@ -706,7 +709,7 @@ entries:
 
           - title: 'How-To: Split products by stores'
             url: /docs/marketplace/dev/howtos/how-to-split-products-by-stores.html
-            
+
           - title: "How-To: Extend Merchant portal dashboard"
             url: /docs/marketplace/dev/howtos/how-to-extend-merchant-portal-dashboard.html
 

@@ -6,7 +6,7 @@ related:
   - title: Glue API - Shopping Lists feature integration
     link: ToDo
   - title: Managing shopping list items
-    link: docs/marketplace/dev/glue-api-guides/page.version/shopping-lists/managing-shopping-list-items.md.html
+    link: docs/marketplace/dev/glue-api-guides/page.version/shopping-lists/managing-shopping-list-items.html
 ---
 
 With the help of the [Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html) feature, company users can manage shopping lists for their company to plan purchasing activities beforehand. Unlike [Wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html), shopping lists contain not only a list of items to be purchased but also the quantity of each item.
@@ -326,7 +326,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 ```
 </details>
 
-For response attributes, see [Create a shopping list](#create-a-shopping-list).
+For the response attributes, see [Create a shopping list](#create-a-shopping-list).
 
 For the attributes of included resources, see:
 * [Add items to a shopping list](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-shopping-lists/managing-shopping-list-items.html#shopping-list-items-response-attributes)
@@ -366,6 +366,9 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 | `GET http://glue.mysprykershop.com/shopping-lists/sdb17f85-953f-565a-a4ce-e5cb02405f83` | Retrieve the shopping list with the id `sdb17f85-953f-565a-a4ce-e5cb02405f83`. |
 | `GET http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a?include=shopping-list-items` | Retrieve the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` with its items. |
 | `GET http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a?include=shopping-list-items,concrete-products` | Retrieve the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` with its items and respective concrete products. |
+| `GET http://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce?include=shopping-list-items` | Retrieve the shopping list with the id `c0bc6296-8a0c-50d9-b25e-5bface7671ce` with its items (marketplace products and product offers). |
+| `GET http://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce?include=shopping-list-items,merchants` | Retrieve the shopping list with the id `c0bc6296-8a0c-50d9-b25e-5bface7671ce` with its merchants. |
+| `GET http://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce?include=shopping-list-items,product-offers,product-offer-availabilities` with its product offers and product offer availabilities. |
 
 ### Response
 
@@ -583,13 +586,281 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
     ]
 }
 ```
-</details>    
+</details>  
+
+<details>
+<summary markdown='span'>Response sample with shopping list items (marketplace products and product offers)</summary>
+
+```json
+{
+    "data": {
+        "type": "shopping-lists",
+        "id": "c0bc6296-8a0c-50d9-b25e-5bface7671ce",
+        "attributes": {
+            "owner": "Andrew Wedner",
+            "name": "Test shopping list",
+            "numberOfItems": 6,
+            "updatedAt": "2022-03-17 09:44:24.000000",
+            "createdAt": "2022-03-17 09:44:24.000000"
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce"
+        },
+        "relationships": {
+            "shopping-list-items": {
+                "data": [
+                    {
+                        "type": "shopping-list-items",
+                        "id": "29f1d940-00b6-5492-abf3-d2b5ff15f0b2"
+                    },
+                    {
+                        "type": "shopping-list-items",
+                        "id": "946451d1-3c40-559e-95c7-ebda2d12bebf"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "shopping-list-items",
+            "id": "29f1d940-00b6-5492-abf3-d2b5ff15f0b2",
+            "attributes": {
+                "productOfferReference": null,
+                "merchantReference": "MER000001",
+                "quantity": 3,
+                "sku": "110_19682159"
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items/29f1d940-00b6-5492-abf3-d2b5ff15f0b2"
+            }
+        },
+        {
+            "type": "shopping-list-items",
+            "id": "946451d1-3c40-559e-95c7-ebda2d12bebf",
+            "attributes": {
+                "productOfferReference": "offer3",
+                "merchantReference": "MER000001",
+                "quantity": 3,
+                "sku": "091_25873091"
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items/946451d1-3c40-559e-95c7-ebda2d12bebf"
+            }
+        }
+    ]
+}
+```
+</details>
+
+<details>
+<summary markdown='span'>Response sample with shopping list items and merchants</summary>
+
+```json
+{
+    "data": {
+        "type": "shopping-lists",
+        "id": "c0bc6296-8a0c-50d9-b25e-5bface7671ce",
+        "attributes": {
+            "owner": "Andrew Wedner",
+            "name": "Test shopping list",
+            "numberOfItems": 6,
+            "updatedAt": "2022-03-17 09:44:24.000000",
+            "createdAt": "2022-03-17 09:44:24.000000"
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce?include=shopping-list-items,merchants"
+        },
+        "relationships": {
+            "shopping-list-items": {
+                "data": [
+                    {
+                        "type": "shopping-list-items",
+                        "id": "29f1d940-00b6-5492-abf3-d2b5ff15f0b2"
+                    },
+                    {
+                        "type": "shopping-list-items",
+                        "id": "946451d1-3c40-559e-95c7-ebda2d12bebf"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "merchants",
+            "id": "MER000001",
+            "attributes": {
+                "merchantName": "Spryker",
+                "merchantUrl": "/de/merchant/spryker",
+                "contactPersonRole": "E-Commerce Manager",
+                "contactPersonTitle": "Mr",
+                "contactPersonFirstName": "Harald",
+                "contactPersonLastName": "Schmidt",
+                "contactPersonPhone": "+49 30 208498350",
+                "logoUrl": "https://d2s0ynfc62ej12.cloudfront.net/merchant/spryker-logo.png",
+                "publicEmail": "info@spryker.com",
+                "publicPhone": "+49 30 234567891",
+                "description": "Spryker ist der Haupthändler auf dem Demo-Marktplatz.",
+                "bannerUrl": "https://d2s0ynfc62ej12.cloudfront.net/merchant/spryker-banner.png",
+                "deliveryTime": "1-3 Tage",
+                "faxNumber": "+49 30 234567800",
+                "legalInformation": {
+                    "terms": "<p><h3>§ 1 Geltungsbereich &amp; Abwehrklausel</h3><br><br>(1) Für die über diesen Internet-Shop begründeten Rechtsbeziehungen zwischen dem Betreiber des Shops (nachfolgend „Anbieter“) und seinen Kunden gelten ausschließlich die folgenden Allgemeinen Geschäftsbedingungen in der jeweiligen Fassung zum Zeitpunkt der Bestellung. <br><br>(2) Abweichende Allgemeine Geschäftsbedingungen des Kunden werden zurückgewiesen.<br><br><h3>§ 2 Zustandekommen des Vertrages</h3><br><br>(1) Die Präsentation der Waren im Internet-Shop stellt kein bindendes Angebot des Anbieters auf Abschluss eines Kaufvertrages dar. Der Kunde wird hierdurch lediglich aufgefordert, durch eine Bestellung ein Angebot abzugeben. <br><br>(2) Durch das Absenden der Bestellung im Internet-Shop gibt der Kunde ein verbindliches Angebot gerichtet auf den Abschluss eines Kaufvertrages über die im Warenkorb enthaltenen Waren ab. Mit dem Absenden der Bestellung erkennt der Kunde auch diese Geschäftsbedingungen als für das Rechtsverhältnis mit dem Anbieter allein maßgeblich an. <br><br>(3) Der Anbieter bestätigt den Eingang der Bestellung des Kunden durch Versendung einer Bestätigungs-E-Mail. Diese Bestellbestätigung stellt noch nicht die Annahme des Vertragsangebotes durch den Anbieter dar. Sie dient lediglich der Information des Kunden, dass die Bestellung beim Anbieter eingegangen ist. Die Erklärung der Annahme des Vertragsangebotes erfolgt durch die Auslieferung der Ware oder eine ausdrückliche Annahmeerklärung.<br><br><h3>§ 3 Eigentumsvorbehalt</h3><br><br>Die gelieferte Ware verbleibt bis zur vollständigen Bezahlung im Eigentum des Anbieters.<br><br><h3>§ 4 Fälligkeit</h3><br><br>Die Zahlung des Kaufpreises ist mit Vertragsschluss fällig.</p>",
+                    "cancellationPolicy": "Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag, an dem Sie oder ein von Ihnen benannter Dritter, der nicht der Beförderer ist, die letzte Ware in Besitz genommen hat. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist. Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.",
+                    "imprint": "<p>Spryker Systems GmbH<br><br>Julie-Wolfthorn-Straße 1<br>10115 Berlin<br>DE<br><br>Phone: +49 (30) 2084983 50<br>Email: info@spryker.com<br><br>Vertreten durch<br>Geschäftsführer: Alexander Graf, Boris Lokschin<br>Registergericht: Hamburg<br>Registernummer: HRB 134310<br></p>",
+                    "dataPrivacy": "Für die Abwicklung ihrer Bestellung gelten auch die Datenschutzbestimmungen von Spryker Systems GmbH."
+                },
+                "categories": []
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/merchants/MER000001"
+            }
+        },
+        {
+            "type": "shopping-list-items",
+            "id": "29f1d940-00b6-5492-abf3-d2b5ff15f0b2",
+            "attributes": {
+                "productOfferReference": null,
+                "merchantReference": "MER000001",
+                "quantity": 3,
+                "sku": "110_19682159"
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items/29f1d940-00b6-5492-abf3-d2b5ff15f0b2"
+            },
+            "relationships": {
+                "merchants": {
+                    "data": [
+                        {
+                            "type": "merchants",
+                            "id": "MER000001"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "shopping-list-items",
+            "id": "946451d1-3c40-559e-95c7-ebda2d12bebf",
+            "attributes": {
+                "productOfferReference": "offer3",
+                "merchantReference": "MER000001",
+                "quantity": 3,
+                "sku": "091_25873091"
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items/946451d1-3c40-559e-95c7-ebda2d12bebf"
+            },
+            "relationships": {
+                "merchants": {
+                    "data": [
+                        {
+                            "type": "merchants",
+                            "id": "MER000001"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
+```
+</details>
+
+<details>
+<summary markdown='span'>Response sample with shopping list items, product offers and product offer availabilities</summary>
+
+```json
+{
+    "data": {
+        "type": "shopping-lists",
+        "id": "c0bc6296-8a0c-50d9-b25e-5bface7671ce",
+        "attributes": {
+            "owner": "Andrew Wedner",
+            "name": "Test shopping list",
+            "numberOfItems": 6,
+            "updatedAt": "2022-03-17 09:44:24.000000",
+            "createdAt": "2022-03-17 09:44:24.000000"
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce?include=shopping-list-items,product-offers,product-offer-availabilities"
+        },
+        "relationships": {
+            "shopping-list-items": {
+                "data": [
+                    {
+                        "type": "shopping-list-items",
+                        "id": "29f1d940-00b6-5492-abf3-d2b5ff15f0b2"
+                    },
+                    {
+                        "type": "shopping-list-items",
+                        "id": "946451d1-3c40-559e-95c7-ebda2d12bebf"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "shopping-list-items",
+            "id": "29f1d940-00b6-5492-abf3-d2b5ff15f0b2",
+            "attributes": {
+                "productOfferReference": null,
+                "merchantReference": "MER000001",
+                "quantity": 3,
+                "sku": "110_19682159"
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items/29f1d940-00b6-5492-abf3-d2b5ff15f0b2"
+            }
+        },
+        {
+            "type": "product-offers",
+            "id": "offer3",
+            "attributes": {
+                "merchantSku": null,
+                "merchantReference": "MER000001",
+                "isDefault": null
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/product-offers/offer3"
+            }
+        },
+        {
+            "type": "shopping-list-items",
+            "id": "946451d1-3c40-559e-95c7-ebda2d12bebf",
+            "attributes": {
+                "productOfferReference": "offer3",
+                "merchantReference": "MER000001",
+                "quantity": 3,
+                "sku": "091_25873091"
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items/946451d1-3c40-559e-95c7-ebda2d12bebf"
+            },
+            "relationships": {
+                "product-offers": {
+                    "data": [
+                        {
+                            "type": "product-offers",
+                            "id": "offer3"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
+```
+</details>
 
 For response attributes, see [Create a shopping list](#create-a-shopping-list).
 
 For the attributes of included resources, see:
 * [Add items to a shopping list](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-shopping-lists/managing-shopping-list-items.html#shopping-list-items-response-attributes)
 * [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html)
 
 ## Edit a shopping list
 

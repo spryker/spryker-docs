@@ -55,10 +55,48 @@ To add items to a shopping list, send the request:
 }
 ```
 
+<details>
+<summary markdown='span'>Request sample with marketplace products</summary>
+
+`POST https://glue.de.korax-dev.cloud.spryker.toys/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items?include=shopping-list-items` 
+
+```json
+{
+    "data": {
+        "type": "shopping-list-items",
+        "attributes": {
+            "quantity": 4,
+            "sku": "005_30663301"
+       }
+    }
+}
+```
+</details>
+
+<details>
+<summary markdown='span'>Request sample with product offers</summary>
+
+`POST https://glue.de.korax-dev.cloud.spryker.toys/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items?include=shopping-list-items`
+
+```json
+{
+    "data":{
+        "type":"shopping-list-items",
+        "attributes":{
+            "sku":"091_25873091", 
+            "quantity": 3,
+             "productOfferReference":"offer3"
+             }
+        }
+}
+```
+</details>
+
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | quantity | Integer | ✓ | Quantity of the product to add. |
 | sku | String | ✓ | SKU of the product to add. Only [concrete products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) are allowed. |
+| productOfferReference | String | Unique identifier of the product offer. |
 
 ### Response
 
@@ -153,13 +191,58 @@ To add items to a shopping list, send the request:
 ```
 </details>
 
+<details>
+<summary markdown='span'>Response sample with marketplace products</summary>
+
+```json
+{
+    "data": {
+        "type": "shopping-list-items",
+        "id": "29f1d940-00b6-5492-abf3-d2b5ff15f0b2",
+        "attributes": {
+            "productOfferReference": null,
+            "merchantReference": "MER000001",
+            "quantity": 3,
+            "sku": "110_19682159"
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items/29f1d940-00b6-5492-abf3-d2b5ff15f0b2"
+        }
+    }
+}
+```
+</details>
+
+<details>
+<summary markdown='span'>Response sample with product offers</summary>
+
+```json
+{
+    "data": {
+        "type": "shopping-list-items",
+        "id": "946451d1-3c40-559e-95c7-ebda2d12bebf",
+        "attributes": {
+            "productOfferReference": "offer3",
+            "merchantReference": "MER000001",
+            "quantity": 3,
+            "sku": "091_25873091"
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items/946451d1-3c40-559e-95c7-ebda2d12bebf"
+        }
+    }
+}
+```
+</details>
+
 <a name="shopping-list-items-response-attributes"></a>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| cell | cell | cell |
 | quantity | Integer | Quantity of the product. |
 | sku | String | Product SKU. |
+| productOfferReference | String | Unique identifier of the product offer.   |
+| merchantReference | String | Unique identifier of the merchant.   |
 
 For the attributes of included resources, see [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes).
 
@@ -190,6 +273,8 @@ To change item quantity in a shopping list, send the request:
 | --- | --- |
 | `PATCH http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08` | In the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a`, change quantity of the item with the id `00fed212-3dc9-569f-885f-3ddca41dea08`. |
 | `PATCH http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08?include=concrete-products` | In the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a`, change quantity of the item with the id `00fed212-3dc9-569f-885f-3ddca41dea08`. Include information about the respective concrete product into the response. |
+| `PATCH https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items/946451d1-3c40-559e-95c7-ebda2d12bebf` | In the shopping list with the id `c0bc6296-8a0c-50d9-b25e-5bface7671ce` change quantity of the item with the id `946451d1-3c40-559e-95c7-ebda2d12bebf` |
+| `PATCH https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items/29f1d940-00b6-5492-abf3-d2b5ff15f0b2`
 
 ```json
 {
@@ -294,7 +379,51 @@ To change item quantity in a shopping list, send the request:
     ]
 }
 ```
-</details>   
+</details> 
+
+<details>
+<summary markdown='span'>Response sample with information on product offers</summary>
+
+```json
+{
+    "data": {
+        "type": "shopping-list-items",
+        "id": "946451d1-3c40-559e-95c7-ebda2d12bebf",
+        "attributes": {
+            "productOfferReference": "offer3",
+            "merchantReference": "MER000001",
+            "quantity": 10,
+            "sku": "091_25873091"
+        },
+        "links": {
+            "self": "https://glue.de.korax-dev.cloud.spryker.toys/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items/946451d1-3c40-559e-95c7-ebda2d12bebf"
+        }
+    }
+}
+```
+</details> 
+
+<details>
+<summary markdown='span'>Response sample with information on marketplace products</summary>
+
+```json
+{
+    "data": {
+        "type": "shopping-list-items",
+        "id": "29f1d940-00b6-5492-abf3-d2b5ff15f0b2",
+        "attributes": {
+            "productOfferReference": null,
+            "merchantReference": "MER000001",
+            "quantity": 15,
+            "sku": "110_19682159"
+        },
+        "links": {
+            "self": "https://glue.de.korax-dev.cloud.spryker.toys/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items/29f1d940-00b6-5492-abf3-d2b5ff15f0b2"
+        }
+    }
+}
+```
+</details> 
 
 For response attributes, see [Add items to a shopping list](#shopping-list-items-response-attributes).
 For the attributes of included resources, see [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes).

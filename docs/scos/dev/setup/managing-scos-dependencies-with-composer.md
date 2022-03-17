@@ -35,21 +35,21 @@ Spryker Commerce OS consists of a number of independent components. Each of them
 
 ```php
 {
-"name": "spryker/cart",
-"description": "Cart module",
-"license": "proprietary",
-"require": {
-"php": ">=7.4",
-"spryker/calculation": "^4.0.0",
-"spryker/cart-extension": "^1.1.0",
-"spryker/kernel": "^3.19.0",
-"spryker/messenger": "^3.0.0",
-"spryker/quote": "^2.0.0",
-"spryker/zed-request": "^3.0.0"
-}
+    "name": "spryker/cart",
+    "description": "Cart module",
+    "license": "proprietary",
+    "require": {
+        "php": ">=7.4",
+        "spryker/calculation": "^4.0.0",
+        "spryker/cart-extension": "^1.1.0",
+        "spryker/kernel": "^3.19.0",
+        "spryker/messenger": "^3.0.0",
+        "spryker/quote": "^2.0.0",
+        "spryker/zed-request": "^3.0.0"
+    }
 ```
 
-You can check the current `composer.json` file in the corresponding [repository of the cart module](https://github.com/spryker/cart).
+You can check the current `composer.json` file in the corresponding [repository of the Cart module](https://github.com/spryker/cart).
 
 In the project level `composer.json` file you can specify the components that you want to use along with their versions like it is done in the [Spryker Commerce OS](https://github.com/spryker-shop/suite ):
 

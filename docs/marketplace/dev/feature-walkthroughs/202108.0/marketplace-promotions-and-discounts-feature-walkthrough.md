@@ -1,8 +1,11 @@
 ---
 title: Marketplace Promotions and Discounts feature walkthrough
-last_updated: Jan 26, 2022
+last_updated: Jan 25, 2022
 description: This article provides technical details on the Marketplace Promotions and Discounts feature.
 template: feature-walkthrough-template
+related:
+    - title: Marketplace promotions and discounts feature overview
+      link: docs/marketplace/user/features/page.version/marketplace-promotions-and-discounts-feature-overview.html
 ---
 
 With the *Marketplace Promotions and Discounts* feature, the discounts are applied to the merchant orders.

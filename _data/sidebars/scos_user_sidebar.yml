@@ -1094,19 +1094,16 @@ entries:
             - "201903.0"
             - "201907.0"
             - "202009.0"
-        - title: Concrete products
+        - title: Managing concrete products
           nested:
           - title: Creating product variants
             url: /docs/scos/user/back-office-user-guides/catalog/products/concrete-products/creating-product-variants.html
           - title: Editing product variants
             url: /docs/scos/user/back-office-user-guides/catalog/products/concrete-products/editing-product-variants.html
-        - title: Managing products
-          url: /docs/scos/user/back-office-user-guides/catalog/products/managing-products/managing-products.html
-          nested:
-          - title: Discontinuing products
-            url: /docs/scos/user/back-office-user-guides/catalog/products/managing-products/discontinuing-products.html
           - title: Adding product alternatives
             url: /docs/scos/user/back-office-user-guides/catalog/products/managing-products/adding-product-alternatives.html
+          - title: Discontinuing products
+            url: /docs/scos/user/back-office-user-guides/catalog/products/managing-products/discontinuing-products.html            
         - title: Creating service offerings - best practices
           url: /docs/scos/user/back-office-user-guides/catalog/products/creating-service-offerings-best-practices.html
           include_versions:

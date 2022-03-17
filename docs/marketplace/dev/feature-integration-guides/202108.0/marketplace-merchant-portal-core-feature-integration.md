@@ -470,8 +470,8 @@ Rename default `tsconfig` to `tsconfig.yves.json`. Create marketplace-specific `
 
 ```bash
 mv tsconfig.json tsconfig.yves.json
-wget -O tsconfig.json https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/tsconfig.json
-wget -O tsconfig.mp.json https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/tsconfig.mp.json
+wget -O tsconfig.json https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/tsconfig.json
+wget -O tsconfig.mp.json https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/tsconfig.mp.json
 ```
 
 Add `vendor/spryker/*/src/Spryker/Zed/*/Presentation/Components/**` and `**/node_modules/**` to exclude option in `tslint.json`.
@@ -479,7 +479,7 @@ Add `vendor/spryker/*/src/Spryker/Zed/*/Presentation/Components/**` and `**/node
 Add the `tslint.mp.json` file.
 
 ```bash
-wget -O tslint.mp.json https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/tslint.mp.json
+wget -O tslint.mp.json https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/tslint.mp.json
 ```
 
 Install npm dependencies:
@@ -558,8 +558,8 @@ Add the `.yarn` folder and download `plugin-workspace-tools.js` and `yarn-2.0.0-
 
 ```bash
 mkdir .yarn && mkdir .yarn/plugins && mkdir .yarn/releases
-wget -O .yarn/plugins/@yarnpkg/plugin-workspace-tools.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/.yarn/plugins/%40yarnpkg/plugin-workspace-tools.js
-wget -O .yarn/releases/yarn-2.3.3.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/.yarn/releases/yarn-2.3.3.js
+wget -O .yarn/plugins/@yarnpkg/plugin-workspace-tools.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/.yarn/plugins/%40yarnpkg/plugin-workspace-tools.js
+wget -O .yarn/releases/yarn-2.3.3.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/.yarn/releases/yarn-2.3.3.js
 ```
 
 Run commands from the root of the project:
@@ -588,15 +588,15 @@ Add the `merchant-portal` folder and builder files:
 
 ```bash
 mkdir frontend/merchant-portal
-wget -O frontend/merchant-portal/entry-points.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/frontend/merchant-portal/entry-points.js
-wget -O frontend/merchant-portal/html-transform.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/frontend/merchant-portal/html-transform.js
-wget -O frontend/merchant-portal/jest.config.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/frontend/merchant-portal/jest.config.js
-wget -O frontend/merchant-portal/mp-paths.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/frontend/merchant-portal/mp-paths.js
-wget -O frontend/merchant-portal/test-setup.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/frontend/merchant-portal/test-setup.js
-wget -O frontend/merchant-portal/tsconfig.spec.json https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/frontend/merchant-portal/tsconfig.spec.json
-wget -O frontend/merchant-portal/update-config-paths.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/frontend/merchant-portal/update-config-paths.js
-wget -O frontend/merchant-portal/utils.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/frontend/merchant-portal/utils.js
-wget -O frontend/merchant-portal/webpack.config.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/frontend/merchant-portal/webpack.config.js
+wget -O frontend/merchant-portal/entry-points.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/frontend/merchant-portal/entry-points.js
+wget -O frontend/merchant-portal/html-transform.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/frontend/merchant-portal/html-transform.js
+wget -O frontend/merchant-portal/jest.config.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/frontend/merchant-portal/jest.config.js
+wget -O frontend/merchant-portal/mp-paths.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/frontend/merchant-portal/mp-paths.js
+wget -O frontend/merchant-portal/test-setup.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/frontend/merchant-portal/test-setup.js
+wget -O frontend/merchant-portal/tsconfig.spec.json https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/frontend/merchant-portal/tsconfig.spec.json
+wget -O frontend/merchant-portal/update-config-paths.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/frontend/merchant-portal/update-config-paths.js
+wget -O frontend/merchant-portal/utils.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/frontend/merchant-portal/utils.js
+wget -O frontend/merchant-portal/webpack.config.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/frontend/merchant-portal/webpack.config.js
 ```
 
 **frontend/merchant-portal/webpack.config.ts**

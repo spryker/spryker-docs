@@ -1,13 +1,17 @@
+---
+title: Edit search preferences for product attributes
+description: Learn how to edit search preferences in the Back Office
+template: back-office-user-guide-template
+---
 
 
-
-
-
-## Editing search preferences
-
-To edit a search preference:
-1. In the *Search Preferences* table, find an attribute you want to change the search preferences for.
-2. In the _Actions_ column of the attribute, click **Edit** .
-3. On the *Edit search preferences* page, you can define how the attribute will behave for search by specifying _Yes_ or _No_ for the **Full text**, **Full text boosted**, **Suggestion terms**, or **Completion terms** fields.
-4. Click **Save**.
-5. On the *Search Preferences* page, click **Synchronize search preferences** for your changes to take effect.
+1. Next to the attribute you want to edit the search preferences for, click **Edit**.
+2. On the **Edit search preferences** page, select **Yes** or **No** for the following:
+    * **FULL TEXT**
+    * **FULL TEXT BOOSTED**
+    * **SUGGESTION TERMS**
+    * **COMPLETION TERMS**
+3. Click **Save**.
+This opens the **Search Preferences** page with a success message displayed.
+4. Optional: To apply the changes, click **Synchronize search preferences**.
+    This refreshes the page with a success message displayed.

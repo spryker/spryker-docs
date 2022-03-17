@@ -114,7 +114,7 @@ composer outdated
 
 Just for the modules that have been extended (factory and classes have been overwritten) the version number needs to be changed and updates need to be performed manually.
 
-For any installation that does not require working in vendor directories, make sure to always use `install` with `--prefer-dist` flag:
+For any installation that does not require working in vendor directories, make sure to always use composer `install`/`update` with `--prefer-dist` flag:
 
 ```
 composer install --prefer-dist

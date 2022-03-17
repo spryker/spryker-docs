@@ -192,9 +192,6 @@ entries:
 
           - title: Marketplace Product feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-feature-integration.html
-            include_versions:
-            - "202108.0"
-            - "202200.0"
 
           - title: Marketplace Product + Cart feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-cart-feature-integration.html
@@ -406,8 +403,6 @@ entries:
         nested:
           - title: Data export Merchant Orders .csv files format
             url: /docs/marketplace/dev/data-export/data-export-merchant-orders-csv-files-format.html
-            include_versions:
-            - "202108.0"
 
       - title: Data import
         nested:
@@ -466,8 +461,6 @@ entries:
 
           - title: "File details: combined-merchant-product-offer.csv"
             url: /docs/marketplace/dev/data-import/file-details-combined-merchant-product-offer.csv.html
-            include_versions:
-            - "202108.0"
 
           - title: "File details: merchant-product.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product.csv.html

@@ -15,12 +15,12 @@ This document describes how to add new column types to a Gui table.
 
 ## Prerequisites
 
-Follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-merchant-portal-core-feature-integration.html)
-to install the Marketplace Merchant Portal Core feature providing the `GuiTable` module.
+To install the Marketplace Merchant Portal Core feature providing the `GuiTable` module, follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-merchant-portal-core-feature-integration.html).
+
 
 ## Adjust GuiTableConfigurationBuilder
 
-Add a new addColumn***() method to `Spryker\Shared\GuiTable\Configuration\Builder\GuiTableConfigurationBuilder`, in which all the required data for a new column configuration is passed. Define the structure that will be used by the frontend component (the data will be transformed into an array and then passed to the frontend component as JSON).
+Add a new `addColumn***()` method to `Spryker\Shared\GuiTable\Configuration\Builder\GuiTableConfigurationBuilder`, in which all the required data for a new column configuration is passed. Define the structure that will be used by the frontend component (the data will be transformed into an array and then passed to the frontend component as JSON).
 
 ```php
     /**
@@ -52,4 +52,4 @@ Add a new addColumn***() method to `Spryker\Shared\GuiTable\Configuration\Builde
     }
 ```
 
-See the [Table Column Type Extension](/docs/marketplace/dev/front-end/table-design/table-column-types) to learn more about Column Type frontend components.
+To learn more about Column Type frontend components, see the [Table Column Type Extension](/docs/marketplace/dev/front-end/table-design/table-column-types)

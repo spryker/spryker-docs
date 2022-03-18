@@ -8,7 +8,7 @@ This document provides the details about how to create a new MerchantOms flow.
 
 To create a new MerchantOms flow, follow the steps:
 
-1. Create a new XML file `config/Zed/oms/MarketplacePayment01.xml`
+1. Create a new XML file `config/Zed/oms/MarketplacePayment01.xml`.
 2. Add the Demo01 state machine process schema as follows:
 
 ```xml

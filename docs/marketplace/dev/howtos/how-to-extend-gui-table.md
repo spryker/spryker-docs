@@ -16,8 +16,8 @@ With this step by step instructions you will learn how to extend a Gui table wit
 
 ## Prerequisites
 
-Follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-merchant-portal-core-feature-integration.html)
-to install the Marketplace Merchant Portal Core feature providing the `GuiTable` module.
+To install the Marketplace Merchant Portal Core feature providing the `GuiTable` module, follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-merchant-portal-core-feature-integration.html).
+
 
 ## 1) Add a new column
 
@@ -38,7 +38,7 @@ public function getConfiguration(): GuiTableConfigurationTransfer
 
 ```
 
-Add a new column to the data provider ``fetchData()`` method using a newly introduced column key:
+Add a new column to the data provider `fetchData()` method using a newly introduced column key:
 
 ```php
     /**

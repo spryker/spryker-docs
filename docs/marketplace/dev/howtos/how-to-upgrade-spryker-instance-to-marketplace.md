@@ -4,11 +4,11 @@ description: This document provides details how to upgrade Spryker instance to t
 template: howto-guide-template
 ---
 
-This document provides details about how to upgrade the existing instance of Spryker Shop to the Marketplace.
+This document describes how to upgrade the existing instance of Spryker Shop to the Marketplace.
 
 ## 1) Add core features
 
-Implement the features and functionality of the Marketplace by following the integration guides from the table below.
+Implement the features and functionality of the Marketplace by following the integration guides from the following table.
 
 | FEATURE | DESCRIPTION |
 | --- | --- |

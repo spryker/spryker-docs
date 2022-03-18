@@ -220,7 +220,7 @@ To retrieve general information about an abstract product, send the request:
 }
 ```
 
- </details>
+</details>
 
 
 <details>
@@ -307,7 +307,7 @@ To retrieve general information about an abstract product, send the request:
 }
 ```
 
- </details>
+</details>
 
 
 

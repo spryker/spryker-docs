@@ -6,7 +6,7 @@ template: module-migration-guide-template
 
 ## Upgrading from version 1.* to version 2.0.0
 
-In this new version of the **ProductMerchantPortalGui** module, we have added support product approval feature. You can find more details about the changes on the [ProductMerchantPortalGui module](https://github.com/spryker/product-merchant-portal-gui/releases) release page.
+In this new version of the **ProductMerchantPortalGui** module, we support the product approval feature. You can find more details about the changes on the [ProductMerchantPortalGui release](https://github.com/spryker/product-merchant-portal-gui/releases) page.
 
 {% info_block errorBox %}
 

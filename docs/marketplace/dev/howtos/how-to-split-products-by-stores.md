@@ -1,11 +1,12 @@
 ---
-title: 'How-To: Split products by stores'
+title: "How-To: Split products by stores"
 description: This document provides details about how to split products by stores.
 template: howto-guide-template
 related:
     - title: Persistence ACL feature walkthrough
       link: docs/marketplace/dev/feature-walkthroughs/page.version/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html
 ---
+
 This document explains how you can split products by stores. For more clarity, we consider an example of a shop with two stores: DE and AT. For each store, we want to create separate _Product Manager_ roles:
 
 - DE product manager
@@ -260,7 +261,7 @@ class DataImportConfig extends SprykerDataImportConfig
 2. Extend `ConsoleDependencyProvider`:
 
 <details>
-<summary markdown='span'>./src/Pyz/Zed/DataImport/DataImportConfig.php/summary>
+<summary markdown='span'>./src/Pyz/Zed/DataImport/DataImportConfig.php</summary>
 
 ```php
 <?php
@@ -545,6 +546,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
     // ...
 }
 ```
+
 ## 6. Set up users
 At this stage, the Persistence Acl feature is installed and configured to support the desired case.
 The only thing left is to add an appropriate group (_DE product manager_ or _AT product manager_) to the required user.

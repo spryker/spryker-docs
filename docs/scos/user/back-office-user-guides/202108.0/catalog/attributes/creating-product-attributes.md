@@ -52,7 +52,7 @@ The *Attribute Key* field accepts lower case letters, digits, numbers, underscor
 11. Select **Save**.
     This takes you to the *View Product Attribute* page with the success message displayed.
 
-**Tips & tricks**
+**Tips and tricks**
 <br>To apply a translation to all the other locales, select ![copy to other languages icon](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Catalog/Attributes/Creating+product+attributes/copy-to-other-languages-icon.png) *Copy to other languages* next to the **Translation** you want to apply.
 
 ### Reference information: Creating product attributes

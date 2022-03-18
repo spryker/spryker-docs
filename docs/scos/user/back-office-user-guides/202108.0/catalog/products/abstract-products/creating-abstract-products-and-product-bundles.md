@@ -178,7 +178,7 @@ The following table describes the attributes you enter and select when adding im
 |Large| Link to the image that will be displayed for the product on the *Product details* page. |
 |Sort Order| Arranges the images displayed for the product in an ascending order. The smallest number is `0`. |
 
-**Tips & tricks**
+**Tips and tricks**
 <br>To delete an image set with all its pictures, select **Delete image set**.
 <!---
 To convert an abstract product into a product bundle, you can update the **Assign bundled products** tab for a variant. The product will automatically be transformed into a bundle. -->

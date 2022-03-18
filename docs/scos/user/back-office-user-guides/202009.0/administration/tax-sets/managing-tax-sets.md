@@ -71,7 +71,7 @@ The tax set is deleted.
 Remember that the tax rates assigned to the deleted tax set will become unassigned, but not deleted. 
 {% endinfo_block %}
 
-### Tips & tricks
+### Tips and tricks
 You can delete a tax set while viewing it:
 1. On the *View Tax Set* page, click **Delete** in the top right corner.
 2. On the *Delete Tax Set* page, confirm your action.

@@ -50,7 +50,12 @@ Component configuration:
 Register the component:
 
 ```ts
-// Dynamic
+declare module '@spryker/table' {
+    interface TableConfig {
+        batchActions?: TableBatchActionsConfig;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -91,12 +96,6 @@ export class RootModule {}
 Below you can find interfaces for the Table Feature Batch Actions:
 
 ```ts
-declare module '@spryker/table' {
-    interface TableConfig {
-        batchActions?: TableBatchActionsConfig;
-    }
-}
-
 export interface TableBatchActionsConfig extends TableFeatureConfig {
     actions: TableBatchAction[];
     rowIdPath: string;

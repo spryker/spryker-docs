@@ -23,7 +23,7 @@ Check out an example usage of the Table Column Date in the `@spryker/table` conf
                 title: 'Column Title',
                 type: 'date',
                 typeOptions: {
-                    date: '${value}',
+                    date: '${displayValue}',
                     format: 'mediumDate',
                 },
             },
@@ -39,6 +39,12 @@ Check out an example usage of the Table Column Date in the `@spryker/table` conf
 Register the component:
 
 ```ts
+declare module '@spryker/table' {
+    interface TableColumnTypeRegistry {
+        date: TableColumnDateConfig;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -56,12 +62,6 @@ export class RootModule {}
 Below you can find interfaces for the Table Column Date:
 
 ```ts
-declare module '@spryker/table' {
-    interface TableColumnTypeRegistry {
-        date: TableColumnDateConfig;
-    }
-}
-
 interface TableColumnDateConfig {
     date?: Date;
     format?: string; // 'shortDate' - by default

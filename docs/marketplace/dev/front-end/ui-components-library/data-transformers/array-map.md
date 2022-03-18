@@ -50,6 +50,12 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/data-transformer' {
+    interface DataTransformerRegistry {
+        'array-map': ArrayMapDataTransformerConfig;
+    }
+}
+
 @NgModule({
     imports: [
         DataTransformerModule.withTransformers({
@@ -65,12 +71,6 @@ export class RootModule {}
 Below you can find interfaces for the Data Transformer Array-map:
 
 ```ts
-declare module '@spryker/data-transformer' {
-    interface DataTransformerRegistry {
-        'array-map': ArrayMapDataTransformerConfig;
-    }
-}
-
 export interface ArrayMapDataTransformerConfig extends DataTransformerConfig {
     mapItems: DataTransformerConfig;
 }

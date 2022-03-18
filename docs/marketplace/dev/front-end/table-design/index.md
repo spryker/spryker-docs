@@ -130,6 +130,7 @@ Below you can find interfaces for the Table configuration:
 export interface TableColumn extends Partial<TableColumnTypeDef> {
     id: string;
     title: string;
+    displayKey?: string;
     width?: string;
     multiRenderMode?: boolean;
     multiRenderModeLimit?: number;
@@ -166,10 +167,11 @@ export interface TableHeaderContext {
     i: number;
 }
 
-export interface TableColumnContext {
+export interface TableColumnContext extends AnyContext {
     value: TableDataValue;
+    displayValue?: unknown;
     row: TableDataRow;
-    config: TableColumn;
+    config: TableColumn; 
     i: number;
     j: number;
 }
@@ -202,7 +204,7 @@ export interface TableData<T extends TableDataRow = TableDataRow> {
     pageSize: number;
 }
 
-export interface TableConfig {
+export interface TableCoreConfig {
     dataSource: DatasourceConfig;
     columnsUrl?: string;
     columns?: TableColumns;
@@ -210,6 +212,8 @@ export interface TableConfig {
     // Features may expect it's config under it's namespace
     [featureName: string]: TableFeatureConfig | unknown;
 }
+
+export interface TableConfig extends TableCoreConfig {}
 
 export type ColumnsTransformer = (
     cols: TableColumns,

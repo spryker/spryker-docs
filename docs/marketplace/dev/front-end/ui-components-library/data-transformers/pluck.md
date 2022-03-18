@@ -41,6 +41,12 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/data-transformer' {
+    interface DataTransformerRegistry {
+        pluck: PluckDataTransformerService;
+    }
+}
+
 @NgModule({
     imports: [
         DataTransformerModule.withTransformers({
@@ -56,12 +62,6 @@ export class RootModule {}
 Below you can find interfaces for the Data Transformer Pluck:
 
 ```ts
-declare module '@spryker/data-transformer' {
-    interface DataTransformerRegistry {
-        pluck: PluckDataTransformerService;
-    }
-}
-
 export interface PluckDataTransformerConfig extends DataTransformerConfig {
     path: string;
 }

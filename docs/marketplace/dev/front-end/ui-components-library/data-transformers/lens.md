@@ -42,6 +42,12 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/data-transformer' {
+    interface DataTransformerRegistry {
+        lens: LensDataTransformerService;
+    }
+}
+
 @NgModule({
     imports: [
         DataTransformerModule.withTransformers({
@@ -57,12 +63,6 @@ export class RootModule {}
 Below you can find interfaces for the Data Transformer Lens:
 
 ```ts
-declare module '@spryker/data-transformer' {
-    interface DataTransformerRegistry {
-        lens: LensDataTransformerService;
-    }
-}
-
 export interface LensDataTransformerConfig extends DataTransformerConfig {
     path: string;
     transformer: DataTransformerConfig;

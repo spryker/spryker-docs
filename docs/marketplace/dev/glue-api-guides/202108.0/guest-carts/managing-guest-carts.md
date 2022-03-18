@@ -1947,7 +1947,7 @@ Upon login, the behavior depends on whether your project is a single cart or [m
 * In a **single cart** environment, the products in the guest cart are added to the customers' own cart.
 * In a **multiple cart** environment, the guest cart is converted to a regular user cart and added to the list of the customers' own carts.
 
-The workflow is displayed in the diagram below:
+The workflow is displayed in the following diagram:
 
 ![Assign cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Storefront+Guides/Managing+Carts/Managing+Guest+Carts/assigning-guest-cart-to-registered-user.png)
 

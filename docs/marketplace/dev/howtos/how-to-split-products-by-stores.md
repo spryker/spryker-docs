@@ -36,7 +36,7 @@ composer require spryker/acl-entity
 console transfer:generate
 ```
 
-The database tables structure below relates to our use case:
+The following database tables structure relates to our use case:
 
 ![Product Store ERD](https://confluence-connect.gliffy.net/embed/image/cf459fd8-0710-4906-8cc8-f8a0cbaff18d.png?utm_medium=live&utm_source=custom)
 

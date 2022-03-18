@@ -23,7 +23,7 @@ The following diagram illustrates the dependencies between the modules for the M
 
 ### Main Marketplace MerchantPortal Core feature modules
 
-The table below lists the main MerchantPortal Core modules:
+The following table lists the main MerchantPortal Core modules:
 
 | NAME | DESCRIPTION |
 | -------------- | ------------------ |
@@ -41,7 +41,7 @@ The table below lists the main MerchantPortal Core modules:
 
 ### Optional Marketplace MerchantPortal Core feature modules
 
-The table below lists optional MerchantPortal Core modules:
+The following table lists optional MerchantPortal Core modules:
 
 | NAME | DESCRIPTION |
 | -------------------- | --------------------- |

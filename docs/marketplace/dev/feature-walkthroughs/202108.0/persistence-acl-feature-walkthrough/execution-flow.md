@@ -32,7 +32,7 @@ By default, rules with a global scope have the highest priority, and rules with 
 
 ### Example of the select query
 
-You can check the logic of selecting rules based on the query below.
+You can check the logic of selecting rules based on the following query.
 
 ```php
 use Orm\Zed\Merchant\Persistence\Map\SpyMerchantTableMap;
@@ -82,7 +82,7 @@ Exceptions are thrown if a user performs unauthorized actions on the Active Reco
 
 ### Example of the create action
 
-You can check the logic of selecting rules based on the query below.
+You can check the logic of selecting rules based on the following query.
 
 ```php
 use Orm\Zed\Product\Persistence\SpyProductAbstract;

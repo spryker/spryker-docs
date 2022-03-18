@@ -76,7 +76,7 @@ Merchants can define product offer prices in the Merchant Portal when they [crea
 
 Merchant product offer is defined per store. Merchants set their own prices per store for the product offer.
 However, defining the right store for the product offer affects its visibility. When setting the stores for the product offer, merchants need to pay attention to the stores where their abstract products are available.
-The table below illustrates the logic according to which the product offer is displayed in the Storefront.
+The following table illustrates the logic according to which the product offer is displayed in the Storefront.
 
 | Characteristics    | DE   | AT   | US   |
 | ----------------------------------------- | ---- | ---- | ---- |

@@ -14,14 +14,14 @@ This articles provides a short overview of the GUI (graphical user interface) mo
 GUI modules have the main purpose of providing logic for the functioning of the Merchant Portal pages and components for merchant management. The Core GUI modules can be identified by the suffix `MerchantPortalGui` (`DashboardMerchantPortalGui`, `ProductOfferMerchantPortalGui`).
 
 Typical GUI modules include:
-- - Controllers for displaying Merchant Portal pages and corresponding logic (forms, data mappers);
+- - Controllers for displaying Merchant Portal pages and corresponding logic (forms, data mappers).
 - GUI tables and corresponding logic for configuration, and data provisioning.
-- Twig templates;
-- Frontend components;
-- Plugins for extending existing GUI tables, forms etc.;
+- Twig templates.
+- Frontend components.
+- Plugins for extending existing GUI tables, and forms.
 - Other GUI related logic.
 
-GUI modules should not contain any business logic, which should be handled by modules responsible for it. For example, `ProductOfferMerchantPortalGui` module uses ``ProductOffer` module to save the product offer data).
+GUI modules should not contain any business logic, which should be handled by modules responsible for it. For example, `ProductOfferMerchantPortalGui` module uses `ProductOffer` module to save the product offer data).
 
 ![GUI module relations](https://confluence-connect.gliffy.net/embed/image/58cb446e-2bd7-4e34-a9fd-6eb401917d31.png?utm_medium=live&utm_source=custom)
 
@@ -29,7 +29,7 @@ GUI modules should not contain any business logic, which should be handled by mo
 
 Merchant Portal GUI modules can be mapped to a feature in two different ways, depending on the feature's purpose:
 
-- as a required module listed in feature's composer.json, that means the module must be installed.
+- As a required module listed in feature's `composer.json`, which means the module must be installed.
 
 {% info_block infoBox "Example" %}
 
@@ -37,7 +37,7 @@ Merchant Portal GUI modules can be mapped to a feature in two different ways, de
 
 {% endinfo_block %}
 
-- as optional module, which means it should be installed as an add-on to the main feature.
+- As optional module, which means it should be installed as an add-on to the main feature.
 
 {% info_block infoBox "Example" %}
 

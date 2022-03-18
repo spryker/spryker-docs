@@ -53,7 +53,7 @@ The merchant product option groups are displayed on the Storefront only when:
 * The product option group status is [active](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html#activating-a-product-option).
 * The product option group approval status is [approved](#marketplace-product-options-approval-statuses).
 
-After a merchant created a product option group and assigned it to their products, the product option group is displayed for all the offers of the products, including offers of other merchants. For example, in the image below, the Video King merchant's offer is selected, but the Spryker merchant's product option group is still displayed:
+After a merchant created a product option group and assigned it to their products, the product option group is displayed for all the offers of the products, including offers of other merchants. For example, in the following image, the Video King merchant's offer is selected, but the Spryker merchant's product option group is still displayed:
 
 ![Marketplace product options on the Storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+product+options/merchant-prodcut-options-on-the-storefront.png)
 

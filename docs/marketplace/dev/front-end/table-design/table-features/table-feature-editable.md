@@ -17,7 +17,7 @@ Component configuration:
 - `columns` - an array with the config for every editable column.  
 - `create` - an object with the config for the added rows.  
 - `update` - an object with the config for the existing rows.  
-- `disableRowKey` - disables the row that contains the mentioned column `id` (see the example below).   
+- `disableRowKey` - disables the row that contains the mentioned column `id` (see the following example).   
 
 ```html
 <spy-table

@@ -10,10 +10,10 @@ This document explains the Table Column Type extension in the Components library
 
 Column Type is an Angular Component that describes how a specific type of the column is rendered within a table column.
 
-Check out this example below to see how to configure columns in the table config:
+Check out the following example to see how to configure columns in the table config:
 
 ```html
-<spy-table 
+<spy-table
     [config]="{
         ...,
         columns: [
@@ -117,7 +117,7 @@ export class RootModule {}
 Check out an example of getting a Table Column config value from the context:
 
 ```ts
-// Module 
+// Module
 import { ContextModule } from '@spryker/utils';
 
 @NgModule({

@@ -19,7 +19,7 @@ To add an attribute for a marketplace concrete product:
 
 1. On the **Concrete Products** page, next to the concrete product you want to edit, hover over the three dots and click **Manage Product** or just click the line. The **Concrete Product SKU, Name** page opens.
 2. Scroll down to the **Attributes** pane.
-3. In the **Attributes** pane, click **+Add**. The empty cells appear in the table below.
+3. In the **Attributes** pane, click **+Add**. The empty cells appear in the following table.
 4. From the drop-down menu **Attribute**, select a predefined value or enter your own when allowed by the Marketplace operator.
 5. Depending on the attribute selected in the step 3, for the **Default** cell, select or enter the predefined value. Use the **Default** cell if no translations are needed.
 6. Add/select translations for the attribute values for the desired locales.

@@ -60,7 +60,7 @@ wget -O frontend/merchant-portal/update-config-paths.js https://raw.githubuserco
     - mp.public-api.ts
 
 
-4. Fill in the newly created files with the code below:
+4. Fill in the newly created files with the following code:
 
 **app.module.ts**
 

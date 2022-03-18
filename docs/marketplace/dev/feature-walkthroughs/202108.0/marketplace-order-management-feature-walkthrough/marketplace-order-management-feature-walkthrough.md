@@ -72,10 +72,10 @@ Make sure that Merchants do not modify the order directly, but instead use [Merc
 In the Merchant Portal, merchants can view and manage their `MerchantOrders`.
 
 The information in the Merchant Portal is limited and includes:
-- customer information
-- shipment address
-- merchant order overview
-- totals
+- Customer information
+- Shipment address
+- Merchant order overview
+- Totals
 
 Merchant order uses its own totals based on order totals, restricted by the Merchant Order Item:
 - refundTotal

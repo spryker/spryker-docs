@@ -93,7 +93,7 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 ```
 
 7. To assign the `MerchantOms` flow to a `Merchant`, you can use the `MerchantOmsDataImport` module.
-Fill in the `merchant_oms_process.csv` as shown in the example below:
+Fill in the `merchant_oms_process.csv` as shown in the following example:
 
 ```php
 merchant_reference,merchant_oms_process_name

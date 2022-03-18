@@ -106,7 +106,7 @@ merchant_key,username
 sony-experts,michele@sony-experts.com
 ```
 
-Run the following commands to import data:
+Import data:
 
 ```bash
 console data:import merchant
@@ -195,7 +195,7 @@ class AclConfig extends SprykerAclConfig
 }
 ```
 
-Run the following command to create users with ACL rules :
+Create users with ACL rules:
 
 ```bash
 console setup:init-db
@@ -205,7 +205,7 @@ console setup:init-db
 
 You can use our `AclEntityDummyProduct` module as an example of extending AclEntityMetadata configuration.
 
-Run the following command to install the module:
+Install the module:
 
 ```bash
 composer require spryker/acl-entity-dummy-product:"^0.2.0" --update-with-dependencies
@@ -305,7 +305,7 @@ To configure the Merchant Portal Sidebar add installed MP GUI modules into `conf
 </config>
 ```
 
-Run the following command to build navigation cache:
+Build navigation cache:
 
 ```bash
 console navigation:build-cache

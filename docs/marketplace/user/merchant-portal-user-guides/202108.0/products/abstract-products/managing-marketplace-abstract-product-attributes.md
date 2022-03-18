@@ -19,7 +19,7 @@ To add an attribute to a marketplace abstract product:
 
 1. Next to the abstract product you want to create an attribute for, hover over the three dots and click **Manage Product**, or just click the line. This takes you to the **_[Product name]_**, **Abstract Product Details** tab.
 2. Scroll down to the **Attributes** pane.
-3. In the **Attributes** pane, click **+Add**. The empty cells appear in the table below.
+3. In the **Attributes** pane, click **+Add**. The empty cells appear in the following table.
 4. From the drop-down menu **Attribute**, select a predefined value or enter your own when allowed by the Marketplace operator.
 5. Depending on the attribute selected in step 3, for the **Default** cell, select or enter the predefined value. Use the **Default** cell if no translations are needed.
 6. Add or select translations for the attribute values for the desired locales.

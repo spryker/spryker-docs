@@ -36,7 +36,9 @@ To create a shopping list for a registered user, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
-Request sample: `POST http://glue.mysprykershop.com/shopping-lists`
+Request sample:
+
+`POST http://glue.mysprykershop.com/shopping-lists`
 
 ```json
 {
@@ -56,7 +58,7 @@ Request sample: `POST http://glue.mysprykershop.com/shopping-lists`
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: create a shopping list</summary>
 
 ```json
 {
@@ -118,7 +120,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample with no shopping lists</summary>
+<summary markdown='span'>Response sample: retrieve all shopping lists</summary>
 
 ```json
   {
@@ -131,7 +133,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 </details>    
 
 <details>
-<summary markdown='span'>Response sample with own and shared shopping lists</summary>
+<summary markdown='span'>Response sample: retrieve own and shared shopping lists</summary>
 
 ```json
 {
@@ -187,7 +189,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 </details>
 
 <details>
-<summary markdown='span'>Response sample with shopping list items and concrete products</summary>
+<summary markdown='span'>Response sample: retrieve all shopping lists with its items and respective concrete products</summary>
 
 ```json
 {
@@ -373,7 +375,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve a shopping list</summary>
 
 ```json
 {
@@ -396,7 +398,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 </details>   
 
 <details>
-<summary markdown='span'>Response sample with shopping list items</summary>
+<summary markdown='span'>Response sample: retrieve a shopping list with its items</summary>
 
 ```json
 {
@@ -449,7 +451,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 </details>
 
 <details>
-<summary markdown='span'>Response sample with shopping list items and concrete products</summary>
+<summary markdown='span'>Response sample: retrieve a shopping list with its items and concrete products</summary>
 
 ```json
 {
@@ -589,7 +591,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 </details>  
 
 <details>
-<summary markdown='span'>Response sample with shopping list items (marketplace products and product offers)</summary>
+<summary markdown='span'>Response sample: retrieve a shopping list with its items (marketplace products and product offers)</summary>
 
 ```json
 {
@@ -654,7 +656,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 </details>
 
 <details>
-<summary markdown='span'>Response sample with shopping list items and merchants</summary>
+<summary markdown='span'>Response sample: retrieve a shopping list with its items and merchants</summary>
 
 ```json
 {
@@ -769,7 +771,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 </details>
 
 <details>
-<summary markdown='span'>Response sample with shopping list items, product offers and product offer availabilities</summary>
+<summary markdown='span'>Response sample: retrieve a shopping list with its items, product offers and product offer availabilities</summary>
 
 ```json
 {
@@ -914,7 +916,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: edit the shopping list</summary>
 
 ```json
 {
@@ -937,7 +939,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 </details>
 
 <details>
-<summary markdown='span'>Response sample with shopping list items and information on concrete products</summary>
+<summary markdown='span'>Response sample: edit the shopping list with its items and respective concrete products</summary>
 
 ```json
 "data": {
@@ -1092,11 +1094,13 @@ To delete a shopping list, send the request:
 
 ### Request
 
-Request sample: `DELETE http://glue.mysprykershop.com/shopping-lists/sdb17f85-953f-565a-a4ce-e5cb02405f83` — Delete the shopping list with the id `sdb17f85-953f-565a-a4ce-e5cb02405f83`.
+Request sample: 
+
+`DELETE http://glue.mysprykershop.com/shopping-lists/sdb17f85-953f-565a-a4ce-e5cb02405f83` — Delete the shopping list with the id `sdb17f85-953f-565a-a4ce-e5cb02405f83`.
 
 ### Response
 
-If the shopping list is deleted successfully, the endpoint retruns the `204 No Content` status code.
+If the shopping list is deleted successfully, the endpoint returns the `204 No Content` status code.
 
 ## Possible errors
 

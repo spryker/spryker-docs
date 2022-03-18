@@ -62,8 +62,9 @@ To manage the product attributes:
 
 See the _References_ section to see the examples of how the attributes look like.
 
+## Approving and denying the new marketplace products
 
-## Approving and denying the marketplace products
+Once the product is created, it needs to be approved by the marketplace administrator.
 
 Depending on the current status of the product, you can approve, deny or get the product in the *draft* status.
 To update the approval status of the product, in the _Actions_ column of the abstract product do the following:

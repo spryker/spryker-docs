@@ -7,7 +7,7 @@ The [marketplace operator](/docs/marketplace/user/intro-to-the-spryker-marketpla
 
 The Marketplace Product Approval Process allows marketplace owners to verify the products of merchants before showing them to customers.
 
-Thus, only the approved and active products within the validity dates range and existing for the defined store are displayed in the Storefront.
+Thus, the Storefront displays only the approved, active, within the validity period, and existing for the defined store products.
 
 ## Product lifecycle
 
@@ -32,11 +32,11 @@ You can configure the logic of the statuses on the project level.
 
 {% endinfo_block %}
 
-A product is only displayed in the Storefront if it is *approved* and its status is *Active*.
+A product only appears in the Storefront if it is approved, active, within their validity dates range, and exists for the defined store.
 
 ## Marketplace Product Approval process workflow
 
-In order for the marketplace product to be displayed in the Storefront, every [merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) needs this product to be approved by the marketplace administrator. The approval process goes through the following stages:
+In order for the new marketplace product to be displayed in the Storefront, every [merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) needs this product to be approved by the marketplace administrator. The approval process goes through the following stages:
 
 1. **Submitting the product for approval.** The [merchant user](https://docs.spryker.com/docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-personas.html) submits the request for product approval in the Merchant Portal. The status of the product changes to *Waiting for approval*.
 

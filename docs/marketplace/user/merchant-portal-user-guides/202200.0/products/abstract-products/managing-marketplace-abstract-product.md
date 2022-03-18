@@ -63,9 +63,9 @@ To edit the existing marketplace abstract product:
 
 ### Sending the product for approval
 
-In order for the product to be available on the Storefront, it needs to be approved. To send the product for approval:
+In order for the new product to be available on the Storefront, it needs to be approved. To send the product for approval:
 
-1. Next to the abstract product, you want to edit, hover over the three dots and click **Manage Product** or just click the line. This takes you to the *[Product name]* drawer, *Abstract Product Details* tab.
+1. Next to the abstract product, you want to send approval for, hover over the three dots and click **Manage Product** or just click the line. This takes you to the *[Product name]* drawer, *Abstract Product Details* tab.
 2. In the right top corner of the drawer, click **Send for Approval**.
 
 {% info_block infoBox "Info" %}

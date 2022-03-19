@@ -22,11 +22,15 @@ This topic describes how to add product attributes to search and define search p
 
 ## Prerequisites
 
-1. [Create a product attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) for the search preference that you are going to create.
-2. Add the product attribute to a product by [creating a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) or by [editing a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/editing-abstract-products.html).
-3. To start working with filter preferences, go to **Merchandising** > **Search Preferences**.
+1. If you are new to the **Search preferences** section, you might want to start with [Best practices: Promote products with search preferences](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/search-preferences/best-practices-promote-products-with-search-preferences.html).
 
-Review the [reference information]() before you start, or look up the necessary information as you go through the process.
+2. [Create a product attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) for the search preference that you are going to create.
+
+3. Add the product attribute to a product by [creating a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) or by [editing a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/editing-abstract-products.html).
+
+4. To start working with filter preferences, go to **Merchandising** > **Search Preferences**.
+
+Review the [reference information](#reference-information-add-product-attributes-to-search-and-define-search-preferences) before you start, or look up the necessary information as you go through the process.
 
 ## Add product attributes to search and define search preferences
 
@@ -46,23 +50,30 @@ Review the [reference information]() before you start, or look up the necessary 
 
 ## Reference information: Add product attributes to search and define search preferences
 
-This section describes attributes you see and enter when creating adding product attributes to search.
+This section describes attributes you see and enter when adding product attributes to search and defining search preferences for them.
 
 ### ATTRIBUTE KEY
 
-A product attribute to add to search. The values of the product attribute are used to search products by. For example, you add the `color` attribute to search. One of the values of the attribute is `green`. When a customer searches for `green`, the search returns all the products with this attribute value assigned.
+A [product attribute](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html) to add to search. The values of the product attribute are used to search products by. For example, you add the `color` attribute to search. One of the values of the attribute is `green`. When a customer searches for `green`, the search returns all the products with this attribute value assigned.
+
+{% info_block warningBox "" %}
+
+Enabling search preferences for attributes with numeric or *yes* and *no* values results in a huge list of search results because these values frequently appear in SKUs, product names, and descriptions. Additionally, in search results, SKUs, product names, and descriptions are always displayed higher.
+
+{% endinfo_block %}
 
 ### FULL TEXT
 
-Defines if an attribute is to be included for full-text search. Customers will be able to find products when they search for a text which is present in the value of a searchable attribute.
+Defines if all words in search terms are to be searched. The results that match all the words in a phrase are displayed higher than those matching parts of the phrase.
 
-**Example**
-The _focus_adjustment_ attribute key has the following values:
-* Auto
-* Auto/Manual
+For example, **FULL TEXT** is enabled for the following attribute key-value pairs:
 
-With **FULL TEXT** enabled, when a customer enters a full name of the attribute's value, all words are searched, and the full phrase has a higher weight than separate words from it. Meaning, if they search for *Auto* or *Manual*, the results containing *Auto* or *Manual* for the Focus Adjustment attribute are displayed first in the search results flyout:
-![Full text](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Search+Preferences+Types/full-text.png)
+| Key | Value|
+| - | - |
+| focus_adjustment | Auto/Manual |
+| flash | Manual |
+
+With **FULL TEXT** enabled, when a customer searches for `Auto/Manual`, the products with `Auto/Manual` and `Manual` values assigned are both displayed in the results. However, the products with `Auto/Manual` are displayed on top.
 
 ### FULL TEXT BOOSTED
 
@@ -71,7 +82,7 @@ Defines if attribute values of an attribute are to receive a higher relevance th
 For example, the *white-balance* and *light_exposure_modes* attributes have the *manual* attribute value. The *white-balance* attribute is assigned to *Canon LEGRIA HF R606*, and *light_exposure_modes* attribute is assigned to *Sony Cyber-shot DSC-W830*. You enable **FULL TEXT BOOSTED** only for *light_exposure_modes*. When a customer searches for *manual*, Sony Cyber-shot DSC-W830 appears higher in the list of results than the product with the *white-balance* attribute.
 ![Full text boosted](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Search+Preferences+Types/full-text-boosted-attribute-values.png)
 
-It can also happen that **FULL TEXT BOOSTED** is enabled for two attributes with the same value. In this case, in the search results, the order of the respective products is defined by Elasticsearch. You can improve this by  customizing its analyzers.
+If **FULL TEXT BOOSTED** is enabled for two attributes with the same value, in the search results, the order of the respective products is defined by Elasticsearch. You can improve this by  customizing its analyzers.
 
 ### SUGGESTION TERMS
 
@@ -84,3 +95,8 @@ Defines if auto-completion suggestions should appear when customers search for t
 
 For example, the _storage_media_ attribute has *SSD* and *Flash* values. With  **COMPLETION TERMS** enabled, when a customer enters `fla` in the search field, the search term is autocompleted with `sh`, and there is a list of suggested terms in the search results.
 ![Completion terms](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Search+Preferences+Types/completion-terms.png)
+
+
+
+Also, it does not make much sense to activate search preferences for attributes with the **numeric** and **Yes/No** values. As numbers may occur not only in attributes but in product SKUs, names and descriptions (which are actually ranked higher than attributes in search results), therefore the probability that a user will find what they were looking for is low, but the list of search results will be huge, and the search term will be present in multiple places.
+Besides, it is very unlikely that users will be searching for an attribute with a numeric value or the Yes/No values.

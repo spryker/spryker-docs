@@ -1,18 +1,18 @@
 ---
-title: Editing category filters
-description: Learn how to edit category filters in the Back Office
+title: Edit filter preferences
+description: Learn how to edit filter preferences in the Back Office
 template: back-office-user-guide-template
 ---
 
-This document describes how to edit category filters in the Back Office.
+This document describes how to edit filter preferences of category filters in the Back Office.
 
 ## Prerequisites
 
-To start working with category filters, go to **Merchandising** > **Filter Preferences**.
+To start working with filter preferences, go to **Merchandising > Filter Preferences**.
 
-Review the [reference information](#reference-information-creating-category-filters) before you start, or look up the necessary information as you go through the process.
+Review the [reference information](#reference-information-edit-filter-preferences-of-a-category-filter) before you start, or look up the necessary information as you go through the process.
 
-## Editing category filters
+## Edit filter preferences of a category filter
 
 1. Next to the filter you want to edit, click **Edit**.
 2. Update any of the following:
@@ -20,12 +20,12 @@ Review the [reference information](#reference-information-creating-category-filt
     * Enter a **FILTER NAME** for any locale.
 3. Click **Save**.
     This opens the **View Filter** page with a success message displayed.    
-4. Optional: Apply the updated filter:
+4. Optional: Sync the filter preferences of the category filter you've updated with the other filters:
     1. Click **List of filters**.
     2. On the **Filter preferences** page, click **Synchronize filter preferences**.
         This refreshes the page with a success message displayed.
 
-## Reference information: Editing category filters
+## Reference information: Edit filter preferences of a category filter
 
 | ATTRIBUTE | DESCRIPTION |
 |-|-|

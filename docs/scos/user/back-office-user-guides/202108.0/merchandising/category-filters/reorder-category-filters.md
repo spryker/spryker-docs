@@ -1,5 +1,5 @@
 ---
-title: Reordering category filters
+title: Reorder category filters
 description: Learn how to reorder category filters in the Back Office
 template: back-office-user-guide-template
 ---

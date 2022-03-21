@@ -128,6 +128,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 namespace Pyz\Zed\Security;
 
 use Spryker\Zed\Security\SecurityDependencyProvider as SprykerSecurityDependencyProvider;
+use Spryker\Zed\SecurityGui\Communication\Plugin\Security\UserSecurityPlugin;
 use Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security\MerchantUserSecurityPlugin;
 use Spryker\Zed\User\Communication\Plugin\Security\UserSessionHandlerSecurityPlugin;
 
@@ -141,6 +142,7 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
         return [
             new UserSessionHandlerSecurityPlugin(),
             new MerchantUserSecurityPlugin(),
+            new UserSecurityPlugin(),
         ];
     }
 }
@@ -329,7 +331,7 @@ Open access to the *Merchant Portal* login page by default:
 ```php
 <?php
 
-$config[AclConstants::ACL_DEFAULT_RULES] = [
+$config[AclConstants::ACL_DEFAULT_RULES][] = [
   [
     'bundle' => 'security-merchant-portal-gui',
     'controller' => 'login',

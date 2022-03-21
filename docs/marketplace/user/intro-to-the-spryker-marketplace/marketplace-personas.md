@@ -24,7 +24,7 @@ Marketplace administrator works for Marketplace operator in the Spryker Back Off
 Merchant user is the employee of the merchant and their company who uses the Merchant Portal to sell in the Marketplace. Merchant user is able to perform the following actions:
 
 - create and edit merchant's product offers on products;
-- manage merchant products;
+- manage marketplace products;
 - manage promotions;
 - manage stock and product availability of the merchant's products and offers;
 - update, approve/deny merchant orders;

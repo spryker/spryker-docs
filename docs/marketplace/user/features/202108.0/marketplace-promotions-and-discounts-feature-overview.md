@@ -18,7 +18,7 @@ A product catalog manager selects a discount type when [creating a voucher](/doc
 
 {% info_block warningBox "Warning" %}
 
-In current implementation, it is not possible to create cart rules or vouchers based on any merchant parameters, such as merchant or product offer. However, it is still possible to create cart rules and vouchers for the merchant products. See [Creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html) for more details.
+In current implementation, it is not possible to create cart rules or vouchers based on any merchant parameters, such as merchant or product offer. However, it is still possible to create cart rules and vouchers for the marketplace products. See [Creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html) for more details.
 
 {% endinfo_block %}
 

@@ -116,7 +116,7 @@ This section describes attributes you see when editing he merchant's online prof
 
 | ATTRIBUTE | DESCRIPTION | REQUIRED? |
 |-|-|-|
-| Your Store is online | By selecting this option, you can define whether the merchant store (with the profile, merchant products and offers) should be displayed on the Marketplace Storefront. |   |
+| Your Store is online | By selecting this option, you can define whether the merchant store (with the profile, marketplace products and offers) should be displayed on the Marketplace Storefront. |   |
 
 ### What’s Next?
 

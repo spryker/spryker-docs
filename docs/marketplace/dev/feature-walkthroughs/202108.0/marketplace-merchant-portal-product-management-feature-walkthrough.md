@@ -15,7 +15,7 @@ The following diagram illustrates the dependencies between the modules for the *
 
 | NAME | DESCRIPTION |
 | --- | --- |
-| [ProductMerchantPortalGui](https://github.com/spryker/product-merchant-portal-gui) | Provides the UI for managing merchant products in the Merchant Portal. |
+| [ProductMerchantPortalGui](https://github.com/spryker/product-merchant-portal-gui) | Provides the UI for managing marketplace products in the Merchant Portal. |
 
 
 ## Related Developer articles

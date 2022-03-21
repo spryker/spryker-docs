@@ -6,7 +6,7 @@ template: concept-topic-template
 
 Wishlists are collections of products that a customer saves for further reference. 
 
-The *Marketplace Wishlist* feature allows customers to add product offers and merchant products to a wishlist in the Marketplace Storefront. This way, customers save time without having to browse favorite items all over the marketplace shop.
+The *Marketplace Wishlist* feature allows customers to add product offers and marketplace products to a wishlist in the Marketplace Storefront. This way, customers save time without having to browse favorite items all over the marketplace shop.
 
 ![Adding products and offers to wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Wishlist/add-products-and-offers-to-wishlist.gif)
 

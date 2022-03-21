@@ -4,7 +4,7 @@ description: This document contains concept information for the Merchants featur
 template: concept-topic-template
 ---
 
-*Merchant* is a seller of goods or services, either a business or a private person working in the Marketplace environment. Merchants manage their business in the *Merchant Portal*. The *Merchant Portal* allows merchants to upload and manage merchant products and [offers](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html), define prices and stock, fulfill orders, and edit merchant profile information. Merchant can have employees who can access the Merchant Portal and perform actions on the merchant's behalf there. These employees are referred to as [*merchant users*](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html).  
+*Merchant* is a seller of goods or services, either a business or a private person working in the Marketplace environment. Merchants manage their business in the *Merchant Portal*. The *Merchant Portal* allows merchants to upload and manage marketplace products and [offers](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html), define prices and stock, fulfill orders, and edit merchant profile information. Merchant can have employees who can access the Merchant Portal and perform actions on the merchant's behalf there. These employees are referred to as [*merchant users*](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html).  
 
 Merchant is the core entity of the Spryker Marketplace and the second main entity after customers since the Marketplace connects the buying customers and the selling customers.
 Every merchant in the Spryker Marketplace has a unique identifier in the system called *Merchant SKU*. 
@@ -27,7 +27,7 @@ The Marketplace administrator manages merchants and sets their statuses in the
 
 <a name=active-merchants></a>
 
-* The merchant profile page, product offers and merchant products on the Storefront:
+* The merchant profile page, product offers and marketplace products on the Storefront:
     * *Active*. This status can be set only for the approved merchants. It indicates that the merchant's profile page is online, and the merchant can create offers and products. A merchant can also create offers and products and manage their sales activity.
     * *Inactive*. This status indicates that the merchant's profile page, products, and offers are offline. It is the default status for the created merchant. With this status, the merchant can not perform their selling online.
 
@@ -96,7 +96,7 @@ Marketplace Storefront allows buyers to check what merchants are the owners of t
 
 ### Searching and filtering by merchant name
 
-In the Spryker Marketplace, you can search for the products sold by a specific merchant by entering the merchant name in the search field. The search results contain the merchant products and/or the abstract products the merchant product offers are related to. The search suggestions and the auto-completion functionality provide the merchant products and offers by the merchant name.
+In the Spryker Marketplace, you can search for the products sold by a specific merchant by entering the merchant name in the search field. The search results contain the marketplace products and/or the abstract products the merchant product offers are related to. The search suggestions and the auto-completion functionality provide the marketplace products and offers by the merchant name.
 ![Search by merchant name](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Merchants/Merchants+feature+overview/search-by-merchant-name.gif)
 
 In the catalog and search results pages, there is the merchant multi-select filter. This filter allows shoppers to see only the products with the product offers belonging to the selected merchant. See [Standard Filters](/docs/scos/user/features/{{page.version}}/search-feature-overview/standard-filters-overview.html) documentation for more details on the filters available in the Spryker Commerce OS.

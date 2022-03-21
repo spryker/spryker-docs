@@ -68,4 +68,4 @@ interface TableColumnDateConfig {
 }
 ```
 
-To learn more about the pre-defined `format` options, see <a href="https://angular.io/api/common/DatePipe#pre-defined-format-options" target="_blank">official Angular documentation</a>.
+To learn more about the pre-defined `format` options, see [official Angular documentation](https://angular.io/api/common/DatePipe#pre-defined-format-options).

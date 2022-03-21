@@ -9,7 +9,7 @@ This document describes how to edit abstract products.
 
 ## Prerequisites
 
-To start working with abstract products, go to  **Catalog** > **Products**.
+To start working with abstract products, go to  **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
@@ -18,8 +18,8 @@ Each section contains reference information. Make sure to review it before you s
 To edit general settings of an abstract product:    
 
 1. Next to the product you want to edit, select **Edit**.
-    This takes you to the *Edit Product Abstract [SKU]* page.
-2. In the *General* tab, update **Store relations**.
+    This takes you to the **Edit Product Abstract [SKU]** page.
+2. On the **General** tab, update **Store relations**.
 3. Update **Name** and **Description** for the desired locales.
 4. Update **New from** and **New to** dates.
 5. Select **Save**.
@@ -41,7 +41,7 @@ The following table describes the attributes you enter and select when editing g
 To edit prices of an abstract product:    
 
 1. Next to the product you want to edit, select **Edit**.
-2. On the *Edit Product Abstract [SKU]* page, click on the *Prices & Tax* tab.
+2. On the **Edit Product Abstract [SKU]** page, click on the **Prices & Tax** tab.
 3. B2B Shop: Select a **Merchant Price Dimension**.
 4. Enter **DEFAULT** prices for the desired available locales and currencies.
 5. Optional:  Enter **ORIGINAL** prices for the desired available locales and currencies.
@@ -57,7 +57,7 @@ The following table describes the attributes you enter and select when editing p
 |Merchant Price Dimension| B2B only<br>Defines the [merchant](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html) the prices apply to.<br>If **Default prices** is selected, the prices apply to all customers.<br>To [manage merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html) go to **Marketplace** > **Merchant Relations**. |
 | Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price  before tax.<br>If a product variant of the abstract product does not have a price, it [inherits](/docs/marketplace/user/features/{{page.version}}/marketplace-product-feature-overview.html) the price you enter here. |
 |Default<br>Original| A default price is the price a customer pays for the product. An original price is a price displayed as a strikethrough beside the default price on the Storefront. The original price is optional and is usually used to indicate a price change. |
-|Add Product Volume Price<br>Edit Product Volume Price| This option allows you to define the prices that are based on the quantity of products that a customer selects. Works only with the default prices.<br>Add Product Volume Price appears only when the price for a currency was set up and saved.<br>Edit Product Volume Price appears only what the volume price was already set up for a currency.||✓|
+|Add Product Volume Price<br>Edit Product Volume Price| This option lets you define the prices that are based on the quantity of products that a customer selects. Works only with the default prices.<br>Add Product Volume Price appears only when the price for a currency was set up and saved.<br>Edit Product Volume Price appears only what the volume price was already set up for a currency.||&check;|
 |Tax Set|The conditions under which a product is going to be taxed.<br>The values available for selection derive from Taxes > Tax Sets<br>Only one value can be selected.|
 
 ## Editing volume prices of an abstract product
@@ -65,14 +65,14 @@ The following table describes the attributes you enter and select when editing p
 To edit volume prices of an abstract product:
 
 1. Next to the product you want to edit add volume prices of, select **Edit**.
-2. On the *Edit Product Abstract [SKU]* page, switch to the *Price & Tax* tab.
+2. On the **Edit Product Abstract [SKU]** page, switch to the **Price & Tax** tab.
 3. Next to the store you want to edit volume prices for, select **> Edit Product Volume Price**.
-4. On the *Add volume prices* page, enter a **Qunatity**.
+4. On the **Add volume prices** page, enter a **Qunatity**.
 5. Enter a **Gross price**.
 6. Optional: Enter a **Net price**.
 7. Optional: To add more volume prices than the number of the rows displayed on the page, select **Save and add more rows**.
 8. Repeat steps 4 to 7 until you edit all the desired volume prices.
-9. Select **Save and exit**. This opens the *Edit Product Abstract [SKU]* page with the success message displayed.
+9. Select **Save and exit**. This opens the **Edit Product Abstract [SKU]** page with the success message displayed.
 
 <!--
 ### Reference information: Editing volume pirces of an abstract product
@@ -95,7 +95,7 @@ To create a product variant, see [Creating product variants](/docs/marketplace/u
 
 To edit meta information:
 1. Next to the product you want to edit, select **Edit**.
-2. On the *Edit Product Abstract [SKU]* page, switch to the *SEO* tab.
+2. On the **Edit Product Abstract [SKU]** page, switch to the **SEO** tab.
 3. Update the following for the desired locales:
     * **Title**
     * **Keywords**
@@ -116,7 +116,7 @@ The following table describes the attributes you enter and select when editing m
 
 To edit product images:
 1. Next to the product you want to edit, select **Edit**.
-2. On the *Edit Product Abstract [SKU]* page, switch to the *Image* tab.
+2. On the **Edit Product Abstract [SKU]** page, switch to the **Image** tab.
 3. Select a locale you want to update images for.
 4. Update images:
     * To add a new image set, select **Add image set**
@@ -126,7 +126,7 @@ To edit product images:
         *  **Large Image URL**
         *  **Sort order**
     * To delete large and small images, select **Delete image**.
-    * To delete an image set with its images, selecte **Delete image set**.
+    * To delete an image set with its images, select **Delete image set**.
 5. Repeat step *4* until you update images for all the desired locales.
 6. Select **Save**. The page refreshes with the success message displayed.
 

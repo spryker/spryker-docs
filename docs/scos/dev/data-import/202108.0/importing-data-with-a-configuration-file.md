@@ -1,5 +1,5 @@
 ---
-title: Importing Data with a Configuration File
+title: Importing data with a configuration file
 description: Learn how to run import in bulk using a .yml configuration file
 last_updated: Jun 16, 2021
 template: data-import-template

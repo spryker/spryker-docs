@@ -22,7 +22,7 @@ To create a wishlist, send the request:
 
 | HEADER KEY    | HEADER VALUE | REQUIRED? | DESCRIPTION |
 | ---------- | -------- | -------- | -------------- |
-| Authorization | string       | ✓         | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string       | &check;         | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
 Sample request: `POST https://glue.mysprykershop.com/wishlists`
 
@@ -39,7 +39,7 @@ Sample request: `POST https://glue.mysprykershop.com/wishlists`
 
 | ATTRIBUTE | TYPE   | REQUIRED | DESCRIPTION |
 | ------- | ----- | ------- | -------------- |
-| name      | string | ✓        | Name of the wishlist to create.|
+| name      | string | &check;        | Name of the wishlist to create.|
 
 ### Response
 
@@ -94,7 +94,7 @@ To retrieve all wishlists of a customer, send the request:
 
 | HEADER KEY    | HEADER VALUE | REQUIRED? | DESCRIPTION |
 | ------------ | ----------- | -------- | --------- |
-| Authorization | string       | ✓         | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string       | &check;         | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
 ### Response
 
@@ -438,7 +438,7 @@ To retrieve a specific wishlist, send the request:
 
 | HEADER KEY    | HEADER VALUE | REQUIRED | DESCRIPTION  |
 | ------------ | ----------- | ------- | -------------- |
-| Authorization | string       | ✓        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
 | QUERY PARAMETER | DESCRIPTION     | POSSIBLE VALUES |
 | ---------- | -------------------- | --------------------- |
@@ -2237,7 +2237,7 @@ To edit a wishlist, send the request:
 
 | HEADER KEY    | HEADER VALUE | REQUIRED | DESCRIPTION    |
 | ------ | ------ | ------ | -------------- |
-| Authorization | string       | ✓        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
 Sample request: `PATCH https://glue.mysprykershop.com/wishlists`
 
@@ -2257,8 +2257,8 @@ The following sample changes the name of a wishlist.
 
 | ATTRIBUTE | TYPE   | REQUIRED | DESCRIPTION    |
 | ------ | ---- | ------- | ----------------------- |
-| id        | string | ✓        | Unique identifier of the wishlist to update the name of. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
-| name      | string | ✓        | New name of the wishlist.                                    |
+| id        | string | &check;        | Unique identifier of the wishlist to update the name of. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
+| name      | string | &check;        | New name of the wishlist.                                    |
 
 ### Response
 
@@ -2287,7 +2287,7 @@ To delete a wishlist, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION   |
 | ---------- | -------- | ----- | ----------------- |
-| Authorization | string       | ✓        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
 Request sample: `DELETE https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a`
 

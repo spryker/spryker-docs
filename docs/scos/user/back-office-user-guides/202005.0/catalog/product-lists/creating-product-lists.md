@@ -43,7 +43,7 @@ This step is optional as you can either add the categories to the list **OR** ad
  5. Once you are satisfied with the setup, click **Save**.
 
 
-**Tips & Tricks**
+**Tips and tricks**
 Assigning products and categories to product lists is optional during the product list creation. You can create a product list with no values assigned and update it in a later event.
 
 When you assign products, you can use the search field to filter the products by entering **SKU** or **product name**.

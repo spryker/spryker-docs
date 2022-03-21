@@ -1885,7 +1885,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| expenseTotal | String | Total amount of expenses (including, e.g., shipping costs). |
+| expenseTotal | String | Total amount of expenses (including, for example, shipping costs). |
 | discountTotal | Integer | Total amount of discounts applied to the cart. |
 | taxTotal | Integer | Total amount of taxes to be paid. |
 | subTotal | Integer | Subtotal of the cart. |
@@ -1940,14 +1940,14 @@ For the attributes of other included resources, see:
 
 Guest carts are anonymous as they are not related to any user. If a user registers or logs in, the guest cart is automatically assigned to their account.
 
-To assign a guest cart to a customer, i.e., merge the carts, include the unique identifier associated with the customer in the *X-Anonymous-Customer-Unique-Id* header of the authentication request if it is an existing customer, or request to create a customer account if it is a new one.
+To assign a guest cart to a customer, that is, merge the carts, include the unique identifier associated with the customer in the *X-Anonymous-Customer-Unique-Id* header of the authentication request if it is an existing customer, or request to create a customer account if it is a new one.
 
 Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/scos/user/features/{{page.version}}/multiple-carts-feature-overview.html) environment:
 
 * In a **single cart** environment, the products in the guest cart are added to the customers' own cart.
 * In a **multiple cart** environment, the guest cart is converted to a regular user cart and added to the list of the customers' own carts.
 
-The workflow is displayed in the diagram below:
+The workflow is displayed in the following diagram:
 
 ![Assign cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Storefront+Guides/Managing+Carts/Managing+Guest+Carts/assigning-guest-cart-to-registered-user.png)
 
@@ -2094,7 +2094,7 @@ In a **single cart** environment, items from the guest cart have been added to
 | 105 | Cart could not be deleted. |
 | 106 | Cart item could not be deleted. |
 | 107 | Failed to create a cart. |
-| 109 | Anonymous customer unique id is empty. |
+| 109 | Anonymous customer unique ID is empty. |
 | 111 | Can’t switch price mode when there are items in the cart. |
 | 112 | Store data is invalid. |
 | 113 | Cart item could not be added. |

@@ -7,7 +7,7 @@ template: import-file-template
 
 This document describes the `merchant_product_option_group` file to create [merchant product option groups](/docs/marketplace/user/features/{{page.version}}/marketplace-product-options-feature-overview.html).
 
-To import the file, run the following command:
+To import the file, run:
 
 ```bash
 data:import merchant-product-option-group

@@ -82,7 +82,7 @@ As another example, the customer may contact you to provide additional details a
 Your message appears in the *Comments* section.
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 
 You can send an email to the customer, review the customer details, and edit the customer addresses.
 

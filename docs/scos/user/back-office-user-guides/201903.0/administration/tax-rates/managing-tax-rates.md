@@ -40,7 +40,7 @@ In the ever-changing business world, there is a chance that the taxation policie
 3. Click **Save**.
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 
 You can start editing a tax rate while viewing it:
 1. On the **View Tax Rate** page, click **Edit** in the top right corner.
@@ -80,7 +80,7 @@ The tax rate is deleted. Remember that it will also be deleted from the Tax Set 
   {% endinfo_block %}
 
 
-**Tips & Tricks**
+**Tips and tricks**
 
 You can delete a tax rate while viewing it:
 1. On the **View Tax Rate** page, click **Delete** in the top-right corner.

@@ -42,7 +42,7 @@ Check out an example usage of the Table Column List in the `@spryker/table` conf
 Register the component:
 
 ```ts
-declare module '../table/table' {
+declare module '@spryker/table' {
     interface TableColumnTypeRegistry {
         list: TableColumnListConfig;
     }

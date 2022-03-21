@@ -171,7 +171,7 @@ export interface TableColumnContext extends AnyContext {
     value: TableDataValue;
     displayValue?: unknown;
     row: TableDataRow;
-    config: TableColumn; 
+    config: TableColumn;
     i: number;
     j: number;
 }

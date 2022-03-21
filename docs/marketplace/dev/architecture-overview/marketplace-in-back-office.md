@@ -17,10 +17,10 @@ The [Spryker Core Back Office feature](https://github.com/spryker-feature/spryke
 
 Marketplace offers two types of GUI modules for the Back Office:
 - `{DomainName}Gui`—this type of module provides UI for the Marketplace operators to manage global Marketplace domain objects such as Orders, Products, Merchants, and others.
-  For example [MerchantProfileGui](https://github.com/spryker/merchant-profile-gui) serves as an admin panel for managing Merchants across the entire system.
+  For example, [MerchantProfileGui](https://github.com/spryker/merchant-profile-gui) serves as an admin panel for managing Merchants across the entire system.
 - `{DomainName}MerchantUserGui`—this type of module provides UI for marketplace operator to manage their own domain objects such as MerchantOrders, Offers, Products, and others.
   For example, [MerchantSalesOrderMerchantUserGui](https://github.com/spryker/merchant-sales-order-merchant-user-gui) is a UI for managing marketplace operator MerchantOrders. Modules of this type require the presence of a connection between a user and a merchant.
-  A user without this connection will not be able to use the page at all.
+  A user without this connection cannot use the page at all.
 
 {% info_block warningBox  %}
 

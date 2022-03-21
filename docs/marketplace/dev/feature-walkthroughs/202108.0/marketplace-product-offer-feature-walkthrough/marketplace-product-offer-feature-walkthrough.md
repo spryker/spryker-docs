@@ -23,11 +23,11 @@ To learn more about the feature and to find out how end users use it, see [Marke
 
 ## Module dependency graph
 
-The following diagram illustrates the dependencies between the modules for the Marketplace Product Offer feature. 
+The following diagram illustrates the dependencies between the modules for the Marketplace Product Offer feature.
 
 ![Module Dependency Graph](https://confluence-connect.gliffy.net/embed/image/73bc50f6-4822-485c-bd0e-d19646a761f3.png?utm_medium=live&utm_source=custom)
 
-The table below lists the main modules of the Marketplace Product Offer feature.
+The following table lists the main modules of the Marketplace Product Offer feature.
 
 | NAME | DESCRIPTION |
 | -------------------- | ---------- |

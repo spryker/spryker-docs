@@ -1060,15 +1060,7 @@ entries:
       nested:
       - title: Products
         nested:
-        - title: Abstract products
-          include_versions:
-          - "201811.0"
-          - "201903.0"
-          - "201907.0"
-          - "202001.0"
-          - "202005.0"
-          - "202009.0"
-          - "202108.0"
+        - title: Manage abstract products
           nested:
           - title: Creating abstract products and product bundles
             url: /docs/scos/user/back-office-user-guides/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html
@@ -1098,7 +1090,7 @@ entries:
             - "201903.0"
             - "201907.0"
             - "202009.0"
-        - title: Managing concrete products
+        - title: Manage concrete products
           nested:
           - title: Creating product variants
             url: /docs/scos/user/back-office-user-guides/catalog/products/concrete-products/creating-product-variants.html
@@ -1108,13 +1100,6 @@ entries:
             url: /docs/scos/user/back-office-user-guides/catalog/products/concrete-products/assign-product-attributes-to-product-variants.html
             include_versions:
             - "202108.0"
-          - title: Assigningn product attributes to product variants
-            url: /docs/scos/user/back-office-user-guides/catalog/products/managing-products/assigning-product-attributes-to-product-variants.html
-            include_versions:
-            - "201811.0"
-            - "201903.0"
-            - "201907.0"
-            - "202009.0"
           - title: Adding product alternatives
             url: /docs/scos/user/back-office-user-guides/catalog/products/managing-products/adding-product-alternatives.html
           - title: Discontinuing products

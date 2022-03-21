@@ -1,6 +1,6 @@
 ---
 title: Product Offer validity dates
-description: This article provides reference information about Marketplace Product Offer validity dates in the Spryker Marketplace.
+description: This document provides reference information about Marketplace Product Offer validity dates in the Spryker Marketplace.
 template: concept-topic-template
 ---
 

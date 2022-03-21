@@ -123,7 +123,7 @@ Response sample: create a cart
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | totals | Object | Describes the total calculations. |
-| totals.expenseTotal | String | Total amount of expenses (including, e.g., shipping costs). |
+| totals.expenseTotal | String | Total amount of expenses (including, for example, shipping costs). |
 | totals.discountTotal | Integer | Total amount of discounts applied to the cart.  |
 | totals.taxTotal | String | Total amount of taxes to be paid. |
 | totals.subTotal | Integer | Subtotal of the cart.  |
@@ -2394,7 +2394,7 @@ To retrieve all carts, send the request:
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| expenseTotal | String | Total amount of expenses (including, e.g., shipping costs). |
+| expenseTotal | String | Total amount of expenses (including, for example, shipping costs). |
 | discountTotal | Integer | Total amount of discounts applied to the cart.  |
 | taxTotal | Integer | Total amount of taxes to be paid. |
 | subTotal | Integer | Subtotal of the cart.  |

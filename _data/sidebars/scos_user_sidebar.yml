@@ -1105,7 +1105,16 @@ entries:
           - title: Editing product variants
             url: /docs/scos/user/back-office-user-guides/catalog/products/concrete-products/editing-product-variants.html
           - title: Assign product attributes to product variants
-            url: /docs/scos/user/back-office-user-guides/catalog/products/concrete-products/assign-product-attributes-to-product-variants.html            
+            url: /docs/scos/user/back-office-user-guides/catalog/products/concrete-products/assign-product-attributes-to-product-variants.html
+            include_versions:
+            - "202108.0"
+          - title: Assigningn product attributes to product variants
+            url: /docs/scos/user/back-office-user-guides/catalog/products/concrete-products/assigning-product-attributes-to-product-variants.html
+            include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+            - "202009.0"                     
           - title: Adding product alternatives
             url: /docs/scos/user/back-office-user-guides/catalog/products/managing-products/adding-product-alternatives.html
           - title: Discontinuing products

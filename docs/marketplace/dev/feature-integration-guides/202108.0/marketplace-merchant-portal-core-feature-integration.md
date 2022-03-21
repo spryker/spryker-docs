@@ -640,9 +640,42 @@ export default async (
 
 If you want to configure deployment configuration to automatically install and build Merchant Portal, you need to change frontend dependencies and install commands in the deployment Yaml:
 
-- Remove existing Yves and Zed dependencies install commands from deployment Yaml:
+- Remove existing Yves and Zed dependencies install commands from config/install/docker.yml:
 
  yves-install-dependencies and zed-install-dependencies
+
+- Add required console commands:
+
+***src/Pyz/Zed/Console/ConsoleDependencyProvider.php***  
+
+```php
+<?php
+
+namespace Pyz\Zed\Console;
+
+use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
+use Spryker\Zed\SetupFrontend\Communication\Console\MerchantPortalBuildFrontendConsole;
+use Spryker\Zed\SetupFrontend\Communication\Console\MerchantPortalInstallDependenciesConsole;
+
+class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return \Symfony\Component\Console\Command\Command[]
+     */
+    protected function getConsoleCommands(Container $container): array
+    {
+        $commands = [
+            new MerchantPortalInstallDependenciesConsole(),
+            new MerchantPortalBuildFrontendConsole(),
+        ];
+        
+        return $commands;
+    }
+}
+
+```
 
 - Update project install dependencies command dependencies-install command to:
 

@@ -34,14 +34,11 @@ To add items to a shopping list, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
+
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | concrete-products |
 
-| REQUEST SAMPLE | USAGE |
-| --- | --- |
-|  | Add items to the shopping list with the `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` unique identifier. |
-|  | Add items to the shopping list with the `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` unique identifier. Include information about the concrete products in the shopping list into the response. |
 
 <details>
 <summary markdown='span'>Request sample: add items to the shopping list</summary>
@@ -61,6 +58,8 @@ To add items to a shopping list, send the request:
 ```
 </details>
 
+
+<details>
 <summary markdown='span'>Request sample: add items to the shopping list, and include information about the concrete products</summary>
 
 `POST http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items?include=concrete-products`
@@ -76,8 +75,8 @@ To add items to a shopping list, send the request:
     }
 }
 ```
-
 </details>
+
 
 <details>
 <summary markdown='span'>Request sample: add marketplace products to the shopping list</summary>
@@ -96,6 +95,7 @@ To add items to a shopping list, send the request:
 }
 ```
 </details>
+
 
 <details>
 <summary markdown='span'>Request sample: add product offers to the shopping list</summary>
@@ -116,11 +116,12 @@ To add items to a shopping list, send the request:
 ```
 </details>
 
+
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | quantity | Integer | ✓ | Quantity of the product to add. |
 | sku | String | ✓ | SKU of the product to add. Only [concrete products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) are allowed. |
-| productOfferReference | String | Unique identifier of the product offer. |
+| productOfferReference | String |   | Unique identifier of the product offer. |
 
 ### Response
 
@@ -268,7 +269,7 @@ To add items to a shopping list, send the request:
 | productOfferReference | String | Unique identifier of the product offer.   |
 | merchantReference | String | Unique identifier of the merchant.   |
 
-For the attributes of included resources, see [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes).
+For the attributes of the included resources, see [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes).
 
 ## Change item quantity in a shopping list
 
@@ -526,7 +527,7 @@ To remove an item from a shopping list, send the request:
 
 Request sample:
 
-`DELETE http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08` — Remove the item with the id `00fed212-3dc9-569f-885f-3ddca41dea08` from the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a`.
+`DELETE http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08` 
 
 ### Response
 

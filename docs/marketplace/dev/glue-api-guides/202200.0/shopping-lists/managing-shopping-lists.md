@@ -57,8 +57,7 @@ Request sample:
 
 ### Response
 
-<details>
-<summary markdown='span'>Response sample: create a shopping list</summary>
+Response sample:
 
 ```json
 {
@@ -78,7 +77,6 @@ Request sample:
     }
 }
 ```
-</details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
@@ -355,7 +353,7 @@ To retrieve a shopping list, send the request:
 
 | QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
-| include | Adds resource relationships to the request. | shopping-list-items, concrete-products|
+| include | Adds resource relationships to the request. | shopping-list-items, concrete-products, merchants, product-offers |
 
 {% info_block infoBox "Included resources" %}
 
@@ -370,7 +368,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 | `GET http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a?include=shopping-list-items,concrete-products` | Retrieve the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` with its items and respective concrete products. |
 | `GET http://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce?include=shopping-list-items` | Retrieve the shopping list with the id `c0bc6296-8a0c-50d9-b25e-5bface7671ce` with its items (marketplace products and product offers). |
 | `GET http://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce?include=shopping-list-items,merchants` | Retrieve the shopping list with the id `c0bc6296-8a0c-50d9-b25e-5bface7671ce` with its merchants. |
-| `GET http://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce?include=shopping-list-items,product-offers,product-offer-availabilities` with its product offers and product offer availabilities. |
+| `GET http://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce?include=shopping-list-items,product-offers,product-offer-availabilities`| Retrieve the shopping list with the id `c0bc6296-8a0c-50d9-b25e-5bface7671ce` with its product offers and product offer availabilities. |
 
 ### Response
 
@@ -863,6 +861,7 @@ For the attributes of included resources, see:
 * [Add items to a shopping list](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-shopping-lists/managing-shopping-list-items.html#shopping-list-items-response-attributes)
 * [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 * [Retrieve merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html)
+* [Retrieve product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html)
 
 ## Edit a shopping list
 

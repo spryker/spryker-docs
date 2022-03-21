@@ -204,7 +204,7 @@ export interface TableData<T extends TableDataRow = TableDataRow> {
     pageSize: number;
 }
 
-export interface TableCoreConfig {
+export interface TableConfig {
     dataSource: DatasourceConfig;
     columnsUrl?: string;
     columns?: TableColumns;
@@ -212,8 +212,6 @@ export interface TableCoreConfig {
     // Features may expect it's config under it's namespace
     [featureName: string]: TableFeatureConfig | unknown;
 }
-
-export interface TableConfig extends TableCoreConfig {}
 
 export type ColumnsTransformer = (
     cols: TableColumns,

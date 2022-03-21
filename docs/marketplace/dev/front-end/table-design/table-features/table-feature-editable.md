@@ -8,7 +8,7 @@ This document explains the Table Feature Editable component in the Components Li
 
 ## Overview
 
-Table Feature Editable is a feature of the Table Component that allows editing/adding rows to the table.
+Table Feature Editable is a feature of the Table Component that allows editing and adding rows to the table.
 
 Check out an example usage of the Table Feature Editable in the `@spryker/table` config.
 

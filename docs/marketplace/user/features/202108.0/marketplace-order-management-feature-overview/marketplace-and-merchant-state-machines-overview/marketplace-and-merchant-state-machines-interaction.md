@@ -127,7 +127,7 @@ The following table provides an overview of the statuses that are displayed at t
 | Customer                  | Storefront      | Delivered on \<date\> |
 
 ## Order item’s status progress: Closed
-Marketplace applies a series of policies that allow customers to return items during a given period of time. When that period expires, the marketplace order item gets the *Closed* state. The Merchant administrator must also be aware of that expiration, and the state closed is also used on the Merchant state machine for the item.
+Marketplace applies a series of policies that let customers return items during a given period of time. When that period expires, the marketplace order item gets the *Closed* state. The Merchant administrator must also be aware of that expiration, and the state closed is also used on the Merchant state machine for the item.
 
 ![Order item’s status progress: Closed](https://confluence-connect.gliffy.net/embed/image/d4583bab-dda6-4ecc-bd92-94388f5e8710.png?utm_medium=live&utm_source=custom)
 

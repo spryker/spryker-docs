@@ -14,15 +14,9 @@ Follow the steps below to install the Glue JSON API convention core.
 
 To start feature integration, overview and install the necessary features:
 
-| NAME                          | VERSION           | INTEGRATION GUIDE                                                                                                                                                                  |
-|-------------------------------| ----------------- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Glue StorefrontApiApplication | {{page.version}}  | [Glue Storefront API Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-storefront-api-application-integration-guide.html)  |
-
-Or
-
-| NAME                       | VERSION           | INTEGRATION GUIDE                                                                                                                                                            |
-|----------------------------| ----------------- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Glue BackendApiApplication | {{page.version}}  | [Glue Backend API Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-backend-api-application-integration-guide.html)  |
+| NAME                                         | VERSION           | INTEGRATION GUIDE                                                                                                                                                                                           |
+|----------------------------------------------| ----------------- |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Glue Storefront and Backend API Applications | {{page.version}}  | [Glue Storefront and Backend API Applications feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-storefront-and-backend-api-application-integration-guide.html)  |
 
 
 ### 1) Install the required modules using Composer
@@ -55,7 +49,6 @@ Add the following configuration:
 <?php
 
 use Spryker\Shared\GlueJsonApiConvention\GlueJsonApiConventionConstants;
-use Spryker\Shared\GlueStorefrontApiApplication\GlueStorefrontApiApplicationConstants;
 
 // ----------------------------------------------------------------------------
 // ------------------------------ Glue Storefront API -------------------------------
@@ -290,7 +283,7 @@ The following plugins are used as examples, they are not required for the featur
 ```php
 <?php
 
-namespace Spryker\Glue\DummyModuleApi\Plugin;
+namespace Pyz\Glue\DummyModuleApi\Plugin;
 
 use Generated\Shared\Transfer\GlueRequestTransfer;
 use Generated\Shared\Transfer\GlueResponseTransfer;
@@ -338,7 +331,7 @@ class DummyResource extends AbstractResourcePlugin implements JsonApiResourceInt
 ```php
 <?php
 
-namespace Spryker\Glue\DummyModuleApi\Plugin;
+namespace Pyz\Glue\DummyModuleApi\Plugin;
 
 use Spryker\Glue\GlueStorefrontApiApplication\Plugin\GlueStorefrontApiApplication\RouteProvider\AbstractRouteProviderPlugin;
 use Spryker\Glue\GlueStorefrontApiApplication\Router\Route\RouteCollection;
@@ -368,7 +361,7 @@ class DummyRouteProviderPlugin extends AbstractRouteProviderPlugin implements Ro
 ```php
 <?php
 
-namespace Spryker\Glue\DummyModuleApi\Plugin;
+namespace Pyz\Glue\DummyModuleApi\Plugin;
 
 use Generated\Shared\Transfer\GlueRelationshipTransfer;
 use Generated\Shared\Transfer\GlueRequestTransfer;

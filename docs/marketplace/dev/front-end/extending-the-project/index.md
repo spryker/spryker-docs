@@ -4,9 +4,9 @@ description: This document provides details about how to extend the new project.
 template: howto-guide-template
 ---
 
-To add additional front-end functionality beyond the one provisioned out-of-the-box, the project must be extended.
+To add additional frontend functionality beyond the one provisioned out-of-the-box, the project must be extended.
 
-This document can help you understand how you can extend the front-end project.
+This document can help you understand how you can extend the frontend project.
 
 ## Prerequisites
 

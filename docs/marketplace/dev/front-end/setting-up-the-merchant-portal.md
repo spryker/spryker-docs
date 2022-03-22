@@ -21,11 +21,11 @@ To build Merchant Portal, install or update the following tools:
 - [Yarn](https://classic.yarnpkg.com/en/docs/install/) - minimum version is 2.0.0 and maximum is 2.3.x.
 
 ## Overview
-The main environmental differences between the existing front-ends (Yves, Zed) and Merchant Portal are:  
+The main environmental differences between the existing frontends (Yves, Zed) and Merchant Portal are:  
 - Minimum NodeJS version is v12.
 - NPM is replaced by Yarn v2 with Workspaces.
 
-Using a "unified" approach, all front-end dependencies must be installed in one step:
+Using a "unified" approach, all frontend dependencies must be installed in one step:
 - The entire project is now a "Yarn Workspace," meaning each submodule declares its dependencies. During the installation stage, Yarn installs all of those dependencies and hoists them up into the root of the project.
 
 ## Install dependencies and build Merchant Portal

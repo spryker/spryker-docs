@@ -1,10 +1,10 @@
 ---
 title: Project structure
-description: This document provides details about the structure of the front-end project in the Spryker Marketplace.
+description: This document provides details about the structure of the frontend project in the Spryker Marketplace.
 template: concept-topic-template
 ---
 
-This document explains the structure of the front-end project in the Spryker Marketplace.
+This document explains the structure of the frontend project in the Spryker Marketplace.
 
 ## Alias
 
@@ -12,11 +12,11 @@ Use the alias `@mp/spryker-module-name` with the proper Spryker module name to i
 
 ## Module structure
 
-Below you can find a general structure of every front-end module in the Spryker Marketplace:
+Below you can find a general structure of every frontend module in the Spryker Marketplace:
 
 - MODULE_NAME
     - src/Spryker/Zed/MODULE_NAME
-        - Presentation - this is the namespace where the marketplace front-end-related files are located.
+        - Presentation - this is the namespace where the marketplace frontend-related files are located.
             - Components - all Angular files are located here.
                 - entry.ts - registers all Angular NgModules via `registerNgModule` from `@mp/zed-ui/app/registry`
                 - app - contains Angular components and services.
@@ -28,7 +28,7 @@ Below you can find a general structure of every front-end module in the Spryker 
 
 ## Main entry points
 
-The following entry points are needed for the Angular config to build the front-end project.
+The following entry points are needed for the Angular config to build the frontend project.
 
 - ZedUi (Project)
     - Presentation

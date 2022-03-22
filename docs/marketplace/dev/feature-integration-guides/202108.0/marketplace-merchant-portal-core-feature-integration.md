@@ -392,9 +392,9 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
-Follow the steps below to install the Merchant Portal Core feature front end.
+Follow the steps below to install the Merchant Portal Core feature frontend.
 
 ### Prerequisites
 

@@ -1255,9 +1255,9 @@ Make sure that the imported data has been added to the `spy_merchant_profile`, `
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
-Follow the steps below to install the Marketplace Merchant feature front end.
+Follow the steps below to install the Marketplace Merchant feature frontend.
 
 ### Prerequisites
 

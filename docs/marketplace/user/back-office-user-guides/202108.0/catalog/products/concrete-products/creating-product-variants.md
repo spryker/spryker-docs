@@ -91,7 +91,7 @@ This section describes the attributes you enter and select when  creating a prod
 |Image Set Name|The name of your image set.|**Yes**|**Yes**|
 |Small|The link of the image that is going to be used in the product catalogs.|**Yes**|**Yes**|
 |Large|The link to the image that is going to be used on the product details page.|**Yes**|**Yes**|
-|Sort Order|If you add several images to an active image set, specify the order in which they are to be shown in the front end and back end using Sort Order fields. The order of images is defined by the order of entered numbers where the image set with sort order "0" is the first to be shown.|**Yes**|**Yes**|
+|Sort Order|If you add several images to an active image set, specify the order in which they are to be shown in the frontend and backend using Sort Order fields. The order of images is defined by the order of entered numbers where the image set with sort order "0" is the first to be shown.|**Yes**|**Yes**|
 
 #### Discontinue tab
 

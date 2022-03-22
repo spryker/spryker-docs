@@ -31,7 +31,7 @@ To edit a content item:
 3. Make changes to the needed attributes.
 4. To save the updates, click **Save**. The updated content item will be displayed on the grid of _List of Content Items_, and the following message is displayed: "_Content item has been successfully updated_".
 
-**Tips & tricks**
+**Tips and tricks**
 <br>On the *Edit Content Item Type: Content Item Key* page, you can clear all the fields in the current locale by clicking **Clear locale**.
 
 Clicking **Back to Content Items** in the top right corner of the page can trigger different actions:

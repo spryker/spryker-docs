@@ -61,7 +61,7 @@ To create an RFQ for a Buyer:
     * click **Cancel** to discard the changes you’ve added.
 ![quote-request-agent](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Sales+Representative/quote-request-agent.png)
 
-**Tips & Tricks**
+**Tips and tricks**
 
 On the **Edit Quote Request** page, you can update the following information:
 
@@ -88,7 +88,7 @@ Keep in mind that measurement units cannot be updated. You can only add a new pr
 2. To keep the changes, click **Save and Back to Edit** in the **Quote Request** widget.
 ![Edit items agent](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Sales+Representative/edit-items-agent.png)
 
-**Tips & Tricks**
+**Tips and tricks**
 
 When changing the item quantity, enter the new value and click the **Refresh** icon.
 ![change-quantity](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Sales+Representative/change-quantity.png)
@@ -114,7 +114,7 @@ To add the delivery address and shipment method:
 5. On the **Shipment** page, select the shipment method and click **Next**. This will save the changes.
 6. To add the changes to the Quote Request, click **Save and Back to Edit**. This will redirect you to the **Edit Quote Request** page.
 
-**Tips & Tricks**
+**Tips and tricks**
 
 On the **Address** and **Shipment** pages:
 

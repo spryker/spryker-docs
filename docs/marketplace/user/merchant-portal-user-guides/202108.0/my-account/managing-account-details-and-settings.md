@@ -1,45 +1,46 @@
 ---
 title: Managing account details and settings
-last_updated: Jan 26, 2022
-description: This topic describes what you can do in the My account area of the Merchant Portal.
+last_updated: Mar 22, 2022
+description: This document describes what you can do in the My account area of the Merchant Portal.
 template: back-office-user-guide-template
 ---
 
-This topic describes how to manage merchant user account details in the Merchant Portal.
+This document describes how to manage merchant user account details in the Merchant Portal.
 
 ## Prerequisites
 
-To start working with the merchant user’s account, go to **Merchant Portal > My account**.
-To open *My account* page, in the top right corner of the Merchant Portal, click the user icon and then click **My account**.
+To start working with the merchant user’s account, go to **Merchant Portal&nbsp;<span aria-label="and then">></span> My account**.
+
+To open the **My account** page, in the top right corner of the Merchant Portal, click the user icon and then click **My account**.
 
 Some sections contain reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Changing personal details
 
-To update the personal details, on *My account* page, in the *Personal Details* section, update the necessary fields and click **Save**.
+To update the personal details, on the **My account** page, in the **Personal Details** section, update the necessary fields and click **Save**.
 
 ## Changing the email address
 
-To update the merchant user email address, on *My account* page, in the *Email* section, change the email address and click **Save**.
+To update the merchant user email address, on the **My account** page, in the **Email** section, change the email address and click **Save**.
 
 ## Changing the password for the Merchant Portal
 
 To update the password for the Merchant Portal:
 
-1. On *My account* page, in the *Password* section, click **Change Password**. The *Change Password* drawer opens.
-2. Enter the current password in the *Current password* field.
-3. Enter the new password in the *New password* field.
-4. To confirm the change enter the new password in the *Repeat new password* field.
+1. On the **My account** page, in the **Password** section, click **Change Password**. The **Change Password** drawer opens.
+2. In the **Current password** field, the current password.
+3. In the **New password** field, enter the new password.
+4. To confirm the change, in the **Repeat new password** field, enter the new password.
 5. Click **Save**.
 
 
-**Tips & Tricks**
+**Tips and tricks**
 
 Click on the show/hide password icon in the corresponding password field to double-check that you entered the right information.
 
 ### Reference information: Changing the password for the Merchant Portal
 
-On the *Change password* drawer, you see the following attributes:
+On the **Change password** drawer, you see the following attributes:
 
 | ATTRIBUTE        | DESCRIPTION        |
 | ---------------- | ---------------------- |
@@ -50,19 +51,19 @@ On the *Change password* drawer, you see the following attributes:
 
 ## Changing the interface language for the Merchant Portal
 
-To change the interface language of the Merchant Portal, on *My account* page, in the *Language* section, from the drop-down menu, select the necessary language and click **Save**.
+To change the interface language of the Merchant Portal, on **My account** page, in the **Language** section, select the necessary language and click **Save**.
 
 ## Reference information
 
-This section describes attributes you see when performing following actions:
-* Accessing *My account* in the Merchant Portal.
+This section describes attributes you see when performing the following actions:
+* Accessing **My account** in the Merchant Portal.
 * Changing the personal details.
 * Changing the email address.
 * Changing the interface language for the Merchant Portal.
 
 ### My account page
 
-The following table describes the attributes on the *My account* page:
+The following table describes the attributes on the **My account** page:
 
 | SECTION          | ATTRIBUTE        | DESCRIPTION        |
 | ---------------- | ---------------- | ---------------------- |

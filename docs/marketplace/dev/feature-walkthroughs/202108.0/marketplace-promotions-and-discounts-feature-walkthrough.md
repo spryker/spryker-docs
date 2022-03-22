@@ -1,7 +1,7 @@
 ---
 title: Marketplace Promotions and Discounts feature walkthrough
-last_updated: Jan 26, 2022
-description: This article provides technical details on the Marketplace Promotions and Discounts feature.
+last_updated: Mar 22, 2022
+description: This document provides technical details about the Marketplace Promotions and Discounts feature.
 template: feature-walkthrough-template
 ---
 
@@ -19,7 +19,7 @@ The following diagram illustrates the dependencies between the modules for the *
 
 ![Module Dependency Graph](https://confluence-connect.gliffy.net/embed/image/75358e26-725d-4f7d-8686-c72be236b88e.png?utm_medium=live&utm_source=custom)
 
-| NAME | DESCRIPTION | 
+| NAME | DESCRIPTION |
 | --- | --- |
 | [DiscountMerchantSalesOrder](https://github.com/spryker/discount-merchant-sales-order) | Provides a plugin for filtering out discounts in `MerchantOrderTransfer.order` that does not belong to the current merchant order. |
 | [DiscountMerchantSalesOrderGui](https://github.com/spryker/discount-merchant-sales-order) | Provides an endpoint `/discount-merchant-sales-order-gui/merchant-sales-order/list` to view the merchant order discounts list in the Back Office. |
@@ -28,6 +28,6 @@ The following diagram illustrates the dependencies between the modules for the *
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES| 
-| -------------- | 
-| [Marketplace Promotions & Discounts feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-promotions-discounts-feature-integration.html) | 
+| INTEGRATION GUIDES|
+| -------------- |
+| [Marketplace Promotions & Discounts feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-promotions-discounts-feature-integration.html) |

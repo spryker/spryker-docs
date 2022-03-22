@@ -5,7 +5,7 @@ description: Retrieve details about guest cart items and learn what else you can
 template: glue-api-storefront-guide-template
 ---
 
-This endpoint allows you to manage guest cart items.
+This endpoint lets you manage guest cart items.
 
 ## Installation
 
@@ -1675,7 +1675,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | -------------- | ----------- | --------------------- |
-| expenseTotal | String | Total amount of expenses (including, e.g., shipping costs). |
+| expenseTotal | String | Total amount of expenses (including, for example, shipping costs). |
 | discountTotal| Integer | Total amount of discounts applied to the cart.  |
 | taxTotal | String | Total amount of taxes to be paid.   |
 | subTotal   | Integer | Subtotal of the cart.  |
@@ -1850,7 +1850,7 @@ If the item is deleted successfully, the endpoint returns the "204 No Content"�
 | 105 | Cart could not be deleted. |
 | 106 | Cart item could not be deleted. |
 | 107 | Failed to create cart. |
-| 109 | Anonymous customer unique id is empty. |
+| 109 | Anonymous customer unique ID is empty. |
 | 110 | Customer already has a cart. |
 | 111 | Can’t switch price mode when there are items in the cart. |
 | 112 | Store data is invalid. |

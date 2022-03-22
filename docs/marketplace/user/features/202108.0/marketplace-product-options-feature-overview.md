@@ -1,13 +1,13 @@
 ---
 title: Marketplace Product Options feature overview
-last_updated: Jan 26, 2022
-description: The Marketplace Product Options feature allows merchants and Marketplace administrators to create product option groups.
+last_updated: Mar 22, 2022
+description: The Marketplace Product Options feature lets merchants and Marketplace administrators create product option groups.
 template: concept-topic-template
 ---
 
 With the *Marketplace Product Options* feature, merchants and Marketplace administrators can create *product options* for merchant products.
 
-Product options are product additions that a customer can select on the product detail page before adding the product to the cart. For example, the product options can be gift wrappings for products, insurance, warranty, etc. Product options do not have stock but an SKU linked to product abstracts. Thus, you cannot purchase them without buying a corresponding product.
+Product options are product additions that a customer can select on the product detail page before adding the product to the cart. For example, the product options can be gift wrappings for products, insurance, or warranty. Product options do not have stock but an SKU linked to product abstracts. Thus, you cannot purchase them without buying a corresponding product.
 
 Each product option is defined by:
 
@@ -20,7 +20,11 @@ Each product option is defined by:
 
 {% info_block infoBox "Info" %}
 
-Currently, you can create and manage general product options via the Back Office, however, you can only import merchant product options. See [Creating a product option](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html) for details on how you can create product options in the Back Office, [Managing product options](/docs/marketplace/user/back-office-user-guides/{{ page.version}}/catalog/product-options/creating-product-options.html) on how you can manage the product options in the Back Office, and [File details: merchant product option group](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-option-group.csv.html) on how you can import merchant product options.
+Currently, you can create and manage general product options via the Back Office. However, you can only import merchant product options.
+
+* For details about how you can create product options in the Back Office, see [Creating a product option](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html).
+* For details about how you can manage the product options in the Back Office, see [Managing product options](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html).
+* For details about how you can import merchant product options, see [File details: merchant product option group](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-option-group.csv.html).
 
 {% endinfo_block %}
 
@@ -50,7 +54,7 @@ The merchant product option groups are displayed on the Storefront only when:
 * The product option group status is [active](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html#activating-a-product-option).
 * The product option group approval status is [approved](#marketplace-product-options-approval-statuses).
 
-After a merchant created a product option group and assigned it to their products, the product option group is displayed for all the offers of the products, including offers of other merchants. For example, in the image below, the Video King merchant's offer is selected, but the Spryker merchant's product option group is still displayed:
+After a merchant created a product option group and assigned it to their products, the product option group is displayed for all the offers of the products, including offers of other merchants. For example, in the following image, the Video King merchant's offer is selected, but the Spryker merchant's product option group is still displayed:
 
 ![Marketplace product options on the Storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+product+options/merchant-prodcut-options-on-the-storefront.png)
 

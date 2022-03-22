@@ -5,7 +5,7 @@ description: This articles provides details how to create new module with applic
 template: howto-guide-template
 ---
 
-This article describes how to extend the Merchant Portal dashboard.
+This document describes how to extend the Merchant Portal dashboard.
 
 ## 1) Create a plugin
 

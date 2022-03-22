@@ -1,7 +1,7 @@
 ---
 title: Marketplace and merchant state machines interaction
-last_updated: Jan 26, 2022
-description: This document contains details on how the Marketplace and merchant state machines interact with each other in the Spryker Commerce OS.
+last_updated: Mar 22, 2022
+description: This document contains details about how the Marketplace and merchant state machines interact with each other in the Spryker Commerce OS.
 template: concept-topic-template
 ---
 
@@ -19,7 +19,7 @@ In this article, we'll look into the process of how Marketplace and merchant sta
 The process starts when a customer places an order. The Marketplace order obtains state *New*.
 ![State: New](https://confluence-connect.gliffy.net/embed/image/630bbd7b-66ee-475f-9d79-50a258b994b2.png?utm_medium=live&utm_source=custom)
 
-The table below provides an overview of the statuses that are displayed at this step:
+The following table provides an overview of the statuses that are displayed at this step:
 
 | ROLE | APPLICATION | STATUS |
 | ------------------------ | -------------- | ------------------- |
@@ -32,7 +32,7 @@ Once the Marketplace administrator receives the payment, the state of the market
 
 ![Order item’s status progress: Paid](https://confluence-connect.gliffy.net/embed/image/98582508-84a7-4fc5-ad6e-73ace5772daa.png?utm_medium=live&utm_source=custom)
 
-The table below provides an overview of the statuses that are displayed at this step:
+The following table provides an overview of the statuses that are displayed at this step:
 
 | ROLE   | APPLICATION | STATUS  |
 | ------------------------ | -------------- | ---------- |
@@ -54,7 +54,7 @@ The Marketplace administrator can also cancel the order under exceptional circum
 
 ![Order item’s status progress: Canceled](https://confluence-connect.gliffy.net/embed/image/d6ceb379-7990-4bf1-b2d4-a46a80230d58.png?utm_medium=live&utm_source=custom)
 
-The table below provides an overview of the statuses that are displayed at this step:
+The following table provides an overview of the statuses that are displayed at this step:
 
 | ROLE                  | APPLICATION | STATUS |
 | ------------------------ | -------------- | --------- |
@@ -67,7 +67,7 @@ When the order is canceled after the payment has been made, the Marketplace admi
 
 ![Order item’s status progress: Refunded](https://confluence-connect.gliffy.net/embed/image/fafabe65-1339-48d7-88b3-b83bf54ccf09.png?utm_medium=live&utm_source=custom)
 
-The table below provides an overview of the statuses that are displayed at this step:
+The following table provides an overview of the statuses that are displayed at this step:
 
 | ROLE                  | APPLICATION | STATUS |
 | ------------------------ | -------------- | --------- |
@@ -76,11 +76,11 @@ The table below provides an overview of the statuses that are displayed at this 
 | Customer                  | Storefront      | Refunded   |
 
 ## Order item’s status progress: Sent to Merchant
-When the system has payment confirmation, it performs the operations to split the marketplace order into one or several merchant orders. The state of the marketplace order item becomes*Sent to Merchant*. The merchant orders are created, and each of the items that they contain shows a state according to each Merchant’s state machine. The first state is *New*.
+When the system has payment confirmation, it performs the operations to split the marketplace order into one or several merchant orders. The state of the marketplace order item becomes *Sent to Merchant*. The merchant orders are created, and each of the items that they contain shows a state according to each Merchant’s state machine. The first state is *New*.
 
 ![Order item’s status progress: Sent to Merchant](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Order+Management/sent-to-merchant.png)
 
-The table below provides an overview of the statuses that are displayed at this step:
+The following table provides an overview of the statuses that are displayed at this step:
 
 | ROLE   | APPLICATION | STATUS |
 | ----------------- | -------------- | --------- |
@@ -93,7 +93,7 @@ Merchant can cancel the order for various reasons. The state of the merchant ord
 
 ![Order item’s status progress: Canceled by Merchant](https://confluence-connect.gliffy.net/embed/image/c141bb84-9abe-48c7-8ca4-5ea508435480.png?utm_medium=live&utm_source=custom)
 
-The table below provides an overview of the statuses that are displayed at this step:
+The following table provides an overview of the statuses that are displayed at this step:
 
 | ROLE       | APPLICATION | STATUS |
 | ----------- | -------------- | --------- |
@@ -102,11 +102,11 @@ The table below provides an overview of the statuses that are displayed at this 
 | Customer    | Storefront      | Canceled    |
 
 ## Order item’s status progress: Shipped by Merchant
-The merchant ships the item to the customer address. To input this information on Merchant Portal, the merchant triggers the event manually (**Shipped** action button) or through the import of the new state via a CSV file. The item’s state on the merchant state machine moves to *Shipped*. The Marketplace administrator also needs to make use of this info. They need to see that the item was also shipped in the Marketplace state machine.
+The merchant ships the item to the customer address. To input this information on Merchant Portal, the merchant triggers the event manually (the **Shipped** action button) or through the import of the new state via a CSV file. The item’s state on the merchant state machine moves to *Shipped*. The Marketplace administrator also needs to make use of this info. They need to see that the item was also shipped in the Marketplace state machine.
 
 ![Order Item’s Status Progress: Shipped by Merchant](https://confluence-connect.gliffy.net/embed/image/6cea2d2f-1797-47ba-8a99-938aef05fc90.png?utm_medium=live&utm_source=custom)
 
-The table below provides an overview of the statuses that are displayed at this step:
+The following table provides an overview of the statuses that are displayed at this step:
 
 | ROLE   | APPLICATION | STATUS |
 | ------------- | -------------- | --------- |
@@ -119,7 +119,7 @@ After the shipment, the merchant tracks the delivery with the shipment carrier. 
 
 ![Order item’s status progress: Delivered](https://confluence-connect.gliffy.net/embed/image/04b08764-f5c4-4de7-9725-b12557e2ea61.png?utm_medium=live&utm_source=custom)
 
-The table below provides an overview of the statuses that are displayed at this step:
+The following table provides an overview of the statuses that are displayed at this step:
 
 | ROLE   | APPLICATION | STATUS |
 | ------------- | -------------- | --------- |
@@ -132,7 +132,7 @@ Marketplace applies a series of policies that allow customers to return items du
 
 ![Order item’s status progress: Closed](https://confluence-connect.gliffy.net/embed/image/d4583bab-dda6-4ecc-bd92-94388f5e8710.png?utm_medium=live&utm_source=custom)
 
-The table below provides an overview of the statuses that are displayed at this step:
+The following table provides an overview of the statuses that are displayed at this step:
 
 | ROLE     | APPLICATION| STATUS      |
 | --------- | ------------- | --------------- |

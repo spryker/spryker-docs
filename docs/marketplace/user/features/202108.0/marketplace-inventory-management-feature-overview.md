@@ -5,20 +5,20 @@ description: This document contains concept information for the Marketplace Prod
 template: concept-topic-template
 ---
 
-The *Marketplace Inventory Management* feature allows maintaining stock and availability of merchant products and product offers that are sold in the Marketplace.
+The *Marketplace Inventory Management* feature enables maintaining stock and availability of merchant products and product offers that are sold in the Marketplace.
 In the context of the inventory management, the *warehouse* is the physical place where your products are stored, and stock is the number of products available in the warehouse.
 
 ## Marketplace warehouse management
 
-When a merchant is created, the corresponding warehouse is created for this merchant. The warehouse name is composed of the following parts: `merchant name + merchant reference + warehouse + index starting with 1, 2, etc.`
+When a merchant is created, the corresponding warehouse is created for this merchant. The warehouse name is composed of the following parts: `merchant name` + `merchant reference` + `warehouse` + `index` (starting with 1, 2).
 
 {% info_block infoBox "Example" %}
 
-"Spryker MER000001 Warehouse 1" where `Spryker` is the merchant name, MER000001 is the merchant reference, and the index is 1 as it is the first warehouse created.
+"Spryker MER000001 Warehouse 1" where `Spryker` is the merchant name, `MER000001` is the merchant reference, and the index is `1`W as it is the first warehouse created.
 
 {% endinfo_block %}
 
-A warehouse can be assigned to a single store or shared between several stores. See [Managing warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/managing-warehouses.html) for details on how you can manage warehouses and stores in the Back Office.
+A warehouse can be assigned to a single store or shared between several stores. For details about how you can manage warehouses and stores in the Back Office, see [Managing warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/managing-warehouses.html).
 
 ## Marketplace stock management
 
@@ -40,7 +40,7 @@ Product offer availability calculation differs from the calculation of concrete 
 
 | CONCRETE PRODUCT AVAILABILITY   | PRODUCT OFFER AVAILABILITY   |
 | --------------------- | ------------------------ |
-| Formula: Concrete product availability = Concrete product quantity – Concrete product reservations | Formula: Offer availability = Offer quantity – Offer reservations |
+| Formula: Concrete product availability = Concrete product quantity - Concrete product reservations | Formula: Offer availability = Offer quantity - Offer reservations |
 
 Offer availability is considered on the Storefront: 
 * On the product details page while adding the offer to cart.

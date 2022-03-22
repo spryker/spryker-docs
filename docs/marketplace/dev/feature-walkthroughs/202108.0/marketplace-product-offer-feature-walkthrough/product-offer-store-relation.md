@@ -1,7 +1,7 @@
 ---
 title: Product Offer store relation
-last_updated: Jan 26, 2022
-description: This article provides reference information about Marketplace Product Offer relation with stores in the Spryker Marketplace.
+last_updated: Mar 22, 2022
+description: This document provides reference information about Marketplace Product Offer relation with stores in the Spryker Marketplace.
 template: concept-topic-template
 ---
 

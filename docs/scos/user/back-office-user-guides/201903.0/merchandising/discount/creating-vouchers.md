@@ -81,7 +81,7 @@ See [Voucher Codes: Reference Information](/docs/scos/user/back-office-user-guid
 
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 
 Once you generated voucher codes, you can export them as a **.csv** file.
 To do that, click **Export** below **Generate**.

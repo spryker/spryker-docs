@@ -57,7 +57,7 @@ You should have a merchant relationship set up in **Merchants** > **Merchant Rel
 5. Once you are satisfied with the setup, click **Save**.
 
 ***
-**Tips & Tricks**
+**Tips and tricks**
 Assigning products and categories to product lists is optional during the product list creation. You can create a product list with no values assigned and update it in a later event.
 
 When you assign products, you can use the search field to filter the products by entering **SKU** or **product name**.

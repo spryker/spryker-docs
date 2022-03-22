@@ -1,11 +1,11 @@
 ---
 title: Installation
-last_updated: Jan 26, 2022
-description: This article describes how to get started with the B2C Demo Marketplace.
+last_updated: Mar 22, 2022
+description: This document describes how to get started with the B2C Demo Marketplace.
 template: concept-topic-template
 ---
 
-This article describes how to get started with the B2C Demo Marketplace.
+This document describes how to get started with the B2C Demo Marketplace.
 
 {% info_block infoBox "Info" %}
 
@@ -39,7 +39,7 @@ git clone https://github.com/spryker-shop/b2c-demo-marketplace.git ./
 git clone https://github.com/spryker/docker-sdk.git docker
 ```
 
-2. Set up environment you need:
+2. Set up the environment you need:
 
 - [Development environment](#setting-up-a-development-environment)
 - [Production-like environment](#setting-up-a-production-like-environment)

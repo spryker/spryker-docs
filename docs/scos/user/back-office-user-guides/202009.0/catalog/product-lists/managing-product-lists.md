@@ -68,7 +68,7 @@ To assign products to a product list:
  5. Select **Save**.
     The page refreshes with the success message displayed.
 
-**Tips & Tricks**
+**Tips and tricks**
 * To double-check the list of products that are to be assigned, switch to the **Products to be assigned** tab.
 
 
@@ -81,7 +81,7 @@ To deassign products from a product list:
 4. Select **Save**.
     The page refreshes with the success message displayed.
 
-**Tips & Tricks**
+**Tips and tricks**
 * To double-check the list of products that are to be deassigned, switch to the **Products to be deassigned** tab.
 
 ## Exporting a product list

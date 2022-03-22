@@ -48,7 +48,7 @@ Invoked when the given component has been initialized.
 This hook is only called once after the first `ngOnChanges`.
 
 `ngDoCheck`  
-Invoked when the change detector of the given component is invoked. It allows us to implement our own change detection algorithm for the given component.
+Invoked when the change detector of the given component is invoked. It lets you implement your own change detection algorithm for the given component.
 
 `ngOnDestroy`  
 This method is invoked just before Angular destroys the component.
@@ -101,7 +101,7 @@ You can find a full list of component metadata properties in the [official docum
 
 ## Component creation
 
-To create a new component, a CLI tool NX can be used to scaffold boilerplate code: 
+To create a new component, a CLI tool NX can be used to scaffold boilerplate code:
 
 ```bash
 nx generate component [my-component-name] --path=path/to/the/module

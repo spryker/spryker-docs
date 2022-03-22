@@ -48,7 +48,7 @@ To change general information of the page and SEO details:
     * Meta keywords
     * Meta description 
 ***
-**Tips & Tricks**
+**Tips and tricks**
 On the **Edit CMS Page: [Page name]** page, you can do the following:
 
 * Publish the current version of the page by clicking **Publish** on the top of the page.
@@ -70,7 +70,7 @@ To change the title and content of the page:
 In the placeholders editor, you can insert a banner, abstract product list, product set, and downloadable files using content item widgets. See the [Adding Content Item Widgets to a Page](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/content-item-widgets/adding-content-item-widgets-to-pages-and-blocks.html#adding-content-item-widgets-to-pages
 {% endinfo_block %} article for more details. )
 ***
-**Tips & Tricks**
+**Tips and tricks**
 On the **Edit Placeholders: [Page Name]** editor, you can do the following:
 
 * Publish the current version of the page by clicking **Publish** on the top of the page.

@@ -13,14 +13,14 @@ In the marketplace, when a buyer goes through checkout, the [Marketplace order](
 
 ## Merchant order calculation
 
-The merchant order consists of the merchant order items, which are the items (products) purchased by the customer. All the calculations for the merchant order items are performed using the product offer, merchant products price, and *merchant order totals*. These are the [initial totals](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculation-3-0.html) that are calculated according to the product offer purchased:
+A merchant order consists of merchant order items, which are items (products) purchased by a customer. All the calculations for merchant order items are performed using the product offer, merchant products price, and *merchant order totals*. These are the [initial totals](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculation-3-0.html) that are calculated according to the product offer purchased:
 
 | TOTAL | DESCRIPTION |
 | -------- | -------------- |
 | Canceled total   | Amount to be returned in case the order was canceled. `Canceled total = Merchant Order grand total - Merchant Order expense total` |
 | Discount total  | Total discount amount.    |
 | Merchant Order grand total   | Total amount the customer needs to pay after the discounts have been applied. |
-| Merchant Order expense total  | Total expenses amount (e.g., shipping).   |
+| Merchant Order expense total  | Total expenses amount (for example, shipping).   |
 | Merchant Order refund total  | Total refundable amount.   |
 | Merchant Order subtotal  | Total amount before taxes and discounts.  |
 | Merchant Order tax total  | Total tax amount from the grand total.   |

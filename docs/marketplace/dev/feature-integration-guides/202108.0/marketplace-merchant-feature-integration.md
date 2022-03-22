@@ -627,18 +627,6 @@ class MerchantSearchConfig extends SprykerMerchantSearchConfig
 }
 ```
 
-
-{% info_block warningBox "Verification" %}
-
-Make sure that when merchant entities are created or updated through ORM, they are exported to Elastica accordingly.
-
-
-| TARGET ENTITY | EXAMPLE OF EXPECTED DATA IDENTIFIER |
-|---|---|
-| Merchant | merchant:1 |
-
-{% endinfo_block %}
-
 <details>
 <summary markdown='span'>Example of the expected data fragment</summary>
 
@@ -907,6 +895,18 @@ class SearchElasticsearchConfig extends SprykerSearchElasticsearchConfig
     ];
 }
 ```
+
+
+{% info_block warningBox "Verification" %}
+
+Make sure that when merchant entities are created or updated through ORM, they are exported to Elastica accordingly.
+
+
+| TARGET ENTITY | EXAMPLE OF EXPECTED DATA IDENTIFIER |
+|---|---|
+| Merchant | merchant:1 |
+
+{% endinfo_block %}
 
 ### 7) Import data
 

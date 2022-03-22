@@ -167,6 +167,4 @@ Make sure that the `MerchantAddressByMerchantReferenceResourceRelationshipPlugin
 
 Make sure that after sending the request `GET http://glue.mysprykershop.com/url-resolver?url={% raw %}{{merchantUrl}{% endraw %}`, the merchant entity type and ID is returned in response.
 
-Make sure that by sending the request `GET http://glue.mysprykershop.com/orders?include=merchant`, merchant attributes are returned in response.
-
 {% endinfo_block %}

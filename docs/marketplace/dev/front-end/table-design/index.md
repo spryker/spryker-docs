@@ -8,13 +8,12 @@ This document describes the Table Design in the Components Library.
 
 ## Overview
 
-A Table Component is an arrangement of data in rows and columns, or possibly in a more complex structure (with sorting, filtering, pagination, row selections, infinite scrolling).
+A *Table Component* is an arrangement of data in rows and columns, or possibly in a more complex structure (with sorting, filtering, pagination, row selections, infinite scrolling).
 It is an essential building block of a user interface.
 
 A basic Table Component is `<spy-table [config]="config"></spy-table>` where `config` is:
-
-- `dataSource` - the Datasource configuration from which the data is taken.
-- `columns` - an array of columns configuration.
+- `dataSource`—the Datasource configuration from which the data is taken.
+- `columns`—an array of columns configuration.
 
 ```ts
 const config: TableConfig = {
@@ -39,8 +38,7 @@ Check out the table architecture diagram for better understanding:
 
 ### Configuration
 
-The Table Component is configured via [Table Configuration](/docs/marketplace/dev/front-end/table-design/table-configuration.html)
-that sets up how the table will behave and look like.
+A Table Component is configured via [Table Configuration](/docs/marketplace/dev/front-end/table-design/table-configuration.html) that sets up how the table should behave and look like.
 
 ### Datasources
 
@@ -51,12 +49,12 @@ that are registered by the user and then configured using the Table Configuratio
 
 Every other piece of functionality is extracted into the [Table Feature](/docs/marketplace/dev/front-end/table-design/table-features/):
 
-- Table Feature is an Angular Component that encapsulates a specific extension of the Core Table.
+- A *Table Feature* is an Angular Component that encapsulates a specific extension of the Core Table.
 - Core Table contains specific placeholders in its view that Table Feature may target to render its piece of UI.
 - Most of the common table functionality already exists as the Table Feature and may be used in the project.
 
 To use a Feature component, register an Angular Module that implements the `ModuleWithFeature` interface in the Root Module
-using `TableModule.withFeatures()` under the key that will serve as its configuration key:
+using `TableModule.withFeatures()` under the key that serves as its configuration key:
 
 ```ts
 @NgModule({
@@ -76,7 +74,7 @@ export class AppModule {}
 Columns in a Table are defined by the [Column Type](/docs/marketplace/dev/front-end/table-design/table-column-types/) and rendered within the columns (text, image, link).
 A new Column Type may be created and registered to the table.
 
-The Column component must implement `TableColumn` interface with the defined config and then be registered to the Root Module via `TableModule.withColumnComponents()`:
+A Column component must implement `TableColumn` interface with the defined config and then be registered to the Root Module via `TableModule.withColumnComponents()`:
 
 ```ts
 @NgModule({
@@ -94,7 +92,7 @@ export class AppModule {}
 
 ### Filters
 
-Table Component does not contain any filters a table usually will have (filtering, searching).
+A Table Component does not contain any filters a table usually has (filtering, searching).
 The Core Table Component has just a view of the columns and data and has built-in sorting.
 
 To use [Filter components](/docs/marketplace/dev/front-end/table-design/table-filters/), the Table Module must implement a specific interface (TableConfig) and then be registered to the Root Module via `TableModule.withFilterComponents()`:
@@ -124,7 +122,7 @@ A few common Table Features that can trigger actions are available in the UI lib
 
 ## Interfaces
 
-Below you can find interfaces for the Table configuration:
+The following interfaces are intended for the Table configuration:
 
 ```ts
 export interface TableColumn extends Partial<TableColumnTypeDef> {

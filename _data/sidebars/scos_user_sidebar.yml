@@ -1102,8 +1102,12 @@ entries:
             - "202108.0"
           - title: Adding product alternatives
             url: /docs/scos/user/back-office-user-guides/catalog/products/managing-products/adding-product-alternatives.html
+            include_versions:
+            - "202108.0"
           - title: Discontinuing products
             url: /docs/scos/user/back-office-user-guides/catalog/products/managing-products/discontinuing-products.html
+            include_versions:
+            - "202108.0"
         - title: Creating service offerings - best practices
           url: /docs/scos/user/back-office-user-guides/catalog/products/creating-service-offerings-best-practices.html
           include_versions:
@@ -1787,18 +1791,28 @@ entries:
         nested:
         - title: Define filter preferences
           url: /docs/scos/user/back-office-user-guides/merchandising/filter-preferences/define-filter-preferences.md
+          include_versions:
+          - "202108.0"
         - title: Edit filter preferences
           url: /docs/scos/user/back-office-user-guides/merchandising/filter-preferences/edit-filter-preferences.md
+          include_versions:
+          - "202108.0"
         - title: Reorder filter preferences
           url: /docs/scos/user/back-office-user-guides/merchandising/filter-preferences/reorder-filter-preferences.md
+          include_versions:
+          - "202108.0"             
       - title: Category filters
         include_versions:
         - "202108.0"
         nested:
         - title: Assign and deassign filters from categories
           url: /docs/scos/user/back-office-user-guides/merchandising/category-filters/assign-and-deassign-filters-from-categories.md
+          include_versions:
+          - "202108.0"
         - title: Reorder category filters
           url: /docs/scos/user/back-office-user-guides/merchandising/category-filters/reorder-category-filters.md
+          include_versions:
+          - "202108.0"
       - title: Search and filters
         include_versions:
         - "201811.0"

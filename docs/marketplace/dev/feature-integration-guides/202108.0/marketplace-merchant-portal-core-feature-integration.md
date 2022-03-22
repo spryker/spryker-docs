@@ -777,6 +777,43 @@ MerchantPortal **MUST NOT** have access to:
 - Gateway
 - Scheduler
 
+**deploy.dev.yml**
+```yaml
+...
+groups:
+  EU:
+    region: EU
+    applications:
+      merchant_portal_eu:
+        application: merchant-portal
+        endpoints:
+          mp.de.spryker.local:
+            entry-point: MerchantPortal
+            store: DE
+            primal: true
+            services:
+              session:
+                namespace: 7
+          mp.at.spryker.local:
+            entry-point: MerchantPortal
+            store: AT
+            services:
+              session:
+                namespace: 8
+  US:
+    region: US
+    applications:
+      merchant_portal_us:
+        application: merchant-portal
+        endpoints:
+          mp.us.spryker.local:
+            entry-point: MerchantPortal
+            store: US
+            services:
+              session:
+                namespace: 9
+```
+
 ### 2) Create a dedicated database user
 
 Grant only default CRUD (INSERT, DELETE, UPDATE, SELECT) operations. DO NOT grant ALL PRIVILEGES, GRANT OPTION, DROP, CREATE, and other admin-related grants.

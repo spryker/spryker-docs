@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-product-sets
   - /docs/managing-product-sets
   - /docs/en/managing-product-sets
+  - /docs/scos/user/back-office-user-guides/202108.0/merchandising/product-sets/managing-product-sets.html
 ---
 
 This document describes how to edit product sets in the Back Office.
@@ -123,6 +124,6 @@ Click the **Images** tab and do any of the following for the needed locales.
 | ATTRIBUTE | DESCRIPTION|
 | --- | --- |
 | IMAGE SET NAME | Internal unique identifier of an image set. For a multi-word name, instead of spaces, use dashes and underscores. |
-| Small Image URL | A public URL to fetch a low-resolution image from. |
-| Large Image URL | A public URL to fetch a high-resolution image from. |
+| SMALL IMAGE URL | A public URL to fetch a low-resolution image from. |
+| LARGE IMAGE URL | A public URL to fetch a high-resolution image from. |
 | SORT ORDER | A number that defines the position of the image on a page relatively to the sort order value of the other images. An image with a smaller sort order value is displayed higher on a page. |

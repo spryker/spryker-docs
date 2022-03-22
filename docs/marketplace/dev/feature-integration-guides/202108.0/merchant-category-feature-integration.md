@@ -25,7 +25,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/merchant-category:"^0.2.0" spryker/merchant-category-data-import:"^0.2.0" spryker/merchant-category-search:"^0.1.0"  --update-with-dependencies
+composer require spryker-feature/merchant-category:"{{page.version}}"  --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -100,6 +100,7 @@ Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | -------------- | ----------- | ------ | ------------- |
+| CategoryWritePublisherPlugin |  |  | Spryker\Zed\MerchantCategory\Communication\Plugin\Publisher\Category |
 | MerchantCategoryMerchantExpanderPlugin | Expands MerchantTransfer with categories.  |   | Spryker\Zed\MerchantCategory\Communication\Plugin\Merchant |
 | MerchantCategoryMerchantSearchDataExpanderPlugin | Expands merchant search data with merchant category keys. |  | Spryker\Zed\MerchantCategorySearch\Communication\Plugin\MerchantSearch |
 | MerchantCategoryWritePublisherPlugin | Updates merchant categories in search based on category events. |  | Spryker\Zed\MerchantSearch\Communication\Plugin\Publisher\MerchantCategory |

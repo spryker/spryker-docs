@@ -479,6 +479,9 @@ entries:
               - title: "Migration guide - Extending the project"
                 url: /docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html
 
+              - title: "Migration guide - Upgrade to Angular v12"
+                url: /docs/marketplace/dev/front-end/extending-the-project/migration-guide-upgrade-to-angular-v12.html
+
           - title: "Table design"
             url: /docs/marketplace/dev/front-end/table-design/
             nested:

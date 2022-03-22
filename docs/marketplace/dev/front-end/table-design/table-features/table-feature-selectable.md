@@ -37,7 +37,12 @@ Component configuration:
 Register the component:
 
 ```ts
-// Dynamic
+declare module '@spryker/table' {
+    interface TableConfig {
+        itemSelection?: TableSelectableConfig;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -72,12 +77,6 @@ export class RootModule {}
 Below you can find interfaces for the Table Feature Selectable:
 
 ```ts
-declare module '@spryker/table' {
-    interface TableConfig {
-        itemSelection?: TableSelectableConfig;
-    }
-}
-
 export interface TableSelectableConfig extends TableFeatureConfig {}
 
 export interface TableSelectionRow {

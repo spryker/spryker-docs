@@ -35,6 +35,12 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/persistence' {
+    interface PersistenceStrategyRegistry {
+        'local-storage': LocalStoragePersistenceStrategy;
+    }
+}
+
 @NgModule({
     imports: [
         PersistenceModule.withStrategies({
@@ -50,12 +56,6 @@ export class RootModule {}
 Below you can find interfaces for the Local Storage Persistence Strategy:
 
 ```ts
-declare module '@spryker/persistence' {
-    interface PersistenceStrategyRegistry {
-        'local-storage': LocalStoragePersistenceStrategy;
-    }
-}
-
 interface LocalStoragePersistenceStrategy extends PersistenceStrategy {
     save(key: string, value: unknown): Observable<void>;
     retrieve<T>(key: string): Observable<T | undefined>;

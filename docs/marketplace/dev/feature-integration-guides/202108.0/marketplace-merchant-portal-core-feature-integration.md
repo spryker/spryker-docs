@@ -648,7 +648,7 @@ If you want to configure deployment configuration to automatically install and b
 
 - Add required console commands:
 
-***src/Pyz/Zed/Console/ConsoleDependencyProvider.php***  
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**  
 
 ```php
 <?php

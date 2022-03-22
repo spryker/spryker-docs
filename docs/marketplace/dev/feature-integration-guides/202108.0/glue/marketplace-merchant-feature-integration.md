@@ -99,7 +99,7 @@ use Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication\MerchantsResourceRouteP
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
-     * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface[]
+     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface>
      */
     protected function getResourceRoutePlugins(): array
     {
@@ -144,7 +144,7 @@ use Spryker\Glue\MerchantsRestApi\Plugin\UrlsRestApi\MerchantRestUrlResolverAttr
 class UrlsRestApiDependencyProvider extends SprykerUrlsRestApiDependencyProvider
 {
     /**
-     * @return \Spryker\Glue\UrlsRestApiExtension\Dependency\Plugin\RestUrlResolverAttributesTransferProviderPluginInterface[]
+     * @return array<\Spryker\Glue\UrlsRestApiExtension\Dependency\Plugin\RestUrlResolverAttributesTransferProviderPluginInterface>
      */
     protected function getRestUrlResolverAttributesTransferProviderPlugins(): array
     {

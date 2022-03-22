@@ -267,7 +267,7 @@ use Spryker\Zed\ProductOption\ProductOptionDependencyProvider as SprykerProductO
 class ProductOptionDependencyProvider extends SprykerProductOptionDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ProductOptionGuiExtension\Dependency\Plugin\ProductOptionListActionViewDataExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\ProductOptionGuiExtension\Dependency\Plugin\ProductOptionListActionViewDataExpanderPluginInterface>
      */
     protected function getProductOptionListActionViewDataExpanderPlugins(): array
     {
@@ -277,7 +277,7 @@ class ProductOptionDependencyProvider extends SprykerProductOptionDependencyProv
     }
 
     /**
-     * @return \Spryker\Zed\ProductOptionGuiExtension\Dependency\Plugin\ProductOptionListTableQueryCriteriaExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\ProductOptionGuiExtension\Dependency\Plugin\ProductOptionListTableQueryCriteriaExpanderPluginInterface>
      */
     protected function getProductOptionListTableQueryCriteriaExpanderPlugins(): array
     {
@@ -287,7 +287,7 @@ class ProductOptionDependencyProvider extends SprykerProductOptionDependencyProv
     }
 
     /**
-     * @return \Spryker\Zed\ProductOptionExtension\Dependency\Plugin\ProductOptionGroupExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\ProductOptionExtension\Dependency\Plugin\ProductOptionGroupExpanderPluginInterface>
      */
     protected function getProductOptionGroupExpanderPlugins(): array
     {
@@ -311,7 +311,7 @@ use Spryker\Zed\ProductOptionStorage\ProductOptionStorageDependencyProvider as S
 class ProductOptionStorageDependencyProvider extends SprykerProductOptionStorageDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ProductOptionStorageExtension\Dependency\Plugin\ProductOptionCollectionFilterPluginInterface[]
+     * @return array<\Spryker\Zed\ProductOptionStorageExtension\Dependency\Plugin\ProductOptionCollectionFilterPluginInterface>
      */
     protected function getProductOptionCollectionFilterPlugins(): array
     {
@@ -345,7 +345,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface[]
+     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
      */
     protected function getMerchantProductOptionStoragePlugins(): array
     {

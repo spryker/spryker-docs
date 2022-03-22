@@ -43,7 +43,7 @@ use Spryker\Yves\MerchantShipment\Plugin\CustomerPage\MerchantShipmentCheckoutAd
 class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyProvider
 {
     /**
-     * @return \SprykerShop\Yves\CustomerPageExtension\Dependency\Plugin\CheckoutAddressStepPreGroupItemsByShipmentPluginInterface[]
+     * @return array<\SprykerShop\Yves\CustomerPageExtension\Dependency\Plugin\CheckoutAddressStepPreGroupItemsByShipmentPluginInterface>
      */
     protected function getCheckoutAddressStepPreGroupItemsByShipmentPlugins(): array
     {

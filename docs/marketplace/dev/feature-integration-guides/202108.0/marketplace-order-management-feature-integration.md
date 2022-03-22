@@ -83,7 +83,7 @@ class MerchantOmsConfig extends SprykerMerchantOmsConfig
     protected const MAIN_MERCHANT_STATE_MACHINE_INITIAL_STATE = 'created';
 
     /**
-     * @return string[]
+     * @return array<string>
      */
     public function getMerchantProcessInitialStateMap(): array
     {
@@ -98,7 +98,7 @@ class MerchantOmsConfig extends SprykerMerchantOmsConfig
     /**
      * @api
      *
-     * @return string[]
+     * @return array<string>
      */
     public function getMerchantOmsProcesses(): array
     {
@@ -713,7 +713,7 @@ use Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport\Mer
 class DataExportDependencyProvider extends SprykerDataExportDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\DataExportExtension\Dependency\Plugin\DataEntityExporterPluginInterface[]
+     * @return array<\Spryker\Zed\DataExportExtension\Dependency\Plugin\DataEntityExporterPluginInterface>
      */
     protected function getDataEntityExporterPlugins(): array
     {
@@ -801,7 +801,7 @@ use Spryker\Zed\Sales\SalesDependencyProvider as SprykerSalesDependencyProvider;
 class SalesDependencyProvider extends SprykerSalesDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\SalesExtension\Dependency\Plugin\OrderExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderExpanderPluginInterface>
      */
     protected function getOrderHydrationPlugins(): array
     {
@@ -812,7 +812,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemExpanderPreSavePluginInterface[]
+     * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemExpanderPreSavePluginInterface>
      */
     protected function getOrderItemExpanderPreSavePlugins(): array
     {
@@ -823,7 +823,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemsTableExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemsTableExpanderPluginInterface>
      */
     protected function getOrderItemsTableExpanderPlugins(): array
     {
@@ -852,7 +852,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Symfony\Component\Console\Command\Command[]
+     * @return array<\Symfony\Component\Console\Command\Command>
      */
     protected function getConsoleCommands(Container $container): array
     {
@@ -879,7 +879,7 @@ use Spryker\Zed\MerchantSalesOrder\MerchantSalesOrderDependencyProvider as Spryk
 class MerchantSalesOrderDependencyProvider extends SprykerMerchantSalesOrderDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\MerchantSalesOrderExtension\Dependency\Plugin\MerchantOrderPostCreatePluginInterface[]
+     * @return array<\Spryker\Zed\MerchantSalesOrderExtension\Dependency\Plugin\MerchantOrderPostCreatePluginInterface>
      */
     protected function getMerchantOrderPostCreatePlugins(): array
     {
@@ -889,7 +889,7 @@ class MerchantSalesOrderDependencyProvider extends SprykerMerchantSalesOrderDepe
     }
 
     /**
-     * @return \Spryker\Zed\MerchantSalesOrderExtension\Dependency\Plugin\MerchantOrderExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\MerchantSalesOrderExtension\Dependency\Plugin\MerchantOrderExpanderPluginInterface>
      */
     protected function getMerchantOrderExpanderPlugins(): array
     {
@@ -920,7 +920,7 @@ use Spryker\Zed\StateMachine\StateMachineDependencyProvider as SprykerStateMachi
 class StateMachineDependencyProvider extends SprykerStateMachineDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\StateMachine\Dependency\Plugin\StateMachineHandlerInterface[]
+     * @return array<\Spryker\Zed\StateMachine\Dependency\Plugin\StateMachineHandlerInterface>
      */
     protected function getStateMachineHandlers()
     {
@@ -1081,7 +1081,7 @@ use Spryker\Zed\Shipment\ShipmentDependencyProvider as SprykerShipmentDependency
 class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ShipmentExtension\Dependency\Plugin\ShipmentExpenseExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\ShipmentExtension\Dependency\Plugin\ShipmentExpenseExpanderPluginInterface>
      */
     protected function getShipmentExpenseExpanderPlugins(): array
     {
@@ -1108,7 +1108,7 @@ use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as Spryke
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
-     * @return string[]
+     * @return array<string>
      */
     protected function getGlobalWidgets(): array
     {

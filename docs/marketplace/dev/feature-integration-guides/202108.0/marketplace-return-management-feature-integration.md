@@ -465,7 +465,7 @@ class SalesReturnDependencyProvider extends SprykerSalesReturnDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\SalesReturnExtension\Dependency\Plugin\ReturnExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\SalesReturnExtension\Dependency\Plugin\ReturnExpanderPluginInterface>
      */
     protected function getReturnExpanderPlugins(): array
     {
@@ -927,7 +927,7 @@ use Spryker\Zed\SalesReturnGui\SalesReturnGuiDependencyProvider as SprykerSalesR
 class SalesReturnGuiDependencyProvider extends SprykerSalesReturnGuiDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\SalesReturnGuiExtension\Dependency\Plugin\ReturnCreateTemplatePluginInterface[]
+     * @return array<\Spryker\Zed\SalesReturnGuiExtension\Dependency\Plugin\ReturnCreateTemplatePluginInterface>
      */
     protected function getReturnCreateTemplatePlugins(): array
     {
@@ -1066,7 +1066,7 @@ use SprykerShop\Yves\MerchantSalesReturnWidget\Widget\MerchantSalesReturnCreateF
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
-     * @return string[]
+     * @return array<string>
      */
     protected function getGlobalWidgets(): array
     {
@@ -1075,7 +1075,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
         ];
     }
     /**
-     * @return \SprykerShop\Yves\ShopApplicationExtension\Dependency\Plugin\WidgetCacheKeyGeneratorStrategyPluginInterface[]
+     * @return array<\SprykerShop\Yves\ShopApplicationExtension\Dependency\Plugin\WidgetCacheKeyGeneratorStrategyPluginInterface>
      */
     protected function getWidgetCacheKeyGeneratorStrategyPlugins(): array
     {

@@ -166,7 +166,7 @@ use SprykerShop\Yves\MerchantSwitcherWidget\Plugin\Router\MerchantSwitcherWidget
 class RouterDependencyProvider extends SprykerRouterDependencyProvider
 {
     /**
-     * @return \Spryker\Yves\RouterExtension\Dependency\Plugin\RouteProviderPluginInterface[]
+     * @return array<\Spryker\Yves\RouterExtension\Dependency\Plugin\RouteProviderPluginInterface>
      */
     protected function getRouteProvider(): array
     {
@@ -195,7 +195,7 @@ use SprykerShop\Yves\MerchantSwitcherWidget\Plugin\ShopApplication\MerchantShopC
 class ShopContextDependencyProvider extends SprykerShopContextDependencyProvider
 {
     /**
-     * @return \Spryker\Shared\ShopContextExtension\Dependency\Plugin\ShopContextExpanderPluginInterface[]
+     * @return array<\Spryker\Shared\ShopContextExtension\Dependency\Plugin\ShopContextExpanderPluginInterface>
      */
     protected function getShopContextExpanderPlugins(): array
     {
@@ -222,7 +222,7 @@ class SearchElasticsearchDependencyProvider extends SprykerSearchElasticsearchDe
     /**
      * @param \Spryker\Client\Kernel\Container $container
      *
-     * @return \Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigExpanderPluginInterface[]
+     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigExpanderPluginInterface>
      */
     protected function getSearchConfigExpanderPlugins(Container $container): array
     {
@@ -251,7 +251,7 @@ use SprykerShop\Yves\MerchantSwitcherWidget\Plugin\ShopApplication\MerchantShopC
 class ShopContextDependencyProvider extends SprykerShopContextDependencyProvider
 {
     /**
-     * @return \Spryker\Shared\ShopContextExtension\Dependency\Plugin\ShopContextExpanderPluginInterface[]
+     * @return array<\Spryker\Shared\ShopContextExtension\Dependency\Plugin\ShopContextExpanderPluginInterface>
      */
     protected function getShopContextExpanderPlugins(): array
     {
@@ -283,7 +283,7 @@ use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as Spryke
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
-     * @return string[]
+     * @return array<string>
      */
     protected function getGlobalWidgets(): array
     {

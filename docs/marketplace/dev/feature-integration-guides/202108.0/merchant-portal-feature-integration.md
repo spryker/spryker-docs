@@ -152,9 +152,9 @@ class AclConfig extends SprykerAclConfig
     }
 
      /**
-     * @param string[][] $installerRules
+     * @param array<array<string>> $installerRules
      *
-     * @return string[][]
+     * @return array<array<string>>
      */
     protected function addMerchantPortalInstallerRules(array $installerRules): array
     {
@@ -223,7 +223,7 @@ Use `\Spryker\Zed\AclEntityDummyProduct\Communication\DummyProductAclEntityMetad
      class AclEntityDependencyProvider extends SprykerAclEntityDependencyProvider
      {
          /**
-          * @return \Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface[]
+          * @return array<\Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface>
           */
           protected function getAclEntityMetadataCollectionExpanderPlugins(): array
           {
@@ -328,7 +328,7 @@ use Spryker\Zed\ZedNavigation\ZedNavigationDependencyProvider as SprykerZedNavig
 class ZedNavigationDependencyProvider extends SprykerZedNavigationDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ZedNavigationExtension\Dependency\Plugin\NavigationItemCollectionFilterPluginInterface[]
+     * @return array<\Spryker\Zed\ZedNavigationExtension\Dependency\Plugin\NavigationItemCollectionFilterPluginInterface>
      */
     protected function getNavigationItemCollectionFilterPlugins(): array
     {

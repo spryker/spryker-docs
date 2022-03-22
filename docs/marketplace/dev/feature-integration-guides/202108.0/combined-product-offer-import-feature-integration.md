@@ -290,7 +290,7 @@ use Pyz\Zed\MerchantProductOfferDataImport\Business\Model\DataSet\CombinedMercha
 class CombinedMerchantProductOfferMandatoryColumnCondition extends CombinedProductMandatoryColumnCondition
 {
     /**
-     * @return string[]
+     * @return array<string>
      */
     protected function getMandatoryColumns(): array
     {
@@ -319,7 +319,7 @@ use Pyz\Zed\MerchantProductOfferDataImport\Business\Model\DataSet\CombinedMercha
 class CombinedMerchantProductOfferStoreMandatoryColumnCondition extends CombinedProductMandatoryColumnCondition
 {
     /**
-     * @return string[]
+     * @return array<string>
      */
     protected function getMandatoryColumns(): array
     {
@@ -621,7 +621,7 @@ use Pyz\Zed\PriceProductOfferDataImport\Business\Model\DataSet\CombinedPriceProd
 class CombinedPriceProductOfferMandatoryColumnCondition extends CombinedProductMandatoryColumnCondition
 {
     /**
-     * @return string[]
+     * @return array<string>
      */
     protected function getMandatoryColumns(): array
     {
@@ -1097,7 +1097,7 @@ use Pyz\Zed\ProductOfferStockDataImport\Business\Model\DataSet\CombinedProductOf
 class CombinedProductOfferStockMandatoryColumnCondition extends CombinedProductMandatoryColumnCondition
 {
     /**
-     * @return string[]
+     * @return array<string>
      */
     protected function getMandatoryColumns(): array
     {
@@ -1454,7 +1454,7 @@ use Pyz\Zed\ProductOfferValidityDataImport\Business\Model\DataSet\CombinedProduc
 class CombinedProductOfferValidityMandatoryColumnCondition extends CombinedProductMandatoryColumnCondition
 {
     /**
-     * @return string[]
+     * @return array<string>
      */
     protected function getMandatoryColumns(): array
     {

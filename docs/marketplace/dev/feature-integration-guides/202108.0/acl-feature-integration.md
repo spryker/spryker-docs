@@ -158,7 +158,7 @@ use Spryker\Zed\EventDispatcher\EventDispatcherDependencyProvider as SprykerEven
 class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider
 {
     /**
-    * @return \Spryker\Shared\EventDispatcherExtension\Dependency\Plugin\EventDispatcherPluginInterface[]
+    * @return array<\Spryker\Shared\EventDispatcherExtension\Dependency\Plugin\EventDispatcherPluginInterface>
     */
     protected function getEventDispatcherPlugins(): array
     {
@@ -182,7 +182,7 @@ use Spryker\Zed\ZedNavigation\ZedNavigationDependencyProvider as SprykerZedNavig
 class ZedNavigationDependencyProvider extends SprykerZedNavigationDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ZedNavigationExtension\Dependency\Plugin\NavigationItemCollectionFilterPluginInterface[]
+     * @return array<\Spryker\Zed\ZedNavigationExtension\Dependency\Plugin\NavigationItemCollectionFilterPluginInterface>
      */
     protected function getNavigationItemCollectionFilterPlugins(): array
     {
@@ -206,7 +206,7 @@ use Spryker\Zed\Installer\InstallerDependencyProvider as SprykerInstallerDepende
 class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\Installer\Dependency\Plugin\InstallerPluginInterface[]
+     * @return array<\Spryker\Zed\Installer\Dependency\Plugin\InstallerPluginInterface>
      */
     public function getInstallerPlugins()
     {
@@ -260,7 +260,7 @@ use Spryker\Zed\AclEntity\Communication\Plugin\Acl\AclRulesAclRolesExpanderPlugi
 class AclDependencyProvider extends SprykerAclDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\AclExtension\Dependency\Plugin\AclRolesExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\AclExtension\Dependency\Plugin\AclRolesExpanderPluginInterface>
      */
     protected function getAclRolesExpanderPlugins(): array
     {
@@ -270,7 +270,7 @@ class AclDependencyProvider extends SprykerAclDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\AclExtension\Dependency\Plugin\AclRolePostSavePluginInterface[]
+     * @return array<\Spryker\Zed\AclExtension\Dependency\Plugin\AclRolePostSavePluginInterface>
      */
     protected function getAclRolePostSavePlugins(): array
     {
@@ -296,7 +296,7 @@ use Spryker\Zed\MerchantPortalApplication\MerchantPortalApplicationDependencyPro
 class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalApplicationDependencyProvider
 {
    /**
-     * @return \Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface[]
+     * @return array<\Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface>
      */
     protected function getMerchantPortalApplicationPlugins(): array
     {

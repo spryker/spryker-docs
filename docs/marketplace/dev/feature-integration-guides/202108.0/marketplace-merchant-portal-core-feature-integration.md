@@ -82,7 +82,7 @@ use Spryker\Zed\Twig\TwigDependencyProvider as SprykerTwigDependencyProvider;
 class TwigDependencyProvider extends SprykerTwigDependencyProvider
 {
     /**
-     * @return \Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface[]
+     * @return array<\Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface>
      */
     protected function getTwigPlugins(): array
     {
@@ -109,7 +109,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 {
 
     /**
-     * @return \Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface[]
+     * @return array<\Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface>
      */
     protected function getApplicationPlugins(): array
     {
@@ -135,7 +135,7 @@ use Spryker\Zed\User\Communication\Plugin\Security\UserSessionHandlerSecurityPlu
 class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 {
     /**
-     * @return \Spryker\Shared\SecurityExtension\Dependency\Plugin\SecurityPluginInterface[]
+     * @return array<\Spryker\Shared\SecurityExtension\Dependency\Plugin\SecurityPluginInterface>
      */
     protected function getSecurityPlugins(): array
     {
@@ -161,7 +161,7 @@ use Spryker\Zed\UserMerchantPortalGui\UserMerchantPortalGuiDependencyProvider as
 class UserMerchantPortalGuiDependencyProvider extends SprykerUserMerchantPortalGuiDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\UserMerchantPortalGuiExtension\Dependency\Plugin\MerchantUserPostChangePluginInterface[]
+     * @return array<\Spryker\Zed\UserMerchantPortalGuiExtension\Dependency\Plugin\MerchantUserPostChangePluginInterface>
      */
     public function getMerchantUserPostChangePlugins(): array
     {
@@ -186,7 +186,7 @@ use Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity\MerchantPortalA
 class AclEntityDependencyProvider extends SprykerAclEntityDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface>
      */
     protected function getAclEntityMetadataCollectionExpanderPlugins(): array
     {
@@ -209,7 +209,7 @@ use Spryker\Zed\Merchant\MerchantDependencyProvider as SprykerMerchantDependency
 class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantPostCreatePluginInterface[]
+     * @return array<\Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantPostCreatePluginInterface>
      */
     protected function getMerchantPostCreatePlugins(): array
     {
@@ -233,7 +233,7 @@ use Spryker\Zed\MerchantUser\MerchantUserDependencyProvider as SprykerMerchantUs
 class MerchantUserDependencyProvider extends SprykerMerchantUserDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\MerchantUserExtension\Dependency\Plugin\MerchantUserPostCreatePluginInterface[]
+     * @return array<\Spryker\Zed\MerchantUserExtension\Dependency\Plugin\MerchantUserPostCreatePluginInterface>
      */
     protected function getMerchantUserPostCreatePlugins(): array
     {
@@ -257,7 +257,7 @@ use Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser\ProductViewe
 class AclDependencyProvider extends SprykerAclDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\AclExtension\Dependency\Plugin\AclInstallerPluginInterface[]
+     * @return array<\Spryker\Zed\AclExtension\Dependency\Plugin\AclInstallerPluginInterface>
      */
     protected function getAclInstallerPlugins(): array
     {
@@ -298,7 +298,7 @@ use Spryker\Zed\ZedUi\Communication\Plugin\Application\ZedUiApplicationPlugin;
 class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalApplicationDependencyProvider
 {
     /**
-     * @return \Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface[]
+     * @return array<\Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface>
      */
     protected function getMerchantPortalApplicationPlugins(): array
     {
@@ -363,7 +363,7 @@ use Spryker\Zed\Router\RouterDependencyProvider as SprykerRouterDependencyProvid
 class RouterDependencyProvider extends SprykerRouterDependencyProvider
 {
     /**
-     * @return array|\Spryker\Zed\RouterExtension\Dependency\Plugin\RouterPluginInterface[]
+     * @return array|array<\Spryker\Zed\RouterExtension\Dependency\Plugin\RouterPluginInterface>
      */
     protected function getMerchantPortalRouterPlugins(): array
     {
@@ -408,7 +408,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Symfony\Component\Console\Command\Command[]
+     * @return array<\Symfony\Component\Console\Command\Command>
      */
     protected function getConsoleCommands(Container $container): array
     {
@@ -914,7 +914,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Symfony\Component\Console\Command\Command[]
+     * @return array<\Symfony\Component\Console\Command\Command>
      */
     protected function getConsoleCommands(Container $container): array
     {
@@ -1103,9 +1103,9 @@ class AclConfig extends SprykerAclConfig
     protected const RULE_TYPE_DENY = 'deny';
 
     /**
-     * @param string[][] $installerRules
+     * @param array<array<string>> $installerRules
      *
-     * @return string[][]
+     * @return array<array<string>>
      */
     protected function addMerchantPortalInstallerRules(array $installerRules): array
     {

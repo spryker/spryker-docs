@@ -118,7 +118,7 @@ use Spryker\Zed\MerchantCategory\Communication\Plugin\RemoveMerchantCategoryRela
 class CategoryDependencyProvider extends SprykerDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\Category\Dependency\Plugin\CategoryRelationDeletePluginInterface[]|\Spryker\Zed\CategoryExtension\Dependency\Plugin\CategoryRelationDeletePluginInterface[]
+     * @return array<\Spryker\Zed\Category\Dependency\Plugin\CategoryRelationDeletePluginInterface>|array<\Spryker\Zed\CategoryExtension\Dependency\Plugin\CategoryRelationDeletePluginInterface>
      */
     protected function getRelationDeletePluginStack(): array
     {
@@ -152,7 +152,7 @@ use Spryker\Zed\MerchantCategory\Communication\Plugin\Merchant\MerchantCategoryM
 class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantExpanderPluginInterface>
      */
     protected function getMerchantExpanderPlugins(): array
     {
@@ -182,7 +182,7 @@ use Spryker\Zed\MerchantSearch\MerchantSearchDependencyProvider as SprykerMercha
 class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\MerchantSearchExtension\Dependency\Plugin\MerchantSearchDataExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\MerchantSearchExtension\Dependency\Plugin\MerchantSearchDataExpanderPluginInterface>
      */
     protected function getMerchantSearchDataExpanderPlugins(): array
     {
@@ -339,7 +339,7 @@ use Spryker\Client\MerchantSearch\MerchantSearchDependencyProvider as SprykerMer
 class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyProvider
 {
     /**
-     * @return \Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface[]
+     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>
      */
     protected function getMerchantSearchQueryExpanderPlugins(): array
     {

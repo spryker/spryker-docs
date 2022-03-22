@@ -257,7 +257,22 @@ jobs:
 
       - run: bundle exec rake check_paas_plus
 
+  last_updated_validation:
+    name: last_updated validation
+    runs-on: ubuntu-latest
 
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup
+        run: |
+          cd ./_plugins/last_updated_validator
+          composer install --prefer-dist --no-progress
+
+      - name: Run validator command
+        run: |
+          cd ./_plugins/last_updated_validator
+          php validate docs
 
   page_validation:
     name: Page validation

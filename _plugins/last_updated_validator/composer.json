@@ -1,0 +1,12 @@
+{
+    "require": {
+        "symfony/finder": "^5.4",
+        "spatie/yaml-front-matter": "^2.0",
+        "symfony/console": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Validator\\": "Validator/"
+        }
+    }
+}

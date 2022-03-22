@@ -49,6 +49,6 @@ You can delete a review, so it will no longer be shown on the **List of product 
 Keep in mind that there is no confirmation screen or pop-up shown. The review is deleted right after you click **Delete**.
 {% endinfo_block %}
 
-**Tips & Tricks**
+**Tips and tricks**
 
 You can quickly navigate to the **View Product Abstract** or **View Customer** page in the Back Office. Click the hyperlinked **Product Name** or **Customer** value in the **List of product reviews** table. 

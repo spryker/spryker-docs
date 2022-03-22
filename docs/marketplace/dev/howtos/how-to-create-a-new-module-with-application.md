@@ -5,7 +5,7 @@ description: This document provides details how to create new module with applic
 template: howto-guide-template
 ---
 
-This article describes how to create a new module with the application.
+This document describes how to create a new module with the application.
 
 ## 1) Create module scaffolding structure
 

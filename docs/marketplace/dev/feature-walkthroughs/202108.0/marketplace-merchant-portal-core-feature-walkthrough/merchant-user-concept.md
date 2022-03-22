@@ -5,7 +5,7 @@ description: Merchant User in Merchant portal.
 template: concept-topic-template
 ---
 
-This article provides a short overview of Merchant User concept in the Spryker Marketplace.
+This document provides a short overview of Merchant User concept in the Spryker Marketplace.
 
 ## Merchant User structure
 
@@ -27,7 +27,7 @@ To avoid technical debt in the future, never use `UserFacade` directly in Mercha
 
 {% endinfo_block %}
 
-The diagram below illustrates merchant user relations:
+The following diagram illustrates merchant user relations:
 
 ![Merchant User relations](https://confluence-connect.gliffy.net/embed/image/6a8b09b8-f7a0-4f92-8728-6bcd056c1f2e.png?utm_medium=live&utm_source=confluence)
 

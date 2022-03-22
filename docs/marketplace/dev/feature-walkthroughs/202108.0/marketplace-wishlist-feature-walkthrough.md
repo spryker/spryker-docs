@@ -1,7 +1,6 @@
 ---
 title: Marketplace Wishlist feature walkthrough
-last_updated: Jan 26, 2022
-description: This article provides technical details on the Marketplace Wishlist feature.
+description: This document provides technical details about the Marketplace Wishlist feature.
 template: feature-walkthrough-template
 ---
 

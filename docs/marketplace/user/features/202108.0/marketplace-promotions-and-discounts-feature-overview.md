@@ -121,7 +121,7 @@ With the rule groups, you can build multiple levels of rule hierarchy. When a ca
 
 ![Decision rule hierarchy](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+%26+Discounts/Discount/Discount+Feature+Overview/decision-rule-hierarchy.png)
 
-When a cart is evaluated on a level that has a rule and a rule group, the rule group is treated as a single rule. The diagram below shows how a cart is evaluated against the rules on the previous screenshot.
+When a cart is evaluated on a level that has a rule and a rule group, the rule group is treated as a single rule. The following diagram shows how a cart is evaluated against the rules on the previous screenshot.
 
 ### Discount threshold
 *Threshold* is a minimum number of items in cart that should fulfill all the specified decision rules for the discount to be applied.
@@ -139,7 +139,7 @@ The Marketplace discounts are applied based on the query string.
 
 The *query string* is a discount application type that uses [decision rules](#decision-rule) to dynamically define what products a discount applies to.
 
-The discount in the example below, applies to white products.
+The discount in the following example, applies to white products.
 ![Query collection](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/collection-query.png)
 The product selection based on the query string is dynamic:
 * If, at some point, the color attribute of a product changes from white to anything else, the product is no longer eligible to be discounted.
@@ -160,7 +160,7 @@ With the calculator fixed type, the currency of the respective shop is used for 
 {% endinfo_block %}
 
 
-See examples in the table below.
+See examples in the following table.
 | Product price | Calculation type | Amount | Discount applied | Price to pay |
 | --- | --- | --- | --- | --- |
 | €50 |  Calculator percentage | 10 | €5 | €45 |

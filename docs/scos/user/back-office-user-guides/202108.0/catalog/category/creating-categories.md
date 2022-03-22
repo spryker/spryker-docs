@@ -151,7 +151,7 @@ To use a template with slots, make sure the [Templates and slots](/docs/scos/dev
 
 Select such a template to have slots for this category page. Slots can embed content from CMS Blocks and technology partner integrations. See [Templates and slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html) for more details.
 
-**Tips & tricks**
+**Tips and tricks**
 <br>When you already know the exact parent category under which the category that you create is going to be nested, you can click **Add category to this node** for a specific parent category. This redirects you to the *Create category* page where you can perform the steps described above. The only difference is that the *Parent* field is auto-populated with the needed value.
 
 The same products can be assigned to multiple categories.

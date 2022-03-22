@@ -40,7 +40,7 @@ There is no difference between how you initiate the flow. In any event, you will
 3. Once done, click **Save**.
 
 
-**Tips & Tricks**
+**Tips and tricks**
 
 Let's say you have assigned too many products to your category and you need to remove some of them.
 1. On the same **Assign Products** page, scroll down. You will see the **Products in this category** section.

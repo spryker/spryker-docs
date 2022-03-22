@@ -5,12 +5,11 @@ description: This articles provides details how to create a new GUI module
 template: howto-guide-template
 ---
 
-This article describes how to create a new GUI module and add it to navigation.
+This document describes how to create a new GUI module and add it to navigation.
 
 ## Prerequisites
 
-Follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-merchant-portal-core-feature-integration.html)
-to install the Marketplace Merchant Portal Core feature providing the `ZedUi`, `Navigation` and ACL related modules.
+To install the Marketplace Merchant Portal Core feature providing the `ZedUi`, `Navigation` and ACL related modules, follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-merchant-portal-core-feature-integration.html).
 
 ## 1) Create a new module
 
@@ -40,6 +39,7 @@ class ExampleController extends AbstractController
 **src/Pyz/Zed/ExampleMerchantPortalGui/Presentation/Test/index.twig**
 
 {% raw %}
+
 ```twig
 {% extends '@ZedUi/Layout/merchant-layout-main.twig' %}
 {% import _self as view %}
@@ -53,11 +53,12 @@ class ExampleController extends AbstractController
 {% endblock %}
 
 ```
+
 {% endraw %}
 
 ## 2) Set up ACL rules
 
-Adjust `Spryker\Zed\AclMerchantPortal\AclMerchantPortalConfig::getMerchantAclRoleRules()` - add a newly introduced module to the allowed bundles list.
+Adjust `Spryker\Zed\AclMerchantPortal\AclMerchantPortalConfig::getMerchantAclRoleRules()`—add a newly introduced module to the allowed bundles list.
 
 ```php
     public function getMerchantAclRoleRules(): array
@@ -98,7 +99,7 @@ Check the `spy_acl_rule` database table and make sure that ACL rules for `exampl
 
 {% endinfo_block %}
 
-To deny access to Back Office users, adjust `Pyz/Zed/Acl/AclConfig::getInstallerRules()`` to disallow `example-merchant-portal-gui` bundle.
+To deny access to Back Office users, adjust `Pyz/Zed/Acl/AclConfig::getInstallerRules()` to disallow the `example-merchant-portal-gui` bundle.
 
 ```php
     public function getInstallerRules()
@@ -139,7 +140,7 @@ To deny access to Back Office users, adjust `Pyz/Zed/Acl/AclConfig::getInstaller
 
 ## 3) Navigation
 
-Adjust `config/Zed/navigation.xml with a link for a new page:
+Adjust `config/Zed/navigation.xml` with a link for a new page:
 
 **config/Zed/navigation.xml**
 
@@ -158,7 +159,7 @@ Adjust `config/Zed/navigation.xml with a link for a new page:
 </config>
 ```
 
-Execute a console command to add a new navigation item:
+Add a new navigation item:
 
 ```bash
 console navigation:build-cache

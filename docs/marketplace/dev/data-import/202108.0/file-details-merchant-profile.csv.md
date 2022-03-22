@@ -20,7 +20,7 @@ The file should have the following parameters:
 |-|-|-|-|-|-|
 | merchant_reference | &check; | String |   |  Unique | Identifier of the merchant in the system. |
 | contact_person_role |   | String |   |   | Role the contact person performs. |
-| contact_person_title |   | String |   |   | A formal salutation for your contact person (e.g. Mr, Ms, Mrs, Dr). |
+| contact_person_title |   | String |   |   | A formal salutation for your contact person (for example,Mr, Ms, Mrs, Dr). |
 | contact_person_first_name |   | String |   |   | First name of the contact person. |
 | contact_person_last_name |   | String |   |   | Last name of the contact person. |
 | contact_person_phone |   | String |   |   | Phone number of the contact person. |

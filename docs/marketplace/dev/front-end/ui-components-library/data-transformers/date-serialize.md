@@ -11,7 +11,7 @@ This document explains the Data Transformer Date-serialize service in the Compon
 
 Data Transformer Date-serialize is an Angular Service that serializes JS Date Object into a Date ISO string.
 
-In the example below, the `datasource` transforms `date` object into the serialized `date` string.
+In the following example, the `datasource` transforms `date` object into the serialized `date` string.
 
 ```html
 <spy-select

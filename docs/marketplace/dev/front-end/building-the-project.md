@@ -1,11 +1,10 @@
 ---
 title: Building the project
-last_updated: Jan 26, 2022
-description: This article provides details how to build the frontend part of the Merchant Portal.
+description: This document provides details how to build the frontend part of the Merchant Portal.
 template: concept-topic-template
 ---
 
-This article provides details how to build the front-end part of the Merchant Portal.
+This document provides details how to build the front-end part of the Merchant Portal.
 
 ## Overview
 Spryker uses [webpack](https://webpack.js.org/guides/getting-started/) to build front-end.

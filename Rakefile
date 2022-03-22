@@ -30,8 +30,9 @@ commonOptions = {
     /www.vagrantup.com\/[\.\w\-\/\?]+/,
     /stackoverflow.com\/[\.\w\-\/\?]+/,
     /symfony.com\/[\.\w\-\/\?]+/,
-    /code.jquery.com\/[\.\w\-\/\?]+/,    
+    /code.jquery.com\/[\.\w\-\/\?]+/,
     /console.aws.amazon.com\/[\.\w\-\/\?]+/,
+    /www.computop.com\/[\.\w\-\/\?]+/,    
     /shopify.github.io\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],

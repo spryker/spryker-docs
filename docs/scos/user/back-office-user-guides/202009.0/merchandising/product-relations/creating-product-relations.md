@@ -40,7 +40,7 @@ To start working with product relations, go to **Merchandising** > **Product Rel
 9. To keep the changes, click **Save**. The table is automatically updated to display the abstract product that fulfills the specified rules/groups.
 
 
-**Tips & Tricks**
+**Tips and tricks**
 
 * If you want a product relation to be displayed on the *Product details* page or the *Cart* page, define at least one **Store relation**.
 * Filter the products in the **Select product** table by entering a product name or SKU in the **Search** field.

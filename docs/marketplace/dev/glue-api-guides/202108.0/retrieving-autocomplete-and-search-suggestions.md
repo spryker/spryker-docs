@@ -1,11 +1,10 @@
 ---
 title: Retrieving autocomplete and search suggestions
-last_updated: Jan 26, 2022
-description: This article provides information on which endpoints to use to get search and auto-completion suggestions for your products, categories, and CMS fields
+description: This document provides information on which endpoints to use to get search and auto-completion suggestions for your products, categories, and CMS fields
 template: glue-api-storefront-guide-template
 ---
 
-In addition to [catalog search](/docs/scos/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html), Glue API allows you to retrieve autocomplete suggestions for products, categories, and CMS pages. The feature allows developers to predict search strings and provide customers with available options.
+In addition to [catalog search](/docs/scos/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html), Glue API lets you retrieve autocomplete suggestions for products, categories, and CMS pages. The feature allows developers to predict search strings and provide customers with available options.
 
 In your development, this resource can help you to enhance the customer experience by providing the relevant information for search, product filters, shopping cart, checkout, order history, wishlist, and many more.
 
@@ -25,7 +24,7 @@ To retrieve a search suggestion, send the request:
 
 | QUERY PARAMETER | DESCRIPTION  | POSSIBLE VALUES|
 | ---------------- | -------------------- | -------------------- |
-| q    | Restricts the returned items to the values of the provided parameters. | <ul><li>{% raw %}{{abstract_product_sku}}{% endraw %}</li><li>{% raw %}{{concrete_product_sku}}{% endraw %}</li><li>{% raw %}{{abstract_product_name}}{% endraw %}</li><li>{% raw %}{{product_attribute}} (for example, brand, color, etc.)—to provide multiple product attributes, use '+'</li><li>{% raw %}{{category_name}}{% endraw %}</li></ul> |
+| q    | Restricts the returned items to the values of the provided parameters. | <ul><li>{% raw %}{{abstract_product_sku}}{% endraw %}</li><li>{% raw %}{{concrete_product_sku}}{% endraw %}</li><li>{% raw %}{{abstract_product_name}}{% endraw %}</li><li>{% raw %}{{product_attribute}} (for example, brand, color)—to provide multiple product attributes, use '+'</li><li>{% raw %}{{category_name}}{% endraw %}</li></ul> |
 | include | Adds resource relationships to the request. | abstract-products  |
 | currency | Sets a currency. | {% raw %}{{currency}}{% endraw %} |
 | priceMode  | Sets a price mode.  | <ul><li>NET_MODE</li><li>GROSS_MODE</li></ul> |

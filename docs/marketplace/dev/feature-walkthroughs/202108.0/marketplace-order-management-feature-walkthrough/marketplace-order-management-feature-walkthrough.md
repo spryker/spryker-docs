@@ -1,9 +1,8 @@
 ---
 title: Marketplace Order Management feature walkthrough
-last_updated: Jan 26, 2022
-description: The Marketplace Order Management feature allows Marketplace customers to place orders.
+description: The Marketplace Order Management feature lets Marketplace customers place orders.
 template: feature-walkthrough-template
-related: 
+related:
     - title: MerchantOms
       link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-order-management-feature-walkthrough/merchant-oms.html
     - title: Marketplace Shipment
@@ -17,7 +16,7 @@ related:
 ---
 
 
-*Marketplace Order Management* enables splitting orders into merchant orders and allowing product offers to be bought directly from a Storefront.
+*Marketplace Order Management* enables splitting orders into merchant orders and letting product offers be bought directly from a Storefront.
 The orders are designed to be used by the Marketplace operator, while the merchant orders are always connected to a merchant. See [Marketplace domain model](/docs/marketplace/dev/architecture-overview/marketplace-domain-model.html) to learn more about the core Marketplace objects.
 
 By using `MerchantSalesOrderFacade::createMerchantOrderCollection()`, you can decide when to create merchant orders out of an order in your project. By default, it is created by `CreateMerchantOrdersCommandPlugin`.
@@ -73,10 +72,10 @@ Make sure that Merchants do not modify the order directly, but instead use [Merc
 In the Merchant Portal, merchants can view and manage their `MerchantOrders`.
 
 The information in the Merchant Portal is limited and includes:
-- customer information
-- shipment address
-- merchant order overview
-- totals
+- Customer information
+- Shipment address
+- Merchant order overview
+- Totals
 
 Merchant order uses its own totals based on order totals, restricted by the Merchant Order Item:
 - refundTotal

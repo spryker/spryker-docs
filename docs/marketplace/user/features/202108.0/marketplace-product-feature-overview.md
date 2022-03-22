@@ -15,20 +15,20 @@ The marketplace products are displayed on the Storefront when the following cond
 
 1. The product status is *Active*.
 2. The merchant who owns the product is [*Active*](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants).
-3. The product visibility state is `Online`.
+3. The product visibility state is *Online*.
 4. The product is defined for the current store.
 5. The product has stock or is always in stock.
 6. The current day is within the range of the product validity dates.
 
 ### Marketplace product on the product details page
 
-Marketplace product appears on top of the the *Sold by* list together with the product offers from other merchants. For a buyer, it doesn't matter whether they are buying a product offer or a marketplace product, however in the system, different entities are defined.
+Marketplace product appears on top of the **Sold by** list together with the product offers from other merchants. For a buyer, it doesn't matter whether they are buying a product offer or a marketplace product, however in the system, different entities are defined.
 
-Product price on top of the product details page is taken from the marketplace product or the product offer. It depends on the option selected in the *Sold by* box.
+Product price on top of the product details page is taken from the marketplace product or the product offer. It depends on the option selected in the **Sold by** field.
 
 ![marketplace product on PDP](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+product/merchant-product-on-pdp.png)
 
-The marketplace product is also displayed with the *Sold By* field defining the merchant on the following pages:
+The marketplace product is also displayed with the **Sold By** field defining the merchant on the following pages:
 
 - Cart page
 - Wishlist
@@ -56,7 +56,7 @@ Also, Marketplace administrators can edit products, if needed, and create produc
 
 
 ## Marketplace products in the Merchant Portal
-Merchants [create](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/creating-marketplace-concrete-product.html) and [manage their products](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product.html) in the Merchant Portal. They can [define prices](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product-prices.html), stock, [attributes](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-attributes.html) etc. for their products. 
+Merchants [create](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/creating-marketplace-concrete-product.html) and [manage their products](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product.html) in the Merchant Portal. They can [define prices](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product-prices.html), stock, and [attributes](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-attributes.html) for their products.
 
 ## Related Business User articles
 

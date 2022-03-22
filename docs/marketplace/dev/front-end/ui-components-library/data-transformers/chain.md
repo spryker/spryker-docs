@@ -11,7 +11,7 @@ This document explains the Data Transformer Chain service in the Components Libr
 
 Data Transformer Chain is an Angular Service that executes other Data Transformers in sequence via configuration.
 
-In the example below, the `datasource` returns an array with the transformed `date` in every child object using chained transformers.
+In the following example, the `datasource` returns an array with the transformed `date` in every child object using chained transformers.
 
 Service configuration:
 

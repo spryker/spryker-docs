@@ -1,7 +1,7 @@
 ---
 title: Viewing refunds
-description: The article provides reference information about attributes Back Office users see when viewing the list of refunds.
-last_updated: Jan 26, 2022
+description: Learn how to view refunds in the Back Office.
+last_updated: Aug 10, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/viewing-refunds
 originalArticleId: 36f1525b-6f90-41be-b0bf-75d368e91b8c
@@ -15,28 +15,18 @@ related:
     link: docs/scos/user/features/page.version/refunds-feature-overview.html
 ---
 
-This topic describes how to view refunds. 
+This document describes how to view refunds in the Back Office.
 
-## Viewing refunds
+To view refunds, go to **Sales** > **Refunds**.
 
-To view a list of refunds, navigate to **Sales** > **Refunds**. The *Overview of Refunds* page is displayed. 
+The **Refunds** page provides all the information about refunds. The refund items appear on this page when a Back Office user [changes the state of an item](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/changing-the-state-of-order-items.html) to **Refunded**. This usually happens when a customer returns an item or reports a faulty item.
 
 
-### Reference information: Viewing refunds
-
-On the *Overview of Refunds* page, you see the *List of refunds* table that contains detailed information about refunds. The page is meant to represent  information about refunds, so no actual actions can be done there.
-The following table describes attributes you see when viewing refunds on the *Overview of Refunds* page.
+The following table describes attributes you see when viewing refunds.
 
 | ATTRIBUTE | DESCRIPTION  |
 | --- | --- |
-| Refund Id| ID of a specific refund. |
-|Sales Order Id  | ID of the order that derives from **Sales** > **Orders**. |
-| Refund date | Date when a specific refund has been created.|
-| Amount | Amount of money to refund. This amount value derives from Item Total in **Sales** > **Orders**.|
-
-{% info_block infoBox "Receiving refunds" %}
-
-When a customer receives the items they ordered, they may encounter issues with some or all of them. In this case, a customer contacts the sales department asking them for a refund. A sales department representative navigates to the **Sales > Orders** section and opens the order. They change the status of the order item (or all items) to *return* and then to *refund*. Once this is done, an appropriate record appears in the *Refunds* section.
-
-{% endinfo_block %}
-
+| REFUND ID | Unique identifier of a refund. |
+| SALES ORDER ID | ID of the order this refund was created from. It derives from **Sales** > **Orders**. |
+| REFUND DATE | Date when a refund has been created.|
+| AMOUNT | Amount of money to refund. This value derives from the item price in the respective order.|

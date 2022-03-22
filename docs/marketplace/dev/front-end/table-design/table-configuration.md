@@ -1,11 +1,10 @@
 ---
 title: Table Configuration
-last_updated: Jan 26, 2022
-description: This articles provides details about the table configuration.
+description: This document provides details about the table configuration.
 template: concept-topic-template
 ---
 
-This article provides details on how to configure the table.
+This document provides details about how to configure the table.
 
 ## Overview
 

@@ -59,7 +59,7 @@ You should have a merchant relationship set up in **Merchants** > **Merchant Rel
 
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 
 Assigning products and categories to product lists is optional during the product list creation. You can create a product list with no values assigned and update it in a later event.
 

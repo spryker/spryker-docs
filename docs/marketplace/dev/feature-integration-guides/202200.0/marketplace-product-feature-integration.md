@@ -1,8 +1,8 @@
 ---
 title: Marketplace Product feature integration
-last_updated: Sep 10, 2021
 description: This document describes the process how to integrate the Marketplace Product feature into a Spryker project.
 template: feature-integration-guide-template
+last_updated: Mar 11, 2022
 ---
 
 This document describes how to integrate the Marketplace Product feature into a Spryker project.
@@ -167,16 +167,18 @@ Make sure that the merchant product data appears in the search engine and in the
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN | DESCRIPTION  | PREREQUISITES | NAMESPACE |
-| --------------------- | ------------------- | --------- | -------------------- |
-| MerchantProductProductAbstractViewActionViewDataExpanderPlugin | Expands view data for abstract product with merchant data.   |           | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement |
-| MerchantProductProductAbstractListActionViewDataExpanderPlugin | Expands product list data for abstract product data for merchant filter.   |           | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement |
-| MerchantProductProductTableQueryCriteriaExpanderPlugin       | Expands QueryCriteriaTransfer with QueryJoinTransfer for filtering by idMerchant. |           | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement |
-| MerchantProductAbstractMapExpanderPlugin                     | Adds merchant names to product abstract search data.         |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
-| MerchantProductPageDataExpanderPlugin                        | Expands the provided ProductAbstractPageSearch transfer object's data by merchant names. |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
-| MerchantProductPageDataLoaderPlugin                          | Expands ProductPageLoadTransfer object with merchant data.   |           | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
-| MerchantProductAbstractStorageExpanderPlugin                 | Expands product abstract storage data with merchant references. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\ProductStorage |
-| MerchantProductProductAbstractPostCreatePlugin | Creates a new merchant product abstract entity if `ProductAbstractTransfer.idMerchant` is set. | None | Spryker\Zed\MerchantProduct\Communication\Plugin\Product |
+| PLUGIN                                                         | DESCRIPTION                                                                                    | PREREQUISITES | NAMESPACE                                                                |
+|----------------------------------------------------------------|------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------|
+| MerchantProductProductAbstractViewActionViewDataExpanderPlugin | Expands view data for abstract product with merchant data.                                     |               | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement    |
+| MerchantProductProductAbstractListActionViewDataExpanderPlugin | Expands product list data for abstract product data for merchant filter.                       |               | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement    |
+| MerchantProductProductTableQueryCriteriaExpanderPlugin         | Expands QueryCriteriaTransfer with QueryJoinTransfer for filtering by idMerchant.              |               | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement    |
+| MerchantProductAbstractMapExpanderPlugin                       | Adds merchant names to product abstract search data.                                           |               | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
+| MerchantProductPageDataExpanderPlugin                          | Expands the provided ProductAbstractPageSearch transfer object's data by merchant names.       |               | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
+| MerchantProductPageDataLoaderPlugin                            | Expands ProductPageLoadTransfer object with merchant data.                                     |               | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
+| MerchantProductAbstractStorageExpanderPlugin                   | Expands product abstract storage data with merchant references.                                |               | Spryker\Zed\MerchantProductStorage\Communication\Plugin\ProductStorage   |
+| MerchantProductProductAbstractPostCreatePlugin                 | Creates a new merchant product abstract entity if `ProductAbstractTransfer.idMerchant` is set. | None          | Spryker\Zed\MerchantProduct\Communication\Plugin\Product                 |
+| ProductApprovalProductAbstractEditViewExpanderPlugin           | Expands view data with abstract product approval status data.                                  | None          | Spryker\Zed\ProductApprovalGui\Communication\Plugin\ProductManagement    |
+| MerchantProductProductAbstractEditViewExpanderPlugin           | Expands view data for abstract product with merchant data.                                     | None          | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement    |
 
 **src/Pyz/Zed/Product/ProductDependencyProvider.php**
 
@@ -200,19 +202,22 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that you can create a new product in the Merchant Portal and observe it after creation in the product data table.
 
 {% endinfo_block %}
 
-**src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php**
+<details><summary markdown='span'>src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php</summary>
 
 ```php
 <?php
 
 namespace Pyz\Zed\ProductManagement;
 
+use Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement\MerchantProductProductAbstractEditViewExpanderPlugin;
+use Spryker\Zed\ProductApprovalGui\Communication\Plugin\ProductManagement\ProductApprovalProductAbstractEditViewExpanderPlugin;
 use Spryker\Zed\MerchantGui\Communication\Plugin\ProductManagement\MerchantProductAbstractListActionViewDataExpanderPlugin;
 use Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement\MerchantProductProductAbstractViewActionViewDataExpanderPlugin;
 use Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement\MerchantProductProductTableQueryCriteriaExpanderPlugin;
@@ -248,8 +253,21 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
             new MerchantProductAbstractListActionViewDataExpanderPlugin(),
         ];
     }
+
+    /**
+     * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractEditViewExpanderPluginInterface>
+     */
+    protected function getProductAbstractEditViewExpanderPlugins(): array
+    {
+        return [
+            new ProductApprovalProductAbstractEditViewExpanderPlugin(),
+            new MerchantProductProductAbstractEditViewExpanderPlugin(),
+        ];
+    }
 }
 ```
+
+</details>
 
 {% info_block warningBox "Verification" %}
 
@@ -258,7 +276,7 @@ Make sure that you can see the merchant name in `http://zed.de.demo-spryker.com/
 
 {% endinfo_block %}
 
-**src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php**
+<details><summary markdown='span'>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -306,9 +324,11 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 }
 ```
 
+</details>
+
 {% info_block warningBox "Verification" %}
 
-Make sure the `de_page` Elasticsearch index for any product that belongs (see `spy_merchant_product_abstract`) to active and approved merchant, contains merchant names. (indexes can be accessed by any Elasticsearch client, for example, Kibana. For Docker configuration details, see [Configuring services](/docs/scos/dev/back-end-development/messages-and-errors/registering-a-new-service.html).
+Make sure the `de_page` Elasticsearch index for any product that belongs (see `spy_merchant_product_abstract`) to active and approved merchant, contains merchant names. (indexes can be accessed by any Elasticsearch client, e.g., Kibana. For Docker configuration details, see [Configuring services](/docs/scos/dev/back-end-development/messages-and-errors/registering-a-new-service.html).
 
 {% endinfo_block %}
 
@@ -502,7 +522,7 @@ Register the following plugins to enable data import:
 | ------------------ | ----------------- | --------- | -------------------------- |
 | MerchantProductDataImportPlugin | Imports merchant product data into the database. |           | Spryker\Zed\MerchantProductDataImport\Communication\Plugin |
 
- **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
+**src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
 ```php
 <?php
@@ -582,7 +602,7 @@ console frontend:yves:build
 
 Make sure that  for the merchant products you can see the merchant name on the product details page.
 
-Make sure that when you add merchant product to cart, on a cart page is has the *Sold By* widget displayed.
+Make sure that when you add merchant product to cart, on a cart page is has the **Sold By** widget displayed.
 
 {% endinfo_block %}
 

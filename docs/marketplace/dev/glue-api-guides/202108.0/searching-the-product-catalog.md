@@ -28,7 +28,7 @@ To search by products, send the request:
 | QUERY PARAMETER | DESCRIPTION  | POSSIBLE VALUES |
 | ------------------- | ---------------- | ----------------------- |
 | include   | Adds resource relationships to the request.      | abstract-products   |
-| q | Restricts the set of the returned items to the provided parameter value. | <ul><li>{% raw %}{{null}}{% endraw %} (empty)</li><li>{% raw %}{{abstract_product_sku}}{% endraw %}</li><li>{% raw %}{{abstract_product_name}}</li><li>{% raw %}{{concrete_product_sku}}{% endraw %}</li><li>{% raw %}{{product_attribute}}{% endraw %} (brand, color, etc.)—to provide multiple product attributes, use `+`</li></ul> |
+| q | Restricts the set of the returned items to the provided parameter value. | <ul><li>{% raw %}{{null}}{% endraw %} (empty)</li><li>{% raw %}{{abstract_product_sku}}{% endraw %}</li><li>{% raw %}{{abstract_product_name}}</li><li>{% raw %}{{concrete_product_sku}}{% endraw %}</li><li>{% raw %}{{product_attribute}}{% endraw %} (brand, color)—to provide multiple product attributes, use `+`</li></ul> |
 | price[min]   | Specifies minimum prices of the products     | {% raw %}{{minimum_price}}{% endraw %}  |
 | price[max]   | Specifies maximum prices of the products  | {% raw %}{{maximum_price}}{% endraw %}  |
 | brand  | Specifies the product brand   | {% raw %}{{brand_name}}{% endraw %} |

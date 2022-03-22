@@ -324,6 +324,30 @@ class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalA
 }
 ```
 
+**src/Pyz/Zed/Router/RouterDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Router;
+
+use Spryker\Zed\Router\Communication\Plugin\Router\MerchantPortalRouterPlugin;
+use Spryker\Zed\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
+
+class RouterDependencyProvider extends SprykerRouterDependencyProvider
+{
+    /**
+     * @return array|\Spryker\Zed\RouterExtension\Dependency\Plugin\RouterPluginInterface[]
+     */
+    protected function getMerchantPortalRouterPlugins(): array
+    {
+        return [
+            new MerchantPortalRouterPlugin()
+        ];
+    }
+}
+```
+
 Open access to the *Merchant Portal* login page by default:
 
 **config/Shared/config_default.php**
@@ -340,6 +364,46 @@ $config[AclConstants::ACL_DEFAULT_RULES][] = [
   ],
 
 ];
+```
+
+Add console command for warming up *Merchant Portal* router cache:
+
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+```php
+<?php
+
+namespace Pyz\Zed\Console;
+
+use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
+use Spryker\Zed\Router\Communication\Plugin\Console\MerchantPortalRouterCacheWarmUpConsole;
+
+class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return \Symfony\Component\Console\Command\Command[]
+     */
+    protected function getConsoleCommands(Container $container): array
+    {
+        $commands = [
+            new MerchantPortalRouterCacheWarmUpConsole(),
+        ];
+        
+        return $commands;
+    }
+}
+```
+
+**config/install/docker.yml**
+```yaml
+env:
+    NEW_RELIC_ENABLED: 0
+
+sections:
+    build:
+      router-cache-warmup-merchant-portal:
+        command: 'vendor/bin/console router:cache:warm-up:merchant-portal'
 ```
 
 ### 3) Set up transfer objects

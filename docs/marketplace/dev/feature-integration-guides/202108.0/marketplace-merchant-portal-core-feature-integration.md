@@ -324,6 +324,32 @@ class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalA
 }
 ```
 
+**src/Pyz/Zed/MerchantPortalApplication/Communication/Bootstrap/MerchantPortalBootstrap.php**
+```php
+<?php
+
+namespace Pyz\Zed\MerchantPortalApplication\Communication\Bootstrap;
+
+use Spryker\Zed\MerchantPortalApplication\Communication\Bootstrap\MerchantPortalBootstrap as MerchantPortalApplicationBootstrap;
+
+class MerchantPortalBootstrap extends MerchantPortalApplicationBootstrap
+{
+}
+```
+
+**src/Pyz/Zed/MerchantPortalApplication/Communication/MerchantPortalApplicationCommunicationFactory.php**
+```php
+<?php
+
+namespace Pyz\Zed\MerchantPortalApplication\Communication;
+
+use Spryker\Zed\MerchantPortalApplication\Communication\MerchantPortalApplicationCommunicationFactory as SprykerMerchantPortalApplicationCommunicationFactory;
+
+class MerchantPortalApplicationCommunicationFactory extends SprykerMerchantPortalApplicationCommunicationFactory
+{
+}
+```
+
 **src/Pyz/Zed/Router/RouterDependencyProvider.php**
 
 ```php

@@ -15,9 +15,9 @@ Check out an example usage of the Datasource Http.
 
 Service configuration:
 
-- `type` - a datasource type.  
-- `url` - a datasource request URL.  
-- `method` - a datasource request method (`GET` by default).  
+- `type`—a datasource type.  
+- `url`—a datasource request URL.  
+- `method`—a datasource request method (`GET` by default).  
 
 ```html
 <spy-select

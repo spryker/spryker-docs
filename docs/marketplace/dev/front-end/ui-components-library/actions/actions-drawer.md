@@ -14,10 +14,10 @@ Check out an example usage of the Actions Drawer.
 
 Service configuration:
 
-- `type` - an action type. 
-- `component` - a component name. 
-- `options` - an object with a component options. 
-    - `inputs` - inputs of the component. 
+- `type`—an action type.
+- `component`—a component name.
+- `options`—an object with a component options.
+   —`inputs`—inputs of the component. 
 
 ```html
 <spy-button-action
@@ -34,7 +34,7 @@ Service configuration:
 
 ## Main Service
 
-The main module registers a component by key via a static method `withComponents()`. 
+The main module registers a component by key via a static method `withComponents()`.
 It assigns the object of components to the `DrawerActionComponentTypesToken` under the hood.
 
 The main service injects all registered types from the `DrawerActionComponentTypesToken.`
@@ -87,7 +87,7 @@ import { DrawerTemplateContext } from '@spryker/drawer';
 // Find the template
 @ViewChild(‘contentTpl’) contentTpl?: TemplateRef<DrawerTemplateContext>;
 
-// Call the method 
+// Call the method
 handleAction(injector, config: { template: contentTpl }, context);
 ```
 

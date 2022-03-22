@@ -14,8 +14,8 @@ Check out an example usage of the Actions Refresh Table.
 
 Service configuration:
 
-- `type` - an action type.  
-- `tableId` - an `id` of the table that will be refreshed.  
+- `type`—an action type.  
+- `tableId`—an `id` of the table that will be refreshed.  
 
 ```html
 <spy-button-action

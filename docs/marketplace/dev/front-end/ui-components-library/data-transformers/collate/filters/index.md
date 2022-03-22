@@ -73,8 +73,8 @@ export class CustomDataTransformerFilterService implements DataTransformerFilter
         options: DataTransformerFilterConfig,
         byValue: DataTransformerFilterByValue,
         transformerByPropName: DataFilterTransformerByPropName,
-    ): Observable<DataTransformerFilterData> { 
-        ... 
+    ): Observable<DataTransformerFilterData> {
+        ...
     }
 }
 
@@ -122,6 +122,6 @@ interface DataTransformerFilter {
 
 There are a few common Data Transformer Filters that are available in UI library as separate packages:
 
-- [Equals](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/equals.html) - filters values that are strictly equal.
-- [Range](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/range.html) - filters values that are within a number range.
-- [Text](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/text.html) - filters values that match a string.
+- [Equals](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/equals.html)—filters values that are strictly equal.
+- [Range](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/range.html)—filters values that are within a number range.
+- [Text](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/text.html)—filters values that match a string.

@@ -14,8 +14,8 @@ Check out an example usage of the Actions Notification.
 
 Service configuration:
 
-- `type` - an action type.  
-- `notifications` - an array with notifications configuration based on the Notification component.  
+- `type`—an action type.  
+- `notifications`—an array with notifications configuration based on the Notification component.  
 
 ```html
 <spy-button-action

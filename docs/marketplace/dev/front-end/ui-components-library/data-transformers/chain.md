@@ -14,7 +14,7 @@ In the following example, the `datasource` returns an array with the transformed
 
 Service configuration:
 
-- `transformers` - an array with Data Transformer configuration objects.
+- `transformers`—an array with Data Transformer configuration objects.
 
 ```html
 <spy-select

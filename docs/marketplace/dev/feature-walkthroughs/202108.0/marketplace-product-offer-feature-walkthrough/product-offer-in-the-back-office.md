@@ -1,5 +1,6 @@
 ---
 title: Product Offer in the Back Office
+last_updated: Mar 22, 2022
 description: This document provides reference information about product offers in the Back Office.
 template: concept-topic-template
 ---

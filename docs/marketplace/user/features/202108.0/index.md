@@ -1,5 +1,6 @@
 ---
 title: Features overview
+last_updated: Mar 22, 2022
 description: The feature guides provide details about features available in the Spryker Marketplace.
 template: concept-topic-template
 ---

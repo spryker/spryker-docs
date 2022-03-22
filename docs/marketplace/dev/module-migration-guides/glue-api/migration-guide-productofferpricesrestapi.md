@@ -1,5 +1,6 @@
 ---
 title: Migration guide - ProductOfferPricesRestApi
+last_updated: Mar 22, 2022
 description: Use the guide to update versions to the newer ones of the ProductOfferPricesRestApi module.
 template: module-migration-guide-template
 ---

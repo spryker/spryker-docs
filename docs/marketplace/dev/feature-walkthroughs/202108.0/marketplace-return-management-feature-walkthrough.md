@@ -1,5 +1,6 @@
 ---
 title: Marketplace Return Management feature walkthrough
+last_updated: Mar 22, 2022
 description: This document provides technical details about the Marketplace Return Management feature.
 template: feature-walkthrough-template
 ---

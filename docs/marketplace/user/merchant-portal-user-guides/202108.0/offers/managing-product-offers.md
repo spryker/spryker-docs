@@ -1,5 +1,6 @@
 ---
 title: Managing product offers
+last_updated: Mar 22, 2022
 description: This document describes the actions a Merchant can do in the Offers section in the Merchant Portal.
 template: back-office-user-guide-template
 ---

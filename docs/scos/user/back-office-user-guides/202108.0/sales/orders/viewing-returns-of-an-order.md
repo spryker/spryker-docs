@@ -1,5 +1,6 @@
 ---
 title: Viewing returns of an order
+last_updated: Mar 22, 2022
 description: Learn how to view returns of an order in the Back Office
 template: back-office-user-guide-template
 ---

@@ -139,7 +139,7 @@ interface DataTransformer<D, DT> {
         data: D,
         config: DataTransformerConfig,
         injector?: Injector,
-    ): Observable<DT>;
+    ): Observable<DT | unknown>;
 }
 ```
 

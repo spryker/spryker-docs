@@ -37,7 +37,12 @@ Component configuration:
 Register the component:
    
 ```ts
-// Dynamic
+declare module '@spryker/table' {
+    interface TableConfig {
+        pagination?: TablePaginationConfig;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.withFeatures({
@@ -71,12 +76,6 @@ export class RootModule {}
 Below you can find interfaces for the Table Feature Pagination:
 
 ```ts
-declare module '@spryker/table' {
-    interface TableConfig {
-        pagination?: TablePaginationConfig;
-    }
-}
-
 export interface TablePaginationConfig extends TableFeatureConfig {
     sizes: number[];
 }

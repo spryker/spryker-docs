@@ -721,6 +721,166 @@ export default async (
     return config;
 };
 ```
+
+### 6) Add files for Merchant Portal entry point:
+
+**public/MerchantPortal/index.php**
+
+```php
+<?php
+
+use Pyz\Zed\MerchantPortalApplication\Communication\Bootstrap\MerchantPortalBootstrap;
+use Spryker\Shared\Config\Application\Environment;
+use Spryker\Shared\ErrorHandler\ErrorHandlerEnvironment;
+
+define('APPLICATION', 'MERCHANT_PORTAL');
+defined('APPLICATION_ROOT_DIR') || define('APPLICATION_ROOT_DIR', dirname(__DIR__, 2));
+
+require_once APPLICATION_ROOT_DIR . '/vendor/autoload.php';
+
+Environment::initialize();
+
+$errorHandlerEnvironment = new ErrorHandlerEnvironment();
+$errorHandlerEnvironment->initialize();
+
+$bootstrap = new MerchantPortalBootstrap();
+$bootstrap
+    ->boot()
+    ->run();
+```
+
+**public/MerchantPortal/maintenance/index.html**
+
+```html
+<!DOCTYPE html>
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Spryker Merchant Portal - Maintenance</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <link href="http://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet" type="text/css" />
+    </head>
+    <style>
+        body {
+            font-family: 'PT Mono', sans-serif;
+        }
+        #so-doc {
+            margin: 0 auto;
+            width: 960px;
+        }
+    </style>
+    <body>
+        <div id="so-doc">
+            <div>
+                <pre>
+                PAGE UNDER CONSTRUCTION!
+
+                Come back in a few minutes...
+                </pre>
+            </div>
+        </div>
+    </body>
+</html>
+```
+
+**public/MerchantPortal/maintenance/maintenance.php**
+
+```php
+<?php
+
+/**
+ * Copyright © 2017-present Spryker Systems GmbH. All rights reserved.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ */
+
+if (file_exists(__DIR__ . '/maintenance.marker')) {
+    http_response_code(503);
+    echo file_get_contents(__DIR__ . '/index.html');
+    exit(1);
+}
+```
+
+**src/Pyz/Zed/ZedUi/Presentation/Components/app/app.module.ts**
+
+```ts
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { DefaultMerchantPortalConfigModule, RootMerchantPortalModule } from '@mp/zed-ui';
+import { DefaultTableConfigModule } from '@mp/gui-table';
+
+@NgModule({
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        RootMerchantPortalModule,
+        DefaultMerchantPortalConfigModule,
+        DefaultTableConfigModule,
+    ],
+})
+export class AppModule extends RootMerchantPortalModule {}
+```
+
+**src/Pyz/Zed/ZedUi/Presentation/Components/environments/environment.prod.ts**
+
+```ts
+export const environment = {
+    production: true,
+};
+```
+
+**src/Pyz/Zed/ZedUi/Presentation/Components/environments/environment.ts**
+
+```ts
+export const environment = {
+    production: false,
+};
+```
+
+**src/Pyz/Zed/ZedUi/Presentation/Components/index.html**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>ZedUi</title>
+        <base href="/" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body></body>
+</html>
+```
+
+**src/Pyz/Zed/ZedUi/Presentation/Components/main.ts**
+
+```ts
+import { enableProdMode } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+import { AppModule } from './app/app.module';
+import { environment } from './environments/environment';
+
+if (environment.production) {
+    enableProdMode();
+}
+
+platformBrowserDynamic()
+    .bootstrapModule(AppModule)
+    /* tslint:disable-next-line: no-console */
+    .catch((error) => console.error(error));
+```
+
+**src/Pyz/Zed/ZedUi/Presentation/Components/polyfills.ts**
+
+```ts
+import '@mp/polyfills';
+```
+
 ---
 {% info_block warningBox "Verification" %}
 

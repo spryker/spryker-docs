@@ -39,27 +39,10 @@ On the *View Product Relation: [Product relation key]* page, you can see the inf
 * **Edit**:  To edit the product relation you are viewing.
 * **List of product relations**: To return to the list of product relations.
 
-For reference information, see [Reference information: Creating, editing, and viewing product relations](#reference-information-creating-editing-and-viewing-product-relations)
 
-## Editing product relations
 
-To edit a product relation:
-1. On the *Product relations* page in the **Actions** column, click **Edit** next to the product relation you want to edit. The *Edit Product Relation: [Product Relation Key]* page opens.
 
-2. Update the attributes in the *Settings* and *Products* tabs.
 
-3. To keep the changes, click **Save**.
-
-**Tips and tricks**
-<br>To return to the list of product relations, in the upper right corner of the page, click **List of product relations**
-
-{% info_block warningBox "Saving changes" %}
-
-Make sure to click **Save** before clicking **List of product relations** or going to any other Back Office section. Otherwise, the changes are discarded.  
-
-{% endinfo_block %}
-
-<a name="reference-information-creating-editing-and-viewing-product-relations"></a>
 
 ### Reference information: Creating, editing, and viewing product relations
 
@@ -85,18 +68,7 @@ On the *Product Relations* page, you can do the following:
 * Search product relations by SKU, Product Relation Key, and Abstract Product Name.
 
 
-#### Create/Edit/View Product Relation: [Product Relation ID] page
 
-The following table describes the attributes you select and enter while creating (the *Create Product Relation: [Product Relation ID]* page), editing (the *Edit View Product Relation: [Product Relation ID]* page), and viewing (the *View Product Relation: [Product Relation ID]* page) a product relation:
-
-| ATTRIBUTE | DESCRIPTION |
-| --- | --- |
-| Product Relation Key | Unique product relation identifier. |
-| Relation type | Drop-down list with two options: Related products and Upselling. This defines the location of the *Similar Products* section on the product details page.|
-| Update regularly:  | Checkbox that defines if the product catalog should be checked against the specified rules on a regular basis. New products fulfilling the rules are added to related products automatically. Existing related products that no longer fulfill the rules are removed automatically. |
-| Is active | Option to activate (make visible on the Storefront) or deactivate (make it invisible on the Storefront) the product relation.|
-| Select product | Table for selecting a product that owns the relation. |
-| Select stores | Defines the stores the product relation is displayed in. |
 
 #### Assigning related product rules, groups, and types
 

@@ -48,4 +48,16 @@ To add a subgroup, click **Add group**. Inside the main box, this adds a separat
 
 To define a rule, select a parameter, a relation operator, and a value.
 
-Add the needed rules and groups based on your requirements. 
+Add the needed rules and groups based on your requirements.
+
+
+## Reference information: Create product relations
+
+| ATTRIBUTE | DESCRIPTION |
+| --- | --- |
+| PRODUCT RELATION KEY | Unique product relation identifier. |
+| RELATION TYPE | Defines how the product relation will be displayed on the Storefront: <ul><li>**Related products**: related products are displayed on the product details page of the product owning the relation.</li><li>**Upselling**: when the product owning the relation is added to cart, related products are displayed on the cart page.|
+| UPDATE REGULARLY  | Defines if the product catalog will be checked against the specified rules regularly. New products fulfilling the rules are added to related products automatically. Existing related products that no longer fulfill the rules are removed automatically. |
+| IS ACTIVE | Defines if the product relation is visible on the Storefront. |
+| Select product | Table for selecting a product that owns the relation. |
+| SELECT STORES | Defines the stores the product relation is displayed in. |

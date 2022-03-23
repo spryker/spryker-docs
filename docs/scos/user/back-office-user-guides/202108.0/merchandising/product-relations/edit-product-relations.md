@@ -1,0 +1,46 @@
+## Editing product relations
+
+
+
+
+To edit a product relation:
+1. On the **Product Relations** page, next to the product relation you want to edit, click **Edit**
+ This opens the **Edit Product Relation** page.
+
+## Edit general information of a product relation
+
+1. Click the **Settings** tab and do any of the following:
+    * Select a **RELATION TYPE**.
+    * Select or clear the **UPDATE REGULARLY** checkbox.
+    * Select or clear the **IS ACTIVE** checkbox.
+    * In the **Product owning the relation** pane, next to the product you want to own the relation, click **Select**.
+        This shows the product for **Selected product**.
+    * In the **Store relation** pane, select or clear the checkboxes next to the stores you want to start or stop displaying the product relation in.
+2. Click **Save**.
+    This refreshes the page with a success message displayed.
+
+## Edit condition rules of a product relation
+
+1. Click the **Products** tab and do any of the following:
+    * To add a rule, do the following:
+        1. Click **Add rule**.
+        2. Select a parameter.
+        3. Select a relation operator.
+        4. Select a value.
+    * To delete a rule, next to the rule you want to delete, click **Delete**
+    * To add a rule group, click **Add group**.
+    * To delete a rule group, in the top-right corner of the group you want to delete, click **Delete**.
+2. Click **Save**.
+    This refreshes the page with a success message displayed.
+
+
+## Reference information: Edit product relations
+
+| ATTRIBUTE | DESCRIPTION |
+| --- | --- |
+| PRODUCT RELATION KEY | Unique product relation identifier. |
+| RELATION TYPE | Defines how the product relation is displayed on the Storefront: <ul><li>**Related products**: related products are displayed on the product details page of the product owning the relation.</li><li>**Upselling**: when the product owning the relation is added to cart, related products are displayed on the cart page.|
+| UPDATE REGULARLY  | Defines if the product catalog should be checked against the specified rules regularly. New products fulfilling the rules are added to related products automatically. Existing related products that no longer fulfill the rules are removed automatically. |
+| IS ACTIVE | Defines if the product relation is visible on the Storefront. |
+| Select product | Table for selecting a product that owns the relation. |
+| SELECT STORES | Defines the stores the product relation is displayed in. |    

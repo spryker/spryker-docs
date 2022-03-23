@@ -37,6 +37,10 @@ DNS propagation is not instant. Therefore, do not "switch off" your old project 
 
 ## Four weeks before go-live
 
+- **Performance Tips implemented and verified**. Please double check that the performance tips we have gathered here are all implemented.
+
+- **Conduct Load Tests**. Please make sure that you have conducted load tests for your application. This should include a dataload with sample data comparable to the size and complexity of your production data.
+
 - **The DNS Names and strategy for your shop are clear**. You should know how users access your shop, and you should verify that you controll access to the DNS for future domains. <br>For example, you have determined that you want to use spryker.com as the domain for your shop. You know how your customers should visit your Storefront and which URL they should use for that. For example, you might want to use the [www.spryker.com](http://www.spryker.com) subdomain for your Storefront.
 
 - **Decide how email sending should be handled.** If you want to send emails using Spryker, decide whether you want to use the Mail Service that Spryker PaaS offers or attach your own Mail Server to your project. In case you want to use ours, validate your DNS name and lift sending restrictions. Let us know the email address you want to send from, and we can help you with the validation. If you have already delegated the NS records, we can set it ourselves.

@@ -1063,22 +1063,22 @@ entries:
         - title: Manage abstract products
           nested:
           - title: Creating abstract products and product bundles
-            url: /docs/scos/user/back-office-user-guides/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html
           - title: Adding scheduled prices to abstract products
-            url: /docs/scos/user/back-office-user-guides/catalog/products/abstract-products/adding-scheduled-prices-to-abstract-products.html
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/adding-scheduled-prices-to-abstract-products.html
             include_versions:
             - "202009.0"
             - "202108.0"
           - title: Adding volume prices to abstract products
-            url: /docs/scos/user/back-office-user-guides/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html
           - title: Assign product attributes to abstract products
-            url: /docs/scos/user/back-office-user-guides/catalog/products/abstract-products/assign-product-attributes-to-abstract-products.html
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/assign-product-attributes-to-abstract-products.html
             include_versions:
             - "202108.0"
           - title: Editing abstract products
-            url: /docs/scos/user/back-office-user-guides/catalog/products/abstract-products/editing-abstract-products.html
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/editing-abstract-products.html
           - title: Creating and managing product bundles
-            url: /docs/scos/user/back-office-user-guides/catalog/products/abstract-products/creating-product-bundles.html
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/creating-product-bundles.html
             include_versions:
             - "201811.0"
             - "201903.0"

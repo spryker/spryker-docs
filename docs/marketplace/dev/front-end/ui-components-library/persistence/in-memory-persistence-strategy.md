@@ -35,6 +35,12 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/persistence' {
+    interface PersistenceStrategyRegistry {
+        'in-memory': InMemoryPersistenceStrategy;
+    }
+}
+
 @NgModule({
     imports: [
         PersistenceModule.withStrategies({
@@ -50,12 +56,6 @@ export class RootModule {}
 Below you can find interfaces for the In Memory Persistence Strategy:
 
 ```ts
-declare module '@spryker/persistence' {
-    interface PersistenceStrategyRegistry {
-        'in-memory': InMemoryPersistenceStrategy;
-    }
-}
-
 interface InMemoryPersistenceStrategy extends PersistenceStrategy {
     save(key: string, value: unknown): Observable<void>;
     retrieve<T>(key: string): Observable<T | undefined>;

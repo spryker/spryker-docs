@@ -20,7 +20,7 @@ Service configuration:
 <spy-table
     [config]="{
         dataSource: {
-            type: 'table.inline',
+            type: 'inline.table',
             data: [
                 {
                     col1: 1,
@@ -66,10 +66,16 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/datasource' {
+    interface DatasourceRegistry {
+        'inline.table': TableDatasourceInlineService;
+    }
+}
+
 @NgModule({
     imports: [
         DatasourceModule.withDatasources({
-            'table.inline': TableDatasourceInlineService,
+            'inline.table': TableDatasourceInlineService,
         }),
     ],
 })
@@ -81,12 +87,6 @@ export class RootModule {}
 Below you can find interfaces for the Datasource Inline Table:
 
 ```ts
-declare module '@spryker/datasource' {
-    interface DatasourceRegistry {
-        'table.inline': TableDatasourceInlineService;
-    }
-}
-
 export interface TableDatasourceInlineConfig extends DatasourceConfig {
     data: unknown;
     filter?: {

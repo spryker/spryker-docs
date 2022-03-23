@@ -30,6 +30,12 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/actions' {
+    interface ActionsRegistry {
+        'refresh-drawer': RefreshDrawerActionHandlerService;
+    }
+}
+
 @NgModule({
     imports: [
         ActionsModule.withActions({

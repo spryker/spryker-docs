@@ -46,6 +46,12 @@ Data Transformer Data Configurator must implement a specific interface (DataTran
 
 ```ts
 // Module augmentation
+declare module '@spryker/data-transformer' {
+    interface DataTransformerRegistry {
+        collate: CollateDataTransformerConfig;
+    }
+}
+
 declare module '@spryker/data-transformer.collate' {
     interface DataTransformerConfiguratorRegistry {
         custom: CustomDataTransformerConfiguratorService;

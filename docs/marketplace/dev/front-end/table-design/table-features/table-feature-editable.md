@@ -116,7 +116,12 @@ Take a closer look at all the options available.
 Register the component:
 
 ```ts
-// Dynamic
+declare module '@spryker/table' {
+    interface TableConfig {
+        editable?: TableEditableConfig;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -151,12 +156,6 @@ export class RootModule {}
 Below you can find interfaces for the Table Feature Editable:
 
 ```ts
-declare module '@spryker/table' {
-    interface TableConfig {
-        editable?: TableEditableConfig;
-    }
-}
-
 export interface TableEditableColumn extends TableColumn {
     typeOptions?: TableEditableColumnTypeOptions;
 }

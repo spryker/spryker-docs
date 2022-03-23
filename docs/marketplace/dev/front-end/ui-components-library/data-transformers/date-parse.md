@@ -30,6 +30,12 @@ In the following example, the `datasource` transforms the `date` string into the
 Register the service:
 
 ```ts
+declare module '@spryker/data-transformer' {
+    interface DataTransformerRegistry {
+        'date-parse': DateParseDataTransformerConfig;
+    }
+}
+
 @NgModule({
     imports: [
         DataTransformerModule.withTransformers({
@@ -45,11 +51,5 @@ export class RootModule {}
 Below you can find interfaces for the Data Transformer Date-parse:
 
 ```ts
-declare module '@spryker/data-transformer' {
-    interface DataTransformerRegistry {
-        'date-parse': DateParseDataTransformerConfig;
-    }
-}
-
 export interface DateParseDataTransformerConfig extends DataTransformerConfig {}
 ```

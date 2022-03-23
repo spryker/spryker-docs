@@ -38,6 +38,12 @@ Check out an example usage of the Table Column Image in the `@spryker/table` con
 Register the component:
 
 ```ts
+declare module '@spryker/table' {
+    interface TableColumnTypeRegistry {
+        image: TableColumnImageConfig;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -55,12 +61,6 @@ export class RootModule {}
 Below you can find interfaces for the Table Column Image:
 
 ```ts
-declare module '@spryker/table' {
-    interface TableColumnTypeRegistry {
-        image: TableColumnImageConfig;
-    }
-}
-
 interface TableColumnImageConfig {
     src?: string;
 }

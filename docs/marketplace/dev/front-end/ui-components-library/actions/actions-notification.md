@@ -39,6 +39,12 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/actions' {
+    interface ActionsRegistry {
+        notification: NotificationActionHandlerService;
+    }
+}
+
 @NgModule({
     imports: [
         ActionsModule.withActions({

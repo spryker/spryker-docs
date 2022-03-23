@@ -131,7 +131,7 @@ export class CustomTableColumnModule {}
 @Injectable({ providedIn: 'root' })
 export class CustomTableColumnConfig {
     @ColumnTypeOption()
-    propName? = this.contextService.wrap('value');
+    propName? = this.contextService.wrap('displayValue');
 
     constructor(private contextService: ContextService) {}
 }

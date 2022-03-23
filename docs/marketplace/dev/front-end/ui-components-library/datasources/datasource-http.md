@@ -35,6 +35,12 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/datasource' {
+    interface DatasourceRegistry {
+        http: DatasourceHttpService;
+    }
+}
+
 @NgModule({
     imports: [
         DatasourceModule.withDatasources({
@@ -50,12 +56,6 @@ export class RootModule {}
 Below you can find interfaces for the Datasource Http:
 
 ```ts
-declare module '@spryker/datasource' {
-    interface DatasourceRegistry {
-        http: DatasourceHttpService;
-    }
-}
-
 export interface DatasourceHttpConfig extends DatasourceConfig {
     url: string;
     method?: string;

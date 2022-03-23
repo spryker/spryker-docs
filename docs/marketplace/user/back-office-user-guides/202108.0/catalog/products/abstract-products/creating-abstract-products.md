@@ -146,4 +146,4 @@ The following table describes the attributes you enter and select when adding im
 
 ## Next steps
 
-[Edit abstract products](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/editing-abstract-products.html)
+[Edit abstract products](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/editing-abstract-products.html)

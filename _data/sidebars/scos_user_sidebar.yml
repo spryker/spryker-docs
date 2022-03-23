@@ -1071,12 +1071,6 @@ entries:
             - "202108.0"
           - title: Adding volume prices to abstract products
             url: /docs/scos/user/back-office-user-guides/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html
-            include_versions:
-            - "201811.0"
-            - "201903.0"
-            - "201907.0"
-            - "202009.0"
-            - "202108.0"
           - title: Assign product attributes to abstract products
             url: /docs/scos/user/back-office-user-guides/catalog/products/abstract-products/assign-product-attributes-to-abstract-products.html
             include_versions:
@@ -1093,21 +1087,17 @@ entries:
         - title: Manage concrete products
           nested:
           - title: Creating product variants
-            url: /docs/scos/user/back-office-user-guides/catalog/products/concrete-products/creating-product-variants.html
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/creating-product-variants.html
           - title: Editing product variants
-            url: /docs/scos/user/back-office-user-guides/catalog/products/concrete-products/editing-product-variants.html
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/editing-product-variants.html
           - title: Assign product attributes to product variants
-            url: /docs/scos/user/back-office-user-guides/catalog/products/concrete-products/assign-product-attributes-to-product-variants.html
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/assign-product-attributes-to-product-variants.html
             include_versions:
             - "202108.0"
           - title: Adding product alternatives
-            url: /docs/scos/user/back-office-user-guides/catalog/products/managing-products/adding-product-alternatives.html
-            include_versions:
-            - "202108.0"
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/adding-product-alternatives.html
           - title: Discontinuing products
-            url: /docs/scos/user/back-office-user-guides/catalog/products/managing-products/discontinuing-products.html
-            include_versions:
-            - "202108.0"
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/discontinuing-products.html
         - title: Creating service offerings - best practices
           url: /docs/scos/user/back-office-user-guides/catalog/products/creating-service-offerings-best-practices.html
           include_versions:
@@ -1800,7 +1790,7 @@ entries:
         - title: Reorder filter preferences
           url: /docs/scos/user/back-office-user-guides/merchandising/filter-preferences/reorder-filter-preferences.md
           include_versions:
-          - "202108.0"             
+          - "202108.0"
       - title: Category filters
         include_versions:
         - "202108.0"

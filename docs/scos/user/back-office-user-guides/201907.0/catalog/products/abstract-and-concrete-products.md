@@ -10,23 +10,23 @@ redirect_from:
   - /v3/docs/en/abstract-and-concrete-products
 related:
   - title: Creating Abstract Products
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html
   - title: Editing an Abstract Product
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/editing-abstract-products.html
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-abstract-products/editing-abstract-products.html
   - title: Creating Product Variants
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/concrete-products/creating-product-variants.html
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/creating-product-variants.html
   - title: Editing Product Variants
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/concrete-products/editing-product-variants.html
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/editing-product-variants.html
   - title: Managing Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
   - title: Discontinuing Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/discontinuing-products.html
   - title: Creating Product Bundles
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/creating-product-bundles.html
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-abstract-products/creating-product-bundles.html
   - title: Adding Product Alternatives
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/adding-product-alternatives.html
   - title: Adding Volume Prices to Abstract Products
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html
   - title: Products- Reference Information
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/products-reference-information.html
   - title: Abstract Product- Reference Information
@@ -48,4 +48,4 @@ Let's start learning how the products are created by reviewing a real-life examp
 
 You have a new product in your store. The new product is a Smartphone that goes in three colors: red, green, and orange. Those colors are product variants.
 
-So first you create an abstract product. See the [Creating an Abstract Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) article.
+So first you create an abstract product. See the [Creating an Abstract Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html) article.

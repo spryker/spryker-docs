@@ -88,8 +88,8 @@ The following table describes the attributes you enter and select when editing v
 
 ## Editing product variants of an abstract product
 
-To edit a product variant, see [Editing product variants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/editing-abstract-products.html#editing-product-variants-of-an-abstract-product).
-To create a product variant, see [Creating product variants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/concrete-products/creating-product-variants.html).
+To edit a product variant, see [Editing product variants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/editing-abstract-products.html#editing-product-variants-of-an-abstract-product).
+To create a product variant, see [Creating product variants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/creating-product-variants.html).
 
 ## Editing meta information of an abstract product
 

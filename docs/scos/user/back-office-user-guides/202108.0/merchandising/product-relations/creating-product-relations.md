@@ -1,6 +1,6 @@
 ---
-title: Creating product relations
-description: Use this procedure to create a product relation and enter all the required values in the Back Office.
+title: Create product relations
+description: Learn how to create product relations in the Back Office.
 last_updated: Jul 30, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-product-relations
@@ -15,7 +15,7 @@ related:
     link: docs/scos/user/features/page.version/product-relations-feature-overview.html
 ---
 
-This topic describes how you create a product relation.
+This document describes how to create product relations in the Back Office.
 
 ## Prerequisites
 
@@ -24,17 +24,17 @@ To start working with product relations, go to **Merchandising** > **Product Rel
 ## Creating product relations
 
 To create a product relation:
-1. On the *Product Relations* page, in the top right corner, click **Create Product Relation**. The *Create Product Relation* page opens.
-2. In  the *General* section of the *Settings* tab, do the following:
-    * Enter a **Product Relation Key**.
-    * Select a **Relation type**.
-    * Select **Update regularly** for the related products to be updated automatically on a regular basis according to the product relation's rules.
-    * Select the **Is active** checkbox to activate the product relation (to make it visible on the Storefront).
-3. In the *Product owning the relation* section,  next to the products you want to create a product relation with, click **Select**.
+1. On the **Product Relations** page, click **Create Product Relation**.
+    The **Create Product Relation** page opens.
+2. Enter a **PRODUCT RELATION KEY**.
+3. Select a **RELATION TYPE**.
+4. For the related products to be updated automatically on a regular basis according to the product relation's rules, select the **UPDATE REGULARLY** checkbox.
+5. To activate the product relation after creating it, select the **IS ACTIVE** checkbox.
+6. In the **Product owning the relation** pane, next to the product you want to create a product relation with, click **Select**.
 
-4. In the *Store relation* section, select the stores you want the product relation to be displayed in.
+7. In the **Store relation** pane, select the stores you want the product relation to be displayed in.
 
-5. Switch to the *Products* tab or click **Next**.
+8. Сlick **Next**.
 
 6. Click **Add rule** or **Add group**, depending on the conditions you want to specify. To learn more about rules, see [Related product rules](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html#related-product-rules).  
 

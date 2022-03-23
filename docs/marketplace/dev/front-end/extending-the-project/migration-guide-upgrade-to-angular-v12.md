@@ -65,13 +65,7 @@ Update/add the following dependencies
 
 Please also add `"typescript": "4.2.4",` to `"resolutions"` section to make sure you use right version.
 
-Run the following commands to make sure you have updated `lock` files and `node_modules` folder.
-
-Update **package-lock.json** via commands  
-```bash
-rm -rf node_modules
-npm install
-```
+Run the following commands to make sure you have updated `lock` file and `node_modules` folder.
 
 Update **yarn.lock** via commands  
 ```bash

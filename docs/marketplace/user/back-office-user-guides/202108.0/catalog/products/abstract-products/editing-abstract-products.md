@@ -139,4 +139,4 @@ The following table describes the attributes you enter and select when editing p
 |Image Set Name |Name of your image set.|
 |Small |Link of the image that is going to be used in the product catalogs.|
 |Large |Link to the image that is going to be used on the product details page.|
-|Sort Order |If you add several images to an active image set, specify the order in which they are to be shown in the frontend and backend using *Sort Order* fields. The order of images is defined by the order of entered numbers where the image set with sort order "0" is the first to be shown.|
+|Sort Order |If you add several images to an active image set, specify the order in which they are to be shown in the frontend and backend using **Sort Order** fields. The order of images is defined by the order of entered numbers where the image set with sort order "0" is the first to be shown.|

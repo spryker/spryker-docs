@@ -17,7 +17,7 @@ To start using Merchant Portal, install Spryker demo-shop:
 
 ## Requirements
 To build Merchant Portal, install or update the following tools:  
-- [Node.js](https://nodejs.org/en/download/) - minimum version is v12.
+- [Node.js](https://nodejs.org/en/download/)—minimum version is v12.
 - [Yarn](https://classic.yarnpkg.com/en/docs/install/) - minimum version is 2.0.0 and maximum is 2.3.x.
 
 ## Overview

@@ -17,7 +17,7 @@ One of the fundamental concepts of the Persistence ACL module is an entity rule.
 | fk_acl_entity_segment | A reference to the data segment to which the rule applies. The segment concept is described below. | |
 | fk_acl_role | The foreign key of the role to which the rule applies. Rules are not applied to specific users, but to roles, which makes their use extremely flexible. | |
 | entity | Entity class. You must specify the full namespace without a leading slash. | `Orm\Zed\Product\Persistence\SpyProductAbstract`, `Orm\Zed\Store\Persistence\SpyStore` |
-| permission_mask | An integer representation of the binary permission mask. See [Permission concept](#permission-concept) documentation for more details. | `AclEntityConstants::OPERATION_MASK_READ`, <br />`AclEntityConstants::OPERATION_MASK_READ \| AclEntityConstants::OPERATION_MASK_UPDATE`, <br /> `AclEntityConstants::OPERATION_MASK_CRUD` |
+| permission_mask | An integer representation of the binary permission mask. For more details, see [Permission concept](#permission-concept) documentation. | `AclEntityConstants::OPERATION_MASK_READ`, <br />`AclEntityConstants::OPERATION_MASK_READ \| AclEntityConstants::OPERATION_MASK_UPDATE`, <br /> `AclEntityConstants::OPERATION_MASK_CRUD` |
 | scope | There are 3 types of rules: *Global*, *Segment* and *Inherited*. Their features and differences are described below. | `AclEntityConstants::SCOPE_GLOBAL`, `AclEntityConstants::SCOPE_SEGMENT`, `AclEntityConstants::SCOPE_INHERITED` |
 
 ## Scope

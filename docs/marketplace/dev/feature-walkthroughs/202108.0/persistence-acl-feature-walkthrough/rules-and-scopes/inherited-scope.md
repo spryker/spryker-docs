@@ -13,7 +13,7 @@ Inherited scope rules apply when you need to grant access to an entity (child) t
 
 ![Inherited scope](https://confluence-connect.gliffy.net/embed/image/e473a9ca-2eb7-481d-b0c4-72d2563ec466.png?utm_medium=live&utm_source=custom)
 
-Inheritance rules (child-parent relationship) are set in the configuration. See [Persistence ACL configuration](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html) for more details.
+Inheritance rules (child-parent relationship) are set in the configuration. For more details, see [Persistence ACL configuration](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html).
 
 Inherited scope functionality has one unique feature: it is sufficient to have **read** access to the parent for successful inheritance for any operation (create/read/update/delete).
 
@@ -48,13 +48,13 @@ SELECT * FROM `spy_merchant_product_abstract` ORDER BY `updated_at` DESC;
 
 Query after the Persistence ACL:
 ```sql
-SELECT `spy_merchant_product_abstract`.* 
+SELECT `spy_merchant_product_abstract`.*
 FROM `spy_merchant_product_abstract`
   INNER JOIN `spy_merchant` ON (`spy_merchant_product_abstract`.`fk_merchant` = `spy_merchant`.`id_merchant`)
   INNER JOIN `spy_acl_entity_segment_merchant`
-    ON (`spy_merchant`.`id_merchant` = `spy_acl_entity_segment_merchant`.`fk_merchant` 
+    ON (`spy_merchant`.`id_merchant` = `spy_acl_entity_segment_merchant`.`fk_merchant`
       AND `spy_acl_entity_segment_merchant`.`fk_acl_entity_segment` IN (5))
-ORDER BY `spy_merchant_product_abstract`.`updated_at` DESC; 
+ORDER BY `spy_merchant_product_abstract`.`updated_at` DESC;
 ```
 
 It is very important to understand that the permissions are checked in the context of roles. Rules of one role do not affect the rules of another. See [Execution Flow](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/execution-flow.html). Below is an example of the two roles:
@@ -84,7 +84,7 @@ It is very important to understand that the permissions are checked in the conte
 
 Rules with IDs `1`, `2`, `3` and `4` refer to one role (`fk_acl_role: 1`), and rules with IDs `5`, `6`, `7` and `8` to another (`fk_acl_role: 2`). When a user has both roles and performs `Update on a Product`, the Persistence ACL engine will perform the following:
 - it will only find role `1` (since it has a rule for updating a product).
-- the role `2` will not be considered at all since it does not allow products to be updated. 
+- the role `2` will not be considered at all since it does not allow products to be updated.
 
 The context of a rule is determined by the role to which it is attached. Because of this, a user with such a set of roles and rules will be able to:
 

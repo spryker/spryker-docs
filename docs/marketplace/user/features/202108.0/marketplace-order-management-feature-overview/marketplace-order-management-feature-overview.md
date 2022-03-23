@@ -31,7 +31,7 @@ For details about how the two state machines interact with each other, see [Mark
 ## Marketplace order calculation
 By default, calculations for the Marketplace order items are performed using the item price (product offer price or the price inherited from the concrete or abstract product), their totals, subtotal aggregation, and tax information.
 
-The Marketplace order comprises all the [totals from the Merchant orders](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/merchant-order-overview.html) and is defined by the following formula:
+The Marketplace order contains all the [totals from the Merchant orders](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/merchant-order-overview.html) and is defined by the following formula:
 
 {% info_block infoBox "Info" %}
 

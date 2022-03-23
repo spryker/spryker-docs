@@ -14,10 +14,10 @@ Check out an example usage of the Table Feature Editable in the `@spryker/table`
 
 Component configuration:
 
-- `columns` - an array with the config for every editable column.  
-- `create` - an object with the config for the added rows.  
-- `update` - an object with the config for the existing rows.  
-- `disableRowKey` - disables the row that contains the mentioned column `id` (see the following example).   
+- `columns`—an array with the config for every editable column.  
+- `create`—an object with the config for the added rows.  
+- `update`—an object with the config for the existing rows.  
+- `disableRowKey`—disables the row that contains the mentioned column `id` (see the following example).   
 
 ```html
 <spy-table
@@ -38,23 +38,23 @@ Component configuration:
 Take a closer look at all the options available.
 
 - `columns` (only required properties are listed, the entire interface can be found in [Table Design](/docs/marketplace/dev/front-end/table-design/#interfaces) article.):  
-    - `id` - a cell `id`.  
-    - `type` - a cell `type`.  
+    - `id`—a cell `id`.  
+    - `type`—a cell `type`.  
     - `typeOptions`. Check [Column Type](/docs/marketplace/dev/front-end/table-design/table-column-types/)) to learn more about the column types available.):  
-        - `value` - sets the default value to the newly added row's cell.  
+        - `value`—sets the default value to the newly added row's cell.  
 
 - `create`:  
-    - `addButon` - this object holds the `Add button` configuration such as `title`, `icon`, `size`.
-    - `cancelButon` - an object with the `Cancel button` configuration like `title` and `icon`.
-    - `disableForCols` - an array with the cell `ids` to be disabled.  
-    - `formInputName` - creates an `input[type=hidden]` element with the specific name.  
-    - `initialData` - initials data for cells and objects with errors for rows and cells.  
+    - `addButon`—this object holds the `Add button` configuration such as `title`, `icon`, `size`.
+    - `cancelButon`—an object with the `Cancel button` configuration like `title` and `icon`.
+    - `disableForCols`—an array with the cell `ids` to be disabled.  
+    - `formInputName`—creates an `input[type=hidden]` element with the specific name.  
+    - `initialData`—initials data for cells and objects with errors for rows and cells.  
 
 - `update`:
-    - `url` - a request url.  
-    - `saveButon` - an object with the `Save button` configuration such as `title` and `icon` (displayed in the `update` popup).  
-    - `cancelButon` - an object with the `Cancel button` configuration such as `title` and `icon` (displayed in the `update` popup).  
-    - `disableForCols` - an array with the cell `ids` to be disabled.  
+    - `url`—a request url.  
+    - `saveButon`—an object with the `Save button` configuration such as `title` and `icon` (displayed in the `update` popup).  
+    - `cancelButon`—an object with the `Cancel button` configuration such as `title` and `icon` (displayed in the `update` popup).  
+    - `disableForCols`—an array with the cell `ids` to be disabled.  
 
 ```html
 <spy-table

@@ -89,7 +89,7 @@ The returned items section displays information on the returned items.
 | Quantity   | Product quantity.                                            |
 | Price  | Product price.                                               |
 | Total   | Total amount paid for the item.                              |
-| State   | Return state for the item. See Main merchant return states for more details. |
+| State   | Return state for the item. For more details, see [Main merchant return states](#main-merchant-return-item-states). |
 | Trigger event   | List of the events to trigger for the return.                |
 | Trigger all matching states | States that you can trigger for all items in the return at once. |
 

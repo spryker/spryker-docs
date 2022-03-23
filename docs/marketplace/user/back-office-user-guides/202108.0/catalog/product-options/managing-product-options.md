@@ -66,7 +66,7 @@ To assign products to a product option, follow these steps:
 To deassign products from a product option, follow these steps:
 1. Select **Edit** next to the product option you want to deassign product from.
 2. On the **Edit product option** page, switch to **Products&nbsp;<span aria-label="and then">></span> Assigned products** subtab.
-3. Deselect the desired products.
+3. Clear the desired products.
 4. Select **Save**.
     This refreshes the page with the success message displayed.
 

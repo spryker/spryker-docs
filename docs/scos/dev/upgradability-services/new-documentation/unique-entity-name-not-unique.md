@@ -119,7 +119,6 @@ The names should be unique to the extent of making it impossible to accidentally
 {% endinfo_block %}
 
 #### Example of not unique table name
-
 ```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" name="zed" namespace="Orm\Zed\EvaluatorSpryker\Persistence" package="src.Orm.Zed.EvaluatorSpryker.Persistence">
@@ -132,7 +131,7 @@ The names should be unique to the extent of making it impossible to accidentally
 </database>
 ```
 
-#### Examples related error in the Evaluator output for tables:
+#### Examples related error in the Evaluator output for tables
 
 ```bash
 ************************************************************************************************************************
@@ -159,9 +158,6 @@ evaluator_spryker
     </table>
 </database>
 ```
-
-After renaming the entity, re-evaluate the code. The same error shouldn't be returned.
-
 ---
 
 ## Making database column names unique
@@ -203,6 +199,7 @@ NotUnique:DatabaseColumn Database column reversed_string has to have project pre
     </table>
 </database>
 ```
+---
 
 ## Making method names unique
 

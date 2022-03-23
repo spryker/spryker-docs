@@ -68,6 +68,46 @@ Renamed transfer name:
 ```
 ---
 
+## Making transfer property names unique
+
+To resolve the errors provided in the preceding examples, rename the transfer property names. For example, add the project name as a prefix.
+
+{% info_block infoBox "Future-proof names" %}
+
+The names should be unique to the extent of making it impossible to accidentally match the name of a core transfer property introduced in the future.
+
+{% endinfo_block %}
+
+#### Example of not unique transfer property
+
+```xml
+<?xml version="1.0"?>
+<transfers xmlns="spryker:transfer-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
+    <transfer name="LocaleCmsPageData">
+        <property name="contentWidgetParameterMap" type="array" singular="contentWidgetParameterMap"/>
+    </transfer>
+</transfers>
+```
+
+#### Example of related error in the Evaluator output
+
+```bash
+-------------------------- ----------------------------------------------------------------------------------------------------
+NotUnique:TransferProperty Transfer property contentWidgetParameterMap for LocaleCmsPageData has to have project prefix Pyz in /0000-fork-b2c-demo-shop/src/Pyz/Shared/Cms/Transfer/cms.transfer.xml, like pyzContentWidgetParameterMap
+-------------------------- ----------------------------------------------------------------------------------------------------
+```
+
+#### Example of renamed transfer property name
+
+```xml
+<?xml version="1.0"?>
+<transfers xmlns="spryker:transfer-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
+    <transfer name="LocaleCmsPageData">
+        <property name="pyzContentWidgetParameterMap" type="array" singular="pyzContentWidgetParameterMap"/>
+    </transfer>
+</transfers>
+```
+
 ## Making table names unique
 
 To resolve the errors provided in the preceding examples, rename the table names. For example, add the project name as a prefix.
@@ -123,6 +163,46 @@ evaluator_spryker
 After renaming the entity, re-evaluate the code. The same error shouldn't be returned.
 
 ---
+
+## Making database column names unique
+
+To resolve the errors provided in the preceding examples, rename the database column names. For example, add the project name as a prefix.
+
+{% info_block infoBox "Future-proof names" %}
+
+The names should be unique to the extent of making it impossible to accidentally match the name of a core database column introduced in the future.
+
+{% endinfo_block %}
+
+#### Example of not unique database column name
+
+```xml
+<?xml version="1.0"?>
+<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" name="zed" namespace="Orm\Zed\EvaluatorSpryker\Persistence" package="src.Orm.Zed.EvaluatorSpryker.Persistence">
+    <table name="pyz_evaluator_spryker" idMethod="native">
+        <column name="reversed_string" required="true" size="128" type="VARCHAR"/>
+    </table>
+</database>
+```
+
+#### Example of related error in the Evaluator output
+
+```bash
+------------------------ ----------------------------------------------------------------------------------------------------
+NotUnique:DatabaseColumn Database column reversed_string has to have project prefix Pyz in /0000-fork-b2c-demo-shop/src/Orm/Zed/EvaluatorSpryker/Persistence/Propel/Schema/spy_evaluator_spryker.schema.xml, like pyz_reversed_string
+------------------------ ----------------------------------------------------------------------------------------------------
+```
+
+#### Example of renamed database column name
+
+```xml
+<?xml version="1.0"?>
+<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" name="zed" namespace="Orm\Zed\EvaluatorSpryker\Persistence" package="src.Orm.Zed.EvaluatorSpryker.Persistence">
+    <table name="pyz_evaluator_spryker" idMethod="native">
+        <column name="pyz_reversed_string" required="true" size="128" type="VARCHAR"/>
+    </table>
+</database>
+```
 
 ## Making method names unique
 
@@ -239,83 +319,3 @@ interface BundleProductsExpanderPlugin use SprykerBundleProductsExpanderPlugin
 }
 ```
 ---
-
-## Making database column names unique
-
-To resolve the errors provided in the preceding examples, rename the database column names. For example, add the project name as a prefix.
-
-{% info_block infoBox "Future-proof names" %}
-
-The names should be unique to the extent of making it impossible to accidentally match the name of a core database column introduced in the future.
-
-{% endinfo_block %}
-
-#### Example of not unique database column name
-
-```xml
-<?xml version="1.0"?>
-<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" name="zed" namespace="Orm\Zed\EvaluatorSpryker\Persistence" package="src.Orm.Zed.EvaluatorSpryker.Persistence">
-    <table name="pyz_evaluator_spryker" idMethod="native">
-        <column name="reversed_string" required="true" size="128" type="VARCHAR"/>
-    </table>
-</database>
-```
-
-#### Example of related error in the Evaluator output
-
-```bash
------------------------- ----------------------------------------------------------------------------------------------------
-NotUnique:DatabaseColumn Database column reversed_string has to have project prefix Pyz in /0000-fork-b2c-demo-shop/src/Orm/Zed/EvaluatorSpryker/Persistence/Propel/Schema/spy_evaluator_spryker.schema.xml, like pyz_reversed_string
------------------------- ----------------------------------------------------------------------------------------------------
-```
-
-#### Example of renamed database column name
-
-```xml
-<?xml version="1.0"?>
-<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" name="zed" namespace="Orm\Zed\EvaluatorSpryker\Persistence" package="src.Orm.Zed.EvaluatorSpryker.Persistence">
-    <table name="pyz_evaluator_spryker" idMethod="native">
-        <column name="pyz_reversed_string" required="true" size="128" type="VARCHAR"/>
-    </table>
-</database>
-```
-
-## Making transfer property names unique
-
-To resolve the errors provided in the preceding examples, rename the transfer property names. For example, add the project name as a prefix.
-
-{% info_block infoBox "Future-proof names" %}
-
-The names should be unique to the extent of making it impossible to accidentally match the name of a core transfer property introduced in the future.
-
-{% endinfo_block %}
-
-#### Example of not unique transfer property
-
-```xml
-<?xml version="1.0"?>
-<transfers xmlns="spryker:transfer-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
-    <transfer name="LocaleCmsPageData">
-        <property name="contentWidgetParameterMap" type="array" singular="contentWidgetParameterMap"/>
-    </transfer>
-</transfers>
-```
-
-#### Example of related error in the Evaluator output
-
-```bash
--------------------------- ----------------------------------------------------------------------------------------------------
-NotUnique:TransferProperty Transfer property contentWidgetParameterMap for LocaleCmsPageData has to have project prefix Pyz in /0000-fork-b2c-demo-shop/src/Pyz/Shared/Cms/Transfer/cms.transfer.xml, like pyzContentWidgetParameterMap
--------------------------- ----------------------------------------------------------------------------------------------------
-```
-
-#### Example of renamed transfer property name
-
-```xml
-<?xml version="1.0"?>
-<transfers xmlns="spryker:transfer-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
-    <transfer name="LocaleCmsPageData">
-        <property name="pyzContentWidgetParameterMap" type="array" singular="pyzContentWidgetParameterMap"/>
-    </transfer>
-</transfers>
-```

@@ -351,7 +351,7 @@ Prepare your data according to your requirements using the demo data:
 <details>
 <summary markdown='span'>data/import/common/common/marketplace/merchant_open_hours_date_schedule.csv</summary>
 
-```csv
+```
 merchant_reference,date,time_from,time_to,note_glossary_key
 MER000001,2020-01-01,,,merchant_weekday_schedule.new_year
 MER000001,2020-04-10,,,merchant_weekday_schedule.good_friday
@@ -425,7 +425,7 @@ MER000005,2021-12-31,14:00:00,17:00:00,
 
 **data/import/common/common/marketplace/merchant_open_hours_week_day_schedule.csv**
 
-```csv
+```
 merchant_reference,week_day_key,time_from,time_to
 MER000001,MONDAY,7:00:00,13:00:00
 MER000001,MONDAY,14:00:00,20:00:00

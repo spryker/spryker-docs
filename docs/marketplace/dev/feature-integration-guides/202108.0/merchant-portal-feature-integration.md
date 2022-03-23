@@ -91,7 +91,7 @@ Connect users and merchants using Zed UI (Backoffice) or using the next data imp
 
 **data/import/common/common/marketplace/merchant.csv**
 
-```csv
+```
  merchant_key,merchant_reference,merchant_name,registration_number,status,email,is_active,url.de_DE,url.en_US
  sony-experts,MER000006,Sony Experts,HYY 134306,approved,michele@sony-experts.com,1,/de/merchant/sony-experts,/en/merchant/sony-experts
 ```
@@ -101,7 +101,7 @@ In case you don't have merchant user data import been integrated, you can find h
 
 **data/import/common/common/marketplace/merchant_user.csv**
 
-```csv
+```
 merchant_key,username
 sony-experts,michele@sony-experts.com
 ```

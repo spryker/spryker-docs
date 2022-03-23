@@ -1801,7 +1801,7 @@ To import data:
 
 **data/import/common/DE/combined_merchant_product_offer.csv**
 
-```csv
+```
 product_offer_reference,merchant_product_offer.concrete_sku,merchant_product_offer.merchant_reference,merchant_product_offer.merchant_sku,merchant_product_offer.is_active,merchant_product_offer.approval_status,merchant_product_offer_store.store_name,product_offer_stock.stock_name,product_offer_stock.quantity,product_offer_stock.is_never_out_of_stock,price_product_offer.price_type,price_product_offer.store,price_product_offer.currency,price_product_offer.value_net,price_product_offer.value_gross,price_product_offer.price_data.volume_prices,product_offer_validity.valid_from,product_offer_validity.valid_to
 offer1000,093_24495843,MER000006,SE1000-01,1,approved,DE,Budget Cameras MER000005 Warehouse 1,100,1,DEFAULT,DE,EUR,50,70,,,
 offer1000,,,,,,,,,,ORIGINAL,DE,EUR,150,170,,,
@@ -1815,7 +1815,7 @@ offer1001,,,,,,,,,,DEFAULT,DE,CHF,260,280,,,
 
 **data/import/common/US/combined_merchant_product_offer.csv**
 
-```csv
+```
 product_offer_reference,merchant_product_offer.concrete_sku,merchant_product_offer.merchant_reference,merchant_product_offer.merchant_sku,merchant_product_offer.is_active,merchant_product_offer.approval_status,merchant_product_offer_store.store_name,product_offer_stock.stock_name,product_offer_stock.quantity,product_offer_stock.is_never_out_of_stock,price_product_offer.price_type,price_product_offer.store,price_product_offer.currency,price_product_offer.value_net,price_product_offer.value_gross,price_product_offer.price_data.volume_prices,product_offer_validity.valid_from,product_offer_validity.valid_to
 offer1000,093_24495843,MER000006,SE1000-01,1,approved,DE,Budget Cameras MER000005 Warehouse 1,100,1,DEFAULT,DE,EUR,50,70,,,
 offer1000,,,,,,,,,,ORIGINAL,DE,EUR,150,170,,,
@@ -1831,7 +1831,7 @@ offer1001,,,,,,,,,,DEFAULT,DE,CHF,260,280,,,
 
 **data/import/common/combined_merchant_product_offer_import_config_EU.yml**
 
-```csv
+```
 # Example of demo shop 'combined merchant product offer' data import.
 version: 0
 
@@ -1851,7 +1851,7 @@ actions:
 
 **data/import/common/combined_merchant_product_offer_import_config_US.yml**
 
-```csv
+```
 # Example of demo shop 'combined merchant product offer' data import.
 version: 0
 

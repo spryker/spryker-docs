@@ -395,7 +395,7 @@ Prepare your data according to your requirements using the demo data:
 
 <details><summary markdown='span'>data/import/common/common/marketplace/price_product_offer.csv</summary>
 
-```csv
+```
 product_offer_reference,price_type,store,currency,value_net,value_gross,price_data.volume_prices
 offer2,DEFAULT,DE,EUR,8144,10160,"[{""quantity"":5,""net_price"":6050,""gross_price"":7065}, {""quantity"":10,""net_price"":5045,""gross_price"":6058}, {""quantity"":20,""net_price"":4040,""gross_price"":5052}]"
 offer2,DEFAULT,DE,CHF,10866,13184,

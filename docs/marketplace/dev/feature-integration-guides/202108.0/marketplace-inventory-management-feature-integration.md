@@ -510,7 +510,7 @@ Prepare your data according to your requirements using the demo data:
 
 **data/import/common/common/marketplace/merchant_stock.csv**
 
-```csv
+```
 merchant_reference,stock_name
 MER000001,Spryker MER000001 Warehouse 1
 MER000002,Video King MER000002 Warehouse 1

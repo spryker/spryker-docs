@@ -137,7 +137,7 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
 
 **data/import/payment_method.csv**
 
-```csv
+```
 payment_method_key,payment_method_name,payment_provider_key,payment_provider_name,is_active
 dummyMarketplacePaymentInvoice,Invoice,DummyMarketplacePayment,Dummy Marketplace Payment,1
 ```
@@ -154,7 +154,7 @@ dummyMarketplacePaymentInvoice,Invoice,DummyMarketplacePayment,Dummy Marketplace
 
 **data/import/payment_method_store.csv**
 
-```csv
+```
 payment_method_key,store
 dummyMarketplacePaymentInvoice,DE
 dummyMarketplacePaymentInvoice,AT

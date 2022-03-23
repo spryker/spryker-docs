@@ -512,7 +512,7 @@ Append glossary according to your configuration:
 
 **data/import/common/common/glossary.csv**
 
-```csv
+```
 merchant_sales_order.merchant_order_id,Merchant Order ID,en_US
 merchant_sales_order.merchant_order_id,Händlerbestell-ID,de_DE
 ```
@@ -543,7 +543,7 @@ Import data as follows:
 
 **data/import/common/common/marketplace/merchant_oms_process.csv**
 
-```csv
+```
 merchant_reference,merchant_oms_process_name
 MER000001,MainMerchantStateMachine
 MER000002,MerchantDefaultStateMachine

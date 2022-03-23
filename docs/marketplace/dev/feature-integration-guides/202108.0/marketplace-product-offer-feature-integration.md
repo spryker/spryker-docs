@@ -355,7 +355,7 @@ Prepare your data according to your requirements using the demo data:
 
 <details><summary markdown='span'>data/import/common/common/marketplace/merchant_product_offer.csv</summary>
 
-```csv
+```
 product_offer_reference,concrete_sku,merchant_reference,merchant_sku,is_active,approval_status
 offer1,093_24495843,MER000001,GS952M00H-Q11,1,approved
 offer2,090_24495844,MER000002,,1,approved
@@ -505,7 +505,7 @@ offer418,112_312526172,MER000002,,1,approved
 
 <details><summary markdown='span'>data/import/common/common/marketplace/merchant_product_offer_store.csv</summary>
 
-```csv
+```
 product_offer_reference,store_name
 offer1,DE
 offer2,DE
@@ -901,7 +901,7 @@ offer418,AT
 
 **data/import/common/common/marketplace/product_offer_validity.csv**
 
-```csv
+```
 product_offer_reference,valid_from,valid_to
 offer1,,2020-01-20 00:00:00.000000
 offer2,,2020-01-20 00:00:00.000000
@@ -1441,7 +1441,7 @@ Append glossary according to your configuration:
 
 **data/import/common/common/glossary.csv**
 
-```csv
+```
 merchant_product_offer.view_seller,View Seller,en_US
 merchant_product_offer.view_seller,Händler ansehen,de_DE
 merchant_product_offer.sold_by,Sold by,en_US

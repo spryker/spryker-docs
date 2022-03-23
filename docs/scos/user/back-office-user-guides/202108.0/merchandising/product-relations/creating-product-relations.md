@@ -19,11 +19,11 @@ This document describes how to create product relations in the Back Office.
 
 ## Prerequisites
 
+1. Learn how [related product rules] work.
 To start working with product relations, go to **Merchandising** > **Product Relations**.
 
-## Creating product relations
+## Define general settings of a product relation
 
-To create a product relation:
 1. On the **Product Relations** page, click **Create Product Relation**.
     The **Create Product Relation** page opens.
 2. Enter a **PRODUCT RELATION KEY**.
@@ -36,31 +36,16 @@ To create a product relation:
 
 8. Сlick **Next**.
 
-6. Click **Add rule** or **Add group**, depending on the conditions you want to specify. To learn more about rules, see [Related product rules](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html#related-product-rules).  
+## Define related products by adding condition rules
 
-7. For the rule/group, select the operator:
-    * **AND**: the selected products are displayed if all the specified conditions are fulfilled
-    * **OR**: the selected products are displayed if at least one of the specified conditions is fulfilled
+In the **Products** tab, you need to define the condition rules. Based on the rules, products are automatically selected to be displayed as related products.
 
-8. Populate the required drop-downs and fields for the rule/group.
+You can define conditions using one rule or by combining rules into groups and sub-groups. When you open the **Products** tab, there is a preadded rule. The rule is in a box, which is the root group.
 
-9. To keep the changes, click **Save**. The table is automatically updated to display the abstract product that fulfills the specified rules/groups.
+The **AND** and **OR** combination operators are used to combine rules in each group. Currently they are greyed out because there is only one rule in the group. To add one more rule to this group, click **Add rule**. This adds one more rule entry and the operators for this group become active. Based on how you can combine these rules, click one of the operators.
 
-**Tips and tricks**
+To add a subgroup, click **Add group**. Inside the main box, this adds a separate box with its own operators and a preadded rule. The rules in this sub-group combined will be used as a single rule when combinging it with the rules in the root group.
 
-* If you want a product relation to be displayed on the *Product details* page or the *Cart* page, define at least one **Store relation**.
-* Filter the products in the *Select product* table by entering a product name or SKU in the **Search** field.
-* You can delete a rule or group by clicking **Delete** for a specific entry.
-* Go back to the *Product Relation* page by clicking **List of product relations** in the top right corner.
+To define a rule, select a parameter, a relation operator, and a value.
 
-{% info_block warningBox "Saving changes" %}
-
-Make sure to click **Save** before clicking **List of product relations** or going to any other Back Office section. Otherwise, the changes are discarded.  
-
-{% endinfo_block %}
-
-For reference information, see [Reference information: Creating, editing, and viewing product relations](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/managing-product-relations.html#reference-information-creating-editing-and-viewing-product-relations)
-
-**What's next?**
-
-To learn more about how to edit, view, or delete a product relation, see [Managing product relations](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/managing-product-relations.html).
+Add the needed rules and groups based on your requirements. 

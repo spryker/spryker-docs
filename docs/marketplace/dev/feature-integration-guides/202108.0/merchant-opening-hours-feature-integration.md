@@ -127,7 +127,9 @@ This step publishes change events to `spy_merchant_opening_hours_storage` and sy
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ----------- | -------------- | ------------- | ------------- |
-| MerchantOpeningHoursWritePublisherPlugin | Registers publisher that are responsible for publishing merchant opening hours entity changes to storage. |   | Spryker\Zed\MerchantOpeningHoursStorage\Communication\Plugin\Event\Subscriber |
+| MerchantOpeningHoursDateScheduleWritePublisherPlugin |  |   | Spryker\Zed\MerchantOpeningHoursStorage\Communication\Plugin\Publisher\MerchantOpeningHours |
+| MerchantOpeningHoursWeekdayScheduleWritePublisherPlugin |  |   | Spryker\Zed\MerchantOpeningHoursStorage\Communication\Plugin\Publisher\MerchantOpeningHours |
+| MerchantOpeningHoursWritePublisherPlugin | Registers publisher that are responsible for publishing merchant opening hours entity changes to storage. |   | Spryker\Zed\MerchantOpeningHoursStorage\Communication\Plugin\Publisher\MerchantOpeningHours |
 
 **src/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -136,6 +138,9 @@ This step publishes change events to `spy_merchant_opening_hours_storage` and sy
 
 namespace Pyz\Zed\Publisher;
 
+use Spryker\Zed\MerchantOpeningHoursStorage\Communication\Plugin\Publisher\MerchantOpeningHours\MerchantOpeningHoursDateScheduleWritePublisherPlugin;
+use Spryker\Zed\MerchantOpeningHoursStorage\Communication\Plugin\Publisher\MerchantOpeningHours\MerchantOpeningHoursWeekdayScheduleWritePublisherPlugin;
+use Spryker\Zed\MerchantOpeningHoursStorage\Communication\Plugin\Publisher\MerchantOpeningHours\MerchantOpeningHoursWritePublisherPlugin;
 use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
 
 class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
@@ -147,6 +152,8 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     {
         return [
             new MerchantOpeningHoursWritePublisherPlugin(),
+            new MerchantOpeningHoursWeekdayScheduleWritePublisherPlugin(),
+            new MerchantOpeningHoursDateScheduleWritePublisherPlugin(),
         ];
     }
 }

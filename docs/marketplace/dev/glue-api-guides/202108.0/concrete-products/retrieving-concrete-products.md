@@ -361,7 +361,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 
 <details><summary markdown='span'>Response sample: retrieve information about a concrete product with its default and volume prices</summary>
 
-```php
+```json
 {
     "data": {
         "type": "concrete-products",

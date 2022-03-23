@@ -310,7 +310,7 @@ To retrieve general information about an abstract product, send the request:
 
 <details> <summary markdown='span'>Response sample: retrieve information about the abstract product with its default prices</summary>
 
-```php
+```json
 {
     "data": {
         "type": "abstract-products",

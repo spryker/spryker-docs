@@ -1,11 +1,19 @@
-## Editing product relations
+---
+title: Edit product relations
+description: Learn how to edit product relations in the Back Office.
+template: back-office-user-guide-template
+---
 
+This document describes how to edit product relations in the Back Office.
 
+## Prerequisites
 
+1. Go to **Merchandising** > **Product Relations**.
+    This opens the **Product Relations** page.
+2. Next to the product relation you want to edit, click **Edit**.
+    This opens the **Edit Product Relation** page.
 
-To edit a product relation:
-1. On the **Product Relations** page, next to the product relation you want to edit, click **Edit**
- This opens the **Edit Product Relation** page.
+Review the [reference information](#reference-information-edit-product-relations) before you start, or look up the necessary information as you go through the process.    
 
 ## Edit general information of a product relation
 
@@ -40,7 +48,7 @@ To edit a product relation:
 | --- | --- |
 | PRODUCT RELATION KEY | Unique product relation identifier. |
 | RELATION TYPE | Defines how the product relation is displayed on the Storefront: <ul><li>**Related products**: related products are displayed on the product details page of the product owning the relation.</li><li>**Upselling**: when the product owning the relation is added to cart, related products are displayed on the cart page.|
-| UPDATE REGULARLY  | Defines if the product catalog should be checked against the specified rules regularly. New products fulfilling the rules are added to related products automatically. Existing related products that no longer fulfill the rules are removed automatically. |
+| UPDATE REGULARLY  | Defines if the product catalog is checked against the specified rules regularly. New products fulfilling the rules are added to related products automatically. Existing related products that no longer fulfill the rules are removed automatically. |
 | IS ACTIVE | Defines if the product relation is visible on the Storefront. |
 | Select product | Table for selecting a product that owns the relation. |
 | SELECT STORES | Defines the stores the product relation is displayed in. |    

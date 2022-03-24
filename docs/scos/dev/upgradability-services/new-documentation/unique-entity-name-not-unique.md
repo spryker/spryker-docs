@@ -42,15 +42,9 @@ The names should be unique to the extent of making it impossible to accidentally
 
 #### Examples related error in the Evaluator output for transfer:
 ```bash
-************************************************************************************************************************
-Evaluator\Business\Check\IsNotUnique\TransferShouldHavePrefixCheck
-You should use Pyz prefix for unique transfer objects on the project level
-************************************************************************************************************************
-------------------------------------------------------------------------------------------------------------------------
-ProductAbstractStore
-"\/src\/Pyz\/Shared\/Product\/Transfer\/product.transfer.xml"
-["productAbstractSku","storeName"]
-************************************************************************************************************************
+---------------- ----------------------------------------------------------------------------------------------------
+NotUnique:TransferName Transfer object name ProductAbstractStore has to have project prefix Pyz in /0000-fork-b2c-demo-shop/src/Pyz/Shared/Product/Transfer/product.transfer.xml, like PyzProductAbstractStore
+---------------------- ----------------------------------------------------------------------------------------------------
 ```
 
 #### Examples renamed transfer name
@@ -134,15 +128,9 @@ The names should be unique to the extent of making it impossible to accidentally
 #### Examples related error in the Evaluator output for tables
 
 ```bash
-************************************************************************************************************************
-Evaluator\Business\Check\IsNotUnique\DbTableCheck
-You should use project specific prefix "pyz" for the table
-************************************************************************************************************************
-------------------------------------------------------------------------------------------------------------------------
-evaluator_spryker
-"\/src\/Pyz\/Zed\/EvaluatorSpryker\/Persistence\/Propel\/Schema\/evaluator_spryker.schema.xml"
-["id_evaluator_spryker","reversed_string"]
-************************************************************************************************************************
+------------------------ ----------------------------------------------------------------------------------------------------
+NotUnique:DatabaseTable Database table evaluator_spryker has to have project prefix Pyz in /0000-fork-b2c-demo-shop/src/Pyz/Zed/EvaluatorSpryker/Persistence/Propel/Schema/evaluator_spryker.schema.xml, like pyz_evaluator_spryker
+----------------------- ----------------------------------------------------------------------------------------------------
 ```
 
 #### Examples of renamed table column name
@@ -236,14 +224,10 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 #### Example related error in the Evaluator output
 
 ```bash
-************************************************************************************************************************
-Evaluator\Business\Check\IsNotUnique\MethodCheck
-Use project specific prefix, e.g Pyz
-************************************************************************************************************************
-------------------------------------------------------------------------------------------------------------------------
-Pyz\Client\RabbitMq\RabbitMqConfig
-{"name":"getPublishQueueConfiguration","class":"Pyz\\Client\\RabbitMq\\RabbitMqConfig"}
-{"parentClass":"Spryker\\Client\\RabbitMq\\RabbitMqConfig","methods":["getQueueConnections","getMessageConfig","getDefaultQueueConnectionConfig","isRuntimeSettingUpEnabled","getQueueConnectionConfigs","getQueueOptions","getQueueConfiguration","getDefaultBoundQueueNamePrefix","createExchangeOptionTransfer","createQueueOptionTransfer","get","getConfig","setSharedConfig","getSharedConfig","resolveSharedConfig"]}
+---------------- ----------------------------------------------------------------------------------------------------
+NotUnique:Method Method name Pyz\Client\RabbitMq\RabbitMqConfig::getPublishQueueConfiguration() should contains project prefix, like pyzGetPyzPublishQueueConfiguration
+---------------- ----------------------------------------------------------------------------------------------------
+
 ```
 
 #### Example of renamed method name

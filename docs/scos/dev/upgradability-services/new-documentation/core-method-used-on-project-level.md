@@ -46,7 +46,7 @@ class CustomerAccessUpdater extends SprykerCustomerAccessUpdater
 ```bash
 ------------------------------------------------------------------------------------------------------------------------
 Pyz\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessUpdater
-"Please avoid Spryker dependency: customerAccessEntityManager->setContentTypesToInaccessible(...)"
+"PrivateApi:Persistence Please avoid Spryker dependency: $this->getCustomerAccessEntityByContentType(...)"
 ************************************************************************************************************************
 ```
 

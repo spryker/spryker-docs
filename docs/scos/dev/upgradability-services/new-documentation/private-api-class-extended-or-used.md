@@ -46,7 +46,7 @@ class CustomerAccessForm extends SprykerCustomerAccessForm
 
 #### Example of related error in the Evaluator output
 
-```text
+```bash
 ------------------------------------------------------------------------------------
 Pyz\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm
 "Please avoid dependency: Spryker\\Zed\\CustomerAccessGui\\Communication\\Form\\CustomerAccessForm in Pyz\\Zed\\CustomerAccessGui\\Communication\\Form\\CustomerAccessForm"

@@ -71,24 +71,24 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 | REQUEST | USAGE |
 | --- | --- |
 | `GET https://glue.mysprykershop.com/guest-carts` | Retrieve a guest cart. |
-| `GET https://glue.mysprykershop.com/guest-carts?include=guest-cart-items` | Retrieve information about a guest cart with the concrete products included. |
+| `GET https://glue.mysprykershop.com/guest-carts?include=guest-cart-items` | Retrieve information about a guest cart with its items included. |
 | `GET https://glue.mysprykershop.com/guest-carts?include=cart-rules` | Retrieve a guest cart with information about the cart rules. |
 | `GET https://glue.mysprykershop.com/guest-carts?include=gift-cards,vouchers` | Retrieve a guest cart with information about the gift cards applied. |
-| `GET https://glue.mysprykershop.com/guest-carts?include=guest-cart-items,concrete-products,product-options` | Retrieve a guest cart with information about its items, respective concrete products, and product options of the concrete products. |
+| `GET https://glue.mysprykershop.com/guest-carts?include=guest-cart-items,concrete-products,product-options` | Retrieve a guest cart with information about its items, respective concrete products, and product options included. |
 | `GET https://glue.mysprykershop.com/guest-carts?include=sales-units,product-measurement-units` | Retrieve a guest cart with information about its items, sales units, and product measurement units. |
 | `GET https://glue.mysprykershop.com/guest-carts?include=vouchers` | Retrieve a guest cart with information about vouchers. |
-| `GET https://glue.mysprykershop.com/guest-carts?include=concrete-products,product-labels` | Retrieve a guest cart with information about concrete products and the product labels assigned to the products in it. |
+| `GET https://glue.mysprykershop.com/guest-carts?include=concrete-products,product-labels` | Retrieve a guest cart with information about concrete products and the product labels assigned. |
 | `GET https://glue.mysprykershop.com/guest-carts?include=promotional-items,abstract-products,concrete-product`| Retrieve detailed information on the promotional items for the guest cart. |
-| `GET https://glue.mysprykershop.com/guest-carts?include=items,concrete-products,product-offers` | Retrieve all guest carts of a user with information about product offers. |
-| `GET http://glue.mysprykershop.com/guest-carts?include=items,concrete-products,product-offers,product-offer-availabilities` | Retrieve all guest carts of a user with product offer availabilities. |
-| `GET http://glue.mysprykershop.com/guest-carts?include=items,concrete-products,product-offers,product-offer-prices` | Retrieve all guest carts of a user with product offer prices. |
-| `GET https://glue.mysprykershop.com/guest-carts/f0d01709-4dea-5ac3-8ceb-873875446ab0?include=guest-cart-items,merchants` | Retrieve a guest cart with items and respective merchants included. |
+| `GET https://glue.mysprykershop.com/guest-carts?include=items,concrete-products,product-offers` | Retrieve a guest cart with information about product offers included. |
+| `GET http://glue.mysprykershop.com/guest-carts?include=items,concrete-products,product-offers,product-offer-availabilities` | Retrieve a guest cart with product offer availabilities information included. |
+| `GET http://glue.mysprykershop.com/guest-carts?include=items,concrete-products,product-offers,product-offer-prices` | Retrieve a guest cart with product offer prices information included. |
+| `GET https://glue.mysprykershop.com/guest-carts/f0d01709-4dea-5ac3-8ceb-873875446ab0?include=guest-cart-items,merchants` | Retrieve a guest cart with items and information about merchants included. |
 
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart</summary>
 
 ```json
 {
@@ -132,7 +132,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 <details>
-<summary markdown='span'>Response sample with guest cart items</summary>
+<summary markdown='span'>Response sample: retrieve information about a guest cart with its items included</summary>
 
 ```json
 {
@@ -227,7 +227,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 <details>
-<summary markdown='span'>Response sample with cart rules</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with information about the cart rules</summary>
 
 ```json
 {
@@ -301,7 +301,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 <details>
-<summary markdown='span'>Response sample with gift cards</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with information about the gift cards applied</summary>
 
 ```json
 {
@@ -371,7 +371,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 <details>
-<summary markdown='span'>Sample response with guest cart items, concrete products, and product options</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with information about its items, respective concrete products, and product options included</summary>
 
 ```json
 {
@@ -628,7 +628,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 <details>
-<summary markdown='span'>Response sample with guest cart items, sales units, and product measurement units</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with information about its items, sales units, and product measurement units</summary>
 
 ```json
 {
@@ -757,7 +757,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 <details>
-<summary markdown='span'>Response sample with a cart rule and a discount voucher</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with information about vouchers</summary>
 
 ```json
 {
@@ -823,11 +823,10 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product labels</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with information about concrete products and the product labels assigned</summary>
 
 ```json
 {
@@ -970,12 +969,11 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
-
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample with promotional items</summary>
+<summary markdown='span'>Response sample: retrieve detailed information on the promotional items for the guest cart</summary>
 
 ```json
 {
@@ -1119,7 +1117,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product offers</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with information about product offers included</summary>
 
 ```json
 {
@@ -1283,7 +1281,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 <details>
-<summary markdown='span'>Response sample with availability of product offers</summary>
+<summary markdown='span'>Response sample: Retrieve a guest cart with product offer availabilities information included</summary>
 
 ```json
 {
@@ -1491,7 +1489,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product offer prices</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with product offer prices information included</summary>
 
 ```json
 {
@@ -1753,7 +1751,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 <details>
-<summary markdown='span'>Response sample with items and merchant</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with items and information about merchants included</summary>
 
 ```json
 {
@@ -1955,7 +1953,10 @@ Below, you can see an exemplary workflow for converting a guest cart into a regu
 
 1. The customer adds items to a guest cart.
 
-Request sample: `POST https://glue.myspsrykershop.com/guest-cart-items`
+Request sample:
+
+`POST https://glue.myspsrykershop.com/guest-cart-items`
+
 ```json
 {
     "data": {
@@ -1973,7 +1974,8 @@ Request sample: `POST https://glue.myspsrykershop.com/guest-cart-items`
 | --- | --- | --- |
 | X-Anonymous-Customer-Unique-Id | guest-user-001 | Guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value.. |
 
-**Response sample**
+Response sample:
+
 ```json
 {
     "data": {
@@ -1985,9 +1987,10 @@ Request sample: `POST https://glue.myspsrykershop.com/guest-cart-items`
     "included": [...]
 }
 ```
-2. The customer logs in.
+1. The customer logs in.
 
 Request sample: `POST https://glue.myspsrykershop.com/access-tokens`
+
 ```json
 {
     "data": {
@@ -2004,7 +2007,7 @@ Request sample: `POST https://glue.myspsrykershop.com/access-tokens`
 | --- | --- | --- |
 | X-Anonymous-Customer-Unique-Id | guest-user-001 | Guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
 
-**Response sample**
+Response sample:
 
 ```json
 {
@@ -2024,7 +2027,9 @@ Request sample: `POST https://glue.myspsrykershop.com/access-tokens`
 ```
 3. The customer requests a list of his own carts.
 
-Request sample: `GET https://glue.myspsrykershop.com/carts`
+Request sample: 
+
+`GET https://glue.myspsrykershop.com/carts`
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
@@ -2032,7 +2037,7 @@ Request sample: `GET https://glue.myspsrykershop.com/carts`
 
 In the **multi-cart** environment, the guest cart has been converted to a regular cart. You can see it in the list of carts with the id `9183f604-9b2c-53d9-acbf-cf59b9b2ff9f`.
 
-**Response sample**
+Response sample:
 
 ```json
 {

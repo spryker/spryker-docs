@@ -125,7 +125,7 @@ To create a return for a registered user, send the Request sample:
 
 </details>
 
-<details><summary markdown='span'>Response sample: create a return for the merchant order item with information on return items</summary>
+<details><summary markdown='span'>Response sample: create a return for the merchant order item with information about return items</summary>
 
 ```json
 {
@@ -216,12 +216,12 @@ To retrieve returns, send the Request sample:
 | REQUEST | USAGE |
 |---|---|
 | `GET https://glue.mysprykershop.com/returns` | Retrieve all returns. |
-| `GET https://glue.mysprykershop.com/returns?include=return-items` | Retrieve all returns with the information on return items included. |
+| `GET https://glue.mysprykershop.com/returns?include=return-items` | Retrieve all returns with the information about return items included. |
 | `GET https://glue.mysprykershop.com/returns?include=merchants` | Retrieve all returns with the respective merchants included. |
 
 ### Response
 
-<details><summary markdown='span'>Response sample: returns with information on return items</summary>
+<details><summary markdown='span'>Response sample: returns with information about return items</summary>
 
 ```json
 {

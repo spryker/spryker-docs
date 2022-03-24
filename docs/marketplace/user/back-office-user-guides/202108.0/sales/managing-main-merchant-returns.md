@@ -30,7 +30,7 @@ To set and track the return statuses, you trigger the return states.
 To trigger the return states:
 
 1. On the **Returns** page, click **View** in the **Actions** column. This takes you to the **Return Overview _[Return reference]_**.
-2. In the **Trigger all matching state section** of the **Overview of Return: _[Return reference]_** page, click the necessary state. The return state changes and the new states that you can trigger, appear. For information on the return item states and the flow, see Main merchant return item states.
+2. In the **Trigger all matching state section** of the **Overview of Return: _[Return reference]_** page, click the necessary state. The return state changes and the new states that you can trigger, appear. For information about the return item states and the flow, see Main merchant return item states.
 
 
 
@@ -81,7 +81,7 @@ The following tables describe the attributes on the **Overview of Return: _[Retu
 
 ##### Returned items section
 
-The returned items section displays information on the returned items.
+The returned items section displays information about the returned items.
 
 | ATTRIBUTE   | DESCRIPTION       |
 | -------------------- | ----------- |

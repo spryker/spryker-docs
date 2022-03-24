@@ -8,7 +8,7 @@ This endpoint lets you manage guest cart items.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see:
+For detailed information about the modules that provide the API functionality and related installation instructions, see:
 * [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html)
 * [Glue API: Measurement Units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html)
 * [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
@@ -1810,7 +1810,7 @@ For more request body examples, see [Add items to a guest cart](#add-items-to-a-
 
 ### Response
 
-If the update is successful, the endpoint returns `RestCartsResponse` with the updated quantity. See [Add items to a guest cart](#add-items-to-a-guest-cart) for examples.
+If the update is successful, the endpoint returns `RestCartsResponse` with the updated quantity. For examples, see [Add items to a guest cart](#add-items-to-a-guest-cart).
 
 ## Remove an item from a guest cart
 

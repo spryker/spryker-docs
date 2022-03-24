@@ -87,9 +87,9 @@ The properties of the `AclEntityMetadataTransfer` are described in the following
 |-----|-----|-----|
 | parent | AclEntityParentMetadataTransfer | This property is used to configure the inheritance. It is required for the entity which has rules with the [inherited scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/inherited-scope.html), or for the [composite entity](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html). For more details, see [Inherited scope vs Composite entity](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html). |
 | entityName | string | Fully qualified class name of the configured entity (Propel Entity). |
-| hasSegmentTable | bool | Sets if the configured entity supports segmentation. See [Segment scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/segment-scope.html) documentation for more details. |
+| hasSegmentTable | bool | Sets if the configured entity supports segmentation. For more details, see [Segment scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/segment-scope.html) documentation. |
 | defaultGlobalOperationMask | int | Sets the default binary access mask (see [Execution flow](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/execution-flow.html) documentation). |
-| isSubentity | bool | Indicates whether the configured entity is the part of a composite object. See [Composite entity](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html) for the details. |
+| isSubentity | bool | Indicates whether the configured entity is the part of a composite object. For more details, see [Composite entity](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html). |
 
 ### AclEntityParentMetadataTransfer
 

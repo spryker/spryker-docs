@@ -55,7 +55,7 @@ All columns with headers having arrows in **List of orders** are sortable.
 
 | SECTION | ATTRIBUTE | DESCRIPTION |
 |---|---|---|
-| Order Overview | | Section with the general information on the order. |
+| Order Overview | | Section with the general information about the order. |
 |   | Order reference | Reference number of the order. |
 |   | Order date | Date when the order was placed. |
 |   | Unique Product Quantity | Number of unique products in the order. |
@@ -66,7 +66,7 @@ All columns with headers having arrows in **List of orders** are sortable.
 |   | Refund total | Available refundable amount for the order. |
 |   | Trigger all matching states inside this order   | Action button for changing the available states for all the items in the order. For details, see [Changing marketplace order states](#changing-marketplace-order-states). |
 | Custom Order Reference |   | Custom number that can be added to the order. |
-| Customer |   | Section with the information on the customer who has submitted the order. |
+| Customer |   | Section with the information about the customer who has submitted the order. |
 |   | Reference | Unique reference of the customer in the system. The reference is clickable and leads to the *[View Customer](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html#viewing-customer-details)* page. |
 |   | Name | Name of the customer. |
 |   | Email | Customer’s email address. |
@@ -85,10 +85,10 @@ All columns with headers having arrows in **List of orders** are sortable.
 | Returns |   | Section with information related to returns (if there are any). |
 | Comments to Order |   | Section with comments added to the order by the customer when submitting it. |
 | Bundle Items Cart Notes |   | Section with the notes for the bundled items. |
-| Payments |   | Section with the information on payment performed y the customer (payment provider, payment method, and the amount paid). |
-| Gift cards |   | Section with the information on the gift cards. |
-| Discounts & Vouchers |   | Section with the information on discounts and vouchers applied to the order. |
-| Refunds |   | Section with information on refunds issued. |
+| Payments |   | Section with the information about payment performed y the customer (payment provider, payment method, and the amount paid). |
+| Gift cards |   | Section with the information about the gift cards. |
+| Discounts & Vouchers |   | Section with the information about discounts and vouchers applied to the order. |
+| Refunds |   | Section with information about refunds issued. |
 | Order Source |   | Source of the order. |
 | Comments |   | Section for the Back Office users to add comments to the order. These comments are not visible to the customer. |
 
@@ -230,7 +230,7 @@ The following tables describe the attributes on the **Overview of Return: _[Retu
 
 #### Returned items section
 
-The returned items section displays information on the returned items.
+The returned items section displays information about the returned items.
 
 | ATTRIBUTE | DESCRIPTION |
 |---|---|

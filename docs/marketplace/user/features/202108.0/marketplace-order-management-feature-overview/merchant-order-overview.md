@@ -25,4 +25,4 @@ A merchant order consists of merchant order items, which are items (products) pu
 | Merchant Order tax total  | Total tax amount from the grand total.   |
 | Marketplace Operator fees total | Total amount of fees paid to the Marketplace administrator.  |
 
-Rounding logic for the calculations is the same as the one used for the Marketplace order. See [Rounding in the Marketplace Order feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html#rounding) for details.
+Rounding logic for the calculations is the same as the one used for the Marketplace order. For details, see [Rounding in the Marketplace Order feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html#rounding).

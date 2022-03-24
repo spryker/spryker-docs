@@ -67,7 +67,7 @@ The following table describes the attributes on the **View Order _[Order ID]_** 
   <tr>
     <td rowspan="11">Order Overview</td>
     <td></td>
-    <td>Section with the general information on the order.</td>
+    <td>Section with the general information about the order.</td>
   </tr>
   <tr>
     <td>Merchant Order reference</td>
@@ -112,7 +112,7 @@ The following table describes the attributes on the **View Order _[Order ID]_** 
   <tr>
     <td rowspan="6">Customer</td>
     <td></td>
-    <td>Section with the information on the customer who has submitted the order.</td>
+    <td>Section with the information about the customer who has submitted the order.</td>
   </tr>
   <tr>
     <td>Reference</td>
@@ -182,7 +182,7 @@ The following table describes the attributes on the **View Order _[Order ID]_** 
   <tr>
     <td>Discounts &amp; Vouchers</td>
     <td></td>
-    <td>Section with the information on discounts and vouchers applied to the order.</td>
+    <td>Section with the information about discounts and vouchers applied to the order.</td>
   </tr>
 </tbody>
 </table>

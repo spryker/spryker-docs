@@ -35,7 +35,7 @@ Product option groups created by merchants can have the following statuses:
 * *Approved*: The product option group was approved by the Marketplace administrator. Merchants can use it for their products and offers, so if it is [active](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html#activating-a-product-option), the product option is displayed on the Storefront.
 * *Denied*: The product option was rejected by the Marketplace administrator, and Merchants cannot use it for their products and offers. If they still use it, it will not be applied and will not be displayed on the Storefront.
 
-Currently, you can only import the Marketplace options approval statuses. See [File details: merchant product option group](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-option-group.csv.html) for details.
+Currently, you can only import the Marketplace options approval statuses. For details, see [File details: merchant product option group](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-option-group.csv.html).
 
 ## Marketplace product options in the Back Office
 In the Back Office, a Marketplace administrator can:

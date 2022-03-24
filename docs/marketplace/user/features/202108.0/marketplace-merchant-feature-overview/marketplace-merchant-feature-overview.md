@@ -48,21 +48,21 @@ Schematically, the merchant status change flow looks like this:
 
 ## Merchant category
 
-You can group merchants by categories to make your working process more efficient and simplify merchants' search for customers. For details, See [Merchant Category](/docs/marketplace/user/features/{{page.version}}/merchant-category-feature-overview.html).
+You can group merchants by categories to make your working process more efficient and simplify merchants' search for customers. For details, see [Merchant Category](/docs/marketplace/user/features/{{page.version}}/merchant-category-feature-overview.html).
 
 ## Merchants on the Storefront
 
 ### Merchant profile
 
-On the Storefront, customers can check the relevant merchant information on the *Merchant Profile* page.
+On the Storefront, customers can check the relevant merchant information on the **Merchant Profile** page.
 
 {% info_block infoBox "Note" %}
 
-The merchant profile page is available only if the merchant is [Active](#merchant-statuses) .
+The merchant profile page is available only if the merchant is [Active](#merchant-statuses).
 
 {% endinfo_block %}
 
-The information for the merchant profile can be defined:
+The information for a merchant profile can be defined:
 * By the Marketplace administrator in the Back Office when [creating merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#creating-merchants) or [editing merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#editing-merchants).
 * By importing the merchant profile data. For more information, see [File details: merchant_profile.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-profile.csv.html) and [File details: merchant_profile_address.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-profile-address.csv.html).
 * By the merchant in the Merchant Portal:

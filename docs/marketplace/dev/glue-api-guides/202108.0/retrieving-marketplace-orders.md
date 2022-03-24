@@ -16,7 +16,7 @@ The **Marketplace Order Management API** lets you retrieve all orders made by a 
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [**Glue API: Order Management feature integration**](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html)
+For detailed information about the modules that provide the API functionality and related installation instructions, see [**Glue API: Order Management feature integration**](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html)
 
 ## Retrieve all orders
 
@@ -531,7 +531,7 @@ For the attributes of the included resources, see [Retrieving merchants](/docs/m
 
 ## Retrieve an order
 
-To retrieve detailed information on an order, send the request:
+To retrieve detailed information about an order, send the request:
 
 ***
 `GET` {% raw %}**/orders/*{{order_id}}***{% endraw %}
@@ -1375,7 +1375,7 @@ To retrieve detailed information on an order, send the request:
 | billingAddress.email       | String | Email address to use for communication.                      |
 | billingAddress.country     | String | Specifies the country.                                       |
 | billingAddress.iso2Code    | String | ISO 2-Letter Country Code to use.                            |
-| shippingAddress            | object | Shipment address of the order. This value is returned only if you submit an order without split delivery. See [Checking out purchases in version 202009.0](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html) to learn how to do that. |
+| shippingAddress            | object | Shipment address of the order. This value is returned only if you submit an order without split delivery. To learn how to do that, see [Checking out purchases in version 202009.0](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html).|
 
 #### Order item information
 

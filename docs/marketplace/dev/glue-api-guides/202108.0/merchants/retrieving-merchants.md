@@ -8,7 +8,7 @@ Merchant is an individual or an organization selling products on the Marketplace
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API - Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-merchant-feature-integration.html).
+For detailed information about the modules that provide the API functionality and related installation instructions, see [Glue API - Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-merchant-feature-integration.html).
 
 ## Retrieve merchants
 
@@ -646,8 +646,8 @@ Retrieve merchant information as a relationship when sending the following reque
 * [Retrieve a product offer]
 * [Retrieve marketplace orders](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-marketplace-orders.html)
 
-Search by merchants in the product catalog. See [Searching the product catalog](/docs/marketplace/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html) for details.
-Resolve a search engine friendly URL of a merchant page. See [Resolving search engine friendly URLs](/docs/marketplace/dev/glue-api-guides/{{page.version}}/resolving-search-engine-friendly-urls.html) for details.
+Search by merchants in the product catalog. For details, see [Searching the product catalog](/docs/marketplace/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html).
+Resolve a search engine friendly URL of a merchant page. For details, see [Resolving search engine friendly URLs](/docs/marketplace/dev/glue-api-guides/{{page.version}}/resolving-search-engine-friendly-urls.html).
 
 
 ## Possible errors

@@ -24,7 +24,7 @@ To set and track the return statuses, you trigger the return states.
 To trigger the return states:
 
 1. On the **Returns** page, in the **Actions** column, click **View**. This takes you to the **Overview of Return: _[Return reference]_**.
-2. In the **Trigger all matching state section** of the **Overview of Return: _[Return reference]_** page, click the necessary state. The return state changes, and the new states that you can trigger appear. See [Marketplace return item states](#marketplace-return-item-states) for information on the return item states and the flow.
+2. In the **Trigger all matching state section** of the **Overview of Return: _[Return reference]_** page, click the necessary state. The return state changes, and the new states that you can trigger appear. For information about the return item states and the flow, see [Marketplace return item states](#marketplace-return-item-states).
 
  {% info_block infoBox "Info" %}
 
@@ -73,7 +73,7 @@ The following table describes the attributes on the **Overview of Return: _[Retu
 
 ##### Returned items section
 
-The returned items section displays information on the returned items.
+The returned items section displays information about the returned items.
 
 | ATTRIBUTE    | DESCRIPTION      |
 | --------------------- | ------------------------------ |

@@ -239,6 +239,20 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
      *
      * @return \Spryker\Yves\Kernel\Container
      */
+    public function provideDependencies(Container $container): Container
+    {
+        $container = parent::provideDependencies($container);
+        $container = $this->extendPaymentMethodHandler($container);
+        $container = $this->extendSubFormPluginCollection($container);
+
+        return $container;
+    }
+    
+    /**
+     * @param \Spryker\Yves\Kernel\Container $container
+     *
+     * @return \Spryker\Yves\Kernel\Container
+     */
     protected function extendPaymentMethodHandler(Container $container): Container
     {
         $container->extend(static::PAYMENT_METHOD_HANDLER, function (StepHandlerPluginCollection $paymentMethodHandler) {

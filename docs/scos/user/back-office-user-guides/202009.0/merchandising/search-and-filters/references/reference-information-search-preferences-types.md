@@ -58,7 +58,7 @@ Completion terms implies that, if set to **Yes**, the attributes will be include
 The _storage_media_ attribute has **SSD** and **Flash** values. If **Include for completion** has been set to **Yes**, then when user types "_fla_" in the search field, the search term will be autocompleted with "_sh_," and there will be a list of suggested terms in the search results flyout:
 ![Completion terms](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Search+Preferences+Types/completion-terms.png){height="200" width="500"}
 
-**Tips & Tricks**
+**Tips and tricks**
 When you first decide on activating search preference types for attributes, keep in mind, that enabling all of them is **highly unrecommended**, as this will result in a huge list of search results.
 Instead of this, you might want to consider enabling search preference types for only those attributes that you really want your users to find while searching, or the attributes that refer to products you want to appear in the search results above all.
 {% info_block infoBox "Example" %}

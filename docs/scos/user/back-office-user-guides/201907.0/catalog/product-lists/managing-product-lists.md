@@ -30,7 +30,7 @@ To edit a product list:
     2. (Un)assign product category or individual products to a list.
 3. Once done, click **Save**.
 ***
-**Tips & Tricks**
+**Tips and tricks**
 On this page, you can:
 * Return to the list of product lists by clicking **Back to Product Lists** in the top right corner of the page.
 * Export a product list into a CSV file. For this, click **Export**.

@@ -4,7 +4,7 @@ description: Retrieve details about guest cart items and learn what else you can
 template: glue-api-storefront-guide-template
 ---
 
-This endpoint allows you to manage guest cart items.
+This endpoint lets you manage guest cart items.
 
 ## Installation
 
@@ -59,7 +59,7 @@ To add items to a guest cart, send the request:
 
 
 <details>
-<summary markdown='span'>Request sample</summary>
+<summary markdown='span'>Request sample: add items to a guest cart</summary>
 
 `POST https://glue.mysprykershop.com/guest-cart-items`
 
@@ -77,7 +77,7 @@ To add items to a guest cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Request sample: adding a promotional item with the cart-rules relationship</summary>
+<summary markdown='span'>Request sample: add a promotional item with the cart-rules relationship to a guest cart</summary>
 
 {% info_block infoBox "Cart rules" %}
 
@@ -102,7 +102,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 </details>
 
 <details>
-<summary markdown='span'>Request sample: adding a gift card</summary>
+<summary markdown='span'>Request sample: add a gift card to a guest cart</summary>
 
 `POST https://glue.mysprykershop.com/guest-cart-items`
 
@@ -120,7 +120,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 </details>
 
 <details>
-<summary markdown='span'>Request sample with product measurement units and sales units</summary>
+<summary markdown='span'>Request sample: add items with product measurement units and sales units to a guest cart</summary>
 
 `POST https://glue.mysprykershop.com/guest-cart-items?include=sales-units`
 
@@ -142,7 +142,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 </details>
 
 <details>
-<summary markdown='span'>Request sample with cart rules</summary>
+<summary markdown='span'>Request sample: add items with cart rules to a guest cart </summary>
 
 `POST https://glue.mysprykershop.com/guest-cart-items?include=cart-rules`
 
@@ -157,11 +157,10 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Request sample with vouchers</summary>
+<summary markdown='span'>Request sample: add items with vouchers to a guest cart</summary>
 
 `POST https://glue.mysprykershop.com/guest-cart-items?include=cart-rules`
 
@@ -176,12 +175,11 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
-
 </details>
 
 
 <details>
-<summary markdown='span'>Request sample with concrete products and product options</summary>
+<summary markdown='span'>Request sample: add items with product options to a guest cart</summary>
 
 `POST https://glue.mysprykershop.com/guest-cart-items?include=guest-cart-items,concrete-products,product-options`
 
@@ -208,7 +206,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 
 
 <details>
-<summary markdown='span'>Request sample with product offers</summary>
+<summary markdown='span'>Request sample: add product offers to a guest cart</summary>
 
 `POST https://glue.mysprykershop.com/guest-cart-items?include=items`
 
@@ -227,7 +225,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 </details>
 
 <details>
-<summary markdown='span'>Request sample: adding a merchant product</summary>
+<summary markdown='span'>Request sample: add a marketplace product to a guest cart</summary>
 
 `POST https://glue.mysprykershop,com/guest-cart-items`
 
@@ -247,7 +245,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 </details>
 
 <details>
-<summary markdown='span'>Request sample with guest cart items and merchants</summary>
+<summary markdown='span'>Request sample: add items to a guest cart with information on merchants included</summary>
 
 `POST https://glue.mysprykershop,com/guest-cart-items?include=guest-cart-items,merchants`
 
@@ -263,7 +261,6 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
-
 </details>
 
 
@@ -294,7 +291,7 @@ It is the responsibility of the API Client to track whether the selected items a
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: add items to a guest cart</summary>
 
 ```json
 {
@@ -370,7 +367,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-<summary markdown='span'>Response sample: adding a promotional item without the cart-rules relationship</summary>
+<summary markdown='span'>Response sample: add a promotional item without the cart-rules relationship to a guest cart</summary>
 
 ```json
 {
@@ -415,7 +412,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 <details>
-<summary markdown='span'>Response sample: adding a promotional item with the cart-rules relationship</summary>
+<summary markdown='span'>Response sample: add a promotional item with the cart-rules relationship to a guest cart</summary>
 
 ```json
 {
@@ -693,7 +690,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 <details>
-<summary markdown='span'>Response sample: adding a gift cart</summary>
+<summary markdown='span'>Response sample: add a gift card to a guest cart</summary>
 
 ```json
 {
@@ -812,7 +809,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 <details>
-<summary markdown='span'>Response sample with concrete products and product options</summary>
+<summary markdown='span'>Response sample: add items with product options to a guest cart</summary>
 
 ```json
 {
@@ -1060,11 +1057,10 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product measurement units and sales units</summary>
+<summary markdown='span'>Response sample: add items with product measurement units and sales units to a guest cart</summary>
 
 ```json
 {
@@ -1182,7 +1178,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-<summary markdown='span'>Response sample with cart rules</summary>
+<summary markdown='span'>Response sample: add items with cart rules to a guest cart</summary>
 
 ```json
 {
@@ -1280,11 +1276,10 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with vouchers</summary>
+<summary markdown='span'>Response sample: add items with vouchers to a guest cart</summary>
 
 ```json
 {
@@ -1423,11 +1418,10 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product offers</summary>
+<summary markdown='span'>Response sample: add product offers to a guest cart</summary>
 
 ```json
 {
@@ -1514,7 +1508,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 <details>
-<summary markdown='span'>Response sample: adding a merchant product</summary>
+<summary markdown='span'>Response sample: add a marketplace product to a guest cart</summary>
 
 ```json
 {
@@ -1544,7 +1538,7 @@ It is the responsibility of the API Client to track whether the selected items a
 }
 
 <details>
-<summary markdown='span'>Response sample with guest cart items and merchants</summary>
+<summary markdown='span'>Response sample: add items to a guest cart with information on merchants included</summary>
 
 ```json
 {
@@ -1674,7 +1668,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | -------------- | ----------- | --------------------- |
-| expenseTotal | String | Total amount of expenses (including, e.g., shipping costs). |
+| expenseTotal | String | Total amount of expenses (including, for example, shipping costs). |
 | discountTotal| Integer | Total amount of discounts applied to the cart.  |
 | taxTotal | String | Total amount of taxes to be paid.   |
 | subTotal   | Integer | Subtotal of the cart.  |
@@ -1783,7 +1777,7 @@ To change item quantity, send the request:
 {% endinfo_block %}
 
 <details>
-<summary markdown='span'>Sample request</summary>
+<summary markdown='span'>Request sample: change item quantity in a guest cart</summary>
 
 `PATCH https://glue.mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`    
 
@@ -1832,7 +1826,9 @@ To remove an item from a guest cart, send the request:
 | --- | --- | --- | --- |
 | X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | Hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart). |
 
-Request sample: `DELETE https://glue.mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`
+Request sample: remove an item from a guest cart
+
+`DELETE https://glue.mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`
 
 ### Response
 
@@ -1849,7 +1845,7 @@ If the item is deleted successfully, the endpoint returns the "204 No Content"�
 | 105 | Cart could not be deleted. |
 | 106 | Cart item could not be deleted. |
 | 107 | Failed to create cart. |
-| 109 | Anonymous customer unique id is empty. |
+| 109 | Anonymous customer unique ID is empty. |
 | 110 | Customer already has a cart. |
 | 111 | Can’t switch price mode when there are items in the cart. |
 | 112 | Store data is invalid. |

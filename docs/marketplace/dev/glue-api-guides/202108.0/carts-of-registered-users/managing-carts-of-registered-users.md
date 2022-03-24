@@ -44,7 +44,9 @@ Carts created via Glue API are always set as the default carts for the user.
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer) or [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user).  |
 
-Sample request: `POST https://glue.mysprykershop.com/carts`
+Request sample: create a cart
+
+`POST https://glue.mysprykershop.com/carts`
 
 ```json
 {
@@ -69,9 +71,7 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 
 ### Response
 
-
-<details>
-<summary markdown='span'>Response sample</summary>
+Response sample: create a cart
 
 ```json
 {
@@ -100,8 +100,6 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 }
 ```
 
-</details>
-
 **General cart information**
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -124,8 +122,8 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| totals | Object | Discribes the total calculations. |
-| totals.expenseTotal | String | Total amount of expenses (including, e.g., shipping costs). |
+| totals | Object | Describes the total calculations. |
+| totals.expenseTotal | String | Total amount of expenses (including, for example, shipping costs). |
 | totals.discountTotal | Integer | Total amount of discounts applied to the cart.  |
 | totals.taxTotal | String | Total amount of taxes to be paid. |
 | totals.subTotal | Integer | Subtotal of the cart.  |
@@ -169,21 +167,15 @@ To retrieve all carts, send the request:
 | `GET https://glue.mysprykershop.com/carts?include=shared-carts` | Retrieve all carts with shared carts included. |
 | `GET https://glue.mysprykershop.com/carts?include=shared-carts,company-users` | Retrieve all carts with included information about shared carts, and the company uses they are shared with. |
 | `GET https://glue.mysprykershop.com/carts?include=cart-rules` | Retrieve all carts with cart rules included. |
-| `GET https://glue.mysprykershop.com/carts?include=vouchers` | Retrieve all carts with  applied vouchers included. |
+| `GET https://glue.mysprykershop.com/carts?include=vouchers` | Retrieve all carts with the applied vouchers included. |
 | `GET https://glue.mysprykershop.com/carts?include=promotional-items` | Retrieve all carts with promotional items included. |
-| `GET https://glue.mysprykershop.com/carts?include=gift-cards` | Retrieve all carts with applied gift cards included. |
-| `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-options` | Retrieve all carts with items, respective concrete product, and their product options included. |
+| `GET https://glue.mysprykershop.com/carts?include=gift-cards` | Retrieve all carts with the applied gift cards included. |
+| `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-options` | Retrieve all carts with items, respective concrete products, and their product options included. |
 | `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-labels` | Retrieve all carts with the included information: concrete products and the product labels assigned to the products in the carts. |
 | `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-offers` | Retrieve all carts with product offers included. |
-| `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-offers,product-offer-availabilities` | Retrieve all carts with product offer availabilities included. |
 | `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-offers,product-offer-prices` | Retrieve all carts with product offer prices included. |
 | `GET https://glue.mysprykershop.com/carts?include=merchants` | Retrieve all carts with merchants included. |
 
-
-### Response
-
-<details>
-<summary markdown='span'>Response sample: no carts</summary>
 
 ```json
 {
@@ -196,7 +188,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: multiple carts</summary>
+<summary markdown='span'>Response sample: retrieve all carts</summary>
 
 ```json
 {
@@ -260,10 +252,8 @@ To retrieve all carts, send the request:
 </details>
 
 
-
-
 <details>
-<summary markdown='span'>Response sample with items included</summary>
+<summary markdown='span'>Response sample: retrieve all carts with the items included</summary>
 
 ```json
 {
@@ -557,7 +547,7 @@ To retrieve all carts, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample with cart permission groups included</summary>
+<summary markdown='span'>Response sample: retrieve all carts with cart permission groups included</summary>
 
 ```json
 {
@@ -694,7 +684,7 @@ To retrieve all carts, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample with shared carts included</summary>
+<summary markdown='span'>Response sample: retrieve all carts with shared carts included</summary>
 
 ```json
 {
@@ -830,7 +820,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with the included information: shared carts and company users they are shared with</summary>
+<summary markdown='span'>Response sample: retrieve all carts with included information about shared carts, and the company uses they are shared with</summary>
 
 ```json
 {
@@ -931,11 +921,10 @@ To retrieve all carts, send the request:
     ]
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with cart rules included</summary>
+<summary markdown='span'>Response sample: retrieve all carts with cart rules included</summary>
 
 ```json
 {
@@ -1066,7 +1055,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with vouchers included</summary>
+<summary markdown='span'>Response sample: retrieve all carts with the applied vouchers included</summary>
 
 ```json
 {
@@ -1133,11 +1122,10 @@ To retrieve all carts, send the request:
     ]
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with a promotional item included</summary>
+<summary markdown='span'>Response sample: retrieve all carts with promotional items included</summary>
 
 ```json
 {
@@ -1203,7 +1191,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with applied gift cards included</summary>
+<summary markdown='span'>Response sample: retrieve all carts with the applied gift cards included</summary>
 
 ```json
 {
@@ -1273,7 +1261,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with items, concrete products, and product options included</summary>
+<summary markdown='span'>Response sample: retrieve all carts with items, respective concrete products, and their product options included</summary>
 
 ```json
 {
@@ -1526,7 +1514,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product labels included</summary>
+<summary markdown='span'>Response sample: retrieve all carts with their concrete products and the product labels assigned to the products in the carts</summary>
 
 ```json
 {
@@ -1682,11 +1670,10 @@ To retrieve all carts, send the request:
     ]
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product offers included</summary>
+<summary markdown='span'>Response sample: retrieve all carts with product offers included</summary>
 
 ```json
 {
@@ -1854,7 +1841,7 @@ To retrieve all carts, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample with product offer availabilities included</summary>
+<summary markdown='span'>Response sample: retrieve all carts with product offers and product offer availabilities included</summary>
 
 ```json
 {
@@ -2043,7 +2030,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product offer prices included</summary>
+<summary markdown='span'>Response sample: retrieve all carts with product offers and product offer prices included</summary>
 
 ```json
 {
@@ -2257,7 +2244,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with merchants included</summary>
+<summary markdown='span'>Response sample: retrieve all carts with merchants included</summary>
 
 ```json
 {
@@ -2375,7 +2362,6 @@ To retrieve all carts, send the request:
     ]
 }
 ```
-
 </details>
 
 <a name="retrieve-registered-users-carts-response-attributes"></a>
@@ -2402,7 +2388,7 @@ To retrieve all carts, send the request:
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| expenseTotal | String | Total amount of expenses (including, e.g., shipping costs). |
+| expenseTotal | String | Total amount of expenses (including, for example, shipping costs). |
 | discountTotal | Integer | Total amount of discounts applied to the cart.  |
 | taxTotal | Integer | Total amount of taxes to be paid. |
 | subTotal | Integer | Subtotal of the cart.  |
@@ -2496,48 +2482,20 @@ To retrieve a registered user's cart, send the request:
 | REQUEST | USAGE |
 | --- | --- |
 | `GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4` | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart. |
-| `GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=items` | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with its items, related concrete products and cart permission groups included. |
+| `GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=items` | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with its items included. |
 | `GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=cart-permission-groups` | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with its cart permissions included. |
-| `GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=shared-carts` | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with details on the shared cart. |
-| `GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=shared-carts,company-users` | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with information about shared carts and the company uses they are shared with. |
-| `GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=cart-rules` | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with cart rules. |
+| `GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=shared-carts` | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with details on the shared carts. |
+| `GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=shared-carts,company-users` | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with information about the shared carts and the company uses they are shared with. |
+| `GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=cart-rules` | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with the cart rules. |
 | `GET https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2?include=promotional-items` | Retrieve the `1ce91011-8d60-59ef-9fe0-4493ef3628b2` cart with its promotional items. |
 | `GET https://glue.mysprykershop.com/carts/8ef901fe-fe47-5569-9668-2db890dbee6d?include=gift-cards` | Retrieve the `8ef901fe-fe47-5569-9668-2db890dbee6` cart with detailed information on its gift cards. |
-| `GET https://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398?include=items,concrete-products,product-options` | Retrieve the `8fc45eda-cddf-5fec-8291-e2e5f8014398` cart with items, respective concrete product, and their product options. |
+| `GET https://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398?include=items,concrete-products,product-options` | Retrieve the `8fc45eda-cddf-5fec-8291-e2e5f8014398` cart with items, concrete products, and their product options. |
 | `GET https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830?include=vouchers` | Retrieve the `976af32f-80f6-5f69-878f-4ea549ee0830` cart with detailed information on its vouchers. |
 | `GET https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d37d32f92ee9?include=items,concrete-products,product-labels` | Retrieve the `0c3ec260-694a-5cec-b78c-d37d32f92ee9` cart with information about the product labels assigned to the products in the cart. |
-| `GET https://glue.mysprykershop.com/carts/bef3732e-bc7a-5c07-a40c-f38caf1c40ff?include=items,concrete-products,product-offers` |Retrieve the `bef3732e-bc7a-5c07-a40c-f38caf1c40ff` cart with details on product offers.|
-| `GET https://glue.mysprykershop.com/carts/bef3732e-bc7a-5c07-a40c-f38caf1c40ff?include=items,concrete-products,product-offers,product-offer-availabilities` |Retrieve the `bef3732e-bc7a-5c07-a40c-f38caf1c40ff` cart with details on product offer availabilities.|
-| `GET https://glue.mysprykershop.com/carts/bef3732e-bc7a-5c07-a40c-f38caf1c40ff?include=items,concrete-products,product-offers,product-offer-prices` |Retrieve the `bef3732e-bc7a-5c07-a40c-f38caf1c40ff` cart with details on product offer prices.|
-| `GET https://glue.mysprykershop.com/carts/54a8290f-a2f6-58db-ae5d-ad4d04aad6ae?include=items,merchants` | Retrieve the `54a8290f-a2f6-58db-ae5d-ad4d04aad6ae` cart with detailed information on merchant products. |
-
-
-### Response
-
-<details>
-<summary markdown='span'>Response sample</summary>
 
 ```json
-{
-    "data": {
-        "type": "carts",
-        "id": "2fd32609-b6b0-5993-9254-8d2f271941e4",
-        "attributes": {
-            "priceMode": "GROSS_MODE",
             "currency": "EUR",
-            "store": "DE",
-            "name": "My Cart",
-            "isDefault": false,
-            "totals": {
-                "discountTotal": 2965,
-                "taxTotal": 4261,
                 "subtotal": 29651,
-                "grandTotal": 26686
-            },
-            "discounts": [
-                {
-                    "displayName": "10% Discount for all orders above",
-                    "amount": 2965,
                     "code": null
                 }
             ]
@@ -2552,7 +2510,7 @@ To retrieve a registered user's cart, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample with items</summary>
+<summary markdown='span'>Response sample: retrieve a cart with its items included</summary>
 
 ```json
 {
@@ -2680,7 +2638,7 @@ To retrieve a registered user's cart, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample with cart permission groups</summary>
+<summary markdown='span'>Response sample: retrieve a cart with its cart permissions included</summary>
 
 ```json
 {
@@ -2742,7 +2700,7 @@ To retrieve a registered user's cart, send the request:
 
 
 <details>
-<summary markdown='span'>Sample response with details on shared carts</summary>
+<summary markdown='span'>Response sample: retrieve a cart with the details on the shared carts</summary>
 
 ```json
 {
@@ -2802,7 +2760,7 @@ To retrieve a registered user's cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with shared carts and company users they are shared with</summary>
+<summary markdown='span'>Response sample: retrieve a cart with the information about the shared carts and the company uses they are shared with</summary>
 
 ```json
 {
@@ -2879,7 +2837,7 @@ To retrieve a registered user's cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with cart rules</summary>
+<summary markdown='span'>Response sample: retrieve a cart with the cart rules included</summary>
 
 ```json
 {
@@ -2947,7 +2905,7 @@ To retrieve a registered user's cart, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample with a promotional item</summary>
+<summary markdown='span'>Response sample: retrieve a cart with its promotional items</summary>
 
 ```json
 {
@@ -3008,7 +2966,7 @@ To retrieve a registered user's cart, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample with with details on gift cards</summary>
+<summary markdown='span'>Response sample: retrieve a cart with the detailed information on its gift cards</summary>
 
 ```json
 {
@@ -3073,7 +3031,7 @@ To retrieve a registered user's cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with items, respective concrete products, and their product options</summary>
+<summary markdown='span'>Response sample: retrieve a cart with items, concrete products, and their product options</summary>
 
 ```json
 {
@@ -3321,7 +3279,7 @@ To retrieve a registered user's cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with vouchers</summary>
+<summary markdown='span'>Response sample: retrieve a cart with the detailed information on its vouchers</summary>
 
 ```json
 {
@@ -3392,7 +3350,7 @@ To retrieve a registered user's cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product labels</summary>
+<summary markdown='span'>Response sample: retrieve a cart with information about the product labels assigned to the products in the cart</summary>
 
 ```json
 {
@@ -3547,7 +3505,7 @@ To retrieve a registered user's cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with details on product offers</summary>
+<summary markdown='span'>Response sample: retrieve a cart with details on product offers</summary>
 
 ```json
 {
@@ -3721,7 +3679,7 @@ To retrieve a registered user's cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product offer availabilities</summary>
+<summary markdown='span'>Response sample: retrieve a cart with details on product offers and product offer availabilities</summary>
 
 ```json
 {
@@ -3939,7 +3897,7 @@ To retrieve a registered user's cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product offer prices</summary>
+<summary markdown='span'>Response sample: retrieve a cart with details on product offers and product offer prices</summary>
 
 ```json
 {
@@ -4213,7 +4171,7 @@ To retrieve a registered user's cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with merchant products</summary>
+<summary markdown='span'>Response sample: retrieve a cart with detailed information on merchants</summary>
 
 ```json
 {
@@ -4337,7 +4295,6 @@ To retrieve a registered user's cart, send the request:
     ]
 }
 ```
-
 </details>
 
 For the attributes of carts of registered users and included resources, see [Retrieve a registered user's carts](#retrieve-registered-users-carts-response-attributes).
@@ -4383,7 +4340,9 @@ You can edit the name of the cart, change the currency and price mode. To do tha
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer) or [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user).  |
 | If-Match | 075d700b908d7e41f751c5d2d4392407 | &check; | Makes the request conditional. It matches the listed conditional ETags from the headers when retrieving the cart. The patch is applied only if the tag value matches. |
 
-Request sample: `https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d37d32f92ee9`
+Request sample: edit a cart
+
+`https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d37d32f92ee9`
 
 ```json
 {
@@ -4409,7 +4368,7 @@ Request sample: `https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d3
 
 ### Response
 
-Response sample:
+Response sample: edit a cart
 
 ```json
 {
@@ -4437,10 +4396,10 @@ Response sample:
         }
     }
 }
-
 ```
 
 ## Delete a cart
+
 To delete a cart, send the request:
 
 ---
@@ -4467,15 +4426,15 @@ You can delete a cart only if a customer has at least one more cart. Deleting a 
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer) or [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user).  |
 
 
+Request sample: delete a cart
 
-Request sample: `DELETE https://glue.mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054`
+`DELETE https://glue.mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054`
 
 ### Response
 
 If the cart is deleted successfully, the endpoint returns the `204 No Content` status code.
 
 ## Possible errors
-
 
 | CODE | REASON |
 | --- | --- |

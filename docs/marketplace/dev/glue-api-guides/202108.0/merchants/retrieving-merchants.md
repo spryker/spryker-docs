@@ -192,7 +192,6 @@ This endpoint returns only [active](/docs/marketplace/user/features/{{page.versi
     }
 }
 ```
-
 </details>
 
 
@@ -286,7 +285,6 @@ This endpoint returns only [active](/docs/marketplace/user/features/{{page.versi
     }
 }
 ```
-
 </details>
 
 <a name="merchants-response-attributes"></a>
@@ -346,12 +344,12 @@ This endpoint returns only [active](/docs/marketplace/user/features/{{page.versi
 
 | USAGE | DESCRIPTION |
 | -------------------- | ---------------------- |
-| `GET https://glue.mysprykershop.com/merchants/MER000006` | Retrieve the merchant with the `MER000006` ID. |
+| `GET https://glue.mysprykershop.com/merchants/MER000006` | Retrieve a merchant with the `MER000006` ID. |
 | `GET https://glue.mysprykershop.com/merchants/MER000006?include=merchant-addresses,merchant-opening-hours` | Retrieve the merchant with the `MER000006` ID, including merchant addresses and opening hours. |
 
 ### Response
 
-<details><summary markdown='span'>Response sample</summary>
+<details><summary markdown='span'>Response sample: retrieve the merchant</summary>
 
 ```json
 {
@@ -398,7 +396,7 @@ This endpoint returns only [active](/docs/marketplace/user/features/{{page.versi
 </details>
 
 
-<details><summary markdown='span'>Response sample with merchant addresses and opening hours</summary>
+<details><summary markdown='span'>Response sample: retrieve a merchant with merchant addresses and opening hours included</summary>
 
 ```json
 {
@@ -623,7 +621,6 @@ This endpoint returns only [active](/docs/marketplace/user/features/{{page.versi
     ]
 }
 ```
-
 </details>
 
 For the merchant attributes, see [Retrieve merchants](#merchants-response-attributes).

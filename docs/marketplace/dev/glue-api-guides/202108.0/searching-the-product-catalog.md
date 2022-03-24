@@ -28,7 +28,7 @@ To search by products, send the request:
 | QUERY PARAMETER | DESCRIPTION  | POSSIBLE VALUES |
 | ------------------- | ---------------- | ----------------------- |
 | include   | Adds resource relationships to the request.      | abstract-products   |
-| q | Restricts the set of the returned items to the provided parameter value. | <ul><li>{% raw %}{{null}}{% endraw %} (empty)</li><li>{% raw %}{{abstract_product_sku}}{% endraw %}</li><li>{% raw %}{{abstract_product_name}}</li><li>{% raw %}{{concrete_product_sku}}{% endraw %}</li><li>{% raw %}{{product_attribute}}{% endraw %} (brand, color, etc.)—to provide multiple product attributes, use `+`</li></ul> |
+| q | Restricts the set of the returned items to the provided parameter value. | <ul><li>{% raw %}{{null}}{% endraw %} (empty)</li><li>{% raw %}{{abstract_product_sku}}{% endraw %}</li><li>{% raw %}{{abstract_product_name}}</li><li>{% raw %}{{concrete_product_sku}}{% endraw %}</li><li>{% raw %}{{product_attribute}}{% endraw %} (brand, color)—to provide multiple product attributes, use `+`</li></ul> |
 | price[min]   | Specifies minimum prices of the products     | {% raw %}{{minimum_price}}{% endraw %}  |
 | price[max]   | Specifies maximum prices of the products  | {% raw %}{{maximum_price}}{% endraw %}  |
 | brand  | Specifies the product brand   | {% raw %}{{brand_name}}{% endraw %} |
@@ -51,7 +51,7 @@ To search by products, send the request:
 | `GET https://glue.mysprykershop.com/catalog-search?q=058`       | Search for an abstract product by SKU *058*.   |
 | `GET https://glue.mysprykershop.com/catalog-search?q=058&include=abstract-products` | Search for an abstract product by SKU *058* with the included product details. |
 | `GET https://glue.mysprykershop.com/catalog-search?q=Acer Liquid Jade` | Search for an abstract product by *Acer Liquid Jade* name.    |
-| `GET https://glue.mysprykershop.com/catalog-search?q=058_261755504` |Search for a concrete product by SKU *058_261755504*.  |
+| `GET https://glue.mysprykershop.com/catalog-search?q=058_261755504` | Search for a concrete product by SKU *058_261755504*.  |
 | `GET https://glue.mysprykershop.com/catalog-search?q=sony+red` | Search for products by multiple attributes (brand *Sony* and *red* color). |
 | `GET https://glue.mysprykershop.com/catalog-search?q=sony&price%5Bmin%5D=99.99&price%5Bmax%5D=150` | Search for products within a minimum (*99.99*) and maximum (*150*) price range. |
 | `GET https://glue.mysprykershop.com/catalog-search?q=sony`   | Search for products of the *Sony* brand.   |
@@ -64,17 +64,17 @@ To search by products, send the request:
 | `GET https://glue.mysprykershop.com/catalog-search?currency=CHF` | Define the *CHF* currency for the search result products.   |
 | `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=name_asc` | Set sorting order ascending.  |
 | `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=name_desc` | Set sorting order descending.   |
-| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=rating` | Sort found products by rating.   |
-| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=price_asc` | Sort found products by price ascending.   |
+| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=rating` | Sort the found products by rating.   |
+| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=price_asc` | Sort the found products by price ascending.   |
 | `GET https://glue.mysprykershop.com/catalog-search?q=Sony&page=3` | Set a page to retrieve the search results from. |
-| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&ipp=24` | Set number of products per page.   |
+| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&ipp=24` | Set a number of products per page.   |
 | `GET https://glue.mysprykershop.com/catalog-search?merchant_name=Spryker` | Filter the results by the *Spryker* merchant name. |
 
 ### Response
 
 
 <details>
-<summary markdown='span'>Response sample: empty search criteria</summary>
+<summary markdown='span'>Response sample: search for all available products</summary>
 
 ```json
 {
@@ -435,7 +435,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Respnse sample: search for an abstract product</summary>
+<summary markdown='span'>Response sample: search for an abstract product by SKU</summary>
 
 ```json
 {
@@ -713,7 +713,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: search for an abstract product with the included abstract product details</summary>
+<summary markdown='span'>Response sample: search for an abstract product by SKU with the included abstract product details</summary>
 
 ```json
 {
@@ -1118,7 +1118,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: search for a concrete product</summary>
+<summary markdown='span'>Response sample: search for a concrete product by SKU</summary>
 
 ```json
 {
@@ -1391,12 +1391,11 @@ To search by products, send the request:
     }
 }
 ```
-
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample: multiple product attributes in search request</summary>
+<summary markdown='span'>Response sample: search for products by multiple attributes</summary>
 
 ```json
 {
@@ -1809,12 +1808,11 @@ To search by products, send the request:
     }
 }
 ```
-
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample: search with minimum and maximum price range</summary>
+<summary markdown='span'>Response sample: search for products within a minimum and maximum price range</summary>
 
 ```json
 {
@@ -2181,12 +2179,11 @@ To search by products, send the request:
     }
 }
 ```
-
 </details>
 
 
 <details>
-<summary markdown='span'>Respnse sample: search by brand</summary>
+<summary markdown='span'>Response sample: search for products by brand</summary>
 
 ```json
 {
@@ -2501,12 +2498,11 @@ To search by products, send the request:
     }
 }
 ```
-
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample: search by labels</summary>
+<summary markdown='span'>Response sample: search for products by labels</summary>
 
 ```json
 {
@@ -2789,12 +2785,11 @@ To search by products, send the request:
     }
 }
 ```
-
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample: search by weight</summary>
+<summary markdown='span'>Response sample: search for products by weight</summary>
 
 ```json
 {
@@ -3107,12 +3102,11 @@ To search by products, send the request:
     }
 }
 ```
-
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample: search by color</summary>
+<summary markdown='span'>Response sample: search for products by color</summary>
 
 ```json
 {
@@ -3462,12 +3456,11 @@ To search by products, send the request:
     }
 }
 ```
-
 </details>
 
 
 <details>
-<summary markdown='span'>Response: search by storage capacity</summary>
+<summary markdown='span'>Response: search for products by storage capacity</summary>
 
 ```json
 {
@@ -3734,12 +3727,11 @@ To search by products, send the request:
     }
 }
 ```
-
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample: search by rating</summary>
+<summary markdown='span'>Response sample: search for products by rating</summary>
 
 ```json
 {
@@ -3977,12 +3969,11 @@ To search by products, send the request:
     }
 }
 ```
-
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample: search by category</summary>
+<summary markdown='span'>Response sample: search for products by the category node ID</summary>
 
 ```json
 {
@@ -4190,12 +4181,11 @@ To search by products, send the request:
     }
 }
 ```
-
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample: setting the search results currency</summary>
+<summary markdown='span'>Response sample: define the currency for the search result products</summary>
 
 ```json
 {
@@ -4418,12 +4408,11 @@ To search by products, send the request:
     }
 }
 ```
-
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample: sorting order ascending</summary>
+<summary markdown='span'>Response sample: set sorting order ascending in the search results</summary>
 
 ```json
 {
@@ -4839,12 +4828,11 @@ To search by products, send the request:
     }
 }
 ```
-
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample: sorting order descending</summary>
+<summary markdown='span'>Response sample: set sorting order descending in the search results</summary>
 
 ```json
 {
@@ -5156,12 +5144,11 @@ To search by products, send the request:
     }
 }
 ```
-
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample: sorting by rating</summary>
+<summary markdown='span'>Response sample: sort the found products by rating</summary>
 
 ```json
 {
@@ -5454,12 +5441,11 @@ To search by products, send the request:
     }
 }
 ```
-
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample: sorting by price ascending</summary>
+<summary markdown='span'>Response sample: sort the found products by price ascending</summary>
 
 ```json
 {
@@ -5769,12 +5755,11 @@ To search by products, send the request:
     }
 }
 ```
-
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample: setting a page of search</summary>
+<summary markdown='span'>Response sample: set a page to retrieve the search results from</summary>
 
 ```json
 {
@@ -6028,12 +6013,11 @@ To search by products, send the request:
     }
 }
 ```
-
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample: setting a number of products per page</summary>
+<summary markdown='span'>Response sample: set a number of products per page</summary>
 
 ```json
 {
@@ -6335,12 +6319,11 @@ To search by products, send the request:
     }
 }
 ```
-
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample: filtering search results by merchant name</summary>
+<summary markdown='span'>Response sample: filter the results by the merchant name</summary>
 
 ```json
 {
@@ -6751,7 +6734,6 @@ To search by products, send the request:
     }
 }
 ```
-
 </details>
 
 <a name="sorting"></a>

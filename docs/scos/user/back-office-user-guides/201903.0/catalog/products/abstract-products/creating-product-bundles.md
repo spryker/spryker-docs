@@ -38,7 +38,7 @@ For example, if your product is a smartphone, you can set it up to be sold with 
 8. Once done, click **Save**.
 
 ***
-**Tips & Tricks**
+**Tips and tricks**
 If you already have a product that you want to be sold in a bundle, you can update the **Assign bundled products** tab for a variant. The product will automatically be transformed into a bundle.
 ***
 **What's next?**

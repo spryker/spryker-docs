@@ -27,7 +27,7 @@ redirect_from:
 This document describes the prerequisites for installing Spryker in Docker on Linux.
 
 
-## DevVM system requirements
+## System requirements for installing Spryker with Docker
 
 Review the system and software requirements in the table.
 

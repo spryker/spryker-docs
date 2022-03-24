@@ -1,7 +1,7 @@
 ---
 title: Merchant Opening Hours feature overview
 last_updated: Jul 27, 2021
-description: The Merchant Opening Hours feature allows you to define opening hours for a merchant.
+description: The Merchant Opening Hours feature lets you define opening hours for a merchant.
 template: concept-topic-template
 ---
 
@@ -15,8 +15,8 @@ A merchant has:
 
 * Special opening hours—are relevant for cases:
 
-    * Merchant is opened on a usually closed day (e.g., Sunday)
-    * Merchant has different opening hours in comparison to a normal schedule (e.g., December 31th has shorter opening hours)
+    * Merchant is opened on a usually closed day (for example, Sunday)
+    * Merchant has different opening hours in comparison to a normal schedule (for example, December 31th has shorter opening hours)
 
 * Public holidays—special days when the Merchant is not available due to the public holidays
 

@@ -32,6 +32,12 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/actions' {
+    interface ActionsRegistry {
+        redirect: RedirectActionHandlerService;
+    }
+}
+
 @NgModule({
     imports: [
         ActionsModule.withActions({

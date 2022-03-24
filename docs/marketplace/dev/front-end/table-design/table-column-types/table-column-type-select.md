@@ -53,6 +53,12 @@ Check out an example usage of the Table Column Select in the `@spryker/table` co
 Register the component:
 
 ```ts
+declare module '@spryker/table' {
+    interface TableColumnTypeRegistry {
+        select: TableColumnSelectConfig;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -70,12 +76,6 @@ export class RootModule {}
 Below you can find interfaces for the Table Column Select:
 
 ```ts
-declare module '@spryker/table' {
-    interface TableColumnTypeRegistry {
-        select: TableColumnSelectConfig;
-    }
-}
-
 type SelectValue = string | number;
 type SelectOption = SelectValue | SelectOptionItem;
 

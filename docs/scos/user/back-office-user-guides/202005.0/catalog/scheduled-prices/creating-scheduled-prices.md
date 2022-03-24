@@ -47,6 +47,6 @@ Instead of changing prices manually on the starting day of the promotion, you ca
 
 7. If you are satisfied with the results, in the **Publish the scheduled prices** section, click **Publish** to apply the price schedules.
 
-**Tips & Tricks**
+**Tips and tricks**
 * If you leave the _Import dry run_ page without publishing the imported price schedules, they do not get deleted. However, you won't be able to return to that page unless you import the file once again.
 * You can check current price schedules of each product in **Products** section >**Edit Product** page > **Scheduled Prices** tab.

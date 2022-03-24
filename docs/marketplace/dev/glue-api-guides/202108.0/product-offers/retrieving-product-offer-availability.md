@@ -28,11 +28,13 @@ To retrieve a availability of a product offer, send the request:
 
 ### Request
 
-Request sample: `https://glue.mysprykershop.com/product-offers/offer56/product-offer-availabilities`
+Request sample: retrieve availability of a product offer
+
+`GET https://glue.mysprykershop.com/product-offers/offer56/product-offer-availabilities`
 
 ### Response
 
-Response sample:
+Response sample: retrieve availability of a product offer
 
 ```json
 {
@@ -55,6 +57,7 @@ Response sample:
     }
 }
 ```
+
 <a name="product-offer-availability-response-attributes"></a>
 
 |ATTRIBUTE  |TYPE  |DESCRIPTION  |

@@ -9,7 +9,7 @@ related:
     link: docs/marketplace/dev/glue-api-guides/page.version/shopping-lists/managing-shopping-list-items.html
 ---
 
-With the help of the [Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html) feature, company users can manage shopping lists for their company to plan purchasing activities beforehand. Unlike [Wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html), shopping lists contain not only a list of items to be purchased but also the quantity of each item.
+The Marketplace Shopping Lists API feature allows managing shopping lists in the Marketplace, as well as managing the items in them. Unlike the [Marketplace Wishlists](/docs/marketplace/user/features/{{page.version}}/marketplace-wishlist-feature-overview.html), shopping lists contain not only a list of items to be purchased but also the quantity of each item.
 
 
 In your development, the resources can help you to enable the shopping list functionality in your application.
@@ -19,6 +19,7 @@ In your development, the resources can help you to enable the shopping list func
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shopping-lists-feature-integration.html)
 * [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
+* [Glue API: Marketplace Shopping Lists feature integration]()<!---LINK-->
 
 
 ## Create a shopping list
@@ -1109,10 +1110,15 @@ If the shopping list is deleted successfully, the endpoint returns the `204 No C
 | 002 | Access token is missing. |
 | 400 | Provided access token is not an [access token of a сompany user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html). |
 | 901 | Shop list name or item name is not specified or too long.<br>**OR** <br> Item quantity is not specified or too large.|
-| 1501 | Shopping list ID or item is not specified. |
+| 1501 | Shopping list ID is not specified. |
+| 1502 | Shopping list item is not specified. |
 | 1503 | Specified shopping list is not found. |
+| 1504 | Shopping list item is not found. |
+| 1505 | Shopping list write permission is required. |
 | 1506 | Shopping list with given name already exists. |
+| 1507 |   |
 | 1508 | Concrete product not found. |
+| 1509 |   |
 | 1510 | Product is discontinued. |
 | 1511 | Product is not active. |
 | 1512 | Merchant is inactive. |

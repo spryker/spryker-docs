@@ -69,7 +69,7 @@ The properties of the `AclEntityMetadataConfigTransfer` are described in the fol
 | PROPERTY | TYPE | DESCRIPTION |
 |-----|-----|-----|
 | aclEntityMetadataCollection | AclEntityMetadataCollectionTransfer | The collection of configurations for different entities.|
-| aclEntityAllowList | string[] | The set of fully qualified classes that this feature does not apply to (even if the user has rules for an entity that is in the allow list). |
+| aclEntityAllowList | string[] | The set of fully qualified classes that this feature does not apply to (even if the user has rules for an entity that is in the allowlist). |
 
 ### AclEntityMetadataCollectionTransfer
 
@@ -312,7 +312,7 @@ The following example sets the default `Read` permissions for the `SpyCountry` a
     }
 ```
 
-### Allow list configuration
+### Allowlist configuration
 
 The following example adds all the entities required for the Persistence Acl to function correctly:
 

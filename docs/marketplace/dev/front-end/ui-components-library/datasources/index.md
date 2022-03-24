@@ -10,7 +10,7 @@ This document explains the Datasources service in the Components Library.
 ## Overview
 
 Datasources are responsible for providing any data to the system based on a given configuration.
-This allows backend systems to control where the data is coming from without changing the front-end (ex. table data, select options).
+This lets backend systems control where the data is coming from without changing the front-end (ex. table data, select options).
 
 Datasources are used in other components like Table, Select, Autocomplete.
 

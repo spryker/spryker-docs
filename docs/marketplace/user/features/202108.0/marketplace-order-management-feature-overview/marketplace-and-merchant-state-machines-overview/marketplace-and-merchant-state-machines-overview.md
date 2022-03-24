@@ -10,7 +10,7 @@ To provide the algorithm of dealing with orders for Marketplace administrators a
 
 {% info_block infoBox "Info" %}
 
-You can set up as many state machines as you need and allow your Marketplace administrator to decide which state machine to use for specific payment methods or countries and stores with different processes. You can also set up different merchant state machines to apply to different merchants according to their processes.
+You can set up as many state machines as you need and let your Marketplace administrator decide which state machine to use for specific payment methods or countries and stores with different processes. You can also set up different merchant state machines to apply to different merchants according to their processes.
 
 {% endinfo_block %}
 

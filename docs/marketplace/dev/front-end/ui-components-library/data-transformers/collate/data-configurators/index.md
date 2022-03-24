@@ -8,7 +8,7 @@ This document explains the Data Transformer Data Configurators service in the Co
 
 ## Overview
 
-Data Transformer Data Configurators is an Angular Service that re-populates data based on configuration. This allows backend systems to control where re-population data is placed.
+Data Transformer Data Configurators is an Angular Service that re-populates data based on configuration. This lets backend systems control where re-population data is placed.
 
 Data Transformer Data Configurators are used in the Datasource service.
 

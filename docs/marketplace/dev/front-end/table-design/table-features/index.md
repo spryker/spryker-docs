@@ -35,7 +35,6 @@ import { ModuleWithFeature, TableFeatureModule } from '@spryker/table';
     imports: [CommonModule, TableFeatureModule],
     exports: [TableCustomFeatureComponent],
     declarations: [TableCustomFeatureComponent],
-    entryComponents: [TableCustomFeatureComponent],
 })
 export class TableCustomFeatureModule implements ModuleWithFeature {
     featureComponent = TableCustomFeatureComponent;

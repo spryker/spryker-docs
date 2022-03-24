@@ -46,7 +46,12 @@ Component configuration:
 Register the component:
 
 ```ts
-// Dynamic
+declare module '@spryker/table' {
+    interface TableConfig {
+        rowActions?: TableRowActionsConfig;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -81,12 +86,6 @@ export class RootModule {}
 Below you can find interfaces for the Table Feature Row Actions:
 
 ```ts
-declare module '@spryker/table' {
-    interface TableConfig {
-        rowActions?: TableRowActionsConfig;
-    }
-}
-
 export interface TableRowActionsConfig extends TableFeatureConfig {
     actions?: TableRowActionBase[];
     click?: string;

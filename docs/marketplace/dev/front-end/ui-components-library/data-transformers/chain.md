@@ -66,6 +66,12 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/data-transformer' {
+    interface DataTransformerRegistry {
+        chain: ChainDataTransformerConfig;
+    }
+}
+
 @NgModule({
     imports: [
         DataTransformerModule.withTransformers({
@@ -81,12 +87,6 @@ export class RootModule {}
 Below you can find interfaces for the Data Transformer Chain:
 
 ```ts
-declare module '@spryker/data-transformer' {
-    interface DataTransformerRegistry {
-        chain: ChainDataTransformerConfig;
-    }
-}
-
 export interface ChainDataTransformerConfig extends DataTransformerConfig {
     transformers: DataTransformerConfig[];
 }

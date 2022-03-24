@@ -29,7 +29,7 @@ This endpoint returns only [active](/docs/marketplace/user/features/{{page.versi
 
 Request sample: retrieve merchant opening hours
 
-`GET http://glue.mysprykershop.com/merchants/MER000001/merchant-opening-hours`
+`GET https://glue.mysprykershop.com/merchants/MER000001/merchant-opening-hours`
 
 ### Response
 

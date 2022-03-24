@@ -685,7 +685,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
             }
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-1?include=sales-units,product-measurement-units"
+            "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-1?include=sales-units,product-measurement-units"
         },
         "relationships": {
             "product-measurement-units": {
@@ -715,7 +715,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
                 "defaultPrecision": 100
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-measurement-units/METR"
+                "self": "https://glue.mysprykershop.com/product-measurement-units/METR"
             }
         },
         {
@@ -729,7 +729,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
                 "productMeasurementUnitCode": "METR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/sales-units/32"
+                "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-1/sales-units/32"
             },
             "relationships": {
                 "product-measurement-units": {
@@ -788,7 +788,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
             }
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/concrete-products/001_25904006"
+            "self": "https://glue.mysprykershop.com/concrete-products/001_25904006"
         }
     }
 }

@@ -31,7 +31,7 @@ To retrieve prices of a product offer, send the request:
 
 Request sample: retrieve prices of a product offer
 
-`GET http://glue.mysprykershop.com/product-offers/offer54/product-offer-prices`
+`GET https://glue.mysprykershop.com/product-offers/offer54/product-offer-prices`
 
 ### Response
 

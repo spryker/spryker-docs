@@ -43,10 +43,10 @@ A developer can create [dynamic product labels](#dynamic-product-label).
 
 The following dynamic product labels are shipped by default:
 * *Discontinued*
-The *Discontinued* product label is added when you discontinue a product. The label is active until the product becomes inactive. See [Discontinuing a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/discontinuing-products.html) to learn more.
+The *Discontinued* product label is added when you discontinue a product. The label is active until the product becomes inactive. See [Discontinuing a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/discontinuing-products.html) to learn more.
 
 * *Alternatives available*
-The *Alternatives available* product label goes along with the *Discontinued* product label. It is added when you discontinue a product that has existing [alternative products](/docs/scos/user/features/{{page.version}}/alternative-products-feature-overview.html). The label is active until the product becomes inactive. See [Adding product alternatives](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/adding-product-alternatives.html) to learn more.
+The *Alternatives available* product label goes along with the *Discontinued* product label. It is added when you discontinue a product that has existing [alternative products](/docs/scos/user/features/{{page.version}}/alternative-products-feature-overview.html). The label is active until the product becomes inactive. See [Adding product alternatives](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/adding-product-alternatives.html) to learn more.
 
 * *NEW*
 The *NEW* label is added when you create a product. It is active for the time period defined inclusively in the **New from** and **New to** fields. See [Creating an Abstract Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html) to learn more.

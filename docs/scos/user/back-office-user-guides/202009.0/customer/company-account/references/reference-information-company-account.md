@@ -1,5 +1,5 @@
 ---
-title: Reference information- Company account
+title: Reference information - company account
 description: The guide provides additional information on the values you use when working with company roles, company unit addresses, company units, and company users.
 last_updated: Aug 27, 2020
 template: back-office-user-guide-template

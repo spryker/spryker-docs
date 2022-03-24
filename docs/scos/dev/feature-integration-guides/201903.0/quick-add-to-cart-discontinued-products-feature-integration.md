@@ -1,5 +1,5 @@
 ---
-title: Quick Order - Discontinued Products Feature Integration
+title: Quick Add to Cart + Discontinued Products Feature Integration
 description: Quick Add to Cart + Discontinued Products allow showing products in cart as "discontinued". This guide describes how to integrate the feature into the project.
 last_updated: Nov 22, 2019
 template: feature-integration-guide-template

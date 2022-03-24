@@ -27,8 +27,8 @@ To search by products, send the request:
 
 | QUERY PARAMETER | DESCRIPTION  | POSSIBLE VALUES |
 | ------------------- | ---------------- | ----------------------- |
-| include   | Adds resource relationships to the request.      | abstract-products, concrete-products, product-labels   |
-| q | Restricts the set of the returned items to the provided parameter value. | <ul><li>{% raw %}{{null}}{% endraw %} (empty)</li><li>{% raw %}{{abstract_product_sku}}{% endraw %}</li><li>{% raw %}{{abstract_product_name}}</li><li>{% raw %}{{concrete_product_sku}}{% endraw %}</li><li>{% raw %}{{product_attribute}}{% endraw %} (brand, color, etc.)—to provide multiple product attributes, use `+`</li></ul> |
+| include   | Adds resource relationships to the request.      | abstract-products   |
+| q | Restricts the set of the returned items to the provided parameter value. | <ul><li>{% raw %}{{null}}{% endraw %} (empty)</li><li>{% raw %}{{abstract_product_sku}}{% endraw %}</li><li>{% raw %}{{abstract_product_name}}</li><li>{% raw %}{{concrete_product_sku}}{% endraw %}</li><li>{% raw %}{{product_attribute}}{% endraw %} (brand, color)—to provide multiple product attributes, use `+`</li></ul> |
 | price[min]   | Specifies minimum prices of the products     | {% raw %}{{minimum_price}}{% endraw %}  |
 | price[max]   | Specifies maximum prices of the products  | {% raw %}{{maximum_price}}{% endraw %}  |
 | brand  | Specifies the product brand   | {% raw %}{{brand_name}}{% endraw %} |
@@ -5015,7 +5015,7 @@ To search by products, send the request:
                                 "value": 1,
                                 "doc_count": 43
                             },
-                            ююю
+                    
                             {
                                 "value": 14,
                                 "doc_count": 1
@@ -7237,7 +7237,7 @@ To search by products, send the request:
 | abstractProducts.images        | Array    | Product images of the abstract product.      |
 | abstractProducts.prices | Integer | Attributes describing the abstract product's price. |
 | abstractProducts.prices.priceTypeName | String | Price type. |
-| abstractProducts.prices.currency | String | Attriebutes describing the currency of the abstract product's price. |
+| abstractProducts.prices.currency | String | Attributes describing the currency of the abstract product's price. |
 | abstractProducts.prices.currency.code | String | Currency code. |
 | abstractProducts.prices.currency.name | String | Currency name. |
 | abstractProducts.prices.currency.symbol | String | Currency symbol. |

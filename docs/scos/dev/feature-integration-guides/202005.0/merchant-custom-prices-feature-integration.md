@@ -17,17 +17,17 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Spryker Core | master |
-| Merchant | master |
-| Merchant Contracts | master |
-| Prices | master |
-| Product | master |
+| Spryker Core | {{page.version}} |
+| Merchant | {{page.version}} |
+| Merchant Contracts | {{page.version}} |
+| Prices | {{page.version}} |
+| Product | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command to install the required modules:
 
 ```bash
-composer require spryker-feature/merchant-custom-prices:"^master" spryker/price-product-merchant-relationship-gui:"^1.0.0" --update-with-dependencies
+composer require spryker-feature/merchant-custom-prices:"^{{page.version}}" spryker/price-product-merchant-relationship-gui:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

@@ -1,5 +1,5 @@
 ---
-title: Comments + order management feature integration
+title: Comments + Order Management feature integration
 description: The guide walks you through the process of installing the Comments + Order Management feature into the project.
 last_updated: Aug 27, 2020
 template: feature-integration-guide-template

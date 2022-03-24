@@ -1,5 +1,5 @@
 ---
-title: Promotions & Discounts feature integration
+title: Promotions and Discounts feature integration
 description: This guides provides you with a set of steps needed to be performed in order to integrate the Discount Promotion feature into your project.
 last_updated: Aug 27, 2020
 template: feature-integration-guide-template

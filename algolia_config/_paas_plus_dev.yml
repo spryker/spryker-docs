@@ -1,0 +1,12 @@
+algolia:
+  index_name: 'paas_plus_dev'
+  files_to_exclude:
+    - index.md
+    - 404.md
+    - search.md
+    - docs/marketplace/user/**/*.md
+    - docs/marketplace/dev/**/*.md
+    - docs/scos/user/**/*.md
+    - docs/scos/dev/**/*.md
+    - docs/cloud/dev**/*.md
+    - docs/fes/dev/**/*.md

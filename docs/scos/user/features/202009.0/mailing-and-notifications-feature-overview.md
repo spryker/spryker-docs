@@ -1,5 +1,5 @@
 ---
-title: Mailing & Notifications feature overview
+title: Mailing and Notifications feature overview
 last_updated: Jun 1, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/mailing-notifications

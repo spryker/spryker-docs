@@ -1,5 +1,5 @@
 ---
-title: Business Units Management Feature Overview
+title: Business Units overview
 description: Once a company administrator has created a company, and it has been activated and approved, they can start building the organizational structure.
 last_updated: Oct 10, 2019
 template: concept-topic-template
@@ -33,7 +33,7 @@ The company administrator can create, edit, delete as well as arrange business u
 To create a business unit, its name and email address must be specified.
 
 {% info_block infoBox %}
-The user can also select a parent business unit of the newly created unit. If it is not selected, the new business unit will be created with "0" level in hierarchy, i.e. as a parent.
+The user can also select a parent business unit of the newly created unit. If it is not selected, the new business unit will be created with "0" level in hierarchy, for example, as a parent.
 {% endinfo_block %}
 ![new-bu.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/new-bu.png) 
 

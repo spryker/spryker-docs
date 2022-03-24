@@ -13,9 +13,16 @@ redirect_from:
 ---
 
 This article describes how to manage translations.
+
+## Prerequisites
+
 To start managing translations, go to the **Administration** > **Glossary** section.
 
-**To create a new translation:**
+Review the reference information before you start, or look up the necessary information as you go through the process.
+
+## Creating a new translation
+
+To create a new translation:
 
 1. In the top-right corner of the *Overview of Translations* page click **Create Translation**.
 2. On the *Create Translation* page, do the following:
@@ -33,7 +40,9 @@ You can not just add/update a glossary key without using it in code, otherwise t
 This is the example of how the translations can look like:
 ![Example of translations](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Glossary/Managing+Glossary/managing-glossary.png)
 
-**To edit an existing translation:**
+## Editing an existing translation
+
+To edit an existing translation:
 
 1. On the *Overview of Translations* page, click **Edit** in the _Actions_ column for a specific glossary key.
 2. On the *Edit Translation* page, change the translation values in the locales (the *Name* field is greyed out thus the glossary key itself is not available for modifications).

@@ -12,7 +12,7 @@
 
                         <strong class="main-header__logo">
                             <a href="/">
-                                <img src="{{ "/images/logo.svg" }}" alt="Spryker Documentation">
+                                <img src="{{ "/images/logo.svg" }}" alt="Spryker Documentation" width="155" height="64">
                             </a>
                         </strong>
 
@@ -39,6 +39,10 @@
                                                 SCOS developer guide
                                                 {% elsif page.product == 'scos' and page.role == 'user' %}
                                                 SCOS users guide
+                                                {% elsif page.product == 'frontend-enablement-service' and page.role == 'dev' %}
+                                                Frontend enablement Service
+                                                {% elsif page.product == 'platform-as-a-service-plus' and page.role == 'dev' %}
+                                                Platform as a Service Plus
                                                 {% else %}
                                                 Select Product
                                                 {% endif %}
@@ -103,6 +107,16 @@
                                                 Spryker Cloud Commerce OS
                                                 </a>
                                             </li>
+                                            <li>
+                                                <a href="/docs/fes/dev/front-end-enablement-service.html" class="main-nav__drop-link">
+                                                Frontend enablement Service
+                                                </a>
+                                            </li>
+                                            <!-- <li>
+                                                <a href="/docs/paas-plus/dev/setup/system-requirements.html" class="main-nav__drop-link">
+                                                Platform as a Service Plus
+                                                </a>
+                                            </li> -->
                                         </ul>
                                     </div>
                                 </div>
@@ -116,7 +130,7 @@
                         <div class="search-popup">
                             <div class="search-popup__inner">
                                 <div class="search-popup__content">
-                                    <a href="#" class="search-popup__close js-search-popup-close"><i class="icon-arrow-left"></i></a>
+                                    <a href="#" class="search-popup__close js-search-popup-close" aria-label="search popup close"><i class="icon-arrow-left"></i></a>
                                     <div class="main-header__search">
                                         <i class="main-header__search-icon icon-search"></i>
                                         {% include search/{{ site.search | default "default" }}_quicksearch.html %}
@@ -132,7 +146,7 @@
                 </div>
                 <div class="main-header__right">
                     {% if page.url != "/search/" %}
-                        <a href="#" class="main-header__search-opener js-search-popup-opener"><i class="icon-search"></i></a>
+                        <a href="#" class="main-header__search-opener js-search-popup-opener" aria-label="search popup opener"><i class="icon-search"></i></a>
                     {% endif %}
 
                     {% if page.url != "/index.html" and page.url != "/search/" %}
@@ -152,7 +166,7 @@
                         </a>
                     {% endif %}
 
-                    <a href="#" class="nav-opener">
+                    <a href="#" class="nav-opener" aria-label="navigation popup opener">
                         <span class="nav-opener__top"></span>
                         <span class="nav-opener__center"></span>
                         <span class="nav-opener__bottom"></span>

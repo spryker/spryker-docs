@@ -17,9 +17,9 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Customer Account Management | master |
-| Order Management | master |
-| Spryker Core | master |
+| Customer Account Management | {{page.version}} |
+| Order Management | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Set up Configuration
 To enable order search functionality, adjust config as shown below.

@@ -1,5 +1,5 @@
 ---
-title: Shopping Cart
+title: Cart
 description: The Spryker Commerce OS offers a powerful and feature rich online shopping cart that acts as a gateway for customer and order management.
 last_updated: Nov 22, 2019
 template: concept-topic-template

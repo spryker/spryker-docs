@@ -1,5 +1,5 @@
 ---
-title: Reference information- Product sets
+title: Reference information - product sets
 description: This guide describes the values you enter when creating or updating product sets in the Back Office.
 last_updated: Aug 27, 2020
 template: back-office-user-guide-template

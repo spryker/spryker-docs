@@ -18,7 +18,7 @@ This topic describes how to manage redirects in the Back Office.
 
 To start managing CMS redirects, go to **Content** > **Redirects**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Editing a CMS redirect
 
@@ -36,7 +36,7 @@ If you modify the *existing* URL from which a redirect is configured, a new URL 
 
 {% endinfo_block %}
 
-**Tips & tricks**
+**Tips and tricks**
 <br>On the *Edit a CMS redirect* page, you can do the following:
 * Create a new CMS redirect by clicking **+Add CMS Redirect** in the top right corner of the page.
 * Return to the list of redirects by clicking **Back to CMS** in the top right corner of the page.

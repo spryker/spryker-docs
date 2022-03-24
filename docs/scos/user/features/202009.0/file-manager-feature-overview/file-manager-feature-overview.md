@@ -1,5 +1,5 @@
 ---
-title: File Manager
+title: File Manager feature overview
 description: Reduce your bounce rate and create an enhanced shopping experience by providing impactful visuals while simultaneously maintaining fast response times.
 last_updated: Jun 1, 2021
 template: concept-topic-template
@@ -16,10 +16,10 @@ A Back Office user can upload files and add them to CMS pages and blocks to disp
 
 Apart from images, you can add a great variety of different types of assets to your project, including but not limited by the following:
 
-*     presentations
-*     pdf documents
-*     graphics
-*     banners
+* presentations
+* pdf documents
+* graphics
+* banners
 
 This enables content managers to create rich, compelling and attractive content for your customers, as well as gives the chance to offer your customers additional information they might be interested in, like user manuals or instructions.
 

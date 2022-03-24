@@ -61,7 +61,7 @@ The more outdated your module versions become, the more effort will be needed to
 But how often should you be taking care of the updates?
 
 **The most reasonable strategy - is sticking to the Spryker release cycle** and updating your current modules whenever there is a new release announcement. [Subscribe to the release notes](/docs/scos/user/intro-to-spryker/releases/releases.html) if you want to know about the new release right after it happened.
-During the active development phase, it would make sense to do updates more often, i.e., monthly.
+During the active development phase, it would make sense to do updates more often, for example, monthly.
 
 ## Features vs. individual module updates
 
@@ -261,7 +261,7 @@ One of the most common issue projects face during the upgrade, is the situation,
 Usually, when you're inheriting a class from Spryker, you want to change its behavior. But before extending the class, check if you can do the following:
 * **Configure the behavior**. Check your environment and module configs. If configuration can fit your needs - that would be the best solution.
 * Change the behavior by **introducing a new plugin or an event listener**. If the behavior you want to inherit is triggered by one of the plugins in a plugin stack or by an event listener, just add a new plugin and introduce a new class at the project level (potentially, implementing some interface). You don't need inheritance in this case.
-* **Use a composition pattern**. There is a lot of information on the internet for *composition vs. inheritance* that will help you to understand the pattern. The main idea is to introduce a new class at the project level and to use the class you wanted to inherit as a constructor dependency, i.e., kind of "wrapping". Even though this is a very good practice, it might not work in cases when you want to change protected methods.
+* **Use a composition pattern**. There is a lot of information on the internet for *composition vs. inheritance* that will help you to understand the pattern. The main idea is to introduce a new class at the project level and to use the class you wanted to inherit as a constructor dependency, for example, kind of "wrapping". Even though this is a very good practice, it might not work in cases when you want to change protected methods.
 * **Do you really need the inheritance?** In case of heavy customizations, think if you really need to extend the existing Spryker class. Replacing it by introducing a new class at the project level and instantiating it in the corresponding factory instead of the Spryker one - would be the preferred way to go.
 
 ### 2. Follow the best practices for inheritance
@@ -395,7 +395,7 @@ Please let us know in case if anything goes wrong with your update. Feel free to
 * There are missing steps in a [migration guide](/docs/scos/dev/module-migration-guides/about-migration-guides.html) in our documentation.
 
 Reach us out at:
-* **Support and community**: share your problem / solution or learn from others in our [community slack](http://slackcommunity.spryker.com/).
+* **Support and community**: share your problem / solution or learn from others in our [community slack](https://sprykercommunity.slack.com/join/shared_invite/zt-gdakzwk3-~B_gJXbUxMdzkBwTQVjNgg#/).
 * **Create a request** on our [support portal](https://spryker.force.com/support/s/).
 * **Contribute to code**: if you want to share your fix with us, let Spryker take care of it. Spryker can support it in the future and make the fix available for your other projects. To contribute to code, create a pull request on the module's [Github repository](https://github.com/spryker);
 * **Contribute to documentation**: if you found an issue in a migration guide or some parts of it are missing - you can suggest a change by clicking **Edit or Report** right below the article title.

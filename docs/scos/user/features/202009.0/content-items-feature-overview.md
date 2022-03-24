@@ -1,5 +1,5 @@
 ---
-title: Content items feature overview
+title: Content Items feature overview
 description: Content item is a preserved content piece that can be used in multiple pages.
 last_updated: Feb 8, 2021
 template: concept-topic-template

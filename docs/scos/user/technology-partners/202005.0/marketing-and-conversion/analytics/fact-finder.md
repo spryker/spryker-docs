@@ -40,7 +40,7 @@ This system of permissions is based on roles that provide access to the specific
 
 ---
 
-## Related Developer articles
+## Related Developer guides
 
 * [Integrating FACT-Finder](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html)
 * [Installing and configuring FACT-Finder](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html)

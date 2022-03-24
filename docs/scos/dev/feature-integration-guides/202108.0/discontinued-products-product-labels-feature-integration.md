@@ -1,5 +1,5 @@
 ---
-title: Discontinued products + product labels feature integration
+title: Discontinued Products + Product Labels feature integration
 description: This guide provides step-by-step instruction on integrating Discontinued Products + Product Labels feature into a Spryker-based project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template

@@ -1,5 +1,5 @@
 ---
-title: Product attribute overview
+title: Product attributes overview
 last_updated: Jun 2, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/product-attribute-overview

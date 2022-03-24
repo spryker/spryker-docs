@@ -19,8 +19,8 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Checkout | master |
-| Quotation Process | master |
+| Checkout | {{page.version}} |
+| Quotation Process | {{page.version}} |
 
 ### 1) Set up Behavior
 Register the following plugins:
@@ -80,8 +80,8 @@ Please overview and install the necessary features before beginning the integrat
 
 | Name | Version |
 | --- | --- |
-| Checkout | master |
-| Quotation Process | master |
+| Checkout | {{page.version}} |
+| Quotation Process | {{page.version}} |
 
 ### Set up Behavior
 #### Set up Quote Request Workflow

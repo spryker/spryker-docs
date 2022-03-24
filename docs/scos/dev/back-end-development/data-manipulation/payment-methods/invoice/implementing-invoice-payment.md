@@ -30,7 +30,7 @@ This article describes the steps that you need to consider when you need to impl
 
 In this set of articles, we will add a new module called `PaymentMethods`.
 
-If this is you first time creating a new module, see [Tutorial - Adding a New Module](/docs/scos/dev/back-end-development/extending-spryker/adding-a-new-module.html).
+If this is you first time creating a new module, see [Tutorial - Adding a New Module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html).
 
 * [Implement Invoice Payment in Front-End](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-front-end.html)
 * [Integrate Invoice Payment into Checkout](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrating-invoice-payment-into-checkout.html)

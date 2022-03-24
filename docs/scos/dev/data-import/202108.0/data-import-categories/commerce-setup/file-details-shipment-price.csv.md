@@ -34,7 +34,7 @@ This file has the following dependencies:
 
 ## Recommendations & Other Information
 
-Field *value* must be *integer* as it is the internal format to store money (currency) in Spryker demo shop. Float values get converted into integer by multiplying by 100 (i.e. if the shipment cost is 5.50 EUR, the value in CSV file should be 550).
+Field *value* must be *integer* as it is the internal format to store money (currency) in Spryker demo shop. Float values get converted into integer by multiplying by 100 (for example, if the shipment cost is 5.50 EUR, the value in CSV file should be 550).
 
 Fields *shipment_method_key*, *store* and *currency* are mandatory, and must be valid (imported already from existing database values, or created manually using precedent CSV files: *shipment_method.csv* and *currency.csv* and *stores.php* configuration project file). Empty value fields will be imported as zeros.
 

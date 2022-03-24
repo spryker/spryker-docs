@@ -9,20 +9,20 @@ redirect_from:
   - /v4/docs/amazon-pay-order-ref-info-demoshop
   - /v4/docs/en/amazon-pay-order-ref-info-demoshop
 related:
-  - title: Amazon Pay - Obtaining an Amazon Order Reference and Information About Shipping Addresses
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/scos-integration/amazon-pay-obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
+  - title: Obtaining an Amazon Order Reference and information about shipping addresses
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
   - title: Amazon Pay - Rendering a “Pay with Amazon” Button on the Cart Page
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-rendering-a-pay-with-amazon-button-on-the-cart-page.html
   - title: Amazon Pay - Support of Bundled Products
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-support-of-bundled-products.html
-  - title: Amazon Pay - API
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/scos-integration/amazon-pay-api.html
-  - title: Amazon Pay - Configuration for the SCOS
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/scos-integration/amazon-pay-configuration-for-the-scos.html
+  - title: Handling orders with Amazon Pay API
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/handling-orders-with-amazon-pay-api.html
+  - title: Configuring Amazon Pay
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/configuring-amazon-pay.html
   - title: Amazon Pay - Sandbox Simulations
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/scos-integration/amazon-pay-sandbox-simulations.html
-  - title: Amazon Pay - API
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-api.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/amazon-pay-sandbox-simulations.html
+  - title: Handling orders with Amazon Pay API
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/legacy-demoshop-handling-orders-with-amazon-pay-api.html
   - title: Amazon Pay - Sandbox Simulations
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-sandbox-simulations.html
   - title: Amazon Pay - Email Notifications
@@ -56,11 +56,11 @@ All necessary credentials have to be specified the same way and in order to retr
 
 The first of them to use is `onOrderReferenceCreate`, which provides an Amazon order reference ID.
 
-This ID is a unique identifier of an order, created on Amazon's side and is required for Amazon Pay API calls.
+This ID is a unique identifier of an order, created on Amazon's side and is required for Handling orders with Amazon Pay API calls.
 
 Other important callbacks are `onAddressSelect` and `onPaymentSelect`. These callbacks are triggered after selecting shipment address information and payment method respectively. Callbacks are client side notifications informing that an event has happened.
 
-Use the Amazon Pay API to retrieve data and run order operations.
+Use the Handling orders with Amazon Pay API to retrieve data and run order operations.
 
 ### Checkout Step Rendering
 

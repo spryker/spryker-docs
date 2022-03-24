@@ -1,5 +1,5 @@
 ---
-title: Product group + cart feature integration
+title: Product Group + Cart feature integration
 description: Instructions to integrate the Product group + Cart feature into a Spryker project.
 last_updated: Aug 27, 2020
 template: feature-integration-guide-template

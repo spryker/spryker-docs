@@ -30,7 +30,7 @@ This article describes the steps that you need to consider when you need to impl
 
 In this HowTo section, we will add a new module called `PaymentMethods`.
 
-If this is your first time creating a new module, see [Tutorial - Adding a New Module](/docs/scos/dev/back-end-development/extending-spryker/adding-a-new-module.html).
+If this is your first time creating a new module, see [Tutorial - Adding a New Module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html).
 
 * [Implement Prepayment in Front-End](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-front-end.html)
 * [Integrate Prepayment into Checkout](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrating-prepayment-into-checkout.html)

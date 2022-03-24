@@ -29,10 +29,10 @@ To start feature integration, overview, and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Spryker Core	 | master |
-| Cart | master |
-| Product | master |
-| Product Lists	 | master |
+| Spryker Core	 | {{page.version}} |
+| Cart | {{page.version}} |
+| Product | {{page.version}} |
+| Product Lists	 | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:

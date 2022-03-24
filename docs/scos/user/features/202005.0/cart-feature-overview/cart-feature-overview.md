@@ -1,5 +1,5 @@
 ---
-title: Shopping Cart
+title: Cart
 description: The Spryker Commerce OS offers a powerful and feature rich online shopping cart that acts as a gateway for customer and order management.
 last_updated: Sep 14, 2020
 template: concept-topic-template
@@ -34,14 +34,13 @@ The main benefits of working with the cart are to create a convenient and predic
 </div>
 
 **Features:**
-<div>
-<a class="feature-link" href="/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/cart-functionality.html">Cart Functionality</a>
-<a class="feature-link" href="/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculation-3.0.html">Calculation 3.0</a>  
-<a class="feature-link" href="/docs/scos/user/shop-user-guides/{{page.version}}/shop-application-guide/cart/minimum-order-value-feature-overview.html">Minimum Order Value</a>   
-<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html">Shared Cart</a>   
-<a class="feature-link" href="/docs/scos/user/shop-user-guides/{{page.version}}/shop-application-guide/cart/multiple-carts-per-user-feature-overview.html">Multiple Carts Per User</a>   
-<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-widget-overview.html">Shopping Cart Widget</a>  
-<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-notes-overview.html">Cart Notes</a>  
-<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/quick-add-to-cart-feature-overview.html">Quick Order</a>
-<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/persistent-cart-sharing-feature-overview.html">Unique URL per Cart for Easy Sharing</a>    
-    </div>
+
+- [Cart Functionality](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/cart-functionality.html)
+- [Calculation 3.0](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculation-3.0.html)
+- [Minimum Order Value](/docs/scos/user/shop-user-guides/{{page.version}}/shop-application-guide/cart/minimum-order-value-feature-overview.html)
+- [Shared Cart](/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html)
+- [Multiple Carts Per User](/docs/scos/user/shop-user-guides/{{page.version}}/shop-application-guide/cart/multiple-carts-per-user-feature-overview.html)
+- [Shopping Cart Widget](/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-widget-overview.html)
+- [Cart Notes](/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-notes-overview.html)
+- [Quick Order](/docs/scos/user/features/{{page.version}}/quick-add-to-cart-feature-overview.html)
+- [Unique URL per Cart for Easy Sharing](/docs/scos/user/features/{{page.version}}/persistent-cart-sharing-feature-overview.html)

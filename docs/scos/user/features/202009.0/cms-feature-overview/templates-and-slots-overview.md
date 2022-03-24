@@ -1,5 +1,5 @@
 ---
-title: Templates and slots
+title: Templates and Slots overview
 description: Templates with slots is a powerful way to manage the content of your shop.
 last_updated: May 26, 2021
 template: concept-topic-template

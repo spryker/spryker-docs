@@ -1,5 +1,5 @@
 ---
-title: Quotation process feature integration
+title: Quotation Process feature integration
 description: Install the Quotation Process feature in your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template

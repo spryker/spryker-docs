@@ -19,14 +19,14 @@ To start working with connections, go to the **Punch Out** section.
 To connect your ERP with the Spryker Commerce OS via the Punch Out protocol, you need to create a Punch Out connection.
 To create the connection:
 1. On the **Punch Out Connections** page, click **+New Connection** in the top right corner.
-2. On the **Create Transferred Cart Connection** page, enter and select the attributes. See the [Punch Out: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/punch-out/references/reference-information-punchout.html) article.
+2. On the **Create Transferred Cart Connection** page, enter and select the attributes. See the [Punch Out: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/punch-out/references/reference-information-punch-out.html) article.
 3. Click **Create**.
 
 ## Editing a Punch Out Connection
 If the connection details change, edit them.
 To edit the connection:
 1. In the **List of Punch Out Connections > Actions** column, click **Edit** for a specific connection.
-2. On the **Edit Transferred Cart Connection** page, change the attributes. See the [Punch Out: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/punch-out/references/reference-information-punchout.html) article.
+2. On the **Edit Transferred Cart Connection** page, change the attributes. See the [Punch Out: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/punch-out/references/reference-information-punch-out.html) article.
 3. Click **Save**.
 
 ## Viewing Entry Points
@@ -35,7 +35,7 @@ To view the entry points, in the **List of Punch Out Connections > Actions** col
 
 
 ## Activating and Deactivating a Punch Out Connection
-To activate or deactivate a connection, in the *Actions* column of hte **List of Pubnch Out Connections**, click:
+To activate or deactivate a connection, in the *Actions* column of hte **List of Punch Out Connections**, click:
 * **Activate** to activate a connection
 * **Deactivate** to deactivate a connection
 

@@ -61,6 +61,7 @@ use Spryker\Shared\OmsMultiThread\OmsMultiThreadConstants;
 $config[OmsMultiThreadConstants::OMS_PROCESS_WORKER_NUMBER] = 10;
 ```
 This value will serve as the upper boundary for a generated processor identifier. For example, if you want to process the orders in 10 simultaneous threads, set this value to 10. Each new order would then be assigned a number between 1 and 10 as the processor identifier.
+
 4. Configure the OMS console commands. Let's take `oms:check-timeout` as an example. Create as many cronjobs, as many process workers you have. Each cronjob should run the command with different processor identifiers within the boundaries defined in Step 3. In our example, we have defined the maximum number of OMS process workers to be 10, thus, we must configure 10 distinct cronjobs each dealing with its own processor identifier:
 
 <details>

@@ -18,9 +18,9 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Multiple Carts | master |
-| Reorder | master |
-| Spryker Core | master |
+| Multiple Carts | {{page.version}} |
+| Reorder | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Set up Behavior
 Register the following plugins:

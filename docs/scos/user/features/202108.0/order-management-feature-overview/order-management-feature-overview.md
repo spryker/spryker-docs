@@ -16,7 +16,7 @@ Bringing flexible shipping options in your online business may have a key impact
 
 In B2B companies, it is important to control the purchases employees make and add order references to the external systems. To keep the order references in your Spryker-based shop, use *Custom Order References* that allow you to link reference used in external systems, such as an ERP, to your internal orders. For example, your company pays the products with the invoice that has a reference. To make it easier to report and track the operations in your external systems, you, as a buyer, can include this reference number into your order.
 
-*Invoice Generation* enables you to generate and send invoices to customers after they placed an order. At the same time, you can also keep the invoices for your records by sending copie of invoices to your own email address.
+*Invoice Generation* enables you to generate and send invoices to customers after they placed an order. At the same time, you can also keep the invoices for your records by sending copy of invoices to your own email address.
 
 With *Order Cancellation*, allow your customers to cancel orders within a defined period and avoid doing it manually on your side on the customer's behalf. For example, a customer may change their mind about the color of an item they have ordered. Instead of contacting support representatives, they can cancel the order right away and re-place it with the desired color.  
 
@@ -33,7 +33,7 @@ B2B customers usually purchase large volumes of products selecting specific meas
 | [Get a general idea of Order Cancellation](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-cancellation-overview.html)   |
 | [Get a general idea of Split Delivery](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/split-delivery-overview.html)   |
 | [Get a general idea of Splittable Order Items](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/splittable-order-items-overview.html)   |
-| [Manage orders](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html)   |
+| [Changing the state of order items](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/changing-the-state-of-order-items.html)   |
 
 {% info_block warningBox "Developer guides" %}
 

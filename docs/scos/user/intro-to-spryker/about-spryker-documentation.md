@@ -41,7 +41,7 @@ The Spryker documentation is broken into the following sections:
 **[User Guides](/docs/scos/user/back-office-user-guides/{{site.version}}/about-back-office-user-guides.html)**: Meant primarily for the end-users who need assistance navigating and using features of the Spryker Back Office and Storefront.
 **[Glue API Guides](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-rest-api.html)**: Provides an overview of the Glue Rest API feature resources. To learn general information on the Glue API infrastructure, see [Glue Infrastructure](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-infrastructure.html). These guides are meant both for developers and the API users.
 **[Developer Guides](/docs/scos/dev/developer-getting-started-guide.html)**: Meant for the developers and contain instructions on how to install and configure Spryker for your project. This section will also help you understand the technical essentials and concepts of the Spryker Commerce OS.
-**[Technology Partners](/docs/scos/user/technology-partners/{{site.version}}/technology-partner-integration.html)**: Here, the developers will find the instructions on how to integrate third-party technology partners into your Spryker project.
+**[Technology Partners](/docs/scos/user/technology-partners/{{site.version}}/technology-partners.html)**: Here, the developers will find the instructions on how to integrate third-party technology partners into your Spryker project.
 **[Tutorials and HowTos](/docs/scos/dev/tutorials-and-howtos/tutorials-and-howtos.html)**: Contains step-by-step instructions on how to perform all types of technical tasks with the Spryker Commerce OS. This section is meant for developers.
 
 ## Personas

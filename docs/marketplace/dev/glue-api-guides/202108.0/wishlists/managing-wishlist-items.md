@@ -4,11 +4,11 @@ description: Retrieve details about wishlist items and learn what else you can d
 template: glue-api-storefront-guide-template
 ---
 
-This endpoint allows you to add and remove items from wishlists.
+This endpoint lets you add and remove items from wishlists.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see Marketplace Wishlist API Feature Integration. <!---LINK-->
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Marketplace Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-wishlist-feature-integration.html). 
 
 ## Add an item to a wishlist
 

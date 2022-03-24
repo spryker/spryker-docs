@@ -8,7 +8,7 @@ With the *Marketplace Product Offer Prices* feature, the Marketplace merchants c
 
 Merchants can define the prices for each product offer. If no price for the product offer is specified, a default price from the concrete product is used.
 
-Price types (e.g. gross price, net price) are assigned to each price, and for each price type, there can be from *one* to *n* product prices. Price type entities are used to differentiate between use cases: for example, we have DEFAULT and ORIGINAL prices which are used for sale pricing. You can add your own price types and use them in your app.
+Price types (for example,gross price, net price) are assigned to each price, and for each price type, there can be from *one* to *n* product prices. Price type entities are used to differentiate between use cases: for example, we have DEFAULT and ORIGINAL prices which are used for sale pricing. You can add your own price types and use them in your app.
 
 A new price type can be added by importing price data. The price type in the CSV file will be added or updated.
 

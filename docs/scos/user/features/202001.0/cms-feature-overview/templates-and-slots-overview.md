@@ -1,5 +1,5 @@
 ---
-title: Templates & Slots Feature Overview
+title: Templates and Slots overview
 description: The article describes the Templates & Slots feature that allows content managers to interact with content using a template with slots.
 last_updated: Oct 2, 2020
 template: concept-topic-template

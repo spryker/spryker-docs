@@ -25,7 +25,7 @@ To start working with search preferences, go to **Merchandising** > **Search Pre
 
 When adding a search preference, the **Attribute Key** value is taken from the **Product Attributes > Specific Attribute** entity. Make sure that you are populating the field with an existing attribute key of an attribute assigned to a product; otherwise, the search result will be blank in the online store.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating new attributes to search
 
@@ -103,13 +103,13 @@ Completion terms implies that, if set to **Yes**, the attributes will be include
 The _storage_media_ attribute has **SSD** and **Flash** values. If **Include for completion** has been set to **Yes**, then when user types "_fla_" in the search field, the search term will be autocompleted with "_sh_," and there will be a list of suggested terms in the search results flyout:
 ![Completion terms](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Search+Preferences+Types/completion-terms.png)
 
-**Tips & tricks**
+**Tips and tricks**
 <br>When you first decide on activating search preference types for attributes, keep in mind, that enabling all of them is **highly unrecommended**, as this will result in a huge list of search results.
 Instead of this, you might want to consider enabling search preference types for only those attributes that you really want your users to find while searching, or the attributes that refer to products you want to appear in the search results above all.
 
 {% info_block infoBox "Example" %}
 
-There is a new device in your shop which is popular on the market for its video recording properties. You know that users are very interested in a device with such property and they might search for products by it.<br>Suppose, you have created the _video_recording_ attribute in your shop with the values **Geotaging** and **Autofocus**.<br>However, suppose there are other attributes having the same values.<br>Since you want to advertise the specific new device more, it would make sense for you to disable, or at least to restrict the number of active search preference types for all other attributes with **Geotagging** and **Autofocus** values and enable an individual (or even all) search preference types for the _video_recording_.<br>This way you will make the _video_recording_ product attribute searchable and therefore the products with this attribute will stand out in the search results when your customers search by attributes.
+There is a new device in your shop which is popular on the market for its video recording properties. You know that users are very interested in a device with such property and they might search for products by it.<br>Suppose, you have created the _video_recording_ attribute in your shop with the values **Geotagging** and **Autofocus**.<br>However, suppose there are other attributes having the same values.<br>Since you want to advertise the specific new device more, it would make sense for you to disable, or at least to restrict the number of active search preference types for all other attributes with **Geotagging** and **Autofocus** values and enable an individual (or even all) search preference types for the _video_recording_.<br>This way you will make the _video_recording_ product attribute searchable and therefore the products with this attribute will stand out in the search results when your customers search by attributes.
 
 {% endinfo_block %}
 

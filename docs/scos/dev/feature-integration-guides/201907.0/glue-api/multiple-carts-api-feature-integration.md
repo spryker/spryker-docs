@@ -1,5 +1,5 @@
 ---
-title: Multiple Carts API feature integration
+title: Glue API - Multiple Carts feature integration
 description: The guide walks you through the process of installing the Multiple Carts API feature into the project.
 last_updated: Nov 22, 2019
 template: feature-integration-guide-template

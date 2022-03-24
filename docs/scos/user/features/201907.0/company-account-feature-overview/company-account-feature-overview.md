@@ -1,5 +1,5 @@
 ---
-title: Company Account Management
+title: Company Account feature overview
 last_updated: Nov 18, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/company-account-management

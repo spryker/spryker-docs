@@ -17,13 +17,13 @@ related:
 
 This document describes how to create product attributes.
 
-## Prerequisistes
+## Prerequisites
 
 To start working with attributes, go to **Catalog** > **Attributes**.
 
-A new product usually needs a super attribute and a regular attribute. The super attribued is used to distinguish product variants and the regular attribued is used to define product characteristics.
+A new product usually needs a super attribute and a regular attribute. The super attribute is used to distinguish product variants and the regular attributes is used to define product characteristics.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating product attributes
 
@@ -52,7 +52,7 @@ The *Attribute Key* field accepts lower case letters, digits, numbers, underscor
 11. Select **Save**.
     This takes you to the *View Product Attribute* page with the success message displayed.
 
-**Tips & tricks**
+**Tips and tricks**
 <br>To apply a translation to all the other locales, select ![copy to other languages icon](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Catalog/Attributes/Creating+product+attributes/copy-to-other-languages-icon.png) *Copy to other languages* next to the **Translation** you want to apply.
 
 ### Reference information: Creating product attributes

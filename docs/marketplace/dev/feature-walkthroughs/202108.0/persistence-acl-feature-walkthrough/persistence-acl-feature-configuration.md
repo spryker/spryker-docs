@@ -4,7 +4,7 @@ last_updated: Nov 05, 2021
 description: In this article, you will learn how to configure the Persistence ACL feature.
 template: concept-topic-template
 ---
-This article describes how you can configure the [Persistence ACL feature](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html).
+This document describes how you can configure the [Persistence ACL feature](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html).
 
 The Persistence ACL functionality is based on the Propel behavior. You can enable the feature in two different ways:
 - [Create a connection with one or more database tables](#connect-persistence-acl-feature-to-one-or-more-database-tables).
@@ -64,7 +64,7 @@ The configuration, unlike the rule, is common to the entire system. The main con
 
 ### AclEntityMetadataConfigTransfer
 
-The properties of the `AclEntityMetadataConfigTransfer` are described in the table below.
+The properties of the `AclEntityMetadataConfigTransfer` are described in the following table.
 
 | PROPERTY | TYPE | DESCRIPTION |
 |-----|-----|-----|
@@ -73,7 +73,7 @@ The properties of the `AclEntityMetadataConfigTransfer` are described in the tab
 
 ### AclEntityMetadataCollectionTransfer
 
-The properties of the `AclEntityMetadataCollectionTransfer` are described in the table below.
+The properties of the `AclEntityMetadataCollectionTransfer` are described in the following table.
 
 | PROPERTY | TYPE | DESCRIPTION |
 |-----|-----|-----|
@@ -81,7 +81,7 @@ The properties of the `AclEntityMetadataCollectionTransfer` are described in the
 
 ### AclEntityMetadataTransfer
 
-The properties of the `AclEntityMetadataTransfer` are described in the table below.
+The properties of the `AclEntityMetadataTransfer` are described in the following table.
 
 | PROPERTY | TYPE | DESCRIPTION |
 |-----|-----|-----|
@@ -93,7 +93,7 @@ The properties of the `AclEntityMetadataTransfer` are described in the table bel
 
 ### AclEntityParentMetadataTransfer
 
-The properties of the `AclEntityParentMetadataTransfer` are described in the table below.
+The properties of the `AclEntityParentMetadataTransfer` are described in the following table.
 
 | PROPERTY | TYPE | DESCRIPTION |
 |-----|-----|-----|
@@ -102,7 +102,7 @@ The properties of the `AclEntityParentMetadataTransfer` are described in the tab
 
 ### AclEntityParentConnectionMetadataTransfer
 
-The properties of the `AclEntityParentConnectionMetadataTransfer` are described in the table below.
+The properties of the `AclEntityParentConnectionMetadataTransfer` are described in the following table.
 
 Sometimes, foreign keys are not used to link the child and parent tables, but rather "reference columns". As a result, a `AclEntityParentConnectionMetadataTransfer` is available.
 
@@ -283,7 +283,7 @@ The following is an example of the data segmentation for the `SpyMerchant`. Data
 
 ### Default operation mask
 
-The example below sets the default `Read` permissions for the `SpyCountry` and `Create + Read` permissions for the `SpyResetPassword`.
+The following example sets the default `Read` permissions for the `SpyCountry` and `Create + Read` permissions for the `SpyResetPassword`.
 
 ```php
     /**

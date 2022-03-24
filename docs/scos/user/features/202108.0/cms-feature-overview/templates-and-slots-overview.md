@@ -16,7 +16,7 @@ Templates slots enables content managers to effectively and coherently interact 
 
 {% info_block infoBox %}
 
-Templates and slots is a complex funcitonality which works in conjunction with other functionalities. To use it effectively, make sure you get familiar with the functionalities in the order they are presented:
+Templates and slots is a complex functionality which works in conjunction with other functionalities. To use it effectively, make sure you get familiar with the functionalities in the order they are presented:
 * [CMS Page](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html)
 * [CMS Block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html)
 * [Content Items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html)
@@ -385,7 +385,7 @@ Currently, the functionality has the following functional constraints which are 
 |BACK OFFICE USER GUIDES|
 |---|
 | [Learn about the CoreMedia technology partner integration](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html)  |
-| [Add content to the Storefront using templates and slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/adding-content-to-storefront-pages-using-templates-and-slots-best-practices.html) |
+| [Add content to the Storefront using templates and slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/best-practices-adding-content-to-the-storefront-pages-using-templates-and-slots.html) |
 | [Manage slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html)   |
 
 

@@ -31,7 +31,7 @@ To retrieve a search suggestion, send the request:
 
 | REQUEST | USAGE |
 | ---------------------- | ------------------------ |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions` | Retrieve suggestions for an empty search string. |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions` | Retrieve search suggestions. |
 | `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=` | Retrieve suggestions for an empty search string.    |
 | `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=058` | Retrieve search suggestions for the SKU `058`. |
 | `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=058&include=abstract-products` | Retrieve search suggestions for the SKU `058`, including product details. |
@@ -49,7 +49,7 @@ To retrieve a search suggestion, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: no results</summary>
+<summary markdown='span'>Response sample: retrieve suggestions for an empty search string</summary>
 
 ```json
 {
@@ -79,7 +79,7 @@ To retrieve a search suggestion, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve suggestions for an abstract product</summary>
+<summary markdown='span'>Response sample: retrieve search suggestions for an abstract product</summary>
 
 ```json
 {

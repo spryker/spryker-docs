@@ -50,7 +50,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 
 <details>
-<summary markdown='span'>Response sample: all orders</summary>
+<summary markdown='span'>Response sample: retrieve all orders</summary>
 
 ```json
 {
@@ -197,7 +197,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 </details>
 
 <details>
-<summary markdown='span'>Response sample with merchants included</summary>
+<summary markdown='span'>Response sample: retrieve all orders with the merchants included</summary>
 
 ```json
 {
@@ -556,12 +556,12 @@ To retrieve detailed information on an order, send the request:
 | ----------------- | ------------------ |
 | `GET http://glue.mysprykershop.com/orders/DE--6`   | Retrieve information about the `DE--6` order.  |
 | `GET https://glue.mysprykershop.com/orders/DE--6?include=order-shipments` | Retrieve information about the order with the ID `DE--6` with order shipments included. |
-| `GET http://glue.mysprykershop.com/orders/DE--3?include=merchants` | Retrieve order `DE--3` with merchants included.|
+| `GET http://glue.mysprykershop.com/orders/DE--3?include=merchants` | Retrieve order `DE--3` with the merchants included.|
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve information about the order</summary>
 
 ```json
 {
@@ -781,7 +781,7 @@ To retrieve detailed information on an order, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample with order shipments</summary>
+<summary markdown='span'>Response sample: retrieve information about the order with order shipments included</summary>
 
 ```json
 {
@@ -1019,7 +1019,7 @@ To retrieve detailed information on an order, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample with merchants included</summary>
+<summary markdown='span'>Response sample: retrieve an with the merchants included</summary>
 
 ```json
 {

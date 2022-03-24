@@ -262,7 +262,7 @@ class GlueStorefrontApiApplicationGlueJsonApiConventionConnectorDependencyProvid
         ResourceRelationshipCollectionInterface $resourceRelationshipCollection
     ): ResourceRelationshipCollectionInterface {
         $resourceRelationshipCollection->addRelationship(
-          'dummyResourceType',
+          'dummy-resource-type',
           new DummyResourceRelationshipPlugin()
         );
 
@@ -346,10 +346,10 @@ class DummyRouteProviderPlugin extends AbstractRouteProviderPlugin implements Ro
      */
     public function addRoutes(StorefrontRouteCollection $routeCollection): RouteCollection
     {
-        $collectionRoute = $this->createGetCollectionRoute('/dummy', 'dummyResourceType');
+        $collectionRoute = $this->createGetCollectionRoute('/dummy', 'dummy-resource-type');
         $routeCollection->add('storesCollection', $collectionRoute);
 
-        $route = $this->createGetRoute('/dummy/{id}', 'dummyResourceType');
+        $route = $this->createGetRoute('/dummy/{id}', 'dummy-resource-type');
         $routeCollection->add('stores', $route);
 
         return $routeCollection;
@@ -403,7 +403,7 @@ class DummyCountriesResourceRelationshipPlugin extends AbstractPlugin implements
 
 {% info_block warningBox “Verification” %}
 
-If everything is set up correctly, you should be able to access `http://glue.mysprykershop.com/dummy-resource-type?fields[items]=att1,att2,att3&page[limit]=1&page[offset]=10&sort=-att1&include=dummy-relationships-type&sort=-att1`
-and `http://glue.mysprykershop.com/dummy?fields[items]=att1,att2,att3&page[limit]=1&page[offset]=10&sort=-att1&include=dummy-relationships-type&sort=-att1`.
+If everything is set up correctly, you should be able to access `http://glue-storefront.mysprykershop.com/dummy-resource-type?fields[items]=att1,att2,att3&page[limit]=1&page[offset]=10&sort=-att1&include=dummy-relationships-type&sort=-att1`
+and `http://glue-storefront.mysprykershop.com/dummy?fields[items]=att1,att2,att3&page[limit]=1&page[offset]=10&sort=-att1&include=dummy-relationships-type&sort=-att1`.
 
 {% endinfo_block %}

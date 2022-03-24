@@ -1780,15 +1780,15 @@ entries:
         - "202108.0"
         nested:
         - title: Define filter preferences
-          url: /docs/scos/user/back-office-user-guides/merchandising/filter-preferences/define-filter-preferences.md
+          url: /docs/scos/user/back-office-user-guides/merchandising/filter-preferences/define-filter-preferences.html
           include_versions:
           - "202108.0"
         - title: Edit filter preferences
-          url: /docs/scos/user/back-office-user-guides/merchandising/filter-preferences/edit-filter-preferences.md
+          url: /docs/scos/user/back-office-user-guides/merchandising/filter-preferences/edit-filter-preferences.html
           include_versions:
           - "202108.0"
         - title: Reorder filter preferences
-          url: /docs/scos/user/back-office-user-guides/merchandising/filter-preferences/reorder-filter-preferences.md
+          url: /docs/scos/user/back-office-user-guides/merchandising/filter-preferences/reorder-filter-preferences.html
           include_versions:
           - "202108.0"
       - title: Category filters
@@ -1796,11 +1796,11 @@ entries:
         - "202108.0"
         nested:
         - title: Assign and deassign filters from categories
-          url: /docs/scos/user/back-office-user-guides/merchandising/category-filters/assign-and-deassign-filters-from-categories.md
+          url: /docs/scos/user/back-office-user-guides/merchandising/category-filters/assign-and-deassign-filters-from-categories.html
           include_versions:
           - "202108.0"
         - title: Reorder category filters
-          url: /docs/scos/user/back-office-user-guides/merchandising/category-filters/reorder-category-filters.md
+          url: /docs/scos/user/back-office-user-guides/merchandising/category-filters/reorder-category-filters.html
           include_versions:
           - "202108.0"
       - title: Search and filters

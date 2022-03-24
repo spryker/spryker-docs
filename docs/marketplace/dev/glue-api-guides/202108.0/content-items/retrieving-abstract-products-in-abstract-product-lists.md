@@ -33,8 +33,9 @@ Alternatively, you can [retrieve an abstract product list](/docs/scos/dev/glue-a
 
 ### Request
 
-Request sample: `GET http://mysprykershop.com/content-product-abstract-lists/apl-1/abstract-products`
+Request sample: retrieve abstract products in an abstract product list
 
+`GET http://mysprykershop.com/content-product-abstract-lists/apl-1/abstract-products`
 
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
@@ -46,7 +47,7 @@ Request sample: `GET http://mysprykershop.com/content-product-abstract-lists/apl
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve abstract products in an abstract product list</summary>
 
 ```json
 {

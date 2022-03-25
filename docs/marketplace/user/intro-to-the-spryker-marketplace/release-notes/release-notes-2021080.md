@@ -110,7 +110,7 @@ Documentation:
 
 ### Merchant product management
 
-The operator can edit and activate merchant products and product options.
+The operator can edit and activate marketplace products and product options.
 
 ![Merchnat products in the Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Releases/Release+notes+202108.0/the-back-office-products.png)
 

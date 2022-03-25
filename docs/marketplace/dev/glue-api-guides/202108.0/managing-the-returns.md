@@ -45,6 +45,7 @@ To create a return for a registered user, send the Request sample:
 <details><summary markdown='span'>Request sample: create a return</summary>
 
 `POST https://glue.mysprykershop.com/returns`
+
 ```json
 {
     "data": {
@@ -65,12 +66,12 @@ To create a return for a registered user, send the Request sample:
     }
 }
 ```
-
 </details>
 
 <details><summary markdown='span'>Request sample: create a return with return items</summary>
 
 `POST https://glue.mysprykershop.com/returns?include=return-items`
+
 ```json
 {
     "data": {
@@ -87,7 +88,6 @@ To create a return for a registered user, send the Request sample:
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
@@ -172,7 +172,6 @@ To create a return for a registered user, send the Request sample:
     ]
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -221,7 +220,7 @@ To retrieve returns, send the Request sample:
 
 ### Response
 
-<details><summary markdown='span'>Response sample: returns with information about return items</summary>
+<details><summary markdown='span'>Response sample: retrieve all returns</summary>
 
 ```json
 {
@@ -269,7 +268,7 @@ To retrieve returns, send the Request sample:
 
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve all returns</summary>
+<details><summary markdown='span'>Response sample: retrieve all returns with details on return items</summary>
 
 ```json
 {
@@ -438,10 +437,9 @@ To retrieve returns, send the Request sample:
     ]
 }
 ```
-
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve returns with the respective merchant included</summary>
+<details><summary markdown='span'>Response sample: retrieve all returns with the respective merchants included</summary>
 
 ```json
 {
@@ -530,7 +528,6 @@ To retrieve returns, send the Request sample:
     ]
 }
 ```
-
 </details>
 
 
@@ -580,10 +577,10 @@ To retrieve a return, send the Request sample:
 
 | REQUEST | USAGE |
 |---|---|
-| `GET http://glue.mysprykershop.com/returns/DE--21-R9` | Retrieve return the return with the ID `DE--21-R9` for sales order items. |
-|  `GET http://glue.mysprykershop.com/returns/DE--21-R6` | Retrieve return with the ID `DE--21-R6` for sales oreder items. |
-| `GET http://glue.mysprykershop.com/returns/DE--21-R6?include=return-items` | Retrieve return with the ID `DE--21-R6`, including the return items. |
-| `GET http://glue.mysprykershop.com/returns/DE--21-R6?include=merchants` | Retrieve return  with the ID `DE--21-R6` for merchant order items, including the respective merchants. |
+| `GET http://glue.mysprykershop.com/returns/DE--21-R9` | Retrieve a return with the ID `DE--21-R9` for sales order items. |
+|  `GET http://glue.mysprykershop.com/returns/DE--21-R6` | Retrieve a return with the ID `DE--21-R6` for sales order items. |
+| `GET http://glue.mysprykershop.com/returns/DE--21-R6?include=return-items` | Retrieve a return with the ID `DE--21-R6`, including the return items. |
+| `GET http://glue.mysprykershop.com/returns/DE--21-R6?include=merchants` | Retrieve a return  with the ID `DE--21-R6` for merchant order items, including the respective merchants. |
 
 ### Response
 
@@ -636,10 +633,9 @@ To retrieve a return, send the Request sample:
     }
 }
 ```
-
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve a return with the return items</summary>
+<details><summary markdown='span'>Response sample: retrieve a return with the return items included</summary>
 
 ```json
 {
@@ -756,7 +752,6 @@ To retrieve a return, send the Request sample:
     ]
 }
 ```
-
 </details>
 
 For the attributes, see [Retrieving returns](#retrieve-returns).

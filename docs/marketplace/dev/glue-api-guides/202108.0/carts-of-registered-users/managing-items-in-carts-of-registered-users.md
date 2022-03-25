@@ -19,6 +19,7 @@ For detailed information about the modules that provide the API functionality an
 
 
 ## Add an item to a registered user's cart
+
 To add items to a cart, send the request:
 
 ---
@@ -49,7 +50,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 
 
 <details>
-<summary markdown='span'>Request sample</summary>
+<summary markdown='span'>Request sample: add an item to a registered user's cart</summary>
 
 `POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items`
 
@@ -68,7 +69,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 
 
 <details>
-<summary markdown='span'>Request sample with product measurement units and sales units</summary>
+<summary markdown='span'>Request sample: add an item to a registered user's cart with product measurement units and sales units</summary>
 
 `POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items?include=sales-units,product-measurement-units`
 
@@ -90,7 +91,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 </details>
 
 <details>
-<summary markdown='span'>Request sample with cart rules</summary>
+<summary markdown='span'>Request sample: add an item to a registered user's cart with cart rules</summary>
 
 `POST http://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items?include=cart-rules`
 
@@ -109,7 +110,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 </details>
 
 <details>
-<summary markdown='span'>Request sample with vouchers</summary>
+<summary markdown='span'>Request sample: add an item to a registered user's cart with vouchers</summary>
 
 `POST http://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items?include=vouchers`
 
@@ -128,7 +129,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 </details>
 
 <details>
-<summary markdown='span'>Request sample with a promotional item and cart rules</summary>
+<summary markdown='span'>Request sample: add a promotional item to a registered user's cart with cart rules</summary>
 
 {% info_block infoBox "Cart rules" %}
 
@@ -153,7 +154,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 </details>
 
 <details>
-<summary markdown='span'>Request sample with concrete products and product options</summary>
+<summary markdown='span'>Request sample: add an item to a registered user's cart with details on concrete products and product options</summary>
 
 `POST http://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398/items?include=concrete-products,product-options`
 
@@ -179,7 +180,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 </details>
 
 <details>
-<summary markdown='span'>Request sample with product offers</summary>
+<summary markdown='span'>Request sample: add a product offer to a registered user's cart</summary>
 
 `POST http://glue.myspsrykershop.com/carts/bef3732e-bc7a-5c07-a40c-f38caf1c40ff/items?include=items`
 
@@ -195,12 +196,11 @@ To add the promotional product to the cart, make sure that the cart fulfills the
   }
 }
 ```
-
 </details>
 
 
 <details>
-<summary markdown='span'>Request sample: adding a merchant product</summary>
+<summary markdown='span'>Request sample: add a marketplace product to a registered user's cart</summary>
 
 `POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items`
 
@@ -219,7 +219,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 </details>
 
 <details>
-<summary markdown='span'>Request sample with items and merchants</summary>
+<summary markdown='span'>Request sample: add an item to a registered user's cart with details on merchants</summary>
 
 `POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items?include=items,merchants`
 
@@ -236,8 +236,6 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 }
 ```
 </details>
-
-
 
 
 
@@ -268,7 +266,7 @@ It is the responsibility of the API Client to track whether the selected items a
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: add an item to a registered user's cart</summary>
 
 ```json
 {
@@ -301,7 +299,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 <details>
-<summary markdown='span'>Response sample with items, product measurement units, and sales units</summary>
+<summary markdown='span'>Response sample: add an item to a registered user's cart with product measurement units and sales units</summary>
 
 ```json
 {
@@ -442,7 +440,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 <details>
-<summary markdown='span'>Response sample with cart rules</summary>
+<summary markdown='span'>Response sample: add an item to a registered user's cart with cart rules</summary>
 
 ```json
 {
@@ -543,9 +541,8 @@ It is the responsibility of the API Client to track whether the selected items a
 
 </details>
 
-
 <details>
-<summary markdown='span'>Response sample with vouchers</summary>
+<summary markdown='span'>Response sample: add an item to a registered user's cart with vouchers</summary>
 
 ```json
 {
@@ -684,11 +681,10 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample: adding a promotional item without cart-rules relationship</summary>
+<summary markdown='span'>Response sample: add a promotional item to a registered user's cart without cart-rules relationship</summary>
 
 ```json
 {
@@ -731,7 +727,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 <details>
-<summary markdown='span'>Response sample: adding a promotional item with cart-rules relationship</summary>
+<summary markdown='span'>Response sample: add a promotional item to a registered user's cart with cart-rules relationship</summary>
 
 ```json
 {
@@ -1008,7 +1004,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-<summary markdown='span'>Response sample with concrete products and product options</summary>
+<summary markdown='span'>Response sample: add an item to a registered user's cart with details on concrete products and product options</summary>
 
 ```json
     {
@@ -1247,7 +1243,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product offers</summary>
+<summary markdown='span'>Response sample: add a product offer to a registered user's cart</summary>
 
 ```json
 {
@@ -1380,7 +1376,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-<summary markdown='span'>Response sample: adding a merchant product</summary>
+<summary markdown='span'>Response sample: add a marketplace product to a registered user's cart</summary>
 
 ```json
 {
@@ -1409,12 +1405,11 @@ It is the responsibility of the API Client to track whether the selected items a
     }
 }
 ```
-
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample with items and merchants</summary>
+<summary markdown='span'>Response sample: add an item to a registered user's cart with details on merchants</summary>
 
 ```json
 {
@@ -1537,7 +1532,6 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 
@@ -1626,7 +1620,8 @@ To change the number of items in a cart, send the request:
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 
-Request sample:
+Request sample: change item quantity
+
 `PATCH http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054/items/177_25913296`
 
 ```json
@@ -1647,7 +1642,7 @@ Request sample:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: change item quantity</summary>
 
 ```json
 {
@@ -1777,6 +1772,7 @@ For the attributes of the included resources, see [Retrieving concrete products]
 ## Remove items from a registered user's cart
 
 To remove an item from a registered user's cart, send the request:
+
 ***
 `DELETE` {% raw %}**/carts/*{{cart_uuid}}*/items/*{{item_group_key}}***{% endraw %}
 ***
@@ -1793,7 +1789,9 @@ To remove an item from a registered user's cart, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
-Sample request: `DELETE http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054/items/177_25913296`
+Request sample: Remove items from a registered user's cart
+
+`DELETE http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054/items/177_25913296`
 
 ### Response
 

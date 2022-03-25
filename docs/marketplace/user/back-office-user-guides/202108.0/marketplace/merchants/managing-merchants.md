@@ -212,7 +212,7 @@ To restrict access to the Merchant Portal, on the **Merchants** page, in the **A
 
 ## Activating and deactivating merchants
 
-Activating or deactivating the merchant indicates whether the merchant profile page, product offers, and merchant products are available in the Storefront or not. To activate the merchant, click **Activate** in the **Actions** column of the **Merchants** page.
+Activating or deactivating the merchant indicates whether the merchant profile page, product offers, and marketplace products are available in the Storefront or not. To activate the merchant, click **Activate** in the *Actions* column of the *Merchants* page.
 
 {% info_block infoBox "Info" %}
 

@@ -338,7 +338,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Make sure that data contains `merchant_references` for merchant products in the `spy_product_abstract_storage`.
+Make sure that data contains `merchant_references` for marketplace products in the `spy_product_abstract_storage`.
 
 {% endinfo_block %}
 
@@ -580,7 +580,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that  for the merchant products you can see the merchant name on the product details page.
+Make sure that  for the marketplace products you can see the merchant name on the product details page.
 
 Make sure that when you add merchant product to cart, on a cart page is has the *Sold By* widget displayed.
 
@@ -678,7 +678,7 @@ class SearchElasticsearchDependencyProvider extends SprykerSearchElasticsearchDe
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you enter the merchant name in the search field, the return list contains merchant products.
+Make sure that when you enter the merchant name in the search field, the return list contains marketplace products.
 
 {% endinfo_block %}
 

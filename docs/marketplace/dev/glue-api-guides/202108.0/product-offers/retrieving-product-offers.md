@@ -38,7 +38,7 @@ To retrieve the product offers, send the request:
 
 | REQUEST | USAGE     |
 | ---------- | ----------- |
-| `GET https://glue.mysprykershop.com/product-offers/offer56`| Retrieve information about the with the `offer56` ID.   |
+| `GET https://glue.mysprykershop.com/product-offers/offer56`| Retrieve information about an offer with the `offer56` ID.   |
 | `GET https://glue.mysprykershop.com/product-offers/offer78?product-offer-prices` | Retrieve information about the offer with `offer78` ID with the product offer prices. |
 | `GET https://glue.mysprykershop.com/product-offers/offer101?product-offer-availabilities` | Retrieve the product offer with the `offer101` ID with the product offer availability. |
 | `GET https://glue.mysprykershop.com/product-offers/offer101?merchants` | Retrieve the product offer with the `offer101` ID, including the merchant it belongs to. |
@@ -46,7 +46,7 @@ To retrieve the product offers, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve an offer</summary>
 
 ```json
 {
@@ -67,7 +67,7 @@ To retrieve the product offers, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product offer prices</summary>
+<summary markdown='span'>Response sample: retrieve an offer with product offer prices included</summary>
 
 ```json
 {
@@ -130,7 +130,7 @@ To retrieve the product offers, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product offer availabilities</summary>
+<summary markdown='span'>Response sample: retrieve an offer with product offer availabilities included</summary>
 
 ```json
 {
@@ -173,11 +173,10 @@ To retrieve the product offers, send the request:
     ]
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with merchant information</summary>
+<summary markdown='span'>Response sample: retrieve an offer with merchant information included</summary>
 
 ```json
 {

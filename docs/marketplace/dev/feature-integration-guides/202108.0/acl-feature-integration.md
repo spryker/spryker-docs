@@ -323,7 +323,7 @@ Make sure that the user can see only the allowed menu links.
 
 Make sure that `spy_acl_role` `spy_acl_group` `spy_acl_user_has_group` tables contain default data.
 
-Make sure that current User transfer contains appropriate Acl groups inside.
+Make sure that you can edit user's ACL groups on User edit page in Back Office.
 
 Make sure that `AclEntityRule` is created in `spy_acl_entity_rule` when the `RoleTransfer` is saved and contains `AclEntityRules`.
 

@@ -1,7 +1,7 @@
 ---
 title: Delivery Methods
 description: The section can be used to create multiple shipping carriers and add shipment services and methods in the Back Office.
-last_updated: Sep 14, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/delivery-methods
 originalArticleId: 92f1d52c-e3ee-4e27-9b59-64ca44fc0b25
@@ -11,8 +11,6 @@ redirect_from:
 related:
   - title: Shipment feature overview
     link: docs/scos/user/features/page.version/shipment-feature-overview.html
-  - title: Delivery Methods- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/administration/delivery-methods/references/delivery-methods-reference-information.html
 ---
 
 The Shipment section of the Spryker Back Office is mostly used by E-Commerce managers.

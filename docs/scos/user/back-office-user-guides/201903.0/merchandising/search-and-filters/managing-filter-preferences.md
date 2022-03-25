@@ -1,7 +1,7 @@
 ---
 title: Managing Filter Preferences
 description: Use the procedure to reorder filters, specify a filter type and add translations to the filter name in the Back Office.
-last_updated: Jul 31, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/managing-filter-preferences
 originalArticleId: c353f64a-4232-4367-b502-56bee1fa812f
@@ -9,12 +9,8 @@ redirect_from:
   - /v2/docs/managing-filter-preferences
   - /v2/docs/en/managing-filter-preferences
 related:
-  - title: Search Preferences Types
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/references/search-preferences-types.html
   - title: Managing Search Preferences
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-search-preferences.html
-  - title: Reference- Search Preferences
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/references/reference-search-preferences.html
 ---
 
 This article describes the procedures of creating and managing filter preferences.

@@ -1,5 +1,6 @@
 ---
 title: Contributing to documentation
+last_updated: Mar 11, 2022
 description: Learn how you can contribute to the Spryker docs.
 template: howto-guide-template
 ---

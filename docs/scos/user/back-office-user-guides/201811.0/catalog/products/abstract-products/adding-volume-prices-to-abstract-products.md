@@ -1,7 +1,7 @@
 ---
 title: Adding Volume Prices
 description: Use the guide to set or update discounts to products purchased in bulk from the Back Office.
-last_updated: Oct 22, 2019
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/adding-volume-prices
 originalArticleId: 8f5cf85b-eb77-45a9-8f5e-79264957c627
@@ -9,12 +9,6 @@ redirect_from:
   - /v1/docs/adding-volume-prices
   - /v1/docs/en/adding-volume-prices
 related:
-  - title: Products- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/products-reference-information.html
-  - title: Abstract Product- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/abstract-product-reference-information.html
-  - title: Concrete Product- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/concrete-product-reference-information.html
   - title: Creating an Abstract Product
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html
   - title: Creating Product Variants

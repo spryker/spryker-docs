@@ -1,5 +1,6 @@
 ---
 title: Customizing deployment pipelines
+last_updated: Jan 26, 2022
 description: Learn how to customize deployment pipelines.
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/customizing-deployment-pipelines

@@ -1,5 +1,6 @@
 ---
 title: "How-To: Extend an existing Gui table"
+last_updated: Jan 26, 2022
 description: This articles provides details how to extend an existing Gui table
 template: howto-guide-template
 related:

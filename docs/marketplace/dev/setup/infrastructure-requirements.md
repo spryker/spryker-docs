@@ -1,5 +1,6 @@
 ---
 title: Infrastructure requirements
+last_updated: Mar 22, 2022
 description: This document provides the required system infrastructure requirements for a Spryker Marketplace project.
 template: concept-topic-template
 ---

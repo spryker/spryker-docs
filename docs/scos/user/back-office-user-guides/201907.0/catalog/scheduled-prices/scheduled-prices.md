@@ -1,7 +1,7 @@
 ---
 title: Scheduled Prices
 description: The Scheduled Prices section is designed to import predefined product price schedules which are to be applied to existing products automatically in the future.
-last_updated: Nov 26, 2019
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/managing-scheduled-prices-201907
 originalArticleId: 55f69a1d-8dbb-4213-86f5-38cc093ac74b

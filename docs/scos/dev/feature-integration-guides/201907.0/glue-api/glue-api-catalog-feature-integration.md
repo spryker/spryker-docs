@@ -1,6 +1,6 @@
 ---
 title: Glue API - Catalog feature integration
-last_updated: Dec 27, 2019
+last_updated: Mar 11, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/catalog-api-feature-integration
 originalArticleId: 03b96930-118b-41bb-971e-64858ce4017d
@@ -10,8 +10,6 @@ redirect_from:
 related:
   - title: Catalog Search
     link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.html
-  - title: Getting Suggestions for Auto-Completion and Search
-    link: docs/scos/dev/glue-api-guides/page.version/getting-suggestions-for-auto-completion-and-search.html
 ---
 
 ## Install Feature API

@@ -1,5 +1,5 @@
----last_updated: Apr 3, 2020
-
+---
+last_updated: Apr 3, 2020
 title: Shipment Schema
 originalLink: https://documentation.spryker.com/v5/docs/db-schema-shipment
 originalArticleId: 1258e1d2-a07f-49b1-874f-46694d9ca85e

@@ -1,5 +1,6 @@
 ---
 title: Table Column Type Text
+last_updated: Jan 26, 2022
 description: This document provides details about the Table Column Type Text in the Components Library.
 template: concept-topic-template
 ---

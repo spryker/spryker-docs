@@ -1,7 +1,7 @@
 ---
 title: Managing Product Labels
 description: The Managing Product Labels section describes the procedures you can use to view, edit, activate and/or deactivate product labels in the Back Office.
-last_updated: May 19, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/managing-product-labels
 originalArticleId: 3ee5bca7-4008-4995-9a8a-8bc39ef40fb8

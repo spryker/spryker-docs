@@ -1,5 +1,6 @@
 ---
 title: Tutorial — Troubleshooting Yves or Zed not restarting after deployment
+last_updated: Jan 26, 2022
 description: Learn how to troubleshoot Yves or Zed not restarting after deployment
 template: troubleshooting-guide-template
 ---

@@ -1,7 +1,7 @@
 ---
 title: Managing Discounts
 description: Use these procedures to view and update discounts, activate/deactivate discounts, and add voucher codes in the Back Office.
-last_updated: Sep 15, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/managing-discounts
 originalArticleId: a2b03a98-db95-4dc0-a2a8-3fc2c2c8f0c5
@@ -9,16 +9,8 @@ redirect_from:
   - /v5/docs/managing-discounts
   - /v5/docs/en/managing-discounts
 related:
-  - title: Discount- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/discount-reference-information.html
-  - title: Discount Calculation- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/discount-calculation-reference-information.html
-  - title: Discount Conditions- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/discount-conditions-reference-information.html
   - title: Token Description Tables
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/token-description-tables.html
-  - title: Voucher Codes- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/voucher-codes-reference-information.html
 ---
 
 This topic describes how to manage discounts.

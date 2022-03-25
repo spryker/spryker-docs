@@ -1,7 +1,7 @@
 ---
 title: Creating Product Bundles
 description: Use the guide to assign product variants to a bundle, set its price, add SEO data and images in the Back Office.
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/creating-and-managing-product-bundles
 originalArticleId: 057fbf19-a8ff-457f-8735-39b3c65ac5f6
@@ -9,8 +9,6 @@ redirect_from:
   - /v3/docs/creating-and-managing-product-bundles
   - /v3/docs/en/creating-and-managing-product-bundles
 related:
-  - title: Abstract Product- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/abstract-product-reference-information.html
   - title: Abstract and Concrete Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-and-concrete-products.html
   - title: Managing Products
@@ -21,10 +19,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/adding-product-alternatives.html
   - title: Adding Volume Prices to Abstract Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html
-  - title: Concrete Product- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/concrete-product-reference-information.html
-  - title: Products- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/products-reference-information.html
 ---
 
 This article describes how you add the product bundles and manage them.

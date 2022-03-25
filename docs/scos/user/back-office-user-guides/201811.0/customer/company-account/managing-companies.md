@@ -1,7 +1,7 @@
 ---
 title: Managing Companies
 description: Use the procedures to create and edit companies, approve and activate/deactivate a company, and/or deny a company in the Back Office.
-last_updated: May 19, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/managing-companies
 originalArticleId: fbbe5576-78f3-457e-8bde-83378a0d1174
@@ -19,8 +19,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-units.html
   - title: Managing Company Roles
     link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-roles.html
-  - title: Company Account- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/references/company-account-reference-information.html
 ---
 
 This topic describes how you create and manage company records, which is the initial step in setting up the company infrastructure.

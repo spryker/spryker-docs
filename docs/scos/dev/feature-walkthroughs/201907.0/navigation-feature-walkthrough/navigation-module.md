@@ -1,7 +1,7 @@
 ---
 title: Navigation Module
 description: The module provides database structure and a public API to manage what’s in the database, and a small toolkit for rendering navigation menus in the frontend
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: feature-walkthrough-template
 originalLink: https://documentation.spryker.com/v3/docs/module-navigation
 originalArticleId: 32112e91-7c2f-4ceb-93d0-f331ff8d449f

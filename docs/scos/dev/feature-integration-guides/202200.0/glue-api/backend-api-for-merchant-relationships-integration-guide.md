@@ -1,5 +1,6 @@
 ---
 title: Backend API for Merchant Relationships feature integration
+last_updated: Jan 26, 2022
 description: Integrate the Backend API for Merchant Relationships into your project
 template: feature-integration-guide-template
 ---

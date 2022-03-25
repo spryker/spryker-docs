@@ -1,7 +1,7 @@
 ---
 title: Calculator Plugins
 description: The information in this topic covers the available calculator plugins along with their examples.
-last_updated: Jul 23, 2019
+last_updated: Jan 26, 2022
 template: feature-walkthrough-template
 originalLink: https://documentation.spryker.com/v1/docs/calculator-plugins
 originalArticleId: ea0e3e72-1bf2-4112-9c0a-1c53f7607413

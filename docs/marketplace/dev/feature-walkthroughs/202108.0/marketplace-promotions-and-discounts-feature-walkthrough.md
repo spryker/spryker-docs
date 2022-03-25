@@ -1,5 +1,6 @@
 ---
 title: Marketplace Promotions and Discounts feature walkthrough
+last_updated: Mar 22, 2022
 description: This document provides technical details about the Marketplace Promotions and Discounts feature.
 template: feature-walkthrough-template
 ---

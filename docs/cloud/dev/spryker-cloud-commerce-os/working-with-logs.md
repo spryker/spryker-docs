@@ -1,5 +1,6 @@
 ---
 title: Working with logs
+last_updated: Jan 26, 2022
 description: Locate the needed logs to debug an application.
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/working-with-logs

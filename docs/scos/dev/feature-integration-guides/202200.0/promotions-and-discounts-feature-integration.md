@@ -1,5 +1,6 @@
 ---
 title: Promotions & Discounts feature integration
+last_updated: Jan 26, 2022
 description: Learn how to integrate the Promotions & Discounts feature into a Spryker project.
 template: feature-integration-guide-template
 ---

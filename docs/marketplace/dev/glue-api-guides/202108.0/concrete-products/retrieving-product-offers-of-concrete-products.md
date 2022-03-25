@@ -1,5 +1,6 @@
 ---
 title: Retrieving product offers of concrete products
+last_updated: Jan 26, 2022
 description: Retrieve details about product offers via Glue API
 template: glue-api-storefront-guide-template
 ---

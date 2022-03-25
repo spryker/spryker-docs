@@ -1,7 +1,7 @@
 ---
 title: Product Reviews
 description: The section is used to define the customers who can add reviews and ratings to products, as well as
-last_updated: May 19, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/product-reviews-management
 originalArticleId: 4f6c7561-a5fb-4c3c-bb43-78087d6ad667

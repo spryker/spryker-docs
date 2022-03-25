@@ -1,7 +1,7 @@
 ---
 title: ratenkauf by easyCredit
 description: Offer a simple and standardized solution for e-commerce and for the point of sale by integrating ratenkauf by easyCredit into the Spryker Commerce OS.
-last_updated: Oct 23, 2019
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/ratenkauf-by-easycredit
 originalArticleId: 86f4b4df-1ed1-4e2c-bdce-cd905686e5c5

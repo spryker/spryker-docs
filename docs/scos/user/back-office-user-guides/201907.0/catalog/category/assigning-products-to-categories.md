@@ -1,7 +1,7 @@
 ---
 title: Assigning Products to Categories
 description: The guide provides instructions on how to assign products to the category in the Back Office.
-last_updated: Feb 4, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/assigning-products-to-categories
 originalArticleId: 2fdd377a-3c22-4630-a779-7e78be54541c
@@ -15,8 +15,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/category/managing-categories.html
   - title: Category Management feature overview
     link: docs/scos/user/features/page.version/category-management-feature-overview.html
-  - title: Category- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/category/references/category-reference-information.html
 ---
 
 This topic describes the steps you need to perform to assign a product(s) to the category.

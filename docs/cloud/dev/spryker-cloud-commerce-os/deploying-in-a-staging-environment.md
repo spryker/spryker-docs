@@ -1,5 +1,6 @@
 ---
 title: Deploying in a staging environment
+last_updated: Jan 26, 2022
 description: Deploy an application in a staging environment.
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/deploying-in-a-staging-environment

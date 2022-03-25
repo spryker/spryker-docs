@@ -1,6 +1,6 @@
 ---
 title: Scheduled Prices Feature Overview
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/scheduled-prices-feature-overview
 originalArticleId: bb3f3936-2772-4aa6-bd1e-f37133b967cf

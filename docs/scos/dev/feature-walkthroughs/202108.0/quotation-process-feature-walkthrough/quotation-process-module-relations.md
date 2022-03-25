@@ -1,5 +1,6 @@
 ---
 title: Quotation Process- module relations
+last_updated: Jan 26, 2022
 description: On this page, you can find module relations for the Quotation Process feature.
 template: feature-walkthrough-template
 ---

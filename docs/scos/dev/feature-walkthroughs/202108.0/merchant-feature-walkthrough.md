@@ -1,5 +1,6 @@
 ---
 title: Merchant feature walkthrough
+last_updated: Jan 26, 2022
 description: In the context of SCOS B2B and Marketplaces, merchant is the selling company.
 template: concept-topic-template
 redirect_from: /docs/marketplace/dev/feature-walkthroughs/202108.0/merchant.html

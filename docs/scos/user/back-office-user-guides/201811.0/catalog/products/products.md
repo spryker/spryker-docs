@@ -1,7 +1,7 @@
 ---
 title: Products
 description: This section is designed to manage products from product creation to stock and product reviews, options, labels, relations, lists, etc in the Back Office.
-last_updated: Nov 26, 2019
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/products
 originalArticleId: 9caabe13-c261-453d-a5f5-39481dcc460b

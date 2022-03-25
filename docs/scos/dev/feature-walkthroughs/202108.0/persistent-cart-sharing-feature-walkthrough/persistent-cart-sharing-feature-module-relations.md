@@ -1,5 +1,6 @@
 ---
 title: Persistent Cart Sharing feature module relations
+last_updated: Jan 26, 2022
 template: feature-walkthrough-template
 ---
 

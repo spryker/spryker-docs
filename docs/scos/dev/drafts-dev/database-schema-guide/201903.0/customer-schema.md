@@ -1,5 +1,5 @@
----last_updated: Nov 22, 2019
-
+---
+last_updated: Nov 22, 2019
 title: Customer Schema
 originalLink: https://documentation.spryker.com/v2/docs/db-schema-customer
 originalArticleId: 7a561138-feab-4640-af13-2d6c7ec7fb8e

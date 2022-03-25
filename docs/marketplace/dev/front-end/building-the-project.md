@@ -1,5 +1,6 @@
 ---
 title: Building the project
+last_updated: Mar 22, 2022
 description: This document provides details how to build the frontend part of the Merchant Portal.
 template: concept-topic-template
 ---

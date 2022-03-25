@@ -1,6 +1,6 @@
 ---
 title: Managing Scheduled Prices
-last_updated: Sep 14, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/managing-scheduled-prices
 originalArticleId: 46e8694b-aaf6-4283-a6b0-7f5f52ed1197
@@ -12,8 +12,6 @@ related:
     link: docs/scos/user/features/page.version/scheduled-prices-feature-overview.html
   - title: Creating Scheduled Prices
     link: docs/scos/user/back-office-user-guides/page.version/catalog/scheduled-prices/creating-scheduled-prices.html
-  - title: Scheduled Prices- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/scheduled-prices/references/scheduled-prices-reference-information.html
 ---
 
 This topic describes how to manage scheduled prices.

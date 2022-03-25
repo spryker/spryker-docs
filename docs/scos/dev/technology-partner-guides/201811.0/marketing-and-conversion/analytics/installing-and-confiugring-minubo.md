@@ -1,5 +1,6 @@
 ---
 title: Installing and configuring Minubo
+last_updated: Jan 26, 2022
 description: Learn how to install and integrate Minubo
 template: howto-guide-template
 ---

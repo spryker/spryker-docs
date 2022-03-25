@@ -1,7 +1,7 @@
 ---
 title: Managing Product Attributes
 description: Use the Managing Attributes procedures to view and updated product attributes in the Back Office.
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/managing-attributes
 originalArticleId: a15d2a0f-94bd-4671-ac2f-6f6e5db1445d
@@ -13,8 +13,6 @@ related:
     link: docs/scos/user/features/page.version/product-feature-overview/product-attributes-overview.html
   - title: Creating Product Attributes
     link: docs/scos/user/back-office-user-guides/page.version/catalog/attributes/creating-product-attributes.html
-  - title: Attributes- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/attributes/references/attributes-reference-information.html
 ---
 
 This topic describes how you can manage the product attributes.

@@ -1,16 +1,13 @@
 ---
 title: Managing Tax Sets
 description: Use these procedures to create, update, view and/or delete tax sets in the Back Office.
-last_updated: Sep 15, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/managing-tax-rates-sets
 originalArticleId: 8e2ab836-79e9-4738-93a7-c92b16b79de4
 redirect_from:
   - /v5/docs/managing-tax-rates-sets
   - /v5/docs/en/managing-tax-rates-sets
-related:
-  - title: Taxes Rates - Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/administration/tax-rates/references/tax-rates-reference-information.html
 ---
 
 This topic describes the procedures that you need to perform to create, edit, and delete tax sets.

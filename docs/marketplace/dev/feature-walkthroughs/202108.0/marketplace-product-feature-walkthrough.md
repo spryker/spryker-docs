@@ -1,5 +1,6 @@
 ---
 title: Marketplace Product feature walkthrough
+last_updated: Jan 26, 2022
 description: A Marketplace Product feature adds merchant information to the product that a merchant sells.
 template: feature-walkthrough-template
 ---

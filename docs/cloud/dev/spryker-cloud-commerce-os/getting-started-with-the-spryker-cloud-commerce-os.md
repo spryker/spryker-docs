@@ -1,5 +1,6 @@
 ---
 title: Getting started with the Spryker Cloud Commerce OS
+last_updated: Jan 26, 2022
 description: After the initial setup, access Spryker Cloud and start developing.
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/getting-started-with-spryker-cloud-commerce-os

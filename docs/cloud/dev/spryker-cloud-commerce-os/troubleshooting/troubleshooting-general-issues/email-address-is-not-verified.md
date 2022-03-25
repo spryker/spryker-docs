@@ -1,5 +1,6 @@
 ---
 title: Email address is not verified
+last_updated: Jan 26, 2022
 description: Solution to the error about unverified email addres.
 template: troubleshooting-guide-template
 ---

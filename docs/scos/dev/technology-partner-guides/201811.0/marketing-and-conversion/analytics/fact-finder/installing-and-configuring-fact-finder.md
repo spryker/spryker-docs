@@ -1,5 +1,6 @@
 ---
 title: Installing and configuring FACT-Finder guide
+last_updated: Jan 26, 2022
 description: This article provides details on the installation and configuration of the FACT-Finder module.
 template: howto-guide-template
 ---

@@ -18,9 +18,6 @@ redirect_from:
   - /v4/docs/en/checkout-steps
   - /v2/docs/checkout-steps
   - /v2/docs/en/checkout-steps
-related:
-  - title: Multi-Step Checkout
-    link: docs/scos/user/features/page.version/checkout-feature-overview/multi-step-checkout-overview.html
 ---
 
 The checkout process consists of the following steps:

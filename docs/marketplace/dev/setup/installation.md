@@ -1,5 +1,6 @@
 ---
 title: Installation
+last_updated: Mar 22, 2022
 description: This document describes how to get started with the B2C Demo Marketplace.
 template: concept-topic-template
 ---

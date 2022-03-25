@@ -1,7 +1,7 @@
 ---
 title: Glue API - Product relations feature integration
 description: This guide will navigate you through the process of installing and configuring the Product Relations feature in Spryker OS.
-last_updated: Sep 14, 2020
+last_updated: Jan 26, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/glue-api-product-relations-feature-integration
 originalArticleId: 6b3b0451-a9cf-4362-9685-fca2429a025e

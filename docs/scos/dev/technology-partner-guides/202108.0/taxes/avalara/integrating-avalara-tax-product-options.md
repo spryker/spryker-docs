@@ -1,7 +1,7 @@
 ---
 title: Integrating Avalara Tax + Product Options
 description: Integrate the Avalara Tax + Product Options feature into your project
-last_updated: Jun 18, 2021
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/avalara-tax-product-options-feature-integration
 originalArticleId: baa66b26-825e-404a-a8e4-1b48cb00cd67

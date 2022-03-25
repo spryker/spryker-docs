@@ -1,5 +1,6 @@
 ---
 title: Frontend enablement Service
+last_updated: Mar 11, 2022
 description: Overview of Frontend enablement Service, an application for launching frontends.
 template: concept-topic-template
 ---

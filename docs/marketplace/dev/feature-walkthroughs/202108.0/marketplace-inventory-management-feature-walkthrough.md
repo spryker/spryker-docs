@@ -1,5 +1,6 @@
 ---
 title: Marketplace Inventory Management feature walkthrough
+last_updated: Jan 26, 2022
 description: Merchants are product and service sellers in the Marketplace.
 template: feature-walkthrough-template
 ---

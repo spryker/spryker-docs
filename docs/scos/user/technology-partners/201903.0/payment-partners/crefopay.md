@@ -1,7 +1,7 @@
 ---
 title: CrefoPay
 description: Provide all steps within the payment process by integrating CrefoPay into the Spryker Commerce OS.
-last_updated: Jul 31, 2020
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/crefopay
 originalArticleId: 5fa9a0f1-c6d5-48fb-964b-29d4dbf35311

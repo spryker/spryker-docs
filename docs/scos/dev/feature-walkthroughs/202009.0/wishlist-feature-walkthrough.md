@@ -1,6 +1,6 @@
 ---
 title: Wishlist feature walkthrough
-last_updated: Aug 19, 2021
+last_updated: Jan 26, 2022
 description: The Wishlist feature allows customers to track and save the products they wish to purchase through the wish list
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/tax-module

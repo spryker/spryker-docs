@@ -1,7 +1,7 @@
 ---
 title: Creating Carrier Companies
 description: Use the procedure to create a carrier company and activate it in the Back Office.
-last_updated: Sep 15, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/creating-a-carrier-company
 originalArticleId: b7bba1a3-c1e8-43fe-92be-a347a4a3997b
@@ -11,8 +11,6 @@ redirect_from:
 related:
   - title: Creating and Managing Delivery Methods
     link: docs/scos/user/back-office-user-guides/page.version/administration/delivery-methods/creating-and-managing-delivery-methods.html
-  - title: Delivery Methods- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/administration/delivery-methods/references/delivery-methods-reference-information.html
   - title: Shipment feature overview
     link: docs/scos/user/features/page.version/shipment-feature-overview.html
 ---

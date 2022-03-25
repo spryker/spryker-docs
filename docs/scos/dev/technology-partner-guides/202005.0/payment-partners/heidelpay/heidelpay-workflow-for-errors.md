@@ -1,7 +1,7 @@
 ---
 title: Heidelpay workflow for errors
 description: This article describes the procedure for handling errors in Heidelpay.
-last_updated: Apr 3, 2020
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v5/docs/heidelpay-error-workflow
 originalArticleId: 7b17736d-b6ae-4099-91ba-ae219c71ff65

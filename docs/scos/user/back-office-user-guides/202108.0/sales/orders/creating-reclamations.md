@@ -1,5 +1,6 @@
 ---
 title: Creating reclamations
+last_updated: Mar 22, 2022
 description: Learn how to create reclamations in the Back Office
 template: back-office-user-guide-template
 ---

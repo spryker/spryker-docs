@@ -1,7 +1,7 @@
 ---
 title: Creating Scheduled Prices
 description: This user guide is about scheduling price changes by creating product price schedules. This functionality is shipped with the Scheduled prices feature.
-last_updated: Sep 15, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/creating-scheduled-prices
 originalArticleId: 10d46e8c-c8ad-498c-8023-249711b71f8f
@@ -11,8 +11,6 @@ redirect_from:
 related:
   - title: Managing Scheduled Prices
     link: docs/scos/user/back-office-user-guides/page.version/catalog/scheduled-prices/managing-scheduled-prices.html
-  - title: Scheduled Prices- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/scheduled-prices/references/scheduled-prices-reference-information.html
   - title: Scheduled Prices Feature Overview
     link: docs/scos/user/features/page.version/scheduled-prices-feature-overview.html
 ---

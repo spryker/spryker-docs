@@ -1,7 +1,7 @@
 ---
 title: Arvato - Store Order 2.0
 description: In this article, you can get details about the  Store Order service in the Arvato module.
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v3/docs/arvato-store-order-2-0
 originalArticleId: 57634a00-cd81-4f1b-82eb-0a9b54bb08c5
@@ -11,8 +11,6 @@ redirect_from:
 related:
   - title: Arvato - Risk Check 2.0
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/arvato/v.2.0/arvato-risk-check-2.0.html
-  - title: Installing and configuring Arvato 2.0
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/arvato/v.2.0/arvato-risk-solution-services-integration-2.0.html
   - title: Arvato
     link: docs/scos/user/technology-partners/page.version/payment-partners/arvato.html
 ---

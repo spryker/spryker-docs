@@ -1,5 +1,6 @@
 ---
 title: Marketplace and merchant state machines overview
+last_updated: Mar 22, 2022
 description: This document contains concept information on the Marketplace and merchant state machines in the Spryker Commerce OS.
 template: concept-topic-template
 ---

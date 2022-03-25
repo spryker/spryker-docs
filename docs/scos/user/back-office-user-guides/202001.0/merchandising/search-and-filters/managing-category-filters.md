@@ -1,7 +1,7 @@
 ---
 title: Managing Category Filters
 description: Use the procedure to arrange items into categories, manage category filters by adding, reordering, or removing them in the Back Office.
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/managing-category-filters
 originalArticleId: 0c709f2c-3e85-4202-9a2c-99fcb0fa3ae6
@@ -9,8 +9,6 @@ redirect_from:
   - /v4/docs/managing-category-filters
   - /v4/docs/en/managing-category-filters
 related:
-  - title: Search Preferences Types
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/references/search-preferences-types.html
   - title: Managing Search Preferences
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-search-preferences.html
   - title: Managing Filter Preferences

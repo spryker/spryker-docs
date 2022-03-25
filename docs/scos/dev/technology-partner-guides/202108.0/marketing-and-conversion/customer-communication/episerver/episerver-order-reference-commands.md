@@ -11,13 +11,6 @@ redirect_from:
   - /docs/episerver-order-referenced-commands
   - /docs/en/episerver-order-referenced-commands
   - /docs/scos/user/technology-partners/202108.0/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-order-referenced-commands.html
-related:
-  - title: Episerver - Integration into a project
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
-  - title: Episerver - Installation and Configuration
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
-  - title: Episerver - API Requests
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-api-requests.html
 ---
 
 The Episerver module has four different commands:

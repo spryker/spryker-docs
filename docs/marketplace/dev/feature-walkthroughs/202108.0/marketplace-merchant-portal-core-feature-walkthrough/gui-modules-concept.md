@@ -1,5 +1,6 @@
 ---
 title: GUI modules concept
+last_updated: Jan 26, 2022
 description: Short overview of GUI modules in Merchant portal.
 template: concept-topic-template
 related:

@@ -1,7 +1,7 @@
 ---
 title: PayOne - Cash on Delivery
 description: Integrate  Cash on Delivery payment through Payone into the Spryker-based shop.
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/payone-cash-on-delivery
 originalArticleId: 4492ac6c-d0c5-4722-b07b-4336e3d40668

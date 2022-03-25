@@ -1,7 +1,7 @@
 ---
 title: Braintree - Performing Requests for the Legacy Demoshop
 description: This article contains information on the state machine commands and conditions for the Braintree module in the Spryker Legacy Demoshop.
-last_updated: Oct 22, 2019
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/braintree-requests-legacy-demoshop
 originalArticleId: bc79bc75-ea5f-47c5-948b-6b4f2bba140b
@@ -11,10 +11,6 @@ redirect_from:
 related:
   - title: Braintree
     link: docs/scos/user/technology-partners/page.version/payment-partners/braintree.html
-  - title: Braintree - Request workflow for Legacy Demoshop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-guides-for-the-legacy-demoshop/braintree-workflow-for-legacy-demoshop.html
-  - title: Braintree - Configuration for the Legacy Demoshop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-guides-for-the-legacy-demoshop/braintree-configuration-for-the-legacy-demoshop.html
 ---
 
 To perform the needed requests, you can easily use the implemented state machine commands and conditions. The next section gives a summary of them. You can also use the facade methods directly which, however, are invoked by the state machine.

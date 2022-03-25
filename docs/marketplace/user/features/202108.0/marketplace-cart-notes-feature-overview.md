@@ -1,5 +1,6 @@
 ---
 title: Marketplace Cart Notes feature overview
+last_updated: Jan 26, 2022
 description: This document contains concept information for the Marketplace Cart Notes feature.
 template: concept-topic-template
 ---

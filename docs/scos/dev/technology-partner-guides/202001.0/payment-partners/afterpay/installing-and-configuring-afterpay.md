@@ -1,7 +1,7 @@
 ---
 title: Installing and configuring Afterpay
 description: Learn how to install and configure AfterPay into Spryker-based project
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/afterpay-installation-and-configuration
 originalArticleId: 7a8a0359-7c28-4551-8c90-2091384ad555

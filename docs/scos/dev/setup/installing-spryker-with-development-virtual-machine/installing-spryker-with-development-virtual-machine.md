@@ -1,5 +1,6 @@
 ---
 title: Installing Spryker with development virtual machine
+last_updated: Mar 11, 2022
 description: All the necessary information for installing Spryker with development virtual machine.
 template: howto-guide-template
 redirect_from:

@@ -1,5 +1,6 @@
 ---
 title: Tutorial — Troubleshooting a failed deployment
+last_updated: Jan 26, 2022
 description: Learn how to troubleshoot a failed deployment
 template: troubleshooting-guide-template
 ---

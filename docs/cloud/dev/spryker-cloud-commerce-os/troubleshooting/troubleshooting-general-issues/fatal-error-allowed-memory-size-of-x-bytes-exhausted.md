@@ -1,5 +1,6 @@
 ---
 title: 'Fatal error: Allowed memory size of x bytes exhausted'
+last_updated: Jan 26, 2022
 description: Solution to the error about exhausted memory
 template: troubleshooting-guide-template
 ---

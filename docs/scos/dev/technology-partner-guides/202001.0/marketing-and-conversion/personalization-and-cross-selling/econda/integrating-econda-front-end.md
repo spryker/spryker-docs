@@ -1,7 +1,7 @@
 ---
 title: Integrating Econda front end
 description: Integrate frontend of the Econda module into the Spryker Commerce OS.
-last_updated: Sep 15, 2020
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/econda-frontend-integration
 originalArticleId: e69a53bc-b89a-481a-ae75-a0df177a2917
@@ -12,12 +12,6 @@ redirect_from:
 related:
   - title: Econda
     link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/personalization-and-cross-selling/econda.html
-  - title: Econda - Exporting CSVs
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/personalization-and-cross-selling/econda/econda-exporting-csvs.html
-  - title: Econda - Tracking
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/personalization-and-cross-selling/econda/econda-tracking.html
-  - title: Econda - Cross Sell
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/personalization-and-cross-selling/econda/econda-cross-sell.html
 ---
 
 {% info_block infoBox "Info" %}

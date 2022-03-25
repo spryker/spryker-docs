@@ -9,7 +9,7 @@ From the technical point of view, Merchant Portal is a subset of modules in Zed 
 
 {% info_block infoBox "Example" %}
 
-For example, there can be a person responsible only for creating and managing product offers, the other person takes care of shipping merchant orders to their buyers. This means that two merchant users need to be created for these purposes.
+For example, there can be a person responsible only for creating and managing product offers; the other person takes care of shipping merchant orders to their buyers. It means that two merchant users need to be created for these purposes.
 
 {% endinfo_block %}
 

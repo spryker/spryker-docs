@@ -6,7 +6,7 @@ template: concept-topic-template
 
 The *Product Offer* entity is created when multiple merchants need to sell the same product on the Marketplace.
 
-Product offer is created per concrete product and contains product-specific information, information about the merchant selling this product, and the offer price. Any concrete product can have one or many offers from different merchants. Therefore, a unique *product offer reference* is defined per each product offer and is used to identify the offer in the system. Offer reference is mandatory and can only be defined once.
+A product offer is created per concrete product and contains product-specific information, information about the merchant selling this product, and the offer price. Any concrete product can have one or many offers from different merchants. Therefore, a unique *product offer reference* is defined per each product offer and is used to identify the offer in the system. Offer reference is mandatory and can only be defined once.
 
 Merchants can [create product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html#creating-a-product-offer) in the Merchant Portal or [import the product offers](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-offer.csv.html).
 
@@ -25,7 +25,7 @@ You can retrieve product offer details via Glue API. For details, see [Retrievin
 {% endinfo_block %}
 
 ## Product offer structure
-To define visibility of a product offer on the Storefront, the following details are attached to the product offer entity:
+To define the visibility of a product offer on the Storefront, the following details are attached to the product offer entity:
 
 | OFFER PARAMETER      | DESCRIPTION           |
 | ------------------- | ----------------------------- |
@@ -74,7 +74,7 @@ Merchants can define product offer prices in the Merchant Portal when they [crea
 
 ## Product offer stores
 
-Merchant product offer is defined per store. Merchants set their own prices per store for the product offer.
+A merchant product offer is defined per store. Merchants set their own prices per store for the product offer.
 However, defining the right store for the product offer affects its visibility. When setting the stores for the product offer, merchants need to pay attention to the stores where their abstract products are available.
 The following table illustrates the logic according to which the product offer is displayed in the Storefront.
 

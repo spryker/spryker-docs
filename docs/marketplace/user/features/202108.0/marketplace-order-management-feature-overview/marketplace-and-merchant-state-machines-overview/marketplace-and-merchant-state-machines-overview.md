@@ -55,7 +55,7 @@ If there are no manually executable events applicable to any of the items, there
 
 ## Merchant state machine
 The Marketplace administrator can define one or several state machines for merchants:
-* One as the default one, which applies automatically to merchant order items in every merchant order.
+* One as the default, which applies automatically to merchant order items in every merchant order.
 * Another state machine for a specific merchant.
 
 Merchant state machine processes merchant order items and works in parallel with the Marketplace state machine.

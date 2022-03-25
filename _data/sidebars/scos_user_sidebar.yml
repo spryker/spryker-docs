@@ -1770,7 +1770,7 @@ entries:
         - "202108.0"
         nested:
         - title: "Best practices: Promote products with search preferences"
-          url: /docs/scos/user/back-office-user-guides/merchandising/search-preferences/best-practices-promoting-products-with-search-preferences.html
+          url: /docs/scos/user/back-office-user-guides/merchandising/search-preferences/best-practices-promote-products-with-search-preferences.html
         - title: Define search preferences
           url: /docs/scos/user/back-office-user-guides/merchandising/search-preferences/define-search-preferences.html
         - title: Edit search preferences

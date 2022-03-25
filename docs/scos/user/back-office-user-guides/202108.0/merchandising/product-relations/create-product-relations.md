@@ -30,7 +30,7 @@ This document describes how to create product relations in the Back Office.
 3. Select a **RELATION TYPE**.
 4. For the related products to be updated automatically on a regular basis according to the product relation's rules, select the **UPDATE REGULARLY** checkbox.
 5. To activate the product relation after creating it, select the **IS ACTIVE** checkbox.
-6. In the **Product owning the relation** pane, next to the product you want to create a product relation with, click **Select**.
+6. In the **Product owning the relation** pane, next to the product you want to display related products for, click **Select**.
 
 7. In the **Store relation** pane, select the stores you want the product relation to be displayed in.
 

@@ -28,7 +28,7 @@ The names should be unique to the extent of making it impossible to accidentally
 
 {% endinfo_block %}
 
-#### Examples of not unique transfer config
+#### Examples of not unique transfer name
 
 ```xml
 <?xml version="1.0"?>
@@ -47,7 +47,7 @@ NotUnique:TransferName Transfer object name ProductAbstractStore has to have pro
 ---------------------- ----------------------------------------------------------------------------------------------------
 ```
 
-#### Examples renamed transfer name
+#### Examples of unique transfer name
 
 Renamed transfer name:
 
@@ -117,10 +117,7 @@ The names should be unique to the extent of making it impossible to accidentally
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" name="zed" namespace="Orm\Zed\EvaluatorSpryker\Persistence" package="src.Orm.Zed.EvaluatorSpryker.Persistence">
     <table name="evaluator_spryker" idMethod="native">
-        <column name="id_evaluator_spryker" required="true" type="INTEGER" autoIncrement="true" primaryKey="true"/>
-        <column name="reversed_string" required="true" size="128" type="VARCHAR"/>
-
-        <id-method-parameter value="evaluator_spryker_pk_seq"/>
+        ...
     </table>
 </database>
 ```
@@ -133,16 +130,13 @@ NotUnique:DatabaseTable Database table evaluator_spryker has to have project pre
 ----------------------- ----------------------------------------------------------------------------------------------------
 ```
 
-#### Examples of renamed table column name
+#### Examples of renamed table name
 
 ```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" name="zed" namespace="Orm\Zed\EvaluatorSpryker\Persistence" package="src.Orm.Zed.EvaluatorSpryker.Persistence">
     <table name="pyz_evaluator_spryker" idMethod="native">
-        <column name="id_evaluator_spryker" required="true" type="INTEGER" autoIncrement="true" primaryKey="true"/>
-        <column name="reversed_string" required="true" size="128" type="VARCHAR"/>
-
-        <id-method-parameter value="evaluator_spryker_pk_seq"/>
+        ...
     </table>
 </database>
 ```
@@ -162,9 +156,9 @@ The names should be unique to the extent of making it impossible to accidentally
 
 ```xml
 <?xml version="1.0"?>
-<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" name="zed" namespace="Orm\Zed\EvaluatorSpryker\Persistence" package="src.Orm.Zed.EvaluatorSpryker.Persistence">
-    <table name="pyz_evaluator_spryker" idMethod="native">
-        <column name="reversed_string" required="true" size="128" type="VARCHAR"/>
+<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\Product\Persistence" package="src.Orm.Zed.Product.Persistence">
+    <table name="spy_product" idMethod="native" allowPkInsert="true" identifierQuoting="true">
+        <column name="is_active" required="true" defaultValue="true" type="BOOLEAN"/>
     </table>
 </database>
 ```
@@ -173,17 +167,17 @@ The names should be unique to the extent of making it impossible to accidentally
 
 ```bash
 ------------------------ ----------------------------------------------------------------------------------------------------
-NotUnique:DatabaseColumn Database column reversed_string has to have project prefix Pyz in /0000-fork-b2c-demo-shop/src/Orm/Zed/EvaluatorSpryker/Persistence/Propel/Schema/spy_evaluator_spryker.schema.xml, like pyz_reversed_string
+NotUnique:DatabaseColumn Database column is_active has to have project prefix Pyz in /0000-fork-b2c-demo-shop/src/Orm/Zed/Product/Persistence/Propel/Schema/spy_product.schema.xml, like pyz_is_active
 ------------------------ ----------------------------------------------------------------------------------------------------
 ```
 
-#### Example of renamed database column name
+#### Example of unique database column name
 
 ```xml
 <?xml version="1.0"?>
-<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" name="zed" namespace="Orm\Zed\EvaluatorSpryker\Persistence" package="src.Orm.Zed.EvaluatorSpryker.Persistence">
-    <table name="pyz_evaluator_spryker" idMethod="native">
-        <column name="pyz_reversed_string" required="true" size="128" type="VARCHAR"/>
+<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\Product\Persistence" package="src.Orm.Zed.Product.Persistence">
+    <table name="spy_product" idMethod="native" allowPkInsert="true" identifierQuoting="true">
+        <column name="pyz_is_active" required="true" defaultValue="true" type="BOOLEAN"/>
     </table>
 </database>
 ```
@@ -280,7 +274,7 @@ interface BundleProductsExpanderPlugin use SprykerBundleProductsExpanderPlugin
 
 ```bash
 ------------------ ----------------------------------------------------------------------------------------------------
-NotUnique:Constant Pyz\Client\ProductStorage\Plugin\BundleProductsExpanderPlugin::KEY_SKU name has to have project namespace, like PYZ_KEY_SKU.
+NotUnique:Constant Pyz\Client\ProductStorage\Plugin\BundleProductsExpanderPlugin::KEY_SKU name has to have project namespace, like KEY_PYZ_SKU.
 ------------------ ----------------------------------------------------------------------------------------------------
 ```
 
@@ -296,7 +290,7 @@ interface BundleProductsExpanderPlugin use SprykerBundleProductsExpanderPlugin
     /**
      * @var string
      */
-    public const PYZ_KEY_SKU = '...';
+    public const KEY_PYZ_SKU = '...';
 }
 ```
 ---

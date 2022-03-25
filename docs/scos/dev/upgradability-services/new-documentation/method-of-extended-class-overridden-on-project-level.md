@@ -7,12 +7,20 @@ template: concept-topic-template
 
 ## Method of an extended class is overridden on the project level
 
-Factory, Dependency Provider, Repository, and Entity Manager methods belong to the private API.
-If you extend a core class and override one of its methods, minor releases can cause errors or unexpected changes in functionality.
+If you extend functionality under private API, any update can cause errors or unexpected changes in functionality.
+If you extend a core class and override one of its methods, updates can cause errors or unexpected changes in functionality.
+
+More information about private API [see here]{link to Private API class was extended or used - private-api-class-extended-or-used.md#Private API class was extended or used}
 
 #### Using custom methods on the project level
 
 To avoid unexpected issues and achieve the same result, instead of overriding the core methods, introduce custom ones.
+
+{% info_block infoBox "" %}
+
+While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility is not guaranteed in the private API. For example, if you use a core method on the project level, and it is updated or removed, it can cause unexpected issues during updates.
+
+{% endinfo_block %}
 
 #### Example of code that can cause upgradability errors
 
@@ -53,55 +61,17 @@ Pyz\Zed\EvaluatorSpryker\Persistence\EvaluatorSprykerCategoryImageEntityManager
 ************************************************************************************************************************
 ```
 
-{% info_block warningBox "Dependency Provider exception" %}
-
-If you override a method and initialize a plugin, it does not break backward compatibility. For example, in `StorageRouterDependencyProvider`, `SprykerShopStorageRouterDependencyProvider` is overridden with a plugin introduced:
-
-<details>
-<summary markdown='span'>Example of an overridden method with a plugin</summary>
-
-```php
-<?php
-
-namespace Pyz\Yves\StorageRouter;
-
-use SprykerShop\Yves\CatalogPage\Plugin\StorageRouter\CatalogPageResourceCreatorPlugin;
-use SprykerShop\Yves\CmsPage\Plugin\StorageRouter\PageResourceCreatorPlugin;
-use SprykerShop\Yves\ProductDetailPage\Plugin\StorageRouter\ProductDetailPageResourceCreatorPlugin;
-use SprykerShop\Yves\ProductSetDetailPage\Plugin\StorageRouter\ProductSetDetailPageResourceCreatorPlugin;
-use SprykerShop\Yves\RedirectPage\Plugin\StorageRouter\RedirectResourceCreatorPlugin;
-use SprykerShop\Yves\StorageRouter\StorageRouterDependencyProvider as SprykerShopStorageRouterDependencyProvider;
-
-class StorageRouterDependencyProvider extends SprykerShopStorageRouterDependencyProvider
-{
-    /**
-     * @return \SprykerShop\Yves\StorageRouterExtension\Dependency\Plugin\ResourceCreatorPluginInterface[]
-     */
-    protected function getResourceCreatorPlugins(): array
-    {
-        return [
-            new PageResourceCreatorPlugin(),
-            new CatalogPageResourceCreatorPlugin(),
-            new ProductDetailPageResourceCreatorPlugin(),
-            new ProductSetDetailPageResourceCreatorPlugin(),
-            new RedirectResourceCreatorPlugin(),
-        ];
-    }
-}
-```
-
-</details>
-
-{% endinfo_block %}
-
 #### Steps to solve potential problem in functionality
 
-1. Introduce a new custom method.
-2. Replace the core method with the custom one you've created in the previous step.
+1. Investigate if it is possible to extend functionality with configuration or plugins (link to "Configuration", "Plug and Play strategy" - https://docs.spryker.com/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#plug-and-play)
+2. If it's impossible to extend functionality with configuration or plugins then introduce a new custom method.
+3. If you introduced new custom method then replace the core method with the custom one you've created in the previous step.
 
 {% info_block infoBox "Unique method names" %}
 
-The method name should be unique to the extent of making it impossible to accidentally match the name of a core method introduced in the future.
+The new custom method name should be unique to the extent of making it impossible to accidentally match the name of a core method introduced in the future.
+
+More details about unique names here {link to "Making method names unique" - unique-entity-name-not-unique.md#Making method names unique }
 
 {% endinfo_block %}
 

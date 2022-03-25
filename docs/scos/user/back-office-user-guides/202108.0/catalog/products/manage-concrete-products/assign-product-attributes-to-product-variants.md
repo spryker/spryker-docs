@@ -12,7 +12,7 @@ This document describes how to assign product attributes to product variants in 
 2. Create a product variant by [creating an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html) or by [adding a product variant to an existing abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/creating-product-variants.html).  
 3. To start working with products, go to **Catalog** > **Products**.
 
-Review the [reference information](assign-product-attributes-to-product-variants) before you start, or look up the necessary information as you go through the process.
+Review the [reference information](reference-information-assign-product-attributes-to-product-variants) before you start, or look up the necessary information as you go through the process.
 
 
 ## Assign product attributes to product variants

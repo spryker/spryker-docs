@@ -45,7 +45,7 @@ Product abstract card:
 
 ## Product groups in the Back Office
 
-In the Back Office, a product catalog manager can view what product group an abstract product belongs to. 
+In the Back Office, a product catalog manager can view what product group an abstract product belongs to.
 
 Also, they can insert product groups into CMS pages via content widgets in the [WYSIWYG editor](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html#content-item-widget).
 
@@ -67,11 +67,6 @@ Check out this video tutorial on product groups:
 
 {% wistia r5l2kit2c1 720 480 %}
 
-## Related Business User articles
-
-|BACK OFFICE USER GUIDES|
-|---|
-| [Check what product group a product belongs to by viewing a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/managing-products.html#viewing-products)  |
 
 {% info_block warningBox "Developer guides" %}
 

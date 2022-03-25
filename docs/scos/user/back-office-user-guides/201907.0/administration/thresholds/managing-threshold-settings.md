@@ -1,7 +1,7 @@
 ---
 title: Managing Threshold Settings
 description: Use the procedure to select a tax set applied to the threshold fee in the Back Office.
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/managing-threshold-settings
 originalArticleId: bd2896f6-96b3-40e6-b0f7-9c7f516432a4
@@ -13,8 +13,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/managing-merchant-order-thresholds.html
   - title: Managing Global Threshold
     link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/managing-global-thresholds.html
-  - title: Threshold- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/references/threshold-reference-information.html
 ---
 
 **Threshold settings** is the page where you can select the tax set that is applied to the threshold fee. Thus, the tax is calculated in the same way it is calculated for the products in the cart.

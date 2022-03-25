@@ -1,5 +1,6 @@
 ---
 title: Marketplace domain model
+last_updated: Jan 26, 2022
 description: The following document describes the key domain objects that make a Spryker Shop a Marketplace.
 template: concept-topic-template
 ---

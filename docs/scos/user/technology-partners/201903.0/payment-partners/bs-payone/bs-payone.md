@@ -1,7 +1,7 @@
 ---
 title: BS Payone
 description: Provide full-service payment service and payment transaction services by integrating BS Payone into your Spryker-based shop.
-last_updated: Jul 31, 2020
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/payone-v1-1
 originalArticleId: 31bc37a5-5959-457c-bb54-804cfd0cf94a

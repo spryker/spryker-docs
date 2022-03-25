@@ -1,7 +1,7 @@
 ---
 title: Content Item Types- Module Relations
 description: Learn about all the content item types and module relations used for them.
-last_updated: Sep 14, 2020
+last_updated: Jan 26, 2022
 template: feature-walkthrough-template
 originalLink: https://documentation.spryker.com/v5/docs/content-item-types-module-relations
 originalArticleId: 5798f27e-2d26-48d3-af19-04465e75eb8e

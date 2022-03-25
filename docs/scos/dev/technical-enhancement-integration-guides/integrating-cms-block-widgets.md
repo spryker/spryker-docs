@@ -13,9 +13,6 @@ redirect_from:
   - /v6/docs/enabling-cms-block-widget
   - /v6/docs/en/enabling-cms-block-widget
   - /docs/scos/dev/technical-enhancements/enabling-cms-block-widget.html
-related:
-  - title: CMS block
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
 ---
 
 This document describes how to enable CMS block widget in a Spryker project.

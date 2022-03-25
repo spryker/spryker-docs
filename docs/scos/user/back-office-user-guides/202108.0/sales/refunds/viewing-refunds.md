@@ -1,7 +1,7 @@
 ---
 title: Viewing refunds
 description: Learn how to view refunds in the Back Office.
-last_updated: Aug 10, 2021
+last_updated: Mar 22, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/viewing-refunds
 originalArticleId: 36f1525b-6f90-41be-b0bf-75d368e91b8c

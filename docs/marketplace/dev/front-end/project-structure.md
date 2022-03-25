@@ -1,5 +1,6 @@
 ---
 title: Project structure
+last_updated: Jan 26, 2022
 description: This document provides details about the structure of the front-end project in the Spryker Marketplace.
 template: concept-topic-template
 ---

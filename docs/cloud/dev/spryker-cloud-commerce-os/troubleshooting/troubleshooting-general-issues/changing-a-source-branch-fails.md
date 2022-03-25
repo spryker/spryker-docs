@@ -1,5 +1,6 @@
 ---
 title: Changing a source branch fails
+last_updated: Jan 26, 2022
 description: Solution to a failed source branch change while saving pipeline settings
 template: troubleshooting-guide-template
 redirect_from:

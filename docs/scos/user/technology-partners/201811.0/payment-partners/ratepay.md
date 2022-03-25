@@ -1,7 +1,7 @@
 ---
 title: RatePay
 description: Offer intelligent payment solutions for handling most popular paylater models like invoice and installments on the internet for the DACH region by integrating RatePay into the Spryker-based shop.
-last_updated: May 19, 2020
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/ratepay
 originalArticleId: 27243cb3-7264-41b1-89d9-c26626183a33
@@ -11,8 +11,6 @@ redirect_from:
 related:
   - title: RatePay - Payment Workflow
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-payment-workflow.html
-  - title: RatePay facade methods
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/integrating-payment-methods-for-ratepay/ratepay-facade-methods.html
   - title: RatePay - How to Disable Address Updates from the Backend Application
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/disabling-address-updates-from-the-backend-application-for-ratepay.html
   - title: Integrating the Direct Debit payment method for RatePay

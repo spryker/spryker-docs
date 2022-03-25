@@ -1,5 +1,6 @@
 ---
 title: Configuring New Relic logging
+last_updated: Jan 26, 2022
 template: howto-guide-template
 ---
 

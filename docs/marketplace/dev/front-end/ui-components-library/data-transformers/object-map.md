@@ -1,5 +1,6 @@
 ---
 title: Data Transformer Object-map
+last_updated: Jan 26, 2022
 description: This document provides details about the Data Transformer Object-map service in the Components Library.
 template: concept-topic-template
 ---

@@ -1,5 +1,6 @@
 ---
 title: "How-To: Upgrade Spryker instance to the Marketplace"
+last_updated: Mar 22, 2022
 description: This document provides details how to upgrade Spryker instance to the Marketplace.
 template: howto-guide-template
 ---

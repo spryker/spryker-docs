@@ -1,5 +1,6 @@
 ---
 title: Table Design
+last_updated: Mar 22, 2022
 description: This document describes the Table Design in the Components Library.
 template: concept-topic-template
 ---

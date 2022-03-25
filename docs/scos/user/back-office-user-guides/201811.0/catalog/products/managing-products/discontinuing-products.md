@@ -1,7 +1,7 @@
 ---
 title: Discontinuing Products
 description: Use the guide to make the product variant discontinued in the Back Office.
-last_updated: Feb 11, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/discontinuing-a-product
 originalArticleId: a084c458-1110-491a-abda-de41dfaba06c
@@ -21,12 +21,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/adding-product-alternatives.html
   - title: Adding Volume Prices
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html
-  - title: Products- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/products-reference-information.html
-  - title: Abstract Product- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/abstract-product-reference-information.html
-  - title: Concrete Product- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/concrete-product-reference-information.html
 ---
 
 This article describes what steps you need to follow to discontinue the product.

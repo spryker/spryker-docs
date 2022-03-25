@@ -1,5 +1,6 @@
 ---
 title: Setup
+last_updated: Mar 11, 2022
 description: All the options of installing Spryker Commerce OS
 template: concept-topic-template
 redirect_from:

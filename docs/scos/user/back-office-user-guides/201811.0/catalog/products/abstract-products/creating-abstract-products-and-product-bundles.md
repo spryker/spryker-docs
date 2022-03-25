@@ -1,7 +1,7 @@
 ---
 title: Creating an Abstract Product
 description: Use the procedure to create an abstract product, set a price and validity period, define superattributes, images, and a store the product is available in.
-last_updated: May 19, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/creating-an-abstract-product
 originalArticleId: 17bb02c1-708a-4c08-945e-e908642152a9
@@ -23,12 +23,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/adding-product-alternatives.html
   - title: Adding Volume Prices
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html
-  - title: Products- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/products-reference-information.html
-  - title: Abstract Product- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/abstract-product-reference-information.html
-  - title: Concrete Product- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/concrete-product-reference-information.html
 ---
 
 This topic describes the procedures that you need to follow in order to create an abstract product and its variants.

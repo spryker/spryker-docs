@@ -1,5 +1,6 @@
 ---
 title: Search types overview
+last_updated: Jan 26, 2022
 redirect_from:
   - /v5/docs/full-site-search
   - /v5/docs/en/full-site-search

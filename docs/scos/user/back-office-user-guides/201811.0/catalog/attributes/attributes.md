@@ -1,7 +1,7 @@
 ---
 title: Attributes
 description: Use the Attributes  section to add super attributes to product variants to highlight its specific peculiarities.
-last_updated: Jan 15, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/attributes
 originalArticleId: 1ef20e80-954d-4057-845c-367237640ceb
@@ -9,8 +9,6 @@ redirect_from:
   - /v1/docs/attributes
   - /v1/docs/en/attributes
 related:
-  - title: Attributes- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/attributes/references/attributes-reference-information.html
   - title: Product Attributes
     link: docs/scos/user/features/page.version/product-feature-overview/product-attributes-overview.html
 ---

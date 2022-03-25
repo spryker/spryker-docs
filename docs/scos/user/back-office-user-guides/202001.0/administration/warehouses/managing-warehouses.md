@@ -1,16 +1,13 @@
 ---
 title: Managing Warehouses
 description: Use the procedures to view and update warehouses in the Back Office.
-last_updated: Mar 11, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/managing-warehouses
 originalArticleId: 309969f1-ea15-4eb4-ad13-868d9e7ecd08
 redirect_from:
   - /v4/docs/managing-warehouses
   - /v4/docs/en/managing-warehouses
-related:
-  - title: Warehouses- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/administration/warehouses/references/warehouses-reference-information.html
 ---
 
 This topic describes the managing actions you can perform on warehouses: view, edit and activate or deactivate.

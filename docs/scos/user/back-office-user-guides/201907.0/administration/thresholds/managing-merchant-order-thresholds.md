@@ -1,7 +1,7 @@
 ---
 title: Managing Merchant Order Thresholds
 description: Use the procedures to edit soft and hard thresholds per specific merchant relationship in the Back Office.
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/managing-merchant-relationships-thresholds
 originalArticleId: 2aeec6b1-90a3-4640-b14b-194d8d29f184
@@ -13,8 +13,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/managing-global-thresholds.html
   - title: Managing Threshold Settings
     link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/managing-threshold-settings.html
-  - title: Threshold- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/references/threshold-reference-information.html
 ---
 
 This topic describes the procedures for managing thresholds per merchant relation.

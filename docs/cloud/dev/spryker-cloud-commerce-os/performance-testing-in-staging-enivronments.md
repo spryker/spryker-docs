@@ -1,5 +1,6 @@
 ---
 title: Performance testing in staging environments
+last_updated: Jan 26, 2022
 description: Learn about performance testing for the Spryker Cloud Commerce OS
 template: concept-topic-template
 redirect_from:

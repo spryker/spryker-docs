@@ -1,5 +1,6 @@
 ---
 title: DevVM system requirements
+last_updated: Mar 11, 2022
 Descriptions: System infrastructure requirements for the Spryker Marketplace with Merchant Portal
 template: howto-guide-template
 ---

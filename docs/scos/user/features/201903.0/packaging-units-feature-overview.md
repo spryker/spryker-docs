@@ -1,7 +1,7 @@
 ---
 title: Packaging Units feature overview
 description: Unit of measure that is used as packaging for a product is referred to as packaging unit and a shop can sell the same product in different packaging units.
-last_updated: Jul 31, 2020
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v2/docs/packaging-units-overview
 originalArticleId: f6187c8a-5eb7-452e-b5f6-5da977054949

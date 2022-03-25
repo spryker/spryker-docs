@@ -1,5 +1,6 @@
 ---
 title: Marketplace Merchant Portal Product Offer Management feature walkthrough
+last_updated: Mar 22, 2022
 description: This document provides reference information about product offers in the Merchant Portal.
 template: feature-walkthrough-template
 ---

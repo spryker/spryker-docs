@@ -1,6 +1,6 @@
 ---
 title: Services
-last_updated: Sep 15, 2020
+last_updated: Jan 26, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/services
 originalArticleId: 0e4f58e4-8a89-44e9-96ff-864c483461a0

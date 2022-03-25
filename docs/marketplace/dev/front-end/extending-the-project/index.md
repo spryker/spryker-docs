@@ -1,5 +1,6 @@
 ---
 title: Extending the project
+last_updated: Mar 22, 2022
 description: This document provides details about how to extend the new project.
 template: howto-guide-template
 ---

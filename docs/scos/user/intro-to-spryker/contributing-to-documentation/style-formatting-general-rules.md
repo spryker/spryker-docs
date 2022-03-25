@@ -1,5 +1,6 @@
 ---
 title: Style, syntax, formatting, and general rules
+last_updated: Jan 26, 2022
 description: Learn how to style and format your docs.
 template: concept-topic-template
 related:
@@ -68,13 +69,11 @@ Every document must have a YAML front matter block. This block consists of key-v
 ---
 title: Foo bar document
 description: Exemplary description text.
-last_updated: Dec 09, 2021
 template: concept-topic-template
 tags: [new, B2B, B2C]
 redirect_from: 
 	-/docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting.html
 	-/docs/marketplace/dev/feature-integration-guides/202108.0/combined-product-offer-import-integration.html
-related:
 	- title: How to extend an existing Gui table
 		link: docs/marketplace/dev/howtos/how-to-extend-gui-table.html
   - title: Sales Data Export feature integration

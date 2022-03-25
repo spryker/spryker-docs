@@ -1,5 +1,6 @@
 ---
 title: Deployment fails due to a failed docker authentication
+last_updated: Jan 26, 2022
 description: Solution to a failed deployment.
 template: troubleshooting-guide-template
 redirect_from:

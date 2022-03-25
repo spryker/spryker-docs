@@ -1,5 +1,6 @@
 ---
 title: Merchant User concept
+last_updated: Jan 26, 2022
 description: Merchant User in Merchant portal.
 template: concept-topic-template
 ---

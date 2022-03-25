@@ -1,5 +1,6 @@
 ---
 title: Installing and configuring Seven Senders
+last_updated: Mar 11, 2022
 template: howto-guide-template
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Managing Users
 description: The procedures help create, edit, activate/deactivate or delete Back Office users, set a language to the Back Office user account, and make a user be an agent.
-last_updated: May 19, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/managing-users
 originalArticleId: 18e23108-6483-493b-aadd-70c82e356fab
@@ -9,10 +9,6 @@ redirect_from:
   - /v1/docs/managing-users
   - /v1/docs/en/managing-users
 related:
-  - title: Roles- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/users/roles-groups-and-users/references/roles-reference-information.html
-  - title: User- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/users/roles-groups-and-users/references/user-reference-information.html
   - title: Managing Roles
     link: docs/scos/user/back-office-user-guides/page.version/users/roles-groups-and-users/managing-roles.html
   - title: Managing Groups

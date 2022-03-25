@@ -1,7 +1,7 @@
 ---
 title: Managing Product Options
 description: Use this section to view the product option details in the Back Office.
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/managing-product-options
 originalArticleId: ad16321d-9818-449d-9f88-2694da79ce7b
@@ -13,8 +13,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/product-options/creating-product-options.html
   - title: Product Options feature overview
     link: docs/scos/user/features/page.version/product-options-feature-overview.html
-  - title: Product Options- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/product-options/references/product-options-reference-information.html
 ---
 
 This article describes the managing actions that you can perform with the product options. 

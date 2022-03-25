@@ -1,6 +1,6 @@
 ---
 title: Managing Guest Carts
-last_updated: Jan 16, 2020
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/managing-guest-carts
 originalArticleId: 716feabe-b263-4010-a4bc-4a637b9568ad

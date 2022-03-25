@@ -1,7 +1,7 @@
 ---
 title: Managing configurable bundle templates
 description: Learn how to manage configurable bundle templates in the Back Office.
-last_updated: Jul 30, 2021
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-configurable-bundle-templates
 originalArticleId: e3c4fbce-bd28-416d-9dd0-bca412689483

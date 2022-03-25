@@ -1,7 +1,7 @@
 ---
 title: Managing Search Preferences
 description: Use the procedure to customize search by product attributes and specify search preference types in the online shop.
-last_updated: Sep 15, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/managing-search-preferences
 originalArticleId: 412efda2-783e-4876-b617-ee27dd0a7626

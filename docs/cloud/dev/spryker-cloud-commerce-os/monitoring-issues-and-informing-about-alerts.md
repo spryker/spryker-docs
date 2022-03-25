@@ -1,5 +1,6 @@
 ---
 title: Monitoring issues and informing about alerts
+last_updated: Jan 26, 2022
 description: Learn how issues with environments are monitored and how customers are informed about alerts on PaaS
 template: concept-topic-template
 ---

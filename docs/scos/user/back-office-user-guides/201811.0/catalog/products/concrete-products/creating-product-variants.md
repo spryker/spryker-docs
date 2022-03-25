@@ -1,7 +1,7 @@
 ---
 title: Creating Product Variants
 description: Use the guide to configure a product variant, set a price and validity period, make it searchable on the website, and more
-last_updated: May 19, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/creating-a-product-variant
 originalArticleId: 5f4db30b-2c63-4929-9cce-acb280e95423
@@ -15,10 +15,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
   - title: Editing Product Variants
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/concrete-products/editing-product-variants.html
-  - title: Products- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/products-reference-information.html
-  - title: Concrete Product- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/concrete-product-reference-information.html
 ---
 
 This topic describes the procedure you need to follow in order to add a new product variant to the abstract product.

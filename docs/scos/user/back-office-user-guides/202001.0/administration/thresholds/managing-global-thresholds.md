@@ -1,7 +1,7 @@
 ---
 title: Managing Global Thresholds
 description: Use the procedures to set up hard and soft thresholds when working with global thresholds in the Back Office.
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/managing-global-threshold
 originalArticleId: 0ab16a0d-5008-4dc9-813c-339ac0cb9eea
@@ -15,8 +15,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html
   - title: Managing Threshold Settings
     link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/managing-threshold-settings.html
-  - title: Threshold- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/references/threshold-reference-information.html
 ---
 
 This topic describes the procedures for managing thresholds per merchant relation.

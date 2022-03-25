@@ -1,5 +1,6 @@
 ---
 title: Reporting documentation issues
+last_updated: Mar 11, 2022
 description: Learn how to report an issue with Spryker docs.
 template: howto-guide-template
 ---

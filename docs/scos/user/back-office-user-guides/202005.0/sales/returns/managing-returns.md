@@ -1,7 +1,7 @@
 ---
 title: Managing Returns
 description: In this article, you will know how to manage returns in the Back Office.
-last_updated: Sep 14, 2020
+last_updated: Mar 11, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/managing-returns
 originalArticleId: b6d7196b-c370-4168-8d59-0a73228ba91c
@@ -9,12 +9,6 @@ redirect_from:
   - /v5/docs/managing-returns
   - /v5/docs/en/managing-returns
 related:
-  - title: Return Management Feature Overview
-    link: /docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html
-  - title: Returns- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/sales/returns/references/returns-reference-information.html
-  - title: Return Item States- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/sales/returns/references/return-item-states-reference-information.html
   - title: Managing Orders
     link: docs/scos/user/back-office-user-guides/page.version/sales/orders/managing-orders.html
 ---

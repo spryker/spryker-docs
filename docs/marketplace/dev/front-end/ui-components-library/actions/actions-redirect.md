@@ -1,5 +1,6 @@
 ---
 title: Actions Redirect 
+last_updated: Jan 26, 2022
 description: This document provides details about the Actions Redirect service in the Components Library.
 template: concept-topic-template
 ---

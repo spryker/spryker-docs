@@ -1,5 +1,6 @@
 ---
 title: Datasource Inline
+last_updated: Jan 26, 2022
 description: This document provides details about the Datasource Inline service in the Components Library.
 template: concept-topic-template
 ---

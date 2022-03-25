@@ -1,5 +1,6 @@
 ---
 title: Launching Storefronts
+last_updated: Mar 11, 2022
 description: Learn how to launch Storefronts
 template: concept-topic-template
 ---

@@ -1,7 +1,7 @@
 ---
 title: Navigation Module Integration
 description: The guide walks you through the process of installing the Navigation Module into your project.
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/navigation-module-integration
 originalArticleId: cace1ac3-0b67-4d1a-811c-1b5680994855

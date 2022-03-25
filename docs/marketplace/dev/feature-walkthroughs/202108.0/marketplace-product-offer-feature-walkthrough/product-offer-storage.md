@@ -1,5 +1,6 @@
 ---
 title: Product Offer storage
+last_updated: Mar 22, 2022
 description: This document provides reference information about Marketplace Product Offer storage.
 template: concept-topic-template
 ---

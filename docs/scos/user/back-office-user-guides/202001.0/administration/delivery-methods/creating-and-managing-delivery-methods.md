@@ -1,7 +1,7 @@
 ---
 title: Creating and Managing Delivery Methods
 description: Use the procedures to create a delivery method, activate it, set a price and tax set, and define a delivery method per store in the Back Office.
-last_updated: Dec 6, 2019
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/creating-and-managing-shipment-methods
 originalArticleId: 7865fc0c-04f2-4eed-89c0-5a560a5d4b75
@@ -13,8 +13,6 @@ related:
     link: docs/scos/user/features/page.version/shipment-feature-overview.html
   - title: Creating a Carrier Company
     link: docs/scos/user/back-office-user-guides/page.version/administration/delivery-methods/creating-carrier-companies.html
-  - title: Delivery Methods- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/administration/delivery-methods/references/delivery-methods-reference-information.html
 ---
 
 This topic describes the procedures for creating and managing shipment methods.

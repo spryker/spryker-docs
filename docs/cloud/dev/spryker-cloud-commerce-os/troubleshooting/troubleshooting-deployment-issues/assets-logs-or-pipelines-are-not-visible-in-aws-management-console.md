@@ -1,5 +1,6 @@
 ---
 title: Assets, logs, or pipelines are not visible in AWS Management Console
+last_updated: Jan 26, 2022
 description: Solution to absent assets, logs, or pipelines in the AWS Management Console.
 template: troubleshooting-guide-template
 redirect_from:

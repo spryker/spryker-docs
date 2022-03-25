@@ -1,7 +1,7 @@
 ---
 title: Integrating the PayNow payment method for Computop
 description: Integrate PayNow payment through Computop into the Spryker-based shop.
-last_updated: Oct 23, 2019
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/computop-paynow
 originalArticleId: 042e86fb-68fb-4f57-a6de-d77e851c5836

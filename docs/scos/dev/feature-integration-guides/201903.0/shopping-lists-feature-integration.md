@@ -1,7 +1,7 @@
 ---
 title: Shopping Lists feature integration
 description: The guide walks you through the process of installing the Shopping Lists feature in your project.
-last_updated: Jan 28, 2020
+last_updated: Jan 26, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/shopping-lists-feature-integration-201903
 originalArticleId: cb43786c-b636-455a-a83a-11f9b9e1a055

@@ -1,7 +1,7 @@
 ---
 title: Managing carts of registered users
 description: Retrieve details about the carts of the registered users and learn what else you can do with the resource.
-last_updated: Jun 22, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-carts-of-registered-users
 originalArticleId: ac357bc6-db9b-43a5-a65a-ef55259cd379
@@ -15,8 +15,6 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html
   - title: Managing gift cards of registered users
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html
-  - title: Retrieving customer carts
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-carts.html
 ---
 
 This endpoint allows managing carts by creating, retrieving, and deleting them.

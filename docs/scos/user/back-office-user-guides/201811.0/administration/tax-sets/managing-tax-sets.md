@@ -1,15 +1,12 @@
 ---
 title: Managing Tax Sets
 description: Use these procedures to create, update, view and/or delete tax sets in the Back Office.
-last_updated: Sep 15, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: 
 originalArticleId: 8e2ab836-79e9-4738-93a7-c92b16b79de4
 redirect_from:
 
-related:
-  - title: Taxes Rates - Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/administration/tax-rates/references/tax-rates-reference-information.html
 ---
 
 ## Managing Tax Sets

@@ -1,5 +1,6 @@
 ---
 title: Deploy file
+last_updated: Jan 26, 2022
 description: Overview of the deploy file
 template: concept-topic-template
 ---

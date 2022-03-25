@@ -1,7 +1,7 @@
 ---
 title: Managing Groups
 description: Use the procedures to create, edit a group and assign a role to this group in the Back Office.
-last_updated: Feb 13, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/managing-groups
 originalArticleId: 01019cd7-5346-460b-ae6a-eb2729ea1ff3
@@ -9,10 +9,6 @@ redirect_from:
   - /v1/docs/managing-groups
   - /v1/docs/en/managing-groups
 related:
-  - title: Roles- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/users/roles-groups-and-users/references/roles-reference-information.html
-  - title: User- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/users/roles-groups-and-users/references/user-reference-information.html
   - title: Managing Roles
     link: docs/scos/user/back-office-user-guides/page.version/users/roles-groups-and-users/managing-roles.html
   - title: Managing Users

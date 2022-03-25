@@ -1,6 +1,6 @@
 ---
 title: Integrating Billpay
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/billpay-integration
 originalArticleId: 9f106f35-5a57-4027-988c-877927dd05d9

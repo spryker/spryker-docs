@@ -1,7 +1,7 @@
 ---
 title: "Best practices: Adding content to the Storefront pages using templates and slots"
 description: Templates with slots allows managing all the Storefront content in the Back Office.
-last_updated: Sep 15, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/adding-content-to-storefront-pages-using-templates-slots
 originalArticleId: eb573db0-c54a-453b-abd6-5498e7fde23d
@@ -9,8 +9,6 @@ redirect_from:
   - /v5/docs/adding-content-to-storefront-pages-using-templates-slots
   - /v5/docs/en/adding-content-to-storefront-pages-using-templates-slots
 related:
-  - title: Slots- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/content/slots/references/slots-reference-information.html
   - title: Managing Slots
     link: docs/scos/user/back-office-user-guides/page.version/content/slots/managing-slots.html
   - title: Templates & Slots Feature Overview

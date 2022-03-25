@@ -1,6 +1,6 @@
 ---
 title: Managing Customers
-last_updated: Jul 31, 2020
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/managing-customers-api
 originalArticleId: 7dbdf8d2-7f8a-47e2-92ce-5e37c3cf5063

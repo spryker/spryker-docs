@@ -1,7 +1,7 @@
 ---
 title: Multiple Carts feature overview
 description: Shopping Cart is where the record of the items a buyer has ‘picked up’ from the online store is kept. Select products, review them and add more with ease.
-last_updated: Jul 23, 2021
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/multiple-carts-feature-overview
 originalArticleId: d5aad6be-5c2c-4e27-806e-7091a6db3d0d

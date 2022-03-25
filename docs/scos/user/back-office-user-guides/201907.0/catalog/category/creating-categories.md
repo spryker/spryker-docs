@@ -1,7 +1,7 @@
 ---
 title: Creating Categories
 description: The guide describes procedures on how to create a category, add images and products, select a template in the Back Office.
-last_updated: Nov 22, 2019
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/creating-categories
 originalArticleId: 16bf3647-0372-4ab8-8fe4-77904c58117b
@@ -15,8 +15,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/category/managing-categories.html
   - title: Category Management feature overview
     link: docs/scos/user/features/page.version/category-management-feature-overview.html
-  - title: Category- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/category/references/category-reference-information.html
 ---
 
 This topic describes how you create categories.

@@ -1,7 +1,7 @@
 ---
 title: Retrieving the Returned Items
 description: In this article, you will find information on retrieving the returned items via the Spryker Glue API.
-last_updated: Aug 11, 2020
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/retrieving-the-returned-items
 originalArticleId: 05d1d519-3862-47d4-8afe-1a94e737060c

@@ -1,7 +1,7 @@
 ---
 title: Obtaining an Amazon Order Reference and information about shipping addresses
 description: This article contains information about order reference and shipping address in Spryker Commerce OS.
-last_updated: Oct 23, 2019
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/amazon-order-reference-information
 originalArticleId: 42f8b813-b2b7-4b20-8ffb-1f956cd475b7

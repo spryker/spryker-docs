@@ -1,7 +1,7 @@
 ---
 title: Checking out purchases
 description: Learn how to check out purchases via Glue API.
-last_updated: Jul 13, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/checking-out-purchases
 originalArticleId: 6da60ad5-47a7-4554-a7e7-d662af2295dd
@@ -11,14 +11,6 @@ redirect_from:
   - /docs/checking-out-purchases
   - /docs/en/checking-out-purchases
 related:
-  - title: Glue API - Checkout feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-checkout-feature-integration.html
-  - title: Checkout
-    link: docs/scos/user/features/page.version/checkout-feature-overview/checkout-feature-overview.html
-  - title: Multi-Step Checkout
-    link: docs/scos/user/features/page.version/checkout-feature-overview/multi-step-checkout-overview.html
-  - title: Retrieving Customer's Order History
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
   - title: Managing guest carts
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-carts.html
   - title: Managing carts of registered users

@@ -1,5 +1,6 @@
 ---
 title: Troubleshooting deployment issues
+last_updated: Jan 26, 2022
 description: Solutions to common deployment issues
 template: concept-topic-template
 redirect_from:

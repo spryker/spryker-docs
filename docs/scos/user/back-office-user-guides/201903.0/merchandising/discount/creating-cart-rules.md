@@ -1,7 +1,7 @@
 ---
 title: Creating Cart Rules
 description: Use the procedure to create a cart-based discount rule along with its conditions in the Back Office.
-last_updated: Jul 31, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/creating-a-cart-rule-discount
 originalArticleId: 93df3a54-85b6-4d1b-804a-a8272021dd22
@@ -9,14 +9,6 @@ redirect_from:
   - /v2/docs/creating-a-cart-rule-discount
   - /v2/docs/en/creating-a-cart-rule-discount
 related:
-  - title: Discount- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/discount-reference-information.html
-  - title: Discount Calculation- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/discount-calculation-reference-information.html
-  - title: Discount Conditions- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/discount-conditions-reference-information.html
-  - title: Voucher Codes- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/voucher-codes-reference-information.html
   - title: Token Description Tables
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/references/token-description-tables.html
   - title: Creating Vouchers

@@ -1,5 +1,6 @@
 ---
 title: Editing shipments
+last_updated: Mar 22, 2022
 description: Learn how to edit shipments in the Back Office
 template: back-office-user-guide-template
 ---

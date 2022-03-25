@@ -1,7 +1,7 @@
 ---
 title: Integrating the PayPal payment method for Computop
 description: Integrate PayPal payment through Computop into the Spryker-based shop.
-last_updated: Oct 23, 2019
+last_updated: Mar 11, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/computop-paypal
 originalArticleId: 3e851502-7c39-4380-b10a-7b287b580e65

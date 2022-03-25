@@ -1,7 +1,7 @@
 ---
 title: Braintree - Configuration for the Legacy Demoshop
 description: This article contains information on the configuration of the Braintree module for Spryker Legacy Demoshop.
-last_updated: Oct 22, 2019
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/braintree-configuration-legacy-demoshop
 originalArticleId: fd7c283d-cf6d-4534-856c-e5659fad6a53
@@ -11,10 +11,6 @@ redirect_from:
 related:
   - title: Braintree
     link: docs/scos/user/technology-partners/page.version/payment-partners/braintree.html
-  - title: Braintree - Request workflow for Legacy Demoshop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-guides-for-the-legacy-demoshop/braintree-workflow-for-legacy-demoshop.html
-  - title: Braintree - Performing Requests for the Legacy Demoshop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-guides-for-the-legacy-demoshop/braintree-performing-requests-for-the-legacy-demoshop.html
 ---
 
 Add `spryker-eco/braintree` to your project by running `composer require spryker-eco/braintree`.

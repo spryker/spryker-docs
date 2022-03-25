@@ -1,5 +1,6 @@
 ---
 title: Connecting to services via SSH
+last_updated: Jan 26, 2022
 description: Access Spryker Cloud services via SSH.
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/connecting-to-services-via-ssh

@@ -1,6 +1,6 @@
 ---
 title: Product Attributes overview
-last_updated: Jul 7, 2021
+last_updated: Jan 26, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-attributes-overview
 originalArticleId: 7421d5b0-37d2-4902-a531-ac67a2424fb7

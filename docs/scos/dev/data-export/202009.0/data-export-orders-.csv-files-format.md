@@ -1,7 +1,7 @@
 ---
 title: Data Export Orders .csv Files Format
 description: The article explains the format of the orders.csv, order-items.csv, order-expenses.csv export files
-last_updated: Aug 27, 2020
+last_updated: Jan 26, 2022
 template: data-export-template
 originalLink: https://documentation.spryker.com/v6/docs/data-export-orders-csv-files-format
 originalArticleId: 55b4f842-5b2b-4871-8aec-905a604309ff

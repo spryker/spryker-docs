@@ -1,7 +1,7 @@
 ---
 title: Managing Categories
 description: The guide provides instructions on how to set an order for products in categories, as well as view, update and delete categories.
-last_updated: May 19, 2020
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/managing-categories
 originalArticleId: 1d195072-06f7-4a21-8bfc-3f61ab623fb5
@@ -13,8 +13,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/category/creating-categories.html
   - title: Assigning Products to Categories
     link: docs/scos/user/back-office-user-guides/page.version/catalog/category/assigning-products-to-categories.html
-  - title: Category- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/category/references/category-reference-information.html
 ---
 
 This topic describes how to manage categories:

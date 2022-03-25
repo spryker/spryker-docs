@@ -1,5 +1,6 @@
 ---
 title: Merchant Portal
+last_updated: Jan 26, 2022
 description: This document describes the peculiarities of the Merchant Portal application.
 template: concept-topic-template
 ---

@@ -1,5 +1,6 @@
 ---
 title: Table Configuration
+last_updated: Mar 22, 2022
 description: This document provides details about the table configuration.
 template: concept-topic-template
 ---

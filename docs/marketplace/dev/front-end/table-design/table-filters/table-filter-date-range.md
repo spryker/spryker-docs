@@ -1,5 +1,6 @@
 ---
 title: Table Filter Date Range
+last_updated: Jan 26, 2022
 description: This document provides details about the Table Filter Date Range component in the Components Library.
 template: concept-topic-template
 ---

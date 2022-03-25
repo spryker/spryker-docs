@@ -1,5 +1,6 @@
 ---
 title: Marketplace Storefront
+last_updated: Jan 26, 2022
 description: This document describes the peculiarities of the Marketplace Storefront application.
 template: concept-topic-template
 ---

@@ -1,5 +1,6 @@
 ---
 title: Preparation for going live
+last_updated: Mar 11, 2022
 description: This instruction explains how to prepare a Spryker project for going live.
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/preparation-for-going-live

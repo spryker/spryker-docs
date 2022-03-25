@@ -1,5 +1,6 @@
 ---
 title: Search the product catalog
+last_updated: Jan 26, 2022
 description: Search the product catalog via Glue API
 template: glue-api-storefront-guide-template
 ---

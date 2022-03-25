@@ -1,7 +1,7 @@
 ---
 title: Installing and configuring FACT-Finder NG API
 description: Fact Finder NG API integration is used for search, tracking, and importing endpoints.
-last_updated: Jan 27, 2020
+last_updated: Jan 26, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v1/docs/fact-finder-ng
 originalArticleId: 3769f5d6-4097-4002-bdf8-a2bf8bab0d47

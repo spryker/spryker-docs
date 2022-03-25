@@ -1,7 +1,7 @@
 ---
 title: Managing Punch Out Connections
 description: The Managing Punch out Connections guide lists steps on how to create, edit, view, activate and deactivate Punch out connections.
-last_updated: Dec 23, 2019
+last_updated: Jan 26, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/v3/docs/managing-punchout-connections
 originalArticleId: 198bd180-e5a2-4ed0-940e-7b55dbf7474d
@@ -15,8 +15,6 @@ related:
     link: docs/scos/user/features/page.version/technology-partner-integrations/punch-out/punch-out.html
   - title: Managing Transactions Log
     link: docs/scos/user/back-office-user-guides/page.version/punch-out/managing-transactions-log.html
-  - title: Punch Out- Reference Information
-    link: docs/scos/user/back-office-user-guides/page.version/punch-out/references/punch-out-reference-information.html
 ---
 
 This topic describes how to create and manage the Punch Out connections.

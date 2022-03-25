@@ -1,5 +1,6 @@
 ---
 title: Creating and restoring database backups
+last_updated: Jan 26, 2022
 description: Learn how to manage database backups in Spryker Cloud Commerce OS.
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/creating-and-restoring-database-backups

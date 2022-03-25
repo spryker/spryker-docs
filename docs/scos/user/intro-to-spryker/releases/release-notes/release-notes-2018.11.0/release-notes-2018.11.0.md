@@ -22,13 +22,6 @@ redirect_from:
   - /v1/docs/en/release-notes-2018-11-0
   - /v6/docs/release-notes-2018-11-0
   - /v6/docs/en/release-notes-2018-11-0
-related:
-  - title: Multiple and Shared Shopping Lists overview
-    link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-lists-feature-overview.html
-  - title: Shopping Cart
-    link: docs/scos/user/features/page.version/cart-feature-overview/cart-feature-overview.html
-  - title: Reorder feature overview
-    link: docs/scos/user/features/page.version/reorder-feature-overview.html
 ---
 
  The Spryker Commerce OS is an end-to-end solution for e-commerce. This document contains a business level description of major new features and enhancements released in November of 2018.

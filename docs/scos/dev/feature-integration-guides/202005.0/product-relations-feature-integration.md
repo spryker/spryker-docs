@@ -1,7 +1,7 @@
 ---
 title: Product Relations feature integration
 description: Integrate the Product Relations feature into your project.
-last_updated: May 19, 2020
+last_updated: Jan 26, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/product-relations-feature-integration
 originalArticleId: e2840881-3dde-45ae-afe3-d5e920f39de8

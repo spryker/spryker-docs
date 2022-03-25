@@ -1,7 +1,7 @@
 ---
 title: Retrieving image sets of abstract products
 description: Retrieve image sets of abstract products.
-last_updated: Jun 16, 2021
+last_updated: Jan 26, 2022
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-image-sets-of-abstract-products
 originalArticleId: 823ef04b-e614-4022-a30f-6e2130d280d8

@@ -1,7 +1,7 @@
 ---
 title: Shop Guide - Creating a Return
 description: This article describes how to create a return in the Spryker Storefront.
-last_updated: Sep 14, 2020
+last_updated: Jan 26, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/shop-guide-creating-a-return
 originalArticleId: 2912886c-7abc-48df-a373-85c7c946ed20
@@ -13,8 +13,6 @@ related:
     link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-returns-management/shop-guide-printing-a-return-slip.html
   - title: Return Details- Reference Information
     link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/references/return-details-reference-information.html
-  - title: Return Management Feature Overview
-    link: /docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html
 ---
 
 If you are not satisfied with the order items received from the seller or don’t need the items anymore, and the items are [returnable](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html) according to the Return Policy, you can return them.

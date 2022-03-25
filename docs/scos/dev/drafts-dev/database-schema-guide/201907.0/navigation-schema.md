@@ -1,5 +1,5 @@
----last_updated: Nov 22, 2019
-
+---
+last_updated: Nov 22, 2019
 title: Navigation Schema
 originalLink: https://documentation.spryker.com/v3/docs/db-schema-navigation
 originalArticleId: 0b9bf7d3-a5e1-4715-97b3-041321092bb5

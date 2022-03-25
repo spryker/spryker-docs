@@ -13,17 +13,15 @@ This document describes how to prepare a Spryker project for going live.
 
 ## Spryker go-live preparation
 
-We divided the preparation into the following timeframes and you can adjust them to your needs. Make sure that all the following tasks are complete one week before going live.
+We divided the preparation into approximate timeframes, and you can adjust them to your needs. Make sure that all the following tasks are complete one week before going live.
 
 ## Until five weeks before go-live
 
-If you migrate from another shop or project to Spryker, that is the domain you want to use already points to a shop or a project, you need a migration plan to phase out the old project and phase in the new one. 
+If you are migrating from another shop or project to Spryker, that is the domain you want to use already points to a shop or a project, you need a migration plan to phase out the old project and phase in the new one. Check with your SEO experts on the strategy for your content and search engine results. 
 
-Check with your SEO experts on the strategy for your content and search engine results. 
+If you delegate DNS to Spryker, let us know the date on which to point the domain name to your Spryker project.
 
-If you delegate DNS to Spryker, let us know when you want us to point the domain name to your Spryker project.
-
-{% info_block infoBox "Note" %}
+{% info_block infoBox "DNS propagation" %}
 
 After pointing the domian name to your Spryker project, some of your customers may still see your old poject due to DNS propagation. So, make sure to keep it live for up to 72 hours after the migration. 
 
@@ -65,13 +63,13 @@ Make sure to deploy to your production environment and run checks regularly. For
 
 ## One week before go-live
 
-- **Double-check the go-live date**. If any of the preceding tasks remain uncompleted, postpone your go-live, or discuss with us how to complete them in time. All DNS-related topics are affected by delays that are inherent to the DNS system, and we cannot apply DNS changes or validations any faster. 
+- **Double-check the go-live date**. If any of the preceding tasks are not complete, postpone your go-live or discuss with us how to complete them in time. DNS changes are especially sensetive to deadlines. Due to how the DNS system works, any DNS chnages take time to take effect.
 
-{% info_block infoBox "Note" %}
+{% info_block infoBox "Don't hesitate to contact us" %}
 	
-If you struggle with the preceding points, reach out to Spryker Support using your Onboarding case *immediately*.
+If your go-live date is close and you feel like you need help with any of the described tasks, contact us via yourr Onboarding case *right away*.
 	
 {% endinfo_block %}
 
-- **Validate that the rollback strategy is still valid**. Check that you have everything you need to recover from an unforeseen problem with the newest version of the project you are deploying.
-- **Build up Go-Live Support Team**. Prepare a team that can monitor your go-live, react quickly to any problems, and work with the Spryker Support or Operations teams.
+- **Validate that the rollback strategy is still valid**. Check that you have everything you need to recover from an unforeseen issue  with the newest version of the project you are deploying.
+- **Organize a go-live support team**. Prepare a team that can monitor your go-live, react quickly to any issues, and work with the Spryker Support or Operations teams.

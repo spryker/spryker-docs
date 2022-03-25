@@ -24,9 +24,9 @@ entries:
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202009.0/security-release-notes-202009.0.html
         - title: Release Notes 202102.0
           nested:
-          - title: Security release notes- 202102.0 SEC
+          - title: "Performance release notes: 202102.0 SEC"
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202102.0/performance-release-notes-202102.0.html
-          - title: Security release notes- 202102.0 SEC
+          - title: "Security release notes: 202102.0 SEC"
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202102.0/security-release-notes-202102.0-sec.html
         - title: Release notes Code Releases May, 2020
           nested:
@@ -1750,7 +1750,7 @@ entries:
         - title: Delete product sets
           url: /docs/scos/user/back-office-user-guides/merchandising/product-sets/delete-product-sets.html
           include_versions:
-          - "202108.0"            
+          - "202108.0"
         - title: Creating product sets
           url: /docs/scos/user/back-office-user-guides/merchandising/product-sets/creating-product-sets.html
           include_versions:

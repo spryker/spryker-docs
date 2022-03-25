@@ -1,5 +1,5 @@
 ---
-title: Security release notes- 202102.0 SEC
+title: "Performance release notes: 202102.0 SEC"
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/security-release-notes-2021020-sec

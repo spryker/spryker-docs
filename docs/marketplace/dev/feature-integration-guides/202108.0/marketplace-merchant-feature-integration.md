@@ -203,7 +203,6 @@ Make sure that:
 * When you create a merchant using `MerchantFacade::createMerchant()`, its profile also gets created.
 * When you update a merchant using `MerchantFacade::updateMerchant()`, its profile also gets updated.
 * When you fetch a merchant using `MerchantFacade::findOne()`, its profile data also gets fetched.
-* When you deactivate a merchant in the *Merchants* section of the Back Office, its merchant users are deactivated in the *Users* section.
 
 {% endinfo_block %}
 

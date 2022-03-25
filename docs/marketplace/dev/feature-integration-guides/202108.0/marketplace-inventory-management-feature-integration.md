@@ -241,12 +241,6 @@ class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependency
 
 ```
 
-{% info_block warningBox "Verification" %}
-
-Make sure that when you view some product offer at `http://zed.de.demo-spryker.com/product-offer-gui/view?id-product-offer={idProductOffer}}`, you can see the `Stock` section.
-
-{% endinfo_block %}
-
 **src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php**
 
 ```php
@@ -732,8 +726,8 @@ Make sure that the imported data is added to the `spy_merchant_stock` and `spy_p
 
 ## Related features
 
-| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
-| - | - | -|
-| Marketplace Inventory Management + Order Management |  |  [Marketplace Inventory Management + Order Management feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-order-management-feature-integration.html)  |
-| Marketplace Inventory Management + Packaging Units |  |  [Marketplace Inventory Management + Packaging Units feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-packaging-units-feature-integration.html)  |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                                                                                                       | 
+|  ---  |  ---  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Marketplace Inventory Management + Order Management | &check;  | [Marketplace Inventory Management + Order Management feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-order-management-feature-integration.html)                 |
+| Marketplace Inventory Management + Packaging Units |  | [Marketplace Inventory Management + Packaging Units feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-packaging-units-feature-integration.html)                   |
 | Merchant Portal - Marketplace Product + Inventory Management feature integration | | [Merchant Portal - Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-inventory-management-feature-integration.html) |

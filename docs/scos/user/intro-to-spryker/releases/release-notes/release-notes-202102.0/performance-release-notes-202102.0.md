@@ -141,7 +141,7 @@ To install this improvement, update the following module:
 
 ## spryker/shopping-list and spryker/cart
 
-Improvement: Fixed N+1 requests issue.
+Improvement: Fixed the N+1 query problem.
 
 Additional information: Reduced the time of creating a shopping list from cart by 33%.
 

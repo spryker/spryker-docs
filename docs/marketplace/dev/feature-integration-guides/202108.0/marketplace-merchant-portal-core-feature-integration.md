@@ -670,6 +670,12 @@ Now it is time to install project dependencies:
 yarn install
 ```
 
+{% info_block warningBox "Warning" %}
+
+If you're getting `Missing write access to node_modules/mp-profile`, delete this **file** and make a **folder** with the same name.
+
+{% endinfo_block %}
+
 Check if the marketplace packages are located in the `node_modules/@spryker` folder (e.g., utils).
 
 ### 5) Install Marketplace builder
@@ -884,7 +890,9 @@ import '@mp/polyfills';
 ---
 {% info_block warningBox "Verification" %}
 
-`npm run mp:build` should pass successfully.
+`npm run mp:build` should pass successfully. If it doesn't work, try full rebuild:
+
+`rm -rf node_modules && yarn cache clean --all && npm cache clean --force && yarn install && yarn mp:build`
 
 {% endinfo_block %}
 

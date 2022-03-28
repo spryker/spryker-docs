@@ -11,7 +11,6 @@ related:
 
 The Marketplace Shopping Lists API feature allows managing shopping lists in the Marketplace, as well as managing the items in them. Unlike the [Marketplace Wishlists](/docs/marketplace/user/features/{{page.version}}/marketplace-wishlist-feature-overview.html), shopping lists contain not only a list of items to be purchased but also the quantity of each item.
 
-
 In your development, the resources can help you to enable the shopping list functionality in your application.
 
 ## Installation
@@ -367,7 +366,6 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 | `GET http://glue.mysprykershop.com/shopping-lists/sdb17f85-953f-565a-a4ce-e5cb02405f83` | Retrieve the shopping list with the id `sdb17f85-953f-565a-a4ce-e5cb02405f83`. |
 | `GET http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a?include=shopping-list-items` | Retrieve the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` with its items. |
 | `GET http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a?include=shopping-list-items,concrete-products` | Retrieve the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` with its items and respective concrete products. |
-| `GET http://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce?include=shopping-list-items` | Retrieve the shopping list with the id `c0bc6296-8a0c-50d9-b25e-5bface7671ce` with its items (marketplace products and product offers). |
 | `GET http://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce?include=shopping-list-items,merchants` | Retrieve the shopping list with the id `c0bc6296-8a0c-50d9-b25e-5bface7671ce` with its merchants. |
 | `GET http://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce?include=shopping-list-items,product-offers,product-offer-availabilities`| Retrieve the shopping list with the id `c0bc6296-8a0c-50d9-b25e-5bface7671ce` with its product offers and product offer availabilities. |
 
@@ -588,71 +586,6 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 }
 ```
 </details>  
-
-<details>
-<summary markdown='span'>Response sample: retrieve a shopping list with its items (marketplace products and product offers)</summary>
-
-```json
-{
-    "data": {
-        "type": "shopping-lists",
-        "id": "c0bc6296-8a0c-50d9-b25e-5bface7671ce",
-        "attributes": {
-            "owner": "Andrew Wedner",
-            "name": "Test shopping list",
-            "numberOfItems": 6,
-            "updatedAt": "2022-03-17 09:44:24.000000",
-            "createdAt": "2022-03-17 09:44:24.000000"
-        },
-        "links": {
-            "self": "https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce"
-        },
-        "relationships": {
-            "shopping-list-items": {
-                "data": [
-                    {
-                        "type": "shopping-list-items",
-                        "id": "29f1d940-00b6-5492-abf3-d2b5ff15f0b2"
-                    },
-                    {
-                        "type": "shopping-list-items",
-                        "id": "946451d1-3c40-559e-95c7-ebda2d12bebf"
-                    }
-                ]
-            }
-        }
-    },
-    "included": [
-        {
-            "type": "shopping-list-items",
-            "id": "29f1d940-00b6-5492-abf3-d2b5ff15f0b2",
-            "attributes": {
-                "productOfferReference": null,
-                "merchantReference": "MER000001",
-                "quantity": 3,
-                "sku": "110_19682159"
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items/29f1d940-00b6-5492-abf3-d2b5ff15f0b2"
-            }
-        },
-        {
-            "type": "shopping-list-items",
-            "id": "946451d1-3c40-559e-95c7-ebda2d12bebf",
-            "attributes": {
-                "productOfferReference": "offer3",
-                "merchantReference": "MER000001",
-                "quantity": 3,
-                "sku": "091_25873091"
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items/946451d1-3c40-559e-95c7-ebda2d12bebf"
-            }
-        }
-    ]
-}
-```
-</details>
 
 <details>
 <summary markdown='span'>Response sample: retrieve a shopping list with its items and merchants</summary>

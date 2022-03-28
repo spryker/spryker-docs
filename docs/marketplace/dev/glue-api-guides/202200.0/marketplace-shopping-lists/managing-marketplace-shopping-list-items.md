@@ -8,14 +8,15 @@ related:
     link: docs/marketplace/dev/glue-api-guides/page.version/shopping-lists/managing-shopping-lists.html
 ---
 
-This endpoint allows managing shopping list items.
+This endpoint allows managing marketplace shopping list items.
 
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shopping-lists-feature-integration.html)
 * [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
-
+* [Glue API: Marketplace Shopping Lists feature integration]()<!---LINK-->
+  
 ## Add items to a shopping list
 
 To add items to a shopping list, send the request:

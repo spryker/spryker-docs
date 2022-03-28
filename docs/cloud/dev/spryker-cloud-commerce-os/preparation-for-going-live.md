@@ -55,13 +55,13 @@ If you do not delegate DNS to Spryker, and you want to use a subdomain for your 
 
 ## One week before go-live
 
-- **Double-check the go-live date**. If any of the preceding tasks are not complete, postpone your go-live or discuss with us how to complete them in time. DNS changes are especially sensetive to deadlines. Due to how the DNS system works, any DNS chnages take time to take effect.
+- **Double-check the go-live date**. If any of the preceding tasks are not complete, postpone your go-live or discuss with us how to complete them in time. DNS changes are especially sensetive to deadlines. Due to how the DNS system works, any DNS changes take time to take effect.
 
 {% info_block infoBox "Don't hesitate to contact us" %}
 
-If your go-live date is close and you feel like you need help with any of the described tasks, contact us via yourr Onboarding case *right away*.
+If your go-live date is close and you feel like you need help with any of the described tasks, contact us via your Onboarding case *right away*.
 
 {% endinfo_block %}
 
-- **Validate that the rollback strategy is still valid**. Check that you have everything you need to recover from an unforeseen issue  with the newest version of the project you are deploying.
+- **Validate that the rollback strategy is still valid**. Check that you have everything you need to recover from an unforeseen issue with the newest version of the project you are deploying.
 - **Organize a go-live support team**. Prepare a team that can monitor your go-live, react quickly to any issues, and work with the Spryker Support or Operations teams.

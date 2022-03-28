@@ -50,8 +50,8 @@ If you do not delegate DNS to Spryker, and you want to use a subdomain for your 
 
 ## Two weeks before go-live
 
-- **Remove all demo data from your environment**. The project should only use the real data that  will be used after the go-live. Remove all the demo data that comes with the Spryker repository, which includes demo and admin users. Demo users in a live shop pose a significant security risk for your project.
-- **Communicate your go-live plan to us**. Make sure to reach out to your Partner or Customer Success Manager and share your go-live plans—the day and time when you want to make your shop accessible to the public. If this time should change, keep us updated. This is mission-critical for DNS switching and the hyper care phase, which Spryker Support does for you before and after your go-live.
+- **Remove all the demo data from the environment**. The project should only use the real data that will be used after the go-live. Remove all the demo data that comes with the Spryker repository, which includes demo and admin users. Demo users in a live shop pose a significant security risk for your project.
+- **Let us know your go-live plan**. Reach out to your Partner or Customer Success Manager and share your go-live plans: the date and time when you want to make your shop accessible to the public. If the time changes, keep us updated. This is critical for DNS switching and the hyper care phase we provide before and after your go-live.
 
 ## One week before go-live
 

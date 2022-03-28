@@ -20,8 +20,7 @@ To integrate Gatling into your project, follow the steps below.
 1. Require the *composer* package:
 
 ```bash
-composer require git@github.com:spryker-sdk/load-testing.git --dev
-```
+
 2. Add the Router provider plugin to `src/Pyz/Yves/Router/RouterDependencyProvider.php`
 
 ```php
@@ -36,7 +35,7 @@ namespace Pyz\Yves\Router;
 class RouterDependencyProvider extends SprykerRouterDependencyProvider
 {
     ...
-    
+
     /**
      * @return \Spryker\Yves\RouterExtension\Dependency\Plugin\RouteProviderPluginInterface[]
      */
@@ -46,7 +45,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
         if (class_exists(LoadTestingRouterProviderPlugin::class)) {
             $routeProviders[] = new LoadTestingRouterProviderPlugin();
         }
-        
+
         return $routeProviders;
     }
 
@@ -82,7 +81,7 @@ console publish:trigger-events
 3. Run the *queue worker*:
 
 ```bash
-console console q:w:s -s 
+console console q:w:s -s
 ```
 
 That being done, you should have the fixtures loaded into the databases.
@@ -96,7 +95,7 @@ After you have completed integration and prepared the fixtures, you install the 
 cd vendor/spryker-sdk/load-testing
 ```
 
-2. Run 
+2. Run
 ```bash
 ./install.sh
 ```
@@ -121,5 +120,3 @@ Now you should have Gatling installed and ready for load testing.
 
 ## Next step
 Running and using Gatling<!---link-->
-
-

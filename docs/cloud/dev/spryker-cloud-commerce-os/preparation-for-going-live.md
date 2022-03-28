@@ -11,19 +11,17 @@ redirect_from:
 
 This document describes how to prepare a Spryker project for going live.
 
-## Spryker go-live preparation
-
 We divided the preparation into approximate timeframes, and you can adjust them to your needs. Make sure that all the following tasks are complete one week before going live.
 
 ## Until five weeks before go-live
 
-If you are migrating from another shop or project to Spryker, that is the domain you want to use already points to a shop or a project, you need a migration plan to phase out the old project and phase in the new one. Check with your SEO experts on the strategy for your content and search engine results. 
+If you are migrating from another shop or project to Spryker, that is the domain you want to use already points to a shop or a project, you need a migration plan to phase out the old project and phase in the new one. Check with your SEO experts on the strategy for your content and search engine results.
 
 If you delegate DNS to Spryker, let us know the date on which to point the domain name to your Spryker project.
 
 {% info_block infoBox "DNS propagation" %}
 
-After pointing the domian name to your Spryker project, some of your customers may still see your old poject due to DNS propagation. So, make sure to keep it live for up to 72 hours after the migration. 
+After pointing the domain name to your Spryker project, some of your customers may still see your old project due to DNS propagation. So, keep it live for up to 72 hours after the migration.
 
 {% endinfo_block %}
 
@@ -31,34 +29,28 @@ After pointing the domian name to your Spryker project, some of your customers m
 
 - **Performance Tips implemented and verified**. Double-check that you implemented all the provided performance tips.
 
-- **Conduct Load Tests**. Make sure that you conducted load tests for your application. The dataload with sample data used for testing should be comparable to the size and complexity of the production data.
+- **Conduct Load Tests**. Conduct load tests for your application. The sample data used for testing should be comparable to the size and complexity of the production data.
 
-- **The DNS Names and strategy for your shop are clear**. You should know how users access your shop, and you should verify that you controll access to the DNS for future domains. <br>For example, you determined that you want to use `spryker.com` as the domain for your shop. You might want to use the `www.spryker.com` subdomain for your Storefront. This is the URL your customers will be using to access your shop. 
+- **The DNS Names and strategy for your shop are clear**. You know how users are going to access your shop. Verify that you control access to the DNS to be able to manage DNS. For example, you want to use `spryker.com` as the domain for your shop, but you want user to access the Storefront via the `www.spryker.com` subdomain.
 
-- **Decide how email sending should be handled.** If you want to send emails using Spryker, decide whether you want to use the native  Mail Service shipped with Spryker PaaS or integrate a third-party Mail Server. If you want to use the native one, validate your DNS name and lift sending restrictions. Let us know the email address you want to send from, and we will help you with the validation. If you already delegated the NS records, we can set it ourselves.
+- **Decide how email sending should be handled.** If you want to send emails using Spryker, decide whether you want to use the native mail service shipped with Spryker PaaS or integrate a third-party one. If you want to use the native one, let us know the email address you want to send emails from. We will lift sending restrictions and help you validate the needed DNS name.
 - **Optional: Delegate DNS**. To find out how to delegate a DNS name, see [Setting up a custom SSL certificate](https://docs.spryker.com/docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-ssl-certificate.html).
 
-{% info_block infoBox "Note" %}
-	
-Only delegate the DNS after creating a migration plan. Once these records are set on your side, we handle the DNS configuration on our side. This lets us configure and verify everything without the need for action on your side. This also means that, to set up DNS records in future, you will need to contact us. If there are DNS records in your currrent thone, to delegate your DNS, send us your  current zone file to set all the records on our side.
-	
-{% endinfo_block %}
+### DNS delegation
 
-{% info_block warningBox "Warning" %}
+Only delegate the DNS after creating a migration plan. After you delegate the DNS, we handle the DNS configuration on our side. This lets us configure and verify everything without the need for action on your side. To set up DNS records, you need to contact us. If there are DNS records in your current zone, before delegating, send us your current zone file to set all the records on our side.
 
-If you do not delegate DNS to Spryker and you want to use a subdomain for your Storefront, decide how to deal with the customers reaching your shop using the root domain. In our example `www.spryker.com` is the subdomain and `spryker.com` is the root domain. We  cannot provide you with an IP to point the DNS name to because Spryker PaaS works only with DNS names for its endpoints.  You also cannot set a `CNAME` for a root domain. This means that you need to find a way to redirect your visitors via another endpoint.
-
-{% endinfo_block %}
+If you do not delegate DNS to Spryker, and you want to use a subdomain for your Storefront, decide how to deal with the customers reaching your shop using the root domain. In our example `www.spryker.com` is the subdomain and `spryker.com` is the root domain. We can't provide you with an IP to point the DNS name to because Spryker PaaS works only with DNS names for its endpoints. You also can't set a `CNAME` for a root domain. This means that you need to find a way to redirect your visitors via another endpoint.
 
 ## Three weeks before go-live
 
-- **Verify that your Deploy file is set up correctly**. Verify that your project works and operates the production endpoints. You can set both testing and production endpoints in your Deploy file. Your developers can now mock a "live" operation of the project with its production endpoints by adjusting their local host entries.
-- **TLS certificates are provisioned**. If you delegate DNS to Spryker, TLS certificates for your endpoints are created automatically. If you want us to create TLS certificates for your endpoints but do not want to delegate your DNS, we can provide you with the verification records. Request them via the [Support Portal](https://support.spryker.com). If you do not delegate your DNS and want to use your own certificates, provide them to us as described in [Setting up a custom SSL certificate](https://docs.spryker.com/docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-ssl-certificate.html).
-Make sure to deploy to your production environment and run checks regularly. For instructions, see [Deploying in a production environment](https://docs.spryker.com/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html).
+- **Verify that your Deploy file is set up correctly**. Verify that your project works and operates the production endpoints. You can set both testing and production endpoints in your Deploy file. Your developers need to mock a "live" operation of the project with its production endpoints by adjusting their local host entries.
+- **TLS certificates are provisioned**. If you delegate DNS to Spryker, TLS certificates for your endpoints are created automatically. If you want us to create TLS certificates for your endpoints but do not want to delegate your DNS, request the verification DNS records via the [Support Portal](https://support.spryker.com). If you do not delegate your DNS and want to use your own certificates, provide them to us as described in [Setting up a custom SSL certificate](https://docs.spryker.com/docs/cloud/dev/spryker-cloud-commerce-os/setting-up-a-custom-ssl-certificate.html).
+- **Deploy the production environment regularly**. This lets you detect potential issues early enough to fix them before going live. For instructions, see [Deploying in a production environment](https://docs.spryker.com/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html).
 
 ## Two weeks before go-live
 
-- **Remove all demo data from your environment**. Make that you exclusively work with the real data that which will be used after the go-live. Remove all demo data that comes with the Spryker repository, which explicitly includes all demo and admin user. Demo users in a live shop pose a significant security risk for your project.
+- **Remove all demo data from your environment**. The project should only use the real data that  will be used after the go-live. Remove all the demo data that comes with the Spryker repository, which includes demo and admin users. Demo users in a live shop pose a significant security risk for your project.
 - **Communicate your go-live plan to us**. Make sure to reach out to your Partner or Customer Success Manager and share your go-live plans—the day and time when you want to make your shop accessible to the public. If this time should change, keep us updated. This is mission-critical for DNS switching and the hyper care phase, which Spryker Support does for you before and after your go-live.
 
 ## One week before go-live
@@ -66,9 +58,9 @@ Make sure to deploy to your production environment and run checks regularly. For
 - **Double-check the go-live date**. If any of the preceding tasks are not complete, postpone your go-live or discuss with us how to complete them in time. DNS changes are especially sensetive to deadlines. Due to how the DNS system works, any DNS chnages take time to take effect.
 
 {% info_block infoBox "Don't hesitate to contact us" %}
-	
+
 If your go-live date is close and you feel like you need help with any of the described tasks, contact us via yourr Onboarding case *right away*.
-	
+
 {% endinfo_block %}
 
 - **Validate that the rollback strategy is still valid**. Check that you have everything you need to recover from an unforeseen issue  with the newest version of the project you are deploying.

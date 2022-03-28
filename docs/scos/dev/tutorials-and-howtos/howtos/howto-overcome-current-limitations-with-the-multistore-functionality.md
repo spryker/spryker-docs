@@ -23,7 +23,7 @@ Suppose you have a product with many variations, like different colors and sizes
 2. Different databases tailored for different requirements and stores. See [Scenario for the separate warehouses and databases](/docs/scos/dev/feature-walkthroughs/{{site.version}}/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html#scenario-1-separate-warehouses-and-databases) for details about how to use and implement this solution.
 However, with this approach, you can encounter some issues like:
 - Higher cost of your project, as you have multiple independent projects with their infrastructure for each locale that you should maintain.
-- Different Back Offices for each locale imply more administrative work and resources.
+- Different Back Offices for each database imply more administrative work and resources.
 
 Anyway, this approach is preferable and more efficient than the first one, and you generally should consider following it any time you face limitations with the current Multi-store functionality.
 

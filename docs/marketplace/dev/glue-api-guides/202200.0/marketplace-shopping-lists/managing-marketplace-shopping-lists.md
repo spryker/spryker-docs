@@ -1116,9 +1116,9 @@ If the shopping list is deleted successfully, the endpoint returns the `204 No C
 | 1504 | Shopping list item is not found. |
 | 1505 | Shopping list write permission is required. |
 | 1506 | Shopping list with given name already exists. |
-| 1507 |   |
+| 1507 | Shopping list item quantity is not valid. |
 | 1508 | Concrete product not found. |
-| 1509 |   |
+| 1509 | Shopping list validation failed.  |
 | 1510 | Product is discontinued. |
 | 1511 | Product is not active. |
 | 1512 | Merchant is inactive. |
@@ -1126,8 +1126,8 @@ If the shopping list is deleted successfully, the endpoint returns the `204 No C
 | 1514 | Product offer is not approved. |
 | 1515 | Product is not approved. |
 | 1516 | Product offer is not active. |
-| 1517 | Product offer is not found.
-| 1518 | Product is not equal to the current Store.
-| 1519 | Product offer is not equal to the current Store.
+| 1517 | Product offer is not found. |
+| 1518 | Product is not equal to the current Store. |
+| 1519 | Product offer is not equal to the current Store. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

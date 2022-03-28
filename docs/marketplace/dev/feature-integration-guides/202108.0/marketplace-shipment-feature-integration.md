@@ -70,12 +70,6 @@ class ShipmentConfig extends SprykerShipmentConfig
 }
 ```
 
-{% info_block warningBox "Verification" %}
-
-Make sure that `ShipmentService::groupItemsByShipment()` groups items by shipment using the merchant reference.
-
-{% endinfo_block %}
-
 ### 3) Set up the database schema and transfer definitions
 
 Apply the database changes and generate entity and transfer changes:

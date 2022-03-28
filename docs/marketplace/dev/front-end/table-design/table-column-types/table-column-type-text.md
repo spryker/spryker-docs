@@ -23,7 +23,7 @@ Check out an example usage of the Table Column Text in the `@spryker/table` conf
                 title: 'Column Title',
                 type: 'text',
                 typeOptions: {
-                    text: '${value}',
+                    text: '${displayValue}',
                 },
             },
             {
@@ -31,7 +31,7 @@ Check out an example usage of the Table Column Text in the `@spryker/table` conf
                 title: 'Column Title',
                 type: 'text',
                 typeOptions: {
-                    text: '${value}',
+                    text: '${displayValue}',
                 },
                 typeOptionsMappings: {
                     color: { col3: 'green' },
@@ -49,6 +49,12 @@ Check out an example usage of the Table Column Text in the `@spryker/table` conf
 Register the component:
 
 ```ts
+declare module '@spryker/table' {
+    interface TableColumnTypeRegistry {
+        text: TableColumnTextConfig;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -66,12 +72,6 @@ export class RootModule {}
 Below you can find interfaces for the Table Column Text:
 
 ```ts
-declare module '@spryker/table' {
-    interface TableColumnTypeRegistry {
-        text: TableColumnTextConfig;
-    }
-}
-
 interface TableColumnTextConfig {
     text?: string;
 }

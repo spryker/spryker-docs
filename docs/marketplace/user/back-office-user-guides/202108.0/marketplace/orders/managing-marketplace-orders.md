@@ -9,7 +9,7 @@ This document describes how to manage marketplace orders.
 
 ## Prerequisites
 
-To start managing marketplace orders, navigate to **Marketplace** > **Orders**.
+To start managing marketplace orders, navigate to **Marketplace&nbsp;<span aria-label="and then">></span> Orders**.
 
 The instructions assume that there is an existing order with the *New* status.
 

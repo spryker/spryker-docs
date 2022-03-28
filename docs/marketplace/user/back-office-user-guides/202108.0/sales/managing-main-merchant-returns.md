@@ -13,15 +13,15 @@ template: back-office-user-guide-template
 
 ## Prerequisites
 
-To start managing the returns for the [main merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/main-merchant-concept.html), navigate to **Sales** > **My Returns**.
+To start managing the returns for the [main merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/main-merchant-concept.html), navigate to **Sales&nbsp;<span aria-label="and then">></span> My Returns**.
 
-Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start or look up the necessary information as you go through the process.
 
 ## Viewing returns for the main merchant
 
 To view details about a return, in the **Actions** column of the return, click **View**.
 
-This takes you to the **Overview of Return: _[Return reference]_** page where you can view the return details, set the return statuses, and [print the return slip](#printing-a-main-merchant-return-slip).
+This takes you to the **Overview of Return: _[Return reference]_** page, where you can view the return details, set the return statuses, and [print the return slip](#printing-a-main-merchant-return-slip).
 
 ## Setting the main merchant return states
 
@@ -30,13 +30,13 @@ To set and track the return statuses, you trigger the return states.
 To trigger the return states:
 
 1. On the **Returns** page, click **View** in the **Actions** column. This takes you to the **Return Overview _[Return reference]_**.
-2. In the **Trigger all matching state section** of the **Overview of Return: _[Return reference]_** page, click the necessary state. The return state changes and the new states that you can trigger, appear. For information about the return item states and the flow, see Main merchant return item states.
+2. In the **Trigger all matching state section** of the **Overview of Return: _[Return reference]_** page, click the necessary state. The return state changes, and the new states that you can trigger appear. For information about the return item states and the flow, see Main merchant return item states.
 
 
 
 **Info**
 
-The triggered return states are reflected in the Customer Account on the Storefront informing customers about the statuses of their returns.
+The triggered return states are reflected in the Customer Account on the Storefront, informing customers about the statuses of their returns.
 
 ------
 

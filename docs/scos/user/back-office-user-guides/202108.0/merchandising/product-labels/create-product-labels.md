@@ -22,7 +22,7 @@ This topic describes how to create product labels in the Back Office.
 
 To start working with product labels, go to **Merchandising** > **Product Labels**.
 
-Review the reference information before you start, or look up the necessary information as you go through the process.
+Review the [reference information](#reference-information-create-product-labels) before you start, or look up the necessary information as you go through the process.
 
 ## Create a product label
 
@@ -46,23 +46,23 @@ Review the reference information before you start, or look up the necessary info
 
 **Tips and tricks**
 
-When assigning a label to multiple products, it might be useful to switch to the **Selected products to assign** tab to double-check your selection.
+When assigning a label to multiple products, it might be useful to switch to the **Selected products to assign** subtab to double-check your selection.
 
-### Reference information: Create product labels
+## Reference information: Create product labels
 
-The following table describes the attributes you see, select, or enter while creating and editing a product label in the Settings tab.
+The following table describes the attributes you see, select, or enter while creating product labels.
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | NAME | Unique identifier of the product label for the Back Office and Storefront. If you don't specify a locale specific name, this name is used by default on the Storefront.  |
 | FRONT-END REFERENCE | Defines the location and design of the product label. By default, the following designs are available: *alternative*, *discontinued*, *top*, *new*, *sale*. |
 | PRIORITY | Defines the order in which labels will appear on a product card and product details page. The product label with the lowest number will have the highest priority. |
-| IS DYNAMIC | [Dynamic product labels](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html#dynamic-product-label) are only created automatically. |
-| IS ACTIVE |  Defines if the label is to be activate after you create it. You can activate it any time later.  |
+| IS DYNAMIC | Only developers can create [dynamic product labels](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html#dynamic-product-label). This checkbox servers as an identifier for existing dynamic product labels. |
+| IS ACTIVE |  Defines if the label is to be displayed on the Storefront after you create it. You can activate it any time later.  |
 | VALID FROM and VALID TO | Inclusively defines the time period when the product label will be displayed on the Storefront. If no dates are selected, the label is always displayed. |
-| IS EXCLUSIVE | Defines if this product label is to be exclusive. If an exclusive product label is applied to a product, all the other applied product labels will not be displayed on the product card. |
+| IS EXCLUSIVE | Defines if this product label is to be exclusive. If an exclusive product label is applied to a product, all the other non-exclusive labels assigned to the product will not be displayed on the product card. |
 | STORE RELATION | Stores in which a product label will be displayed on the Storefront. |
-| NAME in the **TRANSLATIONS** pane | Locale specific names that will be displayed on the Storefront in respective locales. If you don't specify a locale specific name, the **NAME** from the **GENERAL** pane will be displayed. |
+| NAME in the **TRANSLATIONS** pane | Locale specific names that will be displayed on the Storefront in respective stores. If there is no locale specific name, the **NAME** from the **GENERAL** pane is displayed. |
 
 
 ## Next steps

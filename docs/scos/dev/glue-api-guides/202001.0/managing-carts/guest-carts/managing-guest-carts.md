@@ -12,7 +12,7 @@ related:
   - title: Managing Carts of Registered Users
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
   - title: Checking Out Purchases and Getting Checkout Data
-    link: docs/scos/dev/glue-api-guides/page.version/checking-out-purchases-and-getting-checkout-data.html
+    link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
   - title: Multiple Carts feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/multiple-carts-feature-integration.html
   - title: Glue API - Cart feature integration

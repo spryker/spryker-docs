@@ -10,25 +10,25 @@ redirect_from:
 ---
 
 ## Install Feature Core
+
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Order Management | master |
-| Spryker Core | master |
+| Order Management | 202005.0 |
+| Spryker Core | 202005.0 |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/reclamations: "^master" --update-with-dependencies`
+composer require spryker-feature/reclamations: "^202005.0" --update-with-dependencies`
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
-    
-**Verification**
+{% info_block warningBox “Verification” %}
     
 Make sure that the following modules have been installed:
     
@@ -36,7 +36,8 @@ Make sure that the following modules have been installed:
 | --- | --- |
 | `SalesReclamation` | `vendor/spryker/sales-reclamation` |
 | `SalesReclamationGui` | `vendor/spryker/sales-reclamation-gui` |
-</div></section>
+
+{% endinfo_block %}
 
 ### 2) Set up the Database Schema and Transfer Objects
 
@@ -48,9 +49,7 @@ console propel:install
 console transfer:generate
 ```
 
-<section contenteditable="false" class="warningBox"><div class="content">
-    
-**Verification**
+{% info_block warningBox “Verification” %}
     
 Make sure that the following changes have been applied by checking your database:
     
@@ -59,11 +58,9 @@ Make sure that the following changes have been applied by checking your database
 | `spy_sales_reclamation` | table |
 | `spy_sales_reclamation_item` | table |
 
-</div></section>
+{% endinfo_block %}
 
-<section contenteditable="false" class="warningBox"><div class="content">
-    
-**Verification**
+{% info_block warningBox “Verification” %}
     
 Make sure that the following changes were implemented in the transfer objects:
     
@@ -74,7 +71,8 @@ Make sure that the following changes were implemented in the transfer objects:
 | `ReclamationCreateRequest` | class | `src/Generated/Shared/Transfer/ReclamationCreateRequestTransfer` |
 | `SpySalesReclamationEntity` | class | `src/Generated/Shared/Transfer/SpySalesReclamationEntityTransfer` |
 | `SpySalesReclamationItemEntity` | class | `src/Generated/Shared/SpySalesReclamationItemEntityTransfer` |
-</div></section>
+
+{% endinfo_block %}
 
 ### 3) Set up Behavior
 
@@ -109,5 +107,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that the sales order table in the back office has a "Claim" button for each order, clicking on which will redirect you to create reclamation page.
+
 {% endinfo_block %}

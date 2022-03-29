@@ -21,7 +21,9 @@ In this guide, you will find:
 3. You will also find detailed procedural information describing the possible tasks you can do. This information will be divided into B2C related tasks and B2B related tasks where it is applicable.
 
 {% info_block infoBox "Reading Tips" %}
+
 If you are only interested in a B2C scenario, feel free to ignore all content flagged as B2B. However, we highly recommend that B2B users first understand the shop management fundamentals by reviewing the B2C content before progressing to the B2B content.
+
 {% endinfo_block %}
 
 The information is divided into concepts, tasks, and references.

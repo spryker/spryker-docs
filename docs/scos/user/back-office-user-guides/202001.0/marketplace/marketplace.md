@@ -14,7 +14,9 @@ related:
 ---
 
 The Merchants section in the Back Office is mostly used by Spryker Admins. In a B2B environment, the business partnership between a buyer (company/business unit) and a seller (merchant) is often based on a range of agreements. So you should consider the Merchant and Merchant Relation sections as a contract between the seller and buyer.
+
 **Standardized flow of actions for a Spryker Admin**
+
 ![Merchants - Spryker Admin](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Merchants/merchants-section.png)
 
 ![Merchant Relations - Spryker Admin](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Merchants/merchant-relations-section.png)
@@ -32,6 +34,7 @@ For a common B2B solution it should be only one merchant in the system, as two a
 {% endinfo_block %}
 
 ***
+
 The **Merchants** section in the Back Office is designed to set up the contract conditions.
 
 The **Merchant Relations** section is tight to the **Company Account > Companies** and **Company Units** sections as when you create the relation, you select the company and the respective business unit based on the contract.
@@ -41,7 +44,7 @@ In order to have a correct set, you should:
 * Create a merchant
 * Set up a merchant relation.
 ***
-**What's next?**
 
+**What's next?**
 * To know more about how the merchant record is managed, see [Managing Merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchants.html).
 * To know more about merchant relations and their setup, see [Managing Merchant Relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html).

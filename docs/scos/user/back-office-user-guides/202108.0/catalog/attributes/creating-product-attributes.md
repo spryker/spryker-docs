@@ -17,11 +17,11 @@ related:
 
 This document describes how to create product attributes.
 
-## Prerequisistes
+## Prerequisites
 
 To start working with attributes, go to **Catalog** > **Attributes**.
 
-A new product usually needs a super attribute and a regular attribute. The super attribued is used to distinguish product variants and the regular attribued is used to define product characteristics.
+A new product usually needs a super attribute and a regular attribute. The super attribute is used to distinguish product variants and the regular attributes is used to define product characteristics.
 
 Review the reference information before you start, or just look up the necessary information as you go through the process.
 

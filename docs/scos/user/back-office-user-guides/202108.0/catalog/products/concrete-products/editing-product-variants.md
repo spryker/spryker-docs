@@ -22,7 +22,7 @@ related:
 This article describes how to update the product variant added during the abstract product setup.
 The described procedure is also valid for an existing product variant.
 
-## Prerequisistes
+## Prerequisites
 
 To start working with product variants, go to **Catalog** > **Products**.
 

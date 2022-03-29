@@ -10,41 +10,22 @@ redirect_from:
   - /2021080/docs/en/new-relic
   - /docs/new-relic
   - /docs/en/new-relic
-related:
-  - title: Migration Guide - Session
-    link: docs/scos/dev/module-migration-guides/migration-guide-session.html
 ---
 
-## New Relic Monitoring
+Spryker enables integration with New Relic for performance monitoring. New Relic contains a set of powerful features that help you monitor the performance and health of your application.
 
-Spryker enables integration with New Relic for performance monitoring. New Relic contains a set of powerful features that help you monitor the performance and health of your application. To be able to use New Relic, first, you need to get an account. Next, you will need to install the New Relic PHP extension in your virtual machine by following the steps described in [New Relic Setup instructions](https://rpm.newrelic.com/accounts/1131235/applications/setup).
+## Related Developer guides
 
-## General Information
+* [Installing and configuring New Relic with Vagrant](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/new-relic/installing-and-configuring-new-relic–with–vagrant.html)
+* [Configuring New Relic request logging](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/new-relic/configuring-new-relic-logging.html)
 
-The `spryker-eco/new-relic` module provides a `NewRelicMonitoringExtensionPlugin` to send monitoring information to the New Relic service.
+---
 
-## Installation
+## Copyright and Disclaimer
 
-To be able to use the `\SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin` plugin within the [Monitoring](https://github.com/spryker/monitoring) module, install the NewRelic Module:
+See [Disclaimer](https://github.com/spryker/spryker-documentation).
 
-```bash
-composer require spryker-eco/new-relic
-```
+---
+For further information on this partner and integration into Spryker, please contact us.
 
-## Request Logging
-
-Every request is automatically logged by New Relic. The name of the requests will be the name of the used route for Yves and the `[module]/[controller]/[action]` for Zed. Also, URL request and the host are stored as custom parameters for each request.
-
-To enable the New Relic monitoring extension, add it to the `MonitoringDependencyProvider` in your project:
-
-```php
- '12345',
-    'zed_de'    =&gt; '12346',
-    'yves_us'   =&gt; '12347',
-    'zed_us'    =&gt; '12348',
-];
-```
-Therefore, it will be possible to use the record deployment functionality built-in in the console commands, as follows:
-
-```
-$ vendor/bin/console newrelic:record-deployment
+<div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>

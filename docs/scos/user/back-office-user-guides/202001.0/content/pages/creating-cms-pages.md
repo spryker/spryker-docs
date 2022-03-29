@@ -41,7 +41,7 @@ To create a page:
 
     {% info_block infoBox %}
 
-    Templates are project-specific and are usually created by a developer and a business person. If you are missing a CMS Page template, contact them and refer to the [HowTo - Create a CMS Page template](/docs/scos/dev/tutorials/{{page.version}}/howtos/feature-howtos/cms/howto-create-cms-templates.html#adding-a-template-for-a-cms-page).
+    Templates are project-specific and are usually created by a developer and a business person. If you are missing a CMS Page template, contact them and refer to the [HowTo - Create a CMS Page template](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-page-template).
 
     {% endinfo_block %}
 
@@ -54,9 +54,7 @@ To create a page:
 ***
 
 **Tips & Tricks**
-
 * Keep in mind that by default, store relation is enabled for all stores. To hide your page per specific locale(s), clear checkboxes per that(those) locale(s).
-
 * Please consider the following cases:
   - If **Is searchable** is selected, but **store relation** is turned off for all stores, the CMS page will not be displayed and will not be searchable.
   - If **Is searchable** is not selected, but **store relation** is turned on, the CMS page will be shown but will not be searchable.
@@ -65,6 +63,6 @@ To create a page:
 ***
 
 **What's next?**
-<br>Until now, you have created a page draft. The page itself will be available in the online store after you publish it.
 
+Until now, you have created a page draft. The page itself will be available in the online store after you publish it.
 To learn how to view or publish the page, see [Managing CMS Pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/managing-cms-pages.html).

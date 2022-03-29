@@ -31,7 +31,7 @@ To retrieve return reasons, send the request:
 
 ## Request
 
-Request sample :  `GET https://glue.mysprykershop.com/return-reasons`
+Request sample: `GET https://glue.mysprykershop.com/return-reasons`
 
 ## Response
 

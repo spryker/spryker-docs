@@ -55,7 +55,7 @@ The following diagram shows what features are used for both **B2B and B2C**, and
 
 {% endinfo_block %}
 
-![B2B and B2C Features\(2\)](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/B2B%20and%20B2C%20Features%282%29.png)
+![B2B and B2C features](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.md/b2b-and-b2c-features.png)
 
 You can always define what exactly is going to be needed for your specific project.
 

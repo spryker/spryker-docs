@@ -27,7 +27,7 @@ To add volume prices to abstract products:
 1. Next to the product you want to add volume prices for, select **Edit**.
 2. On the *Edit Product* page, switch to the *Price & Tax* tab.
 3. Next to the store you want to add volume prices for, select **> Add Product Volume Price**.
-4. On the *Add volume prices* page, enter a **Qunatity**.
+4. On the *Add volume prices* page, enter a **Quantity**.
 5. Enter a **Gross price**.
 6. Optional: Enter a **Net price**.
 7. Optional: To add more volume prices than the number of the rows displayed on the page, select **Save and add more rows**.

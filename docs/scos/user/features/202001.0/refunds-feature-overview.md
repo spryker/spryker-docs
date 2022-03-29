@@ -22,7 +22,7 @@ For the refunded items, you can use the default OMS states to be displayed on th
 |BACK OFFICE USER GUIDES|
 |---|
 | [View refunds](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/refunds/viewing-refunds.html)  |
-| [See the reference information for refunds](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/refunds/viewing-refunds.html#reference-information-viewing-refunds)  |
+| [See the reference information for refunds](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/refunds/viewing-refunds.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

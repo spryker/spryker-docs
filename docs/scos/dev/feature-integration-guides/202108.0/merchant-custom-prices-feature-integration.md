@@ -1,5 +1,5 @@
 ---
-title: Merchant custom prices feature integration
+title: Merchant Custom Prices feature integration
 description: The Merchant Custom Price Feature allows setting specific prices for merchants. The guide describes the process of integrating the feature into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template

@@ -12,7 +12,7 @@ To integrate with Econda, you will need to connect your Econda account. If you d
 
 To enable Econda tracking for your application, you need to download a personalized JavaScript library from the Econda Analytics Configuration menu (you can find the detailed instructions on the [Econda website](https://support.econda.de/display/MONDE/Tracking-Bibliothek+herunterladen)).
 
-For [cross sell widgets](econda-cross-sell), we will demonstrate integration of JS SDK that you can download from the [Econda website](http://downloads.econda.de/support/releases/js-sdk/current/econda-recommendations.php).
+For cross sell widgets, we will demonstrate integration of JS SDK that you can download from the [Econda website](http://downloads.econda.de/support/releases/js-sdk/current/econda-recommendations.php).
 
 Please refer to [Econda](http://www.econda.de/) documentation on how to customize your Econda widgets.
 
@@ -20,7 +20,7 @@ Some examples can be found at [https://www.econda.de/](https://www.econda.de/)
 
 Details on how to work with Javascript and templates in Spryker can be found in Front-End Guide<!-- link -->.
 
-Econda module uses collectors to [export data to CSV](/docs/scos/dev/technology-partners/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/econda/econda-exporting-csvs.html). Please read more about Collectors.
+Econda module uses collectors to export data to CSV. Please read more about Collectors.
 
 ## Econda JS Library and SDK
 

@@ -19,7 +19,9 @@ You can assign Product Labels to highlight specific products in your shop. Custo
 
 Labels are mapped to products to highlight them in the shop. Customers can also filter products by their labels. Abstract products that are new can be automatically marked with a "new" label for a defined time period.
 ***
+
 **What's next?**
+
 Learn how the product labels are created and managed in the following articles:
 * [Creating a Product Label](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/creating-product-labels.html)
 * [Managing Product Labels](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/managing-product-labels.html)

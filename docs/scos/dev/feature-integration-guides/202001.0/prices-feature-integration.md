@@ -10,7 +10,7 @@ redirect_from:
   - /v4/docs/en/prices-feature-integration
 related:
   - title: Glue API - Product Price API feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-price-api-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-price-feature-integration.html
   - title: Configurable Bundle feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/configurable-bundle-feature-integration.html
   - title: Product Images + Configurable Bundle feature integration
@@ -24,7 +24,9 @@ related:
 ---
 
 {% info_block errorBox "Attention!" %}
+
 The following feature integration Guide expects the basic feature to be in place. The current feature integration Guide only adds the **Volume Prices** functionality and `PriceProductWidget`.
+
 {% endinfo_block %}
 
 ## Install Feature Core
@@ -45,6 +47,7 @@ Run the following command(s) to install the required modules:
 ```bash
 composer require spryker-feature/prices: "^{{page.version}}" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules were installed:
@@ -81,12 +84,14 @@ Make sure that the following changes in transfer objects:
 #### Import Volume Prices
 
 {% info_block infoBox "Note" %}
+
 The following imported entities will be used as product volumes in Spryker OS.
+
 {% endinfo_block %}
 
 Prepare your data according to your requirements using our demo data:
 
-src/data/import/product_price.csv
+**src/data/import/product_price.csv**
 
 ```yaml
 abstract_sku,concrete_sku,price_type,store,currency,value_net,value_gross,price_data.volume_prices
@@ -112,7 +117,7 @@ Register the following plugin to enable data import:
 |---|---|---|---|
 |  `PriceProductDataImportPlugin` | Imports demo product price data into the database. | None |  `Spryker\Zed\PriceProductDataImport\Communication\Plugin` |
 
-src/Pyz/Zed/DataImport/DataImportDependencyProvider.php
+**src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
 ```php
 <?php
@@ -140,7 +145,9 @@ console data:import price-product
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that in the database that the configured data is added to the `spy_product_price` table.
+
 {% endinfo_block %}
 
 ### 4) Set up Behavior
@@ -153,7 +160,7 @@ Enable the following behaviors by registering the plugins:
 |  `PriceProductVolumeExtractorPlugin` | Provides the ability to extract Volume Prices from an array of `PriceProductTransfers` for abstract or concrete products to validate prices when adding items to cart or to validate prices on the backend side. | None |  `Spryker\Zed\PriceProductVolume\Communication\Plugin\PriceProductExtension` |
 |  `PriceProductVolumeFilterPlugin` | Provides the ability to decide, based on selected product quantity, which `PriceProduct` should be chosen based on the set Volume Prices. | None |  `Spryker\Service\PriceProductVolume\Plugin\PriceProductExtension` |
 
-src/Pyz/Zed/PriceProduct/PriceProductDependencyProvider.php
+**src/Pyz/Zed/PriceProduct/PriceProductDependencyProvider.php**
 
 ```php
 <?php
@@ -177,7 +184,7 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 }
 ```
 
-src/Pyz/Client/PriceProductStorage/PriceProductStorageDependencyProvider.php
+**src/Pyz/Client/PriceProductStorage/PriceProductStorageDependencyProvider.php**
 
 ```php
 <?php
@@ -201,7 +208,7 @@ class PriceProductStorageDependencyProvider extends SprykerPriceProductStorageDe
 }
 ```
 
-src/Pyz/Service/PriceProduct/PriceProductDependencyProvider.php
+**src/Pyz/Service/PriceProduct/PriceProductDependencyProvider.php**
 
 ```php
 <?php
@@ -228,7 +235,9 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 ```
 
 {% info_block warningBox "Verification" %}
+
 Go to the product detail page for a product with Volume Prices set, update the quantity to meet any of Volume Prices boundaries and check the price. Then add the product to the cart and if the price of the item in the Cart remains the same as it was on the Product Detail Page, the plugins are installed.
+
 {% endinfo_block %}
 
 ## Install Feature Frontend
@@ -249,6 +258,7 @@ Run the following command(s) to install the required modules:
 ```bash
 composer require spryker-feature/prices: "^{{page.version}}" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules were installed:
@@ -259,11 +269,12 @@ Make sure that the following modules were installed:
 | `PriceProductWidget` | `vendor/spryker-shop/price-product-widget` |
 
 {% endinfo_block %}
+
 ### 2) Add Translations
 
 Append glossary according to your configuration:
 
-src/data/import/glossary.csv
+**src/data/import/glossary.csv**
 
 ```yaml
 page.detail.volume_price.quantity,Quantity,en_US
@@ -279,7 +290,9 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that in the database the configured data are added to the `spy_glossary` table.
+
 {% endinfo_block %}
 
 ### 3) Set up Widgets
@@ -291,7 +304,7 @@ Enable global widgets:
 |  `ProductPriceVolumeWidget` | Shows a table of Volume Prices for a product that contains the columns: quantity and price for that quantity threshold. |  `SprykerShop\Yves\PriceProductVolumeWidget\Widget` |
 |  `PriceProductWidget` | Shows price of a concrete product. |  `SprykerShop\Yves\PriceProductWidget\Widget` |
 
-src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php
+**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
 ```php
 <?php

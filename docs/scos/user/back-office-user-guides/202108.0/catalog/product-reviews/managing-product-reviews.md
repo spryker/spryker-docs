@@ -23,12 +23,13 @@ Learn how to:
 * Change the status of the reviews to be displayed for shop users.
 * Delete the reviews you have found abusive, inappropriate, etc.
 
+## Prerequisites
 
 To start working with reviews, navigate to the **Products > Product Reviews** section.
 
 ## Checking reviews
 
-Before changing the status of or deleting a review, you can first read its contents.
+Before changing the status or deleting a review, you can first read its contents.
 
 **To read a review**, click the arrow in the very first column of the **List of product reviews** table.
 

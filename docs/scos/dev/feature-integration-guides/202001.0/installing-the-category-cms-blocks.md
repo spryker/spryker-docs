@@ -258,25 +258,6 @@ class CmsBlockGuiDependencyProvider extends CmsBlockGuiCmsBlockGuiDependencyProv
 }
 ```
 
-<!--
-### Usage for Demoshop
-
-Adding a template for the new block is done in the same way as for static blocks.
-
-Create a new Twig template under the `src/Pyz/Yves/CmsBlock/Theme/default/template/` folder. We'll call it `categorySale.twig` and it will have the following structure :
-
-```php
-<!-- CMS_BLOCK_PLACEHOLDER : "saleMessage" -->
-<!-- CMS_BLOCK_PLACEHOLDER : "saleInterval" -->
-<!--<blockquote>
-	{% raw %}{{{% endraw %} spyCmsBlockPlaceholder('saleMessage') | raw {% raw %}}}{% endraw %}
-
-	<footer>
-		{% raw %}{{{% endraw %} spyCmsBlockPlaceholder('saleInterval') | raw {% raw %}}}{% endraw %}
-	</footer>
-</blockquote>
-```
--->
 **To configure the block:**
 1. In the Zed UI, go to the CMS section  and navigate to the blocks section.
 2. Click Create CMS Block to create a new block. 

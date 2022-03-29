@@ -25,14 +25,11 @@ Organizations with multiple business units that support their own set of account
 
 The feature allows customer login by token. By dynamically generating a token, a user is able to log in with a pre-defined company user to a new e-commerce provider. All this happens without sharing the login information or having to fill out a sign-up form.
 
-Check out the following videos about managing company accounts:
+Check out the following video about managing company accounts:
+
 Setting up company structure:
 
 {% wistia qkdgkeannb 960 720 %}
-
-Setting up company users and roles:
-
-{% wistia 72qy3slwjo 960 720 %}
 
 
 ## Related Business User articles

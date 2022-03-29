@@ -39,8 +39,8 @@ To retrieve ratings and reviews, send the request:
 
 ### Request
 
-| String parameter | DESCRIPTION | Possible values |
-| --- | --- | --- | --- |
+| STRING PARAMETER | DESCRIPTION | POSSIBLE VALUES |
+| --- | --- | --- |
 | page[offset] | Offset of the item at which to begin the response.  | From `0` to any. |
 | page[limit] | Maximum number of entries to return. | From `1` to any. |
 
@@ -105,9 +105,10 @@ Request sample: `GET http://glue.mysprykershop.com/abstract-products/035/product
 
 To provide a rating and a review of a products, send the request:
 
-***
+---
 `POST`**/abstract-products/*{% raw %}{{{% endraw %}product_sku{% raw %}}}{% endraw %}*/product-reviews**
-***
+
+---
 
 | PATH PARAMETER | HEADER |
 | --- | --- |

@@ -137,7 +137,6 @@ The [demo-shop](https://github.com/spryker/demoshop) ships with a Cronjob trigge
 ## Under the hood
 
 ### Database schema
-![product_label_db.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/product_label_db%281%29.png) 
 
 The `Product Label` module adds three new tables:
 

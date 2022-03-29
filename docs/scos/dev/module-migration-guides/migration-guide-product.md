@@ -196,7 +196,7 @@ class SpyProduct extends BaseSpyProduct
 Remove the following Propel classes (from all namespaces) which were deleted from the database.
 
 * `SpyProductAttributesMetadata` and `SpyProductAttributesMetadataQuery`. Use `SpyProductAttributeKey` instead to store attribute keys.
-* `SpyProductAttributeType` and `SpyProductAttributeTypeQuery`. The concept of common types for attributes was removed. We store attribute types now separately for each domain, i.e. `SpyProductManagementAttribute` for PIM and `SpyProductSearchAttribute` for search filters.
+* `SpyProductAttributeType` and `SpyProductAttributeTypeQuery`. The concept of common types for attributes was removed. We store attribute types now separately for each domain, for example, `SpyProductManagementAttribute` for PIM and `SpyProductSearchAttribute` for search filters.
 * `SpyProductAttributeTypeValue` and `SpyProductAttributeTypeValueQuery`.
 
 ### 2. Major Class Changes

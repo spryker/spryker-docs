@@ -23,7 +23,7 @@ In the Spryker Commerce OS user and rights management is implemented in the foll
 
 ## Users and customers
 
-It is important to distinguish between users and customers. A user works with the back-end side of the store and handles the store maintenance such as creating users and assigning them to roles that will allow them to perform actions such as editing the CMS, activating and deactivating products and managing discounts. A customer on the other hand is the final consumer of the online store i.e. the person who places orders. Customers are also managed in Zed but in a different section.
+It is important to distinguish between users and customers. A user works with the back-end side of the store and handles the store maintenance such as creating users and assigning them to roles that will allow them to perform actions such as editing the CMS, activating and deactivating products and managing discounts. A customer on the other hand is the final consumer of the online store for example, the person who places orders. Customers are also managed in Zed but in a different section.
 
 Users are assigned to groups. Groups are a collection of Roles e.g. customer-care, root, 3rd party etc. Roles have Resources (rules) assigned to them. Resources (rules) are used to assign specific privileges to a Role for example, a Sales Representative Role or a System Administrator Role. Resources are always /module/controller/action and you can use * as placeholder.
 
@@ -36,7 +36,7 @@ The Auth, ACL and User bundles are configured and managed through the Zed user i
 
 Also, you can find bundle names as well as controllers and actions in the file `communication/navigation.xml`. For example:
 
-![bundles_navigation.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/bundles_navigation.png)
+![bundles_navigation.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.md/bundles_navigation.png)
 
 See [Managing users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html) to learn how to create and manage users, groups, and roles .
 
@@ -113,4 +113,3 @@ $config[AclConstants::ACL_DEFAULT_CREDENTIALS] = [
 In the example, we grant the user **winner@spryker.com** access to all Zed resources. To make it work, we should also add **winner@spryker.com** to this option: `UserConstants::USER_SYSTEM_USERS`. Here, a system user is any user who has additional ACL rules defined for them in `config_*.php` file.
 
 * Note that if there is at least one `allow` type for a resource, the user will have access to it in spite of having a `deny` type for the same resource. It works for `AclConstants::ACL_USER_RULE_WHITELIST`, `AclConstants::ACL_DEFAULT_CREDENTIALS` and rules configured via Zed UI, except for `AclConstants::ACL_DEFAULT_RULES` as it is handled before checking if user logged in or not.
-

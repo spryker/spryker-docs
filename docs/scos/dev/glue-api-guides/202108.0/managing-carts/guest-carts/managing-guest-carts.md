@@ -1037,7 +1037,7 @@ For the attributes of other included resources, see:
 
 Guest carts are anonymous as they are not related to any user. If a user registers or logs in, the guest cart is automatically assigned to their account.
 
-To assign a guest cart to a customer, i.e., merge the carts, include the unique identifier associated with the customer in the *X-Anonymous-Customer-Unique-Id* header of the authentication request if it is an existing customer, or request to create a customer account if it is a new one.
+To assign a guest cart to a customer, for example, merge the carts, include the unique identifier associated with the customer in the *X-Anonymous-Customer-Unique-Id* header of the authentication request if it is an existing customer, or request to create a customer account if it is a new one.
 
 Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/scos/user/features/{{page.version}}/multiple-carts-feature-overview.html) environment:
 
@@ -1185,14 +1185,14 @@ In a **single cart** environment, items from the guest cart have been added to
 | 102 | Failed to add an item to cart. |
 | 103 | Item with the given group key not found in the cart. |
 | 104 | Cart uuid is missing. |
-| 105 | Cart could not be deleted. |
-| 106 | Cart item could not be deleted. |
+| 105 | Cart cannot be deleted. |
+| 106 | Cart item cannot be deleted. |
 | 107 | Failed to create a cart. |
 | 109 | Anonymous customer unique id is empty. |
 | 111 | Can’t switch price mode when there are items in the cart. |
 | 112 | Store data is invalid. |
-| 113 | Cart item could not be added. |
-| 114 | Cart item could not be updated. |
+| 113 | Cart item cannot be added. |
+| 114 | Cart item cannot be updated. |
 | 115 | Unauthorized cart action. |
 | 116 | Currency is missing. |
 | 117 | Currency is incorrect. |

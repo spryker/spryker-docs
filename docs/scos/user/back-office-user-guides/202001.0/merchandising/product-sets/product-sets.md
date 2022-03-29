@@ -12,14 +12,13 @@ redirect_from:
 
 Product Sets let customers shop for special sets of products that can be manually curated based on any characteristic of the products you wish.
 Multiple products can be offered as a set so that the customer can add them to cart with a single click. Each set has its own URL and all sets can be shown on a separate section in the catalog.
-
 * Dedicated catalog for product sets with adjustable order of the sets by the weight parameter
 * Product set page with a variant selector (for products with multiple variants), SEO metadata, and images per set
 * Place product sets in CMS placeholders
 
 ***
-**What's next?**
 
+**What's next?**
 * To know why and how the product sets are created, see [Creating a Product Set](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-sets/creating-product-sets.html).
 * To know how the product sets are managed, see [Managing Product Sets](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-sets/managing-product-sets.html).
 * To learn the attributes that you see, enter, and select while creating or managing product sets, see [Product Sets: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-sets/references/product-sets-reference-information.html).

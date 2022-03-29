@@ -28,7 +28,7 @@ To start creating categories, go to **Catalog** > **Categories**
 Review the reference information before you start, or just look up the necessary information as you go through the process.
 
 
-## Createing a category
+## Creating a category
 
 To create a category, take the following steps:
 1. On the *Category* page, in the top right corner, click **Create category** to open the *Create category* page.
@@ -57,7 +57,7 @@ To create a category, take the following steps:
 6. Click **Save**.
 
 
-### Reference information: Createing a category
+### Reference information: Creating a category
 
 This section holds reference information related to the category creation process.
 
@@ -152,7 +152,7 @@ To use a template with slots, make sure the [Templates and slots](/docs/scos/dev
 Select such a template to have slots for this category page. Slots can embed content from CMS Blocks and technology partner integrations. See [Templates and slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html) for more details.
 
 **Tips & tricks**
-<br>When you already know the exact parent category under which the category that you create is going to be nested, you can click **Add categoryto this node** for a specific parent category. This redirects you to the *Create category* page where you can perform the steps described above. The only difference is that the *Parent* field is auto-populated with the needed value.
+<br>When you already know the exact parent category under which the category that you create is going to be nested, you can click **Add category to this node** for a specific parent category. This redirects you to the *Create category* page where you can perform the steps described above. The only difference is that the *Parent* field is auto-populated with the needed value.
 
 The same products can be assigned to multiple categories.
 

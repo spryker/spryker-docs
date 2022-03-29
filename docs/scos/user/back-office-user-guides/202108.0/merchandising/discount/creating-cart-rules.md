@@ -19,7 +19,7 @@ This topic describes how to create a Cart Rule.
 
 A cart rule is a discount that is applied automatically when all attached discount conditions are fulfilled and if the cart rule is active. Unlike a voucher code, it does not require any input from the customer.
 
-## Prerequisistes
+## Prerequisites
 
 To start working with discounts, go to **Merchandising** > **Discount**.
 

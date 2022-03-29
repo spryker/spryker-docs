@@ -12,7 +12,13 @@ redirect_from:
   - /docs/en/stores
 ---
 
-This topic provides an overview of the Stores section in Spryker Back Office.
+This topic provides an overview of the Stores section in the Spryker Back Office.
+
+## Prerequisites
+
+To start managing translations, go to the **Administration** > **Stores** section.
+
+## Viewing stores
 
 In the *Stores* section, you see the following:
 * Store ID

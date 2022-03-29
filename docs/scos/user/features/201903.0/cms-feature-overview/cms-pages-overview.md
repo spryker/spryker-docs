@@ -1,5 +1,5 @@
 ---
-title: CMS Page
+title: CMS Pages overview
 description: CMS page is an extra HTML page of your Spryker shop that you can create and edit in the Back Office using the WYSIWYG editor.
 last_updated: Jul 31, 2020
 template: concept-topic-template
@@ -43,7 +43,7 @@ With the CMS pages feature, you can:
 * specify exact to and from dates to make CMS Pages publicly available within a defined time period;
 * assign a CMS page to a specific locale thus making it visible or hidden for a specific store (Multi-store CMS feature).
 
-This CMS pages feature is ideal for specific landing pages with dedicated URLs to promote content and products, i.e. for marketing campaigns.
+This CMS pages feature is ideal for specific landing pages with dedicated URLs to promote content and products, for example, for marketing campaigns.
 
 **If you are:**
 

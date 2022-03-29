@@ -16,7 +16,9 @@ The Glossary section in the Back Office is mostly used by administrators when a 
 ![Flow of actions for DevOps](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Glossary/glossary-section.png) 
 
 {% info_block infoBox %}
+
 This is how the DevOps interacts with the Development Team and uses the Back Office to set up a new locale for a store.
+
 {% endinfo_block %}
 
 A glossary consists of
@@ -24,6 +26,7 @@ A glossary consists of
 * a glossary value for each locale defined in the online store
 
 You can manage the translations, however, when creating or updating a glossary key, the changes are persisted in the back-end database. The changes are available in the online store after the client data storage is updated (either by manually running the update storage command or after the cronjob that does this update was executed. That is why interaction with the Development Team is needed.
+
 ***
 **What's next?**
 To know how the translations are managed, see [Managing Glossary](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/managing-glossary.html).

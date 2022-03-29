@@ -75,8 +75,8 @@ The `Navigation` module ships with a twig extension that provides the `spyNaviga
 
 `spyNavigation()` accepts two parameters:
 
-* `$navigationKey`: Reference of a navigation menu by its key field (i.e. "MAIN_NAVIGATION").
-* `$template`: Template path used to render the navigation menu (i.e. `"@application/layout/navigation/main.twig"`).
+* `$navigationKey`: Reference of a navigation menu by its key field (for example, "MAIN_NAVIGATION").
+* `$template`: Template path used to render the navigation menu (for example, `"@application/layout/navigation/main.twig"`).
 
 To enable the navigation twig function, register `\Spryker\Yves\Navigation\Plugin\Provider\NavigationTwigServiceProvider` in your application’s bootstrap.
 

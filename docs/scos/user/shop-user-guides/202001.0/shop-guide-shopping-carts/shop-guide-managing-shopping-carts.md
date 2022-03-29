@@ -26,9 +26,13 @@ You can copy the entire cart and its contents if you want to create one more ins
 
 1. Navigate to the **Shopping Carts** page.
 2. Click **Duplicate** in the **Shopping Carts List > Action** column if you want to copy the cart and its contents.
+
 {% info_block warningBox "Note" %}
-By default, the cart is named **[Name of the cart that you duplicate] Copied At [Date]**. You can either change the name of the duplicated cart now or later.
+
+By default, the cart is named ***[Name of the cart that you duplicate]* Copied At *[Date]***. You can either change the name of the duplicated cart now or later.
+
 {% endinfo_block %}
+
 3. Click **Save**.
 ***
 ## Converting a Shopping Cart into a Shopping List
@@ -37,9 +41,9 @@ If you plan to purchase items in your cart repeatedly, it makes sense to convert
 
 1. Navigate to the **Shopping Carts** page.
 2. Click **Add to List** in the **Shopping Carts List > Action** column.
-3. From the drop-down list, select the existing shopping list where the cart items will be added: 
+3. From the drop-down list, select the existing shopping list where the cart items will be added:
 ![Convert to drop-down](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shop+Guide+-+Managing+Shopping+Carts/convert-to-dropdown.png)
-or enter a name and create a new shopping list: 
+or enter a name and create a new shopping list:
 ![Shopping cart list](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shop+Guide+-+Managing+Shopping+Carts/cart-add-to-shopping-list.png)
 4. Click **Submit**.
 ***
@@ -49,8 +53,8 @@ You can share a shopping cart with the company users within your business unit, 
 
 1. Navigate to the **Shopping Carts** page.
 2. Click **Share** in the **Shopping Carts List > Action** column.
-3. On the **Share my cart** page from the drop-down list next to the users you would like to share the cart with, select the sharing access rights: **No access, Read-only, Full Access**. See [Shared Cart Feature Overview](/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html) for more details on the access rights. 
-![Share a cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shop+Guide+-+Managing+Shopping+Carts/share-cart-users.png) 
+3. On the **Share my cart** page from the drop-down list next to the users you would like to share the cart with, select the sharing access rights: **No access, Read-only, Full Access**. See [Shared Cart Feature Overview](/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html) for more details on the access rights.
+![Share a cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shop+Guide+-+Managing+Shopping+Carts/share-cart-users.png)
 4. Click **Save**.
 ***
 ## Dismissing a Shared Shopping Cart
@@ -83,15 +87,15 @@ Deleting a shared shopping cart also deletes it for users it has been shared wit
 External users are the users that do not belong to your company. To share the cart with them:
 
 1. Navigate to the **Shopping Cart** page.
-2. In the **Share Cart via Link** widget, select **External Users**. 
-![External users](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shop+Guide+-+Managing+Shopping+Carts/external+users-share-cart-link.png) 
+2. In the **Share Cart via Link** widget, select **External Users**.
+![External users](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shop+Guide+-+Managing+Shopping+Carts/external+users-share-cart-link.png)
 
 3. Click **Copy** to copy the link and provide to an external user.
 
 {% info_block infoBox %}
 When the external users open the provided link, they can view the contents of your shopping cart:
 {% endinfo_block %}
-![Preview external users](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shop+Guide+-+Managing+Shopping+Carts/external-users-preview.png) 
+![Preview external users](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shop+Guide+-+Managing+Shopping+Carts/external-users-preview.png)
 
 ### Sharing a Cart via Link with the Internal Users
 
@@ -99,8 +103,8 @@ Internal users are the users that belong to your company account. You can share 
 
 1. Navigate to the **Shopping Cart** page.
 2. In the **Share Cart via Link** widget, select **Internal Users**.
-3. Depending on the level of access you would like to share the cart with, click **Copy** to copy the link. 
-![Internal users](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shop+Guide+-+Managing+Shopping+Carts/internal-uers-share-link.png) 
+3. Depending on the level of access you would like to share the cart with, click **Copy** to copy the link.
+![Internal users](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shop+Guide+-+Managing+Shopping+Carts/internal-uers-share-link.png)
 
 To learn more about the differences in the access levels, check the [Shared Carts Feature Overview](/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html).
 

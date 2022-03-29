@@ -1,5 +1,5 @@
 ---
-title: Tax API feature integration
+title: Glue API - Tax feature integration
 description: This guide walks you through the process of installing and configuring the Product Tax Sets API feature in your project.
 last_updated: Nov 22, 2019
 template: feature-integration-guide-template

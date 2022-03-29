@@ -1,6 +1,6 @@
 ---
 title: Product feature overview
-description: Product Management system allows gathering product characteristics and exported them to Spryker. Products can be managed in the Back Office and displayed in Yves
+description: Product Management system allows gathering product characteristics and exported them to Spryker. Products can be managed in the Back Office and displayed in Yves.
 last_updated: Aug 13, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v4/docs/product
@@ -31,13 +31,13 @@ The following table summarizes differences between the Abstract Products and the
 
 | Product data | Abstract Product | Product Variant |
 | --- | --- | --- |
-| SKU | v | v |
-| Name | v | v |
-| Description | v | v |
-| Product attributes | v | v |
-| Super attributes |  | v |
-| Media assets | v | v |
-| Stock |  | v |
+| SKU | ✓ | ✓ |
+| Name | ✓ | ✓ |
+| Description | ✓ | ✓ |
+| Product attributes | ✓ | ✓ |
+| Super attributes |  | ✓ |
+| Media assets | ✓ | ✓ |
+| Stock |  | ✓ |
 
 ## Products Behavior on the Storefront
 On the Storefront, only Abstract Products appear in the Product Catalog and can be searched for. The  Product Variants are always a part of an Abstract Product. Therefore, Abstract Product and all its Product Variants share the same URL.
@@ -60,7 +60,7 @@ Besides the Spryker Back Office, product information can be maintained in an ext
 
 The Spryker Commerce OS supports integration of the following PIM systems:
 
-* [Akeneo](/docs/scos/dev/back-end-development/extending-spryker/extending-the-core.html)
+* [Akeneo](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-core.html)
 * [Censhare PIM](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/censhare-pim.html)
 
 

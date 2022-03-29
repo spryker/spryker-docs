@@ -110,7 +110,7 @@ The *Scheduled Prices: Import dry run* page is divided into four sections.
 | Row n° | Numeric identifier of a price schedule entry in the list of price schedules. |
 | Error |  Describes why a particular price schedule has not been imported.|
 | ID | Numeric identifier of price schedule. |
-|abstract_sku  | Identifier of the abstract product to which price schedule is assigned. |
+| abstract_sku  | Identifier of the abstract product to which price schedule is assigned. |
 | concrete_sku | Identifier of the concrete product to which price schedule is assigned. |
 | store |Store relation of the product to which price schedule is assigned.  |
 | currency |Currency in which price schedule is defined.  |

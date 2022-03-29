@@ -31,5 +31,4 @@ The following schema illustrates the module relations of the Quotation Process f
 | [Checkout + Quotation process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-quotation-process-feature-integration.html) |  |
 | [Quotation Process + Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quotation-process-approval-process-feature-integration.html) |  |
 | [Quotation Process + Multiple Carts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quotation-process-multiple-carts-feature-integration.html) |  |
-| [Shipment + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-cart-feature-integration.html) |  |
 | [Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shipment-feature-integration.html) |  |

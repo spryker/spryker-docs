@@ -2,13 +2,24 @@
 title: Marketplace Order Management feature walkthrough
 description: The Marketplace Order Management feature allows Marketplace customers to place orders.
 template: feature-walkthrough-template
+related: 
+    - title: MerchantOms
+      link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-order-management-feature-walkthrough/merchant-oms.html
+    - title: Marketplace Shipment
+      link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-shipment-feature-walkthrough.html
+    - title: Marketplace and merchant state machines
+      link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
+    - title: Marketplace and merchant state machines interaction
+      link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
+    - title: 'How-to: Create a new MerchantOms flow'
+      link: docs/marketplace/dev/howtos/how-to-create-a-new-merchant-oms-flow.html
 ---
 
 
-*Marketplace Order Management* enables splitting Orders into Merchant Orders and allowing Product Offers to be bought directly from a Storefront.
-The Orders are designed to be used by the Marketplace operator, while the Merchant Orders are always connected to a Merchant. See [Marketplace domain model](/docs/marketplace/dev/architecture-overview/marketplace-domain-model.html) to learn more about the core Marketplace objects.
+*Marketplace Order Management* enables splitting orders into merchant orders and allowing product offers to be bought directly from a Storefront.
+The orders are designed to be used by the Marketplace operator, while the merchant orders are always connected to a merchant. See [Marketplace domain model](/docs/marketplace/dev/architecture-overview/marketplace-domain-model.html) to learn more about the core Marketplace objects.
 
-By using `MerchantSalesOrderFacade::createMerchantOrderCollection()`, you can decide when to create Merchant Orders out of an Order in your project. By default, it is created by `CreateMerchantOrdersCommandPlugin`.
+By using `MerchantSalesOrderFacade::createMerchantOrderCollection()`, you can decide when to create merchant orders out of an order in your project. By default, it is created by `CreateMerchantOrdersCommandPlugin`.
 
 {% info_block warningBox "User documentation" %}
 
@@ -30,11 +41,11 @@ The following diagram illustrates the dependencies between the modules for the *
 | [MerchantOmsDataImport](https://github.com/spryker/merchant-oms-data-import) | Data importer for the `MerchantOms`. | Backoffice UI interface for the Merchant Oms management. |
 | [MerchantSalesOrder](https://github.com/spryker/merchant-sales-order)  | Provides functionality for managing merchant orders. |
 | [MerchantSalesOrderDataExport](https://github.com/spryker/merchant-sales-order-data-export) | Provides possibility to export data related to the merchant orders. |
-| [MerchantSalesOrderMerchantUserGui](https://github.com/spryker/merchant-sales-order-merchant-user-gui) | Backoffice UI for managing merchant sales orders for the Marketplace operator. |
+| [MerchantSalesOrderMerchantUserGui](https://github.com/spryker/merchant-sales-order-merchant-user-gui) | Back Office UI for managing merchant sales orders for the Marketplace operator. |
 | [MerchantSalesOrderWidget](https://github.com/spryker-shop/merchant-sales-order-widget) | Provides Merchant Order information for Yves. |
 | [Oms](https://github.com/spryker/oms) | Order management system for implementing complex process flows using the state machines. |
 | [OmsProductOfferReservation](https://github.com/spryker/oms-product-offer-reservation) | Provides functionality for save/update/remove reservations for the product offers. |
-| [ProductOfferReservationGui](https://github.com/spryker/product-offer-reservation-gui) | Backoffice UI component for managing reservations for product offers. |
+| [ProductOfferReservationGui](https://github.com/spryker/product-offer-reservation-gui) | Back Office UI component for managing reservations for product offers. |
 | [ProductOfferSales](https://github.com/spryker/product-offer-sales) | Connects product offer and sales entities. |
 | [Sales](https://github.com/spryker/sales) | Provides the order management core functionality. |
 | [MerchantSalesOrderExtension](https://github.com/spryker/merchant-sales-order-extension) | Extension point for the `MerchantSalesOrder`. |
@@ -53,12 +64,12 @@ The following diagram illustrates the domain model of the Marketplace Order Mana
 
 {% info_block warningBox “Warning” %}
 
-Do not build Merchant functionality around Orders, but rather around Merchant Orders.
+Do not build the Merchant functionality around Orders, but rather around Merchant Orders.
 Make sure that Merchants do not modify the order directly, but instead use [MerchantOms](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-order-management-feature-walkthrough/merchant-oms.html) for this purpose.
 
 {% endinfo_block %}
 
-In the Merchant Portal, a Merchant can view and manage their `MerchantOrders`.
+In the Merchant Portal, merchants can view and manage their `MerchantOrders`.
 
 The information in the Merchant Portal is limited and includes:
 - customer information
@@ -66,7 +77,7 @@ The information in the Merchant Portal is limited and includes:
 - merchant order overview
 - totals
 
-Merchant Order uses its own Totals, based on Order Totals, restricted by the Merchant Order Item:
+Merchant order uses its own totals based on order totals, restricted by the Merchant Order Item:
 - refundTotal
 - grandTotal
 - taxTotal
@@ -75,20 +86,7 @@ Merchant Order uses its own Totals, based on Order Totals, restricted by the Mer
 - discountTotal
 - canceledTotal
 
-A *merchant order total* is the sum of the totals of items of an order relating to the merchant order.
-
-
-## Learn more
-
-- [MerchantOms](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-order-management-feature-walkthrough/merchant-oms.html)
-
-- [Marketplace Shipment](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-shipment-feature-walkthrough.html)
-
-- [Marketplace & Merchant State Machines](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1296599943/Reviewed+Marketplace+Merchant+State+Machines)
-
-- [Marketplace and Merchant State Machines Interaction](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1247904276/PUBLISHED+Marketplace+and+Merchant+State+Machines+Interaction)
-
-- [How-to: Creation a new MerchantOms flow](/docs/marketplace/dev/howtos/how-to-create-a-new-merchant-oms-flow.html)
+The *merchant order total* is the sum of the totals of items of an order relating to the merchant order.
 
 ## Related Developer articles
 

@@ -41,7 +41,7 @@ To import data into a message queue, use an instance of `Spryker\Zed\DataImport\
 
 Do the following:
 1. Provide two pieces of configuration to a queue writer's `::write()` method:
-* Queue name—the name of the resource-based queue, which stores the imported data between the steps (i.e., `import.product_abstract`).
+* Queue name—the name of the resource-based queue, which stores the imported data between the steps (for example, `import.product_abstract`).
 * Chunk size—the size of the chunks in which data is written to a queue.
 2. Define a dedicated configuration method in `Pyz\Zed\DataImport\DataImportConfig`:
 

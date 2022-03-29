@@ -1,5 +1,5 @@
 ---
-title: Quick Order- Measurement Units feature integration
+title: Quick Add to Cart + Measurement Units feature integration
 description: Quick Add to Cart + Measurement Units allow selling products by any unit of measure with a click. This guide describes how to integrate this feature into your project.
 last_updated: Mar 6, 2020
 template: feature-integration-guide-template

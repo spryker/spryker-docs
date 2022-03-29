@@ -21,12 +21,9 @@ Stock does not always reflect the real availability of products, as not all the 
 
 ## Warehouse management
 
-You can [create warehouses in the Back Office](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/creating-warehouses.html) or [import them](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse.csv.html).
+You can [create warehouses in the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/creating-warehouses.html).
 
-A warehouse can be assigned to a single store or shared between several stores. You can manage relations between stores and warehouses in the Back Office or by importing the warehouse and store data. See [Managing warehouses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/managing-warehouses.html) for details on how you can manage warehouses and stores in the back office and [File details: warehouse_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html) on how you can import the warehouse and store data.
-
-### Defining a warehouse address
-You can define the warehouse address that will be used as the shipping origin address by importing the warehouse address data. See [File details: warehouse_address.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html) for details about the import file.
+A warehouse can be assigned to a single store or shared between several stores. You can manage relations between stores and warehouses in the Back Office or by importing the warehouse and store data. See [Managing warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/managing-warehouses.html) for details on how you can manage warehouses and stores in the Back Office.
 
 ## Stock management
 
@@ -37,7 +34,6 @@ A product is associated with at least one stock product. It should be noted that
 When order is made, stock is not updated automatically in the system, you have to set it manually. You can define stock only for concrete products. You can set stock by:
 
 * Editing product stock in the Back Office. See [Editing stock](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html#editing-stock) for details.
-* Importing the quantities of items stored in each of the warehouses. See [Stocks](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/stocks.html) for details.
 
 ### How Spryker stores your product stock
 Spryker holds your product stock in a type called DECIMAL(20,10), which means that your product stock can be 20 digits long and have a maximum of 10 digits after the comma. For example:
@@ -93,12 +89,12 @@ For SEO purposes, products that are not available can still be displayed on the 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create a warehouses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/creating-warehouses.html)  |
-| [Manage warehouses](/docs/scos/user/user-guides/{{page.version}}/back-office-user-guide/administration/warehouses/managing-warehouses.html) |
+| [Create a warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/creating-warehouses.html)  |
+| [Manage warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/managing-warehouses.html) |
 | [Manage product availabilities](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html)  |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Inventory Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/nventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html) for developers.
+Are you a developer? See [Inventory Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

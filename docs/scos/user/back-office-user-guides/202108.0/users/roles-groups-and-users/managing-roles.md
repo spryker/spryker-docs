@@ -69,7 +69,7 @@ Information about bundles, controllers, and actions is contained in tabs in the 
 where:
 
     * *availability-gui* is **bundle**,
-    * i*ndex* is **controller**,
+    * *index* is **controller**,
     * *view* is **action**.
 
 The bundle, controller, and action values can also be found in the `navigation.xml` file either at
@@ -152,7 +152,7 @@ You can verify the bundle, controller and action values in the [navigation.xml f
 
 3. Go back to the *Edit Role* page and fill in the required fields:
 * **Bundle**: _product-attribute-gui_
-* **Controller**: _attriubte_
+* **Controller**: _attriubute_
 * **Action**: _create_
 * **Permission**: _deny_
 4. Click **Save**.

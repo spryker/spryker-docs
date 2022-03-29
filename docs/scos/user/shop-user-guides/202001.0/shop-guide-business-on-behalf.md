@@ -20,7 +20,9 @@ To open **Your Business Unit** page, go to Customer Account → **Your Business 
 ## Graphic User Interface
 
 {% info_block infoBox %}
+
 Hover your mouse over the numbers to view their description.
+
 {% endinfo_block %}
 
 <div class="mapster-container">
@@ -39,13 +41,13 @@ To log in to a different business unit, do the following:
 
 1. On the *Your Business Unit* page select the required company account from the drop-down:
 
-![Select another company user](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Business+on+Behalf/select-another-company-user.png) 
+![Select another company user](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Business+on+Behalf/select-another-company-user.png)
 
 2. (Optionally) Check **Remember Choice** option if you would like to make this account your default one on login.
 3. Click **Submit** to save the changes.
 
 After a successful change, you will be able to see  [COMPANY NAME / BUSINESS UNIT NAME] instead of Your Business Unit menu item:
 
-![Business unit](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Business+on+Behalf/business-unit-changed.png) 
+![Business unit](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Business+on+Behalf/business-unit-changed.png)
 
 <!-- Last review date: Mar 06, 2019 by Oksana Karasyova -->

@@ -1240,6 +1240,7 @@ To retrieve detailed information on an order, send the request:
 | totals.remunerationTotal | Integer | Total sum of remuneration.                      |
 
 **Billing and shipping addresses**
+
 | Attribute                  | Type   | Description                                                  |
 | -------------------------- | ------ | ------------------------------------------------------------ |
 | billingAddress             | object | List of attributes describing the billing address of the order. |

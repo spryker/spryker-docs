@@ -20,14 +20,16 @@ This topic describes the procedure you need to perform in order to create a new 
 To start working with attributes, navigate to the **Products > Attributes** section.
 ***
 For a new product in your store, you need to create both super attribute and product attribute. The first one is needed to define the product variants and the second one to define the product characteristics.
-***
+
 **To create a new product attribute:**
 1. On the **Product Attributes** page, click **Create Product Attributes**.
 2. On the **Create a Product Attribute** page:
     1. In the **Attribute Key** field, add a new attribute to the product.
+    
     {% info_block warningBox "Note" %}
-Keep in mind that it should not contain any special symbols.
-{% endinfo_block %}
+    Keep in mind that it should not contain any special symbols.
+    {% endinfo_block %}
+    
     2. In the **Input type** drop-down list, select the type of data input.
     3. Select the **Super attribute** checkbox to create a super attribute OR do not select the checkbox if you are creating a product descriptive attribute.
     When the check box is selected, the **Allow input any value other than predefined** option becomes disabled as a super attribute always uses predefined values.
@@ -37,10 +39,10 @@ Keep in mind that it should not contain any special symbols.
     Once Save is selected, the **Translation** tab becomes enabled.
 4. In the **Translations** tab, add the translation for your attribute key.
 5. Click **Save**.
-***
+
 **Tips & Tricks**
 If you want to apply this translation to other languages, click **Copy to other languages** icon next to the translation field.
-***
+
 **What's next?**
 Learn how the product attributes are managed in the [Managing Product Attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/managing-product-attributes.html) article.
 

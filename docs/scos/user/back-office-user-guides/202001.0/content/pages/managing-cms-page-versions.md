@@ -15,8 +15,10 @@ related:
 
 This article describes how you can manage versions of CMS pages: view general information, SEO details, compare CMS versions, and roll back to the selected version or discard changes to a page.
 ***
+
 To start working with the CMS page versions, navigate to the **Content Management** > **Pages** section.
 ***
+
 ## Viewing CMS Pages History
 To view version history for a CMS page:
 
@@ -31,7 +33,9 @@ To view version history for a CMS page:
 
 On the **Version History: [Page Name]** page, you can return to the list of CMS pages by clicking **Back to CMS** on the top of the page.
 ***
+
 ### Rolling back to a CMS Page Version
+
 To roll back to the specific version:
 1. On the **Version History: [Page Name]** page from the drop-down list, select the version that you want to return to.
 ![Rolling back to the selected version](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Pages/CMS+Pages+Versioning/page-versioning.png)
@@ -39,6 +43,7 @@ To roll back to the specific version:
 2. Click **Rollback to Selected Version** in the top right corner of the page. This will copy all data from the older version and publish the previous version in the online store.
 
 ***
+
 ### Comparing CMS Versions
 To compare CMS versions to see what changes you have made to the current version:
 1. On the **Version History: [Page Name]** page from the drop-down list, select the version you want to compare with the current one.

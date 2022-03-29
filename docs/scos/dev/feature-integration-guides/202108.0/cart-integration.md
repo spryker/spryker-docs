@@ -26,10 +26,10 @@ Before starting make sure you are familiar with the concept of Spryker Super Att
 Cart now supports changing the items in the cart by modifying their attributes. If we have a wrong T-Shirt size in the cart we will be able to change it.
 
 Cart now also supports product images out of the box.
-![cart_product_images](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/cart_product_images.png){height="" width=""}
+![cart_product_images](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/feature-integration-guides/cart-integration.md/cart_product_images.png)
 
 If we have products with multiple super attributes we can now, narrowing-down in the cart.
-![product_super_attributes](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/product_super_attributes.png){height="" width=""}
+![product_super_attributes](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/feature-integration-guides/cart-integration.md/product_super_attributes.png)
 
 ## Installation
 
@@ -83,7 +83,7 @@ Make sure the `ExpandBundleItemsWithImagesPlugin` is registered after the `Expan
 
 #### Cart variants
 
-Spryker provides the `CartVariant` module for this purpose. 
+Spryker provides the `CartVariant` module for this purpose.
 To install the `CartVariant` module, run:
 
 ```bash
@@ -656,7 +656,7 @@ class AttributeVariantsProvider
 -->
 
 ### AttributeMapCollector
-To support the mapping between attributes and availability, we need to collect additional data in our attribute map collector. You can do that by adding a single line with `SpyProductTableMap::COL_SKU` to the `getConreteProducts` function. 
+To support the mapping between attributes and availability, we need to collect additional data in our attribute map collector. You can do that by adding a single line with `SpyProductTableMap::COL_SKU` to the `getConreteProducts` function.
 
 The full function is as follows:
 
@@ -709,7 +709,7 @@ protected function filterConcreteProductIds(array $concreteProducts)
 <!--
 ## UI Integration
 
-You can use the demoshop's `cart-item.twig` as a template for your own project. 
+You can use the demoshop's `cart-item.twig` as a template for your own project.
 
 <details open>
 <summary markdown='span'>The following code sample demonstrates the feature's use:</summary>
@@ -762,7 +762,7 @@ You can use the demoshop's `cart-item.twig` as a template for your own project.
 <br>
 </details>
 
-Seemingly complex, you can simplify the code if your implementation does not support narrowing down of attributes (only one super attribute per product, i.e. T-shirt size). 
+Seemingly complex, you can simplify the code if your implementation does not support narrowing down of attributes (only one super attribute per product, for example, T-shirt size).
 
 <details open>
 <summary markdown='span'>The following snippet should help:</summary>
@@ -826,4 +826,3 @@ module.exports = {
 };
 ```
 -->
-

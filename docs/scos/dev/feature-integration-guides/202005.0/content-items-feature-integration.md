@@ -16,13 +16,13 @@ To start the feature integration, review and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Spryker Core | master |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/content-item:"^master" --update-with-dependencies
+composer require spryker-feature/content-item:"^{{page.version}}" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
 Ensure that the following modules have been installed in `vendor/spryker`:<table><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`Content`</td><td>`vendor/spryker/content`</td></tr><tr><td>`ContentStorage`</td><td>`vendor/spryker/content-storage`</td></tr><tr><td>`ContentGui`</td><td>`vendor/spryker/content-gui`</td></tr><tr><td>`ContentGuiExtension`</td><td>`vendor/spryker/content-gui-extension`</td></tr><tr><td>`ContentBanner`</td><td>`vendor/spryker/content-banner`</td></tr><tr><td>`ContentBannerGui`</td><td>`vendor/spryker/content-banner-gui`</td></tr><tr><td>`ContentProduct`</td><td>`vendor/spryker/content-product`</td></tr><tr><td>`ContentProductDataImport`</td><td>`vendor/spryker/content-product-data-import`</td></tr><tr><td>`ContentProductGui`</td><td>`vendor/spryker/content-product-gui`</td></tr><tr><td>`ContentProductSet`</td><td>`vendor/spryker/content-product-set`</td></tr><tr><td>`ContentProductSetDataImport`</td><td>`vendor/spryker/content-product-set-data-import`</td></tr><tr><td>`ContentProductSetGui`</td><td>`vendor/spryker/content-product-set-gui`</td></tr><tr><td>`ContentFile`</td><td>`vendor/spryker/content-file`</td></tr><tr><td>`ContentFileGui`</td><td>`vendor/spryker/content-file-gui`</td></tr></tbody></table>
@@ -555,13 +555,13 @@ To start the feature integration, review and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Spryker Core | master |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/content-item:"^master" --update-with-dependencies
+composer require spryker-feature/content-item:"^{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

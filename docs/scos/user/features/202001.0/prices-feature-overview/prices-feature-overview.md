@@ -1,5 +1,5 @@
 ---
-title: Price Functionality
+title: Prices feature overview
 description: In the article, you can find the price definition, its types, how the price is inherited and calculated.
 last_updated: Dec 21, 2019
 template: concept-topic-template
@@ -42,4 +42,4 @@ The concerns for the product price calculation are the following :
 * calculate amount of tax
 
 price for the options that were selected for the product (e.g.: frame, fabric, etc.)
-For more information, see [Checkout Calculation](/docs/scos/user/features/{{page.version}}/cart-feature-overview/calculation/calculation-3.0.html).
+For more information, see [Checkout Calculation](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculation-3-0.html).

@@ -28,6 +28,7 @@ The primary uses of scheduled prices are to automate price changes and enable Ba
 ![Scheduled Prices - Product Catalog Manager](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Price/Scheduled+Prices/scheduled-prices-section.png)
 
 {% info_block infoBox %}
-This is how a Product Catalog Manager can set up price product schedules for a defined list of products. The imported product prices will be applied on the specified dates. Also, you can import several files with price schedules for the same product and both schedules will be applied. 
-{% endinfo_block %}
 
+This is how a Product Catalog Manager can set up price product schedules for a defined list of products. The imported product prices will be applied on the specified dates. Also, you can import several files with price schedules for the same product and both schedules will be applied.
+
+{% endinfo_block %}

@@ -38,7 +38,7 @@ A developer can create [dynamic product labels](#dynamic-product-label).
 
 ## Dynamic product label
 
-*Dynamic product label* is a product label that follows the condition rules defined on a code level. Unlike the regular product label, the dynamic product label is automatically applied to the product that fulfils the condition rules. A developer can edit the rules or create new dynamic product lablels.
+*Dynamic product label* is a product label that follows the condition rules defined on a code level. Unlike the regular product label, the dynamic product label is automatically applied to the product that fulfils the condition rules. A developer can edit the rules or create new dynamic product labels.
 The following dynamic product labels are shipped by default:
 
 * *Discontinued*

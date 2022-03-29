@@ -1126,7 +1126,7 @@ The following additional attributes will be added to the response:
 | Field* | Type | Description |
 | --- | --- | --- |
 | name | string | Name of a product label. |
-| isExclusive | boolean | Indicates if the label is Exclusive, i.e. takes precedence over other labels the product might have so that only this label can be displayed for the product. |
+| isExclusive | boolean | Indicates if the label is Exclusive, for example, takes precedence over other labels the product might have so that only this label can be displayed for the product. |
 | position | integer | Number of the position in the priority set. |
 | frontEndReference | string | Defines the custom product label type. |
 

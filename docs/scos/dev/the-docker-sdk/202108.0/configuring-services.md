@@ -12,29 +12,14 @@ redirect_from:
   - /docs/en/configuring-services
 related:
   - title: Deploy File Reference - 1.0
-    link: docs/scos/dev/the-docker-sdk/page.version/deploy-file-reference-1.0.html
+    link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file-reference-1.0.html
   - title: Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
 ---
 
 
 
-This document describes configuration options of the services shipped with Spryker in Docker by default.  Find the list of the services below:
-
-* Database
-* ElasticSearch
-* Kibana UI
-* RabbitMQ
-* Swagger UI
-* Redis
-* Redis GUI
-* MailHog
-* Blackfire
-* New Relic
-* WebDriver
-* Dashboard
-* Tideways
-
+This document describes configuration options of the services shipped with Spryker in Docker by default.
 
 {% info_block infoBox %}
 

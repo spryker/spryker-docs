@@ -16,7 +16,7 @@ Please overview and install the necessary features before beginning the integrat
 
 | Name | Version |
 | --- | --- |
-| CMS |master  |
+| CMS |{{page.version}}  |
 
 ### 1) Install the required modules using Composer
 #### Implementation

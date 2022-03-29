@@ -1,5 +1,5 @@
 ---
-title: Prices per merchant relation feature integration
+title: Prices per Merchant Relation feature integration
 description: The guide walks you through the process of installing the Prices per Merchant feature in your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template

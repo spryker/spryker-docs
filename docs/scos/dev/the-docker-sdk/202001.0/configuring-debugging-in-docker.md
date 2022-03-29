@@ -31,14 +31,14 @@ Follow the steps to configure Xdebug in PHPstorm:
       b. If not selected, select the **Can accept external connections** checkbox.
       c. If selected, clear the **Force break at first line when no path mapping specified** and **Force break at first line when a script is outside the project** checkboxes.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Debugging+Setup+in+Docker/binary.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Docker+SDK/Configuring+debugging+in+Docker/xdebug-configuration.png) 
 
 3. In the **External connections** block:
 
       a. Increase **Max. simultaneous connection** from 4 to 5.
       b. If selected, unselect the **Ignore external connections through unregistered server configurations** and **Break at first line in PHP scripts** checkboxes.
 
-![image 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Debugging+Setup+in+Docker/binary2.png) 
+![image 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Docker+SDK/Configuring+debugging+in+Docker/xdebug-external-connections-configuration.png) 
 
 ### Servers configuration
 Follow the steps to configure servers:
@@ -50,7 +50,7 @@ Follow the steps to configure servers:
     2. In the **Host** section, enter *spryker*.
     3. Select the **Use path mappings** checkbox.
     4. Set the absolute path to the `/data` folder on the server for the folder with your Spryker project files.
-    ![Servers config](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Debugging+Setup+in+Docker/servers-confg.png) 
+    ![Servers config](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Docker+SDK/Configuring+debugging+in+Docker/servers-confg.png) 
 
 
 ## Configuring Xdebug in PhpStorm - Optional Configuration
@@ -64,15 +64,15 @@ Follw the steps to add a PHP interpreter:
   b. Image name: "spryker_app:latest"
   c. PHP interpreter path: **php** 
 
-![Remote php interpreter](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Debugging+Setup+in+Docker/remote-php-interpreter.png) 
+![Remote php interpreter](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Docker+SDK/Configuring+debugging+in+Docker/remote-php-interpreter.png) 
 
 ### Remote Debug configuration
 Follow the steps to add a PHP Remote Debug configuration:
 1. Open **Run** → **Edit Configurations...**.
-![Edit configurations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Debugging+Setup+in+Docker/edit-configs.png) 
+![Edit configurations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Docker+SDK/Configuring+debugging+in+Docker/edit-configs.png) 
 
 2. Add new **PHP Remote Debug** configuration.
-![PHP remote debug](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Debugging+Setup+in+Docker/php-remote-debug.png) 
+![PHP remote debug](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Docker+SDK/Configuring+debugging+in+Docker/php-remote-debug.png) 
 
 3. Set the name to "spryker".
 4. Select the **spryker** server.
@@ -83,10 +83,10 @@ Follow the steps to add a PHP Remote Debug configuration:
 To debug an application, do the following:
 
 1. Make a breakpoint:
-![Breakpoint](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Debugging+Setup+in+Docker/breakpoint.png)
+![Breakpoint](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Docker+SDK/Configuring+debugging+in+Docker/breakpoint.png)
 
 2. Click ![Start listening](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Docker+SDK/Configuring+debugging+in+Docker/start-listening.png)
 3. Open the application in browser.
 4. Navigate to the action for which you configured the breakpoint in step 1. The debugging process should be running in the IDE:
-![Debug process](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Debugging+Setup+in+Docker/debug-process.png)
+![Debug process](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Docker+SDK/Configuring+debugging+in+Docker/debug-process.png)
 

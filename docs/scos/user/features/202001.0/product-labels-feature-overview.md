@@ -130,8 +130,6 @@ A Back Office user can define the stores each product label is displayed in. For
 
 See [Creating product labels](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/creating-product-labels.html) to learn how a Back Office user can define store relation for a product label.
 
-A developer can also [import store relations for product labels](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html).
-
 ## Product label statuses
 
 A product label can have the following statuses:
@@ -141,7 +139,7 @@ A product label can have the following statuses:
 
 If a product label is active, it is displayed on all the product pages it is applied to. If a product label is inactive, it is still applied to the selected product, but it is not displayed on the respective product pages. This might be useful when you want to prepare for an event beforehand. You can create an inactive product label and apply it to the desired products. When the event starts, you just need to activate the label to show it on all the product pages it is applied to.
 
-See [Activating/deactivating a product label](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/managing-product-labels.html#editing-product-labels) to learn how a Back Office user can activate and deactivate product labels in the Back Office.
+See [Activating/deactivating a product label](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/managing-product-labels.html#activatingdeactivating-a-product-label) to learn how a Back Office user can activate and deactivate product labels in the Back Office.
 
 ## Product label exclusivity
 

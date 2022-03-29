@@ -16,7 +16,6 @@ related:
 Slots are used to embed content into pages to which [templates with slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html) are applied.
 
 In the Slots page, you can:
-
 * overview the list of templates of Storefront pages;
 * overview the list of slots;
 * activate or deactivate slots.
@@ -33,11 +32,14 @@ On entering the page. the following is selected by default:
 * The first CMS Block from the **List of Blocks for Slot [name]** is selected by default. In the **Product Pages** field, you can see the pages in which this CMS block is displayed. Click on a different CMS block to display its pages.
 
 {% info_block warningBox "Integration required" %}
-You can work with slots after the [Templates & Slots feature has been integrated](/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-feature-integration-guide.html
-{% endinfo_block %} into your project.)
-***
-**What's next?**
 
-* To learn how to add content to Storefront pages using Templates & Slots, see [Adding Content to Storefront Pages Using Templates & Slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/slots/adding-content-to-storefront-pages-using-templates-and-slots.html).
-* To learn how to activate or deactivate slots, assign CMS blocks to a slot, change the order of CMS blocks assigned to a slot, delete an assignment or select the pages in which a CMS block is displayed, see [Managing Slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html). 
+You can work with slots after the [Templates & Slots feature has been integrated](/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-feature-integration.html) into your project.
+
+{% endinfo_block %}
+
+***
+
+**What's next?**
+* To learn how to add content to Storefront pages using Templates & Slots, see [Adding Content to Storefront Pages Using Templates & Slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/adding-content-to-storefront-pages-using-templates-and-slots-best-practices.html).
+* To learn how to activate or deactivate slots, assign CMS blocks to a slot, change the order of CMS blocks assigned to a slot, delete an assignment or select the pages in which a CMS block is displayed, see [Managing Slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html).
 * To learn about the attributes you can see in the **Slots** section, see the [Slots: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/references/slots-reference-information.html) section.

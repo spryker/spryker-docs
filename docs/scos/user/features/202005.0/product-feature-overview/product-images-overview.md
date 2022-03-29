@@ -1,5 +1,5 @@
 ---
-title: Product Image Management
+title: Product Images overview
 description: Group several images into sets and link them to products. One product can have several named and localized sets of images.
 last_updated: Sep 14, 2020
 template: concept-topic-template
@@ -24,23 +24,12 @@ You can enjoy the following benefits of the feature:
 
 ## If you are:
 
-<div class="mr-container">
-    <div class="mr-list-container">
-        <!-- col1 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-green">
-                <li class="mr-title">Developer</li>
-                <li><a href="/docs/scos/dev/feature-integration-guides/{{page.version}}/category-image-feature-integration.html" class="mr-link">Integrate the Category Image feature v. 201907.0 into your project</a></li>
-                <li><a href/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html" class="mr-link">Integrate Product + Cart feature v. 201907.0 into your project</a></li>
-            </ul>
-        </div>
-        <!-- col2 -->
-        <div class="mr-col">
-            <ul class="mr-list mr-list-blue">
-                <li class="mr-title"> Back Office User</li>
-                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html#adding-images" class="mr-link">Assign images to a product</a></li>
-                <li><a href="/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html" class="mr-link">Assign images to categories</a></li>
-                </ul>
-        </div>
-         </div>
-</div>
+Developer:
+
+- [Integrate the Category Image feature v. 202005.0 into your project](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-image-feature-integration.html)
+- [Integrate Product + Cart feature v. 202005.0 into your project](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)
+
+Back Office User:
+
+- [Assign images to a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html#adding-images)
+- [Assign images to categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html)

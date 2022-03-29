@@ -87,10 +87,19 @@ Response sample:
 
 | CODE | REASON |
 | --- | --- |
-| 401 | The access token is invalid. |
-| 403 | The access token is missing. |
-| 404 | Cart not found. |
+| 001 | The access token is invalid. |
+| 002 | The access token is missing. |
+| 101 | Cart is not found. |
+| 104 | Cart uuid is missing. |
 | 422 | Failed to share a cart. |
+| 901 | `idCompanyUser` field is not specified or empty. |
+| 2501 | Cart permission group is not found. |
+| 2701 | Action is forbidden. |
+| 2702 | Failed to share a cart. |
+| 2703 | Shared cart not found. |
+| 2704 | Shared cart ID is missing. |
+| 2705 | Shared cart is not found. |
+| 2706 | Failed to save the shared cart. |
 
 ## Next steps
 

@@ -12,7 +12,7 @@ redirect_from:
 
 The Business on Behalf and Company Account APIs provide REST access to Company Account management. In your development, the resources provided by the API can help you performing the following tasks:
 * [Logging In as Company User](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html)
-* [Retrieving Company User Information](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-user-information.html)
-* [Retrieving Company Information](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-companies.html)
-* [Retrieving Business Unit Information](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-unit-information.html)
-* [Retrieving Company Role Information](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-roles.html)
+* [Retrieving Company Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-users.html)
+* [Retrieving Companies](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-companies.html)
+* [Retrieving Business Units](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-units.html)
+* [Retrieving Company Roles](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-roles.html)

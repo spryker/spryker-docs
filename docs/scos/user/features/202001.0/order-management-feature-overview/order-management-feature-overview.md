@@ -37,6 +37,6 @@ Efficiently keep track of your order processing and ensure quick fulfillment. Ma
 <a class="feature-link" href="/docs/scos/user/features/{{page.version}}/reorder-feature-overview.html">Reorder</a>
 <a class="feature-link" href="/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-management-feature-overview.html">Order Processing</a>
 <a class="feature-link" href="/docs/scos/user/features/{{page.version}}/order-management-feature-overview/splittable-order-items-overview.html">Splittable Order Items</a>
-<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/reclamations-feature-overview.html"">Reclamations</a>
+<a class="feature-link" href="/docs/scos/user/features/{{page.version}}/reclamations-feature-overview.html">Reclamations</a>
 <a class="feature-link" href="/docs/scos/user/features/{{page.version}}/order-management-feature-overview/split-delivery-overview.html">Split Delivery</a>
     </div>

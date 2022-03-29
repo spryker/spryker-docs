@@ -10,7 +10,7 @@ redirect_from:
   - /v4/docs/en/glue-api-customer-access-feature-integration
 related:
   - title: Getting the List of Protected Resources
-    link: docs/scos/dev/glue-api-guides/page.version/getting-the-list-of-protected-resources.html
+    link: docs/scos/dev/glue-api-guides/page.version/retrieving-protected-resources.html
 ---
 
 {% info_block errorBox %}

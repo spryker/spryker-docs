@@ -1,7 +1,7 @@
 ---
 title: Marketplace Product Offer feature walkthrough
 last_updated: Apr 23, 2021
-description: Product Offer is created when merchants wants to sell products already available on Marketplace.
+description: Product Offer is created when merchants want to sell products already available on Marketplace.
 template: feature-walkthrough-template
 redirect_from: /docs/marketplace/dev/feature-walkthroughs/202108.0/marketplace-product-offer-feature-walkthrough/rendering-merchant-product-offers-on-the-storefront.html
 ---
@@ -10,7 +10,7 @@ The *Marketplace Product Offer* entity is created when multiple merchants sell t
 
 The Marketplace product offer has its own validity dates and its own availability calculation based on its reservations.
 
-The offer product re-use and extend concrete product features. All product-related data is stored and processed as concrete products.
+The product offer re-uses and extends concrete product features. All product-related data is stored and processed as concrete products.
 All offer-related data is stored in a separate entity and linked to a concrete product.
 
 The Marketplace Product Offer feature contains both merchant product offer and product offer concepts. Merchant product offer extends product offer by adding a pointer to a merchant.

@@ -22,4 +22,3 @@ Spryker Docker SDK is used for the following purposes:
 1. Building production-like Docker images.
 2. Serving as part of development environment based on Docker.
 3. Simplifying the process of setting up a local demo of Spryker project.
-

@@ -1,5 +1,5 @@
 ---
-title: Custom order reference feature integration
+title: Custom Order Reference feature integration
 description: Use the guide to install the Custom Order Reference feature in your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template

@@ -29,8 +29,11 @@ To start managing customers, navigate to the **Customers > Customers** section.
 2. On the **Add a customer** page, enter the customer information. The customer information must include first name, last name, and the email address that will be linked to the new account. The email address is important for completing the registration (by accessing the link that will be sent by email) or for later use of the forgot password functionality.
 3. Send password token by email by selecting the **Send password token through email** checkbox. After saving the customer data, an email will be sent to the customer containing a link. By accessing the link, the customer will be able to set a password for the account. 
 {% info_block infoBox "Info" %}
+
 If you don’t select this option, the customer is still able to set a password for their account, by clicking the reset password link from the online store.
+
 {% endinfo_block %}
+
 4. To complete the customer creation, click **Save**.
 
 To know more about the attributes you see, select, and enter while creating a customer, see the [Customers: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers-customer-access-customer-groups/references/customers-reference-information.html) article. 

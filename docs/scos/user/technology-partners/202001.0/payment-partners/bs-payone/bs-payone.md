@@ -31,10 +31,10 @@ related:
 
 ## Partner Information
 
-[ABOUT BS PAYONE](https://www.payone.com/) 
-BS PAYONE GmbH is headquartered in Frankfurt am Main and is one of the leading omnichannel-payment providers in Europe. In addition to providing customer support to numerous Savings Banks (Sparkasse) the full-service payment service provider also provides cashless payment transaction services to more than 255,000 customers from stationary trade to the automated and holistic processing of e-commerce and mobile payments. 
+[ABOUT BS PAYONE](https://www.payone.com/)
+BS PAYONE GmbH is headquartered in Frankfurt am Main and is one of the leading omnichannel-payment providers in Europe. In addition to providing customer support to numerous Savings Banks (Sparkasse) the full-service payment service provider also provides cashless payment transaction services to more than 255,000 customers from stationary trade to the automated and holistic processing of e-commerce and mobile payments.
 
-YOUR ADVANTAGES: 
+YOUR ADVANTAGES:
 
 * <b>One solution, one partner, one contract</b>
 Simple & efficient. Technical processing and financial services from a single source.
@@ -45,20 +45,20 @@ Effective accounting support through transaction allocation and reconciliation.
 * <b>Credit entries independent of payment type</b>
 Fast returns management. With automated refunds.
 * <b>Short time to market thanks to plug'n pay</b>
-1-click checkout and seamless integration. For an increasing conversion rate. 
+1-click checkout and seamless integration. For an increasing conversion rate.
 
 We integrate with a wide range of payment methods that can be configured according to your needs and convenience. Payment method flows are configured using state machines.
 
 Payone provides the following methods of payment:
 
-* [Credit Card](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-credit-card-payment.html)
-* [Direct Debit](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-direct-debit-payment.html)
-* [Online Transfer](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-online-transfer-payment.html)
-* [Paypal](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-paypal-payment.html)
-* [Prepayment](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-prepayment.html)
-* [Invoice](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-invoice-payment.html)
-* [Security Invoice](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-security-invoice-payment.html)
-* [Paypal Express Checkout](/docs/scos/dev/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-paypal-payment.html-express-checkout)
+* [Credit Card](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-credit-card-payment.html)
+* [Direct Debit](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-direct-debit-payment.html)
+* [Online Transfer](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-online-transfer-payment.html)
+* [Paypal](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-paypal-payment.html)
+* [Prepayment](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-prepayment.html)
+* [Invoice](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-invoice-payment.html)
+* [Security Invoice](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-invoice-payment.html)
+* [Paypal Express Checkout](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-paypal-payment.html)
 
 We use state machines for handling and managing orders and payments. To integrate Payone payments, a state machine for Payone should be created.
 
@@ -217,7 +217,7 @@ Optionally configure security firewall for `/payone` route to accept `Transactio
 Excerpt from PAYONE Platform Channel Server API document:
 
     <br>
-According to the configuration of your payment portal you will receive the data and the status for each payment processed via the URL you have submitted. The data transfer is based on simple HTTP-POST request (key/value pairs). The `TransactionStatus` is sent from the following IP addresses: 185.60.20.0/24 (i.e. 185.60.20.1 to 185.60.20.254). Please configure your firewall to allow incoming packets from these IP addresses.
+According to the configuration of your payment portal you will receive the data and the status for each payment processed via the URL you have submitted. The data transfer is based on simple HTTP-POST request (key/value pairs). The `TransactionStatus` is sent from the following IP addresses: 185.60.20.0/24 (for example, 185.60.20.1 to 185.60.20.254). Please configure your firewall to allow incoming packets from these IP addresses.
 
 To provide payment details for rendering on frontend, add Payone client to the Checkout and to the Customer module:
 

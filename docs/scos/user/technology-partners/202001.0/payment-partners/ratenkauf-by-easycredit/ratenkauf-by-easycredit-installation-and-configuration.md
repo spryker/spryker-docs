@@ -24,7 +24,7 @@ After installation, run the `propel:install` command or check the following migr
 
 ```php
 CREATE SEQUENCE "spy_payment_easycredit_api_log_pk_seq";
- 
+
 CREATE TABLE "spy_payment_easycredit_api_log"
 (
     "id_payment_easycredit_api_log" INTEGER NOT NULL,
@@ -39,9 +39,9 @@ CREATE TABLE "spy_payment_easycredit_api_log"
     "updated_at" TIMESTAMP,
     PRIMARY KEY ("id_payment_easycredit_api_log")
 );
- 
+
 CREATE SEQUENCE "spy_payment_easycredit_order_identifier_pk_seq";
- 
+
 CREATE TABLE "spy_payment_easycredit_order_identifier"
 (
     "id_payment_easycredit_order_identifier" INTEGER NOT NULL,
@@ -62,19 +62,19 @@ Perform the initial configuration of Easycredit:
 use SprykerEco\Shared\Easycredit\EasycreditConstants;
 use Spryker\Shared\Oms\OmsConstants;
 use Spryker\Shared\Sales\SalesConstants;
- 
+
 ...
- 
+
 $config[OmsConstants::ACTIVE_PROCESSES] = [
     ...
     'Easycredit01',
 ];
- 
+
 $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
     ...
     'easycredit' => 'Easycredit01',
 ];
- 
+
 ...
 $config[EasycreditConstants::SHOP_IDENTIFIER] = 'Your shop identifier';
 $config[EasycreditConstants::SHOP_TOKEN] = 'Your shop token';
@@ -94,7 +94,7 @@ CheckoutPageDependencyProvider.php
 
 ```php
 public const CLIENT_EASYCREDIT = 'CLIENT_EASYCREDIT';
- 
+
 ...
     /**
      * @param \Spryker\Yves\Kernel\Container $container
@@ -105,10 +105,10 @@ public const CLIENT_EASYCREDIT = 'CLIENT_EASYCREDIT';
     {
         $container = parent::provideDependencies($container);
         $container = $this->addEasycreditClient($container);
-     
+
         return $container;
     }
- 
+
     /**
      * @param \Spryker\Yves\Kernel\Container $container
      *
@@ -119,12 +119,12 @@ public const CLIENT_EASYCREDIT = 'CLIENT_EASYCREDIT';
         $container[static::PAYMENT_SUB_FORMS] = function () {
             $subFormPluginCollection = new SubFormPluginCollection();
             $subFormPluginCollection->add(new EasycreditSubFormPlugin());
- 
+
             return $subFormPluginCollection;
         };
          return $container;
     }
- 
+
     /**
      * @param \Spryker\Yves\Kernel\Container $container
      *
@@ -137,10 +137,10 @@ public const CLIENT_EASYCREDIT = 'CLIENT_EASYCREDIT';
             $stepHandlerPluginCollection->add(new EasycreditHandlerPlugin(), PaymentTransfer::EASYCREDIT);
              return $stepHandlerPluginCollection;
         };
- 
+
         return $container;
     }
- 
+
     /**
      * @param \Spryker\Yves\Kernel\Container $container
      *
@@ -151,7 +151,7 @@ public const CLIENT_EASYCREDIT = 'CLIENT_EASYCREDIT';
         $container[static::CLIENT_EASYCREDIT] = function (Container $container) {
             return $container->getLocator()->easycredit()->client();
         };
- 
+
         return $container;
     }
 ...
@@ -161,7 +161,7 @@ public const CLIENT_EASYCREDIT = 'CLIENT_EASYCREDIT';
 To use commands and conditions for events in OMS,  define them.   
 
 OmsDependencyProvider
-    
+
 ```php
 ...
 $container->extend(self::CONDITION_PLUGINS, function (ConditionCollectionInterface $conditionCollection) {
@@ -185,7 +185,7 @@ protected function getCheckoutOrderSavers(Container $container)
         new EasycreditOrderIdentifierPlugin(),
     ];
 }
- 
+
 ...
 ```
 
@@ -428,7 +428,7 @@ class EasycreditStep extends AbstractBaseStep implements StepWithExternalRedirec
     {
         return true;
     }
-    
+
 ```
 
 ShipmentStep.php
@@ -897,7 +897,7 @@ Summary step - `src/Pyz/Yves/CheckoutPage/Theme/default/views/summary/summary.tw
 	</div>
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
-<br>
+
 </details>
 
 **pdp.twig**
@@ -992,8 +992,10 @@ PDP page - `src/Pyz/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.twig`
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
-  {% info_block infoBox "Note" %}
+{% info_block infoBox "Note" %}
+
 You might want to configure the product detail page to add some validation and show the Easycredit badge in `src/Pyz/Yves/ProductDetailPage/Theme/default/components/molecules/product-configurator/product-configurator.twig`
+
 {% endinfo_block %}
 
 product-configurator.twig

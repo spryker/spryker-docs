@@ -101,6 +101,7 @@ Request sample: `POST http://glue.mysprykershop.com/agent-customer-impersonation
 | --- | --- |
 | 001 | Access token is invalid. |
 | 4103 | Action is available to an agent user only. |
+| 4104  | Failed to impersonate a customer. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 

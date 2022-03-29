@@ -36,7 +36,7 @@ You can also search for a navigation element by starting to type its name or key
 1. Click on the navigation element in the **List of navigation elements** table to select the element.
 2. Add the relevant information in the **Create child node** section.
 3. Click **Save**.
-![Creating a child node](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Navigation/Managing+Navigation/create-child-node.gif){height="300" width="800"}
+![Creating a child node](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Navigation/Managing+Navigation/create-child-node.gif)
 
 After saving your node, the view will be updated and instead of the **Create child** node frame you should now be able to see the **Update node** frame. The newly added node now should appear in your navigation tree.
 ***
@@ -46,7 +46,7 @@ After saving your node, the view will be updated and instead of the **Create chi
 3. In the **Create child node** section, click **Create child node**.
 4.  Add the relevant information in the **Create child node** section.
 5. Click **Save**.
-    ![Creating a child node to another node](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Navigation/Managing+Navigation/create-child-node-to-node.gif){height="300" width="800"}
+    ![Creating a child node to another node](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Navigation/Managing+Navigation/create-child-node-to-node.gif)
 ***
 ## Editing, Deleting, Deactivating/Activating a Navigation Element
 
@@ -60,7 +60,7 @@ To **edit, delete, deactivate or activate** a navigation element, in the **List 
 
 1. To reorder nodes, drag and drop elements in the tree.
 2. To keep the changes, click **Save order**.
-![Reordering nodes](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Navigation/Managing+Navigation/reordering-nodes.gif){height="200" width="450"}
+![Reordering nodes](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Navigation/Managing+Navigation/reordering-nodes.gif)
 ***
 **Tips & Tricks**
 To know more about the node types that you select, see [Navigation Node Types](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/references/navigation-reference-information.html) in the References section.

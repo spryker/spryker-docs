@@ -16,14 +16,14 @@ Please overview and install the necessary features before beginning the integrat
 
 | Name | Version |
 | --- | --- |
-| Category | master |
-| Spryker Core | master |
+| Category | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/category-image:"^master" --update-with-dependencies
+composer require spryker-feature/category-image:"^{{page.version}}" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
 Make sure that the following modules were installed:<table><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`CategoryImage`</td><td>`vendor/spryker/category-image`</td></tr><tr><td>`CategoryImageGui`</td><td>`vendor/spryker/category-image-gui`</td></tr><tr><td>`CategoryImageStorage`</td><td>`vendor/spryker/category-image-storage`</td></tr><tr><td>`CategoryExtension`</td><td>`vendor/spryker/category-extension`</td></tr></tbody></table>
@@ -362,14 +362,14 @@ Please overview and install the necessary features before beginning the integrat
 
 | Name | Version |
 | --- | --- |
-| Category | master |
-| Spryker Core | master |
+| Category | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/category-image:"^master" --update-with-dependencies
+composer require spryker-feature/category-image:"^{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

@@ -1,5 +1,5 @@
 ---
-title: Quick Order- Non-splittable Products feature integration
+title: Quick Add to Cart + Non-splittable Products feature integration
 description: Install the Quick Add to Cart and Non-splittable Products features in your project.
 last_updated: Nov 22, 2019
 template: feature-integration-guide-template

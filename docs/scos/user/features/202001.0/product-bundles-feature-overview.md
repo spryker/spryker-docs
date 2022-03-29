@@ -14,12 +14,12 @@ With the Product Bundles feature you can tie individual items together and sell 
 
 A bundle represents two or more products, sold as a set; it is a distinct product that incorporates other concrete products.
 
-Example:
-![Product bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Bundles/product_bundles.png)
-
 {% info_block infoBox %}
 
 Bundles are handled in different ways:<br>For example, a marketing bundle of two items that gives a 20% discount is purchased as a single item and then split for processing into its two constituent items. Another scenario is when products are put together from separate purchase items, for example when tires and rims are sold as separate items and then delivered assembled as wheels.
+
+Example:
+![Product bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Bundles/product_bundles.png)
 
 {% endinfo_block %}
 

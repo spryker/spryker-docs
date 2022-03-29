@@ -22,12 +22,11 @@ For the CMS pages in search results feature, the following details are provided:
 ## Sorting by Relevance and Name
 
 For the convenience of shop visitors, they can easily change the way the search results of the CMS pages list will be displayed. For this, simply use sorting options on the website:
-
 * **Sort by relevance**: Search results that are most likely relevant to what you are looking for will be displayed at the top of the page.
 * **Sort by name ascending**: The pages in search results will be arranged in the order from the shortest name in the title to the longest one.
 * **Sort by name descending**: The pages in search results will be arranged in the reversed order: from the longest title name to the shortest one.
 
-![Sorting by name](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Searching+within+CMS+Pages/sort-by-name.png) 
+![Sorting by name](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Searching+within+CMS+Pages/sort-by-name.png)
 
 After the sorting has been applied, the page will be reloaded and the search results will be listed in the corresponding order.
 
@@ -38,14 +37,13 @@ Therefore, sorting options by a name and relevance available on the search resul
 The number of pages applicable to search results is wrapped into brackets next to the Pages or Products tab. This means that when the Products tab is active - the number is shown for the Pages tab and vice versa. However, if there are no results for CMS pages, neither tab, no counter will be displayed.
 
 It is possible to specify how many CMS pages will be returned to the page. For now, there are three values:
-
 * 12 - defines the minimum value set by default
 * 24
 * 36 - defines the maximum number of pages that can be displayed on the search results page.
 
 Thus, if you need to load more results, select the respective number from the drop-down.
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Searching+within+CMS+Pages/pages-number.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Searching+within+CMS+Pages/pages-number.png)
 
 ## Pagination
 

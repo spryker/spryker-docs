@@ -23,7 +23,7 @@ For detailed information on the modules that provide the API functionality and r
 To retrieve tax sets of a product, send the request:
 
 ---
-`GET` **/abstract-products/*{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}*/tax-sets**
+`GET` **/abstract-products/*{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}*/product-tax-sets**
 
 ---
 

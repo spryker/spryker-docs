@@ -43,7 +43,7 @@ Depending on your project requirements, choose one of the versioning approaches:
 
 {% info_block infoBox "Fork" %}
 
-[Spryker Cloud](https://cloud.spryker.com/) does not support forks of `spryker/docker-sdk`.
+Spryker Cloud Commerce OS does not support forks of `spryker/docker-sdk`.
 
 {% endinfo_block %}
 

@@ -1,5 +1,5 @@
 ---
-title: Alternative products + wishlist feature integration
+title: Alternative products + Wishlist feature integration
 description: The guide walks you through the process of installing the Alternative products and Wishlist features into the project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template

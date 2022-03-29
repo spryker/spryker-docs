@@ -38,7 +38,7 @@ To learn how to create and manage content items in CMS, see:
 {% endinfo_block %}
 
 ## Installation
-For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-api-feature-integration.html).
+For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-feature-integration.html).
 
 ## Retrieving Abstract Product List Content Item Data
 To retrieve the full information on the abstract product list by the content item key, send a GET request to the following endpoint:
@@ -1133,7 +1133,7 @@ The following additional attributes will be added to the response:
 | Field* | Type | Description |
 | --- | --- | --- |
 | name | string | Name of a product label. |
-| isExclusive | boolean | Indicates if the label is Exclusive, i.e. takes precedence over other labels the product might have so that only this label can be displayed for the product. |
+| isExclusive | boolean | Indicates if the label is Exclusive, for example, takes precedence over other labels the product might have so that only this label can be displayed for the product. |
 | position | integer | Number of the position in the priority set. |
 | frontEndReference | string | Defines the custom product label type. |
 

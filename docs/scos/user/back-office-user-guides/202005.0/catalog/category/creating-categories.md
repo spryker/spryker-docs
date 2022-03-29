@@ -33,29 +33,40 @@ The Create page is split into two tabs: **General** and **Image**:
 **To create a product category:**
 1. In the **General** tab, enter and select the attributes for your category. See [Category: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/references/category-reference-information.html).
 2. Enter the attributes of your image set. See [Category: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/references/category-reference-information.html).
-{% info_block infoBox %}
-Small images will be used when subcategories on the parent category page are displayed as a list, while the large images will be used when subcategories are displayed as a grid.
-{% endinfo_block %}
 
-{% info_block infoBox %}
-Even though you can add several image sets and several images to an image set, out of the box, there is no place in the back end and front end where several image sets or images can be displayed for a category. However, if you still do that, the following logic applies:
-{% endinfo_block %}
-*     When adding several image sets, the image set going first or having the name 'default' will be applied to the category. 
-*     When adding several images to the image set that is active for the category, the image with the lowest Sort Order field value is applied to the category. If there are several images with the same value, the image which has been added first is applied. The lowest possible value is "0".
+  {% info_block infoBox %}
+
+  Small images will be used when subcategories on the parent category page are displayed as a list, while the large images will be used when subcategories are displayed as a grid.
+
+  {% endinfo_block %}
+
+  {% info_block infoBox %}
+
+  Even though you can add several image sets and several images to an image set, out of the box, there is no place in the back end and front end where several image sets or images can be displayed for a category. However, if you still do that, the following logic applies:
+
+   *     When adding several image sets, the image set going first or having the name 'default' will be applied to the category. 
+   *     When adding several images to the image set that is active for the category, the image with the lowest Sort Order field value is applied to the category. If there are several images with the same value, the image which has been added first is applied. The lowest possible value is "0".
+
+  {% endinfo_block %}
 
 3. Click **Next** at the bottom of the page, or select the **Image** tab next to **General**.
 4. In the **Image** tab, add an image to the category:
     1. Click **Add image set**.
     2. Enter the attributes of your image set. See [Category: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/references/category-reference-information.html).  
-    {% info_block infoBox %}
-Keep in mind that small images will be used when subcategories on the parent category page are displayed as a list, while the large images will be used when subcategories are displayed as a grid.
-{% endinfo_block %}
+
+      {% info_block infoBox %}
+
+      Keep in mind that small images will be used when subcategories on the parent category page are displayed as a list, while the large images will be used when subcategories are displayed as a grid.
+
+      {% endinfo_block %}
+
     3. If you want to assign several images or image sets, click **Add image** or **Add image set** respectively, and enter URLs. 
     Even though you can add several image sets and several images to an image set, out of the box, there is no place in the back end and front end where several image sets or images can be displayed for a category. However, if you still do that, the following logic applies:
-        * When adding several image sets, the image set going first or having the name 'default' will be applied to the category. 
-        * When adding several images to the image set that is active for the category, the image with the lowest Sort Order field value is applied to the category. If there are several images with the same value, the image which has been added first is applied. The lowest possible value is "0".
+      * When adding several image sets, the image set going first or having the name 'default' will be applied to the category. 
+      * When adding several images to the image set that is active for the category, the image with the lowest Sort Order field value is applied to the category. If there are several images with the same value, the image which has been added first is applied. The lowest possible value is "0".
 4. Click **Save**. 
-* * *
+
+***
 **Tips & Tricks**
 * When you already know the exact parent category under which the category that you create is going to be nested, you can click **Add category to this node** for a specific parent category. This will redirect you to the **Create category** page where you can perform the steps described above. The only difference is that the **Parent** field will be autopopulated with the needed value. 
 * The same products can be assigned to multiple categories.

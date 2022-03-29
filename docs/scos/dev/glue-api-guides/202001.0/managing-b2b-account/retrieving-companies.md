@@ -14,7 +14,7 @@ related:
   - title: Retrieving Company User Information
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-users.html
   - title: Retrieving Business Unit Information
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-unit-information.html
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-units.html
   - title: Retrieving Company Role Information
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-roles.html
   - title: Authentication and Authorization
@@ -38,7 +38,7 @@ For detailed information on the modules that provide the API functionality and r
 ### Information on the User's Company
 To retrieve information on the company a user belongs to, send a GET request to the following endpoint:
 
-[/companies/mine](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/companies)
+companies/mine
 
 Sample request: *GET http://glue.mysprykershop.com/companies/mine*
 
@@ -86,7 +86,7 @@ The endpoint responds with a collection of **RestCompanyResponse** consisting of
 ### Information on a Specific Company
 To retrieve information on a specific company, send a GET request to the following endpoint:
 
-[/companies/{% raw %}{{{% endraw %}company_id{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/companies)
+/companies/{% raw %}{{{% endraw %}company_id{% raw %}}}{% endraw %}
 
 Sample request: *GET http://glue.mysprykershop.com/companies/**59b6c025-cc00-54ca-b101-191391adf2af***
 where **59b6c025-cc00-54ca-b101-191391adf2af** is the ID of the company you need.

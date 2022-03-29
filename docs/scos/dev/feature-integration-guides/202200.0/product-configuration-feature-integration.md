@@ -439,7 +439,7 @@ Make sure that the product configuration synchronization plugin works correctly:
 
 1.  Fill the `spy_product_configuration_storage` table with some data.
     
-2.  Run the `console sync:data -r product_configuration` command.
+2.  Run the `console sync:data product_configuration` command.
     
 3.  Make sure that, in your system, the storage entries are displayed with the `kv:product_configuration:sku` mask.
 

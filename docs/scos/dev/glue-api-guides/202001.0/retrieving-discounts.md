@@ -15,8 +15,8 @@ related:
 
 The Discount API enables shop owners to add free value to their customers by discounting a percentage or a fixed sum of an order's subtotal or an item's price. Discounts can be applied to a purchase in **2** ways:
 
-1. Discounts applied to carts based on certain conditions, called [cart rules](/docs/scos/user/back-office-user-guides/{{page.version}}/discount/creating-a-discount/creating-a-cart-rule-discount.html);
-2. Price reductions provided when redeeming a [discount voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/discount/creating-a-discount/creating-a-discount-voucher.html).
+1. Discounts applied to carts based on certain conditions, called [cart rules](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html);
+2. Price reductions provided when redeeming a [discount voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html).
 
 Discounts provided based on *cart rules* are calculated and taken into account automatically. *Vouchers*, on the other hand, need to be applied by customers explicitly. For this purpose, the *Discounts API* allows:
 
@@ -46,7 +46,7 @@ To apply a discount voucher to a cart, you need to send it via a *POST* request 
 
 {% info_block warningBox "Authentication" %}
 
-Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. 
 
 {% endinfo_block %}
 
@@ -96,8 +96,7 @@ If you included the `vouchers` resource relationship in your request URL, the re
 
 {% endinfo_block %}
 
-<details open>
-<summary markdown='span'>Sample Response<summary markdown='span'>
+**Sample Response**
     
 ```json
 {
@@ -157,8 +156,6 @@ If you included the `vouchers` resource relationship in your request URL, the re
     ]
 }
 ```
-<br>
-</details>
     
 ### Possible Errors
 
@@ -191,7 +188,7 @@ if you want to retrieve discounts provided by **cart rules**, include the *cart-
     
 {% info_block warningBox "Authentication" %}
 
-Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. 
 
 {% endinfo_block %}
     
@@ -252,8 +249,7 @@ The section also includes the voucher **ID** that can be used in the future to u
 | **discountPromotionAbstractSku** | String | Specifies the SKU of the product to which the discount applies. If the discount can be applied to any product, the value of the attribute is **null**. |
 | **discountPromotionQuantity** | Integer | Specifies the amount of the product a customer needs to purchase in order to get the discount. If the discount can be applied to any number of products, the value of the attribute is **null**. |
 
-<details open>
-<summary markdown='span'>Sample Response</summary>
+**Sample Response**
     
 ```json
 {
@@ -319,9 +315,6 @@ The section also includes the voucher **ID** that can be used in the future to u
     ]
 }
 ```
-    
-<br>
-</details>
 
 ### Possible Errors
 
@@ -341,7 +334,7 @@ To unapply a discount voucher, send a DELETE request to the following endpoints:
 
 {% info_block warningBox "Authentication" %}
 
-Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. 
 
 {% endinfo_block %}
 

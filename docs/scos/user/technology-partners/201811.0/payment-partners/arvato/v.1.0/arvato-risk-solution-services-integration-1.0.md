@@ -1,5 +1,5 @@
 ---
-title: Arvato - Risk Solution Services Integration 1.0
+title: Installing and configuring Arvato 1.0
 description: Provide complete and comprehensive risk management for the eCommerce/mail-order industry, contributing to a high level of modularization and automation.
 last_updated: May 19, 2020
 template: concept-topic-template
@@ -10,7 +10,7 @@ redirect_from:
   - /v1/docs/en/arvato-1-0
 related:
   - title: Arvato - Risk Check 1.0
-    link: docs/scos/user/technology-partners/page.version/payment-partners/arvato/v.1.0/arvato-risk-check-1.0.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/arvato/v.1.0/arvato-risk-check-1.0.html
 ---
 
 The purpose of developing the risk solution services is to provide a complete and comprehensive risk management for the eCommerce/mail-order industry, contributing to a high level of modularization and automation. Besides the use of pre-configured service modules for risk management, risk solution services comprise process support up to the outsourcing of the entire operative risk management. All risk management processes are supported by a business intelligence component.
@@ -45,7 +45,7 @@ API URLs:
 Services:
 * [Risk Check](/docs/scos/user/technology-partners/201811.0/payment-partners/arvato/v.1.0/arvato-risk-check-1.0.html)
 
-To implement Arvato RSS you should be familiar with concept of extending the Spryker Commerce OS. See [Extending Spryker](/docs/scos/dev/back-end-development/extending-spryker/extending-a-core-module-that-is-used-by-another.html) for more details.
+To implement Arvato RSS you should be familiar with concept of extending the Spryker Commerce OS. See [Extending Spryker](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-a-core-module-that-is-used-by-another.html) for more details.
 
 ## Installation
 

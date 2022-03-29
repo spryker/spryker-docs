@@ -93,7 +93,7 @@ The following table describes the attributes used when creating or updating a us
 | Email | Email that is going to be used by this user to log in to Back Office.  |
 | Password | Password that is going to be used by this user to log in to Back Office.  |
 | Repeat Password | The same value that you enter for the **Password** field. |
-|First Name| FIrst name of the team member for which the user is being created. |
+|First Name| First name of the team member for which the user is being created. |
 |Last Name| Last name of the team member for which the user is being created. |
 | Assigned Groups |List of all groups that are currently available in the system. You can select from one to many values by selecting the appropriate checkboxes. |
 | Agent | Identifies if this is a user agent. See the _Agent User_ section above. |

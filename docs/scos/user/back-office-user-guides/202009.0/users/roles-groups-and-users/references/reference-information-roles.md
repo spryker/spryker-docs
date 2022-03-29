@@ -1,5 +1,5 @@
 ---
-title: Reference information- Roles
+title: Reference information - roles
 description: The guide provides additional information on the values you enter when creating or editing roles in the Back Office.
 last_updated: Aug 27, 2020
 template: back-office-user-guide-template

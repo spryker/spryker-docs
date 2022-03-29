@@ -29,7 +29,7 @@ To retrieve store configuration, send the request:
 
 ### Request
 
-Request sample : `GET https://glue.mysprykershop.com/stores`
+Request sample: `GET https://glue.mysprykershop.com/stores`
 
 ### Response
 
@@ -49,7 +49,7 @@ Request sample : `GET https://glue.mysprykershop.com/stores`
 							"code": "EUR",
 							"name": "Euro"
 						},
-						{	
+						{
 							"code": "CHF",
 							"name": "Swiss Franc"
 						}
@@ -93,7 +93,7 @@ Request sample : `GET https://glue.mysprykershop.com/stores`
 		}
 }
 ```
-    
+
 </details>
 
 

@@ -1,5 +1,5 @@
 ---
-title: Reference information- Warehouses
+title: Reference information - warehouses
 description: The guide provides additional information on the values you enter when creating and updating warehouses in the Back Office.
 last_updated: Aug 27, 2020
 template: back-office-user-guide-template

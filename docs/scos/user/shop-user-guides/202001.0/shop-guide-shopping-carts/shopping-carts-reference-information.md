@@ -57,7 +57,9 @@ Every Shopping Cart page consists of:
 | 8 | **Action Buttons** | The actions you can do with the RFQ. Can vary depending on the RFQ status. |
 
 {% info_block warningBox %}
+
 The number of sections and widgets on the shopping cart page may differ. That depends on the configuration your project has.
+
 {% endinfo_block %}
 
 <!-- Last review date: Aug 01, 2019 by Oksana Karasyova  -->

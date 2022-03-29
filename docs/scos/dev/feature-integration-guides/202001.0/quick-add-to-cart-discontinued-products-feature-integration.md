@@ -1,6 +1,6 @@
 ---
-title: Quick Order- Discontinued Products feature integration
-description: Quick Add to Cart + Discontinued Products allow showing products in cart as "discontinued". This guide describes how to integrate the feature into the project.
+title: Quick Add to Cart + Discontinued Products feature integration
+description: Quick Add to Cart + Discontinued Products allow showing products in cart as discontinued. This guide describes how to integrate the feature into the project.
 last_updated: Mar 6, 2020
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v4/docs/quick-order-discontinued-products-feature-integration
@@ -11,26 +11,30 @@ redirect_from:
 ---
 
 ## Install Feature Core
+
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 |  Name|Version  |
 | --- | --- |
-|Quick Add To Cart  |201903.0  |
-|Discontinued Products  |  201903.0|
+|Quick Add To Cart  | {{page.version}}  |
+|Discontinued Products  | {{page.version}} |
 
 ### 1) Set up Behavior
+
 #### Set up the Additional Functionality
+
 Enable the following behaviors by registering the plugins:
 
 |Plugin  |  Specification|  Prerequisites| Namespace |
 | --- | --- | --- | --- |
 | `ProductDiscontinuedItemValidatorPlugin` |Checks if the provided product SKU is discontinued, if yes - adds an error message.  | None | `Spryker\Client\ProductDiscontinuedStorage\Plugin\QuickOrder` |
 
-src/Pyz/Client/QuickOrder/QuickOrderDependencyProvider.php
+**src/Pyz/Client/QuickOrder/QuickOrderDependencyProvider.php**
 
 ```php
- <?php
+<?php
  
 namespace Pyz\Client\QuickOrder;
  
@@ -52,5 +56,8 @@ class QuickOrderDependencyProvider extends SprykerQuickOrderDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
-Make the following checks at `https://mysprykershop.com/quick-order`:<ul><li>`ProductDiscontinuedItemValidatorPlugin`validates discontinued products. Provide the SKU of a discontinued product on the **Quick Add To Cart** page and verify that the error message is displayed and you are not allowed to work with this product.</li></ul>
+
+Make the following checks at `https://mysprykershop.com/quick-order`:
+- `ProductDiscontinuedItemValidatorPlugin`validates discontinued products. Provide the SKU of a discontinued product on the **Quick Add To Cart** page and verify that the error message is displayed and you are not allowed to work with this product.
+- 
 {% endinfo_block %}

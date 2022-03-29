@@ -29,7 +29,7 @@ To add a scheduled price to an abstract product:
 4. Select a **Store**.
 5. Select a **Currency**.
 6. Enter a **Net price**.
-7. Optional: Eneter a **Gross price**.
+7. Optional: Enter a **Gross price**.
 8. Select a **Price type**.
 9. Select a **Start from (included)** date and time.
 10. Select a **Finish at (included)** date and time.

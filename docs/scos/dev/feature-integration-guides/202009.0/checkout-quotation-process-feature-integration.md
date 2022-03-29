@@ -1,5 +1,5 @@
 ---
-title: Checkout + quotation process feature integration
+title: Checkout + Quotation Process feature integration
 description: The guide describes the process of installing the Checkout + Quotation process feature into your project.
 last_updated: Sep 8, 2020
 template: feature-integration-guide-template

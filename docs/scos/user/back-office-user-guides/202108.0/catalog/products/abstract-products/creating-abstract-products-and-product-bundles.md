@@ -176,7 +176,7 @@ The following table describes the attributes you enter and select when adding im
 | Image Set Name | Name of image set.|
 | Small | Link to the image that will be displayed for the product in product catalogs.|
 |Large| Link to the image that will be displayed for the product on the *Product details* page. |
-|Sort Order| Arrenges the images displayed for the product in an ascending order. The smalles number is `0`. |
+|Sort Order| Arranges the images displayed for the product in an ascending order. The smallest number is `0`. |
 
 **Tips & tricks**
 <br>To delete an image set with all its pictures, select **Delete image set**.

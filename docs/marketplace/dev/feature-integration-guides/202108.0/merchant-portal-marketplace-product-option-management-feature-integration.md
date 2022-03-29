@@ -1,14 +1,14 @@
 ---
 title: Merchant Portal - Marketplace Product Option Management feature integration
-description: This document describes the process how to integrate the Merchant Portal - Marketplace Product Option Management feature into a Spryker project.
+description: This document describes the process how to integrate the Merchant Portal—Marketplace Product Option Management feature into a Spryker project.
 template: feature-integration-guide-template
 ---
 
-In this document, you will learn how to integrate the Merchant Portal - Marketplace Product Option Management feature into a Spryker project.
+In this document, you will learn how to integrate the Merchant Portal—Marketplace Product Option Management feature into a Spryker project.
 
 ## Install feature core
 
-Follow the steps below to install the Merchant Portal - Marketplace Product Option Management feature core.
+Follow the steps below to install the Merchant Portal—Marketplace Product Option Management feature core.
 
 ### Prerequisites
 
@@ -80,6 +80,6 @@ class SalesMerchantPortalGuiDependencyProvider extends SprykerSalesMerchantPorta
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the order item table has product option column settings and displays the correct data in the `http://mp.mysprykershop.com/sales-merchant-portal-gui/item-list` 
+Make sure that the order item table has product option column settings and displays the correct data in the `http://mp.mysprykershop.com/sales-merchant-portal-gui/item-list`
 
 {% endinfo_block %}

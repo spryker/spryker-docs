@@ -10,13 +10,16 @@ redirect_from:
   - /v4/docs/en/mindlab
 related:
   - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
+    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information
-As a web analysis pioneer with 18 years of experience, Mindlab Solutions is one of the leading specialists in the implementation of challenging analytics projects for websites, apps and intranet systems. Germany's leading companies count on Mindlab when it comes to increasing the scope of digital applications, raising customer satisfaction and conversion rates, and evaluating the efficiency of digitally transformed processes. 
+As a web analysis pioneer with 18 years of experience, Mindlab Solutions is one of the leading specialists in the implementation of challenging analytics projects for websites, apps and intranet systems. Germany's leading companies count on Mindlab when it comes to increasing the scope of digital applications, raising customer satisfaction and conversion rates, and evaluating the efficiency of digitally transformed processes.
+
 {% info_block infoBox "Info" %}
-This integration is built and supported by our technology partner Mindlab Solutions.).
+
+This integration is built and supported by our technology partner Mindlab Solutions.
+
 {% endinfo_block %}
 
 ## Mindlab Documentation
@@ -36,4 +39,3 @@ See [Disclaimer](https://github.com/spryker/spryker-documentation).
 For further information on this partner and integration into Spryker, please contact us.
 
 <div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="163e11fb-e833-4638-86ae-a2ca4b929a41" id="hubspot-1"></div>
-

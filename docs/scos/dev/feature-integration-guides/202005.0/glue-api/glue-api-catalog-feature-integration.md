@@ -10,7 +10,7 @@ redirect_from:
   - /v5/docs/en/catalog-api-feature-integration
 related:
   - title: Catalog Search
-    link: docs/scos/dev/glue-api-guides/page.version/catalog-search.html
+    link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.html
   - title: Getting Suggestions for Auto-Completion and Search
     link: docs/scos/dev/glue-api-guides/page.version/getting-suggestions-for-auto-completion-and-search.html
 ---

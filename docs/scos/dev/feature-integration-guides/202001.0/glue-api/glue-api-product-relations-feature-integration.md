@@ -29,19 +29,24 @@ Run the following command to install the required modules:
 ```bash
 composer require spryker/related-products-rest-api:"^1.0.0" spryker/up-selling-products-rest-api:"^1.0.0" --update-with-dependencies
 ```
-<section contenteditable="false" class="warningBox"><div class="content">
-    Make sure that the following modules have been installed:
+
+{% info_block warningBox “Verification” %}
+
+Make sure that the following modules have been installed:
 
 |Module|Expected Directory|
 |---|---|
 |`RelatedProductsRestApi`|`vendor/spryker/related-products-rest-api`|
 |`UpSellingProductsRestApi`|`vendor/spryker/up-selling-products-rest-api`|
-</div></section>
+
+{% endinfo_block %}
 
 ### 2) Set up Behavior
-Set up the following behaviour.
+
+Set up the following behavior.
 
 #### Enable Resources and Relationships
+
 Activate the following plugins:
 
 |Plugin|Specification|Prerequisites|Namespace|
@@ -79,7 +84,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 
 
-{% info_block warningBox "Verification" %}
+{% info_block warningBox “Verification” %}
 
 Make sure that the following endpoints are available:
 http://glue.mysprykershop.com/abstract-products/`{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}`e/related-products

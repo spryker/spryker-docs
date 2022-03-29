@@ -52,20 +52,20 @@ Make sure that the following modules have been installed:
 
 Set up behavior as follows:
 
-#### 1. Integrate the following plugins:
+#### Integrate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ----------- | ------------ | ------------- | --------- |
 | MerchantUserSecurityPlugin | Sets security firewalls (rules, handlers) for Marketplace users. |  | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security |
-| BooleanToStringTwigPlugin  | Adds a new Twig function for converting Boolean to String |  | Spryker\Zed\ZedUi\Communication\Plugin\Twig  |
-| ZedUiNavigationTwigPlugin  | Adds a new Twig function for rendering Navigation using web components |  | Spryker\Zed\ZedUi\Communication\Plugin |
-| GuiTableApplicationPlugin | Enables GuiTable infrastructure for Zed |  | Spryker\Zed\GuiTable\Communication\Plugin\Application |
-| GuiTableConfigurationTwigPlugin | Adds a new Twig function for rendering GuiTableConfiguration for the GuiTable web component |  | Spryker\Zed\GuiTable\Communication\Plugin\Twig  |
-| SecurityTokenUpdateMerchantUserPostChangePlugin | Rewrites Symfony security token |  | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\UserMerchantPortalGui  |
-| MerchantPortalAclEntityMetadataConfigExpanderPlugin |Expands provided Acl Entity Metadata with merchant order composite, merchant product composite, merchant composite, product offer composit data, merchant read global entities and allow list entities |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity |
-| MerchantAclMerchantPostCreatePlugin | Creates ACL group, ACL role, ACL rules, ACL entity rules and ACL entity segment for provided merchant  |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\Merchant  |
-| MerchantAclMerchantUserPostCreatePlugin | Creates ACL group, ACL role, ACL rules, ACL entity rules and ACL entity segment for provided merchant user |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser  |
-| ProductViewerForOfferCreationAclInstallerPlugin | Provide ProductViewerForOfferCreation Roles with Rules and Groups to create on install |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser  |
+| BooleanToStringTwigPlugin  | Adds a new Twig function for converting Boolean to String. |  | Spryker\Zed\ZedUi\Communication\Plugin\Twig  |
+| ZedUiNavigationTwigPlugin  | Adds a new Twig function for rendering Navigation using web components. |  | Spryker\Zed\ZedUi\Communication\Plugin |
+| GuiTableApplicationPlugin | Enables GuiTable infrastructure for Zed. |  | Spryker\Zed\GuiTable\Communication\Plugin\Application |
+| GuiTableConfigurationTwigPlugin | Adds a new Twig function for rendering GuiTableConfiguration for the GuiTable web component. |  | Spryker\Zed\GuiTable\Communication\Plugin\Twig  |
+| SecurityTokenUpdateMerchantUserPostChangePlugin | Rewrites Symfony security token. |  | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\UserMerchantPortalGui  |
+| MerchantPortalAclEntityMetadataConfigExpanderPlugin |Expands provided Acl Entity Metadata with merchant order composite, merchant product composite, merchant composite, product offer composit data, merchant read global entities and allowlist entities. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity |
+| MerchantAclMerchantPostCreatePlugin | Creates ACL group, ACL role, ACL rules, ACL entity rules and ACL entity segment for the provided merchant.  |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\Merchant  |
+| MerchantAclMerchantUserPostCreatePlugin | Creates ACL group, ACL role, ACL rules, ACL entity rules and ACL entity segment for the provided merchant user. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser  |
+| ProductViewerForOfferCreationAclInstallerPlugin | Provide `ProductViewerForOfferCreation` Roles with Rules and Groups to create on install. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser  |
 
 **src/Pyz/Zed/Twig/TwigDependencyProvider.php**
 
@@ -194,6 +194,7 @@ class AclEntityDependencyProvider extends SprykerAclEntityDependencyProvider
     }
 }
 ```
+
 **src/Pyz/Zed/Merchant/MerchantDependencyProvider.php**
 
 ```php
@@ -266,9 +267,9 @@ class AclDependencyProvider extends SprykerAclDependencyProvider
 }
 ```
 
-#### 2. Enable Merchant Portal infrastructural plugins.
+#### Enable Merchant Portal infrastructural plugins
 
-**src/Pyz/Zed/Acl/AclDependencyProvider.php**
+<details><summary markdown='span'>src/Pyz/Zed/Acl/AclDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -322,7 +323,9 @@ class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalA
 }
 ```
 
-Open access to the *Merchant Portal* login page by default:
+</details>
+
+Open access to the Merchant Portal login page by default:
 
 **config/Shared/config_default.php**
 
@@ -394,16 +397,15 @@ Make sure that the following changes have been applied in transfer objects:
 
 ## Install feature front end
 
-Follow the steps below to install the Merchant Portal Core feature front end.
+Follow the steps below to install the Merchant Portal Core feature frontend.
 
 ### Prerequisites
 
-**Environment requirements:**
+Environment requirements:
+  * NodeJs v12+
+  * Yarn v2 (or latest Yarn v1)
 
-- NodeJs v12+
-- Yarn v2 (or latest Yarn v1)
-
-**Spryker requirements:**
+Spryker requirements:
 
 To start builder integration, check the Spryker packages versions:
 
@@ -466,7 +468,7 @@ Add the `angular.json` file.
 wget -O angular.json https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/angular.json
 ```
 
-Rename default `tsconfig` to `tsconfig.yves.json`. Create marketplace-specific `tsconfig` files (`tsconfig.json`, `tsconfig.mp.json`)
+Rename default `tsconfig` to `tsconfig.yves.json` and create marketplace-specific `tsconfig` files (`tsconfig.json`, `tsconfig.mp.json`)
 
 ```bash
 mv tsconfig.json tsconfig.yves.json
@@ -526,7 +528,7 @@ Update `package.json` with the following fields:
 }
 ```
 
-Update `frontend/settings.js` to point to an updated `tsconfig` for Yves in the `globalSettings.paths` object:
+For Yves, in the `globalSettings.paths` object, update `frontend/settings.js` to point to an updated `tsconfig`:
 
 **frontend/settings.js**
 
@@ -540,7 +542,7 @@ const globalSettings = {
 };
 ```
 
-Add a `.yarnrc.yml` file.
+Add a `.yarnrc.yml` file:
 
 **.yarnrc.yml**
 
@@ -564,23 +566,23 @@ wget -O .yarn/plugins/@yarnpkg/plugin-workspace-tools.js https://raw.githubuserc
 wget -O .yarn/releases/yarn-2.3.3.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/.yarn/releases/yarn-2.3.3.js
 ```
 
-Run commands from the root of the project:
+From the root of the project, run the following:
 
 ```bash
 npm i -g yarn @angular/cli@9.1.11
 ```
 
-Run `yarn -v` to check if the yarn was installed correctly. 1.22.x - global version (outside of the project) and 2.x.x at least in the project.
+To check if the yarn has been installed correctly, run `yarn -v`. 1.22.x—global version outside of the project and 2.x.x at least in the project.
 
 `ng --version` should show Angular CLI: 9.1.11 version.
 
-Now it is time to install project dependencies:
+Install project dependencies:
 
 ```bash
 yarn install
 ```
 
-Check if the marketplace packages are located in the `node_modules/@spryker` folder (for example, utils).
+Check if the marketplace packages are located in the `node_modules/@spryker` folder—for example, utils.
 
 ### 5) Install Marketplace builder
 
@@ -631,7 +633,7 @@ export default async (
     return config;
 };
 ```
----
+
 {% info_block warningBox "Verification" %}
 
 `npm run mp:build` should pass successfully.
@@ -640,12 +642,9 @@ export default async (
 
 ### 6) Adjust deployment configs
 
-If you want to configure deployment configuration to automatically install and build Merchant Portal, you need to change frontend dependencies and install commands in the deployment Yaml:
+To configure deployment configuration to automatically install and build Merchant Portal, change frontend dependencies and install commands in the deployment Yaml:
 
-- Remove existing Yves dependencies install commands from deployment Yaml:
-
- dependencies-install and yves-isntall-dependencies
-
+- Remove existing Yves dependencies install commands from deployment Yaml: `dependencies-install` and `yves-isntall-dependencies`.
 - Update project install dependencies command dependencies-install command to:
 - build-static:
 
@@ -656,14 +655,14 @@ merchant-portal-install-dependencies:
 
 - Add Merchant Portal build command:
 
-- build-static-production: 
+- build-static-production:
   ```yaml
   merchant-portal-build-frontend:
      command: 'vendor/bin/console frontend:mp:build -e production'
      timeout: 1600
   ```
-  
-- build-static-development: 
+
+- build-static-development:
   ```yaml
   merchant-portal-build-frontend:
      command: 'vendor/bin/console frontend:mp:build'
@@ -672,18 +671,18 @@ merchant-portal-install-dependencies:
 
 ## Adjust environment infrastructure
 
-It is not safe to expose MerchantPortal next to the Back Office - MerchantPortal **MUST NOT** have OS, DNS name, VirtualHost settings, FileSystem, and service credentials shared with Zed.
+It is not safe to expose MerchantPortal next to the Back Office—MerchantPortal *MUST NOT* have OS, DNS name, VirtualHost settings, FileSystem, and service credentials shared with Zed.
 
 ### 1) Set up a new virtual machine/docker container dedicated to MerchantPortal
 
-MerchantPortal MUST be placed into its own private subnet.
+MerchantPortal *must be* placed into its own private subnet.
 
-MerchantPortal **MUST** have access to:
+MerchantPortal *must* have access to the following:
 
 - Primary Database
 - Message broker
 
-MerchantPortal **MUST NOT** have access to:
+MerchantPortal *must have* access to the following:
 
 - Search and Storage
 - Gateway
@@ -691,7 +690,7 @@ MerchantPortal **MUST NOT** have access to:
 
 ### 2) Create a dedicated database user
 
-Grant only default CRUD (INSERT, DELETE, UPDATE, SELECT) operations. DO NOT grant ALL PRIVILEGES, GRANT OPTION, DROP, CREATE, and other admin-related grants.
+Grant only default CRUD operations—`INSERT`, `DELETE`, `UPDATE`, `SELECT`. Do not grant `ALL PRIVILEGES`, `GRANT OPTION`, `DROP`, `CREATE`, and other admin-related grants.
 
 The following code snippet example is for MySQL:
 
@@ -703,7 +702,7 @@ FLUSH PRIVILEGES;
 
 ### 3) Create a new Nginx web server configuration
 
-Example of an Nginx configuration:
+The following is an example of an Nginx configuration:
 
 **/etc/nginx/merchant-portal.conf**
 
@@ -741,7 +740,7 @@ server {
 }
 ```
 
-After the Nginx config was modified, apply the new `config:f`
+After modifying the Nginx config, apply the new `config:f`
 
 ```bash
 sudo service nginx reload
@@ -764,18 +763,17 @@ $config[PropelConstants::ZED_DB_PASSWORD] = getenv('SPRYKER_DB_PASSWORD');
 
 {% endinfo_block %}
 
-The following page should now show the login page for MerchantPortal: `https://your-merchant-portal.domain/security-merchant-portal-gui/login`
+The following page should show the login page for MerchantPortal: `https://your-merchant-portal.domain/security-merchant-portal-gui/login`
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following pages do not open `https://your-merchant-portal.domain/security-gui/login`, `https://your-merchant-portal.domain/`
+Make sure the following pages do not open: `https://your-merchant-portal.domain/security-gui/login`, `https://your-merchant-portal.domain/`.
 
 {% endinfo_block %}
 
 ### 4) Register modules in ACL
 
 Add new modules to installer rules:
-
 
 **src/Pyz/Zed/Acl/AclConfig.php**
 
@@ -826,7 +824,7 @@ Make sure that after executing `console setup:init-db`, the `'user-merchant-port
 
 ### 5) Update navigation
 
-Add MyAccount and Logout section to `navigation-secondary.xml`:
+Add the MyAccount and Logout sections to `navigation-secondary.xml`:
 
 **config/Zed/navigation-secondary.xml**
 
@@ -858,6 +856,6 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Log in to the **Merchant Portal** and make sure that the MyAccount and Logout button are visible in the overlay of the secondary navigation, when clicking on the profile picture.
+Log in to the Merchant Portal and make sure that the MyAccount and Logout button are visible in the overlay of the secondary navigation, when clicking on the profile picture.
 
 {% endinfo_block %}

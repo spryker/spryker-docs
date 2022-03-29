@@ -32,6 +32,7 @@ To set up a category filter, you need to have a filter preference setup in the *
 Before adding a filter to the category, make sure that the product (with an attribute with a specific attribute key for which a filter preference exists is assigned to this specific category. Otherwise, the filter will not bring any results once selected in the online store.
 
 {% endinfo_block %}
+
 ***
 
 On the **Overview of Category Filters** page, you see the **Root nodes list**, **Category tree**, and
@@ -63,7 +64,7 @@ Categories in the category tree view that have manually defined filter settings 
 
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 
 Clicking **Reset to global settings** in **Category Filters for [Category name]** will remove the customized filter settings.
 
@@ -91,7 +92,7 @@ It is possible to remove either all filters from the active filters at once or j
 
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 
 To add the removed filters again, click on the **green plus sign** at the filters you want to add back from Inactive filters.
 ![Add a removed filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Search+and+Filters/Managing+Category+Filters/add-removed-filter.gif)

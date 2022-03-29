@@ -19,6 +19,7 @@ commonOptions = {
     /github.com\/[\.\w\-\/]+\.md/,
     /www.virtualbox.org\/[@\.\w\-\/\?]+/,
     /de.linkedin.com\/[@\.\w\-\/\?]+/,
+    /www.linkedin.com\/[@\.\w\-\/\?]+/,
     /www.instagram.com\/[\.\w\-\/\?]+/,
     /eur-lex.europa.eu\/[\.\w\-\/\?]+/,
     /docs.adyen.com\/[\.\w\-\/\?]+/,
@@ -28,8 +29,11 @@ commonOptions = {
     /www.iso.org\/[\.\w\-\/\?]+/,
     /www.vagrantup.com\/[\.\w\-\/\?]+/,
     /stackoverflow.com\/[\.\w\-\/\?]+/,
-    /symfony.com\/[\.\w\-\/\?]+/,    
-    /console.aws.amazon.com\/[\.\w\-\/\?]+/
+    /symfony.com\/[\.\w\-\/\?]+/,
+    /code.jquery.com\/[\.\w\-\/\?]+/,
+    /console.aws.amazon.com\/[\.\w\-\/\?]+/,
+    /www.computop.com\/[\.\w\-\/\?]+/,
+    /shopify.github.io\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],
   :typhoeus => {
@@ -71,6 +75,7 @@ task :check_mp_dev do
     /docs\/fes\/.+/,
     /docs\/paas-plus\/.+/,
     /docs\/marketplace\/user\/.+/,
+    /docs\/marketplace\/\w+\/[\w-]+\/202200\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end

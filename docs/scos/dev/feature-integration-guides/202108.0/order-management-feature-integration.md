@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/order-management-feature-integration
   - /docs/order-management-feature-integration
   - /docs/en/order-management-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202108.0/custom-order-reference-feature-integration.html
 related:
   - title: Comments + Order Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/comments-order-management-feature-integration.html

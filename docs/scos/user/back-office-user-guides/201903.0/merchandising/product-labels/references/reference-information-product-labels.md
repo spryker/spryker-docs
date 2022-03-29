@@ -13,7 +13,9 @@ redirect_from:
 
 This topic describes the attributes that you see, select, and enter on the Product Label pages.
 ***
+
 ## Overview of Product Labels page
+
 In the table of the **Overview of Product Labels** page, you see the following information:
 * Order number of the product label and the priority numeric value
 * Product label name
@@ -22,7 +24,9 @@ In the table of the **Overview of Product Labels** page, you see the following i
 * Product Label status and the actions that can be initiated
 
 ## Create/Edit a Product Label page
+
 **General tab**
+
 | Name | Description |
 | --- | --- |
 | **Name** | The name of the product label, e.g. Discounts Available. |

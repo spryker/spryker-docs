@@ -25,7 +25,7 @@ This topic describes how to assign products to categories.
 
 To start creating categories, go to Catalog > Category.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Assigning products to categories
 
@@ -47,7 +47,7 @@ To assign one or more products to a category:
 
 2. Click **Save**.
 
-**Tips & tricks**
+**Tips and tricks**
 <br>If you have assigned too many products to your category, you can remove some of them:
 1. On the same *Assign Products* page, scroll down to view the *Products in this category* section.
 2. Depending on the number of products you want to exclude from the category, either clear the checkbox in the Selected column for specific products or click **Deselect All** (this will clear all checkboxes for all products on the current page).

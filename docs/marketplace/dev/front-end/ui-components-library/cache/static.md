@@ -36,6 +36,12 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/cache' {
+    interface CacheStrategyRegistry {
+        static: StaticCacheStrategyConfig;
+    }
+}
+
 @NgModule({
     imports: [
         CacheModule.withStrategies({

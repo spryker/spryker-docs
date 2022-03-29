@@ -55,7 +55,7 @@ See [User: Reference Information](/docs/scos/user/back-office-user-guides/{{page
 1. Click **Create**.
     
 ***
-**Tips & Tricks**
+**Tips and tricks**
 There is a way to initiate a create-new-user flow while editing a user record. To do that, on the **Edit User** page, click **Add User** in the top right corner.
 ***
 
@@ -75,7 +75,7 @@ A customer cannot be assigned to multiple users at a time.
 {% endinfo_block %}
 
 ***
-**Tips & Tricks**
+**Tips and tricks**
 To de-assign a customer: 
 1. On the **Assign Customers to User** page, scroll down to the *Assigned customer*s table.
 2. Deselect the check-box next to the customer(s) that needs to become unassigned, and click **Save**.

@@ -20,7 +20,7 @@ If not, follow the steps from this migration guide.
 
 *Estimated migration time: 1h 30m*
 
-**To upgrade the modules to the required versions, do the following:**
+To upgrade the modules to the required versions, do the following:
 
 1. Update the following files in the root:
 
@@ -30,7 +30,7 @@ wget -O tsconfig.json https://raw.githubusercontent.com/spryker-shop/suite/maste
 wget -O tsconfig.mp.json https://raw.githubusercontent.com/spryker-shop/suite/master/tsconfig.mp.json
 ```
 
-2. Update / create the following files in the `frontend/merchant-portal` folder:
+2. In the `frontend/merchant-portal` folder, update or create the following files:
 
 ```bash
 wget -O frontend/merchant-portal/entry-points.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/entry-points.js
@@ -40,7 +40,7 @@ wget -O frontend/merchant-portal/tsconfig.spec.json https://raw.githubuserconten
 wget -O frontend/merchant-portal/update-config-paths.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/update-config-paths.js
 ```
 
-3. Create the files tree on the project level in the `src/Pyz/Zed` folder:
+3. In the `src/Pyz/Zed` folder, create the files tree on the project level:
 
 - ZedUi
     - Presentation
@@ -58,9 +58,9 @@ wget -O frontend/merchant-portal/update-config-paths.js https://raw.githubuserco
             - styles.less
             - public-api.ts
     - mp.public-api.ts
-  
 
-4. Fill in the newly created files with the code below:
+
+4. Fill in the newly created files with the following code:
 
 **app.module.ts**
 
@@ -165,6 +165,6 @@ rm -rf node_modules && yarn install
 yarn mp:build
 ```
 
-Related articles: 
+Related articles:
 
-[Extending the project](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2316501312/Extending+the+project) 
+[Extending the project](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2316501312/Extending+the+project)

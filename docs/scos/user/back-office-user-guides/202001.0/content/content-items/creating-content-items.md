@@ -50,7 +50,7 @@ Follow the steps to create a Banner:
 See [Content Items: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-items.html#create-and-edit-banner-content-item-page) to learn about the attributes on this page.
 
 3. If needed, repeat the previous step in one or more locale-specific tabs.
-4.
+
 {% info_block infoBox "Multi-language setup" %}
 
 The following logic applies in a multi-language setup:
@@ -70,7 +70,7 @@ Make sure the Banner has been created:
 {% endinfo_block %}
 
 ***
-**Tips & Tricks**
+**Tips and tricks**
 On the *Create Content Item: Banner* page, you can do the following:
 
 * Clear all the fields in a tab by clicking **Clear locale**.
@@ -125,7 +125,7 @@ Make sure the Product Abstract List has been created:
 
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 On the *Create Content Item: Abstract Product List* page, you can do the following:
 
 * Filter the products in the **Add more products** table by entering a product name or SKU in the **Search** field.
@@ -175,7 +175,7 @@ Make sure the Product Set has been created:
 ***
 
 
-**Tips & Tricks**
+**Tips and tricks**
 
 On the **Create Content Item: Product Set** page, you can do the following:
 * Filter the product sets in the **Available Product Sets** table by entering a product set name in the **Search** field.
@@ -228,7 +228,7 @@ Make sure the File List has been created:
 {% endinfo_block %}
 
 
-**Tips & Tricks**
+**Tips and tricks**
 On the *Create Content Item: File List* page, you can do the following:
 
 * Filter the files in the **Available Files** table by entering a file name in the **Search** field.

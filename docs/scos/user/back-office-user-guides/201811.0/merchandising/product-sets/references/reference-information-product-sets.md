@@ -14,6 +14,7 @@ redirect_from:
 This article describes the attributes that you select and enter while creating or managing product sets.
 ***
 ## Product Sets page
+
 On the Product Sets page, you see a table with all product sets available in the system. 
 For each product set, the following information is presented:
 
@@ -24,9 +25,13 @@ For each product set, the following information is presented:
 * Product set status (either Active or Inactive)
 * The actions that you can do on a product set (View, Edit, Deactivate, Delete)
 ***
+
 ## Create/Edit Product Set page
+
 The following tables describe the attributes that you enter and select while creating or managing a product set.
+
 **General tab**
+
 | Attribute |Description  |
 | --- | --- |
 | **Name** | The name of your product set. |
@@ -52,6 +57,7 @@ The following tables describe the attributes that you enter and select while cre
 | **Sort Order**|If you add several images to an active image set, specify the order in which they are to be shown in the front end and back end using Sort Order fields. The order of images is defined by the order of entered numbers where the image set with sort order "0" is the first to be shown. |  
 
 ## Product Set Example
+
 This is how the product set looks like in the online store:
 ![Product set example](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Sets/Product+Sets%3A+Reference+Information/product-set-example.png) 
 

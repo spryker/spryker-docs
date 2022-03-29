@@ -463,23 +463,23 @@ Make sure that Merchant Portal has "Dashboard" menu section.
 Add the `angular.json` file.
 
 ```bash
-wget -O angular.json https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/angular.json
+wget -O angular.json https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/angular.json
 ```
 
 Rename default `tsconfig` to `tsconfig.yves.json`. Create marketplace-specific `tsconfig` files (`tsconfig.json`, `tsconfig.mp.json`)
 
 ```bash
 mv tsconfig.json tsconfig.yves.json
-wget -O tsconfig.json https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/tsconfig.json
-wget -O tsconfig.mp.json https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/tsconfig.mp.json
+wget -O tsconfig.json https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/tsconfig.json
+wget -O tsconfig.mp.json https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/tsconfig.mp.json
 ```
 
-Add `vendor/spryker/*/src/Spryker/Zed/*/Presentation/Components/**` and `**/node_modules/**` to exclude option in `tslint.json`.
+Add `vendor/**` and `**/node_modules/**` to exclude option in `tslint.json`.
 
 Add the `tslint.mp.json` file.
 
 ```bash
-wget -O tslint.mp.json https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/tslint.mp.json
+wget -O tslint.mp.json https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/tslint.mp.json
 ```
 
 Install npm dependencies:
@@ -491,7 +491,7 @@ npm i rxjs@~6.6.0 zone.js@~0.10.3 @webcomponents/custom-elements@~1.3.1 @webcomp
 Install npm dev dependencies:
 
 ```bash
-npm i -D @angular-builders/custom-webpack@~9.1.0 @angular-devkit/build-angular@~0.901.11 @angular/cli@~9.1.11 @angular/common@~9.1.12 @angular/compiler@~9.1.12 @angular/compiler-cli@~9.1.12 @angular/core@~9.1.12 @angular/language-service@~9.1.12 @angular/platform-browser@~9.1.12 @angular/platform-browser-dynamic@~9.1.12 @babel/plugin-proposal-class-properties@~7.10.4 @babel/plugin-transform-runtime@~7.10.5 @babel/preset-typescript@~7.10.4 @jsdevtools/file-path-filter@~3.0.2 @nrwl/jest@~9.4.4 @nrwl/workspace@~9.4.4 @spryker/oryx-for-zed@~2.8.1 @types/jest@~26.0.4 @types/node@~12.11.1 @types/webpack@~4.41.17 jest@~26.1.0 jest-preset-angular@~8.2.1 node-sass@~4.14.1 npm-run-all@~4.1.5 rimraf@~3.0.2 ts-jest@~26.1.3 ts-node@~8.3.0 tslib@~1.11.1 typescript@~3.8.3
+npm i -D @angular-builders/custom-webpack@~9.1.0 @angular-devkit/build-angular@~0.901.11 @angular/cli@~9.1.11 @angular/common@~9.1.12 @angular/compiler@~9.1.12 @angular/compiler-cli@~9.1.12 @angular/core@~9.1.12 @angular/language-service@~9.1.12 @angular/platform-browser@~9.1.12 @angular/platform-browser-dynamic@~9.1.12 @babel/plugin-proposal-class-properties@~7.10.4 @babel/plugin-transform-runtime@~7.10.5 @babel/preset-typescript@~7.10.4 @jsdevtools/file-path-filter@~3.0.2 @nrwl/jest@~9.4.4 @nrwl/workspace@~9.4.4 @spryker/oryx-for-zed@~2.11.3 @types/jest@~26.0.4 @types/node@~12.11.1 @types/webpack@~4.41.17 jest@~26.1.0 jest-preset-angular@~8.2.1 node-sass@~4.14.1 npm-run-all@~4.1.5 rimraf@~3.0.2 ts-jest@~26.1.3 ts-node@~8.3.0 tslib@~1.11.1 typescript@~3.8.3
 ```
 
 Update `package.json` with the following fields:
@@ -511,7 +511,9 @@ Update `package.json` with the following fields:
         "mp:test": "ng test",
         "mp:lint": "ng lint",
         "mp:clean": "run-s mp:clean:*",
-        "mp:clean:dist": "rimraf public/Zed/assets/js/mp"
+        "mp:clean:dist": "rimraf public/MerchantPortal/assets/js",
+        "mp:update:paths": "node ./frontend/merchant-portal/update-config-paths",
+        "postinstall": "npm run mp:update:paths"
     },
     "engines": {
         "node": ">=12.0.0",
@@ -558,8 +560,8 @@ Add the `.yarn` folder and download `plugin-workspace-tools.js` and `yarn-2.0.0-
 
 ```bash
 mkdir .yarn && mkdir .yarn/plugins && mkdir .yarn/releases
-wget -O .yarn/plugins/@yarnpkg/plugin-workspace-tools.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/.yarn/plugins/%40yarnpkg/plugin-workspace-tools.js
-wget -O .yarn/releases/yarn-2.3.3.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/.yarn/releases/yarn-2.3.3.js
+wget -O .yarn/plugins/@yarnpkg/plugin-workspace-tools.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/.yarn/plugins/%40yarnpkg/plugin-workspace-tools.js
+wget -O .yarn/releases/yarn-2.3.3.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/.yarn/releases/yarn-2.3.3.js
 ```
 
 Run commands from the root of the project:
@@ -578,7 +580,7 @@ Now it is time to install project dependencies:
 yarn install
 ```
 
-Check if the marketplace packages are located in the `node_modules/@spryker` folder (e.g., utils).
+Check if the marketplace packages are located in the `node_modules/@spryker` folder (for example, utils).
 
 ### 5) Install Marketplace builder
 
@@ -588,15 +590,15 @@ Add the `merchant-portal` folder and builder files:
 
 ```bash
 mkdir frontend/merchant-portal
-wget -O frontend/merchant-portal/entry-points.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/frontend/merchant-portal/entry-points.js
-wget -O frontend/merchant-portal/html-transform.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/frontend/merchant-portal/html-transform.js
-wget -O frontend/merchant-portal/jest.config.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/frontend/merchant-portal/jest.config.js
-wget -O frontend/merchant-portal/mp-paths.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/frontend/merchant-portal/mp-paths.js
-wget -O frontend/merchant-portal/test-setup.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/frontend/merchant-portal/test-setup.js
-wget -O frontend/merchant-portal/tsconfig.spec.json https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/frontend/merchant-portal/tsconfig.spec.json
-wget -O frontend/merchant-portal/update-config-paths.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/frontend/merchant-portal/update-config-paths.js
-wget -O frontend/merchant-portal/utils.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/frontend/merchant-portal/utils.js
-wget -O frontend/merchant-portal/webpack.config.js https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/frontend/merchant-portal/webpack.config.js
+wget -O frontend/merchant-portal/entry-points.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/frontend/merchant-portal/entry-points.js
+wget -O frontend/merchant-portal/html-transform.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/frontend/merchant-portal/html-transform.js
+wget -O frontend/merchant-portal/jest.config.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/frontend/merchant-portal/jest.config.js
+wget -O frontend/merchant-portal/mp-paths.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/frontend/merchant-portal/mp-paths.js
+wget -O frontend/merchant-portal/test-setup.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/frontend/merchant-portal/test-setup.js
+wget -O frontend/merchant-portal/tsconfig.spec.json https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/frontend/merchant-portal/tsconfig.spec.json
+wget -O frontend/merchant-portal/update-config-paths.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/frontend/merchant-portal/update-config-paths.js
+wget -O frontend/merchant-portal/utils.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/frontend/merchant-portal/utils.js
+wget -O frontend/merchant-portal/webpack.config.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/frontend/merchant-portal/webpack.config.js
 ```
 
 **frontend/merchant-portal/webpack.config.ts**
@@ -640,23 +642,32 @@ export default async (
 
 If you want to configure deployment configuration to automatically install and build Merchant Portal, you need to change frontend dependencies and install commands in the deployment Yaml:
 
-- Remove existing Yves and Zed dependencies install commands from deployment Yaml:
+- Remove existing Yves dependencies install commands from deployment Yaml:
 
- yves-isntall-dependencies and yves-isntall-dependencies
+ dependencies-install and yves-isntall-dependencies
 
 - Update project install dependencies command dependencies-install command to:
+- build-static:
 
 ```bash
-vendor/bin/console frontend:mp:install-dependencies -vvv
+merchant-portal-install-dependencies:
+    command: 'console frontend:mp:install-dependencies | tail -100 && echo "Output trimmed, only last 100 lines shown."'
 ```
 
 - Add Merchant Portal build command:
 
+- build-static-production: 
   ```yaml
-  mp-build-frontend:
-      command: "vendor/bin/console frontend:mp:build"
-      groups:/dev/feature-integration-guides/{{page.version}}/
-          - mp
+  merchant-portal-build-frontend:
+     command: 'vendor/bin/console frontend:mp:build -e production'
+     timeout: 1600
+  ```
+  
+- build-static-development: 
+  ```yaml
+  merchant-portal-build-frontend:
+     command: 'vendor/bin/console frontend:mp:build'
+     timeout: 1600
   ```
 
 ## Adjust environment infrastructure

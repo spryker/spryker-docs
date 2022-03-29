@@ -29,11 +29,13 @@ To retrieve prices of a product offer, send the request:
 
 ### Request
 
-Request sample: `GET http://glue.mysprykershop.com/product-offers/offer54/product-offer-prices`
+Request sample: retrieve prices of a product offer
+
+`GET http://glue.mysprykershop.com/product-offers/offer54/product-offer-prices`
 
 ### Response
 
-Response sample:
+Response sample: retrieve prices of a product offer
 
 ```json
 {
@@ -75,6 +77,7 @@ Response sample:
     }
 }
 ```
+
 <a name="product-offer-prices-response-attributes"></a>
 
 |ATTRIBUTE  |TYPE  |DESCRIPTION  |

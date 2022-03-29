@@ -244,7 +244,7 @@ class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you view some product offer at `http://zed.de.demo-spryker.com/product-offer-gui/view?id-product-offer={idProductOffer}}`, you can see the `Stock` section.
+Make sure that when you view some product offer at `http://zed.de.demo-spryker.com/product-offer-gui/view?id-product-offer={{idProductOffer}}`, you can see the `Stock` section.
 
 {% endinfo_block %}
 
@@ -662,7 +662,7 @@ offer360,Sony Experts MER000006 Warehouse 1,0,1
 | product_offer_reference | &check; | string | offer350 | Product offer identifier. |
 | stock_name | &check; | string | Spryker MER000001 Warehouse 1 | Stock identifier. |
 | quantity | &check; | int | 21 | The amount of available product offers. |
-| is_never_out_of_stock | &check; | int | 1 | Flag, the allows to make product offer always available, ignoring stock quantity. |
+| is_never_out_of_stock | &check; | int | 1 | Flag that lets you make product offer always available, ignoring stock quantity. |
 
 Register the following plugins to enable data import:
 

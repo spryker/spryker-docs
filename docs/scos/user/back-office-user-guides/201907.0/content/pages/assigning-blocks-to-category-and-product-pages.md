@@ -49,7 +49,7 @@ You can get a block name in the _Name_ column of the List of CMS blocks on the O
 
 5. To keep the changes, click **Save**.
 ***
-**Tips & Tricks**
+**Tips and tricks**
 If you want to create different versions of the page per locale, add the general information to the section in the corresponding language.
 ***
 **What's next?**

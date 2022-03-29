@@ -1,5 +1,5 @@
 ---
-title: Installation
+title: Spryker Marketplace Setup
 description: This document describes how to get started with the B2C Demo Marketplace.
 template: concept-topic-template
 ---

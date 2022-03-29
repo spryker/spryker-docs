@@ -1,6 +1,6 @@
 ---
-title: Creating product labels
-description: Back Office guide for creating product labels.
+title: Create product labels
+description: Learn how to create product labels in the Back Office
 last_updated: Jul 30, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-product-labels
@@ -10,12 +10,13 @@ redirect_from:
   - /2021080/docs/en/creating-product-labels
   - /docs/creating-product-labels
   - /docs/en/creating-product-labels
+  - /docs/scos/user/back-office-user-guides/202108.0/merchandising/product-labels/creating-product-labels.html
 related:
   - title: Product Labels feature overview
     link: docs/scos/user/features/page.version/product-labels-feature-overview.html
 ---
 
-This topic describes how to create and activate product labels.
+This topic describes how to create product labels in the Back Office.
 
 ## Prerequisites
 
@@ -23,54 +24,37 @@ To start working with product labels, go to **Merchandising** > **Product Labels
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 
-## Creating product labels
+## Create a product label
 
-To create a product label:
-1. On the *Overview of Product Labels* page, select **Create Product Label**.
-2. In the *General* section of the *Create a Product Label* page, do the following:
-    1. enter:
-    * **Name**
-    * **Front-end Reference**
-    * **Priority**
-    2. If you want to activate the product label, select **Is active**.
-3. In the *Behavior* section, select:
-    * **Valid From** and **Valid to** dates.
-    * **Is exclusive** if you want the product label to be exclusive.
-4. In the *Store relation* section, select stores in **Select Stores**.
+1. On the **Product Labels** page, click **Create Product Label**.
+    This opens the **Create a Product Label** page.
+2. In the **GENERAL** pane, enter a **NAME**.
+3. Enter a **FRONT-END REFERENCE**.
+4. Enter a **PRIORITY**.
+5. To make the product label active after creating it, select the **IS ACTIVE** checkbox.
+6. In the **BEHAVIOR** pane, select a **VALID FROM** date.
+7. Select a **VALID TO** date.
+8. Select the **IS EXCLUSIVE** checkbox.
+9. In the **STORE RELATION** pane, select one or more stores.
+10. In the **TRANSLATIONS** pane, enter a **NAME** for each locale.
+11. Click **Next**.
+    This opens the **Products** tab.
 
-{% info_block infoBox %}
-
-Even if there is only one store in your shop, you still need to select it for the product label to be displayed on the Storefront.
-
-{% endinfo_block %}
-
-5. In the *Translations* section, enter **Name** for all the locales.
-See [Reference information: Creating product labels](#reference-information-creating-product-labels) to learn about the attributes on this page.
-6. Switch to the *Products* tab.
-7. In the *Select* column, select one or more products to assign the label to.
-
-{% info_block warningBox %}
-
-Make sure the selected products are listed in the *Selected products to assign ({number of products})* tab.
-
-{% endinfo_block %}
-
-8. Click **Save**.
+12. In the **Available** subtab, select one or more products to assign the label to.
+13. Click **Save**.
 The page refreshes to display the success message about product label creation.
 
 **Tips and tricks**
 
-* Below the table, click **Select All** to assign the label to all the products in the *Available products* tab.
-* Filter the products in the *Available products* tab by entering its name, SKU, or category name in the **Search** field.
-* In the *Selected* column of the *Selected products to assign ({number of products})*, click **Remove** to remove a selected product.
+When assigning a lable to multiple products, it might be useful to switch to the **Selected products to assign** tab to double-check your selection.
 
-### Reference information: Creating product labels
+### Reference information: Create product labels
 
 The following table describes the attributes you see, select, or enter while creating and editing a product label in the Settings tab.
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| Name | Name of the product label. |
+| NAME | Unique identifier of the product label for the Back Office and Storefront. If you don't specify a locale specific name, this name is used by default on the Storefront.  |
 | Front-end Reference | Defines the location and design of the product label. By default, the following designs are available: *alternative*, *discontinued*, *top*, *new*, *sale*. |
 | Priority | Defines the order in which labels will appear on a product card and product details page. The product label with the lowest number will have the highest priority. |
 | Is active | Check box that, if selected, defines that the product label is active.  |

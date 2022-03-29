@@ -63,7 +63,7 @@ Set up behavior as follows:
 | GuiTableConfigurationTwigPlugin | Adds a new Twig function for rendering GuiTableConfiguration for the GuiTable web component. |  | Spryker\Zed\GuiTable\Communication\Plugin\Twig  |
 | SecurityTokenUpdateMerchantUserPostChangePlugin | Rewrites Symfony security token. |  | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\UserMerchantPortalGui  |
 | MerchantPortalAclEntityMetadataConfigExpanderPlugin |Expands provided Acl Entity Metadata with merchant order composite, merchant product composite, merchant composite, product offer composit data, merchant read global entities and allowlist entities. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity |
-| MerchantAclMerchantPostCreatePlugin | Creates ACL group, ACL role, ACL rules, ACL entity rules and ACL entity segment for the provided merchant.  |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\Merchant  |
+| MerchantAclMerchantPostCreatePlugin | Creates ACL group, ACL role, ACL rules, ACL entity rules, and ACL entity segment for the provided merchant.  |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\Merchant  |
 | MerchantAclMerchantUserPostCreatePlugin | Creates ACL group, ACL role, ACL rules, ACL entity rules and ACL entity segment for the provided merchant user. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser  |
 | ProductViewerForOfferCreationAclInstallerPlugin | Provide `ProductViewerForOfferCreation` Roles with Rules and Groups to create on install. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser  |
 
@@ -395,7 +395,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install the Merchant Portal Core feature frontend.
 
@@ -446,7 +446,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Build navigation cache.
+### 3) Build navigation cache
 
 Execute the following command:
 
@@ -455,14 +455,14 @@ console navigation:build-cache
 ```
 {% info_block warningBox "Verification" %}
 
-Make sure that Merchant Portal has "Dashboard" menu section.
+Make sure that Merchant Portal has the **Dashboard** menu.
 
 {% endinfo_block %}
 
 
 ### 4) Set up Marketplace builder configs
 
-Add the `angular.json` file.
+Add the `angular.json` file:
 
 ```bash
 wget -O angular.json https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/angular.json
@@ -478,7 +478,7 @@ wget -O tsconfig.mp.json https://raw.githubusercontent.com/spryker-shop/suite/{{
 
 Add `vendor/**` and `**/node_modules/**` to exclude option in `tslint.json`.
 
-Add the `tslint.mp.json` file.
+Add the `tslint.mp.json` file:
 
 ```bash
 wget -O tslint.mp.json https://raw.githubusercontent.com/spryker-shop/suite/{{page.version}}/tslint.mp.json
@@ -558,7 +558,7 @@ plugins:
 yarnPath: .yarn/releases/yarn-2.3.3.js
 ```
 
-Add the `.yarn` folder and download `plugin-workspace-tools.js` and `yarn-2.0.0-rc.32.js`.
+Add the `.yarn` folder and download `plugin-workspace-tools.js` and `yarn-2.0.0-rc.32.js`:
 
 ```bash
 mkdir .yarn && mkdir .yarn/plugins && mkdir .yarn/releases
@@ -653,7 +653,7 @@ merchant-portal-install-dependencies:
     command: 'console frontend:mp:install-dependencies | tail -100 && echo "Output trimmed, only last 100 lines shown."'
 ```
 
-- Add Merchant Portal build command:
+- Add the Merchant Portal build command:
 
 - build-static-production:
   ```yaml

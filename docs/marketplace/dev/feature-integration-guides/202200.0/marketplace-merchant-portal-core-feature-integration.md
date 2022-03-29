@@ -52,20 +52,20 @@ Make sure that the following modules have been installed:
 
 Set up behavior as follows:
 
-#### 1. Integrate the following plugins:
+#### Integrate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ----------- | ------------ | ------------- | --------- |
 | MerchantUserSecurityPlugin | Sets security firewalls (rules, handlers) for Marketplace users. |  | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security |
-| BooleanToStringTwigPlugin  | Adds a new Twig function for converting Boolean to String |  | Spryker\Zed\ZedUi\Communication\Plugin\Twig  |
-| ZedUiNavigationTwigPlugin  | Adds a new Twig function for rendering Navigation using web components |  | Spryker\Zed\ZedUi\Communication\Plugin |
-| GuiTableApplicationPlugin | Enables GuiTable infrastructure for Zed |  | Spryker\Zed\GuiTable\Communication\Plugin\Application |
-| GuiTableConfigurationTwigPlugin | Adds a new Twig function for rendering GuiTableConfiguration for the GuiTable web component |  | Spryker\Zed\GuiTable\Communication\Plugin\Twig  |
-| SecurityTokenUpdateMerchantUserPostChangePlugin | Rewrites Symfony security token |  | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\UserMerchantPortalGui  |
-| MerchantPortalAclEntityMetadataConfigExpanderPlugin |Expands provided Acl Entity Metadata with merchant order composite, merchant product composite, merchant composite, product offer composit data, merchant read global entities and allow list entities |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity |
-| MerchantAclMerchantPostCreatePlugin | Creates ACL group, ACL role, ACL rules, ACL entity rules and ACL entity segment for provided merchant  |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\Merchant  |
-| MerchantAclMerchantUserPostCreatePlugin | Creates ACL group, ACL role, ACL rules, ACL entity rules and ACL entity segment for provided merchant user |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser  |
-| ProductViewerForOfferCreationAclInstallerPlugin | Provide ProductViewerForOfferCreation Roles with Rules and Groups to create on install |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser  |
+| BooleanToStringTwigPlugin  | Adds a new Twig function for converting Boolean to String. |  | Spryker\Zed\ZedUi\Communication\Plugin\Twig  |
+| ZedUiNavigationTwigPlugin  | Adds a new Twig function for rendering Navigation using web components. |  | Spryker\Zed\ZedUi\Communication\Plugin |
+| GuiTableApplicationPlugin | Enables GuiTable infrastructure for Zed. |  | Spryker\Zed\GuiTable\Communication\Plugin\Application |
+| GuiTableConfigurationTwigPlugin | Adds a new Twig function for rendering GuiTableConfiguration for the GuiTable web component. |  | Spryker\Zed\GuiTable\Communication\Plugin\Twig  |
+| SecurityTokenUpdateMerchantUserPostChangePlugin | Rewrites Symfony security token. |  | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\UserMerchantPortalGui  |
+| MerchantPortalAclEntityMetadataConfigExpanderPlugin |Expands provided Acl Entity Metadata with merchant order composite, merchant product composite, merchant composite, product offer composit data, merchant read global entities and allow list entities. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity |
+| MerchantAclMerchantPostCreatePlugin | Creates ACL group, ACL role, ACL rules, ACL entity rules and ACL entity segment for provided merchant.  |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\Merchant  |
+| MerchantAclMerchantUserPostCreatePlugin | Creates ACL group, ACL role, ACL rules, ACL entity rules, and ACL entity segment for provided merchant user. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser  |
+| ProductViewerForOfferCreationAclInstallerPlugin | Provide `ProductViewerForOfferCreation` Roles with Rules and Groups to create on install. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser  |
 
 **src/Pyz/Zed/Twig/TwigDependencyProvider.php**
 
@@ -266,9 +266,9 @@ class AclDependencyProvider extends SprykerAclDependencyProvider
 }
 ```
 
-#### 2. Enable Merchant Portal infrastructural plugins.
+#### Enable Merchant Portal infrastructural plugins
 
-**src/Pyz/Zed/Acl/AclDependencyProvider.php**
+<details><summary markdown='span'>src/Pyz/Zed/Acl/AclDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -321,6 +321,8 @@ class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalA
     }
 }
 ```
+
+</details>
 
 Open access to the *Merchant Portal* login page by default:
 
@@ -392,18 +394,17 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install the Merchant Portal Core feature front end.
 
 ### Prerequisites
 
-**Environment requirements:**
-
+Environment requirements:
 - NodeJs v12+
 - Yarn v2 (or latest Yarn v1)
 
-**Spryker requirements:**
+Spryker requirements:
 
 To start builder integration, check the Spryker packages versions:
 
@@ -444,7 +445,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Build navigation cache.
+### 3) Build navigation cache
 
 Execute the following command:
 
@@ -453,14 +454,14 @@ console navigation:build-cache
 ```
 {% info_block warningBox "Verification" %}
 
-Make sure that Merchant Portal has "Dashboard" menu section.
+Make sure that Merchant Portal has the **Dashboard** menu.
 
 {% endinfo_block %}
 
 
 ### 4) Set up Marketplace builder configs
 
-Add the following files to the root folder.
+Add the following files to the root folder:
 
 ```bash
 wget -O angular.json https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/angular.json
@@ -478,7 +479,7 @@ wget -O tsconfig.mp.json https://raw.githubusercontent.com/spryker-shop/suite/1.
 
 Add `vendor/**` and `**/node_modules/**` to exclude option in `tslint.json`.
 
-Add the `tslint.mp.json` file.
+Add the `tslint.mp.json` file:
 
 ```bash
 wget -O tslint.mp.json https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/tslint.mp.json
@@ -528,7 +529,7 @@ Update `package.json` with the following fields:
 }
 ```
 
-Update `frontend/settings.js` to point to the created `tsconfig` for Yves in the `globalSettings.paths` object:
+For Yves, in the `globalSettings.paths` object, update `frontend/settings.js` to point to an updated `tsconfig`:
 
 **frontend/settings.js**
 
@@ -542,7 +543,7 @@ const globalSettings = {
 };
 ```
 
-Add a `.yarnrc.yml` file.
+Add a `.yarnrc.yml` file:
 
 **.yarnrc.yml**
 
@@ -558,7 +559,7 @@ plugins:
 yarnPath: .yarn/releases/yarn-2.3.3.js
 ```
 
-Add the `.yarn` folder and download `plugin-workspace-tools.js` and `yarn-2.0.0-rc.32.js`.
+Add the `.yarn` folder and download `plugin-workspace-tools.js` and `yarn-2.0.0-rc.32.js`:
 
 ```bash
 mkdir .yarn && mkdir .yarn/plugins && mkdir .yarn/releases
@@ -632,7 +633,7 @@ export default async (
     return config;
 };
 ```
----
+
 {% info_block warningBox "Verification" %}
 
 `yarn mp:build` should pass successfully.
@@ -641,12 +642,9 @@ export default async (
 
 ### 6) Adjust deployment configs
 
-If you want to configure deployment configuration to automatically install and build Merchant Portal, you need to change frontend dependencies and install commands in the deployment Yaml:
+To configure deployment configuration to automatically install and build Merchant Portal, change frontend dependencies and install commands in the deployment Yaml:
 
-- Remove existing Yves dependencies install commands from deployment Yaml:
-
- dependencies-install and yves-isntall-dependencies
-
+- Remove existing Yves dependencies install commands from deployment Yaml: `dependencies-install` and `yves-isntall-dependencies`.ß
 - Update project install dependencies command dependencies-install command to:
 - build-static:
 
@@ -655,16 +653,16 @@ merchant-portal-install-dependencies:
     command: 'console frontend:mp:install-dependencies | tail -100 && echo "Output trimmed, only last 100 lines shown."'
 ```
 
-- Add Merchant Portal build command:
+- Add the Merchant Portal build command:
 
-- build-static-production: 
+- build-static-production:
   ```yaml
   merchant-portal-build-frontend:
      command: 'vendor/bin/console frontend:mp:build -e production'
      timeout: 1600
   ```
-  
-- build-static-development: 
+
+- build-static-development:
   ```yaml
   merchant-portal-build-frontend:
      command: 'vendor/bin/console frontend:mp:build'

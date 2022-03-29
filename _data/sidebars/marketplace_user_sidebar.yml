@@ -5,7 +5,7 @@ entries:
   - product: Marketplace
     nested:
       - title: Intro to the Spryker Marketplace
-        url: docs/marketplace/user/intro-to-spryker-marketplace/intro-to-spryker-marketplace.html
+        url: /docs/marketplace/user/intro-to-spryker-marketplace/intro-to-spryker-marketplace.html
         nested:
 
           - title: Marketplace concept

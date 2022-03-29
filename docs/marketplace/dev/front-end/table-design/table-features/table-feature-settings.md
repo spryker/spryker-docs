@@ -36,7 +36,12 @@ Component configuration:
 Register the component:
 
 ```ts
-// Dynamic
+declare module '@spryker/table' {
+    interface TableConfig {
+        columnConfigurator?: TableSettingsConfig;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -71,12 +76,6 @@ export class RootModule {}
 Below you can find interfaces for the Table Feature Settings:
 
 ```ts
-declare module '@spryker/table' {
-    interface TableConfig {
-        columnConfigurator?: TableSettingsConfig;
-    }
-}
-
 export interface TableSettingsConfig extends TableFeatureConfig {
     tableId?: string;
 }

@@ -15,7 +15,7 @@ Follow the steps below to install the Marketplace Return Management feature core
 
 To start feature integration, integrate the required features:
 
-| NAME | VERSION | LINK |
+| NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ------- | ---------- |
 | Spryker Core                 | {{page.version}} | [Spryker Core Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Return Management            | {{page.version}} | [Return Management Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/return-management-feature-integration.html) |

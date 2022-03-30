@@ -63,9 +63,3 @@ The following table describes the attributes you see, select, or enter while cre
 | IS EXCLUSIVE | Defines if this product label is to be exclusive. If an exclusive product label is applied to a product, all the other non-exclusive labels assigned to the product will not be displayed on the product card. |
 | STORE RELATION | Stores in which a product label will be displayed on the Storefront. |
 | NAME in the **TRANSLATIONS** pane | Locale specific names that will be displayed on the Storefront in respective stores. If there is no locale specific name, the **NAME** from the **GENERAL** pane is displayed. |
-
-
-## Next steps
-
-* [Edit product labels](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/managing-product-labels.html#editing-product-labels).
-* To learn how you can manage product labels, see [Managing Product Labels](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/managing-product-labels.html).

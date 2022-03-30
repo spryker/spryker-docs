@@ -50,7 +50,7 @@ To start editing product labels, do the following:
 
 ## Reference information: Edit product labels
 
-The following table describes the attributes you see, select, or enter while creating product labels.
+The following table describes the attributes you see, select, or enter while editing product labels.
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |

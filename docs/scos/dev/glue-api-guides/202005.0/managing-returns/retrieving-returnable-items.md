@@ -32,7 +32,7 @@ To retrieve all returnable items from all customer’s orders, send the request:
 ***
 
 ### Request
-Sample request: `GET https://glue.mysprykershop.com/returnable-items`
+Request sample: `GET https://glue.mysprykershop.com/returnable-items`
 
 ### Response
 <details>
@@ -149,7 +149,7 @@ Sample request: `GET https://glue.mysprykershop.com/returnable-items`
 
 To get returnable items of a specific sales order item by the Order Reference(s), you can specify the `orderReferences[]` parameter(s) in your request.
 
-Sample request: `GET https://glue.mysprykershop.com/returnable-items?orderReferences[]=DE--5`
+Request sample: `GET https://glue.mysprykershop.com/returnable-items?orderReferences[]=DE--5`
 
 where **DE--5** is the Order Reference of the order you need.
 
@@ -166,7 +166,7 @@ To get returnable items of a specific sales order item by the order ID, send the
 | {% raw %}{{{% endraw %}OrderID{% raw %}}}{% endraw %} | A unique identifier of an order. [Retrieve all orders](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html#retrieving-all-orders) to get it. |
 
 ### Request
-Sample request: `GET https://glue.mysprykershop.com/returnable-items/14d86bb2-ea23-57ed-904c-eecc63ef10ac`
+Request sample: `GET https://glue.mysprykershop.com/returnable-items/14d86bb2-ea23-57ed-904c-eecc63ef10ac`
 
 ### Response
 Sample Response:

@@ -36,7 +36,7 @@ To create a wishlist, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
-Sample request: `POST https://glue.mysprykershop.com/wishlists`
+Request sample: `POST https://glue.mysprykershop.com/wishlists`
 
 ```json
 {
@@ -779,7 +779,7 @@ To edit a wishlist, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
-Sample request: `PATCH https://glue.mysprykershop.com/wishlists`
+Request sample: `PATCH https://glue.mysprykershop.com/wishlists`
 
 The following sample changes the name of a wishlist.
 

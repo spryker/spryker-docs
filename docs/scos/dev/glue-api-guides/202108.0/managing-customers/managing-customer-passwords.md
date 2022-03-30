@@ -85,7 +85,7 @@ To request a password reset key, send the request:
 
 #### Request
 
-Sample request: `POST https://glue.mysprykershop.com/customer-forgotten-password`
+Request sample: `POST https://glue.mysprykershop.com/customer-forgotten-password`
 
 ```json
 {

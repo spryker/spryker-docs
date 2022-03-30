@@ -239,7 +239,7 @@ To retrieve a list of customer's addresses, send the request:
 
 ### Request
 
-Sample request: `GET http://glue.mysprykershop.com/customers/DE-25/addresses`
+Request sample: `GET http://glue.mysprykershop.com/customers/DE-25/addresses`
 
 
 ### Response

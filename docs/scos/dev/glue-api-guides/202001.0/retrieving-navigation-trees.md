@@ -39,7 +39,7 @@ To retrieve a navigation tree with detailed information on each node, send a GET
 
 /navigations/{% raw %}{{{% endraw %}navigation_id{% raw %}}}{% endraw %}
 
-Sample request: GET *http://glue.mysprykershop.com/navigations/**SOCIAL_LINKS***
+Request sample: GET *http://glue.mysprykershop.com/navigations/**SOCIAL_LINKS***
 
 where **SOCIAL_LINKS** is the ID of the navigation tree you want to retrieve.
 

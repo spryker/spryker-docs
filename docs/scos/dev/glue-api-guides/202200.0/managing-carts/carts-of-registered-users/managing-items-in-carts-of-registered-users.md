@@ -3258,7 +3258,7 @@ To remove an item from a registered user's cart, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
-Sample request: `DELETE http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054/items/177_25913296`
+Request sample: `DELETE http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054/items/177_25913296`
 
 ### Response
 
@@ -3283,7 +3283,7 @@ To remove a configurable bundle from a registered user’s cart, send the reques
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
-Sample request: `DELETE https://mysprykershop.com/carts/e68db76b-1c9b-5fb8-88db-6cbaf8faed76/configured-bundles/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff33dfe3418f6.24909526`
+Request sample: `DELETE https://mysprykershop.com/carts/e68db76b-1c9b-5fb8-88db-6cbaf8faed76/configured-bundles/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff33dfe3418f6.24909526`
 
 ### Response
 

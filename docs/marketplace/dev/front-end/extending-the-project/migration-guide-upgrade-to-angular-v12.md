@@ -5,33 +5,46 @@ template: module-migration-guide-template
 ---
 
 ## Upgrading from version 9.* to version 12.*
-### Overview 
-The Angular community comes up with a major release every six months and on 12th May 2021, we are here with the gift of the Angular version 12 update.
-For better performance, stability, and security need, a version upgrade is required. Stability brings reusable components and tools. Stability makes medium and large applications thrive and shine.
-For stability and security, Angular provides regular upgrades. Upgrades are major, minor, and small patches. An upgrade from the existing version to a newer version always requires time and change in the code.
 
-Since the Spryker applications are very large, it will be a little difficult to migrate to the new version of Angular. 
-Since it is not possible to do this using standard methods such as `nx migrate` or `ng update`, we have prepared the most detailed guide on migrating to the new version.
+In this article, you will find instructions on how to upgrade Angular to version 12 in your Spryker project.
+
+### Overview 
+
+Every six months, the Angular community releases a major update, and on 12th May 2021 version 12 of Angular was released.
+
+A version upgrade is necessary for improved performance, stability, and security. Stability allows reusable components and tools and makes medium and large applications thrive and shine. 
+
+Angular provides regular updates to ensure stability and security. These are major, minor, and small patches. An upgrade from an existing version to a newer version always requires time and changes to the code.
+
+Because Spryker applications are large and complex, migration to a new Angular version will be a challenge.
+Since it is not possible to migrate using standard methods such as `nx migrate` or `ng update`, we have prepared a detailed guide on migrating to the new version.
 
 *Estimated migration time: 1h 30m*
 
-### Update modules
+### 1) Update modules
 
-Upgrade modules to the new version  
+1. Upgrade modules to the new version:
+
 ```bash
 composer require spryker/dummy-merchant-portal-gui:"^0.4.0" spryker/dashboard-merchant-portal-gui:"^1.4.0" spryker/gui-table:"^1.4.0" spryker/merchant-profile-merchant-portal-gui:"^1.4.0" spryker/product-merchant-portal-gui:"^2.1.0" spryker/product-offer-merchant-portal-gui:"^1.7.0" spryker/sales-merchant-portal-gui:"^1.6.0" spryker/security-merchant-portal-gui:"^1.4.0" spryker/user-merchant-portal-gui:"^1.3.0" spryker/zed-ui:"^1.5.0" --update-with-dependencies
 ```
 
-Regenerate the data transfer object  
+2. Regenerate the data transfer object:
+
 ```bash
 console transfer:generate
 ```
 
-### Update NPM dependencies
+### 2) Update NPM dependencies
+
+{% info_block infoBox "Info" %}
 
 Make sure you are using [Node 12 or later](https://nodejs.org/dist/latest-v12.x/).
 
-Update/add the following dependencies  
+{% endinfo_block %}
+
+1. Update/add the following dependencies:
+
 ```json
 "rxjs": "~7.4.0",
 "zone.js": "~0.11.4",
@@ -63,20 +76,22 @@ Update/add the following dependencies
 "typescript": "~4.2.4",
 ```
 
-Please also add `"typescript": "4.2.4",` to `"resolutions"` section to make sure you use right version.
+2. Add `"typescript": "4.2.4",` to the `"resolutions"` section to ensure you're using the correct version.
 
-Run the following commands to make sure you have updated `lock` file and `node_modules` folder.
+3. Run the following commands to ensure that the `lock` file and the `node_modules` folder have been updated.
 
-Update **yarn.lock** via commands  
-```bash
-rm -rf node_modules
-yarn install
-```
+4. Update `yarn.lock` file via commands:
 
-### Create/Update config files
+    ```bash
+    rm -rf node_modules
+    yarn install
+    ```
 
-Create **.browserslistrc** file  
-```
+### 3) Create/Update config files
+
+1. Create a **.browserslistrc** file:
+
+```txt
 last 1 Chrome version
 last 1 Firefox version
 last 2 Edge major versions
@@ -86,7 +101,8 @@ Firefox ESR
 IE 11
 ```
 
-Create **nx.json** file  
+2. Create **nx.json** file:
+
 ```json
 {
     "affected": {
@@ -107,16 +123,18 @@ Create **nx.json** file
 }
 ```
 
-Create **jest.preset.js** in the `frontend/merchant-portal/` folder  
+3. Create **jest.preset.js** file in the `frontend/merchant-portal/` folder:
+
 ```js
 const nxPreset = require('@nrwl/jest/preset');
 
 module.exports = { ...nxPreset };
 ```
 
-Compare and update the following files:  
+4. Compare and update the following files:  
 
-**angular.json**  
+**angular.json**
+
 ```json
 {
     "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
@@ -232,7 +250,8 @@ Compare and update the following files:
 }
 ```
 
-**jest.config.js** in the `frontend/merchant-portal/` folder  
+**jest.config.js** in the `frontend/merchant-portal/` folder:
+
 ```js
 module.exports = {
     displayName: 'merchant-portal',
@@ -261,30 +280,35 @@ module.exports = {
 };
 ```
 
-**test-setup.ts** in the `frontend/merchant-portal/` folder  
+**test-setup.ts** in the `frontend/merchant-portal/` folder:
+
 ```ts
 import 'core-js/features/reflect';
 import 'jest-preset-angular/setup-jest';
 ```
 
-Rename `tsconfig.json` to `tsconfig.base.json` and fix usage in the:
+5. Rename `tsconfig.json` to `tsconfig.base.json` and fix usage in the:
 
 **tsconfig.mp.json**  
+
 ```json
 "extends": "./tsconfig.base.json",
 ```
 
-**tsconfig.yves.json**  
+**tsconfig.yves.json** 
+
 ```json
 "extends": "./tsconfig.base.json",
 ```
 
-**update-config-paths.js** in the `frontend/merchant-portal/` folder  
+**update-config-paths.js** in the `frontend/merchant-portal/` folder:
+
 ```js
 const TSCONFIG_FILES = ["tsconfig.base.json", "tsconfig.mp.json"];
 ```
 
-Run build command  
+6. Run build command:
+
 ```bash
 yarn mp:build
 ```

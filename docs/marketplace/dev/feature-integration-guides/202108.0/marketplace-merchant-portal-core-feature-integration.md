@@ -646,28 +646,26 @@ To configure deployment configuration to automatically install and build Merchan
 
 - Remove existing Yves dependencies install commands from deployment Yaml: `dependencies-install` and `yves-isntall-dependencies`.
 - Update project install dependencies command dependencies-install command to:
-- build-static:
-
-```bash
-merchant-portal-install-dependencies:
-    command: 'console frontend:mp:install-dependencies | tail -100 && echo "Output trimmed, only last 100 lines shown."'
-```
+  - build-static:
+    ```bash
+    merchant-portal-install-dependencies:
+      command: 'console frontend:mp:install-dependencies | tail -100 && echo "Output trimmed, only last 100 lines shown."'
+    ```
 
 - Add the Merchant Portal build command:
+  - build-static-production:
+    ```yaml
+    merchant-portal-build-frontend:
+      command: 'vendor/bin/console frontend:mp:build -e production'
+      timeout: 1600
+    ```
 
-- build-static-production:
-  ```yaml
-  merchant-portal-build-frontend:
-     command: 'vendor/bin/console frontend:mp:build -e production'
-     timeout: 1600
-  ```
-
-- build-static-development:
-  ```yaml
-  merchant-portal-build-frontend:
-     command: 'vendor/bin/console frontend:mp:build'
-     timeout: 1600
-  ```
+  - build-static-development:
+    ```yaml
+    merchant-portal-build-frontend:
+      command: 'vendor/bin/console frontend:mp:build'
+      timeout: 1600
+    ```
 
 ## Adjust environment infrastructure
 

@@ -44,7 +44,7 @@ You can define conditions using one rule or by combining rules into groups and s
 
 The **AND** and **OR** combination operators are used to combine rules in each group. Currently they are greyed out because there is only one rule in the group. To add one more rule to this group, click **Add rule**. This adds one more rule entry and the operators for this group become active. Based on how you can combine these rules, click one of the operators.
 
-To add a subgroup, click **Add group**. Inside the main box, this adds a separate box with its own operators and a preadded rule. The rules in this sub-group combined will be used as a single rule when combinging it with the rules in the root group.
+To add a subgroup, click **Add group**. Inside the main box, this adds a separate box with its own operators and a preadded rule. The rules in this sub-group combined will be used as a single rule when combining it with the rules in the root group.
 
 To define a rule, select a parameter, a relation operator, and a value.
 

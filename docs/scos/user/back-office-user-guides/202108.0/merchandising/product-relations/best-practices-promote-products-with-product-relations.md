@@ -27,3 +27,24 @@ Let's assume that you have different Sony smartwatches in your shop. When a cust
 9. In the **Store relation** pane, select **DE** and **AT** checkboxes. The product relation will be displayed in these stores.
 
 10.  Click **Next**.
+
+
+When the **Products** tab opens, there is a preadded rule on the page. To define related products, do the following:
+
+1. For the parameter, select **brand**.
+    This adds a relation operator field with the **equal** operator prerselected. This also adds a value field.
+2. In the value field, enter `sony`.
+3. Click **Add rule**.
+4. For parameter, select **category**.
+5. In the value field, enter `smartwatches`.
+6. Click **Add group**.
+    This adds a subgroup with a rule.
+7. For parameter select **color**.
+8. In the value field, enter `white`.
+9. Click **Add rule**.
+10. For parameter select **color**.
+11. In the value field, enter `silver`.
+12. In the subgroup, click the **OR** combination operator.
+    This means that either white or silver products are displayed as related for *Sony SmartWatch 3*.
+13. In the main group, click the **AND** combination operator.
+    This means that only white or silver Sony products from the smartwatches category will be displayed for *Sony SmartWatch 3* as related. The products fulfilling these rules are displayed in the table below.

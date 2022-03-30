@@ -17,11 +17,13 @@ To retrieve the product offers of a concrete product, send the request:
 
 ## Request
 
-Request sample: `GET https://glue.mysprykershop.com/concrete-products/006_30692993/product-offers`
+Request sample: retrieve the product offers of a concrete product
+
+`GET https://glue.mysprykershop.com/concrete-products/006_30692993/product-offers`
 
 ## Response
 
-Response sample:
+Response sample: retrieve the product offers of a concrete product
 
 ```json
 {

@@ -39,7 +39,7 @@ On the product details page of a product that's a product alternative for anothe
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Add product alternatives](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/adding-product-alternatives.html) |
+| [Add product alternatives](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/adding-product-alternatives.html) |
 
 {% info_block warningBox "Developer guides" %}
 

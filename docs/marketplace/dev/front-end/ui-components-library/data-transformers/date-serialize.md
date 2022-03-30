@@ -30,6 +30,12 @@ In the following example, the `datasource` transforms `date` object into the ser
 Register the service:
 
 ```ts
+declare module '@spryker/data-transformer' {
+    interface DataTransformerRegistry {
+        'date-serialize': DateSerializeDataTransformerConfig;
+    }
+}
+
 @NgModule({
     imports: [
         DataTransformerModule.withTransformers({
@@ -45,11 +51,5 @@ export class RootModule {}
 Below you can find interfaces for the Data Transformer Date-serialize:
 
 ```ts
-declare module '@spryker/data-transformer' {
-    interface DataTransformerRegistry {
-        'date-serialize': DateSerializeDataTransformerConfig;
-    }
-}
-
 export interface DateSerializeDataTransformerConfig extends DataTransformerConfig {}
 ```

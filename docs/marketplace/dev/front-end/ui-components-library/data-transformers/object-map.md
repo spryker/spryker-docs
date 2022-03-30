@@ -52,6 +52,12 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/data-transformer' {
+    interface DataTransformerRegistry {
+        'object-map': ObjectMapDataTransformerConfig;
+    }
+}
+
 @NgModule({
     imports: [
         DataTransformerModule.withTransformers({
@@ -67,12 +73,6 @@ export class RootModule {}
 Below you can find interfaces for the Data Transformer Object-map:
 
 ```ts
-declare module '@spryker/data-transformer' {
-    interface DataTransformerRegistry {
-        'object-map': ObjectMapDataTransformerConfig;
-    }
-}
-
 export interface ObjectMapDataTransformerConfig extends DataTransformerConfig {
     mapProps: {
         [propName: string]: DataTransformerConfig;

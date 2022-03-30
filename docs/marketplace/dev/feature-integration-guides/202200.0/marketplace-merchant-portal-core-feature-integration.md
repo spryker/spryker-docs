@@ -671,7 +671,7 @@ merchant-portal-install-dependencies:
 
 ## Adjust environment infrastructure
 
-It is not safe to expose MerchantPortal next to the Back Office - MerchantPortal **MUST NOT** have OS, DNS name, VirtualHost settings, FileSystem, and service credentials shared with Zed.
+It is not safe to expose MerchantPortal next to the Back Office - MerchantPortal  *must not have* OS, DNS name, VirtualHost settings, FileSystem, and service credentials shared with Zed.
 
 ### 1) Set up a new virtual machine/docker container dedicated to MerchantPortal
 

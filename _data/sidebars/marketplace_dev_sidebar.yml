@@ -12,8 +12,8 @@ entries:
           - title: Infrastructure requirements
             url: /docs/marketplace/dev/setup/infrastructure-requirements.html
 
-          - title: Installation
-            url: /docs/marketplace/dev/setup/installation.html
+          - title: Setup
+            url: /docs/marketplace/dev/setup/spryker-marketplace-setup.html
 
       - title: Marketplace architecture overview
         nested:

@@ -642,9 +642,9 @@ export default async (
 
 ### 6) Adjust deployment configs
 
-To configure deployment configuration to automatically install and build Merchant Portal, change frontend dependencies and install commands in the deployment Yaml:
+To configure deployment configuration to automatically install and build Merchant Portal, change frontend dependencies and installation commands in the deployment Yaml:
 
-- Remove existing Yves dependencies install commands from deployment Yaml: `dependencies-install` and `yves-isntall-dependencies`.
+- Remove existing Yves dependencies' installation commands from deployment Yaml: `dependencies-install` and `yves-isntall-dependencies`.
 - Update project install dependencies command dependencies-install command to:
 - build-static:
 

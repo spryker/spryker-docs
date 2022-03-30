@@ -675,14 +675,14 @@ It is not safe to expose MerchantPortal next to the Back Office - MerchantPortal
 
 ### 1) Set up a new virtual machine/docker container dedicated to MerchantPortal
 
-MerchantPortal MUST be placed into its own private subnet.
+MerchantPortal *must be* placed into its own private subnet.
 
-MerchantPortal **MUST** have access to:
+MerchantPortal *must have* access to the following:
 
 - Primary Database
 - Message broker
 
-MerchantPortal **MUST NOT** have access to:
+MerchantPortal *must not have* access to the following:
 
 - Search and Storage
 - Gateway
@@ -690,7 +690,7 @@ MerchantPortal **MUST NOT** have access to:
 
 ### 2) Create a dedicated database user
 
-Grant only default CRUD (INSERT, DELETE, UPDATE, SELECT) operations. DO NOT grant ALL PRIVILEGES, GRANT OPTION, DROP, CREATE, and other admin-related grants.
+Grant only default CRUD operations—`INSERT`, `DELETE`, `UPDATE`, `SELECT`. Do not grant `ALL PRIVILEGES`, `GRANT OPTION`, `DROP`, `CREATE`, and other admin-related grants.
 
 The following code snippet example is for MySQL:
 
@@ -702,7 +702,7 @@ FLUSH PRIVILEGES;
 
 ### 3) Create a new Nginx web server configuration
 
-Example of an Nginx configuration:
+The following is an example of an Nginx configuration:
 
 **/etc/nginx/merchant-portal.conf**
 
@@ -740,7 +740,7 @@ server {
 }
 ```
 
-After the Nginx config was modified, apply the new `config:f`
+After modifying the Nginx config, apply the new `config:f`
 
 ```bash
 sudo service nginx reload
@@ -767,7 +767,7 @@ The following page should now show the login page for MerchantPortal: `https://y
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following pages do not open `https://your-merchant-portal.domain/security-gui/login`, `https://your-merchant-portal.domain/`
+Make sure the following pages do not open: `https://your-merchant-portal.domain/security-gui/login`, `https://your-merchant-portal.domain/`
 
 {% endinfo_block %}
 
@@ -819,13 +819,13 @@ class AclConfig extends SprykerAclConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that after executing `console setup:init-db`, the `'user-merchant-portal-gui'` rule is present in the `spy_acl_rule` table.
+Make sure that after executing `console setup:init-db`, the `user-merchant-portal-gui` rule is present in the `spy_acl_rule` table.
 
 {% endinfo_block %}
 
 ### 5) Update navigation
 
-Add MyAccount and Logout section to `navigation-secondary.xml`:
+Add the `My Account` and `Logout` sections to `navigation-secondary.xml`:
 
 **config/Zed/navigation-secondary.xml**
 
@@ -857,6 +857,6 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Log in to the **Merchant Portal** and make sure that the MyAccount and Logout button are visible in the overlay of the secondary navigation, when clicking on the profile picture.
+Log in to the Merchant Portal and make sure that when clicking on the profile picture, the **My Account** and **Logout** buttons are visible in the overlay of the secondary navigation.
 
 {% endinfo_block %}

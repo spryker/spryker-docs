@@ -4,7 +4,7 @@ entries:
 - product: SCOS
   nested:
   - title: Intro to Spryker
-    url: /docs/scos/user/intro-to-spryker/about-spryker.html
+    url: /docs/scos/user/intro-to-spryker/intro-to-spryker.html
     nested:
     - title: Releases
       url: /docs/scos/user/intro-to-spryker/releases/releases.html

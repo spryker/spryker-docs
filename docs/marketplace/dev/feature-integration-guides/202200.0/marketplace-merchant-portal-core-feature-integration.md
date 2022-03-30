@@ -577,7 +577,7 @@ Run `yarn -v` to check if the yarn has been installed correctly. 1.22.x - global
 
 `ng --version` should show Angular CLI: 12.2.16 version.
 
-Now it is time to install project dependencies:
+Install project dependencies:
 
 ```bash
 yarn install

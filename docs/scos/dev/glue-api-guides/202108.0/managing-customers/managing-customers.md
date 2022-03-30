@@ -37,7 +37,9 @@ To create a customer, send the request:
 
 ### Request
 
-Request sample: `POST http://glue.mysprykershop.com/customers`
+Request sample: create a customer
+
+`POST http://glue.mysprykershop.com/customers`
 
 ```json
 {
@@ -71,7 +73,7 @@ Request sample: `POST http://glue.mysprykershop.com/customers`
 
 ### Response
 
-<details><summary markdown='span'>Response sample</summary>
+<details><summary markdown='span'>Response sample: create a customer</summary>
 
 ```json
 {
@@ -126,11 +128,13 @@ To retrieve customers, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
-Request sample: `GET https://glue.mysprykershop.com/customers`
+Request sample: retrieve customers
+
+`GET https://glue.mysprykershop.com/customers`
 
 ### Response
 
-<details><summary markdown='span'>Response sample</summary>
+<details><summary markdown='span'>Response sample: retrieve customers</summary>
 
 ```json
 {
@@ -182,12 +186,14 @@ To retrieve information about a customer, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
-Request sample: `GET http://glue.mysprykershop.com/customers/DE-25`
+Request sample: Retrieve a customer
+
+`GET http://glue.mysprykershop.com/customers/DE-25`
 
 
 ### Response
 
-<details><summary markdown='span'>Response sample</summary>
+<details><summary markdown='span'>Response sample: retrieve a customer</summary>
 
 ```json
 {
@@ -209,7 +215,6 @@ Request sample: `GET http://glue.mysprykershop.com/customers/DE-25`
 		}
 	}
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -242,7 +247,9 @@ To edit a customer account, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer which you want to edit. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
-Request sample: `PATCH http://glue.mysprykershop.com/customers/DE-25`
+Request sample: edit a customer
+
+`PATCH http://glue.mysprykershop.com/customers/DE-25`
 
 ```json
 {
@@ -259,7 +266,7 @@ Request sample: `PATCH http://glue.mysprykershop.com/customers/DE-25`
 
 ### Response
 
-<details><summary markdown='span'>Response sample</summary>
+<details><summary markdown='span'>Response sample: edit a customer</summary>
 
 ```json
 {
@@ -278,7 +285,6 @@ Request sample: `PATCH http://glue.mysprykershop.com/customers/DE-25`
 		}
 	}
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -312,7 +318,9 @@ To anonymize a customer, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer which you want to anonymize. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
-Request sample: `DELETE http://mysprykershop.com/customers/DE-25`
+Request sample: anonymize a customer
+
+`DELETE http://mysprykershop.com/customers/DE-25`
 
 ### Response
 
@@ -341,11 +349,13 @@ This request is available for registered customers only.
 
 ### Request
 
-Request sample: `GET https://glue.mysprykershop.com/customers/DE--21/availability-notifications`
+Request sample: retrieve subscriptions to availability notifications
+
+`GET https://glue.mysprykershop.com/customers/DE--21/availability-notifications`
 
 ### Response
 
-<details><summary markdown='span'>Response sample</summary>
+<details><summary markdown='span'>Response sample: retrieve subscriptions to availability notifications</summary>
 
 ```json
 {
@@ -368,7 +378,6 @@ Request sample: `GET https://glue.mysprykershop.com/customers/DE--21/availabilit
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

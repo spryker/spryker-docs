@@ -32,13 +32,13 @@ After sending a request, the cart is deleted, and you cannot make any changes in
 The endpoint also provides information on whether it is necessary to redirect the user to a third-party page to complete the payment.
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html)
 * [Glue API: Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shipment-feature-integration.html)
 * [Glue API: Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-feature-integration.html)
 * [Glue API: Configurable Bundle + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-cart-feature-integration.html)
 * [Glue API: Configurable Bundle + Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-product-feature-integration.html)
-
 
 
 ## Place an order
@@ -663,6 +663,7 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
 }
 ```
 </details>
+
 
 <details>
 <summary markdown='span'>Response sample: check out with configurable bundles</summary>

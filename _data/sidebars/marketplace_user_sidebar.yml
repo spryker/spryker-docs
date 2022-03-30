@@ -5,31 +5,32 @@ entries:
   - product: Marketplace
     nested:
       - title: Intro to the Spryker Marketplace
+        url: /docs/marketplace/user/intro-to-spryker-marketplace/intro-to-spryker-marketplace.html
         nested:
 
           - title: Marketplace concept
-            url: /docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-concept.html
+            url: /docs/marketplace/user/intro-to-spryker-marketplace/marketplace-concept.html
 
           - title: Marketplace personas
-            url: /docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-personas.html
+            url: /docs/marketplace/user/intro-to-spryker-marketplace/marketplace-personas.html
 
           - title: Back Office for Marketplace Operator
-            url: /docs/marketplace/user/intro-to-the-spryker-marketplace/back-office-for-marketplace-operator.html
+            url: /docs/marketplace/user/intro-to-spryker-marketplace/back-office-for-marketplace-operator.html
 
           - title: Marketplace Storefront
-            url: /docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-storefront.html
+            url: /docs/marketplace/user/intro-to-spryker-marketplace/marketplace-storefront.html
 
           - title: Merchant Portal
-            url: /docs/marketplace/user/intro-to-the-spryker-marketplace/merchant-portal.html
+            url: /docs/marketplace/user/intro-to-spryker-marketplace/merchant-portal.html
 
           - title: Upcoming major module releases
-            url: /docs/marketplace/user/intro-to-the-spryker-marketplace/upcoming-major-module-releases.html
+            url: /docs/marketplace/user/intro-to-spryker-marketplace/upcoming-major-module-releases.html
 
           - title: Release notes
             nested:
 
             - title: Release notes 202108.0
-              url: /docs/marketplace/user/intro-to-the-spryker-marketplace/release-notes/release-notes-2021080.html
+              url: /docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-2021080.html
 
       - title: Features
         url: /docs/marketplace/user/features/

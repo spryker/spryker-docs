@@ -4,7 +4,7 @@ entries:
 - product: SCOS
   nested:
   - title: Intro to Spryker
-    url: /docs/scos/user/intro-to-spryker/about-spryker.html
+    url: /docs/scos/user/intro-to-spryker/intro-to-spryker.html
     nested:
     - title: Releases
       url: /docs/scos/user/intro-to-spryker/releases/releases.html
@@ -24,9 +24,9 @@ entries:
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202009.0/security-release-notes-202009.0.html
         - title: Release Notes 202102.0
           nested:
-          - title: Security release notes- 202102.0 SEC
+          - title: "Performance release notes: 202102.0 SEC"
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202102.0/performance-release-notes-202102.0.html
-          - title: Security release notes- 202102.0 SEC
+          - title: "Security release notes: 202102.0 SEC"
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202102.0/security-release-notes-202102.0-sec.html
         - title: Release notes Code Releases May, 2020
           nested:
@@ -1710,10 +1710,44 @@ entries:
             - "202009.0"
       - title: Product sets
         nested:
+        - title: Create product sets
+          url: /docs/scos/user/back-office-user-guides/merchandising/product-sets/create-product-sets.html
+          include_versions:
+          - "202108.0"
+        - title: Edit product sets
+          url: /docs/scos/user/back-office-user-guides/merchandising/product-sets/edit-product-sets.html
+          include_versions:
+          - "202108.0"
+        - title: View product sets
+          url: /docs/scos/user/back-office-user-guides/merchandising/product-sets/view-product-sets.html
+          include_versions:
+          - "202108.0"
+        - title: Reorder product sets
+          url: /docs/scos/user/back-office-user-guides/merchandising/product-sets/reorder-product-sets.html
+          include_versions:
+          - "202108.0"
+        - title: Delete product sets
+          url: /docs/scos/user/back-office-user-guides/merchandising/product-sets/delete-product-sets.html
+          include_versions:
+          - "202108.0"
         - title: Creating product sets
           url: /docs/scos/user/back-office-user-guides/merchandising/product-sets/creating-product-sets.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
         - title: Managing product sets
           url: /docs/scos/user/back-office-user-guides/merchandising/product-sets/managing-product-sets.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
         - title: References
           include_versions:
           - "201811.0"

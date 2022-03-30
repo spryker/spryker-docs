@@ -28,3 +28,7 @@ Spryker Marketplace includes the following functionalities:
 Check out this video to learn more about the Marketplace in the Spryker Commerce OS:
 
 {% wistia bxnsf8mzdc 960 720 %}
+
+## Read next
+
+[Marketplace personas](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-personas.html)

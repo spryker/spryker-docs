@@ -324,7 +324,7 @@ class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalA
 
 </details>
 
-Open access to the *Merchant Portal* login page by default:
+Open access to the Merchant Portal login page by default:
 
 **config/Shared/config_default.php**
 
@@ -396,7 +396,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 ## Install feature frontend
 
-Follow the steps below to install the Merchant Portal Core feature front end.
+Follow the steps below to install the Merchant Portal Core feature frontend.
 
 ### Prerequisites
 
@@ -573,7 +573,7 @@ Run commands from the root of the project:
 npm i -g yarn @angular/cli@12.2.16
 ```
 
-Run `yarn -v` to check if the yarn was installed correctly. 1.22.x - global version (outside of the project) and 2.x.x at least in the project.
+Run `yarn -v` to check if the yarn has been installed correctly. 1.22.x - global version (outside of the project) and 2.x.x at least in the project.
 
 `ng --version` should show Angular CLI: 12.2.16 version.
 
@@ -583,7 +583,7 @@ Now it is time to install project dependencies:
 yarn install
 ```
 
-Check if the marketplace packages are located in the `node_modules/@spryker` folder (for example, utils).
+Check if the marketplace packages are located in the `node_modules/@spryker` folder—for example, utils.
 
 ### 5) Install Marketplace builder
 
@@ -644,7 +644,7 @@ export default async (
 
 To configure deployment configuration to automatically install and build Merchant Portal, change frontend dependencies and install commands in the deployment Yaml:
 
-- Remove existing Yves dependencies install commands from deployment Yaml: `dependencies-install` and `yves-isntall-dependencies`.ß
+- Remove existing Yves dependencies install commands from deployment Yaml: `dependencies-install` and `yves-isntall-dependencies`.
 - Update project install dependencies command dependencies-install command to:
 - build-static:
 

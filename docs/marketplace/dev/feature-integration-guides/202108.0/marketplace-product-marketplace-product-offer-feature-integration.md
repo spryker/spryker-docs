@@ -62,8 +62,8 @@ class MerchantProductOfferStorageDependencyProvider extends SprykerMerchantProdu
 
 {% info_block warningBox "Verification" %}
 
-Make sure you can switch between merchant products and product offers on the *Product Details* page.
+Make sure you can switch between marketplace products and product offers on the *Product Details* page.
 
-Make sure that merchant products selected on the *Product Details* page by default.
+Make sure that marketplace products selected on the *Product Details* page by default.
 
 {% endinfo_block %}

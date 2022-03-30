@@ -22,7 +22,7 @@ Review the [reference information](#reference-information-creating-reclamations)
 **Tips and tricks**
 Claiming an order does not change the state of the items in the order. When a reclamation is created, a sales team member processes the order manually.
 
-### Reference information: Creating reclamations
+## Reference information: Creating reclamations
 
 | ATTRIBUTE | DESCRIPTION |
 |-|-|

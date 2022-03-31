@@ -32,12 +32,14 @@ To retrieve a full category tree, containing all available nodes and their child
 
 ### Request
 
-Request sample: `GET http://glue.mysprykershop.com/category-trees`
+Request sample: retrieve a category tree
 
-### Reponse
+`GET http://glue.mysprykershop.com/category-trees`
+
+### Response
 
 <details>
-<summary markdown='span'>Response sample </summary>
+<summary markdown='span'>Response sample: retrieve a category tree</summary>
 
 ```json
 {
@@ -162,7 +164,6 @@ Request sample: `GET http://glue.mysprykershop.com/category-trees`
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

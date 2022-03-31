@@ -71,7 +71,6 @@ Request sample: add an address
     }
 }
 ```
-</details>
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |

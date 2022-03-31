@@ -31,3 +31,7 @@ A *merchant user* is the employee of the merchant and their company who uses the
 ## Buyer
 
 A *buyer* is the user who actively uses the Storefront. It is either a registered user who has a customer account or guest user who hasn't yet registered and makes purchases in the Marketplace Storefront.
+
+## Read next
+
+[Back Office for Marketplace Operator](/docs/marketplace/user/intro-to-spryker-marketplace/back-office-for-marketplace-operator.html)

@@ -595,7 +595,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Ensure that, in the database, the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Ensure that in the database, the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 

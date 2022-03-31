@@ -20,7 +20,8 @@ This document describes how to create product relations in the Back Office.
 ## Prerequisites
 
 1. Learn how [related product rules](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html#related-product-rules) work.
-2. To start working with product relations, go to **Merchandising** > **Product Relations**.
+2. If you are new to product relations, you might want to start with [Best practices: Promote products with product relations](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/best-practices-promote-products-with-product-relations.html).
+3. To start working with product relations, go to **Merchandising** > **Product Relations**.
 
 ## Define general settings of a product relation
 

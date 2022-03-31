@@ -891,7 +891,7 @@ class MerchantOmsCommunicationFactory extends SprykerMerchantOmsCommunicationFac
 
 1. To verify `MerchantReturnPreCreatePlugin`, make sure that when you create a return for merchant order items, the row in `spy_sales_return`, which identifies the new return, has the `spy_sales_return.merchant_reference` field populated.
 2. To verify `MerchantReturnCreateRequestValidatorPlugin`, make sure that you can't create a return for items from different merchants.
-3. To verify `MerchantReturnExpanderPlugin` make sure that you can see merchant order references on return detail page.
+3. To verify `MerchantReturnExpanderPlugin`, make sure that you can see merchant order references on the return details page.
 
 {% endinfo_block %}
 

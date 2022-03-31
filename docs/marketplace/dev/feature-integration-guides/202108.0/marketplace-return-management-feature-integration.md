@@ -899,7 +899,7 @@ class MerchantOmsCommunicationFactory extends SprykerMerchantOmsCommunicationFac
 
 <!--Describe how a developer can check they have completed the step correctly.-->
 
-Make sure that when you create and process return for merchant order items, it's statuses synced between state machines in the following way:
+Make sure that when you create and process a return for merchant order items, its statuses are synced between state machines in the following way:
 
 | Marketplace SM     | Default Merchant SM     | Main Merchant SM
 | -------- | ------------------- | ---------- |

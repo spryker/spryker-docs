@@ -18,7 +18,7 @@ This topic describes how to manage [navigation elements](/docs/scos/user/feature
 
 To start working with navigation elements, go to **Content** > **Navigation**.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Creating a navigation element
 
@@ -181,7 +181,7 @@ To duplicate a navigation element:
 3. Click **Save**.
 This takes you to the *Overview of Navigation Elements* page. You can see the message about the successful navigation element duplication. The duplicated element is displayed in the *List of navigation elements*.
 
-**Tips & tricks**
+**Tips and tricks**
 
 * Filter the navigation elements in the *List of navigation elements* by entering a name or a key in the search bar above the table.
 * In the *Navigation tree* section, filter the navigation nodes by entering a navigation node name in the search.

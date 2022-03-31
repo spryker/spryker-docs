@@ -21,7 +21,7 @@ This topic describes how to manage product labels.
 
 To start managing product labels, go to **Merchandising** > **Product Labels**.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Viewing product labels
 
@@ -35,7 +35,7 @@ On the *View Product Label: [product label name]*  page, the following informati
 * Translations of the product label name.
 * Products to which the product label is applied.
 
-**Tips & tricks**
+**Tips and tricks**
 <br>On the *View Product Label: [product label name]*  page, you can:
 * View the product to which the product label is assigned by clicking **View** in the *Actions* column of the *Applied Products* table. This takes you to the *View Product Abstract: [product abstract SKU]* page.
 
@@ -132,5 +132,5 @@ In the *Products* tab, you can do the following:
 * Sort by ID, SKU, and Name.
 * Search by SKU and Name.
 
-**Tips & tricks**
+**Tips and tricks**
 <br>In the *Assigned Products* subtab of the *Products* tab, clear the check box next to a product to deassign it from the label.

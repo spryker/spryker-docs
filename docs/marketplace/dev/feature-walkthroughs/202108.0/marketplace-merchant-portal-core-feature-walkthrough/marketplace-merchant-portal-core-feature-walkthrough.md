@@ -4,7 +4,7 @@ description: Marketplace MerchantPortal Core enables server configuration and th
 template: concept-topic-template
 ---
 
-The Marketplace Merchant Portal Core enables server configuration and basic functions of the Merchant Portal application, such as security login, GUI tables, dashboards, etc. Merchant Portal and Back Office are separate applications with different entry points, bootstraps, and possibilities to register application plugins, configure application base URLs, debug, etc.
+The Marketplace Merchant Portal Core enables server configuration and basic functions of the Merchant Portal application, such as security login, GUI tables, and dashboards. Merchant Portal and Back Office are separate applications with different entry points, bootstraps, and possibilities to register application plugins, configure application base URLs, debug.
 
 {% info_block warningBox "Note" %}
 
@@ -23,7 +23,7 @@ The following diagram illustrates the dependencies between the modules for the M
 
 ### Main Marketplace MerchantPortal Core feature modules
 
-The table below lists the main MerchantPortal Core modules:
+The following table lists the main MerchantPortal Core modules:
 
 | NAME | DESCRIPTION |
 | -------------- | ------------------ |
@@ -41,7 +41,7 @@ The table below lists the main MerchantPortal Core modules:
 
 ### Optional Marketplace MerchantPortal Core feature modules
 
-The table below lists optional MerchantPortal Core modules:
+The following table lists optional MerchantPortal Core modules:
 
 | NAME | DESCRIPTION |
 | -------------------- | --------------------- |

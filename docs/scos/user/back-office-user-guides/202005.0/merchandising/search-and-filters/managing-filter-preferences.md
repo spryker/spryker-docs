@@ -31,7 +31,7 @@ Make sure that the attribute you are going to create a filter preference for is 
     3. Enter the translations for all locations set up in your store.
 3. Click **Save**.
 
-**Tips & Tricks**
+**Tips and tricks**
 The filter is created by it will not be available for use unless you synchronize the filter preferences.
 To do the synchronization, click **Synchronize filter preference** in the top right corner of the **Filter Preferences** page.
 

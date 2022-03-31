@@ -19,7 +19,7 @@ Before you start installing DevVM, make sure to fulfill the [DevVM system requir
 ## Installation
 
 To install Spryker, follow one of the guides below:
-* [Installing Spryker with DevVM on MacOS and Linux](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-development-virtual-machine.html)
+* [Installing Spryker with DevVM on MacOS and Linux](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html)
 * [Installing Spryker with DevVM on Windows](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-windows.html)
 
 

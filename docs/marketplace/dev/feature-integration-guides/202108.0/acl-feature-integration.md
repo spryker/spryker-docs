@@ -281,7 +281,7 @@ class AclDependencyProvider extends SprykerAclDependencyProvider
 }
 ```
 
-Use the following example if you want to enable ACL Entity for the whole Application, e.g. for the Merchant Portal:
+Use the following example if you want to enable ACL Entity for the whole Application, for example,for the Merchant Portal:
 
 **src/Pyz/Zed/MerchantPortalApplication/MerchantPortalApplicationDependencyProvider.php**
 
@@ -321,7 +321,7 @@ Make sure that the request doesn't succeed for users without permission.
 
 Make sure that the user can see only the allowed menu links.
 
-Make sure that `spy_acl_role` `spy_acl_group` `spy_acl_user_has_group` tables contain default data.
+Make sure that `spy_acl_role`, `spy_acl_group`, and `spy_acl_user_has_group` tables contain default data.
 
 Make sure that you can edit user's ACL groups on User edit page in Back Office.
 

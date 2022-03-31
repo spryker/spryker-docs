@@ -23,7 +23,7 @@ Vouchers are codes that customers can redeem during checkout. Voucher codes are 
 
 To start working with discounts, navigate to **Merchandising** > **Discount**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating a voucher
 
@@ -76,7 +76,7 @@ See [Voucher code](#voucher-code) for more information.
 
 {% endinfo_block %}
 
-**Tips & tricks**
+**Tips and tricks**
 <br>Once you generated voucher codes, you can export them as a .csv file.
 To do that, click **Export** below *Generate*.
 

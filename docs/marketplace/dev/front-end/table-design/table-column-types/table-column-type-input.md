@@ -41,6 +41,12 @@ Check out an example usage of the Table Column Input in the `@spryker/table` con
 Register the component:
 
 ```ts
+declare module '@spryker/table' {
+    interface TableColumnTypeRegistry {
+        input: TableColumnInputConfig;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -58,12 +64,6 @@ export class RootModule {}
 Below you can find interfaces for the Table Column Input:
 
 ```ts
-declare module '@spryker/table' {
-    interface TableColumnTypeRegistry {
-        input: TableColumnInputConfig;
-    }
-}
-
 interface TableColumnInputConfig {
     /** Bound to the @spryker/input inputs */
     type: string; // 'text' - by default

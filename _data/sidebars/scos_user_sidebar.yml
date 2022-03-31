@@ -4,7 +4,7 @@ entries:
 - product: SCOS
   nested:
   - title: Intro to Spryker
-    url: /docs/scos/user/intro-to-spryker/about-spryker.html
+    url: /docs/scos/user/intro-to-spryker/intro-to-spryker.html
     nested:
     - title: Releases
       url: /docs/scos/user/intro-to-spryker/releases/releases.html
@@ -24,9 +24,9 @@ entries:
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202009.0/security-release-notes-202009.0.html
         - title: Release Notes 202102.0
           nested:
-          - title: Security release notes- 202102.0 SEC
+          - title: "Performance release notes: 202102.0 SEC"
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202102.0/performance-release-notes-202102.0.html
-          - title: Security release notes- 202102.0 SEC
+          - title: "Security release notes: 202102.0 SEC"
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202102.0/security-release-notes-202102.0-sec.html
         - title: Release notes Code Releases May, 2020
           nested:
@@ -107,6 +107,8 @@ entries:
         url: /docs/scos/user/intro-to-spryker/support/how-to-contact-spryker-support.html
       - title: Understanding Project and Core Level Fixes
         url: /docs/scos/user/intro-to-spryker/support/understanding-project-and-core-level-fixes.html
+    - title: Roadmap
+      url: /docs/scos/user/intro-to-spryker/roadmap.html
     - title: FAQ
       url: /docs/scos/user/intro-to-spryker/faq.html
     - title: B2C Suite
@@ -136,7 +138,7 @@ entries:
         url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/markdown-syntax.html
       - title: Reviewing pull requests
         url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/reviewing-pull-requests.html
-      - title: Adding a new product to the documentation site
+      - title: Adding product sections to the documentation
         url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/adding-a-new-product-to-the-documentation-site.html
 
   - title: Features
@@ -855,15 +857,53 @@ entries:
           url: /docs/scos/user/back-office-user-guides/sales/order-matrix/viewing-the-order-matrix.html
       - title: Orders
         nested:
+        - title: Changing the state of order items
+          url: /docs/scos/user/back-office-user-guides/sales/orders/changing-the-state-of-order-items.html
+          include_versions:
+          - "202108.0"
+        - title: Creating reclamations
+          url: /docs/scos/user/back-office-user-guides/sales/orders/creating-reclamations.html
+          include_versions:
+          - "202108.0"
+        - title: Commenting orders
+          url: /docs/scos/user/back-office-user-guides/sales/orders/commenting-orders.html
+          include_versions:
+          - "202108.0"
+        - title: Creating returns
+          url: /docs/scos/user/back-office-user-guides/sales/orders/creating-returns.html
+          include_versions:
+          - "202108.0"
+        - title: Editing billing addresses in orders
+          url: /docs/scos/user/back-office-user-guides/sales/orders/editing-billing-addresses-in-orders.html
+          include_versions:
+          - "202108.0"
+        - title: Adding and removing custom order references
+          url: /docs/scos/user/back-office-user-guides/sales/orders/adding-and-removing-custom-order-references.html
+          include_versions:
+          - "202108.0"
+        - title: Editing shipments
+          url: /docs/scos/user/back-office-user-guides/sales/orders/editing-shipments.html
+          include_versions:
+          - "202108.0"
+        - title: Viewing returns of an order
+          url: /docs/scos/user/back-office-user-guides/sales/orders/viewing-returns-of-an-order.html
+          include_versions:
+          - "202108.0"
         - title: Managing orders
           url: /docs/scos/user/back-office-user-guides/sales/orders/managing-orders.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
         - title: Managing order shipments
           url: /docs/scos/user/back-office-user-guides/sales/orders/managing-order-shipments.html
           include_versions:
           - "202001.0"
           - "202005.0"
           - "202009.0"
-          - "202108.0"
         - title: References
           include_versions:
           - "201811.0"
@@ -891,6 +931,14 @@ entries:
         - "202009.0"
         - "202108.0"
         nested:
+        - title: Viewing reclamations
+          url: /docs/scos/user/back-office-user-guides/sales/reclamations/viewing-reclamations.html
+          include_versions:
+          - "202108.0"
+        - title: Changing the state of order items in reclamations
+          url: /docs/scos/user/back-office-user-guides/sales/reclamations/changing-the-state-of-order-items-in-reclamations.html
+          include_versions:
+          - "202108.0"
         - title: Managing reclamations
           url: /docs/scos/user/back-office-user-guides/sales/reclamations/managing-reclamations.html
           include_versions:
@@ -899,7 +947,6 @@ entries:
           - "202001.0"
           - "202005.0"
           - "202009.0"
-          - "202108.0"
         - title: References
           include_versions:
           - "201903.0"
@@ -917,9 +964,7 @@ entries:
             - "202005.0"
             - "202009.0"
       - title: Refunds
-        nested:
-        - title: Viewing refunds
-          url: /docs/scos/user/back-office-user-guides/sales/refunds/viewing-refunds.html
+        url: /docs/scos/user/back-office-user-guides/sales/refunds/viewing-refunds.html
       - title: Returns
         include_versions:
         - "202005.0"
@@ -931,6 +976,10 @@ entries:
           include_versions:
           - "202005.0"
           - "202009.0"
+          - "202108.0"
+        - title: Changing the state of order items in returns
+          url: /docs/scos/user/back-office-user-guides/sales/returns/changing-the-state-of-order-items-in-returns.html
+          include_versions:
           - "202108.0"
         - title: References
           include_versions:
@@ -1011,53 +1060,44 @@ entries:
       nested:
       - title: Products
         nested:
-        - title: Abstract products
-          include_versions:
-          - "201811.0"
-          - "201903.0"
-          - "201907.0"
-          - "202001.0"
-          - "202005.0"
-          - "202009.0"
-          - "202108.0"
+        - title: Manage abstract products
           nested:
           - title: Creating abstract products and product bundles
-            url: /docs/scos/user/back-office-user-guides/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html
           - title: Adding scheduled prices to abstract products
-            url: /docs/scos/user/back-office-user-guides/catalog/products/abstract-products/adding-scheduled-prices-to-abstract-products.html
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/adding-scheduled-prices-to-abstract-products.html
             include_versions:
             - "202009.0"
             - "202108.0"
           - title: Adding volume prices to abstract products
-            url: /docs/scos/user/back-office-user-guides/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html
+          - title: Assign product attributes to abstract products
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/assign-product-attributes-to-abstract-products.html
             include_versions:
-            - "201811.0"
-            - "201903.0"
-            - "201907.0"
-            - "202009.0"
             - "202108.0"
           - title: Editing abstract products
-            url: /docs/scos/user/back-office-user-guides/catalog/products/abstract-products/editing-abstract-products.html
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/editing-abstract-products.html
           - title: Creating and managing product bundles
-            url: /docs/scos/user/back-office-user-guides/catalog/products/abstract-products/creating-product-bundles.html
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/creating-product-bundles.html
             include_versions:
             - "201811.0"
             - "201903.0"
             - "201907.0"
             - "202009.0"
-        - title: Concrete products
+        - title: Manage concrete products
           nested:
           - title: Creating product variants
-            url: /docs/scos/user/back-office-user-guides/catalog/products/concrete-products/creating-product-variants.html
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/creating-product-variants.html
           - title: Editing product variants
-            url: /docs/scos/user/back-office-user-guides/catalog/products/concrete-products/editing-product-variants.html
-        - title: Managing products
-          url: /docs/scos/user/back-office-user-guides/catalog/products/managing-products/managing-products.html
-          nested:
-          - title: Discontinuing products
-            url: /docs/scos/user/back-office-user-guides/catalog/products/managing-products/discontinuing-products.html
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/editing-product-variants.html
+          - title: Assign product attributes to product variants
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/assign-product-attributes-to-product-variants.html
+            include_versions:
+            - "202108.0"
           - title: Adding product alternatives
-            url: /docs/scos/user/back-office-user-guides/catalog/products/managing-products/adding-product-alternatives.html
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/adding-product-alternatives.html
+          - title: Discontinuing products
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/discontinuing-products.html
         - title: Creating service offerings - best practices
           url: /docs/scos/user/back-office-user-guides/catalog/products/creating-service-offerings-best-practices.html
           include_versions:
@@ -1286,8 +1326,8 @@ entries:
             - "202009.0"
     - title: Content
       nested:
-      - title: Adding content to the Storefront pages using templates and slots
-        url: /docs/scos/user/back-office-user-guides/content/adding-content-to-storefront-pages-using-templates-and-slots-best-practices.html
+      - title: "Best practices: Adding content to the Storefront pages using templates and slots"
+        url: /docs/scos/user/back-office-user-guides/content/best-practices-adding-content-to-the-storefront-pages-using-templates-and-slots.html
         include_versions:
         - "202001.0"
         - "202005.0"
@@ -1670,10 +1710,44 @@ entries:
             - "202009.0"
       - title: Product sets
         nested:
+        - title: Create product sets
+          url: /docs/scos/user/back-office-user-guides/merchandising/product-sets/create-product-sets.html
+          include_versions:
+          - "202108.0"
+        - title: Edit product sets
+          url: /docs/scos/user/back-office-user-guides/merchandising/product-sets/edit-product-sets.html
+          include_versions:
+          - "202108.0"
+        - title: View product sets
+          url: /docs/scos/user/back-office-user-guides/merchandising/product-sets/view-product-sets.html
+          include_versions:
+          - "202108.0"
+        - title: Reorder product sets
+          url: /docs/scos/user/back-office-user-guides/merchandising/product-sets/reorder-product-sets.html
+          include_versions:
+          - "202108.0"
+        - title: Delete product sets
+          url: /docs/scos/user/back-office-user-guides/merchandising/product-sets/delete-product-sets.html
+          include_versions:
+          - "202108.0"
         - title: Creating product sets
           url: /docs/scos/user/back-office-user-guides/merchandising/product-sets/creating-product-sets.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
         - title: Managing product sets
           url: /docs/scos/user/back-office-user-guides/merchandising/product-sets/managing-product-sets.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
         - title: References
           include_versions:
           - "201811.0"
@@ -1725,7 +1799,52 @@ entries:
             - "202001.0"
             - "202005.0"
             - "202009.0"
+      - title: Search Preferences
+        include_versions:
+        - "202108.0"
+        nested:
+        - title: "Best practices: Promote products with search preferences"
+          url: /docs/scos/user/back-office-user-guides/merchandising/search-preferences/best-practices-promote-products-with-search-preferences.html
+        - title: Define search preferences
+          url: /docs/scos/user/back-office-user-guides/merchandising/search-preferences/define-search-preferences.html
+        - title: Edit search preferences
+          url: /docs/scos/user/back-office-user-guides/merchandising/search-preferences/edit-search-preferences.html
+      - title: Filter Preferences
+        include_versions:
+        - "202108.0"
+        nested:
+        - title: Define filter preferences
+          url: /docs/scos/user/back-office-user-guides/merchandising/filter-preferences/define-filter-preferences.html
+          include_versions:
+          - "202108.0"
+        - title: Edit filter preferences
+          url: /docs/scos/user/back-office-user-guides/merchandising/filter-preferences/edit-filter-preferences.html
+          include_versions:
+          - "202108.0"
+        - title: Reorder filter preferences
+          url: /docs/scos/user/back-office-user-guides/merchandising/filter-preferences/reorder-filter-preferences.html
+          include_versions:
+          - "202108.0"
+      - title: Category filters
+        include_versions:
+        - "202108.0"
+        nested:
+        - title: Assign and deassign filters from categories
+          url: /docs/scos/user/back-office-user-guides/merchandising/category-filters/assign-and-deassign-filters-from-categories.html
+          include_versions:
+          - "202108.0"
+        - title: Reorder category filters
+          url: /docs/scos/user/back-office-user-guides/merchandising/category-filters/reorder-category-filters.html
+          include_versions:
+          - "202108.0"
       - title: Search and filters
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
         nested:
         - title: Managing category filters
           url: /docs/scos/user/back-office-user-guides/merchandising/search-and-filters/managing-category-filters.html
@@ -1734,13 +1853,6 @@ entries:
         - title: Managing search preferences
           url: /docs/scos/user/back-office-user-guides/merchandising/search-and-filters/managing-search-preferences.html
         - title: References
-          include_versions:
-          - "201811.0"
-          - "201903.0"
-          - "201907.0"
-          - "202001.0"
-          - "202005.0"
-          - "202009.0"
           nested:
           - title: Reference information - Search Preferences Types
             url: /docs/scos/user/back-office-user-guides/merchandising/search-and-filters/references/reference-information-search-preferences-types.html
@@ -1762,7 +1874,51 @@ entries:
             - "202009.0"
     - title: Users
       nested:
+      - title: "Best practices: Managing users and their permissions with roles and groups"
+        include_versions:
+        - "202108.0"
+        - "202009.0"
+        url: /docs/scos/user/back-office-user-guides/users/best-practices-managing-users-and-their-permissions-with-roles-and-groups.html
+      - title: Managing user roles
+        include_versions:
+        - "202108.0"
+        - "202009.0"
+        nested:
+        - title: Creating user roles
+          url: /docs/scos/user/back-office-user-guides/users/managing-user-roles/creating-user-roles.html
+        - title: Editing user roles
+          url: /docs/scos/user/back-office-user-guides/users/managing-user-roles/editing-user-roles.html
+      - title: Managing user groups
+        include_versions:
+        - "202108.0"
+        - "202009.0"
+        nested:
+        - title: Creating user groups
+          url: /docs/scos/user/back-office-user-guides/users/managing-user-groups/creating-user-groups.html
+        - title: Editing user roles
+          url: /docs/scos/user/back-office-user-guides/users/managing-user-groups/editing-user-groups.html
+      - title: Managing users
+        include_versions:
+        - "202108.0"
+        - "202009.0"
+        nested:
+        - title: Creating users
+          url: /docs/scos/user/back-office-user-guides/users/managing-users/creating-users.html
+        - title: Editing users
+          url: /docs/scos/user/back-office-user-guides/users/managing-users/editing-users.html
+        - title: Assigning customers to users
+          url: /docs/scos/user/back-office-user-guides/users/managing-users/assigning-customers-to-users.html
+        - title: Activating and deactivating users
+          url: /docs/scos/user/back-office-user-guides/users/managing-users/activating-and-deactivating-users.html
+        - title: Deleting users
+          url: /docs/scos/user/back-office-user-guides/users/managing-users/deleting-users.html
       - title: Roles, groups, and users
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
         nested:
         - title: Managing roles
           url: /docs/scos/user/back-office-user-guides/users/roles-groups-and-users/managing-roles.html
@@ -1771,13 +1927,6 @@ entries:
         - title: Managing groups
           url: /docs/scos/user/back-office-user-guides/users/roles-groups-and-users/managing-groups.html
         - title: References
-          include_versions:
-          - "201811.0"
-          - "201903.0"
-          - "201907.0"
-          - "202001.0"
-          - "202005.0"
-          - "202009.0"
           nested:
           - title: Reference information - Roles
             url: /docs/scos/user/back-office-user-guides/users/roles-groups-and-users/references/reference-information-roles.html
@@ -1787,7 +1936,6 @@ entries:
             - "201907.0"
             - "202001.0"
             - "202005.0"
-            - "202009.0"
           - title: Reference information - User
             url: /docs/scos/user/back-office-user-guides/users/roles-groups-and-users/references/reference-information-user.html
             include_versions:
@@ -1796,9 +1944,8 @@ entries:
             - "201907.0"
             - "202001.0"
             - "202005.0"
-            - "202009.0"
     - title: Marketplace
-      include_versions: 
+      include_versions:
       - "201903.0"
       - "201907.0"
       - "202001.0"

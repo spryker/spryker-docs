@@ -25,7 +25,7 @@ To start working with the delivery methods, go to **Administration** > **Deliver
 
 Once you decide to add a new shipment method, make sure that you have a carrier company to assign a shipment method on the list of delivery methods. If you don't have an appropriate carrier, see [Creating a carrier company](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-carrier-companies.html). You also need to make sure that you have an appropriate tax set in the **Taxes** > **Tax Sets** section, see [Taxes](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html).
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating delivery methods
 
@@ -105,7 +105,7 @@ Keep in mind that **Delivery Method Key** cannot be edited.
 
 3. To keep the changes, click **Save**. For more details on the attributes, see the [Reference information: Creating delivery methods](#reference-information-creating-delivery-methods) section.
 
-**Tips & tricks**
+**Tips and tricks**
 <br>This is how the Back Office setup looks in the online store:
 
 ![Editing a shipment method](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/editing-shipment-method.png)

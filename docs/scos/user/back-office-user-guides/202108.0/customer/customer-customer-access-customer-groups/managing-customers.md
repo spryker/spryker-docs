@@ -21,7 +21,7 @@ This article describes how to manage customers.
 
 To start managing customers, navigate to **Customers** > **Customers**.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Creating customers
 
@@ -66,7 +66,7 @@ To edit a customer:
     *  You see two additional drop-down lists: **Billing Address** and **Shipping Address**. The values in those fields appear only if the addresses were added to the customer profile on the Storefront or from the **Back Office** > **View** customer-specific page. Those are not available for modifications from the *Edit Customer* page.
 3. Update the needed values and click **Save**.
 
-**Tips & tricks**
+**Tips and tricks**
 <br>From the *Edit customer* page, you can:
 * Switch to the *View* customer page, where you can manage the addresses by adding a new address or updating the existing one (see the _Viewing Customer Details_ section below).
 * Delete the customer record (see the _Deleting a Customer Record_ section below).

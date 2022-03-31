@@ -46,7 +46,12 @@ Component configuration:
 Register the component:
 
 ```ts
-// Dynamic
+declare module '@spryker/table.feature.filters' {
+    interface TableFiltersRegistry {
+        dateRange: TableFilterDateRange;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -86,12 +91,6 @@ export class RootModule {}
 Below you can find interfaces for the Table Filter Date Range:
 
 ```ts
-declare module '@spryker/table.feature.filters' {
-    interface TableFiltersRegistry {
-        dateRange: TableFilterDateRange;
-    }
-}
-
 export interface TableFilterDateRange
     extends TableFilterBase<DateRangeValueInput> {
     type: 'date-range';

@@ -15,7 +15,7 @@ Follow the steps below to install the Merchant Category feature core.
 
 To start feature integration, integrate the required features:
 
-| NAME | VERSION | LINK |
+| NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ----- | ---------- |
 | Spryker Core         | {{page.version}}      | [Spryker Core Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Marketplace Merchant | {{page.version}}      | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
@@ -314,7 +314,7 @@ Follow the steps below to install the Merchant Category feature front end.
 
 Integrate the required features before beginning the integration step.
 
-| NAME | VERSION | LINK |
+| NAME | VERSION | INTEGRATION GUIDE |
 | -------- | ------ | -------------- |
 | Spryker Core | {{page.version}}  | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Merchant     | {{page.version}} | [[DEPRECATED\] Merchant Feature Integration](https://github.com/spryker-feature/merchant) |

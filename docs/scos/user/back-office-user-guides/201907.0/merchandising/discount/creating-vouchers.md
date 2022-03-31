@@ -76,7 +76,7 @@ Even if a voucher is valid and the decision rules are satisfied, a voucher can o
   {% endinfo_block %}
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 Once you generated voucher codes, you can export them as a **.csv** file.
 To do that, click **Export** below **Generate**.
 ***

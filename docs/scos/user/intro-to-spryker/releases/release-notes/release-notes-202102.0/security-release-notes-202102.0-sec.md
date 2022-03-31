@@ -1,5 +1,5 @@
 ---
-title: Security release notes- 202102.0 SEC
+title: "Security release notes: 202102.0 SEC"
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/security-release-notes-2021020-sec
@@ -40,14 +40,14 @@ The `CustomerUserConnectorGui` module:
 * CustomerUserConnectorGui (1.2.3)
 
 
-**How to get the fix**: 
-* Update the modules: 
+**How to get the fix**:
+* Update the modules:
 ```bash
 composer update spryker/customer-user-connector-gui spryker/customer-group
 ```
 * Check `AbstractAssignmentTable::getSelectCheckboxColumn()` and `AbstractCustomerTable::getCheckboxColumn()` if they were changed on the project level.
 
-## Stored Cross-Site-Scripting (XSS) in product reviews 
+## Stored Cross-Site-Scripting (XSS) in product reviews
 It is possible for an attacker to enter JavaScript or HTML code that will be executed in the Back Office.
 This vulnerability allows an attacker to execute code in the context of the administrator.
 
@@ -59,7 +59,7 @@ This vulnerability allows an attacker to execute code in the context of the admi
 **Affected modules**:
 * ProductReviewGui (1.2.0)
 
-**How to get the fix**: 
+**How to get the fix**:
 * Update the modules:
 ```bash
 composer update spryker/product-review-gui
@@ -77,7 +77,7 @@ The login script of the Back Office backend allows the specification of a path n
 **Affected modules**:
 * Auth (3.7.5)
 
-**How to get the fix**: 
+**How to get the fix**:
 * Update the modules:
 ```bash
 composer update spryker/auth
@@ -92,8 +92,8 @@ There is a possibility to set an incorrect parameter in the Back Office backend 
 **Affected modules**:
 * CMS (7.10.1)
 
-**How to get the fix**: 
-* Update the modules: 
+**How to get the fix**:
+* Update the modules:
 ```bash
 composer update spryker/cms
 ```
@@ -111,8 +111,8 @@ The written product reviews are present in the Back Office administrative backen
 **Affected modules**:
 * ProductReviewGui (1.2.0)
 
-**How to get the fix**: 
-* Update the modules: 
+**How to get the fix**:
+* Update the modules:
 ```bash
 composer update spryker/product-review-gui
 ```
@@ -129,8 +129,8 @@ When dealing with reclamations in the backend (the Back Office), it is possible 
 **Affected modules**:
 * SalesReclamationGui (1.5.0)
 
-**How to get the fix**: 
-* Update the modules: 
+**How to get the fix**:
+* Update the modules:
 ```bash
 composer update spryker/sales-reclamation-gui
 ```
@@ -164,8 +164,8 @@ The `CustomerPage` module:
 * User (3.12.2)
 * CustomerPage (2.31.0)
 
-**How to get the fix**: 
-* Update the modules: 
+**How to get the fix**:
+* Update the modules:
 ```bash
 composer update spryker-shop/customer-page spryker/user spryker/security-gui.
 ```
@@ -181,7 +181,7 @@ All website users can create their own cookies with a chosen name. This cookie n
 **Affected modules**:
 * SessionRedis (1.4.0)
 
-**How to get the fix**: 
+**How to get the fix**:
 * Update the modules:
 ```bash
 composer update spryker/session-redis

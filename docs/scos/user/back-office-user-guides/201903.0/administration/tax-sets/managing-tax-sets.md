@@ -39,7 +39,7 @@ In case you need to change the tax set:
 
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 
 You can start editing a tax set while viewing it:
 1. On the **View Tax Rate** page, click **Edit** in the top right corner.
@@ -71,7 +71,7 @@ The tax set is deleted.
   
   {% endinfo_block %}
 
-**Tips & Tricks**
+**Tips and tricks**
 
 You can delete a tax set while viewing it:
 1. On the **View Tax Set** page, click **Delete** in the top right corner.

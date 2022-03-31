@@ -48,7 +48,7 @@ Review the [reference information](#reference-information-edit-product-relations
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | PRODUCT RELATION KEY | Unique product relation identifier. |
-| RELATION TYPE | Defines how the product relation is displayed on the Storefront: <ul><li>**Related products**: related products are displayed on the product details page of the product owning the relation.</li><li>**Upselling**: when the product owning the relation is added to cart, related products are displayed on the cart page.|
+| RELATION TYPE | Defines how the product relation is displayed on the Storefront: <ul><li>**Related products**: related products are displayed on the product details page of the product owning the relation.</li><li>**Upselling**: when the product owning the relation is added to cart, related products are displayed on the cart page.</li></ul>|
 | UPDATE REGULARLY  | Defines if the product catalog is checked against the specified rules regularly. New products fulfilling the rules are added to related products automatically. Existing related products that no longer fulfill the rules are removed automatically. |
 | IS ACTIVE | Defines if the product relation is visible on the Storefront. |
 | Select product | Table for selecting a product that owns the relation. |

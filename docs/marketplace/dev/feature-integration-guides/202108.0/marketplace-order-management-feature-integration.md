@@ -1117,21 +1117,10 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 ```
 
 **src/Pyz/Yves/CustomerPage/Theme/default/components/molecules/order-detail-table/order-detail-table.twig**
-<!---
-```twig
-{% extends molecule('order-detail-table', '@SprykerShop:CustomerPage') %}
 
-{% block body %}
-    {% for shipmentGroup in data.shipmentGroups %}
-        <article class="grid grid--gap spacing-bottom spacing-bottom--big">
-            ...
-            {% widget 'MerchantOrderReferenceForItemsWidget' args [shipmentGroup.items] only %}{% endwidget %}
-            ...
-        </article>
-    {% endfor %}
-{% endblock %}
-```
---->
+
+
+
 
 {% info_block warningBox "Verification" %}
 

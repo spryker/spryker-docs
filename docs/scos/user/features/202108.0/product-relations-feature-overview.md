@@ -41,7 +41,7 @@ With Upselling, when the product owing the relation is added to cart, related pr
 
 ![Upselling](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/202006.0/Upselling.gif)
 
-A product catalog manager can select a product relation type when [creating](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/create-product-relations.html) or [editing](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/managing-product-relations.html#editing-product-relations) a product relation in the Back Office.
+A product catalog manager can select a product relation type when [creating](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/create-product-relations.html) or [editing](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/edit-product-relations.html) a product relation in the Back Office.
 
 ## Product types in product relations
 

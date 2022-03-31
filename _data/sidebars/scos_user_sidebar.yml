@@ -4,7 +4,7 @@ entries:
 - product: SCOS
   nested:
   - title: Intro to Spryker
-    url: /docs/scos/user/intro-to-spryker/about-spryker.html
+    url: /docs/scos/user/intro-to-spryker/intro-to-spryker.html
     nested:
     - title: Releases
       url: /docs/scos/user/intro-to-spryker/releases/releases.html
@@ -1712,10 +1712,40 @@ entries:
             - "202009.0"
       - title: Product relations
         nested:
+        - title: "Best practices: Promote products with product relations"
+          url: /docs/scos/user/back-office-user-guides/merchandising/product-relations/best-practices-promote-products-with-product-relations.html
+          include_versions:
+          - "202108.0"
+        - title: Create product relations
+          url: /docs/scos/user/back-office-user-guides/merchandising/product-relations/create-product-relations.html
+          include_versions:
+          - "202108.0"
+        - title: Edit product relations
+          url: /docs/scos/user/back-office-user-guides/merchandising/product-relations/edit-product-relations.html
+          include_versions:
+          - "202108.0"
+        - title: View product relations
+          url: /docs/scos/user/back-office-user-guides/merchandising/product-relations/view-product-relations.html
+          include_versions:
+          - "202108.0"
         - title: Creating product relations
           url: /docs/scos/user/back-office-user-guides/merchandising/product-relations/creating-product-relations.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
         - title: Managing product relations
           url: /docs/scos/user/back-office-user-guides/merchandising/product-relations/managing-product-relations.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"          
         - title: References
           include_versions:
           - "201811.0"

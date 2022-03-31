@@ -1391,7 +1391,7 @@ To set up behavior:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| MerchantPageResourceCreatorPlugin | Allows to access a merchant page at `https://yves.mysprykershop.com/merchant/{merchantReference}`. |   | SprykerShop\Yves\MerchantPage\Plugin |
+| MerchantPageResourceCreatorPlugin | Lets you access a merchant page at `https://yves.mysprykershop.com/merchant/{merchantReference}`. |   | SprykerShop\Yves\MerchantPage\Plugin |
 | UrlStorageMerchantMapperPlugin | Provides access to merchant storage data in the controller related to the `https://yves.mysprykershop.com/merchant/{merchantReference}` URL.  | Publish URL storage data to Redis by running `console sync:data url`. | Spryker\Client\MerchantStorage\Plugin |
 
 **src/Pyz/Yves/StorageRouter/StorageRouterDependencyProvider.php**

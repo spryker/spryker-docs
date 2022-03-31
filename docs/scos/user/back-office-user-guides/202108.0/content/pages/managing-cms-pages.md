@@ -23,9 +23,11 @@ This article describes how to manage CMS pages.
 
 ## Prerequisites
 
-To start managing CMS pages, got to **Content** > **Pages**.
+1. To preview CMS pages as a specific customer, [assign the customer to your user](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/assigning-customers-to-users.html).
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+2. To start managing CMS pages, got to **Content** > **Pages**.
+
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Previewing CMS pages
 
@@ -87,7 +89,7 @@ To view a CMS page:
     * SEO information
     * Placeholders
 
-**Tips & tricks**
+**Tips and tricks**
 <br>On the *View CMS Page: [Page Name]* page, you can do the following:
 * Navigate to the page where you can view all available versions for the page, general information of the version you are currently using, and roll back to the previous page version if needed, as well as compare version. To do this, click **Version History** at the top of the page.
 * Make changes to page layout or its SEO information by clicking **Edit page** at the top of the page.

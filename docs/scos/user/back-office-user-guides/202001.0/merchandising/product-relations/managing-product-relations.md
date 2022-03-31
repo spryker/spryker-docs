@@ -58,7 +58,7 @@ There are 2 places where you can view the product relation:
 
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 
 When you select the **View in Shop** option, keep the following in mind:
 * No matter what relation type is, you will be redirected to the abstract PDP page. So if the relation type is upselling, you will not be able to see the **Similar products** section until you add the product to cart and actually navigate to that cart.

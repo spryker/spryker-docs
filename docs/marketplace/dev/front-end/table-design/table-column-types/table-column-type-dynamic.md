@@ -55,6 +55,12 @@ Check out an example usage of the Table Column Dynamic in the `@spryker/table` c
 Register the component:
 
 ```ts
+declare module '@spryker/table' {
+    interface TableColumnTypeRegistry {
+        dynamic: TableColumnDynamicConfig;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -72,12 +78,6 @@ export class RootModule {}
 Below you can find interfaces for the Table Column Dynamic:
 
 ```ts
-declare module '@spryker/table' {
-    interface TableColumnTypeRegistry {
-        dynamic: TableColumnDynamicConfig;
-    }
-}
-
 interface DataTransformerConfig {
     type: string;
 

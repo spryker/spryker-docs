@@ -1911,9 +1911,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 ```
 
 
-4. Import data:
-
-Run the following command (do not forget to replace {store} param with the store name)
+4. Import data (do not forget to replace `{store}` param with the store name):
 
 ```bash
 console data:import --config data/import/common/combined_merchant_product_offer_import_config_{store}.yml
@@ -1921,10 +1919,10 @@ console data:import --config data/import/common/combined_merchant_product_offer_
 
 {% info_block warningBox "Verification" %}
 
-Make sure that:
-1. New Product offer is created in the `spy_product_offer` table.
-2. New Product offer price is created in the `spy_price_product_offer` table.
-3. New Product offer stock is created in the `spy_product_offer_stock` table.
-4. New Product offer validity is created in the `spy_product_offer_validity` table.
+Make sure the following:
+1. New product offer is created in the `spy_product_offer` table.
+2. New product offer price is created in the `spy_price_product_offer` table.
+3. New product offer stock is created in the `spy_product_offer_stock` table.
+4. New product offer validity is created in the `spy_product_offer_validity` table.
 
 {% endinfo_block %}

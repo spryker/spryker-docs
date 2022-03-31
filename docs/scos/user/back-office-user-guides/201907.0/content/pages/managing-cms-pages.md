@@ -100,7 +100,7 @@ See  [CMS Page: Reference Information](/docs/scos/user/back-office-user-guides/{
 {% endinfo_block %}
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 On the **View CMS Page: [Page name]** page, you can do the following:
 
 * Navigate to the page where you can view all available versions for the page, general information of the version you are currently using, and roll back to the previous page version if needed, as well as compare version. To do this, click **Version History** on the top of the page.

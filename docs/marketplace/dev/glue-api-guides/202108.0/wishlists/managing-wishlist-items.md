@@ -4,7 +4,7 @@ description: Retrieve details about wishlist items and learn what else you can d
 template: glue-api-storefront-guide-template
 ---
 
-This endpoint allows you to add and remove items from wishlists.
+This endpoint lets you add and remove items from wishlists.
 
 ## Installation
 
@@ -26,9 +26,9 @@ To add an item to a wishlist, send the request:
 ### Request
 
 <details>
-<summary markdown='span'>Request sample: adding a concrete product to wishlist</summary>
+<summary markdown='span'>Request sample: add an item to a wishlist</summary>
 
- `POST https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items`
+`POST https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items`
 
 ```json
 {
@@ -43,9 +43,9 @@ To add an item to a wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Request sample: adding a product offer to wishlist</summary>
+<summary markdown='span'>Request sample: add a product offer to a wishlist</summary>
 
- `POST https://glue.mysprykershop.com/wishlists/57c96d55-8a37-5998-927f-7bb663b69094/wishlist-items`
+`POST https://glue.mysprykershop.com/wishlists/57c96d55-8a37-5998-927f-7bb663b69094/wishlist-items`
 
 ```json
 {
@@ -61,9 +61,9 @@ To add an item to a wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Request sample: adding a merchant product to wishlist</summary>
+<summary markdown='span'>Request sample: add a marketplace product to a wishlist</summary>
 
- `POST https://glue.mysprykershop.com/wishlists/57c96d55-8a37-5998-927f-7bb663b69094/wishlist-items`
+`POST https://glue.mysprykershop.com/wishlists/57c96d55-8a37-5998-927f-7bb663b69094/wishlist-items`
 
 ```json
 {
@@ -79,13 +79,13 @@ To add an item to a wishlist, send the request:
 
 | ATTRIBUTE  | TYPE   | REQUIRED | DESCRIPTION   |
 | ------------ | ----- | ---| ---------------- |
-| sku  | String | &check; | SKU of a concrete product or a merchant concrete product to add. |
+| sku  | String | &check; | SKU of a concrete product or a merchant concrete product to add.|
 | productOfferReference | String | | Unique identifier of the product offer. You can get it by [retrieving the offers available for the concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-product-offers-of-concrete-products.html).|
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: adding a concrete product to wishlist</summary>
+<summary markdown='span'>Response sample: add an item to a wishlist</summary>
 
 ```json
 {
@@ -104,7 +104,7 @@ To add an item to a wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: adding a product offer to wishlist</summary>
+<summary markdown='span'>Response sample: add a product offer to a wishlist</summary>
 
 ```json
 {
@@ -163,7 +163,7 @@ To add an item to a wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample - adding a merchant product</summary>
+<summary markdown='span'>Response sample: add a marketplace product to a wishlist</summary>
 
 ```json
 {
@@ -228,7 +228,9 @@ To delete wishlist item, send the request:
 
 ### Request
 
-Request sample: `DELETE https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items/064_18404924`
+Request sample:
+
+`DELETE https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items/064_18404924`
 
 ### Response
 

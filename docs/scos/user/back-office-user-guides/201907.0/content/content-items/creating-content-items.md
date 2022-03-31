@@ -62,7 +62,7 @@ To create a Banner content item:
 
 4. Click **Save** to keep the changes. This will take you to the list of content items where you can see a new **Banner** content item in the table and the following message: '_Content item has been successfully created_'.
 ***
-**Tips & Tricks**
+**Tips and tricks**
 On the **Create Content Item: Banner** page, you can:
 
 * Clear all the fields in the _current_ locale by clicking **Clear locale**.
@@ -91,7 +91,7 @@ Using options in the _Actions_ column of the top table, you can:<ul><li>Change t
 
 4. To keep the changes, click **Save**. This will take you to the list of content items where you can see a new **Abstract Product List** content item in the table and the following message: '_Content item has been successfully created_'.
 ***
-**Tips & Tricks**
+**Tips and tricks**
 On the **Create Content Item: Abstract Product List** page, you can:
 
 * Filter search results by typing an abstract product list name, its ID, or SKU in the **Search** field.
@@ -115,7 +115,7 @@ To create a Product Set content item:
 
 4. To keep the changes, click **Save**. The **Overview of Content Items** page opens containing a new **Product Set** content item in the table.
 ***
-**Tips & Tricks**
+**Tips and tricks**
 On the **Create Content Item: Product Set** page, you can:
 
 * Filter search results by entering a product set name in the **Search** field.
@@ -145,7 +145,7 @@ In the top table, you can re-order files by clicking **Move Up** and **Move Down
 
 4. Click **Save**. This will successfully save the changes and take you to the list of content items where you can see a new **File List** content item in the table and the following message: '_Content item has been successfully created_'.
 
-#### Tips & Tricks
+#### Tips and tricks
 On the **Create Content Item: File List** page, you can:
 
 * Filter search results by entering a file name in the **Search** field.

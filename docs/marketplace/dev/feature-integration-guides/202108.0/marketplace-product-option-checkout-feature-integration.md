@@ -16,7 +16,7 @@ Follow the steps below to install the Marketplace Product Option + Checkout feat
 
 To start feature integration, integrate the required features:
 
-| NAME | VERSION | LINK |
+| NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ------- | ---------- |
 | Marketplace Product Option | {{page.version}}      | [Marketplace Product Option Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-option-feature-integration.html) |
 | Checkout | {{page.version}} | [Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html) |

@@ -16,7 +16,7 @@ Follow the steps below to install the Marketplace Product Option feature core.
 
 To start feature integration, integrate the required features:
 
-| NAME | VERSION | LINK |
+| NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ------- | ---------- |
 | Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Product Options      | {{page.version}} | [Product Options feature integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/903151851/EMPTY+Product+Options+Feature+Integration+-+ongoing) |  

@@ -31,7 +31,7 @@ Instead of changing prices manually on the starting day of the promotion, you ca
 
 To start working with scheduled prices, go to **Catalog** > **Scheduled Prices**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating scheduled prices
 
@@ -54,7 +54,7 @@ If needed, you can [edit the imported scheduled prices](/docs/scos/user/back-off
 
 7. If you are satisfied with the results, in the *Publish the scheduled prices* section, click **Publish** to apply the price schedules.
 
-**Tips & tricks**
+**Tips and tricks**
 
 * If you leave the _Import dry run_ page without publishing the imported price schedules, they do not get deleted. However, you won't be able to return to that page unless you import the file once again.
 * You can check the current price schedules of each product in the *Products* section > the *Edit Product* page > the *Scheduled Prices* tab.

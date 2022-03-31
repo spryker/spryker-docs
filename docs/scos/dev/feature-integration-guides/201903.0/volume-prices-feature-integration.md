@@ -12,7 +12,7 @@ related:
   - title: Volume Prices Feature Overview
     link: docs/scos/user/features/page.version/prices-feature-overview/volume-prices-overview.html
   - title: Adding Volume Prices
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html
 ---
 
 ## Install Feature Core

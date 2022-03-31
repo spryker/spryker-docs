@@ -44,7 +44,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| MerchantProductCartPreCheckPlugin | Validates that merchant references in the cart items match existing merchant products. |  | Spryker\Zed\MerchantProduct\Communication\Plugin\Cart |
+| MerchantProductCartPreCheckPlugin | Validates that merchant references in the cart items match existing marketplace products. |  | Spryker\Zed\MerchantProduct\Communication\Plugin\Cart |
 | MerchantProductPreAddToCartPlugin | Sets merchant reference to item transfer on add to cart. |  | SprykerShop\Yves\MerchantProductWidget\Plugin\CartPage |
 
 **src/Pyz/Zed/Cart/CartDependencyProvider.php**

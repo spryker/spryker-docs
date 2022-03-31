@@ -10,7 +10,7 @@ This document explains the Data Transformer Lens service in the Components Libra
 
 Data Transformer Lens is an Angular Service that updates nested objects by path using another Data Transformer set up with a configuration object.
 
-In the example below `datasource` will return an object with the transformed `date`.
+In the following example `datasource` will return an object with the transformed `date`.
 
 Service configuration:
 
@@ -42,6 +42,12 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/data-transformer' {
+    interface DataTransformerRegistry {
+        lens: LensDataTransformerService;
+    }
+}
+
 @NgModule({
     imports: [
         DataTransformerModule.withTransformers({
@@ -57,12 +63,6 @@ export class RootModule {}
 Below you can find interfaces for the Data Transformer Lens:
 
 ```ts
-declare module '@spryker/data-transformer' {
-    interface DataTransformerRegistry {
-        lens: LensDataTransformerService;
-    }
-}
-
 export interface LensDataTransformerConfig extends DataTransformerConfig {
     path: string;
     transformer: DataTransformerConfig;

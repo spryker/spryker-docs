@@ -38,7 +38,7 @@ A customer can cancel orders on the *Order History* and *Order Details* pages.
 
 See [Order cancellation on the Storefront](#storefront) to learn how B2B and B2C shoppers can cancel orders on the Storefront.
 
-See [Changing Order Statuses](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html#changing-order-statuses) to learn how a Back Office user can cancel orders.
+See [Changing Order Statuses](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/changing-the-state-of-order-items.html) to learn how a Back Office user can cancel orders.
 
 ## Time frames and statuses
 
@@ -54,7 +54,7 @@ Ensure that, in your state machine, the *refunded* state always goes before the 
 
 {% endinfo_block %}
 
-See [Managing Orders](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html) to learn how a Back Office user can skip timeout or cancel an order by changing order statuses.
+See [Changing the state of order items](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/changing-the-state-of-order-items.html) to learn how a Back Office user can skip timeout or cancel an order by changing order statuses.
 
 <a name="storefront"></a>
 
@@ -67,7 +67,7 @@ This is how the Order Cancellation feature works on the Spryker Demo Shop Storef
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage orders](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html)   |
+| [Changing the state of order items](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/changing-the-state-of-order-items.html)   |
 
 {% info_block warningBox "Developer guides" %}
 

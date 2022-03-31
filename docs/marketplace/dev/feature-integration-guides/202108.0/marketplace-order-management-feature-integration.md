@@ -486,10 +486,6 @@ Check your database to make sure that the following changes have been applied:
 |spy_sales_order_item.merchant_reference | column |created  |
 |spy_sales_order_item.product_offer_reference | column | created |
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 Make sure that the following changes have been triggered in transfer objects:
 
 | TRANSFER | TYPE | EVENT  | PATH  |
@@ -1121,7 +1117,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 ```
 
 **src/Pyz/Yves/CustomerPage/Theme/default/components/molecules/order-detail-table/order-detail-table.twig**
-
+<!---
 ```twig
 {% extends molecule('order-detail-table', '@SprykerShop:CustomerPage') %}
 
@@ -1135,6 +1131,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     {% endfor %}
 {% endblock %}
 ```
+--->
 
 {% info_block warningBox "Verification" %}
 

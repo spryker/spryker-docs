@@ -22,7 +22,7 @@ The following diagram illustrates the dependencies between the modules for the *
 
 | MODULE     | DESCRIPTION                |
 |------------|----------------------------|
-| [CartNote](https://github.com/spryker/cart-note) | This module provides functionality to add notes to cart and cart items, push notes from cart to order and than show them on order detail page in zed. |
+| [CartNote](https://github.com/spryker/cart-note) | This module provides functionality to add notes to cart and cart items, push notes from cart to order and then show them on order detail page in zed. |
 | [CartNoteMerchantSalesOrderGui](https://github.com/spryker/cart-note-merchant-sales-order-gui) | CartNoteMerchantSalesOrderGui provides Zed UI interface for merchant cart note management. |
 
 ## Related Developer articles

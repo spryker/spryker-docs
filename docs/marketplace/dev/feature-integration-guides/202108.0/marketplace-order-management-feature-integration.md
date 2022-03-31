@@ -209,6 +209,7 @@ class MerchantOmsConfig extends SprykerMerchantOmsConfig
 </statemachine>
 
 ```
+
 </details>
 
 <details>
@@ -290,6 +291,7 @@ class MerchantOmsConfig extends SprykerMerchantOmsConfig
 </statemachine>
 
 ```
+
 </details>
 
 <details>
@@ -390,6 +392,7 @@ class MerchantOmsConfig extends SprykerMerchantOmsConfig
 
 </statemachine>
 ```
+
 </details>
 
 **config/Zed/navigation.xml**
@@ -432,7 +435,7 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the navigation menu of the Back Office, you can see the **Marketplace->Orders** as well as **Sales->My Orders** menu items.
+Make sure that in the navigation menu of the Back Office, you can see the **Marketplace&nbsp;<span aria-label="and then">></span> Orders** as well as **Sales&nbsp;<span aria-label="and then">></span> My Orders** menu items.
 
 {% endinfo_block %}
 
@@ -679,6 +682,7 @@ actions:
           <<: *default_filter_criteria
           store_name: [US]
 ```
+
 </details>
 
 | PARAMETER |  |  | REQUIRED | POSSIBLE VALUES | DESCRIPTION |
@@ -1090,7 +1094,7 @@ class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 }
 ```
 
-**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>**
+**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
 ```php
 <?php

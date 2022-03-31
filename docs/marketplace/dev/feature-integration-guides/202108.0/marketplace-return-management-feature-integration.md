@@ -1013,7 +1013,7 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the navigation menu of the Back Office, you can see the menu item **Returns** in the **Marketplace** section and **My Returns** in the **Sales** section.
+Make sure that in the navigation menu of the Back Office, you can see the menu item **Returns** in the **Marketplace** section and **My Returns** in the **Sales** section.
 
 {% endinfo_block %}
 

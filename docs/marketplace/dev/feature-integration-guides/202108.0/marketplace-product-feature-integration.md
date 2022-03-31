@@ -600,7 +600,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that  for the merchant products you can see the merchant name on the product details page.
+Make sure that for the merchant products, you can see the merchant name on the product details page.
 
 Make sure that when you add merchant product to cart, on a cart page is has the *Sold By* widget displayed.
 
@@ -737,7 +737,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
     {% block embeddedData %}
         ...
         {% set merchantProductOfferWidget = findWidget('MerchantProductOfferWidget', [data.product]) %}
-        
+
         {% set productOffersCount = merchantProductOfferWidget ? merchantProductOfferWidget.productOffers | length : 0 %}
         {% set isRadioButtonVisible = productOffersCount > 0  %}
         {% set isChecked = merchantProductOfferWidget ? not merchantProductOfferWidget.productView.productOfferReference: true %}
@@ -746,7 +746,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
             isRadioButtonVisible,
             isChecked
         ]) %}
-        
+
         {% if merchantProductWidget %}
             {% widget merchantProductWidget %}
             {% endwidget %}
@@ -769,7 +769,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
     {% elseif widgetGlobalExists('ProductSoldByMerchantWidget') %}
         {% widget 'ProductSoldByMerchantWidget' args [data.listItem] only %}{% endwidget %}
     {% endif %}
-    
+
 {% endblock %}
 ...
 ```

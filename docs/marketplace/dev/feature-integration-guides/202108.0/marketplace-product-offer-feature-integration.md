@@ -1403,7 +1403,7 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the navigation menu of the Back Office, you can see the **Marketplace->Offers** menu item.
+Make sure that in the navigation menu of the Back Office, you can see the **Marketplace->Offers** menu item.
 
 {% endinfo_block %}
 

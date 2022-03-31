@@ -392,8 +392,7 @@ class MerchantOmsConfig extends SprykerMerchantOmsConfig
 ```
 </details>
 
-<details>
-<summary markdown='span'>config/Zed/navigation.xml</summary>
+**config/Zed/navigation.xml**
 
 ```xml
 <?xml version="1.0"?>
@@ -423,7 +422,7 @@ class MerchantOmsConfig extends SprykerMerchantOmsConfig
     </marketplace>
 </config>
 ```
-</details>
+
 
 Execute the following command:
 
@@ -433,7 +432,7 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the navigation menu of the Back Office, you can see the **Marketplace->Orders** as well as **Sales->My Orders** menu items.
+Make sure that in the navigation menu of the Back Office, you can see the **Marketplace->Orders** as well as **Sales->My Orders** menu items.
 
 {% endinfo_block %}
 
@@ -755,8 +754,7 @@ Enable the following behaviors by registering the plugins:
 | ItemFormTypePlugin | Returns ItemFormType class name resolution.  |  | Spryker\Zed\ShipmentGui\Communication\Plugin\Form |
 | MerchantReferenceShipmentExpenseExpanderPlugin | Expands expense transfer with merchant reference from items | | Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Shipment |
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/MerchantOmsCommunicationFactory.php</summary>
+**src/Pyz/Zed/MerchantOms/Communication/MerchantOmsCommunicationFactory.php**
 
 ```php
 <?php
@@ -782,7 +780,6 @@ class MerchantOmsCommunicationFactory extends SprykerMerchantOmsCommunicationFac
     }
 }
 ```
-</details>
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/Sales/SalesDependencyProvider.php</summary>
@@ -836,8 +833,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 ```
 </details>
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
 ```php
 <?php
@@ -863,7 +859,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     }
 }
 ```
-</details>
+
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/MerchantSalesOrder/MerchantSalesOrderDependencyProvider.php</summary>
@@ -892,7 +888,7 @@ class MerchantSalesOrderDependencyProvider extends SprykerMerchantSalesOrderDepe
 
         return $container;
     }
-    
+
     /**
      * @return array<\Spryker\Zed\MerchantSalesOrderExtension\Dependency\Plugin\MerchantOrderPostCreatePluginInterface>
      */
@@ -916,8 +912,7 @@ class MerchantSalesOrderDependencyProvider extends SprykerMerchantSalesOrderDepe
 ```
 </details>
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/StateMachine/StateMachineDependencyProvider.php</summary>
+**src/Pyz/Zed/StateMachine/StateMachineDependencyProvider.php**
 
 ```php
 <?php
@@ -944,10 +939,8 @@ class StateMachineDependencyProvider extends SprykerStateMachineDependencyProvid
         ];
     }
 ```
-</details>
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/DeliverMarketplaceOrderItemCommandPlugin.php</summary>
+**src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/DeliverMarketplaceOrderItemCommandPlugin.php**
 
 ```php
 <?php
@@ -969,10 +962,7 @@ class DeliverMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEventCo
 
 ```
 
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/ShipByMerchantMarketplaceOrderItemCommandPlugin.php</summary>
+**src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/ShipByMerchantMarketplaceOrderItemCommandPlugin.php**
 
 ```php
 <?php
@@ -992,10 +982,9 @@ class ShipByMerchantMarketplaceOrderItemCommandPlugin extends AbstractTriggerOms
     }
 }
 ```
-</details>
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/CancelMarketplaceOrderItemCommandPlugin.php</summary>
+
+**src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/CancelMarketplaceOrderItemCommandPlugin.php**
 
 ```php
 <?php
@@ -1018,10 +1007,9 @@ class CancelMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEventCom
     }
 }
 ```
-</details>
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantOms/MerchantOmsDependencyProvider.php</summary>
+
+**src/Pyz/Zed/MerchantOms/MerchantOmsDependencyProvider.php**
 
 ```php
 <?php
@@ -1045,10 +1033,8 @@ class MerchantOmsDependencyProvider extends SprykerMerchantOmsDependencyProvider
     }
 }
 ```
-</details>
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantSalesOrderMerchantUserGui/MerchantSalesOrderMerchantUserGuiDependencyProvider.php</summary>
+**src/Pyz/Zed/MerchantSalesOrderMerchantUserGui/MerchantSalesOrderMerchantUserGuiDependencyProvider.php**
 
 ```php
 <?php
@@ -1080,10 +1066,7 @@ class MerchantSalesOrderMerchantUserGuiDependencyProvider extends SprykerMerchan
 }
 ```
 
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/Shipment/ShipmentDependencyProvider.php</summary>
+**src/Pyz/Zed/Shipment/ShipmentDependencyProvider.php**
 
 ```php
 <?php
@@ -1107,10 +1090,7 @@ class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 }
 ```
 
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>
+**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php</summary>**
 
 ```php
 <?php
@@ -1131,12 +1111,10 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
             MerchantOrderReferenceForItemsWidget::class,
          ];
     }
-    
+
 }
 
 ```
-
-</details>
 
 **src/Pyz/Yves/CustomerPage/Theme/default/components/molecules/order-detail-table/order-detail-table.twig**
 

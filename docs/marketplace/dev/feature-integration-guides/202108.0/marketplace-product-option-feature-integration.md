@@ -222,7 +222,7 @@ class ProductOptionWriterStep extends PublishAwareStep implements DataImportStep
             ->setActive($this->isActive($dataSet, $productOptionGroupEntity))
             ->setFkTaxSet($dataSet[TaxSetNameToIdTaxSetStep::KEY_TARGET])
             ->save();
-        ... 
+        ...
     }
 }
 ```
@@ -252,7 +252,8 @@ Enable the following behaviors by registering the plugins:
 | MerchantProductOptionGroupWritePublisherPlugin | Retrieves all abstract product IDs using the  merchant product option group IDs from the event transfers. | None | Spryker\Zed\MerchantProductOptionStorage\Communication\Plugin\Publisher\MerchantProductOption |
 
 
-**src/Pyz/Zed/ProductOption/ProductOptionDependencyProvider.php**
+<details>
+<summary markdown='span'>src/Pyz/Zed/ProductOption/ProductOptionDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -297,6 +298,8 @@ class ProductOptionDependencyProvider extends SprykerProductOptionDependencyProv
     }
 }
 ```
+
+</details>
 
 **src/Pyz/Zed/ProductOptionStorage/ProductOptionStorageDependencyProvider.php**
 
@@ -359,8 +362,8 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Make sure merchants can create product option groups and values in the Merchant Portal.
-Make sure that merchant product option information is shown on product details page, when it is approved and active.
-Make sure that merchant product option information is displayed in the cart, checkout and in the user account.
+Make sure that merchant product option information is shown on product details page when it is approved and active.
+Make sure that merchant product option information is displayed in the cart, checkout, and user account.
 Make sure that merchant product options are a part of the marketplace/merchant order and all totals are calculated correctly.
 
 {% endinfo_block %}

@@ -64,6 +64,6 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, the navigation menu of the **MerchantPortal** has **Profile** section.
+Make sure that the navigation menu of the Merchant Portal has the **Profile** section.
 
 {% endinfo_block %}

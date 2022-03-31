@@ -1,6 +1,6 @@
 ---
 title: Product Offer store relation
-description: This article provides reference information about Marketplace Product Offer relation with stores in the Spryker Marketplace.
+description: This document provides reference information about Marketplace Product Offer relation with stores in the Spryker Marketplace.
 template: concept-topic-template
 ---
 

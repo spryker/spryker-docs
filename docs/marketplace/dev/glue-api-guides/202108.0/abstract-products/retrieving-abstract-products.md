@@ -59,13 +59,13 @@ To retrieve general information about an abstract product, send the request:
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=product-options` | Retrieve information about the abstract product with SKU `001` with its product options. |
 | `GET https://glue.mysprykershop.com/abstract-products/035?include=product-reviews` | Retrieve information about the abstract product with SKU `001` with its product reviews. |
 | `GET https://glue.mysprykershop.com/abstract-products/109`     | Retrieve the merchant product with SKU `109`.|
-| `GET https://glue.mysprykershop.com/abstract-products/109?include=merchants` | Retrieve the merchant product with SKU `109` including the merchant information. |
+| `GET https://glue.mysprykershop.com/abstract-products/109?include=merchants` | Retrieve the marketplace product with SKU `109` including the merchant information. |
 
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve information about the abstract product with SKU `001`</summary>
 
 ```json
 {
@@ -124,11 +124,10 @@ To retrieve general information about an abstract product, send the request:
     }
 }
 ```
-
- </details>
+</details>
 
 <details>
-<summary markdown='span'>Response sample with image sets</summary>
+<summary markdown='span'>Response sample: retrieve information about the abstract product with its image sets</summary>
 
 ```json
 {
@@ -219,12 +218,11 @@ To retrieve general information about an abstract product, send the request:
     ]
 }
 ```
-
- </details>
+</details>
 
 
 <details>
-<summary markdown='span'>Response sample with product availability</summary>
+<summary markdown='span'>Response sample: retrieve information about the abstract product with its availability</summary>
 
 ```json
 {
@@ -306,14 +304,13 @@ To retrieve general information about an abstract product, send the request:
     ]
 }
 ```
-
- </details>
-
+</details>
 
 
-<details> <summary markdown='span'>Response sample with default product prices</summary>
 
-```php
+<details> <summary markdown='span'>Response sample: retrieve information about the abstract product with its default prices</summary>
+
+```json
 {
     "data": {
         "type": "abstract-products",
@@ -414,10 +411,9 @@ To retrieve general information about an abstract product, send the request:
     ]
 }
 ```
-
 </details>
 
-<details> <summary markdown='span'>Response sample with volume prices</summary>
+<details> <summary markdown='span'>Response sample: retrieve information about the abstract product with its default and volume prices</summary>
 
 ```json
 {
@@ -529,11 +525,10 @@ To retrieve general information about an abstract product, send the request:
     ]
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with category nodes</summary>
+<summary markdown='span'>Response sample: retrieve information about the abstract product with the category nodes it belongs to</summary>
 
 ```json
 {
@@ -710,12 +705,11 @@ To retrieve general information about an abstract product, send the request:
     ]
 }
 ```
-
- </details>
+</details>
 
 
 <details>
-<summary markdown='span'>Response sample with tax rates</summary>
+<summary markdown='span'>Response sample: retrieve information about the abstract product with its tax sets</summary>
 
 ```json
 {
@@ -873,12 +867,11 @@ To retrieve general information about an abstract product, send the request:
     ]
 }
 ```
-
- </details>
+</details>
 
 
 <details>
-<summary markdown='span'>Response sample with product labels</summary>
+<summary markdown='span'>Response sample: retrieve information about the abstract product with the assigned product labels</summary>
 
 ```json
 {
@@ -932,12 +925,11 @@ To retrieve general information about an abstract product, send the request:
     ]
 }
 ```
-
- </details>
+</details>
 
 
 <details>
-<summary markdown='span'>Response sample with concrete products</summary>
+<summary markdown='span'>Response sample: retrieve information about the abstract product with its concrete products</summary>
 
 ```json
 {
@@ -1046,12 +1038,11 @@ To retrieve general information about an abstract product, send the request:
     ]
 }
 ```
-
- </details>
+</details>
 
 
 <details>
-<summary markdown='span'>Response sample with product options</summary>
+<summary markdown='span'>Response sample: retrieve information about the abstract product with its product options</summary>
 
 ```json
 {
@@ -1154,13 +1145,12 @@ To retrieve general information about an abstract product, send the request:
     ]
 }
 ```
-
- </details>
+</details>
 
 
 
 <details>
-<summary markdown='span'>Response sample with product reviews</summary>
+<summary markdown='span'>Response sample: retrieve information about the abstract product with its product reviews</summary>
 
 ```json
 {
@@ -1172,7 +1162,7 @@ To retrieve general information about an abstract product, send the request:
             "averageRating": 4.7,
             "reviewCount": 3,
             "name": "Canon PowerShot N",
-            "description": "Creative Shot Originality is effortless with Creative Shot. Simply take a shot and the camera will analyse the scene then automatically generate five creative images plus the original unaltered photo - capturing the same subject in a variety of artistic and surprising ways. The unique symmetrical, metal-bodied design is strikingly different with an ultra-modern minimalist style - small enough to keep in your pocket and stylish enough to take anywhere. HS System excels in low light allowing you to capture the real atmosphere of the moment without flash or a tripod. Advanced DIGIC 5 processing and a high-sensitivity 12.1 Megapixel CMOS sensor give excellent image quality in all situations.",
+            "description": "Creative Shot Originality is effortless with Creative Shot. Simply take a shot and the camera will analyse the scene then automatically generate five creative images plus the original unaltered photo - capturing the same subject in a variety of artistic and surprising ways. The unique symmetrical, metal-bodied design is strikingly different with an ultra-modern minimalist style - small enough to keep in your pocket and stylish enough to take anywhere. HS System excels in low light letting you capture the real atmosphere of the moment without flash or a tripod. Advanced DIGIC 5 processing and a high-sensitivity 12.1 Megapixel CMOS sensor give excellent image quality in all situations.",
             "attributes": {
                 "focus": "TTL",
                 "field_of_view": "100%",
@@ -1278,10 +1268,11 @@ To retrieve general information about an abstract product, send the request:
     ]
 }
 ```
- </details>
+</details>
+
 
 <details>
-<summary markdown='span'>Response sample with merchant product</summary>
+<summary markdown='span'>Response sample: retrieve the merchant product</summary>
 
 ```json
 {
@@ -1345,7 +1336,7 @@ To retrieve general information about an abstract product, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample with merchant product including the information about the merchant</summary>
+<summary markdown='span'>Response sample: retrieve the marketplace product including the merchant information</summary>
 
 ```json
 {

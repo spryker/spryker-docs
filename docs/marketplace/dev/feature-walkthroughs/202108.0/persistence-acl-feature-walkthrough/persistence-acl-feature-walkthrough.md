@@ -5,7 +5,7 @@ description: With the Persistence ACL feature, you can manage authorization at t
 template: feature-walkthrough-template
 ---
 
-With the Persistence ACL feature, you can manage authorization at the database entity level, or even within a set of entities or segments. This feature enables a flexible system of inheritance of rights, simplifying the configuration of access. 
+With the Persistence ACL feature, you can manage authorization at the database entity level, or even within a set of entities or segments. This feature enables a flexible system of inheritance of rights, simplifying the configuration of access.
 
 Persistence ACL runs in the Persistence layer, as its name suggests.
 
@@ -14,7 +14,7 @@ The module is based on the Propel ORM (namely Propel Behavior and Propel Hooks).
 
 ## Module dependency graph
 
-The module dependency graph and table below list the main modules of the Persistence ACL feature and their interaction.
+The following module dependency graph and table list the main modules of the Persistence ACL feature and their interaction.
 
 ![Module dependency graph](https://confluence-connect.gliffy.net/embed/image/b15ac7bf-e35f-4298-90da-b7d0c8227be9.png?utm_medium=live&utm_source=custom)
 
@@ -53,7 +53,7 @@ During model operations, the following hooks are used:
 
 - `preDelete`
 
-  
+
 
 Query execution is performed using the following hooks:
 
@@ -68,8 +68,8 @@ A query sent to the database is intercepted and modified with additional joins t
 ## Learn more
 
 - [Configuration](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html)
-- [Rules and scopes](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/rules-and-scopes.html) 
-- [Execution flow](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/execution-flow.html) 
+- [Rules and scopes](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/rules-and-scopes.html)
+- [Execution flow](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/execution-flow.html)
 
 ## Related Developer articles
 

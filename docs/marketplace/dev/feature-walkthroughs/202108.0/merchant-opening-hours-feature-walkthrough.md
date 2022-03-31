@@ -1,6 +1,6 @@
 ---
 title: Merchant Opening Hours feature walkthrough
-description: The Merchant Opening Hours allows you to define opening hours for a merchant.
+description: The Merchant Opening Hours lets you define opening hours for a merchant.
 template: feature-walkthrough-template
 ---
 

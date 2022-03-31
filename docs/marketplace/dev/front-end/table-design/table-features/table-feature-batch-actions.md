@@ -19,11 +19,11 @@ Component configuration:
 - `enabled` - enables the feature via the config.  
 - `noActionsMessage` - error message text.  
 - `actions` - an array with actions that are displayed in the top bar, and their type of the registered [action](/docs/marketplace/dev/front-end/ui-components-library/actions/).   
-- `rowIdPath` - gets a row `id` via the column `id` (in the example below `Sku` column).  
+- `rowIdPath` - gets a row `id` via the column `id` (in the following example, `Sku` column).  
 - `availableActionsPath` - path to an array with available action IDs in the top bar (supports nested objects using dot notation for ex. `prop.nestedProp`).   
 
 ```html
-<spy-table 
+<spy-table
     [config]="{
         dataSource: { ... },
         columns: [ ... ],
@@ -50,7 +50,12 @@ Component configuration:
 Register the component:
 
 ```ts
-// Dynamic
+declare module '@spryker/table' {
+    interface TableConfig {
+        batchActions?: TableBatchActionsConfig;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -91,12 +96,6 @@ export class RootModule {}
 Below you can find interfaces for the Table Feature Batch Actions:
 
 ```ts
-declare module '@spryker/table' {
-    interface TableConfig {
-        batchActions?: TableBatchActionsConfig;
-    }
-}
-
 export interface TableBatchActionsConfig extends TableFeatureConfig {
     actions: TableBatchAction[];
     rowIdPath: string;

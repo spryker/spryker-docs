@@ -308,7 +308,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 
 {% info_block warningBox "Verification" %}
 
-Make sure the `de_page` Elasticsearch index for any product that belongs (see `spy_merchant_product_abstract`) to active and approved merchant, contains merchant names. (indexes can be accessed by any Elasticsearch client, e.g., Kibana. For Docker configuration details, see [Configuring services](/docs/scos/dev/back-end-development/messages-and-errors/registering-a-new-service.html).
+Make sure the `de_page` Elasticsearch index for any product that belongs (see `spy_merchant_product_abstract`) to active and approved merchant, contains merchant names. (indexes can be accessed by any Elasticsearch client, for example, Kibana. For Docker configuration details, see [Configuring services](/docs/scos/dev/back-end-development/messages-and-errors/registering-a-new-service.html).
 
 {% endinfo_block %}
 
@@ -338,7 +338,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Make sure that data contains `merchant_references` for merchant products in the `spy_product_abstract_storage`.
+Make sure that data contains `merchant_references` for marketplace products in the `spy_product_abstract_storage`.
 
 {% endinfo_block %}
 
@@ -580,7 +580,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that  for the merchant products you can see the merchant name on the product details page.
+Make sure that  for the marketplace products you can see the merchant name on the product details page.
 
 Make sure that when you add merchant product to cart, on a cart page is has the *Sold By* widget displayed.
 
@@ -678,7 +678,7 @@ class SearchElasticsearchDependencyProvider extends SprykerSearchElasticsearchDe
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you enter the merchant name in the search field, the return list contains merchant products.
+Make sure that when you enter the merchant name in the search field, the return list contains marketplace products.
 
 {% endinfo_block %}
 

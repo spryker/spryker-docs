@@ -10,7 +10,7 @@ This document explains the Data Transformer Object-map service in the Components
 
 Data Transformer Object-map is an Angular Service that executes another Data Transformer from the config for specific properties in an object.
 
-In the example below, the `datasource` will return an array with the transformed `date` in every child object.
+In the following example, the `datasource` will return an array with the transformed `date` in every child object.
 
 Service configuration:
 
@@ -52,6 +52,12 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/data-transformer' {
+    interface DataTransformerRegistry {
+        'object-map': ObjectMapDataTransformerConfig;
+    }
+}
+
 @NgModule({
     imports: [
         DataTransformerModule.withTransformers({
@@ -67,12 +73,6 @@ export class RootModule {}
 Below you can find interfaces for the Data Transformer Object-map:
 
 ```ts
-declare module '@spryker/data-transformer' {
-    interface DataTransformerRegistry {
-        'object-map': ObjectMapDataTransformerConfig;
-    }
-}
-
 export interface ObjectMapDataTransformerConfig extends DataTransformerConfig {
     mapProps: {
         [propName: string]: DataTransformerConfig;

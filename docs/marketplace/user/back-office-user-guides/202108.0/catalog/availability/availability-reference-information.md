@@ -5,26 +5,27 @@ description: This document contains reference information for working with the A
 template: back-office-user-guide-template
 ---
 
-This article includes the information you need to know when working with the *Availability* section in Back Office.
+This document includes the information you need to know when working with the **Availability** section in Back Office.
 
 ---
 
 ## Overview page
 
-On the *Overview of Products Availability* page, you see the following:
+On the **Overview of Products Availability** page, you see the following:
 
-* The SKUs and names of the abstract products and SKU values are a hyperlink to this product’s *Edit* page.
+* The SKUs and names of the abstract products and SKU values are a hyperlink to this product’s **Edit** page.
 * The number of products in current stock and the number of reserved products (meaning ordered ones).
 * The identifier for the bundled product and those that are *never out of stock* (Yes/No values).
 
 {% info_block infoBox "Info" %}
 
 For multi-store projects, you can filter the products according to the store the product is available.
+
 {% endinfo_block %}
 
 {% info_block infoBox "Info" %}
 
-For the [Marketplace](/docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-concept.html) project, you can also filter the products according to the merchant the product belongs to.
+For the [Marketplace](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-concept.html) project, you can also filter the products according to the merchant the product belongs to.
 
 {% endinfo_block %}
 
@@ -34,23 +35,23 @@ For the [Marketplace](/docs/marketplace/user/intro-to-the-spryker-marketplace/ma
 
 ## View product availability page
 
-On the *View Product Availability* page, you see 2 sections:
+On the **View Product Availability** page, you see 2 sections:
 
 * Abstract product availability
 * Variant availability
 
-The *Abstract Product availability* section is not modifiable. It only provides basic information. As the abstract product itself does not have any stock, the *Current Stock* value reflects the summarized value of all its variants.
+The **Abstract Product availability** section is not modifiable. It only provides basic information. As the abstract product itself does not have any stock, the *Current Stock* value reflects the summarized value of all its variants.
 
 
 {% info_block infoBox "Info" %}
 
-The *Abstract Product* contains a drop-down list where you can select the store for which you need to view the availability of the product.
+The **Abstract Product** contains a drop-down list where you can select the store for which you need to view the availability of the product.
 
 {% endinfo_block %}
 
 {% info_block infoBox "Info" %}
 
-For the [Marketplace](/docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-concept.html) project, a merchant name is available for a specific product. The availability of a certain merchant warehouse is provided.
+For the [Marketplace](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-concept.html) project, a merchant name is available for a specific product. The availability of a certain merchant warehouse is provided.
 
 {% endinfo_block %}
 
@@ -66,7 +67,7 @@ Both sections contain the following info:
 
 ## Edit stock page
 
-The following table describes the attributes you see and enter on the *Edit Stock* page:
+The following table describes the attributes you see and enter on the **Edit Stock** page:
 
 | ATTRIBUTE | DESCRIPTION |
 |-|-|
@@ -85,4 +86,4 @@ This means that a customer can either buy those separately from their product de
 Each product has its own stock and availability value if bought separately.
 But in the case of a bundle, the availability is calculated based on each item’s availability taking into account their *quantity in the bundle*.
 
-Even if each item is available on its own, but the availability does not meet the minimum quantity for a bundle (e.g., there are only two glass screen protectors, but the bundle goes with three), then the whole bundle is *unavailable*.
+Even if each item is available on its own, but the availability does not meet the minimum quantity for a bundle (for example, there are only two glass screen protectors, but the bundle goes with three), then the whole bundle is *unavailable*.

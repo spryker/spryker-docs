@@ -258,7 +258,7 @@ To retrieve general information about a concrete product, send the request:
 
 {% endinfo_block %}   
 
-Sample requests:
+Request samples:
 | Request  | Usage |
 | --- | --- |
 | `GET http://glue.mysprykershop.com/concrete-products/001_25904006` | Get information about the `001_25904006` product.  |

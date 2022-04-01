@@ -9,22 +9,6 @@ template: concept-topic-template
 
 Private API updates can break backward compatibility. Link for API's documentation - [see here]{link to "Private API class was extended or used" - private-api-class-extended-or-used.md#Private API class was extended or used}
 
-The following core classes are exceptions, and you can use and extend them on the project level:
-
-* All the classes from the modules:
-    * Kernel
-    * Bootstrap
-    * Development
-
-* Particular classes:
-    * Facade
-    * Factory
-    * Entity manager
-    * Repository
-    * Dependency provider
-    * Config
-    * Configuration provider
-
 #### Example of the code that can be reason of upgradability errors
 
 `CustomerAccessForm` extends from `Spryker\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm` class from the core level.
@@ -59,8 +43,9 @@ To resolve this issue need to create new custom class and copy needed functional
 Do the following steps to resolve this issue:
 
 1. Investigate if it is possible to extend functionality with configuration or plugins (link to "Configuration", "Plug and Play strategy" - https://docs.spryker.com/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#plug-and-play)
-2. If it's impossible to extend functionality with plugins or configurations then introduce a custom class. For example, `src/Pyz/Zed/CustomerAccessGui/Communication/Form/PyzCustomerAccessForm.php`.
-3. If you created new custom class then copy the needed functionality. For example, from `CustomerAccessForm` to `PyzCustomerAccessForm`.
+2. Investigate if it is possible to create a separate module with a feature specific functionality (project modules) - https://docs.spryker.com/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules
+3. If it's impossible to extend functionality with plugins or configurations then introduce a custom class. For example, `src/Pyz/Zed/CustomerAccessGui/Communication/Form/PyzCustomerAccessForm.php`.
+4. If you created new custom class then copy the needed functionality. For example, from `CustomerAccessForm` to `PyzCustomerAccessForm`.
 
 <details open>
     <summary markdown='span'>Example of PyzCustomerAccessForm</summary>

@@ -7,7 +7,7 @@ template: concept-topic-template
 
 ## Entity name is not unique
 
-The names of the following entities should be unique:
+The names that should be unique:
 
 * Transfers
 * Transfer properties
@@ -16,7 +16,7 @@ The names of the following entities should be unique:
 * Methods
 * Constants
 
-If a minor or major release introduces an entity with the same name, the entity in your project might change behavior or cause issues.
+If a minor or major release introduces with the same name that you are already introduced on project level, it might change behavior or cause issues.
 
 ## Making transfer names unique
 

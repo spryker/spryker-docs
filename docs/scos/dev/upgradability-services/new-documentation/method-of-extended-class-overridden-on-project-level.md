@@ -64,8 +64,9 @@ Pyz\Zed\EvaluatorSpryker\Persistence\EvaluatorSprykerCategoryImageEntityManager
 #### Steps to solve potential problem in functionality
 
 1. Investigate if it is possible to extend functionality with configuration or plugins (link to "Configuration", "Plug and Play strategy" - https://docs.spryker.com/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#plug-and-play)
-2. If it's impossible to extend functionality with configuration or plugins then introduce a new custom method.
-3. If you introduced new custom method then replace the core method with the custom one you've created in the previous step.
+2. Investigate if it is possible to create a separate module with a feature specific functionality (project modules) - https://docs.spryker.com/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules
+3. If it's impossible to extend functionality with configuration or plugins then introduce a new custom method.
+4. If you introduced new custom method then replace the core method with the custom one you've created in the previous step.
 
 {% info_block infoBox "Unique method names" %}
 

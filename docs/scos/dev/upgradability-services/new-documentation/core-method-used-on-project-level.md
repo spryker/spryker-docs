@@ -22,26 +22,35 @@ Meanwhile, we are working on introducing a way to report such cases and add more
 
 #### Example of code that causes the upgradability error
 
-CustomerAccessUpdater uses the setContentTypesToInaccessible method from the core level.
+CustomerFacade uses the getCustomerCollection method from the core level.
 
 ```php
-<?php
-namespace Pyz\Zed\CustomerAccess\Business\CustomerAccess;
-...
-class CustomerAccessUpdater extends SprykerCustomerAccessUpdater
+/**
+ * This file is part of the Spryker Commerce OS.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
+namespace Pyz\Zed\Customer\Business;
+
+use Spryker\Zed\Customer\Business\CustomerFacade as SprykerCustomerFacade;
+
+/**
+ * @method \Pyz\Zed\Customer\Business\CustomerBusinessFactory getFactory()
+ */
+class CustomerFacade extends SprykerCustomerFacade implements CustomerFacadeInterface
 {
-    ...
-    /**
-     * @param \Generated\Shared\Transfer\CustomerAccessTransfer $customerAccessTransfer
+   /**
+     * {@inheritDoc}
      *
-     * @return \Generated\Shared\Transfer\CustomerAccessTransfer
+     * @api
+     *
+     * @param string $email
+     *
+     * @return bool
      */
-    public function updateUnauthenticatedCustomerAccess(CustomerAccessTransfer $customerAccessTransfer): CustomerAccessTransfer
+    public function hasEmail(string $email): bool
     {
-        return $this->getTransactionHandler()->handleTransaction(function () use ($customerAccessTransfer) {
-            ...
-            return $this->customerAccessEntityManager->setContentTypesToInaccessible($customerAccessTransfer);
-        });
+        ...
     }
 }
 ```
@@ -50,8 +59,8 @@ class CustomerAccessUpdater extends SprykerCustomerAccessUpdater
 
 ```bash
 ------------------------------------------------------------------------------------------------------------------------
-Pyz\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessUpdater
-"PrivateApi:Persistence Please avoid Spryker dependency: $this->getCustomerAccessEntityByContentType(...)"
+Pyz\Zed\Customer\Business\CustomerFacade
+"PrivateApi:Persistence Please avoid Spryker dependency: $this->hasEmail(...)"
 ************************************************************************************************************************
 ```
 
@@ -59,30 +68,20 @@ Pyz\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessUpdater
 
 To resolve the error provided in the example, do the following steps:
 1. Investigate if it is possible to extend a functionality with plugins (link to "Plug and Play strategy" - https://docs.spryker.com/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#plug-and-play)
-2. If it's impossible to extend function functionality with plugins then copy the method from the core to the project level and rename it, for example, by adding a prefix. (details about the approach of creating prefixes for methods you can find here {link - to page 'unique-entity-name-not-unique.md'})
-3. If you add new custom method then add the method to the class and the interface:
+2. Investigate if it is possible to create a separate module with a feature specific functionality (project modules) - https://docs.spryker.com/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules
+3. If it's impossible to extend function functionality with plugins then copy the method from the core to the project level and rename it, for example, by adding a prefix. (details about the approach of creating prefixes for methods you can find here {link - to page 'unique-entity-name-not-unique.md'})
+4. If you add new custom method then add the method to the class and the interface:
 ```php
-// src/Pyz/Zed/CustomerAccess/Persistence/CustomerAccessEntityManager.php
+// src/Pyz/Zed/Customer/Business/CustomerFacade.php
 
 /**
- * @param \Generated\Shared\Transfer\CustomerAccessTransfer $customerAccessTransfer
+ * @param string $email
  *
- * @return \Generated\Shared\Transfer\CustomerAccessTransfer
+ * @return bool
  */
-public function setPyzContentTypesToInaccessible(CustomerAccessTransfer $customerAccessTransfer): CustomerAccessTransfer
+public function pyzHasEmail(string $email): bool
 {
    ...
 }
-```
-
-```php
-// src/Pyz/Zed/CustomerAccess/Persistence/CustomerAccessEntityManagerInterface.php
-
-/**
- * @param \Generated\Shared\Transfer\CustomerAccessTransfer $customerAccessTransfer
- *
- * @return \Generated\Shared\Transfer\CustomerAccessTransfer
- */
-public function sePyzContentTypesToInaccessible(CustomerAccessTransfer $customerAccessTransfer): CustomerAccessTransfer;
 ```
 After replacing the core method with its project-level copy, re-evaluate the code. The same error shouldn’t be returned.

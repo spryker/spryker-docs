@@ -1,10 +1,3 @@
----
-title: Evaluator errors reference page
-description: Evaluator error list with the descriptions
-last_updated: Mar 23, 2022
-template: concept-topic-template
----
-
 ## Evaluator errors reference page
 
 This error page provides information about the error that is may occur while evaluator validation.
@@ -36,3 +29,8 @@ At this particular log example check name equal "PrivateApi:Extension"
 | PrivateApi:MethodIsOverwritten | Please avoid usage of core method **{class_namespace}::{method_name}** in the class **{class_namespace}** | {link - method-of-extended-class-overridden-on-project-level.md#Method of an extended class is overridden on the project level} |
 | PrivateApi:Extension | Please avoid extension of the PrivateApi **{class_name}** in **{class_name}** | {link - method-of-extended-class-overridden-on-project-level.md#Method of an extended class is overridden on the project level} |
 | PrivateApi:Persistence | Please avoid Spryker dependency: $this->**{method_name}**(...) | {link - core-method-used-on-project-level.md#A core method is used on the project level} |
+| PrivateApi:CorePersistenceUsage | Please avoid usage of PrivateApi method **{method_name}** in **{class_namespace}** | {link - private-api-class-extended-or-used.md} |
+| PrivateApi:PrivateApiDependencyInBusinessModel | Please avoid Spryker dependency: **{class_namespace}** in **{class_namespace}** | {link - private-api-class-extended-or-used.md} |
+| PrivateApi:Facade | Please avoid Spryker dependency: **{method_name}** | {link - private-api-class-extended-or-used.md} |
+| PrivateApi:ObjectInitialization | Please avoid Spryker dependency: **{class_namespace}** in **{class_namespace}** | {link - private-api-class-extended-or-used.md} |
+| PrivateApi:PersistenceInBusinessModel | Please avoid Spryker dependency: **{object_name}**->**{method_name}(...)** | {link - private-api-class-extended-or-used.md} |

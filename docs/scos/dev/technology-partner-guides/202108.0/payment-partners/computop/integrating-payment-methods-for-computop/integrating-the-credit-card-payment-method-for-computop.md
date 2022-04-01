@@ -1,5 +1,5 @@
 ---
-title: Integrating the Сredit Сard payment method for Computop
+title: Integrating the Credit Card payment method for Computop
 description: Integrate  Credit Card payment through Computop into the Spryker-based shop.
 last_updated: Jun 16, 2021
 template: concept-topic-template

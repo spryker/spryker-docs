@@ -1318,7 +1318,7 @@ See [Retrieving Related Items of an Abstract Product](#related-product-attribute
 
 | CODE | REASON |
 | --- | --- |
-| 101 | Сart with the specified ID was not found. |
+| 101 | Cart with the specified ID was not found. |
 | 104 | Cart ID is missing. |
 | 109 | Anonymous customer unique ID is empty. |
 | 301 | Abstract product is not found. |

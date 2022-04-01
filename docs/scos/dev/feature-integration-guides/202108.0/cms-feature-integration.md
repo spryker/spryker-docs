@@ -777,7 +777,7 @@ cms-page--7,Placeholders Title & Content,1,1,1,/de/ruecknahmegarantie,/en/return
 |meta_title.*(de_DE,en_US) |yes |string |Lorem ipsum | Meta title.|
 | meta_keywords.*(de_DE,en_US)|yes |string |Lorem ipsum |Meta keywords. |
 |meta_description.*(de_DE,en_US) | yes|string |Lorem ipsum |Meta description. |
-| placeholder.title.*(de_DE,en_US)|yes |string |Lorem ipsum |Title сontent. |
+| placeholder.title.*(de_DE,en_US)|yes |string |Lorem ipsum |Title content. |
 | placeholder.content.*(de_DE,en_US)|yes |string | Lorem ipsum| Page content.|
 
 
@@ -836,8 +836,8 @@ blck-10,CMS block for the footer navigation,Navigation block,@CmsBlock/template/
 |template_name | yes| string|static full |Template name. |
 |template_path |no |string |@ShopUi/templates/page-layout-main/page-layout-main.twig |Path to the Twig template to which this CMS block to slot assignment belongs. |
 |active |no |bool |1 |Flag that defines if block is active. |
-|placeholder.title.*(de_DE,en_US) |no |string | Lorem ipsum| Title сontent.|
-|placeholder.description.*(de_DE,en_US) | no| string|Lorem ipsum | Description сontent.|
+|placeholder.title.*(de_DE,en_US) |no |string | Lorem ipsum| Title content.|
+|placeholder.description.*(de_DE,en_US) | no| string|Lorem ipsum | Description content.|
 |placeholder.link.*(de_DE,en_US) |no | string| Lorem ipsum|Link. |
 | placeholder.content.*(de_DE,en_US)|no |string |Lorem ipsum |Page content. |
 

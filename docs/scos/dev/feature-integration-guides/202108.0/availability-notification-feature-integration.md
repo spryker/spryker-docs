@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/availability-notification-feature-integration
 ---
 
-## Install feature сore
+## Install feature core
 
 ### Prerequisites
 

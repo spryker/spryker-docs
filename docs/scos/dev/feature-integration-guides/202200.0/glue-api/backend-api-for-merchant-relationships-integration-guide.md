@@ -18,7 +18,7 @@ To start feature integration, integrate the required features and Glue APIs:
 |---------------------------------|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Backend API                     | {{page.version}}  | [Backend API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/backend-api-feature-integration.html)                                          |
 | Merchants and Merchant Relations | {{page.version}}  | [Merchants and Merchant Relations feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchants-and-merchant-relations-feature-integration.html) |
-| Spryker Core                    | {{page.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)                                        |
+| Spryker Core                    | {{page.version}}  | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)                                        |
 
 ### 1) Install the required modules using Composer
 

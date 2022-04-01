@@ -83,7 +83,7 @@ Request sample: `GET http://glue.mysprykershop.com/company-business-unit-address
 | --- | --- |
 | 001 | Access token is invalid. |
 | 002 | Access token is missing. |
-| 2001 | Сompany business unit address is not found.|
+| 2001 | Company business unit address is not found.|
 
 {% info_block infoBox "Note" %}
 

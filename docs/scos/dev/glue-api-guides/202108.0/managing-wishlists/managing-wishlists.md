@@ -756,7 +756,7 @@ To retrieve wishlist items, send the request:
 | --- | --- | --- |
 | name | String | Name of the wishlist. |
 | numberOfItems | Integer | Number of items in the wishlist. |
-| createdAt | String | Сreation date of the wishlist. |
+| createdAt | String | Creation date of the wishlist. |
 | updatedAt | String | Date of the last update. |
 
 For attributes of the included resources, see:

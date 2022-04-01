@@ -47,7 +47,7 @@ Spryker Cloud Commerce OS does not support forks of `spryker/docker-sdk`.
 
 {% endinfo_block %}
 
-## Сonfiguring a project to use the chosen version of the Docker SDK
+## Configuring a project to use the chosen version of the Docker SDK
 
 Depending on your project requirements, choose one of the following ways to configure a Docker SDK version:
 

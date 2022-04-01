@@ -24,7 +24,7 @@ If no MIME type settings are defines, files of any type can be uploaded.
 
 ## Prerequisites
 
-To start managing MIME type settings, navigate to **Administration** > **MIME Type Settings**.
+To start managing MIME type settings, navigate to **Administration&nbsp;<span aria-label="and then">></span> MIME Type Settings**.
 
 ## Adding MIME Type Settings
 

@@ -18,7 +18,7 @@ This document describes how to edit product sets in the Back Office.
 ## Prerequisites
 
 To start editing a product set, do the following:
-1. Go to **Merchandising** > **Product Sets**.
+1. Go to **Merchandising&nbsp;<span aria-label="and then">></span> Product Sets**.
 2. Next to the product set you want to edit, click **Edit**.
 
 Some section below contain reference information. Review it before you start or look up the necessary information as you go through the process.

@@ -17,7 +17,7 @@ This document describes how to create, edit, and delete [tax sets](/docs/scos/us
 
 Before you can create tax sets, make sure you have [tax rates](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-rates/managing-tax-rates.html).  
 
-To start working with tax sets, go to **Administration > Tax Sets**.
+To start working with tax sets, go to **Administration&nbsp;<span aria-label="and then">></span> Tax Sets**.
 
 Some sections contain reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
@@ -36,7 +36,7 @@ To create a tax set:
 ## Editing a tax set
 
 In case you need to change the tax set:
-1. In the *List of tax sets > Actions* column, click **Edit** for a specific tax set.
+1. In the *List of tax sets&nbsp;<span aria-label="and then">></span> Actions* column, click **Edit** for a specific tax set.
 2. On the *Edit Tax Set* page, change the attributes.
 3. Click **Save**.
 
@@ -52,11 +52,11 @@ The following table describes the attributes that are used when creating or upda
 | ATTRIBUTE |DESCRIPTION  |
 | --- | --- |
 | **Name** | The name of your tax set, e.g. _Shipment Taxes_. |
-| **Tax rates** |List of tax rates available in the Taxes > Tax Rates section. You can assign from one to many values by selecting the checkboxes next. |
+| **Tax rates** |List of tax rates available in the **Taxes&nbsp;<span aria-label="and then">></span> Tax Rates** section. You can assign from one to many values by selecting the checkboxes next. |
 
 ## Viewing a tax set
 
-You can review a specific Tax Set details by clicking **View** in the *List of tax sets > Actions* column.
+You can review a specific Tax Set details by clicking **View** in the *List of tax sets&nbsp;<span aria-label="and then">></span> Actions* column.
 The *Tax set details* page includes the following information:
 * Name
 * Tax set ID
@@ -70,7 +70,7 @@ To return back to the list, click **Back to Tax Sets**.
 
 To delete a tax set:
 
-1. In the *List of tax sets > Actions* column, click **Delete** for a specific tax set.
+1. In the *List of tax sets&nbsp;<span aria-label="and then">></span> Actions* column, click **Delete** for a specific tax set.
 2. On the *Delete Tax Set** page, click **Delete Tax Set** to confirm the action.
 The tax set is deleted.
 

@@ -21,7 +21,7 @@ The topic describes how to create a carrier company.
 
 ## Prerequisites
 
-To start working with the carrier companies, go to **Administration** > **Delivery Methods**.
+To start working with the carrier companies, go to **Administration&nbsp;<span aria-label="and then">></span> Delivery Methods**.
 
 ## Creating carrier companies
 

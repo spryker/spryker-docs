@@ -19,7 +19,7 @@ This topic describes how to manage product labels.
 
 ## Prerequisites
 
-To start managing product labels, go to **Merchandising** > **Product Labels**.
+To start managing product labels, go to **Merchandising&nbsp;<span aria-label="and then">></span> Product Labels**.
 
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 

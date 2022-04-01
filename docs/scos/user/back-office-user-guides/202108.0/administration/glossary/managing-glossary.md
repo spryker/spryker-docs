@@ -16,7 +16,7 @@ This article describes how to manage translations.
 
 ## Prerequisites
 
-To start managing translations, go to the **Administration** > **Glossary** section.
+To start managing translations, go to the **Administration&nbsp;<span aria-label="and then">></span> Glossary** section.
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 

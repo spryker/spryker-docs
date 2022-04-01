@@ -12,7 +12,7 @@ To set up the need product relations, follow the steps in the sections below.
 
 ## Define general settings of a product relation
 
-1. Go to **Merchandising** > **Product Relations**.
+1. Go to **Merchandising&nbsp;<span aria-label="and then">></span> Product Relations**.
 
 2. On the **Product Relations** page, click **Create Product Relation**.
     The **Create Product Relation** page opens.

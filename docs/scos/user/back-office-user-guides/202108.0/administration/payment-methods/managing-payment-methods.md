@@ -23,7 +23,7 @@ You can:
 
 ## Prerequisites
 
-To start working with payment methods, go to **Administration** > **Payment Methods**.
+To start working with payment methods, go to **Administration&nbsp;<span aria-label="and then">></span> Payment Methods**.
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 

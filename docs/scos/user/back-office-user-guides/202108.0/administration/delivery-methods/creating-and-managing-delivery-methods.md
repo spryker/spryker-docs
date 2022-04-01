@@ -21,9 +21,9 @@ This topic describes how to create and manage shipment methods.
 
 ## Prerequisites
 
-To start working with the delivery methods, go to **Administration** > **Delivery Methods**.
+To start working with the delivery methods, go to **Administration&nbsp;<span aria-label="and then">></span> Delivery Methods**.
 
-Once you decide to add a new shipment method, make sure that you have a carrier company to assign a shipment method on the list of delivery methods. If you don't have an appropriate carrier, see [Creating a carrier company](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-carrier-companies.html). You also need to make sure that you have an appropriate tax set in the **Taxes** > **Tax Sets** section, see [Taxes](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html).
+Once you decide to add a new shipment method, make sure that you have a carrier company to assign a shipment method on the list of delivery methods. If you don't have an appropriate carrier, see [Creating a carrier company](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-carrier-companies.html). You also need to make sure that you have an appropriate tax set in the **Taxes&nbsp;<span aria-label="and then">></span> Tax Sets** section, see [Taxes](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html).
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 
@@ -69,7 +69,7 @@ The fields marked with * are required.
 3. To activate the delivery method, select the **Is active** checkbox.
 4. In the *Price & Tax* tab, do the following:
    * Define the price for the delivery method per specific locale;
-   * Select the tax set from the drop-down list. The values are taken from the **Taxes** > **Tax Sets** section. For more information, see [Managing tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/managing-tax-sets.html).
+   * Select the tax set from the drop-down list. The values are taken from the **Taxes&nbsp;<span aria-label="and then">></span> Tax Sets** section. For more information, see [Managing tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/managing-tax-sets.html).
 
 5. In the *Store Relation* tab, select the stores in which the delivery method should be available.
 

@@ -16,7 +16,7 @@ This document describes how to create, edit, and delete [tax rates](/docs/scos/u
 
 ## Prerequisites
 
-To start working with tax rates, go to **Administration** > **Tax Rates**.
+To start working with tax rates, go to **Administration&nbsp;<span aria-label="and then">></span> Tax Rates**.
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 
@@ -46,7 +46,7 @@ The following table describes attributes you view, enter, and select when creati
 
 To edit a tax rate:
 
-1. In the *List of tax rates* > *Actions* column, click **Edit** for a specific tax rate.
+1. In the *List of tax rates&nbsp;<span aria-label="and then">></span> Actions* column, click **Edit** for a specific tax rate.
 2. On the *Edit Tax Rate* page, change the attributes.
 3. Click **Save**. For more details on the reference information of the attributes, see the [Reference information: Creating tax rates](#reference-information-creating-tax-rates) section.
 
@@ -54,7 +54,7 @@ To edit a tax rate:
 
 ## Viewing tax rates
 
-To view details on a specific tax rate,  in the *List of tax rates > Actions* column, click **View**.
+To view details on a specific tax rate,  in the *List of tax rates&nbsp;<span aria-label="and then">></span> Actions* column, click **View**.
 
 The *Tax Rate* details page includes the following information:
 * Name
@@ -77,7 +77,7 @@ To return back to the list, click **Back to Tax Rates**.
 
 To delete a tax rate:
 
-1. In the *List of tax rates > Actions* column, click **Delete** for a specific tax rate.
+1. In the *List of tax rates&nbsp;<span aria-label="and then">></span> Actions* column, click **Delete** for a specific tax rate.
 2. On the *Delete Tax Rate* page, click **Delete Tax Rate** to confirm the action.
 The tax rate is deleted. Remember that it will also be deleted from the [tax set](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/managing-tax-sets.html) to which it has been assigned.
 

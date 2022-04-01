@@ -8,7 +8,7 @@ This document describes how to reorder product sets in the Back Office by defini
 
 To reorder product sets by editing their weight, do the following:
 
-1. Go to **Merchandising** > **Product Sets**.
+1. Go to **Merchandising&nbsp;<span aria-label="and then">></span> Product Sets**.
 2. On the **Product Sets** page, click **Reorder Product Sets**.
     This opens the **Reorder Product Sets** page. The product sets are displayed in the ascending order of their current weight.
 3. Change the **WEIGHT** of each product set, so that it is in the needed position relatively to the other product sets.

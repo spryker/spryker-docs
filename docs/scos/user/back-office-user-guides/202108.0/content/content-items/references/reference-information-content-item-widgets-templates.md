@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/content-item-widgets-templates-reference-information
 ---
 
-This topic contains the reference information you need to know when selecting a template for a content item widget in the **Pages** > **Edit Placeholders** and **Blocks** > **Edit Placeholder** sections.
+This topic contains the reference information you need to know when selecting a template for a content item widget in the **Pages&nbsp;<span aria-label="and then">></span> Edit Placeholders** and **Blocks&nbsp;<span aria-label="and then">></span> Edit Placeholder** sections.
 
 When adding a content item widget to a page or block, you can select a template that will define how your content is displayed in your online store.
 

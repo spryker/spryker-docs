@@ -17,6 +17,7 @@ Depending on your project needs, you can set up a single store that serves all y
 The configuration of the current store in a project can be retrieved via an endpoint provided by the **Stores API**.
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue Application Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html).
 
 ## Retrieve store configuration
@@ -29,12 +30,15 @@ To retrieve store configuration, send the request:
 
 ### Request
 
-Request sample: `GET https://glue.mysprykershop.com/stores`
+Request sample: retrieve protected resources
+
+`GET https://glue.mysprykershop.com/stores`
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve protected resources</summary>
+
 ```json
 {
 		"data": [
@@ -93,7 +97,6 @@ Request sample: `GET https://glue.mysprykershop.com/stores`
 		}
 }
 ```
-
 </details>
 
 

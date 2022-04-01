@@ -27,7 +27,7 @@ For detailed information on the modules that provide the API functionality and r
 ## Get Full Category Tree
 To retrieve the full category tree, containing all available nodes and their children, send a GET request to the following endpoint:
 `/category-trees`
-Sample request: `GET http://mysprykershop.com/category-trees`
+Request sample: `GET http://mysprykershop.com/category-trees`
 If the request is successful, the resource responds with a **RestCategoryTreesResponse**.
 **Response sample:**
 
@@ -154,7 +154,7 @@ where **de**, **en** are the locales; **q=0.9** is a probability.
 ## Get Categories by Product
 To get all categories a product belongs to, you can send a GET request to the following endpoint:
 `/abstract-products/{sku}?include=category-nodes`
-Sample request: `GET http://mysprykershop.com/abstract-products/058?include=category-nodes`
+Request sample: `GET http://mysprykershop.com/abstract-products/058?include=category-nodes`
 where `058` is the SKU of the abstract product.
 If the request is successful, the response will contain category nodes which a product belongs to.
 
@@ -409,7 +409,7 @@ Sample:
 To retrieve a specific node by ID, access the following endpoint:
 
 `/category-nodes/{% raw %}{{{% endraw %}node_id{% raw %}}}{% endraw %}`
-Sample request: `GET http://mysprykershop.com/category-nodes/5`
+Request sample: `GET http://mysprykershop.com/category-nodes/5`
 where `5` is the node ID.
 If the request is successful, the resource responds with a **RestCategoryNodeResponse**.
 

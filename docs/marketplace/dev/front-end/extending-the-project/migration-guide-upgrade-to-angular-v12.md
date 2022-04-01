@@ -25,11 +25,7 @@ Since it is not possible to migrate using standard methods such as `nx migrate` 
 
 1. Upgrade modules to the new version:
 
-```bash
-composer update spryker/dashboard-merchant-portal-gui spryker/gui-table spryker/merchant-profile-merchant-portal-gui spryker/product-merchant-portal-gui spryker/product-offer-merchant-portal-gui spryker/sales-merchant-portal-gui spryker/security-merchant-portal-gui spryker/user-merchant-portal-gui spryker/zed-ui --with-dependencies
-```
-
-After update the minimum module versions should be: 
+The marketplace modules must correspond to the following versions:
 
 | NAME                                        | VERSION   |
 | ------------------------------------------- | --------- |
@@ -42,6 +38,12 @@ After update the minimum module versions should be:
 | SecurityMerchantPortalGui                   | >= 1.4.0  |
 | UserMerchantPortalGui                       | >= 1.3.0  |
 | ZedUi                                       | >= 1.5.0  |
+
+If not, update module versions manually or with the next command:
+
+```bash
+composer update spryker/dashboard-merchant-portal-gui spryker/gui-table spryker/merchant-profile-merchant-portal-gui spryker/product-merchant-portal-gui spryker/product-offer-merchant-portal-gui spryker/sales-merchant-portal-gui spryker/security-merchant-portal-gui spryker/user-merchant-portal-gui spryker/zed-ui
+```
 
 2. Regenerate the data transfer object:
 

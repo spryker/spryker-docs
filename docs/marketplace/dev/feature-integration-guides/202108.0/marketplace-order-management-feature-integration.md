@@ -24,7 +24,7 @@ To start feature integration, integrate the required features:
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
 | Marketplace Shipment | {{page.version}} | [Marketplace Shipment feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-feature-integration.html) |
 
-### 1) Install required modules using Сomposer
+### 1) Install required modules using Composer
 
 Install the required modules:
 
@@ -831,6 +831,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
@@ -1118,8 +1119,21 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 **src/Pyz/Yves/CustomerPage/Theme/default/components/molecules/order-detail-table/order-detail-table.twig**
 
+```twig
 
+{% extends molecule('order-detail-table', '@SprykerShop:CustomerPage') %}
 
+{% block body %}
+    {% for shipmentGroup in data.shipmentGroups %}
+        <article class="grid grid--gap spacing-bottom spacing-bottom--big">
+            ...
+            {% widget 'MerchantOrderReferenceForItemsWidget' args [shipmentGroup.items] only %}{% endwidget %}
+            ...
+        </article>
+    {% endfor %}
+{% endblock %}
+
+```
 
 
 {% info_block warningBox "Verification" %}

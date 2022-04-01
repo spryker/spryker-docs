@@ -7,7 +7,7 @@ template: concept-topic-template
 
 ## A core method is used on the project level
 
-Modules have public and private APIs. Link for API's documentation - [see here]{link to "Private API class was extended or used" - private-api-class-extended-or-used.md#Private API class was extended or used}
+Modules have public and private APIs. Link for API's documentation - link to https://docs.spryker.com/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#development-strategies
 
 {% info_block infoBox "" %}
 

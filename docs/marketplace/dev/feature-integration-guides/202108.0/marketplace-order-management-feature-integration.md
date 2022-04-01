@@ -1120,7 +1120,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 **src/Pyz/Yves/CustomerPage/Theme/default/components/molecules/order-detail-table/order-detail-table.twig**
 
 ```twig
-
+{%- raw -%}
 {% extends molecule('order-detail-table', '@SprykerShop:CustomerPage') %}
 
 {% block body %}
@@ -1132,7 +1132,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
         </article>
     {% endfor %}
 {% endblock %}
-
+{% endraw %}
 ```
 
 

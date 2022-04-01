@@ -734,6 +734,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 
 ```twig
 ...
+{%- raw -%}
 {% widget 'AddToCartFormWidget' args [config, data.product, isDisabled, options] only %}
     {% block embeddedData %}
         ...
@@ -755,11 +756,13 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
     {% endblock %}
 {% endwidget %}
 ...
+{% endraw %}
 ```
 
 **src/Pyz/Yves/ShopUi/Theme/default/components/molecules/product-card-item/product-card-item.twig**
 
 ```twig
+{%- raw -%}
 ...
 {% block productInfo %}
     ...
@@ -773,6 +776,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 
 {% endblock %}
 ...
+{% endraw %}
 ```
 
 {% info_block warningBox "Verification" %}

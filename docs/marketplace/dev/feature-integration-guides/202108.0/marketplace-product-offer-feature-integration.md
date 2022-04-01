@@ -1531,6 +1531,7 @@ class ProductController extends SprykerShopProductController
 **src/Pyz/Yves/ProductDetailPage/Theme/default/components/molecules/product-configurator/product-configurator.twig**
 
 ```twig
+{%- raw -%}
 ...
 {% widget 'AddToCartFormWidget' args [config, data.product, isDisabled, options] only %}
     {% block embeddedData %}
@@ -1553,6 +1554,7 @@ class ProductController extends SprykerShopProductController
     {% endblock %}
 {% endwidget %}
 ...
+{% endraw %}
 ```
 
 Enable Javascript and CSS changes:

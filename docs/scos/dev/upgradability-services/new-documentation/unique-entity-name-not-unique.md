@@ -13,7 +13,7 @@ Modules have public and private APIs. More information you can get here - https:
 While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility is not guaranteed in the private API.
 {% endinfo_block %}
 
-When we are extending public API we need to make sure that we have unique names, so Spryker updates are compatible with project changes.
+When we are extending public API on the project level we need to make sure that we have unique names, so Spryker updates are compatible with project changes.
 
 Project names that have to be unique:
 
@@ -24,281 +24,212 @@ Project names that have to be unique:
 * Methods
 * Constants
 
-If core introduces with the same name that already introduced on project level, it might change behavior or cause issues.
+If core introduces an update with the same name that already defined on project level, it might change behavior or cause issues.
 
-## Making transfer names unique
-
-To resolve the errors provided in the preceding examples, rename the transfer names. For example, add the project name as a prefix.
-
-{% info_block infoBox "Future-proof names" %}
-
-The names should be unique to the extent of making it impossible to accidentally match the name of a core transfer introduced in the future.
-
+{% info_block infoBox "" %}
+To make your code unique you can use prefixes. F.e. "Pyz" or {Project_mane}
 {% endinfo_block %}
 
-#### Examples of not unique transfer name
+## Unique transfer name
+New transfer has to have unique name.
+#### Example of code that causes the upgradability error (not unique transfer name)
 
 ```xml
-<?xml version="1.0"?>
-<transfers xmlns="spryker:transfer-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
-    <transfer name="ProductAbstractStore">
-        <property name="productAbstractSku" type="string"/>
-        <property name="storeName" type="string"/>
+...
+    <transfer name="CustomProductData">
+        ...
     </transfer>
-</transfers>
+...
 ```
 
-#### Examples related error in the Evaluator output for transfer:
+#### Example of related error in the Evaluator output (not unique transfer name)
 ```bash
 ---------------- ----------------------------------------------------------------------------------------------------
-NotUnique:TransferName Transfer object name ProductAbstractStore has to have project prefix Pyz in /0000-fork-b2c-demo-shop/src/Pyz/Shared/Product/Transfer/product.transfer.xml, like PyzProductAbstractStore
+NotUnique:TransferName Transfer object name {name} has to have project prefix Pyz in {path}, like {proposedName}
 ---------------------- ----------------------------------------------------------------------------------------------------
 ```
 
-#### Examples of unique transfer name
-
-Renamed transfer name:
-
+#### Example to resolve the Evaluator check error (unique transfer name)
 ```xml
-<?xml version="1.0"?>
-<transfers xmlns="spryker:transfer-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
-    <transfer name="PyzProductAbstractStore">
-        <property name="productAbstractSku" type="string"/>
-        <property name="storeName" type="string"/>
+...
+    <transfer name="PyzCustomProductData">
+        ...
     </transfer>
-</transfers>
+...
 ```
 ---
-
-## Making transfer property names unique
-
-To resolve the errors provided in the preceding examples, rename the transfer property names. For example, add the project name as a prefix.
-
-{% info_block infoBox "Future-proof names" %}
-
-The names should be unique to the extent of making it impossible to accidentally match the name of a core transfer property introduced in the future.
-
-{% endinfo_block %}
-
-#### Example of not unique transfer property
+## Unique transfer property name
+New transfer property has to have unique names.
+#### Example of code that causes the upgradability error (not unique transfer property name)
 
 ```xml
-<?xml version="1.0"?>
-<transfers xmlns="spryker:transfer-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
+...
     <transfer name="LocaleCmsPageData">
         <property name="contentWidgetParameterMap" type="array" singular="contentWidgetParameterMap"/>
     </transfer>
-</transfers>
+...
 ```
 
-#### Example of related error in the Evaluator output
+#### Example of related error in the Evaluator output (not unique transfer property name)
 
 ```bash
 -------------------------- ----------------------------------------------------------------------------------------------------
-NotUnique:TransferProperty Transfer property contentWidgetParameterMap for LocaleCmsPageData has to have project prefix Pyz in /0000-fork-b2c-demo-shop/src/Pyz/Shared/Cms/Transfer/cms.transfer.xml, like pyzContentWidgetParameterMap
+NotUnique:TransferProperty Transfer property {transferPropertyName} for {transferName} has to have project prefix Pyz in {path}, like {proposedTransferPropertyName}
 -------------------------- ----------------------------------------------------------------------------------------------------
 ```
 
-#### Example of renamed transfer property name
+#### Example to resolve the Evaluator check error (unique transfer property name)
 
 ```xml
-<?xml version="1.0"?>
-<transfers xmlns="spryker:transfer-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
+...
     <transfer name="LocaleCmsPageData">
         <property name="pyzContentWidgetParameterMap" type="array" singular="pyzContentWidgetParameterMap"/>
     </transfer>
-</transfers>
+...
 ```
 
-## Making table names unique
-
-To resolve the errors provided in the preceding examples, rename the table names. For example, add the project name as a prefix.
-
-{% info_block infoBox "Future-proof names" %}
-
-The names should be unique to the extent of making it impossible to accidentally match the name of a core table introduced in the future.
-
-{% endinfo_block %}
-
-#### Example of not unique table name
+## Unique database table name
+New DB table has to have unique names.
+#### Example of not unique database table name
 ```xml
-<?xml version="1.0"?>
-<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" name="zed" namespace="Orm\Zed\EvaluatorSpryker\Persistence" package="src.Orm.Zed.EvaluatorSpryker.Persistence">
-    <table name="evaluator_spryker" idMethod="native">
+...
+    <table name="evaluator_spryker">
         ...
     </table>
-</database>
+...
 ```
 
-#### Examples related error in the Evaluator output for tables
-
+#### Example of related error in the Evaluator output (not unique database table name)
 ```bash
 ------------------------ ----------------------------------------------------------------------------------------------------
-NotUnique:DatabaseTable Database table evaluator_spryker has to have project prefix Pyz in /0000-fork-b2c-demo-shop/src/Pyz/Zed/EvaluatorSpryker/Persistence/Propel/Schema/evaluator_spryker.schema.xml, like pyz_evaluator_spryker
+NotUnique:DatabaseTable Database table {tableName} has to have project prefix Pyz in {path}, like {proposedTableNamw}
 ----------------------- ----------------------------------------------------------------------------------------------------
 ```
 
-#### Examples of renamed table name
+#### Example to resolve the Evaluator check error (unique database table name)
 
 ```xml
-<?xml version="1.0"?>
-<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" name="zed" namespace="Orm\Zed\EvaluatorSpryker\Persistence" package="src.Orm.Zed.EvaluatorSpryker.Persistence">
-    <table name="pyz_evaluator_spryker" idMethod="native">
+...
+    <table name="pyz_evaluator_spryker">
         ...
     </table>
-</database>
+...
 ```
 ---
 
-## Making database column names unique
-
-To resolve the errors provided in the preceding examples, rename the database column names. For example, add the project name as a prefix.
-
-{% info_block infoBox "Future-proof names" %}
-
-The names should be unique to the extent of making it impossible to accidentally match the name of a core database column introduced in the future.
-
-{% endinfo_block %}
-
-#### Example of not unique database column name
+## Unique database table column name
+New DB table column has to have unique names.
+#### Example of not unique database table column name
 
 ```xml
-<?xml version="1.0"?>
-<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\Product\Persistence" package="src.Orm.Zed.Product.Persistence">
-    <table name="spy_product" idMethod="native" allowPkInsert="true" identifierQuoting="true">
-        <column name="is_active" required="true" defaultValue="true" type="BOOLEAN"/>
+...
+    <table name="spy_product">
+        <column name="is_active"/>
     </table>
-</database>
+...
 ```
 
-#### Example of related error in the Evaluator output
+#### Example of related error in the Evaluator output (unique database table column name)
 
 ```bash
 ------------------------ ----------------------------------------------------------------------------------------------------
-NotUnique:DatabaseColumn Database column is_active has to have project prefix Pyz in /0000-fork-b2c-demo-shop/src/Orm/Zed/Product/Persistence/Propel/Schema/spy_product.schema.xml, like pyz_is_active
+NotUnique:DatabaseColumn Database column {columnName} has to have project prefix Pyz in {path}, like {proposedColumnName}
 ------------------------ ----------------------------------------------------------------------------------------------------
 ```
 
-#### Example of unique database column name
+#### Example to resolve the Evaluator check error (unique database table column name)
 
 ```xml
-<?xml version="1.0"?>
-<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\Product\Persistence" package="src.Orm.Zed.Product.Persistence">
-    <table name="spy_product" idMethod="native" allowPkInsert="true" identifierQuoting="true">
-        <column name="pyz_is_active" required="true" defaultValue="true" type="BOOLEAN"/>
+...
+    <table name="spy_product">
+        <column name="pyz_is_active"/>
     </table>
-</database>
+...
 ```
 ---
 
-## Making method names unique
+## Unique method names
+New methods has to have unique names.
 
-To resolve the errors provided in the preceding examples, rename the method names. For example, add the project name as a prefix.
-
-{% info_block infoBox "Future-proof names" %}
-
-The names should be unique to the extent of making it impossible to accidentally match the name of a core method introduced in the future.
-
-{% endinfo_block %}
-
-#### Examples of not unique method name config
-
-`getPublishQueueConfiguration` method name is not unique:
-
+#### Example of not unique method name 
 ```php
-/**
- * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
- */
+namespace Pyz\Client\RabbitMq;
+
+use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
+
 class RabbitMqConfig extends SprykerRabbitMqConfig
 {
-    ...
     /**
-     * @return array
+     * ...
      */
-    protected function getPublishQueueConfiguration(): array
+    protected function getCustomConfiguration(): ...
     {
         ...
     }
-    ...
 }
 ```
 
-#### Example related error in the Evaluator output
+#### Example of related error in the Evaluator output (unique method name)
 
 ```bash
 ---------------- ----------------------------------------------------------------------------------------------------
-NotUnique:Method Method name Pyz\Client\RabbitMq\RabbitMqConfig::getPublishQueueConfiguration() should contains project prefix, like pyzGetPyzPublishQueueConfiguration
+NotUnique:Method Method name {path}::{methodName} should contains project prefix, like {proposedMethodName}
 ---------------- ----------------------------------------------------------------------------------------------------
 
 ```
 
-#### Example of renamed method name
-
+#### Example to resolve the Evaluator check error (unique method name)
 ```php
-/**
- * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
- */
+namespace Pyz\Client\RabbitMq;
+
+use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
+
 class RabbitMqConfig extends SprykerRabbitMqConfig
 {
-    ...
     /**
-     * @return array
+     * ...
      */
-    protected function getPyzPublishQueueConfiguration(): array
+    protected function getPyzCustomConfiguration(): ...
     {
         ...
     }
-    ...
 }
 ```
 ---
 
-## Making constant names unique
+## Unique constant name
+New constant has to have unique names.
 
-To resolve the errors provided in the preceding examples, rename the constant names. For example, add the project name as a prefix.
-
-{% info_block infoBox "Future-proof names" %}
-
-The names should be unique to the extent of making it impossible to accidentally match the name of a core constant introduced in the future.
-
-{% endinfo_block %}
-
-#### Example of not unique constant
+#### Example of not unique constant name
 ```php
-namespace Pyz\Client\ProductStorage\Plugin\BundleProductsExpanderPlugin;
+namespace Pyz\Client\RabbitMq;
 
-...
+use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
 
-interface BundleProductsExpanderPlugin use SprykerBundleProductsExpanderPlugin
+class RabbitMqConfig extends SprykerRabbitMqConfig
 {
-    /**
-     * @var string
-     */
-    public const KEY_SKU = '...';
+    public const CUSTOM_CONST = 'CUSTOM_CONST';
 }
 ```
 
-#### Example related error in the Evaluator output
+#### Example of related error in the Evaluator output (unique constant name)
 
 ```bash
 ------------------ ----------------------------------------------------------------------------------------------------
-NotUnique:Constant Pyz\Client\ProductStorage\Plugin\BundleProductsExpanderPlugin::KEY_SKU name has to have project namespace, like KEY_PYZ_SKU.
+NotUnique:Constant {path}::{constName} name has to have project namespace, like {proposedConstName}.
 ------------------ ----------------------------------------------------------------------------------------------------
 ```
 
-#### Example of renamed constant name
+#### Example to resolve the Evaluator check error (unique constant name)
 
 ```php
-namespace Pyz\Client\ProductStorage\Plugin\BundleProductsExpanderPlugin;
+namespace Pyz\Client\RabbitMq;
 
-...
+use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
 
-interface BundleProductsExpanderPlugin use SprykerBundleProductsExpanderPlugin
+class RabbitMqConfig extends SprykerRabbitMqConfig
 {
-    /**
-     * @var string
-     */
-    public const KEY_PYZ_SKU = '...';
+    public const PYZ_CUSTOM_CONST = 'PYZ_CUSTOM_CONST';
 }
 ```
 ---

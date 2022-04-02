@@ -1,45 +1,35 @@
 ---
-title: Method of extended class is overridden one the project level
+title: Method under private API is overridden on the project level
 description: Reference information for evaluator and upgrader tools.
 last_updated: Mar 23, 2022
 template: concept-topic-template
 ---
 
-## Method of an extended class is overridden on the project level
+## Method under private API is overridden on the project level
 
-If you extend functionality under private API, any update can cause errors or unexpected changes in functionality.
-If you extend a core class and override one of its methods, updates can cause errors or unexpected changes in functionality.
-
-More information about private API [see here]{link to Private API class was extended or used - private-api-class-extended-or-used.md#Private API class was extended or used}
-
-#### Using custom methods on the project level
-
-To avoid unexpected issues and achieve the same result, instead of overriding the core methods, introduce custom ones.
+Modules have public and private APIs. More information you can get here - https://docs.spryker.com/docs/scos/dev/architecture/module-api/definition-of-module-api.html
 
 {% info_block infoBox "" %}
-
-While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility is not guaranteed in the private API. For example, if you use a core method on the project level, and it is updated or removed, it can cause unexpected issues during updates.
-
+While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility is not guaranteed in the private API.
 {% endinfo_block %}
 
-#### Example of code that can cause upgradability errors
+For example, if you extend functionality under private API, any update can cause errors or unexpected changes in functionality after Spryker update.
 
-For example, the extended class EvaluatorCategoryImageEntityManager overrides the core method CategoryImageEntityManager.
+#### Example of code that causes the upgradability error
+
+For example, the extended class `PyzCategoryImageEntityManager` overrides the private API core method `CategoryImageEntityManager::saveCategoryImageSet`.
 
 ```php
-namespace Pyz\Zed\Evaluator\Persistence;
+namespace Pyz\Zed\CategoryImage\Persistence;
 
-use Generated\Shared\Transfer\CategoryImageSetTransfer;
-use Spryker\Zed\CategoryImage\Persistence\CategoryImageEntityManager;
+use Spryker\Zed\CategoryImage\Persistence\CategoryImageEntityManager as SprykerCategoryImageEntityManager;
 
-class EvaluatorCategoryImageEntityManager extends CategoryImageEntityManager
+class PyzCategoryImageEntityManager extends SprykerCategoryImageEntityManager
 {
     /**
-     * @param \Generated\Shared\Transfer\CategoryImageSetTransfer $categoryImageSetTransfer
-     *
-     * @return \Generated\Shared\Transfer\CategoryImageSetTransfer
+     * ...
      */
-    public function saveCategoryImageSet(CategoryImageSetTransfer $categoryImageSetTransfer): CategoryImageSetTransfer
+    public function saveCategoryImageSet(...): ...
     {
         ...
     }
@@ -56,51 +46,47 @@ Introduce a new custom method without usage of existing one. Override usage of t
 ************************************************************************************************************************
 ------------------------------------------------------------------------------------
 Pyz\Zed\EvaluatorSpryker\Persistence\EvaluatorSprykerCategoryImageEntityManager
-{"name":"saveCategoryImageSet","class":"Pyz\\Zed\\EvaluatorSpryker\\Persistence\\EvaluatorSprykerCategoryImageEntityManager"}
-{"parentClass":"Spryker\\Zed\\CategoryImage\\Persistence\\CategoryImageEntityManager"}
+{"name":"{name}"}
+{"parentClass":"{parentClass}"}
 ************************************************************************************************************************
 ```
+#### Solution to resolve the issue
 
-#### Steps to solve potential problem in functionality
+To resolve the error provided in the example, do the following steps:
+1. [Recommended] Check if it is possible to extend functionality with "Configuration" strategy (link to "Configuration" - https://docs.spryker.com/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#configuration)
+2. [Recommended] Check if it is possible to extend functionality with "Plug and Play" strategy (link to "Plug and Play" - https://docs.spryker.com/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#plug-and-play)
+3. [Recommended] Check if it is possible to extend functionality with "Project Modules" strategy (link to "Project Modules") - https://docs.spryker.com/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules
+4. [Not Recommended] Replace the private API core naming with a unique naming.
 
-1. Investigate if it is possible to extend functionality with configuration or plugins (link to "Configuration", "Plug and Play strategy" - https://docs.spryker.com/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#plug-and-play)
-2. Investigate if it is possible to create a separate module with a feature specific functionality (project modules) - https://docs.spryker.com/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules
-3. If it's impossible to extend functionality with configuration or plugins then introduce a new custom method.
-4. If you introduced new custom method then replace the core method with the custom one you've created in the previous step.
-
-{% info_block infoBox "Unique method names" %}
-
-The new custom method name should be unique to the extent of making it impossible to accidentally match the name of a core method introduced in the future.
-
-More details about unique names here {link to "Making method names unique" - unique-entity-name-not-unique.md#Making method names unique }
-
+{% info_block infoBox "" %}
+Meanwhile, we are working on introducing a way to report such cases and add more extension points in the core.
 {% endinfo_block %}
 
-When the core method is overridden with a custom one, re-evaluate the code. The same error shouldn't be returned.
+{% info_block infoBox "" %}
+To make your code unique you can use prefixes. F.e. "Pyz" or {Project_mane}
+{% endinfo_block %}
 
-#### Example of using a custom method on the project level
+#### Example to resolve the Evaluator check error
 
-At this particular example was created new method that almost the same as the core one, but it has unique prefix that base on the default name of current shop (Pyz). 
-This new method should be used instead core's one.
+At this particular example we replaced the private API core naming with a unique naming.
 
 ```php
-namespace Pyz\Zed\Evaluator\Persistence;
+namespace Pyz\Zed\CategoryImage\Persistence;
 
-use Generated\Shared\Transfer\CategoryImageSetTransfer;
-use Spryker\Zed\CategoryImage\Persistence\CategoryImageEntityManager;
+use Spryker\Zed\CategoryImage\Persistence\CategoryImageEntityManager as SprykerCategoryImageEntityManager;
 
-class EvaluatorCategoryImageEntityManager extends CategoryImageEntityManager
+class PyzCategoryImageEntityManager extends SprykerCategoryImageEntityManager
 {
     /**
-     * @param \Generated\Shared\Transfer\CategoryImageSetTransfer $categoryImageSetTransfer
-     *
-     * @return \Generated\Shared\Transfer\CategoryImageSetTransfer
+     * ...
      */
-    public function savePyzCategoryImageSet(CategoryImageSetTransfer $categoryImageSetTransfer): CategoryImageSetTransfer
+    public function savePyzCategoryImageSet(...): ...
     {
         ...
     }
 }
 ```
 ---
+After the fix re-evaluate the code. The same error shouldn’t be returned.
+
 

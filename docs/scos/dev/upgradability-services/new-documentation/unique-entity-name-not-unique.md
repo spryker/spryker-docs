@@ -7,7 +7,15 @@ template: concept-topic-template
 
 ## Entity name is not unique
 
-The names that should be unique:
+Modules have public and private APIs. More information you can get here - https://docs.spryker.com/docs/scos/dev/architecture/module-api/definition-of-module-api.html
+
+{% info_block infoBox "" %}
+While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility is not guaranteed in the private API.
+{% endinfo_block %}
+
+When we are extending public API we need to make sure that we have unique names, so Spryker updates are compatible with project changes.
+
+Project names that have to be unique:
 
 * Transfers
 * Transfer properties
@@ -16,7 +24,7 @@ The names that should be unique:
 * Methods
 * Constants
 
-If a minor or major release introduces with the same name that you are already introduced on project level, it might change behavior or cause issues.
+If core introduces with the same name that already introduced on project level, it might change behavior or cause issues.
 
 ## Making transfer names unique
 

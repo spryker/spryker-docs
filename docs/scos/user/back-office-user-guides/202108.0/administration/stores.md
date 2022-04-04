@@ -16,17 +16,17 @@ This topic provides an overview of the Stores section in the Spryker Back Office
 
 ## Prerequisites
 
-To start managing translations, go to the **Administration** > **Stores** section.
+To start managing translations, go to the **Administration&nbsp;<span aria-label="and then">></span> Stores** section.
 
 ## Viewing stores
 
-In the *Stores* section, you see the following:
+In the **Stores** section, you see the following:
 * Store ID
 * Store name
 
 By default, the last created store goes on top of the table. You can sort and search the list of stores by **name** only.
 
-The *Name* column is sortable.
+The **Name** column is sortable.
 
 {% info_block infoBox %}
 

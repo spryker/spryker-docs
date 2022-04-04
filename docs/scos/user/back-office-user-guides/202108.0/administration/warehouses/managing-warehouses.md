@@ -16,7 +16,7 @@ This topic describes how to manage warehouses.
 
 ## Prerequisites
 
-To start working with warehouses, go to **Administration** > **Warehouses**.
+To start working with warehouses, go to **Administration&nbsp;<span aria-label="and then">></span> Warehouses**.
 
 Review the [reference information](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/creating-warehouses.html#reference-information-creating-warehouses) before you start, or look up the necessary information as you go through the process.
 
@@ -24,8 +24,8 @@ Review the [reference information](/docs/scos/user/back-office-user-guides/{{pag
 
 To view the warehouse details:
 
-1. In the *Actions* column, click **View** for the warehouse you want to view. This takes you to the *View Warehouse: [Warehouse name]* page.
-2. On the *View Warehouse: [Warehouse name]* page, the following information is available:
+1. In the **Actions** column, click **View** for the warehouse you want to view. This takes you to the **View Warehouse: _[Warehouse name]_** page.
+2. On the **View Warehouse: _[Warehouse Name]_** page, the following information is available:
     * Warehouse name
     * Status: whether the warehouse is available or not
     * Store(s) in which the warehouse is available
@@ -35,10 +35,10 @@ To view the warehouse details:
 
 To edit the warehouse details:
 
-1. In the *Actions* column, click **Edit** for the warehouse you want to update. This takes you to the *Edit Warehouse: [Warehouse name]* page.
-2. In the *Configuration* tab, make changes to the needed attributes.
+1. In the **Actions** column, click **Edit** for the warehouse you want to update. This takes you to the **Edit Warehouse: _[Warehouse name]_** page.
+2. On the **Configuration** tab, make changes to the needed attributes.
 3. Switch to the **Store relation** tab and specify the store in which you want the warehouse to be available.
-4. To keep the changes, click **Save**. This redirects you to the *Warehouses* page, where you can see the updated warehouse and the following message: 'Warehouse has been successfully updated'.
+4. To keep the changes, click **Save**. This redirects you to the **Warehouses** page, where you can see the updated warehouse and the following message: 'Warehouse has been successfully updated'.
 
 
 ## What's next?

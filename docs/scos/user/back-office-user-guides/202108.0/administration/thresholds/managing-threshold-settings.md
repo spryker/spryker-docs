@@ -19,14 +19,14 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html
 ---
 
-The *Threshold settings* page allows you to select a tax set that is applied to the threshold fee. Thus, the tax is calculated in the same way it is calculated for the products in the cart.
+The **Threshold settings** page lets you select a tax set that is applied to the threshold fee. Thus, the tax is calculated in the same way it is calculated for the products in the cart.
 
 ## Prerequisites
 
-To start working with threshold settings, navigate to **Administration** > **Threshold Settings**.
+To start working with threshold settings, navigate to **Administration&nbsp;<span aria-label="and then">></span> Threshold Settings**.
 
 ## Managing Threshold Settings
 
 To configure threshold settings:
-1. On the *Edit Threshold Settings* page, from the drop-down list, select the tax set that will be applied to the threshold.
+1. On the **Edit Threshold Settings** page, from the drop-down list, select the tax set that will be applied to the threshold.
 2. Click **Save**.

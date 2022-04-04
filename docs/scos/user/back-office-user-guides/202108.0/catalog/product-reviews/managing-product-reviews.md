@@ -25,7 +25,7 @@ Learn how to:
 
 ## Prerequisites
 
-To start working with reviews, navigate to the **Products > Product Reviews** section.
+To start working with reviews, navigate to the **Products&nbsp;<span aria-label="and then">></span> Product Reviews** section.
 
 ## Checking reviews
 
@@ -38,14 +38,14 @@ Before changing the status or deleting a review, you can first read its contents
 You can change the statuses of the reviews that have been submitted by the customers of your shop.
 
 To change the status of a review:
-1. In the *Actions* column, click **Change status**.
+1. In the **Actions** column, click **Change status**.
 2. Set the new status: **Approve** or **Reject**.
 
 ## Deleting reviews
 
 You can delete a review, so it will no longer be shown on the **List of product reviews**.
 
-**To delete a review**, in the *Actions* column, click **Delete** .
+**To delete a review**, in the **Actions** column, click **Delete** .
 
 {% info_block warningBox "Note" %}
 

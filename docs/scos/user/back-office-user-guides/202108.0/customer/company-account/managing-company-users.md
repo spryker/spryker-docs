@@ -82,7 +82,7 @@ Unassigned Roles | Roles that you can select to be assigned to the customer.|
 To attach a company user to a new company business unit within the same company:
 1. On the *Overview of Company Users* page, in the _Actions_ column, click **Attach to BU** for a user for which you want to change the assigned business unit.
 2. On the *Attach to Business Unit* page:
-    1. Select a business unit you would like the company user to be attached to from the drop-down list.
+    1. Select a business unit you want the company user to be attached to from the drop-down list.
     2. Assign the role under the *Assigned Roles* section.
 3. Click **Save**.
 

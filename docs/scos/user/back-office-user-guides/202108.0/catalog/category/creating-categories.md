@@ -23,7 +23,7 @@ This topic describes how to create categories.
 
 ## Prerequisites
 
-To start creating categories, go to **Catalog** > **Categories**
+To start creating categories, go to **Catalog&nbsp;<span aria-label="and then">></span> Categories**
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 
@@ -31,10 +31,10 @@ Review the reference information before you start, or look up the necessary info
 ## Creating a category
 
 To create a category, take the following steps:
-1. On the *Category* page, in the top right corner, click **Create category** to open the *Create category* page.
-2. In the *Settings* tab, enter and select the attributes for your category.
-3. Click **Next** at the bottom of the page, or select the *Images* tab next to *Settings*.
-4. In the *Images* tab, add an image to the category:
+1. On the **Category** page, in the top right corner, click **Create category** to open the **Create category** page.
+2. On the **Settings** tab, enter and select the attributes for your category.
+3. Click **Next** at the bottom of the page, or select the **Images** tab next to **Settings**.
+4. In the **Images** tab, add an image to the category:
     1. Click **Add image set**.
     2. Enter the attributes of your image set.
 
@@ -63,7 +63,7 @@ This section holds reference information related to the category creation proces
 
 #### Category page
 
-On the *Category* page, you see the following:
+On the **Category** page, you see the following:
 * Category key, category name, and the parent category to which a specific one is assigned.
 * Identifiers for active, visible, and searchable.
 * Template type.
@@ -100,7 +100,7 @@ If the CMS-related template is selected, the following additional attributes app
 
 | ATTRIBUTE | DESCRIPTION |
 |-|-|
-| Image Set Name | Defines the name of the image set, e.g., Default. |
+| Image Set Name | Defines the name of the image set—for example, Default. |
 | Small Image URL | URL of the small version of the image. |
 | Large Image URL | URL of the large version of the image. |
 | Sort Order | Numeric identifier of the image in the order of other images of an image set. This defines the order in which the images are shown in the back end and front end. The order starts from "0". |
@@ -129,10 +129,10 @@ The following templates are used to set up your category look:
 
 </details>
 
-The category is in the catalog, and two CMS blocks are now displayed on the page: *Tackle Your To-Do's and Build a Space That Spurs Creativity* in the example).
+The category is in the catalog, and two CMS blocks are now displayed on the page: **Tackle Your To-Do's and Build a Space That Spurs Creativity** in the example).
 
 **Sub Category grid**
-Select the *Sub Category grid* template to create a multilevel category structure. Here you can assign an image to each subcategory.
+Select the **Sub Category grid** template to create a multilevel category structure. Here you can assign an image to each subcategory.
 
 <details><summary markdown='span'>The Sub Category grid template on the Storefront</summary>
 
@@ -152,7 +152,7 @@ To use a template with slots, make sure the [Templates and slots](/docs/scos/dev
 Select such a template to have slots for this category page. Slots can embed content from CMS Blocks and technology partner integrations. See [Templates and slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html) for more details.
 
 **Tips and tricks**
-<br>When you already know the exact parent category under which the category that you create is going to be nested, you can click **Add category to this node** for a specific parent category. This redirects you to the *Create category* page where you can perform the steps described above. The only difference is that the *Parent* field is auto-populated with the needed value.
+<br>When you already know the exact parent category under which the category that you create is going to be nested, you can click **Add category to this node** for a specific parent category. This redirects you to the **Create category** page where you can perform the steps described above. The only difference is that the **Parent** field is auto-populated with the needed value.
 
 The same products can be assigned to multiple categories.
 

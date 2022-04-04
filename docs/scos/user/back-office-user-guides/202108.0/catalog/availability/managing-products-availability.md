@@ -17,11 +17,11 @@ related:
     link: docs/scos/user/features/page.version/product-feature-overview/timed-product-availability-overview.html
 ---
 
-This topic describes the actions you can do in the **Availability** section of  the Back Office.
+This topic describes the actions you can do in the **Availability** section of the Back Office.
 
 ## Prerequisites
 
-To start working with availability, navigate to **Catalog > Availability**.
+To start working with availability, navigate to **Catalog&nbsp;<span aria-label="and then">></span> Availability**.
 
 Here, inventory managers or other team members responsible for stock updates can check and edit the products' stock.
 
@@ -32,8 +32,7 @@ Each section contains reference information. Make sure to review it before you s
 ## Checking availability
 
 To check the product availability:
-1. In the _Actions_ column of the *Products availability list* table, click **View** next to the corresponding product item.
-This will take you to the *Product Availability* page.
+1. In the **Actions** column of the **Products availability list** table, next to the corresponding product item, click **View**. The **Product Availability** page opens.
 2. In case of a multistore setup, in the **Store** drop-down, select the store locale to check the product's availability for each specific locale.
 
 ### Reference information: Checking availability
@@ -42,47 +41,47 @@ This section describes attributes you see when checking availability.
 
 #### Overview of Products Availability page
 
-On the *Overview of Products Availability* page, you see the following:
-* The SKUs and names of the abstract products and the SKU values is a hyperlink to this product Edit page.
-* The number of products in current stock and the number of reserved products (meaning ordered ones)
-*  The identifier for the bundled product and for those that are **never out of stock** (Yes/No values)
+On the **Overview of Products Availability** page, you see the following:
+* The SKUs and names of the abstract products and the SKU values is a hyperlink to this product's **Edit** page.
+* The number of products in current stock and the number of reserved products (meaning ordered ones).
+*  The identifier for the bundled product and for those that are **never out of stock** (Yes/No values).
 
 #### Product Availability page
 
-On the *Product Availability* page, you see 2 sections:
+On the **Product Availability** page, you see two sections:
 * Abstract product availability
 * Variant availability
 
-The *Abstract product availability* section is not modifiable. It only provides overview information. As the abstract product itself does not have any stock, the Current Stock value will display the summarized value of all its variants.
+The **Abstract product availability** section is not modifiable. It only provides overview information. As the abstract product itself does not have any stock, the Current Stock value displays the summarized value of all its variants.
 
-Unlike *Abstract product availability*, *Variant availability* provides you with an option to edit stock. You invoke the edit stock flow from the *Actions* column. It also has the identifier of the product bundle.
+Unlike *Abstract product availability*, *Variant availability* provides you with an option to edit stock. You invoke the edit stock flow from the **Actions** column. It also has the identifier of the product bundle.
 
-Both sections contain the following info:
-* The SKU and name of the abstract product/product variant
-* The availability value, the number of products in current stock, and the number of reserved products (meaning ordered ones)
-* The identifier for the **never out of stock** (Yes/No values)
+Both sections contain the following information:
+* The SKU and name of the abstract product/product variant.
+* The availability value, the number of products in the current stock, and the number of reserved products (meaning ordered ones).
+* The identifier for the **never out of stock** (Yes/No values).
 
 ## Editing stock
 
 To edit the product stock:
 
-1. On the *Product Availability* page of the product whose variant availability you would like to change, click **Edit Stock** for the corresponding variant.
-2. On the *Edit Stock* page, specify the quantity for the product (for the needed warehouse, if several are set up).
+1. On the **Product Availability** page of the product whose variant availability you want to change, for the corresponding variant, click **Edit Stock**.
+2. On the **Edit Stock** page, specify the quantity for the product (for the needed warehouse, if several are set up).
 3. Select **Never out of stock** if you want the product to be always available.
 4. Click **Save**.
 
 {% info_block infoBox %}
 
-Product stock the DECIMAL(20,10) value, which means that your product stock can be 20 digits long and have a maximum of 10 digits after the decimal separator. For example, *1234567890.0987654321*.
+Product stock the DECIMAL(20,10) value, which means that your product stock can be 20 digits long and have a maximum of 10 digits after the decimal separator—for example, 1234567890.0987654321.
 
 {% endinfo_block %}
 
 To edit the bundled product stock:
 
-1. Navigate to the *Product Availability* page of a bundle whose bundled product variant availability you would like to change.
-2. Click **View bundled products** in the *Variant availability* table.
-3. In the *Bundled products* table that opens, click **Edit Stock** for the corresponding variant.
-4. On the *Edit Stock* page, specify **Quantity** for the product (for the needed warehouse if several are set up).
+1. Navigate to the **Product Availability** page of a bundle whose bundled product variant availability you want to change.
+2. In the **Variant availability** table, click **View bundled products**.
+3. In the **Bundled products** table that opens,  for the corresponding variant, click **Edit Stock**.
+4. On the **Edit Stock** page, specify **Quantity** for the product (for the needed warehouse if several are set up).
 5. Select **Never out of stock** if you want the product to be always available.
 6. Click **Save**.
 
@@ -93,18 +92,19 @@ Please note that you are updating the product variant availability, not the bund
 {% endinfo_block %}
 
 **Tips and tricks**
-<br>You can edit stock for variants from the *Edit Concrete Product* page:
-1. Navigate to the *Edit Product Abstract* using one of the following options:
-    1.  **Products** > **Products** > **Edit**.
-    2.  Click a hyperlinked SKU value in the **Availability** > **Product availability list** table.
-2. In the *Variants* tab, click **Edit** next to the variant for which you would like to update the stock value.
-3. Go to the *Price&Stock* tab.
-4. Enter **Quantity** and select **Never out of stock** if you want the product to be always available.
+<br>You can edit stock for variants from the **Edit Concrete Product** page:
+1. Navigate to **Edit Product Abstract** using one of the following options:
+    1. **Products&nbsp;<span aria-label="and then">></span> Products&nbsp;<span aria-label="and then">></span> Edit**.
+    2. In the **Availability&nbsp;<span aria-label="and then">></span> Product availability list** table, click a hyperlinked SKU value.
+2. In the **Variants** tab, click **Edit** next to the variant for which you want to update the stock value.
+3. Go to the **Price&Stock** tab.
+4. Enter **Quantity**.
+5. If you want the product to be always available, select **Never out of stock**.
 5. Click **Save**.
 
 {% info_block infoBox "Info" %}
 
-Once on the *Edit Concrete Product* page, you can update any of the product details you need.
+Once on the **Edit Concrete Product** page, you can update any of the product details you need.
 
 {% endinfo_block %}
 
@@ -129,4 +129,4 @@ This means that a customer can either buy those separately from their product de
 Each product has its own stock and availability value if to buy separately.
 But in case of a bundle, the availability is calculated based on each item's availability, taking into account their **quantity in the bundle**.
 
-Even if each item is available on its own, but the availability does not meet the minimum quantity for a bundle (e.g., there are only two glass screen protectors, but the bundle goes with three), then all bundle is **unavailable**.
+Even if each item is available on its own, but the availability does not meet the minimum quantity for a bundle (for example, there are only two glass screen protectors, but the bundle goes with three), then all bundle is **unavailable**.

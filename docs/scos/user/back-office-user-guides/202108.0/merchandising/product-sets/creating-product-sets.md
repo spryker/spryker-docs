@@ -52,7 +52,7 @@ Any product set requires a minimum of two products.
 7. Select the **Next** to proceed to the *Images* tab, or just click on it.
 8. In the *Images* tab, click **Add image set**.
 9. Enter the name of your image set and add the URLs to the images.
-You can select as many images as you would like in your image set by selecting **Add Image**.
+You can select as many images as you want in your image set by selecting **Add Image**.
 Following the same procedure, choose images particular to your different online stores.
 
 {% info_block infoBox "Info" %}

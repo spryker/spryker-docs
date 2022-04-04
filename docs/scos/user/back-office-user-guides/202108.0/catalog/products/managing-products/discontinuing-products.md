@@ -29,26 +29,26 @@ You always discontinue a product variant, not an abstract product itself.
 
 ## Prerequisites
 
-To discontinue products for a concrete product, navigate to **Catalog** > **Products**.
+To discontinue products for a concrete product, navigate to **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Discontinuing products
 
 To discontinue a product:
-1. On the *Edit Concrete Product* page, switch to the *Discontinue* tab.
+1. On the **Edit Concrete Product** page, switch to the **Discontinue** tab.
 2. Click **Discontinue**.
     You see additional attributes and information.
-3. You can add a note about the reason for the product being discontinued or any other useful information. Just enter the text in the *Add Note* section for each locale.
+3. You can add a note about the reason for the product being discontinued or any other useful information. Just enter the text in the **Add Note** section for each locale.
 4. Click **Save**.
-The date of the deactivation is available for you on the *Discontinue* tab.
+The date of the deactivation is available for you on the **Discontinue** tab.
 Days left (active_until) value is set to 180 days by default. You can change it on the project level.
 <br>After the product is marked as discontinued, a corresponding label appears on the product detail page and search results in the shop application.
 The product with the Discontinued label cannot be added to cart.
 
 {% info_block warningBox "Note" %}
 
-If the product added to the shopping list or wishlist is marked as discontinued, the *Discontinued* status appears in the list, and the online store customer is not able to proceed to the checkout.
+If the product added to the shopping list or wishlist is marked as discontinued, the **Discontinued** status appears in the list, and the online store customer is not able to proceed to the checkout.
 
 {% endinfo_block %}
 
@@ -61,4 +61,4 @@ You will discontinue this product variant and set up other products to be displa
 
 ## What's next?
 
-Review the other articles in the _Products_ section to know more about product management.
+Review the other articles in the **Products** section to know more about product management.

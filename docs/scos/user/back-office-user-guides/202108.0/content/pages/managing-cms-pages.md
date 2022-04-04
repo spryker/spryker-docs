@@ -31,7 +31,7 @@ Each section contains reference information. Make sure to review it before you s
 
 ## Previewing CMS pages
 
-If you would like to see how your page will look before you publish it, you can preview it in your browser.
+If you want to see how your page will look before you publish it, you can preview it in your browser.
 
 {% info_block warningBox "Note" %}
 
@@ -42,7 +42,7 @@ To preview a draft of your page, link your Zed account to an Yves account.
 To link a Zed customer to an Yves customer:
 1. Navigate to **Users Control** > **User**.
 2. On the *Users list* page, click **Assign Customers to User: Zed account e-mail** in the _Actions_ column. This will take you to the *Assign Customers* page.
-3. Select a user you would like to assign to your Zed account.
+3. Select a user you want to assign to your Zed account.
 
 {% info_block warningBox "Note" %}
 

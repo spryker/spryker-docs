@@ -26,7 +26,7 @@ This topic describes how to manage categories:
 
 ## Prerequisites
 
-To start managing categories, go to **Catalog** > **Category**.
+To start managing categories, go to **Catalog&nbsp;<span aria-label="and then">></span> Category**.
 
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
@@ -38,13 +38,13 @@ To define the order of displaying products, set the numbers under which each pro
 For example, you have ten products assigned to your category. For five of them, there is a seasonal discount applied. So you need those to be at the top of the list.
 
 To change the order of products:
-1. In the *Categories* table, for a specific category, select **Assign Products** from the *Actions* drop-down list. You are taken to the Assign products to category page.
-2. Scroll down to the *Products in this category* tab.
-3. In the *Order* column, set numbers 1-5 for specific products that define the order of products in the category. For example, if you have 5 products, set the numbers from 1 to 5.
+1. In the **Categories** table, for a specific category, select **Assign Products** from the **Actions** drop-down list. You are taken to the Assign products to category page.
+2. Scroll down to the **Products in this category** tab.
+3. In the **Order** column, set numbers 1-5 for specific products that define the order of products in the category. For example, if you have 5 products, set the numbers from 1 to 5.
 
 {% info_block infoBox %}
 
-In case you have several products with the identical order number value, the ordering will be performed based on the product name attribute. The product with 0 in the Order column will be displayed at the bottom
+In case you have several products with the identical order number value, the ordering is performed based on the product name attribute. The product with `0` in the **Order** column is displayed at the bottom.
 
 {% endinfo_block %}
 
@@ -52,9 +52,9 @@ In case you have several products with the identical order number value, the ord
 
 ### Reference information: Ordering products in categories
 
-The following table describes the attributes from the *Products in this category* tab.
+The following table describes the attributes from the **Products in this category** tab.
 
-For the description of all other attributes on the Assign products to category page, see [Assigning products to categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html).
+For the description of all other attributes on the **Assign products to category** page, see [Assigning products to categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html).
 
 | TAB | ATTRIBUTE | DESCRIPTION |
 |-|-|-|
@@ -69,14 +69,14 @@ For the description of all other attributes on the Assign products to category p
 
 To edit a category:
 
-1. In the *Categories* table, select **Edit** from the *Actions* drop-down list.
-You are taken to the *Edit category* page.
+1. In the **Categories** table, select **Edit** from the **Actions** drop-down list.
+You are taken to the **Edit category** page.
 2. Update the needed values.
 3. Click **Save**.
 
 ### Reference information: Editing a category
 
-The following tables describe the attributes from the *Edit category* page.
+The following tables describe the attributes from the **Edit category** page.
 
 **Settings tab**
 
@@ -108,7 +108,7 @@ If the CMS-related template is selected, the following additional attributes app
 
 | ATTRIBUTE | DESCRIPTION |
 |-|-|
-| Image Set Name | Defines the name of the image set, e.g., Default. |
+| Image Set Name | Defines the name of the image set—for example, Default. |
 | Small Image URL | URL of the small version of the image. |
 | Large Image URL | URL of the large version of the image. |
 | Sort Order | Numeric identifier of the image in the order of other images of an image set. This defines the order in which the images are shown in the back end and front end. The order starts from "0". |
@@ -119,7 +119,7 @@ When you create or update categories, you select a template according to which y
 The following templates are used to set up your category look:
 
 **Catalog (default)**
-Select this template to display all product pages linked to the selected category. The product pages include the general product description, a price, an image, and a clickable **View** button that redirects you to the product details page.
+<br>Select this template to display all product pages linked to the selected category. The product pages include the general product description, a price, an image, and a clickable **View** button that redirects you to the product details page.
 
 <details><summary markdown='span'>The Catalog(default) template on the Storefront</summary>
 
@@ -128,7 +128,7 @@ Select this template to display all product pages linked to the selected categor
 </details>
 
 **Catalog+Slots**
-Select this template to show all product pages assigned to the selected category and a CMS Block. Depending on your design requirements, you need to set a specific CMS block and specify where it should be displayed: top, middle, or bottom.
+<br>Select this template to show all product pages assigned to the selected category and a CMS Block. Depending on your design requirements, you need to set a specific CMS block and specify where it should be displayed: top, middle, or bottom.
 
 <details><summary markdown='span'>The Catalog+CMS Block template on the Storefront</summary>
 
@@ -139,7 +139,7 @@ Select this template to show all product pages assigned to the selected category
 The category is in the catalog, and two CMS blocks are now displayed on the page: *Tackle Your To-Do's and Build a Space That Spurs Creativity* in the example).
 
 **Sub Category grid**
-Select the *Sub Category grid* template to create a multilevel category structure. Here you can assign an image to each subcategory.
+Select the **Sub Category grid** template to create a multilevel category structure. Here you can assign an image to each subcategory.
 
 <details><summary markdown='span'>The Sub Category grid on the Storefront</summary>
 
@@ -161,9 +161,9 @@ Select such a template to have slots for this category page. Slots can embed con
 
 To delete a category:
 
-1. In the *Actions* drop-down, select **Delete** next to a specific category.
-You are taken to the *Delete category [Category name]* page.
-On *Delete category [Category name]*, you see detailed information about everything that will be de-assigned, moved, or deleted along with that category.
+1. In the **Actions** drop-down, select **Delete** next to a specific category.
+You are taken to the **Delete category _[Category name]_** page.
+On **Delete category _[Category name]_**, you see detailed information about everything that will be de-assigned, moved, or deleted along with that category.
 2. Select the checkbox next to **Yes, I am sure** to confirm your awareness and click **Delete**.
 
    {% info_block infoBox %}
@@ -180,6 +180,6 @@ Child categories of the deleted category are assigned to its parent categories.
 
 **Tips and tricks**
 <br>If your category contains any nested categories, you can re-sort them by a simple drag-and-drop action:
-1. To get to *Re-sort View*, for a specific category on the table view page, click *Re-sort child categories*.
+1. To get to **Re-sort View**, for a specific category on the table view page, click **Re-sort child categories**.
 2. Once in **Re-sort View**, you can drag and drop categories.
 3. Once you see the correct order, click **Save**.

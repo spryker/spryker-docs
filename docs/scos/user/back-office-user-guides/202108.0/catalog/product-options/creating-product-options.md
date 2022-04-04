@@ -19,11 +19,11 @@ This article describes how to create a product option.
 
 ## Prerequisites
 
-To start working with the product options, go to **Products** > **Product Options**.
+To start working with the product options, go to **Products&nbsp;<span aria-label="and then">></span> Product Options**.
 
-You should have an appropriate Tax Set created in the *Taxes* section in order to apply it to the product option group.
+You should have an appropriate Tax Set created in the **Taxes** section in order to apply it to the product option group.
 
-Let's say you want to add additional options to your product, like a warranty or a gift box. Those are exactly the things that are created in the *Product Options* section. Such options will have their own prices, and the user will be able to select the most suitable one.
+Let's say you want to add additional options to your product, like a warranty or a gift box. Those are exactly the things that are created in the **Product Options** section. Such options have their own prices, and the user can select the most suitable one.
 
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
@@ -31,12 +31,12 @@ Each section contains reference information. Make sure to review it before you s
 
 To create a product option:
 
-1. On the *Product option list* page, in the top right corner, click **Create product option**.
-2. On the *Create new Product Options* page that opens, you see *General Information* and *Products* tabs.
-In the *General Information* tab:
-    1. Add the group name translation key. The format of the group name translation key should be as follows: *product.option.group.name.[your key]*. For example, *product.option.group.name.test*.
+1. On the **Product option list** page, in the top right corner, click **Create product option**.
+2. On the **Create new Product Options** page that opens, you see **General Information** and **Products** tabs.
+In the **General Information** tab:
+    1. Add the group name translation key. The format of the group name translation key should be as follows: **product.option.group.name.[your key]**—for example, *product.option.group.name.test*.
     2. Define a tax set assigned to your product option group by selecting the appropriate value from the drop-down list.
-    3. In the *Option Values* section, enter an option name translation key value. The format of the option name translation key should be as follows: *product.option.[your key]* (for example, *product.option.newtest*).
+    3. In the **Option Values** section, enter an option name translation key value. The format of the option name translation key should be as follows: **product.option.[your key]**—for example, *product.option.newtest*.
 
     {% info_block infoBox "Note" %}
 
@@ -45,13 +45,13 @@ In the *General Information* tab:
     {% endinfo_block %}
 
     4. Add a unique SKU for a product option value or proceed with the auto-generated one.
-    5. In the *Prices* section, specify gross and net prices for a product option value. If you want to add several product options values, click **Add option** below the *Prices* section, and repeat the same step.
+    5. In the **Prices** section, specify gross and net prices for a product option value. If you want to add several product options values, click **Add option** below the **Prices** section, and repeat the same step.
 Prices are integer values and stored in their normalized form. For example, 4EUR is stored as 400 in the database.
 When a price is not defined, the product option value is considered *inactive* for that specific currency and price mode. When a price is set to 0, it is considered *free of charge*.
-    6. In the *Translation* section, add a group name and option name that will be displayed in the shop application per each locale. You can copy the Group and Option names from one locale to another using the corresponding **Copy** icon.
-3. Click **Next** to proceed to the *Products* tab, or just click on it.
-4. In the *Products* tab, select product(s) to be assigned to the product.
-    Alternatively, you can click **Select all on the page**. In this case, all the products displayed on the page will be selected and added to the product option. The products you select will appear in the *Products to be assigned* tab.
+    6. In the **Translation** section, add a group name and option name that is displayed in the shop application per each locale. You can copy the Group and Option names from one locale to another using the corresponding **Copy** icon.
+3. Click **Next** to proceed to the **Products** tab, or just click on it.
+4. In the **Products** tab, select product) to be assigned to the product.
+    Alternatively, you can click **Select all on the page**. In this case, all the products displayed on the page will be selected and added to the product option. The products you select will appear in the **Products to be assigned** tab.
 5. Click **Save**.
 
 ### Reference information: Creating a product option
@@ -61,7 +61,7 @@ The following table describes the attributes you enter and select while creating
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | Group name translation key | Glossary key for a product option group. The format of the group name translation key should be as follows: *product.option.group.name.[your key]*. For example, product.option.group.name.test.<br><br>This field is not available for modification on the Edit Product Option page. |
-| Tax Set | Conditions under which a specific product option group is going to be taxed. A drop-down list with the values from **Taxes** > **Tax Sets**. |
+| Tax Set | Conditions under which a specific product option group is going to be taxed. A drop-down list with the values from **Taxes&nbsp;<span aria-label="and then">></span> Tax Sets**. |
 | Option name translation key | Glossary key for a product option value. The format of the option name translation key should be as follows: *product.option.[your key]*. For example, product.option.newtest.<br><br>This field is not available for modification on the Edit Product Option page. |
 | SKU | Unique SKU for a product option value. This value can be autogenerated, and you can use the autogenerated one.<br>This field is not available for modification on the Edit Product Option page. |
 | Gross price and Net price | Price value for gross and net mode.|
@@ -74,7 +74,7 @@ The following table describes the attributes you enter and select while creating
 You can switch between **All products** and **Products to be assigned** view by selecting the respective options on the top of the products table.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Options/Creating+a+product+option/product-to-be-assigned-tab.png)
 
-If you know the name or the SKU of the product to which an option should be assigned, you can search for it in the *Search* field.
+If you know the name or the SKU of the product to which an option should be assigned, you can search for it in the **Search** field.
 
 Each product abstract can have multiple product option groups assigned.
 
@@ -83,9 +83,9 @@ Your product option is created; however, it is not activated. Thus, it will not 
 
 To activate a product option:
 
-On the *Edit product option* page, click **Activate** in the top right corner.
+On the **Edit product option** page, click **Activate** in the top right corner.
 **OR**
-On the *Product option list* page, click **Activate** for a specific product option in the _Actions_ column.
+On the **Product option list** page, click **Activate** for a specific product option in the **Actions** column.
 
 ### Reference information: Activating a product option
 
@@ -93,7 +93,7 @@ This section describes attributes you see when activating a product option and p
 
 #### Product Option List page
 
-On the *Product option list* page, you see the following information:
+On the **Product option list** page, you see the following information:
 * The autogenerated option group ID.
 * Group name and the SKU for it.
 * The name of the product option.
@@ -101,9 +101,10 @@ On the *Product option list* page, you see the following information:
 * Status (either Active or Inactive).
 * Actions that you can perform for each specific option (Edit, View, Activate/Deactivate).
 
-By default, the table is sorted by *Option group ID*. You can sort the table by the *Group name* and *Status* columns.
+By default, the table is sorted by **Option group ID**. You can sort the table by the **Group name** and **Status*** columns.
 
 #### Product option examples on the Storefront
+
 On the following example, the Warranty and Insurance are the product option groups:
 
 ![Product option example](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Options/Product+Options%3A+Reference+Information/product-option-example.png)

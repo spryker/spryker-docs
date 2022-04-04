@@ -17,7 +17,7 @@ related:
 
 ## Prerequisites
 
-To view product barcodes, go to **Catalog > Product Barcodes**.
+To view product barcodes, go to **Catalog&nbsp;<span aria-label="and then">></span> Product Barcodes**.
 
 ## Viewing product barcodes
 

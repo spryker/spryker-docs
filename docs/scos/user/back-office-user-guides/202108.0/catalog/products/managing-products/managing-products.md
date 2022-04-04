@@ -19,7 +19,7 @@ related:
 
 This article describes how to manage abstract and concrete products.
 
-To start managing products, go to **Catalog** > **Products**.
+To start managing products, go to **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 
 ## Activating products
 
@@ -27,8 +27,8 @@ The abstract product is inactive until at least one product variant is activated
 
 To activate a product:
 1. Navigate to the product variant of the product that you want to activate:
-    **Edit** > **Variants** > **Edit product variant**
-2.  In the top right corner of the *Edit Concrete Product* page, click **Activate**.
+    **Edit&nbsp;<span aria-label="and then">></span> Variants&nbsp;<span aria-label="and then">></span> Edit product variant**
+2.  In the top right corner of the **Edit Concrete Product** page, click **Activate**.
 The product turns visible to the customers of your online store.
 
 {% info_block infoBox "Note" %}
@@ -43,11 +43,11 @@ Each variant needs to be activated in order to be visible to your customers.
 ## Viewing products
 
 If you need to review the product details without actually editing them, do the following:
-1. In the _Actions_ column of the abstract product you want to view, click **View**.
-2. On the *View Product* page, you can navigate to the view product variant, initiate the editing flow for it, or manage its attributes.
+1. In the **Actions** column of the abstract product you want to view, click **View**.
+2. On the **View Product** page, you can navigate to the view product variant, initiate the editing flow for it, or manage its attributes.
 
 **Tips and tricks**
-<br>If you notice something you would like to change for your product, in the top right corner of the page. click **Edit**.
+<br>If you notice something you want to change for your product, in the top right corner of the page. click **Edit**.
 
 ## Managing product attributes
 
@@ -55,19 +55,19 @@ When you see the **Manage Attributes** option, keep in mind that you manage the 
 
 {% info_block infoBox "Info" %}
 
-The attributes that you add are taken from the **Products** > **Attributes** section of the Back Office. So the attribute you want to define should exist in that section.
+The attributes that you add are taken from the **Products&nbsp;<span aria-label="and then">></span> Attributes** section of the Back Office. So the attribute you want to define should exist in that section.
 
 {% endinfo_block %}
 
 To manage the product attributes:
-1.  In the _Actions_ column or in the top right corner of the *Edit* page, select the **Manage Attributes** option for the concrete or abstract product.
-2. On the *Manage Attributes for Product* page, type the first three letters of the attribute key.
+1.  In the **Actions** column or in the top right corner of the **Edit** page, select the **Manage Attributes** option for the concrete or abstract product.
+2. On the **Manage Attributes for Product** page, type the first three letters of the attribute key.
 3. Select the suggested value and click **Add**.
-4. In the _Attributes_ section, define the **Default** value for your attributes and specify the value for the **locales**.
+4. In the **Attributes** section, define the **Default** value for your attributes and specify the value for the **locales**.
     Repeat the procedure if needed.
 5. Click **Save**.
 
-See the _References_ section to see the examples of how the attributes look like.
+See the **References** section to see the examples of how the attributes look like.
 
 **What's next?**
-<br>Review the other articles in the _Products_ section to know more about product management. Also, review the _References_ section to learn more about the attributes you see, select, and enter on the product pages.
+<br>Review the other articles in the **Products** section to know more about product management. Also, review the **References** section to learn more about the attributes you see, select, and enter on the product pages.

@@ -16,7 +16,7 @@ This document describes how to add scheduled prices to abstract products.
 
 ## Prerequisites
 
-To start working with abstract products, go to  **Catalog > Products**.
+To start working with abstract products, go to  **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 
@@ -24,7 +24,7 @@ Review the reference information before you start, or look up the necessary info
 
 To add a scheduled price to an abstract product:
 1. Next to the product you want to add a scheduled price for, select **Edit**.
-2. On the *Edit Product* page, switch to the *Scheduled Prices* tab.
+2. On the **Edit Product** page, switch to the **Scheduled Prices** tab.
 3. Click **+ Add scheduled price**.
 4. Select a **Store**.
 5. Select a **Currency**.
@@ -34,7 +34,7 @@ To add a scheduled price to an abstract product:
 9. Select a **Start from (included)** date and time.
 10. Select a **Finish at (included)** date and time.
 11. Click **Save**.
-    This opens the *Edit Product* page with the success message displayed. The scheduled price you've added is displayed in the table.
+    This opens the **Edit Product** page with the success message displayed. The scheduled price you've added is displayed in the table.
 
 
 ### Reference information: Adding a scheduled price to an abstract product

@@ -17,27 +17,27 @@ related:
 
 This article describes how to add product alternatives for a product.
 
-The product alternative is displayed on the *Product Details* page. This allows your customer to select another item with similar characteristics. It can also help your customers make a purchase if the product they initially review is out of stock.
+The product alternative is displayed on the **Product Details** page. This lets your customer select another item with similar characteristics. It can also help your customers make a purchase if the product they initially review is out of stock.
 For example, if smartphone 1 is out of stock, or discontinued, you can set smartphone 2 to be its alternative.
 
 ## Prerequisites
 
-To start working with product alternatives, go to **Catalog > Products**.
+To start working with product alternatives, go to **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 
 ## Adding product alternatives for a product
 
 To added product alternatives for a product, do the following:
-1. On the *Edit Concrete Product* page, switch to the *Product Alternatives* tab.
-2. To add product alternatives, enter _Product Name_ or its _SKU_ in the **Add Product Alternative by Name** or **SKU** field.
+1. On the **Edit Concrete Product** page, switch to the **Product Alternatives** tab.
+2. To add product alternatives, enter **Product Name** or its **SKU** in the **Add Product Alternative by Name** or **SKU** field.
 You can add multiple alternative products.
 ![Adding product alternatives](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Managing+products/Adding+Product+Alternatives/add-product-alternative.png)
 
 4. Click **Save**.
 The page is refreshed to display the table with the alternative products you have added.
-To remove any alternative product, in the _Actions_ column, click **Remove**.
+To remove any alternative product, in the **Actions** column, click **Remove**.
 
 **Tips and tricks**
-<br>The product alternatives is displayed on the concrete product page only when it is out of stock or discontinued. In any other case, no alternatives are displayed. However, for each product added as an alternative one, a *Replacement for* section is displayed:
+<br>The product alternatives is displayed on the concrete product page only when it is out of stock or discontinued. In any other case, no alternatives are displayed. However, for each product added as an alternative one, a **Replacement for** section is displayed:
 ![Replacement for](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Managing+products/Adding+Product+Alternatives/replacement-for.png)
 
 In addition to the alternatives section, a dynamic label is assigned to the product for which the alternatives are set up.
@@ -45,4 +45,4 @@ In addition to the alternatives section, a dynamic label is assigned to the prod
 
 ## What's next?
 
-See the articles in the _References_ section for more examples of the alternative products.
+For more examples of the alternative products, see the articles in the **References** section.

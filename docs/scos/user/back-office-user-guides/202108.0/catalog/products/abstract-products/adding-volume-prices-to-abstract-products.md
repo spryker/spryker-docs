@@ -15,7 +15,7 @@ This document describes how to add volume prices to abstract products.
 
 ## Prerequisites
 
-To start working with abstract products, go to  **Catalog > Products**.
+To start working with abstract products, go to  **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 
 Define default product prices for the stores you want to define volume prices for. To learn how to do that, see [Editing prices of an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/editing-abstract-products.html#editing-prices-of-an-abstract-product).
 
@@ -25,15 +25,15 @@ Review the [reference information](/docs/scos/user/back-office-user-guides/{{pag
 
 To add volume prices to abstract products:
 1. Next to the product you want to add volume prices for, select **Edit**.
-2. On the *Edit Product* page, switch to the *Price & Tax* tab.
+2. On the **Edit Product** page, switch to the **Price & Tax** tab.
 3. Next to the store you want to add volume prices for, select **> Add Product Volume Price**.
-4. On the *Add volume prices* page, enter a **Quantity**.
+4. On the **Add volume prices** page, enter a **Quantity**.
 5. Enter a **Gross price**.
 6. Optional: Enter a **Net price**.
 7. Optional: To add more volume prices than the number of the rows displayed on the page, select **Save and add more rows**.
 8. Repeat steps 4 to 7 until you add all the desired volume prices.
 9. Select **Save and exit**.
-    This opens the *Edit Product* page with the success message displayed.
+    This opens the **Edit Product** page with the success message displayed.
 
 ## Reference information: Adding volume prices to abstract products
 

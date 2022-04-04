@@ -24,7 +24,7 @@ The described procedure is also valid for an existing product variant.
 
 ## Prerequisites
 
-To start working with product variants, go to **Catalog** > **Products**.
+To start working with product variants, go to **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 
 The procedure you are going to perform is very similar to the procedure described in the Creating a product variant article. For details, see  [Creating a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/concrete-products/creating-product-variants.html).
 
@@ -34,12 +34,12 @@ Review the reference information before you start, or look up the necessary info
 
 To edit a product variant:
 
-1. Navigate to the *Edit Concrete Product* page using one of the following paths:
-   * **Products** > **View** in the _Actions_ column for a specific abstract product **>** scroll down to the **Variants tab** > **Edit** in the _Actions_ column for a specific product variant.
-    * **Products > Edit** in the _Actions_ column for a specific abstract product **> Variants tab > Edit** in the _Actions_ column for a specific product variant.
-2. On the *Edit Concrete Product* page, update the following tabs:
-    1. *General* tab: populate name and description, valid from and to dates, make the product searchable by selecting the Searchable checkbox for the appropriate locale (or all locales).
-    2. *Price & Stock* tab: define the default/original, gross/net prices, and stock.
+1. Navigate to the **Edit Concrete Product** page using one of the following paths:
+   * **Products&nbsp;<span aria-label="and then">></span> View** in the **Actions** column for a specific abstract product **>** scroll down to the **Variants tab&nbsp;<span aria-label="and then">></span> Edit** in the **Actions** column for a specific product variant.
+    * **Products&nbsp;<span aria-label="and then">></span> Edit** in the **Actions** column for a specific abstract product select the **Variants** tab&nbsp;<span aria-label="and then">></span> Edit** in the **Actions** column for a specific product variant.
+2. On the **Edit Concrete Product** page, update the following tabs:
+    1. **General** tab: fill in name and description, valid from and to dates, make the product searchable by selecting the Searchable checkbox for the appropriate locale (or all locales).
+    2. **Price & Stock** tab: define the default/original, gross/net prices, and stock.
 
     {% info_block warningBox "Note" %}
 
@@ -47,11 +47,11 @@ To edit a product variant:
 
     {% endinfo_block %}
 
-    3. *Image* tab: define the image(s), image set(s), and the image order for you product variant.
-    4. *Assign bundled products* tab: this tab is used in case you need to create a product bundle. See [Creating Product Bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) for details.
-    5. *Discontinue* tab: This tab is used in case you want to discontinue the product. See [Discontinuing a Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/discontinuing-products.html) to know more.
-    6. *Product Alternatives* tab: This tab is used to define the product alternatives for the product. See [Adding Product Alternatives](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/adding-product-alternatives.html) to know more.
-    7. *Scheduled Prices* tab: here you can only review scheduled prices imported via a CSV file if any. The actual import is done in **Prices** > **Scheduled Prices**.
+    3. **Image** tab: define the image(s), image set(s), and the image order for you product variant.
+    4. **Assign bundled products** tab: this tab is used in case you need to create a product bundle. For details, see [Creating Product Bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html).
+    5. **Discontinue** tab: This tab is used in case you want to discontinue the product. To know more, see [Discontinuing a Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/discontinuing-products.html).
+    6. **Product Alternatives** tab: This tab is used to define the product alternatives for the product. To know more, [Adding Product Alternatives](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/adding-product-alternatives.html).
+    7. **Scheduled Prices** tab: here you can only review scheduled prices imported via a CSV file if any. The actual import is done in **Prices&nbsp;<span aria-label="and then">></span> Scheduled Prices**.
 3. Click **Save**.
 
 ### Reference information: Editing a product variant
@@ -64,8 +64,8 @@ This section describes the attributes you enter and select when  creating a prod
 | --- | --- | --- | --- |
 |Store relation  | Defines the store for which the product can be available.<br>You can select multiple values. | **No**|**No**|
 | SKU Prefix | A number that you assign to the product will help to track unique information related to that product. | **Yes**|**Display Only**|
-| Autogenerate SKU | Allows the system to autogenerate the SKU once you click **Save**. | **Yes**|**No**|
-| Super Attributes | This section is only available if you have added more than one super attribute and defined more than one value for it.<br>E.g. if you selected the **color** to be a super attribute and defined **green**, **white**, and **black**, you will see "**color**" in this section and a drop-down with the colors you defined.<br>Only one value can be selected. |**Yes**|**No**|
+| Autogenerate SKU | Lets the system autogenerate the SKU once you click **Save**. | **Yes**|**No**|
+| Super Attributes | This section is only available if you have added more than one super attribute and defined more than one value for it.<br>for example,if you selected the **color** to be a super attribute and defined **green**, **white**, and **black**, you will see "**color**" in this section and a drop-down with the colors you defined.<br>Only one value can be selected. |**Yes**|**No**|
 | Name | The name of your product that will be displayed in the online store for your customers. | | **Yes**|**Yes** |
 | Description | The description of the product that your customer sees in the online store. | **Yes** |**Yes** |
 | Searchable | A checkbox that defines if the concrete product can be searched via the Search function in the online store. If not selected, no values will be displayed when searching for this product. | **Yes** | **Yes**|
@@ -76,10 +76,10 @@ This section describes the attributes you enter and select when  creating a prod
 | ATTRIBUTE |DESCRIPTION | CREATE CONCRETE PRODUCT | UPDATE CONCRETE PRODUCT|
 | --- | --- | --- | --- |
 |Use prices from abstract product|Once the checkbox is selected, the prices from the abstract product are taken over.|**Yes**|**No**|
-|Merchant Price Dimension|**B2B Only**<br>The drop-down list that allows you to select a merchant relation and set up a specific price for a specific merchant.<br>If the Default value is selected, the prices will be the same for everyone.<br>The values available for selection derive from **Merchants > Merchant Relations**.<br>Only one value can be selected.|**Yes**|**Yes**|
+|Merchant Price Dimension|**B2B Only**<br>The drop-down list that lets you select a merchant relation and set up a specific price for a specific merchant.<br>If the Default value is selected, the prices will be the same for everyone.<br>The values available for selection derive from **Merchants&nbsp;<span aria-label="and then">></span> Merchant Relations**.<br>Only one value can be selected.|**Yes**|**Yes**|
 | Gross price<br>Net price | The price value for gross and net mode.<br>For concrete products, the prices are inherited from their abstract product and can be updated while editing the concrete product.|**Yes**  |**Yes**  |
 |Default<br>Original|Default prices are the prices your customers will pay, whereas original prices are the "previous prices" in case you want to display promotions. If you specify only a default price, it will be displayed just like a normal product price. However, if both prices are specified, the original one will appear crossed out in the shop.|**Yes**|**Yes**|
-|Add Product Volume Price<br>Edit Product Volume Price|Once selected, the Add volume price (Edit volume price) page opens. This option allows you to define specific prices for a specific quantity of products that a customer selects. Works only in case of Default prices.<br>**Add Product Volume Price** appears only when the price for a currency was set up and saved.<br>**Edit Product Volume Price** appears only what the volume price was already set up for a currency.|**No**|**Yes**|
+|Add Product Volume Price<br>Edit Product Volume Price|Once selected, the Add volume price (Edit volume price) page opens. This option lets you define specific prices for a specific quantity of products that a customer selects. Works only in case of Default prices.<br>**Add Product Volume Price** appears only when the price for a currency was set up and saved.<br>**Edit Product Volume Price** appears only what the volume price was already set up for a currency.|**No**|**Yes**|
 |(Stock) Type|Display-only field that displays warehouses according to your store|**Yes**|**Yes**|
 |(Stock) Quantity|The number of items available in the warehouse.|**Yes**|**Yes**|
 |(Stock) Never out of stock|The check-box that once selected will make the product always available to be purchased.|**Yes**|**Yes**|

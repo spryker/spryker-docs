@@ -24,7 +24,7 @@ Review the reference information before you start, or look up the necessary info
 
 To create a new company record, do the following:
 1. On the *Overview of Companies* page, click **Create Company** in the top right corner.
-2. On the *Create Company* page, in the *Name* field, enter the name of the company you would like to create.
+2. On the *Create Company* page, in the *Name* field, enter the name of the company you want to create.
 3. Click **Save**.
     The new created company appears in the _List of the Companies_ table on the *Companies* page.
 

@@ -20,19 +20,19 @@ This topic describes how to manage scheduled prices.
 
 Here, you can:
 
-* View, edit, download and delete scheduled price imports by clicking respective buttons in the *Actions* column in the *Scheduled prices imported* section.
-* Edit and delete scheduled prices by clicking respective buttons in the Actions column in the *Scheduled prices imported* section.
+* View, edit, download and delete scheduled price imports by clicking respective buttons in the **Actions** column in the **Scheduled prices imported** section.
+* Edit and delete scheduled prices by clicking respective buttons in the Actions column in the **Scheduled prices imported** section.
 
 ## Prerequisites:
 
-To start working with scheduled prices, go to **Catalog** > **Scheduled Prices**.
+To start working with scheduled prices, go to **Catalog&nbsp;<span aria-label="and then">></span> Scheduled Prices**.
 
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Viewing scheduled price imports
 
-To view an import, on the *Scheduled Prices* page, in the *Actions* column, click **View**.
-On the *View* page, the following information is available:
+To view an import, on the **Scheduled Prices** page, in the **Actions** column, click **View**.
+On the **View** page, the following information is available:
 
 * General information
 * Scheduled prices inside this import
@@ -41,8 +41,8 @@ On the *View* page, the following information is available:
 
 To edit an import:
 
-1. On the *Scheduled Prices* page, next to the import that you want to update, click **Edit**.
-2. On the *Edit Import* page that opens, you can perform the following actions:
+1. On the **Scheduled Prices** page, next to the import that you want to update, click **Edit**.
+2. On the **Edit Import** page that opens, you can perform the following actions:
     * Change the scheduled price import name.
     * Edit a scheduled price.
     * Delete a scheduled price.
@@ -53,7 +53,7 @@ This section describes the attributes you see, enter, or select while viewing an
 
 {% info_block infoBox "Info" %}
 
-Since the *View Import* and *Edit Import* pages have almost the same attributes, you can use the attributes in this section while both viewing and editing imports.
+Since the **View Import** and **Edit Import** pages have almost the same attributes, you can use the attributes in this section while both viewing and editing imports.
 
 {% endinfo_block %}
 
@@ -84,11 +84,11 @@ Since the *View Import* and *Edit Import* pages have almost the same attributes,
 
 ## Editing scheduled prices
 
-To edit a scheduled price:
+To edit a scheduled price, do the following:
 
-1. On the *Scheduled Prices* page, click **Edit** next to the import in which the scheduled price that you want to update is located.
-2. On the *Edit Import* page, click **Edit** next to the scheduled price that you want to update.
-3. On the *Edit Scheduled Price* page, you can perform the following actions:
+1. On the **Scheduled Prices** page, click **Edit** next to the import in which the scheduled price that you want to update is located.
+2. On the **Edit Import** page, click **Edit** next to the scheduled price that you want to update.
+3. On the **Edit Scheduled Price** page, you can perform the following actions:
     * Change store relation.
     * Change currency.
     * Specify Net and Gross prices.
@@ -101,7 +101,7 @@ Performing this action triggers the scheduled prices cron job to be run for the 
 {% endinfo_block %}
 
 **Tips and tricks**
-<br>In the Edit Scheduled Price page, you can return to the *Edit Import* page. To do this, click **Back to the import**.
+<br>In the Edit Scheduled Price page, you can return to the **Edit Import** page. To do this, click **Back to the import**.
 
 ### Reference information: Editing scheduled prices
 
@@ -121,15 +121,15 @@ The following table describes the attributes you enter and select while editing 
 
 ## Downloading scheduled price imports
 
-To download an import:
-1. On the *Scheduled Prices* page, next to the scheduled price import that you want to download, click **Download**
+To download an import, do the following:
+1. On the **Scheduled Prices** page, next to the scheduled price import that you want to download, click **Download**
 2. Confirm the action in the pop-up window.
 
 ## Deleting scheduled price imports
 
-To delete an import:
-1. On the *Scheduled Prices* page,  next to the import that you want to delete, click **Delete**.
-2. On the *Delete Import* page, click **Yes**, delete those prices to confirm the action.
+To delete an import, do the following:
+1. On the **Scheduled Prices** page,  next to the import that you want to delete, click **Delete**.
+2. On the **Delete Import** page, click **Yes**, delete those prices to confirm the action.
 
 {% info_block errorBox %}
 
@@ -140,9 +140,9 @@ To delete an import:
 
 ## Deleting scheduled prices
 
-To delete a scheduled price:
-1. On the *Scheduled Prices* page, click **Edit** next to the import in which the scheduled price that you want to delete is located.
-2. On the *Edit Import* page, click **Delete** next to the scheduled price that you want to delete.
+To delete a scheduled price, do the following:
+1. On the **Scheduled Prices** page, click **Edit** next to the import in which the scheduled price that you want to delete is located.
+2. On the **Edit Import** page, click **Delete** next to the scheduled price that you want to delete.
 3. Click **Yes, delete this price** to confirm the action.
 
 

@@ -61,7 +61,7 @@ To change general information and SEO details, on the *Edit CMS Page: [Page Name
 ### Selecting the Placeholders option
 
 To change the title and content of the page:
-1. On the *Edit Placeholders: [Page Name]* editor, place your cursor into the placeholder where you would like to update the content.
+1. On the *Edit Placeholders: [Page Name]* editor, place your cursor into the placeholder where you want to update the content.
 2.  Using options on the editor menu, edit the content of your page.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Pages/Editing+CMS+Pages/placeholders.png)
 

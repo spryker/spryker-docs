@@ -25,11 +25,11 @@ For example, you want to set up a promotion for Valentine's Day beforehand so th
 * Prices switch to the specified ones automatically on the starting date of the promotion.
 * Prices switch back automatically on the last day of the promotion.
 
-Instead of changing prices manually on the starting day of the promotion, you can create a price schedule called,  e.g., *Valentine's day prices*. To do that, you need to import a file with predefined dates and prices.
+Instead of changing prices manually on the starting day of the promotion, you can create a price schedule called—for example, *Valentine's day prices*. To do that, you need to import a file with predefined dates and prices.
 
 ## Prerequisites
 
-To start working with scheduled prices, go to **Catalog** > **Scheduled Prices**.
+To start working with scheduled prices, go to **Catalog&nbsp;<span aria-label="and then">></span> Scheduled Prices**.
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 
@@ -41,7 +41,7 @@ To create a price schedule:
 2. Enter and select the attributes for your price schedule.
 3. Click **Choose File** and select the file you've prepared in step 1.
 4. Click **Import your CSV file**.
-5. Once redirected to the _Import dry run_ page, check whether there are incorrect entries in your file in the *Errors found inside your file* section.
+5. Once redirected to the **Import dry run** page, check whether there are incorrect entries in your file in the **Errors found inside your file** section.
 
 {% info_block infoBox "Info" %}
 
@@ -50,26 +50,26 @@ If needed, you can [edit the imported scheduled prices](/docs/scos/user/back-off
 {% endinfo_block %}
 
 
-6. Check if the successfully imported price schedules are correct in the *Row processed with success* section.
+6. Check if the successfully imported price schedules are correct in the **Row processed with success** section.
 
-7. If you are satisfied with the results, in the *Publish the scheduled prices* section, click **Publish** to apply the price schedules.
+7. If you are satisfied with the results, in the **Publish the scheduled prices** section, click **Publish** to apply the price schedules.
 
 **Tips and tricks**
 
-* If you leave the _Import dry run_ page without publishing the imported price schedules, they do not get deleted. However, you won't be able to return to that page unless you import the file once again.
-* You can check the current price schedules of each product in the *Products* section > the *Edit Product* page > the *Scheduled Prices* tab.
+* If you leave the **Import dry run** page without publishing the imported price schedules, they do not get deleted. However, you won't be able to return to that page unless you import the file once again.
+* You can check the current price schedules of each product in the **Products** section&nbsp;<span aria-label="and then">></span> the **Edit Product** page&nbsp;<span aria-label="and then">></span> the **Scheduled Prices** tab.
 
 ### Reference information: Creating scheduled prices
 
 This section describes the attributes you see, select, and enter when creating scheduled prices.
 
-In the *Import new scheduled prices* section, you see the following:
+In the **Import new scheduled prices** section, you see the following:
 
 * A link to the page where the format of the file with price schedules is described.
 * The Schedule name field.
 * The Choose file button.
 * The button for importing price schedules from the selected file.
-In the *Scheduled prices imported* section, you see the following:
+In the **Scheduled prices imported** section, you see the following:
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
@@ -83,7 +83,7 @@ In the *Scheduled prices imported* section, you see the following:
 
 #### Scheduled Prices: Import dry run page
 
-The *Scheduled Prices: Import dry run* page is divided into four sections.
+The **Scheduled Prices: Import dry run** page is divided into four sections.
 
 * **Dry run of your import**. In this section, you see the following:
     * Link to the page where the format of the file with price schedules is described

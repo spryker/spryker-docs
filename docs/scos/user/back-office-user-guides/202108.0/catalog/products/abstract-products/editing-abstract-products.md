@@ -17,28 +17,28 @@ related:
 
 This document describes how to edit abstract products.
 
-## Prerequisites 
+## Prerequisites
 
-To start working with abstract products, go to  **Catalog** > **Products**.
+To start working with abstract products, go to  **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 
-Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process. 
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Editing general settings of an abstract product
-    
+
 To edit general settings of an abstract product:    
-    
+
 1. Next to the product you want to edit, select **Edit**.
-    This takes you to the *Edit Product Abstract [SKU]* page.
-2. In the *General* tab, update **Store relations**.
-3. Update **Name** and **Description** for the desired locales. 
+   The **Edit Product Abstract _[SKU]_** page.
+2. On the **General** tab, update **Store relations**.
+3. Update **Name** and **Description** for the desired locales.
 4. Update **New from** and **New to** dates.
 5. Select **Save**.
 
 ### Reference information: Editing general settings of an abstract product
-  
+
  The following table describes the attributes you enter and select when editing general settings of an abstract product.
 
-| ATTRIBUTE | DESCRIPTION | 
+| ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | Store relation  | Defines the [stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) the product is available in.<br>You can select multiple values. |
 | SKU Prefix | Unique product identifier that helps to track unique information related to the product. |
@@ -51,7 +51,7 @@ To edit general settings of an abstract product:
 To edit prices of an abstract product:    
 
 1. Next to the product you want to edit, select **Edit**.
-2. On the *Edit Product Abstract [SKU]* page, switch to the *Prices & Tax* tab.
+2. On the **Edit Product Abstract _[SKU]_** page, switch to the **Prices & Tax** tab.
 3. B2B Shop: Select a **Merchant Price Dimension**.
 4. Enter **DEFAULT** prices for the desired available locales and currencies.
 5. Optional:  Enter **ORIGINAL** prices for the desired available locales and currencies.
@@ -61,62 +61,62 @@ To edit prices of an abstract product:
 ### Reference information: Editing prices of an abstract product
 
 The following table describes the attributes you enter and select when editing prices of an abstract product.
-    
-| ATTRIBUTE | DESCRIPTION | 
+
+| ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-|Merchant Price Dimension| B2B only<br>Defines the [merchant](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html) the prices apply to.<br>If **Default prices** is selected, the prices apply to all customers.<br>To [manage merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html) go to **Marketplace** > **Merchant Relations**. |
+|Merchant Price Dimension| B2B only<br>Defines the [merchant](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html) the prices apply to.<br>If **Default prices** is selected, the prices apply to all customers.<br>To [manage merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html) go to **Marketplace&nbsp;<span aria-label="and then">></span> Merchant Relations**. |
 | Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price  before tax.<br>If a product variant of the abstract product does not have a price, it [inherits](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html#product-information-inheritance) the price you enter here. |
 |Default<br>Original| A default price is the price a customer pays for the product. An original price is a price displayed as a strikethrough beside the default price on the Storefront. The original price is optional and is usually used to indicate a price change. |
-|Add Product Volume Price<br>Edit Product Volume Price| This option allows you to define the prices that are based on the quantity of products that a customer selects. Works only with the default prices.<br>Add Product Volume Price appears only when the price for a currency was set up and saved.<br>Edit Product Volume Price appears only what the volume price was already set up for a currency.||✓|
-|Tax Set|The conditions under which a product is going to be taxed.<br>The values available for selection derive from Taxes > Tax Sets<br>Only one value can be selected.|
+|Add Product Volume Price<br>Edit Product Volume Price| This option lets you define the prices that are based on the quantity of products that a customer selects. Works only with the default prices.<br>Add Product Volume Price appears only when the price for a currency was set up and saved.<br>Edit Product Volume Price appears only what the volume price was already set up for a currency.||✓|
+|Tax Set|The conditions under which a product is going to be taxed.<br>The values available for selection derive from Taxes&nbsp;<span aria-label="and then">></span> Tax Sets<br>Only one value can be selected.|
 
 ## Editing volume pirces of an abstract product
 
 To edit volume prices of an abstract product:
 
 1. Next to the product you want to edit add volume prices of, select **Edit**.
-2. On the *Edit Product Abstract [SKU]* page, switch to the *Price & Tax* tab.
+2. On the **Edit Product Abstract _[SKU]_** page, switch to the **Price & Tax** tab.
 3. Next to the store you want to edit volume prices for, select **> Edit Product Volume Price**.
-4. On the *Add volume prices* page, enter a **Quantity**.
+4. On the **Add volume prices** page, enter a **Quantity**.
 5. Enter a **Gross price**.
 6. Optional: Enter a **Net price**.
 7. Optional: To add more volume prices than the number of the rows displayed on the page, select **Save and add more rows**.
-8. Repeat steps 4 to 7 until you edit all the desired volume prices. 
+8. Repeat steps 4 to 7 until you edit all the desired volume prices.
 9. Select **Save and exit**.
-    This opens the *Edit Product Abstract [SKU]* page with the success message displayed. 
-    
+    The **Edit Product Abstract _[SKU]_** page opens, with the success message displayed.
+
 ### Reference information: Editing volume prices of an abstract product
 
 The following table describes the attributes you enter and select when editing volume prices of an abstract product.
-    
-| ATTRIBUTE | DESCRIPTION | 
+
+| ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| Quantity | Defines the quantity of the product to which the prices from **Gross price** and **Net price** fields apply. | 
+| Quantity | Defines the quantity of the product to which the prices from **Gross price** and **Net price** fields apply. |
 | Gross price | Gross price of the product with the quantity equal or bigger than defined in the **Quantity** field. A gross prices is a price after tax. |
-| Net price | Net price of the product with the quantity equal or bigger than defined in the **Quantity** field.  A net price is a price before tax. | 
+| Net price | Net price of the product with the quantity equal or bigger than defined in the **Quantity** field.  A net price is a price before tax. |
 
 ## Editing product variants of an abstract product
 
-To edit a product variant, see [Editing product variants](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/concrete-products/editing-product-variants.html). 
+To edit a product variant, see [Editing product variants](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/concrete-products/editing-product-variants.html).
 To create a product variant, see [Creating product variants](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/concrete-products/creating-product-variants.html).
 
 ## Editing meta information of an abstract product
 
 To edit meta information:
 1. Next to the product you want to edit, select **Edit**.
-2. On the *Edit Product Abstract [SKU]* page, switch to the *SEO* tab.
+2. On the **Edit Product Abstract _[SKU]_** page, switch to the *SEO* tab.
 3. Update the following for the desired locales:
     * **Title**
     * **Keywords**
     * **Description**
 4. Select **Save**.
     The page refreshes with the success message displayed.
-    
+
  ### Reference information: Editing meta information of an abstract product
 
 The following table describes the attributes you enter and select when editing meta information of an abstract product.
-    
-| ATTRIBUTE | DESCRIPTION | 
+
+| ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 |Title|Meta title for your product.|
 |Keywords|Meta keywords for your product.|
@@ -126,7 +126,7 @@ The following table describes the attributes you enter and select when editing m
 
 To edit product images:
 1. Next to the product you want to edit, select **Edit**.
-2. On the *Edit Product Abstract [SKU]* page, switch to the *Image* tab.
+2. On the **Edit Product Abstract _[SKU]_** page, switch to the **Image** tab.
 3. Select a locale you want to update images for.
 4. Update images:
     * To add a new image set, select **Add image set**
@@ -140,12 +140,12 @@ To edit product images:
 5. Repeat step *4* until you update images for all the desired locales.
 6.  Select **Save**.
     The page refreshes with the success message displayed.
-    
+
 ### Reference information: Editing product images of an abstract product
 
 The following table describes the attributes you enter and select when editing product images of an abstract product.
-    
-| ATTRIBUTE | DESCRIPTION | 
+
+| ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 |Image Set Name|Name of your image set.|
 |Small|Link of the image that is going to be used in the product catalogs.|
@@ -156,7 +156,7 @@ The following table describes the attributes you enter and select when editing p
 
 To edit a scheduled price:
 1. Next to the product you want to edit, select **Edit**.
-2. On the *Edit Product Abstract [SKU]* page, switch to the *Scheduled Prices* tab.
+2. On the **Edit Product Abstract _[SKU]_** page, switch to the **Scheduled Prices** tab.
 3. Next to the scheduled price you want to edit, select **Edit**.
 4. Select a **Store**.
 5. Select a **Currency**.
@@ -166,8 +166,8 @@ To edit a scheduled price:
 9. Select a **Start from (included)** date and time.
 10. Select a **Finish at (included)** date and time.
 11. Select **Save**.
-    This opens the *Edit Product Abstract [SKU]* page with the success message displayed. The changes are reflected in the table with scheduled prices.
-    
+    This opens the **Edit Product Abstract _[SKU]_** page with the success message displayed. The changes are reflected in the table with scheduled prices.
+
 ### Reference information: Editing scheduled prices of an abstract product
 
 The following table describes the attributes you enter and select when editing scheduled prices of an abstract product.

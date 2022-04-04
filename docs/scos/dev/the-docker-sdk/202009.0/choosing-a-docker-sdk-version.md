@@ -21,12 +21,6 @@ You should use a particular Docker SDK version for:
 - Control: control when and how you switch the Docker SDK version of the project.
 - Stability: avoid unexpected behavior in pipelines.
 
-{% info_block errorBox "In the cloud" %}
-
-Setting a Docker SDK version is required when deploying code to Spryker Cloud Commerce OS.
-
-{% endinfo_block %}
-
 ## Choosing a versioning approach
 
 To choose a versioning approach, consider the following:
@@ -45,9 +39,9 @@ Depending on your project requirements, choose one of the versioning approaches:
 | Master branch `spryker/docker-sdk:master` | - | - | - | - | Short-term demo projects. Quick start. |
 | Fork of `spryker/docker-sdk` | + | + | + | +  | Customization of the Docker SDK. |
 
-{% info_block infoBox "Fork" %}
+{% info_block infoBox "Forking the Docker SDK" %}
 
-[Spryker Cloud](https://cloud.spryker.com/) does not support forks of `spryker/docker-sdk`.
+[Spryker Cloud Commerce OS](https://cloud.spryker.com/) does not support forks of the Docker SDK. Your project's code must be compatible with its main branch for a successful deployment. 
 
 {% endinfo_block %}
 
@@ -63,10 +57,9 @@ Depending on your project requirements, choose one of the following ways to conf
   * To use a branch as a versioning approach.
   * When Git Submodule is not supported.
 
-{% info_block infoBox "Cloud deployment" %}
+{% info_block warningBox "Spryker Cloud Commerce OS" %}
 
-Currently, the deployment pipelines in Spryker Cloud Commerce OS do not support the Git submodule method.
-A reference file must be used.
+Spryker Cloud Commerce OS supports only reference file as a way of defining a Docker SDK version.
 
 {% endinfo_block %}
 

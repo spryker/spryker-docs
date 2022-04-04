@@ -54,7 +54,7 @@ To start creating a discount, do the following:
 
 
 
-
+## 3. Define the conditions under which the cart rule is applied
 
 
 4. In the **Conditions** tab, do the following:

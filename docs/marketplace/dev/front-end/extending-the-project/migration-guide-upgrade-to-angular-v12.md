@@ -25,8 +25,24 @@ Since it is not possible to migrate using standard methods such as `nx migrate` 
 
 1. Upgrade modules to the new version:
 
+The marketplace modules must correspond to the following versions:
+
+| NAME                                        | VERSION   |
+| ------------------------------------------- | --------- |
+| DashboardMerchantPortalGui                  | >= 1.4.0  |
+| GuiTable                                    | >= 1.4.0  |
+| MerchantProfileMerchantPortalGui            | >= 1.4.0  |
+| ProductMerchantPortalGui                    | >= 2.1.0  |
+| ProductOfferMerchantPortalGui               | >= 1.7.0  |
+| SalesMerchantPortalGui                      | >= 1.6.0  |
+| SecurityMerchantPortalGui                   | >= 1.4.0  |
+| UserMerchantPortalGui                       | >= 1.3.0  |
+| ZedUi                                       | >= 1.5.0  |
+
+If not, update module versions manually or by using the following command:
+
 ```bash
-composer require spryker/dummy-merchant-portal-gui:"^0.4.0" spryker/dashboard-merchant-portal-gui:"^1.4.0" spryker/gui-table:"^1.4.0" spryker/merchant-profile-merchant-portal-gui:"^1.4.0" spryker/product-merchant-portal-gui:"^2.1.0" spryker/product-offer-merchant-portal-gui:"^1.7.0" spryker/sales-merchant-portal-gui:"^1.6.0" spryker/security-merchant-portal-gui:"^1.4.0" spryker/user-merchant-portal-gui:"^1.3.0" spryker/zed-ui:"^1.5.0" --update-with-dependencies
+composer update spryker/dashboard-merchant-portal-gui spryker/gui-table spryker/merchant-profile-merchant-portal-gui spryker/product-merchant-portal-gui spryker/product-offer-merchant-portal-gui spryker/sales-merchant-portal-gui spryker/security-merchant-portal-gui spryker/user-merchant-portal-gui spryker/zed-ui
 ```
 
 2. Regenerate the data transfer object:
@@ -43,7 +59,7 @@ Make sure you are using [Node 12 or later](https://nodejs.org/dist/latest-v12.x/
 
 {% endinfo_block %}
 
-1. Update/add the following dependencies:
+1. Update or add the following dependencies:
 
 ```json
 "rxjs": "~7.4.0",
@@ -78,18 +94,22 @@ Make sure you are using [Node 12 or later](https://nodejs.org/dist/latest-v12.x/
 
 2. Add `"typescript": "4.2.4",` to the `"resolutions"` section to ensure you're using the correct version.
 
-3. Run the following commands to ensure that the `lock` file and the `node_modules` folder have been updated.
+3. Update `mp:build:production` command:
 
-4. Update `yarn.lock` file via commands:
+```json
+"mp:build:production": "ng build --configuration production",
+```
 
-    ```bash
-    rm -rf node_modules
-    yarn install
-    ```
+4. Run the following commands to ensure that the `yarn.lock` file and the `node_modules` folder have been updated:
 
-### 3) Create/Update config files
+```bash
+rm -rf node_modules
+yarn install
+```
 
-1. Create a **.browserslistrc** file:
+### 3) Create or update config files
+
+1. Create a `.browserslistrc` file:
 
 ```txt
 last 1 Chrome version
@@ -101,7 +121,7 @@ Firefox ESR
 IE 11
 ```
 
-2. Create **nx.json** file:
+2. Create `nx.json` file:
 
 ```json
 {
@@ -123,7 +143,7 @@ IE 11
 }
 ```
 
-3. Create **jest.preset.js** file in the `frontend/merchant-portal/` folder:
+3. Create `jest.preset.js` file in the `frontend/merchant-portal/` folder:
 
 ```js
 const nxPreset = require('@nrwl/jest/preset');
@@ -131,9 +151,20 @@ const nxPreset = require('@nrwl/jest/preset');
 module.exports = { ...nxPreset };
 ```
 
-4. Compare and update the following files:  
+4. Add the following section to `tslint.json` file:
 
-**angular.json**
+```json
+"rules": {
+    "deprecation": {
+        "severity": "warning"
+    }
+},
+```
+
+5. Compare and update the following files:  
+
+<details>
+<summary markdown='span'>angular.json</summary>
 
 ```json
 {
@@ -249,8 +280,9 @@ module.exports = { ...nxPreset };
     "defaultProject": "merchant-portal"
 }
 ```
+</details> 
 
-**jest.config.js** in the `frontend/merchant-portal/` folder:
+`jest.config.js` in the `frontend/merchant-portal/` folder:
 
 ```js
 module.exports = {
@@ -280,34 +312,34 @@ module.exports = {
 };
 ```
 
-**test-setup.ts** in the `frontend/merchant-portal/` folder:
+`test-setup.ts` in the `frontend/merchant-portal/` folder:
 
 ```ts
 import 'core-js/features/reflect';
 import 'jest-preset-angular/setup-jest';
 ```
 
-5. Rename `tsconfig.json` to `tsconfig.base.json` and fix usage in the:
+6. Rename `tsconfig.json` to `tsconfig.base.json` and fix usage in the:
 
-**tsconfig.mp.json**  
-
-```json
-"extends": "./tsconfig.base.json",
-```
-
-**tsconfig.yves.json** 
+**tsconfig.mp.json** 
 
 ```json
 "extends": "./tsconfig.base.json",
 ```
 
-**update-config-paths.js** in the `frontend/merchant-portal/` folder:
+**tsconfig.yves.json**
+
+```json
+"extends": "./tsconfig.base.json",
+```
+
+`update-config-paths.js` in the `frontend/merchant-portal/` folder:
 
 ```js
 const TSCONFIG_FILES = ["tsconfig.base.json", "tsconfig.mp.json"];
 ```
 
-6. Run build command:
+7. Run build command:
 
 ```bash
 yarn mp:build

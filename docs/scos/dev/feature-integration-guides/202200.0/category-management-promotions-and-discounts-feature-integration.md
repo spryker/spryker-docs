@@ -69,7 +69,7 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 
 Ensure that the plugins work correctly:
 
-1. [Create a discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html) and define its condition as a query string with a *category* field.
+1. [Create a discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html) and define its condition as a query string with a **category** field.
 2. Add a product assigned to the defined category to the cart.
 3. The discount should be applied to the cart.
 

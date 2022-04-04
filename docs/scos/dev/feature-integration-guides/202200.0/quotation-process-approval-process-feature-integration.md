@@ -112,7 +112,7 @@ class QuoteRequestDependencyProvider extends SprykerQuoteRequestDependencyProvid
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the **Request For Quote** button is not available on the **Cart** page when the quote is in the status *Waiting*.
+Make sure that the **Request For Quote** button is not available on the **Cart** page when the quote is in the status `Waiting`.
 
 Make sure that when you have locked cart after quotation process and request approval for this cart, the cart should stay locked even if approver declined it.
 

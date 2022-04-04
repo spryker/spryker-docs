@@ -78,7 +78,7 @@ Make sure that the following changes have been triggered in transfer objects:
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the discount form has the *PRIORITY* field, and the discounts table has the *PRIORITY* column.
+Make sure that the discount form has the **PRIORITY** field, and the discounts table has the **PRIORITY** column.
 
 Make sure, that the existing discounts in the `spy_discount` DB table have priority set to `9999`.
 
@@ -118,9 +118,9 @@ Make sure that discounts are calculated according to their priorities:
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can submit the *Discount Create* and *Discount Update* forms with specified date and time for **Valid From** and **Valid To** discount form fields:
+Make sure that you can submit the **Discount Create** and **Discount Update** forms with specified date and time for **Valid From** and **Valid To** discount form fields:
 1. In the Back Office, go to **Merchandising** > **Discount**.
-2. Create a new discount or update an existing one, check that you can see the *Discount* form.
+2. Create a new discount or update an existing one, check that you can see the **Discount** form.
 3. Click on **Valid From** and **Valid To** fields to ensure you can see the calendar, where you can select specific date and time.
 4. Make sure **Valid From** and **Valid To** fields can accept the selected date and time (for times not falling on the hour, use keystroke entry—for example, 13:45).
 5. In the `spy_discount` DB table, make sure **Valid From** and **Valid To** date and time are saved correctly.

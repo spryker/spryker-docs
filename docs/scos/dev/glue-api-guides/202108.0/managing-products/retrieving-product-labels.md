@@ -38,12 +38,14 @@ To retrieve a product label, send the request:
 
 ### Request
 
-Request sample: `GET http://glue.mysprykershop.com/product-labels/3`
+Request sample: retrieve a product label
+
+`GET http://glue.mysprykershop.com/product-labels/3`
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve a product label</summary>
 
 ```json
 {

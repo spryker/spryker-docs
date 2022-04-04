@@ -15,8 +15,6 @@ related:
     link: docs/scos/user/features/page.version/agent-assist-feature-overview.html
 ---
 
-
-
 This endpoint allows to refresh an agent assist access token or revoke a refresh token.
 
 
@@ -37,7 +35,9 @@ To refresh an agent assist authentication token, send the request:
 
 ### Request
 
-Request sample: `POST https://glue.mysprykershop.com/refresh-tokens`
+Request sample: refresh an agent assist authentication token
+
+`POST https://glue.mysprykershop.com/refresh-tokens`
 
 ```json
 {
@@ -56,7 +56,7 @@ Request sample: `POST https://glue.mysprykershop.com/refresh-tokens`
 
 ### Response
 
-<details><summary markdown='span'>Response sample</summary>
+<details><summary markdown='span'>Response sample: refresh an agent assist authentication token</summary>
 
 ```json
 {
@@ -74,9 +74,7 @@ Request sample: `POST https://glue.mysprykershop.com/refresh-tokens`
         }
     }
 }
-
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

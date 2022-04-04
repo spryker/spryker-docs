@@ -37,7 +37,7 @@ To retrieve the full information on the abstract product list by the content ite
 
 _/content-product-abstract-lists/{content_item_key}/content-product-abstract_
 
-Sample request: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract_
+Request sample: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract_
 
 where **content-product-abstract-lists** is the Abstract Product List content item type, **apl-1** is its key, and **content-product-abstract** is the abstract product list type.
 
@@ -184,7 +184,7 @@ Please see below for details of the resource relationships.
 ### Getting Image Sets for Abstract Products
 To get image sets assigned to abstract products, request the resource from the abstract-product-image-sets relationships endpoint:
 
-Sample request: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?include=**abstract-product-image-sets**_
+Request sample: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?include=**abstract-product-image-sets**_
 where **abstract-product-image-sets** is the image sets for its abstract products included in the list and **apl-1** is the key of the Abstract Product List content item.
 
 The following additional attributes are added to the response:
@@ -292,7 +292,7 @@ If the request is successful and the abstract product image sets with the specif
 ### Getting Information on Availability for Abstract Products
 To retrieve the information on the availability of abstract products, request the resource from the abstract-product-availabilities relationships endpoint:
 
-Sample request: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?**include=abstract-product-availabilities**_
+Request sample: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?**include=abstract-product-availabilities**_
 where **abstract-product-availabilities** is the availability of the abstract products included in the list and **apl-1** is the key of the Abstract Product List content item.
 
 The following additional attributes will be added to the response:
@@ -453,7 +453,7 @@ If the request is successful and the availability of abstract products with the 
 ### Getting Prices for Abstract Products
 To retrieve prices of abstract products, request the resource from the abstract-product-prices relationships endpoint:
 
-Sample request: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?**include=abstract-product-prices**_
+Request sample: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?**include=abstract-product-prices**_
 where **abstract-product-prices** is the price of each abstract product included in the list and **apl-1** is the key of the Abstract Product List content item containing these products.
 
 The following additional attributes will be added to the response:
@@ -641,7 +641,7 @@ The following additional attributes will be added to the response:
 
 To get information on all available categories which the abstract products are assigned to, send the GET request expandable with the category-nodes relationships endpoint:
 
-Sample request: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?**include=category-nodes**_
+Request sample: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?**include=category-nodes**_
 where **category-nodes** is the category assigned to each abstract product included in the list and **apl-1** is the key of the Abstract Product List content item.
 
 The following additional attributes will be added to the response:
@@ -888,7 +888,7 @@ The following additional attributes will be added to the response:
 ### Getting Information on Tax Sets to Abstract Products
 To get information on tax sets defined for abstract products, request the resource from the product-tax-sets relationships endpoint:
 
-Sample request: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?**include=product-tax-sets**_
+Request sample: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?**include=product-tax-sets**_
 where **product-tax-sets** is the tax set of each abstract product included in the list and **apl-1** is the ID of the Abstract Product List content item.
 
 The following additional attributes will be added to the response:
@@ -1115,7 +1115,7 @@ The following additional attributes will be added to the response:
 ### Getting Product Labels of Abstract Products
 To get information on tax sets defined for abstract products, request the resource from the product-labels relationships endpoint:
 
-Sample request: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?**include=product-labels**_
+Request sample: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?**include=product-labels**_
 where **product-labels** is the product label assigned to each abstract product included in the list and **apl-1** is the key of the Abstract Product List content item.
 
 The following additional attributes will be added to the response:
@@ -1233,7 +1233,7 @@ The following additional attributes will be added to the response:
 To retrieve a specific attribute of the abstract product, send the GET request including the following resources:
 /content-product-abstract-lists/{content_item_key}/content-product-abstract?fields[abstract-products]=sku,name,description&include=abstract-product-prices
 
-Sample request: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?fields[abstract-products]=sku,name,description&include=abstract-product-prices_
+Request sample: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?fields[abstract-products]=sku,name,description&include=abstract-product-prices_
 where **apl-1** is the key of the Abstract Product List content item you want to retrieve.
 
 <details open>

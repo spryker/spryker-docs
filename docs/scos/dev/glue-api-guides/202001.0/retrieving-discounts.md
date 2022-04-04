@@ -58,7 +58,7 @@ When accessing guest carts, you need to specify the guest user ID. This is done 
 
 {% endinfo_block %}
 
-Sample request: `POST http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers`
+Request sample: `POST http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers`
 
 where **1ce91011-8d60-59ef-9fe0-4493ef3628b2** is the UUID of the customer’s cart.
 
@@ -202,7 +202,7 @@ When accessing guest carts, you need to specify the guest user ID. This is done 
 
 {% endinfo_block %}
     
-**Sample requests:**
+**Request samples:**
 
 `GET http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2?include=vouchers`
 
@@ -346,7 +346,7 @@ When accessing guest carts, you need to specify the guest user ID. This is done 
 
 {% endinfo_block %}
 
-Sample request: `DELETE http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers/mydiscount-we3ca`
+Request sample: `DELETE http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers/mydiscount-we3ca`
 
 where:
 

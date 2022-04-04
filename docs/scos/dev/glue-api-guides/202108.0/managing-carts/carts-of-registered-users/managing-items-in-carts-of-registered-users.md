@@ -52,9 +52,10 @@ To add items to a cart, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
-| Query parameter | Description | Possible value |
+| QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | <ul><li>items</li><li>product-measurement-units</li><li>sales-units</li><li>cart-rules</li><li>vouchers</li><li>concrete-products</li><li>product-options</li><li>bundle-items</li><li>bundled-items</li><li>abstract-products</li></ul>|
+
 {% info_block infoBox "Included resources" %}
 
 To retrieve all the product options of the item in a cart, include `concrete-products` and `product-options`.
@@ -62,7 +63,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 {% endinfo_block %}
 
 <details>
-<summary markdown='span'>Request sample</summary>
+<summary markdown='span'>Request sample: add an item to a registered user's cart</summary>
 
 `POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items`
 ```json
@@ -76,12 +77,11 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
     }
 }
 ```
-
 </details>
 
 
 <details>
-<summary markdown='span'>Request sample with product measurement units and sales units</summary>
+<summary markdown='span'>Request sample: add an item to a registered user's cart with product measurement units and sales units</summary>
 
 `POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items?include=sales-units,product-measurement-units`
 
@@ -103,7 +103,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 </details>
 
 <details>
-<summary markdown='span'>Request sample with cart rules</summary>
+<summary markdown='span'>Request sample: add an item to a registered user's cart with cart rules</summary>
 
 `POST http://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items?include=cart-rules`
 
@@ -118,11 +118,10 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
     }
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Request sample with vouchers</summary>
+<summary markdown='span'>Request sample: add an item to a registered user's cart with vouchers</summary>
 
 `POST http://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items?include=vouchers`
 
@@ -137,14 +136,12 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
     }
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Request sample with a promotional item and cart rules</summary>
+<summary markdown='span'>Request sample: add a promotional item to a registered user's cart with cart rules</summary>
 
 {% info_block infoBox "Cart rules" %}
-
 
 To add the promotional product to the cart, make sure that the cart fulfills the cart rules for the promotional item.
 
@@ -167,7 +164,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 </details>
 
 <details>
-<summary markdown='span'>Request sample with concrete products and product options</summary>
+<summary markdown='span'>Request sample: add an item to a registered user's cart with details on concrete products and product options</summary>
 
 `POST http://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398/items?include=concrete-products,product-options`
 
@@ -183,7 +180,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
             		"sku": "OP_gift_wrapping"
             	},
             	{
-            		"sku": "OP_3_year_waranty"
+            		"sku": "OP_3_year_warranty"
             	}
             ]
         }
@@ -193,9 +190,9 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 </details>
 
 <details>
-<summary markdown='span'>Request sample with bundle items</summary>
+<summary markdown='span'>Request sample: add a bundle item to a registered user's cart</summary>
 
-`POST https://glue.mysprykershop.com/carts/bd873e3f-4670-523d-b5db-3492d2c0bee3/items?include=bundle-items` - retrieve the cart with the `bd873e3f-4670-523d-b5db-3492d2c0bee3` ID and the product bundles inside it.
+`POST https://glue.mysprykershop.com/carts/bd873e3f-4670-523d-b5db-3492d2c0bee3/items?include=bundle-items`
 
 ```json
 {
@@ -208,13 +205,12 @@ To add the promotional product to the cart, make sure that the cart fulfills the
     }
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Request sample with bundle items and bundled items</summary>
+<summary markdown='span'>Request sample: add a bundle item to a registered user's cart including the information about the items of the product bundle</summary>
 
-`POST https://glue.mysprykershop.com/carts/bd873e3f-4670-523d-b5db-3492d2c0bee3/items?include=bundle-items,bundled-items` - retrieve the cart with the `bd873e3f-4670-523d-b5db-3492d2c0bee3` ID, the product bundles inside it, and the products of the product bundles.
+`POST https://glue.mysprykershop.com/carts/bd873e3f-4670-523d-b5db-3492d2c0bee3/items?include=bundle-items,bundled-items`
 
 ```json
 {
@@ -227,13 +223,12 @@ To add the promotional product to the cart, make sure that the cart fulfills the
     }
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Request sample with bundle items, bundled items, concrete products, and abstract products</summary>
+<summary markdown='span'>Request sample: add a bundle item to a registered user's cart including the information about the concrete and abstract products of the product bundle</summary>
 
-`POST https://glue.mysprykershop.com/carts/bd873e3f-4670-523d-b5db-3492d2c0bee3/items?include=bundle-items,bundled-items,concrete-products,abstract-products` - retrieve the cart with the `bd873e3f-4670-523d-b5db-3492d2c0bee3` ID. Retrieve the product bundles inside it, the products of the product bundles, and respective abstract and concrete products.
+`POST https://glue.mysprykershop.com/carts/bd873e3f-4670-523d-b5db-3492d2c0bee3/items?include=bundle-items,bundled-items,concrete-products,abstract-products` 
 
 ```json
 {
@@ -246,8 +241,8 @@ To add the promotional product to the cart, make sure that the cart fulfills the
     }
 }
 ```
-
 </details>
+
 
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
@@ -276,7 +271,7 @@ It is the responsibility of the API Client to track whether the selected items a
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: add an item to a registered user's cart</summary>
 
 ```json
 {
@@ -305,11 +300,10 @@ It is the responsibility of the API Client to track whether the selected items a
     }
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with items, product measurement units, and sales units</summary>
+<summary markdown='span'>Response sample: add an item to a registered user's cart with product measurement units and sales units</summary>
 
 ```json
 {
@@ -449,7 +443,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-<summary markdown='span'>Response sample with cart rules</summary>
+<summary markdown='span'>Response sample: add an item to a registered user's cart with cart rules</summary>
 
 ```json
 {
@@ -547,11 +541,10 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with vouchers</summary>
+<summary markdown='span'>Response sample: add an item to a registered user's cart with vouchers</summary>
 
 ```json
 {
@@ -690,11 +683,10 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample: adding a promotional item without cart-rules relationship</summary>
+<summary markdown='span'>Response sample: add a promotional item to a registered user's cart without cart-rules relationship</summary>
 
 ```json
 {
@@ -736,7 +728,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-<summary markdown='span'>Response sample: adding a promotional item with cart-rules relationship</summary>
+<summary markdown='span'>Response sample: add a promotional item to a registered user's cart with cart-rules relationship</summary>
 
 ```json
 {
@@ -1013,7 +1005,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-<summary markdown='span'>Response sample with concrete products and product options</summary>
+<summary markdown='span'>Response sample: add an item to a registered user's cart with details on concrete products and product options</summary>
 
 ```json
     {
@@ -1248,11 +1240,10 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with bundle items</summary>
+<summary markdown='span'>Response sample: add a bundle item to a registered user's cart</summary>
 
 ```json
 {
@@ -1342,7 +1333,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-<summary markdown='span'>Response sample with bundle items and bundled items</summary>
+<summary markdown='span'>Response sample: add a bundle item to a registered user's cart including the information about the items of the product bundle</summary>
 
 ```json
 {
@@ -1563,11 +1554,10 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with bundle items, bundled items, concrete products, and abstract products</summary>
+<summary markdown='span'>Response sample: add a bundle item to a registered user's cart including the information about the concrete and abstract products of the product bundle</summary>
 
 ```json
 {
@@ -2314,7 +2304,6 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 <a name="add-an-item-to-a-registered-users-cart-response-attributes"></a>
@@ -2390,7 +2379,7 @@ To add a configurable bundle to a registered user’s cart, send the request:
 ***
 
 
-| PATH PARAMETER | DESCRIPTIO |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***cart_uuid*** | A unique identifier of a cart. [Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-carts) to get it. |
 
@@ -2401,7 +2390,9 @@ To add a configurable bundle to a registered user’s cart, send the request:
 | Authorization | string |&check; | 	
 An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
-Request sample: `POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/configured-bundles`
+Request sample: add a configurable bundle to a registered user’s cart
+
+`POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/configured-bundles`
 
 ```json
 {
@@ -2430,7 +2421,7 @@ Request sample: `POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| quantity | Integer | &check; | The number of the configurabke bundles to add. |
+| quantity | Integer | &check; | The number of the configurable bundles to add. |
 | templateUuid | String | &check; | Unique identifier of the configurable bundle template. To get it, [retrieve all configurable bundle templates](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-configurable-bundle-templates.html#retrieve-all-configurable-bundle-templates). |
 | sku | String | &check; | Specifies the SKU of a product to add to the cart. To use promotions, specify the SKU of a product being promoted. Concrete product SKU required. |
 | quantity | Integer | &check; | Specifies the number of items to add to the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
@@ -2439,7 +2430,7 @@ Request sample: `POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: add a configurable bundle</summary>
+<summary markdown='span'>Response sample: add a configurable bundle to a registered user’s cart</summary>
 
 ```json
 {
@@ -2589,7 +2580,6 @@ Request sample: `POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1
         }
     ]
 }
-
 ```    
 </details>
 
@@ -2627,7 +2617,8 @@ To change the number of items in a cart, send the request:
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 
-Request sample:
+Request sample: Change item quantity
+
 `PATCH http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054/items/177_25913296`
 
 ```json
@@ -2648,7 +2639,7 @@ Request sample:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: change item quantity</summary>
 
 ```json
 {
@@ -2794,7 +2785,7 @@ To change quantity of configurable bundles in a registered user’s cart, send t
 | --- | --- | --- | --- |
 | Authorization | String | &check; | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
-Request sample:
+Request sample: change quantity of configurable bundles in a registered user’s cart
 
 `PATCH https://mysprykershop.com/carts/e68db76b-1c9b-5fb8-88db-6cbaf8faed76/configured-bundles/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff33dfe3418f6.24909526?include=items`
 
@@ -2817,7 +2808,7 @@ Request sample:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: change quantity of configurable bundles in a registered user’s cart</summary>
 
 ```json
 {
@@ -3081,7 +3072,6 @@ Request sample:
         }
     ]
 }
-
 ```    
 </details>
 
@@ -3107,7 +3097,7 @@ To remove an item from a registered user's cart, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
-Sample request: `DELETE http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054/items/177_25913296`
+Request sample: remove items from a registered user's cart `DELETE http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054/items/177_25913296`
 
 ### Response
 
@@ -3132,7 +3122,9 @@ To remove a configurable bundle from a registered user’s cart, send the reques
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
-Sample request: `DELETE https://mysprykershop.com/carts/e68db76b-1c9b-5fb8-88db-6cbaf8faed76/configured-bundles/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff33dfe3418f6.24909526`
+Request sample: Remove a configurable bundle from a registered user’s cart
+
+`DELETE https://mysprykershop.com/carts/e68db76b-1c9b-5fb8-88db-6cbaf8faed76/configured-bundles/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de-5ff33dfe3418f6.24909526`
 
 ### Response
 

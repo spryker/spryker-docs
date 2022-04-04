@@ -24,7 +24,7 @@ To create a wishlist, send the request:
 | ---------- | -------- | -------- | -------------- |
 | Authorization | string       | &check;         | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
-Sample request: create a wishlist
+Request sample: create a wishlist
 
 `POST https://glue.mysprykershop.com/wishlists`
 
@@ -2238,7 +2238,7 @@ To edit a wishlist, send the request:
 | ------ | ------ | ------ | -------------- |
 | Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
-Sample request: edit a wishlist
+Request sample: edit a wishlist
 
 `PATCH https://glue.mysprykershop.com/wishlists`
 

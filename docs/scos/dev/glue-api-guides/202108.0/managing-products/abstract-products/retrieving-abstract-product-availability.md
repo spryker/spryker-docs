@@ -33,11 +33,13 @@ To retrieve availability of an abstract product, send the request:
 
 ### Request
 
-Request sample: `GET http://glue.mysprykershop.com/abstract-products/001/abstract-product-availabilities`
+Request sample: retrieve availability of an abstract product
+
+`GET http://glue.mysprykershop.com/abstract-products/001/abstract-product-availabilities`
 
 ### Response
 
-Response sample:
+Response sample: retrieve availability of an abstract product
 
 ```json
 {

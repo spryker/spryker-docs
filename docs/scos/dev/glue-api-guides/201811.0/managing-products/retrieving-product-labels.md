@@ -24,7 +24,7 @@ For detailed information on the modules that provide the API functionality and r
 To retrieve a product label, send this GET request:
 
 `/product-labels/{% raw %}{{{% endraw %}label-id{% raw %}}}{% endraw %}`
-Sample request: `GET http://mysprykershop.com/product-labels/3`
+Request sample: `GET http://mysprykershop.com/product-labels/3`
 where `3` is the ID of the label you want to retrieve.
 Label IDs can be found in the `Products / Product Labels` section of the administration interface.
 
@@ -58,7 +58,7 @@ Label IDs can be found in the `Products / Product Labels` section of the adminis
 ## Get Product Labels by Product
 To retrieve the labels of a product, send this GET request:
 `/abstract-products/{% raw %}{{{% endraw %}product-sku{% raw %}}}{% endraw %}`
-Sample request: `GET http://mysprykershop.com/abstract-products/001`
+Request sample: `GET http://mysprykershop.com/abstract-products/001`
 where `001` is the SKU of the product.
 
 **Sample Response**

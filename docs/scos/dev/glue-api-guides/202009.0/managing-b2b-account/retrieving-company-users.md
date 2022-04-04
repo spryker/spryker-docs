@@ -38,7 +38,7 @@ To retrieve all the company users that belong to the company of the authenticate
 | --- | --- | --- |
 | Authorization | &check; | Alphanumeric string that authorizes the company user to send requests to protected resources. Get it by [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html).  |
 
-Sample request: `GET https://glue.mysprykershop.com/company-users`
+Request sample: `GET https://glue.mysprykershop.com/company-users`
 
 
 ### Response

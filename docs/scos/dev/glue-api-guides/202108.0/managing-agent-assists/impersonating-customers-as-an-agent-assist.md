@@ -44,7 +44,9 @@ To impersonate a customer, authenticate as a customer by sending the request:
 | X-Agent-Authorization | string | &check; | String containing digits, letters, symbols that authorized the agent assist. [Authenticate as an agent assist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/authenticating-as-an-agent-assist.html#authenticate-as-an-agent-assist) to get the value.  |
 
 
-Request sample: `POST http://glue.mysprykershop.com/agent-customer-impersonation-access-tokens`
+Request sample: impersonate a customer
+
+`POST http://glue.mysprykershop.com/agent-customer-impersonation-access-tokens`
 
 ```json
 {
@@ -66,7 +68,7 @@ Request sample: `POST http://glue.mysprykershop.com/agent-customer-impersonation
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: impersonate a customer</summary>
 
 ```json
 {
@@ -84,7 +86,6 @@ Request sample: `POST http://glue.mysprykershop.com/agent-customer-impersonation
         }
     }
 }
-
 ```
 </details>
 

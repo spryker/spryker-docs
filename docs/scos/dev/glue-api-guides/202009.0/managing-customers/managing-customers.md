@@ -318,7 +318,7 @@ To anonymize a customer, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer which you want to anonymize. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
-Sample request: `DELETE http://mysprykershop.com/customers/DE-25`
+Request sample: `DELETE http://mysprykershop.com/customers/DE-25`
 
 ### Response
 

@@ -19,7 +19,7 @@ For detailed information on the modules that provide the API functionality and r
 ## Usage
 To get search suggestion that you can use for auto-completion, you need to send GET requests to the following endpoint:
 `/catalog-search-suggestions `
-Sample request: `GET http://mysprykershop.com/catalog-search-suggestions`
+Request sample: `GET http://mysprykershop.com/catalog-search-suggestions`
 To include search queries in your request, use the q parameter. Below you can find the most common queries to use:
 
 | Request | Description |

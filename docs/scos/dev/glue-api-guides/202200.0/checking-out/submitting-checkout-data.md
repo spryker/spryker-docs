@@ -61,7 +61,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 
 
 <details>
-<summary markdown='span'>Request sample with one shipment</summary>
+<summary markdown='span'>Request sample: submit checkout data with one shipment</summary>
 
 ```json
 {
@@ -118,11 +118,10 @@ To retrieve all available shipment methods, submit checkout data with one or mor
     }
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Request sample with a split shipment</summary>
+<summary markdown='span'>Request sample: submit checkout data with a split shipment</summary>
 
 ```json
 {
@@ -200,11 +199,10 @@ To retrieve all available shipment methods, submit checkout data with one or mor
     }
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Request sample with a split shipment and addresses passed as IDs</summary>
+<summary markdown='span'>Request sample: submit checkout data with a split shipment and addresses passed as IDs</summary>
 
 ```json
 {
@@ -250,7 +248,6 @@ To retrieve all available shipment methods, submit checkout data with one or mor
     }
 }
 ```
-
 </details>
 
 
@@ -293,10 +290,11 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 
 
 ### Response
+
 In case of a successful update, the endpoint responds with information that can help you fill in the missing checkout data, like the customer's addresses, available payment and shipment methods.
 
 <details>
-<summary markdown='span'>Response sample with one shipment</summary>
+<summary markdown='span'>Response sample: submit checkout data with one shipment</summary>
 
 ```json
 {
@@ -325,13 +323,12 @@ In case of a successful update, the endpoint responds with information that can 
     }
 }
 ```
-
 </details>
 
 
 
 <details>
-<summary markdown='span'>Response sample with a split shipment</summary>
+<summary markdown='span'>Response sample: submit checkout data with a split shipment</summary>
 
 ```json
 {
@@ -456,11 +453,10 @@ In case of a successful update, the endpoint responds with information that can 
     ]
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with a split shipment, shipments, and shipment methods</summary>
+<summary markdown='span'>Response sample: submit checkout data with a split shipment, shipments, and shipment methods</summary>
 
 ```json
 {
@@ -707,11 +703,10 @@ In case of a successful update, the endpoint responds with information that can 
     ]
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with customer addresses</summary>
+<summary markdown='span'>Response sample: submit checkout data with customer addresses</summary>
 
 ```json
 {
@@ -828,13 +823,12 @@ In case of a successful update, the endpoint responds with information that can 
         }
     ]
 }
-
 ```
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample with company business unit addresses</summary>
+<summary markdown='span'>Response sample: submit checkout data with company business unit addresses</summary>
 
 ```json
 {
@@ -902,11 +896,11 @@ In case of a successful update, the endpoint responds with information that can 
     ]
 }
 ```
-
 </details>
 
+
 <details>
-<summary markdown='span'>Response sample with payment methods</summary>
+<summary markdown='span'>Response sample: submit checkout data with payment methods</summary>
 
 ```json
 {
@@ -990,11 +984,10 @@ In case of a successful update, the endpoint responds with information that can 
     ]
 }       
 ```
-
 </details>
 
 
-| ATTRIBUTE | TYPE | DESCRIPITON |
+| ATTRIBUTE | TYPE | DESCRIPTION |
 | ----------- | ----- | ----- |
 | addresses | Array | A list of customer addresses that can be used for billing or shipping. This attribute is deprecated. To retrieve all available addresses, include the `addresses` resource in your request. |
 | paymentProviders | Array | Payment providers that can be used for the checkout. This attribute is deprecated. To retrieve all the available payment methods, include the `payment-methods` resource in your request. |  

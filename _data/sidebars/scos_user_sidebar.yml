@@ -1845,34 +1845,19 @@ entries:
       - "202005.0"
   - title: Technology Partners
     nested:
+    include_versions:
+    - "202108.0"
     - title: Order Management (ERPOMS)
       nested:
       - title: Tradebyte
         url: /docs/scos/user/technology-partners/order-management-erpoms/tradebyte.html
       - title: NEKOM CC GmbH
         url: /docs/scos/user/technology-partners/order-management-erpoms/nekom-cc-gmbh.html
-        include_versions:
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-      - title: Punchout Catalogs
-        url: /docs/scos/user/technology-partners/order-management-erpoms/punchout-catalogs.html
-        include_versions:
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
       - title: Punchout Catalogs
         url: /docs/scos/user/technology-partners/order-management-erpoms/punchout-catalogs/punchout-catalogs.html
-        include_versions:
-        - "202108.0"
         nested:
         - title: Punchout Catalogs overview
           url: /docs/scos/user/technology-partners/order-management-erpoms/punchout-catalogs/punchout-catalogs-overview.html
-          include_versions:
-          - "202108.0"
     - title: Marketplace Integrations
       nested:
       - title: ChannelPilot Marketplace
@@ -1906,9 +1891,6 @@ entries:
       - title: Metaways
         url: /docs/scos/user/technology-partners/hosting-providers/metaways.html
     - title: Marketing & Conversion
-      include_versions:
-      - "202009.0"
-      - "202108.0"
       nested:
       - title: Personalization and cross-selling
         nested:
@@ -1923,9 +1905,6 @@ entries:
         - title: trbo
           url: /docs/scos/user/technology-partners/marketing-and-conversion/personalization-and-cross-selling/trbo.html
       - title: Customer communication
-        include_versions:
-        - "202009.0"
-        - "202108.0"
         nested:
         - title: Episerver
           url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/episerver.html
@@ -1960,13 +1939,6 @@ entries:
         - title: Mindlab
           url: /docs/scos/user/technology-partners/marketing-and-conversion/analytics/mindlab.html
     - title: Payment Partners
-      include_versions:
-      - "201811.0"
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202009.0"
-      - "202108.0"
       nested:
       - title: Afterpay
         url: /docs/scos/user/technology-partners/payment-partners/afterpay.html
@@ -1992,9 +1964,6 @@ entries:
           - title: PayOne - Authorization and Preauthorization Capture Flows
             url: /docs/scos/user/technology-partners/payment-partners/bs-payone/legacy-demoshop-integration/payone-authorization-and-preauthorization-capture-flows.html
           - title: PayOne - Payment methods
-            include_versions:
-            - "202009.0"
-            - "202108.0"
             nested:
             - title: PayOne - Credit Card Payment
               url: /docs/scos/user/technology-partners/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-credit-card-payment.html
@@ -2012,17 +1981,6 @@ entries:
               url: /docs/scos/user/technology-partners/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-paypal-payment.html
             - title: PayOne - PayPal Express Checkout Payment
               url: /docs/scos/user/technology-partners/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-paypal-express-checkout-payment.html
-              include_versions:
-              - "202009.0"
-              - "202108.0"
-          - title: PayOne - PayPal Express Checkout Payment
-            url: /docs/scos/user/technology-partners/payment-partners/bs-payone/legacy-demoshop-integration/payone-paypal-express-checkout-payment.html
-            include_versions:
-            - "201811.0"
-            - "201903.0"
-            - "201907.0"
-            - "202001.0"
-            - "202005.0"
           - title: PayOne - Facade
             url: /docs/scos/user/technology-partners/payment-partners/bs-payone/legacy-demoshop-integration/payone-facade.html
           - title: PayOne - Integration into the Legacy Demoshop Project
@@ -2080,9 +2038,6 @@ entries:
       - title: Mindcurv
         url: /docs/scos/user/technology-partners/operational-tools-monitoring-legal-etc/mindcurv.html
     - title: Content Management
-      include_versions:
-      - "202001.0"
-      - "202005.0"
       nested:
       - title: E-Spirit
         url: /docs/scos/user/technology-partners/content-management/e-spirit.html
@@ -2095,47 +2050,24 @@ entries:
       - title: Styla
         url: /docs/scos/user/technology-partners/content-management/styla.html
       - title: CoreMedia
-        include_versions:
-        - "202001.0"
-        - "202005.0"
         nested:
         - title: Coremedia with Templates & Slots
           url: /docs/scos/user/technology-partners/content-management/coremedia/coremedia-with-templates-and-slots.html
-          include_versions:
-          - "202001.0"
-          - "202005.0"
     - title: Product Information (PIMERP)
       nested:
       - title: Contentserv
         url: /docs/scos/user/technology-partners/product-information-pimerp/contentserv.html
       - title: Censhare PIM
         url: /docs/scos/user/technology-partners/product-information-pimerp/censhare-pim.html
-        include_versions:
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
       - title: Akeneo
         url: /docs/scos/user/technology-partners/product-information-pimerp/akeneo.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
         nested:
         - title: Installing and configuring Akeneo
           url: /docs/scos/dev/technology-partner-guides/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html
         - title: Akeneo — Console commands
           url: /docs/scos/dev/technology-partner-guides/product-information-pimerp/akeneo/akeneo-console-commands.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
       - title: Xentral
         url: /docs/scos/user/technology-partners/product-information-pimerp/xentral.html
-      - title: Censhare
-        url: /docs/scos/user/technology-partners/product-information-pimerp/censhare.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
     - title: Shipment
       nested:
       - title: Paqato
@@ -2145,11 +2077,7 @@ entries:
       - title: Seven Senders
         url: /docs/scos/user/technology-partners/shipment/seven-senders.html
     - title: Taxes
-      include_versions:
-      - "202108.0"
       nested:
       - title: Avalara
         url: /docs/scos/user/technology-partners/taxes/avalara.html
-        include_versions:
-        - "202108.0"
 ...

@@ -5,19 +5,13 @@ last_updated: Mar 23, 2022
 template: concept-topic-template
 ---
 
-## A private API is used on the project level
+Modules have public and private APIs. While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility is not guaranteed in the private API. For example, if you use a core method on the project level, and it is updated or removed, it can cause unexpected issues during updates.
 
-Modules have public and private APIs. More information you can get here - https://docs.spryker.com/docs/scos/dev/architecture/module-api/definition-of-module-api.html
+For more information about module APIs, see [Definition of Module API](/docs/scos/dev/architecture/module-api/definition-of-module-api.html).
 
-{% info_block infoBox "" %}
-While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility is not guaranteed in the private API.
-{% endinfo_block %}
+## Example of code that causes the upgradability error
 
-For example, if you use a core method on the project level, and it is updated or removed, it can cause unexpected issues during updates.
-
-#### Example of code that causes the upgradability error
-
-CustomerFacade uses the `createCustomerReader` and `getCustomerCollection` (private API).
+`CustomerFacade` uses the `createCustomerReader` and `getCustomerCollection`. This is a  private API.
 
 ```php
 namespace Pyz\Zed\Customer\Business;
@@ -41,7 +35,7 @@ class CustomerFacade extends SprykerCustomerFacade implements CustomerFacadeInte
 }
 ```
 
-#### Example related error in the Evaluator output
+## Example of related error in the Evaluator output
 
 ```bash
 ------------------------------------------------------------------------------------------------------------------------
@@ -50,22 +44,22 @@ Pyz\Zed\Customer\Business\CustomerFacade
 ************************************************************************************************************************
 ```
 
-#### Example to resolve the Evaluator check error
+## Example of resolving the Evaluator check error
 
 To resolve the error provided in the example, do the following steps:
-1. [Recommended] Check if it is possible to extend functionality with "Configuration" strategy (link to "Configuration" - https://docs.spryker.com/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#configuration)
-2. [Recommended] Check if it is possible to extend functionality with "Plug and Play" strategy (link to "Plug and Play" - https://docs.spryker.com/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#plug-and-play)
-3. [Recommended] Check if it is possible to extend functionality with "Project Modules" strategy (link to "Project Modules") - https://docs.spryker.com/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules
-4. [Not Recommended] Replace the private API core functionality with their copies on the project level and use a unique naming for it.
-4.1. [Not Recommended] Add new unique method in the factory to fetch the business model.
-4.2. [Not Recommended] Add new unique method in business model.
+1. Recommended: Check if it's possible to extend the functionality using the [Configuration strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#configuration).
+2. Recommended: Check if it's possible to extend the functionality using the [Plug and Play strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#plug-and-play).
+3. Recommended: Check if it is possible to extend functionality with "Project Modules" strategy (link to "Project Modules") - https://docs.spryker.com/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules
+4. Not recommended: Replace the private API core functionality with their copies on the project level and use a unique naming for it:
+    1. Not recommended: Add new unique method in the factory to fetch the business model.
+    2. Not Recommended: Add new unique method in business model.
 
 {% info_block infoBox "" %}
-Meanwhile, we are working on introducing a way to report such cases and add more extension points in the core.
+We are working on introducing a way to report such cases and add more extension points in the core.
 {% endinfo_block %}
 
-{% info_block infoBox "" %}
-To make your code unique you can use prefixes. F.e. "Pyz" or {Project_mane}
+{% info_block infoBox "Making your code unique" %}
+To make your code unique, use prefixes like `pyz` or your project name.
 {% endinfo_block %}
 
 ```php

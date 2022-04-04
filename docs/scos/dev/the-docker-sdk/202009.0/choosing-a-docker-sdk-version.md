@@ -1,7 +1,7 @@
 ---
 title: Choosing a Docker SDK version
 description: Learn how to choose a versioning approach and configure a particular version of Docker SDK for your project.
-last_updated: May 25, 2021
+last_updated: Apr 03, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/choosing-a-docker-sdk-version
 originalArticleId: fd417f8f-b72a-4d8c-a134-8230ea1a0dbc
@@ -20,6 +20,12 @@ You should use a particular Docker SDK version for:
 - Consistency: the same Docker SDK version is used in development, integration, and deployment pipelines.
 - Control: control when and how you switch the Docker SDK version of the project.
 - Stability: avoid unexpected behavior in pipelines.
+
+{% info_block errorBox "In the cloud" %}
+
+Setting a Docker SDK version is required when deploying code to Spryker Cloud Commerce OS.
+
+{% endinfo_block %}
 
 ## Choosing a versioning approach
 
@@ -56,6 +62,13 @@ Depending on your project requirements, choose one of the following ways to conf
 * Reference file:
   * To use a branch as a versioning approach.
   * When Git Submodule is not supported.
+
+{% info_block infoBox "Cloud deployment" %}
+
+Currently, the deployment pipelines in Spryker Cloud Commerce OS do not support the Git submodule method.
+A reference file must be used.
+
+{% endinfo_block %}
 
 ### Configuring git submodule
 

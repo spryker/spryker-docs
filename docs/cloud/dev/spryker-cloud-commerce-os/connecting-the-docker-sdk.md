@@ -16,16 +16,15 @@ Spryker Docker SDK is a tool used to set up docker environments for Spryker proj
 This is an optional tool locally, but we highly recommend installing it to make your local environment similar to the one in Spryker Cloud Commerce OS.
 
 
-## Select a Docker SDK Version
-Before integrating the Docker SDK, analyze your project's architecture needs and determine which version of it you will be using.
-Refer to [Choosing a Docker SDK version](/docs/choosing-a-docker-sdk-version) for more information.
+## Select a Docker SDK version
 
-You must create a version reference file (.git.docker) for your project before deploying your code to the cloud.
+Analyze your project's architecture and determine the Docker SDK version to use. 
 
-{% info_block errorBox "Using Docker SDK forks" %}
+Before deploying code to the cloud, you must define the Docker SDK version in `.git.docker`. For instructions, see [Choosing a Docker SDK version](/docs/scos/dev/the-docker-sdk/choosing-a-docker-sdk-version.html).
 
-Spryker Cloud Commerce OS does not currently support forks of spryker/docker-sdk.
-Your project's code must be compatible with the main branch for successful deployment.
+{% info_block infoBox "Forking the Docker SDK" %}
+
+Spryker Cloud Commerce OS does not support forks of the Docker SDK. Your project's code must be compatible with the Docker SDK's main branch for a successful deployment. 
 
 {% endinfo_block %}
 

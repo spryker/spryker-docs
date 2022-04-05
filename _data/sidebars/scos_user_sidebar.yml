@@ -694,11 +694,6 @@ entries:
         - title: Managing warehouses
           url: /docs/scos/user/back-office-user-guides/administration/warehouses/managing-warehouses.html
       - title: Payment methods
-        include_versions:
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
         nested:
         - title: Managing payment methods
           url: /docs/scos/user/back-office-user-guides/administration/payment-methods/managing-payment-methods.html
@@ -720,102 +715,18 @@ entries:
         nested:
         - title: Managing tax sets
           url: /docs/scos/user/back-office-user-guides/administration/tax-sets/managing-tax-sets.html
-        - title: Taxes
-          url: /docs/scos/user/back-office-user-guides/administration/tax-rates/taxes.html
-          include_versions:
-          - "201811.0"
-          - "201903.0"
-          - "201907.0"
-          - "202001.0"
-          - "202005.0"
-        - title: References
-          include_versions:
-          - "201811.0"
-          - "201903.0"
-          - "201907.0"
-          - "202001.0"
-          - "202005.0"
-          nested:
-          - title: Reference information - Tax Sets
-            url: /docs/scos/user/back-office-user-guides/administration/tax-sets/references/reference-information-tax-sets.html
-            include_versions:
-            - "201811.0"
-            - "201903.0"
-            - "201907.0"
-            - "202001.0"
-            - "202005.0"
       - title: Thresholds
-        include_versions:
-        - "201903.0"
-        - "201907.0"
-        - "202001.0"
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
         nested:
         - title: Managing global thresholds
           url: /docs/scos/user/back-office-user-guides/administration/thresholds/managing-global-thresholds.html
-          include_versions:
-          - "201903.0"
-          - "201907.0"
-          - "202001.0"
-          - "202005.0"
-          - "202009.0"
-          - "202108.0"
         - title: Managing merchant order thresholds
           url: /docs/scos/user/back-office-user-guides/administration/thresholds/managing-merchant-order-thresholds.html
-          include_versions:
-          - "201903.0"
-          - "201907.0"
-          - "202001.0"
-          - "202005.0"
-          - "202009.0"
-          - "202108.0"
         - title: Managing threshold settings
           url: /docs/scos/user/back-office-user-guides/administration/thresholds/managing-threshold-settings.html
-          include_versions:
-          - "201903.0"
-          - "201907.0"
-          - "202001.0"
-          - "202005.0"
-          - "202009.0"
-          - "202108.0"
-        - title: Threshold
-          url: /docs/scos/user/back-office-user-guides/administration/thresholds/threshold.html
-          include_versions:
-          - "201903.0"
-          - "201907.0"
-          - "202001.0"
-          - "202005.0"
-          - "202009.0"
-        - title: References
-          include_versions:
-          - "201903.0"
-          - "201907.0"
-          - "202001.0"
-          - "202005.0"
-          - "202009.0"
-          nested:
-          - title: Reference information - Threshold
-            url: /docs/scos/user/back-office-user-guides/administration/thresholds/references/reference-information-threshold.html
-            include_versions:
-            - "201903.0"
-            - "201907.0"
-            - "202001.0"
-            - "202005.0"
-            - "202009.0"
       - title: MIME type settings
         nested:
         - title: Managing MIME type settings
           url: /docs/scos/user/back-office-user-guides/administration/mime-type-settings/managing-mime-type-settings.html
-    - title: General Back Office
-      url: /docs/scos/user/back-office-user-guides/general-back-office-overview.html
-      include_versions:
-      - "201811.0"
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
   - title: Technology Partners
     nested:
     include_versions:

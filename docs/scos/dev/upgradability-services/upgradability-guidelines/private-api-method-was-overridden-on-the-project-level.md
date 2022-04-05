@@ -1,5 +1,5 @@
 ---
-title: Method under private API is overridden on the project level
+title: Private API method was overridden on the project level
 description: Reference information for evaluator and upgrader tools.
 last_updated: Mar 23, 2022
 template: concept-topic-template
@@ -88,5 +88,3 @@ class PyzCategoryImageEntityManager extends SprykerCategoryImageEntityManager
 ```
 ---
 After the fix re-evaluate the code. The same error shouldn’t be returned.
-
-

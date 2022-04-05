@@ -5,8 +5,6 @@ last_updated: Mar 23, 2022
 template: concept-topic-template
 ---
 
-## Private API was extended
-
 Modules have public and private APIs. More information you can get here - https://docs.spryker.com/docs/scos/dev/architecture/module-api/definition-of-module-api.html
 
 {% info_block infoBox "" %}
@@ -132,7 +130,7 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
 
 #### Example 3 to resolve the Evaluator check error
 
-To resolve this issue the dependency provider's method should be renamed. 
+To resolve this issue the dependency provider's method should be renamed.
 
 ```php
 namespace Pyz\Yves\CheckoutPage;
@@ -153,7 +151,7 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
 {% info_block infoBox "" %}
 
 Public API in Dependency provider.
-The one exception exist for the protected methods in dependency providers. 
+The one exception exist for the protected methods in dependency providers.
 That is methods that's returns array of plugins.
 
 <details open>
@@ -168,4 +166,3 @@ That is methods that's returns array of plugins.
 </details>
 
 {% endinfo_block %}
-

@@ -1,5 +1,5 @@
 ---
-title: A private API is used on the project level
+title: Private API is used on the project level
 description: Reference information for evaluator and upgrader tools.
 last_updated: Mar 23, 2022
 template: concept-topic-template

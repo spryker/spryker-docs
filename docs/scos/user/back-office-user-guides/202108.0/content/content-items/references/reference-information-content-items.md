@@ -17,11 +17,11 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/content/content-items/editing-content-items.html
 ---
 
-This topic contains the reference information for working with content items in **Content Management** > **Content Items** section.
+This topic contains the reference information for working with content items in **Content Management&nbsp;<span aria-label="and then">></span> Content Items** section.
 
 ## Content items page
 
-In the *Content Items* section, you see the following:
+In the **Content Items** section, you see the following:
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
@@ -33,7 +33,7 @@ In the *Content Items* section, you see the following:
 | **Updated** | The date when a content item was last updated.|
 | **Actions** | A set of actions that can be performed on a content item. |
 
-By default, the latest created content item is displayed and sorted by the _Name_ column on the grid of content items.
+By default, the latest created content item is displayed and sorted by the **Name** column on the grid of content items.
 
 On this page, you can:
 * Create a new content item.
@@ -60,7 +60,7 @@ The following table describes the attributes on the pages:
 ## Create and edit abstract product list content item page
 
 The following table describes the attributes on the pages:
- * *CreateContent Item: Abstract Product List*
+ * *Create Content Item: Abstract Product List*
  * *Edit Content Item: Abstract Product List*
 
 | ATTRIBUTE | DESCRIPTION |
@@ -68,7 +68,7 @@ The following table describes the attributes on the pages:
 | **Name** | The name for an Abstract Product List content item. |
 | **Description** | Descriptive information on what an Abstract Product List is used for. |
 | **Top table** |  A table that displays products included in an Abstract Product List content item.|
-| **Actions** | A set of actions that can be performed on an Abstract Product List content item:<ul><li>**Move Down** or **Move Up** allows you to change the order of products in the list.</li><li>**Delete** allows removing the product from the list.</li></ul>|
+| **Actions** | A set of actions that can be performed on an Abstract Product List content item:<ul><li>**Move Down** or **Move Up** lets you change the order of products in the list.</li><li>**Delete** allows removing the product from the list.</li></ul>|
 | **Add more products (bottom table)**  | A table that contains all available products stored in the database. |
 | **ID** | A sequence number. |
 | **SKU** | A unique identifier of the product. |
@@ -81,7 +81,7 @@ The following table describes the attributes on the pages:
 ## Create and edit product set content item page
 
 The following table describes the attributes on the pages:
- * *CreateContent Item: Product Set*
+ * *Create Content Item: Product Set*
  * *Edit Content Item: Product Set*
 
 | ATTRIBUTE | DESCRIPTION |
@@ -100,7 +100,7 @@ The following table describes the attributes on the pages:
 ## Create and edit file list content item page
 
 The following table describes the attributes on the pages:
- * *CreateContent Item: File List*
+ * *Create Content Item: File List*
  * *Edit Content Item: File List*
 
 | ATTRIBUTE | DESCRIPTION |
@@ -108,7 +108,7 @@ The following table describes the attributes on the pages:
 | **Name** | The name for a File List content item. |
 | **Description** | Descriptive information on what a File List content item is used for. |
 | **Selected Files** | A top table that displays the selected files. |
-| **Actions** | A set of actions you can perform on a File List content item:<ul><li>**Move Down** or **Move Up** allows you to change the order of files in the list. </li><li>**Delete** allows removing the selected file.</li></ul> |
+| **Actions** | A set of actions you can perform on a File List content item:<ul><li>**Move Down** or **Move Up** lets you change the order of files in the list. </li><li>**Delete** allows removing the selected file.</li></ul> |
 | **Available Files** | A bottom table that displays a list of files uploaded to the File Manager. |
 | **ID** | A sequence number. |
 | **File Name** |A file name.  |

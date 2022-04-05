@@ -9,7 +9,7 @@ This document describes how to edit shipments in the Back Office.
 ## Prerequisites
 
 To start working with order shipments, do the following:
-1. Go to **Sales** > **Orders**.
+1. Go to **Sales&nbsp;<span aria-label="and then">></span> Orders**.
 2. Next to the order you want to manage the shipment of, click **View**.
     This opens the **Order Overview** page.
 
@@ -48,7 +48,7 @@ The following table describes the attributes you enter and select when editing b
 
 | ATTRIBUTE | DESCRIPTION |
 |---|---|
-| DELIVERY ADDRESS | The address that the customer selected to deliver the items to. Also allows to add a new address. |
+| DELIVERY ADDRESS | The address that the customer selected to deliver the items to. Also lets the customer add a new address. |
 | SALUTATION | Customer's salutation. |
 | FIRST NAME | Customer's first name. |
 | MIDDLE NAME | Customer's middle name. |

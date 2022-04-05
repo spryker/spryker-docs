@@ -21,7 +21,7 @@ This topic describes how to manage category filters.
 
 ## Prerequisites
 
-To start working with category filters, go to **Merchandising** > **Category Filters**.
+To start working with category filters, go to **Merchandising&nbsp;<span aria-label="and then">></span> Category Filters**.
 To set up a category filter, you need to have a filter preference setup in the *Merchandising* > *Filter Preferences* section.
 
 {% info_block errorBox "Note" %}

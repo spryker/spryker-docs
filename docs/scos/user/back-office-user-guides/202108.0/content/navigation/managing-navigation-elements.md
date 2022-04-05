@@ -16,22 +16,22 @@ This topic describes how to manage [navigation elements](/docs/scos/user/feature
 
 ## Prerequisites
 
-To start working with navigation elements, go to **Content** > **Navigation**.
+To start working with navigation elements, go to **Content&nbsp;<span aria-label="and then">></span> Navigation**.
 
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Creating a navigation element
 
-To create a navigation element:
-1. On the *Overview of Navigation Elements* page, click **+Create Navigation Element**.
-2. On the *Create Navigation Element* page, enter **Name** and **Key**.
+To create a navigation element, do the following:
+1. On the **Overview of Navigation Elements** page, click **+Create Navigation Element**.
+2. On the **Create Navigation Element** page, enter **Name** and **Key**.
 3. Select the **Active** checkbox if you want to activate the navigation element.
 4. Click **Save**.
-This takes you to the *Overview of Navigation Elements* page. You can see the message about the successful creation of the navigation element. The created navigation element is displayed in *List of navigation elements*.
+The **Overview of Navigation Elements** page opens. You can see the message about the successful creation of the navigation element. The created navigation element is displayed in **List of navigation elements**.
 
 ### Reference information: Creating a navigation element
 
-On the *Overview of Navigation Elements* page, you see the following:
+On the **Overview of Navigation Elements** page, you see the following:
 * Navigation elements: the number, name, key, and status.
 * Actions that you can do to a navigation element.
 * Navigation tree displaying all the navigation nodes of a selected navigation element.
@@ -44,7 +44,7 @@ On the *Overview of Navigation Elements* page, you see the following:
 | Valid from and Valid to | Navigation node is displayed on the Storefront between the dates defined in these fields, inclusively. |
 | Active | Checkbox to define if the navigation node is active. Inactive navigation nodes and their sub-nodes are not displayed on the Storefront.  |
 
-The following table describes attributes on the *Create Navigation Element* page.
+The following table describes attributes on the **Create Navigation Element** page.
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
@@ -54,29 +54,29 @@ The following table describes attributes on the *Create Navigation Element* page
 
 ## Creating a navigation node
 
-To create a child node for a navigation element:
-1. In the *List of navigation elements*, select the navigation element you want to create a child node for.
-2. In the *Create child node* section:
+To create a child node for a navigation element, do the following:
+1. In the **List of navigation elements**, select the navigation element you want to create a child node for.
+2. In the **Create child node** section:
     1. Select the node **Type**. To learn about the node types, see [Navigation node types](#navigation-node-types).
     2. Enter the required fields per each locale.
     3. Select **Valid from** and **Valid to** dates.
     4. Select the **Active** checkbox if you want to activate the child node.
 3. Click **Save**.
 
-You can see the message about the successful navigation node creation. In the *Navigation tree* section, the created navigation node is displayed in the navigation tree.
+You can see the message about the successful navigation node creation. In the **Navigation tree** section, the created navigation node is displayed in the navigation tree.
 
-To create a child node for another navigation node:
-1. In *List of navigation elements*, select the navigation element you want to create a child node for.
-2. In the *Navigation tree* section, select the navigation node you want to create a child node for.
-3. In the *Edit node* section, click **Create child node**.
-4. In the *Create child node* section:
+To create a child node for another navigation node, do the following:
+1. In **List of navigation elements**, select the navigation element you want to create a child node for.
+2. In the **Navigation tree** section, select the navigation node you want to create a child node for.
+3. In the **Edit node** section, click **Create child node**.
+4. In the **Create child node** section:
     1. Select the node **Type**.  To learn about the node types, see [Navigation node types](#navigation-node-types).
     2. Enter the required fields per each locale.
     3. Select **Valid from** and **Valid to** dates.
     4. Select the **Active** checkbox if you want to activate the child node.
 5. Click **Save**.
 
-You can see the message about the successful navigation node creation. In the *Navigation tree* section, the created navigation node is displayed in the navigation tree.
+You can see the message about the successful navigation node creation. In the **Navigation tree** section, the created navigation node is displayed in the navigation tree.
 
 ### Reference information: Creating a navigation node
 
@@ -96,8 +96,8 @@ You can create the following node types:
 | --- | --- |
 |Label<br>![Label](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Navigation/Navigation+Node+Types/label.png)   | Labels do not link to any specific URL; they are used for grouping other items accessed from the menu.|
 | Category<br>![Category](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Navigation/Navigation+Node+Types/category.png) | Category is used to link an existing category you have to the navigation node. A category must exist in the Category section. |
-|CMS Page<br>![CMS page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Navigation/Navigation+Node+Types/cms-page.png)| CMS page can be assigned to a node. A CMS page must exist in the **Content** > **Pages** section.|
-| External URL<br>![External URL](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Navigation/Navigation+Node+Types/external-url.png) |External URL is a link that is typically opened in a new tab. |
+|CMS Page<br>![CMS page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Navigation/Navigation+Node+Types/cms-page.png)| CMS page can be assigned to a node. A CMS page must exist in the **Content&nbsp;<span aria-label="and then">></span> Pages** section.|
+| External URL<br>![External URL](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Navigation/Navigation+Node+Types/external-url.png) |External URL is a link that is typically opened on a new tab. |
 |Link<br>![Link](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Navigation/Navigation+Node+Types/link.png)   | Link to internal pages, i.e., login, registration, etc. |
 Depending on the type of the node, there is various node related information that can be managed:
 * Localized title (**all types of nodes**): This is the name of the node exactly how it will be displayed in the store (for example, if you link a category to your node, the node name can be even different from the name of the category).
@@ -110,10 +110,10 @@ Depending on the type of the node, there is various node related information tha
 
 ## Editing a navigation node
 
-To edit a navigation node:
-1. In *List of navigation elements*, select the navigation element owning the navigation node you want to edit.
-2. In the *Navigation tree* section, select the navigation node you want to edit.
-3. In the *Edit node* section:
+To edit a navigation node, do the following:
+1. In **List of navigation elements**, select the navigation element owning the navigation node you want to edit.
+2. In the **Navigation tree** section, select the navigation node you want to edit.
+3. In the **Edit node** section:
     1. Select the node **Type**. To learn about the node types, see [Navigation node types](#navigation-node-types).
     2. Enter the required fields per each locale.
     3. Select **Valid from** and **Valid to** dates.
@@ -133,16 +133,16 @@ You can see the message about the successful navigation node update.
 
 ## Deleting a navigation node
 
-To delete a navigation node:
-1. In *List of navigation elements*, select the navigation element owning the navigation node you want to delete.
-2. In the *Navigation tree* section, select the node you want to delete.
-3. In the *Edit node* section, select **Delete selected node**.
-You can see the message about the successful navigation node deletion. In the *Navigation tree* section, the navigation node is no longer displayed.
+To delete a navigation node, do the following:
+1. In **List of navigation elements**, select the navigation element owning the navigation node you want to delete.
+2. In the **Navigation tree** section, select the node you want to delete.
+3. In the **Edit node** section, select **Delete selected node**.
+You can see the message about the successful navigation node deletion. In the **Navigation tree** section, the navigation node is no longer displayed.
 
 ## Reordering nodes
 
-To reorder nodes:
-1. In the *Navigation tree* section, drag and drop elements in the tree.
+To reorder nodes, do the following:
+1. In the **Navigation tree** section, drag and drop elements in the tree.
 2. Click **Save order**.
 You can see the message about the successful navigation tree update.
 
@@ -150,13 +150,13 @@ You can see the message about the successful navigation tree update.
 
 ## Editing, deactivating, and activating a navigation element
 
-To edit, activate, or deactivate a navigation element:
-1. In the *List of navigation elements*, click **Edit** next to the navigation element you want to edit.
-2. On the *Edit Navigation Element: [Element Number]* page:
+To edit, activate, or deactivate a navigation element, do the following:
+1. In the **List of navigation elements**, click **Edit** next to the navigation element you want to edit.
+2. On the **Edit Navigation Element: _[Element Number]_** page:
     1. Edit the **Name**.
     2. Select or clear the **Active** checkbox to activate or deactivate the navigation element.
 3. Click **Save**.
-This takes you to the *Overview of Navigation Elements* page.  You can see the message about the successful navigation element update. The changes are reflected in the *List of navigation elements*.
+This takes you to the **Overview of Navigation Elements** page.  You can see the message about the successful navigation element update. The changes are reflected in the **List of navigation elements**.
 
 ### Reference information: Editing, deactivating, and activating a navigation element
 
@@ -169,22 +169,22 @@ This takes you to the *Overview of Navigation Elements* page.  You can see the m
 ## Deleting a navigation element
 
 To delete a navigation element:
-1. In the *List of navigation elements*, click **Delete** next to the navigation element you want to delete.
-2. On the *Delete Navigation* page, select **Yes, delete this navigation**.
-This takes you to the *Overview of Navigation Elements* page. You can see the message about the successful navigation element deletion. In the *List of navigation elements*, the navigation element is no longer displayed.
+1. In the **List of navigation elements**, click **Delete** next to the navigation element you want to delete.
+2. On the **Delete Navigation** page, select **Yes, delete this navigation**.
+This takes you to the **Overview of Navigation Elements** page. You can see the message about the successful navigation element deletion. In the **List of navigation elements**, the navigation element is no longer displayed.
 
 ## Duplicating a navigation element
 
 To duplicate a navigation element:
-1. In the *List of navigation elements*, click **Duplicate** next to the navigation element you want to duplicate.
-2. On the *Duplicate Navigation Element* page, enter **Name** and **Key**.
+1. In the **List of navigation elements**, click **Duplicate** next to the navigation element you want to duplicate.
+2. On the **Duplicate Navigation Element** page, enter **Name** and **Key**.
 3. Click **Save**.
-This takes you to the *Overview of Navigation Elements* page. You can see the message about the successful navigation element duplication. The duplicated element is displayed in the *List of navigation elements*.
+This takes you to the **Overview of Navigation Elements** page. You can see the message about the successful navigation element duplication. The duplicated element is displayed in the **List of navigation elements**.
 
 **Tips and tricks**
 
-* Filter the navigation elements in the *List of navigation elements* by entering a name or a key in the search bar above the table.
-* In the *Navigation tree* section, filter the navigation nodes by entering a navigation node name in the search.
+* Filter the navigation elements in the **List of navigation elements** by entering a name or a key in the search bar above the table.
+* In the **Navigation tree** section, filter the navigation nodes by entering a navigation node name in the search.
 
 **What's next?**
 

@@ -19,7 +19,7 @@ This topic describes how you manage product relations.
 
 ## Prerequisites
 
-To start working with product relations, go to **Merchandising** > **Product Relations**.
+To start working with product relations, go to **Merchandising&nbsp;<span aria-label="and then">></span> Product Relations**.
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 
@@ -117,7 +117,7 @@ So the place where a similar product will appear is defined by the relation type
 ## Deleting product relations
 
 To delete a product relation:
-1. In the *Actions* column, click **Delete** next to the product relation you want to delete.
+1. In the **Actions** column, click **Delete** next to the product relation you want to delete.
 2. On the *Delete Product Relation* page, click:
     * **No, I want to keep this product relation** to cancel the deletion.
     * **Yes, delete this product relation** to confirm the deletion. This deletes the product relation and redirects you to the updated list of product relations.

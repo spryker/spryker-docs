@@ -21,7 +21,7 @@ This topic describes how to manage search preferences.
 
 ## Prerequisites
 
-To start working with search preferences, go to **Merchandising** > **Search Preferences** section.
+To start working with search preferences, go to **Merchandising&nbsp;<span aria-label="and then">></span> Search Preferences** section.
 
 When adding a search preference, the **Attribute Key** value is taken from the **Product Attributes > Specific Attribute** entity. Make sure that you are populating the field with an existing attribute key of an attribute assigned to a product; otherwise, the search result will be blank in the online store.
 
@@ -41,7 +41,7 @@ This creates a new non-super attribute and registers it in the system, so your c
 
 To edit a search preference:
 1. In the *Search Preferences* table, find an attribute you want to change the search preferences for.
-2. In the _Actions_ column of the attribute, click **Edit** .
+2. In the **Actions** column of the attribute, click **Edit** .
 3. On the *Edit search preferences* page, you can define how the attribute will behave for search by specifying _Yes_ or _No_ for the **Full text**, **Full text boosted**, **Suggestion terms**, or **Completion terms** fields.
 4. Click **Save**.
 5. On the *Search Preferences* page, click **Synchronize search preferences** for your changes to take effect.
@@ -140,7 +140,7 @@ Currently, the feature has the following functional constraints which are going 
 When you have some or all search preferences activated, you can deactivate individual search preferences, or deactivate them all in bulk.
 
 To deactivate individual search preferences of an attribute, do the following:
-1. Click **Edit** in the _Actions_ column for a respective attribute.
+1. Click **Edit** in the **Actions** column for a respective attribute.
 2. On the *Edit search preferences* page, set a specific search preference type to **No**.
 
-To deactivate all search preferences for specific attributes at once,  in the _Actions_ column of an attribute for which you want to disable all search preferences, click **Deactivate all**.
+To deactivate all search preferences for specific attributes at once,  in the **Actions** column of an attribute for which you want to disable all search preferences, click **Deactivate all**.

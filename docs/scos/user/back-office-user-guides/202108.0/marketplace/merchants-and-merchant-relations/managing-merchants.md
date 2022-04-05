@@ -32,7 +32,7 @@ In a non-marketplace environment, the Merchant record is the record of the compa
 ## Editing a merchant
 
 To edit a merchant:
-1. On the **Overview of Merchants** page, you click **Edit** in the _Actions_ column for a specific merchant.
+1. On the **Overview of Merchants** page, you click **Edit** in the **Actions** column for a specific merchant.
 2. On the **Edit Merchant** page, change the merchant name and click **Save**.
 
 ## Deactivating a merchant

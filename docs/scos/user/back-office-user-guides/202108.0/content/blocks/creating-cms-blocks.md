@@ -25,7 +25,7 @@ If you want to create a CMS block for [email](/docs/scos/user/features/{{page.ve
 
 ## Prerequisites
 
-To start working with CMS blocks, go to **Content** > **Blocks**.
+To start working with CMS blocks, go to **Content&nbsp;<span aria-label="and then">></span> Blocks**.
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 
@@ -33,8 +33,8 @@ Review the reference information before you start, or look up the necessary info
 
 To create a CMS block:
 
-1. On the *Overview of CMS Blocks* page,  click  **Create block** in the top right corner.
-2. On the *Create CMS Block* page, enter the block details:
+1. On the **Overview of CMS Blocks** page,  click  **Create block** in the top right corner.
+2. On the **Create CMS Block** page, enter the block details:
 
 * Store relation
 * Template
@@ -53,12 +53,12 @@ Templates are project-specific and are usually created by a developer and a busi
 
 {% endinfo_block %}
 
-3. To save the changes, click **Save**. This will successfully create a block and take you to the *Edit Block Glossary* page.
+3. To save the changes, click **Save**. This will successfully create a block and take you to the **Edit Block Glossary** page.
 
 
 ### Reference information: Creating a CMS block
 
-The following table describes the attributes on the *Overview of CMS Blocks* page.
+The following table describes the attributes on the **Overview of CMS Blocks** page.
 
 | ATTRIBUTE | DESCRIPTION: REGULAR CMS BLOCK | DESCRIPTION:  EMAIL CMS BLOCK |
 | --- | --- | --- |
@@ -72,10 +72,10 @@ The following table describes the attributes on the *Overview of CMS Blocks* pag
 On this page, you can also:
 
 * Switch to the page where you can create a new CMS block.
-* Sort blocks by *Block Id*, *Name*, *Template*, and *Status*.
-* Filter content items by *Block Id*, *Name*, and *Template*.
+* Sort blocks by **Block Id**, **Name**, **Template**, and **Status**.
+* Filter content items by **Block Id**, **Name**, and **Template**.
 
-The following table describes the attributes on the *Create CMS Block* page.
+The following table describes the attributes on the **Create CMS Block** page.
 
 | ATTRIBUTE  | DESCRIPTION: REGULAR CMS BLOCK | DESCRIPTION: EMAIL CMS BLOCK |
 | --- | --- | --- |

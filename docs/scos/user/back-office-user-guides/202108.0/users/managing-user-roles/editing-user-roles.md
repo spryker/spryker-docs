@@ -8,7 +8,7 @@ This document describes how to edit user roles in the Back Office.
 
 ## Prerequisites
 
-To start working with user roles, go to **Users** > **User Roles**.
+To start working with user roles, go to **Users&nbsp;<span aria-label="and then">></span> User Roles**.
 
 Review the [reference information](#reference-information-editing-roles) before you start, or look up the necessary information as you go through the process.
 

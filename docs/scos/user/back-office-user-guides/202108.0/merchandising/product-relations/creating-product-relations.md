@@ -19,7 +19,7 @@ This topic describes how you create a product relation.
 
 ## Prerequisites
 
-To start working with product relations, go to **Merchandising** > **Product Relations**.
+To start working with product relations, go to **Merchandising&nbsp;<span aria-label="and then">></span> Product Relations**.
 
 ## Creating product relations
 

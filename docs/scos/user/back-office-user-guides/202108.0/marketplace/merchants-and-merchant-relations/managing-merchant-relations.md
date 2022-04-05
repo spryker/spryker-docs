@@ -16,7 +16,7 @@ related:
 ---
 
 This article describes how to manage merchant relations.
-To start working with merchant relations, go to **Marketplace** > **Merchant Relations**.
+To start working with merchant relations, go to **Marketplace&nbsp;<span aria-label="and then">></span> Merchant Relations**.
 
 ## Prerequisites
 
@@ -46,10 +46,10 @@ Once the company is selected, the table is sorted to display only the merchant r
 ## Editing a merchant relation
 
 To edit a merchant relation:
-1. On the *Overview of Merchant relation* page in the _Actions_ column, click **Edit** for a specific merchant relation.
+1. On the *Overview of Merchant relation* page in the **Actions** column, click **Edit** for a specific merchant relation.
 2. On the *Edit Merchant Relation* page, you can update only the **Business unit owner** and **Assigned business units** values.
 3. Once done, click **Save**.
 
 ## Deleting a merchant relation
 
-To delete a merchant relation, click **Delete** in the _Actions_ column for a specific merchant relation on the *Overview of Merchant Relation* page.
+To delete a merchant relation, click **Delete** in the **Actions** column for a specific merchant relation on the *Overview of Merchant Relation* page.

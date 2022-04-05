@@ -19,7 +19,7 @@ This article describes how to manage customer groups.
 
 ## Prerequisites
 
-To start working with customer groups, navigate to the **Customers** > **Customer Groups** section.
+To start working with customer groups, navigate to the **Customers&nbsp;<span aria-label="and then">></span> Customer Groups** section.
 
 {% info_block infoBox %}
 
@@ -29,28 +29,28 @@ Out-of-the-box, there are no connections between customer groups and any other B
 
 ## Adding a customer group
 
-To add a customer group:
-1. On the *Customer groups* page, in the top right corner, click **Add Customer Group**.
-On the **Add a Customer Group** page there are two tabs: *General Information* and *Customers*.
-3. In the *General Information* tab, enter the name and description for your customer group.
-4. Click **Next** to proceed to the *Customers* tab, or just click on it.
-5. In the *Customers* tab, select the checkboxes in the _select_ column for the customers you want to assign to this group.
+To add a customer group, do the following:
+1. On the **Customer groups** page, in the top right corner, click **Add Customer Group**.
+On the **Add a Customer Group** page there are two tabs: **General Information** and **Customers**.
+3. In the **General Information** tab, enter the name and description for your customer group.
+4. Click **Next** to proceed to the **Customers** tab, or just click on it.
+5. In the **Customers** tab, select the checkboxes in the **We select** column for the customers you want to assign to this group.
     You can select as many customers as needed.
 5. Click **Save**.
 
 ## Editing a customer group
 
-To edit a customer group:
-1. On the *Customer groups* page, click **Edit** in the _Actions_ column for the specific group you want to edit.
+To edit a customer group, do the following:
+1. On the **Customer groups** page, click **Edit** in the **Actions** column for the specific group you want to edit.
 2. Update the needed attributes:
-    * To unassign a user from the group, scroll down to the *Assigned customers* table and clear the checkbox on the left of the user you want to unassign.
+    * To remove a user from the group, scroll down to the **Assigned customers** table and clear the checkbox on the left of the user you want to remove.
     * To reassign all customers, click **De-select All**.
 3.  Click **Save**.
 
 ## Viewing customer groups
 
-To view a customer group, in the _Actions_ column for a specific customer group you want to view, click **View**.
+To view a customer group, in the **Actions** column for a specific customer group you want to view, click **View**.
 
-On this page, you can:
+On this page, you can do the following:
 * Click **Edit Customer Group** in the top right corner and initiate the editing flow.
-* Click **View** in the _Actions_ column for a specific customer assigned to this group. This will take you to the *View Customer* page (the **Customers** > **Customers** section).
+* Click **View** in the **Actions** column for a specific customer assigned to this group. The **View Customer** page (the **Customers&nbsp;<span aria-label="and then">></span> Customers** section) opens.

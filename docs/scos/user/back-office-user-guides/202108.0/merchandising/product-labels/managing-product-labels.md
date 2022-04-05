@@ -19,13 +19,13 @@ This topic describes how to manage product labels.
 
 ## Prerequisites
 
-To start managing product labels, go to **Merchandising** > **Product Labels**.
+To start managing product labels, go to **Merchandising&nbsp;<span aria-label="and then">></span> Product Labels**.
 
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Viewing product labels
 
-To view the details of a product label, in the *Actions* column of the *Overview of Product Labels*, select **View**.
+To view the details of a product label, in the **Actions** column of the *Overview of Product Labels*, select **View**.
 
 On the *View Product Label: [product label name]*  page, the following information is available:
 
@@ -37,7 +37,7 @@ On the *View Product Label: [product label name]*  page, the following informati
 
 **Tips and tricks**
 <br>On the *View Product Label: [product label name]*  page, you can:
-* View the product to which the product label is assigned by clicking **View** in the *Actions* column of the *Applied Products* table. This takes you to the *View Product Abstract: [product abstract SKU]* page.
+* View the product to which the product label is assigned by clicking **View** in the **Actions** column of the *Applied Products* table. This takes you to the *View Product Abstract: [product abstract SKU]* page.
 
 ### Reference information: Viewing product labels
 
@@ -97,7 +97,7 @@ Products for the [dynamic product labels](/docs/scos/user/features/{{page.versio
 {% endinfo_block %}
 
 To edit a product label:
-1. In the _Actions_ column of the *Overview of Product Labels* page, select **Edit**.
+1. In the **Actions** column of the *Overview of Product Labels* page, select **Edit**.
 2. On the *Edit Product Label: {product label name}* page, edit the values.
 3. Select **Save**.
 The page is refreshed to show the message about successful product label update.
@@ -105,7 +105,7 @@ The page is refreshed to show the message about successful product label update.
 
 ## Reference information: Editing product labels
 
-The following table describes the attributes you see, select, or enter while creating and editing a product label in the Settings tab.
+The following table describes the attributes you see, select, or enter while creating and editing a product label on the **Settings** tab.
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |

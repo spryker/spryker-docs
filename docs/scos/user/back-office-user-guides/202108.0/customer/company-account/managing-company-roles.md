@@ -25,7 +25,7 @@ This topic describes the procedures of creating and managing company roles. This
 
 ## Prerequisites
 
-To start managing company roles, navigate to  **Company Account** > **Company Roles**.
+To start managing company roles, navigate to  **Company Account&nbsp;<span aria-label="and then">></span> Company Roles**.
 
 {% info_block warningBox "Note" %}
 
@@ -37,25 +37,25 @@ Review the reference information before you start, or look up the necessary info
 
 ## Creating a company role
 
-To create a new company role:
-1. On the *Overview of Company Roles* page, in the top right corner, click **Add Company User Role**.
-2. In the *Create role* pane, enter the required information:
-     * From the *Company* drop-down list, select a company.
+To create a new company role, do the following:
+1. On the **Overview of Company Roles** page, in the top right corner, click **Add Company User Role**.
+2. In the **Create role** pane, enter the required information:
+     * From the **Company** drop-down list, select a company.
      * In the **Name** field, enter the name of the company role.
 3. Select **Is Default** to apply this role to all new company users automatically.
-4. In the *Unassigned Permissions* section, assign all permissions you need by selecting the checkboxes on the left of each value.
+4. In the **Unassigned Permissions** section, assign all permissions you need by selecting the checkboxes on the left of each value.
 5. Click **Save**.
 
 ## Editing a company role
 
 To edit a company role:
-1. On the *Overview of Company Roles* page in the *Actions* column, click **Edit**  if you want to change the details for a company role.
-2. In the *Update role* pane, update the needed attributes.
+1. On the **Overview of Company Roles** page in the **Actions** column, click **Edit**  if you want to change the details for a company role.
+2. In the **Update role** pane, update the needed attributes.
 
 ## Deleting a company role
 
-To delete a company role:
-1. On the *Overview of Company Roles* page in the _Actions_ column, click **Delete**.
+To delete a company role, do the following:
+1. On the **Overview of Company Roles** page in the **Actions** column, click **Delete**.
 2. On the confirmation page, click **Delete** company role to confirm the action.
    {% info_block infoBox "Info" %}
 

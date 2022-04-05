@@ -21,7 +21,7 @@ You create a product set to improve the customer's shopping experience. You coll
 
 ## Prerequisites
 
-To start working with product sets, go to **Merchandising** > **Product Sets**.
+To start working with product sets, go to **Merchandising&nbsp;<span aria-label="and then">></span> Product Sets**.
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 
@@ -66,7 +66,7 @@ If you do not specify different images for your different stores, the system wil
 {% info_block infoBox "Activating a product set" %}
 
 If you did not select the **Active** checkbox in the *General* tab, your product set is inactive.
-To activate it, click **Activate** on the *View Product Set* page, or select **Activate** in the _Actions_ column of the *Product Sets* page.
+To activate it, click **Activate** on the *View Product Set* page, or select **Activate** in the **Actions** column of the *Product Sets* page.
 
 {% endinfo_block %}
 

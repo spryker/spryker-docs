@@ -8,7 +8,7 @@ This document describes how to view returns of an order in the Back Office.
 
 ## Prerequisites
 
-To start working with orders, go to **Sales** > **Orders**.
+To start working with orders, go to **Sales&nbsp;<span aria-label="and then">></span> Orders**.
 
 Review the [reference information](#reference-information-viewing-returns-of-an-order) before you start, or look up the necessary information as you go through the process.
 

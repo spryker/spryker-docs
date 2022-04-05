@@ -17,7 +17,7 @@ related:
 
 This article describes how to manage filter preferences.
 
-To start working with the filter preferences, navigate to the **Merchandising** > **Filter Settings** section.
+To start working with the filter preferences, navigate to the **Merchandising&nbsp;<span aria-label="and then">></span> Filter Settings** section.
 
 ## Prerequisites
 
@@ -41,7 +41,7 @@ To do the synchronization, in the top right corner of the *Filter Preferences* p
 ## Editing filter preferences
 
 To edit a filter preference:
-1. In the _Actions_ column of the *Filter preferences* table, click **Edit** for the filter you need to update.
+1. In the **Actions** column of the *Filter preferences* table, click **Edit** for the filter you need to update.
 2. Update the needed values.
     **Attribute key** is greyed out and is not available for modifications.
  3. Click **Save**.
@@ -50,10 +50,10 @@ To edit a filter preference:
 
 ## Viewing and deleting filter preferences
 
- *To view a filter*, click **View** in the _Actions_ column for a specific filter.
+ *To view a filter*, click **View** in the **Actions** column for a specific filter.
 
 To delete a filter:
- 1. in the _Actions_ column, click **Delete**  for a specific filter.
+ 1. in the **Actions** column, click **Delete**  for a specific filter.
  **OR**
 2. In the top right corner of the page while viewing a filter, click **Delete**.
 

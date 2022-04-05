@@ -16,21 +16,21 @@ This topic provides a list of steps you can perform to edit content item widgets
 
 ## Prerequisites
 
-To start editing content item widgets to pages, navigate to **Content** > **Pages**.
+To start editing content item widgets to pages, navigate to **Content&nbsp;<span aria-label="and then">></span> Pages**.
 
-To start editing content item widgets to blocks, navigate to **Content** > **Blocks**.
+To start editing content item widgets to blocks, navigate to **Content&nbsp;<span aria-label="and then">></span> Blocks**.
 
 ## Editing content item widgets in pages
 
 To edit a content item widget:
 
-1. On the *Overview of CMS Pages* page, in the *Actions* column, select **Edit** > **Placeholders** next to the block you want to add a content item widget to.
-2. On the *Edit Placeholders: [CMS Page Name]* page, in the *Placeholder* tab editor, click a widget element.
+1. On the **Overview of CMS Pages** page, in the **Actions** column, select **Edit&nbsp;<span aria-label="and then">></span> Placeholders** next to the block you want to add a content item widget to.
+2. On the **Edit Placeholders: [CMS Page Name]** page, in the **Placeholder** tab editor, click a widget element.
 
 ![Content item widget edit menu](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Editing+Content+Item+Widgets/content-item-widget-menu.png)
 
 2. In the pop-up menu, you can click:
-    * **Edit Widget**. This will re-open the *Insert a Content Item* pop-up window where you can select another content item of the **same** type and/or another template.
+    * **Edit Widget**. TThe **Insert a Content Item** pop-up window opens where you can select another content item of the **same** type or another template.
 
     {% info_block warningBox %}
 
@@ -38,27 +38,27 @@ To edit a content item widget:
 
     {% endinfo_block %}
 
-    * **Edit Content Item**. This will open the *Edit Content Item Type: [Content Item Key]* page in a new tab where you can update content item elements.
+    * **Edit Content Item**. The **Edit Content Item Type: _[Content Item Key]_** page opens in a new tab where you can update content item elements.
 
     {% info_block warningBox %}
 
-    Keep in mind that after you changed only the content item name, you need to refresh the *Edit Placeholders: [Page Name]* page of the editor to reflect the changes.
+    Keep in mind that after you changed only the content item name, you need to refresh the **Edit Placeholders: _[Page Name]_** page of the editor to reflect the changes.
 
     {% endinfo_block %}
 
-    * **Remove** icon. This will delete the added content item widget.
+    * **Remove** icon. The added content item widget is deleted.
 3.  To keep the updates, click **Save**.
 
 ## Editing content item widgets in blocks
 
 To edit a content item widget:
-1. On the *Overview of CMS Blocks* page, in the *Actions* column, select **Edit Placeholder** next to the block you want to add a content item widget to.
-2. On the *Edit Block Glossary: [Block ID Name]* page, in the *Placeholder* tab editor, click a widget element.
+1. On the **Overview of CMS Blocks** page, in the **Actions** column, select **Edit Placeholder** next to the block you want to add a content item widget to.
+2. On the **Edit Block Glossary: _[Block ID Name]_** page, in the **Placeholder** tab editor, click a widget element.
 
 ![Edit content item widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Editing+Content+Item+Widgets/content-item-widget-menu-block.png)
 
 2. In the pop-up menu, you can click:
-    * **Edit Widget**. This will re-open the *Insert a Content Item* pop-up window where you can select another content item of the **same** type and/or another template.
+    * **Edit Widget**. The **Insert a Content Item** pop-up window opens where you can select another content item of the **same** type and/or another template.
 
     {% info_block warningBox %}
 
@@ -66,13 +66,13 @@ To edit a content item widget:
 
     {% endinfo_block %}
 
-    * **Edit Content Item**. This will open the *Edit Content Item Type: [Content Item Key]* page in a new tab where you can update content item elements.
+    * **Edit Content Item**. The **Edit Content Item Type: _[Content Item Key]_** page opens in a new tab where you can update content item elements.
 
     {% info_block warningBox %}
 
-    Keep in mind that after you changed the content item name, you need to refresh the *Edit Placeholders: [Page Name]* page of the editor to reflect the changes.
+    Keep in mind that after you changed the content item name, you need to refresh the **Edit Placeholders: _[Page Name]_** page of the editor to reflect the changes.
 
     {% endinfo_block %}
 
-    * **Remove** icon. This will delete the added content item widget.
+    * **Remove** icon. The added content item widget is deleted.
 3.  To keep the updates, click **Save**.

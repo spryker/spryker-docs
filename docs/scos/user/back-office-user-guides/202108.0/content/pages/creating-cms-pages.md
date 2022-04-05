@@ -25,7 +25,7 @@ A CMS page is an additional page of your online shop, such as Terms and Conditio
 
 ## Prerequisites
 
-To start working with CMS pages, navigate to **Content** > **Pages**.
+To start working with CMS pages, navigate to **Content&nbsp;<span aria-label="and then">></span> Pages**.
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 
@@ -33,11 +33,11 @@ Review the reference information before you start, or look up the necessary info
 
 To create a page:
 1. In the top right corner, click **+Create page**.
-2. On the *Create CMS Page* page, you can see two tabs: *General* and *SEO*.
-3. In the *General* tab, do the following:
+2. On the **Create CMS Page** page, you can see two tabs: **General** and **SEO**.
+3. On the **General** tab, do the following:
     * Use **Store Relation** to set a store for which your page will be visible on the website. If you want your CMS page not to be displayed per a specific locale, clear a respective checkbox.
-    * **Optional**: Select **Is searchable** to make your page searchable on the web.
-    * Select a page template that will determine a page layout. This is a *mandatory* step.
+    * Optional: Select **Is searchable** to make your page searchable on the web.
+    * Select a page template that determines a page layout. This is a *mandatory* step.
 
 {% info_block infoBox %}
 
@@ -45,10 +45,10 @@ Templates are project-specific and are usually created by a developer and busine
 
 {% endinfo_block %}
 
-    * **Optional**: Enter **Valid from** and **Valid to** if you want to define the validity period during which your page will be available on the Storefront.
+    * Optional: Enter **Valid from** and **Valid to** to define the validity period during which your page will be available on the Storefront.
     * Enter **Name** and **URL** of the page per locale. This is a *mandatory* step.
 
-4. In the *SEO* tab, enter meta-information: title, keywords, and description. The meta details are important for SEO purposes, such as optimizing webpage ranking by search engines and improving website usability.
+4. On the **SEO** tab, enter meta-information: title, keywords, and description. The meta details are important for SEO purposes, such as optimizing webpage ranking by search engines and improving website usability.
 5. To keep the changes, click **Save**.
 
 **Tips and tricks**
@@ -59,11 +59,11 @@ Templates are project-specific and are usually created by a developer and busine
     * If **Is searchable** is selected, and **Store Relation** is turned off for all stores, the CMS page will not be displayed and will not be searchable.
     * If **Is searchable** is not selected, and **Store Relation** is turned on, the CMS page will be shown but will not be searchable.
 
- * If you want to create *different* versions of the page per locale, add the general information to the section in the corresponding language.
+ * To create *different* versions of the page per locale, add the general information to the section in the corresponding language.
 
 ### Reference information: Creating a CMS page
 
-On the *Overview of CMS Pages* page, you see the following:
+On the **Overview of CMS Pages** page, you see the following:
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |

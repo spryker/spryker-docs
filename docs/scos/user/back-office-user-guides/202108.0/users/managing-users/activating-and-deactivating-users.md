@@ -9,7 +9,7 @@ This document describes how to activate and deactivate users in the Back Office.
 
 ## Prerequisites
 
-To start working with users, go to **Users** > **Users**.
+To start working with users, go to **Users&nbsp;<span aria-label="and then">></span> Users**.
 
 ## Activating users
 

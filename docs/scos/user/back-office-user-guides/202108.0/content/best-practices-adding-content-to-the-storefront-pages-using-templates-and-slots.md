@@ -18,7 +18,7 @@ related:
     link: docs/scos/user/features/page.version/cms-feature-overview/templates-and-slots-overview.html
 ---
 
-This topic describes how to add content to Storefront pages using templates with slots. To start working with templates with slots, go to **Content Management** > **Slots**.
+This topic describes how to add content to Storefront pages using templates with slots. To start working with templates with slots, go to **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
 
 Let’s say you have *Sticky Notes* and *Writing Materials* categories, and you want to cross-promote them. You set the following tasks:
 
@@ -53,10 +53,10 @@ If the content item types shipped by default are not sufficient for your project
 
 Follow the steps to create the CMS blocks with the needed content:
 1. Create the following CMS blocks:
-    * Top selling products reference - *Homepage Top sellers Products*
-    * Featured products reference - *Homepage Featured Products*
-    * Writing materials reference - *Category Banner-2*
-    * Sticky notes reference - *Category Banner-3*
+    * Top selling products reference—*Homepage Top sellers Products*
+    * Featured products reference—*Homepage Featured Products*
+    * Writing materials reference—*Category Banner-2*
+    * Sticky notes reference—*Category Banner-3*
 
 See [Creating a CMS Block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/creating-cms-blocks.html) for more details.
 
@@ -87,8 +87,8 @@ See [Editing placeholders](/docs/scos/user/back-office-user-guides/{{page.versio
 [Template with slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html) defines the layout of slots on the Storefront pages you add the CMS blocks to.
 
 Follow the steps to select a template with slots:
-1. Go to **Content Management** > **Slots**.
-2. In **List of Templates**, select the *Product* template with slots.
+1. Go to **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
+2. In **List of Templates**, select the **Product** template with slots.
     This template with slots is assigned to all the product pages. By selecting it, you select to work with all the product pages at once.
 
 If the templates with slots shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [Template with Slots](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#template-with-slots) for more details.

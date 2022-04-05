@@ -45,7 +45,7 @@ The following table describes the attributes that are used when creating a conne
 | Type | Drop-down list with the available types of the connection, e.g., *Setup Request*. |
 | Set Description length on "Transfer to Requisition" | This field controls the maximum length on the description section for a transferred cart, e.g., 128. Any characters outside the limit will be cut off on a transferred cart. | 
 | Cart Encoding | Drop-down list with the available cart encoding types: base64, url-encoded, no-encoding. This configuration varies based on the buyer's ERP requirements. Base64 is selected by default. |
-| Totals Mode | Drop-down list with the available options: Line and Header. This configuration allows you to set whether the cart total is set in the header or on the line level, and it varies based on the buyer's ERP requirements. The header is not supported using the OCI connection type. |
+| Totals Mode | Drop-down list with the available options: Line and Header. This configuration lets you set whether the cart total is set in the header or on the line level, and it varies based on the buyer's ERP requirements. The header is not supported using the OCI connection type. |
 | Cart Mapping | JSON mapping definition for cart mapping. |
 | Default Supplier ID | Unique ID that is issued to a supplier after they have registered in the ERP. |
 |Bundle Mode | Drop-down list with the available bundle modes: composite or bundle. With this attribute, you can configure how the bundle info is sent. If single mode is chosen, then the bundle product is sent as a line item, where the children products are added to the product description. For example, there exists a bundle product with 3 concrete products included in the bundle. In the request, such a bundle will look like a single item with a long description. If composite mode is selected, then bundle product with its children is sent as separate line items with the reference to parent items. For example, there exists a bundle product with 3 concrete products included in the bundle. In the request, such a bundle will look like 4 separate items, where the first one is the main (bundle itself) and the other three have the reference to the first product. |
@@ -78,7 +78,7 @@ The following table describes the attributes that are used when editing a connec
 | Type | Drop-down list with the available types of the connection, e.g., *Setup Request*. |
 | Set Description length on "Transfer to Requisition" | This field controls the maximum length on the description section for a transferred cart, e.g., 128. Any characters outside the limit will be cut off on a transferred cart. | 
 | Cart Encoding | Drop-down list with the available cart encoding types: base64, url-encoded, no-encoding. This configuration varies based on the buyer's ERP requirements. Base64 is selected by default. |
-| Totals Mode | Drop-down list with the available options: Line and Header. This configuration allows you to set whether the cart total is set in the header or on the line level, and it varies based on the buyer's ERP requirements. The header is not supported using the OCI connection type. |
+| Totals Mode | Drop-down list with the available options: Line and Header. This configuration lets you set whether the cart total is set in the header or on the line level, and it varies based on the buyer's ERP requirements. The header is not supported using the OCI connection type. |
 | Cart Mapping | JSON mapping definition for cart mapping. |
 | Default Supplier ID | Unique ID that is issued to a supplier after they have registered in the ERP. |
 |Bundle Mode | Drop-down list with the available bundle modes: composite or bundle. With this attribute, you can configure how the bundle info is sent. If single mode is chosen, then the bundle product is sent as a line item, where the children products are added to the product description. For example, there exists a bundle product with 3 concrete products included in the bundle. In the request, such a bundle will look like a single item with a long description. If composite mode is selected, then bundle product with its children is sent as separate line items with the reference to parent items. For example, there exists a bundle product with 3 concrete products included in the bundle. In the request, such a bundle will look like 4 separate items, where the first one is the main (bundle itself) and the other three have the reference to the first product. |
@@ -93,7 +93,7 @@ To view the entry points, in the **Actions** column of *List of Punch Out Connec
 
 ## Activating and deactivating a punch out connection
 
-To activate or deactivate a connection, in the *Actions* column of *List of Punch Out Connections*, click:
+To activate or deactivate a connection, in the **Actions** column of *List of Punch Out Connections*, click:
 * **Activate** to activate a connection.
 * **Deactivate** to deactivate a connection.
 

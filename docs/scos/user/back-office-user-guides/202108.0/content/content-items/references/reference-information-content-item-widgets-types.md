@@ -12,11 +12,11 @@ redirect_from:
   - /docs/en/content-item-widgets-types-reference-information
 ---
 
-This topic contains the reference information you need to know when working with content item widgets in the **Content Management > Pages/Blocks > Edit Placeholders** section.
+This topic contains the reference information you need to know when working with content item widgets in the **Content Management&nbsp;<span aria-label="and then">></span> Pages/Blocks&nbsp;<span aria-label="and then">></span> Edit Placeholders** section.
 
 ## Banner content item widget
 
-The widget allows you to display a Banner content item on the defined sections of a page or block.
+The widget lets you display a Banner content item on the defined sections of a page or block.
 
 **Use case example:** The widget might be used to display a banner to promote products of a specific brand or hold a marketing campaign on the website.
 
@@ -32,7 +32,7 @@ You can view how it looks like on the store website:
 
 ## Abstract product list content item widget
 
-The widget allows you to add an Abstract Product List content item to any placeholders of a page or block.
+The widget lets you add an Abstract Product List content item to any placeholders of a page or block.
 
 **Use case example:** The widget can be used to display a list of products for a specific promoting campaign, for example, the Best Selling items, or a list of frequently used products on a page.
 
@@ -48,7 +48,7 @@ Template used: Product Slider for store/landing pages
 
 ## Product set content item widget
 
-The widget allows you to add a Product Set content item to any placeholders of a page or block. The Product Set widget can be displayed as a slider or carousel.
+The widget lets you add a Product Set content item to any placeholders of a page or block. The Product Set widget can be displayed as a slider or carousel.
 
 **Use case example:** The widget can be used to display a product set containing, for example, Basic Office Supplies, on a page from which your customers can select and add an item or all items to the cart with one click.
 
@@ -64,7 +64,7 @@ Template used: Product Set for landing pages
 
 ## File list content item widget
 
-The widget allows you to insert a File List content item that will be displayed as a link or icon to download the file, such as video, image, zip, pdf, etc on a page or block.
+The widget lets you insert a File List content item that will be displayed as a link or icon to download the file, such as video, image, zip, pdf, etc on a page or block.
 
 {% info_block infoBox %}
 

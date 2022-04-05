@@ -21,7 +21,7 @@ This topic describes how to create content items in the Back Office.
 
 ## Prerequisites
 
-To start working with content items, go to **Content** > **Content Items**.
+To start working with content items, go to **Content&nbsp;<span aria-label="and then">></span> Content Items**.
 
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
@@ -189,7 +189,7 @@ The following table describes the attributes on the *Create Content Item: Abstra
 | Name | Name for an abstract product list content item. |
 | Description | Descriptive information on what an Abstract Product List is used for. |
 | Top table |  Table that displays products included in an Abstract Product List content item.|
-| Actions | Set of actions that can be performed on an Abstract Product List content item:<ul><li>**Move Down** or **Move Up** allows you to change the order of products in the list.</li><li>**Delete** allows removing the product from the list.</li></ul>|
+| Actions | Set of actions that can be performed on an Abstract Product List content item:<ul><li>**Move Down** or **Move Up** lets you change the order of products in the list.</li><li>**Delete** allows removing the product from the list.</li></ul>|
 | **Add more products (bottom table)**  | Table that contains all available products stored in the database. |
 | ID | Sequence number. |
 | SKU | Unique identifier of the product. |
@@ -333,7 +333,7 @@ The following table describes the attributes on the *Create Content Item: File L
 | Name | Name for a file list content item. |
 | Description | Descriptive information on what a file list content item is used for. |
 | Selected Files | Top table that displays the selected files. |
-| Actions | Set of actions you can perform on a File List content item:<ul><li>**Move Down** or **Move Up** allows you to change the order of files in the list. </li><li>**Delete** allows removing the selected file.</li></ul> |
+| Actions | Set of actions you can perform on a File List content item:<ul><li>**Move Down** or **Move Up** lets you change the order of files in the list. </li><li>**Delete** allows removing the selected file.</li></ul> |
 | Available Files | Bottom table that displays a list of files uploaded to the file manager. |
 | ID | Sequence number. |
 | File Name | File name.  |

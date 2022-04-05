@@ -19,7 +19,7 @@ This article describes how to manage customers.
 
 ## Prerequisites
 
-To start managing customers, navigate to **Customers** > **Customers**.
+To start managing customers, navigate to **Customers&nbsp;<span aria-label="and then">></span> Customers**.
 
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
@@ -60,10 +60,10 @@ The following table describes the attributes you enter and select when creating 
 ## Editing customers
 
 To edit a customer:
-1. For a specific customer, you need to update, click **Edit** in the _Actions_ column on the *Customers* page.
+1. For a specific customer, you need to update, click **Edit** in the **Actions** column on the *Customers* page.
 2. On the *Edit Customer* page, you see the same attributes as on the *Add a customer* page, but with the following exceptions:
     *  The *Email* field is greyed out and is not available for updates.
-    *  You see two additional drop-down lists: **Billing Address** and **Shipping Address**. The values in those fields appear only if the addresses were added to the customer profile on the Storefront or from the **Back Office** > **View** customer-specific page. Those are not available for modifications from the *Edit Customer* page.
+    *  You see two additional drop-down lists: **Billing Address** and **Shipping Address**. The values in those fields appear only if the addresses were added to the customer profile on the Storefront or from the **Back Office&nbsp;<span aria-label="and then">></span> View** customer-specific page. Those are not available for modifications from the *Edit Customer* page.
 3. Update the needed values and click **Save**.
 
 **Tips and tricks**
@@ -117,13 +117,13 @@ To leave a note:
 ### Deleting a customer record
 
 To delete a customer record:
-1. In the *Actions* column of the *Customers* table, click **View** for the customer record you want to delete.
+1. In the **Actions** column of the *Customers* table, click **View** for the customer record you want to delete.
 2. On the *View Customer* page, click **Delete** at the top of the page.
 3. On the *Customer deletion confirmation* page, click **Delete account**.
 
 OR
 
-1. In the *Actions* column of the *Customers* table, click **Edit** for the customer record you want to delete.
+1. In the **Actions** column of the *Customers* table, click **Edit** for the customer record you want to delete.
 2. On the *Edit Customer* page, click **Delete** on top of the page.
 3. On the *Customer deletion confirmation* page, click **Delete account**.
 

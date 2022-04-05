@@ -50,8 +50,8 @@ Prices are integer values and stored in their normalized form. For example, 4E
 When a price is not defined, the product option value is considered *inactive* for that specific currency and price mode. When a price is set to 0, it is considered *free of charge*.
     6. In the **Translation** section, add a group name and option name that is displayed in the shop application per each locale. You can copy the Group and Option names from one locale to another using the corresponding **Copy** icon.
 3. Click **Next** to proceed to the **Products** tab, or just click on it.
-4. In the **Products** tab, select product) to be assigned to the product.
-    Alternatively, you can click **Select all on the page**. In this case, all the products displayed on the page will be selected and added to the product option. The products you select will appear in the **Products to be assigned** tab.
+4. In the **Products** tab, select product to be assigned to the product.
+    Alternatively, you can click **Select all on the page**. In this case, all the products displayed on the page are selected and added to the product option. The products you select appear on the **Products to be assigned** tab.
 5. Click **Save**.
 
 ### Reference information: Creating a product option

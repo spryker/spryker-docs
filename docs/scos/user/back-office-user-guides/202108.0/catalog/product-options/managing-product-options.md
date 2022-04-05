@@ -25,7 +25,7 @@ Before you start managing the product option by editing or deactivating it, you 
 
 ## Viewing a product option
 
-To view a product option details, click **View** in the _Actions_ column for a specific product option.
+To view a product option details, click **View** in the **Actions** column for a specific product option.
 
 On the **View product option** page that opens, you see the following details:
 * General information, including the group name translation key, the tax set applied to it, created and updated dates, translation key along with the SKU, gross price and net price values.

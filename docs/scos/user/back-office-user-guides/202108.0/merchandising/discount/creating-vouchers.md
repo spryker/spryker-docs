@@ -21,7 +21,7 @@ Vouchers are codes that customers can redeem during checkout. Voucher codes are 
 
 ## Prerequisites
 
-To start working with discounts, navigate to **Merchandising** > **Discount**.
+To start working with discounts, navigate to **Merchandising&nbsp;<span aria-label="and then">></span> Discount**.
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 
@@ -98,7 +98,7 @@ By default, the last created discount goes on top of the table. However, you can
 All columns with headers having arrows in the List of Orders table are sortable.
 
 **Actions column**
-All the discount management options that you can invoke from the _Actions_ column are described in the following table.
+All the discount management options that you can invoke from the **Actions** column are described in the following table.
 
 | ACTION |DESCRIPTION  |
 | --- | --- |
@@ -133,7 +133,7 @@ The name and the description should be meaningful to help other Back Office user
 
 #### <a name="discount-calculation-tab"></a>Discount calculation tab
 
-This section contains information you need to know when working with discount calculations in the *Discount calculation* tab.
+This section contains information you need to know when working with discount calculations on the *Discount calculation* tab.
 
 **Calculator type**
 The discount can be calculated in two ways:
@@ -197,7 +197,7 @@ You can either give away the promotional product completely for free or provide 
 
 #### <a name="conditions"></a>Conditions
 
-This section provides information that you need to know when working with discount conditions in the *Conditions* tab.
+This section provides information that you need to know when working with discount conditions on the *Conditions* tab.
 
 Conditions are also called decision rules.
 
@@ -249,9 +249,9 @@ The setup will look like the following:
 
 #### <a name="voucher-code"></a>Voucher code tab
 
-This section describes the information that you need to know when working with voucher codes in the *Voucher code* tab.
+This section describes the information that you need to know when working with voucher codes on the *Voucher code* tab.
 
-You enter and select the following attributes in **Edit Discount** > **Voucher code**:
+You enter and select the following attributes in **Edit Discount&nbsp;<span aria-label="and then">></span> Voucher code**:
 
 | ATTRIBUTE | DESCRIPTION |  
 | --- | --- |

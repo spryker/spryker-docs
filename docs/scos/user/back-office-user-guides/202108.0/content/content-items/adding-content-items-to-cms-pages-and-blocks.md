@@ -16,9 +16,9 @@ This topic describes how to add a content item widget to a page and block using 
 
 ## Prerequisites
 
-To start adding content item widgets to pages, navigate to **Content** > **Pages**.
+To start adding content item widgets to pages, navigate to **Content&nbsp;<span aria-label="and then">></span> Pages**.
 
-To start adding content item widgets to blocks, navigate to **Content** > **Blocks**.
+To start adding content item widgets to blocks, navigate to **Content&nbsp;<span aria-label="and then">></span> Blocks**.
 
 {% info_block warningBox %}
 
@@ -29,13 +29,13 @@ Prior to adding a content item widget to a block or a page, make sure that the p
 ## Adding content item widgets to pages
 
 To add a content item widget to a page:
-1. On the *Overview of CMS Pages* page, In the _Actions_ column, select **Edit** > **Placeholders** next to the page you want to add a content item widget to.
-3. On the *Edit Placeholders: CMS Page [Name]* page, go to the *Placeholder* tab and place your cursor where you want to insert the content items.
+1. On the **Overview of CMS Pages** page, In the **Actions** column, select **Edit&nbsp;<span aria-label="and then">></span> Placeholders** next to the page you want to add a content item widget to.
+3. On the **Edit Placeholders: CMS Page _[Name]_** page, go to the **Placeholder** tab and place your cursor where you want to insert the content items.
 4. In the editor pane, select the widget you want to add from the **Content Item** drop-down list.
 
 ![Content item menu page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Adding+Content+Item+Widgets+to+Pages+and+Blocks/content-item-menu-page.png)
 
-The *Insert a Content Item* pop-up window opens.
+The **Insert a Content Item** pop-up window opens.
 
 ![Insert content item window](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Adding+Content+Item+Widgets+to+Pages+and+Blocks/insert-content-item-window.png)
 
@@ -72,9 +72,9 @@ You can preview the page to see how the content item widget will be displayed on
 ## Adding content item widgets to blocks
 
 To add a content item widget to a block:
-1. On the *Overview of CMS Blocks* page, in the _Actions_ column, select **Edit Placeholder** next to the block you want to add a content item widget to.
-3. On the *Edit Block Glossary: Block ID* page, go to the *Placeholder* tab and place your cursor where you want to insert the content items.
-4. In the editor pane, select the widget you want to add from the **Content Item** drop-down list. The *Insert a Content Item* pop-up window opens.
+1. On the **Overview of CMS Blocks** page, in the **Actions** column, select **Edit Placeholder** next to the block you want to add a content item widget to.
+3. On the **Edit Block Glossary: Block ID** page, go to the **Placeholder** tab and place your cursor where you want to insert the content items.
+4. In the editor pane, select the widget you want to add from the **Content Item** drop-down list. The **Insert a Content Item** pop-up window opens.
 ![Insert content item for blocks](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Adding+Content+Item+Widgets+to+Pages+and+Blocks/insert-content-item-widget-block.png)
 
 5. Select a content item and its template, and click **Insert**. This will insert the content item widget containing the following details:
@@ -92,7 +92,7 @@ Keep in mind that you can select only *one* item and *one* template at a time.
 * Name
 * Template
 
-6. Click **Save**. The new content item widget will be added to the block.
+6. Click **Save**. The new content item widget is added to the block.
 
 {% info_block infoBox %}
 

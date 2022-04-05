@@ -25,7 +25,7 @@ This topic describes how to manage company users.
 
 ## Prerequisites
 
-To start working with company users, go to the **Customers** > **Company Users** section.
+To start working with company users, go to the **Customers&nbsp;<span aria-label="and then">></span> Company Users** section.
 
 {% info_block warningBox "Note" %}
 
@@ -37,9 +37,9 @@ Review the reference information before you start, or look up the necessary info
 
 ## Creating company users
 
-To add a new company user:
-1. On the *Overview of Company Users* page, in the top right corner, click **Add User**.
-2. On the *Create Company User* page:
+To add a new company user, do the following:
+1. On the **Overview of Company Users** page, in the top right corner, click **Add User**.
+2. On the **Create Company User** page, take the following steps:
     1. Enter customer's email, salutation, first name, last name, and gender in the respective fields.
     2. If you want the email with change password details be sent to the customer, select the **Send password token through email** checkbox.
     3. Enter the date of birth and phone values.
@@ -50,13 +50,13 @@ To add a new company user:
 
 ## Editing a company user
 
-To edit a company user:
-1. On the *Overview of Company Users* page, in the _Actions_ column, click **Edit** for the user you want to update.
+To edit a company user, do the following:
+1. On the **Overview of Company Users** page, in the **Actions** column, click **Edit** for the user you want to update.
 2. Update the needed values and click **Save**.
 
 {% info_block infoBox "Info" %}
 
-All values are available for modifications except for the email. The *Email* field is greyed out and is not available for modifications.
+All values are available for modifications except for the email. The **Email** field is greyed out and is not available for modifications.
 
 {% endinfo_block %}
 
@@ -67,37 +67,37 @@ The following table describes the attributes you see, select, or enter while cre
 | ATTRIBUTE |DESCRIPTION  |
 | --- | --- |
 | Email | Email of the customer that is used for logging in to the online store. It is not available for modifications on the *Edit* page. |
-| Salutation | Formal salutation for the customer (_Mr_, _Mrs_, _Ms_, _Dr_). |
+| Salutation | Formal salutation for the customer—_Mr_, _Mrs_, _Ms_, _Dr_. |
 | First Name | Customer first name. |
 | Last Name |  Customer last name.|
 | Gender | Customer gender. |
 | Date of birth | Customer date of birth. |
-Company  | Drop-down list with the companies from **Customers** > **Companies**. This selection defines the list of available business unit. |
+Company  | Drop-down list with the companies from **Customers&nbsp;<span aria-label="and then">></span> Companies**. This selection defines the list of available business unit. |
 | Business Unit | Business unit to which the user is going to be assigned. The list of the available values depends on the selected company. |
 | Assigned Roles | Roles assigned to the customer. |
 Unassigned Roles | Roles that you can select to be assigned to the customer.|
 
 ## Attaching a company user to a business unit
 
-To attach a company user to a new company business unit within the same company:
-1. On the *Overview of Company Users* page, in the _Actions_ column, click **Attach to BU** for a user for which you want to change the assigned business unit.
-2. On the *Attach to Business Unit* page:
+To attach a company user to a new company business unit within the same company, do the following:
+1. On the **Overview of Company Users** page, in the **Actions** column, click **Attach to BU** for a user for which you want to change the assigned business unit.
+2. On the **Attach to Business Unit** page, take the following steps:
     1. Select a business unit you want the company user to be attached to from the drop-down list.
-    2. Assign the role under the *Assigned Roles* section.
+    2. Assign the role under the **Assigned Roles** section.
 3. Click **Save**.
 
 ## Enabling and disabling a company user
 
-If the company User is currently deactivated, in the *Actions* column, click the **Enable** option to activate the user.
+If the company User is currently deactivated, in the **Actions** column, click the **Enable** option to activate the user.
 
 To deactivate an enabled user, click **Disable**.
 ![Enabling a company user](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Company+Account/Managing+Company+Users/enabling-company-user.png)
 
 ## Deleting a company user
 
-To delete a company user:
-1. On the *Overview of Company Users* page, click **Delete** in the *Actions* column.
-2. On the *Company user deletion confirmation* page, confirm the deletion.
+To delete a company user, do the following:
+1. On the **Overview of Company Users** page, click **Delete** in the **Actions** column.
+2. On the **Company user deletion confirmation** page, confirm the deletion.
 
 {% info_block warningBox "Note" %}
 

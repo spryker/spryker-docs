@@ -25,7 +25,7 @@ Bundle and controller are responsible for allowing and restricting access to are
 
 There are several ways you can extract these values in. The easiest way is to look it up in the URL. To look up the values for restricting access to adding product attributes, do the following:
 
-1. Go to **Catalog** > **Attributes**.
+1. Go to **Catalog&nbsp;<span aria-label="and then">></span> Attributes**.
 2. Click **Create Product Attribute**.
 3. Check the link in your browser. It should be similar to `backoffice.demo-spryker.com/product-attribute-gui/attribute/create`.
 
@@ -41,7 +41,7 @@ In this example, the values are as follows:
 
 ### Creating the role with limited access
 
-1. Go to **Users** > **User Roles**.
+1. Go to **Users&nbsp;<span aria-label="and then">></span> User Roles**.
 2. Click **Add new Role**.
 3. On the **Create new Role** page, enter a **NAME**.
   Later, you will be using this name when assigning this role to user groups.
@@ -70,7 +70,7 @@ User groups is a tool for managing multiple users. When you change the permissio
 
 To create the user group, do the following:
 
-1. Go to **Users** > **User Groups**.
+1. Go to **Users&nbsp;<span aria-label="and then">></span> User Groups**.
 2. Click **Create Group**.
 3. Enter a **TITLE**.
     You will use this title to identify the group when creating the user.
@@ -81,7 +81,7 @@ To create the user group, do the following:
 
 ## 3. Creating a user
 
-1. Go to **Users** > **Users**.
+1. Go to **Users&nbsp;<span aria-label="and then">></span> Users**.
 1. On the **Users** page, click **Add New User**.
 2. On the **Create new User** page, enter an **E-MAIL**.
     The user will be using this email address to log into the Back Office.

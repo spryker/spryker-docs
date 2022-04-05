@@ -16,14 +16,14 @@ This article describes how to manage product sets.
 
 ## Prerequisites
 
-To start working with product sets, go to **Merchandising** > **Product Sets**.
+To start working with product sets, go to **Merchandising&nbsp;<span aria-label="and then">></span> Product Sets**.
 
 For reference information, see [Reference information: Creating product sets](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-sets/creating-product-sets.html#reference-information-creating-product-sets).
 
 ## Editing product sets
 
 To edit a product set:
-1. In the _Actions_ column of the *Product Sets* table, click **Edit** for the product set you want to update.
+1. In the **Actions** column of the *Product Sets* table, click **Edit** for the product set you want to update.
 2. On the *Edit Product Set* page, update the needed attributes. The procedure is very similar to the procedure of creating a product set (see _Creating a Product Set_ article for more details). The only difference is that in the *Products* tab, in addition to the *Select Products to assign* table, you will see the *Products in this Set* table at the bottom of the page. In this table, you can:
     1. Clear the checkbox in the _Selected_ column to remove a specific product from the set.
     2. Define the position of the products in the set by putting the appropriate numbers in the _Position_ column. The product that has 0 in the _Position_ column goes first.
@@ -55,7 +55,7 @@ If you want to reorder the product sets, you:
 ## Viewing product sets
 
 To view a product set:
-1. In the _Actions_ column of the *Product Sets* table, click **View** for the product set you want to view.
+1. In the **Actions** column of the *Product Sets* table, click **View** for the product set you want to view.
 2. On this page, you can:
     1. Switch to the *Edit Product Set* page by clicking **Edit** in the top right corner.
     2. Deactivate a product set by clicking **Deactivate** in the top right corner.
@@ -64,13 +64,13 @@ To view a product set:
 ## Activating and deactivating product sets
 
 To activate/deactivate a product set:
-1. In the _Actions_ column of the Product Sets table, click **Deactivate** for a specific product set.
+1. In the **Actions** column of the Product Sets table, click **Deactivate** for a specific product set.
     **Or**
 2. Navigate to the **View Product Set** table, and in the top right corner, and click **Deactivate**.
 
 ## Deleting product set
 
-To delete a product set, in the _Actions_ column of the *Product Sets* page, click **Delete**.
+To delete a product set, in the **Actions** column of the *Product Sets* page, click **Delete**.
 
 {% info_block infoBox "Info" %}
 

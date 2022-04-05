@@ -8,7 +8,7 @@ This document describes how to create [order reclamations](/docs/scos/user/featu
 
 ## Prerequisites
 
-To start managing orders, go to **Sales** > **Orders**.
+To start managing orders, go to **Sales&nbsp;<span aria-label="and then">></span> Orders**.
 
 Review the [reference information](#reference-information-creating-reclamations) before you start, or look up the necessary information as you go through the process.
 

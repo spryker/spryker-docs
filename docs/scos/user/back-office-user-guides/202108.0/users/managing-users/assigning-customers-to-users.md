@@ -16,14 +16,14 @@ You can assign each customer to only one user.
 
 ## Prerequisites
 
-To start working with users, go to **Users** > **Users**.
+To start working with users, go to **Users&nbsp;<span aria-label="and then">></span> Users**.
 
 ## Assigning customers to users
 
 1. Next to the user you want to assign customers to, click **Assign Customers**.
 2. On the **Assign Customers** page, select the checkboxes next to the customers you want to assign to the user.
 3. Click **Save**.
-    This refreshes the page with the success message displayed. The assigned customers are displayed in the **Assigned customers** tab.
+    This refreshes the page with the success message displayed. The assigned customers are displayed on the **Assigned customers** tab.
 
 
 **Tips and tricks**
@@ -37,7 +37,7 @@ When assigning many customers at a time, it might be useful to click the **Custo
 1. Next to the user you want to deassign customers from, click **Assign Customers**.
 2. In the **Assigned customers** tab, clear the checkboxes next to the customers you want to deassign.
 3. Click **Save**.
-    This refreshes the page with the success message displayed. The deassigned customer are displayed in the **Assigned customers** tab.  
+    This refreshes the page with the success message displayed. The deassigned customer are displayed on the **Assigned customers** tab.  
 
 
 **Tips and tricks**

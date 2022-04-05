@@ -15,19 +15,19 @@ related:
     link: docs/scos/user/features/page.version/customer-access-feature-overview.html
 ---
 
-The *Customer Access* page allows you to define what information not logged-in to online store customers.
+The **Customer Access** page lets you define what information not logged-in to online store customers.
 
 ## Prerequisites
 
-To start defining specific restrictions for not logged-in customers, go to **Customers** > **Customer Access**.
+To start defining specific restrictions for not logged-in customers, go to **Customers&nbsp;<span aria-label="and then">></span> Customer Access**.
 
 ## Defining customer access
 
-To define the restrictions:
-1. In the *Customer Access* section, select one of the following content types in the *Hide the following information from not logged in users* pane:
-    * **Price**: if selected, no prices will be shown to not logged-in customers.
+To define the restrictions, do the following:
+1. In the **Customer Access** section, in the **Hide the following information from not logged in users** pane, select one of the following content types:
+    * **Price**: if selected, no prices is shown to not logged-in customers.
     * **Can place an order**: if selected, the not logged-in user is not able to place in order.
-    * **Add to Cart**: if selected, there will be no **Add to Cart** option displayed.
+    * **Add to Cart**: if selected, the **Add to Cart** option is not displayed.
     * **Wishlist**: if selected, no **Wishlist** option is available.
     * **Shopping List**: if selected, no **Add to Shopping List** option is available.
 

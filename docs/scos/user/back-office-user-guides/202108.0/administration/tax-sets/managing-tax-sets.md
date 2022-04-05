@@ -77,7 +77,7 @@ The tax set is deleted.
 
 {% info_block warningBox "Note" %}
 
-Remember that the tax rates assigned to the deleted tax set become unassigned but not deleted.
+Remember that the tax rates assigned to the deleted tax set are removed but not deleted.
 
 {% endinfo_block %}
 

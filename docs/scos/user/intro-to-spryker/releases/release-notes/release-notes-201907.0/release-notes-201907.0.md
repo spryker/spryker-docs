@@ -274,7 +274,8 @@ Cart in the Preview mode can also be shared with users in your company because i
 ## Fix after archive is online -->
 
 * Customer Login by Token - Ability to log in to the Spryker Commerce OS by token
-<!--**Documentation**: [Customer Login by Token](/docs/scos/user/features/201907.0/company-account-feature-overview/customer-login-by-token-overview.html) ## Fix after archive is online -->
+
+<!--**Documentation**: [Customer Login by Token](/docs/scos/user/features/201907.0/company-account-feature-overview/customer-login-by-token-overview.html) Fix after archive is online -->
 
 
 ***
@@ -302,24 +303,18 @@ We have extended our partner portfolio with a RatePay integration that offers 4 
 * [Integrating the Prepayment payment method for RatePay](/docs/scos/user/technology-partners/201907.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-prepayment-payment-method-for-ratepay.html)
 * [Integrating the Invoice payment method for RatePay](/docs/scos/user/technology-partners/201907.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-invoice-payment-method-for-ratepay.html)
 * [Integrating the Direct Debit payment method for RatePay](/docs/scos/user/technology-partners/201907.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-direct-debit-payment-method-for-ratepay.html)
-* [Integrating the Installment payment method for RatePay](/docs/scos/user/technology-partners/201907.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-installment-payment-method-for-ratepay.html)
-
-## Fix after archive is online -->
+* [Integrating the Installment payment method for RatePay](/docs/scos/user/technology-partners/201907.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-installment-payment-method-for-ratepay.html)  Fix after archive is online -->
 
 ### Episerver
 We now have a new integration of our new partner Episerver and their online platform to support newsletters as well as the transactional notifications required in the usual e-commerce transactions.
 
-<!--**Documentation**: [Episerver](/docs/scos/user/technology-partners/201907.0/marketing-and-conversion/customer-communication/episerver.html)
-
-## Fix after archive is online -->
+<!--**Documentation**: [Episerver](/docs/scos/user/technology-partners/201907.0/marketing-and-conversion/customer-communication/episerver.html) Fix after archive is online -->
 
 
 ### Easycredit Direct Integration
 We have now a new integration of our new partner TeamBank AG and their payment method ratenkauf by easyCredit, which allows customers to pay via an installment plan. This can help to increase your conversion rates of the more expensive products and services.
 
-<!--**Documentation**: [Installing and configuring ratenkauf by easyCredit](/docs/scos/dev/technology-partner-guides/{{site.version}}/payment-partners/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.html)
-
-## Fix after archive is online -->
+<!--**Documentation**: [Installing and configuring ratenkauf by easyCredit](/docs/scos/dev/technology-partner-guides/{{site.version}}/payment-partners/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.html) Fix after archive is online -->
 
 ### CrefoPay
 We now have an integration with our new payment partner CrefoPay, which will provide the following payment methods out-of-the-box including partial operations and B2B:

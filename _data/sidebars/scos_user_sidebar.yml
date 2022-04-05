@@ -593,8 +593,27 @@ entries:
           url: /docs/scos/user/back-office-user-guides/merchandising/discount/managing-discounts.html
       - title: Product labels
         nested:
+        - title: Create product labels
+          url: /docs/scos/user/back-office-user-guides/merchandising/product-labels/create-product-labels.html
+          include_versions:
+          - "202108.0"
+        - title: Edit product labels
+          url: /docs/scos/user/back-office-user-guides/merchandising/product-labels/edit-product-labels.html
+          include_versions:
+          - "202108.0"
+        - title: View product labels
+          url: /docs/scos/user/back-office-user-guides/merchandising/product-labels/view-product-labels.html
+          include_versions:
+          - "202108.0"
         - title: Creating product labels
           url: /docs/scos/user/back-office-user-guides/merchandising/product-labels/creating-product-labels.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
         - title: Managing product labels
           url: /docs/scos/user/back-office-user-guides/merchandising/product-labels/managing-product-labels.html
       - title: Product relations

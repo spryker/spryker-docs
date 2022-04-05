@@ -58,7 +58,7 @@ To retrieve information about a company, send the request:
 #### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve information about the companies of the currently authenticated company user</summary>
 
 ```json
 {
@@ -87,8 +87,7 @@ To retrieve information about a company, send the request:
 | --- | --- | --- |
 | name | String | Company name. |
 | isActive | Boolean | Defines if the company is active. |
-| status | String | Company status. Possible values are: `Pending`, `Approved`, or `Denied`. |
-
+| status | String | Company status. Possible values are: `Pending`, `Approved`, or `Denied`.|
 
 
 ## Possible errors

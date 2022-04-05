@@ -38,7 +38,9 @@ To add an item to a wishlist, send the request:
 
 ### Request
 
-Request sample: `POST https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items`
+Request sample: add an item to a wishlist
+
+`POST https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items`
 
 ```json
 {
@@ -57,7 +59,7 @@ Request sample: `POST https://glue.mysprykershop.com/wishlists/09264b7f-1894-58e
 
 ### Response
 
-Response sample:
+Response sample: add an item to a wishlist
 
 ```json
 {
@@ -96,7 +98,9 @@ To delete wishlist item, send the request:
 
 ### Request
 
-Request sample: `DELETE https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items/064_18404924`
+Request sample: delete a wishlist item
+
+`DELETE https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items/064_18404924`
 
 ### Response
 

@@ -58,29 +58,29 @@ To search by products, send the request:
 
 | REQUEST   | USAGE |
 | --------------- | -------------- |
-| GET https://glue.mysprykershop.com/catalog-search?q=       | Search for all available products.   |
-| GET https://glue.mysprykershop.com/catalog-search?q=058       | Search for an abstract product by SKU *058*.   |
-| GET https://glue.mysprykershop.com/catalog-search?q=058&include=abstract-products | Search for an abstract product by SKU *058* with the included product details. |
-| GET https://glue.mysprykershop.com/catalog-search?q=Acer Liquid Jade | Search for an abstract product by *Acer Liquid Jade* name.    |
-| GET https://glue.mysprykershop.com/catalog-search?q=058_261755504 | Search for a concrete product by SKU *058_261755504*.  |
-| GET https://glue.mysprykershop.com/catalog-search?q=sony+red | Search for products by multiple attributes (brand *Sony* and *red* color). |
-| GET https://glue.mysprykershop.com/catalog-search?q=sony&price%5Bmin%5D=99.99&price%5Bmax%5D=150 | Search for products within a minimum (*99.99*) and maximum (*150*) price range. |
-| GET https://glue.mysprykershop.com/catalog-search?q=sony   |  Search for products of the *Sony* brand.   |
-| GET https://glue.mysprykershop.com/catalog-search?label[]=NEW&label[]=SALE % | Search for products with the *NEW* and *SALE*  labels. |
-| GET https://glue.mysprykershop.com/catalog-search?weight[]=45 g | Search for products by the *45 g* weight.  |
-| GET https://glue.mysprykershop.com/catalog-search?color[]=Blue |Search for products by the *Blue* color.   |
-| GET https://glue.mysprykershop.com/catalog-search?storage_capacity[]=32 GB | Search for products by the *32 GB* storage capacity. |
-| GET https://glue.mysprykershop.com/catalog-search?rating[min]=4 | Search for products by the rating *4*.     |
-| GET https://glue.mysprykershop.com/catalog-search?category=6 | Search for products by the category node ID *6*.    |
-| GET https://glue.mysprykershop.com/catalog-search?currency=CHF | Define the *CHF* currency for the search result products.   |
-| GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=name_asc | Set sorting order ascending.  |
-| GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=name_desc | Set sorting order descending.   |
-| GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=rating | Sort found products by rating.   |
-| GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=price_asc | Sort found products by price ascending.   |
-| GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=popularity | Sort found products by popularity. <br>**Note: This is valid for Master Suite only and has not been integrated into B2B/B2C Suites yet.** |
-| GET https://glue.mysprykershop.com/catalog-search?q=Sony&page=3 | Set a page to retrieve the search results from. |
-| GET https://glue.mysprykershop.com/catalog-search?q=Sony&ipp=24 | Set number of products per page.   |
-| GET https://glue.mysprykershop.com/catalog-search?merchant_name=Spryker | Filter the results by Merchant name. <br>**Note: This option is available only if you have upgraded your shop to the Marketplace provided by Spryker.** |
+| `GET https://glue.mysprykershop.com/catalog-search?q=`       | Search for all available products.   |
+| `GET https://glue.mysprykershop.com/catalog-search?q=058`       | Search for an abstract product by SKU *058*.   |
+| `GET https://glue.mysprykershop.com/catalog-search?q=058&include=abstract-products` | Search for an abstract product by SKU *058* with the included product details. |
+| `GET https://glue.mysprykershop.com/catalog-search?q=Acer Liquid Jade` | Search for an abstract product by *Acer Liquid Jade* name.    |
+| `GET https://glue.mysprykershop.com/catalog-search?q=058_261755504` | Search for a concrete product by SKU *058_261755504*.  |
+| `GET https://glue.mysprykershop.com/catalog-search?q=sony+red` | Search for products by multiple attributes (brand *Sony* and *red* color). |
+| `GET https://glue.mysprykershop.com/catalog-search?q=sony&price%5Bmin%5D=99.99&price%5Bmax%5D=150` | Search for products within a minimum (*99.99*) and maximum (*150*) price range. |
+| `GET https://glue.mysprykershop.com/catalog-search?q=sony`   |  Search for products of the *Sony* brand.   |
+| `GET https://glue.mysprykershop.com/catalog-search?label[]=NEW&label[]=SALE %` | Search for products with the *NEW* and *SALE*  labels. |
+| `GET https://glue.mysprykershop.com/catalog-search?weight[]=45 g` | Search for products by the *45 g* weight.  |
+| `GET https://glue.mysprykershop.com/catalog-search?color[]=Blue` |Search for products by the *Blue* color.   |
+| `GET https://glue.mysprykershop.com/catalog-search?storage_capacity[]=32 GB` | Search for products by the *32 GB* storage capacity. |
+| `GET https://glue.mysprykershop.com/catalog-search?rating[min]=4` | Search for products by the rating *4*.     |
+| `GET https://glue.mysprykershop.com/catalog-search?category=6` | Search for products by the category node ID *6*.    |
+| `GET https://glue.mysprykershop.com/catalog-search?currency=CHF` | Define the *CHF* currency for the search result products.   |
+| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=name_asc` | Set sorting order ascending.  |
+| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=name_desc` | Set sorting order descending.   |
+| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=rating` | Sort found products by rating.   |
+| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=price_asc` | Sort found products by price ascending.   |
+| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=popularity` | Sort found products by popularity. <br>**Note: This is valid for Master Suite only and has not been integrated into B2B/B2C Suites yet.** |
+| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&page=3` | Set a page to retrieve the search results from. |
+| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&ipp=24` | Set number of products per page.   |
+| `GET https://glue.mysprykershop.com/catalog-search?merchant_name=Spryker` | Filter the results by Merchant name. <br>**Note: This option is available only if you have upgraded your shop to the Marketplace provided by Spryker.** |
 
 ### Response
 
@@ -91,7 +91,7 @@ To search by products, send the request:
 {% endinfo_block %}
 
 <details>
-<summary markdown='span'>Response sample: Empty search criteria</summary>
+<summary markdown='span'>Response sample: empty search criteria</summary>
 
 ```json
 {
@@ -453,7 +453,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: Search for an abstract product</summary>
+<summary markdown='span'>Response sample: search for an abstract product</summary>
 
 ```json
 {
@@ -716,13 +716,13 @@ To search by products, send the request:
                 ]
             },
             "links": {
-                "self": "https://glue.69.demo-spryker.com:80/catalog-search?q=058"
+                "self": "https://glue.mysprykershop.com/catalog-search?q=058"
             }
         }
     ],
     "links": {
-        "self": "glue.mysprykershop.com/catalog-search?q=058",
-        "last": "glue.mysprykershop.com/catalog-search?q=058&page[offset]=0&page[limit]=12",
+        "self": "https://glue.mysprykershop.com/catalog-search?q=058",
+        "last": "https://glue.mysprykershop.com/catalog-search?q=058&page[offset]=0&page[limit]=12",
         "first": "https://glue.mysprykershop.com/catalog-search?q=058&page[offset]=0&page[limit]=12"
     }
 }
@@ -731,7 +731,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: Search for an abstract product with the included abstract product details</summary>
+<summary markdown='span'>Response sample: search for an abstract product with the included abstract product details</summary>
 
 ```json
 {
@@ -1137,7 +1137,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: Search for a concrete product</summary>
+<summary markdown='span'>Response sample: search for a concrete product</summary>
 
 ```json
 {
@@ -1416,7 +1416,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: Multiple product attributes in search request</summary>
+<summary markdown='span'>Response sample: search for n item using multiple product attributes in search request</summary>
 
 ```json
 {
@@ -1835,7 +1835,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: Search with minimum and maximum price range</summary>
+<summary markdown='span'>Response sample: search for an item with minimum and maximum price range</summary>
 
 ```json
 {
@@ -2208,7 +2208,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: Search by brand</summary>
+<summary markdown='span'>Response sample: search for an item by brand</summary>
 
 ```json
 {
@@ -2529,7 +2529,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: Search by labels</summary>
+<summary markdown='span'>Response sample: search for an item by labels</summary>
 
 ```json
 {
@@ -2818,7 +2818,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: Search by weight</summary>
+<summary markdown='span'>Response sample: search for an item by weight</summary>
 
 ```json
 {
@@ -3137,7 +3137,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: Search by color</summary>
+<summary markdown='span'>Response sample: search for an item by color</summary>
 
 ```json
 {
@@ -3493,7 +3493,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response: Search by storage capacity</summary>
+<summary markdown='span'>Response: search for an item by storage capacity</summary>
 
 ```json
 {
@@ -3766,7 +3766,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: Search by rating</summary>
+<summary markdown='span'>Response sample: search for an item by rating</summary>
 
 ```json
 {
@@ -4000,9 +4000,9 @@ To search by products, send the request:
         }
     ],
     "links": {
-        "self": "glue.mysprykershop.com/catalog-search?rating[min]=4",
-        "last": "glue.mysprykershop.com/catalog-search?rating[min]=4&page[offset]=0&page[limit]=12",
-        "first": "glue.mysprykershop.com/catalog-search?rating[min]=4&page[offset]=0&page[limit]=12"
+        "self": "https://glue.mysprykershop.com/catalog-search?rating[min]=4",
+        "last": "https://glue.mysprykershop.com/catalog-search?rating[min]=4&page[offset]=0&page[limit]=12",
+        "first": "https://glue.mysprykershop.com/catalog-search?rating[min]=4&page[offset]=0&page[limit]=12"
     }
 }
 ```
@@ -4010,7 +4010,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: Search by category</summary>
+<summary markdown='span'>Response sample: search for an item by category</summary>
 
 ```json
 {
@@ -4224,7 +4224,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: Setting the search results currency</summary>
+<summary markdown='span'>Response sample: set the search results currency</summary>
 
 ```json
 {
@@ -4452,7 +4452,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: Sorting order ascending</summary>
+<summary markdown='span'>Response sample: sort the results in ascending order</summary>
 
 ```json
 {
@@ -4874,7 +4874,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: Sorting order descending</summary>
+<summary markdown='span'>Response sample: sort the results in descending order</summary>
 
 ```json
 {
@@ -5181,10 +5181,10 @@ To search by products, send the request:
         }
     ],
     "links": {
-        "self": "glue.mysprykershop.com/catalog-search?q=Sony&sort=name_desc",
-        "last": "glue.mysprykershop.com/catalog-search?q=Sony&sort=name_desc&page[offset]=36&page[limit]=12",
-        "first": "glue.mysprykershop.com/catalog-search?q=Sony&sort=name_desc&page[offset]=0&page[limit]=12",
-        "next": "glue.mysprykershop.com/catalog-search?q=Sony&sort=name_desc&page[offset]=12&page[limit]=12"
+        "self": "https://glue.mysprykershop.com/catalog-search?q=Sony&sort=name_desc",
+        "last": "https://glue.mysprykershop.com/catalog-search?q=Sony&sort=name_desc&page[offset]=36&page[limit]=12",
+        "first": "https://glue.mysprykershop.com/catalog-search?q=Sony&sort=name_desc&page[offset]=0&page[limit]=12",
+        "next": "https://glue.mysprykershop.com/catalog-search?q=Sony&sort=name_desc&page[offset]=12&page[limit]=12"
     }
 }
 ```
@@ -5192,7 +5192,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: Sorting by rating</summary>
+<summary markdown='span'>Response sample: sort the search results by rating</summary>
 
 ```json
 {
@@ -5491,7 +5491,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: Sorting by price ascending</summary>
+<summary markdown='span'>Response sample: sort search results by price ascending</summary>
 
 ```json
 {
@@ -5805,7 +5805,7 @@ To search by products, send the request:
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: Sorting by popularity (This is valid for Master Suite only and has not been integrated into B2B/B2C Suites yet.)</summary>
+<details><summary markdown='span'>Response sample: sort the search results by popularity (This is valid for Master Suite only and has not been integrated into B2B/B2C Suites yet.)</summary>
 
 ```json
 {
@@ -6059,7 +6059,7 @@ To search by products, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: Setting a page of search</summary>
+<summary markdown='span'>Response sample: set a page of search for results</summary>
 
 ```json
 {
@@ -6319,7 +6319,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: Setting a number of products per page</summary>
+<summary markdown='span'>Response sample: set a number of products per page in results</summary>
 
 ```json
 {

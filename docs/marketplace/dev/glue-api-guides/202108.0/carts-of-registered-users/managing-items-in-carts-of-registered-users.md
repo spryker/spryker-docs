@@ -7,6 +7,7 @@ This endpoint allows managing items in carts of registered users by adding, chan
 
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)
 * [Glue API: Measurement Units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html)
@@ -106,7 +107,6 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
     }
 }
 ```
-
 </details>
 
 <details>
@@ -125,7 +125,6 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
     }
 }
 ```
-
 </details>
 
 <details>
@@ -170,7 +169,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
             		"sku": "OP_gift_wrapping"
             	},
             	{
-            		"sku": "OP_3_year_waranty"
+            		"sku": "OP_3_year_warranty"
             	}
             ]
         }
@@ -538,7 +537,6 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -1239,7 +1237,6 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 <details>

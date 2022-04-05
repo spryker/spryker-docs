@@ -28,7 +28,9 @@ To confirm customer registration, send the request:
 
 ### Request
 
-Request sample: `POST` **/customer-confirmation**
+Request sample: confirm customer registration
+
+`POST` **/customer-confirmation**
 
 ```json
 {

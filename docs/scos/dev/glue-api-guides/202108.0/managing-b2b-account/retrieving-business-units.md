@@ -28,6 +28,7 @@ related:
 In the B2B world, users represent their companies rather than act on their own behalf. Such users, called [Company Accounts](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html), are organized in business units depending on their job role and the scope of their activity. The endpoints allows retrieving business unit information.
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html).
 
 ## Retrieve a company business unit
@@ -54,15 +55,41 @@ To retrieve a business unit, send the request:
 
 | REQUEST | USAGE |
 | --- | --- |
-| GET https://glue.mysprykershop.com/company-business-units/mine | Retrieve business units of the current authenticated company user. |
-| GET https://glue.mysprykershop.com/company-business-units/b8a06475-73f5-575a-b1e9-1954de7a49ef | Retrieve the business unit with the unique identifier `b8a06475-73f5-575a-b1e9-1954de7a49ef`. |
-| GET https://glue.mysprykershop.com/company-business-units/32b44d30-3c2d-5f0a-91d3-e66adad10dc1?include=companies | Retrieve the business unit with the unique identifier `b8a06475-73f5-575a-b1e9-1954de7a49ef` and related companies included. |
-| GET https://glue.mysprykershop.com/company-business-units/32b44d30-3c2d-5f0a-91d3-e66adad10dc1?include=company-business-unit-addresses | Retrieve the business unit with the unique identifier `b8a06475-73f5-575a-b1e9-1954de7a49ef` and related business unit addresses included.  |
+| GET http://glue.mysprykershop.com/company-business-units/mine | Retrieve business units of the current authenticated company user. |
+| GET http://glue.mysprykershop.com/company-business-units/b8a06475-73f5-575a-b1e9-1954de7a49ef | Retrieve the business unit with the unique identifier `b8a06475-73f5-575a-b1e9-1954de7a49ef`. |
+| GET http://glue.mysprykershop.com/company-business-units/32b44d30-3c2d-5f0a-91d3-e66adad10dc1?include=companies | Retrieve the business unit with the unique identifier `b8a06475-73f5-575a-b1e9-1954de7a49ef` and related companies included. |
+| GET http://glue.mysprykershop.com/company-business-units/32b44d30-3c2d-5f0a-91d3-e66adad10dc1?include=company-business-unit-addresses | Retrieve the business unit with the unique identifier `b8a06475-73f5-575a-b1e9-1954de7a49ef` and related business unit addresses included.  |
 
 #### Response
 
+
+<details><summary markdown='span'>Response sample: retrieve business units of a company user</summary>
+
+```json
+{
+    "data": {
+        "type": "company-business-units",
+        "id": "b8a06475-73f5-575a-b1e9-1954de7a49ef",
+        "attributes": {
+            "name": "Hotel Tommy Berlin",
+            "email": "hotel.tommy@spryker.com",
+            "phone": "+49 (30) 1234 56789",
+            "externalUrl": "",
+            "bic": "OSDD DE 81 005",
+            "iban": "DE 91 10000000 0123456789",
+            "defaultBillingAddress": null
+        },
+        "links": {
+            "self": "http://glue.mysprykershop.com/company-business-units/b8a06475-73f5-575a-b1e9-1954de7a49ef"
+        }
+    }
+}
+```
+</details>
+
+
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve the business unit with the unique identifier</summary>
 
 ```json
 {
@@ -80,43 +107,19 @@ To retrieve a business unit, send the request:
                 "defaultBillingAddress": null
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/company-business-units/5a6032dc-fbce-5d0d-9d57-11ade1947bac"
+                "self": "http://glue.mysprykershop.com/company-business-units/5a6032dc-fbce-5d0d-9d57-11ade1947bac"
             }
         }
     ],
     "links": {
-        "self": "https://glue.mysprykershop.com/company-business-units/mine"
-    }
-}
-```
-</details>
-
-<details><summary markdown='span'>Response sample with business units of a company user</summary>
-
-```json
-{
-    "data": {
-        "type": "company-business-units",
-        "id": "b8a06475-73f5-575a-b1e9-1954de7a49ef",
-        "attributes": {
-            "name": "Hotel Tommy Berlin",
-            "email": "hotel.tommy@spryker.com",
-            "phone": "+49 (30) 1234 56789",
-            "externalUrl": "",
-            "bic": "OSDD DE 81 005",
-            "iban": "DE 91 10000000 0123456789",
-            "defaultBillingAddress": null
-        },
-        "links": {
-            "self": "https://glue.mysprykershop.com/company-business-units/b8a06475-73f5-575a-b1e9-1954de7a49ef"
-        }
+        "self": "http://glue.mysprykershop.com/company-business-units/mine"
     }
 }
 ```
 </details>
 
 
-<details><summary markdown='span'>Response sample with companies</summary>
+<details><summary markdown='span'>Response sample: retrieve the business unit with the unique identifier and related companies included</summary>
 
 ```json
 {
@@ -146,7 +149,7 @@ To retrieve a business unit, send the request:
                 "status": "approved"
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/companies/0818f408-cc84-575d-ad54-92118a0e4273"
+                "self": "http://glue.mysprykershop.com/companies/0818f408-cc84-575d-ad54-92118a0e4273"
             }
         }
     ]
@@ -155,7 +158,7 @@ To retrieve a business unit, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with company business unit addresses</summary>
+<summary markdown='span'>Response sample: retrieve the business unit with the unique identifier and related business unit addresses included</summary>
 
 ```json
 {
@@ -190,7 +193,7 @@ To retrieve a business unit, send the request:
                 "comment": ""
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/company-business-unit-addresses/19a55c0d-7bf0-580c-a9e8-6edacdc1ecde"
+                "self": "http://glue.mysprykershop.com/company-business-unit-addresses/19a55c0d-7bf0-580c-a9e8-6edacdc1ecde"
             }
         }
     ]

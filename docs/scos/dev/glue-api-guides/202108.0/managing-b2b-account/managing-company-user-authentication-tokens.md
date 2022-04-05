@@ -29,7 +29,9 @@ To refresh a company user authentication token, send the request:
 
 ### Request
 
-Request sample: `POST https://glue.mysprykershop.com/refresh-tokens`
+Request sample: refresh a company user authentication token
+
+`POST https://glue.mysprykershop.com/refresh-tokens`
 
 ```json
 {
@@ -52,7 +54,7 @@ Request sample: `POST https://glue.mysprykershop.com/refresh-tokens`
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: refresh a company user authentication token</summary>
 
 ```json
 {

@@ -30,11 +30,13 @@ To retrieve subscriptions to availability notifications, send the request:
 |-|-|-|-|
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by authenticating as a customer. |
 
-Request sample: `GET https://glue.mysprykershop.com/my-availability-notifications`
+Request sample: retrieve subscriptions to availability notifications
+
+`GET https://glue.mysprykershop.com/my-availability-notifications`
 
 ### Response
 
-<details><summary markdown='span'>Response sample</summary>
+<details><summary markdown='span'>Response sample: retrieve subscriptions to availability notifications</summary>
 
 ```json
 {

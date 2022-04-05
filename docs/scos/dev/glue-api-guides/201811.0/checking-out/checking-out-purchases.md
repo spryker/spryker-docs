@@ -24,7 +24,7 @@ For detailed information on the modules that provide the API functionality and r
 ## Place Order
 To place an order, send a POST request to the following endpoint:
 `/checkout`
-Sample request: `POST http:carts-of-registered-users/managing-carts-of-registered-users.htmlmysprykershop.com/checkout`
+Request sample: `POST http:carts-of-registered-users/managing-carts-of-registered-users.htmlmysprykershop.com/checkout`
 
 ### Request
 A request should contain:
@@ -457,7 +457,7 @@ The **included** section of the response contains additional order details.
 ## Retrieve Checkout Data
 To get information on a particular order, send the following POST request:
 `/checkout-data`
-Sample request: `POST http:carts-of-registered-users/managing-carts-of-registered-users.htmlmysprykershop.com/checkout-data`
+Request sample: `POST http:carts-of-registered-users/managing-carts-of-registered-users.htmlmysprykershop.com/checkout-data`
 {% info_block errorBox "Authentication" %}
 To use this endpoint:<ul><li>**Registered** customers need to authenticate first. For details, see [Authentication and Authorization]().</li><li>For **anonymous** users, you need to add their _X-Anonymous-Customer-Unique-Id_ in the request header. For details, see Managing Guest Carts.</li></ul>
 {% endinfo_block %}

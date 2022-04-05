@@ -52,7 +52,7 @@ Alternatively, you can retrieve all orders made by a customer through the **/ord
 
 ### Response
 
-<details><summary markdown='span'>Response sample with one order</summary>
+<details><summary markdown='span'>Response sample: Retrieve a customer’s order</summary>
 
 ```json
 {

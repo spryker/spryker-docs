@@ -36,12 +36,14 @@ To retrieve a category node, send the request:
 
 ### Request
 
-Request sample : `GET https://glue.mysprykershop.com/category-nodes/5`
+Request sample: retrieve a category node
+
+`GET http://glue.mysprykershop.com/category-nodes/5`
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve a category node</summary>
 
 ```json
 {
@@ -111,7 +113,7 @@ Request sample : `GET https://glue.mysprykershop.com/category-nodes/5`
             ]
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/category-nodes/5"
+            "self": "http://glue.mysprykershop.com/category-nodes/5"
         }
     }
 }

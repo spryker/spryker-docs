@@ -1716,7 +1716,7 @@ Even though guest users have one cart by default, you can optionally specify its
 
 ### Request
 
-Sample request: `DELETE https://glue.mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`
+Request sample: `DELETE https://glue.mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`
 
 
 
@@ -1750,7 +1750,7 @@ Even though guest users have one cart by default, you can optionally specify its
 
 ### Request
 
-Sample request: `PATCH https://glue.mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`
+Request sample: `PATCH https://glue.mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`
 ```js
 {
 	"data": {

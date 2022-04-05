@@ -25,7 +25,7 @@ To retrieve returns of the customer, send the request:
 `GET` **/returns**
 ***
 ### Request
-Sample request: `GET https://glue.mysprykershop.com/returns`
+Request sample: `GET https://glue.mysprykershop.com/returns`
 
 ### Response
 Response sample:
@@ -109,7 +109,7 @@ To retrieve information on a specific return item, send the request:
 | {% raw %}{{{% endraw %}returnID{% raw %}}}{% endraw %} | Unique identifier of the return. |
 
 ### Request
-Sample request: `GET https://glue.mysprykershop.com/returnable-items/DE--1-R3`
+Request sample: `GET http://glue.mysprykershop.com/returnable-items/DE--1-R3`
 
 ### Response
 <details>

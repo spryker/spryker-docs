@@ -50,7 +50,7 @@ To retrieve a search suggestion, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve suggestions for a query</summary>
 
 ```json
 {

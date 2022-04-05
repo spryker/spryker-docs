@@ -33,11 +33,13 @@ To retrieve availability of an abstract product, send the request:
 
 ### Request
 
-Request sample: `GET https://glue.mysprykershop.com/abstract-products/001/abstract-product-availabilities`
+Request sample: retrieve availability of an abstract product
+
+`GET http://glue.mysprykershop.com/abstract-products/001/abstract-product-availabilities`
 
 ### Response
 
-Response sample:
+Response sample: retrieve availability of an abstract product
 
 ```json
 {
@@ -49,11 +51,11 @@ Response sample:
             "quantity": 10
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/abstract-products/001/abstract-product-availabilities"
+            "self": "http://glue.mysprykershop.com/abstract-products/001/abstract-product-availabilities"
         }
     }],
     "links": {
-        "self": "https://glue.mysprykershop.com/abstract-products/001/abstract-product-availabilities"
+        "self": "http://glue.mysprykershop.com/abstract-products/001/abstract-product-availabilities"
     }
 }
 ```
@@ -62,8 +64,8 @@ Response sample:
 
 | FIELD | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| availability | Boolean | Boolean to inform about the availability. |
-| quantity | Integer | Available stock (all warehouses aggregated). |
+| availability | Boolean | Boolean to inform about the availability |
+| quantity | Integer | Available stock (all warehouses aggregated) |
 
 
 ## Possible errors

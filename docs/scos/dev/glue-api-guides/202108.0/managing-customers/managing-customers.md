@@ -37,7 +37,9 @@ To create a customer, send the request:
 
 ### Request
 
-Request sample: `POST https://glue.mysprykershop.com/customers`
+Request sample: create a customer
+
+`POST http://glue.mysprykershop.com/customers`
 
 ```json
 {
@@ -71,7 +73,7 @@ Request sample: `POST https://glue.mysprykershop.com/customers`
 
 ### Response
 
-<details><summary markdown='span'>Response sample</summary>
+<details><summary markdown='span'>Response sample: create a customer</summary>
 
 ```json
 {
@@ -88,11 +90,12 @@ Request sample: `POST https://glue.mysprykershop.com/customers`
 			"updatedAt": "2018-11-06 08:15:02.694668"
 		},
 		"links": {
-			"self": "https://glue.mysprykershop.com/customers/DE--25"
+			"self": "http://glue.mysprykershop.com/customers/DE--25"
 		}
 	}
 }
 ```
+
 </details>
 
 <a name="create-a-customer-response-attributes"></a>
@@ -125,11 +128,13 @@ To retrieve customers, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
-Request sample: `GET https://glue.mysprykershop.com/customers`
+Request sample: retrieve customers
+
+`GET https://glue.mysprykershop.com/customers`
 
 ### Response
 
-<details><summary markdown='span'>Response sample</summary>
+<details><summary markdown='span'>Response sample: retrieve customers</summary>
 
 ```json
 {
@@ -153,7 +158,7 @@ Request sample: `GET https://glue.mysprykershop.com/customers`
         }
     ],
     "links": {
-        "self": "https://glue.mysprykershop.com/customers"
+        "self": "http://glue.mysprykershop.com/customers"
     }
 }
 ```
@@ -181,12 +186,14 @@ To retrieve information about a customer, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
-Request sample: `GET https://glue.mysprykershop.com/customers/DE-25`
+Request sample: Retrieve a customer
+
+`GET http://glue.mysprykershop.com/customers/DE-25`
 
 
 ### Response
 
-<details><summary markdown='span'>Response sample</summary>
+<details><summary markdown='span'>Response sample: retrieve a customer</summary>
 
 ```json
 {
@@ -203,7 +210,7 @@ Request sample: `GET https://glue.mysprykershop.com/customers/DE-25`
 				"updatedAt": "2018-11-06 08:15:02.694668"
 			},
 			"links": {
-				"self": "https://glue.mysprykershop.com/customers/DE--25"
+				"self": "http://glue.mysprykershop.com/customers/DE--25"
 			}
 		}
 	}
@@ -240,7 +247,9 @@ To edit a customer account, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer which you want to edit. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
-Request sample: `PATCH https://glue.mysprykershop.com/customers/DE-25`
+Request sample: edit a customer
+
+`PATCH http://glue.mysprykershop.com/customers/DE-25`
 
 ```json
 {
@@ -257,7 +266,7 @@ Request sample: `PATCH https://glue.mysprykershop.com/customers/DE-25`
 
 ### Response
 
-<details><summary markdown='span'>Response sample</summary>
+<details><summary markdown='span'>Response sample: edit a customer</summary>
 
 ```json
 {
@@ -301,7 +310,7 @@ To anonymize a customer, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}*** | Unique identifier of the customer to anonymize. This parameter is returned as the `id` attribute when [creating a customer](#create-a-customer). If you've already created a customer, [retrieve customers](#retrieve-customers) to get it.  |
+| ***{% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}*** | Unique identifier of the customer to anonimyze. This parameter is returned as the `id` attribute when [creating a customer](#create-a-customer). If you've already created a customer, [retrieve customers](#retrieve-customers) to get it.  |
 
 ### Request
 
@@ -309,7 +318,9 @@ To anonymize a customer, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer which you want to anonymize. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
-Sample request: `DELETE http://mysprykershop.com/customers/DE-25`
+Request sample: anonymize a customer
+
+`DELETE http://mysprykershop.com/customers/DE-25`
 
 ### Response
 
@@ -320,9 +331,7 @@ If the customer is anonymized successfully, the endpoint returns the `204 No Con
 To retrieve subscriptions to availability notifications, send the following:
 
 {% info_block warningBox %}
-
 This request is available for registered customers only.
-
 {% endinfo_block %}
 
 ---
@@ -340,11 +349,13 @@ This request is available for registered customers only.
 
 ### Request
 
-Request sample: `GET https://glue.mysprykershop.com/customers/DE--21/availability-notifications`
+Request sample: retrieve subscriptions to availability notifications
+
+`GET https://glue.mysprykershop.com/customers/DE--21/availability-notifications`
 
 ### Response
 
-<details><summary markdown='span'>Response sample</summary>
+<details><summary markdown='span'>Response sample: retrieve subscriptions to availability notifications</summary>
 
 ```json
 {
@@ -392,7 +403,7 @@ There is an alternative way to retrieve existing subscriptions, for details see 
 | 410 | Failed to save changes. |
 | 414 | Provided gender is invalid. |
 | 420 | The password character set is invalid. |
-| 422 | `newPassword` and `confirmPassword` values are not identical. |
+| 422 | `newPassword` and `confirmPassword` values are not identic. |
 | 802 | Request is unauthorized. |
 | 901 | Indicates one of the following reasons:<ul><li>Terms of service were not accepted. Note that if you don't have the [REST Request Format](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/validating-rest-request-format.html) validation enabled, then you will recieve the `422` status code instead of the `901` error code.</li><li> `newPassword` and `confirmPassword` are not specified.</li><li>Password length is invalid (it should be from 8 to 64 characters).</li></ul> |
 | 4606 | Request is unauthorized.|

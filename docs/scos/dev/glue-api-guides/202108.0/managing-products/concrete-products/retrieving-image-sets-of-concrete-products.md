@@ -38,12 +38,14 @@ To retrieve image sets of a concrete product, send the request:
 
 ### Request
 
-Request sample : `GET https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-image-sets`
+Request sample: retrieve image sets of a concrete product
+
+`GET http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-image-sets`
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve image sets of a concrete product</summary>
 
 ```json
 {
@@ -65,12 +67,12 @@ Request sample : `GET https://glue.mysprykershop.com/concrete-products/001_25904
                 ]
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/177_25913296/concrete-product-image-sets"
+                "self": "http://glue.mysprykershop.com/concrete-products/177_25913296/concrete-product-image-sets"
             }
         }
     ],
     "links": {
-        "self": "https://glue.mysprykershop.com/concrete-products/177_25913296/concrete-product-image-sets"
+        "self": "http://glue.mysprykershop.com/concrete-products/177_25913296/concrete-product-image-sets"
     }
 }
 ```

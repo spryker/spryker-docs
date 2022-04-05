@@ -22,7 +22,6 @@ This endpoint allows to manage guest carts.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-
 * [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)
 * [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
 * [Glue API: Product options feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
@@ -89,10 +88,11 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 | `GET https://glue.mysprykershop.com/guest-carts?include=concrete-products,product-labels` | Retrieve a guest cart with information about concrete products and the product labels assigned to the products in it. |
 
 
+
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart</summary>
 
 ```json
 {
@@ -137,7 +137,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 <details>
-<summary markdown='span'>Response sample with guest cart items</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with the items included</summary>
 
 ```json
 {
@@ -233,7 +233,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 <details>
-<summary markdown='span'>Response sample with cart rules</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with cart rules included</summary>
 
 ```json
 {
@@ -308,7 +308,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 <details>
-<summary markdown='span'>Response sample with gift cards</summary>
+<summary markdown='span'>Response sample: add items with gift cards to a guest cart</summary>
 
 ```json
 {
@@ -378,8 +378,9 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 ```
 </details>
 
+
 <details>
-<summary markdown='span'>Sample response with guest cart items, concrete products, and product options</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with items, respective concrete products, and their product options included</summary>
 
 ```json
 {
@@ -636,7 +637,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 <details>
-<summary markdown='span'>Response sample with guest cart items, sales units, and product measurement units</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with its items, sales units, and product measurement units</summary>
 
 ```json
 {
@@ -766,7 +767,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 <details>
-<summary markdown='span'>Response sample with a cart rule and a discount voucher</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with a cart rule and a discount voucher</summary>
 
 ```json
 {
@@ -809,7 +810,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "discountPromotionQuantity": null
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/vouchers/mydiscount-yu8je"
+                "self": "http://glue.mysprykershop.com/vouchers/mydiscount-yu8je"
             }
         },
         {
@@ -826,7 +827,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "discountPromotionQuantity": null
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/cart-rules/1"
+                "self": "http://glue.mysprykershop.com/cart-rules/1"
             }
         }
     ]
@@ -835,7 +836,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product labels</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with product labels included</summary>
 
 ```json
 {
@@ -1030,7 +1031,6 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 For the attributes of other included resources, see:
-
 * [Managing guest cart items](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html)
 * [Retrieving measurement units](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html)
 * [Retrieving concrete products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
@@ -1056,7 +1056,9 @@ Below, you can see an exemplary workflow for converting a guest cart into a regu
 
 1. The customer adds items to a guest cart.
 
-Request sample: `POST https://glue.myspsrykershop.com/guest-cart-items`
+Request sample:
+
+`POST https://glue.myspsrykershop.com/guest-cart-items`
 
 ```json
 {
@@ -1088,9 +1090,12 @@ Request sample: `POST https://glue.myspsrykershop.com/guest-cart-items`
     "included": [...]
 }
 ```
+
 2. The customer logs in.
 
-Request sample: `POST https://glue.myspsrykershop.com/access-tokens`
+Request sample:
+
+`POST https://glue.myspsrykershop.com/access-tokens`
 
 ```json
 {
@@ -1129,7 +1134,9 @@ Request sample: `POST https://glue.myspsrykershop.com/access-tokens`
 
 3. The customer requests a list of his own carts.
 
-Request sample: `GET https://glue.myspsrykershop.com/carts`
+Request sample:
+
+`GET https://glue.myspsrykershop.com/carts`
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |

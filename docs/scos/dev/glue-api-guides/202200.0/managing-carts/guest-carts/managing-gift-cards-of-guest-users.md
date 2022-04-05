@@ -27,7 +27,7 @@ To manage the gift cards of the registered users, see [Managing gift cards of re
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see Gift Cards API Integration.
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Gift Cards API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/gift-cards-feature-integration.html).
 
 ## Purchasing a gift card
 
@@ -59,8 +59,9 @@ To redeem a gift card, send the request:
 | X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | ✓ | Guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
 
 
+
 <details>
-<summary markdown='span'>Request sample</summary>
+<summary markdown='span'>Request sample: redeem a gift card in a guest cart</summary>
 
 `https://glue.mysprykershop.com/guest-carts/f8782b6c-848d-595e-b3f7-57374f1ff6d7/cart-codes?include=vouchers,gift-cards`
 
@@ -76,13 +77,14 @@ To redeem a gift card, send the request:
 ```    
 </details>
 
+
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | code | String | ✓ | Code of the gift card sent to the specified email address after the gift card was purchased. |
 
 ### Response
 
-Response sample:
+Response sample: redeem a gift card in a guest cart
 
 ```json
 {
@@ -148,6 +150,7 @@ Response sample:
 
 For the guest cart attributes, see [Creating Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart).
 
+
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | gift-cards | code | String | Code of the gift card sent to the specified email address after the gift card was purchased. |
@@ -157,7 +160,7 @@ For the guest cart attributes, see [Creating Guest Carts](/docs/scos/dev/glue-ap
 | gift-cards | actualValue | Integer | Actual value of the gift card code. |
 | gift-cards | isActive | Boolean | Specifies whether the gift card code is redeemed or not. |
 
-## Removing gift card code
+## Remove a gift card code
 
 To remove the gift card code from the cart, send the request:
 
@@ -176,7 +179,9 @@ To remove the gift card code from the cart, send the request:
 | --- | --- | --- | --- |
 | X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | ✓ | Guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
 
-Request sample: `https://glue.mysprykershop.com/guest-carts/f8782b6c-848d-595e-b3f7-57374f1ff6d7/cart-codes/GC-Z9FYJRK3-20`
+Request sample: remove a gift card code
+
+`DELETE https://glue.mysprykershop.com/guest-carts/f8782b6c-848d-595e-b3f7-57374f1ff6d7/cart-codes/GC-Z9FYJRK3-20`
 
 ### Response
 

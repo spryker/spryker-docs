@@ -37,7 +37,9 @@ To login as an agent, send the request:
 
 ### Request
 
-Request sample: `POST https://glue.mysprykershop.com/agent-access-tokens`
+Request sample: authenticate as an agent assist
+
+`POST https://glue.mysprykershop.com/agent-access-tokens`
 
 ```json
 {
@@ -64,7 +66,7 @@ Note that depending on the Login feature configuration for your project, too man
 
 ### Response
 
-<details><summary markdown='span'>Response sample</summary>
+<details><summary markdown='span'>Response sample: authenticate as an agent assist</summary>
 
 ```json
 {

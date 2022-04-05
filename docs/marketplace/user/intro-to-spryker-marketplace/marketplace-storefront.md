@@ -4,7 +4,7 @@ description: This document describes the peculiarities of the Marketplace Storef
 template: concept-topic-template
 ---
 
-*Marketplace Storefront* is a web application designed for the [marketplace business model](/docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-concept.html). Based on the regular Storefront, it supports all [Spryker Commerce OS](/docs/scos/user/intro-to-spryker/about-spryker.html) features. Marketplace functionality lets buyers browse for products and view and purchase them across different merchants.
+*Marketplace Storefront* is a web application designed for the [marketplace business model](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-concept.html). Based on the regular Storefront, it supports all [Spryker Commerce OS](/docs/scos/user/intro-to-spryker/intro-to-spryker.html) features. Marketplace functionality lets buyers browse for products and view and purchase them across different merchants.
 
 In most sections of the Marketplace Storefront, customers can see who the seller of a product or offer is.
 
@@ -97,3 +97,7 @@ On the **Merchant Profile** page, customers can find the following merchant-spec
 Customers can access only the profile pages of [active](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#active-merchants) merchants.
 
 For an example, see the [Spryker merchant profile](https://www.de.b2c-marketplace.demo-spryker.com/en/merchant/spryker) in our Marketplace Demo Shop.
+
+## Read next
+
+[Merchant Portal](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-storefront.html)

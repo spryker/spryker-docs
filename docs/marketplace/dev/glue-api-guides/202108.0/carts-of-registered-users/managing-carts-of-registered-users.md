@@ -826,7 +826,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve all carts with included information about shared carts, and the company uses they are shared with</summary>
+<summary markdown='span'>Response sample: retrieve all carts with included information about shared carts, and the company users they are shared with</summary>
 
 ```json
 {
@@ -1197,7 +1197,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve all carts with the applied gift cards included</summary>
+<summary markdown='span'>Response sample: retrieve all carts with the applied gift cards</summary>
 
 ```json
 {
@@ -2794,7 +2794,7 @@ To retrieve a registered user's cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a cart with the information about the shared carts and the company uses they are shared with</summary>
+<summary markdown='span'>Response sample: retrieve a cart with the information about the shared carts and the company users they are shared with</summary>
 
 ```json
 {
@@ -2867,7 +2867,6 @@ To retrieve a registered user's cart, send the request:
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -3380,7 +3379,6 @@ To retrieve a registered user's cart, send the request:
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -3535,7 +3533,6 @@ To retrieve a registered user's cart, send the request:
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -4441,7 +4438,7 @@ To delete a cart, send the request:
 
 ---
 
-| Path parameter | Description |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | {% raw %}***{{cart_uuid}}***{% endraw %}| Unique identifier of a cart. [Create a cart](#create-a-cart) or [retrieve a registered user's carts](#retrieve-registered-users-carts) to get it. |
 

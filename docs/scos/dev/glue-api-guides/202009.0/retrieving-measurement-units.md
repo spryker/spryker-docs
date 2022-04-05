@@ -36,7 +36,7 @@ To retrieve measurement unit information by product measurement unit code, send 
 
 ### Request
 
-Sample request: `GET https://glue.mysprykershop.com/product-measurement-unit/METR`
+Request sample: `GET http://glue.mysprykershop.com/product-measurement-unit/METR`
 
 ### Response
 Response sample:
@@ -51,7 +51,7 @@ Response sample:
             "defaultPrecision": 100
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/product-measurement-units/METR"
+            "self": "http://glue.mysprykershop.com/product-measurement-units/METR"
         }
     }
 }

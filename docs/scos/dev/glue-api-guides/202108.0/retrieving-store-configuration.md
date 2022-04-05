@@ -30,12 +30,14 @@ To retrieve store configuration, send the request:
 
 ### Request
 
-Request sample: `GET https://glue.mysprykershop.com/stores`
+Request sample: retrieve protected resources
+
+`GET https://glue.mysprykershop.com/stores`
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve protected resources</summary>
 
 ```json
 {

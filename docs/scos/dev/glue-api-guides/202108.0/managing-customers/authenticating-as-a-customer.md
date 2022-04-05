@@ -39,7 +39,9 @@ To authenticate as a customer, send the request:
 
 ### Request
 
-Request sample: `POST https://mysprykershop.com/access-tokens`
+Request sample: authenticate as a customer
+
+`POST https://mysprykershop.com/access-tokens`
 
 ```json
 {
@@ -73,7 +75,7 @@ Note that depending on the Login feature configuration for your project, too man
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: authenticate as a customer</summary>
 
 ```json
 {

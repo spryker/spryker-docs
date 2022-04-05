@@ -20,7 +20,6 @@ This endpoint allows retrieving general information about concrete products.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-
 * [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
 * [Glue API: Measurement Units Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html)
 * [Glue API: Product Options Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
@@ -46,36 +45,36 @@ To retrieve general information about a concrete product, send the request:
 
 | STRING PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
-| include | Adds resource relationships to the request. | concrete-product-image-sets, concrete-product-availabilities, product-options, product-reviews, product-offers, concrete-product-prices, product-measurement-units, sales-units, product-labels, bundled-products |
+| include | Adds resource relationships to the request. | <ul><li>concrete-product-image-sets</li><li>concrete-product-availabilities</li><li>product-options</li><li>product-reviews</li><li>product-offers</li><li>concrete-product-prices</li><li>product-measurement-units</li><li>sales-units</li><li>product-labels</li><li>bundled-products</li></ul> |
 | fields | 	Filters out the fields to be retrieved.  | name, image, description |
 
 {% info_block warningBox "Performance" %}
 
 * For performance and bandwidth usage optimization, we recommend filtering out only the needed information using the `fields` string parameter.
 
-* If you include more resources, you can still use the `fields` string parameter to return only the needed fields. For example, `GET https://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units&fields[concrete-products]=name,description&fields[sales-units]=conversion,precision`.
+* If you include more resources, you can still use the `fields` string parameter to return only the needed fields. For example, `GET http://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units&fields[concrete-products]=name,description&fields[sales-units]=conversion,precision`.
 
 {% endinfo_block %}   
 
 | REQUEST  | USAGE |
 | --- | --- |
-| GET https://glue.mysprykershop.com/concrete-products/001_25904006 | Get information about the `001_25904006` product.  |
-| GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-image-sets | Get information about the `001_25904006` product with its image sets.  |
-| GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-availabilities | Get information about the `001_25904006` product with its availability.  |
-| GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-prices | Get information about the `001_25904006` product with its [default prices](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html#default-and-original-prices-on-the-storefront). |
-| GET https://glue.mysprykershop.com/abstract-products/093_24495843?include=abstract-product-prices | Retrieve information about the abstract product with SKU `093_24495843` with its prices (default and [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html)) |
-| GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-options | Get information about the `001_25904006` product with its product options.  |
-| GET https://glue.mysprykershop.com/concrete-products/035_17360369?include=product-reviews | Get information about the `001_25904006` product with its product reviews.  |
-| GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-offers | Get information about the `001_25904006` product with its product offers.  |
-| GET https://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units,product-measurement-units | Get information about the `fish-1-1` product with the information on its sales units and product measurement units included. |
-| GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-labels | Retrieve information about the `001_25904006` product with product labels included.  |
-| GET https://glue.mysprykershop.com/concrete-products/214_123?included=bundled-products | Retrieve the concrete product with SKU `214_123`. If it is a product bundle, retrieve the bundled products. |
-| GET https://glue.mysprykershop.com/concrete-products/214_123?included=bundled-products,concrete-products,abstract-products | Retrieve the concrete product with SKU `214_123`. If it is a product bundle, retrieve the bundled products. Retrieve all the related concrete products and the abstract products owning them. |
+| `GET http://glue.mysprykershop.com/concrete-products/001_25904006` | Get information about the `001_25904006` product.  |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-image-sets` | Get information about the `001_25904006` product with its image sets.  |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-availabilities` | Get information about the `001_25904006` product with its availability.  |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-prices` | Get information about the `001_25904006` product with its [default prices](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html#default-and-original-prices-on-the-storefront). |
+| `GET https://glue.mysprykershop.com/abstract-products/093_24495843?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `093_24495843` with its prices (default and [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html)) |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-options` | Get information about the `001_25904006` product with its product options.  |
+| `GET https://glue.mysprykershop.com/concrete-products/035_17360369?include=product-reviews` | Get information about the `001_25904006` product with its product reviews.  |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-offers` | Get information about the `001_25904006` product with its product offers.  |
+| `GET http://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units,product-measurement-units` | Get information about the `fish-1-1` product with the information on its sales units and product measurement units included. |
+| `GET http://glue.mysprykershop.com/concrete-products/001_25904006?include=product-labels` | Retrieve information about the `001_25904006` product with product labels included.  |
+| `GET https://glue.mysprykershop.com/concrete-products/214_123?included=bundled-products` | Retrieve the concrete product with SKU `214_123`. If it is a product bundle, retrieve the bundled products. |
+| `GET https://glue.mysprykershop.com/concrete-products/214_123?included=bundled-products,concrete-products,abstract-products` | Retrieve the concrete product with SKU `214_123`. If it is a product bundle, retrieve the bundled products. Retrieve all the related concrete products and the abstract products owning them. |
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve information about a concrete product by SKU</summary>
 
 ```json
 {
@@ -114,7 +113,7 @@ To retrieve general information about a concrete product, send the request:
             }
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/concrete-products/001_25904006"
+            "self": "http://glue.mysprykershop.com/concrete-products/001_25904006"
         }
     }
 }
@@ -122,7 +121,7 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with sales units and product measurement units</summary>
+<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the sales units and product measurement units</summary>
 
 ```json
 {
@@ -151,7 +150,7 @@ To retrieve general information about a concrete product, send the request:
             }
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-1?include=sales-units,product-measurement-units"
+            "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-1?include=sales-units,product-measurement-units"
         },
         "relationships": {
             "product-measurement-units": {
@@ -181,7 +180,7 @@ To retrieve general information about a concrete product, send the request:
                 "defaultPrecision": 100
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/product-measurement-units/METR"
+                "self": "http://glue.mysprykershop.com/product-measurement-units/METR"
             }
         },
         {
@@ -195,7 +194,7 @@ To retrieve general information about a concrete product, send the request:
                 "productMeasurementUnitCode": "METR"
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-1/sales-units/32"
+                "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/sales-units/32"
             },
             "relationships": {
                 "product-measurement-units": {
@@ -214,7 +213,7 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product labels</summary>
+<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on product labels</summary>
 
 ```json
 {
@@ -253,7 +252,7 @@ To retrieve general information about a concrete product, send the request:
             }
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/concrete-products/001_25904006"
+            "self": "http://glue.mysprykershop.com/concrete-products/001_25904006"
         }
     }
 }
@@ -261,7 +260,7 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product image sets</summary>
+<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the product image sets</summary>
 
 ```json
 {
@@ -340,7 +339,7 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product availability</summary>
+<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on product availability</summary>
 
 ```json
 {
@@ -410,9 +409,9 @@ To retrieve general information about a concrete product, send the request:
 ```
 </details>
 
-<details><summary markdown='span'>Response sample - retrieve concrete product with default product prices</summary>
+<details><summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the default product prices</summary>
 
-```php
+```json
 {
     "data": {
         "type": "concrete-products",
@@ -500,9 +499,9 @@ To retrieve general information about a concrete product, send the request:
 ```
 </details>
 
-<details><summary markdown='span'>Response sample - retrieve concrete product with volume prices</summary>
+<details><summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the default and volume prices</summary>
 
-```php
+```json
 {
     "data": {
         "type": "concrete-products",
@@ -600,7 +599,7 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product options</summary>
+<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the product options</summary>
 
 ```json
 {
@@ -691,7 +690,7 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with reviews</summary>
+<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on product reviews</summary>
 
 ```json
 {
@@ -797,7 +796,7 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with bundled products</summary>
+<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the bundled products included</summary>
 
 ```json
 {
@@ -1009,7 +1008,7 @@ To retrieve general information about a concrete product, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample with bundled products, concrete products, and abstract products</summary>
+<summary markdown='span'>Response sample: retrieve information about a concrete product with the detais on bundled products, concrete products, and abstract products</summary>
 
 ```json
 {

@@ -69,7 +69,9 @@ To use this endpoint, customers need to authenticate. For details, see [Authenti
 
 ### Request
 
-Response sample: `POST https://glue.mysprykershop.com/carts/8ef901fe-fe47-5569-9668-2db890dbee6d/cart-codes?include=vouchers,gift-cards`
+Request sample: redeem the gift card code
+
+`POST https://glue.mysprykershop.com/carts/8ef901fe-fe47-5569-9668-2db890dbee6d/cart-codes?include=vouchers,gift-cards`
 
 ```json
 {
@@ -88,7 +90,7 @@ Response sample: `POST https://glue.mysprykershop.com/carts/8ef901fe-fe47-5569-9
 
 ### Response
 
-Response sample:
+Response sample: redeem the gift card code
 
 ```json
 {
@@ -163,7 +165,7 @@ For the attributes of the registered user's carts, see [Creating carts of regist
 | gift-cards | actualValue | Integer | Actual value of the gift card code. |
 | gift-cards | isActive | Boolean | Specifies whether the gift card code is redeemed or not. |
 
-## Removing gift cards
+## Remove a gift card
 
 To remove the gift card code from the cart, send the request:
 
@@ -184,7 +186,9 @@ To use this endpoint, customers need to authenticate. For details, see [Authenti
 
 ### Request
 
-Sample request: `DELETE https://glue.mysprykershop.com/carts/8ef901fe-fe47-5569-9668-2db890dbee6d/cart-codes/GC-I6UB6O56-20`
+Request sample: remove a gift card
+
+`DELETE https://glue.mysprykershop.com/carts/8ef901fe-fe47-5569-9668-2db890dbee6d/cart-codes/GC-I6UB6O56-20`
 
 ### Response
 

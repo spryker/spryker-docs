@@ -32,7 +32,7 @@ To authenticate as a company user, send the request:
 
 ### Request
 
-Request sample:
+Request sample: authenticate as a company user
 
 `POST https://glue.mysprykershop.com/company-user-access-tokens`
 
@@ -56,7 +56,7 @@ Request sample:
 
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: authenticate as a company user</summary>
 
 ```json
 {

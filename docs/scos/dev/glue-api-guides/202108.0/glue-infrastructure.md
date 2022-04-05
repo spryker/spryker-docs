@@ -221,7 +221,7 @@ Let us consider the following REST Response example. It contains information on 
 
 **Request:**
 
-*GET https://glue.mysprykershop.com/wishlists/cbf84323-e54d-5774-8c02-4c90e107afe6*
+`GET http://glue.mysprykershop.com/wishlists/cbf84323-e54d-5774-8c02-4c90e107afe6`
 
 ```json
 	{
@@ -235,7 +235,7 @@ Let us consider the following REST Response example. It contains information on 
             "updatedAt": "2019-07-05 13:13:52.811524"
         },
         "links": {
-            "self": "https://glue.mysprykershop.com/wishlists/cbf84323-e54d-5774-8c02-4c90e107afe6"
+            "self": "http://glue.mysprykershop.com/wishlists/cbf84323-e54d-5774-8c02-4c90e107afe6"
         }
     }
 }
@@ -246,10 +246,10 @@ If we add relationships to the `wishlist-items` and `concrete-products` resource
 
 **Request:**
 
-*GET https://glue.mysprykershop.com/wishlists/cbf84323-e54d-5774-8c02-4c90e107afe6?include=wishlist-items,concrete-products*
+`GET http://glue.mysprykershop.com/wishlists/cbf84323-e54d-5774-8c02-4c90e107afe6?include=wishlist-items,concrete-products`
 
 <details>
-<summary markdown='span'>Code sample:</summary>
+<summary markdown='span'>Response sample</summary>
 
 ```json
 {
@@ -303,7 +303,7 @@ If we add relationships to the `wishlist-items` and `concrete-products` resource
                 }
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/021_21081475"
+                "self": "http://glue.mysprykershop.com/concrete-products/021_21081475"
             }
         },
         {
@@ -313,7 +313,7 @@ If we add relationships to the `wishlist-items` and `concrete-products` resource
                 "sku": "021_21081475"
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/concrete-products/wishlist-items/021_21081475"
+                "self": "http://glue.mysprykershop.com/concrete-products/wishlist-items/021_21081475"
             },
             "relationships": {
                 "concrete-products": {
@@ -337,7 +337,7 @@ To add relationships between two resources, you can either implement the Resourc
 
 *Option 1: With a separate module*
 
-![implementation-with-separate-module.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Glue+Infrastructure/implementation-wiht-separate-module.png)
+![implementation-wiht-separate-module.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Developer+Guides/Glue+Infrastructure/implementation-wiht-separate-module.png)
 
 _Option 2: Without module_
 

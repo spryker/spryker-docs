@@ -16,7 +16,6 @@ This document describes how to integrate the Configurable Bundle feature.
 
 ## Prerequisites
 
-
 To start the feature integration, overview and install the necessary features:
 
 
@@ -58,7 +57,6 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | RestConfigurableBundleTemplatesAttributesTransfer | class | created | src/Generated/Shared/Transfer/RestConfigurableBundleTemplatesAttributesTransfer |
@@ -82,7 +80,6 @@ Make sure that the following changes have been applied in transfer objects:
 | SalesOrderConfiguredBundleItemTransfer | class | created | src/Generated/Shared/Transfer/SalesOrderConfiguredBundleItemTransfer |
 
 {% endinfo_block %}
-
 
 ## 3) Set up behavior
 
@@ -152,9 +149,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 Make sure that:
 
 *   The `/configurable-bundle-templates` resource is available by sending the request: `GET https://glue.mysprykershop.com/configurable-bundle-templates`.
-
 *   Each `configurable-bundle-template` resource has a relationship to `configurable-bundle-template-slots` by sending the request:  `GET https://glue.mysprykershop.com/configurable-bundle-templates?include=configurable-bundle-template-slots`.
-
 *   Each `configurable-bundle-template` resource has a relationship to `configurable-bundle-template-image-sets` by sending the request:`GET https://glue.mysprykershop.com/configurable-bundle-templates?include=configurable-bundle-template-image-sets`.
 
 
@@ -187,7 +182,7 @@ class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-1.  Create an order with a configurable bandle.
+1.  Create an order with a configurable bundle.
 
 2.  Retrieve the order by sending the request: `GET https://glue.mysprykershop.com/order/:orderReference`  
     Make sure the endpoint returns the sections: `data.attributes.items.salesOrderConfiguredBundle` and `data.attributes.items.salesOrderConfiguredBundleItem`.

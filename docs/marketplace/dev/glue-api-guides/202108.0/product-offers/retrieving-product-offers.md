@@ -11,6 +11,7 @@ In your development, product offers API can help you to retrieve relevant extend
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
+
 * [GLUE API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html)
 * [Glue API: Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html)
 * [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-volume-prices.html)
@@ -38,7 +39,7 @@ To retrieve the product offers, send the request:
 
 | REQUEST | USAGE     |
 | ---------- | ----------- |
-| `GET https://glue.mysprykershop.com/product-offers/offer56`| Retrieve information about the with the `offer56` ID.   |
+| `GET https://glue.mysprykershop.com/product-offers/offer56`| Retrieve information about an offer with the `offer56` ID.   |
 | `GET https://glue.mysprykershop.com/product-offers/offer78?product-offer-prices` | Retrieve information about the offer with `offer78` ID with the product offer prices. |
 | `GET https://glue.mysprykershop.com/product-offers/offer101?product-offer-availabilities` | Retrieve the product offer with the `offer101` ID with the product offer availability. |
 | `GET https://glue.mysprykershop.com/product-offers/offer101?merchants` | Retrieve the product offer with the `offer101` ID, including the merchant it belongs to. |
@@ -46,7 +47,7 @@ To retrieve the product offers, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve an offer</summary>
 
 ```json
 {
@@ -59,7 +60,7 @@ To retrieve the product offers, send the request:
             "isDefault": false
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/product-offers/offer56"
+            "self": "https://glue.mysprykershop.comm/product-offers/offer56"
         }
     }
 }
@@ -67,7 +68,7 @@ To retrieve the product offers, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product offer prices</summary>
+<summary markdown='span'>Response sample: retrieve an offer with product offer prices included</summary>
 
 ```json
 {
@@ -130,7 +131,7 @@ To retrieve the product offers, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product offer availabilities</summary>
+<summary markdown='span'>Response sample: retrieve an offer with product offer availabilities included</summary>
 
 ```json
 {
@@ -143,7 +144,7 @@ To retrieve the product offers, send the request:
             "isDefault": false
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/product-offers/offer101?include=product-offer-prices,product-offer-availabilities"
+            "self": "https://glue.mysprykershop.comm/product-offers/offer101?include=product-offer-prices,product-offer-availabilities"
         },
         "relationships": {
             "product-offer-availabilities": {
@@ -166,18 +167,17 @@ To retrieve the product offers, send the request:
                 "quantity": "0.0000000000"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-offers/offer101/product-offer-availabilities"
+                "self": "https://glue.mysprykershop.comm/product-offers/offer101/product-offer-availabilities"
             }
 
         }
     ]
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with merchant information</summary>
+<summary markdown='span'>Response sample: retrieve an offer with merchant information included</summary>
 
 ```json
 {
@@ -190,7 +190,7 @@ To retrieve the product offers, send the request:
             "isDefault": false
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/product-offers/offer101?include=product-offer-prices,product-offer-availabilities,merchants"
+            "self": "https://glue.mysprykershop.comm/product-offers/offer101?include=product-offer-prices,product-offer-availabilities,merchants"
         },
         "merchants": {
                 "data": [
@@ -230,7 +230,7 @@ To retrieve the product offers, send the request:
                 }
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/merchants/MER000006"
+                "self": "https://glue.mysprykershop.comm/merchants/MER000006"
             }
         }
     ]

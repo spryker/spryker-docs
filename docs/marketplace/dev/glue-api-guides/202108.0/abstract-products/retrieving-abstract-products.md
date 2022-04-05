@@ -39,7 +39,7 @@ To retrieve general information about an abstract product, send the request:
 
 * For performance and bandwidth usage optimization, we recommend filtering out only the needed information using the `fields` string parameter.
 
-* If you include more resources, you can still use the `fields` string parameter to return only the needed fields. For example, `GET http://glue.mysprykershop.com/abstract-products/001?include=concrete-products&fields[abstract-products]=name,description&fields[concrete-products]=name,image`.
+* If you include more resources, you can still use the `fields` string parameter to return only the needed fields. For example, `GET https://glue.mysprykershop.com/abstract-products/001?include=concrete-products&fields[abstract-products]=name,description&fields[concrete-products]=name,image`.
 
 {% endinfo_block %}
 
@@ -47,25 +47,25 @@ To retrieve general information about an abstract product, send the request:
 
 | REQUEST | USAGE |
 | --- | --- |
-| `GET http://glue.mysprykershop.com/abstract-products/001` | Retrieve information about the abstract product with SKU `001`. |
+| `GET https://glue.mysprykershop.com/abstract-products/001` | Retrieve information about the abstract product with SKU `001`. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-image-sets` | Retrieve information about the abstract product with SKU `001` with its image sets. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-availabilities` | Retrieve information about the abstract product with SKU `001` with its availability. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `001` with its [default prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html). |
 | `GET https://glue.mysprykershop.com/abstract-products/093?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `093` with its prices (default and [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html)). <!-- Incorrect description. Fix in SCOS and MP docs after the migration --> |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=category-nodes` | Retrieve information about the abstract product with SKU `001` with the category nodes it belongs to. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=product-tax-sets` | Retrieve information about the abstract product with SKU `001` with its tax sets. |
-| `GET http://glue.mysprykershop.com/abstract-products/001?include=product-labels` | Retrieve information about the abstract product with SKU `001` with its assigned product labels. |
+| `GET https://glue.mysprykershop.com/abstract-products/001?include=product-labels` | Retrieve information about the abstract product with SKU `001` with its assigned product labels. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=concrete-products` | Retrieve information about the abstract product with SKU `001` with its concrete products. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=product-options` | Retrieve information about the abstract product with SKU `001` with its product options. |
 | `GET https://glue.mysprykershop.com/abstract-products/035?include=product-reviews` | Retrieve information about the abstract product with SKU `001` with its product reviews. |
 | `GET https://glue.mysprykershop.com/abstract-products/109`     | Retrieve the merchant product with SKU `109`.|
-| `GET https://glue.mysprykershop.com/abstract-products/109?include=merchants` | Retrieve the merchant product with SKU `109` including the merchant information. |
+| `GET https://glue.mysprykershop.com/abstract-products/109?include=merchants` | Retrieve the marketplace product with SKU `109` including the merchant information. |
 
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve information about the abstract product with SKU `001`</summary>
 
 ```json
 {
@@ -119,16 +119,15 @@ To retrieve general information about an abstract product, send the request:
             "url": "/en/canon-ixus-160-1"
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/abstract-products/001"
+            "self": "https://glue.mysprykershop.com/abstract-products/001"
         }
     }
 }
 ```
-
- </details>
+</details>
 
 <details>
-<summary markdown='span'>Response sample with image sets</summary>
+<summary markdown='span'>Response sample: retrieve information about the abstract product with its image sets</summary>
 
 ```json
 {
@@ -219,12 +218,11 @@ To retrieve general information about an abstract product, send the request:
     ]
 }
 ```
-
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample with product availability</summary>
+<summary markdown='span'>Response sample: retrieve information about the abstract product with its availability</summary>
 
 ```json
 {
@@ -306,14 +304,13 @@ To retrieve general information about an abstract product, send the request:
     ]
 }
 ```
-
 </details>
 
 
 
-<details> <summary markdown='span'>Response sample with default product prices</summary>
+<details> <summary markdown='span'>Response sample: retrieve information about the abstract product with its default prices</summary>
 
-```php
+```json
 {
     "data": {
         "type": "abstract-products",
@@ -414,10 +411,9 @@ To retrieve general information about an abstract product, send the request:
     ]
 }
 ```
-
 </details>
 
-<details> <summary markdown='span'>Response sample with volume prices</summary>
+<details> <summary markdown='span'>Response sample: retrieve information about the abstract product with its default and volume prices</summary>
 
 ```json
 {
@@ -529,11 +525,10 @@ To retrieve general information about an abstract product, send the request:
     ]
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with category nodes</summary>
+<summary markdown='span'>Response sample: retrieve information about the abstract product with the category nodes it belongs to</summary>
 
 ```json
 {
@@ -710,12 +705,11 @@ To retrieve general information about an abstract product, send the request:
     ]
 }
 ```
-
- </details>
+</details>
 
 
 <details>
-<summary markdown='span'>Response sample with tax rates</summary>
+<summary markdown='span'>Response sample: retrieve information about the abstract product with its tax sets</summary>
 
 ```json
 {
@@ -873,12 +867,11 @@ To retrieve general information about an abstract product, send the request:
     ]
 }
 ```
-
- </details>
+</details>
 
 
 <details>
-<summary markdown='span'>Response sample with product labels</summary>
+<summary markdown='span'>Response sample: retrieve information about the abstract product with the assigned product labels</summary>
 
 ```json
 {
@@ -913,7 +906,7 @@ To retrieve general information about an abstract product, send the request:
                 "frontEndReference": ""
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-labels/3"
+                "self": "https://glue.mysprykershop.com/product-labels/3"
             }
         },
         {
@@ -926,18 +919,17 @@ To retrieve general information about an abstract product, send the request:
                 "frontEndReference": "highlight"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-labels/5"
+                "self": "https://glue.mysprykershop.com/product-labels/5"
             }
         }
     ]
 }
 ```
-
- </details>
+</details>
 
 
 <details>
-<summary markdown='span'>Response sample with concrete products</summary>
+<summary markdown='span'>Response sample: retrieve information about the abstract product with its concrete products</summary>
 
 ```json
 {
@@ -1046,12 +1038,11 @@ To retrieve general information about an abstract product, send the request:
     ]
 }
 ```
-
- </details>
+</details>
 
 
 <details>
-<summary markdown='span'>Response sample with product options</summary>
+<summary markdown='span'>Response sample: retrieve information about the abstract product with its product options</summary>
 
 ```json
 {
@@ -1154,13 +1145,12 @@ To retrieve general information about an abstract product, send the request:
     ]
 }
 ```
-
- </details>
+</details>
 
 
 
 <details>
-<summary markdown='span'>Response sample with product reviews</summary>
+<summary markdown='span'>Response sample: retrieve information about the abstract product with its product reviews</summary>
 
 ```json
 {
@@ -1278,10 +1268,11 @@ To retrieve general information about an abstract product, send the request:
     ]
 }
 ```
- </details>
+</details>
+
 
 <details>
-<summary markdown='span'>Response sample with merchant product</summary>
+<summary markdown='span'>Response sample: retrieve the merchant product</summary>
 
 ```json
 {
@@ -1345,7 +1336,7 @@ To retrieve general information about an abstract product, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample with merchant product including the information about the merchant</summary>
+<summary markdown='span'>Response sample: retrieve the marketplace product including the merchant information</summary>
 
 ```json
 {

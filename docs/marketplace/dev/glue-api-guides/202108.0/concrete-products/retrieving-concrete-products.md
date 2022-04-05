@@ -46,7 +46,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 
 * For performance and bandwidth usage optimization, we recommend filtering out only the needed information using the `fields` string parameter.
 
-* If you include more resources, you can still use the `fields` string parameter to return only the needed fields. For example, `GET http://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units&fields[concrete-products]=name,description&fields[sales-units]=conversion,precision`.
+* If you include more resources, you can still use the `fields` string parameter to return only the needed fields. For example, `GET https://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units&fields[concrete-products]=name,description&fields[sales-units]=conversion,precision`.
 
 {% endinfo_block %}
 
@@ -54,16 +54,15 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 
 | REQUEST  | USAGE |
 | --- | --- |
-| `GET http://glue.mysprykershop.com/concrete-products/001_25904006` | Retrieve information about the `001_25904006` product.  |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006` | Retrieve information about the `001_25904006` product.  |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-image-sets` | Retrieve information about the `001_25904006` product with its image sets.  |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-availabilities` | Retrieve information about the `001_25904006` product with its availability.  |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-prices` | Retrieve information about the `001_25904006` product with its [default prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html). |
-| `GET https://glue.mysprykershop.com/abstract-products/093_24495843?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `093_24495843` with its prices: default and [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html) |
+| `GET https://glue.mysprykershop.com/abstract-products/093_24495843?include=concrete-product-prices` | Retrieve information about the abstract product with SKU `093_24495843` with its prices: default and [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html) |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-options` | Retrieve information about the `001_25904006` product with its product options.  |
 | `GET https://glue.mysprykershop.com/concrete-products/035_17360369?include=product-reviews` | Retrieve information about the `001_25904006` product with its product reviews.  |
-| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-offers` | Retrieve information about the `001_25904006` product with its product offers.  |
-| `GET http://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units,product-measurement-units` | Retrieve information about the `fish-1-1` product with the information on its sales units and product measurement units included. |
-| `GET http://glue.mysprykershop.com/concrete-products/001_25904006?include=product-labels` | Retrieve information about the `001_25904006` product with product labels included.  |
+| `GET https://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units,product-measurement-units` | Retrieve information about the `fish-1-1` product with the information on its sales units and product measurement units included. |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-labels` | Retrieve information about the `001_25904006` product with product labels included.  |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-offers` | Retrieve information about a concrete product with the SKU `001_25904006` with the product offers for this product included. |
 | `GET https://glue.mysprykershop.com/concrete-products/076_24394207?include=product-offers,product-offer-prices` | Retrieve information about a concrete product with the SKU `076_24394207` with product offers and the product offer prices included.
 | `GET https://glue.mysprykershop.com/concrete-products/111_12295890?include=abstract-products,merchants` | Retrieve information about the concrete product with SKU `111_12295890` with its abstract product and the merchant who sells it.|
@@ -71,7 +70,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve information about a concrete product</summary>
 
 ```json
 {
@@ -110,157 +109,15 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
             }
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/concrete-products/001_25904006"
+            "self": "https://glue.mysprykershop.com/concrete-products/001_25904006"
         }
     }
 }
 ```
-
- </details>
+</details>
 
 <details>
-<summary markdown='span'>Response sample with sales units and product measurement units</summary>
-
-```json
-{
-    "data": {
-        "type": "concrete-products",
-        "id": "cable-vga-1-1",
-        "attributes": {
-            "sku": "cable-vga-1-1",
-            "isDiscontinued": false,
-            "discontinuedNote": null,
-            "averageRating": null,
-            "reviewCount": 0,
-            "name": "VGA cable (1.5m)",
-            "description": "Enjoy clear, crisp, immediate connectivity with the High-Speed HDMI Cable. This quality High-Definition Multimedia Interface (HDMI) cable lets you connect a wide variety of devices in the realms of home entertainment, computing, gaming, and more to your HDTV, projector, or monitor. Perfect for those that interact with multiple platforms and devices, you can rely on strong performance and playback delivery when it comes to your digital experience.",
-            "attributes": {
-                "packaging_unit": "Ring"
-            },
-            "superAttributesDefinition": [
-                "packaging_unit"
-            ],
-            "metaTitle": "",
-            "metaKeywords": "",
-            "metaDescription": "",
-            "attributeNames": {
-                "packaging_unit": "Packaging unit"
-            }
-        },
-        "links": {
-            "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-1?include=sales-units,product-measurement-units"
-        },
-        "relationships": {
-            "product-measurement-units": {
-                "data": [
-                    {
-                        "type": "product-measurement-units",
-                        "id": "METR"
-                    }
-                ]
-            },
-            "sales-units": {
-                "data": [
-                    {
-                        "type": "sales-units",
-                        "id": "32"
-                    }
-                ]
-            }
-        }
-    },
-    "included": [
-        {
-            "type": "product-measurement-units",
-            "id": "METR",
-            "attributes": {
-                "name": "Meter",
-                "defaultPrecision": 100
-            },
-            "links": {
-                "self": "http://glue.mysprykershop.com/product-measurement-units/METR"
-            }
-        },
-        {
-            "type": "sales-units",
-            "id": "32",
-            "attributes": {
-                "conversion": 1,
-                "precision": 100,
-                "isDisplayed": true,
-                "isDefault": true,
-                "productMeasurementUnitCode": "METR"
-            },
-            "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/sales-units/32"
-            },
-            "relationships": {
-                "product-measurement-units": {
-                    "data": [
-                        {
-                            "type": "product-measurement-units",
-                            "id": "METR"
-                        }
-                    ]
-                }
-            }
-        }
-    ]
-}
-```
-
- </details>
-
- <details>
-<summary markdown='span'>Response sample with product labels</summary>
-
-```json
-{
-    "data": {
-        "type": "concrete-products",
-        "id": "001_25904006",
-        "attributes": {
-            "sku": "001_25904006",
-            "isDiscontinued": false,
-            "discontinuedNote": null,
-            "averageRating": null,
-            "reviewCount": 0,
-            "name": "Canon IXUS 160",
-            "description": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results while framing using Live View Control and enjoy sharing them with friends using the 6.8 cm (2.7”) LCD screen. Combine with a Canon Connect Station and you can easily share your photos and movies with the world on social media sites and online albums like irista, plus enjoy watching them with family and friends on an HD TV. Effortlessly enjoy great shots of friends thanks to Face Detection technology. It detects multiple faces in a single frame making sure they remain in focus and with optimum brightness. Face Detection also ensures natural skin tones even in unusual lighting conditions.",
-            "attributes": {
-                "megapixel": "20 MP",
-                "flash_range_tele": "4.2-4.9 ft",
-                "memory_slots": "1",
-                "usb_version": "2",
-                "brand": "Canon",
-                "color": "Red"
-            },
-            "superAttributesDefinition": [
-                "color"
-            ],
-            "metaTitle": "Canon IXUS 160",
-            "metaKeywords": "Canon,Entertainment Electronics",
-            "metaDescription": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results whi",
-            "attributeNames": {
-                "megapixel": "Megapixel",
-                "flash_range_tele": "Flash range (tele)",
-                "memory_slots": "Memory slots",
-                "usb_version": "USB version",
-                "brand": "Brand",
-                "color": "Color"
-            }
-        },
-        "links": {
-            "self": "http://glue.mysprykershop.com/concrete-products/001_25904006"
-        }
-    }
-}
-```
-
- </details>
-
- <details>
-<summary markdown='span'>Response sample with product image sets</summary>
+<summary markdown='span'>Response sample: retrieve information about a concrete product with its image sets</summary>
 
 ```json
 {
@@ -336,11 +193,11 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
     ]
 }
 ```
-
 </details>
 
- <details>
-<summary markdown='span'>Response sample with product availability</summary>
+
+<details>
+<summary markdown='span'>Response sample: retrieve information about a concrete product with its availability</summary>
 
 ```json
 {
@@ -408,10 +265,10 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
     ]
 }
 ```
-
 </details>
 
- <details><summary markdown='span'>Response sample with default product prices</summary>
+ 
+<details><summary markdown='span'>Response sample: retrieve information about a concrete product with its default prices</summary>
 
 ```php
 {
@@ -499,12 +356,12 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
     ]
 }
 ```
-
 </details>
 
-<details><summary markdown='span'>Response sample with volume prices</summary>
 
-```php
+<details><summary markdown='span'>Response sample: retrieve information about a concrete product with its default and volume prices</summary>
+
+```json
 {
     "data": {
         "type": "concrete-products",
@@ -599,11 +456,10 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
     ]
 }
 ```
-
 </details>
 
- <details>
-<summary markdown='span'>Response sample with product options</summary>
+<details>
+<summary markdown='span'>Response sample: retrieve information about a concrete product with its product options</summary>
 
 ```json
 {
@@ -691,11 +547,10 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
     ]
 }
 ```
-
 </details>
 
- <details>
-<summary markdown='span'>Response sample with reviews</summary>
+<details>
+<summary markdown='span'>Response sample: retrieve information about a concrete product with product reviews</summary>
 
 ```json
 {
@@ -801,7 +656,147 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product offers</summary>
+<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on its sales units and product measurement units</summary>
+
+```json
+{
+    "data": {
+        "type": "concrete-products",
+        "id": "cable-vga-1-1",
+        "attributes": {
+            "sku": "cable-vga-1-1",
+            "isDiscontinued": false,
+            "discontinuedNote": null,
+            "averageRating": null,
+            "reviewCount": 0,
+            "name": "VGA cable (1.5m)",
+            "description": "Enjoy clear, crisp, immediate connectivity with the High-Speed HDMI Cable. This quality High-Definition Multimedia Interface (HDMI) cable allows you to connect a wide variety of devices in the realms of home entertainment, computing, gaming, and more to your HDTV, projector, or monitor. Perfect for those that interact with multiple platforms and devices, you can rely on strong performance and playback delivery when it comes to your digital experience.",
+            "attributes": {
+                "packaging_unit": "Ring"
+            },
+            "superAttributesDefinition": [
+                "packaging_unit"
+            ],
+            "metaTitle": "",
+            "metaKeywords": "",
+            "metaDescription": "",
+            "attributeNames": {
+                "packaging_unit": "Packaging unit"
+            }
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-1?include=sales-units,product-measurement-units"
+        },
+        "relationships": {
+            "product-measurement-units": {
+                "data": [
+                    {
+                        "type": "product-measurement-units",
+                        "id": "METR"
+                    }
+                ]
+            },
+            "sales-units": {
+                "data": [
+                    {
+                        "type": "sales-units",
+                        "id": "32"
+                    }
+                ]
+            }
+        }
+    },
+    "included": [
+        {
+            "type": "product-measurement-units",
+            "id": "METR",
+            "attributes": {
+                "name": "Meter",
+                "defaultPrecision": 100
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/product-measurement-units/METR"
+            }
+        },
+        {
+            "type": "sales-units",
+            "id": "32",
+            "attributes": {
+                "conversion": 1,
+                "precision": 100,
+                "isDisplayed": true,
+                "isDefault": true,
+                "productMeasurementUnitCode": "METR"
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-1/sales-units/32"
+            },
+            "relationships": {
+                "product-measurement-units": {
+                    "data": [
+                        {
+                            "type": "product-measurement-units",
+                            "id": "METR"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
+```
+</details>
+
+
+<details>
+<summary markdown='span'>Response sample: retrieve information about a concrete product with its product labels</summary>
+
+```json
+{
+    "data": {
+        "type": "concrete-products",
+        "id": "001_25904006",
+        "attributes": {
+            "sku": "001_25904006",
+            "isDiscontinued": false,
+            "discontinuedNote": null,
+            "averageRating": null,
+            "reviewCount": 0,
+            "name": "Canon IXUS 160",
+            "description": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results while framing using Live View Control and enjoy sharing them with friends using the 6.8 cm (2.7”) LCD screen. Combine with a Canon Connect Station and you can easily share your photos and movies with the world on social media sites and online albums like irista, plus enjoy watching them with family and friends on an HD TV. Effortlessly enjoy great shots of friends thanks to Face Detection technology. It detects multiple faces in a single frame making sure they remain in focus and with optimum brightness. Face Detection also ensures natural skin tones even in unusual lighting conditions.",
+            "attributes": {
+                "megapixel": "20 MP",
+                "flash_range_tele": "4.2-4.9 ft",
+                "memory_slots": "1",
+                "usb_version": "2",
+                "brand": "Canon",
+                "color": "Red"
+            },
+            "superAttributesDefinition": [
+                "color"
+            ],
+            "metaTitle": "Canon IXUS 160",
+            "metaKeywords": "Canon,Entertainment Electronics",
+            "metaDescription": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results whi",
+            "attributeNames": {
+                "megapixel": "Megapixel",
+                "flash_range_tele": "Flash range (tele)",
+                "memory_slots": "Memory slots",
+                "usb_version": "USB version",
+                "brand": "Brand",
+                "color": "Color"
+            }
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/concrete-products/001_25904006"
+        }
+    }
+}
+```
+</details>
+
+<details>
+<summary markdown='span'>Response sample: retrieve information about a concrete product and its product offers included</summary>
 
 ```json
 {
@@ -871,8 +866,9 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 ```
 </details>
 
+
 <details>
-<summary markdown='span'>Response sample with product offers and product offer prices</summary>
+<summary markdown='span'>Response sample: retrieve information about a concrete product and its product offers and product offer prices included</summary>
 
 ```json
 {
@@ -986,7 +982,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 </details>
 
 <details>
-<summary markdown='span'>Response sample with details about the abstract product and the merchant who sells the concrete product</summary>
+<summary markdown='span'>Response sample: retrieve information about a concrete product, an abstract product it belongs to, and the merchant who sells the concrete product</summary>
 
 ```json
 {

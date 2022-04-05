@@ -16,9 +16,9 @@ Functionally, Spryker API can be split into 2 parts: API infrastructure (GLUE) a
 
 To integrate GLUE API in your project, you need to:
 
-- [1. Installing GLUE](#1-installing-glue)
-- [2. Enabling GLUE](#2-enabling-glue)
-- [Integrate REST API resources](#integrate-rest-api-resources)
+- [1. Instal GLUE](#installing-glue)
+- [2. Enable GLUE](#installing-glue)
+- [3. Integrate REST API resources](#integrate-rest-api-resources)
 
 
 

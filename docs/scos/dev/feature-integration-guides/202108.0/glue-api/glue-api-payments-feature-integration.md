@@ -32,7 +32,7 @@ To start the feature integration, overview and install the necessary features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html)  |
-| Payments | {{page.version}} |  |
+| Payments | {{page.version}} | [Payments feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/payments-feature-integration.html) |
 
 ## 1)  Install the required modules using Composer
 
@@ -151,6 +151,7 @@ Make sure that the following changes have occurred:
 ## 4) Set up behavior
 
 ### Enable resources and relationships
+
 Activate the following plugin:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
@@ -191,7 +192,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-To verify `PaymentMethodsByCheckoutDataResourceRelationshipPlugin` is activated, send a POST request to `http://glue.mysprykershop.com/checkout-data?include=payment-methods` and make sure that `checkout-data` resource has a relationship to the `payment-methods` resources.
+To verify `PaymentMethodsByCheckoutDataResourceRelationshipPlugin` is activated, send a POST request to `https://glue.mysprykershop.com/checkout-data?include=payment-methods` and make sure that `checkout-data` resource has a relationship to the `payment-methods` resources.
 
 {% endinfo_block %}
 
@@ -230,7 +231,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-To verify that `PaymentsQuoteMapperPlugin` is activated, send a POST request to `http://glue.mysprykershop.com/checkout` and make sure the order contains the payment method you provided in the request.
+To verify that `PaymentsQuoteMapperPlugin` is activated, send a POST request to `https://glue.mysprykershop.com/checkout` and make sure the order contains the payment method you provided in the request.
 
 {% endinfo_block %}
 
@@ -267,7 +268,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-To verify that SelectedPaymentMethodCheckoutDataResponseMapperPlugin is activated, send a POST request to the `http://glue.mysprykershop.com/checkout-data` endpoint with payment method name and payment provider name, and make sure that you get not empty "selectedPaymentMethods" attribute in the response:
+To verify that SelectedPaymentMethodCheckoutDataResponseMapperPlugin is activated, send a POST request to the `https://glue.mysprykershop.com/checkout-data` endpoint with payment method name and payment provider name, and make sure that you get not empty "selectedPaymentMethods" attribute in the response:
 
 {% endinfo_block %}
 

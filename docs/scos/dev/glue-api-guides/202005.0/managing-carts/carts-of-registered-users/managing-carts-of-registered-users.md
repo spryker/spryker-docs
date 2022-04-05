@@ -97,7 +97,7 @@ To create a cart, send the request:
 {% endinfo_block %}
 
 ### Request
-Sample request: `POST http://glue.mysprykershop.com/carts`
+Request sample: `POST http://glue.mysprykershop.com/carts`
 ```json
 {
    "data":{

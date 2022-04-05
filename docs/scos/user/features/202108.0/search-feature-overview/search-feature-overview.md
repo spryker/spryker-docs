@@ -31,6 +31,14 @@ The indexed [Product attribute](/docs/scos/user/features/{{page.version}}/produc
 **CMS pages**
 Information from the CMS pages is indexed just like the information from the product details page. So if user searches for something that occurs on any of the CMS pages, the CMS page appears in the search results. See [Creating CMS pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/creating-cms-pages.html) for information on how you can create CMS pages.
 
+## Current constraints
+
+Currently, the feature has the following functional constraints which are going to be resolved in the future.
+
+* Search preference attributes are shared across all the stores in a project.
+* You cannot define a search preference for a single store.
+
+
 {% info_block warningBox "Developer guides" %}
 
 Are you a developer? See [Search feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/search-feature-walkthrough.html) for developers.

@@ -5,36 +5,35 @@ description: This document describes how to manage marketplace abstract product 
 template: back-office-user-guide-template
 ---
 
-This topic describes how to manage marketplace abstract product meta information in the Merchant Portal.
+This document describes how to manage marketplace abstract product meta information in the Merchant Portal.
 
 ## Prerequisites
 
-To start working with marketplace abstract products, go to **Merchant Portal** > **Products**.
+To start working with marketplace abstract products, go to **Merchant Portall&nbsp;<span aria-label="and then">></span> Products**.
 
-This article contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
+This document contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Adding abstract product meta information
 
 To add meta information for a product:
 
-1. Next to the abstract product, you want to add meta information for, hover over the three dots and click **Manage Product**, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab.
+1. Next to the abstract product, you want to add meta information for, hover over the three dots and click **Manage Product**, or just click the line. This takes you to the **_[Product name]_**, **Abstract Product Details** tab.
 2. Scroll down to the **SEO** pane.
 3. Fill the following fields for the desired locales:
-      	- Meta title
-      	- Meta keywords. Separate keywords with comma.
-      	- Meta description
-
+  * Meta title
+  * Meta keywords—separate keywords with comma.
+  * Meta description
 4. Click **Save**.  
 
 ## Editing abstract product meta information
 
 To modify meta information for a product:
 
-1. Next to the abstract product, you want to edit meta information for, hover over the three dots and click **Manage Product**, or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab.
+1. Next to the abstract product you want to edit meta information for hover over the three dots and click **Manage Product**, or just click the line. This takes you to the **_[Product name]_**, **Abstract Product Details** tab.
 2. Scroll down to the **SEO** pane.
 3. Update the following fields for the desired locales:
     - Meta title
-    - Meta keywords. Separate keywords with comma.
+    - Meta keywords—separate keywords with comma.
     - Meta description
 
 4. Click **Save**.  

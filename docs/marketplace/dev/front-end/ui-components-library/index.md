@@ -4,7 +4,7 @@ description: This articles provides details about UI components library.
 template: concept-topic-template
 ---
 
-This article provides details about the UI components library.
+This document provides details about the UI components library.
 
 ## Introduction
 

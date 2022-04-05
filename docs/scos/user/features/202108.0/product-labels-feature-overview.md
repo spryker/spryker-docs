@@ -42,16 +42,16 @@ A developer can create [dynamic product labels](#dynamic-product-label).
 The following dynamic product labels are shipped by default:
 
 * *Discontinued*
-<br>The *Discontinued* product label is added when you discontinue a product. The label is active until the product becomes inactive. See [Discontinuing a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/discontinuing-products.html) to learn more.
+<br>The *Discontinued* product label is added when you discontinue a product. The label is active until the product becomes inactive. See [Discontinuing a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/discontinuing-products.html) to learn more.
 
 * *Alternatives available*
-<br>The *Alternatives available* product label goes along with the *Discontinued* product label. It is added when you discontinue a product that has existing [alternative products](/docs/scos/user/features/{{page.version}}/alternative-products-feature-overview.html). The label is active until the product becomes inactive. See [Adding product alternatives](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/adding-product-alternatives.html) to learn more.
+<br>The *Alternatives available* product label goes along with the *Discontinued* product label. It is added when you discontinue a product that has existing [alternative products](/docs/scos/user/features/{{page.version}}/alternative-products-feature-overview.html). The label is active until the product becomes inactive. See [Adding product alternatives](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/adding-product-alternatives.html) to learn more.
 
 * *NEW*
-<br>The *NEW* label is added when you create a product. It is active for the time period defined inclusively in the **New from** and **New to** fields. See [Creating an Abstract Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) to learn more.
+<br>The *NEW* label is added when you create a product. It is active for the time period defined inclusively in the **New from** and **New to** fields. See [Creating an Abstract Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html) to learn more.
 
 * *SALE*
-<br>The *SALE* product label is added to a product automatically when the product’s original price is superior to the default price. See [Creating an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) to learn more.
+<br>The *SALE* product label is added to a product automatically when the product’s original price is superior to the default price. See [Creating an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html) to learn more.
 
 {% info_block infoBox "Prices" %}
 
@@ -131,7 +131,7 @@ A product label can have the following statuses:
 
 If a product label is active, it is displayed on all the product pages it is applied to. If a product label is inactive, it is still applied to the selected product, but it is not displayed on the respective product pages. This might be useful when you want to prepare for an event beforehand. You can create an inactive product label and apply it to the desired products. When the event starts, you just need to activate the label to show it on all the product pages it is applied to.
 
-See [Activating/deactivating a product label](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/managing-product-labels.html#editing-product-labels) to learn how a Back Office user can activate and deactivate product labels in the Back Office.
+To learn how a Back Office user can activate and deactivate product labels in the Back Office, see [Edit product labels](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/edit-product-labels.html)
 
 ## Product label exclusivity
 
@@ -150,7 +150,7 @@ Shop users can view product cards with labels on any Storefront page. Also, they
 |BACK OFFICE USER GUIDES|
 |---|
 | [Create product labels](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/creating-product-labels.html)  |
-| [Manage product labels](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/managing-product-labels.html)  |
+| [Edit product labels](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/edit-product-labels.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

@@ -166,7 +166,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following endpoint is available: `http://glue.mysprykershop.com/product-labels/{% raw %}{{{% endraw %}idProductLabel{% raw %}}}{% endraw %}`
+Make sure that the following endpoint is available: `https://glue.mysprykershop.com/product-labels/{% raw %}{{{% endraw %}idProductLabel{% raw %}}}{% endraw %}`
 
 **Example response:**
 
@@ -182,7 +182,7 @@ Make sure that the following endpoint is available: `http://glue.mysprykershop.c
             "frontEndReference": "highlight"
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/product-labels/5"
+            "self": "https://glue.mysprykershop.com/product-labels/5"
         }
     }
 }
@@ -191,7 +191,7 @@ Make sure that the following endpoint is available: `http://glue.mysprykershop.c
 
 {% info_block warningBox "Verification" %}
 
-Send a request to `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}?include=product-labels` and verify whether the abstract product with the given SKU has at least one assigned product label and the response includes relationships to the **product-labels** resources.
+Send a request to `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}?include=product-labels` and verify whether the abstract product with the given SKU has at least one assigned product label and the response includes relationships to the **product-labels** resources.
 
 **Example response:**
 
@@ -228,7 +228,7 @@ Send a request to `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{%
                 "frontEndReference": "highlight"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-labels/5"
+                "self": "https://glue.mysprykershop.com/product-labels/5"
             }
         }
     ]
@@ -238,7 +238,7 @@ Send a request to `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{%
 
 {% info_block warningBox "Verification" %}
 
-Send a request to `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}?include=product-labels` and verify whether the concrete product with the given SKU has at least one assigned product label and the response includes relationships to the **product-labels** resources.
+Send a request to `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}?include=product-labels` and verify whether the concrete product with the given SKU has at least one assigned product label and the response includes relationships to the **product-labels** resources.
 
 **Example response:**
 
@@ -275,7 +275,7 @@ Send a request to `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{%
                 "frontEndReference": "highlight"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-labels/5"
+                "self": "https://glue.mysprykershop.com/product-labels/5"
             }
         }
     ]
@@ -286,15 +286,15 @@ Send a request to `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{%
 {% info_block warningBox "Verification" %}
 
 Make sure that the following endpoints are available:
-- `http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/vouchers`
-- `http://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}/vouchers`
+- `https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/vouchers`
+- `https://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}/vouchers`
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
 Make sure that the following endpoint is available: 
-- `http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}?include=vouchers,cart-rules`
+- `https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}?include=vouchers,cart-rules`
 
 **Example**
 
@@ -330,7 +330,7 @@ Make sure that the following endpoint is available:
             ]
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2?include=cart-rules,vouchers"
+            "self": "https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2?include=cart-rules,vouchers"
         },
         "relationships": {
             "vouchers": {
@@ -366,7 +366,7 @@ Make sure that the following endpoint is available:
                 "discountPromotionQuantity": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/vouchers/sprykerwu3d"
+                "self": "https://glue.mysprykershop.com/vouchers/sprykerwu3d"
             }
         },
         {
@@ -383,7 +383,7 @@ Make sure that the following endpoint is available:
                 "discountPromotionQuantity": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/cart-rules/1"
+                "self": "https://glue.mysprykershop.com/cart-rules/1"
             }
         }
     ]
@@ -394,7 +394,7 @@ Make sure that the following endpoint is available:
 {% info_block warningBox "Verification" %}
 
 Make sure that the following endpoint is available:
-- `http://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest-cart_uuid{% raw %}}}{% endraw %}?include=vouchers,cart-rules`
+- `https://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest-cart_uuid{% raw %}}}{% endraw %}?include=vouchers,cart-rules`
 
 **Example**
 
@@ -430,7 +430,7 @@ Make sure that the following endpoint is available:
             ]
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/guest-carts/9b07888e-623b-5ab1-83dd-c7af5e1d81ad?include=vouchers,cart-rules"
+            "self": "https://glue.mysprykershop.com/guest-carts/9b07888e-623b-5ab1-83dd-c7af5e1d81ad?include=vouchers,cart-rules"
         },
         "relationships": {
             "vouchers": {
@@ -466,7 +466,7 @@ Make sure that the following endpoint is available:
                 "discountPromotionQuantity": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/vouchers/sprykerpa8n"
+                "self": "https://glue.mysprykershop.com/vouchers/sprykerpa8n"
             }
         },
         {
@@ -483,7 +483,7 @@ Make sure that the following endpoint is available:
                 "discountPromotionQuantity": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/cart-rules/1"
+                "self": "https://glue.mysprykershop.com/cart-rules/1"
             }
         }
     ]

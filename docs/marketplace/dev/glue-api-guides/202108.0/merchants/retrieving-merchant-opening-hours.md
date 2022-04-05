@@ -27,7 +27,9 @@ This endpoint returns only [active](/docs/marketplace/user/features/{{page.versi
 
 ### Request
 
-Request sample: `GET http://glue.mysprykershop.com/merchants/MER000001/merchant-opening-hours`
+Request sample: retrieve merchant opening hours
+
+`GET https://glue.mysprykershop.com/merchants/MER000001/merchant-opening-hours`
 
 ### Response
 
@@ -170,16 +172,15 @@ Request sample: `GET http://glue.mysprykershop.com/merchants/MER000001/merchan
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/merchants/MER000001/merchant-opening-hours"
+                "self": "https://glue.mysprykershop.com/merchants/MER000001/merchant-opening-hours"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/merchants/MER000001/merchant-opening-hours"
+        "self": "https://glue.mysprykershop.com/merchants/MER000001/merchant-opening-hours"
     }
 }
 ```
-
 </details>
 
 <a name="merchant-opening-hours-response-attributes"></a>

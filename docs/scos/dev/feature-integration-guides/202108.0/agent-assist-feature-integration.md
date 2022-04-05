@@ -15,6 +15,7 @@ redirect_from:
 This document describes how to integrate the [Agent Assist](/docs/scos/user/features/{{page.version}}/agent-assist-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
+
 Follow the steps below to install the feature core.
 
 ### Prerequisites
@@ -33,6 +34,7 @@ Run the following command to install the required modules:
 ```bash
 composer require spryker-feature/agent-assist:"{{page.version}}" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Ensure that the following modules have been installed:
@@ -45,6 +47,7 @@ Ensure that the following modules have been installed:
 {% endinfo_block %}
 
 ### 2) Set up the database schema
+
 Run the following commands to apply database changes and to generate entity and transfer changes:
 
 ```bash
@@ -64,9 +67,11 @@ Verify the following changes by checking your database:
 {% endinfo_block %}
 
 ### 3) Set up behavior
+
 Set up the following behaviors.
 
 #### Configure user Zed UI for agent handling
+
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
@@ -76,6 +81,7 @@ Enable the following behaviors by registering the plugins:
 | UserAgentTableDataExpanderPlugin | Fills the *is an agent* column in the Zed Users table. | Expects the *is an agent* checkbox in the Zed User form. | Spryker\Zed\AgentGui\Communication\Plugin |
 
 **src/Pyz/Zed/User/UserDependencyProvider.php**
+
 ```php
 <?php
 
@@ -133,14 +139,16 @@ Ensure that the following plugins have been registered:
 {% endinfo_block %}
 
 ## Install feature front end
+
 Follow the steps below to install the feature front end.
 
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | master |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
@@ -185,6 +193,7 @@ class AgentPageConfig extends SprykerAgentPageConfig
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that when the login form for the agent is submitted, the URL it uses contains a locale code. For example, `/de/agent/login_check` would be the default value for the agent.
@@ -192,6 +201,7 @@ Make sure that when the login form for the agent is submitted, the URL it uses c
 {% endinfo_block %}
 
 ### 3) Add translations
+
 Add translations as follows:
 
 1. Append the glossary according to your configuration:
@@ -230,9 +240,11 @@ console data:import:glossary
 ```
 
 ### 4) Enable controllers
+
 Enable the following controllers.
 
 #### Service provider list
+
 Register the service provider in the Yves application:
 
 | PROVIDER | NAMESPACE | SPECIFICATION |
@@ -271,6 +283,7 @@ Ensure that you've registered the providers correctly:
 {% endinfo_block %}
 
 #### Controller provider list
+
 Register the controller provider(s) in the Yves application:
 
 | PROVIDER | NAMESPACE | ENABLED CONTROLLER | CONTROLLER SPECIFICATION |
@@ -318,6 +331,7 @@ Ensure that you have registered the providers correctly:
 {% endinfo_block %}
 
 ### 5) Set up widgets
+
 Set up widgets as follows:
 
 1. Register the following global widget(s):

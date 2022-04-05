@@ -22,6 +22,7 @@ This endpoint allows managing items in carts of registered users by adding, chan
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
+
 * [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)
 * [Glue API: Measurement Units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html)
 * [Glue API: Product Options feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
@@ -52,7 +53,7 @@ To add items to a cart, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
-| Query parameter | Description | Possible value |
+| QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUE |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | <ul><li>items</li><li>product-measurement-units</li><li>sales-units</li><li>cart-rules</li><li>vouchers</li><li>concrete-products</li><li>product-options</li><li>bundle-items</li><li>bundled-items</li><li>abstract-products</li></ul>|
 {% info_block infoBox "Included resources" %}
@@ -64,7 +65,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 <details>
 <summary markdown='span'>Request sample</summary>
 
-`POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items`
+`POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items`
 ```json
 {
     "data": {
@@ -76,14 +77,13 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
     }
 }
 ```
-
 </details>
 
 
 <details>
 <summary markdown='span'>Request sample with product measurement units and sales units</summary>
 
-`POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items?include=sales-units,product-measurement-units`
+`POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items?include=sales-units,product-measurement-units`
 
 ```json
 {
@@ -105,7 +105,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 <details>
 <summary markdown='span'>Request sample with cart rules</summary>
 
-`POST http://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items?include=cart-rules`
+`POST https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items?include=cart-rules`
 
 ```json
 {
@@ -118,13 +118,12 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
     }
 }
 ```
-
 </details>
 
 <details>
 <summary markdown='span'>Request sample with vouchers</summary>
 
-`POST http://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items?include=vouchers`
+`POST https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items?include=vouchers`
 
 ```json
 {
@@ -137,14 +136,12 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
     }
 }
 ```
-
 </details>
 
 <details>
 <summary markdown='span'>Request sample with a promotional item and cart rules</summary>
 
 {% info_block infoBox "Cart rules" %}
-
 
 To add the promotional product to the cart, make sure that the cart fulfills the cart rules for the promotional item.
 
@@ -169,7 +166,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 <details>
 <summary markdown='span'>Request sample with concrete products and product options</summary>
 
-`POST http://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398/items?include=concrete-products,product-options`
+`POST https://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398/items?include=concrete-products,product-options`
 
 ```json
 {
@@ -208,7 +205,6 @@ To add the promotional product to the cart, make sure that the cart fulfills the
     }
 }
 ```
-
 </details>
 
 <details>
@@ -227,7 +223,6 @@ To add the promotional product to the cart, make sure that the cart fulfills the
     }
 }
 ```
-
 </details>
 
 <details>
@@ -246,7 +241,6 @@ To add the promotional product to the cart, make sure that the cart fulfills the
     }
 }
 ```
-
 </details>
 
 <details>
@@ -265,7 +259,6 @@ To add the promotional product to the cart, make sure that the cart fulfills the
     }
 }
 ```
-
 </details>
 
 <details>
@@ -285,7 +278,6 @@ To add the promotional product to the cart, make sure that the cart fulfills the
     }
 }
 ```
-
 </details>
 
 
@@ -345,7 +337,6 @@ It is the responsibility of the API Client to track whether the selected items a
     }
 }
 ```
-
 </details>
 
 <details>
@@ -589,7 +580,6 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -733,7 +723,6 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -1089,7 +1078,7 @@ It is the responsibility of the API Client to track whether the selected items a
             "thresholds": []
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398"
+            "self": "https://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398"
         }
     },
     "included": [
@@ -1104,7 +1093,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_1_year_waranty"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_1_year_waranty"
             }
         },
         {
@@ -1118,7 +1107,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_2_year_waranty"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_2_year_waranty"
             }
         },
         {
@@ -1132,7 +1121,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_3_year_waranty"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_3_year_waranty"
             }
         },
         {
@@ -1146,7 +1135,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_insurance"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_insurance"
             }
         },
         {
@@ -1160,7 +1149,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_gift_wrapping"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_gift_wrapping"
             }
         },
         {
@@ -1200,7 +1189,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 }
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510"
             },
             "relationships": {
                 "product-options": {
@@ -1278,7 +1267,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398/items/181_31995510-3-5"
+                "self": "https://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398/items/181_31995510-3-5"
             },
             "relationships": {
                 "concrete-products": {
@@ -1294,7 +1283,6 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -1385,7 +1373,6 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -1611,7 +1598,6 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -2363,7 +2349,6 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -2412,7 +2397,6 @@ It is the responsibility of the API Client to track whether the selected items a
     }
 }
 ```
-
 </details>
 
 <details>
@@ -2454,7 +2438,6 @@ It is the responsibility of the API Client to track whether the selected items a
     }
 }
 ```
-
 </details>
 
 <a name="add-an-item-to-a-registered-users-cart-response-attributes"></a>
@@ -2539,7 +2522,7 @@ To add a configurable bundle to a registered user’s cart, send the request:
 ***
 
 
-| PATH PARAMETER | DESCRIPTIO |
+| PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***cart_uuid*** | A unique identifier of a cart. [Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-carts) to get it. |
 
@@ -2578,7 +2561,7 @@ Request sample: `POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| quantity | Integer | &check; | The number of the configurabke bundles to add. |
+| quantity | Integer | &check; | The number of the configurable bundles to add. |
 | templateUuid | String | &check; | Unique identifier of the configurable bundle template. To get it, [retrieve all configurable bundle templates](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-configurable-bundle-templates.html#retrieve-all-configurable-bundle-templates). |
 | sku | String | &check; | Specifies the SKU of a product to add to the cart. To use promotions, specify the SKU of a product being promoted. Concrete product SKU required. |
 | quantity | Integer | &check; | Specifies the number of items to add to the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
@@ -2738,7 +2721,6 @@ Request sample: `POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1
         }
     ]
 }
-
 ```    
 </details>
 
@@ -2777,6 +2759,7 @@ To change the number of items in a cart, send the request:
 
 
 Request sample:
+
 `PATCH http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054/items/177_25913296`
 
 ```json
@@ -3232,7 +3215,6 @@ Request sample:
         }
     ]
 }
-
 ```    
 </details>
 

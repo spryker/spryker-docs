@@ -274,8 +274,7 @@ Cart in the Preview mode can also be shared with users in your company because i
 ## Fix after archive is online -->
 
 * Customer Login by Token - Ability to log in to the Spryker Commerce OS by token
-    <!--**Documentation**: [Customer Login by Token](/docs/scos/user/features/201907.0/company-account-feature-overview/customer-login-by-token-overview.html)
-## Fix after archive is online -->
+<!--**Documentation**: [Customer Login by Token](/docs/scos/user/features/201907.0/company-account-feature-overview/customer-login-by-token-overview.html) ## Fix after archive is online -->
 
 
 ***
@@ -283,15 +282,12 @@ Cart in the Preview mode can also be shared with users in your company because i
 ### Payone Cash on Delivery
 We have extended our Payone module with the cash-on-delivery payment method. This can now be used by merchants to address some of the most skeptical customers who wish to pay for the order only once they have the product in their hands.
 
-<!--**Documentation**: [Payone - Cash on Delivery](/docs/scos/user/technology-partners/201907.0/payment-partners/bs-payone/scos-integration/payone-cash-on-delivery.html)
-## Fix after archive is online -->
+<!--**Documentation**: [Payone - Cash on Delivery](/docs/scos/user/technology-partners/201907.0/payment-partners/bs-payone/scos-integration/payone-cash-on-delivery.html) ## Fix after archive is online -->
 
 ### Heidelpay Easycredit
 We have extended our existing Heidelpay module with the payment method Easycredit, which allows customers to pay via an installment plan. This can help to increase your conversion rates of more expensive products and services.
 
-<!--**Documentation**: [Integrating the Easy Credit payment method for Heidelpay](/docs/scos/dev/technology-partner-guides/{{site.version}}/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-easy-credit-payment-method-for-heidelpay.html)
-
-## Fix after archive is online -->
+<!--**Documentation**: [Integrating the Easy Credit payment method for Heidelpay](/docs/scos/dev/technology-partner-guides/{{site.version}}/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-easy-credit-payment-method-for-heidelpay.html) ## Fix after archive is online -->
 
 ### RatePay
 We have extended our partner portfolio with a RatePay integration that offers 4 payment methods out-of-the-box:

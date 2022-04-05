@@ -5,17 +5,13 @@ last_updated: Mar 23, 2022
 template: concept-topic-template
 ---
 
-## Entity name is not unique
+Modules have public and private APIs. While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility is not guaranteed in the private API. For example, if you use a core method on the project level, and it is updated or removed, it can cause unexpected issues during updates.
 
-Modules have public and private APIs. More information you can get here - https://docs.spryker.com/docs/scos/dev/architecture/module-api/definition-of-module-api.html
+For more information about module APIs, see [Definition of Module API](/docs/scos/dev/architecture/module-api/definition-of-module-api.html).
 
-{% info_block infoBox "" %}
-While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility is not guaranteed in the private API.
-{% endinfo_block %}
+When you are extending public API on the project level, make sure that entity names are unique, so Spryker updates are compatible with project changes.
 
-When we are extending public API on the project level we need to make sure that we have unique names, so Spryker updates are compatible with project changes.
-
-Project names that have to be unique:
+The names of the following entities must be unique on the project level:
 
 * Transfers
 * Transfer properties
@@ -24,14 +20,16 @@ Project names that have to be unique:
 * Methods
 * Constants
 
-If core introduces an update with the same name that already defined on project level, it might change behavior or cause issues.
+If a Spryker update introduces a core entity with a name matching a project-level entity name, behavior might change or cause issues.
 
 {% info_block infoBox "" %}
 To make your code unique you can use prefixes. F.e. "Pyz" or {Project_mane}
 {% endinfo_block %}
 
 ## Unique transfer name
+
 New transfer has to have unique name.
+
 #### Example of code that causes the upgradability error (not unique transfer name)
 
 ```xml
@@ -59,7 +57,9 @@ NotUnique:TransferName Transfer object name {name} has to have project prefix Py
 ```
 ---
 ## Unique transfer property name
+
 New transfer property has to have unique names.
+
 #### Example of code that causes the upgradability error (not unique transfer property name)
 
 ```xml
@@ -151,7 +151,7 @@ NotUnique:DatabaseColumn Database column {columnName} has to have project prefix
 ## Unique method names
 New methods has to have unique names.
 
-#### Example of not unique method name 
+#### Example of not unique method name
 ```php
 namespace Pyz\Client\RabbitMq;
 

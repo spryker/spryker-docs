@@ -8,7 +8,7 @@ A shopping list is a list of the items that shoppers buy or plan to buy frequent
 
 The *Marketplace Shopping List* feature allows customers to add product offers and marketplace products to a shopping list in the Marketplace Storefront.
 
-Merchant information is displayed in the *Sold by* field so that customer can always know which merchant is the owner of the product. 
+Merchant information is displayed in the *Sold by* field so that customer can always know which merchant is the owner of the product. Price and stock of the shopping list items are based on the price and stock of the respective product offers and marketplace products.
 
 ## Marketplace Shopping List on the Storefront
 
@@ -31,7 +31,7 @@ If the product offer or marketplace product is not available, the following beha
 | **Offer** is not in the current store.                       | The *Sold by* hint is not displayed. The shopping list item is switched to the normal product without stock, so the shopping list item is marked as *not available*, there is no possibility to add it to cart, the price is displayed. |
 | **Product** validity date does not include the current date. | The shopping list item is marked as *not available*, there is no possibility to add it to cart, the *Sold by* hint and price are not displayed. |
 | **Offer** validity date does not include the current date.   | The *Sold by* hint is not displayed. The shopping list item is switched to the normal product without stock, so the shopping list item is marked as *not available*, there is no possibility to add it to cart, the price is displayed. |
-| **Product** is discontinued.                                 | The shopping list item is marked as *discontinued*, the *Sold by* hint is shown in the Storefront. If an alternative [marketplace product](/docs/marketplace/user/features/202108.0/marketplace-product-feature-overview.html) exists, it is displayed with the  *Sold by* hint. Product offers are not supported, so if the alternative product has an offer, it is displayed as a marketplace product or a merchant product. |
+| **Product** is discontinued.                                 | The shopping list item is marked as *discontinued*, the *Sold by* hint is shown in the Storefront. If an alternative [marketplace product](/docs/marketplace/user/features/{{page.version}}/marketplace-product-feature-overview.html) exists, it is displayed with the  *Sold by* hint. Product offers are not supported, so if the alternative product has an offer, it is displayed as a marketplace product or a merchant product. |
 
 </div>
 

@@ -1,5 +1,5 @@
 ---
-title: evaluator tool overview
+title: Evaluator tool overview
 description: Functionalities of the evaluator tool
 last_updated: Nov 25, 2021
 template: concept-topic-template

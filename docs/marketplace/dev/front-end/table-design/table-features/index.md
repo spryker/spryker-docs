@@ -9,7 +9,7 @@ This document explains the Table Feature extension in the Components Library.
 
 ## Overview
 
-The table has the ability to add custom features/components to the defined table locations (`TableFeatureLocation`). By default, the table has a simplified view. However, you can embed additional components to the specified locations and extend the table (title, pagination, totals, etc.).
+The table has the ability to add custom features/components to the defined table locations (`TableFeatureLocation`). By default, the table has a simplified view. However, you can embed additional components to the specified locations and extend the table (title, pagination, totals).
 
 A Table Feature is an Angular Component encapsulating a piece of UI that is targeted to a specific location within a Table Component or that may provide additional functionality.
 
@@ -35,7 +35,6 @@ import { ModuleWithFeature, TableFeatureModule } from '@spryker/table';
     imports: [CommonModule, TableFeatureModule],
     exports: [TableCustomFeatureComponent],
     declarations: [TableCustomFeatureComponent],
-    entryComponents: [TableCustomFeatureComponent],
 })
 export class TableCustomFeatureModule implements ModuleWithFeature {
     featureComponent = TableCustomFeatureComponent;
@@ -72,7 +71,7 @@ export class TableCustomFeatureComponent extends TableFeatureComponent<
 
 There are two ways to use the Table Feature:
 
-- Via HTML tag (as a component) being projected into the Table Component—this allows users to control how the Table Feature is loaded on the page, but it does not control its loading from the Table Configuration.
+- Via HTML tag (as a component) being projected into the Table Component—this lets users control how the Table Feature is loaded on the page, but it does not control its loading from the Table Configuration.
 
     ```html
     <spy-table>
@@ -103,7 +102,7 @@ To add a feature via the registry, register the feature in the Table Module usin
 In the table configuration, you can enable or disable, and configure any feature.
 
 ```html
-<spy-table 
+<spy-table
     [config]="{
         ...,
         title: {
@@ -159,6 +158,6 @@ There are multiple standard Table Features that are shipped with the UI library:
 - [Search](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-search.html) - allows searching within the data set.
 - [Selectable](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-selectable.html) - allows selecting multiple rows.
 - [Settings](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-settings.html) - allows customizing columns of the table (show/hide and reorder).
-- [Sync State](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-sync-state.html) - allows syncing the state of the table with browser URL (like pagination, filters, sorting, etc.).
+- [Sync State](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-sync-state.html) - allows syncing the state of the table with browser URL (like pagination, filters, sorting).
 - [Title](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-title.html) - renders the title of the table.
 - [Total](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-total.html) - renders the total number of the data set.

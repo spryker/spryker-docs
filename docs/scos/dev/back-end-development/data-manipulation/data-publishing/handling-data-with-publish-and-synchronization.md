@@ -479,7 +479,7 @@ The command is executed by the worker which is defined as a job in Jenkins:
 ```
 {vagrant@spryker-vagrant ➜  current git:(master) ✗  console queue:task:start publish.hello_world
 Store: DE | Environment: development
-Hello World!
+Hello World Writer!
 ```
 
 {% info_block warningBox "Verification" %}
@@ -639,7 +639,7 @@ namespace Pyz\Zed\HelloWorldStorage\Business\Deleter;
 
 ..
 
-class HelloWorldStorageDeleter implements HelloWorldStorageWriterInterface
+class HelloWorldStorageDeleter implements HelloWorldStorageDeleterInterface
 {
     /**
      * @param \Generated\Shared\Transfer\EventEntityTransfer[] $eventTransfers
@@ -653,24 +653,20 @@ class HelloWorldStorageDeleter implements HelloWorldStorageWriterInterface
             ->find();
 
         foreach ($messages as $message) {
-            $messageStorageTransfer = new HelloWorldStorageTransfer();
-            $messageStorageTransfer->fromArray($message->toArray(), true);
-            $this->store($message->getIdHelloWorldMessage(), $messageStorageTransfer);
+            $this->delete($message->getIdHelloWorldMessage());
         }
     }
 
     /**
+     * @param int $idMessage
+     *
      * @return void
      */
-    protected function store($idMessage, HelloWorldStorageTransfer $messageStorageTransfer): void
+    protected function delete(int $idMessage): void
     {
-        $messages = SpyHelloWorldMessageStorageQuery::create()
-            ->filterByFkHelloWorldMessage_In($messageIds)
-            ->find();
-
-        foreach ($messages as $message) {
-            $message->delete();
-        }
+        SpyHelloWorldMessageStorageQuery::create()
+            ->filterByFkHelloWorldMessage($idMessage)
+            ->delete();
     }
 }
 ```

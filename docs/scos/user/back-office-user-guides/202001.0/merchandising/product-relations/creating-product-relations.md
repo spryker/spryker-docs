@@ -41,7 +41,7 @@ To start working with product relations, navigate to the **Products > Product Re
 
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 
 You can delete a rule or group by clicking **Delete** for a specific entry.
 When adding the query, you can check the products that meet those criteria.
@@ -63,7 +63,7 @@ To activate the created product relation, click **Activate** in the top-right co
 
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 
 On this page, you also can:
 * Click **View** in the _Actions_ column to view the assigned abstract product in Back Office.

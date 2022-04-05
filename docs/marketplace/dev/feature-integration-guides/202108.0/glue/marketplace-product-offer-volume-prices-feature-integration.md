@@ -3,6 +3,8 @@ title: "Glue API: Marketplace Product Offer Volume Prices feature integration"
 last_updated: Dec 04, 2020
 description: This document describes how to integrate the Offers Volume Prices Glue API feature into a Spryker project.
 template: feature-integration-guide-template
+redirect_from:
+    - /docs/marketplace/dev/feature-integration-guides/202108.0/glue/marketplace-product-offer-volume-prices.html
 ---
 
 This document describes how to integrate the Offers Volume Prices Glue API feature into a Spryker project.
@@ -92,6 +94,6 @@ class ProductOfferPricesRestApiDependencyProvider extends SprykerProductPricesRe
 
 {% info_block warningBox "Verification" %}
 
-Make sure that  `ProductOfferPricesRestApiDependencyProvider` plugin is set up by having product offer volumes over sending the request `GET http://glue.mysprykershop.com//concrete-products/{% raw %}{{concreteProductId}}{% endraw %}?include=product-offers,product-offer-prices`.
+Make sure that  `ProductOfferPricesRestApiDependencyProvider` plugin is set up by having product offer volumes over sending the request `GET https://glue.mysprykershop.com//concrete-products/{% raw %}{{concreteProductId}}{% endraw %}?include=product-offers,product-offer-prices`.
 
 {% endinfo_block %}

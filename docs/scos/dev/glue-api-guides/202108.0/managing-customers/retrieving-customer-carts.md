@@ -21,7 +21,7 @@ This endpoint allows retrieving a customer’s carts.
 
 For details on the modules that provide the API functionality and how to install them, see [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html).
 
-## Retrieve a customer’s carts
+## Retrieve customer’s carts
 
 To retrieve a customer’s carts, send the following request:
 
@@ -58,21 +58,21 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 
 | REQUEST | USAGE |
 |-|-|
-| `GET https://glue.mysprykershop.com/customers/DE--1/carts` | Retrieve all carts of a user. |
-| `GET https://glue.mysprykershop.com/customers/DE--1/?include=items` | Retrieve all carts of a user with the items in them included. |
-| `GET https://glue.mysprykershop.com/customers/DE--1/?include=cart-permission-groups` | Retrieve all carts of a user with cart permission groups included. |
-| `GET https://glue.mysprykershop.com/customers/DE--1/?include=shared-carts` | Retrieve all carts of a user with shared carts. |
-| `GET https://glue.mysprykershop.com/customers/DE--1/?include=shared-carts,company-users` | Retrieve all carts of a user with information about shared carts and the company uses they are shared with. |
-| `GET https://glue.mysprykershop.com/customers/DE--1/?include=cart-rules` | Retrieve all carts of a user with cart rules. |
-| `GET https://glue.mysprykershop.com/customers/DE--1/?include=vouchers` | Retrieve all carts of a user with information about applied vouchers. |
-| `GET https://glue.mysprykershop.com/customers/DE--1/?include=promotional-items` | Retrieve information about promotional items for the cart. |
-| `GET https://glue.mysprykershop.com/customers/DE--1/?include=gift-cards` | Retrieve all carts of a user with applied gift cards. |
-| `GET https://glue.mysprykershop.com/customers/DE--1/?include=items,concrete-products,product-options` | Retrieve all carts of a user with items, respective concrete product, and their product options. |
-| `GET https://glue.mysprykershop.com/customers/DE--1/?include=items,concrete-products,product-labels` | Retrieve all carts of a user with information about concrete products and the product labels assigned to the products in the carts. |
+| GET https://glue.mysprykershop.com/customers/DE--1/carts | Retrieve all carts of a user. |
+| GET https://glue.mysprykershop.com/customers/DE--1/?include=items | Retrieve all carts of a user with the items in them included. |
+| GET https://glue.mysprykershop.com/customers/DE--1/?include=cart-permission-groups | Retrieve all carts of a user with cart permission groups included. |
+| GET https://glue.mysprykershop.com/customers/DE--1/?include=shared-carts | Retrieve all carts of a user with shared carts. |
+| GET https://glue.mysprykershop.com/customers/DE--1/?include=shared-carts,company-users | Retrieve all carts of a user with information about shared carts and the company uses they are shared with. |
+| GET https://glue.mysprykershop.com/customers/DE--1/?include=cart-rules | Retrieve all carts of a user with cart rules. |
+| GET https://glue.mysprykershop.com/customers/DE--1/?include=vouchers | Retrieve all carts of a user with information about applied vouchers. |
+| GET https://glue.mysprykershop.com/customers/DE--1/?include=promotional-items | Retrieve information about promotional items for the cart. |
+| GET https://glue.mysprykershop.com/customers/DE--1/?include=gift-cards | Retrieve all carts of a user with applied gift cards. |
+| GET https://glue.mysprykershop.com/customers/DE--1/?include=items,concrete-products,product-options | Retrieve all carts of a user with items, respective concrete product, and their product options. |
+| GET https://glue.mysprykershop.com/customers/DE--1/?include=items,concrete-products,product-labels | Retrieve all carts of a user with information about concrete products and the product labels assigned to the products in the carts. |
 
 ### Response
 
-<details><summary markdown='span'>Response sample: no carts</summary>
+<details><summary markdown='span'>Response sample: no carts are found</summary>
 
 ```json
 {
@@ -82,10 +82,9 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     }
 }
 ```
-
 </details>
 
-<details><summary markdown='span'>Response sample: multiple carts</summary>
+<details><summary markdown='span'>Response sample: retrieve multiple customer's carts</summary>
 
 ```json
 {
@@ -146,10 +145,9 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     }
 }
 ```
-
 </details>
 
-<details><summary markdown='span'>Response sample with items</summary>
+<details><summary markdown='span'>Response sample: retrieve customer's carts with their items included</summary>
 
 ```json
 {
@@ -439,10 +437,9 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     ]
 }
 ```
-
 </details>
 
-<details><summary markdown='span'>Response sample with cart permission groups</summary>
+<details><summary markdown='span'>Response sample: retrieve customer's carts with cart permission groups included</summary>
 
 ```json
 {
@@ -575,10 +572,9 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     ]
 }
 ```
-
 </details>
 
-<details><summary markdown='span'>Response sample with shared carts</summary>
+<details><summary markdown='span'>Response sample: retrieve customer's carts with the information on shared carts included</summary>
 
 ```json
 {
@@ -711,10 +707,9 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     ]
 }
 ```
-
 </details>
 
-<details><summary markdown='span'>Response sample with shared carts and company users they are shared with</summary>
+<details><summary markdown='span'>Response sample: retrieve customer's carts with shared carts and include information about company users they are shared with</summary>
 
 ```json
 {
@@ -815,10 +810,9 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     ]
 }
 ```
-
 </details>
 
-<details><summary markdown='span'>Response sample with cart rules</summary>
+<details><summary markdown='span'>Response sample: retrieve customer's carts with the cart rules included</summary>
 
 ```json
 {
@@ -946,10 +940,9 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     ]
 }
 ```
-
 </details>
 
-<details><summary markdown='span'>Response sample with vouchers</summary>
+<details><summary markdown='span'>Response sample: retrieve customer's carts with the information on vouchers included</summary>
 
 ```json
 {
@@ -1016,10 +1009,9 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     ]
 }
 ```
-
 </details>
 
-<details><summary markdown='span'>Response sample with a promotional item</summary>
+<details><summary markdown='span'>Response sample: retrieve customer's carts withe the information on  promotional items included</summary>
 
 ```json
 {
@@ -1082,10 +1074,9 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     ]
 }
 ```
-
 </details>
 
-<details><summary markdown='span'>Response sample with gift cards applied</summary>
+<details><summary markdown='span'>Response sample: retrieve customer's carts with the information on the gift cards applied</summary>
 
 ```json
 {
@@ -1151,12 +1142,10 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
         }
     ]
 }
-
 ```
-
 </details>
 
-<details><summary markdown='span'>Response sample with items, concrete products, and product options</summary>
+<details><summary markdown='span'>Response sample: retrieve customer's carts and include information on items, concrete products, and product options</summary>
 
 ```json
 {
@@ -1406,10 +1395,9 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     ]
 }
 ```
-
 </details>
 
-<details><summary markdown='span'>Response sample with product labels</summary>
+<details><summary markdown='span'>Response sample: retrieve customer's carts with the information on product labels included</summary>
 
 ```json
 {
@@ -1565,7 +1553,6 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
     ]
 }
 ```
-
 </details>
 
 #### General cart information

@@ -19,7 +19,7 @@ For detailed information on the modules that provide the API functionality and r
 ## Usage
 To retrieve store configuration, send a GET request to the following endpoint:
 `/stores`
-Sample request: `GET http://mysprykershop.com/stores`
+Request sample: `GET http://mysprykershop.com/stores`
 The endpoint will respond with a **RestStoresResponse**.
 
 **Response sample**

@@ -22,7 +22,7 @@ One of the fundamental concepts of the Persistence ACL module is an entity rule.
 
 ## Scope
 
-The concept of scopes is very flexible. It allows you to create any rules that suit the needs of your system. For example:
+The concept of scopes is very flexible. It lets you create any rules that suit the needs of your system. For example:
 
 - Grant read-only access to "All Products".
 - Grant read-write access to "All Products".
@@ -50,9 +50,9 @@ Depending on the scope, the system behaves differently. Read the documentation f
 
 ## Default rule
 
-If a user performs any operation on an entity for which he has no rules, the default rule is triggered. The default rule can be configured both within a specific class and in a general context. 
+If a user performs any operation on an entity for which he has no rules, the default rule is triggered. The default rule can be configured both within a specific class and in a general context.
 
-A class context takes precedence over a general context. Persistence ACL feature is especially useful when all database tables are connected simultaneously. See [configuration](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html#connect-persistence-acl-feature-to-all-database-tables) for more details. Thus, you can define publicly available entities such as `Country`, `Currency`, `Region`, etc. 
+A class context takes precedence over a general context. Persistence ACL feature is especially useful when all database tables are connected simultaneously. See [configuration](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html#connect-persistence-acl-feature-to-all-database-tables) for more details. Thus, you can define publicly available entities such as `Country`, `Currency`, and `Region`.
 
 The default rule configuration is described in the [configuration document](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html).
 

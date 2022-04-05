@@ -10,7 +10,7 @@ This document explains the Data Transformer Date-serialize service in the Compon
 
 Data Transformer Date-serialize is an Angular Service that serializes JS Date Object into a Date ISO string.
 
-In the example below, the `datasource` transforms `date` object into the serialized `date` string.
+In the following example, the `datasource` transforms `date` object into the serialized `date` string.
 
 ```html
 <spy-select
@@ -30,6 +30,12 @@ In the example below, the `datasource` transforms `date` object into the seriali
 Register the service:
 
 ```ts
+declare module '@spryker/data-transformer' {
+    interface DataTransformerRegistry {
+        'date-serialize': DateSerializeDataTransformerConfig;
+    }
+}
+
 @NgModule({
     imports: [
         DataTransformerModule.withTransformers({
@@ -45,11 +51,5 @@ export class RootModule {}
 Below you can find interfaces for the Data Transformer Date-serialize:
 
 ```ts
-declare module '@spryker/data-transformer' {
-    interface DataTransformerRegistry {
-        'date-serialize': DateSerializeDataTransformerConfig;
-    }
-}
-
 export interface DateSerializeDataTransformerConfig extends DataTransformerConfig {}
 ```

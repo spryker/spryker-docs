@@ -4,7 +4,7 @@ description: Merchants are product and service sellers in the Marketplace.
 template: feature-walkthrough-template
 ---
 
-The _Marketplace Inventory Management_ implies stock & availability management as well as multiple warehouse stock management for product offers and merchant products.
+The _Marketplace Inventory Management_ implies stock & availability management as well as multiple warehouse stock management for product offers and marketplace products.
 
 {% info_block warningBox "User documentation" %}
 

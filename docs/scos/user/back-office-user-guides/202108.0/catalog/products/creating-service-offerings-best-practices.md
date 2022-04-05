@@ -27,7 +27,7 @@ The first thing you need to do to start selling a product with either free or ch
 To create the product, do the following:
 
 1. Go to **Catalog > Products** section and click **Create Product** on the top-right corner of the page.
-2. Populate the necessary fields in the *General, Price & Tax, Variants, SEO, Image* tabs. See [Creating an Abstract Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) for details on the tabs and their values.
+2. Populate the necessary fields in the *General, Price & Tax, Variants, SEO, Image* tabs. See [Creating an Abstract Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html) for details on the tabs and their values.
 3. Click **Save**. Your product is now created and will appear in the list of products in the **Catalog > Products** section.
 4. Activate the product:
     1. In the list of products in the **Catalog > Products** section, find your product and click **Edit** in the *Actions* column for it.
@@ -128,7 +128,7 @@ If you need an approach that would best suit your specific business needs, we re
 
 #### 1. Identify the respective products with labels
 
-First of all, you need to somehow identify the products for which the custom solution will be applied. We recommend doing this via product labels. For this, create specific labels for the products that require service from your side. The labels can be, for example, *free service, installation service, 1-day service*, etc. See [Creating a Product Label](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/creating-product-labels.html#creating-product-labels) for details on how to create labels and assign products to them.
+First of all, you need to somehow identify the products for which the custom solution will be applied. We recommend doing this via product labels. For this, create specific labels for the products that require service from your side. The labels can be, for example, *free service, installation service, 1-day service*, etc. See [Creating a Product Label](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/create-product-labels.html) for details on how to create labels and assign products to them.
 
 #### 2.  Override the Add to Cart functionality
 

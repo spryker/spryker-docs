@@ -19,7 +19,7 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-carts.html
 ---
 
-This endpoint allows to manage discount vouchers in guest carts.
+This endpoint allows managing discount vouchers in guest carts.
 
 ## Installation
 
@@ -50,7 +50,7 @@ To apply a discount voucher to a guest cart, send the request:
 
 
 <details>
-<summary markdown='span'>Request sample</summary>
+<summary markdown='span'>Request sample: apply a discount voucher to a guest cart</summary>
 
 `POST https://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers`
 
@@ -68,7 +68,7 @@ To apply a discount voucher to a guest cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Request sample with discount voucher information</summary>
+<summary markdown='span'>Request sample: apply a discount voucher to a guest cart with discount voucher information included</summary>
 
 `POST https://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers?include=vouchers`
 
@@ -82,7 +82,6 @@ To apply a discount voucher to a guest cart, send the request:
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
@@ -93,7 +92,7 @@ To apply a discount voucher to a guest cart, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: apply a discount voucher to a guest cart</summary>
 
 ```json
 {
@@ -127,11 +126,12 @@ To apply a discount voucher to a guest cart, send the request:
     }
 }
 ```
-
 </details>
 
+
+
 <details>
-<summary markdown='span'>Response sample with discount voucher information</summary>
+<summary markdown='span'>Response sample: apply a discount voucher to a guest cart with discount voucher information included</summary>
 
 ```json
 {
@@ -192,8 +192,8 @@ To apply a discount voucher to a guest cart, send the request:
     ]
 }
 ```
-
 </details>
+
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
@@ -227,7 +227,9 @@ To remove a discount voucher, send the request:
 | X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | Guest user's unique identifier. The value should correspond to the value used when [creating the guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart). |
 
 
-Request sample: `DELETE http://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers/mydiscount-we3ca`
+Request sample: remove a discount voucher from a guest cart
+
+`DELETE http://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers/mydiscount-we3ca`
 
 ### Response
 

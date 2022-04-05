@@ -22,7 +22,7 @@ related:
 
 {% info_block infoBox "Info" %}
 
-Check [this article](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2bb2c-demo-shops) to learn about Spryker Commerce OS (SCOS)
+Check [this article](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops) to learn about Spryker Commerce OS (SCOS)
 
 {% endinfo_block %}
 

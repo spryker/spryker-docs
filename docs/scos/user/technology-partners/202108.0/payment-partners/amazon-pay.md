@@ -34,6 +34,13 @@ On the server side, there are API functions for after a buyer decides to use Ama
 
 Subsequent all integration functionality is provided by Amazon Pay.
 
+## Related Developer guides
+
+* [Configuring Amazon Pay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/amazon-pay/configuring-amazon-pay.html)
+* [Amazon Pay - Sandbox Simulations](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/amazon-pay/amazon-pay-sandbox-simulations.html)
+* [Amazon Pay - State Machine](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/amazon-pay/amazon-pay-state-machine.html)
+* [Handling orders with Amazon Pay API](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/amazon-pay/handling-orders-with-amazon-pay-api.html)
+* [Obtaining an Amazon Order Reference and information about shipping addresses](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/amazon-pay/obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html)
 ---
 
 ## Copyright and Disclaimer

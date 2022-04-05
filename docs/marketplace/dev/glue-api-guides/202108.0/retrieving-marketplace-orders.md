@@ -11,7 +11,7 @@ In your development, this resource can help you to:
 - Make the order history available to customers.
 - Make order details available to enable reordering functionality.
 
-The **Marketplace Order Management API** allows you to retrieve all orders made by a registered customer.
+The **Marketplace Order Management API** lets you retrieve all orders made by a registered customer.
 
 
 ## Installation
@@ -50,7 +50,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 
 <details>
-<summary markdown='span'>Response sample: all orders</summary>
+<summary markdown='span'>Response sample: retrieve all orders</summary>
 
 ```json
 {
@@ -197,7 +197,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 </details>
 
 <details>
-<summary markdown='span'>Response sample with merchants included</summary>
+<summary markdown='span'>Response sample: retrieve all orders with the merchants included</summary>
 
 ```json
 {
@@ -554,14 +554,14 @@ To retrieve detailed information on an order, send the request:
 
 | REQUEST | USAGE |
 | ----------------- | ------------------ |
-| `GET http://glue.mysprykershop.com/orders/DE--6`   | Retrieve information about the `DE--6` order.  |
-| `GET https://glue.mysprykershop.com/orders/DE--6?include=order-shipments` | Retrieve information about the order with the id `DE--6` with order shipments included. |
-| `GET http://glue.mysprykershop.com/orders/DE--3?include=merchants` | Retrieve order `DE--3` with merchants included.|
+| `GET https://glue.mysprykershop.com/orders/DE--6`   | Retrieve information about the `DE--6` order.  |
+| `GET https://glue.mysprykershop.com/orders/DE--6?include=order-shipments` | Retrieve information about the order with the ID `DE--6` with order shipments included. |
+| `GET https://glue.mysprykershop.com/orders/DE--3?include=merchants` | Retrieve order `DE--3` with the merchants included.|
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve information about the order</summary>
 
 ```json
 {
@@ -781,7 +781,7 @@ To retrieve detailed information on an order, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample with order shipments</summary>
+<summary markdown='span'>Response sample: retrieve information about the order with order shipments included</summary>
 
 ```json
 {
@@ -1019,7 +1019,7 @@ To retrieve detailed information on an order, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample with merchants included</summary>
+<summary markdown='span'>Response sample: retrieve an with the merchants included</summary>
 
 ```json
 {
@@ -1344,7 +1344,7 @@ To retrieve detailed information on an order, send the request:
 | ATTRIBUTE     | TYPE | DESCRIPTION                |
 | ----------------- | -------- | --------------- |
 | totals                   | Object  | Totals calculations.                            |
-| totals.expenseTotal      | Integer | Total amount of expenses (e.g. shipping costs). |
+| totals.expenseTotal      | Integer | Total amount of expenses (for example,shipping costs). |
 | totals.discountTotal     | Integer | Total amount of discounts applied.              |
 | totals.taxTotal          | Integer | Total amount of taxes paid.                     |
 | totals.subtotal          | Integer | Subtotal of the order.                          |

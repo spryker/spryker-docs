@@ -151,20 +151,20 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox “Verification” %}
 
-`NavigationsResourceRoutePlugin` is set up correctly if the following endpoint is available: *http://glue.mysprykershop.com/navigations/{navigationId}*
+`NavigationsResourceRoutePlugin` is set up correctly if the following endpoint is available: *https://glue.mysprykershop.com/navigations/{navigationId}*
 {% endinfo_block %}
 
 {% info_block warningBox “Verification” %}
 
-Now, it is possible to verify that the configuration of NavigationsRestApiConfig is done correctly. Perform the "http://glue.mysprykershop.com/navigations/{navigationId}" request and check that each node of the type you set up in the configuration (category and CMS pages in the example
+Now, it is possible to verify that the configuration of NavigationsRestApiConfig is done correctly. Perform the "https://glue.mysprykershop.com/navigations/{navigationId}" request and check that each node of the type you set up in the configuration (category and CMS pages in the example
 {% endinfo_block %} "resourceId" is filled with the valid foreign key.)
 
 {% info_block warningBox "your title goes here" %}
-Send a request to *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?include=category-nodes*.<br>Make sure that the response contains `category-nodes` as a relationship and `category-nodes` data included.
+Send a request to *https://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?include=category-nodes*.<br>Make sure that the response contains `category-nodes` as a relationship and `category-nodes` data included.
 {% endinfo_block %}
 
 <details open>
-<summary markdown='span'>http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?include=category-nodes</summary>
+<summary markdown='span'>https://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?include=category-nodes</summary>
 
 ```json
 {
@@ -234,7 +234,7 @@ Send a request to *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?inc
 			"isActive": true
 		},
 		"links": {
-			"self": "http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?include=category-nodes"
+			"self": "https://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?include=category-nodes"
 		},
 		"relationships": {
 			"category-nodes": {
@@ -302,7 +302,7 @@ Send a request to *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?inc
 				"order": 70
 			},
 			"links": {
-				"self": "http://glue.mysprykershop.com/category-nodes/10"
+				"self": "https://glue.mysprykershop.com/category-nodes/10"
 			}
 		},
 		{
@@ -347,7 +347,7 @@ Send a request to *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?inc
 				"order": 80
 			},
 			"links": {
-				"self": "http://glue.mysprykershop.com/category-nodes/12"
+				"self": "https://glue.mysprykershop.com/category-nodes/12"
 			}
 		},
 		{
@@ -392,7 +392,7 @@ Send a request to *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?inc
 				"order": 100
 			},
 			"links": {
-				"self": "http://glue.mysprykershop.com/category-nodes/6"
+				"self": "https://glue.mysprykershop.com/category-nodes/6"
 			}
 		},
 		{
@@ -437,7 +437,7 @@ Send a request to *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?inc
 				"order": 80
 			},
 			"links": {
-				"self": "http://glue.mysprykershop.com/category-nodes/8"
+				"self": "https://glue.mysprykershop.com/category-nodes/8"
 			}
 		}
 	]

@@ -138,7 +138,7 @@ NotUnique:DatabaseColumn Database column {columnName} has to have project prefix
 ------------------------ ----------------------------------------------------------------------------------------------------
 ```
 
-### Example to resolve the Evaluator check error (unique database table column name)
+### Example of resolving the error: Name of database table column is not unique
 
 ```xml
 ...
@@ -149,11 +149,12 @@ NotUnique:DatabaseColumn Database column {columnName} has to have project prefix
 ```
 ---
 
-## Unique method names
+## Method name is not unique
 
-New methods has to have unique names.
+Method names must be unique.
 
-### Example of not unique method name
+### Example of code that causes an upgradability error: Method name is not unique
+
 ```php
 namespace Pyz\Client\RabbitMq;
 
@@ -171,16 +172,15 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-### Example of related error in the Evaluator output (unique method name)
+### Example of related error in the Evaluator output: Method name is not unique
 
 ```bash
 ---------------- ----------------------------------------------------------------------------------------------------
 NotUnique:Method Method name {path}::{methodName} should contains project prefix, like {proposedMethodName}
 ---------------- ----------------------------------------------------------------------------------------------------
-
 ```
 
-### Example to resolve the Evaluator check error (unique method name)
+### Example of resolving the error: Method name is not unique
 
 ```php
 namespace Pyz\Client\RabbitMq;
@@ -200,10 +200,12 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 ```
 
 
-## Unique constant name
-New constant has to have unique names.
+## Constant name is not unique
 
-### Example of not unique constant name
+Constant names must be unique.
+
+### Example of code that causes an upgradability error: Method name is not unique
+
 ```php
 namespace Pyz\Client\RabbitMq;
 
@@ -215,7 +217,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-### Example of related error in the Evaluator output (unique constant name)
+### Example of related error in the Evaluator output: Method name is not unique
 
 ```bash
 ------------------ ----------------------------------------------------------------------------------------------------
@@ -223,7 +225,7 @@ NotUnique:Constant {path}::{constName} name has to have project namespace, like 
 ------------------ ----------------------------------------------------------------------------------------------------
 ```
 
-### Example to resolve the Evaluator check error (unique constant name)
+### Example of resolving the error: Method name is not unique
 
 ```php
 namespace Pyz\Client\RabbitMq;
@@ -235,4 +237,3 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
     public const PYZ_CUSTOM_CONST = 'PYZ_CUSTOM_CONST';
 }
 ```
----

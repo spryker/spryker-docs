@@ -804,7 +804,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "discountPromotionQuantity": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/vouchers/mydiscount-yu8je"
+                "self": "https://glue.mysprykershop.com/vouchers/mydiscount-yu8je"
             }
         },
         {
@@ -821,7 +821,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "discountPromotionQuantity": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/cart-rules/1"
+                "self": "https://glue.mysprykershop.com/cart-rules/1"
             }
         }
     ]

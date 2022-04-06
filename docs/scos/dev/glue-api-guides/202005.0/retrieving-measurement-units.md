@@ -51,7 +51,7 @@ Response sample:
             "defaultPrecision": 100
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/product-measurement-units/METR"
+            "self": "https://glue.mysprykershop.com/product-measurement-units/METR"
         }
     }
 }

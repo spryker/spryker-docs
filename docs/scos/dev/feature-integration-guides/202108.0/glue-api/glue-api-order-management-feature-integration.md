@@ -57,7 +57,6 @@ Generate the transfer changes:
 console transfer:generate
 ```
 
-
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes have occurred:
@@ -91,13 +90,11 @@ Activate the following plugins:
 {% endinfo_block %}
 
 
-
 | PLUGIN  | SPECIFICATION  | PREREQUISITES | NAMESPACE  |
 | -------------------- | --------------------- | ------------ | --------------- |
 | OrdersResourceRoutePlugin               | Registers the `orders` resource.                             | None          | Spryker\Glue\OrdersRestApi\Plugin |
 | OrderRelationshipByOrderReferencePlugin | Adds the `orders` resource as a relationship by order reference. | None          | Spryker\Glue\OrdersRestApi\Plugin |
 | CustomerOrdersResourceRoutePlugin       | Adds the configuration for resource routing, mapping of HTTP methods to controller actions and defines if actions are protected. | None          | Spryker\Glue\OrdersRestApi\Plugin |
-
 
 
 <details open>
@@ -149,16 +146,14 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 
 
-
 {% info_block warningBox "Verification" %}
 
 To verify that `OrdersResourceRoutePlugin` is set up correctly, make sure that the following endpoints are available:
 
-- `http://glue.mysprykershop.com/orders`
-- `http://glue.mysprykershop.com/orders/{% raw %}{{{% endraw %}order_reference{% raw %}}}{% endraw %}`
+- `https://glue.mysprykershop.comm/orders`
+- `https://glue.mysprykershop.comm/orders/{% raw %}{{{% endraw %}order_reference{% raw %}}}{% endraw %}`
 
 {% endinfo_block %}
-
 
 
 {% info_block warningBox "Verification" %}
@@ -174,7 +169,7 @@ To verify that `CustomerOrdersResourceRoutePlugin` is set up correctly, make sur
 To verify that `OrderRelationshipByOrderReferencePlugin` is set up correctly, make sure that the `orders` relationship is returned after sending the following request:
 
 <details open>
-<summary markdown='span'>POST http://glue.mysprykershop.com/checkout?include=orders</summary>
+<summary markdown='span'>POST https://glue.mysprykershop.comm/checkout?include=orders</summary>
     
 ```json
 {
@@ -187,7 +182,7 @@ To verify that `OrderRelationshipByOrderReferencePlugin` is set up correctly, ma
             "isExternalRedirect": null
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/checkout?include=orders"
+            "self": "https://glue.mysprykershop.comm/checkout?include=orders"
         },
         "relationships": {
             "orders": {
@@ -334,7 +329,7 @@ To verify that `OrderRelationshipByOrderReferencePlugin` is set up correctly, ma
                 "calculatedDiscounts": []
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/orders/DE--2"
+                "self": "https://glue.mysprykershop.comm/orders/DE--2"
             }
         }
     ]

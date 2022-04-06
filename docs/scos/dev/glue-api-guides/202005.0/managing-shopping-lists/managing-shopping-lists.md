@@ -35,7 +35,7 @@ To create a shopping list for a registered user, send the request:
 ---
 ### Request
 Request sample: 
-`POST http://glue.mysprykershop.com/shopping-lists`
+`POST https://glue.mysprykershop.com/shopping-lists`
 
 ```
 {
@@ -69,7 +69,7 @@ Request sample:
             "createdAt": "2020-02-07 09:26:01.623754"
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/shopping-lists/sdb17f85-953f-565a-a4ce-e5cb02405f83"
+            "self": "https://glue.mysprykershop.com/shopping-lists/sdb17f85-953f-565a-a4ce-e5cb02405f83"
         }
     }
 }
@@ -98,9 +98,9 @@ To add an item to a shopping list, send the request:
 
 ### Request
 Request sample:
-`POST http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items`
+`POST https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items`
 
-`POST http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items?include=concrete-products`
+`POST https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items?include=concrete-products`
 
 ```
 {
@@ -143,7 +143,7 @@ The `concrete-products` resource can be included only together with the `shoppin
             "sku": "005_30663301"
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08"
+            "self": "https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08"
         }
     }
 }  
@@ -238,9 +238,9 @@ The endpoint returns not only the shopping lists created by users but also the l
 {% endinfo_block %}
 ### Request
 Request sample: 
-`GET http://glue.mysprykershop.com/shopping-lists`
+`GET https://glue.mysprykershop.com/shopping-lists`
 
-`GET http://glue.mysprykershop.com/shopping-lists?include=shopping-list-items,concrete-products`
+`GET https://glue.mysprykershop.com/shopping-lists?include=shopping-list-items,concrete-products`
 
 | String parameter | Description | Exemplary values |
 | --- | --- | --- |
@@ -260,7 +260,7 @@ The `concrete-products` resource can be included only together with the `shoppin
   {
     "data": [],
     "links": {
-        "self": "http://glue.mysprykershop.com/shopping-lists"
+        "self": "https://glue.mysprykershop.com/shopping-lists"
     }
 }  
 ```
@@ -284,7 +284,7 @@ The `concrete-products` resource can be included only together with the `shoppin
                 "createdAt": "2020-02-07 07:59:09.621433"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a"
+                "self": "https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a"
             }
         },
         {
@@ -298,7 +298,7 @@ The `concrete-products` resource can be included only together with the `shoppin
                 "createdAt": "2020-02-07 08:01:11.539074"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/shopping-lists/184ea79d-a2d3-549a-8ca2-4ea36879ceee"
+                "self": "https://glue.mysprykershop.com/shopping-lists/184ea79d-a2d3-549a-8ca2-4ea36879ceee"
             }
         },
         {
@@ -312,12 +312,12 @@ The `concrete-products` resource can be included only together with the `shoppin
                 "createdAt": "2020-02-07 09:34:41.438426"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/shopping-lists/f5ce1365-1429-5d99-97a9-c1b19e4fede6"
+                "self": "https://glue.mysprykershop.com/shopping-lists/f5ce1365-1429-5d99-97a9-c1b19e4fede6"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/shopping-lists"
+        "self": "https://glue.mysprykershop.com/shopping-lists"
     }
 }
 ```
@@ -386,7 +386,7 @@ The `concrete-products` resource can be included only together with the `shoppin
                 }
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/136_24425591"
+                "self": "https://glue.mysprykershop.com/concrete-products/136_24425591"
             }
         },
         {
@@ -440,7 +440,7 @@ The `concrete-products` resource can be included only together with the `shoppin
                 }
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/005_30663301"
+                "self": "https://glue.mysprykershop.com/concrete-products/005_30663301"
             }
         },
         {
@@ -510,11 +510,11 @@ The requested list must be either owned by or shared with the currently logged i
 
 ### Request
 Request sample: 
-`GET http://glue.mysprykershop.com/shopping-lists/sdb17f85-953f-565a-a4ce-e5cb02405f83`
+`GET https://glue.mysprykershop.com/shopping-lists/sdb17f85-953f-565a-a4ce-e5cb02405f83`
 
-`GET http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a?include=shopping-list-items`
+`GET https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a?include=shopping-list-items`
 
-`GET http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a?include=shopping-list-items,concrete-products`
+`GET https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a?include=shopping-list-items,concrete-products`
 
 | Path parameter | Description |
 | --- | --- |
@@ -543,7 +543,7 @@ The `concrete-products` resource can be included only together with the `shoppin
             "createdAt": "2020-02-07 07:59:09.621433"
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a"
+            "self": "https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a"
         }
     }
 }
@@ -586,7 +586,7 @@ The `concrete-products` resource can be included only together with the `shoppin
                 "sku": "136_24425591"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/c3e12dfb-05e5-51c3-ae8f-ba2f07b6bd17"
+                "self": "https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/c3e12dfb-05e5-51c3-ae8f-ba2f07b6bd17"
             }
         },
         {
@@ -597,7 +597,7 @@ The `concrete-products` resource can be included only together with the `shoppin
                 "sku": "005_30663301"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08"
+                "self": "https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08"
             }
         }
     ]
@@ -668,7 +668,7 @@ The `concrete-products` resource can be included only together with the `shoppin
                 }
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/136_24425591"
+                "self": "https://glue.mysprykershop.com/concrete-products/136_24425591"
             }
         },
         {
@@ -722,7 +722,7 @@ The `concrete-products` resource can be included only together with the `shoppin
                 }
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/005_30663301"
+                "self": "https://glue.mysprykershop.com/concrete-products/005_30663301"
             }
         },
         {
@@ -761,9 +761,9 @@ To modify a shopping list, send the request:
 
 ### Request
 Request samples: 
-`PATCH http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a`
+`PATCH https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a`
 
-`PATCH http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a?include=shopping-list-items,concrete-products`
+`PATCH https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a?include=shopping-list-items,concrete-products`
 
 | Path parameter | Description |
 | --- | --- |
@@ -811,7 +811,7 @@ The `concrete-products` resource can be included only together with the `shoppin
             "createdAt": "2020-02-07 07:59:09.621433"
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a"
+            "self": "https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a"
         }
     }
 }
@@ -866,7 +866,7 @@ The `concrete-products` resource can be included only together with the `shoppin
                 }
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/090_24495844"
+                "self": "https://glue.mysprykershop.com/concrete-products/090_24495844"
             }
         },
         {
@@ -877,7 +877,7 @@ The `concrete-products` resource can be included only together with the `shoppin
                 "sku": "090_24495844"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/c3e12dfb-05e5-51c3-ae8f-ba2f07b6bd17"
+                "self": "https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/c3e12dfb-05e5-51c3-ae8f-ba2f07b6bd17"
             },
             "relationships": {
                 "concrete-products": {
@@ -926,7 +926,7 @@ The `concrete-products` resource can be included only together with the `shoppin
                 }
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/128_27314278"
+                "self": "https://glue.mysprykershop.com/concrete-products/128_27314278"
             }
         },
         {
@@ -937,7 +937,7 @@ The `concrete-products` resource can be included only together with the `shoppin
                 "sku": "128_27314278"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08"
+                "self": "https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08"
             },
             "relationships": {
                 "concrete-products": {
@@ -969,9 +969,9 @@ To update the quantity of products in a shopping list item, send the request:
 
 ### Request
 Request samples: 
-`PATCH http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08`
+`PATCH https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08`
 
-`PATCH http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08?include=concrete-products`
+`PATCH https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08?include=concrete-products`
 
 | Path parameter | Description |
 | --- | --- |--- |
@@ -1017,7 +1017,7 @@ The `concrete-products` resource can be included only together with the `shoppin
             "sku": "005_30663301"
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08"
+            "self": "https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08"
         }
     }
 }
@@ -1082,7 +1082,7 @@ The `concrete-products` resource can be included only together with the `shoppin
                 }
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/128_27314278"
+                "self": "https://glue.mysprykershop.com/concrete-products/128_27314278"
             }
         }
     ]
@@ -1100,7 +1100,7 @@ To delete an item from a shopping list, send the request:
 ---
 ### Request
 Request sample: 
-`DELETE http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08`
+`DELETE https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08`
 
 ### Response
 If the item was removed successfully, the endpoint responds with a **204 No Content** status code.
@@ -1115,7 +1115,7 @@ If the item was removed successfully, the endpoint responds with a **204 No Cont
 
 ### Request
 Request sample: 
-`DELETE http://glue.mysprykershop.com/shopping-lists/sdb17f85-953f-565a-a4ce-e5cb02405f83`
+`DELETE https://glue.mysprykershop.com/shopping-lists/sdb17f85-953f-565a-a4ce-e5cb02405f83`
 
 ### Response
 If the shopping list was deleted successfully, the endpoint responds with a **204 No Content** status code.

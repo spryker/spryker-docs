@@ -151,7 +151,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% info_block warningBox "Verification" %}
 
 Make that following endpoint is available:
-`http://glue.mysprykershop.com/customer-access`
+`https://glue.mysprykershop.com/customer-access`
 
 **Sample response**
 
@@ -168,12 +168,12 @@ Make that following endpoint is available:
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/customer-access"
+                "self": "https://glue.mysprykershop.com/customer-access"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/customer-access"
+        "self": "https://glue.mysprykershop.com/customer-access"
     }
 }
 ```
@@ -186,7 +186,7 @@ Make that following endpoint is available:
 Make that `CustomerAccessFormatRequestPlugin` is set up correctly:
 
 * Go to the **Customer Access** tab in *Spryker Back Office* and hide the `price` content.
-* Make a request to: `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract-sku{% raw %}}}{% endraw %}/abstract-product-prices`
+* Make a request to: `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract-sku{% raw %}}}{% endraw %}/abstract-product-prices`
 * Make sure that the response is a 403 error.
 
 **Sample response**

@@ -111,7 +111,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-To verify that `ShipmentMethodsByCheckoutDataResourceRelationshipPlugin` is activated, send a *POST* request to `http://glue.mysprykershop.com/checkout-data?include=shipment-methods` and make sure that you get a response that includes a section with the `shipment-methods` resource.
+To verify that `ShipmentMethodsByCheckoutDataResourceRelationshipPlugin` is activated, send a *POST* request to `https://glue.mysprykershop.com/checkout-data?include=shipment-methods` and make sure that you get a response that includes a section with the `shipment-methods` resource.
 
 {% endinfo_block %}
 
@@ -151,7 +151,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-To verify that `ShipmentQuoteMapperPlugin` is activated, send a *POST* request to `http://glue.mysprykershop.com/checkout` and make sure that the order contains the shipment method you provided in the request.
+To verify that `ShipmentQuoteMapperPlugin` is activated, send a *POST* request to `https://glue.mysprykershop.com/checkout` and make sure that the order contains the shipment method you provided in the request.
 
 {% endinfo_block %}
 
@@ -221,7 +221,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-To verify that `SelectedShipmentMethodCheckoutDataResponseMapperPlugin` is activated, send a *POST* request to the `http://glue.mysprykershop.com/checkout-data` endpoint with shipment method id and make sure that you get not empty `selectedShipmentMethods` attribute in response:
+To verify that `SelectedShipmentMethodCheckoutDataResponseMapperPlugin` is activated, send a *POST* request to the `https://glue.mysprykershop.com/checkout-data` endpoint with shipment method id and make sure that you get not empty `selectedShipmentMethods` attribute in response:
 <details open>
 <summary markdown='span'>Response example</summary>
    
@@ -259,7 +259,7 @@ To verify that `SelectedShipmentMethodCheckoutDataResponseMapperPlugin` is activ
 
 {% info_block warningBox "Verification" %}
 
-To verify that `ShipmentMethodCheckoutDataValidatorPlugin` is activated, send a *POST* request to the `http://glue.mysprykershop.com/checkout` endpoint with an invalid shipping method ID and make sure that you get the error saying that a shipment method is not found.
+To verify that `ShipmentMethodCheckoutDataValidatorPlugin` is activated, send a *POST* request to the `https://glue.mysprykershop.com/checkout` endpoint with an invalid shipping method ID and make sure that you get the error saying that a shipment method is not found.
 
 {% endinfo_block %}
 

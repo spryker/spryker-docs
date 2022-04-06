@@ -87,7 +87,7 @@ class ProductsRestApiDependencyProvider extends SprykerProductsRestApiDependency
 
 {% info_block warningBox “Verification” %}
 
-Make sure that the following endpoint is available:<ul><li>*http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}*</li></ul>
+Make sure that the following endpoint is available:<ul><li>*https://glue.mysprykershop.comm/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}*</li></ul>
 {% endinfo_block %}
 
 {% info_block warningBox “Verification” %}
@@ -98,7 +98,7 @@ Make sure that the `concrete-products` resource is expanded with the discontinue
 <details open>
 <summary markdown='span'>JSON response example</summary>
 
-*GET http://glue.mysprykershop.com/145_29885470*
+*GET https://glue.mysprykershop.comm/145_29885470*
 
 ```
 {
@@ -137,7 +137,7 @@ Make sure that the `concrete-products` resource is expanded with the discontinue
             }
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/concrete-products/145_29885470"
+            "self": "https://glue.mysprykershop.comm/concrete-products/145_29885470"
         }
     }
 }

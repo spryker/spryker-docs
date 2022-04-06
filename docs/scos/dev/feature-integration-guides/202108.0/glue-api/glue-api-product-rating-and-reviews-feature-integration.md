@@ -85,12 +85,13 @@ console event:trigger -r product_concrete
 
 Make sure that there is data in Redis with keys:
 
-`kv:product_abstract:{% raw %}{{{% endraw %}store_name{% raw %}}}{% endraw %}:{% raw %}{{{% endraw %}locale_name{% raw %}}}{% endraw %}:sku:{% raw %}{{{% endraw %}sku_product_abstract{% raw %}}}{% endraw %}`
-`kv:product_concrete:{% raw %}{{{% endraw %}locale_name{% raw %}}}{% endraw %}:sku:{% raw %}{{{% endraw %}sku_product_concrete{% raw %}}}{% endraw %}`
+- `kv:product_abstract:{% raw %}{{{% endraw %}store_name{% raw %}}}{% endraw %}:{% raw %}{{{% endraw %}locale_name{% raw %}}}{% endraw %}:sku:{% raw %}{{{% endraw %}sku_product_abstract{% raw %}}}{% endraw %}`
+- `kv:product_concrete:{% raw %}{{{% endraw %}locale_name{% raw %}}}{% endraw %}:sku:{% raw %}{{{% endraw %}sku_product_concrete{% raw %}}}{% endraw %}`
 
 {% endinfo_block %}
 
 #### Enable resources
+
 Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
@@ -124,12 +125,12 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% info_block warningBox "Verification" %}
 
 Make sure that the following endpoint is available:
-`http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews`
+`https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews`
 
 <details open>
 <summary markdown='span'>Example</summary>
 
-```yaml
+```json
 {
     "data": [
         {
@@ -210,6 +211,7 @@ Make sure that the following endpoint is available:
 {% endinfo_block %}
 
 #### Enable relationships
+
 Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
@@ -293,7 +295,7 @@ class ProductsRestApiDependencyProvider extends SprykerProductsRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-Make a request to `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=product-reviews`.
+Make a request to `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=product-reviews`.
 
 Make sure that the response contains product-reviews as a relationship and product-reviews data included.
 
@@ -302,7 +304,7 @@ Make sure that `averageRating` and `reviewCount` attributes are present in concr
 <details open>
 <summary markdown='span'>Example</summary>
 
-```yaml
+```json
 {
     "data": {
         "type": "abstract-products",
@@ -452,14 +454,14 @@ Make sure that `averageRating` and `reviewCount` attributes are present in concr
 
 {% info_block warningBox "Verification" %}
 
-Make a request to `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=product-reviews`.
+Make a request to `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=product-reviews`.
 
 Make sure that the response contains product-reviews as a relationship and product-reviews data included.
 
 <details open>
 <summary markdown='span'>Example</summary>
 
-```yaml
+```json
 {
     "data": {
         "type": "concrete-products",

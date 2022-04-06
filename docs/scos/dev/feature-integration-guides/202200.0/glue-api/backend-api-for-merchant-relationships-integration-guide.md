@@ -14,8 +14,8 @@ Follow the steps below to install the Backend API for Merchant Relationships fea
 
 To start feature integration, integrate the required features and Glue APIs:
 
-| NAME                            | VERSION           | INTEGRATION GUIDE                                                                                                                                                           |
-|---------------------------------|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| NAME   | VERSION    | INTEGRATION GUIDE   |
+|-------------------------|-------------------|---------------------------|
 | Backend API                     | {{page.version}}  | [Backend API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/backend-api-feature-integration.html)                                          |
 | Merchants and Merchant Relations | {{page.version}}  | [Merchants and Merchant Relations feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchants-and-merchant-relations-feature-integration.html) |
 | Spryker Core                    | {{page.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)                                        |
@@ -62,8 +62,8 @@ Make sure that the following changes have been triggered in transfer objects:
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                  | SPECIFICATION                                                  | PREREQUISITES | NAMESPACE                                                     |
-|-----------------------------------------|----------------------------------------------------------------|---------------|---------------------------------------------------------------|
+| PLUGIN      | SPECIFICATION        | PREREQUISITES | NAMESPACE      |
+|-----------------------|---------------------|---------------|--------------------|
 | MerchantRelationshipApiResourcePlugin   | Configures CRUD actions for `merchant-relationships` resource. |               | Spryker\Zed\MerchantRelationshipApi\Communication\Plugin\Api  |
 | MerchantRelationshipApiValidatorPlugin  | Validates if all required fields are present in request data.  |               | Spryker\Zed\MerchantRelationshipApi\Communication\Plugin\Api  |
 

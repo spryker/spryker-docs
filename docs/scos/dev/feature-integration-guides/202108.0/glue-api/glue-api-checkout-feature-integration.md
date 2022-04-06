@@ -29,14 +29,11 @@ To start feature integration, overview and install the necessary features:
 
 Install the required modules:
 
-
 ```bash
 composer require spryker/checkout-rest-api:"3.5.0" spryker/order-payments-rest-api:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
-
-
 
 Make sure that the following modules have been installed:
 
@@ -161,7 +158,7 @@ For the `checkout-data` endpoint to keep returning shipment methods, keep `Pyz\G
 {% info_block warningBox "Verification" %}
 
 
-If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isShipmentMethodsMappedToAttributes()` is true, make sure the shipping method attributes are returned in the `shipmentMethods` after sending the `POST http://glue.mysprykershop.com/checkout-data` request:
+If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isShipmentMethodsMappedToAttributes()` is true, make sure the shipping method attributes are returned in the `shipmentMethods` after sending the `POST https://glue.mysprykershop.com/checkout-data` request:
 
 <details open>
 <summary markdown='span'>Response sample</summary>
@@ -238,7 +235,7 @@ For the `checkout-data` endpoint to keep returning payment methods, keep `Checko
 {% info_block warningBox "Verification" %}
 
 
-If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isPaymentProvidersMappedToAttributes()` is true, make sure the payment methods attributes are returned in the `paymentProviders `attribute after sending the `POST http://glue.mysprykershop.com/checkout-data` request:
+If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isPaymentProvidersMappedToAttributes()` is true, make sure the payment methods attributes are returned in the `paymentProviders `attribute after sending the `POST https://glue.mysprykershop.com/checkout-data` request:
 
 <details open>
 <summary markdown='span'>Response sample</summary>
@@ -283,7 +280,7 @@ If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isPaymentProvidersMappedToAt
             ...
 }
  ```
- </details>
+</details>
  
 {% endinfo_block %}
 
@@ -354,14 +351,12 @@ Set up the following behaviors.
 
 Activate the following plugins:
 
-
 | PLUGIN    | SPECIFICATION   | PREREQUISITES | NAMESPACE   |
 | --------------- | -------------------- | ----------- | ---------------------- |
 | CheckoutDataResourcePlugin              | Registers the `сheckout-data` resource.                      | None          | Spryker\Glue\CheckoutRestApi\Plugin\GlueApplication |
 | CheckoutResourcePlugin                  | Registers the `checkout` resource.                           | None          | Spryker\Glue\CheckoutRestApi\Plugin\GlueApplication |
 | OrderRelationshipByOrderReferencePlugin | Adds a relationship to the `order` entity by order reference. | None          | Spryker\Glue\OrdersRestApi\Plugin                   |
 | OrderPaymentsResourceRoutePlugin        | Registers the `order-payments` resource.                     | None          | Spryker\Glue\OrderPaymentsRestApi\Plugin            |
-
 
 
 <details open>
@@ -416,23 +411,21 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-
 Make sure that the following plugins are activated:
 
 | PLUGIN    | TEST   |
 | ------------------- | --------------------- |
-| CheckoutDataResourcePlugin              | Check if you get a valid response by sending the `POST http://glue.mysprykershop.com/checkout-data` request. |
-| CheckoutResourcePlugin                  | Check if you get a valid response by sending the `POST http://glue.mysprykershop.com/checkout` request. |
-| OrderRelationshipByOrderReferencePlugin | Check if you get order information from the `orders` resource by sending the `POST http://glue.mysprykershop.com/checkout?include=orders` request. |
+| CheckoutDataResourcePlugin              | Check if you get a valid response by sending the `POST https://glue.mysprykershop.com/checkout-data` request. |
+| CheckoutResourcePlugin                  | Check if you get a valid response by sending the `POST https://glue.mysprykershop.com/checkout` request. |
+| OrderRelationshipByOrderReferencePlugin | Check if you get order information from the `orders` resource by sending the `POST https://glue.mysprykershop.com/checkout?include=orders` request. |
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-
 To make sure that `OrderPaymentsResourceRoutePlugin` is activated, check if you get a valid response by sending the following request:
 
-**http://glue.mysprykershop.com/order-payments**
+**https://glue.mysprykershop.com/order-payments**
 
 ```json
 {
@@ -489,9 +482,9 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-To make sure that `CustomerQuoteMapperPlugin` is activated, send the `POST http://glue.mysprykershop.com/checkout` request and check that the returned order information contains the customer information you have provided in the request.
+To make sure that `CustomerQuoteMapperPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout` request and check that the returned order information contains the customer information you have provided in the request.
 
-To make sure that `AddressQuoteMapperPlugin` is activated, send a `POST http://glue.mysprykershop.com/checkout` request and check that the returned order information contains the billing and shipping address information you have provided in the request.
+To make sure that `AddressQuoteMapperPlugin` is activated, send a `POST https://glue.mysprykershop.com/checkout` request and check that the returned order information contains the billing and shipping address information you have provided in the request.
 
 {% endinfo_block %}
 
@@ -526,14 +519,12 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
         ];
     }
 }
-
-
 ```
 
 
 {% info_block warningBox "Verification" %}
 
-To make sure that `SinglePaymentCheckoutRequestAttributesValidatorPlugin` is activated, check that the following error is returned by sending the `POST http://glue.mysprykershop.com/checkout` request.
+To make sure that `SinglePaymentCheckoutRequestAttributesValidatorPlugin` is activated, check that the following error is returned by sending the `POST https://glue.mysprykershop.com/checkout` request.
 
 ```json
 {

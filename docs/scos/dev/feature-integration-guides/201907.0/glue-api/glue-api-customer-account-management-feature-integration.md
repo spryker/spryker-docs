@@ -349,7 +349,7 @@ SELECT * FROM spy_oauth_client WHERE identifier = 'some-client-identifier';
 
 {% info_block warningBox “Verification” %}
 
-Make sure that the following endpoints are available:<ul><li>http://mysprykershop.com/customers</li><li>http://mysprykershop.com/addresses</li><li>http://mysprykershop.com/customer-password</li><li>http://mysprykershop.com/customer-forgotten-password</li><li>http://mysprykershop.com/customer-restore-password</li><li>http://glue.mysprykershop.com/refresh-tokens</li><li>http://glue.mysprykershop.com/access-tokens</li></ul>
+Make sure that the following endpoints are available:<ul><li>http://mysprykershop.com/customers</li><li>http://mysprykershop.com/addresses</li><li>http://mysprykershop.com/customer-password</li><li>http://mysprykershop.com/customer-forgotten-password</li><li>http://mysprykershop.com/customer-restore-password</li><li>https://glue.mysprykershop.comm/refresh-tokens</li><lihttps://glue.mysprykershop.comom/access-tokens</li></ul>
 {% endinfo_block %}
 
 {% info_block warningBox “Verification” %}

@@ -9,7 +9,7 @@ Modules have public and private APIs. While public API updates always support ba
 
 For more information about module APIs, see [Definition of Module API](/docs/scos/dev/architecture/module-api/definition-of-module-api.html).
 
-When you are extending public API on the project level, make sure that entity names are unique, so Spryker updates are compatible with project changes.
+When you are extending public API on the project level, make sure that entity names are unique, so Spryker updates are compatible with project changes. If a Spryker update introduces a core entity with a name matching a project-level entity name, their behavior might change or cause issues. To make your code unique, you can use prefixes like `Pyz` or your project's name.
 
 The names of the following entities must be unique on the project level:
 
@@ -20,17 +20,11 @@ The names of the following entities must be unique on the project level:
 * Methods
 * Constants
 
-If a Spryker update introduces a core entity with a name matching a project-level entity name, behavior might change or cause issues.
+## Transfer name is not unique
 
-{% info_block infoBox "" %}
-To make your code unique you can use prefixes. F.e. "Pyz" or {Project_mane}
-{% endinfo_block %}
+Transfer names must be unique.
 
-## Unique transfer name
-
-New transfer has to have unique name.
-
-#### Example of code that causes the upgradability error (not unique transfer name)
+### Example of code that causes an upgradability error: Transfer name is not unique
 
 ```xml
 ...
@@ -40,14 +34,16 @@ New transfer has to have unique name.
 ...
 ```
 
-#### Example of related error in the Evaluator output (not unique transfer name)
+### Example of related error in the Evaluator output: Transfer name is not unique
+
 ```bash
 ---------------- ----------------------------------------------------------------------------------------------------
 NotUnique:TransferName Transfer object name {name} has to have project prefix Pyz in {path}, like {proposedName}
 ---------------------- ----------------------------------------------------------------------------------------------------
 ```
 
-#### Example to resolve the Evaluator check error (unique transfer name)
+### Example of resolving the error: Transfer name is not unique
+
 ```xml
 ...
     <transfer name="PyzCustomProductData">
@@ -56,11 +52,11 @@ NotUnique:TransferName Transfer object name {name} has to have project prefix Py
 ...
 ```
 ---
-## Unique transfer property name
+## Transfer property name is not unique
 
-New transfer property has to have unique names.
+Transfer property names must be unique.
 
-#### Example of code that causes the upgradability error (not unique transfer property name)
+### Example of code that causes an upgradability error: Transfer property name is not unique
 
 ```xml
 ...
@@ -70,7 +66,7 @@ New transfer property has to have unique names.
 ...
 ```
 
-#### Example of related error in the Evaluator output (not unique transfer property name)
+### Example of related error in the Evaluator output: Transfer property name is not unique
 
 ```bash
 -------------------------- ----------------------------------------------------------------------------------------------------
@@ -78,7 +74,7 @@ NotUnique:TransferProperty Transfer property {transferPropertyName} for {transfe
 -------------------------- ----------------------------------------------------------------------------------------------------
 ```
 
-#### Example to resolve the Evaluator check error (unique transfer property name)
+### Example of resolving the error: Transfer property name is not unique
 
 ```xml
 ...
@@ -88,9 +84,12 @@ NotUnique:TransferProperty Transfer property {transferPropertyName} for {transfe
 ...
 ```
 
-## Unique database table name
-New DB table has to have unique names.
-#### Example of not unique database table name
+## Database table name is not unique
+
+Database table names must be unique.
+
+### Example of code that causes an upgradability error: Database table name is not unique
+
 ```xml
 ...
     <table name="evaluator_spryker">
@@ -99,14 +98,15 @@ New DB table has to have unique names.
 ...
 ```
 
-#### Example of related error in the Evaluator output (not unique database table name)
+### Example of related error in the Evaluator output: Database table name is not unique
+
 ```bash
 ------------------------ ----------------------------------------------------------------------------------------------------
-NotUnique:DatabaseTable Database table {tableName} has to have project prefix Pyz in {path}, like {proposedTableNamw}
+NotUnique:DatabaseTable Database table {tableName} has to have project prefix Pyz in {path}, like {proposedTableName}
 ----------------------- ----------------------------------------------------------------------------------------------------
 ```
 
-#### Example to resolve the Evaluator check error (unique database table name)
+### Example to resolve the Evaluator check error: Database table name is not unique
 
 ```xml
 ...
@@ -115,11 +115,12 @@ NotUnique:DatabaseTable Database table {tableName} has to have project prefix Py
     </table>
 ...
 ```
----
 
-## Unique database table column name
-New DB table column has to have unique names.
-#### Example of not unique database table column name
+## Name of database table column is not unique
+
+Names of database table columns must be  unique
+
+### Example of code that causes an upgradability error: Name of database table column is not unique
 
 ```xml
 ...
@@ -129,7 +130,7 @@ New DB table column has to have unique names.
 ...
 ```
 
-#### Example of related error in the Evaluator output (unique database table column name)
+### Example of related error in the Evaluator output: Name of database table column is not unique
 
 ```bash
 ------------------------ ----------------------------------------------------------------------------------------------------
@@ -137,7 +138,7 @@ NotUnique:DatabaseColumn Database column {columnName} has to have project prefix
 ------------------------ ----------------------------------------------------------------------------------------------------
 ```
 
-#### Example to resolve the Evaluator check error (unique database table column name)
+### Example to resolve the Evaluator check error (unique database table column name)
 
 ```xml
 ...
@@ -149,9 +150,10 @@ NotUnique:DatabaseColumn Database column {columnName} has to have project prefix
 ---
 
 ## Unique method names
+
 New methods has to have unique names.
 
-#### Example of not unique method name
+### Example of not unique method name
 ```php
 namespace Pyz\Client\RabbitMq;
 
@@ -169,7 +171,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-#### Example of related error in the Evaluator output (unique method name)
+### Example of related error in the Evaluator output (unique method name)
 
 ```bash
 ---------------- ----------------------------------------------------------------------------------------------------
@@ -178,7 +180,8 @@ NotUnique:Method Method name {path}::{methodName} should contains project prefix
 
 ```
 
-#### Example to resolve the Evaluator check error (unique method name)
+### Example to resolve the Evaluator check error (unique method name)
+
 ```php
 namespace Pyz\Client\RabbitMq;
 
@@ -195,12 +198,12 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
     }
 }
 ```
----
+
 
 ## Unique constant name
 New constant has to have unique names.
 
-#### Example of not unique constant name
+### Example of not unique constant name
 ```php
 namespace Pyz\Client\RabbitMq;
 
@@ -212,7 +215,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-#### Example of related error in the Evaluator output (unique constant name)
+### Example of related error in the Evaluator output (unique constant name)
 
 ```bash
 ------------------ ----------------------------------------------------------------------------------------------------
@@ -220,7 +223,7 @@ NotUnique:Constant {path}::{constName} name has to have project namespace, like 
 ------------------ ----------------------------------------------------------------------------------------------------
 ```
 
-#### Example to resolve the Evaluator check error (unique constant name)
+### Example to resolve the Evaluator check error (unique constant name)
 
 ```php
 namespace Pyz\Client\RabbitMq;

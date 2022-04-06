@@ -195,10 +195,14 @@ $jobs[] = [
 ?>
 ```
 
+<!--
+
 {% info_block infoBox %}
 
 For more information and examples of how to get started with the Queue module, see [Tutorial - Set Up a "Hello World" Queue](/docs/scos/dev/legacy-demoshop/201811.0/set-up-a-hello-world-queue-legacy-demoshop.html).
 
 {% endinfo_block %}
 
-<!-- Last review date: Apr 9, 2019 by Ehsan Zanjani and Dmitry Beirak -->
+link to archive
+
+-->

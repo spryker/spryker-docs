@@ -23,12 +23,6 @@ You should use a particular Docker SDK version for:
 - Control: control when and how you switch the Docker SDK version of the project.
 - Stability: avoid unexpected behavior in pipelines.
 
-{% info_block errorBox "In the cloud" %}
-
-Setting a Docker SDK version is required when deploying code to Spryker Cloud Commerce OS.
-
-{% endinfo_block %}
-
 ## Choosing a versioning approach
 
 To choose a versioning approach, consider the following:

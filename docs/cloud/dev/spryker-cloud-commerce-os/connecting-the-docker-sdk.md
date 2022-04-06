@@ -18,13 +18,13 @@ This is an optional tool locally, but we highly recommend installing it to make 
 
 ## Select a Docker SDK version
 
-Analyze your project's architecture and determine the Docker SDK version to use. 
+Analyze your project's architecture and determine the Docker SDK version to use.
 
-Before deploying code to the cloud, you must define the Docker SDK version in `.git.docker`. For instructions, see [Choosing a Docker SDK version](/docs/scos/dev/the-docker-sdk/choosing-a-docker-sdk-version.html).
+Before deploying code to the cloud, you must define the Docker SDK version in `.git.docker`. For instructions, see [Choosing a Docker SDK version](/docs/scos/dev/the-docker-sdk/{{site.version}}/choosing-a-docker-sdk-version.html).
 
 {% info_block infoBox "Forking the Docker SDK" %}
 
-Spryker Cloud Commerce OS does not support forks of the Docker SDK. Your project's code must be compatible with the Docker SDK's main branch for a successful deployment. 
+Spryker Cloud Commerce OS does not support forks of the Docker SDK. Your project's code must be compatible with the Docker SDK's main branch for a successful deployment.
 
 {% endinfo_block %}
 

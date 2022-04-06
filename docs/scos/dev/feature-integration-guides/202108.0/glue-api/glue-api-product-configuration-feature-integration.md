@@ -44,7 +44,6 @@ composer install spryker/product-configurations-rest-api:"^0.1.0" spryker/produc
 
 {% info_block warningBox "Verification" %}
 
-
 Ensure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
@@ -71,9 +70,9 @@ Ensure that the following changes have occurred in transfer objects:
 | --- | --- | --- | --- |
 | RestProductConfigurationInstanceAttributesTransfer | class | created | src/Generated/Shared/Transfer/RestProductConfigurationInstanceAttributesTransfer |
 |RestCartItemProductConfigurationInstanceAttributesTransfer| class| created |src/Generated/Shared/Transfer/RestCartItemProductConfigurationInstanceAttributesTransfer|
-|RestProductConfigurationPriceAttributesTrarnsfer |class |created |src/Generated/Shared/Transfer/RestProductConfigurationPriceAttributesTrarnsfer|
+|RestProductConfigurationPriceAttributesTransfer |class |created |src/Generated/Shared/Transfer/RestProductConfigurationPriceAttributesTransfer|
 |RestProductPriceVolumesAttributesTransfer |class| added |src/Generated/Shared/Transfer/RestProductPriceVolumesAttributesTransfer|
-|ConcreteProductsRestAttributesTransferr.productConfigurationInstance| property |added |src/Generated/Shared/Transfer/ConcreteProductsRestAttributesTransferr|
+|ConcreteProductsRestAttributesTransfer.productConfigurationInstance| property |added |src/Generated/Shared/Transfer/ConcreteProductsRestAttributesTransfer|
 |RestCartItemsAttributesTransfer.productConfigurationInstance |property| added |src/Generated/Shared/Transfer/RestCartItemsAttributesTransfer|
 |RestItemsAttributesTransfer.productConfigurationInstance |property |added |src/Generated/Shared/Transfer/RestItemsAttributesTransfer|
 |RestOrderItemsAttributesTransfer.salesOrderItemConfiguration |property |added |src/Generated/Shared/Transfer/RestOrderItemsAttributesTransfer|
@@ -87,7 +86,6 @@ Set up the following behaviors.
 ### Enable product-concrete resource expanding plugin
 
 Activate the following plugin:
-
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |

@@ -81,7 +81,9 @@ class ProductAlternativeDependencyProvider extends SprykerProductAlternativeDepe
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure that you can see alternatives for products that are marked as **discontinued** on the product details page.
+
 {% endinfo_block %}
 
 

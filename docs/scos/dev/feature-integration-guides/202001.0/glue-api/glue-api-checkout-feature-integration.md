@@ -145,25 +145,25 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-To verify that `CheckoutDataResourcePlugin` is activated, send a *POST* request to `http://glue.mysprykershop.com/checkout-data` and make sure that you get a response different from **404 Not Found**.
+To verify that `CheckoutDataResourcePlugin` is activated, send a *POST* request to `https://glue.mysprykershop.com/checkout-data` and make sure that you get a response different from **404 Not Found**.
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-To verify that `CheckoutResourcePlugin` is activated, send a *POST* request to `http://glue.mysprykershop.com/checkout` and make sure that you get a response different from **404 Not Found**.
+To verify that `CheckoutResourcePlugin` is activated, send a *POST* request to `https://glue.mysprykershop.com/checkout` and make sure that you get a response different from **404 Not Found**.
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-To verify that `OrderRelationshipByOrderReferencePlugin` is activated, send a *POST* request to `http://glue.mysprykershop.com/checkout?include=orders` and make sure that you get a response that includes a section with the corresponding order resource.
+To verify that `OrderRelationshipByOrderReferencePlugin` is activated, send a *POST* request to `https://glue.mysprykershop.com/checkout?include=orders` and make sure that you get a response that includes a section with the corresponding order resource.
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following endpoint is available: `http://glue.mysprykershop.com/order-payments`. To do so, execute a *POST* call with the following body:
+Make sure that the following endpoint is available: `https://glue.mysprykershop.com/order-payments`. To do so, execute a *POST* call with the following body:
 
 {% endinfo_block %}
 
@@ -224,25 +224,25 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-To make sure that `CustomerQuoteMapperPlugin` is activated, send a *POST* request to `http://glue.mysprykershop.com/checkout` and make sure that the order contains the customer information you provided in the request.
+To make sure that `CustomerQuoteMapperPlugin` is activated, send a *POST* request to `https://glue.mysprykershop.com/checkout` and make sure that the order contains the customer information you provided in the request.
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-To make sure that `AddressQuoteMapperPlugin` is activated, send a *POST* request to `http://glue.mysprykershop.com/checkout` and make sure that the order contains the billing and shipping address information you provided in the request.
+To make sure that `AddressQuoteMapperPlugin` is activated, send a *POST* request to `https://glue.mysprykershop.com/checkout` and make sure that the order contains the billing and shipping address information you provided in the request.
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-To verify `PaymentsQuoteMapperPlugin` activation, send a *POST* request to `http://glue.mysprykershop.com/checkout` and make sure that the order contains the payment method you provided in the request.
+To verify `PaymentsQuoteMapperPlugin` activation, send a *POST* request to `https://glue.mysprykershop.com/checkout` and make sure that the order contains the payment method you provided in the request.
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-To verify `ShipmentQuoteMapperPlugin` activation, send a POST request to `http://glue.mysprykershop.com/checkout` and make sure that the order contains the shipment method you provided in the request.
+To verify `ShipmentQuoteMapperPlugin` activation, send a POST request to `https://glue.mysprykershop.com/checkout` and make sure that the order contains the shipment method you provided in the request.
 
 {% endinfo_block %}
 
@@ -308,7 +308,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-To make sure that `SinglePaymentCheckoutRequestAttributesValidatorPlugin` is activated, send a POST request to the `http://glue.mysprykershop.com/checkout` endpoint with multiple payment methods and make sure that you get the following error:
+To make sure that `SinglePaymentCheckoutRequestAttributesValidatorPlugin` is activated, send a POST request to the `https://glue.mysprykershop.com/checkout` endpoint with multiple payment methods and make sure that you get the following error:
 
 **Multiple Payments Error**
 
@@ -328,6 +328,6 @@ To make sure that `SinglePaymentCheckoutRequestAttributesValidatorPlugin` is act
 
 {% info_block warningBox "Verification" %}
 
-To make sure that `ShipmentMethodCheckoutDataValidatorPlugin` is activated, send a POST request to the `http://glue.mysprykershop.com/checkout` endpoint with an invalid shipment method and make sure that you get a corresponding error message.
+To make sure that `ShipmentMethodCheckoutDataValidatorPlugin` is activated, send a POST request to the `https://glue.mysprykershop.com/checkout` endpoint with an invalid shipment method and make sure that you get a corresponding error message.
 
 {% endinfo_block %}

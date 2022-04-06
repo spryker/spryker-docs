@@ -140,7 +140,7 @@ Setting `CheckoutRestApiConfig::IS_PAYMENT_PROVIDER_METHOD_TO_STATE_MACHINE_MAPP
 {% info_block infoBox "Note" %}
 
 `CheckoutRestApiConfig::isShipmentMethodsMappedToAttributes()` must be set to *true* if you want to continue receiving shipment methods in the checkout-data attributes. This configuration defaults to true for backward compatibility.
-In case the `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isShipmentMethodsMappedToAttributes(`) is *true*, make sure the shipping methods attributes are returned. To verify that, send a POST request to the `http://glue.mysprykershop.com/checkout-data` endpoint and make sure that you get not empty `shipmentMethods` attribute in response:
+In case the `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isShipmentMethodsMappedToAttributes(`) is *true*, make sure the shipping methods attributes are returned. To verify that, send a POST request to the `https://glue.mysprykershop.com/checkout-data` endpoint and make sure that you get not empty `shipmentMethods` attribute in response:
 
 <details open>
 <summary markdown='span'>Response example</summary>
@@ -209,7 +209,7 @@ In case the `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isShipmentMethodsMa
 {% info_block infoBox "Note" %}
 
 `CheckoutRestApiConfig::isPaymentProvidersMappedToAttributes()` must be set to *true* if you want to continue receiving payment methods in the checkout-data attributes. This configuration defaults to true for backward compatibility.
-In case the `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isPaymentProvidersMappedToAttributes()` is *true*, make sure the payment methods attributes are returned.  To verify that, send a POST request to the `http://glue.mysprykershop.com/checkout-data` endpoint and make sure that you get not empty `paymentProviders` attribute in response:
+In case the `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isPaymentProvidersMappedToAttributes()` is *true*, make sure the payment methods attributes are returned.  To verify that, send a POST request to the `https://glue.mysprykershop.com/checkout-data` endpoint and make sure that you get not empty `paymentProviders` attribute in response:
 
 <details open>
 <summary markdown='span'>Response example</summary>
@@ -370,19 +370,19 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 ```
 
 {% info_block warningBox "Verification" %}
-To verify that `CheckoutDataResourcePlugin` is activated, send a *POST* request to `http://glue.mysprykershop.com/checkout-data` and make sure that you get a response different from **404 Not Found**.
+To verify that `CheckoutDataResourcePlugin` is activated, send a *POST* request to `https://glue.mysprykershop.com/checkout-data` and make sure that you get a response different from **404 Not Found**.
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-To verify that `CheckoutResourcePlugin` is activated, send a *POST* request to `http://glue.mysprykershop.com/checkout` and make sure that you get a response different from **404 Not Found**.
+To verify that `CheckoutResourcePlugin` is activated, send a *POST* request to `https://glue.mysprykershop.com/checkout` and make sure that you get a response different from **404 Not Found**.
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-To verify that `OrderRelationshipByOrderReferencePlugin` is activated, send a *POST* request to `http://glue.mysprykershop.com/checkout?include=orders` and make sure that you get a response that includes a section with the corresponding order resource.
+To verify that `OrderRelationshipByOrderReferencePlugin` is activated, send a *POST* request to `https://glue.mysprykershop.com/checkout?include=orders` and make sure that you get a response that includes a section with the corresponding order resource.
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-To verify that `OrderPaymentsResourceRoutePlugin` is activated, make sure that the following endpoint is available: `http://glue.mysprykershop.com/order-payments`. To do so, send a *POST* request with the following body:
+To verify that `OrderPaymentsResourceRoutePlugin` is activated, make sure that the following endpoint is available: `https://glue.mysprykershop.com/order-payments`. To do so, send a *POST* request with the following body:
 
 ```json
 {
@@ -434,11 +434,11 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 ```
 
 {% info_block warningBox "Verification" %}
-To verify that `CustomerQuoteMapperPlugin` is activated, send a *POST* request to `http://glue.mysprykershop.com/checkout` and make sure that the order contains the customer information you provided in the request.
+To verify that `CustomerQuoteMapperPlugin` is activated, send a *POST* request to `https://glue.mysprykershop.com/checkout` and make sure that the order contains the customer information you provided in the request.
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-To verify that `AddressQuoteMapperPlugin` is activated, send a *POST* request to `http://glue.mysprykershop.com/checkout` and make sure that the order contains the billing and shipping address information you provided in the request.
+To verify that `AddressQuoteMapperPlugin` is activated, send a *POST* request to `https://glue.mysprykershop.com/checkout` and make sure that the order contains the billing and shipping address information you provided in the request.
 {% endinfo_block %}
 
 ### Configure the single payment method validator plugin
@@ -475,7 +475,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 ```
 
 {% info_block warningBox "Verification" %}
-To verify that `SinglePaymentCheckoutRequestAttributesValidatorPlugin` is activated, send a *POST* request to the `http://glue.mysprykershop.com/checkout` endpoint with multiple payment methods and make sure that you get the following error:
+To verify that `SinglePaymentCheckoutRequestAttributesValidatorPlugin` is activated, send a *POST* request to the `https://glue.mysprykershop.com/checkout` endpoint with multiple payment methods and make sure that you get the following error:
 
 ```json
 {

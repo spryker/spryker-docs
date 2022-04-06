@@ -90,8 +90,8 @@ class MerchantsRestApiDependencyProvider extends SprykerMerchantsRestApiDependen
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you send the request `GET http://glue.mysprykershop.com/merchants`, you can see the category keys and names for merchants assigned to categories.
+Make sure that when you send the request `GET https://glue.mysprykershop.com/merchants`, you can see the category keys and names for merchants assigned to categories.
 
-Make sure that when you send the request `GET http://glue.mysprykershop.com/merchants?categoryKeys[]={% raw %}{{some-category-key}}{% endraw %}`, you can see only merchants that belong to the particular category in the response.
+Make sure that when you send the request `GET https://glue.mysprykershop.com/merchants?categoryKeys[]={% raw %}{{some-category-key}}{% endraw %}`, you can see only merchants that belong to the particular category in the response.
 
 {% endinfo_block %}

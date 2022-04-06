@@ -42,8 +42,8 @@ Make sure that the following modules have been installed:
 Add the necessary parameters to `config/Shared/config_default.php`:
 
 ```php
-$config[GlueApplicationConstants::GLUE_APPLICATION_DOMAIN] = 'http://glue.mysprykershop.com';
-$config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = 'http://glue.mysprykershop.com';
+$config[GlueApplicationConstants::GLUE_APPLICATION_DOMAIN] = 'https://glue.mysprykershop.com';
+$config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = 'https://glue.mysprykershop.com';
 $config[GlueApplicationConstants::GLUE_APPLICATION_REST_DEBUG] = false;
 ```
 
@@ -56,7 +56,7 @@ $config[GlueApplicationConstants::GLUE_APPLICATION_REST_DEBUG] = false;
 Adjust `config/Shared/config_default.php`:
 
 ```php
-$config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = 'http://glue.mysprykershop.com';
+$config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = 'https://glue.mysprykershop.com';
 ```
 
 #### Allow CORS requests to any domain
@@ -68,7 +68,7 @@ $config[GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN] = '*';
 
 {% info_block warningBox "Verification" %}
 
-To make sure that the CORS headers are set up correctly, send the OPTIONS request to any valid GLUE resource with the **Origin** header `http://glue.mysprykershop.com/` and see the correct JSON response:
+To make sure that the CORS headers are set up correctly, send the OPTIONS request to any valid GLUE resource with the **Origin** header `https://glue.mysprykershop.com/` and see the correct JSON response:
 - Verify that the **access-control-allow-origin** header is present and is the same to the one set in `config`
 - Verify that the **access-control-allow-methods** header is present and contains all available methods
 - Send POST, PATCH or DELETE requests (can choose any of available ones and verify that the response headers are the same)
@@ -192,7 +192,7 @@ ip glue.mysprykershop.com
 ```
 
 {% info_block warningBox "Verification" %}
-If everything is set up correctly, you should be able to access `http://glue.mysprykershop.com` and get a correct JSON response as follows:
+If everything is set up correctly, you should be able to access `https://glue.mysprykershop.com` and get a correct JSON response as follows:
 {% endinfo_block %}
 
 **Default JSON Response**
@@ -334,11 +334,11 @@ use Spryker\Glue\EntityTagsRestApi\EntityTagsRestApiConfig as SprykerEntityTagsR
 ```
 
 {% info_block warningBox "Verification" %}
-If everything is set up correctly, a request to `http://glue.mysprykershop.com` with the header `[{"key":"Accept-Language","value":"de_DE, de;q=0.9"}]` should result in a response that contains the **content-language** header set to **de_DE**.
+If everything is set up correctly, a request to `https://glue.mysprykershop.com` with the header `[{"key":"Accept-Language","value":"de_DE, de;q=0.9"}]` should result in a response that contains the **content-language** header set to **de_DE**.
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Send a GET request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %} `.<br>Make sure that the response contains the 'ETag' header.<br>Prepare a PATCH request to  `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identitifer{% raw %}}}{% endraw %}`<br>Add the 'If-Match' header with the value of ETag from a GET response header.<br>Add a request body.
+Send a GET request to `https://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %} `.<br>Make sure that the response contains the 'ETag' header.<br>Prepare a PATCH request to  `https://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identitifer{% raw %}}}{% endraw %}`<br>Add the 'If-Match' header with the value of ETag from a GET response header.<br>Add a request body.
 {% endinfo_block %}
 
 **Request body**
@@ -359,7 +359,7 @@ Send a request with the specified header and body.<br>Make sure that the returne
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Send a GET request to `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %} `.<br>Make sure that the response contains the 'ETag' header.<br>Prepare a PATCH request to  `http://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`<br>Add the 'If-Match' header with some random value.<br>Add a request body.
+Send a GET request to `https://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %} `.<br>Make sure that the response contains the 'ETag' header.<br>Prepare a PATCH request to  `https://glue.mysprykershop.com/{% raw %}{{{% endraw %}RESOURCE_NAME{% raw %}}}{% endraw %}/{% raw %}{{{% endraw %}identifier{% raw %}}}{% endraw %}`<br>Add the 'If-Match' header with some random value.<br>Add a request body.
 {% endinfo_block %}
 
 **Request body**
@@ -379,7 +379,7 @@ Send a request with the specified header and body.<br>Make sure that the respons
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the following endpoint is available:<ul><li>`http://glue.mysprykershop.com/stores`</li></ul>
+Make sure that the following endpoint is available:<ul><li>`https://glue.mysprykershop.com/stores`</li></ul>
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
@@ -388,7 +388,7 @@ To make sure that the `ProductAbstractRestUrlResolverAttributesTransferProviderP
 **Request body**
 
 ```json
-http://glue.mysprykershop.com/url-resolver/?url=/product-abstract-url
+https://glue.mysprykershop.com/url-resolver/?url=/product-abstract-url
 {
     "data": [
         {
@@ -399,12 +399,12 @@ http://glue.mysprykershop.com/url-resolver/?url=/product-abstract-url
                 "entityId": "134"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/url-resolver?url=/de/acer-aspire-s7-134"
+                "self": "https://glue.mysprykershop.com/url-resolver?url=/de/acer-aspire-s7-134"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/url-resolver?url=/de/acer-aspire-s7-134"
+        "self": "https://glue.mysprykershop.com/url-resolver?url=/de/acer-aspire-s7-134"
     }
 }
 ```
@@ -416,7 +416,7 @@ To make sure that the `CategoryNodeRestUrlResolverAttributesTransferProviderPlug
 **Request body**
 
 ```json
-http://glue.mysprykershop.com/url-resolver/?url=/category-url
+https://glue.mysprykershop.com/url-resolver/?url=/category-url
 {
     "data": [
         {
@@ -427,12 +427,12 @@ http://glue.mysprykershop.com/url-resolver/?url=/category-url
                 "entityId": "5"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/url-resolver?url=/de/computer"
+                "self": "https://glue.mysprykershop.com/url-resolver?url=/de/computer"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/url-resolver?url=/de/computer"
+        "self": "https://glue.mysprykershop.com/url-resolver?url=/de/computer"
     }
 }
 ```

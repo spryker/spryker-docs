@@ -151,7 +151,7 @@ There are already some plugins implemented with each of those types:
 
 * `OrderCustomerSavePlugin`—save/create a customer in the database if the customer is new or the ID is not set (guest customer is ignored).
 * `SalesOrderSaverPlugin`—saves order information, creates sales_order and sales_order_item tables.
-* `ProductOptionOrderSaverPlugin`—saves product options to thr sales_product_item table.
+* `ProductOptionOrderSaverPlugin`—saves product options to the sales_product_item table.
 * `DiscountOrderSavePlugin`—saves order discounts to the sales_discounts table.
 * `OrderShipmentSavePlugin`—saves order shipment information to the sales_expense table.
 * `SalesPaymentCheckoutDoSaveOrderPlugin`—saves order payments to the spy_sales_payment table.

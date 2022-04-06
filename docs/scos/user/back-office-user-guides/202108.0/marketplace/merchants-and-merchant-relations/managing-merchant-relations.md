@@ -20,7 +20,7 @@ To start working with merchant relations, go to **Marketplace&nbsp;<span aria-la
 
 ## Prerequisites
 
-To be able to create a merchant relation, you need to have a fully set up company account in the **Company Account** section as the company data drives from there.
+To create a merchant relation, you need to have a fully set up company account in the **Company Account** section as the company data drives from there.
 
 ## Creating a merchant relation
 

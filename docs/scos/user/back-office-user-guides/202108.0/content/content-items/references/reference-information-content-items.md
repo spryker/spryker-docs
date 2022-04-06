@@ -27,7 +27,7 @@ In the **Content Items** section, you see the following:
 | --- | --- |
 | **Content Item Key** | A fixed value of the content item indicated in the database. |
 |**Name**  | The name of a content item. |
-| **Description** |Descriptive information on what a content item is used for.  |
+| **Description** |Descriptive information about what a content item is used for.  |
 | **Content Type** | The type of a content item. |
 | **Created** | The date when a content item was created. |
 | **Updated** | The date when a content item was last updated.|
@@ -50,7 +50,7 @@ The following table describes the attributes on the pages:
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | **Name** | The name of a Banner content item. |
-|**Description**  |Descriptive information on what a banner is used for.  |
+|**Description**  |Descriptive information about what a banner is used for.  |
 | **Title** |  The heading of the banner.|
 |  **Subtitle**| The text of the banner. |
 |**Image URL** |An address where the image element of the Banner content item is stored.  |
@@ -66,7 +66,7 @@ The following table describes the attributes on the pages:
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | **Name** | The name for an Abstract Product List content item. |
-| **Description** | Descriptive information on what an Abstract Product List is used for. |
+| **Description** | Descriptive information about what an Abstract Product List is used for. |
 | **Top table** |  A table that displays products included in an Abstract Product List content item.|
 | **Actions** | A set of actions that can be performed on an Abstract Product List content item:<ul><li>**Move Down** or **Move Up** lets you change the order of products in the list.</li><li>**Delete** allows removing the product from the list.</li></ul>|
 | **Add more products (bottom table)**  | A table that contains all available products stored in the database. |
@@ -87,7 +87,7 @@ The following table describes the attributes on the pages:
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | **Name** | The name for a Product Set content item. |
-|  **Description**|Descriptive information on what a Product Set is used for.  |
+|  **Description**|Descriptive information about what a Product Set is used for.  |
 | **Top table** |A table that displays the selected product set.  |
 | **Actions (top table)**| A column that contains **Delete** you can click to remove the product set from the list. |
 | **Available Product Sets** |  A bottom table that displays product sets available in the database.|
@@ -106,7 +106,7 @@ The following table describes the attributes on the pages:
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | **Name** | The name for a File List content item. |
-| **Description** | Descriptive information on what a File List content item is used for. |
+| **Description** | Descriptive information about what a File List content item is used for. |
 | **Selected Files** | A top table that displays the selected files. |
 | **Actions** | A set of actions you can perform on a File List content item:<ul><li>**Move Down** or **Move Up** lets you change the order of files in the list. </li><li>**Delete** allows removing the selected file.</li></ul> |
 | **Available Files** | A bottom table that displays a list of files uploaded to the File Manager. |

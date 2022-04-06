@@ -4,13 +4,10 @@ description: Learn how to edit product labels in the Back Office
 template: back-office-user-guide-template
 ---
 
-
-
-
 ## Prerequisites
 
 To start editing product labels, do the following:
-1. Go to **Merchandising** > **Product Labels**.
+1. Go to **Merchandising&nbsp;<span aria-label="and then">></span> Product Labels**.
     This opens the **Product Labels** page.
 2. Next to the product label you want to edit, click **Edit**.
 
@@ -36,11 +33,11 @@ To start editing product labels, do the following:
 ## Assign and deassign a product label from products
 
 1. Click the **Products** tab.
-2. In the **Available products** subtab, select the checkboxes next to the products you want to assign the label to.
-3. In the **Assigned products** subtab, clear the checkboxes next to the products you want to deassign the label from.
+2. On the **Available products** subtab, select the checkboxes next to the products you want to assign the label to.
+3. On the **Assigned products** subtab, clear the checkboxes next to the products you want to remove the label from.
 4. Click **Save**
 
-    The page refreshes with a success message displayed. The products you've assigned are displayed in the **Assigned products** subtab. The products you've deassigned are not displayed there.
+    The page refreshes with a success message displayed. The products you've assigned are displayed on the **Assigned products** subtab. The products you've deassigned are not displayed there.
 
 **Tips and tricks**
 

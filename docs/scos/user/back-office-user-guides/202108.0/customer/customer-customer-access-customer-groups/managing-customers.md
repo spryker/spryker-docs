@@ -25,9 +25,9 @@ Each section contains reference information. Make sure to review it before you s
 
 ## Creating customers
 
-To create a new customer:
-1. In the top-right corner of the *Customers* page, click **Add Customer**.
-2. On the *Add a customer* page, enter the customer information. The customer information must include first name, last name, and the email address that will be linked to the new account. The email address is important for completing the registration (by accessing the link that will be sent by email) or for later use of the forgot password functionality.
+To create a new customer, do the following:
+1. In the top-right corner of the **Customers** page, click **Add Customer**.
+2. On the **Add a customer** page, enter the customer information. The customer information must include first name, last name, and the email address that will be linked to the new account. The email address is important for completing the registration (by accessing the link that will be sent by email) or for later use of the forgot password functionality.
 3. Send the password token by email by selecting the **Send password token through email** checkbox. After saving the customer data, an email will be sent to the customer containing a link. By accessing the link, the customer will be able to set a password for the account.
 
 {% info_block infoBox "Info" %}
@@ -37,7 +37,7 @@ If you don’t select this option, the customer is still able to set a password 
 {% endinfo_block %}
 
 4. To complete the customer creation, click **Save**.
-This creates the new customer with the *Unverified* status in the *Customers* table. At the same time, the customer receives an email with the verification link that they must click to get verified and start using the online store as registered users do. Once they verified their account via the link in the email, the status in the *Customers* table changes to *Verified*.
+This creates the new customer with the **Unverified** status in the **Customers** table. At the same time, the customer receives an email with the verification link that they must click to get verified and start using the online store as registered users do. Once they verified their account via the link in the email, the status in the **Customers** table changes to `Verified`.
 
 ### Reference information: Creating customers
 
@@ -60,16 +60,16 @@ The following table describes the attributes you enter and select when creating 
 ## Editing customers
 
 To edit a customer:
-1. For a specific customer, you need to update, click **Edit** in the **Actions** column on the *Customers* page.
-2. On the *Edit Customer* page, you see the same attributes as on the *Add a customer* page, but with the following exceptions:
-    *  The *Email* field is greyed out and is not available for updates.
-    *  You see two additional drop-down lists: **Billing Address** and **Shipping Address**. The values in those fields appear only if the addresses were added to the customer profile on the Storefront or from the **Back Office&nbsp;<span aria-label="and then">></span> View** customer-specific page. Those are not available for modifications from the *Edit Customer* page.
+1. For a specific customer, you need to update, click **Edit** in the **Actions** column on the **Customers** page.
+2. On the **Edit Customer** page, you see the same attributes as on the **Add a customer** page, but with the following exceptions:
+    *  The **Email** field is greyed out and is not available for updates.
+    *  You see two additional drop-down lists: **Billing Address** and **Shipping Address**. The values in those fields appear only if the addresses were added to the customer profile on the Storefront or from the **Back Office&nbsp;<span aria-label="and then">></span> View** customer-specific page. Those are not available for modifications from the **Edit Customer** page.
 3. Update the needed values and click **Save**.
 
 **Tips and tricks**
-<br>From the *Edit customer* page, you can:
-* Switch to the *View* customer page, where you can manage the addresses by adding a new address or updating the existing one (see the _Viewing Customer Details_ section below).
-* Delete the customer record (see the _Deleting a Customer Record_ section below).
+<br>From the **Edit customer** page, you can:
+* Switch to the **View** customer page, where you can manage the addresses by adding a new address or updating the existing one (see the following **Viewing Customer Details** section).
+* Delete the customer record (see the **Deleting a Customer Record** section below).
 
 ### Reference information: Editing customers
 
@@ -78,7 +78,7 @@ The following table describes the attributes you enter and select when editing a
 |ATTRIBUTE| DESCRIPTION|
 |---|---|
 | Email | Email address that is linked to the customer account. The email address is important for completing the registration (by accessing the link that will be sent by email) or for later use of the forgot password functionality. On the Edit customer page, this field is greyed out and not available for modifications.|
-| Salutation | Formal salutation for your customer (e.g., Mr, Mrs).|
+| Salutation | Formal salutation for your customer (for example, Mr, Mrs).|
 | First Name |Customer's first name.|
 | Last Name |Customer's last name.|
 | Gender |Customer's gender. The drop-down list with the following values available for selection:  Male and Female.|
@@ -86,7 +86,7 @@ The following table describes the attributes you enter and select when editing a
 | Phone |Customer's phone number.|
 | Company | Customer's company.|
 | Locale |Selected from a drop-down list value defines the locale for your customer.|
-| Send password token through email |If you select the checkbox, after saving the customer data, an email will be sent to the customer containing a link. By accessing the link, the customer will be able to set a password for the account. If you don’t select this option, the customer still canset a password for their account, by clicking the reset password link from the shop interface. |
+| Send password token through email |If you select the checkbox, after saving the customer data, an email will be sent to the customer containing a link. By accessing the link, the customer will be able to set a password for the account. If you don’t select this option, the customer still can set a password for their account, by clicking the reset password link from the shop interface. |
 | Billing Address | Drop-down list with the addresses set up for the customer. The selected address defines the billing address for your customer.|
 | Shipping Address |Dop-down list with the addresses set up for the customer. The selected address defines the shipping address for your customer.|
 
@@ -94,9 +94,9 @@ The following table describes the attributes you enter and select when editing a
 
 ## Viewing customer details
 
-The *View customer details* page is designed to serve more purposes than just seeing the details.
+The **View customer details** page is designed to serve more purposes than just seeing the details.
 
-On this page, you can view the orders placed by the customer, edit the addresses, or add another address, leave descriptive messages in the *Notes* section.
+On this page, you can view the orders placed by the customer, edit the addresses, or add another address, leave descriptive messages in the **Notes** section.
 
 To know how the customer addresses are managed, see  [Managing customer addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html).
 
@@ -104,28 +104,28 @@ To know how the customer addresses are managed, see  [Managing customer addresse
 
 To view customer details, take one of the following steps:
 * Click **View** in the list of customers.
-* Click **View** in the top right corner of the *Edit Customer* page.
+* Click **View** in the top right corner of the **Edit Customer** page.
 
-If the customer has addresses, they can be edited in the *Addresses* section of the *View Customer* page.
+If the customer has addresses, they can be edited in the **Addresses** section of the **View Customer** page.
 
 ### Leaving a note
 
 To leave a note:
-1. On the *View Customer* page, scroll down to the *Notes* section.
-2. In the **Message** box, type your message and click **Add Note**.
+1. On the **View Customer** page, scroll down to the **Notes** section.
+2. In the **Message** field, type your message and click **Add Note**.
 
 ### Deleting a customer record
 
 To delete a customer record:
-1. In the **Actions** column of the *Customers* table, click **View** for the customer record you want to delete.
-2. On the *View Customer* page, click **Delete** at the top of the page.
-3. On the *Customer deletion confirmation* page, click **Delete account**.
+1. In the **Actions** column of the **Customers** table, click **View** for the customer record you want to delete.
+2. On the **View Customer** page, click **Delete** at the top of the page.
+3. On the **Customer deletion confirmation** page, click **Delete account**.
 
 OR
 
-1. In the **Actions** column of the *Customers* table, click **Edit** for the customer record you want to delete.
-2. On the *Edit Customer* page, click **Delete** on top of the page.
-3. On the *Customer deletion confirmation* page, click **Delete account**.
+1. In the **Actions** column of the **Customers** table, click **Edit** for the customer record you want to delete.
+2. On the **Edit Customer** page, click **Delete** on top of the page.
+3. On the **Customer deletion confirmation** page, click **Delete account**.
 
 #### Reference information: Viewing customer details
 

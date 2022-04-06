@@ -66,7 +66,7 @@ To upload a file, do the following:
         You can leave this field blank and select the use file name checkbox. In this case, the uploaded file name is going to be used.
      * Click **Browse...** and select the file to upload.
      * If you want the file name to be used instead of the entered file name, select the **Use file name** checkbox.
-     * Optionally, populate the **Alt** and **Title** fields for each locale.
+     * Optional: Populate the **Alt** and **Title** fields for each locale.
 4. Once done, click **Save**.
 The file is uploaded to the selected folder.
 

@@ -22,14 +22,14 @@ Review the reference information before you start, or look up the necessary info
 
 ## Creating warehouses
 
-To create a warehouse:
+To create a warehouse, do the following:
 
 1. On the **Warehouses** page, in the top right corner, click **Create Warehouse**.
 The **Create warehouse** page with two tabs opens: **Configuration** and **Store relation**.
 2. On the **Configuration** tab, do the following:
     * **Name**: Enter the name of the warehouse you want to create.
     * **Is this warehouse available?**: Select **Yes** if you want to make your warehouse available (active) or **No** if you want to make your warehouse unavailable (inactive).
-3. (optional) Switch to the **Store relation** tab. By default, the warehouse you are creating will be available for all the stores you have.
+3. Optional: Switch to the **Store relation** tab. By default, the warehouse you are creating will be available for all the stores you have.
 To make your warehouse unavailable for specific store, clear the checkbox for those stores.
 
 {% info_block warningBox "Note" %}
@@ -38,7 +38,7 @@ If you clear all checkboxes for stores assigned to a specific warehouse, this wa
 
 {% endinfo_block %}
 
-4. To keep the changes, click **Save**. This redirects you to the **Warehouses** page where you can see the new warehouse in the table and the following message: '*Warehouse has been successfully saved*'.
+4. To keep the changes, click **Save**. The **Warehouses** page opens where you can see the new warehouse in the table and the following message: '*Warehouse has been successfully saved*'.
 
 ## Reference information: Creating warehouses
 

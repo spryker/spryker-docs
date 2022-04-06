@@ -22,23 +22,23 @@ Review the [reference information](/docs/scos/user/back-office-user-guides/{{pag
 
 ## Viewing warehouse details
 
-To view the warehouse details:
+To view the warehouse details, do the following:
 
-1. In the **Actions** column, click **View** for the warehouse you want to view. This takes you to the **View Warehouse: _[Warehouse name]_** page.
+1. For the warehouse you want to view, in the **Actions** column, click **View**. The **View Warehouse: _[Warehouse name]_** page opens.
 2. On the **View Warehouse: _[Warehouse Name]_** page, the following information is available:
     * Warehouse name
     * Status: whether the warehouse is available or not
-    * Store(s) in which the warehouse is available
+    * Stores in which the warehouse is available
 
 
 ## Editing warehouse details
 
-To edit the warehouse details:
+To edit the warehouse details, do the following:
 
-1. In the **Actions** column, click **Edit** for the warehouse you want to update. This takes you to the **Edit Warehouse: _[Warehouse name]_** page.
+1. For the warehouse you want to update, in the **Actions** column, click **Edit**. The **Edit Warehouse: _[Warehouse name]_** page opens.
 2. On the **Configuration** tab, make changes to the needed attributes.
 3. Switch to the **Store relation** tab and specify the store in which you want the warehouse to be available.
-4. To keep the changes, click **Save**. This redirects you to the **Warehouses** page, where you can see the updated warehouse and the following message: 'Warehouse has been successfully updated'.
+4. To keep the changes, click **Save**. The **Warehouses** page opens, where you can see the updated warehouse and the following message: 'Warehouse has been successfully updated'.
 
 
 ## What's next?

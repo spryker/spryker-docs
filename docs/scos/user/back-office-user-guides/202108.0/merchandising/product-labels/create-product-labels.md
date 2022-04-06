@@ -20,7 +20,7 @@ This topic describes how to create product labels in the Back Office.
 
 ## Prerequisites
 
-To start working with product labels, go to **Merchandising** > **Product Labels**.
+To start working with product labels, go to **Merchandising&nbsp;<span aria-label="and then">></span> Product Labels**.
 
 Review the [reference information](#reference-information-create-product-labels) before you start, or look up the necessary information as you go through the process.
 
@@ -39,7 +39,6 @@ Review the [reference information](#reference-information-create-product-labels)
 10. In the **TRANSLATIONS** pane, enter a **NAME** for each locale.
 11. Click **Next**.
     This opens the **Products** tab.
-
 12. In the **Available** subtab, select one or more products to assign the label to.
 13. Click **Save**.
     This opens the **Edit Product Label** page with a success message displayed.

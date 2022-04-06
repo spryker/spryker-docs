@@ -25,7 +25,7 @@ Review the reference information before you start, or look up the necessary info
 
 ## Viewing product attributes
 
-To view a product attribute,  next to the product attribute you want to view, select **View**.
+To view a product attribute, next to the product attribute you want to view, select **View**.
 
 On the **View Product Attributes** page that opens, you can see the general information of the attribute, its predefined values, and translations.
 
@@ -33,7 +33,7 @@ To edit the product attribute, in the top right corner of the page, select **Edi
 
 ## Editing product attributes
 
-To edit a product attribute:
+To edit a product attribute, do the following:
 1. Select **Edit** next to the product attribute you want to edit.
     On the **Edit Product Attributes** page that opens, the **Attribute Key**, **Input type**, and **Super attribute** are disabled. You can define them only when [creating a product attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html).
 2. Update **Predefined Values**:
@@ -41,16 +41,14 @@ To edit a product attribute:
     * Add predefined values:
         1. Enter a predefined value and press **Enter**.
         2.  Repeat the previous step until you add all the desired values.
-
-
 3. Select **Save**.
-    This takes you to the **2. Translations** tab with the success message displayed.
+    The **2. Translations** tab opens, with the success message displayed.
 4. Update translations:
     * Update the **Translation** of the desired attribute keys for the desired locales.
     * Update the **Translation** of the desired predefined attribute values for the desired locales.
     * To localize predefined parameter values:
         1. Select **Translate predefined values**.
-        2. Enter a **Translation** for the predefined parameter values for all the locales.
+        2. For the predefined parameter values for all the locales enter a **Translation**.
     * To delocalize all the predefined parameter values for all the locales, clear the **Translate predefined values** checkbox.
 5. Select **Save**.
     The **View Product Attribute** page opens, with the success message displayed.

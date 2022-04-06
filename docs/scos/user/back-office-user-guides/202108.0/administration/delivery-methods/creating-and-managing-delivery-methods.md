@@ -23,20 +23,20 @@ This topic describes how to create and manage shipment methods.
 
 To start working with the delivery methods, go to **Administration&nbsp;<span aria-label="and then">></span> Delivery Methods**.
 
-Once you decide to add a new shipment method, make sure that you have a carrier company to assign a shipment method on the list of delivery methods. If you don't have an appropriate carrier, see [Creating a carrier company](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-carrier-companies.html). You also need to make sure that you have an appropriate tax set in the **Taxes&nbsp;<span aria-label="and then">></span> Tax Sets** section, see [Taxes](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html).
+After you decide to add a new shipment method, make sure that you have a carrier company to assign a shipment method on the list of delivery methods. If you don't have an appropriate carrier, see [Creating a carrier company](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-carrier-companies.html). Also make sure to have an appropriate tax set in the **Taxes&nbsp;<span aria-label="and then">></span> Tax Sets** section, see [Taxes](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html).
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating delivery methods
 
-A delivery method is described by:
+A delivery method is described by the following:
 * Delivery price (how is the price for a delivery calculated?).
 * Delivery time (what is the estimated time for the delivery?).
 * Availability (when is the delivery method available?).
 
-To create a new delivery method:
+To create a new delivery method, do the following:
 1. In the top-right corner of the **Delivery Methods** page, click **+Create new delivery method**. The **Create Delivery Method** page with three tabs opens: **Configuration**, **Price & Tax**, and **Store Relation**.
-2. On the **Configuration** tab, enter and select the following attributes:
+2. On **Configuration**, enter and select the following attributes:
    * Delivery Method Key
    * Name
 
@@ -52,7 +52,7 @@ To create a new delivery method:
 
    {% info_block warningBox "Note" %}
 
-   Regardless if you have multi-currency prices with multiple price modes or just one simple static price, the price plugin has priority over those prices and let you customize and apply logic over delivery price calculation.
+   Regardless whether you have multi-currency prices with multiple price modes or just one simple static price, the price plugin has priority over those prices and lets you customize and apply logic over the delivery price calculation.
 
    {% endinfo_block %}
 
@@ -60,7 +60,7 @@ To create a new delivery method:
 
 {% info_block warningBox "Note" %}
 
-The fields marked with * are required.
+The fields marked with an asterisk (*) are required.
 
 {% endinfo_block %}
 
@@ -75,7 +75,7 @@ The fields marked with * are required.
 
 ![Store relation](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/store-relation-delivery-method.png)
 
-6. To keep the changes, click **Save**. This redirects you to the **Delivery Methods** page, where you can see the new delivery method on the list and the following message: '*Shipment method has been successfully saved*'.
+6. To keep the changes, click **Save**. The **Delivery Methods** page opens, where you can see the new delivery method on the list and the following message: '*Shipment method has been successfully saved*'.
 
 ### Reference information: Creating delivery methods
 
@@ -94,16 +94,16 @@ The following table describes the attributes you see, select, or enter while vie
 ## Editing delivery methods
 
 To update the values, you have entered during the delivery method creation:
-1. In the **Actions** column of the **Delivery Methods** page, click **Edit** for the delivery method you want to update.
+1. In the **Actions** column of the **Delivery Methods** page, for the delivery method you want to update, click **Edit** .
 2. Update the needed values.
 
 {% info_block warningBox "Note" %}
 
-Keep in mind that **Delivery Method Key** cannot be edited.
+**Delivery Method Key** cannot be edited.
 
 {% endinfo_block %}
 
-3. To keep the changes, click **Save**. For more details on the attributes, see the [Reference information: Creating delivery methods](#reference-information-creating-delivery-methods) section.
+3. To keep the changes, click **Save**. For more details about the attributes, see the [Reference information: Creating delivery methods](#reference-information-creating-delivery-methods) section.
 
 **Tips and tricks**
 <br>This is how the Back Office setup looks in the online store:
@@ -113,7 +113,9 @@ Keep in mind that **Delivery Method Key** cannot be edited.
 
 ## Viewing delivery methods
 
-To view details of a delivery method, in the **Actions** column for the delivery method you want to view, click **View**. On the **View Delivery Method: _[Delivery Method name_** page, you'll see three sections containing delivery method details: **Configuration**, **Store relation**, and **Price & Tax**. For more details on the attributes you see on the page, see [Reference information: Creating delivery methods](#reference-information-creating-delivery-methods) 
+To view details of a delivery method, in the **Actions** column for the delivery method you want to view, click **View**. 
+On the **View Delivery Method: _[Delivery Method Name]_** page, you can see three sections containing delivery method details: **Configuration**, **Store relation**, and **Price & Tax**.
+For more details about the attributes you see on the page, see [Reference information: Creating delivery methods](#reference-information-creating-delivery-methods) 
 
 ## Deleting delivery methods
 
@@ -123,12 +125,11 @@ Deleting a delivery method has no impact on your previous purchases.
 
 {% endinfo_block %}
 
-To delete a delivery method:
-
-1. In the **Actions** column, click **Delete** for the delivery method you want to delete. The **Delete Delivery Method** page opens.
+To delete a delivery method, do the following:
+1. For the delivery method you want to delete, in the **Actions** column, click **Delete**. The **Delete Delivery Method** page opens.
 2. Under **Are you sure about deleting this delivery method?**, select one of the two options:
    * **No, I want to keep this delivery method** if you want to cancel the deletion of the delivery method. The list of delivery methods opens.
-   * **Yes, delete this delivery method** if you want to delete the delivery method. This deletes the delivery method and redirects you to the list of delivery methods.
+   * **Yes, delete this delivery method** if you want to delete the delivery method. The delivery method is deleted, and the list of delivery methods opens.
 
 **Online Store**
 ![Online store](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/online-store.png)

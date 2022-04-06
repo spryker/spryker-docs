@@ -17,7 +17,7 @@ related:
 
 To view a product label, do the following:
 
-1. Go to **Merchandising** > **Product Labels**.
+1. Go to **Merchandising&nbsp;<span aria-label="and then">></span> Product Labels**.
     This opens the **Product Labels** page.
 2. Next to the product label you want to view, click **View**.
     This opens the **View Product Label** page.

@@ -27,7 +27,7 @@ Review the reference information before you start, or look up the necessary info
 
 ## Creating product attributes
 
-To create a product attribute:
+To create a product attribute, do the following:
 1. On the **Attributes** page, select **+ Create Product Attribute**.
 2. On the **Create a Product Attribute** page, enter an **Attribute Key**.
 
@@ -40,15 +40,15 @@ The **Attribute Key** field accepts lower case letters, digits, numbers, undersc
 3. Select an **Input type**.
 4. To make this attribute a supper attribute, select the **Super attribute** checkbox.
     This disables the **Allow input any value other than predefined** checkbox because a super attribute always uses predefined values.
-5. In the **Predefined Values** field, enter a desired predefined value and press `Enter`.
+5. In the **Predefined Values** field, enter a desired predefined value and press **Enter**.
 6. Repeat the previous step until you add all the desired predefined values.
 7. To allow adding the values that are different from the predefined ones, select **Allow input any value other than predefined ones**.
 8. Select **Save**.
-    This takes you to the **2. Translations** tab.
+    The **2. Translations** tab opens.
 9. On the **2. Translations** tab, for the attribute key for all the locales, enter a **Translation** .
 10. Optional: Localize predefined parameter values:
     1. Select **Translate predefined values**.
-    2. Enter a **Translation** for the predefined parameter values for all the locales.
+    2. For the predefined parameter values for all the locales, enter a **Translation**.
 11. Select **Save**.
     The **View Product Attribute** page opens with the success message displayed.
 

@@ -17,7 +17,7 @@ related:
 
 The topic describes how to manage payment methods.
 
-You can:
+You can do the following:
 * View payment methods available on the Storefront.
 * Edit payment methods: update payment method details, assign payment methods to store, and activate or deactivate payment methods.
 
@@ -29,7 +29,7 @@ Review the reference information before you start, or look up the necessary info
 
 ## Viewing payment methods
 
-To view details of a payment method, in the **Actions** column, click **View** for the payment method. On the **View Payment Method: [Payment Method name]** page, you can see the following information:
+To view details of a payment method, for the payment method, click **View** in the **Actions** column. On the **View Payment Method: _[Payment Method name]_** page, you can see the following information:
 
 * Payment method key
 * Name of the payment method
@@ -37,13 +37,11 @@ To view details of a payment method, in the **Actions** column, click **View** f
 * Payment method status
 * Availability of the payment method per store
 
-For the reference information, see the [Reference information: Editing payment method pages](#reference-information-editing-payment-method-pages) section.
-
 ## Editing payment method details
 
-To edit a payment method:
+To edit a payment method, do the following:
 
-1. On the **Payment Methods** page, in the **Actions** column for the payment method you want to update, click **Edit** . This redirects you to the **Edit Payment Method [Payment Method Name]** page containing two tabs: **Configuration** and **Store relation**.
+1. On the **Payment Methods** page, for the payment method you want to update, click **Edit** in the **Actions** column. The **Edit Payment Method _[Payment Method Name]_** page opens, with two tabs: **Configuration** and **Store Relation**.
 2. On the **Configuration** tab, update the availability status of the payment method under **Is the Payment Method active?**:
 * Select the checkbox to make the payment method available in the *Payment* step during the checkout process.
 * Clear the checkbox to make the payment method unavailable in the *Payment* step during the checkout process.

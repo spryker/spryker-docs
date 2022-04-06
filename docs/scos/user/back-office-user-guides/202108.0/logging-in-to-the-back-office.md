@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/logging-in-to-the-back-office
 ---
 
-To be able to use the Back Office, you have to log in to it. You can log in via:
+To use the Back Office, you have to log in to it. You can log in via:
 
 * Regular Back Office user account
 * Third-party service

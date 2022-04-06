@@ -28,11 +28,11 @@ To start managing MIME type settings, navigate to **Administration&nbsp;<span ar
 
 ## Adding MIME Type Settings
 
-To add a MIME type setting:
-1. On the **MIME Type Setting** page,  in the top right corner, click **+Add MIME type**.
+To add a MIME type setting, do the following:
+1. On the **MIME Type Setting** page, click **+Add MIME type**.
 2. On the **Add MIME type** page, fill in the following fields:
     * **MIME Type**. The MIME type should consist of a type and a subtype; these are all strings which, when concatenated with a slash (/) between them, comprise a MIME type. No whitespace is allowed: **type/subtype**. The type represents the general category into which the data type falls, such as video or text. The subtype identifies the exact kind of data of the specified type the MIME type represents, that is, **image/png**.
-    * Optional: In the **Comment** field, leave a comment. This information is viewable by only the Back Office users.
+    * Optional: Leave a **Comment**. This information is viewable by only the Back Office users.
 3. To let this file extension to be uploaded to the system, select **Is allowed**.
 4. Click **Save**.
 
@@ -55,9 +55,9 @@ There are two ways to allow a MIME type:
 If you create the MIME types as follows:
 ![Tips](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/File+Manager/Managing+MIME+Type+Settings/tips-one.png)
 
-Then you will be able to download only the following file types:
+Then you can download only the following file types:
 * text/csv
 * application/pdf
 
-The following will be displayed on the **File Tree** page once you select to upload a not allowed file type:
+The following is displayed on the **File Tree** page after you select to upload a not allowed file type:
 ![File tree](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/File+Manager/Managing+MIME+Type+Settings/file-tree.png)

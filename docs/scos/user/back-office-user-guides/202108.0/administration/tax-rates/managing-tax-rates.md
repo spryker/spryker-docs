@@ -24,7 +24,7 @@ Review the reference information before you start, or look up the necessary info
 
 To define a rate under which a product, shipment, or threshold is going to be taxed, create a tax rate.
 
-To create a tax rate:
+To create a tax rate, do the following:
 
 1. On the **Overview of Tax Rates** page, in the top right corner, click **Create Tax Rate**.
 2. On the **Create Tax Rate** page, enter and select the attributes.
@@ -46,15 +46,15 @@ The following table describes attributes you view, enter, and select when creati
 
 To edit a tax rate:
 
-1. In the **List of tax rates*&nbsp;<span aria-label="and then">></span> *Actions** column, click **Edit** for a specific tax rate.
+1. For a specific tax rate, in the **List of tax rates&nbsp;<span aria-label="and then">></span> *Actions** column, click **Edit**.
 2. On the **Edit Tax Rate** page, change the attributes.
-3. Click **Save**. For more details on the reference information of the attributes, see the [Reference information: Creating tax rates](#reference-information-creating-tax-rates) section.
+3. Click **Save**. For more details about the reference information of the attributes, see the [Reference information: Creating tax rates](#reference-information-creating-tax-rates) section.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Taxes/Managing+Tax+Rates/editing-tax-rate.png)
 
 ## Viewing tax rates
 
-To view details on a specific tax rate,  in the **List of tax rates&nbsp;<span aria-label="and then">></span> Actions** column, click **View**.
+To view details on a specific tax rate, in the **List of tax rates&nbsp;<span aria-label="and then">></span> Actions** column, click **View**.
 
 The **Tax Rate** details page includes the following information:
 * Name
@@ -64,13 +64,13 @@ The **Tax Rate** details page includes the following information:
 * Created at
 * Updated at
 
-For more details on the reference information of the attributes, see the [Reference information: Creating tax rates](#reference-information-creating-tax-rates) section.
+For more details about the reference information of the attributes, see the [Reference information: Creating tax rates](#reference-information-creating-tax-rates) section.
 
 To return back to the list, click **Back to Tax Rates**.
 
 **Tips and tricks**
 <br>You can start editing a tax rate while viewing it:
-1. On the **View Tax Rate** page, click **Edit** in the top right corner.
+1. On the **View Tax Rate** page, in the top right corner, click **Edit** .
 2. Go over the [Editing tax rates](#editing-tax-rates) procedure.
 
 ## Deleting tax rates

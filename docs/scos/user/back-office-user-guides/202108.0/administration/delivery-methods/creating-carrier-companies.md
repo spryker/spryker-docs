@@ -25,10 +25,10 @@ To start working with the carrier companies, go to **Administration&nbsp;<span a
 
 ## Creating carrier companies
 
-To create a carrier company:
+To create a carrier company, do the following:
 
 1. In the top-right corner of the **Delivery Methods** page, click **+Create new carrier company**.
-2. On the **Create new Carrier company** page, enter a name for the carrier company:
+2. On the **Create new Carrier company** page, enter a **Name** for the carrier company:
 
 {% info_block warningBox %}
 
@@ -36,7 +36,7 @@ To create a carrier company:
 
 {% endinfo_block %}
 
-3. To activate the carrier company, select the **Enabled?** checkbox.
+3. To activate the carrier company, select **Enabled?**.
 4. To complete the creation, click **Add**.
 
 {% info_block infoBox %}
@@ -47,5 +47,5 @@ Click **List of shipment methods** to get back to the list of delivery methods. 
 
 ## What's next?
 
-You have now added a new carrier company for your store.
+You have added a new carrier company for your store.
 The next step is to add a new shipment method to it. For more details, see [Creating and managing delivery methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html).

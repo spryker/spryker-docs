@@ -51,7 +51,7 @@ The page refreshes, and the message about successful threshold update is display
 
 ## Setting up Minimum Soft Threshold
 
-To set up a [minimum soft threshold](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html#soft-minimum-threshold):
+To set up a [minimum soft threshold](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html#soft-minimum-threshold), do the following:
 1. On the **Edit Global threshold** page, select the **Store and Currency** you want to configure the threshold for.
 2. In the **Soft Threshold** section, select a soft threshold type.
 3. Fill in the **Enter threshold value** field.
@@ -67,7 +67,7 @@ See  [Reference information](#reference-information) to know more about the soft
 
 ## Setting up several thresholds
 
-To set up several threshold types:
+To set up several threshold types, do the following:
 1. Enter the fields in the sections of the thresholds you want to set up by following the respective instructions:
     * [Setting up a Hard Minimum Threshold](#setting-up-minimum-hard-threshold)
     * [Setting up a Hard Maximum Threshold](#setting-up-maximum-hard-threshold)
@@ -84,7 +84,7 @@ To know more about attributes, see [Reference information](#reference-informatio
 ## Reference information
 
 The following table describes the attributes you select and enter when managing global order thresholds or when [managing merchant order thresholds](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-merchant-order-thresholds.html).
-s
+
 | ATTRIBUTE |DESCRIPTION|
 | --- | --- |
 |Store and Currency | Defines the store to which the threshold is applied and the currency in which it is displayed. |

@@ -28,7 +28,7 @@ To start working with product alternatives, go to **Catalog&nbsp;<span aria-labe
 
 To added product alternatives for a product, do the following:
 1. On the **Edit Concrete Product** page, switch to the **Product Alternatives** tab.
-2. To add product alternatives, enter **Product Name** or its **SKU** in the **Add Product Alternative by Name** or **SKU** field.
+2. To add product alternatives, in the **Add Product Alternative by Name** or **SKU** field, enter **Product Name** or its **SKU**.
 You can add multiple alternative products.
 ![Adding product alternatives](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Managing+products/Adding+Product+Alternatives/add-product-alternative.png)
 

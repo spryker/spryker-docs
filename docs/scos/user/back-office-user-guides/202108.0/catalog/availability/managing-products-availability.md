@@ -31,7 +31,7 @@ Each section contains reference information. Make sure to review it before you s
 
 ## Checking availability
 
-To check the product availability:
+To check the product availability, do the following:
 1. In the **Actions** column of the **Products availability list** table, next to the corresponding product item, click **View**. The **Product Availability** page opens.
 2. In case of a multistore setup, in the **Store** drop-down, select the store locale to check the product's availability for each specific locale.
 
@@ -44,7 +44,7 @@ This section describes attributes you see when checking availability.
 On the **Overview of Products Availability** page, you see the following:
 * The SKUs and names of the abstract products and the SKU values is a hyperlink to this product's **Edit** page.
 * The number of products in current stock and the number of reserved products (meaning ordered ones).
-*  The identifier for the bundled product and for those that are **never out of stock** (Yes/No values).
+* The identifier for the bundled product and for those that are **never out of stock** (Yes/No values).
 
 #### Product Availability page
 
@@ -63,7 +63,7 @@ Both sections contain the following information:
 
 ## Editing stock
 
-To edit the product stock:
+To edit the product stock, do the following:
 
 1. On the **Product Availability** page of the product whose variant availability you want to change, for the corresponding variant, click **Edit Stock**.
 2. On the **Edit Stock** page, specify the quantity for the product (for the needed warehouse, if several are set up).
@@ -76,18 +76,18 @@ Product stock the DECIMAL(20,10) value, which means that your product stock can 
 
 {% endinfo_block %}
 
-To edit the bundled product stock:
+To edit the bundled product stock, do the following:
 
 1. Navigate to the **Product Availability** page of a bundle whose bundled product variant availability you want to change.
 2. In the **Variant availability** table, click **View bundled products**.
-3. In the **Bundled products** table that opens,  for the corresponding variant, click **Edit Stock**.
+3. In the **Bundled products** table that opens, for the corresponding variant, click **Edit Stock**.
 4. On the **Edit Stock** page, specify **Quantity** for the product (for the needed warehouse if several are set up).
-5. Select **Never out of stock** if you want the product to be always available.
+5. If you want the product to be always available, select **Never out of stock**.
 6. Click **Save**.
 
 {% info_block warningBox "Note" %}
 
-Please note that you are updating the product variant availability, not the bundle availability itself. To see examples of how the bundle availability is calculated, see [Availability calculation example](#availability-calculation-example).
+You are updating the product variant availability, not the bundle availability itself. To see examples of how the bundle availability is calculated, see [Availability calculation example](#availability-calculation-example).
 
 {% endinfo_block %}
 
@@ -104,7 +104,7 @@ Please note that you are updating the product variant availability, not the bund
 
 {% info_block infoBox "Info" %}
 
-Once on the **Edit Concrete Product** page, you can update any of the product details you need.
+On the **Edit Concrete Product** page, you can update any of the product details you need.
 
 {% endinfo_block %}
 

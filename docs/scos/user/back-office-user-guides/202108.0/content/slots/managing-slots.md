@@ -130,7 +130,7 @@ In the **List of Blocks for _[Name]_ Slot** section, you see the following:
 
 {% info_block infoBox "Info" %}
 
-Apart from the **ID** and **Actions**, the attributes described below depend on the CMS block settings defined in **Content&nbsp;<span aria-label="and then">></span> Blocks**. To learn about them, see reference information on the [Creating a CMS block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/creating-cms-blocks.html) page.
+Apart from the **ID** and **Actions**, the attributes described below depend on the CMS block settings defined in **Content&nbsp;<span aria-label="and then">></span> Blocks**. To learn about them, see reference information about the [Creating a CMS block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/creating-cms-blocks.html) page.
 
 {% endinfo_block %}
 

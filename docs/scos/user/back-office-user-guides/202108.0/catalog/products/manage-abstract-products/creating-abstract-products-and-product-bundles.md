@@ -107,7 +107,7 @@ The default prices are displayed in the online store as a current price, while t
 
 ## Defining product variants
 
-In the **Variants** tab, define product variants:
+On the **Variants** tab, define product variants:
 * Product bundle: Select **Save** and follow [Defining meta information](#defining-meta-information). The page refreshes with a product variant created automatically.
 * Abstract product: Define product variants as follows:
     1. Select one or more super attributes that define your product variants.
@@ -125,7 +125,7 @@ The reference information in this section is relevant only for abstract products
 
 {% endinfo_block %}
 
-In the **Variants** tab, you can see all the existing [super attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html#super-attributes). You can [create](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) or [manage](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/managing-product-attributes.html) super attributes in **Catalog&nbsp;<span aria-label="and then">></span> Attributes**.
+On the **Variants** tab, you can see all the existing [super attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html#super-attributes). You can [create](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) or [manage](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/managing-product-attributes.html) super attributes in **Catalog&nbsp;<span aria-label="and then">></span> Attributes**.
 
 You can select as many super attributes as you need and define one or more values for them. For each product attribute value you select, a product variant will be created. After creating the abstract product, you will be able to create new product variants based on the super attributes you select when creating the abstract product.
 

@@ -1,5 +1,5 @@
 ---
-title: Creating vouchers
+title: Create vouchers
 description: Use the procedure to create discount vouchers your customer can redeem during checkout.
 last_updated: Aug 27, 2021
 template: back-office-user-guide-template
@@ -15,42 +15,32 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/creating-cart-rules.html
 ---
 
-This guide describes how to create a voucher.
+This guide describes how to create vouchers.
 
 Vouchers are codes that customers can redeem during checkout. Voucher codes are grouped into pools to apply logic to multiple vouchers at once. You can generate a single voucher to be used by multiple customers or a pool of dedicated one-time per-customer voucher codes.
 
 ## Prerequisites
 
-To start working with discounts, navigate to **Merchandising** > **Discount**.
+To start creating a voucher, do the following:
+1. Go to **Merchandising&nbsp;<span aria-label="and then">></span> Discount**.
+2. On the **Discount** page, click **Create new discount**.
 
-Review the reference information before you start, or look up the necessary information as you go through the process.
+## 1. Define general settings of a voucher discount
 
-## Creating a voucher
 
-To create a discount voucher:
-1. On the *Discount* page,  in the top-right corner, click **Create new discount**.
-2. On the *Create new discount* page, in the *General* tab, do the following:
-    1. In *Store relation*, check the stores you wish the discount to be active in.
-    2. In the *Discount Type* drop-down, select **Voucher codes**.
-    3. In the **Name** field, specify the name for the voucher.
-    4. _Optional_: Enter the description for the voucher in the **Description** field.
-    5. Specify if the voucher is exclusive.
-    6. Specify the validity interval (lifetime) of the voucher.
- 3. Click **Next** or select the **Discount calculation** tab to proceed.
- 4. On the *Create Discount* page, in the *Discount calculation* tab, do the following:
-    1.  Select either **Calculator percentage** or **Calculator fixed** in the **Calculator type** drop-down.
+1. On the **Create Discount** page, click the **General information** tab.
+2. For **STORE RELATION**, select one or more stores you want the discount to be displayed in.
+3. For **DISCOUNT TYPE**, select **Voucher codes**.
+4. Enter a **NAME**.
+5. Optional: Enter a **Description**.
+6. Optional: To make the discount exclusive, select **EXCLUSIVE**.
+7. Select a **VALID FROM** date.
+8. Select a **VALID TO** date.
+9. Click **Next**.
 
-      {% info_block warningBox "Note" %}
 
-      The next step varies based on the selected calculator type:
 
-      1. **Calculator fixed**: Enter the prices to be discounted.
 
-      2.  **Calculator percentage**: Enter the values (percentage) to be discounted.
-
-      {% endinfo_block %}
-
-    2. Select the **Discount application type** and define what products the voucher will be applied to. See reference information of the [Discount calculation](#discount-calculation-tab) tab for more details.
  5. Click **Next**, or select the *Conditions* tab to proceed.
  6. On the *Create new discount* page, in the *Conditions* tab, do the following:
     1. Select the **Apply when** conditions or click **Plain query** and enter the  query manually. See reference information of the [Conditions](#conditions) tab for more details.

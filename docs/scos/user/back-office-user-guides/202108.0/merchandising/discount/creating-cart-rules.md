@@ -21,7 +21,7 @@ A cart rule is a discount that is applied automatically when all attached discou
 
 ## Prerequisites
 
-To start creating a discount, do the following:
+To start creating a cart rule, do the following:
 1. Go to **Merchandising&nbsp;<span aria-label="and then">></span> Discount**.
 2. On the **Discount** page, click **Create new discount**.
 
@@ -29,8 +29,8 @@ To start creating a discount, do the following:
 
 1. On the **Create Discount** page, click the **General information** tab.
 2. For **STORE RELATION**, select one or more stores you want the discount to be displayed in.
-3. Select a **DISCOUNT TYPE**.
-4. Enter a  **NAME**.
+3. For **DISCOUNT TYPE**, select **Cart rule**.
+4. Enter a **NAME**.
 5. Optional: Enter a **Description**.
 6. Optional: To make the discount exclusive, select **EXCLUSIVE**.
 7. Select a **VALID FROM** date.
@@ -58,7 +58,7 @@ To start creating a discount, do the following:
 
 
 4. In the **Conditions** tab, do the following:
-   1. Select the **Apply when** conditions or click **Plain query** and enter the query manually. For reference information, in the **Creating vouchers** guide, see the [Conditions](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html#conditions) section.
+   1. Select the **Apply when** conditions or click **Plain query** and enter the query manually.
    2. Enter the value for **The discount can be applied if the query applies for at least X item(s).** field.
    3. To create the new discount, click **Save**.
 

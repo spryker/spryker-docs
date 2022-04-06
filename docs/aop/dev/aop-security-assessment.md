@@ -30,8 +30,8 @@ All of these participants are responsible for the security of customer data.
 
 ## Threat modeling
 
-Spryker will conduct Threat modeling in order to identify and prioritize potential threats to a system, and determine the value that potential mitigations would have in reducing or neutralizing those threats for apps that are commercially distributed through the AOP apps catalog. 
-The Threat model document will be shared in a PDF, Word or HTML format and will contain the following information:
+Spryker will conduct threat modeling to identify and prioritize potential threats to a system, and determine the value that potential mitigations would have in reducing or neutralizing those threats for apps that are commercially distributed through the AOP apps catalog. 
+The threat model document will be shared in a PDF, Word or HTML format and will contain the following information:
 
 - How data flows through a system to identify where the AOP application might be attacked.
 - Document as many potential threats to the AOP app (PBC) as possible.
@@ -44,9 +44,21 @@ During threat modeling, the following list of risks and threat libraries sources
 3. Risks with [SANS Top 25](https://www.sans.org/top25-software-errors).
 4. Microsoft [STRIDE](https://en.wikipedia.org/wiki/STRIDE_%28security%29).
 
+{% info_block infoBox "Info" %}
+
+Threat modeling is highly recommended but not mandatory for the apps listed in the AOP сatalog. Some Spryker customers ask for threat modeling explicitly in addition to a penetration test. If partner chooses not to get this done initially, they will need to go through that upon customer request. 
+
+{% endinfo_block %}
+
 ## Security assessment and testing
 
-Spryker will conduct a security assessment for apps that are commercially distributed through the AOP apps catalog. These tests include SAST (Static Application Security Testing) and Penetration testing activities. The objective of these tests is to replicate what a malicious actor would typically do in order to gain unauthorized access to the app and steal information. 
+Spryker will conduct a security assessment for apps that are commercially distributed through the AOP apps catalog. These tests include SAST (Static Application Security Testing) and Penetration testing activities. The objective of these tests is to replicate what a malicious actor would typically do in order to gain unauthorized access to the app and steal information.
+
+{% info_block infoBox "Info" %}
+
+Penetration testing is mandatory for all applications in the AOP catalog.
+
+{% endinfo_block %}
 
 Every app that clears the review successfully will be awarded a badge of Security Approval that will be displayed on the listing details. While searching for apps on the catalog, customers will have the ability to filter their results based on the security approval status. 
 
@@ -100,6 +112,8 @@ Vulnerabilities will be sent back to the partner to fix. The partner will be exp
 
 Every app will undergo an annual full test cycle. The partner can continue enhancing the app and use static code checkers to test every release on their side.
 
+![threat-moddelling](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/aop-security-assessment/threat-modelling.png)
+
 ## Expectations from partners and app developers
 
 Spryker expects that the following actions are taken by partners and app developers:
@@ -119,11 +133,18 @@ The app developers should not consider Spryker as an outsourced security QA team
 
 For each app, a review fee of EUR 2500 / USD 3000 will be applicable. This amount is due every time the app goes through a full review cycle (typically annually) and is exclusive of any other fee or revenue share that has been agreed upon between the partner and Spryker.
 The fee covers an initial round of testing and up to two rounds of re-tests in case the application fails to pass the earlier rounds. If more testing is required because the partner hasn’t been able to address issues with earlier rounds of testing, each additional round will require a fee of EUR 800/USD 1000.
-Note: As stated earlier, Spryker will provide a few examples of vulnerabilities with the expectation that the partner does a thorough review of their app and fix any issues across the app.
+
+Similarly, a fee of EUR 2500 / USD 3000 is applicable for threat modeling. This is an optional test as stated earlier.
+
+{% info_block infoBox "Info" %}
+
+As stated earlier, Spryker will provide a few examples of vulnerabilities with the expectation that the partner does a thorough review of their app and fixes any issues across the app.
+
+{% endinfo_block %}
 
 ## Threat modeling process
 
-The diagram below demonstrates threat modeling process:
+The following diagram demonstrates the threat modeling process:
 
 ![image 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/aop-security-assessment/image2.jpg)
 

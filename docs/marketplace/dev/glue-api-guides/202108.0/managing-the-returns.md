@@ -577,10 +577,10 @@ To retrieve a return, send the Request sample:
 
 | REQUEST | USAGE |
 |---|---|
-| `GET http://glue.mysprykershop.com/returns/DE--21-R9` | Retrieve a return with the ID `DE--21-R9` for sales order items. |
-|  `GET http://glue.mysprykershop.com/returns/DE--21-R6` | Retrieve a return with the ID `DE--21-R6` for sales order items. |
-| `GET http://glue.mysprykershop.com/returns/DE--21-R6?include=return-items` | Retrieve a return with the ID `DE--21-R6`, including the return items. |
-| `GET http://glue.mysprykershop.com/returns/DE--21-R6?include=merchants` | Retrieve a return  with the ID `DE--21-R6` for merchant order items, including the respective merchants. |
+| `GET https://glue.mysprykershop.com/returns/DE--21-R9` | Retrieve a return with the ID `DE--21-R9` for sales order items. |
+|  `GET https://glue.mysprykershop.com/returns/DE--21-R6` | Retrieve a return with the ID `DE--21-R6` for sales order items. |
+| `GET https://glue.mysprykershop.com/returns/DE--21-R6?include=return-items` | Retrieve a return with the ID `DE--21-R6`, including the return items. |
+| `GET https://glue.mysprykershop.com/returns/DE--21-R6?include=merchants` | Retrieve a return  with the ID `DE--21-R6` for merchant order items, including the respective merchants. |
 
 ### Response
 

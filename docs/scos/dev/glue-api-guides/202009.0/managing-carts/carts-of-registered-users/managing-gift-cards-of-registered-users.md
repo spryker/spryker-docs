@@ -170,7 +170,7 @@ To use this endpoint, customers need to authenticate. For details, see [Authenti
 {% endinfo_block %}
 
 ### Request
-Sample request: `DELETE https://glue.mysprykershop.com/carts/8ef901fe-fe47-5569-9668-2db890dbee6d/cart-codes/GC-I6UB6O56-20`
+Request sample: `DELETE https://glue.mysprykershop.com/carts/8ef901fe-fe47-5569-9668-2db890dbee6d/cart-codes/GC-I6UB6O56-20`
 
 
 ### Response

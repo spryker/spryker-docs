@@ -517,13 +517,13 @@ SELECT * FROM spy_oauth_client WHERE identifier = 'some-client-identifier';
 
 Make sure that the following endpoints are available:
 
-* http://glue.mysprykershop.com/customers
-* http://glue.mysprykershop.com/addresses
-* http://glue.mysprykershop.com/customer-password
-* http://glue.mysprykershop.com/customer-forgotten-password
-* http://glue.mysprykershop.com/customer-restore-password
-* http://glue.mysprykershop.com/access-tokens
-* http://glue.mysprykershop.com/refresh-tokens
+* https://glue.mysprykershop.com/customers
+* https://glue.mysprykershop.com/addresses
+* https://glue.mysprykershop.com/customer-password
+* https://glue.mysprykershop.com/customer-forgotten-password
+* https://glue.mysprykershop.com/customer-restore-password
+* https://glue.mysprykershop.com/access-tokens
+* https://glue.mysprykershop.com/refresh-tokens
 
 
 {% endinfo_block %}
@@ -592,7 +592,7 @@ To make sure that `RestUserFinderByAccessTokenPlugin` has been set up correctly,
 
 {% info_block warningBox "Verification" %}
 
-To verify that `OauthRefreshTokenSaverPlugin` is set up correctly, send a *POST* request to `http://glue.mysprykershop.com/access-tokens` and make sure that you get the response that includes a section with `access-token` and `refresh-token` and a new record in the `spy_oauth_refresh_token` table. You can run the following SQL-query for this purpose:
+To verify that `OauthRefreshTokenSaverPlugin` is set up correctly, send a *POST* request to `https://glue.mysprykershop.com/access-tokens` and make sure that you get the response that includes a section with `access-token` and `refresh-token` and a new record in the `spy_oauth_refresh_token` table. You can run the following SQL-query for this purpose:
 
 ```sql
 SELECT * FROM spy_oauth_refresh_token WHERE customer_reference = 'authenticated-customer-reference';
@@ -602,7 +602,7 @@ SELECT * FROM spy_oauth_refresh_token WHERE customer_reference = 'authenticated-
 
 {% info_block warningBox "Verification" %}
 
-To verify that `OauthRefreshTokenReaderPlugin` and `OauthRefreshTokenRevokerPlugin` are set up correctly, send a *DELETE* request to `http://glue.mysprykershop.com/refresh-tokens/{% raw %}{{{% endraw %}refresh_token{% raw %}}}{% endraw %}` and  make sure that the record has not empty `spy_oauth_refresh_token::revoked_at` value. You can run the following SQL-query for this purpose:
+To verify that `OauthRefreshTokenReaderPlugin` and `OauthRefreshTokenRevokerPlugin` are set up correctly, send a *DELETE* request to `https://glue.mysprykershop.com/refresh-tokens/{% raw %}{{{% endraw %}refresh_token{% raw %}}}{% endraw %}` and  make sure that the record has not empty `spy_oauth_refresh_token::revoked_at` value. You can run the following SQL-query for this purpose:
 
 ```sql
 SELECT * FROM spy_oauth_refresh_token WHERE customer_reference = 'authenticated-customer-reference';
@@ -612,7 +612,7 @@ SELECT * FROM spy_oauth_refresh_token WHERE customer_reference = 'authenticated-
 
 {% info_block warningBox "Verification" %}
 
-To verify that `OauthRefreshTokensReaderPlugin` and `OauthRefreshTokensRevokerPlugin` are set up correctly, prepare several refresh tokens and send a *DELETE* request to `http://glue.mysprykershop.com/refresh-tokens/mine` and make sure that all records related to the authenticated customer have not empty `spy_oauth_refresh_token::revoked_at` value. You can run the following SQL-query for this purpose:
+To verify that `OauthRefreshTokensReaderPlugin` and `OauthRefreshTokensRevokerPlugin` are set up correctly, prepare several refresh tokens and send a *DELETE* request to `https://glue.mysprykershop.com/refresh-tokens/mine` and make sure that all records related to the authenticated customer have not empty `spy_oauth_refresh_token::revoked_at` value. You can run the following SQL-query for this purpose:
 
 ```sql
 SELECT * FROM spy_oauth_refresh_token WHERE customer_reference = 'authenticated-customer-reference';
@@ -622,7 +622,7 @@ SELECT * FROM spy_oauth_refresh_token WHERE customer_reference = 'authenticated-
 
 {% info_block warningBox "Verification" %}
 
-To verify that `OauthRefreshTokenCheckerPlugin` is set up correctly, send a *POST* request to `http://glue.mysprykershop.com/refresh-tokens` and specify the revoked refresh token. If you get the following errors, the plugin is installed:
+To verify that `OauthRefreshTokenCheckerPlugin` is set up correctly, send a *POST* request to `https://glue.mysprykershop.com/refresh-tokens` and specify the revoked refresh token. If you get the following errors, the plugin is installed:
 
 <details open>
 <summary markdown='span'>POST request example</summary>

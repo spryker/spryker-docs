@@ -24,7 +24,7 @@ To retrieve a list of predefined return reasons, send the request:
 `GET` **/return-reasons**
 ***
 ## Request
-Sample request:  `GET https://glue.mysprykershop.com/return-reasons`
+Request sample:  `GET https://glue.mysprykershop.com/return-reasons`
 
 ## Response
 Sample response: 

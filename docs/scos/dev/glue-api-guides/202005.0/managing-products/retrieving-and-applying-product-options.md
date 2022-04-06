@@ -36,7 +36,7 @@ Endpoints:
 * `/abstract-products`
 * `/concrete-products`
 
-Sample request: `GET http://glue.mysprykershop.com/concrete-products/181_31995510?include=product-options`
+Request sample: `GET http://glue.mysprykershop.com/concrete-products/181_31995510?include=product-options`
 
 where **181_31995510** is the SKU of the product you want to retrieve options for.
 
@@ -208,7 +208,7 @@ When accessing guest carts, you need to specify the guest user ID. This is done 
 
 {% endinfo_block %}
 
-Sample requests:
+Request samples:
 
 `GET http://glue.mysprykershop.com/carts?include=items,concrete-products,product-options`
 
@@ -644,7 +644,7 @@ Orders cannot be accessed anonymously. For this reason, you always need to pass 
 
 {% endinfo_block %}
 
-Sample request: `GET http://glue.mysprykershop.com/orders/DE--3`
+Request sample: `GET http://glue.mysprykershop.com/orders/DE--3`
 
 {% info_block warningBox "Tip" %}
 

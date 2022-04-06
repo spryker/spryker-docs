@@ -19,6 +19,7 @@ A configurable bundle doesn’t have any SKU but contains an identifier to disti
 In your development, this resource can help you to let the customers set up the product the way they want and increase the diversity of the products sold.
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
 * [Glue API: Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-feature-integration.html)
@@ -26,6 +27,7 @@ For detailed information on the modules that provide the API functionality and r
 * [Glue API: Configurable Bundle + Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-product-feature-integration.html)
 
 ## Retrieve all configurable bundle templates
+
 To retrieve all configurable bundle templates, send the request:
 
 ***
@@ -36,11 +38,13 @@ To retrieve all configurable bundle templates, send the request:
 
 ### Request
 
-Request sample: `GET https://glue.mysprykershop.com/configurable-bundle-templates`
+Request sample: retrieve all configurable bundle templates
+
+`GET https://glue.mysprykershop.com/configurable-bundle-templates`
 
 ### Response
 
-Response sample:
+Response sample: retrieve all configurable bundle templates
 
 ```json
 {
@@ -78,6 +82,7 @@ Response sample:
 | name | String | Configurable bundle template name. |
 
 ## Retrieve a configurable bundle template
+
 To retrieve information about a specific Configurable Bundle template, send the request:
 
 ***
@@ -105,7 +110,7 @@ To retrieve information about a specific Configurable Bundle template, send the 
 | `https://glue.mysprykershop.com/configurable-bundle-templates/c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de?include=configurable-bundle-template-image-sets` | Retrieve information about the Configurable Bundle template `c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de with image sets`. |
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a specific configurable bundle</summary>
+<summary markdown='span'>Response sample: retrieve information about a configurable bundle</summary>
 
 ```json
 {
@@ -124,7 +129,7 @@ To retrieve information about a specific Configurable Bundle template, send the 
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve informatio about a specific configurable bundle including configurable bundle template slots, concrete products per slot, cocrete product prices, and image sets</summary>
+<summary markdown='span'>Response sample: retrieve information about a configurable bundle including configurable bundle template slots, concrete products per slot, concrete product prices, and image sets</summary>
 
 ```json
 {
@@ -662,7 +667,7 @@ To retrieve information about a specific Configurable Bundle template, send the 
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a specific cofigurable bundle including configurable bundle image sets</summary>
+<summary markdown='span'>Response sample: retrieve information about a specific configurable bundle including configurable bundle image sets</summary>
 
 ```json
 {

@@ -241,7 +241,6 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
-
 </details>
 
 <details>
@@ -1532,7 +1531,7 @@ It is the responsibility of the API Client to track whether the selected items a
             "discounts": []
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/guest-carts/54ac21a6-c08a-5d09-a2f0-9f9ef8f634cd"
+            "self": "https://glue.mysprykershop.comm/guest-carts/54ac21a6-c08a-5d09-a2f0-9f9ef8f634cd"
         }
     }
 }

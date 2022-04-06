@@ -223,15 +223,7 @@ entries:
         url: /docs/scos/dev/feature-walkthroughs/prices-feature-walkthrough/money-module-reference-information.html
       - title: '"PriceProduct module details: reference information"'
         url: /docs/scos/dev/feature-walkthroughs/prices-feature-walkthrough/priceproduct-module-details-reference-information.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
     - title: Shipment
-      include_versions:
-      - "201811.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
       nested:
       - title: Shipment
         url: /docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/shipment-feature-walkthrough.html
@@ -239,132 +231,49 @@ entries:
         url: /docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
       - title: Shipment Module Overview
         url: /docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/shipment-module-overview.html
-        include_versions:
-        - "201811.0"
       - title: '"Reference information: Shipment method entities in the database"'
         url: /docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/reference-information-shipment-method-entities-in-the-database.html
-        include_versions:
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
-    - title: Refunds
-      include_versions:
-      - "201811.0"
-      - "201903.0"
-      - "201907.0"
-      nested:
-      - title: Refunds
-        url: /docs/scos/dev/feature-walkthroughs/refunds-feature-walkthrough/refunds-feature-walkthrough.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
-      - title: '"Reference information: Refund module"'
-        url: /docs/scos/dev/feature-walkthroughs/refunds-feature-walkthrough/reference-information-refund-module.html
-        include_versions:
-        - "201811.0"
-        - "201903.0"
-        - "201907.0"
     - title: Cms
       url: /docs/scos/dev/feature-walkthroughs/cms-feature-walkthrough/cms-feature-walkthrough.html
-      include_versions:
-      - "201811.0"
-      - "202009.0"
-      - "202108.0"
-      - "202005.0"
       nested:
       - title: CMS Extension Points
         url: /docs/scos/dev/feature-walkthroughs/cms-feature-walkthrough/cms-extension-points-reference-information.html
-        include_versions:
-        - "201811.0"
-        - "202009.0"
-        - "202108.0"
     - title: Product Relations
-      include_versions:
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
       nested:
       - title: Product Relations- module relations
         url: /docs/scos/dev/feature-walkthroughs/product-relations-feature-walkthrough/product-relations-module-relations.html
-        include_versions:
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
       - title: Product Relations
         url: /docs/scos/dev/feature-walkthroughs/product-relations-feature-walkthrough/product-relations-feature-walkthrough.html
-        include_versions:
-        - "202005.0"
-        - "202009.0"
-        - "202108.0"
     - title: Configurable Product
       url: /docs/scos/dev/feature-walkthroughs/configurable-product-feature-walkthrough.html
-      include_versions:
-      - "202108.0"
-      - "202200.0"
     - title: Checkout
       url: /docs/scos/dev/feature-walkthroughs/checkout-feature-walkthrough.html
-      include_versions:
-      - "202108.0"
     - title: Configurable Bundle
       url: /docs/scos/dev/feature-walkthroughs/configurable-bundle-feature-walkthrough.html
-      include_versions:
-      - "202009.0"
-      - "202108.0"
     - title: Merchant
       url: /docs/scos/dev/feature-walkthroughs/merchant-feature-walkthrough.html
-      include_versions:
-      - "202108.0"
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
     - title: Merchant Custom Prices
       url: /docs/scos/dev/feature-walkthroughs/merchant-custom-prices-feature-walkthrough.html
-      include_versions:
-      - "202108.0"
     - title: Merchant B2B Contracts
       url: /docs/scos/dev/feature-walkthroughs/merchant-b2b-contracts-feature-walkthrough.html
-      include_versions:
-      - "202108.0"
     - title: Product
       url: /docs/scos/dev/feature-walkthroughs/product-feature-walkthrough.html
-      include_versions:
-      - "202108.0"
     - title: File Manager
       url: /docs/scos/dev/feature-walkthroughs/file-manager-feature-walkthrough.html
-      include_versions:
-      - "202108.0"
     - title: Return Management
       url: /docs/scos/dev/feature-walkthroughs/return-management-feature-walkthrough.html
-      include_versions:
-      - "202108.0"
     - title: Measurement Units
       url: /docs/scos/dev/feature-walkthroughs/measurement-units-feature-walkthrough.html
-      include_versions:
-      - "202108.0"
     - title: Search
       url: /docs/scos/dev/feature-walkthroughs/search-feature-walkthrough.html
-      include_versions:
-      - "202108.0"
     - title: Agent Assist
       url: /docs/scos/dev/feature-walkthroughs/agent-assist-feature-walkthrough.html
-      include_versions:
-      - "202108.0"
     - title: Customer Access
       url: /docs/scos/dev/feature-walkthroughs/customer-access-feature-walkthrough.html
-      include_versions:
-      - "202108.0"
     - title: Alternative Products
       url: /docs/scos/dev/feature-walkthroughs/alternative-products-feature-walkthrough.html
-      include_versions:
-      - "202108.0"
     - title: Non-splittable Products
       url: /docs/scos/dev/feature-walkthroughs/non-splittable-products-feature-walkthrough.html
-      include_versions:
-      - "202108.0"
   - title: Glue API guides
     nested:
     - title: Glue REST API

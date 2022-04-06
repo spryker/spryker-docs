@@ -229,8 +229,6 @@ entries:
         url: /docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/shipment-feature-walkthrough.html
       - title: '"Reference information: Shipment method plugins"'
         url: /docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
-      - title: Shipment Module Overview
-        url: /docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/shipment-module-overview.html
       - title: '"Reference information: Shipment method entities in the database"'
         url: /docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/reference-information-shipment-method-entities-in-the-database.html
     - title: Cms

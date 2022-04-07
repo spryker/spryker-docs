@@ -1,6 +1,6 @@
 ---
 title: Order Thresholds feature overview
-description: Order thresholds allow you to control the values of the orders your customers place. You can define a maximum or a minimum value that should be reached for an order to be placed.
+description: Order thresholds let you control the values of the orders your customers place. You can define a maximum or a minimum value that should be reached for an order to be placed.
 last_updated: Jul 19, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/order-thresholds
@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/order-thresholds
 ---
 
-Order thresholds allow you to control the values of the orders your customers place. You can define a maximum or a minimum value that should be reached for an order to be placed. Apart from just disallowing a customer to place an order if a threshold condition is not fulfilled, you can request them to pay different types of fees.
+Order thresholds let you control the values of the orders your customers place. You can define a maximum or a minimum value that should be reached for an order to be placed. Apart from just disallowing a customer to place an order if a threshold condition is not fulfilled, you can request them to pay different types of fees.
 
 
 ## Hard maximum threshold
@@ -30,7 +30,7 @@ A *minimum* threshold is a monetary value that should be reached for an order to
 
 
 ### Hard minimum threshold
-A *hard minimum* threshold is a minimum threshold that under no conditions allows a customer to place an order if its subtotal is below the defined value.
+A *hard minimum* threshold is a minimum threshold that under no conditions lets a customer place an order if its subtotal is below the defined value.
 
 For example, if the hard minimum threshold value is €400, and a customer adds products for €195 to cart, they cannot place the order. If the customer adds more products and the order subtotal becomes equal to or greater than €400, they can place the order.
 
@@ -38,7 +38,7 @@ See [Setting up a minimum hard threshold](/docs/scos/user/back-office-user-guide
 
 
 ### Soft minimum threshold
-A *soft minimum* threshold is a minimum threshold that, under the conditions defined by the shop owner, allows a customer to place an order even if its subtotal is below the minimum soft threshold.
+A *soft minimum* threshold is a minimum threshold that, under the conditions defined by the shop owner, lets a customer place an order even if its subtotal is below the minimum soft threshold.
 
 The following soft minimum thresholds are shipped by default:
 

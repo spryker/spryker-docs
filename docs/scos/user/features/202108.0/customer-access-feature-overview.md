@@ -12,9 +12,9 @@ redirect_from:
   - /docs/en/customer-access-feature-overview
 ---
 
-_Customer Access_ allows store administrators to define if a certain information is visible to logged out users.
+_Customer Access_ lets store administrators define whether a certain information is visible to logged out users.
 
-The feature allows you to give your customers the ability to hide content from customers that are not logged-in to their shop. You can restrict access to prices, products, product availability, carts, and shopping lists.
+The feature lets you give your customers the ability to hide content from customers that are not logged-in to their shop. You can restrict access to prices, products, product availability, carts, and shopping lists.
 
 ![Content Restrictions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Hide+Content+from+Logged+out+Users/Hide+Content+from+Logged+out+Users/Content+restrictions.png)
 

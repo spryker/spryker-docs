@@ -1,6 +1,6 @@
 ---
 title: Availability  Notification feature overview
-description: The feature allows both registered and guest users to subscribe to the newsletter by specifying the email address they wish to receive the notifications to
+description: The feature lets registered and guest users subscribe to the newsletter by specifying the email address they wish to receive the notifications to
 last_updated: Aug 12, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/availability-notification-feature-overview

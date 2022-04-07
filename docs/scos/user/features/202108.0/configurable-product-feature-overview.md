@@ -20,7 +20,7 @@ This is the Beta version of the feature and is therefore subject to changes.
 
 The *Configurable Product* feature introduces a new type of product that can be customized by customers—a configurable product.
 
-The feature allows you to sell complex products with modular designs or services. For example, if you sell clothes, you can allow your customers to define the material, color, and add their name to the product. Or, if you are selling a service, you can allow them to select a preferred date and time of the service delivery.
+The feature lets you sell complex products with modular designs or services. For example, if you sell clothes, you can let your customers define the material, color, and add their name to the product. Or, if you are selling a service, you can let them select a preferred date and time of the service delivery.
 
 ## Configurable product
 
@@ -61,7 +61,7 @@ In the orders, they can see which products are configurable ones. They can also 
 
 ## Product configurator
 
-A *product configurator* is a tool that allows customers to customize the product parameters provided by the shop owner or product manufacturer.
+A *product configurator* is a tool that lets customers customize the product parameters provided by the shop owner or product manufacturer.
 
 You can create a product configurator as a part of your shop or integrate a third-party one. The feature is shipped with an exemplary product configurator. The exemplary product configurator allows configuring *Date* and *Preferred time of the day* parameters.
 
@@ -93,7 +93,7 @@ Display parameter values are usually converted from regular parameter values to 
 
 The availability of a configurable product is based on the selected configuration.
 
-A customer selects the quantity of a product in a configurator or in a shop. If a configurator allows a customer to select a product quantity, it passes the selected quantity to the shop as a parameter. Otherwise, it passes the availability as a parameter, and the customer selects the product quantity in the shop.
+A customer selects the quantity of a product in a configurator or in a shop. If a configurator lets a customer select a product quantity, it passes the selected quantity to the shop as a parameter. Otherwise, it passes the availability as a parameter, and the customer selects the product quantity in the shop.
 
 If a configurator does not pass availability, [regular product availability](/docs/marketplace/user/features/{{page.version}}/marketplace-inventory-management-feature-overview.html) is used.
 

@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/file-uploader
 ---
 
-The **File Uploader** feature is helpful when a Back Office user needs to add instructions or additional documentation to the product as an attachment. These files can further be downloaded to visitors' PCs.
+The *File Uploader* feature is helpful when a Back Office user needs to add instructions or additional documentation to the product as an attachment. These files can further be downloaded to visitors' PCs.
 
 A Back Office user can manage the media files in the **Back Office: File Manager** menu that comprises 3 submenus:
 
@@ -29,7 +29,7 @@ The files are kept in folders.
 
 {% endinfo_block %}
 
-The changes will take effect after **Save** is selected.
+The changes take effect after **Save** is selected.
 ![File tree](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/file-tree.png)
 
 Every folder within File Directories Tree can be deleted by selecting **Delete Directory**.
@@ -47,14 +47,14 @@ To upload a file to a particular directory follow the steps:
 2. In the right section, click on **Add File**:
 ![Upload files to the Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/add-file.png)
 
-3. On the **Add a File page**:
+3. On the **Add a File page**, do the following:
 * In the **File name** field, enter the name of the file that will be displayed in the shop.
 * In the **File upload** field, click **Choose File** and from your local storage, select the file you are going to upload to the Back Office.
 
 {% info_block infoBox %}
 
-If Use file name option is selected, then File Name field is not required and will be disregarded. In this case, the file will be uploaded with its original name (the one you see in your local storage
-).
+If Use file name option is selected, then File Name field is not required and will be disregarded. In this case, the file will be uploaded with its original name (the one you see in your local storage).
+
 {% endinfo_block %}
 
 {% info_block warningBox %}
@@ -62,12 +62,13 @@ If Use file name option is selected, then File Name field is not required and wi
 A Back Office user cannot upload an empty text file.
 
 {% endinfo_block %}
+
 * Add translations for the File Name for every locale, if necessary.
 
 ![Add translations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/add-file+menu.png)
 
 4. After the file is uploaded it is available in the Files list section in the directory:
-5. 
+5.
 ![Files list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/files-list.png)
 
 ## File List
@@ -78,12 +79,12 @@ File List submenu represents a table listing all the files uploaded to the Back 
 A Back Office user can perform the following actions to files:
 
 * **View**—shows the versions the file has.
-* **Edit**—You can re-upload an updated version of the file and edit its name.
+* **Edit**—you can re-upload an updated version of the file and edit its name.
 * **Delete**—delete the file in the directory.
 
 ### Versions
 
-**File Uploader** feature allows a Back Office user to have several versions for every file.
+**File Uploader** feature lets a Back Office user have several versions for every file.
 
 For example, at first you uploaded _**Instruction1.txt**_ file (**_v.1_**), then you updated and re-uploaded it to the Administration Interface as **_v.2_**.
 After that you decided that the image instruction would be more useful in this case and uploaded **_Instruction.png_** (**_v.3_**) to the file.
@@ -126,7 +127,7 @@ The shop visitor will download the latest version of the file.
 
 ## MIME Type Settings
 
-**MIME Type Settings** submenu allows a Back Office user to define the file types that can be uploaded to the Administration Interface based on their nature and format.
+**MIME Type Settings** submenu lets a Back Office user define the file types that can be uploaded to the Administration Interface based on their nature and format.
 
 {% info_block infoBox %}
 
@@ -141,7 +142,7 @@ Only files with the MIME types ticked in "Is Allowed" column will be allowed for
 
 {% endinfo_block %}
 
-Most popular file types that a shop owner can allow for uploading in the Administration Interface are:
+Most popular file types that a shop owner can allow uploading in the Administration Interface are:
 
 | TYPE | DESCRIPTION | EXAMPLE OF MIME TYPE |
 | --- | --- | --- |

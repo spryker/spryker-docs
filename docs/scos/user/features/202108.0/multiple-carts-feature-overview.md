@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/multiple-carts-feature-overview
 ---
 
-Sometimes customers need more than one shopping cart, for example, one for daily purchases, the other one for monthly expenses. The *Multiple Carts* feature allows you to create and manage multiple shopping carts in one customer account.
+Sometimes customers need more than one shopping cart, for example, one for daily purchases, the other one for monthly expenses. The *Multiple Carts* feature lets you create and manage multiple shopping carts in one customer account.
 
 ## Creating and managing multiple shopping carts
 
@@ -48,9 +48,9 @@ The table bellow provides detailed information on the possible actions to manage
 
 | ACTION | DESCRIPTION |
 | --- | --- |
-| Edit Name | Allows a customer to edit the name of the shopping cart. |
+| Edit Name | lets a customer edit the name of the shopping cart. |
 | Duplicate | Creates a copy of the chosen shopping cart including the items added to the cart.<br>The duplicate copy of the cart is named according to the template: `<Name of the original cart> Copied At <Mo. dd, yyyy hh:mm>` <br>A cart can be converted into shopping list on the *Shopping cart* page by clicking on **To shopping list**.|
-| Dismiss | Allows a customer to dismiss a shared shopping cart. |
+| Dismiss | lets a customer dismiss a shared shopping cart. |
 | Delete | Deletes the shopping cart. <br>Deleting a shopping cart also deletes the items added to it. |
 
 {% info_block infoBox %}

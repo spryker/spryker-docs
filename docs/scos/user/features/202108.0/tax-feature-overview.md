@@ -20,7 +20,7 @@ redirect_from:
   - /docs/en/international-tax-rates-sets-1
 ---
 
-The *Tax* feature allows you to define taxes for the items you sell. The feature is represented by two entities: tax rates and tax sets.
+The *Tax* feature lets you define taxes for the items you sell. The feature is represented by two entities: tax rates and tax sets.
 
 The tax rate is the percentage of the sales price that buyer pays as a tax. In the default Spryker implementation, the tax rate is defined per country where the tax applies. See [Managing tax rates](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-rates/managing-tax-rates.html) for details on how to create and manage tax rates for countries in the Back Office.
 

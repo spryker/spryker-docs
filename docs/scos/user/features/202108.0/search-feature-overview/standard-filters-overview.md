@@ -20,7 +20,7 @@ With Standard Filters, you can filter the products according to the specified pr
 ## Filter types
 In Spryker Commerce OS, the following filter types exist:
 
-* **Single-select**—allows a user to select only one filter option.
+* **Single-select**—lets a user select only one filter option.
   
 ![Single Select](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Standard+Filters/single-select-b2c.gif)
 

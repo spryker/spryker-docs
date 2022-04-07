@@ -16,7 +16,7 @@ The _Scheduled Prices_ feature enables shop administrators to schedule price cha
 
 Instead of changing prices manually, you can prepare a list of prices with time frames which are to be applied automatically. For example, you might want to increase prices of the products that are of great demand on a certain date before the Christmas eve and decrease them on a certain date afterward. The Scheduled Prices feature enables you to specify the prices and the dates beforehand.
 
-An in-built cron-job will switch the prices on the specified dates for all the specified products automatically. Apart from major events, you can use this feature to update prices across the shop without having to do it manually for each product, since the feature allows you to do it from one place in bulk.
+An in-built cron-job will switch the prices on the specified dates for all the specified products automatically. Apart from major events, you can use this feature to update prices across the shop without having to do it manually for each product, since the feature lets you do it from one place in bulk.
 
 ## Price types
 

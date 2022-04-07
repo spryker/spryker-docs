@@ -117,7 +117,7 @@ The stock will then be calculated as follows:
 
 The Quantity value will always be an integer. It is used to split the ordered products into **sales order items**.
 
-For example, a customer wants to purchase 3 smartphones. In terms of Spryker OS, 1 smartphone is bought 3 times. In the Back Office, you'll see the order split into 3 sales order items: sales order item #1 with 1 smartphone, sales order item #2 with 1 smartphone, and sales order item #3 with 1 smartphone. This allows you to refund each smartphone separately.
+For example, a customer wants to purchase 3 smartphones. In terms of Spryker OS, 1 smartphone is bought 3 times. In the Back Office, you'll see the order split into 3 sales order items: sales order item #1 with 1 smartphone, sales order item #2 with 1 smartphone, and sales order item #3 with 1 smartphone. This lets you refund each smartphone separately.
 
 ### Products with a decimal value in the stock
 

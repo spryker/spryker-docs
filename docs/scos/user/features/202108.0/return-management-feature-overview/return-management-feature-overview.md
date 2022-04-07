@@ -16,7 +16,7 @@ redirect_from:
   - /docs/en/return-details-reference-information
 ---
 
-The *Return Management* feature allows you to create and manage returns for a sales order.
+The *Return Management* feature lets you create and manage returns for a sales order.
 
 Once an order has been shipped, the registered buyer or a Back Office user can initiate a return of the whole order or its individual items. See [Creating returns](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-returns.html) for details on how they can do that.
 

@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/mailing-notifications-feature-overview
 ---
 
-The *Mailing & Notifications* feature allows you to manage newsletters and notifications.
+The *Mailing & Notifications* feature lets you manage newsletters and notifications.
 
 ## Newsletter subscriptions
 

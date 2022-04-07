@@ -16,7 +16,7 @@ redirect_from:
   - /docs/en/product-set
 ---
 
-The *Product Sets* feature allows you to create and sell collections of products. For example, you can create a stationary workspace set, a set of clothing or accessories, or furniture for a specific room. The "Shop-the-Look" function is a common example of a product set, where you can build a collection of items based on relations or recommendations.
+The *Product Sets* feature lets you create and sell collections of products. For example, you can create a stationary workspace set, a set of clothing or accessories, or furniture for a specific room. The "Shop-the-Look" function is a common example of a product set, where you can build a collection of items based on relations or recommendations.
 
 ![product-set-on-the-storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Sets/product-set-on-the-storefront.png)
 

@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/password-management-overview
 ---
 
-*Password Management* enables Spryker admins to manage customer account passwords. It also allows B2B and B2C Shoppers to manage their own account passwords.
+*Password Management* lets Spryker admins manage customer account passwords. It also lets B2B and B2C Shoppers manage their own account passwords.
 
 When you create a customer account in the Back Office, you do not enter the password. Instead, you can select to send a password reset email to the customer account’s email address. This way, the customer knows that the account has been created and they need to reset the password to access it. See [Creating a Customer](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html#creating-customers) to learn how Spryker admin sends password reset emails when creating customer accounts.
 

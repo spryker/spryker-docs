@@ -14,7 +14,7 @@ redirect_from:
 
 
 
-Company accoounts allow to build an organizational structure of your B2B business.
+Company accounts let you build an organizational structure of your B2B business.
 
 ## Company
 

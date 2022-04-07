@@ -89,7 +89,7 @@ The price is displayed dynamically, taking into account the quantity, currency, 
 
 ## File upload form for concrete products
 
-To save your buyers' time and help them order the products in bulk quickly, enable your customers to use the *File Upload* form. The *File Upload* form allows users to add multiple products to the *Quick Order* page by uploading data using a .csv file.
+To save your buyers' time and help them order the products in bulk quickly, enable your customers to use the *File Upload* form. The *File Upload* form lets users add multiple products to the *Quick Order* page by uploading data using a .csv file.
 
 {% info_block infoBox %}
 

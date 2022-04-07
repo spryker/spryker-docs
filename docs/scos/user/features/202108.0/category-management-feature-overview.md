@@ -1,6 +1,6 @@
 ---
 title: Category Management feature overview
-description: The feature allows keeping your product catalog organized and comprehensible for the customers who can easily navigate the storefront and search products quicker
+description: The feature lets you keep your product catalog organized and comprehensible for the customers who can easily navigate the storefront and search products quicker
 last_updated: Oct 20, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/category-management-feature-overview
@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/category-management-feature-overview
 ---
 
-A category is a set of products that share a common attribute and, therefore, can be united logically. The *Category Management* feature allows Back Office users to structure products into a logical system where each product belongs to a category or set of interrelated categories. You can [assign categories to all or individual stores](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html) from the Back Office or [import stores for categories](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category-store.csv.html). For details on how a Back Office user can group products under categories, see [Assigning products to categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html).
+A category is a set of products that share a common attribute and, therefore, can be united logically. The *Category Management* feature lets Back Office users structure products into a logical system where each product belongs to a category or set of interrelated categories. You can [assign categories to all or individual stores](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html) from the Back Office or [import stores for categories](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category-store.csv.html). For details on how a Back Office user can group products under categories, see [Assigning products to categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html).
 
 ## Root, parent, and child categories
 
@@ -37,7 +37,7 @@ For more information about types of category templates, see [Category page templ
 
 ## Category filters
 
-Through category filters, you can locale items better and add customizable category filters to the catalog pages on the Storefront. They also allow you to add, rearrange, and define filters for any given parameter in the category tree, such as price or brand. For details on how a Back Office user can add and manage category filters, see Managing category filters.
+Through category filters, you can locale items better and add customizable category filters to the catalog pages on the Storefront. They also let you add, rearrange, and define filters for any given parameter in the category tree, such as price or brand. For details on how a Back Office user can add and manage category filters, see Managing category filters.
 
 ### Filter preferences
 
@@ -45,7 +45,7 @@ The default filter functionality includes s*tandard filters* and *dynamic filter
 
 #### Standard filters
 
-On the Storefront, the standard filters allow buyers to narrow down the search results by filtering products according to the specified price range, product ratings, product labels, color, material, brand, etc. For more details about standard filters, see [Standard filters](/docs/scos/user/features/{{page.version}}/search-feature-overview/standard-filters-overview.html).
+On the Storefront, the standard filters let buyers narrow down the search results by filtering products according to the specified price range, product ratings, product labels, color, material, brand, etc. For more details about standard filters, see [Standard filters](/docs/scos/user/features/{{page.version}}/search-feature-overview/standard-filters-overview.html).
 
 #### Dynamic filters and facets
 

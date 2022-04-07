@@ -16,7 +16,7 @@ redirect_from:
   - /docs/en/shopping-lists
 ---
 
-A shopping list is a list of the items that shoppers buy or plan to buy frequently or regularly. For example, a consumer can compile a shopping list of the products they purchase every week. Shopping lists allow a buyer to have a quick overview of the products they are planning to buy and the sum of money they are going to spend.
+A shopping list is a list of the items that shoppers buy or plan to buy frequently or regularly. For example, a consumer can compile a shopping list of the products they purchase every week. Shopping lists let a buyer have a quick overview of the products they are planning to buy and the sum of money they are going to spend.
 
 A shopping list is always saved, disregarding if a company user logs out and logs in again—the list is still available. The shopping list does not reserve products on stock, so adding an item to the shopping list does not affect item availability. However, a company user can easily convert any shopping list into a shopping cart to proceed with the Checkout.
 There are two ways to create a shopping list:
@@ -116,7 +116,7 @@ Besides other products, a user with *Full access* rights is allowed to see alter
 7. **Deleting a shopping list**
 
 8. **Deleting items in a shopping list**: The shopping list items can be deleted on the **Edit Shopping list** page.
-   
+
 ![Shared full access](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/shared-full-access.png)
 
 It is possible to grant different access rights on a shopping list to a business unit and users belonging to it. For example, a shopping list can be shared with *Read only* permissions to a business unit, but some of its users might be granted *Full access* permissions. In this case, these users will have *Full access* to the shopping list, whereas the rest of the business unit members will be entitled to *Read only* access.

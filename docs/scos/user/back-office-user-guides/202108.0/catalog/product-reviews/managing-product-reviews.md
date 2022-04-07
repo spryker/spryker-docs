@@ -25,7 +25,7 @@ Learn how to:
 
 ## Prerequisites
 
-To start working with reviews, navigate to the **Products > Product Reviews** section.
+To start working with reviews, navigate to the **Products&nbsp;<span aria-label="and then">></span> Product Reviews** section.
 
 ## Checking reviews
 

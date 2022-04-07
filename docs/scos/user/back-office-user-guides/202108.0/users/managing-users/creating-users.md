@@ -21,7 +21,7 @@ This document describes how to create users in the Back Office.
 
 1. If you are new to the **Users** section, you might want to start with [Best practices: Managing users and their permissions with roles and groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/best-practices-managing-users-and-their-permissions-with-roles-and-groups.html).
 2. Create at least one user group. For instructions, see [Creating user groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-groups/creating-user-groups.html).
-3. To start working with users, go to **Users** > **Users**.
+3. To start working with users, go to **Users&nbsp;<span aria-label="and then">></span> Users**.
 
 Review the [reference information](#reference-information-creating-users) before you start, or look up the necessary information as you go through the process.
 

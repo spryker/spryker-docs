@@ -23,7 +23,7 @@ This topic describes how to create categories.
 
 ## Prerequisites
 
-To start creating categories, go to **Catalog** > **Categories**
+To start creating categories, go to **Catalog&nbsp;<span aria-label="and then">></span> Categories**
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 

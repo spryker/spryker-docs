@@ -18,7 +18,7 @@ You can consider product lists as conditions under which companies see products 
 
 ## Prerequisites
 
-To start working with product lists, go to **Catalog** > **Product Lists**.
+To start working with product lists, go to **Catalog&nbsp;<span aria-label="and then">></span> Product Lists**.
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 

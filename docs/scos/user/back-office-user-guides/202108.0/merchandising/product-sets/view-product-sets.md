@@ -5,7 +5,7 @@ template: back-office-user-guide-template
 ---
 
 To view a product set, do the following:
-1. Go to **Merchandising** > **Product Sets**.
+1. Go to **Merchandising&nbsp;<span aria-label="and then">></span> Product Sets**.
     This opens the **Product Sets** page.
 2. Next to the product set you want to view, click **View**.
 

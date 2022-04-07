@@ -16,15 +16,15 @@ This topic provides a list of steps you can perform to edit content item widgets
 
 ## Prerequisites
 
-To start editing content item widgets to pages, navigate to **Content** > **Pages**.
+To start editing content item widgets to pages, navigate to **Content&nbsp;<span aria-label="and then">></span> Pages**.
 
-To start editing content item widgets to blocks, navigate to **Content** > **Blocks**.
+To start editing content item widgets to blocks, navigate to **Content&nbsp;<span aria-label="and then">></span> Blocks**.
 
 ## Editing content item widgets in pages
 
 To edit a content item widget:
 
-1. On the *Overview of CMS Pages* page, in the *Actions* column, select **Edit** > **Placeholders** next to the block you want to add a content item widget to.
+1. On the *Overview of CMS Pages* page, in the *Actions* column, select **Edit&nbsp;<span aria-label="and then">></span> Placeholders** next to the block you want to add a content item widget to.
 2. On the *Edit Placeholders: [CMS Page Name]* page, in the *Placeholder* tab editor, click a widget element.
 
 ![Content item widget edit menu](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Editing+Content+Item+Widgets/content-item-widget-menu.png)

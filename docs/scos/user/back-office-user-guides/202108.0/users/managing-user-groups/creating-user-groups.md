@@ -18,7 +18,7 @@ This document describes how to create user groups.
 
 1. If you are new to the **Users** section, you might want to start with [Best practices: Managing users and their permissions with roles and groups](/docs/scos/user/back-office-user-guides/{{page.version}}/users/best-practices-managing-users-and-their-permissions-with-roles-and-groups.html).
 2. Create at least one user role. For instructions, see [Creating user roles](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-roles/creating-user-roles.html).
-3. To start working with user groups, go to **Users** > **User Groups**.
+3. To start working with user groups, go to **Users&nbsp;<span aria-label="and then">></span> User Groups**.
 
 Review the [reference information](#reference-information-creating-user-groups) before you start, or look up the necessary information as you go through the process.
 

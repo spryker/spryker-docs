@@ -19,7 +19,7 @@ related:
 
 This article describes how to manage abstract and concrete products.
 
-To start managing products, go to **Catalog** > **Products**.
+To start managing products, go to **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 
 ## Activating products
 
@@ -27,7 +27,7 @@ The abstract product is inactive until at least one product variant is activated
 
 To activate a product:
 1. Navigate to the product variant of the product that you want to activate:
-    **Edit** > **Variants** > **Edit product variant**
+    **Edit&nbsp;<span aria-label="and then">></span> Variants&nbsp;<span aria-label="and then">></span> Edit product variant**
 2.  In the top right corner of the *Edit Concrete Product* page, click **Activate**.
 The product turns visible to the customers of your online store.
 

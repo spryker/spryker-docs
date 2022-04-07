@@ -23,7 +23,7 @@ The *Threshold settings* page allows you to select a tax set that is applied to 
 
 ## Prerequisites
 
-To start working with threshold settings, navigate to **Administration** > **Threshold Settings**.
+To start working with threshold settings, navigate to **Administration&nbsp;<span aria-label="and then">></span> Threshold Settings**.
 
 ## Managing Threshold Settings
 

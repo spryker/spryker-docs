@@ -8,7 +8,7 @@ This document describes how to add and remove custom order references in the Bac
 
 ## Prerequisites
 
-To start working with orders, go to **Sales** > **Orders**.
+To start working with orders, go to **Sales&nbsp;<span aria-label="and then">></span> Orders**.
 
 
 ## Adding a custom order reference

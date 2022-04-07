@@ -12,7 +12,7 @@ If a sales order item is [returnable](/docs/scos/user/features/{{page.version}}/
 
 You can create returns for the items that are in **Exported** or **Delivered** states only. To learn how to change item states, see [Changing the state of order items](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/changing-the-state-of-order-items.html).
 
-To start managing orders, go to **Sales** > **Orders**.
+To start managing orders, go to **Sales&nbsp;<span aria-label="and then">></span> Orders**.
 
 ## Creating returns
 

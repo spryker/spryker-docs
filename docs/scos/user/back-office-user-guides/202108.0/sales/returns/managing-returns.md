@@ -19,7 +19,7 @@ This document describes how to manage returns in the Back Office. To learn how B
 
 ## Prerequisites
 
-To start managing returns, go to **Sales** > **Returns**.
+To start managing returns, go to **Sales&nbsp;<span aria-label="and then">></span> Returns**.
 
 ## Viewing returns
 

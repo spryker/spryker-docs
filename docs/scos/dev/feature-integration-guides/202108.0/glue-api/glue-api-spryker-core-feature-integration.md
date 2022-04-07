@@ -1,5 +1,5 @@
 ---
-title: Glue API - Spryker Сore feature integration
+title: Glue API - Spryker Core feature integration
 description: Use the guide to install the Spryker Core feature in your project.
 last_updated: Jun 17, 2021
 template: feature-integration-guide-template
@@ -98,9 +98,9 @@ To make sure that the CORS headers are set up correctly, send the OPTIONS reques
 
 {% info_block infoBox %}
 
-  -  When the `GlueApplicationConfig::isEagerRelationshipsLoadingEnabled()` option is set to `false`, no relationship is loaded, unless they are explicitly specified in the include query parameter (e.g., `/abstract-products?include=abstract-product-prices`). 
-  - When the `GlueApplicationConfig::isEagerRelationshipsLoadingEnabled()` option is set to `true`, all resource relationships is loaded by default unless you pass the empty include query parameter (e.g., `/abstract-products?include=`). If you specify needed relationships in the include query parameter, only required relationships are added to response data.
-  
+  -  When the `GlueApplicationConfig::isEagerRelationshipsLoadingEnabled()` option is set to `false`, no relationship is loaded, unless they are explicitly specified in the include query parameter (that is, `/abstract-products?include=abstract-product-prices`).
+  - When the `GlueApplicationConfig::isEagerRelationshipsLoadingEnabled()` option is set to `true`, all resource relationships is loaded by default unless you pass the empty include query parameter (that is, `/abstract-products?include=`). If you specify needed relationships in the include query parameter, only required relationships are added to response data.
+
 {% endinfo_block %}
 
 ### 3) Set up transfer objects
@@ -133,7 +133,7 @@ Make sure that the following changes have occurred:
 | RestAgentAccessTokensRequestAttributesTransfer |  class | created | src/Generated/Shared/Transfer/RestAgentAccessTokensRequestAttributesTransfer.php |
 
 {% endinfo_block %}
-    
+
 ### 4) Set up behavior
 
 Activate the following plugins:
@@ -162,16 +162,16 @@ Activate the following plugins:
 
 ```php
 <?php
-  
+
 namespace Pyz\Glue\GlueApplication;
-  
+
 use Spryker\Glue\EventDispatcher\Plugin\Application\EventDispatcherApplicationPlugin;
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\GlueApplication\Plugin\Application\GlueApplicationApplicationPlugin;
 use Spryker\Glue\Http\Plugin\Application\HttpApplicationPlugin;
 use Spryker\Glue\Router\Plugin\Application\RouterApplicationPlugin;
 use Spryker\Glue\Session\Plugin\Application\SessionApplicationPlugin;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
@@ -196,21 +196,21 @@ Create a new entry point for Glue Application:
 
 ```php
 <?php
- 
+
 use Pyz\Glue\GlueApplication\Bootstrap\GlueBootstrap;
 use Spryker\Shared\Config\Application\Environment;
 use Spryker\Shared\ErrorHandler\ErrorHandlerEnvironment;
- 
+
 define('APPLICATION', 'GLUE');
 defined('APPLICATION_ROOT_DIR') || define('APPLICATION_ROOT_DIR', realpath(__DIR__ . '/../..'));
- 
+
 require_once APPLICATION_ROOT_DIR . '/vendor/autoload.php';
- 
+
 Environment::initialize();
- 
+
 $errorHandlerEnvironment = new ErrorHandlerEnvironment();
 $errorHandlerEnvironment->initialize();
- 
+
 $bootstrap = new GlueBootstrap();
 $bootstrap
     ->boot()
@@ -227,18 +227,18 @@ Create Nginx VHOST configuration:
 server {
     # Listener for production/staging - requires external LoadBalancer directing traffic to this port
     listen 10001;
- 
+
     # Listener for testing/development - one host only, doesn't require external LoadBalancer
     listen 80;
- 
+
     server_name ~^glue\\..+\\.com$;
- 
+
     keepalive_timeout 0;
     access_log  /data/logs/development/glue-access.log extended;
- 
+
     # entry point for Glue Application
     root /data/shop/development/current/public/Glue;
- 
+
     set $application_env development;
     # Binding store
     set $application_store DE;
@@ -276,9 +276,9 @@ If everything is set up correctly, you should be able to access `https://glue.my
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\GlueApplication\Plugin\Rest\SetStoreCurrentLocaleBeforeActionPlugin;
 use Spryker\Glue\SecurityBlockerRestApi\Plugin\GlueApplication\SecurityBlockerAgentControllerAfterActionPlugin;
@@ -287,7 +287,7 @@ use Spryker\Glue\SecurityBlockerRestApi\Plugin\GlueApplication\SecurityBlockerCu
 use Spryker\Glue\SecurityBlockerRestApi\Plugin\GlueApplication\SecurityBlockerCustomerRestRequestValidatorPlugin;
 use Spryker\Glue\StoresRestApi\Plugin\StoresResourceRoutePlugin;
 use Spryker\Glue\UrlsRestApi\Plugin\GlueApplication\UrlsResourceRoutePlugin;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
@@ -300,7 +300,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new UrlResolverResourceRoutePlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ControllerBeforeActionPluginInterface[]
      */
@@ -310,7 +310,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new SetStoreCurrentLocaleBeforeActionPlugin(),
         ];
     }
-     
+
     /**
      * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\FormatResponseHeadersPluginInterface[]
      */
@@ -320,7 +320,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new EntityTagFormatResponseHeadersPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RestRequestValidatorPluginInterface[]
      */
@@ -332,7 +332,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new SecurityBlockerAgentRestRequestValidatorPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ControllerAfterActionPluginInterface[]
      */
@@ -351,13 +351,13 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\UrlsRestApi;
- 
+
 use Spryker\Glue\CategoriesRestApi\Plugin\UrlsRestApi\CategoryNodeResourceIdentifierProviderPlugin;
 use Spryker\Glue\ProductsRestApi\Plugin\UrlsRestApi\ProductAbstractResourceIdentifierProviderPlugin;
 use Spryker\Glue\UrlsRestApi\UrlsRestApiDependencyProvider as SprykerUrlsRestApiDependencyProvider;
- 
+
 class UrlsRestApiDependencyProvider extends SprykerUrlsRestApiDependencyProvider
 {
     /**
@@ -377,12 +377,12 @@ class UrlsRestApiDependencyProvider extends SprykerUrlsRestApiDependencyProvider
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\EntityTagsRestApi;
- 
+
 use Spryker\Glue\CartsRestApi\CartsRestApiConfig;
 use Spryker\Glue\EntityTagsRestApi\EntityTagsRestApiConfig as SprykerEntityTagsRestApiConfig;
- 
+
  class EntityTagsRestApiConfig extends SprykerEntityTagsRestApiConfig
 {
     /**
@@ -421,7 +421,7 @@ Send a PATCH request to `https://glue.mysprykershop.com/{% raw %}{{{% endraw %}R
 
 ```json
 HEADER If-Match: cc1eb2e0b45ee5026b72d21dbded0090
- 
+
 {
     "data": {
         "type": "RESOURCE_NAME",
@@ -455,7 +455,7 @@ Sending a wrong `If-Match` header value results in the following error:
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the `https://glue.mysprykershop.com/stores` endpoint is available: 
+Make sure that the `https://glue.mysprykershop.com/stores` endpoint is available:
 
 {% endinfo_block %}
 

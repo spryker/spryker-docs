@@ -89,8 +89,8 @@ class CustomerInstaller implements CustomerInstallerInterface
      */
     protected function executeInstallTransaction(): void
     {
-        $сustomerInstallData = []; //prepare customer data
-        foreach ($сustomerInstallData as $customerData) {
+        $customerInstallData = []; //prepare customer data
+        foreach ($customerInstallData as $customerData) {
             $customerTransfer = new CustomerTransfer();
             $customerTransfer->fromArray($customerData);
             $this->customerWriter->add($customerTransfer);

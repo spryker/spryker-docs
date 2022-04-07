@@ -16,7 +16,7 @@ redirect_from:
 
 The following example represents a real-world scenario: `CustomerRegistration`.
 
-A сustomer goes through the registration process in your frontend (Yves) and all customer information is sent to Zed. Zed uses the information to register the customer. Once the registration is completed, the customer will receive a confirmation email.
+A customer goes through the registration process in your frontend (Yves) and all customer information is sent to Zed. Zed uses the information to register the customer. Once the registration is completed, the customer will receive a confirmation email.
 
 ## 1. Handling Mail Usage
 In the model which handles the registration, you can override the  `sendRegistrationToken` function:

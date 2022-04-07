@@ -5,11 +5,11 @@ last_updated: Mar 23, 2022
 template: concept-topic-template
 ---
 
-Modules have public and private APIs. While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility is not guaranteed in the private API. For example, if you use a core method on the project level, and it is updated or removed, it can cause unexpected issues during updates.
+Modules have public and private APIs. While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility is not guaranteed in the private API. For example, if you use a core method on the project level, and it is updated or removed with an update, it can cause unexpected issues.
 
 For more information about module APIs, see [Definition of Module API](/docs/scos/dev/architecture/module-api/definition-of-module-api.html).
 
-When you are extending public API on the project level, make sure that entity names are unique, so Spryker updates are compatible with project changes. If a Spryker update introduces a core entity with a name matching a project-level entity name, their behavior might change or cause issues. To make your code unique, you can use prefixes like `Pyz` or your project's name.
+When extending public API on the project level, make sure that entity names are unique, so Spryker updates are compatible with project changes. If a Spryker update introduces a core entity with a name matching a project-level entity name, their behavior might change or cause issues. To make your code unique, you can use prefixes like `Pyz` or your project name.
 
 The names of the following entities must be unique on the project level:
 

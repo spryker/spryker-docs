@@ -5,13 +5,11 @@ last_updated: Mar 23, 2022
 template: concept-topic-template
 ---
 
-Modules have public and private APIs. More information you can get here - https://docs.spryker.com/docs/scos/dev/architecture/module-api/definition-of-module-api.html
+Modules have public and private APIs. While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility is not guaranteed in the private API.
 
-{% info_block infoBox "" %}
-While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility is not guaranteed in the private API.
-{% endinfo_block %}
+For more information about module APIs, see [Definition of Module API](/docs/scos/dev/architecture/module-api/definition-of-module-api.html).
 
-#### Example 1 of code that causes the upgradability error
+## Code that causes an upgradability error: Example 1
 
 For example, updating or reusing the private api for a form class can lead to breaking backward compatibility after Spryker update.
 

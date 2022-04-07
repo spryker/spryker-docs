@@ -11,7 +11,7 @@ For more information about module APIs, see [Definition of Module API](/docs/sco
 
 ## Example of code that causes the upgradability error
 
-`CustomerFacade` uses the `createCustomerReader` and `getCustomerCollection`. This is a  private API.
+`CustomerFacade` uses the `createCustomerReader` and `getCustomerCollection`. These are private API entities.
 
 ```php
 namespace Pyz\Zed\Customer\Business;
@@ -56,12 +56,11 @@ To resolve the error provided in the example, try the following in the provided 
 To make your code unique, use prefixes like `pyz` or your project name.
 {% endinfo_block %}
 
-## Example of resolving the error by copying and renaming the entities
+## Example of resolving the error by copying and renaming Private API entities
 
 
-
-1. Add a unique method in the factory to fetch the business model.
-2. Add a unique method in business model.
+1. Give the method a unique name and copy it to the factory to fetch the business model.
+2. Give the method a unique name and copy it to the business model.
 
 
 ```php

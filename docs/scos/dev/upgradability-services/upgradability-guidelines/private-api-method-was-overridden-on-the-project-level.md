@@ -5,12 +5,12 @@ last_updated: Mar 23, 2022
 template: concept-topic-template
 ---
 
-Modules have public and private APIs. While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility is not guaranteed in the private API. For example, if you extend a Private API functionality, and it is updated or removed with an update, it can cause unexpected issues.
+Modules have public and private APIs. While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility is not guaranteed in the private API. For example, if you extend a Private API functionality, and it is changed or removed with an update, it can cause unexpected issues.
 
 For more information about module APIs, see [Definition of Module API](/docs/scos/dev/architecture/module-api/definition-of-module-api.html).
 
 
-#### Example of code that causes an upgradability error
+## Example of code that causes an upgradability error
 
 The extended class `PyzCategoryImageEntityManager` overrides the private API core method `CategoryImageEntityManager::saveCategoryImageSet`.
 
@@ -31,7 +31,7 @@ class PyzCategoryImageEntityManager extends SprykerCategoryImageEntityManager
 }
 ```
 
-#### Example of related error in the Evaluator output
+## Example of related error in the Evaluator output
 
 ```bash
 ------------------------------------------------------------------------------------
@@ -54,15 +54,8 @@ To resolve the error provided in the example, try the following in the provided 
 3. Recommended: Extend the functionality using the [Project Modules strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules).
 4. Not recommended: On the project level, give the Private API entities unique names. For an example, see [Example of resolving the error by copying and renaming the entities](#example-of-resolving-the-error-by-copying-and-renaming-the-entities).
 
-4. [Not Recommended] Replace the private API core naming with a unique naming.
 
-
-
-{% info_block infoBox "" %}
-To make your code unique you can use prefixes. F.e. "Pyz" or {Project_mane}
-{% endinfo_block %}
-
-#### Example of resolving the error by renaming the core entity
+## Example of resolving the error by renaming the core entity
 
 Make the name of the Private API entity unique by adding `Pyz`.
 
@@ -83,7 +76,7 @@ class PyzCategoryImageEntityManager extends SprykerCategoryImageEntityManager
 }
 ```
 
-Alternatively, you can add your project name to the entity's name.
+To make the names of extended Private API entities unique, you can use any other strategy. For example, you can prefix them with your project name.
 
 
 After renaming the entity, re-evaluate the code. The same error shouldn't be returned.

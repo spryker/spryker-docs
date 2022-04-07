@@ -9,9 +9,7 @@ Modules have public and private APIs. While public API updates always support ba
 
 For more information about module APIs, see [Definition of Module API](/docs/scos/dev/architecture/module-api/definition-of-module-api.html).
 
-## Code that causes an upgradability error: Example 1
-
-For example, updating or reusing the private api for a form class can lead to breaking backward compatibility after Spryker update.
+## Code that causes an upgradability error: Extending a private API form class
 
 `CustomerAccessForm` extends `Spryker\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm`. It is a private API.
 
@@ -26,7 +24,7 @@ class CustomerAccessForm extends SprykerCustomerAccessForm
 }
 ```
 
-#### Example 1 of related error in the Evaluator output
+## Related error in the Evaluator output: Extending a private API form class
 
 ```bash
 ------------------------------------------------------------------------------------
@@ -34,23 +32,16 @@ class CustomerAccessForm extends SprykerCustomerAccessForm
 ------------------------------------------------------------------------------------
 ```
 
-#### Solution to resolve the issue
+## Resolving the error: Extending a private API form class
 
-To resolve the error provided in the example, do the following steps:
-1. [Recommended] Check if it is possible to extend functionality with "Configuration" strategy (link to "Configuration" - https://docs.spryker.com/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#configuration)
-2. [Recommended] Check if it is possible to extend functionality with "Plug and Play" strategy (link to "Plug and Play" - https://docs.spryker.com/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#plug-and-play)
-3. [Recommended] Check if it is possible to extend functionality with "Project Modules" strategy (link to "Project Modules") - https://docs.spryker.com/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules
-4. [Not Recommended] Copy the private API core functionality on the project level. Do not extend from the Private API.
+To resolve the error provided in the example, try the following in the provided order:
+1. Recommended: Extend the functionality using the [Configuration strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#configuration).
+2. Recommended: Extend the functionality using the [Plug and Play strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#plug-and-play).
+3. Recommended: Extend the functionality using the [Project Modules strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules).
+4. Not recommended: Copy the private API core functionality to the project level and give it a unique name. For an example, see []
 
-{% info_block infoBox "" %}
-Meanwhile, we are working on introducing a way to report such cases and add more extension points in the core.
-{% endinfo_block %}
+## Example of resolving the error by copying the form class to the project level
 
-{% info_block infoBox "" %}
-To make your code unique you can use prefixes. F.e. "Pyz" or {Project_mane}
-{% endinfo_block %}
-
-#### Example 1 to resolve the Evaluator check error
 ```php
 <?php
 namespace Pyz\Zed\CustomerAccessGui\Communication\Form;
@@ -63,9 +54,9 @@ class PyzCustomerAccessForm extends AbstractType
 }
 ```
 
-#### Example 2 of code that causes the upgradability error
+## Code that causes an upgradability error: Extending a private API business model
 
-Extending the private api for a business model.
+`to-provide` extends `to-proivde`. It is a private API.
 
 ```php
 namespace Pyz\Zed\CustomerAccess\Business\CustomerAccess;
@@ -78,7 +69,7 @@ class CustomerAccessFilter extends SprykerCustomerAccessFilter
 }
 ```
 
-#### Example 2 of related error in the Evaluator output
+## Related error in the Evaluator output: Extending a private API business model
 
 ```bash
 ------------------------------------------------------------------------------------
@@ -86,7 +77,8 @@ class CustomerAccessFilter extends SprykerCustomerAccessFilter
 ------------------------------------------------------------------------------------
 ```
 
-#### Example 2 to resolve the Evaluator check error
+## Example of resolving the error by copying the business model to the project level
+
 ```php
 <?php
 namespace Pyz\Zed\CustomerAccess\Business\CustomerAccess;
@@ -97,9 +89,9 @@ class PyzCustomerAccessFilter implements PyzCustomerAccessFilterInterface
 }
 ```
 
-#### Example 3 of code that causes the upgradability error
+## Code that causes an upgradability error: Extending a private API dependency provider
 
-Extending a Private API for a dependency provider.
+`to-provide` extends `to-proivde`. It is a private API.
 
 ```php
 namespace Pyz\Yves\CheckoutPage;
@@ -118,7 +110,7 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
 }
 ```
 
-#### Example 3 of related error in the Evaluator output
+## Related error in the Evaluator output: Extending a private API dependency provider
 
 ```bash
 ------------------------------------------------------------------------------------
@@ -126,9 +118,7 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
 ------------------------------------------------------------------------------------
 ```
 
-#### Example 3 to resolve the Evaluator check error
-
-To resolve this issue the dependency provider's method should be renamed.
+#### Example of resolving the error by copying the dependency provider to the project level
 
 ```php
 namespace Pyz\Yves\CheckoutPage;

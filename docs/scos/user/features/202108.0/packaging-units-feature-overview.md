@@ -30,7 +30,7 @@ redirect_from:
 
 {% endinfo_block %}
 
-The _Packaging Unit_ feature introduces a **packaging unit** that is a unit of measure used as packaging for a product. It allows including the amount of stock into a product a customer wants to buy. A shop owner can sell the same product in different packaging units, for example, apples can be sold as an "Item", a "Bag" of apples or a "Pallet" of apples. The "bag", "pallet", "box" etc. are referred to as *packaging unit types*.
+The _Packaging Unit_ feature introduces a **packaging unit** that is a unit of measure used as packaging for a product. It allows including the amount of stock into a product a customer wants to buy. A shop owner can sell the same product in different packaging units, for example, apples can be sold as an "Item", a "Bag" of apples or a "Pallet" of apples. The "bag", "pallet", and "box" are referred to as *packaging unit types*.
 
 Each packaging unit is defined on an abstract product level and is represented by one product variant, for example:
 
@@ -121,7 +121,7 @@ For example, a customer wants to purchase 3 smartphones. In terms of Spryker OS,
 
 ### Products with a decimal value in the stock
 
-The shop owner can also define stock in a decimal value, for example, 2.5, 5.65, 0.75, etc.
+The shop owner can also define stock in a decimal value, for example, 2.5, 5.65, 0.75.
 
 For example, you define your stock as 'kilogram' and have in stock 400.50 kg salmons. Each salmon weighs 2.5 kg. A customer wants to buy 10 salmons. If you consider each salmon to be a usual concrete product in your system, you will end up with a wrongly calculated stock. Since according to the formula, the customer buys 1 (amount) salmon 10 (quantity) times, which equals 10. To define a proper relation between your stock and what your customers can purchase, you need to use the Packaging Unit feature, which will convert salmons into packages: 1 salmon = 2.5 kg = 1 package. So, when your customer buys 10 salmons, you get the correct calculation: Quantity (10 packages) multiplied by Amount (2.5) equals 25 kg of stock.
 

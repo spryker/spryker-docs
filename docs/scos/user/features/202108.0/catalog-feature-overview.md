@@ -16,7 +16,7 @@ Catalogs are used to clearly build and organize your products to meet your and y
 
 Product catalogs are built by assigning attributes (defining characteristics) to products and organizing them into custom category trees. In the tree structure, you can create categories that nest sub-categories in them.
 
-For example, Electronics is a category that can encompass all the electronics you sell. You can also group different types of electronics under that category into smaller logical groups such as TVs, Cameras, Mobile Phones, etc. This approach lets you structure the information logically.
+For example, Electronics is a category that can encompass all the electronics you sell. You can also group different types of electronics under that category into smaller logical groups such as TVs, Cameras, and Mobile Phones. This approach lets you structure the information logically.
 
 With this information, we can build navigation and display product pages that dynamically list products based on a selected category.
 

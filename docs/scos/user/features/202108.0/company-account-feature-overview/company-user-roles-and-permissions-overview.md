@@ -1,6 +1,6 @@
 ---
 title: Company user roles and permissions overview
-description: Usually employees within a company have different roles (purchasing, administration, supervision, etc.). These roles are referred to as Company Roles.
+description: Usually employees within a company have different roles (purchasing, administration, supervision). These roles are referred to as Company Roles.
 last_updated: Jul 19, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/company-user-roles-and-permissions-overview
@@ -16,7 +16,7 @@ redirect_from:
   - /docs/en/company-roles-reference-information
 ---
 
-Usually employees within a company have different roles (e.g., purchasing, administration, supervision, etc.). These roles are related to Company Users and are referred to as **Company Roles**. A role can be default (“is_default” flag), which means that it is used for all new users automatically.
+Usually employees within a company have different roles (for example, purchasing, administration, supervision). These roles are related to Company Users and are referred to as **Company Roles**. A role can be default (“is_default” flag), which means that it is used for all new users automatically.
 
 Upon initial creation of the first Company User, the default role is Admin. After the Admin user has been created, he/she creates the structure of the company and can define the default role to be used further on.
 
@@ -113,7 +113,7 @@ For example, the permission to view a product, a page, or permission to place an
 
 Obviously, the permissions can not be checked at the step when user just clicks **Add to cart**, because actual order value has not been calculated yet (pre-checks have not been made yet, discounts have not been calculated). Also, the permissions check request can not be started after the cart has been updated—that would be too late, as, the cart has already been persisted. The request for rights check is made somewhere in between—specifically, right after the discounts have been calculated. That is why the so-called “termination hooks” have been implemented deep in logic, where the permissions checks are made.
 
-The termination hooks (plugin stack) do not allow the permissions sneak into the business logic foundation so it will remain clean from the permissions and not overwhelmed with “can” “if not; then…” etc.
+The termination hooks (plugin stack) do not allow the permissions sneak into the business logic foundation so it will remain clean from the permissions and not overwhelmed with “can” “if not; then…”.
 
 ![termination_hooks.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/termination_hooks.png)
 

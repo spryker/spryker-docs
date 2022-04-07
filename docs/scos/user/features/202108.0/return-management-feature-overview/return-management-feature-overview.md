@@ -33,7 +33,7 @@ Not all the order items can be returned. For an item to be returnable, it should
 * Be in *Shipped* or *Delivered* state.
 * Fall on the return dates set forth in the Return Policy.
 
-The *Return Policy* is a set of rules that defines what items can be returned: in what conditions, in what period of time, etc. Out of the box, you can only define within what period the items can be returned. For example, you can specify that an item can be returned within 14 days after the purchase.
+The *Return Policy* is a set of rules that defines what items can be returned: in what conditions, in what period of time. Out of the box, you can only define within what period the items can be returned. For example, you can specify that an item can be returned within 14 days after the purchase.
 
 {% info_block infoBox "Info" %}
 

@@ -97,7 +97,7 @@ BundleProduct have price this price, it is distributed to whole bundled items. O
 
 ## Persisting when placing an order, end of checkout
 
-Bundle product information is stored to `spy_sales_order_item_bundle`. When order is placed in order detail page you will see all bundled items stored as separate row. This allows process state machine separately for each item, for example (ship, refund, return, etc.).
+Bundle product information is stored to `spy_sales_order_item_bundle`. When order is placed in order detail page you will see all bundled items stored as separate row. This allows process state machine separately for each item, for example (ship, refund, return).
 
 If bundled item moves to reserved state machine state then corresponding bundle availability will be updated also.
 

@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/merchant-custom-prices-feature-overview
   - /docs/merchant-custom-prices-feature-overview
   - /docs/en/merchant-custom-prices-feature-overview
-related: 
+related:
   - title: HowTo - Manage business unit specific prices via data import
     link: docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/how-to-manage-business-unit-specific-prices-via-data-import.html
 ---
@@ -24,7 +24,7 @@ When talking about product prices that depend on customers they refer to, we dif
 - **Specific prices** are different prices meant for specific target audience
 ![Prices diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Prices+per+Merchant+Relations/Prices+per+Merchant+Relation+Feature+Overview/prices_diagram.png)
 
-The different price categories that can be selected based on contextual information, like customer, merchant relationship, etc. is referred to as **price dimension**.
+The different price categories that can be selected based on contextual information, like customer or merchant relationship, is referred to as **price dimension**.
 
 Currently we have the following price dimensions:
 

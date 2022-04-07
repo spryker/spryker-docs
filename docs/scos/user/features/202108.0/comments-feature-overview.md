@@ -14,7 +14,7 @@ redirect_from:
 
 The *Comments* feature provides the ability for online owners to add the comments widget. The widget lets the customers leave comments, special requests or instructions to any entity in the Spryker shop and tag these comments depending on your project specification.
 
-An *entity* is a unit or a component that has some properties and may have relationships with other entities within a system. So, in terms of Spryker Commerce OS, an entity is represented by a Shopping Cart, a Shopping List, a CMS page, etc. It is where the Comments Widget can be located.
+An *entity* is a unit or a component that has some properties and may have relationships with other entities within a system. So, in terms of Spryker Commerce OS, an entity is represented by a Shopping Cart, Shopping List, and CMS page. It is where the Comments Widget can be located.
 
 As an example of this generic solution, we have implemented Comments on the *Shopping Cart* page.
 

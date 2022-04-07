@@ -13,7 +13,7 @@ redirect_from:
 
 E-commerce solutions usually offer a huge product catalog to display products and their variations. To help buyers find the products they are looking for in the catalog, we have the *Standard Filters* feature.
 
-With Standard Filters, you can filter the products according to the specified price range, product ratings, product labels, color, material, brand etc.
+With Standard Filters, you can filter the products according to the specified price range, product ratings, product labels, color, material, or brand.
 
 ![Filter Attributes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Standard+Filters/filter-attributes-b2c.png)
 
@@ -21,15 +21,15 @@ With Standard Filters, you can filter the products according to the specified pr
 In Spryker Commerce OS, the following filter types exist:
 
 * **Single-select**—lets a user select only one filter option.
-  
+
 ![Single Select](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Standard+Filters/single-select-b2c.gif)
 
 * **Multi-select**—allows selecting several variants simultaneously.
-  
+
 ![Multi Select](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Standard+Filters/multi-select-b2c.gif)
 
 * **Range**—filters data in the dimension from the maximum and minimum value. In the current implementation of our demo shop, the range filter is applied to the abstract product prices.
-  
+
 ![Range Filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Standard+Filters/range-b2c.gif)
 
 Products appropriate for the active filters are displayed in the results.

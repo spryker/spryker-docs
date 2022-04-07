@@ -25,7 +25,7 @@ The feature’s default configuration in the Spryker Demo Shop is as follows. Wh
 
 To minimize login issues for real customers, the ban is applied by the IP address, which means you can log in to the same user account from one IP address while being locked out from another IP address. All information about blocked accounts is stored in Redis.
 
-When registering an account or changing an old password in the Demo Shop, the password must contain a combination of alphabetic, numeric, and special characters. The alphabetic characters must also be of mixed case (e.g., one lower case and one upper case), and the password length must be from 8 to 64 characters.
+When registering an account or changing an old password in the Demo Shop, the password must contain a combination of alphabetic, numeric, and special characters. The alphabetic characters must also be of mixed case (for example, one lower case and one upper case), and the password length must be from 8 to 64 characters.
 
 {% info_block warningBox "Developer guides" %}
 

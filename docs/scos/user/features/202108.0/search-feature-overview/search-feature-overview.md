@@ -14,13 +14,13 @@ redirect_from:
 Spryker is shipped with Elasticsearch as the default search solution. Elasticsearch provides all the basic search functionalities. You can extend or customize it to fit your needs.
 
 By default, the following information is indexed:
-- General product information (name, description, SKU, etc.)
+- General product information (name, description, SKU)
 - Product reviews
 - Product attributes
 - CMS pages
 
 **General product information**
-Everything you have on the product details page is indexed. Therefore, it is important that you provide full and accurate information here, like a complete title (for example, not just *Samsung Galaxy A03*, but *Samsung Galaxy A03 Core 2/32GB Blue*), descriptions, manufacturer information, etc.
+Everything you have on the product details page is indexed. Therefore, it is important that you provide full and accurate information here, like a complete title (for example, not just *Samsung Galaxy A03*, but *Samsung Galaxy A03 Core 2/32GB Blue*), descriptions, or manufacturer information.
 
 **Product reviews**
 The indexed content includes summary and description of [product reviews](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html). If any of the text from either summary or description matches the search query, the product appears on a search result page.

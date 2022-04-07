@@ -16,7 +16,7 @@ redirect_from:
   - /docs/en/product-options
 ---
 
-The *Product Options* feature lets a Back Office user create and assign product options to abstract products. Product options are product additions that a customer can select on the product detail page before adding the product to the cart. For example, the product options can be gift wrappings for products, insurance, warranty, etc. Product options do not have stock, but a SKU linked to product abstracts. Thus, you cannot purchase them without buying a corresponding product.
+The *Product Options* feature lets a Back Office user create and assign product options to abstract products. Product options are product additions that a customer can select on the product detail page before adding the product to the cart. For example, the product options can be gift wrappings for products, insurance, or warranty. Product options do not have stock, but a SKU linked to product abstracts. Thus, you cannot purchase them without buying a corresponding product.
 
 Each product option is defined by:
 * Product option group name
@@ -49,7 +49,7 @@ See [Creating a Product Option](/docs/scos/user/back-office-user-guides/{{page.v
 Each product option group may contain as many product options as you need. For example, you can offer insurance services (**product option group**) for the product with several **product options**:
 * One-year coverage insurance $100.
 * Two-yer coverage insurance $150.
-* Three-year coverage insurance $200 etc.
+* Three-year coverage insurance $200.
 
 {% endinfo_block %}
 

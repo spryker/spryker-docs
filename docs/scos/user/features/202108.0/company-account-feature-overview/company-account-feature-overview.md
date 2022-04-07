@@ -13,7 +13,7 @@ redirect_from:
   - /docs/en/company-account
 ---
 
-A B2B business model implies bilateral commercial relations between businesses, so a company is the top figure of every B2B marketplace. Each company has a specific organizational structure with its divisions (units) and employee roles. At some point or another, a B2B business owner would need separate accounts for employees to constrain or extend rights in regards to products, orders, confidential information, etc.
+A B2B business model implies bilateral commercial relations between businesses, so a company is the top figure of every B2B marketplace. Each company has a specific organizational structure with its divisions (units) and employee roles. At some point or another, a B2B business owner would need separate accounts for employees to constrain or extend rights in regards to products, orders, confidential information.
 
 The *Company Account* feature lets you control user access to the system within an organization by configuring different permissions and roles for the company's entities (units) and users. You can set up your own company structure of business units and users with various levels of permissions and roles.
 

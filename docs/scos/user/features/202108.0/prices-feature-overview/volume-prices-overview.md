@@ -83,7 +83,7 @@ Once the product is added to the shopping list or to the cart, the item price co
 ## Threshold
 Volume pricing is applied when a certain threshold is reached.
 
-Threshold is a minimum value that serves as a benchmark/boundary for a discounted price when the product is dependent on the volume (e.g. the number of units of the product) bought.
+Threshold is a minimum value that serves as a benchmark/boundary for a discounted price when the product is dependent on the volume (for example, the number of units of the product) bought.
 
 {% info_block infoBox %}
 This means that if you buy more quantity of products or sometimes may be group of products, you would get discount based on the volume of purchase. All of the individual products exceeding the threshold will receive the special price.

@@ -31,7 +31,7 @@ On initial registration of a company, in the Back Office, it appears with the *P
 
 ## Business unit
 
-A company consists of several *business units* which you can consider as physical divisions of the company. The business units, can have a hierarchical structure too. They can have their own departments, teams, etc. Business units also have metadata, like a tax-number.
+A company consists of several *business units* which you can consider as physical divisions of the company. The business units, can have a hierarchical structure too. They can have their own departments and teams. Business units also have metadata, like a tax-number.
 
 ![company-account-overview.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account/Company+Account+Feature+Overview/company-account-overview.png)
 

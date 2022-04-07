@@ -26,7 +26,7 @@ Gift cards are sensitive data and can be used to pay orders, therefore please ke
 
 In a Spryker-based shop, the gift cards follow the same rules and bought as products and can even be bundles. However, they are purely virtual and do not require shipping. A gift card can be applied as a voucher and redeemed to pay an order. Therefore, the gift cards have two characteristics: a product characteristic and a voucher (+payment method) characteristic. When a gift card is bought, it is treated like a product. When it is applied, it’s a *voucher* that can be used as a payment method.
 
-Gift cards have variants just like abstract products. For example, a New Year Gift Card can have all the different values—50 Euro, 100 Euro, etc. In this case, the New Year Gift Card would be handled like an abstract product, and 50 Euro, 100 Euro, etc. gift cards would be its variants.
+Gift cards have variants just like abstract products. For example, a New Year Gift Card can have all the different values—50 Euro and 100 Euro. In this case, the New Year Gift Card would be handled like an abstract product, and 50 Euro and 100 Euro gift cards would be its variants.
 
 When a customer puts a gift card to cart, they can change a variant, quantity and remove it from cart, just like any abstract product. It should be noted, however, that no discounts are applied to gift card products since the price paid for the gift card must equal the value of the gift card. Even though technically it is possible to have different amounts for gift card’s price and value (say, the gift card price is 100 Euro, however, the gift card value is 150 Euro), you need to consult your local legislation to make sure it would be legal in your country.
 ![Gift cards](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Gift+Cards/Gift+Cards+Purchase+and+Redeeming/gift_card.png)
@@ -49,8 +49,8 @@ When customer buys a gift card, you can use the default OMS states for the GiftC
 
 With a gift card code in place, users get an alternative payment method to pay for their orders. The payment workflow with the gift card would be as follows:
 1. A user puts products into cart, and, assume they have discounts for the products and also apply a voucher.
-2. **Order subtotal** is calculated: General products’ prices without discounts etc.
-3. **Order grand total** is calculated: Price including discounts, vouchers, taxes, etc.
+2. **Order subtotal** is calculated: General products’ prices without discounts.
+3. **Order grand total** is calculated: Price including discounts, vouchers, and taxes.
 4. **Gift card** is applied: Grand total minus Gift Card value. If the order value is lower or equals the gift card value, the checkout workflow stops here, as the gift card is used to fully pay the order.
 5. If the order value is higher than the value of the applied gift, a price to pay is calculated: the remaining sum to be paid using an additional payment method.
 6. Payment method selection and payment.
@@ -69,7 +69,7 @@ Gift card value checking strategy means the way the gift cards are checked for t
 
 Replacement means that if after using a gift card it has some remaining balance, a new gift card with the value equal to the remaining balance is issued for the gift card owner. For example, a user has a gift card for 100 Euro, but spends just 60 Euro to pay the order. In this case, a new 40 Euro gift card with a new code will be sent to the user. The old gift card code would not be valid anymore.
 
-For this strategy, gift cards have a pattern for codes generation. For each gift card code generation, a pattern from the previous gift card is used. For example, if the code X-GC-{number} is used for gift cards generation, where {number} is the pattern, the 100 Euro gift card code generated for customers would be X-GC-1, and the code generated for the remaining 40 Euro would be X-GC-2 etc.
+For this strategy, gift cards have a pattern for codes generation. For each gift card code generation, a pattern from the previous gift card is used. For example, if the code X-GC-{number} is used for gift cards generation, where {number} is the pattern, the 100 Euro gift card code generated for customers would be X-GC-1, and the code generated for the remaining 40 Euro would be X-GC-2.
 
 The main advantage of this strategy is that one and the same gift card code can not be used twice if the gift card has some remaining balance after a purchase has been made. This might be especially useful, for example, in case when a customer wants another customer to use a part of the value from their gift card. In this case, the initial gift card owner would get an e-mail with the new code for the remaining gift card value.
 

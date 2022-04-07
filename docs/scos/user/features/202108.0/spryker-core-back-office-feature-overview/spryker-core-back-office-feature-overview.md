@@ -33,7 +33,7 @@ With Spryker Back Office, you can:
 * Build and manage product categories
 * Create and manage CMS blocks and pages
 * Handle translations
-* Manage products and all elements related to them (availability, labels, options, types, etc.)
+* Manage products and all elements related to them (availability, labels, options, types)
 * Customize search and filters for the online store
 * Create and manage discounts
 * Build and manage the main navigation of your online store

@@ -38,10 +38,25 @@ To start creating a voucher, do the following:
 8. Select a **VALID TO** date.
 9. Click **Next**.
 
+## 2. Define discount calculation and the products to apply the discount to
+
+1. Click the **Discount calculation** tab.
+2. Select a **CALCULATOR TYPE**.
+3. Based on the calculator type you've selected, do one of the following:
+    * **Fixed amount**: Enter the needed discounted prices.
+    * **Percentage**: For **VALUE**, enter a percentage to be discounted.
+4. Select a **DISCOUNT APPLICATION TYPE**.
+5. Depending on the discount application type you've selected, do the following:
+    * **QUERY STRING**: Add a query using the query build or by entering a plain query.
+    * **PROMOTIONAL PRODUCT**:
+        1. Enter **ABSTRACT PRODUCT SKU**.
+        2. Enter a **QUANTITY**.
+6. Click **Next**.
+
+## 3. Define under which conditions the discount is applied
 
 
-
- 5. Click **Next**, or select the *Conditions* tab to proceed.
+1. Click the **Conditions
  6. On the *Create new discount* page, in the *Conditions* tab, do the following:
     1. Select the **Apply when** conditions or click **Plain query** and enter the  query manually. See reference information of the [Conditions](#conditions) tab for more details.
     2. Enter the value for the **The discount can be applied if the query applies for at least X item(s).** field.

@@ -37,6 +37,7 @@ To start creating a cart rule, do the following:
 8. Select a **VALID TO** date.
 9. Click **Next**.
 
+
 ## 2. Define discount calculation and the products to apply the discount to
 
 1. Click the **Discount calculation** tab.

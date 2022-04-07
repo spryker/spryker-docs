@@ -1,10 +1,10 @@
 ---
-title: Evaluator reference
+title: Upgradability guidelines
 description: Find solutions to Evaluator errors
 template: concept-topic-template
 ---
 
-The documents in this section will help you resolve the issues related to code evaluation in a way that keeps your code upgradable and up to date with Spryker's and industry coding standards. 
+The documents in this section will help you resolve the issues related to code evaluation in a way that keeps your code upgradable and up to date with Spryker's and industry coding standards.
 
 When you get an evaluation error, check the name of the triggered check in the Evaluation output logs. The name is at the beginning of each error log.
 
@@ -19,8 +19,8 @@ In the example, the name is `PrivateApi:Extension`. To find the documentation fo
 
 | Group name |  Group description  | Check name  | Error message template | Documentation |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| NotUnique | Covers the cases that are related to project-level entity names that can conflict with the entity names on the core level. | NotUnique:TransferName | Transfer object name **{transfer_name}** has to have project prefix Pyz in **{absolute_transfer_path}**, like **Pyz{transfer_name}** |  {link - unique-entity-name-not-unique.md#Making transfer names unique}  |
-| NotUnique |  | NotUnique:TransferProperty | Transfer property **{transfer_property_name}** for **{transfer}** has to have project prefix Pyz in **{absolute_transfer_path}**, like **pyz{transfer_property_name}** | {link - unique-entity-name-not-unique.md#Making transfer property names unique} |
+| NotUnique | Covers the cases that are related to project-level entity names that can conflict with the entity names on the core level. | NotUnique:TransferName | Transfer object name `{transfer_name}` has to have project prefix Pyz in **{absolute_transfer_path}**, like **Pyz{transfer_name}** |  {link - unique-entity-name-not-unique.md#Making transfer names unique}  |
+| NotUnique |  | NotUnique:TransferProperty | Transfer property `{transfer_property_name}` for `{transfer}` has to have project prefix Pyz in **{absolute_transfer_path}**, like **pyz{transfer_property_name}** | {link - unique-entity-name-not-unique.md#Making transfer property names unique} |
 | NotUnique |  | NotUnique:DatabaseTable | Database table **{table_name}** has to have project prefix Pyz in **{absolute_schema_path}**, like **pyz_{table_name}**| {link - unique-entity-name-not-unique.md#Making table names unique} |
 | NotUnique |  | NotUnique:DatabaseColumn | Database column **{table_column_name}** has to have project prefix Pyz in **{absolute_schema_path}**, like **pyz_{table_column_name}** | {link - unique-entity-name-not-unique.md#Making database column names unique} |
 | NotUnique |  | NotUnique:Method | Method name **{class}::{method_name}** should contains project prefix, like **{method_name_with_prefix}** | {link - unique-entity-name-not-unique.md#Making method names unique} |

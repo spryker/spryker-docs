@@ -44,23 +44,25 @@ Pyz\Zed\Customer\Business\CustomerFacade
 ************************************************************************************************************************
 ```
 
-## Example of resolving the Evaluator check error
+## Resolving the Evaluator check error
 
-To resolve the error provided in the example, do the following steps:
-1. Recommended: Check if it's possible to extend the functionality using the [Configuration strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#configuration).
-2. Recommended: Check if it's possible to extend the functionality using the [Plug and Play strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#plug-and-play).
-3. Recommended: Check if it is possible to extend functionality with "Project Modules" strategy (link to "Project Modules") - https://docs.spryker.com/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules
-4. Not recommended: Replace the private API core functionality with their copies on the project level and use a unique naming for it:
-    1. Not recommended: Add new unique method in the factory to fetch the business model.
-    2. Not Recommended: Add new unique method in business model.
-
-{% info_block infoBox "" %}
-We are working on introducing a way to report such cases and add more extension points in the core.
-{% endinfo_block %}
+To resolve the error provided in the example, try the following in the provided order:
+1. Recommended: Extend the functionality using the [Configuration strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#configuration).
+2. Recommended: Extend the functionality using the [Plug and Play strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#plug-and-play).
+3. Recommended: Extend the functionality using the [Project Modules strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules).
+4. Not recommended: Copy private API core entities to the project level and give them unique names. For an example, see [Example of resolving the error by copying and renaming the entities](#example-of-resolving-the-error-by-copying-and-renaming-the-entities).
 
 {% info_block infoBox "Making your code unique" %}
 To make your code unique, use prefixes like `pyz` or your project name.
 {% endinfo_block %}
+
+## Example of resolving the error by copying and renaming the entities
+
+
+
+1. Add a unique method in the factory to fetch the business model.
+2. Add a unique method in business model.
+
 
 ```php
 namespace Pyz\Zed\Customer\Business;

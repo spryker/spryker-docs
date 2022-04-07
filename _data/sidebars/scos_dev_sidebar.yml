@@ -1872,7 +1872,6 @@ entries:
       nested:
       - title: Execution order of data importers in Demo Shop
         url: /docs/scos/dev/data-import/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
-        - "202108.0"
     - title: Data import categories
       url: /docs/scos/dev/data-import/data-import-categories/about-data-import-categories.html
       nested:

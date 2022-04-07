@@ -110,7 +110,7 @@ Make sure that the File Uploader feature is enabled.
 
 To add a file to the Shop App, do the following:
 
-1. Navigate to the **Back Office: Content Management > Pages**, select the required CMS Page and click **Edit Placeholders**:
+1. Navigate to the **Back Office: Content Management&nbsp;<span aria-label="and then">></span> Pages**, select the required CMS Page and click **Edit Placeholders**:
 
 2. In the **Content** field, add **cms_file** widget:
 

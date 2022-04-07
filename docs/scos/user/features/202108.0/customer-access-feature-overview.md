@@ -19,7 +19,7 @@ The feature lets you give your customers the ability to hide content from custom
 ![Content Restrictions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Hide+Content+from+Logged+out+Users/Hide+Content+from+Logged+out+Users/Content+restrictions.png)
 
 
-A Back Office user can manage customer access in **Customer** > **Customer Access**. They can hide the following content types:
+A Back Office user can manage customer access in **Customer&nbsp;<span aria-label="and then">></span> Customer Access**. They can hide the following content types:
 
 ![content-types.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Hide+Content+from+Logged+out+Users/Hide+Content+from+Logged+out+Users+Overview/content-types.png)
 

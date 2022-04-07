@@ -36,12 +36,12 @@ Each placeholder in a page has locale-specific content (for as many locales as y
 ## CMS content widgets
 
 When you edit a CMS page, you can add CMS content widgets. A CMS content widget is a dynamic piece of reusable content. The following CMS content widgets are shipped with the CMS feature:
-* chart
-* product
-* product set
-* product group
-* cms file
-* cms block
+* Chart
+* Product
+* Product set
+* Product group
+* CMS file
+* CMS block
 
 With the CMS Pages feature, you can:
 

@@ -30,7 +30,7 @@ For use cases and exmaple of each of the content item, see [Content Item Widgets
 
 {% endinfo_block %}
 
-A content manager can [create content items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html) in the Back Office > **Content Management** > **Content Items** section.
+A content manager can [create content items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html) in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Content Items** section.
 A developer can do the following:
 * [Import content items](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html)
 * [Retrieving banner content items](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-content-items/retrieving-banner-content-items.html)

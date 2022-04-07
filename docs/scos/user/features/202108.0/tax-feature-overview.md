@@ -49,7 +49,7 @@ Keeping that in mind, the tax rate is created first.
 Once the rate is defined, you can attach it to a tax set(s). A tax set can contain from one to many tax rates.
 ![Tax set](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/International+Tax+Rates+&+Sets/tax-set.gif)
 
-The described values are defined in the **Back Office** > **Taxes** section.
+The described values are defined in the **Back Office&nbsp;<span aria-label="and then">></span> Taxes** section.
 
 ![Tax section](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/International+Tax+Rates+&+Sets/taxes-section.gif)
 

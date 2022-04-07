@@ -56,7 +56,7 @@ The following templates with slots are shipped with the CMS feature:
 * Product details page template
 * CMS page template
 
-A content manager can [manage templates with slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html) in the Back Office > **Content Management** > **Slots** section.
+A content manager can [manage templates with slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html) in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Slots** section.
 <details open>
     <summary markdown='span'>Template representation—the Back Office</summary>
 
@@ -88,7 +88,7 @@ By importing a [slot list](#slot-list), a developer can do the following:
 *     Delete slots.
 *     Define slot configurations.
 
-A content manager can [manage slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html) in the Back Office > **Content Management** > **Slots** section.
+A content manager can [manage slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html) in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Slots** section.
 
 <details open>
     <summary markdown='span'>Slot representation—the Back Office</summary>
@@ -110,7 +110,7 @@ A content manager can [manage slots](/docs/scos/user/back-office-user-guides/{{p
 
 </details>
 
-A content manager can [manage CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html) in the Back Office > **Content Management** > **Slots** section.
+A content manager can [manage CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html) in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Slots** section.
 
 
 
@@ -123,7 +123,7 @@ A content manager can [manage CMS blocks](/docs/scos/user/back-office-user-guide
 </details>
 
 
-CMS Block is a separate entity with a dedicated section in the Back Office. See [Managing CMS Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-cms-blocks.html) to learn what a content manager can do with CMS blocks in the Back Office > **Content Management** > **Blocks** section.
+CMS Block is a separate entity with a dedicated section in the Back Office. See [Managing CMS Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-cms-blocks.html) to learn what a content manager can do with CMS blocks in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Blocks** section.
 
 
 ## Content item
@@ -139,14 +139,14 @@ CMS Block is a separate entity with a dedicated section in the Back Office. See 
 </details>
 
 From the perspective of templates and slots, a content item always comes as a part of CMS block. That's why there is no place to manage it in the **Slots** section.
-See [Content Items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html) to learn what a content manager can do with content items in the Back Office > **Content Management** > **Content Items** section.
+See [Content Items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html) to learn what a content manager can do with content items in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Content Items** section.
 
 ### <a name="applying-templates-with-slots"></a>Applying Templates with slots
 
 A template with slots can be applied to any page. Even though a content manager can manage all page types in the Back Office, they can only apply templates with slots to the following:
 
-* Category pages in the Back Office > **Category > Create category** section. See [Creating Categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html) for more information.
-* CMS pages in the Back Office > **Pages > Create new CMS page** section. See [Creating a CMS Page](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html) for more information.
+* Category pages in the Back Office&nbsp;<span aria-label="and then">></span> **Category&nbsp;<span aria-label="and then">></span> Create category** section. See [Creating Categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html) for more information.
+* CMS pages in the Back Office&nbsp;<span aria-label="and then">></span> **Pages&nbsp;<span aria-label="and then">></span> Create new CMS page** section. See [Creating a CMS Page](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html) for more information.
 
 A developer can apply templates with slots to all the other page types.
 
@@ -161,7 +161,7 @@ Without correlation defined correctly, Slot Widget may fail to render embedded c
 
 When the lists are imported, the following applies:
 
-* The information defined in them is reflected and can be managed in the Back Office > **Content Management > Slots**.
+* The information defined in them is reflected and can be managed in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
 * By managing this information, a content manager adds content to Storefront.
 
 ### Template list
@@ -199,7 +199,7 @@ With templates and slots, the following applies:
 * Spryker CMS Blocks is the content provider for all the slots.
 * Slots embed content from [CMS Blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html).
 * Content for CMS blocks is created in the [WYSIWYG Editor](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html#content-item-widget).
-* Templates with slots are managed in the Back Office > **Slots** section.
+* Templates with slots are managed in the Back Office&nbsp;<span aria-label="and then">></span> **Slots** section.
 
 The following schema shows how content is managed with the help of templates with slots:
 
@@ -226,7 +226,7 @@ For product details page type, you can use the Product ID or Category ID identif
 To meet your project requirements, you can extend the visibility conditions functionality by adding more conditions, like Customer ID, Customer Group ID or Navigation Nodes. See [HowTo - Create Visibility Conditions for CMS Blocks](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html) to learn more.
 
 
-A content manager can define visibility conditions by [selecting pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html#selecting-pages) in the Back Office > **Content Management > Slots** section.
+A content manager can define visibility conditions by [selecting pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html#selecting-pages) in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Slots** section.
 
 A developer can [import visibility conditions](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html).
 

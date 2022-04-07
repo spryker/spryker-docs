@@ -103,21 +103,19 @@ If a global and a merchant order thresholds are defined, both of them are applie
 If the global minimum threshold is €400, and the minimum threshold per merchant relation is €100, the minimum sub-total is €400.
 
 {% endinfo_block %}
+
 {% info_block infoBox "Example 2" %}
 
 If the global minimum threshold is €400, and the minimum threshold per merchant relation is €700, the minimum sub-total is €700.
 
 {% endinfo_block %}
 
- {% info_block infoBox "Example 3" %}
+{% info_block infoBox "Example 3" %}
 
 
 * Conditions:
-
     * Global hard maximum threshold is €100.
-
     * Soft minimum merchant order threshold with a fee is €200.
-
     * Order sub-total is €150.
 
 * Result: The fee of the merchant order threshold is added to cart, but the customer cannot place the order because the global threshold is reached.

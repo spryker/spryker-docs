@@ -91,7 +91,7 @@ For example:
 3. This item is given special `ItemTransfer:bundleItemIdentifier` unique id which have each bundle in cart.
 4. At the same time bundled items are created and stored into `CartChangeTransfer:items` with referenced bundled identifier `ItemTransfer:relatedBundleItemIdentifier` this is the same id where bundle got assigned. This helps to track back belonging bundle items in quote object.
 
-If bundled items have quantity > 1 then it will be split as separate items in cart.
+If bundled items have quantity&nbsp;<span aria-label="and then">></span> 1 then it will be split as separate items in cart.
 
 BundleProduct have price this price, it is distributed to whole bundled items. Overwriting original product price. If bundle have price 100, and there is 3 bundled products, each will get price 33,34,33 distributed, 34 is to cover rounding error.
 

@@ -50,7 +50,7 @@ In the [state machine](/docs/scos/dev/back-end-development/data-manipulation/dat
 
 {% info_block warningBox "State machine" %}
 
-Ensure that, in your state machine, the *refunded* state always goes before the *cancelled* state. Otherwise, you can't refund the money for a canceled order. You can check the order of the states in the Back Office > **Administration** > **OMS**.
+Ensure that, in your state machine, the *refunded* state always goes before the *cancelled* state. Otherwise, you can't refund the money for a canceled order. You can check the order of the states in the Back Office&nbsp;<span aria-label="and then">></span> **Administration&nbsp;<span aria-label="and then">></span> OMS**.
 
 {% endinfo_block %}
 

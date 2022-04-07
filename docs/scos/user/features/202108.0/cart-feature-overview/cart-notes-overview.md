@@ -18,7 +18,7 @@ The **Cart Notes** let Shop administrators include a "Notes" field on the cart p
 
 The cart note is added to quote or to a particular item in the quote and pushed to order details.
 
-The shop administrator can see the special request in the **Back Office: Sales > Orders** section:
+The shop administrator can see the special request in the **Back Office: Sales&nbsp;<span aria-label="and then">></span> Orders** section:
 
 ![Cart Notes in Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart+Notes/cart-notes-admin.png)
 

@@ -20,7 +20,7 @@ An *agent* is a person with unrivaled product knowledge who can help customers p
 
 Every agent user is a Back Office user. When creating or editing a Back Office user, you can make them an agent assist by selecting this option.
 
-A Back Office user can create an agent user in **Users** > **Users**.
+A Back Office user can create an agent user in **Users&nbsp;<span aria-label="and then">></span> Users**.
 
 To learn more about managing agent users in Back Office, see [Managing users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html)
 

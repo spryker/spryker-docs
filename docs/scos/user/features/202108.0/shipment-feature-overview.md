@@ -41,7 +41,7 @@ Each shipment method has a dedicated price and tax set in the various currencies
 
 {% info_block infoBox "Shipment calculation rules" %}
 
-You can give shipment discounts based on the carrier, shipment method, or cart value. Intricate calculations enable you to freely define a set of rules to be applied to the various discount options.
+You can give shipment discounts based on the carrier, shipment method, or cart value. Intricate calculations let you freely define a set of rules to be applied to the various discount options.
 
 {% endinfo_block %}
 

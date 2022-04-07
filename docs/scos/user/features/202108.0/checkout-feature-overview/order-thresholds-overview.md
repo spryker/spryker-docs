@@ -67,7 +67,7 @@ The soft threshold with a flexible fee allows placing an order with the value be
 For example, a shop owner sets a soft minimum threshold €400 with a flexible fee of 10%. If a customer adds products to cart for 195 Euro, they can still place the order, but the flexible fee of €19.5 is added to their cart. If the customer adds more products and the order subtotal becomes equal to or greater than €400, the fee is removed from the cart.
 
 
-The diagram below shows how orders are checked against defined thresholds.
+The following diagram shows how orders are checked against defined thresholds.
 
 ![minimum-order-value-schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Order+Thresholds/minimum-order-value-schema.jpg)
 

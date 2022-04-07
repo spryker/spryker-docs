@@ -55,7 +55,7 @@ The email format itself is defined on the code level, the tales serving as ident
 ### Default Email Templates
 There is a number of email templates with the respective Email CMS Blocks available in the [Spryker Demo Shops](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops).
 
-The table below contains the list of the default email templates, their Email CMS Blocks, and purpose.
+The following table contains the list of the default email templates, their Email CMS Blocks, and purpose.
 
 <details open>
     <summary markdown='span'>Default email templates</summary>

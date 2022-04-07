@@ -18,7 +18,7 @@ Volume pricing helps the merchants to gain the commitment of the customers. Prov
 
 Such incentives allow a business company to purchase additional inventory at a reduced cost and allow sellers or manufacturers to reduce the products by selling more units and increase their revenues per transaction.
 
-The schema below illustrates the connection between `spy_price_product_store` table links `spy_price_product_merchant_relationship` with the `spy_currency` and `spy_store` tables.
+The following schema illustrates the connection between `spy_price_product_store` table links `spy_price_product_merchant_relationship` with the `spy_currency` and `spy_store` tables.
 
 ![Database schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Volume+Prices/Volume+Prices+Feature+Overview/volume-prices-dbschema.png)
 
@@ -28,10 +28,10 @@ The schema below illustrates the connection between `spy_price_product_store` ta
 
 The "price_data" field is a JSON with attributes such as volume prices, merchant prices, customer prices and then a specific set of prices inside its price type (["QTY" => 10, "GROSS(DEFAULT)" => 100, "NET(DEFAULT)" => 90]).
 
-{% endinfo_block %} 
+{% endinfo_block %}
 
 
-You can find the example of the JSON below:
+The following is an example of JSON:
 
 ```js
 [

@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/shared-carts-feature-overview
 ---
 
-*Shopping Cart* is a part of the online shop where the record of the items a buyer has ‘picked up’ from the online store is kept. The shopping cart enables consumers to select products, review what they selected, make modifications or add extra items if needed, and purchase the products.
+*Shopping Cart* is a part of the online shop where the record of the items a buyer has ‘picked up’ from the online store is kept. The shopping cart lets customers select products, review what they selected, make modifications or add extra items if needed, and purchase the products.
 
 There are two ways to access a shopping cart:
 * Through a shopping cart widget in the header of the webshop.

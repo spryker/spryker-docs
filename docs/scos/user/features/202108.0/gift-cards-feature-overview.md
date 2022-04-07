@@ -37,7 +37,7 @@ After a customer buys a gift card, they get a code sent to the specified e-mail 
 
 Once the gift card code has been generated, it becomes a voucher that can be used as a payment method.
 
-The diagram below shows the gift card product-voucher transition workflow:
+The following diagram shows the gift card product-voucher transition workflow:
 ![Gift card product-voucher transition workflow schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Gift+Cards/Gift+Cards+Purchase+and+Redeeming/GC+product-voucher+transition.png)
 
 When buying a gift card, the shipment method selection step is skipped on Yves. In the background, there is a “noshipment” constant in the app configuration, which can be selected to configure shipment for a specific type of products, in our case, for gift cards.

@@ -47,7 +47,7 @@ All other text is hardcoded. This text is glossary keys, and you can change them
 
 {% info_block infoBox "Product bundles" %}
 
-Keep in mind that bundled product itself always has a 0 tax rate. However, all of the bundled items are represented separately in the invoice and can have their own tax rates which are reflected in the invoice. For example, in the image above, Sony Bundle is the bundled product with a 0% tax rate, and *Sony HDR-AS20*, *Sony SmartWatch 3*, *Sony Xperia Z3 Compact* are its bundled items with their tax rates.
+Keep in mind that bundled product itself always has a 0 tax rate. However, all of the bundled items are represented separately in the invoice and can have their own tax rates which are reflected in the invoice. For example, in the preceding image, Sony Bundle is the bundled product with a 0% tax rate, and *Sony HDR-AS20*, *Sony SmartWatch 3*, *Sony Xperia Z3 Compact* are its bundled items with their tax rates.
 
 {% endinfo_block %}
 

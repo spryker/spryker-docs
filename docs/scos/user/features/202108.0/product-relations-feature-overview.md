@@ -16,7 +16,7 @@ redirect_from:
   - /docs/en/product-relations
 ---
 
-The _Product Relations_ feature enables product catalog managers to create logical relations between products based on their actual properties. Product relations are displayed on the Storefront to achieve multiple purposes.
+The _Product Relations_ feature lets product catalog managers create logical relations between products based on their actual properties. Product relations are displayed on the Storefront to achieve multiple purposes.
 
 For example, you can:
 * Promote products in cart.
@@ -92,7 +92,7 @@ With the rule groups, you can build multiple levels of rule hierarchy. When a pr
 
 ![Rule group hierarchy](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/202006.0/rule-group-hierarchy.png)
 
-When a product is evaluated on a level that has a rule and a rule group, the rule group is treated as a single rule. The diagram below shows how a product is evaluated against the rules on the previous screenshot.
+When a product is evaluated on a level that has a rule and a rule group, the rule group is treated as a single rule. The following diagram shows how a product is evaluated against the rules on the previous screenshot.
 
 <details><summary markdown='span'>Product evaluation diagram</summary>
 

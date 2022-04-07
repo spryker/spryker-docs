@@ -64,7 +64,7 @@ To be able to use the Spryker Back Office, users have to authenticate to the Bac
 
 To *authenticate as a regular Back Office user*, you should have the Back Office user account. See [Managing users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html) to learn how you can create and manage Back Office user accounts.
 
-You can also enable your users to sign in from a third-party service set up for your project. The third-party sign-on uses the [OpenID](https://en.wikipedia.org/wiki/OpenID) protocol for authentication.
+You can also let your users sign in from a third-party service set up for your project. The third-party sign-on uses the [OpenID](https://en.wikipedia.org/wiki/OpenID) protocol for authentication.
 
 {% info_block infoBox %}
 

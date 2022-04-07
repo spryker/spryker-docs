@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/quick-add-to-cart-feature-overview
 ---
 
-Regular buyers, and especially B2B wholesale customers, often know what exactly they want to order from the shop—by product SKU and product name. The *Quick Add to Cart* feature enables your customers to find and buy products in just a few clicks. Instead of going to each product page individually, they can go to the *Quick Add to Cart* page, accessible directly from the header, and quickly order items by typing product SKU and its quantity in respective fields. At the same time, if some specific [quantity restrictions](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html) apply to products, they will also be taken into account when ordering through the *Quick Add to Cart* page. The *Quick Add to Cart* form can also be used to add items to [shopping lists](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html). Also, if a customer has a list of products to be ordered, for example, in a .csv file or other, the ordering process becomes even faster. The customer can bulk add SKUs and put quantities next to them in a single field. This being done, the customer either adds the items to cart or proceeds directly to checkout.
+Regular buyers, and especially B2B wholesale customers, often know what exactly they want to order from the shop—by product SKU and product name. The *Quick Add to Cart* feature lets your customers find and buy products in just a few clicks. Instead of going to each product page individually, they can go to the *Quick Add to Cart* page, accessible directly from the header, and quickly order items by typing product SKU and its quantity in respective fields. At the same time, if some specific [quantity restrictions](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html) apply to products, they will also be taken into account when ordering through the *Quick Add to Cart* page. The *Quick Add to Cart* form can also be used to add items to [shopping lists](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html). Also, if a customer has a list of products to be ordered, for example, in a .csv file or other, the ordering process becomes even faster. The customer can bulk add SKUs and put quantities next to them in a single field. This being done, the customer either adds the items to cart or proceeds directly to checkout.
 
 The *Quick Add to Cart* feature allows placing bulk orders for wholesale and returning customers.
 
@@ -89,7 +89,7 @@ The price is displayed dynamically, taking into account the quantity, currency, 
 
 ## File upload form for concrete products
 
-To save your buyers' time and help them order the products in bulk quickly, enable your customers to use the *File Upload* form. The *File Upload* form lets users add multiple products to the *Quick Order* page by uploading data using a .csv file.
+To save your buyers' time and help them order the products in bulk quickly, let your customers use the *File Upload* form. The *File Upload* form lets users add multiple products to the *Quick Order* page by uploading data using a .csv file.
 
 {% info_block infoBox %}
 

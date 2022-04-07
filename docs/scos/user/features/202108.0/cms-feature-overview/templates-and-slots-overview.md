@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/templates-and-slots-overview
 ---
 
-Templates slots enables content managers to effectively and coherently interact with content using a dedicated template in Spryker—a template with slots. In the Back Office, a content manager has access to all the Storefront pages and can easily embed content into them. The embedded content is rendered by the [Slot Widget](#slot-widget).
+Templates slots lets content managers effectively and coherently interact with content using a dedicated template in Spryker—a template with slots. In the Back Office, a content manager has access to all the Storefront pages and can easily embed content into them. The embedded content is rendered by the [Slot Widget](#slot-widget).
 
 {% info_block infoBox %}
 
@@ -201,14 +201,14 @@ With templates and slots, the following applies:
 * Content for CMS blocks is created in the [WYSIWYG Editor](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html#content-item-widget).
 * Templates with slots are managed in the Back Office > **Slots** section.
 
-The schema below shows how content is managed with the help of templates with slots:
+The following schema shows how content is managed with the help of templates with slots:
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/templates-and-slots.png)
 
 ## Visibility conditions
 When the content manager assigns a CMS block to a slot, it is displayed in all the pages to which the template with the slot is applied.  To narrow down the number of pages to a desired selection, the content manager can define visibility conditions for each CMS block assigned to a slot. Visibility conditions are defined by selecting particular pages in which the content of a CMS block will be displayed. When visibility conditions are defined, the slot widget checks if the CMS block should be rendered in an opened page and either renders or skips it.
 
-Page identifiers used to define visibility conditions depend on the page type to which a template with slots is applied. You can check identifiers for each page type in the table below.
+Page identifiers used to define visibility conditions depend on the page type to which a template with slots is applied. You can check identifiers for each page type in the following table.
 
 | PAGE TYPE/IDENTIFIER | PRODUCT ID | CATEGORY ID | CMS PAGE ID |
 | --- | --- | --- | --- |
@@ -277,7 +277,7 @@ If there is no content to provide on the side of the content provider based on t
 {% endinfo_block %}
 
 #### Contextual variables
-To avoid entering particular identifies of Spryker entities as property values, you can use contextual variables. When such a property is used, slot widget identifies the property value depending on the page opened on the Storefront and fetches the corresponding content. You can find several examples of contextual variables below.
+To avoid entering particular identifies of Spryker entities as property values, you can use contextual variables. When such a property is used, slot widget identifies the property value depending on the page opened on the Storefront and fetches the corresponding content. The following example shows contextual variables.
 
 | PROPERTY | PROPERTY VA;UE EXAMPLE |
 | --- | --- |
@@ -309,7 +309,7 @@ This section describes how Slot Widget works with the Spryker CMS Blocks content
 
 {% endinfo_block %}
 
-WIth the Spryker CMS Blocks content provider, a slot widget template looks as follows:
+With the Spryker CMS Blocks content provider, a slot widget template looks as follows:
 ```twig
 {% raw %}{%{% endraw %} cms_slot "cms-slot-key" with {
     Property: 'Property.value',
@@ -318,7 +318,7 @@ WIth the Spryker CMS Blocks content provider, a slot widget template looks as fo
 
 #### Category pages
 
-To fetch content created for a category page, you can use the `categoryID` property. Find an example of a generic slot widget for category pages below.
+To fetch content created for a category page, you can use the `categoryID` property. The following example shows a generic slot widget for category pages.
 
 ```twig
 {% raw %}{%{% endraw %} cms_slot 'slt-5' with {
@@ -327,7 +327,7 @@ To fetch content created for a category page, you can use the `categoryID` prope
 ```
 
 #### Product details pages
-To fetch content created for a product details page, you can use the `productID` property. Find an example of a generic slot widget for product details pages below.
+To fetch content created for a product details page, you can use the `productID` property. The following example shows a generic slot widget for product details pages.
 
 ```twig
 {% raw %}{%{% endraw %} cms_slot 'slt-7' with {
@@ -345,14 +345,14 @@ To fetch content created for a CMS page, you can use the `pageID` property. Find
 ```
 
 #### Home page
-Unlike category, product details and CMS pages, the home page does not require any properties since there is usually only one home page in a project. Find an example of a generic slot widget for the home page below.
+Unlike category, product details and CMS pages, the home page does not require any properties since there is usually only one home page in a project. The following example is a generic slot widget for the home page.
 
 ```twig
 {% raw %}{%{% endraw %} cms_slot 'slt-2' {% raw %}%}{% endraw %}
 ```
 
 ## Database schema—oemplates with slots and CMS blocks content provider
-You can find the database schema for templates, slots and the SprykerCMS content provider below:
+The following image shows the database schema for templates, slots and the Spryker CMS content provider:
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/template-slot-cms-blocks-content-provider.png)
 

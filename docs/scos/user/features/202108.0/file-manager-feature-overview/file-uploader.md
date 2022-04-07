@@ -108,7 +108,7 @@ Make sure that the File Uploader feature is enabled.
 
 {% endinfo_block %}
 
-To add a file to the Shop App, follow the steps below:
+To add a file to the Shop App, do the following:
 
 1. Navigate to the **Back Office: Content Management > Pages**, select the required CMS Page and click **Edit Placeholders**:
 

@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/cart-notes-overview
 ---
 
-The **Cart Notes** enable Shop administrators to include a "Notes" field on the cart page. Customers can add notes to a particular item or the whole cart, e.g some special instructions about how to prepare and deliver an order.
+The **Cart Notes** let Shop administrators include a "Notes" field on the cart page. Customers can add notes to a particular item or the whole cart, e.g some special instructions about how to prepare and deliver an order.
 
 ![Cart notes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart+Notes/cart-notes.png)
 

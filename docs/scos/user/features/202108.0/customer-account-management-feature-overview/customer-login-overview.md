@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/customer-login-overview
 ---
 
-The *Cusotmer Login* feature with an enhanced secure password policy enables you to prevent brute-force login attacks by configuring your project in the following ways:
+The *Cusotmer Login* feature with an enhanced secure password policy lets you prevent brute-force login attacks by configuring your project in the following ways:
 
 * Block a Storefront user account for some time after a certain number of login attempts.
 

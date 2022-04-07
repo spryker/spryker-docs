@@ -74,7 +74,7 @@ After the sales representative has processed the request, the buyer gets it back
 
 If they aren't satisfied and would like to negotiate the price further, they can **Revise** the RFQ and move it back to the **Draft** status. The RFQ obtains a new RFQ version.
 
-Schematically, the workflow is shown below:
+Schematically, the workflow is shown in the following diagram:
 ![Buyer's Workflow](https://confluence-connect.gliffy.net/embed/image/0dedd086-45ab-494d-a2f8-04c92501a229.png?utm_medium=live&utm_source=custom)
 
 ### Sales representative workflow
@@ -108,7 +108,7 @@ A sales representative can quickly access the RFQs via a Quote Request Widget th
 A sales representative can create an RFQ on behalf of any company user, then process it and even complete checkout. This option is especially convenient when, for example, a company user is busy or doesn't have access to an account.
 
 
-The workflow with statuses for a sales representative is presented in the schema below:
+The workflow with statuses for a sales representative is presented in the following schema:
 ![Sales Rep Workflow](https://confluence-connect.gliffy.net/embed/image/0dedd086-45ab-494d-a2f8-04c92501a229.png?utm_medium=live&utm_source=custom)
 
 When a sales representative creates an RFQ, it has the **Show the latest version to customer** checkbox empty by default. It means that the buyer cannot see the latest updated version of the RFQ (for example, with the changed prices) until the **Show the latest version to customer** checkbox is selected.  The buyer can see the **In Progress** status for the RFQ.

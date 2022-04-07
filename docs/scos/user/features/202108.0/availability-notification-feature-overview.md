@@ -36,7 +36,7 @@ Those who subscribed to the newsletter receive an email once the product is avai
 
 {% info_block infoBox %}
 
-Each email sent as a part of the subscription contains the **unsubscribe from this list** button as shown on the screenshot above.
+Each email sent as a part of the subscription contains the **unsubscribe from this list** button as shown on the preceding screenshot.
 
 {% endinfo_block %}
 

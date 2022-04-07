@@ -31,7 +31,7 @@ Time set for the product validity **Valid from** and **Valid to** fields is accu
 
 ## Use cases
 
-The table below shows possible usage scenarios with the TTL feature and resulting system behavior.
+The following table shows possible usage scenarios with the TTL feature and resulting system behavior.
 
 | VALIDITY DATES SETTINGS | RESULT |
 | --- | --- |

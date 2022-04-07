@@ -27,7 +27,7 @@ To create a configurable bundle on the Storefront, a Shop User selects a configu
 ![Configurable Bundle Template in the Storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/configurable-bundle-template-selection.png)
 
 
-The example below illustrates how the configurable bundle data is saved to the database:
+The following example illustrates how the configurable bundle data is saved to the database:
 ```php
 {
      "id_configurable_bundle_template": 2,

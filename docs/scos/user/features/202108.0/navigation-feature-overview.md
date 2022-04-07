@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/navigation-feature-overview
 ---
 
-The *Navigation* feature enables product catalog managers to create intuitive navigation elements and display them on the Storefront.
+The *Navigation* feature lets product catalog managers create intuitive navigation elements and display them on the Storefront.
 
 They can create different types of navigation for different places of the shop. For example, create a fully-fledged navigation tree for main website navigation, several simple navigation lists for the footer, and any number of custom navigation elements for CMS pages.
 

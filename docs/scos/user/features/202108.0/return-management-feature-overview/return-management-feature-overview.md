@@ -54,7 +54,7 @@ The Return items can have the following states in the Order Management System (O
 <!---
 {% info_block infoBox "Return states on the Storefront" %}
 
-The above states are the default ones in the OMS. You can display them as they are on the Storefront as well, or name the states differently for the Storefront users. For details on how to give custom names to the return states on the Storefront, see *Display Custom Names for Order Item States on the Storefront*.
+The preceding states are the default ones in the OMS. You can display them as they are on the Storefront as well, or name the states differently for the Storefront users. For details on how to give custom names to the return states on the Storefront, see *Display Custom Names for Order Item States on the Storefront*.
 
 {% endinfo_block %}
 -->

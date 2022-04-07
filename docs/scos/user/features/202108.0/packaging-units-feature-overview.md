@@ -77,7 +77,7 @@ The packaging unit amount can be:
 | Minimum amount (amount_minimum) | Minimum amount that a customer can buy. <br> For instance, you cannot buy less than 1 apple. <br>Only relevant if is_variable=true. If the amount is set as variable, by default, the minimum amount equals the interval amount.|
 | Maximum amount (amount_maximum) | Maximum amount that a customer can buy.<br>For instance, you cannot buy more than 10 apples.<br>Only relevant if is_variable=true. |
 
-The schema below shows relations between products, packaging units, their types, and amounts:
+The following schema shows relations between products, packaging units, their types, and amounts:
 
 ![Database relations scheme](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+%26+Measurement+Units/Packaging+Units/Packaging+Units+Feature+Overview/database-relation-scheme.png)
 
@@ -164,7 +164,7 @@ Once the order has been placed, we can navigate to the Back Office and see the f
 
 * Availability for the leading product (**VGA cables as long as you want**) decreased by 11.5 (amount of reserved products)
 * Availablity for the non-leading product (**VGA cables**) didn't change from the previous time.
-The figure below shows how these items and packaging units appear in the cart.
+The following figure shows how these items and packaging units appear in the cart.
 
 ![Cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+%26+Measurement+Units/Packaging+Units/Packaging+Units+Feature+Overview/cart-with-items.png)
 

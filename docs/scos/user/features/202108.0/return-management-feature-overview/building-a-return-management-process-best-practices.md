@@ -68,7 +68,7 @@ You can have the following return process:
         1. Creates the return based on the reclamation.
         2. Sends the return slip and the return label to the Buyer so the Buyer can print it, adhere to the box and ship the items back.
 
-The schema below illustrates the workflow as well as the areas that require custom development for your project:
+The following schema illustrates the workflow as well as the areas that require custom development for your project:
 
 ![image](https://confluence-connect.gliffy.net/embed/image/2599f923-6892-42bc-a867-e2b38bed5b2b.png?utm_medium=live&utm_source=custom)
 

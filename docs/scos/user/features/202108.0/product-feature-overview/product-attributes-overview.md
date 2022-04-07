@@ -69,7 +69,7 @@ A Back Office user can configure configure a product attribute to accept only pr
 ## Product attribute translations
 A Back Office user can localize product attributes. They can add translations for attribute names and values. For example, in the attribute `Color = White`, both `Color` and `White` can be localized.
 
-There are different ways to handle translations of attributes. See the examples below.
+There are different ways to handle translations of attributes. See the following examples.
 
 ### Example 1: localized attributes and non-localized values
 

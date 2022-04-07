@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/product-labels-feature-overview
 ---
 
-The _Product Label_ feature enables product catalog managers to highlight the desired products by adding a special type of information—product labels.
+The _Product Label_ feature lets product catalog managers highlight the desired products by adding a special type of information—product labels.
 
 ## Product label
 
@@ -111,7 +111,7 @@ A Back Office user can define the order in which product labels are displayed on
 
 The product labels are displayed in ascending order of Priority. So, the label with the smallest priority value always goes first while the product label with highest Priority value goes last.
 
-In the picture above, the priority value of *Alternatives available* product label is *4*. The Priority value of *Discontinued* product label is *5*.
+In the preceding figure, the priority value of *Alternatives available* product label is *4*. The Priority value of *Discontinued* product label is *5*.
 
 See [Creating product labels](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-labels/creating-product-labels.html) to learn how a Back Office user can define the product label priority.
 

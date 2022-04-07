@@ -39,7 +39,7 @@ The wishlist name can be later changed in the *Wishlist* section as well as new 
 
 ## Converting a wishlist to cart
 
-The direct-to-cart function enables your customers to simply add items from their wishlist to a shopping cart with a single click.
+The direct-to-cart function lets your customers simply add items from their wishlist to a shopping cart with a single click.
 
 Specifically, the customer can:
 

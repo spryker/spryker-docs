@@ -20,7 +20,7 @@ Depending on the `is_quantity_splittable` value, different amount of splittable 
 cart item quantity = sum(SOI[i].quantity)
 ```
 
-The table below shows quantities that will be created in the system if a concrete product, containing 5 product, would have `is_quantity_splittable` attribute set to true and false:
+The following table shows quantities that will be created in the system if a concrete product, containing 5 product, would have `is_quantity_splittable` attribute set to true and false:
 
 | Cart item | is_quantity_splittable | Cart Item Quantity | Number of SOIs created | Quantities Within the SOIs |
 | --- | --- | --- | --- | --- |

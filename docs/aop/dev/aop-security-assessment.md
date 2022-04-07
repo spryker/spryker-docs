@@ -1,12 +1,10 @@
 ---
 title: AOP Security Assessment
-Descriptions: This document outlines the threat modeling and security assessment requirements and process for apps listed on Spryker’s App Catalog or App Store.
+Descriptions: This document outlines the threat modeling and security assessment requirements and process for apps listed on the Spryker’s app catalog.
 template: howto-guide-template
 ---
 
-## Introduction
-
-This document outlines the threat modeling and security assessment requirements and process for apps listed on Spryker’s App Catalog or App Store. It covers the following app types:
+This document outlines the threat modeling and security assessment requirements and process for apps listed on the Spryker’s app catalog or the app store. It covers the following app types:
 
 - Pure API integrations (with 3rd party services and vendors)
 - Apps extending the Spryker Cloud Commerce Operating System (SCCOS)
@@ -14,11 +12,11 @@ This document outlines the threat modeling and security assessment requirements 
 
 ## AOP security
 
-In the context of listings on the AOP apps catalog, Security is a measure of Trust. For our enterprise customers to trust us with their data, it is important that every application they use with SCCOS offers a satisfactory level of security. 
+In the context of listings on the AOP apps catalog, security is a measure of trust. For our enterprise customers to trust us with their data, it is important that every app they use with SCCOS offers a satisfactory level of security. 
 
 ## Security responsibility
 
-The following are the main participants in a transaction related to the AOP:
+The main participants in a transaction related to the AOP are:
 
 1. AOP Owner - Spryker
 2. The Platform - Spryker SCCOS
@@ -30,7 +28,7 @@ All of these participants are responsible for the security of customer data.
 
 ## Threat modeling
 
-Spryker will conduct threat modeling to identify and prioritize potential threats to a system, and determine the value that potential mitigations would have in reducing or neutralizing those threats for apps that are commercially distributed through the AOP apps catalog. 
+Spryker will conduct threat modeling to identify and prioritize potential threats to a system and determine the value that potential mitigations would have in reducing or neutralizing those threats for commercially distributed apps through the AOP apps catalog.  
 The threat model document will be shared in a PDF, Word or HTML format and will contain the following information:
 
 - How data flows through a system to identify where the AOP application might be attacked.
@@ -46,13 +44,13 @@ During threat modeling, the following list of risks and threat libraries sources
 
 {% info_block infoBox "Info" %}
 
-Threat modeling is highly recommended but not mandatory for the apps listed in the AOP сatalog. Some Spryker customers ask for threat modeling explicitly in addition to a penetration test. If partner chooses not to get this done initially, they will need to go through that upon customer request. 
+Threat modeling is highly recommended but not mandatory for the apps listed in the AOP catalog. Some Spryker customers ask for threat modeling explicitly in addition to a penetration test. If the partner chooses not to get this done initially, they will need to go through that upon customer request. 
 
 {% endinfo_block %}
 
 ## Security assessment and testing
 
-Spryker will conduct a security assessment for apps that are commercially distributed through the AOP apps catalog. These tests include SAST (Static Application Security Testing) and Penetration testing activities. The objective of these tests is to replicate what a malicious actor would typically do in order to gain unauthorized access to the app and steal information.
+Spryker will conduct a security assessment for apps that are commercially distributed through the AOP apps catalog. These tests include SAST (Static Application Security Testing) and penetration testing activities. The objective of these tests is to replicate what a malicious actor would typically do to gain unauthorized access to the app and steal information.
 
 {% info_block infoBox "Info" %}
 
@@ -62,7 +60,7 @@ Penetration testing is mandatory for all applications in the AOP catalog.
 
 Every app that clears the review successfully will be awarded a badge of Security Approval that will be displayed on the listing details. While searching for apps on the catalog, customers will have the ability to filter their results based on the security approval status. 
 
-*As mentioned in the program document, other apps (those without the approval) could be listed on the catalog, but they will not have the security approval badge. Examples of such apps are template apps, starter apps, code samples, etc. Any unapproved app cannot be distributed commercially, i.e. customers cannot be charged for such apps. 
+Other apps (those without the approval) could be listed on the catalog, but they will not have the security approval badge. Examples of such apps are template apps, starter apps, code samples, etc. Any unapproved app cannot be distributed commercially, that is, customers cannot be charged for such apps. 
 
 ## Security standards
 
@@ -132,9 +130,9 @@ The app developers should not consider Spryker as an outsourced security QA team
 ## Review cost 
 
 For each app, a review fee of EUR 2500 / USD 3000 will be applicable. This amount is due every time the app goes through a full review cycle (typically annually) and is exclusive of any other fee or revenue share that has been agreed upon between the partner and Spryker.
-The fee covers an initial round of testing and up to two rounds of re-tests in case the application fails to pass the earlier rounds. If more testing is required because the partner hasn’t been able to address issues with earlier rounds of testing, each additional round will require a fee of EUR 800/USD 1000.
+The fee covers an initial round of testing and up to two rounds of re-tests in case the application fails to pass the earlier rounds. If more testing is required because the partner wasn't able to address issues with earlier rounds of testing, each additional round will require a fee of EUR 800/USD 1000.
 
-Similarly, a fee of EUR 2500 / USD 3000 is applicable for threat modeling. This is an optional test as stated earlier.
+Similarly, a fee of EUR 2500 / USD 3000 is applicable for threat modeling. This is an optional test, as stated earlier.
 
 {% info_block infoBox "Info" %}
 
@@ -150,22 +148,22 @@ The following diagram demonstrates the threat modeling process:
 
 ## Security assessment process
 
-The diagram below demonstrates security assessment procedure:
+The diagram below demonstrates the security assessment procedure:
 
 ![image 1](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/aop-security-assessment/image1.jpg)
 
 ## Review results
 
-- As soon as a review is cleared, an app is marked approved, and a badge is displayed on the marketplace listing.
-- During subsequent full reviews (typically annually), the app will retain its badge while it is in the test cycles. Nevertheless, in the following scenarios, the badge will be removed and customers notified of it:
+- As soon as a review is cleared, an app is marked as approved, and a badge is displayed on the marketplace listing.
+- During subsequent full reviews (typically annually), the app will retain its badge while it is in the test cycles. Nevertheless, in the following scenarios, the badge will be removed, and customers notified of it:
 	- The app developer fails to respond to repeated requests for annual re-assessments.
-	- During the re-assessment,  the app fails repeatedly (~5 times) and the app developer isn’t able to fix the reported issues.
+	- During the re-assessment,  the app fails repeatedly (about 5 times), and the app developer isn’t able to fix the reported issues.
 - At this time, customers can choose to look at an alternate application or work with the developer to remedy the issues.
 - Spryker can also decide to terminate the partner contract in such a scenario.
 
 ## Communication channels
 
-- Spryker will create a Slack channel for app developers to ask questions related to security. Security experts will monitor this channel and respond to the questions. 
+- Spryker will create a Slack channel for the app developers to ask questions related to security. Security experts will monitor this channel and respond to the questions. 
 - Communication during individual assessments would be handled through emails.
 - In cases where a discussion is needed to resolve open questions, a call can be set up between the developer and Spryker security experts.
 

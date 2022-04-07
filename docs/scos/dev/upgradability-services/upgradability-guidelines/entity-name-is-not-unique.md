@@ -38,7 +38,7 @@ Transfer names must be unique.
 
 ```bash
 ---------------- ----------------------------------------------------------------------------------------------------
-NotUnique:TransferName Transfer object name {name} has to have project prefix Pyz in {path}, like {proposedName}
+NotUnique:TransferName Transfer object name "CustomProductData" has to have project prefix Pyz in ".../src/Pyz/Shared/PyzCustomProduct/Transfer/custom_product.transfer.xml", like "PyzCustomProductData"
 ---------------------- ----------------------------------------------------------------------------------------------------
 ```
 
@@ -61,7 +61,7 @@ Transfer property names must be unique.
 ```xml
 ...
     <transfer name="LocaleCmsPageData">
-        <property name="contentWidgetParameterMap" type="array" singular="contentWidgetParameterMap"/>
+        <property name="customProperty"/>
     </transfer>
 ...
 ```
@@ -70,7 +70,7 @@ Transfer property names must be unique.
 
 ```bash
 -------------------------- ----------------------------------------------------------------------------------------------------
-NotUnique:TransferProperty Transfer property {transferPropertyName} for {transferName} has to have project prefix Pyz in {path}, like {proposedTransferPropertyName}
+NotUnique:TransferProperty Transfer property "customProperty" for "LocaleCmsPageData" has to have project prefix Pyz in ".../src/Pyz/Shared/Cms/Transfer/cms.transfer.xml", like "pyzCustomProperty"
 -------------------------- ----------------------------------------------------------------------------------------------------
 ```
 
@@ -79,7 +79,7 @@ NotUnique:TransferProperty Transfer property {transferPropertyName} for {transfe
 ```xml
 ...
     <transfer name="LocaleCmsPageData">
-        <property name="pyzContentWidgetParameterMap" type="array" singular="pyzContentWidgetParameterMap"/>
+        <property name="pyzCustomProperty"/>
     </transfer>
 ...
 ```
@@ -92,7 +92,7 @@ Database table names must be unique.
 
 ```xml
 ...
-    <table name="evaluator_spryker">
+    <table name="custom_table">
         ...
     </table>
 ...
@@ -102,7 +102,7 @@ Database table names must be unique.
 
 ```bash
 ------------------------ ----------------------------------------------------------------------------------------------------
-NotUnique:DatabaseTable Database table {tableName} has to have project prefix Pyz in {path}, like {proposedTableName}
+NotUnique:DatabaseTable Database table "custom_table" has to have project prefix Pyz in ".../src/Orm/Zed/PyzCustomFunctionality/Persistence/Propel/Schema/custom_table.schema.xml", like "pyz_custom_table"
 ----------------------- ----------------------------------------------------------------------------------------------------
 ```
 
@@ -110,7 +110,7 @@ NotUnique:DatabaseTable Database table {tableName} has to have project prefix Py
 
 ```xml
 ...
-    <table name="pyz_evaluator_spryker">
+    <table name="pyz_custom_table">
         ...
     </table>
 ...
@@ -125,7 +125,7 @@ Names of database table columns must be  unique
 ```xml
 ...
     <table name="spy_product">
-        <column name="is_active"/>
+        <column name="custom_column"/>
     </table>
 ...
 ```
@@ -134,7 +134,7 @@ Names of database table columns must be  unique
 
 ```bash
 ------------------------ ----------------------------------------------------------------------------------------------------
-NotUnique:DatabaseColumn Database column {columnName} has to have project prefix Pyz in {path}, like {proposedColumnName}
+NotUnique:DatabaseColumn Database column "custom_column" has to have project prefix Pyz in ".../Persistence/Propel/Schema/spy_product.schema.xml", like "pyz_custom_column"
 ------------------------ ----------------------------------------------------------------------------------------------------
 ```
 
@@ -143,7 +143,7 @@ NotUnique:DatabaseColumn Database column {columnName} has to have project prefix
 ```xml
 ...
     <table name="spy_product">
-        <column name="pyz_is_active"/>
+        <column name="pyz_custom_column"/>
     </table>
 ...
 ```
@@ -176,7 +176,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 ```bash
 ---------------- ----------------------------------------------------------------------------------------------------
-NotUnique:Method Method name {path}::{methodName} should contains project prefix, like {proposedMethodName}
+NotUnique:Method Method name "Pyz\Client\RabbitMq\RabbitMqConfig::getCustomConfiguration()" should contains project prefix, like "getPyzCustomConfiguration"
 ---------------- ----------------------------------------------------------------------------------------------------
 ```
 
@@ -221,7 +221,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 ```bash
 ------------------ ----------------------------------------------------------------------------------------------------
-NotUnique:Constant {path}::{constName} name has to have project namespace, like {proposedConstName}.
+NotUnique:Constant "Pyz\Client\RabbitMq\RabbitMqConfig::CUSTOM_CONST" name has to have project namespace, like "PYZ_CUSTOM_CONST".
 ------------------ ----------------------------------------------------------------------------------------------------
 ```
 

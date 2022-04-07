@@ -40,7 +40,7 @@ class CustomerFacade extends SprykerCustomerFacade implements CustomerFacadeInte
 ```bash
 ------------------------------------------------------------------------------------------------------------------------
 Pyz\Zed\Customer\Business\CustomerFacade
-"PrivateApi:Persistence Please avoid Spryker dependency: "{name}""
+"PrivateApi:Persistence Please avoid Spryker dependency: "{name}"
 ************************************************************************************************************************
 ```
 

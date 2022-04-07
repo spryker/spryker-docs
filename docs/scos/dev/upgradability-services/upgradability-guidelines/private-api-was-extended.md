@@ -28,7 +28,7 @@ class CustomerAccessForm extends SprykerCustomerAccessForm
 
 ```bash
 ------------------------------------------------------------------------------------
-"Please avoid dependency: "{name}" in "{name}""
+"Please avoid dependency: ""Spryker\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm" in "Pyz\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm""
 ------------------------------------------------------------------------------------
 ```
 
@@ -73,7 +73,7 @@ class CustomerAccessFilter extends SprykerCustomerAccessFilter
 
 ```bash
 ------------------------------------------------------------------------------------
-"PrivateApi:PrivateApiDependencyInBusinessModel: "{name}" in "{name}""
+"PrivateApi:PrivateApiDependencyInBusinessModel: ""Spryker\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessFilter" in "Pyz\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessFilter""
 ------------------------------------------------------------------------------------
 ```
 
@@ -114,7 +114,7 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
 
 ```bash
 ------------------------------------------------------------------------------------
-"PrivateApi:MethodIsOverwritten: "{name}" in "{name}""
+"PrivateApi:MethodIsOverwritten: "Spryker\Yves\CheckoutPage\CheckoutPageDependencyProvider::getCustomerStepHandler" in "Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider""
 ------------------------------------------------------------------------------------
 ```
 

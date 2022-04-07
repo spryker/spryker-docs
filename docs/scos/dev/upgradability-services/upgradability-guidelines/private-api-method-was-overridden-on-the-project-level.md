@@ -40,9 +40,9 @@ Evaluator\Business\Check\IsMethodOverridden\EntityManagerCheck
 Introduce a new custom method without usage of existing one. Override usage of the current method in all usage of public API.
 ************************************************************************************************************************
 ------------------------------------------------------------------------------------
-Pyz\Zed\EvaluatorSpryker\Persistence\EvaluatorSprykerCategoryImageEntityManager
-{"name":"{name}"}
-{"parentClass":"{parentClass}"}
+Pyz\Zed\CategoryImage\Persistence\PyzCategoryImageEntityManager
+{"name":"saveCategoryImageSet", "class":"Pyz\Zed\CategoryImage\Persistence\PyzCategoryImageEntityManager"}
+{"parentClass":"Pyz\Zed\CategoryImage\Persistence\CategoryImageEntityManager"}
 ************************************************************************************************************************
 ```
 

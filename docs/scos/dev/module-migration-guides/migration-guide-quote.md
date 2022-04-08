@@ -36,7 +36,7 @@ related:
 
 ## Upgrading from version 1.* to version 2.*
 
-The new version of the **Quote** module provides the ability to save customer quote into the database and get it. Version 2 of the `Quote` module introduced a new schema.
+The new version of the `Quote` module provides the ability to save customer quote into the database and get it. Version 2 of the `Quote` module introduced a new schema.
 
 Quote storage strategy (session, database) can be changed in `Spryker\Shared\Quote\QuoteConfig::getStorageStrategy`.
 
@@ -55,5 +55,3 @@ With this version quote storage strategies (session, database) have been added.
 They implement the interface `Spryker\Client\Quote\StorageStrategy\StorageStrategyInterface`, which extends `QuoteClientInterface`.
 
 Any of your changes from `QuoteClientInterface` should be implemented in `Spryker\Client\Quote\StorageStrategy\DatabaseStorageStrategy` and `Spryker\Client\Quote\StorageStrategy\SessionStorageStrategy`.
-
-<!-- Last review date: Apr 10, 2018*  by  Dmitriy Krainiy-->

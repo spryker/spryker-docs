@@ -31,12 +31,15 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-companyuser.html
 ---
 
-## Upgrading from Version 1.0.0 to Version 2.0.0
+## Upgrading from version 1.0.0 to version 2.0.0
 
 `CompanyUser` module version 2.0.0 brings one major change - new `is_active` column in `spy_company_user` database table. The main purpose of this field is to store information about company users and make it possible to enable/disable them.
 Also, `CompanyUserTransfer` object got a new `isActive` field, since it represents `CompanyUser` from the database (and you aren't allowed to use database entities directly).
 
-**To upgrade to the new version of the module, do the following:**
+_Estimated migration time: 2,5 to 4 hours. The time may vary depending on project-specific factors_
+
+To upgrade to the new version of the module, do the following:
+
 1. Run database migration:
 ```sql
 ALTER TABLE "spy_company_user"
@@ -78,7 +81,8 @@ public function enableCompanyUser(CompanyUserTransfer $companyUserTransfer): Com
 
 **Code sample:**
 
-```php/**
+```php
+/**
  * Specification:
  * - Disables company user.
  * - Uses idCompanyUser from company user transfer to find company user.
@@ -119,10 +123,9 @@ To achieve this, some some changes have been made. Please take a time to check t
 
 The changes are:
 * `CompanyRolePermissionController::manageAction()` method has been removed.
-        Please replace all usages with `CompanyRoleController::updateAction()`.
+  Please replace all usages with `CompanyRoleController::updateAction()`.
 * `SprykerShop/Yves/CompanyPage/Plugin/Provider/CompanyPageControllerProvider::ROUTE_COMPANY_ROLE_PERMISSION_MANAGE` constant that represented the old _Company Role Permissions Management_ page, has been removed and is no longer available.
 
 Please use `SprykerShop/Yves/CompanyPage/Plugin/Provider/CompanyPageControllerProvider::ROUTE_COMPANY_ROLE_UPDATE` instead;
 * Manage permissions button link on Company Role Details page has been changed from `company/company-role-permission/manage` to `company/company-role/update`.
 
-_Estimated migration time: 2,5 to 4 hours. The time may vary depending on project-specific factors_

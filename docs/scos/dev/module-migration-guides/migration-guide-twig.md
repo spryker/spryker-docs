@@ -38,7 +38,7 @@ composer update spryker/twig
 ```
 3. Add new plugins to dependency providers:
 
-**Zed Integration**
+**Zed integration**
 
 ```php
 <?php
@@ -66,7 +66,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 }
 ```
 
-**Yves Integration**
+**Yves integration**
 
 ```php
 <?php
@@ -96,7 +96,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 4. Enable additional plugins:
 
-**Twig Zed Integration**
+**Twig Zed integration**
 
 ```php
 <?php
@@ -205,7 +205,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 }
 ```
 
-**EventDispatcher Zed Integration**
+**EventDispatcher Zed integration**
 
 ```php
 <?php
@@ -231,7 +231,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 }
 ```
 
-**Twig Yves Integration**
+**Twig Yves integration**
 
 ```php
 <?php

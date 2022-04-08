@@ -24,7 +24,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-contentgui.html
 ---
 
-## Upgrading from Version 1.* to Version 2.*
+## Upgrading from version 1.* to version 2.*
 
 Version 2.0.0 of the `ContentGui` module introduces the [Content Items](/docs/scos/user/features/{{site.version}}/content-items-feature-overview.html) functionality that allows creating and managing content and later selecting where it should be inserted.
 
@@ -37,7 +37,10 @@ The `ContentGui` module version 2.0.0 introduced the following changes:
 
 You can find more details about the changes on the [ContentGui module release notes](https://github.com/spryker/content-gui/releases/tag/2.0.0) page.
 
-**To upgrade to the new version of the module, do the following:**
+_Estimated migration time: 30 minutes_
+
+To upgrade to the new version of the module, do the following:
+
 1. Perform the steps in [Migration Guide - Content](/docs/scos/dev/module-migration-guides/migration-guide-content.html).
 2. Upgrade the `ContentGui` module to version 2.0.0:
 
@@ -52,8 +55,5 @@ console transfer:generate
 4. Run the following command to re-build Zed UI:
 
 ```bash
- console frontend:zed:build
- ```
-_Estimated migration time: 30 minutes_
-
-<!-- Last review date: Jul 04, 2019 by Sergey Samoylov, Yuliia Boiko-->
+console frontend:zed:build
+```

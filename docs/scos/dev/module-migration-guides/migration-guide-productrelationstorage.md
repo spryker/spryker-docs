@@ -22,30 +22,37 @@ redirect_from:
 ## Upgrading from version 1.* to 2.0.0
 
 From version 1.* we have changed the storage data structure to contain store related records.
-**To upgrade to the new version of the module, do the following:**
+
+*Estimated migration time: 1 hour.*
+
+To upgrade to the new version of the module, do the following:
 
 1. Upgrade the ProductRelationStorage module to version 2.0.0:
+
 ```bash
 composer require spryker/product-relation-storage:"^2.0.0" --update-with-dependencies
 ```
 2. Clear storage:
-    a. Truncate the `spy_product_abstract_relation_storage` database table:
+
+    1. Truncate the `spy_product_abstract_relation_storage` database table:
+
     ```bash
     TRUNCATE TABLE spy_product_abstract_relation_storage
     ```
-    b. Remove all keys from Redis:
+    2. Remove all keys from Redis:
+
     ```bash
     redis-cli --scan --pattern kv:product_abstract_relation:'*' | xargs redis-cli unlink
     ```
 
 3. Update the database schema and generated classes:
-    a. Run the database migration:
+    1. Run the database migration:
 
     ```bash
     console propel:install
     ```
 
-    b. Generate transfer objects:
+    2. Generate transfer objects:
 
     ```bash
     console transfer:generate
@@ -109,6 +116,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 ```
 
 5. In `Pyz/Zed/Synchronization/SynchronizationDependencyProvider`, replace  `ProductRelationSynchronizationDataPlugin` with `ProductRelationSynchronizationDataRepositoryPlugin`:
+
 ```php
 <?php
 
@@ -132,8 +140,9 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 ```
 
 6. Populate storage with the new version:
-    a. Assign product relations to the stores to publish it to the storage.
-    b. Get all the data about product relations from the database and publish it into Redis:
+    1. Assign product relations to the stores to publish it to the storage.
+    2. Get all the data about product relations from the database and publish it into Redis:
+
     ```bash
     console event:trigger -r product_abstract_relation
     ```
@@ -141,6 +150,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
     {% info_block infoBox %}
 
     Make sure that the worker picks up all events. You can start the worker manually if needed:
+
     ```bash
     console queue:worker:start
     ```
@@ -148,4 +158,4 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
     {% endinfo_block %}
 
 
-*Estimated migration time: 1 hour.*
+

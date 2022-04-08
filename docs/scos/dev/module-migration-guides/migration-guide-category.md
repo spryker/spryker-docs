@@ -38,16 +38,13 @@ This document describes how to upgrade the `Category` module.
 
 ## Upgrading from version 4.* to 5.*
 
-
-*Estimated migration time: 30 minutes.*
-
 In Version 5.* of the Category module, we:
 
 - Added the possibility to assign stores to categories.
 - Introduced the `spy_category_store` table.
 - Adjusted the `spy_category.fk_category_template` field to make it a mandatory column in the `spy_category` table.
 
-
+*Estimated migration time: 30 minutes.*
 
 To upgrade the `Category` module from version 4.* to 5.*:
 
@@ -72,6 +69,7 @@ To upgrade the `Category` module from version 4.* to 5.*:
          </behavior>
    </table>
    ```
+
    {% info_block warningBox "Verification" %}
 
    In case you have `src/Pyz/Zed/Category/Persistence/Propel/Schema/spy_category_template.schema.xml` file locally: if you've never changed it - remove it. If you have introduced changes to it - make sure to move them to `src/Pyz/Zed/Category/Persistence/Propel/Schema/spy_category.schema.xml` and then remove the file.
@@ -236,8 +234,6 @@ Ensure that the `spy_category_store` table has been added and filled with data.
 
 ## Upgrading from Version 3.* to Version 4.*
 
-### Changes
-
 The fourth version of the Category module introduced the changes described below.
 
 Added:
@@ -250,6 +246,8 @@ Added:
 Removed:
 
 * category `is_clickable` functionality
+
+_Estimated migration time: 1 hour. The time may vary depending on project-specific factors._
 
 ### Update modules
 
@@ -287,7 +285,7 @@ ALTER TABLE "spy_category" ADD FOREIGN KEY("fk_category_template") REFERENCES sp
 
 Before upgrading to the new version, make sure that you do not use any deprecated code from version 3.\*. You can find replacements for the deprecated code in the table below.
 
-| Deprecated code | Replacement |
+| DEPRECATED CODE | REPLACEMENT |
 | --- | --- |
 | `\Spryker\Shared\Category\CategoryConstants::RESOURCE_TYPE_CATEGORY_NODE` | `\Spryker\Shared\Category\CategoryConfig::RESOURCE_TYPE_CATEGORY_NODE` |
 |`Spryker\Shared\Category\CategoryConstants::RESOURCE_TYPE_NAVIGATION`|`\Spryker\Shared\Category\CategoryConfig::RESOURCE_TYPE_NAVIGATION`|
@@ -303,7 +301,7 @@ Also, the `is_clickable` form field was removed because this functionality is ob
 
 The following migration script is designed to add the category template selection functionality to your project. If necessary, adjust the script to cover your category implementation
 
-CategoryTemplateMigration.php
+**CategoryTemplateMigration.php**
 
 ```php
 <?php
@@ -426,4 +424,3 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 8. Run the command to add templates to your categories: `vendor/bin/console category-template:migrate`
 
-_Estimated migration time: 1 hour. The time may vary depending on project-specific factors._

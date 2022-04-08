@@ -41,7 +41,7 @@ composer require spryker/security
 ```
 3. Enable new plugins in the corresponding files:
 
-**Yves Integration**
+**Yves integration**
 
 ```php
 <?php

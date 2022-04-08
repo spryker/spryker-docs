@@ -28,16 +28,18 @@ This migration guide is a part of the [Silex migration effort](/docs/scos/dev/mi
 To upgrade the module, do the following:
 
 1. Update the module using composer:
+
 ```bash
 composer update spryker/error-handler
 ```
 2. Remove the old service providers, if you have them in the project:
+
 ```php
 \Spryker\Shared\ErrorHandler\Plugin\ServiceProvider\WhoopsErrorHandlerServiceProvider
 ```
 3. Add new plugins to the dependency providers:
 
-**Zed Integration**
+**Zed integration**
 
 ```php
 <?php
@@ -66,7 +68,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 }
 ```
 
-**Yves Integration**
+**Yves integration**
 
 ```php
 <?php
@@ -96,6 +98,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 ```
 
 4. Update the `config_*.php` file:
+
 ```php
 // Replace
 $config[ApplicationConstants::IS_PRETTY_ERROR_HANDLER_ENABLED] = true;

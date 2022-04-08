@@ -25,21 +25,24 @@ related:
     link: docs/scos/dev/module-migration-guides/migration-guide-merchantrelationshipproductlistgui.html
 ---
 
-## Upgrading from Version 2.* to Version 3.*
+## Upgrading from version 2.* to version 3.*
 
-Version 3.* of the ProductLabelGui module adds the possibility to assign stores to the product labels in the Back Office.
+Version 3.* of the `ProductLabelGui` module adds the possibility to assign stores to the product labels in the Back Office.
 
- To upgrade to the new version of the module, do the following:
+To upgrade to the new version of the module, do the following:
 
-1. Upgrade the ProductLabelStorage module to the new version:
+1. Upgrade the `ProductLabelStorage` module to the new version:
+
 ```bash
 composer require spryker/product-label-gui:"^3.0.0" --update-with-dependencies
 ```
 2. Regenerate the data transfer object:
+
 ```bash
 console transfer:generate
 ```
 3. Add the `StoreRelationToggleFormTypePlugin` plugin provided below in `\Pyz\Zed\ProductLabelGui\ProductLabelGuiDependencyProvider`:
+
 ```php
 <?php
 
@@ -61,7 +64,7 @@ class ProductLabelGuiDependencyProvider extends SprykerProductLabelGuiDependency
 }
 ```
 
-## Upgrading from Version 1.* to Version 2.0.0
+## Upgrading from version 1.* to version 2.0.0
 
 The main point of the `ProductListGui` v2.0.0 is the following: exclusive ownership for product lists was removed from the merchant relations.
 
@@ -89,17 +92,23 @@ Keep in mind, that the Products Lists feature with the `ProductListGui` module m
 
 {% endinfo_block %}
 
-**To upgrade to the new version of the module, do the following:**
+
+*Estimated migration time: 1-2 hours*
+
+To upgrade to the new version of the module, do the following:
 
 1. Update `ProductListGui` module version and its dependencies by running the following command:
+
 ```bash
 composer require spryker/product-list-gui:"^2.0.0" --update-with-dependencies
 ```
 2. Update the transfer objects:
+
 ```bash
 console transfer:generate
 ```
 3. Generate translator cache by running the following command to get the latest Zed translations:
+
 ```bash
 console translator:generate-cache
 ```
@@ -115,7 +124,7 @@ Avoid using of the plugins implementing `ProductListOwnerTypeFormExpanderPluginI
 
 {% endinfo_block %}
 
-4. Remove following methods from `src/Pyz/Zed/ProductListGui/ProductListGuiDependencyProvider.php` (if any present):
+4. Remove the following methods from `src/Pyz/Zed/ProductListGui/ProductListGuiDependencyProvider.php` (if any present):
 
 * `getProductListOwnerTypeFormExpanderPlugins`
 * `getProductListTableConfigExpanderPlugins`
@@ -124,6 +133,7 @@ Avoid using of the plugins implementing `ProductListOwnerTypeFormExpanderPluginI
 * `getProductListTableHeaderExpanderPlugins`
 
 5.  If your project has any domain entities that use product list (e.g. *Configurable Bundle*, *Merchant Relationship*, etc), add the respective plugins to the dependency provider:
+
 ```php
 <?php
 
@@ -168,5 +178,3 @@ class ProductListGuiDependencyProvider extends SprykerProductListGuiDependencyPr
 ```bash
 console frontend:zed:build
 ```
-
-*Estimated migration time: 1-2 hours*

@@ -33,9 +33,10 @@ redirect_from:
 
 ## Upgrading from version 3.* to version 4.*
 
-To upgrade from 3* to 4*, composer update your calculator to version 4.
+To upgrade from version 3.* to 4.*, composer update your calculator to version 4.
 
-**Updating Calculator Stacks**
+**Updating calculator stacks**
+
 In the new version there are two new calculator stacks, `getQuoteCalculatorPluginStack` and `getOrderCalculatorPluginStack`. They are both defined in `\Pyz\Zed\Calculation\CalculationDependencyProvider`.
 
 {% info_block errorBox %}
@@ -44,7 +45,7 @@ In the previous version (3*), the calculator stack was called `getCalculatorSta
 
 {% endinfo_block %}
 
-By default the demoshop ships with these plugins. If you have your custom plugins, please add them accordingly, old and new calculators plugins are backwards compatible.
+By default, the demoshop ships with these plugins. If you have your custom plugins, please add them accordingly, old and new calculators plugins are backwards compatible.
 If you want to keep having old calculated fields, add the plugins to `getQuoteCalculatorPluginStack`. Take into consideration, that we recommend you discard old plugins and use the new ones.
 
 **Code sample:**
@@ -65,7 +66,7 @@ The old Calculator plugins were moved to the following separate repository: `spr
 
 {% endinfo_block %}
 
-The `Caclulator` module also returns `back sales.fk_customer, sales.fk_shipment_method, sales.shipment_delivery_time` - these are deprecated methods. To safely migrate them, see [Migration Guide - Sales](/docs/scos/dev/module-migration-guides/migration-guide-sales.html).
+The `Calculator` module also returns `back sales.fk_customer, sales.fk_shipment_method, sales.shipment_delivery_time` - these are deprecated methods. To safely migrate them, see [Migration Guide - Sales](/docs/scos/dev/module-migration-guides/migration-guide-sales.html).
 
 After this you should see new values calculated + legacy ones.
 
@@ -182,22 +183,22 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
        }
 }
 ```
-
-<br>
 </details>
 
-**Changing Displayed Calculated Values**
+**Changing the displayed calculated values**
+
 You may also want to change displayed calculated values in your twig templates.
 
 Instead of using specific calculated fields, there are more generic fields provided with the new calculator version.
 
 If you were using `ItemTransfer::unitGrossPrice` or `ProductOptionTransfer::unitGrossPrice`, replace this with `ItemTransfer::unitPrice` or `ProductOptionTransfer::unitPrice` - these values are used mostly in cart details, checkout summary or customer order details pages.
 
-You also need to update <code>Price\` >= 4.\*</code> and <code>PriceCartConnector\` >= 3.\*</code> as they provide additional data to the quote transfer when "adding to cart". (`QuoteTransfer::priceMode`).
+You also need to update `Price\ >= 4.\*` and `PriceCartConnector\ >= 3.\*` as they provide additional data to the quote transfer when "adding to cart". (`QuoteTransfer::priceMode`).
 
 It is necessary only if you extended the `\Spryker\Zed\PriceCartConnector\Business\Manager\PriceManager` class, because you will receive this change when you update the module.
 
-### Update Cart Expander Plugin CartItemPricePlugin
+### Updating cart expander plugin CartItemPricePlugin
+
 If you extended the core `CartItemPricePlugin`, adapt the following code:
 
 **Code sample:**
@@ -222,9 +223,10 @@ protected function setQuotePriceMode(QuoteTransfer $quoteTransfer)
 ?>
 ```
 
-### Migrating Sales to the New Calculator Logic
+### Migrating sales to the new calculator logic
 
 To migrate all your orders, do the following:
+
 1. Update Yves to use the new version of the `Calculator` module with the new Calculator plugins.
 2. Update your schema by running the following SQL inserts:
 
@@ -339,7 +341,8 @@ You should now be able to persist an order with the new calculated values.
 
 {% endinfo_block %}
 
-### Sales Aggregation
+### Sales aggregation
+
 `SalesAggregation` is no longer needed as we persist all calculated values.
 Because `SalesAggregator` is not used, we added a new extension point when the order is read. At this point, you can enrich `OrderTransfer` with your own data.
 `\Spryker\Zed\Sales\Dependency\Plugin\HydrateOrderPluginInterface` provides a new plugin interface to inject more data for an order.
@@ -384,7 +387,8 @@ The Sales module does not depend on the `SalesAggregator` anymore. Therefore, yo
 
 {% endinfo_block %}
 
-### Template Changes in SalesBundle >= 6.\*:
+### Template changes in the SalesBundle >= 6.\*:
+
 Item and Item option display have been split into three separate template files:
 
 1. `Spryker/Zed/Sales/Presentation/Detail/boxes/order-item.twig`
@@ -395,7 +399,7 @@ If you have modified these files, take into consideration how data formatting ha
 Also, update your `CheckoutDependency` provider to include the new expander plugin, which is registered in the new checkout preSave plugin, see Checkout Process.
 This plugin expands quote items so each item has a single quantity, then runs order recalculate to have correctly distributed amounts. This is needed because after split has been made, some items may have rounding errors and we need to make sure that the tax and price to pay values are correct.
 
-**To add a new plugin to `\Pyz\Zed\Checkout\CheckoutDependencyProvider`**
+To add a new plugin to `\Pyz\Zed\Checkout\CheckoutDependencyProvider`:
 
 **Code sample:**
 
@@ -415,13 +419,13 @@ This plugin expands quote items so each item has a single quantity, then runs or
     }
 ```
 
-## Old Order Migration
+## Old order migration
 
 To migrate old orders, use the deprecated `SalesAggregator` to populate the new table columns.
 `SalesAggregator` has been deprecated and will be removed in the future. Till then, we will still provide future patches for it.
 All `SalesAggregator` plugins were moved to the `SalesAggregator` module.
 
-**The final core plugins list is:**
+The final core plugins list is:
 
 ```php
 <?php
@@ -460,7 +464,7 @@ Before beginning, make a backup of your sales order data!
 
 {% endinfo_block %}
 
-### Console Command
+### Console command
 
 We prepared a migration console command which will  populate your old orders with the new calculated values.
 To download this console command, go to Console Command.

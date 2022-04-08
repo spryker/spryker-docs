@@ -34,7 +34,7 @@ related:
     link: docs/scos/dev/module-migration-guides/migration-guide-multi-currency.html
 ---
 
-## Upgrading from Version 4.* to Version 5.*
+## Upgrading from version 4.* to version 5.*
 
 From version 5 we have changed price module responsibilities: previously it was responsible for handling product price related functionality. This responsibility has now been moved to the new PriceProduct module which handles product prices, while Price module is responsible for generic spryker core related functionality.
 
@@ -62,9 +62,9 @@ CREATE TABLE "spy_price_product_store"
 ALTER TABLE "spy_price_type"
   ADD "price_mode_configuration" INT2;
   ```
-`spy_price_product_store` is the table for price per store / currency. `price_mode_configuration` field is added to indicate to which mode price type assigned GROSS, NETT, BOTH.
+`spy_price_product_store` is the table for price per store / currency. `price_mode_configuration` field is added to indicate to which mode price type assigned GROSS, NET, BOTH.
 * Build propel models `vendor/bin/console propel:model:build`.
-* Generate new transfer objects `vendor/bin/consle transfer:generate`.
+* Generate new transfer objects `vendor/bin/console transfer:generate`.
 If you have overwritten any of the classes from the `Price` module, you have to change namespace part with `Price` to `PriceProduct`, for example if you used `PriceFacade`, now should use `PriceProductFacade`. Same for `Factories`, `QueryContainer`, `DependencyProvider`.
 Check that all `Price` plugins registered in `ProductDependencyProvider` have been moved to `PriceProduct` namespace.
 `use Spryker\Zed\Price\Communication\Plugin\ProductAbstract\PriceProductAbstractAfterCreatePlugin;`

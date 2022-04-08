@@ -8,9 +8,9 @@ template: module-migration-guide-template
 
 *Estimated migration time: 5 minutes*
 
-To upgrade the ProductConfigurationsRestApi module from version 0.1.* to version 0.2.*, do the following:
+To upgrade the `ProductConfigurationsRestApi` module from version 0.1.* to version 0.2.*, do the following:
 
-1. Update the ProductConfigurationsRestApi module to version 0.2.0:
+1. Update the `ProductConfigurationsRestApi` module to version 0.2.0:
    
 ```bash
 composer require spryker/product-configurations-rest-api:"^0.2.0" --update-with-dependencies

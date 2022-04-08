@@ -35,7 +35,7 @@ Some projects actively use and develop Zed API. To continue using legacy Zed API
 
 1. Create a new class `ApiConfig` in Pyz and extend the base class:
 
-src/Pyz/Zed/Api/ApiConfig.php
+**src/Pyz/Zed/Api/ApiConfig.php**
 
 ```php
 namespace Pyz\Zed\Api;

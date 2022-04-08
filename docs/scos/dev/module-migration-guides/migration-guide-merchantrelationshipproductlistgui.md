@@ -25,7 +25,7 @@ related:
     link: docs/scos/dev/module-migration-guides/migration-guide-productlistgui.html
 ---
 
-## Upgrading from Version 1.* to Version 2.0.0
+## Upgrading from version 1.* to version 2.0.0
 
 The main point of the `MerchantRelationshipProductListGui` v2.0.0 is the following: exclusive ownership for product lists was removed from the merchant relations.
 
@@ -40,19 +40,23 @@ Here is the change list for the `MerchantRelationshipProductListGui` v2.0.0:
 * Deprecated `MerchantRelationshipProductListOwnerTypeFormExpanderPlugin`.
 * Deprecated `MerchantRelationshipTableExpanderPlugin`.
 
-**To upgrade to the new version of the module, do the following:**
+*Estimated migration time: 1hour*
+
+To upgrade to the new version of the module, do the following:
 
 1. Update the `MerchantRelationshipProductListGui` module version and its dependencies by running the following command:
+
 ```bash
 composer require spryker/merchant-relationship-product-list-gui:"^2.0.0" --update-with-dependencies
 ```
 2. Update transfer objects:
+
 ```bash
 console transfer:generate
 ```
 3. Generate translator cache by running the following command to get the latest Zed translations:
+
 ```bash
 console translator:generate-cache
 ```
 
-*Estimated migration time: 1hour*

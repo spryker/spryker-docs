@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-discount.html
 ---
 
-## Upgrading from Version 7.* to Version 9.0.0
+## Upgrading from version 7.* to version 9.0.0
 
 {% info_block infoBox %}
 
@@ -39,7 +39,7 @@ In order to dismantle the Horizontal Barrier and enable partial module updates o
 
 {% endinfo_block %}
 
-## Upgrading from Version 6.* to Version 7.*
+## Upgrading from version 6.* to version 7.*
 
 The seventh version of the `Discount` module introduces the Minimum Quantity of Items value for discounts. This functionality allows you to define discounts that will be applied only when the number of items which satisfies the conditions, is equal to or greater than the defined amount.
 
@@ -53,7 +53,7 @@ console propel:install
 
 This will generate a propel migration file as well update the database and the model for the Minimum Quantity of Items functionality to take effect.
 
-## Upgrading from Version 5.* to Version 6.*
+## Upgrading from version 5.* to version 6.*
 
 1. Update/install `spryker/discount` to at least 6.0.0 version.
 2. Run `vendor/bin/console transfer:generate` to generate the new transfer objects.
@@ -189,15 +189,15 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 13. You can find additional information on the [Discount module release page](https://github.com/spryker/discount/releases) or by checking out our [Demoshop implementation](https://github.com/spryker/demoshop) for implementation example and idea.
 14. You are ready now to use Discount Zed Admin UI and manage discounts per Store.
 
-## Upgrading from Version 4.* to Version 5.*
+## Upgrading from version 4.* to version 5.*
 
-In the `Discount` module version 5, we have introduced multicurrency support for fixed discount calculation. This update also includes:
+In the `Discount` module version 5, we have introduced multi-currency support for fixed discount calculation. This update also includes:
 
 * Support for net/gross amounts.
 * Currency decision rule -  to filter discounts by currency.
 * PriceMode decision rule - to filter discounts by price mode(net/gross).
 * Database schema changes to store discount amounts and fk_store for later multi store support.
-* Sales table changed deprecated collumn type from decimal to int as discount amounts were already stored as integers.
+* Sales table changed deprecated column type from decimal to int as discount amounts were already stored as integers.
 * `CalculatorInterface` renamed to `CalculatorTypeInterface`, concrete calculators Fixed and Percentage rename to `FixedType` and `PercentageType` accordingly.
 
 1. Run the following command:

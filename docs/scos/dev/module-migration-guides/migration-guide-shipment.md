@@ -40,7 +40,10 @@ related:
 
 In the version 8.0.0 of the `Shipment` module, we have added the ability to assign a delivery method to a store in the Back Office. You can find more details about the changes on the [Shipment module release](https://github.com/spryker/shipment/releases) page.
 
-**To upgrade to the new version of the module, do the following:**
+
+*Estimated migration time: 5 min*
+
+To upgrade to the new version of the module, do the following:
 
 1. Upgrade the `Shipment` module to the new version:
 
@@ -63,11 +66,9 @@ console propel:install
 console transfer:generate
 ```
 
-*Estimated migration time: 5 min*
-***
-## Upgrading from Version 6.* to Version 7.*
+## Upgrading from version 6.* to version 7.*
 
-In this new version of the **Shipment** module, we have added support of split delivery. You can find more details about the changes on the [Shipment module release page](https://github.com/spryker/shipment/releases).
+In this new version of the `Shipment` module, we have added support of split delivery. You can find more details about the changes on the [Shipment module release page](https://github.com/spryker/shipment/releases).
 
 {% info_block errorBox %}
 
@@ -75,7 +76,9 @@ This release is a part of the Split delivery concept migration. When you upgrade
 
 {% endinfo_block %}
 
-**To upgrade to the new version of the module, do the following:**
+*Estimated migration time: 10 min*
+
+To upgrade to the new version of the module, do the following:
 
 1.  Upgrade the `Shipment` module to the new version:
 
@@ -199,13 +202,10 @@ class ShipmentConfig extends SprykerShipmentConfig
 }
 ```
 
-*Estimated migration time: 10 min*
 
-***
+## Upgrading from version 5.* to version 6.*
 
-## Upgrading from Version 5.* to Version 6.*
-
-In version 6, multi-currency prices are introduced for shipment methods, allowing to set up different net and gross price per shipment method for each preconfigured currency.
+In version 6, multi-currency prices are introduced for shipment methods, allowing to set up different net and gross price per shipment method for each pre-configured currency.
 
 The `spy_shipment_method.default_price` database column becomes deprecated. Shipment method prices are stored in `spy_shipment_method_price` database table instead. `spy_shipment_method_price` database table holds a store + currency specific gross and net price for each shipment method.
 
@@ -218,7 +218,7 @@ Database structure is as follows:
 </div>
 
 1. Update `spryker/shipment` module to at least 6.0.0 version.
-2. Update database
+2. Update the database:
     * Install the database changes by running `vendor/bin/console propel:diff`. Propel should generate a migration file with the changes.
     * Apply the database changes: `vendor/bin/console propel:migrate`.
     * Generate and update ORM models: `vendor/bin/console propel:model:build`.
@@ -227,16 +227,14 @@ Database structure is as follows:
         * `\Orm\Zed\Shipment\Persistence\SpyShipmentMethodPriceQuery` extends `\Spryker\Zed\Shipment\Persistence\Propel\AbstractSpyShipmentMethodPriceQuery`
 3. Run `vendor/bin/console transfer:generate` to update and generate transfer object changes.
 
-**Transfer object changes**
+    **Transfer object changes**
 
     Property `defaultPrice` in `ShipmentMethod` transfer object is replaced by prices, and      `storeCurrencyPrice` properties.
 
     * `prices transfer` object property contains the shipment method related prices from `spy_shipment_method_price` database table as a `MoneyValue` transfer object collection.
-    * `storeCurrencyPrice` transfer object property contains 1 specific price, based on the preconfigured `store + price` mode and for the requested currency.
+    * `storeCurrencyPrice` transfer object property contains 1 specific price, based on the pre-configured `store + price` mode and for the requested currency.
 
     `ShipmentMethod` transfer object now contains a shipmentMethodKey property, accordingly to the new database structure.
-    <br>
-    </details>
 
 4. Replace the usages of `ShipmentMethod.defaultPrice` transfer object property in your custom codes, depending on your requirements.
 5. Migrate your old database structure by creating a `spy_shipment_method_price` row for each of your `spy_shipment_method` rows.
@@ -244,7 +242,7 @@ Database structure is as follows:
     Depending on your requirements, you can set `gross/net` prices as `0`/`null`/`any integer` value as cents.
 
 <details open>
-<summary markdown='span'>Example: Migration</summary>
+<summary markdown='span'>Example migration</summary>
 
 ```php
 <?php
@@ -466,12 +464,11 @@ class MigrateShipmentMethodPricesConsole extends Console
 
 }                         
 ```
-<br>
 </details>
 
 6. Register the prepared multi-currency handling `MoneyCollectFormType` form type in your project.
 
-Here is the example of MoneyCollectionTypePlugin registration:
+Here is the example of `MoneyCollectionTypePlugin` registration:
 
 ```php
 <?php
@@ -501,7 +498,7 @@ class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 
 9. The `ShipmentFacadeInterface::getAvailableMethods` method applies multi-currency feature:
    1. Does not populate `taxRate` transfer object property anymore in shipment method transfer objects.
-   2. Excludes shipment methods which would end up with `NULL` value for the request's currency and preconfigured `store + price` mode. Amend your custom calls to ShipmentFacadeInterface::getAvailableMethods method accordingly to your requirements.
+   2. Excludes shipment methods which would end up with `NULL` value for the request's currency and pre-configured `store + price` mode. Amend your custom calls to ShipmentFacadeInterface::getAvailableMethods method accordingly to your requirements.
 
 {% info_block errorBox "Important" %}
 
@@ -521,14 +518,15 @@ class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 
 Go to the Shipment management Back Office to verify your shipment method prices.
 
-## Upgrading from Version 4.* to Version 5.*
+## Upgrading from version 4.* to version 5.*
 
 In version 5, shipment lost the direct foreign key `sales.fk_shipment_method` to the `sales_order` table, it was replaced with the `spy_sales_shipment` table where all shipment information is stored.
 
 A new `SalesOrderHydration` plugin was added to populate `OrderTransfer` with shipment information `ShipmentOrderHydratePlugin`.
 
 The new shipment table structure requires manual data migration, we have provided migration script, you can read how to migrate shipment data in [Migration Guide Sales](/docs/scos/dev/module-migration-guides/migration-guide-sales.html).
-***
-## Upgrading from Version 2.* to Version 3.*
+
+
+## Upgrading from version 2.* to version 3.*
 
 The tax plugins are using the version 3.* of the Tax module. You need to upgrade the [Tax](/docs/scos/dev/module-migration-guides/migration-guide-tax.html) module.

@@ -34,11 +34,13 @@ related:
     link: docs/scos/dev/module-migration-guides/glue-api/migration-guide-checkoutrestapi.html
 ---
 
-## Upgrading from Version 4.* to Version 5.0.0
+## Upgrading from version 4.* to version 5.0.0
 
-In this new version of the **Payment** module, we have added support of the payment method per store. You can find more details about the changes on the [Payment module](https://github.com/spryker/payment/releases) release page.
+In this new version of the `Payment` module, we have added support of the payment method per store. You can find more details about the changes on the [Payment module](https://github.com/spryker/payment/releases) release page.
 
-**To upgrade to the new version of the module, do the following:**
+*Estimated migration time: 15 min*
+
+To upgrade to the new version of the module, do the following:
 
 1. Upgrade the **Payment** module to the new version:
 
@@ -61,11 +63,11 @@ console transfer:generate
 ```
 
 4. The `SalesPaymentMethodTypeInstallerPlugin` plugin was removed, please use `PaymentDataImport module` instead. <!-- add Payments feature integration guide link here. -->
+
 5. The `PaymentConfig::getSalesPaymentMethodTypes()` config method was removed, please use the `PaymentDataImport` module instead. <!-- add Payments feature integration guide link here. -->
 
-*Estimated migration time: 15 min*
-***
-## Upgrading from Version 3.* to Version 4.*
+
+## Upgrading from version 3.* to version 4.*
 
 In the Payment module version 4 we have added new payment tables to store order payment related information.
 To enable the new version:

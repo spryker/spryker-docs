@@ -38,7 +38,8 @@ related:
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
 ---
 
-## Upgrading from Version 2.* to Version 3.*
+## Upgrading from version 2.* to version 3.*
+
 CmsBlock version 3.0.0 introduces the following backward incompatible changes:
 
 * Introduced the `spy_cms_block.spy_cms_block-key` unique index.
@@ -48,28 +49,32 @@ CmsBlock version 3.0.0 introduces the following backward incompatible changes:
 * Removed `CmsBlockConstants::YVES_THEME`. Use `CmsBlockConfig::getThemeName()` instead.
 * Moved `CmsBlockPlaceholderTwigPlugin` to the `SprykerShop\CmsBlockWidget` module.
 
-**Upgrade the module to the new version:**
+To upgrade to the new version of the module, do the following:
 
 1. Upgrade the `CmsBlock` module to version 3.0.0:
+
 ```bash
 composer require spryker/cms-block:"^3.0.0" --update-with-dependencies
 ```
 2. Re-generate transfer objects:
+
 ```bash
 console transfer:generate
 ```
-4. If there are:
+3. If there are:
+
     a. no preexisting blocks in the database, run the database migration:
     ```bash
     console propel:install
     ```
+
     b. If there are preexisting blocks in the database, follow the further steps to migrate the block data.
 
-1. On the project level in `src/Pyz/Zed/CmsBlock/Persistence/Propel/Schema/spy_cms_block.schema.xml`, update the `key` column property from `required` to `false` for data migration:
+4. On the project level in `src/Pyz/Zed/CmsBlock/Persistence/Propel/Schema/spy_cms_block.schema.xml`, update the `key` column property from `required` to `false` for data migration:
 
 **src/Pyz/Zed/Content/Persistence/Propel/Schema/spy_content.schema.xml**
 
-```php
+```xml
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed"
           xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd"
@@ -84,8 +89,9 @@ console transfer:generate
 ```
 
 2. Run the database migration:
+
 ```bash
-    console propel:install
+console propel:install
 ```
 
 3. Create the `cms-block:generate-keys` command in `src/Pyz/Zed/CmsBlock/Communication/Console/CmsBlockKeyGeneratorConsoleCommand.php`:
@@ -169,6 +175,7 @@ class ContentItemKeyGeneratorConsoleCommand extends Console
 ```
 
 4. Run the command:
+
 ```bash
 console cms-block:generate-keys
 ```
@@ -177,7 +184,7 @@ console cms-block:generate-keys
 
 **src/Pyz/Zed/Content/Persistence/Propel/Schema/spy_content.schema.xml**
 
-```php
+```xml
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed"
           xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd"
@@ -197,20 +204,20 @@ console cms-block:generate-keys
 console propel:install
 ```
 
-## Upgrading from Version 1.* to Version 2.*
+## Upgrading from version 1.* to version 2.*
 
 This version allows saving CMS Block-Store relation.
 
 1. Update the `spryker/cms-block` module to at least Version 2.0.0.
 2. Update your `spryker/cms-block-collector` module to at least Version 2.0.0. See [Migration Guide - CMS Collector](/docs/scos/dev/module-migration-guides/migration-guide-cmscollector.html) for more details.
 
-**Custom CMS Block Collector**
+### Custom CMS Block Collector
 
 If you have a custom CMS Block Collector, make sure that it collects CMS Blocks only when the related CMS Block has an entity in the `spy_cms_block_store` table for the desired store.
 
 3. Run `vendor/bin/console transfer:generate` to update and generate transfer object changes.
 
-**Transfer object changes**
+### Transfer object changes
 
 `CmsBlock` transfer object has now a `StoreRelation` property which allows you to retrieve/define the stores assigned to the current CMS Block.
 
@@ -221,12 +228,11 @@ If you have a custom CMS Block Collector, make sure that it collects CMS Blocks 
 * `\Orm\Zed\CmsBlock\Persistence\SpyCmsBlockStore` extends `\Spryker\Zed\CmsBlock\Persistence\Propel\AbstractSpyCmsBlockStore`
 * `\Orm\Zed\CmsBlock\Persistence\SpyCmsBlockStoreQuery` extends `\Spryker\Zed\CmsBlock\Persistence\Propel\AbstractSpyCmsBlockStoreQuery`
 
-8. The newly created `spy_cms_block_store` table definess 1 row per CMS Block-store association. Populate this table according to your requirements.
+8. The newly created `spy_cms_block_store` table defines 1 row per CMS Block-store association. Populate this table according to your requirements.
 
-**Example data**
+### Assumptions
 
-**Assumptions**
-<br>You have the following CMS Blocks: Block_1, Block_2, and stores: AT, DE, US.
+You have the following CMS Blocks: Block_1, Block_2, and stores: AT, DE, US.
 
 The `spy_cms_block_store` can have a configuration like this:
 
@@ -245,7 +251,7 @@ Even if you have 1 store, the associations between CMS Blocks and stores have to
 
 {% endinfo_block %}
 
-**Example migration query**
+### Example migration query
 
 To populate the new `spy_cms_block_store` table to have all CMS Blocks in all stores as an initial configuration, run the following query:
 

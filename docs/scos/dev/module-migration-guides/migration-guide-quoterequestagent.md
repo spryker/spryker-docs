@@ -34,19 +34,23 @@ In this new version of the `QuoteRequestAgentPage` module, we have added support
 * Added new dependency spryker/persistent-cart:^3.0.0.
 * Removed several twig files.
 
-**To migrate the module `QuoteRequestAgent` from version 2.0.0 to 3.0.0, do the following:**
+*Estimated migration time: ~2h*
 
-1) Update the `QuoteRequestPage` module:
+To migrate the module `QuoteRequestAgent` from version 2.0.0 to 3.0.0, do the following:
+
+1. Update the `QuoteRequestPage` module:
+
 ```bash
 composer require spryker-shop/quote-request-agent-page: "^3.0.0" --update-with-dependencies
 ```
 
-2) Regenerate transfer objects:
+2. Regenerate transfer objects:
+
 ```bash
 console transfer:generate
 ```
 
-3) Some files were re-organized, please check if you had overwritten them on project level:
+3. Some files were re-organized, please check if you had overwritten them on project level:
 
 * Adjusted `source-price-form` molecule to remove deprecated `priceFiled` data property.
 * Adjusted `page-layout-quote-request` template to extend `page-layout-quote-request` template from `QuoteRequestPage` module instead of `page-layout-agent`.
@@ -55,13 +59,15 @@ console transfer:generate
 * Adjusted `quote-request-edit-items-confirm` view to extend `page-layout-confirmation` template instead of `page-layout-quote-request`.
 * Adjusted `quote-request-view` view to extend `page-layout-agent` template instead of `page-layout-quote-request`.
 
-*Estimated migration time: ~2h*
+
 
 ## Upgrading from version 1.x.x to version 2.x.x
 
 The one major change of `QuoteRequestAgent` 2.x.x is the dependency update for `spryker/quote-request:^2.0.0`.
 
-**To migrate the module `QuoteRequestAgent` from version 1.0.0 to 2.0.0, do the following:**
+*Estimated migration time: ~1h*
+
+To migrate the module `QuoteRequestAgent` from version 1.0.0 to 2.0.0, do the following:
 
 1. Update `spryker/quote-request:^2.0.` by following the steps from the [Migration Guide - QuoteRequest](/docs/scos/dev/module-migration-guides/migration-guide-quoterequest.html)
 2. Update `spryker/quote-request-agent:^2.0.0`:
@@ -76,4 +82,3 @@ composer require spryker/quote-request-agent: "^2.0.0" --update-with-dependencie
 vendor/bin/console transfer:generate
 ```
 
-*Estimated migration time: ~1h*

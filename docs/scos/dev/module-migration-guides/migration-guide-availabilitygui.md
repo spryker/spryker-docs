@@ -40,9 +40,11 @@ This release is a part of the **Decimal Stock** concept migration. When you upgr
 
 {% endinfo_block %}
 
-**To upgrade to the new version of the module, do the following:**
+*Estimated migration time: 5 min*
 
-1. Upgrade the **AvailabilityGui** module to the new version:
+To upgrade to the new version of the module, do the following:
+
+1. Upgrade the `AvailabilityGui` module to the new version:
 
 ```bash
 composer require spryker/availability-gui: "^6.0.0" --update-with-dependencies
@@ -60,8 +62,6 @@ APPLICATION_STORE=US console propel:schema:copy
 console propel:install
 console transfer:generate
 ```
-
-*Estimated migration time: 5 min*
 
 ## Upgrading from version 3.* to version 5.0.0
 

@@ -42,8 +42,10 @@ This migration guide is a part of the [Search migration effort](/docs/scos/dev/m
 
 {% endinfo_block %}
 
-To upgrade the module, do the following:
-1. Remove usages of all deprecated query expander and result formatter plugins (if any) from `Pyz\Client\Catalog\CatalogDependencyProvider`
+To upgrade to the new version of the module, do the following:
+
+1. Remove usages of all deprecated query expander and result formatter plugins (if any) from `Pyz\Client\Catalog\CatalogDependencyProvider`:
+
 ```php
 Spryker\Client\Search\Plugin\Elasticsearch\QueryExpander\CompletionQueryExpanderPlugin
 Spryker\Client\Search\Plugin\Elasticsearch\QueryExpander\FacetQueryExpanderPlugin
@@ -65,7 +67,8 @@ Spryker\Client\Search\Plugin\Elasticsearch\ResultFormatter\SuggestionByTypeResul
 ```
 2. Enable the replacement plugins:
 
-**Pyz\Client\Catalog**
+<details>
+<summary markdown='span'>Pyz\Client\Catalog</summary>
 
 ```php
 <?php
@@ -194,6 +197,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
     }
 }
 ```
+</details>
 
 ## Upgrading from Version 3.* to Version 4.*
 

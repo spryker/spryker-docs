@@ -27,10 +27,12 @@ This migration guide is a part of the [Silex migration effort](/docs/scos/dev/mi
 
 To upgrade *Router*, do the following:
 
-1. Install a new module using composer:
+1. Install a new module using Composer:
+
 ```bash
 composer require spryker/router
 ```
+
 2. Remove old service providers, if you have them in the project:
 ```php
 \Silex\Provider\RoutingServiceProvider
@@ -42,7 +44,9 @@ composer require spryker/router
 \Spryker\Zed\Application\Communication\Plugin\ServiceProvider\UrlGeneratorServiceProvider
 \Spryker\Glue\GlueApplication\Plugin\Rest\ServiceProvider\GlueRoutingServiceProvider
 ```
+
 3. Replace all ControllerProviders in `Pyz\Yves\ShopApplication\YvesBootstrap::getControllerProviderStack()` with the corresponding `RouteProviderPlugin` entities.
+
 4. Remove the following deprecated constants:
 ```php
 \Spryker\Shared\Application\ApplicationConstants::YVES_SSL_ENABLED
@@ -60,7 +64,7 @@ They need to be replaced in your configuration files with new ones:
 
 5. Add the new plugins to dependency providers:
 
-**Zed Integration**
+**Zed integration**
 
 ```php
 <?php
@@ -90,7 +94,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 }
 ```
 
-**Yves Integration**
+**Yves integration**
 
 ```php
 <?php
@@ -122,7 +126,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 6. Enable additional plugins.
 
-**Console Zed Integration**
+**Console Zed integration**
 
 ```php
 <?php
@@ -163,7 +167,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-**EventDispatcher Zed Integration**
+**EventDispatcher Zed integration**
 
 ```php
 <?php
@@ -195,7 +199,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 }
 ```
 
-**Router Zed Integration**
+**Router Zed integration**
 
 ```php
 <?php
@@ -233,7 +237,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
-**Console Yves Integration**
+**Console Yves integration**
 
 ```php
 <?php
@@ -263,7 +267,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-**EventDispatcher Yves Integration**
+**EventDispatcher Yves integration**
 
 ```php
 <?php
@@ -294,7 +298,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 }
 ```
 
-**Router Yves Integration**
+**Router Yves integration**
 
 ```php
 <?php
@@ -365,7 +369,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
-**EventDispatcher Glue Integration**
+**EventDispatcher Glue integration**
 
 ```php
 <?php

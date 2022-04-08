@@ -27,7 +27,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productpagesearch.html
 ---
 
-## Upgrading from Version 3.11.* to Version 3.12.*
+## Upgrading from version 3.11.* to version 3.12.*
 
 {% info_block errorBox "Prerequisites" %}
 
@@ -36,7 +36,8 @@ This migration guide is a part of the [Search migration effort](/docs/scos/dev/m
 {% endinfo_block %}
 
 To upgrade the module, do the following:
-1. Update the module with composer:
+1. Update the module using Composer:
+
 ```bash
 composer update spryker/product-page-search
 ```
@@ -79,8 +80,12 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 Spryker\Zed\ProductPageSearch\Communication\Plugin\Search\ProductConcretePageMapPlugin
 Spryker\Zed\ProductPageSearch\Communication\Plugin\Search\ProductPageMapPlugin
 ```
-## Upgrading from Version 2.* to Version 3.*
-ProductPageSearch 3.0.0 got separate search index for Concrete Products. It includes database table and ElasticSearch index.
+
+## Upgrading from version 2.* to version 3.*
+
+`ProductPageSearch` 3.0.0 got separate search index for Concrete Products. It includes database table and ElasticSearch index.
+
+*Estimated migration time: ~2h*
 
 To perform the migration, follow the steps:
 
@@ -105,4 +110,4 @@ or
 vendor/bin/console event:trigger -r product_concrete
 ```
 
-*Estimated migration time: ~2h*
+

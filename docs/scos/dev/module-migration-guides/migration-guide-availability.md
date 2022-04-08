@@ -41,7 +41,9 @@ This release is a part of the **Decimal Stock** concept migration. When you upgr
 
 {% endinfo_block %}
 
-**To upgrade to the new version of the module, do the following:**
+*Estimated migration time: 5 min*
+
+To upgrade to the new version of the module, do the following:
 
 1. Upgrade the **Availability** module to the new version:
 
@@ -92,7 +94,6 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     }
 }
 ```
-*Estimated migration time: 5 min*
 
 ## Upgrading from version 6.* to version 8.0.0
 

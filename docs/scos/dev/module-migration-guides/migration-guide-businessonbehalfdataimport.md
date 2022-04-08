@@ -46,5 +46,3 @@ Therefore, if you have any custom deployment or importing script that used the c
 Change it to:
 `vendor/bin/console data:import company-user-on-behalf`
 The import key company-user is now assigned to the `CompanyUserDataImport`.
-
-<!-- Last review date: July 18, 2019 by Oleh Hladchenko and Volodymyr Volkov -->

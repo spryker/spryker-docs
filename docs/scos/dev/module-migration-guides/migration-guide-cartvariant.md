@@ -32,9 +32,11 @@ This release is a part of the **Decimal Stock** concept migration. When you upgr
 
 {% endinfo_block %}
 
-**To upgrade to the new version of the module, do the following:**
+*Estimated migration time: 5 min*
 
-1. Upgrade the **AvailabilityOfferConnector** module to the new version:
+To upgrade to the new version of the module, do the following:
+
+1. Upgrade the `AvailabilityOfferConnector` module to the new version:
 
 ```bash
 composer require spryker/cart-variant: "^2.0.0" --update-with-dependencies
@@ -53,4 +55,3 @@ console propel:install
 console transfer:generate
 ```
 
-*Estimated migration time: 5 min*

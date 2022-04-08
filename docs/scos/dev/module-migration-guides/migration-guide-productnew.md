@@ -26,7 +26,8 @@ This migration guide is a part of the [Search migration effort](/docs/scos/dev/m
 
 {% endinfo_block %}
 
-To upgrade the module, do the following:
+To upgrade to the new version of the module, do the following:
+
 1. Remove all  deprecated query expander and result formatter plugins coming from the Search module (if any) from `Pyz\Client\ProductNew\ProductNewDependencyProvider`:
 
 ```php
@@ -41,7 +42,7 @@ To upgrade the module, do the following:
 ```
 2. Enable the new plugins from SearchElasticsearch in `Pyz\Client\ProductNew\ProductNewDependencyProvider`:
 
-Pyz\Client\ProductNew
+**Pyz\Client\ProductNew**
 
 ```php
 <?php

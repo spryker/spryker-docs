@@ -24,7 +24,9 @@ Keep in mind, if you use functionality from `SalesMerchantConnector`, you need t
 
 {% endinfo_block %}
 
-**To replace the deprecated functionality, do the following:**
+*Estimated migration time: 1 hour.*
+
+To replace the deprecated functionality, do the following:
 
 1. Install the `SalesOms`, `MerchantSalesOrder` modules by running the following command:
 ```bash
@@ -72,4 +74,3 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 }
 ```
 
-*Estimated migration time: 1 hour.*

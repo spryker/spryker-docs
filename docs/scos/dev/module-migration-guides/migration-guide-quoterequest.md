@@ -30,7 +30,10 @@ redirect_from:
 
 Its main purpose is to make the parameter name more intuitive for the end user.
 
-**To migrate, do the following:**
+*Estimated migration time: ~2h*
+
+To migrate, do the following:
+
 1. Update the `QuoteRequest` module to version 2.0.0:
 
 ```bash
@@ -81,4 +84,3 @@ Make sure that, if you had usage of `QuoteTransfer::setIsLatestVersionHidden`, `
 
 {% endinfo_block %}
 
-*Estimated migration time: ~2h*

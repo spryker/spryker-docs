@@ -34,7 +34,7 @@ related:
     link: docs/scos/user/technology-partners/page.version/operational-tools-monitoring-legal-etc/new-relic.html
 ---
 
-## Upgrading from Version 1.* to Version 2.*
+## Upgrading from version 1.* to version 2.*
 
 For BC reasons, the initial version of this module had dependencies to the`spryker/new-relic` and `spryker/new-relic-api` modules.
 

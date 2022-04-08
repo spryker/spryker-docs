@@ -27,11 +27,14 @@ More details are listed below:
 * `AuthFacade::isValidPasswordResetToken()` is replaced with `UserPasswordResetFacade::isValidPasswordResetToken()`.
 * `AuthFacade::resetPassword()` is replaced with `UserPasswordResetFacade::setNewPassword()`.
 * `UserFacade::expandMailWithUserData()` was deprecated. Handling of user password reset mail is implemented in `UserPasswordReset` module.
-* Zed Backoffice login URL was changed to `/security-gui/login`.
+* Zed Back Office login URL was changed to `/security-gui/login`.
+
+*Estimated migration time: 2 hours.*
 
 To migrate from the `Auth` module to `Symfony Security`, do the following:
 
 ## Update spryker-feature/spryker-core
+
 {% info_block infoBox "Info" %}
 
 The steps in this section show you how to re-configure the YVES system user and update the configuration file to avoid using the `Auth` module constants, which will be removed.
@@ -39,36 +42,51 @@ The steps in this section show you how to re-configure the YVES system user and 
 {% endinfo_block %}
 
 1. Run:
+
     ```bash
     composer require spryker-feature/spryker-core:dev-master
     ```
+
 2. Adjust `config/Shared/common/config_oauth-development.php`.
     * Remove:
+
     ```php
     use Spryker\Shared\Auth\AuthConstants;
     ```
+
     * Add:
+
     ```php
     use Spryker\Shared\SecuritySystemUser\SecuritySystemUserConstants;
     ```
+
     * Change:
+
     ```php
     $config[AuthConstants::AUTH_DEFAULT_CREDENTIALS]['yves_system']['token'] = 'JDJ5JDEwJFE0cXBwYnVVTTV6YVZXSnVmM2l1UWVhRE94WkQ4UjBUeHBEWTNHZlFRTEd4U2F6QVBqejQ2';
     ```
+
     to:
+
     ```php
     $config[SecuritySystemUserConstants::AUTH_DEFAULT_CREDENTIALS]['yves_system']['token'] = 'JDJ5JDEwJFE0cXBwYnVVTTV6YVZXSnVmM2l1UWVhRE94WkQ4UjBUeHBEWTNHZlFRTEd4U2F6QVBqejQ2';
     ```
+
 3. Adjust `config/Shared/config_default.php`.
     *  Remove:
+
     ```php
     use Spryker\Shared\Auth\AuthConstants;
     ```
+
     *  Add:
+    
     ```php
     use Spryker\Shared\SecuritySystemUser\SecuritySystemUserConstants;
     ```
+
     *  Change:
+
     ```php
     $config[AuthConstants::AUTH_DEFAULT_CREDENTIALS] = [
     'yves_system' => [
@@ -83,7 +101,9 @@ The steps in this section show you how to re-configure the YVES system user and 
     ],
     ];
     ```
+
     to:
+
     ```php
     $config[SecuritySystemUserConstants::AUTH_DEFAULT_CREDENTIALS] = [
     'yves_system' => [
@@ -91,34 +111,46 @@ The steps in this section show you how to re-configure the YVES system user and 
     ],
     ];
     ```
+
     * Change:
+
     ```php
     $config[AuthConstants::SYSTEM_USER_SESSION_REDIS_LIFE_TIME] = 20;
     ```
-    to:             
-     ```php
+
+    to:  
+
+    ```php
     $config[SecuritySystemUserConstants::SYSTEM_USER_SESSION_REDIS_LIFE_TIME] = 20;
     ```
 
 4. Adjust `tests/PyzTest/Zed/Console/_data/cli_sandbox/config/Shared/config_default.php`.
 
     *  Remove:
+ 
     ```php
     use Spryker\Shared\Auth\AuthConstants;
     ```
+
     *  Add:
+
     ```php
     use Spryker\Shared\SecuritySystemUser\SecuritySystemUserConstants;
     ```
+
     *  Change:
+
     ```php
     $config[AuthConstants::AUTH_ZED_ENABLED]
     ```
     to:
+
     ```php
     $config[ZedRequestConstants::AUTH_ZED_ENABLED]
     ```
-    * Change:    
+
+    * Change: 
+
     ```php
     $config[AuthConstants::AUTH_DEFAULT_CREDENTIALS] = [
     'yves_system' => [
@@ -133,7 +165,9 @@ The steps in this section show you how to re-configure the YVES system user and 
     ],
     ];
     ```
+
     to:
+
     ```php
     $config[SecuritySystemUserConstants::AUTH_DEFAULT_CREDENTIALS] = [
     'yves_system' => [
@@ -153,6 +187,7 @@ Updating the Security module is necessary to use the `SecurityGui` module, which
 {% endinfo_block %}
 
 Run:
+
 ```bash
 composer update spryker/security --with-dependencies
 ```
@@ -173,6 +208,7 @@ composer require spryker-feature/spryker-core-back-office:dev-master
 2. Adjust `config/Shared/config_default.php`.
 
     * Change:
+
     ```php
     $config[AclConstants::ACL_DEFAULT_RULES] = [
     [
@@ -183,6 +219,7 @@ composer require spryker-feature/spryker-core-back-office:dev-master
     ```
 
     to:
+
     ```php
     $config[AclConstants::ACL_DEFAULT_RULES] = [
     [
@@ -195,6 +232,7 @@ composer require spryker-feature/spryker-core-back-office:dev-master
 3. Adjust `src/Pyz/Zed/Application/ApplicationDependencyProvider.php`.
 
 Add `Spryker\Zed\Security\Communication\Plugin\Application\SecurityApplicationPlugin` to `getApplicationPlugins()`.
+
 ```php
  /**
      * @return \Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface[]
@@ -243,6 +281,7 @@ Remove `RestorePasswordMailTypePlugin()` and add `UserPasswordResetMailTypePlugi
 ```
 
 6. Update `src/Pyz/Zed/Security/SecurityDependencyProvider.php` with code:
+
 ```php
 <?php
 
@@ -275,6 +314,7 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 ```
 
 7. Update `src/Pyz/Zed/SecurityGui/SecurityGuiConfig.php` with code:
+
 ```php
 <?php
 
@@ -294,6 +334,7 @@ class SecurityGuiConfig extends SprykerSecurityGuiConfig
 ```
 
 8. Update `src/Pyz/Zed/UserPasswordReset/UserPasswordResetDependencyProvider.php` with code:   
+
 ```php
 <?php
 
@@ -330,11 +371,13 @@ This section guides you how to remove the old module files.
 {% endinfo_block %}
 
 1. If the `Auth` module has not been uninstalled, run:
+
 ```bash
 composer remove spryker/auth
 ```
 
 2. Run:
+
 ```bash
 composer remove spryker/auth-mail-connector spryker/auth-mail-connector-extension
 ```
@@ -352,12 +395,14 @@ This action is required for the SprykerTests to be up-to-date.
 {% endinfo_block %}
 
 1. Run:
+
 ```bash
 composer update spryker/application --with-dependencies
 ```
 2. Adjust `tests/PyzTest/Zed/Console/_data/cli_sandbox/config/Shared/config_default.php`.
 
     * Change:
+  
     ```php
     $config[AclConstants::ACL_DEFAULT_CREDENTIALS] = [
     'yves_system' => [
@@ -373,6 +418,7 @@ composer update spryker/application --with-dependencies
     ];
     ```
     to:
+
     ```php
     $config[AclConstants::ACL_DEFAULT_CREDENTIALS] = [
     'yves_system' => [
@@ -381,6 +427,7 @@ composer update spryker/application --with-dependencies
     ];
     ```
     * Change:
+
     ```php
     $config[AclConstants::ACL_DEFAULT_RULES] = [
     [
@@ -409,6 +456,7 @@ composer update spryker/application --with-dependencies
     ],
     ```
     to:
+
     ```php
     $config[AclConstants::ACL_DEFAULT_RULES] = [
     [
@@ -419,6 +467,7 @@ composer update spryker/application --with-dependencies
     ],
     ```
     * Change:
+
     ```php
         [
         'bundle' => 'heartbeat',
@@ -429,6 +478,7 @@ composer update spryker/application --with-dependencies
     ];
     ```
     to:
+
     ```php
         [
         'bundle' => 'health-check',
@@ -438,7 +488,9 @@ composer update spryker/application --with-dependencies
     ],
     ];
     ```
+
     * Change:
+
     ```php
     $config[AclConstants::ACL_USER_RULE_WHITELIST] = [
     [
@@ -462,6 +514,7 @@ composer update spryker/application --with-dependencies
     ];
     ```
     to:
+
     ```php
     $config[AclConstants::ACL_USER_RULE_WHITELIST] = [
     [
@@ -482,6 +535,7 @@ This section helps you to generate transfer objects.
 {% endinfo_block %}
 
 Run:
+
 ```bash
 console transfer:generate
 ```
@@ -495,8 +549,7 @@ This section helps you to generate the new Propel classes.
 {% endinfo_block %}
 
 Run:
+
 ```bash
 console propel:install
 ```
-
-*Estimated migration time: 2 hours.*

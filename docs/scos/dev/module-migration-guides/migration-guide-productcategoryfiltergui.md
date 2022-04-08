@@ -18,9 +18,9 @@ This document describes how to upgrade the `ProductCategoryFilterGui` module.
 
 ## Upgrading from version 1.* to 2.*
 
-_Estimated migration time: 15 minutes._ 
-
 In the version `2.*` of the `ProductCategoryFilterGui` module, we adjusted `CategoryTreeController::indexAction()` to remove fill-up of the deprecated `categoryTree` view parameter.
+
+_Estimated migration time: 15 minutes._ 
 
 To upgrade the `ProductCategoryFilterGui` module from version `1.*` to `2.*`:
 

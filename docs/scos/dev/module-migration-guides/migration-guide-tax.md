@@ -42,7 +42,6 @@ Corresponding plugin business classes, `ExpenseTaxCalculator`, `ItemTaxCalculato
 * Business classes `TaxAmountCalculator`
 * `TaxAmountAfterCancellationCalculator`
 
-***
 
 ## Upgrading from version 2.* to version 3.*
 
@@ -50,6 +49,7 @@ If you’re migrating the Tax module from version 2 to version 3, you need to fo
 
 With the version 3 of the Tax module, new tax calculation is used. The tax rate is based on the current shipping country or, if it’s unavailable, a default tax rate value is used.
 First you need to execute a database schema migration:
+
 ```sql
 ALTER TABLE "spy_tax_rate"
 ADD "fk_country" INTEGER;

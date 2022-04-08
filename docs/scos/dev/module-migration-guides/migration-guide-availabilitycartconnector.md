@@ -41,9 +41,11 @@ This release is a part of the **Decimal Stock** concept migration. When you upgr
 
 {% endinfo_block %}
 
-**To upgrade to the new version of the module, do the following:**
+*Estimated migration time: 5 min*
 
-1. Upgrade the **AvailabilityCartConnector** module to the new version:
+To upgrade to the new version of the module, do the following:
+
+1. Upgrade the `AvailabilityCartConnector` module to the new version:
 
 ```bash
 composer require spryker/availability-cart-connector: "^7.0.0" --update-with-dependencies
@@ -62,7 +64,6 @@ console propel:install
 console transfer:generate
 ```
 
-*Estimated migration time: 5 min*
 
 ## Upgrading from version 4.* to version 6.0.0
 
@@ -71,5 +72,3 @@ console transfer:generate
 In order to dismantle the Horizontal Barrier and enable partial module updates on projects, Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://spryker.com/en/support/) if you have any questions.
 
 {% endinfo_block %}
-
-<!--*Last review date: May 30, 2019*-->

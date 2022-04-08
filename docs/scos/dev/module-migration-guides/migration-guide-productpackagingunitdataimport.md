@@ -22,9 +22,9 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productpackagingunitdataimport.html
 ---
 
-## Upgrading from Version 1.* to Version 2.0.0
+## Upgrading from version 1.* to version 2.0.0
 
-In this new version of the **ProductPackagingUnitDataImport** module, we have added support of decimal stock. You can find more details about the changes on the [ProductPackagingUnitDataImport module](https://github.com/spryker/product-packaging-unit-data-import/releases) release page.
+In this new version of the `ProductPackagingUnitDataImport` module, we have added support of decimal stock. You can find more details about the changes on the [ProductPackagingUnitDataImport module](https://github.com/spryker/product-packaging-unit-data-import/releases) release page.
 
 {% info_block errorBox %}
 
@@ -32,8 +32,11 @@ This release is a part of the **Decimal Stock** concept migration. When you upgr
 
 {% endinfo_block %}
 
-**To upgrade to the new version of the module, do the following:**
-1. Upgrade the **ProductPackagingUnitDataImport** module to the new version:
+*Estimated migration time: 5 min*
+
+To upgrade to the new version of the module, do the following:
+
+1. Upgrade the `ProductPackagingUnitDataImport` module to the new version:
 
 ```bash
 composer require spryker/product-packaging-unit-data-import: "^2.0.0" --update-with-dependencies
@@ -53,4 +56,4 @@ console propel:install
 console transfer:generate
 ```
 
-*Estimated migration time: 5 min*
+

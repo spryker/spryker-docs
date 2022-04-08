@@ -24,11 +24,11 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-contentstorage.html
 ---
 
-## Upgrading from Version 1.* to Version 2.*
+## Upgrading from version 1.* to version 2.*
 
-Version 2.0.0 of the ContentStorage module  introduces the following changes:
+Version 2.0.0 of the `ContentStorage` module introduces the following changes:
 
-* Changed Storage key structure from `content:locale:id` to `content:locale:key`.
+* Changed storage key structure from `content:locale:id` to `content:locale:key`.
 * Introduced the `spy_content_storage.content_key` field to store the identifier of content entities.
 * Removed deprecated `ExecutedContentStorageTransfer`.
 * Removed deprecated `ContentStorageClientInterface::findContentById()`.
@@ -37,14 +37,19 @@ Version 2.0.0 of the ContentStorage module  introduces the following changes:
 * Introduced the `ContentStorageTransfer::$contentKey` transfer object property.
 * Increased the version of `spryker/content` in composer.json.
 
-**To upgrade to the new version of the module, do the following:**
+_Estimated migration time: 30 minutes - 1h_
+
+To upgrade to the new version of the module, do the following:
+
 1. Upgrade the `Content` module to version 2.0.0. See [Migration Guide - Content](/docs/scos/dev/module-migration-guides/migration-guide-content.html) for more details.
+
 2. Upgrade the `ContentStorage` module to version 2.0.0:
 
 ```bash
 composer require spryker/content-storage:"^2.0.0" --update-with-dependencies
 ```
 3. Truncate the `spy_content_storage` database table.
+
 4. Run the database migration:
 
 ```bash
@@ -61,7 +66,3 @@ console transfer:generate
 console sync:data content
 ```
 7. Verify that the `spy_content_storage.key` column uses keys instead of IDs. For example, **content:en_us:apl-1**, where **apl-1** is a key of the content item.
-
-_Estimated migration time: 30 minutes - 1h_
-
-<!-- Last review date: Jul 08, 2019 by Alexander Veselov, Yuliia Boiko-->

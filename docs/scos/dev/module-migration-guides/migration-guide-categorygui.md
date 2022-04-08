@@ -31,28 +31,29 @@ Upgrade the `CategoryGui` module from version 1.* to 2.*:
 1.  To migrate the `Category` module to version 5.*, follow [Upgrading from version 4.* to 5.*](/docs/scos/dev/module-migration-guides/migration-guide-category.html#upgrading-from-version-4-to-5).
 
 2.  Update the `CategoryGui` module to version 2.0.0:
+
 ```bash    
 composer require spryker/category-gui:"^2.0.0" --update-with-dependencies
 ```    
 3.  Update the generated classes:
+
 ```bash    
 console transfer:generate
 ```    
 4.  Update navigation cache:
+
 ```bash    
 console navigation:build-cache
 ```    
 5.  From `Pyz\Zed\Category\CategoryDependencyProvider`, remove the following deprecated plugins:
 
 * `CategoryImageFormPlugin`
-
 * `CategoryImageFormTabExpanderPlugin`
-
 * `ReadCmsBlockCategoryRelationsPlugin`
-
 * `ReadProductCategoryRelationPlugin`
 
 6.  To implement new plugins, update the related modules:
+
 ```bash    
 composer require spryker/category-image-gui:"^1.3.0" spryker/cms-block-category-connector:"^2.4.0" spryker/product-category:"^4.12.0" spryker/store-gui:"^1.1.0" --update-with-dependencies
 ```    
@@ -121,7 +122,6 @@ class CategoryGuiDependencyProvider extends SpykerCategoryGuiDependencyProvider
     }
 }
 ```    
-
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -129,9 +129,6 @@ class CategoryGuiDependencyProvider extends SpykerCategoryGuiDependencyProvider
 Make sure that, in the Back Office:
 
 * Category management is working correctly.
-
 * You can change the store assignment of categories.
-
-
 
 {% endinfo_block %}

@@ -28,7 +28,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmsgui.html
 ---
 
-## Upgrading from Version 4.* to Version 5.*
+## Upgrading from version 4.* to version 5.*
 
 Version 5 of the CMSGui module introduces the [multi-store functionality](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
 
@@ -38,7 +38,9 @@ To enable the feature, make sure you have the store relation type plugin. See be
 
 {% endinfo_block %}
 
-**To upgrade to the new version of the module, do the following:**
+_Estimated migration time: 30 minutes._
+
+To upgrade to the new version of the module, do the following:
 
 1. Require the update with composer: `"spryker/cms-gui": "^5.0.0"`
 2. Add the Store Relation Form Type Plugin:
@@ -62,6 +64,7 @@ class CmsGuiDependencyProvider extends SprykerCmsGuiDependencyProvider
 ```
 
 New transfers must be generated:
+
 `$ console transfer:generate`
 
 3. If project overrides were introduced, please observe the following changes:
@@ -69,4 +72,4 @@ New transfers must be generated:
 * `CmsGuiCommunicationFactory::createCmsGlossaryForm` was deprecated, please use `CmsGuiCommunicationFactory::getCmsGlossaryForm`.
 * `CmsVersionMapper::mapToCmsVersionDataTransfer` was given return type `CmsVersionMapper::CmsVersionDataTransfer`
 
-_Estimated migration time: 30 minutes._
+

@@ -24,13 +24,16 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-quoterequestagentpage.html
 ---
 
-## Upgrading from Version 1.x.x to Version 2.x.x
+## Upgrading from version 1.x.x to version 2.x.x
 
 The only major change of the `QuoteRequestAgentPage` 2.x.x is the dependency update for `spryker/quote-request-agent:^2.0.0` and `spryker/quote-request:^2.0.0`
 
 Also, transfer property `QuoteRequestTranser::isLatestVersionHidden` was replaced by `QuoteRequestTransfer:isLatestVersionVisible`.
 
-**To migrate do the following:**
+*Estimated migration time: ~1h*
+
+To migrate do the following:
+
 1. Update `spryker/quote-request-agent` to version ^2.0.0 by following the steps from [Migration Guide - QuoteRequest](/docs/scos/dev/module-migration-guides/migration-guide-quoterequest.html).
 2. Update `spryker/quote-request` to version ^2.0.0 by following the steps from [Migration Guide - Quote Request Agent](/docs/scos/dev/module-migration-guides/migration-guide-quoterequest.html).
 3. Update `spryker-shop/quote-request-agent-page:^2.0.0`
@@ -53,4 +56,3 @@ src/SprykerShop/Yves/QuoteRequestAgentPage/Theme/default/views/quote-request-edi
 vendor/bin/console transfer:generate
 ```
 
-*Estimated migration time: ~1h*

@@ -52,5 +52,3 @@ Since `QuoteClient::getStorageStrategy` method is used now, the Quote module's v
 
 All logic from CartClient has been moved to `\Spryker\Client\Cart\Plugin\SessionQuoteStorageStrategyPlugin`.
 Make sure that all your local overwrites of those methods have been moved there.
-
-<!-- Last review date: Apr 10, 2018- by Dmitriy Krainiy -->

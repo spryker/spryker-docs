@@ -31,9 +31,9 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productpackagingunitwidget.html
 ---
 
-## Upgrading from Version 0.4.* to Version 0.5.0
+## Upgrading from version 0.4.* to version 0.5.0
 
-In this new version of the **ProductPackagingUnitWidget** module, we have added support of decimal stock. You can find more details about the changes on the [ProductPackagingUnitWidget module](https://github.com/spryker-shop/product-packaging-unit-widget/releases) release page.
+In this new version of the `ProductPackagingUnitWidget` module, we have added support of decimal stock. You can find more details about the changes on the [ProductPackagingUnitWidget module](https://github.com/spryker-shop/product-packaging-unit-widget/releases) release page.
 
 {% info_block errorBox %}
 
@@ -41,9 +41,12 @@ This release is a part of the **Decimal Stock** concept migration. When you upgr
 
 {% endinfo_block %}
 
-**To upgrade to the new version of the module, do the following:**
 
-1. Upgrade the **ProductPackagingUnitWidget** module to the new version:
+*Estimated migration time: 5 min*
+
+To upgrade to the new version of the module, do the following:
+
+1. Upgrade the `ProductPackagingUnitWidget` module to the new version:
 
 ```bash
 composer require spryker-shop/product-packaging-unit-widget: "^0.5.0" --update-with-dependencies
@@ -55,9 +58,8 @@ console propel:install
 console transfer:generate
 ```
 
-*Estimated migration time: 5 min*
 
-## Upgrading from Version 0.2.* to Version 0.4.0
+## Upgrading from version 0.2.* to version 0.4.0
 
 {% info_block infoBox %}
 

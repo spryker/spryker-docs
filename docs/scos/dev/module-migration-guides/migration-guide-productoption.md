@@ -36,7 +36,7 @@ related:
     link: docs/scos/dev/module-migration-guides/migration-guide-productoptioncartconnector.html
 ---
 
-## Upgrading from Version 6.* to Version 8.0.0
+## Upgrading from version 6.* to version 8.0.0
 
 {% info_block infoBox %}
 
@@ -44,7 +44,7 @@ In order to dismantle the Horizontal Barrier and enable partial module updates o
 
 {% endinfo_block %}
 
-## Upgrading from Version 5.* to Version 6.*
+## Upgrading from version 5.* to version 6.*
 
 1. Update `spryker/product-option` to at least version 6.0.0.
 2. Install/Update `spryker/currency` to at least version 3.0.0. See [Migration Guide - Currency](/docs/scos/dev/module-migration-guides/migration-guide-currency.html) for more details.
@@ -59,7 +59,7 @@ This command will generate some new classes in your project under `\Orm\Zed\Prod
 9. Make sure the new Zed user interface assets are built by running `npm run zed` (or antelope build Zed for older versions).
 10. Register `MoneyCollectionFormTypePlugin` in product option dependency provider to support multi-currency price configuration in the Back Office.
 
-**Example of plugin registration:**
+**Example of the plugin registration:**
 
 ```php
 <?php
@@ -86,7 +86,7 @@ class ProductOptionDependencyProvider extends SprykerProductOptionDependencyProv
 11. Migrate prices from `spy_product_option_value.price` field to `spy_product_option_value_price` table. Each `spy_product_option_value` row must have at least 1 `spy_product_option_value_price` row connected. A `ProductOptionValue` entity can have multiple `ProductOptionValuePrices` connected. You can define different gross/net price per currency per store by populating the `fk_currency` and `fk_store` fields accordingly. When either `gross_price` or `net_price` database field is left as `null`, that option will not be available for customers in that exact currency, store, price mode trio. If you set a price field as 0, the option is available for customers and it means it is free of charge.
 
 <details open>
-<summary markdown='span'>Example of migration:</summary>
+<summary markdown='span'>Example of the migration</summary>
 
 ```php
 <?php
@@ -336,8 +336,6 @@ class MigrateProductOptionValuePricesConsole extends Console
     }
 }
 ```
-
-<br>
 </details>
 
 12. The product option collector has to be amended to support multi-currency prices on product option values. The Storage has to save all product option value prices within a given store using the new Storage data structure:
@@ -369,7 +367,7 @@ class MigrateProductOptionValuePricesConsole extends Console
 ```
 A new API call was added to get the store specific prices back: `ProductOptionFacadeInterface::getProductOptionValueStorePrices()`.
 
-**Example of collector upgrade:**
+**Example of the collector upgrade**
 
 ```php
 <?php
@@ -446,7 +444,7 @@ class ProductOptionCollector extends Spryker\Zed\Collector\Business\Collector\St
 ```
 
 13. Transfer objects were amended to support multi-currency price storage. Check your customized codes for the following fields to apply the new behavior:
-* `ProductOptionValue` transfer object's price field is replaced by prices field which contains a collection of `MoneyValue` transfer objects to support multi-currency behaviour. This field can not be used directly anymore to display a price to customer in Yves.
+* `ProductOptionValue` transfer object's price field is replaced by prices field which contains a collection of `MoneyValue` transfer objects to support multi-currency behavior. This field can not be used directly anymore to display a price to customer in Yves.
 * `StorageProductOptionValue` transfer object contains a "prices" field which contains prices within a specific store for all currencies and price modes.
 * `StorageProductOptionValue` transfer object's price field now represents a price for a given store, currency, and price mode trio.
 
@@ -480,7 +478,7 @@ class ProductOptionCollector extends Spryker\Zed\Collector\Business\Collector\St
 
 16. Verify your product option value prices on the Product Options page in the Back Office.
 
-## Upgrading From version 4.* To Version 5.*
+## Upgrading from version 4.* to version 5.*
 
 In version 5 Product Options were updated to work with the new calculator concept. Therefore, the `SalesAggregator` plugin was moved to the `SalesAggregator` module `SubtotalWithProductOptionsAggregatorPlugin`.
 The sales option database tables received new columns for storing calculated values.

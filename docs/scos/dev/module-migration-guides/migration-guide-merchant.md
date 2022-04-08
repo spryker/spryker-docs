@@ -40,6 +40,7 @@ Other changes are:
 * Added required merchant reference in the database.
 * Added is active column.
 * Changed names and signatures in the merchant facade.
+
 ```php
 namespace Spryker\Zed\Merchant\Business;
 
@@ -89,7 +90,9 @@ class MerchantFacade extends AbstractFacade implements MerchantFacadeInterface
 }
 ```
 
-**To upgrade to the new version of the module, do the following:**
+*Estimated migration time: 1-2 hours.*
+
+To upgrade to the new version of the module, do the following:
 
 {% info_block warningBox "Warning" %}
 
@@ -98,6 +101,7 @@ Fill in all empty merchant references before migration. After the migration, you
 {% endinfo_block %}
 
 1. Update `Pyz/Zed/Merchant/Persistence/Propel/Schema/spy_merchant.schema.xml`:
+
 ```xml
 <table name="spy_merchant">
     <behavior name="event">
@@ -106,25 +110,34 @@ Fill in all empty merchant references before migration. After the migration, you
     </behavior>
 </table>
 ```
+
 2. Update `Merchant` module version and its dependencies by running the following command:
+
 ```bash
-composer require spryker/merchnat:"^3.0.0" --update-with-dependencies
+composer require spryker/merchant:"^3.0.0" --update-with-dependencies
 ```
+
 3. Update the transfer objects:
+
 ```bash
 console transfer:generate
 ```
 4. Fill in all merchant references in the database before updating it.
+
 5. Update the database:
+
 ```bash
 console propel:install
 ```
 6. Update the transfer objects:
+
 ```bash
 console transfer:generate
 ```
 7. Activate all the active merchants.
+
 8. Trigger events for all or related entities (`IsActive` setting can influence other entities):
+
 ```bash
 console publish:trigger-events -r merchant
 ```
@@ -179,7 +192,8 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     }
 }
 ```
-10.  Update the glossary `data/import/glossary.csv` :
+10.  Update the glossary `data/import/glossary.csv`:
+
 ```csv
 merchant.message.removed,Product %sku% is not available at the moment.,en_US
 merchant.message.removed,Das Produkt %sku% ist momentan nicht verfügbar.,de_DE
@@ -188,6 +202,7 @@ merchant.message.inactive,Artikel %sku% vom Händler %merchant_name% ist momenta
 merchant.message.inactive,Product %sku% from merchant %merchant_name% is not available at the moment.,en_US
 merchant.message.inactive,Artikel %sku% vom Händler %merchant_name% ist momentan nicht verfügbar.,de_DE
 ```
+
 Run the command:
 ```bash
 console data:import:glossary
@@ -203,8 +218,6 @@ If your project code contains any changes on the project level, make sure that i
 The new version of this module influences other features. You need to trigger events for the related modules.
 
 {% endinfo_block %}
-
-*Estimated migration time: 1-2 hours.*
 
 ## Upgrading from version 1.* to version 2.*
 
@@ -230,25 +243,32 @@ Keep in mind that the Merchant module makes sense only in connection with the [M
 
 {% endinfo_block %}
 
-**To upgrade to the new version of the module, do the following:**
+*Estimated migration time: 1-2 hours.*
+
+To upgrade to the new version of the module, do the following:
 
 1. Update the `Merchant` module version and its dependencies by running the following command:
+
 ```bash
-composer require spryker/merchnat:"^2.0.0" --update-with-dependencies
+composer require spryker/merchant:"^2.0.0" --update-with-dependencies
 ```
 2. Update the transfer objects:
+
 ```bash
 console transfer:generate
 ```
 3. Install the database:
+
 ```bash
 console propel:install
 ```
 4. Update the transfer objects:
+
 ```bash
 console transfer:generate
 ```
 5. Generate translator cache by running the following command to get the latest Zed translations:
+
 ```bash
 console translator:generate-cache
 ```
@@ -259,6 +279,7 @@ If your project code contains any `MerchantFacade` methods usage, then update th
 {% endinfo_block %}
 
 6. If your project has any domain entities that implement `MerchantPostCreatePluginInterface`, `MerchantPostUpdatePluginInterface`, or `MerchantExpanderPluginInterface`, add the respective plugins to the dependency provider:
+
 ```php
 class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
 {
@@ -292,4 +313,3 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
 * `MerchantPostUpdatePluginInterface`plugins are responsible for post updating action for merchants.
 * `MerchantExpanderPluginInterfaceplugins`are responsible for expanding merchant by additional data.
 
-*Estimated migration time: 1-2 hours.*

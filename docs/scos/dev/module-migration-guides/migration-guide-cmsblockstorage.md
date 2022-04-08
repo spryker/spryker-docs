@@ -22,9 +22,10 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmsblockstorage.html
 ---
 
-## Upgrading from Version 1.* to Version 2.*
+## Upgrading from version 1.* to version 2.*
 
 CmsBlockStorage version 2.0.0 introduces the following backward incompatible changes:
+
 * Introduced the `spy_cms_block_storage.cms_block_key` field to store the `cms_block` identifier.
 * Introduced the `mappings` parameter to synchronization behavior to support the ability to get data by block names.
 * Increased the minimum `spryker/cms-block` version in `composer.json`. See [Migration Guide - CMS Block](/docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html#upgrading-from-version-2-to-version-3) for more details.
@@ -32,34 +33,45 @@ CmsBlockStorage version 2.0.0 introduces the following backward incompatible cha
 * Removed `CmsBlockStorageClientInterface::generateBlockNameKey()`.
 * Added return type as an array to `CmsBlockStorageClientInterface::findBlocksByNames()`.
 
+*Estimated migration time: 1h*
+
 1. Upgrade to the new module version:
+
     a. Upgrade the `CmsBlockStorage` module to version 2.0.0:
-```shell
-composer require spryker/cms-block-storage:"^2.0.0" --update-with-dependencies
-```
+    ```shell
+    composer require spryker/cms-block-storage:"^2.0.0" --update-with-dependencies
+    ```
 
 2. Clear storage:
+
     a. Truncate the `spy_cms_block_storage` database table:
+
     ```shell
     TRUNCATE TABLE spy_cms_block_storage
     ```
     b. Remove all keys from Redis:
+
     ```shell
     redis-cli --scan --pattern kv:cms_block:'*' | xargs redis-cli unlink
     ```
 
 3. Update the database schema and generate classes:
+
     a. Run the database migration:
+
     ```shell
     console propel:install
     ```
     b. Generate transfer objects:
+
     ```shell
     console transfer:generate
     ```
 
 4. Populate storage with the new version:
+
     a. Get all the data about CMS blocks from database and publish it into Redis:
+
     ```shell
     console event:trigger -r cms_block
     ```
@@ -73,7 +85,9 @@ composer require spryker/cms-block-storage:"^2.0.0" --update-with-dependencies
 
 
 5. Enable CMS Block Key support for categories and products (optional):
+
     a. Install CMS block key support for `CmsBlockCategoryStorage` and `CmsBlockProductStorage` modules:
+
     ```shell
     composer require spryker/cms-block-category-storage:"^1.4.0" spryker/cms-block-product-storage:"^1.4.0" --update-with-dependencies
     ```
@@ -102,9 +116,8 @@ composer require spryker/cms-block-storage:"^2.0.0" --update-with-dependencies
     ```
 
     c. Trigger sync events:
+
     ```shell
     console event:trigger -r cms_block_category
     console event:trigger -r cms_block_product
     ```
-
-*Estimated migration time: 1h*

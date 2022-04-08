@@ -30,6 +30,8 @@ The [Elastica](https://github.com/spryker/elastica) module is a wrapper around 3
 
 The 6th version of the Elastica module installs version 7 of the `ruflin/elastica` package required for interacting with Elasticsearch 7.
 
+*Estimated migration time: less than 1 minute*
+
 To upgrade the module, install or update it through composer:
 
 ```bash
@@ -40,10 +42,11 @@ composer require "spryker/elastica:6.0.0" --update-with-dependencies
 
 This version of the Elastica module installs version 6 of the `ruflin/elastica` package required for interacting with Elasticsearch 6.
 
+*Estimated migration time: less than 1 minute*
+
 To upgrade the module, install or update it through composer::
 
 ```bash
 composer require "spryker/elastica:5.0.0" --update-with-dependencies
 ```
 
-*Estimated migration time: less than 1 minute*

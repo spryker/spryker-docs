@@ -31,9 +31,9 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productpackagingunit.html
 ---
 
-## Upgrading from Version 3.* to Version 4.0.0
+## Upgrading from version 3.* to version 4.0.0
 
-In this new version of the **ProductPackagingUnit** module, we have added support of decimal stock. You can find more details about the changes on the [ProductPackagingUnit module](https://github.com/spryker/product-packaging-unit/releases) release page.
+In this new version of the `ProductPackagingUnit` module, we have added support of decimal stock. You can find more details about the changes on the [ProductPackagingUnit module](https://github.com/spryker/product-packaging-unit/releases) release page.
 
 {% info_block errorBox %}
 
@@ -41,9 +41,9 @@ This release is a part of the **Decimal Stock** concept migration. When you upgr
 
 {% endinfo_block %}
 
-**To upgrade to the new version of the module, do the following:**
+To upgrade to the new version of the module, do the following:
 
-1. Upgrade the **ProductPackagingUnit** module to the new version:
+1. Upgrade the `ProductPackagingUnit` module to the new version:
 
 ```bash
 composer require spryker/product-packaging-unit: "^4.0.0" --update-with-dependencies
@@ -102,8 +102,6 @@ composer require spryker/product-packaging-unit: "^4.0.0" --update-with-dependen
 {% info_block warningBox "Note" %}
 
 The following scripts will work for the PostgreSQL database only.
-
-{% endinfo_block %}
 
 ```sql
 public function preUp(MigrationManager $manager)
@@ -189,6 +187,10 @@ SQL
         $connection->commit();
     }
 ```
+
+{% endinfo_block %}
+
+
 
 * Change the `ALTER TABLE "spy_product_packaging_unit"` command in the `getUpSQL()` method of the migration file to the following script:
 
@@ -297,7 +299,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 
 9. Change the cart expander plugins order in dependency provider, move `ProductPackagingUnitItemExpanderPlugin` before any other plugin related to the Packaging Unit feature:
 
-src/Pyz/Zed/Cart/CartDependencyProvider.php
+**src/Pyz/Zed/Cart/CartDependencyProvider.php**
 
 ```php
 <?php
@@ -333,7 +335,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 
 *Estimated migration time: 30 min*
 
-## Upgrading from Version 1.* to Version 3.0.0
+## Upgrading from version 1.* to version 3.0.0
 
 {% info_block infoBox %}
 

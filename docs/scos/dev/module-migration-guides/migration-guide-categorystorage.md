@@ -18,13 +18,15 @@ This document describes how to update the `CategoryStorage` module.
 
 ## Upgrading from version 1.* to 2.*
 
-_Estimated migration time: 1 hour._ 
 
 Version `2.*` of the `CategoryStorage` module changes the storage data structure to maintain the relation of categories to stores.
+
+_Estimated migration time: 1 hour._ 
 
 To upgrade the module from version `1.*` to `2.*`:
 
 1. Upgrade the `CategoryStorage` module to version `2.0.0`:
+
 ```bash
 composer require spryker/category-storage:"^2.0.0" --update-with-dependencies
 ```
@@ -32,6 +34,7 @@ composer require spryker/category-storage:"^2.0.0" --update-with-dependencies
 2. On the project level in `Pyz/Zed/CategoryStorage/Persistence/Propel/Schema/spy_category_storage.schema.xml`, remove the synchronization behavior setup from the `spy_category_tree_storage` and `spy_category_node_storage` tables.
 
 3. Update the database schema and the generated data transfer classes:
+
 ```bash    
 console propel:install
 console transfer:generate
@@ -41,13 +44,11 @@ console transfer:generate
 5. From `Pyz\EventBehavior\EventBehaviorDependencyProvider`, remove the deprecated plugins:
 
    - `CategoryTreeEventResourceQueryContainerPlugin`
-
    - `CategoryNodeEventResourceQueryContainerPlugin`
 
 6. Add the new plugins:
 
-<details open>
-    <summary markdown='span'>Pyz\Zed\Publisher\PublisherDependencyProvider</summary>
+<details open><summary markdown='span'>Pyz\Zed\Publisher\PublisherDependencyProvider</summary>
 
 ```php
 <?php
@@ -117,18 +118,15 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```    
-
 </details>
 
 7. From `Pyz\Zed\Synchronization\SynchronizationDependencyProvider`, remove the deprecated plugins:
    - `CategoryNodeSynchronizationDataPlugin`
-
    - `CategoryTreeSynchronizationDataPlugin`
 
 8. Add the new synchronization plugins:
 
-<details open>
-    <summary markdown='span'>Pyz\Zed\Synchronization\SynchronizationDependencyProvider</summary>
+<details open><summary markdown='span'>Pyz\Zed\Synchronization\SynchronizationDependencyProvider</summary>
 
 ```php    
 <?php
@@ -153,30 +151,33 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
     }
 }
 ```
-
 </details>
 
 9. Refill storage:
 
     1. Truncate the `spy_category_node_storage` and `spy_category_tree_storage` database tables:
+
     ```sql    
     TRUNCATE TABLE APPROVED;
     TRUNCATE TABLE spy_category_tree_storage;
     ```
 
     2. Remove all the data:
+
     ```bash
     console sync:data category_node
     console sync:data category_tree
     ```
 
     3. Trigger the events:
+
     ```bash
     console publish:trigger-events -r category_node
     console publish:trigger-events -r category_tree
     ```
 
     4. Sync all table storage data to the storage:
+    
     ```bash
     console sync:data category_node
     console sync:data category_tree

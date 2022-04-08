@@ -27,19 +27,21 @@ This migration guide is a part of the [Silex migration effort](/docs/scos/dev/mi
 
 To upgrade the module, do the following:
 
-1. Update the module using composer:
+1. Update the module using Composer:
+
 ```bash
 composer update spryker/messenger
 ```
 
 2. Remove old service providers, if you have them in the project:
+
 ```php
 \Spryker\Yves\Messenger\Plugin\Provider\FlashMessengerServiceProvider
-\Spryker\Zed\Messenger\Communication\Plugin\ServiceProvider\MessengerServiceProviderx
+\Spryker\Zed\Messenger\Communication\Plugin\ServiceProvider\MessengerServiceProvider
 ```
 3. Add  new plugins to  dependency providers:
 
-**Zed Integration**
+**Zed integration**
 
 ```php
 <?php
@@ -69,7 +71,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 }
 ```
 
-**Yves Integration**
+**Yves integration**
 
 ```php
 <?php

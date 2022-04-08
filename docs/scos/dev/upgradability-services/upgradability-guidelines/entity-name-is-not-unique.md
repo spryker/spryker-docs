@@ -9,7 +9,7 @@ Modules have public and private APIs. While public API updates always support ba
 
 For more information about module APIs, see [Definition of Module API](/docs/scos/dev/architecture/module-api/definition-of-module-api.html).
 
-When extending public API on the project level, make sure that entity names are unique, so Spryker updates are compatible with project changes. If a Spryker update introduces a core entity with a name matching a project-level entity name, their behavior might change or cause issues. To make your code unique, you can use prefixes like `Pyz` or your project name.
+When extending public API on the project level, make sure that entity names are unique, so Spryker updates are compatible with project changes. If a Spryker update introduces a core entity with a name matching a project-level entity name, its behavior might change or cause issues. To make your code unique, you can use prefixes like `Pyz` or your project name.
 
 The names of the following entities must be unique on the project level:
 

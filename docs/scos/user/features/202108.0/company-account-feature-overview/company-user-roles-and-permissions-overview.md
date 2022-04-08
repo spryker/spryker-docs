@@ -89,7 +89,9 @@ Permissions can be simple and complex.
 </table>
 
 {% info_block infoBox %}
+
 Some of the Permissions can be configured for specific roles, for example, “allow adding no more than X items to cart” for junior support engineer.<br>Or for example, some specific products are not allowed to be viewed by anyone, but Admin and Top Managers.<br>These values are referred to as **Company Role Permissions**.
+
 {% endinfo_block %}
 
 Permission can also be **Yves-side** and **Zed-side**.

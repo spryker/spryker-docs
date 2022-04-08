@@ -50,7 +50,7 @@ To configure this permission, use [this step-by-step instruction](/docs/scos/use
 
 * The *Send cart for approval* permission which lets a buyer send a cart for approval to their manager. Without this permission, a buyer cannot see the Request for Approval widget.
 
-* The *Approve up to grand total* permission which lets an approver approve the carts that do not hit the cart grand total limit specified there. See [Configuring the Approve up to grand total permission](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html#approval-process-on-the-storefront) to learn how to set up the permission in the Storefront.
+* The *Approve up to grand total* permission which lets an approver approve the carts that do not hit the cart grand total limit specified there. To learn how to set up the permission in the Storefront, see [Configuring the Approve up to grand total permission](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html#approval-process-on-the-storefront).
 
 Every approval request, in turn, can have three statuses:
 

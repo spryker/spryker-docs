@@ -22,7 +22,7 @@ For example, if the hard maximum threshold is €3000, and a customer adds items
 
 A Back Office user can enter a message that is displayed in cart when the hard maximum threshold is reached.
 
-See [Setting up a maximum hard threshold](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-global-thresholds.html#setting-up-maximum-hard-threshold) to learn how a Back Office user configures the maximum hard threshold.
+To learn how a Back Office user configures the maximum hard threshold, see [Setting up a maximum hard threshold](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-global-thresholds.html#setting-up-maximum-hard-threshold).
 
 
 ## Minimum thresholds

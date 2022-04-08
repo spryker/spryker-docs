@@ -12,8 +12,6 @@ redirect_from:
   - /docs/en/company-accounts-overview
 ---
 
-
-
 Company accounts let you build an organizational structure of your B2B business.
 
 ## Company

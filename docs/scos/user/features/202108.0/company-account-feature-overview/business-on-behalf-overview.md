@@ -19,8 +19,11 @@ For example, as a shop owner, you might have a financial manager in your company
 You can assign a user to multiple business units in the Back Office. After that, a single user will be able to log in to several company accounts and manage all of them via a browser window.
 
 {% info_block warningBox %}
+
 Only customers having more than one Company user can make use of the feature.
+
 {% endinfo_block %}
+
 When you have access to multiple business units, you can:
 
 * Capture company information.

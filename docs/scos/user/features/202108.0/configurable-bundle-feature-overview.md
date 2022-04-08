@@ -18,7 +18,7 @@ For example, when buying a kitchen set, a customer selects pieces of furniture, 
 ## Configurable bundle template
 Every configurable bundle is created per a template. A *configurable bundle template* is a model with configuration details for a bundle, like a number of [slots](#configurable-bundle-slot) or product lists assigned to a slot. There can be multiple templates in a shop, like a sport suit, a car, or a kitchen set.
 
-A Back Office User creates the templates in the Back Office. See [Сreating configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html) to learn how they do it.
+A Back Office User creates the templates in the Back Office. To learn how they do it, see [Сreating configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html).
 
 ![Configurable Bundle Template in the Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Configurable+Bundle+Template+-+back+office.png)
 

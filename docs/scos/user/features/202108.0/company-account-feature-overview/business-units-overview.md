@@ -83,14 +83,11 @@ This will move the address to Unassigned addresses section.
 | [Manage company units](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-units.html) |
 | [Manage company unit addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-unit-addresses.html) |
 
-
 {% info_block warningBox "Developer guides" %}
 
 Are you a developer? See [Company Account feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough/company-account-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}
-
-
 
 ## See next
 

@@ -26,7 +26,7 @@ The following CMS Block email templates are available by default:
 * *Text email template with header and footer*
 * *Empty email template*
 
-See [Creating an Email CMS Block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-content-of-emails-via-cms-blocks.html#creating-an-email-cms-block) to learn how a Back Office User applies a CMS Block email template.
+To learn how a Back Office User applies a CMS Block email template, see [Creating an Email CMS Block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-content-of-emails-via-cms-blocks.html#creating-an-email-cms-block).
 
 A Developer can create more CMS Block email templates.
 
@@ -60,7 +60,7 @@ The following table contains the list of the default email templates, their Emai
 <details open>
     <summary markdown='span'>Default email templates</summary>
 
-| When an email is sent | Email CMS Block name | Twig template |
+| WHEN AN EMAIL IS SENT | EMAIL CMS BLOCK NAME | TWIG TEMPLATE |
 | --- | --- | --- |
 | Customer registered in the shop | customer-registration--html | Customer/src/Spryker/Zed/Customer/Presentation/Mail/customer_registration.html.twig |
 | Customer registered in the shop | customer-registration--text | Customer/src/Spryker/Zed/Customer/Presentation/Mail/customer_registration.html.twig |
@@ -97,7 +97,7 @@ The following table contains the list of the default email templates, their Emai
 
 </details>
 
-See [Managing Content of Emails via CMS Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-content-of-emails-via-cms-blocks.html) to learn how a Back Office User manages the content of email templates by editing Email CMS Blocks.
+To learn how a Back Office User manages the content of email templates by editing Email CMS Block, see [Managing Content of Emails via CMS Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-content-of-emails-via-cms-blocks.html).
 
 After creating email templates, a developer can [import](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-block.csv.html) their assigned Email CMS Blocks. See [example of the import file](https://github.com/spryker-shop/suite/blob/master/data/import/common/common/cms_block.csv) with the Email CMS Blocks in Spryker Master Suite.
 
@@ -111,7 +111,7 @@ You can use the functionalities described in this section, regardless of the ema
 
 You can add [glossary keys](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/managing-glossary.html) directly to email templates, and the respective translations are fetched automatically. When an email with a glossary key is sent, the key is replaced with the translation you defined for the locale selected by the customer. For example, you add the *cart.price.grand.total* glossary key to an email template. When the email is sent to the customer with de_DE locale, the key is replaced with Summe.
 
-See [Managing Glossary](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/managing-glossary.html) to learn how a Back Office User creates translations.
+To learn how a Back Office User creates translations, see [Managing Glossary](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/managing-glossary.html).
 
 ### Variables in Email Templates
 

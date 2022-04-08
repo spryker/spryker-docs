@@ -20,7 +20,7 @@ This document describes how to view [order reclamations](/docs/scos/user/feature
 
 ## Prerequisites
 
-To start working with reclamations, go to **Sales** > **Reclamations**.
+To start working with reclamations, go to **Sales&nbsp;<span aria-label="and then">></span> Reclamations**.
 
 Review the [reference information](#reference-information-viewing-reclamations) before you start, or look up the necessary information as you go through the process.
 

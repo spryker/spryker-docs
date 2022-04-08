@@ -21,7 +21,7 @@ Vouchers are codes that customers can redeem during checkout. Voucher codes are 
 
 ## Prerequisites
 
-To start working with discounts, navigate to **Merchandising** > **Discount**.
+To start working with discounts, navigate to **Merchandising&nbsp;<span aria-label="and then">></span> Discount**.
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 
@@ -251,7 +251,7 @@ The setup will look like the following:
 
 This section describes the information that you need to know when working with voucher codes in the *Voucher code* tab.
 
-You enter and select the following attributes in **Edit Discount** > **Voucher code**:
+You enter and select the following attributes in **Edit Discount&nbsp;<span aria-label="and then">></span> Voucher code**:
 
 | ATTRIBUTE | DESCRIPTION |  
 | --- | --- |

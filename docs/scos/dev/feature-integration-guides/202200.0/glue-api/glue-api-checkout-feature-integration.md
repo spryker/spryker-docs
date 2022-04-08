@@ -360,7 +360,7 @@ Activate the following plugins:
 
 | PLUGIN    | SPECIFICATION   | PREREQUISITES | NAMESPACE   |
 | --------------- | -------------------- | ----------- | ---------------------- |
-| CheckoutDataResourcePlugin              | Registers the `сheckout-data` resource.                      | None          | Spryker\Glue\CheckoutRestApi\Plugin\GlueApplication |
+| CheckoutDataResourcePlugin              | Registers the `checkout-data` resource.                      | None          | Spryker\Glue\CheckoutRestApi\Plugin\GlueApplication |
 | CheckoutResourcePlugin                  | Registers the `checkout` resource.                           | None          | Spryker\Glue\CheckoutRestApi\Plugin\GlueApplication |
 | OrderRelationshipByOrderReferencePlugin | Adds a relationship to the `order` entity by order reference. | None          | Spryker\Glue\OrdersRestApi\Plugin                   |
 | OrderPaymentsResourceRoutePlugin        | Registers the `order-payments` resource.                     | None          | Spryker\Glue\OrderPaymentsRestApi\Plugin            |
@@ -787,5 +787,3 @@ Integrate the following related features.
 | -------- | ----------------- | ---------------------- |
 | Glue API: Shipment  | ✓                                | [Glue API: Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shipment-feature-integration.html)  |
 | Glue API: Payments   | ✓                                | [Glue API: Payments feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-payments-feature-integration.html) |
-
-

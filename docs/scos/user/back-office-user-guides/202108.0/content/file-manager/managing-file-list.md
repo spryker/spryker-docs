@@ -23,7 +23,7 @@ The *File List* section is a way to quickly review all the files from the file t
 
 In the *File List* section, you can do the actual managing action only in case you already have the files in the file tree.
 
-To start working with the file list, navigate to **File Manager** > **File List**.
+To start working with the file list, navigate to **File Manager&nbsp;<span aria-label="and then">></span> File List**.
 
 ## Viewing files
 

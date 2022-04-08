@@ -17,7 +17,7 @@ related:
 
 This topic describes how to manage merchant records.
 
-To start working with merchants, go to **Marketplace > Merchants**.
+To start working with merchants, go to **Marketplace&nbsp;<span aria-label="and then">></span> Merchants**.
 
 ## Creating a merchant
 

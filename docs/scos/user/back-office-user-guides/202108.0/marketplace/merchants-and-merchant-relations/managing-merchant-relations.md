@@ -16,7 +16,7 @@ related:
 ---
 
 This article describes how to manage merchant relations.
-To start working with merchant relations, go to **Marketplace** > **Merchant Relations**.
+To start working with merchant relations, go to **Marketplace&nbsp;<span aria-label="and then">></span> Merchant Relations**.
 
 ## Prerequisites
 

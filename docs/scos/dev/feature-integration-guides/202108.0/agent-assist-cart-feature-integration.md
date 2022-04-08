@@ -71,4 +71,3 @@ Integrate the following related features:
 | ----------------- | ------------ | ----------------------- |
 | Agent Assist            | ✓     | [Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/agent-assist-feature-integration.html) |
 | Agent Assist + Shopping List |         | [Agent Assist + Shopping List feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/agent-assist-shopping-list-feature-integration.html) |
-

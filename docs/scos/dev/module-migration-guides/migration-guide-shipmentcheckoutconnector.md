@@ -39,7 +39,7 @@ To upgrade to the new version of the module, do the following:
 1. Upgrade the `ShipmentCheckoutConnector` module to the new version:
 
 ```bash
-composer require spryker/shipment-сheckout-сonnector: "^2.0.0" --update-with-dependencies
+composer require spryker/shipment-checkout-connector: "^2.0.0" --update-with-dependencies
 ```
 2. Generate the transfer objects:
 

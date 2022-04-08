@@ -17,7 +17,7 @@ The **Overview of Order Matrix** page displays the information about ordered ite
 
 ## Prerequisites
 
-To view the order matrix, navigate to **Sales** > **Order Matrix**.
+To view the order matrix, navigate to **Sales&nbsp;<span aria-label="and then">></span> Order Matrix**.
 
 ## Viewing Order Matrix
 

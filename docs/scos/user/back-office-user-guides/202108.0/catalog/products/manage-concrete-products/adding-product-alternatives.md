@@ -22,7 +22,7 @@ For example, if smartphone 1 is out of stock, or discontinued, you can set smart
 
 ## Prerequisites
 
-To start working with product alternatives, go to **Catalog > Products**.
+To start working with product alternatives, go to **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 
 ## Adding product alternatives for a product
 

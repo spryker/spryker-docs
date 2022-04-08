@@ -19,7 +19,7 @@ This article describes the managing actions that you can perform with the produc
 
 ## Prerequisites
 
-To start working with product options, go to **Products** > **Product Options**.
+To start working with product options, go to **Products&nbsp;<span aria-label="and then">></span> Product Options**.
 
 Before you start managing the product option by editing or deactivating it, you may want to see the product option details. 
 

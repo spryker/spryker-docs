@@ -19,7 +19,7 @@ This article describes how to manage customer groups.
 
 ## Prerequisites
 
-To start working with customer groups, navigate to the **Customers** > **Customer Groups** section.
+To start working with customer groups, navigate to the **Customers&nbsp;<span aria-label="and then">></span> Customer Groups** section.
 
 {% info_block infoBox %}
 
@@ -53,4 +53,4 @@ To view a customer group, in the _Actions_ column for a specific customer group 
 
 On this page, you can:
 * Click **Edit Customer Group** in the top right corner and initiate the editing flow.
-* Click **View** in the _Actions_ column for a specific customer assigned to this group. This will take you to the *View Customer* page (the **Customers** > **Customers** section).
+* Click **View** in the _Actions_ column for a specific customer assigned to this group. This will take you to the *View Customer* page (the **Customers&nbsp;<span aria-label="and then">></span> Customers** section).

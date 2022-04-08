@@ -16,7 +16,7 @@ You can assign each customer to only one user.
 
 ## Prerequisites
 
-To start working with users, go to **Users** > **Users**.
+To start working with users, go to **Users&nbsp;<span aria-label="and then">></span> Users**.
 
 ## Assigning customers to users
 

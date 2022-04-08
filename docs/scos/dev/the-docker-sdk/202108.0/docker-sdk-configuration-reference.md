@@ -18,7 +18,7 @@ The configuration parameters in this document are examplary. You may need to adj
 
 
 
-## Сonfiguring Opcache
+## Configuring Opcache
 
 To configure Opcache, adjust `deploy.*.yml` as follows:
 

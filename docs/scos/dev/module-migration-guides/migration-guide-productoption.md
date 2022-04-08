@@ -6,7 +6,7 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-product-option
 originalArticleId: ed0c6dbc-b739-4b12-b42d-54f89d6643c3
 redirect_from:
-  - /с/docs/mg-product-option
+  - /c/docs/mg-product-option
   - /2021080/docs/en/mg-product-option
   - /docs/mg-product-option
   - /docs/en/mg-product-option

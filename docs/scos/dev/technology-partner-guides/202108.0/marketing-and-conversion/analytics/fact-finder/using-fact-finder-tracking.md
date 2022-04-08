@@ -99,7 +99,7 @@ By default, you can use the `/fact-finder/track` route. According to the FACT-Fi
 
 To use tracking on the back-end, provide the dependency to your module dependency provider.
 
-**Сode sample**
+**Code sample**
 
  ```php
 <?php

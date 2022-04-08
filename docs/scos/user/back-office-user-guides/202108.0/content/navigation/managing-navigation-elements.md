@@ -16,7 +16,7 @@ This topic describes how to manage [navigation elements](/docs/scos/user/feature
 
 ## Prerequisites
 
-To start working with navigation elements, go to **Content** > **Navigation**.
+To start working with navigation elements, go to **Content&nbsp;<span aria-label="and then">></span> Navigation**.
 
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
@@ -96,7 +96,7 @@ You can create the following node types:
 | --- | --- |
 |Label<br>![Label](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Navigation/Navigation+Node+Types/label.png)   | Labels do not link to any specific URL; they are used for grouping other items accessed from the menu.|
 | Category<br>![Category](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Navigation/Navigation+Node+Types/category.png) | Category is used to link an existing category you have to the navigation node. A category must exist in the Category section. |
-|CMS Page<br>![CMS page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Navigation/Navigation+Node+Types/cms-page.png)| CMS page can be assigned to a node. A CMS page must exist in the **Content** > **Pages** section.|
+|CMS Page<br>![CMS page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Navigation/Navigation+Node+Types/cms-page.png)| CMS page can be assigned to a node. A CMS page must exist in the **Content&nbsp;<span aria-label="and then">></span> Pages** section.|
 | External URL<br>![External URL](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Navigation/Navigation+Node+Types/external-url.png) |External URL is a link that is typically opened in a new tab. |
 |Link<br>![Link](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Navigation/Navigation+Node+Types/link.png)   | Link to internal pages, i.e., login, registration, etc. |
 Depending on the type of the node, there is various node related information that can be managed:

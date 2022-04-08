@@ -19,7 +19,7 @@ The *Customer Access* page allows you to define what information not logged-in t
 
 ## Prerequisites
 
-To start defining specific restrictions for not logged-in customers, go to **Customers** > **Customer Access**.
+To start defining specific restrictions for not logged-in customers, go to **Customers&nbsp;<span aria-label="and then">></span> Customer Access**.
 
 ## Defining customer access
 

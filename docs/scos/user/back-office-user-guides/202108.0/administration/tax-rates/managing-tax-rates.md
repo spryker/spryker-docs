@@ -16,7 +16,7 @@ This document describes how to create, edit, and delete [tax rates](/docs/scos/u
 
 ## Prerequisites
 
-To start working with tax rates, go to **Administration** > **Tax Rates**.
+To start working with tax rates, go to **Administration&nbsp;<span aria-label="and then">></span> Tax Rates**.
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 
@@ -24,10 +24,10 @@ Review the reference information before you start, or look up the necessary info
 
 To define a rate under which a product, shipment, or threshold is going to be taxed, create a tax rate.
 
-To create a tax rate:
+To create a tax rate, do the following:
 
-1. On the *Overview of Tax Rates* page, in the top right corner, click **Create Tax Rate**.
-2. On the *Create Tax Rate* page, enter and select the attributes.
+1. On the **Overview of Tax Rates** page, in the top right corner, click **Create Tax Rate**.
+2. On the **Create Tax Rate** page, enter and select the attributes.
 3. Click **Save**.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Taxes/Managing+Tax+Rates/create-tax-rate.png)
@@ -44,19 +44,19 @@ The following table describes attributes you view, enter, and select when creati
 
 ## Editing tax rates
 
-To edit a tax rate:
+To edit a tax rate, do the following:
 
-1. In the *List of tax rates* > *Actions* column, click **Edit** for a specific tax rate.
-2. On the *Edit Tax Rate* page, change the attributes.
+1. In the **List of tax rates&nbsp;<span aria-label="and then">></span> Actions** column, click **Edit** for a specific tax rate.
+2. On the **Edit Tax Rate** page, change the attributes.
 3. Click **Save**. For more details on the reference information of the attributes, see the [Reference information: Creating tax rates](#reference-information-creating-tax-rates) section.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Taxes/Managing+Tax+Rates/editing-tax-rate.png)
 
 ## Viewing tax rates
 
-To view details on a specific tax rate,  in the *List of tax rates > Actions* column, click **View**.
+To view details on a specific tax rate,  in the **List of tax rates&nbsp;<span aria-label="and then">></span> Actions** column, click **View**.
 
-The *Tax Rate* details page includes the following information:
+The **Tax Rate** details page includes the following information:
 * Name
 * Tax rate ID
 * Country
@@ -70,15 +70,15 @@ To return back to the list, click **Back to Tax Rates**.
 
 **Tips and tricks**
 <br>You can start editing a tax rate while viewing it:
-1. On the *View Tax Rate* page, click **Edit** in the top right corner.
+1. On the **View Tax Rate** page, click **Edit** in the top right corner.
 2. Go over the [Editing tax rates](#editing-tax-rates) procedure.
 
 ## Deleting tax rates
 
-To delete a tax rate:
+To delete a tax rate, do the following:
 
-1. In the *List of tax rates > Actions* column, click **Delete** for a specific tax rate.
-2. On the *Delete Tax Rate* page, click **Delete Tax Rate** to confirm the action.
+1. In the **List of tax rates&nbsp;<span aria-label="and then">></span> Actions** column, click **Delete** for a specific tax rate.
+2. On the **Delete Tax Rate** page, click **Delete Tax Rate** to confirm the action.
 The tax rate is deleted. Remember that it will also be deleted from the [tax set](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/managing-tax-sets.html) to which it has been assigned.
 
 {% info_block warningBox "Note" %}
@@ -89,8 +89,8 @@ Even if you delete the only tax rate assigned to a tax set, the tax set itself r
 
 **Tips and tricks**
 <br>You can delete a tax rate while viewing it:
-1. On the *View Tax Rate* page, click **Delete** in the top-right corner.
-2. On the *Delete Tax Rate* page, confirm your action.
+1. On the **View Tax Rate** page, click **Delete** in the top-right corner.
+2. On the **Delete Tax Rate** page, confirm your action.
 
 ## What's next?
 

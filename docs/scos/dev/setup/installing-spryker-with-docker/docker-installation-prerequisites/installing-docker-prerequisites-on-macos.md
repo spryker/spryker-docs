@@ -1,7 +1,7 @@
 ---
 title: Installing Docker prerequisites on MacOS
 description: Perform the steps described in the guide before you can start working with Spryker in Docker on MacOS.
-last_updated: Oct 21, 2021
+last_updated: Apr 11, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/installing-docker-prerequisites-on-macos
 originalArticleId: 5794d7a0-7b64-4847-a32f-2c84f3c54c9b
@@ -30,7 +30,7 @@ Review the system and software requirements in the table and configure them usin
 | Requirement | Value or version |
 | --- | --- |
 | Docker | 18.09.1 or higher |
-| Docker Compose | 1.28 or 1.29 |  
+| Docker Compose | v2 or higher |  
 | vCPU | 4 or more |
 | RAM  | 4GB or more |
 | Swap  | 2GB or more |
@@ -47,7 +47,7 @@ Signup for Docker Hub is not required.
 
 3. In the Docker Desktop, go to preferences by selecting the gear in the top right corner.
 
-4. In the *General* seciton of *Preferences*, clear the **Use Docker Compose V2** checkbox.
+4. In the *General* seciton of *Preferences*, tick the **Use Docker Compose V2** checkbox.
 
 5. Update Memory and Swap Limits:
 
@@ -65,28 +65,18 @@ You can select lower **Memory:** and **Swap:** values than those provided in the
 
 {% endinfo_block %}
 
-5. [Development mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode): Install Mutagen version `0.13.0-beta4` for file synchronisation between the container and the host:
+6. [Development mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode): Install Mutagen and Mutagen-Compose version greater than `0.13.1` for file synchronisation between the container and the host:
 ```shell
-brew tap mutagen-io/homebrew-mutagen && \
-cd "$(brew --repo mutagen-io/homebrew-mutagen)" && \
-git checkout bd8b45734ceebb24a9b11cbae7ff9f1623cfb737 && \
-HOMEBREW_NO_AUTO_UPDATE=1 brew install mutagen-io/mutagen/mutagen-beta && \
-cd - && \
-brew pin mutagen-io/mutagen/mutagen-beta
+brew install mutagen-io/mutagen/mutagen mutagen-io/mutagen/mutagen-compose
 ```
 
-{% info_block warningBox "Rolling back Mutagen version" %}
+{% info_block warningBox "Clean previous installed Mutagen versions" %}
 
-If you previously installed a different version of Mutagen, the only way to roll back is to reinstall it. To install Mutagen version `0.13.0-beta4` and restart the Mutagen daemon, run the command:
+If you previously installed a different version of Mutagen, the following command helps to remove all Mutagen pieces:
 ```shell
-brew uninstall mutagen-io/mutagen/mutagen-beta && \
-cd "$(brew --repo mutagen-io/homebrew-mutagen)" && \
-git checkout bd8b45734ceebb24a9b11cbae7ff9f1623cfb737 && \
-HOMEBREW_NO_AUTO_UPDATE=1 brew install mutagen-io/mutagen/mutagen-beta && \
+brew list | grep mutagen | xargs  brew remove && \
 mutagen daemon stop  && \
-mutagen daemon start && \
-cd - && \
-brew pin mutagen-io/mutagen/mutagen-beta
+mutagen daemon start
 ```
 {% endinfo_block %}
 

@@ -5,7 +5,7 @@ last_updated: Mar 23, 2022
 template: concept-topic-template
 ---
 
-Modules have public and private APIs. While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility is not guaranteed in the private API. For example, if you use a core method on the project level, and it is updated or removed, it can cause unexpected issues during updates.
+Modules have public and private APIs. While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility is not guaranteed in the private API. For example, if you use a core method from the Private API on the project level, and it is updated or removed, it can cause unexpected issues during updates.
 
 For more information about module APIs, see [Definition of Module API](/docs/scos/dev/architecture/module-api/definition-of-module-api.html).
 
@@ -59,11 +59,8 @@ To make your code unique, use prefixes like `pyz` or your project name.
 ## Example of resolving the error by renaming Private API entities
 
 
-1. Give the method a unique name and copy it to the factory to fetch the business model.
-2. Give the method a unique name and copy it to the business model.
-
-
 ```php
+// Give the method a unique name and copy it to the factory to fetch the business model.
 namespace Pyz\Zed\Customer\Business;
 
 use Spryker\Zed\Customer\Business\CustomerFacade as SprykerCustomerFacade;
@@ -102,6 +99,7 @@ class CustomerBusinessFactory extends SprykerCustomerBusinessFactory
 }
 ```
 ```php
+// Give the method a unique name and copy it to the business model.
 namespace Pyz\Zed\Customer\Business\Customer;
 
 use Spryker\Zed\Customer\Business\Customer\CustomerReader as SprykerCustomerReader;

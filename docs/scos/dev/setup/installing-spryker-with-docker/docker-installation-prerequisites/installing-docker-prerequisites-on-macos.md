@@ -65,7 +65,7 @@ You can select lower **Memory:** and **Swap:** values than those provided in the
 
 {% endinfo_block %}
 
-5. [Development mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode): Install or update Mutagen to the latest version:
+5. [Development mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode): Install or update Mutagen and Mutagen Compose to the latest version:
 ```shell
 brew list | grep mutagen | xargs brew remove && brew install mutagen-io/mutagen/mutagen mutagen-io/mutagen/mutagen-compose && mutagen daemon stop && mutagen daemon start
 ```

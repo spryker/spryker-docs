@@ -97,7 +97,7 @@ When customers pay with a credit card, a shop owner can:
 
 When customers pay with PayPal, the flow is as follows:
 
-1. Customer is redirected to the PayPal website, where they have to authorize.
+1. Customer is redirected to the PayPal website, where they have to log in.
 2. On the PayPal website, the customer either cancels or validates the transaction.
 3. Customer is taken to the checkout page with the message of either a successfully placed or canceled order.
 

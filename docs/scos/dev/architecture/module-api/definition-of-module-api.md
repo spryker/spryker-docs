@@ -25,7 +25,7 @@ redirect_from:
   - /docs/scos/dev/architecture/module-api/definition-of-module-api.html
 ---
 
-According to [Semantic Versioning](http://semver.org/), we release a major version of a module when there are backward compatibility(BC) breaking changes in the Public API. This document declares what are public and private APIs.
+According to [Semantic Versioning](http://semver.org/), we release a major version of a module when there are backward compatibility(BC) breaking changes in the Public API. This document declares what public and private APIs are.
 
 ## Public API
 
@@ -60,17 +60,9 @@ In the Spryker Commerce OS’s core, the following is the public API:
 
 ### BC breaking changes
 
-As described above, there are several classes and files which are part of the API. But not every change there would cause a BC break. In general, we can say: there is a BC break whenever an existing contract is changed. A contract is what the user of the API expects. This includes the signature of methods as well as the expected behavior. For this reason, we have added an ApiDoc to the most used APIs like facades and plugin interfaces.
+There are several classes and files which are part of the API, but not every change in the file  causes a BC break. In general, there is a BC break whenever an existing contract is changed. A contract is what the user of the API expects. This includes the signature of methods as well as the expected behavior. For this reason, we have added an ApiDoc to the most used APIs like facades and plugin interfaces.
 
-In any case, Spryker Commerce OS's core team wants to avoid BC breaking changes and reduce the effort needed in projects to use a new version of a module. There are several ways to add functionality to APIs without a BC break. So it is possible to add new methods and even parameters to the existing methods as long as they are optional.
-
-There are several other ways to cause a BC break:
-
-* A new major version of an .
-* A new glossary key in the existing business logic (because there is no translation in the project).
-* The whole software design is part of the API. These modules are marked as Engine. For example, it would be a global BC break if we would enforce another structure of Twig templates for all modules or require another directory structure for modules or change a method in the abstract controller.
-
-Not parts of the API are all module-internal classes are instantiated by factories. Although they have public methods, they are not intended to be used from the project code.
+We always try to avoid BC breaking changes and reduce the effort needed to upgrade a module to a new version. There are several ways to add functionality to APIs without a BC break. So it is possible to add new methods and even parameters to the existing methods as long as they are optional.
 
 
 ## Private API

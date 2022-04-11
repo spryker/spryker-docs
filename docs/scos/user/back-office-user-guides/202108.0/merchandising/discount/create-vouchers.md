@@ -47,124 +47,85 @@ To start creating a voucher, do the following:
     * **Percentage**: For **VALUE**, enter a percentage to be discounted.
 4. Select a **DISCOUNT APPLICATION TYPE**.
 5. Depending on the discount application type you've selected, do the following:
-    * **QUERY STRING**: Add a query using the query build or by entering a plain query.
+    * **QUERY STRING**: Add a query using the query builder or by entering a plain query.
     * **PROMOTIONAL PRODUCT**:
         1. Enter **ABSTRACT PRODUCT SKU**.
         2. Enter a **QUANTITY**.
 6. Click **Next**.
 
-## 3. Define under which conditions the discount is applied
+## 3. Define on what conditions the discount can be applied
 
 
-1. Click the **Conditions
- 6. On the *Create new discount* page, in the *Conditions* tab, do the following:
-    1. Select the **Apply when** conditions or click **Plain query** and enter the  query manually. See reference information of the [Conditions](#conditions) tab for more details.
-    2. Enter the value for the **The discount can be applied if the query applies for at least X item(s).** field.
-7. Click **Save** to create the new voucher.
+1. Click the **Conditions** tab.
+2. For **APPLY WHEN**, add a query using the query builder or by entering a plain query.
+3. For **THE DISCOUNT CAN BE APPLIED IF THE QUERY APPLIES FOR AT LEAST X ITEM(S).**, enter a number.
+4. Click **Save**.
 
-When you click **Save**, an additional tab named *Voucher Codes* appears. Here, you can generate, view, and export voucher codes (if they were already created).
-The list is empty until codes are generated.
+This refreshes the page with a success message displayed.
 
-In the *Voucher code* tab, do the following:
-1. Enter the **Quantity** for voucher codes you want to generate.
-2. _Optional_: Enter a **Custom code**.
-3. Set the **Add Random Generated Code Length** by selecting the value from a drop-down list.
-4. Set the **Maximum number** of uses.
-5. Click **Generate** to complete the process.
-    The voucher codes will be generated according to your specifications. The codes will be displayed in the table at the bottom of the page.
-5. Click **Activate** in the top right corner to activate the voucher.
-Even if a voucher is valid and the decision rules are satisfied, a voucher can only be redeemed if it’s currently active.
+## 4. Generate voucher codes
 
-{% info_block infoBox %}
+1. Click the **Voucher codes** tab.
+2. Enter a **QUANTITY**.
+2. Optional: Enter a **CUSTOM CODE**.
+3. For **ADD RANDOM GENERATED CODE LENGTH**, select a number.
+4. Enter a **MAX NUMBER OF USES**.
+5. Click **Generate**.
+    This refreshes the page with a success message displayed. The created voucher codes are displayed in the **Generated Discount Codes** section.
 
-See [Voucher code](#voucher-code) for more information.
-
-{% endinfo_block %}
 
 **Tips and tricks**
-<br>Once you generated voucher codes, you can export them as a .csv file.
-To do that, click **Export** below *Generate*.
+To download voucher codes, click **Export**.
 
-## Reference information: Creating a voucher
+## 5. Activate the discount
+
+Optional: To make the discount voucher redeemable on the Storefront, click **Activate** in the top-right corner.
+
+This refreshes the page with a success message displayed.
+
+
+
+
+## Reference information: Define general settings of a voucher discount
 
 This section describes attributes you enter and select when creating or editing a voucher.
 
-### <a name="discount-overview-page"></a>Discount Overview page
-
-In the *Discount* section, you see the following:
-* The discount ID and name.
-* The amount that is discounted.
-* The type of discount, its validity period, and status.
-* The identifier for Exclusive.
-* The actions that you can do on each specific discount.
-
-By default, the last created discount goes on top of the table. However, you can sort and search the list of discounts.
-
-All columns with headers having arrows in the List of Orders table are sortable.
-
-**Actions column**
-All the discount management options that you can invoke from the _Actions_ column are described in the following table.
-
-| ACTION |DESCRIPTION  |
-| --- | --- |
-|Edit  | Takes you to the *Edit Discount* page. Here, you can modify discount settings or generate voucher codes if it is a voucher discount. |
-|  View| Takes you to the *View Discount* page. Here, you can find all the information about the chosen discount. |
-|  Add code| You can see this action only if the chosen discount is of a voucher type. It takes you directly to the *Voucher codes* tab of the *Edit Discount* page. Here, you can generate new voucher codes, export or delete the ones that are already created. |
-| Activate/Deactivate | Activates or deactivates a specific discount. If a voucher discount is deactivated, its codes are invalid when entered in a cart. If a cart rule is deactivated, it won't be automatically applied even if the discount rules are fulfilled. |
-
-### Create Discount page
-
-This section describes attributes you select and enter on the *Create Discount* and *Edit Discount* pages when creating and editing a discount.
-
-#### General information tab
-
-The following table describes the attributes you enter and select in the *General information* tab:
-
 | ATTRIBUTE |DESCRIPTION  |
 | --- | --- |
-|Store relation  |Stores you wish the discount to be active in. Multiple stores can be selected.|
-| Discount Type | Drop-down list where you select either *Voucher code* or *Cart rule* discount type. |
-| Name(A unique name that will be displayed to your customers) | Unique name that will be displayed to your customers. |
-| Description | Unique description of the discount. |
-| Non-Exclusive | Defines the discount exclusivity. Non-exclusive discounts can be redeemed in conjunction with other non-exclusive discounts.|
-| Exclusive | Defines the discount exclusivity. An exclusive discount can only be used on its own. You cannot apply other discounts with an exclusive one unless a higher exclusive discount is used. Then, the higher discount is redeemed.  |
-| Valid from and Valid to| Vouchers are redeemable/the cart rule is active between Valid From and Valid To dates, inclusive. E.g., a voucher can be redeemed/discount applies to the cart starting from 1/1/2018 until 31/12/2019.|
+| STORE RELATION | The stores to display the discount in. |
+| DISCOUNT TYPE | Defines how the discount will be applied: <ul><li>**Cart rule**: the discount will be applied automatically to the products defined in [Define discount calculation and the products to apply the discount to](#define-discount-calculation-and-the-products-to-apply-the-discount-to).</li><li>**Voucher codes**: the discount will be applied to the products defined in [Define discount calculation and the products to apply the discount to](#define-discount-calculation-and-the-products-to-apply-the-discount-to) when a customer enters a voucher code generated in [Generate voucher codes](#generate-voucher-codes).</li></ul> |
+| NAME | Unique identifier of the discount that will be displayed in the Back Office and on the Storefront. |
+| DESCRIPTION | The description will be displayed on the Storefront.  |
+| NON-EXCLUSIVE | Defines that this discount can be applied to a cart together with other non-exclusive discounts. |
+| EXCLUSIVE | Defines that this discount, when applied to a cart, discards all the other non-exclusive discounts. If multiple exclusive discounts are applied to a cart, only the discount with the bigger discount value is applied.   |
+| VALID FROM and VALID TO | This discount can be Valid From and Valid To dates, inclusive. E.g., a voucher can be redeemed/discount applies to the cart starting from 1/1/2018 until 31/12/2019.|
 
-{% info_block infoBox "Info" %}
+## Reference information: Define discount calculation and the products to apply the discount to
 
-The name and the description should be meaningful to help other Back Office users understand what the discount does. Besides, the given name is displayed in the customer's cart when redeeming the voucher. Therefore, it must be unique.
+This section contains information for defining discount calculation and the product to apply the discount to.
 
-{% endinfo_block %}
+### CALCULATOR TYPE
 
-#### <a name="discount-calculation-tab"></a>Discount calculation tab
-
-This section contains information you need to know when working with discount calculations in the *Discount calculation* tab.
-
-**Calculator type**
 The discount can be calculated in two ways:
-* **Percentage Value**: The discount is calculated as a percentage of the discounted items. If selected, you will need to set the percentage value (e.g., 25)
-* **Fixed Value**: A fixed amount is discounted. If you select this type, you will need to specify the amount (Gross, or Net, or Both) for each currency used in your store.
+* **Percentage**: The discount is calculated as a percentage of the discounted items.
+* **Fixed amount**: A fixed amount is discounted.
 
 Example:
 
 | PRODUCT PRICE | CALCULATOR PLUGIN | AMOUNT | DISCOUNT APPLIED | PRICE TO PAY |
 | --- | --- | --- | --- | --- |
 | 50 € | Calculator Percentage | 10 |5 € | 45 € |
-| 50 €| Calculator Amount | 10 €| 10 €| 40 €|
+| 50 € | Calculator Amount | 10 €| 10 €| 40 €|
 
-**Discount application type**
-You can select one of the following options:
-* Query String
-* Promotional Product
+### DISCOUNT APPLICATION TYPE: QUERY STRING
 
-**Query String**
 You can use a query to define discount conditions. Only products that satisfy the query's conditions are discountable. Queries also define if the discount is applied to one or several products. Discount conditions are set by using either the *query builder* or by specifying a *Plain query*.
 
 Use the query builder to construct queries (guided) or the **Plain query** field to enter them (free text). You can switch between both modes by clicking the corresponding button (note that incomplete queries cannot be transferred between the two modes).
 **Query builder**
 ![Discount_Calculation_Query](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Calculation:+Reference+Information/query-string.png)
 
-**Plain Query**
+**Plain query**
 ![Discount_Calculation_Plain Query](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Calculation:+Reference+Information/discount-calculation-plain-query.png)
 
 The query builder lets you combine different conditions with connectors (**AND** and **OR**). Multiple conditions (rules) can be added and grouped in this way. Each condition (rule) consists of:
@@ -194,15 +155,14 @@ See [Token description tables](#token-description-tables) for more information.
 
 {% endinfo_block %}
 
-**Discount promotion to product**
+### DISCOUNT APPLICATION TYPE: PROMOTIONAL PRODUCT
+
 Sometimes, it is more profitable to give away free products or provide a discount for the products that are not yet in the cart instead of the ones that are already there. This discount application type enables you to do just that. When a customer fulfills the discount conditions, the promotional product appears below other items. The SKU of the promotional product you wish to be available for adding to cart is entered in the **Abstract product sku** field. Then, you enter the **Quantity** of the chosen promotional product to be available for adding to cart.
 ![Application type](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Calculation:+Reference+Information/Application+type.png)
 
 You can either give away the promotional product completely for free or provide a discount for this product by specifying the percentage value or a fixed amount to be discounted from the promotional product's price (when giving the product for free, the percentage value should be 100%, while the fixed-price value should be equal to the product's price).
 
-#### <a name="conditions"></a>Conditions
-
-This section provides information that you need to know when working with discount conditions in the *Conditions* tab.
+## Reference information: Define under which conditions the discount can be applied
 
 Conditions are also called decision rules.
 
@@ -225,7 +185,7 @@ The minimum order amount value specifies the threshold which should be reached f
 Example: Discount is applied if 4 or more items with the Intel Core processor are in the cart.
 ![Threshold](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/threshold.png)
 
-**More Advanced Example**
+**More advanced example**
 
 To create a discount that will have an extensive number of conditions, you use the condition **groups**. Meaning you collect different rules under different groups and split them into separate chunks.
 Let's say you have received a task to create a discount with the following conditions:

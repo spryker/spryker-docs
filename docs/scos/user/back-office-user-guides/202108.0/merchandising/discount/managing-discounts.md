@@ -46,10 +46,3 @@ And you can also do the following:
 You are redirected to the *Voucher codes* tab of the *Edit Discount* page.
     Follow the steps described in [Creating a discount voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html).
 3. Click **Save**.
-
-## Activating and deactivating discounts
-
-You can activate or deactivate a discount while editing it by one of the following steps:
-
-* In the top-right corner of the *Edit Discount* page, click **Activate** or **Deactivate**.
-* On the *Overview of Discounts* page, in the _Actions_ column, click **Activate** or **Deactivate**.

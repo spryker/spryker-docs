@@ -18,7 +18,7 @@ You can have multiple accounts with Payone. For example, you can have different 
 
 For the *Payone Credit Card* payment method, we support the following modes:
 
-- *Preauthorization and Capture*: After a customer entered the credit card details during the checkout, the merchant preauthorizes or reserves the payable amount on the customer’s credit card. As soon as the items have shipped, this amount is captured. Capture kicks off the process of moving money from the customer’s credit card to the seller’s account. The preauthorization and capture mode is the method of choice for physical goods. It ensures that in case the ordered items are not available anymore or the customer cancels the order before it is shipped, the seller does not have to transfer the money back to the customer's account and thereby avoids a chargeback.
+- *Preauthorization and Capture*: After a customer entered the credit card details during the checkout, the seller preauthorizes or reserves the payable amount on the customer’s credit card. As soon as the items have shipped, this amount is captured. Capture kicks off the process of moving money from the customer’s credit card to the seller’s account. The preauthorization and capture mode is the best choice for physical goods. It ensures that in case the ordered items are not available anymore or the customer cancels the order before it is shipped, the seller does not have to transfer the money back to the customer's account and thereby avoids a chargeback.
 - *3DS*: Messaging protocol that enables consumer authentication with their card issuer when making online purchases.
 - *PCI DSS Compliance via SAQ A*: A set of security standards designed to ensure that you accept, process, and transmit credit card information in a secure environment.
 
@@ -43,15 +43,17 @@ To integrate Payone:
    
    {% info_block infoBox "Info" %}
 
-   It takes some time to obtain details from Payone, as you have to go through a thorough vetting process by Payone such as the "know your customer" (KYC) process before Payone verifies you.
+   It takes some time to obtain credentials from Payone, as you have to go through a thorough vetting process by Payone such as the "know your customer" (KYC) process before Payone verifies you.
 
    {% endinfo_block %}
 
 5. Go back to your store's Back Office, to the Payone app details page.
-6. On the Payone app details page, enter *Credentials*.
-7. Select *Payone Environment Mode*: **TEST** or **LIVE**.
-8. Select a payment method⁠—either **CREDIT CARD** or **PAYPAL**, or both.
-9. In the top right corner of the Payone app details page, click **Configure**.
+6. In the top right corner of the Payone app details page, click **Configure**.
+7. On the Payone app details page, enter *Credentials*.
+   ![payone-app-detais](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/payone/payone-app-details.png)
+8. Select *Payone Environment Mode*: **TEST** or **LIVE**.
+9. Select a payment method⁠—either **CREDIT CARD** or **PAYPAL**, or both.
+   ![payone-payment-methods](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/payone/payone-payment-methods.png)
 10. Optional: To configure payment methods per store, click **Payment methods per store configuration** and select stores for the defined payment methods.
 11. Click **Save**.
    
@@ -78,7 +80,7 @@ When customers pay with the credit card (with optional support of 3DS), the flow
 
 1. Customer provides their credit card payment credentials and pays the required amount for the placed order.
 2. The customer's credit card data is validated.
-3. The customer receives a payment message, whether the payment (authorization) was successful.
+3. The customer receives a payment message, whether the payment, or authorization, was successful.
    
 When paying with a credit card, customers can:
 

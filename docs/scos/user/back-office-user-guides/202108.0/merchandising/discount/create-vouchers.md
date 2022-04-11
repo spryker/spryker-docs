@@ -98,7 +98,7 @@ This section describes attributes you enter and select when creating or editing 
 | DESCRIPTION | The description will be displayed on the Storefront.  |
 | NON-EXCLUSIVE | Defines that this discount can be applied to a cart together with other non-exclusive discounts. |
 | EXCLUSIVE | Defines that this discount, when applied to a cart, discards all the other non-exclusive discounts. If multiple exclusive discounts are applied to a cart, only the discount with the bigger discount value is applied.   |
-| VALID FROM and VALID TO | This discount can be Valid From and Valid To dates, inclusive. E.g., a voucher can be redeemed/discount applies to the cart starting from 1/1/2018 until 31/12/2019.|
+| VALID FROM and VALID TO | Inclusively, define the dates between which the discount can be applied.|
 
 ## Reference information: Define discount calculation and the products to apply the discount to
 
@@ -112,32 +112,28 @@ The discount can be calculated in two ways:
 
 Example:
 
-| PRODUCT PRICE | CALCULATOR PLUGIN | AMOUNT | DISCOUNT APPLIED | PRICE TO PAY |
+| PRODUCT PRICE | CALCULATOR TYPE | AMOUNT | DISCOUNT APPLIED | PRICE TO PAY |
 | --- | --- | --- | --- | --- |
-| 50 € | Calculator Percentage | 10 |5 € | 45 € |
-| 50 € | Calculator Amount | 10 €| 10 €| 40 €|
+| 50 € | Percentage | 10 |5 € | 45 € |
+| 50 € | Fixed amount | 10 €| 10 €| 40 €|
 
 ### DISCOUNT APPLICATION TYPE: QUERY STRING
 
-You can use a query to define discount conditions. Only products that satisfy the query's conditions are discountable. Queries also define if the discount is applied to one or several products. Discount conditions are set by using either the *query builder* or by specifying a *Plain query*.
+A query string defines what products a discount applies to. Only the products that satisfy the query's conditions are discountable. Queries also define if the discount is applied to one or several products. You can define a query string by entering a plain query or by using a query builder.
 
-Use the query builder to construct queries (guided) or the **Plain query** field to enter them (free text). You can switch between both modes by clicking the corresponding button (note that incomplete queries cannot be transferred between the two modes).
-**Query builder**
+Query builder:
 ![Discount_Calculation_Query](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Calculation:+Reference+Information/query-string.png)
 
-**Plain query**
+Plain query:
 ![Discount_Calculation_Plain Query](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Calculation:+Reference+Information/discount-calculation-plain-query.png)
 
+
+A query string consists of decision rules. 
 The query builder lets you combine different conditions with connectors (**AND** and **OR**). Multiple conditions (rules) can be added and grouped in this way. Each condition (rule) consists of:
 * field (e.g., attribute.color)
 * operator (e.g., equal(=))
 * value tokens (e.g., blue)
 
-{% info_block infoBox "Info" %}
-
-The fields and values are defined by your shop data.
-
-{% endinfo_block %}
 
 These tokens are used to build plain queries too. The pattern of the plain query is as follows:
 ![Plain Query Pattern](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Calculation:+Reference+Information/plain-query-pattern.png)

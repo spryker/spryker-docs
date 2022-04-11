@@ -136,21 +136,3 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
     }
 }
 ```
-{% info_block infoBox "Exception" %}
-
-The one exception exist for the protected methods in dependency providers.
-That is methods that's returns array of plugins.
-These methods count as public api and can be overridden on the project level. 
-
-<details open>
- <summary markdown='span'>Public API in Dependency Provider</summary>
-
-```php
-    protected function getResourceCreatorPlugins(): array
-    {
-        return [];
-    }
-```
-</details>
-
-{% endinfo_block %}

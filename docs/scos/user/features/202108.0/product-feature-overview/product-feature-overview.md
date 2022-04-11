@@ -53,7 +53,7 @@ On the Storefront, only abstract products are displayed in the product catalog a
 
 Product variants are always a part of an abstract product. Abstract product and all its product variants share the same URL.
 
-In this example, a T-shirt, which is an abstract product, is available in sizes S, M, and L, which are three different product variants, each having its own stock. When you search *T-shirt* on the Storefront, it's the abstract product that appears as the search result. A Storefront user can only buy one of the product variants. On the *Product details* page of the abstract product, they select and add to cart one of the product variants: S, M, L.
+In this example, a T-shirt, which is an abstract product, is available in sizes S, M, and L, which are three different product variants, each having its own stock. When you search *T-shirt* on the Storefront, it's the abstract product that appears as the search result. A Storefront user can only buy one of the product variants. On the **Product Details** page of the abstract product, they select and add to cart one of the product variants: S, M, L.
 
 
 ### Product information inheritance

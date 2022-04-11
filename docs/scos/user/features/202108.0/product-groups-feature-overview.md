@@ -23,18 +23,18 @@ By default, there is no way to display product groups on Storefront. This sectio
 {% endinfo_block %}
 
 
-On the Storefront, the product group is not displayed as a group. Instead, the behavior of all the UI elements related to the products in the group changes. It affects product abstract card and *Product details* page.
+On the Storefront, the product group is not displayed as a group. Instead, the behavior of all the UI elements related to the products in the group changes. It affects product abstract card and **Product Details** page.
 
 Product abstract card:
 
 1. Hovering over the product abstract card opens a pop-up menu with the colors of all the products included into the group.
 2. Hovering over or clicking a color circle changes the abstract product image, title, rating, label, and the price.
-3. Having hovered over the desired color, a shop user clicks on the product abstract card to be redirected to the *Product details* page of the corresponding product.
+3. Having hovered over the desired color, a shop user clicks on the product abstract card to be redirected to the **Product Details** page of the corresponding product.
 
 ![Product group - product abstract card](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Groups/Product+Groups+Feature+Overview/product-group-product-abstract-card.gif)
 
 
-*Product details* page:
+**Product Details** page:
 
 * Hovering over a color circle changes the abstract product image.
 * Once you stop hovering over a color circle, the image changes back to the image of the product you are viewing.

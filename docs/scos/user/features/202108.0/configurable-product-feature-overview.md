@@ -30,11 +30,11 @@ For example, if you are selling a workstation installation service, before purch
 
 ### Configuring a configurable product
 
-To configure a product, from the *Product Details* page, a customer opens a product configurator. After selecting and saving the configuration, the customer is redirected back to the product details page. The selected configuration is displayed on the product details page, and the customer can add the configured product to the cart.
+To configure a product, from the **Product Details** page, a customer opens a product configurator. After selecting and saving the configuration, the customer is redirected back to the product details page. The selected configuration is displayed on the product details page, and the customer can add the configured product to the cart.
 
 ![configure-button-on-product-details-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configure-button-on-product-details-page.png)
 
-After adding a configurable product to cart, a customer can configure the product from the *Cart* page.
+After adding a configurable product to cart, a customer can configure the product from the **Cart** page.
 
 ![configure-button-on-the-cart-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configure-button-on-the-cart-page.png)
 
@@ -110,12 +110,12 @@ If a price is not provided by the configurator, [a regular product price](/docs/
 
 When importing configurable products, a developer defines if configuration is complete for each product.
 
-If configuration is complete, on entering the *Product details* page, a Storefront user sees a message that the configuration is complete. They can purchase the product without opening the configurator and selecting the parameters.
+If configuration is complete, on entering the **Product Details** page, a Storefront user sees a message that the configuration is complete. They can purchase the product without opening the configurator and selecting the parameters.
 
 ![configurtion-complete-message](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configurtion-complete-message.png)
 
 
-If configuration is not complete, on entering the *Product details* page, a Storefront user sees a message that the configuration is not complete. To purchase the product, they open the configurator and select a configuration.
+If configuration is not complete, on entering the **Product Details** page, a Storefront user sees a message that the configuration is not complete. To purchase the product, they open the configurator and select a configuration.
 
 ![incomplete-configurtion-message](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/incomplete-configurtion-message.png)
 
@@ -132,9 +132,9 @@ The information in [Complete and incomplete configuration](https://spryker.atlas
 
 When a developer creates configurable products by importing them, they can pre-configure parameter values. If a Storefront user chooses to configure such a product, they start with the pre-configured parameter values and can change them.
 
-If a developer also defines that the configuration of such a product is complete, on entering the *Product details* page, a Storefront user sees the pre-configured parameter values. They can add the product to cart without adjusting the configuration.
+If a developer also defines that the configuration of such a product is complete, on entering the **Product Details** page, a Storefront user sees the pre-configured parameter values. They can add the product to cart without adjusting the configuration.
 
-If a developer defines that the configuration of such a product is incomplete, on entering the *Product details* page, a Storefront user does not see the pre-configured parameter values. However, they are still assigned to the product. The Storefront user has to configure the product, but they do not have to change the pre-configured parameter values.
+If a developer defines that the configuration of such a product is incomplete, on entering the **Product Details** page, a Storefront user does not see the pre-configured parameter values. However, they are still assigned to the product. The Storefront user has to configure the product, but they do not have to change the pre-configured parameter values.
 
 ## Configurable product on the Storefront
 

@@ -42,7 +42,7 @@ See [Multi-step checkout](/docs/scos/user/features/{{page.version}}/checkout-fea
 
 ## Split Delivery in the Back Office
 
-In the Back Office, the shipments are displayed in the *Order Items* section on the *View Order: [Order ID]* page.
+In the Back Office, the shipments are displayed on the **View Order: _[Order ID]_** page, in the **Order Items** section.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Split+Delivery/Split+Delivery+Feature+Overview/shipments-zed.png)
 

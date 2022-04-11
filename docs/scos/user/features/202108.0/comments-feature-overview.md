@@ -16,16 +16,16 @@ The *Comments* feature provides the ability for online owners to add the comment
 
 An *entity* is a unit or a component that has some properties and may have relationships with other entities within a system. So, in terms of Spryker Commerce OS, an entity is represented by a Shopping Cart, Shopping List, and CMS page. It is where the Comments Widget can be located.
 
-As an example of this generic solution, we have implemented Comments on the *Shopping Cart* page.
+As an example of this generic solution, we have implemented Comments on the **Shopping Cart** page.
 
-Comments help multiple customers to have a dialog on the cart contents. How does it work? Let's imagine a situation where you have a company account and three HR members (HR assistant, HR manager, and the head of HR department) who are responsible for purchasing the products for the whole office. They share the same shopping cart. The HR assistant adds the products to the shopping cart and includes a comment requesting to review the shopping cart by an HR manager. With the help of comments, they decide on the final quantity of the products and finalize the shopping cart contents. After the shopping cart is ready, the HR manager adds a comment for the head of the HR department to approve the total price. By means of the conversation in the cart comments, the head of the department makes the latest corrections to the cart's contents and attaches the important comments concerning the shipping of some products to the shopping cart. From now on, the HR assistant can proceed to Checkout. The attached comments will be available on the *Checkout* page and if the order is successfully placed - in the order history.
+Comments help multiple customers to have a dialog on the cart contents. How does it work? Let's imagine a situation where you have a company account and three HR members (HR assistant, HR manager, and the head of HR department) who are responsible for purchasing the products for the whole office. They share the same shopping cart. The HR assistant adds the products to the shopping cart and includes a comment requesting to review the shopping cart by an HR manager. With the help of comments, they decide on the final quantity of the products and finalize the shopping cart contents. After the shopping cart is ready, the HR manager adds a comment for the head of the HR department to approve the total price. By means of the conversation in the cart comments, the head of the department makes the latest corrections to the cart's contents and attaches the important comments concerning the shipping of some products to the shopping cart. From now on, the HR assistant can proceed to Checkout. The attached comments will be available on the **Checkout** page and if the order is successfully placed—in the order history.
 
 Thus, the Comments feature lets your B2B customers effectively communicate and discuss the purchases with colleagues, thereby improve customer satisfaction and speed up the process by avoiding additional communication outside of the context.
 
 
 ## Comments widget
 
-Within the Comments feature, we have created the Comments widget. The widget can be placed on any entity page. In our case, it is the *Shopping Cart* page.
+Within the Comments feature, we have created the Comments widget. The widget can be placed on any entity page. In our case, it is the **Shopping Cart** page.
 
 The comment contains the following information:
 
@@ -34,7 +34,7 @@ The comment contains the following information:
 * Contents of the comment
 * Comment Tag
 
-Company users can add comments to a shared cart in both Read-only and Full Access permissions. A user can also add a comment before submitting the order, on the *Checkout Summary* page as well as post factum, after the order has been placed, on the *Order History* page:
+Company users can add comments to a shared cart in both Read-only and Full Access permissions. A user can also add a comment before submitting the order, on the **Checkout Summary** page as well as post factum, after the order has been placed, on the ***Order History** * page:
 
 {% info_block warningBox "Note" %}
 

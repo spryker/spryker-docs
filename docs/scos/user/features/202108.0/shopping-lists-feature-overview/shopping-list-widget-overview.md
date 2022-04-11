@@ -20,7 +20,7 @@ For customers' convenience and ease of use, the shopping list widget is placed i
 * First and last name of the person who created the shopping list.
 * Level of access for shopping list: full access (green) or read only (grey). See [Multiple and Shared Shopping Lists Overview](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html) to learn more about shopping lists sharing and access levels.
 * Number of items in the shopping list.
-* *Create New List* button which adds a new list in *Shopping list* section.
+* *Create New List* button which adds a new list in **Shopping List** section.
 * *All Shopping Lists* button which leads to *Shopping Lists* page with all the shopping lists available for the customer.
 
 ![Shopping List widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Shopping+List+Widget/Shopping+List+Widget+Feature+Overview/Shopping-list-widget.png)

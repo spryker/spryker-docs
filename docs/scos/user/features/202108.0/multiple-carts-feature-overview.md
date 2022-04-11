@@ -19,7 +19,7 @@ Sometimes customers need more than one shopping cart, for example, one for daily
 There are two ways to create a shopping cart:
 
 * Through a shopping cart widget in the header of shop.
-* From the *Shopping Cart* page in the *My Account* menu.
+* From the **Shopping Cart** page in the *My Account* menu.
 
 New items are added to the shopping cart by clicking **Add to Cart** on the product details page.
 
@@ -31,7 +31,7 @@ These could be, for instance, a shopping cart for daily purchases or a shopping 
 
 {% endinfo_block %}
 
-After a shopping cart has been created, it appears in the shopping carts table on the *Shopping Cart* page in *My Account*.
+After a shopping cart has been created, it appears in the shopping carts table on the **Shopping Cart** page in *My Account*.
 
 The table with shopping carts shows details for each of the carts, including:
 
@@ -49,7 +49,7 @@ The table bellow provides detailed information on the possible actions to manage
 | ACTION | DESCRIPTION |
 | --- | --- |
 | Edit Name | lets a customer edit the name of the shopping cart. |
-| Duplicate | Creates a copy of the chosen shopping cart including the items added to the cart.<br>The duplicate copy of the cart is named according to the template: `<Name of the original cart> Copied At <Mo. dd, yyyy hh:mm>` <br>A cart can be converted into shopping list on the *Shopping cart* page by clicking on **To shopping list**.|
+| Duplicate | Creates a copy of the chosen shopping cart including the items added to the cart.<br>The duplicate copy of the cart is named according to the template: `<Name of the original cart> Copied At <Mo. dd, yyyy hh:mm>` <br>A cart can be converted into shopping list on the **Shopping Cart** page by clicking on **To shopping list**.|
 | Dismiss | lets a customer dismiss a shared shopping cart. |
 | Delete | Deletes the shopping cart. <br>Deleting a shopping cart also deletes the items added to it. |
 
@@ -72,7 +72,7 @@ Only one shopping cart can be set as active in the customer account.
 There are 2 ways to set a shopping cart as active:
 
 * Clicking on the cart name in the shopping cart widget in the header of the shop.
-* Clicking on the cart name on the *Shopping Cart* page in the *My Account* menu.
+* Clicking on the cart name on the **Shopping Cart** page in the **My Account** menu.
 
 After the shopping cart is set to active, the user is redirected to a respective cart page where the table with the following information is available:
 

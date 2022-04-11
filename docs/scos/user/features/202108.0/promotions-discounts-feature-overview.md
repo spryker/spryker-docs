@@ -28,7 +28,7 @@ A product catalog manager selects a discount type when [creating a voucher](/doc
 
 ## Voucher
 
-A Voucher is a discount that applies when a customer enters an active voucher code on the *Cart* page.
+A Voucher is a discount that applies when a customer enters an active voucher code on the **Cart** page.
 ![Cart voucher](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/cart_voucher.png)
 
 Once the customer clicks **Redeem code**, the page refreshes to show the discount name, discount value and available actions: **Remove** and **Clear all**. The **Clear all** action disables all the applied discounts. The **Remove** action disables a single discount.

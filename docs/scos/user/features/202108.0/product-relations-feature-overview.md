@@ -37,7 +37,7 @@ With Related products, [related products](#product-types-in-product-relations) a
 
 ![Related products](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/202006.0/related-products.gif)
 
-With Upselling, when the product owing the relation is added to cart, related products are displayed on the *Cart* page.
+With Upselling, when the product owing the relation is added to cart, related products are displayed on the **Cart** page.
 
 ![Upselling](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/202006.0/Upselling.gif)
 

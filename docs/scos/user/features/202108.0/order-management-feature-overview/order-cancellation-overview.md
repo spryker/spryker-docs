@@ -16,7 +16,7 @@ Order cancellation makes the shopping experience of B2B and B2C shoppers more fl
 
 For example, a customer changes their mind about an item in an order they have placed. Instead of contacting customer service, they can cancel the order and place a new one with the desired items.
 
-A customer can cancel orders on the *Order History* and *Order Details* pages.
+A customer can cancel orders on the **Order History** and **Order Details** pages.
 
 <details open><summary markdown='span'>Order cancellation representation - Order History Page</summary>
 
@@ -50,7 +50,7 @@ Ensure that, in your state machine, the *refunded* state always goes before the 
 
 {% endinfo_block %}
 
-To learn how a Back Office user can skip timeout or cancel an order by changing order statuses, see [Changing the state of order items](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/changing-the-state-of-order-items.html) 
+To learn how a Back Office user can skip timeout or cancel an order by changing order statuses, see [Changing the state of order items](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/changing-the-state-of-order-items.html)
 
 <a name="storefront"></a>
 

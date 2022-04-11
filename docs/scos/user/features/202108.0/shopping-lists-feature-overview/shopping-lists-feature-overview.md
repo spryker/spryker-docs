@@ -22,7 +22,7 @@ A shopping list is always saved, disregarding if a company user logs out and log
 There are two ways to create a shopping list:
 
 * Through a [shopping list widget](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-list-widget-overview.html) in the header of the shop.
-* From the *Shopping Lists* page in the *My Account* menu. See [Multiple and Shared Shopping Lists on the Storefront](#multiple-and-shared-shopping-lists-on-the-storefront) for more detailed instruction.
+* From the **Shopping Lists** page in the **My Account** menu. For more detailed instruction, see [Multiple and Shared Shopping Lists on the Storefront](#multiple-and-shared-shopping-lists-on-the-storefront).
 
 New items are added to shopping lists by clicking **Add to Shopping List** on the product details page.
 
@@ -38,7 +38,7 @@ The detailed information on managing shopping lists is represented in the [Multi
 
 ## Permissions management for shared shopping lists
 
-Users of companies with business units can **share** their shopping lists within the company business units. The shopping lists can either be shared with the entire business unit or its members. Company users can view shopping lists shared with them on the *My Account* -> *Shopping lists* page. The shopping lists can be shared by clicking **Share** on this page as well. The *Share [SHOPPING LIST NAME]* page consists of two sections: *Business Units* and *Users*. Here, the shopping list owner can select either the entire business unit or individual users to share the shopping list with.
+Users of companies with business units can **share** their shopping lists within the company business units. The shopping lists can either be shared with the entire business unit or its members. Company users can view shopping lists shared with them on **My Account&nbsp;<span aria-label="and then">></span> Shopping lists**. The shopping lists can be shared by clicking **Share** on this page as well. The **Share _[SHOPPING LIST NAME]_** page consists of two sections: **Business Units** and **Users**. Here, the shopping list owner can select either the entire business unit or individual users to share the shopping list with.
 To view how to share shopping lists with business units or its members, see the [Multiple and Shared Shopping Lists on the Storefront](#multiple-and-shared-shopping-lists-on-the-storefront) section.
 
 Three types of shopping list access rights can be granted:
@@ -55,7 +55,7 @@ Three types of shopping list access rights can be granted:
 
 **_Read only_** permissions allows:
 
-1. **Reading Shopping list**: On the *Shopping List View* page, the user sees a shopping list name, owner, access level (*Read only*), number of users the shopping list is shared with, as well as the table of items with the following information:
+1. **Reading Shopping list**: On the **Shopping List View** page, the user sees a shopping list name, owner, access level (*Read only*), number of users the shopping list is shared with, as well as the table of items with the following information:
 
 * Product image
 * Product name
@@ -75,9 +75,9 @@ Alternative products are not shown for discontinued products since they can not 
 {% endinfo_block %}
 
 
-2. **Changing quantity of items for adding to cart**: On the *Shopping List View* page, a user can change the item quantity to be added to cart.
+2. **Changing quantity of items for adding to cart**: On the **Shopping List View** page, a user can change the item quantity to be added to cart.
 
-3. **Printing a shopping list**: A user can print a shopping list from the *My Account*→*Shopping Lists* or page or from the *Shopping List View* page. For details, see [Multiple and Shared Shopping Lists on the Storefront ](#multiple-and-shared-shopping-lists-on-the-storefront).
+3. **Printing a shopping list**: A user can print a shopping list from the **My Account&nbsp;<span aria-label="and then">></span> Shopping Lists** or page or from the **Shopping List View** page. For details, see [Multiple and Shared Shopping Lists on the Storefront ](#multiple-and-shared-shopping-lists-on-the-storefront).
 
 4. **Adding shopping list items to cart**: A user can select the necessary which are available and add them to cart.
 
@@ -85,7 +85,7 @@ Alternative products are not shown for discontinued products since they can not 
 
 **_Full access_** permissions allow:
 
-1. Reading a shopping list: On the _Shopping List View_ page, the user sees the name of owner, access level (Full access), the number of users the shopping list is shared with, as well as the table of items with the following information:
+1. Reading a shopping list: On the **Shopping List View** page, the user sees the name of owner, access level (Full access), the number of users the shopping list is shared with, as well as the table of items with the following information:
    * Product image
    * Product name
    * SKU
@@ -103,13 +103,13 @@ Besides other products, a user with *Full access* rights is allowed to see alter
 
 {% endinfo_block %}
 
-2. **Changing the number of items for adding to cart**: On the *Shopping List View* page, the user can change the item quantity to be added to the cart.
+2. **Changing the number of items for adding to cart**: On the **Shopping List View** page, the user can change the item quantity to be added to the cart.
 
-3. **Printing a shopping list**: A user can print a shopping list from the *My Account*→*Shopping Lists* or page or from the *Shopping List View* page. For details, see [Multiple and Shared Shopping Lists on the Storefront ](#multiple-and-shared-shopping-lists-on-the-storefront).
+3. **Printing a shopping list**: A user can print a shopping list from **My Account&nbsp;<span aria-label="and then">></span> Shopping Lists** or from the **Shopping List View** page. For details, see [Multiple and Shared Shopping Lists on the Storefront ](#multiple-and-shared-shopping-lists-on-the-storefront).
 
-4. **Editing a shopping list**: Having clicked **Edit**, the user is taken to the *Edit Shopping list* page.
+4. **Editing a shopping list**: Having clicked **Edit**, the user is taken to the **Edit Shopping list** page.
 
-5. **Changing quantity for a shopping list**: The number of items in the shopping list can be changed on the *Edit Shopping list* page.
+5. **Changing quantity for a shopping list**: The number of items in the shopping list can be changed on the **Edit Shopping list** page.
 
 6. **Sharing a shopping list**: A shopping list can be shared by clicking the **Share** button or the **Shared with** link.
 
@@ -123,7 +123,7 @@ It is possible to grant different access rights on a shopping list to a business
 
 ## Search widget for shopping lists
 
-Starting from v. 2019.03.0, it is possible to integrate the [Search Widget for Concrete Products](/docs/scos/user/features/{{page.version}}/product-feature-overview/search-widget-for-concrete-products-overview.html) feature. The search widget allows adding the products to the shopping list directly from the shopping list page. The shoppers do not need to go to product detail pages to add products to a list anymore.
+Starting from v. 201903.0, it is possible to integrate the [Search Widget for Concrete Products](/docs/scos/user/features/{{page.version}}/product-feature-overview/search-widget-for-concrete-products-overview.html) feature. The search widget allows adding the products to the shopping list directly from the shopping list page. The shoppers do not need to go to product detail pages to add products to a list anymore.
 {% info_block warningBox %}
 Without the Search widget, you will not be able to search for products. Therefore, make sure that the Search Widget for Concrete Products feature is integrated into your project.
 {% endinfo_block %}
@@ -131,7 +131,7 @@ Without the Search widget, you will not be able to search for products. Therefor
 
 ## Subtotal for a shopping list
 
-Starting from v.201907.0, every shopping list has Subtotal for all the items added to the shopping list according to the selected Price Mode and Currency.
+Starting from v. 201907.0, every shopping list has Subtotal for all the items added to the shopping list according to the selected Price Mode and Currency.
 
 ![Subtotal for shopping list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/subtotal-for-shopping-list.png)
 

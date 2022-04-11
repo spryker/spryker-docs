@@ -39,9 +39,9 @@ To import concrete products, run the following command:
 
 `console data:import product-concrete`
 
-For non-splittable order items, a Back Office user sees just one product per non-splittable item in the Back Office. For example, if a customer makes an order containing a non-splittable product in the quantity of 2, just 1 sales item with quantity = 2 (1 line) is created in the database. A Back Office user aslo sees just one sales order item (1 line) in _Number of Items_ column of the *Order Overview* page, and actual quantity of items in the order is shown in the _Quantity_ field of the Order details page.
+For non-splittable order items, a Back Office user sees just one product per non-splittable item in the Back Office. For example, if a customer makes an order containing a non-splittable product in the quantity of 2, just 1 sales item with quantity = 2 (1 line) is created in the database. A Back Office user aslo sees just one sales order item (1 line) in **Number of Items** column of the **Order Overview** page, and actual quantity of items in the order is shown in the **Quantity** field of the **Order Details** page.
 
-Both non-splittable and splittable order items can be refunded in the Back Office. However, unlike splittalbe orders, it is impossible to refund orders with unsplittable items partially - only the whole order can be refunded, irrespective of its quantity. Currently, there are 2 prices in the `ItemTransfer` which are in balance: _RefundableAmount_ and _CanceledAmount_. The refundable amount is calculated by the formula:
+Both non-splittable and splittable order items can be refunded in the Back Office. However, unlike splittalbe orders, it is impossible to refund orders with unsplittable items partially - only the whole order can be refunded, irrespective of its quantity. Currently, there are 2 prices in the `ItemTransfer` which are in balance: `RefundableAmount` and `CanceledAmount`. The refundable amount is calculated by the formula:
 
 `refundable amount: sumPriceToPayAggregation - canceledAmount`
 

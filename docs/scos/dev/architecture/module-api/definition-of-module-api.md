@@ -1,5 +1,5 @@
 ---
-title: Definition of Module API
+title: Declaration of module APIs: Public and Private
 description: This article defines internal APIs according to which the version type is defined.
 last_updated: Sep 27, 2021
 template: concept-topic-template
@@ -22,30 +22,31 @@ redirect_from:
   - /v2/docs/en/definition-api
   - /v1/docs/definition-api
   - /v1/docs/en/definition-api
+  - /docs/scos/dev/architecture/module-api/definition-of-module-api.html
 ---
 
-According to [Semantic Versioning](http://semver.org/), Spryker releases a major version “when there are incompatible API changes”. To make a sound decision about the version type, we need to define our internal APIs.
+According to [Semantic Versioning](http://semver.org/), Spryker releases a major version “when there are incompatible API changes”.
 
-In the Spryker Commerce OS’s core, all public methods in theses locatable classes are considered as API:
+## Public API
 
-* [Facades](/docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html)
-* [Clients](/docs/scos/dev/back-end-development/client/client.html)
-* [Query Containers](/docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html)
-* [Services](/docs/scos/dev/back-end-development/messages-and-errors/registering-a-new-service.html)
-* Plugin defining protected methods in dependency providers.
+In the Spryker Commerce OS’s core, the following is part of the public API:
 
-And the interfaces which are implemented everywhere are also part of the API:
+* Public methods in these locatable classes:
+    * [Facades](/docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html)
+    * [Clients](/docs/scos/dev/back-end-development/client/client.html)
+    * [Query Containers](/docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html)
+    * [Services](/docs/scos/dev/back-end-development/messages-and-errors/registering-a-new-service.html)
+    * Plugin defining protected methods in dependency providers.
+* Interfaces:
+    * Plugin interfaces
+    * Plugins
 
-* Plugin interfaces
-* Plugins
-
-In addition to these obvious cases, there are some other classes that are part of the API and can cause a BC break:
-
-* module Config [`Client/Yves/Zed/Shared/Service`](/docs/scos/dev/back-end-development/data-manipulation/configuration-management.html)
-* Controllers
-* Twig functions
-* [CLI commands](/docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html)
-* Public constants that define environment configuration in [Constant Interfaces](/docs/scos/dev/back-end-development/data-manipulation/configuration-management.html)
+* Other classes:
+    * module Config [`Client/Yves/Zed/Shared/Service`](/docs/scos/dev/back-end-development/data-manipulation/configuration-management.html)
+    * Controllers
+    * Twig functions
+    * [CLI commands](/docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html)
+    * Public constants that define environment configuration in [Constant Interfaces](/docs/scos/dev/back-end-development/data-manipulation/configuration-management.html)
 
 Every change in a schema can cause a BC break:
 
@@ -62,8 +63,13 @@ There are several other ways to cause a BC break:
 
 Not parts of the API are all module-internal classes are instantiated by factories. Although they have public methods, they are not intended to be used from the project code.
 
-## BC Breaking changes
+### BC Breaking changes
 
 As described above, there are several classes and files which are part of the API. But not every change there would cause a BC break. In general, we can say: there is a BC break whenever an existing contract is changed. A contract is what the user of the API expects. This includes the signature of methods as well as the expected behavior. For this reason, we have added an ApiDoc to the most used APIs like facades and plugin interfaces.
 
 In any case, Spryker Commerce OS's core team wants to avoid BC breaking changes and reduce the effort needed in projects to use a new version of a module. There are several ways to add functionality to APIs without a BC break. So it is possible to add new methods and even parameters to the existing methods as long as they are optional.
+
+
+## Private API
+
+The *public API* term is introduced by Semantic Versioning. To refer to everything that is not part of the the public API in Spryker Commerce OS, we introduced a *private API*.

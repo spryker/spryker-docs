@@ -1,5 +1,5 @@
 ---
-title: Private API was extended
+title: Private API is extended
 description: Reference information for evaluator and upgrader tools.
 last_updated: Mar 23, 2022
 template: concept-topic-template

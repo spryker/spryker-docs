@@ -1,6 +1,6 @@
 ---
-title: Private API method was overridden on the project level
-description: Learn how to correctly extend a Private API method
+title: Private API method is overridden on the project level
+description: Guidelines for using Private API methods on the project level
 last_updated: Mar 23, 2022
 template: concept-topic-template
 ---

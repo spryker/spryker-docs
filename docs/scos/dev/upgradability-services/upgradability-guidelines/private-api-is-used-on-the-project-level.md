@@ -1,17 +1,17 @@
 ---
 title: Private API is used on the project level
-description: Reference information for evaluator and upgrader tools.
+description: Guidelines for copying Private API functionality to the project level
 last_updated: Mar 23, 2022
 template: concept-topic-template
 ---
 
-Modules have public and private APIs. While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility is not guaranteed in the private API. For example, if you use a core method from the Private API on the project level, and it is updated or removed, it can cause unexpected issues during updates.
+Modules have public and private APIs. While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility is not guaranteed in the private API. For example, if you use a core method on the project level, and it is updated or removed with an update, it can cause unexpected issues.
 
 For more information about module APIs, see [Definition of Module API](/docs/scos/dev/architecture/module-api/definition-of-module-api.html).
 
 ## Example of code that causes the upgradability error
 
-`CustomerFacade` uses `createCustomerReader` and `getCustomerCollection`. These are private API entities.
+`CustomerFacade` uses `createCustomerReader` and `getCustomerCollection`. `createCustomerReader` and `getCustomerCollection` are private API entities.
 
 ```php
 namespace Pyz\Zed\Customer\Business;

@@ -1,6 +1,6 @@
 ---
 title: Entity name is not unique
-description: Reference information for evaluator and upgrader tools.
+description: Guidelines for making entity names unique
 last_updated: Mar 23, 2022
 template: concept-topic-template
 ---

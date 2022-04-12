@@ -25,14 +25,14 @@ To start creating a voucher, do the following:
 1. Go to **Merchandising&nbsp;<span aria-label="and then">></span> Discount**.
 2. On the **Discount** page, click **Create new discount**.
 
-## 1. Define general settings of a voucher discount
+## 1. Define general settings of the discount
 
 
 1. On the **Create Discount** page, click the **General information** tab.
 2. For **STORE RELATION**, select one or more stores you want the discount to be displayed in.
-3. For **DISCOUNT TYPE**, select **Voucher codes**.
+3. Select a **DISCOUNT TYPE**.
 4. Enter a **NAME**.
-5. Optional: Enter a **Description**.
+5. Optional: Enter a **DESCRIPTION**.
 6. Optional: To make the discount exclusive, select **EXCLUSIVE**.
 7. Select a **VALID FROM** date.
 8. Select a **VALID TO** date.
@@ -64,6 +64,8 @@ To start creating a voucher, do the following:
 This refreshes the page with a success message displayed.
 
 ## 4. Generate voucher codes
+
+If you are creating a cart rule, proceed to step [5. Activate the discount](#activate-the-discount)
 
 1. Click the **Voucher codes** tab.
 2. Enter a **QUANTITY**.
@@ -191,53 +193,40 @@ Use the placeholder **[code]** to indicate the position you want random characte
 **Voucher Code Pool**
 The voucher codes of a discount are all contained in the same voucher code pool. One customer may only redeem one voucher code per pool per cart.
 
-#### <a name="token-description-tables"></a>Token description tables
+## Decision rules
 
-This section contains a set of tables that describe fields, value types, and operators you use when building a plain query.
+This section contains additional information for defining decision rules.
 
-**Tokens**
 
-![Token](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Token+Description+Tables/tokens.png)
-
-| VALUE | DESCRIPTION |
-| --- | --- |
-| Fields | The available fields may include SKU, item-price, item-quantity, or a variety of attributes (e.g., **currency** on the image above). |
-| Operator | Operator compares the value of a field on the left with the value(s) on the right (e.g., equals (=), greater than (>)). If the expression evaluates to true, the discount can be applied. (operator is **equal** on the image above) |
-| Value | Value types must match the selected field. The asterisk (*) matches all possible values. (on the image above, the value is **Swiss Franc**)|
-| Combine Conditions | ‘AND’ and ‘OR’ operators are used to combine conditions. (**AND** on the image above) |
-|Grouping|When building more complex queries, conditions may be grouped inside parentheses ‘( )’.|
-
-**Fields and value types (Plain Query)**
-
-|FIELD|PLAIN QUERY|VALUE TYPE|DESCRIPTION|
+| ATTRIBUTE | VALUE TYPE | DESCRIPTION |
 |-|-|-|-|
-|Calendar week|calendar-week|Number|Week number in a year (1-52)|
-|Day of week|day-of-week|Number|Day of week (1-7)|
-|Grand total|grand-total|Number (Decimal)|Sum of all totals|
-|Subtotal|sub-total|Number (Decimal)|Sum of item prices w/o shipment expenses and discounts|
-|Item price|item-price|Number (Decimal)|Price of one item|
-|Item quantity|item-quantity|Number|Number of items|
-|Month|month|Number|Month of the year (1-12)|
-|SKU|sku|String|Any value depends on how SKUs are stored|
-|Time|time|hour:minute|Time of the day|
-|Total quantity|total-quantity|Number|Total cart quantity|
-|Attribute|attribute.*|String, number|Any value|
-|Customer Group|customer-group|String|Any value, use a customer group name for an exact match|
+|calendar-week|Number| Week number in a year: 1-52. |
+|day-of-week|Number| Day of week: 1-7. |
+|grand-total| Decimal number | Sum of all totals. |
+|sub-total| Decimal number | Sum of item prices without shipment expenses and discounts. |
+|item-price| Decimal number | Price of one item. |
+|item-quantity|Number|Number of items. |
+|month|Number| Month of the year: 1-12. |
+|sku|String| SKU of a product. |
+|time| hour:minute | Time of the day. |
+|total-quantity|Number| Total cart quantity. |
+|attribute.*|String, number| Any value. |
+|customer-group|String| Any value, use a customer group name for an exact match. |
 
 **Operators (Plain Query)**
 
-|OPERATOR|OPERATOR FOR PLAIN QUERY|VALUE TYPE|DESCRIPTION|
+|RELATION OPERATOR|IN PLAIN QUERY|VALUE TYPE|DESCRIPTION|
 |-|-|-|-|
-|Contains|CONTAINS|String, Number|Checks if the value is contained in the field|
-|Doesn’t contain|DOES NOT CONTAIN|String, Number|Checks if the value is not contained in the field
-|Equal|=|String, Number|Checks if the value is equal to the value of the right operand|
+|Contains|CONTAINS|String, Number| Checks if the value is contained in the field. |
+|Doesn’t contain|DOES NOT CONTAIN|String, Number| Checks if the value is not contained in the field. |
+|Equal | = | String, Number |Checks if the value is equal to the value of the right operand|
 |Not Equal|!=|String, Number|Checks if the value is not equal to the value of the right operand|
 |In|IS IN|List|Values need to be semicolon-separated|
 |Not In|IS NOT IN|List|Values need to be semicolon-separated|
 |Less|<|Number|Checks if the value is less than the value of the right operand|
 |Less or equal|<=|Number|Checks if the value is less than or equal to the value of the right operand|
 |Greater|>|Number|Checks if the value is greater than the value of the right operand|
-|Greater or equal|>=|Number|Checks if the value is greater than or equal to the value of the right operand|
+|Greater or equal|>=|Number| Checks if the value is greater than or equal to the value of the right operand |
 
 **What's next?**
 <br>See [Managing Discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/managing-discounts.html) to know more about the actions you can do once the discount is created.

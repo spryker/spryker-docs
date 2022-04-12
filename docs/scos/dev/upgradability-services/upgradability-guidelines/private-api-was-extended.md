@@ -56,7 +56,7 @@ class PyzCustomerAccessForm extends AbstractType
 
 ## Code that causes an upgradability error: Extending a private API business model
 
-`to-provide` extends `to-proivde`. It is a private API.
+`CustomerAccessFilter` extends `Spryker\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessFilter`. It is a private API.
 
 ```php
 namespace Pyz\Zed\CustomerAccess\Business\CustomerAccess;
@@ -91,7 +91,7 @@ class PyzCustomerAccessFilter implements PyzCustomerAccessFilterInterface
 
 ## Code that causes an upgradability error: Extending a private API dependency provider
 
-`to-provide` extends `to-proivde`. It is a private API.
+`CheckoutPageDependencyProvider` extends `Spryker\Yves\CheckoutPage\CheckoutPageDependencyProvider`. It is a private API.
 
 ```php
 namespace Pyz\Yves\CheckoutPage;
@@ -136,21 +136,3 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
     }
 }
 ```
-{% info_block infoBox "" %}
-
-Public API in Dependency provider.
-The one exception exist for the protected methods in dependency providers.
-That is methods that's returns array of plugins.
-
-<details open>
- <summary markdown='span'>Public API in Dependency Provider</summary>
-
-```php
-    protected function getResourceCreatorPlugins(): array
-    {
-        return [];
-    }
-```
-</details>
-
-{% endinfo_block %}

@@ -26,7 +26,7 @@ Currently, the feature only works with the following price types:
 
 A default price is the one that is shown as a real price of product.
 
-An original price is the one that, in the front end, is shown as a strikethrough to identify that the price has been used before the default price was applied as if there is a promotion.
+An original price is the one that, in the frontend, is shown as a strikethrough to identify that the price has been used before the default price was applied as if there is a promotion.
 ![Default original price](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Scheduled+Prices/Scheduled+Prices+Feature+Overview/default-original-price.png)
 
 ## Time zones

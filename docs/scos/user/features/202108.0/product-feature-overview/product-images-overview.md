@@ -24,7 +24,7 @@ You can enjoy the following benefits of the feature:
 * Small and large images
 * Adjustable sort order of images in a set
 * Possibility to create different image sets for different use cases on different pages per product
-* Possibility to define the order of images to be displayed on front-end
+* Possibility to define the order of images to be displayed on frontend
 
 ## Related Business User articles
 

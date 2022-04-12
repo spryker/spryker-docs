@@ -40,6 +40,7 @@ In the B2B industry, approvals are referred to shopping carts and items in the c
 For the approval process, you can set specific permissions for the Approver and Buyer roles:
 
 * The *Buy up to grand total* permission that restricts the cart checkout when the cart grand total amount reaches the limit specified in this permission.
+
 {% info_block warningBox "Note" %}
 
 It is mandatory for the Buyer role to set this permission, if you want to use the Approval Process feature in your project.

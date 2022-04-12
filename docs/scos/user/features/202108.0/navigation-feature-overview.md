@@ -68,7 +68,7 @@ The only class you can use by default is *label*. This class capitalizes the nav
 ![label-navigation-node-design](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/label-navigation-node-design.png)
 
 
-A front-end developer can create more classes for navigation nodes.
+A frontend developer can create more classes for navigation nodes.
 
 To learn how a Back office user can define a navigation node design, see [Creating a Navigation Node](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#creating-a-navigation-node).
 

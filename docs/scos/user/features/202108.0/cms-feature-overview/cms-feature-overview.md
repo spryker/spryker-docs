@@ -31,7 +31,7 @@ All the CMS elements are based on templates. They simplify the creation of simil
 
 | CONCEPT | DEFINITION |
 | --- | --- |
-| Page | Pages defined in CMS refer to web pages that are meant to be displayed in the front-end application (Yves). A page is defined by an URL and a template. |
+| Page | Pages defined in CMS refer to web pages that are meant to be displayed in the frontend application (Yves). A page is defined by an URL and a template. |
 | Page URL | When accessing the URL assigned to a page defined in CMS, the associated template will be loaded. |
 | Template | The CMS uses Twig templates that are placed under src/Pyz/Yves/Cms/Theme/default/template/ folder. |
 | Placeholder | Placeholders enable putting context to a template; a placeholder has a glossary key assigned, so at runtime, the placeholders are replaced by the corresponding glossary key value, considering the context. |

@@ -43,6 +43,7 @@ In this version, we have removed this hard dependency. If you still want to use 
 ```bash
 composer require spryker-eco/new-relic
 ```
+
 This will download the New Relic monitoring extension.
 
 To enable the New Relic monitoring extension, add it to  `MonitoringDependencyProvider` in your project:

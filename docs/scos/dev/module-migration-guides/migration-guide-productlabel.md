@@ -139,6 +139,7 @@ NEW,US
 ```bash
 console data:import:product-label-store
 ```
+
 ### Upgrading to the new module version
 
 To upgrade to the new version of the `ProductLabel` module, do the following:
@@ -178,6 +179,7 @@ Once you have the product label IDs in search documents, you can use the `spyPro
 We've also added a new `is_dynamic` field to `spy_product_label` database table to prepare for the new dynamic labels feature coming in the following minor releases. In the 2.0 release the dynamic labels feature is not yet implemented, it will be provided by one of the following minor versions.
 
 To start database migration run the following commands:
+
 * `vendor/bin/console propel:diff`, manual review is necessary for the generated migration file.
 * `vendor/bin/console` propel:migrate
 * `vendor/bin/console propel:model:build`

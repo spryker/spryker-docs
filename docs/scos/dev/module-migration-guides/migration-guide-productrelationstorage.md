@@ -32,6 +32,7 @@ To upgrade to the new version of the module, do the following:
 ```bash
 composer require spryker/product-relation-storage:"^2.0.0" --update-with-dependencies
 ```
+
 2. Clear storage:
 
     1. Truncate the `spy_product_abstract_relation_storage` database table:
@@ -39,6 +40,7 @@ composer require spryker/product-relation-storage:"^2.0.0" --update-with-depende
     ```bash
     TRUNCATE TABLE spy_product_abstract_relation_storage
     ```
+
     2. Remove all keys from Redis:
 
     ```bash
@@ -46,6 +48,7 @@ composer require spryker/product-relation-storage:"^2.0.0" --update-with-depende
     ```
 
 3. Update the database schema and generated classes:
+
     1. Run the database migration:
 
     ```bash
@@ -140,6 +143,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 ```
 
 6. Populate storage with the new version:
+
     1. Assign product relations to the stores to publish it to the storage.
     2. Get all the data about product relations from the database and publish it into Redis:
 

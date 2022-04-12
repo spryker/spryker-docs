@@ -39,6 +39,7 @@ composer require spryker/form
 \Silex\Provider\FormServiceProvider
 \Spryker\Shared\Application\ServiceProvider\FormFactoryServiceProvider
 ```
+
 3. Enable the new plugins in the corresponding files:
 
 **Zed integration (when usable in ZED)**

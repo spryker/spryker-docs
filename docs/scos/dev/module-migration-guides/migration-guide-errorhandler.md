@@ -32,11 +32,13 @@ To upgrade the module, do the following:
 ```bash
 composer update spryker/error-handler
 ```
+
 2. Remove the old service providers, if you have them in the project:
 
 ```php
 \Spryker\Shared\ErrorHandler\Plugin\ServiceProvider\WhoopsErrorHandlerServiceProvider
 ```
+
 3. Add new plugins to the dependency providers:
 
 **Zed integration**

@@ -47,11 +47,13 @@ To upgrade to the new version of the module, do the following:
 ```bash
 composer require spryker/product-label-gui:"^3.0.0" --update-with-dependencies
 ```
+
 2. Regenerate data transfer object:
 
 ```bash
 console transfer:generate
 ```
+
 3. Add the `StoreRelationToggleFormTypePlugin` to`\Pyz\Zed\ProductLabelGui\ProductLabelGuiDependencyProvider`:
 
 ```php

@@ -39,6 +39,7 @@ composer update spryker/messenger
 \Spryker\Yves\Messenger\Plugin\Provider\FlashMessengerServiceProvider
 \Spryker\Zed\Messenger\Communication\Plugin\ServiceProvider\MessengerServiceProvider
 ```
+
 3. Add  new plugins to  dependency providers:
 
 **Zed integration**

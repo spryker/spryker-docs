@@ -36,11 +36,13 @@ To upgrade to the new version of the module, do the following:
 ```bash
 composer require spryker/product-label-gui:"^3.0.0" --update-with-dependencies
 ```
+
 2. Regenerate the data transfer object:
 
 ```bash
 console transfer:generate
 ```
+
 3. Add the `StoreRelationToggleFormTypePlugin` plugin provided below in `\Pyz\Zed\ProductLabelGui\ProductLabelGuiDependencyProvider`:
 
 ```php
@@ -102,16 +104,19 @@ To upgrade to the new version of the module, do the following:
 ```bash
 composer require spryker/product-list-gui:"^2.0.0" --update-with-dependencies
 ```
+
 2. Update the transfer objects:
 
 ```bash
 console transfer:generate
 ```
+
 3. Generate translator cache by running the following command to get the latest Zed translations:
 
 ```bash
 console translator:generate-cache
 ```
+
 {% info_block infoBox "Info" %}
 
 If your project code contains any `ProductListFacade::deleteProductList()` methods usage, then update them to be `ProductListFacade::removeProductList()` since the old method is deprecated now and should not be used anymore.
@@ -132,7 +137,7 @@ Avoid using of the plugins implementing `ProductListOwnerTypeFormExpanderPluginI
 * `getProductListTableDataExpanderPlugins`
 * `getProductListTableHeaderExpanderPlugins`
 
-5.  If your project has any domain entities that use product list (e.g. *Configurable Bundle*, *Merchant Relationship*, etc), add the respective plugins to the dependency provider:
+5. If your project has any domain entities that use product list (e.g. *Configurable Bundle*, *Merchant Relationship*, etc), add the respective plugins to the dependency provider:
 
 ```php
 <?php
@@ -175,6 +180,7 @@ class ProductListGuiDependencyProvider extends SprykerProductListGuiDependencyPr
 * `ProductListUsedByTableExpanderPluginInterface[]` plugins are responsible for expanding table at Used By tab at Product List Edit page. This table contains a list of domain entities that use exact product list.
 
 6. Run the following command to apply JS changes:
+
 ```bash
 console frontend:zed:build
 ```

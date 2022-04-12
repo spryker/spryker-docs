@@ -41,6 +41,7 @@ To upgrade to the new version of the module, do the following:
 ```bash
 composer require spryker/product-packaging-unit-data-import: "^2.0.0" --update-with-dependencies
 ```
+
 2. Update the database entity schema for **each store** in the system:
 
 ```bash

@@ -39,6 +39,7 @@ To migrate, do the following:
 ```bash
 composer require spryker/quote-request: "^2.0.0" --update-with-dependencies
 ```
+
 2. Run the database migration:
 
 ```sql
@@ -76,10 +77,13 @@ vendor/bin/console transfer:generate
 ```
 
 {% info_block infoBox %}
+
 Make sure that `QuoteRequestTransfer` now has `isLatestVersionVisible`, and doesn't have `isLatestVersionHidden` property.
+
 {% endinfo_block %}
 
 {% info_block warningBox %}
+
 Make sure that, if you had usage of `QuoteTransfer::setIsLatestVersionHidden`, `QuoteTransfer::getIsLatestVersionHidden`  methods on project level, they have been updated to use the newly introduced `QuoteTransfer::getIsLatestVersionVisible` and  `QuoteTransfer::getIsLatestVersionVisible` methods with business logic inversion.
 
 {% endinfo_block %}

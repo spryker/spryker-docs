@@ -36,11 +36,13 @@ This migration guide is a part of the [Search migration effort](/docs/scos/dev/m
 {% endinfo_block %}
 
 To upgrade the module, do the following:
+
 1. Update the module using Composer:
 
 ```bash
 composer update spryker/product-page-search
 ```
+
 2. Remove `ProductPageSearchDependencyProvider::getMapExpanderPlugins()` method.
 3. Enable the new abstract product map expander plugins:
 
@@ -76,6 +78,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 ```
 
 4. Remove deprecated plugin usages (if any) from `Pyz\Zed\Search\SearchDependencyProvider`:
+
 ```php
 Spryker\Zed\ProductPageSearch\Communication\Plugin\Search\ProductConcretePageMapPlugin
 Spryker\Zed\ProductPageSearch\Communication\Plugin\Search\ProductPageMapPlugin
@@ -90,22 +93,31 @@ Spryker\Zed\ProductPageSearch\Communication\Plugin\Search\ProductPageMapPlugin
 To perform the migration, follow the steps:
 
 1. Run the database migration:
+
 ```bash
 vendor/bin/console propel:install
 ```
+
 2. Generate transfers:
-```bash:
+
+```bash
 vendor/bin/console transfer:generate
 ```
+
 3. Install search:
-```bash:
+
+```bash
 vendor/bin/console search:setup
 ```
+
 4. Sync concrete products data with ElasticSearch:
-```bash:
+
+```bash
 vendor/bin/console data:import:product-concrete
 ```
+
 or
+
 ```bash
 vendor/bin/console event:trigger -r product_concrete
 ```

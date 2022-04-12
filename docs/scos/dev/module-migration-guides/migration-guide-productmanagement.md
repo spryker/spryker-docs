@@ -55,6 +55,7 @@ To upgrade to the new version of the module, do the following:
 ```bash
 composer require spryker/product-management: "^0.19.0" --update-with-dependencies
 ```
+
 2. Update the database entity schema for each store in the system:
 
 ```bash
@@ -62,6 +63,7 @@ APPLICATION_STORE=DE console propel:schema:copy
 APPLICATION_STORE=US console propel:schema:copy
 ...
 ```
+
 3. Run the database migration:
 
 ```bash
@@ -145,7 +147,7 @@ That being done, you are able to use the currency-aware form type.
 If you’re migrating the `ProductManagement` module from version 0.7.x to version 0.8.x, follow the steps described below.
 The `ProductManagement` module persistence layer was moved into the new `ProductAttribute` module.
 
-## ORM entities changed
+### ORM entities changed
 
 The classes under `Orm\Zed\ProductManagement\` were moved to the `Orm\Zed\ProductAttribute\` namespace.
 
@@ -158,7 +160,7 @@ The classes under `Orm\Zed\ProductManagement\` were moved to the `Orm\Zed\Produc
 | `Spryker\Zed\ProductManagement\Persistence\Propel\AbstractSpyProductManagementAttributeValueTranslation` | `Spryker\Zed\ProductAttribute\Persistence\Propel\AbstractSpyProductManagementAttributeValueTranslation` |
 | `Spryker\Zed\ProductManagement\Persistence\Propel\AbstractSpyProductManagementAttributeValueTranslationQuery` | `Spryker\Zed\ProductAttribute\Persistence\Propel\AbstractSpyProductManagementAttributeValueTranslationQuery` |
 
-## Importer updates
+### Importer updates
 
 Project's importer was also updated to take advantage of the new `ProductAttribute` module.
 

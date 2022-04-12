@@ -17,6 +17,7 @@ composer require spryker/product-configurations-price-product-volumes-rest-api:"
 ```
 
 2. From `\Pyz\Glue\ProductConfigurationsRestApi\ProductConfigurationsRestApiDependencyProvider`, remove the plugins:
+
     - `ProductConfigurationVolumePriceRestCartItemProductConfigurationMapperPlugin`
     - `ProductConfigurationVolumePriceCartItemProductConfigurationMapperPlugin`
 

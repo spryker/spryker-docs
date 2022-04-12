@@ -36,6 +36,7 @@ redirect_from:
 The main update of the `Merchant` v3.0.0 is the ability to create stores and URLs for the merchant, activate and deactivate the merchant.
 
 Other changes are:
+
 * Removed `MerchantCriteriaFilter` transfer.
 * Added required merchant reference in the database.
 * Added is active column.
@@ -122,25 +123,27 @@ composer require spryker/merchant:"^3.0.0" --update-with-dependencies
 ```bash
 console transfer:generate
 ```
-4. Fill in all merchant references in the database before updating it.
 
+4. Fill in all merchant references in the database before updating it.
 5. Update the database:
 
 ```bash
 console propel:install
 ```
+
 6. Update the transfer objects:
 
 ```bash
 console transfer:generate
 ```
-7. Activate all the active merchants.
 
+7. Activate all the active merchants.
 8. Trigger events for all or related entities (`IsActive` setting can influence other entities):
 
 ```bash
 console publish:trigger-events -r merchant
 ```
+
 9. Register the following form plugins:
 
 
@@ -192,7 +195,8 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     }
 }
 ```
-10.  Update the glossary `data/import/glossary.csv`:
+
+10. Update the glossary `data/import/glossary.csv`:
 
 ```csv
 merchant.message.removed,Product %sku% is not available at the moment.,en_US
@@ -204,9 +208,11 @@ merchant.message.inactive,Artikel %sku% vom Händler %merchant_name% ist momenta
 ```
 
 Run the command:
+
 ```bash
 console data:import:glossary
 ```
+
 {% info_block warningBox "Warning" %}
 
 If your project code contains any changes on the project level, make sure that it works correctly.
@@ -252,26 +258,31 @@ To upgrade to the new version of the module, do the following:
 ```bash
 composer require spryker/merchant:"^2.0.0" --update-with-dependencies
 ```
+
 2. Update the transfer objects:
 
 ```bash
 console transfer:generate
 ```
+
 3. Install the database:
 
 ```bash
 console propel:install
 ```
+
 4. Update the transfer objects:
 
 ```bash
 console transfer:generate
 ```
+
 5. Generate translator cache by running the following command to get the latest Zed translations:
 
 ```bash
 console translator:generate-cache
 ```
+
 {% info_block warningBox "Warning" %}
 
 If your project code contains any `MerchantFacade` methods usage, then update them. Some methods were removed, and the return types were updated.

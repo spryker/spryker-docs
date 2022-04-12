@@ -15,6 +15,7 @@ To upgrade the `ProductConfigurationsRestApi` module from version 0.1.* to versi
 ```bash
 composer require spryker/product-configurations-rest-api:"^0.2.0" --update-with-dependencies
 ```
+
 2. From `\Pyz\Glue\ProductConfigurationsRestApi\ProductConfigurationsRestApiDependencyProvider`, replace the removed plugin stacks with the new ones:
     - `\Pyz\Glue\ProductConfigurationsRestApi\ProductConfigurationsRestApiDependencyProvider::getCartItemProductConfigurationMapperPlugins()` should be replaced with `\Pyz\Glue\ProductConfigurationsRestApi\ProductConfigurationsRestApiDependencyProvider::getProductConfigurationPriceMapperPlugins()`.
     - `\Pyz\Glue\ProductConfigurationsRestApi\ProductConfigurationsRestApiDependencyProvider::getRestCartItemProductConfigurationMapperPlugins()` should be replaced with `\Pyz\Glue\ProductConfigurationsRestApi\ProductConfigurationsRestApiDependencyProvider::getRestProductConfigurationPriceMapperPlugins()`.

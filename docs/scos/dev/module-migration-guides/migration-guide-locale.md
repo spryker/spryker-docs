@@ -32,6 +32,7 @@ To upgrade the module, do the following:
 ```bash
 composer update spryker/locale
 ```
+
 2. Add new plugins to dependency providers:
 
 **Zed integration**

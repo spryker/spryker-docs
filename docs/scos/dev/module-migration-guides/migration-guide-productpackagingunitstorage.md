@@ -47,6 +47,7 @@ To upgrade to the new version of the module, do the following:
 ```bash
 composer require spryker/product-packaging-unit-storage: "^5.0.0" --update-with-dependencies
 ```
+
 2. Rename the `spy_product_abstract_packaging_storage.schema.xml` to `spy_product_packaging_unit_storage.schema.xml` and do the following changes:
 
 **src/Pyz/Zed/ProductPackagingUnitStorage/Persistence/Propel/Schema/spy_product_packaging_unit_storage.schema.xml**
@@ -150,6 +151,7 @@ To perform the migration, follow the steps:
 ```bash
 vendor/bin/console propel:install
 ```
+
 3. Generate transfers:
 
 ```bash

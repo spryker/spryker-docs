@@ -27,12 +27,14 @@ This migration guide is a part of the [Silex migration effort](/docs/scos/dev/mi
 
 To upgrade the module, do the following:
 
-1. Update the module using composer:
+1. Update the module using Composer:
+
 ```bash
 composer require spryker/validator
 ```
 
 2. Remove old service providers, if you have them in the project:
+
 ```php
 \Silex\Provider\ValidatorServiceProvider
 ```

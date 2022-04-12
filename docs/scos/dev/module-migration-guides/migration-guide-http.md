@@ -39,6 +39,7 @@ composer require spryker/http spryker/event-dispatcher
 \Spryker\Yves\Application\Plugin\Provider\CookieServiceProvider
 \Spryker\Zed\Application\Communication\Plugin\ServiceProvider\SubRequestServiceProvider
 ```
+
 3. Enable new plugins in the corresponding files:
 
 **Zed integration (when usable in Zed)**
@@ -160,6 +161,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 ```
 
 4. Configure the *Http Module* with the following `\Spryker\Shared\Http\HttpConstants` options:
+
 * `\Spryker\Shared\Http\HttpConstants::YVES_HTTP_PORT` - sets the HTTP port for Yves (Spryker frontend);
 * `\Spryker\Shared\Http\HttpConstants::YVES_HTTPS_PORT` - sets the HTTPS port for Yves;
 * `\Spryker\Shared\Http\HttpConstants::YVES_TRUSTED_PROXIES` - sets an array of trusted proxies for Yves;

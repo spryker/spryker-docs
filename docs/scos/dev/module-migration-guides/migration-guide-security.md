@@ -27,11 +27,14 @@ This migration guide is a part of the [Silex migration effort](/docs/scos/dev/mi
 
 To upgrade the module, do the following:
 
-1. Update the module using composer:
+1. Update the module using Composer:
+
 ```bash
 composer require spryker/security
 ```
+
 2. Remove the old service providers, if you have them in the project:
+
 ```php
 \Silex\Provider\RememberMeServiceProvider
 \Silex\Provider\SecurityServiceProvider
@@ -39,6 +42,7 @@ composer require spryker/security
 \SprykerShop\Yves\CustomerPage\Plugin\Provider\CustomerSecurityServiceProvider
 \SprykerShop\Yves\ShopApplication\Plugin\Provider\YvesSecurityServiceProvider
 ```
+
 3. Enable new plugins in the corresponding files:
 
 **Yves integration**

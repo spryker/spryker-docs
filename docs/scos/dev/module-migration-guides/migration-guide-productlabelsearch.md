@@ -103,7 +103,6 @@ composer update spryker/product-label-search
 ```
 
 2. Remove the usage of the deprecated `Spryker\Zed\ProductLabelSearch\Communication\Plugin\PageMapExpander\ProductLabelMapExpanderPlugin` from `Pyz\Zed\ProductPageSearch\ProductPageSearchDependencyProvider`.
-
 3. Enable the replacement plugin:
 
 ```php

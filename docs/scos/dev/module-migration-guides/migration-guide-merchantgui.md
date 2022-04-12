@@ -46,16 +46,19 @@ To upgrade to the new version of the module, do the following:
 ```bash
 composer require spryker/merchant-gui:"^3.0.0" --update-with-dependencies
 ```
+
 2. Update the transfer objects:
 
 ```bash
 console transfer:generate
 ```
+
 3. Generate translator cache by running the following command to get the latest Zed translations:
 
 ```bash
 console translator:generate-cache
 ```
+
 4. Register the following form plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
@@ -143,6 +146,7 @@ To upgrade to the new version of the module, do the following:
 ```bash
 composer require spryker/merchant-gui:"^2.0.0" --update-with-dependencies
 ```
+
 {% info_block infoBox "Info" %}
 
 Also, check the Migration Guide for the [Merchant](/docs/scos/dev/module-migration-guides/migration-guide-merchant.html#upgrading-from-version-1-to-version-2).
@@ -160,6 +164,7 @@ console transfer:generate
 ```bash
 console translator:generate-cache
 ```
+
 {% info_block warningBox "Warning" %}
 
 If your project code contains any changes for the frontend part, make sure that it works correctly.

@@ -40,6 +40,7 @@ redirect_from:
 The configuration codes have moved from `RabbitMqDependencyProvider` to `RabbitMqConfiguration`.
 
 **RabbitMqOption TransferObject**
+
 * `RabbitMqOption` transfer has changed:
 `bindingQueue` property has changed to `bindingQueueCollection`
 * `RabbitMqOption` transfer has changed:

@@ -68,16 +68,20 @@ This command will update `spy_touch_storage`, and `spy_touch_search` classes to 
   ```
 
 6. The following deprecated methods were removed, please check your code if you have custom calls or dependencies:
-* `TouchFacadeInterface::bulkTouchActive()`
-* `TouchFacadeInterface::bulkTouchInactive()`
-* `TouchFacadeInterface::bulkTouchDeleted()`
-* `TouchQueryContainerInterface::queryTouchEntries()`
-* `TouchInterface::bulkUpdateTouchRecords()`
+
+   * `TouchFacadeInterface::bulkTouchActive()`
+   * `TouchFacadeInterface::bulkTouchInactive()`
+   * `TouchFacadeInterface::bulkTouchDeleted()`
+   * `TouchQueryContainerInterface::queryTouchEntries()`
+   * `TouchInterface::bulkUpdateTouchRecords()`
+
 You can find additional details on the [Touch module release page](https://github.com/spryker/touch/releases).
 
 7. The following methods have internal changes, please check if you have customized them:
-* `TouchQueryContainer::queryTouchDeleteStorageAndSearch()`
-* `TouchRecord::removeTouchEntriesMarkedAsDeleted()`
-You can find additional details on the [Touch module release page](https://github.com/spryker/touch/releases).            
+
+   * `TouchQueryContainer::queryTouchDeleteStorageAndSearch()`
+   * `TouchRecord::removeTouchEntriesMarkedAsDeleted()`
+  
+  You can find additional details on the [Touch module release page](https://github.com/spryker/touch/releases).
 8. Note: Module requires PHP 7.1 from now on.
 9. After these steps, your `Touch` module supports multi-store entities.

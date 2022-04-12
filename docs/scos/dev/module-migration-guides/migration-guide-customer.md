@@ -54,7 +54,7 @@ vendor/bin/console propel:model:build
 
 Propel models should be updated, no migrations should be created.
 
-### 2. Fix Rthe removed deprecations
+### 2. Fix the removed deprecations
 
 Find usages of `\Spryker\Shared\Customer\CustomerConstants::HOST_YVES` and replace them with `\Spryker\Shared\Customer\CustomerConstants::BASE_URL_YVES`.
 

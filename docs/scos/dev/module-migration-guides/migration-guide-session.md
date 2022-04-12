@@ -39,17 +39,21 @@ This migration guide is a part of the [Silex migration effort](/docs/scos/dev/mi
 
 To upgrade the module, do the following:
 
-1. Install modules using composer:
+1. Install modules using Composer:
+
 ```bash
 composer require spryker/session spryker/event-dispatcher
 ```
-2. Remove old service providers, if you have them in the project::
+
+2. Remove old service providers, if you have them in the project:
+
 ```php
 \Silex\Provider\SessionServiceProvider
 \Spryker\Yves\Session\Plugin\ServiceProvider\SessionServiceProvider
 \Spryker\Zed\Session\Communication\Plugin\ServiceProvider\SessionServiceProvider
 \Spryker\Zed\Application\Communication\Plugin\ServiceProvider\SaveSessionServiceProvider
 ```
+
 3. Enable new plugins:
 
 **Zed integration (when usable in ZED)**
@@ -185,6 +189,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+
 ## Upgrading from version 3.* to version 4.*
 
 The previous version made use of the deprecated `spryker/new-relic` and the `spryker/new-relic-api` modules.

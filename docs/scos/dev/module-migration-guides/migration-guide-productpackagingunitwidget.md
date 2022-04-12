@@ -51,6 +51,7 @@ To upgrade to the new version of the module, do the following:
 ```bash
 composer require spryker-shop/product-packaging-unit-widget: "^0.5.0" --update-with-dependencies
 ```
+
 2. Run the transfer object generation:
 
 ```bash

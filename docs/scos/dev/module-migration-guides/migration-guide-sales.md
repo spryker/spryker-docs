@@ -247,10 +247,12 @@ BEGIN;
  ```
 4. Now that the required fields/tables have been created,  migrate your data using the following script: *Sales Migration Console Command*.
 
-**This command will migrate:**
-* all `sales_order.fk_customer` data to `sales_order.customer_reference`
-* all `sales_order.fk_shipment_method` to `spy_sales_shipment` table.
+    **This command will migrate:**
+
+   * all `sales_order.fk_customer` data to `sales_order.customer_reference`
+   * all `sales_order.fk_shipment_method` to `spy_sales_shipment` table.
 Place the console command invoked by `vendor/bin/console` into your Sales module under `\Pyz\Zed\Sales\Communication\Console\ShipmentAndCustomerMigrationConsole.php`.
+
 5. Register the console command at `\Pyz\Zed\Console\ConsoleDependencyProvider::getConsoleCommands`.
 6. Run it like `vendor/bin/console sales:migrate`
 
@@ -260,7 +262,7 @@ It is important to see if the data migration went well. To check, look at the ta
 
 {% endinfo_block %}
 
-8. To drop the old foreign keys:
+7. To drop the old foreign keys:
 
 ```sql
 BEGIN;
@@ -273,7 +275,8 @@ BEGIN;
  ALTER TABLE "spy_sales_order" DROP COLUMN "shipment_delivery_time";
 
  COMMIT;
- ```
+```
+
 Now that orders are migrated, run Propel migrations to update Sales related entities and relations: `vendor/bin/console propel:diff, vendor/bin/console propel:model:build`. +Run transfers update: `vendor/bin/console transfer:generate`.
 
 ### Step 2
@@ -281,8 +284,11 @@ Now that orders are migrated, run Propel migrations to update Sales related enti
 Migrating the calculated data and moving from the `sales-aggregator` concept requires adding the calculated fields to the sales tables.
 
 Now you have two options:
+
 * keep old calculators (deprecated)
+
 **OR**
+
 * migrate to the new calculators logic.
 
 1. To keep old calculation logic, see [Updating calculator stacks](/docs/scos/dev/module-migration-guides/migration-guide-calculation.html).

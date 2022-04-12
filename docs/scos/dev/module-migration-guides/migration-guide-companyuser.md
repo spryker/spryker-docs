@@ -41,6 +41,7 @@ _Estimated migration time: 2,5 to 4 hours. The time may vary depending on projec
 To upgrade to the new version of the module, do the following:
 
 1. Run database migration:
+
 ```sql
 ALTER TABLE "spy_company_user"
 ADD "is_active" BOOLEAN DEFAULT 't';
@@ -48,12 +49,20 @@ ADD "is_active" BOOLEAN DEFAULT 't';
 As a result, all existing company users will receive a new column `is_active`. By default, the value is `true` and it is `required`.
 
 2. Rebuild `Propel2` models:
-`vendor/bin/console propel:model:build`
+
+```bash
+vendor/bin/console propel:model:build
+```
+
 This command is needed to update `SpyCompanyUser`, `SpyCompanyUserEntityTransfer` and other database-related classes.
 So, once this command is executed, CompanyUser-related database classes will have new methods - `getIsActive` and `setIsActive`.
 
 3. Regenerate transfer objects:
-`vendor/bin/console transfer:generate`
+
+```bash
+vendor/bin/console transfer:generate
+```
+
 This command is needed to regenerate `CompanyUserTransfer` object, which will now have a new field - `isActive`.
 
 ### New facade methods
@@ -122,10 +131,9 @@ With the changes of this Epic, the picture is completely different. Now, you're 
 To achieve this, some some changes have been made. Please take a time to check the list below to make sure that upgrading your CompanyUser module to the new 2.0.0 major won't break any existing code.
 
 The changes are:
+
 * `CompanyRolePermissionController::manageAction()` method has been removed.
   Please replace all usages with `CompanyRoleController::updateAction()`.
 * `SprykerShop/Yves/CompanyPage/Plugin/Provider/CompanyPageControllerProvider::ROUTE_COMPANY_ROLE_PERMISSION_MANAGE` constant that represented the old _Company Role Permissions Management_ page, has been removed and is no longer available.
-
 Please use `SprykerShop/Yves/CompanyPage/Plugin/Provider/CompanyPageControllerProvider::ROUTE_COMPANY_ROLE_UPDATE` instead;
 * Manage permissions button link on Company Role Details page has been changed from `company/company-role-permission/manage` to `company/company-role/update`.
-

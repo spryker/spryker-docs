@@ -38,6 +38,7 @@ To upgrade to the new version of the module, do the following:
 ```bash
 composer require spryker/manual-order-entry-gui: "^0.9.0" --update-with-dependencies
 ```
+
 2. Generate the transfer objects:
 
 ```bash
@@ -63,6 +64,7 @@ To upgrade to the new version of the module, do the following:
 ```bash
 composer require spryker/manual-order-entry-gui: "^0.8.0" --update-with-dependencies
 ```
+
 2. Generate the transfer objects:
 
 ```bash
@@ -73,6 +75,6 @@ console transfer:generate
 
 {% info_block infoBox %}
 
- In order to dismantle the Horizontal Barrier and enable partial module updates on projects, Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://spryker.com/en/support/) if you have any questions.
+In order to dismantle the Horizontal Barrier and enable partial module updates on projects, Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://spryker.com/en/support/) if you have any questions.
 
- {% endinfo_block %}
+{% endinfo_block %}

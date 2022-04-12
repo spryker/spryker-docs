@@ -15,11 +15,13 @@ To upgrade the `ProductConfigurationStorage` module from version 0.1.* to versio
 ```bash
 composer require spryker/product-configuration-storage:"^0.2.0" --update-with-dependencies
 ```
+
 2. Generate transfer classes:
 
 ```bash
 console transfer:generate
 ```
+
 3. From `\Pyz\Client\ProductConfigurationStorage\ProductConfigurationStorageDependencyProvider`, remove the removed plugin stack `getProductConfigurationStoragePriceExtractorPlugins()`.
 
 4. From `\Pyz\CLient\ProductConfiguration\ProductConfigurationDependencyProvider`, remove the plugin `ProductConfiguratorCheckSumResponsePlugin`.

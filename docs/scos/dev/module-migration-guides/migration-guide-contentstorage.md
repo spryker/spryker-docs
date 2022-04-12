@@ -48,6 +48,7 @@ To upgrade to the new version of the module, do the following:
 ```bash
 composer require spryker/content-storage:"^2.0.0" --update-with-dependencies
 ```
+
 3. Truncate the `spy_content_storage` database table.
 
 4. Run the database migration:
@@ -55,14 +56,17 @@ composer require spryker/content-storage:"^2.0.0" --update-with-dependencies
 ```bash
 console propel:install
 ```
+
 5. Run the following command to re-generate transfer objects:
 
 ```bash
 console transfer:generate
 ```
+
 6. Sync all content entities to the new storage schema:
 
 ```bash
 console sync:data content
 ```
+
 7. Verify that the `spy_content_storage.key` column uses keys instead of IDs. For example, **content:en_us:apl-1**, where **apl-1** is a key of the content item.

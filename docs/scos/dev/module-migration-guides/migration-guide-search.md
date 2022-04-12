@@ -47,11 +47,13 @@ To upgrade the module, do the following:
 composer update spryker/search --with-dependencies
 composer require spryker/search-elasticsearch
 ```
+
 2. Regenerate transfer classes:
 
 ```bash
 console transfer:generate
 ```
+
 3. Adjust all project-level implementations of `Spryker\Client\Search\Dependency\Plugin\QueryInterface`. First, change `Spryker\Client\Search\Dependency\Plugin\QueryInterface` to `Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface`. This does not require changing any implementation details. After that implement `\Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextAwareQueryInterface` as described in the [Search Migration Concept](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html#searching-for-data).
 4. Remove `Pyz\Client\Search\SearchDependencyProvider::createSearchConfigBuilderPlugin()`.
 5. Remove `Pyz\Client\Search\SearchDependencyProvider::createSearchConfigExpanderPlugins()`.
@@ -91,7 +93,6 @@ class SearchDependencyProvider extends SprykerSearchDependencyProvider
 ```
 
 7. Remove `Pyz\Zed\Search\SearchDependencyProvider::getSearchPageMapPlugins()`.
-
 8. Enable `ElasticsearchIndexInstallerPlugin` and `ElasticsearchIndexMapInstallerPlugin` in `Pyz\Zed\Search\SearchDependencyProvider`:
 
 **Pyz\Zed\Search**
@@ -147,9 +148,10 @@ class SearchElasticsearchConfig extends SprykerSearchElasticsearchConfig
 ```
 
 10. Adjust all project-level Elasticsearch index definition JSON files (if any) as follows:
-- Each JSON file should be renamed, so it would have one of the source identifiers (see above) as its name. The name of the definition file matters and will later be translated into index name.
-- Each JSON file should provide a definition only for one mapping type, suitable for that index. By default, *index’s only* mapping type should have the same name as the JSON file it’s described by. For example, `page.json` should only contain a definition for the `page` mapping type.
-- Each JSON file should be placed inside of the directory, which matches a path pattern defined by `SearchElasticsearchConfig::getJsonSchemaDefinitionDirectories()`.
+
+    - Each JSON file should be renamed, so it would have one of the source identifiers (see above) as its name. The name of the definition file matters and will later be translated into index name.
+    - Each JSON file should provide a definition only for one mapping type, suitable for that index. By default, *index’s only* mapping type should have the same name as the JSON file it’s described by. For example, `page.json` should only contain a definition for the `page` mapping type.
+    - Each JSON file should be placed inside of the directory, which matches a path pattern defined by `SearchElasticsearchConfig::getJsonSchemaDefinitionDirectories()`.
 
 
 ## Upgrading from version 7.* to version 8.*
@@ -235,22 +237,69 @@ class UrlGenerator implements UrlGeneratorInterface
 You have to change the way filters are configured in twig templates. Previously there was an incorrect setting on using a name, instead of a request parameter. The filters are under `Pyz/Yves/Catalog/Theme/default/catalog/partials/filters` directory.
 
 **Twig templates also require changes:**
-* **"multi-select.twig"**:
-`<input type="checkbox" name="{% raw %}{{{% endraw %} filter.name {% raw %}}}{% endraw %}[]" ...`  should be `<input type="checkbox" name="{% raw %}{{{% endraw %} filter.config.parameterName {% raw %}}}{% endraw %}[]" ...`
 
-* **"price-range.twig"**:
-`<input type="number" name="{% raw %}{{{% endraw %} filter.name {% raw %}}}{% endraw %}[min]" ... ... <input type="number" name="{% raw %}{{{% endraw %} filter.name {% raw %}}}{% endraw %}[max]"`  should be `<input type="number" name="{% raw %}{{{% endraw %} filter.config.parameterName {% raw %}}}{% endraw %}[min]" ... ... <input type="number" name="{% raw %}{{{% endraw %} filter.config.parameterName {% raw %}}}{% endraw %}[max]" ...`
+* **"multi-select.twig"**
 
-* **"range.twig":**
-`<input type="number" name="{% raw %}{{{% endraw %} filter.name {% raw %}}}{% endraw %}[min]" ... ... <input type="number" name="{% raw %}{{{% endraw %} filter.name {% raw %}}}{% endraw %}[max]" ...` should be `<input type="number" name="{% raw %}{{{% endraw %} filter.config.parameterName {% raw %}}}{% endraw %}[min]" ... ... <input type="number" name="{% raw %}{{{% endraw %} filter.config.parameterName {% raw %}}}{% endraw %}[max]" ...`
+```twig
+<input type="checkbox" name="{% raw %}{{{% endraw %} filter.name {% raw %}}}{% endraw %}[]" ...
+``` 
 
-* **"rating.twig":**
-`<input type="hidden" name="{% raw %}{{{% endraw %} filter.name {% raw %}}}{% endraw %}[min]" ...`  should be `<input type="hidden" name="{% raw %}{{{% endraw %} filter.config.parameterName {% raw %}}}{% endraw %}[min]" ...`
+should be 
+
+```twig
+<input type="checkbox" name="{% raw %}{{{% endraw %} filter.config.parameterName {% raw %}}}{% endraw %}[]" ...
+```
+
+* **"price-range.twig"**
+
+```twig
+<input type="number" name="{% raw %}{{{% endraw %} filter.name {% raw %}}}{% endraw %}[min]" ... ... <input type="number" name="{% raw %}{{{% endraw %} filter.name {% raw %}}}{% endraw %}[max]"
+```
+
+should be 
+
+```twig
+<input type="number" name="{% raw %}{{{% endraw %} filter.config.parameterName {% raw %}}}{% endraw %}[min]" ... ... <input type="number" name="{% raw %}{{{% endraw %} filter.config.parameterName {% raw %}}}{% endraw %}[max]" ...
+```
+
+* **"range.twig"**
+  
+```twig
+<input type="number" name="{% raw %}{{{% endraw %} filter.name {% raw %}}}{% endraw %}[min]" ... ... <input type="number" name="{% raw %}{{{% endraw %} filter.name {% raw %}}}{% endraw %}[max]" ...
+``` 
+
+should be 
+
+```twig
+<input type="number" name="{% raw %}{{{% endraw %} filter.config.parameterName {% raw %}}}{% endraw %}[min]" ... ... <input type="number" name="{% raw %}{{{% endraw %} filter.config.parameterName {% raw %}}}{% endraw %}[max]" ...
+```
+
+* **"rating.twig"**
+  
+```twig
+<input type="hidden" name="{% raw %}{{{% endraw %} filter.name {% raw %}}}{% endraw %}[min]" ...
+```  
+
+should be 
+
+```twig
+<input type="hidden" name="{% raw %}{{{% endraw %} filter.config.parameterName {% raw %}}}{% endraw %}[min]" ...
+```
 
 * **"single-select.twig"**
-`<input type="radio" name="{% raw %}{{{% endraw %} filter.name {% raw %}}}{% endraw %}" ...`  should be `<input type="radio" name="{% raw %}{{{% endraw %} filter.config.parameterName {% raw %}}}{% endraw %}" ...`
 
-* **"Pyz/Yves/Catalog/Theme/default/catalog/partials/filters.twig":**
+```twig
+<input type="radio" name="{% raw %}{{{% endraw %} filter.name {% raw %}}}{% endraw %}" ...
+```  
+
+should be 
+
+```twig
+<input type="radio" name="{% raw %}{{{% endraw %} filter.config.parameterName {% raw %}}}{% endraw %}" ...
+```
+
+* **"Pyz/Yves/Catalog/Theme/default/catalog/partials/filters.twig"**
+
 `{% raw %}{{{% endraw %} ('product.filter.' ~ filter.name) | trans {% raw %}}}{% endraw %}` should be `{% raw %}{{{% endraw %} ('product.filter.' ~ filter.name | lower) | trans {% raw %}}}{% endraw %}`
 
 

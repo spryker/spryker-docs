@@ -219,12 +219,14 @@ Database structure is as follows:
 
 1. Update `spryker/shipment` module to at least 6.0.0 version.
 2. Update the database:
+
     * Install the database changes by running `vendor/bin/console propel:diff`. Propel should generate a migration file with the changes.
     * Apply the database changes: `vendor/bin/console propel:migrate`.
     * Generate and update ORM models: `vendor/bin/console propel:model:build`.
     * You will find some new classes in your project under `\Orm\Zed\Shipment\Persistence` namespace. It’s important that you make sure that they extend the base classes from the Spryker core, e.g.:
         * `\Orm\Zed\Shipment\Persistence\SpyShipmentMethodPrice` extends `\Spryker\Zed\Shipment\Persistence\Propel\AbstractSpyShipmentMethodPrice`
         * `\Orm\Zed\Shipment\Persistence\SpyShipmentMethodPriceQuery` extends `\Spryker\Zed\Shipment\Persistence\Propel\AbstractSpyShipmentMethodPriceQuery`
+
 3. Run `vendor/bin/console transfer:generate` to update and generate transfer object changes.
 
     **Transfer object changes**
@@ -493,9 +495,7 @@ class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 ```
 
 7. The `ShipmentFacadeInterface::createMethod` method now expects "prices" `MoneyValue` transfer object collection to be set in the provided `ShipmentMethod` transfer object. Update your custom calls to this method accordingly.
-
 8. The `ShipmentFacadeInterface::updateMethod` method now expects "prices" `MoneyValue` transfer object collection to be set in the provided `ShipmentMethod` transfer object. Update your custom calls to this method accordingly.
-
 9. The `ShipmentFacadeInterface::getAvailableMethods` method applies multi-currency feature:
    1. Does not populate `taxRate` transfer object property anymore in shipment method transfer objects.
    2. Excludes shipment methods which would end up with `NULL` value for the request's currency and pre-configured `store + price` mode. Amend your custom calls to ShipmentFacadeInterface::getAvailableMethods method accordingly to your requirements.
@@ -507,13 +507,9 @@ class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 {% endinfo_block %}
 
 10.  The `MethodForm::setDefaultOptions` deprecated method was removed, use `MethodForm::configureOptions` instead.
-
 11.  The `ShipmentDependencyProvider::STORE` static dependency access was replaced with proper `StoreFacadeInterface` bridged access. Amend your implementation if you have customized it.
-
 12.  Note: The `MethodForm.defaultPrice` form field was replaced with its multi-currency representation. Amend your implementation if you have customized it.
-
 13.  Note: The `MethodForm` form now works on the `ShipmentMethod` transfer object instead of simple array. Amend your implementation if you have customized it.
-
 14.  Note: The `ShipmentMethodDeliveryTimePluginInterface` interface now expects the returned delivery time in seconds. Amend your implementations of this plugin accordingly. The DemoShop example implementation of the plugin and its usage in the `ShipmentFormDataProvider::getDeliveryTime` method are also updated.
 
 Go to the Shipment management Back Office to verify your shipment method prices.

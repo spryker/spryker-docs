@@ -55,6 +55,7 @@ To upgrade to the new version of the module, do the following:
 ```bash
 composer require spryker/product-bundle: "^7.0.0" --update-with-dependencies
 ```
+
 2. Update the database entity schema for each store in the system:
 
 ```bash
@@ -62,6 +63,7 @@ APPLICATION_STORE=DE console propel:schema:copy
 APPLICATION_STORE=US console propel:schema:copy
 ...
 ```
+
 3. Run the database migration:
 
 ```bash

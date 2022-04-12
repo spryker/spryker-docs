@@ -63,7 +63,6 @@ console transfer:generate
 ```
 
 4. The `SalesPaymentMethodTypeInstallerPlugin` plugin was removed, please use `PaymentDataImport module` instead. <!-- add Payments feature integration guide link here. -->
-
 5. The `PaymentConfig::getSalesPaymentMethodTypes()` config method was removed, please use the `PaymentDataImport` module instead. <!-- add Payments feature integration guide link here. -->
 
 

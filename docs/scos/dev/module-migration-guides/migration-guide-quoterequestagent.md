@@ -52,12 +52,12 @@ console transfer:generate
 
 3. Some files were re-organized, please check if you had overwritten them on project level:
 
-* Adjusted `source-price-form` molecule to remove deprecated `priceFiled` data property.
-* Adjusted `page-layout-quote-request` template to extend `page-layout-quote-request` template from `QuoteRequestPage` module instead of `page-layout-agent`.
-* Adjusted `quote-request-create` view to extend `page-layout-agent` template from `AgentPage` module instead of `page-layout-quote-request`.
-* Adjusted `quote-request-create` view to update title glossary key.
-* Adjusted `quote-request-edit-items-confirm` view to extend `page-layout-confirmation` template instead of `page-layout-quote-request`.
-* Adjusted `quote-request-view` view to extend `page-layout-agent` template instead of `page-layout-quote-request`.
+   * Adjusted `source-price-form` molecule to remove deprecated `priceFiled` data property.
+   * Adjusted `page-layout-quote-request` template to extend `page-layout-quote-request` template from `QuoteRequestPage` module instead of `page-layout-agent`.
+   * Adjusted `quote-request-create` view to extend `page-layout-agent` template from `AgentPage` module instead of `page-layout-quote-request`.
+   * Adjusted `quote-request-create` view to update title glossary key.
+   * Adjusted `quote-request-edit-items-confirm` view to extend `page-layout-confirmation` template instead of `page-layout-quote-request`.
+   * Adjusted `quote-request-view` view to extend `page-layout-agent` template instead of `page-layout-quote-request`.
 
 
 

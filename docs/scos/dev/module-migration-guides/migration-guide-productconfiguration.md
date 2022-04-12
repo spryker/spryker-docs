@@ -21,6 +21,7 @@ composer require spryker/product-configuration:"^0.2.0" --update-with-dependenc
 ```bash
 console transfer:generate
 ```
+
 3. From `\Pyz\Client\ProductConfiguration\ProductConfigurationDependencyProvider` remove the plugin stacks:
    - `\Pyz\Client\ProductConfiguration\ProductConfigurationDependencyProvider::getDefaultProductConfiguratorRequestPlugin()`
    - `\Pyz\Client\ProductConfiguration\ProductConfigurationDependencyProvider::getDefaultProductConfiguratorResponsePlugin()`
@@ -51,6 +52,7 @@ class ProductConfigurationDependencyProvider extends SprykerProductConfiguration
     }
 }
 ```
+
 5. In `\Pyz\Service\PriceProduct\PriceProductDependencyProvider`, on the project level, register the filter plugins:
 
 ```php
@@ -78,6 +80,7 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
     }
 }
 ```
+
 6. From `\Pyz\Client\ProductConfiguration\ProductConfigurationDependencyProvider`, remove the plugin `ProductConfigurationQuoteRequestQuoteCheckPlugin` (should be replaced with `Spryker\Client\ProductConfigurationCart\Plugin\QuoteRequest\ProductConfigurationQuoteRequestQuoteCheckPlugin`).
 
 7. From `\Pyz\Zed\Availability\AvailabilityDependencyProvider`, remove the plugin `ProductConfigurationCartItemQuantityCounterStrategyPlugin` (should be replaced with `Spryker\Zed\ProductConfigurationCart\Communication\Plugin\Availability\ProductConfigurationCartItemQuantityCounterStrategyPlugin`.

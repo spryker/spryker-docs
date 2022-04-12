@@ -40,6 +40,7 @@ To upgrade to the new version of the module, do the following:
 ```yaml
 composer require spryker/company-user: “^2.0.0”
 ```
+
 2. Regenerate transfer objects:
 
 ```yaml

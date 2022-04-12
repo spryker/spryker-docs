@@ -39,6 +39,7 @@ The ProductValidity module is responsible for (de)activation of products for (or
 
 We have added a new [spy_product_validity](https://github.com/spryker/demoshop/commit/4fff838#diff-dbd7f860d235b1eaf9516e5127e656db) database table (the query can be checked [by following this link](https://github.com/spryker/demoshop/commit/4fff838#diff-99a822ed42bf42d4e81be47bc8e9829c)).
 To start the database migration, run the following commands:
+
 * `vendor/bin/console propel:diff` - manual review is necessary for the generated migration file.
 * `vendor/bin/console propel:migrate`
 * `vendor/bin/console propel:model:build`
@@ -65,6 +66,7 @@ Check out our [Demoshop implementation](https://github.com/spryker/demoshop/comm
 #### 2. Enable the cronjob
 
 Add the following job to `config/Zed/cronjobs/jobs.php` file:
+
 ```php
 $jobs[] = [
     'name' => 'check-product-validity',

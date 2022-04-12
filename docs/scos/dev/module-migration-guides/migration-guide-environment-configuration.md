@@ -64,6 +64,7 @@ $config[ApplicationConstants::BASE_URL_YVES] = sprintf(
 ```
 
 ### BASE_URL_ZED and BASE_URL_SSL_ZED
+
 Similar to the two constants above, these two define the base URLs for accessing `_Zed_`. They should include the scheme and optionally port.
 
 ```php

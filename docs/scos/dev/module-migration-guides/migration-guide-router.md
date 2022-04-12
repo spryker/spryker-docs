@@ -34,6 +34,7 @@ composer require spryker/router
 ```
 
 2. Remove old service providers, if you have them in the project:
+
 ```php
 \Silex\Provider\RoutingServiceProvider
 \Silex\Provider\ServiceControllerServiceProvider
@@ -48,13 +49,16 @@ composer require spryker/router
 3. Replace all ControllerProviders in `Pyz\Yves\ShopApplication\YvesBootstrap::getControllerProviderStack()` with the corresponding `RouteProviderPlugin` entities.
 
 4. Remove the following deprecated constants:
+
 ```php
 \Spryker\Shared\Application\ApplicationConstants::YVES_SSL_ENABLED
 \Spryker\Shared\Application\ApplicationConstants::YVES_SSL_EXCLUDED
 \Spryker\Shared\Application\ApplicationConstants::ZED_SSL_ENABLED
 \Spryker\Shared\Application\ApplicationConstants::ZED_SSL_EXCLUDED
 ```
+
 They need to be replaced in your configuration files with new ones:
+
 ```php
 \Spryker\Shared\Router\RouterConstants::YVES_IS_SSL_ENABLED
 \Spryker\Shared\Router\RouterConstants::YVES_SSL_EXCLUDED_ROUTE_NAMES

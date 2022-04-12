@@ -58,6 +58,7 @@ To upgrade to the new version, do the following:
 2. Perform the database update and migration:
 
    1. Execute the following SQL query to apply `spy_company_business_unit` database table changes:
+  
   ```SQL
   BEGIN;
 

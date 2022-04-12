@@ -48,12 +48,15 @@ This version defines connection between abstract products and stores, allowing u
 6. Generate ORM models by running `vendor/bin/console propel:model:build`.
     This command will generate some new classes in your project under `\Orm\Zed\Product\Persistence` namespace.
     It is important to make sure that they extend the base classes from the Spryker core, e.g.:
+
     * `\Orm\Zed\Product\Persistence\SpyProductAbstractStore extends \Spryker\Zed\Product\Persistence\Propel\AbstractSpyProductAbstractStore`
     * `\Orm\Zed\Product\Persistence\SpyProductAbstractStoreQuery extends \Spryker\Zed\Product\Persistence\Propel\AbstractSpyProductAbstractStoreQuery`
+
 7. The newly created `spy_product_abstract_store` table defines 1 row per `abstract product-store` association. Populate this table according to your requirements.
 
 **Example data**
 Assumptions:
+
 * You have the following abstract products: AP1, AP2.
 * You have the following stores: S1, S2, S3.
 Then `spy_product_abstract_store` will have the following rows as association definition:
@@ -89,7 +92,7 @@ INSERT INTO spy_product_abstract_store (fk_product_abstract, fk_store)
   SELECT id_product_abstract, id_store FROM spy_product_abstract, spy_store;
  ```
 
-1. Product collector multi-store setup (if you have multi-stores)
+8. Product collector multi-store setup (if you have multi-stores)
     1. Amend collector queries both for Search and Storage to include the information if the abstract product is available in the current store. You will need to `LEFT JOIN` the `spy_product_abstract_store` table to the selector queries on the abstract product and for the current store. Define the `spy_product_abstract_store.fk_store` column as `is_in_store` in the result (this name is a suggestion, feel free to choose an other name).
 
 **Explanation**
@@ -134,7 +137,7 @@ It is important to have the store matching condition inside the ON section of th
 
 The current store ID can be set through a new `storeTransfer` class property which is populated by the collector classes.
 
-2. Amend your Search and Storage collectors to make a decision on the newly created column if the abstract product should be stored or not. The `AbstractCollector::isStorable()` should return `true` when the abstract product is available in the current store and `false` when the abstract product is not available in the current store.
+9. Amend your Search and Storage collectors to make a decision on the newly created column if the abstract product should be stored or not. The `AbstractCollector::isStorable()` should return `true` when the abstract product is available in the current store and `false` when the abstract product is not available in the current store.
 
 **Example of implementation:**
 
@@ -164,8 +167,8 @@ class ProductCollector extends AbstractSearchPdoCollector
 
 Collectors should now be able to export abstract product data per store both for Storage and Search.
 
-3. `Facade/ProductToUrlInterface::hasUrl()` method is removed because it is not used within the module. Please check your code if you have customized calls to it.
-4. `ProductAbstractManager` internal class was amended to handle `abstract product-store` relation, take a look if you have customized it.
+10. `Facade/ProductToUrlInterface::hasUrl()` method is removed because it is not used within the module. Please check your code if you have customized calls to it.
+11. `ProductAbstractManager` internal class was amended to handle `abstract product-store` relation, take a look if you have customized it.
 
 Additionally you might want to update the Product Information Management (PIM) Zed Admin UI to manage abstract products and their store configuration. You can find further information about multi-store products here, and [Migration Guide - ProductManagement](/docs/scos/dev/module-migration-guides/migration-guide-productmanagement.html).
 
@@ -175,6 +178,7 @@ Check out our Demoshop implementation for implementation example and idea.
 ## Upgrading from version 3.* to version 4.*
 
 ### 1. Database migration
+
 `vendor/bin/console propel:diff`, also manual review is necessary for the generated migration file.
 `vendor/bin/console propel:migrate`
 `vendor/bin/console propel:model:build`, also need to change the parents of ALL generated classes to core, as the example shows below.
@@ -400,7 +404,9 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
 </details>
 
 ### 5. Troubleshooting
+
 For all other issues that you might encounter after migration, please refer to the Spryker Demoshop.
 
 ## Upgrading from version 2.* to version 3.*
+
 The Product module does not provide the tax functionality anymore. Upgrade [Migration Guide - Tax](/docs/scos/dev/module-migration-guides/migration-guide-tax.html).

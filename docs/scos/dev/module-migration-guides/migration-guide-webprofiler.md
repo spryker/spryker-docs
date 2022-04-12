@@ -32,15 +32,19 @@ This migration guide is a part of the [Silex migration effort](/docs/scos/dev/mi
 
 To upgrade the module, do the following:
 
-1. Update the module using composer:
+1. Update the module using Composer:
+
 ```bash
 composer update spryker/web-profiler
 ```
+
 2. Remove old service providers, if you have them in the project:
+
 ```php
 \SprykerShop\Yves\WebProfilerWidget\Plugin\ServiceProvider\WebProfilerWidgetServiceProvider
 \Spryker\Shared\WebProfiler\Plugin\ServiceProvider\WebProfilerServiceProvider
 ```
+
 3. Add new plugins to dependency providers:
 
 **Zed integration**

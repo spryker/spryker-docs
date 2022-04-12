@@ -48,6 +48,7 @@ Currently, Spryker supports multi-store and this should be adopted for the rest 
 	<parameter name="queue_pool" value="synchronizationPool" />
 </behavior>
 ```
+
 For wiring the stores and sync queues you should configure it in `store.php`
 
 ```php
@@ -56,9 +57,10 @@ $stores['DE']['queuePools']['synchronizationPool'] = [
 	'DE-connection'
 ];
 ```
+
 #### Module layers
 
-In Previous version the listener plugins has been extended from Abstract plugin classes and now this has changed due to obey the spryker architecture and moved into business layer and open APIs from Facade classes.
+In Previous version the listener plugins has been extended from Abstract plugin classes and now this has changed due to obey the Spryker architecture and moved into business layer and open APIs from Facade classes.
 
 ### Version 1 of the EventBehavior modules
 

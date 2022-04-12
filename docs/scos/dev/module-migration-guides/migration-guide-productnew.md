@@ -40,6 +40,7 @@ To upgrade to the new version of the module, do the following:
 \Spryker\Client\Search\Plugin\Elasticsearch\ResultFormatter\PaginatedResultFormatterPlugin;
 \Spryker\Client\Search\Plugin\Elasticsearch\ResultFormatter\SortedResultFormatterPlugin;
 ```
+
 2. Enable the new plugins from SearchElasticsearch in `Pyz\Client\ProductNew\ProductNewDependencyProvider`:
 
 **Pyz\Client\ProductNew**

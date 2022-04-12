@@ -44,26 +44,33 @@ First of all, there is a brand new possibility to search for concrete products b
 To perform the migration, follow the steps:
 
 1. This feature requires `ProductPageSearch` 3.x.x.
+
     * Update `spryker/product-page-search ^3.0.0`
     * Follow the steps from  [Migration guide - ProductPageSearch](/docs/scos/dev/module-migration-guides/migration-guide-productpagesearch.html).
+
 2. Generate transfers:
 
 ```yaml
 vendor/bin/console transfer:generate
 ```
+
 3. Build frontend:
 
 ```yaml
 vendor/bin/console frontend:yves:install-dependencies  
 vendor/bin/console frontend:yves:build
 ```
+
 4. Some files were re-organized, so if you had overwritten classes and templates on project level please check our [release notes](https://github.com/spryker-shop/quick-order-page/releases).
-* `quick-order-form-field-list.twig` was removed
-* `components/molecules/quick-order-rows/quick-order-rows.twig` has changes
-* `quick-order.twig` and `quick-order-form.twig` now use new data from controller
-* `quick-order-async-render.twig` was renamed to quick-order-row-async.twig
-* `TextOrderParser` was moved to `SprykerShop\Yves\QuickOrderPage\TextOrder`, `getParsedTextOrderItems()` was renamed to `parse()`.
+
+   * `quick-order-form-field-list.twig` was removed
+   * `components/molecules/quick-order-rows/quick-order-rows.twig` has changes
+   * `quick-order.twig` and `quick-order-form.twig` now use new data from controller
+   * `quick-order-async-render.twig` was renamed to quick-order-row-async.twig
+   * `TextOrderParser` was moved to `SprykerShop\Yves\QuickOrderPage\TextOrder`, `getParsedTextOrderItems()` was renamed to `parse()`.
+
 5. Change the removed deprecated code with its substitution.
-* Deprecated constants were removed `QuickOrderPageConstants::ALLOWED_SEPARATORS`, `QuickOrderPageConstants::PRODUCT_ROWS_NUMBER`. Use `QuickOrderPageConfig` instead.
+   
+   * Deprecated constants were removed `QuickOrderPageConstants::ALLOWED_SEPARATORS`, `QuickOrderPageConstants::PRODUCT_ROWS_NUMBER`. Use `QuickOrderPageConfig` instead.
 
 

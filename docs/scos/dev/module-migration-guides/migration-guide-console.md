@@ -56,6 +56,7 @@ Spryker\Zed\Search\Communication\Console\SearchRegisterSnapshotRepositoryConsole
 Spryker\Zed\Search\Communication\Console\SearchRestoreSnapshotConsole;
 Spryker\Zed\Search\Communication\Console\SearchSetupIndexesConsole;
 ```
+
 2. Enable the new commands:
 
 **Pyz\Zed\Console**
@@ -107,9 +108,10 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     }
 }
 ```
+
 ## Upgrading from version 3.* to version 4.*
 
-Console version 4 has been prepared for a standalone usage. Now, you are able to use `Console` module even without a DB configuration.
+`Console` version 4 has been prepared for a standalone usage. Now, you are able to use `Console` module even without a DB configuration.
 Find or create `ConsoleDependencyProvider` in your project.
 
 {% info_block warningBox %}

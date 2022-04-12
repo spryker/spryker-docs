@@ -97,7 +97,7 @@ To upgrade the module, do the following:
 composer update spryker/event-dispatcher
 ```
 
-2.  Add new plugins to the dependency providers:
+2. Add new plugins to the dependency providers:
 
 **Zed integration**
 

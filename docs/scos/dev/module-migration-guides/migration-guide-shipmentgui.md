@@ -35,11 +35,13 @@ To upgrade to the new version of the module, do the following:
 ```bash
 composer require spryker/shipment-gui:"^2.0.0" --update-with-dependencies
 ```
-2. Generate the transfer objects:
+
+2. Generate transfer objects:
 
 ```bash
 console transfer:generate
 ```
+
 3. Register the following form plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |

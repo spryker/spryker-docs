@@ -32,12 +32,14 @@ To upgrade the module, do the following:
 ```bash
 composer update spryker/translator
 ```
+
 2. Remove old service providers, if you have them in the project:
 
 ```php
 \Silex\Provider\TranslationServiceProvider
 \SprykerShop\Yves\ShopTranslator\Plugin\Provider\TranslationServiceProvider
 ```
+
 3. Add new plugins to dependency providers:
 
 **Zed integration**

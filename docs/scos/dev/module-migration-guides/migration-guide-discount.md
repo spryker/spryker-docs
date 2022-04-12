@@ -59,11 +59,17 @@ This will generate a propel migration file as well update the database and the m
 2. Run `vendor/bin/console transfer:generate` to generate the new transfer objects.
 3. Install the new database tables by running `vendor/bin/console propel:diff`. Propel should generate a migration file with the changes.
 4. Run `vendor/bin/console propel:migrate` to apply the database changes.
-5. Generate ORM models by running `vendor/bin/console propel:model:build`.
+5. Generate ORM models by running the command:
+
+```bash
+vendor/bin/console propel:model:build
+```
+
 This command will generate some new classes in your project under the  `\Orm\Zed\Discount\Persistence` namespace. It is important to make sure that they extend the base classes from the Spryker core, e.g.:
 
-*  `\Orm\Zed\Discount\Persistence\SpyDiscountStore` extends `\Spryker\Zed\Discount\Persistence\Propel\AbstractSpyDiscountStore`
-*  `\Orm\Zed\Discount\Persistence\SpyDiscountStoreQuery` extends `\Spryker\Zed\Discount\Persistence\Propel\AbstractSpyDiscountStoreQuery`
+* `\Orm\Zed\Discount\Persistence\SpyDiscountStore` extends `\Spryker\Zed\Discount\Persistence\Propel\AbstractSpyDiscountStore`
+* `\Orm\Zed\Discount\Persistence\SpyDiscountStoreQuery` extends `\Spryker\Zed\Discount\Persistence\Propel\AbstractSpyDiscountStoreQuery`
+
 6. Each row in the newly created `spy_discount_store` table represents a connection between a `Store` and a `Discount`, meaning that a specific discount is available in that specific Store.
 
 To migrate the `spy_discount_store` table, create connections between your discounts and the desired stores.
@@ -149,7 +155,8 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 ```
 
-10. The following classes' constructor dependencies were altered, please check if you have customized any of them or their constructor method:
+10.  The following classes' constructor dependencies were altered, please check if you have customized any of them or their constructor method:
+
 * `Calculator/Discount`
 * `DiscountConfigurationHydrate`
 * `DiscountPersist`
@@ -157,12 +164,14 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 * `DiscountsTable`
 
 11. The following methods were enhanced, please check if you have customized any of them:
+
 * `Calculator/Discount::retrieveActiveCartAndVoucherDiscounts()`
 * `DiscountFormDataProvider::createDiscountGeneralTransferDefaults()`
 * `DiscountConfigurationHydrate::getByIdDiscount()`
 * `DiscountCommunicationFactory::getVoucherForm()`
 
 12. The following methods/classes were removed or renamed, please check if you have customized any of them:
+
 * `DiscountConfigurationHydrate::setDiscountConfigurationExpanderPlugins()`
 * `DiscountPersist::setDiscountPostCreatePlugins()`
 * `DiscountPersist::setDiscountPostUpdatePlugins()`

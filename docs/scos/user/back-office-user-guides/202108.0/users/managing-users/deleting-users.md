@@ -7,7 +7,7 @@ template: back-office-user-guide-template
 
 
 To delete a user, do the following:
-1. Go to **Users** > **Users**.
+1. Go to **Users&nbsp;<span aria-label="and then">></span> Users**.
 2. Next to the user you want to delete, click **Delete**.
 3. On the **Delete User** page, click **Delete** to confirm the action.
     This opens the **Users** page with the success message displayed. The user's **STATUS** is **Deleted**. The user's record stays in the database, and you can reactivate it at any time.

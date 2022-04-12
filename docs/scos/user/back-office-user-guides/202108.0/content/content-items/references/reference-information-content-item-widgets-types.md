@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/content-item-widgets-types-reference-information
 ---
 
-This topic contains the reference information you need to know when working with content item widgets in the **Content Management > Pages/Blocks > Edit Placeholders** section.
+This topic contains the reference information you need to know when working with content item widgets in the **Content Management&nbsp;<span aria-label="and then">></span> Pages/Blocks&nbsp;<span aria-label="and then">></span> Edit Placeholders** section.
 
 ## Banner content item widget
 

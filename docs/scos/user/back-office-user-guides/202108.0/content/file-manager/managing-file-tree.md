@@ -25,7 +25,7 @@ The *File Tree* section is used to upload the files, create or delete the direct
 
 If there are no MIME types defined in the *MIME Type Settings* section, you will be able to download any type of file. If you have at least one MIME type defined as Is Allowed, you will be able to download only the files of that type unless you add more allowed types. See [Managing MIME Type Settings](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/mime-type-settings/managing-mime-type-settings.html) for more details.
 
-To start working with file tree elements, navigate to **Content** > **File Tree** section.
+To start working with file tree elements, navigate to **Content&nbsp;<span aria-label="and then">></span> File Tree** section.
 
 ## Creating file directories
 

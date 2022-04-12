@@ -27,12 +27,12 @@ In your development, the endpoints can help you to:
 * significantly boost the SEO presence of your product store
 * increase search engine ranking of your online store
 
-To facilitate their usage, Spryker Glue provides an endpoint that allows resolving a SEO-friendly URL, for example, `http://mysprykershop.com/en/canon-powershot-n-35`, into a URL of the relevant product resource in Glue API, for example, `http://glue.mysprykershop.com/abstract-products/035`. This capability is provided by the URLs API.
+To facilitate their usage, Spryker Glue provides an endpoint that allows resolving a SEO-friendly URL, for example, `http://mysprykershop.com/en/canon-powershot-n-35`, into a URL of the relevant product resource in Glue API, for example, `https://glue.mysprykershop.com/abstract-products/035`. This capability is provided by the URLs API.
 
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html).
 
 ## Resolve a SEF URL into a Glue API URL
 
@@ -54,9 +54,9 @@ To resolve a SEF URL into a Glue API URL, send the request:
 
 | REQUEST SAMPLE | USAGE |
 | --- | --- |
-| `GET https://glue.mysprykershop.com/url-resolver?url=/de/acer-aspire-s7-134` | Resolve the following URL of a product: `https://mysprykershop.com/de/acer-aspire-s7-134` |
-| `GET https://glue.mysprykershop.com/url-resolver?url=/en/computer` | Resolve the following URL of a category node: `https://mysprykershop.com/en/computer` |
-| `GET https://glue.mysprykershop.com/url-resolver?url=/de/ruecknahmegarantie` | Resolve the following URL of a CMS page `https://mysprykershop.com/de/ruecknahmegarantie` |
+| GET https://glue.mysprykershop.com/url-resolver?url=/de/acer-aspire-s7-134 | Resolve the following URL of a product: `https://mysprykershop.com/de/acer-aspire-s7-134` |
+| GET https://glue.mysprykershop.com/url-resolver?url=/en/computer | Resolve the following URL of a category node: `https://mysprykershop.com/en/computer` |
+| GET https://glue.mysprykershop.com/url-resolver?url=/de/ruecknahmegarantie | Resolve the following URL of a CMS page `https://mysprykershop.com/de/ruecknahmegarantie` |
 
 ### Response
 

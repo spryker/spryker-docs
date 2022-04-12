@@ -187,9 +187,9 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 Ensure that the following endpoints are available:
 
-*   `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}`
+*   `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}`
 
-*   `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}`
+*   `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}`
 
 {% endinfo_block %}
 
@@ -203,6 +203,7 @@ Activate the following plugins:
 |ProductAbstractByProductAbstractSkuResourceRelationshipPlugin |Adds the `abstract-products` resource as a relationship to the `concrete-products` resource. |None| Spryker\Glue\ProductsRestApi\Plugin\GlueApplication|
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
+
 ```php
 <?php
 
@@ -244,13 +245,13 @@ Ensure that:
 
 *   The following endpoints are available:
 
-    *   http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}
+    *   https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}
 
-    *   `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}`  
+    *   `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}`  
 
-*   When the `concrete-products` resource is included as a query string, the `abstract-products` resource returns it as a relationship: `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=concrete-products`.
+*   When the `concrete-products` resource is included as a query string, the `abstract-products` resource returns it as a relationship: `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=concrete-products`.
 
-*   When the `abstract-products` resource is included as a query string, the `concrete-products` resource returns it as a relationship: `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=abstract-products`.
+*   When the `abstract-products` resource is included as a query string, the `concrete-products` resource returns it as a relationship: `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=abstract-products`.
 
 {% endinfo_block %}
 
@@ -325,13 +326,13 @@ Ensure the following:
 
 *   The endpoints are available:
 
-    *   `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-image-sets`
+    *   `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-image-sets`
 
-    *   `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-image-sets`  
+    *   `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-image-sets`  
 
-*   When the `abstract-product-image-sets` resource is included as a query string, the `abstract-products` resource returns it as a relationship: `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-image-sets`
+*   When the `abstract-product-image-sets` resource is included as a query string, the `abstract-products` resource returns it as a relationship: `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-image-sets`
 
-*   When the `concrete-product-image-sets` resource is included as a query string, the `concrete-products` resource returns it as a relationship: `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=concrete-product-image-sets`
+*   When the `concrete-product-image-sets` resource is included as a query string, the `concrete-products` resource returns it as a relationship: `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=concrete-product-image-sets`
 
 {% endinfo_block %}
 
@@ -345,9 +346,6 @@ Activate the following plugins:
 | ConcreteProductPricesRoutePlugin |Registers the `concrete-product-prices` resource. |None| Spryker\Glue\ProductPricesRestApi\Plugin |
 | AbstractProductPricesByResourceIdResourceRelationshipPlugin |Adds the `abstract-product-prices-resource` as a relationship to the `abstract-products` resource. |None | Spryker\Glue\ProductPricesRestApi\Plugin\GlueApplication |
 | ConcreteProductPricesByResourceIdResourceRelationshipPlugin |Adds the `concrete-product-prices-resource` as a relationship to the `concrete-products` resource. |None | Spryker\Glue\ProductPricesRestApi\Plugin\GlueApplication|
-
-
-
 
 
 
@@ -409,13 +407,13 @@ Ensure the following:
 
 *   The endpoints are available:
 
-    *   `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-prices`
+    *   `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-prices`
 
-    *   `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-prices`
+    *   `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-prices`
 
-*   When the `abstract-product-prices` resource is included as a query string, the `abstract-products` resource returns it as a relationship: `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-prices`
+*   When the `abstract-product-prices` resource is included as a query string, the `abstract-products` resource returns it as a relationship: `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-prices`
 
-*   When the `concrete-product-prices` resource is included as a query string, the `concrete-products` resource returns it as a relationship: `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=concrete-product-prices`
+*   When the `concrete-product-prices` resource is included as a query string, the `concrete-products` resource returns it as a relationship: `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=concrete-product-prices`
 
 {% endinfo_block %}
 
@@ -464,7 +462,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 Ensure that the relationship has been registered correctly:
 
-1.  Send a request to `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=category-nodes`.
+1.  Send a request to `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=category-nodes`.
 
 2.  The response should contain the `category-nodes` resource as a relationship.
 
@@ -480,7 +478,7 @@ Ensure that the relationship has been registered correctly:
          ...
       },
       "links":{  
-         "self":"http://glue.mysprykershop.com/abstract-products/001"
+         "self":"https://glue.mysprykershop.com/abstract-products/001"
       },
       "relationships":{  
          "category-nodes":{  
@@ -505,7 +503,7 @@ Ensure that the relationship has been registered correctly:
             ...
          },
          "links":{  
-            "self":"http://glue.mysprykershop.com/category-nodes/4"
+            "self":"https://glue.mysprykershop.com/category-nodes/4"
          }
       },
       {  
@@ -515,7 +513,7 @@ Ensure that the relationship has been registered correctly:
             ...
          },
          "links":{  
-            "self":"http://glue.mysprykershop.com/category-nodes/2"
+            "self":"https://glue.mysprykershop.com/category-nodes/2"
          }
       }
    ]
@@ -559,6 +557,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following endpoint is available: `http://glue.mysprykershop.com/product-management-attributes/{% raw %}{{{% endraw %}attribute_key{% raw %}}}{% endraw %}`
+Ensure that the following endpoint is available: `https://glue.mysprykershop.com/product-management-attributes/{% raw %}{{{% endraw %}attribute_key{% raw %}}}{% endraw %}`
 
 {% endinfo_block %}

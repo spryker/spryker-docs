@@ -19,7 +19,7 @@ This topic describes how to manage customer addresses and view orders.
 
 ## Prerequisites
 
-To start working with customer details, go to **Customers** > **Customers**.
+To start working with customer details, go to **Customers&nbsp;<span aria-label="and then">></span> Customers**.
 
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
@@ -76,5 +76,4 @@ The following table describes the attributes you enter and select when editing a
 To view orders made by a specific customer:
 1. Navigate to the *View Customer* page and scroll down to the *Orders* section.
 2. To find a specific order, start typing either its order reference value or any other value that the table with the list of orders contains in the **Search** field. As you type, the list of matching orders will be created in the table.
-3. To view order details, click **View**. This will take you to the *View Order* page from the *Sales* > *Orders* section.
-
+3. To view order details, click **View**. This will take you to the *View Order* page from the *Sales&nbsp;<span aria-label="and then">></span> Orders* section.

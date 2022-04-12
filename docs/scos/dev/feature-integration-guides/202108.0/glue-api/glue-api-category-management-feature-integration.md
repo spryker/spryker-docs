@@ -24,9 +24,8 @@ To start feature integration, overview and install the necessary features:
 
 |FEATURE  |VERSION |REQUIRED SUB-FEATURE |
 |---  |--- |--- |
-| Spryker Core |dev-master |[Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Category Management |dev-master| |
-
+| Spryker Core | {{page.version}} |[Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Category Management | {{page.version}} | |
 
 
 ## 1) Install the required modules using Composer
@@ -38,13 +37,11 @@ composer require spryker/categories-rest-api:"^1.1.3" --update-with-dependencies
 
 {% info_block warningBox "Verification" %}
 
-
 Make sure that the following module has been installed:
 
 | MODULE |EXPECTED DIRECTORY |
 | --- | --- |
 |CategoriesRestApi |vendor/spryker/categories-rest-api|
-
 
 {% endinfo_block %}
 
@@ -164,12 +161,9 @@ class UrlsRestApiDependencyProvider extends SprykerUrlsRestApiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-
 Make sure that the following endpoints are available:
 
-*   `http://glue.mysprykershop.com/category-trees`
-
-*   `http://glue.mysprykershop.com/category-nodes/{% raw %}{{{% endraw %}category_node_id{% raw %}}}{% endraw %}`
-
+*   `https://glue.mysprykershop.com/category-trees`
+*   `https://glue.mysprykershop.com/category-nodes/{% raw %}{{{% endraw %}category_node_id{% raw %}}}{% endraw %}`
 
 {% endinfo_block %}

@@ -127,12 +127,12 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 If CatalogSearchResourceRoutePlugin and CatalogSearchSuggestionsResourceRoutePlugin are installed correctly, the following endpoints should now be available:
 {% endinfo_block %}
 
-* http://glue.mysprykershop.com/catalog-search?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}
-* http://glue.mysprykershop.com/catalog-search-suggestions?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}
+* https://glue.mysprykershop.com/catalog-search?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}
+* https://glue.mysprykershop.com/catalog-search-suggestions?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}
 
 {% info_block infoBox %}
 To make sure that `CatalogSearchAbstractProductsResourceRelationshipPlugin` and `CatalogSearchSuggestionsAbstractProductsResourceRelationshipPlugin` are functioning correctly, do the following:
 {% endinfo_block %}
 {% info_block infoBox %}
-Make a request to http://glue.mysprykershop.com/catalog-search?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}&amp;include=abstract-products and verify that the response includes relationships to abstract-products resources.Make a request to http://glue.mysprykershop.com/catalog-search-suggestions?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}&amp;include=abstract-products and verify that the response includes relationships to abstract-products resources.
+Make a request to https://glue.mysprykershop.com/catalog-search?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}&amp;include=abstract-products and verify that the response includes relationships to abstract-products resources.Make a request to https://glue.mysprykershop.com/catalog-search-suggestions?q={% raw %}{{{% endraw %}q_term{% raw %}}}{% endraw %}&amp;include=abstract-products and verify that the response includes relationships to abstract-products resources.
 {% endinfo_block %}

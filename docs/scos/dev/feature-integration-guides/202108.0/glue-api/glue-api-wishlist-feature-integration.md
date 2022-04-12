@@ -18,6 +18,7 @@ related:
 Follow the steps below to install Wishlist feature API.
 
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 |NAME|VERSION|INTEGRATION GUIDE|
@@ -33,6 +34,7 @@ Run the following command to install the required modules:
 ```bash
 composer require spryker/wishlists-rest-api:"^1.0.0" --update-with-dependencies
 ```
+
 {% info_block warningBox “Verification” %}
 
 Make sure that the following module has been installed:
@@ -161,7 +163,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 Make sure that the following endpoints are available:
 `http:///glue.mysprykershop.com/wishlists`
 `http:///glue.mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlists-items`
-Send a request to `http://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=wishlists` and make sure that the given customer has at least one wishlist. Make sure that the response includes relationships to the `wishlists` resources.
+Send a request to `https://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=wishlists` and make sure that the given customer has at least one wishlist. Make sure that the response includes relationships to the `wishlists` resources.
 
 {% endinfo_block %}
 

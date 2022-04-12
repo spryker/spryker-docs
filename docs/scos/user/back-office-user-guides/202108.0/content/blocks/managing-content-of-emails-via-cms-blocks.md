@@ -21,7 +21,7 @@ There is a number of default emails that are automatically sent on different occ
 
 ## Prerequisites
 
-To start managing the content of emails, go to **Content > Blocks**.
+To start managing the content of emails, go to **Content&nbsp;<span aria-label="and then">></span> Blocks**.
 
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 

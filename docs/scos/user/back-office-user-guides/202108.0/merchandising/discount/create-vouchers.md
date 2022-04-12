@@ -119,7 +119,7 @@ Example:
 
 ### DISCOUNT APPLICATION TYPE: QUERY STRING
 
-A query string defines what products a discount applies to. Only the products that satisfy the query's conditions are discountable. Queries also define if the discount is applied to one or several products. You can define a query string by entering a plain query or by using a query builder.
+A query string defines what products a discount applies to. A query string consists of decision rules. Only the products that fulfill all the decision rules are discountable. You can define a query string by entering a plain query or by using a query builder.
 
 Query builder:
 ![Discount_Calculation_Query](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Calculation:+Reference+Information/query-string.png)
@@ -127,51 +127,31 @@ Query builder:
 Plain query:
 ![Discount_Calculation_Plain Query](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Calculation:+Reference+Information/discount-calculation-plain-query.png)
 
-
-A query string consists of decision rules. 
-The query builder lets you combine different conditions with connectors (**AND** and **OR**). Multiple conditions (rules) can be added and grouped in this way. Each condition (rule) consists of:
-* field (e.g., attribute.color)
-* operator (e.g., equal(=))
-* value tokens (e.g., blue)
+A decision rule consists of the following:
+* Attribute. For example, *attribute.color*.
+* Relation operator. For example, *equal*.
+* Value. For example, *black*.
 
 
-These tokens are used to build plain queries too. The pattern of the plain query is as follows:
-![Plain Query Pattern](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Calculation:+Reference+Information/plain-query-pattern.png)
+You can find query examples in the following table.
 
-You can find plain query examples in the following table.
 |PLAIN QUERY|EXPLANATION|
 |---|---|
-|day-of-week = '1'|Discount applies if the order is placed on Monday.|
-|shipment-carrier != '1' AND price-mode = 'GROSS_MODE'|Discount applies if the shipment carrier with the attribute "1" is not chosen and gross pricing is selected.|
+|day-of-week = '1'| Discount applies to the orders that are placed on Monday.|
+|shipment-carrier != '1' AND price-mode = 'GROSS_MODE'| Discount applies if the shipment carrier with the identifier `1` is not chosen and gross pricing is selected.|
 |currency != 'EUR' OR price-mode = 'GROSS_MODE'|Discount applies if the selected currency is not Euro or the pricing mode is gross.|
 
-{% info_block infoBox "Info" %}
-
-See [Token description tables](#token-description-tables) for more information.
-
-{% endinfo_block %}
 
 ### DISCOUNT APPLICATION TYPE: PROMOTIONAL PRODUCT
 
-Sometimes, it is more profitable to give away free products or provide a discount for the products that are not yet in the cart instead of the ones that are already there. This discount application type enables you to do just that. When a customer fulfills the discount conditions, the promotional product appears below other items. The SKU of the promotional product you wish to be available for adding to cart is entered in the **Abstract product sku** field. Then, you enter the **Quantity** of the chosen promotional product to be available for adding to cart.
+The promotional product lets you select a product that is to be displayed in a customer's cart with a discount. The **ABSTRACT PRODUCT SKU** defines the discounted product, and **QUANTITY** defines how many products a customer can buy with a discount.
 ![Application type](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Calculation:+Reference+Information/Application+type.png)
 
-You can either give away the promotional product completely for free or provide a discount for this product by specifying the percentage value or a fixed amount to be discounted from the promotional product's price (when giving the product for free, the percentage value should be 100%, while the fixed-price value should be equal to the product's price).
+To give away a promotional product for free, select percentage calculator type and enter 100 percents.
 
 ## Reference information: Define under which conditions the discount can be applied
 
-Conditions are also called decision rules.
 
-* A cart rule can have one or more conditions linked to it. The cart rule is redeemed only if every condition linked to it is satisfied.
-* Vouchers can be linked to one or more conditions. Vouchers are only redeemed if all linked conditions are satisfied.
-
-The conditions are created in the form of a query and may be entered as a plain query or via the query builder. (See the [Discount calculation tab](#discount-calculation-tab) section for more details.)
-
-{% info_block infoBox "Info" %}
-
-If you do not need to add a condition, you can leave the query builder empty.
-
-{% endinfo_block %}
 
 Example: Discount is applied if five or more items are in the cart and it is Tuesday or Wednesday.
 ![Discount Condition](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/discount-condition.png)

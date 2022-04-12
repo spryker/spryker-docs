@@ -62,16 +62,15 @@ new ExpenseTaxCalculatorPlugin(),
 
 {% info_block errorBox %}
 
-The old Calculator plugins were moved to the following separate repository: `spryker/calculation-migration`. Please include into your `composer.json` like `"spryker/calculation-migration": "dev-master"` and run composer update. This should enable you to use old plugins.
+The old Calculator plugins were moved to the following separate repository: `spryker/calculation-migration`. Please include into your `composer.json` like `"spryker/calculation-migration": "dev-master"` and run composer update. This should enable you to use the old plugins.
 
 {% endinfo_block %}
 
 The `Calculator` module also returns `back sales.fk_customer, sales.fk_shipment_method, sales.shipment_delivery_time` - these are deprecated methods. To safely migrate them, see [Migration Guide - Sales](/docs/scos/dev/module-migration-guides/migration-guide-sales.html).
 
-After this you should see new values calculated + legacy ones.
+After this you should see the new values calculated + the legacy ones.
 
-<details open>
-<summary markdown='span'>Code sample:</summary>
+<details open><summary markdown='span'>Code sample:</summary>
 
 ```php
 <?php
@@ -187,7 +186,7 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
 
 **Changing the displayed calculated values**
 
-You may also want to change displayed calculated values in your twig templates.
+You may also want to change the displayed calculated values in your twig templates.
 
 Instead of using specific calculated fields, there are more generic fields provided with the new calculator version.
 
@@ -330,7 +329,8 @@ REFERENCES "spy_sales_order" ("id_sales_order");
 COMMIT;
 ```
 
-3. Run console commands:
+3. Run the console commands:
+
 * `vendor/bin/console transfer:generate`
 * `vendor/bin/console propel:diff`
 * `vendor/bin/console propel:model:build`
@@ -466,7 +466,7 @@ Before beginning, make a backup of your sales order data!
 
 ### Console command
 
-We prepared a migration console command which will  populate your old orders with the new calculated values.
+We prepared a migration console command which will populate your old orders with the new calculated values.
 To download this console command, go to Console Command.
 Register the following console command: `\Pyz\Zed\SalesAggregator\Communication\Console\SalesAggregatorMigrationConsole` in the Spryker Console module dependency provider: `\Pyz\Zed\Console\ConsoleDependencyProvider::getConsoleCommands` method.
 
@@ -499,5 +499,5 @@ Please back up your data now!
 You can now execute the command via `vendor/bin/console sales-aggregator:migrate` - you will be prompted to confirm before executing the migration.
 Console command accepts an argument to make "dry run" by verifying if all data is correct, it compares aggregated and new calculated values.
 If any order fails verification, it will be skipped and you will have to manually investigate and fix it.
-Verification checks if values are still the same before/after the migration.
-After the migration is complete, you can drop all use of `SalesAggregator`, as all values are already persisted. You can get the same results by using `SalesFacade::getOrderByIdSalesOrder()`.
+Verification checks if the values are still the same before/after the migration.
+After the migration is complete, you can drop the use of `SalesAggregator`, as all values are already persisted. You can get the same results by using `SalesFacade::getOrderByIdSalesOrder()`.

@@ -38,7 +38,7 @@ related:
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
 ---
 
-## Upgrading from Version 1.* to Version 2.*
+## Upgrading from version 1.* to version 2.*
 
 This version provides support for multi-store CMS Block handling.
 

@@ -24,7 +24,7 @@ redirect_from:
 
 ## Upgrading from version 1.* to version 2.0.0
 
-In this new version of the **CartVariant** module, we have added support of decimal stock. You can find more details about the changes on the [CartVariant module](https://github.com/spryker/cart-variant/releases) release page.
+In this new version of the `CartVariant` module, we have added support of decimal stock. You can find more details about the changes on the [CartVariant module](https://github.com/spryker/cart-variant/releases) release page.
 
 {% info_block errorBox %}
 
@@ -41,6 +41,7 @@ To upgrade to the new version of the module, do the following:
 ```bash
 composer require spryker/cart-variant: "^2.0.0" --update-with-dependencies
 ```
+
 2. Update the database entity schema for each store in the system:
 
 ```bash
@@ -48,6 +49,7 @@ APPLICATION_STORE=DE console propel:schema:copy
 APPLICATION_STORE=US console propel:schema:copy
 ...
 ```
+
 3.Run the database migration:
 
 ```bash

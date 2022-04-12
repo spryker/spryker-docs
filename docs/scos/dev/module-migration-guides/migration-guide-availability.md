@@ -33,7 +33,7 @@ redirect_from:
 
 ## Upgrading from version 8.* to version 9.0.0
 
-In this new version of the **Availability** module, we have added support of decimal stock. You can find more details about the changes on the [Availability release](https://github.com/spryker/availability/releases) page.
+In this new version of the `Availability` module, we have added support of decimal stock. You can find more details about the changes on the [Availability release](https://github.com/spryker/availability/releases) page.
 
 {% info_block errorBox %}
 
@@ -45,11 +45,12 @@ This release is a part of the **Decimal Stock** concept migration. When you upgr
 
 To upgrade to the new version of the module, do the following:
 
-1. Upgrade the **Availability** module to the new version:
+1. Upgrade the `Availability` module to the new version:
 
 ```bash
 composer require spryker/availability: "^9.0.0" --update-with-dependencies
 ```
+
 2. Update the database entity schema for each store in the system:
 
 ```bash
@@ -105,9 +106,9 @@ In order to dismantle the Horizontal Barrier and enable partial module updates o
 
 ## Upgrading from version 5.* to version 6.*
 
-In **Availability** module version 6 we have added support for multi-store. The Back Office has undergone some changes to allow selecting stores and update database tables to store relations to store.
+In `Availability` module version 6 we have added support for multi-store. The Back Office has undergone some changes to allow selecting stores and update database tables to store relations to store.
 
-To upgrade, run database migrations:
+To upgrade, run the database migrations:
 
 ```php
            ALTER TABLE "spy_availability"
@@ -130,7 +131,7 @@ Then:
 * Run `vendor/bin/console propel:model:build` - this will update models.
 * Run  `vendor/bin/console transfer:generate` - this will create new transfer objects.
 
-We have changed public API for methods in: `\Spryker\Zed\Availability\Business\AvailabilityFacade::findProductAbstractAvailability` received a third argument for `idStore`.
+We have changed the public API for methods in: `\Spryker\Zed\Availability\Business\AvailabilityFacade::findProductAbstractAvailability` received a third argument for `idStore`.
 
 We have also changed the way data is collected by collector, now it has to filter data by current store.
 
@@ -164,7 +165,7 @@ All `Availability` UI has been moved to `AvailabilitGui` module, mostly Communic
 
 ## Upgrading from version 2.* to version 3.*
 
-With Availability version 3, we have changed the way availability is calculated.
+With the Availability version 3, we have changed the way availability is calculated.
 Two new tables have been added:
 
 ```php

@@ -38,7 +38,8 @@ composer require spryker/category-storage:"^2.0.0" --update-with-dependencies
 ```bash    
 console propel:install
 console transfer:generate
-```    
+``` 
+   
 4. From `Pyz\Zed\Event\EventDependencyProvider`, remove the deprecated subscriber: `CategoryStorageEventSubscriber`.
 
 5. From `Pyz\EventBehavior\EventBehaviorDependencyProvider`, remove the deprecated plugins:

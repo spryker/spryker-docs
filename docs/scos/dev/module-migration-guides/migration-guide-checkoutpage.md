@@ -23,7 +23,7 @@ redirect_from:
 
 ## Upgrading from version 2.* to version 3.*
 
-In this new version of the CheckoutPage module, we have added support of split delivery. You can find more details about the changes on the[CheckoutPage module release page](https://github.com/spryker-shop/checkout-page/releases).
+In this new version of the `CheckoutPage` module, we have added support of split delivery. You can find more details about the changes on the[CheckoutPage module release page](https://github.com/spryker-shop/checkout-page/releases).
 
 {% info_block infoBox %}
 
@@ -35,7 +35,7 @@ This release is a part of the **Split delivery** concept migration. When you upg
 
 To upgrade to the new version of the module, do the following:
 
-1. Upgrade the CheckoutPage module to the new version:
+1. Upgrade the `CheckoutPage` module to the new version:
 
 ```bash
 composer require spryker-shop/checkout-page: "^3.0.0" --update-with-dependencies

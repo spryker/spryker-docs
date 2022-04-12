@@ -40,7 +40,7 @@ related:
 
 ## Upgrading from version 2.* to version 3.*
 
-CmsBlock version 3.0.0 introduces the following backward incompatible changes:
+`CmsBlock` version 3.0.0 introduces the following backward incompatible changes:
 
 * Introduced the `spy_cms_block.spy_cms_block-key` unique index.
 * Adjusted `CmsBlockWriter` to use `CmsBlockKeyProvider` that persists the `key` field while writing a content entity.
@@ -56,19 +56,22 @@ To upgrade to the new version of the module, do the following:
 ```bash
 composer require spryker/cms-block:"^3.0.0" --update-with-dependencies
 ```
+
 2. Re-generate transfer objects:
 
 ```bash
 console transfer:generate
 ```
+
 3. If there are:
 
-    a. no preexisting blocks in the database, run the database migration:
+   1. no preexisting blocks in the database, run the database migration:
+    
     ```bash
     console propel:install
     ```
 
-    b. If there are preexisting blocks in the database, follow the further steps to migrate the block data.
+    2. If there are preexisting blocks in the database, follow the further steps to migrate the block data.
 
 4. On the project level in `src/Pyz/Zed/CmsBlock/Persistence/Propel/Schema/spy_cms_block.schema.xml`, update the `key` column property from `required` to `false` for data migration:
 
@@ -88,13 +91,13 @@ console transfer:generate
 </database>
 ```
 
-2. Run the database migration:
+5. Run the database migration:
 
 ```bash
 console propel:install
 ```
 
-3. Create the `cms-block:generate-keys` command in `src/Pyz/Zed/CmsBlock/Communication/Console/CmsBlockKeyGeneratorConsoleCommand.php`:
+6. Create the `cms-block:generate-keys` command in `src/Pyz/Zed/CmsBlock/Communication/Console/CmsBlockKeyGeneratorConsoleCommand.php`:
 
 **src/Pyz/Zed/CmsBlock/Communication/Console/CmsBlockKeyGeneratorConsoleCommand.php**
 
@@ -174,13 +177,13 @@ class ContentItemKeyGeneratorConsoleCommand extends Console
 }
 ```
 
-4. Run the command:
+7. Run the command:
 
 ```bash
 console cms-block:generate-keys
 ```
 
-9. Revert the previous changes to the file `spy_cms_block.schema.xml` by restoring the `required` value of key to `true`:
+8. Revert the previous changes to the file `spy_cms_block.schema.xml` by restoring the `required` value of key to `true`:
 
 **src/Pyz/Zed/Content/Persistence/Propel/Schema/spy_content.schema.xml**
 
@@ -198,7 +201,7 @@ console cms-block:generate-keys
 </database>
 ```
 
-10. Run the database migration:
+9. Run the database migration:
 
 ```bash
 console propel:install
@@ -224,9 +227,9 @@ If you have a custom CMS Block Collector, make sure that it collects CMS Blocks 
 4. Install the database changes by running `vendor/bin/console propel:diff`. Propel should generate a migration file with the changes.
 5. Apply the database changes: `vendor/bin/console propel:migrate`
 6. Generate and update ORM models: `vendor/bin/console propel:model:build`
-7. You will find some new classes in your project under the `\Orm\Zed\CmsBlock\Persistence` namespace. It’s important to make sure that they extend the base classes from the Spryker core, e.g.:
-* `\Orm\Zed\CmsBlock\Persistence\SpyCmsBlockStore` extends `\Spryker\Zed\CmsBlock\Persistence\Propel\AbstractSpyCmsBlockStore`
-* `\Orm\Zed\CmsBlock\Persistence\SpyCmsBlockStoreQuery` extends `\Spryker\Zed\CmsBlock\Persistence\Propel\AbstractSpyCmsBlockStoreQuery`
+7. You will find some new classes in your project under the `\Orm\Zed\CmsBlock\Persistence` namespace. It’s important to make sure that they extend the base classes from the Spryker core, for example:
+   * `\Orm\Zed\CmsBlock\Persistence\SpyCmsBlockStore` extends `\Spryker\Zed\CmsBlock\Persistence\Propel\AbstractSpyCmsBlockStore`
+   * `\Orm\Zed\CmsBlock\Persistence\SpyCmsBlockStoreQuery` extends `\Spryker\Zed\CmsBlock\Persistence\Propel\AbstractSpyCmsBlockStoreQuery`
 
 8. The newly created `spy_cms_block_store` table defines 1 row per CMS Block-store association. Populate this table according to your requirements.
 
@@ -275,4 +278,4 @@ INSERT INTO spy_cms_block_store (fk_cms_block, fk_store)
 
 You can find more details for these changes on [CMS Block module release page](https://github.com/spryker/cms-block/releases).
 
-CMS Block is ready to be used in multi-store environment. Additionally you might want to update the `spryker/cms-block-gui` Administration Intervace to manage CMS Blocks and their store configuration. You can find further information about multi-store CMS Blocks here, and Zed Admin UI module migration guide in [Migration Guide - CMS Block GUI](/docs/scos/dev/module-migration-guides/migration-guide-cmsblockgui.html).
+CMS Block is ready to be used in multi-store environment. Additionally you might want to update the `spryker/cms-block-gui` Administration Interface to manage CMS Blocks and their store configuration. You can find further information about multi-store CMS Blocks here, and Zed Admin UI module migration guide in [Migration Guide - CMS Block GUI](/docs/scos/dev/module-migration-guides/migration-guide-cmsblockgui.html).

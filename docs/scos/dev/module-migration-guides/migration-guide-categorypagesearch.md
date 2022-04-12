@@ -31,32 +31,34 @@ _Estimated migration time: 1 hour._ 
 
 To upgrade to the new version of the module, do the following:
 
-1.  Install the `ProductCategorySearch` module:
+1. Install the `ProductCategorySearch` module:
 
 ```bash    
 composer require spryker/product-category-search
-```    
-2.  Upgrade the `CategoryPageSearch` module to version `2.0.0`:
+``` 
+
+2. Upgrade the `CategoryPageSearch` module to version `2.0.0`:
 
 ```bash    
 composer require spryker/category-page-search:"^2.0.0" --update-with-dependencies
-```    
-3.  From the `spy_category_node_page_search` table on the project level in `Pyz/Zed/CategoryPageSearch/Persistence/Propel/Schema/spy_category_page_search.schema.xml`, remove the synchronization behavior setup.
+```
 
-4.  Update the database schema and the generated classes:
+3. From the `spy_category_node_page_search` table on the project level in `Pyz/Zed/CategoryPageSearch/Persistence/Propel/Schema/spy_category_page_search.schema.xml`, remove the synchronization behavior setup.
+
+4. Update the database schema and the generated classes:
 
 ```bash    
 console propel:install
 console transfer:generate
-```    
-5.  In the `CategoryPageSearch` module, replace the deprecated plugins:
+```
+
+5. In the `CategoryPageSearch` module, replace the deprecated plugins:
 
 * `ProductCategoryPageDataLoaderExpanderPlugin`
 * `CategoryPageDataLoaderPlugin`
 * `ProductCategoryMapExpanderPlugin`
 
-<details open>
-<summary markdown='span'>Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider</summary>
+<details open><summary markdown='span'>Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider</summary>
 
 ```php        
 <?php
@@ -105,14 +107,13 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 ```     
 </details>   
 
-6.  From `Pyz\Zed\Event\EventDependencyProvider`, remove the deprecated subscriber: `CategoryPageSearchEventSubscriber`.
+6. From `Pyz\Zed\Event\EventDependencyProvider`, remove the deprecated subscriber: `CategoryPageSearchEventSubscriber`.
 
-7.  From `Pyz\EventBehavior\EventBehaviorDependencyProvider`, remove the deprecated plugin: `CategoryPageEventResourceQueryContainerPlugin`.
+7. From `Pyz\EventBehavior\EventBehaviorDependencyProvider`, remove the deprecated plugin: `CategoryPageEventResourceQueryContainerPlugin`.
 
-8.  Add the new plugins:
+8. Add the new plugins:
 
-<details open>
-<summary markdown='span'>Pyz\Zed\Publisher\PublisherDependencyProvider</summary>
+<details open><summary markdown='span'>Pyz\Zed\Publisher\PublisherDependencyProvider</summary>
 
 ```php    
 <?php
@@ -176,9 +177,9 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 ```
 </details>
 
-9.  From `Pyz\Zed\Synchronization\SynchronizationDependencyProvider`, remove the deprecated plugin:`CategoryPageSynchronizationDataPlugin`.
+9. From `Pyz\Zed\Synchronization\SynchronizationDependencyProvider`, remove the deprecated plugin:`CategoryPageSynchronizationDataPlugin`.
 
-10.  Add the new synchronization plugin to `Pyz\Zed\Synchronization\SynchronizationDependencyProvider`:
+10. Add the new synchronization plugin to `Pyz\Zed\Synchronization\SynchronizationDependencyProvider`:
 
 ```php    
 <?php
@@ -202,28 +203,28 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
-11.  Refill storage:
+11. Refill storage:
 
     1.  Truncate the `spy_category_node_page_search` database table:
 
-```sql
-TRUNCATE TABLE spy_category_node_page_search;
-```
+    ```sql
+    TRUNCATE TABLE spy_category_node_page_search;
+    ```
      2.  Remove all the data:
 
-```bash
-console sync:data category_node
-```
+    ```bash
+    console sync:data category_node
+    ```
     3.  Trigger the event:
 
-```bash
-console publish:trigger-events -r category_node
-```
+    ```bash
+    console publish:trigger-events -r category_node
+    ```
     4.  Sync all table storage data to the storage:
 
-```bash
-console sync:data category_node
-```
+    ```bash
+    console sync:data category_node
+    ```
 
 {% info_block warningBox "Verification" %}
 
@@ -241,7 +242,7 @@ This migration guide is a part of the [Search migration effort](/docs/scos/dev/m
 
 To upgrade to the new version of the module, do the following:
 
-1. Update the modules with composer:
+1. Update the modules using Composer:
 
 ```bash
 composer update spryker/category-page-search

@@ -48,7 +48,7 @@ Follow the installation instructions to enable all connector plugins: CMS Block 
 
 ### 2. Deprecations migration
 
-Change usage of `\Spryker\Shared\CmsBlockCategoryConnector\CmsBlockCategoryConnectorConstants::RESOURCE_TYPE_CMS_BLOCK_CATEGORY_CONNECTOR` to `\Spryker\Shared\CmsBlockCategoryConnector\CmsBlockCategoryConnectorConfig::RESOURCE_TYPE_CMS_BLOCK_CATEGORY_CONNECTOR`
+Change the usage of `\Spryker\Shared\CmsBlockCategoryConnector\CmsBlockCategoryConnectorConstants::RESOURCE_TYPE_CMS_BLOCK_CATEGORY_CONNECTOR` to `\Spryker\Shared\CmsBlockCategoryConnector\CmsBlockCategoryConnectorConfig::RESOURCE_TYPE_CMS_BLOCK_CATEGORY_CONNECTOR`
 
 ### 3. Database migration
 

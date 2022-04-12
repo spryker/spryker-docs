@@ -38,7 +38,7 @@ related:
 
 ## Upgrading from version 1.* to version 2.*
 
-This version adds support to manage CMS Block-store relation through the dedicated CMS Block Administration Interface.
+This version adds support to manage CMS Block-store relation through the dedicated CMS Block Back Office.
 
 1. Install/update `spryker/cms-block` to at least version 2.0.0. For more information, see [Migration Guide - CMS Block](/docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html).
 

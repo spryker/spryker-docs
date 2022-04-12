@@ -21,8 +21,8 @@ We gave up the `Auth` module in favor of using `Symfony Security`. `Symfony Secu
 More details are listed below:
 
 * All public API for modules `Auth`, `AuthMailConnector`, `AuthMailConnectorExtension` is deprecated.
-*  `AuthFacade::login()` and `AuthFacade::logout()` was replaced with the implementation of `Spryker\Shared\SecurityExtension\Dependency\Plugin\SecurityPluginInterface`. For the Back Office authentication it was implemented at `SecurityGui` module with `UserSecurityPlugin`.
-*  `AuthFacade::isAuthenticated()`is replaced with `SecurityFacade::isUserLoggedIn()`.
+* `AuthFacade::login()` and `AuthFacade::logout()` were replaced with the implementation of `Spryker\Shared\SecurityExtension\Dependency\Plugin\SecurityPluginInterface`. The Back Office authentication was implemented at `SecurityGui` module with `UserSecurityPlugin`.
+* `AuthFacade::isAuthenticated()`is replaced with `SecurityFacade::isUserLoggedIn()`.
 * `AuthFacade::requestPasswordReset()` is replaced with `UserPasswordResetFacade::requestPasswordReset()`.
 * `AuthFacade::isValidPasswordResetToken()` is replaced with `UserPasswordResetFacade::isValidPasswordResetToken()`.
 * `AuthFacade::resetPassword()` is replaced with `UserPasswordResetFacade::setNewPassword()`.
@@ -33,7 +33,7 @@ More details are listed below:
 
 To migrate from the `Auth` module to `Symfony Security`, do the following:
 
-## Update spryker-feature/spryker-core
+## Update the spryker-feature/spryker-core
 
 {% info_block infoBox "Info" %}
 
@@ -48,6 +48,7 @@ The steps in this section show you how to re-configure the YVES system user and 
     ```
 
 2. Adjust `config/Shared/common/config_oauth-development.php`.
+
     * Remove:
 
     ```php
@@ -73,6 +74,7 @@ The steps in this section show you how to re-configure the YVES system user and 
     ```
 
 3. Adjust `config/Shared/config_default.php`.
+
     *  Remove:
 
     ```php
@@ -178,7 +180,7 @@ The steps in this section show you how to re-configure the YVES system user and 
 
     * If you are using the plugin `Spryker/Zed/Auth/Communication/Plugin/SessionRedis/SystemUserSessionRedisLifeTimeCalculatorPlugin` in `src/Pyz/Zed/SessionRedis/SessionRedisDependencyProvider::getSessionRedisLifeTimeCalculatorPlugins()`, please replace it with `Spryker/Zed/SecuritySystemUser/Communication/Plugin/SessionRedis/SystemUserSessionRedisLifeTimeCalculatorPlugin`.
 
-## Update Security module  
+## Update the Security module  
 
 {% info_block infoBox "Info" %}
 
@@ -192,7 +194,7 @@ Run:
 composer update spryker/security --with-dependencies
 ```
 
-## Update spryker-feature/spryker-core-back-office
+## Update the spryker-feature/spryker-core-back-office
 
 {% info_block infoBox "Info" %}
 
@@ -201,6 +203,7 @@ This section contains the basic steps for migrating from the `Auth` module to th
 {% endinfo_block %}
 
 1. Run:
+
 ```bash
 composer require spryker-feature/spryker-core-back-office:dev-master
 ```
@@ -229,7 +232,7 @@ composer require spryker-feature/spryker-core-back-office:dev-master
         'type' => 'allow',
     ```
 
-3. Adjust `src/Pyz/Zed/Application/ApplicationDependencyProvider.php`.
+1. Adjust `src/Pyz/Zed/Application/ApplicationDependencyProvider.php`.
 
 Add `Spryker\Zed\Security\Communication\Plugin\Application\SecurityApplicationPlugin` to `getApplicationPlugins()`.
 
@@ -280,7 +283,7 @@ Remove `RestorePasswordMailTypePlugin()` and add `UserPasswordResetMailTypePlugi
     }
 ```
 
-6. Update `src/Pyz/Zed/Security/SecurityDependencyProvider.php` with code:
+6. Update `src/Pyz/Zed/Security/SecurityDependencyProvider.php` with the following code:
 
 ```php
 <?php
@@ -313,7 +316,7 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 }
 ```
 
-7. Update `src/Pyz/Zed/SecurityGui/SecurityGuiConfig.php` with code:
+7. Update `src/Pyz/Zed/SecurityGui/SecurityGuiConfig.php` with the following code:
 
 ```php
 <?php
@@ -333,7 +336,7 @@ class SecurityGuiConfig extends SprykerSecurityGuiConfig
 }
 ```
 
-8. Update `src/Pyz/Zed/UserPasswordReset/UserPasswordResetDependencyProvider.php` with code:   
+8. Update `src/Pyz/Zed/UserPasswordReset/UserPasswordResetDependencyProvider.php` with the following code:   
 
 ```php
 <?php
@@ -399,6 +402,7 @@ This action is required for the SprykerTests to be up-to-date.
 ```bash
 composer update spryker/application --with-dependencies
 ```
+
 2. Adjust `tests/PyzTest/Zed/Console/_data/cli_sandbox/config/Shared/config_default.php`.
 
     * Change:
@@ -417,6 +421,7 @@ composer update spryker/application --with-dependencies
     ],
     ];
     ```
+
     to:
 
     ```php
@@ -455,6 +460,7 @@ composer update spryker/application --with-dependencies
         'type' => 'allow',
     ],
     ```
+
     to:
 
     ```php
@@ -466,6 +472,7 @@ composer update spryker/application --with-dependencies
         'type' => 'allow',
     ],
     ```
+
     * Change:
 
     ```php
@@ -477,6 +484,7 @@ composer update spryker/application --with-dependencies
     ],
     ];
     ```
+
     to:
 
     ```php
@@ -513,6 +521,7 @@ composer update spryker/application --with-dependencies
     ],
     ];
     ```
+
     to:
 
     ```php
@@ -540,7 +549,7 @@ Run:
 console transfer:generate
 ```
 
-## Update database
+## Update the database
 
 {% info_block infoBox "Info" %}
 

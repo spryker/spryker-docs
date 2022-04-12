@@ -30,7 +30,7 @@ redirect_from:
 
 ## Upgrading from version 4.* to version 5.*
 
-Version 5 of the CMSGui module introduces the [multi-store functionality](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
+Version 5 of the `CMSGui` module introduces the [multi-store functionality](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
 
 {% info_block errorBox %}
 
@@ -42,7 +42,7 @@ _Estimated migration time: 30 minutes._
 
 To upgrade to the new version of the module, do the following:
 
-1. Require the update with composer: `"spryker/cms-gui": "^5.0.0"`
+1. Require the update using Composer: `"spryker/cms-gui": "^5.0.0"`
 2. Add the Store Relation Form Type Plugin:
 
 **src/Pyz/Zed/CmsGui/CmsGuiDependencyProvider.php**

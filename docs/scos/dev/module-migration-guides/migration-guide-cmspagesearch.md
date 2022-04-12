@@ -31,7 +31,7 @@ redirect_from:
 
 {% info_block errorBox "Prerequisites" %}
 
-This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/scos/dev/module-migration-guides/migration-guide-search.html#upgrading-from-version-89-to-version-810).
+This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html). Prior to upgrading this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/scos/dev/module-migration-guides/migration-guide-search.html#upgrading-from-version-89-to-version-810).
 
 {% endinfo_block %}
 
@@ -39,11 +39,12 @@ _Estimated migration time: 30 minutes_
 
 To upgrade the module, do the following:
 
-1. Update the module with composer:
+1. Update the module using Composer:
 
 ```bash
 composer update spryker/cms-page-search
 ```
+
 2. Remove all deprecated query expander plugins coming from the Search module (if any) from `Pyz\Client\CmsPageSearch\CmsPageSearchDependencyProvider`:
 
 ```php
@@ -52,6 +53,7 @@ Spryker\Client\Search\Plugin\Elasticsearch\QueryExpander\IsActiveQueryExpanderPl
 Spryker\Client\Search\Plugin\Elasticsearch\QueryExpander\LocalizedQueryExpanderPlugin
 Spryker\Client\Search\Plugin\Elasticsearch\QueryExpander\StoreQueryExpanderPlugin
 ```
+
 3. Enable the replacement plugins:
 
 **Pyz\Client\CmsPageSearch**
@@ -106,9 +108,10 @@ class CmsPageSearchDependencyProvider extends SprykerCmsPageSearchDependencyProv
 ```php
 Spryker\Zed\CmsPageSearch\Communication\Plugin\Search\CmsDataPageMapBuilder
 ```
+
 ## Upgrading from version 1.* to version 2.*
 
-Version 2.0.0 of the CmsPageSearch module introduces the [multi-store functionality](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
+Version 2.0.0 of the `CmsPageSearch` module introduces the [multi-store functionality](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
 
 To avoid the BC break, a synchronization behavior must be removed.
 

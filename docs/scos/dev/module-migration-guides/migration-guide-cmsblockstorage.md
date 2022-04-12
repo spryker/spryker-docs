@@ -24,7 +24,7 @@ redirect_from:
 
 ## Upgrading from version 1.* to version 2.*
 
-CmsBlockStorage version 2.0.0 introduces the following backward incompatible changes:
+`CmsBlockStorage` version 2.0.0 introduces the following backward incompatible changes:
 
 * Introduced the `spy_cms_block_storage.cms_block_key` field to store the `cms_block` identifier.
 * Introduced the `mappings` parameter to synchronization behavior to support the ability to get data by block names.
@@ -37,19 +37,21 @@ CmsBlockStorage version 2.0.0 introduces the following backward incompatible cha
 
 1. Upgrade to the new module version:
 
-    a. Upgrade the `CmsBlockStorage` module to version 2.0.0:
-    ```shell
+    1. Upgrade the `CmsBlockStorage` module to version 2.0.0:
+
+    ```bash
     composer require spryker/cms-block-storage:"^2.0.0" --update-with-dependencies
     ```
 
 2. Clear storage:
 
-    a. Truncate the `spy_cms_block_storage` database table:
+    1. Truncate the `spy_cms_block_storage` database table:
 
-    ```shell
+    ```bash
     TRUNCATE TABLE spy_cms_block_storage
     ```
-    b. Remove all keys from Redis:
+
+    2. Remove all keys from Redis:
 
     ```shell
     redis-cli --scan --pattern kv:cms_block:'*' | xargs redis-cli unlink
@@ -57,12 +59,13 @@ CmsBlockStorage version 2.0.0 introduces the following backward incompatible cha
 
 3. Update the database schema and generate classes:
 
-    a. Run the database migration:
+    1. Run the database migration:
 
     ```shell
     console propel:install
     ```
-    b. Generate transfer objects:
+
+    2. Generate transfer objects:
 
     ```shell
     console transfer:generate
@@ -70,14 +73,15 @@ CmsBlockStorage version 2.0.0 introduces the following backward incompatible cha
 
 4. Populate storage with the new version:
 
-    a. Get all the data about CMS blocks from database and publish it into Redis:
+    1. Get all the data about CMS blocks from database and publish it into Redis:
 
     ```shell
     console event:trigger -r cms_block
     ```
-    b. Verify that the `spy_cms_block_storage.key` column uses keys instead of IDs. For example, `cms_block:en_us:blck-1`, where `blck-1` is the CMS block key.
 
-    c. Verify that all the method overrides in `\Pyz\Zed\CmsBlockStorage\CmsBlockStorageDependencyProvider` match the signature provided in the package:
+    2. Verify that the `spy_cms_block_storage.key` column uses keys instead of IDs. For example, `cms_block:en_us:blck-1`, where `blck-1` is the CMS block key.
+
+    3. Verify that all the method overrides in `\Pyz\Zed\CmsBlockStorage\CmsBlockStorageDependencyProvider` match the signature provided in the package:
 
     ```php
     protected function getContentWidgetDataExpanderPlugins(): array
@@ -86,12 +90,13 @@ CmsBlockStorage version 2.0.0 introduces the following backward incompatible cha
 
 5. Enable CMS Block Key support for categories and products (optional):
 
-    a. Install CMS block key support for `CmsBlockCategoryStorage` and `CmsBlockProductStorage` modules:
+    1. Install CMS block key support for `CmsBlockCategoryStorage` and `CmsBlockProductStorage` modules:
 
-    ```shell
+    ```bash
     composer require spryker/cms-block-category-storage:"^1.4.0" spryker/cms-block-product-storage:"^1.4.0" --update-with-dependencies
     ```
-    b. Add plugins in `src/Pyz/Client/CmsBlockStorage/CmsBlockStorageDependencyProvider.php`:
+
+    2. Add plugins in `src/Pyz/Client/CmsBlockStorage/CmsBlockStorageDependencyProvider.php`:
 
     ```php        
     namespace Pyz\Client\CmsBlockStorage;
@@ -115,9 +120,9 @@ CmsBlockStorage version 2.0.0 introduces the following backward incompatible cha
     }
     ```
 
-    c. Trigger sync events:
+    3. Trigger sync events:
 
-    ```shell
+    ```bash
     console event:trigger -r cms_block_category
     console event:trigger -r cms_block_product
     ```

@@ -36,7 +36,7 @@ This release is a part of the **Decimal Stock** concept migration. When you upgr
 
 To upgrade to the new version of the module, do the following:
 
-1. Upgrade the **AvailabilityStorage** module to the new version:
+1. Upgrade the `AvailabilityStorage` module to the new version:
 
 ```bash
 composer require spryker/availability-storage: "^2.0.0" --update-with-dependencies

@@ -12,7 +12,7 @@ This document describes how to change the state of order items in reclamations. 
 The instructions assume that there is an existing order with the **Payment pending** status.
 
 To start working with item states in reclamations, do the following:
-1. Go to **Sales** > **Reclamations**.
+1. Go to **Sales&nbsp;<span aria-label="and then">></span> Reclamations**.
     This opens the **Reclamations** page.
 2. Next to the reclamation containing the items you want to change the state of, click **View**.
     This opens the **View reclamation** page.  
@@ -52,7 +52,7 @@ The following table describes the states you can select for order items.
 | Skip Timeout | Select this status to end the time period during which the customer can cancel the order. |
 | invoice-generate | Select this state to generate the invoice and send it to the customer. If invoice BCC is configured for your project, the copy of the invoice will be sent to the specified email address as well. You can trigger the invoice-generate only for the whole order. Even if you selected just some of the order items, the invoice is generated for the whole order.|
 | Ship | Select this state once the order is shipped.|
-| Stock-update | Select this state when you update the number of available products of products in **Products** > **Availability**. |
+| Stock-update | Select this state when you update the number of available products of products in **Products&nbsp;<span aria-label="and then">></span> Availability**. |
 |  Close| Select this state when your customer has successfully received the ordered items and is satisfied with their quality.|
 | Return | Select this state if the customer returns you either all or several items from the order.  |
 | Refund | Select this state in case of a refund.|

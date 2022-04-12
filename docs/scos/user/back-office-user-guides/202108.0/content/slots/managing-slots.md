@@ -25,7 +25,7 @@ You can:
 
 ## Prerequisites
 
-To start managing slots, go to **Content** > **Slots**.
+To start managing slots, go to **Content&nbsp;<span aria-label="and then">></span> Slots**.
 
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
@@ -130,7 +130,7 @@ In the *List of Blocks for [Name] Slot* section, you see the following:
 
 {% info_block infoBox "Info" %}
 
-Apart from the **ID** and **Actions**, the attributes described below depend on the CMS block settings defined in **Content** > **Blocks**. To learn about them, see reference information on the [Creating a CMS block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/creating-cms-blocks.html) page.
+Apart from the **ID** and **Actions**, the attributes described below depend on the CMS block settings defined in **Content&nbsp;<span aria-label="and then">></span> Blocks**. To learn about them, see reference information on the [Creating a CMS block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/creating-cms-blocks.html) page.
 
 {% endinfo_block %}
 

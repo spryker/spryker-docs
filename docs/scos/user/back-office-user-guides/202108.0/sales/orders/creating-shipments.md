@@ -18,7 +18,7 @@ This document describes how to create shipments for orders in the Back Office.
 ## Prerequisites
 
 To start working with order shipments, do the following.
-1. Go to **Sales** > **Orders**.
+1. Go to **Sales&nbsp;<span aria-label="and then">></span> Orders**.
 2. Next to the order you want to manage the shipment of, click **View**.
     This opens the **Order Overview** page.
 

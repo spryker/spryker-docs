@@ -8,7 +8,7 @@ This document describes how to edit user groups in the Back Office.
 
 ## Prerequisites
 
-To start working with user groups, go to **Users** > **User Groups**.
+To start working with user groups, go to **Users&nbsp;<span aria-label="and then">></span> User Groups**.
 
 Review the [reference information](#reference-information-editing-user-groups) before you start, or look up the necessary information as you go through the process.
 

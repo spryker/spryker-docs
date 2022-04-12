@@ -8,7 +8,7 @@ This document describes how to edit users in the Back Office.
 
 ## Prerequisites
 
-To start working with users, go to **Users** > **Users**.
+To start working with users, go to **Users&nbsp;<span aria-label="and then">></span> Users**.
 
 Review the [reference information](#reference-information-editing-users) before you start, or look up the necessary information as you go through the process.
 

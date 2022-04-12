@@ -11,7 +11,7 @@ This document describes how to change the state of order items in returns. Each 
 The instructions assume that there is an existing order with the **waiting for return** state.
 
 To start working with item states in returns, do the following:
-1. Go to **Sales** > **Returns**.
+1. Go to **Sales&nbsp;<span aria-label="and then">></span> Returns**.
     This opens the **Returns** page.
 2. Next to the return containing the items you want to change the state of, click **View**.
     This opens the **Return Overview** page.  

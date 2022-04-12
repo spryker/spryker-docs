@@ -7,7 +7,7 @@ template: concept-topic-template
 
 Spryker uses the Calculation module to calculate the cart totals that are displayed in the cart/checkout or when the order is placed.
 
-The Сalculation module extensively uses plugins to inject calculation algorithms.
+The Calculation module extensively uses plugins to inject calculation algorithms.
 
 ## How calculation works
 

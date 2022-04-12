@@ -34,7 +34,7 @@ To start the feature integration, overview and install the necessary features:
 
 | FEATURE OR GLUE API  | VERSION    | INTEGRATION GUIDE    |
 | ----------------- | ---------- | --------------------- |
-| Glue API: Spryker Core                | {{page.version}} | [Glue API: Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Glue API: Spryker Core                | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Company Account                       | {{page.version}}  | [Company account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html) |
 | Glue API: Customer Account Management | {{page.version}} | [Glue API: Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) |
 | Glue API: Glue Application            | {{page.version}} | [Glue API: Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
@@ -203,7 +203,7 @@ Set up the following behaviors.
 Generate the `UUID` column values in the `spy_company` database table:
 
 ```bash
-console uuid:generate Company spy_company 
+console uuid:generate Company spy_company
 ```
 
 
@@ -222,7 +222,7 @@ select count(*) from spy_company where uuid is NULL;
 Run the following command:
 
 ```bash
-console uuid:generate CompanyBusinessUnit spy_company_business_unit 
+console uuid:generate CompanyBusinessUnit spy_company_business_unit
 ```
 
 
@@ -241,7 +241,7 @@ select count(*) from spy_company_business_unit where uuid is NULL;
 Run the following command:
 
 ```bash
-console uuid:generate CompanyRole spy_company_role 
+console uuid:generate CompanyRole spy_company_role
 ```
 
 
@@ -278,7 +278,7 @@ select count(*) from spy_company_unit_address where uuid is NULL;
 Run the following command:
 
 ```bash
-console uuid:generate CompanyUser spy_company_user 
+console uuid:generate CompanyUser spy_company_user
 ```
 
 
@@ -783,7 +783,7 @@ To verify that feature is set up correctly go throw the following steps:
 
 1. [Authenticate as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).
 
-2. [Retrieve available company users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/searching-by-company-users.html#retrieve-available-company-users). 
+2. [Retrieve available company users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/searching-by-company-users.html#retrieve-available-company-users).
 
 3. Using the company user ID you’ve retrieved in the previous step, [authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user).
 Check that the response contains all the necessary data.
@@ -846,20 +846,20 @@ To make sure the `CompanyUserRestUserValidatorPlugin` is set up correctly, check
   - The collection of resources with the company business units your current company user belongs to.
   - `companies` and `addresses` relationships.
 - Send the `GET https://glue.mysprykershop.com/company-business-units/{% raw %}{{{% endraw %}company_business_unit_uuid{% raw %}}}{% endraw %}?include=companies,company-business-unit-addresses` request. Make sure that the response contains:
-  - Only the company business unit resource that your current company user belongs to. 
+  - Only the company business unit resource that your current company user belongs to.
   - `companies` and `addresses` relationships.
 - Send the `GET https://glue.mysprykershop.com/company-business-unit-addresses/{% raw %}{{{% endraw %}company_business_unit_address_uuid{% raw %}}}{% endraw %}` request. Make sure that response contains only the company business unit address of the business unit your current company user belongs to has.
 - Send the `GET https://glue.mysprykershop.com/company-roles/mine?include=companies` request. Make sure that the response contains:
-  - All the company roles assigned to your current company user. 
+  - All the company roles assigned to your current company user.
   - The `companies` relationship.
 - Send the `GET https://glue.mysprykershop.com/company-roles/{% raw %}{{{% endraw %}company_role_uuid{% raw %}}}{% endraw %}?include=companies` request. Make sure that the response contains:
-  - Only the company role resource assigned to your current company user. 
+  - Only the company role resource assigned to your current company user.
   - The `companies` relationship.
 - Send the `GET https://glue.mysprykershop.com/company-users?include=company-roles,companies,company-business-units,customers` request. Make sure that the response contains:
-  - All the company users of the company your current company user belong to. 
+  - All the company users of the company your current company user belong to.
   - The `company-roles`, `companies`, `company-business-units`, and `customers`relationships.
 - Send the `GET https://glue.mysprykershop.com/company-users/mine?include=company-roles,companies,company-business-units,customers` request. Make sure that the response contains:
-    - A collection of resources with all the company users that the current user can impersonate as. 
+    - A collection of resources with all the company users that the current user can impersonate as.
     - The `company-roles`, `companies`, `company-business-units`, and `customers` relationships.
 - Send the `GET https://glue.mysprykershop.com/company-users/{% raw %}{{{% endraw %}company_user_uuid{% raw %}}}{% endraw %}?include=company-roles,companies,company-business-units,customers` request. Make sure that the response contains:
     - One company user

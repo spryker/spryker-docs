@@ -1,6 +1,7 @@
 ---
 title: Connecting the Docker SDK
 description: Connect Docker SDK to your Spryker Cloud project.
+last_updated: Apr 03, 2022
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/connecting-docker-sdk
 originalArticleId: a4fe702d-b469-4224-a329-aba9f6c2c027
@@ -12,7 +13,20 @@ redirect_from:
 
 Spryker Docker SDK is a tool used to set up docker environments for Spryker projects.
 
-This is an optional tool, but we highly recommend installing it to make your local environment similar to the one in Spryker Cloud Commerce OS.
+This is an optional tool locally, but we highly recommend installing it to make your local environment similar to the one in Spryker Cloud Commerce OS.
+
+
+## Select a Docker SDK version
+
+Analyze your project's architecture and determine the Docker SDK version to use.
+
+Before deploying code to the cloud, you must define the Docker SDK version in `.git.docker`. For instructions, see [Choosing a Docker SDK version](/docs/scos/dev/the-docker-sdk/{{site.version}}/choosing-a-docker-sdk-version.html).
+
+{% info_block infoBox "Forking the Docker SDK" %}
+
+Spryker Cloud Commerce OS does not support forks of the Docker SDK. Your project's code must be compatible with the Docker SDK's main branch for a successful deployment.
+
+{% endinfo_block %}
 
 
 ## Connect Docker SDK
@@ -28,7 +42,6 @@ At the [Set up a Deploy file](/docs/scos/dev/setup/installing-spryker-with-docke
 ## Start from scratch with Docker SDK and Demo Shop
 
 If you want to start a new project from scratch, follow [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
-
 
 
 ## Next step

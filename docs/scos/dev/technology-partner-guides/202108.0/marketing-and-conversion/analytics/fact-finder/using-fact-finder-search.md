@@ -66,7 +66,7 @@ Basic parameters:
 
 Controller example:
 
-**Сode sample**
+**Code sample**
 
  ```php
 <?php

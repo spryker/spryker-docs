@@ -24,7 +24,7 @@ This topic describes how to assign and deassign filters from categories in the B
 
 
 1. Create the category filters you want to assign. For instructions, see [Define filter preferences](/docs/scos/user/back-office-user-guides/202108.0/merchandising/filter-preferences/define-filter-preferences.html)
-2. To start working with category filters, go to **Merchandising > Category Filters**.
+2. To start working with category filters, go to **Merchandising&nbsp;<span aria-label="and then">></span> Category Filters**.
 
 ## Assign filters to a category
 
@@ -44,7 +44,7 @@ This topic describes how to assign and deassign filters from categories in the B
 
 ## Deassign filters from categories
 
-1. Go to **Merchandising** > **Category Filters**.
+1. Go to **Merchandising&nbsp;<span aria-label="and then">></span> Category Filters**.
 2. In the **CATEGORY TREE** pane, select the category you want to deassign filters from.
     This displays the **CATEGORY FILTERS FOR {Category name}** pane.    
 3. Deassign filters via one of the following ways:

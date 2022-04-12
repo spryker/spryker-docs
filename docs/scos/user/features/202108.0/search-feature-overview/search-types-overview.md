@@ -29,7 +29,7 @@ If you set up a multi-language store, the search function automatically checks a
 ## Textual search
 By default, all content on CMS and Product Pages, such as product name, description text, or allocated attributes, is searchable. Additionally, Product Attributes and can be boosted in the search results. You can easily define which products or content should be included into or excluded from the full-text search.
 
-For details on how you can manage the search preferences, see [Managing search preferences](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/search-and-filters/managing-search-preferences.html).
+For details about how you can manage the search preferences, see [Managing search preferences](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/search-and-filters/managing-search-preferences.html).
 
 ## Current constraints
 

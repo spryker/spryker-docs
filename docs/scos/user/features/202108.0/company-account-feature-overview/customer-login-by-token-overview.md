@@ -16,7 +16,7 @@ redirect_from:
 
 Most modern e-commerce applications let customers log in by token or, in other words, they support token-based authentication. They do so for several good reasons:
 
-* Tokens are stateless: They are stored on the client side and already contain all the information they need for authentication. No session information on the server is great for scaling your application.
+* Tokens are stateless: They are stored on the client side and already contain all the information they need for authentication. No session information about the server is great for scaling your application.
 
 * Tokens are secure: Tokens (not cookies) are sent on every request, which helps to prevent attacks. Since the session is not stored, there is no session-based information that could be manipulated.
 

@@ -65,7 +65,7 @@ Approval Process as such introduces steps that company employees must follow to 
 Here’s how approvals fit into the buying process:
 
 **1. Submitting the request for approval**
-The Approval Process workflow is flexible and starts when a buyer submits the request for approval through the company user account in the shop application. The approval request can be submitted after any step of the checkout depending on the project configuration. The buyer requests approval from the appropriate approver through the Approver widget. Check [Shop Guide - Submit a request for approval](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html#approval-process-on-the-storefront) for details on how to submit a request for approval. After the buyer has requested the approval, the request gets the **Waiting** status and cannot be edited.
+The Approval Process workflow is flexible and starts when a buyer submits the request for approval through the company user account in the shop application. The approval request can be submitted after any step of the checkout depending on the project configuration. The buyer requests approval from the appropriate approver through the Approver widget. Check [Shop Guide - Submit a request for approval](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html#approval-process-on-the-storefront) for details about how to submit a request for approval. After the buyer has requested the approval, the request gets the **Waiting** status and cannot be edited.
 
 {% info_block warningBox "Note" %}
 

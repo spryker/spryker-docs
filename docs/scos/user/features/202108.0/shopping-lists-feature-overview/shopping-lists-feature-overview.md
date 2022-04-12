@@ -30,11 +30,11 @@ Company users can create not just one but multiple shopping lists to be used for
 
 {% info_block infoBox "Example" %}
 
-For instance, these could be separate shopping lists for daily, weekly, and monthly purchases.
+For example, these could be separate shopping lists for daily, weekly, and monthly purchases.
 
 {% endinfo_block %}
 
-The detailed information on managing shopping lists is represented in the [Multiple and Shared Shopping Lists overview](#multiple-and-shared-shopping-lists-on-the-storefront) section.
+The detailed information about managing shopping lists is represented in the [Multiple and Shared Shopping Lists overview](#multiple-and-shared-shopping-lists-on-the-storefront) section.
 
 ## Permissions management for shared shopping lists
 

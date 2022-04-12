@@ -32,7 +32,7 @@ A Back Office user can define the following:
 A Back Office user can add a product sets to any page by [creating a product set content item](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html) and [adding it to CMS pages and blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
 
 
-For more details on product sets, check the video:
+For more details about product sets, check the video:
 
 {% wistia 9co7uw35a9 720 480 %}
 

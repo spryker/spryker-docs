@@ -80,7 +80,7 @@ Buyers can do the following actions using the Wishlists feature:
 
 ## Video tutorial
 
-For more details on wishlists, check the video:
+For more details about wishlists, check the video:
 
 {% wistia g7hzsa9xw7 720 480 %}
 

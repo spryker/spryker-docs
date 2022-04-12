@@ -32,7 +32,7 @@ Currently, the feature has the following functional constraints which are going 
 
 ## Video tutorial
 
-For more details on managing ratings and reviews, check the video:
+For more details about managing ratings and reviews, check the video:
 
 {% wistia efvyq9vfb8 720 480 %}
 

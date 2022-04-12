@@ -79,7 +79,7 @@ Quick Add to Cart quantity rules fall under limitations set by [quantity restric
 
 When manually filling the **SKU/Name* field, the quantity selector allows a visitor to put the valid numbers based on [quantity restrictions](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html) set for that SKU. That means, for example, if a concrete product has the minimum quantity restriction for 4 units, the interval restriction to 2 units, and the maximum quantity is 12, the shopper can put 4, 6, 8, 10, and 12 items to cart.
 
-The **Quantity** field in the Quick Order adheres to these quantities. Therefore, if the shopper enters an invalid number into the **Quantity** field, for instance, 5, the number will automatically change to the next higher quantity set in quantity restrictions, that is 6.
+The **Quantity** field in the Quick Order adheres to these quantities. Therefore, if the shopper enters an invalid number into the **Quantity** field, for example, 5, the number will automatically change to the next higher quantity set in quantity restrictions, that is 6.
 
 ## Product prices for Quick Order
 

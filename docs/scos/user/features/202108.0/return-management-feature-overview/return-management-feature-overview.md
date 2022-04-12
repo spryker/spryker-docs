@@ -54,7 +54,7 @@ The Return items can have the following states in the Order Management System (O
 <!---
 {% info_block infoBox "Return states on the Storefront" %}
 
-The preceding states are the default ones in the OMS. You can display them as they are on the Storefront as well, or name the states differently for the Storefront users. For details on how to give custom names to the return states on the Storefront, see *Display Custom Names for Order Item States on the Storefront*.
+The preceding states are the default ones in the OMS. You can display them as they are on the Storefront as well, or name the states differently for the Storefront users. For details about how to give custom names to the return states on the Storefront, see *Display Custom Names for Order Item States on the Storefront*.
 
 {% endinfo_block %}
 -->
@@ -64,7 +64,7 @@ The relation of sales order items statuses and the return states is as follows:
 
 ## Return slip
 
-Buyers and Back Office users can have a paper version of the return by printing the automatically generated *return slip*. The return slip contains return and sales order references, details on the returnable sales order items, and a barcode generated based on the return reference.
+Buyers and Back Office users can have a paper version of the return by printing the automatically generated *return slip*. The return slip contains return and sales order references, details about the returnable sales order items, and a barcode generated based on the return reference.
 ![Return slip](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Return+Management/Return+Management+Feature+Overview/print-return-slip.png)
 
 ## Return Management on the Storefront
@@ -79,7 +79,7 @@ The [Product Bundles](/docs/scos/user/features/{{page.version}}/product-bundles-
 
 {% endinfo_block %}
 
-Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the Back Office user [processes the return](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-returns.html). See [Return items states](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/managing-returns.html) for details on the return states.
+Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the Back Office user [processes the return](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-returns.html). For details about the return states, see [Return items states](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/managing-returns.html).
 
 {% info_block infoBox "Info" %}
 
@@ -93,7 +93,7 @@ The following figure shows how to create a return, view its details and print a 
 
 ## Return Management in the Back Office
 
-A Back Office user can create returns for the [returnable items](#returnable-items-and-a-return-policy) from the order details page of the Back Office. See [Back Office user guide - Managing orders](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-returns.html) for details. Also, a Back Office user can view returns, change their states, print a return slip, and cancel the returns.  See [Back Office user guide - Manging returns](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/managing-returns.html)  for instructions on how to manage the returns in the Back Office.
+A Back Office user can create returns for the [returnable items](#returnable-items-and-a-return-policy) from the order details page of the Back Office. For details, see [Back Office user guide - Managing orders](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-returns.html). Also, a Back Office user can view returns, change their states, print a return slip, and cancel the returns. For details about how to manage the returns in the Back Office, see [Back Office user guide - Manging returns](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/managing-returns.html).
 
 {% info_block infoBox "Return management process" %}
 
@@ -104,7 +104,8 @@ To define the most suitable return management process for your project, to learn
 
 ## Video tutorial
 
-Check out this video to get more details on how Return Management works:
+Check out this video to get more details about how Return Management works:
+
 {% wistia kqxwnzjo3o 960 720 %}
 
 ## Current constraints

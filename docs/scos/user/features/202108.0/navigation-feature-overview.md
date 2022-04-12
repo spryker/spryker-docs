@@ -94,7 +94,7 @@ To learn how a marketing content manager can add content to the Storefront, see 
 
 A content item template defines how a content item is displayed on the Storefront. The following templates are shipped for the Navigation content item by default:
 
-* *Tree structure after the first level*—the first level of navigation nodes is displayed in a horizontal line. Hovering over an element opens a menu showing all the child nodes as a list.
+* *Tree structure after the first level*—the first level of navigation nodes is displayed in a horizontal line. Holding the pointer over an element opens a menu, showing all the child nodes as a list.
 * *Inline navigation*—the first level of navigation nodes is displayed as a list. Child nodes are not displayed.
 * *List navigation*—the first level of navigation nodes is displayed as a list. Child nodes are not displayed.
 * *Tree structure*—all the levels of navigation nodes are displayed as a list.
@@ -124,7 +124,7 @@ A content item template defines how a content item is displayed on the Storefron
 
 </details>
 
-For more details on navigation, check the video:
+For more details about navigation, check the video:
 
 {% wistia anlwttuexm 720 480 %}
 

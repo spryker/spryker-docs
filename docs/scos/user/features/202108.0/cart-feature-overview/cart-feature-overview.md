@@ -26,7 +26,7 @@ Your customers can place orders faster by adding simple products to cart from th
 
 The feature supports [product groups](/docs/scos/user/features/{{page.version}}/product-groups-feature-overview.html). If simple products are grouped, you can browse and add these products to cart from the **Category** page.
 
-In a Spryker shop, the shopping cart widget is displayed in the header. With the widget, customers can easily create new shopping carts and view the existing ones by hovering over the cart icon.
+In a Spryker shop, the shopping cart widget is displayed in the header. With the widget, customers can easily create new shopping carts and view the existing ones by pointing to the cart icon.
 
 ## Related Business User articles
 

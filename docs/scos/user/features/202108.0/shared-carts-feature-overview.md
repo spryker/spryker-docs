@@ -20,7 +20,7 @@ There are two ways to access a shopping cart:
 
 New items are added to the shopping cart by clicking on **Add to Cart** on the product details page.
 
-To share a shopping cart, a user needs to click **Share cart** in the **Actions** column (on the **Shopping Cart** page, in **My Account** menu) for a cart they would like to share. See the [Shared Cart on the Storefront](#shared-cart-on-the-storefront) section.
+To share a shopping cart, a user needs to click **Share cart** in the **Actions** column (on the **Shopping Cart** page, in **My Account** menu) for a cart they want to share. See the [Shared Cart on the Storefront](#shared-cart-on-the-storefront) section.
 
 ## Permissions management for shared shopping carts
 
@@ -114,7 +114,7 @@ The _**Full access**_ permission allows:
 
 11. **Duplicating a shopping cart**: The shopping cart can be duplicated on the **Shopping Cart** page.
 
-12. **Dismissing a shared shopping cart**: Company users within one business unit can share carts. Such carts can be dissmissed if they, for example, are no longer needed.
+12. **Dismissing a shared shopping cart**: Company users within one business unit can share carts. Such carts can be dismissed if they, for example, are no longer needed.
 
 13. **Deleting a shopping cart**: The shopping cart can be deleted on the **Shopping Cart** page. Deleting a shared shopping cart also deletes it for users it has been shared with.
 

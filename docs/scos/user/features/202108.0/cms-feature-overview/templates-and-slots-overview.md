@@ -139,8 +139,8 @@ To learn what a content manager can do with content items in the Back Office&nbs
 
 A template with slots can be applied to any page. Even though a content manager can manage all page types in the Back Office, they can only apply templates with slots to the following:
 
-* Category pages in the Back Office&nbsp;<span aria-label="and then">></span> **Category&nbsp;<span aria-label="and then">></span> Create category** section. See [Creating Categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html) for more information.
-* CMS pages in the Back Office&nbsp;<span aria-label="and then">></span> **Pages&nbsp;<span aria-label="and then">></span> Create new CMS page** section. See [Creating a CMS Page](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html) for more information.
+* Category pages in the Back Office&nbsp;<span aria-label="and then">></span> **Category&nbsp;<span aria-label="and then">></span> Create category** section. For more information, see [Creating Categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html).
+* CMS pages in the Back Office&nbsp;<span aria-label="and then">></span> **Pages&nbsp;<span aria-label="and then">></span> Create new CMS page** section. For more information, see [Creating a CMS Page](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html).
 
 A developer can apply templates with slots to all the other page types.
 
@@ -188,7 +188,7 @@ The slot list contains the following information:
 | status | Defines whether the slot is active or not where "0" stands for "inactive" and "1" stands for "active". If a slot is inactive, it is not rendered in the Storefront by the slot widget. | 1 |
 
 ## Content providers
-A content provider is a source from where Slot Widget fetches content to embed into slots and, subsequently, render it in the Storefront.  With templates and slots, you can use slots to embed the content created in your Spryker project or CMS editors of technology partners (for example, [CoreMedia](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html), [E-spirit](/docs/scos/user/technology-partners/{{page.version}}/content-management/e-spirit.html), [Styla](/docs/scos/user/technology-partners/{{page.version}}/content-management/styla.html), [Magnolia](/docs/scos/user/technology-partners/{{page.version}}/content-management/magnolia.html)).
+A content provider is a source from where Slot Widget fetches content to embed into slots and, subsequently, render it in the Storefront. With templates and slots, you can use slots to embed the content created in your Spryker project or CMS editors of technology partners (for example, [CoreMedia](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html), [E-spirit](/docs/scos/user/technology-partners/{{page.version}}/content-management/e-spirit.html), [Styla](/docs/scos/user/technology-partners/{{page.version}}/content-management/styla.html), [Magnolia](/docs/scos/user/technology-partners/{{page.version}}/content-management/magnolia.html)).
 
 With templates and slots, the following applies:
 
@@ -202,7 +202,7 @@ The following schema shows how content is managed with the help of templates wit
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/templates-and-slots.png)
 
 ## Visibility conditions
-When the content manager assigns a CMS block to a slot, it is displayed in all the pages to which the template with the slot is applied.  To narrow down the number of pages to a desired selection, the content manager can define visibility conditions for each CMS block assigned to a slot. Visibility conditions are defined by selecting particular pages in which the content of a CMS block will be displayed. When visibility conditions are defined, the slot widget checks if the CMS block should be rendered in an opened page and either renders or skips it.
+When the content manager assigns a CMS block to a slot, it is displayed in all the pages to which the template with the slot is applied. To narrow down the number of pages to a desired selection, the content manager can define visibility conditions for each CMS block assigned to a slot. Visibility conditions are defined by selecting particular pages in which the content of a CMS block will be displayed. When visibility conditions are defined, the slot widget checks if the CMS block should be rendered in an opened page and either renders or skips it.
 
 Page identifiers used to define visibility conditions depend on the page type to which a template with slots is applied. You can check identifiers for each page type in the following table.
 

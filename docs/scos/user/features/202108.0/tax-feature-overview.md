@@ -22,7 +22,7 @@ redirect_from:
 
 The *Tax* feature lets you define taxes for the items you sell. The feature is represented by two entities: tax rates and tax sets.
 
-The tax rate is the percentage of the sales price that buyer pays as a tax. In the default Spryker implementation, the tax rate is defined per country where the tax applies. See [Managing tax rates](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-rates/managing-tax-rates.html) for details on how to create and manage tax rates for countries in the Back Office.
+The tax rate is the percentage of the sales price that buyer pays as a tax. In the default Spryker implementation, the tax rate is defined per country where the tax applies. For details about how to create and manage tax rates for countries in the Back Office, see [Managing tax rates](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-rates/managing-tax-rates.html).
 
 A tax set is a set of tax rates. You can [define tax sets in the Back office](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/managing-tax-sets.html) or[ import tax sets](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-tax.csv.html) into your project.
 
@@ -63,23 +63,23 @@ Avalara is mostly meant for the USA.
 
 {% endinfo_block %}
 
-To use Avalara, you need to [set up the AvaTax platform](https://help.avalara.com/Avalara_AvaTax_Update/Set_up_AvaTax_Update) for your application and [integrate Avalara](/docs/scos/dev/technology-partner-guides/{{page.version}}/taxes/avalara/integrating-avalara.html) into your project. Once you do that, you can [apply Avalara tax codes](https://help.avalara.com/Avalara_AvaTax_Update/Avalara_tax_codes) to automate tax calculations for your shop.   
+To use Avalara, [set up the AvaTax platform](https://help.avalara.com/Avalara_AvaTax_Update/Set_up_AvaTax_Update) for your application and [integrate Avalara](/docs/scos/dev/technology-partner-guides/{{page.version}}/taxes/avalara/integrating-avalara.html) into your project. Once you do that, you can [apply Avalara tax codes](https://help.avalara.com/Avalara_AvaTax_Update/Avalara_tax_codes) to automate tax calculations for your shop.
 
 You can set the Avalara tax codes for the following entities by importing the codes:
 
-* Abstract product: See [File details: product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html) for details on import.
-* Product option: See [File details: product_option.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html) for details on import.
-* Shipment: [See File details: shipment.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-shipment.csv.html) for details on import.
+* Abstract product: For details about import, see [File details: product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html).
+* Product option: For details about import, see [File details: product_option.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html).
+* Shipment: For details about import, see [File details: shipment.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-shipment.csv.html).
 
 {% info_block infoBox %}
 
-Since shipment and products fall under different taxability categories, Avalara tax code for shipment is different from that of the abstract product or product option. See [Avalara tax code search](https://taxcode.avatax.avalara.com/) for details on the codes and categories.
+Since shipment and products fall under different taxability categories, Avalara tax code for shipment is different from that of the abstract product or product option. For details about the codes and categories, see [Avalara tax code search](https://taxcode.avatax.avalara.com/).
 
 {% endinfo_block %}
 
 The Avalara codes are not displayed on the Storefront or in the Back Office. They are processed in the background to define taxes for order items. Avalara calculates taxes during the checkout, and, by default, the taxes are shown at the final checkout step.
 
-When calculating taxes, Avalara takes the items' [warehouse addresses](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html#defining-a-warehouse-address) into account. Therefore, each order item you calculate a tax for with Avalara, should have a warehouse assigned. See [Warehouse assignment](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html#warehouse-assignment-to-order-items-with-avalara-integration-only) to order items to learn how warehouses are assigned to order items by default.
+When calculating taxes, Avalara takes the items' [warehouse addresses](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html#defining-a-warehouse-address) into account. Therefore, each order item you calculate a tax for with Avalara, must have a warehouse assigned. To learn how warehouses are assigned to order items by default, see [Warehouse assignment to order items (with Avalara integration only)](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html#warehouse-assignment-to-order-items-with-avalara-integration-only).
 
 ## Tax feature on the Storefront
 

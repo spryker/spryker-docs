@@ -26,8 +26,8 @@ Bundles are handled in different ways:<br>For example, a marketing bundle of two
 {% endinfo_block %}
 
 
-* A bundle can contain multiple quantities of the same item
-* The availability of a bundle product is equal to the item with the lowest availability
+* A bundle can contain multiple quantities of the same item.
+* The availability of a bundle product is equal to the item with the lowest availability.
 
 ## Product-Bundle module
 
@@ -51,7 +51,7 @@ Product bundles are two or more existing products combined into a new type of pr
 
 ## Availability calculation
 
-Bundle availability is calculated from bundled product availability. When bundled product availability is changed, for example state machine move through reserved flags then all bundles is updated accordingly.
+Bundle availability is calculated from bundled product availability. When bundled product availability is changed, for example, a state machine moves through reserved flags, then all bundles are updated accordingly.
 
 Bundle is updated when:
 

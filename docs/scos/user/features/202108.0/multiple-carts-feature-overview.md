@@ -27,7 +27,7 @@ Customers can create not just one but multiple shopping carts to be used for dif
 
 {% info_block infoBox %}
 
-These could be, for instance, a shopping cart for daily purchases or a shopping cart for goods that you purchase once in a month.
+These could be, for example, a shopping cart for daily purchases or a shopping cart for goods that you purchase once in a month.
 
 {% endinfo_block %}
 
@@ -44,7 +44,7 @@ The table with shopping carts shows details for each of the carts, including:
 
 ![Multiple carts list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/multiple-cart-list.png)
 
-The table bellow provides detailed information on the possible actions to manage shopping carts.
+The table bellow provides detailed information about the possible actions to manage shopping carts.
 
 | ACTION | DESCRIPTION |
 | --- | --- |

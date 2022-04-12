@@ -33,7 +33,7 @@ When a customer puts a gift card to cart, they can change a variant, quantity an
 
 It is not possible to pay a gift card by using another gift card, even if the order contains other products with the gift card. Also, the range of payment methods that can be used to pay for gift cards can be limited. That is, you can filter out the payment methods for gift cards. Payment methods available for gift cards can be specified in the configuration file. By default, invoice payment method is not available for gift cards to avoid fraud.
 
-After a customer buys a gift card, they get a code sent to the specified e-mail address.
+After a customer buys a gift card, they get a code sent to the specified email address.
 
 Once the gift card code has been generated, it becomes a voucher that can be used as a payment method.
 
@@ -43,7 +43,7 @@ The following diagram shows the gift card product-voucher transition workflow:
 When buying a gift card, the shipment method selection step is skipped on Yves. In the background, there is a “noshipment” constant in the app configuration, which can be selected to configure shipment for a specific type of products, in our case, for gift cards.
 
 
-When customer buys a gift card, you can use the default OMS states for the GiftCardSubprocess to be displayed on the Storefront, or set custom state names so they would make more sense for the Storefront users. For details on how to set the custom state names on the Storefront for refunded orders, see [HowTo - Display custom names for order item states on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
+When customer buys a gift card, you can use the default OMS states for the GiftCardSubprocess to be displayed on the Storefront, or set custom state names so they would make more sense for the Storefront users. For details about how to set the custom state names on the Storefront for refunded orders, see [HowTo - Display custom names for order item states on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
 
 ## Buying with gift cards
 
@@ -58,7 +58,7 @@ With a gift card code in place, users get an alternative payment method to pay f
 Schematically, the order placement process with a gift card is as follows:
 ![Order placement process schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Gift+Cards/Gift+Cards+Purchase+and+Redeeming/gc_payment_process.png)
 
-In the Back Office, a Back Office user can see if an order was paid with a gift card and/or a regular payment method. The amount paid with the gift card as well as the amount paid with a regular payment method (if applicable) are shown as well.
+In the Back Office, a Back Office user can see whether an order was paid with a gift card or regular payment method. The amount paid with the gift card as well as the amount paid with a regular payment method (if applicable) are shown as well.
 ![Gift card payment method](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Gift+Cards/Gift+Cards+Purchase+and+Redeeming/gift_card_payment_method.png)
 
 ## Gift card value checking strategies
@@ -71,7 +71,7 @@ Replacement means that if after using a gift card it has some remaining balance,
 
 For this strategy, gift cards have a pattern for codes generation. For each gift card code generation, a pattern from the previous gift card is used. For example, if the code X-GC-{number} is used for gift cards generation, where {number} is the pattern, the 100 Euro gift card code generated for customers would be X-GC-1, and the code generated for the remaining 40 Euro would be X-GC-2.
 
-The main advantage of this strategy is that one and the same gift card code can not be used twice if the gift card has some remaining balance after a purchase has been made. This might be especially useful, for example, in case when a customer wants another customer to use a part of the value from their gift card. In this case, the initial gift card owner would get an e-mail with the new code for the remaining gift card value.
+The main advantage of this strategy is that one and the same gift card code can not be used twice if the gift card has some remaining balance after a purchase has been made. This might be especially useful, for example, in case when a customer wants another customer to use a part of the value from their gift card. In this case, the initial gift card owner would get an email with the new code for the remaining gift card value.
 
 ### Balance strategy
 

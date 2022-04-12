@@ -16,7 +16,7 @@ redirect_from:
   - /docs/en/company-roles-reference-information
 ---
 
-Usually employees within a company have different roles (for example, purchasing, administration, supervision). These roles are related to Company Users and are referred to as **Company Roles**. A role can be default (“is_default” flag), which means that it is used for all new users automatically.
+Usually employees within a company have different roles (for example, purchasing, administration, supervision). These roles are related to Company Users and are referred to as **Company Roles**. A role can be default (“is_default” option), which means that it is used for all new users automatically.
 
 Upon initial creation of the first Company User, the default role is Admin. After the Admin user has been created, he/she creates the structure of the company and can define the default role to be used further on.
 
@@ -133,7 +133,7 @@ Every company role includes a set of permissions that can be enabled/disabled ac
   - **Remove item from cart**—allows deleting the products from the cart.
   - **Place Order**—allows placing the order. Without this permission enabled, a user will have error when trying to submit the order. If the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) feature is integrated into your project, then **Buy up to grand total** permission is also required in order to be able to place an order.
   - **Buy up to grand total (Requires "Send cart for approval")**—sets a limit for the grand total of the cart. If the amount in the cart is bigger than the limit set in this permission, the user will not be able to proceed to checkout. Works with **Send cart for approval** permission. This permission is available after enabling the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) feature.
-  - **Approve up to grand total**—with this permission enabled, a user can approve the the cart. See [Approval Feature Overview](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) for more details.
+  - **Approve up to grand total**—with this permission enabled, a user can approve the the cart. For more details, see [Approval Feature Overview](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html).
   - **View Business Unit orders**—with this permission enabled, a user can see not only their own orders, but also the orders of their business unit.
   - **View Company orders**—with this permission enabled, a user can see not only their own orders, orders of their business unit, but also the orders of their comapny.
   - **Send cart for approval (Requires "Buy up to grand total")**—lets a user send the cart for approval. Works together with Buy up to grand total permission. See [Approval Feature Overview](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) for more details.

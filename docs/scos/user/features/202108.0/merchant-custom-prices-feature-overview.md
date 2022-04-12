@@ -55,7 +55,7 @@ The specific prices apply only to merchant relation assignee (business units, as
 
 ![Prices for merchant referring to a specific relation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Prices+per+Merchant+Relations/Prices+per+Merchant+Relation+Feature+Overview/merchant_prices.png)
 
-Besides setting specific prices for individual merchant relations products manually, the prices can also be added in bulk by importing them from a CSV file. The CSV file for import must contain populated `merchant_relation_key`, `abstract_sku and/or concrete_sku`, `price_type`, `store,currency`, `price_net`, `price_gross` fields.
+Besides setting specific prices for individual merchant relations products manually, the prices can also be added in bulk by importing them from a CSV file. The CSV file for import must contain populated `merchant_relation_key`, `abstract_sku`, `concrete_sku`, `price_type`, `store,currency`, `price_net`, `price_gross` fields.
 
 To import the specific prices for merchant relations from the CSV file residing in `data/import` inside the module `PriceProductMerchantRelationshipDataImport`, run
 

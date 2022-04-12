@@ -151,55 +151,28 @@ To give away a promotional product for free, select percentage calculator type a
 
 ## Reference information: Define under which conditions the discount can be applied
 
-
+Similarly do [defining discounted products](#discount-application-type-query-string), the conditions on which a discount is a applied are defined using a query string.
 
 Example: Discount is applied if five or more items are in the cart and it is Tuesday or Wednesday.
 ![Discount Condition](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/discount-condition.png)
 
-The minimum order amount value specifies the threshold which should be reached for the products in a cart with a certain attribute to be discounted. When added to cart, products with the attribute specified by a query are measured against the threshold. By default, the minimum order amount value is 1. It means that any discount is applied if the number of items (that meet the rules) inside the cart is superior or equal to 1.
+The **THE DISCOUNT CAN BE APPLIED IF THE QUERY APPLIES FOR AT LEAST X ITEM(S).** defines a minimum number of items that must fulfill the query for the discount to be applies. By default, the minimum order amount value is 1. It means that the discount is applied if there is one item in a cart the fulfills the query.
 
 Example: Discount is applied if 4 or more items with the Intel Core processor are in the cart.
 ![Threshold](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/threshold.png)
 
-**More advanced example**
 
-To create a discount that will have an extensive number of conditions, you use the condition **groups**. Meaning you collect different rules under different groups and split them into separate chunks.
-Let's say you have received a task to create a discount with the following conditions:
 
-**B2B Scenario**
-The discount is going to be applied if one of the following is fulfilled:
-* The price mode is **Gross**, and the subtotal amount is greater or equal: 100 € (Euro) **OR** 115 CHF (Swiss Franc)
+## Reference information: Generate voucher codes
 
-**OR**
-
-* The price mode is **Net**, and the subtotal amount is greater or equal: 80 € (Euro) **OR** 95 CHF (Swiss Franc)
-
-The setup will look like the following:
-![B2B scenario](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/b2b-scenario.png)
-
-**B2C Scenario**
-The discount is going to be applied if one of the following is fulfilled:
-* On **Tuesday**, and the item color is red, this item does not have the label **New**, and the customer adds at least two items (or more) to a cart
-
-**OR**
-
-* On **Thursday**, and the item color is white, this item does not have the label **New**, and the customer adds at least two items (or more) to a cart
-
-The setup will look like the following:
-![B2C scenario](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Discount+Conditions:+Reference+Information/b2c-scenario.png)
-
-#### <a name="voucher-code"></a>Voucher code tab
-
-This section describes the information that you need to know when working with voucher codes in the *Voucher code* tab.
-
-You enter and select the following attributes in **Edit Discount** > **Voucher code**:
+This section describes the information that you need to know when working with voucher codes in the **Voucher code** tab.
 
 | ATTRIBUTE | DESCRIPTION |  
 | --- | --- |
-| Quantity | Number of vouchers you need to generate. |  
-| Custom code | When generating a single voucher code, you can enter it manually. If you want to create multiple codes at once, add a "Random Generated Code Length" to the custom code.|  
-| Add Random Generated Code Length | This value defines the number of random characters to be added to the custom code. If you do not add any custom value, you can just select this value. The system will generate the codes with the length you select. |  
-| Max number of uses (0 = Infinite usage) | Defines the maximum number of times a voucher code can be redeemed in a cart. |  
+| QUANTITY | Number of vouchers to generate. |  
+| CUSTOM CODE | When generating a single voucher code, you can enter it manually. If you want to create multiple codes at once, add a "Random Generated Code Length" to the custom code. |  
+| ADD RANDOM GENERATED CODE LENGTH | A number of random alphanumeric symbols to add to the code. If you entered  |  
+| MAX NUMBER OF USES | Defines the maximum number of times a voucher code can be redeemed in a cart. |  
 
 Use the placeholder **[code]** to indicate the position you want random characters to be added to.
 <br>**For example:**

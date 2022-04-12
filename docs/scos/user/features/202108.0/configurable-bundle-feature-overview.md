@@ -88,7 +88,7 @@ By default, it is not obligatory to select products for all the slots to order a
 Schematically, a configurable bundle looks as follows:
 ![Config Bundle Schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/slots+scheme.png)
 
-When a Storefront User selects a product for a slot, the product is picked. For example, if they select *Base cabinet with 2 shelves SKU12236* for the slot *Base Cabinet*, they see the following message: "You have picked `Base cabinet with 2 shelves SKU 12236` product to fill the slot `Base Cabinet`.".
+When a Storefront User selects a product for a slot, the product is picked. For example, if they select **Base cabinet with 2 shelves SKU12236** for the slot **Base Cabinet**, they see the following message: "You have picked `Base cabinet with 2 shelves SKU 12236` product to fill the slot `Base Cabinet`.".
 
 
 
@@ -97,7 +97,7 @@ When a Storefront User selects a product for a slot, the product is picked. For 
 On the **Сart** page, items are grouped by configured bundles.
 ![Configured bundle on the Cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/configurable-bundle-in-cart.png)
 
-A Storefront User can add a note to a configurable bundle. The note is displayed with the bundle on the *Checkout Summary* and **Order Details** pages.
+A Storefront User can add a note to a configurable bundle. The note is displayed with the bundle on the **Checkout Summary** and **Order Details** pages.
 
 ![Configurable bundle note](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/configurable-bundle-note.png)
 

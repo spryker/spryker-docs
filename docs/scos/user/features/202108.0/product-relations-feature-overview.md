@@ -25,7 +25,7 @@ For example, you can:
 
 Product relations are established only between abstract products. An abstract product can have multiple product relations.
 
-See [Creating a Product Relation](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/create-product-relations.html) to learn how a Back Office user can create a product relation.
+To learn how a Back Office user can create a product relation, see [Creating a Product Relation](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/create-product-relations.html).
 
 A developer can import<!-- link to new import page --> product relations.
 

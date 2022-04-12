@@ -21,8 +21,8 @@ An in-built cron-job will switch the prices on the specified dates for all the s
 ## Price types
 
 Currently, the feature only works with the following price types:
-* default
-* original
+* Default
+* Original
 
 A default price is the one that is shown as a real price of product.
 
@@ -42,8 +42,8 @@ Even though it is possible to use any time zone for defining a price schedule, i
 ## Defining product price schedules
 
 You can define price schedules as follows:
-Import a csv file with a list of prices. This option is for bulk operations. You can import the file via [Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/creating-scheduled-prices.html) or [manually](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/pricing/file-details-product-price-schedule.csv.html).
-Add a price schedule to a single abstract or concrete product. This option is suitable for working with a small number of products. See [Editing an Abstract Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/editing-abstract-products.html).
+Import a CSV file with a list of prices. This option is for bulk operations. You can import the file via [Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/creating-scheduled-prices.html) or [manually](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/pricing/file-details-product-price-schedule.csv.html).
+Add a price schedule to a single abstract or concrete product. This option is suitable for working with a small number of products. For details, see [Editing an Abstract Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/editing-abstract-products.html).
 
 ## Cron job
 

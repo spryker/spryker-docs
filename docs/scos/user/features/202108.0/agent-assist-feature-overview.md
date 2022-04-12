@@ -14,8 +14,6 @@ redirect_from:
 
 An *agent* is a person with unrivaled product knowledge who can help customers perform different activities in the Storefront. For example, a customer might call an agent and ask them to help choose the right product or assist with the buying process or even perform some actions in the Storefront on their behalf. Say, a customer wants to add items to a shopping list or create a company but cannot do it for some reason. This is when the agent steps in and provides practical support acting on the customer's behalf.
 
-
-
 ## Setting up an agent user
 
 Every agent user is a Back Office user. When creating or editing a Back Office user, you can make them an agent assist by selecting this option.

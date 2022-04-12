@@ -110,7 +110,6 @@ Like with scenario 2, this scenario is best to use for resolving disputes and ha
 You can also combine this scenario with [scenario 1](#scenario1). For example, you might have the *Return* option available for Buyers within 14 days after the delivery of the products, and then have some *Contact Customer Service* option, which would be active during the warranty period.
 
 The main advantages of this approach are:
-
 * You save Buyers' time by allowing them to quickly resolve their questions without having to create claims and wait for the responses.
 * You have only valid Buyer claims, which can be sorted and forwarded to the respective departments by the Customer Service. You also have only valid return requests, which saves your and Buyers' time and money.
 * Even though this workflow implies additional development effort, you can tailor it to the specific needs of your project.

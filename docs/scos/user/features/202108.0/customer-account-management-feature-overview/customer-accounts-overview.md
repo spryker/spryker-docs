@@ -39,7 +39,7 @@ There are slight differences in customer accounts' information for the B2B and B
 | Shopping Carts | ✓ |  |
 | Wishlist |  | ✓ |
 
-See [Customer Registration overview](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-registration-overview.html) for details on how customer accounts can be created.
+For details on how customer accounts can be created, see [Customer Registration overview](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-registration-overview.html).
 
 
 Customers manage their accounts directly on the Storefront. If a customer updates an account, the data is synchronized, and the Back Office user sees the updated information in the Back Office&nbsp;<span aria-label="and then">></span> **Customers&nbsp;<span aria-label="and then">></span> Customers** section. The exceptions are newsletter subscriptions and password changes: this information is not stored in the Back Office.

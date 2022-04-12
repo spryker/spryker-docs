@@ -25,9 +25,8 @@ A Back Office user can manage customer access in **Customer&nbsp;<span aria-labe
 
 * price: a customer does not see the price if they are not logged in:
 
-
 Settings in Admin UI (on the left)
-Shop application (on the right)
+<br>Shop application (on the right)
 
 ![price_not_shown_for_non_logged_in_user.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Hide+Content+from+Logged+out+Users/Hide+Content+from+Logged+out+Users+Overview/price_not_shown_for_non_logged_in_user.png)
 

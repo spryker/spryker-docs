@@ -36,7 +36,7 @@ A developer can do the following:
 * [Retrieving banner content items](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-content-items/retrieving-banner-content-items.html)
 * [Retrieving abstract product list content items](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-content-items/retrieving-abstract-product-list-content-items.html)
 
-See [Content Items feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/content-items-feature-walkthrough/content-items-feature-walkthrough.html) for more information on each content item type and module relations.
+For more information on each content item type and module relations, see [Content Items feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/content-items-feature-walkthrough/content-items-feature-walkthrough.html).
 
 ## Content Item Widget
 
@@ -106,7 +106,7 @@ You can select a template when inserting a content item widget into a CMS block.
 
 </details>
 
-A developer can create and customize templates. See [Adding a Template for a Content Item Widget](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#content-item-widget-template) for more details.
+A developer can create and customize templates. For more details, see [Adding a Template for a Content Item Widget](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#content-item-widget-template).
 
 ## Content Database Schema
 CMS content is an item that can contain different content based on its type (banner, products, product set, file). Content items can be added to blocks and pages with a Twig function.

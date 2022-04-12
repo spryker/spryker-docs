@@ -18,7 +18,7 @@ redirect_from:
 
 The *Return Management* feature lets you create and manage returns for a sales order.
 
-Once an order has been shipped, the registered buyer or a Back Office user can initiate a return of the whole order or its individual items. See [Creating returns](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-returns.html) for details on how they can do that.
+Once an order has been shipped, the registered buyer or a Back Office user can initiate a return of the whole order or its individual items. For details about how to create return, see [Creating returns](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-returns.html).
 
 {% info_block warningBox "Note" %}
 
@@ -37,7 +37,7 @@ The *Return Policy* is a set of rules that defines what items can be returned: i
 
 {% info_block infoBox "Info" %}
 
-For now, you can set the Return Policy period in code only. There is no UI for that. See [HowTo - Set the number of days for a return policy](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-set-number-of-days-for-a-return-policy.html) for details.
+For now, you can set the Return Policy period in code only. There is no UI for that. For details, see [HowTo - Set the number of days for a return policy](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-set-number-of-days-for-a-return-policy.html).
 
 {% endinfo_block %}
 
@@ -58,6 +58,7 @@ The preceding states are the default ones in the OMS. You can display them as th
 
 {% endinfo_block %}
 -->
+
 The relation of sales order items statuses and the return states is as follows:
 ![Sales Order Items and Statuses](https://confluence-connect.gliffy.net/embed/image/cebbb529-19b7-4623-bd6d-ef2b30fe97a9.png?utm_medium=live&utm_source=custom)
 

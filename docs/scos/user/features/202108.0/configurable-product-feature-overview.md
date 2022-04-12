@@ -18,7 +18,7 @@ This is the Beta version of the feature and is therefore subject to changes.
 
 {% endinfo_block %}
 
-The *Configurable Product* feature introduces a new type of product that can be customized by customers—a configurable product.
+The **Configurable Product* feature introduces a new type of product that can be customized by customers—a configurable product.
 
 The feature lets you sell complex products with modular designs or services. For example, if you sell clothes, you can let your customers define the material, color, and add their name to the product. Or, if you are selling a service, you can let them select a preferred date and time of the service delivery.
 

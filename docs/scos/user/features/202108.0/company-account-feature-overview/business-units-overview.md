@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/business-units-overview
 ---
 
-Once a company administrator has created a company which has been activated and approved in the Back Office, they can start building the organizational structure of their company in _My Company_ section of the web-shop.
+Once a company administrator has created a company which has been activated and approved in the Back Office, they can start building the organizational structure of their company in **My Company** section of the web-shop.
 
 The very first step of defining the company structure is setting up business units and creating the business units hierarchy.
 
@@ -64,7 +64,7 @@ A business unit's children that are one level below it, become 0 level parent bu
 {% endinfo_block %}
 
 * A business unit can be assigned with one or multiple addresses.
-* The existing addresses can be assigned to business units right at the stage of their creation, and the new addresses can be added on the _Edit Business Unit_ page.
+* The existing addresses can be assigned to business units right at the stage of their creation, and the new addresses can be added on the **Edit Business Unit** page.
 
 ![business-units-address.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/business-units-address.png)
 

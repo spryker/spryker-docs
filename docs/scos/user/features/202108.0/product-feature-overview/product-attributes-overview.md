@@ -54,13 +54,6 @@ Product variants of the same abstract product can differ by different super attr
     * C:  `color = red`
     * D:  `size = 45`
 
-
-
-
-
-
-
-
 ## Predefined product attribute values
 A *predefined product attribute value* is a product attribute value that a Back Office user defines when managing product attributes.
 
@@ -150,8 +143,6 @@ Länge = 1.5 meter
 
 What you see on the US version of the shop:
 Length = 4.92 feet  
-
-
 
 ## Database schema for product attributes
 

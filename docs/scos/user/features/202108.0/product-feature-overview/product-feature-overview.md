@@ -81,7 +81,7 @@ The product information is structured as follows:
   - The blue variant holds the stock information and the super attribute: `color = blue`.
   - The green variant holds:
     - The stock information.
-    - The super attribute: `color = green`,
+    - The super attribute: `color = green`.
     - The price, which is different from the abstract product's price.
 
 #### Case 3: Selling a product in five colors, four sizes, and three materials

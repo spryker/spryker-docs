@@ -158,7 +158,7 @@ Then, the customer decided to select the **As long as you want** packaging unit 
 
 ![Case3-1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+&+Measurement+Units/Packaging+Units/Packaging+Units+Feature+Overview/case3-1.png)
 
-In our example, the customer set the **meter** for a sales unit, selected **3.5** - for the **Amount** field and **2** - for the **Quantity** field. The default value for **"As long as you want"** is set to **0.5**.
+In our example, the customer set the **meter** for a sales unit, selected **3.5** - for the **Amount** field and **2**—for the **Quantity** field. The default value for **"As long as you want"** is set to **0.5**.
 
 Once the order has been placed, we can navigate to the Back Office and see the following:
 
@@ -185,7 +185,7 @@ In our example, the following conditions are met:
 
 {% info_block infoBox "Example:" %}
 
-You have a product in your shop - a pen. And there exists a packaging unit for a pen - a box with a minimum amount of 5 items in it up to the maximum amount of 50 pens available. Every shopper can define the necessary amount of pens that will be included in the box and order several such boxes. But on the Quick Order page, if the customer adds a pen with the packaging unit 'box', the box consisting of minimum 5 items will be added by default.
+You have a product in your shop—a pen. And there exists a packaging unit for a pen—a box with a minimum amount of 5 items in it up to the maximum amount of 50 pens available. Every shopper can define the necessary amount of pens that will be included in the box and order several such boxes. But on the Quick Order page, if the customer adds a pen with the packaging unit 'box', the box consisting of minimum 5 items will be added by default.
 
 {% endinfo_block %}
 

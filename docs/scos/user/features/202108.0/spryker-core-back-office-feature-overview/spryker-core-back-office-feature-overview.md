@@ -57,12 +57,12 @@ You can always define what exactly is going to be needed for your specific proje
 ## Back Office authentication
 
 
-To be able to use the Spryker Back Office, users have to authenticate to the Back Office. They can authenticate via:
+To use the Spryker Back Office, users have to authenticate to the Back Office. They can authenticate via:
 
 * Regular Back Office user account
 * Third-party sign-on (optional)
 
-To *authenticate as a regular Back Office user*, you should have the Back Office user account. See [Managing users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html) to learn how you can create and manage Back Office user accounts.
+To *authenticate as a regular Back Office user*, you should have the Back Office user account. To learn how to create and manage Back Office user accounts, see [Managing users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html).
 
 You can also let your users sign in from a third-party service set up for your project. The third-party sign-on uses the [OpenID](https://en.wikipedia.org/wiki/OpenID) protocol for authentication.
 
@@ -79,7 +79,6 @@ If a user chooses to log in via a third-party, the user is redirected to the OAu
 **Strategy 1: Upon the first login, create the Back Office admin user based on the third-party system’s user data.**
 
 If a user who does not exist in the Spryker database logs in for the first time, the following happens:
-
 * Based on the third-party system’s user data such as first name, last name, and email, the Back Office user is created and visible on the [Users page](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html) in the Back Office.
 * The user is assigned to the default [group](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-groups/creating-user-groups.html).
 

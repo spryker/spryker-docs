@@ -22,12 +22,12 @@ A *navigation element* is a page section that contains links to shop resources, 
 
 ![navigation-element](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/navigation+element.png)
 
-See [Creating a Navigation Element](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#creating-a-navigation-element) to learn how a Back Office user can create a navigation element.
+To learn how a Back Office user can create a navigation element, seee [Creating a Navigation Element](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#creating-a-navigation-element).
 
 ### Navigation element duplication
 
 If you have a configured navigation element in a shop and you want to use it as a basis for another navigation element, you can duplicate it. This is especially useful in a multi-shop scenario.
-See [Duplicating a Navigation Element](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#duplicating-a-navigation-element) to learn how a Back Office user can do that.
+To learn how a Back Office user can do that, see [Duplicating a Navigation Element](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#duplicating-a-navigation-element).
 
 ## Navigation tree
 
@@ -58,7 +58,7 @@ A navigation node can be both of the parent type and the child type. For example
 
 ![child-parent-navigation-node](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/child-parent-navigation-node.png)
 
-See [Creating a Navigation Node](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#creating-a-navigation-node) to learn how a Back Office user can create navigation nodes.
+To learn how a Back Office user can create navigation node, see [Creating a Navigation Node](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#creating-a-navigation-node).
 
 ### Navigation node design
 
@@ -70,14 +70,15 @@ The only class you can use by default is *label*. This class capitalizes the nav
 
 A front-end developer can create more classes for navigation nodes.
 
-See [Creating a Navigation Node](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#creating-a-navigation-node) to learn how a Back office user can define a navigation node design.
+To learn how a Back office user can define a navigation node design, see [Creating a Navigation Node](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#creating-a-navigation-node).
 
 ## Navigation node validity period
 
 You can define the time period a navigation node is valid for:
 * When the validity period ends, the navigation node with its child stops being displayed on the Storefront.
 * When the validity period starts, the navigation node with its child starts being displayed on the Storefront.
-See [Creating a Navigation Node](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#creating-a-navigation-node) to learn how a product catalog manager can define a navigation node validity period.
+
+To learn how a product catalog manager can define a navigation node validity period, see [Creating a Navigation Node](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#creating-a-navigation-node).
 
 ## Navigation as content item
 
@@ -86,8 +87,8 @@ The schema shows how the Navigation feature affects content management in a Spry
 
 ![navigation-as-content-item-schema](https://confluence-connect.gliffy.net/embed/image/a086fe4e-1d09-49ae-a181-ebd8b0f8c051.png?utm_medium=live&utm_source=custom)
 
-See [Create a Navigation Content Item](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html#create-a-navigation-content-item) to learn how a Back Office user can create a Navigation content item.
-See [Adding Content to Storefront Pages Using Templates & Slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/best-practices-adding-content-to-the-storefront-pages-using-templates-and-slots.html) to learn how a marketing content manager can add content to the Storefront.
+To learn how a Back Office user can create a Navigation content item, see [Create a Navigation Content Item](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html#create-a-navigation-content-item).
+To learn how a marketing content manager can add content to the Storefront, see [Adding Content to Storefront Pages Using Templates & Slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/best-practices-adding-content-to-the-storefront-pages-using-templates-and-slots.html).
 
 ### Navigation content item templates
 

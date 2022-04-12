@@ -38,7 +38,7 @@ Then, in the *Shipment* checkout step, you can see the products grouped by the s
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/Shop+Guide+-+Summary+Step/summary-step-new.png)
 
-See [Multi-step checkout](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html) for more details on how to add multiple delivery addresses to order items in the Storefront.
+For more details on how to add multiple delivery addresses to order items in the Storefront, see [Multi-step checkout](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html).
 
 ## Split Delivery in the Back Office
 
@@ -53,7 +53,7 @@ Here you can perform the following actions on shipments:
 * Move items between shipments.
 * Change the state of each item or all items per shipment.
 
-See [Creating shipments](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-shipments.html) for more details on how to create and manage shipments in the Back Office.
+For more details on how to create and manage shipments in the Back Office, see [Creating shipments](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-shipments.html).
 
 ## Constraints
 
@@ -63,7 +63,7 @@ Currently, the Split Delivery is not compatible with the Gift Cards feature. If 
 
 ### Limitation for payment service providers
 
-Most of payment service providers (PSP) support a single delivery address for a given order, while Split Delivery lets your customers add multiple shipments to the same order. In this case, you need to modify the configuration of the online store to let your customers deliver order items to different addresses. See [HowTo - Disable Split Delivery in Yves Interface](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html) for information on how to do that.
+Most of payment service providers (PSP) support a single delivery address for a given order, while Split Delivery lets your customers add multiple shipments to the same order. In this case, you need to modify the configuration of the online store to let your customers deliver order items to different addresses. For information on how to do that, see [HowTo - Disable Split Delivery in Yves Interface](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html).
 
 <!--
 ### Product Bundles

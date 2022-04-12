@@ -34,7 +34,7 @@ The comment contains the following information:
 * Contents of the comment
 * Comment Tag
 
-Company users can add comments to a shared cart in both Read-only and Full Access permissions. A user can also add a comment before submitting the order, on the **Checkout Summary** page as well as post factum, after the order has been placed, on the ***Order History** * page:
+Company users can add comments to a shared cart in both Read-only and Full Access permissions. A user can also add a comment before submitting the order, on the **Checkout Summary** page as well as post factum, after the order has been placed, on the **Order History** page:
 
 {% info_block warningBox "Note" %}
 

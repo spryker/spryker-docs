@@ -59,7 +59,7 @@ Every approval request, in turn, can have three statuses:
 * Declined—the cart has been rejected.
 
 ## Approval Process workflow
-Approval Process as such introduces steps that company employees should follow to order, request for approval, and pay for products.
+Approval Process as such introduces steps that company employees must follow to order, request for approval, and pay for products.
 
 Here’s how approvals fit into the buying process:
 

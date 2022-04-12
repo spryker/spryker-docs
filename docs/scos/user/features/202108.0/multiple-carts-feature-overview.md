@@ -19,7 +19,7 @@ Sometimes customers need more than one shopping cart, for example, one for daily
 There are two ways to create a shopping cart:
 
 * Through a shopping cart widget in the header of shop.
-* From the **Shopping Cart** page in the *My Account* menu.
+* From the **Shopping Cart** page in the **My Account** menu.
 
 New items are added to the shopping cart by clicking **Add to Cart** on the product details page.
 
@@ -31,7 +31,7 @@ These could be, for instance, a shopping cart for daily purchases or a shopping 
 
 {% endinfo_block %}
 
-After a shopping cart has been created, it appears in the shopping carts table on the **Shopping Cart** page in *My Account*.
+After a shopping cart has been created, it appears in the shopping carts table on the **Shopping Cart** page in **My Account**.
 
 The table with shopping carts shows details for each of the carts, including:
 
@@ -40,7 +40,7 @@ The table with shopping carts shows details for each of the carts, including:
 * Number of products added to cart
 * Price mode (Net or Gross)
 * Cart Total
-* Possible actions to manage shopping carts: edit name, duplicate, [share](/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html), dismiss, delete, switch cart to shopping list (see the *Actions* table for details)
+* Possible actions to manage shopping carts: edit name, duplicate, [share](/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html), dismiss, delete, switch cart to shopping list (see the **Actions** table for details)
 
 ![Multiple carts list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/multiple-cart-list.png)
 

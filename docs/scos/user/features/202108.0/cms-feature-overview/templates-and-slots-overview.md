@@ -119,7 +119,7 @@ A content manager can [manage CMS blocks](/docs/scos/user/back-office-user-guide
 </details>
 
 
-CMS Block is a separate entity with a dedicated section in the Back Office. See [Managing CMS Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-cms-blocks.html) to learn what a content manager can do with CMS blocks in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Blocks** section.
+CMS Block is a separate entity with a dedicated section in the Back Office. To learn what a content manager can do with CMS blocks in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Blocks** section, see [Managing CMS Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-cms-blocks.html).
 
 
 ## Content item
@@ -219,7 +219,7 @@ Page identifiers used to define visibility conditions depend on the page type to
 For product details page type, you can use the Product ID or Category ID identifiers. Category ID is a collective identifier. By selecting a category, the content manager selects all the products that are [assigned to the category](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html).
 {% endinfo_block %}
 
-To meet your project requirements, you can extend the visibility conditions functionality by adding more conditions, like Customer ID, Customer Group ID or Navigation Nodes. See [HowTo - Create Visibility Conditions for CMS Blocks](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html) to learn more.
+To meet your project requirements, you can extend the visibility conditions functionality by adding more conditions, like Customer ID, Customer Group ID or Navigation Nodes. To learn more, see [HowTo - Create Visibility Conditions for CMS Blocks](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html).
 
 
 A content manager can define visibility conditions by [selecting pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html#selecting-pages) in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Slots** section.
@@ -371,7 +371,9 @@ The following image shows the database schema for templates, slots and the Spryk
 ## Current constraints
 
 {% info_block infoBox %}
+
 Currently, the functionality has the following functional constraints which are going to be resolved in the future.
+
 {% endinfo_block %}
 
 * The Back Office sections related to the CMS pages do not provide any relevant information about templates and slots.

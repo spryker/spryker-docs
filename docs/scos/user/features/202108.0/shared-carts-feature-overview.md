@@ -16,11 +16,11 @@ redirect_from:
 
 There are two ways to access a shopping cart:
 * Through a shopping cart widget in the header of the webshop.
-* From Shopping Cart page in the *My Account* menu.
+* From Shopping Cart page in the **My Account** menu.
 
 New items are added to the shopping cart by clicking on **Add to Cart** on the product details page.
 
-To share a shopping cart, a user needs to click **Share cart** in the *Actions* column (on the **Shopping Cart** page, in *My Account* menu) for a cart they would like to share. See the [Shared Cart on the Storefront](#shared-cart-on-the-storefront) section.
+To share a shopping cart, a user needs to click **Share cart** in the **Actions** column (on the **Shopping Cart** page, in **My Account** menu) for a cart they would like to share. See the [Shared Cart on the Storefront](#shared-cart-on-the-storefront) section.
 
 ## Permissions management for shared shopping carts
 

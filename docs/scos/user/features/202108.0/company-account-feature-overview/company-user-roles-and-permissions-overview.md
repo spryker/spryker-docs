@@ -122,7 +122,7 @@ The termination hooks (plugin stack) do not allow the permissions sneak into the
 The termination hooks are performed one by one, and process termination can happen for any reason, and one of them would be the permissions.
 
 ## Company permissions on the Storefront
-Every company role includes a set of permissions that can be enabled/disabled according to your needs by switching the toggle in *Enable* column:
+Every company role includes a set of permissions that can be enabled/disabled according to your needs by switching the toggle in **Enable** column:
 
  - **Add company users**—allows adding company users. With this permission enabled, a user will have Create User button on the Company Users page.
   - **Invite users**—allows inviting company users. With this permission enabled, a user will have Invite Users button on the Company Users page.

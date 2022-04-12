@@ -58,9 +58,9 @@ To make your code unique, use prefixes like `pyz` or your project name.
 
 ## Example of resolving the error by renaming Private API entities
 
+1. Give the method a unique name and copy it to the factory to fetch the business models.
 
 ```php
-// Give the method a unique name and copy it to the factory to fetch the business model.
 namespace Pyz\Zed\Customer\Business;
 
 use Spryker\Zed\Customer\Business\CustomerFacade as SprykerCustomerFacade;
@@ -98,8 +98,10 @@ class CustomerBusinessFactory extends SprykerCustomerBusinessFactory
     }
 }
 ```
+
+2. Copy the method to the business model.
+
 ```php
-// Give the method a unique name and copy it to the business model.
 namespace Pyz\Zed\Customer\Business\Customer;
 
 use Spryker\Zed\Customer\Business\Customer\CustomerReader as SprykerCustomerReader;

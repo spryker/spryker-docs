@@ -1,15 +1,16 @@
 ---
-title: "Glue API: Shopping List feature integration" last_updated: Feb 15, 2022 description: This
-document describes how to integrate the Shopping list feature into a Spryker project.
+title: "Glue API: Shopping Lists feature integration" 
+last_updated: Apr 13, 2022 
+description: This document describes how to integrate the Shopping lists feature into a Spryker project.
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the Add Offer and Merchant Product to Shopping list feature into a Spryker
+This document describes how to integrate the Marketplace Shopping Lists feature into a Spryker
 project.
 
 ## Install feature core
 
-Follow the steps below to install Shopping List Glue API feature core.
+Follow the steps below to install Marketplace Shopping Lists Glue API feature core.
 
 ### Prerequisites
 
@@ -19,7 +20,7 @@ To start feature integration, integrate the required features:
 | - | - | - | 
 | Spryker Core | {{page.version}} |  [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html)
-| Marketplace Shopping List | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shopping-list-feature-integration.html)
+| Marketplace Shopping Lists | {{page.version}} | [Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-shopping-lists-feature-integration.html)
 
 ### 1) Install the required modules using Composer
 
@@ -97,8 +98,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
      */
     protected function getResourceRelationshipPlugins(
         ResourceRelationshipCollectionInterface $resourceRelationshipCollection
-    ): ResourceRelationshipCollectionInterface {
-       ...
+    ): ResourceRelationshipCollectionInterface {       
         $resourceRelationshipCollection->addRelationship(
             ShoppingListsRestApiConfig::RESOURCE_SHOPPING_LIST_ITEMS,
             new MerchantByMerchantReferenceResourceRelationshipPlugin(),
@@ -265,4 +265,4 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE | 
 | - | - | - | 
-| TODO ADD CORRECT LINKS Merchant Portal - Marketplace Add Product Offer And Merchant Product To Shopping List feature integration| | [Merchant Portal - Marketplace Add Product Offer And Merchant Product To Shopping List feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-add-offer-and-merchant-product-to-shopping-list-feature-integration.html)|
+| Merchant Portal - Marketplace Shopping Lists feature integration| | [Merchant Portal - Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-shopping-lists-feature-integration.html)|

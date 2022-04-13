@@ -9,9 +9,9 @@ Modules have public and private APIs. While public API updates always support ba
 
 For more information about module APIs, see [Definition of Module API](/docs/scos/dev/architecture/module-api/definition-of-module-api.html).
 
-## Example of code that causes the upgradability error
+## Example of code that causes an upgradability error
 
-`CustomerFacade` uses `createCustomerReader` and `getCustomerCollection`. `createCustomerReader` and `getCustomerCollection` are private API entities.
+`CustomerFacade` uses `createCustomerReader` and `getCustomerCollection` from a private API.
 
 ```php
 namespace Pyz\Zed\Customer\Business;
@@ -44,7 +44,7 @@ Pyz\Zed\Customer\Business\CustomerFacade
 ************************************************************************************************************************
 ```
 
-## Resolving the Evaluator check error
+## Resolving the error
 
 To resolve the error provided in the example, try the following in the provided order:
 1. Recommended: Extend the functionality using the [Configuration strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#configuration).
@@ -58,7 +58,8 @@ To make your code unique, use prefixes like `pyz` or your project name.
 
 ## Example of resolving the error by renaming Private API entities
 
-1. Give the method a unique name and copy it to the factory to fetch the business models.
+1. Give the method a unique name and copy it to the factory to fetch the business models. In the  example, we add `Pyz` to its name, but you can use any other strategy. For example, you can prefix them with your project name.
+
 
 ```php
 namespace Pyz\Zed\Customer\Business;
@@ -117,4 +118,5 @@ class CustomerReader extends SprykerCustomerReader implements CustomerReaderInte
     }
 }
 ```
+
 After the fix re-evaluate the code. The same error shouldn’t be returned.

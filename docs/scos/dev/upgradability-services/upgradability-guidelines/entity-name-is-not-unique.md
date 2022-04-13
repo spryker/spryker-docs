@@ -20,11 +20,8 @@ The names of the following entities must be unique on the project level:
 * Methods
 * Constants
 
-## Transfer name is not unique
 
-Transfer names must be unique.
-
-### Example of code that causes an upgradability error: Transfer name is not unique
+## Example of code that causes an upgradability error: Transfer name is not unique
 
 ```xml
 ...
@@ -34,7 +31,7 @@ Transfer names must be unique.
 ...
 ```
 
-### Example of related error in the Evaluator output: Transfer name is not unique
+## Example of related error in the Evaluator output: Transfer name is not unique
 
 ```bash
 ---------------- ----------------------------------------------------------------------------------------------------
@@ -42,7 +39,7 @@ NotUnique:TransferName Transfer object name "CustomProductData" has to have proj
 ---------------------- ----------------------------------------------------------------------------------------------------
 ```
 
-### Example of resolving the error: Transfer name is not unique
+## Example of resolving the error: Transfer name is not unique
 
 ```xml
 ...
@@ -52,11 +49,8 @@ NotUnique:TransferName Transfer object name "CustomProductData" has to have proj
 ...
 ```
 ---
-## Transfer property name is not unique
 
-Transfer property names must be unique.
-
-### Example of code that causes an upgradability error: Transfer property name is not unique
+## Example of code that causes an upgradability error: Transfer property name is not unique
 
 ```xml
 ...
@@ -66,7 +60,7 @@ Transfer property names must be unique.
 ...
 ```
 
-### Example of related error in the Evaluator output: Transfer property name is not unique
+## Example of related error in the Evaluator output: Transfer property name is not unique
 
 ```bash
 -------------------------- ----------------------------------------------------------------------------------------------------
@@ -83,12 +77,9 @@ NotUnique:TransferProperty Transfer property "customProperty" for "LocaleCmsPage
     </transfer>
 ...
 ```
+---
 
-## Database table name is not unique
-
-Database table names must be unique.
-
-### Example of code that causes an upgradability error: Database table name is not unique
+## Example of code that causes an upgradability error: Database table name is not unique
 
 ```xml
 ...
@@ -98,7 +89,7 @@ Database table names must be unique.
 ...
 ```
 
-### Example of related error in the Evaluator output: Database table name is not unique
+## Example of related error in the Evaluator output: Database table name is not unique
 
 ```bash
 ------------------------ ----------------------------------------------------------------------------------------------------
@@ -106,7 +97,7 @@ NotUnique:DatabaseTable Database table "custom_table" has to have project prefix
 ----------------------- ----------------------------------------------------------------------------------------------------
 ```
 
-### Example to resolve the Evaluator check error: Database table name is not unique
+## Example to resolving the error: Database table name is not unique
 
 ```xml
 ...
@@ -115,12 +106,9 @@ NotUnique:DatabaseTable Database table "custom_table" has to have project prefix
     </table>
 ...
 ```
+---
 
-## Name of database table column is not unique
-
-Names of database table columns must be  unique
-
-### Example of code that causes an upgradability error: Name of database table column is not unique
+## Example of code that causes an upgradability error: Name of database table column is not unique
 
 ```xml
 ...
@@ -130,7 +118,7 @@ Names of database table columns must be  unique
 ...
 ```
 
-### Example of related error in the Evaluator output: Name of database table column is not unique
+## Example of related error in the Evaluator output: Name of database table column is not unique
 
 ```bash
 ------------------------ ----------------------------------------------------------------------------------------------------
@@ -138,7 +126,7 @@ NotUnique:DatabaseColumn Database column "custom_column" has to have project pre
 ------------------------ ----------------------------------------------------------------------------------------------------
 ```
 
-### Example of resolving the error: Name of database table column is not unique
+## Example of resolving the error: Name of database table column is not unique
 
 ```xml
 ...
@@ -149,11 +137,7 @@ NotUnique:DatabaseColumn Database column "custom_column" has to have project pre
 ```
 ---
 
-## Method name is not unique
-
-Method names must be unique.
-
-### Example of code that causes an upgradability error: Method name is not unique
+## Example of code that causes an upgradability error: Method name is not unique
 
 ```php
 namespace Pyz\Client\RabbitMq;
@@ -172,7 +156,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-### Example of related error in the Evaluator output: Method name is not unique
+## Example of related error in the Evaluator output: Method name is not unique
 
 ```bash
 ---------------- ----------------------------------------------------------------------------------------------------
@@ -180,7 +164,7 @@ NotUnique:Method Method name "Pyz\Client\RabbitMq\RabbitMqConfig::getCustomConfi
 ---------------- ----------------------------------------------------------------------------------------------------
 ```
 
-### Example of resolving the error: Method name is not unique
+## Example of resolving the error: Method name is not unique
 
 ```php
 namespace Pyz\Client\RabbitMq;
@@ -199,12 +183,9 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
+---
 
-## Constant name is not unique
-
-Constant names must be unique.
-
-### Example of code that causes an upgradability error: Method name is not unique
+## Example of code that causes an upgradability error: Method name is not unique
 
 ```php
 namespace Pyz\Client\RabbitMq;
@@ -217,7 +198,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-### Example of related error in the Evaluator output: Method name is not unique
+## Example of related error in the Evaluator output: Method name is not unique
 
 ```bash
 ------------------ ----------------------------------------------------------------------------------------------------
@@ -225,7 +206,7 @@ NotUnique:Constant "Pyz\Client\RabbitMq\RabbitMqConfig::CUSTOM_CONST" name has t
 ------------------ ----------------------------------------------------------------------------------------------------
 ```
 
-### Example of resolving the error: Method name is not unique
+## Example of resolving the error: Method name is not unique
 
 ```php
 namespace Pyz\Client\RabbitMq;

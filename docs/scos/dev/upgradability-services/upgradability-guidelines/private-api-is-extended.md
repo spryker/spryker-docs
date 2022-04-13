@@ -11,7 +11,7 @@ For more information about module APIs, see [Definition of Module API](/docs/sco
 
 ## Code that causes an upgradability error: Extending a private API form class
 
-`CustomerAccessForm` extends `Spryker\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm`. It is a private API.
+`CustomerAccessForm` extends `Spryker\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm` from a private API.
 
 ```php
 namespace Pyz\Zed\CustomerAccessGui\Communication\Form;
@@ -38,7 +38,7 @@ To resolve the error provided in the example, try the following in the provided 
 1. Recommended: Extend the functionality using the [Configuration strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#configuration).
 2. Recommended: Extend the functionality using the [Plug and Play strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#plug-and-play).
 3. Recommended: Extend the functionality using the [Project Modules strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules).
-4. Not recommended: Copy the private API core functionality to the project level and give it a unique name. For an example, see []
+4. Not recommended: Copy the private API core functionality to the project level and give it a unique name. For an example, see [Example of resolving the error by copying the form class to the project level](#example-of-resolving-the-error-by-copying-the-form-class-to-the-project-level)
 
 ## Example of resolving the error by copying the form class to the project level
 
@@ -56,7 +56,7 @@ class PyzCustomerAccessForm extends AbstractType
 
 ## Code that causes an upgradability error: Extending a private API business model
 
-`CustomerAccessFilter` extends `Spryker\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessFilter`. It is a private API.
+`CustomerAccessFilter` extends `Spryker\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessFilter` from a private API.
 
 ```php
 namespace Pyz\Zed\CustomerAccess\Business\CustomerAccess;
@@ -91,7 +91,7 @@ class PyzCustomerAccessFilter implements PyzCustomerAccessFilterInterface
 
 ## Code that causes an upgradability error: Extending a private API dependency provider
 
-`CheckoutPageDependencyProvider` extends `Spryker\Yves\CheckoutPage\CheckoutPageDependencyProvider`. It is a private API.
+`CheckoutPageDependencyProvider` extends `Spryker\Yves\CheckoutPage\CheckoutPageDependencyProvider` from a private API.
 
 ```php
 namespace Pyz\Yves\CheckoutPage;
@@ -118,7 +118,7 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
 ------------------------------------------------------------------------------------
 ```
 
-#### Example of resolving the error by copying the dependency provider to the project level
+## Example of resolving the error by copying the dependency provider to the project level
 
 ```php
 namespace Pyz\Yves\CheckoutPage;

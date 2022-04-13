@@ -164,16 +164,7 @@ This section describes the information that you need to know when working with v
 | QUANTITY | Number of vouchers to generate. |  
 | CUSTOM CODE | Any custom symbols you want the voucher codes to contain. If you are adding a single custom code, for **ADD RANDOM GENERATED CODE LENGTH**, select **No additional random characters**. If you add random characters, by default, they are appended to the end of the custom code. To specify where to place the random characters, add `[code]` to the custom code. For example, `black[code]friday`. |  
 | ADD RANDOM GENERATED CODE LENGTH | A number of random alphanumeric symbols to add to the code. If you entered a **CUSTOM CODE**, the random characters will be appended to the end of it. If you are generating more than one code, you must select **3** or more. |  
-| MAX NUMBER OF USES | Defines the maximum number of times a voucher code can be redeemed. Apart from numbers, accepts the following: |  
-
-
-| VALUE | BEHAVIOR |  
-| --- | --- |
-| 0 | Infinitely redeemable. |  
-| 1 | Voucher can be redeemed once. |  
-| n > 1 | Voucher can be redeemed _n_ times. |  
-
-![Voucher code](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Voucher+Codes:+Reference+Information/voucher-code.png)
+| MAX NUMBER OF USES | Defines the maximum number of times a voucher code can be redeemed. |  
 
 **Voucher Code Pool**
 The voucher codes of a discount are all contained in the same voucher code pool. One customer may only redeem one voucher code per pool per cart.
@@ -212,5 +203,6 @@ This section contains additional information for defining decision rules.
 |Greater|>|Number|Checks if the value is greater than the value of the right operand|
 |Greater or equal|>=|Number| Checks if the value is greater than or equal to the value of the right operand |
 
-**What's next?**
-<br>See [Managing Discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/managing-discounts.html) to know more about the actions you can do once the discount is created.
+## Next steps
+
+[Edit discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/edit-discounts.html)

@@ -34,12 +34,20 @@ A Voucher is a discount that applies when a customer enters an active voucher co
 Once the customer clicks **Redeem code**, the page refreshes to show the discount name, discount value and available actions: **Remove** and **Clear all**. The **Clear all** action disables all the applied discounts. The **Remove** action disables a single discount.
 ![Cart voucher applied](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/cart_voucher_applied.png)
 
-Multiple voucher codes can be generated for a single voucher. The code has a **Max number of uses** value which defines how many times the code can be redeemed.
+Multiple voucher codes can be generated for a single voucher. Each code has a maximum number of uses which defines how many times the code can be redeemed.
 
-You can eneter codes manually or use the code generator in the Back Office.
+You can enter codes manually or use the code generator in the Back Office.
 ![Generate codes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/generate_codes.png)
 
 See [Creating a Voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) to learn how a product catalog manager can create a voucher in the Back Office.
+
+### Voucher code collection
+
+All the voucher codes belonging to a voucher discount comprise a *voucher code collection*. A customer can apply one voucher code from a collection to a cart. If they apply two codes from a single collection to a cart, the code with a bigger discount value is applied.
+
+At the same time, a customer can apply two voucher codes to a single cart, if the codes belong to different collections. 
+
+
 
 ## Cart rule
 

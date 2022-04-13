@@ -35,6 +35,12 @@ Check out an example usage of the Data Transformer Collate Configurator Table in
 Register the service:
 
 ```ts
+declare module '@spryker/data-transformer.collate' {
+    interface DataTransformerConfiguratorRegistry {
+        table: TableDataTransformerConfiguratorService;
+    }
+}
+
 @NgModule({
     imports: [
         DataTransformerModule.withTransformers({
@@ -46,16 +52,4 @@ Register the service:
     ],
 })
 export class RootModule {}
-```
-
-## Interfaces
-
-Below you can find interfaces for the Data Transformer Collate Configurator Table:
-
-```ts
-declare module '@spryker/data-transformer.collate' {
-    interface DataTransformerConfiguratorRegistry {
-        table: TableDataTransformerConfiguratorService;
-    }
-}
 ```

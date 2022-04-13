@@ -11,13 +11,12 @@ related:
     link: docs/marketplace/dev/howtos/how-to-add-new-guitable-filter-type.html
 ---
 
-This article describes how to create a new Gui table in Merchant Portal.
+This document describes how to create a new Gui table in Merchant Portal.
 With this step by step instructions you will create a new Gui table with filters, search, sorting and an `http` data source type from scratch.
 
 ## Prerequisites
 
-Follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-merchant-portal-core-feature-integration.html)
-to install the Marketplace Merchant Portal Core feature providing the `GuiTable` module.
+To install the Marketplace Merchant Portal Core feature providing the `GuiTable` module, follow the [Marketplace Merchant Portal Core feature integration guide](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-merchant-portal-core-feature-integration.html).
 
 ## 1) Add GuiTable services to dependencies
 
@@ -232,8 +231,7 @@ class ProductAbstractGuiTableConfigurationProvider
 
 ## 5) Create a table data provider
 
-Create a table data provider extending `Spryker\Shared\GuiTable\DataProvider\AbstractGuiTableDataProvider`.
-Create and return an instance of `MerchantProductTableCriteriaTransfer` in the `createCriteria()` method. The properties will be filled and should be used for pagination, search, sorting and filtering. Return `GuiTableDataResponseTransfer` with table data in `fetchData()` method using the newly introduced transfer properties from $criteriaTransfer
+Create a table data provider extending `Spryker\Shared\GuiTable\DataProvider\AbstractGuiTableDataProvider`. In the `createCriteria()` method, create and return an instance of `MerchantProductTableCriteriaTransfer`. The properties will be filled and should be used for pagination, search, sorting and filtering. Return `GuiTableDataResponseTransfer` with table data in the `fetchData()` method using the newly introduced transfer properties from $criteriaTransfer
 (`MerchantProductTableCriteriaTransfer` introduced in `AbstractGuiTableDataProvider::createCriteria()`).
 
 ```php
@@ -278,7 +276,7 @@ Create and return an instance of `MerchantProductTableCriteriaTransfer` in the `
 
 ## 6) Create a page with a table
 
-Create a controller that displays a table, make use of the newly created configuration provider to pass table configuration to the Twig template:
+Create a controller that displays a table and make use of the newly created configuration provider to pass table configuration to the Twig template:
 
 ```php
 namespace Spryker\Zed\ProductMerchantPortalGui\Communication\Controller;
@@ -305,7 +303,7 @@ class ProductsController extends AbstractController
 
 Create a corresponding Twig template, pass configuration to frontend component.
 
-See [Table Design](/docs/marketplace/dev/front-end/table-design) to learn more about table components.
+To learn more about table components, see [Table Design](/docs/marketplace/dev/front-end/table-design).
 
 ## 7) Data source
 

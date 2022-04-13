@@ -16,7 +16,7 @@ This topic provides an overview of the Stores section in the Spryker Back Office
 
 ## Prerequisites
 
-To start managing translations, go to the **Administration** > **Stores** section.
+To start managing translations, go to the **Administration&nbsp;<span aria-label="and then">></span> Stores** section.
 
 ## Viewing stores
 

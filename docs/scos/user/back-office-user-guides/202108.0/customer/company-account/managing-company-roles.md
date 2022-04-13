@@ -25,7 +25,7 @@ This topic describes the procedures of creating and managing company roles. This
 
 ## Prerequisites
 
-To start managing company roles, navigate to  **Company Account** > **Company Roles**.
+To start managing company roles, navigate to  **Company Account&nbsp;<span aria-label="and then">></span> Company Roles**.
 
 {% info_block warningBox "Note" %}
 
@@ -33,7 +33,7 @@ Make sure to [create a company](/docs/scos/user/back-office-user-guides/{{page.v
 
 {% endinfo_block %}
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating a company role
 

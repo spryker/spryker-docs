@@ -21,7 +21,7 @@ To learn more about the feature and to find out how end users use it, see [Merch
 |---|---|
 | [Category](https://github.com/spryker/category) | Helps you build a product organisation structure. Categories are modelled in an hierarchical structure, a tree.  |
 | [MerchantCategory](https://github.com/spryker/merchant-category) | Provides a connection between category and merchant entities. |
-| [MerchantCategoryDataImport](https://github.com/spryker/merchant-category-data-import) | Imports relations between categories and merchants from .csv file. |
+| [MerchantCategoryDataImport](https://github.com/spryker/merchant-category-data-import) | Imports relations between categories and merchants from CSV file. |
 | [MerchantCategorySearch](https://github.com/spryker/merchant-category-search) | Provides plugins to extend `MerchantSearch` with categories. |
 
 ## Domain model

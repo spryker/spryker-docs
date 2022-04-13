@@ -17,6 +17,7 @@ This document describes how to integrate the Glue API - Availability Notificatio
 Follow the steps below to integrate the Glue API - Availability Notification feature.
 
 ## Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
@@ -26,6 +27,7 @@ To start feature integration, overview and install the necessary features:
 ## 1) Install required modules using Composer
 
 Install the required modules:
+
 ```bash
 composer require spryker/availability-notifications-rest-api --update-with-dependencies
 ```
@@ -37,7 +39,6 @@ Ensure that the following modules have been installed:
 | MODULE | EXPECTED DIRECTORY |
 |-|-|
 | AvailabilityNotificationsRestApi | vendor/spryker/availability-notifications-rest-api |
-
 
 {% endinfo_block %}
 
@@ -73,6 +74,7 @@ Activate the following plugins:
 | MyAvailabilityNotificationsResourceRoutePlugin | Registers the my-availability-notifications resource. | None | Spryker\Glue\AvailabilityNotificationsRestApi\Plugin\GlueApplication |
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
+
 ```php
 <?php
 
@@ -103,11 +105,9 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 Make sure that you can send the following requests:
 
-* `GET http://glue.mysprykershop.com/my-availability-notifications`
-
-* `GET http://glue.mysprykershop.com/customers/{customerReference}/availability-notifications`
-
-* `POST http://glue.mysprykershop.com/availability-notifications`
+* `GET https://glue.mysprykershop.com/my-availability-notifications`
+* `GET https://glue.mysprykershop.com/customers/{customerReference}/availability-notifications`
+* `POST https://glue.mysprykershop.com/availability-notifications`
 
 ```json
 {
@@ -121,6 +121,6 @@ Make sure that you can send the following requests:
 }
 ```
 
-* `DELETE http://glue.mysprykershop.com/availability-notifications/{subscription_key}`.
+* `DELETE https://glue.mysprykershop.com/availability-notifications/{subscription_key}`.
 
 {% endinfo_block %}

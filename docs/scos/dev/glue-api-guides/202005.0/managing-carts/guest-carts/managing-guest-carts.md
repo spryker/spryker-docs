@@ -927,12 +927,12 @@ Even though guest users have one cart by default, you can optionally specify its
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/guest-carts/c52f815e-ac61-5fc6-8cb7-0e5de5a077e5"
+                "self": "https://glue.mysprykershop.com/guest-carts/c52f815e-ac61-5fc6-8cb7-0e5de5a077e5"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/guest-cart-items?include=concrete-products,product-labels"
+        "self": "https://glue.mysprykershop.com/guest-cart-items?include=concrete-products,product-labels"
     },
     "included": [
         {
@@ -945,7 +945,7 @@ Even though guest users have one cart by default, you can optionally specify its
                 "frontEndReference": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-labels/3"
+                "self": "https://glue.mysprykershop.com/product-labels/3"
             }
         },
         {
@@ -983,7 +983,7 @@ Even though guest users have one cart by default, you can optionally specify its
                 }
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/035_17360369"
+                "self": "https://glue.mysprykershop.com/concrete-products/035_17360369"
             },
             "relationships": {
                 "product-labels": {
@@ -1032,7 +1032,7 @@ Even though guest users have one cart by default, you can optionally specify its
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/guest-carts/c52f815e-ac61-5fc6-8cb7-0e5de5a077e5/guest-cart-items/035_17360369"
+                "self": "https://glue.mysprykershop.com/guest-carts/c52f815e-ac61-5fc6-8cb7-0e5de5a077e5/guest-cart-items/035_17360369"
             },
             "relationships": {
                 "concrete-products": {
@@ -1716,7 +1716,7 @@ Even though guest users have one cart by default, you can optionally specify its
 
 ### Request
 
-Sample request: `DELETE https://glue.mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`
+Request sample: `DELETE https://glue.mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`
 
 
 
@@ -1750,7 +1750,7 @@ Even though guest users have one cart by default, you can optionally specify its
 
 ### Request
 
-Sample request: `PATCH https://glue.mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`
+Request sample: `PATCH https://glue.mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`
 ```js
 {
 	"data": {

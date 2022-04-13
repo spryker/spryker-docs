@@ -46,7 +46,7 @@ To retrieve general information about a concrete product, send the request:
 
 * For performance and bandwidth usage optimization, we recommend filtering out only the needed information using the `fields` string parameter.
 
-* If you include more resources, you can still use the `fields` string parameter to return only the needed fields. For example, `GET http://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units&fields[concrete-products]=name,description&fields[sales-units]=conversion,precision`.
+* If you include more resources, you can still use the `fields` string parameter to return only the needed fields. For example, `GET https://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units&fields[concrete-products]=name,description&fields[sales-units]=conversion,precision`.
 
 
 {% endinfo_block %}   
@@ -54,15 +54,15 @@ To retrieve general information about a concrete product, send the request:
 
 | Request  | Usage |
 | --- | --- |
-| `GET http://glue.mysprykershop.com/concrete-products/001_25904006` | Get information about the `001_25904006` product.  |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006` | Get information about the `001_25904006` product.  |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-image-sets` | Get information about the `001_25904006` product with its image sets.  |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-availabilities` | Get information about the `001_25904006` product with its availability.  |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-prices` | Get information about the `001_25904006` product with its prices.  |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-options` | Get information about the `001_25904006` product with its product options.  |
 | `GET https://glue.mysprykershop.com/concrete-products/035_17360369?include=product-reviews` | Get information about the `001_25904006` product with its product reviews.  |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-offers` | Get information about the `001_25904006` product with its product offers.  |
-| `GET http://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units,product-measurement-units` | Get information about the `fish-1-1` product with the information on its sales units and product mesurement units included. |
-| `GET http://glue.mysprykershop.com/concrete-products/001_25904006?include=product-labels` | Retrieve information about the `001_25904006` product with product labels included.  |
+| `GET https://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units,product-measurement-units` | Get information about the `fish-1-1` product with the information on its sales units and product mesurement units included. |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-labels` | Retrieve information about the `001_25904006` product with product labels included.  |
 
   
 
@@ -109,7 +109,7 @@ To retrieve general information about a concrete product, send the request:
             }
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/concrete-products/001_25904006"
+            "self": "https://glue.mysprykershop.com/concrete-products/001_25904006"
         }
     }
 }
@@ -147,7 +147,7 @@ To retrieve general information about a concrete product, send the request:
             }
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-1?include=sales-units,product-measurement-units"
+            "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-1?include=sales-units,product-measurement-units"
         },
         "relationships": {
             "product-measurement-units": {
@@ -177,7 +177,7 @@ To retrieve general information about a concrete product, send the request:
                 "defaultPrecision": 100
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-measurement-units/METR"
+                "self": "https://glue.mysprykershop.com/product-measurement-units/METR"
             }
         },
         {
@@ -191,7 +191,7 @@ To retrieve general information about a concrete product, send the request:
                 "productMeasurementUnitCode": "METR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/sales-units/32"
+                "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-1/sales-units/32"
             },
             "relationships": {
                 "product-measurement-units": {
@@ -250,7 +250,7 @@ To retrieve general information about a concrete product, send the request:
             }
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/concrete-products/001_25904006"
+            "self": "https://glue.mysprykershop.com/concrete-products/001_25904006"
         }
     }
 }

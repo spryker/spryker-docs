@@ -26,7 +26,7 @@ Check out an example usage of the Table Column List in the `@spryker/table` conf
                     limit: 2,
                     type: 'text',
                     typeOptions: {
-                        text: '${value}',
+                        text: '${displayValue}',
                     },
                 },
             },
@@ -42,6 +42,12 @@ Check out an example usage of the Table Column List in the `@spryker/table` conf
 Register the component:
 
 ```ts
+declare module '@spryker/table' {
+    interface TableColumnTypeRegistry {
+        list: TableColumnListConfig;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -59,12 +65,6 @@ export class RootModule {}
 Below you can find interfaces for the Table Column List:
 
 ```ts
-declare module '../table/table' {
-    interface TableColumnTypeRegistry {
-        list: TableColumnListConfig;
-    }
-}
-
 interface TableColumnListConfigInner {
     type?: string;
     typeOptions?: Object;

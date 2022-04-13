@@ -23,42 +23,51 @@ This might be useful if you decided to hold a marketing campaign, a set of activ
 ***
 To start creating the category or product detail pages, navigate to the **Content Management > Blocks** section.
 ***
+
 ## Assigning a Block to a Category Page
+
 To create a category page:
 1. On the **Overview of CMS Blocks** page in the _Actions_ column, click **Edit Block** next to the block you would like to use to create a page.
-{% info_block warningBox %}
-You can only add existing, active, and not expired block. If the block has not been created yet, see the [Creating a CMS Block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/creating-cms-blocks.html
-{% endinfo_block %} article first.)
+  {% info_block warningBox %}
+  
+  You can only add existing, active, and not expired block. If the block has not been created yet, see the [Creating a CMS Block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/creating-cms-blocks.html) article first.
+
+  {% endinfo_block %}
+
 2. On the **Edit CMS Block: Block ID** page that opens, put a cursor on the container where the CMS block will be displayed depending on your design requirements:
-    * Categories: top
-    * Categories: middle
-    * Categories: bottom
+   * Categories: top
+   * Categories: middle
+   * Categories: bottom
 ![Position blocks on a category page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Blocks/Assigning+Blocks+to+Category+or+Product+Pages/categories-position.png)
 
-{% info_block infoBox %}
+  {% info_block infoBox %}
 
-See [CMS Block: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/blocks/references/cms-block-reference-information.html) to learn more about attributes displayed on the **Edit CMS Block: Block ID** page.
+  See [CMS Block: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/blocks/references/cms-block-reference-information.html) to learn more about attributes displayed on the **Edit CMS Block: Block ID** page.
 
-{% endinfo_block %}
+  {% endinfo_block %}
 
 3. From the drop-down list, select the category which this block will be assigned to.
 4. To keep the changes, click **Save**.
+
 ***
 ## Assigning a Block to a Product Detail Page
+
 To create a product detail page:
 1. On the **Overview of CMS Blocks** page in the _Actions_ column, click **Edit Block** next to the block you would like to use to create a page.
-2.
-{% info_block warningBox %}
 
-You can only add existing, active, and not expired block. If the block has not been created yet, see the [Creating a CMS Block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/creating-cms-blocks.html) article first.
+  {% info_block warningBox %}
 
-{% endinfo_block %}
+  You can only add existing, active, and not expired block. If the block has not been created yet, see the [Creating a CMS Block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/creating-cms-blocks.html) article first.
+
+  {% endinfo_block %}
 
 2. Scroll down the page to the **Products** field and put a cursor there.
 
-{% info_block infoBox %}
-See [CMS Block: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/blocks/references/cms-block-reference-information.html
-{% endinfo_block %} to learn more about attributes displayed on the **Edit CMS Block: Block ID** page.)
+  {% info_block infoBox %}
+  
+  See [CMS Block: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/blocks/references/cms-block-reference-information.html) to learn more about attributes displayed on the **Edit CMS Block: Block ID** page.
+
+  {% endinfo_block %}
 
 ![Assign blocks to a product detail page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Blocks/Assigning+Blocks+to+Category+or+Product+Pages/product-page-block.png)
 

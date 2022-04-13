@@ -1,11 +1,11 @@
 ---
-title: Data export Merchant Orders .csv files format
+title: Data export Merchant Orders CSV files format
 last_updated: May 27, 2021
-description: This article contains content of merchant-orders, merchant order-items, and merchant-order-expenses.
+description: This document contains content of merchant-orders, merchant order-items, and merchant-order-expenses.
 template: import-file-template
 ---
 
-This article contains content of the following files you get when [exporting data on orders](/docs/scos/dev/data-export/{{page.version}}/data-export.html) generated in Spryker:
+This document contains content of the following files you get when [exporting data on orders](/docs/scos/dev/data-export/{{page.version}}/data-export.html) generated in Spryker:
 
 * merchant-orders
 * merchant-order-items
@@ -56,7 +56,7 @@ These are the parameters included in the `merchant_orders.csv` file:
 | 37 | merchant_order_totals_refund_total |   | Number | Original value is multiplied by 100 before it is stored in this field. | Refund total of the order totals for this merchant. |
 | 38 | merchant_order_totals_subtotal |   | Number | Original value is multiplied by 100 before it is stored in this field. | Subtotal of the order totals for this merchant. |
 | 39 | merchant_order_totals_tax_total |   | Number | Original value is multiplied by 100 before it is stored in this field. | Tax total of the order totals for this merchant. |
-| 40 | merchant_order_comments |   | Object | Comments are presented in a JSON array format: order_comments {% raw %}{{username, message, created_at, updated_at},...}{% endraw %} | Comments added by the customer to the sales order for this merchant. Username may be a different name from the customer’s first, middle, or last name, e. g., a nickname. |
+| 40 | merchant_order_comments |   | Object | Comments are presented in a JSON array format: order_comments {% raw %}{{username, message, created_at, updated_at},...}{% endraw %} | Comments added by the customer to the sales order for this merchant. Username may be a different name from the customer’s first, middle, or last name—for example, a nickname. |
 
 Check out the [merchant-orders.csv sample file](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Data+Export/merchant-orders.csv).
 
@@ -64,7 +64,7 @@ Check out the [merchant-orders.csv sample file](https://spryker.s3.eu-central-1.
 
 These are the header fields included in the `merchant_order_items.csv` file:
 
-| DEFAULT SEQUENCE | .CSV COLUMN HEADER NAME | REQUIRED? | TYPE | OTHER REQUIREMENTS / COMMENTS | DESCRIPTION |
+| DEFAULT SEQUENCE | CSV COLUMN HEADER NAME | REQUIRED? | TYPE | OTHER REQUIREMENTS / COMMENTS | DESCRIPTION |
 |-|-|-|-|-|-|
 | 1 | merchant_order_reference | &check; | String | Unique | Merchant order reference identifier |
 | 2 | marketplace_order_reference | &check; | String | Unique | Marketplace order reference identifier. |
@@ -132,7 +132,7 @@ Check out the [merchant-order-items.csv sample file](https://spryker.s3.eu-centr
 
 These are the header fields included in the `merchant_order_expenses.csv` file.
 
-| DEFAULT SEQUENCE | .CSV COLUMN HEADER NAME | REQUIRED? | TYPE | OTHER REQUIREMENTS / COMMENTS | DESCRIPTION |
+| DEFAULT SEQUENCE | CSV COLUMN HEADER NAME | REQUIRED? | TYPE | OTHER REQUIREMENTS / COMMENTS | DESCRIPTION |
 |-|-|-|-|-|-|
 | 1 | merchant_order_reference | &check; | String | Unique | Merchant order reference identification |
 | 2 | marketplace_order_reference | &check; | String | Unique | Marketplace order reference identification. |

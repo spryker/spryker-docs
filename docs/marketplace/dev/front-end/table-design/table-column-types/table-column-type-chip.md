@@ -23,7 +23,7 @@ Check out an example usage of the Table Column Chip in the `@spryker/table` conf
                 title: 'Column Title',
                 type: 'chip',
                 typeOptions: {
-                    text: '${value}',
+                    text: '${displayValue}',
                     color: 'blue',
                 },
             },
@@ -50,6 +50,12 @@ Check out an example usage of the Table Column Chip in the `@spryker/table` conf
 Register the component:
 
 ```ts
+declare module '@spryker/table' {
+    interface TableColumnTypeRegistry {
+        chip: TableColumnChipConfig;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -67,12 +73,6 @@ export class RootModule {}
 Below you can find interfaces for the Table Column Chip:
 
 ```ts
-declare module '@spryker/table' {
-    interface TableColumnTypeRegistry {
-        chip: TableColumnChipConfig;
-    }
-}
-
 interface TableColumnChipConfig {
     /** Bound to the @spryker/chips inputs */
     text?: string;

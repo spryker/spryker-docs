@@ -24,6 +24,7 @@ Please review and install the necessary features before beginning the integratio
 |Product Label| {{page.version}} |
 
 ### 1) Install the required modules using Composer
+
 Run the following command to install the required modules:
 
 ```yaml
@@ -74,12 +75,14 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 ```
 
 Run the following console command to:
+
 * Execute registered installer plugins
 * Install the infrastructural data
 
 ```bash
 console setup:init-db
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the configured infrastructural alternative product label has been added to the `spy_product_label` table in the database.

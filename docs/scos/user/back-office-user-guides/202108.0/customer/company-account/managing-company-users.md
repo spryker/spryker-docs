@@ -25,7 +25,7 @@ This topic describes how to manage company users.
 
 ## Prerequisites
 
-To start working with company users, go to the **Customers** > **Company Users** section.
+To start working with company users, go to the **Customers&nbsp;<span aria-label="and then">></span> Company Users** section.
 
 {% info_block warningBox "Note" %}
 
@@ -33,7 +33,7 @@ Make sure you have a [company role](/docs/scos/user/back-office-user-guides/{{pa
 
 {% endinfo_block %}
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating company users
 
@@ -72,7 +72,7 @@ The following table describes the attributes you see, select, or enter while cre
 | Last Name |  Customer last name.|
 | Gender | Customer gender. |
 | Date of birth | Customer date of birth. |
-Company  | Drop-down list with the companies from **Customers** > **Companies**. This selection defines the list of available business unit. |
+Company  | Drop-down list with the companies from **Customers&nbsp;<span aria-label="and then">></span> Companies**. This selection defines the list of available business unit. |
 | Business Unit | Business unit to which the user is going to be assigned. The list of the available values depends on the selected company. |
 | Assigned Roles | Roles assigned to the customer. |
 Unassigned Roles | Roles that you can select to be assigned to the customer.|

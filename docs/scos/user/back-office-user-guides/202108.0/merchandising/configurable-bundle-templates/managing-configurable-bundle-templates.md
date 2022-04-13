@@ -19,7 +19,7 @@ This article describes how to manage configurable bundle templates.
 
 ## Prerequisites
 
-To start working with configurable bundle templates, go to **Merchandising** > **Configurable Bundle Templates**.
+To start working with configurable bundle templates, go to **Merchandising&nbsp;<span aria-label="and then">></span> Configurable Bundle Templates**.
 
 For reference information, see [Creating configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/creating-configurable-bundle-templates.html#reference-information-creating-configurable-bundles).
 
@@ -87,7 +87,7 @@ To assign products to slot in a configurable bundle template:
 6. Select **Save**.
 The page refreshes with the success message displayed.
 
-**Tips & tricks**
+**Tips and tricks**
 <br>To double-check the list of products that are to be assigned, switch to the *Products to be assigned* tab.
 
 #### Deassigning products from slots in configurable bundle templates
@@ -98,7 +98,7 @@ To deassign a product from a slot in a configurable bundle template:
 3. Select **Save**.
 The page refreshes with the success message displayed.
 
-**Tips & tricks**
+**Tips and tricks**
 <br>To double-check the list of products that are to be deassigned, switch to the *Products to be deassigned* tab.
 
 

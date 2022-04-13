@@ -19,7 +19,7 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME          | VERSION | INTEGRATION GUIDE                                            |
 | ------------- | ------- | ------------------------------------------------------------ |
-| Spryker Core  | master  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Spryker Core  | master  | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Agent Assist  | master  | [Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/agent-assist-feature-integration.html) |
 | Shopping List | master  | [Shopping lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shopping-lists-feature-integration.html) |
 
@@ -60,8 +60,6 @@ class AgentDependencyProvider extends SprykerAgentDependencyProvider
 Ensure that, after finishing customer impersonation, the session shopping list collection is empty.
 
 {% endinfo_block %}
-
-
 
 ## Related features
 

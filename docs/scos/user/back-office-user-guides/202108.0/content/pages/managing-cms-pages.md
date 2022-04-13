@@ -23,9 +23,11 @@ This article describes how to manage CMS pages.
 
 ## Prerequisites
 
-To start managing CMS pages, got to **Content** > **Pages**.
+1. To preview CMS pages as a specific customer, [assign the customer to your user](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/assigning-customers-to-users.html).
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+2. To start managing CMS pages, got to **Content&nbsp;<span aria-label="and then">></span> Pages**.
+
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Previewing CMS pages
 
@@ -38,7 +40,7 @@ To preview a draft of your page, link your Zed account to an Yves account.
 {% endinfo_block %}
 
 To link a Zed customer to an Yves customer:
-1. Navigate to **Users Control** > **User**.
+1. Navigate to **Users Control&nbsp;<span aria-label="and then">></span> User**.
 2. On the *Users list* page, click **Assign Customers to User: Zed account e-mail** in the _Actions_ column. This will take you to the *Assign Customers* page.
 3. Select a user you would like to assign to your Zed account.
 
@@ -80,14 +82,14 @@ To view a CMS page:
     *  **In Zed**: This option opens the View CMS Page editor that includes general information about a published page, as well as its URL and metadata.
     *  **In Shop**: This option opens a live page on the Storefront.
     *  **Version History**: This option opens the *Version History: [Page Name]* page that displays all available versions of the page and general information of the version you are currently using.
- 3. To view the page details in Zed, select **View** > **In Zed**.
+ 3. To view the page details in Zed, select **View&nbsp;<span aria-label="and then">></span> In Zed**.
  4. On the *View CMS Page: [Page Name]* page, the following information is available:
     * General information
     * URLs
     * SEO information
     * Placeholders
 
-**Tips & tricks**
+**Tips and tricks**
 <br>On the *View CMS Page: [Page Name]* page, you can do the following:
 * Navigate to the page where you can view all available versions for the page, general information of the version you are currently using, and roll back to the previous page version if needed, as well as compare version. To do this, click **Version History** at the top of the page.
 * Make changes to page layout or its SEO information by clicking **Edit page** at the top of the page.

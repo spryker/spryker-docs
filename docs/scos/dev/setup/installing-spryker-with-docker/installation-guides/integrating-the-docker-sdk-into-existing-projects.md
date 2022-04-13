@@ -130,4 +130,4 @@ To get the full and up-to-date list of commands, run `docker/sdk help`.
 * [Deploy File Reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html)
 * [Services](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-services.html)
 * [Self-signed SSL Certificate Setup](/docs/scos/dev/setup/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html)
-* [Additional DevOPS Guidelines](/docs/scos/dev/setup/installing-spryker-with-docker/configuration/additional-devops-guidelines.html)
+* [Adjusting Jenkins for a Docker environment](/docs/scos/dev/setup/installing-spryker-with-docker/configuration/adjusting-jenkins-for-a-docker-environment.html)

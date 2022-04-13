@@ -33,7 +33,7 @@ use SprykerEco\Zed\AfterPay\Communication\Plugin\Checkout\AfterPaySaveOrderPlugi
 
 In `src/Pyz/Zed/Oms/OmsDependencyProvider.php`, add:
 
-**Сode sample**
+**Code sample**
 
  ```php
  ...

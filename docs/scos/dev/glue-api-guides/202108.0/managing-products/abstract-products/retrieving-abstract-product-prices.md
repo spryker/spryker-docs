@@ -15,6 +15,7 @@ redirect_from:
 This endpoint allows retrieving detailed information about the prices of abstract products.
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
 
 ## Retrieve prices of an abstract product
@@ -42,7 +43,8 @@ To retrieve prices of an abstract product, send the request:
 | priceMode | Defines the price mode to retrieve the price in. | GROSS_MODE, NET_MODE |
 
 ### Response
-<details><summary markdown='span'>Response sample with default abstract product prices</summary>
+
+<details><summary markdown='span'>Response sample: retrieve default prices of an abstract product</summary>
 
 ```json
 {
@@ -85,13 +87,10 @@ To retrieve prices of an abstract product, send the request:
     }
 }
 ```
-
 </details>
 
 <details>  
-<summary markdown='span'>
-Response sample with default prices and volume prices for an abstract product
-</summary>
+<summary markdown='span'>Response sample: retrieve default and volume prices of an abstract product</summary>
 
 ```json    
 {
@@ -140,12 +139,10 @@ Response sample with default prices and volume prices for an abstract product
         "self": "https://glue.mysprykershop.com/abstract-products/093/abstract-product-prices"
     }
 }
-
 ```
-
 </details>
 
-<details><summary markdown='span'>Response sample with a gross price in Swiss Franc for an abstract product</summary>
+<details><summary markdown='span'>Response sample: retrieve a gross price in Swiss Franc of an abstract product</summary>
 
  ```json
     {
@@ -188,7 +185,6 @@ Response sample with default prices and volume prices for an abstract product
     }
 }
 ```
-
 </details>
 
 <a name="abstract-product-prices-response-attributes"></a>

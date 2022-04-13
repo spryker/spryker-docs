@@ -23,7 +23,9 @@ On the **Customers** page in the **Customers** > **Customers** section, you see 
 * The actions that you can perform on a customer record (**View**, **Edit**, and for _B2B only_: **Attach to company**)
 ***
 ## Add Customer/Edit Customer pages
+
 The following table describes the attributes you enter and select when creating or editing customers.
+
 |Attribute| Description|
 |---|---|
 | **Email**|An email address that will be linked to the new account. The email address is important for completing the registration (by accessing the link that will be sent by email) or for later use of the forgot password functionality. On the Edit customer page, this field is greyed out and not available for modifications.|
@@ -42,7 +44,9 @@ The following table describes the attributes you enter and select when creating 
 
 ***
 ## Add New Address page
+
 The following table describes the attributes you enter and select when adding a new customer address.
+
 |Attribute|Description|
 |---|---|
 |**Salutation**<br>**First Name**<br>**Last Name**|Customer's salutation. If the other person is the point of contact for this new address, you need to populate the fields with the respective data. If the customer is the same, populate the fields with the same values.|
@@ -54,11 +58,17 @@ The following table describes the attributes you enter and select when adding a 
 ![Add new address page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Customers/Customers%3A+Reference+Information/Add+new+address+page.png) 
 
 ***
+
 ## B2B: Attach Customer to Company page
+
 The following table describes the attributes that you select while attaching the customer to a company.
+
 {% info_block infoBox "Info" %}
+
 Once you click **Save**, you are redirected to the **Company Account > Company Users** page where your customer's data will be stored.
+
 {% endinfo_block %}
+
 |Attribute|Description|
 |---|---|
 |**Company**|A drop-down list with the companies from the **Company Account > Companies** section. Your selection defines the values available in the **Business Unit** drop-down list, as only the business units of the selected company are going to be displayed.|

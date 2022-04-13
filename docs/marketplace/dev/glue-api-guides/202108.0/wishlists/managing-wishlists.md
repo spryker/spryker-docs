@@ -8,9 +8,7 @@ The Marketplace Wishlists API allows creating list and deleting [wishlists](/doc
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see:
-
-- Marketplace Wishlist API feature integration <!---LINK-->
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Marketplace Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-wishlist-feature-integration.html)
 
 ## Create a wishlist
 
@@ -24,9 +22,11 @@ To create a wishlist, send the request:
 
 | HEADER KEY    | HEADER VALUE | REQUIRED? | DESCRIPTION |
 | ---------- | -------- | -------- | -------------- |
-| Authorization | string       | ✓         | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string       | &check;         | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
-Sample request: `POST https://glue.mysprykershop.com/wishlists`
+Request sample: create a wishlist
+
+`POST https://glue.mysprykershop.com/wishlists`
 
 ```json
 {
@@ -41,11 +41,11 @@ Sample request: `POST https://glue.mysprykershop.com/wishlists`
 
 | ATTRIBUTE | TYPE   | REQUIRED | DESCRIPTION |
 | ------- | ----- | ------- | -------------- |
-| name      | string | ✓        | Name of the wishlist to create.|
+| name      | string | &check;        | Name of the wishlist to create.|
 
 ### Response
 
-**Response sample**
+Response sample: create a wishlist
 
 ```json
 {
@@ -96,12 +96,12 @@ To retrieve all wishlists of a customer, send the request:
 
 | HEADER KEY    | HEADER VALUE | REQUIRED? | DESCRIPTION |
 | ------------ | ----------- | -------- | --------- |
-| Authorization | string       | ✓         | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string       | &check;         | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample with no wishlists</summary>
+<summary markdown='span'>Response sample: no wishlists found</summary>
 
 ```json
 {
@@ -111,11 +111,10 @@ To retrieve all wishlists of a customer, send the request:
 		}
 	}
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with existing wishlists</summary>
+<summary markdown='span'>Response sample: retrieve all the wishlists</summary>
 
 
 ```json
@@ -143,7 +142,7 @@ To retrieve all wishlists of a customer, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with wishlist items</summary>
+<summary markdown='span'>Response sample: retrieve all the wishlists with wishlist items</summary>
 
 ```json
 {
@@ -192,7 +191,7 @@ To retrieve all wishlists of a customer, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with wishlist items and respective concrete products</summary>
+<summary markdown='span'>Response sample: retrieve all the wishlists with wishlist items and respective concrete products</summary>
 
 ```json
 {
@@ -291,7 +290,7 @@ To retrieve all wishlists of a customer, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with wishlist items, respective concrete products, and their product labels</summary>
+<summary markdown='span'>Response sample: retrieve all the wishlists with wishlist items, respective concrete products, and their product labels</summary>
 
 ```json
 {
@@ -408,7 +407,6 @@ To retrieve all wishlists of a customer, send the request:
     ]
 }
 ```
-
 </details>
 
 | ATTRIBUTE     | TYPE    | DESCRIPTION  |
@@ -440,7 +438,7 @@ To retrieve a specific wishlist, send the request:
 
 | HEADER KEY    | HEADER VALUE | REQUIRED | DESCRIPTION  |
 | ------------ | ----------- | ------- | -------------- |
-| Authorization | string       | ✓        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
 | QUERY PARAMETER | DESCRIPTION     | POSSIBLE VALUES |
 | ---------- | -------------------- | --------------------- |
@@ -448,7 +446,7 @@ To retrieve a specific wishlist, send the request:
 
 | REQUEST SAMPLE   | USAGE   |
 | ------------- | ------------ |
-| GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1 | Retrieve the wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. |
+| GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1 | Retrieve a wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. |
 | GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1?include=wishlist-items | Retrieve the wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. Include wishlist items in the response. |
 | GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1?include=wishlist-items,concrete-products | Retrieve the wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. Include wishlist items and respective concrete products in the response. |
 | GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1?include=wishlist-items,concrete-products,product-labels | Retrieve the wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. Include wishlist items, respective concrete products and their product labels in the response. |
@@ -464,7 +462,7 @@ To retrieve a specific wishlist, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieving a wishlist</summary>
+<summary markdown='span'>Response sample: retrieve a wishlist</summary>
 
 ```json
 {
@@ -486,7 +484,7 @@ To retrieve a specific wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with wishlist items</summary>
+<summary markdown='span'>Response sample: retrieve a wishlist with wishlist items included</summary>
 
 ```json
 {
@@ -530,7 +528,7 @@ To retrieve a specific wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with wishlist items and respective concrete products</summary>
+<summary markdown='span'>Response sample: retrieve a wishlist with wishlist items and respective concrete products included</summary>
 
 ```json
 {
@@ -622,7 +620,7 @@ To retrieve a specific wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with wishlist items, respective concrete products, and their product labels</summary>
+<summary markdown='span'>Response sample: retrieve a wishlist with wishlist items, respective concrete products, and product labels included</summary>
 
 ```json
 {
@@ -737,7 +735,7 @@ To retrieve a specific wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with wishlist items, concrete products and their availabilities</summary>
+<summary markdown='span'>Response sample: retrieve a wishlist with wishlist items, concrete products and their availabilities</summary>
 
 ```json
 {
@@ -862,7 +860,7 @@ To retrieve a specific wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with wishlist items, concrete products and their prices</summary>
+<summary markdown='span'>Response sample: retrieve a wishlist with wishlist items, concrete products and their prices</summary>
 
 ```json
 {
@@ -998,7 +996,7 @@ To retrieve a specific wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with wishlist items, concrete products, and product offers</summary>
+<summary markdown='span'>Response sample: retrieve a wishlist with wishlist items, concrete products, and product offers</summary>
 
 ```json
 {
@@ -1336,7 +1334,7 @@ To retrieve a specific wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with wishlist items, concrete products, product offers, and product offer availabilities</summary>
+<summary markdown='span'>Response sample: retrieve a wishlist with wishlist items, concrete products, product offers, and product offer availabilities</summary>
 
 ```json
 {
@@ -1698,7 +1696,7 @@ To retrieve a specific wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with wishlist items, concrete products, product offers, and product offer prices</summary>
+<summary markdown='span'>Response sample: retrieve a wishlist with wishlist items, concrete products, product offers, and product offer prices</summary>
 
 ```json
 {
@@ -2082,7 +2080,7 @@ To retrieve a specific wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with wishlist items and merchant information included</summary>
+<summary markdown='span'>Response sample: retrieve a wishlist with wishlist items and merchant information included</summary>
 
 ```json
 {
@@ -2203,7 +2201,6 @@ To retrieve a specific wishlist, send the request:
     ]
 }
 ```
-
 </details>
 
 | ATTRIBUTE  | TYPE  | DESCRIPTION     |
@@ -2239,9 +2236,11 @@ To edit a wishlist, send the request:
 
 | HEADER KEY    | HEADER VALUE | REQUIRED | DESCRIPTION    |
 | ------ | ------ | ------ | -------------- |
-| Authorization | string       | ✓        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
-Sample request: `PATCH https://glue.mysprykershop.com/wishlists`
+Request sample: edit a wishlist
+
+`PATCH https://glue.mysprykershop.com/wishlists`
 
 The following sample changes the name of a wishlist.
 
@@ -2259,8 +2258,8 @@ The following sample changes the name of a wishlist.
 
 | ATTRIBUTE | TYPE   | REQUIRED | DESCRIPTION    |
 | ------ | ---- | ------- | ----------------------- |
-| id        | string | ✓        | Unique identifier of the wishlist to update the name of. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
-| name      | string | ✓        | New name of the wishlist.                                    |
+| id        | string | &check;   | Unique identifier of the wishlist to update the name of. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
+| name      | string | &check;   | New name of the wishlist.   |
 
 ### Response
 
@@ -2289,9 +2288,11 @@ To delete a wishlist, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION   |
 | ---------- | -------- | ----- | ----------------- |
-| Authorization | string       | ✓        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
-Request sample: `DELETE https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a`
+Request sample: 
+
+`DELETE https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a`
 
 ### Response
 

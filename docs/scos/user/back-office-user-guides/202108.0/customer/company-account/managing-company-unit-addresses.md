@@ -19,16 +19,16 @@ This page describes the procedure of creating and managing company unit addresse
 
 ## Prerequistes
 
-To start working with company unit addresses, go to **Customers** > **Company Unit Addresses**.
+To start working with company unit addresses, go to **Customers&nbsp;<span aria-label="and then">></span> Company Unit Addresses**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating company unit addresses
 
 To create a company business unit:
 1. On the **Overview of Business Unit Addresses** page, click **Create Company Unit Address** in the top right corner.
 2. On the **Create Company Unit Address** page:
-    * Select _company_ and _country_ from the respective drop-down lists (the company values are taken from **Customers** > **Companies**).
+    * Select _company_ and _country_ from the respective drop-down lists (the company values are taken from **Customers&nbsp;<span aria-label="and then">></span> Companies**).
     * Enter the City, Zip Code, and Street values to complete the address. Number, Addition to address, Comment, and Labels fields are optional.
 3. Once done, click **Save**.
 
@@ -40,7 +40,7 @@ To edit a company unit address:
 
 Once the address is created, you can assign it to the business unit.
 To assign an address:
-1. Navigate to **Customers** > **Company Units** .
+1. Navigate to **Customers&nbsp;<span aria-label="and then">></span> Company Units** .
 2. On the *List of company business units* page,  in the _Actions_ column, click **Edit** for a business unit you want to update with an address.
 3. On the *Edit Company Business Unit* page, click the **Addresses** field. You can select from one to many values. The list of values available for selection is limited to those addresses assigned to the company the same as the business unit is assigned to.
 4. Click **Save**.
@@ -51,7 +51,7 @@ The following table describes the attributes you see, select, or enter while cre
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| Company | Drop-down list with the values from **Customers** > **Company**. |
+| Company | Drop-down list with the values from **Customers&nbsp;<span aria-label="and then">></span> Company**. |
 | Country | Drop-down list with the countries available for selection. |
 | City | Text field where you enter the city name. |
 | Zip Code | Text field where you enter the zip code value. |

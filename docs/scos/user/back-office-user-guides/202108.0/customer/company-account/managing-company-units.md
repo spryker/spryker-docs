@@ -23,9 +23,9 @@ This article describes how to manage company units.
 
 ## Prerequisites
 
-To start managing company units, go to  **Customers** > **Company Units**.
+To start managing company units, go to  **Customers&nbsp;<span aria-label="and then">></span> Company Units**.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Creating company business units
 

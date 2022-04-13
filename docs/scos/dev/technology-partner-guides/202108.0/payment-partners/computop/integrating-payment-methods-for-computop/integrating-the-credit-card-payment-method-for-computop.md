@@ -1,5 +1,5 @@
 ---
-title: Integrating the Сredit Сard payment method for Computop
+title: Integrating the Credit Card payment method for Computop
 description: Integrate  Credit Card payment through Computop into the Spryker-based shop.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -27,7 +27,7 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-ideal-payment-method-for-computop.html
   - title: Integrating the Easy Credit payment method for Computop
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-easy-credit-payment-method-for-computop.html
-  - title: Computop - Paydirekt
+  - title: Integrating the Paydirekt payment method for Computop
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paydirekt-payment-method-for-computop.html
   - title: Integrating the CRIF payment method for Computop
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-crif-payment-method-for-computop.html

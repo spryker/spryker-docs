@@ -22,7 +22,7 @@ For detailed information on the modules that provide the API functionality and r
 ## Searching for Products
 To search for products, send GET requests to the following endpoint:
 `/catalog-search`
-Sample request: `GET http://mysprykershop.com/catalog-search?q=`
+Request sample: `GET http://mysprykershop.com/catalog-search?q=`
 The above request is the same as searching with an empty search field in Spryker front-end (no search parameters provided). By executing such a test search request, you can get search settings, such as sorting and pagination options, a default number of items per page etc.
 
 {% info_block warningBox %}

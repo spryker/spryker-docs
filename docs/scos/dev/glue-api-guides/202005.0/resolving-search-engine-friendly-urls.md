@@ -138,7 +138,7 @@ To resolve a SEO-friendly link into a Glue URL, send a GET request to the follow
 **/url-resolver**
 
 ### Request
-Sample request: *GET http://glue.mysprykershop.com/url-resolver?url=**/de/acer-aspire-s7-134***
+Request sample: *GET http://glue.mysprykershop.com/url-resolver?url=**/de/acer-aspire-s7-134***
 
 where **/de/acer-aspire-s7-134** is the SEF URL you want to resolve, without the server name and scheme.
 

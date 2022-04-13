@@ -65,7 +65,7 @@ On the **Edit Quote Request** page, clicking **Add shipment method** should redi
 
 5. Select the shipment method and the delivery date (if needed), and click **Save**. The Quote Request will be updated successfully and redirect you to the **Edit Quote Request** page.
 
-**Tips & Tricks**
+**Tips and tricks**
 You can add a delivery address and a shipment method during the checkout prior to creating a Quote Request. To do this, follow the instructions in the [Address](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-address-step.html) and [Shipment](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-shipment-step.html) steps. Once done, the changes will be saved. To proceed with the quote request, click **Back to Cart**.
 ___
 
@@ -96,7 +96,7 @@ Keep in mind that measurement units cannot be updated. You can only add a new pr
 
 3.  To keep changes, click **Save and Back to Edit**. The Quote Request will be updated.
 
-**Tips & Tricks**
+**Tips and tricks**
 If you want to update the item quantity, enter the value in the Quantity field and click the **Refresh** icon.
 
 ![change-quantity-in-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Buyer/change-quantity-in-cart.png)
@@ -127,7 +127,7 @@ Once the delivery address is defined, the previously added shipment method is re
 
 4. On the **Shipment** page, select the shipment method and delivery date (if needed), and click **Save**. This will save the changes and add them to the quote.
 
-**Tips & Tricks**
+**Tips and tricks**
 
 On the **Address** and **Shipment** pages:
 

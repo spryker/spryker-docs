@@ -36,7 +36,12 @@ Component configuration:
 Register the component:
 
 ```ts
-// Dynamic
+declare module '@spryker/table' {
+    interface TableConfig {
+        total?: TableTotalConfig;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -71,11 +76,5 @@ export class RootModule {}
 Below you can find interfaces for the Table Feature Total:
 
 ```ts
-declare module '@spryker/table' {
-    interface TableConfig {
-        total?: TableTotalConfig;
-    }
-}
-
 export interface TableTotalConfig extends TableFeatureConfig {}
 ```

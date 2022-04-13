@@ -301,7 +301,7 @@ $i->see(CustomerOverviewPage::BOX_HEADLINE_ORDERS, 'h5');
 $i->see(CustomerOverviewPage::BOX_HEADLINE_PROFILE, 'h5');
 $i->see(CustomerOverviewPage::BOX_HEADLINE_NEWSLETTER, 'h5');
 ```
-сhange checking the `h5` heading to `h2`:
+change checking the `h5` heading to `h2`:
 ```
 $i->see(CustomerOverviewPage::BOX_HEADLINE_ORDERS, 'h2');
 $i->see(CustomerOverviewPage::BOX_HEADLINE_PROFILE, 'h2');
@@ -745,7 +745,7 @@ introduce the `itemscope` and `itemtype`  microdata directives to the `div` tag:
 ```
 <h3 class="page-info__title">{% raw %}{{{% endraw %} data.title {% raw %}}}{% endraw %}</h3>
 ```
-сhange the `h3` heading to `h1`  and add the `title title--h3` CSS classes:
+change the `h3` heading to `h1`  and add the `title title--h3` CSS classes:
 ```
 <h1 class="page-info__title title title--h3 ">{% raw %}{{{% endraw %} data.title {% raw %}}}{% endraw %}</h1>
 ```

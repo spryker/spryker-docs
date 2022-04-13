@@ -39,8 +39,8 @@ To retrieve prices of an abstract product, send the request:
 
 | Request  | Usage |
 | --- | --- |
-| `GET http://glue.mysprykershop.com/abstract-products/001/abstract-product-prices` | Retrieve the price of the `001` product.  |
-| `GET http://glue.mysprykershop.com/abstract-products/001/abstract-product-prices?currency=CHF&priceMode=GROSS_MODE` | Retrieve the gross price of the `001` product in Swiss Franc. |
+| `GET https://glue.mysprykershop.com/abstract-products/001/abstract-product-prices` | Retrieve the price of the `001` product.  |
+| `GET https://glue.mysprykershop.com/abstract-products/001/abstract-product-prices?currency=CHF&priceMode=GROSS_MODE` | Retrieve the gross price of the `001` product in Swiss Franc. |
 
 | String parameter | Description | Exemplary values |
 | --- | --- | --- |
@@ -87,12 +87,12 @@ To retrieve prices of an abstract product, send the request:
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/abstract-products/001/abstract-product-prices"
+                "self": "https://glue.mysprykershop.com/abstract-products/001/abstract-product-prices"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/abstract-products/001/abstract-product-prices"
+        "self": "https://glue.mysprykershop.com/abstract-products/001/abstract-product-prices"
     }
 }
 ```
@@ -134,12 +134,12 @@ To retrieve prices of an abstract product, send the request:
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/abstract-products/001/abstract-product-prices"
+                "self": "https://glue.mysprykershop.com/abstract-products/001/abstract-product-prices"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/abstract-products/001/items?currency=CHF&priceMode=GROSS_MODE"
+        "self": "https://glue.mysprykershop.com/abstract-products/001/items?currency=CHF&priceMode=GROSS_MODE"
     }
 }
 ```

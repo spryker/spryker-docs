@@ -99,6 +99,12 @@ Any existing Angular component can be registered and used within the Drawer.
 Also, it's possible to create and register a custom component that is rendered inside the Drawer.
 
 ```ts
+declare module '@spryker/actions' {
+    interface ActionsRegistry {
+        drawer: DrawerActionHandlerService;
+    }
+}
+
 @NgModule({
     imports: [
         ActionsModule.withActions({

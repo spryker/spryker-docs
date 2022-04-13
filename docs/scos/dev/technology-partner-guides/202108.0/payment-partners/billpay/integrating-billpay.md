@@ -16,7 +16,7 @@ related:
 
 Billpay offers multiple payment methods (Invoice, Direct Debit, PayLater, Instalment). Availability of payment methods differs from country to country. Please contact Billpay directly or visit the [Billpay website](https://www.billpay.de/en/)e  for details.
 
-The Billpay module provides integration with the [Invoice with prescoring](https://www.billpay.de/en/business-clients/payment-information/index.html) payment method.
+The Billpay module provides integration with the [Invoice with prescoring](https://www.billpay.de/en/klarna-group-for-business/index.html) payment method.
 
 ## Configuration
 

@@ -43,7 +43,9 @@ You can only add existing, active, and not expired block. If the block has not b
 ![Position blocks on a category page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Blocks/Assigning+Blocks+to+Category+or+Product+Pages/categories-position.png)
 
 {% info_block infoBox %}
+
 See  [CMS Block: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/blocks/references/cms-block-reference-information.html) to learn more about attributes displayed on the **Edit CMS Block: Block ID** page.
+
 {% endinfo_block %}
 
 3. From the drop-down list, select the category which this block will be assigned to.
@@ -52,16 +54,21 @@ See  [CMS Block: Reference Information](/docs/scos/user/back-office-user-guides/
 ## Assigning a Block to a Product Detail Page
 To create a product detail page:
 1. On the **Overview of CMS Blocks** page in the _Actions_ column, click **Edit Block** next to the block you would like to use to create a page.
-{% info_block warningBox %}
-You can only add existing, active, and not expired block. If the block has not been created yet, see the [Creating a CMS Block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/creating-cms-blocks.html) article first.
-{% endinfo_block %}
+  {% info_block warningBox %}
+  
+  You can only add existing, active, and not expired block. If the block has not been created yet, see the [Creating a CMS Block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/creating-cms-blocks.html) article first.
+  
+  {% endinfo_block %}
+
 2. Scroll down the page to the **Products** field and put a cursor there.
 
-{% info_block infoBox %}
-See  [CMS Block: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/blocks/references/cms-block-reference-information.html) to learn more about attributes displayed on the **Edit CMS Block: Block ID** page.
-{% endinfo_block %}
+  {% info_block infoBox %}
+  
+  See  [CMS Block: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content-management/blocks/references/cms-block-reference-information.html) to learn more about attributes displayed on the **Edit CMS Block: Block ID** page.
+  
+  {% endinfo_block %}
 
-![Assign blocks to a product detail page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Blocks/Assigning+Blocks+to+Category+or+Product+Pages/product-page-block.png)
+  ![Assign blocks to a product detail page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Blocks/Assigning+Blocks+to+Category+or+Product+Pages/product-page-block.png)
 
 3. From the drop-down list, select any of the suggested abstract products.  
 4. To keep the changes, click **Save**.

@@ -50,7 +50,12 @@ Component configuration:
 Register the component:
 
 ```ts
-// Dynamic
+declare module '@spryker/table.feature.filters' {
+    interface TableFiltersRegistry {
+        select: TableFilterSelect;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -90,12 +95,6 @@ export class RootModule {}
 Below you can find interfaces for the Table Filter Select:
 
 ```ts
-declare module '@spryker/table.feature.filters' {
-    interface TableFiltersRegistry {
-        select: TableFilterSelect;
-    }
-}
-
 export interface TableFilterSelect
     extends TableFilterBase<TableFilterSelectValue> {
     type: 'select';
@@ -112,5 +111,5 @@ export interface TableFilterSelectOptionsValue {
     title: string;
 }
 
-export type TableFilterSelectValue = unknown | unknown[];
+export type TableFilterSelectValue = SelectValueSelected;
 ```

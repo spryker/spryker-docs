@@ -411,9 +411,9 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
      */
     protected function getPublisherPlugins(): array
     {
-        return array_merge(        
+        return [        
             new MerchantProductOfferWritePublisherPlugin(),
-        );
+        ];
     }
 }
 ```

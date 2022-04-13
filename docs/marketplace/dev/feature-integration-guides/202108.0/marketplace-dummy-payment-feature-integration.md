@@ -179,9 +179,9 @@ Make sure that the new payment method is added to the `spy_payment_method` and `
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
-Follow the steps below to install the Dummy Payment feature front end.
+Follow the steps below to install the Dummy Payment feature frontend.
 
 ### 1) Add translations
 

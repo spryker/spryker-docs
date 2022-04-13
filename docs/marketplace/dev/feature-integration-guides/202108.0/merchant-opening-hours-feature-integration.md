@@ -509,9 +509,9 @@ Make sure that the opening hours data is added to the `spy_merchant_opening_hour
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
-Follow the steps below to install the Merchant Opening Hours feature front end.
+Follow the steps below to install the Merchant Opening Hours feature frontend.
 
 ### Prerequisites
 

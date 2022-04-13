@@ -40,7 +40,7 @@ The following table describes the attributes you enter and select while editing 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | Group name translation key | Glossary key of the product option group. You can enter this value only when [creating product options](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html). |
-| Tax Set | Conditions under which the product option group is taxed. See [Managing tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/managing-tax-sets.html) to learn how to create tax sets. |
+| Tax Set | Conditions under which the product option group is taxed. To learn how to create tax sets, see [Managing tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/managing-tax-sets.html). |
 | Option name translation key | Glossary key for the product option value. You can enter this value only when [creating product options](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html). |
 | SKU | Unique identifier of the product option value. You can enter this value only when [creating product options](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html). |
 | Gross price and Net price | Price values of the product option value for gross and net modes. Prices are integer values and, in the database, they are stored in their normalized form. For example, `4EUR` is stored as `400`. If you do not define a price for a product option value, it is considered *inactive* for that specific currency and price mode. If a price is `0`, it is considered *free of charge*.|
@@ -66,7 +66,7 @@ To assign products to a product option, follow these steps:
 To deassign products from a product option, follow these steps:
 1. Select **Edit** next to the product option you want to deassign product from.
 2. On the **Edit product option** page, switch to **Products&nbsp;<span aria-label="and then">></span> Assigned products** subtab.
-3. Deselect the desired products.
+3. Clear the desired products.
 4. Select **Save**.
     This refreshes the page with the success message displayed.
 

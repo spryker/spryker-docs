@@ -93,9 +93,9 @@ Make sure that it is only possible to have items in cart where the product offer
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
-Follow the steps below to install the Marketplace Product Offer + Cart feature front end.
+Follow the steps below to install the Marketplace Product Offer + Cart feature frontend.
 
 ### Prerequisites
 

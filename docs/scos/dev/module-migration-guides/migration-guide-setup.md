@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-setup.html
 ---
 
-## Upgrading from Version 3.* to Version 4.*
+## Upgrading from version 3.* to version 4.*
 
 With this update the behavior of the `setup:install` command slightly changes. Instead of removing directories where generated files are stored, these directories will be kept and emptied.
 
@@ -76,7 +76,3 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     }
 }
 ```
-<!--See also:
-
-* Checkout other Console commands
--->

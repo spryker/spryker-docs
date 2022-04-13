@@ -8,9 +8,9 @@ template: module-migration-guide-template
 
 *Estimated migration time: 10 minutes*
 
-To upgrade the ProductConfiguratorGatewayPage module from version 0.3.* to version 0.4.*, do the following:
+To upgrade the `ProductConfiguratorGatewayPage` module from version 0.3.* to version 0.4.*, do the following:
 
-1. Update the ProductConfiguratorGatewayPage module to version 0.4.0:
+1. Update the `ProductConfiguratorGatewayPage` module to version 0.4.0:
 
 ```bash
 composer require spryker-shop/product-configurator-gateaway-page:"^0.4.0" --update-with-dependencies
@@ -23,6 +23,7 @@ console transfer:generate
 ```
 
 3. From `\Pyz\Yves\ProductConfiguratorGatewayPage\ProductConfiguratorGatewayPageDependencyProvider`, remove the plugin stack: `\Pyz\Yves\ProductConfiguratorGatewayPage\ProductConfiguratorGatewayPageDependencyProvider::getProductConfiguratorGatewayBackUrlResolverStrategyPlugins()`.
+
 4. In `\Pyz\Yves\ProductConfiguratorGatewayPage\ProductConfiguratorGatewayPageDependencyProvider`, on project level, register the new strategy plugins:
 
 <details open>

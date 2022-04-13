@@ -30,12 +30,16 @@ redirect_from:
 
 Its main purpose is to make the parameter name more intuitive for the end user.
 
-**To migrate, do the following:**
+*Estimated migration time: ~2h*
+
+To migrate, do the following:
+
 1. Update the `QuoteRequest` module to version 2.0.0:
 
 ```bash
 composer require spryker/quote-request: "^2.0.0" --update-with-dependencies
 ```
+
 2. Run the database migration:
 
 ```sql
@@ -73,12 +77,14 @@ vendor/bin/console transfer:generate
 ```
 
 {% info_block infoBox %}
+
 Make sure that `QuoteRequestTransfer` now has `isLatestVersionVisible`, and doesn't have `isLatestVersionHidden` property.
+
 {% endinfo_block %}
 
 {% info_block warningBox %}
+
 Make sure that, if you had usage of `QuoteTransfer::setIsLatestVersionHidden`, `QuoteTransfer::getIsLatestVersionHidden`  methods on project level, they have been updated to use the newly introduced `QuoteTransfer::getIsLatestVersionVisible` and  `QuoteTransfer::getIsLatestVersionVisible` methods with business logic inversion.
 
 {% endinfo_block %}
 
-*Estimated migration time: ~2h*

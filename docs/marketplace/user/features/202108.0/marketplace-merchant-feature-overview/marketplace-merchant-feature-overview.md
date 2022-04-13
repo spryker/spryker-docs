@@ -40,7 +40,7 @@ The Marketplace administrator manages merchants and sets their statuses in the
 | Active | N/A | &check; |
 | Inactive | N/A | ✗ |
 
-For details about how to change the merchant user statuses and activate and deactivate merchants in the Back Office. [Approving and denying merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#approving-and-denying-merchants) and [Activating and deactivating merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants).
+For details about how to change the merchant user statuses and activate and deactivate merchants in the Back Office, see [approving and denying merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#approving-and-denying-merchants) and [activating and deactivating merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants).
 
 Schematically, the merchant status change flow looks like this:
 

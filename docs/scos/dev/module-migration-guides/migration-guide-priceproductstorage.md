@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-priceproductstorage.html
 ---
 
-## Upgrading from Version 2.* to Version 4.0.0
+## Upgrading from version 2.* to version 4.0.0
 
 {% info_block infoBox %}
 

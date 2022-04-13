@@ -34,52 +34,57 @@ related:
     link: docs/scos/dev/module-migration-guides/migration-guide-multi-currency.html
 ---
 
-## Upgrading from Version 4.* to Version 5.*
+## Upgrading from version 4.* to version 5.*
 
 From version 5 we have changed price module responsibilities: previously it was responsible for handling product price related functionality. This responsibility has now been moved to the new PriceProduct module which handles product prices, while Price module is responsible for generic spryker core related functionality.
 
 Due to this change of the Price module responsibility, all related modules have also be updated to work with the `PriceProduct` module.
 
 1. First you have to install the new `PriceProduct` module.
-* run `composer require spryker/price-product`.
-* run SQL queries to create a new table and alter the existing one.
 
-```sql
-CREATE SEQUENCE "spy_price_product_store_pk_seq";
+   * run `composer require spryker/price-product`.
+   * run SQL queries to create a new table and alter the existing one.
 
-CREATE TABLE "spy_price_product_store"
-(
-    "id_price_product_store" INTEGER NOT NULL,
-    "fk_price_product" INTEGER NOT NULL,
-    "fk_currency" INTEGER NOT NULL,
-    "fk_store" INTEGER,
-    "net_price" INTEGER,
-    "gross_price" INTEGER,
-    PRIMARY KEY ("id_price_product_store"),
-    CONSTRAINT "spy_price_product_store-unique-price_product" UNIQUE ("fk_currency","fk_price_product","fk_store")
-);
+    ```sql
+    CREATE SEQUENCE "spy_price_product_store_pk_seq";
 
-ALTER TABLE "spy_price_type"
-  ADD "price_mode_configuration" INT2;
-  ```
-`spy_price_product_store` is the table for price per store / currency. `price_mode_configuration` field is added to indicate to which mode price type assigned GROSS, NETT, BOTH.
-* Build propel models `vendor/bin/console propel:model:build`.
-* Generate new transfer objects `vendor/bin/consle transfer:generate`.
-If you have overwritten any of the classes from the `Price` module, you have to change namespace part with `Price` to `PriceProduct`, for example if you used `PriceFacade`, now should use `PriceProductFacade`. Same for `Factories`, `QueryContainer`, `DependencyProvider`.
-Check that all `Price` plugins registered in `ProductDependencyProvider` have been moved to `PriceProduct` namespace.
-`use Spryker\Zed\Price\Communication\Plugin\ProductAbstract\PriceProductAbstractAfterCreatePlugin;`
-`use Spryker\Zed\Price\Communication\Plugin\ProductAbstract\PriceProductAbstractAfterUpdatePlugin;`
-`use Spryker\Zed\Price\Communication\Plugin\ProductAbstract\PriceProductAbstractReadPlugin;`
-`use Spryker\Zed\Price\Communication\Plugin\ProductConcrete\PriceProductConcreteAfterCreatePlugin;`
-`use Spryker\Zed\Price\Communication\Plugin\ProductConcrete\PriceProductConcreteAfterUpdatePlugin;`
-`use Spryker\Zed\Price\Communication\Plugin\ProductConcrete\PriceProductConcreteReadPlugin;`
-Should be renamed to:
-`use Spryker\Zed\PriceProduct\Communication\Plugin\ProductAbstract\PriceProductAbstractAfterCreatePlugin;`
-`use Spryker\Zed\PriceProduct\Communication\Plugin\ProductAbstract\PriceProductAbstractAfterUpdatePlugin;`
-`use Spryker\Zed\PriceProduct\Communication\Plugin\ProductAbstract\PriceProductAbstractReadPlugin;`
-`use Spryker\Zed\PriceProduct\Communication\Plugin\ProductConcrete\PriceProductConcreteAfterCreatePlugin;`
-`use Spryker\Zed\PriceProduct\Communication\Plugin\ProductConcrete\PriceProductConcreteAfterUpdatePlugin;`
-`use Spryker\Zed\PriceProduct\Communication\Plugin\ProductConcrete\PriceProductConcreteReadPlugin;`
+    CREATE TABLE "spy_price_product_store"
+    (
+        "id_price_product_store" INTEGER NOT NULL,
+        "fk_price_product" INTEGER NOT NULL,
+        "fk_currency" INTEGER NOT NULL,
+        "fk_store" INTEGER,
+        "net_price" INTEGER,
+        "gross_price" INTEGER,
+        PRIMARY KEY ("id_price_product_store"),
+        CONSTRAINT "spy_price_product_store-unique-price_product" UNIQUE ("fk_currency","fk_price_product","fk_store")
+    );
+
+    ALTER TABLE "spy_price_type"
+    ADD "price_mode_configuration" INT2;
+    ```
+
+    `spy_price_product_store` is the table for price per store / currency. `price_mode_configuration` field is added to indicate to which mode price type assigned GROSS, NET, BOTH.
+   * Build propel models `vendor/bin/console propel:model:build`.
+   * Generate new transfer objects `vendor/bin/console transfer:generate`.
+
+    If you have overwritten any of the classes from the `Price` module, you have to change namespace part with `Price` to `PriceProduct`, for example if you used `PriceFacade`, now should use `PriceProductFacade`. Same for `Factories`, `QueryContainer`, `DependencyProvider`.
+    Check that all `Price` plugins registered in `ProductDependencyProvider` have been moved to `PriceProduct` namespace.
+    `use Spryker\Zed\Price\Communication\Plugin\ProductAbstract\PriceProductAbstractAfterCreatePlugin;`
+    `use Spryker\Zed\Price\Communication\Plugin\ProductAbstract\PriceProductAbstractAfterUpdatePlugin;`
+    `use Spryker\Zed\Price\Communication\Plugin\ProductAbstract\PriceProductAbstractReadPlugin;`
+    `use Spryker\Zed\Price\Communication\Plugin\ProductConcrete\PriceProductConcreteAfterCreatePlugin;`
+    `use Spryker\Zed\Price\Communication\Plugin\ProductConcrete\PriceProductConcreteAfterUpdatePlugin;`
+    `use Spryker\Zed\Price\Communication\Plugin\ProductConcrete\PriceProductConcreteReadPlugin;`
+
+    Should be renamed to:
+
+    `use Spryker\Zed\PriceProduct\Communication\Plugin\ProductAbstract\PriceProductAbstractAfterCreatePlugin;`
+    `use Spryker\Zed\PriceProduct\Communication\Plugin\ProductAbstract\PriceProductAbstractAfterUpdatePlugin;`
+    `use Spryker\Zed\PriceProduct\Communication\Plugin\ProductAbstract\PriceProductAbstractReadPlugin;`
+    `use Spryker\Zed\PriceProduct\Communication\Plugin\ProductConcrete\PriceProductConcreteAfterCreatePlugin;`
+    `use Spryker\Zed\PriceProduct\Communication\Plugin\ProductConcrete\PriceProductConcreteAfterUpdatePlugin;`
+    `use Spryker\Zed\PriceProduct\Communication\Plugin\ProductConcrete\PriceProductConcreteReadPlugin;`
 
 2. Update `StorageProductMapper` with the new price resolving logic
 
@@ -126,7 +131,7 @@ class StorageProductMapper implements StorageProductMapperInterface
 }
 ```
 
-3. Inject PriceProduct client depency and pass to mapper class.
+3. Inject `PriceProduct` client dependency and pass it to mapper class.
 
 ```php
 namespace Pyz\Yves\Product;

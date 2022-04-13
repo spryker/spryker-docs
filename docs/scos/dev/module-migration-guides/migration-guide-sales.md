@@ -33,7 +33,7 @@ redirect_from:
 
 ## Upgrading from version 10.* to version 11.0.0
 
-In this new version of the **Sales** module, we have added support of split delivery.
+In this new version of the `Sales` module, we have added support of split delivery.
 You can find more details about the changes on the [Sales module release page](https://github.com/spryker/sales/releases).
 
 {% info_block errorBox %}
@@ -42,7 +42,9 @@ This release is a part of the **Split delivery** concept migration. When you upg
 
 {% endinfo_block %}
 
-**To upgrade to the new version of the module, do the following:**
+*Estimated migration time: 5 min*
+
+To upgrade to the new version of the module, do the following:
 
 1. Upgrade the `Sales` module to the new version:
 
@@ -73,6 +75,7 @@ console transfer:generate
 | `UniqueOrderBundleItemsExpanderPlugin` | Expands the provided array of `ItemTransfers` with product bundles. | None | `\Spryker\Zed\ProductBundle\Communication\Plugin\Sales\UniqueOrderBundleItemsExpanderPlugin` |
 
 **src/Pyz/Zed/Sales/SalesDependencyProvider.php**
+
 ```php
 <?php
 
@@ -107,8 +110,6 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 
 ```
 
-*Estimated migration time: 5 min*
-***
 
 ## Upgrading from version 8.* to version 10.0.0
 
@@ -122,7 +123,7 @@ To dismantle the Horizontal Barrier and enable partial module updates on project
 
 ## Upgrading from version 7.* to version 8.*
 
-In the **Sales** module version 8, we have added multi-currency support, this release added two new fields to `spy_sales table` to persist "currency" and "store".
+In the `Sales` module version 8, we have added multi-currency support, this release added two new fields to `spy_sales table` to persist "currency" and "store".
 
 Also, Order saver now stores currency and store where order is placed.
 
@@ -142,9 +143,9 @@ CREATE INDEX "spy_sales_order-currency_iso_code" ON "spy_sales_order" ("currency
 
 Run `propel:model:build` to generate new propel model classes.
 
-## Upgrading from Version 6.* to Version 7.*
+## Upgrading from version 6.* to version 7.*
 
-In the **Sales** version 7, a new table for sales order item metadata (`spy_sales_order_item_metadata`) has been added. In order to migrate, the following table should be added:
+In the `Sales` version 7, a new table for sales order item metadata (`spy_sales_order_item_metadata`) has been added. In order to migrate, the following table should be added:
 
 ```sql
 BEGIN;
@@ -189,7 +190,8 @@ SELECT id_sales_order_item, '[]', now(), now() FROM spy_sales_order_item;
 
 There are two steps for migrating to version 6 and they should be performed in the following order:
 
-### Step 1:
+### Step 1
+
 Migrating `sales_order.fk_customer`, `sales_order.fk_shipment_method` and `sales_order.shipment_delivery_time` related data, to the new structure.
 
 {% info_block errorBox "Important" %}
@@ -199,6 +201,7 @@ Do not run any propel commands when executing this, it will drop foreign keys wi
 {% endinfo_block %}
 
 We created a new module into which all deprecated code was moved. We also changed the sales schema, so if you include the new bundle, fields will stay.
+
 1. Include the following into your `composer.json`: `"spryker/calculation-migration": "dev-master"`.
 2. Run `composer update`.
 
@@ -244,10 +247,12 @@ BEGIN;
  ```
 4. Now that the required fields/tables have been created,  migrate your data using the following script: *Sales Migration Console Command*.
 
-**This command will migrate:**
-* all `sales_order.fk_customer` data to `sales_order.customer_reference`
-* all `sales_order.fk_shipment_method` to `spy_sales_shipment` table.
+    **This command will migrate:**
+
+   * all `sales_order.fk_customer` data to `sales_order.customer_reference`
+   * all `sales_order.fk_shipment_method` to `spy_sales_shipment` table.
 Place the console command invoked by `vendor/bin/console` into your Sales module under `\Pyz\Zed\Sales\Communication\Console\ShipmentAndCustomerMigrationConsole.php`.
+
 5. Register the console command at `\Pyz\Zed\Console\ConsoleDependencyProvider::getConsoleCommands`.
 6. Run it like `vendor/bin/console sales:migrate`
 
@@ -257,7 +262,7 @@ It is important to see if the data migration went well. To check, look at the ta
 
 {% endinfo_block %}
 
-8. To drop the old foreign keys:
+7. To drop the old foreign keys:
 
 ```sql
 BEGIN;
@@ -270,15 +275,20 @@ BEGIN;
  ALTER TABLE "spy_sales_order" DROP COLUMN "shipment_delivery_time";
 
  COMMIT;
- ```
+```
+
 Now that orders are migrated, run Propel migrations to update Sales related entities and relations: `vendor/bin/console propel:diff, vendor/bin/console propel:model:build`. +Run transfers update: `vendor/bin/console transfer:generate`.
 
-### Step 2:
+### Step 2
+
 Migrating the calculated data and moving from the `sales-aggregator` concept requires adding the calculated fields to the sales tables.
 
 Now you have two options:
+
 * keep old calculators (deprecated)
+
 **OR**
+
 * migrate to the new calculators logic.
 
 1. To keep old calculation logic, see [Updating calculator stacks](/docs/scos/dev/module-migration-guides/migration-guide-calculation.html).
@@ -295,8 +305,9 @@ Please update your templates if overwritten.
 
 {% endinfo_block %}
 
-## Sales Migration Console Command
-Console Command
+### Sales migration console command
+
+**Console command**
 
 ```php
 <?php

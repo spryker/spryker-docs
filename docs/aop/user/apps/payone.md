@@ -78,9 +78,9 @@ After you activated the payment method, it becomes available for your customers 
 
 When customers pay with a credit card (with optional support of 3DS), the flow is as follows:
 
-1. The customer provides their credit card payment credentials and pays the required amount for the placed order.
+1. Customer provides their credit card payment credentials and pays the required amount for the placed order.
 2. The customer's credit card data is validated.
-3. The customer receives a payment message, whether the payment or authorization was successful.
+3. Customer receives a payment message, whether the payment or authorization was successful.
    
 When paying with a credit card, customers can do the following:
 
@@ -100,9 +100,9 @@ When customers pay with a credit card, a shop owner can do the following:
 
 When customers pay with PayPal, the flow is as follows:
 
-1. The customer is redirected to the PayPal website, where they have to log in.
+1. Customer is redirected to the PayPal website, where they have to log in.
 2. On the PayPal website, the customer either cancels or validates the transaction.
-3. The customer is taken to the checkout page with the message of either a successfully placed or canceled order.
+3. Customer is taken to the checkout page with the message of either a successfully placed or canceled order.
 
 When paying with PayPal, customers can:
 

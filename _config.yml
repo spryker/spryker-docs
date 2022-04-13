@@ -281,10 +281,6 @@ algolia:
       title: 'Frontend enablement Service Developer'
     - name: 'paas_plus_dev'
       title: 'Platform as a Service Plus Developer'
-    - name: 'aop_user'
-      title: 'AOP User'
-    - name: 'aop_dev'
-      title: 'AOP Developer'
 
 sass:
     sass_dir: css

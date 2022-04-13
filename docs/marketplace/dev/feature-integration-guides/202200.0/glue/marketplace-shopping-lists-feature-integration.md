@@ -18,14 +18,17 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE | 
 | - | - | - | 
 | Spryker Core | {{page.version}} |  [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)
-| MAIN FEATURE | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html)
+| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html)
+| Marketplace Shopping List | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shopping-list-feature-integration.html)
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-shopping-lists-api
+composer require spryker/merchant-product-offer-shopping-lists-api
+composer require spryker/merchant-product-shopping-lists-api
+composer require spryker/product-offer-shopping-lists-rest-api
 ```
 
 {% info_block warningBox "Verification" %}
@@ -34,15 +37,10 @@ Make sure that the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 |-|-|
-| MerchantProduct | vendor/spryker/merchant-product |
-| MerchantProductOffer | vendor/spryker/merchant-product-offer |
+
 | MerchantProductOfferShoppingListsRestApi | vendor/spryker/merchant-product-offer-shopping-lists-api |
 | MerchantProductShoppingListsRestApi | vendor/spryker/merchant-product-shopping-lists-api |
-| ProductOfferShoppingList | vendor/spryker/product-offer-shopping-list |
 | ProductOfferShoppingListsRestApi | vendor/spryker/product-offer-shopping-lists-rest-api |
-| ShoppingList | vendor/spryker/shopping-list |
-| ShoppingListsRestApi | vendor/spryker/shopping-lists-rest-api |
-| ProductOffersRestApi | vendor/spryker/product-offers-rest-api |
 
 {% endinfo_block %}
 
@@ -122,55 +120,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
         );
 
         return $resourceRelationshipCollection;
-    }
-}
-```
-
-#### Configure additional plugins for shopping list item validation
-
-| PLUGIN | SPECIFICATION                                                            | PREREQUISITES | NAMESPACE |
-| --------------- |--------------------------------------------------------------------------| ------------ | ----------------- |
-| ShoppingListItemProductConcreteHasValidStoreAddItemPreCheckPlugin | Add validation that Product Concrete belongs to current store            |   | Spryker\Zed\ShoppingList\Communication\Plugin |
-| MerchantProductOfferAddItemPreCheckPlugin | Validates that Merchant of Product Offer is active and approved          |   | Spryker\Zed\MerchantProductOffer\Communication\Plugin\ShoppingList |
-| MerchantProductAddItemPreCheckPlugin | Validates that Merchant of Product is active and approved                |   | Spryker\Zed\MerchantProduct\Communication\Plugin\ShoppingList |
-| MerchantProductShoppingListItemBulkPostSavePlugin | Expands Shopping list item with Product Concrete with Merchant reference |   | Spryker\Zed\MerchantProduct\Communication\Plugin\ShoppingList |
-| MerchantProductOfferShoppingListItemBulkPostSavePlugin | Expands Shopping list item with Product Offer with Merchant reference    |   | Spryker\Zed\MerchantProductOffer\Communication\Plugin\ShoppingList |
-
-**src/Pyz/Zed/ShoppingList/ShoppingListDependencyProvider.php**
-
-```php
-...
-use Spryker\Zed\MerchantProduct\Communication\Plugin\ShoppingList\MerchantProductAddItemPreCheckPlugin;
-use Spryker\Zed\MerchantProduct\Communication\Plugin\ShoppingList\MerchantProductShoppingListItemBulkPostSavePlugin;
-use Spryker\Zed\MerchantProduct\Communication\Plugin\ShoppingList\MerchantProductShoppingListItemCollectionExpanderPlugin;
-use Spryker\Zed\MerchantProductOffer\Communication\Plugin\ShoppingList\MerchantProductOfferAddItemPreCheckPlugin;
-use Spryker\Zed\MerchantProductOffer\Communication\Plugin\ShoppingList\MerchantProductOfferShoppingListItemBulkPostSavePlugin;
-
-class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Zed\ShoppingListExtension\Dependency\Plugin\AddItemPreCheckPluginInterface>
-     */
-    protected function getAddItemPreCheckPlugins(): array
-    {
-        return [
-            ...
-            new ShoppingListItemProductConcreteHasValidStoreAddItemPreCheckPlugin(),
-            new MerchantProductOfferAddItemPreCheckPlugin(),
-            new MerchantProductAddItemPreCheckPlugin(),
-        ];
-    }
-    
-    /**
-     * @return array<\Spryker\Zed\ShoppingListExtension\Dependency\Plugin\ShoppingListItemBulkPostSavePluginInterface>
-     */
-    protected function getShoppingListItemBulkPostSavePlugins(): array
-    {
-        return [    
-            ...       
-            new MerchantProductShoppingListItemBulkPostSavePlugin(),
-            new MerchantProductOfferShoppingListItemBulkPostSavePlugin(),
-        ];
     }
 }
 ```

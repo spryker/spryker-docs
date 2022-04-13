@@ -36,7 +36,6 @@ In the Spryker Commerce OS’s core, the following is the public API:
     * [Clients](/docs/scos/dev/back-end-development/client/client.html)
     * [Query Containers](/docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html)
     * [Services](/docs/scos/dev/back-end-development/messages-and-errors/registering-a-new-service.html)
-    * Plugin defining protected methods in dependency providers.
 
 * Interfaces:
     * Plugin interfaces
@@ -60,7 +59,7 @@ In the Spryker Commerce OS’s core, the following is the public API:
 
 ### BC breaking changes
 
-There are several classes and files which are part of the API, but not every change in the file  causes a BC break. In general, there is a BC break whenever an existing contract is changed. A contract is what the user of the API expects. This includes the signature of methods as well as the expected behavior. For this reason, we have added an ApiDoc to the most used APIs like facades and plugin interfaces.
+There are several classes and files which are part of the public API, but not every change in the file  causes a BC break. In general, there is a BC break whenever an existing contract is changed. A contract is what the user of the API expects. This includes the signature of methods as well as the expected behavior. For this reason, we have added an ApiDoc to the most used APIs like facades and plugin interfaces.
 
 We always try to avoid BC breaking changes and reduce the effort needed to upgrade a module to a new version. There are several ways to add functionality to APIs without a BC break. So it is possible to add new methods and even parameters to the existing methods as long as they are optional.
 

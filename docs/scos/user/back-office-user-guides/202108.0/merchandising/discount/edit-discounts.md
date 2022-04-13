@@ -69,7 +69,7 @@ Review the [reference information](#reference-information-edit-discounts) before
 1. Click the **Voucher codes** tab.
 2. Enter a **QUANTITY**.
 2. Optional: Enter a **CUSTOM CODE**.
-3. For **ADD RANDOM GENERATED CODE LENGTH**, select a number.
+3. Optional: For **ADD RANDOM GENERATED CODE LENGTH**, select a number.
 4. Enter a **MAX NUMBER OF USES**.
 5. Click **Generate**.
     This refreshes the page with a success message displayed. The created voucher codes are displayed in the **Generated Discount Codes** section.

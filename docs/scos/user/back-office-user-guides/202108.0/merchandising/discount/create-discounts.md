@@ -1,6 +1,6 @@
 ---
-title: Create vouchers
-description: Use the procedure to create discount vouchers your customer can redeem during checkout.
+title: Create discounts
+description: Learn how to create discounts in the Back Office
 last_updated: Aug 27, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-a-voucher
@@ -10,14 +10,10 @@ redirect_from:
   - /2021080/docs/en/creating-a-voucher
   - /docs/creating-a-voucher
   - /docs/en/creating-a-voucher
-related:
-  - title: Creating cart rules
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/creating-cart-rules.html
+  - /docs/scos/user/back-office-user-guides/202108.0/merchandising/discount/creating-vouchers.html
 ---
 
-This guide describes how to create vouchers.
-
-Vouchers are codes that customers can redeem during checkout. Voucher codes are grouped into pools to apply logic to multiple vouchers at once. You can generate a single voucher to be used by multiple customers or a pool of dedicated one-time per-customer voucher codes.
+This document describes how to create discounts in the Back Office.
 
 ## Prerequisites
 
@@ -25,8 +21,9 @@ To start creating a voucher, do the following:
 1. Go to **Merchandising&nbsp;<span aria-label="and then">></span> Discount**.
 2. On the **Discount** page, click **Create new discount**.
 
-## 1. Define general settings of the discount
+Review the [reference information](#reference-information-create-discounts) before you start, or look up the necessary information as you go through the process.
 
+## 1. Define general settings of the discount
 
 1. On the **Create Discount** page, click the **General information** tab.
 2. For **STORE RELATION**, select one or more stores you want the discount to be displayed in.
@@ -70,23 +67,16 @@ If you are creating a cart rule, proceed to step [5. Activate the discount](#act
 1. Click the **Voucher codes** tab.
 2. Enter a **QUANTITY**.
 2. Optional: Enter a **CUSTOM CODE**.
-3. For **ADD RANDOM GENERATED CODE LENGTH**, select a number.
+3. Optional: For **ADD RANDOM GENERATED CODE LENGTH**, select a number.
 4. Enter a **MAX NUMBER OF USES**.
 5. Click **Generate**.
     This refreshes the page with a success message displayed. The created voucher codes are displayed in the **Generated Discount Codes** section.
-
-
-**Tips and tricks**
-To download voucher codes, click **Export**.
 
 ## 5. Activate the discount
 
 Optional: To make the discount voucher redeemable on the Storefront, click **Activate** in the top-right corner.
 
 This refreshes the page with a success message displayed.
-
-
-
 
 ## Reference information: Define general settings of a voucher discount
 
@@ -172,16 +162,11 @@ This section describes the information that you need to know when working with v
 | ATTRIBUTE | DESCRIPTION |  
 | --- | --- |
 | QUANTITY | Number of vouchers to generate. |  
-| CUSTOM CODE | When generating a single voucher code, you can enter it manually. If you want to create multiple codes at once, add a "Random Generated Code Length" to the custom code. |  
-| ADD RANDOM GENERATED CODE LENGTH | A number of random alphanumeric symbols to add to the code. If you entered  |  
-| MAX NUMBER OF USES | Defines the maximum number of times a voucher code can be redeemed in a cart. |  
+| CUSTOM CODE | Any custom symbols you want the voucher codes to contain. If you are adding a single custom code, for **ADD RANDOM GENERATED CODE LENGTH**, select **No additional random characters**. If you add random characters, by default, they are appended to the end of the custom code. To specify where to place the random characters, add `[code]` to the custom code. For example, `black[code]friday`. |  
+| ADD RANDOM GENERATED CODE LENGTH | A number of random alphanumeric symbols to add to the code. If you entered a **CUSTOM CODE**, the random characters will be appended to the end of it. If you are generating more than one code, you must select **3** or more. |  
+| MAX NUMBER OF USES | Defines the maximum number of times a voucher code can be redeemed. Apart from numbers, accepts the following: |  
 
-Use the placeholder **[code]** to indicate the position you want random characters to be added to.
-<br>**For example:**
-   * **123[code]** (the randomly generated code will be added right after the custom code);
-   *  **[code]123** (the randomly generated code will be added in front of the custom code).
 
-**Maximum number of uses**
 | VALUE | BEHAVIOR |  
 | --- | --- |
 | 0 | Infinitely redeemable. |  
@@ -193,7 +178,7 @@ Use the placeholder **[code]** to indicate the position you want random characte
 **Voucher Code Pool**
 The voucher codes of a discount are all contained in the same voucher code pool. One customer may only redeem one voucher code per pool per cart.
 
-## Decision rules
+## Decision rules: Attributes and operators
 
 This section contains additional information for defining decision rules.
 
@@ -213,7 +198,6 @@ This section contains additional information for defining decision rules.
 |attribute.*|String, number| Any value. |
 |customer-group|String| Any value, use a customer group name for an exact match. |
 
-**Operators (Plain Query)**
 
 |RELATION OPERATOR|IN PLAIN QUERY|VALUE TYPE|DESCRIPTION|
 |-|-|-|-|

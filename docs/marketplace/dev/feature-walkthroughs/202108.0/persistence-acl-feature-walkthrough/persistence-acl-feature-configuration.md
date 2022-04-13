@@ -31,7 +31,7 @@ In the following code snippet, only SpyMerchant entity is configured to be handl
 ## Connect Persistence ACL feature to all database tables
 
 ACL handles all entities in the system in the following example.
-When configuring ACLs in such a way, be sure to use the [Allowed entity list](#allow-list-configuration) to exclude entities that are needed to function properly.
+When configuring ACLs in such a way, be sure to use the [Allowed entity list](#allowlist-configuration) to exclude entities that are needed to function properly.
 Provide the list of entities that are needed:
 
 - `SpyUser`

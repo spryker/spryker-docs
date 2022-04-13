@@ -33,7 +33,10 @@ commonOptions = {
     /code.jquery.com\/[\.\w\-\/\?]+/,
     /console.aws.amazon.com\/[\.\w\-\/\?]+/,
     /www.computop.com\/[\.\w\-\/\?]+/,
-    /www.project-a.com\/[\.\w\-\/\?]+/,    
+    /www.project-a.com\/[\.\w\-\/\?]+/,
+    /help.github.com\/[\.\w\-\/\?]+/, 
+    /guides.github.com\/[\.\w\-\/\?]+/,
+    /docs.github.com\/[\.\w\-\/\?]+/,
     /shopify.github.io\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],

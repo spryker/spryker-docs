@@ -19,7 +19,7 @@ To start working with item states in reclamations, do the following:
 
 
 
-Review the [reference information](#reference-information-changing-the-state-of-order-items) before you start, or look up the necessary information as you go through the process.
+Review the [reference information](#reference-information-changing-the-state-of-order-items-in-reclamations) before you start, or look up the necessary information as you go through the process.
 
 ## Changing the state of all the items in a reclamation
 

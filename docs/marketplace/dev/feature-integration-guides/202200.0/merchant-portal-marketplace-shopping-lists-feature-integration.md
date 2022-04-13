@@ -1,15 +1,15 @@
 ---
-title: Merchant Portal - Add Offer And Merchant Product to Shopping List feature integration
-last_updated: Sep 13, 2021
-description: This document describes the process how to integrate the Merchant Portal - Add Offer And Merchant Product to Shopping List feature into a Spryker project.
+title: Merchant Portal - Marketplace Shopping Lists feature integration
+last_updated: April 13, 2022
+description: This document describes the process how to integrate the Merchant Portal - Marketplace Shopping Lists feature into a Spryker project.
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the Merchant Portal - Add Offer And Merchant Product to Shopping List feature into a Spryker project.
+This document describes how to integrate the Merchant Portal - Marketplace Shopping Lists feature into a Spryker project.
 
 ## Install feature core
 
-Follow the steps below to install the Merchant Portal - Add Offer And Merchant Product to Shopping List feature core.
+Follow the steps below to install the Merchant Portal - Marketplace Shopping Lists feature core.
 
 ### Prerequisites
 
@@ -17,16 +17,16 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Marketplace Merchant | master | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
-| Merchant Portal Marketplace Product | master | [Merchant Portal - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html) |
-| Marketplace Product Offer | master | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)  |
+| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
+| Merchant Portal Marketplace Product | {{page.version}} | [Merchant Portal - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html) |
+| Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)  |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-shopping-lists:"^1.0.0" --update-with-dependencies 
+composer require spryker-feature/marketplace-shopping-lists 
 ```
 {% info_block warningBox "Verification" %}
 
@@ -37,6 +37,41 @@ Make sure that the following modules have been installed:
 | ProductOfferShoppingListWidget | spryker-shop/product-offer-shopping-list-widget |
 | ProductOfferShoppingList | spryker/product-offer-shopping-list |
 | ProductOfferShoppingListDataImport | spryker/product-offer-shopping-list-data-import |
+
+{% endinfo_block %}
+
+### 2) Add Yves translations
+
+Append glossary according to your configuration:
+
+**src/data/import/glossary.csv**
+
+```yaml
+shopping_list.pre.check.product_offer,Product Offer is not found.,en_US
+shopping_list.pre.check.product_offer,Produktangebot wurde nicht gefunden.,de_DE
+shopping_list.pre.check.product_offer.approved,Product Offer is not approved.,en_US
+shopping_list.pre.check.product_offer.approved,Product Offer ist nicht genehmigt.,de_DE
+shopping_list.pre.check.product_offer.is_active,Product Offer is not active.,en_US
+shopping_list.pre.check.product_offer.is_active,Produktangebot ist inaktiv.,de_DE
+shopping_list.pre.check.product_offer.store_invalid,Product Offer is not equal to the current Store.,en_US
+shopping_list.pre.check.product_offer.store_invalid,Das Angebot gleicht nicht dem aktuellen Shop.,de_DE
+shopping_list.pre.check.product_merchant_inactive,Merchant is inactive.,en_US
+shopping_list.pre.check.product_merchant_inactive,Der Händler ist nicht aktiv.,de_DE
+shopping_list.pre.check.product_merchant_not_approved,Merchant is not approved.,en_US
+shopping_list.pre.check.product_merchant_not_approved,Der Händler ist nicht bestätigt.,de_DE
+shopping_list.pre.check.product.store_invalid,Product is not equal to the current Store.,en_US
+shopping_list.pre.check.product.store_invalid,Das Produkt gleicht nicht dem aktuellen Shop.,de_DE
+```
+
+Import data:
+
+```bash
+console data:import glossary
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that in the database, the configured data is added to the spy_glossary table.
 
 {% endinfo_block %}
 
@@ -116,15 +151,13 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
      */
     protected function getAddItemShoppingListItemMapperPlugins(): array
     {
-        return [
-            ...
+        return [            
             new ProductOfferShoppingListItemMapperPlugin(),
         ];
     }
     protected function getShoppingListItemToItemMapperPlugins(): array
     {
-        return [
-            ...
+        return [            
             new ProductOfferShoppingListItemToItemMapperPlugin(),
             new MerchantShoppingListItemToItemMapperPlugin(),
         ];
@@ -137,7 +170,12 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | ProductOfferShoppingListAddItemPreCheckPlugin | Checks if product offer exists and refers to required product. | None | Spryker\Zed\ProductOfferShoppingList\Communication\Plugin\ShoppingList; |
+| MerchantProductAddItemPreCheckPlugin | Validates that Merchant of Product is active and approved                |   | Spryker\Zed\MerchantProduct\Communication\Plugin\ShoppingList |
+| MerchantProductConcreteStorageCollectionExpanderPlugin | Expands `ProductConcreteStorage` transfers with merchant reference| None | Spryker\Zed\MerchantProductStorage\Communication\Plugin\ProductStorage |
+| MerchantProductOfferAddItemPreCheckPlugin | Validates that Merchant of Product Offer is active and approved          |   | Spryker\Zed\MerchantProductOffer\Communication\Plugin\ShoppingList |
+| MerchantProductOfferShoppingListItemBulkPostSavePlugin | Expands Shopping list item with Product Offer with Merchant reference    |   | Spryker\Zed\MerchantProductOffer\Communication\Plugin\ShoppingList |
 | MerchantProductOfferShoppingListItemCollectionExpanderPlugin | Expands a `ShoppingListItemCollectionTransfer` with Merchant data of Product Offer| None | Spryker\Zed\MerchantProductOffer\Communication\Plugin\ShoppingList |
+| MerchantProductShoppingListItemBulkPostSavePlugin | Expands Shopping list item with Product Concrete with Merchant reference |   | Spryker\Zed\MerchantProduct\Communication\Plugin\ShoppingList |
 | MerchantProductShoppingListItemCollectionExpanderPlugin | Expands a `ShoppingListItemCollectionTransfer` with Merchant data of Product. | None | Spryker\Zed\MerchantProduct\Communication\Plugin\ShoppingListExtension |
 | ProductOfferItemToShoppingListItemMapperPlugin | Maps `ItemTransfer.productOfferReference` transfer property to `ShoppingListItemTransfer.productOfferReference` transfer property | None | Spryker\Zed\ProductOfferShoppingList\Communication\Plugin\ShoppingList |
 
@@ -152,6 +190,11 @@ use Spryker\Zed\MerchantProduct\Communication\Plugin\ShoppingListExtension\Merch
 use Spryker\Zed\MerchantProductOffer\Communication\Plugin\ShoppingList\MerchantProductOfferShoppingListItemCollectionExpanderPlugin;
 use Spryker\Zed\ProductOfferShoppingList\Communication\Plugin\ShoppingList\ProductOfferItemToShoppingListItemMapperPlugin;
 use Spryker\Zed\ProductOfferShoppingList\Communication\Plugin\ShoppingList\ProductOfferShoppingListAddItemPreCheckPlugin;
+use Spryker\Zed\MerchantProduct\Communication\Plugin\ShoppingList\MerchantProductAddItemPreCheckPlugin;
+use Spryker\Zed\MerchantProduct\Communication\Plugin\ShoppingList\MerchantProductShoppingListItemBulkPostSavePlugin;
+use Spryker\Zed\MerchantProduct\Communication\Plugin\ShoppingList\MerchantProductShoppingListItemCollectionExpanderPlugin;
+use Spryker\Zed\MerchantProductOffer\Communication\Plugin\ShoppingList\MerchantProductOfferAddItemPreCheckPlugin;
+use Spryker\Zed\MerchantProductOffer\Communication\Plugin\ShoppingList\MerchantProductOfferShoppingListItemBulkPostSavePlugin;
 
 class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvider
 {
@@ -160,9 +203,11 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
      */
     protected function getAddItemPreCheckPlugins(): array
     {
-        return [
-            ...
+        return [            
             new ProductOfferShoppingListAddItemPreCheckPlugin(),
+            new ShoppingListItemProductConcreteHasValidStoreAddItemPreCheckPlugin(),
+            new MerchantProductOfferAddItemPreCheckPlugin(),
+            new MerchantProductAddItemPreCheckPlugin(),
         ];
     }
     
@@ -171,13 +216,11 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
      */
     protected function getItemCollectionExpanderPlugins(): array
     {
-        return [
-            ...
+        return [            
             new MerchantProductOfferShoppingListItemCollectionExpanderPlugin(),
             new MerchantProductShoppingListItemCollectionExpanderPlugin(),
         ];
     }
-    
     
     /**
      * @return array<\Spryker\Zed\ShoppingListExtension\Dependency\Plugin\ItemToShoppingListItemMapperPluginInterface>
@@ -188,9 +231,19 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
             new ProductOfferItemToShoppingListItemMapperPlugin(),
         ];
     }
+    
+     /**
+     * @return array<\Spryker\Zed\ShoppingListExtension\Dependency\Plugin\ShoppingListItemBulkPostSavePluginInterface>
+     */
+    protected function getShoppingListItemBulkPostSavePlugins(): array
+    {
+        return [    
+            new MerchantProductShoppingListItemBulkPostSavePlugin(),
+            new MerchantProductOfferShoppingListItemBulkPostSavePlugin(),
+        ];
+    }
 }
 ```
-
 
 #### 3. Enable related widgets
 
@@ -221,8 +274,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
      */
     protected function getGlobalWidgets(): array
     {
-        return [
-            ...
+        return [            
             ShoppingListMerchantWidget::class,
             ShoppingListProductOfferWidget::class,
             ProductOfferShoppingListWidget::class,
@@ -250,7 +302,6 @@ shopping-list-item-key-43,offer51
 #### 2. Add importer configuration
 **data/import/local/full_EU.yml **
 ```csv
-# Example of demo shop 'combined shopping list items' data import.
 version: 0
 
 actions:
@@ -273,8 +324,7 @@ class DataImportConfig extends SprykerDataImportConfig
      */
     public function getFullImportTypes(): array
     {
-        return [
-            ...
+        return [            
             ProductOfferShoppingListDataImportConfig::IMPORT_TYPE_PRODUCT_OFFER_SHOPPING_LIST_ITEM,
         ];
     }
@@ -293,16 +343,22 @@ use Spryker\Zed\ProductOfferShoppingListDataImport\ProductOfferShoppingListDataI
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
 /**
+ * @var string
+ */
+protected const COMMAND_SEPARATOR = ':';
+    
+/**
 * @param \Spryker\Zed\Kernel\Container $container
 *
 * @return array<\Symfony\Component\Console\Command\Command>
 */
     protected function getConsoleCommands(Container $container): array
     {
-        $commands = [
-                ...
+        $commands = [                
                 new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ProductOfferShoppingListDataImportConfig::IMPORT_TYPE_PRODUCT_OFFER_SHOPPING_LIST_ITEM),
             ];
+            
+        return $commands;
     }
 }
 ```
@@ -321,8 +377,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
  protected function getDataImporterPlugins(): array
     {
-        return [
-            ...
+        return [            
             new ProductOfferShoppingListItemDataImportPlugin(),
         ];
     }
@@ -340,122 +395,6 @@ Make sure that the imported data is added to the spy_shopping_list_item table.
 
 ### 5) Add required functionality to Product storage
 
-#### 1. Adjust ProductStorageBusinessFactory
-
-**src/Pyz/Zed/ProductStorage/Business/ProductStorageBusinessFactory.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\ProductStorage\Business;
- /**
-     * @return \Spryker\Zed\ProductStorage\Business\Storage\ProductConcreteStorageWriterInterface
-     */
-    public function createProductConcreteStorageWriter(): ProductConcreteStorageWriterInterface
-    {
-        if (!$this->getConfig()->isCteEnabled()) {
-            return parent::createProductConcreteStorageWriter();
-        }
-
-        return new ProductConcreteStorageWriter(
-            $this->getProductFacade(),
-            $this->getQueryContainer(),
-            $this->getConfig()->isSendingToQueue(),
-        +   $this->getProductConcreteStorageCollectionExpanderPlugins(),
-            $this->getSynchronizationService(),
-            $this->getQueueClient(),
-            $this->createProductConcreteStorageCteStrategyResolver()->resolve(),
-        );
-    }
-}
-```
-#### 2. Adjust Product Concrete Storage Writer 
-**src/Pyz/Zed/ProductStorage/Business/Storage/ProductConcreteStorageWriter.php**
-```php
-<?php
-
-namespace Pyz\Zed\ProductStorage\Business\Storage;
-
-public function __construct(
-        ProductStorageToProductInterface $productFacade,
-        ProductStorageQueryContainerInterface $queryContainer,
-        $isSendingToQueue,
-        array $productConcreteStorageCollectionExpanderPlugins,
-        SynchronizationServiceInterface $synchronizationService,
-        QueueClientInterface $queueClient,
-        ProductStorageCteStrategyInterface $productConcreteStorageCte
-    ) {
-        parent::__construct($productFacade, $queryContainer, $isSendingToQueue, $productConcreteStorageCollectionExpanderPlugins);
-
-        $this->synchronizationService = $synchronizationService;
-        $this->queueClient = $queueClient;
-        $this->productConcreteStorageCte = $productConcreteStorageCte;
-    }
-
-   ...
-    /**
-     * @param array $productConcreteLocalizedEntities
-     * @param array<\Orm\Zed\ProductStorage\Persistence\SpyProductConcreteStorage> $productConcreteStorageEntities
-     *
-     * @return void
-     */
-    protected function storeData(array $productConcreteLocalizedEntities, array $productConcreteStorageEntities): void
-    {
-        $pairedEntities = $this->pairProductConcreteLocalizedEntitiesWithProductConcreteStorageEntities(
-            $productConcreteLocalizedEntities,
-            $productConcreteStorageEntities,
-        );
-
-        $productConcreteStorageTransfers = $this->getProductConcreteStorageTransfers($pairedEntities);
-
-        $this->expandProductConcreteStorageCollection($productConcreteStorageTransfers);
-
-        foreach ($pairedEntities as $index => $pair) {
-            $productConcreteLocalizedEntity = $pair[static::PRODUCT_CONCRETE_LOCALIZED_ENTITY];
-            $productConcreteStorageEntity = $pair[static::PRODUCT_CONCRETE_STORAGE_ENTITY];
-
-            if ($productConcreteLocalizedEntity === null || !$this->isActive($productConcreteLocalizedEntity)) {
-                $this->deletedProductConcreteSorageEntity($productConcreteStorageEntity);
-
-                continue;
-            }
-
-            $this->storeProductConcreteStorageEntity(
-                $productConcreteStorageTransfers[$index],
-                $productConcreteStorageEntity,
-                $pair[static::LOCALE_NAME],
-            );
-        }
-
-        $this->write();
-
-        if ($this->synchronizedMessageCollection !== []) {
-            $this->queueClient->sendMessages('sync.storage.product', $this->synchronizedMessageCollection);
-        }
-    }
-
-     /**
-     * @param \Generated\Shared\Transfer\ProductConcreteStorageTransfer $productConcreteStorageTransfer
-     * @param \Orm\Zed\ProductStorage\Persistence\SpyProductConcreteStorage $productConcreteStorageEntity
-     * @param string $localeName
-     *
-     * @return void
-     */
-    protected function storeProductConcreteStorageEntity(
-        ProductConcreteStorageTransfer $productConcreteStorageTransfer,
-        SpyProductConcreteStorage $productConcreteStorageEntity,
-        $localeName
-    ): void {
-        $productConcreteStorageData = [
-            'fk_product' => $productConcreteStorageTransfer->getIdProductConcrete(),
-            'data' => $productConcreteStorageTransfer->toArray(),
-            'locale' => $localeName,
-        ];
-
-        $this->add($productConcreteStorageData);
-    }
-```
-
 #### 3. Make changes to PublisherDependencyProvider 
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
@@ -472,18 +411,31 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
      */
     protected function getPublisherPlugins(): array
     {
-        return array_merge(
-        ...
-        $this->getMerchantProductOfferStoragePlugins(),
+        return array_merge(        
+            new MerchantProductOfferWritePublisherPlugin(),
         );
-    }    
+    }
+}
+```
+
+#### 3. Make changes to ProductStorageDependencyProvider 
+
+**src/Pyz/Zed/ProductStorage/ProductStorageDependencyProvider.php**
+```php
+<?php
+namespace Pyz\Zed\ProductStorage;
+
+use Spryker\Zed\MerchantProductStorage\Communication\Plugin\ProductStorage\MerchantProductConcreteStorageCollectionExpanderPlugin;
+
+class ProductStorageDependencyProvider extends SprykerProductStorageDependencyProvider
+{
     /**
-     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
+     * @return array<\Spryker\Zed\ProductStorageExtension\Dependency\Plugin\ProductConcreteStorageCollectionExpanderPluginInterface>
      */
-    protected function getMerchantProductOfferStoragePlugins(): array
+    protected function getProductConcreteStorageCollectionExpanderPlugins(): array
     {
         return [
-            new MerchantProductOfferWritePublisherPlugin(),
+            new MerchantProductConcreteStorageCollectionExpanderPlugin(),
         ];
     }
 }
@@ -493,5 +445,5 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | -|
-| Shop Guide - Shopping Lists |  |  [Shop Guide - Shopping Lists](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-shopping-lists.html)  |
-| Glue API: Marketplace Shopping List feature integration |  |  [Glue API: Marketplace Shopping List feature integration](/docs/marketplace/dev/feature-integration-guides/glue/{{page.version}}/marketplace-shopping-list-feature-integration.html)  |
+| Shop Guide - Shopping Lists | {{page.version}} |  [Shop Guide - Shopping Lists](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-shopping-lists.html)  |
+| Glue API: Marketplace Shopping Lists feature integration | {{page.version}} |  [Glue API: Marketplace Shopping List feature integration](/docs/marketplace/dev/feature-integration-guides/glue/{{page.version}}/marketplace-shopping-lists-feature-integration.html)  |

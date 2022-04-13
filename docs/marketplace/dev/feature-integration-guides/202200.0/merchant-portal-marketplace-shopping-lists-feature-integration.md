@@ -75,7 +75,7 @@ Make sure that in the database, the configured data is added to the spy_glossary
 
 {% endinfo_block %}
 
-### 2) Generate transfers and migrations
+### 3) Generate transfers and migrations
 ```bash
 console transfer:generate
 ```
@@ -121,7 +121,7 @@ Ensure that the following changes have occurred in the database:
 
 {% endinfo_block %}
 
-### 3) Setup desired behaviour 
+### 4) Setup desired behaviour 
 
 #### 1. Set up mappers for data
 
@@ -283,7 +283,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-### 4) Import data
+### 5) Import data
 
 To import data:
 #### 1. Prepare import data according to your requirements using demo data
@@ -363,7 +363,7 @@ protected const COMMAND_SEPARATOR = ':';
 }
 ```
 
-#### 4. Register required Data Import plugin
+#### 5. Register required Data Import plugin
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 ```php
@@ -384,7 +384,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-#### 5. 
+#### 6. 
 ```bash
 console data:import console data:import product-offer-shopping-list-item
 ```
@@ -393,9 +393,9 @@ console data:import console data:import product-offer-shopping-list-item
 Make sure that the imported data is added to the spy_shopping_list_item table.
 {% endinfo_block %}
 
-### 5) Add required functionality to Product storage
+### 6) Add required functionality to Product storage
 
-#### 3. Make changes to PublisherDependencyProvider 
+#### 1. Make changes to PublisherDependencyProvider 
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 ```php
@@ -418,7 +418,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 ```
 
-#### 3. Make changes to ProductStorageDependencyProvider 
+#### 2. Make changes to ProductStorageDependencyProvider 
 
 **src/Pyz/Zed/ProductStorage/ProductStorageDependencyProvider.php**
 ```php

@@ -12,8 +12,8 @@ entries:
           - title: Infrastructure requirements
             url: /docs/marketplace/dev/setup/infrastructure-requirements.html
 
-          - title: Installation
-            url: /docs/marketplace/dev/setup/installation.html
+          - title: Setup
+            url: /docs/marketplace/dev/setup/spryker-marketplace-setup.html
 
       - title: Marketplace architecture overview
         nested:
@@ -752,6 +752,9 @@ entries:
 
               - title: "Migration guide - Extending the project"
                 url: /docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html
+
+              - title: "Migration guide - Upgrade to Angular v12"
+                url: /docs/marketplace/dev/front-end/extending-the-project/migration-guide-upgrade-to-angular-v12.html
 
           - title: "Table design"
             url: /docs/marketplace/dev/front-end/table-design/

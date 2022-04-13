@@ -20,7 +20,8 @@ This document describes how to create product relations in the Back Office.
 ## Prerequisites
 
 1. Learn how [related product rules](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html#related-product-rules) work.
-2. To start working with product relations, go to **Merchandising** > **Product Relations**.
+2. If you are new to product relations, you might want to start with [Best practices: Promote products with product relations](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/best-practices-promote-products-with-product-relations.html).
+3. To start working with product relations, go to **Merchandising&nbsp;<span aria-label="and then">></span> Product Relations**.
 
 ## Define general settings of a product relation
 
@@ -44,7 +45,7 @@ You can define conditions using one rule or by combining rules into groups and s
 
 The **AND** and **OR** combination operators are used to combine rules in each group. Currently they are greyed out because there is only one rule in the group. To add one more rule to this group, click **Add rule**. This adds one more rule entry and the operators for this group become active. Based on how you can combine these rules, click one of the operators.
 
-To add a subgroup, click **Add group**. Inside the main box, this adds a separate box with its own operators and a preadded rule. The rules in this sub-group combined will be used as a single rule when combinging it with the rules in the root group.
+To add a subgroup, click **Add group**. Inside the main box, this adds a separate box with its own operators and a preadded rule. The rules in this sub-group combined will be used as a single rule when combining it with the rules in the root group.
 
 To define a rule, select a parameter, a relation operator, and a value.
 
@@ -56,7 +57,7 @@ Add the needed rules and groups based on your requirements.
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | PRODUCT RELATION KEY | Unique product relation identifier. |
-| RELATION TYPE | Defines how the product relation will be displayed on the Storefront: <ul><li>**Related products**: related products are displayed on the product details page of the product owning the relation.</li><li>**Upselling**: when the product owning the relation is added to cart, related products are displayed on the cart page.|
+| RELATION TYPE | Defines how the product relation will be displayed on the Storefront: <ul><li>**Related products**: related products are displayed on the product details page of the product owning the relation.</li><li>**Upselling**: when the product owning the relation is added to cart, related products are displayed on the cart page.</li></ul>|
 | UPDATE REGULARLY  | Defines if the product catalog will be checked against the specified rules regularly. New products fulfilling the rules are added to related products automatically. Existing related products that no longer fulfill the rules are removed automatically. |
 | IS ACTIVE | Defines if the product relation is visible on the Storefront. |
 | Select product | Table for selecting a product that owns the relation. |

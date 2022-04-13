@@ -31,9 +31,10 @@ To subscribe to availability notifications for an out-of-stock product, send the
 
 ### Request
 
-<details><summary markdown='span'>Request sample</summary>
+<details><summary markdown='span'>Request sample: subscribe to availability notifications
+</summary>
 
-POST https://glue.mysprykershop.com/availability-notifications
+`POST https://glue.mysprykershop.com/availability-notifications`
 
 ```json
 {
@@ -55,7 +56,8 @@ POST https://glue.mysprykershop.com/availability-notifications
 
 ### Response
 
-<details><summary markdown='span'>Response sample</summary>
+<details><summary markdown='span'>Response sample: subscribe to availability notifications
+</summary>
 
 ```json
 {
@@ -73,14 +75,13 @@ POST https://glue.mysprykershop.com/availability-notifications
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 |-|-|-|
 | localeName | string | Locale of the subscribed customer. |
 | email | string | Customer email where the product availability notifications are sent to. |
-| sku | string | SKU of the product the customer recieves notifications about. |
+| sku | string | SKU of the product the customer receives notifications about. |
 
 ## Unsubscribe from availability notifications
 
@@ -97,7 +98,9 @@ To unsubscribe from availability notifications for a product, send the request:
 
 ### Request
 
-Request sample: `DELETE https://glue.mysprykershop.com/availability-notifications/05f2004950e01a056537384a405ec9a0`
+Request sample: unsubscribe from availability notifications
+
+`DELETE https://glue.mysprykershop.com/availability-notifications/05f2004950e01a056537384a405ec9a0`
 
 ### Response
 

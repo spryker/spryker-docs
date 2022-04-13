@@ -17,10 +17,10 @@ redirect_from:
 
 
 To view a product relation, do the following:
-1. Go to **Merchandising** > **Product Relations**.
+1. Go to **Merchandising&nbsp;<span aria-label="and then">></span> Product Relations**.
     This opens the **Product Relations** page.
 2. Next to the product relation you want to view, click **View**.
-    This opens the **View Product Relation** page. 
+    This opens the **View Product Relation** page.
 
 
 
@@ -29,7 +29,7 @@ To view a product relation, do the following:
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | Product relation key | Unique product relation identifier. |
-| Relation type | Defines how the product relation is displayed on the Storefront: <ul><li>**Related products**: related products are displayed on the product details page of the product owning the relation.</li><li>**Upselling**: when the product owning the relation is added to cart, related products are displayed on the cart page.|
+| Relation type | Defines how the product relation is displayed on the Storefront: <ul><li>**Related products**: related products are displayed on the product details page of the product owning the relation.</li><li>**Upselling**: when the product owning the relation is added to cart, related products are displayed on the cart page.</li></ul>|
 | Update regularly  | Defines if the product catalog is checked against the specified rules regularly. New products fulfilling the rules are added to related products automatically. Existing related products that no longer fulfill the rules are removed automatically. |
 | Status | Defines if the product relation is visible on the Storefront. |
 | PRODUCT OWNING THE RELATION | A product for which related products are displayed on the product details or cart pages. |

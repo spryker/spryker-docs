@@ -18,7 +18,7 @@ In your development, the endpoints can help you to:
 * Significantly boost the SEO presence of your product store.
 * Increase the search engine ranking of your online store.
 
-To facilitate their usage, Spryker Glue provides an endpoint that allows resolving an SEO-friendly URL, for example, `http://mysprykershop.com/en/canon-powershot-n-35`, into a URL of the relevant product resource in Glue API, for example, `http://glue.mysprykershop.com/abstract-products/035`. This capability is provided by the URLs API.
+To facilitate their usage, Spryker Glue provides an endpoint that allows resolving an SEO-friendly URL, for example, `http://mysprykershop.com/en/canon-powershot-n-35`, into a URL of the relevant product resource in Glue API, for example, `https://glue.mysprykershop.com/abstract-products/035`. This capability is provided by the URLs API.
 
 
 ## Installation

@@ -8,7 +8,7 @@ This document describes how to edit filter preferences of category filters in th
 
 ## Prerequisites
 
-To start working with filter preferences, go to **Merchandising > Filter Preferences**.
+To start working with filter preferences, go to **Merchandising&nbsp;<span aria-label="and then">></span> Filter Preferences**.
 
 Review the [reference information](#reference-information-edit-filter-preferences-of-a-category-filter) before you start, or look up the necessary information as you go through the process.
 

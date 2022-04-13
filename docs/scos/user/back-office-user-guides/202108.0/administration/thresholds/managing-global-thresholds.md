@@ -22,7 +22,7 @@ related:
 This topic describes how to manage global thresholds.
 
 ## Prerequisites
-To start working with global thresholds, go to **Administration** > **Global threshold**.
+To start working with global thresholds, go to **Administration&nbsp;<span aria-label="and then">></span> Global threshold**.
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 

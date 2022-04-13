@@ -39,7 +39,6 @@ To start feature integration, integrate the required features:
 | Customer Account Management | {{page.version}} | [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
 
 
-
 ## 1) Install the required modules using Composer
 
 Install the required modules:
@@ -163,7 +162,6 @@ console propel:install
 console transfer:generate
 ```
 
-
 {% info_block warningBox "Verification" %}
 
 Ensure that the following changes have occurred in the database:
@@ -177,9 +175,7 @@ Ensure that the following changes have occurred in the database:
 | spy_oauth_scope                                       | table  | created |
 | spy_oauth_refresh_token                               | table  | created |
 
-
 {% endinfo_block %}
-
 
 
 {% info_block warningBox "Verification" %}
@@ -576,6 +572,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 ```
 </details>
 
+
 **src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
 
 ```php
@@ -720,6 +717,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 ```bash
 console setup:init-db
 ```
+
 {% info_block warningBox "Verification" %}
 
 Ensure that the OAuth client has been added to the `spy_oauth_client table`:
@@ -739,15 +737,15 @@ Ensure that the OAuth client has been added to the `spy_oauth_client table`:
 
 Ensure that the following endpoints are available:
 
-- `http://glue.mysprykershop.com/customers`
-- `http://glue.mysprykershop.com/addresses`
-- `http://glue.mysprykershop.com/customer-password`
-- `http://glue.mysprykershop.com/customer-forgotten-password`
-- `http://glue.mysprykershop.com/customer-restore-password`
-- `http://glue.mysprykershop.com/access-tokens`
-- `http://glue.mysprykershop.com/refresh-tokens`
-- `http://glue.mysprykershop.com/token`
-- `http://glue.mysprykershop.com/customer-confirmation`
+- `https://glue.mysprykershop.com/customers`
+- `https://glue.mysprykershop.com/addresses`
+- `https://glue.mysprykershop.com/customer-password`
+- `https://glue.mysprykershop.com/customer-forgotten-password`
+- `https://glue.mysprykershop.com/customer-restore-password`
+- `https://glue.mysprykershop.com/access-tokens`
+- `https://glue.mysprykershop.com/refresh-tokens`
+- `https://glue.mysprykershop.com/token`
+- `https://glue.mysprykershop.com/customer-confirmation`
 
 {% endinfo_block %}
 
@@ -758,7 +756,7 @@ Ensure that the addresses resource relationship is registered correctly:
 
 1. [Add a customer address](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html#add-an-address).
 
-2. Send the request: `GET http://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=addresses`.
+2. Send the request: `GET https://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=addresses`.
 
 3. Check that the response contains the relationships to the `addresses` resource.
 
@@ -769,7 +767,7 @@ Ensure that the addresses resource relationship is registered correctly:
 
 Ensure that you’ve set up `AccessTokenRestRequestValidatorPlugin`:
 
-1. Send the `POST http://glue.mysprykershop.com/refresh-tokens` request without the `Authorization` header or with an outdated or incorrect authentication token.
+1. Send the `POST https://glue.mysprykershop.com/refresh-tokens` request without the `Authorization` header or with an outdated or incorrect authentication token.
 
 2. Check that one of the following errors is returned:
 
@@ -849,7 +847,7 @@ Ensure that you’ve set up `OauthRefreshTokenSaverPlugin`:
 
 Ensure that you’ve set up `OauthRefreshTokenReaderPlugin` and `OauthRefreshTokenRevokerPlugin`:
 
-1. Send the request: `DELETE http://glue.mysprykershop.com/refresh-tokens/{% raw %}{{{% endraw %}refresh_token}`[.](#)
+1. Send the request: `DELETE https://glue.mysprykershop.com/refresh-tokens/{% raw %}{{{% endraw %}refresh_token}`[.](#)
 2. Check that the refresh token has been revoked: run the following SQL query and check that the `spy_oauth_refresh_token::revoked_at` database field is not empty.
 
 {% endinfo_block %}
@@ -861,7 +859,7 @@ Ensure that you’ve set up `OauthRefreshTokensReaderPlugin` and `OauthRefreshTo
 
 1. Prepare several refresh tokens.
 
-2. Send the request: `DELETE http://glue.mysprykershop.com/refresh-tokens/mine`.
+2. Send the request: `DELETE https://glue.mysprykershop.com/refresh-tokens/mine`.
 
 3. Run the following SQL query:
 
@@ -879,7 +877,7 @@ Check that the `spy_oauth_refresh_token::revoked_at` values of all the records r
 Ensure that you’ve set up `OauthRefreshTokenCheckerPlugin`:
 
 1. Send the following request with a revoked refresh token:
-   `POST http://glue.mysprykershop.com/refresh-tokens`
+   `POST https://glue.mysprykershop.com/refresh-tokens`
 
 ```json
 {
@@ -926,6 +924,6 @@ Ensure that you’ve set up `OauthRefreshTokenRemoverPlugin`:
 
 {% info_block warningBox "Verification" %}
 
-To make sure that you’ve activated `AddressByCheckoutDataResourceRelationshipPlugin`, send the `POST http://glue.mysprykershop.com/checkout-data?include=addresses` request and check that the response contains the information from the addresses resource.
+To make sure that you’ve activated `AddressByCheckoutDataResourceRelationshipPlugin`, send the `POST https://glue.mysprykershop.com/checkout-data?include=addresses` request and check that the response contains the information from the addresses resource.
 
 {% endinfo_block %}

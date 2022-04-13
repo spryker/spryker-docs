@@ -10,7 +10,7 @@ This document describes how to edit search preferences for product attributes in
 
 1. If you are new to the **Search preferences** section, you might want to start with [Best practices: Promote products with search preferences](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/search-preferences/best-practices-promote-products-with-search-preferences.html).
 
-2. To start working with filter preferences, go to **Merchandising** > **Search Preferences**.
+2. To start working with filter preferences, go to **Merchandising&nbsp;<span aria-label="and then">></span> Search Preferences**.
 
 Review the [reference information](#reference-information-edit-search-preferences-for-product-attributes) before you start, or look up the necessary information as you go through the process.
 

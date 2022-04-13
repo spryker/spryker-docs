@@ -21,7 +21,7 @@ The topic describes how to edit CMS pages in the Back Office.
 
 ## Prerequisites
 
-To start editing CMS pages, go to **Content Management** > **Pages**.
+To start editing CMS pages, go to **Content Management&nbsp;<span aria-label="and then">></span> Pages**.
 
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 

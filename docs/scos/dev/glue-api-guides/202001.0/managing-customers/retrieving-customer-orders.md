@@ -34,7 +34,7 @@ For detailed information on the modules that provide the API functionality and r
 ## Getting Customer's Orders
 To retrieve a list of all orders made by a registered customer, send a GET request to the following endpoint:
 `/orders`
-Sample request: `GET http://mysprykershop.com/orders`
+Request sample: `GET http://mysprykershop.com/orders`
 **Sample Response:**
 
 | Field* | Type | Description |
@@ -134,7 +134,7 @@ When paging is enabled, the **links** section of the JSON response will contain 
 ## Retrieving Specific Order
 To retrieve detailed information on a specific order, including the items that the customer ordered, use the following endpoint:
 `/orders/{% raw %}{{{% endraw %}order_id{% raw %}}}{% endraw %}`
-Sample request: `GET http://mysprykershop.com/orders/DE--1`
+Request sample: `GET http://mysprykershop.com/orders/DE--1`
 where `DE--1` is the Refernece Number of the order you want to retrieve.
 **Sample Response:**
 **General Order Information**

@@ -25,7 +25,7 @@ A CMS page is an additional page of your online shop, such as Terms and Conditio
 
 ## Prerequisites
 
-To start working with CMS pages, navigate to **Content** > **Pages**.
+To start working with CMS pages, navigate to **Content&nbsp;<span aria-label="and then">></span> Pages**.
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 

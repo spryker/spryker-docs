@@ -40,7 +40,7 @@ You can hover your mouse over the chart to see the details.
 
 {% endinfo_block %}
 
-Once the status of an order is updated in the **Sales** > **Orders** section, the change is reflected on this chart.
+Once the status of an order is updated in the **Sales&nbsp;<span aria-label="and then">></span> Orders** section, the change is reflected on this chart.
 ![Order status](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Dashboard/orders-status.png)
 
 ## Top Orders

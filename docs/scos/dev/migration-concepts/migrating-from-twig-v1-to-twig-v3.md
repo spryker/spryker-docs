@@ -77,7 +77,7 @@ $twig->addFunction($function->getName(), $function);
 //CORRECT
 $twig->addFunction($function);
 ```
-6. Check if you use `filter` or `spaсeless` tags in your `*.twig` files. Those tags were removed in Twig v3, but can use them in all versions with tag `apply`. For example, `{% raw %}{%{% endraw %} apply trans|raw {% raw %}%}{% endraw %}` instead of `{% raw %}{%{% endraw %} filter trans|raw {% raw %}%}{% endraw %}` or `{% raw %}{%{% endraw %} apply spaceless {% raw %}%}{% endraw %}` instead of `{% raw %}{%{% endraw %} spaceless {% raw %}%}{% endraw %}`. The code with `apply` works in all versions.
+6. Check if you use `filter` or `spaceless` tags in your `*.twig` files. Those tags were removed in Twig v3, but can use them in all versions with tag `apply`. For example, `{% raw %}{%{% endraw %} apply trans|raw {% raw %}%}{% endraw %}` instead of `{% raw %}{%{% endraw %} filter trans|raw {% raw %}%}{% endraw %}` or `{% raw %}{%{% endraw %} apply spaceless {% raw %}%}{% endraw %}` instead of `{% raw %}{%{% endraw %} spaceless {% raw %}%}{% endraw %}`. The code with `apply` works in all versions.
 7. Check if you use `if` tag with `for` tag. This will not work with Twig v3, so you need to put this `if` tag inside the loop body.
 ```php
 {% raw %}{%{% endraw %} for item in order.items {% raw %}%}{% endraw %}

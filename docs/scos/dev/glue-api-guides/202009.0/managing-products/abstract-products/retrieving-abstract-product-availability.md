@@ -33,7 +33,7 @@ To retrieve availability of an abstract product, send the request:
 
 ### Request
 
-Request sample : `GET http://glue.mysprykershop.com/abstract-products/001/abstract-product-availabilities`
+Request sample : `GET https://glue.mysprykershop.com/abstract-products/001/abstract-product-availabilities`
 
 ### Response
 
@@ -49,11 +49,11 @@ Response sample:
             "quantity": 10
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/abstract-products/001/abstract-product-availabilities"
+            "self": "https://glue.mysprykershop.com/abstract-products/001/abstract-product-availabilities"
         }
     }],
     "links": {
-        "self": "http://glue.mysprykershop.com/abstract-products/001/abstract-product-availabilities"
+        "self": "https://glue.mysprykershop.com/abstract-products/001/abstract-product-availabilities"
     }
 }
 ```

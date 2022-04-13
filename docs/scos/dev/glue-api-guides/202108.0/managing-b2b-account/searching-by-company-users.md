@@ -51,13 +51,13 @@ To retrieve company users of the current authenticated customer, send the reques
 
 | REQUEST | USAGE |
 | --- | --- |
-| GET https://glue.mysprykershop.com/company-users/mine | Retrieve all the copmany users the current authenticated customer can authenticate as. |
-| GET https://glue.mysprykershop.com/company-users/mine?include=companies,company-business-units,company-roles | Retrieve all the copmany users the current authenticated customer can authenticate as. Include information about the company and business unit each company user belongs to. Include information about the roles of each company user. |
+| GET https://glue.mysprykershop.com/company-users/mine | Retrieve all the company users the current authenticated customer can authenticate as. |
+| GET https://glue.mysprykershop.com/company-users/mine?include=companies,company-business-units,company-roles | Retrieve all the company users the current authenticated customer can authenticate as. Include information about the company and business unit each company user belongs to. Include information about the roles of each company user. |
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve all the company users the current authenticated customer can authenticate as</summary>
 
 ```json
 {
@@ -101,11 +101,10 @@ To retrieve company users of the current authenticated customer, send the reques
     }
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with companies, company business units and company roles</summary>
+<summary markdown='span'>Response sample: Retrieve all the company users the current authenticated customer can authenticate as and include information about companies, company business units and company roles</summary>
 
 ```json
 {
@@ -272,7 +271,6 @@ To retrieve company users of the current authenticated customer, send the reques
     ]
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

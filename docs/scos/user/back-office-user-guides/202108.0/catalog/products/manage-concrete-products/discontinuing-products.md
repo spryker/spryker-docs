@@ -29,7 +29,7 @@ You always discontinue a product variant, not an abstract product itself.
 
 ## Prerequisites
 
-To discontinue products for a concrete product, navigate to **Catalog** > **Products**.
+To discontinue products for a concrete product, navigate to **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 

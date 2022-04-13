@@ -25,7 +25,7 @@ This topic describes the procedures of creating and managing company roles. This
 
 ## Prerequisites
 
-To start managing company roles, navigate to  **Company Account** > **Company Roles**.
+To start managing company roles, navigate to  **Company Account&nbsp;<span aria-label="and then">></span> Company Roles**.
 
 {% info_block warningBox "Note" %}
 

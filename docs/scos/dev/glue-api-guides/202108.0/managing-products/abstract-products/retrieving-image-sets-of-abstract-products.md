@@ -38,12 +38,14 @@ To retrieve image sets of an abstract product, send the request:
 
 ### Request
 
-Request sample: `GET http://glue.mysprykershop.com/abstract-products/001/abstract-product-image-sets`
+Request sample: retrieve image sets of an abstract product
+
+`GET http://glue.mysprykershop.com/abstract-products/001/abstract-product-image-sets`
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve image sets of an abstract product</summary>
 
 ```json
 {
@@ -74,7 +76,6 @@ Request sample: `GET http://glue.mysprykershop.com/abstract-products/001/abstrac
     }
 }
 ```
-
 </details>
 
 <a name="abstract-product-sets-response-attributes"></a>

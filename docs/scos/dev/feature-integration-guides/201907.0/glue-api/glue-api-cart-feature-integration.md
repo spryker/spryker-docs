@@ -150,7 +150,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 **Verification**
     
-To make sure that `AnonymousCustomerUniqueIdValidatorPlugin` is set up correctly, send a request to an endpoint configured to require an anonymous customer ID (for example, `http://glue.mysprykershop.com/guest-carts`) without any ID and check whether the following error is returned:
+To make sure that `AnonymousCustomerUniqueIdValidatorPlugin` is set up correctly, send a request to an endpoint configured to require an anonymous customer ID (for example, `https://glue.mysprykershop.com/guest-carts`) without any ID and check whether the following error is returned:
 
 ```json
 {
@@ -255,11 +255,11 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 To verify the plugin integration:
 
 1. Make sure that the following endpoints are available:
-    - `http://glue.mysprykershop.com/carts`
-    - `http://glue.mysprykershop.com/guest-carts`
-2. Make a request to `http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/?include=items`. The cart with the given ID should have at least one item in it.
+    - `https://glue.mysprykershop.com/carts`
+    - `https://glue.mysprykershop.com/guest-carts`
+2. Make a request to `https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/?include=items`. The cart with the given ID should have at least one item in it.
 3. Make sure that the response includes relationships to the corresponding cart items resources.
-4. Make a request to `http://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}/?include=items`. The guest cart with the given ID should have at least one item in it.
+4. Make a request to `https://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}/?include=items`. The guest cart with the given ID should have at least one item in it.
 5. Make sure that the response includes relationships to the corresponding guest cart items resources.
 </div></section>
 
@@ -327,7 +327,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 
 **Verification**
     
-To verify that `QuoteCreatorPlugin` is installed correctly, send a <i>POST</i> request to `http://glue.mysprykershop.com/carts/` with a valid body and make sure that you are unable to create more than one cart for the same customer. When attempting to create the second cart, you should receive the following error response:
+To verify that `QuoteCreatorPlugin` is installed correctly, send a <i>POST</i> request to `https://glue.mysprykershop.com/carts/` with a valid body and make sure that you are unable to create more than one cart for the same customer. When attempting to create the second cart, you should receive the following error response:
 
 ```json
 {

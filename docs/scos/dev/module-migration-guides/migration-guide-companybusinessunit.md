@@ -18,10 +18,10 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-companybusinessunit.html
 ---
 
-## Upgrading from Version 1* to Version 2*
+## Upgrading from version 1.* to version 2.*
 
-The second version of the CompanyBusinessUnit module added the parent Company Business Units functionality.
-CompanyBusinessUnit v2.0.0 major version adds a new `fk_parent_company_business_unit`to the `spy_company_business_unit` database table:
+The second version of the `CompanyBusinessUnit` module added the parent Company Business Units functionality.
+`CompanyBusinessUnit` v2.0.0 major version adds a new `fk_parent_company_business_unit`to the `spy_company_business_unit` database table:
 
 ```xml
 <?xml version="1.0"?>
@@ -37,42 +37,46 @@ CompanyBusinessUnit v2.0.0 major version adds a new `fk_parent_company_business_
 
 </database>
 ```
+
 This change allowed company business units to have parent company business units, which made it possible to create hierarchies of company business units inside the company.
 
-**To upgrade to the new version, do the following:**
+To upgrade to the new version, do the following:
 
-### 1. Update modules
+1. Update modules
 
-    1. Update `spryker/company-business-unit` module version in your `composer.json`:
- ```bash
-   {
-  "require": {
-    "spryker/company-business-unit": "^2.0.0"
+   1. Update `spryker/company-business-unit` module version in your `composer.json`:
+  ```bash
+  {
+    "require": {
+      "spryker/company-business-unit": "^2.0.0"
+    }
   }
-}
-```
+  ```
 
-2. Run `composer update` to update the installed packages. If the execution of this command fails because of the dependency issues, they should be resolved first.
+   2. Run `composer update` to update the installed packages. If the execution of this command fails because of the dependency issues, they should be resolved first.
 
-### 2. Perform the database update and migration:
+2. Perform the database update and migration:
 
-    1. Execute the following SQL query to apply `spy_company_business_unit` database table changes:
-```SQL
-BEGIN;
+   1. Execute the following SQL query to apply `spy_company_business_unit` database table changes:
+  
+  ```SQL
+  BEGIN;
 
-ALTER TABLE "spy_company_business_unit" ADD "fk_parent_company_business_unit" INTEGER;
+  ALTER TABLE "spy_company_business_unit" ADD "fk_parent_company_business_unit" INTEGER;
 
-ALTER TABLE "spy_company_business_unit" ADD CONSTRAINT "spy_company_business_unit-fk_parent_company_business_unit"
+  ALTER TABLE "spy_company_business_unit" ADD CONSTRAINT "spy_company_business_unit-fk_parent_company_business_unit"
     FOREIGN KEY ("fk_parent_company_business_unit")
     REFERENCES "spy_company_business_unit" ("id_company_business_unit");
 
-COMMIT;
-```
-2. Execute the following commands to build Propel models:
-```bash
-console propel:diff;
-console propel:migrate;
-console propel:model:build;
-```
+  COMMIT;
+  ```
 
-3.  Execute the `console transfer:generate` command to apply transfer objects changes.
+   2. Execute the following commands to build Propel models:
+   
+  ```bash
+  console propel:diff;
+  console propel:migrate;
+  console propel:model:build;
+  ```
+
+   3.  Execute the `console transfer:generate` command to apply transfer objects changes.

@@ -37,12 +37,12 @@ In the Spryker Commerce OS’s core, all public methods in theses locatable clas
 And the interfaces which are implemented everywhere are also part of the API:
 
 * Plugin interfaces
-* Plugins
+* [Plugins](/docs/scos/dev/back-end-development/plugins/plugins.html)
 
 In addition to these obvious cases, there are some other classes that are part of the API and can cause a BC break:
 
 * module Config [`Client/Yves/Zed/Shared/Service`](/docs/scos/dev/back-end-development/data-manipulation/configuration-management.html)
-* Controllers
+* [Controllers](/docs/scos/dev/back-end-development/yves/controllers-and-actions.html)
 * Twig functions
 * [CLI commands](/docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html)
 * Public constants that define environment configuration in [Constant Interfaces](/docs/scos/dev/back-end-development/data-manipulation/configuration-management.html)

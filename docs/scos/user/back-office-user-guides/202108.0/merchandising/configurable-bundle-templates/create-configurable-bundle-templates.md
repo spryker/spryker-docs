@@ -33,16 +33,7 @@ Review the [reference information](#reference-information-create-configurable-bu
 3. Click **Save**.
     This refreshes the page with a success message displayed.
 
-<a name="reference-information-creating-configurable-bundles"></a>
-
-## Reference information: Create configurable bundle templates
-
-
-| ATTRIBUTE | DESCRIPTION |  
-| --- | --- |
-| NAME |  |  
-
 ## Next steps
 
-* Now that you have created a template, add slots to it. See [Creating a slot for a configurable bundle template](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html#creating-slots-in-configurable-bundle-templates) for details on how to do that.
-* To edit, activate, deactivate, or delete a configurable bundle template, see [Managing configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html).
+* [Edit configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/edit-configurable-bundle-templates.html)
+* [Edit slots in configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html)

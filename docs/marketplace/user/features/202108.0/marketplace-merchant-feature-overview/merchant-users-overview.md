@@ -13,7 +13,6 @@ For example, there can be a person responsible only for creating and managing pr
 
 {% endinfo_block %}
 
-
 To add merchant users for a merchant, the merchant must be created first. When the merchant record exists, a Marketplace administrator can set up one or several merchant users to manage the merchant account.
 
 The merchant users concept follows certain rules:
@@ -29,12 +28,13 @@ The following table explains all the statuses that may apply to a merchant user.
 | STATUS | DESCRIPTION |
 | --- | --- |
 | Active | When the merchant user has the `Active` status, it means that the merchant is approved, the merchant user account is activated, the email with reset password instructions has been sent, and the merchant user has access to the Merchant Portal. |
-| Deactivated | Access to the Merchant Portal is revoked for a deactivated merchant user. A merchant user can be deactivated when:<ul><li>A merchant or Marketplace administrator deactivates the merchant user.</li><li>The merchant user's merchant is [denied](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses).</li></ul> |
+| Deactivated | Access to the Merchant Portal is revoked for a deactivated merchant user. A merchant user can be deactivated when:<ul><li>A merchant or Marketplace administrator deactivates the merchant user.</li><li>The merchant to whom the merchant user belongs has been [denied](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses).</li></ul> |
 | Deleted | Access to the Merchant Portal is revoked for the deleted merchant user. In the current implementation, both statuses `Deactivated` and `Deleted` have the same functionality—they restrict access to the Merchant Portal. However, this can be changed and adapted on the project level. |
 
 <!--See LINK TO BO GUIDE HOW TO ACTIVATE A MERCHANT USER for details on to change the merchant user statues in the Back Office-->
 
 ## Merchant user access
+
 Both merchant and typical Back Office users have a common entry point, but the login URLs to the Back Office and Merchant Portal are different. The exemplary login link to the Merchant Portal is `https://os.de.marketplace.demo-spryker.com/security-merchant-portal-gui/login`.
 
 To log in to the Merchant Portal, both a merchant and merchant user need to be activated in the Back Office.

@@ -40,7 +40,13 @@ The Marketplace administrator manages merchants and sets their statuses in the
 | Active | N/A | &check; |
 | Inactive | N/A | ✗ |
 
-For details about how to change the merchant user statuses and activate and deactivate merchants in the Back Office, see [Approving and denying merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#approving-and-denying-merchants) and [Activating and deactivating merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants).
+For details about how to change the merchant statuses and activate or deactivate merchants in the Back Office, see [approving and denying merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#approving-and-denying-merchants) and [activating and deactivating merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants).
+
+{% info_block infoBox "Info" %}
+
+Whenever a merchant is denied, all the users (/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html) of this merchant get deactivated. Upon re-approval, the merchant users must be manually activated one by one.
+
+{% endinfo_block %}
 
 Schematically, the merchant status change flow looks like this:
 
@@ -63,6 +69,7 @@ The merchant profile page is available only if the merchant is [Active](#merchan
 {% endinfo_block %}
 
 The information for a merchant profile can be defined:
+
 * By the Marketplace administrator in the Back Office when [creating merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#creating-merchants) or [editing merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#editing-merchants).
 * By importing the merchant profile data. For more information, see [File details: merchant_profile.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-profile.csv.html) and [File details: merchant_profile_address.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-profile-address.csv.html).
 * By the merchant in the Merchant Portal:
@@ -72,6 +79,7 @@ The information for a merchant profile can be defined:
 
 
 ### Merchant opening hours
+
 To make the selling activity efficient, merchants can provide their working schedule that will display to buyers on the Storefront. For details, see [Merchant Opening Hours feature overview](/docs/marketplace/user/features/{{page.version}}/merchant-opening-hours-feature-overview.html).
 
 ### Merchant links on the Storefront pages

@@ -22,7 +22,7 @@ The following modules are used for the Product Offer storage:
 
 {% info_block infoBox "" %}
 
-For details about how to use Client, use `Client` of the `MerchantProductOfferStorage` module for getting the cached data.  See [Client](/docs/scos/dev/back-end-development/client/client.html).
+For details about how to use Client, use `Client` of the `MerchantProductOfferStorage` module for getting the cached data, see [Client](/docs/scos/dev/back-end-development/client/client.html).
 
 {% endinfo_block %}
 

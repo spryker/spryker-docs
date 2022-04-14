@@ -285,9 +285,9 @@ Make sure that the imported data is added to the `spy_merchant_category` table.
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
-Follow the steps below to install the Merchant Category feature front end.
+Follow the steps below to install the Merchant Category feature frontend.
 
 ### Prerequisites
 

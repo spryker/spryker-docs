@@ -4,7 +4,7 @@ description: This document contains concept information for the Merchants featur
 template: concept-topic-template
 ---
 
-*Merchant* is a seller of goods or services, either a business or a private person working in the Marketplace environment. Merchants manage their business in the *Merchant Portal*. The *Merchant Portal* allows merchants to upload and manage marketplace products and [offers](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html), define prices and stock, fulfill orders, and edit merchant profile information. Merchant can have employees who can access the Merchant Portal and perform actions on the merchant's behalf there. These employees are referred to as [*merchant users*](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html).  
+A *merchant* is a seller of goods or services, either a business or a private person working in the Marketplace environment. Merchants manage their business in the *Merchant Portal*. The *Merchant Portal* lets merchants upload and manage merchant products and [offers](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html), define prices and stock, fulfill orders, and edit merchant profile information. Merchant can have employees who can access the Merchant Portal and perform actions on the merchant's behalf there. These employees are referred to as [*merchant users*](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html).  
 
 Merchant is the core entity of the Spryker Marketplace and the second main entity after customers since the Marketplace connects the buying customers and the selling customers.
 Every merchant in the Spryker Marketplace has a unique identifier in the system called *Merchant SKU*. 
@@ -12,7 +12,7 @@ You can [create merchants in the Back Office](/docs/marketplace/user/back-office
 
 {% info_block infoBox "Note" %}
 
-After you created a merchant, you can not delete it completely. You can only [deactivate](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants) the merchant.
+After you create a merchant, you can not delete it completely. You can only [deactivate](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants) the merchant.
 
 {% endinfo_block %}
 
@@ -54,17 +54,17 @@ Schematically, the merchant status change flow looks like this:
 
 ## Merchant category
 
-You can group merchants by categories to make your working process more efficient and simplify merchants search for customers. See [Merchant Category](/docs/marketplace/user/features/{{page.version}}/merchant-category-feature-overview.html) for details.
+You can group merchants by categories to make your working process more efficient and simplify merchants' search for customers. For details, see [Merchant Category](/docs/marketplace/user/features/{{page.version}}/merchant-category-feature-overview.html).
 
 ## Merchants on the Storefront
 
 ### Merchant profile
 
-On the Storefront, customers can check the relevant merchant information on the *Merchant Profile* page.
+On the Storefront, customers can check the relevant merchant information on the **Merchant Profile** page.
 
 {% info_block infoBox "Note" %}
 
-The merchant profile page is available only if the merchant is [Active](#merchant-statuses) .
+The merchant profile page is available only if the merchant is [Active](#merchant-statuses).
 
 {% endinfo_block %}
 
@@ -84,7 +84,7 @@ To make the selling activity efficient, merchants can provide their working sche
 
 ### Merchant links on the Storefront pages
 
-Marketplace Storefront allows buyers to check what merchants are the owners of the offers and products the customers are buying. The respective merchant names with the link to the merchant profile page are available:
+Marketplace Storefront lets buyers check what merchants are the owners of the offers and products the customers are buying. The respective merchant names with the link to the merchant profile page are available:
 
 * On the product detail page
 
@@ -107,12 +107,12 @@ Marketplace Storefront allows buyers to check what merchants are the owners of t
 In the Spryker Marketplace, you can search for the products sold by a specific merchant by entering the merchant name in the search field. The search results contain the marketplace products and/or the abstract products the merchant product offers are related to. The search suggestions and the auto-completion functionality provide the marketplace products and offers by the merchant name.
 ![Search by merchant name](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Merchants/Merchants+feature+overview/search-by-merchant-name.gif)
 
-In the catalog and search results pages, there is the merchant multi-select filter. This filter allows shoppers to see only the products with the product offers belonging to the selected merchant. For more details about filters available in the Spryker Commerce O, see [Standard Filters](/docs/scos/user/features/{{page.version}}/search-feature-overview/standard-filters-overview.html) documentation 
+In the catalog and search results pages, there is the merchant multi-select filter. This filter lets shoppers see only the products with the product offers belonging to the selected merchant. For more details about filters available in the Spryker Commerce O, see [Standard Filters](/docs/scos/user/features/{{page.version}}/search-feature-overview/standard-filters-overview.html) documentation.
 
 ![Merchant search filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Merchants/Merchants+feature+overview/merchant-filter.gif)
 
 
-If the merchant is not active, their products and offers are not displayed in the search suggestions, search results and in the merchant filter.
+If the merchant is not active, their products and offers are not displayed in the search suggestions, search results, and the merchant filter.
 
 ## Next steps
 

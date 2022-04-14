@@ -10,7 +10,7 @@ The *Marketplace Wishlist* feature lets customers add product offers and merchan
 
 ![Adding products and offers to wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Wishlist/add-products-and-offers-to-wishlist.gif)
 
-Merchant information is displayed in the *Sold by* field so that customer can always know which merchant is the owner of the product.
+Merchant information is displayed in the *Sold by* field so that a customer can always know which merchant is the owner of the product.
 
 Once the customer decides to buy a product, they can add it to cart directly from the wishlist.
 

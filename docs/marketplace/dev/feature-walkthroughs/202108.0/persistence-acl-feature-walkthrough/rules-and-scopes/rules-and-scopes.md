@@ -17,7 +17,7 @@ One of the fundamental concepts of the Persistence ACL module is an entity rule.
 | fk_acl_entity_segment | A reference to the data segment to which the rule applies. The segment concept is described below. | |
 | fk_acl_role | The foreign key of the role to which the rule applies. Rules are not applied to specific users, but to roles, which makes their use extremely flexible. | |
 | entity | Entity class. You must specify the full namespace without a leading slash. | `Orm\Zed\Product\Persistence\SpyProductAbstract`, `Orm\Zed\Store\Persistence\SpyStore` |
-| permission_mask | An integer representation of the binary permission mask. See [Permission concept](#permission-concept) documentation for more details. | `AclEntityConstants::OPERATION_MASK_READ`, <br />`AclEntityConstants::OPERATION_MASK_READ \| AclEntityConstants::OPERATION_MASK_UPDATE`, <br /> `AclEntityConstants::OPERATION_MASK_CRUD` |
+| permission_mask | An integer representation of the binary permission mask. For more details, see [Permission concept](#permission-concept) documentation. | `AclEntityConstants::OPERATION_MASK_READ`, <br />`AclEntityConstants::OPERATION_MASK_READ \| AclEntityConstants::OPERATION_MASK_UPDATE`, <br /> `AclEntityConstants::OPERATION_MASK_CRUD` |
 | scope | There are 3 types of rules: *Global*, *Segment* and *Inherited*. Their features and differences are described below. | `AclEntityConstants::SCOPE_GLOBAL`, `AclEntityConstants::SCOPE_SEGMENT`, `AclEntityConstants::SCOPE_INHERITED` |
 
 ## Scope
@@ -52,7 +52,7 @@ Depending on the scope, the system behaves differently. Read the documentation f
 
 If a user performs any operation on an entity for which he has no rules, the default rule is triggered. The default rule can be configured both within a specific class and in a general context.
 
-A class context takes precedence over a general context. Persistence ACL feature is especially useful when all database tables are connected simultaneously. See [configuration](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html#connect-persistence-acl-feature-to-all-database-tables) for more details. Thus, you can define publicly available entities such as `Country`, `Currency`, and `Region`.
+A class context takes precedence over a general context. Persistence ACL feature is especially useful when all database tables are connected simultaneously. For more details, see [configuration](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html#connect-persistence-acl-feature-to-all-database-tables). Thus, you can define publicly available entities such as `Country`, `Currency`, and `Region`.
 
 The default rule configuration is described in the [configuration document](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html).
 
@@ -73,4 +73,4 @@ Every CRUD operation has its own binary mask.
 | Update |`0b100` | 4 |
 | Delete |`0b1000` | 8 |
 
-See [Spryker\Shared\AclEntity\AclEntityConstants](https://github.com/spryker/acl-entity/blob/master/src/Spryker/Shared/AclEntity/AclEntityConstants.php) for details.
+For details, see [Spryker\Shared\AclEntity\AclEntityConstants](https://github.com/spryker/acl-entity/blob/master/src/Spryker/Shared/AclEntity/AclEntityConstants.php).

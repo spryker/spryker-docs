@@ -56,9 +56,9 @@ Make sure that the following changes were applied in transfer objects:
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
-Follow the steps below to install the Merchant Switcher feature front end.
+Follow the steps below to install the Merchant Switcher feature frontend.
 
 ### Prerequisites
 

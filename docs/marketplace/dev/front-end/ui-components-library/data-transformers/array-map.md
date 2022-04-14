@@ -14,7 +14,7 @@ In the following example, the `datasource` will return an array with the transfo
 
 Service configuration:
 
-- `mapItems` - a Data Transformer that is set up with a configuration object.
+- `mapItems`—a Data Transformer that is set up with a configuration object.
 
 ```html
 <spy-select

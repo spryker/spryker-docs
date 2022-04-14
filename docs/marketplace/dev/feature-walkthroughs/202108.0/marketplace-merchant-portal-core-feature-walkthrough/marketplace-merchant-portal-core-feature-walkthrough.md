@@ -32,7 +32,7 @@ The following table lists the main MerchantPortal Core modules:
 | [AclMerchantPortal](https://github.com/spryker/acl-merchant-portal) | Acl and merchant entities are connected through this module.   |
 | [GuiTable](https://github.com/spryker/gui-table) | This module provides base functionality for building GuiTables.    |
 | [MerchantPortalApplication](https://github.com/spryker/merchant-portal-application) | This module provides basic infrastructure for the MerchantPortal modules.   |
-| [MerchantUser](https://github.com/spryker/merchant-user) | Merchant user module provides data structure, facade methods and plugins  that allow users to relate to merchants.  |
+| [MerchantUser](https://github.com/spryker/merchant-user) | Merchant user module provides data structure, facade methods and plugins that let users relate to merchants.  |
 | [MerchantUserPasswordResetMail](https://github.com/spryker/merchant-user-password-reset-mail) | This module provides possibility to reset password for the merchant user.   |
 | [Navigation](https://github.com/spryker/navigation) | This module manages multiple navigation menus that can be displayed on the frontend.   |
 | [SecurityMerchantPortalGui](https://github.com/spryker/security-merchant-portal-gui) | This module provides security rules and authentication for merchant users.   |

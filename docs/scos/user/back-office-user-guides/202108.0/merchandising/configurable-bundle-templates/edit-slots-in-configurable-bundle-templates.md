@@ -38,10 +38,13 @@ This document describes how to edit slots in configurable bundle templates in th
 ## Assigning products to a slot in a configurable bundle template
 
 1. Click the **Assign Products** tab.
-2. Assign one or more products as follows:
-   - Under **Import Product List**, select **Choose File**.
-   - Select a CSV file with the product list. The file should contain `product_list_key` and `concrete_sku` fields.
-   - In the **Select Products to assign** table, select one or more products.
+2. Assign one or more products in one of the following ways:
+    * Import the list of products you want to assign:
+        1. Click **Choose File**.
+        2. Select a CSV file with the product list. The file should contain `product_list_key` and `concrete_sku` fields.
+    * Select the products you want to assign:
+        1. In the **Select Products to assign** subtab, select the checkboxes next to the products you want to assign.
+        2.
 6. Select **Save**.
 The page refreshes with the success message displayed.
 

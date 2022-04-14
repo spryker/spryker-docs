@@ -17,7 +17,7 @@ related:
     link: docs/scos/dev/data-export/page.version/data-export-orders-.csv-files-format.html
 ---
 
-To quickly populate an external system like ERP or OMS with data from your Spryker shop, you can export it as files from the Spryker shop and then import them into the external system.
+To quickly populate an external system like ERP or OMS with data from your Spryker shop, you can export it as CSV files from the Spryker shop and then import them into the external system.
 
 For now, you can export only order data, which includes data on:
 * Orders

@@ -14,7 +14,7 @@ Check out an example usage of the Local Storage Persistence Strategy.
 
 Service configuration:
 
-- `storage` - persistence strategy type.  
+- `storage`—persistence strategy type.  
 
 ```html
 <spy-select

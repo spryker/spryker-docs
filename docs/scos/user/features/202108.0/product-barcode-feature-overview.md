@@ -57,7 +57,7 @@ In the default configuration, barcodes are generated based on the SKU of a concr
 
 Barcodes are dynamically generated for concrete products. This ensures that barcodes are immediately valid.
 
-You can see the barcodes in the **Catalog > Product Barcodes** section. The section is designed as a review; thus no actual actions are performed here. The barcode is generated automatically once a new concrete product is added.
+You can see the barcodes in the **Catalog&nbsp;<span aria-label="and then">></span> Product Barcodes** section. The section is designed as a review; thus no actual actions are performed here. The barcode is generated automatically once a new concrete product is added.
 
 You can see Product ID, product name, SKU, and the barcode itself.
 

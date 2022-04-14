@@ -16,7 +16,7 @@ redirect_from:
   - /docs/en/promotions-discounts
 ---
 
-The _Promotions & Discounts_ feature enables product catalog managers to provide free value to their customers by discounting a percentage or a fixed sum of an order's subtotal or an item's price on predefined conditions.
+The _Promotions & Discounts_ feature lets product catalog managers provide free value to their customers by discounting a percentage or a fixed sum of an order's subtotal or an item's price on predefined conditions.
 
 ## Discount types
 
@@ -28,7 +28,7 @@ A product catalog manager selects a discount type when [creating a voucher](/doc
 
 ## Voucher
 
-A Voucher is a discount that applies when a customer enters an active voucher code on the *Cart* page.
+A Voucher is a discount that applies when a customer enters an active voucher code on the **Cart** page.
 ![Cart voucher](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/cart_voucher.png)
 
 Once the customer clicks **Redeem code**, the page refreshes to show the discount name, discount value and available actions: **Remove** and **Clear all**. The **Clear all** action disables all the applied discounts. The **Remove** action disables a single discount.
@@ -39,7 +39,7 @@ Multiple voucher codes can be generated for a single voucher. The code has a **M
 You can eneter codes manually or use the code generator in the Back Office.
 ![Generate codes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/generate_codes.png)
 
-See [Creating a Voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) to learn how a product catalog manager can create a voucher in the Back Office.
+To learn how a product catalog manager can create a voucher in the Back Office, see [Creating a Voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html).
 
 ## Cart rule
 
@@ -48,13 +48,13 @@ A Cart rule is a discount that applies to cart once all the [decision rules](#de
 The cart rule is applied automatically. If the decision rules of a discount are fulfilled, the customer can see the discount upon entering cart. Unlike with [voucher](#voucher), the **Clear all** and **Remove** actions are not displayed.
 ![Cart rule](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/cart-cart-rule.png)
 
-See [Creating a Cart Rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html) to learn how a product catalog manager can create a cart rule in the Back Office.
+To learn how a product catalog manager can create a cart rule in the Back Office, see [Creating a Cart Rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
 
 ### Decision rule
 
 A decision rule is a condition assigned to a discount that should be fulfilled for the discount to be applied.
 
-A discount can have one or more decision rules. Find an exemplary combination below:
+A discount can have one or more decision rules. See the following exemplary combination:
 
 | PARAMETER | RELATION OPERATOR | VALUE |
 | --- | --- | --- |
@@ -103,7 +103,7 @@ With the rule groups, you can build multiple levels of rule hierarchy. When a ca
 
 ![Decision rule hierarchy](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+%26+Discounts/Discount/Discount+Feature+Overview/decision-rule-hierarchy.png)
 
-When a cart is evaluated on a level that has a rule and a rule group, the rule group is treated as a single rule. The diagram below shows how a cart is evaluated against the rules on the previous screenshot.
+When a cart is evaluated on a level that has a rule and a rule group, the rule group is treated as a single rule. The following diagram shows how a cart is evaluated against the rules on the previous screenshot.
 
 ### Discount threshold
 
@@ -125,7 +125,7 @@ There are two types of discount application:
 
 Query String is a discount application type that uses [decision rules](#decision-rule) to dynamically define what products a discount applies to.
 
-The discount in the example below, applies to white products.
+The discount in the following example applies to white products.
 ![Query collection](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/collection-query.png)
 
 The product selection based on the query string is dynamic:
@@ -155,7 +155,7 @@ With the calculator fixed type, the currency of the respective shop is used for 
 
 {% endinfo_block %}
 
-See examples in the table below.
+See examples in the following table.
 
 | PRODUCT PRICE | CALCULATION TYPE | AMOUNT | DISCOUNT APPLIED | PRICE TO PAY |
 | --- | --- | --- | --- | --- |

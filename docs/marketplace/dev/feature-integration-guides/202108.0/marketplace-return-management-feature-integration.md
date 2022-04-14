@@ -1019,9 +1019,9 @@ Make sure that, in the navigation menu of the Back Office, you can see the menu 
 {% endinfo_block %}
 
 
-## Install feature front end
+## Install feature frontend
 
-Follow the steps below to install the Marketplace return management feature front end.
+Follow the steps below to install the Marketplace return management feature frontend.
 
 ### 1) Install required modules using Сomposer
 
@@ -1047,7 +1047,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up widgets
 
-<!--Provide a list of plugins and global widgets to enable widgets. Add descriptions for complex javascript code snippets. Provide a console command for generating front-end code.-->
+<!--Provide a list of plugins and global widgets to enable widgets. Add descriptions for complex javascript code snippets. Provide a console command for generating frontend code.-->
 
 Set up widgets as follows:
 

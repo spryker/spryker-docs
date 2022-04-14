@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/persistent-cart-sharing-feature-overview
 ---
 
-The *Persistent Cart Sharing* feature allows company users to generate the URL to share the cart with different levels of access. To be able to generate the link, you need to be logged in to a company account.
+The *Persistent Cart Sharing* feature lets company users generate the URL to share the cart with different levels of access. To be able to generate the link, you need to be logged in to a company account.
 
 URL is generated with the following structure: `your_domain/cart/preview/UIID`. For example, `http://mysprykershop.com/cart/preview/bea563fe-3f03-594e-8586-c5ae11e253fd`.
 

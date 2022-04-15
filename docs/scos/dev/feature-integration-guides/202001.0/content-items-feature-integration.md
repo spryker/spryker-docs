@@ -72,7 +72,6 @@ src/Pyz/Zed/ContentStorage/Persistence/Propel/Schema/spy_content_storage.schema.
 Run the following commands to apply database changes and generate changes for entities and transfers:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

@@ -42,7 +42,7 @@ use Spryker\Zed\ProductOfferPackagingUnit\Communication\Plugin\Oms\ProductOfferP
 class OmsDependencyProvider extends SprykerOmsDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\OmsExtension\Dependency\Plugin\OmsReservationAggregationPluginInterface[]
+     * @return array<\Spryker\Zed\OmsExtension\Dependency\Plugin\OmsReservationAggregationPluginInterface>
      */
     protected function getOmsReservationAggregationPlugins(): array
     {
@@ -59,6 +59,6 @@ Make sure that availability is calculated properly for the product offers that b
 
 * Add such a product offer to the cart.
 * Place an order.
-* Make sure that `spy_product_offer_reservation` contains a new row, which has reserved the quantity equal to the amount of the bought packaging unit.
+* Make sure that `spy_oms_product_offer_reservation` contains a new row, which has reserved the quantity equal to the amount of the bought packaging unit.
 
 {% endinfo_block %}

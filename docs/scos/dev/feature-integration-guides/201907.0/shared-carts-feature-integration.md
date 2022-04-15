@@ -38,7 +38,6 @@ Make sure that the following modules have been installed:<table><thead><tr><th>M
 Run the following commands to apply the database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -72,7 +71,7 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the configured data has been added to the `spy_glossary` table in the database.
+Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables in the database.
 {% endinfo_block %}
 
 ### 4) Import Data
@@ -653,7 +652,7 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data has been added to the `spy_glossary` table.
+Make sure that in the database the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 {% endinfo_block %}
 
 ### 3) Set up Widgets

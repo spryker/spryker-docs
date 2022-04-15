@@ -38,7 +38,6 @@ Make sure that the following modules have been installed:<table><thead><tr><th>M
 
 Apply database changes, generate entities and transfer changes:
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate 
 ```
@@ -323,7 +322,7 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that, in the database, the configured data is added to the `spy_glossary` table.
+Make sure that, in the database, the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 {% endinfo_block %}
 
 ### 3) Enable controllers

@@ -105,16 +105,19 @@ entries:
               url: /docs/marketplace/user/back-office-user-guides/sales/managing-marketplace-returns.html
               include_versions:
               - "202108.0"
+              - "202205.0"
 
             - title: Managing main merchant orders
               url: /docs/marketplace/user/back-office-user-guides/sales/managing-main-merchant-orders.html
               include_versions:
               - "202108.0"
+              - "202205.0"
 
             - title: Managing main merchant returns
               url: /docs/marketplace/user/back-office-user-guides/sales/managing-main-merchant-returns.html
               include_versions:
               - "202108.0"
+              - "202205.0"
 
         - title: Catalog
 
@@ -127,6 +130,7 @@ entries:
                 url: /docs/marketplace/user/back-office-user-guides/catalog/availability/availability-reference-information.html
                 include_versions:
                 - "202108.0"
+                - "202205.0"
 
             - title: Products
               nested:
@@ -138,11 +142,13 @@ entries:
                   url: /docs/marketplace/user/back-office-user-guides/catalog/products/abstract-products/creating-abstract-products.html
                   include_versions:
                   - "202108.0"
+                  - "202205.0"
 
                 - title: Editing abstract products
                   url: /docs/marketplace/user/back-office-user-guides/catalog/products/abstract-products/editing-abstract-products.html
                   include_versions:
                   - "202108.0"
+                  - "202205.0"
 
               - title: Concrete products
                 nested:
@@ -151,6 +157,7 @@ entries:
                   url: /docs/marketplace/user/back-office-user-guides/catalog/products/concrete-products/creating-product-variants.html
                   include_versions:
                   - "202108.0"
+                  - "202205.0"
 
               - title: Managing products
                 nested:
@@ -159,16 +166,19 @@ entries:
                   url: /docs/marketplace/user/back-office-user-guides/catalog/products/managing-products/managing-products.html
                   include_versions:
                   - "202108.0"
+                  - "202205.0"
 
               - title: "Abstract products: reference information"
                 url: /docs/marketplace/user/back-office-user-guides/catalog/products/abstract-product-reference-information.html
                 include_versions:
                 - "202108.0"
+                - "202205.0"
 
               - title: "Products: reference information"
                 url: /docs/marketplace/user/back-office-user-guides/catalog/products/products-reference-information.html
                 include_versions:
                 - "202108.0"
+                - "202205.0"
 
         - title: Product Options
           nested:
@@ -177,11 +187,13 @@ entries:
               url: /docs/marketplace/user/back-office-user-guides/catalog/product-options/creating-product-options.html
               include_versions:
               - "202108.0"
+              - "202205.0"
 
             - title: Managing product options
               url: /docs/marketplace/user/back-office-user-guides/catalog/product-options/managing-product-options.html
               include_versions:
               - "202108.0"
+              - "202205.0"
 
         - title: Marketplace
 
@@ -194,11 +206,13 @@ entries:
                   url: /docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchants.html
                   include_versions:
                   - "202108.0"
+                  - "202205.0"
 
                 - title: Managing merchant users
                   url: /docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchant-users.html
                   include_versions:
                   - "202108.0"
+                  - "202205.0"
 
             - title: Offers
               nested:
@@ -207,6 +221,7 @@ entries:
                   url: /docs/marketplace/user/back-office-user-guides/marketplace/offers/managing-merchant-product-offers.html
                   include_versions:
                   - "202108.0"
+                  - "202205.0"
 
             - title: Orders
               nested:
@@ -215,11 +230,13 @@ entries:
                   url: /docs/marketplace/user/back-office-user-guides/marketplace/orders/managing-marketplace-orders.html
                   include_versions:
                   - "202108.0"
+                  - "202205.0"
 
       - title: Merchant Portal user guides
         url: /docs/marketplace/user/merchant-portal-user-guides/
         include_versions:
         - "202108.0"
+        - "202205.0"
 
         nested:
 
@@ -227,6 +244,7 @@ entries:
           url: /docs/marketplace/user/merchant-portal-user-guides/logging-in-to-the-merchant-portal.html
           include_versions:
           - "202108.0"
+          - "202205.0"
 
         - title: My account
           nested:
@@ -235,6 +253,7 @@ entries:
             url: /docs/marketplace/user/merchant-portal-user-guides/my-account/managing-account-details-and-settings.html
             include_versions:
             - "202108.0"
+            - "202205.0"
 
         - title: Dashboard
           nested:
@@ -243,6 +262,7 @@ entries:
             url: /docs/marketplace/user/merchant-portal-user-guides/dashboard/managing-merchants-performance-data.html
             include_versions:
             - "202108.0"
+            - "202205.0"
 
         - title: Profile
           nested:
@@ -250,6 +270,7 @@ entries:
             url: /docs/marketplace/user/merchant-portal-user-guides/profile/editing-merchants-profile-details.html
             include_versions:
             - "202108.0"
+            - "202205.0"
 
         - title: Offers
           nested:
@@ -258,6 +279,7 @@ entries:
             url: /docs/marketplace/user/merchant-portal-user-guides/offers/managing-product-offers.html
             include_versions:
             - "202108.0"
+            - "202205.0"
 
         - title: Orders
           nested:
@@ -266,6 +288,7 @@ entries:
             url: /docs/marketplace/user/merchant-portal-user-guides/orders/managing-merchant-orders.html
             include_versions:
             - "202108.0"
+            - "202205.0"
 
         - title: Products
           nested:
@@ -277,31 +300,37 @@ entries:
               url: /docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/creating-marketplace-abstract-product.html
               include_versions:
               - "202108.0"
+              - "202205.0"
 
             - title: Managing a marketplace abstract product
               url: /docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/managing-marketplace-abstract-product.html
               include_versions:
               - "202108.0"
+              - "202205.0"
 
             - title: Managing marketplace abstract product prices
               url: /docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/managing-marketplace-abstract-product-prices.html
               include_versions:
               - "202108.0"
+              - "202205.0"
 
             - title: Managing marketplace abstract product image sets
               url: /docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/managing-marketplace-abstract-product-image-sets.html
               include_versions:
               - "202108.0"
+              - "202205.0"
 
             - title: Managing marketplace abstract product attributes
               url: /docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/managing-marketplace-abstract-product-attributes.html
               include_versions:
               - "202108.0"
+              - "202205.0"
 
             - title: Managing marketplace abstract product meta information
               url: /docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/managing-marketplace-abstract-product-meta-information.html
               include_versions:
               - "202108.0"
+              - "202205.0"
 
           - title: Concrete products
             nested:
@@ -310,23 +339,28 @@ entries:
               url: /docs/marketplace/user/merchant-portal-user-guides/products/concrete-products/creating-marketplace-concrete-product.html
               include_versions:
               - "202108.0"
+              - "202205.0"
 
             - title: Managing a marketplace concrete product
               url: /docs/marketplace/user/merchant-portal-user-guides/products/concrete-products/managing-marketplace-concrete-product.html
               include_versions:
               - "202108.0"
+              - "202205.0"
 
             - title: Managing marketplace concrete product prices
               url: /docs/marketplace/user/merchant-portal-user-guides/products/concrete-products/managing-marketplace-concrete-product-prices.html
               include_versions:
               - "202108.0"
+              - "202205.0"
 
             - title: Managing marketplace concrete product image sets
               url: /docs/marketplace/user/merchant-portal-user-guides/products/concrete-products/managing-marketplace-concrete-products-image-sets.html
               include_versions:
               - "202108.0"
+              - "202205.0"
 
             - title: Managing marketplace concrete product attributes
               url: /docs/marketplace/user/merchant-portal-user-guides/products/concrete-products/managing-marketplace-concrete-product-attributes.html
               include_versions:
               - "202108.0"
+              - "202205.0"

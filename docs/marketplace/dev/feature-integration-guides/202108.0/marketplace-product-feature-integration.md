@@ -557,9 +557,9 @@ Make sure that the imported data is added to the `spy_merchant_product` table.
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
-Follow the steps below to install the Marketplace Product feature front end.
+Follow the steps below to install the Marketplace Product feature frontend.
 
 ### 1) Set up widgets
 

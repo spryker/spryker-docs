@@ -22,7 +22,7 @@ There are three key figures: marketplace owner, merchant, and buyer.
 
 The business relationships between merchants and buyers are usually based on contracts.
 
-A Back Office user can manage merchants and merchant relations. See [Managing merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchants.html) and [Managing merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html) to learn how to do that.
+A Back Office user can manage merchants and merchant relations. To learn how to do that, see [Managing merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchants.html) and [Managing merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html).
 
 A developer can also import merchants and merchant relations.
 

@@ -22,7 +22,7 @@ This model is intentionally simplified. Learn more about the core domain objects
 `Merchant` is a core Marketplace domain object. `Merchant` represents an entity of a third-party seller on a shop. In other setups, such as "big-box retail", a `Merchant` can represent a branch of a chain of stores.
 Merchants use [Merchant Portal](/docs/marketplace/dev/architecture-overview/marketplace-merchant-portal-architecture-overview.html) to manage their profile, catalog, and sales.
 
-To learn more about the Merchant entity, see [Marketplace Merchant feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{site.version}}/marketplace-merchant-feature-walkthrough.html).
+To learn more about the `Merchant` entity, see [Marketplace Merchant feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{site.version}}/marketplace-merchant-feature-walkthrough.html).
 
 #### Product
 `Product` is a B2C/B2B e-commerce domain object. `Product` represents some goods or services that a customer can buy in a shop. In the Marketplace, a `Product` can be owned by a Marketplace operator or can be created by a merchant.

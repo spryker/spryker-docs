@@ -28,7 +28,7 @@ We use our [Architecture Sniffer Tool](https://github.com/spryker/architecture-s
 
 ## Running the Tool
 
-The sniffer can find a lot of violations and will report them:
+The sniffer can find a lot of violations and report them:
 
 ```php
 $ vendor/bin/console code:sniff:architecture

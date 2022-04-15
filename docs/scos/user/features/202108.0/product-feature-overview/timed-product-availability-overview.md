@@ -1,6 +1,6 @@
 ---
 title: Timed Product Availability overview
-description: Timed product availability, or product TTL (Time to Live) allows you to define when your products are available online and when they are not.
+description: Timed product availability, or product TTL (Time to Live) lets you define when your products are available online and when they are not.
 last_updated: Jul 9, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/timed-product-availability-overview
@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/timed-product-availability-overview
 ---
 
-Timed product availability, or product TTL (Time to Live) allows you to define when your products are available online and when they are not. To get the main idea of the TTL, go to the general feature overview for more detailed information on how it works as well as familiarize yourself with its usage scenarios.
+Timed product availability, or product TTL (Time to Live) lets you define when your products are available online and when they are not. To get the main idea of the TTL, go to the general feature overview for more detailed information about how it works as well as familiarize yourself with its usage scenarios.
 
 The Timed Product Availability feature is implemented through the `isActive` field by introducing two more fields for product concretes in the Back Office—**Valid from** and **Valid to**. A product can have exactly one "life"—one (or no) start, one (or no) end. If the **Valid from** date has not come yet, or if **Valid to** has been reached, the value of isActive field is set to `false` and the product is invisible for customers. This being said, the product validity settings overrule manual (de)activation of products.
 
@@ -31,7 +31,7 @@ Time set for the product validity **Valid from** and **Valid to** fields is accu
 
 ## Use cases
 
-The table below shows possible usage scenarios with the TTL feature and resulting system behavior.
+The following table shows possible usage scenarios with the TTL feature and resulting system behavior.
 
 | VALIDITY DATES SETTINGS | RESULT |
 | --- | --- |

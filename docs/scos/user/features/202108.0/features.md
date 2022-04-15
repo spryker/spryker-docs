@@ -16,7 +16,7 @@ The feature guides describe features in details, highlight their functional abil
 * Product owners
 * Anyone looking to learn more about the Spryker features or add new functionality to a Spryker-based project
 
-The *Features* section is divided into capabilities. Each capability contains a capability description and conceptual documentation of all the features a capability includes.
+The **Features** section is divided into capabilities. Each capability contains a capability description and conceptual documentation of all the features a capability includes.
 
 In the feature documentation, you will find the following information:
 
@@ -26,7 +26,7 @@ In the feature documentation, you will find the following information:
 
 {% info_block infoBox "Reference documentation" %}
 
-The documentation in the *Features* section provides reference information that should not be used as guidelines. If you want to learn how to use or install a feature, you can find all the guides related to a feature on its summary page, like [Content items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html).
+The documentation in the **Features** section provides reference information that should not be used as guidelines. If you want to learn how to use or install a feature, you can find all the guides related to a feature on its summary page, like [Content items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html).
 
 Or, you can go directly to the following guides:
 

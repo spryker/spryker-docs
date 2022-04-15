@@ -14,7 +14,7 @@ This articles provides a short overview of the GUI (graphical user interface) mo
 GUI modules have the main purpose of providing logic for the functioning of the Merchant Portal pages and components for merchant management. The Core GUI modules can be identified by the suffix `MerchantPortalGui` (`DashboardMerchantPortalGui`, `ProductOfferMerchantPortalGui`).
 
 Typical GUI modules include:
-- - Controllers for displaying Merchant Portal pages and corresponding logic (forms, data mappers).
+- Controllers for displaying Merchant Portal pages and corresponding logic (forms, data mappers).
 - GUI tables and corresponding logic for configuration, and data provisioning.
 - Twig templates.
 - Frontend components.
@@ -41,6 +41,6 @@ Merchant Portal GUI modules can be mapped to a feature in two different ways, de
 
 {% info_block infoBox "Example" %}
 
-([Marketplace Inventory Management feature](https://github.com/spryker-feature/marketplace-inventory-management): AvailabilityMerchantPortalGui module.
+([Marketplace Inventory Management feature](https://github.com/spryker-feature/marketplace-inventory-management): the `AvailabilityMerchantPortalGui` module.
 
 {% endinfo_block %}

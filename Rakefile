@@ -37,7 +37,8 @@ commonOptions = {
     /help.github.com\/[\.\w\-\/\?]+/, 
     /guides.github.com\/[\.\w\-\/\?]+/,
     /docs.github.com\/[\.\w\-\/\?]+/,
-    /shopify.github.io\/[\.\w\-\/\?]+/
+    /shopify.github.io\/[\.\w\-\/\?]+/,
+    /blackfire.io\/[\.\w\-\/\?]+/ 
   ],
   :file_ignore => [],
   :typhoeus => {

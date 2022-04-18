@@ -14,8 +14,8 @@ Follow the steps below to install the Backend API feature core.
 
 To start feature integration, integrate the required features and Glue APIs:
 
-| NAME          | VERSION           | INTEGRATION GUIDE                                                                                                                     |
-|---------------| ----------------- |---------------------------------------------------------------------------------------------------------------------------------------|
+| NAME    | VERSION    | INTEGRATION GUIDE            |
+|---------------| ----------------- |------------------------|
 | Spryker Core  | {{page.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)  |
 
 ### 1) Install the required modules using Composer
@@ -169,9 +169,7 @@ class ApiConfig extends SprykerApiConfig
         ];
     }
 }
-
 ```
-
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -213,8 +211,8 @@ Ensure the following transfers have been created:
 ### 4) Set up behavior
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                            | SPECIFICATION                                                                                                                | PREREQUISITES | NAMESPACE                                                   |
-|---------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------|
+| PLUGIN   | SPECIFICATION          | PREREQUISITES | NAMESPACE      |
+|--------------------|------------------------|---------------|-------------------------|
 | ApiRouterPlugin                                   | Provides `Router` which handles backend API calls.                                                                           |               | Spryker\Zed\Api\Communication\Plugin\Router                 |
 | MonitoringRequestTransactionEventDispatcherPlugin | Adds subscriber to listen for controller events.                                                                             |               | Spryker\Zed\Monitoring\Communication\Plugin\EventDispatcher |
 | RouterListenerEventDispatcherPlugin               | Adds a `RouteListener` to the `EventDispatcher`.                                                                             |               | Spryker\Zed\Router\Communication\Plugin\EventDispatcher     |
@@ -246,7 +244,6 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
         ];
     }
 }
-
 ```
 
 **src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php**
@@ -279,7 +276,6 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
         ];
     }
 }
-
 ```
 
 **src/Pyz/Zed/Api/ApiDependencyProvider.php**
@@ -306,7 +302,6 @@ class ApiDependencyProvider extends SprykerApiDependencyProvider
         ];
     }
 }
-
 ```
 
 Create a new entry point for Backend API Application:
@@ -337,6 +332,7 @@ $bootstrap
 ```
 
 #### 5) Configure web server
+
 Create Nginx VHOST configuration:
 
 **/etc/nginx/sites-enabled/DE_development_glue**

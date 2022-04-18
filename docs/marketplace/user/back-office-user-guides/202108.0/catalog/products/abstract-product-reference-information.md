@@ -62,7 +62,7 @@ No values are available for selection when you create a product bundle. When you
 | Image Set Name | Name of your image set. | Yes | Yes |
 | Small | Link of the image that is going to be used in the product catalogs. | Yes | Yes |
 | Large | Link to the image that is going to be used on the product details page. | Yes | Yes |
-| Sort Order | If you add several images to an active image set, specify the order in which they are to be shown in the front end and back end using the *Sort Order* fields. The order of the images is defined by order of entered numbers where the image set with the sort order "0" is the first to be shown. | Yes | Yes |
+| Sort Order | If you add several images to an active image set, specify the order in which they are to be shown in the frontend and backend using the *Sort Order* fields. The order of the images is defined by order of entered numbers where the image set with the sort order "0" is the first to be shown. | Yes | Yes |
 
 ## Scheduled Prices tab
 
@@ -77,6 +77,6 @@ On this page, you can view all the information entered while creating or editing
 
 {% info_block infoBox "Info" %}
 
-For the [Marketplace](/docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-concept.html) projects, you can check what merchant owns the product on this page.
+For the [Marketplace](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-concept.html) projects, you can check what merchant owns the product on this page.
 
 {% endinfo_block %}

@@ -42,7 +42,7 @@ use Spryker\Zed\Wishlist\WishlistDependencyProvider as SprykerWishlistDependency
 class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistItemExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistItemExpanderPluginInterface>
      */
     protected function getWishlistItemExpanderPlugins(): array
     {
@@ -66,7 +66,7 @@ use Spryker\Glue\WishlistsRestApi\WishlistsRestApiDependencyProvider as SprykerW
 class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependencyProvider
 {
     /**
-     * @return \Spryker\Glue\WishlistsRestApiExtension\Dependency\Plugin\RestWishlistItemsAttributesMapperPluginInterface[]
+     * @return array<\Spryker\Glue\WishlistsRestApiExtension\Dependency\Plugin\RestWishlistItemsAttributesMapperPluginInterface>
      */
     protected function getRestWishlistItemsAttributesMapperPlugins(): array
     {
@@ -79,6 +79,6 @@ class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependen
 
 {% info_block warningBox "Verification" %}
 
-Make sure that `PriceProductWishlistItemExpanderPlugin` and `ProductPriceRestWishlistItemsAttributesMapperPlugin` are set up by sending the request `GET http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get the price product collection within the `attributes` in the response.
+Make sure that `PriceProductWishlistItemExpanderPlugin` and `ProductPriceRestWishlistItemsAttributesMapperPlugin` are set up by sending the request `GET https://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get the price product collection within the `attributes` in the response.
 
 {% endinfo_block %}

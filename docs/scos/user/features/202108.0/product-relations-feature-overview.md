@@ -16,7 +16,7 @@ redirect_from:
   - /docs/en/product-relations
 ---
 
-The _Product Relations_ feature enables product catalog managers to create logical relations between products based on their actual properties. Product relations are displayed on the Storefront to achieve multiple purposes.
+The _Product Relations_ feature lets product catalog managers create logical relations between products based on their actual properties. Product relations are displayed on the Storefront to achieve multiple purposes.
 
 For example, you can:
 * Promote products in cart.
@@ -25,7 +25,7 @@ For example, you can:
 
 Product relations are established only between abstract products. An abstract product can have multiple product relations.
 
-See [Creating a Product Relation](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/creating-product-relations.html) to learn how a Back Office user can create a product relation.
+To learn how a Back Office user can create a product relation, see [Creating a Product Relation](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/create-product-relations.html).
 
 A developer can import<!-- link to new import page --> product relations.
 
@@ -37,11 +37,11 @@ With Related products, [related products](#product-types-in-product-relations) a
 
 ![Related products](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/202006.0/related-products.gif)
 
-With Upselling, when the product owing the relation is added to cart, related products are displayed on the *Cart* page.
+With Upselling, when the product owing the relation is added to cart, related products are displayed on the **Cart** page.
 
 ![Upselling](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/202006.0/Upselling.gif)
 
-A product catalog manager can select a product relation type when [creating](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/creating-product-relations.html) or [editing](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/managing-product-relations.html#editing-product-relations) a product relation in the Back Office.
+A product catalog manager can select a product relation type when [creating](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/create-product-relations.html) or [editing](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/edit-product-relations.html) a product relation in the Back Office.
 
 ## Product types in product relations
 
@@ -92,7 +92,7 @@ With the rule groups, you can build multiple levels of rule hierarchy. When a pr
 
 ![Rule group hierarchy](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/202006.0/rule-group-hierarchy.png)
 
-When a product is evaluated on a level that has a rule and a rule group, the rule group is treated as a single rule. The diagram below shows how a product is evaluated against the rules on the previous screenshot.
+When a product is evaluated on a level that has a rule and a rule group, the rule group is treated as a single rule. The following diagram shows how a product is evaluated against the rules on the previous screenshot.
 
 <details><summary markdown='span'>Product evaluation diagram</summary>
 
@@ -108,7 +108,7 @@ If selected, the product catalog is automatically evaluated against the defined 
 
 If you do not select this option, the product catalog is evaluated against the defined rules only at the stage of product relation creation.
 
-A product catalog manager can select this option when [creating](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/creating-product-relations.html) a product relation.
+A product catalog manager can select this option when [creating](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/create-product-relations.html) a product relation.
 
 A developer can do the following:
 
@@ -128,7 +128,7 @@ Stores are defined when creating or editing a product relation in the Back Offic
 |BACK OFFICE USER GUIDES|
 |---|
 | [Get a general idea of the Product Relations feature](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html)  |   |
-| [Create product relations](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/creating-product-relations.html)  |   |
+| [Create product relations](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/create-product-relations.html)  |   |
 | [Manage product relations](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/managing-product-relations.html)  |   |
 
 {% info_block warningBox "Developer guides" %}

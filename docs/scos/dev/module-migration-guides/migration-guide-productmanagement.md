@@ -36,9 +36,9 @@ related:
     link: docs/scos/dev/module-migration-guides/migration-guide-price.html
 ---
 
-## Upgrading from Version 0.18.* to Version 0.19.0
+## Upgrading from version 0.18.* to version 0.19.0
 
-In this new version of the **ProductManagement** module, we have added support of decimal stock. You can find more details about the changes on the [ProductManagement module](https://github.com/spryker/product-management/releases) release page.
+In this new version of the `ProductManagement` module, we have added support of decimal stock. You can find more details about the changes on the [ProductManagement module](https://github.com/spryker/product-management/releases) release page.
 
 {% info_block errorBox %}
 
@@ -46,13 +46,16 @@ This release is a part of the **Decimal Stock** concept migration. When you upgr
 
 {% endinfo_block %}
 
-**To upgrade to the new version of the module, do the following:**
+*Estimated migration time: 5 min*
 
-1. Upgrade the **ProductManagement** module to the new version:
+To upgrade to the new version of the module, do the following:
+
+1. Upgrade the `ProductManagement` module to the new version:
 
 ```bash
 composer require spryker/product-management: "^0.19.0" --update-with-dependencies
 ```
+
 2. Update the database entity schema for each store in the system:
 
 ```bash
@@ -60,6 +63,7 @@ APPLICATION_STORE=DE console propel:schema:copy
 APPLICATION_STORE=US console propel:schema:copy
 ...
 ```
+
 3. Run the database migration:
 
 ```bash
@@ -67,9 +71,7 @@ console propel:install
 console transfer:generate
 ```
 
-*Estimated migration time: 5 min*
-
-## Upgrading from Version 0.* to Version 0.18.0
+## Upgrading from version 0.* to version 0.18.0
 
 {% info_block infoBox %}
 
@@ -77,7 +79,7 @@ In order to dismantle the Horizontal Barrier and enable partial module updates o
 
 {% endinfo_block %}
 
-## Upgrading from Version 0.9.* to Version 0.10.*
+## Upgrading from version 0.9.* to version 0.10.*
 
 The new version provides support to manage the `abstract product-store` relations per store.
 
@@ -115,9 +117,9 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 
 You should be able now to see the `abstract product-store` relations in the Product Information Management (PIM) Back Office. However, you will not able to manage / change anything yet. If you would like to enable the entire multi-store product behavior, see [Multi-Store Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/multi-store-products-feature-integration.html).
 
-## Upgrading from Version 0.8.* to Version 0.9.*
+## Upgrading from version 0.8.* to version 0.9.*
 
-With version 0.9, we have added multi-currency support. First of all, make sure you migrated the **Price** module. The way the price form is rendered has been changed: now it displays price matrix with a currency, a store and a price type as input fields. Check `\Spryker\Zed\ProductManagement\Communication\Form\ProductFormAdd::addPriceForm` - it uses a new form from the **Money** module. Also, check `\Spryker\Zed\ProductManagement\Communication\Form\ProductConcreteFormEdit::addPriceForm` - if you have overwritten or changed those classes, you will have to modify them accordingly. The new `ProductManagement/Presentation/_partials/product_price_collection.twig` form is rendered now as well. There is also a new dependency in `PriceFormTypePlugin`. Here is a snippet on how to include it:
+With version 0.9, we have added multi-currency support. First of all, make sure you migrated the `Price` module. The way the price form is rendered has been changed: now it displays price matrix with a currency, a store and a price type as input fields. Check `\Spryker\Zed\ProductManagement\Communication\Form\ProductFormAdd::addPriceForm` - it uses a new form from the **Money** module. Also, check `\Spryker\Zed\ProductManagement\Communication\Form\ProductConcreteFormEdit::addPriceForm` - if you have overwritten or changed those classes, you will have to modify them accordingly. The new `ProductManagement/Presentation/_partials/product_price_collection.twig` form is rendered now as well. There is also a new dependency in `PriceFormTypePlugin`. Here is a snippet on how to include it:
 
 ```php
 namespace Pyz\Zed\ProductManagement;
@@ -140,15 +142,16 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 
 That being done, you are able to use the currency-aware form type.
 
-## Upgrading from Version 0.7.* to Version 0.8.*
+## Upgrading from version 0.7.* to version 0.8.*
 
 If you’re migrating the `ProductManagement` module from version 0.7.x to version 0.8.x, follow the steps described below.
 The `ProductManagement` module persistence layer was moved into the new `ProductAttribute` module.
 
-## ORM Entities Changed
+### ORM entities changed
+
 The classes under `Orm\Zed\ProductManagement\` were moved to the `Orm\Zed\ProductAttribute\` namespace.
 
-| **Old** | **New** |
+| OLD | NEW |
 | --- | --- |
 | `Spryker\Zed\ProductManagement\Persistence\Propel\AbstractSpyProductAttribute` | `Spryker\Zed\ProductAttribute\Persistence\Propel\AbstractSpyProductAttribute` |
 | `Spryker\Zed\ProductManagement\Persistence\Propel\AbstractSpyProductAttributeQuery` | `Spryker\Zed\ProductAttribute\Persistence\Propel\AbstractSpyProductAttributeQuery` |
@@ -157,21 +160,18 @@ The classes under `Orm\Zed\ProductManagement\` were moved to the `Orm\Zed\Produc
 | `Spryker\Zed\ProductManagement\Persistence\Propel\AbstractSpyProductManagementAttributeValueTranslation` | `Spryker\Zed\ProductAttribute\Persistence\Propel\AbstractSpyProductManagementAttributeValueTranslation` |
 | `Spryker\Zed\ProductManagement\Persistence\Propel\AbstractSpyProductManagementAttributeValueTranslationQuery` | `Spryker\Zed\ProductAttribute\Persistence\Propel\AbstractSpyProductManagementAttributeValueTranslationQuery` |
 
-## Importer Updates
+### Importer updates
+
 Project's importer was also updated to take advantage of the new `ProductAttribute` module.
 
 * `src/Pyz/Zed/Importer/Business/Factory/AbstractFactory.php`
 Removed `getProductManagementFacade()` and replaced it with the `getProductAttributeFacade()` method.
-
 * `src/Pyz/Zed/Importer/Business/Factory/ImporterFactory.php`
 Removed `getProductManagementFacade()` and replaced it with the `getProductAttributeFacade()` method.
-
 * `src/Pyz/Zed/Importer/Business/Importer/ProductManagement/ProductManagementAttributeImporter.php`
 Removed `$productManagementFacade` and replaced it with the `$productAttributeFacade` property.
-
 * `src/Pyz/Zed/Importer/ImporterDependencyProvider.php`
-Removed `FACADE_PRODUCT_MANAGEMENT` and replaced it with the `FACADE_PRODUCT_ATTRIBUTE` constant.
-        Removed `addProductManagementFacade()` and replaced it with the `addProductAttributeFacade()` method.
+Removed `FACADE_PRODUCT_MANAGEMENT` and replaced it with the `FACADE_PRODUCT_ATTRIBUTE` constant. Removed `addProductManagementFacade()` and replaced it with the `addProductAttributeFacade()` method.
 
 {% info_block errorBox %}
 

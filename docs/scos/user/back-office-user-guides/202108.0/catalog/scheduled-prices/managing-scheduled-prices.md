@@ -25,7 +25,7 @@ Here, you can:
 
 ## Prerequisites:
 
-To start working with scheduled prices, go to **Catalog** > **Scheduled Prices**.
+To start working with scheduled prices, go to **Catalog&nbsp;<span aria-label="and then">></span> Scheduled Prices**.
 
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 

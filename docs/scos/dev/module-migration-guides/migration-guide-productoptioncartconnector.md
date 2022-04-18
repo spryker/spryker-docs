@@ -34,7 +34,7 @@ related:
     link: docs/scos/dev/module-migration-guides/migration-guide-productoption.html
 ---
 
-## Upgrading from Version 5.* to Version 7.0.0
+## Upgrading from version 5.* to version 7.0.0
 
 {% info_block infoBox %}
 
@@ -42,13 +42,16 @@ In order to dismantle the Horizontal Barrier and enable partial module updates o
 
 {% endinfo_block %}
 
-## Upgrading from Version 4.* to Version 5.*
+## Upgrading from version 4.* to version 5.*
 
 1. Update `spryker/product-option` to at least version 6.0.0. See [Migration Guide - Product Option](/docs/scos/dev/module-migration-guides/migration-guide-productoption.html).
 2. Install/Update `spryker/price` to at least version 5.0.0. You can find additional information to price module upgrade: here.
 3. Update `spryker/product-option-cart-connector` to version 5.0.0.
 4. Optionally add `ProductOptionValuePriceExistsCartPreCheckPlugin` to your `CartPreCheckPlugin` list to pre-check product option value price if it exists before switching currency.
-Example of plugin registration:
+
+
+**Example of plugin registration**
+
 ```php
 <?php
 namespace Pyz\Zed\Cart;
@@ -77,5 +80,3 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 
 5. `ProductOptionCartConnectorToProductOptionInterface` was renamed to `ProductOptionCartConnectorToProductOptionFacadeInterface`. If you have implemented this interface, amend your implementation to use the new name.
 6. Additional changes were made to `ProductOptionValueExpander` and to its factory method. Amend your code if you have customized or extended this class.
-
-<!-- Last review date: Nov 10, 2017 by Karoly Gerner -->

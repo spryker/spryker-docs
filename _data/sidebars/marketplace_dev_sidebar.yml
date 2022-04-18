@@ -12,8 +12,8 @@ entries:
           - title: Infrastructure requirements
             url: /docs/marketplace/dev/setup/infrastructure-requirements.html
 
-          - title: Installation
-            url: /docs/marketplace/dev/setup/installation.html
+          - title: Setup
+            url: /docs/marketplace/dev/setup/spryker-marketplace-setup.html
 
       - title: Marketplace architecture overview
         nested:
@@ -274,6 +274,11 @@ entries:
             include_versions:
             - "202108.0"
 
+          - title: Merchant Switcher + Customer Account Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-customer-account-management-feature-integration.html
+            include_versions:
+              - "202108.0"
+
           - title: Merchant Switcher + Wishlist feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-wishlist-feature-integration.html
             include_versions:
@@ -281,11 +286,6 @@ entries:
 
           - title: Marketplace Order Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html
-            include_versions:
-            - "202108.0"
-
-          - title: Marketplace Order Management + Customer Account Management feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-customer-account-management-feature-integration.html
             include_versions:
             - "202108.0"
 
@@ -750,8 +750,11 @@ entries:
             url: /docs/marketplace/dev/front-end/extending-the-project/
             nested:
 
-              - title: "Migration guide - Extending the project"
+              - title: "Migration guide: Extending the project"
                 url: /docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html
+
+              - title: "Migration guide - Upgrade to Angular v12"
+                url: /docs/marketplace/dev/front-end/extending-the-project/migration-guide-upgrade-to-angular-v12.html
 
           - title: "Table design"
             url: /docs/marketplace/dev/front-end/table-design/

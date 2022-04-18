@@ -12,22 +12,21 @@ redirect_from:
   - /docs/en/customer-access-feature-overview
 ---
 
-_Customer Access_ allows store administrators to define if a certain information is visible to logged out users.
+_Customer Access_ lets store administrators define whether a certain information is visible to logged out users.
 
-The feature allows you to give your customers the ability to hide content from customers that are not logged-in to their shop. You can restrict access to prices, products, product availability, carts, and shopping lists.
+The feature lets you give your customers the ability to hide content from customers that are not logged-in to their shop. You can restrict access to prices, products, product availability, carts, and shopping lists.
 
 ![Content Restrictions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Hide+Content+from+Logged+out+Users/Hide+Content+from+Logged+out+Users/Content+restrictions.png)
 
 
-A Back Office user can manage customer access in **Customer** > **Customer Access**. They can hide the following content types:
+A Back Office user can manage customer access in **Customer&nbsp;<span aria-label="and then">></span> Customer Access**. They can hide the following content types:
 
 ![content-types.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Hide+Content+from+Logged+out+Users/Hide+Content+from+Logged+out+Users+Overview/content-types.png)
 
 * price: a customer does not see the price if they are not logged in:
 
-
 Settings in Admin UI (on the left)
-Shop application (on the right)
+<br>Shop application (on the right)
 
 ![price_not_shown_for_non_logged_in_user.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Hide+Content+from+Logged+out+Users/Hide+Content+from+Logged+out+Users+Overview/price_not_shown_for_non_logged_in_user.png)
 

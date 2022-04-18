@@ -45,7 +45,7 @@ The contact person is the only contact of the merchant with the Marketplace admi
 
 #### Company
 
-This section contains general information on the company the merchant has.
+This section contains general information about the company the merchant has.
 
 | ATTRIBUTE | DESCRIPTION | REQUIRED? |
 |-|-|-|
@@ -116,7 +116,7 @@ This section describes attributes you see when editing the merchant's online pro
 
 | ATTRIBUTE | DESCRIPTION | REQUIRED? |
 |-|-|-|
-| Your Store is online | By selecting this option, you can define whether the merchant store (with the profile, merchant products and offers) should be displayed on the Marketplace Storefront. |   |
+| Your Store is online | By selecting this option, you can define whether the merchant store (with the profile, marketplace products and offers) should be displayed on the Marketplace Storefront. |   |
 
 ### What’s Next?
 

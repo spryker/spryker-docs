@@ -8,7 +8,7 @@ The Marketplace Wishlists API allows creating list and deleting [wishlists](/doc
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Marketplace Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-wishlist-feature-integration.html)
+For detailed information about the modules that provide the API functionality and related installation instructions, see [Marketplace Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-wishlist-feature-integration.html)
 
 ## Create a wishlist
 
@@ -24,7 +24,9 @@ To create a wishlist, send the request:
 | ---------- | -------- | -------- | -------------- |
 | Authorization | string       | &check;         | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
-Sample request: `POST https://glue.mysprykershop.com/wishlists`
+Request sample: create a wishlist
+
+`POST https://glue.mysprykershop.com/wishlists`
 
 ```json
 {
@@ -43,7 +45,7 @@ Sample request: `POST https://glue.mysprykershop.com/wishlists`
 
 ### Response
 
-**Response sample**
+Response sample: create a wishlist
 
 ```json
 {
@@ -99,7 +101,7 @@ To retrieve all wishlists of a customer, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample with no wishlists</summary>
+<summary markdown='span'>Response sample: no wishlists found</summary>
 
 ```json
 {
@@ -109,11 +111,10 @@ To retrieve all wishlists of a customer, send the request:
 		}
 	}
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with existing wishlists</summary>
+<summary markdown='span'>Response sample: retrieve all the wishlists</summary>
 
 
 ```json
@@ -141,7 +142,7 @@ To retrieve all wishlists of a customer, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with wishlist items</summary>
+<summary markdown='span'>Response sample: retrieve all the wishlists with wishlist items</summary>
 
 ```json
 {
@@ -190,7 +191,7 @@ To retrieve all wishlists of a customer, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with wishlist items and respective concrete products</summary>
+<summary markdown='span'>Response sample: retrieve all the wishlists with wishlist items and respective concrete products</summary>
 
 ```json
 {
@@ -289,7 +290,7 @@ To retrieve all wishlists of a customer, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with wishlist items, respective concrete products, and their product labels</summary>
+<summary markdown='span'>Response sample: retrieve all the wishlists with wishlist items, respective concrete products, and their product labels</summary>
 
 ```json
 {
@@ -406,7 +407,6 @@ To retrieve all wishlists of a customer, send the request:
     ]
 }
 ```
-
 </details>
 
 | ATTRIBUTE     | TYPE    | DESCRIPTION  |
@@ -446,7 +446,7 @@ To retrieve a specific wishlist, send the request:
 
 | REQUEST SAMPLE   | USAGE   |
 | ------------- | ------------ |
-| GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1 | Retrieve the wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. |
+| GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1 | Retrieve a wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. |
 | GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1?include=wishlist-items | Retrieve the wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. Include wishlist items in the response. |
 | GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1?include=wishlist-items,concrete-products | Retrieve the wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. Include wishlist items and respective concrete products in the response. |
 | GET https://glue.mysprykershop.com/wishlists/246591f8-4f30-55ce-8b17-8482859b4ac1?include=wishlist-items,concrete-products,product-labels | Retrieve the wishlist with the `246591f8-4f30-55ce-8b17-8482859b4ac1` identifier. Include wishlist items, respective concrete products and their product labels in the response. |
@@ -462,7 +462,7 @@ To retrieve a specific wishlist, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieving a wishlist</summary>
+<summary markdown='span'>Response sample: retrieve a wishlist</summary>
 
 ```json
 {
@@ -484,7 +484,7 @@ To retrieve a specific wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with wishlist items</summary>
+<summary markdown='span'>Response sample: retrieve a wishlist with wishlist items included</summary>
 
 ```json
 {
@@ -528,7 +528,7 @@ To retrieve a specific wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with wishlist items and respective concrete products</summary>
+<summary markdown='span'>Response sample: retrieve a wishlist with wishlist items and respective concrete products included</summary>
 
 ```json
 {
@@ -620,7 +620,7 @@ To retrieve a specific wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with wishlist items, respective concrete products, and their product labels</summary>
+<summary markdown='span'>Response sample: retrieve a wishlist with wishlist items, respective concrete products, and product labels included</summary>
 
 ```json
 {
@@ -735,7 +735,7 @@ To retrieve a specific wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with wishlist items, concrete products and their availabilities</summary>
+<summary markdown='span'>Response sample: retrieve a wishlist with wishlist items, concrete products and their availabilities</summary>
 
 ```json
 {
@@ -860,7 +860,7 @@ To retrieve a specific wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with wishlist items, concrete products and their prices</summary>
+<summary markdown='span'>Response sample: retrieve a wishlist with wishlist items, concrete products and their prices</summary>
 
 ```json
 {
@@ -996,7 +996,7 @@ To retrieve a specific wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with wishlist items, concrete products, and product offers</summary>
+<summary markdown='span'>Response sample: retrieve a wishlist with wishlist items, concrete products, and product offers</summary>
 
 ```json
 {
@@ -1334,7 +1334,7 @@ To retrieve a specific wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with wishlist items, concrete products, product offers, and product offer availabilities</summary>
+<summary markdown='span'>Response sample: retrieve a wishlist with wishlist items, concrete products, product offers, and product offer availabilities</summary>
 
 ```json
 {
@@ -1696,7 +1696,7 @@ To retrieve a specific wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with wishlist items, concrete products, product offers, and product offer prices</summary>
+<summary markdown='span'>Response sample: retrieve a wishlist with wishlist items, concrete products, product offers, and product offer prices</summary>
 
 ```json
 {
@@ -2080,7 +2080,7 @@ To retrieve a specific wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with wishlist items and merchant information included</summary>
+<summary markdown='span'>Response sample: retrieve a wishlist with wishlist items and merchant information included</summary>
 
 ```json
 {
@@ -2127,7 +2127,7 @@ To retrieve a specific wishlist, send the request:
                 "deliveryTime": "1-3 days",
                 "faxNumber": "+49 30 234567800",
                 "legalInformation": {
-                    "terms": "<p><span style=\"font-weight: bold;\">General Terms</span><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><span style=\"font-weight: bold;\">Using your Information</span><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to allow us to deliver the type of content and product offerings in which you are most interested.<br><br><span style=\"font-weight: bold;\">Protecting visitor information</span><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>",
+                    "terms": "<p><span style=\"font-weight: bold;\">General Terms</span><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><span style=\"font-weight: bold;\">Using your Information</span><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to let us deliver the type of content and product offerings in which you are most interested.<br><br><span style=\"font-weight: bold;\">Protecting visitor information</span><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>",
                     "cancellationPolicy": "You have the right to withdraw from this contract within 14 days without giving any reason. The withdrawal period will expire after 14 days from the day on which you acquire, or a third party other than the carrier and indicated by you acquires, physical possession of the last good. You may use the attached model withdrawal form, but it is not obligatory. To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.",
                     "imprint": "<p>Spryker Systems GmbH<br><br>Julie-Wolfthorn-Straße 1<br>10115 Berlin<br>DE<br><br>Phone: +49 (30) 2084983 50<br>Email: info@spryker.com<br><br>Represented by<br>Managing Directors: Alexander Graf, Boris Lokschin<br>Register Court: Hamburg<br>Register Number: HRB 134310<br></p>",
                     "dataPrivacy": "Spryker Systems GmbH values the privacy of your personal data."
@@ -2201,7 +2201,6 @@ To retrieve a specific wishlist, send the request:
     ]
 }
 ```
-
 </details>
 
 | ATTRIBUTE  | TYPE  | DESCRIPTION     |
@@ -2239,7 +2238,9 @@ To edit a wishlist, send the request:
 | ------ | ------ | ------ | -------------- |
 | Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
-Sample request: `PATCH https://glue.mysprykershop.com/wishlists`
+Request sample: edit a wishlist
+
+`PATCH https://glue.mysprykershop.com/wishlists`
 
 The following sample changes the name of a wishlist.
 
@@ -2257,8 +2258,8 @@ The following sample changes the name of a wishlist.
 
 | ATTRIBUTE | TYPE   | REQUIRED | DESCRIPTION    |
 | ------ | ---- | ------- | ----------------------- |
-| id        | string | &check;        | Unique identifier of the wishlist to update the name of. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
-| name      | string | &check;        | New name of the wishlist.                                    |
+| id        | string | &check;   | Unique identifier of the wishlist to update the name of. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
+| name      | string | &check;   | New name of the wishlist.   |
 
 ### Response
 
@@ -2289,7 +2290,9 @@ To delete a wishlist, send the request:
 | ---------- | -------- | ----- | ----------------- |
 | Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
-Request sample: `DELETE https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a`
+Request sample: 
+
+`DELETE https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a`
 
 ### Response
 

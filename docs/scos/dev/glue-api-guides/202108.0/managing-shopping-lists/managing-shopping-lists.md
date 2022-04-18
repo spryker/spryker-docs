@@ -43,7 +43,9 @@ To create a shopping list for a registered user, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
-Request sample: `POST http://glue.mysprykershop.com/shopping-lists`
+Request sample: create a shopping list
+
+`POST http://glue.mysprykershop.com/shopping-lists`
 
 ```json
 {
@@ -63,7 +65,7 @@ Request sample: `POST http://glue.mysprykershop.com/shopping-lists`
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: create a shopping list</summary>
 
 ```json
 {
@@ -108,7 +110,7 @@ To retrieve shopping lists, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
-| QUERY PARAMETER | DESCRIPTION | EXAMPLARY VALUES |
+| QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | shopping-list-items, concrete-products|
 
@@ -126,7 +128,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample with no shopping lists</summary>
+<summary markdown='span'>Response sample: no shopping lists are retrieved</summary>
 
 ```json
   {
@@ -136,11 +138,11 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
     }
 }  
 ```
-
 </details>    
 
+
 <details>
-<summary markdown='span'>Response sample with own and shared shopping lists</summary>
+<summary markdown='span'>Response sample: Retrieve own and shared shopping lists</summary>
 
 ```json
 {
@@ -193,11 +195,10 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
     }
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with shopping list items and concrete products</summary>
+<summary markdown='span'>Response sample: retrieve shopping lists with the details on its items and concrete products</summary>
 
 ```json
 {
@@ -334,7 +335,6 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
     ]
 }
 ```
-<br>
 </details>
 
 For response attributes, see [Create a shopping list](#create-a-shopping-list).
@@ -381,7 +381,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve a shopping list</summary>
 
 ```json
 {
@@ -405,7 +405,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 </details>   
 
 <details>
-<summary markdown='span'>Response sample with shopping list items</summary>
+<summary markdown='span'>Response sample: retrieve a shopping list with the details on the shopping list items</summary>
 
 ```json
 {
@@ -455,11 +455,10 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
     ]
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with shopping list items and concrete products</summary>
+<summary markdown='span'>Response sample: retrieve a shopping list with the details on the shopping list items and concrete products</summary>
 
 ```json
 {
@@ -596,7 +595,6 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
     ]
 }
 ```
-
 </details>    
 
 For response attributes, see [Create a shopping list](#create-a-shopping-list).
@@ -623,7 +621,7 @@ To edit a shopping list, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
-| QUERY PARAMETER | DESCRIPTION | EXAMPLARY VALUES |
+| QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | shopping-list-items, concrete-products|
 
@@ -656,7 +654,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 
 ### Response
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: edit a shopping list</summary>
 
 ```json
 {
@@ -676,11 +674,10 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
     }
 }
 ```
- <br>
 </details>
 
 <details>
-<summary markdown='span'>Response sample with shopping list items and information on concrete products</summary>
+<summary markdown='span'>Response sample: edit a shopping list with the details on its items and concrete products</summary>
 
 ```json
 "data": {
@@ -813,7 +810,6 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
     ]
 }
 ```
-
 </details>
 
 For response attributes, see [Create a shopping list](#create-a-shopping-list).
@@ -836,11 +832,13 @@ To delete a shopping list, send the request:
 
 ### Request
 
-Request sample: `DELETE http://glue.mysprykershop.com/shopping-lists/sdb17f85-953f-565a-a4ce-e5cb02405f83` — Delete the shopping list with the id `sdb17f85-953f-565a-a4ce-e5cb02405f83`.
+Request sample: delete a shopping list
+
+`DELETE http://glue.mysprykershop.com/shopping-lists/sdb17f85-953f-565a-a4ce-e5cb02405f83` 
 
 ### Response
 
-If the shopping list is deleted successfully, the endpoint retruns the `204 No Content` status code.
+If the shopping list is deleted successfully, the endpoint returns the `204 No Content` status code.
 
 ## Possible errors
 
@@ -848,7 +846,7 @@ If the shopping list is deleted successfully, the endpoint retruns the `204 No C
 | --- | --- |
 | 001 | Access token is incorrect. |
 | 002 | Access token is missing. |
-| 400 | Provided access token is not an [access token of a сompany user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html). |
+| 400 | Provided access token is not an [access token of a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html). |
 | 901 | Shop list name or item name is not specified or too long.<br>**OR** <br> Item quantity is not specified or too large.|
 | 1501 | Shopping list ID or item is not specified. |
 | 1503 | Specified shopping list is not found. |

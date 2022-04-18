@@ -4,18 +4,18 @@ description: The Marketplace Product Options feature lets merchants and Marketpl
 template: concept-topic-template
 ---
 
-With the *Marketplace Product Options* feature, merchants and Marketplace administrators can create *product options* for merchant products.
+With the *Marketplace Product Options* feature, merchants and Marketplace administrators can create *product options* for marketplace products.
 
 Product options are product additions that a customer can select on the product detail page before adding the product to the cart. For example, the product options can be gift wrappings for products, insurance, or warranty. Product options do not have stock but an SKU linked to product abstracts. Thus, you cannot purchase them without buying a corresponding product.
 
-Each product option is defined by:
+Each product option is defined by the following:
 
-* product option group name
-* tax set assigned on the product option group
-* option value
-* translation
+* Product option group name
+* Tax set assigned on the product option group
+* Option value
+* Translation
 
-*Product option group* holds all available options or *option values* that buyers select. For example, you can have the "Warranty" product option group and create "1-year warranty" and "2-year warranty" values for it.
+A *product option group* holds all available options or *option values* that buyers select. For example, you can have the *Warranty* product option group and create *1-year warranty* and *2-year warranty* values for it.
 
 {% info_block infoBox "Info" %}
 
@@ -33,9 +33,10 @@ Product option groups created by merchants can have the following statuses:
 
 * *Waiting for approval*: The product option group was created by a merchant and waits for the Marketplace administrator's approval. This is the default status assigned to all Marketplace product options that do not have a different approval status set.
 * *Approved*: The product option group was approved by the Marketplace administrator. Merchants can use it for their products and offers, so if it is [active](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html#activating-a-product-option), the product option is displayed on the Storefront.
-* *Denied*: The product option was rejected by the Marketplace administrator, and Merchants cannot use it for their products and offers. If they still use it, it will not be applied and will not be displayed on the Storefront.
+* *Denied*: The Marketplace administrator rejected the product option, and merchants cannot use it for their products and offers. If they still use it, it will not be applied and will not be displayed on the Storefront.
 
-Currently, you can only import the Marketplace options approval statuses. See [File details: merchant product option group](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-option-group.csv.html) for details.
+
+Currently, you can only import the Marketplace options approval statuses. For details, see [File details: merchant product option group](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-option-group.csv.html).
 
 ## Marketplace product options in the Back Office
 In the Back Office, a Marketplace administrator can:
@@ -53,7 +54,7 @@ The merchant product option groups are displayed on the Storefront only when:
 * The product option group status is [active](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html#activating-a-product-option).
 * The product option group approval status is [approved](#marketplace-product-options-approval-statuses).
 
-After a merchant created a product option group and assigned it to their products, the product option group is displayed for all the offers of the products, including offers of other merchants. For example, in the following image, the Video King merchant's offer is selected, but the Spryker merchant's product option group is still displayed:
+After a merchant creates a product option group and assigns it to their products, the product option group is displayed for all the offers of the products, including offers of other merchants. For example, in the following image, the Video King merchant's offer is selected, but the Spryker merchant's product option group is still displayed:
 
 ![Marketplace product options on the Storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+product+options/merchant-prodcut-options-on-the-storefront.png)
 

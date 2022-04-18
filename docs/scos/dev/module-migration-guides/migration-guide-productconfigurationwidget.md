@@ -8,9 +8,9 @@ template: module-migration-guide-template
 
 *Estimated migration time: 5 minutes*
 
-To upgrade the ProductConfigurationWidget module from version 0.1.* to version 0.2.*, do the following:
+To upgrade the `ProductConfigurationWidget` module from version 0.1.* to version 0.2.*, do the following:
 
-1. Update the ProductConfigurationWidget module to version 0.2.0:
+1. Update the `ProductConfigurationWidget` module to version 0.2.0:
 
 ```bash
 composer require spryker-shop/product-configuration-widget:"^0.2.0" --update-with-dependencies

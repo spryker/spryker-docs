@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/approval-process-feature-overview
 ---
 
-The *Approval Process* feature enables B2B customers to have multiple people contributing to the ordering process but requires the manager's approval to proceed with the checkout.
+The *Approval Process* feature lets B2B customers have multiple people contributing to the ordering process but requires the manager's approval to proceed with the checkout.
 
 Permissions related to the approval process are configured based on the restrictions applied to a [company role](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html). Generally, the approval process is initiated when the cart total exceeds a certain amount set in the *Buy up to grand total* permissions. For example, an employee in a company may have to send their order to the manager for approval if the total order cost is above a certain amount. Only after the manager has received the request and approved the order, the employee can proceed to the checkout.
 
@@ -40,6 +40,7 @@ In the B2B industry, approvals are referred to shopping carts and items in the c
 For the approval process, you can set specific permissions for the Approver and Buyer roles:
 
 * The *Buy up to grand total* permission that restricts the cart checkout when the cart grand total amount reaches the limit specified in this permission.
+
 {% info_block warningBox "Note" %}
 
 It is mandatory for the Buyer role to set this permission, if you want to use the Approval Process feature in your project.
@@ -48,9 +49,9 @@ It is mandatory for the Buyer role to set this permission, if you want to use th
 
 To configure this permission, use [this step-by-step instruction](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html#approval-process-on-the-storefront).
 
-* The *Send cart for approval* permission that allows a buyer to send a cart for approval to their manager. Without this permission, a buyer cannot see the Request for Approval widget.
+* The *Send cart for approval* permission which lets a buyer send a cart for approval to their manager. Without this permission, a buyer cannot see the Request for Approval widget.
 
-* *Approve up to grand total* permission that allows an approver to approve the carts that do not hit the cart grand total limit specified there. See [Configuring the Approve up to grand total permission](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html#approval-process-on-the-storefront) to learn how to set up the permission in the Storefront.
+* The *Approve up to grand total* permission which lets an approver approve the carts that do not hit the cart grand total limit specified there. To learn how to set up the permission in the Storefront, see [Configuring the Approve up to grand total permission](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html#approval-process-on-the-storefront).
 
 Every approval request, in turn, can have three statuses:
 
@@ -59,12 +60,12 @@ Every approval request, in turn, can have three statuses:
 * Declined—the cart has been rejected.
 
 ## Approval Process workflow
-Approval Process as such introduces steps that company employees should follow to order, request for approval, and pay for products.
+Approval Process as such introduces steps that company employees must follow to order, request for approval, and pay for products.
 
 Here’s how approvals fit into the buying process:
 
 **1. Submitting the request for approval**
-The Approval Process workflow is flexible and starts when a buyer submits the request for approval through the company user account in the shop application. The approval request can be submitted after any step of the checkout depending on the project configuration. The buyer requests approval from the appropriate approver through the Approver widget. Check [Shop Guide - Submit a request for approval](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html#approval-process-on-the-storefront) for details on how to submit a request for approval. After the buyer has requested the approval, the request gets the **Waiting** status and cannot be edited.
+The Approval Process workflow is flexible and starts when a buyer submits the request for approval through the company user account in the shop application. The approval request can be submitted after any step of the checkout depending on the project configuration. The buyer requests approval from the appropriate approver through the Approver widget. Check [Shop Guide - Submit a request for approval](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html#approval-process-on-the-storefront) for details about how to submit a request for approval. After the buyer has requested the approval, the request gets the **Waiting** status and cannot be edited.
 
 {% info_block warningBox "Note" %}
 

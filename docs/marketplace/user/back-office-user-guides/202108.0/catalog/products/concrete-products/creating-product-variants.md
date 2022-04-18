@@ -42,9 +42,9 @@ To create a product variant:
     3. **B2B only:** In **Merchant Price Dimension**, select the merchant relationship to define a special price per merchant relation.
     4. Select **Quantity** for the product and then select **Never out of stock** if you want the product to never go out of stock.
 5. Optional: Click **Next** to go to **Image** to add images for the product and define the image order.
-6. Optional: Click **Next** of select the **Assign bundled products** tab to create a bundles product. For more information, see [Creating and managing product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html).
+6. Optional: Click **Next** of select the **Assign bundled products** tab to create a bundles product. For more information, see [Creating and managing product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html).
 7. Click **Save**.
-The page is refreshed and you can see two additional tabs: **Discontinue** and **Product Alternatives**. See  [Discontinuing products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/discontinuing-products.html) and [Adding product alternatives](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/adding-product-alternatives.html) to know more.
+The page is refreshed and you can see two additional tabs: *Discontinue* and* Product Alternatives*. See  [Discontinuing products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/discontinuing-products.html) and [Adding product alternatives](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/adding-product-alternatives.html) to know more.
 
 {% info_block errorBox "Important" %}
 
@@ -91,7 +91,7 @@ This section describes the attributes you enter and select when  creating a prod
 |Image Set Name|The name of your image set.|**Yes**|**Yes**|
 |Small|The link of the image that is going to be used in the product catalogs.|**Yes**|**Yes**|
 |Large|The link to the image that is going to be used on the product details page.|**Yes**|**Yes**|
-|Sort Order|If you add several images to an active image set, specify the order in which they are to be shown in the front end and back end using Sort Order fields. The order of images is defined by the order of entered numbers where the image set with sort order "0" is the first to be shown.|**Yes**|**Yes**|
+|Sort Order|If you add several images to an active image set, specify the order in which they are to be shown in the frontend and backend using Sort Order fields. The order of images is defined by the order of entered numbers where the image set with sort order "0" is the first to be shown.|**Yes**|**Yes**|
 
 #### Discontinue tab
 

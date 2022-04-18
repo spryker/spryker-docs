@@ -37,7 +37,7 @@ To retrieve the Banner content item data, send a GET request to the following en
 
 /content-banners/{content_item_key}
 
-Sample request: _GET http://mysprykershop.com/content-banners/br-3_
+Request sample: _GET http://mysprykershop.com/content-banners/br-3_
 where **content-banners** is the content item type and **br-3** is the key of the Banner content item you want to retrieve.
 
 {% info_block infoBox %}

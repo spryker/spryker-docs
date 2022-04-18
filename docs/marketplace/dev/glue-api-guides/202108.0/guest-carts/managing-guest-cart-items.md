@@ -8,7 +8,7 @@ This endpoint lets you manage guest cart items.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see:
+For detailed information about the modules that provide the API functionality and related installation instructions, see:
 * [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html)
 * [Glue API: Measurement Units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html)
 * [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
@@ -59,7 +59,7 @@ To add items to a guest cart, send the request:
 
 
 <details>
-<summary markdown='span'>Request sample</summary>
+<summary markdown='span'>Request sample: add items to a guest cart</summary>
 
 `POST https://glue.mysprykershop.com/guest-cart-items`
 
@@ -77,7 +77,7 @@ To add items to a guest cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Request sample: adding a promotional item with the cart-rules relationship</summary>
+<summary markdown='span'>Request sample: add a promotional item with the cart-rules relationship to a guest cart</summary>
 
 {% info_block infoBox "Cart rules" %}
 
@@ -102,7 +102,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 </details>
 
 <details>
-<summary markdown='span'>Request sample: adding a gift card</summary>
+<summary markdown='span'>Request sample: add a gift card to a guest cart</summary>
 
 `POST https://glue.mysprykershop.com/guest-cart-items`
 
@@ -120,7 +120,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 </details>
 
 <details>
-<summary markdown='span'>Request sample with product measurement units and sales units</summary>
+<summary markdown='span'>Request sample: add items with product measurement units and sales units to a guest cart</summary>
 
 `POST https://glue.mysprykershop.com/guest-cart-items?include=sales-units`
 
@@ -142,7 +142,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 </details>
 
 <details>
-<summary markdown='span'>Request sample with cart rules</summary>
+<summary markdown='span'>Request sample: add items with cart rules to a guest cart </summary>
 
 `POST https://glue.mysprykershop.com/guest-cart-items?include=cart-rules`
 
@@ -157,11 +157,10 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Request sample with vouchers</summary>
+<summary markdown='span'>Request sample: add items with vouchers to a guest cart</summary>
 
 `POST https://glue.mysprykershop.com/guest-cart-items?include=cart-rules`
 
@@ -176,12 +175,11 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
-
 </details>
 
 
 <details>
-<summary markdown='span'>Request sample with concrete products and product options</summary>
+<summary markdown='span'>Request sample: add items with product options to a guest cart</summary>
 
 `POST https://glue.mysprykershop.com/guest-cart-items?include=guest-cart-items,concrete-products,product-options`
 
@@ -208,7 +206,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 
 
 <details>
-<summary markdown='span'>Request sample with product offers</summary>
+<summary markdown='span'>Request sample: add product offers to a guest cart</summary>
 
 `POST https://glue.mysprykershop.com/guest-cart-items?include=items`
 
@@ -227,7 +225,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 </details>
 
 <details>
-<summary markdown='span'>Request sample: adding a merchant product</summary>
+<summary markdown='span'>Request sample: add a marketplace product to a guest cart</summary>
 
 `POST https://glue.mysprykershop,com/guest-cart-items`
 
@@ -243,11 +241,10 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Request sample with guest cart items and merchants</summary>
+<summary markdown='span'>Request sample: add items to a guest cart with information on merchants included</summary>
 
 `POST https://glue.mysprykershop,com/guest-cart-items?include=guest-cart-items,merchants`
 
@@ -263,7 +260,6 @@ To add the promotional product to cart, make sure that the cart fulfills the car
     }
 }
 ```
-
 </details>
 
 
@@ -294,7 +290,7 @@ It is the responsibility of the API Client to track whether the selected items a
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: add items to a guest cart</summary>
 
 ```json
 {
@@ -370,7 +366,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-<summary markdown='span'>Response sample: adding a promotional item without the cart-rules relationship</summary>
+<summary markdown='span'>Response sample: add a promotional item without the cart-rules relationship to a guest cart</summary>
 
 ```json
 {
@@ -415,7 +411,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 <details>
-<summary markdown='span'>Response sample: adding a promotional item with the cart-rules relationship</summary>
+<summary markdown='span'>Response sample: add a promotional item with the cart-rules relationship to a guest cart</summary>
 
 ```json
 {
@@ -693,7 +689,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 <details>
-<summary markdown='span'>Response sample: adding a gift cart</summary>
+<summary markdown='span'>Response sample: add a gift card to a guest cart</summary>
 
 ```json
 {
@@ -812,7 +808,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 <details>
-<summary markdown='span'>Response sample with concrete products and product options</summary>
+<summary markdown='span'>Response sample: add items with product options to a guest cart</summary>
 
 ```json
 {
@@ -937,7 +933,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "reviewCount": 0,
                 "productAbstractSku": "181",
                 "name": "Samsung Galaxy Tab S2 SM-T813",
-                "description": "Enjoy greater flexibility  ...than ever before with the Galaxy Tab S2. Remarkably slim and ultra-lightweight, use this device to take your e-books, photos, videos and work-related files with you wherever you need to go. The Galaxy Tab S2’s 4:3 ratio display is optimised for magazine reading and web use. Switch to Reading Mode to adjust screen brightness and change wallpaper - create an ideal eBook reading environment designed to reduce the strain on your eyes. Get greater security with convenient and accurate fingerprint functionality. Activate fingerprint lock by pressing the home button. Use fingerprint verification to restrict / allow access to your web browser, screen lock mode and your Samsung account.",
+                "description": "Enjoy greater flexibility  ...than ever before with the Galaxy Tab S2. Remarkably slim and ultra-lightweight, use this device to take your e-books, photos, videos and work-related files with you wherever you need to go. The Galaxy Tab S2’s 4:3 ratio display is optimised for magazine reading and web use. Switch to Reading Mode to adjust screen brightness and change wallpaper—create an ideal eBook reading environment designed to reduce the strain on your eyes. Get greater security with convenient and accurate fingerprint functionality. Activate fingerprint lock by pressing the home button. Use fingerprint verification to restrict / allow access to your web browser, screen lock mode and your Samsung account.",
                 "attributes": {
                     "internal_memory": "3 GB",
                     "processor_model": "APQ8076",
@@ -1060,11 +1056,10 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product measurement units and sales units</summary>
+<summary markdown='span'>Response sample: add items with product measurement units and sales units to a guest cart</summary>
 
 ```json
 {
@@ -1182,7 +1177,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-<summary markdown='span'>Response sample with cart rules</summary>
+<summary markdown='span'>Response sample: add items with cart rules to a guest cart</summary>
 
 ```json
 {
@@ -1280,11 +1275,10 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with vouchers</summary>
+<summary markdown='span'>Response sample: add items with vouchers to a guest cart</summary>
 
 ```json
 {
@@ -1423,11 +1417,10 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product offers</summary>
+<summary markdown='span'>Response sample: add product offers to a guest cart</summary>
 
 ```json
 {
@@ -1514,7 +1507,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 <details>
-<summary markdown='span'>Response sample: adding a merchant product</summary>
+<summary markdown='span'>Response sample: add a marketplace product to a guest cart</summary>
 
 ```json
 {
@@ -1538,13 +1531,13 @@ It is the responsibility of the API Client to track whether the selected items a
             "discounts": []
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/guest-carts/54ac21a6-c08a-5d09-a2f0-9f9ef8f634cd"
+            "self": "https://glue.mysprykershop.comm/guest-carts/54ac21a6-c08a-5d09-a2f0-9f9ef8f634cd"
         }
     }
 }
 
 <details>
-<summary markdown='span'>Response sample with guest cart items and merchants</summary>
+<summary markdown='span'>Response sample: add items to a guest cart with information on merchants included</summary>
 
 ```json
 {
@@ -1593,7 +1586,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "longitude": "52.534105",
                 "faxNumber": "+49 30 234567800",
                 "legalInformation": {
-                    "terms": "<p><span style=\"font-weight: bold;\">General Terms</span><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><span style=\"font-weight: bold;\">Using your Information</span><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to allow us to deliver the type of content and product offerings in which you are most interested.<br><br><span style=\"font-weight: bold;\">Protecting visitor information</span><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>",
+                    "terms": "<p><span style=\"font-weight: bold;\">General Terms</span><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><span style=\"font-weight: bold;\">Using your Information</span><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to let us deliver the type of content and product offerings in which you are most interested.<br><br><span style=\"font-weight: bold;\">Protecting visitor information</span><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>",
                     "cancellationPolicy": "You have the right to withdraw from this contract within 14 days without giving any reason. The withdrawal period will expire after 14 days from the day on which you acquire, or a third party other than the carrier and indicated by you acquires, physical possession of the last good. You may use the attached model withdrawal form, but it is not obligatory. To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.",
                     "imprint": "<p>Spryker Systems GmbH<br><br>Julie-Wolfthorn-Straße 1<br>10115 Berlin<br>DE<br><br>Phone: +49 (30) 2084983 50<br>Email: info@spryker.com<br><br>Represented by<br>Managing Directors: Alexander Graf, Boris Lokschin<br>Register Court: Hamburg<br>Register Number: HRB 134310<br></p>",
                     "dataPrivacy": "Spryker Systems GmbH values the privacy of your personal data."
@@ -1783,7 +1776,7 @@ To change item quantity, send the request:
 {% endinfo_block %}
 
 <details>
-<summary markdown='span'>Sample request</summary>
+<summary markdown='span'>Request sample: change item quantity in a guest cart</summary>
 
 `PATCH https://glue.mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`    
 
@@ -1810,7 +1803,7 @@ For more request body examples, see [Add items to a guest cart](#add-items-to-a-
 
 ### Response
 
-If the update is successful, the endpoint returns `RestCartsResponse` with the updated quantity. See [Add items to a guest cart](#add-items-to-a-guest-cart) for examples.
+If the update is successful, the endpoint returns `RestCartsResponse` with the updated quantity. For examples, see [Add items to a guest cart](#add-items-to-a-guest-cart).
 
 ## Remove an item from a guest cart
 
@@ -1832,7 +1825,9 @@ To remove an item from a guest cart, send the request:
 | --- | --- | --- | --- |
 | X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | Hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart). |
 
-Request sample: `DELETE https://glue.mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`
+Request sample: remove an item from a guest cart
+
+`DELETE https://glue.mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`
 
 ### Response
 

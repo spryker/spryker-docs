@@ -15,6 +15,7 @@ redirect_from:
 This endpoint allows authenticating as a company user.
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html).
 
 ## Authenticate as a company user
@@ -31,9 +32,10 @@ To authenticate as a company user, send the request:
 
 ### Request
 
-Request sample:
+Request sample: authenticate as a company user
 
 `POST https://glue.mysprykershop.com/company-user-access-tokens`
+
 ```json
 {
     "data": {
@@ -54,7 +56,7 @@ Request sample:
 
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: authenticate as a company user</summary>
 
 ```json
 {
@@ -73,7 +75,6 @@ Request sample:
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

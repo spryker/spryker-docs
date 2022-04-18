@@ -42,7 +42,7 @@ use Spryker\Zed\Wishlist\WishlistDependencyProvider as SprykerWishlistDependency
 class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistItemExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistItemExpanderPluginInterface>
      */
     protected function getWishlistItemExpanderPlugins(): array
     {
@@ -65,7 +65,7 @@ use Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer\P
 class PriceProductOfferDependencyProvider extends SprykerPriceProductOfferDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\PriceProductOfferExtension\Dependency\Plugin\PriceProductOfferExtractorPluginInterface[]
+     * @return array<\Spryker\Zed\PriceProductOfferExtension\Dependency\Plugin\PriceProductOfferExtractorPluginInterface>
      */
     protected function getPriceProductOfferExtractorPlugins(): array
     {
@@ -78,8 +78,8 @@ class PriceProductOfferDependencyProvider extends SprykerPriceProductOfferDepend
 
 {% info_block warningBox "Verification" %}
 
-Make sure that `PriceProductOfferWishlistItemExpanderPlugin` is set up by sending the request `GET http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get the price product collection within the `attributes` in the response.
+Make sure that `PriceProductOfferWishlistItemExpanderPlugin` is set up by sending the request `GET https://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get the price product collection within the `attributes` in the response.
 
-Make sure that `PriceProductOfferVolumeExtractorPlugin` is set up by sending the request `GET http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items,selected-product-offers,product-offer-prices`. You should get the product offer volume prices within the `prices` in the response.
+Make sure that `PriceProductOfferVolumeExtractorPlugin` is set up by sending the request `GET https://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items,selected-product-offers,product-offer-prices`. You should get the product offer volume prices within the `prices` in the response.
 
 {% endinfo_block %}

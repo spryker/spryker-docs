@@ -14,11 +14,11 @@ Check out an example usage of the Table Feature Search in the `@spryker/table` c
 
 Component configuration:
 
-- `enabled` - enables the feature via config.  
-- `placeholder` - the search placeholder text.
+- `enabled`—enables the feature via config.  
+- `placeholder`—the search placeholder text.
 
 ```html
-<spy-table 
+<spy-table
     [config]="{
         dataSource: { ... },
         columns: [ ... ],

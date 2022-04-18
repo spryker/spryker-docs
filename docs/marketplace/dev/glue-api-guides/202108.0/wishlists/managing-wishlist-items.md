@@ -8,7 +8,7 @@ This endpoint lets you add and remove items from wishlists.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Marketplace Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-wishlist-feature-integration.html). 
+For detailed information about the modules that provide the API functionality and related installation instructions, see [Marketplace Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-wishlist-feature-integration.html). 
 
 ## Add an item to a wishlist
 
@@ -26,9 +26,9 @@ To add an item to a wishlist, send the request:
 ### Request
 
 <details>
-<summary markdown='span'>Request sample: adding a concrete product to wishlist</summary>
+<summary markdown='span'>Request sample: add an item to a wishlist</summary>
 
- `POST https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items`
+`POST https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items`
 
 ```json
 {
@@ -43,9 +43,9 @@ To add an item to a wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Request sample: adding a product offer to wishlist</summary>
+<summary markdown='span'>Request sample: add a product offer to a wishlist</summary>
 
- `POST https://glue.mysprykershop.com/wishlists/57c96d55-8a37-5998-927f-7bb663b69094/wishlist-items`
+`POST https://glue.mysprykershop.com/wishlists/57c96d55-8a37-5998-927f-7bb663b69094/wishlist-items`
 
 ```json
 {
@@ -61,9 +61,9 @@ To add an item to a wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Request sample: adding a merchant product to wishlist</summary>
+<summary markdown='span'>Request sample: add a marketplace product to a wishlist</summary>
 
- `POST https://glue.mysprykershop.com/wishlists/57c96d55-8a37-5998-927f-7bb663b69094/wishlist-items`
+`POST https://glue.mysprykershop.com/wishlists/57c96d55-8a37-5998-927f-7bb663b69094/wishlist-items`
 
 ```json
 {
@@ -79,13 +79,13 @@ To add an item to a wishlist, send the request:
 
 | ATTRIBUTE  | TYPE   | REQUIRED | DESCRIPTION   |
 | ------------ | ----- | ---| ---------------- |
-| sku  | String | &check; | SKU of a concrete product or a merchant concrete product to add. |
+| sku  | String | &check; | SKU of a concrete product or a merchant concrete product to add.|
 | productOfferReference | String | | Unique identifier of the product offer. You can get it by [retrieving the offers available for the concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-product-offers-of-concrete-products.html).|
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: adding a concrete product to wishlist</summary>
+<summary markdown='span'>Response sample: add an item to a wishlist</summary>
 
 ```json
 {
@@ -104,7 +104,7 @@ To add an item to a wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: adding a product offer to wishlist</summary>
+<summary markdown='span'>Response sample: add a product offer to a wishlist</summary>
 
 ```json
 {
@@ -163,7 +163,7 @@ To add an item to a wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample - adding a merchant product</summary>
+<summary markdown='span'>Response sample: add a marketplace product to a wishlist</summary>
 
 ```json
 {
@@ -198,11 +198,11 @@ To add an item to a wishlist, send the request:
 | merchantReference | String  | Unique identifier of the merchant.  |
 | id     | String  | Unique identifier of the product offer in the wishlist. It's based on the `sku` and `productOfferReference`. |
 | sku       | String  | SKU of the concrete product in the wishlist.     |
-| availability    | Object  | Contains information on the product's availability. |
+| availability    | Object  | Contains information about the product's availability. |
 | availability.isNeverOutOfStock | Boolean | Defines if the product is never out of stock. |
 | availability.availability  | Boolean | Defines if the product is available.  |
 | availability.quantity  | Integer | Aggregated stock of the item in all [warehouses](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html#warehouse-management).   |
-| prices  | Array   | Contains information on prices.    |
+| prices  | Array   | Contains information about prices.    |
 | prices.priceTypeName  | String  | Price type. |
 | prices.grossAmount  | Integer | Gross price in cents.  |
 | prices.netAmount | Integer | Net price in cents.   |
@@ -228,7 +228,9 @@ To delete wishlist item, send the request:
 
 ### Request
 
-Request sample: `DELETE https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items/064_18404924`
+Request sample:
+
+`DELETE https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items/064_18404924`
 
 ### Response
 

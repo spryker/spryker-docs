@@ -1,6 +1,6 @@
 ---
-title: File details- category_store.csv
-description: Learn the description of the category_store.csv file to configure assignments of categories in your Spkyer shop | Spryker
+title: File details - category_store.csv
+description: Learn the description of the category_store.csv file to configure assignments of categories in your Spryker shop | Spryker
 last_updated: Jul 1, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-category-storecsv
@@ -24,9 +24,9 @@ data:import category-store
 
 The file should have the following parameters:
 
-| PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
-|-|-|-|-|-|-|
-| category_key | &check; | String |   |   | Category key of the category. |
+| PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
+|-|-|-|-|-|
+| category_key | &check; | String |   | Category key of the category. |
 | included_store_names |   | String |   | To accept all stores, use the asterisk (*) symbol. | Holds store names to include separated by a comma. |
 | excluded_store_names |   | String |   | To remove all stores, use the asterisk (*) symbol. | Holds store names to exclude separated by a comma. |
 

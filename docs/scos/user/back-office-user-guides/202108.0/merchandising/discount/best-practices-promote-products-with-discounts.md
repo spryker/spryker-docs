@@ -2,7 +2,7 @@
 
 
 
-Let's say that today is January 19, 2017. Soon your shop is going to receive Asus laptops with a new Intel processor. You want to quickly sell the laptops with the old processor. You are going to give a 20% discount for the old laptops.
+Let's say that today is January 19, 2017. Soon your shop is going to receive Asus laptops with a new Intel processor. You want to quickly sell the laptops with the old processor. You are going to offer free standard delivery for all Intel-based Asus laptops.
 
 ## 1. Define general settings of the discount
 
@@ -10,9 +10,9 @@ Let's say that today is January 19, 2017. Soon your shop is going to receive Asu
 2. On the **Discount** page, click **Create new discount**.
 3. On the **Create Discount** page, for **STORE RELATION**, select **DE** and **AT**. The discount will be applicable in both shops.
 4. Select a **Cart rule**. The discount will be applied automatically once a customer adds an Intel-based Asus laptop to cart.
-6. For **NAME**, enter **20% discount for Intel-based Asus laptops**. This name will be displayed in cart when the discount is applied.
+6. For **NAME**, enter **Get more value with Asus laptops**. This name will be displayed in cart when the discount is applied.
 
-7. Optional: Enter a **DESCRIPTION**.
+7. For **DESCRIPTION**, enter `A 50% discount for mice when ordered with Intel-based Asus laptops.`
 
 8. Select the **EXCLUSIVE** checkmark.
     When this discount is applied to a cart, all the other discounts will be discarded.
@@ -27,22 +27,31 @@ Let's say that today is January 19, 2017. Soon your shop is going to receive Asu
 1. Click the **Discount calculation** tab.
 2. For **CALCULATOR TYPE**, select **Percentage**.
     The discount will be calculated as a percentage of the products' price.
-3. For **Percentage**, enter 20.
-    20% of the products' price will be discounted.
+3. For **Percentage**, enter `100`.
+    100% of the products' price will be discounted. In other words, it will be free.
 4. For **DISCOUNT APPLICATION TYPE**, select **QUERY STRING**.
-5. 
-    * **QUERY STRING**: Add a query using the query builder or by entering a plain query.
-    * **PROMOTIONAL PRODUCT**:
-        1. Enter **ABSTRACT PRODUCT SKU**.
-        2. Enter a **QUANTITY**.
-6. Click **Next**.
+5. For **APPLY TO**, select **shipment-method**.
+6. In the next new field that appeared, select **equal**.
+7. In the next field, select **Standard (DHL)**.
+    The discount will apply to the standard DHL delivery.
+8. Click **+ Add rule**.
+9. For the new rule that appears, repeat steps 5-6.
+10. For the value field, select **Standard (Hermes)**.
+
+The 100% discount will apply to the standard delivery of DHL and Hermes.
 
 ## 3. Define on what conditions the discount can be applied
 
 
 1. Click the **Conditions** tab.
-2. For **APPLY WHEN**, add a query using the query builder or by entering a plain query.
-3. For **THE DISCOUNT CAN BE APPLIED IF THE QUERY APPLIES FOR AT LEAST X ITEM(S).**, enter a number.
+2. For **APPLY WHEN**, for the attribute, select **attribute.brand**.
+3. For the rule value, enter `Asus`.
+    The discount will be applied if an Asus product is added to cart.
+4. Click **+ Add rule**.
+5. For the attribute of the rule that appears, select **attribute.processor_model**.
+6. For the rule value, enter `i3`
+    Since the current combination operator is **AND**, the discount will be applied if both rules are fulfilled: a cart contains an Asus product with an i3 Intel processor.
+7.     
 4. Click **Save**.
 
 This refreshes the page with a success message displayed.

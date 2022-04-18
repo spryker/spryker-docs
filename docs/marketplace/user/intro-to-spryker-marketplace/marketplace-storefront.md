@@ -28,20 +28,12 @@ Sorting of the **Sold by** section is configurable on a project level.
 
 The product price on top of the Product Details page is taken from the selected merchant's product or offer. When a customer selects a product or offer in the **Sold by** section, the page refreshes, showing the selected merchant's price.
 
-## Quick Order page
-
-On the **Quick Order** page, in the **Merchants** drop-down, customers can select particular merchant to buy products and offers. ALternatively, they can select the option **All merchant** If they select a specific merchant, in this case, the search by product name or SKU , a product or offer from only a selected merchant is found. If you change the merchant of the added product or offer, some fields may change—for example, Price. If you select all merchants, then the products and offers of all merchants are found.
-
 
 ## Cart page
 
 On the **Cart** page, a merchant reference is displayed for each product. The merchant names are clickable and lead to the merchant profile pages.
 
 ![Cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Marketplace+Storefront/cart-merchant-relations.png)
-
-A customer can find and add products and offers of a specific merchant in the **Quick Add to Cart** section. In the search field, they enter a product name or SKU and select the needed merchant product or product offer, and if there are several merchants selling this item, a drop-down with such merchants appears. Then, the customer selects a preferable merchant, enters quantity, and adds the item to cart. Note that the drop-down is not visible until the product is selected.
-
-<!-- add a GIF file that represents this process-->
 
 
 ## Checkout

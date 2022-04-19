@@ -16,7 +16,7 @@ This document describes the `category.csv` file to configure [categories](/docs/
 To import the file, run:
 
 ```bash
-data:import category
+data:import:category
 ```
 
 ## Import file parameters

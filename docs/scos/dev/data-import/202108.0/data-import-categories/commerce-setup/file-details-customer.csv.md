@@ -16,7 +16,7 @@ This document describes the `customer.csv` file to configure [Customer](/docs/sc
 To import the file, run:
 
 ```bash
-data:import customer
+data:import:customer
 ```
 
 ## Import file parameters

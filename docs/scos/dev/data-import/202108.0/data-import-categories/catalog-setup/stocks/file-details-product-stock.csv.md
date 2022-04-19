@@ -16,7 +16,7 @@ This document describes the `product_stock.csv` file to configure [Product Stock
 To import the file, run:
 
 ```bash
-data:import product-stock
+data:import:product-stock
 ```
 
 ## Import file parameters

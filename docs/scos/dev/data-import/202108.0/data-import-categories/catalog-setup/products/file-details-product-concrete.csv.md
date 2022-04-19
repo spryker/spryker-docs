@@ -16,7 +16,7 @@ This document describes the `product_concrete.csv` file to configure [Concrete P
 To import the file, run:
 
 ```bash
-data:import product-concrete
+data:import:product-concrete
 ```
 
 ## Import file parameters

@@ -16,7 +16,7 @@ This document describes the `category_template.csv` file to configure category t
 To import the file, run:
 
 ```bash
-data:import category-template
+data:import:category-template
 ```
 
 ## Import file parameters

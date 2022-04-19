@@ -18,7 +18,7 @@ The `shipment_method_store.csv` file contains the links between each shipment me
 To import the file, run:
 
 ```bash
-data:import shipment-method-store
+data:import:shipment-method-store
 ```
 
 ## Import file parameters

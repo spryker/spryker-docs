@@ -16,7 +16,7 @@ This document describes the `shipment_price.csv` file to configure the [Shipment
 To import the file, run:
 
 ```bash
-data:import shipment-price
+data:import:shipment-price
 ```
 
 ## Import file parameters

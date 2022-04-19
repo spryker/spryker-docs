@@ -16,7 +16,7 @@ This document describes the `sales_order_threshold.csv` file to configure [Sales
 To import the file, run:
 
 ```bash
-data:import sales-order-threshold
+data:import:sales-order-threshold
 ```
 
 ## Import file parameters

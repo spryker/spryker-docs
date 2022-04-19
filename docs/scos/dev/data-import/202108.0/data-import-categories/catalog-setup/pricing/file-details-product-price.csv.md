@@ -16,7 +16,7 @@ This article contains content of the `product_price.csv` file to configure [pric
 To import the file, run:
 
 ```bash
-data:import product-price
+data:import:product-price
 ```
 
 ## Import file parameters

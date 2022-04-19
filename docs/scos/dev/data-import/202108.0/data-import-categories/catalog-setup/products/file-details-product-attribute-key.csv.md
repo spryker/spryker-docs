@@ -16,7 +16,7 @@ This document describes the `product_attribute_key.csv` file to configure [Produ
 To import the file, run:
 
 ```bash
-data:import product-attribute-key
+data:import:product-attribute-key
 ```
 
 ## Import file parameters

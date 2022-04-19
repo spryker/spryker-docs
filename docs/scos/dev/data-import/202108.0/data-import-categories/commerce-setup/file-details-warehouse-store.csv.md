@@ -13,6 +13,13 @@ redirect_from:
 
 This document describes the `warehouse_store.csv` file to configure the relation between [Warehouse](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html) and Store in your Spryker Demo Shop.
 
+To import the file, run
+
+```bash
+data:import:stock-store
+```
+
+
 ## Import file parameters
 
 The file should have the following parameters:

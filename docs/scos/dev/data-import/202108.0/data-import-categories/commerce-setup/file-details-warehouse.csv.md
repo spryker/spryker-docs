@@ -13,6 +13,12 @@ redirect_from:
 
 This document describes the `warehouse.csv` file to configure the [Warehouse](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html) information in your Spryker Demo Shop.
 
+To import the file, run
+
+```bash
+data:import:stock
+```
+
 ## Import file parameters
 
 The file should have the following parameters:
@@ -21,7 +27,6 @@ The file should have the following parameters:
 | --- | --- | --- | --- | --- | --- |
 | name | Yes | String |  | Name of the warehouse. |
 | is_active | No | Boolean | <ul><li>True = 1</li><li>False = 0</li><li>If empty, it will be assumed 0 (false)</li></ul>| Status of the warehouse, specified in a boolean value: 1 (true) or 0 (false), where 1 indicates that the warehouse is available and 0 indicates that the warehouse is unavailable. By default, the warehouse is not active.|
-
 
 ## Import file dependencies
 

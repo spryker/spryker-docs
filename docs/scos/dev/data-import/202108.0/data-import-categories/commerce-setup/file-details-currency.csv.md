@@ -16,7 +16,7 @@ This document describes the `currency.csv` file to configure [Currency](/docs/sc
 To import the file, run:
 
 ```bash
-data:import currency
+data:import:currency
 ```
 
 ## Import file parameters
@@ -28,7 +28,6 @@ The file should have the following parameters:
 | iso_code | &check; | String |   | Currency ISO code. <br>For more details check [ISO 4217 CURRENCY CODES](https://www.iso.org/iso-4217-currency-codes.html).  |
 | currency_symbol | &check; | String |   | Currency symbol. |
 | name | &check; | String |   | Currency name. |
-
 
 ## Import file dependencies
 

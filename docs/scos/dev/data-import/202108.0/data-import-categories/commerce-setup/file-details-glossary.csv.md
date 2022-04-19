@@ -16,7 +16,7 @@ This document describes the `glossary.csv` file to configure [Customer](/docs/sc
 To import the file, run:
 
 ```bash
-data:import glossary
+data:import:glossary
 ```
 
 ## Import file parameters

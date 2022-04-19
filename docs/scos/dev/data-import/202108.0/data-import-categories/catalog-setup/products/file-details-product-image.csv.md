@@ -16,7 +16,7 @@ This document describes the `product_image.csv` file to configure [Product Image
 To import the file, run:
 
 ```bash
-data:import product-image
+data:import:product-image
 ```
 
 ## Import file parameters

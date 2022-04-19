@@ -17,7 +17,7 @@ This document describes the `category_store.csv` file to configure assignments o
 To import the file, run:
 
 ```bash
-data:import category-store
+data:import:category-store
 ```
 
 ## Import file parameters

@@ -16,7 +16,7 @@ This article contains content of the `product_price_schedule.csv` file to config
 To import the file, run:
 
 ```bash
-data:import product-price-schedule
+data:import:product-price-schedule
 ```
 
 ## Import file parameters

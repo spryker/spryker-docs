@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/file-details-warehouse-addresscsv
 ---
 
-This document describes the `warehourse_address.csv` file to configure [warehouse address information](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html#defining-a-warehouse-address) in your Spryker shop.
+This document describes the `warehouse_address.csv` file to configure [warehouse address information](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html#defining-a-warehouse-address) in your Spryker shop.
 
 To import the file, run
 

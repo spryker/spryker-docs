@@ -16,7 +16,7 @@ This document describes the `product_management_attribute.csv` file to configure
 To import the file, run:
 
 ```bash
-data:import product-management-attribute
+data:import:product-management-attribute
 ```
 
 ## Import file parameters

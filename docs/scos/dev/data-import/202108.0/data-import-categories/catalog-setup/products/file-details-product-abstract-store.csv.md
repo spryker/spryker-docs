@@ -16,7 +16,7 @@ This document describes the `product_abstract_store.csv` file to configure Produ
 To import the file, run:
 
 ```bash
-data:import product-abstract-store
+data:import:product-abstract-store
 ```
 
 ## Import file parameters

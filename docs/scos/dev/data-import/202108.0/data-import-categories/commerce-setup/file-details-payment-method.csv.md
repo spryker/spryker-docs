@@ -16,7 +16,7 @@ This document describes the `payment_method.csv` file to configure the [Payment 
 To import the file, run:
 
 ```bash
-data:import payment-method
+data:import:payment-method
 ```
 
 ## Import file parameters

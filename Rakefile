@@ -34,11 +34,12 @@ commonOptions = {
     /console.aws.amazon.com\/[\.\w\-\/\?]+/,
     /www.computop.com\/[\.\w\-\/\?]+/,
     /www.project-a.com\/[\.\w\-\/\?]+/,
-    /help.github.com\/[\.\w\-\/\?]+/, 
+    /help.github.com\/[\.\w\-\/\?]+/,
     /guides.github.com\/[\.\w\-\/\?]+/,
     /docs.github.com\/[\.\w\-\/\?]+/,
     /shopify.github.io\/[\.\w\-\/\?]+/,
-    /blackfire.io\/[\.\w\-\/\?]+/ 
+    / marketplace.visualstudio.com\/[\.\w\-\/\?]+/,    
+    /blackfire.io\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],
   :typhoeus => {

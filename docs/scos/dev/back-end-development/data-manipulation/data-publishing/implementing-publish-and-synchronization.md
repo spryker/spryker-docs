@@ -26,38 +26,46 @@ redirect_from:
 
 To implement *Publish and Synchronize* in your code, you need to perform the following steps:
 
-## 1. Add Publish Events
-*Publish* and *Synchronize* are event-driven. To start publishing data to the frontend, an event must be triggered. For this purpose, you need to add events for all changes you want to synchronize. For information on how to add events to your module, see [Adding Events](/docs/scos/dev/back-end-development/data-manipulation/event/adding-events.html).
+## 1. Define Publish Events
+*Publish* and *Synchronize* are event-driven workflows. To start publishing data to the frontend, an event must be triggered (publish event). After the publish process sucessfully prepared the data for the frontend, another event must be triggered (synchronization event) in order to deliver the prepared data to the frontend.
 
-For example, the following code creates an event once an entity is created, updated or deleted in the spy_product_abstract table (see `data/shop/development/current/vendor/spryker/product/src/Spryker/Zed/Product/Dependency/ProductEvents.php`):
+For this purpose, you need to define events for all changes you want to publish & synchronize. For information on how to add events to your module, see [Adding Events](/docs/scos/dev/back-end-development/data-manipulation/event/adding-events.html).
+
+For example, the following code defines events for publish for the cases when an entity is created, updated or deleted in the spy_glossary_translation table (see `data/shop/development/current/vendor/spryker/product/src/Spryker/Shared/GlossaryStorage/GlossaryStorageConfig.php`):
 
 ```php
-/**
- * Specification:
- * - Represents spy_product_abstract entity creation.
- *
- * @api
- */
-const ENTITY_SPY_PRODUCT_ABSTRACT_CREATE = "Entity.spy_product_abstract.create";
+    /**
+     * Specification:
+     * - Represents spy_glossary_translation entity creation event.
+     *
+     * @api
+     *
+     * @var string
+     */
+    public const ENTITY_SPY_GLOSSARY_TRANSLATION_CREATE = 'Entity.spy_glossary_translation.create';
 
-/**
- * Specification:
- * - Represents spy_product_abstract entity changes.
- *
- * @api
- */
-const ENTITY_SPY_PRODUCT_ABSTRACT_UPDATE = "Entity.spy_product_abstract.update";
+    /**
+     * Specification:
+     * - Represents spy_glossary_translation entity change event.
+     *
+     * @api
+     *
+     * @var string
+     */
+    public const ENTITY_SPY_GLOSSARY_TRANSLATION_UPDATE = 'Entity.spy_glossary_translation.update';
 
-/**
- * Specification:
- * - Represents spy_product_abstract entity deletion.
- *
- * @api
- */
-const ENTITY_SPY_PRODUCT_ABSTRACT_DELETE = "Entity.spy_product_abstract.delete";
+    /**
+     * Specification:
+     * - Represents spy_glossary_translation entity deletion event.
+     *
+     * @api
+     *
+     * @var string
+     */
+    public const ENTITY_SPY_GLOSSARY_TRANSLATION_DELETE = 'Entity.spy_glossary_translation.delete';
 ```
 
-The events will be posted to queue **event** in RabbitMq.
+The synchronization events are auto-generated and linked by the synchroniziation process, therefore no explicit event declaration is necessary for default behaviour.
 
 ## 2. Create Publication Queue
 Now, you need to create a publication queue. It will be used to synchronize published data to the frontend. It is recommended to have a separate queue for each *Redis* or *Elasticsearch* entity. For information on how to create a queue, see [Set Up a "Hello World" Queue](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html), section **Creating a Simple Queue**.
@@ -90,6 +98,9 @@ protected function getQueueOptions()
 ```
 
 {% endinfo_block %}
+
+The events will be posted to queue **event** in RabbitMq.
+
 
 ## 3. Create Publication Table
 The next step is to create a database table that will be used as a mirror for the corresponding *Redis* or *Elasticsearch* store. For details, see [Extending the Database Schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).

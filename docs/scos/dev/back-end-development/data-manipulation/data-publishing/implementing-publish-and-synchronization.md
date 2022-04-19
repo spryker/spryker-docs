@@ -26,8 +26,24 @@ redirect_from:
 
 To implement *Publish and Synchronize* in your code, you need to perform the following steps:
 
-## 1. Define Publish Events
-*Publish* and *Synchronize* are event-driven workflows. To start publishing data to the frontend, an event must be triggered (publish event). After the publish process sucessfully prepared the data for the frontend, another event must be triggered (synchronization event) in order to deliver the prepared data to the frontend.
+## 1. Create Publish Module
+
+It is recommended practice to create a separate module for publish & synchronize purpose. To create an empty module, execute the following commands:
+
+```
+console code:generate:module:zed MyModuleStorage
+console code:generate:module:client MyModuleStorage
+console code:generate:module:shared MyModuleStorage
+```
+
+{% info_block infoBox %}
+
+As a naming convention, names of modules that publish data to Redis end with Storage (e.g. *MyModule**Storage***, and names of modules that publish to Elasticsearch end with Search (e.g. *MyModule**Search***).
+
+{% endinfo_block %}
+
+## 2. Define Publish Events
+*Publish* and *Synchronize* are event-driven processes. To start publishing data to the frontend, an event must be triggered (publish event). After the publish process sucessfully prepared the data for the frontend, another event must be triggered (synchronization event) in order to deliver the prepared data to the frontend.
 
 For this purpose, you need to define events for all changes you want to publish & synchronize. For information on how to add events to your module, see [Adding Events](/docs/scos/dev/back-end-development/data-manipulation/event/adding-events.html).
 
@@ -67,7 +83,7 @@ For example, the following code defines events for publish for the cases when an
 
 The synchronization events are auto-generated and linked by the synchroniziation process, therefore no explicit event declaration is necessary for default behaviour.
 
-## 2. Create Publish & Synchronization Queues
+## 3. Create Publish & Synchronization Queues
 Now, you need to configure the publish queue where all publish events will be exchanged. The default publish queue is **event** - this can be adjusted in `data/shop/development/current/vendor/spryker/product/src/Spryker/Zed/Publisher/PublisherConfig::getPublishQueueName()`.
 
 Now, you need to define synchronization queues in order to deliver the prepared data to the frontend. It is recommended to have a separate synchronization queue for each *Redis* or *Elasticsearch* entity. For information on how to create a queue, see [Set Up a "Hello World" Queue](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html), section **Creating a Simple Queue**.
@@ -100,7 +116,7 @@ protected function getQueueOptions()
 {% endinfo_block %}
 
 
-## 3. Create Publish Table
+## 4. Create Publish Table
 The next step is to create a database table that will be used as a mirror for the corresponding *Redis* or *Elasticsearch* store. For details, see [Extending the Database Schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).
 
 {% info_block infoBox %}
@@ -160,55 +176,47 @@ Synchronization Behavior Parameters:
 * **queue_group** - specifies the queue group used for synchronization.
 * **params** - specifies search parameters (Elasticsearch only).
 
-## 4. Create Publish Module
-
-Now, you are ready to implement the **Publish** step. It is recommended practice to create a separate module for this purpose. To create an empty module, execute the following commands:
-
-```
-console code:generate:module:zed MyModuleStorage
-console code:generate:module:client MyModuleStorage
-console code:generate:module:shared MyModuleStorage
-```
-
-{% info_block infoBox %}
-
-As a naming convention, names of modules that publish data to Redis end with Storage (e.g. *MyModule**Storage***, and names of modules that publish to Elasticsearch end with Search (e.g. *MyModule**Search***).
-
-{% endinfo_block %}
-
 ## 5. Listen to Publish Events
-To implement the *Publish* step, first, you need is to consume the *Publish Events*. For this purpose, you need to create an event listener. A listener is a plugin class to your storage or search module. Sample implementation can be found in the *ProductStorage* Module.
+To implement the *Publish* prcoess, first you need to consume the *Publish Events*. For this purpose, you need to create an event listener. A listener is a plugin class to your storage or search module. Sample implementation can be found in the *GlossaryStorage* Module.
 
 ```php
-class ProductConcreteProductAbstractStorageListener extends AbstractProductConcreteStorageListener implements EventBulkHandlerInterface
+class GlossaryWritePublisherPlugin extends AbstractPlugin implements PublisherPluginInterface
 {
-    use DatabaseTransactionHandlerTrait;
-
     /**
+     * {@inheritDoc}
+     *
      * @api
      *
-     * @param \Spryker\Shared\Kernel\Transfer\TransferInterface[] $eventTransfers
+     * @param array<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
      * @param string $eventName
      *
      * @return void
      */
-    public function handleBulk(array $eventTransfers, $eventName)
+    public function handleBulk(array $eventEntityTransfers, $eventName)
     {
-        $this->preventTransaction();
-        $productAbstractIds = $this->getFactory()->getEventBehaviorFacade()->getEventTransferIds($eventTransfers);
-        if (empty($productAbstractIds)) {
-            return;
-        }
+        $this->getFacade()->writeCollectionByGlossaryTranslationEvents($eventEntityTransfers);
+    }
 
-        $productIds = $this->getQueryContainer()->queryProductIdsByProductAbstractIds($productAbstractIds)->find()->getData();
-        $this->publish($productIds);
+    /**
+     * {@inheritDoc}
+     *
+     * @api
+     *
+     * @return array<string>
+     */
+    public function getSubscribedEvents(): array
+    {
+        return [
+            GlossaryStorageConfig::ENTITY_SPY_GLOSSARY_TRANSLATION_CREATE,
+            GlossaryStorageConfig::ENTITY_SPY_GLOSSARY_TRANSLATION_UPDATE,
+        ];
     }
 }
 ```
 
-A listener class must implement the **EventBulkHandlerInterface** and contain only one method called handleBulk that will be called by the event queue. The method accepts two parameters:
+A listener class must implement the **PublisherPluginInterface** and contain the handleBulk method that will be called by the event queue for the given events in getSubscribedEvents method. The method accepts two parameters:
 
-* **$eventTransfers** - specifies an array of event transfers that represent the events to consume;
+* **$eventEntityTransfers** - specifies an array of event transfers that represent the events to consume;
 * **$eventName** - specifies an event name.
 
 {% info_block infoBox %}
@@ -220,29 +228,34 @@ For performance considerations, events are passed to the listener in bulk. Even 
 
 Implementing a listener is detailed in [Listening to Events](/docs/scos/dev/back-end-development/data-manipulation/event/listening-to-events.html). Follow the guide to create your listener classes.
 
-Also, you need to map listeners to the events. For this purpose, you need to add a plugin class that extends the **AbstractPlugin** and implements the **EventSubscriberInterface** interfaces. For example, this is how the *ProductStorage* module maps changes in abstract products to the respective listeners (see full code in data/shop/development/current/vendor/spryker/product-storage/src/Spryker/Zed/ProductStorage/Communication/Plugin/Event/Subscriber/ProductStorageEventSubscriber.php):
+Also, you need to setup listener classes in PublisherDependencyProvider::getPublisherPlugins() to enable them. The mapping of the listener class needs to state the listened queue in its key and the listener class in its value. (see full code in `data/shop/development/current/vendor/spryker/publisher/src/Spryker/Zed/Publisher/PublisherDependencyProvider::getPublisherPlugins()`):
 
 ```php
-class ProductStorageEventSubscriber extends AbstractPlugin implements EventSubscriberInterface
+class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 {
     /**
-     * @api
-     *
-     * @param \Spryker\Zed\Event\Dependency\EventCollectionInterface $eventCollection
-     *
-     * @return \Spryker\Zed\Event\Dependency\EventCollectionInterface
+     * @return array
      */
-    public function getSubscribedEvents(EventCollectionInterface $eventCollection)
+    protected function getPublisherPlugins(): array
     {
-        $eventCollection
-            //...
-            ->addListenerQueued(ProductEvents::ENTITY_SPY_PRODUCT_ABSTRACT_CREATE, new ProductAbstractStorageListener())
-            ->addListenerQueued(ProductEvents::ENTITY_SPY_PRODUCT_ABSTRACT_UPDATE, new ProductAbstractStorageListener())
-            ->addListenerQueued(ProductEvents::ENTITY_SPY_PRODUCT_ABSTRACT_UPDATE, new ProductConcreteProductAbstractStorageListener())
-            ->addListenerQueued(ProductEvents::ENTITY_SPY_PRODUCT_ABSTRACT_DELETE, new ProductAbstractStorageListener())
-            //...
-        return $eventCollection;
+        return array_merge(
+          parent::getPublisherPlugins(),
+          $this->getGlossaryStoragePlugins()
+        );
     }
+
+    /**
+     * @return array
+     */
+    protected function getGlossaryStoragePlugins(): array
+    {
+        return [
+            GlossaryStorageConfig::PUBLISH_TRANSLATION => [
+                new GlossaryTranslationWritePublisherPlugin(),
+            ],
+        ];
+    }
+
 }
 ```
 

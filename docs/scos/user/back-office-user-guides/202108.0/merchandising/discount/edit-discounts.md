@@ -19,7 +19,7 @@ This topic describes how to edit discounts in the Back Office.
 
 If you are new to discounts, you might want to start with [Best practices: Promote products with discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/best-practices-promote-products-with-discounts.html).
 
-Review the [reference information](#reference-information-edit-discounts) before you start, or look up the necessary information as you go through the process.
+Review the [reference information](#reference-information-edit-general-settings-of-a-discount) before you start, or look up the necessary information as you go through the process.
 
 
 To edit a discount, do the following:

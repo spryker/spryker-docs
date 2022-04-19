@@ -19,7 +19,7 @@ This topic describes how to edit discounts in the Back Office.
 
 If you are new to discounts, you might want to start with [Best practices: Promote products with discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/best-practices-promote-products-with-discounts.html).
 
-Review the [reference information](#reference-information-edit-discounts) before you start, or look up the necessary information as you go through the process.
+Review the [reference information](#reference-information-edit-general-settings-of-a-discount) before you start, or look up the necessary information as you go through the process.
 
 
 To edit a discount, do the following:
@@ -89,7 +89,7 @@ To download voucher codes, click **Export**.
 | DISCOUNT TYPE | Defines how the discount is applied: <ul><li>**Cart rule**: the discount is applied automatically to the products defined in [Edit discount calculation and the products to apply the discount to](#edit-discount-calculation-and-the-products-to-apply-the-discount-to).</li><li>**Voucher codes**: the discount applies to the products defined in [Edit discount calculation and the products to apply the discount to](#edit-discount-calculation-and-the-products-to-apply-the-discount-to) when a customer enters a voucher code generated in [Voucher discount: Generate voucher codes](#voucher-discount-generate-voucher-codes).</li></ul> |
 | NAME | Unique identifier of the discount that is displayed in the Back Office and on the Storefront. |
 | DESCRIPTION | The description is displayed only in the Back Office.  |
-| PRIORITY | Defines the order of discounts being applied. Accepts integers from `1` to `9999` with `1` being the highest priority. | 
+| PRIORITY | Defines the order of discounts being applied. Accepts integers from `1` to `9999` with `1` being the highest priority. |
 | NON-EXCLUSIVE | Defines that this discount can be applied to a cart together with other non-exclusive discounts. |
 | EXCLUSIVE | Defines that this discount, when applied to a cart, discards all the other non-exclusive discounts. If multiple exclusive discounts are applied to a cart, only the discount with the bigger discount value is applied.   |
 | VALID FROM and VALID TO | Inclusively, define the dates between which the discount can be applied.|

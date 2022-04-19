@@ -12,11 +12,11 @@ redirect_from:
   - /docs/en/customer-login-by-token-overview
 ---
 
-*Customer Login* by Token feature allows B2B users to log in to Spryker Shop using a token.
+*Customer Login* by Token feature lets B2B users log in to Spryker Shop using a token.
 
-Most modern e-commerce applications allow customers to log in by token or, in other words, they support token-based authentication. They do so for several good reasons:
+Most modern e-commerce applications let customers log in by token or, in other words, they support token-based authentication. They do so for several good reasons:
 
-* Tokens are stateless: They are stored on the client side and already contain all the information they need for authentication. No session information on the server is great for scaling your application.
+* Tokens are stateless: They are stored on the client side and already contain all the information they need for authentication. No session information about the server is great for scaling your application.
 
 * Tokens are secure: Tokens (not cookies) are sent on every request, which helps to prevent attacks. Since the session is not stored, there is no session-based information that could be manipulated.
 

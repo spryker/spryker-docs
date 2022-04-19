@@ -73,7 +73,6 @@ Adjust the schema definition so `EventTransfer` has the additional columns for A
 Run the following commands to generate transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

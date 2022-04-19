@@ -63,7 +63,6 @@ Adjust the schema definition so that entity changes can trigger events:
 Run the following commands:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

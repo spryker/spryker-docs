@@ -22,13 +22,13 @@ Sharing data between a parent component and one or more child components is a co
 
 ## Component inputs
 
-An Angular Component has Inputs - these are the properties or attributes that can be passed to them from the outside. In the web component form, inputs are translated to HTML attributes and read as strings, so extra parsing is usually required (we ship a set of decorators for most commonly used parsing types, such as `@ToJson`, `ToBoolean`).
+An Angular Component has Inputs—these are the properties or attributes that can be passed to them from the outside. In the web component form, inputs are translated to HTML attributes and read as strings, so extra parsing is usually required (we ship a set of decorators for most commonly used parsing types, such as `@ToJson`, `ToBoolean`).
 
 To define the input, you have to use `@Input` angular decorator, which marks a class field as an input property and provides configuration metadata. The input property is bound to a DOM property in the template. During change detection, Angular automatically updates the data property with the DOM property's value.
 
 ## Component outputs
 
-Angular Component has Outputs - these are the events that the component can emit to the outside at any time. In the web component, form outputs are translated to DOM Custom Events.
+Angular Component has Outputs—these are the events that the component can emit to the outside at any time. In the web component, form outputs are translated to DOM Custom Events.
 
 To define output, you have to use `@Output` angular decorator, which marks a class field as an output property and supplies configuration metadata. Each time output is emitted, the callback method associated with the output property is invoked.
 

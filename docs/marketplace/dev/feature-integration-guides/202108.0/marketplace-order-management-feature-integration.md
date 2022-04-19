@@ -20,10 +20,11 @@ To start feature integration, integrate the required features:
 | Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Order Management | {{page.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html) |
 | State Machine | {{page.version}} | [State Machine feature integration](https://github.com/spryker-feature/state-machine) |
+| Marketplace Dummy Payment | {{page.version}} | [Marketplace Dummy Payment feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-dummy-payment-feature-integration.html) |
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
 | Marketplace Shipment | {{page.version}} | [Marketplace Shipment feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-feature-integration.html) |
 
-### 1) Install required modules using Сomposer
+### 1) Install required modules using Composer
 
 Install the required modules:
 
@@ -83,7 +84,7 @@ class MerchantOmsConfig extends SprykerMerchantOmsConfig
     protected const MAIN_MERCHANT_STATE_MACHINE_INITIAL_STATE = 'created';
 
     /**
-     * @return string[]
+     * @return array<string>
      */
     public function getMerchantProcessInitialStateMap(): array
     {
@@ -98,7 +99,7 @@ class MerchantOmsConfig extends SprykerMerchantOmsConfig
     /**
      * @api
      *
-     * @return string[]
+     * @return array<string>
      */
     public function getMerchantOmsProcesses(): array
     {
@@ -208,6 +209,7 @@ class MerchantOmsConfig extends SprykerMerchantOmsConfig
 </statemachine>
 
 ```
+
 </details>
 
 <details>
@@ -289,6 +291,7 @@ class MerchantOmsConfig extends SprykerMerchantOmsConfig
 </statemachine>
 
 ```
+
 </details>
 
 <details>
@@ -389,10 +392,10 @@ class MerchantOmsConfig extends SprykerMerchantOmsConfig
 
 </statemachine>
 ```
+
 </details>
 
-<details>
-<summary markdown='span'>config/Zed/navigation.xml</summary>
+**config/Zed/navigation.xml**
 
 ```xml
 <?xml version="1.0"?>
@@ -422,7 +425,7 @@ class MerchantOmsConfig extends SprykerMerchantOmsConfig
     </marketplace>
 </config>
 ```
-</details>
+
 
 Execute the following command:
 
@@ -432,7 +435,7 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the navigation menu of the Back Office, you can see the **Marketplace->Orders** as well as **Sales->My Orders** menu items.
+Make sure that in the navigation menu of the Back Office, you can see the **Marketplace&nbsp;<span aria-label="and then">></span> Orders** as well as **Sales&nbsp;<span aria-label="and then">></span> My Orders** menu items.
 
 {% endinfo_block %}
 
@@ -464,7 +467,6 @@ Adjust the schema definition so entity changes trigger events:
 Apply database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -483,10 +485,6 @@ Check your database to make sure that the following changes have been applied:
 |spy_sales_expense.merchant_reference | column |created |
 |spy_sales_order_item.merchant_reference | column |created  |
 |spy_sales_order_item.product_offer_reference | column | created |
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Make sure that the following changes have been triggered in transfer objects:
 
@@ -509,11 +507,32 @@ Make sure that the following changes have been triggered in transfer objects:
 
 ### 4) Add translations
 
+Append glossary according to your configuration:
+
+**data/import/common/common/glossary.csv**
+
+```
+merchant_sales_order.merchant_order_id,Merchant Order ID,en_US
+merchant_sales_order.merchant_order_id,Händlerbestell-ID,de_DE
+```
+
+Import data:
+
+```bash
+console data:import glossary
+```
+
 Generate a new translation cache for Zed:
 
 ```bash
 console translator:generate-cache
 ```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+
+{% endinfo_block %}
 
 ### 5) Import data
 
@@ -523,7 +542,7 @@ Import data as follows:
 
 **data/import/common/common/marketplace/merchant_oms_process.csv**
 
-```csv
+```
 merchant_reference,merchant_oms_process_name
 MER000001,MainMerchantStateMachine
 MER000002,MerchantDefaultStateMachine
@@ -564,6 +583,26 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
         ];
     }
 }
+```
+
+**data/import/local/full_EU.yml**
+
+```yml
+version: 0
+
+actions:
+  - data_entity: merchant-oms-process
+    source: data/import/common/common/marketplace/merchant_oms_process.csv
+```
+
+**data/import/local/full_US.yml**
+
+```yml
+version: 0
+
+actions:
+  - data_entity: merchant-oms-process
+    source: data/import/common/common/marketplace/merchant_oms_process.csv
 ```
 
 3. Import data:
@@ -639,6 +678,7 @@ actions:
           <<: *default_filter_criteria
           store_name: [US]
 ```
+
 </details>
 
 | PARAMETER |  |  | REQUIRED | POSSIBLE VALUES | DESCRIPTION |
@@ -673,7 +713,7 @@ use Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport\Mer
 class DataExportDependencyProvider extends SprykerDataExportDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\DataExportExtension\Dependency\Plugin\DataEntityExporterPluginInterface[]
+     * @return array<\Spryker\Zed\DataExportExtension\Dependency\Plugin\DataEntityExporterPluginInterface>
      */
     protected function getDataEntityExporterPlugins(): array
     {
@@ -714,8 +754,7 @@ Enable the following behaviors by registering the plugins:
 | ItemFormTypePlugin | Returns ItemFormType class name resolution.  |  | Spryker\Zed\ShipmentGui\Communication\Plugin\Form |
 | MerchantReferenceShipmentExpenseExpanderPlugin | Expands expense transfer with merchant reference from items | | Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Shipment |
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/MerchantOmsCommunicationFactory.php</summary>
+**src/Pyz/Zed/MerchantOms/Communication/MerchantOmsCommunicationFactory.php**
 
 ```php
 <?php
@@ -741,7 +780,6 @@ class MerchantOmsCommunicationFactory extends SprykerMerchantOmsCommunicationFac
     }
 }
 ```
-</details>
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/Sales/SalesDependencyProvider.php</summary>
@@ -761,7 +799,7 @@ use Spryker\Zed\Sales\SalesDependencyProvider as SprykerSalesDependencyProvider;
 class SalesDependencyProvider extends SprykerSalesDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\SalesExtension\Dependency\Plugin\OrderExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderExpanderPluginInterface>
      */
     protected function getOrderHydrationPlugins(): array
     {
@@ -772,7 +810,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemExpanderPreSavePluginInterface[]
+     * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemExpanderPreSavePluginInterface>
      */
     protected function getOrderItemExpanderPreSavePlugins(): array
     {
@@ -783,7 +821,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemsTableExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemsTableExpanderPluginInterface>
      */
     protected function getOrderItemsTableExpanderPlugins(): array
     {
@@ -793,10 +831,10 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
     }
 }
 ```
+
 </details>
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
 ```php
 <?php
@@ -812,7 +850,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Symfony\Component\Console\Command\Command[]
+     * @return array<\Symfony\Component\Console\Command\Command>
      */
     protected function getConsoleCommands(Container $container): array
     {
@@ -822,7 +860,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     }
 }
 ```
-</details>
+
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/MerchantSalesOrder/MerchantSalesOrderDependencyProvider.php</summary>
@@ -839,7 +877,21 @@ use Spryker\Zed\MerchantSalesOrder\MerchantSalesOrderDependencyProvider as Spryk
 class MerchantSalesOrderDependencyProvider extends SprykerMerchantSalesOrderDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\MerchantSalesOrderExtension\Dependency\Plugin\MerchantOrderPostCreatePluginInterface[]
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return \Spryker\Zed\Kernel\Container
+     */
+    public function provideCommunicationLayerDependencies(Container $container): Container
+    {
+        $container = parent::provideCommunicationLayerDependencies($container);
+
+        $container = $this->addSalesFacade($container);
+
+        return $container;
+    }
+
+    /**
+     * @return array<\Spryker\Zed\MerchantSalesOrderExtension\Dependency\Plugin\MerchantOrderPostCreatePluginInterface>
      */
     protected function getMerchantOrderPostCreatePlugins(): array
     {
@@ -849,7 +901,7 @@ class MerchantSalesOrderDependencyProvider extends SprykerMerchantSalesOrderDepe
     }
 
     /**
-     * @return \Spryker\Zed\MerchantSalesOrderExtension\Dependency\Plugin\MerchantOrderExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\MerchantSalesOrderExtension\Dependency\Plugin\MerchantOrderExpanderPluginInterface>
      */
     protected function getMerchantOrderExpanderPlugins(): array
     {
@@ -861,8 +913,7 @@ class MerchantSalesOrderDependencyProvider extends SprykerMerchantSalesOrderDepe
 ```
 </details>
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/StateMachine/StateMachineDependencyProvider.php</summary>
+**src/Pyz/Zed/StateMachine/StateMachineDependencyProvider.php**
 
 ```php
 <?php
@@ -880,7 +931,7 @@ use Spryker\Zed\StateMachine\StateMachineDependencyProvider as SprykerStateMachi
 class StateMachineDependencyProvider extends SprykerStateMachineDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\StateMachine\Dependency\Plugin\StateMachineHandlerInterface[]
+     * @return array<\Spryker\Zed\StateMachine\Dependency\Plugin\StateMachineHandlerInterface>
      */
     protected function getStateMachineHandlers()
     {
@@ -889,10 +940,8 @@ class StateMachineDependencyProvider extends SprykerStateMachineDependencyProvid
         ];
     }
 ```
-</details>
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/DeliverMarketplaceOrderItemCommandPlugin.php</summary>
+**src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/DeliverMarketplaceOrderItemCommandPlugin.php**
 
 ```php
 <?php
@@ -914,10 +963,7 @@ class DeliverMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEventCo
 
 ```
 
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/ShipByMerchantMarketplaceOrderItemCommandPlugin.php</summary>
+**src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/ShipByMerchantMarketplaceOrderItemCommandPlugin.php**
 
 ```php
 <?php
@@ -937,10 +983,9 @@ class ShipByMerchantMarketplaceOrderItemCommandPlugin extends AbstractTriggerOms
     }
 }
 ```
-</details>
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/CancelMarketplaceOrderItemCommandPlugin.php</summary>
+
+**src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/CancelMarketplaceOrderItemCommandPlugin.php**
 
 ```php
 <?php
@@ -963,10 +1008,9 @@ class CancelMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEventCom
     }
 }
 ```
-</details>
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantOms/MerchantOmsDependencyProvider.php</summary>
+
+**src/Pyz/Zed/MerchantOms/MerchantOmsDependencyProvider.php**
 
 ```php
 <?php
@@ -976,7 +1020,6 @@ namespace Pyz\Zed\MerchantOms;
 use Pyz\Zed\MerchantOms\Communication\Plugin\Oms\CancelMarketplaceOrderItemCommandPlugin;
 use Pyz\Zed\MerchantOms\Communication\Plugin\Oms\DeliverMarketplaceOrderItemCommandPlugin;
 use Pyz\Zed\MerchantOms\Communication\Plugin\Oms\ShipByMerchantMarketplaceOrderItemCommandPlugin;
-use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\MerchantOms\MerchantOmsDependencyProvider as SprykerMerchantOmsDependencyProvider;
 
 class MerchantOmsDependencyProvider extends SprykerMerchantOmsDependencyProvider
@@ -991,10 +1034,8 @@ class MerchantOmsDependencyProvider extends SprykerMerchantOmsDependencyProvider
     }
 }
 ```
-</details>
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/MerchantSalesOrderMerchantUserGui/MerchantSalesOrderMerchantUserGuiDependencyProvider.php</summary>
+**src/Pyz/Zed/MerchantSalesOrderMerchantUserGui/MerchantSalesOrderMerchantUserGuiDependencyProvider.php**
 
 ```php
 <?php
@@ -1026,10 +1067,7 @@ class MerchantSalesOrderMerchantUserGuiDependencyProvider extends SprykerMerchan
 }
 ```
 
-</details>
-
-<details>
-<summary markdown='span'>src/Pyz/Zed/Shipment/ShipmentDependencyProvider.php**</summary>
+**src/Pyz/Zed/Shipment/ShipmentDependencyProvider.php**
 
 ```php
 <?php
@@ -1042,7 +1080,7 @@ use Spryker\Zed\Shipment\ShipmentDependencyProvider as SprykerShipmentDependency
 class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ShipmentExtension\Dependency\Plugin\ShipmentExpenseExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\ShipmentExtension\Dependency\Plugin\ShipmentExpenseExpanderPluginInterface>
      */
     protected function getShipmentExpenseExpanderPlugins(): array
     {
@@ -1053,13 +1091,58 @@ class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 }
 ```
 
-</details>
+**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\ShopApplication;
+
+use SprykerShop\Yves\MerchantSalesOrderWidget\Widget\MerchantOrderReferenceForItemsWidget;
+use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
+
+class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
+{
+    /**
+     * @return array<string>
+     */
+    protected function getGlobalWidgets(): array
+    {
+        return [
+            MerchantOrderReferenceForItemsWidget::class,
+         ];
+    }
+
+}
+
+```
+
+**src/Pyz/Yves/CustomerPage/Theme/default/components/molecules/order-detail-table/order-detail-table.twig**
+
+```twig
+{%- raw -%}
+{% extends molecule('order-detail-table', '@SprykerShop:CustomerPage') %}
+
+{% block body %}
+    {% for shipmentGroup in data.shipmentGroups %}
+        <article class="grid grid--gap spacing-bottom spacing-bottom--big">
+            ...
+            {% widget 'MerchantOrderReferenceForItemsWidget' args [shipmentGroup.items] only %}{% endwidget %}
+            ...
+        </article>
+    {% endfor %}
+{% endblock %}
+{% endraw %}
+```
+
 
 {% info_block warningBox "Verification" %}
 
 Make sure that the Merchant State Machine is executed on merchant orders after the order has been split.
 
 Make sure that when retrieving an order in the *Sales* module, it is split by the merchant order and that the Order state is derived from the Merchant State Machine.
+
+Make sure that after splitting the order into merchants' orders, their IDs are displayed on the order details page in Yves.
 
 {% endinfo_block %}
 

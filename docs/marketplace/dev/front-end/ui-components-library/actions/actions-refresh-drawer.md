@@ -14,7 +14,7 @@ Check out an example usage of the Actions Refresh Drawer.
 
 Service configuration:
 
-- `type` - an action type.
+- `type`—an action type.
 
 ```html
 <spy-button-action

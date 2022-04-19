@@ -47,7 +47,6 @@ Make sure that the following modules have been installed:
 Run the following command to generate the transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

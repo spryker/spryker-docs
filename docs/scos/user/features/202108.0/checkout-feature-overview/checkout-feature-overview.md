@@ -16,7 +16,7 @@ redirect_from:
 
 Offer customers a smooth shopping experience by customizing the checkout workflow. Add, delete, and configure any checkout step, like customer account login, shipment and payment methods, or checkout overview.
 
-With the *Checkout* feature, you can enable customers to select single or multiple products and add wishlist items to their cart, as well as integrate different carriers and delivery methods.
+With the *Checkout* feature, you can let customers select single or multiple products and add wishlist items to their cart, as well as integrate different carriers and delivery methods.
 
 Control the values of the orders your customers place by defining order thresholds.
 

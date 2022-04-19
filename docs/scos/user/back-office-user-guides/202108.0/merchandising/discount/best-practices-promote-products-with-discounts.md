@@ -1,3 +1,11 @@
+---
+title: "Best practices: Promote products with discounts"
+description: Learn how to promote products using discounts.
+template: back-office-user-guide-template
+---
+
+This document explains how to use discounts to promote products using a concrete example. 
+
 Let's say that today is January 19, 2017. Soon your shop is going to receive Asus laptops with a new Intel processor. You want to quickly sell the laptops with the old processor. To promote the old laptops, you are going to offer free standard delivery for all Intel-based Asus laptops.
 
 To create the corresponding discount, follow the steps in the sections below.

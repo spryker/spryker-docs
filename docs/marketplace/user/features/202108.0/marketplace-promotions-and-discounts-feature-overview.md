@@ -14,7 +14,7 @@ There are two discount types:
 * Voucher
 * Cart rule
 
-A product catalog manager selects a discount type when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
+A product catalog manager selects a discount type when [creating a discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html).
 
 {% info_block warningBox "Warning" %}
 
@@ -46,8 +46,6 @@ Multiple voucher codes can be generated for a single voucher. The code has a **M
 You can enter codes manually or use the code generator in the Back Office.
 ![Generate codes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/generate_codes.png)
 
-See [Creating a Voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) to learn how a product catalog manager can create a voucher in the Back Office.
-
 ## Cart Rule
 
 A *Cart rule* is a discount that applies to cart once all the [decision rules](#decision-rule) linked to the cart rule are fulfilled.
@@ -55,8 +53,6 @@ A *Cart rule* is a discount that applies to cart once all the [decision rules](#
 
 The cart rule is applied automatically. If the decision rules of a discount are fulfilled, the customer can see the discount upon entering cart. Unlike with [voucher](#voucher), the **Clear all** and **Remove** actions are not displayed.
 ![Cart rule](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Promotions+and+Discounts+feature+overview/cart-rule-storefront.png)
-
-See [Creating a Cart Rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html) to learn how a product catalog manager can create a cart rule in the Back Office.
 
 ### Decision rule
 A decision rule is a condition assigned to a discount that should be fulfilled for the discount to be applied.
@@ -215,7 +211,7 @@ Validity interval is a time period during which a discount is active and can be 
 If a cart is eligible for a discount outside of its validity interval, the cart rule is not applied. If a customer enters a voucher code outside of its validity interval, they get a "Your voucher code is invalid." message.
 
 
-A product catalog manager defines calculation when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
+A product catalog manager defines calculation when [creating a discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html).
 ![Validity interval](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/validity-interval.png)
 
 {% info_block warningBox "Developer guides" %}

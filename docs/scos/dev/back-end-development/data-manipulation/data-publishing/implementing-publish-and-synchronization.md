@@ -67,8 +67,10 @@ For example, the following code defines events for publish for the cases when an
 
 The synchronization events are auto-generated and linked by the synchroniziation process, therefore no explicit event declaration is necessary for default behaviour.
 
-## 2. Create Publication Queue
-Now, you need to create a publication queue. It will be used to synchronize published data to the frontend. It is recommended to have a separate queue for each *Redis* or *Elasticsearch* entity. For information on how to create a queue, see [Set Up a "Hello World" Queue](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html), section **Creating a Simple Queue**.
+## 2. Create Publish & Synchronization Queues
+Now, you need to configure the publish queue where all publish events will be exchanged. The default publish queue is **event** - this can be adjusted in `data/shop/development/current/vendor/spryker/product/src/Spryker/Zed/Publisher/PublisherConfig::getPublishQueueName()`.
+
+Now, you need to define synchronization queues in order to deliver the prepared data to the frontend. It is recommended to have a separate synchronization queue for each *Redis* or *Elasticsearch* entity. For information on how to create a queue, see [Set Up a "Hello World" Queue](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html), section **Creating a Simple Queue**.
 
 {% info_block infoBox %}
 
@@ -76,33 +78,29 @@ As a naming convention, names of queues that synchronize data to Redis start wit
 
 {% endinfo_block %}
 
-We implemented 2 message processor plugins for synchronizing data to the frontend:
+Spryker implemented 2 generic synchronization message processor plugins for synchronizing data to the frontend:
 
 * `SynchronizationStorageQueueMessageProcessorPlugin` - for synchronizing data to Redis, and
 * `SynchronizationSearchQueueMessageProcessorPlugin` - for synchronizing data to Elasticsearch.
 
-You need to map your new queue to one of the plugins depending on which storage you want to use it for. The queues must be mapped in `QueueDependencyProvider::getProcessorMessagePlugins()`. For details, see section **Queue Message Processor Plugin** in the *Set Up a "Hello World" Queue* document.
+You need to map your synchronization queue names to one of the plugins depending on which storage you want to use it for. The queues must be mapped in `QueueDependencyProvider::getProcessorMessagePlugins()`. For details, see section **Queue Message Processor Plugin** in the *Set Up a "Hello World" Queue* document.
 
 {% info_block infoBox %}
 
-It is also good practice to create an error queue for your publication queue, where errors will be posted. The error queue must be registered in `RabbitMqConfig::getQueueOptions()`. For example:
+It is also good practice to create an error queue for your synchronization queues, where errors will be posted. The error queue must be registered in `RabbitMqConfig::getQueueOptions()`. For example:
 
 ```php
 protected function getQueueOptions()
 {
     $queueOptionCollection = new ArrayObject();
-    $queueOptionCollection->append($this->createQueueOption(EventConstants::EVENT_QUEUE, EventConstants::EVENT_QUEUE_ERROR));
-    $queueOptionCollection->append($this->createQueueOption(GlossaryStorageConstants::SYNC_STORAGE_QUEUE, GlossaryStorageConstants::SYNC_STORAGE_ERROR_QUEUE));
-    $queueOptionCollection->append($this->createQueueOption(UrlStorageConstants::URL_SYNC_STORAGE_QUEUE, UrlStorageConstants::URL_SYNC_STORAGE_ERROR_QUEUE));
-    ...
+    $queueOptionCollection->append($this->createQueueOption(GlossaryStorageConfig::SYNC_STORAGE_TRANSLATION, GlossaryStorageConfig::SYNC_STORAGE_TRANSLATION_ERROR));
+    // ...
 ```
 
 {% endinfo_block %}
 
-The events will be posted to queue **event** in RabbitMq.
 
-
-## 3. Create Publication Table
+## 3. Create Publish Table
 The next step is to create a database table that will be used as a mirror for the corresponding *Redis* or *Elasticsearch* store. For details, see [Extending the Database Schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).
 
 {% info_block infoBox %}

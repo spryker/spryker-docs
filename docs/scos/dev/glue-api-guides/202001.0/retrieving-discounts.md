@@ -15,8 +15,8 @@ related:
 
 The Discount API enables shop owners to add free value to their customers by discounting a percentage or a fixed sum of an order's subtotal or an item's price. Discounts can be applied to a purchase in **2** ways:
 
-1. Discounts applied to carts based on certain conditions, called [cart rules](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html);
-2. Price reductions provided when redeeming a [discount voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html).
+1. Discounts applied to carts based on certain conditions, called [cart rules](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html#cart-rule);
+2. Price reductions provided when redeeming a [discount voucher](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html#voucher).
 
 Discounts provided based on *cart rules* are calculated and taken into account automatically. *Vouchers*, on the other hand, need to be applied by customers explicitly. For this purpose, the *Discounts API* allows:
 
@@ -46,7 +46,7 @@ To apply a discount voucher to a cart, you need to send it via a *POST* request 
 
 {% info_block warningBox "Authentication" %}
 
-Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. 
+Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint.
 
 {% endinfo_block %}
 
@@ -97,7 +97,7 @@ If you included the `vouchers` resource relationship in your request URL, the re
 {% endinfo_block %}
 
 **Sample Response**
-    
+
 ```json
 {
     "data": {
@@ -156,7 +156,7 @@ If you included the `vouchers` resource relationship in your request URL, the re
     ]
 }
 ```
-    
+
 ### Possible Errors
 
 | Status | Reason |
@@ -166,12 +166,12 @@ If you included the `vouchers` resource relationship in your request URL, the re
 | 403 | The access token is missing (for carts of registered users only). |
 | 404 | A cart with the specified **ID** was not found. |
 | 422 | Incorrect voucher code or the voucher could not be applied. |
-    
+
 ### Viewing Discounts Applied to a Purchase
 
 #### Request
 To view discounts applied to a purchase, send a GET request to the corresponding carts resource and include the discounts you want to retrieve as relationships.
-    
+
 {% info_block infoBox "your title goes here" %}
 
 if you want to retrieve discounts provided by **vouchers**, include the *vouchers* resource relationship;
@@ -179,29 +179,29 @@ if you want to retrieve discounts provided by **vouchers**, include the *voucher
 if you want to retrieve discounts provided by **cart rules**, include the *cart-rules* resource relationship.
 
 {% endinfo_block %}
-    
+
 **Request Samples:**
 
 * **/carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}?include=vouchers** - *vouchers* applied to a registered user’s cart;
 
 * **/carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}?include=cart-rules** - *cart rules* applied to a registered user’s cart.
-    
+
 {% info_block warningBox "Authentication" %}
 
-Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. 
+Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint.
 
 {% endinfo_block %}
-    
+
 * **/guest-carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}?include=vouchers** - *vouchers* applied to a guest cart.
 
 * **/guest-carts/{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}?include=cart-rules** - *cart rules* applied to a guest cart.
-    
+
 {% info_block warningBox "Anonymous User ID" %}
 
 When accessing guest carts, you need to specify the guest user ID. This is done via the `X-Anonymous-Customer-Unique-Id` header. Guest user IDs are managed by the API Client. For details, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html).
 
 {% endinfo_block %}
-    
+
 **Request samples:**
 
 `GET http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2?include=vouchers`
@@ -211,7 +211,7 @@ When accessing guest carts, you need to specify the guest user ID. This is done 
 `GET http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2?include=vouchers,cart-rules`
 
 where **1ce91011-8d60-59ef-9fe0-4493ef3628b2** is the cart ID.
-    
+
 ### Response
 The endpoints respond with the cart information. The voucher data and the applied cart rules are available in the **included** section.
 
@@ -220,7 +220,7 @@ The endpoints respond with the cart information. The voucher data and the applie
 The section also includes the voucher **ID** that can be used in the future to unapply the voucher.
 
 {% endinfo_block %}
-    
+
 **Voucher Attributes**
 
 | Attribute | Type | Description |
@@ -250,7 +250,7 @@ The section also includes the voucher **ID** that can be used in the future to u
 | **discountPromotionQuantity** | Integer | Specifies the amount of the product a customer needs to purchase in order to get the discount. If the discount can be applied to any number of products, the value of the attribute is **null**. |
 
 **Sample Response**
-    
+
 ```json
 {
     "data": {
@@ -334,7 +334,7 @@ To unapply a discount voucher, send a DELETE request to the following endpoints:
 
 {% info_block warningBox "Authentication" %}
 
-Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint. 
+Carts of registered users cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token when accessing the endpoint.
 
 {% endinfo_block %}
 

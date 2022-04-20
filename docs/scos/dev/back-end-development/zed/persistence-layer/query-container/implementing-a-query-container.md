@@ -24,6 +24,12 @@ redirect_from:
   - /v1/docs/en/implementing-a-query-container
 ---
 
+{% info_block infoBox "Soft deprecation" %}
+
+Query containers are soft deprecated.
+It is recommended to use [Repository](/docs/scos/dev/back-end-development/zed/persistence-layer/repository.html) and [Entity Manager](/docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html) instead. 
+
+{% endinfo_block %}
 
 To create a new Query Container you can copy and paste the following snippet and replace `MyBundle` with your module name.
 

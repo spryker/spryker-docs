@@ -23,6 +23,28 @@ redirect_from:
   - /v1/docs/en/event-adding
 ---
 
-When adding an event, make sure you first decide what kind of events you want to trigger in your code. Events are stored in a class for later use, by adding its literal string value (ModuleName.subject.action). This value uniquely identifies an event in the event module, and all listeners attached to it will be triggered when a corresponding module invokes an event.
+When adding an event, make sure you first decide what kind of events you want to trigger in your code. Events are defined in a class, by declaring their literal string values (ModuleName.subject.action). An event's value uniquely identifies an event. All listeners attached to an event will be executed when a module triggers an event.
 
-For example, when you want to perform an action on a product before creating it, first create a class to hold all the module events for example: `Spryker\Zed\Product\Dependency\ProductEvents`, then add the following constant `ProductEvents::PRODUCT_ABSTRACT_BEFORE_CREATE` with a value of `Product.product_abstract.before.create`(the convention is first part module name, then subject and lastly the action you are free to define the naming just keep it literal for code clarity). Next, trigger the event using the event facade `\Spryker\Zed\Event\EventFacadeInterface::trigger` method which accepts two arguments, `eventName` is the name of event we created before `ProductEvents::PRODUCT_ABSTRACT_BEFORE_CREATE` and `TransferInterface` is the transfer object you want to pass to the event listener. Invoke this method in the place where the extension point is needed. In this case before entity is persisted.
+For example, when you want to perform an action before persisting a product abstract entity
+* create a class to hold all the module events: `Spryker\Shared\Product\ProductConfig.php`
+* add the following constant `ProductConfig::PRODUCT_ABSTRACT_BEFORE_CREATE` with a value of `Product.product_abstract.before.create`(first part module name, then subject and lastly the action - you are free to define any unique name, just keep it literal for code clarity).
+* trigger the event before entity is persisted using the event facade `\Spryker\Zed\Event\EventFacadeInterface::trigger` method which accepts two arguments (`eventName` is the name of event we created before `ProductConfig::PRODUCT_ABSTRACT_BEFORE_CREATE` and `TransferInterface` is the transfer object you want to pass to the event listener).
+
+{% info_block infoBox %}
+
+When multiple modules use the same events, we recommend to re-define the constants in the secondary modules and bind them to the primary module's constants with `@uses` php tag.
+
+```php
+
+class ProductStorageConfig extends AbstractBundleConfig
+{
+    /**
+     * @uses ProductConfig::PRODUCT_ABSTRACT_BEFORE_CREATE // primary constant
+     *
+     * @var string
+     */
+    public const PRODUCT_ABSTRACT_BEFORE_CREATE = 'Product.product_abstract.before.create'; // secondary constant
+}
+```
+
+{% endinfo_block %}

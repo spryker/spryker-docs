@@ -28,7 +28,7 @@ In a non-marketplace environment, a merchant is a record of the company which se
 
 ## Prerequisites
 
-To start working with merchants,
+Review the [reference information](#reference-information-create-a-merchant) before you start, or look up the necessary information as you go through the process.
 
 ## Create a merchant
 
@@ -57,6 +57,5 @@ To start working with merchants,
 
 ## Next steps
 
-Once you have the merchant record available in the system, you can proceed with creating a merchant relation.
-
-See [Managing Merchant Relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html) to know how you create those.
+[Edit merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants/edit-merchants.html)
+[Create merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/create-merchant-relations.html)

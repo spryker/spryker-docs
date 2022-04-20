@@ -16,7 +16,7 @@ related:
 ---
 
 This article describes how to manage merchant relations.
-To start working with merchant relations, go to **Marketplace&nbsp;<span aria-label="and then">></span> Merchant Relations**.
+To start working with merchant relations,
 
 ## Prerequisites
 
@@ -24,15 +24,15 @@ To be able to create a merchant relation, you need to have a fully set up compan
 
 ## Create a merchant relation
 
-To create a merchant relation:
-1. On the **Overview of Merchant relation** page, click **Add Merchant relation**.
-2. On the **Create Merchant Relation** page, select a **MERCHANT**.
-3. Select a **COMPANY**.
-4. Click **Confirm**.
-5. Select a **BUSINESS UNIT OWNER**.
-6. Optional: Enter and select one or more **ASSIGNED BUSINESS UNITS**.
-7. Optional: Enter and select one or more **ASSIGNED PRODUCT LISTS**.
-5. Click **Save**.
+1. Go to **Marketplace&nbsp;<span aria-label="and then">></span> Merchant Relations**.
+2. On the **Overview of Merchant relation** page, click **Add Merchant relation**.
+3. On the **Create Merchant Relation** page, select a **MERCHANT**.
+4. Select a **COMPANY**.
+5. Click **Confirm**.
+6. Select a **BUSINESS UNIT OWNER**.
+7. Optional: Enter and select one or more **ASSIGNED BUSINESS UNITS**.
+8. Optional: Enter and select one or more **ASSIGNED PRODUCT LISTS**.
+9. Click **Save**.
 
 The merchant is created and can be used to create merchant specific prices (see [Creating abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html) and [Creating a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/creating-product-variants.html) to know more). As well as they can be used to create merchant relationship thresholds (see [Managing merchant order thresholds](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-merchant-order-thresholds.html) for more details).
 

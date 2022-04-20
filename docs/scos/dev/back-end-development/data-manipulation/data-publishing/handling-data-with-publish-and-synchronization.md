@@ -902,7 +902,7 @@ Ensure that the data has been exported to a secondary queue for the Synchronize 
 
 {% endinfo_block %}
 
-6. Sync data with Redis:
+6. Synchronize data with Redis:
 
 ```bash
 console queue:task:start sync.storage.hello

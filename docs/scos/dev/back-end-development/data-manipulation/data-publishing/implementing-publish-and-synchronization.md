@@ -301,9 +301,6 @@ For performance considerations, events are passed to the listener in bulk. Even 
 
 {% endinfo_block %}
 
-
-Implementing a listener is detailed in [Listening to Events](/docs/scos/dev/back-end-development/data-manipulation/event/listening-to-events.html). Follow the guide to create your listener classes.
-
 Also, you need to configure listener classes in PublisherDependencyProvider::getPublisherPlugins() to enable them. The listeners are listening on the default publish queue. Alternativly, the mapping of the listener class can adjust the listened queue in its key. (see full code in `data/shop/development/current/vendor/spryker/publisher/src/Spryker/Zed/Publisher/PublisherDependencyProvider::getPublisherPlugins()`):
 
 ```php
@@ -345,6 +342,12 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 }
 ```
+
+{% info_block infoBox %}
+
+Implementing a generic listener is detailed in [Listening to Events](/docs/scos/dev/back-end-development/data-manipulation/event/listening-to-events.html). Follow the guide to create your non publish & synchronize listener classes.
+
+{% endinfo_block %}
 
 ## 6. Publish Data
 After consuming a publish event, you need to prepare the data for the frontend. For this purpose, your code needs to query the data relevant to the update and make changes to the corresponding *storage* or *search* database table. For this purpose, you need to implement the following methods: **writeCollectionBy{TriggeredEvent}Events** for publishing an entity, and **deleteCollectionBy{TriggeredEvent}Events** for removing it.

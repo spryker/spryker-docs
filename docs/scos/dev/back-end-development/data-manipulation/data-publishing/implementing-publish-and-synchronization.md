@@ -349,7 +349,7 @@ Implementing a generic listener is detailed in [Listening to Events](/docs/scos/
 
 {% endinfo_block %}
 
-## 6. Publish Data
+## 7. Publish Data
 After consuming a publish event, you need to prepare the data for the frontend. For this purpose, your code needs to query the data relevant to the update and make changes to the corresponding *storage* or *search* database table. For this purpose, you need to implement the following methods: **writeCollectionBy{TriggeredEvent}Events** for publishing an entity, and **deleteCollectionBy{TriggeredEvent}Events** for removing it.
 
 Sample implementation can be found in the *GlossaryStorage* module (see full code in `data/shop/development/current/vendor/spryker/glossary-storage/src/Spryker/Zed/GlossaryStorage/Communication/Plugin/Publisher/GlossaryTranslation/GlossaryWritePublisherPlugin.php`):
@@ -391,7 +391,7 @@ Recommended naming for **write{targetEntityName}CollectionBy{triggeredEvent}Even
 
 The changes over the *storage* or *search* database tables will trigger the corresponding synchronization events.
 
-## 7. Listen to Synchronization Events
+## 8. Listen to Synchronization Events
 
 Spryker implemented 2 generic synchronization message processor plugins for synchronizing data to the frontend:
 
@@ -402,7 +402,7 @@ You need to map your synchronization queue names to one of the plugins depending
 
 After implementing the above steps, you will have the data storage of your frontend app synchronized with the backend data storage.
 
-## 8. Recommneded module structure
+## 9. Recommneded module structure
 
 The recommended module structure for a Publish & Synchronize module
 ```

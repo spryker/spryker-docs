@@ -17,7 +17,7 @@ related:
 
 
 *Marketplace Order Management* enables splitting orders into merchant orders and letting product offers be bought directly from a Storefront.
-The orders are designed to be used by the Marketplace operator, while the merchant orders are always connected to a merchant. See [Marketplace domain model](/docs/marketplace/dev/architecture-overview/marketplace-domain-model.html) to learn more about the core Marketplace objects.
+The orders are designed to be used by the Marketplace operator, while the merchant orders are always connected to a merchant. To learn more about the core Marketplace objects, see [Marketplace domain model](/docs/marketplace/dev/architecture-overview/marketplace-domain-model.html).
 
 By using `MerchantSalesOrderFacade::createMerchantOrderCollection()`, you can decide when to create merchant orders out of an order in your project. By default, it is created by `CreateMerchantOrdersCommandPlugin`.
 
@@ -90,8 +90,7 @@ The *merchant order total* is the sum of the totals of items of an order relatin
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
-|---------|---------|---------|--------|
-| [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-feature-integration.html)    | [Retrieving Marketplace orders](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-marketplace-orders.html)        | [File details: merchant_oms_process.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-oms-process.csv.html)        |  [MerchantOms](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-order-management-feature-walkthrough/merchant-oms.html)  |
-| [Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-order-threshold-feature-integration.html)    |         | [File details: merchant-order-status.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-order-status.csv.html)        |  [How-to: Creation a new MerchantOms flow](/docs/marketplace/dev/howtos/how-to-create-a-new-merchant-oms-flow.html)   |
-| [Marketplace Order Management + Customer Account Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-customer-account-management-feature-integration.html)    |         |         |
+| INTEGRATION GUIDES                                                                                                                                                                                              |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|---------|--------|
+| [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-feature-integration.html)                                     | [Retrieving Marketplace orders](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-marketplace-orders.html)        | [File details: merchant_oms_process.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-oms-process.csv.html)        |  [MerchantOms](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-order-management-feature-walkthrough/merchant-oms.html)  |
+| [Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-order-threshold-feature-integration.html)   |         | [File details: merchant-order-status.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-order-status.csv.html)        |  [How-to: Creation a new MerchantOms flow](/docs/marketplace/dev/howtos/how-to-create-a-new-merchant-oms-flow.html)   |

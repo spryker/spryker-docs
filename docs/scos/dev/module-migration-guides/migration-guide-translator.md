@@ -32,15 +32,17 @@ To upgrade the module, do the following:
 ```bash
 composer update spryker/translator
 ```
+
 2. Remove old service providers, if you have them in the project:
 
 ```php
 \Silex\Provider\TranslationServiceProvider
 \SprykerShop\Yves\ShopTranslator\Plugin\Provider\TranslationServiceProvider
 ```
+
 3. Add new plugins to dependency providers:
 
-**Zed Integration**
+**Zed integration**
 
 ```php
 <?php
@@ -68,7 +70,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 }
 ```
 
-**Yves Integration**
+**Yves integration**
 
 ```php
 <?php
@@ -98,7 +100,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 4. Enable additional plugins:
 
-**Twig Zed Integration**
+**Twig Zed integration**
 
 ```php
 <?php
@@ -124,7 +126,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 }
 ```
 
-**Validator Zed Integration**
+**Validator Zed integration**
 
 ```php
 <?php
@@ -150,7 +152,7 @@ class ValidatorDependencyProvider extends SprykerValidatorDependencyProvider
 }
 ```
 
-**Twig Yves Integration**
+**Twig Yves integration**
 
 ```php
 <?php
@@ -176,7 +178,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 }
 ```
 
-**Validator Yves Integration**
+**Validator Yves integration**
 
 ```php
 <?php

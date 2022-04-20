@@ -17,11 +17,13 @@ This document describes how to create discounts in the Back Office.
 
 ## Prerequisites
 
-To start creating a voucher, do the following:
+If you are new to discounts, you might want to start with [Best practices: Promote products with discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/best-practices-promote-products-with-discounts.html).
+
+There is a [reference information](#reference-information-define-general-settings-of-the-discount) for each section. Review it before you start, or look up the necessary information as you go through the process.
+
+To create a discount, do the following:
 1. Go to **Merchandising&nbsp;<span aria-label="and then">></span> Discount**.
 2. On the **Discount** page, click **Create new discount**.
-
-Review the [reference information](#reference-information-create-discounts) before you start, or look up the necessary information as you go through the process.
 
 ## 1. Define general settings of the discount
 
@@ -74,20 +76,18 @@ If you are creating a cart rule, proceed to step [5. Activate the discount](#act
 
 ## 5. Activate the discount
 
-Optional: To make the discount voucher redeemable on the Storefront, click **Activate** in the top-right corner.
+Optional: To make the discount redeemable on the Storefront, click **Activate** in the top-right corner.
 
 This refreshes the page with a success message displayed.
 
-## Reference information: Define general settings of a voucher discount
-
-This section describes attributes you enter and select when creating or editing a voucher.
+## Reference information: Define general settings of the discount
 
 | ATTRIBUTE |DESCRIPTION  |
 | --- | --- |
 | STORE RELATION | The stores to display the discount in. |
 | DISCOUNT TYPE | Defines how the discount will be applied: <ul><li>**Cart rule**: the discount will be applied automatically to the products defined in [Define discount calculation and the products to apply the discount to](#define-discount-calculation-and-the-products-to-apply-the-discount-to).</li><li>**Voucher codes**: the discount will be applied to the products defined in [Define discount calculation and the products to apply the discount to](#define-discount-calculation-and-the-products-to-apply-the-discount-to) when a customer enters a voucher code generated in [Generate voucher codes](#generate-voucher-codes).</li></ul> |
 | NAME | Unique identifier of the discount that will be displayed in the Back Office and on the Storefront. |
-| DESCRIPTION | The description will be displayed on the Storefront.  |
+| DESCRIPTION | The description will be displayed only in the Back Office.  |
 | NON-EXCLUSIVE | Defines that this discount can be applied to a cart together with other non-exclusive discounts. |
 | EXCLUSIVE | Defines that this discount, when applied to a cart, discards all the other non-exclusive discounts. If multiple exclusive discounts are applied to a cart, only the discount with the bigger discount value is applied.   |
 | VALID FROM and VALID TO | Inclusively, define the dates between which the discount can be applied.|
@@ -141,7 +141,7 @@ The promotional product lets you select a product that is to be displayed in a c
 
 To give away a promotional product for free, select percentage calculator type and enter 100 percents.
 
-## Reference information: Define under which conditions the discount can be applied
+## Reference information: Define on what conditions the discount can be applied
 
 Similarly do [defining discounted products](#discount-application-type-query-string), the conditions on which a discount is a applied are defined using a query string.
 
@@ -157,26 +157,19 @@ Example: Discount is applied if 4 or more items with the Intel Core processor ar
 
 ## Reference information: Generate voucher codes
 
-This section describes the information that you need to know when working with voucher codes in the **Voucher code** tab.
-
 | ATTRIBUTE | DESCRIPTION |  
 | --- | --- |
 | QUANTITY | Number of vouchers to generate. |  
 | CUSTOM CODE | Any custom symbols you want the voucher codes to contain. If you are adding a single custom code, for **ADD RANDOM GENERATED CODE LENGTH**, select **No additional random characters**. If you add random characters, by default, they are appended to the end of the custom code. To specify where to place the random characters, add `[code]` to the custom code. For example, `black[code]friday`. |  
 | ADD RANDOM GENERATED CODE LENGTH | A number of random alphanumeric symbols to add to the code. If you entered a **CUSTOM CODE**, the random characters will be appended to the end of it. If you are generating more than one code, you must select **3** or more. |  
-| MAX NUMBER OF USES | Defines the maximum number of times a voucher code can be redeemed. Apart from numbers, accepts the following: |  
+| MAX NUMBER OF USES | Defines the maximum number of times a voucher code can be redeemed. |  
 
+{% info_block infoBox "Voucher code collections" %}
 
-| VALUE | BEHAVIOR |  
-| --- | --- |
-| 0 | Infinitely redeemable. |  
-| 1 | Voucher can be redeemed once. |  
-| n > 1 | Voucher can be redeemed _n_ times. |  
+The voucher codes of a discount belong to a voucher code collection. One customer may only redeem one voucher code per collection per cart. At the same time, a customer can redeem two vouchers in one cart if they belong to different voucher code collections.
 
-![Voucher code](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Discount/Voucher+Codes:+Reference+Information/voucher-code.png)
+{% endinfo_block %}
 
-**Voucher Code Pool**
-The voucher codes of a discount are all contained in the same voucher code pool. One customer may only redeem one voucher code per pool per cart.
 
 ## Decision rules: Attributes and operators
 
@@ -212,5 +205,6 @@ This section contains additional information for defining decision rules.
 |Greater|>|Number|Checks if the value is greater than the value of the right operand|
 |Greater or equal|>=|Number| Checks if the value is greater than or equal to the value of the right operand |
 
-**What's next?**
-<br>See [Managing Discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/managing-discounts.html) to know more about the actions you can do once the discount is created.
+## Next steps
+
+[Edit discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/edit-discounts.html)

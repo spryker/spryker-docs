@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/configurable-bundle-feature-overview
 ---
 
-A *configurable bundle*  is a [product bundle](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html) for which a Storefront User selects products on the Storefront.
+A *configurable bundle* is a [product bundle](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html) for which a Storefront User selects products on the Storefront.
 For example, when buying a kitchen set, a customer selects pieces of furniture, like drawers, cupboards, or cabinets, from suggested options.
 
 ## Configurable bundle template
@@ -27,7 +27,7 @@ To create a configurable bundle on the Storefront, a Shop User selects a configu
 ![Configurable Bundle Template in the Storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/configurable-bundle-template-selection.png)
 
 
-The example below illustrates how the configurable bundle data is saved to the database:
+The following example illustrates how the configurable bundle data is saved to the database:
 ```php
 {
      "id_configurable_bundle_template": 2,
@@ -67,7 +67,7 @@ For example, a *Kitchen furniture set* configurable bundle template can have the
 
 ![Kitchen Configurable Bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/kitchen+slots.png)
 
-When a Back Office user creates a configurable bundle template, they create the slots, and a [product list](/docs/scos/user/features/{{page.version}}/product-lists-feature-overview.html) is automatically assigned to each of them. They can edit the product list in **Catalog Management** > **Product Lists** section or by editing the slot in the configurable bundle template.
+When a Back Office user creates a configurable bundle template, they create the slots, and a [product list](/docs/scos/user/features/{{page.version}}/product-lists-feature-overview.html) is automatically assigned to each of them. They can edit the product list in **Catalog Management&nbsp;<span aria-label="and then">></span> Product Lists** section or by editing the slot in the configurable bundle template.
 
 {% info_block warningBox "Slots" %}
 
@@ -88,27 +88,27 @@ By default, it is not obligatory to select products for all the slots to order a
 Schematically, a configurable bundle looks as follows:
 ![Config Bundle Schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/slots+scheme.png)
 
-When a Storefront User selects a product for a slot, the product is picked. For example, if they select *Base cabinet with 2 shelves SKU12236* for the slot *Base Cabinet*, they see the following message: "You have picked `Base cabinet with 2 shelves SKU 12236` product to fill the slot `Base Cabinet`.".
+When a Storefront User selects a product for a slot, the product is picked. For example, if they select **Base cabinet with 2 shelves SKU12236** for the slot **Base Cabinet**, they see the following message: "You have picked `Base cabinet with 2 shelves SKU 12236` product to fill the slot `Base Cabinet`.".
 
 
 
 ## Configurable bundle notes in cart
 
-On the *Сart* page, items are grouped by configured bundles.
+On the **Сart** page, items are grouped by configured bundles.
 ![Configured bundle on the Cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/configurable-bundle-in-cart.png)
 
-A Storefront User can add a note to a configurable bundle. The note is displayed with the bundle on the *Checkout Summary* and *Order Details* page.
+A Storefront User can add a note to a configurable bundle. The note is displayed with the bundle on the **Checkout Summary** and **Order Details** pages.
 
 ![Configurable bundle note](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/configurable-bundle-note.png)
 
 ## Product bundle configurator
-*Product bundle configurator* is a page where a Storefront User selects products for a configurable bundle.
+**Product bundle configurator** is a page where a Storefront User selects products for a configurable bundle.
 
 ## Configurable bundle quantity, stock, and price
 
 Currently, the feature supports 1:1 product-slot relation in the configurator. You can select only one concrete product with quantity 1 for a slot. However, using the data import, you may import a bigger quantity for the products in the slots.
 
-On the *Cart* page, a Storefront User can change the qunatity of a configured bundle. After the quantity is increased, the quantity of all the items in the configured bundle is multiplied by this number.
+On the **Cart** page, a Storefront User can change the quantity of a configured bundle. After the quantity is increased, the quantity of all the items in the configured bundle is multiplied by this number.
 
 For example, a Storefront User adds a configurable bundle with the following products:
 * Item A:
@@ -232,7 +232,7 @@ Currently, the feature has the following functional constraints which are going 
 
 
 * On the Configurator page, you cannot add the configured bundle to a [shopping list](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html) or [wishlist](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html).
-* A Storefront User cannot return to the *Configurator* page from the *Cart*, *Reorder*, or *Shopping list* pages.
+* A Storefront User cannot return to the **Configurator** page from the **Cart**, **Reorder**, or **Shopping List** pages.
 * The following products cannot be displayed in the configurator:
     - Products with [measurement](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) or [packaging units](/docs/scos/user/features/{{page.version}}/packaging-units-feature-overview.html)
     - [Product bundles](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html)
@@ -241,7 +241,7 @@ Currently, the feature has the following functional constraints which are going 
     * [Product options](/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html)
     * [Product labels](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html)
     * [Product quantity restrictions](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html)
-* The *Slot* page doesn't have any sorting, pagination, or search.
+* The **Slot** page doesn't have any sorting, pagination, or search.
 * Product bundles cannot be added to configurable bundles.
 
 ## Related Business User articles

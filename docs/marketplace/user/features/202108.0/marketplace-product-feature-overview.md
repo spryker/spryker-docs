@@ -4,9 +4,9 @@ description: This document contains concept information for the Marketplace Prod
 template: concept-topic-template
 ---
 
-In the Marketplace, products that a merchant owns, are referred to as *marketplace products*. Besides creating offers for products of other merchants or the ones that the Marketplace administrator suggests, a merchant can also create their own unique products. These products possess the same characteristics the usual abstract and concrete products have, but in addition, every such product has merchant-related information such as merchant reference. Merchants can [create their products in the Merchant Portal](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/creating-marketplace-abstract-product.html) or [import the marketplace products data](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product.csv.html), or merchants manage stock and set prices for their products in the Merchant Portal. See [Managing marketplace abstract products](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product.html) for details.
+In the Marketplace, products that a merchant owns are referred to as *marketplace products*. Besides creating offers for products of other merchants or the ones that the Marketplace administrator suggests, a merchant can also create their own unique products. These products possess the same characteristics the usual abstract and concrete products have, but in addition, every such product has merchant-related information such as merchant reference. Merchants can [create their products in the Merchant Portal](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/creating-marketplace-abstract-product.html) or [import the marketplace products data](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product.csv.html), or merchants manage stock and set prices for their products in the Merchant Portal. For details, see [Managing marketplace abstract products](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product.html).
 
-Merchants can allow other merchants to create offers for their unique products. This possibility is defined with the help of `is_shared` parameter of the [marketplace product data importer](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product.csv.html).
+Merchants can let other merchants create offers for their unique products. This possibility is defined with the help of the `is_shared` parameter of the [marketplace product data importer](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product.csv.html).
 
 ## Marketplace products on the Storefront
 
@@ -21,7 +21,7 @@ The marketplace products are displayed on the Storefront when the following cond
 
 ### Marketplace product on the product details page
 
-Marketplace product appears on top of the **Sold by** list together with the product offers from other merchants. For a buyer, it doesn't matter whether they are buying a product offer or a marketplace product, however in the system, different entities are defined.
+Marketplace product appears on top of the **Sold by** list together with the product offers from other merchants. For a buyer, it doesn't matter whether they are buying a product offer or a marketplace product; however, in the system, different entities are defined.
 
 Product price on top of the product details page is taken from the marketplace product or the product offer. It depends on the option selected in the **Sold by** field.
 

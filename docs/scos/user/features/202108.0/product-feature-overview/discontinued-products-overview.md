@@ -28,7 +28,7 @@ Only [concrete products](/docs/scos/user/features/{{page.version}}/product-featu
 
 {% endinfo_block %}
 
-The schema below illustrates the relations between discontinued products, abstract and concrete products:
+The following schema illustrates the relations between discontinued products, abstract and concrete products:
 
 ![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Discontinued+Products/Discontinued+Products+Feature+Overview/discontinued-schema.png)
 

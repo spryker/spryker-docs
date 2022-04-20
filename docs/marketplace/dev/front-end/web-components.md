@@ -13,7 +13,7 @@ Internal components will remain as Angular Components unless they are required t
 
 ## Overview
 
-Web Components are a collection of technologies for creating reusable custom elements - with their functionality encapsulated away from the rest of your code and incorporated into your web applications.
+Web Components are a collection of technologies for creating reusable custom elements—with their functionality encapsulated away from the rest of your code and incorporated into your web applications.
 
 Below is an example of how to register Angular components as web components:
 

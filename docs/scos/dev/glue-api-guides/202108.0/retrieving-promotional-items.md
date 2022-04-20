@@ -15,7 +15,7 @@ The [Promotions](/docs/scos/user/features/{{page.version}}/promotions-discounts-
 
 {% info_block infoBox "Info" %}
 
-For more details on how to create the discount conditions, see [Creating a Cart Rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
+For more details on how to create the discount conditions, see [Create discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html).
 
 {% endinfo_block %}
 

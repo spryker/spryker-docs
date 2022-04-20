@@ -389,6 +389,8 @@ Recommended naming for **write{targetEntityName}CollectionBy{triggeredEvent}Even
 
 {% endinfo_block %}
 
+The changes over the *storage* or *search* database tables will trigger the corresponding synchronization events.
+
 ## 7. Listen to Synchronization Events
 
 Spryker implemented 2 generic synchronization message processor plugins for synchronizing data to the frontend:
@@ -399,6 +401,32 @@ Spryker implemented 2 generic synchronization message processor plugins for sync
 You need to map your synchronization queue names to one of the plugins depending on which storage you want to use it for. The queues must be mapped in `QueueDependencyProvider::getProcessorMessagePlugins()`. For details, see section **Queue Message Processor Plugin** in the *Set Up a "Hello World" Queue* document.
 
 After implementing the above steps, you will have the data storage of your frontend app synchronized with the backend data storage.
+
+## 8. Recommneded module structure
+
+The recommended module structure for a Publish & Synchronize module
+```
++ src/
+  + Spryker/
+    + Shared/
+      + GlossaryStorageConfig.php                   // module related event and queue constants
+    + Zed/
+      + GlossaryStorage/
+        + Business/
+          + GlossaryStorageFacade.php
+        + Communiation/
+          + Plugin/
+            + Publisher/
+              + GlossaryKey/                        // "glossary key" storage entity related listeners
+                + GlossaryDeletePublisherPlugin.php
+                + GlossaryWriterPublisherPlugin.php
+              + GlossaryTranslation/                // "glossary translation" storage entity related listeners
+                + GlossaryWriterPublisherPlugin.php // 
+              + GlossaryKeyPublisherTriggerPlugin.php  // triggers a publish event for all database entity via "publish:trigger-events" console command
+            + Synchronization/
+              + GlossaryTranslationSynchrozniationDataRepositoryPlugin.php // triggers a synchronization event for all database entity in the corresponding publish table via "sync:data" console command
+```
+
 
 ## Additional Tasks
 

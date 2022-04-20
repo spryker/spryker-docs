@@ -24,9 +24,8 @@ To install Docker prerequisites on Windows with WSL1, follow [Installing Docker 
 To install Docker prerequisites on Windows with WSL2, follow [Installing Docker prerequisites on Windows with WSL2](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html).
 
 
-
-
 ## Installing Spryker in Development mode on Windows
+
 Follow the steps to install Spryker in Development mode:
 
 1. Open Ubuntu.
@@ -44,6 +43,7 @@ Follow the steps to install Spryker in Development mode:
     {% endinfo_block %}
 
 4. Depending on the desired [Demo Shop](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops):
+
     * Clone the B2C repository:
 
     ```bash
@@ -57,14 +57,19 @@ Follow the steps to install Spryker in Development mode:
     ```
 
 5. Depending on the repository you've cloned, navigate into the cloned folder:
+
     * B2C repository:
+
     ```bash
     cd b2c-demo-shop
     ```
+
     * B2B repository:
+
     ```bash
     cd b2b-demo-shop
     ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that you are in the correct folder by running the `pwd` command.
@@ -78,10 +83,10 @@ image: spryker/php:7.3-alpine3.12
 ```
 
 7. Clone the Docker SDK repository:
+
 ```bash
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker
 ```
-
 
 8. In `{shop_name}/docker/context/php/debug/etc/php/debug.conf.d/69-xdebug.ini`, set `xdebug.remote_host` and `xdebug.client_host` to `host.docker.internal`:
 
@@ -99,9 +104,11 @@ sudo usermod -aG docker $USER
 ```
 
 10. Bootstrap local docker setup:
+
 ```bash
 docker/sdk bootstrap deploy.dev.yml
 ```
+
 {% info_block warningBox "Bootstrap" %}
 
 Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after you update the Docker SDK or the deploy file.
@@ -132,7 +139,7 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
     {% endinfo_block %}
  
     9. Select **File** > **Save**.
-    10.  Close the file.
+    10. Close the file.
 
 12. Once the job finishes, build and start the instance:
 

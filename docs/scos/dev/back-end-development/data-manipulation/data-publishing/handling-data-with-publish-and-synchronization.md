@@ -17,7 +17,7 @@ redirect_from:
 ---
 
 Publish and Synchronization (P&S) allows exporting data from Spryker back end (Zed) to external endpoints. The default external endpoints are Redis and Elasticsearch. The endpoints are usually used by the front end (Yves) or API (Glue).
-In this step-by-step tutorial, you will learn how P&S works and how to export data using a Hello World P&S module example. The module synchronizes(syncs) the data stored in a Zed database table to Redis. When a record is changed, created or deleted in the table, the module automatically makes changes in Redis.
+In this step-by-step tutorial, you will learn how P&S works and how to export data using a Hello World P&S module example. The module synchronizes the data stored in a Zed database table to Redis. When a record is changed, created or deleted in the table, the module automatically makes changes in Redis.
 
 ## 1. Module and Table
 
@@ -66,9 +66,9 @@ The following P&S naming conventions are applied:
 
 ## 2. Data Structure
 
-Usually, the data for Yves is stored differently from the data for Zed. It’s because the data model used in Redis and Elasticsearch is more optimized to be used by a front end. With P&S, data is always carried in the form of [**Transfer Objects**](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html) between Zed and Yves.
+Usually, the data for Yves is structured differently than the data for Zed. It’s because the data model used in Redis and Elasticsearch is optimized to be used by a front end. With P&S, data is always carried in the form of [**Transfer Objects**](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html) between Zed and Yves.
 
-Follow the steps below to create a transfer object.
+Follow the steps below to create a transfer object that represents the front end's target data structure.
 
 1.  Create `\Pyz\Shared\HelloWorldStorage\Transfer\hello_world_storage.transfer.xml`:
 
@@ -86,8 +86,8 @@ Follow the steps below to create a transfer object.
 ```bash
 console transfer:generate
 ```
-## 3. Events
-For the changes in the table to be published automatically, an event for each particular change should be enabled. In our example, we export the events from `SpyHelloWorldMessage`.
+## 3. Publish Events
+For the changes in the Zed database table to be published automatically, an event for each particular change should be enabled. In our example, we want to monitor the events of `SpyHelloWorldMessage`.
 
 Follow the steps to enable the events:
 
@@ -118,7 +118,7 @@ To track changes in all the table columns, we use the asterisk (`*`) for the `c
 console propel:install
 ```
 
-Now the `SpyHelloWorldMessage` entity model has three events for creating, updating, and deleting a record.
+Now the `SpyHelloWorldMessage` entity model has three events for creating, updating, and deleting a record (these are referred as "publish events").
 
 3. To map them to the constants which you can use in code later, create the `\Pyz\Shared\HelloWorldStorage\HelloWorldStorageConfig` configuration file:
 
@@ -152,7 +152,7 @@ Now, we have enabled events for the `SpyHelloWorldMessage` entity.
 
 ## 4. Publishers
 
-For P&S to work, the publishers need to catch the events and run the appropriate code.
+For P&S to work, the publishers need to catch the publish events and run the appropriate code to prepare the data for synchronization.
 
 1. Create a writer plugin that handles the creation and changes of the `spy_hello_world_message` entity.  
 
@@ -500,7 +500,7 @@ Use the `-k` option to keep messages in the queue for debugging purposes: `que
 
 ## 6. Storage Table
 
-To publish data in Redis, an intermediate database table in Zed is required. The table stores data until it is sent to Redis. The data in the table is already structured for export to Redis.
+To syncrhonize the data into Redis, an intermediate Zed database table is required. The table stores the data until it is sent to Redis. The data in the table is already structured for Redis.
 
 Follow the steps to create the table:
 
@@ -578,11 +578,11 @@ To create complex keys to use more than one column, do the following:
 
 ## 7. Models and Facade
 
-At this point, you can complete the publish part. Follow the standard conventions and let publishers delegate the execution process through the Facade to the Models behind.
+At this point, you can complete the publish part. Follow the standard conventions and let publishers delegate the execution process through the Facade to the models behind.
 
-To do this, create facade and model classes to handle the logic of the publish part as follows.
+To do this, create Facade and model classes to handle the logic of the publish part as follows.
 
-Find the facade methods below:
+Find the Facade methods below:
 
 - `writeCollectionByHelloWorldEvents(array $eventTransfers)`
 
@@ -671,7 +671,7 @@ class HelloWorldStorageDeleter implements HelloWorldStorageDeleterInterface
 }
 ```
 
-3. Create the two facade methods to expose the model:
+3. Create the two Facade methods to expose the model:
 
 ```php
 <?php
@@ -708,7 +708,7 @@ class HelloWorldStorageFacade extends AbstractFacade implements HelloWorldStorag
 }
 ```
 
-4. Refactor the publisher classes and call the facade methods:
+4. Refactor the publisher classes and call the Facade methods:
 
 ```php
 <?php
@@ -783,7 +783,7 @@ class HelloWorldDeletePublisherPlugin extends AbstractPlugin implements Publishe
 ```
 ## 8. Queue
 
-This section describes how to create the queue to sync data to Redis.
+This section describes how to create the queue to synchronize data to Redis.
 
 To create the `sync.storage.hello` queue, do the following :
 
@@ -921,7 +921,7 @@ To run all queues at once, run the following command: `console queue:worker:sta
 
 ## 9. Redis
 
-This section describes how to check the data export in Redis.
+This section describes how to check the data synchronization in Redis.
 
 Follow the steps to check the data in Redis:
 

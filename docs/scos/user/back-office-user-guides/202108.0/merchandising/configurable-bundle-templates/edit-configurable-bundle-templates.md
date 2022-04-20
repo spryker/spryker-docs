@@ -27,7 +27,7 @@ To start editing a configurable bundle template, do the following:
 
 ## Edit the name of a configurable bundle template
 
-1. Click the **General** tab.
+1. On the **Edit Configurable Bundle Template** page, click the **General** tab.
 2. Update the **NAME** for needed locales.
 3. Select **Save**.
     The page refreshes with the success message displayed.

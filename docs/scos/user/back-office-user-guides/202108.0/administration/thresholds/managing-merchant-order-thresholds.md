@@ -23,7 +23,7 @@ To start working with merchant order thresholds, go to **Administration&nbsp;<sp
 
 ## Prerequisites
 
-The list of the merchant relations for which you can define thresholds is based on the merchant relations created in **Merchant&nbsp;<span aria-label="and then">></span> Merchant Relations**. See [Creating a Merchant](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchants.html#creating-a-merchant) to learn more.
+The list of the merchant relations for which you can define thresholds is based on the merchant relations created in **Merchant&nbsp;<span aria-label="and then">></span> Merchant Relations**. See [Creating a Merchant](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants/create-merchant.html) to learn more.
 
 ## Setting up Minimum Hard  Threshold
 

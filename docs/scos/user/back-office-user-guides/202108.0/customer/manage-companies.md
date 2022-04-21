@@ -1,5 +1,5 @@
 ---
-title: Managing companies
+title: Manage companies
 description: Use the procedures to create and edit companies, approve and activate/deactivate a company, and/or deny a company in the Back Office.
 last_updated: Aug 10, 2021
 template: back-office-user-guide-template
@@ -10,9 +10,10 @@ redirect_from:
   - /2021080/docs/en/managing-companies
   - /docs/managing-companies
   - /docs/en/managing-companies
+  - /docs/scos/user/back-office-user-guides/202108.0/customer/company-account/managing-companies.html
 ---
 
-This topic describes how to manage company records.
+This document describes how to manage companies.
 
 ## Prerequisites
 
@@ -25,9 +26,9 @@ To start managing companies, go to **Customers&nbsp;<span aria-label="and then">
 3. Click **Save**.
     This opens the **Companies** page. The created company is displayed in the table.
 
-{% info_block warningBox "" %}
+{% info_block warningBox "Company headquarters" %}
 
-Once a company is created, one business unit for it is created automatically. This is considered to be a headquarter. To learn how to manage it, see [Managing company units](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-units.html).
+Once a company is created, one business unit for it is created automatically. This business unit is the company's headquarters. To learn how to manage it and create more business units for the company, see [Managing company units](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-units.html).
 
 {% endinfo_block %}
 

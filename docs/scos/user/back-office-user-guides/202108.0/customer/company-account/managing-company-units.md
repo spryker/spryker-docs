@@ -27,9 +27,8 @@ To start managing company units, go to  **Customers&nbsp;<span aria-label="and t
 
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
-## Create company business units
+## Create a company business unit
 
-To create a company business unit:
 1. In the top right corner of the **Company Units** page, click **Create Company Business Unit**.
 2. On the **Create Company Business Unit** page, select a **COMPANY**.
 3. Optional: Select a **PARENT**.
@@ -39,7 +38,7 @@ To create a company business unit:
 7. Click **Save**.
     This opens the **Company Units** page. The created company business unit is displayed in the list.
 
-### Reference information: Create company business units
+### Reference information: Create a company business unit
 
 | ATTRIBUTE | DESCRIPTION  |
 | --- | --- |
@@ -47,7 +46,7 @@ To create a company business unit:
 | PARENT | A parent business unit for the business unit you are creating. |
 | NAME | Name of the business unit you create. |
 | IBAN |  International Bank Account Number. |
-|BIC| Bank Identifier Code. |
+| BIC | Bank Identifier Code. |
 
 ## Edit company business units
 

@@ -158,9 +158,9 @@ typeOptionsMappings: {
 ...
 
 // Possible showed table `text` and `color` variants:
-// text - 'Active' and color - 'green' - if table column value is `col3`
-// text - 'Inactive' and default color('red') - if table column value is `false`
-// default text(table column value) and default color('red') - in other cases
+// text—'Active' and color—'green'—if table column value is `col3`
+// text—'Inactive' and default color('red')—if table column value is `false`
+// default text(table column value) and default color('red')—in other cases
 ```
 
 To get more details about the table columns, see [Column Types](/docs/marketplace/dev/front-end/table-design/table-column-types/).

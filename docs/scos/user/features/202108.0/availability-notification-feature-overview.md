@@ -1,6 +1,6 @@
 ---
 title: Availability  Notification feature overview
-description: The feature allows both registered and guest users to subscribe to the newsletter by specifying the email address they wish to receive the notifications to
+description: The feature lets registered and guest users subscribe to the newsletter by specifying the email address they wish to receive the notifications to
 last_updated: Aug 12, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/availability-notification-feature-overview
@@ -14,7 +14,7 @@ redirect_from:
 
 When customers visit an out-of-stock product’s page, they usually search for the shop which has the product in stock. The Back Office user of the original store can replenish the stock; however, it does not mean that the customer is still be there to buy it. The *Availability Notification* feature provides a way to notify you about the demand for the product, so you can prioritize the product replenishment and notify the customer once it is available again.
 
-The feature works in the form of a newsletter for both guest and registered users. Guest users subscribe by entering the email address they would like to receive the notification to:
+The feature works in the form of a newsletter for both guest and registered users. Guest users subscribe by entering the email address they want to receive the notification to:
 ![Guest subscription](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Product+is+Available+Again/guest-subscription.png)
 
 Registered users subscribe to the newsletter in the same way, but the email address set up in their account is already entered when they visit a page with an out-of-stock product:
@@ -36,7 +36,7 @@ Those who subscribed to the newsletter receive an email once the product is avai
 
 {% info_block infoBox %}
 
-Each email sent as a part of the subscription contains the **unsubscribe from this list** button as shown on the screenshot above.
+Each email sent as a part of the subscription contains the **unsubscribe from this list** button as shown on the preceding screenshot.
 
 {% endinfo_block %}
 

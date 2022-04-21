@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/product-images-overview
 ---
 
-*Product Images* make your shop more appealing and give your customers a better idea of what they are buying. The feature allows you to group several images into sets and link them to products. One product can have several named and localized sets of images, for example, to present standard or seasonal highlights.
+*Product Images* make your shop more appealing and give your customers a better idea of what they are buying. The feature lets you group several images into sets and link them to products. One product can have several named and localized sets of images, for example, to present standard or seasonal highlights.
 
 Different image sets can be used in CMS Pages and Blocks, for marketing and promotional purposes or simply to increase branding in your store.
 
@@ -24,7 +24,7 @@ You can enjoy the following benefits of the feature:
 * Small and large images
 * Adjustable sort order of images in a set
 * Possibility to create different image sets for different use cases on different pages per product
-* Possibility to define the order of images to be displayed on front-end
+* Possibility to define the order of images to be displayed on frontend
 
 ## Related Business User articles
 

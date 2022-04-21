@@ -12,25 +12,18 @@ redirect_from:
   - /docs/en/creating-configurable-bundle-templates
   - /docs/scos/user/back-office-user-guides/202108.0/merchandising/configurable-bundle-templates/creating-configurable-bundle-templates.html
 related:
-  - title: Managing Configurable Bundle Templates
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html
+  - title: Edit configurable bundle templates
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/configurable-bundle-templates/edit-configurable-bundle-templates.html
   - title: Configurable Bundle Feature Overview
     link: docs/scos/user/features/page.version/configurable-bundle-feature-overview.html
 ---
 
-This topic describes how to create configurable bundle templates.
+To create a configurable bundle template, follow the steps:
 
-## Prerequisites
-
-To start working with configurable bundle templates, go to **Merchandising&nbsp;<span aria-label="and then">></span> Configurable Bundle Templates**.
-
-Review the [reference information](#reference-information-create-configurable-bundle-templates) before you start, or look up the necessary information as you go through the process.
-
-## Create a configurable bundle template
-
-1. On the **Configurable Bundle Templates** page, click **Create New Template**.
-2. On the **Create Configurable Bundle Template** page, enter a **NAME** for each locale.
-3. Click **Save**.
+1. Go to **Merchandising&nbsp;<span aria-label="and then">></span> Configurable Bundle Templates**.
+2. On the **Configurable Bundle Templates** page, click **Create New Template**.
+3. On the **Create Configurable Bundle Template** page, enter a **NAME** for each locale.
+4. Click **Save**.
     This refreshes the page with a success message displayed.
 
 ## Next steps

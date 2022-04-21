@@ -6,11 +6,11 @@ template: concept-topic-template
 
 The *Product Offer* entity is created when multiple merchants need to sell the same product on the Marketplace.
 
-Product offer is created per concrete product and contains product-specific information, information about the merchant selling this product, and the offer price. Any concrete product can have one or many offers from different merchants. Therefore, a unique *product offer reference* is defined per each product offer and is used to identify the offer in the system. Offer reference is mandatory and can only be defined once.
+A product offer is created per concrete product and contains product-specific information, information about the merchant selling this product, and the offer price. Any concrete product can have one or many offers from different merchants. Therefore, a unique *product offer reference* is defined per each product offer and is used to identify the offer in the system. Offer reference is mandatory and can only be defined once.
 
 Merchants can [create product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html#creating-a-product-offer) in the Merchant Portal or [import the product offers](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-offer.csv.html).
 
- Marketplace administrators can view and approve or deny merchants' product offers in the Back Office. See [Managing merchant product offers](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/offers/managing-merchant-product-offers.html) for details.
+ Marketplace administrators can view and approve or deny merchants' product offers in the Back Office. For details, see [Managing merchant product offers](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/offers/managing-merchant-product-offers.html).
 
  Every merchant can have multiple offers for the same concrete product. However, a product offer is related to a single merchant and cannot be shared between other merchants:
 
@@ -20,21 +20,21 @@ Merchants can [create product offers](/docs/marketplace/user/merchant-portal-use
 
 {% info_block infoBox "Note" %}
 
-You can retrieve product offer details via Glue API. See [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html) and [Retrieving product offers for a concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-product-offers-of-concrete-products.html) for details.
+You can retrieve product offer details via Glue API. For details, see [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html) and [Retrieving product offers for a concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-product-offers-of-concrete-products.html).
 
 {% endinfo_block %}
 
 ## Product offer structure
-To define visibility of a product offer on the Storefront, the following details are attached to the product offer entity:
+To define the visibility of a product offer on the Storefront, the following details are attached to the product offer entity:
 
 | OFFER PARAMETER      | DESCRIPTION           |
 | ------------------- | ----------------------------- |
 | Concrete product SKU | Defines the concrete product the offer is created for.       |
-| Merchant SKU         | Allows the merchant to identify the product offer in the ERP system. |
+| Merchant SKU         | Lets the merchant identify the product offer in the ERP system. |
 | Offer Reference      | Unique ID that helps to identify the product offer in the Marketplace. Offer reference is mandatory. |
 | Store                | Defines the store where the product offer is available.      |
-| Price                | Allows the merchant to set their price for the offer. {% info_block infoBox "Info" %} You can also set [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html) for a product offer. For now, you can only [import volume prices for product offers](/docs/marketplace/dev/data-import/{{page.version}}/file-details-price-product-offer.csv.html). {% endinfo_block %}      |
-| Stock                | Allows the merchant to define stock for the product offer. The stock can be reserved and available. |
+| Price                | Lets the merchant set their price for the offer. {% info_block infoBox "Info" %} You can also set [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html) for a product offer. For now, you can only [import volume prices for product offers](/docs/marketplace/dev/data-import/{{page.version}}/file-details-price-product-offer.csv.html). {% endinfo_block %}      |
+| Stock                | Lets the merchant define stock for the product offer. The stock can be reserved and available. |
 | Status               | Approval status: <ul><li>Approval status (Waiting for approval, Approved, Denied).</li><li>Visibility: Visibility (Active, Inactive).</li></ul> |
 | Validity Dates       | Specifies the period during which the product offer is visible on the Storefront. Concrete product validity dates have higher priority over the Offer validity dates. |
 
@@ -74,7 +74,7 @@ Merchants can define product offer prices in the Merchant Portal when they [crea
 
 ## Product offer stores
 
-Merchant product offer is defined per store. Merchants set their own prices per store for the product offer.
+A merchant product offer is defined per store. Merchants set their own prices per store for the product offer.
 However, defining the right store for the product offer affects its visibility. When setting the stores for the product offer, merchants need to pay attention to the stores where their abstract products are available.
 The following table illustrates the logic according to which the product offer is displayed in the Storefront.
 

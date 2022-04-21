@@ -36,7 +36,7 @@ related:
     link: docs/scos/dev/module-migration-guides/migration-guide-productmanagement.html
 ---
 
-## Upgrading from Version 5.* to Version 6.*
+## Upgrading from version 5.* to version 6.*
 
 This version defines connection between abstract products and stores, allowing users to manage abstract product appearance per store.
 
@@ -48,12 +48,15 @@ This version defines connection between abstract products and stores, allowing u
 6. Generate ORM models by running `vendor/bin/console propel:model:build`.
     This command will generate some new classes in your project under `\Orm\Zed\Product\Persistence` namespace.
     It is important to make sure that they extend the base classes from the Spryker core, e.g.:
+
     * `\Orm\Zed\Product\Persistence\SpyProductAbstractStore extends \Spryker\Zed\Product\Persistence\Propel\AbstractSpyProductAbstractStore`
     * `\Orm\Zed\Product\Persistence\SpyProductAbstractStoreQuery extends \Spryker\Zed\Product\Persistence\Propel\AbstractSpyProductAbstractStoreQuery`
+
 7. The newly created `spy_product_abstract_store` table defines 1 row per `abstract product-store` association. Populate this table according to your requirements.
 
 **Example data**
 Assumptions:
+
 * You have the following abstract products: AP1, AP2.
 * You have the following stores: S1, S2, S3.
 Then `spy_product_abstract_store` will have the following rows as association definition:
@@ -62,17 +65,23 @@ Then `spy_product_abstract_store` will have the following rows as association de
 | --- | --- |
 | AP1 | S1 |
 | AP1 | S2 |
-|AP1  | S3 |
-| AP2 |  S1|
-|AP2  | S2 |
-|  AP2|S3  |
+| AP1 | S3 |
+| AP2 | S1 |
+| AP2 | S2 |
+| AP2 | S3 |
 
 This example defines the data set as all abstract products are accessible in all of your stores. If you do not define or remove an association between AP1 and S2, then your AP1 abstract product and its concrete products will not be available in S2.
 
-**IMPORTANT**: even if you have 1 store, the associations between abstract products and stores have to be defined.
+{% info_block errorBox "IMPORTANT" %}
+
+Even if you have 1 store, the associations between abstract products and stores have to be defined.
+
+{% endinfo_block %}
 
 **Example migration query**
+
 To populate the new `spy_product_abstract_store` table to have all abstract products in all stores as an initial configuration, run the following query:
+
 ```sql
 PostgreSQL:
 INSERT INTO spy_product_abstract_store (id_product_abstract_store, fk_product_abstract, fk_store)
@@ -83,7 +92,7 @@ INSERT INTO spy_product_abstract_store (fk_product_abstract, fk_store)
   SELECT id_product_abstract, id_store FROM spy_product_abstract, spy_store;
  ```
 
-8. Product collector multi-store setup (if you have multi-stores
+8. Product collector multi-store setup (if you have multi-stores)
     1. Amend collector queries both for Search and Storage to include the information if the abstract product is available in the current store. You will need to `LEFT JOIN` the `spy_product_abstract_store` table to the selector queries on the abstract product and for the current store. Define the `spy_product_abstract_store.fk_store` column as `is_in_store` in the result (this name is a suggestion, feel free to choose an other name).
 
 **Explanation**
@@ -128,7 +137,7 @@ It is important to have the store matching condition inside the ON section of th
 
 The current store ID can be set through a new `storeTransfer` class property which is populated by the collector classes.
 
-2. Amend your Search and Storage collectors to make a decision on the newly created column if the abstract product should be stored or not. The `AbstractCollector::isStorable()` should return `true` when the abstract product is available in the current store and `false` when the abstract product is not available in the current store.
+9. Amend your Search and Storage collectors to make a decision on the newly created column if the abstract product should be stored or not. The `AbstractCollector::isStorable()` should return `true` when the abstract product is available in the current store and `false` when the abstract product is not available in the current store.
 
 **Example of implementation:**
 
@@ -158,16 +167,18 @@ class ProductCollector extends AbstractSearchPdoCollector
 
 Collectors should now be able to export abstract product data per store both for Storage and Search.
 
-9. `Facade/ProductToUrlInterface::hasUrl()` method is removed because it is not used within the module. Please check your code if you have customized calls to it.
-10. `ProductAbstractManager` internal class was amended to handle `abstract product-store` relation, take a look if you have customized it.
+10. `Facade/ProductToUrlInterface::hasUrl()` method is removed because it is not used within the module. Please check your code if you have customized calls to it.
+11. `ProductAbstractManager` internal class was amended to handle `abstract product-store` relation, take a look if you have customized it.
 
 Additionally you might want to update the Product Information Management (PIM) Zed Admin UI to manage abstract products and their store configuration. You can find further information about multi-store products here, and [Migration Guide - ProductManagement](/docs/scos/dev/module-migration-guides/migration-guide-productmanagement.html).
 
 Note: make sure that `ProductPriceQueryExpanderPlugin` is always registered before `FacetQueryExpanderPlugin` in your dependency provider plugin list definitions.
 Check out our Demoshop implementation for implementation example and idea.
 
-## Upgrading from Version 3.* to Version 4.*
-### 1. Database Migration
+## Upgrading from version 3.* to version 4.*
+
+### 1. Database migration
+
 `vendor/bin/console propel:diff`, also manual review is necessary for the generated migration file.
 `vendor/bin/console propel:migrate`
 `vendor/bin/console propel:model:build`, also need to change the parents of ALL generated classes to core, as the example shows below.
@@ -199,31 +210,31 @@ Remove the following Propel classes (from all namespaces) which were deleted fro
 * `SpyProductAttributeType` and `SpyProductAttributeTypeQuery`. The concept of common types for attributes was removed. We store attribute types now separately for each domain, for example, `SpyProductManagementAttribute` for PIM and `SpyProductSearchAttribute` for search filters.
 * `SpyProductAttributeTypeValue` and `SpyProductAttributeTypeValueQuery`.
 
-### 2. Major Class Changes
+### 2. Major class changes
 
 * `Spryker\Zed\Product\Communication\Plugin\Installer` plugin got removed. Please make sure to remove usages in your project from `Pyz\Zed\Installer\InstallerDependencyProvider`.
-* `Spryker\Zed\Product\Business\Attribute\AttributeManager` was removed. Use the `ProductFacade` from the `Product` module or `Spryker\Zed\Product\Business\Attribute\AttributeKeyManager` inside the `Product` moduleinstead.
+* `Spryker\Zed\Product\Business\Attribute\AttributeManager` was removed. Use the `ProductFacade` from the `Product` module or `Spryker\Zed\Product\Business\Attribute\AttributeKeyManager` inside the `Product` module instead.
 
-### 3. Major Transfer Changes
+### 3. Major transfer changes
 
-* ProductAbstractTransfer:
-    * productImagesSets renamed to imageSets.
-    * taxRate removed, use idTaxSet instead.
-* ProductConcreteTransfer:
-    * productImagesSets renamed to imageSets.
-    * productImageUrl removed, use imageSets instead.
-    * productAbstractSku renamed to abstractSku.
-    * idProductAbstract renamed to fkProductAbstract.
-    * name removed, use localizedAttributes.name instead.
-* ProductImageTransfer:
-    * sort renamed to sortOrder.
-    * idProductImageSetToProductImage removed.
+* `ProductAbstractTransfer`:
+    * `productImagesSets` are renamed to `imageSets`.
+    * `taxRate` are removed, use `idTaxSet` instead.
+* `ProductConcreteTransfer`:
+    * `productImagesSets` are renamed to `imageSets`.
+    * `productImageUrl` are removed, use `imageSets` instead.
+    * `productAbstractSku` is renamed to abstractSku.
+    * `idProductAbstract` is renamed to `fkProductAbstract`.
+    * `name` is removed, use `localizedAttributes.name` instead.
+* `ProductImageTransfer`:
+    * `sort` is renamed to `sortOrder`.
+    * `idProductImageSetToProductImage` is removed.
 
-### 4. Introduced Product Plugins
+### 4. Introduced product plugins
 Add product reader, creator and updater plugins in `Pyz\Zed\Product\ProductDependencyProvider`. The example below comes from the Spryker Demoshop and the used plugins are responsible for stock, price and image handling of the products. To hook in any of the read, create or update processes of abstract and concrete products you should use these extension points if the future.
 
 <details open>
-<summary markdown='span'>Code sample:</summary>
+<summary markdown='span'>Code sample</summary>
 
 ```php
 <?php
@@ -237,13 +248,11 @@ namespace Pyz\Zed\Product;
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Price\Communication\Plugin\ProductAbstract\PriceProductAbstractAfterCreatePlugin;
 use Spryker\Zed\Price\Communication\Plugin\ProductAbstract\PriceProductAbstractAfterUpdatePlugin;
-use Spryker\Zed\Price\Communication\Plugin\ProductAbstract\PriceProductAbstractReadPlugin;
 use Spryker\Zed\Price\Communication\Plugin\ProductConcrete\PriceProductConcreteAfterCreatePlugin;
 use Spryker\Zed\Price\Communication\Plugin\ProductConcrete\PriceProductConcreteAfterUpdatePlugin;
 use Spryker\Zed\Price\Communication\Plugin\ProductConcrete\PriceProductConcreteReadPlugin;
 use Spryker\Zed\ProductImage\Communication\Plugin\ProductAbstractAfterCreatePlugin as ImageSetProductAbstractAfterCreatePlugin;
 use Spryker\Zed\ProductImage\Communication\Plugin\ProductAbstractAfterUpdatePlugin as ImageSetProductAbstractAfterUpdatePlugin;
-use Spryker\Zed\ProductImage\Communication\Plugin\ProductAbstractReadPlugin as ImageSetProductAbstractReadPlugin;
 use Spryker\Zed\ProductImage\Communication\Plugin\ProductConcreteAfterCreatePlugin as ImageSetProductConcreteAfterCreatePlugin;
 use Spryker\Zed\ProductImage\Communication\Plugin\ProductConcreteAfterUpdatePlugin as ImageSetProductConcreteAfterUpdatePlugin;
 use Spryker\Zed\ProductImage\Communication\Plugin\ProductConcreteReadPlugin as ImageSetProductConcreteReadPlugin;
@@ -256,7 +265,6 @@ use Spryker\Zed\Stock\Communication\Plugin\ProductConcreteAfterUpdatePlugin as S
 use Spryker\Zed\Stock\Communication\Plugin\ProductConcreteReadPlugin as StockProductConcreteReadPlugin;
 use Spryker\Zed\TaxProductConnector\Communication\Plugin\TaxSetProductAbstractAfterCreatePlugin;
 use Spryker\Zed\TaxProductConnector\Communication\Plugin\TaxSetProductAbstractAfterUpdatePlugin;
-use Spryker\Zed\TaxProductConnector\Communication\Plugin\TaxSetProductAbstractReadPlugin;
 
 class ProductDependencyProvider extends SprykerProductDependencyProvider
 {
@@ -282,20 +290,6 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
             new ImageSetProductAbstractAfterCreatePlugin(),
             new TaxSetProductAbstractAfterCreatePlugin(),
             new PriceProductAbstractAfterCreatePlugin(),
-        ];
-    }
-
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Product\Dependency\Plugin\ProductAbstractPluginReadInterface[]
-     */
-    protected function getProductAbstractReadPlugins(Container $container)
-    {
-        return [
-            new ImageSetProductAbstractReadPlugin(),
-            new TaxSetProductAbstractReadPlugin(),
-            new PriceProductAbstractReadPlugin(),
         ];
     }
 
@@ -390,12 +384,12 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
 
 }
 ```
-
-<br>
 </details>
 
 ### 5. Troubleshooting
+
 For all other issues that you might encounter after migration, please refer to the Spryker Demoshop.
 
-## Upgrading from Version 2.* to Version 3.*
+## Upgrading from version 2.* to version 3.*
+
 The Product module does not provide the tax functionality anymore. Upgrade [Migration Guide - Tax](/docs/scos/dev/module-migration-guides/migration-guide-tax.html).

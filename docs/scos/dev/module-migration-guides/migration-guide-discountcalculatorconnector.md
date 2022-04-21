@@ -40,13 +40,13 @@ related:
     link: docs/scos/dev/module-migration-guides/migration-guide-discountsalesaggregatorconnector.html
 ---
 
-## Upgrading from Version 4.* to Version 5.*
+## Upgrading from version 4.* to version 5.*
 
 This module no longer has any calculator plugins, except  `DiscountCalculatorPlugin`. All other plugins were moved to the separate repository in `spryker/calculation-migration`.
 
 To learn how to migrate to the new structure see, the [Upgrading from version 3.* to version 4.*](/docs/scos/dev/module-migration-guides/migration-guide-calculation.html#upgrading-from-version-3-to-version-4) section in *Migration Guide - Calculation*.
 
-## Upgrading from Version 2.* to Version 3.*
+## Upgrading from version 2.* to version 3.*
 
 The tax plugins are using the version 3.* of the Tax module. See [Migration Guide - Tax](/docs/scos/dev/module-migration-guides/migration-guide-tax.html) for more details.
 

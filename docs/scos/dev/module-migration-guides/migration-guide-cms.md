@@ -111,7 +111,6 @@ The event behavior needs to be applied to all `SpyCmsPageStore columns`.
 On your local development environment, you may run:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

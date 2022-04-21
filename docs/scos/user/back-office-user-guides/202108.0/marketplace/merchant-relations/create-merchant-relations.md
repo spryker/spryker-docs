@@ -15,12 +15,14 @@ related:
     link: docs/scos/user/features/page.version/merchant-b2b-contracts-feature-overview.html
 ---
 
-This article describes how to manage merchant relations.
-To start working with merchant relations,
+This document describes how to create merchant relations in the Back Office.
 
 ## Prerequisites
 
-To be able to create a merchant relation, you need to have a fully set up company account in the **Company Account** section as the company data drives from there.
+1. [Create a merchant](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants/create-merchants.html).
+2. [Create a company](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-companies.html).
+3. Optional: [Create a product list](docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/creating-product-lists.html). It's needed to allow or deny a company access to certain products.
+4. Review the [reference information](#reference-information-edit-merchant-relations) before you start, or look up the necessary information as you go through the process.
 
 ## Create a merchant relation
 
@@ -34,14 +36,18 @@ To be able to create a merchant relation, you need to have a fully set up compan
 8. Optional: Enter and select one or more **ASSIGNED PRODUCT LISTS**.
 9. Click **Save**.
 
-The merchant is created and can be used to create merchant specific prices (see [Creating abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html) and [Creating a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/creating-product-variants.html) to know more). As well as they can be used to create merchant relationship thresholds (see [Managing merchant order thresholds](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-merchant-order-thresholds.html) for more details).
-
-## Reference information: Create merchant relations
+## Reference information: Create a merchant relation
 
 | ATTRIBUTE |DESCRIPTION  |
 | --- | --- |
-| MERCHANT |  |
-| COMPANY |  |
-| BUSINESS UNIT OWNER |  |
-| ASSIGNED BUSINESS UNITS |  |
-| ASSIGNED PRODUCT LISTS |  |
+| MERCHANT | A merchant that will be selling products to the company. |
+| COMPANY | A company that will be buying products from the merchant. |
+| BUSINESS UNIT OWNER | The business unit that has a contract with the merchant. |
+| ASSIGNED BUSINESS UNITS | The business units that will be ordering products from the merchant. |
+| ASSIGNED PRODUCT LISTS | Product lists to allow or deny the company access to. If you add an allowlist product list, only the product from the list will be available to the company. If you don't select any lists, the entire product catalog will be available to the company.  |
+
+
+## Next steps
+
+* Define merchant specific prices. For instructions, see [Creating abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html) and [Creating a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/creating-product-variants.html).
+* Define order thresholds for merchants. For instructions, see [Manage merchant order thresholds](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-merchant-order-thresholds.html).

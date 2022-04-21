@@ -27,58 +27,55 @@ To start managing company units, go to  **Customers&nbsp;<span aria-label="and t
 
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
-## Creating company business units
+## Create company business units
 
 To create a company business unit:
-1. In the top right corner of the *Overview of Company Business Units* page, click **Create Company Business Unit**.
-2. On the *Create Company Business Unit* page, populate all required information: select company from the drop-down list and enter the name of the business unit.
-*Parent*, *IBAN*, and *BIC* fields are optional and can be populated later.
-3. Click **Save**.
-    The new created business unit will appear in the _Company Business Units_ table on the *Company Units* page.
+1. In the top right corner of the **Company Units** page, click **Create Company Business Unit**.
+2. On the **Create Company Business Unit** page, select a **COMPANY**.
+3. Optional: Select a **PARENT**.
+4. Enter a **NAME**.
+5. Enter an **IBAN**.
+6. Enter a **BIC**.
+7. Click **Save**.
+    This opens the **Company Units** page. The created company business unit is displayed in the list.
 
-The business units can be managed by triggering certain actions in the _Actions_ column in the **Company Business Units** table. Specifically, business units can be **Edited** and **Deleted**.
-
-### Reference information: Creating company business units
-
-The following table describes the attributes you see, select, or enter while creating a company business unit.
-
-| ATTRIBUTE | DESCRIPTION  |
-| --- | --- |
-| Company | Drop-down list with the companies. On the *Create* page, all companies form the *Companies* section are available for selection. The company selected during the business unit creation cannot be changed. |
-| Parent | Parent business unit. The values available for selection depend on the selected companies. |
-| Name | Name of the business unit you create.|
-| IBAN |  International Bank Account Number. |
-|BIC| Bank Identifier Code. |
-
-## Editing business units
-
-To edit a business unit:
-1. Click **Edit** in the _Actions_ column if you want to change the details for a business unit such as Parent BU, Name, IBAN, and BIC.
-
-{% info_block infoBox "Info" %}
-
-Once the company business unit address is created, you can attach it to a business unit on the *Edit Company Business Unit* page. See [Managing company unit addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-unit-addresses.html) for more details.
-
-{% endinfo_block %}
-
-2. Once done, click **Save**.
-
-### Reference information: Editing business units
-
-The following table describes the attributes you see, select, or enter while editing a company business unit.
+### Reference information: Create company business units
 
 | ATTRIBUTE | DESCRIPTION  |
 | --- | --- |
-| Company | Company name. The field is not editable. |
-| Parent | Parent business unit. The values available for selection depends on the selected company. |
-| Name | Name of the business unit you create.|
+| COMPANY | A company to create the business unit for.  |
+| PARENT | A parent business unit for the business unit you are creating. |
+| NAME | Name of the business unit you create. |
 | IBAN |  International Bank Account Number. |
 |BIC| Bank Identifier Code. |
-| Addresses |This is a multi-select list that includes the values from the *Company Unit Addresses* section but only those assigned to a company, meaning the values available for selection are defined by the selected company.|
 
-## Deleting business units
+## Edit company business units
 
-If you want to delete an existing business unit, click **Delete** in the *Actions* column.
+1. Next to the business unit you want to edit, click **Edit**.
+2. Select a **PARENT**.
+3. Enter a **NAME**.
+4. Enter an **IBAN**.
+5. Enter a **BIC**.
+6. Enter and select **ADDRESSES**.
+7. Click **Save**.
+    This opens the **Company Units** page with a success message displayed.
 
-**What's next?**
-<br>You need to create a company unit address so that you can attach it to your business unit. See [Managing company unit addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-unit-addresses.html) for more details.
+### Reference information: Edit company business units
+
+| ATTRIBUTE | DESCRIPTION  |
+| --- | --- |
+| COMPANY | A company to create the business unit for.  |
+| PARENT | A parent business unit for the business unit you are creating. |
+| NAME | Name of the business unit you create. |
+| IBAN |  International Bank Account Number. |
+|BIC| Bank Identifier Code. |
+| Addresses | A company unit address to assign to this business unit. |
+
+## Delete company business units
+
+Next to the business unit you want to delete, click **Delete**.
+    This refreshes the page with a success message displayed. The business unit is no longer displayed in the list.
+
+## Next steps
+
+[Managing company unit addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-unit-addresses.html).

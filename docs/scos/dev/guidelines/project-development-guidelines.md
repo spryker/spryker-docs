@@ -40,7 +40,7 @@ Use custom names for everything that is added on the project level:
 - Cons
 - etc. 
 
-## Keep modules up to date during development
+## Keep modules up to date
 It is recomended to check for security updates for external and Spryker dependencies on the regular bases (during development and after go-live).
 It is recomended to keep modules up to date in general (at least during development).
  

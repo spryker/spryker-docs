@@ -39,6 +39,7 @@ Use custom names for everything that is added on the project level:
 - Properties,
 - Cons
 - etc. 
+You can use a project name as a prefix for everithing stated above.
 
 ## Keep modules up to date
 It is recomended to check for security updates for external and Spryker dependencies on the regular bases (during development and after go-live).

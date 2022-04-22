@@ -38,13 +38,13 @@ Review the reference information before you start, or look up the necessary info
 ## Creating a company role
 
 To create a new company role:
-1. On the *Overview of Company Roles* page, in the top right corner, click **Add Company User Role**.
-2. In the *Create role* pane, enter the required information:
-     * From the *Company* drop-down list, select a company.
-     * In the **Name** field, enter the name of the company role.
-3. Select **Is Default** to apply this role to all new company users automatically.
-4. In the *Unassigned Permissions* section, assign all permissions you need by selecting the checkboxes on the left of each value.
-5. Click **Save**.
+1. On the **Company Roles** page, in the top right corner, click **Add Company User Role**.
+2. On the **Create Company Role** page, select a **COMPANY**.
+3. Enter a **NAME**
+4. To automatically apply this role to every new user of the company, select **IS DEFAULT**.
+5. Optional: For **UNASSIGNED PERMISSIONS** section, select the permissions to assign to this role.
+6. Click **Save**.
+    This opens the **Company Roles** page with a success message displayed. The created role is displayed in the list.
 
 ## Editing a company role
 
@@ -63,6 +63,7 @@ To delete a company role:
 
    {% endinfo_block %}
 
-**What's next?**
+## Next steps
+
 <br>Once the role is created, you can proceed with creating a company user and assign the created role to it.
 See [Managing company users](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-users.html) to know how the company users are created and managed.

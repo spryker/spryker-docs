@@ -20,3 +20,18 @@ To edit a company unit address in the Back Office, do the following:
 12. Deassign labels by clicking **x** next to the labels you want to deassign.
 13. Click **Save**.
     This refreshes the page with a success message displayed.
+
+
+## Reference information: Edit company unit addresses
+
+| ATTRIBUTE | DESCRIPTION |
+| --- | --- |
+| COMPANY | A company this address is assigned to. |
+| COUNTRY | Country. |
+| CITY | City. |
+| ZIP CODE | Zip code. |
+| STREET | Street name. |
+| NUMBER | Building number. |
+| ADDITION TO ADDRESS | Any additional address information. |
+| COMMENT | A comment about the address. |
+| LABELS | Multi-select field with the labels for selection. |

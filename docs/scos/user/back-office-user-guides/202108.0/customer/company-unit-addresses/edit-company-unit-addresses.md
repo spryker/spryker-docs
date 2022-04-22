@@ -1,12 +1,22 @@
-## Edit a company unit address
+---
+title: Edit company unit addresses
+description: Learn how to edit company unit addresses in the Back Office.
+template: back-office-user-guide-template
+---
 
+To edit a company unit address in the Back Office, do the following:
 
-1. On the *Overview of Business Unit Addresses* page, in the *Actions* column, click **Edit Company Unit Address** if you want to change address details such as the Company the address belongs to, country, City, Zip Code, Street, Number of the building, Additional Information for the address, Comments, and Address labels.
-2. Click **Save**.
-
-Once the address is created, you can assign it to the business unit.
-To assign an address:
-1. Navigate to **Customers&nbsp;<span aria-label="and then">></span> Company Units** .
-2. On the *List of company business units* page,  in the _Actions_ column, click **Edit** for a business unit you want to update with an address.
-3. On the *Edit Company Business Unit* page, click the **Addresses** field. You can select from one to many values. The list of values available for selection is limited to those addresses assigned to the company the same as the business unit is assigned to.
-4. Click **Save**.
+1. Go to **Customers&nbsp;<span aria-label="and then">></span> Company Unit Addresses**.
+2. On the **Overview of Business Unit Addresses** page, next to the company unit address you want to edit, click **Edit Business Unit Address**
+3. On the **Edit Business Unit Address** page, select a **COMPANY**.
+4. Select a **COUNTRY**.
+5. Enter a **CITY**.
+6. Enter a **ZIP CODE**.
+7. Enter a **STREET**.
+8. Enter a **NUMBER**.
+9. Enter an **ADDITION TO ADDRESS**.
+10. Enter a **COMMENT**.
+11. Enter and select **LABELS**.
+12. Deassign labels by clicking **x** next to the labels you want to deassign.
+13. Click **Save**.
+    This refreshes the page with a success message displayed.

@@ -16,14 +16,12 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-units.html
 ---
 
-This describes how to create company unit addresses in the Back Office.
+This document describes how to create company unit addresses in the Back Office.
 
 ## Prerequisites
 
-
 * [Create a company](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/manage-companies.html)
 * Review the [reference information](#reference-information-create-a-company-unit-address) before you start, or look up the necessary information as you go through the process.
-3. To start working with company unit addresses,
 
 ## Create a company unit address
 
@@ -41,23 +39,22 @@ This describes how to create company unit addresses in the Back Office.
 12. Click **Save**.
 
 
-## Reference information
-
-The following table describes the attributes you see, select, or enter while creating or editing a company unit address.
+## Reference information: Create a company unit address
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| COMPANY | Drop-down list with the values from **Customers&nbsp;<span aria-label="and then">></span> Company**. |
-| COUNTRY | Drop-down list with the countries available for selection. |
-| CITY | Text field where you enter the city name. |
-| ZIP CODE | Text field where you enter the zip code value. |
-| STREET | Text field where you enter the street name. |
-| NUMBER | A text field where you enter the street number. |
-| ADDITION TO ADDRESS |Text field where you enter any additions to the address that you create.|
-|COMMENT|Text field where you enter any comment regarding the customer address.|
-|Labels| Multi-select field with the labels for selection.|
+| COMPANY | A company to assign this address to. To learn how to create a company, see [Create a company](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/manage-companies.html). |
+| COUNTRY | Country. |
+| CITY | City. |
+| ZIP CODE | Zip code. |
+| STREET | Street name. |
+| NUMBER | Building number. |
+| ADDITION TO ADDRESS | Any additional address information. |
+| COMMENT | A comment about the address. |
+| LABELS | Multi-select field with the labels for selection. |
 
 ## Next steps
 
-* [Managing company roles](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-roles.html)
-* [Managing company users](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-users.html) articles.
+* Assign the address to a company unit. For instructions see, [Edit company units](/docs/scos/user/back-office-user-guides/{{page.history}}/customer/company-units/edit-company-units.html)
+* [Manage company roles](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-roles.html)
+* [Manage company users](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-users.html)

@@ -27,7 +27,6 @@ redirect_from:
 {% info_block infoBox "Soft deprecation" %}
 
 Query containers are soft deprecated.
-It is recommended to use [Repository](/docs/scos/dev/back-end-development/zed/persistence-layer/repository.html) and [Entity Manager](/docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html) instead. 
 Previously Query Containers were used to cross module borders (via Dependency Providers), which led to higher module coupling and leaking of persistence layer from one domain object to another and therefore higher maintenance efforts and lower code reusability. This usage has been deprecated and is not recommended in project development.
 {% endinfo_block %}
 

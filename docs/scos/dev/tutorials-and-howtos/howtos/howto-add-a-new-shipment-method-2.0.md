@@ -28,17 +28,21 @@ related:
 ---
 
 {% info_block infoBox %}
+
 This article describes the steps to add a new shipment method, without integrating with the shipment provider.
+
 {% endinfo_block %}
 
 In this tutorial we’ll consider the case when you need to add a new shipment method, without the need to integrate it with the shipment providers system.
 
 What’s important for this situation is to have multi-currency prices attached to the shipment method and also to have the correct tax set linked to it. Also, the `ship` event should be manually triggerable from the Back Office.
 
-## Setting Up the State Machine
+## Setting up the state machine
 
 The state machine that handles orders that use this shipment method needs to use a manual event for shipping, so that it can be triggered from the Back Office.
-![Setting up State Machine](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+a+New+Shipment+Method+2.0/ship_event.png) 
+
+![Setting up State Machine](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+a+New+Shipment+Method+2.0/ship_event.png)
+
 The corresponding XML for this transition would be:
 
 ```xml
@@ -61,8 +65,9 @@ The corresponding XML for this transition would be:
 </events>
 ```
 
-## Adding a New Shipment Method
-**To add a new shipment method:**
+## Adding a new shipment method
+
+To add a new shipment method:
 
 1. In the Back Office, navigate to the **Shipment** section and click **Add new Carrier Company**.
 2. Specify a name for the carrier company and the corresponding glossary key for having a localized name.
@@ -71,7 +76,7 @@ The corresponding XML for this transition would be:
 
 Now that we have a new shipment carrier, we can add a new shipment method to it.
 
-**To add a new shipment method to a carrier:**
+To add a new shipment method to a carrier:
 
 1. Click **Add new Shipment Method**.
 You will be redirected to the _Add a new shipment method_ dialog.
@@ -82,7 +87,7 @@ You will be redirected to the _Add a new shipment method_ dialog.
 6. Click **Add Shipment Method**.
 ![Add shipment method ](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+a+New+Shipment+Method+2.0/ui_shipment_method_6.png) 
 
-The shipment methods with price are retrieved depending on your preconfigured price mode + current store and the currently selected currency.
+The shipment methods with price are retrieved depending on your pre-configured price mode + current store and the currently selected currency.
 
 Shipment methods might be excluded if their active flag is off, connected `AvailabilityPlugin` plugin excludes them, or it would have a price as NULL.
 

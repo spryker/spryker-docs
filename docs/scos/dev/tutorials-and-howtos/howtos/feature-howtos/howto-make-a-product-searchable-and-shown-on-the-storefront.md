@@ -28,7 +28,9 @@ related:
 ---
 
 {% info_block infoBox %}
+
 The article describes the flow on how to make a product searchable and displayed on the Storefront.
+
 {% endinfo_block %}
 
 There are a number of conditions that should be fulfilled to make your product searchable and shown on Yves by URL. What is important is to make sure that your product meets the following conditions:

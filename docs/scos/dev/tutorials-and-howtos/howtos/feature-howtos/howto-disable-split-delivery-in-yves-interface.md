@@ -26,8 +26,7 @@ Sometimes payment service providers do not support multiple shipments for the sa
 
 **To disable the feature for the Checkout process in Yves**, do the following:
 
- 1. Open the `\Pyz\Shared\Shipment\ShipmentConfig.php` file.
-
+1. Open the `\Pyz\Shared\Shipment\ShipmentConfig.php` file.
 2. Change the `isMultiShipmentSelectionEnabled()` to return false:
 
 ```php

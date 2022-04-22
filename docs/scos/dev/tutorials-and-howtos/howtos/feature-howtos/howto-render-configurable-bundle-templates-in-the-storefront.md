@@ -26,7 +26,8 @@ The configurable bundle functionality is implemented by 3 widgets:
 
 By adding these widgets to respective templates, you can render the Configurable Bundle Templates in the Storefront. Specifically, in the Cart, Checkout Summary, Order Details, and Quote Request pages. This article provides details on how to do that.
 
-## Rendering Configurable Bundle Templates on the Cart Page
+## Rendering Configurable Bundle Templates on the cart page
+
 To render a `configured bundle` product on the cart page, call `QuoteConfiguredBundleWidget`  in the cart page template (`CartPage/Theme/default/templates/page-layout-cart/page-layout-cart.twig`).
 
 **Code example that renders configured bundle product on the cart page**
@@ -60,8 +61,8 @@ To add comments to a `configured bundle` product, set up the `ConfiguredBundleNo
 {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 ```
 
-## Rendering Configurable Bundle Templates on the Checkout Summary Page
-##
+## Rendering Configurable Bundle Templates on the checkout summary page
+
 To render the  `configured bundle` product on the Checkout Summary page, call `QuoteConfiguredBundleWidget`  in the checkout summary page template (`CheckoutPage/Theme/default/views/summary/summary.twig`).
 
 **Code example that renders configured bundle product on the Checkout page, Summary step**
@@ -78,7 +79,7 @@ To render the  `configured bundle` product on the Checkout Summary page, call `Q
 
 If you set up `ConfiguredBundleNoteWidget` for your product, it will be called automatically in the `configured-bundle` molecule of the `QuoteConfiguredBundleWidget` (the same example as for the cart page). It is impossible to edit or remove comments for the configured bundle product on the checkout summary step. The customer can read comments which are editable on the cart page only.
 
-## Rendering Configurable Bundle Templates on the Order Details Page 
+## Rendering Configurable Bundle Templates on the order details page 
 
 To render the `configured bundle` product on the order details page, call `SalesConfiguredBundleWidget`  in the `order-detail-table` (`CustomerPage/Theme/default/components/molecules/order-detail-table/order-detail-table.twig`) molecule of the `CustomerReorderWidget`.
 
@@ -100,7 +101,8 @@ It’s not possible to edit or remove comments for the ordered configured bundle
 } only {% raw %}%}{% endraw %}
 ```
 
-## Rendering Configurable Bundle Templates on the Quote Request Pages
+## Rendering Configurable Bundle Templates on the quote request pages
+
 Rendering `configured bundle` products on the Quote Request pages is implemented by calling `QuoteConfiguredBundleWidget` inside the *view* of a special quote request page.
 
 **Code example which renders configured bundle product on the Quote Request page**

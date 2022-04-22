@@ -44,6 +44,7 @@ $facade-&gt;deleteTranslation($keyName,$locale);
 ```
 
 ## Retrieving glossary keys
+
 The support for listing the glossary keys is exposed through `GlossaryBusinessContainer`:
 
 ```php
@@ -55,7 +56,9 @@ $grid = $this-&gt;getFactory()-&gt;createGlossaryKeyTranslationGrid($request);
 * `createGlossaryKeyTranslationGrid()` queries the database for the list of glossary keys for each of the supported languages.
 
 {% info_block warningBox "Removing locales from configuration" %}
+
 If a locale is removed from configuration, the glossary keys for the locale are not retrieved from the database, even if they exist.
+
 {% endinfo_block %}
 
 ### Configuring locales
@@ -68,6 +71,7 @@ Locales are configured in `config/Shared/stores.php` as follows:
 ```
 
 ## Using glossary keys
+
 On the Storefront, you can use glossary keys to translate rendered content. The following examples shows how to do it using a dedicated extension for the Twig template engine:
 
 ```xml

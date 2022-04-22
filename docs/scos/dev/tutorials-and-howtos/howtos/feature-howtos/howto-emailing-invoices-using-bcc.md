@@ -14,7 +14,7 @@ redirect_from:
   - /v6/docs/en/howto-emailing-invoices-using-bcc
 ---
 
-Every time you generate an[ invoice for your customer’s orders](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/invoice-generation-overview.html), it is sent to the customer’s email address. If you also need a copy of the invoice, you can include yourself or your employees to BCC recipients of the emails with the invoices. Since the copy is hidden, when customers receive the email, they do not see other recipients' email addresses.
+Every time you generate an [invoice for your customer’s orders](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/invoice-generation-overview.html), it is sent to the customer’s email address. If you also need a copy of the invoice, you can include yourself or your employees to BCC recipients of the emails with the invoices. Since the copy is hidden, when customers receive the email, they do not see other recipients' email addresses.
 
 {% info_block infoBox "Info" %}
 
@@ -41,12 +41,14 @@ namespace Pyz\Zed\SalesInvoice;
 
 When configured, this method sends a hidden copy of each invoice to the specified email address.
 
-You can also force sending the additional copies of all generated invoices to customer’s email and to the email addresses specified in the `getOrderInoiceBCC()` method. To achieve this, run the command:
+You can also force sending the additional copies of all generated invoices to customer’s email and to the email addresses specified in the `getOrderInvoiceBCC()` method. To achieve this, run the command:
+
 ```bash
 console order:invoice --force
 ```
 
 If you want to send the additional copies for not all, but for specific orders only, specify the order ID after the `force` flag. For example, if you want to receive an additional copy of the invoice for order 1, your command will look like this:
+
 ```bash
 console order:invoice --force 1
 ```

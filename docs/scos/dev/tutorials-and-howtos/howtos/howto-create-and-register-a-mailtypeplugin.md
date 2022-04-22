@@ -25,10 +25,13 @@ redirect_from:
 ---
 
 {% info_block infoBox %}
+
 This HowTo describes how to create and register a mail provider you want to use.
+
 {% endinfo_block %}
 
 ## Creating a MailTypePlugin
+
 MailType is a class used to build the entire `MailTransfer` through an easy-to-use interface. Create the `MailTypePlugin` within the Mail module which would send out the emails and implement `MailTypePluginInterface`. Then, just set up your email in the `build()` method.
 
 Within the `build()` method you have access to the `MailBuilderInterface`, which makes it easy to enrich the `MailTransfer` with the information needed to send out the emails. You also have access to the `MailTransfer` itself through the `MailBuilderInterface`. This one, for example, is used to get the recipient information from a given transfer object.
@@ -78,6 +81,7 @@ class YourMailTypePlugin extends AbstractPlugin implements MailTypePluginInterfa
 ```
 
 ## Registering a MailTypePlugin
+
 To add your `MailType` to the `MailTypeCollection`, add it to your `MailDependencyProvider`:
 
 ```php

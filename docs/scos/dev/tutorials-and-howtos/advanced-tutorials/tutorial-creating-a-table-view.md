@@ -32,7 +32,8 @@ This tutorial explains how to retrieve data from the database and render it in a
 
 * You have created a new [module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html).
 
-## Creating a Table
+## Creating a table
+
 Create the `ProductTable` class under the `src/Pyz/Zed/HelloWorld/Communication/Table` folder:
 
 **Code sample:**
@@ -101,7 +102,8 @@ class ProductTable extends AbstractTable
 }
 ```
 
-## Creating a Factory
+## Creating a factory
+
 The factory should be placed in the communication layer and should contain a method that returns an instance of the `ProductTable` class. Add the method that constructs the instance of the `ProductTable` class:
 
 ```php
@@ -133,9 +135,9 @@ class HelloWorldCommunicationFactory extends AbstractCommunicationFactory
 }
 ```
 
-## Adding a Controller Action that Renders the Table
+## Adding a Controller action that renders the table
 
-**Code sample:**
+**Code sample**
 
 ```php
 <?php
@@ -183,7 +185,8 @@ The `tableAction()` will be called by a jQuery Plugin ([Datatables](https://data
 
 {% endinfo_block %}
 
-## Creating the Twig Template
+## Creating the twig template
+
 Add the products variable to `Pyz/Zed/HelloWorld/Presentation/Index/index.twig` to render the table containing the list of products.
 
 ```php
@@ -203,6 +206,7 @@ Add the products variable to `Pyz/Zed/HelloWorld/Presentation/Index/index.twig` 
 
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
+
 Run the `vendor/bin/console router:cache:warm-up` command.
 
 This is all! To see the table you created, go to `https://zed.mysprykershop.com/hello-world`. You will be able to see the products listed in the table.

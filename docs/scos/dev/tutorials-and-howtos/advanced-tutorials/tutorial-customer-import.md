@@ -29,12 +29,13 @@ This tutorial describes the steps you need to follow to extend the `Installer` m
 
 In this example, we’ll import customer data; of course you can update the code in this tutorial to fit your need.
 
-## Implementing Customer Installer
+## Implementing customer installer
+
 Create the `CustomerInstaller` class under the `src/Pyz/Zed/Customer/Business/Installer/` folder.
 
 Place the following code in the `CustomerInstaller` class:
 
-**Code sample:**
+**Code sample**
 
 ```php
 <?php
@@ -99,7 +100,7 @@ class CustomerInstaller implements CustomerInstallerInterface
 }
 ```
 
-**Interface:**
+**Interface**
 
 ```php
 <?php
@@ -115,7 +116,8 @@ interface CustomerInstallerInterface
 }
 ```
 
-## Adding a method to Facade
+## Adding a method to facade
+
 In the `CustomerFacade`, add a method that calls a new customer installer.
 
 To override the facade, create `CustomerFacade` under the `Pyz\Zed\Customer\Business` folder:
@@ -171,7 +173,8 @@ class CustomerBusinessFactory extends SprykerCustomerBusinessFactory
 }
 ```
 
-## Creating the Installer plugin
+## Creating the installer plugin
+
 Create the `CustomerInstallerPlugin` installer plugin  which implements `InstallerPluginInterface` under  `Pyz\Zed\Customer\Communication\Plugin\Installer`:
 
 ```php
@@ -201,7 +204,8 @@ class CustomerInstallerPlugin extends AbstractPlugin implements InstallerPluginI
 }
 ```
 
-## Registering the New Data Installer Plugin
+## Registering the new data installer plugin
+
 Now, we’re almost ready to test the new data installer; we just need to register it in `InstallerDependencyProvider`:
 
 ```php

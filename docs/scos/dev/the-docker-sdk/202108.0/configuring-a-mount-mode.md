@@ -92,6 +92,7 @@ docker/sdk boot
 6. Follow the installation instructions displayed in the grey block of the output of the command you have run in the previous step.
 
 7. Build and run Spryker application based on demo data:
+8. 
 ```bash
 docker/sdk up --build --data --assets
 ```
@@ -145,11 +146,15 @@ To configure docker-sync mount mode on Windows with Windows Subsystem for Linux 
 2. [Enable WSL1](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
 
 3. In WSL, install the latest version of Docker:
+
     1. Update packages to the latest versions:
-     ```bash
+
+    ```bash
     sudo apt-get update
     ```
+
     2. Install the following packages to allow apt to access repositories via HTTPS:
+    
     ```bash
     sudo apt-get install \
     apt-transport-https \
@@ -158,24 +163,31 @@ To configure docker-sync mount mode on Windows with Windows Subsystem for Linux 
     gnupg-agent \
     software-properties-common
     ```
+
     3. Add Docker's official GNU Privacy Guard key:
+
     ```bash
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
     ```
+
     4. Set up a stable repository:
+
     ```bash
     sudo add-apt-repository \
     "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
     $(lsb_release -cs) \
     stable"
     ```
-    5. Install the latest version of Docker Communitiy Edition:
+
+    5. Install the latest version of Docker Community Edition:
+    
     ```bash
     sudo apt-get install docker-ce docker-ce-cli containerd.io
     ```
-4. Install Docker Compose:
-    1. Check the latest stable [release of Docker Compose](https://github.com/docker/compose/releases).
 
+4. Install Docker Compose:
+
+    1. Check the latest stable [release of Docker Compose](https://github.com/docker/compose/releases).
     2. Download Docker Compose:
 
     {% info_block infoBox "Docker Compose version" %}
@@ -189,54 +201,64 @@ To configure docker-sync mount mode on Windows with Windows Subsystem for Linux 
     ```
 
     3. Apply executable permissions to the binary:
+
     ```bash
     sudo chmod +x /usr/local/bin/docker-compose
     ```
 
 5. Install docker-sync:
+
     1. Install ruby and ruby-dev:
+
     ```bash
     sudo apt-get install ruby ruby-dev
     ```
 
     2. Install docker-sync:
+
     ```bash
     sudo gem install docker-sync
     ```
+
 6. Set your Docker for Windows host as an environment variable:
 
     1. In Docker for Windows settings, select **Expose daemon on tcp://localhost:2375 without TLS**.
-
     2. To update the profile with the environment variable, in your WSL shell, run the command:
+    
     ```bash
     echo "export DOCKER_HOST=tcp://127.0.0.1:2375" >> ~/.bashrc
     ```
 
 7. Compile and install OCaml:
+
     1. Install the build script:
+
     ```bash
     sudo apt-get install build-essential make
     ```
 
     2. Check the latest compatible [OCaml release](https://github.com/ocaml/ocaml/releases).
     In the next steps, replace `{ocaml-version}` in command parameters with the version you choose.
-
     3. Download the OCaml archive:
+
     ```bash
     wget http://caml.inria.fr/pub/distrib/ocaml-{ocaml-version}/ocaml-{ocaml-version}.tar.gz
     ```
 
     4. Extract the archive:
+
     ```bash
     tar xvf ocaml-{ocaml-version}.tar.gz
     ```
 
     5. Change the directory:
+
     ```bash
     cd ocaml-{ocaml-version}
     ```
 
     6. Configure and compile OCaml:
+
     ```bash
     ./configure
     make world
@@ -245,6 +267,7 @@ To configure docker-sync mount mode on Windows with Windows Subsystem for Linux 
     ```
 
     7. Install OCaml and clean:
+
     ```bash
     sudo make install
     sudo make clean
@@ -254,23 +277,26 @@ To configure docker-sync mount mode on Windows with Windows Subsystem for Linux 
 
     1. Check the latest [release of Unison](https://github.com/bcpierce00/unison/releases).
     In the next steps, replace `{unison-version}` in command parameters with the version you choose.
-
     2. Download the Unison archive:
+
     ```bash
     wget https://github.com/bcpierce00/unison/archive/{unison-version}.tar.gz
     ```
 
     3. Extract the archive:
+
     ```bash
     tar xvf {unison-version}.tar.gz
     ```
 
     4. Change the directory:
+
     ```bash
     cd unison-{unison-version}
     ```
 
     5. Compile and install Unison:
+
     ```bash
     make UISTYLE=text
     sudo cp src/unison /usr/local/bin/unison
@@ -278,6 +304,7 @@ To configure docker-sync mount mode on Windows with Windows Subsystem for Linux 
     ```
 
 9. Adjust the `mount:` section of `deploy.local.yml` as follows:
+
 ```yaml
 docker:
 ...
@@ -288,6 +315,7 @@ docker:
 ```
 
 10. Bootstrap the Docker SDK:
+
 ```bash
 docker/sdk boot
 ```
@@ -295,6 +323,7 @@ docker/sdk boot
 11. Follow the installation instructions displayed in the grey block of the output of the command you have run in the previous step.
 
 12. Build and run Spryker application based on demo data:
+
 ```bash
 docker/sdk up --build --data --assets
 ```
@@ -304,17 +333,18 @@ docker/sdk up --build --data --assets
 To configure native mount mode for Windows with Windows Subsystem for Linux 2 (WSL2):
 
 1. [Download and install Docker Desktop Stable](https://docs.docker.com/docker-for-windows/install/) 2.3.0.2 or higher.
-
 2. [Enable WSL2](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
 
 3. In WSL, install Docker:
 
     1. Update packages to the latest version:
+
      ```bash
      sudo apt-get update
      ```
 
     2. Install packages to allow apt to access repositories via HTTPS:
+
       ```bash
       sudo apt-get install \
       apt-transport-https \
@@ -325,11 +355,13 @@ To configure native mount mode for Windows with Windows Subsystem for Linux 2 (W
       ```
 
     3. Add Docker's official GNU Privacy Guard key:
+
       ```bash
       curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
       ```
 
     4. Set up a stable repository:
+
       ```bash
       sudo add-apt-repository \
       "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
@@ -338,6 +370,7 @@ To configure native mount mode for Windows with Windows Subsystem for Linux 2 (W
       ```
 
     5. Install the latest version of Docker Community Edition:
+
       ```bash
       sudo apt-get install docker-ce docker-ce-cli containerd.io
       ```
@@ -345,7 +378,6 @@ To configure native mount mode for Windows with Windows Subsystem for Linux 2 (W
 4. Install Docker Compose:
 
     1. Check the latest stable [release of Docker Compose](https://github.com/docker/compose/releases).
-
     2. Download Docker Compose:
 
     {% info_block infoBox "Docker Compose version" %}
@@ -359,11 +391,13 @@ To configure native mount mode for Windows with Windows Subsystem for Linux 2 (W
     ```
 
     3. Apply executable permissions to the binary:
+
     ```bash
     sudo chmod +x /usr/local/bin/docker-compose
     ```
 
 5. Bootstrap the Docker SDK:
+
 ```bash
 docker/sdk boot
 ```
@@ -371,6 +405,7 @@ docker/sdk boot
 6. Follow the installation instructions displayed in the grey block of the output of the command you have run in the previous step.
 
 7. Build and run Spryker application based on demo data.
+
 ```bash
 docker/sdk up --build --data --assets
 ```

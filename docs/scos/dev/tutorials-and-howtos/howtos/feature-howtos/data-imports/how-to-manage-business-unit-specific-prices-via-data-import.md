@@ -29,9 +29,11 @@ To assign special product prices to merchants, you can do the following:
 
 1. In the `merchant_relationship.csv` file, define the merchant relation keys. For details, see the [example in the Spryker B2B Demo Shop](https://github.com/spryker-shop/b2b-demo-shop/blob/master/data/import/common/common/merchant_relationship.csv).
 2. To import merchant relations, run
-   ```
-   console data:import merchant-relationship
-   ```
+   
+```bash
+console data:import merchant-relationship
+```
+
 3. For each merchant relationship, create separate data import CSV files. For example, you can have a file `price-product-merchant-relationship-mr001.csv`, where `mr001` is the merchant relation key you defined in the previous step. In this file, you specify product prices for this specific merchant.
 4. Then, you can do one of the following:
    - Set specific default prices for this merchant manually.
@@ -43,6 +45,7 @@ For example, if the percentage of discount for a merchant is 20%, the script gen
 This approach is optimal for big amount of data. However, its main drawback is that you need some development effort and that the script runs and processes data outside of the Spryker platform.
 
 5. To import product prices for merchant relations, run
-   ```
-   console data:import product-price-merchant-relationship
-   ```
+   
+```bash
+console data:import product-price-merchant-relationship
+```

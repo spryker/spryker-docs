@@ -25,8 +25,6 @@ In case your project requires more, you can redefine field size in `spy_cms_vers
 
 For example, place the following into `src/Pyz/Zed/Cms/Persistence/Propel/Schema/spy_cms.schema.xml`:
 
-{% endinfo_block %}
-
 ```xml
 <div code="xml">
 	<?xml version="1.0"?>
@@ -37,3 +35,4 @@ For example, place the following into `src/Pyz/Zed/Cms/Persistence/Propel/Schema
 	</database>
 </div>
 ```
+{% endinfo_block %}

@@ -14,12 +14,13 @@ redirect_from:
 After placing an order, the cart can either be deleted or saved. If you configure carts to be saved, after placing an order, the cart is duplicated, and the customer can access it. 
 
 To define this behavior, in `CheckoutPageConfig`, set `cleanCartAfterOrderCreation()` to one of the following:
+
 * `true`: after placing an order, the cart is deleted.
 * `false`: after placing an order, the cart is saved. 
 
 **Pyz\Shared\CheckoutPage\CheckoutPageConfig**
    
-```
+```php
     /**
      * @api
      *

@@ -31,6 +31,7 @@ In this article, you will learn how to map API resources to *Customer Access Fea
 {% info_block infoBox %}
 
 *Customer Access Feature* items available out of the box are mapped to API resource types by default. The corresponding resource types are:
+
 * **price** - `abstract-product-prices` and `concrete-product-prices`;
 * **add-to-cart** - `guest-cart-items`;
 * **wishlist** - `wishlists` and `wishlist-items`;
@@ -41,7 +42,7 @@ In this article, you will learn how to map API resources to *Customer Access Fea
 1. To define the mapping of API resource types to content types, open or create file `src/Pyz/Glue/CustomerAccessRestApi/CustomerAccessRestApiConfig.php`.
 
 2. The file contains the `CustomerAccessRestApiConfig::CUSTOMER_ACCESS_CONTENT_TYPE_TO_RESOURCE_TYPE_MAPPING` array, where each entry specifies a mapping of a *Customer Access Feature* item to the corresponding API resource type(s).
-For example, in the following code block, item **can place an order** is mapped to **2** resource types: *checkout* and *checkout-data*:
+    For example, in the following code block, item **can place an order** is mapped to **2** resource types: *checkout* and *checkout-data*:
 
    ```php
    <?php

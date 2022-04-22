@@ -28,7 +28,8 @@ A console command is a PHP class that contains the implementation of a functiona
 
 Spryker offers a wrapper over Symfony’s Console component that makes the implementation and configuration of a console command easier.
 
-## Implementing a New Console Command
+## Implementing a new Console command
+
 To exemplify how to implement and use a console command, we’ll build a console command that refreshes the application cache and clears folder for generated files. The `UpdateApplicationConsole` will run the following commands in one step:
 
 ```bash

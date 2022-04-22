@@ -35,9 +35,10 @@ To implement a Twig extension, you have to do the following:
 Read on to learn how you can do this.
 
 ## Implement the filter
+
 To implement the filter, add the logic to a dedicated class in the module you’re currently working on:
 
-**Code sample:**
+**Code sample**
 
 ```php
 <?php
@@ -73,7 +74,7 @@ class PriceFilter
 }
 ```
 
-**Code sample:**
+**Code sample**
 
 ```php
 <?php
@@ -95,7 +96,7 @@ class ServiceFactory extends AbstractServiceFactory
 }
 ```
 
-**Code sample:**
+**Code sample**
 
 ```php
 <?php
@@ -117,9 +118,10 @@ class PriceFilterService extends AbstractService implements PriceFilterServiceIn
 ```
 
 ## Add the Twig extension
+
 Having implemented the filter, you have to add the Twig extension. To do so, create a class that extends the `AbstractTwigExtensionPlugin` class and calls the logic implemented in the class mentioned above.
 
-**Code sample:**
+**Code sample**
 
 ```php
 <?php
@@ -153,6 +155,7 @@ class ExampleTwigExtensionPlugin extends AbstractTwigExtensionPlugin
 ```
 
 ## Register the Twig extension you created
+
 To be able to use the extension from the Twig templates, the extension must be registered in the `getTwigExtensions()` method from the `TwigDependencyProvider` class. See [Defining the module dependencies: Dependency Provider](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/defining-the-module-dependencies-dependency-provider.html) for information on the dependency providers.
 
 First, add a reference to the Twig extension in `TwigDependencyProvider.php`:
@@ -168,9 +171,10 @@ protected function getTwigPlugins(Application $app): array
         new ExampleTwigExtensionPlugin(),
     ];
 }
+```
 
+## Test the Twig extension
 
-## Test the Twig Extension
 Now, the Twig extension is ready to be used in the Twig templates.
 
 ```json

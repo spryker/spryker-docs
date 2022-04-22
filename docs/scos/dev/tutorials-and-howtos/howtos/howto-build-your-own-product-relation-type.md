@@ -24,13 +24,17 @@ redirect_from:
 ---
 
 {% info_block infoBox %}
+
 This tutorial provides step-by-step instruction for the process of building your own product relation type.
+
 {% endinfo_block %}
 
 These instructions are related to Yves and Zed, so both applications should be updated accordingly in order to allow your product relation type.
 
 ## Zed
+
 To modify Zed, do the following:
+
 1. Create new relation type in `\Spryker\Shared\ProductRelation\ProductRelationTypes` as a new constant type.
 
 {% info_block infoBox "For example:" %}
@@ -66,10 +70,10 @@ class RelationNewDataProvider implements ProductRelationDataProviderInterface
      return ProductRelationTypes::TYPE_RELATION_NEW; //this is the type which is mapped when rendering twig function, first argument.
    }  
 }
-
 ```
 
 ## Yves
+
 By default, the demoshop provides a carousel type javascript component which renders related products.
 This component can be added with a twig product_relation(type, parameters, title, templatePath) function.
 
@@ -77,14 +81,14 @@ The type is a string which maps to a specific data provider and provides custom 
 
 It accepts the following arguments:
 
-| Argument name | Transcription |
+| ARGUMENT NAME | TRANSCRIPTION |
 | --- | --- |
 | `type` | <ul><li>Is the type which is defined in `\Spryker\Shared\ProductRelation\ProductRelationTypes`</li><li>String value (related-products, up-selling).</li></ul> |
 | `parameter` | <ul><li>Is the parameter for the selected relation type</li><li>This value defers depending on the selected relation types</li></ul> |
 | `title` | Is the title displayed in the carousel component. |
 | `templatePath` | Is the path to the template for rendering the carousel component.<br>For example: `@ProductRelation/partial/product_relation_carousel.twig`. |
 
-Each type has a data provider. This data provider reads data from redis and sends it to the template.
+Each type has a data provider. This data provider reads data from Redis and sends it to the template.
 
 {% info_block warningBox %}
 

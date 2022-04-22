@@ -19,12 +19,12 @@ If you need another type of content to display in CMS page/bock content or even 
 You can:
 
 * Introduce a new entity with all the properties required by your project. See `ContentBanner` and `ContentBannerGui` modules  for examples.
-
 * Use an entity that already exists in your shop database, like Location, Partner or Employee. See `ContentProduct` and `ContentProductGui` modules for examples.
 
 To create a new custom content item, implement the following plugins in the order they are described.
 
-## Content Form Plugin
+## Content form plugin
+
 Open `\Pyz\Zed\ContentGui\ContentGuiDependencyProvider::getContentPlugins()` to check the existing content form plugins.
 
 {% info_block infoBox %}
@@ -36,17 +36,15 @@ Such plugins implement `\Spryker\Zed\ContentGuiExtension\Dependency\Plugin\Conte
 ***
 
 To create a new content form plugin:
+
 1. Create a module for the new content type, e. g. `src/Zed/ContentFooGui` with a plugin inside. Find the description of plugin methods below:
 
 * `getTypeKey()` - returns a string with the name of your content item, e. g. Foo.
-
 * `getTermKey()` - returns a string displaying the term for this content type in database, e.g. `Foo`, `Foo List` or `Foo Query`. In database, a content type can have different term representations. Correspondingly, there are different ways of getting information about content. For example:
     * `Foo List` - product list IDs
     * `Foo Query` - product query as part of SQL/ElasticSearch query.
-
     This value will be displayed in the Back Office > **Content Management** > **Content Items** section.
 * `getForm()` - a form class name with a namespace which should be displayed in the *Content create* or *Content edit* pages.
-
 * `getTransferObject()` - maps form data to a content term transfer object, e. g. `ContentFooTermTransfer`.
 
 ```php
@@ -102,7 +100,8 @@ class ContentFooFormPlugin extends AbstractPlugin implements ContentPluginInterf
     }
 }
 ```
-  2. Create `ContentFooTermForm`. The main part of the plugin is the `Form` class that implements `\Symfony\Component\Form\FormBuilderInterface`. See:
+
+2. Create `ContentFooTermForm`. The main part of the plugin is the `Form` class that implements `\Symfony\Component\Form\FormBuilderInterface`. See:
 
 * [Forms](https://symfony.com/doc/current/forms.html) for more information about Symfony forms.
 * [Creating Forms](/docs/scos/dev/back-end-development/forms/creating-forms.html) to learn about form creation procedure in Spryker.
@@ -175,16 +174,17 @@ After enabling the plugin, make sure there is the new content item in Back Offic
 
 {% endinfo_block %}
 
-## Twig Plugin
+## Twig plugin
+
 After enabling the content form plugin, you will have your new content item data in Storage. To fetch the item data from Storage, use `\Spryker\Client\ContentStorage\ContentStorageClientInterface::findContentTypeContextByKey(string $contentKey, string $localeName)`.
 
 * `$contentKey` is generated automatically after content saving.
-
 * `$localeName` is an automatically provided locale by current Store.
 
 The method returns `ContentTypeContextTransfer` where `ContentTypeContextTransfer::$parameters` is the data saved by the form created in the previous section.
 
 ***
+
 To create a new Twig plugin:
 
 1. Using `ContentTypeContextTransfer::$term` and `ContentTypeContextTransfer::$parameters`, fill in the properties of your new content transfer object, e.g. `ContentFooTransfer`, in `src/Shared/ContentFoo/Transfer/`.
@@ -207,20 +207,19 @@ Optionally, you can add the `$templateIdentifier` parameter, e.g. `function (str
 
 Now you can use your plugin as a function in Twig files. If you’ve named your plugin `content_foo`, in a Twig file, the function will look like `{% raw %}{{{% endraw %} content_foo('content-key', 'big-header') {% raw %}}}{% endraw %}`.
 
-## WYSIWYG Editor Plugin
+## WYSIWYG editor plugin
 
 *CMS Block Glossary Edit* and *Placeholder Edit* pages contains WYSIWYG editor to put content into CMS block or page.  The **Content Item** drop-down menu in the WYSIWYG toolbar contains all the content items which you can add. See [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/back-office-user-guides/{{site.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html) for more details.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Feature+HowTos/HowTo+-+Create+a+New+Custom+Content+Item/content-item-menu.png)
 
 ***
+
 To add the new content item to that list, in `src/Zed/ContentFooGui`, implement a new plugin using `\Spryker\Zed\ContentGuiExtension\Dependency\Plugin\ContentGuiEditorPluginInterface`, e. g.  `ContentFooContentGuiEditorPlugin`.
 You can find the method descriptions below:
 
 * `getType()` returns a string displaying the content type, e.g. Foo.
-
 * `getTemplates()` returns an array of templates supported by your Twig plugin created in the previous section. If there are no supported templates defined, returns an empty array.
-
 * `getTwigFunctionTemplate()` returns a Twig expression that will be added into the content.
 
 ```php
@@ -267,5 +266,4 @@ class ContentFooContentGuiEditorPlugin extends AbstractPlugin implements Content
         return "{% raw %}{{{% endraw %} content_foo('%KEY%', '%TEMPLATE%') {% raw %}}}{% endraw %}";
     }
 }
-
 ```

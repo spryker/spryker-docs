@@ -28,7 +28,7 @@ The HowTo guide provides steps on how to:
 * activate a discount rule based on a shipment carrier, a shipment method or a shipment price.
 * add a shipment pre-check plugin to checkout
 
-## Activate a Discount Rule Based on a Shipment Carrier
+## Activate a discount rule based on a shipment carrier
 
 It is possible to create a discount rule based on a shipment carrier, a shipment method or a shipment price.
 
@@ -88,7 +88,7 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 
 You are ready to use the shipment discounts.
 
-## Checkout Shipment Pre-Check Plugin
+## Checkout shipment pre-check plugin
 
 You can add shipment pre-check plugin to checkout workflow, which will check if the shipment is active in order placing. If it's not - then error message will be displayed and customer will get redirected to the shipment step to select another shipment method.
 

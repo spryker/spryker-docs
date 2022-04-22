@@ -37,7 +37,7 @@ There are only few things need to do to implement any business processes based o
 
 ## Schema creation
 
-Customer Approve Process Database Schema
+**Customer approve process database schema**
 
 ```php
 <table name="pyz_customer_approve_process_item">
@@ -65,9 +65,10 @@ Customer Approve Process Database Schema
 We have added several foreign keys including foreign key to the `spy_customer` table.
 
 ## CRUD implementation
+
 We will need few operations for managing customer approve process:
 
-CustomerApproveProcessFacadeInterface
+**CustomerApproveProcessFacadeInterface**
 
 ```php
 <?php
@@ -128,9 +129,9 @@ interface CustomerApproveProcessFacadeInterface
 This is all you need to implement in the business layer.
 `CustomerApproveProcessItemTransfer` was implemented to keep all the data in one place for further usage.
 
-transfer.xml
+**transfer.xml**
 
-```html
+```xml
 <transfer name="CustomerApproveProcessItem">
     <property name="idCustomerApproveProcessItem" type="int"/>
     <property name="idCustomer" type="int"/>
@@ -142,7 +143,8 @@ transfer.xml
 ```
 
 ## StateMachineHandlerPlugin
-CustomerApproveProcessStateMachineHandlerPlugin
+
+**CustomerApproveProcessStateMachineHandlerPlugin**
 
 ```php
 <?php
@@ -260,8 +262,9 @@ class CustomerApproveProcessStateMachineHandlerPlugin extends AbstractPlugin imp
 }
 ```
 
-## Commands and Conditions
-CustomerApproveProcessCommandPlugin
+## Commands and conditions
+
+**CustomerApproveProcessCommandPlugin**
 
 ```php
 <?php
@@ -291,7 +294,7 @@ class CustomerApproveProcessCommandPlugin extends AbstractPlugin implements Comm
 }
 ```
 
-CustomerApproveProcessConditionPlugin
+**CustomerApproveProcessConditionPlugin**
 
 ```php
 <?php
@@ -323,12 +326,13 @@ class CustomerApproveProcessConditionPlugin extends AbstractPlugin implements Co
 }
 ```
 
-## Customer Approve Process Flow XML File
+## Customer approve process flow XML file
+
 There is a simple example of the state machine process, you need to put it into `config/Zed/StateMachine/CustomerApproveProcess/Process01.xml`.
 
-Process01.xml
+**Process01.xml**
 
-```html
+```xml
 <?xml version="1.0"?>
 <statemachine
     xmlns="spryker:state-machine-01"
@@ -391,10 +395,11 @@ Process01.xml
 ```
 
 ## Zed UI presentation
+
 For representing our process items in Zed UI we need only two things: controller and template.
 Controller includes list of all items, add new item, delete item actions:
 
-StateMachineItemsController
+**StateMachineItemsController**
 
 ```php
 <?php
@@ -504,9 +509,9 @@ class StateMachineItemsController extends AbstractController
 
 We need the template only for the list action, there is an example:
 
-transfer.xml
+**transfer.xml**
 
-```html
+```twig
 {% raw %}{%{% endraw %} extends '@Cms/Layout/layout.twig' {% raw %}%}{% endraw %}
 
 {% raw %}{%{% endraw %} set widget_title = 'Customer Approve Process State Machine' {% raw %}%}{% endraw %}

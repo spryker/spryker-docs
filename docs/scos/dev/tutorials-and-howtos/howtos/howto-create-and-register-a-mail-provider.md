@@ -25,7 +25,9 @@ redirect_from:
 ---
 
 {% info_block infoBox %}
+
 This HowTo describes how to create and register a mail provider you want to use.
+
 {% endinfo_block %}
 
 The mail provider is defined in the provider class. As each provider behaves differently, the provider class will also look different as well.
@@ -59,7 +61,8 @@ By using `$container->extend()`, you get the `MailProviderCollectionAddInterface
 
 As you can see in the example above, the provider is registered to all MailTypes by using `MailConfig::MAIL_TYPE_ALL`. If you want the provider to only handle a specific MailType, use the `MailType` constant from your `MailTypePlugin` e.g. `CustomerRegistrationMailTypePlugin::MAIL_TYPE`. See [HowTo - Creating and Registering a MailTypePlugin](/docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html) for information on how to create and register a MailTypePlugin.
 
-### Using More Than One Provider
+### Using more than one provider
+
 To send emails through different providers, register more than one provider to the `Mail` module. You can even create a scenario when all marketing emails go through provider A, and all others - through provider B. In *Register the Mail Provider* you already made use of this technique to register one provider to all types. The following example demonstrates how to wire up more than one provider:
 
 ```php

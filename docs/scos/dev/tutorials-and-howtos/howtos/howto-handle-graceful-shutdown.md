@@ -39,6 +39,7 @@ protected function createImportGenerator(Collection $collection): \Generator
     }
 }
 ```
+
 {% info_block infoBox %}
 
 To learn more about the Generators, see the Generators documentation.
@@ -46,6 +47,7 @@ To learn more about the Generators, see the Generators documentation.
 {% endinfo_block %}
 
 ## Handling exceptions
+
 Sometimes, you need to throw an exception into the Generator code. For such cases, you can use the second argument of the `GracefulRunnerFacadeInterface::run()` method. It’s the class name that should be thrown into the Generator when a signal was handled. The following example explains it in more details:
 
 ```php

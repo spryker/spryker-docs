@@ -39,14 +39,17 @@ The application has been developed for four primary purposes:
 4. Provide sample REST requests that can facilitate custom touchpoint development.
 
 {% info_block errorBox %}
+
 The shop is provided for display purposes only and should not under any circumstances be used as a starting point for any project.
+
 {% endinfo_block %}
 
-## API Resources
+## API resources
+
 The Demo shop has been built using and demonstrates the use of the endpoints and resources provided by the following APIs:
 
 
-| API | Reference Documents |
+| API | REFERENCE DOCUMENTS |
 | --- | --- |
 | Search API | [Catalog search](/docs/scos/dev/glue-api-guides/{{site.version}}/searching-the-product-catalog.html)<br>[Getting suggestions for auto-completion and search](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-autocomplete-and-search-suggestions.html) |
 | Category API | [Retrieving category trees](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-categories/retrieving-category-trees.html) |
@@ -64,12 +67,14 @@ The Demo shop has been built using and demonstrates the use of the endpoints and
 | Wishlist API | [Managing wishlists](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-wishlists/managing-wishlists.html) |
 | Store API | [Retrieving store configuration](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-store-configuration.html) |
 
-## Running the Example Application
+## Running the example application
+
 The app source code can be found in the following GitHub repository: [https://github.com/spryker-shop/b2c-api-react-example](https://github.com/spryker-shop/b2c-api-react-example). You can install it inside [Spryker Development Virtual Machine](/docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html) or on a dedicated web server.
 
 For detailed installation steps, see [B2C API React Example Installation](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/b2c-api-react-example/b2c-api-react-example.html).
 
-## Peeking Requests
+## Peeking requests
+
 After installing and running the example app, you can try its functionality. Depending on how you installed it, the shop will be available at:
 
 * `http://glue.de.b2c-demo-shop.local/react/` - when installed it in the VM;

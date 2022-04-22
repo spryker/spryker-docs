@@ -24,41 +24,45 @@ redirect_from:
 ---
 
 {% info_block infoBox "Personalized Prices" %}
+
 This article describes the steps that you need to consider when you need to implement personalized prices for customer groups.
+
 {% endinfo_block %}
 
 ## Overview
 
 When implementing special prices that are according to the group the customer is part of, several steps need to be considered.
 
-| Module | Description |
+| MODULE | DESCRIPTION |
 | --- | --- |
-| Customer	 | The customer entity needs to be extended to include the group id. Also, the customer module should be extended so that we have also the group id information for the customer. |
-| Price	 | The group id should be included in the price entity also. For an SKU, we should have one or more prices. The Price module should be extended so that we can query the price based on the SKU of the product and the group id. |
-|Importer | The set of prices should be imported for each product. |
-| Collector	 | The set of prices should be exported to the client side data storage. |
+| Customer | The customer entity needs to be extended to include the group id. Also, the customer module should be extended so that we have also the group id information for the customer. |
+| Price | The group id should be included in the price entity also. For an SKU, we should have one or more prices. The Price module should be extended so that we can query the price based on the SKU of the product and the group id. |
+| Importer | The set of prices should be imported for each product. |
+| Collector | The set of prices should be exported to the client side data storage. |
 | Catalog | The price that corresponds to the logged in customer group should be displayed. |
 | PriceCartConnector | The price that corresponds to the group the logged in customer is part of should be used in the cart. |
 
-## Extend Customer Module
+## Extend Customer module
+
 The `spy_customer` table should be extended on the project side to include the group id. You can read more here on how to extend the database schema.
 
 After you applied the changes on the database level, you need to extend the Customer module to include the group id when creating, updating or retrieving customer data.
 
-## Extend Price Module
+## Extend Price module
+
 The `spy_price` table should be extended on the project side to include the group id. The new added column should not be mandatory.
 
 As a rule you can apply, for each SKU we should have an entry in the `spy_price` table without a group id associated. This entry can be considered the default price for that SKU and can be used if no price was found for a specific group id or for guest users.
 
 The Price  module should be extended so that we are able to query prices by SKU and group id and to retrieve the default price.
 
-## Import Prices
+## Import prices
 
 The `Importer` module takes care of importing data to the SQL database.
 
 Prices are imported by the `ProductPriceImporter`. If you are using the Importer module to load initial data to the SQL database, you need to update the `ProductPriceImporter:importOne(array $data)` to include the group id for each price entry.
 
-## Adjust Prices for Cart
+## Adjust prices for cart
 
 The prices displayed for the products included in the cart must be according to the group the logged in customer is part of( in case the current user is a guest, the default price should be displayed).
 
@@ -67,7 +71,9 @@ The prices for the products in the cart are added by the `CartItemPricePlugin`.
 These values are used by the cart calculators.
 
 {% info_block infoBox %}
+
 We recommend you implement a new plugin that replaces the one from Core instead of extending it on the project side. This way, you make sure the implementation is backward compatible.
+
 {% endinfo_block %}
 
 You can implement a new plugin for retrieving the price based on the group id and register it under the `CartDependencyProvider:getExpanderPlugins(Container $container)`.
@@ -118,7 +124,8 @@ class CartItemSpecialPricePlugin extends AbstractPlugin implements ItemExpanderP
 }
 ```
 
-## Export Prices
+## Export prices
+
 The special prices must also be exported to the client-side data storage so that the corresponding price can be shown to the customer. Data aggregation and export to client-side data storage is handled by the `Collector` module.
 
 The product data is collected by the `ProductCollector`. The `ProductCollector:collectItem($touchKey, array $collectItemData)` should be modified to collect the collection of prices for the current SKU.
@@ -151,7 +158,8 @@ The product data is collected by the `ProductCollector`. The `ProductCollector:c
     }
 ```
 
-## Display Price to Customer
+## Display price to customer
+
 The JSON containing the product details that’s stored in Redis is transformed in a more understandable format by the `ProductResourceCreator`.
 
 When building the product using the data from Redis, we need to set the price according to the group the customer is part of.

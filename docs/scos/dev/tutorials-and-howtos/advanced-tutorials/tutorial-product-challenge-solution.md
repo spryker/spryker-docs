@@ -26,14 +26,13 @@ redirect_from:
 <!-- used to be: http://spryker.github.io/onboarding/product-solution/ -->
 
 ## ProductCountry module (Zed)
+
 First, you need to create a new table with the name `pyz_product_country`. This table will be filled with demo data provided by a hard coded `sku/country` list in the `ImportController` of the module.
 
-File: `Pyz/Zed/ProductCountry/Persistence/Propel/Schema/pyz_product_country.schema.xml`
-
 <details open>
-<summary markdown='span'>Click to expand the code sample</summary>
+<summary markdown='span'>Pyz/Zed/ProductCountry/Persistence/Propel/Schema/pyz_product_country.schema.xml</summary>
 
-```
+```xml
 &lt;?xml version="1.0"?&gt;
 &lt;database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     name="zed"
@@ -59,18 +58,16 @@ File: `Pyz/Zed/ProductCountry/Persistence/Propel/Schema/pyz_product_country.sche
 
 &lt;/database&gt;
 ```
-
-<br>
 </details>
 
-Next, call the console propel:install console command in order to migrate the database and create the query objects.
+Next, call the `console propel:install` console command in order to migrate the database and create the query objects.
 
 Method: `Pyz\Zed\ProductCountry\Communication\Controller\ImportController::indexAction()`
 
 <details open>
 <summary markdown='span'>Click to expand the code sample</summary>
 
-```
+```php
 &lt;?php
 
 class ProductCountryQueryContainer extends AbstractQueryContainer implements ProductCountryQueryContainerInterface
@@ -95,8 +92,6 @@ class ProductCountryQueryContainer extends AbstractQueryContainer implements Pro
     //...
 }
 ```
-
-<br>
 </details>
 
 In the `ProductCountryBusinessFactory` class you need to create a new instance of the `ProductCountryManager`. The dependency to the product module facade is missing in the class. Create a new method `getProductFacade` that returns the facade from the `ProductCountryDependencyProvider`.
@@ -137,8 +132,6 @@ class ProductCountryBusinessFactory extends SprykerBusinessFactory
 
 }
 ```
-
-<br>
 </details>
 
 Now, implement the logic to save a new product, within the `ProductCountryManager`.
@@ -146,7 +139,7 @@ Now, implement the logic to save a new product, within the `ProductCountryManage
 <details open>
 <summary markdown='span'>Click to expand the code sample</summary>
 
-```
+```php
 &lt;?php
 
 class ProductCountryManager implements ProductCountryManagerInterface
@@ -196,16 +189,15 @@ class ProductCountryManager implements ProductCountryManagerInterface
 
 }
 ```
-
-<br>
 </details>
 
 ## Collector module (Zed)
+
 The collector is used to transfer data from the SQL storage to the key-value storage. The collector must be extended with the new field “product_country”.
 
 Open `Pyz/Zed/Collector/Persistence/Storage/Pdo/PostgreSql/ProductCollectorQuery.php` and extend the collector SQL query with a left join to the new created table `spy_product_country` in order to load and select the country name where each product is produced.
 
-```
+```sql
 SELECT
     ...
     spy_country.name AS product_country
@@ -225,7 +217,7 @@ Now we need to add the new selected column `product_country` to the collectItem 
 <details open>
 <summary markdown='span'>Click to expand the code sample</summary>
 
-```
+```php
 &lt;?php
 
 class ProductCollector extends AbstractStoragePdoCollector
@@ -259,14 +251,13 @@ class ProductCollector extends AbstractStoragePdoCollector
     //...
 }
 ```
-
-<br>
 </details>
 
 ## Product module (Yves)
+
 Open `Pyz/Yves/Product/Theme/default/product/detail.twig` and add the following code:
 
-```
+```twig
 {% raw %}{%{% endraw %} if product.product_country {% raw %}%}{% endraw %}
 &lt;dt&gt;{% raw %}{{{% endraw %} "page.product_country"|trans {% raw %}}}{% endraw %}&lt;/dt&gt;
 &lt;dd&gt;{% raw %}{{{% endraw %} product.product_country {% raw %}}}{% endraw %}&lt;/dd&gt;

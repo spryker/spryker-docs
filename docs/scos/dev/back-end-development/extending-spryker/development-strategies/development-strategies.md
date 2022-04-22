@@ -76,6 +76,10 @@ Spryker OS support: High, you can safely take minor and patch releases.
 
 When specific OOTB Spryker behavior doesn’t fit Project requirements, you can enable the full power of available for your codebase by extending existing business modules.
 
+{% info_block infoBox "Let us know whitch extension point is missing, so we can add it in core!" %}
+You can register missing extension point in - https://spryker.ideas.aha.io/  
+{% endinfo_block %}
+
 As it’s quite a substantial change, we need to go deeper and not only extend OOTB Spryker behaviors but also change it, some of the non-API change become dangerous. That’s why a module constraint to a specific minor version is required (using ~ instead of ^).
 
 Consider using the composition design pattern instead of the direct class extensions: it could increase development costs, but also increases vendor support and simplifies minor updates.

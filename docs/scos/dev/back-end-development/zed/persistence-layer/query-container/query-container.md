@@ -26,8 +26,9 @@ redirect_from:
 
 {% info_block infoBox "When to use Query Containers" %}
 
-Query containers MUST NOT be used to cross module boundaries, as it increases modules coupling. However, they can be used behind Repository and Entity managers as query aggregations.
+Query containers MUST NOT be used to cross module boundaries, as it increases modules coupling. However, they can be used behind [Repository](/docs/scos/dev/back-end-development/zed/persistence-layer/repository.html) and [Entity Manager](/docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html) as query aggregations.
 Previously Query Containers were used to cross module borders (via Dependency Providers), which led to higher module coupling and leaking of persistence layer from one domain object to another and therefore higher maintenance efforts and lower code reusability. This usage has been deprecated and is not recommended in project development.
+
 {% endinfo_block %}
 
 A query container holds all the database queries of the current module.

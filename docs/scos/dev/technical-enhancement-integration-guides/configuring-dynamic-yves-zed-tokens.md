@@ -37,7 +37,7 @@ After running `docker/sdk bootstrap`, you can find all the tokens in environment
 
 | Parameter | Parameter description | Env variable | Description of env variable value  |
 | --- | --- | --- | --- |
-| `HttpConstants::URI_SIGNER_SECRET_KEY` | Encrypts URI signs. | `SPRYKER_URI_SIGNER_SECRET_KEY` | Consists of 80 characters in lower and upper case Latin letters and digits. |
+| `HttpConstants::URI_SIGNER_SECRET_KEY` | Encrypts URI signs. | `SPRYKER_URI_SIGNER_SECRET_KEY` | Consists of characters in lower and upper case Latin letters and digits. |
 | `OauthConstants::PUBLIC_KEY_PATH` and `OauthCryptographyConstants::PUBLIC_KEY_PATH` | SSH public key. | `SPRYKER_OAUTH_KEY_PUBLIC` |  |
 | `OauthConstants::PRIVATE_KEY_PATH` | SSH private key. | `SPRYKER_OAUTH_KEY_PRIVATE` |  |
 | `OauthConstants::ENCRYPTION_KEY` | Encrypts data when generating tokens. | `SPRYKER_OAUTH_ENCRYPTION_KEY` | Consists of 48 characters in lower and upper case Latin letters and digits. |

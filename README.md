@@ -4,11 +4,12 @@ This repository contains the documentation for the [Spryker documentation portal
 
 ## Installation
 
-Follow our [guide](https://docs.spryker.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html)
+To build the documentation site locally, see [buidling the documentation site](https://docs.spryker.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html).
 
 ### Build with Docker
 
-Run this command `docker run --rm --volume="$PWD:/srv/jekyll" --volume="$PWD/vendor/bundle:/usr/local/bundle" -p 4000:4000 jekyll/jekyll:4.2.0 jekyll serve --incremental --livereload`
+To build the documentation site with Docker, run this command:
+`docker run --rm --volume="$PWD:/srv/jekyll" --volume="$PWD/vendor/bundle:/usr/local/bundle" -p 4000:4000 jekyll/jekyll:4.2.0 jekyll serve --incremental --livereload`
 
 ## To contribute
 

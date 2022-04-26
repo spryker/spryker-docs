@@ -3156,13 +3156,6 @@ entries:
         nested:
         - title: Entity
           url: /docs/scos/dev/back-end-development/zed/persistence-layer/entity.html
-        - title: Query Container
-          url: /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html
-          nested:
-          - title: Using a Query Container
-            url: /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/using-a-query-container.html
-          - title: Implementing a Query Container
-            url: /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implementing-a-query-container.html
         - title: Entity Manager
           url: /docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html
         - title: Repository
@@ -3173,6 +3166,13 @@ entries:
           url: /docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html
         - title: Query objects - creation and usage
           url: /docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html
+        - title: Query Container
+          url: /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html
+          nested:
+          - title: Using a Query Container
+            url: /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/using-a-query-container.html
+          - title: Implementing a Query Container
+            url: /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implementing-a-query-container.html
       - title: Adding navigation in the Back Office
         url: /docs/scos/dev/back-end-development/zed/adding-navigation-in-the-back-office.html
     - title: Cronjobs

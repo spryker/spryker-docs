@@ -25,13 +25,13 @@ To add a new price for a marketplace concrete product, follow these steps:
 3. In the **Price** section, click **+Add**. The empty cells appear in the following table.
 4. Optional: To set a price for a specific customer, from the **Customer** drop-down menu, select the appropriate [business unit](/docs.spryker.com/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-units-overview.html) to apply the price to.
 
-{% info_block infoBox "Note" %}
+  {% info_block infoBox "Note" %}
 
-In order the business unit to which the customer is assigned to appear in the **Customers** drop-down menu, in the Back Office, create the [merchant relation](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html#prerequisites).
+  In order for the business unit to which the customer is assigned to appear in the **Customers** drop-down menu, in the Back Office, create the [merchant relation](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html#prerequisites).
 
-You can set customer-specific prices set for [marketplace products](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html), not [product offers](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html).
+  You can set customer-specific prices set for [marketplace products](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html), not [product offers](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html).
 
-{% endinfo_block %}
+  {% endinfo_block %}
 
 5. From the drop-down menu **Store**, select the store for which the price is created.
 6. From the drop-down menu **Currency**, select the currency in which the price is defined.

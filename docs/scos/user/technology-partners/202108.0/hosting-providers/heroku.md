@@ -13,7 +13,7 @@ Heroku is fully managed, giving developers the freedom to focus on their core pr
 
 ## Related Developer guides
 
-* [Integrating Heroku](/docs/scos/dev/technology-partner-guides/{{page.version}}/hosting-providers/integrating-heroku.html).
+* [Integrating Heroku](/docs/scos/dev/technology-partner-guides/{{page.version}}/hosting-providers/integrating-heroku.html)
 
 
 ---

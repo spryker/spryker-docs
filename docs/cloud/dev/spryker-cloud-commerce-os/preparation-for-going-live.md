@@ -9,9 +9,28 @@ redirect_from:
   - /docs/en/preparation-for-going-live
 ---
 
-This document describes how to prepare a Spryker project for going live.
+This document describes how to prepare a Spryker project for going live on Spryker Cloud Commerce OS (SCCOS).
 
 We divided the preparation into approximate timeframes, and you can adjust them to your needs. Make sure that all the following tasks are complete one week before going live.
+
+## Compatibility checklist ##
+
+Review this preparatory checklist before initiating your go-live plan.  
+You cannot successfully deploy a project on Spryker Cloud Commerce OS unless:
+
+- You upgrade your project's code to match the latest demoshop release, or at minimum, upgrade to a release that fully supports the Docker SDK.
+
+- You migrate the project's database to MariaDB if you are not already using it.
+
+- You split up your project's Zed endpoints as outlined in this [integration guide](/docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html).
+
+- You verify that your project's service naming scheme is an exact match for the examples inside the [sample deploy-spryker-b2c-staging.yml file](https://github.com/spryker-shop/b2c-demo-shop/blob/master/deploy.spryker-b2c-staging.yml).
+
+- You create [deploy files](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html) for each of your environments. These files must be named in a particular manner: `deploy.(project)-(environment).yml`. For instance, `deploy.example-staging.yml`.
+
+- You [define a Docker SDK version](/docs/scos/dev/the-docker-sdk/{{site.version}}/choosing-a-docker-sdk-version.html) for the project to use.
+
+- You integrate [FlySystem](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-data-import-from-an-s3-bucket.html) so that the project is using data in S3 Buckets instead of local storage.
 
 ## Until five weeks before go-live
 

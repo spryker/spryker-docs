@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Console Commands
+title: Tutorial - Console commands
 description: Use the guide to create and use a new console command.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -30,7 +30,7 @@ Spryker offers a wrapper over Symfony’s Console component that makes the imple
 
 ## Implementing a new Console command
 
-To exemplify how to implement and use a console command, we’ll build a console command that refreshes the application cache and clears folder for generated files. The `UpdateApplicationConsole` will run the following commands in one step:
+To demonstrate how to use and implement a console command, we will create one that clears the generated files folder and refreshes the application cache. The `UpdateApplicationConsole` will run the following commands in one step:
 
 ```bash
 vendor/bin/console router:cache:warm-up
@@ -39,7 +39,7 @@ vendor/bin/console navigation:build-cache
 vendor/bin/console glue:rest:build-request-validation-cache
 ```
 
-Create the `UpdateApplicationConsole` class.
+1. Create the `UpdateApplicationConsole` class.
 
 The console commands must be added in Zed, under the Communication layer of the module, to the Console folder. The console command must extend the `Console` class from Spryker, as you can see below:
 
@@ -137,3 +137,5 @@ public function getConsoleCommands()
 ```bash
 vendor/bin/console tutorial:update
 ```
+
+That's it! A new console command is created.

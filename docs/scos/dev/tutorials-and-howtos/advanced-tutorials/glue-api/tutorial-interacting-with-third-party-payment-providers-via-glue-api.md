@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Interacting with Third Party Payment Providers via Glue API
+title: Tutorial - Interacting with third party payment providers via Glue API
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-interacting-with-third-party-payment-providers-via-glue-api
@@ -160,7 +160,7 @@ class OrderPaymentUpdaterPlugin extends AbstractPlugin implements OrderPaymentUp
 }
 ```
 
-## 4. Plugin wiring
+## 4. Wire the plugins
 
 Now, you need to wire the plugins so that they could be invoked during checkout. The Checkout *Response Mapper Plugin* needs to be registered in `\Pyz\Glue\CheckoutRestApi\CheckoutRestApiDependencyProvider::getCheckoutResponseMapperPlugins()`:
 

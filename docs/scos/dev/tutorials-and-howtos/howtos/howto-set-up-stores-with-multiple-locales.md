@@ -25,10 +25,12 @@ redirect_from:
 ---
 
 {% info_block infoBox "Multiple Locales" %}
+
 This article describes the steps you need to consider when you have to set up stores with multiple locales.
+
 {% endinfo_block %}
 
-## Configure Locales for Store
+## Configure Locales for store
 
 The stores configuration can be found in the `config/Shared/stores.php` file.
 
@@ -46,19 +48,19 @@ For each store you can define a set of locales; the first locale is the default 
 
 In the example above, the `en` key is associated with the `en_US` locale.
 
-## URL Routing for Stores with Multiple Locales
+## URL routing for stores with multiple locales
 
 In Yves, the key for the selected locale is contained in the URL; if no key is contained in the URL, the default locale is considered as the current one.
 
 In Demoshop, for listing the current content of the cart, the following URLs are routed to the same controller and action:
 
-| URL	| Locale |
+| URL	| LOCALE |
 | --- | --- |
 | https://mysprykershop.com/cart | en_US |
 | https://mysprykershop.com/de/cart |  de_DE|
-|https://mysprykershop.com/en/cart  |  en_US|
+| https://mysprykershop.com/en/cart  |  en_US|
 
-## Products with Localized Attributes
+## Products with localized attributes
 
 The details of the abstract products are stored localized in the `spy_product_abstract_localized_attributes` table. For each abstract product, there is an entry in this table that corresponds to each locale, containing the associated attributes for the defined locale.
 
@@ -73,6 +75,7 @@ The following details are stored localized in the Demoshop, for both abstract an
 * long description
 
 ### Importing products with localized attributes
+
 When importing product data in your application, you need to consider the list of locales that are defined for the store.
 
 The CSV file containing the product data that needs to be imported must contain the name of the product for each locale:
@@ -84,7 +87,7 @@ The CSV file that contains the attributes for the products to be imported must c
 * `short_description.en_US`, `short_description.de_DE`
 * `long_description.en_US`, `long_description.de_DE`
 
-## Categories with Localized Attributes
+## Categories with localized attributes
 
 The details of the categories are kept in the `spy_category_attribute`. For each category defined in the `spy_category` table, there is an entry for each defined locale containing the details of the category localized.
 
@@ -108,7 +111,7 @@ The CSV file containing the product data that needs to be imported must contain 
 * `low_pic.en_US`, `low_pic.de_DE`
 * `category_description.en_US`, `category_description.de_DE`
 
-## Importing CMS Blocks and Pages
+## Importing CMS blocks and pages
 
 The CMS blocks and pages are able to render localized content through the use of placeholders. The placeholders have a glossary key associated; at runtime, the placeholder is replaced with the glossary value that corresponds to the current locale. Also, a static page will have a distinct URL for each locale defined in the application.
 
@@ -178,6 +181,7 @@ The XML file structure for loading static pages is similar to the one for import
 ```
 
 ### Localized URLs
+
 The `spy_url` table stores the URLs that correspond to:
 
 * category pages

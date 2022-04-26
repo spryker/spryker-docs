@@ -33,17 +33,17 @@ This tutorial is also available on the Spryker Training web-site. For more infor
 
 {% endinfo_block %}
 
-## Challenge Description
+## Challenge description
 
 When you add a red camera to cart, all red cameras are going to be boosted in the catalog and pushed to the top of the products.
 
 In this task, you will also learn how to work with plugins and extend the search plugin stack.
 
-## Challenge Solving Highlights
+## Challenge solving highlights
 
 In this task, we are using the cart only for the sake of training. In a real-life scenario, you can use the customer's order history to analyze what colors this customer likes and boost the catalog accordingly, or even use another attribute.
 
-Fulltext search engines like Elasticsearch provide a possibility to influence sorting of products by tweaking the scoring function. The scoring function assigns weights to each result based on a formula, which in its turn is usually based on text similarity or synonyms, but we can change it to boost specific products higher than others.
+Full-text search engines like Elasticsearch provide a possibility to influence sorting of products by tweaking the scoring function. The scoring function assigns weights to each result based on a formula, which in its turn is usually based on text similarity or synonyms, but we can change it to boost specific products higher than others.
 
 In this challenge, we will try to affect the scoring function based on products that are already in the cart.
 
@@ -56,12 +56,12 @@ As we are working with search and Elasticsearch, we need to work with the client
 The client uses a stack of plugins that implement `\Spryker/Client/SearchExtension/Dependency/Plugin/QueryExpanderPluginInterface`. In this task, we will extend this plugin stack by creating a new plugin for boosting and injecting it into the plugin stack. By creating a new plugin for boosting and injecting it in the plugin stack, we can alter the search query accordingly
 
 To create the plugin:
+
 1. Inside the catalog client directory, create the following directories: `Plugin/Elasticsearch/QueryExpander`.
 
 2. Inside the _QueryExpander_ directory, create a new query plugin and call it `AttributeCartBasedBoostingQueryExpanderPlugin`. This plugin implements  `QueryExpanderPluginInterface`.
- <details open>
 
-<summary markdown='span'>Pyz\Client\Catalog\Plugin\Elasticsearch\QueryExpander</summary>
+<details open><summary markdown='span'>Pyz\Client\Catalog\Plugin\Elasticsearch\QueryExpander</summary>
 
 ```php
 namespace Pyz\Client\Catalog\Plugin\Elasticsearch\QueryExpander;
@@ -197,12 +197,11 @@ class AttributeCartBasedBoostingQueryExpanderPlugin extends AbstractPlugin imple
     }
 }
 ```
- </details>
+</details>
 
-3. As you may notice, *CartClient* does not exist as a dependency for the *CatalogClient*. Let's add this dependency, so our query plugin works. For this, open `CatalogDependencyProvider` in `src/Pyz/Client/Catalog` and add *CartClient* as a dependency:
+1. As you may notice, `CartClient` does not exist as a dependency for the *CatalogClient*. Let's add this dependency, so our query plugin works. For this, open `CatalogDependencyProvider` in `src/Pyz/Client/Catalog` and add *CartClient* as a dependency:
 
-<details open>
-<summary markdown='span'>Pyz\Client\Catalog</summary>
+<details open><summary markdown='span'>Pyz\Client\Catalog</summary>
 
 ```php
 namespace Pyz\Client\Catalog;
@@ -250,7 +249,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 ```
 </details>
 
-3. Next, get the *CartClient* dependency using the *CatalogFactory*. Extend the *CatalogFactory* of the catalog client in `src/Pyz/Client/Catalog` and get the *CartClient*.
+1. Next, get the `CartClient` dependency using the `CatalogFactory`. Extend the `CatalogFactory` of the catalog client in `src/Pyz/Client/Catalog` and get the `CartClient`.
 
 ```php
 namespace Pyz\Client\Catalog;
@@ -272,12 +271,11 @@ class CatalogFactory extends SprykerCatalogFactory
 
 4. To get the color of a product from the cart, we need to read the product data from the _key-value storage; Redis_.  For that, `ProductStorageClient` should be used with the method `getProductAbstractStorageData()`.
 
-Like the *CartClient*, the *ProductStorageClient* needs to be added to the `CatalogDependencyProvider`. Then the `CatalogFactory` can get it from the dependency provider:
+Like the `CartClient`, the `ProductStorageClient` needs to be added to the `CatalogDependencyProvider`. Then the `CatalogFactory` can get it from the dependency provider:
 
-<details open>
-<summary markdown='span'>Pyz\Client\Catalog</summary>
+<details open><summary markdown='span'>Pyz\Client\Catalog</summary>
 
- ```php
+```php
 namespace Pyz\Client\Catalog;
 
 class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
@@ -318,8 +316,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 ```
 </details>
 
- <details open>
-<summary markdown='span'>Pyz\Client\Catalog</summary>
+<details open><summary markdown='span'>Pyz\Client\Catalog</summary>
 
 ```php
 namespace Pyz\Client\Catalog;
@@ -351,7 +348,6 @@ Boosting the catalog is basically an expansion of the base search query for chan
 So, to use our new plugin, we need to inject it in the `CatalogDependencyProvider` in the `createCatalogSearchQueryExpanderPlugins()` method. For that, do the following:
 
 1. Replace the `SortedCategoryQueryExpanderPlugin()` with your `AttributeCartBasedBoostingQueryExpanderPlugin()`.
-
 2. Make sure that you keep the same exact position of the plugin, as the order of these plugins matters for the search results.
 
 ```php

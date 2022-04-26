@@ -26,13 +26,15 @@ The following guide provides step-by-step instructions on how to implement a RES
 {% info_block warningBox %}
 
 Consider studying the following documents before you begin:
+
 * [JSON API Specification](https://jsonapi.org/format/) implemented in Spryker;
 * [Swagger Tools Reference](https://swagger.io/) to know how to document your API;
 * [REST API Modelling Reference](https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling).
 
 {% endinfo_block %}
 
-## 1. Create a Glue Resource Module
+## 1. Create a Glue resource module
+
 The first step is to create an empty Glue Resource Module. For naming convention, all the resource module names have to consist of the feature name in plural followed by the **RestApi** suffix. For example, the `WishlistsRestApi` module represents a resource for managing the wishlists feature.
 
 To create a module:
@@ -40,7 +42,7 @@ To create a module:
 * Create a new module in `src/Pyz/Glue/{YOUR_RESOURCE}sRestApi` if you want to have a project-level resource.
 * Create the following folder and file structure:
 
-| {YOUR_RESOURCE}sRestApi | Description |
+| {YOUR_RESOURCE}sRestApi | DESCRIPTION |
 | --- | --- |
 | `/Controller` | Folder for resource controllers. Controllers are used to handle JSON requests and responses. |
 | `/Dependency` | Bridges to other clients. |
@@ -53,9 +55,11 @@ To create a module:
 {% info_block infoBox %}
 
 You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to create a basic structure. Run the following command:
+
 ```bash
 console spryk:run AddGlueBasicStructure --mode=project --module=ResourcesRestApi --organization=Pyz --resourceType=resources
 ```
+
 You'll need to agree to all the default values when prompted.
 
 {% endinfo_block %}
@@ -65,15 +69,17 @@ You'll need to agree to all the default values when prompted.
 {% info_block infoBox %}
 
 You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to add a transfer file. Run the following command:  
+
 ```bash
 console spryk:run AddSharedRestAttributesTransfer --mode=project --module=ResourcesRestApi --organization=Pyz --name=RestResourcesAttributes
 ```
+
 {% endinfo_block %}
 
 The resulting folder structure in the example of the Wishlists REST API module:
 ![Wishlists REST API module](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Glue+API/wishlists-rest-api-module.png)
 
-## 2. Create a Configuration Class
+## 2. Create a configuration class
 
 It is a good practice to create a configuration class that provides general module information. The class can be used to store types of resources, custom error codes used in your module, and other configuration data. Let us open the `WishlistsRestApiConfig.php` file and provide some initial configuration:
 
@@ -107,9 +113,10 @@ You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-
 ```bash
 console spryk:run AddGlueConfig --mode=project --module=ResourcesRestApi --organization=Pyz
 ```
+
 {% endinfo_block %}
 
-## 3. Create a Factory
+## 3. Create a factory
 
 Factory is used for instantiating module classes and dependencies and provides access to the resource builder.
 
@@ -143,9 +150,11 @@ You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-
 ```bash
 console spryk:run AddGlueFactory --mode=project --module=ResourcesRestApi --organization=Pyz
 ```
+
 {% endinfo_block %}
 
-## 4. Create a Resource Controller
+## 4. Create a resource controller
+
 The next step in implementing a resource module is creating a controller for it. The controller is a PHP class that receives all the requests, calls business logic and returns responses. To implement a controller:
 
 1. Create a new class in the `Controller` folder. The naming convention is that the class name must start with the name of the resource it controls and end with the `ResourceController` suffix.
@@ -154,7 +163,9 @@ The next step in implementing a resource module is creating a controller for it.
 4. Implement actions that will be used to handle all the possible HTTP verbs (GET, POST, DELETE, PATCH) for the given resource.
 
 {% info_block errorBox %}
+
 The controller must only provide the request handling flow and must not contain any actual business logic. All operations must be delegated to the corresponding layers.
+
 {% endinfo_block %}
 
 {% info_block warningBox %}
@@ -165,7 +176,7 @@ Requests will be passed to the controller as instances of `RestRequestInterface`
 
 Sample controller implementation:
 
-WishlistsResourceController.php
+**WishlistsResourceController.php**
 
 ```php
 <?php
@@ -229,16 +240,19 @@ class WishlistsResourceController extends AbstractController
      }
 }
 ```
+
 {% info_block infoBox %}
 
-You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to create a resource controller. Run the following command:  
+You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to create a resource controller. Run the following command: 
+
 ```bash
 console AddGlueController  --mode=project --module=ResourcesRestApi --organization=Pyz --controller=ResourcesController
 ```
 
 {% endinfo_block %}
 
-## 5. Describe Fields for Post and Patch Calls
+## 5. Describe fields for post and patch calls
+
 The **POST** and the **PATCH** verbs allow you to pass the body in your request. Such parameters can be used in your resource module to manipulate Spryker entities. For example, when changing an entity via REST API, you can pass the modified values as fields of a **POST** or a **PATCH** request.
 
 The same as with any other data source, you can use containers called **Transfer Objects** for the convenience of dealing with data retrieved from POST requests. The objects are defined in the XML transfer file located in the Shared layer. The names of the transfer objects need to start with **Rest**.
@@ -271,19 +285,21 @@ To generate the respective transfer objects, run `vendor/bin/console transfer:ge
 {% info_block infoBox %}
 
 You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to describe fields for post and patch calls. Run the following command:
+
 ```bash
 console spryk:run AddSharedRestAttributesTransfer --mode=project --module=ResourcesRestApi --organization=Pyz --name=RestResourcesAttributes
 ```
 
 {% endinfo_block %}
 
-## 6. Route Requests to Your Controller
+## 6. Route requests to your controller
+
 Now you need to route requests to your module. For this purpose, you need to create a route plugin that calls a certain function of the resource controller depending on the method configured in your resource. Then you need to add the plugin to the Glue Module dependency provider.
 
-**Resource Route Plugin**
+**Resource route plugin**
 The route plugin must be inherited from `AbstractPlugin` and implement `ResourceRoutePluginInterface`. Let us create one in the Plugin folder:
 
-WishlistsResourceRoutePlugin.php
+**WishlistsResourceRoutePlugin.php**
 
 ```php
 <?php
@@ -376,7 +392,7 @@ Finally, you need to specify a fully-qualified class name of the Transfer Object
 
 Now the plugin is complete. It should look something like this:
 
-WishlistsResourceRoutePlugin.php
+**WishlistsResourceRoutePlugin.php**
 
 ```php
 <?php
@@ -450,21 +466,25 @@ class WishlistsResourceRoutePlugin extends AbstractPlugin implements ResourceRou
     }
 }
 ```
+
 {% info_block infoBox %}
 
 You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to route requests to your controller. Run the following command:
+
 ```bash
 console spryk:run AddGlueResourceRoute --mode=project --module=ResourcesRestApi --organization=Pyz --resourceType=resources --resourceRouteMethod=get
 ```
 
 {% endinfo_block %}
 
-## 7. Process REST Requests
+## 7. Process REST requests
+
 After you've routed requests to your module, you can process them. For this purpose, you can make use of the `Spryker\Glue\Kernel\AbstractFactory::getResourceBuilder()` method. It returns `Spryker\Glue\GlueApplication\Rest\JsonApi\RestResourceBuilderInterface`. This builder interface instantiates the `RestResourceInterface` and `RestResponseInterface` objects that are necessary to build the REST responses correctly.
 
 To build the responses, you need to create classes responsible for the request processing. You can place them in the **Processor** folder. You can create various separate models for reading, creating, updating, and deleting modules.
 
-## 8. Invoke Processors in Your Code
+## 8. Invoke processors in your code
+
 Finally, when you have a processor in place, you can use it in your code. For the processor invoking, use the factory created in step 3. Let us reopen the resource controller created in step 4 (`WishlistsResourceController.php`) and add code that handles GET requests:
 
 ```php
@@ -475,7 +495,8 @@ public function getAction(RestRequestInterface $restRequest): RestResponseInterf
     }
 ```
 
-## 9. Register Resources in GlueApplicationDependencyProvider
+## 9. Register resources in GlueApplicationDependencyProvider
+
 You need to register your resource route plugin in Glue:
 
 1. Open the `src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php` file.

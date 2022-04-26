@@ -30,19 +30,21 @@ This tutorial is also available on the Spryker Training web-site. For more infor
 
 {% endinfo_block %}
 
-## Challenge Description
+## Challenge description
+
 The aim of this task is to build the first block of personalization for your shop. We are going to build a new CMS page and fill it with personalized products using the user's session ID.
 
 We will use the session ID just to show that products change when a new customer visits the page.
 
 {% info_block infoBox %}
+
 In a real case scenario, the session ID can be replaced and a score calculated from the customer's preferences and order history.
+
 {% endinfo_block %}
 
-### 1. Create the CMS Page
+### 1. Create the CMS page
 
-
-  1. First, we will create the CMS page template.
+1. First, we will create the CMS page template.
 
 In `src/Pyz/Shared/Cms/Theme/default/templates`, add a new directory called _my-offers_.
 
@@ -72,10 +74,8 @@ Inside this folder, add a twig file called _my-offers.twig_.
 ```
 
 2. Create a new CMS page from CMS tab in the back office. Use the twig template you have just added, and use the `URL /my-offers`.
-
 3. Click **Next** and fill in the title and content of the page.
 Use any title and description you like to add.
-
 4. Save the page, and publish it.
 Now, we need to test the CMS page. Go to the **My Offers** page in your shop: `https://mysprykershop.com/my-offers.`
 
@@ -86,6 +86,7 @@ Next, let's get the personalized products and add them to the page.
 
 To get the products, we will use **Elasticsearch**. To do so, we need to work with the `SearchClient` as it is the place to connect with Elasticsearch.
 So, mainly we will work with Yves to get the request from the shop, and the client to pass the request to Elasticsearch and get the response back.
+
 1. First, create a new Yves module in `src/Pyz/Yves` and call it `PersonalizedProduct`.
 2. Create a `PersonalizedProductRouteProviderPlugin` inside `src/Pyz/Yves/PersonalizedProduct/Plugin/Router` and add the route to the personalized products inside of it.
 
@@ -126,7 +127,6 @@ The `value()` method gives a default value in case the limit value is not passed
 {% endinfo_block %}
 
 3. Register the `PersonalizedProductRouteProviderPlugin` to the `\Pyz\Yves\Router\RouterDependencyProvider::getRouteProvider()`method.
-
 4. Create an `IndexController` for the `PersonalizedProduct` module in `src/Pyz/Yves/PersonalizedProduct/Controller` and add an `indexAction()`.
 Then, add the twig template for the controller and the action in `src/Pyz/Yves/PersonalizedProduct/Theme/default/views/index` and call it `index.twig`.
 
@@ -149,7 +149,7 @@ class IndexController extends AbstractController
 }
 ```
 
-```
+```twig
 {% raw %}{%{% endraw %} extends template('page-blank') {% raw %}%}{% endraw %}
 
 {% raw %}{%{% endraw %} block body {% raw %}%}{% endraw %}
@@ -162,9 +162,10 @@ class IndexController extends AbstractController
 For now, the Yves part is done. You can now go to `http://www.de.suite.local/personalized-product/12` and get the personalized products page.<br>Now try `http://www.de.suite.local/personalized-product/not-positive-integer`, this should result in an 404 error as the rout in not defined.<br>The next set of steps is for work on the client. By performing those, you will connect your module to Elasticsearch.
 
 First, you need a client for that in order to connect Yves to Elasticsearch.
+
 {% endinfo_block %}
 
-1. Create the PersonalizedProduct's client directory in `src/Pyz/Client` and call it `PersonalizedProduct` and add the client class and interface.
+5. Create the PersonalizedProduct's client directory in `src/Pyz/Client` and call it `PersonalizedProduct` and add the client class and interface.
 
 ```php
 namespace Pyz\Client\PersonalizedProduct;
@@ -201,13 +202,15 @@ class PersonalizedProductClient extends AbstractClient implements PersonalizedPr
 6. To get the products from Elasticsearch, we need to use the `SearchClient`. In the SearchClient, there is the `search()` method that queries the search engine and takes a search query and an array of formatters as parameters.
 
 So, we need three main steps here:
+
 * create the query
 * get the formatters
 * get the SearchClient.
 
 Then, we can hook things together.
 
-First, let's create the query. The query is basically a plugin implementing the QueryInterface.
+First, let's create the query. The query is basically a plugin implementing the `QueryInterface`.
+
 1. Add the following directory structure inside the client's directory: `Plugin/Elasticsearch/Query`.
 2. Then, add the query plugin inside it and call it `PersonalizedProductQueryPlugin`:
 

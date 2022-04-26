@@ -27,20 +27,23 @@ related:
 
 This tutorial describes how you can boost the cart-based search in your project.
 
-## Challenge Description
+## Challenge description
+
 Based on the colors of the products in the user's cart, the catalog should first display products that have the same color. Let’s say, for example, that there’s a red product in the cart, then the top results in the catalog should also contain red products.
 
-## Challenge Solving Highlights
+## Challenge solving highlights
+
 To solve the challenge, follow the instructions below.
 
 ### Preparation
-Fulltext search engines like Elasticsearch provide a possibility to influence the sorting of products by tweaking the scoring function. The scoring function assigns weights to each result based on a formula, which in its turn is usually based on text similarity or synonyms, but we can change it to boost specific products higher than others. In this challenge, we will try to affect the scoring function based on the products that are already in the cart.
+
+Full-text search engines like Elasticsearch provide a possibility to influence the sorting of products by tweaking the scoring function. The scoring function assigns weights to each result based on a formula, which in its turn is usually based on text similarity or synonyms, but we can change it to boost specific products higher than others. In this challenge, we will try to affect the scoring function based on the products that are already in the cart.
 
 The second idea leverages the fact that Spryker implementation of [search](/docs/scos/user/features/{{site.version}}/search-feature-overview/search-feature-overview.html) is very flexible and allows configuring additional plugins that are used to build search queries.
 
 To solve this task, we will be working in the client layer of the Catalog module located at `src/Pyz/Client/Catalog/`.
 
-### Step-by-Step Solution
+### Step-by-step solution
 
 1. If we trace the execution flow of search starting from `Pyz\Yves\Catalog\Controller\CatalogController`, we will find a `CatalogClient`. The client uses a stack of plugins which implements `\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface`. It is needed to create a new plugin, which will modify our search queries accordingly.
 2. Implement `Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface` and replace `SortedCategoryQueryExpanderPlugin` with your new plugin in `Pyz\Client\Catalog\CatalogDependencyProvider::createCatalogSearchQueryExpanderPlugins()`. Name the new plugin `Pyz\Client\Catalog\Plugin\Elasticsearch\QueryExpander\CartBoostQueryExpanderPlugin`. The final version of the plugin can be found [here](#plugin).
@@ -73,6 +76,7 @@ class CatalogFactory extends SprykerCatalogFactory
 {% info_block infoBox "Snippet for Implementing Cart Boost Query Expander" %}
 
 Check out the example code of the `CartBoostQueryExpanderPlugin` plugin:
+
 <details open>
 <summary markdown='span'>src/Pyz/Client/Catalog/Plugin/Elasticsearch/QueryExpander/CartBoostQueryExpanderPlugin.php</summary>
 
@@ -218,4 +222,5 @@ class CartBoostQueryExpanderPlugin extends AbstractPlugin implements QueryExpand
 {% endinfo_block %}
 
 ### Testing
+
 Now, to test the results, go to a category having products of different colors, for example, *Cameras & Camcoders*. Then, add any red product to your cart and return to the catalog page. The order of products should be changed accordingly, and you should see red products first.

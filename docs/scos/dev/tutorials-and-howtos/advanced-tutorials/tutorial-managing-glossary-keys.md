@@ -74,7 +74,7 @@ Locales are configured in `config/Shared/stores.php` as follows:
 
 On the Storefront, you can use glossary keys to translate rendered content. The following examples shows how to do it using a dedicated extension for the Twig template engine:
 
-```xml
+```twig
 <div><label>{% raw %}{{{% endraw %} 'First Name' | trans {% raw %}}}{% endraw %}</label>
     <div>
 

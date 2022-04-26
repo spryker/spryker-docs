@@ -24,9 +24,8 @@ redirect_from:
 ---
 
 <!--used to be: http://spryker.github.io/tutorials/zed/internationalization/-->
-## Challenge
 
-When running international business it is important to fine tune the behavior of a shop depending on the country. Topics that differ:
+In international business, it is important to fine-tune a shop's behavior according to the country. Topics that differ:
 
 * Design &amp; Layout
 * Currency &amp; price
@@ -54,7 +53,7 @@ Localization is adapting the design and layout of your software product so that 
 
 {% info_block infoBox %}
 
-A locale is a parameter that describes the users' language, country, and variant preferences (For example, for Belgium there are two locales available: nl_BE and fr_BE).
+A locale is a parameter that describes the users' language, country, and variant preferences (For example, for Belgium there are two locales available: `nl_BE` and `fr_BE`).
 
 {% endinfo_block %}
 

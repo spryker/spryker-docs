@@ -1,5 +1,5 @@
 ---
-title: Tutorial- Product Challenge Solution
+title: Tutorial- Product challenge solution
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-product-challenge-solution
@@ -60,7 +60,11 @@ First, you need to create a new table with the name `pyz_product_country`. This 
 ```
 </details>
 
-Next, call the `console propel:install` console command in order to migrate the database and create the query objects.
+Next, call the console command to migrate the database and create the query objects.
+
+```bash
+console propel:install
+```
 
 Method: `Pyz\Zed\ProductCountry\Communication\Controller\ImportController::indexAction()`
 
@@ -186,7 +190,6 @@ class ProductCountryManager implements ProductCountryManagerInterface
     }
 
     //...
-
 }
 ```
 </details>
@@ -205,7 +208,7 @@ FROM
     ...
 ```
 
-```
+```sql
 ...
 LEFT JOIN spy_product_country ON (spy_product_country.fk_product = spy_product_abstract.id_product_abstract)
 LEFT JOIN spy_country ON (spy_country.id_country = spy_product_country.fk_country)

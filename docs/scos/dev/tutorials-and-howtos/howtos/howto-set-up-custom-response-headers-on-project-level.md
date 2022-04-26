@@ -25,6 +25,7 @@ The procedure described in this HowTo is just an example of what you can do with
 {% endinfo_block %}
 
 ## Prerequisites
+
 Ensure that you have:
 
 * Up-to-date Spryker installation
@@ -32,9 +33,11 @@ Ensure that you have:
 * CMS page with the video in your Spryker-based shop
 
 ## Setting up custom response headers
+
 To set up custom response headers:
 
 1. For the video example, change the CmsController of the respective CMS page:
+
 ```php
 $response = new \Symfony\Component\HttpFoundation\Response();
         $response->headers->set('Feature-Policy', 'fullscreen *');
@@ -43,7 +46,9 @@ $response = new \Symfony\Component\HttpFoundation\Response();
         );
         return $response;
 ```
+
 2. Optional: to change the header response globally, edit `\SprykerShop\Yves\ShopApplication\Subscriber\ShopApplicationTwigEventSubscriber::createResponse()`
+
 ```php
 $response->headers->set('Feature-Policy', 'fullscreen *');
 ```

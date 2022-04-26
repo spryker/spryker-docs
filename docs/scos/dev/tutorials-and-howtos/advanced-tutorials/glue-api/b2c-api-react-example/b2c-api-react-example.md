@@ -40,13 +40,13 @@ The application has been developed for four primary purposes:
 
 {% info_block errorBox %}
 
-The shop is provided for display purposes only and should not under any circumstances be used as a starting point for any project.
+The shop is provided only for display purposes, and should under no circumstances be used as a starting point for any project.
 
 {% endinfo_block %}
 
 ## API resources
 
-The Demo shop has been built using and demonstrates the use of the endpoints and resources provided by the following APIs:
+The Demo shop was built using and demonstrates the use of the endpoints and resources provided by the following APIs:
 
 
 | API | REFERENCE DOCUMENTS |

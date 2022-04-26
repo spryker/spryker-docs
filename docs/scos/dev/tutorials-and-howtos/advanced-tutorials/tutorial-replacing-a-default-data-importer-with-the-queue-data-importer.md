@@ -24,7 +24,7 @@ Specifically, the `ProductAbstract` data importer is replaced here.
 
 You should have data in the `PRODUCT_ABSTRACT_QUEUE`. See [Importing data with the queue data importer](/docs/scos/dev/data-import/{{site.version}}/importing-data-with-the-queue-data-importer.html#exporting-data-from-csv-to-queue) for details on how to import data into the queue.
 
-## Step 1. Configuration
+## 1. Configuration
 
 Configure `DataImportConfig` and add a constant to it. You can add a new constant and a public method to  `Pyz\Zed\DataImport\DataImportConfig`.
 
@@ -67,7 +67,7 @@ class DataImportConfig extends SprykerDataImportConfig
 }
 ```
 
-## Step 2. Registering a console command
+## 2. Register a console command
 
 Register a new import console command in `Pyz\Zed\Console\ConsoleDependencyProvider::getConsoleCommands()`:
 
@@ -98,7 +98,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-## Step 3. Adjusting the business factory
+## 3. Adjust the business factory
 
 Go to `Pyz\Zed\DataImport\Business\DataImportBusinessFactory` and add a new method for creating the queue data importer that uses the queue reader and imports data to the database.
 Also, add a call to this method to `DataImportBusinessFactory::getDataImporterByType()`.
@@ -152,7 +152,7 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
 ```
 </details>
 
-## Step 4. Adjusting writers
+## 4. Adjust writers
 
 Make changes to all bulk data set writers, which store data internally. Then, flush it to the database in bulk once a configured threshold is reached.
 First, use `Spryker\Zed\DataImport\Business\DataImporter\Queue\DataSetWriterPersistenceStateAwareTrait` inside these writers. Then, do the following:
@@ -206,7 +206,7 @@ class ProductAbstractBulkPdoDataSetWriter implements DataSetWriterInterface
 </details>
 
 
-## Step 5. Execution
+## 5. Execution
 
 To perform data importing from the queue into the persistent storage, run `vendor/bin/console data:import` with the `--group` option set to `QUEUE_READERS`.
 

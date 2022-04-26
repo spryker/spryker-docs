@@ -1,5 +1,5 @@
 ---
-title: Tutorial - New Relic Monitoring
+title: Tutorial - New Relic monitoring
 description: Use the guide to learn how to configure a New Relic agent, including on Linux,  and then test it.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -42,16 +42,16 @@ Here is the instruction for a default Linux installation:
 
 ```bash
 $ wget http://download.newrelic.com/php_agent/release/newrelic-php5-X.X.X.X-OS.tar.gz
- $ sudo gzip -dc newrelic-php5-X.X.X.X-OS.tar.gz | tar xf -
+$ sudo gzip -dc newrelic-php5-X.X.X.X-OS.tar.gz | tar xf -
 $ cd newrelic-php5-X.X.X.X
 $ sudo ./newrelic-install install
 ```
 
-Enter the license key  and follow the instructions:
+Enter the license key and follow the instructions:
 
 ![New Relic - Step 4](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Advanced/Tutorial+New+Relic+Monitoring/newrelic-step4.png) 
 
-Once the installation is finished,  check/modify the following files: a mapping default fpm (web) transaction to the default Yves, and the console commands (non-web) to the default Zed.
+Once the installation is finished, check/modify the following files: a mapping default fpm (web) transaction to the default Yves, and the console commands (non-web) to the default Zed.
 
 **/etc/php/7.2/cli/conf.d/newrelic.ini**
 
@@ -98,7 +98,7 @@ $ sudo service nginx restart
 $ sudo /etc/init.d/newrelic-daemon status
 ```
 
-To enable or migrate New Relic packages, check the following tutorial:
+To enable or migrate New Relic packages, check the following articles:
 
 * [Migration Guide - Monitoring](/docs/scos/dev/module-migration-guides/migration-guide-monitoring.html)
 * [New Relic](/docs/scos/user/technology-partners/{{site.version}}/operational-tools-monitoring-legal-etc/new-relic.html)

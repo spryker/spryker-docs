@@ -12,14 +12,14 @@ For more information about module APIs, see [Definition of Module API](/docs/sco
 
 ## Example of code that causes an upgradability error
 
-The extended class `PyzCategoryImageEntityManager` overrides the private API core method `CategoryImageEntityManager::saveCategoryImageSet`.
+The extended class `CategoryImageEntityManager` overrides the private API core method `CategoryImageEntityManager::saveCategoryImageSet`.
 
 ```php
 namespace Pyz\Zed\CategoryImage\Persistence;
 
 use Spryker\Zed\CategoryImage\Persistence\CategoryImageEntityManager as SprykerCategoryImageEntityManager;
 
-class PyzCategoryImageEntityManager extends SprykerCategoryImageEntityManager
+class CategoryImageEntityManager extends SprykerCategoryImageEntityManager
 {
     /**
      * ...
@@ -40,8 +40,8 @@ Evaluator\Business\Check\IsMethodOverridden\EntityManagerCheck
 Introduce a new custom method without usage of existing one. Override usage of the current method in all usage of public API.
 ************************************************************************************************************************
 ------------------------------------------------------------------------------------
-Pyz\Zed\CategoryImage\Persistence\PyzCategoryImageEntityManager
-{"name":"saveCategoryImageSet", "class":"Pyz\Zed\CategoryImage\Persistence\PyzCategoryImageEntityManager"}
+Pyz\Zed\CategoryImage\Persistence\CategoryImageEntityManager
+{"name":"saveCategoryImageSet", "class":"Pyz\Zed\CategoryImage\Persistence\CategoryImageEntityManager"}
 {"parentClass":"Pyz\Zed\CategoryImage\Persistence\CategoryImageEntityManager"}
 ************************************************************************************************************************
 ```
@@ -64,7 +64,7 @@ namespace Pyz\Zed\CategoryImage\Persistence;
 
 use Spryker\Zed\CategoryImage\Persistence\CategoryImageEntityManager as SprykerCategoryImageEntityManager;
 
-class PyzCategoryImageEntityManager extends SprykerCategoryImageEntityManager
+class CategoryImageEntityManager extends SprykerCategoryImageEntityManager
 {
     /**
      * ...

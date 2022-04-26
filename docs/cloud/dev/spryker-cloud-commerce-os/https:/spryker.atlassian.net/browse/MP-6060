@@ -16,7 +16,7 @@ We divided the preparation into approximate timeframes, and you can adjust them 
 ## Compatibility checklist
 
 Review this preparatory checklist before initiating your go-live plan.  
-You cannot successfully deploy a project on Spryker Cloud Commerce OS unless you do the following :
+You cannot successfully deploy a project on Spryker Cloud Commerce OS unless you do the following:
 
 - Upgrade your project's code to match the latest demoshop release, or at minimum, upgrade to a release that fully supports the Docker SDK.
 - Migrate the project's database to MariaDB if you are not already using it.

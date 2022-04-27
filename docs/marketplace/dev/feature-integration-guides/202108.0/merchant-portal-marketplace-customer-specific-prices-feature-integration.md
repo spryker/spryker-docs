@@ -11,73 +11,56 @@ This document describes how to integrate the Merchant Portal - Marketplace Custo
 
 Follow the steps below to install the Merchant Portal - Marketplace Customer Specific Prices feature core.
 
+### Prerequisites
+
+To start feature integration, integrate the required features:
+
+| NAME | VERSION | INTEGRATION GUIDE |
+| --------- | ------ |-----------------|
+| Marketplace Merchant Custom Prices | {{page.version}} | |
+| Marketplace Merchant Portal Product Management | {{page.version}} | |
+
+spryker-feature/merchant-custom-prices
+spryker-feature/marketplace-merchant-portal-product-management
+
 ### 1) Install the required modules using Composer
 
 Install the required module:
 
 ```bash
-composer require spryker/price-product-merchant-relationship-merchant-portal-gui:"^1.0.0" --update-with-dependencies
+composer require spryker-feature/marketplace-merchant-custom-prices --with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules were installed:
 
-| MODULE    | EXPECTED DIRECTORY        |
-|-----------|---------------------------|
+| MODULE                                            | EXPECTED DIRECTORY        |
+|---------------------------------------------------|---------------------------|
+| PriceProduct                                      | vendor/spryker/price-product |
+| PriceProductMerchantRelationship                  | vendor/spryker/price-product-merchant-relationship |
 | PriceProductMerchantRelationshipMerchantPortalGui | vendor/spryker/price-product-merchant-relationship-merchant-portal-gui |
+| ProductMerchantPortalGui                          | vendor/spryker/product-merchant-portal-gui |
 
 {% endinfo_block %}
 
+### 2) Set up behavior
 
-### 2) Set up database schema
+Enable the following behaviors by registering the plugins:
 
-```bash
-console propel:install
-```
-
-{% info_block warningBox "Verification" %}
-
-Verify that the following changes have been applied by checking your database:
-
-| DATABASE ENTITY | TYPE   | EVENT     |
-|-----------------|--------|-----------|
-| spy_acl_rule.bundle   | column | updated   |
-| spy_acl_rule.controller   | column | updated   |
+| PLUGIN  | SPECIFICATION                                                                                                                                                                                                                                                               | PREREQUISITES | NAMESPACE                                                                                       |
+| ------------ |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------------------------|
+| MerchantRelationshipPreBuildPriceProductGroupKeyPlugin | Sets PriceProduct.priceDimension.isMerchantActive to null.                                                                                                                                                                                                                  |               | Spryker\Service\PriceProductMerchantRelationship\Plugin\PriceProduct                            |
+| MerchantRelationshipVolumePriceProductValidatorPlugin | Validates volume prices against having volume price for price with merchant relationship.                                                                                                                                                                                   |               | Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\PriceProduct | 
+| MerchantRelationshipPriceProductCollectionDeletePlugin | Removes price product merchant relationships by provided criteria transfer.                                                                                                                                                                                                 |               | Spryker\Zed\PriceProductMerchantRelationship\Communication\Plugin\PriceProduct |
+| MerchantRelationshipPriceProductTableFilterPlugin | Filters price product transfers by merchant relationship.                                                                                                                                                                                                                   |               | Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui |
+| MerchantRelationshipPriceProductAbstractTableConfigurationExpanderPlugin | Expands price product abstract table configuration with Merchant Relationship column. Overrides `delete` and `save` url configuration for Merchant Relationship prices to include `idMerchantRelationship` parameter. Disables volume price column for the merchant prices. |               | Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui |
+| MerchantRelationshipPriceProductConcreteTableConfigurationExpanderPlugin | Expands price product concrete table configuration with Merchant Relationship column. Overrides `delete` and `save` url configuration for Merchant Relationship prices to include `idMerchantRelationship` parameter. Disables volume price column for the merchant prices. |               | Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui |
+| MerchantRelationshipPriceProductMapperPlugin | Maps merchant relationship data to `PriceProductTableViewTransfer` transfer object. |  | Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui |
 
 
-{% endinfo_block %}
-
-### 3) Set up the transfer objects
-
-Generate transfer changes:
-
-```bash
-console transfer:generate
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the following changes were applied in transfer objects:
-
-| TRANSFER  | TYPE  | EVENT | PATH |
-| - | - | - | - |
-| PriceProductCollectionDeleteCriteria | class | Created | src/Generated/Shared/Transfer/PriceProductCollectionDeleteCriteriaTransfer |
-| PriceProductCollectionResponse | class | Created | src/Generated/Shared/Transfer/PriceProductCollectionResponseTransfer |
-| PriceProductMerchantRelationshipCollectionDeleteCriteria | class | Created | src/Generated/Shared/Transfer/PriceProductMerchantRelationshipCollectionDeleteCriteriaTransfer |
-| PriceProductMerchantRelationshipCollectionResponse | class | Created | src/Generated/Shared/Transfer/PriceProductMerchantRelationshipCollectionResponseTransfer |
-| PriceProductTableView | class | Created | src/Generated/Shared/Transfer/PriceProductTableViewTransfer |
-| PriceProductTableCriteria | class | Created | src/Generated/Shared/Transfer/PriceProductTableCriteriaTransfer |
-| PriceProductCriteria.withAllMerchantPrices | property | Created | src/Generated/Shared/Transfer/PriceProductCriteriaTransfer |
-| PriceProductDimension.idPriceProductDefault | property | Created | src/Generated/Shared/Transfer/PriceProductDimensionTransfer |
-| PriceProduct.priceTypeName | property | Created | src/Generated/Shared/Transfer/PriceProductTransfer |
-| PriceProductDimension.name | property | Created | src/Generated/Shared/Transfer/PriceProductDimensionTransfer |
-
-{% endinfo_block %}
-
-### 4) Configure price product group key pre-build plugins
-
-**src/Pyz/Service/PriceProduct/PriceProductDependencyProvider.php**
+<details>
+<summary markdown='span'>src/Pyz/Service/PriceProduct/PriceProductDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -101,9 +84,10 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 }
 ```
 
-### 5) Configure price product validation plugins and price product collection delete plugins
+</details>
 
-**src/Pyz/Zed/PriceProduct/PriceProductDependencyProvider.php**
+<details>
+<summary markdown='span'>src/Pyz/Zed/PriceProduct/PriceProductDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -138,9 +122,10 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 }
 ```
 
-### 6) Configure price product table filter plugins, price product abstract table configuration expander plugins, price product concrete table configuration expander plugins and price product mapper plugins
+</details>
 
-**src/Pyz/Zed/ProductMerchantPortalGui/ProductMerchantPortalGuiDependencyProvider.php**
+<details>
+<summary markdown='span'>src/Pyz/Zed/ProductMerchantPortalGui/ProductMerchantPortalGuiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -196,3 +181,13 @@ class ProductMerchantPortalGuiDependencyProvider extends SprykerProductMerchantP
     }
 }
 ```
+
+</details>
+
+{% info_block warningBox "Verification" %}
+
+Log in to the Merchant Portal with a merchant with merchant relationships.
+
+Open any product for edit and make sure that the Customer column in the Price section is updatable.
+
+{% endinfo_block %}

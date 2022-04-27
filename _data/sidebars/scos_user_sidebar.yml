@@ -1635,12 +1635,49 @@ entries:
       nested:
       - title: Discount
         nested:
+        - title: "Best practices: Promote products with discounts"
+          url: /docs/scos/user/back-office-user-guides/merchandising/discount/best-practices-promote-products-with-discounts.html
+          include_versions:
+          - "202108.0"
+        - title: Create discounts
+          url: /docs/scos/user/back-office-user-guides/merchandising/discount/create-discounts.html
+          include_versions:
+          - "202108.0"
+        - title: Edit discounts
+          url: /docs/scos/user/back-office-user-guides/merchandising/discount/edit-discounts.html
+          include_versions:
+          - "202108.0"
+        - title: Export voucher codes
+          url: /docs/scos/user/back-office-user-guides/merchandising/discount/export-voucher-codes.html
+          include_versions:
+          - "202108.0"
         - title: Creating vouchers
           url: /docs/scos/user/back-office-user-guides/merchandising/discount/creating-vouchers.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
         - title: Creating cart rules
           url: /docs/scos/user/back-office-user-guides/merchandising/discount/creating-cart-rules.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
         - title: Managing discounts
           url: /docs/scos/user/back-office-user-guides/merchandising/discount/managing-discounts.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
         - title: References
           include_versions:
           - "201811.0"
@@ -2348,6 +2385,7 @@ entries:
       - "202001.0"
       - "202005.0"
   - title: Technology Partners
+    url: /docs/scos/user/technology-partners/technology-partners.html
     nested:
     - title: Order Management (ERPOMS)
       nested:
@@ -2381,7 +2419,7 @@ entries:
       nested:
       - title: ChannelPilot Marketplace
         url: /docs/scos/user/technology-partners/marketplace-integrations/channelpilot-marketplace.html
-    - title: Finance & Accounting
+    - title: Finance and accounting
       nested:
       - title: Nitrobox
         url: /docs/scos/user/technology-partners/finance-and-accounting/nitrobox.html
@@ -2391,9 +2429,9 @@ entries:
       nested:
       - title: Dixa
         url: /docs/scos/user/technology-partners/customer-service/dixa.html
-      - title: live chat service
+      - title: Live Chat Service
         url: /docs/scos/user/technology-partners/customer-service/live-chat-service.html
-      - title: Optimise it
+      - title: optimise-it
         url: /docs/scos/user/technology-partners/customer-service/optimise-it.html
       - title: iAdvize
         url: /docs/scos/user/technology-partners/customer-service/iadvize.html
@@ -2409,7 +2447,7 @@ entries:
         url: /docs/scos/user/technology-partners/hosting-providers/continum.html
       - title: Metaways
         url: /docs/scos/user/technology-partners/hosting-providers/metaways.html
-    - title: Marketing & Conversion
+    - title: Marketing and conversion
       include_versions:
       - "202009.0"
       - "202108.0"
@@ -2437,13 +2475,13 @@ entries:
           url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/dotdigital.html
         - title: Inxmail
           url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/inxmail.html
-      - title: AB Testing & Performance
+      - title: AB testing and performance
         nested:
         - title: AB Tasty
           url: /docs/scos/user/technology-partners/marketing-and-conversion/ab-testing-and-performance/ab-tasty.html
         - title: Baqend
           url: /docs/scos/user/technology-partners/marketing-and-conversion/ab-testing-and-performance/baqend.html
-      - title: Customer Retention & Loyalty
+      - title: Customer retention and loyalty
         nested:
         - title: Zenloop
           url: /docs/scos/user/technology-partners/marketing-and-conversion/customer-retention-and-loyalty/zenloop.html
@@ -2624,14 +2662,6 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
-        nested:
-        - title: Installing and configuring Akeneo
-          url: /docs/scos/dev/technology-partner-guides/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html
-        - title: Akeneo — Console commands
-          url: /docs/scos/dev/technology-partner-guides/product-information-pimerp/akeneo/akeneo-console-commands.html
-          include_versions:
-          - "202009.0"
-          - "202108.0"
       - title: Xentral
         url: /docs/scos/user/technology-partners/product-information-pimerp/xentral.html
       - title: Censhare

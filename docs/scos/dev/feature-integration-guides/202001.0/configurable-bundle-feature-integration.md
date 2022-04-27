@@ -124,7 +124,6 @@ src/Pyz/Zed/ConfigurableBundlePageSearch/Persistence/Propel/Schema/spy_configura
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -312,7 +311,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database, the configured data are added to the `spy_glossary` table.
+Make sure that in the database, the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 

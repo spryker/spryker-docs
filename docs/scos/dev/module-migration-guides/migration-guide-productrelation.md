@@ -35,28 +35,32 @@ redirect_from:
 
 From version 2.* we have added the possibility to assign product relations to stores.
 
-**To upgrade to the new version of the module, do the following:**
+*Estimated migration time: 30 minutes.*
 
-1. Upgrade the ProductRelation module to the new version:
+To upgrade to the new version of the module, do the following:
+
+1. Upgrade the `ProductRelation` module to the new version:
+
 ```bash
 composer require spryker/product-relation:"^3.0.0" --update-with-dependencies
 ```
 
 2. Prepare a database entity schema for each store in the system:
+  
 ```bash
 APPLICATION_STORE=DE console propel:schema:copy
 APPLICATION_STORE=US console propel:schema:copy
 ...
 ```
 
-
 3. Run the database migration:
+
 ```bash
 console propel:install
 console transfer:generate
 ```
 
-*Estimated migration time: 30 minutes.*
+
 
 
 ## Upgrading from version 1.* to version 2.*

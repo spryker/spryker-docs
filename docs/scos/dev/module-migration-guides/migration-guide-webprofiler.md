@@ -32,18 +32,22 @@ This migration guide is a part of the [Silex migration effort](/docs/scos/dev/mi
 
 To upgrade the module, do the following:
 
-1. Update the module using composer:
+1. Update the module using Composer:
+
 ```bash
 composer update spryker/web-profiler
 ```
+
 2. Remove old service providers, if you have them in the project:
+
 ```php
 \SprykerShop\Yves\WebProfilerWidget\Plugin\ServiceProvider\WebProfilerWidgetServiceProvider
 \Spryker\Shared\WebProfiler\Plugin\ServiceProvider\WebProfilerServiceProvider
 ```
+
 3. Add new plugins to dependency providers:
 
-**Zed Integration**
+**Zed integration**
 
 ```php
 <?php
@@ -71,7 +75,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 }
 ```
 
-**Yves Integration**
+**Yves integration**
 
 ```php
 <?php
@@ -101,7 +105,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 4. Enable additional plugins:
 
-**Form Zed Integration**
+**Form Zed integration**
 
 ```php
 <?php
@@ -127,7 +131,7 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 }
 ```
 
-**Twig Zed Integration**
+**Twig Zed integration**
 
 ```php
 <?php
@@ -153,7 +157,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 }
 ```
 
-**WebProfiler Zed Integration**
+**WebProfiler Zed integration**
 
 ```php
 <?php
@@ -197,7 +201,7 @@ class WebProfilerDependencyProvider extends SprykerWebProfilerDependencyProvider
 }
 ```
 
-**Form Yves Integration**
+**Form Yves integration**
 
 ```php
 <?php
@@ -223,7 +227,7 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 }
 ```
 
-**Twig Yves Integration**
+**Twig Yves integration**
 
 ```php
 <?php

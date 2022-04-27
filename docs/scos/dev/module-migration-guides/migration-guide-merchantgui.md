@@ -37,20 +37,28 @@ If your project code contains the MerchantProfile module, you need to remove reg
 
 {% endinfo_block %}
 
-**To upgrade to the new version of the module, do the following:**
+*Estimated migration time: 1-2 hours.*
+
+To upgrade to the new version of the module, do the following:
 
 1. Update `MerchantGui` module version and its dependencies by running the following command:
+
 ```bash
-composer require spryker/merchnat-gui:"^3.0.0" --update-with-dependencies
+composer require spryker/merchant-gui:"^3.0.0" --update-with-dependencies
 ```
+
 2. Update the transfer objects:
+
 ```bash
 console transfer:generate
 ```
+
 3. Generate translator cache by running the following command to get the latest Zed translations:
+
 ```bash
 console translator:generate-cache
 ```
+
 4. Register the following form plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
@@ -76,11 +84,13 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
 ```
 
 5. Generate translator cache by running the following command to get the latest Zed translations:
+
 ```bash
 console translator:generate-cache
 ```
 
 6. Rename method for plugins stack `getMerchantProfileFormExpanderPlugins` to `getMerchantFormExpanderPlugins`:
+
 ```php
 namespace Pyz\Zed\MerchantGui;
 
@@ -109,8 +119,6 @@ If your project code contains any changes, make sure that it works correctly.
 
 {% endinfo_block %}
 
-*Estimated migration time: 1-2 hours.*
-
 ## Upgrading from version 1.* to version 2.*
 
 The main update of the `MerchantGui` v2.0.0 is the ability to expand Table, Form, Tabs for merchant entity. We also removed Merchant delete functionality.
@@ -129,12 +137,16 @@ Keep in mind that the `MerchantGui` module makes sense only in connection with m
 
 {% endinfo_block %}
 
-**To upgrade to the new version of the module, do the following:**
+*Estimated migration time: 1-2 hours.*
+
+To upgrade to the new version of the module, do the following:
 
 1. Update the `MerchantGui` module version and its dependencies by running the following command:
+
 ```bash
-composer require spryker/merchnat-gui:"^2.0.0" --update-with-dependencies
+composer require spryker/merchant-gui:"^2.0.0" --update-with-dependencies
 ```
+
 {% info_block infoBox "Info" %}
 
 Also, check the Migration Guide for the [Merchant](/docs/scos/dev/module-migration-guides/migration-guide-merchant.html#upgrading-from-version-1-to-version-2).
@@ -142,14 +154,17 @@ Also, check the Migration Guide for the [Merchant](/docs/scos/dev/module-migrati
 {% endinfo_block %}
 
 2. Update transfer objects:
+
 ```bash
 console transfer:generate
 ```
 
 3. Generate translator cache by running the following command to get the latest Zed translations:
+
 ```bash
 console translator:generate-cache
 ```
+
 {% info_block warningBox "Warning" %}
 
 If your project code contains any changes for the frontend part, make sure that it works correctly.
@@ -157,6 +172,7 @@ If your project code contains any changes for the frontend part, make sure that 
 {% endinfo_block %}
 
 4. If your project has any domain entities, that implement `MerchantFormExpanderPluginInterface`,  `MerchantTableActionExpanderPluginInterface`,  `MerchantTableActionExpanderPluginInterface`, `MerchantTableHeaderExpanderPluginInterface`, `MerchantTableConfigExpanderPluginInterface`, `MerchantFormTabExpanderPluginInterface`, add the respective plugins to the dependency provider:
+
 ```php
 class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
 {
@@ -216,6 +232,3 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
 * `MerchantTableActionExpanderPluginInterface` plugins are responsible for expanding the action column for the table.
 * `MerchantTableDataExpanderPluginInterface` plugins are responsible for expanding the data for the table.
 * `MerchantFormExpanderPluginInterface` plugins are responsible for expanding the form.
-
-
-*Estimated migration time: 1-2 hours.*

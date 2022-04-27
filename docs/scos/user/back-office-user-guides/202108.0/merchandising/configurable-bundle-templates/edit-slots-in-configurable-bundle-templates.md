@@ -34,29 +34,28 @@ This document describes how to edit slots in configurable bundle templates in th
     The page refreshes with the success message displayed.
 
 
-
-## Assigning products to a slot in a configurable bundle template
-
-1. Click the **Assign Products** tab.
-2. Assign one or more products in one of the following ways:
-    * Import the list of products you want to assign:
-        1. Click **Choose File**.
-        2. Select a CSV file with the product list. The file should contain `product_list_key` and `concrete_sku` fields.
-    * Select the products you want to assign:
-        1. In the **Select Products to assign** subtab, select the checkboxes next to the products you want to assign.
-        2.
-6. Select **Save**.
-The page refreshes with the success message displayed.
-
-**Tips and tricks**
-<br>To double-check the list of products that are to be assigned, switch to the **Products to be assigned** tab.
-
-#### Deassigning products from slots in configurable bundle templates
+## Assign and deassign products from a slot in a configurable bundle template
 
 1. Click the **Assign Products** tab.
-2. In the **Products in this list** table, select one or more products.
-3. Select **Save**.
-The page refreshes with the success message displayed.
+2. In the **Select Products to assign** subtab, select the checkboxes next to the products you want to assign.
+3. In the **Products in this list** subtab, select the checkboxes next to the products you want to deassign.
+4. Click **Save**.
+    The page refreshes with the success message displayed. The updated product selection is displayed in the **Products in this list** subtab.
 
 **Tips and tricks**
-<br>To double-check the list of products that are to be deassigned, switch to the **Products to be deassigned** tab.
+When assigning and deassigning a lot of products, it might be useful to double-check your selection in **Products to be assigned** and **Products to be deassigned** subtabs.
+
+## Import products for a slot in a configurable bundle template
+
+
+{% info_block warningBox "" %}
+
+If there are assigned products, they are replaced with the product list you import.
+
+{% endinfo_block %}
+
+1. Click the **Assign Products** tab.
+2. Click **Choose File**.
+3. Select a CSV file with the product list. The file should contain `product_list_key` and `concrete_sku` fields.
+4. Click **Save**
+    The page refreshes with the success message displayed. The updated product selection is displayed in the **Products in this list** subtab.

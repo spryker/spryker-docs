@@ -8,9 +8,9 @@ template: module-migration-guide-template
 
 *Estimated migration time: 30 minutes*
 
-To upgrade the ProductConfiguration module from version 0.1.* to version 0.2.*, do the following:
+To upgrade the `ProductConfiguration` module from version 0.1.* to version 0.2.*, do the following:
 
-1. Update the ProductConfiguration module to version 0.2.0:
+1. Update the `ProductConfiguration` module to version 0.2.0:
 
 ```bash
 composer require spryker/product-configuration:"^0.2.0" --update-with-dependencies
@@ -21,6 +21,7 @@ composer require spryker/product-configuration:"^0.2.0" --update-with-dependenc
 ```bash
 console transfer:generate
 ```
+
 3. From `\Pyz\Client\ProductConfiguration\ProductConfigurationDependencyProvider` remove the plugin stacks:
    - `\Pyz\Client\ProductConfiguration\ProductConfigurationDependencyProvider::getDefaultProductConfiguratorRequestPlugin()`
    - `\Pyz\Client\ProductConfiguration\ProductConfigurationDependencyProvider::getDefaultProductConfiguratorResponsePlugin()`
@@ -51,6 +52,7 @@ class ProductConfigurationDependencyProvider extends SprykerProductConfiguration
     }
 }
 ```
+
 5. In `\Pyz\Service\PriceProduct\PriceProductDependencyProvider`, on the project level, register the filter plugins:
 
 ```php
@@ -78,11 +80,17 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
     }
 }
 ```
+
 6. From `\Pyz\Client\ProductConfiguration\ProductConfigurationDependencyProvider`, remove the plugin `ProductConfigurationQuoteRequestQuoteCheckPlugin` (should be replaced with `Spryker\Client\ProductConfigurationCart\Plugin\QuoteRequest\ProductConfigurationQuoteRequestQuoteCheckPlugin`).
+
 7. From `\Pyz\Zed\Availability\AvailabilityDependencyProvider`, remove the plugin `ProductConfigurationCartItemQuantityCounterStrategyPlugin` (should be replaced with `Spryker\Zed\ProductConfigurationCart\Communication\Plugin\Availability\ProductConfigurationCartItemQuantityCounterStrategyPlugin`.
+
 8. From `\Pyz\Zed\AvailabilityCartConnector\AvailabilityCartConnectorDependencyProvider`, remove the plugin `ProductConfigurationCartItemQuantityCounterStrategyPlugin` (should be replaced with `Spryker\Zed\ProductConfigurationCart\Communication\Plugin\AvailabilityCartConnector\ProductConfigurationCartItemQuantityCounterStrategyPlugin`).
+
 9. From `\Pyz\Zed\Cart\CartDependencyProvider`, remove the plugin: `ProductConfigurationGroupKeyItemExpanderPlugin` (should be replaced with `Spryker\Zed\ProductConfigurationCart\Communication\Plugin\Cart\ProductConfigurationGroupKeyItemExpanderPlugin`).
+
 10. From `\Pyz\Zed\Checkout\CheckoutDependencyProvider`, remove the plugin: `ProductConfigurationCheckoutPreConditionPlugin` (should be replaced with `Spryker\Zed\ProductConfigurationCart\Communication\Plugin\Checkout\ProductConfigurationCheckoutPreConditionPlugin`).
+
 11. From `\Pyz\Zed\PriceCartConnector\PriceCartConnectorDependencyProvider`, remove the plugins:
 
     - `ProductConfigurationCartItemQuantityCounterStrategyPlugin` (should be replaced with `Spryker\Zed\ProductConfigurationCart\Communication\Plugin\PriceCartConnector\ProductConfigurationCartItemQuantityCounterStrategyPlugin`)

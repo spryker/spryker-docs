@@ -12,14 +12,14 @@ redirect_from:
   - /docs/en/multiple-carts-feature-overview
 ---
 
-Sometimes customers need more than one shopping cart, for example, one for daily purchases, the other one for monthly expenses. The *Multiple Carts* feature allows you to create and manage multiple shopping carts in one customer account.
+Sometimes customers need more than one shopping cart, for example, one for daily purchases, the other one for monthly expenses. The *Multiple Carts* feature lets you create and manage multiple shopping carts in one customer account.
 
 ## Creating and managing multiple shopping carts
 
 There are two ways to create a shopping cart:
 
 * Through a shopping cart widget in the header of shop.
-* From the *Shopping Cart* page in the *My Account* menu.
+* From the **Shopping Cart** page in the **My Account** menu.
 
 New items are added to the shopping cart by clicking **Add to Cart** on the product details page.
 
@@ -27,11 +27,11 @@ Customers can create not just one but multiple shopping carts to be used for dif
 
 {% info_block infoBox %}
 
-These could be, for instance, a shopping cart for daily purchases or a shopping cart for goods that you purchase once in a month.
+These could be, for example, a shopping cart for daily purchases or a shopping cart for goods that you purchase once in a month.
 
 {% endinfo_block %}
 
-After a shopping cart has been created, it appears in the shopping carts table on the *Shopping Cart* page in *My Account*.
+After a shopping cart has been created, it appears in the shopping carts table on the **Shopping Cart** page in **My Account**.
 
 The table with shopping carts shows details for each of the carts, including:
 
@@ -40,17 +40,17 @@ The table with shopping carts shows details for each of the carts, including:
 * Number of products added to cart
 * Price mode (Net or Gross)
 * Cart Total
-* Possible actions to manage shopping carts: edit name, duplicate, [share](/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html), dismiss, delete, switch cart to shopping list (see the *Actions* table for details)
+* Possible actions to manage shopping carts: edit name, duplicate, [share](/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html), dismiss, delete, switch cart to shopping list (see the **Actions** table for details)
 
 ![Multiple carts list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/multiple-cart-list.png)
 
-The table bellow provides detailed information on the possible actions to manage shopping carts.
+The table bellow provides detailed information about the possible actions to manage shopping carts.
 
 | ACTION | DESCRIPTION |
 | --- | --- |
-| Edit Name | Allows a customer to edit the name of the shopping cart. |
-| Duplicate | Creates a copy of the chosen shopping cart including the items added to the cart.<br>The duplicate copy of the cart is named according to the template: `<Name of the original cart> Copied At <Mo. dd, yyyy hh:mm>` <br>A cart can be converted into shopping list on the *Shopping cart* page by clicking on **To shopping list**.|
-| Dismiss | Allows a customer to dismiss a shared shopping cart. |
+| Edit Name | lets a customer edit the name of the shopping cart. |
+| Duplicate | Creates a copy of the chosen shopping cart including the items added to the cart.<br>The duplicate copy of the cart is named according to the template: `<Name of the original cart> Copied At <Mo. dd, yyyy hh:mm>` <br>A cart can be converted into shopping list on the **Shopping Cart** page by clicking on **To shopping list**.|
+| Dismiss | lets a customer dismiss a shared shopping cart. |
 | Delete | Deletes the shopping cart. <br>Deleting a shopping cart also deletes the items added to it. |
 
 {% info_block infoBox %}
@@ -72,7 +72,7 @@ Only one shopping cart can be set as active in the customer account.
 There are 2 ways to set a shopping cart as active:
 
 * Clicking on the cart name in the shopping cart widget in the header of the shop.
-* Clicking on the cart name on the *Shopping Cart* page in the *My Account* menu.
+* Clicking on the cart name on the **Shopping Cart** page in the **My Account** menu.
 
 After the shopping cart is set to active, the user is redirected to a respective cart page where the table with the following information is available:
 

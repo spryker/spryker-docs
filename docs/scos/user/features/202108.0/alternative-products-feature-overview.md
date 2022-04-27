@@ -16,7 +16,7 @@ Suggesting product alternatives is a great way to ease the user’s product find
 
 For marketplace relations, alternative products are useful because for a marketplace owner it is irrelevant from what merchant a buyer has bought a product. If a merchant does not have this product, the alternative product can be shown on the marketplace.
 
-A Back Office user can add product alternatives for both abstract and concrete products in **Catalog** > **Products**.
+A Back Office user can add product alternatives for both abstract and concrete products in **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 
 All the available alternative products are shown on the abstract product details page, if one of the following occurs:
 

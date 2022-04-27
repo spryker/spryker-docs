@@ -66,4 +66,4 @@ We always try to avoid BC breaking changes and reduce the effort needed to upgra
 
 ## Private API
 
-The *public API* term is introduced by Semantic Versioning. To refer to everything that is not part of the the public API in Spryker Commerce OS, we introduced a *private API*.
+The *public API* term is introduced by Semantic Versioning. To refer to everything that is not part of the public API in Spryker Commerce OS, we introduced a *private API*.

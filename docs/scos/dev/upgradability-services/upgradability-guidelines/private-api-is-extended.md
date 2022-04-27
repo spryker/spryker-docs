@@ -9,7 +9,7 @@ Modules have public and private APIs. While public API updates always support ba
 
 For more information about module APIs, see [Definition of Module API](/docs/scos/dev/architecture/module-api/definition-of-module-api.html).
 
-## Code that causes an upgradability error: Extending a private API form class
+## Example of Example of code that causes an upgradability error: Extending a private API form class
 
 `CustomerAccessForm` extends `Spryker\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm` from a private API.
 
@@ -38,11 +38,12 @@ To resolve the error provided in the example, try the following in the provided 
 1. Recommended: Extend the functionality using the [Configuration strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#configuration).
 2. Recommended: Extend the functionality using the [Plug and Play strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#plug-and-play).
 3. Recommended: Extend the functionality using the [Project Modules strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules).
-4. Not recommended.
-Reason: The effort to update the project could be bigger in the future and could require more manual work.
-   4.1. Register the missing extension point, so core can add it in [Spryker Ideas](https://spryker.ideas.aha.io/).
-   4.2. Copy the private API core functionality to the project level and give it a unique name. For an example, see [Example of resolving the error by copying the form class to the project level](#example-of-resolving-the-error-by-copying-the-form-class-to-the-project-level).
-   4.3. As soon as 4.1 is released in core - refactor the code added in step 4.2 to any of the recommended 1-3 steps.
+4. Not recommended: Copy the functionality from the core to the project level:
+    1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
+    2. Copy the private API core functionality to the project level and give it a unique name. For an example, see [Example of resolving the error by copying the form class to the project level](#example-of-resolving-the-error-by-copying-the-form-class-to-the-project-level).
+    3. As soon as the extension point in core is released, refactor the code added in step 4.2 using the strategies in steps 1-3.
+        While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
+
 
 ## Example of resolving the error by copying the form class to the project level
 
@@ -58,7 +59,10 @@ class PyzCustomerAccessForm extends AbstractType
 }
 ```
 
-## Code that causes an upgradability error: Extending a private API business model
+After the fix re-evaluate the code. The same error shouldn’t be returned.
+
+
+## Example of code that causes an upgradability error: Extending a private API business model
 
 `CustomerAccessFilter` extends `Spryker\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessFilter` from a private API.
 
@@ -93,7 +97,7 @@ class PyzCustomerAccessFilter implements PyzCustomerAccessFilterInterface
 }
 ```
 
-## Code that causes an upgradability error: Extending a private API dependency provider
+## Example of code that causes an upgradability error: Extending a private API dependency provider
 
 `CheckoutPageDependencyProvider` extends `Spryker\Yves\CheckoutPage\CheckoutPageDependencyProvider` from a private API.
 

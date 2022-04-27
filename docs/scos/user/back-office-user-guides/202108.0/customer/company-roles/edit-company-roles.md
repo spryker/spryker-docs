@@ -8,7 +8,7 @@ This document describes how to edit company roles in the Back Office.
 
 ## Prerequisites
 
-Review the reference information before you start, or look up the necessary information as you go through the process.
+Review the [reference information](#edit-a-company-role) before you start, or look up the necessary information as you go through the process.
 
 ## Edit a company role
 
@@ -26,8 +26,8 @@ Review the reference information before you start, or look up the necessary info
 
 | ATTRIBUTE |DESCRIPTION  |
 | --- | --- |
-| COMPANY | A company this role belongs to. |
+| COMPANY | A company this role belongs to. To define a role's company, [create](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-roles/create-company-roles.html) it from scratch. |
 | NAME | Unique identifier of the role.  |
 | IS DEFAULT | Defines if this role is used by default for all the new company users created. If the selected **COMPANY** already has a default role, by selecting this option you change the default role to this one. |
-| ASSIGNED PERMISSIONS | Permissions that are assigned to this role. |
-| UNASSIGNED PERMISSIONS | Permissions that are not assigned to this role. |
+| ASSIGNED PERMISSIONS | Permissions that are assigned to this role. The permissions are defined on a code level. |
+| UNASSIGNED PERMISSIONS | Permissions that are not assigned to this role. The permissions are defined on a code level. |

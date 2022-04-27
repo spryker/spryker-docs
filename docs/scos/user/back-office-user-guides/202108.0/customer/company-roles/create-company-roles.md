@@ -27,7 +27,7 @@ This document describes how to create company roles in the Back Office.
 ## Prerequisites
 
 * [Create a company](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-companies.html#creating-companies).
-* Review the reference information before you start, or look up the necessary information as you go through the process.
+* Review the [reference information](#create-a-company-role) before you start, or look up the necessary information as you go through the process.
 
 ## Create a company role
 
@@ -48,7 +48,7 @@ This document describes how to create company roles in the Back Office.
 | COMPANY | A company to create this role for. |
 | NAME | Unique identifier of the role.  |
 | IS DEFAULT | Defines if this role will be used by default for all the new company users created. If the selected **COMPANY** already has a default role, by selecting this option you change the default role to this one. |
-| UNASSIGNED PERMISSIONS | Permissions that define what a company user with this rule can do. |
+| UNASSIGNED PERMISSIONS | Permissions that define what a company user with this rule can do. The permissions are defined on a code level. |
 
 
 ## Next steps

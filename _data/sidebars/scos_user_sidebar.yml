@@ -1026,6 +1026,27 @@ entries:
             - "202001.0"
             - "202005.0"
             - "202009.0"
+      - title: Manage companies
+        url: /docs/scos/user/back-office-user-guides/customer/manage-companies.html
+      - title: Company units
+        nested:
+          - title: Create company units
+            url: /docs/scos/user/back-office-user-guides/customer/company-units/create-company-units.html
+          - title: Edit company units
+            url: /docs/scos/user/back-office-user-guides/customer/company-units/edit-company-units.html
+      - title: Company unit addresses
+        nested:
+          - title: Create company unit addresses
+            url: /docs/scos/user/back-office-user-guides/customer/company-unit-addresses/create-company-unit-addresses.html
+          - title: Edit company units
+            url: /docs/scos/user/back-office-user-guides/customer/company-unit-addresses/edit-company-unit-addresses.html
+      - title: Company users
+        nested:
+          - title: Create company users
+            url: /docs/scos/user/back-office-user-guides/customer/company-users/create-company-users.html
+          - title: Edit company units
+            url: /docs/scos/user/back-office-user-guides/customer/company-users/edit-company-users.html
+                        
       - title: Company account
         nested:
         - title: Managing companies
@@ -2042,7 +2063,7 @@ entries:
         - title: Create merchant relations
           url: /docs/scos/user/back-office-user-guides/marketplace/merchant-relations/edit-merchant-relations.html
           include_versions:
-          - "202108.0"            
+          - "202108.0"
       - title: Merchants and merchant relations
         include_versions:
         - "201903.0"

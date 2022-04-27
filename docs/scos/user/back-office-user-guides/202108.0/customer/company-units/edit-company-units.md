@@ -4,16 +4,16 @@ description: Learn how to edit company units in the Back Office.
 template: back-office-user-guide-template
 ---
 
-Learn how to edit company units in the Back Office.
+Learn how to edit company units in the Back Office. Additionally, this is the only way to add  addresses to company units. 
 
 
 ## Prerequisites
 
 * Optional: [Create company unit addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-unit-addresses/create-company-unit-addresses.html). They will be needed to assign addresses to the company unit you are going to edit.
-* Review the [reference information](#reference-information-edit-a-company-unit-address) before you start, or look up the necessary information as you go through the process.
+* Review the [reference information](#reference-information-edit-a-company-unit) before you start, or look up the necessary information as you go through the process.
 
 
-## Edit a company business unit
+## Edit a company unit
 
 1. Go to **Customers&nbsp;<span aria-label="and then">></span> Company Units**.
 2. Next to the business unit you want to edit, click **Edit**.
@@ -25,7 +25,7 @@ Learn how to edit company units in the Back Office.
 8. Click **Save**.
     This opens the **Company Units** page with a success message displayed.
 
-## Reference information: Edit company business units
+## Reference information: Edit company a unit
 
 | ATTRIBUTE | DESCRIPTION  |
 | --- | --- |
@@ -34,4 +34,4 @@ Learn how to edit company units in the Back Office.
 | NAME | Name. |
 | IBAN |  International Bank Account Number. |
 |BIC| Bank Identifier Code. |
-| Addresses | Addresses of this unit. |
+| ADDRESSES | Addresses of this unit. |

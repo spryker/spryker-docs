@@ -1,6 +1,6 @@
 ---
-title: Managing company users
-description: Use the procedures to create, edit, enable/disable, delete, and attach company users to business units in the Back Office.
+title: Create company users
+description: Learn how to create in the Back Office.
 last_updated: Jul 6, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-company-users
@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-company-users
   - /docs/managing-company-users
   - /docs/en/managing-company-users
+  - /docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-users.html
 related:
   - title: Managing Company Unit Addresses
     link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-unit-addresses.html
@@ -25,28 +26,44 @@ This topic describes how to manage company users.
 
 ## Prerequisites
 
+1. [Create a company](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/manage-companies.html).
+2. [Create a company unit](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-units/create-company-units.html).
+3. [Create a company role](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-roles/create-company-roles.html).
+4. Review the reference information before you start, or look up the necessary information as you go through the process.
+
 To start working with company users, go to the **Customers&nbsp;<span aria-label="and then">></span> Company Users** section.
 
-{% info_block warningBox "Note" %}
 
-Make sure you have a [company role](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-roles.html), [company](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-companies.html), and [business unit](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-units.html) created.
-
-{% endinfo_block %}
-
-Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating company users
 
-To add a new company user:
+
 1. On the *Overview of Company Users* page, in the top right corner, click **Add User**.
-2. On the *Create Company User* page:
-    1. Enter customer's email, salutation, first name, last name, and gender in the respective fields.
-    2. If you want the email with change password details be sent to the customer, select the **Send password token through email** checkbox.
-    3. Enter the date of birth and phone values.
-    4. Select company and business units from the respective drop-down lists.
-    5. Enter the phone number of the user (optional).
-    6. Check the checkbox for the roles you want to assign to the user. The values available for selection are limited by those assigned to a company. See [Managing company roles](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-roles.html) to learn how the company roles are created.
+2. On the *Create Company User* page, enter an **EMAIL**.
+3. Select a **SALUTATION**.
+4. Enter a **FIRST NAME**
+5. Enter a **LAST NAME**
+6. Select a **GENDER**.
+7. To send a password change email to the user, select the **SEND PASSWORD TOKEN THROUGH EMAIL** checkbox.
+8. Select a **DATE OF BIRTH**.
+9. Enter a **PHONE**.
+10. Select a **COMPANY**
+
 3. Click **Save**.
+
+
+| ATTRIBUTE |DESCRIPTION  |
+| --- | --- |
+| EMAIL | Email of the customer that is used for logging in to the online store. It is not available for modifications on the *Edit* page. |
+| SALUTATION | Formal salutation for the customer (_Mr_, _Mrs_, _Ms_, _Dr_). |
+| FIRST NAME | Customer first name. |
+| LAST NAME |  Customer last name.|
+| GENDER | Customer gender. |
+| DATE OF BIRTH | Customer date of birth. |
+| COMPANY  | Drop-down list with the companies from **Customers&nbsp;<span aria-label="and then">></span> Companies**. This selection defines the list of available business unit. |
+| BUSINESS UNIT | Business unit to which the user is going to be assigned. The list of the available values depends on the selected company. |
+| ASSIGNED ROLES  | Roles assigned to the customer. |
+Unassigned Roles | Roles that you can select to be assigned to the customer.|
 
 ## Editing a company user
 
@@ -64,18 +81,7 @@ All values are available for modifications except for the email. The *Email* fie
 
 The following table describes the attributes you see, select, or enter while creating or editing a company user.
 
-| ATTRIBUTE |DESCRIPTION  |
-| --- | --- |
-| Email | Email of the customer that is used for logging in to the online store. It is not available for modifications on the *Edit* page. |
-| Salutation | Formal salutation for the customer (_Mr_, _Mrs_, _Ms_, _Dr_). |
-| First Name | Customer first name. |
-| Last Name |  Customer last name.|
-| Gender | Customer gender. |
-| Date of birth | Customer date of birth. |
-Company  | Drop-down list with the companies from **Customers&nbsp;<span aria-label="and then">></span> Companies**. This selection defines the list of available business unit. |
-| Business Unit | Business unit to which the user is going to be assigned. The list of the available values depends on the selected company. |
-| Assigned Roles | Roles assigned to the customer. |
-Unassigned Roles | Roles that you can select to be assigned to the customer.|
+
 
 ## Attaching a company user to a business unit
 

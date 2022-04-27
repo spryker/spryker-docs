@@ -84,7 +84,7 @@ For example, the following code defines events for publishing for the cases when
 The synchronization events are auto-generated and linked by the synchronization process. Therefore, no explicit event declaration is necessary for the default behavior.
 
 ## 3. Configure Publish & Synchronization queues
-Now, you need to configure the publish queues where all publish events will be exchanged. The default generic publish queue is `event`. You can define the queue in `data/shop/development/current/vendor/spryker/product/src/Spryker/Zed/Publisher/PublisherConfig::getPublishQueueName()`. It is also possible to use separate publish queue per listener class (see [Listen to Publish Events](#6-listen-to-publish-events)).
+Now, you need to configure the publish queues where all publish events will be exchanged. The default generic publish queue is `event`. You can define the queue in `data/shop/development/current/vendor/spryker/product/src/Spryker/Zed/Publisher/PublisherConfig::getPublishQueueName()`. It is also possible to use separate publish queue per listener class (see [Listen to Publish Events](#listen-to-publish-events)).
 
 {% info_block infoBox "Creating a queue"%}
 

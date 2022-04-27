@@ -11,9 +11,6 @@ redirect_from:
   - /docs/managing-company-unit-addresses
   - /docs/en/managing-company-unit-addresses
   - /docs/scos/user/back-office-user-guides/202108.0/customer/company-account/managing-company-unit-addresses.html
-related:
-  - title: Managing Company Units
-    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-units.html
 ---
 
 This document describes how to create company unit addresses in the Back Office.
@@ -57,5 +54,5 @@ This document describes how to create company unit addresses in the Back Office.
 
 * [Assign the address to a company unit](/docs/scos/user/back-office-user-guides/{{page.history}}/customer/company-units/edit-company-units.html)
 * [Edit company unit addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-unit-addresses/edit-company-unit-addresses.html)
-* [Manage company roles](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-roles.html)
-* [Manage company users](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-users.html)
+* [Create company roles](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-roles/create-company-roles.html)
+* [Create company users](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-users/create-company-users.html)

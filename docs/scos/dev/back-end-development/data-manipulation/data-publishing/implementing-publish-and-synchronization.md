@@ -1,7 +1,7 @@
 ---
 title: Implementing Publish and Synchronization
 description: To implement Publish and Synchronize in your code, you need to perform the following steps
-last_updated: Jun 16, 2021
+last_updated: April 22, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/publish-and-synchronization-reference
 originalArticleId: cdb95c33-1519-4323-9d27-7cba32a8ac82
@@ -24,11 +24,11 @@ redirect_from:
   - /v1/docs/en/publish-and-synchronization-reference
 ---
 
-To implement *Publish and Synchronize* in your code, you need to perform the following steps:
+To implement *Publish and Synchronize* in your code, perform the following steps:
 
-## 1. Create Publish Module
+## 1. Create Publish module
 
-It is recommended practice to create a separate module for publish & synchronize purpose. To create an empty module, execute the following commands:
+We recommend creating a separate module for the publish & synchronize purpose. To create an empty module, execute the following commands:
 
 ```
 console code:generate:module:zed MyModuleStorage
@@ -36,18 +36,18 @@ console code:generate:module:client MyModuleStorage
 console code:generate:module:shared MyModuleStorage
 ```
 
-{% info_block infoBox %}
+{% info_block infoBox "Naming convention"%}
 
-As a naming convention, names of modules that publish data to Redis end with Storage (e.g. *MyModule**Storage***, and names of modules that publish to Elasticsearch end with Search (e.g. *MyModule**Search***).
+As a naming convention, names of modules that publish data to Redis end with Storage (for example, *MyModule**Storage***, and names of modules that publish to Elasticsearch end with Search (for example, *MyModule**Search***).
 
 {% endinfo_block %}
 
-## 2. Define Publish Events
-*Publish* and *Synchronize* are event-driven processes. To start publishing data to the frontend, an event must be triggered (publish event). After the publish process sucessfully prepared the data for the frontend, another event must be triggered (synchronization event) in order to deliver the prepared data to the frontend.
+## 2. Define Publish events
+The *Publish* and *Synchronize* are event-driven processes. To start publishing data to the frontend, a Publish event must be triggered. After the publish process successfully prepares the data for the frontend, the Synchronization event must be triggered to deliver the prepared data to the frontend.
 
-For this purpose, you need to define events for all changes you want to publish & synchronize. For information on how to add events to your module, see [Adding Events](/docs/scos/dev/back-end-development/data-manipulation/event/adding-events.html).
+For this purpose, you need to define events for all changes you want to publish and synchronize. For information on adding events to your module, see [Adding Events](/docs/scos/dev/back-end-development/data-manipulation/event/adding-events.html).
 
-For example, the following code defines events for publish for the cases when an entity is created, updated or deleted in the spy_glossary_translation table (see `data/shop/development/current/vendor/spryker/product/src/Spryker/Shared/GlossaryStorage/GlossaryStorageConfig.php`):
+For example, the following code defines events for publishing for the cases when an entity is created, updated, or deleted in the `spy_glossary_translation` table (see `data/shop/development/current/vendor/spryker/product/src/Spryker/Shared/GlossaryStorage/GlossaryStorageConfig.php`):
 
 ```php
     /**
@@ -81,34 +81,26 @@ For example, the following code defines events for publish for the cases when an
     public const ENTITY_SPY_GLOSSARY_TRANSLATION_DELETE = 'Entity.spy_glossary_translation.delete';
 ```
 
-The synchronization events are auto-generated and linked by the synchroniziation process, therefore no explicit event declaration is necessary for default behaviour.
+The synchronization events are auto-generated and linked by the synchronization process. Therefore, no explicit event declaration is necessary for the default behavior.
 
-## 3. Configure Publish & Synchronization Queues
-Now, you need to configure the publish queue(s) where all publish events will be exchanged. The default generic publish queue is **event** - this can be adjusted in `data/shop/development/current/vendor/spryker/product/src/Spryker/Zed/Publisher/PublisherConfig::getPublishQueueName()`. It is also possible to use separate publish queue per listener class (see **Listen to Publish Events**).
+## 3. Configure Publish & Synchronization queues
+Now, you need to configure the publish queues where all publish events will be exchanged. The default generic publish queue is `event`. You can define the queue in `data/shop/development/current/vendor/spryker/product/src/Spryker/Zed/Publisher/PublisherConfig::getPublishQueueName()`. It is also possible to use separate publish queue per listener class (see [Listen to Publish Events](#6-listen-to-publish-events)).
 
-{% info_block infoBox %}
+{% info_block infoBox "Creating a queue"%}
 
-For information on how to create a queue, see [Set Up a "Hello World" Queue](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html), section **Creating a Simple Queue**.
-
-{% endinfo_block %}
-
-Now, you need to configure synchronization queues in order to deliver the prepared data to the frontend. It is recommended to have a separate synchronization queue for each *Redis* or *Elasticsearch* entity. 
-
-{% info_block infoBox %}
-
-As a naming convention, names of queues that synchronize data to Redis start with **sync.storage**, and names of queues that synchronize data to Elasticsearch start with **sync.search**.
+For information on how to create a queue, see [Set Up a "Hello World" Queue](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#queue).
 
 {% endinfo_block %}
 
-{% info_block infoBox %}
+Now, you need to configure synchronization queues in order to deliver the prepared data to the frontend. We recommended having a separate synchronization queue for each *Redis* or *Elasticsearch* entity. 
 
-For information on how to create a queue, see [Set Up a "Hello World" Queue](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html), section **Creating a Simple Queue**.
+{% info_block infoBox "Naming convention"%}
+
+As a naming convention, names of queues that synchronize data to Redis start with *sync.storage*, and names of queues that synchronize data to Elasticsearch start with *sync.search*.
 
 {% endinfo_block %}
 
-{% info_block infoBox %}
-
-It is also good practice to create an error queue for your synchronization queues, where errors will be posted. The error queue must be registered in `RabbitMqConfig::getQueueOptions()`. For example:
+It is also a good practice to create an error queue for your synchronization queues, where errors will be posted. The error queue must be registered in `RabbitMqConfig::getQueueOptions()`. For example:
 
 ```php
 protected function getQueueOptions()
@@ -118,18 +110,17 @@ protected function getQueueOptions()
     // ...
 ```
 
+
+## 4. Create Publish table
+The next step is to create a database table that will be used as a mirror for the corresponding *Redis* or *Elasticsearch* store. For details, see [Extending the database schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).
+
+{% info_block infoBox "Naming convention"%}
+
+As a naming convention, it is recommended to append `_storage` to the end of the table name if it is synchronized with Redis, and `_search` if it is synchronized with Elasticsearch.
+
 {% endinfo_block %}
 
-## 4. Create Publish Table
-The next step is to create a database table that will be used as a mirror for the corresponding *Redis* or *Elasticsearch* store. For details, see [Extending the Database Schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).
-
-{% info_block infoBox %}
-
-As a naming convention, it is recommended to append `_storage` to the end of the table name, if it is synchronized with Redis, and `_search`, if it is synchronized with Elasticsearch.
-
-{% endinfo_block %}
-
-All mirror tables must implement the **Synchronization** Behavior that will be used to synchronize data to *Redis* or *Elasticsearch*. Also, the table must populate foreign keys necessary to backtrack the Propel entities.
+All mirror tables must implement the *Synchronization* behavior that will be used to synchronize data to *Redis* or *Elasticsearch*. Also, the table must populate foreign keys necessary to backtrack the Propel entities.
 
 Sample Redis synchronization table (see `data/shop/development/current/src/Orm/Propel/DE/Schema/spy_product_storage.schema.xml`):
 
@@ -170,29 +161,31 @@ Sample Elasticsearch synchronization table (see `data/shop/development/current/s
     </table>
 ```
 
-The *Synchronization* behavior added by the above schema files adds a column that will contain the actual data to synchronize to Redis or Elasticsearch (in JSON format). The column name is **data**.
+The *Synchronization* behavior added by the above schema files adds a column that will contain the actual data to synchronize to Redis or Elasticsearch (in JSON format). The column name is *data*.
 
-Synchronization Behavior Parameters:
+Synchronization behavior parameters:
 * **resource** - specifies the Redis or Elasticsearch namespace to synchronize with.
 * **store** - specifies whether it is necessary to specify a store for an entity.
 * **locale** - specifies whether it is necessary to specify a locale for an entity.
 * **key_suffix_column** - specifies the name of the column that will be appended to the Redis or Elasticsearch key to make the key unique. If this parameter is omitted, then all entities will be stored under the same key.
-* **queue_group** - specifies the queue group used for synchronization.
+* **queue_group** - specifies the queue group for synchronization.
 * **params** - specifies search parameters (Elasticsearch only).
 
 
-## 5. Trigger Publish Events
-To implement the first step of the *Publish* process, you need to trigger the corresponding publish events. 
+## 5. Trigger Publish events
+To implement the first step of the *Publish* process, you need to trigger the corresponding Publish events. 
 
-One way to do that is to trigger the events manually. This can be done by calling the `EventFacade::trigger()` method:
+One way to do that is to trigger the events manually. You can do this by calling the `EventFacade::trigger()` method:
+
 ```php
 $this->eventFacade->trigger(CmsEvents::CMS_VERSION_PUBLISH, (new EventEntityTransfer())->setId($id));
 ```
 
-Alternatively, you can enable event triggering automatically. In this case, an event will be triggered once a certain Propel entity is created, updated or deleted. For this purpose, you need to enable **Event Behavior** in your modules.
+Alternatively, you can enable event triggering automatically. In this case, an event will be triggered once a certain Propel entity is created, updated, or deleted. For this purpose, you need to enable *Event behavior* in your modules.
 
-To implement Event Behavior, you need to add a behavior called **event** to your Propel model. For example, the following code in the schema of the *Product Module* enables triggering of events each time the spy_product_abstract table is updated (see `data/shop/development/current/src/Pyz/Zed/Product/Persistence/Propel/Schema/spy_product.schema.xml`):
+To implement Event Behavior, add the behavior called *event* to your Propel model. For example, the following code in the schema of the Product module enables the triggering of events each time the `spy_product_abstract` table is updated:
 
+**data/shop/development/current/src/Pyz/Zed/Product/Persistence/Propel/Schema/spy_product.schema.xml**
 ```xml
 <table name="spy_product_abstract">
     <behavior name="event">
@@ -201,31 +194,32 @@ To implement Event Behavior, you need to add a behavior called **event** to your
 </table>
 ```
 
-The **parameter** element specifies when events should be triggered. It has 4 attributes:
+The `parameter` element specifies when events should be triggered. It has four attributes:
 
-* **name** - specifies the parameter name. It should be unique in your Propel model.
-* **column** - specifies the column that needs to be updated to trigger an event. If you want to track all columns, use the asterisk (*****) character.
-* **value** - specifies a value to compare.
-* **operator** - specifies the comparison operator. You can use any PHP comparison operators for this purpose (===, ==, !=, !==, <, >, <=, >=, <>).
+* *name*: the parameter name. It should be unique in your Propel model.
+* *column*: the column that needs to be updated to trigger an event. If you want to track all columns, use the asterisk (*****) character.
+* *value*: a value to compare.
+* *operator* - the comparison operator. You can use any PHP comparison operators for this purpose (===, ==, !=, !==, <, >, <=, >=, <>).
 
-The *value* and *operator* attributes are optional. They can be used to filter changes based on certain criteria. In the following example, an event will be triggered only if the value of the **quantity** column equals **0**:
+The *value* and *operator* attributes are optional. You can use them to filter changes based on certain criteria. In the following example, an event will be triggered only if the value of the *quantity* column is 0:
 
 ```php
 <parameter name="spy_mymodule_quantity" column="quantity" value="0" operator="==="/>
 ```
 
-The following example triggers an event when the value of any column is less than or equals **10**:
+The following example triggers an event when the value of any column is less than or equals 10:
 
 ```php
 <parameter name="spy_mymodule_all" column="*" value="10" operator="<="/>
 ```
 
 After making changes to your Propel schema, run the following command:
+
 ```
 console propel:install
 ```
 
-Now, you can trigger publish events by simply manipulating any entry in the table:
+Now, you can trigger publish events by manipulating any entry in the table:
 
 ```php
 $productAbstractEntity = SpyProductAbstractQuery::create()->findOne();
@@ -233,11 +227,9 @@ $productAbstractEntity->setColorCode("#FFFFFF");
 $productAbstractEntity->save();
 ```
 
+### Deleting entries
+Currently, event triggering only works with Propel Entities, but not Propel Queries. For this reason, deleting multiple entities does not trigger the *Publish and Synchronize* process. Thus, for example, the following code does not trigger anything: `$query→filterByFkProduct(1)→delete();`. To work this around, you need to trigger the events manually or iterate through objects and delete them one by one:
 
-### Deleting Entries
-Currently, event triggering only works with Propel Entities, but not Propel Queries. For this reason, deleting multiple entities will not trigger *Publish and Synchronize*. Thus, for example, the following code will not trigger anything: `$query→filterByFkProduct(1)→delete();`. To work around this, you need to trigger the events manually or iterate through objects and delete them one-by-one.
-
-#### How
 ```php
 $productAbstractIds = [1,2,3];
 $query->filterByFkProduct_In($productAbstractIds)->delete();
@@ -252,8 +244,8 @@ foreach ($productAbstracts as $productAbstract) {
 ```
 
 
-## 6. Listen to Publish Events
-To implement the next step of the *Publish* process, you need to consume the *Publish Events*. For this purpose, you need to create an event listener. A listener is a plugin class to your storage or search module. Sample implementation can be found in the *GlossaryStorage* Module.
+## 6. Listen to Publish events
+To implement the next step of the *Publish* process, you need to consume the Publish events. For this purpose, you create an event listener. A listener is a plugin class to your storage or search module. See the sample implementation in the [GlossaryStorage](https://github.com/spryker/glossary-storage) module.
 
 ```php
 class GlossaryWritePublisherPlugin extends AbstractPlugin implements PublisherPluginInterface
@@ -290,18 +282,18 @@ class GlossaryWritePublisherPlugin extends AbstractPlugin implements PublisherPl
 }
 ```
 
-A listener class must implement the **PublisherPluginInterface** and contain the handleBulk method that will be called by the event queue for the defined events in getSubscribedEvents method. The method accepts two parameters:
+A listener class must implement `PublisherPluginInterface` and contain the `handleBulk` method. The `handleBulk` method is called by the event queue for the defined events in the `getSubscribedEvents` method. The method accepts two parameters:
 
-* **$eventEntityTransfers** - specifies an array of event transfers that represent the events to consume;
-* **$eventName** - specifies an event name.
+* *$eventEntityTransfers*: specifies an array of event transfers that represent the events to consume;
+* *$eventName*: specifies the event name.
 
-{% info_block infoBox %}
+{% info_block infoBox "Info"%}
 
 For performance considerations, events are passed to the listener in bulk. Even if a single event must be handled, it is passed as an array of a single element.
 
 {% endinfo_block %}
 
-Also, you need to configure listener classes in PublisherDependencyProvider::getPublisherPlugins() to enable them. The listeners are listening on the default publish queue. Alternativly, the mapping of the listener class can adjust the listened queue in its key. (see full code in `data/shop/development/current/vendor/spryker/publisher/src/Spryker/Zed/Publisher/PublisherDependencyProvider::getPublisherPlugins()`):
+Also, you need to configure listener classes in `PublisherDependencyProvider::getPublisherPlugins()` to enable them. The listeners are listening to the default publish queue. Alternatively, the mapping of the listener class can adjust the listened queue in its key. For details, see  the full code in `data/shop/development/current/vendor/spryker/publisher/src/Spryker/Zed/Publisher/PublisherDependencyProvider::getPublisherPlugins()`):
 
 ```php
 class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
@@ -343,16 +335,16 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 ```
 
-{% info_block infoBox %}
+{% info_block infoBox "Generic listener classes" %}
 
-Implementing a generic listener is detailed in [Listening to Events](/docs/scos/dev/back-end-development/data-manipulation/event/listening-to-events.html). Follow the guide to create your non publish & synchronize listener classes.
+For details on creating your non-publish and synchronize listener classes, see [Listening to Events](/docs/scos/dev/back-end-development/data-manipulation/event/listening-to-events.html).
 
 {% endinfo_block %}
 
-## 7. Publish Data
-After consuming a publish event, you need to prepare the data for the frontend. For this purpose, your code needs to query the data relevant to the update and make changes to the corresponding *storage* or *search* database table. For this purpose, you need to implement the following methods: **writeCollectionBy{TriggeredEvent}Events** for publishing an entity, and **deleteCollectionBy{TriggeredEvent}Events** for removing it.
+## 7. Publish data
+After consuming a publish event, you need to prepare the data for the frontend. For this purpose, your code needs to query the data relevant to the update and make changes to the corresponding *storage* or *search* database table. For this purpose, you need to implement the following methods: *writeCollectionBy{TriggeredEvent}Events* for publishing an entity, and **deleteCollectionBy{TriggeredEvent}Events** for removing it.
 
-Sample implementation can be found in the *GlossaryStorage* module (see full code in `data/shop/development/current/vendor/spryker/glossary-storage/src/Spryker/Zed/GlossaryStorage/Communication/Plugin/Publisher/GlossaryTranslation/GlossaryWritePublisherPlugin.php`):
+See the sample implementation in the [GlossaryStorage](https://github.com/spryker/glossary-storage) module. See the full code in `data/shop/development/current/vendor/spryker/glossary-storage/src/Spryker/Zed/GlossaryStorage/Communication/Plugin/Publisher/GlossaryTranslation/GlossaryWritePublisherPlugin.php`:
 
 ```php
     /**
@@ -380,31 +372,31 @@ Sample implementation can be found in the *GlossaryStorage* module (see full cod
     }
 ```
 
-{% info_block infoBox %}
+{% info_block infoBox "Recommended naming"%}
 
-Recommended naming for **write{targetEntityName}CollectionBy{triggeredEvent}Events** and **delete{targetEntityName}CollectionBy{triggeredEvent}Events** methods
+Recommended naming for the `write{targetEntityName}CollectionBy{triggeredEvent}Events` and `delete{targetEntityName}CollectionBy{triggeredEvent}Events` methods:
 
-* **$targetEntityName** - The unique name of the entity in Redis or Elasticsearch. It is recommended to leave this placeholder empty if this publish and synchronize module is responsible for handling exactly 1 entity.
-* **$triggeredEvent** - A logical name for the group of events that makes it easy to identify the origin of trigger. It is recommended to use the name of the entity in persistence that triggered the publish and synchronize process.
+* `$targetEntityName`: the unique name of the entity in Redis or Elasticsearch. We recommend leaving this placeholder empty if this publish and synchronize module is responsible for handling exactly one entity.
+* `$triggeredEvent`: logical name for the group of events that makes it easy to identify the origin of the trigger. We recommend using the name of the entity in persistence that triggered the publish and synchronize process.
 
 {% endinfo_block %}
 
-The changes over the *storage* or *search* database tables will trigger the corresponding synchronization events.
+The changes over the *storage* or *search* database tables trigger the corresponding synchronization events.
 
-## 8. Listen to Synchronization Events
+## 8. Listen to Synchronization events
 
-Spryker implemented 2 generic synchronization message processor plugins for synchronizing data to the frontend:
+Spryker implemented two generic synchronization message processor plugins for synchronizing data to the frontend:
 
-* `SynchronizationStorageQueueMessageProcessorPlugin` - for synchronizing data to Redis, and
-* `SynchronizationSearchQueueMessageProcessorPlugin` - for synchronizing data to Elasticsearch.
+* `SynchronizationStorageQueueMessageProcessorPlugin` for synchronizing data to Redis, and
+* `SynchronizationSearchQueueMessageProcessorPlugin` for synchronizing data to Elasticsearch.
 
-You need to map your synchronization queue names to one of the plugins depending on which storage you want to use it for. The queues must be mapped in `QueueDependencyProvider::getProcessorMessagePlugins()`. For details, see section **Queue Message Processor Plugin** in the *Set Up a "Hello World" Queue* document.
+You need to map your synchronization queue names to one of the plugins depending on which storage you want to use it for. You must map the queues in `QueueDependencyProvider::getProcessorMessagePlugins()`. For details, see [Queue](https://docs.spryker.com/docs/scos/dev/back-end-development/data-manipulation/queue/queue.html#queue-message-processor-plugin).
 
 After implementing the above steps, you will have the data storage of your frontend app synchronized with the backend data storage.
 
-## 9. Recommneded module structure
+## 9. Recommended module structure
 
-The recommended module structure for a Publish & Synchronize module
+The recommended module structure for the Publish and Synchronize module
 ```
 + src/
   + Spryker/
@@ -428,24 +420,27 @@ The recommended module structure for a Publish & Synchronize module
 ```
 
 
-## Additional Tasks
+## Additional tasks
+There are some additional tasks for the Publish and Synchronize that you can perform:
+- Viewing the event mapping
+- Debugging Publish and Synchronize
+- 
+### View event mapping
 
-### View Event Mapping
-
-To see all listeners mapped for a certain event, Ctrl+Click it in PhpStorm. The following example shows that the *SPY_URL_CREATE* event has **6** listeners mapped to it, which means that there will be **6** messages for this event in the **event** queue.
+To see all listeners mapped for a certain event, Ctrl+Click it in PhpStorm. The following example shows that the *SPY_URL_CREATE* event has six listeners mapped to it, which means that there will be six messages for this event in the *event* queue.
 ![Lookup listener](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Resources+and+Developer+Tools/Publish+and+Synchronization+Reference/lookup-listener.png)
 
 ### Debug Publish and Synchronize
 
 To debug Publish and Synchronize:
 
-1. Turn off [Jenkins](/docs/scos/dev/sdk/cronjob-scheduling.html) to stop processing all queues. This can be done using the following command:
+1. Turn off [Jenkins](/docs/scos/dev/sdk/cronjob-scheduling.html) to stop processing all queues. Use the following command:
 
    ```bash
    console setup:jenkins:disable
    ```
 
-2. Trigger your publish event. Now, you should be able to see the messages in the corresponding publish queue of RabbitMQ management UI. To open it, use the following URL: `https://mysprykershop.com:15672/#/queues`.
+2. Trigger your Publish event. Now, you should see the messages in the corresponding publish queue of the RabbitMQ management UI. To open it, use the following URL: `https://mysprykershop.com:15672/#/queues`.
 
 3. Set a breakpoint inside a listener mapped to the publish event and enable the PhpStorm debugging mode.
 
@@ -455,7 +450,7 @@ To debug Publish and Synchronize:
    XDEBUG_CONFIG="remote_host=10.10.0.1" PHP_IDE_CONFIG="serverName=~^zed\.de\..+\.local$" console queue:task:start event --no-ack
    ```
 
-5. If you want to view the events stacked in the Publish Queues, they are also available in the RabbitMQ management UI.
+5. If you want to view the events stacked in the Publish queues, you can do this in the RabbitMQ management UI.
 
 6. To re-enable the queues after debugging, run the following command:
 
@@ -463,7 +458,7 @@ To debug Publish and Synchronize:
    console setup:jenkins:enable
    ```
 
-## Re-Synchronize Storage and Search Data to Redis or Elasticsearch
+## Re-synchronize Storage and Search data to Redis or Elasticsearch
 There is no functionality for this purpose, but you can use the queue client to send data to sync queues. Example:
 
 ```php
@@ -485,8 +480,8 @@ $queueClient = $this->getFactory()->getQueueClient();
 $queueClient->sendMessage("sync.storage.product", $queueSendTransfer);
 ```
 
-## Re-Trigger Publish & Synchronize
-Use the Event Facade to trigger publish events for specific entities:
+## Re-trigger the Publish and Synchronize process
+Use the Event facade to trigger Publish events for specific entities:
 
 ```php
 $productAbstracts = SpyProductAbstractQuery::create()->find();
@@ -495,13 +490,13 @@ foreach ($productAbstracts as $productAbstract) {
 }
 ```
 
-{% info_block infoBox %}
+{% info_block infoBox "Info"%}
 
-This process only makes sure the update the target entities that exist in persistence. Cleaning up obsolate entities in Redis or Elasticsearch needs to be handled separatly.
+This process only updates the target entities that exist in persistence. You have to clean up obsolete entities in Redis or Elasticsearch separately.
 
 {% endinfo_block %}
 
 
-### Disable Events
+### Disable events
 
 If you want to disable all events, call `EventBehaviorConfig::disableEvent()`. To disable events of a specific entity, call `$glossaryTranslationEntity->disableEvent()`.

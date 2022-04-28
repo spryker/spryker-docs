@@ -4,9 +4,9 @@ description: This document contains concept information for the Marketplace Prod
 template: concept-topic-template
 ---
 
-In the Marketplace, products that a merchant owns, are referred to as *marketplace products*. Besides creating offers for products of other merchants or the ones that the Marketplace administrator suggests, a merchant can also create their own unique products. These products possess the same characteristics the usual abstract and concrete products have, but in addition, every such product has merchant-related information such as merchant reference. Merchants can [create their products in the Merchant Portal](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/creating-marketplace-abstract-product.html) or [import the marketplace products data](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product.csv.html), or merchants manage stock and set prices for their products in the Merchant Portal. See [Managing marketplace abstract products](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product.html) for details.
+In the Marketplace, products that a merchant owns are referred to as *marketplace products*. Besides creating offers for products of other merchants or the ones that the Marketplace administrator suggests, a merchant can also create their own unique products. These products possess the same characteristics the usual abstract and concrete products have, but in addition, every such product has merchant-related information such as merchant reference. Merchants can [create their products in the Merchant Portal](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/creating-marketplace-abstract-product.html) or [import the marketplace products data](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product.csv.html), or merchants manage stock and set prices for their products in the Merchant Portal. For details, see [Managing marketplace abstract products](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product.html).
 
-Merchants can allow other merchants to create offers for their unique products. This possibility is defined with the help of `is_shared` parameter of the [marketplace product data importer](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product.csv.html).
+Merchants can let other merchants create offers for their unique products. This possibility is defined with the help of the `is_shared` parameter of the [marketplace product data importer](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product.csv.html).
 
 ## Marketplace products on the Storefront
 
@@ -14,20 +14,20 @@ The marketplace products are displayed on the Storefront when the following cond
 
 1. The product status is *Active*.
 2. The merchant who owns the product is [*Active*](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants).
-3. The product visibility state is `Online`.
+3. The product visibility state is *Online*.
 4. The product is defined for the current store.
 5. The product has stock or is always in stock.
 6. The current day is within the range of the product validity dates.
 
 ### Marketplace product on the product details page
 
-Marketplace product appears on top of the the *Sold by* list together with the product offers from other merchants. For a buyer, it doesn't matter whether they are buying a product offer or a marketplace product, however in the system, different entities are defined.
+Marketplace product appears on top of the **Sold by** list together with the product offers from other merchants. For a buyer, it doesn't matter whether they are buying a product offer or a marketplace product; however, in the system, different entities are defined.
 
-Product price on top of the product details page is taken from the marketplace product or the product offer. It depends on the option selected in the *Sold by* box.
+Product price on top of the product details page is taken from the marketplace product or the product offer. It depends on the option selected in the **Sold by** field.
 
 ![marketplace product on PDP](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+product/merchant-product-on-pdp.png)
 
-The marketplace product is also displayed with the *Sold By* field defining the merchant on the following pages:
+The marketplace product is also displayed with the **Sold By** field defining the merchant on the following pages:
 
 - Cart page
 - Wishlist
@@ -55,7 +55,7 @@ Also, Marketplace administrators can edit products, if needed, and create produc
 
 
 ## Marketplace products in the Merchant Portal
-Merchants [create](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/creating-marketplace-concrete-product.html) and [manage their products](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product.html) in the Merchant Portal. They can [define prices](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product-prices.html), stock, [attributes](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-attributes.html) etc. for their products. 
+Merchants [create](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/creating-marketplace-concrete-product.html) and [manage their products](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product.html) in the Merchant Portal. They can [define prices](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product-prices.html), stock, and [attributes](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-attributes.html) for their products.
 
 ## Related Business User articles
 
@@ -64,7 +64,7 @@ Merchants [create](/docs/marketplace/user/merchant-portal-user-guides/{{page.ver
 | [Creating marketplace abstract products](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product.html) |  |
 | [Creating marketplace concrete products](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/creating-marketplace-concrete-product.html) |  |
 | [Managing marketplace abstract products](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product.html) | [Editing abstract products](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/editing-abstract-products.html) |
-| [Managing marketplace concrete products](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product.html)| [Editing a product variant](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/editing-abstract-products.html#editing-product-variants-of-an-abstract-product) |
+| [Managing marketplace concrete products](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product.html)| [Editing a product variant](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/editing-abstract-products.html) |
 | [Managing marketplace abstract product prices](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-prices.html) |  |
 | [Managing marketplace concrete product prices](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product-prices.html) |  |
 | [Managing marketplace abstract product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-image-sets.html) |  |

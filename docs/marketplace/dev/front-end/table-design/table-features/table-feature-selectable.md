@@ -17,10 +17,10 @@ Check out an example usage of the Table Feature Selectable in the `@spryker/tabl
 
 Component configuration:
 
-- `enabled` - enables the feature via config.
+- `enabled`—enables the feature via config.
 
 ```html
-<spy-table 
+<spy-table
     [config]="{
         dataSource: { ... },
         columns: [ ... ],
@@ -37,7 +37,12 @@ Component configuration:
 Register the component:
 
 ```ts
-// Dynamic
+declare module '@spryker/table' {
+    interface TableConfig {
+        itemSelection?: TableSelectableConfig;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -72,12 +77,6 @@ export class RootModule {}
 Below you can find interfaces for the Table Feature Selectable:
 
 ```ts
-declare module '@spryker/table' {
-    interface TableConfig {
-        itemSelection?: TableSelectableConfig;
-    }
-}
-
 export interface TableSelectableConfig extends TableFeatureConfig {}
 
 export interface TableSelectionRow {

@@ -42,8 +42,10 @@ This migration guide is a part of the [Search migration effort](/docs/scos/dev/m
 
 {% endinfo_block %}
 
-To upgrade the module, do the following:
-1. Remove usages of all deprecated query expander and result formatter plugins (if any) from `Pyz\Client\Catalog\CatalogDependencyProvider`
+To upgrade to the new version of the module, do the following:
+
+1. Remove usages of all deprecated query expander and result formatter plugins (if any) from `Pyz\Client\Catalog\CatalogDependencyProvider`:
+
 ```php
 Spryker\Client\Search\Plugin\Elasticsearch\QueryExpander\CompletionQueryExpanderPlugin
 Spryker\Client\Search\Plugin\Elasticsearch\QueryExpander\FacetQueryExpanderPlugin
@@ -63,9 +65,11 @@ Spryker\Client\Search\Plugin\Elasticsearch\ResultFormatter\SortedResultFormatter
 Spryker\Client\Search\Plugin\Elasticsearch\ResultFormatter\SpellingSuggestionResultFormatterPlugin
 Spryker\Client\Search\Plugin\Elasticsearch\ResultFormatter\SuggestionByTypeResultFormatterPlugin
 ```
+
 2. Enable the replacement plugins:
 
-**Pyz\Client\Catalog**
+<details>
+<summary markdown='span'>Pyz\Client\Catalog</summary>
 
 ```php
 <?php
@@ -194,10 +198,12 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
     }
 }
 ```
+</details>
 
-## Upgrading from Version 3.* to Version 4.*
+## Upgrading from version 3.* to version 4.*
 
 Due to introducing the Suggestion Search feature, the Catalog bundle now requires Search >=5.2.
 To upgrade from 3.* to 4.\*:
-1. Before upgrading to the new version, make sure that you do not use any deprecated code from version 3.\*. Check the description of the deprecated code to see what you will need to use instead.
-2. In the previous version `\Spryker\Client\Catalog\CatalogDependencyProvider` provided by default a stack of query expander and a stack of result formatter plugins for the `\Spryker\Client\Catalog\CatalogClient::catalogSearch()` method. In the new version you need to provide the necessary plugins from project level instead in: `\Pyz\Client\Catalog\CatalogDependencyProvider`.
+
+1. Before upgrading to the new version, make sure that you do not use any deprecated code from the version 3.\*. Check the description of the deprecated code to see what you will need to use instead.
+2. In the previous version `\Spryker\Client\Catalog\CatalogDependencyProvider` provided by default a stack of query expander and a stack of result formatter plugins for the `\Spryker\Client\Catalog\CatalogClient::catalogSearch()` method. In the new version you need to provide the necessary plugins from the project level instead in: `\Pyz\Client\Catalog\CatalogDependencyProvider`.

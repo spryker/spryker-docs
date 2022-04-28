@@ -31,12 +31,15 @@ To retrieve return reasons, send the request:
 
 ## Request
 
-Request sample: `GET https://glue.mysprykershop.com/return-reasons`
+Request sample: retrieve return reasons
+
+`GET https://glue.mysprykershop.com/return-reasons`
 
 ## Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve return reasons
+</summary>
 
 ```json
 {
@@ -77,7 +80,6 @@ Request sample: `GET https://glue.mysprykershop.com/return-reasons`
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |

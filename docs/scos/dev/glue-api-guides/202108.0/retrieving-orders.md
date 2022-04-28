@@ -38,6 +38,7 @@ For detailed information on the modules that provide the API functionality and r
 * [Glue API: Configurable Bundle + Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-product-feature-integration.html)
 
 ## Retrieve all orders
+
 To retrieve a list of all orders made by a registered customer, send the request:
 
 ---
@@ -53,7 +54,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 | STRING PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
-| offset | Ofset of the order at which to begin the response. <br> Works only together with `page[limit]`. <br> To work correctly, the value should be devisable by the value of `page[limit]`. <br> The default value is `0`.  | From `0` to any. |
+| offset | Offset of the order at which to begin the response. <br> Works only together with `page[limit]`. <br> To work correctly, the value should be devisable by the value of `page[limit]`. <br> The default value is `0`.  | From `0` to any. |
 | limit | Maximum number of entries to return. <br> Works only together with `page[offset]`. <br> The default value is `10`. | From `1` to any. |
 
 | REQUEST | USAGE |
@@ -66,9 +67,9 @@ To retrieve a list of all orders made by a registered customer, send the request
 ### Response
 
 <details>
-<summary markdown='span'>Response sample with one order</summary>
+<summary markdown='span'>Response sample: retrieve a single order</summary>
 
-```
+```json
 {
     "data": [
         {
@@ -97,7 +98,6 @@ To retrieve a list of all orders made by a registered customer, send the request
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -123,7 +123,7 @@ To retrieve detailed information on an order, send the request:
 ---
 
 | PATH PARAMETER     | DESCRIPTON                                                   |
-| ------------------ | ------------------------------------------------------------ |
+| ------------------ | -------------------- |
 | ***{% raw %}{{{% endraw %}order_id{% raw %}}}{% endraw %}*** | Unique identifier of an order. [Retrieve all orders](#retrieve-all-orders) to get it. |
 
 ### Request
@@ -132,19 +132,19 @@ To retrieve detailed information on an order, send the request:
 | ------------- | ------------ | -------- | ------------------------------------------------------------ |
 | Authorization | string       | ✓        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
-| String parameter | Description                                 | Possible values                                       |
-| ---------------- | ------------------------------------------- | ----------------------------------------------------- |
+| STRING PARAMETER | DESCRIPTION  | POSSIBLE VALUES    |
+| ---------------- | ---------------- | --------------- |
 | include          | Adds resource relationships to the request. | order-shipments, concrete-products, abstract-products |
 
-| Request                                                      | Usage                                                        |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| REQUEST  | USAGE  |
+| ------------------ | --------------------- |
 | GET https://glue.mysprykershop.com/orders/DE--1              | Retrieve information about the order with the id `DE--6`.      |
 | GET https://glue.mysprykershop.com/orders/DE--6?include=order-shipments | Retrieve information about the order with the id `DE--6` with order shipments included. |
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve an order</summary>
 
 ```json
 {
@@ -359,11 +359,10 @@ To retrieve detailed information on an order, send the request:
     }
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with order shipments</summary>
+<summary markdown='span'>Response sample: retrieve an order with order shipments included</summary>
 
 ```json
 {
@@ -655,11 +654,10 @@ To retrieve detailed information on an order, send the request:
     ]
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with a configurable bundle</summary>
+<summary markdown='span'>Response sample: retrieve an order with the details on a configurable bundle</summary>
 
 ```json
 {
@@ -1212,9 +1210,7 @@ To retrieve detailed information on an order, send the request:
         }
     }
 }
-
 ```    
-
 </details>
 
 **General order information**
@@ -1267,7 +1263,7 @@ To retrieve detailed information on an order, send the request:
 **Order item information**
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
-| --------------------------------------- | ------- | ------------------------------------------------------------ |
+| ------------------- | ------- | ------------------------- |
 | items                                   | array   | Items in the order.                                          |
 | items.state                             | String  | Defines the state of the order in the state machine.         |
 | bundleItems | Array | Array of objects describing the concrete product bundles in the order. |
@@ -1330,8 +1326,8 @@ To retrieve detailed information on an order, send the request:
 
 **Calculated discounts for items**
 
-| ATTRIBUTE                             | TYPE    | DESCRIPTION                                                  |
-| :------------------------------------ | :------ | :----------------------------------------------------------- |
+| ATTRIBUTE  | TYPE    | DESCRIPTION   |
+| -------------------- | ------ | ----------------- |
 | items.calculatedDiscounts             | Array   | List of attributes describing the discount calculated for this item. |
 | items.calculatedDiscounts.unitAmount  | Integer | Discount value applied to this order item.                  |
 | items.calculatedDiscounts.sumAmount   | Integer | Sum of the discount values applied to this order item.       |
@@ -1342,9 +1338,9 @@ To retrieve detailed information on an order, send the request:
 
 **Product options**
 
-| ATTRIBUTE                            | TYPE    | DESCRIPTION                                            |
-| :----------------------------------- | :------ | :----------------------------------------------------- |
-| items.productOptions                 | Array   | Lst of product options ordered with this item.         |
+| ATTRIBUTE   | TYPE    | DESCRIPTION   |
+| ------------------- | ----- | ------------------------- |
+| items.productOptions                 | Array   | List of product options ordered with this item.         |
 | items.productOptions.optionGroupName | String  | Name of the group to which the product option belongs. |
 | items.productOptions.sku             | String  | SKU of the product option.                             |
 | items.productOptions.optionName      | String  | Name of the product option.                            |
@@ -1352,8 +1348,8 @@ To retrieve detailed information on an order, send the request:
 
 **Calculated discounts**
 
-| ATTRIBUTE                       | TYPE    | DESCRIPTION                                                  |
-| :------------------------------ | :------ | :----------------------------------------------------------- |
+| ATTRIBUTE   | TYPE    | DESCRIPTION    |
+| --------------- | ----- | ----------------------- |
 | calculatedDiscounts             | Array   | Discounts applied to this order item.                        |
 | calculatedDiscounts.unitAmount  | Integer | Amount of the discount provided by the given item for each unit of the product, in cents. |
 | calculatedDiscounts.sumAmount   | Integer | Total amount of the discount provided by the given item, in cents. |
@@ -1364,8 +1360,8 @@ To retrieve detailed information on an order, send the request:
 
 **Expenses**
 
-| ATTRIBUTE               | TYPE    | DESCRIPTION                       |
-| :---------------------- | :------ | :-------------------------------- |
+| ATTRIBUTE    | TYPE    | DESCRIPTION     |
+| ------------------- | ----- | ------------------ |
 | expenses                | array   | Additional expenses of the order. |
 | expenses.type           | String  | Expense type.                     |
 | expenses.name           | String  | Expense name.                     |

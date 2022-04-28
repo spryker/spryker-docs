@@ -14,8 +14,8 @@ Check out an example usage of the Datasource Inline.
 
 Service configuration:
 
-- `type` - a datasource type.  
-- `data` - a datasource data.  
+- `type`—a datasource type.  
+- `data`—a datasource data.  
 
 ```html
 <spy-select
@@ -32,6 +32,12 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/datasource' {
+    interface DatasourceRegistry {
+        inline: DatasourceInlineService;
+    }
+}
+
 @NgModule({
     imports: [
         DatasourceModule.withDatasources({
@@ -47,12 +53,6 @@ export class RootModule {}
 Below you can find interfaces for the Datasource Inline:
 
 ```ts
-declare module '@spryker/datasource' {
-    interface DatasourceRegistry {
-        inline: DatasourceInlineService;
-    }
-}
-
 export interface DatasourceInlineConfig extends DatasourceConfig {
     data: unknown;
 }

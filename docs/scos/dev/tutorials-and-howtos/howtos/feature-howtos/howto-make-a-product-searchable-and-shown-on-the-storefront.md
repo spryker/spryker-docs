@@ -24,7 +24,7 @@ redirect_from:
   - /v1/docs/en/ht-make-product-shown-on-frontend-by-url
 related:
   - title: Creating Product Variants
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/concrete-products/creating-product-variants.html
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/creating-product-variants.html
 ---
 
 {% info_block infoBox %}
@@ -37,5 +37,5 @@ There are a number of conditions that should be fulfilled to make your product s
 * It is in stock in the warehouse for the current store. See the [Availability](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/availability/managing-products-availability.html) section to learn how to check products' availability.
 * The product's status is **Active**. See the [Products](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/managing-products/managing-products.html#activating-products) section to learn how to manage products, including status change.
 * It has a price in the current locale. See the [Products](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/managing-products/managing-products.html) section for more details.
-* It has been marked as searchable in the Back Office. See the [Products](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/concrete-products/creating-product-variants.html) section for more details
-* It has product variants - abstract product will not be displayed on Yves unless it has product variants. See [Products](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/concrete-products/creating-product-variants.html) to learn how to create product variants.
+* It has been marked as searchable in the Back Office. See the [Products](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/manage-concrete-products/creating-product-variants.html) section for more details
+* It has product variants - abstract product will not be displayed on Yves unless it has product variants. See [Products](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/manage-concrete-products/creating-product-variants.html) to learn how to create product variants.

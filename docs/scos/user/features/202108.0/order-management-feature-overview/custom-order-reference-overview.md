@@ -20,7 +20,7 @@ Keep in mind that the custom order references are available only for logged-in u
 {% endinfo_block %}
 
 
-In the Storefront, you, as a buyer, can add a custom order reference to the order or edit it (if needed) on the *Cart* page and then view it on the *Summary* page. Once the order has been placed, the reference becomes non-editable and is displayed on the *Order Details* page in your customer account.
+In the Storefront, you, as a buyer, can add a custom order reference to the order or edit it (if needed) on the **Cart** page and then view it on the **Summary** page. Once the order has been placed, the reference becomes non-editable and is displayed on the **Order Details** page in your customer account.
 
 <details open>
 <summary markdown='span'>Cart page</summary>
@@ -64,7 +64,7 @@ If you added a custom order reference to the cart, submitted a request for quote
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage orders](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html) |
+| [Adding and removing custom order references](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/adding-and-removing-custom-order-references.html) |
 
 {% info_block warningBox "Developer guides" %}
 

@@ -12,15 +12,15 @@ redirect_from:
   - /docs/en/reclamations-feature-overview
 ---
 
-Handling order claims are the reality of doing business for most e-commerce sites. A customer might have bought an item and then discovered, that it does not fit, or they might have stumbled upon another item and want to order it instead of the order already placed, or an item is faulty, or additional parts are needed etc.
+Handling order claims are the reality of doing business for most e-commerce sites. A customer might have bought an item and then discovered, that it does not fit, or they might have stumbled upon another item and want to order it instead of the order already placed, or an item is faulty, or additional parts are needed.
 
 The _Reclamations_ feature is a simple, yet effective way for administrators to handle all the customer order claims. The shop administrators can create, view, and edit the reclamations in the dedicated section of the Administration Interface. The editing implies making a refund (depending on your state machine configuration) or closing the reclamation. Thus, the Reclamation feature makes the process of claims-handling easier, faster and more efficient for the store administrators, as well as helps to improve customer service.
 
-Once a Back Office user has received a claim regarding an order from the customer, they can go to [Overview of Orders](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html#claiming-orders) in the Back Office and click **Claim** to register the claim for the order (for all items or separate items of the order).
+Once a Back Office user has received a claim regarding an order from the customer, they can go to [Overview of Orders](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-reclamations.html) in the Back Office and click **Claim** to register the claim for the order (for all items or separate items of the order).
 
-After the reclamation has been created, it appears on the [Reclamations](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/reclamations/managing-reclamations.html) page under the **Sales** menu in the Back Office. Each reclamation is linked to a specific order by order ID, however, one and the same order can have more than one reclamation.
+After the reclamation has been created, it appears on the [Reclamations](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/reclamations/viewing-reclamations.html) page under the **Sales** menu in the Back Office. Each reclamation is linked to a specific order by order ID, however, one and the same order can have more than one reclamation.
 
-With the reclamations in place, you can find the problematic issues with orders that a shop owner has (e.g., the product is faulty or broken) and manage them.
+With the reclamations in place, you can find the problematic issues with orders that a shop owner has (for example, the product is faulty or broken) and manage them.
 
 {% info_block errorBox %}
 
@@ -40,9 +40,9 @@ In the Back Office in the order list, a Back Office user doesn't have the functi
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create an order linked to a reclamation](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/reclamations/managing-reclamations.html)  |
-| [Create a new order-related reclamation](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/managing-orders.html#claiming-orders)  |
-| [Manage reclamations](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/reclamations/managing-reclamations.html)  |
+| [Create a new order-related reclamation](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-reclamations.html)  |
+| [View reclamations](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/reclamations/viewing-reclamations.html)  |
+| [Changing the state of order items in reclamations](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/reclamations/changing-the-state-of-order-items-in-reclamations.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

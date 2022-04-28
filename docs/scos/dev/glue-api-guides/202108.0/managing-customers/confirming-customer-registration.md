@@ -21,13 +21,16 @@ For detailed information on the modules that provide the API functionality and r
 ## Confirm customer registration
 
 To confirm customer registration, send the request:
+
 ***
 `POST` **/customer-confirmation**
 ***
 
 ### Request
 
-Request sample: `POST` **/customer-confirmation**
+Request sample: confirm customer registration
+
+`POST` **/customer-confirmation**
 
 ```json
 {

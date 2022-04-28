@@ -1,6 +1,6 @@
 ---
 title: Resource Sharing feature overview
-description: The feature allows you to generate a link to your cart and share it within your business unit with various access permissions
+description: The feature lets you generate a link to your cart and share it within your business unit with various access permissions
 last_updated: Aug 23, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/resource-sharing-feature-overview

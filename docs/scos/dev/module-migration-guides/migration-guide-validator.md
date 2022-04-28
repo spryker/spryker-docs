@@ -27,19 +27,21 @@ This migration guide is a part of the [Silex migration effort](/docs/scos/dev/mi
 
 To upgrade the module, do the following:
 
-1. Update the module using composer:
+1. Update the module using Composer:
+
 ```bash
 composer require spryker/validator
 ```
 
 2. Remove old service providers, if you have them in the project:
+
 ```php
 \Silex\Provider\ValidatorServiceProvider
 ```
 
 3. Enable new plugins in the corresponding files:
 
-**Zed Integration (when usable in ZED)**
+**Zed integration (when usable in ZED)**
 
 ```php
 <?php
@@ -68,7 +70,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 }
 ```
 
-**Yves Integration (when usable in Yves)**
+**Yves integration (when usable in Yves)**
 
 ```php
 <?php
@@ -99,7 +101,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 4. Enable additional plugins:
 
-**Zed Integration (when usable in ZED)**
+**Zed integration (when usable in ZED)**
 
 ```php
 <?php
@@ -137,7 +139,7 @@ class ValidatorDependencyProvider extends SprykerValidatorDependencyProvider
 }
 ```
 
-**Yves Integration (when usable in Yves)**
+**Yves integration (when usable in Yves)**
 
 ```php
 <?php

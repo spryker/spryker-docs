@@ -42,7 +42,6 @@ Make sure that the following modules are installed:
 Run the following commands to apply database changes, and also generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -151,11 +150,11 @@ Make sure that the following endpoints are available:
 * `http:///glue.mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlists-items`
 
 {% info_block infoBox %}
-Make a request to `http://glue.mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlists-items?include=concrete-products` and make sure that the given wishlist has at least one product added. Make sure that the response includes relationships to the `concrete-products` resources.		
+Make a request to `https://glue.mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlists-items?include=concrete-products` and make sure that the given wishlist has at least one product added. Make sure that the response includes relationships to the `concrete-products` resources.		
 {% endinfo_block %}
 
 {% info_block infoBox %}
-Make a request to `http://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=wishlists` and make sure that the given customer has at least one wishlist. Make sure that the response includes relationships to the `wishlists` resources.
+Make a request to `https://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=wishlists` and make sure that the given customer has at least one wishlist. Make sure that the response includes relationships to the `wishlists` resources.
 {% endinfo_block %}
 
 **See also:**

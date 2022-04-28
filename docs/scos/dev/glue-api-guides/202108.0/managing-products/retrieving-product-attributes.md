@@ -35,12 +35,14 @@ To retrieve all product attributes, send the request:
 
 ### Request
 
-Request sample: `https://glue.mysprykershop.com/product-management-attributes`
+Request sample: retrieve all product attributes
+
+`https://glue.mysprykershop.com/product-management-attributes`
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample - retrieve all product attributes</summary>
+<summary markdown='span'>Response sample: retrieve all product attributes</summary>
 
 ```json
 {
@@ -143,7 +145,6 @@ Request sample: `https://glue.mysprykershop.com/product-management-attributes`
     }
 }
 ```
-
 </details>
 
 
@@ -172,12 +173,15 @@ To retrieve a product attribute, send the request:
 
 ### Request
 
-Request sample: `https://glue.mysprykershop.com/product-management-attributes/storage_capacity`
+Request sample: retrieve a product attribute
+
+`https://glue.mysprykershop.com/product-management-attributes/storage_capacity`
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample - retrieve a product attribute</summary>
+<summary markdown='span'>Response sample: retrieve a product attribute</summary>
+
 ```json
 {
     "data": {

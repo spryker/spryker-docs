@@ -33,7 +33,7 @@ With Spryker Back Office, you can:
 * Build and manage product categories
 * Create and manage CMS blocks and pages
 * Handle translations
-* Manage products and all elements related to them (availability, labels, options, types, etc.)
+* Manage products and all elements related to them (availability, labels, options, types)
 * Customize search and filters for the online store
 * Create and manage discounts
 * Build and manage the main navigation of your online store
@@ -57,14 +57,14 @@ You can always define what exactly is going to be needed for your specific proje
 ## Back Office authentication
 
 
-To be able to use the Spryker Back Office, users have to authenticate to the Back Office. They can authenticate via:
+To use the Spryker Back Office, users have to authenticate to the Back Office. They can authenticate via:
 
 * Regular Back Office user account
 * Third-party sign-on (optional)
 
-To *authenticate as a regular Back Office user*, you should have the Back Office user account. See [Managing users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html) to learn how you can create and manage Back Office user accounts.
+To *authenticate as a regular Back Office user*, you should have the Back Office user account. To learn how to create and manage Back Office user accounts, see [Managing users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html).
 
-You can also enable your users to sign in from a third-party service set up for your project. The third-party sign-on uses the [OpenID](https://en.wikipedia.org/wiki/OpenID) protocol for authentication.
+You can also let your users sign in from a third-party service set up for your project. The third-party sign-on uses the [OpenID](https://en.wikipedia.org/wiki/OpenID) protocol for authentication.
 
 {% info_block infoBox %}
 
@@ -79,9 +79,8 @@ If a user chooses to log in via a third-party, the user is redirected to the OAu
 **Strategy 1: Upon the first login, create the Back Office admin user based on the third-party system’s user data.**
 
 If a user who does not exist in the Spryker database logs in for the first time, the following happens:
-
-* Based on the third-party system’s user data such as first name, last name, and email, the Back Office user is created and visible on the [*Users* page](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html) in the Back Office.
-* The user is assigned to the default [group](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-groups.html).
+* Based on the third-party system’s user data such as first name, last name, and email, the Back Office user is created and visible on the [Users page](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html) in the Back Office.
+* The user is assigned to the default [group](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-groups/creating-user-groups.html).
 
 With Strategy 1, the login process looks like this:
 
@@ -113,11 +112,9 @@ Each of the Identity Managers is an ECO module that should be developed separate
 | [Mange Punch Out](/docs/scos/user/back-office-user-guides/{{page.version}}/punch-out/managing-punch-out-connections.html) |
 | [View Order Matrix](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/order-matrix/viewing-the-order-matrix.html) |
 | [Manage customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html) |
-| [Create an abstract product and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html) |
+| [Create an abstract product and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html) |
 | [Create content items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html) |
-| [Create a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) |
-| [Manage users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html) |
-| [Manage merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchants.html) |
+| [Manage users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html) |
 | [Create a warehouse](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/creating-warehouses.html) |
 
 {% info_block warningBox "Developer guides" %}

@@ -27,17 +27,20 @@ This migration guide is a part of the [Silex migration effort](/docs/scos/dev/mi
 
 To upgrade *Propel*, do the following:
 
-1. Install a new module using composer:
+1. Install a new module using Composer:
+
 ```bash
 composer require spryker/propel
 ```
 
 2. Remove old service providers, if you have them in the project:
+
 ```php
 \Spryker\Zed\Propel\Communication\Plugin\ServiceProvider\PropelServiceProvider
 ```
 
 3. Add new plugins to dependency providers:
+
 ```php
 <?php
 

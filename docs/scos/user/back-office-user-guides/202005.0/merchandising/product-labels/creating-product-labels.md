@@ -34,7 +34,7 @@ But if you want to add another eye-catching label to the product, you need to cr
 4. In the **Available products** table, define the product(s) to which this label needs to be assigned by selecting respective checkboxes in the _Select_ column.
 5. Click **Save**.
 ***
-**Tips & Tricks**
+**Tips and tricks**
 * If a product has one exclusive and no or several non-exclusive labels, only the exclusive one is applied to the product.
 * If you want to assign labels to all products in the table, click **Select All**.
 * To find a specific product or filter products by categories or name, start typing in the Search field. The list of matching items would be displayed.

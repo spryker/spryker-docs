@@ -30,12 +30,12 @@ redirect_from:
 
 ## Upgrading from version 0.1.5 to version 0.2.0
 
-Version 0.2.0 of the Api module introduces a default behavior to disable legacy Zed API for security reasons.
+Version 0.2.0 of the `Api` module introduces a default behavior to disable legacy Zed API for security reasons.
 Some projects actively use and develop Zed API. To continue using legacy Zed API, one has to override the method `isApiEnabled` of the `ApiConfig` class in your project implementation:
 
 1. Create a new class `ApiConfig` in Pyz and extend the base class:
 
-src/Pyz/Zed/Api/ApiConfig.php
+**src/Pyz/Zed/Api/ApiConfig.php**
 
 ```php
 namespace Pyz\Zed\Api;

@@ -44,12 +44,14 @@ To retrieve ratings and reviews, send the request:
 | page[offset] | Offset of the item at which to begin the response.  | From `0` to any. |
 | page[limit] | Maximum number of entries to return. | From `1` to any. |
 
-Request sample: `GET http://glue.mysprykershop.com/abstract-products/035/product-reviews`
+Request sample: retrieve product ratings and reviews
+
+`GET http://glue.mysprykershop.com/abstract-products/035/product-reviews`
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve product ratings and reviews</summary>
 
 ```json
 {
@@ -89,7 +91,6 @@ Request sample: `GET http://glue.mysprykershop.com/abstract-products/035/product
     }
 }
 ```
-
 </details>
 
 <a name="product-ratings-and-reviews-response-attributes"></a>
@@ -101,9 +102,9 @@ Request sample: `GET http://glue.mysprykershop.com/abstract-products/035/product
 | summary | String | Review summary. |
 | description | String | Full review. |
 
-## Provide a rating and a review of a products
+## Provide a rating and a review of products
 
-To provide a rating and a review of a products, send the request:
+To provide rating and a review of products, send the request:
 
 ---
 `POST`**/abstract-products/*{% raw %}{{{% endraw %}product_sku{% raw %}}}{% endraw %}*/product-reviews**
@@ -120,7 +121,9 @@ To provide a rating and a review of a products, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer) or [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user).  |
 
-Sample request: `POST http://glue.mysprykershop.com/abstract-products/139/product-reviews`
+Request sample: provide a rating and a review of products
+
+`POST http://glue.mysprykershop.com/abstract-products/139/product-reviews`
 
 ```json
 {
@@ -130,7 +133,7 @@ Sample request: `POST http://glue.mysprykershop.com/abstract-products/139/produc
             "nickname": "John Doe",
             "rating": 5,
             "summary": "Excellent product",
-            "description": "Powerful processor, bright screen, beatiful design and excellent build quality - what else do you need?"
+            "description": "Powerful processor, bright screen, beautiful design and excellent build quality - what else do you need?"
         }
     }
 }
@@ -145,7 +148,7 @@ Sample request: `POST http://glue.mysprykershop.com/abstract-products/139/produc
 
 ### Response
 
-Response sample:
+Response sample: provide rating and a review of products
 
 ```json
 {
@@ -156,7 +159,7 @@ Response sample:
             "rating": 5,
             "nickname": "John Doe",
             "summary": "Excellent product",
-            "description": "Powerful processor, bright screen, beatiful design and excellent build quality - what else do you need?"
+            "description": "Powerful processor, bright screen, beautiful design and excellent build quality - what else do you need?"
         },
         "links": {
             "self": "http://glue.de.suite-nonsplit.local/product-reviews/42"

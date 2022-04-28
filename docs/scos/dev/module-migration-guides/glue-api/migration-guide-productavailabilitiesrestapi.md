@@ -86,12 +86,12 @@ Was:
                 "quantity": 10
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/sku/concrete-product-availabilities"
+                "self": "https://glue.mysprykershop.com/concrete-products/sku/concrete-product-availabilities"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/concrete-products/sku/concrete-product-availabilities"
+        "self": "https://glue.mysprykershop.com/concrete-products/sku/concrete-product-availabilities"
     }
 }
 ```
@@ -109,12 +109,12 @@ Becomes:
                 "quantity": "10.0000000000"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/sku/concrete-product-availabilities"
+                "self": "https://glue.mysprykershop.com/concrete-products/sku/concrete-product-availabilities"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/concrete-products/sku/concrete-product-availabilities"
+        "self": "https://glue.mysprykershop.com/concrete-products/sku/concrete-product-availabilities"
     }
 }
 ```
@@ -135,12 +135,12 @@ Was:
                 "quantity": 10
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/abstract-products/sku/abstract-product-availabilities"
+                "self": "https://glue.mysprykershop.com/abstract-products/sku/abstract-product-availabilities"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/abstract-products/sku/abstract-product-availabilities"
+        "self": "https://glue.mysprykershop.com/abstract-products/sku/abstract-product-availabilities"
     }
 }
 ```
@@ -157,12 +157,12 @@ Becomes:
                 "quantity": "10.0000000000"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/abstract-products/sku/abstract-product-availabilities"
+                "self": "https://glue.mysprykershop.com/abstract-products/sku/abstract-product-availabilities"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/abstract-products/sku/abstract-product-availabilities"
+        "self": "https://glue.mysprykershop.com/abstract-products/sku/abstract-product-availabilities"
     }
 }
 ```

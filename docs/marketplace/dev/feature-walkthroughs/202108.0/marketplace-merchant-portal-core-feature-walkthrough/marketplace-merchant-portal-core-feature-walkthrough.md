@@ -4,7 +4,7 @@ description: Marketplace MerchantPortal Core enables server configuration and th
 template: concept-topic-template
 ---
 
-The Marketplace Merchant Portal Core enables server configuration and basic functions of the Merchant Portal application, such as security login, GUI tables, dashboards, etc. Merchant Portal and Back Office are separate applications with different entry points, bootstraps, and possibilities to register application plugins, configure application base URLs, debug, etc.
+The Marketplace Merchant Portal Core enables server configuration and basic functions of the Merchant Portal application, such as security login, GUI tables, and dashboards. Merchant Portal and Back Office are separate applications with different entry points, bootstraps, and possibilities to register application plugins, configure application base URLs, debug.
 
 {% info_block warningBox "Note" %}
 
@@ -23,7 +23,7 @@ The following diagram illustrates the dependencies between the modules for the M
 
 ### Main Marketplace MerchantPortal Core feature modules
 
-The table below lists the main MerchantPortal Core modules:
+The following table lists the main MerchantPortal Core modules:
 
 | NAME | DESCRIPTION |
 | -------------- | ------------------ |
@@ -32,7 +32,7 @@ The table below lists the main MerchantPortal Core modules:
 | [AclMerchantPortal](https://github.com/spryker/acl-merchant-portal) | Acl and merchant entities are connected through this module.   |
 | [GuiTable](https://github.com/spryker/gui-table) | This module provides base functionality for building GuiTables.    |
 | [MerchantPortalApplication](https://github.com/spryker/merchant-portal-application) | This module provides basic infrastructure for the MerchantPortal modules.   |
-| [MerchantUser](https://github.com/spryker/merchant-user) | Merchant user module provides data structure, facade methods and plugins  that allow users to relate to merchants.  |
+| [MerchantUser](https://github.com/spryker/merchant-user) | Merchant user module provides data structure, facade methods and plugins that let users relate to merchants.  |
 | [MerchantUserPasswordResetMail](https://github.com/spryker/merchant-user-password-reset-mail) | This module provides possibility to reset password for the merchant user.   |
 | [Navigation](https://github.com/spryker/navigation) | This module manages multiple navigation menus that can be displayed on the frontend.   |
 | [SecurityMerchantPortalGui](https://github.com/spryker/security-merchant-portal-gui) | This module provides security rules and authentication for merchant users.   |
@@ -41,7 +41,7 @@ The table below lists the main MerchantPortal Core modules:
 
 ### Optional Marketplace MerchantPortal Core feature modules
 
-The table below lists optional MerchantPortal Core modules:
+The following table lists optional MerchantPortal Core modules:
 
 | NAME | DESCRIPTION |
 | -------------------- | --------------------- |

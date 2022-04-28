@@ -21,13 +21,13 @@ This topic describes the actions you can do in the **Availability** section of  
 
 ## Prerequisites
 
-To start working with availability, navigate to **Catalog > Availability**.
+To start working with availability, navigate to **Catalog&nbsp;<span aria-label="and then">></span> Availability**.
 
 Here, inventory managers or other team members responsible for stock updates can check and edit the products' stock.
 
 The main advantage is that you do not need to make any manual calculations. The system does all the calculations automatically, and you get the aggregated availability value. You will have a single table with a comparison of the product's stock value and the ordered value. It also calculates the bundled products stock.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Checking availability
 
@@ -92,11 +92,11 @@ Please note that you are updating the product variant availability, not the bund
 
 {% endinfo_block %}
 
-**Tips & tricks**
+**Tips and tricks**
 <br>You can edit stock for variants from the *Edit Concrete Product* page:
 1. Navigate to the *Edit Product Abstract* using one of the following options:
-    1.  **Products** > **Products** > **Edit**.
-    2.  Click a hyperlinked SKU value in the **Availability** > **Product availability list** table.
+    1.  **Products&nbsp;<span aria-label="and then">></span> Products&nbsp;<span aria-label="and then">></span> Edit**.
+    2.  Click a hyperlinked SKU value in the **Availability&nbsp;<span aria-label="and then">></span> Product availability list** table.
 2. In the *Variants* tab, click **Edit** next to the variant for which you would like to update the stock value.
 3. Go to the *Price&Stock* tab.
 4. Enter **Quantity** and select **Never out of stock** if you want the product to be always available.

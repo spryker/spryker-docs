@@ -132,7 +132,7 @@ Also, a module should contain the transfer definition in `src/Pyz/Shared/Resourc
 
 | ResourcesRestApi | DESCRIPTION |
 | --- | --- |
-| `resources_rest_api.transfer.xml` | Contains API transfer definintions. |
+| `resources_rest_api.transfer.xml` | Contains API transfer definitions. |
 
 The resulting folder structure on the example of the WishlistsRestApi Resource module looks as follows:
 
@@ -221,9 +221,9 @@ Let us consider the following REST Response example. It contains information on 
 
 **Request:**
 
-*GET http://glue.mysprykershop.com/wishlists/cbf84323-e54d-5774-8c02-4c90e107afe6*
+`GET http://glue.mysprykershop.com/wishlists/cbf84323-e54d-5774-8c02-4c90e107afe6`
 
-```js
+```json
 	{
     "data": {
         "type": "wishlists",
@@ -246,12 +246,12 @@ If we add relationships to the `wishlist-items` and `concrete-products` resource
 
 **Request:**
 
-*GET http://glue.mysprykershop.com/wishlists/cbf84323-e54d-5774-8c02-4c90e107afe6?include=wishlist-items,concrete-products*
+`GET http://glue.mysprykershop.com/wishlists/cbf84323-e54d-5774-8c02-4c90e107afe6?include=wishlist-items,concrete-products`
 
 <details>
-<summary markdown='span'>Code sample:</summary>
+<summary markdown='span'>Response sample</summary>
 
-```js
+```json
 {
     "data": {
         "type": "wishlists",
@@ -329,8 +329,6 @@ If we add relationships to the `wishlist-items` and `concrete-products` resource
     ]
 }
 ```
-
-<br>
 </details>
 
 #### Possible implementations

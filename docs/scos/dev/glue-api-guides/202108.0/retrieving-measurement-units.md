@@ -36,11 +36,13 @@ To retrieve measurement unit information by product measurement unit code, send 
 
 ### Request
 
-Sample request: `GET http://glue.mysprykershop.com/product-measurement-unit/METR`
+Request sample: retrieve a measurement unit
+
+`GET http://glue.mysprykershop.com/product-measurement-unit/METR`
 
 ### Response
 
-Response sample:
+Response sample: retrieve a measurement unit
 
 ```json
 {

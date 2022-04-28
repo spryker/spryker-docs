@@ -24,21 +24,21 @@ If no MIME type settings are defines, files of any type can be uploaded.
 
 ## Prerequisites
 
-To start managing MIME type settings, navigate to **Administration** > **MIME Type Settings**.
+To start managing MIME type settings, navigate to **Administration&nbsp;<span aria-label="and then">></span> MIME Type Settings**.
 
 ## Adding MIME Type Settings
 
 To add a MIME type setting:
-1. On the *MIME Type Setting* page,  in the top right corner, click **+Add MIME type**.
-2. On the *Add MIME type* page, populate the following fields:
-    * **MIME Type**. The MIME type should consist of a type and a subtype; these are all strings which, when concatenated with a slash (/) between them, comprise a MIME type. No whitespace is allowed: **type/subtype**. The type represents the general category into which the data type falls, such as video or text. The subtype identifies the exact kind of data of the specified type the MIME type represents, i.e., **image/png**.
-    * Optionally leave a comment in the **Comment** field. This information is viewable by only the Back Office users.
+1. On the **MIME Type Setting** page,  in the top right corner, click **+Add MIME type**.
+2. On the **Add MIME type** page, fill in the following fields:
+    * **MIME Type**. The MIME type should consist of a type and a subtype; these are all strings which, when concatenated with a slash (/) between them, comprise a MIME type. No whitespace is allowed: **type/subtype**. The type represents the general category into which the data type falls, such as video or text. The subtype identifies the exact kind of data of the specified type the MIME type represents—for example, **image/png**.
+    * Optional: In the **Comment** field, leave a comment. This information is viewable by Back Office users only.
 3. Select the **Is allowed** checkbox if you want to allow this file extension to be uploaded to the system.
 4. Click **Save**.
 
 ## Editing and deleting MIME types
 
-In the _Actions_ column, click one of the following depending on what you need:
+In the **Actions** column, click one of the following depending on what you need:
 * **Edit** to edit a setting. Update the attributes and click **Save**.
 * **Delete** to delete a setting.
 
@@ -48,17 +48,17 @@ There are two ways to allow a MIME type:
 
 * Select the **Is allowed** checkbox while creating/editing a MIME type.
     ![Select is allowed](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/File+Manager/Managing+MIME+Type+Settings/allowing-mime-type.gif)
-* On the *MIME Type Settings* page, in the _Is Allowed_ column, select the checkbox  and click **Save**.
+* On the **MIME Type Settings** page, in the **Is Allowed** column, select the checkbox  and click **Save**.
     ![MIME type settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/File+Manager/Managing+MIME+Type+Settings/mime-type-settings.gif)
 
-**Tips & tricks**
-<br>If you create a MIME type but do not allow it, no constraints are going to be applied. 
+**Tips and tricks**
+<br>If you create a MIME type but do not allow it, no constraints are going to be applied.
 If you create the MIME types as follows:
 ![Tips](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/File+Manager/Managing+MIME+Type+Settings/tips-one.png)
 
-Then you will be able to download only the following file types:
+Then you can download only the following file types:
 * text/csv
 * application/pdf
 
-The following will be displayed on the *File Tree* page once you select to upload a not allowed file type:
+The following is displayed on the **File Tree** page once you select to upload a not allowed file type:
 ![File tree](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/File+Manager/Managing+MIME+Type+Settings/file-tree.png)

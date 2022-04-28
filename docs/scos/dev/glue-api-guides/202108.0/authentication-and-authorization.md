@@ -27,7 +27,7 @@ To get access to a protected resource, a user obtains an *access token*. An acce
 
 ![auth-scheme.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Storefront+Guides/Authentication+and+Authorization/auth-scheme+%281%29.png)
 
-For security purposes, access tokens have a limited lifetime. When retrieiving an access token, the response body also contains the token's lifetime, in seconds. When the lifetime expires, the token can no longer be used for authentication.
+For security purposes, access tokens have a limited lifetime. When retrieving an access token, the response body also contains the token's lifetime, in seconds. When the lifetime expires, the token can no longer be used for authentication.
 
 There is also a *refresh token* in the response. When your access token expires, you can exchange the refresh token for a new access token.  The new access token also has a limited lifetime and a new refresh token.
 

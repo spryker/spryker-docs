@@ -1,13 +1,13 @@
 ---
 title: "File details: merchant_product.csv"
 last_updated: Feb 26, 2021
-description: This document describes the merchant_product.csv file to configure merchant products in your Spryker shop.
+description: This document describes the merchant_product.csv file to configure marketplace products in your Spryker shop.
 template: import-file-template
 ---
 
 This document describes the `merchant_product.csv` file to configure [marketplace product](/docs/marketplace/user/features/{{page.version}}/marketplace-product-feature-overview.html) information in your Spryker shop.
 
-To import the file, run
+To import the file, run:
 
 ```bash
 data:import merchant-product

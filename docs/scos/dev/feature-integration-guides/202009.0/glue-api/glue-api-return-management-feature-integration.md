@@ -42,7 +42,7 @@ console transfer:generate
 ```
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data are added to the `spy_glossary` table  in the database.
+Make sure that the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables  in the database.
 
 | Transfer | Type | Event | Path |
 | --- | --- | --- | --- |
@@ -115,9 +115,9 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% info_block warningBox "Verification" %}
 
 Make sure that following endpoints are available now:
-- `http://glue.mysprykershop.com/returns`
-- `http://glue.mysprykershop.com/return-reasons`
+- `https://glue.mysprykershop.com/returns`
+- `https://glue.mysprykershop.com/return-reasons`
 
-Make sure that items from `http://glue.mysprykershop.com/orders` endpoint contain `isReturnable` and uuid properties.
+Make sure that items from `https://glue.mysprykershop.com/orders` endpoint contain `isReturnable` and uuid properties.
 
 {% endinfo_block %}

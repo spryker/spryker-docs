@@ -41,6 +41,12 @@ Check out an example usage of the Data Transformer Collate Filter Equals in the 
 Register the service:
 
 ```ts
+declare module '@spryker/data-transformer.collate' {
+    interface DataTransformerFilterRegistry {
+        equals: EqualsDataTransformerFilterService;
+    }
+}
+
 @NgModule({
     imports: [
         DataTransformerModule.withTransformers({
@@ -59,12 +65,6 @@ export class RootModule {}
 Below you can find interfaces for the Data Transformer Collate Filter Equals:
 
 ```ts
-declare module '@spryker/data-transformer.collate' {
-    interface DataTransformerFilterRegistry {
-        equals: EqualsDataTransformerFilterService;
-    }
-}
-
 interface DataTransformerFilterConfig {
     type: string;
     propNames: string | string[];

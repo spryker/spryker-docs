@@ -91,7 +91,7 @@ To find out whether a product is discontinued, send a GET request to the endpoin
 `/concrete-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %} `
 Retrieves information on a **concrete** product by SKU.
 
-Sample request: `GET http://mysprykershop.com/concrete-products/145_29885470`
+Request sample: `GET http://mysprykershop.com/concrete-products/145_29885470`
 where `145_29885470` is the SKU of the concrete product.
 
 If the request was successful and a product with the specified SKU was found, the resource responds with a `RestConcreteProductsResponse`. Sample response (truncated) with the `isDiscontinued` and `discontinuedNote` fields populated:
@@ -140,7 +140,7 @@ To retrieve alternatives for a product, send a GET request to the following endp
 * `/concrete-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/abstract-alternative-products` - gets **abstract** products that substitute the item whose SKU is specified;
 * `/concrete-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/concrete-alternative-products` - gets **concrete** products that substitute the item whose SKU is specified.
 
-Sample request: `GET http://mysprykershop.com/concrete-products/145_29885470/abstract-alternative-products`
+Request sample: `GET http://mysprykershop.com/concrete-products/145_29885470/abstract-alternative-products`
 where `145_29885470` is the SKU of the product you are searching alternatives for.
 
 {% info_block warningBox %}

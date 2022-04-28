@@ -9,7 +9,7 @@ This document describes how to retrieve product offer availabilities via Glue AP
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see:
+For detailed information about the modules that provide the API functionality and related installation instructions, see:
 * [GLUE API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html)
 * [Glue API: Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html)
 * [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-volume-prices.html)
@@ -28,11 +28,13 @@ To retrieve a availability of a product offer, send the request:
 
 ### Request
 
-Request sample: `https://glue.mysprykershop.com/product-offers/offer56/product-offer-availabilities`
+Request sample: retrieve availability of a product offer
+
+`GET https://glue.mysprykershop.com/product-offers/offer56/product-offer-availabilities`
 
 ### Response
 
-Response sample:
+Response sample: retrieve availability of a product offer
 
 ```json
 {
@@ -46,15 +48,16 @@ Response sample:
                 "quantity": "0.0000000000"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-offers/offer56/product-offer-availabilities"
+                "self": "https://glue.mysprykershop.com/product-offers/offer56/product-offer-availabilities"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/product-offers/offer56/product-offer-availabilities"
+        "self": "https://glue.mysprykershop.com/product-offers/offer56/product-offer-availabilities"
     }
 }
 ```
+
 <a name="product-offer-availability-response-attributes"></a>
 
 |ATTRIBUTE  |TYPE  |DESCRIPTION  |

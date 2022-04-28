@@ -9,7 +9,7 @@ This document explains the Persistence service in the Components Library.
 
 ## Overview
 
-The Persistence Service saves arbitrary data based on the configuration. This allows backend systems to use different persistence mechanisms without requiring them to change the frontend (ex. http datasources, etc.).
+The Persistence Service saves arbitrary data based on the configuration. This lets backend systems use different persistence mechanisms without requiring them to change the frontend (ex. http datasources).
 
 Anyone may save any data using the Persistence Service. Anyone may use Persistence Strategy Service to select a specific `PersistenceStrategy` based on their configuration.
 
@@ -102,7 +102,7 @@ interface PersistenceStrategy {
 
 There are a few common Persistence Strategies that are available in the UI library:
 
-- [In-memory](/docs/marketplace/dev/front-end/ui-components-library/persistence/in-memory-persistence-strategy.html) - 
+- [In-memory](/docs/marketplace/dev/front-end/ui-components-library/persistence/in-memory-persistence-strategy.html)—
  stores data in memory and will be lost when the browser page is reloaded.
-- [Local-storage](/docs/marketplace/dev/front-end/ui-components-library/persistence/local-storage-persistence-strategy.html) - uses browser Local Storage to store the data.
-- [Url](/docs/marketplace/dev/front-end/ui-components-library/persistence/url-persistence-strategy.html) - uses browser URL to store the data.
+- [Local-storage](/docs/marketplace/dev/front-end/ui-components-library/persistence/local-storage-persistence-strategy.html)—uses browser Local Storage to store the data.
+- [Url](/docs/marketplace/dev/front-end/ui-components-library/persistence/url-persistence-strategy.html)—uses browser URL to store the data.

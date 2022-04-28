@@ -31,9 +31,9 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productpackagingunit.html
 ---
 
-## Upgrading from Version 3.* to Version 4.0.0
+## Upgrading from version 3.* to version 4.0.0
 
-In this new version of the **ProductPackagingUnit** module, we have added support of decimal stock. You can find more details about the changes on the [ProductPackagingUnit module](https://github.com/spryker/product-packaging-unit/releases) release page.
+In this new version of the `ProductPackagingUnit` module, we have added support of decimal stock. You can find more details about the changes on the [ProductPackagingUnit module](https://github.com/spryker/product-packaging-unit/releases) release page.
 
 {% info_block errorBox %}
 
@@ -41,9 +41,9 @@ This release is a part of the **Decimal Stock** concept migration. When you upgr
 
 {% endinfo_block %}
 
-**To upgrade to the new version of the module, do the following:**
+To upgrade to the new version of the module, do the following:
 
-1. Upgrade the **ProductPackagingUnit** module to the new version:
+1. Upgrade the `ProductPackagingUnit` module to the new version:
 
 ```bash
 composer require spryker/product-packaging-unit: "^4.0.0" --update-with-dependencies
@@ -52,23 +52,24 @@ composer require spryker/product-packaging-unit: "^4.0.0" --update-with-dependen
 2. You should prepare a backup for the following database tables, just in case the migration failed: `spy_product_packaging_unit`, `spy_product_packaging_unit_amount`, and `spy_product_packaging_lead_product`.
 
 3. Clean up the old database tables:
-* `src/Pyz/Zed/IndexGenerator/Persistence/Propel/Schema/spy_product_packaging_unit.schema.xml`:
 
-```xml
-<?xml version="1.0"?>
-<database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\ProductPackagingUnit\Persistence" package="src.Orm.Zed.ProductPackagingUnit.Persistence">
-  <table name="spy_product_packaging_unit">
-    <index name="index-spy_product_packaging_unit-fk_product">
-      <index-column name="fk_product"/>
-    </index>
-  </table>
-</database>
-```
-* `src/Pyz/Zed/ProductPackagingUnit/Persistence/Propel/Schema/spy_product_packaging_unit.schema.xml`:
+   * `src/Pyz/Zed/IndexGenerator/Persistence/Propel/Schema/spy_product_packaging_unit.schema.xml`:
 
-```xml
-<?xml version="1.0"?>
-<database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\ProductPackagingUnit\Persistence" package="src.Orm.Zed.ProductPackagingUnit.Persistence">
+    ```xml
+    <?xml version="1.0"?>
+    <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\ProductPackagingUnit\Persistence" package="src.Orm.Zed.ProductPackagingUnit.Persistence">
+    <table name="spy_product_packaging_unit">
+        <index name="index-spy_product_packaging_unit-fk_product">
+        <index-column name="fk_product"/>
+        </index>
+    </table>
+    </database>
+    ```
+   * `src/Pyz/Zed/ProductPackagingUnit/Persistence/Propel/Schema/spy_product_packaging_unit.schema.xml`:
+
+    ```xml
+    <?xml version="1.0"?>
+    <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed"  xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\ProductPackagingUnit\Persistence" package="src.Orm.Zed.ProductPackagingUnit.Persistence">
 
     <table name="spy_product_packaging_unit" phpName="SpyProductPackagingUnit">
         <behavior name="event">
@@ -81,175 +82,184 @@ composer require spryker/product-packaging-unit: "^4.0.0" --update-with-dependen
             <parameter name="spy_product_packaging_unit_type_all" column="*"/>
         </behavior>
     </table>
+    </database>
+    ```
 
-</database>
-```
 4. Run the following commands for **every store**:
+    
     * Merge database schema definition files:
+
     ```bash
 	console propel:schema:copy
     ```
+
    * Build propel models:
+
 	```bash
     console propel:model:build
     ```
+
     * Generate migration files:
+
 	```bash
     console propel:diff
     ```
+
     * To migrate existing Packaging Unit data in your database, adjust **all generated migration files** for with the `preUp()` and `postUp()` scripts:
 
-{% info_block warningBox "Note" %}
+    {% info_block warningBox "Note" %}
 
-The following scripts will work for the PostgreSQL database only.
+    The following scripts will work for the PostgreSQL database only.
 
-{% endinfo_block %}
+    ```sql
+    public function preUp(MigrationManager $manager)
+        {
+            $connection = $manager->getAdapterConnection('zed');
+            $connection->beginTransaction();
 
-```sql
-public function preUp(MigrationManager $manager)
-    {
-        $connection = $manager->getAdapterConnection('zed');
-        $connection->beginTransaction();
+            /* Create temporary table */
+            $connection->exec(<<<SQL
+    CREATE TABLE spy_product_packaging_unit_new
+    (
+        id_product_packaging_unit      INTEGER,
+        fk_product                     INTEGER,
+        fk_lead_product                INTEGER,
+        fk_product_packaging_unit_type INTEGER,
+        amount_interval                NUMERIC(20, 10),
+        amount_max                     NUMERIC(20, 10),
+        amount_min                     NUMERIC(20, 10),
+        default_amount                 NUMERIC(20, 10) default 1,
+        is_amount_variable             BOOLEAN default false,
+        fk_abstract_product            INTEGER,
+        created_at                     TIMESTAMP,
+        updated_at                     TIMESTAMP
+    );
+    SQL
+            );
 
-        /* Create temporary table */
-        $connection->exec(<<<SQL
-CREATE TABLE spy_product_packaging_unit_new
-(
-    id_product_packaging_unit      INTEGER,
-    fk_product                     INTEGER,
-    fk_lead_product                INTEGER,
-    fk_product_packaging_unit_type INTEGER,
-    amount_interval                NUMERIC(20, 10),
-    amount_max                     NUMERIC(20, 10),
-    amount_min                     NUMERIC(20, 10),
-    default_amount                 NUMERIC(20, 10) default 1,
-    is_amount_variable             BOOLEAN default false,
-    fk_abstract_product            INTEGER,
-    created_at                     TIMESTAMP,
-    updated_at                     TIMESTAMP
-);
-SQL
-        );
+            $connection->exec(<<<SQL
+    INSERT INTO spy_product_packaging_unit_new (id_product_packaging_unit, fk_product,  fk_product_packaging_unit_type, created_at, updated_at)
+    SELECT id_product_packaging_unit,
+        fk_product,
+        fk_product_packaging_unit_type,
+        created_at,
+        updated_at
+    FROM spy_product_packaging_unit;
+    SQL
+            );
 
-        $connection->exec(<<<SQL
-INSERT INTO spy_product_packaging_unit_new (id_product_packaging_unit, fk_product, fk_product_packaging_unit_type, created_at, updated_at)
-SELECT id_product_packaging_unit,
-       fk_product,
-       fk_product_packaging_unit_type,
-       created_at,
-       updated_at
-FROM spy_product_packaging_unit;
-SQL
-        );
+            /* Update the temporary table with amount data */
+            $connection->exec(<<<SQL
+    UPDATE
+        spy_product_packaging_unit_new AS sppun
+    SET amount_min = sppua.amount_min,
+        amount_max = sppua.amount_max,
+        default_amount = sppua.default_amount,
+        is_amount_variable = sppua.is_variable,
+        amount_interval = sppua.amount_interval
+    FROM spy_product_packaging_unit_amount AS sppua
+    WHERE sppun.id_product_packaging_unit = sppua.fk_product_packaging_unit;
+    SQL
+            );
 
-        /* Update the temporary table with amount data */
-        $connection->exec(<<<SQL
-UPDATE
-    spy_product_packaging_unit_new AS sppun
-SET amount_min = sppua.amount_min,
-    amount_max = sppua.amount_max,
-    default_amount = sppua.default_amount,
-    is_amount_variable = sppua.is_variable,
-    amount_interval = sppua.amount_interval
-FROM spy_product_packaging_unit_amount AS sppua
-WHERE sppun.id_product_packaging_unit = sppua.fk_product_packaging_unit;
-SQL
-        );
+            /* Update the temporary table with lead product data */
+            $connection->exec(<<<SQL
+    UPDATE spy_product_packaging_unit_new sppun
+    SET fk_abstract_product = sp.fk_product_abstract
+    FROM spy_product sp
+    WHERE sppun.fk_product = sp.id_product;
+    SQL
+            );
 
-        /* Update the temporary table with lead product data */
-        $connection->exec(<<<SQL
-UPDATE spy_product_packaging_unit_new sppun
-SET fk_abstract_product = sp.fk_product_abstract
-FROM spy_product sp
-WHERE sppun.fk_product = sp.id_product;
-SQL
-        );
+            $connection->exec(<<<SQL
+    UPDATE spy_product_packaging_unit_new AS sppun
+    SET fk_lead_product = sp.id_product
+    FROM spy_product_packaging_lead_product AS spplp
+            JOIN spy_product sp ON spplp.fk_product = sp.id_product
+    WHERE spplp.fk_product <> sppun.fk_product
+    AND sppun.fk_abstract_product = spplp.fk_product_abstract;
+    SQL
+            );
 
-        $connection->exec(<<<SQL
-UPDATE spy_product_packaging_unit_new AS sppun
-SET fk_lead_product = sp.id_product
-FROM spy_product_packaging_lead_product AS spplp
-         JOIN spy_product sp ON spplp.fk_product = sp.id_product
-WHERE spplp.fk_product <> sppun.fk_product
-  AND sppun.fk_abstract_product = spplp.fk_product_abstract;
-SQL
-        );
+            /*
+             * Cleanup the redundant packaging unit data
+             * Packaging unit rows with is_lead_product, which doesn't represent a packaging unit doesn't belong to the packaging unit table anymore
+             */
+            $connection->exec(<<<SQL
+    DELETE
+    FROM spy_product_packaging_unit_new
+    WHERE fk_lead_product IS NULL;
+    SQL
+            );
 
-        /*
-         * Cleanup the redundant packaging unit data
-         * Packaging unit rows with is_lead_product, which doesn't represent a packaging unit doesn't belong to the packaging unit table anymore
-         */
-        $connection->exec(<<<SQL
-DELETE
-FROM spy_product_packaging_unit_new
-WHERE fk_lead_product IS NULL;
-SQL
-        );
+            $connection->commit();
+        }
+    ```
 
-        $connection->commit();
-    }
-```
+    {% endinfo_block %}
 
-* Change the `ALTER TABLE "spy_product_packaging_unit"` command in the `getUpSQL()` method of the migration file to the following script:
 
-```sql
-ALTER TABLE "spy_product_packaging_unit"
-  ADD "fk_lead_product" INTEGER,
-  ADD "amount_interval" NUMERIC(20,10),
-  ADD "amount_max" NUMERIC(20,10),
-  ADD "amount_min" NUMERIC(20,10),
-  ADD "default_amount" NUMERIC(20,10),
-  ADD "is_amount_variable" BOOLEAN,
-  DROP COLUMN "has_lead_product";
-```
 
-* Implement the `postUp()` method the following way:
+    * Change the `ALTER TABLE "spy_product_packaging_unit"` command in the `getUpSQL()` method of the migration file to the following script:
 
-```sql
-public function postUp(MigrationManager $manager)
-    {
-        $connection = $manager->getAdapterConnection('zed');
-        $connection->beginTransaction();
+    ```sql
+    ALTER TABLE "spy_product_packaging_unit"
+    ADD "fk_lead_product" INTEGER,
+    ADD "amount_interval" NUMERIC(20,10),
+    ADD "amount_max" NUMERIC(20,10),
+    ADD "amount_min" NUMERIC(20,10),
+    ADD "default_amount" NUMERIC(20,10),
+    ADD "is_amount_variable" BOOLEAN,
+    DROP COLUMN "has_lead_product";
+    ```
 
-        /* Update the spy_product_packaging_unit table with data collected in temporary table */
-        $connection->exec(<<<SQL
-UPDATE
-    spy_product_packaging_unit AS sppu
-SET
-    fk_lead_product = sppun.fk_lead_product,
-    amount_min = sppun.amount_min,
-    amount_max = sppun.amount_max,
-    default_amount = sppun.default_amount,
-    is_amount_variable = sppun.is_amount_variable,
-    amount_interval = sppun.amount_interval
-FROM spy_product_packaging_unit_new AS sppun
-WHERE sppu.id_product_packaging_unit = sppun.id_product_packaging_unit;
-SQL
-        );
+    * Implement the `postUp()` method the following way:
 
-        /* Cleanup the redundant packaging unit data */
-        $connection->exec(<<<SQL
-DELETE
-FROM spy_product_packaging_unit
-WHERE fk_lead_product IS NULL;
-SQL
-        );
+    ```sql
+    public function postUp(MigrationManager $manager)
+        {
+            $connection = $manager->getAdapterConnection('zed');
+            $connection->beginTransaction();
 
-        /* Alter table columns */
-        $connection->exec(<<<SQL
-ALTER TABLE spy_product_packaging_unit
-    ALTER COLUMN fk_lead_product SET NOT NULL,
-    ALTER COLUMN default_amount SET NOT NULL,
-    ALTER COLUMN is_amount_variable SET NOT NULL;
-SQL
-        );
+            /* Update the spy_product_packaging_unit table with data collected in temporary table */
+            $connection->exec(<<<SQL
+    UPDATE
+        spy_product_packaging_unit AS sppu
+    SET
+        fk_lead_product = sppun.fk_lead_product,
+        amount_min = sppun.amount_min,
+        amount_max = sppun.amount_max,
+        default_amount = sppun.default_amount,
+        is_amount_variable = sppun.is_amount_variable,
+        amount_interval = sppun.amount_interval
+    FROM spy_product_packaging_unit_new AS sppun
+    WHERE sppu.id_product_packaging_unit = sppun.id_product_packaging_unit;
+    SQL
+            );
 
-        /* Drop temporary table */
-        $connection->exec('DROP TABLE spy_product_packaging_unit_new');
+            /* Cleanup the redundant packaging unit data */
+            $connection->exec(<<<SQL
+    DELETE
+    FROM spy_product_packaging_unit
+    WHERE fk_lead_product IS NULL;
+    SQL
+            );
 
-        $connection->commit();
-    }
-```
+            /* Alter table columns */
+            $connection->exec(<<<SQL
+    ALTER TABLE spy_product_packaging_unit
+        ALTER COLUMN fk_lead_product SET NOT NULL,
+        ALTER COLUMN default_amount SET NOT NULL,
+        ALTER COLUMN is_amount_variable SET NOT NULL;
+    SQL
+            );
+
+            /* Drop temporary table */
+            $connection->exec('DROP TABLE spy_product_packaging_unit_new');
+
+            $connection->commit();
+        }
+    ```
 
 5. Execute the migration for **all stores**:
 
@@ -268,6 +278,7 @@ console propel:postgres-indexes:generate
 ```bash
 console transfer:generate
 ```
+
 8. Add the following plugin to the project dependency provider, if applicable:
 
 **src/Pyz/Zed/Oms/OmsDependencyProvider.php**
@@ -297,7 +308,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 
 9. Change the cart expander plugins order in dependency provider, move `ProductPackagingUnitItemExpanderPlugin` before any other plugin related to the Packaging Unit feature:
 
-src/Pyz/Zed/Cart/CartDependencyProvider.php
+**src/Pyz/Zed/Cart/CartDependencyProvider.php**
 
 ```php
 <?php
@@ -329,11 +340,12 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     }
 }
 ```
+
 10. Remove the usage of  `\Spryker\Zed\ProductPackagingUnitStorage\Communication\Plugin\Synchronization\ProductAbstractPackagingSynchronizationDataPlugin` from the `\Pyz\Zed\Synchronization\SynchronizationDependencyProvider`.
 
 *Estimated migration time: 30 min*
 
-## Upgrading from Version 1.* to Version 3.0.0
+## Upgrading from version 1.* to version 3.0.0
 
 {% info_block infoBox %}
 

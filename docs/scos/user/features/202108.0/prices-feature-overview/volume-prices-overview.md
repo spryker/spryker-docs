@@ -124,7 +124,7 @@ That is a particular case of electricity bills where you pay more if you use mor
 
 {% info_block infoBox %}
 
-Currently, the feature has the following functional constraints which are going to be resolved in the future.
+The feature has the following functional constraints which are going to be resolved in the future.
 
 {% endinfo_block %}
 

@@ -20,7 +20,7 @@ The feature works in the form of a newsletter for both guest and registered user
 Registered users subscribe to the newsletter in the same way, but the email address set up in their account is already entered when they visit a page with an out-of-stock product:
 ![Registered user subscription](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Product+is+Available+Again/registered-user-subscription.png)
 
-Registered users can change the pre-entered email address to any other one.
+Registered users can change the preentered email address to any other one.
 
 Once a customer subscribed, the email address input field is replaced with the **Do not notify me when back in stock** button.
 ![Do not notify me when back in stock button](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Mailing+&+Communication/Product+is+Available+Again/do-not-notify-button.png)
@@ -40,7 +40,7 @@ Each email sent as a part of the subscription contains the **unsubscribe from th
 
 {% endinfo_block %}
 
-Currently, a Back Office user cannot manage newsletter subscriptions.
+A Back Office user cannot manage newsletter subscriptions.
 
 A developer can manage the newsletter text files in `/src/Spryker/Zed/AvailabilityNotification/Presentation/Mail` and check the list of subscriptions in the `spy_availability_subscription`database table.
 

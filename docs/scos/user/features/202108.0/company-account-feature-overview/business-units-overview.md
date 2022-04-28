@@ -54,7 +54,7 @@ Example:
 
 The following are special characteristics of business units:
 
-* It is not possible to assign a parent business unit to its child.
+* You can't assign a parent business unit to its child.
 * Deleting a parent business unit does not delete its children. The hierarchy is kept, and just goes one level up.
 
 {% info_block infoBox %}

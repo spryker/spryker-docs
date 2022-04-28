@@ -18,7 +18,7 @@ In B2B companies, it is important to control the purchases employees make and ad
 
 *Invoice Generation* lets you generate and send invoices to customers after they placed an order. At the same time, you can also keep the invoices for your records by sending copy of invoices to your own email address.
 
-With *Order Cancellation*, let your customers cancel orders within a defined period and avoid doing it manually on your side on the customer's behalf. For example, a customer may change their mind about the color of an item they have ordered. Instead of contacting support representatives, they can cancel the order right away and re-place it with the desired color.  
+With *Order Cancellation*, let your customers cancel orders within a defined period and avoid doing it manually on your side on the customer's behalf. For example, a customer may change their mind about the color of an item they have ordered. Instead of contacting support representatives, they can cancel the order right away and re-place it with the needed color.  
 
 To make it easier for your customers to manage their orders and shipments, you can offer them to split a single order into multiple shipments with *Split Delivery*. For example, they might want to buy presents for the holidays and ship them to different addresses. With just the standard single delivery, they would have to place multiple orders for this. Split Delivery allows delivering order items to different shipping addresses and on different days, with different shipment methods.
 

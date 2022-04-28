@@ -113,7 +113,7 @@ The company has the following company users:
 | Head of the department | Approver  | Has the *Approve up to grand total* permission set to €1000. |
 | Head of the department | Buyer  | Has the *Buy up to grand total* permission set to €1000.  |
 
-Submitting quote B triggers an approval process as the quote total exceeds the amount set in the *Buy up to grand total* permission. To approve that request, an employee asks for approval from either the manager or the head of the department using the Approval widget and waits until the quote gets the Approved status. Once the request is approved, the employee can complete the checkout.
+Submitting quote B triggers an approval process because the quote total exceeds the amount set in the *Buy up to grand total* permission. To approve that request, an employee asks for approval from either the manager or the head of the department using the Approval widget and waits until the quote gets the Approved status. Once the request is approved, the employee can complete the checkout.
 
 **Case 3.  Approval Process is initiated (senior approver)**
 
@@ -127,7 +127,7 @@ The company has the following company users:
 | Manager | Approver  | Has the *Approve up to grand total* permission set to €600. |
 | Head of the department | Approver  | Has the *Approve up to grand total* permission set to €1000. |
 
-Quote C needs approval that has to be provided by the head of the department as the manager's approval limit is lower than the quote grand total. After the request has been approved by the head of the department, the buyer can complete the checkout.
+Quote C needs approval that has to be provided by the head of the department because the manager's approval limit is lower than the quote grand total. After the request has been approved by the head of the department, the buyer can complete the checkout.
 
 **Case 4. Case 2. Approval Process is not initiated**
 
@@ -141,7 +141,7 @@ The company has the following company users:
 | Manager | Approver  | Has the *Approve up to grand total* permission for €600. |
 | Head of the department | Approver  | Has the *Approve up to grand total* permission set to €1000. |
 
-Quote D can't be processed as the quote total is higher than any Approver permissions set for that company. In such case, the only workaround is to edit the quote (decrease the quantity of the items or remove some items from the cart), split the cart into several carts, or create a new Approver role with a greater *Approve up to* permission.
+Quote D can't be processed because the quote total is higher than any Approver permissions set for that company. In such case, the only workaround is to edit the quote (decrease the quantity of the items or remove some items from the cart), split the cart into several carts, or create a new Approver role with a greater *Approve up to* permission.
 
 ### Quote lock functionality
 After the quote is submitted for approval, it gets locked for both the buyer and the approver. This functionality prevents any changes to the quote's content while it's in the pending approval state.

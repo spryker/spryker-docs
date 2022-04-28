@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-customers
   - /docs/managing-customers
   - /docs/en/managing-customers
+  - /docs/scos/user/back-office-user-guides/202108.0/customer/customer-customer-access-customer-groups/managing-customers.html
 related:
   - title: Customer Accounts
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
@@ -26,9 +27,24 @@ Each section contains reference information. Make sure to review it before you s
 ## Creating customers
 
 To create a new customer:
-1. In the top-right corner of the *Customers* page, click **Add Customer**.
-2. On the *Add a customer* page, enter the customer information. The customer information must include first name, last name, and the email address that will be linked to the new account. The email address is important for completing the registration (by accessing the link that will be sent by email) or for later use of the forgot password functionality.
-3. Send the password token by email by selecting the **Send password token through email** checkbox. After saving the customer data, an email will be sent to the customer containing a link. By accessing the link, the customer will be able to set a password for the account.
+1. Go to **Customers&nbsp;<span aria-label="and then">></span> Customers**.
+2. On the **Customers** page, click **Add Customer**.
+3. On the **Add a customer** page, enter an **EMAIL**.
+4. Select a **SALUTATION**.
+5. Enter a **FIRST NAME**.
+6. Enter a **LAST NAME**.
+7. Optional: Select a **GENDER**.
+8. Optional: Select a **DATE OF BIRTH**.
+9. Optional: Enter a **PHONE**.
+10. Optional: Enter a **COMPANY**.
+11. Optional: Select a **LOCALE**.
+12. To send a password change link to the customer's **EMAIL**, select the **SEND PASSWORD TOKEN THROUGH EMAIL** checkbox.
+13. Click **Save**.
+
+    This opens the **Customers** page with a success message displayed. The customer is displayed in the list.
+
+the customer information. The customer information must include first name, last name, and the email address that will be linked to the new account. The email address is important for completing the registration (by accessing the link that will be sent by email) or for later use of the forgot password functionality.
+
 
 {% info_block infoBox "Info" %}
 
@@ -45,16 +61,16 @@ The following table describes the attributes you enter and select when creating 
 
 |ATTRIBUTE| DESCRIPTION|
 |---|---|
-| Email | Email address that will be linked to the new account. The email address is important for completing the registration (by accessing the link that will be sent by email) or for later use of the forgot password functionality.|
-| Salutation |Formal salutation for your customer (e.g., Mr, Mrs).|
-| First Name |Customer's first name.|
-| Last Name |Customer's last name.|
-| Gender |Customer's gender. The drop-down list with the following values available for selection:  Male and Female.|
-| Date of birth |Customer's date of birth in the format mm/dd/yyyy. Once you click on the field, the calendar opens where you can select the date.|
-| Phone |Customer's phone number.|
-| Company | Customer's company.|
-| Locale |Selected from a drop-down list value defines the locale for your customer.|
-| Send password token through email |If you select the checkbox, after saving the customer data, an email will be sent to the customer containing a link. By accessing the link, the customer will be able to set a password for the account. If you don’t select this option, the customer is still able to set a password for their account, by clicking the reset password link from the shop interface. |
+| EMAIL | Email address that will be linked to the new account. The email address is important for completing the registration (by accessing the link that will be sent by email) or for later use of the forgot password functionality.|
+| SALUTATION |Formal salutation for your customer (e.g., Mr, Mrs).|
+| FIRST NAME |Customer's first name.|
+| LAST NAME |Customer's last name.|
+| GENDER |Customer's gender. The drop-down list with the following values available for selection:  Male and Female.|
+| DATE OF BIRTH |Customer's date of birth in the format mm/dd/yyyy. Once you click on the field, the calendar opens where you can select the date.|
+| PHONE |Customer's phone number.|
+| COMPANY | Customer's company.|
+| LOCALE |Selected from a drop-down list value defines the locale for your customer.|
+| SEND PASSWORD TOKEN THROUGH EMAIL |If you select the checkbox, after saving the customer data, an email will be sent to the customer containing a link. By accessing the link, the customer will be able to set a password for the account. If you don’t select this option, the customer is still able to set a password for their account, by clicking the reset password link from the shop interface. |
 ![Add or edit customers page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Customers/Customers%3A+Reference+Information/customers-reference-information.png)
 
 ## Editing customers

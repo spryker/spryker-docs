@@ -1,5 +1,5 @@
 ---
-title: HowTo - Configure basic htaccess authentication
+title: HowTo - Configure basic .htaccess authentication
 description: Learn how to configure basic htaccess authentication for the Storefront and the Back Office.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -24,7 +24,7 @@ It is not possible to protect Glue endpoints with basic auth and we do not recom
 
 {% endinfo_block %}
 
-## 1. Defining login details and endpoints
+## 1. Define login details and endpoints
 
 To define login details and endpoints:
 
@@ -81,7 +81,7 @@ Open a protected endpoint and make sure that you are prompted to enter the defin
 
 You've configured basic authentication.
 
-## 2. Excluding IP addresses from .htaccess authentication
+## 2. Exclude IP addresses from .htaccess authentication
 
 To allow clients with desired IP addresses to bypass .htaccess authentication, adjust the `deploy.*.yml` of the desired environment as follows:
 

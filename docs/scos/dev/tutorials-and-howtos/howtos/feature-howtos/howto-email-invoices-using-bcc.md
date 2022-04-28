@@ -1,5 +1,5 @@
 ---
-title: HowTo - Emailing Invoices Using BCC
+title: HowTo - Email invoices using BCC
 description: This article provides detailed instructions on emailing invoices using BCC.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/howto-emailing-invoices-using-bcc
   - /v6/docs/howto-emailing-invoices-using-bcc
   - /v6/docs/en/howto-emailing-invoices-using-bcc
+  - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-emailing-invoices-using-bcc.html
 ---
 
 Every time you generate an [invoice for your customer’s orders](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/invoice-generation-overview.html), it is sent to the customer’s email address. If you also need a copy of the invoice, you can include yourself or your employees to BCC recipients of the emails with the invoices. Since the copy is hidden, when customers receive the email, they do not see other recipients' email addresses.

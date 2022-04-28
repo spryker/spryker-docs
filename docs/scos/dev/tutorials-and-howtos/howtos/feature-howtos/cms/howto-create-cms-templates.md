@@ -31,11 +31,9 @@ CMS page template is a [Twig](https://twig.symfony.com/) file that, when applied
 
 To learn how the template is created, check the exemplary procedure below.
 
-***
-
 1. Create the Twig template - `src/Pyz/Shared/Cms/Theme/default/templates/contact_page.twig`:
 
-```html
+```twig
 <h1>CONTACT US </h1>
 <div>
 <strong>  Get in touch </strong>
@@ -83,9 +81,7 @@ A content manager can apply this template when [creating a CMS page](/docs/scos/
 
 [Template with slots](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html) is a Twig file that defines the layout of slots across a Storefront page and has at least one slot assigned.
 
-***
-
-**Create a template with slots:**
+To create a template with slots:
 
 1. Create a Twig template as described in [CMS Page Template](#cms-page-template).
 2. For each slot that you want to have in the template, insert a [slot widget](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html#slot-widget).

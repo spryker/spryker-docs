@@ -1,5 +1,5 @@
 ---
-title: HowTo - Add a New Shipment Method
+title: HowTo - Add a new shipment method
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-add-new-shipment-method
@@ -36,7 +36,7 @@ In this tutorial we’ll consider the case when you need to add a new shipment m
 
 What’s important for this situation is to have a price attached to the shipment method and also to have the correct tax set linked to it. Also, the ship event should be manually triggerable from the Zed Admin UI.
 
-## Setting up the state machine
+## Set up the state machine
 
 The state machine that handles orders that use this shipment method needs to use a manual event for shipping, so that it can be triggered from the Zed Admin UI.
 
@@ -64,7 +64,7 @@ The corresponding XML for this transition would be:
 </events>
 ```
 
-## Adding a new shipment method
+## Add a new shipment method
 
 To add a new shipment method:
 

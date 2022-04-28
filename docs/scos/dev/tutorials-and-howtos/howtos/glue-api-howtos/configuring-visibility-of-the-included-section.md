@@ -1,5 +1,5 @@
 ---
-title: Configuring Visibility of the Included Section
+title: Configuring visibility of the included section
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-configuring-visibility-included-section-201903
@@ -64,7 +64,7 @@ To configure the behavior of the sections:
   * **true** - to enable related resources everywhere;
   * **false** - to return related resources per request only.
 
-**Sample Implementation**
+**Sample implementation**
 
 ```php
 <?php
@@ -94,8 +94,7 @@ class GlueApplicationConfig extends SprykerGlueApplicationConfig
 
 To verify that the configuration has been completed successfully:
 
-1. Send a GET request as follows:
-_http://mysprykershop.com/concrete-products/177_24867659?**include=concrete-product-image-sets**_
+4. Send a GET request as follows: `http://mysprykershop.com/concrete-products/177_24867659?include=concrete-product-image-sets`
 
 2. Make sure that the **included** and **relationships** sections of the response contain the `concrete-product-image-sets` resource only.
 
@@ -144,8 +143,7 @@ _http://mysprykershop.com/concrete-products/177_24867659?**include=concrete-prod
 }
 ```
 
-3. Send a GET request as follows:
-_http://mysprykershop.com/concrete-products/177_24867659_
+3. Send a GET request as follows: `http://mysprykershop.com/concrete-products/177_24867659`
 4. Make sure that the endpoint responds in accordance with your configuration:
     * if the `getIsEagerRelatedResourcesInclusionEnabled` parameter is set to `true`, the included section of the response contains all related resources.
 

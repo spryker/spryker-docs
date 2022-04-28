@@ -1,5 +1,5 @@
 ---
-title: HowTo - Make a Product Searchable and Shown on the Storefront
+title: HowTo - Make a product searchable and shown on the Storefront
 description: Use the guide to learn about conditions need to be performed to make a product searchable in the online store.
 last_updated: Jun 16, 2021
 template: howto-guide-template

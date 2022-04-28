@@ -35,9 +35,13 @@ To enable guest checkout:
 
 3. In `​ Pyz\Client\Permission\PermissionDependencyProvider.php`, remove or comment `​PlaceOrderWithAmountUpToPermissionPlugin()`​.
 
-4. DevVM-based instance: to sync code changes, run `vagrant halt && vagrant up`.
+4. DevVM-based instance: to sync code changes, run: 
 
-5. In CheckoutPage module, create `src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig`.
+```bash
+vagrant halt && vagrant up
+```
+
+5. In `CheckoutPage` module, create `src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig`.
 
 <details open><summary markdown='span'>src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig</summary>
 

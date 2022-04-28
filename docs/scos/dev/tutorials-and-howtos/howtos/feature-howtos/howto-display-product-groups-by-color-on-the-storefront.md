@@ -1,5 +1,5 @@
 ---
-title: HowTo - Display Product Groups by Color on the Storefront
+title: HowTo - Display product groups by color on the Storefront
 description: Procedure to display a product group on Storefront.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -53,7 +53,6 @@ console transfer:generate
 The `color_code` field has been added to the `spy_product_abstract` table.
 
 {% endinfo_block %}
-
 
 ## Transfer object extension
 

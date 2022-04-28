@@ -1,5 +1,5 @@
 ---
-title: HowTo - Create a Visibility Condition for CMS Blocks
+title: HowTo - Create a visibility condition for CMS Blocks
 description: Visibility condition is a tool used to define particular pages in which the content of CMS block is displayed.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -99,7 +99,7 @@ The slot widget with `idProductAbstract`, `isGuest`, `age` and `city` properties
 
 3. Define the new properties for `CmsSlotBlockConditionTransfer` and `CmsSlotParamsTransfer` in `src/Pyz/Shared/CmsSlotBlockCustomer/Transfer/cms_slot_block_customer.transfer.xml`:
 
-```html
+```xml
 <transfer name="CmsSlotParams">
     <property name="isGuest" type="bool"/>
     <property name="age" type="int"/>
@@ -163,9 +163,9 @@ class CustomerSlotBlockConditionFormPlugin extends AbstractPlugin implements Cms
 
 3. Create `CustomerSlotBlockConditionForm`. It is a regular Symfony Form class which implements `\Symfony\Component\Form\FormBuilderInterface`, See:
 
-* [Forms](https://symfony.com/doc/current/forms.html) for more information about Symfony forms.
-* [Creating Forms](/docs/scos/dev/back-end-development/forms/creating-forms.html) to learn about form creation procedure in Spryker.
-* a form example in `\Spryker\Zed\CmsSlotBlockProductCategoryGui\Communication\Form\ProductCategorySlotBlockConditionForm`.
+   * [Forms](https://symfony.com/doc/current/forms.html) for more information about Symfony forms.
+   * [Creating Forms](/docs/scos/dev/back-end-development/forms/creating-forms.html) to learn about form creation procedure in Spryker.
+   * a form example in `\Spryker\Zed\CmsSlotBlockProductCategoryGui\Communication\Form\ProductCategorySlotBlockConditionForm`.
 
 {% info_block errorBox %}
 
@@ -212,14 +212,14 @@ In our case the created form has 5 elements:
     }
 ```
 
-1. Add the new plugin to the `\Pyz\Zed\CmsSlotBlockGui\CmsSlotBlockGuiDependencyProvider::getCmsSlotBlockFormPlugins()` plugin list in `CustomerSlotBlockConditionFormPlugin`.
+4. Add the new plugin to the `\Pyz\Zed\CmsSlotBlockGui\CmsSlotBlockGuiDependencyProvider::getCmsSlotBlockFormPlugins()` plugin list in `CustomerSlotBlockConditionFormPlugin`.
 
 {% info_block warningBox "Verification" %}
 
-2. Go to the Back Office > **Content Management** > **Slots**.
-3. Select a product details page template in the **List of Templates**.
-4. Select a slot in the  **List of Slots for {name} Template**.
-5. Add or choose one CMS block in the List of Blocks for {name} Slot.
+1. Go to the Back Office > **Content Management** > **Slots**.
+2. Select a product details page template in the **List of Templates**.
+3. Select a slot in the  **List of Slots for {name} Template**.
+4. Add or choose one CMS block in the List of Blocks for {name} Slot.
 
 {% info_block infoBox %}
 
@@ -227,9 +227,9 @@ You should be able to see a rendered form of the customer visibility condition.
 
 {% endinfo_block %}
 
-6. Select any visibility conditions and take note of them.
-7. Click **Save**.
-8. In database, check the last added rows in `spy_cms_slot_block.conditions` and `spy_cms_slot_block_storage.data` columns.
+5. Select any visibility conditions and take note of them.
+6. Click **Save**.
+7. In database, check the last added rows in `spy_cms_slot_block.conditions` and `spy_cms_slot_block_storage.data` columns.
 
 {% info_block infoBox %}
 

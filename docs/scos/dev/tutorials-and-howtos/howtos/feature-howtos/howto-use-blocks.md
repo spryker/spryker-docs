@@ -1,5 +1,5 @@
 ---
-title: HowTo - Use Blocks
+title: HowTo - Use blocks
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-use-cms-blocks
@@ -34,12 +34,10 @@ CMS Block module provides only business logic. For better experience install CMS
 
 {% endinfo_block %}
 
-### Main usage
+The following steps will help you become familiar with how blocks work. To add a block with a hello message, follow these steps:
 
-To familiarize yourself with how to use blocks, follow the steps described below. These steps describe how to add a block with a hello message:
-
-* Add a template for the new block - similar to templates for pages.
-* Create a new Twig template under the `src/Pyz/Yves/CmsBlock/Theme/default/template/` folder. We'll call it `hello.twig` and it will contain the following structure :
+1. Add a template for the new block - similar to templates for pages.
+2. Create a new Twig template under the `src/Pyz/Yves/CmsBlock/Theme/default/template/` folder. We'll call it `hello.twig` and it will contain the following structure :
 
 ```php
 <!-- CMS_BLOCK_PLACEHOLDER : "helloBlockText" -->
@@ -49,12 +47,12 @@ To familiarize yourself with how to use blocks, follow the steps described below
 </div>
 ```
 
-* Next, configure the new block in the CMS Block interface and add the corresponding glossary keys for the 2 included placeholders.
-* Click **Create CMS Block** to take you to the page for creating a new block
-* Select the newly created template from the list, select static type and give it a proper unique name ("HelloMessage").
-* Enter the **Valid From** and **Valid To** dates if you want to limit the availability to a date range and click **Save**.
-* Create the glossary keys for the placeholders ( see previous example)
-* Run the collectors so that the changes are effective in Yves.
+3. Next, configure the new block in the CMS Block interface and add the corresponding glossary keys for the 2 included placeholders.
+4. Click **Create CMS Block** to take you to the page for creating a new block
+5. Select the newly created template from the list, select static type and give it a proper unique name ("HelloMessage").
+6. Enter the **Valid From** and **Valid To** dates if you want to limit the availability to a date range and click **Save**.
+7. Create the glossary keys for the placeholders ( see previous example)
+8. Run the collectors so that the changes are effective in Yves.
 
 The new block is now ready to be used and integrated in other Twig templates.
 
@@ -62,10 +60,8 @@ The new block is now ready to be used and integrated in other Twig templates.
 {% raw %}{{{% endraw %} spyCmsBlock({name: 'HelloMessage'}) {% raw %}}}{% endraw %}
 ```
 
-### Multi-store environment
+## Multi-store environment
 
 In case you have multiple store environment configured, you can also define in which of your stores the CMS Block is allowed to appear.
-
-#### Explanation
 
 In the example above, the CMS Block is assigned to DE and US only. If the CMS Block is enabled, then it will appear only in store DE and US. Afterward the user could define another CMS Block assigned to AT store only and have a different content per store.

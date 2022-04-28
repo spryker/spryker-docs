@@ -1,5 +1,5 @@
 ---
-title: HowTo - Add a New Shipment Method 2.0
+title: HowTo - Add a new shipment method 2.0
 description: Use the guide to add a new shipment method with the currency and price specified without integrating the method with shipment providers.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -37,7 +37,7 @@ In this tutorial we’ll consider the case when you need to add a new shipment m
 
 What’s important for this situation is to have multi-currency prices attached to the shipment method and also to have the correct tax set linked to it. Also, the `ship` event should be manually triggerable from the Back Office.
 
-## Setting up the state machine
+## Set up the state machine
 
 The state machine that handles orders that use this shipment method needs to use a manual event for shipping, so that it can be triggered from the Back Office.
 
@@ -65,7 +65,7 @@ The corresponding XML for this transition would be:
 </events>
 ```
 
-## Adding a new shipment method
+## Add a new shipment method
 
 To add a new shipment method:
 
@@ -92,6 +92,4 @@ The shipment methods with price are retrieved depending on your pre-configured p
 Shipment methods might be excluded if their active flag is off, connected `AvailabilityPlugin` plugin excludes them, or it would have a price as NULL.
 
 In this current example, the new shipment method is available in the shop for DE store, EUR currency and gross price mode as 7 EUR.
-![UI shipment selection](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+a+New+Shipment+Method+2.0/ui_shipment_selection.png) 
-
-<!-- Last review day: Feb 26, 2019 -by Karoly Gerner, Anastasija Datsun-->
+![UI shipment selection](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+a+New+Shipment+Method+2.0/ui_shipment_selection.png)

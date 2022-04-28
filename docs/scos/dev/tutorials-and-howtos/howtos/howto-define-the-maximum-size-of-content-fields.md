@@ -17,7 +17,7 @@ related:
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-feature-overview.html
 ---
 
-By default CMS module doesn't specify the content field size. For MySQL and MariaDB, it is transferred to TEXT (65535 bytes), and, for PostgreSQL, it is transferred to TEXT (unlimited length).
+By default, CMS module doesn't specify the content field size. For MySQL and MariaDB, it is transferred to TEXT (65535 bytes), and, for PostgreSQL, it is transferred to TEXT (unlimited length).
 
 In case your project requires more, you can redefine field size in `spy_cms_version` table.
 
@@ -35,4 +35,5 @@ For example, place the following into `src/Pyz/Zed/Cms/Persistence/Propel/Schema
 	</database>
 </div>
 ```
+
 {% endinfo_block %}

@@ -1,5 +1,5 @@
 ---
-title: HowTo - create a custom content item
+title: HowTo - Create a custom content item
 description: If the content items shipped with Spryker do not fulfill your needs, the article will help you to create a new one.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -32,8 +32,6 @@ Open `\Pyz\Zed\ContentGui\ContentGuiDependencyProvider::getContentPlugins()` to 
 Such plugins implement `\Spryker\Zed\ContentGuiExtension\Dependency\Plugin\ContentPluginInterface`.
 
 {% endinfo_block %}
-
-***
 
 To create a new content form plugin:
 
@@ -103,10 +101,10 @@ class ContentFooFormPlugin extends AbstractPlugin implements ContentPluginInterf
 
 2. Create `ContentFooTermForm`. The main part of the plugin is the `Form` class that implements `\Symfony\Component\Form\FormBuilderInterface`. See:
 
-* [Forms](https://symfony.com/doc/current/forms.html) for more information about Symfony forms.
-* [Creating Forms](/docs/scos/dev/back-end-development/forms/creating-forms.html) to learn about form creation procedure in Spryker.
-* `\Spryker\Zed\ContentBannerGui\Communication\Form\BannerContentTermForm` as an example of a simple form.
-* `\Spryker\Zed\ContentProductGui\Communication\Form\ProductAbstractListContentTermForm` as an example of a form with a dedicated template and a complex Javascript functionality.
+   * [Forms](https://symfony.com/doc/current/forms.html) for more information about Symfony forms.
+   * [Creating Forms](/docs/scos/dev/back-end-development/forms/creating-forms.html) to learn about form creation procedure in Spryker.
+   * `\Spryker\Zed\ContentBannerGui\Communication\Form\BannerContentTermForm` as an example of a simple form.
+   * `\Spryker\Zed\ContentProductGui\Communication\Form\ProductAbstractListContentTermForm` as an example of a form with a dedicated template and a complex Javascript functionality.
 
 Each form shipped by default require at least one form field to be filled out before it can be submitted. However, you can add more form constraints with additional validation.
 
@@ -183,13 +181,11 @@ After enabling the content form plugin, you will have your new content item data
 
 The method returns `ContentTypeContextTransfer` where `ContentTypeContextTransfer::$parameters` is the data saved by the form created in the previous section.
 
-***
-
 To create a new Twig plugin:
 
 1. Using `ContentTypeContextTransfer::$term` and `ContentTypeContextTransfer::$parameters`, fill in the properties of your new content transfer object, e.g. `ContentFooTransfer`, in `src/Shared/ContentFoo/Transfer/`.
 
-2. Create a new module, e. g. `src/Yves/ContentFooWidget`.
+2. Create a new module, for example, `src/Yves/ContentFooWidget`.
 
 3. Implement a Twig function using `\Spryker\Shared\Twig\TwigFunction`, e.g. `\SprykerShop\Yves\ContentBannerWidget\Twig\ContentBannerTwigFunction`.
 
@@ -212,8 +208,6 @@ Now you can use your plugin as a function in Twig files. If you’ve named your 
 *CMS Block Glossary Edit* and *Placeholder Edit* pages contains WYSIWYG editor to put content into CMS block or page.  The **Content Item** drop-down menu in the WYSIWYG toolbar contains all the content items which you can add. See [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/back-office-user-guides/{{site.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html) for more details.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Feature+HowTos/HowTo+-+Create+a+New+Custom+Content+Item/content-item-menu.png)
-
-***
 
 To add the new content item to that list, in `src/Zed/ContentFooGui`, implement a new plugin using `\Spryker\Zed\ContentGuiExtension\Dependency\Plugin\ContentGuiEditorPluginInterface`, e. g.  `ContentFooContentGuiEditorPlugin`.
 You can find the method descriptions below:

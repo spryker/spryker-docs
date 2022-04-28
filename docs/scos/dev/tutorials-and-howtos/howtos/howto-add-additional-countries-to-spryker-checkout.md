@@ -28,7 +28,7 @@ Ensure that you have an up-to-date installation of any of the following instance
 * Spryker B2B Shop
 * Spryker Suite
 
-## Adding countries to checkout
+## Add countries to checkout
 
 To add additional countries to the checkout, follow the steps:
 

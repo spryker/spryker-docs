@@ -37,9 +37,11 @@ There are only few things need to do to implement any business processes based o
 
 ## Schema creation
 
-**Customer approve process database schema**
+Create the corresponding approval process schema:
 
-```php
+**Customer approval process database schema**
+
+```sql
 <table name="pyz_customer_approve_process_item">
     <column name="id_customer_approve_process_item" required="true" type="INTEGER" autoIncrement="true" primaryKey="true"/>
     <column name="fk_customer" type="INTEGER" required="true"/>
@@ -66,7 +68,7 @@ We have added several foreign keys including foreign key to the `spy_customer` t
 
 ## CRUD implementation
 
-We will need few operations for managing customer approve process:
+Set up a few operations for managing customer approval process:
 
 **CustomerApproveProcessFacadeInterface**
 
@@ -143,6 +145,8 @@ This is all you need to implement in the business layer.
 ```
 
 ## StateMachineHandlerPlugin
+
+Configure the `StateMachineHandlerPlugin`:
 
 **CustomerApproveProcessStateMachineHandlerPlugin**
 
@@ -263,6 +267,8 @@ class CustomerApproveProcessStateMachineHandlerPlugin extends AbstractPlugin imp
 ```
 
 ## Commands and conditions
+
+Configure the plugins:
 
 **CustomerApproveProcessCommandPlugin**
 

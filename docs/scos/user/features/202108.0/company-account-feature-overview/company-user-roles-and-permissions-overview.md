@@ -142,8 +142,11 @@ Every company role includes a set of permissions that can be enabled/disabled ac
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage company users](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-users.html) |
-| [Manage company roles](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-roles.html) |
+| [Create company roles](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-roles/create-company-roles.html) |
+| [Edit company roles](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-roles/edit-company-roles.html) |
+| [Create company users](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-users/create-company-users.html) |
+| [Edit company users](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-users/edit-company-users.html) |
+
 
 
 {% info_block warningBox "Developer guides" %}

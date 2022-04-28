@@ -1026,7 +1026,50 @@ entries:
             - "202001.0"
             - "202005.0"
             - "202009.0"
+      - title: Manage companies
+        url: /docs/scos/user/back-office-user-guides/customer/manage-companies.html
+        include_versions:
+        - "202108.0"
+      - title: Company units
+        include_versions:
+        - "202108.0"
+        nested:
+          - title: Create company units
+            url: /docs/scos/user/back-office-user-guides/customer/company-units/create-company-units.html
+          - title: Edit company units
+            url: /docs/scos/user/back-office-user-guides/customer/company-units/edit-company-units.html
+      - title: Company unit addresses
+        include_versions:
+        - "202108.0"
+        nested:
+          - title: Create company unit addresses
+            url: /docs/scos/user/back-office-user-guides/customer/company-unit-addresses/create-company-unit-addresses.html
+          - title: Edit company units
+            url: /docs/scos/user/back-office-user-guides/customer/company-unit-addresses/edit-company-unit-addresses.html
+      - title: Company roles
+        include_versions:
+        - "202108.0"
+        nested:
+          - title: Create company roles
+            url: /docs/scos/user/back-office-user-guides/customer/company-roles/create-company-roles.html
+          - title: Edit company roles
+            url: /docs/scos/user/back-office-user-guides/customer/company-roles/edit-company-roles.html
+      - title: Company users
+        include_versions:
+        - "202108.0"
+        nested:
+          - title: Create company users
+            url: /docs/scos/user/back-office-user-guides/customer/company-users/create-company-users.html
+          - title: Edit company users
+            url: /docs/scos/user/back-office-user-guides/customer/company-users/edit-company-users.html
       - title: Company account
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
         nested:
         - title: Managing companies
           url: /docs/scos/user/back-office-user-guides/customer/company-account/managing-companies.html

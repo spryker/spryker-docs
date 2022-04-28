@@ -8,7 +8,7 @@ This document describes how to edit company users.
 
 ## Prerequisites
 
-Review the [reference information](reference-information-edit-a-company-user) before you start, or look up the necessary information as you go through the process.
+Review the [reference information](#reference-information-edit-a-company-user) before you start, or look up the necessary information as you go through the process.
 
 ## Edit a company user
 

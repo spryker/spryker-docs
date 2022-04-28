@@ -16,17 +16,16 @@ related:
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
 ---
 
-This article describes how to manage customers.
+This article describes how to create customers.
 
 ## Prerequisites
 
-To start managing customers, navigate to **Customers&nbsp;<span aria-label="and then">></span> Customers**.
+To start managing customers, go to **Customers&nbsp;<span aria-label="and then">></span> Customers**.
 
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
-## Creating customers
+## Creating a customer
 
-To create a new customer:
 1. Go to **Customers&nbsp;<span aria-label="and then">></span> Customers**.
 2. On the **Customers** page, click **Add Customer**.
 3. On the **Add a customer** page, enter an **EMAIL**.
@@ -43,19 +42,11 @@ To create a new customer:
 
     This opens the **Customers** page with a success message displayed. The customer is displayed in the list.
 
-the customer information. The customer information must include first name, last name, and the email address that will be linked to the new account. The email address is important for completing the registration (by accessing the link that will be sent by email) or for later use of the forgot password functionality.
+**Tips and tricks**
 
+Once you create a customer, a verification email is sent to their email address, while their **STATUS** is **Unverified**. After they click the verification link, their status changes to  **Verified**.
 
-{% info_block infoBox "Info" %}
-
-If you don’t select this option, the customer is still able to set a password for their account by clicking the reset password link from the online store.
-
-{% endinfo_block %}
-
-4. To complete the customer creation, click **Save**.
-This creates the new customer with the *Unverified* status in the *Customers* table. At the same time, the customer receives an email with the verification link that they must click to get verified and start using the online store as registered users do. Once they verified their account via the link in the email, the status in the *Customers* table changes to *Verified*.
-
-### Reference information: Creating customers
+## Reference information: Creating customers
 
 The following table describes the attributes you enter and select when creating a customer.
 
@@ -70,42 +61,7 @@ The following table describes the attributes you enter and select when creating 
 | PHONE |Customer's phone number.|
 | COMPANY | Customer's company.|
 | LOCALE |Selected from a drop-down list value defines the locale for your customer.|
-| SEND PASSWORD TOKEN THROUGH EMAIL |If you select the checkbox, after saving the customer data, an email will be sent to the customer containing a link. By accessing the link, the customer will be able to set a password for the account. If you don’t select this option, the customer is still able to set a password for their account, by clicking the reset password link from the shop interface. |
-![Add or edit customers page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Customers/Customers%3A+Reference+Information/customers-reference-information.png)
-
-## Editing customers
-
-To edit a customer:
-1. For a specific customer, you need to update, click **Edit** in the _Actions_ column on the *Customers* page.
-2. On the *Edit Customer* page, you see the same attributes as on the *Add a customer* page, but with the following exceptions:
-    *  The *Email* field is greyed out and is not available for updates.
-    *  You see two additional drop-down lists: **Billing Address** and **Shipping Address**. The values in those fields appear only if the addresses were added to the customer profile on the Storefront or from the **Back Office&nbsp;<span aria-label="and then">></span> View** customer-specific page. Those are not available for modifications from the *Edit Customer* page.
-3. Update the needed values and click **Save**.
-
-**Tips and tricks**
-<br>From the *Edit customer* page, you can:
-* Switch to the *View* customer page, where you can manage the addresses by adding a new address or updating the existing one (see the _Viewing Customer Details_ section below).
-* Delete the customer record (see the _Deleting a Customer Record_ section below).
-
-### Reference information: Editing customers
-
-The following table describes the attributes you enter and select when editing a customer.
-
-|ATTRIBUTE| DESCRIPTION|
-|---|---|
-| Email | Email address that is linked to the customer account. The email address is important for completing the registration (by accessing the link that will be sent by email) or for later use of the forgot password functionality. On the Edit customer page, this field is greyed out and not available for modifications.|
-| Salutation | Formal salutation for your customer (e.g., Mr, Mrs).|
-| First Name |Customer's first name.|
-| Last Name |Customer's last name.|
-| Gender |Customer's gender. The drop-down list with the following values available for selection:  Male and Female.|
-| Date of birth |Customer's date of birth in the format mm/dd/yyyy. Once you click on the field, the calendar opens where you change the date.|
-| Phone |Customer's phone number.|
-| Company | Customer's company.|
-| Locale |Selected from a drop-down list value defines the locale for your customer.|
-| Send password token through email |If you select the checkbox, after saving the customer data, an email will be sent to the customer containing a link. By accessing the link, the customer will be able to set a password for the account. If you don’t select this option, the customer still canset a password for their account, by clicking the reset password link from the shop interface. |
-| Billing Address | Drop-down list with the addresses set up for the customer. The selected address defines the billing address for your customer.|
-| Shipping Address |Dop-down list with the addresses set up for the customer. The selected address defines the shipping address for your customer.|
-
+| SEND PASSWORD TOKEN THROUGH EMAIL | If you select the checkbox, after saving the customer, an email will be sent to the customer containing a link. By accessing the link, the customer will be able to set a password for the account. If you don’t select this option, the customer will still able to set a password by clicking the reset password link on the Storefront. |
 ![Add or edit customers page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Customers/Customers%3A+Reference+Information/customers-reference-information.png)
 
 ## Viewing customer details

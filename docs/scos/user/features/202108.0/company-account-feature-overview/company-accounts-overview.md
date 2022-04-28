@@ -103,7 +103,7 @@ Company users can perform the following actions on the Storefront:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage companies](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-companies.html) |
+| [Manage companies](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/manage-companies.html) |
 
 
 {% info_block warningBox "Developer guides" %}

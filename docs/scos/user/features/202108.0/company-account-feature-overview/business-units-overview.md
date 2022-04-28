@@ -80,8 +80,10 @@ This will move the address to Unassigned addresses section.
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage company units](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-units.html) |
-| [Manage company unit addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-unit-addresses.html) |
+| [Create company units](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-units/create-company-units.html) |
+| [Edit company units](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-units/edit-company-units.html) |
+| [Create company unit addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-unit-addresses/create-company-unit-addresses.html) |
+| [Edit company unit addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-unit-addresses/edit-company-unit-addresses.html) |
 
 {% info_block warningBox "Developer guides" %}
 

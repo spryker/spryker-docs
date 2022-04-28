@@ -62,26 +62,26 @@ commonOptions = {
   :parallel => { :in_threads => 3}
 }
 
-task :check_aop_user do
+task :check_acp_user do
   options = commonOptions.dup
   options[:file_ignore] = [
     /docs\/scos\/.+/,
     /docs\/marketplace\/.+/,
     /docs\/cloud\/.+/,
-    /docs\/aop\/dev\/.+/,    
+    /docs\/acp\/dev\/.+/,    
     /docs\/fes\/.+/,
     /docs\/paas-plus\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
 
-task :check_aop_dev do
+task :check_acp_dev do
   options = commonOptions.dup
   options[:file_ignore] = [
     /docs\/scos\/.+/,
     /docs\/marketplace\/.+/,
     /docs\/cloud\/.+/,
-    /docs\/aop\/user\/.+/,    
+    /docs\/acp\/user\/.+/,    
     /docs\/fes\/.+/,
     /docs\/paas-plus\/.+/
   ]
@@ -95,7 +95,7 @@ task :check_cloud do
     /docs\/fes\/.+/,
     /docs\/marketplace\/.+/,
     /docs\/paas-plus\/.+/,
-    /docs\/aop\/.+/
+    /docs\/acp\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -107,7 +107,7 @@ task :check_mp_dev do
     /docs\/cloud\/.+/,
     /docs\/fes\/.+/,
     /docs\/paas-plus\/.+/,
-    /docs\/aop\/.+/,
+    /docs\/acp\/.+/,
     /docs\/marketplace\/user\/.+/,
     /docs\/marketplace\/\w+\/[\w-]+\/202200\.0\/.+/
   ]
@@ -121,7 +121,7 @@ task :check_mp_user do
     /docs\/cloud\/.+/,
     /docs\/fes\/.+/,
     /docs\/paas-plus\/.+/,
-    /docs\/aop\/.+/,
+    /docs\/acp\/.+/,
     /docs\/marketplace\/dev\/.+/,
   ]
   HTMLProofer.check_directory("./_site", options).run
@@ -134,7 +134,7 @@ task :check_scos_dev do
     /docs\/cloud\/.+/,
     /docs\/fes\/.+/,
     /docs\/paas-plus\/.+/,
-    /docs\/aop\/.+/,
+    /docs\/acp\/.+/,
     /docs\/scos\/user\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201811\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201903\.0\/.+/,
@@ -153,7 +153,7 @@ task :check_scos_dev_2020090 do
   options[:file_ignore] = [
     /docs\/marketplace\/.+/,
     /docs\/cloud\/.+/,
-    /docs\/aop\/.+/,
+    /docs\/acp\/.+/,
     /docs\/scos\/user\/.+/,
     /docs\/fes\/.+/,
     /docs\/paas-plus\/.+/,
@@ -173,7 +173,7 @@ task :check_scos_user do
   options[:file_ignore] = [
     /docs\/marketplace\/.+/,
     /docs\/cloud\/.+/,
-    /docs\/aop\/.+/,
+    /docs\/acp\/.+/,
     /docs\/scos\/dev\/.+/,
     /docs\/fes\/.+/,
     /docs\/paas-plus\/.+/,
@@ -193,7 +193,7 @@ task :check_fes do
     /docs\/scos\/.+/,
     /docs\/marketplace\/.+/,
     /docs\/cloud\/.+/,
-    /docs\/aop\/.+/,
+    /docs\/acp\/.+/,
     /docs\/paas-plus\/.+/,
   ]
   HTMLProofer.check_directory("./_site", options).run
@@ -205,7 +205,7 @@ task :check_paas_plus do
     /docs\/scos\/.+/,
     /docs\/marketplace\/.+/,
     /docs\/cloud\/.+/,
-    /docs\/aop\/.+/,
+    /docs\/acp\/.+/,
     /docs\/fes\/.+/,
   ]
   HTMLProofer.check_directory("./_site", options).run

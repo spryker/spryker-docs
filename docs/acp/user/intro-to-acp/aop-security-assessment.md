@@ -1,5 +1,5 @@
 ---
-title: AOP Security Assessment
+title: ACP Security Assessment
 Descriptions: This document outlines the threat modeling and security assessment requirements and process for apps listed on the Spryker’s app catalog.
 template: howto-guide-template
 ---
@@ -10,15 +10,15 @@ This document outlines the threat modeling and security assessment requirements 
 - Apps extending the Spryker Cloud Commerce Operating System (SCCOS)
 - Hybrid apps
 
-## AOP security
+## ACP security
 
-In the context of listings on the AOP apps catalog, security is a measure of trust. For our enterprise customers to trust us with their data, it is important that every app they use with SCCOS offers a satisfactory level of security. 
+In the context of listings on the ACP apps catalog, security is a measure of trust. For our enterprise customers to trust us with their data, it is important that every app they use with SCCOS offers a satisfactory level of security. 
 
 ## Security responsibility
 
-The main participants in a transaction related to the AOP are:
+The main participants in a transaction related to the ACP are:
 
-1. AOP Owner - Spryker
+1. ACP Owner - Spryker
 2. The Platform - Spryker SCCOS
 3. The Integration Developer - Spryker or Technology Partners 
 4. The Integration Consumer - Customer
@@ -28,11 +28,11 @@ All of these participants are responsible for the security of customer data.
 
 ## Threat modeling
 
-Spryker will conduct threat modeling to identify and prioritize potential threats to a system and determine the value that potential mitigations would have in reducing or neutralizing those threats for commercially distributed apps through the AOP apps catalog.  
+Spryker will conduct threat modeling to identify and prioritize potential threats to a system and determine the value that potential mitigations would have in reducing or neutralizing those threats for commercially distributed apps through the ACP apps catalog.  
 The threat model document will be shared in a PDF, Word or HTML format and will contain the following information:
 
-- How data flows through a system to identify where the AOP application might be attacked.
-- Document as many potential threats to the AOP app (PBC) as possible.
+- How data flows through a system to identify where the ACP application might be attacked.
+- Document as many potential threats to the ACP app (PBC) as possible.
 - Security controls that may be put in place to reduce the likelihood or impact of a potential threat.
 
 During threat modeling, the following list of risks and threat libraries sources are recommended to define the possible threats an application might be facing:
@@ -44,17 +44,17 @@ During threat modeling, the following list of risks and threat libraries sources
 
 {% info_block infoBox "Info" %}
 
-Threat modeling is highly recommended but not mandatory for the apps listed in the AOP catalog. Some Spryker customers ask for threat modeling explicitly in addition to a penetration test. If the partner chooses not to get this done initially, they will need to go through that upon customer request. 
+Threat modeling is highly recommended but not mandatory for the apps listed in the ACP catalog. Some Spryker customers ask for threat modeling explicitly in addition to a penetration test. If the partner chooses not to get this done initially, they will need to go through that upon customer request. 
 
 {% endinfo_block %}
 
 ## Security assessment and testing
 
-Spryker will conduct a security assessment for apps that are commercially distributed through the AOP apps catalog. These tests include SAST (Static Application Security Testing) and penetration testing activities. The objective of these tests is to replicate what a malicious actor would typically do to gain unauthorized access to the app and steal information.
+Spryker will conduct a security assessment for apps that are commercially distributed through the ACP apps catalog. These tests include SAST (Static Application Security Testing) and penetration testing activities. The objective of these tests is to replicate what a malicious actor would typically do to gain unauthorized access to the app and steal information.
 
 {% info_block infoBox "Info" %}
 
-Penetration testing is mandatory for all applications in the AOP catalog.
+Penetration testing is mandatory for all applications in the ACP catalog.
 
 {% endinfo_block %}
 
@@ -104,7 +104,7 @@ External integrations will undergo an endpoint assessment in accordance with OWA
 {% endinfo_block %}
 
 
-Spryker (or an authorized third party) will test code that runs on AOP/SCCOS or code that a partner makes available to us for review. This testing will consist of Static Code Analysis with a SAST tool, as well as a manual review of the code for critical parts of the application. Partners will provide documentation to indicate the critical features of the app.
+Spryker (or an authorized third party) will test code that runs on ACP/SCCOS or code that a partner makes available to us for review. This testing will consist of Static Code Analysis with a SAST tool, as well as a manual review of the code for critical parts of the application. Partners will provide documentation to indicate the critical features of the app.
 
 Vulnerabilities will be sent back to the partner to fix. The partner will be expected to conduct a full review on their side before resubmitting for another round of testing. The review fee includes **three** cycles of testing. If the app requires more cycles of testing because the issues weren’t fixed, every subsequent test cycle will attract a cost.
 

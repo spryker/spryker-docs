@@ -86,7 +86,7 @@ The direct integration requires quite a bit of manual work by developers.
 
 {% info_block infoBox "Info" %}
 
-The direct integration is the most basic and, at the same time, the most cumbersome way of integrating Usercentrics. We do not support the direct integration approach in the AOP, so if you choose it, you should not use the Spryker Usercentrics integration.
+The direct integration is the most basic and, at the same time, the most cumbersome way of integrating Usercentrics. We do not support the direct integration approach in the ACP, so if you choose it, you should not use the Spryker Usercentrics integration.
 
 {% endinfo_block %}
 

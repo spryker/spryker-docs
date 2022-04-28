@@ -150,20 +150,14 @@ defaults:
       role: "dev"
   -
     scope:
-      path: "docs/aop"
+      path: "docs/acp"
     values:
-      product: "aop"
+      product: "acp"
   -
     scope:
-      path: "docs/aop/dev"
+      path: "docs/acp/user"
     values:
-      sidebar: "aop_dev_sidebar"
-      role: "dev"
-  -
-    scope:
-      path: "docs/aop/user"
-    values:
-      sidebar: "aop_user_sidebar"
+      sidebar: "acp_user_sidebar"
       role: "user"
   -
      scope:
@@ -239,12 +233,12 @@ sidebars:
   - cloud_dev_sidebar
   - scos_dev_sidebar
   - scos_user_sidebar
-  - aop_dev_sidebar
-  - aop_user_sidebar
+  - acp_dev_sidebar
+  - acp_user_sidebar
   - fes_dev_sidebar
   - paas_plus_dev_sidebar
-  - aop_dev_sidebar
-  - aop_user_sidebar
+  - acp_dev_sidebar
+  - acp_user_sidebar
 
 description: "Spryker documentation center."
 # the description is used in the feed.xml file
@@ -273,10 +267,10 @@ algolia:
       title: 'Marketplace Developer'
     - name: 'cloud_dev'
       title: 'Cloud Developer'
-    - name: 'aop_user'
-      title: 'AOP User'
-    - name: 'aop_dev'
-      title: 'AOP Developer'
+    - name: 'acp_user'
+      title: 'ACP User'
+    - name: 'ACP_dev'
+      title: 'ACP Developer'
     - name: 'fes_dev'
       title: 'Frontend enablement Service Developer'
     - name: 'paas_plus_dev'

@@ -57,7 +57,7 @@ For instructions on how to install the necessary modules and enable OAuth authen
 ## User Authentication
 To authenticate a user and receive an access token, send a POST request to the following endpoint:
 `/access-tokens`
-Sample request: `POST http://mysprykershop.com/access-tokens`
+Request sample: `POST http://mysprykershop.com/access-tokens`
 
 **Attributes:**
 
@@ -141,7 +141,7 @@ Also, some resources can be protected by shop owners from unauthorized access ex
 ## Refreshing Tokens
 To refresh an access token, send a request to the following endpoint and pass the corresponding refresh token:
 `/refresh-tokens`
-Sample request: `POST http://mysprykershop.com/refresh-tokens`
+Request sample: `POST http://mysprykershop.com/refresh-tokens`
 
 Attributes:
 

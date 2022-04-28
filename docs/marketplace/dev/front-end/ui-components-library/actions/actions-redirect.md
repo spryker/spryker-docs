@@ -1,5 +1,5 @@
 ---
-title: Actions Redirect 
+title: Actions Redirect
 description: This document provides details about the Actions Redirect service in the Components Library.
 template: concept-topic-template
 ---
@@ -14,8 +14,8 @@ Check out an example usage of the Actions Redirect.
 
 Service configuration:
 
-- `type` - an action type.  
-- `url` - a URL to redirect.  
+- `type`—an action type.  
+- `url`—a URL to redirect.  
 
 ```html
 <spy-button-action
@@ -32,6 +32,12 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/actions' {
+    interface ActionsRegistry {
+        redirect: RedirectActionHandlerService;
+    }
+}
+
 @NgModule({
     imports: [
         ActionsModule.withActions({

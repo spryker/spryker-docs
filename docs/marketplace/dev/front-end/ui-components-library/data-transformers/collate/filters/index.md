@@ -59,6 +59,12 @@ Data Transformer Filter must implement a specific interface (`DataTransformerFil
 
 ```ts
 // Module augmentation
+declare module '@spryker/data-transformer' {
+    interface DataTransformerRegistry {
+        collate: CollateDataTransformerConfig;
+    }
+}
+
 declare module '@spryker/data-transformer.collate' {
     interface DataTransformerFilterRegistry {
         custom: CustomDataTransformerFilterService;
@@ -69,12 +75,13 @@ declare module '@spryker/data-transformer.collate' {
 @Injectable({ providedIn: 'root' })
 export class CustomDataTransformerFilterService implements DataTransformerFilter {
     filter(
+        type: DataTransformerFilterRegistryType | string,
         data: DataTransformerFilterData,
         options: DataTransformerFilterConfig,
         byValue: DataTransformerFilterByValue,
         transformerByPropName: DataFilterTransformerByPropName,
-    ): Observable<DataTransformerFilterData> { 
-        ... 
+    ): Observable<DataTransformerFilterData> {
+        ...
     }
 }
 
@@ -93,12 +100,6 @@ export class RootModule {}
 Below you can find interfaces for the `DataTransformerFilter` configuration and `DataTransformerFilter` type:
 
 ```ts
-declare module '@spryker/data-transformer' {
-    interface DataTransformerRegistry {
-        collate: CollateDataTransformerConfig;
-    }
-}
-
 type DataTransformerFilterData = Record<string, unknown>[];
 type DataTransformerFilterByValue = unknown[];
 type DataFilterTransformerByPropName = Record<string, string>;
@@ -110,6 +111,7 @@ interface DataTransformerFilterConfig {
 
 interface DataTransformerFilter {
     filter(
+        type: DataTransformerFilterRegistryType | string,
         data: DataTransformerFilterData,
         options: DataTransformerFilterConfig,
         byValue: DataTransformerFilterByValue,
@@ -122,6 +124,6 @@ interface DataTransformerFilter {
 
 There are a few common Data Transformer Filters that are available in UI library as separate packages:
 
-- [Equals](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/equals.html) - filters values that are strictly equal.
-- [Range](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/range.html) - filters values that are within a number range.
-- [Text](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/text.html) - filters values that match a string.
+- [Equals](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/equals.html)—filters values that are strictly equal.
+- [Range](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/range.html)—filters values that are within a number range.
+- [Text](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/text.html)—filters values that match a string.

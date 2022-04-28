@@ -23,7 +23,7 @@ This topic describes how to assign products to categories.
 
 ## Prerequisites:
 
-To start creating categories, go to Catalog > Category.
+To start creating categories, go to **Catalog&nbsp;<span aria-label="and then">></span> Category**.
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 

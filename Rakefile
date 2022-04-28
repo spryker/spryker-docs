@@ -32,8 +32,14 @@ commonOptions = {
     /symfony.com\/[\.\w\-\/\?]+/,
     /code.jquery.com\/[\.\w\-\/\?]+/,
     /console.aws.amazon.com\/[\.\w\-\/\?]+/,
-    /www.computop.com\/[\.\w\-\/\?]+/,    
-    /shopify.github.io\/[\.\w\-\/\?]+/
+    /www.computop.com\/[\.\w\-\/\?]+/,
+    /www.project-a.com\/[\.\w\-\/\?]+/,
+    /help.github.com\/[\.\w\-\/\?]+/,
+    /guides.github.com\/[\.\w\-\/\?]+/,
+    /docs.github.com\/[\.\w\-\/\?]+/,
+    /shopify.github.io\/[\.\w\-\/\?]+/,
+    / marketplace.visualstudio.com\/[\.\w\-\/\?]+/,    
+    /blackfire.io\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],
   :typhoeus => {
@@ -75,6 +81,7 @@ task :check_mp_dev do
     /docs\/fes\/.+/,
     /docs\/paas-plus\/.+/,
     /docs\/marketplace\/user\/.+/,
+    /docs\/marketplace\/\w+\/[\w-]+\/202200\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end

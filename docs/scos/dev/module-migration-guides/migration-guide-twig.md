@@ -27,18 +27,22 @@ This migration guide is a part of the [Silex migration effort](/docs/scos/dev/mi
 
 To upgrade the module, do the following:
 
-1. Update the module using composer:
+1. Update the module using Composer:
+
 ```bash
 composer update spryker/twig
 ```
+
 2. Remove old service providers, if you have them in the project:
+
 ```php
 \Spryker\Zed\Twig\Communication\Plugin\ServiceProvider\TwigServiceProvider
 \Spryker\Yves\Twig\Plugin\ServiceProvider\TwigServiceProvider
 ```
+
 3. Add new plugins to dependency providers:
 
-**Zed Integration**
+**Zed integration**
 
 ```php
 <?php
@@ -66,7 +70,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 }
 ```
 
-**Yves Integration**
+**Yves integration**
 
 ```php
 <?php
@@ -96,7 +100,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 4. Enable additional plugins:
 
-**Twig Zed Integration**
+**Twig Zed integration**
 
 ```php
 <?php
@@ -205,7 +209,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 }
 ```
 
-**EventDispatcher Zed Integration**
+**EventDispatcher Zed integration**
 
 ```php
 <?php
@@ -231,7 +235,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 }
 ```
 
-**Twig Yves Integration**
+**Twig Yves integration**
 
 ```php
 <?php

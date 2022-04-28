@@ -14,7 +14,7 @@ Check out an example usage of the Url Persistence Strategy.
 
 Service configuration:
 
-- `storage` - persistence strategy type.  
+- `storage`—persistence strategy type.  
 
 ```html
 <spy-select
@@ -35,6 +35,12 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/persistence' {
+    interface PersistenceStrategyRegistry {
+        'url': UrlPersistenceStrategy;
+    }
+}
+
 @NgModule({
     imports: [
         PersistenceModule.withStrategies({
@@ -50,12 +56,6 @@ export class RootModule {}
 Below you can find interfaces for the Url Persistence Strategy:
 
 ```ts
-declare module '@spryker/persistence' {
-    interface PersistenceStrategyRegistry {
-        'url': UrlPersistenceStrategy;
-    }
-}
-
 interface UrlPersistenceStrategy extends PersistenceStrategy {
     save(key: string, value: unknown): Observable<void>;
     retrieve<T>(key: string): Observable<T | undefined>;

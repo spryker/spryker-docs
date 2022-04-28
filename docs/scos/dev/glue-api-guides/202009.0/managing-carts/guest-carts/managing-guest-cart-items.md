@@ -1464,7 +1464,7 @@ To change item quantity, send the request:
 
 
 <details open>
-<summary markdown='span'>Sample request</summary>
+<summary markdown='span'>Request sample</summary>
 
 `PATCH https://glue.mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`    
 

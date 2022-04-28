@@ -10,11 +10,11 @@ This document explains the Data Transformer Array-map service in the Components 
 
 Data Transformer Array-map is an Angular Service that executes another Data Transformer based on the config for every element in the array.
 
-In the example below, the `datasource` will return an array with the transformed `date` in every object.
+In the following example, the `datasource` will return an array with the transformed `date` in every object.
 
 Service configuration:
 
-- `mapItems` - a Data Transformer that is set up with a configuration object.
+- `mapItems`—a Data Transformer that is set up with a configuration object.
 
 ```html
 <spy-select
@@ -50,6 +50,12 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/data-transformer' {
+    interface DataTransformerRegistry {
+        'array-map': ArrayMapDataTransformerConfig;
+    }
+}
+
 @NgModule({
     imports: [
         DataTransformerModule.withTransformers({
@@ -65,12 +71,6 @@ export class RootModule {}
 Below you can find interfaces for the Data Transformer Array-map:
 
 ```ts
-declare module '@spryker/data-transformer' {
-    interface DataTransformerRegistry {
-        'array-map': ArrayMapDataTransformerConfig;
-    }
-}
-
 export interface ArrayMapDataTransformerConfig extends DataTransformerConfig {
     mapItems: DataTransformerConfig;
 }

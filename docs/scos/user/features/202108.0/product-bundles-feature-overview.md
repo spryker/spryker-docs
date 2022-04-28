@@ -26,8 +26,8 @@ Bundles are handled in different ways:<br>For example, a marketing bundle of two
 {% endinfo_block %}
 
 
-* A bundle can contain multiple quantities of the same item
-* The availability of a bundle product is equal to the item with the lowest availability
+* A bundle can contain multiple quantities of the same item.
+* The availability of a bundle product is equal to the item with the lowest availability.
 
 ## Product-Bundle module
 
@@ -51,7 +51,7 @@ Product bundles are two or more existing products combined into a new type of pr
 
 ## Availability calculation
 
-Bundle availability is calculated from bundled product availability. When bundled product availability is changed, for example state machine move through reserved flags then all bundles is updated accordingly.
+Bundle availability is calculated from bundled product availability. When bundled product availability is changed, for example, a state machine moves through reserved flags, then all bundles are updated accordingly.
 
 Bundle is updated when:
 
@@ -88,16 +88,16 @@ For example:
 
 1. Item with SKU “123” is added to cart, expander will look if this item is bundle. If it’s bundle then it will read all bundled items from persistence.
 2. Item with SKU “123” is then added to `QuoteTransfer:bundleItems`.
-3. This item is given special `ItemTransfer:bundleItemIdentifier` unique id which have each bundle in cart.
-4. At the same time bundled items are created and stored into `CartChangeTransfer:items` with referenced bundled identifier `ItemTransfer:relatedBundleItemIdentifier` this is the same id where bundle got assigned. This helps to track back belonging bundle items in quote object.
+3. This item is given special `ItemTransfer:bundleItemIdentifier` unique ID which have each bundle in cart.
+4. At the same time bundled items are created and stored into `CartChangeTransfer:items` with referenced bundled identifier `ItemTransfer:relatedBundleItemIdentifier` this is the same ID where bundle got assigned. This helps to track back belonging bundle items in quote object.
 
-If bundled items have quantity > 1 then it will be split as separate items in cart.
+If bundled items have quantity&nbsp;<span aria-label="and then">></span> 1 then it will be split as separate items in cart.
 
 BundleProduct have price this price, it is distributed to whole bundled items. Overwriting original product price. If bundle have price 100, and there is 3 bundled products, each will get price 33,34,33 distributed, 34 is to cover rounding error.
 
 ## Persisting when placing an order, end of checkout
 
-Bundle product information is stored to `spy_sales_order_item_bundle`. When order is placed in order detail page you will see all bundled items stored as separate row. This allows process state machine separately for each item, for example (ship, refund, return, etc.).
+Bundle product information is stored to `spy_sales_order_item_bundle`. When order is placed in order detail page you will see all bundled items stored as separate row. This allows process state machine separately for each item, for example (ship, refund, return).
 
 If bundled item moves to reserved state machine state then corresponding bundle availability will be updated also.
 
@@ -105,7 +105,7 @@ If bundled item moves to reserved state machine state then corresponding bundle 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html)  |
+| [Create product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

@@ -16,7 +16,7 @@ This article describes how to manage product lists.
 
 ## Prerequisistes
 
-To start managing product lists, go to **Catalog** > **Product Lists**.
+To start managing product lists, go to **Catalog&nbsp;<span aria-label="and then">></span> Product Lists**.
 
 ## Editing a product list
 

@@ -22,6 +22,7 @@ related:
 This endpoint allows managing discount vouchers in carts of registered users.
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html).
 
 ## Apply a discount voucher to a cart of a registered user
@@ -47,7 +48,7 @@ To apply a discount voucher to a cart of a registered user, send the request:
 | Include | Adds resource relationships to the request.	 | vouchers |
 
 <details>
-<summary markdown='span'>Request sample</summary>
+<summary markdown='span'>Request sample: apply a discount voucher to a cart of a registered user</summary>
 
 `POST https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers`
 
@@ -61,11 +62,10 @@ To apply a discount voucher to a cart of a registered user, send the request:
     }
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Request sample with discount voucher information</summary>
+<summary markdown='span'>Request sample: apply a discount voucher to a cart of a registered user with details on discount voucher information</summary>
 
 `POST https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers?include=vouchers`
 
@@ -79,7 +79,6 @@ To apply a discount voucher to a cart of a registered user, send the request:
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
@@ -89,7 +88,7 @@ To apply a discount voucher to a cart of a registered user, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: apply a discount voucher to a cart of a registered user</summary>
 
 ```json
 {
@@ -123,11 +122,10 @@ To apply a discount voucher to a cart of a registered user, send the request:
     }
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with discount voucher information</summary>
+<summary markdown='span'>Response sample: apply a discount voucher to a cart of a registered user with details on discount voucher information</summary>
 
 ```json
 {
@@ -182,13 +180,12 @@ To apply a discount voucher to a cart of a registered user, send the request:
                 "discountPromotionQuantity": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/vouchers/mydiscount-qa1ma?include=vouchers"
+                "self": "https://glue.mysprykershop.com/vouchers/mydiscount-qa1ma?include=vouchers"
             }
         }
     ]
 }
 ```
-
 </details>
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -221,7 +218,9 @@ To remove a discount voucher, send the request:
 | --- | --- | --- | --- |
 | Authorization | String | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
-Request sample: `DELETE https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers/mydiscount-we3ca`
+Request sample: remove a discount voucher from a registered user's cart
+
+`DELETE https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers/mydiscount-we3ca`
 
 ### Response
 

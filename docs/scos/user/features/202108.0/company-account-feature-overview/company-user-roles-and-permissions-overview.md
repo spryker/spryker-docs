@@ -1,6 +1,6 @@
 ---
 title: Company user roles and permissions overview
-description: Usually employees within a company have different roles (purchasing, administration, supervision, etc.). These roles are referred to as Company Roles.
+description: Usually employees within a company have different roles (purchasing, administration, supervision). These roles are referred to as Company Roles.
 last_updated: Jul 19, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/company-user-roles-and-permissions-overview
@@ -16,7 +16,7 @@ redirect_from:
   - /docs/en/company-roles-reference-information
 ---
 
-Usually employees within a company have different roles (e.g., purchasing, administration, supervision, etc.). These roles are related to Company Users and are referred to as **Company Roles**. A role can be default (“is_default” flag), which means that it is used for all new users automatically.
+Usually employees within a company have different roles (for example, purchasing, administration, supervision). These roles are related to Company Users and are referred to as **Company Roles**. A role can be default (“is_default” option), which means that it is used for all new users automatically.
 
 Upon initial creation of the first Company User, the default role is Admin. After the Admin user has been created, he/she creates the structure of the company and can define the default role to be used further on.
 
@@ -89,7 +89,9 @@ Permissions can be simple and complex.
 </table>
 
 {% info_block infoBox %}
+
 Some of the Permissions can be configured for specific roles, for example, “allow adding no more than X items to cart” for junior support engineer.<br>Or for example, some specific products are not allowed to be viewed by anyone, but Admin and Top Managers.<br>These values are referred to as **Company Role Permissions**.
+
 {% endinfo_block %}
 
 Permission can also be **Yves-side** and **Zed-side**.
@@ -113,14 +115,14 @@ For example, the permission to view a product, a page, or permission to place an
 
 Obviously, the permissions can not be checked at the step when user just clicks **Add to cart**, because actual order value has not been calculated yet (pre-checks have not been made yet, discounts have not been calculated). Also, the permissions check request can not be started after the cart has been updated—that would be too late, as, the cart has already been persisted. The request for rights check is made somewhere in between—specifically, right after the discounts have been calculated. That is why the so-called “termination hooks” have been implemented deep in logic, where the permissions checks are made.
 
-The termination hooks (plugin stack) do not allow the permissions sneak into the business logic foundation so it will remain clean from the permissions and not overwhelmed with “can” “if not; then…” etc.
+The termination hooks (plugin stack) do not allow the permissions sneak into the business logic foundation so it will remain clean from the permissions and not overwhelmed with “can” “if not; then…”.
 
 ![termination_hooks.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+User+Permissions/Company+Roles+and+Permissions+Feature+Overview/termination_hooks.png)
 
 The termination hooks are performed one by one, and process termination can happen for any reason, and one of them would be the permissions.
 
 ## Company permissions on the Storefront
-Every company role includes a set of permissions that can be enabled/disabled according to your needs by switching the toggle in *Enable* column:
+Every company role includes a set of permissions that can be enabled/disabled according to your needs by switching the toggle in **Enable** column:
 
  - **Add company users**—allows adding company users. With this permission enabled, a user will have Create User button on the Company Users page.
   - **Invite users**—allows inviting company users. With this permission enabled, a user will have Invite Users button on the Company Users page.
@@ -131,17 +133,20 @@ Every company role includes a set of permissions that can be enabled/disabled ac
   - **Remove item from cart**—allows deleting the products from the cart.
   - **Place Order**—allows placing the order. Without this permission enabled, a user will have error when trying to submit the order. If the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) feature is integrated into your project, then **Buy up to grand total** permission is also required in order to be able to place an order.
   - **Buy up to grand total (Requires "Send cart for approval")**—sets a limit for the grand total of the cart. If the amount in the cart is bigger than the limit set in this permission, the user will not be able to proceed to checkout. Works with **Send cart for approval** permission. This permission is available after enabling the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) feature.
-  - **Approve up to grand total**—with this permission enabled, a user can approve the the cart. See [Approval Feature Overview](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) for more details.
+  - **Approve up to grand total**—with this permission enabled, a user can approve the the cart. For more details, see [Approval Feature Overview](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html).
   - **View Business Unit orders**—with this permission enabled, a user can see not only their own orders, but also the orders of their business unit.
   - **View Company orders**—with this permission enabled, a user can see not only their own orders, orders of their business unit, but also the orders of their comapny.
-  - **Send cart for approval (Requires "Buy up to grand total")**—allows a user to send the cart for approval. Works together with Buy up to grand total permission. See [Approval Feature Overview](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) for more details.
+  - **Send cart for approval (Requires "Buy up to grand total")**—lets a user send the cart for approval. Works together with Buy up to grand total permission. See [Approval Feature Overview](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) for more details.
 
 ## Related Business User articles
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage company users](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-users.html) |
-| [Manage company roles](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-roles.html) |
+| [Create company roles](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-roles/create-company-roles.html) |
+| [Edit company roles](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-roles/edit-company-roles.html) |
+| [Create company users](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-users/create-company-users.html) |
+| [Edit company users](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-users/edit-company-users.html) |
+
 
 
 {% info_block warningBox "Developer guides" %}

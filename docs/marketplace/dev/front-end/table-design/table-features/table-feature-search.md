@@ -14,11 +14,11 @@ Check out an example usage of the Table Feature Search in the `@spryker/table` c
 
 Component configuration:
 
-- `enabled` - enables the feature via config.  
-- `placeholder` - the search placeholder text.
+- `enabled`—enables the feature via config.  
+- `placeholder`—the search placeholder text.
 
 ```html
-<spy-table 
+<spy-table
     [config]="{
         dataSource: { ... },
         columns: [ ... ],
@@ -36,7 +36,12 @@ Component configuration:
 Register the component:
 
 ```ts
-// Dynamic
+declare module '@spryker/table' {
+    interface TableConfig {
+        search?: TableSearchConfig;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -71,12 +76,6 @@ export class RootModule {}
 Below you can find interfaces for the Table Feature Search:
 
 ```ts
-declare module '@spryker/table' {
-    interface TableConfig {
-        search?: TableSearchConfig;
-    }
-}
-
 export interface TableSearchConfig extends TableFeatureConfig {
     placeholder?: string;
 }

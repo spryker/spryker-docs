@@ -15,11 +15,11 @@ Check out an example usage of the Table Feature Pagination in the `@spryker/tabl
 
 Component configuration:
 
-- `enabled` - enables the feature via config.  
-- `sizes` - an array of numbers of table rows that needs to be displayed per page.  
+- `enabled`—enables the feature via config.  
+- `sizes`—an array of numbers of table rows that needs to be displayed per page.  
 
 ```html
-<spy-table 
+<spy-table
     [config]="{
         dataSource: { ... },
         columns: [ ... ],
@@ -35,9 +35,14 @@ Component configuration:
 ## Component registration
 
 Register the component:
-   
+
 ```ts
-// Dynamic
+declare module '@spryker/table' {
+    interface TableConfig {
+        pagination?: TablePaginationConfig;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.withFeatures({
@@ -71,12 +76,6 @@ export class RootModule {}
 Below you can find interfaces for the Table Feature Pagination:
 
 ```ts
-declare module '@spryker/table' {
-    interface TableConfig {
-        pagination?: TablePaginationConfig;
-    }
-}
-
 export interface TablePaginationConfig extends TableFeatureConfig {
     sizes: number[];
 }

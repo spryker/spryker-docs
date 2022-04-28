@@ -27,13 +27,15 @@ This migration guide is a part of the [Silex migration effort](/docs/scos/dev/mi
 
 To upgrade the module, do the following:
 
-1. Update the module using composer:
+1. Update the module using Composer:
+
 ```bash
 composer update spryker/locale
 ```
+
 2. Add new plugins to dependency providers:
 
-**Zed Integration**
+**Zed integration**
 
 ```php
 <?php
@@ -63,7 +65,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 }
 ```
 
-**Yves Integration**
+**Yves integration**
 
 ```php
 <?php
@@ -95,7 +97,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 3. Enable additional plugins:
 
-**EventDispatcher Zed Integration**
+**EventDispatcher Zed integration**
 
 ```php
 <?php
@@ -121,7 +123,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 }
 ```
 
-**EventDispatcher Yves Integration**
+**EventDispatcher Yves integration**
 
 ```php
 <?php

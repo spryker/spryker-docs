@@ -4,7 +4,7 @@ description: Manage the returns via Glue API in the Spryker Marketplace.
 template: glue-api-storefront-guide-template
 ---
 
-The Return Management API allows developers to retrieve return information and create returns. The list of retrievable information includes:
+The Return Management API lets developers retrieve return information and create returns. The list of retrievable information includes:
 
 * Sales order items that a customer can return.
 * Returns per customer.
@@ -19,7 +19,7 @@ Specify reasons for returning the sales order items.
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, [see Glue API: Marketplace Return Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-return-management-feature-integration.html).
+For details about the modules that provide the API functionality and how to install them, [see Glue API: Marketplace Return Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-return-management-feature-integration.html).
 
 ## Create a return
 
@@ -45,6 +45,7 @@ To create a return for a registered user, send the Request sample:
 <details><summary markdown='span'>Request sample: create a return</summary>
 
 `POST https://glue.mysprykershop.com/returns`
+
 ```json
 {
     "data": {
@@ -65,12 +66,12 @@ To create a return for a registered user, send the Request sample:
     }
 }
 ```
-
 </details>
 
 <details><summary markdown='span'>Request sample: create a return with return items</summary>
 
 `POST https://glue.mysprykershop.com/returns?include=return-items`
+
 ```json
 {
     "data": {
@@ -87,7 +88,6 @@ To create a return for a registered user, send the Request sample:
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
@@ -125,7 +125,7 @@ To create a return for a registered user, send the Request sample:
 
 </details>
 
-<details><summary markdown='span'>Response sample: create a return for the merchant order item with information on return items</summary>
+<details><summary markdown='span'>Response sample: create a return for the merchant order item with information about return items</summary>
 
 ```json
 {
@@ -172,7 +172,6 @@ To create a return for a registered user, send the Request sample:
     ]
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -216,12 +215,12 @@ To retrieve returns, send the Request sample:
 | REQUEST | USAGE |
 |---|---|
 | `GET https://glue.mysprykershop.com/returns` | Retrieve all returns. |
-| `GET https://glue.mysprykershop.com/returns?include=return-items` | Retrieve all returns with the information on return items included. |
+| `GET https://glue.mysprykershop.com/returns?include=return-items` | Retrieve all returns with the information about return items included. |
 | `GET https://glue.mysprykershop.com/returns?include=merchants` | Retrieve all returns with the respective merchants included. |
 
 ### Response
 
-<details><summary markdown='span'>Response sample: returns with information on return items</summary>
+<details><summary markdown='span'>Response sample: retrieve all returns</summary>
 
 ```json
 {
@@ -269,7 +268,7 @@ To retrieve returns, send the Request sample:
 
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve all returns</summary>
+<details><summary markdown='span'>Response sample: retrieve all returns with details on return items</summary>
 
 ```json
 {
@@ -438,10 +437,9 @@ To retrieve returns, send the Request sample:
     ]
 }
 ```
-
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve returns with the respective merchant included</summary>
+<details><summary markdown='span'>Response sample: retrieve all returns with the respective merchants included</summary>
 
 ```json
 {
@@ -516,7 +514,7 @@ To retrieve returns, send the Request sample:
                 "longitude": "52.534105",
                 "faxNumber": "+49 30 234567800",
                 "legalInformation": {
-                    "terms": "<p><span style=\"font-weight: bold;\">General Terms</span><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><span style=\"font-weight: bold;\">Using your Information</span><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to allow us to deliver the type of content and product offerings in which you are most interested.<br><br><span style=\"font-weight: bold;\">Protecting visitor information</span><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>",
+                    "terms": "<p><span style=\"font-weight: bold;\">General Terms</span><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><span style=\"font-weight: bold;\">Using your Information</span><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to let us deliver the type of content and product offerings in which you are most interested.<br><br><span style=\"font-weight: bold;\">Protecting visitor information</span><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>",
                     "cancellationPolicy": "You have the right to withdraw from this contract within 14 days without giving any reason. The withdrawal period will expire after 14 days from the day on which you acquire, or a third party other than the carrier and indicated by you acquires, physical possession of the last good. You may use the attached model withdrawal form, but it is not obligatory. To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.",
                     "imprint": "<p>Spryker Systems GmbH<br><br>Julie-Wolfthorn-Straße 1<br>10115 Berlin<br>DE<br><br>Phone: +49 (30) 2084983 50<br>Email: info@spryker.com<br><br>Represented by<br>Managing Directors: Alexander Graf, Boris Lokschin<br>Register Court: Hamburg<br>Register Number: HRB 134310<br></p>",
                     "dataPrivacy": "Spryker Systems GmbH values the privacy of your personal data."
@@ -530,7 +528,6 @@ To retrieve returns, send the Request sample:
     ]
 }
 ```
-
 </details>
 
 
@@ -580,10 +577,10 @@ To retrieve a return, send the Request sample:
 
 | REQUEST | USAGE |
 |---|---|
-| `GET http://glue.mysprykershop.com/returns/DE--21-R9` | Retrieve return the return with the ID `DE--21-R9` for sales order items. |
-|  `GET http://glue.mysprykershop.com/returns/DE--21-R6` | Retrieve return with the ID `DE--21-R6` for sales oreder items. |
-| `GET http://glue.mysprykershop.com/returns/DE--21-R6?include=return-items` | Retrieve return with the ID `DE--21-R6`, including the return items. |
-| `GET http://glue.mysprykershop.com/returns/DE--21-R6?include=merchants` | Retrieve return  with the ID `DE--21-R6` for merchant order items, including the respective merchants. |
+| `GET https://glue.mysprykershop.com/returns/DE--21-R9` | Retrieve a return with the ID `DE--21-R9` for sales order items. |
+|  `GET https://glue.mysprykershop.com/returns/DE--21-R6` | Retrieve a return with the ID `DE--21-R6` for sales order items. |
+| `GET https://glue.mysprykershop.com/returns/DE--21-R6?include=return-items` | Retrieve a return with the ID `DE--21-R6`, including the return items. |
+| `GET https://glue.mysprykershop.com/returns/DE--21-R6?include=merchants` | Retrieve a return  with the ID `DE--21-R6` for merchant order items, including the respective merchants. |
 
 ### Response
 
@@ -636,10 +633,9 @@ To retrieve a return, send the Request sample:
     }
 }
 ```
-
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve a return with the return items</summary>
+<details><summary markdown='span'>Response sample: retrieve a return with the return items included</summary>
 
 ```json
 {
@@ -689,7 +685,7 @@ To retrieve a return, send the Request sample:
 
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve a return with the details on merchants</summary>
+<details><summary markdown='span'>Response sample: retrieve a return with the details about merchants</summary>
 
 ```json
 {
@@ -742,7 +738,7 @@ To retrieve a return, send the Request sample:
                 "longitude": "52.534105",
                 "faxNumber": "+49 30 234567800",
                 "legalInformation": {
-                    "terms": "<p><span style=\"font-weight: bold;\">General Terms</span><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><span style=\"font-weight: bold;\">Using your Information</span><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to allow us to deliver the type of content and product offerings in which you are most interested.<br><br><span style=\"font-weight: bold;\">Protecting visitor information</span><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>",
+                    "terms": "<p><span style=\"font-weight: bold;\">General Terms</span><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><span style=\"font-weight: bold;\">Using your Information</span><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to let us deliver the type of content and product offerings in which you are most interested.<br><br><span style=\"font-weight: bold;\">Protecting visitor information</span><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>",
                     "cancellationPolicy": "You have the right to withdraw from this contract within 14 days without giving any reason. The withdrawal period will expire after 14 days from the day on which you acquire, or a third party other than the carrier and indicated by you acquires, physical possession of the last good. You may use the attached model withdrawal form, but it is not obligatory. To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.",
                     "imprint": "<p>Spryker Systems GmbH<br><br>Julie-Wolfthorn-Straße 1<br>10115 Berlin<br>DE<br><br>Phone: +49 (30) 2084983 50<br>Email: info@spryker.com<br><br>Represented by<br>Managing Directors: Alexander Graf, Boris Lokschin<br>Register Court: Hamburg<br>Register Number: HRB 134310<br></p>",
                     "dataPrivacy": "Spryker Systems GmbH values the privacy of your personal data."
@@ -756,7 +752,6 @@ To retrieve a return, send the Request sample:
     ]
 }
 ```
-
 </details>
 
 For the attributes, see [Retrieving returns](#retrieve-returns).

@@ -28,7 +28,7 @@ Run the following command:
 $ yarn install
 ```
 
-## Building front end
+## Building frontend
 
 Run the following command:
 
@@ -42,11 +42,11 @@ For production
 $ yarn mp:build:production
 ```
 
-## Installing back end
+## Installing backend
 
 Install the needed packages for the Merchant Portal with dependencies, see the available list [here](https://github.com/spryker/?q=merchant-portal-gui)
 
-| NAME | VERSION | LINK |
+| NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ----- | ---------- |
 | Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Marketplace Merchant Portal Core | {{page.version}}  | [Marketplace Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html) |
@@ -91,7 +91,7 @@ Connect users and merchants using Zed UI (Backoffice) or using the next data imp
 
 **data/import/common/common/marketplace/merchant.csv**
 
-```csv
+```
  merchant_key,merchant_reference,merchant_name,registration_number,status,email,is_active,url.de_DE,url.en_US
  sony-experts,MER000006,Sony Experts,HYY 134306,approved,michele@sony-experts.com,1,/de/merchant/sony-experts,/en/merchant/sony-experts
 ```
@@ -101,12 +101,12 @@ In case you don't have merchant user data import been integrated, you can find h
 
 **data/import/common/common/marketplace/merchant_user.csv**
 
-```csv
+```
 merchant_key,username
 sony-experts,michele@sony-experts.com
 ```
 
-Run the following commands to import data:
+Import data:
 
 ```bash
 console data:import merchant
@@ -152,9 +152,9 @@ class AclConfig extends SprykerAclConfig
     }
 
      /**
-     * @param string[][] $installerRules
+     * @param array<array<string>> $installerRules
      *
-     * @return string[][]
+     * @return array<array<string>>
      */
     protected function addMerchantPortalInstallerRules(array $installerRules): array
     {
@@ -195,7 +195,7 @@ class AclConfig extends SprykerAclConfig
 }
 ```
 
-Run the following command to create users with ACL rules :
+Create users with ACL rules:
 
 ```bash
 console setup:init-db
@@ -205,7 +205,7 @@ console setup:init-db
 
 You can use our `AclEntityDummyProduct` module as an example of extending AclEntityMetadata configuration.
 
-Run the following command to install the module:
+Install the module:
 
 ```bash
 composer require spryker/acl-entity-dummy-product:"^0.2.0" --update-with-dependencies
@@ -223,7 +223,7 @@ Use `\Spryker\Zed\AclEntityDummyProduct\Communication\DummyProductAclEntityMetad
      class AclEntityDependencyProvider extends SprykerAclEntityDependencyProvider
      {
          /**
-          * @return \Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface[]
+          * @return array<\Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface>
           */
           protected function getAclEntityMetadataCollectionExpanderPlugins(): array
           {
@@ -305,7 +305,7 @@ To configure the Merchant Portal Sidebar add installed MP GUI modules into `conf
 </config>
 ```
 
-Run the following command to build navigation cache:
+Build navigation cache:
 
 ```bash
 console navigation:build-cache
@@ -328,7 +328,7 @@ use Spryker\Zed\ZedNavigation\ZedNavigationDependencyProvider as SprykerZedNavig
 class ZedNavigationDependencyProvider extends SprykerZedNavigationDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ZedNavigationExtension\Dependency\Plugin\NavigationItemCollectionFilterPluginInterface[]
+     * @return array<\Spryker\Zed\ZedNavigationExtension\Dependency\Plugin\NavigationItemCollectionFilterPluginInterface>
      */
     protected function getNavigationItemCollectionFilterPlugins(): array
     {
@@ -381,3 +381,17 @@ After login, you should be redirected to the Dashboard. The contents of the Side
 ![Merchant Portal dashboard](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Feature+Integration+Guides/Marketplace/Merchant+Portal+feature+integration/mp-dashboard.png)
 
 {% endinfo_block %}
+
+## Related features
+
+Integrate the following related features:
+
+| FEATURE                                                                                                   | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                                                                                                                                                                         |
+|-----------------------------------------------------------------------------------------------------------| --- |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Merchant Portal - Marketplace Merchant                                                                    | &check;  | [Merchant Portal - Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-merchant-feature-integration.html)                                                                                                                                     |
+| Merchant Portal - Marketplace Product                                                                     | &check;  | [Merchant Portal - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html)                                                                                                                                       |
+| Merchant Portal - Marketplace Order Management                                                            | &check;  | [Merchant Portal - Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-order-management-feature-integration.html)                                                                                                                     |
+| Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management | &check;  | [Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature-integration.html) |
+| Merchant Portal - Marketplace Product + Inventory Management                                              | &check;  | [Merchant Portal - Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-inventory-management-feature-integration.html)                                                                                           |
+| Merchant Portal - Marketplace Product Option Management                                                   | &check;  | [Merchant Portal - Marketplace Product Option Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-option-management-feature-integration.html)                                                                                                   |
+| Merchant Portal - Marketplace Product + Tax feature                                                       | &check;  | [Merchant Portal - Marketplace Product + Tax feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-tax-feature-integration.html)                                                                                                                             |

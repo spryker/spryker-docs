@@ -22,13 +22,13 @@ Sharing data between a parent component and one or more child components is a co
 
 ## Component inputs
 
-An Angular Component has Inputs - these are the properties or attributes that can be passed to them from the outside. In the web component form, inputs are translated to HTML attributes and read as strings, so extra parsing is usually required (we ship a set of decorators for most commonly used parsing types, such as `@ToJson`, `ToBoolean`).
+An Angular Component has Inputs—these are the properties or attributes that can be passed to them from the outside. In the web component form, inputs are translated to HTML attributes and read as strings, so extra parsing is usually required (we ship a set of decorators for most commonly used parsing types, such as `@ToJson`, `ToBoolean`).
 
 To define the input, you have to use `@Input` angular decorator, which marks a class field as an input property and provides configuration metadata. The input property is bound to a DOM property in the template. During change detection, Angular automatically updates the data property with the DOM property's value.
 
 ## Component outputs
 
-Angular Component has Outputs - these are the events that the component can emit to the outside at any time. In the web component, form outputs are translated to DOM Custom Events.
+Angular Component has Outputs—these are the events that the component can emit to the outside at any time. In the web component, form outputs are translated to DOM Custom Events.
 
 To define output, you have to use `@Output` angular decorator, which marks a class field as an output property and supplies configuration metadata. Each time output is emitted, the callback method associated with the output property is invoked.
 
@@ -47,7 +47,7 @@ Invoked when the given component has been initialized.
 This hook is only called once after the first `ngOnChanges`.
 
 `ngDoCheck`  
-Invoked when the change detector of the given component is invoked. It allows us to implement our own change detection algorithm for the given component.
+Invoked when the change detector of the given component is invoked. It lets you implement your own change detection algorithm for the given component.
 
 `ngOnDestroy`  
 This method is invoked just before Angular destroys the component.
@@ -100,7 +100,7 @@ You can find a full list of component metadata properties in the [official docum
 
 ## Component creation
 
-To create a new component, a CLI tool NX can be used to scaffold boilerplate code: 
+To create a new component, a CLI tool NX can be used to scaffold boilerplate code:
 
 ```bash
 nx generate component [my-component-name] --path=path/to/the/module

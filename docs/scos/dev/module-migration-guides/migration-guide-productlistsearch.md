@@ -31,9 +31,12 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productlistsearch.html
 ---
 
-## Upgrading from Version 1.* to Version 2.*
+## Upgrading from version 1.* to version 2.*
 
 The main goal of `ProductListSearch` 2.x.x is to add support of Concrete Products search introduced in `ProductPageSearch` 3.x.x.
+
+_Estimated migration time: ~1h_
+
 To complete the migration, follow the steps below:
 
 1. Update `spryker/product-page-search` ^3.2.0
@@ -65,7 +68,3 @@ protected function getProductConcretePageDataExpanderPlugins(): array
 	];
 }
 ```
-
-_Estimated migration time: ~1h_
-
-<!-- Last review date: Mar 13, 2019 by Stanislav Matveyev, Oksana Karasyova -->

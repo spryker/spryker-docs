@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/catalog-category-management-feature-integration
 ---
 
-This document describes how to integrate the Catalog + Category Management into a Spryker project. 
+This document describes how to integrate the Catalog + Category Management into a Spryker project.
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME                | VERSION | INTEGRATION GUIDE                                            |
 | ------------------- | ------- | ------------------------------------------------------------ |
-| Spryker Core        | {{page.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Spryker Core        | {{page.version}}  | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Catalog             | {{page.version}}  |  |
 | Category Management | {{page.version}}  | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
 
@@ -92,17 +92,16 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can find categories using the global search on the Storefront. 
+Make sure that you can find categories using the global search on the Storefront.
 
 {% endinfo_block %}
 
 ## Related features
 
 Integrate the following related features:
- 
+
 
 | FEATURE  | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE     |
 | ------------- | ---------------- | -------------------- |
 | Catalog             |      ✓     | |
 | Category Management |      ✓     | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
-

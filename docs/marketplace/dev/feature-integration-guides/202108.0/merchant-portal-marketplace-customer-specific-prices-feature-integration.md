@@ -1,6 +1,6 @@
 ---
 title: Merchant Portal - Marketplace Customer Specific Prices feature integration
-last_updated: Apr 20, 2022
+last_updated: Apr 29, 2022
 description: This document describes the process how to integrate the Marketplace Customer Specific Prices into the Spryker Merchant Portal.
 template: feature-integration-guide-template
 ---
@@ -15,17 +15,14 @@ Follow the steps below to install the Merchant Portal - Marketplace Customer Spe
 
 To start feature integration, integrate the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
-| --------- | ------ |-----------------|
-| Marketplace Merchant Custom Prices | {{page.version}} | |
-| Marketplace Merchant Portal Product Management | {{page.version}} | |
-
-spryker-feature/merchant-custom-prices
-spryker-feature/marketplace-merchant-portal-product-management
+| NAME | VERSION | INTEGRATION GUIDE                                                                                                                                                 |
+| --------- | ------ |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Merchant Custom Prices | 202108.0 | [Merchant Custom Prices feature integration](/docs/scos/dev/feature-integration-guides/202108.0/merchant-custom-prices-feature-integration.html) |
+| Marketplace Product | 202108.0 | [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/202108.0/merchant-portal-marketplace-product-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
-Install the required module:
+Install the required modules:
 
 ```bash
 composer require spryker-feature/marketplace-merchant-custom-prices --with-dependencies
@@ -58,6 +55,73 @@ Enable the following behaviors by registering the plugins:
 | MerchantRelationshipPriceProductConcreteTableConfigurationExpanderPlugin | Expands price product concrete table configuration with Merchant Relationship column. Overrides `delete` and `save` url configuration for Merchant Relationship prices to include `idMerchantRelationship` parameter. Disables volume price column for the merchant prices. |               | Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui |
 | MerchantRelationshipPriceProductMapperPlugin | Maps merchant relationship data to `PriceProductTableViewTransfer` transfer object. |  | Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui |
 
+<details>
+<summary markdown='span'>src/Pyz/Zed/ProductMerchantPortalGui/ProductMerchantPortalGuiDependencyProvider.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\ProductMerchantPortalGui;
+
+use Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui\MerchantRelationshipPriceProductAbstractTableConfigurationExpanderPlugin;
+use Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui\MerchantRelationshipPriceProductConcreteTableConfigurationExpanderPlugin;
+use Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui\MerchantRelationshipPriceProductMapperPlugin;
+use Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui\MerchantRelationshipPriceProductTableFilterPlugin;
+use Spryker\Zed\ProductMerchantPortalGui\ProductMerchantPortalGuiDependencyProvider as SprykerProductMerchantPortalGuiDependencyProvider;
+
+class ProductMerchantPortalGuiDependencyProvider extends SprykerProductMerchantPortalGuiDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\ProductMerchantPortalGuiExtension\Dependency\Plugin\PriceProductTableFilterPluginInterface>
+     */
+    protected function getPriceProductTableFilterPlugins(): array
+    {
+        return [
+            new MerchantRelationshipPriceProductTableFilterPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\ProductMerchantPortalGuiExtension\Dependency\Plugin\PriceProductAbstractTableConfigurationExpanderPluginInterface>
+     */
+    protected function getPriceProductAbstractTableConfigurationExpanderPlugins(): array
+    {
+        return [
+            new MerchantRelationshipPriceProductAbstractTableConfigurationExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\ProductMerchantPortalGuiExtension\Dependency\Plugin\PriceProductConcreteTableConfigurationExpanderPluginInterface>
+     */
+    protected function getPriceProductConcreteTableConfigurationExpanderPlugins(): array
+    {
+        return [
+            new MerchantRelationshipPriceProductConcreteTableConfigurationExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\ProductMerchantPortalGuiExtension\Dependency\Plugin\PriceProductMapperPluginInterface>
+     */
+    protected function getPriceProductMapperPlugins(): array
+    {
+        return [
+            new MerchantRelationshipPriceProductMapperPlugin(),
+        ];
+    }
+}
+```
+</details>
+
+{% info_block warningBox "Verification" %}
+
+Log in to the Merchant Portal with a merchant that has at least one merchant relationship.
+
+Open any merchant product and make sure that the Prises table contains "Customer" column for both: abstract and concrete products.
+Make sure that you can filter and sort price table by Customer column.  
+
+{% endinfo_block %}
 
 <details>
 <summary markdown='span'>src/Pyz/Service/PriceProduct/PriceProductDependencyProvider.php</summary>
@@ -124,70 +188,9 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 
 </details>
 
-<details>
-<summary markdown='span'>src/Pyz/Zed/ProductMerchantPortalGui/ProductMerchantPortalGuiDependencyProvider.php</summary>
-
-```php
-<?php
-
-namespace Pyz\Zed\ProductMerchantPortalGui;
-
-use Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui\MerchantRelationshipPriceProductAbstractTableConfigurationExpanderPlugin;
-use Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui\MerchantRelationshipPriceProductConcreteTableConfigurationExpanderPlugin;
-use Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui\MerchantRelationshipPriceProductMapperPlugin;
-use Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui\MerchantRelationshipPriceProductTableFilterPlugin;
-use Spryker\Zed\ProductMerchantPortalGui\ProductMerchantPortalGuiDependencyProvider as SprykerProductMerchantPortalGuiDependencyProvider;
-
-class ProductMerchantPortalGuiDependencyProvider extends SprykerProductMerchantPortalGuiDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Zed\ProductMerchantPortalGuiExtension\Dependency\Plugin\PriceProductTableFilterPluginInterface>
-     */
-    protected function getPriceProductTableFilterPlugins(): array
-    {
-        return [
-            new MerchantRelationshipPriceProductTableFilterPlugin(),
-        ];
-    }
-
-    /**
-     * @return array<\Spryker\Zed\ProductMerchantPortalGuiExtension\Dependency\Plugin\PriceProductAbstractTableConfigurationExpanderPluginInterface>
-     */
-    protected function getPriceProductAbstractTableConfigurationExpanderPlugins(): array
-    {
-        return [
-            new MerchantRelationshipPriceProductAbstractTableConfigurationExpanderPlugin(),
-        ];
-    }
-
-    /**
-     * @return array<\Spryker\Zed\ProductMerchantPortalGuiExtension\Dependency\Plugin\PriceProductConcreteTableConfigurationExpanderPluginInterface>
-     */
-    protected function getPriceProductConcreteTableConfigurationExpanderPlugins(): array
-    {
-        return [
-            new MerchantRelationshipPriceProductConcreteTableConfigurationExpanderPlugin(),
-        ];
-    }
-
-    /**
-     * @return array<\Spryker\Zed\ProductMerchantPortalGuiExtension\Dependency\Plugin\PriceProductMapperPluginInterface>
-     */
-    protected function getPriceProductMapperPlugins(): array
-    {
-        return [
-            new MerchantRelationshipPriceProductMapperPlugin(),
-        ];
-    }
-}
-```
-
-</details>
-
 {% info_block warningBox "Verification" %}
 
-Log in to the Merchant Portal with a merchant with merchant relationships.
-
-Open any product for edit and make sure that the Customer column in the Price section is updatable.
+Make sure that you see the validation error while attempting to set or create the customer price for the volume price.
+Make sure that you can delete the customer price. 
 
 {% endinfo_block %}

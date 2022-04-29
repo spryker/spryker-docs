@@ -4478,7 +4478,7 @@ entries:
         url: /docs/scos/dev/architecture/module-api/using-composer-constraint-for-customized-modules.html
       - title: Performance and Scalability
         url: /docs/scos/dev/architecture/module-api/performance-and-scalability.html
-      - title: Declaration of module APIs: Public and private"
+      - title: "Declaration of module APIs: Public and private"
         url: /docs/scos/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html
       - title: Semantic Versioning- Major vs. Minor vs. Patch Release
         url: /docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html

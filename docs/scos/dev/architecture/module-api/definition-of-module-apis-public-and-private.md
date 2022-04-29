@@ -2,9 +2,9 @@
 title: Declaration of module APIs: Public and private
 description: This document declares what public and private APIs are
 last_updated: Sep 27, 2021
-template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/definition-api
 originalArticleId: d86471b1-719e-4ab5-b5eb-b5e915f0a837
+template: concept-topic-template
 redirect_from:
   - /2021080/docs/definition-api
   - /2021080/docs/en/definition-api

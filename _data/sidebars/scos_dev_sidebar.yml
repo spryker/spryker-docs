@@ -4499,6 +4499,22 @@ entries:
         url: /docs/scos/dev/guidelines/coding-guidelines/secure-coding-practices.html
       - title: Code style guide
         url: /docs/scos/dev/guidelines/coding-guidelines/code-style-guide.html
+    - title: Keeping a project upgradable
+      url: /docs/scos/dev/keeping-a-project-auto-upgradable/keeping-a-project-upgradable.html
+      nested:
+        - title: Upgradability guidelines
+          url: docs/scos/dev/keeping-a-project-auto-upgradable/upgradability-guidelines/upgradability-guidelines.md
+          nested:
+            - title: Entity name is not unique
+              url: /docs/scos/dev/keeping-a-project-upgradable/upgradability-guidelines/entity-name-is-not-unique.html
+            - title: Private API is extended
+              url: /docs/scos/dev/keeping-a-project-upgradable/upgradability-guidelines/private-api-is-extended.html
+            - title: Private API is used on the project level
+              url: /docs/scos/dev/keeping-a-project-upgradable/upgradability-guidelines/private-api-is-used-on-the-project-level.html
+            - title: Private API method is overridden on the project level
+              url: /docs/scos/dev/keeping-a-project-upgradable/upgradability-guidelines/private-api-method-is-overridden-on-the-project-level.html
+        - title: Running the Evalutor tool
+          url: /docs/scos/dev/keeping-a-project-upgradable/running-the-evaluator-tool.html
     - title: Performance guidelines
       nested:
       - title: General performance guidelines

@@ -55,10 +55,6 @@ To resolve the error provided in the example, try the following in the provided 
     3. As soon as the extension point in core is released, refactor the code added in step 4.2 using the strategies in steps 1-3.
         While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
 
-{% info_block infoBox "Making your code unique" %}
-To make your code unique, use prefixes like `pyz` or your project name.
-{% endinfo_block %}
-
 ## Example of resolving the error by renaming Private API entities
 
 1. Give the method a unique name and copy it to the factory to fetch the business models. In the  example, we add `Pyz` to its name, but you can use any other strategy. For example, you can prefix them with your project name.

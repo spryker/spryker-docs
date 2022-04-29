@@ -1,5 +1,5 @@
 ---
-title: Project Development Guidelines
+title: Project development guidelines
 description: This article describes the strategies a project team can take while building a Spryker-based project.
 last_updated: Jan 28, 2022
 template: concept-topic-template

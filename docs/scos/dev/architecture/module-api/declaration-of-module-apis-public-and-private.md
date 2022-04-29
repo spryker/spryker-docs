@@ -1,5 +1,5 @@
 ---
-title: Declaration of module APIs: Public and private
+"title: Declaration of module APIs: Public and private"
 description: This document declares what public and private APIs are
 last_updated: Sep 27, 2021
 originalLink: https://documentation.spryker.com/2021080/docs/definition-api

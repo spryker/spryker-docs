@@ -1,5 +1,5 @@
 ---
-title: ACP Security Assessment
+title: ACP security assessment
 Descriptions: This document outlines the threat modeling and security assessment requirements and process for apps listed on the Spryker’s app catalog.
 template: howto-guide-template
 ---

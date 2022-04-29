@@ -10,11 +10,9 @@ The App Composition Platform (ACP) lets [Spryker Cloud Commerce OS (SCCOS)](/doc
 
 The following apps are supported:
 
-- PayOne, a Payment Service Provider (PSP)
-- UserCentrics, a Consent Management Platform (CMP)
-- BazaarVoice, a platform for User-Generated Content (UGC)
-
-<!---Add links to the general apps descriptions, once available-->
+- [Payone](/docs/acp/user/apps/payone.html), a Payment Service Provider (PSP)
+- [Usercentrics](/docs/acp/user/apps/usercentrics.html), a Consent Management Platform (CMP)
+- [Bazaarvoice](/docs/acp/user/apps/bazaarvoice.html), a platform for User-Generated Content (UGC)
 
 Spryker builds all integrations of the apps and provides them in a secure and no-code way for the SCCOS.
 
@@ -43,7 +41,7 @@ In most cases, to try an app from the ACP catalog, you do the following:
 
 {% info_block infoBox "Info" %}
 
-Make sure you check the configuration guidelines<!---LINK--> for the app you need because additional settings in the Back Office might be required for individual apps to run.
+Make sure you check the configuration guidelines for the app you need because additional settings in the Back Office might be required for individual apps to run.
 
 {% endinfo_block %}
 

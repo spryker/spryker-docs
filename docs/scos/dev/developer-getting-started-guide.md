@@ -68,6 +68,20 @@ We recommend starting with a Docker SDK environment. This option includes Docker
 It features a lightweight environment that is closer to a production implementation.
 
 To start developing your Spryker in Docker, see [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
+#### Deploy file
+For local env we use deploy.dev.yml file (see docimentation how to work with it [https://github.com/spryker/docker-sdk/tree/master/docs/07-deploy-file](https://github.com/spryker/docker-sdk/tree/master/docs/07-deploy-file) )
+
+What to change in this file:
+ - namespace - better to have name for your project, it will prevent problem when two or more project with the same name installed.
+ - regions
+ - stores 
+ - domains for local environment 
+ - domains for services (rabbit, jenkins) - optional, but can help to keep all project links together.
+
+#### Vagrant clean up
+If you decided to use docker instead of vagrant, you don't need config for them:
+- Remove `config/install/development.yml`.
+- Remove `config_default-development_*.php` files
 
 ### Installing Spryker with Development Virtual Machine
 
@@ -89,6 +103,13 @@ Alternatively, you can install Spryker on an operating system that fulfills Spry
 After installing, make sure to have a look at [Post-Installation steps and additional info](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-spryker-after-installing-with-devvm.html) for tips on fine-tuning Spryker.
 
 {% endinfo_block %}
+
+### Readme.md
+ - Update project install description.
+ - Update repository link. 
+ - Remove unused information (like vagrant installation if you not use it)
+ - It can be good idea to move production information to down, all new developers will easily see how to use project.
+
 
 ## 2. Manage your modules
 
@@ -130,6 +151,22 @@ To configure and customize your Spryker Commerce OS, do the following:
 4. [Schedule tasks](/docs/scos/dev/back-end-development/cronjobs/cronjobs.html) (Cron jobs).
 <!---4. Move to the maintenance mode-->
 
+### Store clean up
+This step depends on the store setup, which you plan to have. If you start with one store, consider cleaning up the remaining stores right away:
+
+ - `config/install/*`
+ - `data/import/*`
+ - `deploy.dev.yml`
+ - `config_default.php` 
+ - `src/SprykerConfig/CodeBucketConfig.php`
+
+### Data import clean up
+In folder `data/import` you can find a lot of files related to each store, you need to define wich store do you need, and remove all unused files.
+
+Pay attention that default config described there `DataImportConfig::getDefaultYamlConfigPath()` and also should be changed.
+
+For allowing some stores, you need to edit `CodeBucketConfig::getCodeBuckets()`.
+
 ## 4. Debugging
 
 Before you start developing, set up and get to know your debugging environment. To learn how to configure debugging, see one of the following:
@@ -160,3 +197,52 @@ Get to know the parts of the Spryker Development Virtual Machine with which we s
 * What is the Spryker DevVM (Development Virtual Machine) and why do we need it?
 * Main Structure
 * Technology Stack: Linux distribution, PHP, Postgres, MySQL, ES, Redis, Queue, Jenkins-->
+
+## 6. CI configuration
+ - [Deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/deployment-pipelines.html)
+ - [Customizing deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/customizing-deployment-pipelines.html)
+ - [GitHub Actions](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/configuring-github-actions.html)
+ - [Configuring GitLab pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/configuring-gitlab-pipelines.html)
+ - [Azure Pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/configuring-azure-pipelines.html)
+ - [Configuring Bitbucket Pipelines ](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/configuring-bitbucket-pipelines.html)
+
+## 7. Checkers configuration
+### Code sniffer
+Also recommended to update code sniffer to latest version (you also need to change `composer.json` file)
+```bash
+composer update spryker/code-sniffer slevomat/coding-standard --with-dependencies
+```
+
+There are will be some new checks, but mostly everything is easy to fix.
+On a project level you may decide to use your own rules, or exclude something that enamled in spryker by default.
+
+To enable some new rule see full list there: [Slevomat Coding Standard](https://github.com/slevomat/coding-standard)
+
+To disable something you can use configuration. Next example exclude rule that annotation for constructor and method is required:
+```yaml
+<rule ref="vendor/spryker/code-sniffer/Spryker/ruleset.xml">
+        <exclude name="Spryker.Commenting.DocBlock"/>
+</rule>
+```
+### PhpStan
+Recommended update version to 1.2.* (or higher) - it will solve memory issue, and do not have any extra problems.
+
+On a project level you can enable 6 level
+```yaml
+vendor/bin/phpstan analyze -l 6 -c phpstan.neon src/
+```
+
+## 8. PhpStorm configuration
+### Plugins
+ - PYZ
+ - Symfony Support
+
+### Speed up indexation
+In the beginning of the project you need reset you project a lot of time, phpstorm indexing is annoying and take too much resources, you can disable cache indexing, it will help and you will not lose nothing.
+
+How to disable - right click on the folder -> "Mark Directory As" -> "Excluded"
+
+Safe to disable:
+ - `data/cache `
+ - `data/tmp` 
+ - `public/(Yves/Zed/Marketlace)/assets`

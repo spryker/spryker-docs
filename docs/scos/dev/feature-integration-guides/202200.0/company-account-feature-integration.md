@@ -365,6 +365,13 @@ Enable the following behaviors by registering the plugins:
 | CompanyUserOauthUserProviderPlugin | Associates the `company_user` scope with `idCompanyUser` Oauth GrandType. | None | Spryker\Zed\OauthCompanyUser\Communication\Plugin\Oauth |
 | IdCompanyUserOauthGrantTypeConfigurationProviderPlugin | Provides new `IdCompanyUser` Oauth GrandType. | None | Spryker\Zed\OauthCompanyUser\Communication\Plugin\Oauth |
 | CompanyBusinessUnitCompanyUserStorageExpanderPlugin | Expands the `CompanyUserStorageTransfer` with the company business unit id. | None | Spryker\Zed\CompanyBusinessUnitStorage\Communication\Plugin |
+| CompanyFieldToCompanyUserFormExpanderPlugin                       | Transforms company select dropdown on the company user edit form into an input field with search and suggestions                          | None          | `Spryker\Zed\CompanyGui\Communication\Plugin\CompanyUserGui`                  |
+| CompanyBusinessUnitToCompanyUserFormExpanderPlugin                | Transforms business unit select dropdown on the company user edit form into an input field with search and suggestions                    | None              | `Spryker\Zed\CompanyBusinessUnitGui\Communication\Plugin\CompanyUserGui`      |
+| CompanyToCompanyUserAttachCustomerFormExpanderPlugin              | Transforms company select dropdown on the customer to company attach form into an input field with search and suggestions                 | None              | `Spryker\Zed\CompanyGui\Communication\Plugin\CompanyUserGui`                  |
+| CompanyBusinessUnitToCompanyUserAttachCustomerFormExpanderPlugin  | Transforms business unit select dropdown on the customer to company attach form into an input field with search and suggestions           | None              | `Spryker\Zed\CompanyBusinessUnitGui\Communication\Plugin\CompanyUserGui`      |
+| CompanyToCompanyUnitAddressEditFormExpanderPlugin                 | Transforms company select dropdown on the company unit address edit form into an input field with search and suggestions                  | None              | `Spryker\Zed\CompanyGui\Communication\Plugin\CompanyUnitAddressGui`           |
+| CompanyToCompanyRoleCreateFormExpanderPlugin                      | Transforms company select dropdown on the company role edit form into an input field with search and suggestions                          | None              | `Spryker\Zed\CompanyGui\Communication\Plugin\CompanyRoleGui`                  |
+| CompanyBusinessUnitToCustomerBusinessUnitAttachFormExpanderPlugin | Transforms business unit select dropdown on the company user to business unit attach form into an input field with search and suggestions | None              | `Spryker\Zed\CompanyBusinessUnitGui\Communication\Plugin\BusinessOnBehalfGui` |
 
 **src/Pyz/Zed/Customer/CustomerDependencyProvider.php**
 
@@ -535,6 +542,117 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 }
 ```
 
+**src/Pyz/Zed/CompanyUserGui/CompanyUserGuiDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\CompanyUserGui;
+
+use Spryker\Zed\CompanyBusinessUnitGui\Communication\Plugin\CompanyUserGui\CompanyBusinessUnitToCompanyUserAttachCustomerFormExpanderPlugin;
+use Spryker\Zed\CompanyBusinessUnitGui\Communication\Plugin\CompanyUserGui\CompanyBusinessUnitToCompanyUserFormExpanderPlugin;
+use Spryker\Zed\CompanyGui\Communication\Plugin\CompanyUserGui\CompanyFieldToCompanyUserFormExpanderPlugin;
+use Spryker\Zed\CompanyGui\Communication\Plugin\CompanyUserGui\CompanyToCompanyUserAttachCustomerFormExpanderPlugin;
+use Spryker\Zed\CompanyUserGui\CompanyUserGuiDependencyProvider as SprykerCompanyUserGuiDependencyProvider;
+
+class CompanyUserGuiDependencyProvider extends SprykerCompanyUserGuiDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\CompanyUserGuiExtension\Dependency\Plugin\CompanyUserFormExpanderPluginInterface>
+     */
+    protected function getCompanyUserFormExpanderPlugins(): array
+    {
+        return [
+            new CompanyFieldToCompanyUserFormExpanderPlugin(),
+            new CompanyBusinessUnitToCompanyUserFormExpanderPlugin(),
+        ];
+    }
+    
+    /**
+     * @return array<\Spryker\Zed\CompanyUserGuiExtension\Dependency\Plugin\CompanyUserAttachCustomerFormExpanderPluginInterface>
+     */
+    protected function getCompanyUserAttachCustomerFormExpanderPlugins(): array
+    {
+        return [
+            new CompanyBusinessUnitToCompanyUserAttachCustomerFormExpanderPlugin(),
+            new CompanyToCompanyUserAttachCustomerFormExpanderPlugin(),            
+        ];
+    }    
+}
+```
+
+**src/Pyz/Zed/CompanyUnitAddressGui/CompanyUnitAddressGuiDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\CompanyUnitAddressGui;
+
+use Spryker\Zed\CompanyGui\Communication\Plugin\CompanyUnitAddressGui\CompanyToCompanyUnitAddressEditFormExpanderPlugin;
+use Spryker\Zed\CompanyUnitAddressGui\CompanyUnitAddressGuiDependencyProvider as SprykerCompanyUnitAddressGuiDependencyProvider;
+
+class CompanyUnitAddressGuiDependencyProvider extends SprykerCompanyUnitAddressGuiDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\CompanyUnitAddressGuiExtension\Dependency\Plugin\CompanyUnitAddressEditFormExpanderPluginInterface>
+     */
+    protected function getCompanyUnitAddressFormPlugins(): array
+    {
+        return [
+            new CompanyToCompanyUnitAddressEditFormExpanderPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/CompanyRoleGui/CompanyRoleGuiDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\CompanyRoleGui;
+
+use Spryker\Zed\CompanyGui\Communication\Plugin\CompanyRoleGui\CompanyToCompanyRoleCreateFormExpanderPlugin;
+use Spryker\Zed\CompanyRoleGui\CompanyRoleGuiDependencyProvider as SprykerCompanyRoleGuiDependencyProvider;
+
+class CompanyRoleGuiDependencyProvider extends SprykerCompanyRoleGuiDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\CompanyRoleGuiExtension\Communication\Plugin\CompanyRoleCreateFormExpanderPluginInterface>
+     */
+    protected function getCompanyRoleCreateFormExpanderPlugins(): array
+    {
+        return [
+            new CompanyToCompanyRoleCreateFormExpanderPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/BusinessOnBehalfGui/BusinessOnBehalfGuiDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\BusinessOnBehalfGui;
+
+use Spryker\Zed\BusinessOnBehalfGui\BusinessOnBehalfGuiDependencyProvider as SprykerBusinessOnBehalfGuiDependencyProvider;
+use Spryker\Zed\CompanyBusinessUnitGui\Communication\Plugin\BusinessOnBehalfGui\CompanyBusinessUnitToCustomerBusinessUnitAttachFormExpanderPlugin;
+
+class BusinessOnBehalfGuiDependencyProvider extends SprykerBusinessOnBehalfGuiDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\BusinessOnBehalfGuiExtension\Dependency\Plugin\CustomerBusinessUnitAttachFormExpanderPluginInterface>
+     */
+    protected function getCustomerBusinessUnitAttachFormExpanderPlugins(): array
+    {
+        return [
+            new CompanyBusinessUnitToCustomerBusinessUnitAttachFormExpanderPlugin(),
+        ];
+    }
+}
+```
+
 {% info_block warningBox "Verification" %}
 
 Log in with a customer who has multiple Company Users and a default one. Check in the session if the default Company User was assigned to the Customer. Check in the session if the `IsOnBehalf` property is set correctly for the Customer.
@@ -550,6 +668,14 @@ Make sure that token generation for a company user works. For more information, 
 {% info_block warningBox "Verification" %}
 
 To make sure the `CompanyBusinessUnitCompanyUserStorageExpanderPlugin` was set up correctly, you need to check the data exported to the key-value storage key `kv:company_user:1` for the `id_company_business_unit:id`. `id_company_business_unit` needs to be set up to a correct foreign key of the business unit the company user is assigned to.
+
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
+To make sure the transform dropdowns plugins (`CompanyFieldToCompanyUserFormExpanderPlugin`, `CompanyBusinessUnitToCompanyUserFormExpanderPlugin`,
+`CompanyToCompanyUserAttachCustomerFormExpanderPlugin`, `CompanyBusinessUnitToCompanyUserAttachCustomerFormExpanderPlugin`,
+`CompanyToCompanyUnitAddressEditFormExpanderPlugin`, `CompanyToCompanyRoleCreateFormExpanderPlugin`, `CompanyBusinessUnitToCustomerBusinessUnitAttachFormExpanderPlugin`) were set up correctly, you need to open the corresponding form and check that input boxes with search and suggestions are used for the company and business unit fields instead of default select dropdowns.
 
 {% endinfo_block %}
 

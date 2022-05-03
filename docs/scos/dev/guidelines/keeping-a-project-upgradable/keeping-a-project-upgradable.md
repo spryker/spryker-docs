@@ -29,11 +29,11 @@ For more information about the strategies and how they affect upgradability, see
 
 ## 2. Follow development guidelines
 
-The best way to prevent compatibility issues is to prevent them. Throughout the development cycle, we recommend following our [Project development guidelines](/docs/scos/dev/guidelines/project-development-guidelines.html).
+The best way to resolve compatibility issues is to prevent them. Throughout the development cycle, we recommend following our [Project development guidelines](/docs/scos/dev/guidelines/project-development-guidelines.html).
 
 ## 3. Check if project is upgradable using the Evaluator tool
 
-The Evaluator tool is part of Spryker SDK that performs a number of checks are based on the static analysis of our tools.
+The Evaluator tool is part of Spryker SDK that performs a number of checks based on the static code analysis of our tools.
 
 Evaluator provides informative output about your code. If all the checks are successful, the tool returns zero messages.
 
@@ -98,4 +98,4 @@ If Evaluator detects compliance issues, resolve them by using the instructions i
 
 ## 5. Update your project
 
-After passing an evaluation successfully, you can safely take minor and patch updates. If the project is enrolled into PaaS+, the updates will be applied automatically during the next deployment.
+After passing an evaluation successfully, you can safely take minor and patch updates. If the project is enrolled into PaaS+, the updates will be provided automatically.

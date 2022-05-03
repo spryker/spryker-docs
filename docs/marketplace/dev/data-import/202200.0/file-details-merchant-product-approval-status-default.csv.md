@@ -23,13 +23,11 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-The file has the following dependencies:
-
-- [merchant.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant.csv.html)
+The file has the following dependency: [merchant.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant.csv.html).
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+In the following table, you can find the template and example of the file:
 
 | FILE     | DESCRIPTION    |
 | -------------------------- | -------------------------- |

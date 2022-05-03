@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Sending an email
+title: "Tutorial: Sending an email"
 description: The tutorial provides code samples on how to process customer registration information in Zed to register the customer and send a confirmation email.
 last_updated: Sep 27, 2021
 template: howto-guide-template

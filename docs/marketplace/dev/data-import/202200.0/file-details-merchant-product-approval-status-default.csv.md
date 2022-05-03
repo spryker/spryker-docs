@@ -9,7 +9,7 @@ This document describes the `merchant_product_approval_status_default.csv` file 
 To import the file, run:
 
 ```bash
-data:import merchant-product-approval-status-default
+console data:import merchant-product-approval-status-default
 ```
 
 ## Import file parameters

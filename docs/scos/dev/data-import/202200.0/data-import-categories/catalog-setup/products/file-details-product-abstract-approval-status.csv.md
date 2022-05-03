@@ -8,7 +8,7 @@ This article contains content of the **product_approval_status_default.csv** fil
 To import the file, run
 
 ```bash
-data:import:product-approval-status
+console data:import product-approval-status
 ```
 
 ## Import file parameters

@@ -4503,7 +4503,7 @@ entries:
       url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
       nested:
         - title: Upgradability guidelines
-          url: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html
           nested:
             - title: Entity name is not unique
               url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/entity-name-is-not-unique.html

@@ -51,7 +51,7 @@ The evaluator tool checks the following:
 
 To learn more about the evaluator tool, see the following documents:
 
-- [evaluator tool overview](/docs/scos/dev/guidelines/keeping-a-project-upgradable/evaluator-tool-overview.html)
+
 - [Running the evaluator tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-evaluator-tool.html)
 
 

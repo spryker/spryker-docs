@@ -3885,52 +3885,52 @@ entries:
         nested:
         - title: Data Imports
           nested:
-          - title: HowTo - Import Delivery Methods Linked to Store
+          - title: "HowTo: Import delivery methods linked to store"
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-delivery-methods-linked-to-store.html
-          - title: HowTo - Import Warehouse Data
+          - title: "HowTo: Import warehouse data"
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html
-          - title: HowTo - Import Packaging Units
+          - title: "HowTo: Import packaging units"
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-packaging-units.html
-          - title: HowTo - Manage business unit specific prices via data import
+          - title: "HowTo: Manage business unit specific prices via data import"
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/how-to-manage-business-unit-specific-prices-via-data-import.html
-        - title: HowTo - Generate a Token for Login
+        - title: "HowTo: Generate a token for login"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html
-        - title: HowTo - Use Blocks
+        - title: "HowTo: Use blocks"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-use-blocks.html
-        - title: HowTo - Create Discounts Based on Shipment
+        - title: "HowTo: Create discounts based on shipment"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-create-discounts-based-on-shipment.html
-        - title: HowTo - Display Custom Names for Order Item States on the Storefront
+        - title: "HowTo: Display custom names for order item states on the Storefront"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html
-        - title: HowTo - Configure the Product Reviews
+        - title: "HowTo: Configure the product reviews"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-configure-the-product-reviews.html
-        - title: HowTo - Manage a big number of categories
+        - title: "HowTo: Manage a big number of categories"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-manage-a-big-number-of-categories.html
-        - title: HowTo - Display Product Groups by Color on the Storefront
+        - title: "HowTo: Display product groups by color on the Storefront"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-product-groups-by-color-on-the-storefront.html
-        - title: HowTo - Set Number of Days for a Return Policy
+        - title: "HowTo: Set number of days for a return policy"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-set-number-of-days-for-a-return-policy.html
-        - title: HowTo - Make a Product Searchable and Shown on the Storefront
+        - title: "HowTo: Make a product searchable and shown on the Storefront"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
-        - title: HowTo - Schedule Cron Job for Scheduled Prices
+        - title: "HowTo: Schedule cron job for scheduled prices"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-schedule-cron-job-for-scheduled-prices.html
         - title: CMS
           nested:
-          - title: HowTo - Create CMS Templates
+          - title: "HowTo: Create CMS templates"
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html
-          - title: HowTo - Create a Visibility Condition for CMS Blocks
+          - title: "HowTo: Create a visibility vondition for CMS blocks"
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html
-          - title: HowTo - create a custom content item
+          - title: "HowTo: Create a custom content item"
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-custom-content-item.html
-        - title: HowTo - define if a cart should be deleted after placing an order
+        - title: "HowTo: Define if a cart should be deleted after placing an order"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html
-        - title: HowTo -  Render Configurable Bundle Templates in the Storefront
+        - title: "HowTo:  Render configurable bundle templates in the Storefront"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html
-        - title: HowTo - Disable Split Delivery in Yves Interface
+        - title: "HowTo: Disable split delivery in Yves interface"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html
-        - title: HowTo - Implement customer approval process based on a generic state
+        - title: "HowTo: Implement customer approval process based on a generic state"
             machine
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-implement-customer-approval-process-based-on-a-generic-state-machine.html
-        - title: HowTo - Emailing Invoices Using BCC
+        - title: "HowTo: Emailing invoices using BCC"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-emailing-invoices-using-bcc.html
       - title: Glue API HowTos
         url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/glue-api-howtos.html
@@ -3941,72 +3941,72 @@ entries:
           url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-visibility-of-the-included-section.html
         - title: Managing customer access to Glue API resources
           url: /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/managing-customer-access-to-glue-api-resources.html
-      - title: HowTo - Replace key-value storage with database
+      - title: "HowTo: Replace key-value storage with database"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-key-value-storage-with-database.html
-      - title: HowTo - Force HTTPS
+      - title: "HowTo: Force HTTPS"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-force-https.html
-      - title: HowTo - Change the Default Behavior of Event Triggering in the AvailabilityStorage
+      - title: "HowTo: Change the default behavior of event triggering in the AvailabilityStorage"
           Module
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-change-the-default-behavior-of-event-triggering-in-the-availabilitystorage-module.html
-      - title: HowTo - Build Your Own Product Relation Type
+      - title: "HowTo: Build your own product relation type"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-build-your-own-product-relation-type.html
-      - title: HowTo - Set up multiple stores
+      - title: "HowTo: Set up multiple stores"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html
-      - title: HowTo - Integrate and Use Precise Decimal Numbers
+      - title: "HowTo: Integrate and use precise decimal numbers"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-integrate-and-use-precise-decimal-numbers.html
-      - title: HowTo - Create and Register a MailTypePlugin
+      - title: "HowTo: Create and register a MailTypePlugin"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html
-      - title: HowTo - Handle twenty five million prices in Spryker Commerce OS
+      - title: "HowTo: Handle twenty five million prices in Spryker Commerce OS"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-twenty-five-million-prices-in-spryker-commerce-os.html
-      - title: HowTo - Customize HTTP Headers in AJAX Request
+      - title: "HowTo: Customize HTTP headers in AJAX request"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-customize-http-headers-in-ajax-request.html
-      - title: HowTo - Configure basic htaccess authentication
+      - title: "HowTo: Configure basic htaccess authentication"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-configure-basic-htaccess-authentication.html
-      - title: HowTo - Create Personalized Prices
+      - title: "HowTo: Create personalized prices"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-personalized-prices.html
-      - title: HowTo - Set up Spryker with MySQL
+      - title: "HowTo: Set up Spryker with MySQL"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-spryker-with-mysql.html
-      - title: HowTo - Add a New Shipment Method 2.0
+      - title: "HowTo: Add a new shipment method 2.0"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-add-a-new-shipment-method-2.0.html
-      - title: HowTo - Define the maximum size of content fields
+      - title: "HowTo: Define the maximum size of content fields"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-define-the-maximum-size-of-content-fields.html
-      - title: HowTo - Decrease the memory usage of Spryker with Docker on WSL2
+      - title: "HowTo: Decrease the memory usage of Spryker with Docker on WSL2"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-decrease-the-memory-usage-of-spryker-with-docker-on-wsl2.html
-      - title: HowTo - Hydrate Payment Methods for an Order
+      - title: "HowTo: Hydrate payment methods for an order"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-hydrate-payment-methods-for-an-order.html
-      - title: HowTo - Add a New Shipment Method
+      - title: "HowTo: Add a new shipment method"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-add-a-new-shipment-method.html
-      - title: HowTo - Notify About Unsupported Browsers
+      - title: "HowTo: Notify about unsupported browsers"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-notify-about-unsupported-browsers.html
-      - title: HowTo - Set up Stores with Multiple Locales
+      - title: "HowTo: Set up Stores with multiple locales"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-stores-with-multiple-locales.html
-      - title: HowTo - Handle graceful shutdown
+      - title: "HowTo: Handle graceful shutdown"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-graceful-shutdown.html
-      - title: HowTo - Install Spryker in AWS Environment
+      - title: "HowTo: Install Spryker in AWS environment"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-install-spryker-in-aws-environment.html
-      - title: HowTo - Enable guest checkout in B2B Demo Shop
+      - title: "HowTo: Enable guest checkout in B2B demo shop"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-enable-guest-checkout-in-b2b-demo-shop.html
-      - title: HowTo - Set up custom response headers on project level
+      - title: "HowTo: Set up custom response headers on project level"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-custom-response-headers-on-project-level.html
-      - title: HowTo - Set up Database Connections
+      - title: "HowTo: Set up database connections"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-database-connections.html
-      - title: HowTo - Replace Spryker Module Dependencies
+      - title: "HowTo: Replace Spryker module dependencies"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-spryker-module-dependencies.html
-      - title: HowTo - Add additional countries to Spryker checkout
+      - title: "HowTo: Add additional countries to Spryker checkout"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-add-additional-countries-to-spryker-checkout.html
-      - title: HowTo - Product Data from Import to Front-End View
+      - title: "HowTo: Product data from import to frontend view"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-product-data-from-import-to-frontend-view.html
-      - title: HowTo - enable SFTP for Flysystem
+      - title: "HowTo: enable SFTP for Flysystem"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-enable-sftp-for-flysystem.html
-      - title: HowTo - Handle Case Sensitive File-System on Mac OS
+      - title: "HowTo: Handle case-sensitive file system on Mac OS"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-case-sensitive-file-system-on-mac-os.html
-      - title: HowTo - Create and Register a Mail Provider
+      - title: "HowTo: Create and register a mail provider"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mail-provider.html
-      - title: HowTo - Get Ready for VAT (tax) Changes in Germany
+      - title: "HowTo: Get ready for VAT (tax) changes in Germany"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-get-ready-for-vat-tax-changes-in-germany.html
-      - title: HowTo - Reset a Docker environment
+      - title: "HowTo: Reset a Docker environment"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-reset-a-docker-environment.html
-      - title: HowTo - Allow Zed CSS/JS on a project
+      - title: "HowTo: Allow Zed CSS/JS on a project"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project.html
   - title: Technology partner guides
     nested:

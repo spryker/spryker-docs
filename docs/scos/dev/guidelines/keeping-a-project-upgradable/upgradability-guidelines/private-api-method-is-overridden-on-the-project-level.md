@@ -54,7 +54,7 @@ To resolve the error provided in the example, try the following in the provided 
 3. Recommended: Extend the functionality using the [Project Modules strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules).
 4. Not recommended: Give the Private API entities unique names:
     1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
-    2. On the project level, give the Private API entities unique names. For an example, see [Example of resolving the error by copying and renaming the entities](#example-of-resolving-the-error-by-copying-and-renaming-the-entities).
+    2. On the project level, give the Private API entities unique names. For an example, see [Example of resolving the error by copying and renaming the entities](#example-of-resolving-the-error-by-renaming-the-core-entity).
     3. As soon as the extension point in core is released, refactor the code added in step 4.2 using the strategies in steps 1-3.
         While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
 

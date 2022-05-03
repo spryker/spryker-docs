@@ -14,7 +14,7 @@ console data:import merchant-product-approval-status-default
 
 ## Import file parameters
 
-The file should have the following parameters:
+The file must have the following parameters:
 
 | PARAMETER      | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS  | DESCRIPTION                               |
 | ------------- | ---------- | ------ | ----------- | ------------------- | ------------------------------------ |

@@ -107,3 +107,9 @@ With PayPal Express, your customers can complete transactions in just a few step
 #### Klarna
 
 Use Klarna services to let your customers pay later for their purchases.
+
+## PaaS+
+
+Starting from this version, B2C and B2B Demo Shops are fully compatible with industry and our own coding standards. The implemented fixes are based on the evaluation performed by the Evaluator tool.
+
+You can now evaluate your code and make sure it’s upgradable by following [Keeping a project upgradable](/docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html). After a successful evaluation, headless projects can safely take minor and patch updates. For PaaS+ projects, if a project passes evaluation, the updates are provided automatically.

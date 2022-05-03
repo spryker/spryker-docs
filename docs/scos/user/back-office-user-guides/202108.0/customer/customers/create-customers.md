@@ -1,6 +1,6 @@
 ---
 title: Managing customers
-description: This guide provides instructions on how shop owners can add and manage personal information, customer billing, and shipping addresses in the Back Office.
+description: Learn how to create customers in the Back Office.
 last_updated: Jul 6, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customers
@@ -16,7 +16,7 @@ related:
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
 ---
 
-This article describes how to create customers.
+This document describes how to create customers in the Back Office.
 
 ## Prerequisites
 
@@ -48,13 +48,13 @@ Once you create a customer, a verification email is sent to their email address,
 
 |ATTRIBUTE| DESCRIPTION|
 |---|---|
-| EMAIL | Email address that will be linked to the new account. The email address is important for completing the registration (by accessing the link that will be sent by email) or for later use of the forgot password functionality.|
-| SALUTATION |Formal salutation for your customer (e.g., Mr, Mrs).|
-| FIRST NAME |Customer's first name.|
-| LAST NAME |Customer's last name.|
-| GENDER |Customer's gender. The drop-down list with the following values available for selection:  Male and Female.|
-| DATE OF BIRTH |Customer's date of birth in the format mm/dd/yyyy. Once you click on the field, the calendar opens where you can select the date.|
-| PHONE |Customer's phone number.|
-| COMPANY | Customer's company.|
-| LOCALE |Selected from a drop-down list value defines the locale for your customer.|
-| SEND PASSWORD TOKEN THROUGH EMAIL | If you select the checkbox, after saving the customer, an email will be sent to the customer containing a link. By accessing the link, the customer will be able to set a password for the account. If you don’t select this option, the customer will still able to set a password by clicking the reset password link on the Storefront. |
+| EMAIL | Email address to be used for the account. |
+| SALUTATION | Formal salutation. |
+| FIRST NAME | First name. |
+| LAST NAME | Last name. |
+| GENDER | Gender.|
+| DATE OF BIRTH | Date of birth.|
+| PHONE | Phone number.|
+|COMPANY| Company. Not to be confused with a [B2B company](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html). |
+| LOCALE | Locale.|
+| SEND PASSWORD TOKEN THROUGH EMAIL | If you select the checkbox, after saving the customer, an email will be sent to the customer containing a link. By accessing the link, the customer will be able to set a password for the account. If you don’t select this option, the customer will still be able request this email on the Storefront. |

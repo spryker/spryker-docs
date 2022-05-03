@@ -1,23 +1,49 @@
+---
+title: Edit customer addresses
+description: Learn how to edit customer addresses in the Back Office.
+template: back-office-user-guide-template
+---
 
+This document describes how to edit customer addresses in the Back Office.
 
+## Prerequisites
 
-Review the [reference information](#reference-information-add-a-customer-address) before you start or look up the necessary information as you go through the process.
+Review the [reference information](#reference-information-edit-a-customer-address) before you start or look up the necessary information as you go through the process.
 
-## Editing customer addresses
+## Edit a customer address
 
-To edit a customer's address:
-1. On the *View Customer* page, scroll down to the *Addresses* section and click **Edit** next to the address to be edited.
-2. On the *Edit address* page, make your changes and click **Save**.
+1. Go to **Customers&nbsp;<span aria-label="and then">></span> Customers**.
+    This opens the **Customers** page.
+2. Next to the customer address you want to edit the address of, click **View**.
+    This opens the **View** page.
+3. In the **ADDRESSES** pane, next to the address you want to edit, click **Edit**.
+4. On the **Edit address** page, select a **SALUTATION**.
+5. Enter a **FIRST NAME**.
+6. Enter a **LAST NAME**.
+7. For **ADDRESS LINE 1**, enter the address.
+8. For **ADDRESS LINE 2** and **ADDRESS LINE 3**, enter any additional information for the address.
+9. Enter a **CITY**.
+10. Enter a **ZIP CODE**.
+11. Select a **COUNTRY**.
+12. Enter a **PHONE**.
+13. Enter a **COMPANY**.
+14. Enter a **COMMENT**.
+15. Click **Save**.
+    The **View** page opens. The updated address is displayed in the **ADDRESSES** pane.
 
-### Reference information: Editing customer address
-
-The following table describes the attributes you enter and select when editing a new customer address.
+## Reference information: Editing a customer address
 
 | ATTRIBUTE| DESCRIPTION |
 |---|---|
-|Salutation<br>First Name<br>Last Name|Customer's salutation.|
-|Address line 1<br>Address line 2<br>Address line 3|Customer's address information except for the city, zip code, and country.|
-|City<br>Zip Code<br>Country|City, zip code, and country of the customer.|
-|Phone|Customer's phone number.|
-|Company|Customer's company.|
-|Comment|Comment regarding the customer or customer address (e.g., _"This address is going to be used only if the order costs less than 900 euros."_).|
+|SALUTATION| Formal salutation. |
+| FIRST NAME | First name. |
+|LAST NAME | Last name. |
+|ADDRESS LINE 1 | Address. |
+|ADDRESS LINE 2 | Additional information for the address. |
+|ADDRESS LINE 3 | Additional information for the address.  |
+|CITY | City. |
+|ZIP CODE | ZIP code. |
+|COUNTRY | Country. |
+|PHONE| Phone number. |
+|COMPANY| Company. Not to be confused with a [B2B company](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html). |
+|COMMENT| Any comment about the address. For example, `Use only for billing`. |

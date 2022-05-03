@@ -14,14 +14,37 @@ This document describes how to edit customers in the Back Office.
 
 ## Edit a customer
 
+1. Go to **Customers&nbsp;<span aria-label="and then">></span> Customers**.
+    This opens the **Customer** page.
+2. Next to the customer you want to edit, click **Edit**.
+3. On the **Add a customer** page, select a **SALUTATION**.
+4. Enter a **FIRST NAME**.
+5. Enter a **LAST NAME**.
+6. Select a **GENDER**.
+7. Select a **DATE OF BIRTH**.
+8. Enter a **PHONE**.
+9. Enter a **COMPANY**.
+10. Select a **LOCALE**.
+11. To send a password change link to the customer's **EMAIL**, select the **SEND PASSWORD TOKEN THROUGH EMAIL** checkbox.
+12. Select a **BILLING ADDRESS**.
+13. Select a **SHIPPING ADDRESS**.
+14. Click **Save**.
+    This opens the **View** page with a success message displayed.
 
-1. For a specific customer, you need to update, click **Edit** in the _Actions_ column on the *Customers* page.
-2. On the *Edit Customer* page, you see the same attributes as on the *Add a customer* page, but with the following exceptions:
-    *  The *Email* field is greyed out and is not available for updates.
-    *  You see two additional drop-down lists: **Billing Address** and **Shipping Address**. The values in those fields appear only if the addresses were added to the customer profile on the Storefront or from the **Back Office&nbsp;<span aria-label="and then">></span> View** customer-specific page. Those are not available for modifications from the *Edit Customer* page.
-3. Update the needed values and click **Save**.
 
-**Tips and tricks**
-<br>From the *Edit customer* page, you can:
-* Switch to the *View* customer page, where you can manage the addresses by adding a new address or updating the existing one (see the _Viewing Customer Details_ section below).
-* Delete the customer record (see the _Deleting a Customer Record_ section below).
+## Reference information: Edit a customer
+
+|ATTRIBUTE| DESCRIPTION|
+|---|---|
+| EMAIL | Email address. To change a customer's email address, you have to [create the customer](/docs/scos/user/back-office-user-guides/202108.0/customer/customers/create-customers.html) from scratch. |
+| SALUTATION | Formal salutation. |
+| FIRST NAME | First name. |
+| LAST NAME | Last name. |
+| GENDER | Gender.|
+| DATE OF BIRTH | Date of birth.|
+| PHONE | Phone number.|
+|COMPANY| Company. Not to be confused with a [B2B company](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html). |
+| LOCALE | Locale. |
+| SEND PASSWORD TOKEN THROUGH EMAIL | If you select the checkbox, after saving the customer, an email will be sent to the customer containing a link. By accessing the link, the customer will be able to set a password for the account. If you don’t select this option, the customer will still able to set a password by clicking the reset password link on the Storefront. |
+| BILLING ADDRESS | When placing an order, this address will be selected by default for billing. |
+| SHIPPING ADDRESS | When placing an order, this address will be selected by default for shipping. |

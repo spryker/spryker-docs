@@ -1,5 +1,5 @@
 ---
-title: HowTo - Install Spryker in AWS Environment
+title: HowTo - Install Spryker in AWS environment
 description: Learn how to configure native AWS services to prepare infrastructure for successful Spryker installation in AWS environment and about the installation itself.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -24,15 +24,13 @@ redirect_from:
   - /v1/docs/en/ht-install-spryker-in-aws-environment
 ---
 
-## Introduction
-
 This how-to is aimed to provide you with additional information about native configuration of AWS services and Spryker installation using AWS cloud as a base of infrastructure.
 
 Following the instructions, you will get Spryker running on AWS. The first part is devoted to step-by-step configuration of AWS native services like RDS, Elasticsearch Service, ElastiCache to prepare a suitable infrastructure for running Spryker. The second part is the installation of Spryker itself.
 
 ## AWS native services configuration
 
-The first thing you need to do to install Spryker or AWS is to configure the following AWS native services:
+The first thing you need to do to install Spryker in AWS is to configure the following AWS native services:
 
 * Security Group
 * RDS (Managed relational database service)
@@ -242,7 +240,7 @@ To configure Elastic IP, do the following:
 
 See [Allocating an Elastic IP Address](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#using-instance-addressing-eips-allocating) and [Associating an Elastic IP Address with a Running Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#using-instance-addressing-eips-associating) for more details on configuring the Elastic IP Address.
 
-### Connecting to the Instance
+### Connecting to the instance
 
 To connect to the instance, do the following:
 

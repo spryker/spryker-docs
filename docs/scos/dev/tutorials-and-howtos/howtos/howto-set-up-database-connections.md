@@ -1,5 +1,5 @@
 ---
-title: HowTo - Set up Database Connections
+title: HowTo - Set up database connections
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-setup-database-connections
@@ -48,7 +48,7 @@ $config[PropelConstants::PROPEL]['database']['connections']['default'] = $connec
 $config[PropelConstants::PROPEL]['database']['connections']['zed'] = $connections[$engine];
 ```
 
-## Multi connections
+## Multiple connections
 
 Custom case, which allows a project to have more than one connections to different DBs. To define a new connection find a Propel configuration `APP_DIR/config/Shared/config_propel.php`and add the following (example for Postgres):
 

@@ -1,5 +1,5 @@
 ---
-title: HowTo - Notify About Unsupported Browsers
+title: HowTo - Notify about unsupported browsers
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-notify-about-unsupported-browsers
@@ -28,7 +28,6 @@ The component can also be changed to detect a feature, for example:
 ```php
 var hasNativeCustomElements = !!window.customElements;
 ```
-
 
 ## Usage
 

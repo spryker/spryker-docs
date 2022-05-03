@@ -189,7 +189,6 @@ To implement the solution:
 
 These two documents can be viewed as two tables with a foreign key in terms of relational databases.
 
-
 ### ElasticSearch join data type feature - side effects
 
 The side effects of this solution are:
@@ -211,6 +210,7 @@ We addressed the following issues related to a slow publish process:
 
 The default message chunk size of an event queue is 500. With this size, about two million rows of data have to be published per one bulk.
 2. The following has to be done simultaneously:
+
     * Trigger product abstract events to update their structure in ES
     * Trigger their child documents to be published
 

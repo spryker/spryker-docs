@@ -1,5 +1,5 @@
 ---
-title: HowTo - Get Ready for VAT (tax) Changes in Germany
+title: HowTo - Get ready for VAT (tax) changes in Germany
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-get-ready-for-vat-tax-changes-in-germany
@@ -39,7 +39,7 @@ To get you ready for the tax update on 01.07.2020, we have prepared an example o
 
 Let's assume that:
 
-- you use the default cronjobs configuration from `config/Zed/cronjobs/jenkins.php`;
+- you use the default cron jobs configuration from `config/Zed/cronjobs/jenkins.php`;
 - you use the default tax import;
 - you want to update the tax rate Germany Standard to 16% on 01.07.2020;
 - you want to update the tax rate Germany Reduced to 5% on 01.07.2020;

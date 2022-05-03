@@ -29,6 +29,7 @@ To reset a Docker environment:
 ```bash
 sudo docker/sdk prune
 ```
+
 2. In the project root directory, clean data, bootstrap the deploy file and start the instance:
 
 ```bash

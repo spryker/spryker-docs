@@ -1,5 +1,5 @@
 ---
-title: HowTo - Integrate and Use Precise Decimal Numbers
+title: HowTo - Integrate and use Precise Decimal Numbers
 description: Use the guide to install and work with precise decimal numbers in arithmetic, casting, rounding, comparing operations. Learn how they work with transfer objects
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -19,8 +19,6 @@ redirect_from:
 ---
 
 The article provides information on how to install and work with precise decimal objects.
-
-***
 
 The `decimal-object` library allows you to work with precise decimal numbers. A decimal number is a number that is smaller than an integer. Decimal numbers can be used when more precision is required, while float numbers are imprecise and shouldn't be used for cases where exact precision is necessary. For example, when dealing with money (a price of a product), measuring weights or liquids (food or water respectively), and length (meters such as a cable), decimal numbers can be used.
 
@@ -42,7 +40,7 @@ To install the `{% raw %}{{{% endraw %}decimal-object{% raw %}}}{% endraw %}` li
 
 You can specify Decimal as a type of your Data Transfer Object’s property. To define it, use the `decimal` type:  
 
-```php
+```
 <transfer name="StockProduct">
     <property name="quantity" type="decimal"/>
 </transfer>
@@ -152,6 +150,7 @@ $decimal = $decimal->negate(); //-7
 ```
 
 **Table of exceptions**
+
 The table provides additional information about exceptions that may occur when working with decimal objects.
 
 | METHOD | EXCEPTION | DESCRIPTION |

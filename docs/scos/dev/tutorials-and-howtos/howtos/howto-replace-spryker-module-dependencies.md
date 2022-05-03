@@ -1,5 +1,5 @@
 ---
-title: HowTo - Replace Spryker Module Dependencies
+title: HowTo - Replace Spryker module dependencies
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-replace-bundle-dependencies
@@ -23,23 +23,21 @@ redirect_from:
   - /v1/docs/en/ht-replace-bundle-dependencies
 ---
 
-{% info_block infoBox "Spryker Dependencies" %}
-
-This content describes how to identify module dependencies and replace a dependent module with another one.
-
-{% endinfo_block %}
+This document describes how to identify module dependencies and replace a dependent module with another one.
 
 Each Spryker module might have several dependent modules that provide communication, utilities and added functionality. Usually adjustments are done via our plugin mechanism or via class extensions. However, when introducing a massive functional change, you may need to replace an entire core module with one of your own (or a 3rd party). To do so, there are two steps that you need to follow. Firstly, you will need to replace the module and secondly, connect the modules to the new functionality.
 
-**For example:**
+{% info_block infoBox "Example" %}
 
 A company working with the Payone and Refund modules decides they want to use a different refund functionality. They can replace the core refund module with their own implementation that satisfies the same interface. This requires that they first replace the existing refund module with a new refund implementation in the project code. Then, they will have to reroute the Payone module to communicate with the new refund functionality instead.
 
-**Prerequisites:**
+{% endinfo_block %}
+
+## Prerequisites
 
 In the example above we assume that you know exactly what core module you want to replace. If that is not the case, you will first need to know what are the core module’s dependencies. You can find this information in a module’s composer.json file. This file lists all the dependent components and can be used to locate the dependent functionality that you want to replace, based on your project’s requirements.
 
-**To replace a module with another module:**
+To replace a module with another module:
 
 The following process describes adding a replace command into a new module to indicate that it replaces a core module.
 
@@ -72,7 +70,7 @@ For more information on using the composer replace command click [here](https://
 
 If you added a replace module, go to `shop/vendor` and check that composer added the new `replace_ module/s` to this directory.
 
-**To check this worked:**
+To check whether this worked:
 
 Go to `shop/vendor/spryker` and check that composer removed the modules that needed to be replaced from the directory. The next step is to connect the module with your new functionality.
 

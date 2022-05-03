@@ -29,7 +29,6 @@ With the Spryker Commerce OS, you can create multiple stores for different scena
 * Define separate search preferences to create an entirely different set of rankings, rules, and settings per store. For example, a date format or a currency.
 * Set up a default store.
 
-
 ## Multi-store setup infrastructure options
 
 Multi-store setup 1: Database, search engine, and key-value storage are shared between stores.

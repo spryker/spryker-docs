@@ -36,7 +36,7 @@ Ensure that you have:
 
 To set up custom response headers:
 
-1. For the video example, change the CmsController of the respective CMS page:
+1. For the video example, change the `CmsController` of the respective CMS page:
 
 ```php
 $response = new \Symfony\Component\HttpFoundation\Response();

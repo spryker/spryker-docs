@@ -4,7 +4,7 @@ description: Marketplace Product Approval Process feature adds Merchant context 
 template: feature-walkthrough-template
 ---
 
-The *Marketplace Product Approval Process* feature adds a Merchant context to Product Approval Process by providing
+The *Marketplace Product Approval Process* feature adds a merchant context to Product Approval Process by providing
 an optional `spy_merchant.default_product_abstract_approval_status` DB column where default product approval statuses for merchants are stored and can be used as default product approval statuses for merchant products. Also, the feature provides Data importer for merchant's default product approval statuses.
 
 ## Module dependency graph

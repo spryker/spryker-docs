@@ -211,12 +211,12 @@ To retrieve a search suggestion, send the request:
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/catalog-search-suggestions?q=comp"
+                "self": "https://glue.mysprykershop.com/catalog-search-suggestions?q=comp"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/catalog-search-suggestions?q=comp"
+        "self": "https://glue.mysprykershop.com/catalog-search-suggestions?q=comp"
     }
 }
 ```

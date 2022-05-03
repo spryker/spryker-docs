@@ -13,8 +13,8 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-configuration-for-the-legacy-demoshop.html
   - title: Amazon Pay - Refund
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-refund.html
-  - title: Amazon Pay - API
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-api.html
+  - title: Handling orders with Amazon Pay API
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/legacy-demoshop-handling-orders-with-amazon-pay-api.html
   - title: Amazon Pay - Email Notifications
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-email-notifications.html
   - title: Amazon Pay - Sandbox Simulations
@@ -36,7 +36,7 @@ If the buyer is a registered Amazon customer, clicking the button prompts to ent
 
 If correct, Amazon creates an order reference and passes it to the shop.
 
-Using this reference and Amazon Pay credentials it is possible to run Amazon Pay API queries.
+Using this reference and Amazon Pay credentials it is possible to run Handling orders with Amazon Pay API queries.
 
 **To insert the Amazon Pay button in your shop, add the following widget on your page:**:
 ```php

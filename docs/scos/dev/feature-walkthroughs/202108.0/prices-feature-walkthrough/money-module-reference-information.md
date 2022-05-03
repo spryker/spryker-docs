@@ -75,10 +75,10 @@ Then, for the above example, the output is `10,00` or `10.00`.
 {% endinfo_block %}
 
 **`MoneyFacade::convertIntegerToDecimal()`**
-In some cases you need a plain decimal representation of the value in integer (i.e., cents). This can be useful, for example, for API calls.
+In some cases you need a plain decimal representation of the value in integer (for example, cents). This can be useful, for example, for API calls.
 
 **`MoneyFacade::convertDecimalToInteger()`**
-In some cases you need an integer (i.e., cents) representation for a decimal value. This can be useful for storing monetary values in the database.
+In some cases you need an integer (for example, cents) representation for a decimal value. This can be useful for storing monetary values in the database.
 
 ## Money collection form type
 

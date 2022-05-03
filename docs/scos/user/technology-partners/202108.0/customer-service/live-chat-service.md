@@ -1,5 +1,5 @@
 ---
-title: live chat service
+title: Live Chat Service
 description: Ensure that live chat helps their customers with new leads and
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/live-chat-service
 related:
   - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
+    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information

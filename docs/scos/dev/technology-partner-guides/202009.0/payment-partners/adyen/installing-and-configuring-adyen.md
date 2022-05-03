@@ -11,8 +11,8 @@ redirect_from:
 related:
   - title: Integrating Adyen
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/integrating-adyen.html
-  - title: Enabling Adyen filtering payment methods
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/enabling-adyen-filtering-payment-methods.html
+  - title: Enabling filtering of payment methods for Ayden
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/enabling-filtering-of-payment-methods-for-adyen.html
   - title: Integrating Adyen payment methods
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/integrating-adyen-payment-methods.html
 ---

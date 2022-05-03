@@ -27,7 +27,7 @@ The following node types are available:
 * **Label**: These nodes do not link to any specific URL, they are used for grouping other nodes.
 * **Category**: Nodes can be assigned to category node URLs.
 * **CMS Page**: Nodes can be assigned to CMS page URLs.
-* **Link**: These nodes link to internal pages in Yves, i.e. login, registration, etc.
+* **Link**: These nodes link to internal pages in Yves, for example, login, registration, etc.
 * **External URL**: These nodes link to external URLs (typically tabs opened in a new browser).
 You can control and adjust Navigation node appearance and add icons by assigning custom CSS classes to them.
 

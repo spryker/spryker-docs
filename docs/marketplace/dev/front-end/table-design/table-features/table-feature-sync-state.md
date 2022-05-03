@@ -8,17 +8,17 @@ This document explains the Table Feature Sync State component in the Components 
 
 ## Overview
 
-Table Feature Sync State is a feature of the Table Component that synchronizes the table state with the browser URL (like pagination, filters, sorting, etc.).
+Table Feature Sync State is a feature of the Table Component that synchronizes the table state with the browser URL (like pagination, filters, sorting).
 
 Check out an example usage of the Table Feature Sync State in the `@spryker/table` config.
 
 Component configuration:
 
-- `enabled` - enables the feature via config.   
-- `tableId` - an `id` of the table that syncs the state of the table with the browser URL (also can be assigned to the table via HTML).  
+- `enabled`—enables the feature via config.   
+- `tableId`—an `id` of the table that syncs the state of the table with the browser URL (also can be assigned to the table via HTML).  
 
 ```html
-<spy-table 
+<spy-table
     [config]="{
         dataSource: { ... },
         columns: [ ... ],
@@ -36,7 +36,12 @@ Component configuration:
 Register the component:
 
 ```ts
-// Dynamic
+declare module '@spryker/table' {
+    interface TableConfig {
+        syncStateUrl?: TableSyncStateConfig;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -71,12 +76,6 @@ export class RootModule {}
 Below you can find interfaces for the Table Feature Sync State:
 
 ```ts
-declare module '@spryker/table' {
-    interface TableConfig {
-        syncStateUrl?: TableSyncStateConfig;
-    }
-}
-
 export interface TableSyncStateConfig extends TableFeatureConfig {
     tableId?: string;
 }

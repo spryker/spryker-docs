@@ -25,9 +25,9 @@ If you want to create a CMS block for [email](/docs/scos/user/features/{{page.ve
 
 ## Prerequisites
 
-To start working with CMS blocks, go to **Content** > **Blocks**.
+To start working with CMS blocks, go to **Content&nbsp;<span aria-label="and then">></span> Blocks**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating a CMS block
 

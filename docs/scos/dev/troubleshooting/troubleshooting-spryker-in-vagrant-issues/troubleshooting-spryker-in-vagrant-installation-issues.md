@@ -24,7 +24,7 @@ redirect_from:
   - /v1/docs/en/troubleshooting
 ---
 
-When you [install Spryker with Vagrant](/docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-mac-os-or-linux-with-development-virtual-machine.html), you might encounter issues when you build up the virtual machine, set up applications and services, or perform other installation-related actions. The following sections can help you troubleshoot these types of issues.
+When you [install Spryker with Vagrant](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html), you might encounter issues when you build up the virtual machine, set up applications and services, or perform other installation-related actions. The following sections can help you troubleshoot these types of issues.
 
 ## Topics
 

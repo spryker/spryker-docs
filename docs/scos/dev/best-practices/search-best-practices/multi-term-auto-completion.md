@@ -29,7 +29,7 @@ Term completion is a feature where a user gets suggestions for search terms and 
 
 After completing “hammer”, the search would suggest more terms found in documents containing both “fortis” and “hammer”.
 
-The Elasticsearch API offers the [completion suggester](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-suggesters-completion.html), which works great in many cases but has one major drawback in that it can only suggest fixed terms that are saved to Elasticsearch during index time. So in the example above, the terms “fortis” and “hammer” as well as both compound variations, i.e. “fortis hammer” and “hammer fortis”, would have to be indexed.
+The Elasticsearch API offers the [completion suggester](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-suggesters-completion.html), which works great in many cases but has one major drawback in that it can only suggest fixed terms that are saved to Elasticsearch during index time. So in the example above, the terms “fortis” and “hammer” as well as both compound variations, for example, “fortis hammer” and “hammer fortis”, would have to be indexed.
 
 We therefore recommend indexing all terms for which you want to offer auto completion (category names, facet values, brands and other categorial terms) in one field called completion_terms: "completion_terms":
 

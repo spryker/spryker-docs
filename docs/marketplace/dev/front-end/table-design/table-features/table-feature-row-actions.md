@@ -15,14 +15,14 @@ Check out an example usage of the Table Feature Row Actions in the `@spryker/tab
 
 Component configuration:
 
-- `enabled` - enables the feature via config.  
-- `actions` - an array with actions that are displayed in the drop down menu and their type of registered [action](/docs/marketplace/dev/front-end/ui-components-library/actions/).  
-- `click` - indicates which action is used for clicking the table row by its `id`.
-- `rowIdPath` - is used for the `rowId` action context.  
-- `availableActionsPath` - path to an array with the available action IDs in the table data row (supports nested objects using dot notation for ex. `prop.nestedProp`).  
+- `enabled`—enables the feature via config.  
+- `actions`—an array with actions that are displayed in the drop down menu and their type of registered [action](/docs/marketplace/dev/front-end/ui-components-library/actions/).  
+- `click`—indicates which action is used for clicking the table row by its `id`.
+- `rowIdPath`—is used for the `rowId` action context.  
+- `availableActionsPath`—path to an array with the available action IDs in the table data row (supports nested objects using dot notation for ex. `prop.nestedProp`).  
 
 ```html
-<spy-table 
+<spy-table
     [config]="{
         dataSource: { ... },
         columns: [ ... ],
@@ -46,7 +46,12 @@ Component configuration:
 Register the component:
 
 ```ts
-// Dynamic
+declare module '@spryker/table' {
+    interface TableConfig {
+        rowActions?: TableRowActionsConfig;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -81,12 +86,6 @@ export class RootModule {}
 Below you can find interfaces for the Table Feature Row Actions:
 
 ```ts
-declare module '@spryker/table' {
-    interface TableConfig {
-        rowActions?: TableRowActionsConfig;
-    }
-}
-
 export interface TableRowActionsConfig extends TableFeatureConfig {
     actions?: TableRowActionBase[];
     click?: string;

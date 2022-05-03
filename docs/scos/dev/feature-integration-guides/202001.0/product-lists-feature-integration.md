@@ -148,7 +148,6 @@ src/Pyz/Zed/ProductListStorage/Persistence/Propel/Schema/spy_product_list_storag
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -244,7 +243,7 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the configured data has been added to the `spy_glossary` table  in the database.
+Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables  in the database.
 {% endinfo_block %}
 
 
@@ -742,7 +741,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that features which use Redis to read product data (i.e., Product Details Page, Product relations, etc.
+Make sure that features which use Redis to read product data (for example, Product Details Page, Product relations, etc.
 {% endinfo_block %} don't show it when a product is restricted for the customer.)
 
 #### Product Restrictions in the Cart

@@ -7,18 +7,18 @@ related:
       link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-promotions-and-discounts-feature-walkthrough.html
 ---
 
-The *Marketplace Promotions and Discounts* feature ensures that the discounts are applied to orders.
+The *Marketplace Promotions and Discounts* feature ensures that discounts are applied to orders.
 
 There are two discount types:
 
 * Voucher
 * Cart rule
 
-A product catalog manager selects a discount type when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
+A product catalog manager selects a discount type when [creating a discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html).
 
 {% info_block warningBox "Warning" %}
 
-In current implementation, it is not possible to create cart rules or vouchers based on any merchant parameters, such as merchant or product offer. However, it is still possible to create cart rules and vouchers for the merchant products. See [Creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html) for more details.
+In current implementation, it is impossible to create cart rules or vouchers based on any merchant parameters, such as merchant or product offer. However, it is still possible to create cart rules and vouchers for the marketplace products. See [Create discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html) for more details.
 
 {% endinfo_block %}
 
@@ -38,7 +38,7 @@ Based on the business logic, discounts can be applied in the following ways:
 A *Voucher* is a discount that applies when a customer enters an active voucher code on the *Cart* page.
 ![Cart voucher](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Promotions+and+Discounts+feature+overview/voucher-storefront.png)
 
-Once the customer clicks **Redeem code**, the page refreshes to show the discount name, discount value and available actions: **Remove** and **Clear all**. The **Clear all** action disables all the applied discounts. The **Remove** action disables a single discount.
+Once the customer clicks **Redeem code**, the page refreshes to show the discount name, discount value, and available actions: **Remove** and **Clear all**. The **Clear all** action disables all the applied discounts. The **Remove** action disables a single discount.
 ![Cart voucher applied](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Promotions+and+Discounts+feature+overview/voucher-cart.png)
 
 Multiple voucher codes can be generated for a single voucher. The code has a **Max number of uses** value which defines how many times the code can be redeemed.
@@ -46,17 +46,17 @@ Multiple voucher codes can be generated for a single voucher. The code has a **M
 You can enter codes manually or use the code generator in the Back Office.
 ![Generate codes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/generate_codes.png)
 
-See [Creating a Voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) to learn how a product catalog manager can create a voucher in the Back Office.
+To learn how a product catalog manager can create a voucher in the Back Office, see [Creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html).
 
 ## Cart Rule
 
-A *Cart rule* is a discount that applies to cart once all the [decision rules](#decision-rule) linked to the cart rule are fulfilled.
+A *cart rule* is a discount that applies to cart once all the [decision rules](#decision-rule) linked to the cart rule are fulfilled.
 
 
-The cart rule is applied automatically. If the decision rules of a discount are fulfilled, the customer can see the discount upon entering cart. Unlike with [voucher](#voucher), the **Clear all** and **Remove** actions are not displayed.
+The cart rule is applied automatically. If the decision rules of a discount are fulfilled, the customer can see the discount upon entering the cart. Unlike with [vouchers](#voucher), the **Clear all** and **Remove** actions are not displayed.
 ![Cart rule](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Promotions+and+Discounts+feature+overview/cart-rule-storefront.png)
 
-See [Creating a Cart Rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html) to learn how a product catalog manager can create a cart rule in the Back Office.
+To learn how a product catalog manager can create a cart rule in the Back Office, see [Create discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html).
 
 ### Decision rule
 A decision rule is a condition assigned to a discount that should be fulfilled for the discount to be applied.
@@ -68,7 +68,7 @@ A discount can have one or more decision rules. Find an exemplary combination be
 | total-quantity | equal |  3 |
 |  day-of-week| equal | 5  |
 
-In this case, the discount is applied if the cart contains 3 items and the purchase is made on the fifth day of the week (Friday).
+In this case, the discount is applied if the cart contains three items and the purchase is made on the fifth day of the week (Friday).
 
 Multiple decision rules form a query. A query is a request for information based on the defined parameters. In the Discount feature, a query requests information from a cart to check if it is eligible for the discount. By specifying decision rules, you define the parameters of the query.
 
@@ -97,10 +97,10 @@ You can switch between Query Builder and Plain query modes to see how the specif
 Decision rules are combined with *AND* and *OR*  combination operators. With the AND operator, all the rules should be fulfilled for the discount to be applied. With the OR operator, at least one of them should be fulfilled for the discount to be applied.
 
 
-In the following example, for the discount to be applied, a cart should contain 3 items and the purchase should be made on Wednesday.
+In the following example, for the discount to be applied, a cart should contain three items, and the purchase should be made on Wednesday.
 ![AND operator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/and-operator.png)
 
-In the following example, for the discount to be applied, a cart should either contain 3 items or the purchase should be made on Wednesday.
+In the following example, for the discount to be applied, a cart should contain three items, or the purchase should be made on Wednesday.
 ![OR operator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/or-operator.png)
 
 {% info_block infoBox "Info" %}
@@ -120,13 +120,13 @@ With the rule groups, you can build multiple levels of rule hierarchy. When a ca
 
 ![Decision rule hierarchy](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+%26+Discounts/Discount/Discount+Feature+Overview/decision-rule-hierarchy.png)
 
-When a cart is evaluated on a level that has a rule and a rule group, the rule group is treated as a single rule. The diagram below shows how a cart is evaluated against the rules on the previous screenshot.
+When a cart is evaluated on a level that has a rule and a rule group, the rule group is treated as a single rule. The following diagram shows how a cart is evaluated against the rules on the previous screenshot.
 
 ### Discount threshold
-*Threshold* is a minimum number of items in cart that should fulfill all the specified decision rules for the discount to be applied.
+A *threshold* is a minimum number of items in the cart that should fulfill all the specified decision rules for the discount to be applied.
 The default value is *1* . It means that a discount is applied if at least one item fulfills the discount's decision rules.
 
-In the following example, the discount is applied if there are four items with the Intel Core processor in cart.
+In the following example, the discount is applied if there are four items with the Intel Core processor in the cart.
 ![Threshold](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/threshold.png)
 
 
@@ -138,11 +138,11 @@ The Marketplace discounts are applied based on the query string.
 
 The *query string* is a discount application type that uses [decision rules](#decision-rule) to dynamically define what products a discount applies to.
 
-The discount in the example below, applies to white products.
+The discount in the following example applies to white products.
 ![Query collection](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/collection-query.png)
 The product selection based on the query string is dynamic:
-* If, at some point, the color attribute of a product changes from white to anything else, the product is no longer eligible to be discounted.
-* If, at some point, a product receives the white color attribute, it becomes eligible for the discount.
+* If at some point, the color attribute of a product changes from white to anything else, the product is no longer eligible to be discounted.
+* If at some point, a product receives the white color attribute, it becomes eligible for the discount.
 
 
 ## Discount calculation
@@ -159,20 +159,20 @@ With the calculator fixed type, the currency of the respective shop is used for 
 {% endinfo_block %}
 
 
-See examples in the table below.
+See examples in the following table.
 | Product price | Calculation type | Amount | Discount applied | Price to pay |
 | --- | --- | --- | --- | --- |
 | €50 |  Calculator percentage | 10 | €5 | €45 |
 | €50 | Calculator fixed | 10 | €10 | €40 |
 
-A product catalog manager defines calculation when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
+A product catalog manager defines calculation when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [Create discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html).
 ![Discount calculation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/discount_calculation.png)
 
 ## Discount exclusiveness
 
 Discount exclusiveness defines if a discount value of a discount can be combined with the discount value of other discounts in a single order.
 
-A product catalog manager defines calculation when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
+A product catalog manager defines calculation when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [Create discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html).
 ![Exclusive discount](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/exclusivity.png)
 
 ### Exclusive discount
@@ -189,7 +189,7 @@ In the following example, a cart with the order total amount of €100 contains 
 
 The discount exclusivity is resolved as follows:
 1. The discounts D1 and D2 are exclusive, so the non-exclusive discount D3 is discarded.
-2. The discount D1 providers more free value than the discount D2.
+2. The discount D1 provides more free value than the discount D2.
 3. As a result, the discount D1 is applied.
 
 
@@ -209,13 +209,13 @@ As all the discounts are non-exclusive, they are applied together.
 
 ## Discount validity interval
 
-Validity interval is a time period during which a discount is active and can be applied.
+A *validity interval* is a time period during which a discount is active and can be applied.
 
 
 If a cart is eligible for a discount outside of its validity interval, the cart rule is not applied. If a customer enters a voucher code outside of its validity interval, they get a "Your voucher code is invalid." message.
 
 
-A product catalog manager defines calculation when [creating a voucher](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-vouchers.html) or [creating a cart rule](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
+A product catalog manager defines calculation when [creating a discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html).
 ![Validity interval](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/validity-interval.png)
 
 {% info_block warningBox "Developer guides" %}

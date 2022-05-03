@@ -44,6 +44,7 @@ To edit a business unit:
 1. Click **Edit** in the _Actions_ column if you want to change the details for a business unit such as Parent BU, Name, IBAN, and BIC.
 
   {% info_block infoBox "Info" %}
+  
   Once the company business unit address is created, you can attach it to a business unit on the **Edit Company Business Unit** page. See [Managing Company Unit Addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-unit-addresses.html) for more details.
 
   {% endinfo_block %}

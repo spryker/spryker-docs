@@ -80,7 +80,7 @@ To be able to use Product Alternatives API, first, you need to have the Alternat
 {% endinfo_block %}
 
 ## Checking Whether Product is Discontinued
-Before suggesting an alternative product, first, you need to identify whether a product is still available, i.e. not discontinued. For this purpose, the response of the `/concrete-products` endpoint has been extended with the following attributes:
+Before suggesting an alternative product, first, you need to identify whether a product is still available, for example, not discontinued. For this purpose, the response of the `/concrete-products` endpoint has been extended with the following attributes:
 
 | Attribute | Type | Description |
 | --- | --- | --- |
@@ -96,7 +96,7 @@ To find out whether a product is discontinued, send a GET request to the endpoin
 `/concrete-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %} `
 Retrieves information on a **concrete** product by SKU.
 
-Sample request: `GET http://mysprykershop.com/concrete-products/145_29885470`
+Request sample: `GET http://mysprykershop.com/concrete-products/145_29885470`
 where `145_29885470` is the SKU of the concrete product.
 
 If the request was successful and a product with the specified SKU was found, the resource responds with a `RestConcreteProductsResponse`. Sample response (truncated) with the `isDiscontinued` and `discontinuedNote` fields populated:
@@ -145,7 +145,7 @@ To retrieve alternatives for a product, send a GET request to the following endp
 * `/concrete-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/abstract-alternative-products` - gets **abstract** products that substitute the item whose SKU is specified;
 * `/concrete-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/concrete-alternative-products` - gets **concrete** products that substitute the item whose SKU is specified.
 
-Sample request: `GET http://mysprykershop.com/concrete-products/145_29885470/abstract-alternative-products`
+Request sample: `GET http://mysprykershop.com/concrete-products/145_29885470/abstract-alternative-products`
 where `145_29885470` is the SKU of the product you are searching alternatives for.
 
 {% info_block warningBox %}

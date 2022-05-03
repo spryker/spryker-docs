@@ -66,7 +66,7 @@ To submit checkout data without order confirmation, you need to use the `/checko
 
 /checkout-data
 
-Sample request: *POST http://glue.mysprykershop.com/checkout-data*
+Request sample: *POST http://glue.mysprykershop.com/checkout-data*
 
 ### Request
 A request should contain the ID of the customer's cart that is being checked out. All other fields are optional.
@@ -576,7 +576,7 @@ To finalize checkout and place an order, send a POST request to the following en
 
 /checkout
 
-Sample request: *POST http://glue.mysprykershop.com/checkout*
+Request sample: *POST http://glue.mysprykershop.com/checkout*
 
 ### Request
 A request should contain:
@@ -777,7 +777,7 @@ You can extend the response with the **orders** resource relationship in order t
 For detailed information and a list of attributes, see section [Retrieving Specific Order](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html#retrieving-specific-order).
 {% endinfo_block %}
 
-Sample request: *POST http://glue.mysprykershop.com/checkout?include=orders*
+Request sample: *POST http://glue.mysprykershop.com/checkout?include=orders*
 
 **Response Sample**
 
@@ -1024,7 +1024,7 @@ If the user is redirected to a third-party page for payment verification, you ne
 
 /order-payments
 
-Sample request: *POST http://glue.mysprykershop.com/order-payments*
+Request sample: *POST http://glue.mysprykershop.com/order-payments*
 
 ### Request
 Your request should contain the payload related to the order. The request can include an optional payment identifier, if necessary.

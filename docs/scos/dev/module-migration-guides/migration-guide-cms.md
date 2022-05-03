@@ -44,7 +44,7 @@ related:
     link: docs/scos/dev/module-migration-guides/migration-guide-cmscollector.html
 ---
 
-## Upgrading from Version 6.* to Version 7.*
+## Upgrading from version 6.* to version 7.*
 
 Version 7.0.0 of the CMS module introduces the [multi-store functionality](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
 
@@ -55,7 +55,9 @@ Version 7.0.0 of the CMS module introduces the [multi-store functionality](/docs
 * Update storage behavior
 * Migrate database
 
-**To upgrade to the new version of the module, do the following:**
+_Estimated migration time: 2 hours_
+
+To upgrade to the new version of the module, do the following:
 
 1. Update the `Cms` module with Composer:
 
@@ -63,7 +65,7 @@ Version 7.0.0 of the CMS module introduces the [multi-store functionality](/docs
 "spryker/cms": "^7.0.0"
 ```
 
-2. **Remove** all deprecated references:
+2. Remove all the deprecated references:
 Search for and update usage of any deprecated class or method that was used.
 
 * Renamed the `createLocaleQuery` method to `getLocaleQuery` in `CmsPersistenceFactory`.
@@ -86,7 +88,8 @@ Exceptions were replaced by Throwables.
 
 Also, keep in mind that a doc block with non-existing methods was removed from `CmsQueryContainerInterface`.
 
-3. Update Database Schema.
+3. Update database schema.
+
 The event behavior needs to be applied to all `SpyCmsPageStore columns`.
 
 **src/Pyz/Zed/Cms/Persistence/Propel/Schema/spy_cms.schema.xml**
@@ -108,7 +111,6 @@ The event behavior needs to be applied to all `SpyCmsPageStore columns`.
 On your local development environment, you may run:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -127,7 +129,7 @@ Before migrating a production database, always review each SQL statement individ
 
 5. Perform Data Migration.
 
-For quick and smooth migration, we have prepared an example migration script. This script will find a page and share it with every store. Your specific project may require customization, especially if you have special rules regarding sharing of pages per store or a collection of `CmsPages` larger than what can be stored in your migration server's available memory.
+For a quick and smooth migration, we have prepared an example migration script. This script will find a page and share it with every store. Your specific project may require customization, especially if you have special rules regarding sharing of pages per store or a collection of `CmsPages` larger than what can be stored in your migration server's available memory.
 
 This script will only migrate pages to stores where persistence is shared.
 
@@ -239,9 +241,9 @@ $ console event:trigger -r cms_page
 $ console event:trigger -r cms_page_search
 ```
 
-_Estimated migration time: 2 hours_
 
-## Upgrading from Version 5. to Version 6.*
+
+## Upgrading from version 5. to version 6.*
 
 CMS version 5.0 is responsible only for CMS pages and page versioning. CMS Block functionality became more flexible and moved to the `CmsBlock` module.
 
@@ -261,7 +263,7 @@ To install the module, `"spryker/cms-block": "^1.0.0"` with Composer is required
 
 After running the last command, you’ll find some new classes in your project under the `\Orm\Zed\Cms\Persistence` namespace.
 
-It’s important to make sure that they are extending the base classes from the core, i.e.
+It’s important to make sure that they are extending the base classes from the core, for example: 
 * `Orm\Zed\Cms\Persistence\SpyCmsBlock` extends `Spryker\Zed\CmsBlock\Persistence\Propel\AbstractSpyCmsBlock`
 * `Orm\Zed\Cms\Persistence\SpyCmsBlockQuery` extends `Spryker\Zed\CmsBlock\Persistence\Propel\AbstractSpyCmsBlockQuery.`
 
@@ -276,8 +278,7 @@ Move CMS Block templates to the `src/Pyz/Shared/CmsBlock/Theme/default/template/
 
 For quick and smooth migration, we have prepared a migration script. You can find it below.
 
-<details>
-<summary markdown='span'>Code sample</summary>
+<details><summary markdown='span'>Code sample</summary>
 
 ```php
 <?php
@@ -471,11 +472,9 @@ class CmsToCmsBlockDataMigration extends Console
 
 }
 ```
-
-<br>
 </details>
 
-Copy script to `src/Pyz/Zed/CmsBlock/Communication/Console/CmsToCmsBlockDataMigration.php` and register it in `Pyz\Zed\Console\ConsoleDependencyProvider`.
+Copy the script to `src/Pyz/Zed/CmsBlock/Communication/Console/CmsToCmsBlockDataMigration.php` and register it in the `Pyz\Zed\Console\ConsoleDependencyProvider`.
 
 ```php
 <?php
@@ -497,7 +496,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 Run the script with the command `vendor/bin/console cms-cms-block:migrate`.
 
-## Upgrading from Version 4.* to Version 5.*
+## Upgrading from version 4.* to version 5.*
 
 CMS Version 5.0 has a new concept for showing pages in the frontend. In the previous CMS versions, after creating a CMS page and running the collectors, we were able to see the page in the frontend, but now this has changed. After creating a CMS page, another step called **Publish** is needed to display the page in the frontend. Publish aggregates all CMS related data and puts it to our new CMS table `spy_cms_version`. The new collectors push this data to the frontend storage and search.
 
@@ -507,32 +506,31 @@ Before upgrading, make sure that you do not use any deprecated code from version
 
 {% endinfo_block %}
 
-### Database Migration
+### Database migration
 
-To start Database migration, run the following commands:
+To start the database migration, run the following commands:
 
 * `vendor/bin/console propel:diff`, manual review is necessary for the generated migration file.
 * `vendor/bin/console propel:migrate`
 * `vendor/bin/console propel:model:build`
 
-After running the last command, you will find some new classes in your project under the `\Orm\Zed\Cms\Persistence` namespace. It is important to make sure that they are extending the base classes from the core, i.e.
+After running the last command, you will find some new classes in your project under the `\Orm\Zed\Cms\Persistence` namespace. It is important to make sure that they are extending the base classes from the core, for example: 
 
 * `Orm\Zed\Cms\Persistence\SpyCmsVersion` extends  `Spryker\Zed\Cms\Persistence\Propel\SpyCmsVersion`
-
 * `Orm\Zed\Cms\Persistence\SpyCmsVersionQuery` extends `Spryker\Zed\Cms\Persistence\Propel\SpyCmsVersionQuery`
 
-### CMS Templates
+### CMS templates
 
 In this version, we have moved all CMS templates to the Shared layer instead of only Yves, but you are still able to use the old files.
 `src/Pyz/Yves/Cms/Theme/default/template/*` => `src/Pyz/Shared/Cms/Theme/default/template/*`
 
-### CMS Twig Functions
+### CMS twig functions
 
 The `TwigCms` function has been improved to provide better speed and performance, it will only send a query to Redis when the translations are not available.
 You can still work with the current version although upgrading is highly recommended.
 You can find it here: `src/Pyz/Yves/Cms/Plugin/TwigCms.php`.
 
-### CMS Collector
+### CMS collector
 
 To push new CMS version data to the frontend storage and search, add it to the `src/Pyz/Zed/Collector/CollectorDependencyProvider.php` plugin stack:
 
@@ -569,7 +567,7 @@ To push new CMS version data to the frontend storage and search, add it to the `
     ?>
 ```
 
-### CMS User Interaction
+### CMS user interaction
 
 When a CMS page is published, we also store/show user information for this action. To store and show user information, register two new plugins from the new `CmsUserConnector` module.
 Add them here: `src/Pyz/Zed/Cms/CmsDependencyProvider.php`
@@ -605,7 +603,8 @@ class CmsDependencyProvider extends SprykerCmsDependencyProvider
 ?>
 ```
 
-### CMS Data Importer
+### CMS data importer
+
 To publish pages after importing, add this to your CMS Importer class:
 
 **Code sample:**
@@ -644,8 +643,9 @@ To publish pages after importing, add this to your CMS Importer class:
     ?>
 ```
 
-### Publishing Current Pages
-To publish current pages, create a console command that calls the following method:
+### Publishing current pages
+
+To publish the current pages, create a console command that calls the following method:
 
 ```php
 <?php
@@ -660,7 +660,7 @@ To publish current pages, create a console command that calls the following meth
     ?>
 ```
 
-## Upgrading from Version 2.* to Version 3.*
+## Upgrading from version 2.* to version 3.*
 
 We have extended CMS pages with localized attributes such as name and HTML meta header information. Also, CMS pages can now be marked as searchable. These changes required some changes in the database.
 
@@ -669,4 +669,4 @@ We have extended CMS pages with localized attributes such as name and HTML meta 
 * `vendor/bin/console propel:diff`, also manual review is necessary for the generated migration file.
 * `vendor/bin/console propel:migrate`
 * `vendor/bin/console propel:model:build`
-* After running the last command you’ll find some new classes in your project under the `\Orm\Zed\Cms\Persistence` namespace. It’s important to make sure that they are extending the base classes from the core, i.e. `Orm\Zed\Cms\Persistence\SpyCmsPageLocalizedAttributes` extends `Spryker\Zed\Cms\Persistence\Propel\AbstractSpyCmsPageLocalizedAttributes`, and `Orm\Zed\Cms\Persistence\SpyCmsPageLocalizedAttributesQuery` extends `Spryker\Zed\Cms\Persistence\Propel\AbstractSpyCmsPageLocalizedAttributesQuery`.
+* After running the last command you’ll find some new classes in your project under the `\Orm\Zed\Cms\Persistence` namespace. It’s important to make sure that they are extending the base classes from the core, for example, `Orm\Zed\Cms\Persistence\SpyCmsPageLocalizedAttributes` extends `Spryker\Zed\Cms\Persistence\Propel\AbstractSpyCmsPageLocalizedAttributes`, and `Orm\Zed\Cms\Persistence\SpyCmsPageLocalizedAttributesQuery` extends `Spryker\Zed\Cms\Persistence\Propel\AbstractSpyCmsPageLocalizedAttributesQuery`.

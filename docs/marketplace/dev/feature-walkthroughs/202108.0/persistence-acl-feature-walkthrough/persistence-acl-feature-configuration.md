@@ -4,7 +4,7 @@ last_updated: Nov 05, 2021
 description: In this article, you will learn how to configure the Persistence ACL feature.
 template: concept-topic-template
 ---
-This article describes how you can configure the [Persistence ACL feature](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html).
+This document describes how you can configure the [Persistence ACL feature](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html).
 
 The Persistence ACL functionality is based on the Propel behavior. You can enable the feature in two different ways:
 - [Create a connection with one or more database tables](#connect-persistence-acl-feature-to-one-or-more-database-tables).
@@ -16,10 +16,10 @@ In the following code snippet, only SpyMerchant entity is configured to be handl
 
 ```xml
 <?xml version="1.0"?>
-<database xmlns="spryker:schema-01" 
+<database xmlns="spryker:schema-01"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          name="zed" 
-          xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" 
+          name="zed"
+          xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
           namespace="Orm\Zed\Merchant\Persistence"
           package="src.Orm.Zed.Merchant.Persistence">
     <table name="spy_merchant">
@@ -31,7 +31,7 @@ In the following code snippet, only SpyMerchant entity is configured to be handl
 ## Connect Persistence ACL feature to all database tables
 
 ACL handles all entities in the system in the following example.
-When configuring ACLs in such a way, be sure to use the [Allowed entity list](#allow-list-configuration) to exclude entities that are needed to function properly.
+When configuring ACLs in such a way, be sure to use the [Allowed entity list](#allowlist-configuration) to exclude entities that are needed to function properly.
 Provide the list of entities that are needed:
 
 - `SpyUser`
@@ -64,16 +64,16 @@ The configuration, unlike the rule, is common to the entire system. The main con
 
 ### AclEntityMetadataConfigTransfer
 
-The properties of the `AclEntityMetadataConfigTransfer` are described in the table below.
+The properties of the `AclEntityMetadataConfigTransfer` are described in the following table.
 
 | PROPERTY | TYPE | DESCRIPTION |
 |-----|-----|-----|
 | aclEntityMetadataCollection | AclEntityMetadataCollectionTransfer | The collection of configurations for different entities.|
-| aclEntityAllowList | string[] | The set of fully qualified classes that this feature does not apply to (even if the user has rules for an entity that is in the allow list). |
+| aclEntityAllowList | string[] | The set of fully qualified classes that this feature does not apply to (even if the user has rules for an entity that is in the allowlist). |
 
 ### AclEntityMetadataCollectionTransfer
 
-The properties of the `AclEntityMetadataCollectionTransfer` are described in the table below.
+The properties of the `AclEntityMetadataCollectionTransfer` are described in the following table.
 
 | PROPERTY | TYPE | DESCRIPTION |
 |-----|-----|-----|
@@ -81,19 +81,19 @@ The properties of the `AclEntityMetadataCollectionTransfer` are described in the
 
 ### AclEntityMetadataTransfer
 
-The properties of the `AclEntityMetadataTransfer` are described in the table below.
+The properties of the `AclEntityMetadataTransfer` are described in the following table.
 
 | PROPERTY | TYPE | DESCRIPTION |
 |-----|-----|-----|
-| parent | AclEntityParentMetadataTransfer | This property is used to configure the inheritance. It is required for the entity which has rules with the [inherited scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/inherited-scope.html), or for the [composite entity](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html). See [Inherited scope vs Composite entity](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html) for more details. |
+| parent | AclEntityParentMetadataTransfer | This property is used to configure the inheritance. It is required for the entity which has rules with the [inherited scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/inherited-scope.html), or for the [composite entity](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html). For more details, see [Inherited scope vs Composite entity](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html). |
 | entityName | string | Fully qualified class name of the configured entity (Propel Entity). |
-| hasSegmentTable | bool | Sets if the configured entity supports segmentation. See [Segment scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/segment-scope.html) documentation for more details. |
+| hasSegmentTable | bool | Sets if the configured entity supports segmentation. For more details, see [Segment scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/segment-scope.html) documentation. |
 | defaultGlobalOperationMask | int | Sets the default binary access mask (see [Execution flow](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/execution-flow.html) documentation). |
-| isSubentity | bool | Indicates whether the configured entity is the part of a composite object. See [Composite entity](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html) for the details. |
+| isSubentity | bool | Indicates whether the configured entity is the part of a composite object. For more details, see [Composite entity](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html). |
 
 ### AclEntityParentMetadataTransfer
 
-The properties of the `AclEntityParentMetadataTransfer` are described in the table below.
+The properties of the `AclEntityParentMetadataTransfer` are described in the following table.
 
 | PROPERTY | TYPE | DESCRIPTION |
 |-----|-----|-----|
@@ -102,7 +102,7 @@ The properties of the `AclEntityParentMetadataTransfer` are described in the tab
 
 ### AclEntityParentConnectionMetadataTransfer
 
-The properties of the `AclEntityParentConnectionMetadataTransfer` are described in the table below.
+The properties of the `AclEntityParentConnectionMetadataTransfer` are described in the following table.
 
 Sometimes, foreign keys are not used to link the child and parent tables, but rather "reference columns". As a result, a `AclEntityParentConnectionMetadataTransfer` is available.
 
@@ -127,7 +127,7 @@ This configuration is necessary to use the functionality of the [Inherited scope
      *
      * @return \Generated\Shared\Transfer\AclEntityMetadataConfigTransfer
      */
-    public function expand(AclEntityMetadataConfigTransfer $aclEntityMetadataConfigTransfer): AclEntityMetadataConfigTransfer 
+    public function expand(AclEntityMetadataConfigTransfer $aclEntityMetadataConfigTransfer): AclEntityMetadataConfigTransfer
     {
         $aclEntityMetadataConfigTransfer->getAclEntityMetadataCollectionOrFail()->addAclEntityMetadata(
             SpyProduct::class,
@@ -161,7 +161,7 @@ This configuration is necessary to use the functionality of the [Inherited scope
             (new AclEntityMetadataTransfer())
                 ->setEntityName(SpyStore::class)
         );
-        
+
         return $aclEntityMetadataConfigTransfer;
     }
 ```
@@ -178,7 +178,7 @@ Pay attention to the [AclEntityParentConnectionMetadataTransfer](#aclentityparen
     *
     * @return \Generated\Shared\Transfer\AclEntityMetadataConfigTransfer
     */
-    public function expand(AclEntityMetadataConfigTransfer $aclEntityMetadataConfigTransfer): AclEntityMetadataConfigTransfer 
+    public function expand(AclEntityMetadataConfigTransfer $aclEntityMetadataConfigTransfer): AclEntityMetadataConfigTransfer
     {
         $aclEntityMetadataConfigTransfer->getAclEntityMetadataCollectionOrFail()->addAclEntityMetadata(
             SpyAvailability::class,
@@ -198,7 +198,7 @@ Pay attention to the [AclEntityParentConnectionMetadataTransfer](#aclentityparen
             SpyProduct::class,
             (new AclEntityMetadataTransfer())->setEntityName(SpyProduct::class)
         );
-        
+
         return $aclEntityMetadataConfigTransfer;
     }
 ```
@@ -217,7 +217,7 @@ Below you can find an example of a [Composite entity](/docs/marketplace/dev/feat
     *
     * @return \Generated\Shared\Transfer\AclEntityMetadataConfigTransfer
     */
-    public function expand(AclEntityMetadataConfigTransfer $aclEntityMetadataConfigTransfer): AclEntityMetadataConfigTransfer 
+    public function expand(AclEntityMetadataConfigTransfer $aclEntityMetadataConfigTransfer): AclEntityMetadataConfigTransfer
     {
         $aclEntityMetadataConfigTransfer->getAclEntityMetadataCollectionOrFail()->addAclEntityMetadata(
             SpyMerchantProfile::class,
@@ -253,14 +253,14 @@ Below you can find an example of a [Composite entity](/docs/marketplace/dev/feat
             SpyMerchant::class,
             (new AclEntityMetadataTransfer())->setEntityName(SpyMerchant::class)
         );
-    
+
         return $aclEntityMetadataConfigTransfer;
     }
 ```
 
 ### Data segmentation support
 
-The following is an example of the data segmentation for the `SpyMerchant`. Data segmentation is required for the [Segment scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/segment-scope.html) rules. 
+The following is an example of the data segmentation for the `SpyMerchant`. Data segmentation is required for the [Segment scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/segment-scope.html) rules.
 
 ```php
     /**
@@ -268,7 +268,7 @@ The following is an example of the data segmentation for the `SpyMerchant`. Data
      *
      * @return \Generated\Shared\Transfer\AclEntityMetadataConfigTransfer
      */
-    public function expand(AclEntityMetadataConfigTransfer $aclEntityMetadataConfigTransfer): AclEntityMetadataConfigTransfer 
+    public function expand(AclEntityMetadataConfigTransfer $aclEntityMetadataConfigTransfer): AclEntityMetadataConfigTransfer
     {
         $aclEntityMetadataConfigTransfer->getAclEntityMetadataCollectionOrFail()->addAclEntityMetadata(
             SpyMerchant::class,
@@ -276,14 +276,14 @@ The following is an example of the data segmentation for the `SpyMerchant`. Data
                 ->setEntityName(SpyMerchant::class)
                 ->setHasSegmentTable(true)
         );
-        
+
         return $aclEntityMetadataConfigTransfer;
     }
 ```
 
 ### Default operation mask
 
-The example below sets the default `Read` permissions for the `SpyCountry` and `Create + Read` permissions for the `SpyResetPassword`.
+The following example sets the default `Read` permissions for the `SpyCountry` and `Create + Read` permissions for the `SpyResetPassword`.
 
 ```php
     /**
@@ -291,7 +291,7 @@ The example below sets the default `Read` permissions for the `SpyCountry` and `
      *
      * @return \Generated\Shared\Transfer\AclEntityMetadataConfigTransfer
      */
-    public function expand(AclEntityMetadataConfigTransfer $aclEntityMetadataConfigTransfer): AclEntityMetadataConfigTransfer 
+    public function expand(AclEntityMetadataConfigTransfer $aclEntityMetadataConfigTransfer): AclEntityMetadataConfigTransfer
     {
         $aclEntityMetadataConfigTransfer->getAclEntityMetadataCollectionOrFail()->addAclEntityMetadata(
             SpyCountry::class,
@@ -307,12 +307,12 @@ The example below sets the default `Read` permissions for the `SpyCountry` and `
                     AclEntityConstants::OPERATION_MASK_CREATE | AclEntityConstants::OPERATION_MASK_READ
                 )
         );
-        
+
         return $aclEntityMetadataConfigTransfer;
     }
 ```
 
-### Allow list configuration
+### Allowlist configuration
 
 The following example adds all the entities required for the Persistence Acl to function correctly:
 
@@ -322,7 +322,7 @@ The following example adds all the entities required for the Persistence Acl to 
      *
      * @return \Generated\Shared\Transfer\AclEntityMetadataConfigTransfer
      */
-    public function expand(AclEntityMetadataConfigTransfer $aclEntityMetadataConfigTransfer): AclEntityMetadataConfigTransfer 
+    public function expand(AclEntityMetadataConfigTransfer $aclEntityMetadataConfigTransfer): AclEntityMetadataConfigTransfer
     {
         $aclEntityMetadataConfigTransfer
             ->addAclEntityAllowListItem(SpyUser::class)

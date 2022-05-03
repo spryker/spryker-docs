@@ -97,7 +97,7 @@ To retrieve a cart permission group, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
-Sample request: `GET http://glue.mysprykershop.com/cart-permission-groups/1`
+Request sample: `GET http://glue.mysprykershop.com/cart-permission-groups/1`
 
 ### Response
 

@@ -25,7 +25,7 @@ To view a product relation, click **View** in the **Actions** column for the pro
 *     The abstract product the relation is displayed for
 *     Number, SKU, name, price, category, and the status of the related products
 
-**Tips & Tricks**
+**Tips and tricks**
 
 In the upper right corner of the page, click:
 
@@ -45,7 +45,7 @@ In the upper right corner of the page, click:
 
 See [Product Relations: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-relations/references/reference-information-product-relations.html) to learn about the attributes used while editing a product relation.
 
-**Tips & Tricks**
+**Tips and tricks**
 In the upper right corner of the page, click **List of product relations** to return to the list of product relations.
 {% info_block warningBox "Saving changes" %}
 

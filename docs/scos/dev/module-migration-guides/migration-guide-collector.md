@@ -34,7 +34,7 @@ related:
     link: docs/scos/dev/module-migration-guides/migration-guide-touch.html
 ---
 
-## Upgrading from Version 5.* to Version 6.*
+## Upgrading from version 5.* to version 6.*
 
 1. The general concept of `collectors`, and `collector queries` are enhanced to support multi-store.
 The following classes were altered to support the multi-store concept:
@@ -65,8 +65,8 @@ The `AbstractCollector::isStorable` is not limited to multi-store entities and c
 
 You can find additional details on the [Collector module release page](https://github.com/spryker/collector/releases).
 
-2. Update/install `spryker/touch` to at least `4.0.0` version. For more information, see [Migration Guide - Touch](/docs/scos/dev/module-migration-guides/migration-guide-touch.html).
-3. If you have multiple stores: Amend your existing custom `AbstractPdoCollectorQuery` extended queries to always select current store related `spy_touch_storage` and `spy_touch_search` records. This has to be made for all of the queries regardless if they work with a multi-store entity or a single-store entity. You can find additional details regarding collector multi-store concept in the previous step, on the [Collector module release page](https://github.com/spryker/collector/releases), and on our [Demoshop implementation](https://github.com/spryker/demoshop).
+5. Update/install `spryker/touch` to at least `4.0.0` version. For more information, see [Migration Guide - Touch](/docs/scos/dev/module-migration-guides/migration-guide-touch.html).
+6. If you have multiple stores: Amend your existing custom `AbstractPdoCollectorQuery` extended queries to always select current store related `spy_touch_storage` and `spy_touch_search` records. This has to be made for all of the queries regardless if they work with a multi-store entity or a single-store entity. You can find additional details regarding collector multi-store concept in the previous step, on the [Collector module release page](https://github.com/spryker/collector/releases), and on our [Demoshop implementation](https://github.com/spryker/demoshop).
 
 **Example of a modified query**
 
@@ -105,15 +105,15 @@ It is important to add the condition to the `LEFT JOIN` section so the number of
 
 {% endinfo_block %}
 
-4. The deprecated `CollectorDependencyProvider::provideLocaleFacade()` is removed, please check your code if you have custom calls or dependencies.
+7. The deprecated `CollectorDependencyProvider::provideLocaleFacade()` is removed, please check your code if you have custom calls or dependencies.
 
-5. The following methods have internal changes, please check if you have customized them:
+8. The following methods have internal changes, please check if you have customized them:
 * `AbstractTouchUpdater::bulkUpdate()`
 * `AbstractTouchUpdater::getCollectorKeyFromData()`
 
 You can find additional details on [Collector module release page](https://github.com/spryker/collector/releases).
 
-## Upgrading from Version 3.* to Version 4.*
+## Upgrading from version 3.* to version 4.*
 
 With version 4 of the Collector module, we fixed the `collector:search:export` and `collector:search:update` console commands to run for all available locales instead of just for the current one. This behavior is now consistent with the storage collector command (`collector:storage:export`).
 

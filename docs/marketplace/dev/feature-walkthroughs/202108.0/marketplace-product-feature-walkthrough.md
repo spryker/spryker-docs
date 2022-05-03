@@ -4,12 +4,11 @@ description: A Marketplace Product feature adds merchant information to the prod
 template: feature-walkthrough-template
 ---
 
-The *Marketplace Product* feature provides a relation between Products and Merchants. 
+The *Marketplace Product* feature provides a relation between Products and Merchants.
 `MerchantProductAbstract` is a database table used to store data with the Product and Merchant relations. The [Product features work as in the Spryker Commerce OS](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html).
 However, on the Storefront, there are additional plugins and widgets to support the relation between Products and Merchants.
 Products are extended with the merchant's data and, when purchased, are assigned to the appropriate `MerchantOrder`.
-See [Marketplace Merchant Portal product management](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-merchant-portal-product-management-feature-walkthrough.html) to learn more about managing products in the Merchant Portal.
-
+To learn more about managing products in the Merchant Portal, see [Marketplace Merchant Portal product management](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-merchant-portal-product-management-feature-walkthrough.html).
 {% info_block warningBox "User documentation" %}
 
 To learn more about the feature and to find out how end users use it, see [Marketplace Product feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-product-feature-overview.html) feature overview for business users.
@@ -25,13 +24,13 @@ The following diagram illustrates the dependencies between the modules for the *
 | MODULE     | DESCRIPTION                |
 |------------|----------------------------|
 | [MerchantProduct](https://github.com/spryker/merchant-product) | Provides connection between the product and merchant entities.  |
-| [MerchantProductDataImport](https://github.com/spryker/merchant-product-data-import) | Imports relations between the products and the merchants from the .csv file.  |
+| [MerchantProductDataImport](https://github.com/spryker/merchant-product-data-import) | Imports relations between the products and the merchants from the CSV file.  |
 | [ProductMerchantPortalGui](https://github.com/spryker/product-merchant-portal-gui) | Provides components for merchant product management.  |
 | [ProductMerchantPortalGuiExtension](https://github.com/spryker/product-merchant-portal-gui-extension) | Provides extension interfaces for the  `ProductMerchantPortalGui` module.  |
 | [MerchantProductStorage](https://github.com/spryker/merchant-product-storage) | Manages the storage for the merchant product abstract.  |
 | [MerchantProductWidget](https://github.com/spryker-shop/merchant-product-widget) | Provides the merchant product abstract information.  |
 | [Product](https://github.com/spryker/product) | Provides the base infrastructure and CRUD operations to handle the abstract and concrete products.  |
-| [MerchantProductsRestApi](https://github.com/spryker/merchant-products-rest-api) | Provides REST API endpoints to manage the merchant products.  |
+| [MerchantProductsRestApi](https://github.com/spryker/merchant-products-rest-api) | Provides REST API endpoints to manage the marketplace products.  |
 | [CartsRestApiExtension](https://github.com/spryker/carts-rest-api-extension) | Provides plugin interfaces used by the `CartsRestApi` module.  |
 
 </div>

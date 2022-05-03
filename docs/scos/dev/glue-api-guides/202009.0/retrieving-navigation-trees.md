@@ -39,7 +39,7 @@ To retrieve a navigation tree, send the request:
 
 ### Request
 
-Sample request: `GET http://glue.mysprykershop.com/navigations/SOCIAL_LINKS`
+Request sample: `GET http://glue.mysprykershop.com/navigations/SOCIAL_LINKS`
 
 
 | String parameter | Description | Exemplary values |

@@ -9,16 +9,16 @@ template: back-office-user-guide-template
 
 ## Prerequisites
 
-To start managing merchant orders for the [main merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/main-merchant-concept.html), navigate to **Sales** *>* **My orders**.
+To start managing merchant orders for the [main merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/main-merchant-concept.html), navigate to **Sales&nbsp;<span aria-label="and then">></span> My orders**.
 
 The instructions assume that there is an existing order with the *New* status.
 
-Each section in this article contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section in this article contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Viewing main merchant orders
 
-To view the [main merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/main-merchant-concept.html) orders, in the *List of Orders* table, click **View** next to the order you want to check.
-This takes you to the *Merchant Order Overview* page.
+To view the [main merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/main-merchant-concept.html) orders, in the **List of Orders** table, click **View** next to the order you want to check.
+This takes you to the **Merchant Order Overview** page.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Back+Office+user+guides/Sales/main-merchant-order-back-office.png)
 
@@ -30,7 +30,7 @@ This section holds reference information related to viewing the [main merchant](
 
 By default, the last created order goes on top of the table. However, you can sort the table by the order number, order reference, created date, customer emails, or the number of items ordered.
 
-On the *Overview of Orders* page, you see the following:
+On the **Overview of Orders** page, you see the following:
 
 - Merchant order reference
 - Marketplace order reference, where the merchant order belongs
@@ -39,13 +39,13 @@ On the *Overview of Orders* page, you see the following:
 - Order state, the grand total of the order, and the number of items ordered
 - Actions that you can do on this page
 
-By default, the last created order goes on top of the table. However, you can sort and search the *List of Orders* table.
+By default, the last created order goes on top of the table. However, you can sort and search the **List of Orders** table.
 
-All columns with headers having arrows in *List of Orders* are sortable.
+All columns with headers having arrows in **List of Orders** are sortable.
 
 ##### Actions column
 
-All the order management options that you can invoke from the *Actions* column in *List of Orders* are described in the following table.
+All the order management options that you can invoke from the **Actions** column in **List of Orders** are described in the following table.
 
 | ACTION | DESCRIPTION |
 | --------- | --------------- |
@@ -53,7 +53,7 @@ All the order management options that you can invoke from the *Actions* column i
 
 #### Merchant Order Overview page
 
-The following table describes the attributes on the *View Order [Order ID]* page when you *view* an order.
+The following table describes the attributes on the **View Order _[Order ID]_** page when you *view* an order.
 
 <table>
 <thead>
@@ -67,7 +67,7 @@ The following table describes the attributes on the *View Order [Order ID]* page
   <tr>
     <td rowspan="11">Order Overview</td>
     <td></td>
-    <td>Section with the general information on the order.</td>
+    <td>Section with the general information about the order.</td>
   </tr>
   <tr>
     <td>Merchant Order reference</td>
@@ -112,7 +112,7 @@ The following table describes the attributes on the *View Order [Order ID]* page
   <tr>
     <td rowspan="6">Customer</td>
     <td></td>
-    <td>Section with the information on the customer who has submitted the order.</td>
+    <td>Section with the information about the customer who has submitted the order.</td>
   </tr>
   <tr>
     <td>Reference</td>
@@ -137,7 +137,7 @@ The following table describes the attributes on the *View Order [Order ID]* page
   <tr>
     <td>Merchant order items</td>
     <td></td>
-    <td>Section with details on every merchant order item with its products and shipment information.</td>
+    <td>Section with details about every merchant order item with its products and shipment information.</td>
   </tr>
   <tr>
     <td></td>
@@ -182,7 +182,7 @@ The following table describes the attributes on the *View Order [Order ID]* page
   <tr>
     <td>Discounts &amp; Vouchers</td>
     <td></td>
-    <td>Section with the information on discounts and vouchers applied to the order.</td>
+    <td>Section with the information about discounts and vouchers applied to the order.</td>
   </tr>
 </tbody>
 </table>
@@ -190,12 +190,11 @@ The following table describes the attributes on the *View Order [Order ID]* page
 ## Changing main merchant order states
 
 To change the state of the order items in a shipment:
-
-1. In the *List of Orders* table, click **View** next to the order with items you want to change the state of. This takes you to the *Merchant Order Overview* page.
+1. In the **List of Orders** table, next to the order with items you want to change the state of, click **View**. This takes you to the **Merchant Order Overview** page.
 2. Scroll down to the desired shipment.
 3. Select the checkbox next to the products you want to change the state of.
-4. In the *Trigger all matching states of order inside this shipment* section, click **the next available state**. See [Reference information: Changing main merchant order states](/docs/marketplace/user/back-office-user-guides/{{page.version}}/sales/managing-main-merchant-orders.html#reference-information-changing-main-merchant-order-states) for details on the available states.
-   The page refreshes to show the message about the successful state change. In the *Trigger all matching states of order inside this shipment* section of the modified shipment, you can see the updated state.
+4. In the **Trigger all matching states of order inside this shipment** section, click **the next available state**. For details about the available states, see [Reference information: Changing main merchant order states](/docs/marketplace/user/back-office-user-guides/{{page.version}}/sales/managing-main-merchant-orders.html#reference-information-changing-main-merchant-order-states).
+   The page refreshes to show the message about the successful state change. In the **Trigger all matching states of order inside this shipment** section of the modified shipment, you can see the updated state.
 5. Repeat step 4 until you get the desired shipment state.
 
 ### Reference information: Changing main merchant order states
@@ -219,8 +218,8 @@ You can create a new shipment for the merchant orders where there is more than o
 
 You can create a new shipment for one or several merchant order items. To create a new shipment:
 
-1. In the *List of Orders* table, click **View** next to the order you want to edit the shipment of.
-2. In the *Merchant Order Items* section of the *Merchant Order Overview* page, click **Create Shipment**.
+1. In the **List of Orders** table, next to the order you want to edit the shipment of, click **View**.
+2. In the **Merchant Order Items** section of the **Merchant Order Overview** page, click **Create Shipment**.
 3. Fill in all the required fields.
 4. Click **Save**.
 
@@ -231,31 +230,31 @@ The following table describes the attributes you enter and select when creating 
 | ATTRIBUTE  | DESCRIPTION   | REQUIRED |
 | ----------------------- | ---------------- | ----------- |
 | Delivery Address                 | Dropdown menu where you can select the delivery address. By default, *New Address* is selected. |              |
-| Salutation   | Salutation to use when addressing the customer.  | ✓ |
-| First Name  | Customer's first name.  | ✓ |
+| Salutation   | Salutation to use when addressing the customer.  | &check; |
+| First Name  | Customer's first name.  | &check; |
 | Middle name  | Customer's middle name.   |   |
-| Last name   | Customer's last name.   | ✓ |
-| Email   | Customer’s email address.   | ✓ |
-| Country   | Drop-down menu with the list of countries to select.  | ✓ |
-| Address 1 | 1st line of the customer's address.  | ✓ |
-| Address 2  | 2nd line of the customer's address.  | ✓ |
+| Last name   | Customer's last name.   | &check; |
+| Email   | Customer’s email address.   | &check; |
+| Country   | Drop-down menu with the list of countries to select.  | &check; |
+| Address 1 | 1st line of the customer's address.  | &check; |
+| Address 2  | 2nd line of the customer's address.  | &check; |
 | Company  | Customer’s company name.  |     |
-| City   | Customer’s city.  | ✓  |
-| ZIP code  | ZIP code.   | ✓  |
+| City   | Customer’s city.  | &check;  |
+| ZIP code  | ZIP code.   | &check;  |
 | Phone  | Customer’s phone number.  |      |
 | Cell Phone  | Customer’s cell phone number.   |   |
 | Description   | Description of the shipping address.  |   |
 | Comment   | Comment to the shipping address.  |              |
-| Shipment method   | Drop-down menu with the list of all the available shipment methods in the system. You can select only one. | ✓  |
+| Shipment method   | Drop-down menu with the list of all the available shipment methods in the system. You can select only one. | &check;  |
 | Requested delivery date | Date by which the order should be delivered. |    |
-| Order items inside this shipment | Check the order items you create or edit the shipment for.   | ✓   |
+| Order items inside this shipment | Check the order items you create or edit the shipment for.   | &check;   |
 
 ## Editing main merchant shipment
 
 You can edit the existing details for the shipment in the Back Office. To do that:
 
-1. In the *List of Orders* table, click **View** next to the order you want to edit the shipment of.
-2. In the *Merchant Order Items* section of the *Merchant Order Overview* page, click **Edit Shipment**. This takes you to the *Edit shipment for Order: [Order ID]* page*.*
+1. In the **List of Orders** table, click **View** next to the order you want to edit the shipment of.
+2. In the **Merchant Order Items** section of the **Merchant Order Overview** page, click **Edit Shipment**. This takes you to the **Edit shipment for Order: _[Order ID]_** page.
 3. Update the main merchant shipment.
 4. Click **Save**.
 

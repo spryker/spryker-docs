@@ -15,8 +15,8 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/integrating-braintree.html
   - title: Braintree - Performing Requests
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-performing-requests.html
-  - title: Braintree - Workflow
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-workflow.html
+  - title: Braintree - Request workflow
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-request-workflow.html
 ---
 
 To configure Braintree module for Spryker Commerce OS (SCOS), do the following:
@@ -30,7 +30,6 @@ composer require spryker-eco/braintree --update-with-dependencies
 Apply database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

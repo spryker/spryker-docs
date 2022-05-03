@@ -15,6 +15,7 @@ redirect_from:
 ## Install feature core
 
 ### Prerequisites
+
 To start feature integration, review and install the necessary features:
 
 | NAME | VERSION |
@@ -80,5 +81,7 @@ class ProductAlternativeDependencyProvider extends SprykerProductAlternativeDepe
 ```
 
 {% info_block warningBox “Verification” %}
+
 Make sure that you can see alternatives for not available products on the product detail page.
+
 {% endinfo_block %}

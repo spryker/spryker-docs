@@ -36,14 +36,16 @@ To retrieve a category node, send the request:
 
 ### Request
 
-Request sample : `GET http://glue.mysprykershop.com/category-nodes/5`
+Request sample: retrieve a category node
+
+`GET http://glue.mysprykershop.com/category-nodes/5`
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve a category node</summary>
 
-```js
+```json
 {
     "data": {
         "type": "category-nodes",

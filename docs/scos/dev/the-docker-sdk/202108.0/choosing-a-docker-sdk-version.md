@@ -1,7 +1,7 @@
 ---
 title: Choosing a Docker SDK version
 description: Learn how to choose a versioning approach and configure a particular version of Docker SDK for your project.
-last_updated: Jun 16, 2021
+last_updated: Apr 03, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/choosing-a-docker-sdk-version
 originalArticleId: 18a333a7-2d89-455f-885a-92d24594fb31
@@ -41,13 +41,13 @@ Depending on your project requirements, choose one of the versioning approaches:
 | Master branch `spryker/docker-sdk:master` | - | - | - | - | Short-term demo projects. Quick start. |
 | Fork of `spryker/docker-sdk` | + | + | + | +  | Customization of the Docker SDK. |
 
-{% info_block infoBox "Fork" %}
+{% info_block infoBox "Forking the Docker SDK" %}
 
-[Spryker Cloud](https://cloud.spryker.com/) does not support forks of `spryker/docker-sdk`.
+[Spryker Cloud Commerce OS](https://cloud.spryker.com/) does not support forks of the Docker SDK. Your project's code must be compatible with the Docker SDK's main branch for a successful deployment. 
 
 {% endinfo_block %}
 
-## Сonfiguring a project to use the chosen version of the Docker SDK
+## Configuring a project to use the chosen version of the Docker SDK
 
 Depending on your project requirements, choose one of the following ways to configure a Docker SDK version:
 
@@ -58,6 +58,13 @@ Depending on your project requirements, choose one of the following ways to conf
 * Reference file:
   * To use a branch as a versioning approach.
   * When Git Submodule is not supported.
+
+
+{% info_block warningBox "Spryker Cloud Commerce OS" %}
+
+Spryker Cloud Commerce OS supports only reference file as a way of defining a Docker SDK version.
+
+{% endinfo_block %}
 
 ### Configuring git submodule
 

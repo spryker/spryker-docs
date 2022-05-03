@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/inxmail
 related:
   - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
+    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information
@@ -36,7 +36,7 @@ YOUR ADVANTAGES:
 * Personal advice and contact person
 
 
-## Related Developer articles
+## Related Developer guides
 
 * [Inxmail API requests](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/inxmail/inxmail-api-requests.html)
 * [Inxmail order reference commands](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/inxmail/inxmail-order-referenced-commands.html)

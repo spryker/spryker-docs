@@ -40,7 +40,7 @@ If you do not see the needed product on the page, there is no need to navigate t
 3. Once done, click **Save**.
 
 
-**Tips & Tricks**
+**Tips and tricks**
 Let's say you have assigned too many products to your category and you need to remove some of them. 
 1. On the same **Assign Products** page, scroll down. You will see the **Products in this category** section. 
 2. Depending on the number of products you want to exclude from the category, either clear the checkbox in the _Selected_ column for specific products or click **Deselect All** (this will deselect all the products on the current page). 

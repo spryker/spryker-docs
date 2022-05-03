@@ -26,8 +26,6 @@ The following feature integration guide expects the basic feature to be in place
 
 {% endinfo_block %}
 
-
-
 This document describes how to integrate the Company Account feature API into a Spryker project.
 
 ## Prerequisites
@@ -36,7 +34,7 @@ To start the feature integration, overview and install the necessary features:
 
 | FEATURE OR GLUE API  | VERSION    | INTEGRATION GUIDE    |
 | ----------------- | ---------- | --------------------- |
-| Glue API: Spryker Core                | {{page.version}} | [Glue API: Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Glue API: Spryker Core                | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Company Account                       | {{page.version}}  | [Company account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html) |
 | Glue API: Customer Account Management | {{page.version}} | [Glue API: Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) |
 | Glue API: Glue Application            | {{page.version}} | [Glue API: Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
@@ -100,7 +98,6 @@ class CompanyUsersRestApiConfig extends SprykerCompanyUsersRestApiConfig
 Generate transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -189,9 +186,10 @@ checkout.validation.company_address.not_applicable,Firmenanschriften sind nur f�
 ```bash
 console data:import glossary
 ```
+
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data has been added to the `spy_glossary` table.
+Make sure that in the database the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 
@@ -204,7 +202,7 @@ Set up the following behaviors.
 Generate the `UUID` column values in the `spy_company` database table:
 
 ```bash
-console uuid:generate Company spy_company 
+console uuid:generate Company spy_company
 ```
 
 
@@ -223,7 +221,7 @@ select count(*) from spy_company where uuid is NULL;
 Run the following command:
 
 ```bash
-console uuid:generate CompanyBusinessUnit spy_company_business_unit 
+console uuid:generate CompanyBusinessUnit spy_company_business_unit
 ```
 
 
@@ -242,7 +240,7 @@ select count(*) from spy_company_business_unit where uuid is NULL;
 Run the following command:
 
 ```bash
-console uuid:generate CompanyRole spy_company_role 
+console uuid:generate CompanyRole spy_company_role
 ```
 
 
@@ -279,7 +277,7 @@ select count(*) from spy_company_unit_address where uuid is NULL;
 Run the following command:
 
 ```bash
-console uuid:generate CompanyUser spy_company_user 
+console uuid:generate CompanyUser spy_company_user
 ```
 
 
@@ -314,7 +312,7 @@ Activate the following plugins:
 | CompanyBusinessUnitAddressesByCompanyBusinessUnitResourceRelationshipPlugin | Adds the `company-business-unit-addresses` resource as a relationship to the `company-business-units` resource. |               | Spryker\Glue\CompanyBusinessUnitAddressesRestApi\Plugin\GlueApplication\CompanyBusinessUnitAddressesByCompanyBusinessUnitResourceRelationshipPlugin |
 | CompanyBusinessUnitByCompanyUserResourceRelationshipPlugin   | Adds the `company-business-units` resource as a relationship. Requires `CompanyUserTransfer` to be provided in the resource payload. |               | Spryker\Glue\CompanyBusinessUnitsRestApi\Plugin\GlueApplication |
 | CompanyRoleByCompanyUserResourceRelationshipPlugin           | Adds the `companies` resource as a relationship. Requires the `CompanyUserTransfer` to be provided in the resource payload. |               | Spryker\Glue\CompaniesRestApi\Plugin\GlueApplication         |
-| CustomerByCompanyUserResourceRelationshipPlugin              | Adds the `customers` resource as a relationship when `CompnayUserTransfer` is provided as a payload. |               | Spryker\Glue\CustomersRestApi\Plugin\GlueApplication         |
+| CustomerByCompanyUserResourceRelationshipPlugin              | Adds the `customers` resource as a relationship when `CompanyUserTransfer` is provided as a payload. |               | Spryker\Glue\CustomersRestApi\Plugin\GlueApplication         |
 | CompanyUserOauthCustomerIdentifierExpanderPlugin             | If a company user UUID is set up in `CustomerTransfer`, expands `CustomerIdentifierTransfer` with the UUID. |               | Spryker\Zed\CompanyUsersRestApi\Communication\Plugin\OauthCustomerConnector |
 | CompanyUserRestUserMapperPlugin                              | Maps company user data to a REST user identifier.            |               | Spryker\Glue\CompanyUserAuthRestApi\Plugin\AuthRestApi       |
 | OauthUserIdentifierFilterPermissionPlugin                    | Filters the user identifier array to remove configured keys before persisting. |               | Spryker\Zed\OauthPermission\Communication\Plugin\Filter      |
@@ -359,7 +357,6 @@ class OauthCustomerConnectorDependencyProvider extends SprykerOauthCustomerConne
     }
 }
 ```
-
 
 
 **src/Pyz/Glue/AuthRestApi/AuthRestApiDependencyProvider.php**
@@ -412,7 +409,6 @@ class OauthCompanyUserDependencyProvider extends SprykerOauthCompanyUserDependen
 ```
 
 
-
 **src/Pyz/Zed/Oauth/OauthDependencyProvider.php**
 
 ```php
@@ -436,7 +432,6 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
     }
 }
 ```
-
 
 
 **src/Pyz/Zed/OauthRevoke/OauthRevokeDependencyProvider.php**
@@ -464,7 +459,6 @@ class OauthRevokeDependencyProvider extends SprykerRevokeOauthDependencyProvider
 ```
 
 
-
 **src/Pyz/Zed/OauthPermission/OauthPermissionConfig.php**
 
 ```php
@@ -488,8 +482,6 @@ class OauthPermissionConfig extends SprykerOauthPermissionConfig
     }
 }
 ```
-
-
 
 **src/Pyz/Glue/CustomersRestApi/CustomersRestApiDependencyProvider.php**
 
@@ -647,7 +639,6 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 ```
 
 
-
 **src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
 
 ```php
@@ -757,7 +748,6 @@ class ShipmentsRestApiDependencyProvider extends SprykerShipmentsRestApiDependen
 ```
 
 
-
 **src/Pyz/Zed/ShipmentsRestApi/ShipmentsRestApiDependencyProvider.php**
 
 ```php
@@ -788,12 +778,11 @@ class ShipmentsRestApiDependencyProvider extends SprykerShipmentsRestApiDependen
 
 {% info_block warningBox "Verification" %}
 
-
 To verify that feature is set up correctly go throw the following steps:
 
 1. [Authenticate as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).
 
-2. [Retrieve available company users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/searching-by-company-users.html#retrieve-available-company-users). 
+2. [Retrieve available company users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/searching-by-company-users.html#retrieve-available-company-users).
 
 3. Using the company user ID you’ve retrieved in the previous step, [authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user).
 Check that the response contains all the necessary data.
@@ -802,7 +791,6 @@ Check that the response contains all the necessary data.
 
 
 {% info_block warningBox "Verification" %}
-
 
 To verify that all the required data is provided in the access token, at [jwt.io](https://jwt.io/), decode the token and check that, in the `sub` property of the payload data, the required `customer_reference`, `id_customer`, `id_company_user`, and permissions are present.
 
@@ -835,7 +823,7 @@ SELECT * FROM spy_oauth_refresh_token WHERE user_identifier LIKE '%{"id_company_
 
 To make sure the `CompanyUserRestUserValidatorPlugin` is set up correctly, check that a non-company user can't access the resources listed in the `CompanyUsersRestApiConfig::COMPANY_USER_RESOURCES`, and the following error is returned:
 
-```
+```php
 {
     "errors": [
         {
@@ -851,28 +839,28 @@ To make sure the `CompanyUserRestUserValidatorPlugin` is set up correctly, check
 
 {% info_block warningBox "Verification" %}
 
-- Send the `GET http://glue.mysprykershop.com/companies/mine` request. Make sure that the response contains a collection of resources with the companies your current company user belongs to.
-- Send the `GET http://glue.mysprykershop.com/companies/{% raw %}{{{% endraw %}company_uuid{% raw %}}}{% endraw %}` request. Make sure that the response contains only the company resource your current company user belongs to.
-- Send the `GET http://glue.mysprykershop.com/company-business-units/mine?include=companies,company-business-unit-addresses request`. Make sure that the response contains:
+- Send the `GET https://glue.mysprykershop.com/companies/mine` request. Make sure that the response contains a collection of resources with the companies your current company user belongs to.
+- Send the `GET https://glue.mysprykershop.com/companies/{% raw %}{{{% endraw %}company_uuid{% raw %}}}{% endraw %}` request. Make sure that the response contains only the company resource your current company user belongs to.
+- Send the `GET https://glue.mysprykershop.com/company-business-units/mine?include=companies,company-business-unit-addresses request`. Make sure that the response contains:
   - The collection of resources with the company business units your current company user belongs to.
   - `companies` and `addresses` relationships.
-- Send the `GET http://glue.mysprykershop.com/company-business-units/{% raw %}{{{% endraw %}company_business_unit_uuid{% raw %}}}{% endraw %}?include=companies,company-business-unit-addresses` request. Make sure that the response contains:
-  - Only the company business unit resource that your current company user belongs to. 
+- Send the `GET https://glue.mysprykershop.com/company-business-units/{% raw %}{{{% endraw %}company_business_unit_uuid{% raw %}}}{% endraw %}?include=companies,company-business-unit-addresses` request. Make sure that the response contains:
+  - Only the company business unit resource that your current company user belongs to.
   - `companies` and `addresses` relationships.
-- Send the `GET http://glue.mysprykershop.com/company-business-unit-addresses/{% raw %}{{{% endraw %}company_business_unit_address_uuid{% raw %}}}{% endraw %}` request. Make sure that response contains only the company business unit address of the business unit your current company user belongs to has.
-- Send the `GET http://glue.mysprykershop.com/company-roles/mine?include=companies` request. Make sure that the response contains:
-  - All the company roles assigned to your current company user. 
+- Send the `GET https://glue.mysprykershop.com/company-business-unit-addresses/{% raw %}{{{% endraw %}company_business_unit_address_uuid{% raw %}}}{% endraw %}` request. Make sure that response contains only the company business unit address of the business unit your current company user belongs to has.
+- Send the `GET https://glue.mysprykershop.com/company-roles/mine?include=companies` request. Make sure that the response contains:
+  - All the company roles assigned to your current company user.
   - The `companies` relationship.
-- Send the `GET http://glue.mysprykershop.com/company-roles/{% raw %}{{{% endraw %}company_role_uuid{% raw %}}}{% endraw %}?include=companies` request. Make sure that the response contains:
-  - Only the company role resource assigned to your current company user. 
+- Send the `GET https://glue.mysprykershop.com/company-roles/{% raw %}{{{% endraw %}company_role_uuid{% raw %}}}{% endraw %}?include=companies` request. Make sure that the response contains:
+  - Only the company role resource assigned to your current company user.
   - The `companies` relationship.
-- Send the `GET http://glue.mysprykershop.com/company-users?include=company-roles,companies,company-business-units,customers` request. Make sure that the response contains:
-  - All the company users of the company your current company user belong to. 
+- Send the `GET https://glue.mysprykershop.com/company-users?include=company-roles,companies,company-business-units,customers` request. Make sure that the response contains:
+  - All the company users of the company your current company user belong to.
   - The `company-roles`, `companies`, `company-business-units`, and `customers`relationships.
-- Send the `GET http://glue.mysprykershop.com/company-users/mine?include=company-roles,companies,company-business-units,customers` request. Make sure that the response contains:
-    - A collection of resources with all the company users that the current user can impersonate as. 
+- Send the `GET https://glue.mysprykershop.com/company-users/mine?include=company-roles,companies,company-business-units,customers` request. Make sure that the response contains:
+    - A collection of resources with all the company users that the current user can impersonate as.
     - The `company-roles`, `companies`, `company-business-units`, and `customers` relationships.
-- Send the `GET http://glue.mysprykershop.com/company-users/{% raw %}{{{% endraw %}company_user_uuid{% raw %}}}{% endraw %}?include=company-roles,companies,company-business-units,customers` request. Make sure that the response contains:
+- Send the `GET https://glue.mysprykershop.com/company-users/{% raw %}{{{% endraw %}company_user_uuid{% raw %}}}{% endraw %}?include=company-roles,companies,company-business-units,customers` request. Make sure that the response contains:
     - One company user
     - The `company-roles`, `companies`, `company-business-units`, and `customers` relationships
 
@@ -882,13 +870,13 @@ To make sure the `CompanyUserRestUserValidatorPlugin` is set up correctly, check
 
 Verify the following using merchant prices and merchant threshold:
 
-- Make sure the company account information is saved during order placement: send the `POST http://glue.mysprykershop.com/checkout` request with a company user access token and check the company-related restrictions are applied to your order.
-- Make sure the company account information is used during cart operations: send the `POST http://glue.mysprykershop.com/carts/:uuid/items` request with company user access token and make sure the company-related restrictions are applied to your cart.
+- Make sure the company account information is saved during order placement: send the `POST https://glue.mysprykershop.com/checkout` request with a company user access token and check the company-related restrictions are applied to your order.
+- Make sure the company account information is used during cart operations: send the `POST https://glue.mysprykershop.com/carts/:uuid/items` request with company user access token and make sure the company-related restrictions are applied to your cart.
 
 {% endinfo_block %}
 {% info_block warningBox "Verification" %}
 
 
-To verify that `CompanyBusinessUnitAddressByCheckoutDataResourceRelationshipPlugin` is activated, send the `POST http://glue.mysprykershop.com/checkout-data?include=company-business-unit-addresses` request and check that the response contains the `company-business-unit-addresses` resource.
+To verify that `CompanyBusinessUnitAddressByCheckoutDataResourceRelationshipPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout-data?include=company-business-unit-addresses` request and check that the response contains the `company-business-unit-addresses` resource.
 
 {% endinfo_block %}

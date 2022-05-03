@@ -1,5 +1,5 @@
 ---
-title: Optimise it
+title: optimise-it
 description: Integrate a custom-tailored chat solution - Optimise it, which can include integrations of messengers (WhatsApp, Facebook, Apple Business Chat), chatbots, video-chat, co-browsing, screen sharing into Spryker  Commerce OS.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/optimise-it
 related:
   - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
+    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information

@@ -29,7 +29,7 @@ To retrieve a full category tree, containing all available nodes and their child
 
 ### Request
 
-Sample request: `GET http://glue.mysprykershop.com/category-trees`
+Request sample: `GET http://glue.mysprykershop.com/category-trees`
 
 
 ### Reponse 

@@ -36,7 +36,7 @@ To retrieve a list of protected resources, send a GET request to the following e
 **/customer-access**
 
 ### Request
-Sample request: `GET http://glue.mysprykershop.com/customer-access`
+Request sample: `GET http://glue.mysprykershop.com/customer-access`
 
 ### Response
 If the request was successful, the endpoint returns the types of API resources that should not be accessed without proper authentication.

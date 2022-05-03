@@ -15,7 +15,7 @@ related:
 
 Spryker enables integration with New Relic for performance monitoring. New Relic contains a set of powerful features that help you monitor the performance and health of your application.
 
-## Related Developer articles
+## Related Developer guides
 
 * [Installing and configuring New Relic with Vagrant](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/new-relic/installing-and-configuring-new-relic–with–vagrant.html)
 * [Configuring New Relic logging](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/new-relic/configuring-new-relic-logging.html)

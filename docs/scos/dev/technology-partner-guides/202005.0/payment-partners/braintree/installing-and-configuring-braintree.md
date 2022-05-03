@@ -9,10 +9,10 @@ redirect_from:
   - /v5/docs/braintree-configuration
   - /v5/docs/en/braintree-configuration
 related:
-  - title: Braintree - Performing Requests for SCOS
+  - title: Braintree - Performing Requests
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-performing-requests.html
-  - title: Braintree - Workflow for SCOS
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-workflow.html
+  - title: Braintree - Request workflow
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-request-workflow.html
   - title: Braintree
     link: docs/scos/user/technology-partners/page.version/payment-partners/braintree.html
 ---

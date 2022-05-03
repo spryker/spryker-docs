@@ -10,7 +10,7 @@ This document explains the Data Transformers service in the Components Library.
 ## Overview
 
 Data Transformers are responsible for transforming data from one form to another based on a certain configuration.
-As a result, backend systems can manipulate data without changing the frontend at all (such as table datasource, select datasource, etc.).
+As a result, backend systems can manipulate data without changing the frontend at all (such as table datasource, select datasource).
 
 Anyone may use the Data Transformer Service to modify data by configuring a specific `DataTransformer`.
 
@@ -96,7 +96,7 @@ export interface CustomDataTransformerConfig extends DataTransformerConfig {
 @Injectable({
     providedIn: 'root',
 })
-export class CustomDataTransformerService implements 
+export class CustomDataTransformerService implements
     DataTransformer<CustomDataTransformerData, CustomDataTransformerDataT> {
     transform(
         data: CustomDataTransformerData,
@@ -139,7 +139,7 @@ interface DataTransformer<D, DT> {
         data: D,
         config: DataTransformerConfig,
         injector?: Injector,
-    ): Observable<DT>;
+    ): Observable<DT | unknown>;
 }
 ```
 
@@ -147,13 +147,13 @@ interface DataTransformer<D, DT> {
 
 There are a few common Data Transformers that are available in the UI library as separate packages:
 
-- [Collate](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/) - sorts, filters, and paginates data based on configuration. It has extra extension points:
-    - [Data Configurators](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/) - are services that allow configuring re-population data (sorting, pagination, filtering). These services are registered via `CollateDataTransformer.withConfigurators()`. There are a few common Collate Data Configurators that are available:
-    - [Filters](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/) - are services that extend the filtering. You need to register them via `CollateDataTransformer.withFilters()`. There are a few common Collate Filters that are available:
-- [Array-map](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/array-map.html) - executes another Data Transformer from the config for every object in the array.
-- [Chain](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/chain.html) - executes another Data Transformer in sequence via configuration.
-- [Date-parse](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-parse.html) - parses the string value as a Date ISO into the JS Date Object.
-- [Date-serialize](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-serialize.html) - serializes JS Date Object into a Date ISO string.
-- [Lens](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/lens.html) - updates the nested object by path using another Data Transformer set up with a configuration object.
-- [Object-map](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/object-map.html) - executes another Data Transformer from the config for each object in the object.
-- [Pluck](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/pluck.html) - selects and returns a nested object by path via configuration.
+- [Collate](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/)—sorts, filters, and paginates data based on configuration. It has extra extension points:
+    - [Data Configurators](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/)—are services that allow configuring re-population data (sorting, pagination, filtering). These services are registered via `CollateDataTransformer.withConfigurators()`. There are a few common Collate Data Configurators that are available:
+    - [Filters](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/)—are services that extend the filtering. You need to register them via `CollateDataTransformer.withFilters()`. There are a few common Collate Filters that are available:
+- [Array-map](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/array-map.html)—executes another Data Transformer from the config for every object in the array.
+- [Chain](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/chain.html)—executes another Data Transformer in sequence via configuration.
+- [Date-parse](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-parse.html)—parses the string value as a Date ISO into the JS Date Object.
+- [Date-serialize](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-serialize.html)—serializes JS Date Object into a Date ISO string.
+- [Lens](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/lens.html)—updates the nested object by path using another Data Transformer set up with a configuration object.
+- [Object-map](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/object-map.html)—executes another Data Transformer from the config for each object in the object.
+- [Pluck](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/pluck.html)—selects and returns a nested object by path via configuration.

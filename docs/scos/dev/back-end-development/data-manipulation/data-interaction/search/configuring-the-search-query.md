@@ -292,7 +292,7 @@ It looks up for products even if a customer makes typos and spelling mistakes in
 #### Suggestions by page type
 
 Suggestions by page type result by page types such as a category, products, and CMS pages.
-Use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\SuggestionByTypeQueryExpanderPlugin` to return sets of documents matching a full-text search query grouped by type, i.e., “product”, “category”, “cms page”, etc. Typical usage for this plugin is suggesting the top results by type when the user is typing in the search field. The necessary result formatter for this plugin is` \Spryker\Client\SearchElasticsearch\Plugin\ResultFormatter\SuggestionByTypeResultFormatterPlugin`.
+Use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\SuggestionByTypeQueryExpanderPlugin` to return sets of documents matching a full-text search query grouped by type, for example, “product”, “category”, “cms page”, etc. Typical usage for this plugin is suggesting the top results by type when the user is typing in the search field. The necessary result formatter for this plugin is` \Spryker\Client\SearchElasticsearch\Plugin\ResultFormatter\SuggestionByTypeResultFormatterPlugin`.
 
 #### Autocompletion
 

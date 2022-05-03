@@ -92,7 +92,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart</summary>
 
 ```json
 {
@@ -137,7 +137,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 <details>
-<summary markdown='span'>Response sample with guest cart items</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with the items included</summary>
 
 ```json
 {
@@ -233,7 +233,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 <details>
-<summary markdown='span'>Response sample with cart rules</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with cart rules included</summary>
 
 ```json
 {
@@ -308,7 +308,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 <details>
-<summary markdown='span'>Response sample with gift cards</summary>
+<summary markdown='span'>Response sample: add items with gift cards to a guest cart</summary>
 
 ```json
 {
@@ -378,8 +378,9 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 ```
 </details>
 
+
 <details>
-<summary markdown='span'>Sample response with guest cart items, concrete products, and product options</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with items, respective concrete products, and their product options included</summary>
 
 ```json
 {
@@ -633,11 +634,10 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with guest cart items, sales units, and product measurement units</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with its items, sales units, and product measurement units</summary>
 
 ```json
 {
@@ -767,7 +767,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 <details>
-<summary markdown='span'>Response sample with a cart rule and a discount voucher</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with a cart rule and a discount voucher</summary>
 
 ```json
 {
@@ -833,11 +833,10 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product labels</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with product labels included</summary>
 
 ```json
 {
@@ -981,7 +980,6 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
-
 </details>
 
 <a name="guest-cart-response-attributes"></a>
@@ -1044,7 +1042,7 @@ For the attributes of other included resources, see:
 
 Guest carts are anonymous as they are not related to any user. If a user registers or logs in, the guest cart is automatically assigned to their account.
 
-To assign a guest cart to a customer, i.e., merge the carts, include the unique identifier associated with the customer in the *X-Anonymous-Customer-Unique-Id* header of the authentication request if it is an existing customer, or request to create a customer account if it is a new one.
+To assign a guest cart to a customer, for example, merge the carts, include the unique identifier associated with the customer in the *X-Anonymous-Customer-Unique-Id* header of the authentication request if it is an existing customer, or request to create a customer account if it is a new one.
 
 Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/scos/user/features/{{page.version}}/multiple-carts-feature-overview.html) environment:
 
@@ -1058,7 +1056,10 @@ Below, you can see an exemplary workflow for converting a guest cart into a regu
 
 1. The customer adds items to a guest cart.
 
-Request sample: `POST https://glue.myspsrykershop.com/guest-cart-items`
+Request sample:
+
+`POST https://glue.myspsrykershop.com/guest-cart-items`
+
 ```json
 {
     "data": {
@@ -1077,6 +1078,7 @@ Request sample: `POST https://glue.myspsrykershop.com/guest-cart-items`
 | X-Anonymous-Customer-Unique-Id | guest-user-001 | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value.. |
 
 **Response sample**
+
 ```json
 {
     "data": {
@@ -1088,9 +1090,13 @@ Request sample: `POST https://glue.myspsrykershop.com/guest-cart-items`
     "included": [...]
 }
 ```
+
 2. The customer logs in.
 
-Request sample: `POST https://glue.myspsrykershop.com/access-tokens`
+Request sample:
+
+`POST https://glue.myspsrykershop.com/access-tokens`
+
 ```json
 {
     "data": {
@@ -1125,9 +1131,12 @@ Request sample: `POST https://glue.myspsrykershop.com/access-tokens`
     }
 }
 ```
+
 3. The customer requests a list of his own carts.
 
-Request sample: `GET https://glue.myspsrykershop.com/carts`
+Request sample:
+
+`GET https://glue.myspsrykershop.com/carts`
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
@@ -1160,6 +1169,7 @@ In the **multi-cart** environment, the guest cart has been converted to a regu
 In a **single cart** environment, items from the guest cart have been added to the user's own cart.
 
 **Response body**
+
 ```json
 {
     "data": [

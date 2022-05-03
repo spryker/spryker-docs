@@ -20,12 +20,12 @@ This article describes how you can manage versions of CMS pages: view general in
 
 ## Prerequisites
 
-To start working with CMS page versions, go to **Content** > **Pages**.
+To start working with CMS page versions, go to **Content&nbsp;<span aria-label="and then">></span> Pages**.
 
 ## Viewing the history of CMS pages
 
 To view version history of a CMS page:
-1. On the *Overview of CMS pages* page in the _Actions_ column, select **View** > **Version History** next to the page whose version history you want to view.
+1. On the *Overview of CMS pages* page in the _Actions_ column, select **View&nbsp;<span aria-label="and then">></span> Version History** next to the page whose version history you want to view.
 2. On the *Version History: [Page Name]* page, the following information is available:
     * Information on the current version and when it was published.
     * Name of the page and the template it is using.

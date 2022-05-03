@@ -28,9 +28,9 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productpackagingunitstorage.html
 ---
 
-## Upgrading from Version 4.* to Version 5.0.0
+## Upgrading from version 4.* to v  version 5.0.0
 
-In this new version of the **ProductPackagingUnitStorage** module, we have added support of decimal stock. You can find more details about the changes on the [ProductPackagingUnitStorage module](https://github.com/spryker/product-packaging-unit-storage/releases) release page.
+In this new version of the `ProductPackagingUnitStorage` module, we have added support of decimal stock. You can find more details about the changes on the [ProductPackagingUnitStorage module](https://github.com/spryker/product-packaging-unit-storage/releases) release page.
 
 {% info_block errorBox %}
 
@@ -38,13 +38,16 @@ This release is a part of the **Decimal Stock** concept migration. When you upgr
 
 {% endinfo_block %}
 
-**To upgrade to the new version of the module, do the following:**
+*Estimated migration time: 15 min*
 
-1. Upgrade the **ProductPackagingUnitStorage** module to the new version:
+To upgrade to the new version of the module, do the following:
+
+1. Upgrade the `ProductPackagingUnitStorage` module to the new version:
 
 ```bash
 composer require spryker/product-packaging-unit-storage: "^5.0.0" --update-with-dependencies
 ```
+
 2. Rename the `spy_product_abstract_packaging_storage.schema.xml` to `spy_product_packaging_unit_storage.schema.xml` and do the following changes:
 
 **src/Pyz/Zed/ProductPackagingUnitStorage/Persistence/Propel/Schema/spy_product_packaging_unit_storage.schema.xml**
@@ -123,10 +126,10 @@ class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProv
 }
 ```
 
-*Estimated migration time: 15 min*
 
 
-## Upgrading from Version 2.* to Version 4.0.0
+
+## Upgrading from version 2.* to version 4.0.0
 
 {% info_block infoBox %}
 
@@ -134,9 +137,11 @@ In order to dismantle the Horizontal Barrier and enable partial module updates o
 
 {% endinfo_block %}
 
-## Upgrading from Version 1.* to Version  2.*
+## Upgrading from version 1.* to version  2.*
 
-The only one major change of **ProductPackagingUnitStorage 2.x.x** is adding dependency to `spryker/product-measurement-unit-storage:^1.0.0` which requires DB changes.
+The only one major change of `ProductPackagingUnitStorage` 2.x.x is adding dependency to `spryker/product-measurement-unit-storage:^1.0.0` which requires DB changes.
+
+*Estimated migration time: ~1h.*
 
 To perform the migration, follow the steps:
 
@@ -146,10 +151,11 @@ To perform the migration, follow the steps:
 ```bash
 vendor/bin/console propel:install
 ```
+
 3. Generate transfers:
 
 ```bash
 vendor/bin/console transfer:generate
 ```
 
-*Estimated migration time: ~1h.*
+

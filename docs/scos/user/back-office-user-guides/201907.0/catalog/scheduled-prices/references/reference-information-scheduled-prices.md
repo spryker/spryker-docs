@@ -17,10 +17,10 @@ This topic contains the reference information that you need to know when working
 
 In the **Scheduled Prices** section you see the following:
 
-*     Link to the page where the format of the file with price schedules is described.
-*     Schedule name field
-*     File selection button
-*     The button for importing price schedules from the selected file
+* Link to the page where the format of the file with price schedules is described.
+* Schedule name field
+* File selection button
+* The button for importing price schedules from the selected file
 
 ## Import New Scheduled Prices Page Attributes
 
@@ -55,7 +55,7 @@ The **Scheduled Prices: Import dry run** page is divided into four sections.
 | Attribute | Description |
 | --- | --- |
 | **Schedule name** |The name of the list of price product schedules which you have just imported.  |
-| **Select your CSV file** |Here, you can select the file with price product schedules which you want to re-import. It is used in case you want to correct or change some of the schedules you have imported. Learn about file format in [HowTo - Import Scheduled Prices](/docs/scos/dev/tutorials/201907.0/howtos/feature-howtos/howto-import-scheduled-prices.html).  |
+| **Select your CSV file** |Here, you can select the file with price product schedules which you want to re-import. It is used in case you want to correct or change some of the schedules you have imported. Learn about file format in [HowTo - Import Scheduled Prices](/docs/scos/dev/tutorials/201907.0/howtos/feature-howtos/howto-import-scheduled-prices.html). |
 | **Row n°** | A numeric identifier of a price schedule entry in the list of price schedules. |
 | **Error** |  Describes why a particular price schedule has not been imported.|
 | **ID** | A numeric identifier of price schedule. |

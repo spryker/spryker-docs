@@ -17,19 +17,19 @@ related:
 
 The topic describes how to manage payment methods.
 
-You can:
+You can do the following:
 * View payment methods available on the Storefront.
 * Edit payment methods: update payment method details, assign payment methods to store, and activate or deactivate payment methods.
 
 ## Prerequisites
 
-To start working with payment methods, go to **Administration** > **Payment Methods**.
+To start working with payment methods, go to **Administration&nbsp;<span aria-label="and then">></span> Payment Methods**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Viewing payment methods
 
-To view details of a payment method, in the *Actions* column, click **View** for the payment method. On the *View Payment Method: [Payment Method name]* page, you can see the following information:
+To view details of a payment method, for the payment method, in the **Actions** column, click **View**. On the **View Payment Method: _[Payment Method name]_** page, you can see the following information:
 
 * Payment method key
 * Name of the payment method
@@ -43,14 +43,14 @@ For the reference information, see the [Reference information: Editing payment m
 
 To edit a payment method:
 
-1. On the *Payment Methods* page, in the *Actions* column for the payment method you want to update, click **Edit** . This redirects you to the *Edit Payment Method [Payment Method Name]* page containing two tabs: *Configuration* and *Store relation*.
-2. In the *Configuration* tab, update the availability status of the payment method under **Is the Payment Method active?**:
-* Select the checkbox to make the payment method available in the *Payment* step during the checkout process.
-* Clear the checkbox to make the payment method unavailable in the *Payment* step during the checkout process.
+1. On the **Payment Methods** page, in the **Actions** column for the payment method you want to update, click **Edit** . This redirects you to the **Edit Payment Method _[Payment Method Name]_** page containing two tabs: **Configuration** and **Store relation**.
+2. On the **Configuration** tab, update the availability status of the payment method under **Is the Payment Method active?**:
+* Select the checkbox to make the payment method available in the **Payment** step during the checkout process.
+* Clear the checkbox to make the payment method unavailable in the **Payment** step during the checkout process.
 
 ![Edit the payment method](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Payment+Management/Payment+Methods/Managing+Payment+Methods/edit-payment-method.png)
 
-3. In the *Store relation* tab, select stores you want the payment method to be displayed in.
+3. On the **Store relation** tab, select stores you want the payment method to be displayed in.
 
 4. To apply the changes, click **Save**.
 

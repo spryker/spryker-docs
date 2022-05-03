@@ -16,9 +16,9 @@ The topic describes how to create warehouses in the Back Office.
 
 ## Prerequisites
 
-To start working with warehouses, go to **Administration** > **Warehouses**.
+To start working with warehouses, go to **Administration&nbsp;<span aria-label="and then">></span> Warehouses**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating warehouses
 
@@ -52,7 +52,7 @@ The following table describes the attributes you see and enter when creating, vi
 
 ## What's next?
 
-The warehouse has been created. You can start working with it when creating or editing a concrete product. For more details, see [Creating a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/concrete-products/creating-product-variants.html).
+The warehouse has been created. You can start working with it when creating or editing a concrete product. For more details, see [Creating a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/creating-product-variants.html).
 
 Additionally, you can edit any warehouse. For more details, see the [Editing warehouse details](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/managing-warehouses.html#editing-warehouse-details) section in *Managing Warehouses*.
 

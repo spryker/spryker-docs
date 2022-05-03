@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-customers
   - /docs/managing-customers
   - /docs/en/managing-customers
-  - /docs/scos/user/back-office-user-guides/202108.0/customer/customer-customer-access-customer-groups/managing-customers.html
+  - /docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html
 related:
   - title: Customer Accounts
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
@@ -58,3 +58,8 @@ Once you create a customer, a verification email is sent to their email address,
 |COMPANY| Company. Not to be confused with a [B2B company](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html). |
 | LOCALE | Locale.|
 | SEND PASSWORD TOKEN THROUGH EMAIL | If you select the checkbox, after saving the customer, an email will be sent to the customer containing a link. By accessing the link, the customer will be able to set a password for the account. If you don’t select this option, the customer will still be able request this email on the Storefront. |
+
+## Next steps
+
+* [Add customer addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/add-customer-addresses.html)
+* [Add notes to customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/add-notes-to-customers.html)

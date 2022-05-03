@@ -63,3 +63,7 @@ The following table describes the attributes you enter and select when adding a 
 |PHONE| Phone number. |
 |COMPANY| Company. Not to be confused with a [B2B company](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html). |
 |COMMENT| Any comment about the address. For example, `Use only for billing`. |
+
+## Next steps
+
+To select addresses for a customer, [edit a customer](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/edit-customers.html)

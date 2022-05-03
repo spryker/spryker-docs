@@ -1,5 +1,5 @@
 ---
-title: Configuring an Events Queue
+title: Configuring an events queue
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/event-configure-q

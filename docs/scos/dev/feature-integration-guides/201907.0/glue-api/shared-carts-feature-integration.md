@@ -308,18 +308,22 @@ Send the `GET https://glue.mysprykershop.com/carts/?include=cart-permission-grou
 
 Send the `GET https://glue.mysprykershop.com/carts/{{cart_uuid}}/?include=cart-permission-groups` request and make sure that a single cart item (no matter owned by customers or shared with them) is returned.
 
+{% endinfo_block %}
+
 {% info_block warningBox “Verification” %}
 
 Send the `GET https://glue.mysprykershop.com/carts/?include=shared-carts,cart-permission-groups,company-users` request and make sure that the carts shared with the other users are returned with the `shared-carts` resource as a relationship. Also, make sure that `cart-permission-groups` and `company-user` resources are returned as relationships of the `shared-carts` resource.
 
 Send the `GET https://glue.mysprykershop.com/carts/{{cart_uuid}}/?include=shared-carts,cart-permission-groups,company-users` request and make sure that a single cart with `cart-permission-groups` and `company-user` resources is returned.
-{% endinfo_block %} is returned.)
+
+{% endinfo_block %}
 
 {% info_block warningBox “Verification” %}
 
 To make sure that `CartPermissionGroupsResourceRoutePlugin` is installed correctly, check that the `https://glue.mysprykershop.com/cart-permission-groups` resource is available.
 
 Make sure that the `GET https://glue.mysprykershop.com/cart-permission-groups/{{permission_group_id}}` request returns a single `cart-permission-groups` resource.
+
 {% endinfo_block %}
 
 {% info_block warningBox “Verification” %}

@@ -15,8 +15,6 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-units.html
   - title: Managing Company Roles
     link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-roles.html
-  - title: Managing Companies
-    link: docs/scos/user/back-office-user-guides/page.version/customer/manage-companies.html
 ---
 
 This topic describes how to manage company users.

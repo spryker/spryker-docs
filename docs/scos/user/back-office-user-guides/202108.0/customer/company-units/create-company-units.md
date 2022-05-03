@@ -18,7 +18,7 @@ This document describes how to create company units.
 ## Prerequisites
 
 * [Create a company](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/manage-companies.html).
-* Review the [reference information](#reference-information-create-a-company-unit-address) before you start, or look up the necessary information as you go through the process.
+* Review the [reference information](#reference-information-create-a-company-unit) before you start, or look up the necessary information as you go through the process.
 
 ## Create a company unit
 

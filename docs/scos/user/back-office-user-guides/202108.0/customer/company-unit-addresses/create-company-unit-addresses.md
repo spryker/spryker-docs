@@ -52,7 +52,7 @@ This document describes how to create company unit addresses in the Back Office.
 
 ## Next steps
 
-* [Assign the address to a company unit](/docs/scos/user/back-office-user-guides/{{page.history}}/customer/company-units/edit-company-units.html)
+* [Assign the address to a company unit](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-units/edit-company-units.html)
 * [Edit company unit addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-unit-addresses/edit-company-unit-addresses.html)
 * [Create company roles](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-roles/create-company-roles.html)
 * [Create company users](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-users/create-company-users.html)

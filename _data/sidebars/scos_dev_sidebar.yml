@@ -3923,7 +3923,7 @@ entries:
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-custom-content-item.html
         - title: "HowTo: Define if a cart should be deleted after placing an order"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html
-        - title: "HowTo:  Render configurable bundle templates in the Storefront"
+        - title: "HowTo: Render configurable bundle templates in the Storefront"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html
         - title: "HowTo: Disable split delivery in Yves interface"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html

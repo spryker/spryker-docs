@@ -102,7 +102,7 @@ class ProductTable extends AbstractTable
 ```
 
 ## Creating a Factory
-The factory should be placed in the communication layer and should contain a method that returns an instance of the `ProductTable` class. Add the method that constructs the instance of the `ProductTable` class:
+The factory must be placed in the communication layer and must contain a method that returns an instance of the `ProductTable` class. Add the method that constructs the instance of the `ProductTable` class:
 
 ```php
 <?php

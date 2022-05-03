@@ -47,7 +47,7 @@ To cope with these challenges, Spryker’s architecture differentiates a project
 ## Internationalization vs localization
 Internationalization is the process of building software so that it supports localization ( implementing the mechanisms to offer the content that corresponds to the users language and preferences). It’s the step that comes before localization and settles the conventions where and how the localization resources must be stored. In other words, it means adapting the design and layout of your software product, so that it displays content that’s adapted to the users' culture and language, such as translated text, cultural accepted images and layout.
 
-Localization is adapting the design and layout of your software product so that it displays content that’s adapted to the users culture and language, such as translated text, cultural accepted images, and layout. Its main focus is gathering the necessary resources and follow the conventions that are implemented through internationalization. This means that for each locale that’s supported by the application, the application should have its corresponding resources.
+Localization is adapting the design and layout of your software product so that it displays content that’s adapted to the users culture and language, such as translated text, cultural accepted images, and layout. Its main focus is gathering the necessary resources and follow the conventions that are implemented through internationalization. This means that for each locale that’s supported by the application, the application must have its corresponding resources.
 
 {% info_block infoBox %}
 

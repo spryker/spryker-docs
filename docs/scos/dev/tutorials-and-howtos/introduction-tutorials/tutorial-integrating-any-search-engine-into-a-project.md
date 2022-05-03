@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Integrating any search engine into a project
+title: "Tutorial: Integrating any search engine into a project"
 description: Learn how to integrate any external search engine instead of the default Elasticsearch.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -51,7 +51,7 @@ To build a query, you have to define, for example, `FfSearchQueryTransfer` objec
 ```
 Then you create a query model, for example, `FactFinderQuery`. The basic version might look like this:
 
-<details open>
+<details>
 <summary markdown='span'>Code sample</summary>
 
 ```php
@@ -132,7 +132,7 @@ To handle search requests through a different source, you need your own model im
 
 Template for this model is:
 
-<details open>
+<details>
 <summary markdown='span'>Code sample</summary>
 
 ```php
@@ -248,7 +248,7 @@ It means that in order to use the FACT-Finder response, you have to comply with 
 You have to respond with an object, supporting an array-based or `get`-based index. For example, creating a JSON object or a transfer object.
 
 Example of a response from the search provider:
-<details open>
+<details>
 <summary markdown='span'>Code sample</summary>
 
 ```
@@ -330,7 +330,7 @@ To handle search update events, you have to implement the following methods of t
 * `writeDocuments`
 
 #### 2. Handle the events
-Since Spryker stores not only product data in Elasticsearch, but also CMS pages, categories, etc., you have to make sure that only product data is handled by the FACT-Finder adapter.
+Since Spryker stores not only product data in Elasticsearch, but also CMS pages and categories, make sure that only product data is handled by the FACT-Finder adapter.
 
 To achieve this, change schema for the search documents in `spy_product_page_search.schema.xml`. Make sure to use the same source identifier as used in the adapter class.
 ```xml

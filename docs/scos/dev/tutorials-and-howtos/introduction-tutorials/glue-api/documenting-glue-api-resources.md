@@ -132,7 +132,6 @@ For more information on `ResourceRelationshipPlugins`, see [Relationship Plugin]
 
 
 
-
 ## REST methods
 
 In addition to requests and responses, you can also supply additional information on your API endpoints. To do so, you need to modify the resource controllers of your REST API modules.

@@ -57,6 +57,7 @@ To apply validation rules to an API:
 ```bash
 vendor/bin/console rest-api:build-request-validation-cache`
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure `src/Pyz/Generated/Glue/Validator/validation.cache` has been updated.

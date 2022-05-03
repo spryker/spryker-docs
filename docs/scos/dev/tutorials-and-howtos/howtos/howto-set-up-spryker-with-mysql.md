@@ -24,12 +24,13 @@ redirect_from:
   - /v1/docs/en/ht-setup-spryker-with-mysql
 ---
 
-Spryker supports MySQL database. To install it with this database, follow these instructions to adjust the configuration.
+Spryker supports connecting to the MySQL database. To install a demo shop with this database, follow the instructions to adjust the configuration.
 
 ## MySQL version
+
 Currently Spryker works only with MySQL version 5.7 or higher.
 
-##  Adjusting Spryker to run with MySQL
+## Adjust Spryker to run with MySQL
 
 To run the Spryker Demoshop with MySQL, adjust some parts in our configs:
 
@@ -49,11 +50,11 @@ DATABASE_DEFAULT_ENGINE='mysql'
 
 3. That's it. Now, run `vendor/bin/install` to install Spryker with MySQL.
 
-## MySQL GroupBy setting
+## Configure MySQL GroupBy setting
 
 In some MySQL servers, there is the `ONLY_FULL_GROUP_BY` option which forces all columns to be present in `group_by`. This option should be removed from your configurations of MySQL:
 
-**Wrong setting:**
+**Wrong setting**
 
 ```bash
 [mysqld]
@@ -62,7 +63,7 @@ In some MySQL servers, there is the `ONLY_FULL_GROUP_BY` option which forces all
 sql-mode = STRICT_ALL_TABLES,ONLY_FULL_GROUP_BY
 ```
 
-**Correct setting:**
+**Correct setting**
 
 ```bash
 [mysqld]

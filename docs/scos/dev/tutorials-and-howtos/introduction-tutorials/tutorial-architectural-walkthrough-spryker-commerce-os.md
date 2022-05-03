@@ -730,7 +730,7 @@ class HelloSprykerDependencyProvider extends AbstractBundleDependencyProvider
 }																	
 ```
 
-5. Inject the dependency using the HelloSprykerBusinessFactory.
+5. Inject the dependency using the `HelloSprykerBusinessFactory`.
 
 ```php
 /**

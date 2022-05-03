@@ -9,8 +9,6 @@ template: concept-topic-template
 
 The upgrader tool is a utility that automatically updates a Spryker project’s modules and libraries to the latest versions.
 
-
-
 ## How the upgrader tool works
 
 To update a project, the upgrader tool runs the following steps.

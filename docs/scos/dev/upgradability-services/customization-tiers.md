@@ -5,11 +5,7 @@ last_updated: Nov 25, 2021
 template: concept-topic-template
 ---
 
-
-
 ## What are customization tiers?
-
-
 
 <!-- related: /docs.spryker.com/docs/scos/dev/guidelines/project-development-guidelines.md -->
 
@@ -23,7 +19,6 @@ template: concept-topic-template
 ### What coding principals should I follow to qualify for this tier?
 
 Concrete principals with at least one example each.
-
 
 ## {CUSTOMIZATION-TIER-2}
 

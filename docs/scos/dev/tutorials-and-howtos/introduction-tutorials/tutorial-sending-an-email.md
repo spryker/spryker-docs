@@ -18,7 +18,8 @@ The following example represents a real-world scenario: `CustomerRegistration`.
 
 A customer goes through the registration process in your frontend (Yves) and all customer information is sent to Zed. Zed uses the information to register the customer. Once the registration is completed, the customer will receive a confirmation email.
 
-## 1. Handling Mail Usage
+## 1. Handling mail usage
+
 In the model which handles the registration, you can override the  `sendRegistrationToken` function:
 
 ```php
@@ -63,6 +64,7 @@ class Customer extends SprykerCustomer
     }
 }
 ```
+
 Also, you need to override factory:
 
 ```php
@@ -112,6 +114,7 @@ protected function sendRegistrationToken()
     $this->mailFacade->handleMail($mailTransfer);
 }
 ```
+
 ## 2. Creating a MailTypePlugin
 
 Now, create the `MailType` plugin for this example. See [HowTo - Create and Register a MailTypePlugin](/docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html) for more information on creating a MailTypePlugin:
@@ -245,6 +248,7 @@ When the plugin is created, it should be registered in `MailDependencyProvider`:
 ```
 
 ## 4. Mail translations
+
 The default `MailBuilder` also has access to the glossary with the `setSubject()` method. This is used for translations as follows:
 
 ```php
@@ -297,7 +301,7 @@ namespace Spryker\Zed\Mail\Business\Model\Mail\Builder;
 }
 ```
 
-As you can see above, you can also translate with the placeholder. For the `mail.order.shipped.subject` key, we have ` Your order {orderReference} is on its way as translation`.
+As you can see above, you can also translate with the placeholder. For the `mail.order.shipped.subject` key, we have `Your order {orderReference} is on its way as translation`.
 
 In your `MailType` plugin, you can use the `orderReference` from the given `OrderTransfer` within the subject:
 
@@ -321,7 +325,8 @@ protected function setSubject(MailBuilderInterface $mailBuilder)
 }
 ```
 
-## Setting Templates
+## Setting templates
+
 Usually you will have a `.twig` file which contains the template you want to use for mail. You need to set the template which should be used in your `MailType` plugin:
 
 ```php
@@ -334,9 +339,10 @@ protected function setTextTemplate(MailBuilderInterface $mailBuilder)
 ...
 }
 ```
+
 The provider determines the template final look. It can contain a plain text, HTML, etc. For example, you can even have a template which generates JSON:
 
-```json
+```twig
 {
     ...
     customer: "{% raw %}{{{% endraw %} mail.customer.firstName {% raw %}}}{% endraw %} {% raw %}{{{% endraw %} mail.customer.lastName {% raw %}}}{% endraw %}",
@@ -346,7 +352,7 @@ The provider determines the template final look. It can contain a plain text, HT
 
 In our example we have a plain text template with:
 
-```json
+```twig
 {% raw %}{{{% endraw %} 'mail.customer.registration.text' | trans {% raw %}}}{% endraw %}
 ```
 
@@ -356,7 +362,7 @@ The templates must be placed within the module's Presentation layer. In our exam
 
 We also provide a basic layout file where you can inject concrete content files to. If you want to build your own layout, you need to have the following in your template:
 
-```json
+```twig
 {% raw %}{%{% endraw %} for template in mail.templates {% raw %}%}{% endraw %}
     {% raw %}{%{% endraw %} if not template.isHtml {% raw %}%}{% endraw %}
         {% raw %}{%{% endraw %} include "@" ~ template.name with {mail: mail} {% raw %}%}{% endraw %}
@@ -368,7 +374,7 @@ This one is used for plain text messages, and templates can also be used to gene
 
 For HTML messages you need to have this in your layout file:
 
-```json
+```twig
 {% raw %}{%{% endraw %} for template in mail.templates {% raw %}%}{% endraw %}
     {% raw %}{%{% endraw %} if template.isHtml {% raw %}%}{% endraw %}
         {% raw %}{%{% endraw %} include "@" ~ template.name with {mail: mail} {% raw %}%}{% endraw %}

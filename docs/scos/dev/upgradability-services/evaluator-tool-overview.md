@@ -65,17 +65,18 @@ Total messages: 244
 
 You can use the evaluator tool as follows:
 * Analyze project code compliance:
+
 ```bash
 analyze:php:code-compliance
 ```
 
 * Generate a report about code compliance issues:
+
 ```bash
 analyze:php:code-compliance-report
 ```
 
 For detailed instructions, see [Running the evaluator tool](/docs/scos/dev/upgradability-services/running-the-evaluator-tool.html).
-
 
 ## Next steps
 

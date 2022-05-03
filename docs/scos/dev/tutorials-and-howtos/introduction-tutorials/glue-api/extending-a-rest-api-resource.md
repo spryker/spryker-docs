@@ -34,7 +34,7 @@ The following guide relies on your knowledge of the structure of a Glue REST API
 
 {% endinfo_block %}
 
-## Prerequisites:
+## Prerequisites
 
 To complete this tutorial, you need to comply with the following prerequisites:
 
@@ -93,6 +93,7 @@ All transfer file names end with `.transfer.xml`.
 
 * Run `vendor/bin/console transfer:generate` to generate the transfers.
 * Check that the generated transfers contain the attribute you added:
+
     * `src/Generated/Shared/Transfer/AbstractProductsRestAttributesTransfer.php - for abstract products`;
     * `src/Generated/Shared/Transfer/ConcreteProductsRestAttributesTransfer.php` - for concrete products;
 
@@ -110,7 +111,7 @@ console spryk:run AddSharedRestAttributesTransfer --mode=project --module=Resour
 
 If automatic transfer-to-transfer conversion can be performed, you do not need to take extra steps to put data in the attribute you added on step 1. Automatic conversion occurs when the attribute name defined in the REST transfer matches exactly the name of the respective field in the storage transfer.
 
-In more complicated cases, when, for example, you need to pull data from alternative storage or map data differently from what automapping does, you need to override the processor classes. Let us override the `AbstractProductsResourceMapper` class in order to add the `manufacturerCountry` attribute data. For this purpose, we need to extend, on the project level, the `ProductsRestApi` module that implements the Products API. To do this:
+In more complicated cases, when, for example, you need to pull data from alternative storage or map data differently from what auto-mapping does, you need to override the processor classes. Let us override the `AbstractProductsResourceMapper` class in order to add the `manufacturerCountry` attribute data. For this purpose, we need to extend, on the project level, the `ProductsRestApi` module that implements the Products API. To do this:
 
 * Create the `src/Pyz/Glue/ProductsRestApi` directory.
 * Implement `\Pyz\Glue\ProductsRestApi\Processor\Mapper\AbstractProductsResourceMapper` as follows:

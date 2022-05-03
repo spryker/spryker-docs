@@ -52,6 +52,7 @@ To create a module:
 |`{YOUR_RESOURCE}sRestApiFactory.php`  |  Factory to construct objects.|
 | `ResourcesDependencyProvider.php` | Provides external dependencies to this module. |
 | `{YOUR_RESOURCE}sRestApiResource.php` |  Locatable class that provides resource objects to other modules as a dependency.|
+
 {% info_block infoBox %}
 
 You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to create a basic structure. Run the following command:
@@ -282,6 +283,7 @@ In the example below, the `RestWishlistsAttributesTransfer` Transfer Object will
 ```
 
 To generate the respective transfer objects, run `vendor/bin/console transfer:generate`
+
 {% info_block infoBox %}
 
 You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to describe fields for post and patch calls. Run the following command:
@@ -297,6 +299,7 @@ console spryk:run AddSharedRestAttributesTransfer --mode=project --module=Resour
 Now you need to route requests to your module. For this purpose, you need to create a route plugin that calls a certain function of the resource controller depending on the method configured in your resource. Then you need to add the plugin to the Glue Module dependency provider.
 
 **Resource route plugin**
+
 The route plugin must be inherited from `AbstractPlugin` and implement `ResourceRoutePluginInterface`. Let us create one in the Plugin folder:
 
 **WishlistsResourceRoutePlugin.php**

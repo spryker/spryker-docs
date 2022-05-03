@@ -33,8 +33,6 @@ This tutorial is also available on the Spryker Training web-site. For more infor
 
 {% endinfo_block %}
 
-## Challenge description
-
 When you add a red camera to cart, all red cameras are going to be boosted in the catalog and pushed to the top of the products.
 
 In this task, you will also learn how to work with plugins and extend the search plugin stack.
@@ -199,7 +197,7 @@ class AttributeCartBasedBoostingQueryExpanderPlugin extends AbstractPlugin imple
 ```
 </details>
 
-1. As you may notice, `CartClient` does not exist as a dependency for the *CatalogClient*. Let's add this dependency, so our query plugin works. For this, open `CatalogDependencyProvider` in `src/Pyz/Client/Catalog` and add *CartClient* as a dependency:
+3. As you may notice, `CartClient` does not exist as a dependency for the *CatalogClient*. Let's add this dependency, so our query plugin works. For this, open `CatalogDependencyProvider` in `src/Pyz/Client/Catalog` and add *CartClient* as a dependency:
 
 <details open><summary markdown='span'>Pyz\Client\Catalog</summary>
 
@@ -249,7 +247,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 ```
 </details>
 
-1. Next, get the `CartClient` dependency using the `CatalogFactory`. Extend the `CatalogFactory` of the catalog client in `src/Pyz/Client/Catalog` and get the `CartClient`.
+4. Next, get the `CartClient` dependency using the `CatalogFactory`. Extend the `CatalogFactory` of the catalog client in `src/Pyz/Client/Catalog` and get the `CartClient`.
 
 ```php
 namespace Pyz\Client\Catalog;
@@ -269,7 +267,7 @@ class CatalogFactory extends SprykerCatalogFactory
 }
 ```
 
-4. To get the color of a product from the cart, we need to read the product data from the _key-value storage; Redis_.  For that, `ProductStorageClient` should be used with the method `getProductAbstractStorageData()`.
+5. To get the color of a product from the cart, we need to read the product data from the _key-value storage; Redis_.  For that, `ProductStorageClient` should be used with the method `getProductAbstractStorageData()`.
 
 Like the `CartClient`, the `ProductStorageClient` needs to be added to the `CatalogDependencyProvider`. Then the `CatalogFactory` can get it from the dependency provider:
 
@@ -372,6 +370,7 @@ protected function createCatalogSearchQueryExpanderPlugins(): array
 ```
 
 Done! Now go to the *Cameras* catalog page in your shop `https://mysprykershop.com/en/cameras-&amp;-camcorders/digital-cameras` and do the following:
+
 1. Add a red camera to cart.
 2. Go back to the same catalog page.
 

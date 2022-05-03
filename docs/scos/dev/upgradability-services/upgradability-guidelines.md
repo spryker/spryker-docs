@@ -37,6 +37,7 @@ To avoid unexpected issues and achieve the same result, make the names of entiti
 ```
 
 Related error in the Evaluator output:
+
 ```bash
 ************************************************************************************************************************
 Evaluator\Business\Check\IsNotUnique\TransferShouldHavePrefixCheck
@@ -62,6 +63,7 @@ ProductAbstractStore
     </table>
 </database>
 ```
+
 Related error in the Evaluator output:
 
 ```bash
@@ -96,7 +98,6 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-
 Related error in the Evaluator output:
 
 ```bash
@@ -109,9 +110,6 @@ Pyz\Client\RabbitMq\RabbitMqConfig
 {"name":"getPublishQueueConfiguration","class":"Pyz\\Client\\RabbitMq\\RabbitMqConfig"}
 {"parentClass":"Spryker\\Client\\RabbitMq\\RabbitMqConfig","methods":["getQueueConnections","getMessageConfig","getDefaultQueueConnectionConfig","isRuntimeSettingUpEnabled","getQueueConnectionConfigs","getQueueOptions","getQueueConfiguration","getDefaultBoundQueueNamePrefix","createExchangeOptionTransfer","createQueueOptionTransfer","get","getConfig","setSharedConfig","getSharedConfig","resolveSharedConfig"]}
 ```
-
-
-
 
 #### Examples of making entity names unique
 
@@ -135,7 +133,6 @@ Renamed transfer name:
 </transfers>
 ```
 ---
-
 
 Renamed table name:
 
@@ -252,8 +249,6 @@ public function setContentTypesToInaccessible(CustomerAccessTransfer $customerAc
 After replacing the core method with its project-level copy, re-evaluate the code. The same error shouldn't be returned.
 
 
-
-
 ## Method of an extended class is overridden on the project level
 
 Factory, Dependency Provider, Repository, and Entity Manager methods belong to the private API. If you extend a core class and override one of its methods, minor releases can cause errors or unexpected changes in functionality.
@@ -289,6 +284,7 @@ class EvaluatorCategoryImageEntityManager extends CategoryImageEntityManager
 ```
 
 Related error in the Evaluator output:
+
 ```bash
 ------------------------------------------------------------------------------------
 ************************************************************************************************************************
@@ -338,7 +334,6 @@ class StorageRouterDependencyProvider extends SprykerShopStorageRouterDependency
     }
 }
 ```
-
 </details>
 
 {% endinfo_block %}
@@ -358,8 +353,7 @@ The method name should be unique to the extent of making it impossible to accide
 
 2. Replace the core method with the custom one you've created in the previous step.
 
-When the core method is overriden with a custom one, re-evaluate the code. The same error shouldn't be returned.
-
+When the core method is overridden with a custom one, re-evaluate the code. The same error shouldn't be returned.
 
 
 ## Private API class was extended or used
@@ -408,6 +402,7 @@ class CustomerAccessForm extends SprykerCustomerAccessForm
 ```
 
 Related error in the Evaluator output:
+
 ```text
 ------------------------------------------------------------------------------------
 Pyz\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm

@@ -1,5 +1,5 @@
 ---
-title: Migration guide - MerchantProductOfferStorage
+title: "Migration guide: MerchantProductOfferStorage"
 description: Use the guide to update versions to the newer ones of the MerchantProductOfferStorage module.
 template: module-migration-guide-template
 ---

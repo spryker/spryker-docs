@@ -4,14 +4,13 @@ description: Retrieve Marketplace product offers via API
 template: glue-api-storefront-guide-template
 ---
 
-Product offers allow different merchants to sell the same product on the Marketplace. Product offers are created per concrete products, and you can get the offer information via retrieving the product information.
+Product offers let different merchants sell the same product on the Marketplace. Product offers are created per concrete products, and you can get the offer information via retrieving the product information.
 
 In your development, product offers API can help you to retrieve relevant extended information for product offers.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see:
-
+For detailed information about the modules that provide the API functionality and related installation instructions, see:
 * [GLUE API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html)
 * [Glue API: Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html)
 * [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-volume-prices.html)
@@ -60,7 +59,7 @@ To retrieve the product offers, send the request:
             "isDefault": false
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/product-offers/offer56"
+            "self": "https://glue.mysprykershop.comm/product-offers/offer56"
         }
     }
 }
@@ -144,7 +143,7 @@ To retrieve the product offers, send the request:
             "isDefault": false
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/product-offers/offer101?include=product-offer-prices,product-offer-availabilities"
+            "self": "https://glue.mysprykershop.comm/product-offers/offer101?include=product-offer-prices,product-offer-availabilities"
         },
         "relationships": {
             "product-offer-availabilities": {
@@ -167,7 +166,7 @@ To retrieve the product offers, send the request:
                 "quantity": "0.0000000000"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-offers/offer101/product-offer-availabilities"
+                "self": "https://glue.mysprykershop.comm/product-offers/offer101/product-offer-availabilities"
             }
 
         }
@@ -190,7 +189,7 @@ To retrieve the product offers, send the request:
             "isDefault": false
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/product-offers/offer101?include=product-offer-prices,product-offer-availabilities,merchants"
+            "self": "https://glue.mysprykershop.comm/product-offers/offer101?include=product-offer-prices,product-offer-availabilities,merchants"
         },
         "merchants": {
                 "data": [
@@ -223,14 +222,14 @@ To retrieve the product offers, send the request:
                 "longitude": "48.131058",
                 "faxNumber": "+49 30 234567600",
                 "legalInformation": {
-                    "terms": "<p><span style=\"font-weight: bold;\">General Terms</span><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><span style=\"font-weight: bold;\">Using your Information</span><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to allow us to deliver the type of content and product offerings in which you are most interested.<br><br><span style=\"font-weight: bold;\">Protecting visitor information</span><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>",
+                    "terms": "<p><span style=\"font-weight: bold;\">General Terms</span><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><span style=\"font-weight: bold;\">Using your Information</span><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to let us deliver the type of content and product offerings in which you are most interested.<br><br><span style=\"font-weight: bold;\">Protecting visitor information</span><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>",
                     "cancellationPolicy": "You have the right to withdraw from this contract within 14 days without giving any reason. The withdrawal period will expire after 14 days from the day on which you acquire, or a third party other than the carrier and indicated by you acquires, physical possession of the last good. You may use the attached model withdrawal form, but it is not obligatory. To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.",
                     "imprint": "<p>Sony Experts<br><br>Matthias-Pschorr-Straße 1<br>80336 München<br>DE<br><br>Phone: 030 1234567<br>Email: support@sony-experts.com<br><br>Represented by<br>Managing Director: Max Mustermann<br>Register Court: Munich<br>Register Number: HYY 134306<br></p>",
                     "dataPrivacy": "Sony Experts values the privacy of your personal data."
                 }
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/merchants/MER000006"
+                "self": "https://glue.mysprykershop.comm/merchants/MER000006"
             }
         }
     ]

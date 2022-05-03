@@ -12,21 +12,21 @@ redirect_from:
   - /docs/en/scheduled-prices-feature-overview
 ---
 
-The _Scheduled Prices_ feature enables shop administrators to schedule price changes, which are to happen in the future for multiple products simultaneously.
+The _Scheduled Prices_ feature lets shop administrators schedule price changes, which are to happen in the future for multiple products simultaneously.
 
-Instead of changing prices manually, you can prepare a list of prices with time frames which are to be applied automatically. For example, you might want to increase prices of the products that are of great demand on a certain date before the Christmas eve and decrease them on a certain date afterward. The Scheduled Prices feature enables you to specify the prices and the dates beforehand.
+Instead of changing prices manually, you can prepare a list of prices with time frames which are to be applied automatically. For example, you might want to increase prices of the products that are of great demand on a certain date before the Christmas eve and decrease them on a certain date afterward. The Scheduled Prices feature lets you specify the prices and the dates beforehand.
 
-An in-built cron-job will switch the prices on the specified dates for all the specified products automatically. Apart from major events, you can use this feature to update prices across the shop without having to do it manually for each product, since the feature allows you to do it from one place in bulk.
+An in-built cron-job will switch the prices on the specified dates for all the specified products automatically. Apart from major events, you can use this feature to update prices across the shop without having to do it manually for each product, since the feature lets you do it from one place in bulk.
 
 ## Price types
 
 Currently, the feature only works with the following price types:
-* default
-* original
+* Default
+* Original
 
 A default price is the one that is shown as a real price of product.
 
-An original price is the one that, in the front end, is shown as a strikethrough to identify that the price has been used before the default price was applied as if there is a promotion.
+An original price is the one that, in the frontend, is shown as a strikethrough to identify that the price has been used before the default price was applied as if there is a promotion.
 ![Default original price](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Scheduled+Prices/Scheduled+Prices+Feature+Overview/default-original-price.png)
 
 ## Time zones
@@ -42,8 +42,8 @@ Even though it is possible to use any time zone for defining a price schedule, i
 ## Defining product price schedules
 
 You can define price schedules as follows:
-Import a csv file with a list of prices. This option is for bulk operations. You can import the file via [Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/creating-scheduled-prices.html) or [manually](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/pricing/file-details-product-price-schedule.csv.html).
-Add a price schedule to a single abstract or concrete product. This option is suitable for working with a small number of products. See [Editing an Abstract Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/editing-abstract-products.html).
+Import a CSV file with a list of prices. This option is for bulk operations. You can import the file via [Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/creating-scheduled-prices.html) or [manually](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/pricing/file-details-product-price-schedule.csv.html).
+Add a price schedule to a single abstract or concrete product. This option is suitable for working with a small number of products. For details, see [Editing an Abstract Product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/editing-abstract-products.html).
 
 ## Cron job
 

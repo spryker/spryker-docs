@@ -15,6 +15,7 @@ redirect_from:
 Follow the steps below to install Measurement units feature API.
 
 ## Prerequisites
+
 To start the feature integration, overview and install the necessary features:
 
 | NAME | VERSION | LINK |
@@ -23,6 +24,7 @@ To start the feature integration, overview and install the necessary features:
 | Product Measurement Units | {{page.version}} | [Product Measurement Units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-measurement-unit-feature-integration.html) |
 
 ## 1)  Install the required modules using Composer
+
 Run the following command to install the required modules:
 
 ```bash
@@ -45,7 +47,6 @@ Make sure that the following modules have been installed:
 Run the following command to generate the transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -53,7 +54,6 @@ console transfer:generate
 {% info_block warningBox "Verification" %}
 
 Make sure that `SpyProductMeasurementUnitStorage` and `SpyProductConcreteStorage` have been extended with synchronization behavior, namely with the methods:
-
 
 | ENTITY | TYPE | EVENT | PATH | METHODS |
 | --- | --- | --- | --- | --- |
@@ -82,9 +82,11 @@ Make sure that the following changes have occurred:
 
 
 ## 3) Set up behavior
+
 Set up the following behaviors.
 
 ### Re-export data to storage
+
 Run the following commands to reload abstract and concrete product data to the Storage:
 
 ```bash
@@ -97,12 +99,12 @@ console event:trigger -r product_concrete
 Make sure that the following Redis keys exist and there is data in them:
 
 * `kv:product_measurement_unit:code:{% raw %}{{{% endraw %}product_measurement_unit_code{% raw %}}}{% endraw %}`
-
 * `kv:product_concrete:{% raw %}{{{% endraw %}locale_name{% raw %}}}{% endraw %}:sku:{% raw %}{{{% endraw %}sku_product_concrete{% raw %}}}{% endraw %}`
 
 {% endinfo_block %}
 
 ### Enable resources and relationships
+
 Activate the following plugins:
 
 
@@ -188,7 +190,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% info_block warningBox "Verification" %}
 
 Make sure that the `ProductMeasurementUnitsResourceRoutePlugin` plugin is set up:
-1. Send the request `GET http://glue.mysprykershop.com/product-measurement-units/{% raw %}{{{% endraw %}product_measurement_unit_code{% raw %}}}{% endraw %}`.
+1. Send the request `GET https://glue.mysprykershop.com/product-measurement-units/{% raw %}{{{% endraw %}product_measurement_unit_code{% raw %}}}{% endraw %}`.
 
 2. You should get a valid response, similar to the following:
 
@@ -202,7 +204,7 @@ Make sure that the `ProductMeasurementUnitsResourceRoutePlugin` plugin is set up
             "defaultPrecision": 100
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/product-measurement-units/METR"
+            "self": "https://glue.mysprykershop.com/product-measurement-units/METR"
         }
     }
 }
@@ -214,7 +216,7 @@ Make sure that the `ProductMeasurementUnitsResourceRoutePlugin` plugin is set up
 {% info_block warningBox "Verification" %}
 
 Make sure that the `SalesUnitsResourceRoutePlugin` and `ProductMeasurementUnitsBySalesUnitResourceRelationshipPlugin` plugins are set up:
-1. Send the request `GET http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}/sales-units?include=product-measurement-units`.
+1. Send the request `GET https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}/sales-units?include=product-measurement-units`.
 
 2. You should get a valid response, similar to the following:
 
@@ -275,7 +277,7 @@ Make sure that the `SalesUnitsResourceRoutePlugin` and `ProductMeasurementUnitsB
 {% info_block warningBox "Verification" %}
 
 Make sure that the `ProductMeasurementUnitsByProductConcreteResourceRelationshipPlugin` and `SalesUnitsByProductConcreteResourceRelationshipPlugin` relationship plugins are set up:
-1. Send the request `GET http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}?include=product-measurement-units,sales-units`.
+1. Send the request `GET https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}?include=product-measurement-units,sales-units`.
 
 2. You should get a valid response, similar to the following:
 
@@ -314,7 +316,7 @@ Make sure that the `ProductMeasurementUnitsByProductConcreteResourceRelationship
             }
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/concrete-products/215_123?include=product-measurement-units,sales-units"
+            "self": "https://glue.mysprykershop.com/concrete-products/215_123?include=product-measurement-units,sales-units"
         },
         "relationships": {
             "product-measurement-units": {
@@ -348,7 +350,7 @@ Make sure that the `ProductMeasurementUnitsByProductConcreteResourceRelationship
                 "defaultPrecision": 100
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-measurement-units/METR"
+                "self": "https://glue.mysprykershop.com/product-measurement-units/METR"
             }
         },
         {
@@ -362,7 +364,7 @@ Make sure that the `ProductMeasurementUnitsByProductConcreteResourceRelationship
                 "productMeasurementUnitCode": "METR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/215_123/sales-units/1"
+                "self": "https://glue.mysprykershop.com/concrete-products/215_123/sales-units/1"
             },
             "relationships": {
                 "product-measurement-units": {
@@ -383,7 +385,7 @@ Make sure that the `ProductMeasurementUnitsByProductConcreteResourceRelationship
                 "defaultPrecision": 10
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-measurement-units/CMET"
+                "self": "https://glue.mysprykershop.com/product-measurement-units/CMET"
             }
         },
         {
@@ -397,7 +399,7 @@ Make sure that the `ProductMeasurementUnitsByProductConcreteResourceRelationship
                 "productMeasurementUnitCode": "CMET"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/215_123/sales-units/2"
+                "self": "https://glue.mysprykershop.com/concrete-products/215_123/sales-units/2"
             },
             "relationships": {
                 "product-measurement-units": {
@@ -421,7 +423,7 @@ Make sure that the `ProductMeasurementUnitsByProductConcreteResourceRelationship
 {% info_block warningBox "Verification" %}
 
 Make sure that the `SalesUnitsByCartItemResourceRelationshipPlugin` relationship plugin is set up:
-1. Send the request `GET http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}?include=items,sales-units`.
+1. Send the request `GET https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}?include=items,sales-units`.
 
 2. You should get a valid response, similar to the following:
 
@@ -449,7 +451,7 @@ Make sure that the `SalesUnitsByCartItemResourceRelationshipPlugin` relationship
             "discounts": []
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2?include=items,sales-units"
+            "self": "https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2?include=items,sales-units"
         },
         "relationships": {
             "items": {
@@ -474,7 +476,7 @@ Make sure that the `SalesUnitsByCartItemResourceRelationshipPlugin` relationship
                 "productMeasurementUnitCode": "CMET"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/215_124/sales-units/4"
+                "self": "https://glue.mysprykershop.com/concrete-products/215_124/sales-units/4"
             }
         },
         {
@@ -514,7 +516,7 @@ Make sure that the `SalesUnitsByCartItemResourceRelationshipPlugin` relationship
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/items/215_124_quantity_sales_unit_id_4_amount_5_sales_unit_id_4"
+                "self": "https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/items/215_124_quantity_sales_unit_id_4_amount_5_sales_unit_id_4"
             },
             "relationships": {
                 "sales-units": {
@@ -607,7 +609,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 {% info_block warningBox "Verification" %}
 
 Make sure that the plugins have been set up:
-1. Send the request `POST http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/items`  with the request body:
+1. Send the request `POST https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/items`  with the request body:
 
 ```json
 {
@@ -625,7 +627,7 @@ Make sure that the plugins have been set up:
 }
 ```
 
-2. Send the request `GET http://glue.mysprykershop.com/carts?include=items` and make sure that the following attributes are included:
+2. Send the request `GET https://glue.mysprykershop.com/carts?include=items` and make sure that the following attributes are included:
     * `salesUnits.id`
     * `salesUnits.amount`
 
@@ -667,7 +669,7 @@ class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-Send the request `GET http://glue.mysprykershop.com/orders/{% raw %}{{{% endraw %}order_uuid{% raw %}}}{% endraw %}` and make sure that the order items have `salesUnits` and `salesUnits.amount` properties in the response.
+Send the request `GET https://glue.mysprykershop.com/orders/{% raw %}{{{% endraw %}order_uuid{% raw %}}}{% endraw %}` and make sure that the order items have `salesUnits` and `salesUnits.amount` properties in the response.
 
 {% endinfo_block %}
 

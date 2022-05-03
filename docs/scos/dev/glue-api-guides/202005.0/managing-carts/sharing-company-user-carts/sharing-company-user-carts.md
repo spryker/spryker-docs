@@ -54,13 +54,13 @@ To retrieve all available Permission Groups, send a GET request to the following
 
 [/cart-permission-groups](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/cart-permission-groups)
 
-Sample request: *GET http://glue.mysprykershop.com/cart-permission-groups*
+Request sample: *GET http://glue.mysprykershop.com/cart-permission-groups*
 
 To retrieve a specific Permission Group, query the following endpoint:
 
 [/cart-permission-groups/{% raw %}{{{% endraw %}permission_group_id{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/cart-permission-groups)
 
-Sample request: *GET http://glue.mysprykershop.com/cart-permission-groups/1*
+Request sample: *GET http://glue.mysprykershop.com/cart-permission-groups/1*
 
 where **1** is the ID of the Permission Group you need.
 
@@ -149,7 +149,7 @@ To identify whether a cart is shared, send a request to the **/carts** or the **
 [/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/carts) - provides information on a specific cart.
 
 ### Request
-Sample requests:
+Request samples:
 * *GET http://glue.mysprykershop.com/carts?include=shared-carts,company-users,cart-permission-groups*
 * *GET http://glue.mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054?include=shared-carts,company-users,cart-permission-groups*
 
@@ -383,7 +383,7 @@ To share a user's cart, send a POST request to the following endpoint:
 
 ### Request
 
-Sample request: *POST http://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab/shared-carts*
+Request sample: *POST http://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab/shared-carts*
 
 where **f23f5cfa-7fde-5706-aefb-ac6c6bbadeab** is the ID of the cart you want to share.
 
@@ -465,7 +465,7 @@ To change permissions for a shared cart, send a PATCH request to the following e
 
 ### Request
 
-Sample request: *PATCH http://glue.mysprykershop.com/shared-carts/4c677a6b-2f65-5645-9bf8-0ef3532bbbccaa*
+Request sample: *PATCH http://glue.mysprykershop.com/shared-carts/4c677a6b-2f65-5645-9bf8-0ef3532bbbccaa*
 
 where **4c677a6b-2f65-5645-9bf8-0ef3532bbbccaa** is the ID of the shared cart object.
 
@@ -540,7 +540,7 @@ To stop sharing a cart, send a DELETE request to the following endpoint:
 [/shared-carts/{% raw %}{{{% endraw %}shared-cart-uuid{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/shared-carts)
 
 ### Request
-Sample request: *DELETE http://glue.mysprykershop.com/shared-carts/4c677a6b-2f65-5645-9bf8-0ef3532bbbccaa*
+Request sample: *DELETE http://glue.mysprykershop.com/shared-carts/4c677a6b-2f65-5645-9bf8-0ef3532bbbccaa*
 
 where **4c677a6b-2f65-5645-9bf8-0ef3532bbbccaa** is the ID of the shared cart object.
 

@@ -7,7 +7,8 @@ This endpoint allows managing items in carts of registered users by adding, chan
 
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see:
+
+For detailed information about the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)
 * [Glue API: Measurement Units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html)
 * [Glue API: Product Options feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
@@ -52,7 +53,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 <details>
 <summary markdown='span'>Request sample: add an item to a registered user's cart</summary>
 
-`POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items`
+`POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items`
 
 ```json
 {
@@ -71,7 +72,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 <details>
 <summary markdown='span'>Request sample: add an item to a registered user's cart with product measurement units and sales units</summary>
 
-`POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items?include=sales-units,product-measurement-units`
+`POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items?include=sales-units,product-measurement-units`
 
 ```json
 {
@@ -93,7 +94,7 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
 <details>
 <summary markdown='span'>Request sample: add an item to a registered user's cart with cart rules</summary>
 
-`POST http://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items?include=cart-rules`
+`POST https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items?include=cart-rules`
 
 ```json
 {
@@ -106,13 +107,12 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
     }
 }
 ```
-
 </details>
 
 <details>
 <summary markdown='span'>Request sample: add an item to a registered user's cart with vouchers</summary>
 
-`POST http://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items?include=vouchers`
+`POST https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830/items?include=vouchers`
 
 ```json
 {
@@ -125,7 +125,6 @@ To retrieve all the product options of the item in a cart, include `concrete-pro
     }
 }
 ```
-
 </details>
 
 <details>
@@ -156,7 +155,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 <details>
 <summary markdown='span'>Request sample: add an item to a registered user's cart with details on concrete products and product options</summary>
 
-`POST http://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398/items?include=concrete-products,product-options`
+`POST https://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398/items?include=concrete-products,product-options`
 
 ```json
 {
@@ -170,7 +169,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
             		"sku": "OP_gift_wrapping"
             	},
             	{
-            		"sku": "OP_3_year_waranty"
+            		"sku": "OP_3_year_warranty"
             	}
             ]
         }
@@ -202,7 +201,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 <details>
 <summary markdown='span'>Request sample: add a marketplace product to a registered user's cart</summary>
 
-`POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items`
+`POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items`
 
 ```json
 {
@@ -221,7 +220,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 <details>
 <summary markdown='span'>Request sample: add an item to a registered user's cart with details on merchants</summary>
 
-`POST http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items?include=items,merchants`
+`POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items?include=items,merchants`
 
 ```json
 {
@@ -538,7 +537,6 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -1034,7 +1032,7 @@ It is the responsibility of the API Client to track whether the selected items a
             ]
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398"
+            "self": "https://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398"
         }
     },
     "included": [
@@ -1049,7 +1047,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_1_year_waranty"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_1_year_waranty"
             }
         },
         {
@@ -1063,7 +1061,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_2_year_waranty"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_2_year_waranty"
             }
         },
         {
@@ -1077,7 +1075,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_3_year_waranty"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_3_year_waranty"
             }
         },
         {
@@ -1091,7 +1089,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_insurance"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_insurance"
             }
         },
         {
@@ -1105,7 +1103,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "currencyIsoCode": "EUR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_gift_wrapping"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510/product-options/OP_gift_wrapping"
             }
         },
         {
@@ -1118,7 +1116,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "averageRating": null,
                 "reviewCount": 0,
                 "name": "Samsung Galaxy Tab S2 SM-T813",
-                "description": "Enjoy greater flexibility  ...than ever before with the Galaxy Tab S2. Remarkably slim and ultra-lightweight, use this device to take your e-books, photos, videos and work-related files with you wherever you need to go. The Galaxy Tab S2’s 4:3 ratio display is optimised for magazine reading and web use. Switch to Reading Mode to adjust screen brightness and change wallpaper - create an ideal eBook reading environment designed to reduce the strain on your eyes. Get greater security with convenient and accurate fingerprint functionality. Activate fingerprint lock by pressing the home button. Use fingerprint verification to restrict / allow access to your web browser, screen lock mode and your Samsung account.",
+                "description": "Enjoy greater flexibility  ...than ever before with the Galaxy Tab S2. Remarkably slim and ultra-lightweight, use this device to take your e-books, photos, videos and work-related files with you wherever you need to go. The Galaxy Tab S2’s 4:3 ratio display is optimised for magazine reading and web use. Switch to Reading Mode to adjust screen brightness and change wallpaper—create an ideal eBook reading environment designed to reduce the strain on your eyes. Get greater security with convenient and accurate fingerprint functionality. Activate fingerprint lock by pressing the home button. Use fingerprint verification to restrict / allow access to your web browser, screen lock mode and your Samsung account.",
                 "attributes": {
                     "internal_memory": "3 GB",
                     "processor_model": "APQ8076",
@@ -1145,7 +1143,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 }
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/181_31995510"
+                "self": "https://glue.mysprykershop.com/concrete-products/181_31995510"
             },
             "relationships": {
                 "product-options": {
@@ -1223,7 +1221,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398/items/181_31995510-3-5"
+                "self": "https://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398/items/181_31995510-3-5"
             },
             "relationships": {
                 "concrete-products": {
@@ -1239,7 +1237,6 @@ It is the responsibility of the API Client to track whether the selected items a
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -1400,7 +1397,7 @@ It is the responsibility of the API Client to track whether the selected items a
             "discounts": []
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a"
+            "self": "https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a"
         }
     }
 }
@@ -1433,7 +1430,7 @@ It is the responsibility of the API Client to track whether the selected items a
             "discounts": []
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a"
+            "self": "https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a"
         },
         "relationships": {
             "items": {
@@ -1466,7 +1463,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "deliveryTime": "1-3 days",
                 "faxNumber": "+49 30 234567800",
                 "legalInformation": {
-                    "terms": "<p><h3>General Terms</h3><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><h3>Using your Information</h3><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to allow us to deliver the type of content and product offerings in which you are most interested.<br><br><h3>Protecting visitor information</h3><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>",
+                    "terms": "<p><h3>General Terms</h3><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><h3>Using your Information</h3><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to let us deliver the type of content and product offerings in which you are most interested.<br><br><h3>Protecting visitor information</h3><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>",
                     "cancellationPolicy": "You have the right to withdraw from this contract within 14 days without giving any reason. The withdrawal period will expire after 14 days from the day on which you acquire, or a third party other than the carrier and indicated by you acquires, physical possession of the last good. You may use the attached model withdrawal form, but it is not obligatory. To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.",
                     "imprint": "<p>Spryker Systems GmbH<br><br>Julie-Wolfthorn-Straße 1<br>10115 Berlin<br>DE<br><br>Phone: +49 (30) 2084983 50<br>Email: info@spryker.com<br><br>Represented by<br>Managing Directors: Alexander Graf, Boris Lokschin<br>Register Court: Hamburg<br>Register Number: HRB 134310<br></p>",
                     "dataPrivacy": "Spryker Systems GmbH values the privacy of your personal data."
@@ -1474,7 +1471,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "categories": []
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/merchants/MER000001"
+                "self": "https://glue.mysprykershop.com/merchants/MER000001"
             }
         },
         {
@@ -1516,7 +1513,7 @@ It is the responsibility of the API Client to track whether the selected items a
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items/020_21081478"
+                "self": "https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a/items/020_21081478"
             },
             "relationships": {
                 "merchants": {

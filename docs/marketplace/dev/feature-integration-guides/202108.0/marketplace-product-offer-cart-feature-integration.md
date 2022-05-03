@@ -49,7 +49,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Zed\CartExtension\Dependency\Plugin\ItemExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\CartExtension\Dependency\Plugin\ItemExpanderPluginInterface>
      */
     protected function getExpanderPlugins(Container $container): array
     {
@@ -60,7 +60,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Zed\CartExtension\Dependency\Plugin\CartPreCheckPluginInterface[]
+     * @return array<\Spryker\Zed\CartExtension\Dependency\Plugin\CartPreCheckPluginInterface>
      */
     protected function getCartPreCheckPlugins(Container $container): array
     {
@@ -72,7 +72,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Zed\CartExtension\Dependency\Plugin\PreReloadItemsPluginInterface[]
+     * @return array<\Spryker\Zed\CartExtension\Dependency\Plugin\PreReloadItemsPluginInterface>
      */
     protected function getPreReloadPlugins(Container $container): array
     {
@@ -93,9 +93,9 @@ Make sure that it is only possible to have items in cart where the product offer
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
-Follow the steps below to install the Marketplace Product Offer + Cart feature front end.
+Follow the steps below to install the Marketplace Product Offer + Cart feature frontend.
 
 ### Prerequisites
 
@@ -114,7 +114,7 @@ Enable the following behaviors by registering the plugins:
 | - | - | - | - |
 | MerchantProductOfferPreAddToCartPlugin | Sets the product offer reference to the item transfer |  | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\CartPage |
 
-**src/Pyz/Yves/Cart/CartDependencyProvider.php**
+**src/Pyz/Yves/CartPage/CartPageDependencyProvider.php**
 
 ```
 <?php
@@ -127,7 +127,7 @@ use SprykerShop\Yves\MerchantProductOfferWidget\Plugin\CartPage\MerchantProductO
 class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 {
     /**
-     * @return \SprykerShop\Yves\CartPageExtension\Dependency\Plugin\PreAddToCartPluginInterface[]
+     * @return array<\SprykerShop\Yves\CartPageExtension\Dependency\Plugin\PreAddToCartPluginInterface>
      */
     protected function getPreAddToCartPlugins(): array
     {

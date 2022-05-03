@@ -4,9 +4,9 @@ description: This document provides details about how to extend the new project.
 template: howto-guide-template
 ---
 
-To add additional front-end functionality beyond the one provisioned out-of-the-box, the project must be extended.
+To add additional frontend functionality beyond the one provisioned out-of-the-box, the project must be extended.
 
-This document can help you understand how you can extend the front-end project.
+This document can help you understand how you can extend the frontend project.
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ Prior to starting the project extension, verify that the marketplace modules are
 | SalesMerchantPortalGui (optional)           | >= 0.8.1  |
 | SecurityMerchantPortalGui (optional)        | >= 0.4.2  |
 
-If not, follow the steps from the [Migration guide - Extending the project](/docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html).
+If not, follow the steps from the [Migration guide: Extending the project](/docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html).
 
 ## Extending/customizing configuration modules
 

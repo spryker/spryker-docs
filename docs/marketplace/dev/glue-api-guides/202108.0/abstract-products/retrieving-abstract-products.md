@@ -8,7 +8,7 @@ This endpoint allows retrieving general information about abstract products.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see:
+For detailed information about the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
 * [Glue API: Product Options feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
 * [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-labels-feature-integration.html)
@@ -39,7 +39,7 @@ To retrieve general information about an abstract product, send the request:
 
 * For performance and bandwidth usage optimization, we recommend filtering out only the needed information using the `fields` string parameter.
 
-* If you include more resources, you can still use the `fields` string parameter to return only the needed fields. For example, `GET http://glue.mysprykershop.com/abstract-products/001?include=concrete-products&fields[abstract-products]=name,description&fields[concrete-products]=name,image`.
+* If you include more resources, you can still use the `fields` string parameter to return only the needed fields. For example, `GET https://glue.mysprykershop.com/abstract-products/001?include=concrete-products&fields[abstract-products]=name,description&fields[concrete-products]=name,image`.
 
 {% endinfo_block %}
 
@@ -47,14 +47,14 @@ To retrieve general information about an abstract product, send the request:
 
 | REQUEST | USAGE |
 | --- | --- |
-| `GET http://glue.mysprykershop.com/abstract-products/001` | Retrieve information about the abstract product with SKU `001`. |
+| `GET https://glue.mysprykershop.com/abstract-products/001` | Retrieve information about the abstract product with SKU `001`. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-image-sets` | Retrieve information about the abstract product with SKU `001` with its image sets. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-availabilities` | Retrieve information about the abstract product with SKU `001` with its availability. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `001` with its [default prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html). |
 | `GET https://glue.mysprykershop.com/abstract-products/093?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `093` with its prices (default and [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html)). <!-- Incorrect description. Fix in SCOS and MP docs after the migration --> |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=category-nodes` | Retrieve information about the abstract product with SKU `001` with the category nodes it belongs to. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=product-tax-sets` | Retrieve information about the abstract product with SKU `001` with its tax sets. |
-| `GET http://glue.mysprykershop.com/abstract-products/001?include=product-labels` | Retrieve information about the abstract product with SKU `001` with its assigned product labels. |
+| `GET https://glue.mysprykershop.com/abstract-products/001?include=product-labels` | Retrieve information about the abstract product with SKU `001` with its assigned product labels. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=concrete-products` | Retrieve information about the abstract product with SKU `001` with its concrete products. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=product-options` | Retrieve information about the abstract product with SKU `001` with its product options. |
 | `GET https://glue.mysprykershop.com/abstract-products/035?include=product-reviews` | Retrieve information about the abstract product with SKU `001` with its product reviews. |
@@ -119,7 +119,7 @@ To retrieve general information about an abstract product, send the request:
             "url": "/en/canon-ixus-160-1"
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/abstract-products/001"
+            "self": "https://glue.mysprykershop.com/abstract-products/001"
         }
     }
 }
@@ -906,7 +906,7 @@ To retrieve general information about an abstract product, send the request:
                 "frontEndReference": ""
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-labels/3"
+                "self": "https://glue.mysprykershop.com/product-labels/3"
             }
         },
         {
@@ -919,7 +919,7 @@ To retrieve general information about an abstract product, send the request:
                 "frontEndReference": "highlight"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-labels/5"
+                "self": "https://glue.mysprykershop.com/product-labels/5"
             }
         }
     ]
@@ -1162,7 +1162,7 @@ To retrieve general information about an abstract product, send the request:
             "averageRating": 4.7,
             "reviewCount": 3,
             "name": "Canon PowerShot N",
-            "description": "Creative Shot Originality is effortless with Creative Shot. Simply take a shot and the camera will analyse the scene then automatically generate five creative images plus the original unaltered photo - capturing the same subject in a variety of artistic and surprising ways. The unique symmetrical, metal-bodied design is strikingly different with an ultra-modern minimalist style - small enough to keep in your pocket and stylish enough to take anywhere. HS System excels in low light letting you capture the real atmosphere of the moment without flash or a tripod. Advanced DIGIC 5 processing and a high-sensitivity 12.1 Megapixel CMOS sensor give excellent image quality in all situations.",
+            "description": "Creative Shot Originality is effortless with Creative Shot. Simply take a shot and the camera will analyse the scene then automatically generate five creative images plus the original unaltered photo—capturing the same subject in a variety of artistic and surprising ways. The unique symmetrical, metal-bodied design is strikingly different with an ultra-modern minimalist style—small enough to keep in your pocket and stylish enough to take anywhere. HS System excels in low light letting you capture the real atmosphere of the moment without flash or a tripod. Advanced DIGIC 5 processing and a high-sensitivity 12.1 Megapixel CMOS sensor give excellent image quality in all situations.",
             "attributes": {
                 "focus": "TTL",
                 "field_of_view": "100%",
@@ -1426,7 +1426,7 @@ To retrieve general information about an abstract product, send the request:
                 "longitude": "52.534105",
                 "faxNumber": "+49 30 234567800",
                 "legalInformation": {
-                    "terms": "<p><span style=\"font-weight: bold;\">General Terms</span><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><span style=\"font-weight: bold;\">Using your Information</span><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to allow us to deliver the type of content and product offerings in which you are most interested.<br><br><span style=\"font-weight: bold;\">Protecting visitor information</span><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>",
+                    "terms": "<p><span style=\"font-weight: bold;\">General Terms</span><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><span style=\"font-weight: bold;\">Using your Information</span><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to let us deliver the type of content and product offerings in which you are most interested.<br><br><span style=\"font-weight: bold;\">Protecting visitor information</span><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>",
                     "cancellationPolicy": "You have the right to withdraw from this contract within 14 days without giving any reason. The withdrawal period will expire after 14 days from the day on which you acquire, or a third party other than the carrier and indicated by you acquires, physical possession of the last good. You may use the attached model withdrawal form, but it is not obligatory. To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.",
                     "imprint": "<p>Spryker Systems GmbH<br><br>Julie-Wolfthorn-Straße 1<br>10115 Berlin<br>DE<br><br>Phone: +49 (30) 2084983 50<br>Email: info@spryker.com<br><br>Represented by<br>Managing Directors: Alexander Graf, Boris Lokschin<br>Register Court: Hamburg<br>Register Number: HRB 134310<br></p>",
                     "dataPrivacy": "Spryker Systems GmbH values the privacy of your personal data."

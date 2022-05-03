@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-offergui.html
 ---
 
-## Upgrading from Version 0.1.* to Version 0.3.0
+## Upgrading from version 0.1.* to version 0.3.0
 
 {% info_block infoBox %}
 

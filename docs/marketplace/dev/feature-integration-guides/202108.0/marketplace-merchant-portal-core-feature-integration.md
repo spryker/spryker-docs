@@ -52,20 +52,20 @@ Make sure that the following modules have been installed:
 
 Set up behavior as follows:
 
-#### 1. Integrate the following plugins:
+#### Integrate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ----------- | ------------ | ------------- | --------- |
 | MerchantUserSecurityPlugin | Sets security firewalls (rules, handlers) for Marketplace users. |  | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security |
-| BooleanToStringTwigPlugin  | Adds a new Twig function for converting Boolean to String |  | Spryker\Zed\ZedUi\Communication\Plugin\Twig  |
-| ZedUiNavigationTwigPlugin  | Adds a new Twig function for rendering Navigation using web components |  | Spryker\Zed\ZedUi\Communication\Plugin |
-| GuiTableApplicationPlugin | Enables GuiTable infrastructure for Zed |  | Spryker\Zed\GuiTable\Communication\Plugin\Application |
-| GuiTableConfigurationTwigPlugin | Adds a new Twig function for rendering GuiTableConfiguration for the GuiTable web component |  | Spryker\Zed\GuiTable\Communication\Plugin\Twig  |
-| SecurityTokenUpdateMerchantUserPostChangePlugin | Rewrites Symfony security token |  | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\UserMerchantPortalGui  |
-| MerchantPortalAclEntityMetadataConfigExpanderPlugin |Expands provided Acl Entity Metadata with merchant order composite, merchant product composite, merchant composite, product offer composit data, merchant read global entities and allow list entities |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity |
-| MerchantAclMerchantPostCreatePlugin | Creates ACL group, ACL role, ACL rules, ACL entity rules and ACL entity segment for provided merchant  |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\Merchant  |
-| MerchantAclMerchantUserPostCreatePlugin | Creates ACL group, ACL role, ACL rules, ACL entity rules and ACL entity segment for provided merchant user |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser  |
-| ProductViewerForOfferCreationAclInstallerPlugin | Provide ProductViewerForOfferCreation Roles with Rules and Groups to create on install |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser  |
+| BooleanToStringTwigPlugin  | Adds a new Twig function for converting Boolean to String. |  | Spryker\Zed\ZedUi\Communication\Plugin\Twig  |
+| ZedUiNavigationTwigPlugin  | Adds a new Twig function for rendering Navigation using web components. |  | Spryker\Zed\ZedUi\Communication\Plugin |
+| GuiTableApplicationPlugin | Enables GuiTable infrastructure for Zed. |  | Spryker\Zed\GuiTable\Communication\Plugin\Application |
+| GuiTableConfigurationTwigPlugin | Adds a new Twig function for rendering GuiTableConfiguration for the GuiTable web component. |  | Spryker\Zed\GuiTable\Communication\Plugin\Twig  |
+| SecurityTokenUpdateMerchantUserPostChangePlugin | Rewrites Symfony security token. |  | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\UserMerchantPortalGui  |
+| MerchantPortalAclEntityMetadataConfigExpanderPlugin |Expands provided Acl Entity Metadata with merchant order composite, merchant product composite, merchant composite, product offer composit data, merchant read global entities and allowlist entities. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity |
+| MerchantAclMerchantPostCreatePlugin | Creates ACL group, ACL role, ACL rules, ACL entity rules, and ACL entity segment for the provided merchant.  |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\Merchant  |
+| MerchantAclMerchantUserPostCreatePlugin | Creates ACL group, ACL role, ACL rules, ACL entity rules and ACL entity segment for the provided merchant user. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser  |
+| ProductViewerForOfferCreationAclInstallerPlugin | Provide `ProductViewerForOfferCreation` Roles with Rules and Groups to create on install. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser  |
 
 **src/Pyz/Zed/Twig/TwigDependencyProvider.php**
 
@@ -82,7 +82,7 @@ use Spryker\Zed\Twig\TwigDependencyProvider as SprykerTwigDependencyProvider;
 class TwigDependencyProvider extends SprykerTwigDependencyProvider
 {
     /**
-     * @return \Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface[]
+     * @return array<\Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface>
      */
     protected function getTwigPlugins(): array
     {
@@ -109,7 +109,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 {
 
     /**
-     * @return \Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface[]
+     * @return array<\Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface>
      */
     protected function getApplicationPlugins(): array
     {
@@ -128,19 +128,21 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 namespace Pyz\Zed\Security;
 
 use Spryker\Zed\Security\SecurityDependencyProvider as SprykerSecurityDependencyProvider;
+use Spryker\Zed\SecurityGui\Communication\Plugin\Security\UserSecurityPlugin;
 use Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security\MerchantUserSecurityPlugin;
 use Spryker\Zed\User\Communication\Plugin\Security\UserSessionHandlerSecurityPlugin;
 
 class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 {
     /**
-     * @return \Spryker\Shared\SecurityExtension\Dependency\Plugin\SecurityPluginInterface[]
+     * @return array<\Spryker\Shared\SecurityExtension\Dependency\Plugin\SecurityPluginInterface>
      */
     protected function getSecurityPlugins(): array
     {
         return [
             new UserSessionHandlerSecurityPlugin(),
             new MerchantUserSecurityPlugin(),
+            new UserSecurityPlugin(),
         ];
     }
 }
@@ -159,7 +161,7 @@ use Spryker\Zed\UserMerchantPortalGui\UserMerchantPortalGuiDependencyProvider as
 class UserMerchantPortalGuiDependencyProvider extends SprykerUserMerchantPortalGuiDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\UserMerchantPortalGuiExtension\Dependency\Plugin\MerchantUserPostChangePluginInterface[]
+     * @return array<\Spryker\Zed\UserMerchantPortalGuiExtension\Dependency\Plugin\MerchantUserPostChangePluginInterface>
      */
     public function getMerchantUserPostChangePlugins(): array
     {
@@ -184,7 +186,7 @@ use Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity\MerchantPortalA
 class AclEntityDependencyProvider extends SprykerAclEntityDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface>
      */
     protected function getAclEntityMetadataCollectionExpanderPlugins(): array
     {
@@ -194,6 +196,7 @@ class AclEntityDependencyProvider extends SprykerAclEntityDependencyProvider
     }
 }
 ```
+
 **src/Pyz/Zed/Merchant/MerchantDependencyProvider.php**
 
 ```php
@@ -207,7 +210,7 @@ use Spryker\Zed\Merchant\MerchantDependencyProvider as SprykerMerchantDependency
 class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantPostCreatePluginInterface[]
+     * @return array<\Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantPostCreatePluginInterface>
      */
     protected function getMerchantPostCreatePlugins(): array
     {
@@ -231,7 +234,7 @@ use Spryker\Zed\MerchantUser\MerchantUserDependencyProvider as SprykerMerchantUs
 class MerchantUserDependencyProvider extends SprykerMerchantUserDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\MerchantUserExtension\Dependency\Plugin\MerchantUserPostCreatePluginInterface[]
+     * @return array<\Spryker\Zed\MerchantUserExtension\Dependency\Plugin\MerchantUserPostCreatePluginInterface>
      */
     protected function getMerchantUserPostCreatePlugins(): array
     {
@@ -255,7 +258,7 @@ use Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser\ProductViewe
 class AclDependencyProvider extends SprykerAclDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\AclExtension\Dependency\Plugin\AclInstallerPluginInterface[]
+     * @return array<\Spryker\Zed\AclExtension\Dependency\Plugin\AclInstallerPluginInterface>
      */
     protected function getAclInstallerPlugins(): array
     {
@@ -266,9 +269,9 @@ class AclDependencyProvider extends SprykerAclDependencyProvider
 }
 ```
 
-#### 2. Enable Merchant Portal infrastructural plugins.
+#### Enable Merchant Portal infrastructural plugins
 
-**src/Pyz/Zed/Acl/AclDependencyProvider.php**
+<details><summary markdown='span'>src/Pyz/Zed/MerchantPortalApplication/MerchantPortalApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -296,7 +299,7 @@ use Spryker\Zed\ZedUi\Communication\Plugin\Application\ZedUiApplicationPlugin;
 class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalApplicationDependencyProvider
 {
     /**
-     * @return \Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface[]
+     * @return array<\Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface>
      */
     protected function getMerchantPortalApplicationPlugins(): array
     {
@@ -322,14 +325,66 @@ class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalA
 }
 ```
 
-Open access to the *Merchant Portal* login page by default:
+</details>
+
+**src/Pyz/Zed/MerchantPortalApplication/Communication/Bootstrap/MerchantPortalBootstrap.php**
+```php
+<?php
+
+namespace Pyz\Zed\MerchantPortalApplication\Communication\Bootstrap;
+
+use Spryker\Zed\MerchantPortalApplication\Communication\Bootstrap\MerchantPortalBootstrap as MerchantPortalApplicationBootstrap;
+
+class MerchantPortalBootstrap extends MerchantPortalApplicationBootstrap
+{
+}
+```
+
+**src/Pyz/Zed/MerchantPortalApplication/Communication/MerchantPortalApplicationCommunicationFactory.php**
+```php
+<?php
+
+namespace Pyz\Zed\MerchantPortalApplication\Communication;
+
+use Spryker\Zed\MerchantPortalApplication\Communication\MerchantPortalApplicationCommunicationFactory as SprykerMerchantPortalApplicationCommunicationFactory;
+
+class MerchantPortalApplicationCommunicationFactory extends SprykerMerchantPortalApplicationCommunicationFactory
+{
+}
+```
+
+**src/Pyz/Zed/Router/RouterDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Router;
+
+use Spryker\Zed\Router\Communication\Plugin\Router\MerchantPortalRouterPlugin;
+use Spryker\Zed\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
+
+class RouterDependencyProvider extends SprykerRouterDependencyProvider
+{
+    /**
+     * @return array|array<\Spryker\Zed\RouterExtension\Dependency\Plugin\RouterPluginInterface>
+     */
+    protected function getMerchantPortalRouterPlugins(): array
+    {
+        return [
+            new MerchantPortalRouterPlugin()
+        ];
+    }
+}
+```
+
+Open access to the Merchant Portal login page by default:
 
 **config/Shared/config_default.php**
 
 ```php
 <?php
 
-$config[AclConstants::ACL_DEFAULT_RULES] = [
+$config[AclConstants::ACL_DEFAULT_RULES][] = [
   [
     'bundle' => 'security-merchant-portal-gui',
     'controller' => 'login',
@@ -338,6 +393,46 @@ $config[AclConstants::ACL_DEFAULT_RULES] = [
   ],
 
 ];
+```
+
+Add console command for warming up *Merchant Portal* router cache:
+
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+```php
+<?php
+
+namespace Pyz\Zed\Console;
+
+use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
+use Spryker\Zed\Router\Communication\Plugin\Console\MerchantPortalRouterCacheWarmUpConsole;
+
+class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Symfony\Component\Console\Command\Command>
+     */
+    protected function getConsoleCommands(Container $container): array
+    {
+        $commands = [
+            new MerchantPortalRouterCacheWarmUpConsole(),
+        ];
+        
+        return $commands;
+    }
+}
+```
+
+**config/install/docker.yml**
+```yaml
+env:
+    NEW_RELIC_ENABLED: 0
+
+sections:
+    build:
+      router-cache-warmup-merchant-portal:
+        command: 'vendor/bin/console router:cache:warm-up:merchant-portal'
 ```
 
 ### 3) Set up transfer objects
@@ -354,8 +449,6 @@ Make sure that the following changes have been applied in transfer objects:
 
 | TRANSFER  | TYPE  | EVENT | PATH  |
 | ----------- | ----- | ------- | -------------------- |
-| MerchantDashboardCard | class | created | src/Generated/Shared/Transfer/MerchantDashboardCardTransfer  |
-| MerchantDashboardActionButton | class | created | src/Generated/Shared/Transfer/MerchantDashboardActionButtonTransfer |
 | GuiTableDataRequest | class | Created | src/Generated/Shared/Transfer/GuiTableDataRequestTransfer |
 | GuiTableConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableConfigurationTransfer |
 | GuiTableColumnConfiguration | class | Created | src/Generated/Shared/Transfer/GuiTableColumnConfigurationTransfer |
@@ -392,18 +485,18 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
-Follow the steps below to install the Merchant Portal Core feature front end.
+Follow the steps below to install the Merchant Portal Core feature frontend.
 
 ### Prerequisites
 
-**Environment requirements:**
+Environment requirements:
+  * NPM v6 (higher versions have problems with workspace)
+  * NodeJs v12-14
+  * Yarn v2 (or latest Yarn v1)
 
-- NodeJs v12+
-- Yarn v2 (or latest Yarn v1)
-
-**Spryker requirements:**
+Spryker requirements:
 
 To start builder integration, check the Spryker packages versions:
 
@@ -444,7 +537,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Build navigation cache.
+### 3) Build navigation cache
 
 Execute the following command:
 
@@ -453,20 +546,20 @@ console navigation:build-cache
 ```
 {% info_block warningBox "Verification" %}
 
-Make sure that Merchant Portal has "Dashboard" menu section.
+Make sure that Merchant Portal has the **Dashboard** menu.
 
 {% endinfo_block %}
 
 
 ### 4) Set up Marketplace builder configs
 
-Add the `angular.json` file.
+Add the `angular.json` file:
 
 ```bash
 wget -O angular.json https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/angular.json
 ```
 
-Rename default `tsconfig` to `tsconfig.yves.json`. Create marketplace-specific `tsconfig` files (`tsconfig.json`, `tsconfig.mp.json`)
+Rename default `tsconfig` to `tsconfig.yves.json` and create marketplace-specific `tsconfig` files (`tsconfig.json`, `tsconfig.mp.json`)
 
 ```bash
 mv tsconfig.json tsconfig.yves.json
@@ -476,7 +569,7 @@ wget -O tsconfig.mp.json https://raw.githubusercontent.com/spryker-shop/suite/1.
 
 Add `vendor/**` and `**/node_modules/**` to exclude option in `tslint.json`.
 
-Add the `tslint.mp.json` file.
+Add the `tslint.mp.json` file:
 
 ```bash
 wget -O tslint.mp.json https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/tslint.mp.json
@@ -526,7 +619,7 @@ Update `package.json` with the following fields:
 }
 ```
 
-Update `frontend/settings.js` to point to an updated `tsconfig` for Yves in the `globalSettings.paths` object:
+For Yves, in the `globalSettings.paths` object, update `frontend/settings.js` to point to an updated `tsconfig`:
 
 **frontend/settings.js**
 
@@ -540,7 +633,7 @@ const globalSettings = {
 };
 ```
 
-Add a `.yarnrc.yml` file.
+Add a `.yarnrc.yml` file:
 
 **.yarnrc.yml**
 
@@ -556,37 +649,42 @@ plugins:
 yarnPath: .yarn/releases/yarn-2.3.3.js
 ```
 
-Add the `.yarn` folder and download `plugin-workspace-tools.js` and `yarn-2.0.0-rc.32.js`.
+Add the `.yarn` folder and download `plugin-workspace-tools.js` and `yarn-2.3.3.js`:
 
 ```bash
 mkdir .yarn && mkdir .yarn/plugins && mkdir .yarn/releases
 wget -O .yarn/plugins/@yarnpkg/plugin-workspace-tools.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/.yarn/plugins/%40yarnpkg/plugin-workspace-tools.js
+wget -O .yarn/plugins/@yarnpkg/plugin-interactive-tools.cjs https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/.yarn/plugins/%40yarnpkg/plugin-interactive-tools.cjs
 wget -O .yarn/releases/yarn-2.3.3.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/.yarn/releases/yarn-2.3.3.js
 ```
 
-Run commands from the root of the project:
+From the root of the project, run the following:
 
 ```bash
 npm i -g yarn @angular/cli@9.1.11
 ```
 
-Run `yarn -v` to check if the yarn was installed correctly. 1.22.x - global version (outside of the project) and 2.x.x at least in the project.
+To check if the yarn has been installed correctly, run `yarn -v`. 1.22.x—global version outside of the project and 2.x.x at least in the project.
 
 `ng --version` should show Angular CLI: 9.1.11 version.
 
-Now it is time to install project dependencies:
+Install project dependencies:
 
 ```bash
 yarn install
 ```
 
-Check if the marketplace packages are located in the `node_modules/@spryker` folder (for example, utils).
+{% info_block warningBox "Warning" %}
+
+If you're getting `Missing write access to node_modules/mp-profile`, delete this **file** and make a **folder** with the same name.
+
+{% endinfo_block %}
+
+Check if the marketplace packages are located in the `node_modules/@spryker` folder — for example, utils.
 
 ### 5) Install Marketplace builder
 
 Add the `merchant-portal` folder and builder files:
-
-**frontend/merchant-portal/entry-points.js**
 
 ```bash
 mkdir frontend/merchant-portal
@@ -594,11 +692,11 @@ wget -O frontend/merchant-portal/entry-points.js https://raw.githubusercontent.c
 wget -O frontend/merchant-portal/html-transform.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/frontend/merchant-portal/html-transform.js
 wget -O frontend/merchant-portal/jest.config.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/frontend/merchant-portal/jest.config.js
 wget -O frontend/merchant-portal/mp-paths.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/frontend/merchant-portal/mp-paths.js
-wget -O frontend/merchant-portal/test-setup.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/frontend/merchant-portal/test-setup.js
+wget -O frontend/merchant-portal/test-setup.ts https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/frontend/merchant-portal/test-setup.ts
 wget -O frontend/merchant-portal/tsconfig.spec.json https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/frontend/merchant-portal/tsconfig.spec.json
 wget -O frontend/merchant-portal/update-config-paths.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/frontend/merchant-portal/update-config-paths.js
 wget -O frontend/merchant-portal/utils.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/frontend/merchant-portal/utils.js
-wget -O frontend/merchant-portal/webpack.config.js https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/frontend/merchant-portal/webpack.config.js
+wget -O frontend/merchant-portal/webpack.config.ts https://raw.githubusercontent.com/spryker-shop/suite/1.8.0/frontend/merchant-portal/webpack.config.ts
 ```
 
 **frontend/merchant-portal/webpack.config.ts**
@@ -631,67 +729,293 @@ export default async (
     return config;
 };
 ```
----
+
+### 6) Add files for Merchant Portal entry point:
+
+**public/MerchantPortal/index.php**
+
+```php
+<?php
+
+use Pyz\Zed\MerchantPortalApplication\Communication\Bootstrap\MerchantPortalBootstrap;
+use Spryker\Shared\Config\Application\Environment;
+use Spryker\Shared\ErrorHandler\ErrorHandlerEnvironment;
+
+define('APPLICATION', 'MERCHANT_PORTAL');
+defined('APPLICATION_ROOT_DIR') || define('APPLICATION_ROOT_DIR', dirname(__DIR__, 2));
+
+require_once APPLICATION_ROOT_DIR . '/vendor/autoload.php';
+
+Environment::initialize();
+
+$errorHandlerEnvironment = new ErrorHandlerEnvironment();
+$errorHandlerEnvironment->initialize();
+
+$bootstrap = new MerchantPortalBootstrap();
+$bootstrap
+    ->boot()
+    ->run();
+```
+
+**public/MerchantPortal/maintenance/index.html**
+
+```html
+<!DOCTYPE html>
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Spryker Merchant Portal - Maintenance</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <link href="http://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet" type="text/css" />
+    </head>
+    <style>
+        body {
+            font-family: 'PT Mono', sans-serif;
+        }
+        #so-doc {
+            margin: 0 auto;
+            width: 960px;
+        }
+    </style>
+    <body>
+        <div id="so-doc">
+            <div>
+                <pre>
+                PAGE UNDER CONSTRUCTION!
+
+                Come back in a few minutes...
+                </pre>
+            </div>
+        </div>
+    </body>
+</html>
+```
+
+**public/MerchantPortal/maintenance/maintenance.php**
+
+```php
+<?php
+
+/**
+ * Copyright © 2017-present Spryker Systems GmbH. All rights reserved.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ */
+
+if (file_exists(__DIR__ . '/maintenance.marker')) {
+    http_response_code(503);
+    echo file_get_contents(__DIR__ . '/index.html');
+    exit(1);
+}
+```
+
+**src/Pyz/Zed/ZedUi/Presentation/Components/app/app.module.ts**
+
+```ts
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { DefaultMerchantPortalConfigModule, RootMerchantPortalModule } from '@mp/zed-ui';
+import { DefaultTableConfigModule } from '@mp/gui-table';
+
+@NgModule({
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        RootMerchantPortalModule,
+        DefaultMerchantPortalConfigModule,
+        DefaultTableConfigModule,
+    ],
+})
+export class AppModule extends RootMerchantPortalModule {}
+```
+
+**src/Pyz/Zed/ZedUi/Presentation/Components/environments/environment.prod.ts**
+
+```ts
+export const environment = {
+    production: true,
+};
+```
+
+**src/Pyz/Zed/ZedUi/Presentation/Components/environments/environment.ts**
+
+```ts
+export const environment = {
+    production: false,
+};
+```
+
+**src/Pyz/Zed/ZedUi/Presentation/Components/index.html**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>ZedUi</title>
+        <base href="/" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body></body>
+</html>
+```
+
+**src/Pyz/Zed/ZedUi/Presentation/Components/main.ts**
+
+```ts
+import { enableProdMode } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+import { AppModule } from './app/app.module';
+import { environment } from './environments/environment';
+
+if (environment.production) {
+    enableProdMode();
+}
+
+platformBrowserDynamic()
+    .bootstrapModule(AppModule)
+    /* tslint:disable-next-line: no-console */
+    .catch((error) => console.error(error));
+```
+
+**src/Pyz/Zed/ZedUi/Presentation/Components/polyfills.ts**
+
+```ts
+import '@mp/polyfills';
+```
+
 {% info_block warningBox "Verification" %}
 
-`npm run mp:build` should pass successfully.
+`yarn run mp:build` should pass successfully. If it doesn't work, try full rebuild:
+
+`rm -rf node_modules && yarn cache clean --all && npm cache clean --force && yarn install && yarn mp:build`
 
 {% endinfo_block %}
 
 ### 6) Adjust deployment configs
 
-If you want to configure deployment configuration to automatically install and build Merchant Portal, you need to change frontend dependencies and install commands in the deployment Yaml:
+To configure deployment configuration to automatically install and build Merchant Portal, change frontend dependencies and install commands in the deployment Yaml:
 
-- Remove existing Yves dependencies install commands from deployment Yaml:
+- Remove existing Yves dependencies install commands from deployment Yaml: `dependencies-install` and `yves-isntall-dependencies`.
+- Add required console commands:
 
- dependencies-install and yves-isntall-dependencies
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**  
 
-- Update project install dependencies command dependencies-install command to:
-- build-static:
+```php
+<?php
 
-```bash
-merchant-portal-install-dependencies:
-    command: 'console frontend:mp:install-dependencies | tail -100 && echo "Output trimmed, only last 100 lines shown."'
+namespace Pyz\Zed\Console;
+
+use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
+use Spryker\Zed\SetupFrontend\Communication\Console\MerchantPortalBuildFrontendConsole;
+use Spryker\Zed\SetupFrontend\Communication\Console\MerchantPortalInstallDependenciesConsole;
+
+class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Symfony\Component\Console\Command\Command>
+     */
+    protected function getConsoleCommands(Container $container): array
+    {
+        $commands = [
+            new MerchantPortalInstallDependenciesConsole(),
+            new MerchantPortalBuildFrontendConsole(),
+        ];
+        
+        return $commands;
+    }
+}
+
 ```
 
-- Add Merchant Portal build command:
+- Update project install dependencies command dependencies-install command to:
+  - build-static:
+    ```bash
+    merchant-portal-install-dependencies:
+      command: 'console frontend:mp:install-dependencies | tail -100 && echo "Output trimmed, only last 100 lines shown."'
+    ```
 
-- build-static-production: 
-  ```yaml
-  merchant-portal-build-frontend:
-     command: 'vendor/bin/console frontend:mp:build -e production'
-     timeout: 1600
-  ```
-  
-- build-static-development: 
-  ```yaml
-  merchant-portal-build-frontend:
-     command: 'vendor/bin/console frontend:mp:build'
-     timeout: 1600
-  ```
+- Add the Merchant Portal build command:
+  - build-static-production:
+    ```yaml
+    merchant-portal-build-frontend:
+      command: 'vendor/bin/console frontend:mp:build -e production'
+      timeout: 1600
+    ```
+
+  - build-static-development:
+    ```yaml
+    merchant-portal-build-frontend:
+      command: 'vendor/bin/console frontend:mp:build'
+      timeout: 1600
+    ```
 
 ## Adjust environment infrastructure
 
-It is not safe to expose MerchantPortal next to the Back Office - MerchantPortal **MUST NOT** have OS, DNS name, VirtualHost settings, FileSystem, and service credentials shared with Zed.
+It is not safe to expose MerchantPortal next to the Back Office—MerchantPortal *must not have* OS, DNS name, VirtualHost settings, FileSystem, and service credentials shared with Zed.
 
 ### 1) Set up a new virtual machine/docker container dedicated to MerchantPortal
 
-MerchantPortal MUST be placed into its own private subnet.
+MerchantPortal *must be* placed into its own private subnet.
 
-MerchantPortal **MUST** have access to:
+MerchantPortal *must have* access to the following:
 
 - Primary Database
 - Message broker
 
-MerchantPortal **MUST NOT** have access to:
+MerchantPortal *must not have* access to the following:
 
 - Search and Storage
 - Gateway
 - Scheduler
 
+**deploy.dev.yml**
+```yaml
+...
+groups:
+  EU:
+    region: EU
+    applications:
+      merchant_portal_eu:
+        application: merchant-portal
+        endpoints:
+          mp.de.spryker.local:
+            entry-point: MerchantPortal
+            store: DE
+            primal: true
+            services:
+              session:
+                namespace: 7
+          mp.at.spryker.local:
+            entry-point: MerchantPortal
+            store: AT
+            services:
+              session:
+                namespace: 8
+  US:
+    region: US
+    applications:
+      merchant_portal_us:
+        application: merchant-portal
+        endpoints:
+          mp.us.spryker.local:
+            entry-point: MerchantPortal
+            store: US
+            services:
+              session:
+                namespace: 9
+```
+
 ### 2) Create a dedicated database user
 
-Grant only default CRUD (INSERT, DELETE, UPDATE, SELECT) operations. DO NOT grant ALL PRIVILEGES, GRANT OPTION, DROP, CREATE, and other admin-related grants.
+Grant only default CRUD operations—`INSERT`, `DELETE`, `UPDATE`, `SELECT`. Do not grant `ALL PRIVILEGES`, `GRANT OPTION`, `DROP`, `CREATE`, and other admin-related grants.
 
 The following code snippet example is for MySQL:
 
@@ -703,7 +1027,7 @@ FLUSH PRIVILEGES;
 
 ### 3) Create a new Nginx web server configuration
 
-Example of an Nginx configuration:
+The following is an example of an Nginx configuration:
 
 **/etc/nginx/merchant-portal.conf**
 
@@ -741,7 +1065,7 @@ server {
 }
 ```
 
-After the Nginx config was modified, apply the new `config:f`
+After modifying the Nginx config, apply the new `config:f`
 
 ```bash
 sudo service nginx reload
@@ -764,18 +1088,17 @@ $config[PropelConstants::ZED_DB_PASSWORD] = getenv('SPRYKER_DB_PASSWORD');
 
 {% endinfo_block %}
 
-The following page should now show the login page for MerchantPortal: `https://your-merchant-portal.domain/security-merchant-portal-gui/login`
+The following page should show the login page for MerchantPortal: `https://your-merchant-portal.domain/security-merchant-portal-gui/login`
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following pages do not open `https://your-merchant-portal.domain/security-gui/login`, `https://your-merchant-portal.domain/`
+Make sure the following pages do not open: `https://your-merchant-portal.domain/security-gui/login`, `https://your-merchant-portal.domain/`.
 
 {% endinfo_block %}
 
 ### 4) Register modules in ACL
 
 Add new modules to installer rules:
-
 
 **src/Pyz/Zed/Acl/AclConfig.php**
 
@@ -789,10 +1112,12 @@ use Spryker\Zed\Acl\AclConfig as SprykerAclConfig;
 
 class AclConfig extends SprykerAclConfig
 {
+    protected const RULE_TYPE_DENY = 'deny';
+
     /**
-     * @param string[][] $installerRules
+     * @param array<array<string>> $installerRules
      *
-     * @return string[][]
+     * @return array<array<string>>
      */
     protected function addMerchantPortalInstallerRules(array $installerRules): array
     {
@@ -820,13 +1145,13 @@ class AclConfig extends SprykerAclConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that after executing `console setup:init-db`, the `'user-merchant-portal-gui'` rule is present in the `spy_acl_rule` table.
+Make sure that after executing `console setup:init-db`, the `user-merchant-portal-gui` rule is present in the `spy_acl_rule` table.
 
 {% endinfo_block %}
 
 ### 5) Update navigation
 
-Add MyAccount and Logout section to `navigation-secondary.xml`:
+Add the `My Account` and `Logout` sections to `navigation-secondary.xml`:
 
 **config/Zed/navigation-secondary.xml**
 
@@ -858,6 +1183,14 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Log in to the **Merchant Portal** and make sure that the MyAccount and Logout button are visible in the overlay of the secondary navigation, when clicking on the profile picture.
+Log in to the Merchant Portal and make sure that when clicking on the profile picture, the **My Account** and **Logout** buttons are visible in the overlay of the secondary navigation.
 
 {% endinfo_block %}
+
+## Related features
+
+Integrate the following related features:
+
+| FEATURE        | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| - | - | -|
+| Merchant Portal | &check;  |  [Merchant Portal feature integration ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-feature-integration.html) |

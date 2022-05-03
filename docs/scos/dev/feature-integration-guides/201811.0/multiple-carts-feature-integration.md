@@ -30,7 +30,6 @@ Make sure that the following modules were installed:<table><thead><tr><th>Module
 ### 2) Set up Database Schema and Transfer Objects
 Run the following commands to apply database changes and generate entity and transfer changes:
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -59,7 +58,7 @@ multi_cart.cart.set_default.success,"Warenkorb '%quote%' wurde erfolgreich auf a
   console data:import glossary
   ```
   {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 {% endinfo_block %}
   
   ### 4) Import Data
@@ -539,7 +538,7 @@ Run the following console command to import data:
 console data:import glossary
 ```
 {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 {% endinfo_block %}
 ### 3) Enable Controllers
 #### Controller Provider List

@@ -16,7 +16,7 @@ The topic describes how to create warehouses in the Back Office.
 
 ## Prerequisites
 
-To start working with warehouses, go to **Administration** > **Warehouses**.
+To start working with warehouses, go to **Administration&nbsp;<span aria-label="and then">></span> Warehouses**.
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 

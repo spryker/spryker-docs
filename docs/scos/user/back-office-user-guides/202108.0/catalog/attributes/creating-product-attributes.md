@@ -19,7 +19,7 @@ This document describes how to create product attributes.
 
 ## Prerequisites
 
-To start working with attributes, go to **Catalog** > **Attributes**.
+To start working with attributes, go to **Catalog&nbsp;<span aria-label="and then">></span> Attributes**.
 
 A new product usually needs a super attribute and a regular attribute. The super attribute is used to distinguish product variants and the regular attributes is used to define product characteristics.
 

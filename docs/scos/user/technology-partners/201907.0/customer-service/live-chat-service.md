@@ -1,5 +1,5 @@
 ---
-title: live chat service
+title: Live Chat Service
 description: Ensure that live chat helps their customers with new leads and
 last_updated: Nov 22, 2019
 template: concept-topic-template

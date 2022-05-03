@@ -17,7 +17,7 @@ Merchants define the following settings when creating product offers:
 
 |SETTING|DESCRIPTION|
 |---|---|
-| Status| Active or Inactive |
+| Status| Active or Inactive. |
 | Merchnat SKU | Unique identifier of the offer in the merchants' system. |
 | Stores| Spryker Marketplace is a multi-store environment, and merchants can define which stores to display their offers in. |
 |Stock | Offer's own stock that's not dependent on the respective product's stock. |

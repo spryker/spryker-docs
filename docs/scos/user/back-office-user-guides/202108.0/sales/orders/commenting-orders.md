@@ -5,7 +5,7 @@ template: back-office-user-guide-template
 ---
 
 To add a [comment](/docs/scos/user/features/{{page.version}}/comments-feature-overview.html) to an order in the Back Office, do the following:
-1. Go to **Sales** > **Orders**.
+1. Go to **Sales&nbsp;<span aria-label="and then">></span> Orders**.
     This opens the **Orders** page.
 2. Next to the order you want to comment, click **View**.
     This opens the **Order Overview** page.

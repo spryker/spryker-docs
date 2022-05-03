@@ -116,7 +116,7 @@ use Spryker\Zed\Wishlist\WishlistDependencyProvider as SprykerWishlistDependency
 class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\WishlistExtension\Dependency\Plugin\AddItemPreCheckPluginInterface[]
+     * @return array<\Spryker\Zed\WishlistExtension\Dependency\Plugin\AddItemPreCheckPluginInterface>
      */
     protected function getAddItemPreCheckPlugins(): array
     {
@@ -142,7 +142,7 @@ use Spryker\Glue\WishlistsRestApi\WishlistsRestApiDependencyProvider as SprykerW
 class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependencyProvider
 {
     /**
-     * @return \Spryker\Glue\WishlistsRestApiExtension\Dependency\Plugin\RestWishlistItemsAttributesMapperPluginInterface[]
+     * @return array<\Spryker\Glue\WishlistsRestApiExtension\Dependency\Plugin\RestWishlistItemsAttributesMapperPluginInterface>
      */
     protected function getRestWishlistItemsAttributesMapperPlugins(): array
     {
@@ -167,7 +167,7 @@ use Spryker\Zed\WishlistsRestApi\WishlistsRestApiDependencyProvider as SprykerWi
 class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\WishlistsRestApiExtension\Dependency\Plugin\RestWishlistItemsAttributesDeleteStrategyPluginInterface[]
+     * @return array<\Spryker\Zed\WishlistsRestApiExtension\Dependency\Plugin\RestWishlistItemsAttributesDeleteStrategyPluginInterface>
      */
     protected function getRestWishlistItemsAttributesDeleteStrategyPlugins(): array
     {
@@ -182,10 +182,10 @@ class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependen
 
 {% info_block warningBox "Verification" %}
 
-Make sure that `ProductOfferRestWishlistItemsAttributesMapperPlugin` is set up by sending the request `GET http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get `attributes` in the response.
+Make sure that `ProductOfferRestWishlistItemsAttributesMapperPlugin` is set up by sending the request `GET https://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get `attributes` in the response.
 
-Make sure that `MerchantProductOfferAddItemPreCheckPlugin` is set up by sending the request `POST http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}/wishlist-items`. You should have the wishlist item added only when the product has the specified offer reference.
+Make sure that `MerchantProductOfferAddItemPreCheckPlugin` is set up by sending the request `POST https://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}/wishlist-items`. You should have the wishlist item added only when the product has the specified offer reference.
 
-Make sure that `ProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin` and `EmptyProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin` are set up by sending the request `DELETE http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}/wishlist-items/{% raw %}{{wishlistItemId}}{% endraw %}`. You should get the product offer wishlist item deleted.
+Make sure that `ProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin` and `EmptyProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin` are set up by sending the request `DELETE https://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}/wishlist-items/{% raw %}{{wishlistItemId}}{% endraw %}`. You should get the product offer wishlist item deleted.
 
 {% endinfo_block %}

@@ -24,6 +24,30 @@ The project development, the team is free to decide what approach to use. Spryke
 
 Before starting the project, we recommend you check available development strategies and define one for your implementation. See [Development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) for details.
 
+## Use custom namespaces and names
+
+Instead of using the `Pyz` namespace, create your own namespace for project development. For example, use the project name as a namespace.
+
+Use custom names for everything that is added on the project level, like the following:
+- Transfers
+- Transfer properties
+- DB tables
+- DB table fields,
+- Modules
+- Classes
+- Interfaces
+- Traits
+- Properties
+- Contants
+
+For example, customize the names by adding the project name.
+
+## Keep modules up to date
+
+During development and after going live, we recommend checking for security updates of external and Spryker dependencies on a regular basis.
+
+Additionally, we recommend keeping modules up to date in general.
+
 ## Development & Tests
 
 From the very first day of project development, it’s recommended to establish an incremental development process based on CI/CD supported by tests.

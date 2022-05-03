@@ -7,7 +7,7 @@ template: glue-api-storefront-guide-template
 This endpoint allows retrieving general information about concrete products.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see:
+For detailed information about the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
 * [Glue API: Measurement Units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html)
 * [Glue API: Product Options feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
@@ -46,7 +46,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 
 * For performance and bandwidth usage optimization, we recommend filtering out only the needed information using the `fields` string parameter.
 
-* If you include more resources, you can still use the `fields` string parameter to return only the needed fields. For example, `GET http://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units&fields[concrete-products]=name,description&fields[sales-units]=conversion,precision`.
+* If you include more resources, you can still use the `fields` string parameter to return only the needed fields. For example, `GET https://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units&fields[concrete-products]=name,description&fields[sales-units]=conversion,precision`.
 
 {% endinfo_block %}
 
@@ -54,15 +54,15 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 
 | REQUEST  | USAGE |
 | --- | --- |
-| `GET http://glue.mysprykershop.com/concrete-products/001_25904006` | Retrieve information about the `001_25904006` product.  |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006` | Retrieve information about the `001_25904006` product.  |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-image-sets` | Retrieve information about the `001_25904006` product with its image sets.  |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-availabilities` | Retrieve information about the `001_25904006` product with its availability.  |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-prices` | Retrieve information about the `001_25904006` product with its [default prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html). |
 | `GET https://glue.mysprykershop.com/abstract-products/093_24495843?include=concrete-product-prices` | Retrieve information about the abstract product with SKU `093_24495843` with its prices: default and [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html) |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-options` | Retrieve information about the `001_25904006` product with its product options.  |
 | `GET https://glue.mysprykershop.com/concrete-products/035_17360369?include=product-reviews` | Retrieve information about the `001_25904006` product with its product reviews.  |
-| `GET http://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units,product-measurement-units` | Retrieve information about the `fish-1-1` product with the information on its sales units and product measurement units included. |
-| `GET http://glue.mysprykershop.com/concrete-products/001_25904006?include=product-labels` | Retrieve information about the `001_25904006` product with product labels included.  |
+| `GET https://glue.mysprykershop.com/concrete-products/fish-1-1?include=sales-units,product-measurement-units` | Retrieve information about the `fish-1-1` product with the information on its sales units and product measurement units included. |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-labels` | Retrieve information about the `001_25904006` product with product labels included.  |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-offers` | Retrieve information about a concrete product with the SKU `001_25904006` with the product offers for this product included. |
 | `GET https://glue.mysprykershop.com/concrete-products/076_24394207?include=product-offers,product-offer-prices` | Retrieve information about a concrete product with the SKU `076_24394207` with product offers and the product offer prices included.
 | `GET https://glue.mysprykershop.com/concrete-products/111_12295890?include=abstract-products,merchants` | Retrieve information about the concrete product with SKU `111_12295890` with its abstract product and the merchant who sells it.|
@@ -109,7 +109,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
             }
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/concrete-products/001_25904006"
+            "self": "https://glue.mysprykershop.com/concrete-products/001_25904006"
         }
     }
 }
@@ -267,7 +267,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 ```
 </details>
 
- 
+
 <details><summary markdown='span'>Response sample: retrieve information about a concrete product with its default prices</summary>
 
 ```php
@@ -564,7 +564,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
             "averageRating": 4.7,
             "reviewCount": 3,
             "name": "Canon PowerShot N",
-            "description": "Creative Shot Originality is effortless with Creative Shot. Simply take a shot and the camera will analyse the scene then automatically generate five creative images plus the original unaltered photo - capturing the same subject in a variety of artistic and surprising ways. The unique symmetrical, metal-bodied design is strikingly different with an ultra-modern minimalist style - small enough to keep in your pocket and stylish enough to take anywhere. HS System excels in low light letting you capture the real atmosphere of the moment without flash or a tripod. Advanced DIGIC 5 processing and a high-sensitivity 12.1 Megapixel CMOS sensor give excellent image quality in all situations.",
+            "description": "Creative Shot Originality is effortless with Creative Shot. Simply take a shot and the camera will analyse the scene then automatically generate five creative images plus the original unaltered photo—capturing the same subject in a variety of artistic and surprising ways. The unique symmetrical, metal-bodied design is strikingly different with an ultra-modern minimalist style—small enough to keep in your pocket and stylish enough to take anywhere. HS System excels in low light letting you capture the real atmosphere of the moment without flash or a tripod. Advanced DIGIC 5 processing and a high-sensitivity 12.1 Megapixel CMOS sensor give excellent image quality in all situations.",
             "attributes": {
                 "focus": "TTL",
                 "field_of_view": "100%",
@@ -685,7 +685,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
             }
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-1?include=sales-units,product-measurement-units"
+            "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-1?include=sales-units,product-measurement-units"
         },
         "relationships": {
             "product-measurement-units": {
@@ -715,7 +715,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
                 "defaultPrecision": 100
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-measurement-units/METR"
+                "self": "https://glue.mysprykershop.com/product-measurement-units/METR"
             }
         },
         {
@@ -729,7 +729,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
                 "productMeasurementUnitCode": "METR"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/sales-units/32"
+                "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-1/sales-units/32"
             },
             "relationships": {
                 "product-measurement-units": {
@@ -788,7 +788,7 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
             }
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/concrete-products/001_25904006"
+            "self": "https://glue.mysprykershop.com/concrete-products/001_25904006"
         }
     }
 }

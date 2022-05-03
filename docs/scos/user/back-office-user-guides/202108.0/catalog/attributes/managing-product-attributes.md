@@ -19,7 +19,7 @@ This topic describes how to manage product attributes.
 
 ## Prerequisites
 
-To start managing attributes, go to **Catalog** > **Attributes**.
+To start managing attributes, go to **Catalog&nbsp;<span aria-label="and then">></span> Attributes**.
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 

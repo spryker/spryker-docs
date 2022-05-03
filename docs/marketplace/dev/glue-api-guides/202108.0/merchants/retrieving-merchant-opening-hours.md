@@ -20,7 +20,7 @@ To retrieve a merchant opening hours, send the request:
 
 {% info_block warningBox "Note" %}
 
-This endpoint returns only [active](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) merchants. To learn how you can activate a merchant in the Back Office, see [Activating and deactivating merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants).
+This endpoint returns only [active](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) merchants. You can activate merchants in the Back Office.
 
 {% endinfo_block %}
 
@@ -29,7 +29,7 @@ This endpoint returns only [active](/docs/marketplace/user/features/{{page.versi
 
 Request sample: retrieve merchant opening hours
 
-`GET http://glue.mysprykershop.com/merchants/MER000001/merchant-opening-hours`
+`GET https://glue.mysprykershop.com/merchants/MER000001/merchant-opening-hours`
 
 ### Response
 
@@ -172,12 +172,12 @@ Request sample: retrieve merchant opening hours
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/merchants/MER000001/merchant-opening-hours"
+                "self": "https://glue.mysprykershop.com/merchants/MER000001/merchant-opening-hours"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/merchants/MER000001/merchant-opening-hours"
+        "self": "https://glue.mysprykershop.com/merchants/MER000001/merchant-opening-hours"
     }
 }
 ```

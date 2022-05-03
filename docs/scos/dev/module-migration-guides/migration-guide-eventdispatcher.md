@@ -19,11 +19,11 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-eventdispatcher.html
 ---
 
-## Upgrading to Version 1.1.2
+## Upgrading to version 1.1.2
 
 Version 1.1.2 boosts the overall Zed and Glue performance by introducing a [cache of unresolved entities for Zed](/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html#activate-class-resolver-cache).
 
-**To upgrade to the new version of the module, enable the following plugins:**
+To upgrade to the new version of the module, enable the following plugins:
 
 For Glue:
 
@@ -56,6 +56,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 ```
 
 For Zed:
+
 ```php
 <?php
 
@@ -79,7 +80,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 }
 ```
 
-That's it! You've upgraded the EventDispatcher module to 1.1.2 version.
+That's it! You've upgraded the `EventDispatcher` module to 1.1.2 version.
 
 ---
 
@@ -96,9 +97,9 @@ To upgrade the module, do the following:
 composer update spryker/event-dispatcher
 ```
 
-2.  Add new plugins to the dependency providers:
+2. Add new plugins to the dependency providers:
 
-**Zed Integration**
+**Zed integration**
 
 ```php
 <?php
@@ -127,7 +128,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 }
 ```
 
-**Yves Integration**
+**Yves integration**
 
 ```php
 <?php
@@ -157,7 +158,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-**Glue Integration**
+**Glue integration**
 
 ```php
 <?php
@@ -188,7 +189,7 @@ class ShopApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 3. Enable additional plugins:
 
-**EventDispatcher Zed Integration**
+**EventDispatcher Zed integration**
 
 ```php
 <?php
@@ -250,7 +251,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 }
 ```
 
-**EventDispatcher Yves Integration**
+**EventDispatcher Yves integration**
 
 ```php
 <?php
@@ -309,7 +310,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 }
 ```
 
-**EventDispatcher Glue Integration**
+**EventDispatcher Glue integration**
 
 ```php
 <?php

@@ -8,7 +8,7 @@ This document describes how to retrieve product offer prices via Glue API.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see:
+For detailed information about the modules that provide the API functionality and related installation instructions, see:
 * [GLUE API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html)
 * [Glue API: Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html)
 * [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-volume-prices.html)
@@ -31,7 +31,7 @@ To retrieve prices of a product offer, send the request:
 
 Request sample: retrieve prices of a product offer
 
-`GET http://glue.mysprykershop.com/product-offers/offer54/product-offer-prices`
+`GET https://glue.mysprykershop.com/product-offers/offer54/product-offer-prices`
 
 ### Response
 
@@ -68,12 +68,12 @@ Response sample: retrieve prices of a product offer
             },
 
             "links": {
-                "self": "http://glue.mysprykershop.com/product-offers/offer54/product-offer-prices"
+                "self": "https://glue.mysprykershop.com/product-offers/offer54/product-offer-prices"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/product-offers/offer54/product-offer-prices"
+        "self": "https://glue.mysprykershop.com/product-offers/offer54/product-offer-prices"
     }
 }
 ```

@@ -13,8 +13,6 @@ redirect_from:
 related:
   - title: Managing Merchant Order Thresholds
     link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/managing-merchant-order-thresholds.html
-  - title: Managing Merchant Relations
-    link: docs/scos/user/back-office-user-guides/page.version/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html
   - title: Managing Threshold Settings
     link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/managing-threshold-settings.html
 ---
@@ -22,7 +20,7 @@ related:
 This topic describes how to manage global thresholds.
 
 ## Prerequisites
-To start working with global thresholds, go to **Administration** > **Global threshold**.
+To start working with global thresholds, go to **Administration&nbsp;<span aria-label="and then">></span> Global threshold**.
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 

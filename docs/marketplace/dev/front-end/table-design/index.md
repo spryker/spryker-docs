@@ -117,8 +117,8 @@ There is a way to trigger some [Actions](/docs/marketplace/dev/front-end/ui-comp
 
 A few common Table Features that can trigger actions are available in the UI library:
 
-- [Row actions](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-row-actions.html) - renders a dropdown menu that contains actions applicable to the table row and on click triggers an Action which must be registered.
-- [Batch actions](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-batch-actions.html) - allows triggering batch/multiple actions from rows.
+- [Row actions](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-row-actions.html)—renders a dropdown menu that contains actions applicable to the table row and on click triggers an Action which must be registered.
+- [Batch actions](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-batch-actions.html)—allows triggering batch/multiple actions from rows.
 
 ## Interfaces
 
@@ -154,7 +154,7 @@ interface TableColumnTypeOptionsMappings {
 }
 
 export interface TableColumnTypeRegistry {
-    // Key is type string - value is type config class
+    // Key is type string—value is type config class
     'layout-flat': LayoutFlatConfig;
 }
 
@@ -263,7 +263,7 @@ export enum TableFeatureLocation {
 }
 
 export interface TableRowActionRegistry {
-    // Key is action string - value is action options type
+    // Key is action string—value is action options type
 }
 
 export type TableRowAction = keyof TableRowActionRegistry;

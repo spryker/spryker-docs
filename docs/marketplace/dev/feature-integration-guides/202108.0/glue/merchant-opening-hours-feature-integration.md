@@ -24,7 +24,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/merchant-opening-hours-rest-api:"^0.1.0"
+composer require spryker/merchant-opening-hours-rest-api:"^1.0.0"
 ```
 
 {% info_block warningBox "Verification" %}
@@ -80,7 +80,7 @@ use Spryker\Glue\MerchantOpeningHoursRestApi\Plugin\GlueApplication\MerchantOpen
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
-     * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface[]
+     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface>
      */
     protected function getResourceRoutePlugins(): array
     {
@@ -109,6 +109,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that `MerchantOpeningHoursByMerchantReferenceResourceRelationshipPlugin` is set up by sending the request `GET http://glue.mysprykershop.com/merchants/{% raw %}{{merchant-reference}}{% endraw %}?include=merchant-opening-hours`. You should get merchants with all merchant opening hours as relationships.
+Make sure that `MerchantOpeningHoursByMerchantReferenceResourceRelationshipPlugin` is set up by sending the request `GET https://glue.mysprykershop.comm/merchants/{% raw %}{{merchant-reference}}{% endraw %}?include=merchant-opening-hours`. You should get merchants with all merchant opening hours as relationships.
 
 {% endinfo_block %}

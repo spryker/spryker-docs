@@ -6,7 +6,7 @@ template: back-office-user-guide-template
 
 To reorder category filter in the Back Office, do the following:
 
-1. Go to **Merchandising** > **Category Filters**.
+1. Go to **Merchandising&nbsp;<span aria-label="and then">></span> Category Filters**.
 2. In the **CATEGORY TREE** pane, select the category you want to reorder the filters of.
     This displays the **CATEGORY FILTERS FOR {Category name}** pane.    
 3. In the **ACTIVE FILTERS** section, drag a category filter to a needed position.

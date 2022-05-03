@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Testing and TDD - Spryker Commerce OS
+title: "Tutorial: Testing and TDD - Spryker Commerce OS"
 description: Use the tutorial to understand how testing concepts work with Spryker by using the test-driven development approach.
 last_updated: Jun 16, 2021
 template: howto-guide-template

@@ -1,5 +1,5 @@
 ---
-title: HowTo - Configure basic htaccess authentication
+title: "HowTo: Configure basic htaccess authentication"
 description: Learn how to configure basic htaccess authentication for the Storefront and the Back Office.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -25,7 +25,8 @@ It is not possible to protect Glue endpoints with basic auth and we do not recom
 {% endinfo_block %}
 
 ## 1. Defining login details and endpoints
-To define login details and endpoints:
+
+To define login details and endpoints, follow these steps:
 
 1. Add login details to `deploy.*.yml` of the desired environment as follows:
 

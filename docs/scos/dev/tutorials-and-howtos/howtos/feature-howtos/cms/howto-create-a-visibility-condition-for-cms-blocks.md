@@ -1,5 +1,5 @@
 ---
-title: HowTo - Create a Visibility Condition for CMS Blocks
+title: "HowTo: Create a visibility condition for CMS blocks"
 description: Visibility condition is a tool used to define particular pages in which the content of CMS block is displayed.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -216,7 +216,7 @@ In our case the created form has 5 elements:
 
 {% info_block warningBox "Verification" %}
 
-1. Go to the Back Office > **Content Management** > **Slots**.
+1. Go to the Back Office > **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
 
 2. Select a product details page template in the **List of Templates**.
 

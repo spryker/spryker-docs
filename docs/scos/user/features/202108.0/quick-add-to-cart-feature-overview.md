@@ -109,7 +109,7 @@ Buyers can upload a CSV by choosing a file from their local system or via drag &
 {% info_block infoBox %}
 
 Make sure to populate the product data in the following format: [CONCRETE_SKU, QUANTITY].
-It is possible to upload only one file at a time.
+You can upload only one file at a time.
 
 {% endinfo_block %}
 

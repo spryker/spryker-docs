@@ -1,5 +1,5 @@
 ---
-title: HowTo - Set up Stores with Multiple Locales
+title: "HowTo: Set up stores with multiple locales"
 description: Use the guide to configure different locales for your store.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -25,7 +25,7 @@ redirect_from:
 ---
 
 {% info_block infoBox "Multiple Locales" %}
-This article describes the steps you need to consider when you have to set up stores with multiple locales.
+This document describes the steps you need to consider when you have to set up stores with multiple locales.
 {% endinfo_block %}
 
 ## Configure Locales for Store

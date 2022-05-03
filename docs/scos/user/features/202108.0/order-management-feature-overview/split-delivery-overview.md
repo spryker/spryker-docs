@@ -59,7 +59,7 @@ For more details about how to create and manage shipments in the Back Office, se
 
 ### Gift card compatibility
 
-Currently, the Split Delivery is not compatible with the Gift Cards feature. If you want to buy a Gift card, only *one* delivery address can be selected for the whole order.
+The Split Delivery is not compatible with the Gift Cards feature. If you want to buy a Gift card, only *one* delivery address can be selected for the whole order.
 
 ### Limitation for payment service providers
 

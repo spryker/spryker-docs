@@ -1,5 +1,5 @@
 ---
-title: HowTo - Define the maximum size of content fields
+title: "HowTo: Define the maximum size of content fields"
 description: Use the guide to customize the content field size in the CMS module.
 last_updated: Jun 16, 2021
 template: howto-guide-template

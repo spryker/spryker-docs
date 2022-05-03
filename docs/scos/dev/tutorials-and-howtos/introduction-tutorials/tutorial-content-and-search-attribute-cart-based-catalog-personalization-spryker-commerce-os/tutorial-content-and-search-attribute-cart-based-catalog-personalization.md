@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Content and Search - Attribute-Cart-Based Catalog Personalization
+title: "Tutorial: Content and search - attribute-cart-based catalog personalization"
 description: The tutorial provides a step-by-step solution on how you can arrange your products in the cart by a color attribute
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -59,7 +59,7 @@ To create the plugin:
 1. Inside the catalog client directory, create the following directories: `Plugin/Elasticsearch/QueryExpander`.
 
 2. Inside the _QueryExpander_ directory, create a new query plugin and call it `AttributeCartBasedBoostingQueryExpanderPlugin`. This plugin implements  `QueryExpanderPluginInterface`.
- <details open>
+ <details>
 
 <summary markdown='span'>Pyz\Client\Catalog\Plugin\Elasticsearch\QueryExpander</summary>
 
@@ -201,7 +201,7 @@ class AttributeCartBasedBoostingQueryExpanderPlugin extends AbstractPlugin imple
 
 3. As you may notice, *CartClient* does not exist as a dependency for the *CatalogClient*. Let's add this dependency, so our query plugin works. For this, open `CatalogDependencyProvider` in `src/Pyz/Client/Catalog` and add *CartClient* as a dependency:
 
-<details open>
+<details>
 <summary markdown='span'>Pyz\Client\Catalog</summary>
 
 ```php
@@ -274,7 +274,7 @@ class CatalogFactory extends SprykerCatalogFactory
 
 Like the *CartClient*, the *ProductStorageClient* needs to be added to the `CatalogDependencyProvider`. Then the `CatalogFactory` can get it from the dependency provider:
 
-<details open>
+<details>
 <summary markdown='span'>Pyz\Client\Catalog</summary>
 
  ```php
@@ -318,7 +318,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 ```
 </details>
 
- <details open>
+ <details>
 <summary markdown='span'>Pyz\Client\Catalog</summary>
 
 ```php

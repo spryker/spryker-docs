@@ -1,5 +1,5 @@
 ---
-title: HowTo - Handle twenty five million prices in Spryker Commerce OS
+title: "HowTo: Handle twenty five million prices in Spryker Commerce OS"
 description: Learn how we enabled Spryker to handle 25 million of prices.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -235,7 +235,7 @@ We evaluated the following solutions:
 
 [Postgresql CTE](https://www.postgresqltutorial.com/postgresql-cte/) allows managing bulk inserts and updates of huge data amounts, which speeds up the execution of PHP processes.
 
-<details open>
+<details>
     <summary markdown='span'>SQL query example</summary>
 
 ```sql

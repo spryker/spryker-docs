@@ -1,5 +1,5 @@
 ---
-title: HowTo - Enable guest checkout in B2B Demo Shop
+title: "HowTo: Enable guest checkout in B2B Demo Shop"
 description: Learn how to enable guest checkout in B2B Demo Shop.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,17 +22,14 @@ The implementation described in this document is examplary and may require addit
 
 {% endinfo_block %}
 
-
-
-
-To enable guest checkout:
+To enable guest checkout, follow these steps:
 
 1. In the `is_restricted` column of the `spy_unauthenticated_customer_access` table, set `0` for `add-to-cart` and `order-place-submit` content types.
 
 2. Remove customer permissions:
-    1. In the Back Office, go to **Customers** > **Customer Access**.
+    1. In the Back Office, go to **Customers&nbsp;<span aria-label="and then">></span> Customer Access**.
     2. Clear all the permissions.
-    ![customer-permissions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+enable+guest+checkout+in+B2B+Demo+Shop/customer-permissions.png) 
+    ![customer-permissions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+enable+guest+checkout+in+B2B+Demo+Shop/customer-permissions.png)
     3. Select **Save**
     This refreshes the page with the success message displayed.
 
@@ -41,8 +38,7 @@ To enable guest checkout:
 4. DevVM-based instace: to sync code changes, run `vagrant halt && vagrant up`.
 
 5. In CheckoutPage module, create `src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig`.
-<details open>
-    <summary markdown='span'>src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig</summary>
+<details><summary markdown='span'>src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig</summary>
 
 ```twig
 {% raw %}{%{% endraw %} extends template('page-layout-checkout', 'CheckoutPage') {% raw %}%}{% endraw %}
@@ -145,8 +141,6 @@ To enable guest checkout:
 ```
 
 </details>
-
-
 
 6. In `src/Pyz/Yves/CheckoutPage/Theme/default/views/summary/summary.twig` adjust the form definition by replacing `enable: data.isPlaceableOrder and can('WriteSharedCartPermissionPlugin', data.cart.idQuote),` with the following:
 ```twig

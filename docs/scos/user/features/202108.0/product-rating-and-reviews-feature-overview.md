@@ -26,7 +26,7 @@ This feature is supported by 3 modules:
 
 ## Current constraints
 
-Currently, the feature has the following functional constraints which are going to be resolved in the future:
+The feature has the following functional constraints which are going to be resolved in the future:
 * Product reviews are linked to locales, but not stores.
 * A review is available in all the stores that share the locale of the store in which it has been originally created.
 

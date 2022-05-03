@@ -1,3 +1,8 @@
+
+
+
+Review the [reference information](#reference-information-add-a-customer-address) before you start or look up the necessary information as you go through the process.
+
 ## Editing customer addresses
 
 To edit a customer's address:

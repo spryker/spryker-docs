@@ -20,7 +20,7 @@ This topic describes how to create customer addresses.
 
 ## Prerequisites
 
-* Review the [reference information](#reference-information-add-a-customer-address) before you start or look up the necessary information as you go through the process.
+Review the [reference information](#reference-information-add-a-customer-address) before you start or look up the necessary information as you go through the process.
 
 ## Adding customer addresses
 

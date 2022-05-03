@@ -90,11 +90,11 @@ analyze:php:code-compliance
 analyze:php:code-compliance-report
 ```
 
-For detailed instructions, see [Running the evaluator tool](/docs/scos/dev/keeping-a-project-upgradable/running-the-evaluator-tool.html).
+For detailed instructions, see [Running the evaluator tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-evaluator-tool.html).
 
 ## 4. Resolve the evaluation issues
 
-If Evaluator detects compliance issues, resolve them by using the instructions in [Upgradability guidelines](/docs/scos/dev/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html).
+If Evaluator detects compliance issues, resolve them by using the instructions in [Upgradability guidelines](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html).
 
 ## 5. Update your project
 

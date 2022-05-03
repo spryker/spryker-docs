@@ -91,4 +91,4 @@ For example, if at step 6, due to incorrect authentication details, the upgrader
 
 ## Next steps
 
-[Running the upgrader tool](/docs/scos/dev/keeping-a-project-upgradable/running-the-upgrader-tool.html)
+[Running the upgrader tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-upgrader-tool.html)

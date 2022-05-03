@@ -51,8 +51,8 @@ The evaluator tool checks the following:
 
 To learn more about the evaluator tool, see the following documents:
 
-- [evaluator tool overview](/docs/scos/dev/keeping-a-project-upgradable/evaluator-tool-overview.html)
-- [Running the evaluator tool](/docs/scos/dev/keeping-a-project-upgradable/running-the-evaluator-tool.html)
+- [evaluator tool overview](/docs/scos/dev/guidelines/keeping-a-project-upgradable/evaluator-tool-overview.html)
+- [Running the evaluator tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-evaluator-tool.html)
 
 
 
@@ -73,5 +73,5 @@ The upgrader tool checks your project’s code against our latest released code.
 
 To learn more about the evaluator tool, see the following documents:
 
-* [upgrader tool overview](/docs/scos/dev/keeping-a-project-upgradable/upgrader-tool-overview.html)
-* [Running the upgrader tool](/docs/scos/dev/keeping-a-project-upgradable/running-the-upgrader-tool.html)
+* [upgrader tool overview](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgrader-tool-overview.html)
+* [Running the upgrader tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-upgrader-tool.html)

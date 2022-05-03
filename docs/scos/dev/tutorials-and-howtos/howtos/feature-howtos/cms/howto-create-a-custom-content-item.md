@@ -1,5 +1,5 @@
 ---
-title: HowTo - create a custom content item
+title: "HowTo: create a custom content item"
 description: If the content items shipped with Spryker do not fulfill your needs, the article will help you to create a new one.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -40,11 +40,11 @@ To create a new content form plugin:
 
 * `getTypeKey()` - returns a string with the name of your content item, e. g. Foo.
 
-* `getTermKey()` - returns a string displaying the term for this content type in database, e.g. `Foo`, `Foo List` or `Foo Query`. In database, a content type can have different term representations. Correspondingly, there are different ways of getting information about content. For example:
+* `getTermKey()` - returns a string displaying the term for this content type in database—for example, `Foo`, `Foo List` or `Foo Query`. In database, a content type can have different term representations. Correspondingly, there are different ways of getting information about content. For example:
     * `Foo List` - product list IDs
     * `Foo Query` - product query as part of SQL/ElasticSearch query.
 
-    This value will be displayed in the Back Office > **Content Management** > **Content Items** section.
+    This value will be displayed in the Back Office > **Content Management&nbsp;<span aria-label="and then">></span> Content Items** section.
 * `getForm()` - a form class name with a namespace which should be displayed in the *Content create* or *Content edit* pages.
 
 * `getTransferObject()` - maps form data to a content term transfer object, e. g. `ContentFooTermTransfer`.
@@ -169,7 +169,7 @@ class ContentFooTermForm extends AbstractType
 
 {% info_block warningBox "Verification" %}
 
-After enabling the plugin, make sure there is the new content item in Back Office > **Content Management** > **Content Items** > **Add Content Item** drop-down menu.
+After enabling the plugin, make sure there is the new content item in Back Office > **Content Management&nbsp;<span aria-label="and then">></span> Content Items&nbsp;<span aria-label="and then">></span> Add Content Item** drop-down menu.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Feature+HowTos/HowTo+-+Create+a+New+Custom+Content+Item/add-content-item-menu.png)
 
@@ -187,19 +187,19 @@ The method returns `ContentTypeContextTransfer` where `ContentTypeContextTransfe
 ***
 To create a new Twig plugin:
 
-1. Using `ContentTypeContextTransfer::$term` and `ContentTypeContextTransfer::$parameters`, fill in the properties of your new content transfer object, e.g. `ContentFooTransfer`, in `src/Shared/ContentFoo/Transfer/`.
+1. Using `ContentTypeContextTransfer::$term` and `ContentTypeContextTransfer::$parameters`, fill in the properties of your new content transfer object—for example, `ContentFooTransfer`, in `src/Shared/ContentFoo/Transfer/`.
 
 2. Create a new module, e. g. `src/Yves/ContentFooWidget`.
 
-3. Implement a Twig function using `\Spryker\Shared\Twig\TwigFunction`, e.g. `\SprykerShop\Yves\ContentBannerWidget\Twig\ContentBannerTwigFunction`.
+3. Implement a Twig function using `\Spryker\Shared\Twig\TwigFunction`—for example, `\SprykerShop\Yves\ContentBannerWidget\Twig\ContentBannerTwigFunction`.
 
-4. Implement a Twig plugin using `\Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface`, e.g. `\SprykerShop\Yves\ContentBannerWidget\Plugin\Twig\ContentBannerTwigPlugin`.
+4. Implement a Twig plugin using `\Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface`—for example, `\SprykerShop\Yves\ContentBannerWidget\Plugin\Twig\ContentBannerTwigPlugin`.
 
 {% info_block infoBox "Function parameters" %}
 
-The `$key` parameter is obligatory for the function, e.g. `function (string $key)`.
+The `$key` parameter is obligatory for the function—for example, `function (string $key)`.
 
-Optionally, you can add the `$templateIdentifier` parameter, e.g. `function (string $key, string $templateIdentifier)`.
+Optionally, you can add the `$templateIdentifier` parameter—for example, `function (string $key, string $templateIdentifier)`.
 
 {% endinfo_block %}
 
@@ -217,7 +217,7 @@ Now you can use your plugin as a function in Twig files. If you’ve named your 
 To add the new content item to that list, in `src/Zed/ContentFooGui`, implement a new plugin using `\Spryker\Zed\ContentGuiExtension\Dependency\Plugin\ContentGuiEditorPluginInterface`, e. g.  `ContentFooContentGuiEditorPlugin`.
 You can find the method descriptions below:
 
-* `getType()` returns a string displaying the content type, e.g. Foo.
+* `getType()` returns a string displaying the content type—for example, Foo.
 
 * `getTemplates()` returns an array of templates supported by your Twig plugin created in the previous section. If there are no supported templates defined, returns an empty array.
 

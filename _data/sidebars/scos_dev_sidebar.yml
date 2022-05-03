@@ -3995,7 +3995,7 @@ entries:
       - title: HowTo - Add additional countries to Spryker checkout
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-add-additional-countries-to-spryker-checkout.html
       - title: HowTo - Product Data from Import to Front-End View
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-product-data-from-import-to-front-end-view.html
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-product-data-from-import-to-frontend-view.html
       - title: HowTo - enable SFTP for Flysystem
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-enable-sftp-for-flysystem.html
       - title: HowTo - Handle Case Sensitive File-System on Mac OS

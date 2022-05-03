@@ -1,5 +1,5 @@
 ---
-title: HowTo - Create CMS Templates
+title: "HowTo: Create CMS templates"
 description: Use the guide to create a template for a CMS page, CMS Block, Content Item Widget.
 last_updated: Jun 16, 2021
 template: howto-guide-template

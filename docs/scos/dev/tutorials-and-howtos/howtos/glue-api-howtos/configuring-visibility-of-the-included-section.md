@@ -21,7 +21,7 @@ redirect_from:
   - /v2/docs/en/ht-configuring-visibility-included-section-201903
 ---
 
-Responses of Spryker Glue REST API can return the **included** and **relationships** sections. The sections contain additional information on the resource requested. Such information is presented in the form of related resources. For example, if you request information on products, the sections can include such additional related resources as image sets, prices, availability information etc.
+Responses of Spryker Glue REST API can return the **included** and **relationships** sections. The sections contain additional information on the resource requested. Such information is presented in the form of related resources. For example, if you request information on products, the sections can include such additional related resources as image sets, prices, and availability information.
 
 {% info_block infoBox %}
 
@@ -49,7 +49,7 @@ For the purposes of boosting the API performance and bandwidth usage optimizatio
 To configure the behavior of the **included** and **relationships** sections:
 
 ## Prerequisites
-To make the option possible, you need to have at least version **1.12.0** of `GlueApplication` module installed in your project. For details on how to upgrade, see the Integration Guide.
+To make the option possible, you need to have at least version **1.12.0** of `GlueApplication` module installed in your project. For information about how to upgrade, see the Integration Guide.
 
 ## Configuration
 To configure the behavior of the sections:

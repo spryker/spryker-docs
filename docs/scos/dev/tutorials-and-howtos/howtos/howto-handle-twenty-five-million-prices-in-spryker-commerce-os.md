@@ -121,9 +121,9 @@ The following solutions were evaluated:
 
 To solve the ES indexing issue, we reduced the size of product abstract documents which reduced dynamic mapping properties.
 
-To implement the solution:
+To implement the solution, follow these steps:
 
-1. To be able to use the Join field type feature and declare a join relation in `search.json`, restrict the ES index to use a single type of document. Below, you can see an example of a mapping definition with a declared join relation:
+1. To use the Join field type feature and declare a join relation in `search.json`, restrict the ES index to use a single type of document. The following example represents a mapping definition with a declared join relation:
 
 ```json
 {
@@ -146,7 +146,7 @@ To implement the solution:
 }
 ```
 
-2. To make the product-price relation work:
+2. Make the product-price relation work:
 	1. Extend product abstract documents with the required `joined_price` section:
 
     ```json
@@ -167,9 +167,9 @@ To implement the solution:
 	* parent document ID
     * price
 	* currency
-	* unique identifier.
+	* unique identifier
 
-    Example of the price document:
+    The example of the price document:
 
     ```json
     price_product_concrete_group_specific:abc:50445:foo-bar:en_us
@@ -188,9 +188,9 @@ These two documents can be viewed as two tables with a foreign key in terms of r
 
 
 
-### ElasticSearch join data type feature - side effects
+### ElasticSearch join data type feature: Side effects
 
-The side effects of this solution are:
+The side effects of this solution are the following:
 
 1. The [Product Reviews feature](/docs/scos/user/features/{{site.version}}/product-rating-and-reviews-feature-overview.html) is disabled because it requires multiple document types per index.
 2. Performance requires additional attention. You can read about performance issues related to the feature in [Parent-join and performance](https://www.elastic.co/guide/en/elasticsearch/reference/current/parent-join.html#_parent_join_and_performance).
@@ -201,29 +201,21 @@ The side effects of this solution are:
 To implement a parent-child relationship between documents, we built a standard search module that follows [Spryker architecture](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html). The new price search module is subscribed to the publish and unpublish events of abstract products to manage related price documents in the search. The listener in the search module receives a product abstract ID and fetches all related prices to publish or unpublish them depending on the incoming event. Due to a big number of prices, the publish process became slow. This causes the following issues.
 
 #### Issues
-We addressed the following issues related to a slow publish process:
 
+The following issues related to a slow publish process have been added:
 
-1. Memory limit and performance issues. As a product abstract can stand for about forty thousand prices, a table with 25 000 000 rows is parsed every time to find them.
-
-The default message chunk size of an event queue is 500. With this size, about two million rows of data have to be published per one bulk.
-
-
+1. Memory limit and performance issues. As a product abstract can stand for about forty thousand prices, a table with 25,000,000 rows is parsed every time to find them. The default message chunk size of an event queue is 500. With this size, about two million rows of data have to be published per one bulk.
 2. The following has to be done simultaneously:
-    * Trigger product abstract events to update their structure in ES
-    * Trigger their child documents to be published
-
-
+    * Trigger product abstract events to update their structure in ES.
+    * Trigger their child documents to be published.
 3. RabbitMQ connection issues. Connection is getting closed after fetching a bunch of messages because the PHP process takes too long to be executed. After processing the messages, PHP tries to acknowledge them using the old connection which has been closed by RabbitMQ. Being single-threaded, the PHP library cannot asynchronously send any heartbeats when the thread is busy with something else.
-See [Detecting Dead TCP Connections with Heartbeats and TCP Keepalives](https://www.rabbitmq.com/heartbeats.html) to learn more.
+   For more information, see [Detecting Dead TCP Connections with Heartbeats and TCP Keepalives](https://www.rabbitmq.com/heartbeats.html).
 
-#### Evaluated Solutions
+#### Evaluated solutions
 
-We evaluated the following solutions:
-
-
-1. Use [Common Table Expression (CTE)](https://www.postgresql.org/docs/10/queries-with.html) queries to handle bulk insert and update operations in the `_search` table. We chose this solution because we had implemented it previously. See [Data Importer Speed Optimization](/docs/scos/dev/data-import/{{site.version}}/data-importer-speed-optimization.html) to learn how this solution is used to optimize the speed of data importers.
-2. Use [PostgreSQL trigger feature](https://www.postgresql.org/docs/9.1/sql-createtrigger.html) to fill the `search` table on the insert update operations in the `entity` table.
+The following solutions were evaluated:
+1. To handle bulk insert and update operations in the `_search` table, use [Common Table Expression (CTE)](https://www.postgresql.org/docs/10/queries-with.html) queries. We chose this solution because we had implemented it previously. To learn how this solution is used to optimize the speed of data importers, see [Data Importer Speed Optimization](/docs/scos/dev/data-import/{{site.version}}/data-importer-speed-optimization.html).
+2. To fill the `search` table on the insert update operations in the `entity` table, see [PostgreSQL trigger feature](https://www.postgresql.org/docs/9.1/sql-createtrigger.html).
 3. Implement a reconnection logic that establishes a new connection after catching an exception.
 
 #### Bulk insertion with raw SQL

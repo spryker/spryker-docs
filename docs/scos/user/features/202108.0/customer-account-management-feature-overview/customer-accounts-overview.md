@@ -57,10 +57,10 @@ A Back Office user can do the following:
 
 * Add notes attached for customers.
 * Set a preferred locale per customer.
-* Deleting a customer data via an anonymization mechanism.
+* Deleting a customer data using an anonymization mechanism.
 * Configure a non-linear customer reference for external communication.
 * Set address books with default addresses for billing and shipping.
-* Send a password token via email.
+* Send a password token by email.
 * Check last orders of a customer in the shop.
 
 For details, see the following:

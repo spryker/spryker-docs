@@ -57,7 +57,6 @@ Company users can assign and unassign a company business unit to their accounts 
 |BACK OFFICE USER GUIDES|
 |---|
 | [Assign a company user to a company unit](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-users/edit-company-users.html)  |
-| [Assign a customer to a company](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html)  |
 
 
 {% info_block warningBox "Developer guides" %}

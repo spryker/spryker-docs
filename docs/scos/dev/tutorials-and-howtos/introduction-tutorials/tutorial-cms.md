@@ -23,12 +23,8 @@ redirect_from:
   - /v1/docs/t-cms
   - /v1/docs/en/t-cms
 related:
-  - title: CMS Manual
-    link: docs/scos/user/features/site.version/cms-feature-overview/cms-feature-overview.html
   - title: Implementing URL Routing in Yves
     link: docs/scos/dev/back-end-development/yves/implementing-url-routing-in-yves.html
-  - title: Glossary Creation
-    link: docs/scos/user/back-office-user-guides/site.version/administration/glossary/managing-glossary.html
   - title: Cronjob Scheduling
     link: docs/scos/dev/sdk/cronjob-scheduling.html
 ---

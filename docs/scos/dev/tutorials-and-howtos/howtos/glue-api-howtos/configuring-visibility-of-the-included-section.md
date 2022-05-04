@@ -94,57 +94,57 @@ class GlueApplicationConfig extends SprykerGlueApplicationConfig
 
 To verify that the configuration has been completed successfully:
 
-1. Send a GET request as follows: `http://mysprykershop.com/concrete-products/177_24867659?include=concrete-product-image-sets`
+   1. Send a GET request as follows: `http://mysprykershop.com/concrete-products/177_24867659?include=concrete-product-image-sets`
 
-2. Make sure that the **included** and **relationships** sections of the response contain the `concrete-product-image-sets` resource only.
+   2. Make sure that the **included** and **relationships** sections of the response contain the `concrete-product-image-sets` resource only.
 
-**Sample response**
+  **Sample response**
 
-```json
-{
-  data: {
-    type: concrete-products,
-    id: 177_24867659,
-    attributes: {...},
-    links: {...},
-    relationships: {
-      concrete-product-image-sets: {
-        data: [
-          {
-            type: concrete-product-image-sets,
-            id: 177_24867659
-          }
-        ]
-      }
-    }
-  },
-  included: [
-    {
-      type: concrete-product-image-sets,
+  ```json
+  {
+    data: {
+      type: concrete-products,
       id: 177_24867659,
-      attributes: {
-        imageSets: [
-          {
-            name: default,
-            images: [
-              {
-                externalUrlLarge: //images.icecat.biz/img/norm/high/24867659-4916.jpg,
-                externalUrlSmall: //images.icecat.biz/img/norm/medium/24867659-4916.jpg
-              }
-            ]
-          }
-        ]
-      },
-      links: {
-        self: http://mysprykershop.com/concrete-products/177_24867659/concrete-product-image-sets
+      attributes: {...},
+      links: {...},
+      relationships: {
+        concrete-product-image-sets: {
+          data: [
+            {
+              type: concrete-product-image-sets,
+              id: 177_24867659
+            }
+          ]
+        }
       }
-    }
-  ]
-}
-```
+    },
+    included: [
+      {
+        type: concrete-product-image-sets,
+        id: 177_24867659,
+        attributes: {
+          imageSets: [
+            {
+              name: default,
+              images: [
+                {
+                  externalUrlLarge: //images.icecat.biz/img/norm/high/24867659-4916.jpg,
+                  externalUrlSmall: //images.icecat.biz/img/norm/medium/24867659-4916.jpg
+                }
+              ]
+            }
+          ]
+        },
+        links: {
+          self: http://mysprykershop.com/concrete-products/177_24867659/concrete-product-image-sets
+        }
+      }
+    ]
+  }
+  ```
 
-3. Send a GET request as follows: `http://mysprykershop.com/concrete-products/177_24867659`
-4. Make sure that the endpoint responds in accordance with your configuration:
+   3. Send a GET request as follows: `http://mysprykershop.com/concrete-products/177_24867659`
+   4. Make sure that the endpoint responds in accordance with your configuration:
     * if the `getIsEagerRelatedResourcesInclusionEnabled` parameter is set to `true`, the included section of the response contains all related resources.
 
     **Sample response**
@@ -256,4 +256,4 @@ To verify that the configuration has been completed successfully:
     }
     ```
 
-    {% endinfo_block %}
+{% endinfo_block %}

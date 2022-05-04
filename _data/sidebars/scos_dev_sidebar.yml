@@ -1546,6 +1546,14 @@ entries:
       include_versions:
       - "202108.0"
       - "202204.0"
+    - title: Backend API feature integration
+      url: /docs/scos/dev/feature-integration-guides/backend-api-integration-guide.html
+      include_versions:
+      - "202204.0"
+    - title: Backend API for Merchant Relationships feature integration
+      url: /docs/scos/dev/feature-integration-guides/backend-api-for-merchant-relationships-integration-guide.html
+      include_versions:
+      - "202204.0"
     - title: Category Management feature integration
       url: /docs/scos/dev/feature-integration-guides/category-management-feature-integration.html
       include_versions:
@@ -1712,6 +1720,10 @@ entries:
       url: /docs/scos/dev/feature-integration-guides/cms-category-management-feature-integration.html
       include_versions:
       - "202108.0"
+      - "202204.0"
+    - title: Category Management + Promotions and Discounts feature integration
+      url: /docs/scos/dev/feature-integration-guides/category-management-promotions-and-discounts-feature-integration.html
+      include_versions:
       - "202204.0"
     - title: CMS + Product Lists + Catalog feature integration
       url: /docs/scos/dev/feature-integration-guides/cms-product-lists-catalog-feature-integration.html
@@ -1958,6 +1970,10 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
+      - "202204.0"
+    - title: Product Approval Process feature integration
+      url: /docs/scos/dev/feature-integration-guides/product-approval-process-feature-integration.html
+      include_versions:
       - "202204.0"
     - title: Product Bundles feature integration
       url: /docs/scos/dev/feature-integration-guides/product-bundles-feature-integration.html
